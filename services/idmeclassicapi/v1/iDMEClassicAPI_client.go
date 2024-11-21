@@ -844,6 +844,27 @@ func (c *IDMEClassicAPIClient) DeleteLogicalLatestVersionInvoker(request *model.
 	return &DeleteLogicalLatestVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteMultiView 删除模型
+//
+// 删除多视图对象。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) DeleteMultiView(request *model.DeleteMultiViewRequest) (*model.DeleteMultiViewResponse, error) {
+	requestDef := GenReqDefForDeleteMultiView()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteMultiViewResponse), nil
+	}
+}
+
+// DeleteMultiViewInvoker 删除模型
+func (c *IDMEClassicAPIClient) DeleteMultiViewInvoker(request *model.DeleteMultiViewRequest) *DeleteMultiViewInvoker {
+	requestDef := GenReqDefForDeleteMultiView()
+	return &DeleteMultiViewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteTarget 通过目标模型删除关系实体的数据实例
 //
 // 调用该接口输入源模型的数据实例ID和目标模型的英文名称，删除对应关系实体的数据实例。
@@ -1208,7 +1229,7 @@ func (c *IDMEClassicAPIClient) ListUsingPostInvoker(request *model.ListUsingPost
 // Refresh 刷新树形节点
 //
 // 调用该接口刷新指定数据实例对应的节点全路径。在调用该接口前请确保数据模型具有“树形结构”功能。
-// 调用该接口时，如果未指定数据实例或指定的数据实例为父节点，则刷新整颗树的所有节点全路径。
+// 调用该接口时，如果未指定数据实例或指定的数据实例为父节点，则刷新整棵树的所有节点全路径。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IDMEClassicAPIClient) Refresh(request *model.RefreshRequest) (*model.RefreshResponse, error) {

@@ -277,6 +277,22 @@ func (i *BatchSyncMetadataInvoker) Invoke() (*model.BatchSyncMetadataResponse, e
 	}
 }
 
+type BatchTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchTagInvoker) Invoke() (*model.BatchTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchTagResponse), nil
+	}
+}
+
 type BatchUpdateSecurityDlfDataWareHousesInvoker struct {
 	*invoker.BaseInvoker
 }

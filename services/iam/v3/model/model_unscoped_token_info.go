@@ -23,8 +23,7 @@ type UnscopedTokenInfo struct {
 	// roles信息。
 	Roles *[]UnscopedTokenInfoRoles `json:"roles,omitempty"`
 
-	// catalog信息。
-	Catalog *[]UnscopedTokenInfoCatalog `json:"catalog,omitempty"`
+	Catalog *UnscopedTokenInfoCatalog `json:"catalog,omitempty"`
 }
 
 func (o UnscopedTokenInfo) String() string {

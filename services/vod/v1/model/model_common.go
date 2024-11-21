@@ -12,10 +12,10 @@ import (
 // Common 模板信息。
 type Common struct {
 
-	// pvc开关。
+	// 高清低码开关。
 	Pvc CommonPvc `json:"pvc"`
 
-	// pvc版本。
+	// 高清低码版本。
 	PvcVersion *string `json:"pvc_version,omitempty"`
 
 	// 视频编码格式。

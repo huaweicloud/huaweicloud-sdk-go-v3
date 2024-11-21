@@ -10,8 +10,8 @@ import (
 type ListAgenciesResponse struct {
 
 	// 委托信息列表。
-	Agencies       *[]AgencyResult `json:"agencies,omitempty"`
-	HttpStatusCode int             `json:"-"`
+	Agencies       *[]AgencyListResult `json:"agencies,omitempty"`
+	HttpStatusCode int                 `json:"-"`
 }
 
 func (o ListAgenciesResponse) String() string {

@@ -200,6 +200,11 @@ func GenReqDefForCreateVolume() *def.HttpRequestDef {
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XClientToken").
+		WithJsonTag("X-Client-Token").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 

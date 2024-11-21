@@ -14,6 +14,8 @@ type CreateWelcomeSpeechReq struct {
 
 	// 欢迎词。
 	WelcomeSpeech string `json:"welcome_speech"`
+
+	Language *LanguageEnum `json:"language,omitempty"`
 }
 
 func (o CreateWelcomeSpeechReq) String() string {

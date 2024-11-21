@@ -9,6 +9,18 @@ import (
 // UpdateUserOption
 type UpdateUserOption struct {
 
+	//
+	CreateTime *string `json:"create_time,omitempty"`
+
+	// IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+	XdomainId *string `json:"xdomain_id,omitempty"`
+
+	// IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+	XdomainType *string `json:"xdomain_type,omitempty"`
+
+	// IAM用户是否为账号管理员。
+	IsDomainOwner *bool `json:"is_domain_owner,omitempty"`
+
 	// IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
 	AccessMode *string `json:"access_mode,omitempty"`
 

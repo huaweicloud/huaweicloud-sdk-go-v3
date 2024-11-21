@@ -15,6 +15,8 @@ type ShowHotQuestionResponse struct {
 	// 热点问题。
 	HotQuestion *string `json:"hot_question,omitempty"`
 
+	Language *LanguageEnum `json:"language,omitempty"`
+
 	// 机器人ID。
 	RobotId *string `json:"robot_id,omitempty"`
 

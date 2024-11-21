@@ -52,6 +52,8 @@ var (
 		"https://dayu.eu-west-101.myhuaweicloud.com")
 	AE_AD_1 = region.NewRegion("ae-ad-1",
 		"https://dayu.ae-ad-1.myhuaweicloud.com")
+	CN_NORTH_11 = region.NewRegion("cn-north-11",
+		"https://dayu.cn-north-11.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -77,6 +79,7 @@ var staticFields = map[string]*region.Region{
 	"me-east-1":      ME_EAST_1,
 	"eu-west-101":    EU_WEST_101,
 	"ae-ad-1":        AE_AD_1,
+	"cn-north-11":    CN_NORTH_11,
 }
 
 var provider = region.DefaultProviderChain("DATAARTSSTUDIO")

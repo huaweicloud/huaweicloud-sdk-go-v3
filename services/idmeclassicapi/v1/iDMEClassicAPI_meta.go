@@ -730,10 +730,14 @@ func GenReqDefForCountUsingPost() *def.HttpRequestDef {
 func GenReqDefForCreateMultiView() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/rdm_{identifier}_app/publicservices/api/MultiViewModel/create").
+		WithPath("/rdm_{identifier}_app/publicservices/api/{mvModelName}/create").
 		WithResponse(new(model.CreateMultiViewResponse)).
 		WithContentType("application/json")
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("MvModelName").
+		WithJsonTag("mvModelName").
+		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Identifier").
 		WithJsonTag("identifier").
@@ -822,10 +826,14 @@ func GenReqDefForDeleteBranch() *def.HttpRequestDef {
 func GenReqDefForDeleteByConditionMultiView() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/rdm_{identifier}_app/publicservices/api/MultiViewModel/deleteByCondition").
+		WithPath("/rdm_{identifier}_app/publicservices/api/{mvModelName}/deleteByCondition").
 		WithResponse(new(model.DeleteByConditionMultiViewResponse)).
 		WithContentType("application/json")
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("MvModelName").
+		WithJsonTag("mvModelName").
+		WithLocationType(def.Path))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Identifier").
 		WithJsonTag("identifier").
@@ -925,6 +933,30 @@ func GenReqDefForDeleteLogicalLatestVersion() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ModelName").
 		WithJsonTag("modelName").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteMultiView() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/rdm_{identifier}_app/publicservices/api/{mvModelName}/delete").
+		WithResponse(new(model.DeleteMultiViewResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("MvModelName").
+		WithJsonTag("mvModelName").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Identifier").
+		WithJsonTag("identifier").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

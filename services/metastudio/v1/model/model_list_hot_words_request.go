@@ -36,7 +36,7 @@ type ListHotWordsRequest struct {
 	// sis服务所在区域
 	Region *int32 `json:"region,omitempty"`
 
-	// 智能交互语言  * zh_CN:简体中文  * en_US:英语
+	// 智能交互语言  * zh_CN：简体中文（已下线，请使用CN）  * en_US：英语（已下线，请使用EN）  * CN: 中文  * EN: 英文
 	Language *ListHotWordsRequestLanguage `json:"language,omitempty"`
 }
 
@@ -56,6 +56,8 @@ type ListHotWordsRequestLanguage struct {
 type ListHotWordsRequestLanguageEnum struct {
 	ZH_CN ListHotWordsRequestLanguage
 	EN_US ListHotWordsRequestLanguage
+	CN    ListHotWordsRequestLanguage
+	EN    ListHotWordsRequestLanguage
 }
 
 func GetListHotWordsRequestLanguageEnum() ListHotWordsRequestLanguageEnum {
@@ -65,6 +67,12 @@ func GetListHotWordsRequestLanguageEnum() ListHotWordsRequestLanguageEnum {
 		},
 		EN_US: ListHotWordsRequestLanguage{
 			value: "en_US",
+		},
+		CN: ListHotWordsRequestLanguage{
+			value: "CN",
+		},
+		EN: ListHotWordsRequestLanguage{
+			value: "EN",
 		},
 	}
 }

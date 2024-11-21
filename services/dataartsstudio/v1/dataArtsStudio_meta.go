@@ -410,6 +410,26 @@ func GenReqDefForBatchSyncMetadata() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchTag() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/datamap/entities/guids/tags").
+		WithResponse(new(model.BatchTagResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Instance").
+		WithJsonTag("instance").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchUpdateSecurityDlfDataWareHouses() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).

@@ -1221,6 +1221,166 @@ func (i *CreateOnceCodeInvoker) Invoke() (*model.CreateOnceCodeResponse, error) 
 	}
 }
 
+type CreatePacifyWordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePacifyWordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreatePacifyWordsInvoker) Invoke() (*model.CreatePacifyWordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePacifyWordsResponse), nil
+	}
+}
+
+type DeletePacifyWordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePacifyWordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeletePacifyWordsInvoker) Invoke() (*model.DeletePacifyWordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePacifyWordsResponse), nil
+	}
+}
+
+type ListPacifyWordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPacifyWordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPacifyWordsInvoker) Invoke() (*model.ListPacifyWordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPacifyWordsResponse), nil
+	}
+}
+
+type ShowPacifyWordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPacifyWordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPacifyWordsInvoker) Invoke() (*model.ShowPacifyWordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPacifyWordsResponse), nil
+	}
+}
+
+type ShowPacifyWordsIntentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPacifyWordsIntentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPacifyWordsIntentInvoker) Invoke() (*model.ShowPacifyWordsIntentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPacifyWordsIntentResponse), nil
+	}
+}
+
+type ShowPacifyWordsSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPacifyWordsSwitchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPacifyWordsSwitchInvoker) Invoke() (*model.ShowPacifyWordsSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPacifyWordsSwitchResponse), nil
+	}
+}
+
+type ShowPacifyWordsTriggerTimeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPacifyWordsTriggerTimeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPacifyWordsTriggerTimeInvoker) Invoke() (*model.ShowPacifyWordsTriggerTimeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPacifyWordsTriggerTimeResponse), nil
+	}
+}
+
+type UpdatePacifyWordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePacifyWordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePacifyWordsInvoker) Invoke() (*model.UpdatePacifyWordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePacifyWordsResponse), nil
+	}
+}
+
+type UpdatePacifyWordsSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePacifyWordsSwitchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePacifyWordsSwitchInvoker) Invoke() (*model.UpdatePacifyWordsSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePacifyWordsSwitchResponse), nil
+	}
+}
+
+type UpdatePacifyWordsTriggerTimeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePacifyWordsTriggerTimeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePacifyWordsTriggerTimeInvoker) Invoke() (*model.UpdatePacifyWordsTriggerTimeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePacifyWordsTriggerTimeResponse), nil
+	}
+}
+
 type CreatePictureModelingByUrlJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1829,6 +1989,38 @@ func (i *ListStylesInvoker) Invoke() (*model.ListStylesResponse, error) {
 	}
 }
 
+type CreateSubtitleFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSubtitleFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSubtitleFileInvoker) Invoke() (*model.CreateSubtitleFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSubtitleFileResponse), nil
+	}
+}
+
+type ShowSubtitleFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSubtitleFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSubtitleFileInvoker) Invoke() (*model.ShowSubtitleFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSubtitleFileResponse), nil
+	}
+}
+
 type CountTenantResourcesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2245,6 +2437,22 @@ func (i *ListTtsaJobsInvoker) Invoke() (*model.ListTtsaJobsResponse, error) {
 	}
 }
 
+type CreateAsyncTtsJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAsyncTtsJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAsyncTtsJobInvoker) Invoke() (*model.CreateAsyncTtsJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAsyncTtsJobResponse), nil
+	}
+}
+
 type CreateTtsAuditionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2258,6 +2466,22 @@ func (i *CreateTtsAuditionInvoker) Invoke() (*model.CreateTtsAuditionResponse, e
 		return nil, err
 	} else {
 		return result.(*model.CreateTtsAuditionResponse), nil
+	}
+}
+
+type ShowAsyncTtsJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAsyncTtsJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAsyncTtsJobInvoker) Invoke() (*model.ShowAsyncTtsJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAsyncTtsJobResponse), nil
 	}
 }
 

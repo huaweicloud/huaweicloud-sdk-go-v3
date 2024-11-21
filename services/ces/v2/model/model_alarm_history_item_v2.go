@@ -37,6 +37,15 @@ type AlarmHistoryItemV2 struct {
 	// 结束时间，UTC时间
 	EndTime *sdktime.SdkTime `json:"end_time,omitempty"`
 
+	// 第一次告警时间戳，UTC时间
+	FirstAlarmTime *sdktime.SdkTime `json:"first_alarm_time,omitempty"`
+
+	// 最后一次告警时间，UTC时间
+	LastAlarmTime *sdktime.SdkTime `json:"last_alarm_time,omitempty"`
+
+	// 告警恢复时间，UTC时间
+	AlarmRecoveryTime *sdktime.SdkTime `json:"alarm_recovery_time,omitempty"`
+
 	Metric *Metric `json:"metric,omitempty"`
 
 	Condition *AlarmCondition `json:"condition,omitempty"`

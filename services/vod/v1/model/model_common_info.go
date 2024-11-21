@@ -11,7 +11,7 @@ import (
 
 type CommonInfo struct {
 
-	// pvc开关<br/>
+	// 高清低码开关<br/>
 	Pvc bool `json:"pvc"`
 
 	// 视频编码格式<br/>
@@ -27,13 +27,25 @@ type CommonInfo struct {
 	Format CommonInfoFormat `json:"format"`
 
 	// 分片时长(默认为5秒)<br/>
-	HlsInterval int32 `json:"hls_interval"`
+	HlsInterval *int32 `json:"hls_interval,omitempty"`
 
 	// 上采样<br/>
 	Upsample *bool `json:"upsample,omitempty"`
 
 	// SHORT：短边自适应<br/> LONG：长边自适应<br/> NONE：宽高自适应<br/>
 	Adaptation *CommonInfoAdaptation `json:"adaptation,omitempty"`
+
+	// 编码质量等级，取值[0,2] 0表示当前现网方式默认方式，1表示转码效率优先，2表示转码质量优先。<br/>
+	Preset *int32 `json:"preset,omitempty"`
+
+	// I帧最大间隔，取值范围：[2，10]。默认值：5，单位秒。<br/>
+	MaxIframesInterval *int32 `json:"max_iframes_interval,omitempty"`
+
+	// 转码后音频是否独立存储。<br/>
+	HlsAudioSeparate *bool `json:"hls_audio_separate,omitempty"`
+
+	// 分片的封装格式，目前支持TS和FMP4，默认TS格式。
+	HlsSegmentType *CommonInfoHlsSegmentType `json:"hls_segment_type,omitempty"`
 }
 
 func (o CommonInfo) String() string {
@@ -247,6 +259,53 @@ func (c CommonInfoAdaptation) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CommonInfoAdaptation) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CommonInfoHlsSegmentType struct {
+	value string
+}
+
+type CommonInfoHlsSegmentTypeEnum struct {
+	TS   CommonInfoHlsSegmentType
+	FMP4 CommonInfoHlsSegmentType
+}
+
+func GetCommonInfoHlsSegmentTypeEnum() CommonInfoHlsSegmentTypeEnum {
+	return CommonInfoHlsSegmentTypeEnum{
+		TS: CommonInfoHlsSegmentType{
+			value: "TS",
+		},
+		FMP4: CommonInfoHlsSegmentType{
+			value: "FMP4",
+		},
+	}
+}
+
+func (c CommonInfoHlsSegmentType) Value() string {
+	return c.value
+}
+
+func (c CommonInfoHlsSegmentType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CommonInfoHlsSegmentType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

@@ -113,10 +113,6 @@ func GenReqDefForCreateScalingPolicy() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }

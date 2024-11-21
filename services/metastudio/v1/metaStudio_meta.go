@@ -1945,6 +1945,10 @@ func GenReqDefForListHotQuestion() *def.HttpRequestDef {
 		WithName("RobotId").
 		WithJsonTag("robot_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Language").
+		WithJsonTag("language").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Authorization").
@@ -3138,6 +3142,425 @@ func GenReqDefForCreateOnceCode() *def.HttpRequestDef {
 		WithName("XAppUserId").
 		WithJsonTag("X-App-UserId").
 		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreatePacifyWords() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/digital-human-chat/pacify-words").
+		WithResponse(new(model.CreatePacifyWordsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Authorization").
+		WithJsonTag("Authorization").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSdkDate").
+		WithJsonTag("X-Sdk-Date").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XProjectId").
+		WithJsonTag("X-Project-Id").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XAppUserId").
+		WithJsonTag("X-App-UserId").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeletePacifyWords() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/{project_id}/digital-human-chat/pacify-words/{pacify_words_id}").
+		WithResponse(new(model.DeletePacifyWordsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PacifyWordsId").
+		WithJsonTag("pacify_words_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Authorization").
+		WithJsonTag("Authorization").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSdkDate").
+		WithJsonTag("X-Sdk-Date").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XProjectId").
+		WithJsonTag("X-Project-Id").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XAppUserId").
+		WithJsonTag("X-App-UserId").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListPacifyWords() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/digital-human-chat/pacify-words").
+		WithResponse(new(model.ListPacifyWordsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RobotId").
+		WithJsonTag("robot_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Language").
+		WithJsonTag("language").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PacifyWordsType").
+		WithJsonTag("pacify_words_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Intent").
+		WithJsonTag("intent").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Authorization").
+		WithJsonTag("Authorization").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSdkDate").
+		WithJsonTag("X-Sdk-Date").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XProjectId").
+		WithJsonTag("X-Project-Id").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XAppUserId").
+		WithJsonTag("X-App-UserId").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowPacifyWords() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/digital-human-chat/pacify-words/{pacify_words_id}").
+		WithResponse(new(model.ShowPacifyWordsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PacifyWordsId").
+		WithJsonTag("pacify_words_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Authorization").
+		WithJsonTag("Authorization").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSdkDate").
+		WithJsonTag("X-Sdk-Date").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XProjectId").
+		WithJsonTag("X-Project-Id").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XAppUserId").
+		WithJsonTag("X-App-UserId").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowPacifyWordsIntent() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/digital-human-chat/pacify-words-intent").
+		WithResponse(new(model.ShowPacifyWordsIntentResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RobotId").
+		WithJsonTag("robot_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Authorization").
+		WithJsonTag("Authorization").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSdkDate").
+		WithJsonTag("X-Sdk-Date").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XProjectId").
+		WithJsonTag("X-Project-Id").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XAppUserId").
+		WithJsonTag("X-App-UserId").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowPacifyWordsSwitch() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/digital-human-chat/pacify-words-switch").
+		WithResponse(new(model.ShowPacifyWordsSwitchResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RobotId").
+		WithJsonTag("robot_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Language").
+		WithJsonTag("language").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Authorization").
+		WithJsonTag("Authorization").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSdkDate").
+		WithJsonTag("X-Sdk-Date").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XProjectId").
+		WithJsonTag("X-Project-Id").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XAppUserId").
+		WithJsonTag("X-App-UserId").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowPacifyWordsTriggerTime() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/digital-human-chat/pacify-words-time").
+		WithResponse(new(model.ShowPacifyWordsTriggerTimeResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RobotId").
+		WithJsonTag("robot_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Language").
+		WithJsonTag("language").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Authorization").
+		WithJsonTag("Authorization").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSdkDate").
+		WithJsonTag("X-Sdk-Date").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XProjectId").
+		WithJsonTag("X-Project-Id").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XAppUserId").
+		WithJsonTag("X-App-UserId").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdatePacifyWords() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/digital-human-chat/pacify-words/{pacify_words_id}").
+		WithResponse(new(model.UpdatePacifyWordsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PacifyWordsId").
+		WithJsonTag("pacify_words_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Authorization").
+		WithJsonTag("Authorization").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSdkDate").
+		WithJsonTag("X-Sdk-Date").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XProjectId").
+		WithJsonTag("X-Project-Id").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XAppUserId").
+		WithJsonTag("X-App-UserId").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdatePacifyWordsSwitch() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/digital-human-chat/pacify-words-switch").
+		WithResponse(new(model.UpdatePacifyWordsSwitchResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Authorization").
+		WithJsonTag("Authorization").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSdkDate").
+		WithJsonTag("X-Sdk-Date").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XProjectId").
+		WithJsonTag("X-Project-Id").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XAppUserId").
+		WithJsonTag("X-App-UserId").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdatePacifyWordsTriggerTime() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/digital-human-chat/pacify-words-time").
+		WithResponse(new(model.UpdatePacifyWordsTriggerTimeResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Authorization").
+		WithJsonTag("Authorization").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSdkDate").
+		WithJsonTag("X-Sdk-Date").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XProjectId").
+		WithJsonTag("X-Project-Id").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XAppUserId").
+		WithJsonTag("X-App-UserId").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").
@@ -4908,6 +5331,83 @@ func GenReqDefForListStyles() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateSubtitleFile() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/subtitle-files").
+		WithResponse(new(model.CreateSubtitleFileResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Authorization").
+		WithJsonTag("Authorization").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSdkDate").
+		WithJsonTag("X-Sdk-Date").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XProjectId").
+		WithJsonTag("X-Project-Id").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XAppUserId").
+		WithJsonTag("X-App-UserId").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowSubtitleFile() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/subtitle-files/{job_id}").
+		WithResponse(new(model.ShowSubtitleFileResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("JobId").
+		WithJsonTag("job_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Authorization").
+		WithJsonTag("Authorization").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSdkDate").
+		WithJsonTag("X-Sdk-Date").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XProjectId").
+		WithJsonTag("X-Project-Id").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XAppUserId").
+		WithJsonTag("X-App-UserId").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-Request-Id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCountTenantResources() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -5849,6 +6349,38 @@ func GenReqDefForListTtsaJobs() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateAsyncTtsJob() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/ttsc/async-jobs").
+		WithResponse(new(model.CreateAsyncTtsJobResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Authorization").
+		WithJsonTag("Authorization").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSdkDate").
+		WithJsonTag("X-Sdk-Date").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XProjectId").
+		WithJsonTag("X-Project-Id").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XAppUserId").
+		WithJsonTag("X-App-UserId").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateTtsAudition() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -5880,6 +6412,39 @@ func GenReqDefForCreateTtsAudition() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowAsyncTtsJob() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/ttsc/async-jobs/{job_id}").
+		WithResponse(new(model.ShowAsyncTtsJobResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("JobId").
+		WithJsonTag("job_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Authorization").
+		WithJsonTag("Authorization").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XSdkDate").
+		WithJsonTag("X-Sdk-Date").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XProjectId").
+		WithJsonTag("X-Project-Id").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XAppUserId").
+		WithJsonTag("X-App-UserId").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -6476,6 +7041,10 @@ func GenReqDefForListWelcomeSpeech() *def.HttpRequestDef {
 		WithName("RobotId").
 		WithJsonTag("robot_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Language").
+		WithJsonTag("language").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Authorization").
@@ -6553,6 +7122,10 @@ func GenReqDefForShowWelcomeSpeechSwitch() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("RobotId").
 		WithJsonTag("robot_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Language").
+		WithJsonTag("language").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

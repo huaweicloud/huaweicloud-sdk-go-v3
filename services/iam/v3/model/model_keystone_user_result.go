@@ -39,6 +39,9 @@ type KeystoneUserResult struct {
 	PwdStrength *string `json:"pwd_strength,omitempty"`
 
 	Extra *KeystoneUserResultExtra `json:"extra,omitempty"`
+
+	// IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
+	AccessMode *string `json:"access_mode,omitempty"`
 }
 
 func (o KeystoneUserResult) String() string {

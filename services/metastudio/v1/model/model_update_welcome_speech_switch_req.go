@@ -14,6 +14,8 @@ type UpdateWelcomeSpeechSwitchReq struct {
 
 	// 欢迎词功能开关。
 	EnableWelcomeSpeech bool `json:"enable_welcome_speech"`
+
+	Language *LanguageEnum `json:"language,omitempty"`
 }
 
 func (o UpdateWelcomeSpeechSwitchReq) String() string {

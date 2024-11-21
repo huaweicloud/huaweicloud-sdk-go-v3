@@ -14,6 +14,8 @@ type CreateHotQuestionReq struct {
 
 	// 热点问题。
 	HotQuestion string `json:"hot_question"`
+
+	Language *LanguageEnum `json:"language,omitempty"`
 }
 
 func (o CreateHotQuestionReq) String() string {

@@ -23,6 +23,9 @@ type CreateTtsAuditionRequestBody struct {
 
 	// 音量。 默认值140，最小值90，最大值240。
 	Volume *int32 `json:"volume,omitempty"`
+
+	// 业务场景，多个入口调用试听接口时的业务场景
+	BusinessType *string `json:"business_type,omitempty"`
 }
 
 func (o CreateTtsAuditionRequestBody) String() string {

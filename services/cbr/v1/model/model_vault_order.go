@@ -44,6 +44,9 @@ type VaultOrder struct {
 
 	// 是否开启存储库自动扩容能力（只支持按需存储库）。
 	AutoExpand *bool `json:"auto_expand,omitempty"`
+
+	// 用于标识当前存储库是否已锁定
+	Locked *bool `json:"locked,omitempty"`
 }
 
 func (o VaultOrder) String() string {

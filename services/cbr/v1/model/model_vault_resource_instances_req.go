@@ -73,7 +73,7 @@ func GetVaultResourceInstancesReqCloudTypeEnum() VaultResourceInstancesReqCloudT
 			value: "public",
 		},
 		HYBRID: VaultResourceInstancesReqCloudType{
-			value: " hybrid",
+			value: "hybrid",
 		},
 	}
 }

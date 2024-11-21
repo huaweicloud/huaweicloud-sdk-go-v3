@@ -405,6 +405,22 @@ func (i *CreateClusterJobInvoker) Invoke() (*model.CreateClusterJobResponse, err
 	}
 }
 
+type CreateClusteringJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateClusteringJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateClusteringJobInvoker) Invoke() (*model.CreateClusteringJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateClusteringJobResponse), nil
+	}
+}
+
 type CreateCodeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -533,6 +549,22 @@ func (i *CreateDrugModelInvoker) Invoke() (*model.CreateDrugModelResponse, error
 	}
 }
 
+type CreateFavoriteInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFavoriteInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateFavoriteInvoker) Invoke() (*model.CreateFavoriteResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFavoriteResponse), nil
+	}
+}
+
 type CreateFepJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -642,6 +674,22 @@ func (i *CreateMolBatchDownloadTaskInvoker) Invoke() (*model.CreateMolBatchDownl
 		return nil, err
 	} else {
 		return result.(*model.CreateMolBatchDownloadTaskResponse), nil
+	}
+}
+
+type CreateMolDockingJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateMolDockingJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateMolDockingJobInvoker) Invoke() (*model.CreateMolDockingJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateMolDockingJobResponse), nil
 	}
 }
 
@@ -1042,6 +1090,22 @@ func (i *DeleteDrugModelInvoker) Invoke() (*model.DeleteDrugModelResponse, error
 		return nil, err
 	} else {
 		return result.(*model.DeleteDrugModelResponse), nil
+	}
+}
+
+type DeleteFavoriteInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteFavoriteInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteFavoriteInvoker) Invoke() (*model.DeleteFavoriteResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteFavoriteResponse), nil
 	}
 }
 
@@ -1829,6 +1893,22 @@ func (i *ListDrugModelInvoker) Invoke() (*model.ListDrugModelResponse, error) {
 	}
 }
 
+type ListFavoriteInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFavoriteInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListFavoriteInvoker) Invoke() (*model.ListFavoriteResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFavoriteResponse), nil
+	}
+}
+
 type ListGlobalWorkflowStatisticInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2549,6 +2629,22 @@ func (i *RunFastaPreprocessInvoker) Invoke() (*model.RunFastaPreprocessResponse,
 	}
 }
 
+type RunFormatConverterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunFormatConverterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RunFormatConverterInvoker) Invoke() (*model.RunFormatConverterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunFormatConverterResponse), nil
+	}
+}
+
 type Show3dStructureContentInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2690,6 +2786,22 @@ func (i *ShowBucketStorageInvoker) Invoke() (*model.ShowBucketStorageResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowBucketStorageResponse), nil
+	}
+}
+
+type ShowClusteringJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowClusteringJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowClusteringJobInvoker) Invoke() (*model.ShowClusteringJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowClusteringJobResponse), nil
 	}
 }
 

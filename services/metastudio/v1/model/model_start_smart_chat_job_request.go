@@ -21,10 +21,10 @@ type StartSmartChatJobRequest struct {
 	// 第三方用户ID。不允许输入中文。
 	XAppUserId *string `json:"X-App-UserId,omitempty"`
 
-	// 智能交互对话ID，获取方法请参考[[创建智能交互对话直播间](https://support.huaweicloud.com/api-metastudio/CreateSmartChatRoom.html)](tag:hc,hk)[“创建智能交互对话直播间”](tag:cmcc)。
+	// 智能交互对话ID，获取方法请参考[创建智能交互对话直播间](CreateSmartChatRoom.xml)。
 	RoomId string `json:"room_id"`
 
-	// 应用ID，获取方法请参考[[创建应用](https://support.huaweicloud.com/api-metastudio/CreateRobot.html)](tag:hc,hk)[“创建应用”](tag:cmcc)。
+	// 应用ID，获取方法请参考[创建应用](CreateRobot.xml)。
 	RobotId string `json:"robot_id"`
 
 	Body *SmartChatJobsReq `json:"body,omitempty"`

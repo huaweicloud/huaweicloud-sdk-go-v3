@@ -376,6 +376,27 @@ func (c *DataArtsStudioClient) BatchSyncMetadataInvoker(request *model.BatchSync
 	return &BatchSyncMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchTag 批量打标签(邀测)
+//
+// 批量给资产打标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) BatchTag(request *model.BatchTagRequest) (*model.BatchTagResponse, error) {
+	requestDef := GenReqDefForBatchTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchTagResponse), nil
+	}
+}
+
+// BatchTagInvoker 批量打标签(邀测)
+func (c *DataArtsStudioClient) BatchTagInvoker(request *model.BatchTagRequest) *BatchTagInvoker {
+	requestDef := GenReqDefForBatchTag()
+	return &BatchTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchUpdateSecurityDlfDataWareHouses 批量更新数据开发连接细粒度认证状态
 //
 // 批量更新数据开发连接细粒度认证状态

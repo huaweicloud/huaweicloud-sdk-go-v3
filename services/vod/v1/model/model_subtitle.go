@@ -20,6 +20,9 @@ type Subtitle struct {
 	// 字幕语言类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
 	Language SubtitleLanguage `json:"language"`
 
+	// subtitle name
+	Name *string `json:"name,omitempty"`
+
 	// 字幕文件的MD5值。
 	Md5 *string `json:"md5,omitempty"`
 

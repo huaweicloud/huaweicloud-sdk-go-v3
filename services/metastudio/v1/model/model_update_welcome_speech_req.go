@@ -11,6 +11,9 @@ type UpdateWelcomeSpeechReq struct {
 
 	// 欢迎词。
 	WelcomeSpeech *string `json:"welcome_speech,omitempty"`
+
+	// 欢迎词功能开关。
+	EnableWelcomeSpeech *bool `json:"enable_welcome_speech,omitempty"`
 }
 
 func (o UpdateWelcomeSpeechReq) String() string {

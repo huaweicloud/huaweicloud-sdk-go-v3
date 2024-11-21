@@ -514,6 +514,26 @@ func GenReqDefForCreateClusterJob() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateClusteringJob() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/eihealth-projects/{eihealth_project_id}/drug-jobs/clustering").
+		WithResponse(new(model.CreateClusteringJobResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EihealthProjectId").
+		WithJsonTag("eihealth_project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateCode() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -658,6 +678,26 @@ func GenReqDefForCreateDrugModel() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateFavorite() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/eihealth-projects/{eihealth_project_id}/favorites").
+		WithResponse(new(model.CreateFavoriteResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EihealthProjectId").
+		WithJsonTag("eihealth_project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateFepJob() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -778,6 +818,26 @@ func GenReqDefForCreateMolBatchDownloadTask() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/eihealth-projects/{eihealth_project_id}/drug-common/toolkit/batch-download").
 		WithResponse(new(model.CreateMolBatchDownloadTaskResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EihealthProjectId").
+		WithJsonTag("eihealth_project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateMolDockingJob() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/eihealth-projects/{eihealth_project_id}/drug-common/mol-docking").
+		WithResponse(new(model.CreateMolDockingJobResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1259,6 +1319,26 @@ func GenReqDefForDeleteDrugModel() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ModelId").
 		WithJsonTag("model_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteFavorite() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/{project_id}/eihealth-projects/{eihealth_project_id}/favorites/{favorite_id}").
+		WithResponse(new(model.DeleteFavoriteResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EihealthProjectId").
+		WithJsonTag("eihealth_project_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FavoriteId").
+		WithJsonTag("favorite_id").
 		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
@@ -2466,6 +2546,67 @@ func GenReqDefForListDrugModel() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListFavorite() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/eihealth-projects/{eihealth_project_id}/favorites").
+		WithResponse(new(model.ListFavoriteResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EihealthProjectId").
+		WithJsonTag("eihealth_project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceId").
+		WithJsonTag("resource_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("UserNameList").
+		WithJsonTag("user_name_list").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceTypeList").
+		WithJsonTag("resource_type_list").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TypeList").
+		WithJsonTag("type_list").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("StartTime").
+		WithJsonTag("start_time").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EndTime").
+		WithJsonTag("end_time").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("KeyWord").
+		WithJsonTag("key_word").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortDir").
+		WithJsonTag("sort_dir").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortKey").
+		WithJsonTag("sort_key").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListGlobalWorkflowStatistic() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -3295,6 +3436,30 @@ func GenReqDefForRunFastaPreprocess() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForRunFormatConverter() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/eihealth-projects/{eihealth_project_id}/drug-common/toolkit/format-converter").
+		WithResponse(new(model.RunFormatConverterResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EihealthProjectId").
+		WithJsonTag("eihealth_project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShow3dStructureContent() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -3470,6 +3635,26 @@ func GenReqDefForShowBucketStorage() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EihealthProjectId").
 		WithJsonTag("eihealth_project_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowClusteringJob() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/eihealth-projects/{eihealth_project_id}/drug-jobs/clustering/{job_id}").
+		WithResponse(new(model.ShowClusteringJobResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EihealthProjectId").
+		WithJsonTag("eihealth_project_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("JobId").
+		WithJsonTag("job_id").
 		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()

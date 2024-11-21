@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// OptimizationMode 靶点口袋分子设计模式：支持从头生成、侧链修饰、骨架跃迁
+// OptimizationMode 靶点口袋分子设计模式：支持从头生成、侧链修饰、骨架跃迁、片段生长。
 type OptimizationMode struct {
 	value string
 }
@@ -18,6 +18,7 @@ type OptimizationModeEnum struct {
 	GENERATION             OptimizationMode
 	SIDE_CHAINS_DECORATION OptimizationMode
 	SCAFFOLD_HOPPING       OptimizationMode
+	FRAGMENT_GROWING       OptimizationMode
 }
 
 func GetOptimizationModeEnum() OptimizationModeEnum {
@@ -30,6 +31,9 @@ func GetOptimizationModeEnum() OptimizationModeEnum {
 		},
 		SCAFFOLD_HOPPING: OptimizationMode{
 			value: "scaffold_hopping",
+		},
+		FRAGMENT_GROWING: OptimizationMode{
+			value: "fragment_growing",
 		},
 	}
 }

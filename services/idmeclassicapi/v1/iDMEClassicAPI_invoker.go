@@ -629,6 +629,22 @@ func (i *DeleteLogicalLatestVersionInvoker) Invoke() (*model.DeleteLogicalLatest
 	}
 }
 
+type DeleteMultiViewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteMultiViewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteMultiViewInvoker) Invoke() (*model.DeleteMultiViewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteMultiViewResponse), nil
+	}
+}
+
 type DeleteTargetInvoker struct {
 	*invoker.BaseInvoker
 }

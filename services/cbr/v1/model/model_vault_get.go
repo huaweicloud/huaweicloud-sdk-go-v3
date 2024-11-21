@@ -56,6 +56,9 @@ type VaultGet struct {
 	// 用于标识SMB服务
 	SysLockSourceService *string `json:"sys_lock_source_service,omitempty"`
 
+	// 用于标识该存储库是否已锁定
+	Locked *bool `json:"locked,omitempty"`
+
 	// 更新时间,例如:\"2020-02-05T10:38:34.209782\"
 	UpdatedAt string `json:"updated_at"`
 

@@ -10,7 +10,7 @@ import (
 type ListNosqlTaskListResponse struct {
 
 	// 记录总数。
-	TotalCount *string `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 任务详情。
 	Schedules      *[]ScheduleDetailInfo `json:"schedules,omitempty"`

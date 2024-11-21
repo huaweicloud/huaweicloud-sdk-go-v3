@@ -23,6 +23,9 @@ type StartSmartChatJobResponse struct {
 
 	VideoConfig *SmartChatVideoConfig `json:"video_config,omitempty"`
 
+	// 语音配置参数列表。
+	VoiceConfigList *[]SmartChatVoiceConfig `json:"voice_config_list,omitempty"`
+
 	// 智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
 	ChatVideoType *StartSmartChatJobResponseChatVideoType `json:"chat_video_type,omitempty"`
 
@@ -34,6 +37,9 @@ type StartSmartChatJobResponse struct {
 
 	// 是否透明背景
 	IsTransparent *bool `json:"is_transparent,omitempty"`
+
+	// 默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
+	DefaultLanguage *StartSmartChatJobResponseDefaultLanguage `json:"default_language,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
@@ -81,6 +87,53 @@ func (c StartSmartChatJobResponseChatVideoType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *StartSmartChatJobResponseChatVideoType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type StartSmartChatJobResponseDefaultLanguage struct {
+	value string
+}
+
+type StartSmartChatJobResponseDefaultLanguageEnum struct {
+	CN StartSmartChatJobResponseDefaultLanguage
+	EN StartSmartChatJobResponseDefaultLanguage
+}
+
+func GetStartSmartChatJobResponseDefaultLanguageEnum() StartSmartChatJobResponseDefaultLanguageEnum {
+	return StartSmartChatJobResponseDefaultLanguageEnum{
+		CN: StartSmartChatJobResponseDefaultLanguage{
+			value: "CN",
+		},
+		EN: StartSmartChatJobResponseDefaultLanguage{
+			value: "EN",
+		},
+	}
+}
+
+func (c StartSmartChatJobResponseDefaultLanguage) Value() string {
+	return c.value
+}
+
+func (c StartSmartChatJobResponseDefaultLanguage) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *StartSmartChatJobResponseDefaultLanguage) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

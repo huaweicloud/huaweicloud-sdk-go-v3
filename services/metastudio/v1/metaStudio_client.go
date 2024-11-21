@@ -1620,6 +1620,216 @@ func (c *MetaStudioClient) CreateOnceCodeInvoker(request *model.CreateOnceCodeRe
 	return &CreateOnceCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePacifyWords 创建安抚话术
+//
+// 该接口用于创建安抚话术。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreatePacifyWords(request *model.CreatePacifyWordsRequest) (*model.CreatePacifyWordsResponse, error) {
+	requestDef := GenReqDefForCreatePacifyWords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePacifyWordsResponse), nil
+	}
+}
+
+// CreatePacifyWordsInvoker 创建安抚话术
+func (c *MetaStudioClient) CreatePacifyWordsInvoker(request *model.CreatePacifyWordsRequest) *CreatePacifyWordsInvoker {
+	requestDef := GenReqDefForCreatePacifyWords()
+	return &CreatePacifyWordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePacifyWords 删除安抚话术
+//
+// 该接口用于删除安抚话术。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeletePacifyWords(request *model.DeletePacifyWordsRequest) (*model.DeletePacifyWordsResponse, error) {
+	requestDef := GenReqDefForDeletePacifyWords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePacifyWordsResponse), nil
+	}
+}
+
+// DeletePacifyWordsInvoker 删除安抚话术
+func (c *MetaStudioClient) DeletePacifyWordsInvoker(request *model.DeletePacifyWordsRequest) *DeletePacifyWordsInvoker {
+	requestDef := GenReqDefForDeletePacifyWords()
+	return &DeletePacifyWordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPacifyWords 查询安抚话术列表
+//
+// 该接口用于查询安抚话术列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListPacifyWords(request *model.ListPacifyWordsRequest) (*model.ListPacifyWordsResponse, error) {
+	requestDef := GenReqDefForListPacifyWords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPacifyWordsResponse), nil
+	}
+}
+
+// ListPacifyWordsInvoker 查询安抚话术列表
+func (c *MetaStudioClient) ListPacifyWordsInvoker(request *model.ListPacifyWordsRequest) *ListPacifyWordsInvoker {
+	requestDef := GenReqDefForListPacifyWords()
+	return &ListPacifyWordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPacifyWords 查询安抚话术详情
+//
+// 该接口用于查询安抚话术详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowPacifyWords(request *model.ShowPacifyWordsRequest) (*model.ShowPacifyWordsResponse, error) {
+	requestDef := GenReqDefForShowPacifyWords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPacifyWordsResponse), nil
+	}
+}
+
+// ShowPacifyWordsInvoker 查询安抚话术详情
+func (c *MetaStudioClient) ShowPacifyWordsInvoker(request *model.ShowPacifyWordsRequest) *ShowPacifyWordsInvoker {
+	requestDef := GenReqDefForShowPacifyWords()
+	return &ShowPacifyWordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPacifyWordsIntent 查询安抚话术意图
+//
+// 该接口用于查询安抚话术意图。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowPacifyWordsIntent(request *model.ShowPacifyWordsIntentRequest) (*model.ShowPacifyWordsIntentResponse, error) {
+	requestDef := GenReqDefForShowPacifyWordsIntent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPacifyWordsIntentResponse), nil
+	}
+}
+
+// ShowPacifyWordsIntentInvoker 查询安抚话术意图
+func (c *MetaStudioClient) ShowPacifyWordsIntentInvoker(request *model.ShowPacifyWordsIntentRequest) *ShowPacifyWordsIntentInvoker {
+	requestDef := GenReqDefForShowPacifyWordsIntent()
+	return &ShowPacifyWordsIntentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPacifyWordsSwitch 查询安抚话术功能开关
+//
+// 该接口用于查询安抚话术功能开关。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowPacifyWordsSwitch(request *model.ShowPacifyWordsSwitchRequest) (*model.ShowPacifyWordsSwitchResponse, error) {
+	requestDef := GenReqDefForShowPacifyWordsSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPacifyWordsSwitchResponse), nil
+	}
+}
+
+// ShowPacifyWordsSwitchInvoker 查询安抚话术功能开关
+func (c *MetaStudioClient) ShowPacifyWordsSwitchInvoker(request *model.ShowPacifyWordsSwitchRequest) *ShowPacifyWordsSwitchInvoker {
+	requestDef := GenReqDefForShowPacifyWordsSwitch()
+	return &ShowPacifyWordsSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPacifyWordsTriggerTime 查询安抚话术等待触发时长
+//
+// 该接口用于查询等待触发时长。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowPacifyWordsTriggerTime(request *model.ShowPacifyWordsTriggerTimeRequest) (*model.ShowPacifyWordsTriggerTimeResponse, error) {
+	requestDef := GenReqDefForShowPacifyWordsTriggerTime()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPacifyWordsTriggerTimeResponse), nil
+	}
+}
+
+// ShowPacifyWordsTriggerTimeInvoker 查询安抚话术等待触发时长
+func (c *MetaStudioClient) ShowPacifyWordsTriggerTimeInvoker(request *model.ShowPacifyWordsTriggerTimeRequest) *ShowPacifyWordsTriggerTimeInvoker {
+	requestDef := GenReqDefForShowPacifyWordsTriggerTime()
+	return &ShowPacifyWordsTriggerTimeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePacifyWords 修改安抚话术
+//
+// 该接口用于修改安抚话术。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdatePacifyWords(request *model.UpdatePacifyWordsRequest) (*model.UpdatePacifyWordsResponse, error) {
+	requestDef := GenReqDefForUpdatePacifyWords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePacifyWordsResponse), nil
+	}
+}
+
+// UpdatePacifyWordsInvoker 修改安抚话术
+func (c *MetaStudioClient) UpdatePacifyWordsInvoker(request *model.UpdatePacifyWordsRequest) *UpdatePacifyWordsInvoker {
+	requestDef := GenReqDefForUpdatePacifyWords()
+	return &UpdatePacifyWordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePacifyWordsSwitch 修改安抚话术功能开关
+//
+// 该接口用于修改安抚话术功能开关。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdatePacifyWordsSwitch(request *model.UpdatePacifyWordsSwitchRequest) (*model.UpdatePacifyWordsSwitchResponse, error) {
+	requestDef := GenReqDefForUpdatePacifyWordsSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePacifyWordsSwitchResponse), nil
+	}
+}
+
+// UpdatePacifyWordsSwitchInvoker 修改安抚话术功能开关
+func (c *MetaStudioClient) UpdatePacifyWordsSwitchInvoker(request *model.UpdatePacifyWordsSwitchRequest) *UpdatePacifyWordsSwitchInvoker {
+	requestDef := GenReqDefForUpdatePacifyWordsSwitch()
+	return &UpdatePacifyWordsSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePacifyWordsTriggerTime 修改安抚话术等待触发时长
+//
+// 该接口用于修改安抚话术等待触发时长。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdatePacifyWordsTriggerTime(request *model.UpdatePacifyWordsTriggerTimeRequest) (*model.UpdatePacifyWordsTriggerTimeResponse, error) {
+	requestDef := GenReqDefForUpdatePacifyWordsTriggerTime()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePacifyWordsTriggerTimeResponse), nil
+	}
+}
+
+// UpdatePacifyWordsTriggerTimeInvoker 修改安抚话术等待触发时长
+func (c *MetaStudioClient) UpdatePacifyWordsTriggerTimeInvoker(request *model.UpdatePacifyWordsTriggerTimeRequest) *UpdatePacifyWordsTriggerTimeInvoker {
+	requestDef := GenReqDefForUpdatePacifyWordsTriggerTime()
+	return &UpdatePacifyWordsTriggerTimeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePictureModelingByUrlJob 基于图片URL创建照片建模任务
 //
 // 该接口用于从URL中获取图片进行照片建模任务。
@@ -2418,6 +2628,48 @@ func (c *MetaStudioClient) ListStylesInvoker(request *model.ListStylesRequest) *
 	return &ListStylesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateSubtitleFile 创建分身数字人视频字幕文件
+//
+// 该接口用于创建分身数字人视频字幕文件任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateSubtitleFile(request *model.CreateSubtitleFileRequest) (*model.CreateSubtitleFileResponse, error) {
+	requestDef := GenReqDefForCreateSubtitleFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSubtitleFileResponse), nil
+	}
+}
+
+// CreateSubtitleFileInvoker 创建分身数字人视频字幕文件
+func (c *MetaStudioClient) CreateSubtitleFileInvoker(request *model.CreateSubtitleFileRequest) *CreateSubtitleFileInvoker {
+	requestDef := GenReqDefForCreateSubtitleFile()
+	return &CreateSubtitleFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSubtitleFile 查询分身数字人视频字幕文件任务详情
+//
+// 该接口用于查询分身数字人视频字幕文件任务详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowSubtitleFile(request *model.ShowSubtitleFileRequest) (*model.ShowSubtitleFileResponse, error) {
+	requestDef := GenReqDefForShowSubtitleFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSubtitleFileResponse), nil
+	}
+}
+
+// ShowSubtitleFileInvoker 查询分身数字人视频字幕文件任务详情
+func (c *MetaStudioClient) ShowSubtitleFileInvoker(request *model.ShowSubtitleFileRequest) *ShowSubtitleFileInvoker {
+	requestDef := GenReqDefForShowSubtitleFile()
+	return &ShowSubtitleFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CountTenantResources 统计时间段内过期的资源数量
 //
 // 统计指定时间段内即将过期的包周期与一次性资源数量。
@@ -2986,6 +3238,27 @@ func (c *MetaStudioClient) ListTtsaJobsInvoker(request *model.ListTtsaJobsReques
 	return &ListTtsaJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAsyncTtsJob 创建TTS语音异步任务
+//
+// 该接口用于对外生成音频文件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateAsyncTtsJob(request *model.CreateAsyncTtsJobRequest) (*model.CreateAsyncTtsJobResponse, error) {
+	requestDef := GenReqDefForCreateAsyncTtsJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAsyncTtsJobResponse), nil
+	}
+}
+
+// CreateAsyncTtsJobInvoker 创建TTS语音异步任务
+func (c *MetaStudioClient) CreateAsyncTtsJobInvoker(request *model.CreateAsyncTtsJobRequest) *CreateAsyncTtsJobInvoker {
+	requestDef := GenReqDefForCreateAsyncTtsJob()
+	return &CreateAsyncTtsJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateTtsAudition 创建TTS试听任务
 //
 // 该接口用于创建生成播报内容的语音试听文件任务。
@@ -3009,6 +3282,27 @@ func (c *MetaStudioClient) CreateTtsAudition(request *model.CreateTtsAuditionReq
 func (c *MetaStudioClient) CreateTtsAuditionInvoker(request *model.CreateTtsAuditionRequest) *CreateTtsAuditionInvoker {
 	requestDef := GenReqDefForCreateTtsAudition()
 	return &CreateTtsAuditionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAsyncTtsJob 获取音频语音文件
+//
+// 该接口用于获取TTS音频文件下载链接。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowAsyncTtsJob(request *model.ShowAsyncTtsJobRequest) (*model.ShowAsyncTtsJobResponse, error) {
+	requestDef := GenReqDefForShowAsyncTtsJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAsyncTtsJobResponse), nil
+	}
+}
+
+// ShowAsyncTtsJobInvoker 获取音频语音文件
+func (c *MetaStudioClient) ShowAsyncTtsJobInvoker(request *model.ShowAsyncTtsJobRequest) *ShowAsyncTtsJobInvoker {
+	requestDef := GenReqDefForShowAsyncTtsJob()
+	return &ShowAsyncTtsJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowTtsAuditionFile 获取TTS试听文件

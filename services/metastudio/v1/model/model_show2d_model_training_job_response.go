@@ -36,7 +36,7 @@ type Show2dModelTrainingJobResponse struct {
 	// 创建时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”
 	CreateTime *string `json:"create_time,omitempty"`
 
-	// 分身数字人训练任务创建者联系方式，如手机或邮箱等。
+	// 分身数字人训练任务创建者的手机号。
 	Contact *string `json:"contact,omitempty"`
 
 	// 分身数字人训练任务的批次名称。

@@ -20,6 +20,9 @@ type ClusterInformationSpec struct {
 	EniNetwork *EniNetworkUpdate `json:"eniNetwork,omitempty"`
 
 	HostNetwork *ClusterInformationSpecHostNetwork `json:"hostNetwork,omitempty"`
+
+	// 集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
+	DeletionProtection *bool `json:"deletionProtection,omitempty"`
 }
 
 func (o ClusterInformationSpec) String() string {

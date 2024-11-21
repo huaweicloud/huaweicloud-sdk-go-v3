@@ -8,6 +8,10 @@ import (
 
 // CreateVolumeRequest Request Object
 type CreateVolumeRequest struct {
+
+	// 请求的幂等标识。
+	XClientToken *string `json:"X-Client-Token,omitempty"`
+
 	Body *CreateVolumeRequestBody `json:"body,omitempty"`
 }
 

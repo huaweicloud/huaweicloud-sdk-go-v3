@@ -17,6 +17,9 @@ type KeystoneCreateUserResult struct {
 	// IAM用户描述信息。
 	Description *string `json:"description,omitempty"`
 
+	// IAM用户密码状态。true：需要修改密码，false：正常；如果密码未设置，此字段可能不返回。
+	PwdStatus *bool `json:"pwd_status,omitempty"`
+
 	// IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
 	PasswordExpiresAt string `json:"password_expires_at"`
 

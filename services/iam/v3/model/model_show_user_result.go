@@ -61,6 +61,12 @@ type ShowUserResult struct {
 
 	// IAM用户描述信息
 	Description string `json:"description"`
+
+	// IAM用户密码创建更新时间。
+	PwdCreateTime *string `json:"pwd_create_time,omitempty"`
+
+	// IAM用户更新时间。
+	ModifyPwdTime *string `json:"modify_pwd_time,omitempty"`
 }
 
 func (o ShowUserResult) String() string {

@@ -67,10 +67,10 @@ func GetBackupExtendInfoSupportedRestoreModeEnum() BackupExtendInfoSupportedRest
 			value: "na",
 		},
 		BACKUP: BackupExtendInfoSupportedRestoreMode{
-			value: " backup",
+			value: "backup",
 		},
 		SNAPSHOT: BackupExtendInfoSupportedRestoreMode{
-			value: " snapshot",
+			value: "snapshot",
 		},
 	}
 }

@@ -9,7 +9,7 @@ import (
 // CreateDialogUrlReq 创建对话链接。
 type CreateDialogUrlReq struct {
 
-	// 智能交互对话ID。
+	// 智能交互对话ID，获取方法请参考[创建智能交互对话直播间](CreateSmartChatRoom.xml)。
 	RoomId string `json:"room_id"`
 
 	// 应用ID。

@@ -28,7 +28,7 @@ type ScopedTokenInfo struct {
 	Roles []ScopedTokenInfoRoles `json:"roles"`
 
 	// catalog信息
-	Catalog []UnscopedTokenInfoCatalog `json:"catalog"`
+	Catalog []UnscopedTokenInfoCatalogEndpoints `json:"catalog"`
 }
 
 func (o ScopedTokenInfo) String() string {

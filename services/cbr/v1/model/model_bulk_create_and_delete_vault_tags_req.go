@@ -46,7 +46,7 @@ func GetBulkCreateAndDeleteVaultTagsReqActionEnum() BulkCreateAndDeleteVaultTags
 			value: "create",
 		},
 		DELETE: BulkCreateAndDeleteVaultTagsReqAction{
-			value: " delete",
+			value: "delete",
 		},
 	}
 }

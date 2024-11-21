@@ -29,6 +29,9 @@ type ThirdPartyModelConfig struct {
 
 	// SIS所在区域的projectId
 	SisProjectId *string `json:"sis_project_id,omitempty"`
+
+	// 是否开启热词
+	EnableHotWords *bool `json:"enable_hot_words,omitempty"`
 }
 
 func (o ThirdPartyModelConfig) String() string {

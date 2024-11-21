@@ -25,6 +25,9 @@ type VaultUpdate struct {
 
 	// 存储库容量阈值，存储库已用容量和总容量的百分比超过该值，若smn_notify为开，将发送相关通知。
 	Threshold *int32 `json:"threshold,omitempty"`
+
+	// 用于标识当前存储库是否已锁定
+	Locked *bool `json:"locked,omitempty"`
 }
 
 func (o VaultUpdate) String() string {

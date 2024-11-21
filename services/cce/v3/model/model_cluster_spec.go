@@ -78,6 +78,9 @@ type ClusterSpec struct {
 	// 集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
 	EnableDistMgt *bool `json:"enableDistMgt,omitempty"`
 
+	// 集群删除保护，默认为false关闭，如果开启后用户将无法删除该集群。
+	DeletionProtection *bool `json:"deletionProtection,omitempty"`
+
 	// 覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
 	ConfigurationsOverride *[]PackageConfiguration `json:"configurationsOverride,omitempty"`
 }

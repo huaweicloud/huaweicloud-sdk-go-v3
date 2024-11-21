@@ -472,6 +472,10 @@ func GenReqDefForListAlarmHistories() *def.HttpRequestDef {
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OrderBy").
+		WithJsonTag("order_by").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

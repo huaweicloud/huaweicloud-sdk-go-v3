@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -38,6 +41,9 @@ type ListAlarmHistoriesRequest struct {
 
 	// 分页大小
 	Limit *int32 `json:"limit,omitempty"`
+
+	// 按关键字排序, 默认为update_time, {first_alarm_time: 告警产生时间, update_time: 更新时间, alarm_level: 告警级别, record_id：表记录主键}
+	OrderBy *ListAlarmHistoriesRequestOrderBy `json:"order_by,omitempty"`
 }
 
 func (o ListAlarmHistoriesRequest) String() string {
@@ -47,4 +53,59 @@ func (o ListAlarmHistoriesRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListAlarmHistoriesRequest", string(data)}, " ")
+}
+
+type ListAlarmHistoriesRequestOrderBy struct {
+	value string
+}
+
+type ListAlarmHistoriesRequestOrderByEnum struct {
+	FIRST_ALARM_TIME ListAlarmHistoriesRequestOrderBy
+	UPDATE_TIME      ListAlarmHistoriesRequestOrderBy
+	ALARM_LEVEL      ListAlarmHistoriesRequestOrderBy
+	RECORD_ID        ListAlarmHistoriesRequestOrderBy
+}
+
+func GetListAlarmHistoriesRequestOrderByEnum() ListAlarmHistoriesRequestOrderByEnum {
+	return ListAlarmHistoriesRequestOrderByEnum{
+		FIRST_ALARM_TIME: ListAlarmHistoriesRequestOrderBy{
+			value: "first_alarm_time",
+		},
+		UPDATE_TIME: ListAlarmHistoriesRequestOrderBy{
+			value: "update_time",
+		},
+		ALARM_LEVEL: ListAlarmHistoriesRequestOrderBy{
+			value: "alarm_level",
+		},
+		RECORD_ID: ListAlarmHistoriesRequestOrderBy{
+			value: "record_id",
+		},
+	}
+}
+
+func (c ListAlarmHistoriesRequestOrderBy) Value() string {
+	return c.value
+}
+
+func (c ListAlarmHistoriesRequestOrderBy) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListAlarmHistoriesRequestOrderBy) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

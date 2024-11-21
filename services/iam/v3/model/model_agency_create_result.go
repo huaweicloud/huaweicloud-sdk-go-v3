@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// AgencyResult
-type AgencyResult struct {
+// AgencyCreateResult
+type AgencyCreateResult struct {
 
 	// 委托创建时间。
 	CreateTime string `json:"create_time"`
@@ -29,19 +29,13 @@ type AgencyResult struct {
 
 	// 被委托方账号ID。
 	TrustDomainId *string `json:"trust_domain_id,omitempty"`
-
-	// 被委托方账号名。
-	TrustDomainName *string `json:"trust_domain_name,omitempty"`
-
-	// 委托URN。
-	AgencyUrn *string `json:"agency_urn,omitempty"`
 }
 
-func (o AgencyResult) String() string {
+func (o AgencyCreateResult) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "AgencyResult struct{}"
+		return "AgencyCreateResult struct{}"
 	}
 
-	return strings.Join([]string{"AgencyResult", string(data)}, " ")
+	return strings.Join([]string{"AgencyCreateResult", string(data)}, " ")
 }

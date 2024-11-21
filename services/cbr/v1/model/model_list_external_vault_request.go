@@ -3,9 +3,6 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
@@ -22,7 +19,7 @@ type ListExternalVaultRequest struct {
 	Offset *int32 `json:"offset,omitempty"`
 
 	// [保护类型。取值为backup，replication和hybrid。](tag:hws,hws_hk) [保护类型。取值为backup和replication。](tag:ocb) [保护类型。取值为backup。](tag:g42,hk-g42,sbc,dt,fcs_vm,ctc,tm,tlf,cmcc,hcso_dt)
-	ProtectType *ListExternalVaultRequestProtectType `json:"protect_type,omitempty"`
+	ProtectType *string `json:"protect_type,omitempty"`
 
 	// 区域ID
 	RegionId string `json:"region_id"`
@@ -44,47 +41,4 @@ func (o ListExternalVaultRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListExternalVaultRequest", string(data)}, " ")
-}
-
-type ListExternalVaultRequestProtectType struct {
-	value string
-}
-
-type ListExternalVaultRequestProtectTypeEnum struct {
-	BACKUPREPLICATIONHYBRID ListExternalVaultRequestProtectType
-}
-
-func GetListExternalVaultRequestProtectTypeEnum() ListExternalVaultRequestProtectTypeEnum {
-	return ListExternalVaultRequestProtectTypeEnum{
-		BACKUPREPLICATIONHYBRID: ListExternalVaultRequestProtectType{
-			value: "backup;replication;hybrid",
-		},
-	}
-}
-
-func (c ListExternalVaultRequestProtectType) Value() string {
-	return c.value
-}
-
-func (c ListExternalVaultRequestProtectType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ListExternalVaultRequestProtectType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

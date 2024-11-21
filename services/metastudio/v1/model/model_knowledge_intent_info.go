@@ -12,7 +12,7 @@ type KnowledgeIntentInfo struct {
 	// 意图ID。
 	IntentId *string `json:"intent_id,omitempty"`
 
-	// 你是谁。
+	// 主题。
 	Name *string `json:"name,omitempty"`
 
 	// 意图标识。

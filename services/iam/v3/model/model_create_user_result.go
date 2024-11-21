@@ -62,6 +62,9 @@ type CreateUserResult struct {
 
 	// 密码过期时间（UTC时间），“null”表示密码不过期。
 	PasswordExpiresAt *string `json:"password_expires_at,omitempty"`
+
+	// 用户默认的项目ID。
+	DefaultProjectId *string `json:"default_project_id,omitempty"`
 }
 
 func (o CreateUserResult) String() string {

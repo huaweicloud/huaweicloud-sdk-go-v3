@@ -8,7 +8,10 @@ import (
 
 // DeleteCustomPolicyResponse Response Object
 type DeleteCustomPolicyResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	//
+	Message        *string `json:"message,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteCustomPolicyResponse) String() string {

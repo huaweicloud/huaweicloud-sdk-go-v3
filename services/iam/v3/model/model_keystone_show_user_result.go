@@ -34,6 +34,9 @@ type KeystoneShowUserResult struct {
 
 	// IAM用户是否启用。true表示启用，false表示停用，默认为true。
 	Enabled bool `json:"enabled"`
+
+	// IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
+	AccessMode *string `json:"access_mode,omitempty"`
 }
 
 func (o KeystoneShowUserResult) String() string {

@@ -68,7 +68,7 @@ func GetOrganizationPolicyOperationTypeEnum() OrganizationPolicyOperationTypeEnu
 			value: "backup",
 		},
 		REPLICATION: OrganizationPolicyOperationType{
-			value: " replication",
+			value: "replication",
 		},
 	}
 }

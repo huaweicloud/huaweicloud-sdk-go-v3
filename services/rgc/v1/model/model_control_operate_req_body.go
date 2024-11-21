@@ -14,6 +14,9 @@ type ControlOperateReqBody struct {
 
 	// 组织单元的ID信息。
 	TargetIdentifier string `json:"target_identifier"`
+
+	// 策略参数。
+	Parameters *[]EnableControlParameters `json:"parameters,omitempty"`
 }
 
 func (o ControlOperateReqBody) String() string {

@@ -28,7 +28,7 @@ type ShowHttpAttackTimelineStatsRequest struct {
 	GroupByValue *string `json:"group_by_value,omitempty"`
 
 	// 时间粒度(单位：秒)，不同时间范围有不同的可选时间粒度。[0,1H]，可选时间粒度为1M、5M；(1H,1D]，可选时间粒度为1M、5M、1H；(1D,3D]，可选时间粒度为1M、5M、1H、1D；(3D,7D]，可选时间粒度为5M、1H、1D；(7D,30D]，可选时间粒度为1H、1D。其中M代表分钟，H代表小时，D代表天。
-	Interval *int32 `json:"interval,omitempty"`
+	Interval int32 `json:"interval"`
 
 	// 开始时间
 	StartTime int64 `json:"start_time"`
