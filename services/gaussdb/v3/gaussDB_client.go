@@ -691,6 +691,27 @@ func (c *GaussDBClient) DescribeBackupEncryptStatusInvoker(request *model.Descri
 	return &DescribeBackupEncryptStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DownloadSlowLogFile 获取慢日志下载链接
+//
+// 获取慢日志下载链接
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) DownloadSlowLogFile(request *model.DownloadSlowLogFileRequest) (*model.DownloadSlowLogFileResponse, error) {
+	requestDef := GenReqDefForDownloadSlowLogFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadSlowLogFileResponse), nil
+	}
+}
+
+// DownloadSlowLogFileInvoker 获取慢日志下载链接
+func (c *GaussDBClient) DownloadSlowLogFileInvoker(request *model.DownloadSlowLogFileRequest) *DownloadSlowLogFileInvoker {
+	requestDef := GenReqDefForDownloadSlowLogFile()
+	return &DownloadSlowLogFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExpandGaussMySqlInstanceVolume 包周期存储扩容
 //
 // 包周期存储扩容。
@@ -2036,6 +2057,27 @@ func (c *GaussDBClient) ShowLtsConfigsInvoker(request *model.ShowLtsConfigsReque
 	return &ShowLtsConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowMultiTenant 查询多租特性开关状态
+//
+// 查询多租特性开关状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowMultiTenant(request *model.ShowMultiTenantRequest) (*model.ShowMultiTenantResponse, error) {
+	requestDef := GenReqDefForShowMultiTenant()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMultiTenantResponse), nil
+	}
+}
+
+// ShowMultiTenantInvoker 查询多租特性开关状态
+func (c *GaussDBClient) ShowMultiTenantInvoker(request *model.ShowMultiTenantRequest) *ShowMultiTenantInvoker {
+	requestDef := GenReqDefForShowMultiTenant()
+	return &ShowMultiTenantInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowProxyConfigurations 查询数据库代理内核参数。
 //
 // 查询数据库代理内核参数。
@@ -2139,6 +2181,27 @@ func (c *GaussDBClient) ShowRestoreTables(request *model.ShowRestoreTablesReques
 func (c *GaussDBClient) ShowRestoreTablesInvoker(request *model.ShowRestoreTablesRequest) *ShowRestoreTablesInvoker {
 	requestDef := GenReqDefForShowRestoreTables()
 	return &ShowRestoreTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSlowLogStatistics 查询慢日志统计信息
+//
+// 查询慢日志统计信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowSlowLogStatistics(request *model.ShowSlowLogStatisticsRequest) (*model.ShowSlowLogStatisticsResponse, error) {
+	requestDef := GenReqDefForShowSlowLogStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSlowLogStatisticsResponse), nil
+	}
+}
+
+// ShowSlowLogStatisticsInvoker 查询慢日志统计信息
+func (c *GaussDBClient) ShowSlowLogStatisticsInvoker(request *model.ShowSlowLogStatisticsRequest) *ShowSlowLogStatisticsInvoker {
+	requestDef := GenReqDefForShowSlowLogStatistics()
+	return &ShowSlowLogStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSlowlogSensitiveStatus 查询慢日志脱敏状态
@@ -2623,6 +2686,27 @@ func (c *GaussDBClient) UpdateInstanceMonitor(request *model.UpdateInstanceMonit
 func (c *GaussDBClient) UpdateInstanceMonitorInvoker(request *model.UpdateInstanceMonitorRequest) *UpdateInstanceMonitorInvoker {
 	requestDef := GenReqDefForUpdateInstanceMonitor()
 	return &UpdateInstanceMonitorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateMultiTenant 开启或者关闭多租特性
+//
+// 开启或者关闭多租特性。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateMultiTenant(request *model.UpdateMultiTenantRequest) (*model.UpdateMultiTenantResponse, error) {
+	requestDef := GenReqDefForUpdateMultiTenant()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateMultiTenantResponse), nil
+	}
+}
+
+// UpdateMultiTenantInvoker 开启或者关闭多租特性
+func (c *GaussDBClient) UpdateMultiTenantInvoker(request *model.UpdateMultiTenantRequest) *UpdateMultiTenantInvoker {
+	requestDef := GenReqDefForUpdateMultiTenant()
+	return &UpdateMultiTenantInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateNewNodeAutoAddSwitch 开启或关闭新增节点自动加入该Proxy

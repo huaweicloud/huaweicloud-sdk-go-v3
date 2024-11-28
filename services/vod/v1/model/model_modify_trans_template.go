@@ -21,7 +21,7 @@ type ModifyTransTemplate struct {
 	IsAutoEncrypt *bool `json:"is_auto_encrypt,omitempty"`
 
 	// 画质配置信息列表<br/>
-	QualityInfoList []QualityInfoList `json:"quality_info_list"`
+	QualityInfoList *[]QualityInfoList `json:"quality_info_list,omitempty"`
 
 	// 绑定的水印模板组ID数组<br/>
 	WatermarkTemplateIds *[]string `json:"watermark_template_ids,omitempty"`
@@ -29,7 +29,7 @@ type ModifyTransTemplate struct {
 	// 模板介绍<br/>
 	Description *string `json:"description,omitempty"`
 
-	Common *CommonInfo `json:"common"`
+	Common *CommonInfo `json:"common,omitempty"`
 }
 
 func (o ModifyTransTemplate) String() string {

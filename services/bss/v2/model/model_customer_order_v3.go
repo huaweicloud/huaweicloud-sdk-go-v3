@@ -54,6 +54,9 @@ type CustomerOrderV3 struct {
 
 	// 订单创建者名称。 如果是客户自己下单，则此处返回下单操作员的登录名称；如果是运营人员从后台下单，则此处返回“运营人员”；如果是运营系统自动触发下单，则此处返回“运营系统”。
 	UserName *string `json:"user_name,omitempty"`
+
+	// 订单待付款截止时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+	PendingPaymentEndTime *string `json:"pending_payment_end_time,omitempty"`
 }
 
 func (o CustomerOrderV3) String() string {

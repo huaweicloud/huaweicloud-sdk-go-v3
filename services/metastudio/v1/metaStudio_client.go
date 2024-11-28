@@ -208,69 +208,6 @@ func (c *MetaStudioClient) ShowAgencyInvoker(request *model.ShowAgencyRequest) *
 	return &ShowAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateBeautyPreviewJob 创建美白预览任务
-//
-// 该接口用于创建美白预览任务。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) CreateBeautyPreviewJob(request *model.CreateBeautyPreviewJobRequest) (*model.CreateBeautyPreviewJobResponse, error) {
-	requestDef := GenReqDefForCreateBeautyPreviewJob()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateBeautyPreviewJobResponse), nil
-	}
-}
-
-// CreateBeautyPreviewJobInvoker 创建美白预览任务
-func (c *MetaStudioClient) CreateBeautyPreviewJobInvoker(request *model.CreateBeautyPreviewJobRequest) *CreateBeautyPreviewJobInvoker {
-	requestDef := GenReqDefForCreateBeautyPreviewJob()
-	return &CreateBeautyPreviewJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowBeautyPreviewJob 查询美白预览任务
-//
-// 该接口用于查询美白预览任务。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) ShowBeautyPreviewJob(request *model.ShowBeautyPreviewJobRequest) (*model.ShowBeautyPreviewJobResponse, error) {
-	requestDef := GenReqDefForShowBeautyPreviewJob()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowBeautyPreviewJobResponse), nil
-	}
-}
-
-// ShowBeautyPreviewJobInvoker 查询美白预览任务
-func (c *MetaStudioClient) ShowBeautyPreviewJobInvoker(request *model.ShowBeautyPreviewJobRequest) *ShowBeautyPreviewJobInvoker {
-	requestDef := GenReqDefForShowBeautyPreviewJob()
-	return &ShowBeautyPreviewJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// StartBeautyPreviewJob 启动美白预览任务
-//
-// 该接口用于启动美白预览任务。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) StartBeautyPreviewJob(request *model.StartBeautyPreviewJobRequest) (*model.StartBeautyPreviewJobResponse, error) {
-	requestDef := GenReqDefForStartBeautyPreviewJob()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.StartBeautyPreviewJobResponse), nil
-	}
-}
-
-// StartBeautyPreviewJobInvoker 启动美白预览任务
-func (c *MetaStudioClient) StartBeautyPreviewJobInvoker(request *model.StartBeautyPreviewJobRequest) *StartBeautyPreviewJobInvoker {
-	requestDef := GenReqDefForStartBeautyPreviewJob()
-	return &StartBeautyPreviewJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateDialogUrl 创建对话链接
 //
 // 该接口用于创建对话链接。
@@ -1598,6 +1535,132 @@ func (c *MetaStudioClient) UpdateKnowledgeSkillInvoker(request *model.UpdateKnow
 	return &UpdateKnowledgeSkillInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateLivePlatform 创建第三方直播平台
+//
+// 该接口用于创建第三方直播平台。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateLivePlatform(request *model.CreateLivePlatformRequest) (*model.CreateLivePlatformResponse, error) {
+	requestDef := GenReqDefForCreateLivePlatform()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateLivePlatformResponse), nil
+	}
+}
+
+// CreateLivePlatformInvoker 创建第三方直播平台
+func (c *MetaStudioClient) CreateLivePlatformInvoker(request *model.CreateLivePlatformRequest) *CreateLivePlatformInvoker {
+	requestDef := GenReqDefForCreateLivePlatform()
+	return &CreateLivePlatformInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteLivePlatform 删除第三方直播平台信息
+//
+// 该接口用于删除第三方直播平台信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteLivePlatform(request *model.DeleteLivePlatformRequest) (*model.DeleteLivePlatformResponse, error) {
+	requestDef := GenReqDefForDeleteLivePlatform()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteLivePlatformResponse), nil
+	}
+}
+
+// DeleteLivePlatformInvoker 删除第三方直播平台信息
+func (c *MetaStudioClient) DeleteLivePlatformInvoker(request *model.DeleteLivePlatformRequest) *DeleteLivePlatformInvoker {
+	requestDef := GenReqDefForDeleteLivePlatform()
+	return &DeleteLivePlatformInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLivePlatformProducts 查询第三方直播平台商品列表
+//
+// 该接口用于查询第三方直播平台商品列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListLivePlatformProducts(request *model.ListLivePlatformProductsRequest) (*model.ListLivePlatformProductsResponse, error) {
+	requestDef := GenReqDefForListLivePlatformProducts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLivePlatformProductsResponse), nil
+	}
+}
+
+// ListLivePlatformProductsInvoker 查询第三方直播平台商品列表
+func (c *MetaStudioClient) ListLivePlatformProductsInvoker(request *model.ListLivePlatformProductsRequest) *ListLivePlatformProductsInvoker {
+	requestDef := GenReqDefForListLivePlatformProducts()
+	return &ListLivePlatformProductsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLivePlatforms 查询直播平台列表
+//
+// 该接口用于查询直播平台列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListLivePlatforms(request *model.ListLivePlatformsRequest) (*model.ListLivePlatformsResponse, error) {
+	requestDef := GenReqDefForListLivePlatforms()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLivePlatformsResponse), nil
+	}
+}
+
+// ListLivePlatformsInvoker 查询直播平台列表
+func (c *MetaStudioClient) ListLivePlatformsInvoker(request *model.ListLivePlatformsRequest) *ListLivePlatformsInvoker {
+	requestDef := GenReqDefForListLivePlatforms()
+	return &ListLivePlatformsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLivePlatform 查询第三方直播平台信息
+//
+// 该接口用于查询第三方直播平台信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowLivePlatform(request *model.ShowLivePlatformRequest) (*model.ShowLivePlatformResponse, error) {
+	requestDef := GenReqDefForShowLivePlatform()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLivePlatformResponse), nil
+	}
+}
+
+// ShowLivePlatformInvoker 查询第三方直播平台信息
+func (c *MetaStudioClient) ShowLivePlatformInvoker(request *model.ShowLivePlatformRequest) *ShowLivePlatformInvoker {
+	requestDef := GenReqDefForShowLivePlatform()
+	return &ShowLivePlatformInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLivePlatform 更新第三方直播平台信息
+//
+// 该接口用于更新第三方直播平台信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateLivePlatform(request *model.UpdateLivePlatformRequest) (*model.UpdateLivePlatformResponse, error) {
+	requestDef := GenReqDefForUpdateLivePlatform()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateLivePlatformResponse), nil
+	}
+}
+
+// UpdateLivePlatformInvoker 更新第三方直播平台信息
+func (c *MetaStudioClient) UpdateLivePlatformInvoker(request *model.UpdateLivePlatformRequest) *UpdateLivePlatformInvoker {
+	requestDef := GenReqDefForUpdateLivePlatform()
+	return &UpdateLivePlatformInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateOnceCode 创建一次性鉴权码
 //
 // 该接口用于创建一次性鉴权码，有效期5分钟，鉴权码只能使用一次，每次使用后需要重新获取。
@@ -2921,6 +2984,28 @@ func (c *MetaStudioClient) ListVoiceTrainingJobInvoker(request *model.ListVoiceT
 	return &ListVoiceTrainingJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetJobBatchName 设置任务批次
+//
+// 用户设置任务批次，该接口用于批量任务管理场景，设置任务的批次
+// * 需要开通NA租户权限后才能正常调用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) SetJobBatchName(request *model.SetJobBatchNameRequest) (*model.SetJobBatchNameResponse, error) {
+	requestDef := GenReqDefForSetJobBatchName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetJobBatchNameResponse), nil
+	}
+}
+
+// SetJobBatchNameInvoker 设置任务批次
+func (c *MetaStudioClient) SetJobBatchNameInvoker(request *model.SetJobBatchNameRequest) *SetJobBatchNameInvoker {
+	requestDef := GenReqDefForSetJobBatchName()
+	return &SetJobBatchNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowJobAuditResult 获取语音训练任务审核结果
 //
 // 获取语音训练任务审核结果。
@@ -2961,6 +3046,27 @@ func (c *MetaStudioClient) ShowJobUploadingAddress(request *model.ShowJobUploadi
 func (c *MetaStudioClient) ShowJobUploadingAddressInvoker(request *model.ShowJobUploadingAddressRequest) *ShowJobUploadingAddressInvoker {
 	requestDef := GenReqDefForShowJobUploadingAddress()
 	return &ShowJobUploadingAddressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTenantDurationCfg 查询用户配置的个性化音频时长
+//
+// 查询用户配置的个性化音频时长
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowTenantDurationCfg(request *model.ShowTenantDurationCfgRequest) (*model.ShowTenantDurationCfgResponse, error) {
+	requestDef := GenReqDefForShowTenantDurationCfg()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTenantDurationCfgResponse), nil
+	}
+}
+
+// ShowTenantDurationCfgInvoker 查询用户配置的个性化音频时长
+func (c *MetaStudioClient) ShowTenantDurationCfgInvoker(request *model.ShowTenantDurationCfgRequest) *ShowTenantDurationCfgInvoker {
+	requestDef := GenReqDefForShowTenantDurationCfg()
+	return &ShowTenantDurationCfgInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowTrainingSegmentInfo 获取在线录音确认结果
@@ -3241,6 +3347,10 @@ func (c *MetaStudioClient) ListTtsaJobsInvoker(request *model.ListTtsaJobsReques
 // CreateAsyncTtsJob 创建TTS语音异步任务
 //
 // 该接口用于对外生成音频文件
+//
+// &gt; 使用本接口前，需要在MetaStudio控制台服务概览页面，开通“声音合成”的按需计费。
+// &gt; 详细操作为：单击“声音合成”卡片中的“去开通”，在弹出的“开通按需计费服务提示”对话框中，勾选同意协议。单击“确定”，开通按需计费。
+// &gt; 如需使用第三方声音进行语音合成，请购买出门问问声音套餐，操作请参考《用户指南》的“购买出门问问声音套餐”章节。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) CreateAsyncTtsJob(request *model.CreateAsyncTtsJobRequest) (*model.CreateAsyncTtsJobResponse, error) {

@@ -1217,6 +1217,27 @@ func (c *GaussDBforNoSQLClient) ListRecycleInstancesInvoker(request *model.ListR
 	return &ListRecycleInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListRedisPitrRestoreTime 查询Redis可恢复时间点
+//
+// 查询Redis可恢复时间点。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListRedisPitrRestoreTime(request *model.ListRedisPitrRestoreTimeRequest) (*model.ListRedisPitrRestoreTimeResponse, error) {
+	requestDef := GenReqDefForListRedisPitrRestoreTime()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRedisPitrRestoreTimeResponse), nil
+	}
+}
+
+// ListRedisPitrRestoreTimeInvoker 查询Redis可恢复时间点
+func (c *GaussDBforNoSQLClient) ListRedisPitrRestoreTimeInvoker(request *model.ListRedisPitrRestoreTimeRequest) *ListRedisPitrRestoreTimeInvoker {
+	requestDef := GenReqDefForListRedisPitrRestoreTime()
+	return &ListRedisPitrRestoreTimeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListRedisSlowLogs 查询GeminiDB(for Redis)数据库慢日志
 //
 // 查询GeminiDB(for Redis)数据库慢日志信息，支持日志关键字搜索。
@@ -1660,6 +1681,27 @@ func (c *GaussDBforNoSQLClient) RestoreExistingInstanceInvoker(request *model.Re
 	return &RestoreExistingInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RestoreRedisPitr 恢复当前Redis实例到指定时间点
+//
+// 恢复当前Redis实例到指定时间点。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) RestoreRedisPitr(request *model.RestoreRedisPitrRequest) (*model.RestoreRedisPitrResponse, error) {
+	requestDef := GenReqDefForRestoreRedisPitr()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestoreRedisPitrResponse), nil
+	}
+}
+
+// RestoreRedisPitrInvoker 恢复当前Redis实例到指定时间点
+func (c *GaussDBforNoSQLClient) RestoreRedisPitrInvoker(request *model.RestoreRedisPitrRequest) *RestoreRedisPitrInvoker {
+	requestDef := GenReqDefForRestoreRedisPitr()
+	return &RestoreRedisPitrInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SaveLtsConfigs 关联LTS日志流
 //
 // - 将实例日志与LTS日志流关联，后台将自动上传实例日志到关联的LTS日志流里。
@@ -1766,6 +1808,27 @@ func (c *GaussDBforNoSQLClient) SetRecyclePolicy(request *model.SetRecyclePolicy
 func (c *GaussDBforNoSQLClient) SetRecyclePolicyInvoker(request *model.SetRecyclePolicyRequest) *SetRecyclePolicyInvoker {
 	requestDef := GenReqDefForSetRecyclePolicy()
 	return &SetRecyclePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetRedisPitrPolicy 设置Redis恢复到指定时间点策略
+//
+// 设置Redis恢复到指定时间点策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) SetRedisPitrPolicy(request *model.SetRedisPitrPolicyRequest) (*model.SetRedisPitrPolicyResponse, error) {
+	requestDef := GenReqDefForSetRedisPitrPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetRedisPitrPolicyResponse), nil
+	}
+}
+
+// SetRedisPitrPolicyInvoker 设置Redis恢复到指定时间点策略
+func (c *GaussDBforNoSQLClient) SetRedisPitrPolicyInvoker(request *model.SetRedisPitrPolicyRequest) *SetRedisPitrPolicyInvoker {
+	requestDef := GenReqDefForSetRedisPitrPolicy()
+	return &SetRedisPitrPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAllInstancesBackups 查询备份列表
@@ -2207,6 +2270,48 @@ func (c *GaussDBforNoSQLClient) ShowRedisBigKeysInvoker(request *model.ShowRedis
 	return &ShowRedisBigKeysInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowRedisPitrInfo 查询Redis实例指定时间点恢复所占用的存储空间
+//
+// 查询Redis实例指定时间点恢复所占用的存储空间。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowRedisPitrInfo(request *model.ShowRedisPitrInfoRequest) (*model.ShowRedisPitrInfoResponse, error) {
+	requestDef := GenReqDefForShowRedisPitrInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRedisPitrInfoResponse), nil
+	}
+}
+
+// ShowRedisPitrInfoInvoker 查询Redis实例指定时间点恢复所占用的存储空间
+func (c *GaussDBforNoSQLClient) ShowRedisPitrInfoInvoker(request *model.ShowRedisPitrInfoRequest) *ShowRedisPitrInfoInvoker {
+	requestDef := GenReqDefForShowRedisPitrInfo()
+	return &ShowRedisPitrInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRedisPitrPolicy 查询Redis恢复到指定时间点策略
+//
+// 查询Redis恢复到指定时间点策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowRedisPitrPolicy(request *model.ShowRedisPitrPolicyRequest) (*model.ShowRedisPitrPolicyResponse, error) {
+	requestDef := GenReqDefForShowRedisPitrPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRedisPitrPolicyResponse), nil
+	}
+}
+
+// ShowRedisPitrPolicyInvoker 查询Redis恢复到指定时间点策略
+func (c *GaussDBforNoSQLClient) ShowRedisPitrPolicyInvoker(request *model.ShowRedisPitrPolicyRequest) *ShowRedisPitrPolicyInvoker {
+	requestDef := GenReqDefForShowRedisPitrPolicy()
+	return &ShowRedisPitrPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowRestorableList 查询可恢复的实例列表
 //
 // 查询用户可恢复的实例列表
@@ -2289,6 +2394,27 @@ func (c *GaussDBforNoSQLClient) ShrinkInstanceNode(request *model.ShrinkInstance
 func (c *GaussDBforNoSQLClient) ShrinkInstanceNodeInvoker(request *model.ShrinkInstanceNodeRequest) *ShrinkInstanceNodeInvoker {
 	requestDef := GenReqDefForShrinkInstanceNode()
 	return &ShrinkInstanceNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopBackup 停止备份
+//
+// 支持紧急情况下停止备份功能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) StopBackup(request *model.StopBackupRequest) (*model.StopBackupResponse, error) {
+	requestDef := GenReqDefForStopBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopBackupResponse), nil
+	}
+}
+
+// StopBackupInvoker 停止备份
+func (c *GaussDBforNoSQLClient) StopBackupInvoker(request *model.StopBackupRequest) *StopBackupInvoker {
+	requestDef := GenReqDefForStopBackup()
+	return &StopBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SwitchIpGroup 设置实例负载均衡的IP访问黑白名单

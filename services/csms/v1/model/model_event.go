@@ -51,6 +51,7 @@ type EventEventTypesEnum struct {
 	SECRET_VERSION_EXPIRED EventEventTypes
 	SECRET_ROTATED         EventEventTypes
 	SECRET_DELETED         EventEventTypes
+	SECRET_ROTATED_FAILED  EventEventTypes
 }
 
 func GetEventEventTypesEnum() EventEventTypesEnum {
@@ -66,6 +67,9 @@ func GetEventEventTypesEnum() EventEventTypesEnum {
 		},
 		SECRET_DELETED: EventEventTypes{
 			value: "SECRET_DELETED",
+		},
+		SECRET_ROTATED_FAILED: EventEventTypes{
+			value: "SECRET_ROTATED_FAILED",
 		},
 	}
 }

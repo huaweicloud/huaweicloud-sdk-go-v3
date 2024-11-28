@@ -39,9 +39,6 @@ type Create2dModelTrainingJobReq struct {
 	// 分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
 	ModelVersion *Create2dModelTrainingJobReqModelVersion `json:"model_version,omitempty"`
 
-	// 美白等级。默认值0，不美白。
-	BeautyLevel *int32 `json:"beauty_level,omitempty"`
-
 	// 是否是基础版的形象训练
 	IsFlexus *bool `json:"is_flexus,omitempty"`
 

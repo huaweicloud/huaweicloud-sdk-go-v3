@@ -917,6 +917,22 @@ func (i *ListRecycleInstancesInvoker) Invoke() (*model.ListRecycleInstancesRespo
 	}
 }
 
+type ListRedisPitrRestoreTimeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRedisPitrRestoreTimeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRedisPitrRestoreTimeInvoker) Invoke() (*model.ListRedisPitrRestoreTimeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRedisPitrRestoreTimeResponse), nil
+	}
+}
+
 type ListRedisSlowLogsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1253,6 +1269,22 @@ func (i *RestoreExistingInstanceInvoker) Invoke() (*model.RestoreExistingInstanc
 	}
 }
 
+type RestoreRedisPitrInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestoreRedisPitrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RestoreRedisPitrInvoker) Invoke() (*model.RestoreRedisPitrResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestoreRedisPitrResponse), nil
+	}
+}
+
 type SaveLtsConfigsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1330,6 +1362,22 @@ func (i *SetRecyclePolicyInvoker) Invoke() (*model.SetRecyclePolicyResponse, err
 		return nil, err
 	} else {
 		return result.(*model.SetRecyclePolicyResponse), nil
+	}
+}
+
+type SetRedisPitrPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetRedisPitrPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetRedisPitrPolicyInvoker) Invoke() (*model.SetRedisPitrPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetRedisPitrPolicyResponse), nil
 	}
 }
 
@@ -1669,6 +1717,38 @@ func (i *ShowRedisBigKeysInvoker) Invoke() (*model.ShowRedisBigKeysResponse, err
 	}
 }
 
+type ShowRedisPitrInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRedisPitrInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRedisPitrInfoInvoker) Invoke() (*model.ShowRedisPitrInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRedisPitrInfoResponse), nil
+	}
+}
+
+type ShowRedisPitrPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRedisPitrPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRedisPitrPolicyInvoker) Invoke() (*model.ShowRedisPitrPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRedisPitrPolicyResponse), nil
+	}
+}
+
 type ShowRestorableListInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1730,6 +1810,22 @@ func (i *ShrinkInstanceNodeInvoker) Invoke() (*model.ShrinkInstanceNodeResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShrinkInstanceNodeResponse), nil
+	}
+}
+
+type StopBackupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopBackupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StopBackupInvoker) Invoke() (*model.StopBackupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopBackupResponse), nil
 	}
 }
 

@@ -153,6 +153,28 @@ func (c *CbrClient) BatchUpdateVaultInvoker(request *model.BatchUpdateVaultReque
 	return &BatchUpdateVaultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeOrder 变更
+//
+// 订单更新，调用该接口更新包周期产品订单信息,返回待支付订单信息。
+// &gt; 该接口目前属于公测阶段，部分region暂时无法使用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) ChangeOrder(request *model.ChangeOrderRequest) (*model.ChangeOrderResponse, error) {
+	requestDef := GenReqDefForChangeOrder()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeOrderResponse), nil
+	}
+}
+
+// ChangeOrderInvoker 变更
+func (c *CbrClient) ChangeOrderInvoker(request *model.ChangeOrderRequest) *ChangeOrderInvoker {
+	requestDef := GenReqDefForChangeOrder()
+	return &ChangeOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CheckAgent 查询agent状态
 //
 // 检查应用一致性Agent状态
@@ -1396,9 +1418,9 @@ func (c *CbrClient) UpdateMemberStatusInvoker(request *model.UpdateMemberStatusR
 	return &UpdateMemberStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateOrder 变更
+// UpdateOrder 变更（废弃）
 //
-// 订单更新，支付cbc订单后，调用该接口更新包周期产品订单信息。
+// 订单更新，支付cbc订单后，调用该接口更新包周期产品订单信息。该接口已废弃。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) UpdateOrder(request *model.UpdateOrderRequest) (*model.UpdateOrderResponse, error) {
@@ -1411,7 +1433,7 @@ func (c *CbrClient) UpdateOrder(request *model.UpdateOrderRequest) (*model.Updat
 	}
 }
 
-// UpdateOrderInvoker 变更
+// UpdateOrderInvoker 变更（废弃）
 func (c *CbrClient) UpdateOrderInvoker(request *model.UpdateOrderRequest) *UpdateOrderInvoker {
 	requestDef := GenReqDefForUpdateOrder()
 	return &UpdateOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

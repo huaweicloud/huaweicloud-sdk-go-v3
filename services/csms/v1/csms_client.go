@@ -40,6 +40,27 @@ func (c *CsmsClient) BatchCreateOrDeleteTagsInvoker(request *model.BatchCreateOr
 	return &BatchCreateOrDeleteTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAgency 创建服务委托
+//
+// 创建服务委托。用于创建凭据管理服务相关委托和函数工作流相关委托。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) CreateAgency(request *model.CreateAgencyRequest) (*model.CreateAgencyResponse, error) {
+	requestDef := GenReqDefForCreateAgency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAgencyResponse), nil
+	}
+}
+
+// CreateAgencyInvoker 创建服务委托
+func (c *CsmsClient) CreateAgencyInvoker(request *model.CreateAgencyRequest) *CreateAgencyInvoker {
+	requestDef := GenReqDefForCreateAgency()
+	return &CreateAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSecret 创建凭据
 //
 // 创建新的凭据，并将凭据值存入凭据的初始版本。
@@ -359,6 +380,27 @@ func (c *CsmsClient) ListSecretTagsInvoker(request *model.ListSecretTagsRequest)
 	return &ListSecretTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSecretTask 查询任务列表
+//
+// 查询任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) ListSecretTask(request *model.ListSecretTaskRequest) (*model.ListSecretTaskResponse, error) {
+	requestDef := GenReqDefForListSecretTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecretTaskResponse), nil
+	}
+}
+
+// ListSecretTaskInvoker 查询任务列表
+func (c *CsmsClient) ListSecretTaskInvoker(request *model.ListSecretTaskRequest) *ListSecretTaskInvoker {
+	requestDef := GenReqDefForListSecretTask()
+	return &ListSecretTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSecretVersions 查询凭据的版本列表
 //
 // 查询指定凭据下的版本列表信息。
@@ -443,6 +485,27 @@ func (c *CsmsClient) RotateSecretInvoker(request *model.RotateSecretRequest) *Ro
 	return &RotateSecretInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAgency 查看是否有服务委托
+//
+// 查看是否有服务委托
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) ShowAgency(request *model.ShowAgencyRequest) (*model.ShowAgencyResponse, error) {
+	requestDef := GenReqDefForShowAgency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAgencyResponse), nil
+	}
+}
+
+// ShowAgencyInvoker 查看是否有服务委托
+func (c *CsmsClient) ShowAgencyInvoker(request *model.ShowAgencyRequest) *ShowAgencyInvoker {
+	requestDef := GenReqDefForShowAgency()
+	return &ShowAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSecret 查询凭据
 //
 // 查询指定凭据的信息。
@@ -483,6 +546,27 @@ func (c *CsmsClient) ShowSecretEvent(request *model.ShowSecretEventRequest) (*mo
 func (c *CsmsClient) ShowSecretEventInvoker(request *model.ShowSecretEventRequest) *ShowSecretEventInvoker {
 	requestDef := GenReqDefForShowSecretEvent()
 	return &ShowSecretEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSecretFunctionTemplates 获取凭据轮转函数模板
+//
+// 获取凭据轮转函数模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) ShowSecretFunctionTemplates(request *model.ShowSecretFunctionTemplatesRequest) (*model.ShowSecretFunctionTemplatesResponse, error) {
+	requestDef := GenReqDefForShowSecretFunctionTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecretFunctionTemplatesResponse), nil
+	}
+}
+
+// ShowSecretFunctionTemplatesInvoker 获取凭据轮转函数模板
+func (c *CsmsClient) ShowSecretFunctionTemplatesInvoker(request *model.ShowSecretFunctionTemplatesRequest) *ShowSecretFunctionTemplatesInvoker {
+	requestDef := GenReqDefForShowSecretFunctionTemplates()
+	return &ShowSecretFunctionTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSecretStage 查询凭据的版本状态

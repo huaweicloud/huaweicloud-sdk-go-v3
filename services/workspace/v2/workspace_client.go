@@ -775,6 +775,322 @@ func (c *WorkspaceClient) UpdateDesktopNamePolicyInvoker(request *model.UpdateDe
 	return &UpdateDesktopNamePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddDesktopPoolVolumes 桌面池批量添加磁盘
+//
+// 桌面池批量添加磁盘。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) AddDesktopPoolVolumes(request *model.AddDesktopPoolVolumesRequest) (*model.AddDesktopPoolVolumesResponse, error) {
+	requestDef := GenReqDefForAddDesktopPoolVolumes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddDesktopPoolVolumesResponse), nil
+	}
+}
+
+// AddDesktopPoolVolumesInvoker 桌面池批量添加磁盘
+func (c *WorkspaceClient) AddDesktopPoolVolumesInvoker(request *model.AddDesktopPoolVolumesRequest) *AddDesktopPoolVolumesInvoker {
+	requestDef := GenReqDefForAddDesktopPoolVolumes()
+	return &AddDesktopPoolVolumesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDesktopPool 创建桌面池
+//
+// 创建桌面池，可将此桌面池分配给用户、用户组，用户登录时会绑定其中一个桌面。
+// 注:需通过开通委托功能接口先对云服务进行授权才可以使用该功能
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CreateDesktopPool(request *model.CreateDesktopPoolRequest) (*model.CreateDesktopPoolResponse, error) {
+	requestDef := GenReqDefForCreateDesktopPool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDesktopPoolResponse), nil
+	}
+}
+
+// CreateDesktopPoolInvoker 创建桌面池
+func (c *WorkspaceClient) CreateDesktopPoolInvoker(request *model.CreateDesktopPoolRequest) *CreateDesktopPoolInvoker {
+	requestDef := GenReqDefForCreateDesktopPool()
+	return &CreateDesktopPoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDesktopPoolAuthorizedObjects 桌面池授权用户、用户组
+//
+// 该接口用于桌面池授权用户、用户组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CreateDesktopPoolAuthorizedObjects(request *model.CreateDesktopPoolAuthorizedObjectsRequest) (*model.CreateDesktopPoolAuthorizedObjectsResponse, error) {
+	requestDef := GenReqDefForCreateDesktopPoolAuthorizedObjects()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDesktopPoolAuthorizedObjectsResponse), nil
+	}
+}
+
+// CreateDesktopPoolAuthorizedObjectsInvoker 桌面池授权用户、用户组
+func (c *WorkspaceClient) CreateDesktopPoolAuthorizedObjectsInvoker(request *model.CreateDesktopPoolAuthorizedObjectsRequest) *CreateDesktopPoolAuthorizedObjectsInvoker {
+	requestDef := GenReqDefForCreateDesktopPoolAuthorizedObjects()
+	return &CreateDesktopPoolAuthorizedObjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDesktopPool 删除桌面池
+//
+// 当桌面池内无桌面时可删除桌面池，桌面池删除后无法恢复。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) DeleteDesktopPool(request *model.DeleteDesktopPoolRequest) (*model.DeleteDesktopPoolResponse, error) {
+	requestDef := GenReqDefForDeleteDesktopPool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDesktopPoolResponse), nil
+	}
+}
+
+// DeleteDesktopPoolInvoker 删除桌面池
+func (c *WorkspaceClient) DeleteDesktopPoolInvoker(request *model.DeleteDesktopPoolRequest) *DeleteDesktopPoolInvoker {
+	requestDef := GenReqDefForDeleteDesktopPool()
+	return &DeleteDesktopPoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDesktopPoolVolumes 桌面池批量删除磁盘
+//
+// 桌面池批量删除磁盘。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) DeleteDesktopPoolVolumes(request *model.DeleteDesktopPoolVolumesRequest) (*model.DeleteDesktopPoolVolumesResponse, error) {
+	requestDef := GenReqDefForDeleteDesktopPoolVolumes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDesktopPoolVolumesResponse), nil
+	}
+}
+
+// DeleteDesktopPoolVolumesInvoker 桌面池批量删除磁盘
+func (c *WorkspaceClient) DeleteDesktopPoolVolumesInvoker(request *model.DeleteDesktopPoolVolumesRequest) *DeleteDesktopPoolVolumesInvoker {
+	requestDef := GenReqDefForDeleteDesktopPoolVolumes()
+	return &DeleteDesktopPoolVolumesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteDesktopPoolAction 操作桌面池
+//
+// 操作桌面池，用于桌面池里面的桌面批量开机、关机、重启和休眠。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ExecuteDesktopPoolAction(request *model.ExecuteDesktopPoolActionRequest) (*model.ExecuteDesktopPoolActionResponse, error) {
+	requestDef := GenReqDefForExecuteDesktopPoolAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteDesktopPoolActionResponse), nil
+	}
+}
+
+// ExecuteDesktopPoolActionInvoker 操作桌面池
+func (c *WorkspaceClient) ExecuteDesktopPoolActionInvoker(request *model.ExecuteDesktopPoolActionRequest) *ExecuteDesktopPoolActionInvoker {
+	requestDef := GenReqDefForExecuteDesktopPoolAction()
+	return &ExecuteDesktopPoolActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExpandDesktopPool 扩容桌面池
+//
+// 扩容桌面池。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ExpandDesktopPool(request *model.ExpandDesktopPoolRequest) (*model.ExpandDesktopPoolResponse, error) {
+	requestDef := GenReqDefForExpandDesktopPool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExpandDesktopPoolResponse), nil
+	}
+}
+
+// ExpandDesktopPoolInvoker 扩容桌面池
+func (c *WorkspaceClient) ExpandDesktopPoolInvoker(request *model.ExpandDesktopPoolRequest) *ExpandDesktopPoolInvoker {
+	requestDef := GenReqDefForExpandDesktopPool()
+	return &ExpandDesktopPoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExpandDesktopPoolVolumes 桌面池批量扩容磁盘
+//
+// 桌面池批量扩容磁盘。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ExpandDesktopPoolVolumes(request *model.ExpandDesktopPoolVolumesRequest) (*model.ExpandDesktopPoolVolumesResponse, error) {
+	requestDef := GenReqDefForExpandDesktopPoolVolumes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExpandDesktopPoolVolumesResponse), nil
+	}
+}
+
+// ExpandDesktopPoolVolumesInvoker 桌面池批量扩容磁盘
+func (c *WorkspaceClient) ExpandDesktopPoolVolumesInvoker(request *model.ExpandDesktopPoolVolumesRequest) *ExpandDesktopPoolVolumesInvoker {
+	requestDef := GenReqDefForExpandDesktopPoolVolumes()
+	return &ExpandDesktopPoolVolumesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDesktopPoolAuthorizedObjects 查询桌面池授权的用户、用户组
+//
+// 该接口用于查询指定桌面池授权的用户、用户组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListDesktopPoolAuthorizedObjects(request *model.ListDesktopPoolAuthorizedObjectsRequest) (*model.ListDesktopPoolAuthorizedObjectsResponse, error) {
+	requestDef := GenReqDefForListDesktopPoolAuthorizedObjects()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDesktopPoolAuthorizedObjectsResponse), nil
+	}
+}
+
+// ListDesktopPoolAuthorizedObjectsInvoker 查询桌面池授权的用户、用户组
+func (c *WorkspaceClient) ListDesktopPoolAuthorizedObjectsInvoker(request *model.ListDesktopPoolAuthorizedObjectsRequest) *ListDesktopPoolAuthorizedObjectsInvoker {
+	requestDef := GenReqDefForListDesktopPoolAuthorizedObjects()
+	return &ListDesktopPoolAuthorizedObjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDesktopPools 查询桌面池列表
+//
+// 该接口用于查询桌面池列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListDesktopPools(request *model.ListDesktopPoolsRequest) (*model.ListDesktopPoolsResponse, error) {
+	requestDef := GenReqDefForListDesktopPools()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDesktopPoolsResponse), nil
+	}
+}
+
+// ListDesktopPoolsInvoker 查询桌面池列表
+func (c *WorkspaceClient) ListDesktopPoolsInvoker(request *model.ListDesktopPoolsRequest) *ListDesktopPoolsInvoker {
+	requestDef := GenReqDefForListDesktopPools()
+	return &ListDesktopPoolsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPoolDesktopsDetail 查询桌面池下的桌面信息
+//
+// 该接口用于查询桌面池下的桌面信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListPoolDesktopsDetail(request *model.ListPoolDesktopsDetailRequest) (*model.ListPoolDesktopsDetailResponse, error) {
+	requestDef := GenReqDefForListPoolDesktopsDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPoolDesktopsDetailResponse), nil
+	}
+}
+
+// ListPoolDesktopsDetailInvoker 查询桌面池下的桌面信息
+func (c *WorkspaceClient) ListPoolDesktopsDetailInvoker(request *model.ListPoolDesktopsDetailRequest) *ListPoolDesktopsDetailInvoker {
+	requestDef := GenReqDefForListPoolDesktopsDetail()
+	return &ListPoolDesktopsDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RebuildDesktopPool 桌面池重建系统盘
+//
+// 桌面池重建系统盘。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) RebuildDesktopPool(request *model.RebuildDesktopPoolRequest) (*model.RebuildDesktopPoolResponse, error) {
+	requestDef := GenReqDefForRebuildDesktopPool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RebuildDesktopPoolResponse), nil
+	}
+}
+
+// RebuildDesktopPoolInvoker 桌面池重建系统盘
+func (c *WorkspaceClient) RebuildDesktopPoolInvoker(request *model.RebuildDesktopPoolRequest) *RebuildDesktopPoolInvoker {
+	requestDef := GenReqDefForRebuildDesktopPool()
+	return &RebuildDesktopPoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResizeDesktopPool 桌面池变更规格
+//
+// 桌面池变更规格
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ResizeDesktopPool(request *model.ResizeDesktopPoolRequest) (*model.ResizeDesktopPoolResponse, error) {
+	requestDef := GenReqDefForResizeDesktopPool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResizeDesktopPoolResponse), nil
+	}
+}
+
+// ResizeDesktopPoolInvoker 桌面池变更规格
+func (c *WorkspaceClient) ResizeDesktopPoolInvoker(request *model.ResizeDesktopPoolRequest) *ResizeDesktopPoolInvoker {
+	requestDef := GenReqDefForResizeDesktopPool()
+	return &ResizeDesktopPoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDesktopPoolDetail 查询桌面池详情
+//
+// 指定桌面池Id查询详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowDesktopPoolDetail(request *model.ShowDesktopPoolDetailRequest) (*model.ShowDesktopPoolDetailResponse, error) {
+	requestDef := GenReqDefForShowDesktopPoolDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDesktopPoolDetailResponse), nil
+	}
+}
+
+// ShowDesktopPoolDetailInvoker 查询桌面池详情
+func (c *WorkspaceClient) ShowDesktopPoolDetailInvoker(request *model.ShowDesktopPoolDetailRequest) *ShowDesktopPoolDetailInvoker {
+	requestDef := GenReqDefForShowDesktopPoolDetail()
+	return &ShowDesktopPoolDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDesktopPool 修改桌面池属性
+//
+// 修改桌面池属性。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateDesktopPool(request *model.UpdateDesktopPoolRequest) (*model.UpdateDesktopPoolResponse, error) {
+	requestDef := GenReqDefForUpdateDesktopPool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDesktopPoolResponse), nil
+	}
+}
+
+// UpdateDesktopPoolInvoker 修改桌面池属性
+func (c *WorkspaceClient) UpdateDesktopPoolInvoker(request *model.UpdateDesktopPoolRequest) *UpdateDesktopPoolInvoker {
+	requestDef := GenReqDefForUpdateDesktopPool()
+	return &UpdateDesktopPoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListUnusedDesktops 查询在指定时间段未使用的桌面
 //
 // 查询在指定时间段未使用的桌面。已废弃，不推荐使用。统计数据推荐使用[查询桌面使用情况统计数据接口](https://console.huaweicloud.com/apiexplorer/#/openapi/Workspace/doc?api&#x3D;ListDesktopUsageMetric)和[查询用户使用统计数据接口](https://console.huaweicloud.com/apiexplorer/#/openapi/Workspace/doc?api&#x3D;ListUserUsageMetric)。
@@ -1877,6 +2193,27 @@ func (c *WorkspaceClient) BatchDeleteOtpDevices(request *model.BatchDeleteOtpDev
 func (c *WorkspaceClient) BatchDeleteOtpDevicesInvoker(request *model.BatchDeleteOtpDevicesRequest) *BatchDeleteOtpDevicesInvoker {
 	requestDef := GenReqDefForBatchDeleteOtpDevices()
 	return &BatchDeleteOtpDevicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteUser 批量删除用户
+//
+// 该接口用于批量删除桌面用户。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) BatchDeleteUser(request *model.BatchDeleteUserRequest) (*model.BatchDeleteUserResponse, error) {
+	requestDef := GenReqDefForBatchDeleteUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteUserResponse), nil
+	}
+}
+
+// BatchDeleteUserInvoker 批量删除用户
+func (c *WorkspaceClient) BatchDeleteUserInvoker(request *model.BatchDeleteUserRequest) *BatchDeleteUserInvoker {
+	requestDef := GenReqDefForBatchDeleteUser()
+	return &BatchDeleteUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ChangeUserStatus 操作用户

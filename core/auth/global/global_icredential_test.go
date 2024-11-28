@@ -28,6 +28,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"net/http"
 	"net/http/httptest"
+	"strings"
 	"testing"
 	"time"
 )
@@ -147,14 +148,17 @@ func TestCredentialsBuilder_SafeBuild2(t *testing.T) {
 func TestCredentials_ProcessAuthParams(t *testing.T) {
 	cases := []struct {
 		Name, RegionId, Data, AK, SK, ExpectedDomainId string
-		ExpectedError                                  error
+		StatusCode                                     int
+		ExpectedError                                  string
 	}{
-		{"One Domain", "region-id-1", "{\"domains\":[{\"id\":\"domain_id\"}]}", "ak", "sk", "domain_id", nil},
-		{"No Domain", "region-id-2", "{\"domains\":[]}", "ak2", "sk2", "",
-			errors.New("failed to get domain id automatically," +
+		{"Bad Request", "region-id-1", "{\"error_code\":\"XXX.001\",\"error_msg\":\"Bad Request\"}", "ak", "sk", "", 400,
+			"failed to get domain id automatically, {\"status_code\":400,\"request_id\":\"\",\"error_code\":\"XXX.001\",\"error_message\":\"Bad Request, X-IAM-Trace-Id=trace-id\",\"encoded_authorization_message\":\"\"}"},
+		{"One Domain", "region-id-1", "{\"domains\":[{\"id\":\"domain_id\"}]}", "ak", "sk", "domain_id", 200, ""},
+		{"No Domain", "region-id-2", "{\"domains\":[]}", "ak2", "sk2", "", 200,
+			"failed to get domain id automatically," +
 				" X-IAM-Trace-Id=trace-id, please confirm that you have 'iam:users:getUser' permission," +
 				" or set domain id manually:" +
-				" global.NewCredentialsBuilder().WithAk(ak).WithSk(sk).WithDomainId(domainId).SafeBuild()")},
+				" global.NewCredentialsBuilder().WithAk(ak).WithSk(sk).WithDomainId(domainId).SafeBuild()"},
 	}
 
 	for _, c := range cases {
@@ -162,6 +166,7 @@ func TestCredentials_ProcessAuthParams(t *testing.T) {
 			ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 				w.Header().Set("Content-Type", "application/json")
 				w.Header().Set("X-IAM-Trace-Id", "trace-id")
+				w.WriteHeader(c.StatusCode)
 				_, err := fmt.Fprintln(w, c.Data)
 				assert.Nil(t, err)
 			}))
@@ -175,8 +180,8 @@ func TestCredentials_ProcessAuthParams(t *testing.T) {
 			assert.Nil(t, err)
 
 			defer func() {
-				if c.ExpectedError != nil {
-					assert.Equal(t, c.ExpectedError, recover())
+				if c.ExpectedError != "" {
+					assert.Equal(t, c.ExpectedError, strings.TrimSpace(fmt.Sprintf("%v", recover())))
 				} else {
 					assert.Equal(t, c.ExpectedDomainId, credentials.DomainId)
 				}

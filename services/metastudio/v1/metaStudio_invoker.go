@@ -149,54 +149,6 @@ func (i *ShowAgencyInvoker) Invoke() (*model.ShowAgencyResponse, error) {
 	}
 }
 
-type CreateBeautyPreviewJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateBeautyPreviewJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateBeautyPreviewJobInvoker) Invoke() (*model.CreateBeautyPreviewJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateBeautyPreviewJobResponse), nil
-	}
-}
-
-type ShowBeautyPreviewJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowBeautyPreviewJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowBeautyPreviewJobInvoker) Invoke() (*model.ShowBeautyPreviewJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowBeautyPreviewJobResponse), nil
-	}
-}
-
-type StartBeautyPreviewJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *StartBeautyPreviewJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *StartBeautyPreviewJobInvoker) Invoke() (*model.StartBeautyPreviewJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.StartBeautyPreviewJobResponse), nil
-	}
-}
-
 type CreateDialogUrlInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1205,6 +1157,102 @@ func (i *UpdateKnowledgeSkillInvoker) Invoke() (*model.UpdateKnowledgeSkillRespo
 	}
 }
 
+type CreateLivePlatformInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateLivePlatformInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateLivePlatformInvoker) Invoke() (*model.CreateLivePlatformResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateLivePlatformResponse), nil
+	}
+}
+
+type DeleteLivePlatformInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteLivePlatformInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteLivePlatformInvoker) Invoke() (*model.DeleteLivePlatformResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteLivePlatformResponse), nil
+	}
+}
+
+type ListLivePlatformProductsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLivePlatformProductsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListLivePlatformProductsInvoker) Invoke() (*model.ListLivePlatformProductsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLivePlatformProductsResponse), nil
+	}
+}
+
+type ListLivePlatformsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLivePlatformsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListLivePlatformsInvoker) Invoke() (*model.ListLivePlatformsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLivePlatformsResponse), nil
+	}
+}
+
+type ShowLivePlatformInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLivePlatformInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowLivePlatformInvoker) Invoke() (*model.ShowLivePlatformResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLivePlatformResponse), nil
+	}
+}
+
+type UpdateLivePlatformInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateLivePlatformInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateLivePlatformInvoker) Invoke() (*model.UpdateLivePlatformResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateLivePlatformResponse), nil
+	}
+}
+
 type CreateOnceCodeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2197,6 +2245,22 @@ func (i *ListVoiceTrainingJobInvoker) Invoke() (*model.ListVoiceTrainingJobRespo
 	}
 }
 
+type SetJobBatchNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetJobBatchNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetJobBatchNameInvoker) Invoke() (*model.SetJobBatchNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetJobBatchNameResponse), nil
+	}
+}
+
 type ShowJobAuditResultInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2226,6 +2290,22 @@ func (i *ShowJobUploadingAddressInvoker) Invoke() (*model.ShowJobUploadingAddres
 		return nil, err
 	} else {
 		return result.(*model.ShowJobUploadingAddressResponse), nil
+	}
+}
+
+type ShowTenantDurationCfgInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTenantDurationCfgInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTenantDurationCfgInvoker) Invoke() (*model.ShowTenantDurationCfgResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTenantDurationCfgResponse), nil
 	}
 }
 

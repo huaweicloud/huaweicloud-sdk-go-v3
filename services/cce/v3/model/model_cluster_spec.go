@@ -83,6 +83,8 @@ type ClusterSpec struct {
 
 	// 覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
 	ConfigurationsOverride *[]PackageConfiguration `json:"configurationsOverride,omitempty"`
+
+	EncryptionConfig *EncryptionConfig `json:"encryptionConfig,omitempty"`
 }
 
 func (o ClusterSpec) String() string {

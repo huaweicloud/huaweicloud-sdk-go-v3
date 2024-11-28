@@ -12,7 +12,8 @@ type ComputeFlavorGroup struct {
 	// 性能规格，包含以下状态：  normal：通用增强型。 normal2：通用增强Ⅱ型。 armFlavors：鲲鹏通用增强型。 dedicicateNormal（dedicatedNormalLocalssd）：x86独享型。 armLocalssd：鲲鹏通用型。 normalLocalssd：x86通用型。 general：通用型。 dedicated 对于PostgreSQL引擎：独享型
 	GroupType string `json:"group_type"`
 
-	ComputeFlavors *ComputeFlavor `json:"compute_flavors"`
+	// 计算规格列表
+	ComputeFlavors []ComputeFlavor `json:"compute_flavors"`
 }
 
 func (o ComputeFlavorGroup) String() string {

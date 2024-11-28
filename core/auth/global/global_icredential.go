@@ -82,7 +82,7 @@ func (s *Credentials) ProcessAuthParams(client *impl.DefaultHttpClient, region s
 
 	resp, err := internal.KeystoneListAuthDomains(client, req)
 	if err != nil {
-		panic(fmt.Errorf("failed to get domain id automatically, X-IAM-Trace-Id=%s, %w", resp.TraceId, err))
+		panic(fmt.Errorf("failed to get domain id automatically, %w", err))
 	}
 	domains := *resp.Domains
 	if len(domains) == 0 {

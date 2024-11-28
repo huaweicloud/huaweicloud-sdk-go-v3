@@ -517,6 +517,22 @@ func (i *DescribeBackupEncryptStatusInvoker) Invoke() (*model.DescribeBackupEncr
 	}
 }
 
+type DownloadSlowLogFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadSlowLogFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadSlowLogFileInvoker) Invoke() (*model.DownloadSlowLogFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadSlowLogFileResponse), nil
+	}
+}
+
 type ExpandGaussMySqlInstanceVolumeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1541,6 +1557,22 @@ func (i *ShowLtsConfigsInvoker) Invoke() (*model.ShowLtsConfigsResponse, error) 
 	}
 }
 
+type ShowMultiTenantInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMultiTenantInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowMultiTenantInvoker) Invoke() (*model.ShowMultiTenantResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMultiTenantResponse), nil
+	}
+}
+
 type ShowProxyConfigurationsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1618,6 +1650,22 @@ func (i *ShowRestoreTablesInvoker) Invoke() (*model.ShowRestoreTablesResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowRestoreTablesResponse), nil
+	}
+}
+
+type ShowSlowLogStatisticsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSlowLogStatisticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSlowLogStatisticsInvoker) Invoke() (*model.ShowSlowLogStatisticsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSlowLogStatisticsResponse), nil
 	}
 }
 
@@ -1986,6 +2034,22 @@ func (i *UpdateInstanceMonitorInvoker) Invoke() (*model.UpdateInstanceMonitorRes
 		return nil, err
 	} else {
 		return result.(*model.UpdateInstanceMonitorResponse), nil
+	}
+}
+
+type UpdateMultiTenantInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateMultiTenantInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateMultiTenantInvoker) Invoke() (*model.UpdateMultiTenantResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateMultiTenantResponse), nil
 	}
 }
 

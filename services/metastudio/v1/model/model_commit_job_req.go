@@ -30,6 +30,12 @@ type CommitJobReq struct {
 
 	// 第三方用户id
 	AppUserId *string `json:"app_user_id,omitempty"`
+
+	// 模型输出语言类型
+	OutputLanguage *string `json:"output_language,omitempty"`
+
+	// 自定义试听文本
+	CustomText *string `json:"custom_text,omitempty"`
 }
 
 func (o CommitJobReq) String() string {

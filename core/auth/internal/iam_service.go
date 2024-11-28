@@ -21,6 +21,7 @@ package internal
 
 import (
 	"errors"
+	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
@@ -139,6 +140,12 @@ func KeystoneListAuthDomains(client *impl.DefaultHttpClient, req *request.Defaul
 
 func handleErrAndGetRespData(req *request.DefaultHttpRequest, resp *response.DefaultHttpResponse) ([]byte, error) {
 	if err := (sdkerr.DefaultErrorHandler{}).HandleError(req, resp); err != nil {
+		traceId := resp.GetHeader(IamTraceId)
+		var servErr *sdkerr.ServiceResponseError
+		if traceId != "" && errors.As(err, &servErr) {
+			servErr.ErrorMessage += fmt.Sprintf(", %s=%s", IamTraceId, traceId)
+			return nil, servErr
+		}
 		return nil, err
 	}
 

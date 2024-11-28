@@ -60,6 +60,8 @@ type TrainingJobInfo struct {
 
 	// 批次名称
 	BatchName *string `json:"batch_name,omitempty"`
+
+	AllocatedResource *VoiceTrainingAllocatedResource `json:"allocated_resource,omitempty"`
 }
 
 func (o TrainingJobInfo) String() string {

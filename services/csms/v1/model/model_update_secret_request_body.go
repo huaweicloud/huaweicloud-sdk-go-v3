@@ -23,6 +23,9 @@ type UpdateSecretRequestBody struct {
 
 	// 凭据订阅的事件列表，当前最大可订阅一个事件。当事件包含的基础事件触发时，通知消息将发送到事件对应的通知主题。
 	EventSubscriptions *[]string `json:"event_subscriptions,omitempty"`
+
+	// FunctionGraph函数的urn。
+	RotationFuncUrn *string `json:"rotation_func_urn,omitempty"`
 }
 
 func (o UpdateSecretRequestBody) String() string {

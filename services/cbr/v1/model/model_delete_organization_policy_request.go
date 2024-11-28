@@ -9,7 +9,7 @@ import (
 // DeleteOrganizationPolicyRequest Request Object
 type DeleteOrganizationPolicyRequest struct {
 
-	// 资源策略ID
+	// 组织策略ID
 	OrganizationPolicyId string `json:"organization_policy_id"`
 }
 

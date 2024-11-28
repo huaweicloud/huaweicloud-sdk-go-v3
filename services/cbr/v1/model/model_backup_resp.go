@@ -27,8 +27,8 @@ type BackupResp struct {
 	// 备份ID
 	Id string `json:"id"`
 
-	// 备份类型
-	ImageType BackupRespImageType `json:"image_type"`
+	// [备份类型。取值为backup和replication。](tag:hws,hws_hk,ocb) [备份类型。取值为backup。](tag:g42,hk_g42,sbc,dt,fcs_vm,ctc,tm,tlf,cmcc,hcso_dt)
+	ImageType string `json:"image_type"`
 
 	// 备份名称
 	Name string `json:"name"`
@@ -54,10 +54,10 @@ type BackupResp struct {
 	// 资源大小，单位为GB
 	ResourceSize int32 `json:"resource_size"`
 
-	// 资源类型: 云服务器: OS::Nova::Server, 云硬盘: OS::Cinder::Volume, 云桌面：OS::Workspace::DesktopV2
-	ResourceType BackupRespResourceType `json:"resource_type"`
+	// [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:hws,hws_hk) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo](tag:hk_g42,sbc,dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Sfs::Turbo](tag:fcs_vm,ctc,ocb,tm) [资源类型: OS::Nova::Server, OS::Cinder::Volume](tag:tlf,cmcc,hcso_dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:g42)
+	ResourceType string `json:"resource_type"`
 
-	// 备份状态
+	// 备份状态 - available: 可用 - protecting: 保护中 - deleting: 删除中 - restoring: 恢复中 - error: 异常 - waiting_protect: 等待保护 - waiting_delete: 等待删除 - waiting_restore: 等待恢复
 	Status BackupRespStatus `json:"status"`
 
 	// 更新时间，例如:\"2020-02-05T10:38:34.209782\"
@@ -72,7 +72,7 @@ type BackupResp struct {
 	// 企业项目id,默认为‘0’。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 备份提供商ID，用于区分备份对象。当前取值包含  0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。
+	// 备份提供商ID，用于区分备份对象。当前取值包含： [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。](tag:hws,hws_hk) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881，该值代表备份对象为SFS Turbo。](tag:ocb,tlf,sbc,fcs_vm,g42,tm,dt,cmcc) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881，该值代表备份对象为SFS Turbo。86a80900-71bf-4961-956a-d52df944f84a，该值代表备份对象为Workspace。](tag:ctc) [0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。](tag:hcso_dt)
 	ProviderId string `json:"provider_id"`
 
 	// 子副本列表
@@ -80,6 +80,9 @@ type BackupResp struct {
 
 	// 是否是增备
 	Incremental *bool `json:"incremental,omitempty"`
+
+	// 备份副本快照类型
+	Version *int32 `json:"version,omitempty"`
 }
 
 func (o BackupResp) String() string {
@@ -89,104 +92,6 @@ func (o BackupResp) String() string {
 	}
 
 	return strings.Join([]string{"BackupResp", string(data)}, " ")
-}
-
-type BackupRespImageType struct {
-	value string
-}
-
-type BackupRespImageTypeEnum struct {
-	BACKUP      BackupRespImageType
-	REPLICATION BackupRespImageType
-}
-
-func GetBackupRespImageTypeEnum() BackupRespImageTypeEnum {
-	return BackupRespImageTypeEnum{
-		BACKUP: BackupRespImageType{
-			value: "backup",
-		},
-		REPLICATION: BackupRespImageType{
-			value: "replication",
-		},
-	}
-}
-
-func (c BackupRespImageType) Value() string {
-	return c.value
-}
-
-func (c BackupRespImageType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *BackupRespImageType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type BackupRespResourceType struct {
-	value string
-}
-
-type BackupRespResourceTypeEnum struct {
-	OSNOVASERVER          BackupRespResourceType
-	OSCINDERVOLUME        BackupRespResourceType
-	OSWORKSPACEDESKTOP_V2 BackupRespResourceType
-}
-
-func GetBackupRespResourceTypeEnum() BackupRespResourceTypeEnum {
-	return BackupRespResourceTypeEnum{
-		OSNOVASERVER: BackupRespResourceType{
-			value: "OS::Nova::Server",
-		},
-		OSCINDERVOLUME: BackupRespResourceType{
-			value: "OS::Cinder::Volume",
-		},
-		OSWORKSPACEDESKTOP_V2: BackupRespResourceType{
-			value: "OS::Workspace::DesktopV2",
-		},
-	}
-}
-
-func (c BackupRespResourceType) Value() string {
-	return c.value
-}
-
-func (c BackupRespResourceType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *BackupRespResourceType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }
 
 type BackupRespStatus struct {

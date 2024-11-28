@@ -21,6 +21,22 @@ func (i *BatchCreateOrDeleteTagsInvoker) Invoke() (*model.BatchCreateOrDeleteTag
 	}
 }
 
+type CreateAgencyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAgencyInvoker) Invoke() (*model.CreateAgencyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAgencyResponse), nil
+	}
+}
+
 type CreateSecretInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -261,6 +277,22 @@ func (i *ListSecretTagsInvoker) Invoke() (*model.ListSecretTagsResponse, error) 
 	}
 }
 
+type ListSecretTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecretTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSecretTaskInvoker) Invoke() (*model.ListSecretTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecretTaskResponse), nil
+	}
+}
+
 type ListSecretVersionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -325,6 +357,22 @@ func (i *RotateSecretInvoker) Invoke() (*model.RotateSecretResponse, error) {
 	}
 }
 
+type ShowAgencyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAgencyInvoker) Invoke() (*model.ShowAgencyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAgencyResponse), nil
+	}
+}
+
 type ShowSecretInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -354,6 +402,22 @@ func (i *ShowSecretEventInvoker) Invoke() (*model.ShowSecretEventResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ShowSecretEventResponse), nil
+	}
+}
+
+type ShowSecretFunctionTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSecretFunctionTemplatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSecretFunctionTemplatesInvoker) Invoke() (*model.ShowSecretFunctionTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSecretFunctionTemplatesResponse), nil
 	}
 }
 

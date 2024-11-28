@@ -29,7 +29,7 @@ type ShowProductResponse struct {
 	// 文本列表
 	TextList *[]ProductTextInfo `json:"text_list,omitempty"`
 
-	// 素材资产列表
+	// 资产列表,仅支持图片、视频、音频资产
 	AssetList *[]ProductMediaDetailInfo `json:"asset_list,omitempty"`
 
 	// 商品创建时间，格式遵循：RFC 3339。 例 “2020-07-30T10:43:17Z”。

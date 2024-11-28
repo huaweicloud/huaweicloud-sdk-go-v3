@@ -13,7 +13,10 @@ type RotateSecretResponse struct {
 	VersionId *string `json:"version_id,omitempty"`
 
 	// 凭据的名称。
-	SecretName     *string `json:"secret_name,omitempty"`
+	SecretName *string `json:"secret_name,omitempty"`
+
+	// 凭据轮转任务ID。
+	RotationTaskId *string `json:"rotation_task_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

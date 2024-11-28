@@ -51,8 +51,11 @@ type ListProtectableRequestProtectableType struct {
 }
 
 type ListProtectableRequestProtectableTypeEnum struct {
-	SERVER ListProtectableRequestProtectableType
-	DISK   ListProtectableRequestProtectableType
+	SERVER       ListProtectableRequestProtectableType
+	DISK         ListProtectableRequestProtectableType
+	TURBO        ListProtectableRequestProtectableType
+	WORKSPACE    ListProtectableRequestProtectableType
+	WORKSPACE_V2 ListProtectableRequestProtectableType
 }
 
 func GetListProtectableRequestProtectableTypeEnum() ListProtectableRequestProtectableTypeEnum {
@@ -62,6 +65,15 @@ func GetListProtectableRequestProtectableTypeEnum() ListProtectableRequestProtec
 		},
 		DISK: ListProtectableRequestProtectableType{
 			value: "disk",
+		},
+		TURBO: ListProtectableRequestProtectableType{
+			value: "turbo",
+		},
+		WORKSPACE: ListProtectableRequestProtectableType{
+			value: "workspace",
+		},
+		WORKSPACE_V2: ListProtectableRequestProtectableType{
+			value: "workspace_v2",
 		},
 	}
 }

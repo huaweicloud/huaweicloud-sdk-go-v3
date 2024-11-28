@@ -187,6 +187,27 @@ func (c *CodeArtsInspectorClient) ListHostsInvoker(request *model.ListHostsReque
 	return &ListHostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSubscription 资源版本查询接口
+//
+// 资源版本查询接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsInspectorClient) ShowSubscription(request *model.ShowSubscriptionRequest) (*model.ShowSubscriptionResponse, error) {
+	requestDef := GenReqDefForShowSubscription()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSubscriptionResponse), nil
+	}
+}
+
+// ShowSubscriptionInvoker 资源版本查询接口
+func (c *CodeArtsInspectorClient) ShowSubscriptionInvoker(request *model.ShowSubscriptionRequest) *ShowSubscriptionInvoker {
+	requestDef := GenReqDefForShowSubscription()
+	return &ShowSubscriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DownloadTaskReport 下载网站扫描报告
 //
 // 下载网站扫描任务PDF报告

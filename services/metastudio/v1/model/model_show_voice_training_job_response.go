@@ -59,8 +59,10 @@ type ShowVoiceTrainingJobResponse struct {
 	DhtmsJobId *string `json:"dhtms_job_id,omitempty"`
 
 	// 批次名称
-	BatchName      *string `json:"batch_name,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	BatchName *string `json:"batch_name,omitempty"`
+
+	AllocatedResource *VoiceTrainingAllocatedResource `json:"allocated_resource,omitempty"`
+	HttpStatusCode    int                             `json:"-"`
 }
 
 func (o ShowVoiceTrainingJobResponse) String() string {

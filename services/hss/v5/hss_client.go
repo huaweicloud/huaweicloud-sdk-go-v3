@@ -19,6 +19,27 @@ func HssClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// AddCceIntegrationProtection 新建cce集成防护配置
+//
+// 新建cce集成防护配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) AddCceIntegrationProtection(request *model.AddCceIntegrationProtectionRequest) (*model.AddCceIntegrationProtectionResponse, error) {
+	requestDef := GenReqDefForAddCceIntegrationProtection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddCceIntegrationProtectionResponse), nil
+	}
+}
+
+// AddCceIntegrationProtectionInvoker 新建cce集成防护配置
+func (c *HssClient) AddCceIntegrationProtectionInvoker(request *model.AddCceIntegrationProtectionRequest) *AddCceIntegrationProtectionInvoker {
+	requestDef := GenReqDefForAddCceIntegrationProtection()
+	return &AddCceIntegrationProtectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddHostsGroup 创建服务器组
 //
 // 创建服务器组
@@ -59,6 +80,27 @@ func (c *HssClient) AssociatePolicyGroup(request *model.AssociatePolicyGroupRequ
 func (c *HssClient) AssociatePolicyGroupInvoker(request *model.AssociatePolicyGroupRequest) *AssociatePolicyGroupInvoker {
 	requestDef := GenReqDefForAssociatePolicyGroup()
 	return &AssociatePolicyGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchAddAccounts 批量添加账号
+//
+// 批量添加账号
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) BatchAddAccounts(request *model.BatchAddAccountsRequest) (*model.BatchAddAccountsResponse, error) {
+	requestDef := GenReqDefForBatchAddAccounts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchAddAccountsResponse), nil
+	}
+}
+
+// BatchAddAccountsInvoker 批量添加账号
+func (c *HssClient) BatchAddAccountsInvoker(request *model.BatchAddAccountsRequest) *BatchAddAccountsInvoker {
+	requestDef := GenReqDefForBatchAddAccounts()
+	return &BatchAddAccountsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchCreateTags 批量创建标签
@@ -292,6 +334,48 @@ func (c *HssClient) CreateVulnerabilityScanTaskInvoker(request *model.CreateVuln
 	return &CreateVulnerabilityScanTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteAccount 删除账号
+//
+// 删除账号
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) DeleteAccount(request *model.DeleteAccountRequest) (*model.DeleteAccountResponse, error) {
+	requestDef := GenReqDefForDeleteAccount()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAccountResponse), nil
+	}
+}
+
+// DeleteAccountInvoker 删除账号
+func (c *HssClient) DeleteAccountInvoker(request *model.DeleteAccountRequest) *DeleteAccountInvoker {
+	requestDef := GenReqDefForDeleteAccount()
+	return &DeleteAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAgentDaemonset 删除集群daemonset
+//
+// 删除集群daemonset
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) DeleteAgentDaemonset(request *model.DeleteAgentDaemonsetRequest) (*model.DeleteAgentDaemonsetResponse, error) {
+	requestDef := GenReqDefForDeleteAgentDaemonset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAgentDaemonsetResponse), nil
+	}
+}
+
+// DeleteAgentDaemonsetInvoker 删除集群daemonset
+func (c *HssClient) DeleteAgentDaemonsetInvoker(request *model.DeleteAgentDaemonsetRequest) *DeleteAgentDaemonsetInvoker {
+	requestDef := GenReqDefForDeleteAgentDaemonset()
+	return &DeleteAgentDaemonsetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteHostsGroup 删除服务器组
 //
 // 删除服务器组
@@ -353,6 +437,27 @@ func (c *HssClient) ExportVuls(request *model.ExportVulsRequest) (*model.ExportV
 func (c *HssClient) ExportVulsInvoker(request *model.ExportVulsRequest) *ExportVulsInvoker {
 	requestDef := GenReqDefForExportVuls()
 	return &ExportVulsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAccounts 查询多账号列表
+//
+// 查询多账号列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListAccounts(request *model.ListAccountsRequest) (*model.ListAccountsResponse, error) {
+	requestDef := GenReqDefForListAccounts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAccountsResponse), nil
+	}
+}
+
+// ListAccountsInvoker 查询多账号列表
+func (c *HssClient) ListAccountsInvoker(request *model.ListAccountsRequest) *ListAccountsInvoker {
+	requestDef := GenReqDefForListAccounts()
+	return &ListAccountsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAlarmWhiteList 查询告警白名单列表
@@ -521,6 +626,27 @@ func (c *HssClient) ListBlockedIp(request *model.ListBlockedIpRequest) (*model.L
 func (c *HssClient) ListBlockedIpInvoker(request *model.ListBlockedIpRequest) *ListBlockedIpInvoker {
 	requestDef := GenReqDefForListBlockedIp()
 	return &ListBlockedIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCceClusterConfig 获取集群配置
+//
+// 获取集群配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListCceClusterConfig(request *model.ListCceClusterConfigRequest) (*model.ListCceClusterConfigResponse, error) {
+	requestDef := GenReqDefForListCceClusterConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCceClusterConfigResponse), nil
+	}
+}
+
+// ListCceClusterConfigInvoker 获取集群配置
+func (c *HssClient) ListCceClusterConfigInvoker(request *model.ListCceClusterConfigRequest) *ListCceClusterConfigInvoker {
+	requestDef := GenReqDefForListCceClusterConfig()
+	return &ListCceClusterConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListContainerNodes 查询容器节点列表
@@ -836,6 +962,27 @@ func (c *HssClient) ListJarPackageStatistics(request *model.ListJarPackageStatis
 func (c *HssClient) ListJarPackageStatisticsInvoker(request *model.ListJarPackageStatisticsRequest) *ListJarPackageStatisticsInvoker {
 	requestDef := GenReqDefForListJarPackageStatistics()
 	return &ListJarPackageStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListOrganizationTree 查询账号组织
+//
+// 查询账号组织
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListOrganizationTree(request *model.ListOrganizationTreeRequest) (*model.ListOrganizationTreeResponse, error) {
+	requestDef := GenReqDefForListOrganizationTree()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOrganizationTreeResponse), nil
+	}
+}
+
+// ListOrganizationTreeInvoker 查询账号组织
+func (c *HssClient) ListOrganizationTreeInvoker(request *model.ListOrganizationTreeRequest) *ListOrganizationTreeInvoker {
+	requestDef := GenReqDefForListOrganizationTree()
+	return &ListOrganizationTreeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPasswordComplexity 查询口令复杂度策略检测报告
@@ -1697,6 +1844,27 @@ func (c *HssClient) SwitchHostsProtectStatus(request *model.SwitchHostsProtectSt
 func (c *HssClient) SwitchHostsProtectStatusInvoker(request *model.SwitchHostsProtectStatusRequest) *SwitchHostsProtectStatusInvoker {
 	requestDef := GenReqDefForSwitchHostsProtectStatus()
 	return &SwitchHostsProtectStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAgentDaemonset 更新集群daemonset
+//
+// 更新集群daemonset
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) UpdateAgentDaemonset(request *model.UpdateAgentDaemonsetRequest) (*model.UpdateAgentDaemonsetResponse, error) {
+	requestDef := GenReqDefForUpdateAgentDaemonset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAgentDaemonsetResponse), nil
+	}
+}
+
+// UpdateAgentDaemonsetInvoker 更新集群daemonset
+func (c *HssClient) UpdateAgentDaemonsetInvoker(request *model.UpdateAgentDaemonsetRequest) *UpdateAgentDaemonsetInvoker {
+	requestDef := GenReqDefForUpdateAgentDaemonset()
+	return &UpdateAgentDaemonsetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateBackupPolicyInfo 修改存储库绑定的备份策略

@@ -2,6 +2,7 @@ package model
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 
 	"strings"
 )
@@ -58,6 +59,15 @@ type OrderInstanceV2 struct {
 
 	// 资源到期后的扣费策略： 0：到期进入宽限期1：到期转按需2：到期后自动删除（从生效中直接删除）3：到期后自动续费4：到期后冻结5：到期后删除（从保留期删除）  说明： 只有“3”表示该资源是自动续订，其他情况下，都是非自动续订下的到期策略。
 	ExpirePolicy *int32 `json:"expire_policy,omitempty"`
+
+	// 产品规格描述
+	ProductSpecDesc *string `json:"product_spec_desc,omitempty"`
+
+	// 线性大小
+	SpecSize *decimal.Decimal `json:"spec_size,omitempty"`
+
+	// 线性大小单位
+	SpecSizeMeasureId *int32 `json:"spec_size_measure_id,omitempty"`
 }
 
 func (o OrderInstanceV2) String() string {

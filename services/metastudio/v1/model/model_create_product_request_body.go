@@ -23,7 +23,7 @@ type CreateProductRequestBody struct {
 	// 文本列表
 	TextList *[]ProductTextInfo `json:"text_list,omitempty"`
 
-	// 素材资产列表
+	// 资产列表,仅支持图片、视频、音频资产
 	AssetList *[]ProductMediaInfo `json:"asset_list,omitempty"`
 
 	// **参数解释**： 自动激活商品

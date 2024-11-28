@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// UnusedPermissionDetails 未使用的权限详情。
 type UnusedPermissionDetails struct {
 
 	// 权限对应的云服务名称。

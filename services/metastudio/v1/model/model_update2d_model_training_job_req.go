@@ -27,9 +27,6 @@ type Update2dModelTrainingJobReq struct {
 	// 动作视频上传分片数。
 	ActionVideoMultipartCount *int32 `json:"action_video_multipart_count,omitempty"`
 
-	// 美白等级。默认值0，不美白。
-	BeautyLevel *int32 `json:"beauty_level,omitempty"`
-
 	// 分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
 	IsBackgroundReplacement *bool `json:"is_background_replacement,omitempty"`
 

@@ -28,6 +28,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"net/http"
 	"net/http/httptest"
+	"strings"
 	"testing"
 	"time"
 )
@@ -111,7 +112,9 @@ func TestCredentialsBuilder_SafeBuild2(t *testing.T) {
 		t.Run(c.Name, func(t *testing.T) {
 			_, err := NewCredentialsBuilder().WithAk(c.Ak).WithSk(c.Sk).SafeBuild()
 			assert.IsType(t, err, &sdkerr.CredentialsTypeError{})
-			msg := err.(*sdkerr.CredentialsTypeError).ErrorMessage
+			var credentialsTypeError *sdkerr.CredentialsTypeError
+			errors.As(err, &credentialsTypeError)
+			msg := credentialsTypeError.ErrorMessage
 			for _, contain := range c.ExpectedContains {
 				assert.Contains(t, msg, contain)
 			}
@@ -151,18 +154,21 @@ func TestCredentialsBuilder_SafeBuild2(t *testing.T) {
 func TestCredentials_ProcessAuthParams(t *testing.T) {
 	cases := []struct {
 		Name, RegionId, Data, ExpectedProjectId string
-		ExpectedError                           error
+		StatusCode                              int
+		ExpectedError                           string
 	}{
-		{"One Project", "region-id-1", "{\"projects\":[{\"id\":\"project_id\"}]}", "project_id", nil},
-		{"No Project", "region-id-2", "{\"projects\":[]}", "",
-			errors.New("failed to get project id of region 'region-id-2' automatically," +
+		{"Bad Request", "region-id-1", "{\"error_code\":\"XXX.001\",\"error_msg\":\"Bad Request\"}", "", 400,
+			"failed to get project id of region 'region-id-1' automatically, {\"status_code\":400,\"request_id\":\"\",\"error_code\":\"XXX.001\",\"error_message\":\"Bad Request, X-IAM-Trace-Id=trace-id\",\"encoded_authorization_message\":\"\"}"},
+		{"One Project", "region-id-1", "{\"projects\":[{\"id\":\"project_id\"}]}", "project_id", 200, ""},
+		{"No Project", "region-id-2", "{\"projects\":[]}", "", 200,
+			"failed to get project id of region 'region-id-2' automatically," +
 				" X-IAM-Trace-Id=trace-id, confirm that the project exists in your account," +
 				" or set project id manually:" +
-				" basic.NewCredentialsBuilder().WithAk(ak).WithSk(sk).WithProjectId(projectId).SafeBuild()")},
-		{"Multi Projects", "region-id-3", "{\"projects\":[{\"id\":\"project_id1\"},{\"id\":\"project_id2\"}]}", "",
-			errors.New("multiple project ids found: [project_id1,project_id2]," +
+				" basic.NewCredentialsBuilder().WithAk(ak).WithSk(sk).WithProjectId(projectId).SafeBuild()"},
+		{"Multi Projects", "region-id-3", "{\"projects\":[{\"id\":\"project_id1\"},{\"id\":\"project_id2\"}]}", "", 200,
+			"multiple project ids found: [project_id1,project_id2]," +
 				" X-IAM-Trace-Id=trace-id, please select one when initializing the credentials:" +
-				" basic.NewCredentialsBuilder().WithAk(ak).WithSk(sk).WithProjectId(projectId).SafeBuild()")},
+				" basic.NewCredentialsBuilder().WithAk(ak).WithSk(sk).WithProjectId(projectId).SafeBuild()"},
 	}
 
 	for _, c := range cases {
@@ -170,6 +176,7 @@ func TestCredentials_ProcessAuthParams(t *testing.T) {
 			ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 				w.Header().Set("Content-Type", "application/json")
 				w.Header().Set("X-IAM-Trace-Id", "trace-id")
+				w.WriteHeader(c.StatusCode)
 				_, err := fmt.Fprintln(w, c.Data)
 				assert.Nil(t, err)
 			}))
@@ -183,8 +190,8 @@ func TestCredentials_ProcessAuthParams(t *testing.T) {
 			assert.Nil(t, err)
 
 			defer func() {
-				if c.ExpectedError != nil {
-					assert.Equal(t, c.ExpectedError, recover())
+				if c.ExpectedError != "" {
+					assert.Equal(t, c.ExpectedError, strings.TrimSpace(fmt.Sprintf("%v", recover())))
 				} else {
 					assert.Equal(t, c.ExpectedProjectId, credentials.ProjectId)
 				}

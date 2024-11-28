@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -26,6 +29,9 @@ type NodeSpecUpdate struct {
 	ServerEnterpriseProjectID *string `json:"serverEnterpriseProjectID,omitempty"`
 
 	NodeNicSpecUpdate *NodeSpecUpdateNodeNicSpecUpdate `json:"nodeNicSpecUpdate,omitempty"`
+
+	// **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： 取值范围：['null', cybersecurity]; **默认取值**： 不涉及
+	SecurityReinforcementType *NodeSpecUpdateSecurityReinforcementType `json:"securityReinforcementType,omitempty"`
 }
 
 func (o NodeSpecUpdate) String() string {
@@ -35,4 +41,51 @@ func (o NodeSpecUpdate) String() string {
 	}
 
 	return strings.Join([]string{"NodeSpecUpdate", string(data)}, " ")
+}
+
+type NodeSpecUpdateSecurityReinforcementType struct {
+	value string
+}
+
+type NodeSpecUpdateSecurityReinforcementTypeEnum struct {
+	NULL          NodeSpecUpdateSecurityReinforcementType
+	CYBERSECURITY NodeSpecUpdateSecurityReinforcementType
+}
+
+func GetNodeSpecUpdateSecurityReinforcementTypeEnum() NodeSpecUpdateSecurityReinforcementTypeEnum {
+	return NodeSpecUpdateSecurityReinforcementTypeEnum{
+		NULL: NodeSpecUpdateSecurityReinforcementType{
+			value: "null",
+		},
+		CYBERSECURITY: NodeSpecUpdateSecurityReinforcementType{
+			value: "cybersecurity",
+		},
+	}
+}
+
+func (c NodeSpecUpdateSecurityReinforcementType) Value() string {
+	return c.value
+}
+
+func (c NodeSpecUpdateSecurityReinforcementType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *NodeSpecUpdateSecurityReinforcementType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

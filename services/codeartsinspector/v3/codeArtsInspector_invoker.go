@@ -133,6 +133,22 @@ func (i *ListHostsInvoker) Invoke() (*model.ListHostsResponse, error) {
 	}
 }
 
+type ShowSubscriptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSubscriptionInvoker) Invoke() (*model.ShowSubscriptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSubscriptionResponse), nil
+	}
+}
+
 type DownloadTaskReportInvoker struct {
 	*invoker.BaseInvoker
 }

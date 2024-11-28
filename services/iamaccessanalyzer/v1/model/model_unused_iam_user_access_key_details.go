@@ -7,6 +7,7 @@ import (
 	"strings"
 )
 
+// UnusedIamUserAccessKeyDetails 未使用的用户访问秘钥详情。
 type UnusedIamUserAccessKeyDetails struct {
 
 	// 用户访问密钥唯一标识符（ID）。

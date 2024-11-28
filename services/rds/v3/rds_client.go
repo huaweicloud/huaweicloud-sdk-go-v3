@@ -4359,6 +4359,27 @@ func (c *RdsClient) BatchAddMsdtcsInvoker(request *model.BatchAddMsdtcsRequest) 
 	return &BatchAddMsdtcsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CopyDatabase 复制数据库
+//
+// 复制数据库
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) CopyDatabase(request *model.CopyDatabaseRequest) (*model.CopyDatabaseResponse, error) {
+	requestDef := GenReqDefForCopyDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CopyDatabaseResponse), nil
+	}
+}
+
+// CopyDatabaseInvoker 复制数据库
+func (c *RdsClient) CopyDatabaseInvoker(request *model.CopyDatabaseRequest) *CopyDatabaseInvoker {
+	requestDef := GenReqDefForCopyDatabase()
+	return &CopyDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSqlserverDatabase 创建数据库
 //
 // 创建数据库。
@@ -4399,6 +4420,27 @@ func (c *RdsClient) CreateSqlserverDbUser(request *model.CreateSqlserverDbUserRe
 func (c *RdsClient) CreateSqlserverDbUserInvoker(request *model.CreateSqlserverDbUserRequest) *CreateSqlserverDbUserInvoker {
 	requestDef := GenReqDefForCreateSqlserverDbUser()
 	return &CreateSqlserverDbUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteMsdtcLocalHost 删除MSDTC
+//
+// 删除MSDTC相关主机host地址
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) DeleteMsdtcLocalHost(request *model.DeleteMsdtcLocalHostRequest) (*model.DeleteMsdtcLocalHostResponse, error) {
+	requestDef := GenReqDefForDeleteMsdtcLocalHost()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteMsdtcLocalHostResponse), nil
+	}
+}
+
+// DeleteMsdtcLocalHostInvoker 删除MSDTC
+func (c *RdsClient) DeleteMsdtcLocalHostInvoker(request *model.DeleteMsdtcLocalHostRequest) *DeleteMsdtcLocalHostInvoker {
+	requestDef := GenReqDefForDeleteMsdtcLocalHost()
+	return &DeleteMsdtcLocalHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteSqlserverDatabase 删除数据库

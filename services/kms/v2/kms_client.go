@@ -19,6 +19,28 @@ func KmsClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// AssociateAlias
+//
+// 关联别名。
+// 你可以将别名从原密钥关联到另一个新的密钥
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) AssociateAlias(request *model.AssociateAliasRequest) (*model.AssociateAliasResponse, error) {
+	requestDef := GenReqDefForAssociateAlias()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateAliasResponse), nil
+	}
+}
+
+// AssociateAliasInvoker
+func (c *KmsClient) AssociateAliasInvoker(request *model.AssociateAliasRequest) *AssociateAliasInvoker {
+	requestDef := GenReqDefForAssociateAlias()
+	return &AssociateAliasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchCreateKmsTags 批量添加删除密钥标签
 //
 // - 功能介绍：批量添加删除密钥标签。
@@ -111,6 +133,25 @@ func (c *KmsClient) CancelSelfGrant(request *model.CancelSelfGrantRequest) (*mod
 func (c *KmsClient) CancelSelfGrantInvoker(request *model.CancelSelfGrantRequest) *CancelSelfGrantInvoker {
 	requestDef := GenReqDefForCancelSelfGrant()
 	return &CancelSelfGrantInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAlias
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) CreateAlias(request *model.CreateAliasRequest) (*model.CreateAliasResponse, error) {
+	requestDef := GenReqDefForCreateAlias()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAliasResponse), nil
+	}
+}
+
+// CreateAliasInvoker
+func (c *KmsClient) CreateAliasInvoker(request *model.CreateAliasRequest) *CreateAliasInvoker {
+	requestDef := GenReqDefForCreateAlias()
+	return &CreateAliasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateDatakey 创建数据密钥
@@ -327,6 +368,27 @@ func (c *KmsClient) DecryptDatakey(request *model.DecryptDatakeyRequest) (*model
 func (c *KmsClient) DecryptDatakeyInvoker(request *model.DecryptDatakeyRequest) *DecryptDatakeyInvoker {
 	requestDef := GenReqDefForDecryptDatakey()
 	return &DecryptDatakeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAlias
+//
+// 删除别名
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) DeleteAlias(request *model.DeleteAliasRequest) (*model.DeleteAliasResponse, error) {
+	requestDef := GenReqDefForDeleteAlias()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAliasResponse), nil
+	}
+}
+
+// DeleteAliasInvoker
+func (c *KmsClient) DeleteAliasInvoker(request *model.DeleteAliasRequest) *DeleteAliasInvoker {
+	requestDef := GenReqDefForDeleteAlias()
+	return &DeleteAliasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteImportedKeyMaterial 删除密钥材料
@@ -626,6 +688,27 @@ func (c *KmsClient) ImportKeyMaterial(request *model.ImportKeyMaterialRequest) (
 func (c *KmsClient) ImportKeyMaterialInvoker(request *model.ImportKeyMaterialRequest) *ImportKeyMaterialInvoker {
 	requestDef := GenReqDefForImportKeyMaterial()
 	return &ImportKeyMaterialInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAliases
+//
+// 查询一个密钥关联的所有别名
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) ListAliases(request *model.ListAliasesRequest) (*model.ListAliasesResponse, error) {
+	requestDef := GenReqDefForListAliases()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAliasesResponse), nil
+	}
+}
+
+// ListAliasesInvoker
+func (c *KmsClient) ListAliasesInvoker(request *model.ListAliasesRequest) *ListAliasesInvoker {
+	requestDef := GenReqDefForListAliases()
+	return &ListAliasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListGrants 查询授权列表

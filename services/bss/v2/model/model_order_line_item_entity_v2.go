@@ -57,6 +57,8 @@ type OrderLineItemEntityV2 struct {
 
 	// 商务归属的资源类型编码。 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
 	CommercialResource *string `json:"commercial_resource,omitempty"`
+
+	BaseProductInfo *ProductObject `json:"base_product_info,omitempty"`
 }
 
 func (o OrderLineItemEntityV2) String() string {

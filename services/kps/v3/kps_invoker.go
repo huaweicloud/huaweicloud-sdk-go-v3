@@ -37,6 +37,38 @@ func (i *BatchAssociateKeypairInvoker) Invoke() (*model.BatchAssociateKeypairRes
 	}
 }
 
+type BatchExportPrivateKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchExportPrivateKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchExportPrivateKeyInvoker) Invoke() (*model.BatchExportPrivateKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchExportPrivateKeyResponse), nil
+	}
+}
+
+type BatchImportKeypairInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchImportKeypairInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchImportKeypairInvoker) Invoke() (*model.BatchImportKeypairResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchImportKeypairResponse), nil
+	}
+}
+
 type ClearPrivateKeyInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -45,7 +45,7 @@ type ListProductsRequest struct {
 	// 按标签模糊查询。
 	Tag *string `json:"tag,omitempty"`
 
-	// 按状态查询，多状态使用英文逗号分割。
+	// 按状态查询，多状态使用英文逗号分隔。
 	State *string `json:"state,omitempty"`
 }
 

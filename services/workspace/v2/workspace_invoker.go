@@ -581,6 +581,246 @@ func (i *UpdateDesktopNamePolicyInvoker) Invoke() (*model.UpdateDesktopNamePolic
 	}
 }
 
+type AddDesktopPoolVolumesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddDesktopPoolVolumesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddDesktopPoolVolumesInvoker) Invoke() (*model.AddDesktopPoolVolumesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddDesktopPoolVolumesResponse), nil
+	}
+}
+
+type CreateDesktopPoolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDesktopPoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDesktopPoolInvoker) Invoke() (*model.CreateDesktopPoolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDesktopPoolResponse), nil
+	}
+}
+
+type CreateDesktopPoolAuthorizedObjectsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDesktopPoolAuthorizedObjectsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDesktopPoolAuthorizedObjectsInvoker) Invoke() (*model.CreateDesktopPoolAuthorizedObjectsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDesktopPoolAuthorizedObjectsResponse), nil
+	}
+}
+
+type DeleteDesktopPoolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDesktopPoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDesktopPoolInvoker) Invoke() (*model.DeleteDesktopPoolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDesktopPoolResponse), nil
+	}
+}
+
+type DeleteDesktopPoolVolumesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDesktopPoolVolumesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDesktopPoolVolumesInvoker) Invoke() (*model.DeleteDesktopPoolVolumesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDesktopPoolVolumesResponse), nil
+	}
+}
+
+type ExecuteDesktopPoolActionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteDesktopPoolActionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteDesktopPoolActionInvoker) Invoke() (*model.ExecuteDesktopPoolActionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteDesktopPoolActionResponse), nil
+	}
+}
+
+type ExpandDesktopPoolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExpandDesktopPoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExpandDesktopPoolInvoker) Invoke() (*model.ExpandDesktopPoolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExpandDesktopPoolResponse), nil
+	}
+}
+
+type ExpandDesktopPoolVolumesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExpandDesktopPoolVolumesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExpandDesktopPoolVolumesInvoker) Invoke() (*model.ExpandDesktopPoolVolumesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExpandDesktopPoolVolumesResponse), nil
+	}
+}
+
+type ListDesktopPoolAuthorizedObjectsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDesktopPoolAuthorizedObjectsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDesktopPoolAuthorizedObjectsInvoker) Invoke() (*model.ListDesktopPoolAuthorizedObjectsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDesktopPoolAuthorizedObjectsResponse), nil
+	}
+}
+
+type ListDesktopPoolsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDesktopPoolsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDesktopPoolsInvoker) Invoke() (*model.ListDesktopPoolsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDesktopPoolsResponse), nil
+	}
+}
+
+type ListPoolDesktopsDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPoolDesktopsDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPoolDesktopsDetailInvoker) Invoke() (*model.ListPoolDesktopsDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPoolDesktopsDetailResponse), nil
+	}
+}
+
+type RebuildDesktopPoolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RebuildDesktopPoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RebuildDesktopPoolInvoker) Invoke() (*model.RebuildDesktopPoolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RebuildDesktopPoolResponse), nil
+	}
+}
+
+type ResizeDesktopPoolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResizeDesktopPoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ResizeDesktopPoolInvoker) Invoke() (*model.ResizeDesktopPoolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResizeDesktopPoolResponse), nil
+	}
+}
+
+type ShowDesktopPoolDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDesktopPoolDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDesktopPoolDetailInvoker) Invoke() (*model.ShowDesktopPoolDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDesktopPoolDetailResponse), nil
+	}
+}
+
+type UpdateDesktopPoolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDesktopPoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDesktopPoolInvoker) Invoke() (*model.UpdateDesktopPoolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDesktopPoolResponse), nil
+	}
+}
+
 type ListUnusedDesktopsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1410,6 +1650,22 @@ func (i *BatchDeleteOtpDevicesInvoker) Invoke() (*model.BatchDeleteOtpDevicesRes
 		return nil, err
 	} else {
 		return result.(*model.BatchDeleteOtpDevicesResponse), nil
+	}
+}
+
+type BatchDeleteUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteUserInvoker) Invoke() (*model.BatchDeleteUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteUserResponse), nil
 	}
 }
 

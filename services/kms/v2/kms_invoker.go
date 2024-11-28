@@ -5,6 +5,22 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/kms/v2/model"
 )
 
+type AssociateAliasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssociateAliasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AssociateAliasInvoker) Invoke() (*model.AssociateAliasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssociateAliasResponse), nil
+	}
+}
+
 type BatchCreateKmsTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -66,6 +82,22 @@ func (i *CancelSelfGrantInvoker) Invoke() (*model.CancelSelfGrantResponse, error
 		return nil, err
 	} else {
 		return result.(*model.CancelSelfGrantResponse), nil
+	}
+}
+
+type CreateAliasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAliasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAliasInvoker) Invoke() (*model.CreateAliasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAliasResponse), nil
 	}
 }
 
@@ -226,6 +258,22 @@ func (i *DecryptDatakeyInvoker) Invoke() (*model.DecryptDatakeyResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.DecryptDatakeyResponse), nil
+	}
+}
+
+type DeleteAliasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAliasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAliasInvoker) Invoke() (*model.DeleteAliasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAliasResponse), nil
 	}
 }
 
@@ -450,6 +498,22 @@ func (i *ImportKeyMaterialInvoker) Invoke() (*model.ImportKeyMaterialResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ImportKeyMaterialResponse), nil
+	}
+}
+
+type ListAliasesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAliasesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAliasesInvoker) Invoke() (*model.ListAliasesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAliasesResponse), nil
 	}
 }
 

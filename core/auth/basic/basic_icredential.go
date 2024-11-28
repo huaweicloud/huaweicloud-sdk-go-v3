@@ -83,8 +83,7 @@ func (s *Credentials) ProcessAuthParams(client *impl.DefaultHttpClient, region s
 
 	resp, err := internal.KeystoneListProjects(client, req)
 	if err != nil {
-		panic(fmt.Errorf("failed to get project id of region '%s' automatically, X-IAM-Trace-Id=%s, %s",
-			region, resp.TraceId, err.Error()))
+		panic(fmt.Errorf("failed to get project id of region '%s' automatically, %s", region, err.Error()))
 	}
 	projects := *resp.Projects
 	if len(projects) < 1 {

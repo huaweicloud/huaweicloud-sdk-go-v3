@@ -11,6 +11,12 @@ type ListOrganizationPoliciesRequest struct {
 
 	// 组织策略类型
 	OperationType string `json:"operation_type"`
+
+	// 每页显示的条目数量，正整数
+	Limit *int32 `json:"limit,omitempty"`
+
+	// 偏移值，正整数
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListOrganizationPoliciesRequest) String() string {

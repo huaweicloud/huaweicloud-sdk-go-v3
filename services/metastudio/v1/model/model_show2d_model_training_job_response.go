@@ -127,9 +127,6 @@ type Show2dModelTrainingJobResponse struct {
 	// 转编译任务机型
 	WorkerType *[]string `json:"worker_type,omitempty"`
 
-	// 美白等级。默认值0，不美白。
-	BeautyLevel *int32 `json:"beauty_level,omitempty"`
-
 	// 声音训练任务id。
 	VoiceTrainJobId *string `json:"voice_train_job_id,omitempty"`
 

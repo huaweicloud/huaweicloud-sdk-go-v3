@@ -26,7 +26,7 @@ type UpdateProductRequestBody struct {
 	// 文本列表
 	TextList *[]ProductTextInfo `json:"text_list,omitempty"`
 
-	// 素材资产列表
+	// 资产列表,仅支持图片、视频、音频资产
 	AssetList *[]ProductMediaInfo `json:"asset_list,omitempty"`
 
 	// 商品状态枚举 * ACTIVED：已激活 * UNACTIVED：未激活

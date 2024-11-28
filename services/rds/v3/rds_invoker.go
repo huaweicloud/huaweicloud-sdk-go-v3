@@ -3301,6 +3301,22 @@ func (i *BatchAddMsdtcsInvoker) Invoke() (*model.BatchAddMsdtcsResponse, error) 
 	}
 }
 
+type CopyDatabaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CopyDatabaseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CopyDatabaseInvoker) Invoke() (*model.CopyDatabaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CopyDatabaseResponse), nil
+	}
+}
+
 type CreateSqlserverDatabaseInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3330,6 +3346,22 @@ func (i *CreateSqlserverDbUserInvoker) Invoke() (*model.CreateSqlserverDbUserRes
 		return nil, err
 	} else {
 		return result.(*model.CreateSqlserverDbUserResponse), nil
+	}
+}
+
+type DeleteMsdtcLocalHostInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteMsdtcLocalHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteMsdtcLocalHostInvoker) Invoke() (*model.DeleteMsdtcLocalHostResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteMsdtcLocalHostResponse), nil
 	}
 }
 

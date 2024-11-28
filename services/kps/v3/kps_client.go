@@ -61,6 +61,48 @@ func (c *KpsClient) BatchAssociateKeypairInvoker(request *model.BatchAssociateKe
 	return &BatchAssociateKeypairInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchExportPrivateKey 批量导出密钥对私钥
+//
+// 批量导出密钥对私钥，单次最多导出10条数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KpsClient) BatchExportPrivateKey(request *model.BatchExportPrivateKeyRequest) (*model.BatchExportPrivateKeyResponse, error) {
+	requestDef := GenReqDefForBatchExportPrivateKey()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchExportPrivateKeyResponse), nil
+	}
+}
+
+// BatchExportPrivateKeyInvoker 批量导出密钥对私钥
+func (c *KpsClient) BatchExportPrivateKeyInvoker(request *model.BatchExportPrivateKeyRequest) *BatchExportPrivateKeyInvoker {
+	requestDef := GenReqDefForBatchExportPrivateKey()
+	return &BatchExportPrivateKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchImportKeypair 批量导入SSH密钥对
+//
+// 批量导入SSH密钥对,单次批量导入不得超过10条记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KpsClient) BatchImportKeypair(request *model.BatchImportKeypairRequest) (*model.BatchImportKeypairResponse, error) {
+	requestDef := GenReqDefForBatchImportKeypair()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchImportKeypairResponse), nil
+	}
+}
+
+// BatchImportKeypairInvoker 批量导入SSH密钥对
+func (c *KpsClient) BatchImportKeypairInvoker(request *model.BatchImportKeypairRequest) *BatchImportKeypairInvoker {
+	requestDef := GenReqDefForBatchImportKeypair()
+	return &BatchImportKeypairInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ClearPrivateKey 清除私钥
 //
 // 清除SSH密钥对私钥。

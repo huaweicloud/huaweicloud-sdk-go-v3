@@ -101,6 +101,22 @@ func (i *BatchUpdateVaultInvoker) Invoke() (*model.BatchUpdateVaultResponse, err
 	}
 }
 
+type ChangeOrderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeOrderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeOrderInvoker) Invoke() (*model.ChangeOrderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeOrderResponse), nil
+	}
+}
+
 type CheckAgentInvoker struct {
 	*invoker.BaseInvoker
 }

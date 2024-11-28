@@ -5,6 +5,22 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/hss/v5/model"
 )
 
+type AddCceIntegrationProtectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddCceIntegrationProtectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddCceIntegrationProtectionInvoker) Invoke() (*model.AddCceIntegrationProtectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddCceIntegrationProtectionResponse), nil
+	}
+}
+
 type AddHostsGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -34,6 +50,22 @@ func (i *AssociatePolicyGroupInvoker) Invoke() (*model.AssociatePolicyGroupRespo
 		return nil, err
 	} else {
 		return result.(*model.AssociatePolicyGroupResponse), nil
+	}
+}
+
+type BatchAddAccountsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchAddAccountsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchAddAccountsInvoker) Invoke() (*model.BatchAddAccountsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchAddAccountsResponse), nil
 	}
 }
 
@@ -213,6 +245,38 @@ func (i *CreateVulnerabilityScanTaskInvoker) Invoke() (*model.CreateVulnerabilit
 	}
 }
 
+type DeleteAccountInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAccountInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAccountInvoker) Invoke() (*model.DeleteAccountResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAccountResponse), nil
+	}
+}
+
+type DeleteAgentDaemonsetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAgentDaemonsetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAgentDaemonsetInvoker) Invoke() (*model.DeleteAgentDaemonsetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAgentDaemonsetResponse), nil
+	}
+}
+
 type DeleteHostsGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -258,6 +322,22 @@ func (i *ExportVulsInvoker) Invoke() (*model.ExportVulsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ExportVulsResponse), nil
+	}
+}
+
+type ListAccountsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAccountsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAccountsInvoker) Invoke() (*model.ListAccountsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAccountsResponse), nil
 	}
 }
 
@@ -386,6 +466,22 @@ func (i *ListBlockedIpInvoker) Invoke() (*model.ListBlockedIpResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListBlockedIpResponse), nil
+	}
+}
+
+type ListCceClusterConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCceClusterConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCceClusterConfigInvoker) Invoke() (*model.ListCceClusterConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCceClusterConfigResponse), nil
 	}
 }
 
@@ -626,6 +722,22 @@ func (i *ListJarPackageStatisticsInvoker) Invoke() (*model.ListJarPackageStatist
 		return nil, err
 	} else {
 		return result.(*model.ListJarPackageStatisticsResponse), nil
+	}
+}
+
+type ListOrganizationTreeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOrganizationTreeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListOrganizationTreeInvoker) Invoke() (*model.ListOrganizationTreeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOrganizationTreeResponse), nil
 	}
 }
 
@@ -1282,6 +1394,22 @@ func (i *SwitchHostsProtectStatusInvoker) Invoke() (*model.SwitchHostsProtectSta
 		return nil, err
 	} else {
 		return result.(*model.SwitchHostsProtectStatusResponse), nil
+	}
+}
+
+type UpdateAgentDaemonsetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAgentDaemonsetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAgentDaemonsetInvoker) Invoke() (*model.UpdateAgentDaemonsetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAgentDaemonsetResponse), nil
 	}
 }
 

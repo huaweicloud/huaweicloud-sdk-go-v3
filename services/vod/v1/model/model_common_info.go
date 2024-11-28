@@ -12,10 +12,10 @@ import (
 type CommonInfo struct {
 
 	// 高清低码开关<br/>
-	Pvc bool `json:"pvc"`
+	Pvc *bool `json:"pvc,omitempty"`
 
 	// 视频编码格式<br/>
-	VideoCodec CommonInfoVideoCodec `json:"video_codec"`
+	VideoCodec *CommonInfoVideoCodec `json:"video_codec,omitempty"`
 
 	// 音频编码格式<br/> AAC：AAC格式 (default)<br/> HEAAC1：HEAAC1格式<br/> HEAAC2：HEAAC2格式<br/> MP3：MP3格式<br/>
 	AudioCodec *CommonInfoAudioCodec `json:"audio_codec,omitempty"`
