@@ -9,7 +9,7 @@ import (
 
 type TableModelAttributeVo struct {
 
-	// 编码，填写String类型替代Long类型。
+	// 编码，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	// 字段名。
@@ -56,7 +56,7 @@ type TableModelAttributeVo struct {
 	// 序号。
 	Ordinal *int32 `json:"ordinal,omitempty"`
 
-	// 所属关系建模的模型ID，填写String类型替代Long类型。
+	// 所属关系建模的模型ID，ID字符串。
 	TableModelId *string `json:"table_model_id,omitempty"`
 
 	// 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
@@ -71,7 +71,7 @@ type TableModelAttributeVo struct {
 	// 密级
 	SecrecyLevels *[]SecrecyLevelVo `json:"secrecy_levels,omitempty"`
 
-	// 关联的数据标准的ID，填写String类型替代Long类型。
+	// 关联的数据标准的ID，ID字符串。
 	StandRowId *string `json:"stand_row_id,omitempty"`
 
 	// 关联的数据标准名称，只读。
@@ -89,7 +89,7 @@ type TableModelAttributeVo struct {
 	// 逻辑属性编码
 	Code *string `json:"code,omitempty"`
 
-	// 关联逻辑属性ID，填写String类型替代Long类型。
+	// 关联逻辑属性ID，ID字符串。
 	RelatedLogicAttrId *string `json:"related_logic_attr_id,omitempty"`
 
 	// 关联逻辑实体属性中文名称

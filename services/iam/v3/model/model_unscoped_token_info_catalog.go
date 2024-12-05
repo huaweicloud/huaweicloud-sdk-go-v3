@@ -17,9 +17,7 @@ type UnscopedTokenInfoCatalog struct {
 	// 该接口所属服务。
 	Type *string `json:"type,omitempty"`
 
-	Endpoints *[]UnscopedTokenInfoCatalogEndpoints `json:"endpoints,omitempty"`
-
-	Description *interface{} `json:"description,omitempty"`
+	Endpoints *[]UnscopedTokenInfoEndpoints `json:"endpoints,omitempty"`
 }
 
 func (o UnscopedTokenInfoCatalog) String() string {

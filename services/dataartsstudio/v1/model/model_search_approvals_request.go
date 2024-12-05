@@ -21,7 +21,7 @@ type SearchApprovalsRequest struct {
 	// 默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
 	ContentType *string `json:"Content-Type,omitempty"`
 
-	// 业务定义ID，填写String类型替代Long类型。
+	// 业务定义ID，ID字符串。
 	BizId *string `json:"biz_id,omitempty"`
 
 	// 按名称或编码模糊查询。

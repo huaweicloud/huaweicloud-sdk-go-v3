@@ -21,10 +21,10 @@ type ListTableModelRelationsRequest struct {
 	// 默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
 	ContentType *string `json:"Content-Type,omitempty"`
 
-	// 所属关系建模的模型ID，填写String类型替代Long类型。
+	// 所属关系建模的模型ID，ID字符串。
 	ModelId string `json:"model_id"`
 
-	// 表模型ids，填写String类型替代Long类型。
+	// 表模型ids，ID字符串。
 	TableIds *string `json:"table_ids,omitempty"`
 
 	// 表类型。 枚举值：   - TABLE_MODEL: 关系建模：逻辑实体/物理表   - FACT_LOGIC_TABLE: 事实表

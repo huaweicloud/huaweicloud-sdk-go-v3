@@ -9,16 +9,16 @@ import (
 
 type RelationMappingVo struct {
 
-	// 编码，填写String类型替代Long类型。
+	// 编码，ID字符串。
 	Id *string `json:"id,omitempty"`
 
-	// 关系ID，填写String类型替代Long类型。
+	// 关系ID，ID字符串。
 	RelationId *string `json:"relation_id,omitempty"`
 
-	// 源字段ID，填写String类型替代Long类型。
+	// 源字段ID，ID字符串。
 	SourceFieldId *string `json:"source_field_id,omitempty"`
 
-	// 目标字段ID，填写String类型替代Long类型。
+	// 目标字段ID，ID字符串。
 	TargetFieldId *string `json:"target_field_id,omitempty"`
 
 	// 源表名称。

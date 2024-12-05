@@ -29,6 +29,12 @@ type ApigDataSourceVo struct {
 
 	// 1：cdm 2：数据架构 4:数据开发 8：数据质量 16：数据目录 32：数据安全 64：数据服务
 	SupportService *int32 `json:"supportService,omitempty"`
+
+	// 标签信息
+	DwCategory *string `json:"dw_category,omitempty"`
+
+	// 连接描述信息
+	Description *string `json:"description,omitempty"`
 }
 
 func (o ApigDataSourceVo) String() string {

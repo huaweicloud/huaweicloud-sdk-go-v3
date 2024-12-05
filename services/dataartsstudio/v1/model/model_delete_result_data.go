@@ -10,7 +10,7 @@ import (
 type DeleteResultData struct {
 
 	// 成功删除的对象个数
-	Value *string `json:"value,omitempty"`
+	Value *int32 `json:"value,omitempty"`
 }
 
 func (o DeleteResultData) String() string {

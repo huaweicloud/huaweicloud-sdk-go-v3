@@ -1455,6 +1455,27 @@ func (c *MeetingClient) ListOngoingWebinarsInvoker(request *model.ListOngoingWeb
 	return &ListOngoingWebinarsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListOnlineConfAttendee 查询指定会议的在线与会者信息
+//
+// 该接口用于查询指定会议的在线与会者信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) ListOnlineConfAttendee(request *model.ListOnlineConfAttendeeRequest) (*model.ListOnlineConfAttendeeResponse, error) {
+	requestDef := GenReqDefForListOnlineConfAttendee()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOnlineConfAttendeeResponse), nil
+	}
+}
+
+// ListOnlineConfAttendeeInvoker 查询指定会议的在线与会者信息
+func (c *MeetingClient) ListOnlineConfAttendeeInvoker(request *model.ListOnlineConfAttendeeRequest) *ListOnlineConfAttendeeInvoker {
+	requestDef := GenReqDefForListOnlineConfAttendee()
+	return &ListOnlineConfAttendeeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListUpComingWebinars 查询即将召开的网络研讨会列表
 //
 // 该接口用于查询即将召开的网络研讨会。管理员可查询企业内即将召开网络研讨会，非管理员可查询自己预订的即将召开的网络研讨会。

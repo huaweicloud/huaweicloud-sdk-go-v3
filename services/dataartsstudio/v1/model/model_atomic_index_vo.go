@@ -9,7 +9,7 @@ import (
 
 type AtomicIndexVo struct {
 
-	// 编码，填写String类型替代Long类型。
+	// 编码，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	// 原子指标英文名。
@@ -27,19 +27,19 @@ type AtomicIndexVo struct {
 	// 计算表达式，形如'sum(${fact_column_id})'，其中fact_column_id表示引用事实表中的字段ID
 	CalExp string `json:"cal_exp"`
 
-	// 引用函数ID，填写String类型替代Long类型。
+	// 引用函数ID，ID字符串。
 	CalFnIds *[]string `json:"cal_fn_ids,omitempty"`
 
-	// 主题域分组ID，只读，填写String类型替代Long类型。
+	// 主题域分组ID，只读，ID字符串。
 	L1Id *string `json:"l1_id,omitempty"`
 
 	// 主题域ID，只读，创建和更新时无需填写。
 	L2Id *string `json:"l2_id,omitempty"`
 
-	// 业务对象guid，填写String类型替代Long类型。
+	// 业务对象guid，ID字符串。
 	L3Id string `json:"l3_id"`
 
-	// 事实表ID，填写String类型替代Long类型。
+	// 事实表ID，ID字符串。
 	TableId string `json:"table_id"`
 
 	// 事实表名称。
@@ -48,7 +48,7 @@ type AtomicIndexVo struct {
 	// 数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
 	DwType *string `json:"dw_type,omitempty"`
 
-	// 字段ID信息，填写String类型替代Long类型。
+	// 字段ID信息，ID字符串。
 	FieldIds []string `json:"field_ids"`
 
 	// 字段名称信息。

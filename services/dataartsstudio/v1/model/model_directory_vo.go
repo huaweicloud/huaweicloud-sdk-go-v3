@@ -36,7 +36,7 @@ type DirectoryVo struct {
 	QualifiedName *string `json:"qualified_name,omitempty"`
 
 	// 是否来自公共层，只读。
-	FromPublic *string `json:"from_public,omitempty"`
+	FromPublic *bool `json:"from_public,omitempty"`
 
 	// 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
@@ -50,7 +50,7 @@ type DirectoryVo struct {
 	// 更新人，只读。
 	UpdateBy *string `json:"update_by,omitempty"`
 
-	// 关联的主题ID，填写String类型替代Long类型。
+	// 关联的主题ID，ID字符串。
 	RefId *string `json:"ref_id,omitempty"`
 
 	// 子目录。

@@ -18,7 +18,7 @@ type CountTableModelsRequest struct {
 	// 默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
 	ContentType *string `json:"Content-Type,omitempty"`
 
-	// 依据关系建模的模型ID查询统计信息，填写String类型替代Long类型。
+	// 依据关系建模的模型ID查询统计信息，ID字符串。
 	ModelId *string `json:"model_id,omitempty"`
 }
 

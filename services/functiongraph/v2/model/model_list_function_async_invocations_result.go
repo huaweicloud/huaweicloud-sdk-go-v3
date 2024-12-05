@@ -27,7 +27,7 @@ type ListFunctionAsyncInvocationsResult struct {
 	StartTime *sdktime.SdkTime `json:"start_time,omitempty"`
 
 	// 异步调用结束时间（格式为YYYY-MM-DD'T'HH:mm:ss,UTC时间）。
-	EndTime *sdktime.SdkTime `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty"`
 }
 
 func (o ListFunctionAsyncInvocationsResult) String() string {

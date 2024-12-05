@@ -28,7 +28,7 @@ type StandElementFieldVo struct {
 	// 是否禁用。
 	Disabled *bool `json:"disabled,omitempty"`
 
-	// 数据标准ID，填写String类型替代Long类型。
+	// 数据标准ID，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	// 是否显示，系统默认项必然显示不允许修改。true表示使用数据标准时体现（增改查的时候可以操作该属性），false表示使用数据标准时不体现。

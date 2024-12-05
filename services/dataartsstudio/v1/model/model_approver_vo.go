@@ -11,7 +11,7 @@ import (
 
 type ApproverVo struct {
 
-	// 审批单ID，填写String类型替代Long类型。
+	// 审批单ID，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	// 审批人姓名。

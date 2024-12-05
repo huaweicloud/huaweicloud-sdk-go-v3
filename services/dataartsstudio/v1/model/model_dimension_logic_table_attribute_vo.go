@@ -8,7 +8,7 @@ import (
 
 type DimensionLogicTableAttributeVo struct {
 
-	// 维度表ID，填写String类型替代Long类型。
+	// 维度表ID，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	// 所属维表ID。
@@ -17,7 +17,7 @@ type DimensionLogicTableAttributeVo struct {
 	// 序号
 	Ordinal int32 `json:"ordinal"`
 
-	// 维度属性ID，填写String类型替代Long类型。
+	// 维度属性ID，ID字符串。
 	DimensionAttributeId string `json:"dimension_attribute_id"`
 
 	// 字段名，只读。
@@ -49,7 +49,7 @@ type DimensionLogicTableAttributeVo struct {
 	// 是否不为空。
 	NotNull *bool `json:"not_null,omitempty"`
 
-	// 关联的数据标准的ID，填写String类型替代Long类型。
+	// 关联的数据标准的ID，ID字符串。
 	StandRowId *string `json:"stand_row_id,omitempty"`
 
 	// 关联的数据标准名称，只读。

@@ -8,10 +8,10 @@ import (
 
 type MetricMonitorVo struct {
 
-	// 编码，填写String类型替代Long类型。
+	// 编码，ID字符串。
 	Id *string `json:"id,omitempty"`
 
-	// 其他指标ID，填写String类型替代Long类型。
+	// 其他指标ID，ID字符串。
 	OtherMetricIds *[]string `json:"other_metric_ids,omitempty"`
 
 	// 其他指标名称，只读。
@@ -26,7 +26,7 @@ type MetricMonitorVo struct {
 	// 告警表达式。
 	Expression *string `json:"expression,omitempty"`
 
-	// 挂载指ID，填写String类型替代Long类型。
+	// 挂载指ID，ID字符串。
 	MetricId *string `json:"metric_id,omitempty"`
 
 	// 前端表达式配置，用于前端数据恢复。

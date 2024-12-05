@@ -36,10 +36,10 @@ type ListCompoundMetricsRequest struct {
 	// 依据维度颗粒度查维度属性。
 	DimensionGroup *string `json:"dimension_group,omitempty"`
 
-	// 依据原子指标ID查维度属性，填写String类型替代Long类型。
+	// 依据原子指标ID查维度属性，ID字符串。
 	AtomicIndexId *string `json:"atomic_index_id,omitempty"`
 
-	// 业务对象l3的ID，填写String类型替代Long类型。
+	// 业务对象l3的ID，ID字符串。
 	L3Id *string `json:"l3_id,omitempty"`
 
 	// 时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。

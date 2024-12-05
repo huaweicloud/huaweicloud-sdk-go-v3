@@ -34,8 +34,6 @@ type KeystoneUpdateUserByAdminResult struct {
 
 	// IAM用户是否启用。true表示启用，false表示停用，默认为true。
 	Enabled bool `json:"enabled"`
-
-	Extra *KeystoneUserResultExtra `json:"extra,omitempty"`
 }
 
 func (o KeystoneUpdateUserByAdminResult) String() string {

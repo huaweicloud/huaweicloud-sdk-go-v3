@@ -10,7 +10,7 @@ import (
 // PublishVersionVo 版本信息。
 type PublishVersionVo struct {
 
-	// 版本ID，填写String类型替代Long类型。
+	// 版本ID，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	// 版本名称。
@@ -22,7 +22,7 @@ type PublishVersionVo struct {
 	// 版本描述。
 	Description *string `json:"description,omitempty"`
 
-	// 业务对象ID，填写String类型替代Long类型。
+	// 业务对象ID，ID字符串。
 	BizId *string `json:"biz_id,omitempty"`
 
 	BizType *BizTypeEnum `json:"biz_type,omitempty"`

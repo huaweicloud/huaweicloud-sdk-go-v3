@@ -30,7 +30,7 @@ type SearchCodeTablesRequest struct {
 	// 按审核人查询。
 	Approver *string `json:"approver,omitempty"`
 
-	// 目录ID，填写String类型替代Long类型。
+	// 目录ID，ID字符串。
 	DirectoryId *string `json:"directory_id,omitempty"`
 
 	// 业务状态。 枚举值：   - DRAFT: 草稿   - PUBLISH_DEVELOPING: 发布待审批   - PUBLISHED: 已发布   - OFFLINE_DEVELOPING: 下线待审批   - OFFLINE: 已下线   - REJECT: 已驳回

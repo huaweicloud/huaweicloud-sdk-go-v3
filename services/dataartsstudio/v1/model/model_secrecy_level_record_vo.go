@@ -9,10 +9,10 @@ import (
 
 type SecrecyLevelRecordVo struct {
 
-	// 属性关联密级的ID，填写String类型替代Long类型。
+	// 属性关联密级的ID，ID字符串。
 	Id *string `json:"id,omitempty"`
 
-	// 密级的ID，填写String类型替代Long类型。
+	// 密级的ID，ID字符串。
 	SecrecyLevelId string `json:"secrecyLevel_id"`
 
 	// 密级名称。
@@ -27,7 +27,7 @@ type SecrecyLevelRecordVo struct {
 	// 密级描述。
 	Description *string `json:"description,omitempty"`
 
-	// 业务对象ID，填写String类型替代Long类型。
+	// 业务对象ID，ID字符串。
 	BizId string `json:"biz_id"`
 
 	BizType *BizTypeEnum `json:"biz_type"`

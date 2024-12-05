@@ -10,7 +10,7 @@ import (
 // ApprovalVo 审批信息,只读参数。业务对象最近一次的审批信息，包括审批的业务详情、审核人信息、审核时间等。
 type ApprovalVo struct {
 
-	// 审批单ID，填写String类型替代Long类型。
+	// 审批单ID，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	// 项目ID，获取方式参考接口路径参数“project_id”。
@@ -22,7 +22,7 @@ type ApprovalVo struct {
 	// 业务英文名。
 	NameEn *string `json:"name_en,omitempty"`
 
-	// 业务ID，填写String类型替代Long类型。
+	// 业务ID，ID字符串。
 	BizId *string `json:"biz_id,omitempty"`
 
 	BizType *BizTypeEnum `json:"biz_type,omitempty"`

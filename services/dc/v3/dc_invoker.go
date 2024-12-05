@@ -5,6 +5,134 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dc/v3/model"
 )
 
+type BindGlobalEipsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BindGlobalEipsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BindGlobalEipsInvoker) Invoke() (*model.BindGlobalEipsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BindGlobalEipsResponse), nil
+	}
+}
+
+type ListGlobalEipsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGlobalEipsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListGlobalEipsInvoker) Invoke() (*model.ListGlobalEipsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGlobalEipsResponse), nil
+	}
+}
+
+type UnbindGlobalEipsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UnbindGlobalEipsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UnbindGlobalEipsInvoker) Invoke() (*model.UnbindGlobalEipsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UnbindGlobalEipsResponse), nil
+	}
+}
+
+type CreateConnectGatewayInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateConnectGatewayInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateConnectGatewayInvoker) Invoke() (*model.CreateConnectGatewayResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateConnectGatewayResponse), nil
+	}
+}
+
+type DeleteConnectGatewayInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteConnectGatewayInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteConnectGatewayInvoker) Invoke() (*model.DeleteConnectGatewayResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteConnectGatewayResponse), nil
+	}
+}
+
+type ListConnectGatewaysInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListConnectGatewaysInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListConnectGatewaysInvoker) Invoke() (*model.ListConnectGatewaysResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListConnectGatewaysResponse), nil
+	}
+}
+
+type ShowConnectGatewayInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowConnectGatewayInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowConnectGatewayInvoker) Invoke() (*model.ShowConnectGatewayResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowConnectGatewayResponse), nil
+	}
+}
+
+type UpdateConnectGatewayInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateConnectGatewayInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateConnectGatewayInvoker) Invoke() (*model.UpdateConnectGatewayResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateConnectGatewayResponse), nil
+	}
+}
+
 type CreateHostedDirectConnectInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -146,6 +274,230 @@ func (i *UpdateHostedDirectConnectInvoker) Invoke() (*model.UpdateHostedDirectCo
 		return nil, err
 	} else {
 		return result.(*model.UpdateHostedDirectConnectResponse), nil
+	}
+}
+
+type ListGdgwRouteTablesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGdgwRouteTablesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListGdgwRouteTablesInvoker) Invoke() (*model.ListGdgwRouteTablesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGdgwRouteTablesResponse), nil
+	}
+}
+
+type UpdateGdgwRouteTableInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateGdgwRouteTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateGdgwRouteTableInvoker) Invoke() (*model.UpdateGdgwRouteTableResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateGdgwRouteTableResponse), nil
+	}
+}
+
+type CreateGlobalDcGatewayInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateGlobalDcGatewayInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateGlobalDcGatewayInvoker) Invoke() (*model.CreateGlobalDcGatewayResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateGlobalDcGatewayResponse), nil
+	}
+}
+
+type CreatePeerLinkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePeerLinkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreatePeerLinkInvoker) Invoke() (*model.CreatePeerLinkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePeerLinkResponse), nil
+	}
+}
+
+type DeleteGlobalDcGatewayInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteGlobalDcGatewayInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteGlobalDcGatewayInvoker) Invoke() (*model.DeleteGlobalDcGatewayResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteGlobalDcGatewayResponse), nil
+	}
+}
+
+type DeletePeerLinkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePeerLinkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeletePeerLinkInvoker) Invoke() (*model.DeletePeerLinkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePeerLinkResponse), nil
+	}
+}
+
+type ListGlobalDcGatewayInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGlobalDcGatewayInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListGlobalDcGatewayInvoker) Invoke() (*model.ListGlobalDcGatewayResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGlobalDcGatewayResponse), nil
+	}
+}
+
+type ListPeerLinksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPeerLinksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPeerLinksInvoker) Invoke() (*model.ListPeerLinksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPeerLinksResponse), nil
+	}
+}
+
+type ListRmsGlobalDcGatewayInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRmsGlobalDcGatewayInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRmsGlobalDcGatewayInvoker) Invoke() (*model.ListRmsGlobalDcGatewayResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRmsGlobalDcGatewayResponse), nil
+	}
+}
+
+type ShowGlobalDcGatewayInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowGlobalDcGatewayInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowGlobalDcGatewayInvoker) Invoke() (*model.ShowGlobalDcGatewayResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowGlobalDcGatewayResponse), nil
+	}
+}
+
+type ShowPeerLinkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPeerLinkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPeerLinkInvoker) Invoke() (*model.ShowPeerLinkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPeerLinkResponse), nil
+	}
+}
+
+type ShowRmsGlobalDcGatewayInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRmsGlobalDcGatewayInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRmsGlobalDcGatewayInvoker) Invoke() (*model.ShowRmsGlobalDcGatewayResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRmsGlobalDcGatewayResponse), nil
+	}
+}
+
+type UpdateGlobalDcGatewayInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateGlobalDcGatewayInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateGlobalDcGatewayInvoker) Invoke() (*model.UpdateGlobalDcGatewayResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateGlobalDcGatewayResponse), nil
+	}
+}
+
+type UpdatePeerLinkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePeerLinkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePeerLinkInvoker) Invoke() (*model.UpdatePeerLinkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePeerLinkResponse), nil
 	}
 }
 

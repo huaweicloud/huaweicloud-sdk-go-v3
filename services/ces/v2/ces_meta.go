@@ -437,6 +437,10 @@ func GenReqDefForListAlarmHistories() *def.HttpRequestDef {
 		WithJsonTag("alarm_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RecordId").
+		WithJsonTag("record_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Name").
 		WithJsonTag("name").
 		WithLocationType(def.Query))

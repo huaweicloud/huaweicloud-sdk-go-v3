@@ -942,6 +942,17 @@ func GenReqDefForKeystoneListFederationDomains() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForKeystoneListFederationProjects() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/OS-FEDERATION/projects").
+		WithResponse(new(model.KeystoneListFederationProjectsResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForKeystoneListGroups() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

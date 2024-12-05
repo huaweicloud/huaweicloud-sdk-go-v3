@@ -78,6 +78,12 @@ type Traces struct {
 
 	// 标识资源所在的账号ID。仅在跨租户操作资源时有值。
 	ResourceAccountId *string `json:"resource_account_id,omitempty"`
+
+	// 标识用户请求是不是只读。
+	ReadOnly *bool `json:"read_only,omitempty"`
+
+	// 记录事件对应的操作ID。
+	OperationId *string `json:"operation_id,omitempty"`
 }
 
 func (o Traces) String() string {

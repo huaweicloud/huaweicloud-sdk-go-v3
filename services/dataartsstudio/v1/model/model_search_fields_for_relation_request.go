@@ -24,7 +24,7 @@ type SearchFieldsForRelationRequest struct {
 	// 查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 所属关系建模的模型ID，填写String类型替代Long类型。
+	// 所属关系建模的模型ID，ID字符串。
 	ModelId string `json:"model_id"`
 }
 

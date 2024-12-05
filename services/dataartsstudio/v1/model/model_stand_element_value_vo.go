@@ -16,16 +16,16 @@ type StandElementValueVo struct {
 	// 属性值。
 	FdValue *string `json:"fd_value,omitempty"`
 
-	// 属性定义的ID，填写String类型替代Long类型。
+	// 属性定义的ID，ID字符串。
 	FdId *string `json:"fd_id,omitempty"`
 
-	// 标准所属目录，填写String类型替代Long类型。
+	// 标准所属目录，ID字符串。
 	DirectoryId *string `json:"directory_id,omitempty"`
 
-	// 标准所属行，填写String类型替代Long类型。
+	// 标准所属行，ID字符串。
 	RowId *string `json:"row_id,omitempty"`
 
-	// 数据标准的ID，填写String类型替代Long类型。
+	// 数据标准的ID，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	Status *BizStatusEnum `json:"status,omitempty"`

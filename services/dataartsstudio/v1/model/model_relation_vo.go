@@ -9,13 +9,13 @@ import (
 
 type RelationVo struct {
 
-	// 编码，填写String类型替代Long类型。
+	// 编码，ID字符串。
 	Id *string `json:"id,omitempty"`
 
-	// 源表ID，填写String类型替代Long类型。
+	// 源表ID，ID字符串。
 	SourceTableId *string `json:"source_table_id,omitempty"`
 
-	// 目标表ID，填写String类型替代Long类型。
+	// 目标表ID，ID字符串。
 	TargetTableId *string `json:"target_table_id,omitempty"`
 
 	// 关系名称。

@@ -8,7 +8,7 @@ import (
 
 type BizInfoVo struct {
 
-	// 业务ID，填写String类型替代Long类型。
+	// 业务ID，ID字符串。
 	BizId string `json:"biz_id"`
 
 	BizType *BizTypeEnum `json:"biz_type"`

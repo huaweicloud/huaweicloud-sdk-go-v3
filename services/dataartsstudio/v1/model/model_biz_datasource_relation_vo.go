@@ -9,10 +9,10 @@ import (
 // BizDatasourceRelationVo 数据源信息。
 type BizDatasourceRelationVo struct {
 
-	// 编码，填写String类型替代Long类型。
+	// 编码，ID字符串。
 	Id *string `json:"id,omitempty"`
 
-	// 业务对象信息，填写String类型替代Long类型。
+	// 业务对象信息，ID字符串。
 	BizId *string `json:"biz_id,omitempty"`
 
 	BizType *BizTypeEnum `json:"biz_type,omitempty"`

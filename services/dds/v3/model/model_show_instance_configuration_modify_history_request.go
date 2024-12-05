@@ -12,6 +12,9 @@ type ShowInstanceConfigurationModifyHistoryRequest struct {
 	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
+	// 实例ID或组ID或节点ID。可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。
+	EntityId string `json:"entity_id"`
+
 	// 索引位置，偏移量。  从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）。 取值必须为数字，不能为负数。
 	Offset *int32 `json:"offset,omitempty"`
 

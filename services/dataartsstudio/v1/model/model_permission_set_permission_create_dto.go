@@ -49,6 +49,9 @@ type PermissionSetPermissionCreateDto struct {
 
 	// url路径名称, MRS存算分离或者HIVE指定location场景下使用。
 	Url *string `json:"url,omitempty"`
+
+	// 是否自动触发同步, 默认false
+	AutoSync *bool `json:"auto_sync,omitempty"`
 }
 
 func (o PermissionSetPermissionCreateDto) String() string {

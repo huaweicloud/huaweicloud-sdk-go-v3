@@ -9,18 +9,18 @@ import (
 
 type QualityInfoVo struct {
 
-	// 编码ID，填写String类型替代Long类型。
+	// 编码ID，ID字符串。
 	Id *string `json:"id,omitempty"`
 
-	// 表ID，只读，填写String类型替代Long类型。
+	// 表ID，只读，ID字符串。
 	TableId *string `json:"table_id,omitempty"`
 
-	// 属性ID，只读，填写String类型替代Long类型。
+	// 属性ID，只读，ID字符串。
 	AttrId *string `json:"attr_id,omitempty"`
 
 	BizType *BizTypeEnum `json:"biz_type,omitempty"`
 
-	// 质量ID，填写String类型替代Long类型。
+	// 质量ID，ID字符串。
 	DataQualityId string `json:"data_quality_id"`
 
 	// 是否要显示正则表达式。

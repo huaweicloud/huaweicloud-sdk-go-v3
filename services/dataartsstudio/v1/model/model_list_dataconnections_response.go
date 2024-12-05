@@ -15,6 +15,9 @@ type ListDataconnectionsResponse struct {
 	// 返回记录总数，一个工作空间最多只能创建50条数据连接
 	MaxRecords *int32 `json:"max_records,omitempty"`
 
+	// 返回当前空间内创建连接的总数
+	TotalSize *int32 `json:"total_size,omitempty"`
+
 	// 返回数据连接列表
 	DataConnectionLists *[]ApigDataSourceView `json:"data_connection_lists,omitempty"`
 	HttpStatusCode      int                   `json:"-"`

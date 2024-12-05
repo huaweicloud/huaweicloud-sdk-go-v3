@@ -49,6 +49,18 @@ type UpdateUserResult struct {
 
 	// 密码过期时间（UTC时间），“null”表示密码不过期。
 	PasswordExpiresAt *string `json:"password_expires_at,omitempty"`
+
+	// UTC时间，格式为YYYY-MM-DDTHH:mm:ss.ssssss，日期和时间戳格式如：2023-06-28T08:56:33.710000。
+	CreateTime *string `json:"create_time,omitempty"`
+
+	// IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+	XdomainId *string `json:"xdomain_id,omitempty"`
+
+	// IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+	XdomainType *string `json:"xdomain_type,omitempty"`
+
+	// IAM用户是否为账号管理员。
+	IsDomainOwner *bool `json:"is_domain_owner,omitempty"`
 }
 
 func (o UpdateUserResult) String() string {

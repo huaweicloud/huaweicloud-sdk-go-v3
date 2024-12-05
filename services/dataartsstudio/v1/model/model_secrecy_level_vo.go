@@ -9,7 +9,7 @@ import (
 
 type SecrecyLevelVo struct {
 
-	// 密级ID，填写String类型替代Long类型。
+	// 密级ID，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	// 数据安全主键。

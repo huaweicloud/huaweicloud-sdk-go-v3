@@ -19,6 +19,174 @@ func DcClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// BindGlobalEips 绑定GEIP操作
+//
+// 绑定GEIP操作
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) BindGlobalEips(request *model.BindGlobalEipsRequest) (*model.BindGlobalEipsResponse, error) {
+	requestDef := GenReqDefForBindGlobalEips()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BindGlobalEipsResponse), nil
+	}
+}
+
+// BindGlobalEipsInvoker 绑定GEIP操作
+func (c *DcClient) BindGlobalEipsInvoker(request *model.BindGlobalEipsRequest) *BindGlobalEipsInvoker {
+	requestDef := GenReqDefForBindGlobalEips()
+	return &BindGlobalEipsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGlobalEips 查询已经绑定的GEIP列表
+//
+// 查询已经绑定的GEIP列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) ListGlobalEips(request *model.ListGlobalEipsRequest) (*model.ListGlobalEipsResponse, error) {
+	requestDef := GenReqDefForListGlobalEips()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGlobalEipsResponse), nil
+	}
+}
+
+// ListGlobalEipsInvoker 查询已经绑定的GEIP列表
+func (c *DcClient) ListGlobalEipsInvoker(request *model.ListGlobalEipsRequest) *ListGlobalEipsInvoker {
+	requestDef := GenReqDefForListGlobalEips()
+	return &ListGlobalEipsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UnbindGlobalEips 解绑GEIP
+//
+// 解绑GEIP
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) UnbindGlobalEips(request *model.UnbindGlobalEipsRequest) (*model.UnbindGlobalEipsResponse, error) {
+	requestDef := GenReqDefForUnbindGlobalEips()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UnbindGlobalEipsResponse), nil
+	}
+}
+
+// UnbindGlobalEipsInvoker 解绑GEIP
+func (c *DcClient) UnbindGlobalEipsInvoker(request *model.UnbindGlobalEipsRequest) *UnbindGlobalEipsInvoker {
+	requestDef := GenReqDefForUnbindGlobalEips()
+	return &UnbindGlobalEipsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateConnectGateway 创建互联网关
+//
+// 创建互联网关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) CreateConnectGateway(request *model.CreateConnectGatewayRequest) (*model.CreateConnectGatewayResponse, error) {
+	requestDef := GenReqDefForCreateConnectGateway()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateConnectGatewayResponse), nil
+	}
+}
+
+// CreateConnectGatewayInvoker 创建互联网关
+func (c *DcClient) CreateConnectGatewayInvoker(request *model.CreateConnectGatewayRequest) *CreateConnectGatewayInvoker {
+	requestDef := GenReqDefForCreateConnectGateway()
+	return &CreateConnectGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteConnectGateway 删除互联网关
+//
+// 删除互联网关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) DeleteConnectGateway(request *model.DeleteConnectGatewayRequest) (*model.DeleteConnectGatewayResponse, error) {
+	requestDef := GenReqDefForDeleteConnectGateway()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteConnectGatewayResponse), nil
+	}
+}
+
+// DeleteConnectGatewayInvoker 删除互联网关
+func (c *DcClient) DeleteConnectGatewayInvoker(request *model.DeleteConnectGatewayRequest) *DeleteConnectGatewayInvoker {
+	requestDef := GenReqDefForDeleteConnectGateway()
+	return &DeleteConnectGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListConnectGateways 查询互联网关列表信息
+//
+// 查询互联网关列表信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) ListConnectGateways(request *model.ListConnectGatewaysRequest) (*model.ListConnectGatewaysResponse, error) {
+	requestDef := GenReqDefForListConnectGateways()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConnectGatewaysResponse), nil
+	}
+}
+
+// ListConnectGatewaysInvoker 查询互联网关列表信息
+func (c *DcClient) ListConnectGatewaysInvoker(request *model.ListConnectGatewaysRequest) *ListConnectGatewaysInvoker {
+	requestDef := GenReqDefForListConnectGateways()
+	return &ListConnectGatewaysInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowConnectGateway 查询互联网关详细信息
+//
+// 查询互联网关详细信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) ShowConnectGateway(request *model.ShowConnectGatewayRequest) (*model.ShowConnectGatewayResponse, error) {
+	requestDef := GenReqDefForShowConnectGateway()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowConnectGatewayResponse), nil
+	}
+}
+
+// ShowConnectGatewayInvoker 查询互联网关详细信息
+func (c *DcClient) ShowConnectGatewayInvoker(request *model.ShowConnectGatewayRequest) *ShowConnectGatewayInvoker {
+	requestDef := GenReqDefForShowConnectGateway()
+	return &ShowConnectGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateConnectGateway 更新互联网关
+//
+// 更新互联网关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) UpdateConnectGateway(request *model.UpdateConnectGatewayRequest) (*model.UpdateConnectGatewayResponse, error) {
+	requestDef := GenReqDefForUpdateConnectGateway()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateConnectGatewayResponse), nil
+	}
+}
+
+// UpdateConnectGatewayInvoker 更新互联网关
+func (c *DcClient) UpdateConnectGatewayInvoker(request *model.UpdateConnectGatewayRequest) *UpdateConnectGatewayInvoker {
+	requestDef := GenReqDefForUpdateConnectGateway()
+	return &UpdateConnectGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateHostedDirectConnect 创建托管专线连接
 //
 // 用于合作伙伴用户最终租户创建托管专线
@@ -207,6 +375,300 @@ func (c *DcClient) UpdateHostedDirectConnect(request *model.UpdateHostedDirectCo
 func (c *DcClient) UpdateHostedDirectConnectInvoker(request *model.UpdateHostedDirectConnectRequest) *UpdateHostedDirectConnectInvoker {
 	requestDef := GenReqDefForUpdateHostedDirectConnect()
 	return &UpdateHostedDirectConnectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGdgwRouteTables 查询全球接入网关路由表
+//
+// 查询全球接入网关路由表，返回查询到的全球接入网关路由表的详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) ListGdgwRouteTables(request *model.ListGdgwRouteTablesRequest) (*model.ListGdgwRouteTablesResponse, error) {
+	requestDef := GenReqDefForListGdgwRouteTables()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGdgwRouteTablesResponse), nil
+	}
+}
+
+// ListGdgwRouteTablesInvoker 查询全球接入网关路由表
+func (c *DcClient) ListGdgwRouteTablesInvoker(request *model.ListGdgwRouteTablesRequest) *ListGdgwRouteTablesInvoker {
+	requestDef := GenReqDefForListGdgwRouteTables()
+	return &ListGdgwRouteTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGdgwRouteTable 修改全球接入网关路由表
+//
+// 修改全球接入网关路由表，返回修改全球接入网关路由表的结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) UpdateGdgwRouteTable(request *model.UpdateGdgwRouteTableRequest) (*model.UpdateGdgwRouteTableResponse, error) {
+	requestDef := GenReqDefForUpdateGdgwRouteTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateGdgwRouteTableResponse), nil
+	}
+}
+
+// UpdateGdgwRouteTableInvoker 修改全球接入网关路由表
+func (c *DcClient) UpdateGdgwRouteTableInvoker(request *model.UpdateGdgwRouteTableRequest) *UpdateGdgwRouteTableInvoker {
+	requestDef := GenReqDefForUpdateGdgwRouteTable()
+	return &UpdateGdgwRouteTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateGlobalDcGateway 创建全球接入网关
+//
+// 创建全球接入网关，返回创建全球接入网关的结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) CreateGlobalDcGateway(request *model.CreateGlobalDcGatewayRequest) (*model.CreateGlobalDcGatewayResponse, error) {
+	requestDef := GenReqDefForCreateGlobalDcGateway()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateGlobalDcGatewayResponse), nil
+	}
+}
+
+// CreateGlobalDcGatewayInvoker 创建全球接入网关
+func (c *DcClient) CreateGlobalDcGatewayInvoker(request *model.CreateGlobalDcGatewayRequest) *CreateGlobalDcGatewayInvoker {
+	requestDef := GenReqDefForCreateGlobalDcGateway()
+	return &CreateGlobalDcGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePeerLink 创建全球接入网关对等链接
+//
+// 创建全球接入网关对等链接，返回创建全球接入网关对等链接的结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) CreatePeerLink(request *model.CreatePeerLinkRequest) (*model.CreatePeerLinkResponse, error) {
+	requestDef := GenReqDefForCreatePeerLink()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePeerLinkResponse), nil
+	}
+}
+
+// CreatePeerLinkInvoker 创建全球接入网关对等链接
+func (c *DcClient) CreatePeerLinkInvoker(request *model.CreatePeerLinkRequest) *CreatePeerLinkInvoker {
+	requestDef := GenReqDefForCreatePeerLink()
+	return &CreatePeerLinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteGlobalDcGateway 删除全球接入网关
+//
+// 根据ID删除全球接入网关，返回删除全球接入网关的结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) DeleteGlobalDcGateway(request *model.DeleteGlobalDcGatewayRequest) (*model.DeleteGlobalDcGatewayResponse, error) {
+	requestDef := GenReqDefForDeleteGlobalDcGateway()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteGlobalDcGatewayResponse), nil
+	}
+}
+
+// DeleteGlobalDcGatewayInvoker 删除全球接入网关
+func (c *DcClient) DeleteGlobalDcGatewayInvoker(request *model.DeleteGlobalDcGatewayRequest) *DeleteGlobalDcGatewayInvoker {
+	requestDef := GenReqDefForDeleteGlobalDcGateway()
+	return &DeleteGlobalDcGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePeerLink 删除全球接入网关对等链接
+//
+// 根据ID删除全球接入网关对等链接，返回删除全球接入网关对等链接的结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) DeletePeerLink(request *model.DeletePeerLinkRequest) (*model.DeletePeerLinkResponse, error) {
+	requestDef := GenReqDefForDeletePeerLink()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePeerLinkResponse), nil
+	}
+}
+
+// DeletePeerLinkInvoker 删除全球接入网关对等链接
+func (c *DcClient) DeletePeerLinkInvoker(request *model.DeletePeerLinkRequest) *DeletePeerLinkInvoker {
+	requestDef := GenReqDefForDeletePeerLink()
+	return &DeletePeerLinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGlobalDcGateway 查询全球接入网关列表
+//
+// 查询 全球接入网关列表，返回列表中包含全球接入网关的详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) ListGlobalDcGateway(request *model.ListGlobalDcGatewayRequest) (*model.ListGlobalDcGatewayResponse, error) {
+	requestDef := GenReqDefForListGlobalDcGateway()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGlobalDcGatewayResponse), nil
+	}
+}
+
+// ListGlobalDcGatewayInvoker 查询全球接入网关列表
+func (c *DcClient) ListGlobalDcGatewayInvoker(request *model.ListGlobalDcGatewayRequest) *ListGlobalDcGatewayInvoker {
+	requestDef := GenReqDefForListGlobalDcGateway()
+	return &ListGlobalDcGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPeerLinks 查询全球接入网关对等链接
+//
+// 查询全球接入网关对等链接，返回查询到的全球接入网关对等链接的详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) ListPeerLinks(request *model.ListPeerLinksRequest) (*model.ListPeerLinksResponse, error) {
+	requestDef := GenReqDefForListPeerLinks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPeerLinksResponse), nil
+	}
+}
+
+// ListPeerLinksInvoker 查询全球接入网关对等链接
+func (c *DcClient) ListPeerLinksInvoker(request *model.ListPeerLinksRequest) *ListPeerLinksInvoker {
+	requestDef := GenReqDefForListPeerLinks()
+	return &ListPeerLinksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRmsGlobalDcGateway 查询RMS全球接入网关
+//
+// 根据类型、domain_id、region_id,资源类型查询资源，返回查询到的资源的详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) ListRmsGlobalDcGateway(request *model.ListRmsGlobalDcGatewayRequest) (*model.ListRmsGlobalDcGatewayResponse, error) {
+	requestDef := GenReqDefForListRmsGlobalDcGateway()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRmsGlobalDcGatewayResponse), nil
+	}
+}
+
+// ListRmsGlobalDcGatewayInvoker 查询RMS全球接入网关
+func (c *DcClient) ListRmsGlobalDcGatewayInvoker(request *model.ListRmsGlobalDcGatewayRequest) *ListRmsGlobalDcGatewayInvoker {
+	requestDef := GenReqDefForListRmsGlobalDcGateway()
+	return &ListRmsGlobalDcGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGlobalDcGateway 查询全球接入网关详情
+//
+// 根据ID查询全球接入网关，返回查询到的全球接入网关的详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) ShowGlobalDcGateway(request *model.ShowGlobalDcGatewayRequest) (*model.ShowGlobalDcGatewayResponse, error) {
+	requestDef := GenReqDefForShowGlobalDcGateway()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowGlobalDcGatewayResponse), nil
+	}
+}
+
+// ShowGlobalDcGatewayInvoker 查询全球接入网关详情
+func (c *DcClient) ShowGlobalDcGatewayInvoker(request *model.ShowGlobalDcGatewayRequest) *ShowGlobalDcGatewayInvoker {
+	requestDef := GenReqDefForShowGlobalDcGateway()
+	return &ShowGlobalDcGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPeerLink 查询全球接入网关对等链接
+//
+// 根据ID查询全球接入网关对等链接，返回查询到的全球接入网关对等链接的详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) ShowPeerLink(request *model.ShowPeerLinkRequest) (*model.ShowPeerLinkResponse, error) {
+	requestDef := GenReqDefForShowPeerLink()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPeerLinkResponse), nil
+	}
+}
+
+// ShowPeerLinkInvoker 查询全球接入网关对等链接
+func (c *DcClient) ShowPeerLinkInvoker(request *model.ShowPeerLinkRequest) *ShowPeerLinkInvoker {
+	requestDef := GenReqDefForShowPeerLink()
+	return &ShowPeerLinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRmsGlobalDcGateway 查询RMS全球接入网关
+//
+// 根据类型、domain_id、region_id,资源类型，全球接入网关ID查询资源,返回查询到的资源的详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) ShowRmsGlobalDcGateway(request *model.ShowRmsGlobalDcGatewayRequest) (*model.ShowRmsGlobalDcGatewayResponse, error) {
+	requestDef := GenReqDefForShowRmsGlobalDcGateway()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRmsGlobalDcGatewayResponse), nil
+	}
+}
+
+// ShowRmsGlobalDcGatewayInvoker 查询RMS全球接入网关
+func (c *DcClient) ShowRmsGlobalDcGatewayInvoker(request *model.ShowRmsGlobalDcGatewayRequest) *ShowRmsGlobalDcGatewayInvoker {
+	requestDef := GenReqDefForShowRmsGlobalDcGateway()
+	return &ShowRmsGlobalDcGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGlobalDcGateway 修改全球接入网关
+//
+// 根据ID修改全球接入网关，返回修改全球接入网关的结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) UpdateGlobalDcGateway(request *model.UpdateGlobalDcGatewayRequest) (*model.UpdateGlobalDcGatewayResponse, error) {
+	requestDef := GenReqDefForUpdateGlobalDcGateway()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateGlobalDcGatewayResponse), nil
+	}
+}
+
+// UpdateGlobalDcGatewayInvoker 修改全球接入网关
+func (c *DcClient) UpdateGlobalDcGatewayInvoker(request *model.UpdateGlobalDcGatewayRequest) *UpdateGlobalDcGatewayInvoker {
+	requestDef := GenReqDefForUpdateGlobalDcGateway()
+	return &UpdateGlobalDcGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePeerLink 修改全球接入网关对等链接
+//
+// 根据ID修改全球接入网关对等链接，返回修改全球接入网关对等链接的结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) UpdatePeerLink(request *model.UpdatePeerLinkRequest) (*model.UpdatePeerLinkResponse, error) {
+	requestDef := GenReqDefForUpdatePeerLink()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePeerLinkResponse), nil
+	}
+}
+
+// UpdatePeerLinkInvoker 修改全球接入网关对等链接
+func (c *DcClient) UpdatePeerLinkInvoker(request *model.UpdatePeerLinkRequest) *UpdatePeerLinkInvoker {
+	requestDef := GenReqDefForUpdatePeerLink()
+	return &UpdatePeerLinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowQuotas 查询配额

@@ -10,7 +10,7 @@ import (
 
 type DimensionVo struct {
 
-	// 编码，填写String类型替代Long类型。
+	// 编码，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	// 字段名。
@@ -31,18 +31,18 @@ type DimensionVo struct {
 	// 更新人。
 	UpdateBy *string `json:"update_by,omitempty"`
 
-	// 引用码表ID，填写String类型替代Long类型。
+	// 引用码表ID，ID字符串。
 	CodeTableId *string `json:"code_table_id,omitempty"`
 
 	CodeTable *CodeTableVo `json:"code_table,omitempty"`
 
-	// 主题域分组ID，只读，填写String类型替代Long类型。
+	// 主题域分组ID，只读，ID字符串。
 	L1Id *string `json:"l1_id,omitempty"`
 
 	// 主题域ID，只读，创建和更新时无需填写。
 	L2Id *string `json:"l2_id,omitempty"`
 
-	// 业务对象ID，填写String类型替代Long类型。
+	// 业务对象ID，ID字符串。
 	L3Id string `json:"l3_id"`
 
 	// 层级属性。
@@ -101,10 +101,10 @@ type DimensionVo struct {
 	// 其他配置
 	Configs *string `json:"configs,omitempty"`
 
-	// 开发环境版本，填写String类型替代Long类型。
+	// 开发环境版本，ID字符串。
 	DevVersion *string `json:"dev_version,omitempty"`
 
-	// 生产环境版本，填写String类型替代Long类型。
+	// 生产环境版本，ID字符串。
 	ProdVersion *string `json:"prod_version,omitempty"`
 
 	// 开发环境版本名称

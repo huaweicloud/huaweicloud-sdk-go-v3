@@ -21,7 +21,7 @@ type SearchDesignLatestApprovalDiffRequest struct {
 	// 默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
 	ContentType *string `json:"Content-Type,omitempty"`
 
-	// 待比较下展的实体ID，填写String类型替代Long类型。
+	// 待比较下展的实体ID，ID字符串。
 	BizId string `json:"biz_id"`
 
 	// 待删除下展的实体类型。 枚举值：   - ATOMIC_INDEX: 原子指标   - DERIVATIVE_INDEX: 衍生指标   - DIMENSION: 维度   - FACT_LOGIC_TABLE: 事实表   - TABLE_MODEL:关系建模：逻辑实体/物理表   - STANDARD_ELEMENT: 数据标准   - AGGREGATION_LOGIC_TABLE: 汇总表   - CODE_TABLE: 码表   - BIZ_METRIC: 业务指标   - COMPOUND_METRIC: 复合指标

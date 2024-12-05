@@ -36,7 +36,7 @@ type ShowImageCheckRuleDetailRequest struct {
 	// 检查项id
 	CheckRuleId string `json:"check_rule_id"`
 
-	// 标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 华为标准   - qt_standard : 青腾标准
+	// 标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
 	Standard string `json:"standard"`
 
 	// 企业仓库实例ID，swr共享版无需使用该参数

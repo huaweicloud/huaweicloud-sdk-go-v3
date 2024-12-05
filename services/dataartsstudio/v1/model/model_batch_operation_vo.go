@@ -12,19 +12,19 @@ import (
 // BatchOperationVo 批量操作对象，只读。
 type BatchOperationVo struct {
 
-	// 批量审批ID，填写String类型替代Long类型。
+	// 批量审批ID，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	// 项目ID。
 	TenantId *string `json:"tenant_id,omitempty"`
 
-	// 组ID，填写String类型替代Long类型。
+	// 组ID，ID字符串。
 	GroupId *string `json:"group_id,omitempty"`
 
 	// 业务名。
 	BizName *string `json:"biz_name,omitempty"`
 
-	// 业务ID，填写String类型替代Long类型。
+	// 业务ID，ID字符串。
 	BizId *string `json:"biz_id,omitempty"`
 
 	// 操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。 枚举值：   - RUNNING: 运行中   - SUCCESS: 操作成功   - FAILED: 操作失败

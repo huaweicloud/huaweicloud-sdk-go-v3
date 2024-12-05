@@ -25,6 +25,18 @@ type SimDeviceMultiplyVo struct {
 
 	// 版本信息
 	Version *int32 `json:"version,omitempty"`
+
+	// 移动网络iccid
+	IccidMobile *string `json:"iccid_mobile,omitempty"`
+
+	// 联通网络iccid
+	IccidUnicom *string `json:"iccid_unicom,omitempty"`
+
+	// 电信网络iccid
+	IccidTelcom *string `json:"iccid_telcom,omitempty"`
+
+	// 批次号
+	OrderId *int64 `json:"order_id,omitempty"`
 }
 
 func (o SimDeviceMultiplyVo) String() string {

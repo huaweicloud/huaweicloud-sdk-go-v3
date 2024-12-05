@@ -13,19 +13,19 @@ import (
 type CreateVifPeer struct {
 
 	// VIF对等体名字
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// VIF对等体名字描述信息
 	Description *string `json:"description,omitempty"`
 
 	// 接口的地址簇类型，ipv4，ipv6
-	AddressFamily *string `json:"address_family,omitempty"`
+	AddressFamily string `json:"address_family"`
 
 	// VIF对等体云侧接口地址
-	LocalGatewayIp *string `json:"local_gateway_ip,omitempty"`
+	LocalGatewayIp string `json:"local_gateway_ip"`
 
 	// VIF对等体客户侧接口地址
-	RemoteGatewayIp *string `json:"remote_gateway_ip,omitempty"`
+	RemoteGatewayIp string `json:"remote_gateway_ip"`
 
 	// 路由模式：static/bgp
 	RouteMode *CreateVifPeerRouteMode `json:"route_mode,omitempty"`
@@ -40,7 +40,7 @@ type CreateVifPeer struct {
 	RemoteEpGroup *[]string `json:"remote_ep_group,omitempty"`
 
 	// vif对等体对应的虚拟接口ID
-	VifId *string `json:"vif_id,omitempty"`
+	VifId string `json:"vif_id"`
 }
 
 func (o CreateVifPeer) String() string {

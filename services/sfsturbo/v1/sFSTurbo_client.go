@@ -622,6 +622,27 @@ func (c *SFSTurboClient) ListSharesInvoker(request *model.ListSharesRequest) *Li
 	return &ListSharesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSharesByTag 通过标签查询文件系统列表
+//
+// 通过标签查询文件系统列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) ListSharesByTag(request *model.ListSharesByTagRequest) (*model.ListSharesByTagResponse, error) {
+	requestDef := GenReqDefForListSharesByTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSharesByTagResponse), nil
+	}
+}
+
+// ListSharesByTagInvoker 通过标签查询文件系统列表
+func (c *SFSTurboClient) ListSharesByTagInvoker(request *model.ListSharesByTagRequest) *ListSharesByTagInvoker {
+	requestDef := GenReqDefForListSharesByTag()
+	return &ListSharesByTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetHpcCacheBackend 配置hpc缓存型后端信息
 //
 // 配置hpc缓存型后端信息

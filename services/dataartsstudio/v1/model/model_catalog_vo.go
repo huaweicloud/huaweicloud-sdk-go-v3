@@ -56,13 +56,13 @@ type CatalogVo struct {
 	// 责任人。
 	Owner *string `json:"owner,omitempty"`
 
-	// 父目录ID，木有则为根目录，填写String类型替代Long类型。
+	// 父目录ID，木有则为根目录，ID字符串。
 	ParentId *string `json:"parent_id,omitempty"`
 
-	// 同层排序，目标节点的ID，填写String类型替代Long类型。
+	// 同层排序，目标节点的ID，ID字符串。
 	SwapOrderId *string `json:"swap_order_id,omitempty"`
 
-	// 主题ID，填写String类型替代Long类型。
+	// 主题ID，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	// 认证ID，自动生成。

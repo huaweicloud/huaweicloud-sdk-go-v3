@@ -9,7 +9,7 @@ import (
 
 type DimensionHierarchiesVo struct {
 
-	// 编码，填写String类型替代Long类型。
+	// 编码，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	// 层级名称。

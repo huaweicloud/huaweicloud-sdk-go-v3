@@ -44,6 +44,9 @@ type CompareJobInfo struct {
 
 	// 失败原因。
 	ErrorMsg *string `json:"error_msg,omitempty"`
+
+	// 动态比对时延。
+	DynamicCompareDelay *int64 `json:"dynamic_compare_delay,omitempty"`
 }
 
 func (o CompareJobInfo) String() string {

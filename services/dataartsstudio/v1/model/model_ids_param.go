@@ -11,7 +11,7 @@ import (
 
 type IdsParam struct {
 
-	// ID列表，填写String类型替代Long类型。
+	// ID列表，ID字符串。
 	Ids []string `json:"ids"`
 
 	// 删除物理表。 枚举值：   - PHYSICAL_TABLE: 关系建模

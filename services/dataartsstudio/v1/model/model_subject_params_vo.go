@@ -8,7 +8,7 @@ import (
 
 type SubjectParamsVo struct {
 
-	// 编码。更新时必填，创建时可以为空，填写String类型替代Long类型。
+	// 编码。更新时必填，创建时可以为空，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	// 中文名称。
@@ -32,7 +32,7 @@ type SubjectParamsVo struct {
 	// 层级。取值范围1-7。
 	Level int32 `json:"level"`
 
-	// 上层主题ID，首层则为空，填写String类型替代Long类型。
+	// 上层主题ID，首层则为空，ID字符串。
 	ParentId *string `json:"parent_id,omitempty"`
 
 	// 自定义项。主题的自定义属性。

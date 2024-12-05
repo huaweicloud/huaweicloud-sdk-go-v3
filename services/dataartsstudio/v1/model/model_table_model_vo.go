@@ -11,13 +11,13 @@ import (
 // TableModelVo 表的详情信息。
 type TableModelVo struct {
 
-	// 编码，填写String类型替代Long类型。
+	// 编码，ID字符串。
 	Id *string `json:"id,omitempty"`
 
-	// 所属关系建模的模型ID，填写String类型替代Long类型。
+	// 所属关系建模的模型ID，ID字符串。
 	ModelId string `json:"model_id"`
 
-	// 父表ID，填写String类型替代Long类型。
+	// 父表ID，ID字符串。
 	ParentTableId *string `json:"parent_table_id,omitempty"`
 
 	// 父表名称，只读。
@@ -26,13 +26,13 @@ type TableModelVo struct {
 	// 父表编码，只读。
 	ParentTableCode *string `json:"parent_table_code,omitempty"`
 
-	// 关联逻辑实体的ID，填写String类型替代Long类型。
+	// 关联逻辑实体的ID，ID字符串。
 	RelatedLogicTableId *string `json:"related_logic_table_id,omitempty"`
 
 	// 关联逻辑实体的名称。
 	RelatedLogicTableName *string `json:"related_logic_table_name,omitempty"`
 
-	// 关联逻辑实体的模型ID，填写String类型替代Long类型。
+	// 关联逻辑实体的模型ID，ID字符串。
 	RelatedLogicTableModelId *string `json:"related_logic_table_model_id,omitempty"`
 
 	// 关联逻辑实体的模型名称。
@@ -93,10 +93,10 @@ type TableModelVo struct {
 
 	Status *BizStatusEnum `json:"status,omitempty"`
 
-	// 逻辑实体的ID，填写String类型替代Long类型。
+	// 逻辑实体的ID，ID字符串。
 	LogicTbId *string `json:"logic_tb_id,omitempty"`
 
-	// 归属的业务分类的id，填写String类型替代Long类型。
+	// 归属的业务分类的id，ID字符串。
 	BizCatalogId *string `json:"biz_catalog_id,omitempty"`
 
 	// 归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}。
@@ -145,13 +145,13 @@ type TableModelVo struct {
 	// 业务对象中文名，只读，创建和更新时无需填写。
 	L3 *string `json:"l3,omitempty"`
 
-	// 主题域分组ID，只读，填写String类型替代Long类型。
+	// 主题域分组ID，只读，ID字符串。
 	L1Id *string `json:"l1_id,omitempty"`
 
 	// 主题域ID，只读，创建和更新时无需填写。
 	L2Id *string `json:"l2_id,omitempty"`
 
-	// 业务对象ID，只读，填写String类型替代Long类型。
+	// 业务对象ID，只读，ID字符串。
 	L3Id *string `json:"l3_id,omitempty"`
 
 	// 分区表达式。
@@ -181,7 +181,7 @@ type TableModelVo struct {
 	// 质量责任人。
 	QualityOwner *string `json:"quality_owner,omitempty"`
 
-	// 质量ID，填写String类型替代Long类型。
+	// 质量ID，ID字符串。
 	QualityId *string `json:"quality_id,omitempty"`
 
 	// DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
@@ -207,10 +207,10 @@ type TableModelVo struct {
 
 	SummaryStatus *SyncStatusEnum `json:"summary_status,omitempty"`
 
-	// 开发环境版本，填写String类型替代Long类型。
+	// 开发环境版本，ID字符串。
 	DevVersion *string `json:"dev_version,omitempty"`
 
-	// 生产环境版本，填写String类型替代Long类型。
+	// 生产环境版本，ID字符串。
 	ProdVersion *string `json:"prod_version,omitempty"`
 
 	// 开发环境版本名称。

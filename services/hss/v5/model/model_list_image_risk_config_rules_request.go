@@ -36,7 +36,7 @@ type ListImageRiskConfigRulesRequest struct {
 	// 基线名称
 	CheckName string `json:"check_name"`
 
-	// 标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 华为标准 - qt_standard : 青腾标准
+	// 标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
 	Standard string `json:"standard"`
 
 	// 结果类型，包含如下： - pass ： 已通过 - failed : 未通过

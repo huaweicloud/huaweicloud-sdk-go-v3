@@ -9,10 +9,10 @@ import (
 // CodeTableFieldValueVo 码表属性值。
 type CodeTableFieldValueVo struct {
 
-	// 码表字段ID，填写String类型替代Long类型。
+	// 码表字段ID，ID字符串。
 	Id *string `json:"id,omitempty"`
 
-	// 所属码表属性ID，填写String类型替代Long类型。
+	// 所属码表属性ID，ID字符串。
 	FdId *string `json:"fd_id,omitempty"`
 
 	// 码表属性值。

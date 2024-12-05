@@ -187,6 +187,74 @@ func (c *DataArtsStudioClient) BatchAssociateSecurityLevelToEntitiesInvoker(requ
 	return &BatchAssociateSecurityLevelToEntitiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreateDesignTableModelsFromLogic 转换逻辑模型为物理模型
+//
+// 转换逻辑模型为物理模型，转换成功则显示转换后的目标模型信息。
+// 异常：目标模型信息的“id”等属性为null时，则需要调用《获取操作结果》接口查看具体报错信息：GET https://{endpoint}/v1/{project_id}/design/operation-results?operation_type&#x3D;TRANSFORM_LOGIC_MODEL&amp;operation_id&#x3D;{model_id}，其中{model_id}为本接口的路径参数。
+// 约束与限制：
+//
+//	1、target_model_id与target_model_name不对应时，target_model_id优先级高于target_model_name。
+//	2、target_model_id与dw_type不对应时，会找不到模型，提示：模型不存在。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) BatchCreateDesignTableModelsFromLogic(request *model.BatchCreateDesignTableModelsFromLogicRequest) (*model.BatchCreateDesignTableModelsFromLogicResponse, error) {
+	requestDef := GenReqDefForBatchCreateDesignTableModelsFromLogic()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateDesignTableModelsFromLogicResponse), nil
+	}
+}
+
+// BatchCreateDesignTableModelsFromLogicInvoker 转换逻辑模型为物理模型
+func (c *DataArtsStudioClient) BatchCreateDesignTableModelsFromLogicInvoker(request *model.BatchCreateDesignTableModelsFromLogicRequest) *BatchCreateDesignTableModelsFromLogicInvoker {
+	requestDef := GenReqDefForBatchCreateDesignTableModelsFromLogic()
+	return &BatchCreateDesignTableModelsFromLogicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateSecurityPermissionSetMembers 批量添加权限集成员
+//
+// 批量添加权限集成员
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) BatchCreateSecurityPermissionSetMembers(request *model.BatchCreateSecurityPermissionSetMembersRequest) (*model.BatchCreateSecurityPermissionSetMembersResponse, error) {
+	requestDef := GenReqDefForBatchCreateSecurityPermissionSetMembers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateSecurityPermissionSetMembersResponse), nil
+	}
+}
+
+// BatchCreateSecurityPermissionSetMembersInvoker 批量添加权限集成员
+func (c *DataArtsStudioClient) BatchCreateSecurityPermissionSetMembersInvoker(request *model.BatchCreateSecurityPermissionSetMembersRequest) *BatchCreateSecurityPermissionSetMembersInvoker {
+	requestDef := GenReqDefForBatchCreateSecurityPermissionSetMembers()
+	return &BatchCreateSecurityPermissionSetMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateSecurityPermissionSetPermissions 批量添加权限集的权限
+//
+// 批量添加权限集的权限
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) BatchCreateSecurityPermissionSetPermissions(request *model.BatchCreateSecurityPermissionSetPermissionsRequest) (*model.BatchCreateSecurityPermissionSetPermissionsResponse, error) {
+	requestDef := GenReqDefForBatchCreateSecurityPermissionSetPermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateSecurityPermissionSetPermissionsResponse), nil
+	}
+}
+
+// BatchCreateSecurityPermissionSetPermissionsInvoker 批量添加权限集的权限
+func (c *DataArtsStudioClient) BatchCreateSecurityPermissionSetPermissionsInvoker(request *model.BatchCreateSecurityPermissionSetPermissionsRequest) *BatchCreateSecurityPermissionSetPermissionsInvoker {
+	requestDef := GenReqDefForBatchCreateSecurityPermissionSetPermissions()
+	return &BatchCreateSecurityPermissionSetPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeleteSecurityDataClassificationRule 批量删除识别规则接口
 //
 // 批量删除识别规则接口
@@ -544,6 +612,27 @@ func (c *DataArtsStudioClient) CheckFactLogicTableStatusInvoker(request *model.C
 	return &CheckFactLogicTableStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CompareDesignVersions 比较版本信息
+//
+// 通过两个版本id，比较两者差异。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CompareDesignVersions(request *model.CompareDesignVersionsRequest) (*model.CompareDesignVersionsResponse, error) {
+	requestDef := GenReqDefForCompareDesignVersions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CompareDesignVersionsResponse), nil
+	}
+}
+
+// CompareDesignVersionsInvoker 比较版本信息
+func (c *DataArtsStudioClient) CompareDesignVersionsInvoker(request *model.CompareDesignVersionsRequest) *CompareDesignVersionsInvoker {
+	requestDef := GenReqDefForCompareDesignVersions()
+	return &CompareDesignVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ConfirmApprovals 审批单处理
 //
 // 审批驳回/通过，单个或多个action-id&#x3D;reject/resolve。
@@ -837,6 +926,69 @@ func (c *DataArtsStudioClient) CreateDesignAtomicIndex(request *model.CreateDesi
 func (c *DataArtsStudioClient) CreateDesignAtomicIndexInvoker(request *model.CreateDesignAtomicIndexRequest) *CreateDesignAtomicIndexInvoker {
 	requestDef := GenReqDefForCreateDesignAtomicIndex()
 	return &CreateDesignAtomicIndexInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDesignCompoundMetric 新建复合指标
+//
+// 根据参数，新建复合指标。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateDesignCompoundMetric(request *model.CreateDesignCompoundMetricRequest) (*model.CreateDesignCompoundMetricResponse, error) {
+	requestDef := GenReqDefForCreateDesignCompoundMetric()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDesignCompoundMetricResponse), nil
+	}
+}
+
+// CreateDesignCompoundMetricInvoker 新建复合指标
+func (c *DataArtsStudioClient) CreateDesignCompoundMetricInvoker(request *model.CreateDesignCompoundMetricRequest) *CreateDesignCompoundMetricInvoker {
+	requestDef := GenReqDefForCreateDesignCompoundMetric()
+	return &CreateDesignCompoundMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDesignDerivativeIndex 新建衍生指标
+//
+// 根据参数，新建衍生指标指标。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateDesignDerivativeIndex(request *model.CreateDesignDerivativeIndexRequest) (*model.CreateDesignDerivativeIndexResponse, error) {
+	requestDef := GenReqDefForCreateDesignDerivativeIndex()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDesignDerivativeIndexResponse), nil
+	}
+}
+
+// CreateDesignDerivativeIndexInvoker 新建衍生指标
+func (c *DataArtsStudioClient) CreateDesignDerivativeIndexInvoker(request *model.CreateDesignDerivativeIndexRequest) *CreateDesignDerivativeIndexInvoker {
+	requestDef := GenReqDefForCreateDesignDerivativeIndex()
+	return &CreateDesignDerivativeIndexInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDesignDimension 新建维度
+//
+// 根据参数新建维度。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateDesignDimension(request *model.CreateDesignDimensionRequest) (*model.CreateDesignDimensionResponse, error) {
+	requestDef := GenReqDefForCreateDesignDimension()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDesignDimensionResponse), nil
+	}
+}
+
+// CreateDesignDimensionInvoker 新建维度
+func (c *DataArtsStudioClient) CreateDesignDimensionInvoker(request *model.CreateDesignDimensionRequest) *CreateDesignDimensionInvoker {
+	requestDef := GenReqDefForCreateDesignDimension()
+	return &CreateDesignDimensionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateDirectory 创建目录
@@ -1593,6 +1745,111 @@ func (c *DataArtsStudioClient) DeleteDesignAtomicIndex(request *model.DeleteDesi
 func (c *DataArtsStudioClient) DeleteDesignAtomicIndexInvoker(request *model.DeleteDesignAtomicIndexRequest) *DeleteDesignAtomicIndexInvoker {
 	requestDef := GenReqDefForDeleteDesignAtomicIndex()
 	return &DeleteDesignAtomicIndexInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDesignCompoundMetric 删除复合指标
+//
+// 根据ID集合删除复合指标。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) DeleteDesignCompoundMetric(request *model.DeleteDesignCompoundMetricRequest) (*model.DeleteDesignCompoundMetricResponse, error) {
+	requestDef := GenReqDefForDeleteDesignCompoundMetric()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDesignCompoundMetricResponse), nil
+	}
+}
+
+// DeleteDesignCompoundMetricInvoker 删除复合指标
+func (c *DataArtsStudioClient) DeleteDesignCompoundMetricInvoker(request *model.DeleteDesignCompoundMetricRequest) *DeleteDesignCompoundMetricInvoker {
+	requestDef := GenReqDefForDeleteDesignCompoundMetric()
+	return &DeleteDesignCompoundMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDesignDerivativeIndex 删除衍生指标
+//
+// 根据衍生指标ID，删除衍生指标。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) DeleteDesignDerivativeIndex(request *model.DeleteDesignDerivativeIndexRequest) (*model.DeleteDesignDerivativeIndexResponse, error) {
+	requestDef := GenReqDefForDeleteDesignDerivativeIndex()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDesignDerivativeIndexResponse), nil
+	}
+}
+
+// DeleteDesignDerivativeIndexInvoker 删除衍生指标
+func (c *DataArtsStudioClient) DeleteDesignDerivativeIndexInvoker(request *model.DeleteDesignDerivativeIndexRequest) *DeleteDesignDerivativeIndexInvoker {
+	requestDef := GenReqDefForDeleteDesignDerivativeIndex()
+	return &DeleteDesignDerivativeIndexInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDesignDimension 删除维度
+//
+// 根据传入的维度ID，删除维度。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) DeleteDesignDimension(request *model.DeleteDesignDimensionRequest) (*model.DeleteDesignDimensionResponse, error) {
+	requestDef := GenReqDefForDeleteDesignDimension()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDesignDimensionResponse), nil
+	}
+}
+
+// DeleteDesignDimensionInvoker 删除维度
+func (c *DataArtsStudioClient) DeleteDesignDimensionInvoker(request *model.DeleteDesignDimensionRequest) *DeleteDesignDimensionInvoker {
+	requestDef := GenReqDefForDeleteDesignDimension()
+	return &DeleteDesignDimensionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDesignDimensionLogicTable 删除维度表
+//
+// 根据维度表ID，删除维度表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) DeleteDesignDimensionLogicTable(request *model.DeleteDesignDimensionLogicTableRequest) (*model.DeleteDesignDimensionLogicTableResponse, error) {
+	requestDef := GenReqDefForDeleteDesignDimensionLogicTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDesignDimensionLogicTableResponse), nil
+	}
+}
+
+// DeleteDesignDimensionLogicTableInvoker 删除维度表
+func (c *DataArtsStudioClient) DeleteDesignDimensionLogicTableInvoker(request *model.DeleteDesignDimensionLogicTableRequest) *DeleteDesignDimensionLogicTableInvoker {
+	requestDef := GenReqDefForDeleteDesignDimensionLogicTable()
+	return &DeleteDesignDimensionLogicTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDesignFactLogicTable 删除事实表
+//
+// 根据ID集合删除事实表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) DeleteDesignFactLogicTable(request *model.DeleteDesignFactLogicTableRequest) (*model.DeleteDesignFactLogicTableResponse, error) {
+	requestDef := GenReqDefForDeleteDesignFactLogicTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDesignFactLogicTableResponse), nil
+	}
+}
+
+// DeleteDesignFactLogicTableInvoker 删除事实表
+func (c *DataArtsStudioClient) DeleteDesignFactLogicTableInvoker(request *model.DeleteDesignFactLogicTableRequest) *DeleteDesignFactLogicTableInvoker {
+	requestDef := GenReqDefForDeleteDesignFactLogicTable()
+	return &DeleteDesignFactLogicTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteDesignLatestApproval 删除实体下展
@@ -4849,6 +5106,27 @@ func (c *DataArtsStudioClient) ShowDerivativeIndexByIdInvoker(request *model.Sho
 	return &ShowDerivativeIndexByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDesignOperationResult 获取操作结果
+//
+// 获取批量操作的结果，如逻辑模型转物理模型和逆向数据库操作。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowDesignOperationResult(request *model.ShowDesignOperationResultRequest) (*model.ShowDesignOperationResultResponse, error) {
+	requestDef := GenReqDefForShowDesignOperationResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDesignOperationResultResponse), nil
+	}
+}
+
+// ShowDesignOperationResultInvoker 获取操作结果
+func (c *DataArtsStudioClient) ShowDesignOperationResultInvoker(request *model.ShowDesignOperationResultRequest) *ShowDesignOperationResultInvoker {
+	requestDef := GenReqDefForShowDesignOperationResult()
+	return &ShowDesignOperationResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDimensionById 查看维度详情
 //
 // 通过ID查看维度详情信息。
@@ -5856,6 +6134,69 @@ func (c *DataArtsStudioClient) UpdateDesignAtomicIndex(request *model.UpdateDesi
 func (c *DataArtsStudioClient) UpdateDesignAtomicIndexInvoker(request *model.UpdateDesignAtomicIndexRequest) *UpdateDesignAtomicIndexInvoker {
 	requestDef := GenReqDefForUpdateDesignAtomicIndex()
 	return &UpdateDesignAtomicIndexInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDesignCompoundMetric 更新复合指标
+//
+// 根据参数，更新复合指标。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UpdateDesignCompoundMetric(request *model.UpdateDesignCompoundMetricRequest) (*model.UpdateDesignCompoundMetricResponse, error) {
+	requestDef := GenReqDefForUpdateDesignCompoundMetric()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDesignCompoundMetricResponse), nil
+	}
+}
+
+// UpdateDesignCompoundMetricInvoker 更新复合指标
+func (c *DataArtsStudioClient) UpdateDesignCompoundMetricInvoker(request *model.UpdateDesignCompoundMetricRequest) *UpdateDesignCompoundMetricInvoker {
+	requestDef := GenReqDefForUpdateDesignCompoundMetric()
+	return &UpdateDesignCompoundMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDesignDerivativeIndex 更新衍生指标
+//
+// 根据传入参数，更新衍生指标。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UpdateDesignDerivativeIndex(request *model.UpdateDesignDerivativeIndexRequest) (*model.UpdateDesignDerivativeIndexResponse, error) {
+	requestDef := GenReqDefForUpdateDesignDerivativeIndex()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDesignDerivativeIndexResponse), nil
+	}
+}
+
+// UpdateDesignDerivativeIndexInvoker 更新衍生指标
+func (c *DataArtsStudioClient) UpdateDesignDerivativeIndexInvoker(request *model.UpdateDesignDerivativeIndexRequest) *UpdateDesignDerivativeIndexInvoker {
+	requestDef := GenReqDefForUpdateDesignDerivativeIndex()
+	return &UpdateDesignDerivativeIndexInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDesignDimension 更新维度
+//
+// 根据参数，更新维度信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UpdateDesignDimension(request *model.UpdateDesignDimensionRequest) (*model.UpdateDesignDimensionResponse, error) {
+	requestDef := GenReqDefForUpdateDesignDimension()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDesignDimensionResponse), nil
+	}
+}
+
+// UpdateDesignDimensionInvoker 更新维度
+func (c *DataArtsStudioClient) UpdateDesignDimensionInvoker(request *model.UpdateDesignDimensionRequest) *UpdateDesignDimensionInvoker {
+	requestDef := GenReqDefForUpdateDesignDimension()
+	return &UpdateDesignDimensionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDesignTableQuality 更新表的异常数据输出配置

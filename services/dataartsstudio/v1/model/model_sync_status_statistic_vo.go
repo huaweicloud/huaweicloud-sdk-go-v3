@@ -8,16 +8,16 @@ import (
 
 type SyncStatusStatisticVo struct {
 
-	// 成功数，填写String类型替代Long类型。
+	// 成功数，ID字符串。
 	Success *string `json:"success,omitempty"`
 
-	// 失败数，填写String类型替代Long类型。
+	// 失败数，ID字符串。
 	Failed *string `json:"failed,omitempty"`
 
-	// 同步中，填写String类型替代Long类型。
+	// 同步中，ID字符串。
 	Running *string `json:"running,omitempty"`
 
-	// 未同步数，填写String类型替代Long类型。
+	// 未同步数，ID字符串。
 	Other *string `json:"other,omitempty"`
 }
 

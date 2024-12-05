@@ -9,13 +9,13 @@ import (
 
 type DimensionAttributeVo struct {
 
-	// 编码，填写String类型替代Long类型。
+	// 编码，ID字符串。
 	Id *string `json:"id,omitempty"`
 
-	// 维度ID，只读，填写String类型替代Long类型。
+	// 维度ID，只读，ID字符串。
 	DimensionId *string `json:"dimension_id,omitempty"`
 
-	// 码表属性ID，填写String类型替代Long类型。
+	// 码表属性ID，ID字符串。
 	CodeTableFieldId *string `json:"code_table_field_id,omitempty"`
 
 	// 字段名。
@@ -53,7 +53,7 @@ type DimensionAttributeVo struct {
 	// 是否不为空。
 	NotNull *bool `json:"not_null,omitempty"`
 
-	// 关联的数据标准的ID，填写String类型替代Long类型。
+	// 关联的数据标准的ID，ID字符串。
 	StandRowId *string `json:"stand_row_id,omitempty"`
 
 	// 关联的数据标准名称，只读。

@@ -8,10 +8,7 @@ import (
 
 // UpdateTemplateMetadataResponse Response Object
 type UpdateTemplateMetadataResponse struct {
-
-	// 空响应体
-	Body           *string `json:"body,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o UpdateTemplateMetadataResponse) String() string {

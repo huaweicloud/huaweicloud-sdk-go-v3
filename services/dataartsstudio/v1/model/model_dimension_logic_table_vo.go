@@ -19,13 +19,13 @@ type DimensionLogicTableVo struct {
 	// 逻辑实体名。
 	TbLogicName *string `json:"tb_logic_name,omitempty"`
 
-	// 主题域分组ID，只读，填写String类型替代Long类型。
+	// 主题域分组ID，只读，ID字符串。
 	L1Id *string `json:"l1_id,omitempty"`
 
 	// 主题域ID，只读，创建和更新时无需填写。
 	L2Id *string `json:"l2_id,omitempty"`
 
-	// 业务对象ID，填写String类型替代Long类型。
+	// 业务对象ID，ID字符串。
 	L3Id *string `json:"l3_id,omitempty"`
 
 	// 创建人。
@@ -34,7 +34,7 @@ type DimensionLogicTableVo struct {
 	// 描述。
 	Description *string `json:"description,omitempty"`
 
-	// 所属维度ID，填写String类型替代Long类型。
+	// 所属维度ID，ID字符串。
 	DimensionId *string `json:"dimension_id,omitempty"`
 
 	// 资产责任人。
@@ -43,7 +43,7 @@ type DimensionLogicTableVo struct {
 	// 维度类型。 枚举值：   - COMMON: 普通维度   - LOOKUP: 码表维度   - HIERARCHIES: 层级维度
 	DimensionType *DimensionLogicTableVoDimensionType `json:"dimension_type,omitempty"`
 
-	// 引用码表ID，填写String类型替代Long类型。
+	// 引用码表ID，ID字符串。
 	CodeTableId *string `json:"code_table_id,omitempty"`
 
 	CodeTable *CodeTableVo `json:"code_table,omitempty"`
@@ -145,7 +145,7 @@ type DimensionLogicTableVo struct {
 	// DISTRIBUTE BY HASH column.
 	DistributeColumn *string `json:"distribute_column,omitempty"`
 
-	// 质量ID，填写String类型替代Long类型。
+	// 质量ID，ID字符串。
 	QualityId *string `json:"quality_id,omitempty"`
 
 	// 别名。
@@ -160,10 +160,10 @@ type DimensionLogicTableVo struct {
 	// 其他配置
 	Configs *string `json:"configs,omitempty"`
 
-	// 开发环境版本，填写String类型替代Long类型。
+	// 开发环境版本，ID字符串。
 	DevVersion *string `json:"dev_version,omitempty"`
 
-	// 生产环境版本，填写String类型替代Long类型
+	// 生产环境版本，ID字符串
 	ProdVersion *string `json:"prod_version,omitempty"`
 
 	// 开发环境版本名称

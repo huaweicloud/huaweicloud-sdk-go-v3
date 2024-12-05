@@ -1093,6 +1093,22 @@ func (i *ListOngoingWebinarsInvoker) Invoke() (*model.ListOngoingWebinarsRespons
 	}
 }
 
+type ListOnlineConfAttendeeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOnlineConfAttendeeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListOnlineConfAttendeeInvoker) Invoke() (*model.ListOnlineConfAttendeeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOnlineConfAttendeeResponse), nil
+	}
+}
+
 type ListUpComingWebinarsInvoker struct {
 	*invoker.BaseInvoker
 }

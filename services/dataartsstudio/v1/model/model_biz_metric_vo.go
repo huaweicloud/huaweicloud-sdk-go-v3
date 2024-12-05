@@ -11,7 +11,7 @@ import (
 // BizMetricVo 业务指标信息。
 type BizMetricVo struct {
 
-	// 编码，更新时必填，创建时为空，填写String类型替代Long类型。
+	// 编码，更新时必填，创建时为空，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	// 指标名称。
@@ -27,7 +27,7 @@ type BizMetricVo struct {
 
 	Status *BizStatusEnum `json:"status,omitempty"`
 
-	// 归属的流程架构的ID，填写String类型替代Long类型。
+	// 归属的流程架构的ID，ID字符串。
 	BizCatalogId string `json:"biz_catalog_id"`
 
 	// 归属的流程架构路径，只读。
@@ -60,7 +60,7 @@ type BizMetricVo struct {
 	// 应用场景。
 	ApplyScenario *string `json:"apply_scenario,omitempty"`
 
-	// 关联技术指标，填写String类型替代Long类型。
+	// 关联技术指标，ID字符串。
 	TechnicalMetric *string `json:"technical_metric,omitempty"`
 
 	// 关联技术指标名称，只读。

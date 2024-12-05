@@ -26,9 +26,6 @@ type VirtualInterface struct {
 	// 虚拟接口创建时间
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
-	// 虚拟接口更新时间
-	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
-
 	// 虚拟接口的描述
 	Description *string `json:"description,omitempty"`
 

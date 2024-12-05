@@ -8,7 +8,7 @@ import (
 
 type ApprovalInfoParam struct {
 
-	// 审批单ID列表，填写String类型替代Long类型。
+	// 审批单ID列表，ID字符串。
 	Ids []string `json:"ids"`
 
 	// 审批单信息，审批人填写的审批意见。

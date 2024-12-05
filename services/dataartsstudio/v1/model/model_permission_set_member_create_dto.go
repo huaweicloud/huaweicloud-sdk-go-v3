@@ -22,6 +22,9 @@ type PermissionSetMemberCreateDto struct {
 
 	// 工作空间
 	Workspace *string `json:"workspace,omitempty"`
+
+	// 是否自动触发同步, 默认false
+	AutoSync *bool `json:"auto_sync,omitempty"`
 }
 
 func (o PermissionSetMemberCreateDto) String() string {

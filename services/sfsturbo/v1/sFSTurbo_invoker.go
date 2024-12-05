@@ -453,6 +453,22 @@ func (i *ListSharesInvoker) Invoke() (*model.ListSharesResponse, error) {
 	}
 }
 
+type ListSharesByTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSharesByTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSharesByTagInvoker) Invoke() (*model.ListSharesByTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSharesByTagResponse), nil
+	}
+}
+
 type SetHpcCacheBackendInvoker struct {
 	*invoker.BaseInvoker
 }

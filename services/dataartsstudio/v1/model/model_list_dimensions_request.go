@@ -33,10 +33,10 @@ type ListDimensionsRequest struct {
 	// 业务状态。 枚举值：   - DRAFT: 草稿   - PUBLISH_DEVELOPING: 发布待审批   - PUBLISHED: 已发布   - OFFLINE_DEVELOPING: 下线待审批   - OFFLINE: 已下线   - REJECT: 已驳回
 	Status *ListDimensionsRequestStatus `json:"status,omitempty"`
 
-	// 主题域l2的ID，填写String类型替代Long类型。
+	// 主题域l2的ID，ID字符串。
 	L2Id *string `json:"l2_id,omitempty"`
 
-	// 依据复合指标ID列表查维度，填写String类型替代Long类型。
+	// 依据复合指标ID列表查维度，ID字符串。
 	DerivativeIds *[]string `json:"derivative_ids,omitempty"`
 
 	// 时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
@@ -45,7 +45,7 @@ type ListDimensionsRequest struct {
 	// 时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
 	EndTime *string `json:"end_time,omitempty"`
 
-	// 事实表ID，填写String类型替代Long类型。
+	// 事实表ID，ID字符串。
 	FactLogicId *string `json:"fact_logic_id,omitempty"`
 
 	// 维度类型。 枚举值： - COMMON: 普通维度 - LOOKUP: 码表维度 - HIERARCHIES: 层级维度

@@ -9,13 +9,13 @@ import (
 
 type TableMappingDetailVo struct {
 
-	// 编码，填写String类型替代Long类型。
+	// 编码，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	// 名称。
 	MappingId *string `json:"mapping_id,omitempty"`
 
-	// 目的字段ID，填写String类型替代Long类型。
+	// 目的字段ID，ID字符串。
 	TargetAttrId *string `json:"target_attr_id,omitempty"`
 
 	// 目的字段排序。
@@ -30,10 +30,10 @@ type TableMappingDetailVo struct {
 	// 源表db名称数组，只读。
 	SrcTableDbNames *[]string `json:"src_table_db_names,omitempty"`
 
-	// 源表在关系建模中的模型ID数组，只读，填写String类型替代Long类型。
+	// 源表在关系建模中的模型ID数组，只读，ID字符串。
 	SrcTableModelIds *[]string `json:"src_table_model_ids,omitempty"`
 
-	// 源表ID数组，只读，填写String类型替代Long类型。
+	// 源表ID数组，只读，ID字符串。
 	SrcTableIdList *[]string `json:"src_table_id_list,omitempty"`
 
 	// 源表字段ID。
@@ -42,7 +42,7 @@ type TableMappingDetailVo struct {
 	// 源表字段名称数组，只读。
 	SrcAttrNames *[]string `json:"src_attr_names,omitempty"`
 
-	// 源表字段ID数组，只读，填写String类型替代Long类型。
+	// 源表字段ID数组，只读，ID字符串。
 	SrcAttrIdList *[]string `json:"src_attr_id_list,omitempty"`
 
 	// 备注。

@@ -37,6 +37,22 @@ func (i *ApplyConfigurationToInstancesInvoker) Invoke() (*model.ApplyConfigurati
 	}
 }
 
+type BatchDeleteManualBackupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteManualBackupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteManualBackupInvoker) Invoke() (*model.BatchDeleteManualBackupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteManualBackupResponse), nil
+	}
+}
+
 type BatchTagActionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -114,6 +130,22 @@ func (i *CheckWeekPasswordInvoker) Invoke() (*model.CheckWeekPasswordResponse, e
 		return nil, err
 	} else {
 		return result.(*model.CheckWeekPasswordResponse), nil
+	}
+}
+
+type ClearInstanceSessionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ClearInstanceSessionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ClearInstanceSessionsInvoker) Invoke() (*model.ClearInstanceSessionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ClearInstanceSessionsResponse), nil
 	}
 }
 
@@ -437,6 +469,22 @@ func (i *DeleteLtsConfigsInvoker) Invoke() (*model.DeleteLtsConfigsResponse, err
 	}
 }
 
+type DeleteRedisDisabledCommandsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteRedisDisabledCommandsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteRedisDisabledCommandsInvoker) Invoke() (*model.DeleteRedisDisabledCommandsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteRedisDisabledCommandsResponse), nil
+	}
+}
+
 type ExpandInstanceNodeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -706,6 +754,22 @@ func (i *ListInstanceMaintenanceWindowInvoker) Invoke() (*model.ListInstanceMain
 		return nil, err
 	} else {
 		return result.(*model.ListInstanceMaintenanceWindowResponse), nil
+	}
+}
+
+type ListInstanceSessionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceSessionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceSessionsInvoker) Invoke() (*model.ListInstanceSessionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceSessionsResponse), nil
 	}
 }
 
@@ -1301,6 +1365,22 @@ func (i *SaveLtsConfigsInvoker) Invoke() (*model.SaveLtsConfigsResponse, error) 
 	}
 }
 
+type SaveRedisDisabledCommandsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SaveRedisDisabledCommandsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SaveRedisDisabledCommandsInvoker) Invoke() (*model.SaveRedisDisabledCommandsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SaveRedisDisabledCommandsResponse), nil
+	}
+}
+
 type SetAutoEnlargePolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1330,6 +1410,22 @@ func (i *SetBackupPolicyInvoker) Invoke() (*model.SetBackupPolicyResponse, error
 		return nil, err
 	} else {
 		return result.(*model.SetBackupPolicyResponse), nil
+	}
+}
+
+type SetDisasterRecoverySettingsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetDisasterRecoverySettingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetDisasterRecoverySettingsInvoker) Invoke() (*model.SetDisasterRecoverySettingsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetDisasterRecoverySettingsResponse), nil
 	}
 }
 
@@ -1506,6 +1602,22 @@ func (i *ShowConfigurationDetailInvoker) Invoke() (*model.ShowConfigurationDetai
 		return nil, err
 	} else {
 		return result.(*model.ShowConfigurationDetailResponse), nil
+	}
+}
+
+type ShowDisasterRecoverySettingsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDisasterRecoverySettingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDisasterRecoverySettingsInvoker) Invoke() (*model.ShowDisasterRecoverySettingsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDisasterRecoverySettingsResponse), nil
 	}
 }
 
@@ -1717,6 +1829,38 @@ func (i *ShowRedisBigKeysInvoker) Invoke() (*model.ShowRedisBigKeysResponse, err
 	}
 }
 
+type ShowRedisDisabledCommandsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRedisDisabledCommandsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRedisDisabledCommandsInvoker) Invoke() (*model.ShowRedisDisabledCommandsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRedisDisabledCommandsResponse), nil
+	}
+}
+
+type ShowRedisHotKeysInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRedisHotKeysInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRedisHotKeysInvoker) Invoke() (*model.ShowRedisHotKeysResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRedisHotKeysResponse), nil
+	}
+}
+
 type ShowRedisPitrInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1842,6 +1986,22 @@ func (i *SwitchIpGroupInvoker) Invoke() (*model.SwitchIpGroupResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.SwitchIpGroupResponse), nil
+	}
+}
+
+type SwitchOverInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchOverInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SwitchOverInvoker) Invoke() (*model.SwitchOverResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchOverResponse), nil
 	}
 }
 

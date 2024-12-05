@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type UnscopedTokenInfoCatalogEndpoints struct {
+type UnscopedTokenInfoEndpoints struct {
 
 	// 终端节点ID。
 	Id *string `json:"id,omitempty"`
@@ -24,11 +24,11 @@ type UnscopedTokenInfoCatalogEndpoints struct {
 	Url *string `json:"url,omitempty"`
 }
 
-func (o UnscopedTokenInfoCatalogEndpoints) String() string {
+func (o UnscopedTokenInfoEndpoints) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "UnscopedTokenInfoCatalogEndpoints struct{}"
+		return "UnscopedTokenInfoEndpoints struct{}"
 	}
 
-	return strings.Join([]string{"UnscopedTokenInfoCatalogEndpoints", string(data)}, " ")
+	return strings.Join([]string{"UnscopedTokenInfoEndpoints", string(data)}, " ")
 }

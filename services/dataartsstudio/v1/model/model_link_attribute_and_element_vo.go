@@ -12,13 +12,13 @@ import (
 // LinkAttributeAndElementVo 属性ID列表。
 type LinkAttributeAndElementVo struct {
 
-	// 属性ID列表，填写String类型替代Long类型。
+	// 属性ID列表，ID字符串。
 	Ids []string `json:"ids"`
 
-	// 关联的数据标准的ID，填写String类型替代Long类型。
+	// 关联的数据标准的ID，ID字符串。
 	StandRowId string `json:"stand_row_id"`
 
-	// 表ID，填写String类型替代Long类型。
+	// 表ID，ID字符串。
 	TableId string `json:"table_id"`
 
 	// 表类型，默认是TABLE_MODEL。 枚举值：   - TABLE_MODEL: 关系模型（逻辑模型/物理模型）   - AGGREGATION_LOGIC_TABLE: 汇总表   - FACT_LOGIC_TABLE: 事实表   - DIMENSION: 维度   - DIMENSION_LOGIC_TABLE: 维度表

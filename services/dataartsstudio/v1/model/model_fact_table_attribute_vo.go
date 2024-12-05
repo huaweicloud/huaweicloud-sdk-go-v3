@@ -9,16 +9,16 @@ import (
 // FactTableAttributeVo 事实表维度信息。
 type FactTableAttributeVo struct {
 
-	// 编码，填写String类型替代Long类型。
+	// 编码，ID字符串。
 	Id *string `json:"id,omitempty"`
 
-	// 所属事实表ID，只读，填写String类型替代Long类型。
+	// 所属事实表ID，只读，ID字符串。
 	FactLogicTableId *string `json:"fact_logic_table_id,omitempty"`
 
 	// 序号。
 	Ordinal int32 `json:"ordinal"`
 
-	// 维度ID，填写String类型替代Long类型。
+	// 维度ID，ID字符串。
 	DimensionId *string `json:"dimension_id,omitempty"`
 
 	// 维度角色。
@@ -60,7 +60,7 @@ type FactTableAttributeVo struct {
 
 	AttributeType *BizTypeEnum `json:"attribute_type,omitempty"`
 
-	// 关联的数据标准的ID，填写String类型替代Long类型。
+	// 关联的数据标准的ID，ID字符串。
 	StandRowId *string `json:"stand_row_id,omitempty"`
 
 	// 关联的数据标准名称，只读。

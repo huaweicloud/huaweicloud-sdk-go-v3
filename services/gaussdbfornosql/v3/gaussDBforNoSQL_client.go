@@ -61,6 +61,27 @@ func (c *GaussDBforNoSQLClient) ApplyConfigurationToInstancesInvoker(request *mo
 	return &ApplyConfigurationToInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteManualBackup 批量删除手动备份
+//
+// 批量删除数据库实例的手动备份。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) BatchDeleteManualBackup(request *model.BatchDeleteManualBackupRequest) (*model.BatchDeleteManualBackupResponse, error) {
+	requestDef := GenReqDefForBatchDeleteManualBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteManualBackupResponse), nil
+	}
+}
+
+// BatchDeleteManualBackupInvoker 批量删除手动备份
+func (c *GaussDBforNoSQLClient) BatchDeleteManualBackupInvoker(request *model.BatchDeleteManualBackupRequest) *BatchDeleteManualBackupInvoker {
+	requestDef := GenReqDefForBatchDeleteManualBackup()
+	return &BatchDeleteManualBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchTagAction 批量添加或删除资源标签
 //
 // 批量添加或删除指定数据库实例的标签。
@@ -165,6 +186,27 @@ func (c *GaussDBforNoSQLClient) CheckWeekPassword(request *model.CheckWeekPasswo
 func (c *GaussDBforNoSQLClient) CheckWeekPasswordInvoker(request *model.CheckWeekPasswordRequest) *CheckWeekPasswordInvoker {
 	requestDef := GenReqDefForCheckWeekPassword()
 	return &CheckWeekPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ClearInstanceSessions 关闭实例所有节点会话
+//
+// 关闭实例所有节点会话。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ClearInstanceSessions(request *model.ClearInstanceSessionsRequest) (*model.ClearInstanceSessionsResponse, error) {
+	requestDef := GenReqDefForClearInstanceSessions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ClearInstanceSessionsResponse), nil
+	}
+}
+
+// ClearInstanceSessionsInvoker 关闭实例所有节点会话
+func (c *GaussDBforNoSQLClient) ClearInstanceSessionsInvoker(request *model.ClearInstanceSessionsRequest) *ClearInstanceSessionsInvoker {
+	requestDef := GenReqDefForClearInstanceSessions()
+	return &ClearInstanceSessionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CompareConfiguration 参数模板比较
@@ -587,6 +629,27 @@ func (c *GaussDBforNoSQLClient) DeleteLtsConfigsInvoker(request *model.DeleteLts
 	return &DeleteLtsConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteRedisDisabledCommands 删除Redis禁用命令
+//
+// 删除Redis禁用命令。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) DeleteRedisDisabledCommands(request *model.DeleteRedisDisabledCommandsRequest) (*model.DeleteRedisDisabledCommandsResponse, error) {
+	requestDef := GenReqDefForDeleteRedisDisabledCommands()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteRedisDisabledCommandsResponse), nil
+	}
+}
+
+// DeleteRedisDisabledCommandsInvoker 删除Redis禁用命令
+func (c *GaussDBforNoSQLClient) DeleteRedisDisabledCommandsInvoker(request *model.DeleteRedisDisabledCommandsRequest) *DeleteRedisDisabledCommandsInvoker {
+	requestDef := GenReqDefForDeleteRedisDisabledCommands()
+	return &DeleteRedisDisabledCommandsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExpandInstanceNode 扩容指定集群实例的节点数量
 //
 // 扩容指定集群实例的节点数量。
@@ -923,9 +986,9 @@ func (c *GaussDBforNoSQLClient) ListInstanceDatabasesInvoker(request *model.List
 	return &ListInstanceDatabasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListInstanceMaintenanceWindow
+// ListInstanceMaintenanceWindow 查询实例可维护时间段
 //
-// 查询实例可维护时间段
+// 查询实例可维护时间段。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ListInstanceMaintenanceWindow(request *model.ListInstanceMaintenanceWindowRequest) (*model.ListInstanceMaintenanceWindowResponse, error) {
@@ -938,10 +1001,31 @@ func (c *GaussDBforNoSQLClient) ListInstanceMaintenanceWindow(request *model.Lis
 	}
 }
 
-// ListInstanceMaintenanceWindowInvoker
+// ListInstanceMaintenanceWindowInvoker 查询实例可维护时间段
 func (c *GaussDBforNoSQLClient) ListInstanceMaintenanceWindowInvoker(request *model.ListInstanceMaintenanceWindowRequest) *ListInstanceMaintenanceWindowInvoker {
 	requestDef := GenReqDefForListInstanceMaintenanceWindow()
 	return &ListInstanceMaintenanceWindowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstanceSessions 获取实例的会话
+//
+// 获取实例的会话。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListInstanceSessions(request *model.ListInstanceSessionsRequest) (*model.ListInstanceSessionsResponse, error) {
+	requestDef := GenReqDefForListInstanceSessions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceSessionsResponse), nil
+	}
+}
+
+// ListInstanceSessionsInvoker 获取实例的会话
+func (c *GaussDBforNoSQLClient) ListInstanceSessionsInvoker(request *model.ListInstanceSessionsRequest) *ListInstanceSessionsInvoker {
+	requestDef := GenReqDefForListInstanceSessions()
+	return &ListInstanceSessionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListInstanceTags 查询资源标签
@@ -1385,7 +1469,7 @@ func (c *GaussDBforNoSQLClient) ModifyEpsQuotasInvoker(request *model.ModifyEpsQ
 	return &ModifyEpsQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ModifyInstanceMaintenanceWindow 查询实例可维护时间段
+// ModifyInstanceMaintenanceWindow 设置实例可维护时间段
 //
 // 设置指定实例可维护时间段。
 //
@@ -1400,7 +1484,7 @@ func (c *GaussDBforNoSQLClient) ModifyInstanceMaintenanceWindow(request *model.M
 	}
 }
 
-// ModifyInstanceMaintenanceWindowInvoker 查询实例可维护时间段
+// ModifyInstanceMaintenanceWindowInvoker 设置实例可维护时间段
 func (c *GaussDBforNoSQLClient) ModifyInstanceMaintenanceWindowInvoker(request *model.ModifyInstanceMaintenanceWindowRequest) *ModifyInstanceMaintenanceWindowInvoker {
 	requestDef := GenReqDefForModifyInstanceMaintenanceWindow()
 	return &ModifyInstanceMaintenanceWindowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1725,6 +1809,27 @@ func (c *GaussDBforNoSQLClient) SaveLtsConfigsInvoker(request *model.SaveLtsConf
 	return &SaveLtsConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SaveRedisDisabledCommands 设置Redis禁用命令
+//
+// 设置Redis禁用命令。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) SaveRedisDisabledCommands(request *model.SaveRedisDisabledCommandsRequest) (*model.SaveRedisDisabledCommandsResponse, error) {
+	requestDef := GenReqDefForSaveRedisDisabledCommands()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SaveRedisDisabledCommandsResponse), nil
+	}
+}
+
+// SaveRedisDisabledCommandsInvoker 设置Redis禁用命令
+func (c *GaussDBforNoSQLClient) SaveRedisDisabledCommandsInvoker(request *model.SaveRedisDisabledCommandsRequest) *SaveRedisDisabledCommandsInvoker {
+	requestDef := GenReqDefForSaveRedisDisabledCommands()
+	return &SaveRedisDisabledCommandsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetAutoEnlargePolicy 设置磁盘自动扩容策略
 //
 // 设置磁盘自动扩容策略。
@@ -1765,6 +1870,27 @@ func (c *GaussDBforNoSQLClient) SetBackupPolicy(request *model.SetBackupPolicyRe
 func (c *GaussDBforNoSQLClient) SetBackupPolicyInvoker(request *model.SetBackupPolicyRequest) *SetBackupPolicyInvoker {
 	requestDef := GenReqDefForSetBackupPolicy()
 	return &SetBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetDisasterRecoverySettings 设置实例容灾切换的故障节点比例
+//
+// 设置实例容灾切换的故障节点比例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) SetDisasterRecoverySettings(request *model.SetDisasterRecoverySettingsRequest) (*model.SetDisasterRecoverySettingsResponse, error) {
+	requestDef := GenReqDefForSetDisasterRecoverySettings()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetDisasterRecoverySettingsResponse), nil
+	}
+}
+
+// SetDisasterRecoverySettingsInvoker 设置实例容灾切换的故障节点比例
+func (c *GaussDBforNoSQLClient) SetDisasterRecoverySettingsInvoker(request *model.SetDisasterRecoverySettingsRequest) *SetDisasterRecoverySettingsInvoker {
+	requestDef := GenReqDefForSetDisasterRecoverySettings()
+	return &SetDisasterRecoverySettingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SetInstanceDataDump 开启/关闭实例数据导出
@@ -1995,6 +2121,27 @@ func (c *GaussDBforNoSQLClient) ShowConfigurationDetail(request *model.ShowConfi
 func (c *GaussDBforNoSQLClient) ShowConfigurationDetailInvoker(request *model.ShowConfigurationDetailRequest) *ShowConfigurationDetailInvoker {
 	requestDef := GenReqDefForShowConfigurationDetail()
 	return &ShowConfigurationDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDisasterRecoverySettings 查询实例容灾切换的故障节点比例
+//
+// 查询实例容灾切换的故障节点比例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowDisasterRecoverySettings(request *model.ShowDisasterRecoverySettingsRequest) (*model.ShowDisasterRecoverySettingsResponse, error) {
+	requestDef := GenReqDefForShowDisasterRecoverySettings()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDisasterRecoverySettingsResponse), nil
+	}
+}
+
+// ShowDisasterRecoverySettingsInvoker 查询实例容灾切换的故障节点比例
+func (c *GaussDBforNoSQLClient) ShowDisasterRecoverySettingsInvoker(request *model.ShowDisasterRecoverySettingsRequest) *ShowDisasterRecoverySettingsInvoker {
+	requestDef := GenReqDefForShowDisasterRecoverySettings()
+	return &ShowDisasterRecoverySettingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowElbIpGroup 查询实例负载均衡的IP访问黑白名单
@@ -2270,6 +2417,48 @@ func (c *GaussDBforNoSQLClient) ShowRedisBigKeysInvoker(request *model.ShowRedis
 	return &ShowRedisBigKeysInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowRedisDisabledCommands 查询Redis禁用命令
+//
+// 查询Redis禁用命令。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowRedisDisabledCommands(request *model.ShowRedisDisabledCommandsRequest) (*model.ShowRedisDisabledCommandsResponse, error) {
+	requestDef := GenReqDefForShowRedisDisabledCommands()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRedisDisabledCommandsResponse), nil
+	}
+}
+
+// ShowRedisDisabledCommandsInvoker 查询Redis禁用命令
+func (c *GaussDBforNoSQLClient) ShowRedisDisabledCommandsInvoker(request *model.ShowRedisDisabledCommandsRequest) *ShowRedisDisabledCommandsInvoker {
+	requestDef := GenReqDefForShowRedisDisabledCommands()
+	return &ShowRedisDisabledCommandsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRedisHotKeys 查询Redis实例的热key
+//
+// 支持查询Redis实例的热key。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowRedisHotKeys(request *model.ShowRedisHotKeysRequest) (*model.ShowRedisHotKeysResponse, error) {
+	requestDef := GenReqDefForShowRedisHotKeys()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRedisHotKeysResponse), nil
+	}
+}
+
+// ShowRedisHotKeysInvoker 查询Redis实例的热key
+func (c *GaussDBforNoSQLClient) ShowRedisHotKeysInvoker(request *model.ShowRedisHotKeysRequest) *ShowRedisHotKeysInvoker {
+	requestDef := GenReqDefForShowRedisHotKeys()
+	return &ShowRedisHotKeysInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowRedisPitrInfo 查询Redis实例指定时间点恢复所占用的存储空间
 //
 // 查询Redis实例指定时间点恢复所占用的存储空间。
@@ -2436,6 +2625,27 @@ func (c *GaussDBforNoSQLClient) SwitchIpGroup(request *model.SwitchIpGroupReques
 func (c *GaussDBforNoSQLClient) SwitchIpGroupInvoker(request *model.SwitchIpGroupRequest) *SwitchIpGroupInvoker {
 	requestDef := GenReqDefForSwitchIpGroup()
 	return &SwitchIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchOver Redis主备切换
+//
+// 切换实例下的主备节点
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) SwitchOver(request *model.SwitchOverRequest) (*model.SwitchOverResponse, error) {
+	requestDef := GenReqDefForSwitchOver()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchOverResponse), nil
+	}
+}
+
+// SwitchOverInvoker Redis主备切换
+func (c *GaussDBforNoSQLClient) SwitchOverInvoker(request *model.SwitchOverRequest) *SwitchOverInvoker {
+	requestDef := GenReqDefForSwitchOver()
+	return &SwitchOverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SwitchSecondLevelMonitoring 开启/关闭秒级监控

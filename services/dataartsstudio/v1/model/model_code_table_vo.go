@@ -10,7 +10,7 @@ import (
 // CodeTableVo 码表结构。
 type CodeTableVo struct {
 
-	// 码表ID，填写String类型替代Long类型。
+	// 码表ID，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	// 表名称，英文名。
@@ -22,7 +22,7 @@ type CodeTableVo struct {
 	// 表版本。
 	TbVersion *int32 `json:"tb_version,omitempty"`
 
-	// 目录ID，填写String类型替代Long类型。
+	// 目录ID，ID字符串。
 	DirectoryId string `json:"directory_id"`
 
 	// 目录树。

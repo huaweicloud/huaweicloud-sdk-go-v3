@@ -10,7 +10,7 @@ import (
 
 type CompoundMetricVo struct {
 
-	// 编码，填写String类型替代Long类型。
+	// 编码，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	// 字段名。
@@ -32,40 +32,40 @@ type CompoundMetricVo struct {
 	GroupCode *string `json:"group_code,omitempty"`
 
 	// 复合指标类型。 枚举值：   - EXPRESSION: 表达式   - PERIODICITY_VALUED_COMPARISON: 环比   - INTERVAL_VALUED_COMPARISON: 同比
-	CompoundType *CompoundMetricVoCompoundType `json:"compound_type,omitempty"`
+	CompoundType CompoundMetricVoCompoundType `json:"compound_type"`
 
 	// 比较类型。 枚举值：   - YEAR_TO_YEAR: 年同比   - MONTH_TO_MONTH: 月同比   - WEEK_TO_WEEK: 周同比
 	ComparisonType *CompoundMetricVoComparisonType `json:"comparison_type,omitempty"`
 
-	// 指标信息，填写String类型替代Long类型。
-	MetricIds []string `json:"metric_ids"`
+	// 指标信息，ID字符串。
+	MetricIds *[]string `json:"metric_ids,omitempty"`
 
 	// 指标名称信息。
 	MetricNames *[]string `json:"metric_names,omitempty"`
 
-	// 复合指标信息，填写String类型替代Long类型。
+	// 复合指标信息，ID字符串。
 	CompoundMetricIds *[]string `json:"compound_metric_ids,omitempty"`
 
 	// 复合指标名称信息
 	CompoundMetricNames *[]string `json:"compound_metric_names,omitempty"`
 
-	// 引用函数ID，填写String类型替代Long类型。
+	// 引用函数ID，ID字符串。
 	CalFnIds *[]string `json:"cal_fn_ids,omitempty"`
 
 	// 计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
-	CalExp string `json:"cal_exp"`
+	CalExp *string `json:"cal_exp,omitempty"`
 
-	// 主题域分组ID，只读，填写String类型替代Long类型。
+	// 主题域分组ID，只读，ID字符串。
 	L1Id *string `json:"l1_id,omitempty"`
 
 	// 主题域ID，只读，创建和更新时无需填写。
 	L2Id *string `json:"l2_id,omitempty"`
 
-	// 业务对象ID，填写String类型替代Long类型。
-	L3Id *string `json:"l3_id,omitempty"`
+	// 业务对象ID，ID字符串。
+	L3Id string `json:"l3_id"`
 
 	// 字段类型。
-	DataType *string `json:"data_type,omitempty"`
+	DataType string `json:"data_type"`
 
 	// 创建人。
 	CreateBy *string `json:"create_by,omitempty"`
@@ -96,7 +96,7 @@ type CompoundMetricVo struct {
 	// 业务对象中文名，只读，创建和更新时无需填写。
 	L3 *string `json:"l3,omitempty"`
 
-	// 汇总表ID，只读，填写String类型替代Long类型。
+	// 汇总表ID，只读，ID字符串。
 	SummaryTableId *string `json:"summary_table_id,omitempty"`
 }
 

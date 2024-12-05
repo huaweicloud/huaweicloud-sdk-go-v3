@@ -11,10 +11,10 @@ import (
 
 type MappingSourceTableVo struct {
 
-	// 表1ID，填写String类型替代Long类型。
+	// 表1ID，ID字符串。
 	Table1Id string `json:"table1_id"`
 
-	// 表2ID，填写String类型替代Long类型。
+	// 表2ID，ID字符串。
 	Table2Id *string `json:"table2_id,omitempty"`
 
 	// 表1名称。

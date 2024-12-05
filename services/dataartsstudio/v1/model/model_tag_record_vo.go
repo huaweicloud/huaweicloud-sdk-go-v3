@@ -9,16 +9,16 @@ import (
 
 type TagRecordVo struct {
 
-	// 编码，填写String类型替代Long类型。
+	// 编码，ID字符串。
 	Id *string `json:"id,omitempty"`
 
-	// 标签ID，填写String类型替代Long类型。
+	// 标签ID，ID字符串。
 	TagId string `json:"tag_id"`
 
 	// 标签名称。
 	TagName *string `json:"tag_name,omitempty"`
 
-	// 实体ID，填写String类型替代Long类型。
+	// 实体ID，ID字符串。
 	BizId string `json:"biz_id"`
 
 	BizType *BizTypeEnum `json:"biz_type"`

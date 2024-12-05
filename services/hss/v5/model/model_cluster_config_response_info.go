@@ -26,25 +26,19 @@ type ClusterConfigResponseInfo struct {
 	// 集群名称
 	ClusterName *string `json:"cluster_name,omitempty"`
 
-	// 付费模式 | on_demand 按需 free 免费
+	// 付费模式：   on_demand 按需   free 免费
 	ChargingMode *string `json:"charging_mode,omitempty"`
-
-	// 开启agent自动升级
-	AutoUpgrade *bool `json:"auto_upgrade,omitempty"`
 
 	// 优先使用包周期配额；默认0
 	PreferPacketCycle *int32 `json:"prefer_packet_cycle,omitempty"`
 
-	// vpc id
-	VpcId *string `json:"vpc_id,omitempty"`
-
-	// cce protection type
+	// cce集群防护类型
 	ProtectType *string `json:"protect_type,omitempty"`
 
-	// protection status
+	// 防护状态：   protecting 防护中   part_protect  部分防护   creating 开启中   error_protect 防护异常   unprotect 未防护   wait_protect 待防护
 	ProtectStatus *string `json:"protect_status,omitempty"`
 
-	// cluster type
+	// 集群类型
 	ClusterType *string `json:"cluster_type,omitempty"`
 
 	// fail reason

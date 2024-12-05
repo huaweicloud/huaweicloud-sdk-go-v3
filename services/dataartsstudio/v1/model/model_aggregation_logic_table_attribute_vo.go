@@ -9,10 +9,10 @@ import (
 // AggregationLogicTableAttributeVo 汇总表属性。
 type AggregationLogicTableAttributeVo struct {
 
-	// 编码，填写String类型替代Long类型。
+	// 编码，ID字符串。
 	Id *string `json:"id,omitempty"`
 
-	// 所属汇总表ID，填写String类型替代Long类型。
+	// 所属汇总表ID，ID字符串。
 	AggregationLogicTableId *string `json:"aggregation_logic_table_id,omitempty"`
 
 	// 序号。
@@ -58,7 +58,7 @@ type AggregationLogicTableAttributeVo struct {
 	// 属性关联对象的英文名
 	RefNameEn *string `json:"ref_name_en,omitempty"`
 
-	// 关联的数据标准的ID，填写String类型替代Long类型。
+	// 关联的数据标准的ID，ID字符串。
 	StandRowId *string `json:"stand_row_id,omitempty"`
 
 	// 关联的数据标准名称，只读。

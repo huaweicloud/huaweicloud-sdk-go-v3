@@ -9,13 +9,13 @@ import (
 // HierarchiesAttrVo 层级属性。
 type HierarchiesAttrVo struct {
 
-	// 编码，填写String类型替代Long类型。
+	// 编码，ID字符串。
 	Id *string `json:"id,omitempty"`
 
-	// 层级ID，填写String类型替代Long类型。
+	// 层级ID，ID字符串。
 	HierarchiesId *string `json:"hierarchies_id,omitempty"`
 
-	// 属性ID，填写String类型替代Long类型。
+	// 属性ID，ID字符串。
 	AttrId *string `json:"attr_id,omitempty"`
 
 	// 层次。
@@ -27,7 +27,7 @@ type HierarchiesAttrVo struct {
 	// 引用属性名称，只读。
 	AttrNameCh *string `json:"attr_name_ch,omitempty"`
 
-	// 详情属性ID，填写String类型替代Long类型。
+	// 详情属性ID，ID字符串。
 	DetailAttrIds *[]string `json:"detail_attr_ids,omitempty"`
 
 	// 详情属性英文。

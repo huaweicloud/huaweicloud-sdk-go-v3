@@ -8,10 +8,10 @@ import (
 
 type StatisticStandardCoverageVo struct {
 
-	// 字段总数，填写String类型替代Long类型。
+	// 字段总数，ID字符串。
 	AllColNum *string `json:"all_col_num,omitempty"`
 
-	// 关联标准字段数，填写String类型替代Long类型。
+	// 关联标准字段数，ID字符串。
 	ColNum *string `json:"col_num,omitempty"`
 
 	// 标准覆盖率。

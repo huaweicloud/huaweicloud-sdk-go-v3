@@ -15,6 +15,9 @@ type ListAlarmHistoriesRequest struct {
 	// 告警ID,以al开头，后跟22位由字母或数字组成的字符串
 	AlarmId *string `json:"alarm_id,omitempty"`
 
+	// 告警记录ID,以ah开头，后跟22位由字母或数字组成的字符串
+	RecordId *string `json:"record_id,omitempty"`
+
 	// 告警规则名称
 	Name *string `json:"name,omitempty"`
 

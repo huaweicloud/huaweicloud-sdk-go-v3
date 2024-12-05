@@ -1889,9 +1889,9 @@ func (c *CceClient) UpgradeClusterInvoker(request *model.UpgradeClusterRequest) 
 	return &UpgradeClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpgradeNodePool 节点池升级
+// UpgradeNodePool 同步节点池
 //
-// 该API用于节点池升级。
+// 该API用于同步节点池中已有节点的配置
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CceClient) UpgradeNodePool(request *model.UpgradeNodePoolRequest) (*model.UpgradeNodePoolResponse, error) {
@@ -1904,7 +1904,7 @@ func (c *CceClient) UpgradeNodePool(request *model.UpgradeNodePoolRequest) (*mod
 	}
 }
 
-// UpgradeNodePoolInvoker 节点池升级
+// UpgradeNodePoolInvoker 同步节点池
 func (c *CceClient) UpgradeNodePoolInvoker(request *model.UpgradeNodePoolRequest) *UpgradeNodePoolInvoker {
 	requestDef := GenReqDefForUpgradeNodePool()
 	return &UpgradeNodePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

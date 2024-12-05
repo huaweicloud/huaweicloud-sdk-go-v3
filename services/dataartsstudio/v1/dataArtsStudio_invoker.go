@@ -133,6 +133,54 @@ func (i *BatchAssociateSecurityLevelToEntitiesInvoker) Invoke() (*model.BatchAss
 	}
 }
 
+type BatchCreateDesignTableModelsFromLogicInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateDesignTableModelsFromLogicInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateDesignTableModelsFromLogicInvoker) Invoke() (*model.BatchCreateDesignTableModelsFromLogicResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateDesignTableModelsFromLogicResponse), nil
+	}
+}
+
+type BatchCreateSecurityPermissionSetMembersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateSecurityPermissionSetMembersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateSecurityPermissionSetMembersInvoker) Invoke() (*model.BatchCreateSecurityPermissionSetMembersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateSecurityPermissionSetMembersResponse), nil
+	}
+}
+
+type BatchCreateSecurityPermissionSetPermissionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateSecurityPermissionSetPermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateSecurityPermissionSetPermissionsInvoker) Invoke() (*model.BatchCreateSecurityPermissionSetPermissionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateSecurityPermissionSetPermissionsResponse), nil
+	}
+}
+
 type BatchDeleteSecurityDataClassificationRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -405,6 +453,22 @@ func (i *CheckFactLogicTableStatusInvoker) Invoke() (*model.CheckFactLogicTableS
 	}
 }
 
+type CompareDesignVersionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CompareDesignVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CompareDesignVersionsInvoker) Invoke() (*model.CompareDesignVersionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CompareDesignVersionsResponse), nil
+	}
+}
+
 type ConfirmApprovalsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -626,6 +690,54 @@ func (i *CreateDesignAtomicIndexInvoker) Invoke() (*model.CreateDesignAtomicInde
 		return nil, err
 	} else {
 		return result.(*model.CreateDesignAtomicIndexResponse), nil
+	}
+}
+
+type CreateDesignCompoundMetricInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDesignCompoundMetricInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDesignCompoundMetricInvoker) Invoke() (*model.CreateDesignCompoundMetricResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDesignCompoundMetricResponse), nil
+	}
+}
+
+type CreateDesignDerivativeIndexInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDesignDerivativeIndexInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDesignDerivativeIndexInvoker) Invoke() (*model.CreateDesignDerivativeIndexResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDesignDerivativeIndexResponse), nil
+	}
+}
+
+type CreateDesignDimensionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDesignDimensionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDesignDimensionInvoker) Invoke() (*model.CreateDesignDimensionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDesignDimensionResponse), nil
 	}
 }
 
@@ -1202,6 +1314,86 @@ func (i *DeleteDesignAtomicIndexInvoker) Invoke() (*model.DeleteDesignAtomicInde
 		return nil, err
 	} else {
 		return result.(*model.DeleteDesignAtomicIndexResponse), nil
+	}
+}
+
+type DeleteDesignCompoundMetricInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDesignCompoundMetricInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDesignCompoundMetricInvoker) Invoke() (*model.DeleteDesignCompoundMetricResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDesignCompoundMetricResponse), nil
+	}
+}
+
+type DeleteDesignDerivativeIndexInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDesignDerivativeIndexInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDesignDerivativeIndexInvoker) Invoke() (*model.DeleteDesignDerivativeIndexResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDesignDerivativeIndexResponse), nil
+	}
+}
+
+type DeleteDesignDimensionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDesignDimensionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDesignDimensionInvoker) Invoke() (*model.DeleteDesignDimensionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDesignDimensionResponse), nil
+	}
+}
+
+type DeleteDesignDimensionLogicTableInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDesignDimensionLogicTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDesignDimensionLogicTableInvoker) Invoke() (*model.DeleteDesignDimensionLogicTableResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDesignDimensionLogicTableResponse), nil
+	}
+}
+
+type DeleteDesignFactLogicTableInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDesignFactLogicTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDesignFactLogicTableInvoker) Invoke() (*model.DeleteDesignFactLogicTableResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDesignFactLogicTableResponse), nil
 	}
 }
 
@@ -3685,6 +3877,22 @@ func (i *ShowDerivativeIndexByIdInvoker) Invoke() (*model.ShowDerivativeIndexByI
 	}
 }
 
+type ShowDesignOperationResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDesignOperationResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDesignOperationResultInvoker) Invoke() (*model.ShowDesignOperationResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDesignOperationResultResponse), nil
+	}
+}
+
 type ShowDimensionByIdInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4450,6 +4658,54 @@ func (i *UpdateDesignAtomicIndexInvoker) Invoke() (*model.UpdateDesignAtomicInde
 		return nil, err
 	} else {
 		return result.(*model.UpdateDesignAtomicIndexResponse), nil
+	}
+}
+
+type UpdateDesignCompoundMetricInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDesignCompoundMetricInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDesignCompoundMetricInvoker) Invoke() (*model.UpdateDesignCompoundMetricResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDesignCompoundMetricResponse), nil
+	}
+}
+
+type UpdateDesignDerivativeIndexInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDesignDerivativeIndexInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDesignDerivativeIndexInvoker) Invoke() (*model.UpdateDesignDerivativeIndexResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDesignDerivativeIndexResponse), nil
+	}
+}
+
+type UpdateDesignDimensionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDesignDimensionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDesignDimensionInvoker) Invoke() (*model.UpdateDesignDimensionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDesignDimensionResponse), nil
 	}
 }
 

@@ -11,7 +11,7 @@ import (
 // AggregationLogicTableVo 汇总表值对象（VO）。
 type AggregationLogicTableVo struct {
 
-	// 汇总表的唯一系统ID，更新时必填，创建时不须填写，填写String类型替代Long类型。
+	// 汇总表的唯一系统ID，更新时必填，创建时不须填写，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	// 汇总表英文名称，对应实际的物理表名。
@@ -20,13 +20,13 @@ type AggregationLogicTableVo struct {
 	// 汇总表的中文名，用于展示使用。
 	TbLogicName string `json:"tb_logic_name"`
 
-	// 主题域分组ID，只读，创建和更新时无需填写，填写String类型替代Long类型。
+	// 主题域分组ID，只读，创建和更新时无需填写，ID字符串。
 	L1Id *string `json:"l1_id,omitempty"`
 
 	// 主题域ID，只读，创建和更新时无需填写。
 	L2Id *string `json:"l2_id,omitempty"`
 
-	// 汇总表所属主题的ID，必填，填写String类型替代Long类型。
+	// 汇总表所属主题的ID，必填，ID字符串。
 	L3Id string `json:"l3_id"`
 
 	// 汇总表描述信息。
@@ -143,7 +143,7 @@ type AggregationLogicTableVo struct {
 	// DLF作业ID。
 	DlfTaskId *string `json:"dlf_task_id,omitempty"`
 
-	// 质量ID，填写String类型替代Long类型。
+	// 质量ID，ID字符串。
 	QualityId *string `json:"quality_id,omitempty"`
 
 	// 是否是逆向的，只读。
@@ -182,10 +182,10 @@ type AggregationLogicTableVo struct {
 	// 汇总表绑定的SQL。
 	Sql *string `json:"sql,omitempty"`
 
-	// 开发环境版本，填写String类型替代Long类型。
+	// 开发环境版本，ID字符串。
 	DevVersion *string `json:"dev_version,omitempty"`
 
-	// 生产环境版本，填写String类型替代Long类型。
+	// 生产环境版本，ID字符串。
 	ProdVersion *string `json:"prod_version,omitempty"`
 
 	// 开发环境版本名称

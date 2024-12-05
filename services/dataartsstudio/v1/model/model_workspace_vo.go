@@ -10,7 +10,7 @@ import (
 
 type WorkspaceVo struct {
 
-	// 编号，填写String类型替代Long类型。
+	// 编号，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	// 工作区名字。

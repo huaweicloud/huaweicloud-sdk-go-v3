@@ -10,7 +10,7 @@ import (
 // AllTableVo 总览表。
 type AllTableVo struct {
 
-	// l1的ID，填写String类型替代Long类型。
+	// l1的ID，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	// l1名称。
@@ -86,13 +86,13 @@ type AllTableVo struct {
 	// 业务对象中文名，只读，创建和更新时无需填写。
 	L3 *string `json:"l3,omitempty"`
 
-	// 主题域分组ID，只读，填写String类型替代Long类型。
+	// 主题域分组ID，只读，ID字符串。
 	L1Id *string `json:"l1_id,omitempty"`
 
 	// 主题域ID，只读，创建和更新时无需填写。
 	L2Id *string `json:"l2_id,omitempty"`
 
-	// 业务对象ID，只读，填写String类型替代Long类型。
+	// 业务对象ID，只读，ID字符串。
 	L3Id *string `json:"l3_id,omitempty"`
 
 	NewBiz *BizVersionManageVo `json:"new_biz,omitempty"`
@@ -117,7 +117,7 @@ type AllTableVo struct {
 
 	SummaryStatus *SyncStatusEnum `json:"summary_status,omitempty"`
 
-	// 标准数量，只读，填写String类型替代Long类型。
+	// 标准数量，只读，ID字符串。
 	StandardCount *string `json:"standard_count,omitempty"`
 
 	// 别名。
@@ -132,10 +132,10 @@ type AllTableVo struct {
 	// 工作空间名称。
 	WorkspaceName *string `json:"workspace_name,omitempty"`
 
-	// 开发环境版本，填写String类型替代Long类型。
+	// 开发环境版本，ID字符串。
 	DevVersion *string `json:"dev_version,omitempty"`
 
-	// 生产环境版本，填写String类型替代Long类型。
+	// 生产环境版本，ID字符串。
 	ProdVersion *string `json:"prod_version,omitempty"`
 
 	// 开发环境版本名称

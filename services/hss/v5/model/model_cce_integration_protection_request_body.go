@@ -11,7 +11,7 @@ import (
 
 type CceIntegrationProtectionRequestBody struct {
 
-	// cce集群类型 | existing 存量集群 adding 新增集群
+	// cce集群类型：   existing 存量集群   adding 新增集群
 	ClusterType *CceIntegrationProtectionRequestBodyClusterType `json:"cluster_type,omitempty"`
 
 	// 集群id
@@ -20,10 +20,10 @@ type CceIntegrationProtectionRequestBody struct {
 	// 集群名称
 	ClusterName string `json:"cluster_name"`
 
-	// 付费模式 | on_demand 按需 free_security_check 免费安全体检
+	// 付费模式：   on_demand 按需   free_security_check 免费安全体检
 	ChargingMode *CceIntegrationProtectionRequestBodyChargingMode `json:"charging_mode,omitempty"`
 
-	// cce防护类型 | cluster_level 集群级别防护 node_level 节点级别防护
+	// cce防护类型：   cluster_level 集群级别防护   node_level 节点级别防护
 	CceProtectionType *CceIntegrationProtectionRequestBodyCceProtectionType `json:"cce_protection_type,omitempty"`
 
 	// 优先使用包周期配额；默认false

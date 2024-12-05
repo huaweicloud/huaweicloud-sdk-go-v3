@@ -1355,10 +1355,6 @@ func GenReqDefForDeleteTemplate() *def.HttpRequestDef {
 		WithJsonTag("Client-Request-Id").
 		WithLocationType(def.Header))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1388,10 +1384,6 @@ func GenReqDefForDeleteTemplateVersion() *def.HttpRequestDef {
 		WithName("ClientRequestId").
 		WithJsonTag("Client-Request-Id").
 		WithLocationType(def.Header))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1500,10 +1492,6 @@ func GenReqDefForShowTemplateVersionContent() *def.HttpRequestDef {
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Location").
 		WithJsonTag("Location").
 		WithKindName("string").
@@ -1561,10 +1549,6 @@ func GenReqDefForUpdateTemplateMetadata() *def.HttpRequestDef {
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 

@@ -663,6 +663,10 @@ func GenReqDefForListSimDeviceMultiply() *def.HttpRequestDef {
 		WithJsonTag("sim_card_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OrderId").
+		WithJsonTag("order_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Version").
 		WithJsonTag("version").
 		WithLocationType(def.Query))

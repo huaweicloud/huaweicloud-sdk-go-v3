@@ -10,12 +10,12 @@ import (
 // BizVersionManageVo 业务版本管理，只读。
 type BizVersionManageVo struct {
 
-	// ID信息，填写String类型替代Long类型。
+	// ID信息，ID字符串。
 	Id *string `json:"id,omitempty"`
 
 	BizType *BizTypeEnum `json:"biz_type,omitempty"`
 
-	// 业务ID，填写String类型替代Long类型。
+	// 业务ID，ID字符串。
 	BizId *string `json:"biz_id,omitempty"`
 
 	// 业务对象信息。

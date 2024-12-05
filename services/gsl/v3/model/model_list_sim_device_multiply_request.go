@@ -18,6 +18,9 @@ type ListSimDeviceMultiplyRequest struct {
 	// sim卡id
 	SimCardId *int64 `json:"sim_card_id,omitempty"`
 
+	// 批次号
+	OrderId *int64 `json:"order_id,omitempty"`
+
 	// 三网卡版本信息
 	Version *int32 `json:"version,omitempty"`
 

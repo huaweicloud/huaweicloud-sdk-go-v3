@@ -47,6 +47,9 @@ type CreateInstanceRequestBody struct {
 
 	// 是否开启反亲和。仅资源租户独享实例支持该特性。
 	AntiAffinity *bool `json:"anti_affinity,omitempty"`
+
+	// TMS标签信息
+	Tags *[]TmsResourceTag `json:"tags,omitempty"`
 }
 
 func (o CreateInstanceRequestBody) String() string {

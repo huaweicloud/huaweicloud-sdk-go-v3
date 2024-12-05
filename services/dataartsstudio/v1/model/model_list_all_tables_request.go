@@ -51,7 +51,7 @@ type ListAllTablesRequest struct {
 	// 查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 所属主题的ID列表，填写String类型替代Long类型。
+	// 所属主题的ID列表，ID字符串。
 	BizCatalogIdList *[]string `json:"biz_catalog_id_list,omitempty"`
 
 	// 查询的表类型，必填。 枚举值：   - TABLE_MODEL_LOGIC: 逻辑实体   - TABLE_MODEL: 物理表   - DIMENSION_LOGIC_TABLE: 维度表   - FACT_LOGIC_TABLE: 事实表   - AGGREGATION_LOGIC_TABLE: 汇总表

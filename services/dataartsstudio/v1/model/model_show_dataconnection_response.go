@@ -42,6 +42,9 @@ type ShowDataconnectionResponse struct {
 	// 数据连接类别
 	DwCatagory *string `json:"dw_catagory,omitempty"`
 
+	// 连接描述信息
+	Description *string `json:"description,omitempty"`
+
 	// 0：创建 1：更新。默认为0
 	UpdateType     *int32 `json:"update_type,omitempty"`
 	HttpStatusCode int    `json:"-"`

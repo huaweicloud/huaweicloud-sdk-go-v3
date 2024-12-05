@@ -11,7 +11,12 @@ import (
 
 // ShowScriptResponse Response Object
 type ShowScriptResponse struct {
+
+	// 脚本名称。
 	Name *string `json:"name,omitempty"`
+
+	// 脚本ID
+	Id *string `json:"id,omitempty"`
 
 	// 脚本类型： - FlinkSQL - DLISQL - SparkSQL - HiveSQL - DWSSQL - RDSSQL - Shell - PRESTO - ClickHouseSQL - HetuEngineSQL - PYTHON - ImpalaSQL - SparkPython
 	Type *ShowScriptResponseType `json:"type,omitempty"`
