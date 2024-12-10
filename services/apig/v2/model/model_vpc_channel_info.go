@@ -22,8 +22,11 @@ type VpcChannelInfo struct {
 	// VPC通道的成员类型。 - ip - ecs
 	MemberType VpcChannelInfoMemberType `json:"member_type"`
 
-	// vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型
+	// vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型  当vpc_channel_type字段为空时，负载通道类型由type字段控制： 当type不为3或microservice_info为空，VCP通道类型默认为服务器类型。 当type=3，microservice_info不为空，VPC通道类型为微服务类型。  修改负载通道时vpc通道类型不会修改，直接使用原有的vpc通道类型。  此字段待废弃，请使用vpc_channel_type字段指定负载通道类型。
 	Type *int32 `json:"type,omitempty"`
+
+	// vpc通道类型。 - builtin：服务器类型 - microservice： 微服务类型 - reference：引用负载通道类型  当vpc_channel_type为空时，负载通道类型取决于type字段的取值。 当vpc_channel_type不为空，但type字段非空或不为0时，当vpc_channel_type的指定类型与type字段指定的类型冲突时会校验报错。 当vpc_channel_type不为空，且type字段为空或等于0时，直接使用vpc_channel_type字段的值指定负载通道类型。  修改负载通道时vpc通道类型不会修改，直接使用原有的vpc通道类型。
+	VpcChannelType *VpcChannelInfoVpcChannelType `json:"vpc_channel_type,omitempty"`
 
 	// VPC通道的字典编码  支持英文，数字，特殊字符（-_.）  暂不支持
 	DictCode *string `json:"dict_code,omitempty"`
@@ -133,6 +136,57 @@ func (c VpcChannelInfoMemberType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *VpcChannelInfoMemberType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type VpcChannelInfoVpcChannelType struct {
+	value string
+}
+
+type VpcChannelInfoVpcChannelTypeEnum struct {
+	BUILTIN      VpcChannelInfoVpcChannelType
+	MICROSERVICE VpcChannelInfoVpcChannelType
+	REFERENCE    VpcChannelInfoVpcChannelType
+}
+
+func GetVpcChannelInfoVpcChannelTypeEnum() VpcChannelInfoVpcChannelTypeEnum {
+	return VpcChannelInfoVpcChannelTypeEnum{
+		BUILTIN: VpcChannelInfoVpcChannelType{
+			value: "builtin",
+		},
+		MICROSERVICE: VpcChannelInfoVpcChannelType{
+			value: "microservice",
+		},
+		REFERENCE: VpcChannelInfoVpcChannelType{
+			value: "reference",
+		},
+	}
+}
+
+func (c VpcChannelInfoVpcChannelType) Value() string {
+	return c.value
+}
+
+func (c VpcChannelInfoVpcChannelType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *VpcChannelInfoVpcChannelType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

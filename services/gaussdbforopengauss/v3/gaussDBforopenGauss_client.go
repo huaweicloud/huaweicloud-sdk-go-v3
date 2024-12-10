@@ -838,6 +838,27 @@ func (c *GaussDBforopenGaussClient) ListEpsQuotasInvoker(request *model.ListEpsQ
 	return &ListEpsQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListFeatures 查询实例特性列表
+//
+// 查询当前实例高级特性列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListFeatures(request *model.ListFeaturesRequest) (*model.ListFeaturesResponse, error) {
+	requestDef := GenReqDefForListFeatures()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFeaturesResponse), nil
+	}
+}
+
+// ListFeaturesInvoker 查询实例特性列表
+func (c *GaussDBforopenGaussClient) ListFeaturesInvoker(request *model.ListFeaturesRequest) *ListFeaturesInvoker {
+	requestDef := GenReqDefForListFeatures()
+	return &ListFeaturesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListFlavors 查询数据库规格
 //
 // 查询数据库的规格信息。
@@ -2011,6 +2032,27 @@ func (c *GaussDBforopenGaussClient) SwitchShard(request *model.SwitchShardReques
 func (c *GaussDBforopenGaussClient) SwitchShardInvoker(request *model.SwitchShardRequest) *SwitchShardInvoker {
 	requestDef := GenReqDefForSwitchShard()
 	return &SwitchShardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateFeatures 开启特性
+//
+// 打开高级特性开关。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) UpdateFeatures(request *model.UpdateFeaturesRequest) (*model.UpdateFeaturesResponse, error) {
+	requestDef := GenReqDefForUpdateFeatures()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateFeaturesResponse), nil
+	}
+}
+
+// UpdateFeaturesInvoker 开启特性
+func (c *GaussDBforopenGaussClient) UpdateFeaturesInvoker(request *model.UpdateFeaturesRequest) *UpdateFeaturesInvoker {
+	requestDef := GenReqDefForUpdateFeatures()
+	return &UpdateFeaturesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateInstanceConfiguration 修改指定实例的参数

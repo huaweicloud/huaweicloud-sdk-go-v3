@@ -101,6 +101,22 @@ func (i *CreateRepoDomainsInvoker) Invoke() (*model.CreateRepoDomainsResponse, e
 	}
 }
 
+type CreateRepoTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRepoTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateRepoTagInvoker) Invoke() (*model.CreateRepoTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRepoTagResponse), nil
+	}
+}
+
 type CreateRetentionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -485,6 +501,38 @@ func (i *ShowAccessDomainInvoker) Invoke() (*model.ShowAccessDomainResponse, err
 	}
 }
 
+type ShowDomainOverviewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainOverviewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDomainOverviewInvoker) Invoke() (*model.ShowDomainOverviewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainOverviewResponse), nil
+	}
+}
+
+type ShowDomainResourceReportsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainResourceReportsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDomainResourceReportsInvoker) Invoke() (*model.ShowDomainResourceReportsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainResourceReportsResponse), nil
+	}
+}
+
 type ShowNamespaceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -546,6 +594,22 @@ func (i *ShowRetentionInvoker) Invoke() (*model.ShowRetentionResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowRetentionResponse), nil
+	}
+}
+
+type ShowShareFeatureGatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowShareFeatureGatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowShareFeatureGatesInvoker) Invoke() (*model.ShowShareFeatureGatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowShareFeatureGatesResponse), nil
 	}
 }
 

@@ -9,10 +9,10 @@ import (
 // ListAuditInstancesRequest Request Object
 type ListAuditInstancesRequest struct {
 
-	// 偏移量
+	// 偏移量，默认0。
 	Offset *string `json:"offset,omitempty"`
 
-	// 查询记录数
+	// 查询记录数，默认100，最大1000。
 	Limit *string `json:"limit,omitempty"`
 }
 

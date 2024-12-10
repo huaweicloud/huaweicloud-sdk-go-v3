@@ -61,6 +61,27 @@ func (c *CsmsClient) CreateAgencyInvoker(request *model.CreateAgencyRequest) *Cr
 	return &CreateAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateGrants 授权操作
+//
+// 授权操作
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) CreateGrants(request *model.CreateGrantsRequest) (*model.CreateGrantsResponse, error) {
+	requestDef := GenReqDefForCreateGrants()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateGrantsResponse), nil
+	}
+}
+
+// CreateGrantsInvoker 授权操作
+func (c *CsmsClient) CreateGrantsInvoker(request *model.CreateGrantsRequest) *CreateGrantsInvoker {
+	requestDef := GenReqDefForCreateGrants()
+	return &CreateGrantsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSecret 创建凭据
 //
 // 创建新的凭据，并将凭据值存入凭据的初始版本。
@@ -147,6 +168,27 @@ func (c *CsmsClient) CreateSecretVersion(request *model.CreateSecretVersionReque
 func (c *CsmsClient) CreateSecretVersionInvoker(request *model.CreateSecretVersionRequest) *CreateSecretVersionInvoker {
 	requestDef := GenReqDefForCreateSecretVersion()
 	return &CreateSecretVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteGrant 删除授权
+//
+// 删除授权
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) DeleteGrant(request *model.DeleteGrantRequest) (*model.DeleteGrantResponse, error) {
+	requestDef := GenReqDefForDeleteGrant()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteGrantResponse), nil
+	}
+}
+
+// DeleteGrantInvoker 删除授权
+func (c *CsmsClient) DeleteGrantInvoker(request *model.DeleteGrantRequest) *DeleteGrantInvoker {
+	requestDef := GenReqDefForDeleteGrant()
+	return &DeleteGrantInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteSecret 立即删除凭据
@@ -273,6 +315,48 @@ func (c *CsmsClient) DownloadSecretBlob(request *model.DownloadSecretBlobRequest
 func (c *CsmsClient) DownloadSecretBlobInvoker(request *model.DownloadSecretBlobRequest) *DownloadSecretBlobInvoker {
 	requestDef := GenReqDefForDownloadSecretBlob()
 	return &DownloadSecretBlobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GenerateRandomPassword
+//
+// 生成随机密码
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) GenerateRandomPassword(request *model.GenerateRandomPasswordRequest) (*model.GenerateRandomPasswordResponse, error) {
+	requestDef := GenReqDefForGenerateRandomPassword()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GenerateRandomPasswordResponse), nil
+	}
+}
+
+// GenerateRandomPasswordInvoker
+func (c *CsmsClient) GenerateRandomPasswordInvoker(request *model.GenerateRandomPasswordRequest) *GenerateRandomPasswordInvoker {
+	requestDef := GenReqDefForGenerateRandomPassword()
+	return &GenerateRandomPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGrants 授权列表
+//
+// 授权列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) ListGrants(request *model.ListGrantsRequest) (*model.ListGrantsResponse, error) {
+	requestDef := GenReqDefForListGrants()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGrantsResponse), nil
+	}
+}
+
+// ListGrantsInvoker 授权列表
+func (c *CsmsClient) ListGrantsInvoker(request *model.ListGrantsRequest) *ListGrantsInvoker {
+	requestDef := GenReqDefForListGrants()
+	return &ListGrantsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListNotificationRecords 查询已触发的事件通知记录
@@ -443,6 +527,27 @@ func (c *CsmsClient) ListSecretsInvoker(request *model.ListSecretsRequest) *List
 	return &ListSecretsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListUsers 查询用户列表
+//
+// 查询用户列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) ListUsers(request *model.ListUsersRequest) (*model.ListUsersResponse, error) {
+	requestDef := GenReqDefForListUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUsersResponse), nil
+	}
+}
+
+// ListUsersInvoker 查询用户列表
+func (c *CsmsClient) ListUsersInvoker(request *model.ListUsersRequest) *ListUsersInvoker {
+	requestDef := GenReqDefForListUsers()
+	return &ListUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RestoreSecret 取消凭据的定时删除任务
 //
 // 取消凭据的定时删除任务，凭据对象恢复可使用状态。
@@ -610,6 +715,27 @@ func (c *CsmsClient) ShowSecretVersion(request *model.ShowSecretVersionRequest) 
 func (c *CsmsClient) ShowSecretVersionInvoker(request *model.ShowSecretVersionRequest) *ShowSecretVersionInvoker {
 	requestDef := GenReqDefForShowSecretVersion()
 	return &ShowSecretVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGrant 更新授权
+//
+// 更新授权
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) UpdateGrant(request *model.UpdateGrantRequest) (*model.UpdateGrantResponse, error) {
+	requestDef := GenReqDefForUpdateGrant()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateGrantResponse), nil
+	}
+}
+
+// UpdateGrantInvoker 更新授权
+func (c *CsmsClient) UpdateGrantInvoker(request *model.UpdateGrantRequest) *UpdateGrantInvoker {
+	requestDef := GenReqDefForUpdateGrant()
+	return &UpdateGrantInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSecret 更新凭据

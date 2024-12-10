@@ -190,8 +190,14 @@ type UpdateImageResponse struct {
 	ImageDisplayname *string `json:"__image_displayname,omitempty"`
 
 	// 是否是AMD架构类型的镜像。取值为“true”或者“false”。
-	SupportAmd     *string `json:"__support_amd,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	SupportAmd *string `json:"__support_amd,omitempty"`
+
+	// 如果镜像支持sriov直通，取值为true，否则无需增加该属性。
+	SupportKvmHi1822Hisriov *string `json:"__support_kvm_hi1822_hisriov,omitempty"`
+
+	// 如果镜像支持Virtio-net直通规格，取值为true，否则无需增加该属性。
+	SupportKvmHi1822Hivirtionet *string `json:"__support_kvm_hi1822_hivirtionet,omitempty"`
+	HttpStatusCode              int     `json:"-"`
 }
 
 func (o UpdateImageResponse) String() string {

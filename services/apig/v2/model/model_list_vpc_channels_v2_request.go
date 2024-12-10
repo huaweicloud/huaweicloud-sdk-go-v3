@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -41,6 +44,9 @@ type ListVpcChannelsV2Request struct {
 
 	// 后端服务器组编号
 	MemberGroupId *string `json:"member_group_id,omitempty"`
+
+	// vpc通道类型： - builtin：服务器类型 - microservice： 微服务类型 - reference：引用负载通道类型
+	VpcChannelType *ListVpcChannelsV2RequestVpcChannelType `json:"vpc_channel_type,omitempty"`
 }
 
 func (o ListVpcChannelsV2Request) String() string {
@@ -50,4 +56,55 @@ func (o ListVpcChannelsV2Request) String() string {
 	}
 
 	return strings.Join([]string{"ListVpcChannelsV2Request", string(data)}, " ")
+}
+
+type ListVpcChannelsV2RequestVpcChannelType struct {
+	value string
+}
+
+type ListVpcChannelsV2RequestVpcChannelTypeEnum struct {
+	BUILTIN      ListVpcChannelsV2RequestVpcChannelType
+	MICROSERVICE ListVpcChannelsV2RequestVpcChannelType
+	REFERENCE    ListVpcChannelsV2RequestVpcChannelType
+}
+
+func GetListVpcChannelsV2RequestVpcChannelTypeEnum() ListVpcChannelsV2RequestVpcChannelTypeEnum {
+	return ListVpcChannelsV2RequestVpcChannelTypeEnum{
+		BUILTIN: ListVpcChannelsV2RequestVpcChannelType{
+			value: "builtin",
+		},
+		MICROSERVICE: ListVpcChannelsV2RequestVpcChannelType{
+			value: "microservice",
+		},
+		REFERENCE: ListVpcChannelsV2RequestVpcChannelType{
+			value: "reference",
+		},
+	}
+}
+
+func (c ListVpcChannelsV2RequestVpcChannelType) Value() string {
+	return c.value
+}
+
+func (c ListVpcChannelsV2RequestVpcChannelType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListVpcChannelsV2RequestVpcChannelType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

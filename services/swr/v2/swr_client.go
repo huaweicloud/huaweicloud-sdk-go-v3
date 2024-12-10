@@ -145,6 +145,27 @@ func (c *SwrClient) CreateRepoDomainsInvoker(request *model.CreateRepoDomainsReq
 	return &CreateRepoDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateRepoTag 创建镜像tag
+//
+// 创建镜像tag
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) CreateRepoTag(request *model.CreateRepoTagRequest) (*model.CreateRepoTagResponse, error) {
+	requestDef := GenReqDefForCreateRepoTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRepoTagResponse), nil
+	}
+}
+
+// CreateRepoTagInvoker 创建镜像tag
+func (c *SwrClient) CreateRepoTagInvoker(request *model.CreateRepoTagRequest) *CreateRepoTagInvoker {
+	requestDef := GenReqDefForCreateRepoTag()
+	return &CreateRepoTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateRetention 创建镜像老化规则
 //
 // 创建镜像老化规则
@@ -649,6 +670,48 @@ func (c *SwrClient) ShowAccessDomainInvoker(request *model.ShowAccessDomainReque
 	return &ShowAccessDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDomainOverview 获取租户总览信息
+//
+// 获取租户总览信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) ShowDomainOverview(request *model.ShowDomainOverviewRequest) (*model.ShowDomainOverviewResponse, error) {
+	requestDef := GenReqDefForShowDomainOverview()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainOverviewResponse), nil
+	}
+}
+
+// ShowDomainOverviewInvoker 获取租户总览信息
+func (c *SwrClient) ShowDomainOverviewInvoker(request *model.ShowDomainOverviewRequest) *ShowDomainOverviewInvoker {
+	requestDef := GenReqDefForShowDomainOverview()
+	return &ShowDomainOverviewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDomainResourceReports 获取租户资源统计信息
+//
+// 获取租户资源统计信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) ShowDomainResourceReports(request *model.ShowDomainResourceReportsRequest) (*model.ShowDomainResourceReportsResponse, error) {
+	requestDef := GenReqDefForShowDomainResourceReports()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainResourceReportsResponse), nil
+	}
+}
+
+// ShowDomainResourceReportsInvoker 获取租户资源统计信息
+func (c *SwrClient) ShowDomainResourceReportsInvoker(request *model.ShowDomainResourceReportsRequest) *ShowDomainResourceReportsInvoker {
+	requestDef := GenReqDefForShowDomainResourceReports()
+	return &ShowDomainResourceReportsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowNamespace 获取组织详情
 //
 // 获取组织详情
@@ -731,6 +794,27 @@ func (c *SwrClient) ShowRetention(request *model.ShowRetentionRequest) (*model.S
 func (c *SwrClient) ShowRetentionInvoker(request *model.ShowRetentionRequest) *ShowRetentionInvoker {
 	requestDef := GenReqDefForShowRetention()
 	return &ShowRetentionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowShareFeatureGates 查询服务特性开关信息
+//
+// 查询服务特性开关信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) ShowShareFeatureGates(request *model.ShowShareFeatureGatesRequest) (*model.ShowShareFeatureGatesResponse, error) {
+	requestDef := GenReqDefForShowShareFeatureGates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowShareFeatureGatesResponse), nil
+	}
+}
+
+// ShowShareFeatureGatesInvoker 查询服务特性开关信息
+func (c *SwrClient) ShowShareFeatureGatesInvoker(request *model.ShowShareFeatureGatesRequest) *ShowShareFeatureGatesInvoker {
+	requestDef := GenReqDefForShowShareFeatureGates()
+	return &ShowShareFeatureGatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSyncJob 获取镜像自动同步任务信息

@@ -10,7 +10,7 @@ import (
 type SwitchAuditDatabaseResponse struct {
 
 	// 响应状态
-	Result         *string `json:"result,omitempty"`
+	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

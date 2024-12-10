@@ -12,7 +12,7 @@ import (
 // ListRdsDatabasesRequest Request Object
 type ListRdsDatabasesRequest struct {
 
-	// 数据库类型 - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - MARIADB - GAUSSDBOPENGAUSS
+	// 数据库类型 - MYSQL - POSTGRESQL - SQLSERVER - TAURUS - DWS - MARIADB - GAUSSDBOPENGAUSS
 	DbType ListRdsDatabasesRequestDbType `json:"db_type"`
 
 	// 偏移量，从第一条数据偏移offset条数据后开始查询，默认为0。
@@ -37,13 +37,10 @@ type ListRdsDatabasesRequestDbType struct {
 
 type ListRdsDatabasesRequestDbTypeEnum struct {
 	MYSQL            ListRdsDatabasesRequestDbType
-	ORACLE           ListRdsDatabasesRequestDbType
 	POSTGRESQL       ListRdsDatabasesRequestDbType
 	SQLSERVER        ListRdsDatabasesRequestDbType
-	DAMENG           ListRdsDatabasesRequestDbType
 	TAURUS           ListRdsDatabasesRequestDbType
 	DWS              ListRdsDatabasesRequestDbType
-	KINGBASE         ListRdsDatabasesRequestDbType
 	MARIADB          ListRdsDatabasesRequestDbType
 	GAUSSDBOPENGAUSS ListRdsDatabasesRequestDbType
 }
@@ -53,26 +50,17 @@ func GetListRdsDatabasesRequestDbTypeEnum() ListRdsDatabasesRequestDbTypeEnum {
 		MYSQL: ListRdsDatabasesRequestDbType{
 			value: "MYSQL",
 		},
-		ORACLE: ListRdsDatabasesRequestDbType{
-			value: "ORACLE",
-		},
 		POSTGRESQL: ListRdsDatabasesRequestDbType{
 			value: "POSTGRESQL",
 		},
 		SQLSERVER: ListRdsDatabasesRequestDbType{
 			value: "SQLSERVER",
 		},
-		DAMENG: ListRdsDatabasesRequestDbType{
-			value: "DAMENG",
-		},
 		TAURUS: ListRdsDatabasesRequestDbType{
 			value: "TAURUS",
 		},
 		DWS: ListRdsDatabasesRequestDbType{
 			value: "DWS",
-		},
-		KINGBASE: ListRdsDatabasesRequestDbType{
-			value: "KINGBASE",
 		},
 		MARIADB: ListRdsDatabasesRequestDbType{
 			value: "MARIADB",

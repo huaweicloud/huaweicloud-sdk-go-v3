@@ -47,6 +47,9 @@ type ShowDetailsOfCertificateV2Response struct {
 	// 是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
 	IsHasTrustedRootCa *bool `json:"is_has_trusted_root_ca,omitempty"`
 
+	// 证书算法类型： - RSA - ECC - SM2
+	AlgorithmType *ShowDetailsOfCertificateV2ResponseAlgorithmType `json:"algorithm_type,omitempty"`
+
 	// 版本
 	Version *int32 `json:"version,omitempty"`
 
@@ -114,6 +117,57 @@ func (c ShowDetailsOfCertificateV2ResponseType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ShowDetailsOfCertificateV2ResponseType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ShowDetailsOfCertificateV2ResponseAlgorithmType struct {
+	value string
+}
+
+type ShowDetailsOfCertificateV2ResponseAlgorithmTypeEnum struct {
+	RSA ShowDetailsOfCertificateV2ResponseAlgorithmType
+	ECC ShowDetailsOfCertificateV2ResponseAlgorithmType
+	SM2 ShowDetailsOfCertificateV2ResponseAlgorithmType
+}
+
+func GetShowDetailsOfCertificateV2ResponseAlgorithmTypeEnum() ShowDetailsOfCertificateV2ResponseAlgorithmTypeEnum {
+	return ShowDetailsOfCertificateV2ResponseAlgorithmTypeEnum{
+		RSA: ShowDetailsOfCertificateV2ResponseAlgorithmType{
+			value: "RSA",
+		},
+		ECC: ShowDetailsOfCertificateV2ResponseAlgorithmType{
+			value: "ECC",
+		},
+		SM2: ShowDetailsOfCertificateV2ResponseAlgorithmType{
+			value: "SM2",
+		},
+	}
+}
+
+func (c ShowDetailsOfCertificateV2ResponseAlgorithmType) Value() string {
+	return c.value
+}
+
+func (c ShowDetailsOfCertificateV2ResponseAlgorithmType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowDetailsOfCertificateV2ResponseAlgorithmType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

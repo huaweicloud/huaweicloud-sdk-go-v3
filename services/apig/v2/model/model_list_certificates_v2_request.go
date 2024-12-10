@@ -32,6 +32,9 @@ type ListCertificatesV2Request struct {
 
 	// 证书所属实例ID
 	InstanceId string `json:"instance_id"`
+
+	// 证书算法类型： - RSA。 - ECC。 - SM2。
+	AlgorithmType *ListCertificatesV2RequestAlgorithmType `json:"algorithm_type,omitempty"`
 }
 
 func (o ListCertificatesV2Request) String() string {
@@ -72,6 +75,57 @@ func (c ListCertificatesV2RequestType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ListCertificatesV2RequestType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListCertificatesV2RequestAlgorithmType struct {
+	value string
+}
+
+type ListCertificatesV2RequestAlgorithmTypeEnum struct {
+	RSA ListCertificatesV2RequestAlgorithmType
+	ECC ListCertificatesV2RequestAlgorithmType
+	SM2 ListCertificatesV2RequestAlgorithmType
+}
+
+func GetListCertificatesV2RequestAlgorithmTypeEnum() ListCertificatesV2RequestAlgorithmTypeEnum {
+	return ListCertificatesV2RequestAlgorithmTypeEnum{
+		RSA: ListCertificatesV2RequestAlgorithmType{
+			value: "RSA",
+		},
+		ECC: ListCertificatesV2RequestAlgorithmType{
+			value: "ECC",
+		},
+		SM2: ListCertificatesV2RequestAlgorithmType{
+			value: "SM2",
+		},
+	}
+}
+
+func (c ListCertificatesV2RequestAlgorithmType) Value() string {
+	return c.value
+}
+
+func (c ListCertificatesV2RequestAlgorithmType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListCertificatesV2RequestAlgorithmType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

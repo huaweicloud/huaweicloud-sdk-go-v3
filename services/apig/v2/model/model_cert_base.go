@@ -45,6 +45,9 @@ type CertBase struct {
 
 	// 是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
 	IsHasTrustedRootCa *bool `json:"is_has_trusted_root_ca,omitempty"`
+
+	// 证书算法类型： - RSA - ECC - SM2
+	AlgorithmType *CertBaseAlgorithmType `json:"algorithm_type,omitempty"`
 }
 
 func (o CertBase) String() string {
@@ -85,6 +88,57 @@ func (c CertBaseType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CertBaseType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CertBaseAlgorithmType struct {
+	value string
+}
+
+type CertBaseAlgorithmTypeEnum struct {
+	RSA CertBaseAlgorithmType
+	ECC CertBaseAlgorithmType
+	SM2 CertBaseAlgorithmType
+}
+
+func GetCertBaseAlgorithmTypeEnum() CertBaseAlgorithmTypeEnum {
+	return CertBaseAlgorithmTypeEnum{
+		RSA: CertBaseAlgorithmType{
+			value: "RSA",
+		},
+		ECC: CertBaseAlgorithmType{
+			value: "ECC",
+		},
+		SM2: CertBaseAlgorithmType{
+			value: "SM2",
+		},
+	}
+}
+
+func (c CertBaseAlgorithmType) Value() string {
+	return c.value
+}
+
+func (c CertBaseAlgorithmType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CertBaseAlgorithmType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

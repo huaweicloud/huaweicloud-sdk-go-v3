@@ -4137,10 +4137,6 @@ func GenReqDefForListApisBindedToRequestThrottlingPolicyV2() *def.HttpRequestDef
 		WithName("ApiName").
 		WithJsonTag("api_name").
 		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Tags").
-		WithJsonTag("tags").
-		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -5028,6 +5024,10 @@ func GenReqDefForListCertificatesV2() *def.HttpRequestDef {
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AlgorithmType").
+		WithJsonTag("algorithm_type").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -5390,6 +5390,10 @@ func GenReqDefForListVpcChannelsV2() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("MemberGroupId").
 		WithJsonTag("member_group_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("VpcChannelType").
+		WithJsonTag("vpc_channel_type").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

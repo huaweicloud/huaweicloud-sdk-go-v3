@@ -24,6 +24,8 @@ type MicroServiceInfo struct {
 
 	CceInfo *MicroServiceInfoCce `json:"cce_info,omitempty"`
 
+	CceServiceInfo *MicroServiceInfoCceService `json:"cce_service_info,omitempty"`
+
 	NacosInfo *MicroServiceInfoNacosBase `json:"nacos_info,omitempty"`
 
 	// 微服务更新时间

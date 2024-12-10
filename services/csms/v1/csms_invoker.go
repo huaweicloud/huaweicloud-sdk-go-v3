@@ -37,6 +37,22 @@ func (i *CreateAgencyInvoker) Invoke() (*model.CreateAgencyResponse, error) {
 	}
 }
 
+type CreateGrantsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateGrantsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateGrantsInvoker) Invoke() (*model.CreateGrantsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateGrantsResponse), nil
+	}
+}
+
 type CreateSecretInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -98,6 +114,22 @@ func (i *CreateSecretVersionInvoker) Invoke() (*model.CreateSecretVersionRespons
 		return nil, err
 	} else {
 		return result.(*model.CreateSecretVersionResponse), nil
+	}
+}
+
+type DeleteGrantInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteGrantInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteGrantInvoker) Invoke() (*model.DeleteGrantResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteGrantResponse), nil
 	}
 }
 
@@ -194,6 +226,38 @@ func (i *DownloadSecretBlobInvoker) Invoke() (*model.DownloadSecretBlobResponse,
 		return nil, err
 	} else {
 		return result.(*model.DownloadSecretBlobResponse), nil
+	}
+}
+
+type GenerateRandomPasswordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GenerateRandomPasswordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GenerateRandomPasswordInvoker) Invoke() (*model.GenerateRandomPasswordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GenerateRandomPasswordResponse), nil
+	}
+}
+
+type ListGrantsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGrantsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListGrantsInvoker) Invoke() (*model.ListGrantsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGrantsResponse), nil
 	}
 }
 
@@ -325,6 +389,22 @@ func (i *ListSecretsInvoker) Invoke() (*model.ListSecretsResponse, error) {
 	}
 }
 
+type ListUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUsersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListUsersInvoker) Invoke() (*model.ListUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUsersResponse), nil
+	}
+}
+
 type RestoreSecretInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -450,6 +530,22 @@ func (i *ShowSecretVersionInvoker) Invoke() (*model.ShowSecretVersionResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowSecretVersionResponse), nil
+	}
+}
+
+type UpdateGrantInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateGrantInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateGrantInvoker) Invoke() (*model.UpdateGrantResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateGrantResponse), nil
 	}
 }
 

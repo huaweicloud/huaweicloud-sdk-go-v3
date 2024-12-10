@@ -28,6 +28,9 @@ type MemberGroupCreate struct {
 
 	// VPC通道后端服务器组的标签，仅VPC通道类型为微服务时支持。
 	MicroserviceLabels *[]MicroserviceLabel `json:"microservice_labels,omitempty"`
+
+	// 引用的负载通道编号，仅VPC通道类型为引用类型（vpc_channel_type=reference）时支持。
+	ReferenceVpcChannelId *string `json:"reference_vpc_channel_id,omitempty"`
 }
 
 func (o MemberGroupCreate) String() string {

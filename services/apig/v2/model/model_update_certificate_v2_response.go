@@ -47,6 +47,9 @@ type UpdateCertificateV2Response struct {
 	// 是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
 	IsHasTrustedRootCa *bool `json:"is_has_trusted_root_ca,omitempty"`
 
+	// 证书算法类型： - RSA - ECC - SM2
+	AlgorithmType *UpdateCertificateV2ResponseAlgorithmType `json:"algorithm_type,omitempty"`
+
 	// 版本
 	Version *int32 `json:"version,omitempty"`
 
@@ -114,6 +117,57 @@ func (c UpdateCertificateV2ResponseType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateCertificateV2ResponseType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type UpdateCertificateV2ResponseAlgorithmType struct {
+	value string
+}
+
+type UpdateCertificateV2ResponseAlgorithmTypeEnum struct {
+	RSA UpdateCertificateV2ResponseAlgorithmType
+	ECC UpdateCertificateV2ResponseAlgorithmType
+	SM2 UpdateCertificateV2ResponseAlgorithmType
+}
+
+func GetUpdateCertificateV2ResponseAlgorithmTypeEnum() UpdateCertificateV2ResponseAlgorithmTypeEnum {
+	return UpdateCertificateV2ResponseAlgorithmTypeEnum{
+		RSA: UpdateCertificateV2ResponseAlgorithmType{
+			value: "RSA",
+		},
+		ECC: UpdateCertificateV2ResponseAlgorithmType{
+			value: "ECC",
+		},
+		SM2: UpdateCertificateV2ResponseAlgorithmType{
+			value: "SM2",
+		},
+	}
+}
+
+func (c UpdateCertificateV2ResponseAlgorithmType) Value() string {
+	return c.value
+}
+
+func (c UpdateCertificateV2ResponseAlgorithmType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateCertificateV2ResponseAlgorithmType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

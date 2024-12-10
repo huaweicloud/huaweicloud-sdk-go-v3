@@ -29,6 +29,9 @@ type ApiPolicyHttpCreate struct {
 	// 请求后端服务的重试次数，默认为-1，范围[-1,10]。  当该值为-1时，幂等的接口会重试1次，非幂等的不会重试。POST，PATCH方法为非幂等；GET，HEAD，PUT，OPTIONS和DELETE等方法为幂等的。
 	RetryCount *string `json:"retry_count,omitempty"`
 
+	// 是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
+	EnableSmChannel *bool `json:"enable_sm_channel,omitempty"`
+
 	// 关联的策略组合模式： - ALL：满足全部条件 - ANY：满足任一条件
 	EffectMode ApiPolicyHttpCreateEffectMode `json:"effect_mode"`
 

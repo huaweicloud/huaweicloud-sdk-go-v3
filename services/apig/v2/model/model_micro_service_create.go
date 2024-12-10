@@ -19,6 +19,8 @@ type MicroServiceCreate struct {
 
 	CceInfo *MicroServiceInfoCceBase `json:"cce_info,omitempty"`
 
+	CceServiceInfo *MicroServiceInfoCceServiceBase `json:"cce_service_info,omitempty"`
+
 	NacosInfo *MicroServiceInfoNacosBase `json:"nacos_info,omitempty"`
 }
 

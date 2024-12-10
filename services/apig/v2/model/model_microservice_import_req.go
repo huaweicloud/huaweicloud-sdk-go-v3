@@ -35,6 +35,8 @@ type MicroserviceImportReq struct {
 
 	CceInfo *MicroServiceInfoCceCreate `json:"cce_info,omitempty"`
 
+	CceServiceInfo *MicroServiceInfoCceServiceCreate `json:"cce_service_info,omitempty"`
+
 	NacosInfo *MicroServiceInfoNacosBase `json:"nacos_info,omitempty"`
 }
 

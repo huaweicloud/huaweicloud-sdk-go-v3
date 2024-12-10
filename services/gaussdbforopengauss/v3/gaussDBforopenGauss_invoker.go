@@ -629,6 +629,22 @@ func (i *ListEpsQuotasInvoker) Invoke() (*model.ListEpsQuotasResponse, error) {
 	}
 }
 
+type ListFeaturesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFeaturesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListFeaturesInvoker) Invoke() (*model.ListFeaturesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFeaturesResponse), nil
+	}
+}
+
 type ListFlavorsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1522,6 +1538,22 @@ func (i *SwitchShardInvoker) Invoke() (*model.SwitchShardResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.SwitchShardResponse), nil
+	}
+}
+
+type UpdateFeaturesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateFeaturesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateFeaturesInvoker) Invoke() (*model.UpdateFeaturesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateFeaturesResponse), nil
 	}
 }
 
