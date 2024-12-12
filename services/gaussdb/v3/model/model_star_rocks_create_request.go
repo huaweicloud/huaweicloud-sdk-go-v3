@@ -50,6 +50,11 @@ type StarRocksCreateRequest struct {
 
 	// 实例安全组ID。默认与Taurus安全组ID一致。
 	SecurityGroupId *string `json:"security_group_id,omitempty"`
+
+	PayInfo *StarRocksCreateRequestPayInfo `json:"pay_info,omitempty"`
+
+	// 可用区。包周期场景必填。
+	RegionCode *string `json:"region_code,omitempty"`
 }
 
 func (o StarRocksCreateRequest) String() string {

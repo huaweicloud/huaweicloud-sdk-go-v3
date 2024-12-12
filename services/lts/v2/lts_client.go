@@ -859,6 +859,27 @@ func (c *LtsClient) ListKeywordsAlarmRulesInvoker(request *model.ListKeywordsAla
 	return &ListKeywordsAlarmRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListLogContext 查询上下文日志
+//
+// 查询上下文日志 该接口用于查询指定日志前（上文）后（下文）的若干条日志。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) ListLogContext(request *model.ListLogContextRequest) (*model.ListLogContextResponse, error) {
+	requestDef := GenReqDefForListLogContext()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLogContextResponse), nil
+	}
+}
+
+// ListLogContextInvoker 查询上下文日志
+func (c *LtsClient) ListLogContextInvoker(request *model.ListLogContextRequest) *ListLogContextInvoker {
+	requestDef := GenReqDefForListLogContext()
+	return &ListLogContextInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListLogGroups 查询账号下所有日志组
 //
 // 该接口用于查询账号下所有日志组。

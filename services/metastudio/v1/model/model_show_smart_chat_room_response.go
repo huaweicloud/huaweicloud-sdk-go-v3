@@ -25,11 +25,17 @@ type ShowSmartChatRoomResponse struct {
 
 	VoiceConfig *VoiceConfig `json:"voice_config,omitempty"`
 
+	// 语音配置参数列表。
+	VoiceConfigList *[]ChatVoiceConfig `json:"voice_config_list,omitempty"`
+
 	// 机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
 	RobotId *string `json:"robot_id,omitempty"`
 
 	// **参数解释**： 并发路数。
 	Concurrency *int32 `json:"concurrency,omitempty"`
+
+	// 默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+	DefaultLanguage *ShowSmartChatRoomResponseDefaultLanguage `json:"default_language,omitempty"`
 
 	BackgroundConfig *BackgroundConfigInfo `json:"background_config,omitempty"`
 
@@ -66,6 +72,53 @@ func (o ShowSmartChatRoomResponse) String() string {
 	}
 
 	return strings.Join([]string{"ShowSmartChatRoomResponse", string(data)}, " ")
+}
+
+type ShowSmartChatRoomResponseDefaultLanguage struct {
+	value string
+}
+
+type ShowSmartChatRoomResponseDefaultLanguageEnum struct {
+	CN ShowSmartChatRoomResponseDefaultLanguage
+	EN ShowSmartChatRoomResponseDefaultLanguage
+}
+
+func GetShowSmartChatRoomResponseDefaultLanguageEnum() ShowSmartChatRoomResponseDefaultLanguageEnum {
+	return ShowSmartChatRoomResponseDefaultLanguageEnum{
+		CN: ShowSmartChatRoomResponseDefaultLanguage{
+			value: "CN",
+		},
+		EN: ShowSmartChatRoomResponseDefaultLanguage{
+			value: "EN",
+		},
+	}
+}
+
+func (c ShowSmartChatRoomResponseDefaultLanguage) Value() string {
+	return c.value
+}
+
+func (c ShowSmartChatRoomResponseDefaultLanguage) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowSmartChatRoomResponseDefaultLanguage) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ShowSmartChatRoomResponseChatVideoType struct {

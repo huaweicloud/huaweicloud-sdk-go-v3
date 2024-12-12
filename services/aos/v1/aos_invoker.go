@@ -293,6 +293,166 @@ func (i *UpdatePrivateHookMetadataInvoker) Invoke() (*model.UpdatePrivateHookMet
 	}
 }
 
+type CreatePrivateModuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePrivateModuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreatePrivateModuleInvoker) Invoke() (*model.CreatePrivateModuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePrivateModuleResponse), nil
+	}
+}
+
+type CreatePrivateModuleVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePrivateModuleVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreatePrivateModuleVersionInvoker) Invoke() (*model.CreatePrivateModuleVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePrivateModuleVersionResponse), nil
+	}
+}
+
+type DeletePrivateModuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePrivateModuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeletePrivateModuleInvoker) Invoke() (*model.DeletePrivateModuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePrivateModuleResponse), nil
+	}
+}
+
+type DeletePrivateModuleVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePrivateModuleVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeletePrivateModuleVersionInvoker) Invoke() (*model.DeletePrivateModuleVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePrivateModuleVersionResponse), nil
+	}
+}
+
+type ListPrivateModuleVersionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPrivateModuleVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPrivateModuleVersionsInvoker) Invoke() (*model.ListPrivateModuleVersionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPrivateModuleVersionsResponse), nil
+	}
+}
+
+type ListPrivateModulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPrivateModulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPrivateModulesInvoker) Invoke() (*model.ListPrivateModulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPrivateModulesResponse), nil
+	}
+}
+
+type ShowPrivateModuleMetadataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPrivateModuleMetadataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPrivateModuleMetadataInvoker) Invoke() (*model.ShowPrivateModuleMetadataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPrivateModuleMetadataResponse), nil
+	}
+}
+
+type ShowPrivateModuleVersionContentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPrivateModuleVersionContentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPrivateModuleVersionContentInvoker) Invoke() (*model.ShowPrivateModuleVersionContentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPrivateModuleVersionContentResponse), nil
+	}
+}
+
+type ShowPrivateModuleVersionMetadataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPrivateModuleVersionMetadataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPrivateModuleVersionMetadataInvoker) Invoke() (*model.ShowPrivateModuleVersionMetadataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPrivateModuleVersionMetadataResponse), nil
+	}
+}
+
+type UpdatePrivateModuleMetadataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePrivateModuleMetadataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePrivateModuleMetadataInvoker) Invoke() (*model.UpdatePrivateModuleMetadataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePrivateModuleMetadataResponse), nil
+	}
+}
+
 type ContinueDeployStackInvoker struct {
 	*invoker.BaseInvoker
 }

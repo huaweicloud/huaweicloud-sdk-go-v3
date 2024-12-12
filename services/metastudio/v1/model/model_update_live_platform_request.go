@@ -24,7 +24,7 @@ type UpdateLivePlatformRequest struct {
 	// 直播平台ID。
 	PlatformId string `json:"platform_id"`
 
-	Body *CreateLivePlatformReq `json:"body,omitempty"`
+	Body *UpdateLivePlatformReq `json:"body,omitempty"`
 }
 
 func (o UpdateLivePlatformRequest) String() string {

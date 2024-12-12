@@ -19,7 +19,7 @@ type ListUsersRequest struct {
 	Limit int32 `json:"limit"`
 
 	// 最长64位，用户名，支持模糊查询
-	UserName *string `json:"user_name,omitempty"`
+	UserInfo *string `json:"user_info,omitempty"`
 }
 
 func (o ListUsersRequest) String() string {

@@ -42,7 +42,7 @@ type CreateSmartLiveRoomReqBaseInfo struct {
 	// **参数解释**： 主播轮换时备选主播数字人资产ID（仅形象资产，不包含声音）。  **约束限制**： 不涉及 **取值范围**： 当前最大支持5个备选主播。 数字人资产ID，字符长度0-64位。 **默认取值**： 不涉及
 	BackupModelAssetIds *[]string `json:"backup_model_asset_ids,omitempty"`
 
-	LiveEventCallbackConfig *LiveEventCallBackConfig `json:"live_event_callback_config,omitempty"`
+	LiveEventCallbackConfig *LiveRoomEventCallBackConfig `json:"live_event_callback_config,omitempty"`
 
 	RtcCallbackConfig *RtcLiveEventCallBackConfig `json:"rtc_callback_config,omitempty"`
 

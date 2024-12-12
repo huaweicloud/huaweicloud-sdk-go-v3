@@ -1627,27 +1627,6 @@ func (c *CceClient) SyncNodeInvoker(request *model.SyncNodeRequest) *SyncNodeInv
 	return &SyncNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SyncNodePool 同步nodePool配置到存量节点
-//
-// 该API用于同步nodePool配置到存量节点。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CceClient) SyncNodePool(request *model.SyncNodePoolRequest) (*model.SyncNodePoolResponse, error) {
-	requestDef := GenReqDefForSyncNodePool()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.SyncNodePoolResponse), nil
-	}
-}
-
-// SyncNodePoolInvoker 同步nodePool配置到存量节点
-func (c *CceClient) SyncNodePoolInvoker(request *model.SyncNodePoolRequest) *SyncNodePoolInvoker {
-	requestDef := GenReqDefForSyncNodePool()
-	return &SyncNodePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // UpdateAddonInstance 更新AddonInstance
 //
 // 更新插件实例的功能。

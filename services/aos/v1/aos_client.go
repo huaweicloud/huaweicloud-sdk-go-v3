@@ -696,6 +696,303 @@ func (c *AosClient) UpdatePrivateHookMetadataInvoker(request *model.UpdatePrivat
 	return &UpdatePrivateHookMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePrivateModule 创建私有模块
+//
+// 创建私有模块（CreatePrivateModule）
+//
+// 创建一个私有的空模块。如果用户给予了module_version与module_uri，则在创建私有模块的同时，在私有模块下创建一个私有模块版本。
+//   - 模块允许用户将可复用的代码编辑在一起供模块使用。
+//   - 如果同名私有模块在当前账户中已经存在，则会返回失败。
+//   - 版本号遵循语义化版本号（Semantic Version），为用户自定义。
+//   - 资源编排服务只会对模块进行浅校验，如文件大小、是否可以解压、文件数量等。并不会深度校验，即不会做语法类校验。
+//
+// 以HCL格式的模板为例，模板中引用私有模块的语法如下：
+// &#x60;&#x60;&#x60;
+//
+//	module \&quot;my_hello_word_module\&quot; {
+//	  source &#x3D; \&quot;rf://rfs.{region_id}.myhuaweicloud.com/private/{domain_id}/{module_name}?version&#x3D;&#x3D;{module_version}\&quot;
+//	}
+//
+// &#x60;&#x60;&#x60;
+//
+// 以JSON格式的模板为例，模板中引用私有模块的语法如下：
+// &#x60;&#x60;&#x60;
+//
+//	{
+//	  \&quot;module\&quot;: {
+//	    \&quot;my_hello_word_module\&quot;: {
+//	      \&quot;source\&quot;: \&quot;rf://rfs.{region_id}.myhuaweicloud.com/private/{domain_id}/{module_name}?version&#x3D;&#x3D;{module_version}\&quot;
+//	    }
+//	  }
+//	}
+//
+// &#x60;&#x60;&#x60;
+// 对应上述两个例子中的模块链接（source字段的内容）可以调用ShowPrivateModuleVersionMetadata返回的module_source字段中获取
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) CreatePrivateModule(request *model.CreatePrivateModuleRequest) (*model.CreatePrivateModuleResponse, error) {
+	requestDef := GenReqDefForCreatePrivateModule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePrivateModuleResponse), nil
+	}
+}
+
+// CreatePrivateModuleInvoker 创建私有模块
+func (c *AosClient) CreatePrivateModuleInvoker(request *model.CreatePrivateModuleRequest) *CreatePrivateModuleInvoker {
+	requestDef := GenReqDefForCreatePrivateModule()
+	return &CreatePrivateModuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePrivateModuleVersion 创建私有模块版本
+//
+// 创建私有模块版本（CreatePrivateModuleVersion）
+//
+// 创建新的私有模块版本
+//
+//   - 模块的版本号需遵循语义化版本号（Semantic Version），为用户自定义。
+//   - 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//   - 资源编排服务只会对模块进行浅校验，如文件大小、是否可以解压、文件数量等。并不会深度校验，即不会做语法类校验。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) CreatePrivateModuleVersion(request *model.CreatePrivateModuleVersionRequest) (*model.CreatePrivateModuleVersionResponse, error) {
+	requestDef := GenReqDefForCreatePrivateModuleVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePrivateModuleVersionResponse), nil
+	}
+}
+
+// CreatePrivateModuleVersionInvoker 创建私有模块版本
+func (c *AosClient) CreatePrivateModuleVersionInvoker(request *model.CreatePrivateModuleVersionRequest) *CreatePrivateModuleVersionInvoker {
+	requestDef := GenReqDefForCreatePrivateModuleVersion()
+	return &CreatePrivateModuleVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePrivateModule 删除私有模块
+//
+// 删除私有模块（DeletePrivateModule）
+//
+// 删除某个私有模块以及私有模块下的全部模块版本
+//
+//   - 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//
+// **请谨慎操作，删除私有模块将会删除该私有模块下的所有的模块版本。**
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) DeletePrivateModule(request *model.DeletePrivateModuleRequest) (*model.DeletePrivateModuleResponse, error) {
+	requestDef := GenReqDefForDeletePrivateModule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePrivateModuleResponse), nil
+	}
+}
+
+// DeletePrivateModuleInvoker 删除私有模块
+func (c *AosClient) DeletePrivateModuleInvoker(request *model.DeletePrivateModuleRequest) *DeletePrivateModuleInvoker {
+	requestDef := GenReqDefForDeletePrivateModule()
+	return &DeletePrivateModuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePrivateModuleVersion 删除私有模块版本
+//
+// 删除私有模块版本（DeletePrivateModuleVersion）
+//
+// 删除某个私有模块版本
+//
+//   - 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//
+// **请谨慎操作**
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) DeletePrivateModuleVersion(request *model.DeletePrivateModuleVersionRequest) (*model.DeletePrivateModuleVersionResponse, error) {
+	requestDef := GenReqDefForDeletePrivateModuleVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePrivateModuleVersionResponse), nil
+	}
+}
+
+// DeletePrivateModuleVersionInvoker 删除私有模块版本
+func (c *AosClient) DeletePrivateModuleVersionInvoker(request *model.DeletePrivateModuleVersionRequest) *DeletePrivateModuleVersionInvoker {
+	requestDef := GenReqDefForDeletePrivateModuleVersion()
+	return &DeletePrivateModuleVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPrivateModuleVersions 列举私有模块版本
+//
+// 列举私有模块版本（ListPrivateModuleVersions）
+//
+// 列举所选择的私有模块中所有的模块版本信息。
+//
+//   - 可以使用sort_key和sort_dir两个关键字对返回结果按创建时间（create_time）进行排序。给予的sort_key和sort_dir数量须一致，否则返回400。如果未给予sort_key和sort_dir，则默认按照创建时间降序排序。
+//   - 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//   - 如果模块不存在则返回404。
+//
+// # ListPrivateModuleVersions返回的只有摘要信息（具体摘要信息见ListPrivateModuleVersionsResponseBody），如果用户需要详细的模块版本元数据请调用ShowPrivateModuleVersionMetadata
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) ListPrivateModuleVersions(request *model.ListPrivateModuleVersionsRequest) (*model.ListPrivateModuleVersionsResponse, error) {
+	requestDef := GenReqDefForListPrivateModuleVersions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPrivateModuleVersionsResponse), nil
+	}
+}
+
+// ListPrivateModuleVersionsInvoker 列举私有模块版本
+func (c *AosClient) ListPrivateModuleVersionsInvoker(request *model.ListPrivateModuleVersionsRequest) *ListPrivateModuleVersionsInvoker {
+	requestDef := GenReqDefForListPrivateModuleVersions()
+	return &ListPrivateModuleVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPrivateModules 列举私有模块
+//
+// 列举私有模块（ListPrivateModules）
+//
+// 列举当前局点下用户所有的私有模块。
+//
+//   - 可以使用sort_key和sort_dir两个关键字对返回结果按创建时间（create_time）进行排序。给予的sort_key和sort_dir数量须一致，否则返回400。如果未给予sort_key和sort_dir，则默认按照创建时间降序排序。
+//   - 如果当前用户下没有任何私有模块，则返回空list。
+//   - 如果需要某个模块的所有版本信息，可以调用ListModuleVersions。
+//
+// # ListPrivateModules返回的只有摘要信息（具体摘要信息见ListPrivateModulesResponseBody），如果用户需要详细的模块元数据请调用ShowPrivateModuleMetadata
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) ListPrivateModules(request *model.ListPrivateModulesRequest) (*model.ListPrivateModulesResponse, error) {
+	requestDef := GenReqDefForListPrivateModules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPrivateModulesResponse), nil
+	}
+}
+
+// ListPrivateModulesInvoker 列举私有模块
+func (c *AosClient) ListPrivateModulesInvoker(request *model.ListPrivateModulesRequest) *ListPrivateModulesInvoker {
+	requestDef := GenReqDefForListPrivateModules()
+	return &ListPrivateModulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPrivateModuleMetadata 获取私有模块元数据
+//
+// 获取私有模块元数据（ShowPrivateModuleMetadata）
+//
+// 获取当前私有模块的元数据信息
+//
+//   - 具体返回的信息见ShowPrivateModuleMetadataResponseBody，如果想查看私有模块下全部模块版本，请调用ListPrivateModuleVersions。
+//   - 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) ShowPrivateModuleMetadata(request *model.ShowPrivateModuleMetadataRequest) (*model.ShowPrivateModuleMetadataResponse, error) {
+	requestDef := GenReqDefForShowPrivateModuleMetadata()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPrivateModuleMetadataResponse), nil
+	}
+}
+
+// ShowPrivateModuleMetadataInvoker 获取私有模块元数据
+func (c *AosClient) ShowPrivateModuleMetadataInvoker(request *model.ShowPrivateModuleMetadataRequest) *ShowPrivateModuleMetadataInvoker {
+	requestDef := GenReqDefForShowPrivateModuleMetadata()
+	return &ShowPrivateModuleMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPrivateModuleVersionContent 获取私有模块版本内容
+//
+// 获取私有模块版本内容（ShowPrivateModuleVersionContent）
+//
+// 获取指定私有模块对应版本的内容。
+//
+//   - 如果获取成功，则以临时重定向形式返回模块下载链接（OBS Pre Signed地址，有效期为5分钟），大多数的客户端会进行自动重定向并下载模块；
+//   - 如果未进行自动重定向，请参考HTTP的重定向规则获取模块下载链接，手动下载模块。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) ShowPrivateModuleVersionContent(request *model.ShowPrivateModuleVersionContentRequest) (*model.ShowPrivateModuleVersionContentResponse, error) {
+	requestDef := GenReqDefForShowPrivateModuleVersionContent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPrivateModuleVersionContentResponse), nil
+	}
+}
+
+// ShowPrivateModuleVersionContentInvoker 获取私有模块版本内容
+func (c *AosClient) ShowPrivateModuleVersionContentInvoker(request *model.ShowPrivateModuleVersionContentRequest) *ShowPrivateModuleVersionContentInvoker {
+	requestDef := GenReqDefForShowPrivateModuleVersionContent()
+	return &ShowPrivateModuleVersionContentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPrivateModuleVersionMetadata 获取私有模块版本元数据
+//
+// 获取私有模块版本元数据（ShowPrivateModuleVersionMetadata）
+//
+// 获取当前私有模块对应的版本的元数据信息
+//
+//   - 具体返回的信息见ShowPrivateModuleVersionMetadataResponseBody。
+//   - 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) ShowPrivateModuleVersionMetadata(request *model.ShowPrivateModuleVersionMetadataRequest) (*model.ShowPrivateModuleVersionMetadataResponse, error) {
+	requestDef := GenReqDefForShowPrivateModuleVersionMetadata()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPrivateModuleVersionMetadataResponse), nil
+	}
+}
+
+// ShowPrivateModuleVersionMetadataInvoker 获取私有模块版本元数据
+func (c *AosClient) ShowPrivateModuleVersionMetadataInvoker(request *model.ShowPrivateModuleVersionMetadataRequest) *ShowPrivateModuleVersionMetadataInvoker {
+	requestDef := GenReqDefForShowPrivateModuleVersionMetadata()
+	return &ShowPrivateModuleVersionMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePrivateModuleMetadata 更新私有模块元数据
+//
+// 更新私有模块元数据（UpdatePrivateModuleMetadata）
+//
+// 更新当前私有模块的元数据信息
+//
+//   - 目前只支持更新私有模块的描述
+//   - 如果需要创建新的版本，请调用CreatePrivateModuleVersion
+//   - 更新为增量更新，即如果某个参数不提供，则保持原始值
+//   - 如果请求中没有需要被更新的参数，则返回400。注意：即使更新原始值和目标值一致也被认为是有效更新
+//   - 更新后私有模块的更新时间（update_time）也会被更新
+//   - 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) UpdatePrivateModuleMetadata(request *model.UpdatePrivateModuleMetadataRequest) (*model.UpdatePrivateModuleMetadataResponse, error) {
+	requestDef := GenReqDefForUpdatePrivateModuleMetadata()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePrivateModuleMetadataResponse), nil
+	}
+}
+
+// UpdatePrivateModuleMetadataInvoker 更新私有模块元数据
+func (c *AosClient) UpdatePrivateModuleMetadataInvoker(request *model.UpdatePrivateModuleMetadataRequest) *UpdatePrivateModuleMetadataInvoker {
+	requestDef := GenReqDefForUpdatePrivateModuleMetadata()
+	return &UpdatePrivateModuleMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ContinueDeployStack 继续部署资源栈
 //
 // 继续部署资源栈（ContinueDeployStack）

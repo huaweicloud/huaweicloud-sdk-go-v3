@@ -1189,22 +1189,6 @@ func (i *SyncNodeInvoker) Invoke() (*model.SyncNodeResponse, error) {
 	}
 }
 
-type SyncNodePoolInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SyncNodePoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *SyncNodePoolInvoker) Invoke() (*model.SyncNodePoolResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SyncNodePoolResponse), nil
-	}
-}
-
 type UpdateAddonInstanceInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -3344,7 +3344,7 @@ func (c *MetaStudioClient) ListTtsaJobsInvoker(request *model.ListTtsaJobsReques
 	return &ListTtsaJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateAsyncTtsJob 创建TTS语音异步任务
+// CreateAsyncTtsJob 创建TTS异步任务
 //
 // 该接口用于对外生成音频文件
 //
@@ -3363,7 +3363,7 @@ func (c *MetaStudioClient) CreateAsyncTtsJob(request *model.CreateAsyncTtsJobReq
 	}
 }
 
-// CreateAsyncTtsJobInvoker 创建TTS语音异步任务
+// CreateAsyncTtsJobInvoker 创建TTS异步任务
 func (c *MetaStudioClient) CreateAsyncTtsJobInvoker(request *model.CreateAsyncTtsJobRequest) *CreateAsyncTtsJobInvoker {
 	requestDef := GenReqDefForCreateAsyncTtsJob()
 	return &CreateAsyncTtsJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3394,7 +3394,7 @@ func (c *MetaStudioClient) CreateTtsAuditionInvoker(request *model.CreateTtsAudi
 	return &CreateTtsAuditionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowAsyncTtsJob 获取音频语音文件
+// ShowAsyncTtsJob 获取TTS异步任务
 //
 // 该接口用于获取TTS音频文件下载链接。
 //
@@ -3409,7 +3409,7 @@ func (c *MetaStudioClient) ShowAsyncTtsJob(request *model.ShowAsyncTtsJobRequest
 	}
 }
 
-// ShowAsyncTtsJobInvoker 获取音频语音文件
+// ShowAsyncTtsJobInvoker 获取TTS异步任务
 func (c *MetaStudioClient) ShowAsyncTtsJobInvoker(request *model.ShowAsyncTtsJobRequest) *ShowAsyncTtsJobInvoker {
 	requestDef := GenReqDefForShowAsyncTtsJob()
 	return &ShowAsyncTtsJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

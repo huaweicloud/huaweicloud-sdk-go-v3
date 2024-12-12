@@ -27,6 +27,12 @@ type ImageAssetMeta struct {
 	// **参数解释**： 图片形态。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： * Horizontal：横向 * Vertical：纵向  **默认取值**： 不涉及。
 	Mode *ImageAssetMetaMode `json:"mode,omitempty"`
 
+	// **参数解释**： 视频帧率。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及
+	FrameRate *string `json:"frame_rate,omitempty"`
+
+	// **参数解释**： 时长,单位秒。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
+	Duration *int32 `json:"duration,omitempty"`
+
 	ErrorInfo *ErrorResponse `json:"error_info,omitempty"`
 }
 

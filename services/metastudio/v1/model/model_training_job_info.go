@@ -62,6 +62,9 @@ type TrainingJobInfo struct {
 	BatchName *string `json:"batch_name,omitempty"`
 
 	AllocatedResource *VoiceTrainingAllocatedResource `json:"allocated_resource,omitempty"`
+
+	// 模型输出语言类型
+	OutputLanguage *string `json:"output_language,omitempty"`
 }
 
 func (o TrainingJobInfo) String() string {

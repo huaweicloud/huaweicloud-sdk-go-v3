@@ -15,7 +15,7 @@ type ShowAsyncTtsJobResponse struct {
 	// 音频文件下载链接，有效期为1个小时。
 	AudioFileUrl *string `json:"audio_file_url,omitempty"`
 
-	// 音频信息文件下载链接，有效期为1个小时。
+	// 字幕文件下载链接，有效期为1个小时。
 	AudioInfoFileUrl *string `json:"audio_info_file_url,omitempty"`
 	HttpStatusCode   int     `json:"-"`
 }

@@ -26,6 +26,9 @@ type CacheRules struct {
 	// 缓存遵循源站开关，on：打开，off：关闭。  > 默认值为off。
 	FollowOrigin *string `json:"follow_origin,omitempty"`
 
+	// 强制缓存：CDN节点缓存过期时间是否忽略源站响应头Cache-Control中的no-cache、private、no-store字段，默认关闭强制缓存功能。强制缓存与缓存过期时间来源功能配合使用，具体使用限制及配置效果请参考CDN用户指南的配置节点缓存规则章节。on：打开强制缓存，off：关闭强制缓存
+	ForceCache *string `json:"force_cache,omitempty"`
+
 	// URL参数： - del_params：忽略指定URL参数， - reserve_params：保留指定URL参数， - ignore_url_params：忽略全部URL参数， - full_url：使用完整URL参数。   > 不传此参数时，默认为full_url。
 	UrlParameterType *string `json:"url_parameter_type,omitempty"`
 

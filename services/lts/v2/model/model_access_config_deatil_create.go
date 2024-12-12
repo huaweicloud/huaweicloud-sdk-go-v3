@@ -66,6 +66,33 @@ type AccessConfigDeatilCreate struct {
 
 	// K8s Label日志标签，最多支持创建30个，keyname不支持重名，仅CCE接入类型时使用
 	LogK8s map[string]string `json:"logK8s,omitempty"`
+
+	// 是否允许此文件重复采集
+	RepeatCollect *bool `json:"repeat_collect,omitempty"`
+
+	// 系统内置字段：配置日志接入规则时，可以配置系统内置字段，上报日志后，每条日志数据的标签数据中将会有系统字段 采集场景为主机文件的内置字段为：hostName、hostId、hostIP、pathFile、hostIPv6、category、collectTime、__host_group__ 采集场景为K8S集群容器文件的内置字段为：hostName、hostId、hostIP、pathFile、hostIPv6、clusterId、podName、appName、containerName、nameSpace、category、collectTime、__host_group__、serviceID、podIp、clusterName、workloadType 若修改时传入此字段，将覆盖原有配置
+	SystemFields *[]string `json:"system_fields,omitempty"`
+
+	// 自定义键值对：配置日志接入规则时，可以配置自定义键值对规则，上报日志后，每条日志数据的标签数据中将会有用户自定义的键值对字段，键值对数量不超过20 键的长度限制为128，允许的字符有a-zA-Z0-9_- 值的长度限制为1024
+	CustomKeyValue map[string]string `json:"custom_key_value,omitempty"`
+
+	// 容器 Label白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+	IncludeLabelsLogical *string `json:"includeLabelsLogical,omitempty"`
+
+	// 容器 Label黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+	ExcludeLabelsLogical *string `json:"excludeLabelsLogical,omitempty"`
+
+	// K8S Label白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+	IncludeK8sLabelsLogical *string `json:"includeK8sLabelsLogical,omitempty"`
+
+	// K8S Label黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+	ExcludeK8sLabelsLogical *string `json:"excludeK8sLabelsLogical,omitempty"`
+
+	// 环境变量白名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+	IncludeEnvsLogical *string `json:"includeEnvsLogical,omitempty"`
+
+	// 环境变量黑名单，可选为AND，OR，不配置时默认为OR；当存在多个值时的处理逻辑，AND表示同时满足才会生效，OR表示有一项满足就会生效
+	ExcludeEnvsLogical *string `json:"excludeEnvsLogical,omitempty"`
 }
 
 func (o AccessConfigDeatilCreate) String() string {

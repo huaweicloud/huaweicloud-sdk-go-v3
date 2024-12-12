@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -30,6 +33,12 @@ type SmartChatRoomBaseInfo struct {
 	// **参数解释**： 并发路数。
 	Concurrency *int32 `json:"concurrency,omitempty"`
 
+	// 语音配置参数列表。
+	VoiceConfigList *[]VoiceConfigRsp `json:"voice_config_list,omitempty"`
+
+	// 默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+	DefaultLanguage *SmartChatRoomBaseInfoDefaultLanguage `json:"default_language,omitempty"`
+
 	// 创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
 	CreateTime *string `json:"create_time,omitempty"`
 
@@ -44,4 +53,51 @@ func (o SmartChatRoomBaseInfo) String() string {
 	}
 
 	return strings.Join([]string{"SmartChatRoomBaseInfo", string(data)}, " ")
+}
+
+type SmartChatRoomBaseInfoDefaultLanguage struct {
+	value string
+}
+
+type SmartChatRoomBaseInfoDefaultLanguageEnum struct {
+	CN SmartChatRoomBaseInfoDefaultLanguage
+	EN SmartChatRoomBaseInfoDefaultLanguage
+}
+
+func GetSmartChatRoomBaseInfoDefaultLanguageEnum() SmartChatRoomBaseInfoDefaultLanguageEnum {
+	return SmartChatRoomBaseInfoDefaultLanguageEnum{
+		CN: SmartChatRoomBaseInfoDefaultLanguage{
+			value: "CN",
+		},
+		EN: SmartChatRoomBaseInfoDefaultLanguage{
+			value: "EN",
+		},
+	}
+}
+
+func (c SmartChatRoomBaseInfoDefaultLanguage) Value() string {
+	return c.value
+}
+
+func (c SmartChatRoomBaseInfoDefaultLanguage) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SmartChatRoomBaseInfoDefaultLanguage) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

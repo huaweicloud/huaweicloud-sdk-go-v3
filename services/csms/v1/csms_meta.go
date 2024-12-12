@@ -465,8 +465,8 @@ func GenReqDefForListUsers() *def.HttpRequestDef {
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("UserName").
-		WithJsonTag("user_name").
+		WithName("UserInfo").
+		WithJsonTag("user_info").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

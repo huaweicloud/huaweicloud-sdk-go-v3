@@ -43,6 +43,9 @@ type VideoConfig struct {
 
 	// **参数解释**： 视频是否开启超分。 **约束限制**： 仅分身数字人视频制作支持。 **取值范围** * true: 开启 * false: 不开启
 	IsEnableSuperResolution *bool `json:"is_enable_super_resolution,omitempty"`
+
+	// **参数解释**： 视频结束帧是否跟起始帧相同。需要多个数字人视频无缝拼接时设置成true。 **约束限制**： 仅分身数字人视频制作支持。 **取值范围** * true: 开启 * false: 不开启
+	IsEndAtFirstFrame *bool `json:"is_end_at_first_frame,omitempty"`
 }
 
 func (o VideoConfig) String() string {

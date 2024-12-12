@@ -31,6 +31,9 @@ type LtsFieldsInfo struct {
 
 	// 特殊分词符
 	Ascii *[]string `json:"ascii,omitempty"`
+
+	// json字段信息
+	LtsSubFieldsInfoList *[]LtsSubFieldsInfo `json:"ltsSubFieldsInfoList,omitempty"`
 }
 
 func (o LtsFieldsInfo) String() string {
@@ -50,6 +53,7 @@ type LtsFieldsInfoFieldTypeEnum struct {
 	STRING LtsFieldsInfoFieldType
 	LONG   LtsFieldsInfoFieldType
 	FLOAT  LtsFieldsInfoFieldType
+	JSON   LtsFieldsInfoFieldType
 }
 
 func GetLtsFieldsInfoFieldTypeEnum() LtsFieldsInfoFieldTypeEnum {
@@ -62,6 +66,9 @@ func GetLtsFieldsInfoFieldTypeEnum() LtsFieldsInfoFieldTypeEnum {
 		},
 		FLOAT: LtsFieldsInfoFieldType{
 			value: "float",
+		},
+		JSON: LtsFieldsInfoFieldType{
+			value: "json",
 		},
 	}
 }

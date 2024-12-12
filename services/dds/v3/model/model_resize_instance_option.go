@@ -15,7 +15,10 @@ type ResizeInstanceOption struct {
 	TargetType *ResizeInstanceOptionTargetType `json:"target_type,omitempty"`
 
 	// 待变更规格的节点ID或实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 - 对于集群实例，变更mongos节点规格时，取值为mongos节点ID；变更单个shard组规格时，取值为shard组ID；批量变更多个shard组规格时，不传该参数；变更config组规格时，取值为config组的ID。 - 对于副本集实例，取值为相应的实例ID。变更readonly节点规格时，取值为readonly节点ID。 - 对于单节点实例，取值为相应的实例ID。
-	TargetId string `json:"target_id"`
+	TargetId *string `json:"target_id,omitempty"`
+
+	// 待变更规格的节点组ID列表，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 - 对于集群实例，变更mongos节点规格时，不传该参数；变更单个shard组规格时，不传该参数；变更config组规格时，不传该参数；批量变更多个shard组规格时，取值为相应的多个shard组ID，最多支持16个shard组批量变更。 - 对于副本集实例，不传该参数。 - 对于单节点实例，不传该参数。
+	TargetIds *[]string `json:"target_ids,omitempty"`
 
 	// 变更至新规格的资源规格编码。
 	TargetSpecCode string `json:"target_spec_code"`

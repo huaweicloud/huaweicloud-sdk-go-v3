@@ -645,6 +645,22 @@ func (i *ListKeywordsAlarmRulesInvoker) Invoke() (*model.ListKeywordsAlarmRulesR
 	}
 }
 
+type ListLogContextInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLogContextInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListLogContextInvoker) Invoke() (*model.ListLogContextResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLogContextResponse), nil
+	}
+}
+
 type ListLogGroupsInvoker struct {
 	*invoker.BaseInvoker
 }

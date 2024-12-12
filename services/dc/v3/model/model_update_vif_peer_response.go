@@ -8,6 +8,10 @@ import (
 
 // UpdateVifPeerResponse Response Object
 type UpdateVifPeerResponse struct {
+
+	// 请求ID
+	RequestId *string `json:"request_id,omitempty"`
+
 	VifPeer        *VifPeer `json:"vif_peer,omitempty"`
 	HttpStatusCode int      `json:"-"`
 }

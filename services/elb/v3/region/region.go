@@ -66,6 +66,8 @@ var (
 		"https://elb.cn-east-5.myhuaweicloud.com")
 	RU_NORTHWEST_2 = region.NewRegion("ru-northwest-2",
 		"https://elb.ru-northwest-2.myhuaweicloud.com")
+	AP_SOUTHEAST_5 = region.NewRegion("ap-southeast-5",
+		"https://elb.ap-southeast-5.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -98,6 +100,7 @@ var staticFields = map[string]*region.Region{
 	"af-north-1":       AF_NORTH_1,
 	"cn-east-5":        CN_EAST_5,
 	"ru-northwest-2":   RU_NORTHWEST_2,
+	"ap-southeast-5":   AP_SOUTHEAST_5,
 }
 
 var provider = region.DefaultProviderChain("ELB")

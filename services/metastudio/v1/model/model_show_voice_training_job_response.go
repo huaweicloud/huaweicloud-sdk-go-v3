@@ -62,7 +62,10 @@ type ShowVoiceTrainingJobResponse struct {
 	BatchName *string `json:"batch_name,omitempty"`
 
 	AllocatedResource *VoiceTrainingAllocatedResource `json:"allocated_resource,omitempty"`
-	HttpStatusCode    int                             `json:"-"`
+
+	// 模型输出语言类型
+	OutputLanguage *string `json:"output_language,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowVoiceTrainingJobResponse) String() string {
