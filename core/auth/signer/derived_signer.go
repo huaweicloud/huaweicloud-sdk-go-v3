@@ -56,6 +56,7 @@ func (s DerivedSigner) Sign(r *request.DefaultHttpRequest, ak, sk, derivedAuthSe
 		return nil, errors.New("RegionId is required in credentials when using derived auth")
 	}
 
+	processContentHeader(r, xSdkContentSha256)
 	originalHeaders := r.GetHeaderParams()
 	t := extractTime(originalHeaders)
 	headerDate := t.UTC().Format(BasicDateFormat)
@@ -99,6 +100,13 @@ func (s DerivedSigner) authHeaderValue(signature, accessKey, info string, signed
 		info,
 		strings.Join(signedHeaders, ";"),
 		signature)
+}
+
+func (s DerivedSigner) processContentHeader(req *request.DefaultHttpRequest, contentHeader string) {
+	if contentType, ok := req.GetHeaderParams()["Content-Type"]; ok && (!strings.Contains(contentType, "application/json") &&
+		!strings.Contains(contentType, "application/bson")) {
+		req.AddHeaderParam(contentHeader, "UNSIGNED-PAYLOAD")
+	}
 }
 
 // getDerivationKey Get the derivation key for derived credential.

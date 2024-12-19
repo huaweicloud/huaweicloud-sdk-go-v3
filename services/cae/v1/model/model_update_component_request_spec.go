@@ -42,6 +42,7 @@ type UpdateComponentRequestSpecRuntimeEnum struct {
 	JAVA8    UpdateComponentRequestSpecRuntime
 	JAVA11   UpdateComponentRequestSpecRuntime
 	JAVA17   UpdateComponentRequestSpecRuntime
+	JAVA21   UpdateComponentRequestSpecRuntime
 	TOMCAT8  UpdateComponentRequestSpecRuntime
 	TOMCAT9  UpdateComponentRequestSpecRuntime
 	PYTHON3  UpdateComponentRequestSpecRuntime
@@ -68,6 +69,9 @@ func GetUpdateComponentRequestSpecRuntimeEnum() UpdateComponentRequestSpecRuntim
 		},
 		JAVA17: UpdateComponentRequestSpecRuntime{
 			value: "Java17",
+		},
+		JAVA21: UpdateComponentRequestSpecRuntime{
+			value: "Java21",
 		},
 		TOMCAT8: UpdateComponentRequestSpecRuntime{
 			value: "Tomcat8",

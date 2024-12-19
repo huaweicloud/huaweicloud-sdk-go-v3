@@ -168,6 +168,27 @@ func (c *DcsClient) ChangeMasterStandbyAsyncInvoker(request *model.ChangeMasterS
 	return &ChangeMasterStandbyAsyncInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeNodesStartStopStatus 指定实例节点启停开关
+//
+// 实例节点启停。执行节点关机操作前的24小时内，需要对实例（单机实例除外）进行数据备份。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ChangeNodesStartStopStatus(request *model.ChangeNodesStartStopStatusRequest) (*model.ChangeNodesStartStopStatusResponse, error) {
+	requestDef := GenReqDefForChangeNodesStartStopStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeNodesStartStopStatusResponse), nil
+	}
+}
+
+// ChangeNodesStartStopStatusInvoker 指定实例节点启停开关
+func (c *DcsClient) ChangeNodesStartStopStatusInvoker(request *model.ChangeNodesStartStopStatusRequest) *ChangeNodesStartStopStatusInvoker {
+	requestDef := GenReqDefForChangeNodesStartStopStatus()
+	return &ChangeNodesStartStopStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CopyInstance 备份指定实例
 //
 // 备份指定的缓存实例。
@@ -616,6 +637,27 @@ func (c *DcsClient) DeleteHotkeyScanTaskInvoker(request *model.DeleteHotkeyScanT
 	return &DeleteHotkeyScanTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteInstanceBandwidthAutoScalingPolicy 删除实例带宽弹性伸缩策略
+//
+// 删除实例带宽弹性伸缩策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) DeleteInstanceBandwidthAutoScalingPolicy(request *model.DeleteInstanceBandwidthAutoScalingPolicyRequest) (*model.DeleteInstanceBandwidthAutoScalingPolicyResponse, error) {
+	requestDef := GenReqDefForDeleteInstanceBandwidthAutoScalingPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteInstanceBandwidthAutoScalingPolicyResponse), nil
+	}
+}
+
+// DeleteInstanceBandwidthAutoScalingPolicyInvoker 删除实例带宽弹性伸缩策略
+func (c *DcsClient) DeleteInstanceBandwidthAutoScalingPolicyInvoker(request *model.DeleteInstanceBandwidthAutoScalingPolicyRequest) *DeleteInstanceBandwidthAutoScalingPolicyInvoker {
+	requestDef := GenReqDefForDeleteInstanceBandwidthAutoScalingPolicy()
+	return &DeleteInstanceBandwidthAutoScalingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteIpFromDomainName 域名摘除IP
 //
 // 将只读副本的IP从域名中摘除，摘除成功后，只读域名不会再解析到该副本IP。
@@ -656,6 +698,27 @@ func (c *DcsClient) DeleteMigrationTask(request *model.DeleteMigrationTaskReques
 func (c *DcsClient) DeleteMigrationTaskInvoker(request *model.DeleteMigrationTaskRequest) *DeleteMigrationTaskInvoker {
 	requestDef := GenReqDefForDeleteMigrationTask()
 	return &DeleteMigrationTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePublicIp 关闭实例公网访问
+//
+// 关闭实例公网访问。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) DeletePublicIp(request *model.DeletePublicIpRequest) (*model.DeletePublicIpResponse, error) {
+	requestDef := GenReqDefForDeletePublicIp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePublicIpResponse), nil
+	}
+}
+
+// DeletePublicIpInvoker 关闭实例公网访问
+func (c *DcsClient) DeletePublicIpInvoker(request *model.DeletePublicIpRequest) *DeletePublicIpInvoker {
+	requestDef := GenReqDefForDeletePublicIp()
+	return &DeletePublicIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteSingleInstance 删除实例
@@ -1673,6 +1736,27 @@ func (c *DcsClient) ShowBackgroundTaskProgressInvoker(request *model.ShowBackgro
 	return &ShowBackgroundTaskProgressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowBandwidths 获取实例分片带宽
+//
+// 获取实例各个分片带宽。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ShowBandwidths(request *model.ShowBandwidthsRequest) (*model.ShowBandwidthsResponse, error) {
+	requestDef := GenReqDefForShowBandwidths()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBandwidthsResponse), nil
+	}
+}
+
+// ShowBandwidthsInvoker 获取实例分片带宽
+func (c *DcsClient) ShowBandwidthsInvoker(request *model.ShowBandwidthsRequest) *ShowBandwidthsInvoker {
+	requestDef := GenReqDefForShowBandwidths()
+	return &ShowBandwidthsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowBigkeyAutoscanConfig 查询大key自动分析配置
 //
 // 查询大key自动分析配置。
@@ -1883,6 +1967,27 @@ func (c *DcsClient) ShowInstanceInvoker(request *model.ShowInstanceRequest) *Sho
 	return &ShowInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowInstanceBandwidthAutoScalingPolicy 查询实例带宽弹性伸缩策略
+//
+// 查询实例带宽弹性伸缩策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ShowInstanceBandwidthAutoScalingPolicy(request *model.ShowInstanceBandwidthAutoScalingPolicyRequest) (*model.ShowInstanceBandwidthAutoScalingPolicyResponse, error) {
+	requestDef := GenReqDefForShowInstanceBandwidthAutoScalingPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceBandwidthAutoScalingPolicyResponse), nil
+	}
+}
+
+// ShowInstanceBandwidthAutoScalingPolicyInvoker 查询实例带宽弹性伸缩策略
+func (c *DcsClient) ShowInstanceBandwidthAutoScalingPolicyInvoker(request *model.ShowInstanceBandwidthAutoScalingPolicyRequest) *ShowInstanceBandwidthAutoScalingPolicyInvoker {
+	requestDef := GenReqDefForShowInstanceBandwidthAutoScalingPolicy()
+	return &ShowInstanceBandwidthAutoScalingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowInstanceSslDetail 查询实例SSL信息
 //
 // 查询实例SSL信息。该接口目前仅针对Redis 6.0[基础版](tag:hws,hws_hk)版本实例。
@@ -1902,6 +2007,27 @@ func (c *DcsClient) ShowInstanceSslDetail(request *model.ShowInstanceSslDetailRe
 func (c *DcsClient) ShowInstanceSslDetailInvoker(request *model.ShowInstanceSslDetailRequest) *ShowInstanceSslDetailInvoker {
 	requestDef := GenReqDefForShowInstanceSslDetail()
 	return &ShowInstanceSslDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceVersion 根据实例ID获取实例内核版本信息
+//
+// 获取对应实例内核版本号。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ShowInstanceVersion(request *model.ShowInstanceVersionRequest) (*model.ShowInstanceVersionResponse, error) {
+	requestDef := GenReqDefForShowInstanceVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceVersionResponse), nil
+	}
+}
+
+// ShowInstanceVersionInvoker 根据实例ID获取实例内核版本信息
+func (c *DcsClient) ShowInstanceVersionInvoker(request *model.ShowInstanceVersionRequest) *ShowInstanceVersionInvoker {
+	requestDef := GenReqDefForShowInstanceVersion()
+	return &ShowInstanceVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowJobInfo 查询租户Job执行结果
@@ -2179,6 +2305,27 @@ func (c *DcsClient) UpdateAclAccountRemarkInvoker(request *model.UpdateAclAccoun
 	return &UpdateAclAccountRemarkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateBandwidth 修改实例分片带宽
+//
+// 修改实例分片带宽。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) UpdateBandwidth(request *model.UpdateBandwidthRequest) (*model.UpdateBandwidthResponse, error) {
+	requestDef := GenReqDefForUpdateBandwidth()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateBandwidthResponse), nil
+	}
+}
+
+// UpdateBandwidthInvoker 修改实例分片带宽
+func (c *DcsClient) UpdateBandwidthInvoker(request *model.UpdateBandwidthRequest) *UpdateBandwidthInvoker {
+	requestDef := GenReqDefForUpdateBandwidth()
+	return &UpdateBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateBigkeyAutoscanConfig 设置大key自动分析配置
 //
 // 设置大key自动分析配置。
@@ -2347,6 +2494,27 @@ func (c *DcsClient) UpdateInstanceBandwidthInvoker(request *model.UpdateInstance
 	return &UpdateInstanceBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateInstanceBandwidthAutoScalingPolicy 更新实例带宽弹性伸缩策略
+//
+// 更新实例带宽弹性伸缩策略。暂不支持实例带宽自动回缩。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) UpdateInstanceBandwidthAutoScalingPolicy(request *model.UpdateInstanceBandwidthAutoScalingPolicyRequest) (*model.UpdateInstanceBandwidthAutoScalingPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateInstanceBandwidthAutoScalingPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstanceBandwidthAutoScalingPolicyResponse), nil
+	}
+}
+
+// UpdateInstanceBandwidthAutoScalingPolicyInvoker 更新实例带宽弹性伸缩策略
+func (c *DcsClient) UpdateInstanceBandwidthAutoScalingPolicyInvoker(request *model.UpdateInstanceBandwidthAutoScalingPolicyRequest) *UpdateInstanceBandwidthAutoScalingPolicyInvoker {
+	requestDef := GenReqDefForUpdateInstanceBandwidthAutoScalingPolicy()
+	return &UpdateInstanceBandwidthAutoScalingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateInstanceConfig 异步修改实例配置参数
 //
 // 为了确保分布式缓存服务发挥出最优性能，您可以根据自己的业务情况对DCS缓存实例的运行参数进行调整。
@@ -2410,6 +2578,27 @@ func (c *DcsClient) UpdatePasswordInvoker(request *model.UpdatePasswordRequest) 
 	return &UpdatePasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdatePublicIp 开启/修改实例公网访问
+//
+// 开启/修改实例公网访问。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) UpdatePublicIp(request *model.UpdatePublicIpRequest) (*model.UpdatePublicIpResponse, error) {
+	requestDef := GenReqDefForUpdatePublicIp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePublicIpResponse), nil
+	}
+}
+
+// UpdatePublicIpInvoker 开启/修改实例公网访问
+func (c *DcsClient) UpdatePublicIpInvoker(request *model.UpdatePublicIpRequest) *UpdatePublicIpInvoker {
+	requestDef := GenReqDefForUpdatePublicIp()
+	return &UpdatePublicIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateSlavePriority 设置备节点优先级
 //
 // 设置副本优先级，主节点故障时，权重越小的备节点切换为主节点的优先级越高。
@@ -2450,6 +2639,27 @@ func (c *DcsClient) UpdateSslSwitch(request *model.UpdateSslSwitchRequest) (*mod
 func (c *DcsClient) UpdateSslSwitchInvoker(request *model.UpdateSslSwitchRequest) *UpdateSslSwitchInvoker {
 	requestDef := GenReqDefForUpdateSslSwitch()
 	return &UpdateSslSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpgradeInstanceMinorVersion 升级实例小版本
+//
+// 升级实例小版本。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) UpgradeInstanceMinorVersion(request *model.UpgradeInstanceMinorVersionRequest) (*model.UpgradeInstanceMinorVersionResponse, error) {
+	requestDef := GenReqDefForUpgradeInstanceMinorVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeInstanceMinorVersionResponse), nil
+	}
+}
+
+// UpgradeInstanceMinorVersionInvoker 升级实例小版本
+func (c *DcsClient) UpgradeInstanceMinorVersionInvoker(request *model.UpgradeInstanceMinorVersionRequest) *UpgradeInstanceMinorVersionInvoker {
+	requestDef := GenReqDefForUpgradeInstanceMinorVersion()
+	return &UpgradeInstanceMinorVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ValidateDeletableReplica 校验集群副本是否支持删除

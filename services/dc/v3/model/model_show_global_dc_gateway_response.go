@@ -8,11 +8,10 @@ import (
 
 // ShowGlobalDcGatewayResponse Response Object
 type ShowGlobalDcGatewayResponse struct {
-	RequestId *string `json:"request_id,omitempty"`
+	GlobalDcGateway *GlobalDcGatewayEntry `json:"global_dc_gateway,omitempty"`
 
-	GlobalDcGateway *ExternalShowGlobalDcGateway `json:"global_dc_gateway,omitempty"`
-
-	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	// 请求ID。
+	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

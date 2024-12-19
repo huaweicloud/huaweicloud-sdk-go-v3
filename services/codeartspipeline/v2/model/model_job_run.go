@@ -19,7 +19,7 @@ type JobRun struct {
 	Sequence *int32 `json:"sequence,omitempty"`
 
 	// 是否异步
-	Async *string `json:"async,omitempty"`
+	Async *bool `json:"async,omitempty"`
 
 	// 任务名称
 	Name *string `json:"name,omitempty"`

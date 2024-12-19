@@ -8,7 +8,12 @@ import (
 
 // UpdateConnectGatewayResponse Response Object
 type UpdateConnectGatewayResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 请求ID
+	RequestId *string `json:"request_id,omitempty"`
+
+	ConnectGateway *ConnectGatewayResponse `json:"connect_gateway,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o UpdateConnectGatewayResponse) String() string {

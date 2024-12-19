@@ -9,7 +9,7 @@ import (
 // UpdateGlobalDcGatewayRequest Request Object
 type UpdateGlobalDcGatewayRequest struct {
 
-	// 全球接入网关ID
+	// 全域接入网关ID
 	GlobalDcGatewayId string `json:"global_dc_gateway_id"`
 
 	Body *UpdateGlobalDcGatewayRequestBody `json:"body,omitempty"`

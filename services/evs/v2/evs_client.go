@@ -585,6 +585,29 @@ func (c *EvsClient) ShowVolumeTagsInvoker(request *model.ShowVolumeTagsRequest) 
 	return &ShowVolumeTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UnsubscribePostpaidVolume 退订包周期计费模式的云硬盘
+//
+// 退订包周期计费模式的云硬盘，有如下约束：
+// -  系统盘、启动盘不可使用当前接口退订，必须和弹性云服务器一起退订
+// -  接口的请求body体最多可以传60个云硬盘id
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) UnsubscribePostpaidVolume(request *model.UnsubscribePostpaidVolumeRequest) (*model.UnsubscribePostpaidVolumeResponse, error) {
+	requestDef := GenReqDefForUnsubscribePostpaidVolume()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UnsubscribePostpaidVolumeResponse), nil
+	}
+}
+
+// UnsubscribePostpaidVolumeInvoker 退订包周期计费模式的云硬盘
+func (c *EvsClient) UnsubscribePostpaidVolumeInvoker(request *model.UnsubscribePostpaidVolumeRequest) *UnsubscribePostpaidVolumeInvoker {
+	requestDef := GenReqDefForUnsubscribePostpaidVolume()
+	return &UnsubscribePostpaidVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateSnapshot 更新云硬盘快照
 //
 // 更新云硬盘快照。支持企业项目授权功能。

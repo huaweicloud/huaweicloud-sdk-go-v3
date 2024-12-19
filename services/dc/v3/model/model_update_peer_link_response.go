@@ -12,10 +12,8 @@ type UpdatePeerLinkResponse struct {
 	// 请求ID
 	RequestId *string `json:"request_id,omitempty"`
 
-	PeerLink *ExternalUpdatePeerLink `json:"peer_link,omitempty"`
-
-	XRequestId     *string `json:"X-Request-Id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	PeerLink       *ExternalUpdatePeerLink `json:"peer_link,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o UpdatePeerLinkResponse) String() string {

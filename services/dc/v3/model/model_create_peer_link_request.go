@@ -9,10 +9,10 @@ import (
 // CreatePeerLinkRequest Request Object
 type CreatePeerLinkRequest struct {
 
-	// 全球接入网关ID
+	// 全域接入网关ID
 	GlobalDcGatewayId string `json:"global_dc_gateway_id"`
 
-	Body *CreatePeerLinkRequestBody `json:"body,omitempty"`
+	Body *CreateExternalPeerLinkRequestBody `json:"body,omitempty"`
 }
 
 func (o CreatePeerLinkRequest) String() string {

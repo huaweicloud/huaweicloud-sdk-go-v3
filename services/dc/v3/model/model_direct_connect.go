@@ -56,13 +56,13 @@ type DirectConnect struct {
 	// 为托管hosted物理专线分配的vlan。
 	Vlan *int32 `json:"vlan,omitempty"`
 
-	// 资源状态，合法值是： ACTIVE：专线已经开通完成且线路处于正常状态 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 BUILD：申请专线正在施工建设中 ERROR：专线配置异常，请联系客服解决相关问题。 PENDING_DELETE：正在删除 DELETED：已删除 APPLY：申请开通 DENY：客户需求无法满足，拒绝工勘。 PENDING_PAY：待支付 PAID：已支付 PENDING_SURVEY：待工勘
+	// 资源状态，合法值是： ACTIVE：专线已经开通完成且线路处于正常状态 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 BUILD：申请专线正在施工建设中 ERROR：专线配置异常，请联系客服解决相关问题。 PENDING_DELETE：正在删除 DELETED：已删除 APPLY：申请开通 DENY：客户需求无法满足，拒绝工勘。 PENDING_PAY：待支付 PAID：已支付 PENDING_SURVEY：待工勘 LEASED_LINE_DELIVERY：运营商施工
 	Status *DirectConnectStatus `json:"status,omitempty"`
 
-	// 物理专线的申请时间
+	// 物理专线的申请时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
 	ApplyTime *sdktime.SdkTime `json:"apply_time,omitempty"`
 
-	// 物理专线的创建时间
+	// 物理专线的创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
 	// 物理专线的运营商操作状态，合法值是：ACTIVE， DOWN
@@ -92,13 +92,13 @@ type DirectConnect struct {
 	// 专线要求的网关类型
 	VgwType *DirectConnectVgwType `json:"vgw_type,omitempty"`
 
-	// 物理专线归属的链路聚合组(lag）的ID
+	// 物理专线归属的链路聚合组（lag）的ID
 	LagId *string `json:"lag_id,omitempty"`
 
-	// 专线协议的签暑状态
+	// 专线协议的签署状态
 	SignedAgreementStatus *DirectConnectSignedAgreementStatus `json:"signed_agreement_status,omitempty"`
 
-	// 专线协议的签暑时间
+	// 专线协议的签署时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
 	SignedAgreementTime *sdktime.SdkTime `json:"signed_agreement_time,omitempty"`
 
 	// 实例所属企业项目ID
@@ -112,7 +112,7 @@ type DirectConnect struct {
 	// 用户专线可支持的特性列表[（功能暂不支持）](tag:dt)
 	SupportFeature *[]string `json:"support_feature,omitempty"`
 
-	// 归属的IES站点的ID[（功能暂不支持）](tag:dt)
+	// 归属的CloudPond站点的ID[（功能暂不支持）](tag:dt)
 	IesId *string `json:"ies_id,omitempty"`
 
 	// 如果专线资源的状态是Error的情况下，该参数会显示相关错误信息。[（功能暂不支持）](tag:dt)
@@ -331,17 +331,18 @@ type DirectConnectStatus struct {
 }
 
 type DirectConnectStatusEnum struct {
-	BUILD          DirectConnectStatus
-	PAID           DirectConnectStatus
-	APPLY          DirectConnectStatus
-	PENDING_SURVEY DirectConnectStatus
-	ACTIVE         DirectConnectStatus
-	DOWN           DirectConnectStatus
-	ERROR          DirectConnectStatus
-	PENDING_DELETE DirectConnectStatus
-	DELETED        DirectConnectStatus
-	DENY           DirectConnectStatus
-	PENDING_PAY    DirectConnectStatus
+	BUILD                DirectConnectStatus
+	PAID                 DirectConnectStatus
+	APPLY                DirectConnectStatus
+	PENDING_SURVEY       DirectConnectStatus
+	ACTIVE               DirectConnectStatus
+	DOWN                 DirectConnectStatus
+	ERROR                DirectConnectStatus
+	PENDING_DELETE       DirectConnectStatus
+	DELETED              DirectConnectStatus
+	DENY                 DirectConnectStatus
+	PENDING_PAY          DirectConnectStatus
+	LEASED_LINE_DELIVERY DirectConnectStatus
 }
 
 func GetDirectConnectStatusEnum() DirectConnectStatusEnum {
@@ -378,6 +379,9 @@ func GetDirectConnectStatusEnum() DirectConnectStatusEnum {
 		},
 		PENDING_PAY: DirectConnectStatus{
 			value: "PENDING_PAY",
+		},
+		LEASED_LINE_DELIVERY: DirectConnectStatus{
+			value: "LEASED_LINE_DELIVERY",
 		},
 	}
 }

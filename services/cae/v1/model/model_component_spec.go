@@ -70,6 +70,7 @@ type ComponentSpecRuntimeEnum struct {
 	JAVA8    ComponentSpecRuntime
 	JAVA11   ComponentSpecRuntime
 	JAVA17   ComponentSpecRuntime
+	JAVA21   ComponentSpecRuntime
 	TOMCAT8  ComponentSpecRuntime
 	TOMCAT9  ComponentSpecRuntime
 	PYTHON3  ComponentSpecRuntime
@@ -96,6 +97,9 @@ func GetComponentSpecRuntimeEnum() ComponentSpecRuntimeEnum {
 		},
 		JAVA17: ComponentSpecRuntime{
 			value: "Java17",
+		},
+		JAVA21: ComponentSpecRuntime{
+			value: "Java21",
 		},
 		TOMCAT8: ComponentSpecRuntime{
 			value: "Tomcat8",

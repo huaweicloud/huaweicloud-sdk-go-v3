@@ -9,7 +9,7 @@ import (
 // DeleteGlobalDcGatewayRequest Request Object
 type DeleteGlobalDcGatewayRequest struct {
 
-	// 全球接入网关ID
+	// 全域接入网关ID
 	GlobalDcGatewayId string `json:"global_dc_gateway_id"`
 }
 

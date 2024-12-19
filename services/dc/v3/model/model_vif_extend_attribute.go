@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// VifExtendAttribute 接口BFD/NQA等可靠性检测信息,只有配置BFD和NQA的扩展参数才会显示扩展参数信息
+// VifExtendAttribute 接口BFD/NQA等可靠性检测信息,只有配置BFD和NQA的扩展参数才会显示扩展参数信息，扩展参数信息[（预留字段，暂不支持）](tag:dt)
 type VifExtendAttribute struct {
 
 	// 虚拟接口的可用性检测类型

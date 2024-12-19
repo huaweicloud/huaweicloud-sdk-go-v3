@@ -19,6 +19,27 @@ func AadClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// AddWafWhiteIpRule 防护策略web-cc黑白名单-创建黑白名单规则
+//
+// 防护策略web-cc黑白名单-创建黑白名单规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) AddWafWhiteIpRule(request *model.AddWafWhiteIpRuleRequest) (*model.AddWafWhiteIpRuleResponse, error) {
+	requestDef := GenReqDefForAddWafWhiteIpRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddWafWhiteIpRuleResponse), nil
+	}
+}
+
+// AddWafWhiteIpRuleInvoker 防护策略web-cc黑白名单-创建黑白名单规则
+func (c *AadClient) AddWafWhiteIpRuleInvoker(request *model.AddWafWhiteIpRuleRequest) *AddWafWhiteIpRuleInvoker {
+	requestDef := GenReqDefForAddWafWhiteIpRule()
+	return &AddWafWhiteIpRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDomain 创建防护域名
 //
 // 创建防护域名
@@ -59,6 +80,27 @@ func (c *AadClient) DeleteDomain(request *model.DeleteDomainRequest) (*model.Del
 func (c *AadClient) DeleteDomainInvoker(request *model.DeleteDomainRequest) *DeleteDomainInvoker {
 	requestDef := GenReqDefForDeleteDomain()
 	return &DeleteDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteWafWhiteIpRule 防护策略web-cc黑白名单-删除黑白名单规则
+//
+// 防护策略web-cc黑白名单-删除黑白名单规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) DeleteWafWhiteIpRule(request *model.DeleteWafWhiteIpRuleRequest) (*model.DeleteWafWhiteIpRuleResponse, error) {
+	requestDef := GenReqDefForDeleteWafWhiteIpRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteWafWhiteIpRuleResponse), nil
+	}
+}
+
+// DeleteWafWhiteIpRuleInvoker 防护策略web-cc黑白名单-删除黑白名单规则
+func (c *AadClient) DeleteWafWhiteIpRuleInvoker(request *model.DeleteWafWhiteIpRuleRequest) *DeleteWafWhiteIpRuleInvoker {
+	requestDef := GenReqDefForDeleteWafWhiteIpRule()
+	return &DeleteWafWhiteIpRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDDoSAttackEvent 查询DDoS攻击事件列表

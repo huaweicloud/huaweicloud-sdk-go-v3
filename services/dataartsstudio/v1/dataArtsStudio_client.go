@@ -4141,6 +4141,27 @@ func (c *DataArtsStudioClient) ResetLinkAttributeAndStandardInvoker(request *mod
 	return &ResetLinkAttributeAndStandardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RetryFactoryJobInstance 重跑作业实例
+//
+// 支持重跑作业实例以及上下游的作业实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) RetryFactoryJobInstance(request *model.RetryFactoryJobInstanceRequest) (*model.RetryFactoryJobInstanceResponse, error) {
+	requestDef := GenReqDefForRetryFactoryJobInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RetryFactoryJobInstanceResponse), nil
+	}
+}
+
+// RetryFactoryJobInstanceInvoker 重跑作业实例
+func (c *DataArtsStudioClient) RetryFactoryJobInstanceInvoker(request *model.RetryFactoryJobInstanceRequest) *RetryFactoryJobInstanceInvoker {
+	requestDef := GenReqDefForRetryFactoryJobInstance()
+	return &RetryFactoryJobInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RollbackApproval 撤回审批单
 //
 // 撤回审批单。

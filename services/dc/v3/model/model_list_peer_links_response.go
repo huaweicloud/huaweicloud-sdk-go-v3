@@ -8,13 +8,14 @@ import (
 
 // ListPeerLinksResponse Response Object
 type ListPeerLinksResponse struct {
-	RequestId *string `json:"request_id,omitempty"`
 
-	PeerLinks *[]ExternalListPeerLinks `json:"peer_links,omitempty"`
+	// 专线关联连接列表。
+	PeerLinks *[]PeerLinkEntry `json:"peer_links,omitempty"`
 
 	PageInfo *PageInfo `json:"page_info,omitempty"`
 
-	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	// 请求ID。
+	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

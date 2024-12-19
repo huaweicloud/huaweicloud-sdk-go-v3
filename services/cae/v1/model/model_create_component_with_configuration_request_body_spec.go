@@ -46,6 +46,7 @@ type CreateComponentWithConfigurationRequestBodySpecRuntimeEnum struct {
 	JAVA8    CreateComponentWithConfigurationRequestBodySpecRuntime
 	JAVA11   CreateComponentWithConfigurationRequestBodySpecRuntime
 	JAVA17   CreateComponentWithConfigurationRequestBodySpecRuntime
+	JAVA21   CreateComponentWithConfigurationRequestBodySpecRuntime
 	TOMCAT8  CreateComponentWithConfigurationRequestBodySpecRuntime
 	TOMCAT9  CreateComponentWithConfigurationRequestBodySpecRuntime
 	PYTHON3  CreateComponentWithConfigurationRequestBodySpecRuntime
@@ -72,6 +73,9 @@ func GetCreateComponentWithConfigurationRequestBodySpecRuntimeEnum() CreateCompo
 		},
 		JAVA17: CreateComponentWithConfigurationRequestBodySpecRuntime{
 			value: "Java17",
+		},
+		JAVA21: CreateComponentWithConfigurationRequestBodySpecRuntime{
+			value: "Java21",
 		},
 		TOMCAT8: CreateComponentWithConfigurationRequestBodySpecRuntime{
 			value: "Tomcat8",

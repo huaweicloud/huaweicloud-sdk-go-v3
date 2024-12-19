@@ -149,6 +149,22 @@ func (i *ExecuteDeviceControlsSetInvoker) Invoke() (*model.ExecuteDeviceControls
 	}
 }
 
+type ListPropertyActiveControlsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPropertyActiveControlsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPropertyActiveControlsInvoker) Invoke() (*model.ListPropertyActiveControlsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPropertyActiveControlsResponse), nil
+	}
+}
+
 type SetDeviceControlDefaultValuesInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -208,6 +208,27 @@ func (c *IoTEdgeClient) ExecuteDeviceControlsSetInvoker(request *model.ExecuteDe
 	return &ExecuteDeviceControlsSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPropertyActiveControls 获取属性执行中的控制
+//
+// 获取属性执行中的控制
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) ListPropertyActiveControls(request *model.ListPropertyActiveControlsRequest) (*model.ListPropertyActiveControlsResponse, error) {
+	requestDef := GenReqDefForListPropertyActiveControls()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPropertyActiveControlsResponse), nil
+	}
+}
+
+// ListPropertyActiveControlsInvoker 获取属性执行中的控制
+func (c *IoTEdgeClient) ListPropertyActiveControlsInvoker(request *model.ListPropertyActiveControlsRequest) *ListPropertyActiveControlsInvoker {
+	requestDef := GenReqDefForListPropertyActiveControls()
+	return &ListPropertyActiveControlsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetDeviceControlDefaultValues 设备控制默认值
 //
 // 设备控制默认值

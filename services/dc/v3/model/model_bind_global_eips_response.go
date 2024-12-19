@@ -12,10 +12,8 @@ type BindGlobalEipsResponse struct {
 	// 请求ID
 	RequestId *string `json:"request_id,omitempty"`
 
-	GlobalEips *ListBindingGeip `json:"global_eips,omitempty"`
-
-	XRequestId     *string `json:"X-Request-Id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	GlobalEips     *ListBindingGeip `json:"global_eips,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o BindGlobalEipsResponse) String() string {

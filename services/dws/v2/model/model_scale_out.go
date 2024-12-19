@@ -11,6 +11,9 @@ type ScaleOut struct {
 
 	// 扩容节点数。
 	Count int32 `json:"count"`
+
+	// 指定子网ID。
+	SubnetId *string `json:"subnet_id,omitempty"`
 }
 
 func (o ScaleOut) String() string {

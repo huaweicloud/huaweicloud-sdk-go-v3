@@ -33,7 +33,7 @@ type ListVirtualGatewaysRequest struct {
 	// 根据企业项目ID过滤资源实例
 	EnterpriseProjectId *[]string `json:"enterprise_project_id,omitempty"`
 
-	// 通过VPC-ID过虑虚拟网关实例
+	// 通过VPC-ID过滤虚拟网关实例
 	VpcId *[]string `json:"vpc_id,omitempty"`
 }
 

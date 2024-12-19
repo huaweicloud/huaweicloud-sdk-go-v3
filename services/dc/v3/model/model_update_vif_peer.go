@@ -10,13 +10,13 @@ import (
 type UpdateVifPeer struct {
 
 	// VIF对等体名字
-	Name string `json:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// VIF对等体名字描述信息
 	Description *string `json:"description,omitempty"`
 
 	// 远端子网列表，记录用户侧的cidrs
-	RemoteEpGroup []string `json:"remote_ep_group"`
+	RemoteEpGroup *[]string `json:"remote_ep_group,omitempty"`
 }
 
 func (o UpdateVifPeer) String() string {

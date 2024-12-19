@@ -13,9 +13,6 @@ type BandwidthInfoExternal struct {
 
 	// 带宽包ID
 	GcbId *string `json:"gcb_id,omitempty"`
-
-	// 冻结状态
-	FreezeStatus *string `json:"freeze_status,omitempty"`
 }
 
 func (o BandwidthInfoExternal) String() string {

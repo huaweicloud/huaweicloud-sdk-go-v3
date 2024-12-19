@@ -421,6 +421,22 @@ func (i *ShowVolumeTagsInvoker) Invoke() (*model.ShowVolumeTagsResponse, error) 
 	}
 }
 
+type UnsubscribePostpaidVolumeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UnsubscribePostpaidVolumeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UnsubscribePostpaidVolumeInvoker) Invoke() (*model.UnsubscribePostpaidVolumeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UnsubscribePostpaidVolumeResponse), nil
+	}
+}
+
 type UpdateSnapshotInvoker struct {
 	*invoker.BaseInvoker
 }

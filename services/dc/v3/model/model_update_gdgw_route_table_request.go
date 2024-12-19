@@ -9,7 +9,7 @@ import (
 // UpdateGdgwRouteTableRequest Request Object
 type UpdateGdgwRouteTableRequest struct {
 
-	// 全球接入网关ID
+	// 全域接入网关ID
 	GdgwId string `json:"gdgw_id"`
 
 	Body *UpdateGdgwRoutetableRequestBody `json:"body,omitempty"`

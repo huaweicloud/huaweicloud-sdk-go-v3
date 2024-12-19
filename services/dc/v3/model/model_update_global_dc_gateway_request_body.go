@@ -6,13 +6,9 @@ import (
 	"strings"
 )
 
-// UpdateGlobalDcGatewayRequestBody 创建全球接入网关请求体
+// UpdateGlobalDcGatewayRequestBody 更新global-dc-gateway的请求体。
 type UpdateGlobalDcGatewayRequestBody struct {
-
-	// 空运行？ true-是，false-否
-	DryRun *bool `json:"dry_run,omitempty"`
-
-	GlobalDcGateway *UpdateGlobalDcGatewayRequestBodyGlobalDcGateway `json:"global_dc_gateway,omitempty"`
+	GlobalDcGateway *UpdateGlobalDcGateway `json:"global_dc_gateway"`
 }
 
 func (o UpdateGlobalDcGatewayRequestBody) String() string {

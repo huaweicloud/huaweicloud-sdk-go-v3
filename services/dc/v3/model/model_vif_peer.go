@@ -63,7 +63,7 @@ type VifPeer struct {
 	// vif对等体对应的虚拟接口ID
 	VifId *string `json:"vif_id,omitempty"`
 
-	// 路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入华为云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
+	// 路由模式为bgp：receive_route_num值为接收搭配BGP的路由数目； 路由模式为static：该字段无意义，值为-1； 注：若早期接入云的部分用户无法获取该字段信息，如需要请联系客服迁移专线端口。
 	ReceiveRouteNum *int32 `json:"receive_route_num,omitempty"`
 
 	// 是否使能nqa功能：true或false

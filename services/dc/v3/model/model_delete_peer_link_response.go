@@ -8,8 +8,7 @@ import (
 
 // DeletePeerLinkResponse Response Object
 type DeletePeerLinkResponse struct {
-	XRequestId     *string `json:"X-Request-Id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeletePeerLinkResponse) String() string {

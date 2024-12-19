@@ -5,6 +5,22 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/aad/v2/model"
 )
 
+type AddWafWhiteIpRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddWafWhiteIpRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddWafWhiteIpRuleInvoker) Invoke() (*model.AddWafWhiteIpRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddWafWhiteIpRuleResponse), nil
+	}
+}
+
 type CreateDomainInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -34,6 +50,22 @@ func (i *DeleteDomainInvoker) Invoke() (*model.DeleteDomainResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteDomainResponse), nil
+	}
+}
+
+type DeleteWafWhiteIpRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteWafWhiteIpRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteWafWhiteIpRuleInvoker) Invoke() (*model.DeleteWafWhiteIpRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteWafWhiteIpRuleResponse), nil
 	}
 }
 

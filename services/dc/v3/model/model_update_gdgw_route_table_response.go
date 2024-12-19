@@ -9,14 +9,12 @@ import (
 // UpdateGdgwRouteTableResponse Response Object
 type UpdateGdgwRouteTableResponse struct {
 
-	// 请求ID
+	// 请求id
 	RequestId *string `json:"request_id,omitempty"`
 
-	// 路由表详细对象
+	// 全域接入网关路由表
 	GdgwRoutetable *[]ShowGdgwRoutetable `json:"gdgw_routetable,omitempty"`
-
-	XRequestId     *string `json:"X-Request-Id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HttpStatusCode int                   `json:"-"`
 }
 
 func (o UpdateGdgwRouteTableResponse) String() string {

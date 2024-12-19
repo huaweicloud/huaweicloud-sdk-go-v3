@@ -23,8 +23,11 @@ type VirtualInterface struct {
 	// 虚拟接口接入带宽
 	Bandwidth *int32 `json:"bandwidth,omitempty"`
 
-	// 虚拟接口创建时间
+	// 虚拟接口创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+
+	// 虚拟接口修改时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
 	// 虚拟接口的描述
 	Description *string `json:"description,omitempty"`
@@ -56,7 +59,7 @@ type VirtualInterface struct {
 	// 是否使能nqa功能：true或false
 	EnableNqa *bool `json:"enable_nqa,omitempty"`
 
-	// 是否使能nqa功能：true或false
+	// 是否使能bfd功能：true或false
 	EnableBfd *bool `json:"enable_bfd,omitempty"`
 
 	// VIF关联的链路聚合组ID
@@ -77,7 +80,7 @@ type VirtualInterface struct {
 	// 客户侧网关IPv4接口地址，该字段现已经移到vifpeer参数列表中，未来将会废弃。
 	RemoteGatewayV4Ip *string `json:"remote_gateway_v4_ip,omitempty"`
 
-	// 归属的IES站点的ID[（功能暂不支持）](tag:dt)
+	// 归属的CloudPond站点的ID[（功能暂不支持）](tag:dt)
 	IesId *string `json:"ies_id,omitempty"`
 
 	// 如果资源的状态是Error的情况下，该参数会显示相关错误信息。
@@ -95,7 +98,7 @@ type VirtualInterface struct {
 	// 客户侧网关IPv6接口地址，该字段现已迁移到vifpeer参数列表中，未来将会废弃。
 	RemoteGatewayV6Ip *string `json:"remote_gateway_v6_ip,omitempty"`
 
-	// 本地网关的ID，用于IES场景。[（功能暂不支持）](tag:dt)
+	// 本地网关的ID，用于CloudPond场景。[（功能暂不支持）](tag:dt)
 	LgwId *string `json:"lgw_id,omitempty"`
 
 	// 虚拟接口关联的网关的ID
@@ -113,7 +116,7 @@ type VirtualInterface struct {
 	// 虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
 	Priority *VirtualInterfacePriority `json:"priority,omitempty"`
 
-	// vif的Peer的相关信息
+	// vif的Peer的相关信息[（预留字段，暂不支持）](tag:dt)
 	VifPeers *[]VifPeer `json:"vif_peers,omitempty"`
 
 	ExtendAttribute *VifExtendAttribute `json:"extend_attribute,omitempty"`

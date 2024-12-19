@@ -1285,6 +1285,22 @@ func (i *ListStorageTypesInvoker) Invoke() (*model.ListStorageTypesResponse, err
 	}
 }
 
+type ListUpdateBackupEnhancePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUpdateBackupEnhancePolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListUpdateBackupEnhancePolicyInvoker) Invoke() (*model.ListUpdateBackupEnhancePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUpdateBackupEnhancePolicyResponse), nil
+	}
+}
+
 type ListUpgradeHistoriesInvoker struct {
 	*invoker.BaseInvoker
 }

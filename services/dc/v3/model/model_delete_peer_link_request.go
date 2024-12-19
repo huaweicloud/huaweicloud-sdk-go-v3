@@ -9,10 +9,10 @@ import (
 // DeletePeerLinkRequest Request Object
 type DeletePeerLinkRequest struct {
 
-	// 全球接入网关ID
+	// 全域接入网关ID
 	GlobalDcGatewayId string `json:"global_dc_gateway_id"`
 
-	// 全球接入网关对等体
+	// 全域接入网关对等体
 	PeerLinkId string `json:"peer_link_id"`
 }
 

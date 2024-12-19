@@ -3141,6 +3141,22 @@ func (i *ResetLinkAttributeAndStandardInvoker) Invoke() (*model.ResetLinkAttribu
 	}
 }
 
+type RetryFactoryJobInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RetryFactoryJobInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RetryFactoryJobInstanceInvoker) Invoke() (*model.RetryFactoryJobInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RetryFactoryJobInstanceResponse), nil
+	}
+}
+
 type RollbackApprovalInvoker struct {
 	*invoker.BaseInvoker
 }

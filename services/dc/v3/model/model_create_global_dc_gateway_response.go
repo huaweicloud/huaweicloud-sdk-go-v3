@@ -8,13 +8,10 @@ import (
 
 // CreateGlobalDcGatewayResponse Response Object
 type CreateGlobalDcGatewayResponse struct {
+	GlobalDcGateway *CreateGlobalDcGatewayEntry `json:"global_dc_gateway,omitempty"`
 
-	// 请求ID
-	RequestId *string `json:"request_id,omitempty"`
-
-	GlobalDcGateway *ExternalCreateGlobalDcGateway `json:"global_dc_gateway,omitempty"`
-
-	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	// 请求ID。
+	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

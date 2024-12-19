@@ -6,13 +6,9 @@ import (
 	"strings"
 )
 
-// PeerSiteExternal 对等体对象
 type PeerSiteExternal struct {
 
-	// 类型
-	Type *string `json:"type,omitempty"`
-
-	// 网关ID
+	// 全域接入网关ID
 	GatewayId *string `json:"gateway_id,omitempty"`
 
 	// 连接ID
@@ -24,7 +20,7 @@ type PeerSiteExternal struct {
 	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 站点编码
+	// 网点编码
 	SiteCode *string `json:"site_code,omitempty"`
 }
 

@@ -9,7 +9,7 @@ import (
 
 type ExternalCreatePeerLink struct {
 
-	// 唯一ID
+	// 专线对等连接
 	Id *string `json:"id,omitempty"`
 
 	// 租户ID
@@ -18,29 +18,26 @@ type ExternalCreatePeerLink struct {
 	// 名称
 	Name string `json:"name"`
 
-	// 描述
+	// 描述信息
 	Description *string `json:"description,omitempty"`
 
-	// 全球接入网关ID
+	// 全域接入网关ID
 	GlobalDcGatewayId *string `json:"global_dc_gateway_id,omitempty"`
-
-	// 实例ID
-	InstanceId *string `json:"instance_id,omitempty"`
 
 	BandwidthInfo *BandwidthInfoExternal `json:"bandwidth_info,omitempty"`
 
 	PeerSite *PeerSiteExternal `json:"peer_site"`
 
-	// 状态： ACTIVE-正常
+	// '状态信息' - ACTIVE 正常 - ERROR 异常
 	Status *string `json:"status,omitempty"`
 
-	// 原因
+	// 失败原因
 	Reason *string `json:"reason,omitempty"`
 
 	// 创建时间
 	CreatedTime *sdktime.SdkTime `json:"created_time,omitempty"`
 
-	// 修改时间
+	// 更新时间
 	UpdatedTime *sdktime.SdkTime `json:"updated_time,omitempty"`
 }
 

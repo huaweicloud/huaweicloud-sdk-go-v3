@@ -26,10 +26,10 @@ type SwitchoverTestRecord struct {
 	// shutdown, undo_shutdown表示倒换测试操作类型
 	Operation *SwitchoverTestRecordOperation `json:"operation,omitempty"`
 
-	// 倒换测试操作的开始时间
+	// 倒换测试操作的开始时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
 	StartTime *sdktime.SdkTime `json:"start_time,omitempty"`
 
-	// 倒换测试操作的结束时间
+	// 倒换测试操作的结束时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
 	EndTime *sdktime.SdkTime `json:"end_time,omitempty"`
 
 	// 倒换测试状态记录 STARTING: 初始状态 INPROGRESS: 配置下发中 COMPLETE: 配置下发完成 ERROR: 配置下发失败

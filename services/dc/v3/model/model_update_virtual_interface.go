@@ -24,13 +24,13 @@ type UpdateVirtualInterface struct {
 	// 远端子网列表，记录租户侧的cidrs
 	RemoteEpGroup *[]string `json:"remote_ep_group,omitempty"`
 
-	// 用于公网专线,用户访问公网服务地址列表
+	// 用于公网专线,用户访问公网服务地址列表。[（预留字段，暂不支持）](tag:dt)
 	ServiceEpGroup *[]string `json:"service_ep_group,omitempty"`
 
-	// 是否使能bfd功能：true或false
+	// 是否使能bfd功能：true或false。[（预留字段，暂不支持）](tag:dt)
 	EnableBfd *bool `json:"enable_bfd,omitempty"`
 
-	// 是否使能nqa功能：true或false
+	// 是否使能nqa功能：true或false。[（预留字段，暂不支持）](tag:dt)
 	EnableNqa *bool `json:"enable_nqa,omitempty"`
 
 	// 对其他租户创建的虚拟接口进行确认,可以是ACCEPTED和REJECTED

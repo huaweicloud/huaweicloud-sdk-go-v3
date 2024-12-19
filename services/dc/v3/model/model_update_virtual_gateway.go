@@ -15,10 +15,10 @@ type UpdateVirtualGateway struct {
 	// 虚拟网关的描述信息
 	Description *string `json:"description,omitempty"`
 
-	// 虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs
+	// 虚拟网关到访问云上服务IPv4子网列表，通常是vpc的cidrs[，当虚拟网关接入VPC时该列表才允许更新。](tag:dt)
 	LocalEpGroup *[]string `json:"local_ep_group,omitempty"`
 
-	// 虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs
+	// 虚拟网关到访问云上服务IPv6子网列表，通常是vpc的cidrs。[（预留字段，暂不支持）](tag:dt)
 	LocalEpGroupIpv6 *[]string `json:"local_ep_group_ipv6,omitempty"`
 }
 

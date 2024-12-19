@@ -1,0 +1,36 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// BatchShowUpgradeCandidateVersionsResponse Response Object
+type BatchShowUpgradeCandidateVersionsResponse struct {
+
+	// 升级类型信息列表。
+	UpgradeTypeList *[]UpgradeTypeInfo `json:"upgrade_type_list,omitempty"`
+
+	// 升级目标版本，没有在滚动升级中返回null。
+	TargetVersion *string `json:"target_version,omitempty"`
+
+	// 可以升级的版本，包括大小版本。
+	UpgradeCandidateVersions *[]string `json:"upgrade_candidate_versions,omitempty"`
+
+	// 可以升级的热补丁信息。
+	HotfixUpgradeInfos *[]HotfixInfoResult `json:"hotfix_upgrade_infos,omitempty"`
+
+	// 可以回滚的热补丁信息。
+	HotfixRollbackInfos *[]HotfixInfoResult `json:"hotfix_rollback_infos,omitempty"`
+	HttpStatusCode      int                 `json:"-"`
+}
+
+func (o BatchShowUpgradeCandidateVersionsResponse) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "BatchShowUpgradeCandidateVersionsResponse struct{}"
+	}
+
+	return strings.Join([]string{"BatchShowUpgradeCandidateVersionsResponse", string(data)}, " ")
+}

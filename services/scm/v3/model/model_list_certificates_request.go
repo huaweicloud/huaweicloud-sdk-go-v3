@@ -29,6 +29,9 @@ type ListCertificatesRequest struct {
 
 	// 是否支持部署。
 	DeploySupport *bool `json:"deploy_support,omitempty"`
+
+	// 过滤资源是否属于当前租户，取值如下： - true：只查属于当前租户的资源，不包括共享资源。 - false：查询当前租户及共享给该租户的资源。
+	OwnedBySelf *bool `json:"owned_by_self,omitempty"`
 }
 
 func (o ListCertificatesRequest) String() string {

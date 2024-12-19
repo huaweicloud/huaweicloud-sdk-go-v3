@@ -41,6 +41,9 @@ type SmartDocumentRecognizerRequestBody struct {
 	// 需要传入字典的json序列化后字符串，用于对kv_result中的特定key值进行归一化映射。例如，kv_result中包含{\"名称\"：\"小明\"}的键值对，若传入{\"名称\"：\"姓名\"}的kv_map，则返回结果为{“姓名”：“小明”}。  > 参数传入示例： - \"kv_map\":\"{\\\"名称\\\":\\\"姓名\\\"}\"
 	KvMap *string `json:"kv_map,omitempty"`
 
+	// 是否进行印章擦除。开启后，可提升印章遮挡区域的文字识别精度。
+	EraseSeal *bool `json:"erase_seal,omitempty"`
+
 	// 指定PDF页码识别。传入该参数时，则识别指定页码的内容。如果不传该参数，则默认识别第1页。
 	PdfPageNumber *int32 `json:"pdf_page_number,omitempty"`
 }

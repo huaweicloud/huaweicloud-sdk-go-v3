@@ -32,10 +32,12 @@ type ShowUpgradeCandidateVersionsResponse struct {
 	// 可以回滚的热补丁版本，滚动升级中返回空数组。
 	HotfixRollbackCandidateVersions *[]string `json:"hotfix_rollback_candidate_versions,omitempty"`
 
-	HotfixUpgradeInfos *HotfixUpgradeInfos `json:"hotfix_upgrade_infos,omitempty"`
+	// 可以升级的热补丁信息。
+	HotfixUpgradeInfos *[]HotfixUpgradeInfos `json:"hotfix_upgrade_infos,omitempty"`
 
-	HotfixRollbackInfos *HotfixRollbackInfos `json:"hotfix_rollback_infos,omitempty"`
-	HttpStatusCode      int                  `json:"-"`
+	// 可以回滚的热补丁信息。
+	HotfixRollbackInfos *[]HotfixRollbackInfos `json:"hotfix_rollback_infos,omitempty"`
+	HttpStatusCode      int                    `json:"-"`
 }
 
 func (o ShowUpgradeCandidateVersionsResponse) String() string {

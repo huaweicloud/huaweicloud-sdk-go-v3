@@ -12,7 +12,7 @@ type CreateSnapshotPolicyRequest struct {
 	// 集群ID
 	ClusterId string `json:"cluster_id"`
 
-	Body *BackupPolicy `json:"body,omitempty"`
+	Body *CreateSnapshotPolicyRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateSnapshotPolicyRequest) String() string {

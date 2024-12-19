@@ -1702,6 +1702,27 @@ func (c *RdsClient) ListStorageTypesInvoker(request *model.ListStorageTypesReque
 	return &ListStorageTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListUpdateBackupEnhancePolicy 查询高级备份策略
+//
+// 查询高级备份策略，可查看自定义稀疏备份等
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListUpdateBackupEnhancePolicy(request *model.ListUpdateBackupEnhancePolicyRequest) (*model.ListUpdateBackupEnhancePolicyResponse, error) {
+	requestDef := GenReqDefForListUpdateBackupEnhancePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUpdateBackupEnhancePolicyResponse), nil
+	}
+}
+
+// ListUpdateBackupEnhancePolicyInvoker 查询高级备份策略
+func (c *RdsClient) ListUpdateBackupEnhancePolicyInvoker(request *model.ListUpdateBackupEnhancePolicyRequest) *ListUpdateBackupEnhancePolicyInvoker {
+	requestDef := GenReqDefForListUpdateBackupEnhancePolicy()
+	return &ListUpdateBackupEnhancePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListUpgradeHistories
 //
 // 查询实例大版本升级历史信息。

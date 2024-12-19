@@ -61,7 +61,7 @@ type ScalingActivityLogListStatus struct {
 type ScalingActivityLogListStatusEnum struct {
 	SUCCESS ScalingActivityLogListStatus
 	FAIL    ScalingActivityLogListStatus
-	DING    ScalingActivityLogListStatus
+	DOING   ScalingActivityLogListStatus
 }
 
 func GetScalingActivityLogListStatusEnum() ScalingActivityLogListStatusEnum {
@@ -72,8 +72,8 @@ func GetScalingActivityLogListStatusEnum() ScalingActivityLogListStatusEnum {
 		FAIL: ScalingActivityLogListStatus{
 			value: "FAIL",
 		},
-		DING: ScalingActivityLogListStatus{
-			value: "DING",
+		DOING: ScalingActivityLogListStatus{
+			value: "DOING",
 		},
 	}
 }

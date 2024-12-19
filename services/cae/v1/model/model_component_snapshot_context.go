@@ -96,6 +96,7 @@ type ComponentSnapshotContextRuntimeEnum struct {
 	JAVA8    ComponentSnapshotContextRuntime
 	JAVA11   ComponentSnapshotContextRuntime
 	JAVA17   ComponentSnapshotContextRuntime
+	JAVA21   ComponentSnapshotContextRuntime
 	TOMCAT8  ComponentSnapshotContextRuntime
 	TOMCAT9  ComponentSnapshotContextRuntime
 	PYTHON3  ComponentSnapshotContextRuntime
@@ -122,6 +123,9 @@ func GetComponentSnapshotContextRuntimeEnum() ComponentSnapshotContextRuntimeEnu
 		},
 		JAVA17: ComponentSnapshotContextRuntime{
 			value: "Java17",
+		},
+		JAVA21: ComponentSnapshotContextRuntime{
+			value: "Java21",
 		},
 		TOMCAT8: ComponentSnapshotContextRuntime{
 			value: "Tomcat8",

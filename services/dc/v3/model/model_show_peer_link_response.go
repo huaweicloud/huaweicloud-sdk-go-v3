@@ -8,13 +8,10 @@ import (
 
 // ShowPeerLinkResponse Response Object
 type ShowPeerLinkResponse struct {
+	PeerLink *PeerLinkEntry `json:"peer_link,omitempty"`
 
-	// 请求ID
-	RequestId *string `json:"request_id,omitempty"`
-
-	PeerLink *ExternalShowPeerLink `json:"peer_link,omitempty"`
-
-	XRequestId     *string `json:"X-Request-Id,omitempty"`
+	// 请求ID。
+	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

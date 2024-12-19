@@ -18,7 +18,7 @@ type CreateVirtualInterface struct {
 	// 虚拟接口描述信息
 	Description *string `json:"description,omitempty"`
 
-	// 虚拟接口关联的物理专线ID
+	// 虚拟接口关联的物理专线ID。在创建虚拟接口时，需要关联direct_connect_id或lag_id，当LAG功能在当前局点不支持时，该参数为必选。
 	DirectConnectId *string `json:"direct_connect_id,omitempty"`
 
 	// 虚拟接口的类型,private
@@ -27,7 +27,7 @@ type CreateVirtualInterface struct {
 	// 接入网关类型：VGW/GDGW/LGW
 	ServiceType *CreateVirtualInterfaceServiceType `json:"service_type,omitempty"`
 
-	// 对接客户侧vlan
+	// 对接客户侧vlan。当关联物理连接选择托管专线时，vlan需要和托管专线保持一致。
 	Vlan int32 `json:"vlan"`
 
 	// 虚拟接口接入带宽
@@ -48,7 +48,7 @@ type CreateVirtualInterface struct {
 	// 客户侧网关IPv6接口地址,如果address_family是IPv6，是必选参数
 	RemoteGatewayV6Ip *string `json:"remote_gateway_v6_ip,omitempty"`
 
-	// 虚拟风关连接的虚拟网关的ID
+	// 虚拟接口连接的虚拟网关的ID
 	VgwId string `json:"vgw_id"`
 
 	// 路由模式：static/bgp
@@ -66,10 +66,10 @@ type CreateVirtualInterface struct {
 	// 访问公网服务的子网列表
 	ServiceEpGroup *[]string `json:"service_ep_group,omitempty"`
 
-	// 是否使能bfd功能：true或false
+	// 是否使能bfd功能：true或false。[（预留字段暂不支持）](tag:dt)
 	EnableBfd *bool `json:"enable_bfd,omitempty"`
 
-	// 是否使能nqa功能：true或false
+	// 是否使能nqa功能：true或false。[（预留字段暂不支持）](tag:dt)
 	EnableNqa *bool `json:"enable_nqa,omitempty"`
 
 	// 虚拟接口关联的链路聚合组ID
@@ -146,7 +146,6 @@ type CreateVirtualInterfaceServiceType struct {
 }
 
 type CreateVirtualInterfaceServiceTypeEnum struct {
-	VPC  CreateVirtualInterfaceServiceType
 	VGW  CreateVirtualInterfaceServiceType
 	GDGW CreateVirtualInterfaceServiceType
 	LGW  CreateVirtualInterfaceServiceType
@@ -154,9 +153,6 @@ type CreateVirtualInterfaceServiceTypeEnum struct {
 
 func GetCreateVirtualInterfaceServiceTypeEnum() CreateVirtualInterfaceServiceTypeEnum {
 	return CreateVirtualInterfaceServiceTypeEnum{
-		VPC: CreateVirtualInterfaceServiceType{
-			value: "vpc",
-		},
 		VGW: CreateVirtualInterfaceServiceType{
 			value: "VGW",
 		},

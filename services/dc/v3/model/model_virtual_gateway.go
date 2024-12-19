@@ -15,6 +15,9 @@ type VirtualGateway struct {
 	// 虚拟网关接入的VPC的ID
 	VpcId *string `json:"vpc_id,omitempty"`
 
+	// 虚拟网关接入的ER的ID
+	EnterpriseRouterId *string `json:"enterprise_router_id,omitempty"`
+
 	// 实例所属项目ID。
 	TenantId *string `json:"tenant_id,omitempty"`
 

@@ -27,6 +27,9 @@ type QuickImportImageByFileRequestBody struct {
 	// 最小系统盘大小。在使用OBS桶的外部镜像文件制作镜像时生效且为必选字段。取值为1至1024GB。
 	MinDisk int32 `json:"min_disk"`
 
+	// 操作系统使用的许可证类型。取值范围： platform：华为云官方许可证 byol：自带许可证（Bring Your Own License） 目前仅Windows操作系统支持设置该参数。
+	LicenseType *string `json:"license_type,omitempty"`
+
 	// 镜像标签列表。默认为空。 tags和image_tags只能使用一个。
 	Tags *[]string `json:"tags,omitempty"`
 

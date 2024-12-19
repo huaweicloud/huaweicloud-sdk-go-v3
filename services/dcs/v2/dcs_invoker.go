@@ -117,6 +117,22 @@ func (i *ChangeMasterStandbyAsyncInvoker) Invoke() (*model.ChangeMasterStandbyAs
 	}
 }
 
+type ChangeNodesStartStopStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeNodesStartStopStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeNodesStartStopStatusInvoker) Invoke() (*model.ChangeNodesStartStopStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeNodesStartStopStatusResponse), nil
+	}
+}
+
 type CopyInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -453,6 +469,22 @@ func (i *DeleteHotkeyScanTaskInvoker) Invoke() (*model.DeleteHotkeyScanTaskRespo
 	}
 }
 
+type DeleteInstanceBandwidthAutoScalingPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstanceBandwidthAutoScalingPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteInstanceBandwidthAutoScalingPolicyInvoker) Invoke() (*model.DeleteInstanceBandwidthAutoScalingPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteInstanceBandwidthAutoScalingPolicyResponse), nil
+	}
+}
+
 type DeleteIpFromDomainNameInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -482,6 +514,22 @@ func (i *DeleteMigrationTaskInvoker) Invoke() (*model.DeleteMigrationTaskRespons
 		return nil, err
 	} else {
 		return result.(*model.DeleteMigrationTaskResponse), nil
+	}
+}
+
+type DeletePublicIpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePublicIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeletePublicIpInvoker) Invoke() (*model.DeletePublicIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePublicIpResponse), nil
 	}
 }
 
@@ -1253,6 +1301,22 @@ func (i *ShowBackgroundTaskProgressInvoker) Invoke() (*model.ShowBackgroundTaskP
 	}
 }
 
+type ShowBandwidthsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBandwidthsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowBandwidthsInvoker) Invoke() (*model.ShowBandwidthsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBandwidthsResponse), nil
+	}
+}
+
 type ShowBigkeyAutoscanConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1413,6 +1477,22 @@ func (i *ShowInstanceInvoker) Invoke() (*model.ShowInstanceResponse, error) {
 	}
 }
 
+type ShowInstanceBandwidthAutoScalingPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceBandwidthAutoScalingPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceBandwidthAutoScalingPolicyInvoker) Invoke() (*model.ShowInstanceBandwidthAutoScalingPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceBandwidthAutoScalingPolicyResponse), nil
+	}
+}
+
 type ShowInstanceSslDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1426,6 +1506,22 @@ func (i *ShowInstanceSslDetailInvoker) Invoke() (*model.ShowInstanceSslDetailRes
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceSslDetailResponse), nil
+	}
+}
+
+type ShowInstanceVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceVersionInvoker) Invoke() (*model.ShowInstanceVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceVersionResponse), nil
 	}
 }
 
@@ -1637,6 +1733,22 @@ func (i *UpdateAclAccountRemarkInvoker) Invoke() (*model.UpdateAclAccountRemarkR
 	}
 }
 
+type UpdateBandwidthInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateBandwidthInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateBandwidthInvoker) Invoke() (*model.UpdateBandwidthResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateBandwidthResponse), nil
+	}
+}
+
 type UpdateBigkeyAutoscanConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1765,6 +1877,22 @@ func (i *UpdateInstanceBandwidthInvoker) Invoke() (*model.UpdateInstanceBandwidt
 	}
 }
 
+type UpdateInstanceBandwidthAutoScalingPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceBandwidthAutoScalingPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInstanceBandwidthAutoScalingPolicyInvoker) Invoke() (*model.UpdateInstanceBandwidthAutoScalingPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceBandwidthAutoScalingPolicyResponse), nil
+	}
+}
+
 type UpdateInstanceConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1813,6 +1941,22 @@ func (i *UpdatePasswordInvoker) Invoke() (*model.UpdatePasswordResponse, error) 
 	}
 }
 
+type UpdatePublicIpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePublicIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePublicIpInvoker) Invoke() (*model.UpdatePublicIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePublicIpResponse), nil
+	}
+}
+
 type UpdateSlavePriorityInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1842,6 +1986,22 @@ func (i *UpdateSslSwitchInvoker) Invoke() (*model.UpdateSslSwitchResponse, error
 		return nil, err
 	} else {
 		return result.(*model.UpdateSslSwitchResponse), nil
+	}
+}
+
+type UpgradeInstanceMinorVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeInstanceMinorVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpgradeInstanceMinorVersionInvoker) Invoke() (*model.UpgradeInstanceMinorVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeInstanceMinorVersionResponse), nil
 	}
 }
 

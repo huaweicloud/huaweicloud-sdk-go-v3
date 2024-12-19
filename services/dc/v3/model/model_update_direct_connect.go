@@ -18,13 +18,13 @@ type UpdateDirectConnect struct {
 	// 物理专线的描述信息
 	Description *string `json:"description,omitempty"`
 
-	// 指定托管专线接入带宽,单位Mbps
+	// 指定托管专线接入带宽,单位Mbps。[注：标准或运营专线的带宽不能降低！](tag:dt)
 	Bandwidth *int32 `json:"bandwidth,omitempty"`
 
 	// 物理专线对端所在的物理位置，省/市/街道或IDC名字
 	PeerLocation *string `json:"peer_location,omitempty"`
 
-	// 更新资源状态，合法值是：PENDING_PAY
+	// 更新资源状态，合法值是：PENDING_PAY,APPLY
 	Status *UpdateDirectConnectStatus `json:"status,omitempty"`
 
 	// 更新运营商状态，合法值是：ACTIVE,DOWN
@@ -46,12 +46,16 @@ type UpdateDirectConnectStatus struct {
 
 type UpdateDirectConnectStatusEnum struct {
 	PENDING_PAY UpdateDirectConnectStatus
+	APPLY       UpdateDirectConnectStatus
 }
 
 func GetUpdateDirectConnectStatusEnum() UpdateDirectConnectStatusEnum {
 	return UpdateDirectConnectStatusEnum{
 		PENDING_PAY: UpdateDirectConnectStatus{
 			value: "PENDING_PAY",
+		},
+		APPLY: UpdateDirectConnectStatus{
+			value: "APPLY",
 		},
 	}
 }

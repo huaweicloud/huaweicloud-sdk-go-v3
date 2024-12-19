@@ -8,12 +8,12 @@ import (
 
 // CreatePeerLinkResponse Response Object
 type CreatePeerLinkResponse struct {
+
+	// 请求ID
 	RequestId *string `json:"request_id,omitempty"`
 
-	PeerLink *ExternalCreatePeerLink `json:"peer_link,omitempty"`
-
-	XRequestId     *string `json:"X-Request-Id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	PeerLink       *ExternalCreatePeerLink `json:"peer_link,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o CreatePeerLinkResponse) String() string {

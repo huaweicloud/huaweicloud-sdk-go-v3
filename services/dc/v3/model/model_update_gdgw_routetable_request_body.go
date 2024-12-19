@@ -6,12 +6,13 @@ import (
 	"strings"
 )
 
+// UpdateGdgwRoutetableRequestBody 修改全域接入网关路由表的request
 type UpdateGdgwRoutetableRequestBody struct {
 
-	// 空运行：true-是，false-否
+	// 是否dry run模式执行
 	DryRun *bool `json:"dry_run,omitempty"`
 
-	GdgwRoutetable *UpdateGdgwRoutetableRequestBodyGdgwRoutetable `json:"gdgw_routetable,omitempty"`
+	GdgwRoutetable *GdgwRouteTableRequest `json:"gdgw_routetable,omitempty"`
 }
 
 func (o UpdateGdgwRoutetableRequestBody) String() string {

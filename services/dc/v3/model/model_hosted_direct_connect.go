@@ -1,11 +1,10 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
-
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -18,19 +17,19 @@ type HostedDirectConnect struct {
 	// 实例所属项目ID。
 	TenantId *string `json:"tenant_id,omitempty"`
 
-	// 物理专线名字
+	// 托管专线名字
 	Name *string `json:"name,omitempty"`
 
-	// 物理专线的描述信息
+	// 托管专线的描述信息
 	Description *string `json:"description,omitempty"`
 
-	// 物理专线接入带宽，单位Mbps。
+	// 托管专线接入带宽，单位Mbps。
 	Bandwidth *int32 `json:"bandwidth,omitempty"`
 
 	// 专线的接入位置信息
 	Location *string `json:"location,omitempty"`
 
-	// 物理专线对端所在的物理位置，省/市/街道或IDC名字。
+	// 托管专线对端所在的物理位置，省/市/街道或IDC名字。
 	PeerLocation *string `json:"peer_location,omitempty"`
 
 	// hosted物理专线对应的hosting物理专线的ID
@@ -45,22 +44,22 @@ type HostedDirectConnect struct {
 	// hosted物理专线预分配的vlan。
 	Vlan *int32 `json:"vlan,omitempty"`
 
-	// 操作状态，合法值是： BUILD：已开通 ACTIVE：虚拟网关正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：虚拟网关异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
+	// 操作状态，合法值是： BUILD：已开通 ACTIVE：托管专线正常 DOWN：专线对应的端口处于down的状态，可能存在线路故障等异常。 ERROR：托管专线异常 PENDING_DELETE：删除中 PENDING_UPDATE：更新中 PENDING_CREATE：创建中
 	Status *HostedDirectConnectStatus `json:"status,omitempty"`
 
-	// 物理专线申请时间
-	ApplyTime *string `json:"apply_time,omitempty"`
+	// 托管专线申请时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+	ApplyTime *sdktime.SdkTime `json:"apply_time,omitempty"`
 
-	// 物理专线创建时间
-	CreateTime *string `json:"create_time,omitempty"`
+	// 托管专线创建时间。采用UTC时间格式，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ
+	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
-	// 物理专线的运营商操作状态，合法值是：ACTIVE， DOWN
+	// 托管专线的运营商操作状态，合法值是：ACTIVE， DOWN
 	ProviderStatus *HostedDirectConnectProviderStatus `json:"provider_status,omitempty"`
 
-	// 物理专线接入接口的类型，支持1G 10G 40G 100G
+	// 托管专线接入接口的类型，支持1G 10G 40G 100G
 	PortType *HostedDirectConnectPortType `json:"port_type,omitempty"`
 
-	// 物理专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
+	// 托管专线的类型，类型包括标准(standard)，运营专线(hosting)，托管专线（hosted）[，一站式标准（onestop_standard），一站式托管（onestop_hosted）](tag:hws)。
 	Type *HostedDirectConnectType `json:"type,omitempty"`
 }
 
