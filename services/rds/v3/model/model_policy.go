@@ -12,7 +12,7 @@ type Policy struct {
 	Period string `json:"period"`
 
 	// 保留时长（天）
-	RetentionDays string `json:"retention_days"`
+	RetentionDays int32 `json:"retention_days"`
 }
 
 func (o Policy) String() string {

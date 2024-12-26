@@ -1445,6 +1445,22 @@ func (i *SearchCorpAdminsInvoker) Invoke() (*model.SearchCorpAdminsResponse, err
 	}
 }
 
+type SearchCorpDigitalInfoListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchCorpDigitalInfoListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SearchCorpDigitalInfoListInvoker) Invoke() (*model.SearchCorpDigitalInfoListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchCorpDigitalInfoListResponse), nil
+	}
+}
+
 type SearchCorpDirInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1650,6 +1666,22 @@ func (i *SearchOnlineMeetingsInvoker) Invoke() (*model.SearchOnlineMeetingsRespo
 		return nil, err
 	} else {
 		return result.(*model.SearchOnlineMeetingsResponse), nil
+	}
+}
+
+type SearchPrivateCorpDigitalInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchPrivateCorpDigitalInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SearchPrivateCorpDigitalInfoInvoker) Invoke() (*model.SearchPrivateCorpDigitalInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchPrivateCorpDigitalInfoResponse), nil
 	}
 }
 

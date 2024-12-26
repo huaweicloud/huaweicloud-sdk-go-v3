@@ -21,6 +21,12 @@ type ListVoiceTrainingJobRequest struct {
 	// 过滤创建时间>=输入时间的记录。
 	CreateSince *string `json:"create_since,omitempty"`
 
+	// 过滤更新时间<=输入时间的记录。
+	UpdateUntil *string `json:"update_until,omitempty"`
+
+	// 过滤更新时间>=输入时间的记录。
+	UpdateSince *string `json:"update_since,omitempty"`
+
 	// 第三方用户ID。不允许输入中文。
 	XAppUserId *string `json:"X-App-UserId,omitempty"`
 
@@ -41,6 +47,12 @@ type ListVoiceTrainingJobRequest struct {
 
 	// 批次名称。
 	BatchName *string `json:"batch_name,omitempty"`
+
+	// 排序字段，当前支持：ceate_time/update_time
+	SortKey *string `json:"sort_key,omitempty"`
+
+	// 排序规则：desc(降序)/asc(升序)
+	SortDir *string `json:"sort_dir,omitempty"`
 }
 
 func (o ListVoiceTrainingJobRequest) String() string {

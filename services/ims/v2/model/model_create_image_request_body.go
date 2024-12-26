@@ -65,6 +65,9 @@ type CreateImageRequestBody struct {
 
 	// 数据盘的卷ID。当数据盘创建系统盘镜像时，该参数必选
 	VolumeId *string `json:"volume_id,omitempty"`
+
+	// 云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
+	HwFirmwareType *CreateImageRequestBodyHwFirmwareType `json:"hw_firmware_type,omitempty"`
 }
 
 func (o CreateImageRequestBody) String() string {
@@ -164,6 +167,53 @@ func (c CreateImageRequestBodyArchitecture) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateImageRequestBodyArchitecture) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateImageRequestBodyHwFirmwareType struct {
+	value string
+}
+
+type CreateImageRequestBodyHwFirmwareTypeEnum struct {
+	BIOS CreateImageRequestBodyHwFirmwareType
+	UEFI CreateImageRequestBodyHwFirmwareType
+}
+
+func GetCreateImageRequestBodyHwFirmwareTypeEnum() CreateImageRequestBodyHwFirmwareTypeEnum {
+	return CreateImageRequestBodyHwFirmwareTypeEnum{
+		BIOS: CreateImageRequestBodyHwFirmwareType{
+			value: "bios",
+		},
+		UEFI: CreateImageRequestBodyHwFirmwareType{
+			value: "uefi",
+		},
+	}
+}
+
+func (c CreateImageRequestBodyHwFirmwareType) Value() string {
+	return c.value
+}
+
+func (c CreateImageRequestBodyHwFirmwareType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateImageRequestBodyHwFirmwareType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

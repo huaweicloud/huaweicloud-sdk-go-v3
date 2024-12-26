@@ -80,7 +80,7 @@ func (c *BmsClient) BatchCreateBaremetalServerTagsInvoker(request *model.BatchCr
 	return &BatchCreateBaremetalServerTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchDeleteBaremetalServerTags 批量删除l裸金属服务器标签
+// BatchDeleteBaremetalServerTags 批量删除裸金属服务器标签
 //
 // - 为指定云服务器批量删除标签。
 //
@@ -95,7 +95,7 @@ func (c *BmsClient) BatchDeleteBaremetalServerTags(request *model.BatchDeleteBar
 	}
 }
 
-// BatchDeleteBaremetalServerTagsInvoker 批量删除l裸金属服务器标签
+// BatchDeleteBaremetalServerTagsInvoker 批量删除裸金属服务器标签
 func (c *BmsClient) BatchDeleteBaremetalServerTagsInvoker(request *model.BatchDeleteBaremetalServerTagsRequest) *BatchDeleteBaremetalServerTagsInvoker {
 	requestDef := GenReqDefForBatchDeleteBaremetalServerTags()
 	return &BatchDeleteBaremetalServerTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -185,7 +185,7 @@ func (c *BmsClient) ChangeBaremetalServerNameInvoker(request *model.ChangeBareme
 	return &ChangeBaremetalServerNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ChangeBaremetalServerOs
+// ChangeBaremetalServerOs 切换裸金属服务器的操作系统
 //
 // 切换裸金属服务器的操作系统。切换操作系统支持密码或者密钥注入，该接口支持企业项目细粒度权限的校验，具体细粒度请参见 bms:servers:changeOS
 //
@@ -200,7 +200,7 @@ func (c *BmsClient) ChangeBaremetalServerOs(request *model.ChangeBaremetalServer
 	}
 }
 
-// ChangeBaremetalServerOsInvoker
+// ChangeBaremetalServerOsInvoker 切换裸金属服务器的操作系统
 func (c *BmsClient) ChangeBaremetalServerOsInvoker(request *model.ChangeBaremetalServerOsRequest) *ChangeBaremetalServerOsInvoker {
 	requestDef := GenReqDefForChangeBaremetalServerOs()
 	return &ChangeBaremetalServerOsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

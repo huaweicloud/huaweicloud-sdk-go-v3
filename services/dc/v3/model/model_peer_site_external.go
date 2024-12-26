@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// PeerSiteExternal 连接站点信息
 type PeerSiteExternal struct {
 
 	// 全域接入网关ID
@@ -22,6 +23,9 @@ type PeerSiteExternal struct {
 
 	// 网点编码
 	SiteCode *string `json:"site_code,omitempty"`
+
+	// 连接类型
+	Type *string `json:"type,omitempty"`
 }
 
 func (o PeerSiteExternal) String() string {

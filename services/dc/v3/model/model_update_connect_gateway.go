@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// UpdateConnectGateway 修改互联网关请求Body体
 type UpdateConnectGateway struct {
 
 	// 网关名字

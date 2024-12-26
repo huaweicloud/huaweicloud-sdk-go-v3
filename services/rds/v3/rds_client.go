@@ -836,6 +836,27 @@ func (c *RdsClient) ListDatastoresInvoker(request *model.ListDatastoresRequest) 
 	return &ListDatastoresInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDrInfos 查询容灾管理列表
+//
+// 查询容灾管理列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListDrInfos(request *model.ListDrInfosRequest) (*model.ListDrInfosResponse, error) {
+	requestDef := GenReqDefForListDrInfos()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDrInfosResponse), nil
+	}
+}
+
+// ListDrInfosInvoker 查询容灾管理列表
+func (c *RdsClient) ListDrInfosInvoker(request *model.ListDrInfosRequest) *ListDrInfosInvoker {
+	requestDef := GenReqDefForListDrInfos()
+	return &ListDrInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDrRelations
 //
 // 批量查询容灾实例信息

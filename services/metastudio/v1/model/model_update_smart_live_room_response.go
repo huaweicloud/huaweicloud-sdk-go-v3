@@ -78,6 +78,12 @@ type UpdateSmartLiveRoomResponse struct {
 	// 直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
 	RoomState *UpdateSmartLiveRoomResponseRoomState `json:"room_state,omitempty"`
 
+	// 直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - UNCONFIRM: 未确认 - CONFIRMED：已确认 - REJECT： 拒绝
+	ConfirmState *UpdateSmartLiveRoomResponseConfirmState `json:"confirm_state,omitempty"`
+
+	// 直播间剧本版本。调用update接口即更新版本。使用时间戳。
+	ScriptVersion *string `json:"script_version,omitempty"`
+
 	ErrorInfo *ErrorResponse `json:"error_info,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
@@ -224,6 +230,57 @@ func (c UpdateSmartLiveRoomResponseRoomState) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateSmartLiveRoomResponseRoomState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type UpdateSmartLiveRoomResponseConfirmState struct {
+	value string
+}
+
+type UpdateSmartLiveRoomResponseConfirmStateEnum struct {
+	UNCONFIRM UpdateSmartLiveRoomResponseConfirmState
+	CONFIRMED UpdateSmartLiveRoomResponseConfirmState
+	REJECT    UpdateSmartLiveRoomResponseConfirmState
+}
+
+func GetUpdateSmartLiveRoomResponseConfirmStateEnum() UpdateSmartLiveRoomResponseConfirmStateEnum {
+	return UpdateSmartLiveRoomResponseConfirmStateEnum{
+		UNCONFIRM: UpdateSmartLiveRoomResponseConfirmState{
+			value: "UNCONFIRM",
+		},
+		CONFIRMED: UpdateSmartLiveRoomResponseConfirmState{
+			value: "CONFIRMED",
+		},
+		REJECT: UpdateSmartLiveRoomResponseConfirmState{
+			value: "REJECT",
+		},
+	}
+}
+
+func (c UpdateSmartLiveRoomResponseConfirmState) Value() string {
+	return c.value
+}
+
+func (c UpdateSmartLiveRoomResponseConfirmState) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateSmartLiveRoomResponseConfirmState) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

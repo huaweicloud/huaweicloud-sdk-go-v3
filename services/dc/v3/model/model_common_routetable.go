@@ -37,6 +37,9 @@ type CommonRoutetable struct {
 
 	// 路由描述
 	Description *string `json:"description,omitempty"`
+
+	// 下一跳类型: - vif_peer: 虚拟接口对等体 - gdgw: 全域接入网关
+	Type CommonRoutetableType `json:"type"`
 }
 
 func (o CommonRoutetable) String() string {
@@ -132,6 +135,53 @@ func (c CommonRoutetableStatus) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CommonRoutetableStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CommonRoutetableType struct {
+	value string
+}
+
+type CommonRoutetableTypeEnum struct {
+	VIF_PEER CommonRoutetableType
+	GDGW     CommonRoutetableType
+}
+
+func GetCommonRoutetableTypeEnum() CommonRoutetableTypeEnum {
+	return CommonRoutetableTypeEnum{
+		VIF_PEER: CommonRoutetableType{
+			value: "vif_peer",
+		},
+		GDGW: CommonRoutetableType{
+			value: "gdgw",
+		},
+	}
+}
+
+func (c CommonRoutetableType) Value() string {
+	return c.value
+}
+
+func (c CommonRoutetableType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CommonRoutetableType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

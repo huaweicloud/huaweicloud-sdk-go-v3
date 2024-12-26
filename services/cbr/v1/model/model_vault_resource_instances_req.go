@@ -110,8 +110,13 @@ type VaultResourceInstancesReqObjectType struct {
 }
 
 type VaultResourceInstancesReqObjectTypeEnum struct {
-	SERVER VaultResourceInstancesReqObjectType
-	DISK   VaultResourceInstancesReqObjectType
+	SERVER    VaultResourceInstancesReqObjectType
+	DISK      VaultResourceInstancesReqObjectType
+	TURBO     VaultResourceInstancesReqObjectType
+	WORKSPACE VaultResourceInstancesReqObjectType
+	VMWARE    VaultResourceInstancesReqObjectType
+	RDS       VaultResourceInstancesReqObjectType
+	FILE      VaultResourceInstancesReqObjectType
 }
 
 func GetVaultResourceInstancesReqObjectTypeEnum() VaultResourceInstancesReqObjectTypeEnum {
@@ -121,6 +126,21 @@ func GetVaultResourceInstancesReqObjectTypeEnum() VaultResourceInstancesReqObjec
 		},
 		DISK: VaultResourceInstancesReqObjectType{
 			value: "disk",
+		},
+		TURBO: VaultResourceInstancesReqObjectType{
+			value: "turbo",
+		},
+		WORKSPACE: VaultResourceInstancesReqObjectType{
+			value: "workspace",
+		},
+		VMWARE: VaultResourceInstancesReqObjectType{
+			value: "vmware",
+		},
+		RDS: VaultResourceInstancesReqObjectType{
+			value: "rds",
+		},
+		FILE: VaultResourceInstancesReqObjectType{
+			value: "file",
 		},
 	}
 }

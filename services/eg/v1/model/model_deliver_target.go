@@ -14,10 +14,10 @@ type DeliverTarget struct {
 	// 投递目标名称，及事件目标名称
 	DeliverTargetName *string `json:"deliverTargetName,omitempty"`
 
-	// 投递状态         SUCCESS Or  FAILED
+	// 投递状态 SUCCESS Or FAILED
 	DeliverStatus *string `json:"deliverStatus,omitempty"`
 
-	// 考虑展示的个数    例如限制只展示最新三条
+	// 考虑展示的个数 例如限制只展示最新三条
 	DeliverDetailList *[]DeliverDetail `json:"deliverDetailList,omitempty"`
 }
 

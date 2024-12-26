@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// CreateVifPeerRequestBody 创建虚拟接口对等体请求体
 type CreateVifPeerRequestBody struct {
 	VifPeer *CreateVifPeer `json:"vif_peer,omitempty"`
 }

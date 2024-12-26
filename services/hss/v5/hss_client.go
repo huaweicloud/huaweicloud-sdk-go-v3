@@ -460,6 +460,27 @@ func (c *HssClient) ListAccountsInvoker(request *model.ListAccountsRequest) *Lis
 	return &ListAccountsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAgentInstallScript 查询agent安装脚本
+//
+// 查询agent安装脚本
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListAgentInstallScript(request *model.ListAgentInstallScriptRequest) (*model.ListAgentInstallScriptResponse, error) {
+	requestDef := GenReqDefForListAgentInstallScript()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAgentInstallScriptResponse), nil
+	}
+}
+
+// ListAgentInstallScriptInvoker 查询agent安装脚本
+func (c *HssClient) ListAgentInstallScriptInvoker(request *model.ListAgentInstallScriptRequest) *ListAgentInstallScriptInvoker {
+	requestDef := GenReqDefForListAgentInstallScript()
+	return &ListAgentInstallScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAlarmWhiteList 查询告警白名单列表
 //
 // 查询告警白名单列表

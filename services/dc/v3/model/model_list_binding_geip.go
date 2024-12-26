@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ListBindingGeip Returns geip and its binding status
+// ListBindingGeip GEIP列表的响应体
 type ListBindingGeip struct {
 
 	// geip的id

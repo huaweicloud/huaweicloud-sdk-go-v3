@@ -68,6 +68,11 @@ type OrderInstanceV2 struct {
 
 	// 线性大小单位
 	SpecSizeMeasureId *int32 `json:"spec_size_measure_id,omitempty"`
+
+	// |参数名称：资源更新时间。| |参数约束及描述：资源更新时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-12-25T07:32:04Z”。|
+	UpdateTime *string `json:"update_time,omitempty"`
+
+	EnterpriseProject *EnterpriseProject `json:"enterprise_project,omitempty"`
 }
 
 func (o OrderInstanceV2) String() string {

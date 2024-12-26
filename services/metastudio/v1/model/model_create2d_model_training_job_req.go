@@ -50,7 +50,7 @@ type Create2dModelTrainingJobReq struct {
 
 	VoiceProperties *VoiceProperties `json:"voice_properties,omitempty"`
 
-	// 该任务所生成的模型支持的业务类型，可多选
+	// 该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
 	SupportedService *[]SupportedServiceEnum `json:"supported_service,omitempty"`
 }
 

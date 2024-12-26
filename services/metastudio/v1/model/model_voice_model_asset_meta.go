@@ -46,6 +46,9 @@ type VoiceModelAssetMeta struct {
 	// 是否支持vc。
 	IsSupportVcProcess *bool `json:"is_support_vc_process,omitempty"`
 
+	// 是否支持泰语文本自动分句。
+	IsSupportThaiAutoSplit *bool `json:"is_support_thai_auto_split,omitempty"`
+
 	// 是否是Flexus版本声音。
 	IsFlexus *bool `json:"is_flexus,omitempty"`
 }

@@ -85,6 +85,22 @@ func (i *AssociateSecurityLevelToEntitieInvoker) Invoke() (*model.AssociateSecur
 	}
 }
 
+type AuthorizeDataConnectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AuthorizeDataConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AuthorizeDataConnectionInvoker) Invoke() (*model.AuthorizeDataConnectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AuthorizeDataConnectionResponse), nil
+	}
+}
+
 type BatchApproveApplyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1426,6 +1442,22 @@ func (i *DeleteDirectoryInvoker) Invoke() (*model.DeleteDirectoryResponse, error
 		return nil, err
 	} else {
 		return result.(*model.DeleteDirectoryResponse), nil
+	}
+}
+
+type DeleteEntityInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteEntityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteEntityInvoker) Invoke() (*model.DeleteEntityResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteEntityResponse), nil
 	}
 }
 
@@ -4245,6 +4277,22 @@ func (i *ShowQualityTaskDetailInvoker) Invoke() (*model.ShowQualityTaskDetailRes
 	}
 }
 
+type ShowQueuesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowQueuesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowQueuesInvoker) Invoke() (*model.ShowQueuesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowQueuesResponse), nil
+	}
+}
+
 type ShowRelationByIdInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4386,6 +4434,22 @@ func (i *ShowStandardTemplateInvoker) Invoke() (*model.ShowStandardTemplateRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowStandardTemplateResponse), nil
+	}
+}
+
+type ShowTableDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTableDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTableDataInvoker) Invoke() (*model.ShowTableDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTableDataResponse), nil
 	}
 }
 

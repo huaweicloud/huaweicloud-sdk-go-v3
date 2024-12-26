@@ -15,6 +15,10 @@ type EventStreamingSource struct {
 
 	SourceMobileRocketmq *SourceMobileMqParameters `json:"source_mobile_rocketmq,omitempty"`
 
+	SourceCommunityRocketmq *SourceCommunityMqParameters `json:"source_community_rocketmq,omitempty"`
+
+	SourceDmsRocketmq *SourceDmsmqParameters `json:"source_dms_rocketmq,omitempty"`
+
 	// 事件源类型名称
 	Name *EventStreamingSourceName `json:"name,omitempty"`
 }
@@ -33,13 +37,21 @@ type EventStreamingSourceName struct {
 }
 
 type EventStreamingSourceNameEnum struct {
-	HC_DMS EventStreamingSourceName
+	HC_DMS_ROCKETMQ       EventStreamingSourceName
+	HC_COMMUNITY_ROCKETMQ EventStreamingSourceName
+	HC_KAFKA              EventStreamingSourceName
 }
 
 func GetEventStreamingSourceNameEnum() EventStreamingSourceNameEnum {
 	return EventStreamingSourceNameEnum{
-		HC_DMS: EventStreamingSourceName{
-			value: "HC.DMS",
+		HC_DMS_ROCKETMQ: EventStreamingSourceName{
+			value: "HC.DMS_ROCKETMQ",
+		},
+		HC_COMMUNITY_ROCKETMQ: EventStreamingSourceName{
+			value: "HC.COMMUNITY_ROCKETMQ",
+		},
+		HC_KAFKA: EventStreamingSourceName{
+			value: "HC.Kafka",
 		},
 	}
 }

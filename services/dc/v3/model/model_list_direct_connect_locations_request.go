@@ -30,7 +30,7 @@ type ListDirectConnectLocationsRequest struct {
 	// 根据名字过滤查询，可查询多个名字。
 	Name *[]string `json:"name,omitempty"`
 
-	// 根椐资源状态过淲实例
+	// 根椐资源状态过滤实例
 	Status *[]string `json:"status,omitempty"`
 }
 

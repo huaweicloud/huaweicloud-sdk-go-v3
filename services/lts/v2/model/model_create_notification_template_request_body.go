@@ -19,7 +19,7 @@ type CreateNotificationTemplateRequestBody struct {
 	Type *[]string `json:"type,omitempty"`
 
 	// 模板描述，必填，只含有汉字、数字、字母、下划线不能以下划线开头和结尾，长度为0--1024
-	Desc string `json:"desc"`
+	Desc *string `json:"desc,omitempty"`
 
 	// 模板来源，目前必填为LTS，否则会筛选不出来
 	Source string `json:"source"`

@@ -15,6 +15,9 @@ type InterpreterGroupInfo struct {
 	// 传译组名称。
 	GroupName *string `json:"groupName,omitempty"`
 
+	// 传译组类型，MANUAL：人工传译，AI：AI传译。默认MANUAL。
+	GroupType *string `json:"groupType,omitempty"`
+
 	// 传译组支持的第一种语言。
 	FirstLanguage string `json:"firstLanguage"`
 

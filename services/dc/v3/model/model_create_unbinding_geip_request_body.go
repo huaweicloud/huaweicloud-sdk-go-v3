@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// CreateUnbindingGeipRequestBody 解绑GEIP请求体
 type CreateUnbindingGeipRequestBody struct {
 	GlobalEips *[]UnbindingGeipBody `json:"global_eips,omitempty"`
 }

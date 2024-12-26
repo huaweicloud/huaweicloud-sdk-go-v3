@@ -15,7 +15,7 @@ type ChannelCreateReq struct {
 	Description *string `json:"description,omitempty"`
 
 	// 企业项目id
-	EpsId *string `json:"eps_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 跨账号开关
 	CrossAccount *bool `json:"cross_account,omitempty"`

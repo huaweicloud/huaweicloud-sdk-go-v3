@@ -214,6 +214,7 @@ type BillingObjectType struct {
 type BillingObjectTypeEnum struct {
 	SERVER    BillingObjectType
 	DISK      BillingObjectType
+	TURBO     BillingObjectType
 	WORKSPACE BillingObjectType
 	VMWARE    BillingObjectType
 	RDS       BillingObjectType
@@ -227,6 +228,9 @@ func GetBillingObjectTypeEnum() BillingObjectTypeEnum {
 		},
 		DISK: BillingObjectType{
 			value: "disk",
+		},
+		TURBO: BillingObjectType{
+			value: "turbo",
 		},
 		WORKSPACE: BillingObjectType{
 			value: "workspace",
@@ -326,8 +330,12 @@ type BillingSpecCode struct {
 }
 
 type BillingSpecCodeEnum struct {
-	VAULT_BACKUP_SERVER_NORMAL BillingSpecCode
-	VAULT_BACKUP_VOLUME_NORMAL BillingSpecCode
+	VAULT_BACKUP_SERVER_NORMAL      BillingSpecCode
+	VAULT_BACKUP_VOLUME_NORMAL      BillingSpecCode
+	VAULT_BACKUP_TURBO_NORMAL       BillingSpecCode
+	VAULT_BACKUP_DATABASE_NORMAL    BillingSpecCode
+	VAULT_HYBRID_SERVER_NORMAL      BillingSpecCode
+	VAULT_REPLICATION_SERVER_NORMAL BillingSpecCode
 }
 
 func GetBillingSpecCodeEnum() BillingSpecCodeEnum {
@@ -337,6 +345,18 @@ func GetBillingSpecCodeEnum() BillingSpecCodeEnum {
 		},
 		VAULT_BACKUP_VOLUME_NORMAL: BillingSpecCode{
 			value: "vault.backup.volume.normal",
+		},
+		VAULT_BACKUP_TURBO_NORMAL: BillingSpecCode{
+			value: "vault.backup.turbo.normal",
+		},
+		VAULT_BACKUP_DATABASE_NORMAL: BillingSpecCode{
+			value: "vault.backup.database.normal",
+		},
+		VAULT_HYBRID_SERVER_NORMAL: BillingSpecCode{
+			value: "vault.hybrid.server.normal",
+		},
+		VAULT_REPLICATION_SERVER_NORMAL: BillingSpecCode{
+			value: "vault.replication.server.normal",
 		},
 	}
 }

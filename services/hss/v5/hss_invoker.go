@@ -341,6 +341,22 @@ func (i *ListAccountsInvoker) Invoke() (*model.ListAccountsResponse, error) {
 	}
 }
 
+type ListAgentInstallScriptInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAgentInstallScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAgentInstallScriptInvoker) Invoke() (*model.ListAgentInstallScriptResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAgentInstallScriptResponse), nil
+	}
+}
+
 type ListAlarmWhiteListInvoker struct {
 	*invoker.BaseInvoker
 }

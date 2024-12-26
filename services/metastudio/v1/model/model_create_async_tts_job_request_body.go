@@ -15,6 +15,9 @@ type CreateAsyncTtsJobRequestBody struct {
 	// 待合成文本
 	Text string `json:"text"`
 
+	// 发送给tts的待合成文本
+	TtsText *string `json:"tts_text,omitempty"`
+
 	// 音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
 	VoiceAssetId string `json:"voice_asset_id"`
 
@@ -38,6 +41,17 @@ type CreateAsyncTtsJobRequestBody struct {
 
 	// 异常时返回的静默音频流时长，单位毫秒。
 	SilenceTimeMs *int32 `json:"silence_time_ms,omitempty"`
+
+	CallbackConfig *TtsCallBackConfig `json:"callback_config,omitempty"`
+
+	// 是否开启字幕
+	GenSrt *bool `json:"gen_srt,omitempty"`
+
+	// 字幕最大长度限制
+	SrtLen *int64 `json:"srt_len,omitempty"`
+
+	// 字幕行数限制，默认为1
+	SrtLineLimit *int32 `json:"srt_line_limit,omitempty"`
 }
 
 func (o CreateAsyncTtsJobRequestBody) String() string {

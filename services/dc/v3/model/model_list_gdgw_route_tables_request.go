@@ -12,17 +12,23 @@ import (
 // ListGdgwRouteTablesRequest Request Object
 type ListGdgwRouteTablesRequest struct {
 
+	// 显示字段列表
+	Fields *[]string `json:"fields,omitempty"`
+
+	// show response ext-fields
+	ExtFields *[]string `json:"ext_fields,omitempty"`
+
 	// 全域接入网关ID
 	GdgwId string `json:"gdgw_id"`
 
-	// 地址簇
-	AddressFamily *[]ListGdgwRouteTablesRequestAddressFamily `json:"address_family,omitempty"`
-
-	// 下一跳ID
+	// 下一条ID
 	Nexthop *[]string `json:"nexthop,omitempty"`
 
 	// 目的地址
 	Destination *[]string `json:"destination,omitempty"`
+
+	// 地址簇
+	AddressFamily *[]ListGdgwRouteTablesRequestAddressFamily `json:"address_family,omitempty"`
 }
 
 func (o ListGdgwRouteTablesRequest) String() string {

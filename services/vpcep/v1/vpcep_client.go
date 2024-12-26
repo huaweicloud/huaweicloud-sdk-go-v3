@@ -605,6 +605,28 @@ func (c *VpcepClient) UpdateEndpointWhiteInvoker(request *model.UpdateEndpointWh
 	return &UpdateEndpointWhiteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpgradeEndpointService 升级终端节点服务
+//
+// 升级终端节点服务，使终端节点服务支持创建专业型终端节点实例
+// 该接口仅支持在华东二、中东-利雅得、华东-青岛、非洲-开罗局点调用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcepClient) UpgradeEndpointService(request *model.UpgradeEndpointServiceRequest) (*model.UpgradeEndpointServiceResponse, error) {
+	requestDef := GenReqDefForUpgradeEndpointService()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeEndpointServiceResponse), nil
+	}
+}
+
+// UpgradeEndpointServiceInvoker 升级终端节点服务
+func (c *VpcepClient) UpgradeEndpointServiceInvoker(request *model.UpgradeEndpointServiceRequest) *UpgradeEndpointServiceInvoker {
+	requestDef := GenReqDefForUpgradeEndpointService()
+	return &UpgradeEndpointServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchAddOrRemoveResourceInstance 批量添加或删除资源标签接口
 //
 // 为指定Endpoint Service或Endpoint批量添加或删除标签。

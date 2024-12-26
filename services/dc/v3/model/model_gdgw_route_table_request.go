@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// GdgwRouteTableRequest 修改路由入参对象
 type GdgwRouteTableRequest struct {
 
 	// 需要添加的路由

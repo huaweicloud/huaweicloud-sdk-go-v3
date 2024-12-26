@@ -437,6 +437,22 @@ func (i *UpdateEndpointWhiteInvoker) Invoke() (*model.UpdateEndpointWhiteRespons
 	}
 }
 
+type UpgradeEndpointServiceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeEndpointServiceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpgradeEndpointServiceInvoker) Invoke() (*model.UpgradeEndpointServiceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeEndpointServiceResponse), nil
+	}
+}
+
 type BatchAddOrRemoveResourceInstanceInvoker struct {
 	*invoker.BaseInvoker
 }

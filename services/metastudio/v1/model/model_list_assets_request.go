@@ -36,7 +36,7 @@ type ListAssetsRequest struct {
 	// 标签查询组合方式 INTERSECTION：交集 UNION_SET：并集
 	TagCombinationType *ListAssetsRequestTagCombinationType `json:"tag_combination_type,omitempty"`
 
-	// 最近直播任务起始时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+	// 起始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
 	StartTime *string `json:"start_time,omitempty"`
 
 	// 结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。

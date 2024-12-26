@@ -21,10 +21,10 @@ type KafkaConnectionDetail struct {
 	SecurityProtocol *string `json:"security_protocol,omitempty"`
 
 	// kafka实例是否开启了SASL_SSL。
-	SaslSsl bool `json:"sasl_ssl"`
+	EnableSaslSsl bool `json:"enable_sasl_ssl"`
 
 	// kafka实例用户名。实例开启了SASL_SSL时必填
-	Username *string `json:"username,omitempty"`
+	UserName *string `json:"user_name,omitempty"`
 
 	// kafka实例密码。实例开启了SASL_SSL时必填
 	Password *string `json:"password,omitempty"`

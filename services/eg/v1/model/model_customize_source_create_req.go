@@ -23,8 +23,7 @@ type CustomizeSourceCreateReq struct {
 	// 事件源类型
 	Type *CustomizeSourceCreateReqType `json:"type,omitempty"`
 
-	// json格式封装消息实例链接信息：如RabbitMQ实例的instance_id字段、虚拟主机vhost字段、队列queue字段、用户名、密码等
-	Detail *interface{} `json:"detail,omitempty"`
+	Detail *RocketMqDetail `json:"detail,omitempty"`
 }
 
 func (o CustomizeSourceCreateReq) String() string {

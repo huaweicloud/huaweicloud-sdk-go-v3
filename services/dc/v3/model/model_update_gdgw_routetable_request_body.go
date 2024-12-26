@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// UpdateGdgwRoutetableRequestBody 修改全域接入网关路由表的request
+// UpdateGdgwRoutetableRequestBody 注意：新增、删除、修改操作互斥，一次请求只能执行其中一类操作
 type UpdateGdgwRoutetableRequestBody struct {
 
 	// 是否dry run模式执行

@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// CreateExternalPeerLinkRequestBodyPeerLink 创建关联连接请求Body体
 type CreateExternalPeerLinkRequestBodyPeerLink struct {
 
 	// 关联连接的名字

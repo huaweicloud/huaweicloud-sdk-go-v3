@@ -11,9 +11,6 @@ type ShowDetailOfEventRequest struct {
 
 	// 追踪事件的uniqueId
 	TraceId string `json:"trace_id"`
-
-	// 指定查询的事件通道ID
-	ChannelId *string `json:"channel_id,omitempty"`
 }
 
 func (o ShowDetailOfEventRequest) String() string {

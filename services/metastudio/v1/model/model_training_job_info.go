@@ -48,6 +48,9 @@ type TrainingJobInfo struct {
 	// 用户授权书连接。
 	VoiceAuthorizationUrl *string `json:"voice_authorization_url,omitempty"`
 
+	// 用户原始输入数据url。
+	TrainingInputSourceUrl *string `json:"training_input_source_url,omitempty"`
+
 	CreateType *CreateType `json:"create_type,omitempty"`
 
 	Tag *JobTag `json:"tag,omitempty"`
@@ -65,6 +68,9 @@ type TrainingJobInfo struct {
 
 	// 模型输出语言类型
 	OutputLanguage *string `json:"output_language,omitempty"`
+
+	// 任务是否重做
+	IsRemake *bool `json:"is_remake,omitempty"`
 }
 
 func (o TrainingJobInfo) String() string {

@@ -29,6 +29,9 @@ type ListSubscriptionsRequest struct {
 
 	// 目标连接 id
 	ConnectionId *string `json:"connection_id,omitempty"`
+
+	// 创建订阅时所使用的企业项目id
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o ListSubscriptionsRequest) String() string {

@@ -12,8 +12,7 @@ type AllowDbRolePrivilegesRequestBody struct {
 	// 数据库名称。 不能使用模板库，且是已存在的数据库名称。 模板库包括postgres， template0 ，template1，templatea，template_pdb，templatem。
 	DbName string `json:"db_name"`
 
-	// 角色权限信息。
-	User *interface{} `json:"user"`
+	User *GaussDBforOpenGaussRoleAttributes `json:"user"`
 }
 
 func (o AllowDbRolePrivilegesRequestBody) String() string {

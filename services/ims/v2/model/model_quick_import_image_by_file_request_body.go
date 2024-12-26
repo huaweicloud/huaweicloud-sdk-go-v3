@@ -42,6 +42,9 @@ type QuickImportImageByFileRequestBody struct {
 	// 镜像的架构类型。取值包括： x86 arm 默认使用“x86”。
 	Architecture *QuickImportImageByFileRequestBodyArchitecture `json:"architecture,omitempty"`
 
+	// 云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
+	HwFirmwareType *QuickImportImageByFileRequestBodyHwFirmwareType `json:"hw_firmware_type,omitempty"`
+
 	// 操作系统版本。 创建数据盘镜像时该参数取值为Linux或Windows，默认Linux。
 	OsType *QuickImportImageByFileRequestBodyOsType `json:"os_type,omitempty"`
 
@@ -138,6 +141,53 @@ func (c QuickImportImageByFileRequestBodyArchitecture) MarshalJSON() ([]byte, er
 }
 
 func (c *QuickImportImageByFileRequestBodyArchitecture) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type QuickImportImageByFileRequestBodyHwFirmwareType struct {
+	value string
+}
+
+type QuickImportImageByFileRequestBodyHwFirmwareTypeEnum struct {
+	BIOS QuickImportImageByFileRequestBodyHwFirmwareType
+	UEFI QuickImportImageByFileRequestBodyHwFirmwareType
+}
+
+func GetQuickImportImageByFileRequestBodyHwFirmwareTypeEnum() QuickImportImageByFileRequestBodyHwFirmwareTypeEnum {
+	return QuickImportImageByFileRequestBodyHwFirmwareTypeEnum{
+		BIOS: QuickImportImageByFileRequestBodyHwFirmwareType{
+			value: "bios",
+		},
+		UEFI: QuickImportImageByFileRequestBodyHwFirmwareType{
+			value: "uefi",
+		},
+	}
+}
+
+func (c QuickImportImageByFileRequestBodyHwFirmwareType) Value() string {
+	return c.value
+}
+
+func (c QuickImportImageByFileRequestBodyHwFirmwareType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *QuickImportImageByFileRequestBodyHwFirmwareType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

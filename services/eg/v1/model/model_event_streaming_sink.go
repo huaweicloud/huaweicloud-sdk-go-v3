@@ -15,6 +15,8 @@ type EventStreamingSink struct {
 
 	SinkKafka *SinkKafkaParameters `json:"sink_kafka,omitempty"`
 
+	SinkObs *SinkObsParameters `json:"sink_obs,omitempty"`
+
 	// 事件目标类型名称
 	Name *EventStreamingSinkName `json:"name,omitempty"`
 }

@@ -8,8 +8,7 @@ import (
 
 // CreateResourceTagResponse Response Object
 type CreateResourceTagResponse struct {
-	Body           *string `json:"body,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o CreateResourceTagResponse) String() string {

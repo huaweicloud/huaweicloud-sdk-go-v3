@@ -2334,6 +2334,27 @@ func (c *MetaStudioClient) UpdateSmartChatRoomInvoker(request *model.UpdateSmart
 	return &UpdateSmartChatRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchConfirmLiveCommands 批量确认命令
+//
+// 该接口用于批量确认命令列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) BatchConfirmLiveCommands(request *model.BatchConfirmLiveCommandsRequest) (*model.BatchConfirmLiveCommandsResponse, error) {
+	requestDef := GenReqDefForBatchConfirmLiveCommands()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchConfirmLiveCommandsResponse), nil
+	}
+}
+
+// BatchConfirmLiveCommandsInvoker 批量确认命令
+func (c *MetaStudioClient) BatchConfirmLiveCommandsInvoker(request *model.BatchConfirmLiveCommandsRequest) *BatchConfirmLiveCommandsInvoker {
+	requestDef := GenReqDefForBatchConfirmLiveCommands()
+	return &BatchConfirmLiveCommandsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExecuteSmartLiveCommand 控制数字人直播过程
 //
 // 该接口用于控制数字人直播过程。
@@ -2395,6 +2416,48 @@ func (c *MetaStudioClient) ListSmartLiveJobs(request *model.ListSmartLiveJobsReq
 func (c *MetaStudioClient) ListSmartLiveJobsInvoker(request *model.ListSmartLiveJobsRequest) *ListSmartLiveJobsInvoker {
 	requestDef := GenReqDefForListSmartLiveJobs()
 	return &ListSmartLiveJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSmartLiveRuleCommands 查询租户未确认的互动规则命令列表
+//
+// 该接口用于查询租户未确认的互动规则命令列表，仅限于需要做二次确认的特定用户使用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListSmartLiveRuleCommands(request *model.ListSmartLiveRuleCommandsRequest) (*model.ListSmartLiveRuleCommandsResponse, error) {
+	requestDef := GenReqDefForListSmartLiveRuleCommands()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSmartLiveRuleCommandsResponse), nil
+	}
+}
+
+// ListSmartLiveRuleCommandsInvoker 查询租户未确认的互动规则命令列表
+func (c *MetaStudioClient) ListSmartLiveRuleCommandsInvoker(request *model.ListSmartLiveRuleCommandsRequest) *ListSmartLiveRuleCommandsInvoker {
+	requestDef := GenReqDefForListSmartLiveRuleCommands()
+	return &ListSmartLiveRuleCommandsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSmartLiveScriptCommands 查询租户未确认的剧本命令列表
+//
+// 该接口用于查询租户未确认的剧本命令列表，仅限于需要做二次确认的特定用户使用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListSmartLiveScriptCommands(request *model.ListSmartLiveScriptCommandsRequest) (*model.ListSmartLiveScriptCommandsResponse, error) {
+	requestDef := GenReqDefForListSmartLiveScriptCommands()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSmartLiveScriptCommandsResponse), nil
+	}
+}
+
+// ListSmartLiveScriptCommandsInvoker 查询租户未确认的剧本命令列表
+func (c *MetaStudioClient) ListSmartLiveScriptCommandsInvoker(request *model.ListSmartLiveScriptCommandsRequest) *ListSmartLiveScriptCommandsInvoker {
+	requestDef := GenReqDefForListSmartLiveScriptCommands()
+	return &ListSmartLiveScriptCommandsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // LiveEventReport 上报直播间事件
@@ -2479,6 +2542,27 @@ func (c *MetaStudioClient) StopSmartLive(request *model.StopSmartLiveRequest) (*
 func (c *MetaStudioClient) StopSmartLiveInvoker(request *model.StopSmartLiveRequest) *StopSmartLiveInvoker {
 	requestDef := GenReqDefForStopSmartLive()
 	return &StopSmartLiveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ConfirmSmartLiveRoom 直播间确认
+//
+// 该接口用直播间二次确认
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ConfirmSmartLiveRoom(request *model.ConfirmSmartLiveRoomRequest) (*model.ConfirmSmartLiveRoomResponse, error) {
+	requestDef := GenReqDefForConfirmSmartLiveRoom()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ConfirmSmartLiveRoomResponse), nil
+	}
+}
+
+// ConfirmSmartLiveRoomInvoker 直播间确认
+func (c *MetaStudioClient) ConfirmSmartLiveRoomInvoker(request *model.ConfirmSmartLiveRoomRequest) *ConfirmSmartLiveRoomInvoker {
+	requestDef := GenReqDefForConfirmSmartLiveRoom()
+	return &ConfirmSmartLiveRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateInteractionRuleGroup 创建智能直播间互动规则库
@@ -3392,6 +3476,90 @@ func (c *MetaStudioClient) CreateTtsAudition(request *model.CreateTtsAuditionReq
 func (c *MetaStudioClient) CreateTtsAuditionInvoker(request *model.CreateTtsAuditionRequest) *CreateTtsAuditionInvoker {
 	requestDef := GenReqDefForCreateTtsAudition()
 	return &CreateTtsAuditionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTtscVocabularyConfigs 设置TTS租户级扩展词表配置
+//
+// 该接口用于设置TTS租户级扩展词表配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateTtscVocabularyConfigs(request *model.CreateTtscVocabularyConfigsRequest) (*model.CreateTtscVocabularyConfigsResponse, error) {
+	requestDef := GenReqDefForCreateTtscVocabularyConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTtscVocabularyConfigsResponse), nil
+	}
+}
+
+// CreateTtscVocabularyConfigsInvoker 设置TTS租户级扩展词表配置
+func (c *MetaStudioClient) CreateTtscVocabularyConfigsInvoker(request *model.CreateTtscVocabularyConfigsRequest) *CreateTtscVocabularyConfigsInvoker {
+	requestDef := GenReqDefForCreateTtscVocabularyConfigs()
+	return &CreateTtscVocabularyConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTtscVocabularyConfigs 删除TTS租户级词表扩展配置
+//
+// 该接口用于删除TTS租户级词表扩展配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteTtscVocabularyConfigs(request *model.DeleteTtscVocabularyConfigsRequest) (*model.DeleteTtscVocabularyConfigsResponse, error) {
+	requestDef := GenReqDefForDeleteTtscVocabularyConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTtscVocabularyConfigsResponse), nil
+	}
+}
+
+// DeleteTtscVocabularyConfigsInvoker 删除TTS租户级词表扩展配置
+func (c *MetaStudioClient) DeleteTtscVocabularyConfigsInvoker(request *model.DeleteTtscVocabularyConfigsRequest) *DeleteTtscVocabularyConfigsInvoker {
+	requestDef := GenReqDefForDeleteTtscVocabularyConfigs()
+	return &DeleteTtscVocabularyConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTtscVocabularyConfigs 获取TTS租户级词表扩展配置
+//
+// 该接口用于获取TTS租户级词表扩展配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListTtscVocabularyConfigs(request *model.ListTtscVocabularyConfigsRequest) (*model.ListTtscVocabularyConfigsResponse, error) {
+	requestDef := GenReqDefForListTtscVocabularyConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTtscVocabularyConfigsResponse), nil
+	}
+}
+
+// ListTtscVocabularyConfigsInvoker 获取TTS租户级词表扩展配置
+func (c *MetaStudioClient) ListTtscVocabularyConfigsInvoker(request *model.ListTtscVocabularyConfigsRequest) *ListTtscVocabularyConfigsInvoker {
+	requestDef := GenReqDefForListTtscVocabularyConfigs()
+	return &ListTtscVocabularyConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SaveTtscVocabularyConfigs 修改TTS租户级扩展词表配置
+//
+// 该接口用于修改TTS租户级扩展词表配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) SaveTtscVocabularyConfigs(request *model.SaveTtscVocabularyConfigsRequest) (*model.SaveTtscVocabularyConfigsResponse, error) {
+	requestDef := GenReqDefForSaveTtscVocabularyConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SaveTtscVocabularyConfigsResponse), nil
+	}
+}
+
+// SaveTtscVocabularyConfigsInvoker 修改TTS租户级扩展词表配置
+func (c *MetaStudioClient) SaveTtscVocabularyConfigsInvoker(request *model.SaveTtscVocabularyConfigsRequest) *SaveTtscVocabularyConfigsInvoker {
+	requestDef := GenReqDefForSaveTtscVocabularyConfigs()
+	return &SaveTtscVocabularyConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAsyncTtsJob 获取TTS异步任务

@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// CreateExternalPeerLinkRequestBodyPeerLinkPeerSite 连接站点对象
 type CreateExternalPeerLinkRequestBodyPeerLinkPeerSite struct {
 
 	// 接入网关连接对端的实例(当前ER实例)ID

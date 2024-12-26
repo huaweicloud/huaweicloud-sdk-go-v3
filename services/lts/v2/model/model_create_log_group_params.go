@@ -17,6 +17,9 @@ type CreateLogGroupParams struct {
 
 	// 标签字段信息
 	Tags *[]TagsBody `json:"tags,omitempty"`
+
+	// 日志组别名
+	LogGroupNameAlias *string `json:"log_group_name_alias,omitempty"`
 }
 
 func (o CreateLogGroupParams) String() string {

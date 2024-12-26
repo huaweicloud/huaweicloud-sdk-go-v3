@@ -7,10 +7,14 @@ import (
 	"strings"
 )
 
+// ExternalCreatePeerLink 创建关联连接返回对象
 type ExternalCreatePeerLink struct {
 
 	// 专线对等连接
 	Id *string `json:"id,omitempty"`
+
+	// 专线对等连接实例ID
+	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 租户ID
 	TenantId *string `json:"tenant_id,omitempty"`

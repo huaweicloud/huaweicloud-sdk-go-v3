@@ -39,7 +39,7 @@ type Update2dModelTrainingJobReq struct {
 	// 动作视频样例可修改信息。
 	SamplesBasicInfo *[]ActionBasicSampleInfo `json:"samples_basic_info,omitempty"`
 
-	// 该任务所生成的模型支持的业务类型，可多选
+	// 该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
 	SupportedService *[]SupportedServiceEnum `json:"supported_service,omitempty"`
 
 	// 声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频

@@ -30,7 +30,7 @@ type ChannelInfo struct {
 	UpdatedTime *string `json:"updated_time,omitempty"`
 
 	// 企业项目id
-	EpsId *string `json:"eps_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o ChannelInfo) String() string {

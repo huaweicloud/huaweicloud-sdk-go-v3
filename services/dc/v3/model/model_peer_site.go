@@ -15,7 +15,7 @@ type PeerSite struct {
 	// 对端网关的ID
 	GatewayId *string `json:"gateway_id,omitempty"`
 
-	// 对端网关连接的ID(如：对端为ER时为attachment ID,对端为GDGW时为对端的PeerLink Id)
+	// 对端网关连接的ID(如：对端为ER时为attachment ID,对端为GDGW时为对端的PeerLink Id
 	LinkId *string `json:"link_id,omitempty"`
 
 	// 对端网关所在的Region

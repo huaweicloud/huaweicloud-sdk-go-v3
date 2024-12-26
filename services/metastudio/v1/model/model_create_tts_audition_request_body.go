@@ -12,6 +12,9 @@ type CreateTtsAuditionRequestBody struct {
 	// 待合成文本。
 	Text string `json:"text"`
 
+	// 发送给tts的待合成文本。
+	TtsText *string `json:"tts_text,omitempty"`
+
 	// 音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
 	Emotion string `json:"emotion"`
 
@@ -26,6 +29,9 @@ type CreateTtsAuditionRequestBody struct {
 
 	// 业务场景，多个入口调用试听接口时的业务场景
 	BusinessType *string `json:"business_type,omitempty"`
+
+	// 风格情感
+	Style *string `json:"style,omitempty"`
 }
 
 func (o CreateTtsAuditionRequestBody) String() string {

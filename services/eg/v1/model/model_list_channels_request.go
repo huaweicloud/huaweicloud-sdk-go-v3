@@ -31,7 +31,7 @@ type ListChannelsRequest struct {
 	FuzzyName *string `json:"fuzzy_name,omitempty"`
 
 	// 指定查询的企业项目id，精确匹配
-	EpsId *string `json:"eps_id,omitempty"`
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o ListChannelsRequest) String() string {

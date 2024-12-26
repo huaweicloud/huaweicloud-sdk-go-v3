@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// BandwidthInfoExternal 带宽信息
 type BandwidthInfoExternal struct {
 
 	// 带宽值

@@ -24,6 +24,17 @@ type UpdateSubscriptionTargetResponse struct {
 	// 订阅的事件目标参数列表
 	Detail *interface{} `json:"detail,omitempty"`
 
+	KafkaDetail *KafkaTargetDetail `json:"kafka_detail,omitempty"`
+
+	SmnDetail *SmnTargetDetail `json:"smn_detail,omitempty"`
+
+	EgDetail *EgTargetDetail `json:"eg_detail,omitempty"`
+
+	ApigwDetail *ApigwTargetDetail `json:"apigw_detail,omitempty"`
+
+	// 重试次数
+	RetryTimes *int32 `json:"retry_times,omitempty"`
+
 	Transform *TransForm `json:"transform,omitempty"`
 
 	DeadLetterQueue *DeadLetterQueue `json:"dead_letter_queue,omitempty"`

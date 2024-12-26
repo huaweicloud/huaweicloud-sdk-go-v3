@@ -12,6 +12,9 @@ type UpdateAccessConfigRequestBody struct {
 	// 日志接入ID
 	AccessConfigId string `json:"access_config_id"`
 
+	// 日志接入名称。 满足正则表达式：^(?!.)(?!)(?!.*?.$)[\\u4e00-\\u9fa5a-zA-Z0-9-.]{1,64}$
+	AccessConfigName *string `json:"access_config_name,omitempty"`
+
 	AccessConfigDetail *AccessConfigDeatilUpdate `json:"access_config_detail,omitempty"`
 
 	HostGroupInfo *AccessConfigHostGroupIdList `json:"host_group_info,omitempty"`

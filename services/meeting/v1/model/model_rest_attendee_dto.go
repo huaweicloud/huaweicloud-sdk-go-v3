@@ -56,6 +56,9 @@ type RestAttendeeDto struct {
 
 	// App ID。如果是APP ID鉴权场景，此项必填。参考[[App ID的申请](https://support.huaweicloud.com/devg-meeting/meeting_20_0011.html#section1)](tag:hws)[[App ID的申请](https://support.huaweicloud.com/intl/zh-cn/devg-meeting/meeting_20_0011.html#section1)](tag:hk)。
 	AppId *string `json:"appId,omitempty"`
+
+	// 企业内唯一会场标识, 0标识为普通与会者，1标识为企业内唯一会场; uniqueType 为1， 同时type要指定为customnumber
+	UniqueType *int32 `json:"uniqueType,omitempty"`
 }
 
 func (o RestAttendeeDto) String() string {

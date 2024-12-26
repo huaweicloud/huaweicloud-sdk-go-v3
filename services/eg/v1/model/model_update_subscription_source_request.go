@@ -15,6 +15,9 @@ type UpdateSubscriptionSourceRequest struct {
 	// 事件订阅源ID
 	SourceId string `json:"source_id"`
 
+	// 创建订阅时所使用的企业项目id
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
 	Body *SubscriptionSource `json:"body,omitempty"`
 }
 

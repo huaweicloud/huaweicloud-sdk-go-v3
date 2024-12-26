@@ -20,6 +20,9 @@ type InterpreterInfo struct {
 
 	// 用户名。
 	Name *string `json:"name,omitempty"`
+
+	// 传译员序号，AI传译组下传译员唯一标识。
+	InterpreterId *string `json:"interpreterId,omitempty"`
 }
 
 func (o InterpreterInfo) String() string {

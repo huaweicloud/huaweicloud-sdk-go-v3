@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// CreateBindingGeipRequestBody 绑定GEIP请求体
 type CreateBindingGeipRequestBody struct {
 
 	// 带宽包id

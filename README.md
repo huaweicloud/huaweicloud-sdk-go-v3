@@ -242,6 +242,8 @@ the [CHANGELOG.md](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/blob/mas
 * [7. API Invoker](#7-api-invoker-top)
     * [7.1 Custom request headers](#71-custom-request-headers-top)
     * [7.2 Retry for request](#72-retry-for-request-top)
+* [8. FAQ](#8-faq-top)
+    * [8.1 How to use in Cloud Service Alliance Scenarios](#81-how-to-use-in-cloud-service-alliance-scenarios-top)
 
 ### 1. Client Configuration [:top:](#user-manual-top)
 
@@ -365,7 +367,7 @@ There are two types of Huawei Cloud services, `regional` services and `global` s
 
 Global services contain BSS, DevStar, EPS, IAM, RMS.
 
-For `regional` services' authentication, projectId is required to initialize basic.NewCredentialsBuilder(). 
+For `regional` services' authentication, projectId is required to initialize basic.NewCredentialsBuilder().
 
 For `global` services' authentication, domainId is required to initialize global.NewCredentialsBuilder().
 
@@ -1160,14 +1162,14 @@ func main() {
 #### 7.2 Retry for request [:top:](#user-manual-top)
 
 When a request encounters a network exception or flow control on the interface, the request needs to be retried. The
-Go SDK provides the retry method for our users which could be used to the requests of `GET` HTTP method. 
+Go SDK provides the retry method for our users which could be used to the requests of `GET` HTTP method.
 If you want to use the retry method, the following parameters are required:
 
 - _maxRetryTimes_: the max retry times
 - _retryCondition_: a function, which determine the condition of when to retry
 - _backoffStrategy_: calculate the wait duration before next retry
 
-Take the interface `ListVpcs` of VPC service for example, assume the request would retry at most 3 times, 
+Take the interface `ListVpcs` of VPC service for example, assume the request would retry at most 3 times,
 retry when service responses an error, the code would be like the following:
 
 ``` go
@@ -1216,5 +1218,45 @@ func main() {
     } else {
         fmt.Printf("%+v\n", err)
     }
+}
+```
+
+### 8. FAQ [:top:](#user-manual-top)
+
+#### 8.1 How to use in Cloud Service Alliance Scenarios [:top:](#user-manual-top)
+
+``` go
+package main
+
+import (
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
+    vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
+    "os"
+)
+
+func main() {
+    // Specify the endpoint, take the endpoint of VPC service in region of eu-west-101 for example
+    endpoint := "https://vpc.eu-west-101.myhuaweicloud.com"
+    // Initialize the credentials, you should provide projectId or domainId in this way, take initializing BasicCredentials for example
+    basicAuth, err := basic.NewCredentialsBuilder().
+        WithAk(os.Getenv("HUAWEICLOUD_SDK_AK")).
+        WithSk(os.Getenv("HUAWEICLOUD_SDK_SK")).
+        WithProjectId("{your projectId string}").
+        SafeBuild()
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+
+    // Initialize specified New{Service}Client, take initializing the regional service VPC's VpcClient for example
+    hcClient, err := vpc.VpcClientBuilder().
+        WithEndpoint(endpoint).
+        WithCredential(basicAuth).
+        SafeBuild()
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    client := vpc.NewVpcClient(hcClient)
 }
 ```

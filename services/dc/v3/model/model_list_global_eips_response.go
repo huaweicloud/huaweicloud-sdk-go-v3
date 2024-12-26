@@ -13,8 +13,13 @@ type ListGlobalEipsResponse struct {
 	RequestId *string `json:"request_id,omitempty"`
 
 	// 全局弹性公网IP
-	GlobalEips     *[]ListBindingGeip `json:"global_eips,omitempty"`
-	HttpStatusCode int                `json:"-"`
+	GlobalEips *[]ListBindingGeip `json:"global_eips,omitempty"`
+
+	// 总记录数。
+	TotalCount *int32 `json:"total_count,omitempty"`
+
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListGlobalEipsResponse) String() string {

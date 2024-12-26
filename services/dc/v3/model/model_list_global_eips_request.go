@@ -39,7 +39,7 @@ type ListGlobalEipsRequest struct {
 	// 互联网关ID
 	ConnectGatewayId string `json:"connect_gateway_id"`
 
-	// 根椐资源状态过淲实例
+	// 根椐资源状态过滤实例
 	Status *[]string `json:"status,omitempty"`
 
 	// 全局弹性IP的ID

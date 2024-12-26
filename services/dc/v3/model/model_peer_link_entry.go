@@ -22,6 +22,9 @@ type PeerLinkEntry struct {
 	// 描述信息
 	Description *string `json:"description,omitempty"`
 
+	// 失败原因
+	Reason *string `json:"reason,omitempty"`
+
 	// 对应的专线全域接入网关ID
 	GlobalDcGatewayId *string `json:"global_dc_gateway_id,omitempty"`
 

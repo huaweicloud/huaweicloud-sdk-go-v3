@@ -14,6 +14,9 @@ type ShowDetailOfSubscriptionTargetRequest struct {
 
 	// 事件订阅目标ID
 	TargetId string `json:"target_id"`
+
+	// 创建订阅时所使用的企业项目id
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o ShowDetailOfSubscriptionTargetRequest) String() string {

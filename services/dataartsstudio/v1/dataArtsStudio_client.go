@@ -124,6 +124,27 @@ func (c *DataArtsStudioClient) AssociateSecurityLevelToEntitieInvoker(request *m
 	return &AssociateSecurityLevelToEntitieInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AuthorizeDataConnection 数据连接跨空间授权
+//
+// 数据连接跨空间授权。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) AuthorizeDataConnection(request *model.AuthorizeDataConnectionRequest) (*model.AuthorizeDataConnectionResponse, error) {
+	requestDef := GenReqDefForAuthorizeDataConnection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AuthorizeDataConnectionResponse), nil
+	}
+}
+
+// AuthorizeDataConnectionInvoker 数据连接跨空间授权
+func (c *DataArtsStudioClient) AuthorizeDataConnectionInvoker(request *model.AuthorizeDataConnectionRequest) *AuthorizeDataConnectionInvoker {
+	requestDef := GenReqDefForAuthorizeDataConnection()
+	return &AuthorizeDataConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchApproveApply 审核申请
 //
 // 审核申请。
@@ -1892,6 +1913,27 @@ func (c *DataArtsStudioClient) DeleteDirectory(request *model.DeleteDirectoryReq
 func (c *DataArtsStudioClient) DeleteDirectoryInvoker(request *model.DeleteDirectoryRequest) *DeleteDirectoryInvoker {
 	requestDef := GenReqDefForDeleteDirectory()
 	return &DeleteDirectoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEntity 删除资产(邀测)
+//
+// 根据guid删除资产。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) DeleteEntity(request *model.DeleteEntityRequest) (*model.DeleteEntityResponse, error) {
+	requestDef := GenReqDefForDeleteEntity()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteEntityResponse), nil
+	}
+}
+
+// DeleteEntityInvoker 删除资产(邀测)
+func (c *DataArtsStudioClient) DeleteEntityInvoker(request *model.DeleteEntityRequest) *DeleteEntityInvoker {
+	requestDef := GenReqDefForDeleteEntity()
+	return &DeleteEntityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteSecurityAssignedQueue 删除当前空间下分配的队列资源
@@ -5590,6 +5632,27 @@ func (c *DataArtsStudioClient) ShowQualityTaskDetailInvoker(request *model.ShowQ
 	return &ShowQualityTaskDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowQueues 获取队列(邀测)
+//
+// 队列列表，展示10条数据，该接口功能处于邀测阶段，后续将随功能公测将逐步开放。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowQueues(request *model.ShowQueuesRequest) (*model.ShowQueuesResponse, error) {
+	requestDef := GenReqDefForShowQueues()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowQueuesResponse), nil
+	}
+}
+
+// ShowQueuesInvoker 获取队列(邀测)
+func (c *DataArtsStudioClient) ShowQueuesInvoker(request *model.ShowQueuesRequest) *ShowQueuesInvoker {
+	requestDef := GenReqDefForShowQueues()
+	return &ShowQueuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowRelationById 查看关系详情
 //
 // 通过ID获取关系详情信息。
@@ -5777,6 +5840,27 @@ func (c *DataArtsStudioClient) ShowStandardTemplate(request *model.ShowStandardT
 func (c *DataArtsStudioClient) ShowStandardTemplateInvoker(request *model.ShowStandardTemplateRequest) *ShowStandardTemplateInvoker {
 	requestDef := GenReqDefForShowStandardTemplate()
 	return &ShowStandardTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTableData 数据预览(邀测)
+//
+// 表数据预览，展示10条数据，该接口功能处于邀测阶段，后续将随功能公测将逐步开放。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowTableData(request *model.ShowTableDataRequest) (*model.ShowTableDataResponse, error) {
+	requestDef := GenReqDefForShowTableData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTableDataResponse), nil
+	}
+}
+
+// ShowTableDataInvoker 数据预览(邀测)
+func (c *DataArtsStudioClient) ShowTableDataInvoker(request *model.ShowTableDataRequest) *ShowTableDataInvoker {
+	requestDef := GenReqDefForShowTableData()
+	return &ShowTableDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowTableModelById 查看表模型详情

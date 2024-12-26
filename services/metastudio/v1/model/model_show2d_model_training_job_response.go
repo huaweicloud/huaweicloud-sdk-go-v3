@@ -136,7 +136,7 @@ type Show2dModelTrainingJobResponse struct {
 	// 声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
 	AudioSourceType *Show2dModelTrainingJobResponseAudioSourceType `json:"audio_source_type,omitempty"`
 
-	// 该任务所生成的模型支持的业务类型，可多选
+	// 该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
 	SupportedService *[]SupportedServiceEnum `json:"supported_service,omitempty"`
 
 	AllocatedResource *TrainingAllocatedResource `json:"allocated_resource,omitempty"`

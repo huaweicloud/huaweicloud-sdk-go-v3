@@ -23,6 +23,9 @@ type GlobalDcGatewayEntry struct {
 	// 描述信息
 	Description *string `json:"description,omitempty"`
 
+	// 失败原因
+	Reason *string `json:"reason,omitempty"`
+
 	// global-dc-gateway所属的企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 

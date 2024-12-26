@@ -21,6 +21,9 @@ type NodeTypes struct {
 	// 产品类型 - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
 	DatastoreType string `json:"datastore_type"`
 
+	// 架构类型 - x86。 - arm。
+	Architecture string `json:"architecture"`
+
 	// 支持的可用区及状态信息。
 	AvailableZones []NodeTypeAvailableZones `json:"available_zones"`
 

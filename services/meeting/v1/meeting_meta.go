@@ -2426,6 +2426,35 @@ func GenReqDefForSearchCorpAdmins() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForSearchCorpDigitalInfoList() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/mmc/control/conferences/queryCorpDigitalInfoList").
+		WithResponse(new(model.SearchCorpDigitalInfoListResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConferenceID").
+		WithJsonTag("conferenceID").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Type").
+		WithJsonTag("type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Language").
+		WithJsonTag("language").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XConferenceAuthorization").
+		WithJsonTag("X-Conference-Authorization").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForSearchCorpDir() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -2965,6 +2994,35 @@ func GenReqDefForSearchOnlineMeetings() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XSiteId").
 		WithJsonTag("X-Site-Id").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForSearchPrivateCorpDigitalInfo() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/mmc/control/conferences/queryPrivateCorpDigitalInfo").
+		WithResponse(new(model.SearchPrivateCorpDigitalInfoResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConferenceID").
+		WithJsonTag("conferenceID").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Account").
+		WithJsonTag("account").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Language").
+		WithJsonTag("language").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XConferenceAuthorization").
+		WithJsonTag("X-Conference-Authorization").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()

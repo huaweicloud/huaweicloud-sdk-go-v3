@@ -124,6 +124,48 @@ func (c *EgClient) CreateEndpointInvoker(request *model.CreateEndpointRequest) *
 	return &CreateEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateEventSchema 创建自定义事件模型
+//
+// 创建自定义事件模型
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EgClient) CreateEventSchema(request *model.CreateEventSchemaRequest) (*model.CreateEventSchemaResponse, error) {
+	requestDef := GenReqDefForCreateEventSchema()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateEventSchemaResponse), nil
+	}
+}
+
+// CreateEventSchemaInvoker 创建自定义事件模型
+func (c *EgClient) CreateEventSchemaInvoker(request *model.CreateEventSchemaRequest) *CreateEventSchemaInvoker {
+	requestDef := GenReqDefForCreateEventSchema()
+	return &CreateEventSchemaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateEventSchemaVersion 创建自定义事件模型版本
+//
+// 创建自定义事件模型版本，版本号后台自动生成
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EgClient) CreateEventSchemaVersion(request *model.CreateEventSchemaVersionRequest) (*model.CreateEventSchemaVersionResponse, error) {
+	requestDef := GenReqDefForCreateEventSchemaVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateEventSchemaVersionResponse), nil
+	}
+}
+
+// CreateEventSchemaVersionInvoker 创建自定义事件模型版本
+func (c *EgClient) CreateEventSchemaVersionInvoker(request *model.CreateEventSchemaVersionRequest) *CreateEventSchemaVersionInvoker {
+	requestDef := GenReqDefForCreateEventSchemaVersion()
+	return &CreateEventSchemaVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateEventSource 创建自定义事件源
 //
 // 创建用户自定义类型的事件源，只能指定自定义通道，不能指定系统通道。
@@ -271,6 +313,48 @@ func (c *EgClient) DeleteEndpointInvoker(request *model.DeleteEndpointRequest) *
 	return &DeleteEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteEventSchema 删除事件模型
+//
+// 删除事件模型
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EgClient) DeleteEventSchema(request *model.DeleteEventSchemaRequest) (*model.DeleteEventSchemaResponse, error) {
+	requestDef := GenReqDefForDeleteEventSchema()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteEventSchemaResponse), nil
+	}
+}
+
+// DeleteEventSchemaInvoker 删除事件模型
+func (c *EgClient) DeleteEventSchemaInvoker(request *model.DeleteEventSchemaRequest) *DeleteEventSchemaInvoker {
+	requestDef := GenReqDefForDeleteEventSchema()
+	return &DeleteEventSchemaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteEventSchemaVersion 删除事件模型版本
+//
+// 删除事件模型指定版本
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EgClient) DeleteEventSchemaVersion(request *model.DeleteEventSchemaVersionRequest) (*model.DeleteEventSchemaVersionResponse, error) {
+	requestDef := GenReqDefForDeleteEventSchemaVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteEventSchemaVersionResponse), nil
+	}
+}
+
+// DeleteEventSchemaVersionInvoker 删除事件模型版本
+func (c *EgClient) DeleteEventSchemaVersionInvoker(request *model.DeleteEventSchemaVersionRequest) *DeleteEventSchemaVersionInvoker {
+	requestDef := GenReqDefForDeleteEventSchemaVersion()
+	return &DeleteEventSchemaVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteEventSource 删除自定义事件源
 //
 // 删除指定的自定义事件源。
@@ -355,6 +439,27 @@ func (c *EgClient) DeleteSubscriptionTargetInvoker(request *model.DeleteSubscrip
 	return &DeleteSubscriptionTargetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DiscoverEventSchemaFromData 事件模型自动发现
+//
+// 事件模型自动发现
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EgClient) DiscoverEventSchemaFromData(request *model.DiscoverEventSchemaFromDataRequest) (*model.DiscoverEventSchemaFromDataResponse, error) {
+	requestDef := GenReqDefForDiscoverEventSchemaFromData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DiscoverEventSchemaFromDataResponse), nil
+	}
+}
+
+// DiscoverEventSchemaFromDataInvoker 事件模型自动发现
+func (c *EgClient) DiscoverEventSchemaFromDataInvoker(request *model.DiscoverEventSchemaFromDataRequest) *DiscoverEventSchemaFromDataInvoker {
+	requestDef := GenReqDefForDiscoverEventSchemaFromData()
+	return &DiscoverEventSchemaFromDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAgencies 查询服务委托
 //
 // 查询服务委托。
@@ -437,6 +542,48 @@ func (c *EgClient) ListEndpoints(request *model.ListEndpointsRequest) (*model.Li
 func (c *EgClient) ListEndpointsInvoker(request *model.ListEndpointsRequest) *ListEndpointsInvoker {
 	requestDef := GenReqDefForListEndpoints()
 	return &ListEndpointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEventSchema 查询事件模型列表
+//
+// 查询事件模型列表，包括系统事件模型和自定义事件模型
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EgClient) ListEventSchema(request *model.ListEventSchemaRequest) (*model.ListEventSchemaResponse, error) {
+	requestDef := GenReqDefForListEventSchema()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEventSchemaResponse), nil
+	}
+}
+
+// ListEventSchemaInvoker 查询事件模型列表
+func (c *EgClient) ListEventSchemaInvoker(request *model.ListEventSchemaRequest) *ListEventSchemaInvoker {
+	requestDef := GenReqDefForListEventSchema()
+	return &ListEventSchemaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEventSchemaVersions 查询事件模型版本列表
+//
+// 查询事件模型版本列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EgClient) ListEventSchemaVersions(request *model.ListEventSchemaVersionsRequest) (*model.ListEventSchemaVersionsResponse, error) {
+	requestDef := GenReqDefForListEventSchemaVersions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEventSchemaVersionsResponse), nil
+	}
+}
+
+// ListEventSchemaVersionsInvoker 查询事件模型版本列表
+func (c *EgClient) ListEventSchemaVersionsInvoker(request *model.ListEventSchemaVersionsRequest) *ListEventSchemaVersionsInvoker {
+	requestDef := GenReqDefForListEventSchemaVersions()
+	return &ListEventSchemaVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListEventSources 查询事件源列表
@@ -672,7 +819,7 @@ func (c *EgClient) OperateSubscriptionInvoker(request *model.OperateSubscription
 
 // PutEvents 发布事件到事件通道
 //
-// 发布事件到事件通道。
+// 发布事件到事件通道，仅供调试使用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) PutEvents(request *model.PutEventsRequest) (*model.PutEventsResponse, error) {
@@ -796,6 +943,48 @@ func (c *EgClient) ShowDetailOfEventInvoker(request *model.ShowDetailOfEventRequ
 	return &ShowDetailOfEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDetailOfEventSchema 查询事件模型详情
+//
+// 查询事件模型详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EgClient) ShowDetailOfEventSchema(request *model.ShowDetailOfEventSchemaRequest) (*model.ShowDetailOfEventSchemaResponse, error) {
+	requestDef := GenReqDefForShowDetailOfEventSchema()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDetailOfEventSchemaResponse), nil
+	}
+}
+
+// ShowDetailOfEventSchemaInvoker 查询事件模型详情
+func (c *EgClient) ShowDetailOfEventSchemaInvoker(request *model.ShowDetailOfEventSchemaRequest) *ShowDetailOfEventSchemaInvoker {
+	requestDef := GenReqDefForShowDetailOfEventSchema()
+	return &ShowDetailOfEventSchemaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailOfEventSchemaVersion 查询事件模型版本详情
+//
+// 查询事件模型指定版本详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EgClient) ShowDetailOfEventSchemaVersion(request *model.ShowDetailOfEventSchemaVersionRequest) (*model.ShowDetailOfEventSchemaVersionResponse, error) {
+	requestDef := GenReqDefForShowDetailOfEventSchemaVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDetailOfEventSchemaVersionResponse), nil
+	}
+}
+
+// ShowDetailOfEventSchemaVersionInvoker 查询事件模型版本详情
+func (c *EgClient) ShowDetailOfEventSchemaVersionInvoker(request *model.ShowDetailOfEventSchemaVersionRequest) *ShowDetailOfEventSchemaVersionInvoker {
+	requestDef := GenReqDefForShowDetailOfEventSchemaVersion()
+	return &ShowDetailOfEventSchemaVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDetailOfEventSource 查询事件源详情
 //
 // 查询事件源详情信息。
@@ -901,6 +1090,27 @@ func (c *EgClient) ShowEventStreamingInvoker(request *model.ShowEventStreamingRe
 	return &ShowEventStreamingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowListOfEventSample 查询事件示例列表
+//
+// 查询事件示例列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EgClient) ShowListOfEventSample(request *model.ShowListOfEventSampleRequest) (*model.ShowListOfEventSampleResponse, error) {
+	requestDef := GenReqDefForShowListOfEventSample()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowListOfEventSampleResponse), nil
+	}
+}
+
+// ShowListOfEventSampleInvoker 查询事件示例列表
+func (c *EgClient) ShowListOfEventSampleInvoker(request *model.ShowListOfEventSampleRequest) *ShowListOfEventSampleInvoker {
+	requestDef := GenReqDefForShowListOfEventSample()
+	return &ShowListOfEventSampleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateChannel 更新自定义事件通道
 //
 // 更新自定义事件通道定义。
@@ -962,6 +1172,27 @@ func (c *EgClient) UpdateEndpoint(request *model.UpdateEndpointRequest) (*model.
 func (c *EgClient) UpdateEndpointInvoker(request *model.UpdateEndpointRequest) *UpdateEndpointInvoker {
 	requestDef := GenReqDefForUpdateEndpoint()
 	return &UpdateEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEventSchema 更新自定义事件模型
+//
+// 更新自定义事件模型定义
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EgClient) UpdateEventSchema(request *model.UpdateEventSchemaRequest) (*model.UpdateEventSchemaResponse, error) {
+	requestDef := GenReqDefForUpdateEventSchema()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEventSchemaResponse), nil
+	}
+}
+
+// UpdateEventSchemaInvoker 更新自定义事件模型
+func (c *EgClient) UpdateEventSchemaInvoker(request *model.UpdateEventSchemaRequest) *UpdateEventSchemaInvoker {
+	requestDef := GenReqDefForUpdateEventSchema()
+	return &UpdateEventSchemaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateEventSource 更新自定义事件源
@@ -1029,7 +1260,7 @@ func (c *EgClient) UpdateSubscriptionInvoker(request *model.UpdateSubscriptionRe
 
 // UpdateSubscriptionSource 更新事件订阅源
 //
-// 更新事件订阅源定义
+// 更新事件订阅源定义。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EgClient) UpdateSubscriptionSource(request *model.UpdateSubscriptionSourceRequest) (*model.UpdateSubscriptionSourceResponse, error) {

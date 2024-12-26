@@ -13,7 +13,7 @@ type ListDatabaseRolesResponse struct {
 	Roles *[]GaussDbListDatabaseRoles `json:"roles,omitempty"`
 
 	// 数据库用户/角色总数。
-	TotalCount     *int64 `json:"total_count,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

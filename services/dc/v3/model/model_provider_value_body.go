@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ProviderValueBody 运营商描述信息。
+// ProviderValueBody 运营商名称
 type ProviderValueBody struct {
 
 	// 英文名称。

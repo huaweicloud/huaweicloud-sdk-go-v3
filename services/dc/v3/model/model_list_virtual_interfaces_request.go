@@ -33,7 +33,7 @@ type ListVirtualInterfacesRequest struct {
 	// 根据资源ID过滤实例
 	Id *[]string `json:"id,omitempty"`
 
-	// 根椐资源状态过淲实例
+	// 根椐资源状态过滤实例
 	Status *[]string `json:"status,omitempty"`
 
 	// 根椐物理专线ID过滤查询实例信息

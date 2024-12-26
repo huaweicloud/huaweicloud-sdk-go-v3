@@ -32,6 +32,11 @@ type SubscriptionTarget struct {
 
 	EgDetail *EgTargetDetail `json:"eg_detail,omitempty"`
 
+	ApigwDetail *ApigwTargetDetail `json:"apigw_detail,omitempty"`
+
+	// 重试次数
+	RetryTimes *int32 `json:"retry_times,omitempty"`
+
 	Transform *TransForm `json:"transform"`
 
 	DeadLetterQueue *DeadLetterQueue `json:"dead_letter_queue,omitempty"`
@@ -53,6 +58,7 @@ type SubscriptionTargetProviderType struct {
 type SubscriptionTargetProviderTypeEnum struct {
 	CUSTOM   SubscriptionTargetProviderType
 	OFFICIAL SubscriptionTargetProviderType
+	APIGW    SubscriptionTargetProviderType
 }
 
 func GetSubscriptionTargetProviderTypeEnum() SubscriptionTargetProviderTypeEnum {
@@ -62,6 +68,9 @@ func GetSubscriptionTargetProviderTypeEnum() SubscriptionTargetProviderTypeEnum 
 		},
 		OFFICIAL: SubscriptionTargetProviderType{
 			value: "OFFICIAL",
+		},
+		APIGW: SubscriptionTargetProviderType{
+			value: "APIGW",
 		},
 	}
 }

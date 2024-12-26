@@ -10,9 +10,9 @@ import (
 type Volume struct {
 
 	// 磁盘名称，取值范围为 SSD（超高IO）,高IO（SAS），普通IO（SATA）
-	Volume *string `json:"volume,omitempty"`
+	Volume string `json:"volume"`
 
-	// 磁盘容量
+	// 磁盘容量,单位：GB
 	Capacity *int32 `json:"capacity,omitempty"`
 }
 

@@ -20,7 +20,7 @@ type ProviderResponseBody struct {
 
 	ProviderValue *ProviderValueBody `json:"provider_value,omitempty"`
 
-	// 运营商描述信息
+	// 运营商说明
 	Description *string `json:"description,omitempty"`
 }
 

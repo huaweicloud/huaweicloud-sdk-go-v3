@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// PeerLinkStatus 关联连接状态，PENDING_CREATE (创建中), PENDING_UPDATE (更新中), ACTIVE (可用状态), ERROR (失败状态)。
+// PeerLinkStatus 关联连接状态， - PENDING_CREATE (创建中) - PENDING_UPDATE (更新中) - ACTIVE (可用状态) - ERROR (失败状态)
 type PeerLinkStatus struct {
 	value string
 }

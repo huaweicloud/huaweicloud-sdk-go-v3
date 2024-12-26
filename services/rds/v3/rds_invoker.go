@@ -629,6 +629,22 @@ func (i *ListDatastoresInvoker) Invoke() (*model.ListDatastoresResponse, error) 
 	}
 }
 
+type ListDrInfosInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDrInfosInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDrInfosInvoker) Invoke() (*model.ListDrInfosResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDrInfosResponse), nil
+	}
+}
+
 type ListDrRelationsInvoker struct {
 	*invoker.BaseInvoker
 }

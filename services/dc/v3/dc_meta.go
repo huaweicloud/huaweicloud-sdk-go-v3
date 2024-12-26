@@ -12,7 +12,7 @@ func GenReqDefForBindGlobalEips() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v3/{project_id}/dcaas/connect-gateways/{connect_gateway_id}/binding-global-eips").
 		WithResponse(new(model.BindGlobalEipsResponse)).
-		WithContentType("application/json; charset=utf-8")
+		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ConnectGatewayId").
@@ -93,7 +93,7 @@ func GenReqDefForUnbindGlobalEips() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v3/{project_id}/dcaas/connect-gateways/{connect_gateway_id}/unbinding-global-eips").
 		WithResponse(new(model.UnbindGlobalEipsResponse)).
-		WithContentType("application/json; charset=utf-8")
+		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ConnectGatewayId").
@@ -541,8 +541,12 @@ func GenReqDefForListGdgwRouteTables() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AddressFamily").
-		WithJsonTag("address_family").
+		WithName("Fields").
+		WithJsonTag("fields").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ExtFields").
+		WithJsonTag("ext_fields").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Nexthop").
@@ -551,6 +555,10 @@ func GenReqDefForListGdgwRouteTables() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Destination").
 		WithJsonTag("destination").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AddressFamily").
+		WithJsonTag("address_family").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -562,7 +570,7 @@ func GenReqDefForUpdateGdgwRouteTable() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v3/{project_id}/dcaas/gdgw/{gdgw_id}/routetables").
 		WithResponse(new(model.UpdateGdgwRouteTableResponse)).
-		WithContentType("application/json; charset=utf-8")
+		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("GdgwId").
@@ -907,10 +915,6 @@ func GenReqDefForBatchCreateResourceTags() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -932,10 +936,6 @@ func GenReqDefForCreateResourceTag() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 

@@ -10,16 +10,16 @@ import (
 type GetAccessConfigListRequestBody struct {
 
 	// 接入配置名称列表
-	AccessConfigNameList []string `json:"access_config_name_list"`
+	AccessConfigNameList *[]string `json:"access_config_name_list,omitempty"`
 
 	// 主机组名称列表
-	HostGroupNameList []string `json:"host_group_name_list"`
+	HostGroupNameList *[]string `json:"host_group_name_list,omitempty"`
 
 	// 日志组名称列表
-	LogGroupNameList []string `json:"log_group_name_list"`
+	LogGroupNameList *[]string `json:"log_group_name_list,omitempty"`
 
 	// 日志流名称列表
-	LogStreamNameList []string `json:"log_stream_name_list"`
+	LogStreamNameList *[]string `json:"log_stream_name_list,omitempty"`
 
 	// 接入配置标签，KEY不能重复,最多20个标签
 	AccessConfigTagList *[]AccessConfigTag `json:"access_config_tag_list,omitempty"`

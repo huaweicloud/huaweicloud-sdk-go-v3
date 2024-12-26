@@ -146,6 +146,9 @@ type MonthlyBillRes struct {
 
 	// |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
 	ExpireTime *string `json:"expire_time,omitempty"`
+
+	// |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包周期、预留实例预付为交易时间，按需、预留实例按时计费为话单生失效时间。 说明：当statistic_type=3时有效。|
+	ConsumeTime *string `json:"consume_time,omitempty"`
 }
 
 func (o MonthlyBillRes) String() string {

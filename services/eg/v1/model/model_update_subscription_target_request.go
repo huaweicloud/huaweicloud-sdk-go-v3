@@ -15,6 +15,9 @@ type UpdateSubscriptionTargetRequest struct {
 	// 事件订阅目标ID
 	TargetId string `json:"target_id"`
 
+	// 创建订阅时所使用的企业项目id
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
 	Body *SubscriptionTarget `json:"body,omitempty"`
 }
 

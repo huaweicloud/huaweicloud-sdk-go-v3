@@ -735,6 +735,27 @@ func GenReqDefForUpdateEndpointWhite() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForUpgradeEndpointService() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/vpc-endpoint-services/{vpc_endpoint_service_id}/upgrade").
+		WithResponse(new(model.UpgradeEndpointServiceResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("VpcEndpointServiceId").
+		WithJsonTag("vpc_endpoint_service_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchAddOrRemoveResourceInstance() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

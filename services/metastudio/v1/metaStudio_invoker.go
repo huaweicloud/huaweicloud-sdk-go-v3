@@ -1765,6 +1765,22 @@ func (i *UpdateSmartChatRoomInvoker) Invoke() (*model.UpdateSmartChatRoomRespons
 	}
 }
 
+type BatchConfirmLiveCommandsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchConfirmLiveCommandsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchConfirmLiveCommandsInvoker) Invoke() (*model.BatchConfirmLiveCommandsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchConfirmLiveCommandsResponse), nil
+	}
+}
+
 type ExecuteSmartLiveCommandInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1810,6 +1826,38 @@ func (i *ListSmartLiveJobsInvoker) Invoke() (*model.ListSmartLiveJobsResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ListSmartLiveJobsResponse), nil
+	}
+}
+
+type ListSmartLiveRuleCommandsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSmartLiveRuleCommandsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSmartLiveRuleCommandsInvoker) Invoke() (*model.ListSmartLiveRuleCommandsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSmartLiveRuleCommandsResponse), nil
+	}
+}
+
+type ListSmartLiveScriptCommandsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSmartLiveScriptCommandsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSmartLiveScriptCommandsInvoker) Invoke() (*model.ListSmartLiveScriptCommandsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSmartLiveScriptCommandsResponse), nil
 	}
 }
 
@@ -1874,6 +1922,22 @@ func (i *StopSmartLiveInvoker) Invoke() (*model.StopSmartLiveResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.StopSmartLiveResponse), nil
+	}
+}
+
+type ConfirmSmartLiveRoomInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ConfirmSmartLiveRoomInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ConfirmSmartLiveRoomInvoker) Invoke() (*model.ConfirmSmartLiveRoomResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ConfirmSmartLiveRoomResponse), nil
 	}
 }
 
@@ -2546,6 +2610,70 @@ func (i *CreateTtsAuditionInvoker) Invoke() (*model.CreateTtsAuditionResponse, e
 		return nil, err
 	} else {
 		return result.(*model.CreateTtsAuditionResponse), nil
+	}
+}
+
+type CreateTtscVocabularyConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTtscVocabularyConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateTtscVocabularyConfigsInvoker) Invoke() (*model.CreateTtscVocabularyConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTtscVocabularyConfigsResponse), nil
+	}
+}
+
+type DeleteTtscVocabularyConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTtscVocabularyConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteTtscVocabularyConfigsInvoker) Invoke() (*model.DeleteTtscVocabularyConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTtscVocabularyConfigsResponse), nil
+	}
+}
+
+type ListTtscVocabularyConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTtscVocabularyConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTtscVocabularyConfigsInvoker) Invoke() (*model.ListTtscVocabularyConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTtscVocabularyConfigsResponse), nil
+	}
+}
+
+type SaveTtscVocabularyConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SaveTtscVocabularyConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SaveTtscVocabularyConfigsInvoker) Invoke() (*model.SaveTtscVocabularyConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SaveTtscVocabularyConfigsResponse), nil
 	}
 }
 

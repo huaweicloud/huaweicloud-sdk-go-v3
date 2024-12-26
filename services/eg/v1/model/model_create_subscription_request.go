@@ -8,6 +8,10 @@ import (
 
 // CreateSubscriptionRequest Request Object
 type CreateSubscriptionRequest struct {
+
+	// 创建订阅时所使用的企业项目id
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
 	Body *SubscriptionCreateReq `json:"body,omitempty"`
 }
 

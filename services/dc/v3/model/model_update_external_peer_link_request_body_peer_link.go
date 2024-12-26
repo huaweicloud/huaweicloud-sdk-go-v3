@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// UpdateExternalPeerLinkRequestBodyPeerLink 更新关联连接请求体
 type UpdateExternalPeerLinkRequestBodyPeerLink struct {
 
 	// 接入网关关联连接的名字

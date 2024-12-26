@@ -149,6 +149,22 @@ func (i *BatchDeleteAddressItemsInvoker) Invoke() (*model.BatchDeleteAddressItem
 	}
 }
 
+type BatchDeleteDomainSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteDomainSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteDomainSetInvoker) Invoke() (*model.BatchDeleteDomainSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteDomainSetResponse), nil
+	}
+}
+
 type BatchDeleteServiceItemsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -581,6 +597,22 @@ func (i *ListDomainParseDetailInvoker) Invoke() (*model.ListDomainParseDetailRes
 	}
 }
 
+type ListDomainParseIpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDomainParseIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDomainParseIpInvoker) Invoke() (*model.ListDomainParseIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDomainParseIpResponse), nil
+	}
+}
+
 type ListDomainSetsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -709,6 +741,22 @@ func (i *ListLogConfigInvoker) Invoke() (*model.ListLogConfigResponse, error) {
 	}
 }
 
+type ListProjectTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectTagsResponse), nil
+	}
+}
+
 type ListProtectedVpcsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -722,6 +770,22 @@ func (i *ListProtectedVpcsInvoker) Invoke() (*model.ListProtectedVpcsResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ListProtectedVpcsResponse), nil
+	}
+}
+
+type ListResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListResourceTagsInvoker) Invoke() (*model.ListResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResourceTagsResponse), nil
 	}
 }
 
@@ -773,6 +837,86 @@ func (i *ListServiceSetsInvoker) Invoke() (*model.ListServiceSetsResponse, error
 	}
 }
 
+type SaveTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SaveTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SaveTagsInvoker) Invoke() (*model.SaveTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SaveTagsResponse), nil
+	}
+}
+
+type ShowAlarmConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAlarmConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAlarmConfigInvoker) Invoke() (*model.ShowAlarmConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAlarmConfigResponse), nil
+	}
+}
+
+type ShowAntiVirusRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAntiVirusRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAntiVirusRuleInvoker) Invoke() (*model.ShowAntiVirusRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAntiVirusRuleResponse), nil
+	}
+}
+
+type ShowAntiVirusSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAntiVirusSwitchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAntiVirusSwitchInvoker) Invoke() (*model.ShowAntiVirusSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAntiVirusSwitchResponse), nil
+	}
+}
+
+type ShowDomainSetDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainSetDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDomainSetDetailInvoker) Invoke() (*model.ShowDomainSetDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainSetDetailResponse), nil
+	}
+}
+
 type UpdateAddressSetInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -786,6 +930,54 @@ func (i *UpdateAddressSetInvoker) Invoke() (*model.UpdateAddressSetResponse, err
 		return nil, err
 	} else {
 		return result.(*model.UpdateAddressSetResponse), nil
+	}
+}
+
+type UpdateAlarmConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAlarmConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAlarmConfigInvoker) Invoke() (*model.UpdateAlarmConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAlarmConfigResponse), nil
+	}
+}
+
+type UpdateAntiVirusRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAntiVirusRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAntiVirusRuleInvoker) Invoke() (*model.UpdateAntiVirusRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAntiVirusRuleResponse), nil
+	}
+}
+
+type UpdateAntiVirusSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAntiVirusSwitchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAntiVirusSwitchInvoker) Invoke() (*model.UpdateAntiVirusSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAntiVirusSwitchResponse), nil
 	}
 }
 
@@ -981,6 +1173,22 @@ func (i *ListAclRulesInvoker) Invoke() (*model.ListAclRulesResponse, error) {
 	}
 }
 
+type ListRegionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRegionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRegionsInvoker) Invoke() (*model.ListRegionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRegionsResponse), nil
+	}
+}
+
 type ListRuleAclTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -994,6 +1202,22 @@ func (i *ListRuleAclTagsInvoker) Invoke() (*model.ListRuleAclTagsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListRuleAclTagsResponse), nil
+	}
+}
+
+type ShowImportStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowImportStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowImportStatusInvoker) Invoke() (*model.ShowImportStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowImportStatusResponse), nil
 	}
 }
 
@@ -1045,6 +1269,22 @@ func (i *ChangeEipStatusInvoker) Invoke() (*model.ChangeEipStatusResponse, error
 	}
 }
 
+type ListAlarmWhitelistInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAlarmWhitelistInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAlarmWhitelistInvoker) Invoke() (*model.ListAlarmWhitelistResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAlarmWhitelistResponse), nil
+	}
+}
+
 type ListEipCountInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1077,6 +1317,38 @@ func (i *ListEipsInvoker) Invoke() (*model.ListEipsResponse, error) {
 	}
 }
 
+type ShowAutoProtectStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAutoProtectStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAutoProtectStatusInvoker) Invoke() (*model.ShowAutoProtectStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAutoProtectStatusResponse), nil
+	}
+}
+
+type SwitchAutoProtectStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchAutoProtectStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SwitchAutoProtectStatusInvoker) Invoke() (*model.SwitchAutoProtectStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchAutoProtectStatusResponse), nil
+	}
+}
+
 type ChangeIpsProtectModeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1090,6 +1362,22 @@ func (i *ChangeIpsProtectModeInvoker) Invoke() (*model.ChangeIpsProtectModeRespo
 		return nil, err
 	} else {
 		return result.(*model.ChangeIpsProtectModeResponse), nil
+	}
+}
+
+type ChangeIpsRuleModeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeIpsRuleModeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeIpsRuleModeInvoker) Invoke() (*model.ChangeIpsRuleModeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeIpsRuleModeResponse), nil
 	}
 }
 
@@ -1109,6 +1397,22 @@ func (i *ChangeIpsSwitchStatusInvoker) Invoke() (*model.ChangeIpsSwitchStatusRes
 	}
 }
 
+type ListCustomerIpsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCustomerIpsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCustomerIpsInvoker) Invoke() (*model.ListCustomerIpsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCustomerIpsResponse), nil
+	}
+}
+
 type ListIpsProtectModeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1125,6 +1429,38 @@ func (i *ListIpsProtectModeInvoker) Invoke() (*model.ListIpsProtectModeResponse,
 	}
 }
 
+type ListIpsRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIpsRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListIpsRulesInvoker) Invoke() (*model.ListIpsRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIpsRulesResponse), nil
+	}
+}
+
+type ListIpsRules1Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIpsRules1Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListIpsRules1Invoker) Invoke() (*model.ListIpsRules1Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIpsRules1Response), nil
+	}
+}
+
 type ListIpsSwitchStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1138,5 +1474,37 @@ func (i *ListIpsSwitchStatusInvoker) Invoke() (*model.ListIpsSwitchStatusRespons
 		return nil, err
 	} else {
 		return result.(*model.ListIpsSwitchStatusResponse), nil
+	}
+}
+
+type ShowIpsUpdateTimeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIpsUpdateTimeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowIpsUpdateTimeInvoker) Invoke() (*model.ShowIpsUpdateTimeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIpsUpdateTimeResponse), nil
+	}
+}
+
+type UpdateAdvancedIpsRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAdvancedIpsRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAdvancedIpsRuleInvoker) Invoke() (*model.UpdateAdvancedIpsRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAdvancedIpsRuleResponse), nil
 	}
 }

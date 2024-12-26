@@ -50,6 +50,9 @@ type ListSmartLiveRoomsRequest struct {
 
 	// 按照自己拥有的和别人分享以及公共的模板进行查询 * OWNED 自己拥有且暂未共享的 * SHARED_TO_OHTERS 分享给别人的 * SHARED_FROM_OHTERS 别人分享给我的 * PUBLIC 公共模板
 	TemplateOwnType *string `json:"template_own_type,omitempty"`
+
+	// 直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - unconfirm: 未确认 - confirmed：已确认 - reject： 拒绝
+	ConfirmState *string `json:"confirm_state,omitempty"`
 }
 
 func (o ListSmartLiveRoomsRequest) String() string {

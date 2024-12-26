@@ -42,7 +42,7 @@ type ListGlobalDcGatewaysRequest struct {
 	// 云连接ID
 	CloudConnectionId *[]string `json:"cloud_connection_id,omitempty"`
 
-	// 根椐资源状态过淲实例
+	// 根椐资源状态过滤实例
 	Status *[]string `json:"status,omitempty"`
 
 	// 全球中心网络ID

@@ -17,8 +17,7 @@ type GaussDbListDatabaseRoles struct {
 	// 用户/角色是否被锁。
 	LockStatus *bool `json:"lock_status,omitempty"`
 
-	// 用户/角色的权限属性。
-	Attribute *interface{} `json:"attribute,omitempty"`
+	Attribute *GaussDbListDatabaseRolesPriv `json:"attribute,omitempty"`
 }
 
 func (o GaussDbListDatabaseRoles) String() string {
