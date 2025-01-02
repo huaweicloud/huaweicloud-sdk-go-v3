@@ -13,7 +13,12 @@ type ListConnectGatewaysResponse struct {
 	RequestId *string `json:"request_id,omitempty"`
 
 	ConnectGateways *[]ConnectGatewayResponse `json:"connect_gateways,omitempty"`
-	HttpStatusCode  int                       `json:"-"`
+
+	// 总记录数。
+	TotalCount *int32 `json:"total_count,omitempty"`
+
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListConnectGatewaysResponse) String() string {

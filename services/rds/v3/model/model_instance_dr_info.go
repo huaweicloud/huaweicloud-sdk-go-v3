@@ -41,6 +41,9 @@ type InstanceDrInfo struct {
 	// 灾备实例所在region
 	SlaveRegion string `json:"slave_region"`
 
+	// 搭建流程。master表示配置主实例容灾能力流程。slave表示配置灾备实例容灾能力流程。
+	BuildProcess *string `json:"build_process,omitempty"`
+
 	// 灾备搭建时间
 	Time int64 `json:"time"`
 }

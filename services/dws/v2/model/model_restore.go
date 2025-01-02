@@ -31,6 +31,9 @@ type Restore struct {
 
 	// 企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。
+	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
 }
 
 func (o Restore) String() string {

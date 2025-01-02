@@ -1093,6 +1093,22 @@ func (i *ListRdSforMysqlProxyFlavorsInvoker) Invoke() (*model.ListRdSforMysqlPro
 	}
 }
 
+type ListReadOnlyReplayDatabaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListReadOnlyReplayDatabaseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListReadOnlyReplayDatabaseInvoker) Invoke() (*model.ListReadOnlyReplayDatabaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListReadOnlyReplayDatabaseResponse), nil
+	}
+}
+
 type ListRecycleInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1410,6 +1426,22 @@ func (i *RestoreExistInstanceInvoker) Invoke() (*model.RestoreExistInstanceRespo
 		return nil, err
 	} else {
 		return result.(*model.RestoreExistInstanceResponse), nil
+	}
+}
+
+type RestoreLogReplayDatabaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestoreLogReplayDatabaseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RestoreLogReplayDatabaseInvoker) Invoke() (*model.RestoreLogReplayDatabaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestoreLogReplayDatabaseResponse), nil
 	}
 }
 

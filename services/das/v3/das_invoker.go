@@ -693,6 +693,22 @@ func (i *ShowTuningInvoker) Invoke() (*model.ShowTuningResponse, error) {
 	}
 }
 
+type SynchronizeInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SynchronizeInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SynchronizeInstancesInvoker) Invoke() (*model.SynchronizeInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SynchronizeInstancesResponse), nil
+	}
+}
+
 type UpdateDbUserInvoker struct {
 	*invoker.BaseInvoker
 }

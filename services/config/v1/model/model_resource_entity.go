@@ -6,7 +6,6 @@ import (
 	"strings"
 )
 
-// ResourceEntity 资源对象
 type ResourceEntity struct {
 
 	// 资源id
@@ -48,14 +47,14 @@ type ResourceEntity struct {
 	// 资源操作状态
 	ProvisioningState *string `json:"provisioning_state,omitempty"`
 
-	// 资源状态，保有中（Normal）/已删除(Deleted)
-	State *string `json:"state,omitempty"`
-
 	// 资源Tag
 	Tags map[string]string `json:"tags,omitempty"`
 
 	// 资源详细属性
 	Properties map[string]interface{} `json:"properties,omitempty"`
+
+	// 资源状态，保有中（Normal）/已删除(Deleted)
+	State *string `json:"state,omitempty"`
 }
 
 func (o ResourceEntity) String() string {

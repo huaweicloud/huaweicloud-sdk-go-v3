@@ -8,7 +8,16 @@ import (
 
 // SearchPrivateCorpDigitalInfoResponse Response Object
 type SearchPrivateCorpDigitalInfoResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 结果码
+	ReturnCode *int32 `json:"returnCode,omitempty"`
+
+	// 结果描述
+	ReturnDesc *string `json:"returnDesc,omitempty"`
+
+	// 数字资产列表
+	CorpDigitalInfoList *[]CorpDigitalInfo `json:"corpDigitalInfoList,omitempty"`
+	HttpStatusCode      int                `json:"-"`
 }
 
 func (o SearchPrivateCorpDigitalInfoResponse) String() string {

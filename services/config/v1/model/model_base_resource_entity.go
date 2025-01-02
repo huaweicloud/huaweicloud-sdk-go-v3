@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// ShowTrackedResourceDetailResponse Response Object
-type ShowTrackedResourceDetailResponse struct {
+// BaseResourceEntity 资源对象
+type BaseResourceEntity struct {
 
 	// 资源id
 	Id *string `json:"id,omitempty"`
@@ -53,17 +53,13 @@ type ShowTrackedResourceDetailResponse struct {
 
 	// 资源详细属性
 	Properties map[string]interface{} `json:"properties,omitempty"`
-
-	// 资源状态，保有中（Normal）/已删除(Deleted)
-	State          *string `json:"state,omitempty"`
-	HttpStatusCode int     `json:"-"`
 }
 
-func (o ShowTrackedResourceDetailResponse) String() string {
+func (o BaseResourceEntity) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "ShowTrackedResourceDetailResponse struct{}"
+		return "BaseResourceEntity struct{}"
 	}
 
-	return strings.Join([]string{"ShowTrackedResourceDetailResponse", string(data)}, " ")
+	return strings.Join([]string{"BaseResourceEntity", string(data)}, " ")
 }

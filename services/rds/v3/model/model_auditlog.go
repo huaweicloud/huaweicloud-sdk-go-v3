@@ -16,7 +16,7 @@ type Auditlog struct {
 	Name *string `json:"name,omitempty"`
 
 	// 审计日志大小，单位：KB。
-	Size *int64 `json:"size,omitempty"`
+	Size *float64 `json:"size,omitempty"`
 
 	// 审计日志开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。  其中，T指某个时间的开始，Z指时区偏移量，例如北京时间偏移显示为+0800。
 	BeginTime *string `json:"begin_time,omitempty"`

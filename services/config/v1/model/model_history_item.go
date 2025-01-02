@@ -27,7 +27,7 @@ type HistoryItem struct {
 	// 资源关系列表
 	Relations *[]ResourceRelation `json:"relations,omitempty"`
 
-	Resource *ResourceEntity `json:"resource,omitempty"`
+	Resource *BaseResourceEntity `json:"resource,omitempty"`
 }
 
 func (o HistoryItem) String() string {

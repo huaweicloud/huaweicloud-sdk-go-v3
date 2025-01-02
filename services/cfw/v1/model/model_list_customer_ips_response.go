@@ -8,8 +8,8 @@ import (
 
 // ListCustomerIpsResponse Response Object
 type ListCustomerIpsResponse struct {
-	Data           *PageInfoCustomerIpsListVo `json:"data,omitempty"`
-	HttpStatusCode int                        `json:"-"`
+	Data           *HttpListCustomerIpsResponseData `json:"data,omitempty"`
+	HttpStatusCode int                              `json:"-"`
 }
 
 func (o ListCustomerIpsResponse) String() string {

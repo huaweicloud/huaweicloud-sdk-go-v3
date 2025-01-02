@@ -23,6 +23,11 @@ type InterpreterInfo struct {
 
 	// 传译员序号，AI传译组下传译员唯一标识。
 	InterpreterId *string `json:"interpreterId,omitempty"`
+
+	// 传译员类型，MANUAL：人工传译，AI：AI传译。默认MANUAL。
+	InterpreterType *string `json:"interpreterType,omitempty"`
+
+	AiDigitalInfo *InterpreterAiDigitalInfo `json:"aiDigitalInfo,omitempty"`
 }
 
 func (o InterpreterInfo) String() string {

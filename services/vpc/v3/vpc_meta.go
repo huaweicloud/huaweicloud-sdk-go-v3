@@ -1790,6 +1790,10 @@ func GenReqDefForListVpcs() *def.HttpRequestDef {
 		WithJsonTag("id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Name").
 		WithJsonTag("name").
 		WithLocationType(def.Query))

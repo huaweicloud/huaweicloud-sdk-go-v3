@@ -949,6 +949,27 @@ func (c *DasClient) ShowTuningInvoker(request *model.ShowTuningRequest) *ShowTun
 	return &ShowTuningInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SynchronizeInstances 同步实例列表
+//
+// 同步实例列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) SynchronizeInstances(request *model.SynchronizeInstancesRequest) (*model.SynchronizeInstancesResponse, error) {
+	requestDef := GenReqDefForSynchronizeInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SynchronizeInstancesResponse), nil
+	}
+}
+
+// SynchronizeInstancesInvoker 同步实例列表
+func (c *DasClient) SynchronizeInstancesInvoker(request *model.SynchronizeInstancesRequest) *SynchronizeInstancesInvoker {
+	requestDef := GenReqDefForSynchronizeInstances()
+	return &SynchronizeInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateDbUser 修改数据库用户
 //
 // 修改注册在DAS里的数据库用户名和密码。此接口不会修改数据库实例上的数据库用户对象的用户名和密码。请确保输入的用户名和密码是已经存在并且是正确的。

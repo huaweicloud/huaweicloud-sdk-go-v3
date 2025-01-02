@@ -21,6 +21,9 @@ type ListAlarmHistoriesRequest struct {
 	// 告警规则名称
 	Name *string `json:"name,omitempty"`
 
+	// 告警类型，event：查询事件类型告警，metric：查询指标类型告警
+	AlarmType *ListAlarmHistoriesRequestAlarmType `json:"alarm_type,omitempty"`
+
 	// 告警规则状态, ok为正常，alarm为告警，invalid为已失效
 	Status *string `json:"status,omitempty"`
 
@@ -56,6 +59,53 @@ func (o ListAlarmHistoriesRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListAlarmHistoriesRequest", string(data)}, " ")
+}
+
+type ListAlarmHistoriesRequestAlarmType struct {
+	value string
+}
+
+type ListAlarmHistoriesRequestAlarmTypeEnum struct {
+	EVENT  ListAlarmHistoriesRequestAlarmType
+	METRIC ListAlarmHistoriesRequestAlarmType
+}
+
+func GetListAlarmHistoriesRequestAlarmTypeEnum() ListAlarmHistoriesRequestAlarmTypeEnum {
+	return ListAlarmHistoriesRequestAlarmTypeEnum{
+		EVENT: ListAlarmHistoriesRequestAlarmType{
+			value: "event",
+		},
+		METRIC: ListAlarmHistoriesRequestAlarmType{
+			value: "metric",
+		},
+	}
+}
+
+func (c ListAlarmHistoriesRequestAlarmType) Value() string {
+	return c.value
+}
+
+func (c ListAlarmHistoriesRequestAlarmType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListAlarmHistoriesRequestAlarmType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type ListAlarmHistoriesRequestOrderBy struct {

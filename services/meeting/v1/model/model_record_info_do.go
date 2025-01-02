@@ -22,7 +22,7 @@ type RecordInfoDo struct {
 	SegmentLimit *int32 `json:"segmentLimit,omitempty"`
 
 	// 录制段落总数
-	SegmentCount *int32 `json:"segmentCount,omitempty"`
+	SegmentCount *int64 `json:"segmentCount,omitempty"`
 
 	// 录制人工启动/停止分段列表
 	SegmentList *[]SegmentDo `json:"segmentList,omitempty"`

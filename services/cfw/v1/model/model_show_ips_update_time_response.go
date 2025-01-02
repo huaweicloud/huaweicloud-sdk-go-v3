@@ -8,20 +8,8 @@ import (
 
 // ShowIpsUpdateTimeResponse Response Object
 type ShowIpsUpdateTimeResponse struct {
-	Data *[]IpsRuleUpdateTimeVo `json:"data,omitempty"`
-
-	ErrorCode *string `json:"error_code,omitempty"`
-
-	ErrorDescription *string `json:"error_description,omitempty"`
-
-	FailReason *string `json:"fail_reason,omitempty"`
-
-	JobId *string `json:"job_id,omitempty"`
-
-	OrderId *string `json:"order_id,omitempty"`
-
-	TraceId        *string `json:"trace_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Data           *[]IpsRuleUpdateTimeVo `json:"data,omitempty"`
+	HttpStatusCode int                    `json:"-"`
 }
 
 func (o ShowIpsUpdateTimeResponse) String() string {

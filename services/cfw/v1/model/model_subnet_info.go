@@ -9,7 +9,7 @@ import (
 // SubnetInfo 管理子网信息
 type SubnetInfo struct {
 
-	// 子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0003.xml)
+	// 子网所在的可用区标识，从终端节点获取，参考[终端节点](cfw_02_0000.xml)
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
 	// 功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16

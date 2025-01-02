@@ -1448,6 +1448,27 @@ func (c *RdsClient) ListRdSforMysqlProxyFlavorsInvoker(request *model.ListRdSfor
 	return &ListRdSforMysqlProxyFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListReadOnlyReplayDatabase 查询只读实例可恢复到主实例的库
+//
+// 查询只读实例可恢复到主实例的库
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListReadOnlyReplayDatabase(request *model.ListReadOnlyReplayDatabaseRequest) (*model.ListReadOnlyReplayDatabaseResponse, error) {
+	requestDef := GenReqDefForListReadOnlyReplayDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListReadOnlyReplayDatabaseResponse), nil
+	}
+}
+
+// ListReadOnlyReplayDatabaseInvoker 查询只读实例可恢复到主实例的库
+func (c *RdsClient) ListReadOnlyReplayDatabaseInvoker(request *model.ListReadOnlyReplayDatabaseRequest) *ListReadOnlyReplayDatabaseInvoker {
+	requestDef := GenReqDefForListReadOnlyReplayDatabase()
+	return &ListReadOnlyReplayDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListRecycleInstances 查询回收站
 //
 // 查询回收站实例信息
@@ -1869,6 +1890,27 @@ func (c *RdsClient) RestoreExistInstance(request *model.RestoreExistInstanceRequ
 func (c *RdsClient) RestoreExistInstanceInvoker(request *model.RestoreExistInstanceRequest) *RestoreExistInstanceInvoker {
 	requestDef := GenReqDefForRestoreExistInstance()
 	return &RestoreExistInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestoreLogReplayDatabase 延迟库只读，恢复库到主实例
+//
+// 延迟库只读，恢复库到主实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) RestoreLogReplayDatabase(request *model.RestoreLogReplayDatabaseRequest) (*model.RestoreLogReplayDatabaseResponse, error) {
+	requestDef := GenReqDefForRestoreLogReplayDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestoreLogReplayDatabaseResponse), nil
+	}
+}
+
+// RestoreLogReplayDatabaseInvoker 延迟库只读，恢复库到主实例
+func (c *RdsClient) RestoreLogReplayDatabaseInvoker(request *model.RestoreLogReplayDatabaseRequest) *RestoreLogReplayDatabaseInvoker {
+	requestDef := GenReqDefForRestoreLogReplayDatabase()
+	return &RestoreLogReplayDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RestoreTables 表级时间点恢复(MySQL)

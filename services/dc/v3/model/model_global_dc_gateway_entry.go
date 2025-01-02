@@ -44,10 +44,10 @@ type GlobalDcGatewayEntry struct {
 	Locales *LocalesBody `json:"locales,omitempty"`
 
 	// 全域接入网关(GDGW)上关联连接的数量，表示DGW挂载ER的数量
-	CurrentPeerLinkCount *string `json:"current_peer_link_count,omitempty"`
+	CurrentPeerLinkCount *int32 `json:"current_peer_link_count,omitempty"`
 
 	// 该全域接入网关上GDGW允许创建关联连接（PeerLink）的数量
-	AvailablePeerLinkCount *string `json:"available_peer_link_count,omitempty"`
+	AvailablePeerLinkCount *int32 `json:"available_peer_link_count,omitempty"`
 
 	// global-dc-gateway关联TAG。
 	Tags *[]Tag `json:"tags,omitempty"`

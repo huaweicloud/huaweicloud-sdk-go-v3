@@ -13,16 +13,16 @@ type SegmentFileDo struct {
 	RecordType *string `json:"recordType,omitempty"`
 
 	// 录制文件开始时间
-	BeginTime *int32 `json:"beginTime,omitempty"`
+	BeginTime *int64 `json:"beginTime,omitempty"`
 
 	// 录制文件结束时间
-	EndTime *int32 `json:"endTime,omitempty"`
+	EndTime *int64 `json:"endTime,omitempty"`
 
 	// 录制文件时长(秒)
-	Duration *int32 `json:"duration,omitempty"`
+	Duration *int64 `json:"duration,omitempty"`
 
 	// 文件大小(字节数)
-	FileSize *int32 `json:"fileSize,omitempty"`
+	FileSize *int64 `json:"fileSize,omitempty"`
 
 	// 文件hash校验码(SHA256)，64个字符
 	Sha256 *string `json:"sha256,omitempty"`

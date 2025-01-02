@@ -21,6 +21,12 @@ type RemediationConfigurationRequestBody struct {
 	// 修正执行的目标ID。如果修正方式为fgs，则该值为函数工作流的函数urn；如果修正方式为rfs，则该值为资源编排服务的模板name与版本号，两者以/分割，如果没有指定默认V1。
 	TargetId string `json:"target_id"`
 
+	// 修正执行的目标的regionId。如果修正方式为RFS，该字段为空则Config服务会默认配置北京四（中国站）或香港一（国际站）的regionId；如果修正方式为FGS，该字段为空则Config服务会根据实例urn自动配置。
+	TargetRegionId *string `json:"target_region_id,omitempty"`
+
+	// 修正执行的目标的projectId。如果修正方式为RFS，该字段为空则Config服务会默认配置北京四（中国站）或香港一（国际站）的主projectId；如果修正方式为FGS，该字段为空则Config服务会根据实例urn自动配置。指定target_region_id字段则该字段必选。
+	TargetProjectId *string `json:"target_project_id,omitempty"`
+
 	// 修正执行的静态参数。
 	StaticParameter *[]RemediationStaticParameter `json:"static_parameter,omitempty"`
 

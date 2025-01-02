@@ -18,6 +18,9 @@ type ListVpcsRequest struct {
 	// VPC资源ID。可以使用该字段过滤VPC
 	Id *[]string `json:"id,omitempty"`
 
+	// 功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的VPC。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的VPC，请传参all_granted_eps。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
 	// VPC的name信息，可以使用该字段过滤VPC
 	Name *[]string `json:"name,omitempty"`
 
