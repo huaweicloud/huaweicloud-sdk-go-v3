@@ -19,10 +19,10 @@ type GetDatabases struct {
 	Status string `json:"status"`
 
 	// 创建时间。
-	Created string `json:"created"`
+	Created int64 `json:"created"`
 
 	// 最近更新时间。
-	Updated string `json:"updated"`
+	Updated int64 `json:"updated"`
 
 	// 所在RDS的id。
 	Id string `json:"id"`

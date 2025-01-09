@@ -24,7 +24,7 @@ type ListTtscVocabularyConfigsRequest struct {
 	// 第三方用户ID。不允许输入中文。
 	XAppUserId *string `json:"X-App-UserId,omitempty"`
 
-	// 词表类型 CHINESE_G2P：（g2p）中文拼音
+	// 自定义读法类型 CHINESE_G2P：拼音
 	Type string `json:"type"`
 
 	// 每页显示的条目数量。

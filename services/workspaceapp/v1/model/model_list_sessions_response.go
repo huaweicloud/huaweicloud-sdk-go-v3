@@ -9,7 +9,7 @@ import (
 // ListSessionsResponse Response Object
 type ListSessionsResponse struct {
 
-	// 总数
+	// 总数。
 	Count *int32 `json:"count,omitempty"`
 
 	// 企业的会话列表。

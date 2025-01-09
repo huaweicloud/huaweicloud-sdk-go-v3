@@ -13,7 +13,7 @@ type CountItem struct {
 	Key *string `json:"key,omitempty"`
 
 	// 数量
-	Num *int32 `json:"num,omitempty"`
+	Num *int64 `json:"num,omitempty"`
 }
 
 func (o CountItem) String() string {

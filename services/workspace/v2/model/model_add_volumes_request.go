@@ -8,6 +8,10 @@ import (
 
 // AddVolumesRequest Request Object
 type AddVolumesRequest struct {
+
+	// CBC接口回调时，请求头里带上的业务ID
+	ServiceTransactionId *string `json:"Service-Transaction-Id,omitempty"`
+
 	Body *AddDesktopsVolumesReq `json:"body,omitempty"`
 }
 

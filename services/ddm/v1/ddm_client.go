@@ -61,6 +61,27 @@ func (c *DdmClient) ListDatabaseAvailableVersionsInvoker(request *model.ListData
 	return &ListDatabaseAvailableVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDdmConfigurations 获取参数模板列表
+//
+// 获取参数模板列表，包括所有DDM的默认参数模板和用户创建的参数模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ListDdmConfigurations(request *model.ListDdmConfigurationsRequest) (*model.ListDdmConfigurationsResponse, error) {
+	requestDef := GenReqDefForListDdmConfigurations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDdmConfigurationsResponse), nil
+	}
+}
+
+// ListDdmConfigurationsInvoker 获取参数模板列表
+func (c *DdmClient) ListDdmConfigurationsInvoker(request *model.ListDdmConfigurationsRequest) *ListDdmConfigurationsInvoker {
+	requestDef := GenReqDefForListDdmConfigurations()
+	return &ListDdmConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RollBackDatabaseVersion 回滚内核版本
 //
 // 回滚内核版本
@@ -80,6 +101,48 @@ func (c *DdmClient) RollBackDatabaseVersion(request *model.RollBackDatabaseVersi
 func (c *DdmClient) RollBackDatabaseVersionInvoker(request *model.RollBackDatabaseVersionRequest) *RollBackDatabaseVersionInvoker {
 	requestDef := GenReqDefForRollBackDatabaseVersion()
 	return &RollBackDatabaseVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowConfiguration 获取指定参数模板的参数
+//
+// 获取指定参数模板的参数
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ShowConfiguration(request *model.ShowConfigurationRequest) (*model.ShowConfigurationResponse, error) {
+	requestDef := GenReqDefForShowConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowConfigurationResponse), nil
+	}
+}
+
+// ShowConfigurationInvoker 获取指定参数模板的参数
+func (c *DdmClient) ShowConfigurationInvoker(request *model.ShowConfigurationRequest) *ShowConfigurationInvoker {
+	requestDef := GenReqDefForShowConfiguration()
+	return &ShowConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRiskInfo 内核版本风险提醒
+//
+// 内核版本风险提醒
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ShowRiskInfo(request *model.ShowRiskInfoRequest) (*model.ShowRiskInfoResponse, error) {
+	requestDef := GenReqDefForShowRiskInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRiskInfoResponse), nil
+	}
+}
+
+// ShowRiskInfoInvoker 内核版本风险提醒
+func (c *DdmClient) ShowRiskInfoInvoker(request *model.ShowRiskInfoRequest) *ShowRiskInfoInvoker {
+	requestDef := GenReqDefForShowRiskInfo()
+	return &ShowRiskInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListApiVersion 查询API版本列表
@@ -122,6 +185,27 @@ func (c *DdmClient) CreateDatabase(request *model.CreateDatabaseRequest) (*model
 func (c *DdmClient) CreateDatabaseInvoker(request *model.CreateDatabaseRequest) *CreateDatabaseInvoker {
 	requestDef := GenReqDefForCreateDatabase()
 	return &CreateDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDdmDatabase 创建DDM逻辑库
+//
+// 创建DDM逻辑库。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) CreateDdmDatabase(request *model.CreateDdmDatabaseRequest) (*model.CreateDdmDatabaseResponse, error) {
+	requestDef := GenReqDefForCreateDdmDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDdmDatabaseResponse), nil
+	}
+}
+
+// CreateDdmDatabaseInvoker 创建DDM逻辑库
+func (c *DdmClient) CreateDdmDatabaseInvoker(request *model.CreateDdmDatabaseRequest) *CreateDdmDatabaseInvoker {
+	requestDef := GenReqDefForCreateDdmDatabase()
+	return &CreateDdmDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateGroup 创建组
@@ -229,6 +313,27 @@ func (c *DdmClient) DeleteDdmDatabase(request *model.DeleteDdmDatabaseRequest) (
 func (c *DdmClient) DeleteDdmDatabaseInvoker(request *model.DeleteDdmDatabaseRequest) *DeleteDdmDatabaseInvoker {
 	requestDef := GenReqDefForDeleteDdmDatabase()
 	return &DeleteDdmDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDdmInstance 删除DDM实例
+//
+// 删除指定的DDM实例，释放该实例的所有资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) DeleteDdmInstance(request *model.DeleteDdmInstanceRequest) (*model.DeleteDdmInstanceResponse, error) {
+	requestDef := GenReqDefForDeleteDdmInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDdmInstanceResponse), nil
+	}
+}
+
+// DeleteDdmInstanceInvoker 删除DDM实例
+func (c *DdmClient) DeleteDdmInstanceInvoker(request *model.DeleteDdmInstanceRequest) *DeleteDdmInstanceInvoker {
+	requestDef := GenReqDefForDeleteDdmInstance()
+	return &DeleteDdmInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteInstance 删除DDM实例
@@ -588,6 +693,27 @@ func (c *DdmClient) ListSlowLogInvoker(request *model.ListSlowLogRequest) *ListS
 	return &ListSlowLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSlowLogs 慢日志监控
+//
+// 查询指定时间段内在DDM实例上执行过的慢sql相关信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ListSlowLogs(request *model.ListSlowLogsRequest) (*model.ListSlowLogsResponse, error) {
+	requestDef := GenReqDefForListSlowLogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSlowLogsResponse), nil
+	}
+}
+
+// ListSlowLogsInvoker 慢日志监控
+func (c *DdmClient) ListSlowLogsInvoker(request *model.ListSlowLogsRequest) *ListSlowLogsInvoker {
+	requestDef := GenReqDefForListSlowLogs()
+	return &ListSlowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListUsers 查询DDM帐号列表
 //
 // 查询DDM帐号列表。
@@ -735,6 +861,27 @@ func (c *DdmClient) ShowDatabaseInvoker(request *model.ShowDatabaseRequest) *Sho
 	return &ShowDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDdmJobResult 获取指定ID的任务信息
+//
+// 获取指定ID的任务信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ShowDdmJobResult(request *model.ShowDdmJobResultRequest) (*model.ShowDdmJobResultResponse, error) {
+	requestDef := GenReqDefForShowDdmJobResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDdmJobResultResponse), nil
+	}
+}
+
+// ShowDdmJobResultInvoker 获取指定ID的任务信息
+func (c *DdmClient) ShowDdmJobResultInvoker(request *model.ShowDdmJobResultRequest) *ShowDdmJobResultInvoker {
+	requestDef := GenReqDefForShowDdmJobResult()
+	return &ShowDdmJobResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowInstance 查询DDM实例详情
 //
 // 查询指定DDM实例的详细信息。
@@ -880,6 +1027,27 @@ func (c *DdmClient) ShrinkInstanceNodes(request *model.ShrinkInstanceNodesReques
 func (c *DdmClient) ShrinkInstanceNodesInvoker(request *model.ShrinkInstanceNodesRequest) *ShrinkInstanceNodesInvoker {
 	requestDef := GenReqDefForShrinkInstanceNodes()
 	return &ShrinkInstanceNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchSsl 为实例设置SSL数据加密
+//
+// 为实例设置SSL数据加密。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) SwitchSsl(request *model.SwitchSslRequest) (*model.SwitchSslResponse, error) {
+	requestDef := GenReqDefForSwitchSsl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchSslResponse), nil
+	}
+}
+
+// SwitchSslInvoker 为实例设置SSL数据加密
+func (c *DdmClient) SwitchSslInvoker(request *model.SwitchSslRequest) *SwitchSslInvoker {
+	requestDef := GenReqDefForSwitchSsl()
+	return &SwitchSslInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDatabaseInfo 同步DN信息

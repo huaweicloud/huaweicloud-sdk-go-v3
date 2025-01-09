@@ -9,6 +9,12 @@ import (
 // BatchRunDesktopsResponse Response Object
 type BatchRunDesktopsResponse struct {
 
+	// 错误码，失败时返回。
+	ErrorCode *string `json:"error_code,omitempty"`
+
+	// 错误描述。
+	ErrorMsg *string `json:"error_msg,omitempty"`
+
 	// 操作失败桌面列表。
 	FailedOperationList *[]VmOperateResult `json:"failed_operation_list,omitempty"`
 

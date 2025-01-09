@@ -9,11 +9,11 @@ import (
 // CreateGroupResponse Response Object
 type CreateGroupResponse struct {
 
-	// DDM实例ID。
-	InstanceId *string `json:"instance_id,omitempty"`
-
 	// 任务ID，仅创建按需实例时会返回该参数。
 	JobId *string `json:"job_id,omitempty"`
+
+	// 组ID，仅创建按需实例时会返回该参数。
+	GroupId *string `json:"group_id,omitempty"`
 
 	// 订单号，创建包年包月时返回该参数。
 	OrderId        *string `json:"order_id,omitempty"`

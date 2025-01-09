@@ -12,7 +12,7 @@ type ServerAddress struct {
 	Addr *string `json:"addr,omitempty"`
 
 	// IP地址类型： `4` - IPV4 `6` - IPV6
-	Version *int32 `json:"version,omitempty"`
+	Version *string `json:"version,omitempty"`
 
 	// MAC地址。
 	OSEXTIPSMACmacAddr *string `json:"OS-EXT-IPS-MAC:mac_addr,omitempty"`

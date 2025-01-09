@@ -14,6 +14,9 @@ type ImageInfo struct {
 	// 镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private。
 	ImageType *string `json:"image_type,omitempty"`
 
+	// 镜像平台分类，取值为Windows。
+	OsPlatform *string `json:"os_platform,omitempty"`
+
 	// 操作系统类型，目前取值Linux， Windows，Other。
 	OsType *string `json:"os_type,omitempty"`
 
@@ -37,6 +40,9 @@ type ImageInfo struct {
 
 	// 镜像的产品编码。
 	ProductCode *string `json:"product_code,omitempty"`
+
+	// 创建时间。格式为UTC时间。
+	CreatedAt *string `json:"created_at,omitempty"`
 }
 
 func (o ImageInfo) String() string {

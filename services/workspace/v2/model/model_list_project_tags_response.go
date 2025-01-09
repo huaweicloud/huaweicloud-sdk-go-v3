@@ -10,8 +10,11 @@ import (
 type ListProjectTagsResponse struct {
 
 	// 标签对象
-	Tags           *[]Tags `json:"tags,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Tags *[]Tags `json:"tags,omitempty"`
+
+	// 标签总数
+	TotalCount     *int32 `json:"totalCount,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListProjectTagsResponse) String() string {

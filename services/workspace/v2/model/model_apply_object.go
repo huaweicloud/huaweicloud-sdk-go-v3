@@ -15,7 +15,7 @@ type ApplyObject struct {
 	// 对象ID。
 	ObjectId *string `json:"object_id,omitempty"`
 
-	// 对象类型，可选值为： - DESKTOP：桌面。 - DESKTOP_POOL：桌面池。 - ALL_DESKTOPS: 所有桌面，仅供触发式任务使用。
+	// 对象类型，可选值为： - DESKTOP：桌面。 - DESKTOP_POOL：桌面池。 - ALL_DESKTOPS: 所有桌面，仅供触发式任务使用。 - DESKTOP_TAG：桌面标签
 	ObjectType *ApplyObjectObjectType `json:"object_type,omitempty"`
 
 	// 对象名称。
@@ -39,6 +39,7 @@ type ApplyObjectObjectTypeEnum struct {
 	DESKTOP      ApplyObjectObjectType
 	DESKTOP_POOL ApplyObjectObjectType
 	ALL_DESKTOPS ApplyObjectObjectType
+	DESKTOP_TAG  ApplyObjectObjectType
 }
 
 func GetApplyObjectObjectTypeEnum() ApplyObjectObjectTypeEnum {
@@ -51,6 +52,9 @@ func GetApplyObjectObjectTypeEnum() ApplyObjectObjectTypeEnum {
 		},
 		ALL_DESKTOPS: ApplyObjectObjectType{
 			value: "ALL_DESKTOPS",
+		},
+		DESKTOP_TAG: ApplyObjectObjectType{
+			value: "DESKTOP_TAG",
 		},
 	}
 }

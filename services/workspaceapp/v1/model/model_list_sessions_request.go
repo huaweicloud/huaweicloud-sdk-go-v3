@@ -30,10 +30,13 @@ type ListSessionsRequest struct {
 	// 服务器IP。
 	VmIp *string `json:"vm_ip,omitempty"`
 
+	// 客户端出口IP。
+	PublicIp *string `json:"public_ip,omitempty"`
+
 	// 应用服务器名称。
 	MachineName *string `json:"machine_name,omitempty"`
 
-	// 应用状态： * `Active` - 会话当前处于活动状态，有用户登录并且正在使用。 * `Disconnected` - 用户已经登录但会话处于断开连接状态。 * `AppcInit` - 会话正在初始化。 * `SignedOut` - 会话已注销。 * `InitFail` - 会话初始化失败。
+	// 应用状态，支持查询多个，中间用英文逗号分隔： * `Active` - 会话当前处于活动状态，有用户登录并且正在使用。 * `Disconnected` - 用户已经登录但会话处于断开连接状态。 * `AppcInit` - 会话正在初始化。 * `SignedOut` - 会话已注销。 * `InitFail` - 会话初始化失败。
 	SessionState *string `json:"session_state,omitempty"`
 
 	// 会话是否创建成功,默认不填则查询全部 * 'true' - 会话创建成功 * 'false' - 会话创建失败

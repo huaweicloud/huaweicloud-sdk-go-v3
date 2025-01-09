@@ -17,6 +17,9 @@ type ListHistoryOnlineInfoNewRequest struct {
 
 	// 查询类型，类型查询优先于时间查询。类型查询和时间查询必须有一个存在。 -MONTH：按月查询。 -WEEK：按周查询。 -DAY：按天查询。
 	QueryType *string `json:"query_type,omitempty"`
+
+	// 客户端所在操作系统时间的小时数。
+	ClientHour *int32 `json:"client_hour,omitempty"`
 }
 
 func (o ListHistoryOnlineInfoNewRequest) String() string {

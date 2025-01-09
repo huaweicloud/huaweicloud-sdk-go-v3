@@ -9,7 +9,7 @@ import (
 // ListDesktopsConnectStatusResponse Response Object
 type ListDesktopsConnectStatusResponse struct {
 
-	// 桌面登录信息列表。
+	// 桌面连接信息列表。
 	Desktops *[]ConnectDesktopsInfo `json:"desktops,omitempty"`
 
 	// 桌面总数。

@@ -8,6 +8,9 @@ import (
 
 type Record struct {
 
+	// 租户id，不对外展示
+	TenantId *string `json:"tenantId,omitempty"`
+
 	// 桌面sid
 	Sid *string `json:"sid,omitempty"`
 

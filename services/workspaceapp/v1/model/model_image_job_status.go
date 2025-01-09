@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ImageJobStatus job状态 * `WAITING` - 等待 * `RUNNING` - 运行中 * `SUCCESS - 完成 * `FAILED` - 失败
+// ImageJobStatus job状态。 * `WAITING` - 等待 * `RUNNING` - 运行中 * `SUCCESS - 完成 * `FAILED` - 失败
 type ImageJobStatus struct {
 	value string
 }

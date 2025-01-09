@@ -18,7 +18,7 @@ type ListScheduledTasksRecordsDetailsRequest struct {
 	// 用于分页查询，查询的起始记录序号，从0开始。
 	Offset int32 `json:"offset"`
 
-	// 用于分页查询，每页返回的个数，取值范围0~50。
+	// 用于分页查询，每页返回的个数，取值范围0~100。
 	Limit int32 `json:"limit"`
 }
 

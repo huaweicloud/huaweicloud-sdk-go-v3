@@ -9,7 +9,7 @@ import (
 // ListImageServersResponse Response Object
 type ListImageServersResponse struct {
 
-	// 总数
+	// 总数。
 	Count *int32 `json:"count,omitempty"`
 
 	// 镜像实例列表返回列表条目数量上限为分页的最大上限值。

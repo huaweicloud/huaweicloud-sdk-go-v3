@@ -10,7 +10,7 @@ import (
 type RecordInfoReq struct {
 
 	// 会议uuid
-	ConfUUID *string `json:"confUUID,omitempty"`
+	ConfUUID string `json:"confUUID"`
 
 	// 录制段落查询偏移量
 	SegmentOffset *int32 `json:"segmentOffset,omitempty"`

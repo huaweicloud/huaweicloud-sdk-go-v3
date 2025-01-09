@@ -13,8 +13,10 @@ type ListGdgwRouteTablesResponse struct {
 	RequestId *string `json:"request_id,omitempty"`
 
 	// 全域接入网关路由表
-	GdgwRoutetable *[]CommonRoutetable `json:"gdgw_routetable,omitempty"`
-	HttpStatusCode int                 `json:"-"`
+	GdgwRoutetables *[]CommonRoutetable `json:"gdgw_routetables,omitempty"`
+
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListGdgwRouteTablesResponse) String() string {

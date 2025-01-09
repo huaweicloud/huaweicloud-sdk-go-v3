@@ -24,6 +24,9 @@ type ScheduledTasksRecordsDetails struct {
 	// 执行状态。
 	ExecStatus *string `json:"exec_status,omitempty"`
 
+	// 执行脚本id。
+	ExecScriptId *string `json:"exec_script_id,omitempty"`
+
 	// 失败或者跳过原因的错误码。
 	ResultCode *string `json:"result_code,omitempty"`
 

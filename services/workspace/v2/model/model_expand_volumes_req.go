@@ -12,6 +12,9 @@ type ExpandVolumesReq struct {
 	// 桌面ID。
 	DesktopId *string `json:"desktop_id,omitempty"`
 
+	// 订单ID，包周期桌面扩容时使用。
+	OrderId *string `json:"order_id,omitempty"`
+
 	// 磁盘ID。
 	VolumeId *string `json:"volume_id,omitempty"`
 

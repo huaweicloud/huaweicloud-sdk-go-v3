@@ -79,7 +79,13 @@ type ShowSignatureResponse struct {
 
 	// 签名用途
 	SignatureUsage *string `json:"signature_usage,omitempty"`
-	HttpStatusCode int     `json:"-"`
+
+	// 资质ID
+	QualificationId *string `json:"qualification_id,omitempty"`
+
+	// 资质名
+	QualificationName *string `json:"qualification_name,omitempty"`
+	HttpStatusCode    int     `json:"-"`
 }
 
 func (o ShowSignatureResponse) String() string {

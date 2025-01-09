@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// AgenciesInfo 委托信息
+// AgenciesInfo 委托信息。
 type AgenciesInfo struct {
 
 	// 名称

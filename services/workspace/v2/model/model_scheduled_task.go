@@ -15,7 +15,7 @@ type ScheduledTask struct {
 	// 任务名称。
 	TaskName *string `json:"task_name,omitempty"`
 
-	// 任务类型。START：开机，STOP：关机，REBOOT：重启，HIBERNATE：休眠，REBUILD：重建系统盘，EXECUTE_SCRIPT：执行脚本。
+	// 任务类型。START：开机，STOP：关机，REBOOT：重启，HIBERNATE：休眠，REBUILD：重建系统盘，EXECUTE_SCRIPT：执行脚本，CREATE_SNAPSHOT：创建快照。
 	TaskType *string `json:"task_type,omitempty"`
 
 	// 执行周期。FIXED_TIME：指定时间，DAY：按天，WEEK：按周，MONTH：按月。
@@ -41,6 +41,9 @@ type ScheduledTask struct {
 
 	// 时区
 	TimeZone *string `json:"time_zone,omitempty"`
+
+	// 触发式任务触发后，等待时长。
+	WaitTime *int32 `json:"wait_time,omitempty"`
 }
 
 func (o ScheduledTask) String() string {

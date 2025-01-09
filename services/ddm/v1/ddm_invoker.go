@@ -37,6 +37,22 @@ func (i *ListDatabaseAvailableVersionsInvoker) Invoke() (*model.ListDatabaseAvai
 	}
 }
 
+type ListDdmConfigurationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDdmConfigurationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDdmConfigurationsInvoker) Invoke() (*model.ListDdmConfigurationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDdmConfigurationsResponse), nil
+	}
+}
+
 type RollBackDatabaseVersionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,6 +66,38 @@ func (i *RollBackDatabaseVersionInvoker) Invoke() (*model.RollBackDatabaseVersio
 		return nil, err
 	} else {
 		return result.(*model.RollBackDatabaseVersionResponse), nil
+	}
+}
+
+type ShowConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowConfigurationInvoker) Invoke() (*model.ShowConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowConfigurationResponse), nil
+	}
+}
+
+type ShowRiskInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRiskInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRiskInfoInvoker) Invoke() (*model.ShowRiskInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRiskInfoResponse), nil
 	}
 }
 
@@ -82,6 +130,22 @@ func (i *CreateDatabaseInvoker) Invoke() (*model.CreateDatabaseResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.CreateDatabaseResponse), nil
+	}
+}
+
+type CreateDdmDatabaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDdmDatabaseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDdmDatabaseInvoker) Invoke() (*model.CreateDdmDatabaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDdmDatabaseResponse), nil
 	}
 }
 
@@ -162,6 +226,22 @@ func (i *DeleteDdmDatabaseInvoker) Invoke() (*model.DeleteDdmDatabaseResponse, e
 		return nil, err
 	} else {
 		return result.(*model.DeleteDdmDatabaseResponse), nil
+	}
+}
+
+type DeleteDdmInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDdmInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDdmInstanceInvoker) Invoke() (*model.DeleteDdmInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDdmInstanceResponse), nil
 	}
 }
 
@@ -437,6 +517,22 @@ func (i *ListSlowLogInvoker) Invoke() (*model.ListSlowLogResponse, error) {
 	}
 }
 
+type ListSlowLogsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSlowLogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSlowLogsInvoker) Invoke() (*model.ListSlowLogsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSlowLogsResponse), nil
+	}
+}
+
 type ListUsersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -549,6 +645,22 @@ func (i *ShowDatabaseInvoker) Invoke() (*model.ShowDatabaseResponse, error) {
 	}
 }
 
+type ShowDdmJobResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDdmJobResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDdmJobResultInvoker) Invoke() (*model.ShowDdmJobResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDdmJobResultResponse), nil
+	}
+}
+
 type ShowInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -658,6 +770,22 @@ func (i *ShrinkInstanceNodesInvoker) Invoke() (*model.ShrinkInstanceNodesRespons
 		return nil, err
 	} else {
 		return result.(*model.ShrinkInstanceNodesResponse), nil
+	}
+}
+
+type SwitchSslInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchSslInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SwitchSslInvoker) Invoke() (*model.SwitchSslResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchSslResponse), nil
 	}
 }
 

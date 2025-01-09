@@ -61,6 +61,27 @@ func (c *ScmClient) BatchPushCertificateInvoker(request *model.BatchPushCertific
 	return &BatchPushCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CancelCertificateRequest 撤回证书申请
+//
+// 撤回证书申请。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ScmClient) CancelCertificateRequest(request *model.CancelCertificateRequestRequest) (*model.CancelCertificateRequestResponse, error) {
+	requestDef := GenReqDefForCancelCertificateRequest()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelCertificateRequestResponse), nil
+	}
+}
+
+// CancelCertificateRequestInvoker 撤回证书申请
+func (c *ScmClient) CancelCertificateRequestInvoker(request *model.CancelCertificateRequestRequest) *CancelCertificateRequestInvoker {
+	requestDef := GenReqDefForCancelCertificateRequest()
+	return &CancelCertificateRequestInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteCertificate 删除证书
 //
 // 删除证书实例，即将证书资源从系统中删除。
@@ -269,4 +290,151 @@ func (c *ScmClient) UnsubscribeCertificate(request *model.UnsubscribeCertificate
 func (c *ScmClient) UnsubscribeCertificateInvoker(request *model.UnsubscribeCertificateRequest) *UnsubscribeCertificateInvoker {
 	requestDef := GenReqDefForUnsubscribeCertificate()
 	return &UnsubscribeCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCsr 创建CSR
+//
+// 创建CSR。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ScmClient) CreateCsr(request *model.CreateCsrRequest) (*model.CreateCsrResponse, error) {
+	requestDef := GenReqDefForCreateCsr()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCsrResponse), nil
+	}
+}
+
+// CreateCsrInvoker 创建CSR
+func (c *ScmClient) CreateCsrInvoker(request *model.CreateCsrRequest) *CreateCsrInvoker {
+	requestDef := GenReqDefForCreateCsr()
+	return &CreateCsrInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCsr 删除CSR
+//
+// 删除CSR。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ScmClient) DeleteCsr(request *model.DeleteCsrRequest) (*model.DeleteCsrResponse, error) {
+	requestDef := GenReqDefForDeleteCsr()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCsrResponse), nil
+	}
+}
+
+// DeleteCsrInvoker 删除CSR
+func (c *ScmClient) DeleteCsrInvoker(request *model.DeleteCsrRequest) *DeleteCsrInvoker {
+	requestDef := GenReqDefForDeleteCsr()
+	return &DeleteCsrInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCsr 查询CSR列表
+//
+// 查询CSR列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ScmClient) ListCsr(request *model.ListCsrRequest) (*model.ListCsrResponse, error) {
+	requestDef := GenReqDefForListCsr()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCsrResponse), nil
+	}
+}
+
+// ListCsrInvoker 查询CSR列表
+func (c *ScmClient) ListCsrInvoker(request *model.ListCsrRequest) *ListCsrInvoker {
+	requestDef := GenReqDefForListCsr()
+	return &ListCsrInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCsr 查询CSR
+//
+// 查询CSR。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ScmClient) ShowCsr(request *model.ShowCsrRequest) (*model.ShowCsrResponse, error) {
+	requestDef := GenReqDefForShowCsr()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCsrResponse), nil
+	}
+}
+
+// ShowCsrInvoker 查询CSR
+func (c *ScmClient) ShowCsrInvoker(request *model.ShowCsrRequest) *ShowCsrInvoker {
+	requestDef := GenReqDefForShowCsr()
+	return &ShowCsrInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCsrPrivateKey 查询私钥
+//
+// 查询私钥。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ScmClient) ShowCsrPrivateKey(request *model.ShowCsrPrivateKeyRequest) (*model.ShowCsrPrivateKeyResponse, error) {
+	requestDef := GenReqDefForShowCsrPrivateKey()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCsrPrivateKeyResponse), nil
+	}
+}
+
+// ShowCsrPrivateKeyInvoker 查询私钥
+func (c *ScmClient) ShowCsrPrivateKeyInvoker(request *model.ShowCsrPrivateKeyRequest) *ShowCsrPrivateKeyInvoker {
+	requestDef := GenReqDefForShowCsrPrivateKey()
+	return &ShowCsrPrivateKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCsr 更新CSR
+//
+// 更新CSR。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ScmClient) UpdateCsr(request *model.UpdateCsrRequest) (*model.UpdateCsrResponse, error) {
+	requestDef := GenReqDefForUpdateCsr()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateCsrResponse), nil
+	}
+}
+
+// UpdateCsrInvoker 更新CSR
+func (c *ScmClient) UpdateCsrInvoker(request *model.UpdateCsrRequest) *UpdateCsrInvoker {
+	requestDef := GenReqDefForUpdateCsr()
+	return &UpdateCsrInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadCsr 上传CSR
+//
+// 上传CSR。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ScmClient) UploadCsr(request *model.UploadCsrRequest) (*model.UploadCsrResponse, error) {
+	requestDef := GenReqDefForUploadCsr()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadCsrResponse), nil
+	}
+}
+
+// UploadCsrInvoker 上传CSR
+func (c *ScmClient) UploadCsrInvoker(request *model.UploadCsrRequest) *UploadCsrInvoker {
+	requestDef := GenReqDefForUploadCsr()
+	return &UploadCsrInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

@@ -18,6 +18,12 @@ type ListGdgwRouteTablesRequest struct {
 	// show response ext-fields
 	ExtFields *[]string `json:"ext_fields,omitempty"`
 
+	// 每页返回的个数。 取值范围：1~2000。
+	Limit *int32 `json:"limit,omitempty"`
+
+	// 上一页最后一条资源记录的ID，为空时为查询第一页。 使用说明：必须与limit一起使用。
+	Marker *string `json:"marker,omitempty"`
+
 	// 全域接入网关ID
 	GdgwId string `json:"gdgw_id"`
 

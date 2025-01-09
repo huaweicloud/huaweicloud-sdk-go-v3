@@ -30,7 +30,7 @@ type CreateResolveTaskRequestBody struct {
 	// 失效时间（天）。aim_code_type为group时，取值范围为1~180；aim_code_type为individual个性化时，取值范围为1~7。  > 失效时间精确到秒，例如参数设置为1，创建时间为2022-07-22 21:10:12，过期时间为2022-07-23 21:10:12。
 	ExpirationTime int32 `json:"expiration_time"`
 
-	// 短链参数列表。一次请求最多生成100个短链。  > OPPO模板一次最多申请10个短链。 > 群发短链每次调用最多申请一条。
+	// 短链参数列表。一次请求最多生成100个短链。  > 群发短链每次调用最多申请一条。
 	Params []CreateShortChainParam `json:"params"`
 }
 

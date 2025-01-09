@@ -9,7 +9,7 @@ import (
 // ListDesktopsEipsRequest Request Object
 type ListDesktopsEipsRequest struct {
 
-	// 企业项目ID
+	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 桌面ID。

@@ -9,7 +9,7 @@ import (
 // ListWarehouseAppsResponse Response Object
 type ListWarehouseAppsResponse struct {
 
-	// 总数
+	// 总数。
 	Count *int32 `json:"count,omitempty"`
 
 	// 应用仓库中的应用列表。

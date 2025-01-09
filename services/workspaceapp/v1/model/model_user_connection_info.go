@@ -78,6 +78,9 @@ type UserConnectionInfo struct {
 
 	// 会话虚拟ip。
 	VirtualIp *string `json:"virtual_ip,omitempty"`
+
+	// 客户端出口ip。
+	PublicIp *string `json:"public_ip,omitempty"`
 }
 
 func (o UserConnectionInfo) String() string {

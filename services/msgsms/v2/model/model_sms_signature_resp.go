@@ -78,6 +78,12 @@ type SmsSignatureResp struct {
 
 	// 签名用途
 	SignatureUsage *string `json:"signature_usage,omitempty"`
+
+	// 资质ID
+	QualificationId *string `json:"qualification_id,omitempty"`
+
+	// 资质名
+	QualificationName *string `json:"qualification_name,omitempty"`
 }
 
 func (o SmsSignatureResp) String() string {

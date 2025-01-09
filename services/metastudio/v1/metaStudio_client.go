@@ -1683,6 +1683,27 @@ func (c *MetaStudioClient) CreateOnceCodeInvoker(request *model.CreateOnceCodeRe
 	return &CreateOnceCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeletePacifyWords 批量删除安抚话术
+//
+// 该接口用于批量删除安抚话术。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) BatchDeletePacifyWords(request *model.BatchDeletePacifyWordsRequest) (*model.BatchDeletePacifyWordsResponse, error) {
+	requestDef := GenReqDefForBatchDeletePacifyWords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeletePacifyWordsResponse), nil
+	}
+}
+
+// BatchDeletePacifyWordsInvoker 批量删除安抚话术
+func (c *MetaStudioClient) BatchDeletePacifyWordsInvoker(request *model.BatchDeletePacifyWordsRequest) *BatchDeletePacifyWordsInvoker {
+	requestDef := GenReqDefForBatchDeletePacifyWords()
+	return &BatchDeletePacifyWordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePacifyWords 创建安抚话术
 //
 // 该接口用于创建安抚话术。
@@ -3478,9 +3499,9 @@ func (c *MetaStudioClient) CreateTtsAuditionInvoker(request *model.CreateTtsAudi
 	return &CreateTtsAuditionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateTtscVocabularyConfigs 设置TTS租户级扩展词表配置
+// CreateTtscVocabularyConfigs 设置TTS租户级自定义读法配置
 //
-// 该接口用于设置TTS租户级扩展词表配置。
+// 该接口用于设置TTS租户级自定义读法配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) CreateTtscVocabularyConfigs(request *model.CreateTtscVocabularyConfigsRequest) (*model.CreateTtscVocabularyConfigsResponse, error) {
@@ -3493,15 +3514,15 @@ func (c *MetaStudioClient) CreateTtscVocabularyConfigs(request *model.CreateTtsc
 	}
 }
 
-// CreateTtscVocabularyConfigsInvoker 设置TTS租户级扩展词表配置
+// CreateTtscVocabularyConfigsInvoker 设置TTS租户级自定义读法配置
 func (c *MetaStudioClient) CreateTtscVocabularyConfigsInvoker(request *model.CreateTtscVocabularyConfigsRequest) *CreateTtscVocabularyConfigsInvoker {
 	requestDef := GenReqDefForCreateTtscVocabularyConfigs()
 	return &CreateTtscVocabularyConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteTtscVocabularyConfigs 删除TTS租户级词表扩展配置
+// DeleteTtscVocabularyConfigs 删除TTS租户级自定义读法配置
 //
-// 该接口用于删除TTS租户级词表扩展配置。
+// 该接口用于删除TTS租户级自定义读法配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) DeleteTtscVocabularyConfigs(request *model.DeleteTtscVocabularyConfigsRequest) (*model.DeleteTtscVocabularyConfigsResponse, error) {
@@ -3514,15 +3535,15 @@ func (c *MetaStudioClient) DeleteTtscVocabularyConfigs(request *model.DeleteTtsc
 	}
 }
 
-// DeleteTtscVocabularyConfigsInvoker 删除TTS租户级词表扩展配置
+// DeleteTtscVocabularyConfigsInvoker 删除TTS租户级自定义读法配置
 func (c *MetaStudioClient) DeleteTtscVocabularyConfigsInvoker(request *model.DeleteTtscVocabularyConfigsRequest) *DeleteTtscVocabularyConfigsInvoker {
 	requestDef := GenReqDefForDeleteTtscVocabularyConfigs()
 	return &DeleteTtscVocabularyConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListTtscVocabularyConfigs 获取TTS租户级词表扩展配置
+// ListTtscVocabularyConfigs 获取TTS租户级自定义读法配置
 //
-// 该接口用于获取TTS租户级词表扩展配置。
+// 该接口用于获取TTS租户级自定义读法配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) ListTtscVocabularyConfigs(request *model.ListTtscVocabularyConfigsRequest) (*model.ListTtscVocabularyConfigsResponse, error) {
@@ -3535,15 +3556,15 @@ func (c *MetaStudioClient) ListTtscVocabularyConfigs(request *model.ListTtscVoca
 	}
 }
 
-// ListTtscVocabularyConfigsInvoker 获取TTS租户级词表扩展配置
+// ListTtscVocabularyConfigsInvoker 获取TTS租户级自定义读法配置
 func (c *MetaStudioClient) ListTtscVocabularyConfigsInvoker(request *model.ListTtscVocabularyConfigsRequest) *ListTtscVocabularyConfigsInvoker {
 	requestDef := GenReqDefForListTtscVocabularyConfigs()
 	return &ListTtscVocabularyConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SaveTtscVocabularyConfigs 修改TTS租户级扩展词表配置
+// SaveTtscVocabularyConfigs 修改TTS租户级自定义读法配置
 //
-// 该接口用于修改TTS租户级扩展词表配置。
+// 该接口用于修改TTS租户级自定义读法配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) SaveTtscVocabularyConfigs(request *model.SaveTtscVocabularyConfigsRequest) (*model.SaveTtscVocabularyConfigsResponse, error) {
@@ -3556,7 +3577,7 @@ func (c *MetaStudioClient) SaveTtscVocabularyConfigs(request *model.SaveTtscVoca
 	}
 }
 
-// SaveTtscVocabularyConfigsInvoker 修改TTS租户级扩展词表配置
+// SaveTtscVocabularyConfigsInvoker 修改TTS租户级自定义读法配置
 func (c *MetaStudioClient) SaveTtscVocabularyConfigsInvoker(request *model.SaveTtscVocabularyConfigsRequest) *SaveTtscVocabularyConfigsInvoker {
 	requestDef := GenReqDefForSaveTtscVocabularyConfigs()
 	return &SaveTtscVocabularyConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

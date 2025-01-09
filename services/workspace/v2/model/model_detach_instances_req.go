@@ -9,8 +9,11 @@ import (
 // DetachInstancesReq 解绑用户请求
 type DetachInstancesReq struct {
 
-	// 桌面id
+	// 桌面id,不能为空
 	DesktopIds *[]string `json:"desktop_ids,omitempty"`
+
+	// 解绑后是否关机。
+	ShutoffAfterDetach *bool `json:"shutoff_after_detach,omitempty"`
 }
 
 func (o DetachInstancesReq) String() string {

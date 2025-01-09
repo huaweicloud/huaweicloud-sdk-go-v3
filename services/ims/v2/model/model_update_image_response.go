@@ -197,7 +197,10 @@ type UpdateImageResponse struct {
 
 	// 如果镜像支持Virtio-net直通规格，取值为true，否则无需增加该属性。
 	SupportKvmHi1822Hivirtionet *string `json:"__support_kvm_hi1822_hivirtionet,omitempty"`
-	HttpStatusCode              int     `json:"-"`
+
+	// 设置虚拟机的优雅关机超时时间，设置范围为60-300，默认为60（取值为整数，单位为秒）。 云服务器在优雅关机超时后会触发强制关机，避免实例长时间处于关机状态中。 当您的云服务器关机过程中由于特定软件的状态、保存等原因导致优雅关机时间过长，会触发超时强制关机。 您可以通过设置镜像该字段，使得发放的云服务器优雅关机超时时间变长。 该字段当前只影响弹性云服务器，不影响裸金属服务器。
+	OsShutdownTimeout *string `json:"os_shutdown_timeout,omitempty"`
+	HttpStatusCode    int     `json:"-"`
 }
 
 func (o UpdateImageResponse) String() string {

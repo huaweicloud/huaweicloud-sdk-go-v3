@@ -29,6 +29,15 @@ type Connections struct {
 
 	// 拥有者。
 	DomainId *string `json:"domain_id,omitempty"`
+
+	// 终端节点IPv4。
+	VpcepIp *string `json:"vpcepIp,omitempty"`
+
+	// 终端节点IPv6。
+	VpcepIpv6Address *string `json:"vpcepIpv6Address,omitempty"`
+
+	// 终端节点内网域名。
+	VpcepDnsName *string `json:"vpcepDnsName,omitempty"`
 }
 
 func (o Connections) String() string {

@@ -13,8 +13,11 @@ type CreateUserGroupResponse struct {
 	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 错误描述。
-	ErrorMsg       *string `json:"error_msg,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
+
+	// 加密后的详细拒绝原因，用户可以自行调用STS服务的decode-authorization-message接口进行解密。
+	EncodedAuthorizationMessage *string `json:"encoded_authorization_message,omitempty"`
+	HttpStatusCode              int     `json:"-"`
 }
 
 func (o CreateUserGroupResponse) String() string {

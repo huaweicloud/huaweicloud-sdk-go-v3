@@ -38,6 +38,9 @@ type ScheduledTasksRecords struct {
 
 	// 执行定时任务的任务id，只有定时执行脚本返回。
 	ExecuteTaskId *string `json:"execute_task_id,omitempty"`
+
+	// 执行定时任务的对象类型，只有定时执行脚本返回。
+	ExecuteObjectType *string `json:"execute_object_type,omitempty"`
 }
 
 func (o ScheduledTasksRecords) String() string {

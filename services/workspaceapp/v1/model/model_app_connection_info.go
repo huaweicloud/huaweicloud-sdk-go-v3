@@ -69,6 +69,30 @@ type AppConnectionInfo struct {
 
 	// 会话虚拟ip。
 	VirtualIp *string `json:"virtual_ip,omitempty"`
+
+	// 客户端出口ip。
+	PublicIp *string `json:"public_ip,omitempty"`
+
+	// 事务id。
+	TransactionId *string `json:"transaction_id,omitempty"`
+
+	// 登录应用结束时间。
+	EndTime *sdktime.SdkTime `json:"end_time,omitempty"`
+
+	// aps服务器ID。
+	ApsInstanceId *string `json:"aps_instance_id,omitempty"`
+
+	// aps服务器名称。
+	ApsInstanceName *string `json:"aps_instance_name,omitempty"`
+
+	// wdh专属主机ID。
+	ApsHostId *string `json:"aps_host_id,omitempty"`
+
+	// 主服务器组ID。
+	PrimaryServerGroupId *string `json:"primary_server_group_id,omitempty"`
+
+	// 主服务器组ID。
+	SecondaryServerGroupId *string `json:"secondary_server_group_id,omitempty"`
 }
 
 func (o AppConnectionInfo) String() string {

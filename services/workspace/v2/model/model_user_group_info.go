@@ -42,6 +42,9 @@ type UserGroupInfo struct {
 
 	// 用户组sid。
 	Sid *string `json:"sid,omitempty"`
+
+	// 用户列表中用户数。
+	TotalDesktops *int32 `json:"total_desktops,omitempty"`
 }
 
 func (o UserGroupInfo) String() string {

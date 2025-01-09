@@ -11,10 +11,10 @@ type VocabularyConfig struct {
 	// id
 	Id *string `json:"id,omitempty"`
 
-	// 映射键
+	// 原始词
 	Key *string `json:"key,omitempty"`
 
-	// 映射值
+	// 设置的自定义读法
 	Value *string `json:"value,omitempty"`
 
 	// 创建时间。

@@ -12,7 +12,7 @@ type ListSlowLogRequest struct {
 	// DDM实例ID。
 	InstanceId string `json:"instance_id"`
 
-	// 分页参数：起始值 [大于等于0] 。
+	// 分页参数：起始值 [大于等于1] 。
 	CurPage string `json:"curPage"`
 
 	// 分页参数：每页多少条。

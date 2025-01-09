@@ -24,11 +24,17 @@ type ListLoginRecordsNewRequest struct {
 	// 登录桌面的终端系统类型，当前支持：WI（云桌面客户端）。
 	TerminalType *string `json:"terminal_type,omitempty"`
 
-	// 用于分页查询，取值范围0-100，默认值20。
-	Limit *string `json:"limit,omitempty"`
+	// 用于分页查询，查询的起始记录序号，从0开始
+	Offset *int32 `json:"offset,omitempty"`
 
-	// 用于分页查询，查询的起始记录序号，从0开始。
-	Offset *string `json:"offset,omitempty"`
+	// 用于分页查询，返回登录记录数量限制,取值范围0-1000。如果不指定，默认为20。
+	Limit *int32 `json:"limit,omitempty"`
+
+	// 查询端到端时延的最小值
+	MinNetworkRtt *int32 `json:"min_network_rtt,omitempty"`
+
+	// 查询端到端时延的最大值
+	MaxNetworkRtt *int32 `json:"max_network_rtt,omitempty"`
 }
 
 func (o ListLoginRecordsNewRequest) String() string {

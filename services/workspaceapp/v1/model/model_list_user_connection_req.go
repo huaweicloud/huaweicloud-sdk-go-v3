@@ -52,6 +52,9 @@ type ListUserConnectionReq struct {
 	// 连接IP。
 	WiIp *string `json:"wi_ip,omitempty"`
 
+	// 客户端出口ip。
+	PublicIp *string `json:"public_ip,omitempty"`
+
 	// 登录应用开始时间，格式 2022-10-31 08:07:39。
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 

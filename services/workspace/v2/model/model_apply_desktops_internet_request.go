@@ -8,6 +8,10 @@ import (
 
 // ApplyDesktopsInternetRequest Request Object
 type ApplyDesktopsInternetRequest struct {
+
+	// CBC接口回调时，请求头里带上的业务ID
+	ServiceTransactionId *string `json:"Service-Transaction-Id,omitempty"`
+
 	Body *ApplyDesktopsInternetReq `json:"body,omitempty"`
 }
 

@@ -55,6 +55,9 @@ type ListAppConnectionReq struct {
 	// 连接IP。
 	WiIp *string `json:"wi_ip,omitempty"`
 
+	// 客户端出口ip。
+	PublicIp *string `json:"public_ip,omitempty"`
+
 	// 租户id。
 	TenantId *string `json:"tenant_id,omitempty"`
 

@@ -13,13 +13,13 @@ type GetDatabaseResponseBean struct {
 	Name string `json:"name"`
 
 	// 逻辑库的创建时间。
-	Created string `json:"created"`
+	Created int64 `json:"created"`
 
 	// 状态。
 	Status string `json:"status"`
 
 	// DDM实例最后更新时间。
-	Updated string `json:"updated"`
+	Updated int64 `json:"updated"`
 
 	// 逻辑库分片的详细信息。
 	Databases []GetDatabases `json:"databases"`

@@ -67,8 +67,11 @@ type ShowScheduledTasksResponse struct {
 	GrayFailThreshold *int32 `json:"gray_fail_threshold,omitempty"`
 
 	// 时区。
-	TimeZone       *string `json:"time_zone,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	TimeZone *string `json:"time_zone,omitempty"`
+
+	// 触发式任务触发后，等待时长。
+	WaitTime       *int32 `json:"wait_time,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowScheduledTasksResponse) String() string {

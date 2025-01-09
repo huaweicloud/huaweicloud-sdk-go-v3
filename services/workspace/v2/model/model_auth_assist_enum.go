@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// AuthAssistEnum 认证类型。 OTP：OTP辅助认证
+// AuthAssistEnum 认证类型。 OTP：OTP辅助认证 RADIUS: RADIUS认证
 type AuthAssistEnum struct {
 	value string
 }

@@ -41,6 +41,9 @@ type CreateSecurityGroupRuleOption struct {
 
 	// 功能说明：规则在安全组中的优先级 取值范围：1~100，1代表最高优先级 约束：默认值为100
 	Priority *string `json:"priority,omitempty"`
+
+	// 功能说明：是否启用安全组规则。 取值范围：true, false。 约束：默认值为true。
+	Enabled *bool `json:"enabled,omitempty"`
 }
 
 func (o CreateSecurityGroupRuleOption) String() string {

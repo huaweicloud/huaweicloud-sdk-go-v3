@@ -8,7 +8,7 @@ import (
 
 // CreateAgenciesRequest Request Object
 type CreateAgenciesRequest struct {
-	Body *interface{} `json:"body,omitempty"`
+	Body *CreateAgenciesReq `json:"body,omitempty"`
 }
 
 func (o CreateAgenciesRequest) String() string {

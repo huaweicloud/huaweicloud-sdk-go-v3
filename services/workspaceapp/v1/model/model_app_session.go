@@ -66,6 +66,9 @@ type AppSession struct {
 	// 客户端IP。
 	ClientIp *string `json:"client_ip,omitempty"`
 
+	// 客户端出口ip。
+	PublicIp *string `json:"public_ip,omitempty"`
+
 	// 客户端版本。
 	ClientVersion *string `json:"client_version,omitempty"`
 

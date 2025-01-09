@@ -45,7 +45,7 @@ type UpdateScheduledTasksReq struct {
 	// 灰度失败阈值，灰度执行失败次数达到该值时，不执行下一批任务。只支持脚本执行。
 	GrayFailThreshold *int32 `json:"gray_fail_threshold,omitempty"`
 
-	// 触发场景。POST_CREATE_DESKTOP_SUCCESS：创建桌面成功后，POST_REBUILD_DESKTOP_SUCCESS：重建桌面成功后，POST_REATTACH_DESKTOP_SUCCESS：触发重建的分配用户任务成功后。
+	// 触发场景。POST_CREATE_DESKTOP_SUCCESS：创建桌面成功后，POST_REBUILD_DESKTOP_SUCCESS：重建桌面成功后，POST_REATTACH_DESKTOP_SUCCESS：触发重建的分配用户任务成功后，POST_DESKTOP_DISCONNECTED：桌面断开连接后。
 	LifeCycleType *string `json:"life_cycle_type,omitempty"`
 
 	// 时区。
@@ -74,6 +74,9 @@ type UpdateScheduledTasksReq struct {
 
 	// 任务是否灰度执行，供远程脚本使用。
 	IsGray *bool `json:"is_gray,omitempty"`
+
+	// 触发式任务触发后，等待时长。
+	WaitTime *int32 `json:"wait_time,omitempty"`
 }
 
 func (o UpdateScheduledTasksReq) String() string {

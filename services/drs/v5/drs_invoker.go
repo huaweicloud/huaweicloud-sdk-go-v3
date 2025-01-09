@@ -789,6 +789,22 @@ func (i *ShowActionsInvoker) Invoke() (*model.ShowActionsResponse, error) {
 	}
 }
 
+type ShowAgencyInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAgencyInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAgencyInfoInvoker) Invoke() (*model.ShowAgencyInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAgencyInfoResponse), nil
+	}
+}
+
 type ShowColumnInfoResultInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1250,6 +1266,22 @@ func (i *SyncUserJdbcDriverInvoker) Invoke() (*model.SyncUserJdbcDriverResponse,
 		return nil, err
 	} else {
 		return result.(*model.SyncUserJdbcDriverResponse), nil
+	}
+}
+
+type UpdateAgencyPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAgencyPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAgencyPolicyInvoker) Invoke() (*model.UpdateAgencyPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAgencyPolicyResponse), nil
 	}
 }
 

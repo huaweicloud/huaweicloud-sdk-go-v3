@@ -14,6 +14,9 @@ type SimpleDesktopInfo struct {
 	// 桌面名。
 	ComputerName *string `json:"computer_name,omitempty"`
 
+	// 系统计算机名。
+	OsHostName *string `json:"os_host_name,omitempty"`
+
 	// 创建时间。
 	Created *string `json:"created,omitempty"`
 
@@ -44,11 +47,23 @@ type SimpleDesktopInfo struct {
 	// 是否处于管理员维护模式
 	InMaintenanceMode *bool `json:"in_maintenance_mode,omitempty"`
 
+	// 桌面协同资源SKU码
+	ShareResourceSku *string `json:"share_resource_sku,omitempty"`
+
+	// 桌面类型
+	DesktopType *string `json:"desktop_type,omitempty"`
+
 	// 桌面的子网ID。
 	SubnetId *string `json:"subnet_id,omitempty"`
 
 	// 桌面计费资源ID。
 	BillResourceId *string `json:"bill_resource_id,omitempty"`
+
+	// 桌面的运行状态。
+	Status *string `json:"status,omitempty"`
+
+	// 桌面的任务状态。
+	TaskStatus *string `json:"task_status,omitempty"`
 }
 
 func (o SimpleDesktopInfo) String() string {

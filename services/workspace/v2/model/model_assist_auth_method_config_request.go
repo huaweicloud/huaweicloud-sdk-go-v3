@@ -11,6 +11,10 @@ type AssistAuthMethodConfigRequest struct {
 	AuthType *AuthAssistEnum `json:"auth_type,omitempty"`
 
 	OtpConfigInfo *OtpConfigInfo `json:"otp_config_info,omitempty"`
+
+	RadiusAuthConfig *RadiusAuthConfig `json:"radius_auth_config,omitempty"`
+
+	RadiusGatewayConfig *RadiusGatewayConfig `json:"radius_gateway_config,omitempty"`
 }
 
 func (o AssistAuthMethodConfigRequest) String() string {

@@ -67,6 +67,9 @@ type SessionInfo struct {
 	// 客户端IP。
 	ClientIp *string `json:"client_ip,omitempty"`
 
+	// 客户端出口ip。
+	PublicIp *string `json:"public_ip,omitempty"`
+
 	// 客户端版本。
 	ClientVersion *string `json:"client_version,omitempty"`
 
@@ -90,6 +93,12 @@ type SessionInfo struct {
 
 	// 租户ID。
 	TenantId *string `json:"tenant_id,omitempty"`
+
+	// 主服务器组ID。
+	PrimaryServerGroupId *string `json:"primary_server_group_id,omitempty"`
+
+	// 备服务器组ID。
+	SecondaryServerGroupId *string `json:"secondary_server_group_id,omitempty"`
 }
 
 func (o SessionInfo) String() string {

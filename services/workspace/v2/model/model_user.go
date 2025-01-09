@@ -14,6 +14,9 @@ type User struct {
 	// 用户ID。
 	Id *string `json:"id,omitempty"`
 
+	// 用户ID。
+	Sid *string `json:"sid,omitempty"`
+
 	// 桌面用户名。
 	UserName *string `json:"user_name,omitempty"`
 
@@ -55,6 +58,15 @@ type User struct {
 
 	// 账户是否禁用，true表示被禁用，false表示未禁用。
 	Disabled *bool `json:"disabled,omitempty"`
+
+	// 用户是否订阅协同，true表示已订阅，false表示未订阅
+	ShareSpaceSubscription *bool `json:"share_space_subscription,omitempty"`
+
+	// 用户已绑定协同桌面数
+	ShareSpaceDesktops *int32 `json:"share_space_desktops,omitempty"`
+
+	// 加入的组列表。
+	GroupNames *[]string `json:"group_names,omitempty"`
 }
 
 func (o User) String() string {

@@ -549,6 +549,14 @@ func GenReqDefForListGdgwRouteTables() *def.HttpRequestDef {
 		WithJsonTag("ext_fields").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Nexthop").
 		WithJsonTag("nexthop").
 		WithLocationType(def.Query))

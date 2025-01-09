@@ -32,6 +32,12 @@ type ListImagesRequest struct {
 
 	// 偏移量,默认0。
 	Offset *int32 `json:"offset,omitempty"`
+
+	// 用于排序，表示按照哪个字段排序。取值为镜像属性name、created_at字段，默认为name。
+	SortField *string `json:"sort_field,omitempty"`
+
+	// 用于排序，表示升序还是降序，取值为asc和desc。与sort_field一起组合使用，默认为升序asc。
+	SortType *string `json:"sort_type,omitempty"`
 }
 
 func (o ListImagesRequest) String() string {

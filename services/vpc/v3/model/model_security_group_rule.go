@@ -54,6 +54,9 @@ type SecurityGroupRule struct {
 
 	// 功能说明：安全组规则所属项目ID
 	ProjectId string `json:"project_id"`
+
+	// 功能说明：是否启用安全组规则。 取值范围：true, false。 约束：默认值为true。
+	Enabled bool `json:"enabled"`
 }
 
 func (o SecurityGroupRule) String() string {

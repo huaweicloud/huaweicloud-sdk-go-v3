@@ -8,8 +8,12 @@ import (
 
 // ShowAssistAuthConfigResponse Response Object
 type ShowAssistAuthConfigResponse struct {
-	OtpConfigInfo  *OtpConfigInfo `json:"otp_config_info,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	OtpConfigInfo *OtpConfigInfo `json:"otp_config_info,omitempty"`
+
+	RadiusConfigInfo *RadiusConfigInfo `json:"radius_config_info,omitempty"`
+
+	RadiusGatewayConfigInfo *RadiusGatewayConfigInfo `json:"radius_gateway_config_info,omitempty"`
+	HttpStatusCode          int                      `json:"-"`
 }
 
 func (o ShowAssistAuthConfigResponse) String() string {

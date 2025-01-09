@@ -63,7 +63,7 @@ type UserDetail struct {
 	Locked *bool `json:"locked,omitempty"`
 
 	// 是否允许修改密码，true表示允许修改密码，false表示不允许。
-	EnabledChangePassword *bool `json:"enabled_change_password,omitempty"`
+	EnableChangePassword *bool `json:"enable_change_password,omitempty"`
 
 	// 密码是否永不过期，true表示密码永不过期，false表示密码会过期。
 	PasswordNeverExpired *bool `json:"password_never_expired,omitempty"`
@@ -76,6 +76,12 @@ type UserDetail struct {
 
 	// 加入的组列表。
 	GroupNames *[]string `json:"group_names,omitempty"`
+
+	// 用户是否订阅协同，true表示已订阅，false表示未订阅
+	ShareSpaceSubscription *bool `json:"share_space_subscription,omitempty"`
+
+	// 用户已绑定协同桌面数
+	ShareSpaceDesktops *int32 `json:"share_space_desktops,omitempty"`
 
 	// 用户绑定桌面云总数。
 	TotalDesktops *int32 `json:"total_desktops,omitempty"`

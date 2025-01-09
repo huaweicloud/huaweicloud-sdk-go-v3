@@ -34,6 +34,9 @@ type SmsSignatureReq struct {
 
 	// 签名来源标题内容
 	SourceTitleContent *string `json:"source_title_content,omitempty"`
+
+	// 资质ID ，当前考虑存量应用的接口兼容性，代码未做强制校验，但创建签名时请务必携带资质ID，否则会导致资质审核失败
+	QualificationId *string `json:"qualification_id,omitempty"`
 }
 
 func (o SmsSignatureReq) String() string {

@@ -19,7 +19,7 @@ type ListProductsResponse struct {
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
 	// 产品列表。
-	Products *[]ProductInfo `json:"products,omitempty"`
+	Products *[]Product `json:"products,omitempty"`
 
 	// 对象总数。
 	TotalCount     *int32 `json:"total_count,omitempty"`

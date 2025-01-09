@@ -454,6 +454,22 @@ func GenReqDefForListSecurityGroupRules() *def.HttpRequestDef {
 		WithName("RemoteIpPrefix").
 		WithJsonTag("remote_ip_prefix").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Priority").
+		WithJsonTag("priority").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Ethertype").
+		WithJsonTag("ethertype").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RemoteAddressGroupId").
+		WithJsonTag("remote_address_group_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Enabled").
+		WithJsonTag("enabled").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

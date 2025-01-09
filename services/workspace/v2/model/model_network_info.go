@@ -17,7 +17,7 @@ type NetworkInfo struct {
 	PublicIpInfo *PublicIp `json:"public_ip_info,omitempty"`
 
 	// 桌面绑定的安全组列表
-	SecurityGroups *[]SecurityGroupInfo `json:"security_groups,omitempty"`
+	SecurityGroups *[]SecurityGroup `json:"security_groups,omitempty"`
 }
 
 func (o NetworkInfo) String() string {

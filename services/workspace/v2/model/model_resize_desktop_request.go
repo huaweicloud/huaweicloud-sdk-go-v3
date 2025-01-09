@@ -8,6 +8,10 @@ import (
 
 // ResizeDesktopRequest Request Object
 type ResizeDesktopRequest struct {
+
+	// CBC接口回调时，请求头里带上的业务ID
+	ServiceTransactionId *string `json:"Service-Transaction-Id,omitempty"`
+
 	Body *ResizeDesktopReq `json:"body,omitempty"`
 }
 

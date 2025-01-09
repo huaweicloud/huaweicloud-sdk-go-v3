@@ -1060,6 +1060,27 @@ func (c *DrsClient) ShowActionsInvoker(request *model.ShowActionsRequest) *ShowA
 	return &ShowActionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAgencyInfo 查询委托权限详情
+//
+// 查询委托权限详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowAgencyInfo(request *model.ShowAgencyInfoRequest) (*model.ShowAgencyInfoResponse, error) {
+	requestDef := GenReqDefForShowAgencyInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAgencyInfoResponse), nil
+	}
+}
+
+// ShowAgencyInfoInvoker 查询委托权限详情
+func (c *DrsClient) ShowAgencyInfoInvoker(request *model.ShowAgencyInfoRequest) *ShowAgencyInfoInvoker {
+	requestDef := GenReqDefForShowAgencyInfo()
+	return &ShowAgencyInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowColumnInfoResult 获取指定数据库表列信息
 //
 // 获取指定数据库表列信息
@@ -1673,6 +1694,27 @@ func (c *DrsClient) SyncUserJdbcDriver(request *model.SyncUserJdbcDriverRequest)
 func (c *DrsClient) SyncUserJdbcDriverInvoker(request *model.SyncUserJdbcDriverRequest) *SyncUserJdbcDriverInvoker {
 	requestDef := GenReqDefForSyncUserJdbcDriver()
 	return &SyncUserJdbcDriverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAgencyPolicy 更新委托权限策略
+//
+// 更新委托权限策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) UpdateAgencyPolicy(request *model.UpdateAgencyPolicyRequest) (*model.UpdateAgencyPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateAgencyPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAgencyPolicyResponse), nil
+	}
+}
+
+// UpdateAgencyPolicyInvoker 更新委托权限策略
+func (c *DrsClient) UpdateAgencyPolicyInvoker(request *model.UpdateAgencyPolicyRequest) *UpdateAgencyPolicyInvoker {
+	requestDef := GenReqDefForUpdateAgencyPolicy()
+	return &UpdateAgencyPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateBatchAsyncJobs 更新指定ID批量异步任务详情

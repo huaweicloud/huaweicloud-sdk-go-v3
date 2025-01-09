@@ -21,6 +21,12 @@ type ListServersRequest struct {
 	// 服务器名称，支持部分匹配。
 	ServerName *string `json:"server_name,omitempty"`
 
+	// 机器名称，支持部分匹配。
+	MachineName *string `json:"machine_name,omitempty"`
+
+	// ip地址，支持部分匹配。
+	IpAddr *string `json:"ip_addr,omitempty"`
+
 	// 服务器唯一标识。
 	ServerId *string `json:"server_id,omitempty"`
 

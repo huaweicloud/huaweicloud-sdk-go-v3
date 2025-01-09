@@ -8,7 +8,7 @@ import (
 
 type DeleteTtscVocabularyConfigsRequestBody struct {
 
-	// 词表id
+	// 自定义读法id
 	Id *[]string `json:"id,omitempty"`
 }
 

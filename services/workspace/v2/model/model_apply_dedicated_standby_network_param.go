@@ -9,6 +9,9 @@ import (
 // ApplyDedicatedStandbyNetworkParam 开通专线备用线路入参
 type ApplyDedicatedStandbyNetworkParam struct {
 
+	// 租户的站点id
+	SiteId *string `json:"site_id,omitempty"`
+
 	// 租户指定的专线备用地址
 	Address *string `json:"address,omitempty"`
 

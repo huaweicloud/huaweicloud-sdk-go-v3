@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ImageJobType job类型 * `CREATE_SERVER` - 创建镜像实例 * `CREATE_SERVER_IMAGE` - 构建镜像 * `DELETE_SERVER` - 删除镜像实例
+// ImageJobType job类型。 * `CREATE_SERVER` - 创建镜像实例 * `CREATE_SERVER_IMAGE` - 构建镜像 * `DELETE_SERVER` - 删除镜像实例
 type ImageJobType struct {
 	value string
 }

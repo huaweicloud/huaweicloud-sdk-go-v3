@@ -21,6 +21,9 @@ type UserInGroup struct {
 	// 用户手机号。
 	UserPhone *string `json:"user_phone,omitempty"`
 
+	// 用户桌面数。
+	TotalDesktops *int32 `json:"total_desktops,omitempty"`
+
 	// 用户描述。
 	Description *string `json:"description,omitempty"`
 }

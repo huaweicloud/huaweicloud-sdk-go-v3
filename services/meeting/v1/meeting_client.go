@@ -1917,27 +1917,6 @@ func (c *MeetingClient) SearchCorpAdminsInvoker(request *model.SearchCorpAdminsR
 	return &SearchCorpAdminsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SearchCorpDigitalInfoList 查询公共或本地数字资产列表
-//
-// 主持人通过该接口查询系统公共音色或者企业本地音色。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MeetingClient) SearchCorpDigitalInfoList(request *model.SearchCorpDigitalInfoListRequest) (*model.SearchCorpDigitalInfoListResponse, error) {
-	requestDef := GenReqDefForSearchCorpDigitalInfoList()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.SearchCorpDigitalInfoListResponse), nil
-	}
-}
-
-// SearchCorpDigitalInfoListInvoker 查询公共或本地数字资产列表
-func (c *MeetingClient) SearchCorpDigitalInfoListInvoker(request *model.SearchCorpDigitalInfoListRequest) *SearchCorpDigitalInfoListInvoker {
-	requestDef := GenReqDefForSearchCorpDigitalInfoList()
-	return &SearchCorpDigitalInfoListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // SearchCorpDir 查询企业通讯录
 //
 // 企业用户（含管理员）通过该接口查询该企业的通讯录。
@@ -2215,27 +2194,6 @@ func (c *MeetingClient) SearchOnlineMeetings(request *model.SearchOnlineMeetings
 func (c *MeetingClient) SearchOnlineMeetingsInvoker(request *model.SearchOnlineMeetingsRequest) *SearchOnlineMeetingsInvoker {
 	requestDef := GenReqDefForSearchOnlineMeetings()
 	return &SearchOnlineMeetingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// SearchPrivateCorpDigitalInfo 查询主讲人绑定的数字资产信息
-//
-// 主持人通过该接口查询查询主讲人绑定的数字资产信息列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MeetingClient) SearchPrivateCorpDigitalInfo(request *model.SearchPrivateCorpDigitalInfoRequest) (*model.SearchPrivateCorpDigitalInfoResponse, error) {
-	requestDef := GenReqDefForSearchPrivateCorpDigitalInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.SearchPrivateCorpDigitalInfoResponse), nil
-	}
-}
-
-// SearchPrivateCorpDigitalInfoInvoker 查询主讲人绑定的数字资产信息
-func (c *MeetingClient) SearchPrivateCorpDigitalInfoInvoker(request *model.SearchPrivateCorpDigitalInfoRequest) *SearchPrivateCorpDigitalInfoInvoker {
-	requestDef := GenReqDefForSearchPrivateCorpDigitalInfo()
-	return &SearchPrivateCorpDigitalInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SearchPrograms 查询信息窗节目

@@ -40,6 +40,9 @@ type SmsTemplateReq struct {
 
 	// 模板参数
 	VariableAttributes *[]SmsTemplateVariableAttrReq `json:"variable_attributes,omitempty"`
+
+	// 流程状态 1. Pending: 待提交 2. Reviewing: 待审核 3. Disable：停用
+	FlowStatus *string `json:"flow_status,omitempty"`
 }
 
 func (o SmsTemplateReq) String() string {

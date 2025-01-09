@@ -694,6 +694,10 @@ func GenReqDefForListPortInfos() *def.HttpRequestDef {
 		WithName("PubName").
 		WithJsonTag("pub_name").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IsBind").
+		WithJsonTag("is_bind").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

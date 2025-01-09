@@ -18,6 +18,9 @@ type RuleCommand struct {
 	// 命令ID。
 	CommandId *string `json:"command_id,omitempty"`
 
+	// 命令时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+	CommandTime *string `json:"command_time,omitempty"`
+
 	// 互动规则列表
 	InteractionRules *[]LiveRoomInteractionRuleInfo `json:"interaction_rules,omitempty"`
 }

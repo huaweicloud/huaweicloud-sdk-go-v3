@@ -14,6 +14,9 @@ type LivePlayingShootScriptItem struct {
 
 	// 段落标题。
 	Title *string `json:"title,omitempty"`
+
+	// 段落话术内容。
+	Text *string `json:"text,omitempty"`
 }
 
 func (o LivePlayingShootScriptItem) String() string {

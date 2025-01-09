@@ -12,7 +12,7 @@ type ListDesktopNamePolicyRequest struct {
 	// 是否包含用户名的桌面名称策略。 - true 包含 - false 不包含
 	IsContainUser *bool `json:"is_contain_user,omitempty"`
 
-	// 策略名称，由数字、字母、下划线组成，必须以字母或下划线开头，长度范围为1~30个字符，支持模糊筛选。
+	// 策略名称，由数字、字母、中文、下划线组成，必须以字母或下划线开头，长度范围为1~30个字符，支持模糊筛选。
 	PolicyName *string `json:"policy_name,omitempty"`
 
 	// 策略id。

@@ -32,6 +32,12 @@ type EditUserReq struct {
 	// 下次登录是否需要重置密码，true表示需要重置密码，false表示不需要。
 	NextLoginChangePassword *bool `json:"next_login_change_password,omitempty"`
 
+	// 用户组的专有ID列表。
+	GroupIds *[]string `json:"group_ids,omitempty"`
+
+	// 别名。
+	AliasName *string `json:"alias_name,omitempty"`
+
 	// 密码是否永不过期，true表示密码永不过期，false表示密码会过期。
 	PasswordNeverExpired *bool `json:"password_never_expired,omitempty"`
 

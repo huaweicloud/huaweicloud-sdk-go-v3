@@ -62,6 +62,9 @@ type SmartLiveRoomBaseInfo struct {
 
 	// 私有数据，用户填写，原样带回。
 	PrivData *string `json:"priv_data,omitempty"`
+
+	// 直播间确认状态。此状态仅用于特定用户需要人工确认场景。 - UNCONFIRM: 未确认 - CONFIRMED：已确认 - REJECT： 拒绝
+	ConfirmState *SmartLiveRoomBaseInfoConfirmState `json:"confirm_state,omitempty"`
 }
 
 func (o SmartLiveRoomBaseInfo) String() string {
@@ -267,6 +270,57 @@ func (c SmartLiveRoomBaseInfoLastJobStatus) MarshalJSON() ([]byte, error) {
 }
 
 func (c *SmartLiveRoomBaseInfoLastJobStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type SmartLiveRoomBaseInfoConfirmState struct {
+	value string
+}
+
+type SmartLiveRoomBaseInfoConfirmStateEnum struct {
+	UNCONFIRM SmartLiveRoomBaseInfoConfirmState
+	CONFIRMED SmartLiveRoomBaseInfoConfirmState
+	REJECT    SmartLiveRoomBaseInfoConfirmState
+}
+
+func GetSmartLiveRoomBaseInfoConfirmStateEnum() SmartLiveRoomBaseInfoConfirmStateEnum {
+	return SmartLiveRoomBaseInfoConfirmStateEnum{
+		UNCONFIRM: SmartLiveRoomBaseInfoConfirmState{
+			value: "UNCONFIRM",
+		},
+		CONFIRMED: SmartLiveRoomBaseInfoConfirmState{
+			value: "CONFIRMED",
+		},
+		REJECT: SmartLiveRoomBaseInfoConfirmState{
+			value: "REJECT",
+		},
+	}
+}
+
+func (c SmartLiveRoomBaseInfoConfirmState) Value() string {
+	return c.value
+}
+
+func (c SmartLiveRoomBaseInfoConfirmState) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SmartLiveRoomBaseInfoConfirmState) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

@@ -1269,6 +1269,22 @@ func (i *CreateOnceCodeInvoker) Invoke() (*model.CreateOnceCodeResponse, error) 
 	}
 }
 
+type BatchDeletePacifyWordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeletePacifyWordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeletePacifyWordsInvoker) Invoke() (*model.BatchDeletePacifyWordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeletePacifyWordsResponse), nil
+	}
+}
+
 type CreatePacifyWordsInvoker struct {
 	*invoker.BaseInvoker
 }

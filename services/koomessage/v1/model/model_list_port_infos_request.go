@@ -36,6 +36,9 @@ type ListPortInfosRequest struct {
 
 	// 服务号名称。  > - type=1时，此字段作为过滤条件 > - type=0时，不作为过滤条件
 	PubName *string `json:"pub_name,omitempty"`
+
+	// 绑定状态。 - 0：未绑定 - 1：已绑定  > - type=0时，此字段作为过滤条件 > - type=1时，不作为过滤条件
+	IsBind *int32 `json:"is_bind,omitempty"`
 }
 
 func (o ListPortInfosRequest) String() string {

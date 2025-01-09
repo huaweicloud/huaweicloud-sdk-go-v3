@@ -24,7 +24,7 @@ type SaveTtscVocabularyConfigsRequest struct {
 	// 第三方用户ID。不允许输入中文。
 	XAppUserId *string `json:"X-App-UserId,omitempty"`
 
-	// 词表id
+	// 自定义读法id
 	VocabularyId string `json:"vocabulary_id"`
 
 	Body *SaveTtscVocabularyConfigsRequestBody `json:"body,omitempty"`

@@ -9,7 +9,7 @@ import (
 // UpdateDesktopNamePolicyReq 更新桌面名称策略请求体。
 type UpdateDesktopNamePolicyReq struct {
 
-	// 策略名称，由数字、字母、下划线组成，必须以字母或下划线开头，长度范围为1~30个字符。
+	// 策略名称，由数字、字母、中文、下划线组成，必须以字母或下划线开头，长度范围为1~30个字符。
 	PolicyName *string `json:"policy_name,omitempty"`
 
 	// 策略前缀。
