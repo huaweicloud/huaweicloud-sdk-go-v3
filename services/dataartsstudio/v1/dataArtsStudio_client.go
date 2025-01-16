@@ -5043,6 +5043,27 @@ func (c *DataArtsStudioClient) ShowDataDetailInvoker(request *model.ShowDataDeta
 	return &ShowDataDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDataPreview 表数据预览
+//
+// 表数据预览
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowDataPreview(request *model.ShowDataPreviewRequest) (*model.ShowDataPreviewResponse, error) {
+	requestDef := GenReqDefForShowDataPreview()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDataPreviewResponse), nil
+	}
+}
+
+// ShowDataPreviewInvoker 表数据预览
+func (c *DataArtsStudioClient) ShowDataPreviewInvoker(request *model.ShowDataPreviewRequest) *ShowDataPreviewInvoker {
+	requestDef := GenReqDefForShowDataPreview()
+	return &ShowDataPreviewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDataProfile 资产信息
 //
 // 查询概要

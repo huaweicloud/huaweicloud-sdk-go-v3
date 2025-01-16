@@ -15,6 +15,9 @@ type ShowCsrResponse struct {
 	// CSR名称。
 	Name *string `json:"name,omitempty"`
 
+	// CSR内容。
+	Csr *string `json:"csr,omitempty"`
+
 	// CSR绑定的域名。
 	DomainName *string `json:"domain_name,omitempty"`
 
@@ -40,11 +43,11 @@ type ShowCsrResponse struct {
 	CompanyName *string `json:"company_name,omitempty"`
 
 	// CSR创建时间。
-	CreateTime float32 `json:"create_time,omitempty"`
+	CreateTime *int64 `json:"create_time,omitempty"`
 
 	// CSR更新时间。
-	UpdateTime     float32 `json:"update_time,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	UpdateTime     *int64 `json:"update_time,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowCsrResponse) String() string {

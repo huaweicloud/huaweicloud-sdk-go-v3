@@ -3829,6 +3829,22 @@ func (i *ShowDataDetailInvoker) Invoke() (*model.ShowDataDetailResponse, error) 
 	}
 }
 
+type ShowDataPreviewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDataPreviewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDataPreviewInvoker) Invoke() (*model.ShowDataPreviewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDataPreviewResponse), nil
+	}
+}
+
 type ShowDataProfileInvoker struct {
 	*invoker.BaseInvoker
 }

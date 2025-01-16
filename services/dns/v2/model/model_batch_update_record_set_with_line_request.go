@@ -12,7 +12,7 @@ type BatchUpdateRecordSetWithLineRequest struct {
 	// 所属zone的ID。
 	ZoneId string `json:"zone_id"`
 
-	Body *BatchUpdateRecordSetWithLineReq `json:"body,omitempty"`
+	Body *BatchUpdateRecordSetWithLineRequestBody `json:"body,omitempty"`
 }
 
 func (o BatchUpdateRecordSetWithLineRequest) String() string {

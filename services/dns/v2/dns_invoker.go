@@ -5,6 +5,70 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dns/v2/model"
 )
 
+type BatchDeleteRecordSetsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteRecordSetsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteRecordSetsInvoker) Invoke() (*model.BatchDeleteRecordSetsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteRecordSetsResponse), nil
+	}
+}
+
+type BatchDeleteZonesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteZonesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteZonesInvoker) Invoke() (*model.BatchDeleteZonesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteZonesResponse), nil
+	}
+}
+
+type BatchSetRecordSetsStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchSetRecordSetsStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchSetRecordSetsStatusInvoker) Invoke() (*model.BatchSetRecordSetsStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchSetRecordSetsStatusResponse), nil
+	}
+}
+
+type BatchSetZonesStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchSetZonesStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchSetZonesStatusInvoker) Invoke() (*model.BatchSetZonesStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchSetZonesStatusResponse), nil
+	}
+}
+
 type CreateCustomLineInvoker struct {
 	*invoker.BaseInvoker
 }

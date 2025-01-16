@@ -31,6 +31,9 @@ type ListInstanceRequestBody struct {
 
 	// 搜索字段。  key为要匹配的字段，当前只支持resource_name。  value为匹配的值，当前为精确匹配。
 	Matches *[]TagMatch `json:"matches,omitempty"`
+
+	// 不包含任意一个标签。该字段为true时查询所有不带标签的资源，此时忽略“tags”、“tags_any”、“not_tags”、“not_tags_any”字段。
+	WithoutAnyTag *bool `json:"without_any_tag,omitempty"`
 }
 
 func (o ListInstanceRequestBody) String() string {

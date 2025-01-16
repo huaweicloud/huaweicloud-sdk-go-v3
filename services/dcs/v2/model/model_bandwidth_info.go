@@ -37,6 +37,12 @@ type BandwidthInfo struct {
 
 	// 任务是否运行
 	TaskRunning *bool `json:"task_running,omitempty"`
+
+	// **参数解释**： 实例基准带宽。 **取值范围**： 不涉及。
+	AssuredBandwidth *int32 `json:"assured_bandwidth,omitempty"`
+
+	// **参数解释**： 节点最大带宽。 **取值范围**： 不涉及。
+	MaxBandwidthForNode *int32 `json:"max_bandwidth_for_node,omitempty"`
 }
 
 func (o BandwidthInfo) String() string {

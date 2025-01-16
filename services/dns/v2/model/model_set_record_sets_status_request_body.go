@@ -6,17 +6,17 @@ import (
 	"strings"
 )
 
-type SetRecordSetsStatusReq struct {
+type SetRecordSetsStatusRequestBody struct {
 
 	// 解析记录状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析。
 	Status string `json:"status"`
 }
 
-func (o SetRecordSetsStatusReq) String() string {
+func (o SetRecordSetsStatusRequestBody) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "SetRecordSetsStatusReq struct{}"
+		return "SetRecordSetsStatusRequestBody struct{}"
 	}
 
-	return strings.Join([]string{"SetRecordSetsStatusReq", string(data)}, " ")
+	return strings.Join([]string{"SetRecordSetsStatusRequestBody", string(data)}, " ")
 }

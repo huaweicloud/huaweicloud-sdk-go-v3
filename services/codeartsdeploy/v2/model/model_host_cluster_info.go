@@ -27,8 +27,6 @@ type HostClusterInfo struct {
 	// slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
 	SlaveClusterId *string `json:"slave_cluster_id,omitempty"`
 
-	CreatedBy *UserInfo `json:"created_by,omitempty"`
-
 	// 描述
 	Description *string `json:"description,omitempty"`
 
@@ -39,6 +37,9 @@ type HostClusterInfo struct {
 
 	// 环境数量
 	EnvCount *int32 `json:"env_count,omitempty"`
+
+	// 主机集群是否为代理机接入模式， 1：是 0：否
+	IsProxyMode *int32 `json:"is_proxy_mode,omitempty"`
 }
 
 func (o HostClusterInfo) String() string {

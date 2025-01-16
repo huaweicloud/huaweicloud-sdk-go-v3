@@ -17,7 +17,7 @@ type CreatePrivateZoneReq struct {
 	// 域名类型。取值：private。
 	ZoneType string `json:"zone_type"`
 
-	// 管理该zone的管理员邮箱。
+	// 管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
 	Email *string `json:"email,omitempty"`
 
 	// 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。

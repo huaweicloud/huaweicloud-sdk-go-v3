@@ -20,14 +20,14 @@ type SecretTask struct {
 	// 任务状态。
 	TaskStatus *string `json:"task_status,omitempty"`
 
-	// 任务尝试次数。
-	AttemptNums *int32 `json:"attempt_nums,omitempty"`
-
 	// 轮转类型。
 	OperateType *string `json:"operate_type,omitempty"`
 
 	// 任务创建时间。
 	TaskTime *int64 `json:"task_time,omitempty"`
+
+	// 轮转尝试次数。
+	AttemptNums *int32 `json:"attempt_nums,omitempty"`
 
 	// 任务错误码。
 	TaskErrorCode *string `json:"task_error_code,omitempty"`

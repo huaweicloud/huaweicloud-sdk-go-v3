@@ -9,10 +9,10 @@ import (
 // UpdateLineGroupsRequest Request Object
 type UpdateLineGroupsRequest struct {
 
-	// 待更新的线路分组ID。
+	// 线路分组ID
 	LinegroupId string `json:"linegroup_id"`
 
-	Body *UpdateLineGroupsBody `json:"body,omitempty"`
+	Body *UpdateLineGroupsRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateLineGroupsRequest) String() string {

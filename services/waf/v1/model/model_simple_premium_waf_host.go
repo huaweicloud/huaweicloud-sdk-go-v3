@@ -40,6 +40,9 @@ type SimplePremiumWafHost struct {
 
 	// 域名id，和id的值是一样的，属于冗余字段
 	Hostid *string `json:"hostid,omitempty"`
+
+	// 企业项目id
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o SimplePremiumWafHost) String() string {

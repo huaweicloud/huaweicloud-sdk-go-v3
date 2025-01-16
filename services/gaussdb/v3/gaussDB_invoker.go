@@ -2741,6 +2741,22 @@ func (i *ListStarRocksDataReplicationConfigInvoker) Invoke() (*model.ListStarRoc
 	}
 }
 
+type ListStarRocksDataReplicationConfigByDataBaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListStarRocksDataReplicationConfigByDataBaseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListStarRocksDataReplicationConfigByDataBaseInvoker) Invoke() (*model.ListStarRocksDataReplicationConfigByDataBaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListStarRocksDataReplicationConfigByDataBaseResponse), nil
+	}
+}
+
 type ListStarRocksDataReplicationsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2786,6 +2802,22 @@ func (i *ListStarrocksInstanceInfoInvoker) Invoke() (*model.ListStarrocksInstanc
 		return nil, err
 	} else {
 		return result.(*model.ListStarrocksInstanceInfoResponse), nil
+	}
+}
+
+type ModifyDataSyncInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyDataSyncInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyDataSyncInvoker) Invoke() (*model.ModifyDataSyncResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyDataSyncResponse), nil
 	}
 }
 
@@ -3154,6 +3186,22 @@ func (i *UpdateStarrocksParamsInvoker) Invoke() (*model.UpdateStarrocksParamsRes
 		return nil, err
 	} else {
 		return result.(*model.UpdateStarrocksParamsResponse), nil
+	}
+}
+
+type UpgradeSrKernelVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeSrKernelVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpgradeSrKernelVersionInvoker) Invoke() (*model.UpgradeSrKernelVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeSrKernelVersionResponse), nil
 	}
 }
 

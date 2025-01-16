@@ -33,10 +33,10 @@ type ShowRecordSetByZoneResp struct {
 	Records *[]string `json:"records,omitempty"`
 
 	// 创建时间。
-	CreateAt *string `json:"create_at,omitempty"`
+	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 更新时间。
-	UpdateAt *string `json:"update_at,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 
 	// 资源状态。
 	Status *string `json:"status,omitempty"`

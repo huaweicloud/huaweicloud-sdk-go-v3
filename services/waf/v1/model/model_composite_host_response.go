@@ -63,6 +63,9 @@ type CompositeHostResponse struct {
 
 	// 防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
 	Server *[]WafServer `json:"server,omitempty"`
+
+	// 企业项目id
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o CompositeHostResponse) String() string {

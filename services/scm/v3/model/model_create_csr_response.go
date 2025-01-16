@@ -37,8 +37,14 @@ type CreateCsrResponse struct {
 	CompanyCity *string `json:"company_city,omitempty"`
 
 	// 公司名称，当“usage”取值为“ENTERPRISE”时，本参数必填。
-	CompanyName    *string `json:"company_name,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	CompanyName *string `json:"company_name,omitempty"`
+
+	// CSR创建时间。
+	CreateTime *int64 `json:"create_time,omitempty"`
+
+	// CSR更新时间。
+	UpdateTime     *int64 `json:"update_time,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o CreateCsrResponse) String() string {

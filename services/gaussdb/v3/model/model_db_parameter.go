@@ -23,6 +23,9 @@ type DbParameter struct {
 
 	// 参数描述。
 	Description *string `json:"description,omitempty"`
+
+	// **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **取值范围**：  不涉及。
+	IsModifiable *string `json:"is_modifiable,omitempty"`
 }
 
 func (o DbParameter) String() string {

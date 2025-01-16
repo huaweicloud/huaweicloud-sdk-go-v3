@@ -18,7 +18,7 @@ type ShowPrivateZoneResponse struct {
 	// 对zone的描述信息。
 	Description *string `json:"description,omitempty"`
 
-	// 管理该zone的管理员邮箱。
+	// 管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
 	Email *string `json:"email,omitempty"`
 
 	// zone类型，内网（private）。

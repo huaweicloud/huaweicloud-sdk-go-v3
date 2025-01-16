@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type CreateCustomLines struct {
+type CreateCustomLineRequestBody struct {
 
 	// 解析线路名称。  长度限制为1-80个字符，只允许包含中文、字母、数字、'-'、'_'、'.'字符。  租户内，解析线路名称是唯一的。
 	Name string `json:"name"`
@@ -18,11 +18,11 @@ type CreateCustomLines struct {
 	Description *string `json:"description,omitempty"`
 }
 
-func (o CreateCustomLines) String() string {
+func (o CreateCustomLineRequestBody) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "CreateCustomLines struct{}"
+		return "CreateCustomLineRequestBody struct{}"
 	}
 
-	return strings.Join([]string{"CreateCustomLines", string(data)}, " ")
+	return strings.Join([]string{"CreateCustomLineRequestBody", string(data)}, " ")
 }

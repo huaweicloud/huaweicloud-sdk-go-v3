@@ -14,6 +14,9 @@ type ListStarRocksDbParametersRequest struct {
 
 	// 请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
 	XLanguage string `json:"X-Language"`
+
+	// **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
+	AddTaskScenario *string `json:"add_task_scenario,omitempty"`
 }
 
 func (o ListStarRocksDbParametersRequest) String() string {

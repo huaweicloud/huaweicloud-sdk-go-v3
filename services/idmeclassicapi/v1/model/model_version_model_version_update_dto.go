@@ -16,6 +16,9 @@ type VersionModelVersionUpdateDto struct {
 
 	// **参数解释：**  版本号。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Version string `json:"version"`
+
+	// **参数解释：**  修改人。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
+	Modifier *string `json:"modifier,omitempty"`
 }
 
 func (o VersionModelVersionUpdateDto) String() string {

@@ -24,8 +24,11 @@ type ListPrivateZonesRequest struct {
 	// 资源标签。
 	Tags *string `json:"tags,omitempty"`
 
-	// zone名称。
+	// Zone名称。  搜索模式默认为模糊搜索。
 	Name *string `json:"name,omitempty"`
+
+	// Zone ID。
+	Id *string `json:"id,omitempty"`
 
 	// 资源状态。
 	Status *string `json:"status,omitempty"`
@@ -33,8 +36,17 @@ type ListPrivateZonesRequest struct {
 	// 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索
 	SearchMode *string `json:"search_mode,omitempty"`
 
-	// 域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+	// 查询结果中zone列表的排序字段。  取值范围为：  name：域名 created_at：创建时间 updated_at：更新时间 默认值为空，表示不排序。
+	SortKey *string `json:"sort_key,omitempty"`
+
+	// 查询结果中zone列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。
+	SortDir *string `json:"sort_dir,omitempty"`
+
+	// 域名关联的企业项目ID，长度不超过36个字符。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 关联VPC的ID。
+	RouterId *string `json:"router_id,omitempty"`
 }
 
 func (o ListPrivateZonesRequest) String() string {

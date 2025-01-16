@@ -13,7 +13,7 @@ type ListTopicAttributesRequest struct {
 	TopicUrn string `json:"topic_urn"`
 
 	// 主题策略名称。  只支持特定的策略名称，请参见[Topic属性表](smn_api_a1000.xml)。
-	Name string `json:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 func (o ListTopicAttributesRequest) String() string {

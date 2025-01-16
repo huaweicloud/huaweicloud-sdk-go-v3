@@ -14,6 +14,9 @@ type CsrResponseBody struct {
 	// CSR名称。
 	Name string `json:"name"`
 
+	// CSR内容。
+	Csr string `json:"csr"`
+
 	// CSR绑定的域名。
 	DomainName string `json:"domain_name"`
 
@@ -39,10 +42,10 @@ type CsrResponseBody struct {
 	CompanyName string `json:"company_name"`
 
 	// CSR创建时间。
-	CreateTime float32 `json:"create_time"`
+	CreateTime int64 `json:"create_time"`
 
 	// CSR更新时间。
-	UpdateTime float32 `json:"update_time"`
+	UpdateTime int64 `json:"update_time"`
 }
 
 func (o CsrResponseBody) String() string {

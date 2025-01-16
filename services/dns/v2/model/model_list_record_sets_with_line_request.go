@@ -21,6 +21,9 @@ type ListRecordSetsWithLineRequest struct {
 	// 分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
 	Offset *int32 `json:"offset,omitempty"`
 
+	// zone的ID。
+	ZoneId *string `json:"zone_id,omitempty"`
+
 	// 解析线路ID。
 	LineId *string `json:"line_id,omitempty"`
 
@@ -36,13 +39,13 @@ type ListRecordSetsWithLineRequest struct {
 	// 待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
 	Name *string `json:"name,omitempty"`
 
-	// 待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
+	// 待查询的Record Set的id包含此id。
 	Id *string `json:"id,omitempty"`
 
 	// 待查询的Record Set的值中包含此records。  搜索模式默认为模糊搜索。  默认值为空。
 	Records *string `json:"records,omitempty"`
 
-	// 查询结果中Record Set列表的排序字段。  取值范围：  name：域名 type：记录集类型 默认值为空，表示不排序。
+	// 查询结果中Record Set列表的排序字段。  取值范围：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
 	SortKey *string `json:"sort_key,omitempty"`
 
 	// 查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。

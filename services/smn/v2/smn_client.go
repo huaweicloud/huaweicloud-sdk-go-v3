@@ -212,6 +212,27 @@ func (c *SmnClient) CreateMessageTemplateInvoker(request *model.CreateMessageTem
 	return &CreateMessageTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateNotifyPolicy 创建通知策略
+//
+// 创建通知策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) CreateNotifyPolicy(request *model.CreateNotifyPolicyRequest) (*model.CreateNotifyPolicyResponse, error) {
+	requestDef := GenReqDefForCreateNotifyPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateNotifyPolicyResponse), nil
+	}
+}
+
+// CreateNotifyPolicyInvoker 创建通知策略
+func (c *SmnClient) CreateNotifyPolicyInvoker(request *model.CreateNotifyPolicyRequest) *CreateNotifyPolicyInvoker {
+	requestDef := GenReqDefForCreateNotifyPolicy()
+	return &CreateNotifyPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateResourceTag 添加资源标签
 //
 // 一个资源上最多有10个标签。此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
@@ -295,6 +316,27 @@ func (c *SmnClient) DeleteMessageTemplate(request *model.DeleteMessageTemplateRe
 func (c *SmnClient) DeleteMessageTemplateInvoker(request *model.DeleteMessageTemplateRequest) *DeleteMessageTemplateInvoker {
 	requestDef := GenReqDefForDeleteMessageTemplate()
 	return &DeleteMessageTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteNotifyPolicy 删除通知策略
+//
+// 删除通知策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) DeleteNotifyPolicy(request *model.DeleteNotifyPolicyRequest) (*model.DeleteNotifyPolicyResponse, error) {
+	requestDef := GenReqDefForDeleteNotifyPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteNotifyPolicyResponse), nil
+	}
+}
+
+// DeleteNotifyPolicyInvoker 删除通知策略
+func (c *SmnClient) DeleteNotifyPolicyInvoker(request *model.DeleteNotifyPolicyRequest) *DeleteNotifyPolicyInvoker {
+	requestDef := GenReqDefForDeleteNotifyPolicy()
+	return &DeleteNotifyPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteResourceTag 删除资源标签
@@ -677,7 +719,8 @@ func (c *SmnClient) PublishHttpDetectInvoker(request *model.PublishHttpDetectReq
 
 // PublishMessage 消息发布
 //
-// 将消息发送给Topic的所有订阅端点。当返回消息ID时，该消息已被保存并开始尝试将其推送给Topic的订阅者。三种消息发送方式
+// 将消息发送给Topic的所有订阅端点。当返回消息ID时，该消息已被保存并开始尝试将其推送给Topic的订阅者。为确保您的消息能够成功推送到各个订阅者，请确保您的消息内容符合当地法律法规要求。
+// 三种消息发送方式
 //
 // message
 //
@@ -726,6 +769,27 @@ func (c *SmnClient) ShowHttpDetectResultInvoker(request *model.ShowHttpDetectRes
 	return &ShowHttpDetectResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowNotifyPolicy 查询通知策略
+//
+// 查询通知策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) ShowNotifyPolicy(request *model.ShowNotifyPolicyRequest) (*model.ShowNotifyPolicyResponse, error) {
+	requestDef := GenReqDefForShowNotifyPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowNotifyPolicyResponse), nil
+	}
+}
+
+// ShowNotifyPolicyInvoker 查询通知策略
+func (c *SmnClient) ShowNotifyPolicyInvoker(request *model.ShowNotifyPolicyRequest) *ShowNotifyPolicyInvoker {
+	requestDef := GenReqDefForShowNotifyPolicy()
+	return &ShowNotifyPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateLogtank 更新云日志
 //
 // 更新指定Topic绑定的云日志。
@@ -766,6 +830,27 @@ func (c *SmnClient) UpdateMessageTemplate(request *model.UpdateMessageTemplateRe
 func (c *SmnClient) UpdateMessageTemplateInvoker(request *model.UpdateMessageTemplateRequest) *UpdateMessageTemplateInvoker {
 	requestDef := GenReqDefForUpdateMessageTemplate()
 	return &UpdateMessageTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateNotifyPolicy 修改通知策略
+//
+// 修改通知策略，该接口仅支持全量修改，不支持部分修改。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) UpdateNotifyPolicy(request *model.UpdateNotifyPolicyRequest) (*model.UpdateNotifyPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateNotifyPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateNotifyPolicyResponse), nil
+	}
+}
+
+// UpdateNotifyPolicyInvoker 修改通知策略
+func (c *SmnClient) UpdateNotifyPolicyInvoker(request *model.UpdateNotifyPolicyRequest) *UpdateNotifyPolicyInvoker {
+	requestDef := GenReqDefForUpdateNotifyPolicy()
+	return &UpdateNotifyPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSubscription 更新订阅者

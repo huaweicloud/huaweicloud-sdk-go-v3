@@ -20,7 +20,7 @@ type ListPtrRecordsFloatingResp struct {
 	// PTR记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
 	Ttl *int32 `json:"ttl,omitempty"`
 
-	// 弹性IP的IP地址。
+	// 弹性公网IP的IP地址。
 	Address *string `json:"address,omitempty"`
 
 	// 资源状态。

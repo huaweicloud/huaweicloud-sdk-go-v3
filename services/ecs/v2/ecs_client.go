@@ -749,6 +749,29 @@ func (c *EcsClient) ListResizeFlavorsInvoker(request *model.ListResizeFlavorsReq
 	return &ListResizeFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
+// ListServerAzInfo 查询可用区列表
+//
+// 查询可用区列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ListServerAzInfo(request *model.ListServerAzInfoRequest) (*model.ListServerAzInfoResponse, error) {
+	requestDef := GenReqDefForListServerAzInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListServerAzInfoResponse), nil
+	}
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+// ListServerAzInfoInvoker 查询可用区列表
+func (c *EcsClient) ListServerAzInfoInvoker(request *model.ListServerAzInfoRequest) *ListServerAzInfoInvoker {
+	requestDef := GenReqDefForListServerAzInfo()
+	return &ListServerAzInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListServerBlockDevices 查询弹性云服务器挂载磁盘列表详情信息
 //
 // 查询弹性云服务器挂载的磁盘信息。

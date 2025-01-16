@@ -12,7 +12,7 @@ type ListPtrRecordsResponse struct {
 
 	Metadata *Metadata `json:"metadata,omitempty"`
 
-	// 弹性IP的PTR记录ID列表信息。
+	// 弹性公网IP的PTR记录ID列表信息。
 	Floatingips    *[]ListPtrRecordsFloatingResp `json:"floatingips,omitempty"`
 	HttpStatusCode int                           `json:"-"`
 }

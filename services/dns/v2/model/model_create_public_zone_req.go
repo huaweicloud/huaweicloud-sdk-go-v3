@@ -15,10 +15,10 @@ type CreatePublicZoneReq struct {
 	// 描述
 	Description *string `json:"description,omitempty"`
 
-	// Zone类型,取值public。
+	// 域名类型。取值：public。
 	ZoneType *string `json:"zone_type,omitempty"`
 
-	// 管理该zone的管理员邮箱
+	// 管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
 	Email *string `json:"email,omitempty"`
 
 	// 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位.

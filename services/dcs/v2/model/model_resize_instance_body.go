@@ -22,7 +22,7 @@ type ResizeInstanceBody struct {
 	// 需要保留的节点ip。cluster集群缩容时需要填写，不填写时系统将随机删除多余的分片
 	ReservedIp *[]string `json:"reserved_ip,omitempty"`
 
-	// 变更类型，Redis 4.0或者5.0主备实例进行副本数变更时必选。 - createReplication: 添加副本 - deleteReplication: 删除副本
+	// 变更类型，Redis 4.0或者5.0实例进行副本数变更时必选。 - createReplication: 添加副本 - deleteReplication: 删除副本 - addSharding: 添加分片 - instanceType: 实例类型变更[，目前仅支持Redis 4.0/5.0/6.0实例中的主备实例/读写分离实例变更为proxy集群实例、proxy集群实例变更为主备实例/读写分离实例](tag:hws,hws_hk,hws_eu,ctc,sbc,hk_sbc,g42,hk_g42,otc)。
 	ChangeType *ResizeInstanceBodyChangeType `json:"change_type,omitempty"`
 
 	// Redis 4.0或者5.0主备实例进行添加副本时必选，指定每个副本所在的可用区Code，使用前需要先确认该可用区资源是否售罄。  具体查询方法，请参考[查询可用区信息](https://support.huaweicloud.com/api-dcs/ListAvailableZones.html)
@@ -51,6 +51,8 @@ type ResizeInstanceBodyChangeType struct {
 type ResizeInstanceBodyChangeTypeEnum struct {
 	CREATE_REPLICATION ResizeInstanceBodyChangeType
 	DELETE_REPLICATION ResizeInstanceBodyChangeType
+	ADD_SHARDING       ResizeInstanceBodyChangeType
+	INSTANCE_TYPE      ResizeInstanceBodyChangeType
 }
 
 func GetResizeInstanceBodyChangeTypeEnum() ResizeInstanceBodyChangeTypeEnum {
@@ -60,6 +62,12 @@ func GetResizeInstanceBodyChangeTypeEnum() ResizeInstanceBodyChangeTypeEnum {
 		},
 		DELETE_REPLICATION: ResizeInstanceBodyChangeType{
 			value: "deleteReplication",
+		},
+		ADD_SHARDING: ResizeInstanceBodyChangeType{
+			value: "addSharding",
+		},
+		INSTANCE_TYPE: ResizeInstanceBodyChangeType{
+			value: "instanceType",
 		},
 	}
 }

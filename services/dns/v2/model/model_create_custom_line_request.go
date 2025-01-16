@@ -8,7 +8,7 @@ import (
 
 // CreateCustomLineRequest Request Object
 type CreateCustomLineRequest struct {
-	Body *CreateCustomLines `json:"body,omitempty"`
+	Body *CreateCustomLineRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateCustomLineRequest) String() string {

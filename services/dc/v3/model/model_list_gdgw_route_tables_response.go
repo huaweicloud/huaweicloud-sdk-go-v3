@@ -15,6 +15,9 @@ type ListGdgwRouteTablesResponse struct {
 	// 全域接入网关路由表
 	GdgwRoutetables *[]CommonRoutetable `json:"gdgw_routetables,omitempty"`
 
+	// 总记录数。
+	TotalCount *int32 `json:"total_count,omitempty"`
+
 	PageInfo       *PageInfo `json:"page_info,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

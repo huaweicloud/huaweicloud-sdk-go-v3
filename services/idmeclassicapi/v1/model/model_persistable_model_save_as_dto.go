@@ -34,7 +34,7 @@ type PersistableModelSaveAsDto struct {
 	// **参数解释：**  源实例的唯一标识（单实例为ID，版本实例为versionId）。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	SourceInstanceId string `json:"sourceInstanceId"`
 
-	// **参数解释：**  置空字段数组。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
+	// **参数解释：**  将自定义属性（包括基本属性、扩展属性和分类属性）设置为空值，其长度不能超过1000个字符。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	NeedSetNullAttrs *[]string `json:"needSetNullAttrs,omitempty"`
 
 	// **参数解释：**  要保存的属性。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。

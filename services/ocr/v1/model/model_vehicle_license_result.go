@@ -9,6 +9,9 @@ import (
 // VehicleLicenseResult
 type VehicleLicenseResult struct {
 
+	// 行驶证类型：  - normal: 纸质行驶证  - electronic: 电子行驶证
+	Type *string `json:"type,omitempty"`
+
 	// 号牌号码。
 	Number *string `json:"number,omitempty"`
 
@@ -77,6 +80,15 @@ type VehicleLicenseResult struct {
 
 	// 能源类型。
 	EnergyType *string `json:"energy_type,omitempty"`
+
+	// 车身颜色。
+	Color *string `json:"color,omitempty"`
+
+	// 强制报废日期。
+	MandatoryScrappingDate *string `json:"mandatory_scrapping_date,omitempty"`
+
+	// 状态。
+	Status *[]string `json:"status,omitempty"`
 
 	Front *VehicleLicenseFront `json:"front,omitempty"`
 

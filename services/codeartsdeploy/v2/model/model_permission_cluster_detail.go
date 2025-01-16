@@ -23,6 +23,9 @@ type PermissionClusterDetail struct {
 
 	// 是否有编辑主机集群权限矩阵的权限
 	CanManage *bool `json:"can_manage,omitempty"`
+
+	// 是否有复制主机权限
+	CanCopy *bool `json:"can_copy,omitempty"`
 }
 
 func (o PermissionClusterDetail) String() string {

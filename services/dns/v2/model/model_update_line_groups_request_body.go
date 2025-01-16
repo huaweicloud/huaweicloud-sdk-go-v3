@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type UpdateLineGroupsBody struct {
+type UpdateLineGroupsRequestBody struct {
 
 	// 线路分组名称。 不能与自定义线路名称、预制线路名称重复。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
 	Name string `json:"name"`
@@ -18,11 +18,11 @@ type UpdateLineGroupsBody struct {
 	Lines []string `json:"lines"`
 }
 
-func (o UpdateLineGroupsBody) String() string {
+func (o UpdateLineGroupsRequestBody) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "UpdateLineGroupsBody struct{}"
+		return "UpdateLineGroupsRequestBody struct{}"
 	}
 
-	return strings.Join([]string{"UpdateLineGroupsBody", string(data)}, " ")
+	return strings.Join([]string{"UpdateLineGroupsRequestBody", string(data)}, " ")
 }

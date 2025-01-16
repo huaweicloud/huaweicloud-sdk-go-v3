@@ -14,6 +14,9 @@ type LifecycleManagedModelLifecycleTemplateSwitchDto struct {
 	LifecycleTemplate *ObjectReferenceParamDto `json:"lifecycleTemplate"`
 
 	LifecycleState *ObjectReferenceParamDto `json:"lifecycleState"`
+
+	// **参数解释：**  修改人。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
+	Modifier *string `json:"modifier,omitempty"`
 }
 
 func (o LifecycleManagedModelLifecycleTemplateSwitchDto) String() string {

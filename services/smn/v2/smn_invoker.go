@@ -149,6 +149,22 @@ func (i *CreateMessageTemplateInvoker) Invoke() (*model.CreateMessageTemplateRes
 	}
 }
 
+type CreateNotifyPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateNotifyPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateNotifyPolicyInvoker) Invoke() (*model.CreateNotifyPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateNotifyPolicyResponse), nil
+	}
+}
+
 type CreateResourceTagInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -210,6 +226,22 @@ func (i *DeleteMessageTemplateInvoker) Invoke() (*model.DeleteMessageTemplateRes
 		return nil, err
 	} else {
 		return result.(*model.DeleteMessageTemplateResponse), nil
+	}
+}
+
+type DeleteNotifyPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteNotifyPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteNotifyPolicyInvoker) Invoke() (*model.DeleteNotifyPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteNotifyPolicyResponse), nil
 	}
 }
 
@@ -533,6 +565,22 @@ func (i *ShowHttpDetectResultInvoker) Invoke() (*model.ShowHttpDetectResultRespo
 	}
 }
 
+type ShowNotifyPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowNotifyPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowNotifyPolicyInvoker) Invoke() (*model.ShowNotifyPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowNotifyPolicyResponse), nil
+	}
+}
+
 type UpdateLogtankInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -562,6 +610,22 @@ func (i *UpdateMessageTemplateInvoker) Invoke() (*model.UpdateMessageTemplateRes
 		return nil, err
 	} else {
 		return result.(*model.UpdateMessageTemplateResponse), nil
+	}
+}
+
+type UpdateNotifyPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateNotifyPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateNotifyPolicyInvoker) Invoke() (*model.UpdateNotifyPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateNotifyPolicyResponse), nil
 	}
 }
 

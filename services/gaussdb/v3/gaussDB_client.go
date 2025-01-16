@@ -3612,6 +3612,27 @@ func (c *GaussDBClient) ListStarRocksDataReplicationConfigInvoker(request *model
 	return &ListStarRocksDataReplicationConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListStarRocksDataReplicationConfigByDataBase 按目标库查询StarRocks数据同步配置信息
+//
+// 按目标库查询StarRocks数据同步配置信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListStarRocksDataReplicationConfigByDataBase(request *model.ListStarRocksDataReplicationConfigByDataBaseRequest) (*model.ListStarRocksDataReplicationConfigByDataBaseResponse, error) {
+	requestDef := GenReqDefForListStarRocksDataReplicationConfigByDataBase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListStarRocksDataReplicationConfigByDataBaseResponse), nil
+	}
+}
+
+// ListStarRocksDataReplicationConfigByDataBaseInvoker 按目标库查询StarRocks数据同步配置信息
+func (c *GaussDBClient) ListStarRocksDataReplicationConfigByDataBaseInvoker(request *model.ListStarRocksDataReplicationConfigByDataBaseRequest) *ListStarRocksDataReplicationConfigByDataBaseInvoker {
+	requestDef := GenReqDefForListStarRocksDataReplicationConfigByDataBase()
+	return &ListStarRocksDataReplicationConfigByDataBaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListStarRocksDataReplications 查询StarRocks数据同步状态信息
 //
 // 查询StarRocks数据同步状态信息。
@@ -3673,6 +3694,27 @@ func (c *GaussDBClient) ListStarrocksInstanceInfo(request *model.ListStarrocksIn
 func (c *GaussDBClient) ListStarrocksInstanceInfoInvoker(request *model.ListStarrocksInstanceInfoRequest) *ListStarrocksInstanceInfoInvoker {
 	requestDef := GenReqDefForListStarrocksInstanceInfo()
 	return &ListStarrocksInstanceInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyDataSync 修改StarRocks数据同步配置
+//
+// 修改StarRocks数据同步配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ModifyDataSync(request *model.ModifyDataSyncRequest) (*model.ModifyDataSyncResponse, error) {
+	requestDef := GenReqDefForModifyDataSync()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyDataSyncResponse), nil
+	}
+}
+
+// ModifyDataSyncInvoker 修改StarRocks数据同步配置
+func (c *GaussDBClient) ModifyDataSyncInvoker(request *model.ModifyDataSyncRequest) *ModifyDataSyncInvoker {
+	requestDef := GenReqDefForModifyDataSync()
+	return &ModifyDataSyncInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // PauseStarRocksDataReplication 暂停StarRocks数据同步
@@ -4156,6 +4198,27 @@ func (c *GaussDBClient) UpdateStarrocksParams(request *model.UpdateStarrocksPara
 func (c *GaussDBClient) UpdateStarrocksParamsInvoker(request *model.UpdateStarrocksParamsRequest) *UpdateStarrocksParamsInvoker {
 	requestDef := GenReqDefForUpdateStarrocksParams()
 	return &UpdateStarrocksParamsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpgradeSrKernelVersion StarRocks内核版本升级
+//
+// StarRocks内核版本升级。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpgradeSrKernelVersion(request *model.UpgradeSrKernelVersionRequest) (*model.UpgradeSrKernelVersionResponse, error) {
+	requestDef := GenReqDefForUpgradeSrKernelVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeSrKernelVersionResponse), nil
+	}
+}
+
+// UpgradeSrKernelVersionInvoker StarRocks内核版本升级
+func (c *GaussDBClient) UpgradeSrKernelVersionInvoker(request *model.UpgradeSrKernelVersionRequest) *UpgradeSrKernelVersionInvoker {
+	requestDef := GenReqDefForUpgradeSrKernelVersion()
+	return &UpgradeSrKernelVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteSqlFilterRule 删除SQL限流规则

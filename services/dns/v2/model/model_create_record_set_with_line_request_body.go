@@ -17,7 +17,7 @@ type CreateRecordSetWithLineRequestBody struct {
 	// Record Set的类型。
 	Type string `json:"type"`
 
-	// 解析记录的状态。默认值为ENABLE。
+	// 解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
 	Status *string `json:"status,omitempty"`
 
 	// 解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。

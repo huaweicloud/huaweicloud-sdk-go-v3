@@ -19,7 +19,7 @@ type UpdateInstanceBandwidthAutoScalingPolicyResponse struct {
 	BandwidthUsageUpperThreshold UpdateInstanceBandwidthAutoScalingPolicyResponseBandwidthUsageUpperThreshold `json:"bandwidth_usage_upper_threshold"`
 
 	// 带宽扩展操作的静默时间（两次带宽扩展操作之间的最小间隔时间），单位：秒。 默认值：0。取值范围：0~86400。
-	ScaleOutCooldown *int32 `json:"scale_out_cooldown,omitempty"`
+	ScaleOutCooldown int32 `json:"scale_out_cooldown"`
 
 	// 是否启用带宽自动回缩。默认值：false。该参数暂未启用。
 	ScaleInEnabled *bool `json:"scale_in_enabled,omitempty"`

@@ -19,6 +19,98 @@ func DnsClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// BatchDeleteRecordSets 批量删除Record Set
+//
+// 批量删除Record Set。
+// 响应结果中只包含本次实际删除的Record Set。
+// 支持批量删除公网域名和内网域名的记录集。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) BatchDeleteRecordSets(request *model.BatchDeleteRecordSetsRequest) (*model.BatchDeleteRecordSetsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteRecordSets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteRecordSetsResponse), nil
+	}
+}
+
+// BatchDeleteRecordSetsInvoker 批量删除Record Set
+func (c *DnsClient) BatchDeleteRecordSetsInvoker(request *model.BatchDeleteRecordSetsRequest) *BatchDeleteRecordSetsInvoker {
+	requestDef := GenReqDefForBatchDeleteRecordSets()
+	return &BatchDeleteRecordSetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteZones 批量删除Zone
+//
+// 批量删除Zone。
+// 本接口为原子操作，所有记录应全部删除成功或全部失败。
+// 仅支持公网Zone、内网Zone。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) BatchDeleteZones(request *model.BatchDeleteZonesRequest) (*model.BatchDeleteZonesResponse, error) {
+	requestDef := GenReqDefForBatchDeleteZones()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteZonesResponse), nil
+	}
+}
+
+// BatchDeleteZonesInvoker 批量删除Zone
+func (c *DnsClient) BatchDeleteZonesInvoker(request *model.BatchDeleteZonesRequest) *BatchDeleteZonesInvoker {
+	requestDef := GenReqDefForBatchDeleteZones()
+	return &BatchDeleteZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchSetRecordSetsStatus 批量设置Record Set状态
+//
+// 批量设置Record Set状态。
+// 响应结果中只包含本次实际更新的Record Set。
+// 支持公网域名和内网域名的记录集。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) BatchSetRecordSetsStatus(request *model.BatchSetRecordSetsStatusRequest) (*model.BatchSetRecordSetsStatusResponse, error) {
+	requestDef := GenReqDefForBatchSetRecordSetsStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchSetRecordSetsStatusResponse), nil
+	}
+}
+
+// BatchSetRecordSetsStatusInvoker 批量设置Record Set状态
+func (c *DnsClient) BatchSetRecordSetsStatusInvoker(request *model.BatchSetRecordSetsStatusRequest) *BatchSetRecordSetsStatusInvoker {
+	requestDef := GenReqDefForBatchSetRecordSetsStatus()
+	return &BatchSetRecordSetsStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchSetZonesStatus 批量设置Zone状态
+//
+// 批量设置Zone状态。
+// 响应结果中只包含本次实际更新的Zone。
+// 仅支持公网Zone、内网Zone。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) BatchSetZonesStatus(request *model.BatchSetZonesStatusRequest) (*model.BatchSetZonesStatusResponse, error) {
+	requestDef := GenReqDefForBatchSetZonesStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchSetZonesStatusResponse), nil
+	}
+}
+
+// BatchSetZonesStatusInvoker 批量设置Zone状态
+func (c *DnsClient) BatchSetZonesStatusInvoker(request *model.BatchSetZonesStatusRequest) *BatchSetZonesStatusInvoker {
+	requestDef := GenReqDefForBatchSetZonesStatus()
+	return &BatchSetZonesStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCustomLine 创建单个自定义线路
 //
 // 创建单个自定义线路
@@ -292,9 +384,9 @@ func (c *DnsClient) UpdateLineGroupsInvoker(request *model.UpdateLineGroupsReque
 	return &UpdateLineGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateEipRecordSet 设置弹性IP的PTR记录
+// CreateEipRecordSet 设置弹性公网IP的PTR记录
 //
-// 设置弹性IP的PTR记录
+// 设置弹性公网IP的PTR记录
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) CreateEipRecordSet(request *model.CreateEipRecordSetRequest) (*model.CreateEipRecordSetResponse, error) {
@@ -307,15 +399,15 @@ func (c *DnsClient) CreateEipRecordSet(request *model.CreateEipRecordSetRequest)
 	}
 }
 
-// CreateEipRecordSetInvoker 设置弹性IP的PTR记录
+// CreateEipRecordSetInvoker 设置弹性公网IP的PTR记录
 func (c *DnsClient) CreateEipRecordSetInvoker(request *model.CreateEipRecordSetRequest) *CreateEipRecordSetInvoker {
 	requestDef := GenReqDefForCreateEipRecordSet()
 	return &CreateEipRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPtrRecords 查询租户弹性IP的PTR记录列表
+// ListPtrRecords 查询租户弹性公网IP的PTR记录列表
 //
-// 查询租户弹性IP的PTR记录列表
+// 查询租户弹性公网IP的PTR记录列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListPtrRecords(request *model.ListPtrRecordsRequest) (*model.ListPtrRecordsResponse, error) {
@@ -328,15 +420,15 @@ func (c *DnsClient) ListPtrRecords(request *model.ListPtrRecordsRequest) (*model
 	}
 }
 
-// ListPtrRecordsInvoker 查询租户弹性IP的PTR记录列表
+// ListPtrRecordsInvoker 查询租户弹性公网IP的PTR记录列表
 func (c *DnsClient) ListPtrRecordsInvoker(request *model.ListPtrRecordsRequest) *ListPtrRecordsInvoker {
 	requestDef := GenReqDefForListPtrRecords()
 	return &ListPtrRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// RestorePtrRecord 将弹性IP的PTR记录恢复为默认值
+// RestorePtrRecord 将弹性公网IP的PTR记录恢复为默认值
 //
-// 将弹性IP的PTR记录恢复为默认值
+// 将弹性公网IP的PTR记录恢复为默认值
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) RestorePtrRecord(request *model.RestorePtrRecordRequest) (*model.RestorePtrRecordResponse, error) {
@@ -349,15 +441,15 @@ func (c *DnsClient) RestorePtrRecord(request *model.RestorePtrRecordRequest) (*m
 	}
 }
 
-// RestorePtrRecordInvoker 将弹性IP的PTR记录恢复为默认值
+// RestorePtrRecordInvoker 将弹性公网IP的PTR记录恢复为默认值
 func (c *DnsClient) RestorePtrRecordInvoker(request *model.RestorePtrRecordRequest) *RestorePtrRecordInvoker {
 	requestDef := GenReqDefForRestorePtrRecord()
 	return &RestorePtrRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPtrRecordSet 查询单个弹性IP的PTR记录
+// ShowPtrRecordSet 查询单个弹性公网IP的PTR记录
 //
-// 查询单个弹性IP的PTR记录
+// 查询单个弹性公网IP的PTR记录
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ShowPtrRecordSet(request *model.ShowPtrRecordSetRequest) (*model.ShowPtrRecordSetResponse, error) {
@@ -370,15 +462,15 @@ func (c *DnsClient) ShowPtrRecordSet(request *model.ShowPtrRecordSetRequest) (*m
 	}
 }
 
-// ShowPtrRecordSetInvoker 查询单个弹性IP的PTR记录
+// ShowPtrRecordSetInvoker 查询单个弹性公网IP的PTR记录
 func (c *DnsClient) ShowPtrRecordSetInvoker(request *model.ShowPtrRecordSetRequest) *ShowPtrRecordSetInvoker {
 	requestDef := GenReqDefForShowPtrRecordSet()
 	return &ShowPtrRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdatePtrRecord 修改弹性IP的PTR记录
+// UpdatePtrRecord 修改弹性公网IP的PTR记录
 //
-// 修改弹性IP的PTR记录
+// 修改弹性公网IP的PTR记录
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) UpdatePtrRecord(request *model.UpdatePtrRecordRequest) (*model.UpdatePtrRecordResponse, error) {
@@ -391,7 +483,7 @@ func (c *DnsClient) UpdatePtrRecord(request *model.UpdatePtrRecordRequest) (*mod
 	}
 }
 
-// UpdatePtrRecordInvoker 修改弹性IP的PTR记录
+// UpdatePtrRecordInvoker 修改弹性公网IP的PTR记录
 func (c *DnsClient) UpdatePtrRecordInvoker(request *model.UpdatePtrRecordRequest) *UpdatePtrRecordInvoker {
 	requestDef := GenReqDefForUpdatePtrRecord()
 	return &UpdatePtrRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

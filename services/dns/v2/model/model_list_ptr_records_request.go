@@ -18,7 +18,7 @@ type ListPtrRecordsRequest struct {
 	// 分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 反向解析关联的企业项目ID，长度不超过36个字符。  默认值为0。
+	// 反向解析关联的企业项目ID，长度不超过36个字符。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。

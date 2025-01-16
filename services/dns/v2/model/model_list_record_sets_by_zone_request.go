@@ -36,10 +36,10 @@ type ListRecordSetsByZoneRequest struct {
 	// 待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
 	Name *string `json:"name,omitempty"`
 
-	// 待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
+	// 待查询的Record Set的id包含此id。
 	Id *string `json:"id,omitempty"`
 
-	// 查询结果中Record Set列表的排序字段。  取值范围为：  name：域名 type：记录集类型 默认值为空，表示不排序。
+	// 查询结果中Record Set列表的排序字段。  取值范围为：  name：记录集名称 type：记录集类型 默认值为空，表示不排序。
 	SortKey *string `json:"sort_key,omitempty"`
 
 	// 查询结果中Record Set列表的排序方式。  取值范围：  desc：降序排序 asc：升序排序 默认值为空，表示不排序。

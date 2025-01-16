@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type UpdateCustomsLineReq struct {
+type UpdateCustomLineRequestBody struct {
 
 	// 解析线路名称。
 	Name *string `json:"name,omitempty"`
@@ -18,11 +18,11 @@ type UpdateCustomsLineReq struct {
 	Description *string `json:"description,omitempty"`
 }
 
-func (o UpdateCustomsLineReq) String() string {
+func (o UpdateCustomLineRequestBody) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "UpdateCustomsLineReq struct{}"
+		return "UpdateCustomLineRequestBody struct{}"
 	}
 
-	return strings.Join([]string{"UpdateCustomsLineReq", string(data)}, " ")
+	return strings.Join([]string{"UpdateCustomLineRequestBody", string(data)}, " ")
 }

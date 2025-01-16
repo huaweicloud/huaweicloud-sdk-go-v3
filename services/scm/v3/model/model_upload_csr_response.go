@@ -16,8 +16,8 @@ type UploadCsrResponse struct {
 	Name *string `json:"name,omitempty"`
 
 	// CSR创建时间。
-	CreateTime     float32 `json:"create_time,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	CreateTime     *int64 `json:"create_time,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o UploadCsrResponse) String() string {

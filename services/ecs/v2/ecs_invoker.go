@@ -517,6 +517,24 @@ func (i *ListResizeFlavorsInvoker) Invoke() (*model.ListResizeFlavorsResponse, e
 	}
 }
 
+type ListServerAzInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListServerAzInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListServerAzInfoInvoker) Invoke() (*model.ListServerAzInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListServerAzInfoResponse), nil
+	}
+}
+
 type ListServerBlockDevicesInvoker struct {
 	*invoker.BaseInvoker
 }

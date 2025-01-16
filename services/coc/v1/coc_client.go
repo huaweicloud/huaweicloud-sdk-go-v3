@@ -271,6 +271,29 @@ func (c *CocClient) ListAuthorizableTicketsExternalInvoker(request *model.ListAu
 	return &ListAuthorizableTicketsExternalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPrrTemplate 查询PRR模板列表
+//
+// 查询PRR模板列表
+//
+// limit最大为100
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListPrrTemplate(request *model.ListPrrTemplateRequest) (*model.ListPrrTemplateResponse, error) {
+	requestDef := GenReqDefForListPrrTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPrrTemplateResponse), nil
+	}
+}
+
+// ListPrrTemplateInvoker 查询PRR模板列表
+func (c *CocClient) ListPrrTemplateInvoker(request *model.ListPrrTemplateRequest) *ListPrrTemplateInvoker {
+	requestDef := GenReqDefForListPrrTemplate()
+	return &ListPrrTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListResource 查询用户所有资源
 //
 // 查询用户所有资源

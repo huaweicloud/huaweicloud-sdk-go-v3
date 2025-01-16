@@ -57,6 +57,9 @@ type CloudWafHostItem struct {
 	WebTag *string `json:"web_tag,omitempty"`
 
 	Flag *Flag `json:"flag,omitempty"`
+
+	// 企业项目id
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o CloudWafHostItem) String() string {

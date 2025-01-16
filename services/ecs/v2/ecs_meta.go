@@ -732,6 +732,17 @@ func GenReqDefForListResizeFlavors() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListServerAzInfo() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/availability-zones").
+		WithResponse(new(model.ListServerAzInfoResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListServerBlockDevices() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
