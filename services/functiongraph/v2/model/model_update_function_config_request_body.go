@@ -49,6 +49,9 @@ type UpdateFunctionConfigRequestBody struct {
 
 	FuncVpc *FuncVpc `json:"func_vpc,omitempty"`
 
+	// VPC对等连接网段。您可以声明代码中使用到的VPC网段，用以检测是否与服务使用VPC网段冲突。网段间使用分号分隔且不能超过5个。
+	PeeringCidr *string `json:"peering_cidr,omitempty"`
+
 	MountConfig *MountConfig `json:"mount_config,omitempty"`
 
 	StrategyConfig *StrategyConfig `json:"strategy_config,omitempty"`
@@ -103,6 +106,9 @@ type UpdateFunctionConfigRequestBody struct {
 
 	// 类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
 	EnableClassIsolation *bool `json:"enable_class_isolation,omitempty"`
+
+	// 自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+	LtsCustomTag map[string]string `json:"lts_custom_tag,omitempty"`
 }
 
 func (o UpdateFunctionConfigRequestBody) String() string {

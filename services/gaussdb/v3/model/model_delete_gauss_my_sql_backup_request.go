@@ -12,7 +12,7 @@ type DeleteGaussMySqlBackupRequest struct {
 	// 语言。
 	XLanguage *string `json:"X-Language,omitempty"`
 
-	// 备份文件ID。  获取方法参见[查询备份列表](https://support.huaweicloud.com/api-gaussdbformysql/ShowGaussMySqlBackupList.html)。
+	// 备份文件ID。  获取方法参见[查询备份列表](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlBackupList.html)。
 	BackupId string `json:"backup_id"`
 }
 

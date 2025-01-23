@@ -52,8 +52,11 @@ type CustomerOrderV2 struct {
 
 	AmountInfo *AmountInfomationV2 `json:"amount_info,omitempty"`
 
-	// |参数名称：客户订单企业项目信息。| |参数约束及描述： 客户订单企业项目信息。具体请参见表 EnterpriseProject。|
+	// 客户订单企业项目信息。具体请参见表 EnterpriseProject。
 	EnterpriseProjects *[]EnterpriseProject `json:"enterprise_projects,omitempty"`
+
+	// 客户订单下属的订单详情信息。具体请参见表 SubCustomerOrderV2 说明：当查询订单为组合交易订单时，订单信息会返回下属的订单信息，当查询为普通订单时，此字段返回为空
+	SubOrderInfos *[]SubCustomerOrderV2 `json:"sub_order_infos,omitempty"`
 }
 
 func (o CustomerOrderV2) String() string {

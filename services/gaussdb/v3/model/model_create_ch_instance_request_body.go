@@ -30,7 +30,7 @@ type CreateChInstanceRequestBody struct {
 	// 可用区码。  当ha中mode为Ha时，需要填写多个可用区，用\",\" 分隔。例如：cn-southwest-244b,cn-southwest-244a
 	AzCode string `json:"az_code"`
 
-	// 时区。默认为所属GaussDB(for MySQL)实例时区。
+	// 时区。默认为所属TaurusDB实例时区。
 	TimeZone *string `json:"time_zone,omitempty"`
 
 	TagsInfo *CreateChInstanceRequestBodyTagsInfo `json:"tags_info"`

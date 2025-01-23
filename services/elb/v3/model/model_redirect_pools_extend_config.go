@@ -19,6 +19,8 @@ type RedirectPoolsExtendConfig struct {
 	RemoveHeadersConfig *RemoveHeadersConfig `json:"remove_headers_config,omitempty"`
 
 	TrafficLimitConfig *TrafficLimitConfig `json:"traffic_limit_config,omitempty"`
+
+	CorsConfig *CorsConfig `json:"cors_config,omitempty"`
 }
 
 func (o RedirectPoolsExtendConfig) String() string {

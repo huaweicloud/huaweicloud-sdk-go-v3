@@ -16,6 +16,8 @@ type ShootScriptShowItem struct {
 
 	SubtitleFileInfo *SubtitleFiles `json:"subtitle_file_info,omitempty"`
 
+	AudioConfig *AudioInfo `json:"audio_config,omitempty"`
+
 	PreviewInfo *PreviewInfo `json:"preview_info,omitempty"`
 }
 

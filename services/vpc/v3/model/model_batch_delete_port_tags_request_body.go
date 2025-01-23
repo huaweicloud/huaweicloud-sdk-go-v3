@@ -10,7 +10,7 @@ import (
 type BatchDeletePortTagsRequestBody struct {
 
 	// 标签列表
-	Tags *[]DeleteResourceTagRequestBody `json:"tags,omitempty"`
+	Tags []DeleteResourceTagRequestBody `json:"tags"`
 }
 
 func (o BatchDeletePortTagsRequestBody) String() string {

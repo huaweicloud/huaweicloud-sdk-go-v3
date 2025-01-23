@@ -22,8 +22,8 @@ type DescribeTableResponse struct {
 
 	RunTimeInfo *RunTimeInfo `bson:"run_time_info,omitempty"`
 
-	TtlOptions     *TtlOptions `bson:"ttl_options,omitempty"`
-	HttpStatusCode int         `bson:"-"`
+	TtlSpecification *TtlSpecification `bson:"ttl_specification,omitempty"`
+	HttpStatusCode   int               `bson:"-"`
 }
 
 func (o DescribeTableResponse) String() string {

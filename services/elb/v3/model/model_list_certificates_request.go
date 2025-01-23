@@ -36,6 +36,9 @@ type ListCertificatesRequest struct {
 	// 证书的类型。分为服务器证书(server)和CA证书(client)。  支持多值查询，查询条件格式：type=xxx&type=xxx。
 	Type *[]string `json:"type,omitempty"`
 
+	// SCM证书ID。  支持多值查询，查询条件格式：scm_certificate_id=xxx&scm_certificate_id=xxx。
+	ScmCertificateId *[]string `json:"scm_certificate_id,omitempty"`
+
 	// 证书的主域名。  支持多值查询，查询条件格式：common_name=xxx&common_name=xxx。
 	CommonName *[]string `json:"common_name,omitempty"`
 

@@ -40,7 +40,7 @@ type UpdatePoolOption struct {
 	// 修改保护状态, 取值： - nonProtection: 不保护 - consoleProtection: 控制台修改保护
 	ProtectionStatus *UpdatePoolOptionProtectionStatus `json:"protection_status,omitempty"`
 
-	// 设置保护的原因 >仅当protection_status为consoleProtection时有效。
+	// 参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
 	ProtectionReason *string `json:"protection_reason,omitempty"`
 
 	// 后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
@@ -49,6 +49,8 @@ type UpdatePoolOption struct {
 	ConnectionDrain *ConnectionDrain `json:"connection_drain,omitempty"`
 
 	PoolHealth *PoolHealth `json:"pool_health,omitempty"`
+
+	QuicCidHashStrategy *QuicCidHashStrategy `json:"quic_cid_hash_strategy,omitempty"`
 }
 
 func (o UpdatePoolOption) String() string {

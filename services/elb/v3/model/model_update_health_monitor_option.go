@@ -33,7 +33,7 @@ type UpdateHealthMonitorOption struct {
 	// 健康检查连续失败多少次后，将后端服务器的健康检查状态由ONLINE判定为OFFLINE。取值范围：1-10。
 	MaxRetriesDown *int32 `json:"max_retries_down,omitempty"`
 
-	// 健康检查端口号。取值：1-65535，不可传入空，但可传入null，表示使用后端服务器端口号。[当pool协议为IP时，monitor_port必须指定为非0值。](tag:hws_eu)
+	// 参数解释：健康检查端口号。 [约束限制：当pool协议为IP时，monitor_port必须指定为非0值。](tag:hws_eu) 取值范围：1-65535和null，传null表示使用后端服务器端口号。
 	MonitorPort *int32 `json:"monitor_port,omitempty"`
 
 	// 健康检查名称。

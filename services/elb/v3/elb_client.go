@@ -40,6 +40,40 @@ func (c *ElbClient) BatchAddAvailableZonesInvoker(request *model.BatchAddAvailab
 	return &BatchAddAvailableZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreateLoadBalancers 批量创建负载均衡器
+//
+// [批量创建独享型或者共享型负载均衡器，包括按需及包周期计费负载均衡器。](tag:hws)
+// [批量创建独享型或者共享型负载均衡器。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,dt,ctc,cmcc,sbc,hk_sbc)
+// [批量创建负载均衡器。](tag:hcso,hk_vdf,srg,fcs,tm,hk_tm,ct)
+// - 若要创建内网IPv4负载均衡器，则需要传入vip_subnet_cidr_id。
+// - 若要创建公网IPv4负载均衡器，则需要传入publicip，以及传入vpc_id和vip_subnet_cidr_id这两个参数中的一个。
+// - 若要绑定有已有公网IPv4地址，则需要传入publicip_ids，以及传入vpc_id和vip_subnet_cidr_id这两个参数中的一个。
+// - 若要创建内网双栈负载均衡器，则需要传入ipv6_vip_virsubnet_id。
+// - 若要创建公网双栈负载均衡器，则需要传入ipv6_vip_virsubnet_id和ipv6_bandwidth。
+// - 若要创建网络型负载均衡器，则需要传入l4_flavor_id（网络型规格ID）；若要创建应用型负载均衡器，则需要传入l7_flavor_id（应用型规格ID）；若要创建网络型+应用型负载均衡器，则需要传入l4_flavor_id和l7_flavor_id。
+// - 如果批量创建的负载均衡器数量大于1，则不支持绑定已有的公网IP，且不支持指定ipv4和ipv6地址。即number大于1时，不支持传入publicip_ids，vip_address和ipv6_vip_address字段。
+// [- 若要创建包周期负载均衡器，则需要传入prepaid_options，否则创建按需计费负载均衡器。](tag:hws)
+// - 按需计费分为固定规格计费和弹性规格计费，根据创建时所选规格的类型决定计费方式。具体规格说明见创建LB请求参数l4_flavor_id和l7_flavor_id。
+// - 异步接口，返回体中包含需要批量创建的负载均衡的ID列表和批量创建负载均衡器的job ID，可以通过job ID查询当前批量创建负载均衡器的进度。
+// - 批量创建独享型和共享型实例时，请求体传参规则有所不同，具体见请求体说明中各个参数的解释。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) BatchCreateLoadBalancers(request *model.BatchCreateLoadBalancersRequest) (*model.BatchCreateLoadBalancersResponse, error) {
+	requestDef := GenReqDefForBatchCreateLoadBalancers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateLoadBalancersResponse), nil
+	}
+}
+
+// BatchCreateLoadBalancersInvoker 批量创建负载均衡器
+func (c *ElbClient) BatchCreateLoadBalancersInvoker(request *model.BatchCreateLoadBalancersRequest) *BatchCreateLoadBalancersInvoker {
+	requestDef := GenReqDefForBatchCreateLoadBalancers()
+	return &BatchCreateLoadBalancersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchCreateMembers 批量创建后端服务器
 //
 // 在指定pool下批量创建后端服务器。一次最多创建200个。
@@ -170,6 +204,27 @@ func (c *ElbClient) ChangeLoadbalancerChargeModeInvoker(request *model.ChangeLoa
 	return &ChangeLoadbalancerChargeModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CloneLoadbalancer 复制已有负载均衡器
+//
+// 复制已有的负载均衡器实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) CloneLoadbalancer(request *model.CloneLoadbalancerRequest) (*model.CloneLoadbalancerResponse, error) {
+	requestDef := GenReqDefForCloneLoadbalancer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CloneLoadbalancerResponse), nil
+	}
+}
+
+// CloneLoadbalancerInvoker 复制已有负载均衡器
+func (c *ElbClient) CloneLoadbalancerInvoker(request *model.CloneLoadbalancerRequest) *CloneLoadbalancerInvoker {
+	requestDef := GenReqDefForCloneLoadbalancer()
+	return &CloneLoadbalancerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCertificate 创建证书
 //
 // 创建证书。用于HTTPS协议监听器。
@@ -298,16 +353,19 @@ func (c *ElbClient) CreateListenerInvoker(request *model.CreateListenerRequest) 
 
 // CreateLoadBalancer 创建负载均衡器
 //
-// 创建独享型负载均衡器，包括按需及包周期计费负载均衡器。
-// 1. 若要创建内网IPv4负载均衡器，则需要传入vip_subnet_cidr_id。
-// 2. 若要创建公网IPv4负载均衡器，则需要传入publicip，以及传入vpc_id和vip_subnet_cidr_id这两个参数中的一个。
-// 3. 若要绑定有已有公网IPv4地址，则需要传入publicip_ids，以及传入vpc_id和vip_subnet_cidr_id这两个参数中的一个。
-// 4. 若要创建内网双栈负载均衡器，则需要传入ipv6_vip_virsubnet_id。
-// 5. 若要创建公网双栈负载均衡器，则需要传入ipv6_vip_virsubnet_id和ipv6_bandwidth。
-// 6. 若要创建网络型负载均衡器，则需要传入l4_flavor_id（网络型规格ID）；若要创建应用型负载均衡器，则需要传入l7_flavor_id（应用型规格ID）；若要创建网络型+应用型负载均衡器，则需要传入l4_flavor_id和l7_flavor_id。
-// 7. 若要创建包周期负载均衡器，则需要传入prepaid_options，否则创建按需计费负载均衡器。
-// 8. 按需计费分为固定规格计费和弹性规格计费，根据创建时所选规格的类型决定计费方式。具体规格说明见创建LB请求参数l4_flavor_id和l7_flavor_id。
-// [9.若要创建gateway类型的负载均衡器，则需要：
+// [创建独享型负载均衡器，包括按需及包周期计费负载均衡器。](tag:hws)
+// [创建独享型负载均衡器。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,dt,ctc,cmcc,sbc,hk_sbc)
+// [创建负载均衡器。](tag:hcso,hk_vdf,srg,fcs,tm,hk_tm,ct)
+//
+// - 若要创建内网IPv4负载均衡器，则需要传入vip_subnet_cidr_id。
+// - 若要创建公网IPv4负载均衡器，则需要传入publicip，以及传入vpc_id和vip_subnet_cidr_id这两个参数中的一个。
+// - 若要绑定有已有公网IPv4地址，则需要传入publicip_ids，以及传入vpc_id和vip_subnet_cidr_id这两个参数中的一个。
+// - 若要创建内网双栈负载均衡器，则需要传入ipv6_vip_virsubnet_id。
+// - 若要创建公网双栈负载均衡器，则需要传入ipv6_vip_virsubnet_id和ipv6_bandwidth。
+// - 若要创建网络型负载均衡器，则需要传入l4_flavor_id（网络型规格ID）；若要创建应用型负载均衡器，则需要传入l7_flavor_id（应用型规格ID）；若要创建网络型+应用型负载均衡器，则需要传入l4_flavor_id和l7_flavor_id。
+// [- 若要创建包周期负载均衡器，则需要传入prepaid_options，否则创建按需计费负载均衡器。](tag:hws)
+// - 按需计费分为固定规格计费和弹性规格计费，根据创建时所选规格的类型决定计费方式。具体规格说明见创建LB请求参数l4_flavor_id和l7_flavor_id。
+// [- 若要创建gateway类型的负载均衡器，则需要：
 //   - 指定loadbalancer_type&#x3D;\&quot;gateway\&quot;，且不支持指定vip_address，ipv6_vip_address。
 //   - vip_subnet_cidr_id和ipv6_subnet_cidr_id两者不能都为空，如果两者都传入，则必须属于同一子网。
 //   - 不支持创建公网gateway类型LB。
@@ -584,9 +642,33 @@ func (c *ElbClient) DeleteLoadBalancerInvoker(request *model.DeleteLoadBalancerR
 	return &DeleteLoadBalancerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteLoadBalancerCascade 级联删除负载均衡器及关联EIP
+//
+// 删除负载均衡器且级联删除其下子资源（删除负载均衡器及其绑定的监听器、后端服务器等一系列资源）。以及根据需要删除或解绑后端服务器组和LB关联的EIP。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) DeleteLoadBalancerCascade(request *model.DeleteLoadBalancerCascadeRequest) (*model.DeleteLoadBalancerCascadeResponse, error) {
+	requestDef := GenReqDefForDeleteLoadBalancerCascade()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteLoadBalancerCascadeResponse), nil
+	}
+}
+
+// DeleteLoadBalancerCascadeInvoker 级联删除负载均衡器及关联EIP
+func (c *ElbClient) DeleteLoadBalancerCascadeInvoker(request *model.DeleteLoadBalancerCascadeRequest) *DeleteLoadBalancerCascadeInvoker {
+	requestDef := GenReqDefForDeleteLoadBalancerCascade()
+	return &DeleteLoadBalancerCascadeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteLoadBalancerForce 级联删除负载均衡器
 //
-// 删除负载均衡器且级联删除其下子资源（删除负载均衡器及其绑定的监听器、后端服务器组、后端服务器等一系列资源）
+// 删除负载均衡器且级联删除其下子资源（删除负载均衡器及其绑定的监听器、后端服务器组、后端服务器等一系列资源）。
+// - 若LB关联了EIP，则只解绑EIP，不会删除EIP。
+// [- 若已开启多挂特性，且关联了多个LB，则只做解绑；否则删除。
+// - 若是共享型LB下的后端服务器组，无论是否多挂都只删除，不解绑。](tag:hc,hk)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) DeleteLoadBalancerForce(request *model.DeleteLoadBalancerForceRequest) (*model.DeleteLoadBalancerForceResponse, error) {
@@ -689,6 +771,27 @@ func (c *ElbClient) DeletePoolInvoker(request *model.DeletePoolRequest) *DeleteP
 	return &DeletePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeletePoolCascade 级联删除后端服务器组
+//
+// 级联删除后端服务器组，包含在此后端服务器组下的所有后端服务器和健康检查也将被删除。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) DeletePoolCascade(request *model.DeletePoolCascadeRequest) (*model.DeletePoolCascadeResponse, error) {
+	requestDef := GenReqDefForDeletePoolCascade()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePoolCascadeResponse), nil
+	}
+}
+
+// DeletePoolCascadeInvoker 级联删除后端服务器组
+func (c *ElbClient) DeletePoolCascadeInvoker(request *model.DeletePoolCascadeRequest) *DeletePoolCascadeInvoker {
+	requestDef := GenReqDefForDeletePoolCascade()
+	return &DeletePoolCascadeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteSecurityPolicy 删除自定义安全策略
 //
 // 删除自定义安全策略。[荷兰region不支持自定义安全策略功能，请勿使用。](tag:dt,dt_test)
@@ -738,6 +841,8 @@ func (c *ElbClient) ListAllMembersInvoker(request *model.ListAllMembersRequest) 
 // - 默认情况下，会返回一个可用区集合。
 // 在（如创建LB）设置可用区时，填写的可用区必须包含在可用区集合中、为这个可用区集合的子集。
 //
+// - 如果传入了loadbalancer_id，则返回该负载均衡器所在集群的可用区集合
+//
 // - 特殊场景下，部分客户要求负载均衡只能创建在指定可用区集合中，此时会返回客户定制的可用区集合。
 // 返回可用区集合可能为一个也可能为多个，比如列表有两个可用区集合\\[az1,az2\\],\\[az2,az3\\]。
 // 在创建负载均衡器时，可以选择创建在多个可用区，但所选的多个可用区必须同属于其中一个可用区集合，
@@ -781,6 +886,27 @@ func (c *ElbClient) ListCertificatesInvoker(request *model.ListCertificatesReque
 	return &ListCertificatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListFeatureConfigs 查询当前租户ELB服务的特性配置
+//
+// 查询当前租户ELB服务的特性配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) ListFeatureConfigs(request *model.ListFeatureConfigsRequest) (*model.ListFeatureConfigsResponse, error) {
+	requestDef := GenReqDefForListFeatureConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFeatureConfigsResponse), nil
+	}
+}
+
+// ListFeatureConfigsInvoker 查询当前租户ELB服务的特性配置
+func (c *ElbClient) ListFeatureConfigsInvoker(request *model.ListFeatureConfigsRequest) *ListFeatureConfigsInvoker {
+	requestDef := GenReqDefForListFeatureConfigs()
+	return &ListFeatureConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListFlavors 查询规格列表
 //
 // 查询当前region下可用的负载均衡规格列表。
@@ -821,6 +947,27 @@ func (c *ElbClient) ListHealthMonitors(request *model.ListHealthMonitorsRequest)
 func (c *ElbClient) ListHealthMonitorsInvoker(request *model.ListHealthMonitorsRequest) *ListHealthMonitorsInvoker {
 	requestDef := GenReqDefForListHealthMonitors()
 	return &ListHealthMonitorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListJobs 查询异步任务的job列表
+//
+// 用于查询实例导出、实例复制、实例升级等异步接口任务的状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) ListJobs(request *model.ListJobsRequest) (*model.ListJobsResponse, error) {
+	requestDef := GenReqDefForListJobs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListJobsResponse), nil
+	}
+}
+
+// ListJobsInvoker 查询异步任务的job列表
+func (c *ElbClient) ListJobsInvoker(request *model.ListJobsRequest) *ListJobsInvoker {
+	requestDef := GenReqDefForListJobs()
+	return &ListJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListL7Policies 查询转发策略列表
@@ -905,6 +1052,27 @@ func (c *ElbClient) ListLoadBalancers(request *model.ListLoadBalancersRequest) (
 func (c *ElbClient) ListLoadBalancersInvoker(request *model.ListLoadBalancersRequest) *ListLoadBalancersInvoker {
 	requestDef := GenReqDefForListLoadBalancers()
 	return &ListLoadBalancersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLoadbalancerFeature 查询指定ELB实例的特性配置
+//
+// 查询指定ELB实例的特性配置情况。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) ListLoadbalancerFeature(request *model.ListLoadbalancerFeatureRequest) (*model.ListLoadbalancerFeatureResponse, error) {
+	requestDef := GenReqDefForListLoadbalancerFeature()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLoadbalancerFeatureResponse), nil
+	}
+}
+
+// ListLoadbalancerFeatureInvoker 查询指定ELB实例的特性配置
+func (c *ElbClient) ListLoadbalancerFeatureInvoker(request *model.ListLoadbalancerFeatureRequest) *ListLoadbalancerFeatureInvoker {
+	requestDef := GenReqDefForListLoadbalancerFeature()
+	return &ListLoadbalancerFeatureInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListLogtanks 查询云日志列表
@@ -1138,6 +1306,27 @@ func (c *ElbClient) ShowHealthMonitor(request *model.ShowHealthMonitorRequest) (
 func (c *ElbClient) ShowHealthMonitorInvoker(request *model.ShowHealthMonitorRequest) *ShowHealthMonitorInvoker {
 	requestDef := GenReqDefForShowHealthMonitor()
 	return &ShowHealthMonitorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJob 查询异步任务的job状态
+//
+// 用于查询模板导入、实例复制、实例升级等异步接口任务的状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobResponse, error) {
+	requestDef := GenReqDefForShowJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowJobResponse), nil
+	}
+}
+
+// ShowJobInvoker 查询异步任务的job状态
+func (c *ElbClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoker {
+	requestDef := GenReqDefForShowJob()
+	return &ShowJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowL7Policy 查询转发策略详情
@@ -1584,6 +1773,27 @@ func (c *ElbClient) UpdateSecurityPolicyInvoker(request *model.UpdateSecurityPol
 	return &UpdateSecurityPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpgradeLoadbalancer 升级负载均衡器类型
+//
+// 升级负载均衡器类型。支持将共享型ELB升级为独享型ELB，但不支持独享型降级为共享型。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) UpgradeLoadbalancer(request *model.UpgradeLoadbalancerRequest) (*model.UpgradeLoadbalancerResponse, error) {
+	requestDef := GenReqDefForUpgradeLoadbalancer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeLoadbalancerResponse), nil
+	}
+}
+
+// UpgradeLoadbalancerInvoker 升级负载均衡器类型
+func (c *ElbClient) UpgradeLoadbalancerInvoker(request *model.UpgradeLoadbalancerRequest) *UpgradeLoadbalancerInvoker {
+	requestDef := GenReqDefForUpgradeLoadbalancer()
+	return &UpgradeLoadbalancerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListApiVersions 查询API版本列表信息
 //
 // 返回ELB当前所有可用的API版本。
@@ -1630,20 +1840,26 @@ func (c *ElbClient) BatchDeleteIpListInvoker(request *model.BatchDeleteIpListReq
 //
 // 计算以下几种场景的预占用IP数量：
 //
-// - 计算创建LB的第一个七层监听器后总占用IP数量：
-// 传入loadbalancer_id、l7_flavor_id为空、ip_target_enable不传或为false。
+// - 计算创建LB所需IP数量：
+// 传入字段availability_zone_id，及可选字段l7_flavor_id、ip_target_enable、ip_version，不能传loadbalancer_id。
 //
-// - 计算LB规格变更或开启跨VPC后总占用IP数量：
-// 传入参数loadbalancer_id，及l7_flavor_id不为空或ip_target_enable为true。
+// - 计算创建LB的第一个七层监听器后新增占用IP数量：
+// 传入loadbalancer_id，其他字段不传。
 //
-// - 计算创建LB所需IP数量：传入参数availability_zone_id，
-// 及可选参数l7_flavor_id、ip_target_enable、ip_version，不能传loadbalancer_id。
+// - 计算LB变更（规格变更或特性开启）新增占用IP数量：
+// 传入字段loadbalancer_id，及l7_flavor_id不为空或ip_target_enable为true。可以同时传入多个字段，表示同时进行多种变更所需要新增的占用IP数量。
+//
+// - 计算共享型ELB升级为独享型ELB所需占用IP数量：
+// 传入sence、loadbalancer_id，其他字段不传。
+//
+// - 计算ELB实例开启NAT64特性所需占用IP数量：
+// 传入nat64_enable、loadbalancer_id，其他字段不传。
 //
 // 说明：
 // - 计算出来的预占IP数大于等于最终实际占用的IP数。
-// - 总占用IP数量，即整个LB所占用的IP数量。
+// - 新增占用IP数量，不包含已占用的IP数。
 //
-// [不支持传入l7_flavor_id](tag:hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+// [不支持传入l7_flavor_id。](tag:hcso,hk_vdf,srg,fcs)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) CountPreoccupyIpNum(request *model.CountPreoccupyIpNumRequest) (*model.CountPreoccupyIpNumResponse, error) {
@@ -1664,7 +1880,7 @@ func (c *ElbClient) CountPreoccupyIpNumInvoker(request *model.CountPreoccupyIpNu
 
 // CreateIpGroup 创建IP地址组
 //
-// 创建IP地址组。输入的ip可为ip地址或者CIDR子网，支持IPV4和IPV6。
+// 创建IP地址组。输入的ip可为ip地址、CIDR子网或者ip地址段，格式为ip-ip，例如10.12.3.1-10.12.3.10，支持IPV4和IPV6。
 //
 // 需要注意0.0.0.0与0.0.0.0/32视为重复，0:0:0:0:0:0:0:1与::1与::1/128视为重复，只会保存其中一个。
 //
@@ -1750,10 +1966,31 @@ func (c *ElbClient) ShowIpGroupInvoker(request *model.ShowIpGroupRequest) *ShowI
 	return &ShowIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowIpGroupRelatedListeners 查询IP地址组关联的监听器列表
+//
+// 查询IP地址组关联的监听器列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) ShowIpGroupRelatedListeners(request *model.ShowIpGroupRelatedListenersRequest) (*model.ShowIpGroupRelatedListenersResponse, error) {
+	requestDef := GenReqDefForShowIpGroupRelatedListeners()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIpGroupRelatedListenersResponse), nil
+	}
+}
+
+// ShowIpGroupRelatedListenersInvoker 查询IP地址组关联的监听器列表
+func (c *ElbClient) ShowIpGroupRelatedListenersInvoker(request *model.ShowIpGroupRelatedListenersRequest) *ShowIpGroupRelatedListenersInvoker {
+	requestDef := GenReqDefForShowIpGroupRelatedListeners()
+	return &ShowIpGroupRelatedListenersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateIpGroup 更新IP地址组
 //
 // 更新IP地址组，只支持全量更新IP。即IP地址组中的ip_list将被全量覆盖，不在请求参数中的IP地址将被移除。
-// 输入的ip可为ip地址或者CIDR子网，支持IPV4和IPV6。
+// 输入的ip可为ip地址、CIDR子网或者ip地址段，格式为ip-ip，例如10.12.3.1-10.12.3.10，支持IPV4和IPV6。
 //
 // 需要注意0.0.0.0与0.0.0.0/32视为重复，0:0:0:0:0:0:0:1与::1与::1/128视为重复，只会保存其中一个。
 //

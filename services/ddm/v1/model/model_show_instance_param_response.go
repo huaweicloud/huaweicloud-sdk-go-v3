@@ -9,6 +9,15 @@ import (
 // ShowInstanceParamResponse Response Object
 type ShowInstanceParamResponse struct {
 
+	// 参数组id。
+	Id *string `json:"id,omitempty"`
+
+	// 参数组名称。
+	Name *string `json:"name,omitempty"`
+
+	// 参数组描述。
+	Description *string `json:"description,omitempty"`
+
 	// DDM参数最后更新时间。
 	Updated *string `json:"updated,omitempty"`
 

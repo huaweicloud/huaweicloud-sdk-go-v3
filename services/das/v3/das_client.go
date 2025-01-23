@@ -583,6 +583,90 @@ func (c *DasClient) ListInnodbLocksInvoker(request *model.ListInnodbLocksRequest
 	return &ListInnodbLocksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInstanceDistribution 查询实例分布情况
+//
+// 查询实例分布情况
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListInstanceDistribution(request *model.ListInstanceDistributionRequest) (*model.ListInstanceDistributionResponse, error) {
+	requestDef := GenReqDefForListInstanceDistribution()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceDistributionResponse), nil
+	}
+}
+
+// ListInstanceDistributionInvoker 查询实例分布情况
+func (c *DasClient) ListInstanceDistributionInvoker(request *model.ListInstanceDistributionRequest) *ListInstanceDistributionInvoker {
+	requestDef := GenReqDefForListInstanceDistribution()
+	return &ListInstanceDistributionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstanceMultiNodesSingleMetric 获取多节点单指标数据
+//
+// 获取多节点单指标数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListInstanceMultiNodesSingleMetric(request *model.ListInstanceMultiNodesSingleMetricRequest) (*model.ListInstanceMultiNodesSingleMetricResponse, error) {
+	requestDef := GenReqDefForListInstanceMultiNodesSingleMetric()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceMultiNodesSingleMetricResponse), nil
+	}
+}
+
+// ListInstanceMultiNodesSingleMetricInvoker 获取多节点单指标数据
+func (c *DasClient) ListInstanceMultiNodesSingleMetricInvoker(request *model.ListInstanceMultiNodesSingleMetricRequest) *ListInstanceMultiNodesSingleMetricInvoker {
+	requestDef := GenReqDefForListInstanceMultiNodesSingleMetric()
+	return &ListInstanceMultiNodesSingleMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstanceNodesInfo 获取单个实例节点信息
+//
+// 获取单个实例节点信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListInstanceNodesInfo(request *model.ListInstanceNodesInfoRequest) (*model.ListInstanceNodesInfoResponse, error) {
+	requestDef := GenReqDefForListInstanceNodesInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceNodesInfoResponse), nil
+	}
+}
+
+// ListInstanceNodesInfoInvoker 获取单个实例节点信息
+func (c *DasClient) ListInstanceNodesInfoInvoker(request *model.ListInstanceNodesInfoRequest) *ListInstanceNodesInfoInvoker {
+	requestDef := GenReqDefForListInstanceNodesInfo()
+	return &ListInstanceNodesInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstanceTopSlowLog 查询实例的TOP慢SQL列表
+//
+// 查询实例的TOP慢SQL列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListInstanceTopSlowLog(request *model.ListInstanceTopSlowLogRequest) (*model.ListInstanceTopSlowLogResponse, error) {
+	requestDef := GenReqDefForListInstanceTopSlowLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceTopSlowLogResponse), nil
+	}
+}
+
+// ListInstanceTopSlowLogInvoker 查询实例的TOP慢SQL列表
+func (c *DasClient) ListInstanceTopSlowLogInvoker(request *model.ListInstanceTopSlowLogRequest) *ListInstanceTopSlowLogInvoker {
+	requestDef := GenReqDefForListInstanceTopSlowLog()
+	return &ListInstanceTopSlowLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListMetadataLocks 查询元数据锁列表
 //
 // 查询元数据锁列表。
@@ -627,6 +711,48 @@ func (c *DasClient) ListProcessesInvoker(request *model.ListProcessesRequest) *L
 	return &ListProcessesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListRiskItems 查询资源风险实例风险项
+//
+// 查询资源风险实例风险项
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListRiskItems(request *model.ListRiskItemsRequest) (*model.ListRiskItemsResponse, error) {
+	requestDef := GenReqDefForListRiskItems()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRiskItemsResponse), nil
+	}
+}
+
+// ListRiskItemsInvoker 查询资源风险实例风险项
+func (c *DasClient) ListRiskItemsInvoker(request *model.ListRiskItemsRequest) *ListRiskItemsInvoker {
+	requestDef := GenReqDefForListRiskItems()
+	return &ListRiskItemsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRiskTrend 查询资源风险实例风险趋势
+//
+// 查询资源风险实例风险趋势
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListRiskTrend(request *model.ListRiskTrendRequest) (*model.ListRiskTrendResponse, error) {
+	requestDef := GenReqDefForListRiskTrend()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRiskTrendResponse), nil
+	}
+}
+
+// ListRiskTrendInvoker 查询资源风险实例风险趋势
+func (c *DasClient) ListRiskTrendInvoker(request *model.ListRiskTrendRequest) *ListRiskTrendInvoker {
+	requestDef := GenReqDefForListRiskTrend()
+	return &ListRiskTrendInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSpaceAnalysis 获取空间分析数据列表
 //
 // 获取空间分析数据列表。实例级别数据来源于文件系统，库级别和表级别数据来源于information_schema.tables表。空间&amp;元数据分析最多分析10000张表，若缺少库表空间数据，可能是因为数据库实例表个数过多或者账号未保存密码。如果为保存密码，请使用用户管理接口或页面录入数据库账号。 支持MySQL、GaussDB(for MySQL)和SQLServer引擎。
@@ -667,6 +793,27 @@ func (c *DasClient) ListSqlLimitRules(request *model.ListSqlLimitRulesRequest) (
 func (c *DasClient) ListSqlLimitRulesInvoker(request *model.ListSqlLimitRulesRequest) *ListSqlLimitRulesInvoker {
 	requestDef := GenReqDefForListSqlLimitRules()
 	return &ListSqlLimitRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTopSlowLog 查询TOP慢SQL列表
+//
+// 查询TOP慢SQL列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListTopSlowLog(request *model.ListTopSlowLogRequest) (*model.ListTopSlowLogResponse, error) {
+	requestDef := GenReqDefForListTopSlowLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTopSlowLogResponse), nil
+	}
+}
+
+// ListTopSlowLogInvoker 查询TOP慢SQL列表
+func (c *DasClient) ListTopSlowLogInvoker(request *model.ListTopSlowLogRequest) *ListTopSlowLogInvoker {
+	requestDef := GenReqDefForListTopSlowLog()
+	return &ListTopSlowLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListTransactions 查询历史事务列表
@@ -734,6 +881,27 @@ func (c *DasClient) RegisterDbUserInvoker(request *model.RegisterDbUserRequest) 
 	return &RegisterDbUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetThresholdForMetric 设置指标阈值
+//
+// 设置指标阈值
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) SetThresholdForMetric(request *model.SetThresholdForMetricRequest) (*model.SetThresholdForMetricResponse, error) {
+	requestDef := GenReqDefForSetThresholdForMetric()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetThresholdForMetricResponse), nil
+	}
+}
+
+// SetThresholdForMetricInvoker 设置指标阈值
+func (c *DasClient) SetThresholdForMetricInvoker(request *model.SetThresholdForMetricRequest) *SetThresholdForMetricInvoker {
+	requestDef := GenReqDefForSetThresholdForMetric()
+	return &SetThresholdForMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDbUser 查询数据库用户信息
 //
 // 查询注册在DAS里的数据库用户信息。此接口不能查询数据库实例上的数据库用户对象。
@@ -775,6 +943,27 @@ func (c *DasClient) ShowInstanceHealthReport(request *model.ShowInstanceHealthRe
 func (c *DasClient) ShowInstanceHealthReportInvoker(request *model.ShowInstanceHealthReportRequest) *ShowInstanceHealthReportInvoker {
 	requestDef := GenReqDefForShowInstanceHealthReport()
 	return &ShowInstanceHealthReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMetricNamesSupport 多节点单指标支持指标信息
+//
+// 多节点单指标支持指标信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowMetricNamesSupport(request *model.ShowMetricNamesSupportRequest) (*model.ShowMetricNamesSupportResponse, error) {
+	requestDef := GenReqDefForShowMetricNamesSupport()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMetricNamesSupportResponse), nil
+	}
+}
+
+// ShowMetricNamesSupportInvoker 多节点单指标支持指标信息
+func (c *DasClient) ShowMetricNamesSupportInvoker(request *model.ShowMetricNamesSupportRequest) *ShowMetricNamesSupportInvoker {
+	requestDef := GenReqDefForShowMetricNamesSupport()
+	return &ShowMetricNamesSupportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowQuotas 查询云DBA配额

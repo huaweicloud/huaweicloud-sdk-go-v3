@@ -56,6 +56,15 @@ type Quota struct {
 
 	// 单个LB实例下的监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
 	ListenersPerLoadbalancer int32 `json:"listeners_per_loadbalancer"`
+
+	// 单个监听器下的IP地址组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+	IpgroupsPerListener int32 `json:"ipgroups_per_listener"`
+
+	// 单个转发策略下的后端服务器组配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+	PoolsPerL7policy int32 `json:"pools_per_l7policy"`
+
+	// 单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+	L7policiesPerListener int32 `json:"l7policies_per_listener"`
 }
 
 func (o Quota) String() string {

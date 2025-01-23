@@ -47,7 +47,7 @@ type Pool struct {
 
 	SessionPersistence *SessionPersistence `json:"session_persistence"`
 
-	// 参数解释：后端服务器组支持的IP版本。  [取值范围： - 共享型：固定为v4； -  独享型：取值dualstack、v4。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs)  [取值范围：dualstack、v4。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
+	// 参数解释：后端服务器组支持的IP版本。  [取值范围： - 共享型：固定为v4； - 独享型：取值dualstack、v4。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs)  [取值范围：dualstack、v4。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
 	IpVersion string `json:"ip_version"`
 
 	SlowStart *SlowStart `json:"slow_start"`
@@ -55,10 +55,10 @@ type Pool struct {
 	// 参数解释：是否开启误删保护。  取值范围：false不开启，true开启。  > 退场时需要先关闭所有资源的删除保护开关。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test)
 	MemberDeletionProtectionEnable bool `json:"member_deletion_protection_enable"`
 
-	// 参数解释：创建时间。  取值范围：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+	// 参数解释：创建时间。  取值范围：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
 	CreatedAt *string `json:"created_at,omitempty"`
 
-	// 参数解释：更新时间。  取值范围：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+	// 参数解释：更新时间。  取值范围：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
 	UpdatedAt *string `json:"updated_at,omitempty"`
 
 	// 参数解释：后端服务器组关联的虚拟私有云的ID。
@@ -70,7 +70,7 @@ type Pool struct {
 	// 参数解释：修改保护状态,。  取值范围： - nonProtection: 不保护。 - consoleProtection: 控制台修改保护。  默认取值：nonProtection
 	ProtectionStatus *PoolProtectionStatus `json:"protection_status,omitempty"`
 
-	// 参数解释：设置保护的原因。  参数限制：仅当protection_status为consoleProtection时有效。
+	// 参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
 	ProtectionReason *string `json:"protection_reason,omitempty"`
 
 	// 参数解释：后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  约束限制： - 仅QUIC,TCP,UDP的pool支持。
@@ -83,8 +83,10 @@ type Pool struct {
 
 	PoolHealth *PoolHealth `json:"pool_health,omitempty"`
 
-	// 参数解释：可用区组，如：center
+	// 参数解释：网络公共边界组，如：center
 	PublicBorderGroup *string `json:"public_border_group,omitempty"`
+
+	QuicCidHashStrategy *QuicCidHashStrategy `json:"quic_cid_hash_strategy,omitempty"`
 }
 
 func (o Pool) String() string {

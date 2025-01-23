@@ -26,6 +26,9 @@ type ExportTopRiskInstancesRequest struct {
 
 	// 请求语言类型。
 	XLanguage *ExportTopRiskInstancesRequestXLanguage `json:"X-Language,omitempty"`
+
+	// 指标码
+	MetricCode *string `json:"metric_code,omitempty"`
 }
 
 func (o ExportTopRiskInstancesRequest) String() string {

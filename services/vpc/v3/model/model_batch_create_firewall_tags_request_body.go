@@ -10,7 +10,7 @@ import (
 type BatchCreateFirewallTagsRequestBody struct {
 
 	// 标签列表
-	Tags *[]ResourceTag `json:"tags,omitempty"`
+	Tags []ResourceTag `json:"tags"`
 }
 
 func (o BatchCreateFirewallTagsRequestBody) String() string {

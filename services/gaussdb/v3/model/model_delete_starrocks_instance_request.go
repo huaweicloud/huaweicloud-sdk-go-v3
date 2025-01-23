@@ -9,7 +9,7 @@ import (
 // DeleteStarrocksInstanceRequest Request Object
 type DeleteStarrocksInstanceRequest struct {
 
-	// GaussDBForMySQL实例ID，严格匹配UUID规则。
+	// TaurusDB实例ID，严格匹配UUID规则。
 	InstanceId string `json:"instance_id"`
 
 	// StarRocks实例ID，严格匹配UUID规则。

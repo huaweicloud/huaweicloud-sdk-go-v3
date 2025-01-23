@@ -9,10 +9,10 @@ import (
 // CheckDataBaseConfigResponse Response Object
 type CheckDataBaseConfigResponse struct {
 
-	// GaussDB(for MySQL)数据库名称。
+	// TaurusDB数据库名称。
 	SourceDatabaseName *string `json:"source_database_name,omitempty"`
 
-	// GaussDB(for MySQL)数据库配置检查结果。
+	// TaurusDB数据库配置检查结果。
 	SourceDbConfigCheckResults *[]DbConfigCheckResult `json:"source_db_config_check_results,omitempty"`
 
 	// 目标数据库名称。

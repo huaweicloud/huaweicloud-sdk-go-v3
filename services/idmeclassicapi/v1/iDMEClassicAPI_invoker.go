@@ -21,6 +21,22 @@ func (i *AddTagInvoker) Invoke() (*model.AddTagResponse, error) {
 	}
 }
 
+type AddToCategoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddToCategoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddToCategoryInvoker) Invoke() (*model.AddToCategoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddToCategoryResponse), nil
+	}
+}
+
 type BatchAddChildNodeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -117,6 +133,22 @@ func (i *BatchCheckoutUndoByAdminInvoker) Invoke() (*model.BatchCheckoutUndoByAd
 	}
 }
 
+type BatchCreateShareDocsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateShareDocsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateShareDocsInvoker) Invoke() (*model.BatchCreateShareDocsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateShareDocsResponse), nil
+	}
+}
+
 type BatchCreateUsingPostInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -165,6 +197,22 @@ func (i *BatchDeleteBranchInvoker) Invoke() (*model.BatchDeleteBranchResponse, e
 	}
 }
 
+type BatchDeleteLatestVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteLatestVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteLatestVersionInvoker) Invoke() (*model.BatchDeleteLatestVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteLatestVersionResponse), nil
+	}
+}
+
 type BatchDeleteLogicalBranchInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -181,6 +229,22 @@ func (i *BatchDeleteLogicalBranchInvoker) Invoke() (*model.BatchDeleteLogicalBra
 	}
 }
 
+type BatchDeleteLogicalLatestVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteLogicalLatestVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteLogicalLatestVersionInvoker) Invoke() (*model.BatchDeleteLogicalLatestVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteLogicalLatestVersionResponse), nil
+	}
+}
+
 type BatchDeleteLogicalUsingPostInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +258,38 @@ func (i *BatchDeleteLogicalUsingPostInvoker) Invoke() (*model.BatchDeleteLogical
 		return nil, err
 	} else {
 		return result.(*model.BatchDeleteLogicalUsingPostResponse), nil
+	}
+}
+
+type BatchDeleteShareDocsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteShareDocsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteShareDocsInvoker) Invoke() (*model.BatchDeleteShareDocsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteShareDocsResponse), nil
+	}
+}
+
+type BatchDeleteStructuredDocumentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteStructuredDocumentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteStructuredDocumentInvoker) Invoke() (*model.BatchDeleteStructuredDocumentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteStructuredDocumentResponse), nil
 	}
 }
 
@@ -306,6 +402,22 @@ func (i *BatchUpdateByAdminInvoker) Invoke() (*model.BatchUpdateByAdminResponse,
 		return nil, err
 	} else {
 		return result.(*model.BatchUpdateByAdminResponse), nil
+	}
+}
+
+type BatchUpdateDocumentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateDocumentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateDocumentInvoker) Invoke() (*model.BatchUpdateDocumentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateDocumentResponse), nil
 	}
 }
 
@@ -482,6 +594,22 @@ func (i *CountUsingPostInvoker) Invoke() (*model.CountUsingPostResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.CountUsingPostResponse), nil
+	}
+}
+
+type CreateDocumentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDocumentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDocumentInvoker) Invoke() (*model.CreateDocumentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDocumentResponse), nil
 	}
 }
 
@@ -821,6 +949,22 @@ func (i *ListHistoryDataInvoker) Invoke() (*model.ListHistoryDataResponse, error
 	}
 }
 
+type ListQueryDocumentsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListQueryDocumentsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListQueryDocumentsInvoker) Invoke() (*model.ListQueryDocumentsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListQueryDocumentsResponse), nil
+	}
+}
+
 type ListQueryRelatedObjectsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -850,6 +994,22 @@ func (i *ListQueryRelationshipInvoker) Invoke() (*model.ListQueryRelationshipRes
 		return nil, err
 	} else {
 		return result.(*model.ListQueryRelationshipResponse), nil
+	}
+}
+
+type ListQueryShareDocsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListQueryShareDocsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListQueryShareDocsInvoker) Invoke() (*model.ListQueryShareDocsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListQueryShareDocsResponse), nil
 	}
 }
 
@@ -930,6 +1090,22 @@ func (i *RefreshInvoker) Invoke() (*model.RefreshResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.RefreshResponse), nil
+	}
+}
+
+type RemoveFromCategoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RemoveFromCategoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RemoveFromCategoryInvoker) Invoke() (*model.RemoveFromCategoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RemoveFromCategoryResponse), nil
 	}
 }
 
@@ -1058,6 +1234,22 @@ func (i *ShowGetRootInvoker) Invoke() (*model.ShowGetRootResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowGetRootResponse), nil
+	}
+}
+
+type ShowGetTokensInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowGetTokensInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowGetTokensInvoker) Invoke() (*model.ShowGetTokensResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowGetTokensResponse), nil
 	}
 }
 
@@ -1234,6 +1426,22 @@ func (i *UpdateByConditionUsingPostInvoker) Invoke() (*model.UpdateByConditionUs
 		return nil, err
 	} else {
 		return result.(*model.UpdateByConditionUsingPostResponse), nil
+	}
+}
+
+type UpdateDocumentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDocumentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDocumentInvoker) Invoke() (*model.UpdateDocumentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDocumentResponse), nil
 	}
 }
 

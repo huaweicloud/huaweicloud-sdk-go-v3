@@ -98,6 +98,9 @@ type CreateFunctionRequestBody struct {
 
 	// 是否启动动态内存配置
 	EnableDynamicMemory *bool `json:"enable_dynamic_memory,omitempty"`
+
+	// 自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+	LtsCustomTag map[string]string `json:"lts_custom_tag,omitempty"`
 }
 
 func (o CreateFunctionRequestBody) String() string {

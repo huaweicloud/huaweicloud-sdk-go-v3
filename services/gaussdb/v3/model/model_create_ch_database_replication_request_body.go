@@ -12,7 +12,7 @@ type CreateChDatabaseReplicationRequestBody struct {
 	// 源实例ID。
 	SourceInstanceId string `json:"source_instance_id"`
 
-	// 源节点ID。GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID。
+	// 源节点ID。TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID。
 	SourceNodeId *string `json:"source_node_id,omitempty"`
 
 	// 源数据库。

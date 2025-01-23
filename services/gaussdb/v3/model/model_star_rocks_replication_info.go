@@ -12,7 +12,7 @@ import (
 // StarRocksReplicationInfo StarRocks同步任务信息。
 type StarRocksReplicationInfo struct {
 
-	// GaussDB(for MySQL)数据库。
+	// TaurusDB数据库。
 	SourceDatabase *string `json:"source_database,omitempty"`
 
 	// 目标数据库。

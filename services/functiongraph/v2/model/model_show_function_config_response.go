@@ -100,6 +100,9 @@ type ShowFunctionConfigResponse struct {
 
 	FuncVpc *FuncVpc `json:"func_vpc,omitempty"`
 
+	// VPC对等连接网段。您可以声明代码中使用到的VPC网段，用以检测是否与服务使用VPC网段冲突。网段间使用分号分隔且不能超过5个。
+	PeeringCidr *string `json:"peering_cidr,omitempty"`
+
 	MountConfig *MountConfig `json:"mount_config,omitempty"`
 
 	// 依赖id列表
@@ -176,7 +179,10 @@ type ShowFunctionConfigResponse struct {
 
 	// 是否返回流式数据（已废弃）
 	IsReturnStream *bool `json:"is_return_stream,omitempty"`
-	HttpStatusCode int   `json:"-"`
+
+	// 自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
+	LtsCustomTag   map[string]string `json:"lts_custom_tag,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o ShowFunctionConfigResponse) String() string {

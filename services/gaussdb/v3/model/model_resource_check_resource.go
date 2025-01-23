@@ -39,7 +39,7 @@ type ResourceCheckResource struct {
 	// 可用区码。选填，校验可用区码是否正确。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
-	// HTAP实例子网即GaussDBForMySQL实例子网。 获取方法请参见[获取子网ID](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
+	// HTAP实例子网即TaurusDB实例子网。 获取方法请参见[获取子网ID](https://support.huaweicloud.com/api-vpc/vpc_subnet01_0003.html)。
 	SubnetId string `json:"subnet_id"`
 }
 

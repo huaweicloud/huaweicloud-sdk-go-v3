@@ -32,6 +32,9 @@ type CreateTtsAuditionRequestBody struct {
 
 	// 风格情感
 	Style *string `json:"style,omitempty"`
+
+	// 声道。（单声道|双声道） 默认值1，最小值1，最大值2。
+	Channels *int32 `json:"channels,omitempty"`
 }
 
 func (o CreateTtsAuditionRequestBody) String() string {

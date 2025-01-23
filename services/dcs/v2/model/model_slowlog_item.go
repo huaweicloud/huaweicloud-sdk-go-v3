@@ -29,6 +29,12 @@ type SlowlogItem struct {
 
 	// 操作慢日志的账号名称，当前只对指定客户开放
 	Username *string `json:"username,omitempty"`
+
+	// **参数解释**： 节点类型。 **取值范围**： 不涉及。
+	NodeRole *string `json:"node_role,omitempty"`
+
+	// **参数解释**： 客户端IP地址。 **取值范围**： 不涉及。
+	ClientIp *string `json:"client_ip,omitempty"`
 }
 
 func (o SlowlogItem) String() string {

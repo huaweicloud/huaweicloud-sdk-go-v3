@@ -31,6 +31,30 @@ func GenReqDefForAddTag() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForAddToCategory() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/rdm_{identifier}_app/publicservices/api/{modelName}/addToCategory").
+		WithResponse(new(model.AddToCategoryResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Identifier").
+		WithJsonTag("identifier").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ModelName").
+		WithJsonTag("modelName").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchAddChildNode() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -175,6 +199,30 @@ func GenReqDefForBatchCheckoutUndoByAdmin() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchCreateShareDocs() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/rdm_{identifier}_app/publicservices/api/{modelName}/structured-doc/share-doc/batch").
+		WithResponse(new(model.BatchCreateShareDocsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ModelName").
+		WithJsonTag("modelName").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Identifier").
+		WithJsonTag("identifier").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchCreateUsingPost() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -247,6 +295,30 @@ func GenReqDefForBatchDeleteBranch() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchDeleteLatestVersion() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/rdm_{identifier}_app/publicservices/api/{modelName}/batch-delete-latest-version").
+		WithResponse(new(model.BatchDeleteLatestVersionResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ModelName").
+		WithJsonTag("modelName").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Identifier").
+		WithJsonTag("identifier").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchDeleteLogicalBranch() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -271,6 +343,30 @@ func GenReqDefForBatchDeleteLogicalBranch() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchDeleteLogicalLatestVersion() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/rdm_{identifier}_app/publicservices/api/{modelName}/batch-logical-delete-latest-version").
+		WithResponse(new(model.BatchDeleteLogicalLatestVersionResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ModelName").
+		WithJsonTag("modelName").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Identifier").
+		WithJsonTag("identifier").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchDeleteLogicalUsingPost() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -285,6 +381,54 @@ func GenReqDefForBatchDeleteLogicalUsingPost() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ModelName").
 		WithJsonTag("modelName").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBatchDeleteShareDocs() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/rdm_{identifier}_app/publicservices/api/{modelName}/structured-doc/share-doc/batch").
+		WithResponse(new(model.BatchDeleteShareDocsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ModelName").
+		WithJsonTag("modelName").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Identifier").
+		WithJsonTag("identifier").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBatchDeleteStructuredDocument() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/rdm_{identifier}_app/publicservices/api/{modelName}/structured-doc/documents/batch").
+		WithResponse(new(model.BatchDeleteStructuredDocumentResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ModelName").
+		WithJsonTag("modelName").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Identifier").
+		WithJsonTag("identifier").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -453,6 +597,30 @@ func GenReqDefForBatchUpdateByAdmin() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ModelName").
 		WithJsonTag("modelName").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBatchUpdateDocument() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/rdm_{identifier}_app/publicservices/api/{modelName}/structured-doc/documents/batch/update").
+		WithResponse(new(model.BatchUpdateDocumentResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ModelName").
+		WithJsonTag("modelName").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Identifier").
+		WithJsonTag("identifier").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -717,6 +885,30 @@ func GenReqDefForCountUsingPost() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ModelName").
 		WithJsonTag("modelName").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateDocument() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/rdm_{identifier}_app/publicservices/api/{modelName}/structured-doc/documents").
+		WithResponse(new(model.CreateDocumentResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ModelName").
+		WithJsonTag("modelName").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Identifier").
+		WithJsonTag("identifier").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1375,6 +1567,30 @@ func GenReqDefForListHistoryData() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListQueryDocuments() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/rdm_{identifier}_app/publicservices/api/{modelName}/structured-doc/documents/query").
+		WithResponse(new(model.ListQueryDocumentsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ModelName").
+		WithJsonTag("modelName").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Identifier").
+		WithJsonTag("identifier").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListQueryRelatedObjects() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -1488,6 +1704,30 @@ func GenReqDefForListQueryRelationship() *def.HttpRequestDef {
 		WithName("TotalRows").
 		WithJsonTag("totalRows").
 		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListQueryShareDocs() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/rdm_{identifier}_app/publicservices/api/{modelName}/structured-doc/share-doc").
+		WithResponse(new(model.ListQueryShareDocsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ModelName").
+		WithJsonTag("modelName").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Identifier").
+		WithJsonTag("identifier").
+		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -1765,6 +2005,30 @@ func GenReqDefForRefresh() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForRemoveFromCategory() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/rdm_{identifier}_app/publicservices/api/{modelName}/removeFromCategory").
+		WithResponse(new(model.RemoveFromCategoryResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ModelName").
+		WithJsonTag("modelName").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Identifier").
+		WithJsonTag("identifier").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForRemoveTag() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -1979,6 +2243,30 @@ func GenReqDefForShowGetRoot() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/rdm_{identifier}_app/publicservices/api/{modelName}/getRoot").
 		WithResponse(new(model.ShowGetRootResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Identifier").
+		WithJsonTag("identifier").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ModelName").
+		WithJsonTag("modelName").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowGetTokens() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/rdm_{identifier}_app/publicservices/api/{modelName}/structured-doc/tokens").
+		WithResponse(new(model.ShowGetTokensResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -2252,6 +2540,30 @@ func GenReqDefForUpdateByConditionUsingPost() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ModelName").
 		WithJsonTag("modelName").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateDocument() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/rdm_{identifier}_app/publicservices/api/{modelName}/structured-doc/documents").
+		WithResponse(new(model.UpdateDocumentResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ModelName").
+		WithJsonTag("modelName").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Identifier").
+		WithJsonTag("identifier").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

@@ -9,10 +9,10 @@ import (
 // CreateStarRocksDataReplication StarRocks创建数据同步请求。
 type CreateStarRocksDataReplication struct {
 
-	// GaussDB(for MySQL)实例ID。
+	// TaurusDB实例ID。
 	SourceInstanceId string `json:"source_instance_id"`
 
-	// GaussDB(for MySQL)只读节点ID。如为空，则取GaussDB(for MySQL)主节点ID
+	// TaurusDB只读节点ID。如为空，则取TaurusDB主节点ID
 	SourceNodeId *string `json:"source_node_id,omitempty"`
 
 	// 源数据库。

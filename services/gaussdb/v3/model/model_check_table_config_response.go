@@ -9,7 +9,7 @@ import (
 // CheckTableConfigResponse Response Object
 type CheckTableConfigResponse struct {
 
-	// GaussDB(for MySQL)数据库名。
+	// TaurusDB数据库名。
 	SourceDatabaseName *string `json:"source_database_name,omitempty"`
 
 	// 目标数据库名。

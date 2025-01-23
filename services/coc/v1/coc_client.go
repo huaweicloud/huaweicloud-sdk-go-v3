@@ -15,7 +15,7 @@ func NewCocClient(hcClient *httpclient.HcHttpClient) *CocClient {
 }
 
 func CocClientBuilder() *httpclient.HcHttpClientBuilder {
-	builder := httpclient.NewHcHttpClientBuilder()
+	builder := httpclient.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials,basic.Credentials")
 	return builder
 }
 
@@ -269,29 +269,6 @@ func (c *CocClient) ListAuthorizableTicketsExternal(request *model.ListAuthoriza
 func (c *CocClient) ListAuthorizableTicketsExternalInvoker(request *model.ListAuthorizableTicketsExternalRequest) *ListAuthorizableTicketsExternalInvoker {
 	requestDef := GenReqDefForListAuthorizableTicketsExternal()
 	return &ListAuthorizableTicketsExternalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListPrrTemplate 查询PRR模板列表
-//
-// 查询PRR模板列表
-//
-// limit最大为100
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CocClient) ListPrrTemplate(request *model.ListPrrTemplateRequest) (*model.ListPrrTemplateResponse, error) {
-	requestDef := GenReqDefForListPrrTemplate()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListPrrTemplateResponse), nil
-	}
-}
-
-// ListPrrTemplateInvoker 查询PRR模板列表
-func (c *CocClient) ListPrrTemplateInvoker(request *model.ListPrrTemplateRequest) *ListPrrTemplateInvoker {
-	requestDef := GenReqDefForListPrrTemplate()
-	return &ListPrrTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListResource 查询用户所有资源

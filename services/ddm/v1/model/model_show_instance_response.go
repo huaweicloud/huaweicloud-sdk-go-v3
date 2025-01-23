@@ -73,7 +73,13 @@ type ShowInstanceResponse struct {
 	Nodes *[]GetDetailfNodesInfo `json:"nodes,omitempty"`
 
 	// 管理员账号用户名。 - 长度为1-32个字符。 - 必须以字母开头。 - 可以包含字母，数字、下划线，不能包含其它特殊字符。
-	AdminUserName  *string `json:"admin_user_name,omitempty"`
+	AdminUserName *string `json:"admin_user_name,omitempty"`
+
+	// 是否开启SSL。
+	EnableSsl *bool `json:"enable_ssl,omitempty"`
+
+	// 规格码。
+	FlavorRef      *string `json:"flavor_ref,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

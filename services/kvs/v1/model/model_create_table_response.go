@@ -26,7 +26,9 @@ type CreateTableResponse struct {
 	GlobalSecondaryIndexSchema *[]GlobalSecondaryIndex `bson:"global_secondary_index_schema,omitempty"`
 
 	PreSplitKeyOptions *PreSplitKeyOptions `bson:"pre_split_key_options,omitempty"`
-	HttpStatusCode     int                 `bson:"-"`
+
+	TtlSpecification *TtlSpecification `bson:"ttl_specification,omitempty"`
+	HttpStatusCode   int               `bson:"-"`
 }
 
 func (o CreateTableResponse) String() string {

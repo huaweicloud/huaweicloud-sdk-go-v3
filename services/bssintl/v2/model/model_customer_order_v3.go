@@ -57,6 +57,9 @@ type CustomerOrderV3 struct {
 
 	// 订单待付款截止时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
 	PendingPaymentEndTime *string `json:"pending_payment_end_time,omitempty"`
+
+	// 客户订单下属的订单详情信息。具体请参见表 SubCustomerOrderV3 说明：当查询订单为组合交易订单时，订单信息会返回下属的订单信息，当查询为普通订单时，此字段返回为空
+	SubOrderInfos *[]SubCustomerOrderV3 `json:"sub_order_infos,omitempty"`
 }
 
 func (o CustomerOrderV3) String() string {

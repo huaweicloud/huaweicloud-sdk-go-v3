@@ -421,6 +421,70 @@ func (i *ListInnodbLocksInvoker) Invoke() (*model.ListInnodbLocksResponse, error
 	}
 }
 
+type ListInstanceDistributionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceDistributionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceDistributionInvoker) Invoke() (*model.ListInstanceDistributionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceDistributionResponse), nil
+	}
+}
+
+type ListInstanceMultiNodesSingleMetricInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceMultiNodesSingleMetricInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceMultiNodesSingleMetricInvoker) Invoke() (*model.ListInstanceMultiNodesSingleMetricResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceMultiNodesSingleMetricResponse), nil
+	}
+}
+
+type ListInstanceNodesInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceNodesInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceNodesInfoInvoker) Invoke() (*model.ListInstanceNodesInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceNodesInfoResponse), nil
+	}
+}
+
+type ListInstanceTopSlowLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceTopSlowLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceTopSlowLogInvoker) Invoke() (*model.ListInstanceTopSlowLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceTopSlowLogResponse), nil
+	}
+}
+
 type ListMetadataLocksInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -453,6 +517,38 @@ func (i *ListProcessesInvoker) Invoke() (*model.ListProcessesResponse, error) {
 	}
 }
 
+type ListRiskItemsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRiskItemsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRiskItemsInvoker) Invoke() (*model.ListRiskItemsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRiskItemsResponse), nil
+	}
+}
+
+type ListRiskTrendInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRiskTrendInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRiskTrendInvoker) Invoke() (*model.ListRiskTrendResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRiskTrendResponse), nil
+	}
+}
+
 type ListSpaceAnalysisInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -482,6 +578,22 @@ func (i *ListSqlLimitRulesInvoker) Invoke() (*model.ListSqlLimitRulesResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ListSqlLimitRulesResponse), nil
+	}
+}
+
+type ListTopSlowLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTopSlowLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTopSlowLogInvoker) Invoke() (*model.ListTopSlowLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTopSlowLogResponse), nil
 	}
 }
 
@@ -533,6 +645,22 @@ func (i *RegisterDbUserInvoker) Invoke() (*model.RegisterDbUserResponse, error) 
 	}
 }
 
+type SetThresholdForMetricInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetThresholdForMetricInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetThresholdForMetricInvoker) Invoke() (*model.SetThresholdForMetricResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetThresholdForMetricResponse), nil
+	}
+}
+
 type ShowDbUserInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -562,6 +690,22 @@ func (i *ShowInstanceHealthReportInvoker) Invoke() (*model.ShowInstanceHealthRep
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceHealthReportResponse), nil
+	}
+}
+
+type ShowMetricNamesSupportInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMetricNamesSupportInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowMetricNamesSupportInvoker) Invoke() (*model.ShowMetricNamesSupportResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMetricNamesSupportResponse), nil
 	}
 }
 

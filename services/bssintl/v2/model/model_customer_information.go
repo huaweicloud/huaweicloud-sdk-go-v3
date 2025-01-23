@@ -52,6 +52,9 @@ type CustomerInformation struct {
 
 	// 客户等级。 V0 V1 V2 V3 V4 V5
 	CustomerLevel *string `json:"customer_level,omitempty"`
+
+	// |参数名称：客户邮箱| |参数的约束及描述：该参数为字符串 范围限制:0-256。|
+	Email *string `json:"email,omitempty"`
 }
 
 func (o CustomerInformation) String() string {

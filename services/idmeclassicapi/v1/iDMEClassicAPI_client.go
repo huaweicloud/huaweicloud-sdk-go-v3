@@ -40,6 +40,27 @@ func (c *IDMEClassicAPIClient) AddTagInvoker(request *model.AddTagRequest) *AddT
 	return &AddTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddToCategory 添加数据分类
+//
+// 将数据分类对象数据实例添加至数据分类数据实例中。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) AddToCategory(request *model.AddToCategoryRequest) (*model.AddToCategoryResponse, error) {
+	requestDef := GenReqDefForAddToCategory()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddToCategoryResponse), nil
+	}
+}
+
+// AddToCategoryInvoker 添加数据分类
+func (c *IDMEClassicAPIClient) AddToCategoryInvoker(request *model.AddToCategoryRequest) *AddToCategoryInvoker {
+	requestDef := GenReqDefForAddToCategory()
+	return &AddToCategoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchAddChildNode 批量添加实例的子节点
 //
 // 调用该接口批量为指定数据实例添加子节点。在调用该接口前请确保数据模型具有“树形结构”功能。
@@ -166,6 +187,27 @@ func (c *IDMEClassicAPIClient) BatchCheckoutUndoByAdminInvoker(request *model.Ba
 	return &BatchCheckoutUndoByAdminInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreateShareDocs 批量创建分享结构化文档
+//
+// 批量创建分享结构化文档。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) BatchCreateShareDocs(request *model.BatchCreateShareDocsRequest) (*model.BatchCreateShareDocsResponse, error) {
+	requestDef := GenReqDefForBatchCreateShareDocs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateShareDocsResponse), nil
+	}
+}
+
+// BatchCreateShareDocsInvoker 批量创建分享结构化文档
+func (c *IDMEClassicAPIClient) BatchCreateShareDocsInvoker(request *model.BatchCreateShareDocsRequest) *BatchCreateShareDocsInvoker {
+	requestDef := GenReqDefForBatchCreateShareDocs()
+	return &BatchCreateShareDocsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchCreateUsingPost 批量创建实例
 //
 // 批量创建指定数据模型的数据实例。
@@ -229,6 +271,27 @@ func (c *IDMEClassicAPIClient) BatchDeleteBranchInvoker(request *model.BatchDele
 	return &BatchDeleteBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteLatestVersion 批量删除版本对象下最新分支的最新版本实例数据
+//
+// 根据主对象ID，批量删除版本对象下最新分支的最新版本实例数据。请您谨慎使用删除操作，删除后该数据将无法恢复。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) BatchDeleteLatestVersion(request *model.BatchDeleteLatestVersionRequest) (*model.BatchDeleteLatestVersionResponse, error) {
+	requestDef := GenReqDefForBatchDeleteLatestVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteLatestVersionResponse), nil
+	}
+}
+
+// BatchDeleteLatestVersionInvoker 批量删除版本对象下最新分支的最新版本实例数据
+func (c *IDMEClassicAPIClient) BatchDeleteLatestVersionInvoker(request *model.BatchDeleteLatestVersionRequest) *BatchDeleteLatestVersionInvoker {
+	requestDef := GenReqDefForBatchDeleteLatestVersion()
+	return &BatchDeleteLatestVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeleteLogicalBranch 批量软删除最新大版本下的所有小版本
 //
 // 根据主对象ID，批量软删除最新大版本下的所有小版本。通过此接口进行删除操作时，系统会将当前删除的实例数据转存至XDM应用的XDMLogicDeleteData内置模型中。
@@ -248,6 +311,27 @@ func (c *IDMEClassicAPIClient) BatchDeleteLogicalBranch(request *model.BatchDele
 func (c *IDMEClassicAPIClient) BatchDeleteLogicalBranchInvoker(request *model.BatchDeleteLogicalBranchRequest) *BatchDeleteLogicalBranchInvoker {
 	requestDef := GenReqDefForBatchDeleteLogicalBranch()
 	return &BatchDeleteLogicalBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteLogicalLatestVersion 批量软删除版本对象下最新分支的最新版本实例数据
+//
+// 根据主对象ID，批量软删除版本对象下最新分支的最新版本实例数据。通过此接口进行删除操作时，系统会将当前删除的实例数据转存至XDM应用的XDMLogicDeleteData内置模型中。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) BatchDeleteLogicalLatestVersion(request *model.BatchDeleteLogicalLatestVersionRequest) (*model.BatchDeleteLogicalLatestVersionResponse, error) {
+	requestDef := GenReqDefForBatchDeleteLogicalLatestVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteLogicalLatestVersionResponse), nil
+	}
+}
+
+// BatchDeleteLogicalLatestVersionInvoker 批量软删除版本对象下最新分支的最新版本实例数据
+func (c *IDMEClassicAPIClient) BatchDeleteLogicalLatestVersionInvoker(request *model.BatchDeleteLogicalLatestVersionRequest) *BatchDeleteLogicalLatestVersionInvoker {
+	requestDef := GenReqDefForBatchDeleteLogicalLatestVersion()
+	return &BatchDeleteLogicalLatestVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchDeleteLogicalUsingPost 批量软删除实例
@@ -271,6 +355,48 @@ func (c *IDMEClassicAPIClient) BatchDeleteLogicalUsingPost(request *model.BatchD
 func (c *IDMEClassicAPIClient) BatchDeleteLogicalUsingPostInvoker(request *model.BatchDeleteLogicalUsingPostRequest) *BatchDeleteLogicalUsingPostInvoker {
 	requestDef := GenReqDefForBatchDeleteLogicalUsingPost()
 	return &BatchDeleteLogicalUsingPostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteShareDocs 批量删除结构化文档分享权限
+//
+// 批量删除结构化文档分享权限。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) BatchDeleteShareDocs(request *model.BatchDeleteShareDocsRequest) (*model.BatchDeleteShareDocsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteShareDocs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteShareDocsResponse), nil
+	}
+}
+
+// BatchDeleteShareDocsInvoker 批量删除结构化文档分享权限
+func (c *IDMEClassicAPIClient) BatchDeleteShareDocsInvoker(request *model.BatchDeleteShareDocsRequest) *BatchDeleteShareDocsInvoker {
+	requestDef := GenReqDefForBatchDeleteShareDocs()
+	return &BatchDeleteShareDocsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteStructuredDocument 批量删除结构化文档
+//
+// 批量删除结构化文档。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) BatchDeleteStructuredDocument(request *model.BatchDeleteStructuredDocumentRequest) (*model.BatchDeleteStructuredDocumentResponse, error) {
+	requestDef := GenReqDefForBatchDeleteStructuredDocument()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteStructuredDocumentResponse), nil
+	}
+}
+
+// BatchDeleteStructuredDocumentInvoker 批量删除结构化文档
+func (c *IDMEClassicAPIClient) BatchDeleteStructuredDocumentInvoker(request *model.BatchDeleteStructuredDocumentRequest) *BatchDeleteStructuredDocumentInvoker {
+	requestDef := GenReqDefForBatchDeleteStructuredDocument()
+	return &BatchDeleteStructuredDocumentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchDeleteUsingPost 批量删除实例
@@ -420,6 +546,27 @@ func (c *IDMEClassicAPIClient) BatchUpdateByAdmin(request *model.BatchUpdateByAd
 func (c *IDMEClassicAPIClient) BatchUpdateByAdminInvoker(request *model.BatchUpdateByAdminRequest) *BatchUpdateByAdminInvoker {
 	requestDef := GenReqDefForBatchUpdateByAdmin()
 	return &BatchUpdateByAdminInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchUpdateDocument 批量更新结构化文档
+//
+// 批量更新结构化文档。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) BatchUpdateDocument(request *model.BatchUpdateDocumentRequest) (*model.BatchUpdateDocumentResponse, error) {
+	requestDef := GenReqDefForBatchUpdateDocument()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateDocumentResponse), nil
+	}
+}
+
+// BatchUpdateDocumentInvoker 批量更新结构化文档
+func (c *IDMEClassicAPIClient) BatchUpdateDocumentInvoker(request *model.BatchUpdateDocumentRequest) *BatchUpdateDocumentInvoker {
+	requestDef := GenReqDefForBatchUpdateDocument()
+	return &BatchUpdateDocumentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchUpdateUsingPost 批量更新实例
@@ -651,6 +798,27 @@ func (c *IDMEClassicAPIClient) CountUsingPost(request *model.CountUsingPostReque
 func (c *IDMEClassicAPIClient) CountUsingPostInvoker(request *model.CountUsingPostRequest) *CountUsingPostInvoker {
 	requestDef := GenReqDefForCountUsingPost()
 	return &CountUsingPostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDocument 创建结构化文档
+//
+// 创建结构化文档。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) CreateDocument(request *model.CreateDocumentRequest) (*model.CreateDocumentResponse, error) {
+	requestDef := GenReqDefForCreateDocument()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDocumentResponse), nil
+	}
+}
+
+// CreateDocumentInvoker 创建结构化文档
+func (c *IDMEClassicAPIClient) CreateDocumentInvoker(request *model.CreateDocumentRequest) *CreateDocumentInvoker {
+	requestDef := GenReqDefForCreateDocument()
+	return &CreateDocumentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateMultiView 创建视图对象
@@ -1098,6 +1266,27 @@ func (c *IDMEClassicAPIClient) ListHistoryDataInvoker(request *model.ListHistory
 	return &ListHistoryDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListQueryDocuments 查询结构化文档
+//
+// 查询结构化文档。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) ListQueryDocuments(request *model.ListQueryDocumentsRequest) (*model.ListQueryDocumentsResponse, error) {
+	requestDef := GenReqDefForListQueryDocuments()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListQueryDocumentsResponse), nil
+	}
+}
+
+// ListQueryDocumentsInvoker 查询结构化文档
+func (c *IDMEClassicAPIClient) ListQueryDocumentsInvoker(request *model.ListQueryDocumentsRequest) *ListQueryDocumentsInvoker {
+	requestDef := GenReqDefForListQueryDocuments()
+	return &ListQueryDocumentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListQueryRelatedObjects 查询关系实体关联模型的信息
 //
 // 调用该接口查询指定关系实体所关联的源/目标模型的所有实例信息，包含具体的属性。
@@ -1139,6 +1328,27 @@ func (c *IDMEClassicAPIClient) ListQueryRelationship(request *model.ListQueryRel
 func (c *IDMEClassicAPIClient) ListQueryRelationshipInvoker(request *model.ListQueryRelationshipRequest) *ListQueryRelationshipInvoker {
 	requestDef := GenReqDefForListQueryRelationship()
 	return &ListQueryRelationshipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListQueryShareDocs 查询结构化文档分享授权列表
+//
+// 查询结构化文档分享授权列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) ListQueryShareDocs(request *model.ListQueryShareDocsRequest) (*model.ListQueryShareDocsResponse, error) {
+	requestDef := GenReqDefForListQueryShareDocs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListQueryShareDocsResponse), nil
+	}
+}
+
+// ListQueryShareDocsInvoker 查询结构化文档分享授权列表
+func (c *IDMEClassicAPIClient) ListQueryShareDocsInvoker(request *model.ListQueryShareDocsRequest) *ListQueryShareDocsInvoker {
+	requestDef := GenReqDefForListQueryShareDocs()
+	return &ListQueryShareDocsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListQueryTarget 通过源模型实例ID查询关联的目标模型实例
@@ -1246,6 +1456,27 @@ func (c *IDMEClassicAPIClient) Refresh(request *model.RefreshRequest) (*model.Re
 func (c *IDMEClassicAPIClient) RefreshInvoker(request *model.RefreshRequest) *RefreshInvoker {
 	requestDef := GenReqDefForRefresh()
 	return &RefreshInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RemoveFromCategory 移除数据分类
+//
+// 将数据分类数据实例从数据分类对象数据实例中移除。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) RemoveFromCategory(request *model.RemoveFromCategoryRequest) (*model.RemoveFromCategoryResponse, error) {
+	requestDef := GenReqDefForRemoveFromCategory()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoveFromCategoryResponse), nil
+	}
+}
+
+// RemoveFromCategoryInvoker 移除数据分类
+func (c *IDMEClassicAPIClient) RemoveFromCategoryInvoker(request *model.RemoveFromCategoryRequest) *RemoveFromCategoryInvoker {
+	requestDef := GenReqDefForRemoveFromCategory()
+	return &RemoveFromCategoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RemoveTag 解绑标签
@@ -1418,6 +1649,27 @@ func (c *IDMEClassicAPIClient) ShowGetRoot(request *model.ShowGetRootRequest) (*
 func (c *IDMEClassicAPIClient) ShowGetRootInvoker(request *model.ShowGetRootRequest) *ShowGetRootInvoker {
 	requestDef := GenReqDefForShowGetRoot()
 	return &ShowGetRootInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGetTokens 获取Token信息
+//
+// 该接口可以用于通过文档ID和认证类型的方式进行认证来获取结构化文档的Token。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) ShowGetTokens(request *model.ShowGetTokensRequest) (*model.ShowGetTokensResponse, error) {
+	requestDef := GenReqDefForShowGetTokens()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowGetTokensResponse), nil
+	}
+}
+
+// ShowGetTokensInvoker 获取Token信息
+func (c *IDMEClassicAPIClient) ShowGetTokensInvoker(request *model.ShowGetTokensRequest) *ShowGetTokensInvoker {
+	requestDef := GenReqDefForShowGetTokens()
+	return &ShowGetTokensInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowGetUsingPost 查询实例
@@ -1653,6 +1905,27 @@ func (c *IDMEClassicAPIClient) UpdateByConditionUsingPost(request *model.UpdateB
 func (c *IDMEClassicAPIClient) UpdateByConditionUsingPostInvoker(request *model.UpdateByConditionUsingPostRequest) *UpdateByConditionUsingPostInvoker {
 	requestDef := GenReqDefForUpdateByConditionUsingPost()
 	return &UpdateByConditionUsingPostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDocument 更新文档标题
+//
+// 更新文档标题。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) UpdateDocument(request *model.UpdateDocumentRequest) (*model.UpdateDocumentResponse, error) {
+	requestDef := GenReqDefForUpdateDocument()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDocumentResponse), nil
+	}
+}
+
+// UpdateDocumentInvoker 更新文档标题
+func (c *IDMEClassicAPIClient) UpdateDocumentInvoker(request *model.UpdateDocumentRequest) *UpdateDocumentInvoker {
+	requestDef := GenReqDefForUpdateDocument()
+	return &UpdateDocumentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateState 设置生命周期的状态

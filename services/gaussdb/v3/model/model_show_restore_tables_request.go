@@ -15,7 +15,7 @@ type ShowRestoreTablesRequest struct {
 	// 实例ID，严格匹配UUID规则。
 	InstanceId string `json:"instance_id"`
 
-	// 备份时间点，时间戳格式。  通过[查询可恢复时间段](https://support.huaweicloud.com/api-gaussdbformysql/ShowBackupRestoreTime.html)获取。
+	// 备份时间点，时间戳格式。  通过[查询可恢复时间段](https://support.huaweicloud.com/api-taurusdb/ShowBackupRestoreTime.html)获取。
 	RestoreTime string `json:"restore_time"`
 
 	// 是否是最新库表。 - true：是最新库表。 - false：是恢复时间点库表。

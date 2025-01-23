@@ -9,10 +9,10 @@ import (
 // ListStarRocksDataReplicationConfigByDataBaseResponse Response Object
 type ListStarRocksDataReplicationConfigByDataBaseResponse struct {
 
-	// GaussDB(for MySQL)实例ID。
+	// TaurusDB实例ID。
 	SourceInstanceId *string `json:"source_instance_id,omitempty"`
 
-	// GaussDB(for MySQL)节点ID。
+	// TaurusDB节点ID。
 	SourceNodeId *string `json:"source_node_id,omitempty"`
 
 	DatabaseInfo *DataBaseInfo `json:"database_info,omitempty"`

@@ -59,6 +59,9 @@ type OrderLineItemEntityV2 struct {
 	CommercialResource *string `json:"commercial_resource,omitempty"`
 
 	BaseProductInfo *ProductObject `json:"base_product_info,omitempty"`
+
+	// 订单ID。
+	OrderId *string `json:"order_id,omitempty"`
 }
 
 func (o OrderLineItemEntityV2) String() string {

@@ -12,10 +12,10 @@ type OfficialWebsiteRatingResult struct {
 	// 包年/包月产品的官网价。
 	OfficialWebsiteAmount *decimal.Decimal `json:"official_website_amount,omitempty"`
 
-	// 分期金额的官网价。  说明： 暂只支持IES产品。
+	// 分期金额的官网价。  说明： 暂只支持CloudPond产品。
 	InstallmentOfficialWebsiteAmount *string `json:"installment_official_website_amount,omitempty"`
 
-	// 分期付款的周期类型。 2：月  说明： 暂只支持IES产品。
+	// 分期付款的周期类型。 2：月 3：年  说明： 暂只支持CloudPond产品。
 	InstallmentPeriodType *int32 `json:"installment_period_type,omitempty"`
 
 	// 价格度量单位标识。 1：元

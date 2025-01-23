@@ -197,22 +197,6 @@ func (i *ListAuthorizableTicketsExternalInvoker) Invoke() (*model.ListAuthorizab
 	}
 }
 
-type ListPrrTemplateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListPrrTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListPrrTemplateInvoker) Invoke() (*model.ListPrrTemplateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListPrrTemplateResponse), nil
-	}
-}
-
 type ListResourceInvoker struct {
 	*invoker.BaseInvoker
 }

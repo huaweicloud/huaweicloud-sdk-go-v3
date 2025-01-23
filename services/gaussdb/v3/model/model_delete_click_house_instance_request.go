@@ -9,7 +9,7 @@ import (
 // DeleteClickHouseInstanceRequest Request Object
 type DeleteClickHouseInstanceRequest struct {
 
-	// GaussDB(for MySQL)实例ID，严格匹配UUID规则。
+	// TaurusDB实例ID，严格匹配UUID规则。
 	InstanceId string `json:"instance_id"`
 
 	// ClickHouse实例ID，严格匹配UUID规则。

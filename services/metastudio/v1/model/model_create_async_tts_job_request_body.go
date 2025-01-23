@@ -52,6 +52,18 @@ type CreateAsyncTtsJobRequestBody struct {
 
 	// 字幕行数限制，默认为1
 	SrtLineLimit *int32 `json:"srt_line_limit,omitempty"`
+
+	// 声道。（单声道|双声道） 默认值1，最小值1，最大值2。
+	Channels *int32 `json:"channels,omitempty"`
+
+	// 音频文件上传的外部URL > * 需要先申请开通白名单， 才允许将音频等文件上传到外部URL。
+	OutputExternalUrl *string `json:"output_external_url,omitempty"`
+
+	// 字幕文件上传的外部URL > * 需要先申请开通白名单， 才允许将字幕等文件上传到外部URL。
+	SrtOutputExternalUrl *string `json:"srt_output_external_url,omitempty"`
+
+	// 动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
+	ActionOutputExternalUrl *string `json:"action_output_external_url,omitempty"`
 }
 
 func (o CreateAsyncTtsJobRequestBody) String() string {

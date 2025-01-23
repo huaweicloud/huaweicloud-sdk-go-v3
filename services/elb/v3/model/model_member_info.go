@@ -57,10 +57,10 @@ type MemberInfo struct {
 	// 后端服务器关联的负载均衡器ID列表。  不支持该字段，请勿使用。
 	Loadbalancers *[]ResourceId `json:"loadbalancers,omitempty"`
 
-	// 创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+	// 创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
 	CreatedAt *string `json:"created_at,omitempty"`
 
-	// 更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+	// 更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
 	UpdatedAt *string `json:"updated_at,omitempty"`
 
 	// 后端服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。
@@ -68,6 +68,8 @@ type MemberInfo struct {
 
 	// member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
 	InstanceId *string `json:"instance_id,omitempty"`
+
+	Reason *MemberHealthCheckFailedReason `json:"reason,omitempty"`
 }
 
 func (o MemberInfo) String() string {
