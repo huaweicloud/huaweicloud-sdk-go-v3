@@ -1,3 +1,14 @@
+# 0.1.134 2025-01-24
+
+### HuaweiCloud SDK KVS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - Solve the version incompatibility problem.
+- _Change_
+  - None
+
 # 0.1.133 2025-01-23
 
 ### HuaweiCloud SDK BSS
