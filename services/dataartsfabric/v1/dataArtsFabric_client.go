@@ -714,7 +714,7 @@ func (c *DataArtsFabricClient) ListTagFabricWorkspacesInvoker(request *model.Lis
 
 // CreateWorkspace 创建Workspace
 //
-// # Create workspace
+// Create workspace
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsFabricClient) CreateWorkspace(request *model.CreateWorkspaceRequest) (*model.CreateWorkspaceResponse, error) {

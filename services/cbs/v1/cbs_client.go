@@ -153,6 +153,7 @@ func (c *CbsClient) DeleteSessionInvoker(request *model.DeleteSessionRequest) *D
 
 // ExecuteComposeVideo 合成视频(按包周期收费)
 //
+//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbsClient) ExecuteComposeVideo(request *model.ExecuteComposeVideoRequest) (*model.ExecuteComposeVideoResponse, error) {
 	requestDef := GenReqDefForExecuteComposeVideo()
@@ -171,6 +172,7 @@ func (c *CbsClient) ExecuteComposeVideoInvoker(request *model.ExecuteComposeVide
 }
 
 // ExecuteComposeVideoOndemand 合成视频(按需收费)
+//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbsClient) ExecuteComposeVideoOndemand(request *model.ExecuteComposeVideoOndemandRequest) (*model.ExecuteComposeVideoOndemandResponse, error) {
@@ -191,6 +193,7 @@ func (c *CbsClient) ExecuteComposeVideoOndemandInvoker(request *model.ExecuteCom
 
 // ExecuteCreateVideo 创建视频
 //
+//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbsClient) ExecuteCreateVideo(request *model.ExecuteCreateVideoRequest) (*model.ExecuteCreateVideoResponse, error) {
 	requestDef := GenReqDefForExecuteCreateVideo()
@@ -209,6 +212,7 @@ func (c *CbsClient) ExecuteCreateVideoInvoker(request *model.ExecuteCreateVideoR
 }
 
 // ExecuteDeleteVideoById 删除视频
+//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbsClient) ExecuteDeleteVideoById(request *model.ExecuteDeleteVideoByIdRequest) (*model.ExecuteDeleteVideoByIdResponse, error) {
@@ -229,6 +233,7 @@ func (c *CbsClient) ExecuteDeleteVideoByIdInvoker(request *model.ExecuteDeleteVi
 
 // ExecuteDeleteimageById 删除图片
 //
+//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbsClient) ExecuteDeleteimageById(request *model.ExecuteDeleteimageByIdRequest) (*model.ExecuteDeleteimageByIdResponse, error) {
 	requestDef := GenReqDefForExecuteDeleteimageById()
@@ -247,6 +252,7 @@ func (c *CbsClient) ExecuteDeleteimageByIdInvoker(request *model.ExecuteDeleteim
 }
 
 // ExecuteGetCharacterInfoById 获取形象详情
+//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbsClient) ExecuteGetCharacterInfoById(request *model.ExecuteGetCharacterInfoByIdRequest) (*model.ExecuteGetCharacterInfoByIdResponse, error) {
@@ -311,6 +317,7 @@ func (c *CbsClient) ExecuteGetFramsListByImagesIdInvoker(request *model.ExecuteG
 
 // ExecuteGetImagesList 获取图片列表
 //
+//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbsClient) ExecuteGetImagesList(request *model.ExecuteGetImagesListRequest) (*model.ExecuteGetImagesListResponse, error) {
 	requestDef := GenReqDefForExecuteGetImagesList()
@@ -329,6 +336,7 @@ func (c *CbsClient) ExecuteGetImagesListInvoker(request *model.ExecuteGetImagesL
 }
 
 // ExecuteGetVideoInfoById 获取视频详情
+//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbsClient) ExecuteGetVideoInfoById(request *model.ExecuteGetVideoInfoByIdRequest) (*model.ExecuteGetVideoInfoByIdResponse, error) {
@@ -369,6 +377,7 @@ func (c *CbsClient) ExecuteGetVideosListInvoker(request *model.ExecuteGetVideosL
 }
 
 // ExecutePostCreateImages 创建图片
+//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbsClient) ExecutePostCreateImages(request *model.ExecutePostCreateImagesRequest) (*model.ExecutePostCreateImagesResponse, error) {
@@ -433,6 +442,7 @@ func (c *CbsClient) ExecuteSessionInvoker(request *model.ExecuteSessionRequest) 
 
 // ExecuteUpdateImageName 修改图片名
 //
+//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbsClient) ExecuteUpdateImageName(request *model.ExecuteUpdateImageNameRequest) (*model.ExecuteUpdateImageNameResponse, error) {
 	requestDef := GenReqDefForExecuteUpdateImageName()
@@ -451,6 +461,7 @@ func (c *CbsClient) ExecuteUpdateImageNameInvoker(request *model.ExecuteUpdateIm
 }
 
 // ExecuteUpdateVideoById 更新视频名
+//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbsClient) ExecuteUpdateVideoById(request *model.ExecuteUpdateVideoByIdRequest) (*model.ExecuteUpdateVideoByIdResponse, error) {

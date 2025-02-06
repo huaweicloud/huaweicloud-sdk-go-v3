@@ -3134,10 +3134,8 @@ func (c *DwsClient) SwitchPlanStageInvoker(request *model.SwitchPlanStageRequest
 // 容灾状态为“运行中”时可以执行灾备切换操作。
 // 灾备切换需要一定时间，在此期间，原生产集群将可不用。
 // 不同场景下进行灾备切换，RPO（Recovery Point Object，灾难发生后，系统和数据必须恢复到的时间点要求。）说明如下：
-//
-//	生产集群在“可用”的状态下，RPO&#x3D;0。
-//	生产集群在“不可用”的状态下，无法保证RPO&#x3D;0，但数据至少可恢复到生产集群“最近容灾成功时间”。
-//
+//   生产集群在“可用”的状态下，RPO&#x3D;0。
+//   生产集群在“不可用”的状态下，无法保证RPO&#x3D;0，但数据至少可恢复到生产集群“最近容灾成功时间”。
 // 仅支持DWS 2.0集群。
 //
 // Please refer to HUAWEI cloud API Explorer for details.

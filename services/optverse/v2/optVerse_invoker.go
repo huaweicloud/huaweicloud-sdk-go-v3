@@ -1,8 +1,8 @@
-package v1
+package v2
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/invoker"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/optverse/v1/model"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/optverse/v2/model"
 )
 
 type CreateTaskInvoker struct {

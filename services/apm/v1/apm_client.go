@@ -462,6 +462,7 @@ func (c *ApmClient) ShowTopologyTreeInvoker(request *model.ShowTopologyTreeReque
 
 // ShowFlameLineTree
 //
+//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApmClient) ShowFlameLineTree(request *model.ShowFlameLineTreeRequest) (*model.ShowFlameLineTreeResponse, error) {
 	requestDef := GenReqDefForShowFlameLineTree()

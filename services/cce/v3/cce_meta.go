@@ -1249,19 +1249,19 @@ func GenReqDefForShowClusterSupportConfiguration() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
-		WithLocationType(def.Path))
+		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterType").
 		WithJsonTag("cluster_type").
-		WithLocationType(def.Path))
+		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterVersion").
 		WithJsonTag("cluster_version").
-		WithLocationType(def.Path))
+		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("NetworkMode").
 		WithJsonTag("network_mode").
-		WithLocationType(def.Path))
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").

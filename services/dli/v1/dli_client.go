@@ -2883,6 +2883,7 @@ func (c *DliClient) ListDatabasesInvoker(request *model.ListDatabasesRequest) *L
 // Deprecated: This function is deprecated and will be removed in the future versions.
 // ListPartitions 获取分区信息列表
 //
+//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DliClient) ListPartitions(request *model.ListPartitionsRequest) (*model.ListPartitionsResponse, error) {
 	requestDef := GenReqDefForListPartitions()

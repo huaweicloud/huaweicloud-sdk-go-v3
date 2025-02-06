@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ScriptParamDefine 顺序参数，没有参数名字段 参数顺序，从1开始，不连续会报错  api层用不同的vo对象接收，管理面没有order字段。service层统一处理差异  拼接：sh xxx.sh  'aaa' 'a' 'b' 执行时值为空：sh xxx.sh  ” 'a' 'b'
+// ScriptParamDefine 顺序参数，没有参数名字段 参数顺序，从1开始，不连续会报错  api层用不同的vo对象接收，管理面没有order字段。service层统一处理差异  拼接：sh xxx.sh  'aaa' 'a' 'b' 执行时值为空：sh xxx.sh  '' 'a' 'b'
 type ScriptParamDefine struct {
 
 	// 参数名称：只支持英文、数字、下划线

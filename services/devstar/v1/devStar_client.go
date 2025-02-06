@@ -432,9 +432,9 @@ func (c *DevStarClient) ListProjectsV4Invoker(request *model.ListProjectsV4Reque
 // CheckRepositoryDuplicateName 检查仓库名称是否重名
 //
 // 检查仓库名称是否重名
-//   - 校验规则
+// - 校验规则
 //     同一个项目下的仓库名称不能存在重复,当结果为true时,校验通过,仓库名称可用,否则,校验不通过,当前项目下的仓库名称已存在,不可用
-//   - 必传参数
+// - 必传参数
 //     project_id,name,region_id
 //
 // Please refer to HUAWEI cloud API Explorer for details.

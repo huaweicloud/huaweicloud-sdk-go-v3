@@ -109,7 +109,9 @@ func (c *RomaClient) AssociateDomainV2Invoker(request *model.AssociateDomainV2Re
 //
 // 签名密钥创建后，需要绑定到API才能生效。
 //
+//
 // 将签名密钥绑定到API后，则服务集成请求后端服务时就会使用这个签名密钥进行加密签名，后端服务可以校验这个签名来验证请求来源。
+//
 //
 // 将指定的签名密钥绑定到一个或多个已发布的API上。同一个API发布到不同的环境可以绑定不同的签名密钥；一个API在发布到特定环境后只能绑定一个签名密钥。
 //
@@ -625,7 +627,9 @@ func (c *RomaClient) CreateDispatchesInvoker(request *model.CreateDispatchesRequ
 //
 // 在实际的生产中，API提供者可能有多个环境，如开发环境、测试环境、生产环境等，用户可以自由将API发布到某个环境，供调用者调用。
 //
+//
 // 对于不同的环境，API的版本、请求地址甚至于包括请求消息等均有可能不同。如：某个API，v1.0的版本为稳定版本，发布到了生产环境供生产使用，同时，该API正处于迭代中，v1.1的版本是开发人员交付测试人员进行测试的版本，发布在测试环境上，而v1.2的版本目前开发团队正处于开发过程中，可以发布到开发环境进行自测等。
+//
 //
 // 为此，服务集成提供多环境管理功能，使租户能够最大化的模拟实际场景，低成本的接服务集成。
 //
@@ -650,15 +654,16 @@ func (c *RomaClient) CreateEnvironmentV2Invoker(request *model.CreateEnvironment
 //
 // 将API发布到不同的环境后，对于不同的环境，可能会有不同的环境变量，比如，API的服务部署地址，请求的版本号等。
 //
+//
 // 用户可以定义不同的环境变量，用户在定义API时，在API的定义中使用这些变量，当调用API时，服务集成会将这些变量替换成真实的变量值，以达到不同环境的区分效果。
+//
 //
 // 环境变量定义在API分组上，该分组下的所有API都可以使用这些变量。
 //
 // &gt; 1.环境变量的变量名称必须保持唯一，即一个分组在同一个环境上不能有两个同名的变量
-//
-//	2.环境变量区分大小写，即变量ABC与变量abc是两个不同的变量
-//	3.设置了环境变量后，使用到该变量的API的调试功能将不可使用。
-//	4.定义了环境变量后，使用到环境变量的地方应该以对称的#标识环境变量，当API发布到相应的环境后，会对环境变量的值进行替换，如：定义的API的URL为：https://#address#:8080，环境变量address在RELEASE环境上的值为：192.168.1.5，则API发布到RELEASE环境后的真实的URL为：https://192.168.1.5:8080。
+//   2.环境变量区分大小写，即变量ABC与变量abc是两个不同的变量
+//   3.设置了环境变量后，使用到该变量的API的调试功能将不可使用。
+//   4.定义了环境变量后，使用到环境变量的地方应该以对称的#标识环境变量，当API发布到相应的环境后，会对环境变量的值进行替换，如：定义的API的URL为：https://#address#:8080，环境变量address在RELEASE环境上的值为：192.168.1.5，则API发布到RELEASE环境后的真实的URL为：https://192.168.1.5:8080。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RomaClient) CreateEnvironmentVariableV2(request *model.CreateEnvironmentVariableV2Request) (*model.CreateEnvironmentVariableV2Response, error) {
@@ -4862,7 +4867,9 @@ func (c *RomaClient) UpdateAclStrategyV2Invoker(request *model.UpdateAclStrategy
 //
 // 将流控策略应用于API，则所有对该API的访问将会受到该流控策略的限制。
 //
+//
 // 当一定时间内的访问次数超过流控策略设置的API最大访问次数限制后，后续的访问将会被拒绝，从而能够较好的保护后端API免受异常流量的冲击，保障服务的稳定运行。
+//
 //
 // 为指定的API绑定流控策略，绑定时，需要指定在哪个环境上生效。同一个API发布到不同的环境可以绑定不同的流控策略；一个API在发布到特定环境后只能绑定一个默认的流控策略。
 //
@@ -6327,7 +6334,7 @@ func (c *RomaClient) BatchAssociateCertsV2Invoker(request *model.BatchAssociateC
 
 // BatchAssociateDomainsV2 SSL证书绑定域名
 //
-// # SSL证书绑定域名
+// SSL证书绑定域名
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RomaClient) BatchAssociateDomainsV2(request *model.BatchAssociateDomainsV2Request) (*model.BatchAssociateDomainsV2Response, error) {
@@ -6369,7 +6376,7 @@ func (c *RomaClient) BatchDisassociateCertsV2Invoker(request *model.BatchDisasso
 
 // BatchDisassociateDomainsV2 SSL证书解绑域名
 //
-// # SSL证书解绑域名
+// SSL证书解绑域名
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RomaClient) BatchDisassociateDomainsV2(request *model.BatchDisassociateDomainsV2Request) (*model.BatchDisassociateDomainsV2Response, error) {

@@ -2286,7 +2286,7 @@ func (c *DcsClient) UpdateAclAccountPassWordInvoker(request *model.UpdateAclAcco
 
 // UpdateAclAccountRemark ACL账号修改备注
 //
-// # ACL账号修改备注
+// ACL账号修改备注
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DcsClient) UpdateAclAccountRemark(request *model.UpdateAclAccountRemarkRequest) (*model.UpdateAclAccountRemarkResponse, error) {

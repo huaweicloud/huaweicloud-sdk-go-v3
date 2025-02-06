@@ -10,7 +10,7 @@ import (
 type ShowClusterSupportConfigurationRequest struct {
 
 	// 集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-	ClusterId string `json:"cluster_id"`
+	ClusterId *string `json:"cluster_id,omitempty"`
 
 	// 集群类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
 	ClusterType string `json:"cluster_type"`

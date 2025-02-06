@@ -210,6 +210,7 @@ func (c *ModerationClient) RunCreateVideoStreamModerationJobInvoker(request *mod
 
 // RunQueryAudioModerationJob 查询音频内容审核作业
 //
+//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ModerationClient) RunQueryAudioModerationJob(request *model.RunQueryAudioModerationJobRequest) (*model.RunQueryAudioModerationJobResponse, error) {
 	requestDef := GenReqDefForRunQueryAudioModerationJob()

@@ -378,7 +378,7 @@ func (c *EipClient) AttachShareBandwidthInvoker(request *model.AttachShareBandwi
 
 // CountEipAvailableResources 查询弹性公网IP可用数
 //
-// # IP池用于查询公网可用ip个数
+// IP池用于查询公网可用ip个数
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EipClient) CountEipAvailableResources(request *model.CountEipAvailableResourcesRequest) (*model.CountEipAvailableResourcesResponse, error) {

@@ -84,6 +84,9 @@ type InstanceRequest struct {
 	Count *int32 `json:"count,omitempty"`
 
 	ServerlessInfo *ServerlessInfo `json:"serverless_info,omitempty"`
+
+	// 是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
+	IsAutoUpgrade *bool `json:"is_auto_upgrade,omitempty"`
 }
 
 func (o InstanceRequest) String() string {

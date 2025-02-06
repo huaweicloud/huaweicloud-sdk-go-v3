@@ -22,8 +22,7 @@ func CdnClientBuilder() *httpclient.HcHttpClientBuilder {
 // BatchCopyDomain 批量域名复制
 //
 // 批量域名复制接口。
-//
-//	&gt; 将某个加速域名的配置批量复制到其他域名。
+//  &gt; 将某个加速域名的配置批量复制到其他域名。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CdnClient) BatchCopyDomain(request *model.BatchCopyDomainRequest) (*model.BatchCopyDomainResponse, error) {

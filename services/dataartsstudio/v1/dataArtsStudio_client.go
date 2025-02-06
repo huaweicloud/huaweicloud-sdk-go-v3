@@ -213,9 +213,8 @@ func (c *DataArtsStudioClient) BatchAssociateSecurityLevelToEntitiesInvoker(requ
 // 转换逻辑模型为物理模型，转换成功则显示转换后的目标模型信息。
 // 异常：目标模型信息的“id”等属性为null时，则需要调用《获取操作结果》接口查看具体报错信息：GET https://{endpoint}/v1/{project_id}/design/operation-results?operation_type&#x3D;TRANSFORM_LOGIC_MODEL&amp;operation_id&#x3D;{model_id}，其中{model_id}为本接口的路径参数。
 // 约束与限制：
-//
-//	1、target_model_id与target_model_name不对应时，target_model_id优先级高于target_model_name。
-//	2、target_model_id与dw_type不对应时，会找不到模型，提示：模型不存在。
+//   1、target_model_id与target_model_name不对应时，target_model_id优先级高于target_model_name。
+//   2、target_model_id与dw_type不对应时，会找不到模型，提示：模型不存在。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) BatchCreateDesignTableModelsFromLogic(request *model.BatchCreateDesignTableModelsFromLogicRequest) (*model.BatchCreateDesignTableModelsFromLogicResponse, error) {
@@ -3451,6 +3450,7 @@ func (c *DataArtsStudioClient) ListQualityTaskInvoker(request *model.ListQuality
 
 // ListQualityTaskLists 获取质量作业列表V1
 //
+//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListQualityTaskLists(request *model.ListQualityTaskListsRequest) (*model.ListQualityTaskListsResponse, error) {
 	requestDef := GenReqDefForListQualityTaskLists()
@@ -4080,7 +4080,7 @@ func (c *DataArtsStudioClient) ParseUserBehaviorInvoker(request *model.ParseUser
 
 // PayForDgcOneKey DataArtsStudio实例一键购买接口
 //
-// # DataArtsStudio实例一键购买接口
+// DataArtsStudio实例一键购买接口
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) PayForDgcOneKey(request *model.PayForDgcOneKeyRequest) (*model.PayForDgcOneKeyResponse, error) {
@@ -4562,6 +4562,7 @@ func (c *DataArtsStudioClient) SearchVersionsInvoker(request *model.SearchVersio
 }
 
 // SetFactoryJobTags 设置作业标签
+//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) SetFactoryJobTags(request *model.SetFactoryJobTagsRequest) (*model.SetFactoryJobTagsResponse, error) {
@@ -6727,9 +6728,8 @@ func (c *DataArtsStudioClient) UpdateWorkspaceInvoker(request *model.UpdateWorks
 // AuthorizeActionApiToInstance API授权操作(授权/取消授权/申请/续约)
 //
 // - API主动授权：  API审核人可发起，API主动授权成功后，在有效期内，APP即可访问该API。API授权包含授权和续约两部分功能。
-//   - 授权：授权会给予APP在有效期内访问API的权利。
-//   - 续约：续约会更新授权有效期，仅支持延长有效期，不能减少。
-//
+//     * 授权：授权会给予APP在有效期内访问API的权利。
+//     * 续约：续约会更新授权有效期，仅支持延长有效期，不能减少。
 // - API解除授权：  API审核人可发起，解除API对APP的授权关系。解除授权后，APP将不再能够调用该API。API解除已授权的APP关系，需要为APP预留至少2天的准备时间。
 // - APP解除授权：  APP所有者可发起，解除API对APP的授权关系。解除授权后，APP将不再能够调用该API。APP解除自己的授权关系，无需预留准备时间。
 // - APP申请授权：  APP所有者可发起，APP申请API后，待API的审核人完成审核，APP即可访问该API。授权会给予APP在有效期内访问API的权利，需要API审核。

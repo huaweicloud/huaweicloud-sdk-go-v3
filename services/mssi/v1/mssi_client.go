@@ -84,6 +84,7 @@ func (c *MssiClient) CreateFlowInvoker(request *model.CreateFlowRequest) *Create
 
 // CreateFlowTemplateFromFlow 根据流创建Flow模板
 //
+//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MssiClient) CreateFlowTemplateFromFlow(request *model.CreateFlowTemplateFromFlowRequest) (*model.CreateFlowTemplateFromFlowResponse, error) {
 	requestDef := GenReqDefForCreateFlowTemplateFromFlow()
@@ -312,6 +313,7 @@ func (c *MssiClient) ShowSingleConnectionInvoker(request *model.ShowSingleConnec
 }
 
 // UpdateConnectionInfo 修改连接配置内容
+//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MssiClient) UpdateConnectionInfo(request *model.UpdateConnectionInfoRequest) (*model.UpdateConnectionInfoResponse, error) {

@@ -1525,6 +1525,22 @@ func (i *SetAutoEnlargePolicyInvoker) Invoke() (*model.SetAutoEnlargePolicyRespo
 	}
 }
 
+type SetAutoUpgradePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetAutoUpgradePolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetAutoUpgradePolicyInvoker) Invoke() (*model.SetAutoUpgradePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetAutoUpgradePolicyResponse), nil
+	}
+}
+
 type SetBackupPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1701,6 +1717,22 @@ func (i *ShowAutoEnlargePolicyInvoker) Invoke() (*model.ShowAutoEnlargePolicyRes
 	}
 }
 
+type ShowAutoUpgradePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAutoUpgradePolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAutoUpgradePolicyInvoker) Invoke() (*model.ShowAutoUpgradePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAutoUpgradePolicyResponse), nil
+	}
+}
+
 type ShowAvailableVersionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1778,6 +1810,22 @@ func (i *ShowConfigurationInvoker) Invoke() (*model.ShowConfigurationResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowConfigurationResponse), nil
+	}
+}
+
+type ShowDatabaseLevelDatabaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDatabaseLevelDatabaseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDatabaseLevelDatabaseInvoker) Invoke() (*model.ShowDatabaseLevelDatabaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDatabaseLevelDatabaseResponse), nil
 	}
 }
 

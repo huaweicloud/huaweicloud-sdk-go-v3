@@ -9,7 +9,7 @@ import (
 // ListTaskResponse Response Object
 type ListTaskResponse struct {
 
-	// 数量
+	// 任务数量
 	Count *int32 `json:"count,omitempty"`
 
 	// 任务列表项视图

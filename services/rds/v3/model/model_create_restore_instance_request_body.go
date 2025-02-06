@@ -76,6 +76,9 @@ type CreateRestoreInstanceRequestBody struct {
 
 	// 是否只预检此次请求，仅支持MySQL。 - true：发送参数检查请求，不会创建实例。   - 检查通过：返回202状态码。   - 检查不通过：返回对应错误码，详情请参考错误码。 - false：发送正常请求，通过检查后，并且执行创建实例的请求。
 	DryRun *bool `json:"dry_run,omitempty"`
+
+	// 是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
+	IsAutoUpgrade *bool `json:"is_auto_upgrade,omitempty"`
 }
 
 func (o CreateRestoreInstanceRequestBody) String() string {

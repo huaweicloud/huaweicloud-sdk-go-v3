@@ -1208,7 +1208,7 @@ func (c *CcClient) ShowCloudConnectionRoutesInvoker(request *model.ShowCloudConn
 
 // BatchCreateGcbResourceTags 批量添加账户全域互联带宽资源标签
 //
-// # TMS批量添加资源标签
+// TMS批量添加资源标签
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcClient) BatchCreateGcbResourceTags(request *model.BatchCreateGcbResourceTagsRequest) (*model.BatchCreateGcbResourceTagsResponse, error) {

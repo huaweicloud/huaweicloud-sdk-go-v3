@@ -147,7 +147,7 @@ func (c *SecMasterClient) CreateAlertInvoker(request *model.CreateAlertRequest) 
 
 // CreateAlertRule 创建告警规则
 //
-// # Create alert rule
+// Create alert rule
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) CreateAlertRule(request *model.CreateAlertRuleRequest) (*model.CreateAlertRuleResponse, error) {
@@ -168,7 +168,7 @@ func (c *SecMasterClient) CreateAlertRuleInvoker(request *model.CreateAlertRuleR
 
 // CreateAlertRuleSimulation 模拟告警规则
 //
-// # Simulate alert rule
+// Simulate alert rule
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) CreateAlertRuleSimulation(request *model.CreateAlertRuleSimulationRequest) (*model.CreateAlertRuleSimulationResponse, error) {
@@ -483,7 +483,7 @@ func (c *SecMasterClient) DeleteAlertInvoker(request *model.DeleteAlertRequest) 
 
 // DeleteAlertRule 删除告警规则
 //
-// # Delete alert rule
+// Delete alert rule
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) DeleteAlertRule(request *model.DeleteAlertRuleRequest) (*model.DeleteAlertRuleResponse, error) {
@@ -651,7 +651,7 @@ func (c *SecMasterClient) DeletePlaybookVersionInvoker(request *model.DeletePlay
 
 // DisableAlertRule 停用告警规则
 //
-// # Disable alert rule
+// Disable alert rule
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) DisableAlertRule(request *model.DisableAlertRuleRequest) (*model.DisableAlertRuleResponse, error) {
@@ -672,7 +672,7 @@ func (c *SecMasterClient) DisableAlertRuleInvoker(request *model.DisableAlertRul
 
 // EnableAlertRule 启用告警规则
 //
-// # Enable alert rule
+// Enable alert rule
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) EnableAlertRule(request *model.EnableAlertRuleRequest) (*model.EnableAlertRuleResponse, error) {
@@ -693,7 +693,7 @@ func (c *SecMasterClient) EnableAlertRuleInvoker(request *model.EnableAlertRuleR
 
 // ListAlertRuleMetrics 告警规则总览
 //
-// # List alert rule metrics
+// List alert rule metrics
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ListAlertRuleMetrics(request *model.ListAlertRuleMetricsRequest) (*model.ListAlertRuleMetricsResponse, error) {
@@ -714,7 +714,7 @@ func (c *SecMasterClient) ListAlertRuleMetricsInvoker(request *model.ListAlertRu
 
 // ListAlertRuleTemplates 列出告警规则模板
 //
-// # List alert rule templates
+// List alert rule templates
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ListAlertRuleTemplates(request *model.ListAlertRuleTemplatesRequest) (*model.ListAlertRuleTemplatesResponse, error) {
@@ -735,7 +735,7 @@ func (c *SecMasterClient) ListAlertRuleTemplatesInvoker(request *model.ListAlert
 
 // ListAlertRules 列出告警规则
 //
-// # List alert rules
+// List alert rules
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ListAlertRules(request *model.ListAlertRulesRequest) (*model.ListAlertRulesResponse, error) {
@@ -1113,7 +1113,7 @@ func (c *SecMasterClient) ShowAlertRuleInvoker(request *model.ShowAlertRuleReque
 
 // ShowAlertRuleTemplate 查看告警规则模板
 //
-// # List alert rule templates
+// List alert rule templates
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ShowAlertRuleTemplate(request *model.ShowAlertRuleTemplateRequest) (*model.ShowAlertRuleTemplateResponse, error) {
@@ -1197,7 +1197,7 @@ func (c *SecMasterClient) ShowPlaybookInvoker(request *model.ShowPlaybookRequest
 
 // ShowPlaybookInstance 查询剧本实例详情
 //
-// # Show playbook instance
+// Show playbook instance
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ShowPlaybookInstance(request *model.ShowPlaybookInstanceRequest) (*model.ShowPlaybookInstanceResponse, error) {
@@ -1302,7 +1302,7 @@ func (c *SecMasterClient) ShowPlaybookTopologyInvoker(request *model.ShowPlayboo
 
 // ShowPlaybookVersion 查询剧本版本详情
 //
-// # Show playbook version version
+// Show playbook version version
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ShowPlaybookVersion(request *model.ShowPlaybookVersionRequest) (*model.ShowPlaybookVersionResponse, error) {
@@ -1323,7 +1323,7 @@ func (c *SecMasterClient) ShowPlaybookVersionInvoker(request *model.ShowPlaybook
 
 // UpdateAlertRule 更新告警规则
 //
-// # Update alert rule
+// Update alert rule
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) UpdateAlertRule(request *model.UpdateAlertRuleRequest) (*model.UpdateAlertRuleResponse, error) {

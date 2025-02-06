@@ -920,12 +920,10 @@ func (c *VodClient) ShowStorageModeTypeInvoker(request *model.ShowStorageModeTyp
 // ShowVodRetrieval 查询取回数据信息
 //
 // ## 典型场景 ##
-//
-//	用于查询点播低频和归档取回量统计数据。&lt;br/&gt;
+//  用于查询点播低频和归档取回量统计数据。&lt;br/&gt;
 //
 // ## 接口功能 ##
-//
-//	用于查询点播低频和归档取回量统计数据。&lt;br/&gt;
+//  用于查询点播低频和归档取回量统计数据。&lt;br/&gt;
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VodClient) ShowVodRetrieval(request *model.ShowVodRetrievalRequest) (*model.ShowVodRetrievalResponse, error) {
@@ -1100,8 +1098,7 @@ func (c *VodClient) UpdateCoverByThumbnailInvoker(request *model.UpdateCoverByTh
 // UpdateStorageMode 修改媒资文件在obs的存储模式
 //
 // ## 接口功能 ##
-//
-//	修改媒资文件在obs的存储模式&lt;br/&gt;
+//   修改媒资文件在obs的存储模式&lt;br/&gt;
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VodClient) UpdateStorageMode(request *model.UpdateStorageModeRequest) (*model.UpdateStorageModeResponse, error) {

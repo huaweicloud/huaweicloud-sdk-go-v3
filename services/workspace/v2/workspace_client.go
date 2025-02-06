@@ -4795,8 +4795,7 @@ func (c *WorkspaceClient) ListDesktopSnapshotInvoker(request *model.ListDesktopS
 // 新增对应指标的通知规则;对应指标满足相应的规则条件时发送通知
 // 同一指标的规则不允许重复;
 // 统计指标名称，目前仅支持固定值：desktop_idle_duration
-//   - &#x60;desktop_idle_duration&#x60; -  桌面空闲时长, 仅允许设置 &#39;&gt;&#x3D;&#39; 阈值
-//
+//   * &#x60;desktop_idle_duration&#x60; -  桌面空闲时长, 仅允许设置 &#39;&gt;&#x3D;&#39; 阈值
 // 注：需先为云服务添加委托授权，否则无法正常发送通知到SMN
 //
 // Please refer to HUAWEI cloud API Explorer for details.

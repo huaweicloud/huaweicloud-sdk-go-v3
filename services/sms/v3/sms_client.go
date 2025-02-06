@@ -756,7 +756,7 @@ func (c *SmsClient) UpdateCommandResultInvoker(request *model.UpdateCommandResul
 
 // UpdateConsistencyResult 上传一致性校验结果
 //
-// # Agent 上传一致性校验结果简报
+// Agent 上传一致性校验结果简报
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmsClient) UpdateConsistencyResult(request *model.UpdateConsistencyResultRequest) (*model.UpdateConsistencyResultResponse, error) {

@@ -1,30 +1,31 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"strings"
 )
 
-// TaskListItemVo 任务列表项视图
+// TaskListItemVo 单个任务详情数据
 type TaskListItemVo struct {
 
-	// 任务编号
-	Id *string `json:"id,omitempty"`
+	// 任务ID
+	TaskId string `json:"task_id"`
 
-	// 状态
-	Status *TaskListItemVoStatus `json:"status,omitempty"`
+	// 任务状态
+	Status TaskListItemVoStatus `json:"status"`
 
-	// 开始时间（UTC）
-	StartTime *sdktime.SdkTime `json:"start_time,omitempty"`
+	// 开始时间
+	StartTime string `json:"start_time"`
 
-	// 结束时间（UTC）
-	EndTime *sdktime.SdkTime `json:"end_time,omitempty"`
+	// 结束时间
+	EndTime string `json:"end_time"`
 
-	// 创建时间（UTC）
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+	// 创建时间
+	CreateTime string `json:"create_time"`
 }
 
 func (o TaskListItemVo) String() string {
@@ -42,8 +43,13 @@ type TaskListItemVoStatus struct {
 
 type TaskListItemVoStatusEnum struct {
 	RUNNING   TaskListItemVoStatus
+	PENDING   TaskListItemVoStatus
+	EXPIRED   TaskListItemVoStatus
+	UNKNOWN   TaskListItemVoStatus
 	FAILED    TaskListItemVoStatus
-	SUCCESSED TaskListItemVoStatus
+	SUCCEEDED TaskListItemVoStatus
+	STOPPED   TaskListItemVoStatus
+	DELETED   TaskListItemVoStatus
 }
 
 func GetTaskListItemVoStatusEnum() TaskListItemVoStatusEnum {
@@ -51,11 +57,26 @@ func GetTaskListItemVoStatusEnum() TaskListItemVoStatusEnum {
 		RUNNING: TaskListItemVoStatus{
 			value: "Running",
 		},
+		PENDING: TaskListItemVoStatus{
+			value: "Pending",
+		},
+		EXPIRED: TaskListItemVoStatus{
+			value: "Expired",
+		},
+		UNKNOWN: TaskListItemVoStatus{
+			value: "Unknown",
+		},
 		FAILED: TaskListItemVoStatus{
 			value: "Failed",
 		},
-		SUCCESSED: TaskListItemVoStatus{
-			value: "Successed",
+		SUCCEEDED: TaskListItemVoStatus{
+			value: "Succeeded",
+		},
+		STOPPED: TaskListItemVoStatus{
+			value: "Stopped",
+		},
+		DELETED: TaskListItemVoStatus{
+			value: "Deleted",
 		},
 	}
 }

@@ -21,7 +21,7 @@ func ProjectManClientBuilder() *httpclient.HcHttpClientBuilder {
 
 // AddApplyJoinProjectForAgc AGC调用 当前用户申请加入项目
 //
-// # AGC调用 当前用户申请加入项目, 申请的用户id写在header中
+// AGC调用 当前用户申请加入项目, 申请的用户id写在header中
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ProjectManClient) AddApplyJoinProjectForAgc(request *model.AddApplyJoinProjectForAgcRequest) (*model.AddApplyJoinProjectForAgcResponse, error) {

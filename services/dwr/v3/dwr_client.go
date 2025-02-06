@@ -483,7 +483,7 @@ func (c *DwrClient) ShowWorkflowInfoInvoker(request *model.ShowWorkflowInfoReque
 
 // UpdateWorkflow 更新工作流
 //
-// # Update Workflow
+// Update Workflow
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwrClient) UpdateWorkflow(request *model.UpdateWorkflowRequest) (*model.UpdateWorkflowResponse, error) {

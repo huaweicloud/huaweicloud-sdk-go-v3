@@ -107,8 +107,7 @@ func (c *LakeFormationClient) BatchCheckPermissionInvoker(request *model.BatchCh
 //
 // 创建服务接入客户端。
 // 其他限制：
-//
-//	同一个实例下默认最多创建20个接入客户端。
+//   同一个实例下默认最多创建20个接入客户端。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *LakeFormationClient) CreateAccessClient(request *model.CreateAccessClientRequest) (*model.CreateAccessClientResponse, error) {

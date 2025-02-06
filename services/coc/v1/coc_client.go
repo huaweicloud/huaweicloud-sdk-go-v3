@@ -105,7 +105,7 @@ func (c *CocClient) CreateReportCustomEventInvoker(request *model.CreateReportCu
 
 // CreateReportPrometheusEvent Prometheus事件接入
 //
-// # Prometheus事件接入
+// Prometheus事件接入
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) CreateReportPrometheusEvent(request *model.CreateReportPrometheusEventRequest) (*model.CreateReportPrometheusEventResponse, error) {
@@ -126,7 +126,7 @@ func (c *CocClient) CreateReportPrometheusEventInvoker(request *model.CreateRepo
 
 // CreateCocIncident CreateExternalIncident 创建事件单
 //
-// # CreateExternalIncident 创建事件单
+// CreateExternalIncident 创建事件单
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) CreateCocIncident(request *model.CreateCocIncidentRequest) (*model.CreateCocIncidentResponse, error) {
@@ -147,7 +147,7 @@ func (c *CocClient) CreateCocIncidentInvoker(request *model.CreateCocIncidentReq
 
 // HandleCocIncident HandleCocIncident处理事件单
 //
-// # HandleCocIncident 处理事件单
+// HandleCocIncident 处理事件单
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) HandleCocIncident(request *model.HandleCocIncidentRequest) (*model.HandleCocIncidentResponse, error) {
@@ -168,7 +168,7 @@ func (c *CocClient) HandleCocIncidentInvoker(request *model.HandleCocIncidentReq
 
 // ListCocTicketOperationHistories GetCocTicketOperationHistories 获取事件单历史
 //
-// # ListCocTicketOperationHistories  获取事件单历史
+// ListCocTicketOperationHistories  获取事件单历史
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ListCocTicketOperationHistories(request *model.ListCocTicketOperationHistoriesRequest) (*model.ListCocTicketOperationHistoriesResponse, error) {
@@ -189,7 +189,7 @@ func (c *CocClient) ListCocTicketOperationHistoriesInvoker(request *model.ListCo
 
 // ShowCocIncidentDetail GetCocIncidentDetail 获取事件单详细
 //
-// # ShowCocIncidentDetail  获取事件单详细
+// ShowCocIncidentDetail  获取事件单详细
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ShowCocIncidentDetail(request *model.ShowCocIncidentDetailRequest) (*model.ShowCocIncidentDetailResponse, error) {
@@ -210,7 +210,7 @@ func (c *CocClient) ShowCocIncidentDetailInvoker(request *model.ShowCocIncidentD
 
 // CreateCocIssues CreateExternalIssues 创建问题单
 //
-// # CreateExternalIssues 创建问题单
+// CreateExternalIssues 创建问题单
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) CreateCocIssues(request *model.CreateCocIssuesRequest) (*model.CreateCocIssuesResponse, error) {
@@ -231,7 +231,7 @@ func (c *CocClient) CreateCocIssuesInvoker(request *model.CreateCocIssuesRequest
 
 // ShowCocIssuesDetail GetCocIssuesDetail 获取事件单详细
 //
-// # ShowCocIssuesDetail  获取事件单详细
+// ShowCocIssuesDetail  获取事件单详细
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ShowCocIssuesDetail(request *model.ShowCocIssuesDetailRequest) (*model.ShowCocIssuesDetailResponse, error) {

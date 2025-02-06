@@ -1386,6 +1386,7 @@ func (c *CloudtestClient) ListUserDnsMappingInvoker(request *model.ListUserDnsMa
 
 // ListUserPackageUsage ListUserPackageUsage
 //
+//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) ListUserPackageUsage(request *model.ListUserPackageUsageRequest) (*model.ListUserPackageUsageResponse, error) {
 	requestDef := GenReqDefForListUserPackageUsage()
@@ -1404,6 +1405,7 @@ func (c *CloudtestClient) ListUserPackageUsageInvoker(request *model.ListUserPac
 }
 
 // ListUserPopupInfo ListUserPopupInfo
+//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudtestClient) ListUserPopupInfo(request *model.ListUserPopupInfoRequest) (*model.ListUserPopupInfoResponse, error) {

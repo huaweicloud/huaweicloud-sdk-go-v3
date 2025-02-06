@@ -24,99 +24,95 @@ func AosClientBuilder() *httpclient.HcHttpClientBuilder {
 // 创建私有provider（CreatePrivateProvider）
 //
 // 创建一个私有的空provider。如果用户给予了provider_version和function_graph_urn，则在创建私有provider的同时，还会在私有provider下创建一个私有provider版本。
-//   - 私有provider允许用户将自定义的provider注册到RFS中，并仅提供给当前用户使用。
-//   - 如果同名私有provider在当前账户中已经存在，则会返回409。
-//   - 版本号遵循语义化版本号（Semantic Version），为用户自定义。
-//   - 在本API中，provider_version和function_graph_urn需要搭配使用，如果只指定其中一个参数，则会返回400。
-//   - 资源编排服务只会对function_graph_urn进行浅校验，如是否符合正则，是否仅指定为当前region等。并不会深度校验，即用户是否存在权限调用，是否真实存在等。
-//   - 该API会返回provider_source字段，该字段按照“huawei.com/private-provider/{provider_name}”的形式拼接。关于provider_name和provider_source字段在模板中的使用细节，详见下方描述中。
-//   - 如果用户期望使用名称中不含有大写英文的provider，可以按照如下展示将provider_source字段指定为模板中定义的required_providers中的source参数。
-//   - 如果用户期望使用名称含有大写英文的provider，需要将provider_name完全转化为小写英文创建。同时用户既可以在模板中使用API返回的provider_source参数，也可以在模板中以 “huawei.com/private-provider”为固定前缀，按照原含大写英文的provider_name，拼写provider_source参数。
+//   * 私有provider允许用户将自定义的provider注册到RFS中，并仅提供给当前用户使用。
+//   * 如果同名私有provider在当前账户中已经存在，则会返回409。
+//   * 版本号遵循语义化版本号（Semantic Version），为用户自定义。
+//   * 在本API中，provider_version和function_graph_urn需要搭配使用，如果只指定其中一个参数，则会返回400。
+//   * 资源编排服务只会对function_graph_urn进行浅校验，如是否符合正则，是否仅指定为当前region等。并不会深度校验，即用户是否存在权限调用，是否真实存在等。
+//   * 该API会返回provider_source字段，该字段按照“huawei.com/private-provider/{provider_name}”的形式拼接。关于provider_name和provider_source字段在模板中的使用细节，详见下方描述中。
+//   * 如果用户期望使用名称中不含有大写英文的provider，可以按照如下展示将provider_source字段指定为模板中定义的required_providers中的source参数。
+//   * 如果用户期望使用名称含有大写英文的provider，需要将provider_name完全转化为小写英文创建。同时用户既可以在模板中使用API返回的provider_source参数，也可以在模板中以 “huawei.com/private-provider”为固定前缀，按照原含大写英文的provider_name，拼写provider_source参数。
 //
 // 以HCL格式的模板为例，模板中引用私有provider的语法如下：
 // &#x60;&#x60;&#x60;
-//
-//	Provider \&quot;{provider_name}\&quot; {
-//	  source &#x3D; \&quot;{provider_source}\&quot;
-//	  version &#x3D; \&quot;{provider_version}\&quot;
-//	}
-//
+// Provider \&quot;{provider_name}\&quot; {
+//   source &#x3D; \&quot;{provider_source}\&quot;
+//   version &#x3D; \&quot;{provider_version}\&quot;
+// }
 // &#x60;&#x60;&#x60;
 //
 // 以JSON格式的模板为例，模板中引用私有provider的语法如下：
 // &#x60;&#x60;&#x60;
-//
-//	{
-//	  \&quot;terraform\&quot;:{
-//	    \&quot;required_providers\&quot;:[
-//	      {
-//	        \&quot;{provider_name}\&quot;:{
-//	          \&quot;source\&quot;:\&quot;{provider_source}\&quot;,
-//	          \&quot;version\&quot;:\&quot;{provider_version}\&quot;
-//	        }
-//	      }
-//	    ]
-//	  }
-//	}
-//
+// {
+//   \&quot;terraform\&quot;:{
+//     \&quot;required_providers\&quot;:[
+//       {
+//         \&quot;{provider_name}\&quot;:{
+//           \&quot;source\&quot;:\&quot;{provider_source}\&quot;,
+//           \&quot;version\&quot;:\&quot;{provider_version}\&quot;
+//         }
+//       }
+//     ]
+//   }
+// }
 // &#x60;&#x60;&#x60;
 //
 // RFS在支持用户使用FunctionGraph(以下简称：FG)的HTTP函数运行私有Provider时，定义了一套详细的对接规则，以实现RFS与私有Provider之间的成功交互。
 // 其中关于FG的HTTP函数使用，请参考官网文档： https://support.huaweicloud.com/productdesc-functiongraph/functiongraph_02_1002.html。
 // 用户需要在提供的FG的HTTP函数方法中，按照如下规则实现一系列对应方法：
-//  1. 用户需要首先在FG中启动一个HTTP Server，用于接受来自RFS的HTTP请求，请求的Path固定为\&quot;/provider\&quot;，请求方法为\&quot;POST\&quot;。RFS规定了发送给FG的HTTP请求体，请求体格式如下所示：
+//   1. 用户需要首先在FG中启动一个HTTP Server，用于接受来自RFS的HTTP请求，请求的Path固定为\&quot;/provider\&quot;，请求方法为\&quot;POST\&quot;。RFS规定了发送给FG的HTTP请求体，请求体格式如下所示：
 //     &#x60;&#x60;&#x60;
 //     {
-//     \&quot;method_name\&quot;: String,
-//     \&quot;request_data\&quot;: String,
-//     \&quot;context\&quot;:{
-//     \&quot;session_id\&quot;: String,
-//     \&quot;config_data\&quot;: String
+//       \&quot;method_name\&quot;: String,
+//       \&quot;request_data\&quot;: String,
+//       \&quot;context\&quot;:{
+//         \&quot;session_id\&quot;: String,
+//         \&quot;config_data\&quot;: String
+//       }
 //     }
-//     }
 //     &#x60;&#x60;&#x60;
-//     用户提供的FG的HTTP函数需要能够接收如上请求。否则会调用私有Provider失败，导致资源编排失败。
-//  2. 下面对FG中如何使用请求体中的各个参数，以实现FG与RFS的成功交互做详细解释：
-//     \&quot;method_name\&quot;：RFS期望FG的HTTP函数中调用的私有provider的gRPC方法名。RFS会在请求体中，根据实际业务场景，每次从如下方法中选择一个进行传递。其中每个方法名需要与provider中原生的gRPC方法一一对应。在收到携带有某个方法名的请求后，FG的HTTP函数内能够调用对应的私有provider的原生gRPC方法，实现具体资源的处理逻辑。
-//     provider内提供的原生gRPC协议请参考：tfplugin5.proto和grpc_controller.proto。方法名列表如下：
-//     &#x60;&#x60;&#x60;
-//     tfplugin5.proto：
-//     \&quot;/tfplugin5.Provider/GetSchema\&quot;
-//     \&quot;/tfplugin5.Provider/PrepareProviderConfig\&quot;
-//     \&quot;/tfplugin5.Provider/ValidateResourceTypeConfig\&quot;
-//     \&quot;/tfplugin5.Provider/ValidateDataSourceConfig\&quot;
-//     \&quot;/tfplugin5.Provider/UpgradeResourceState\&quot;
-//     \&quot;/tfplugin5.Provider/Configure\&quot;
-//     \&quot;/tfplugin5.Provider/ReadResource\&quot;
-//     \&quot;/tfplugin5.Provider/PlanResourceChange\&quot;
-//     \&quot;/tfplugin5.Provider/ApplyResourceChange\&quot;
-//     \&quot;/tfplugin5.Provider/ImportResourceState\&quot;
-//     \&quot;/tfplugin5.Provider/ReadDataSource\&quot;
-//     \&quot;/tfplugin5.Provider/Stop\&quot;
-//     grpc_controller.proto：
-//     \&quot;/plugin.GRPCController/Shutdown\&quot;
-//     &#x60;&#x60;&#x60;
-//     \&quot;request_data\&quot;：RFS传递给FG的HTTP函数中每个方法的请求内容。在每个方法的处理逻辑中，需要先将request_data中的数据使用base64解码，然后作为私有provider的gRPC方法的数据传入。
-//     \&quot;config_data\&quot;：用于自定义provider处理实际请求前的初始化，如果context中config_data非空，FG的HTTP函数需要先将config_data作为输入调用/tfplugin5.Provider/Configure方法，进行初始化，再根据method_name调用对应的方法获取响应。
-//     \&quot;session_id\&quot;：表示请求是否来自同一个模板中的同一批编排任务。session_id相同，表示请求来自同一个模板中的同一批编排任务。
-//     注意：用户启动的同一个provider进程不能接受多个来自RFS的请求。RFS推荐用户处理请求时，每次都启动新的进程处理相关请求。
-//  3. 在FG的HTTP函数中实现的请求响应按照固定格式进行返回，响应体的格式如下，成功响应码固定为200，任何其他响应码均视为失败请求，会导致资源编排失败。
+//      用户提供的FG的HTTP函数需要能够接收如上请求。否则会调用私有Provider失败，导致资源编排失败。
+//   2. 下面对FG中如何使用请求体中的各个参数，以实现FG与RFS的成功交互做详细解释：
+//      \&quot;method_name\&quot;：RFS期望FG的HTTP函数中调用的私有provider的gRPC方法名。RFS会在请求体中，根据实际业务场景，每次从如下方法中选择一个进行传递。其中每个方法名需要与provider中原生的gRPC方法一一对应。在收到携带有某个方法名的请求后，FG的HTTP函数内能够调用对应的私有provider的原生gRPC方法，实现具体资源的处理逻辑。
+//      provider内提供的原生gRPC协议请参考：tfplugin5.proto和grpc_controller.proto。方法名列表如下：
+//         &#x60;&#x60;&#x60;
+//         tfplugin5.proto：
+//           \&quot;/tfplugin5.Provider/GetSchema\&quot;
+//           \&quot;/tfplugin5.Provider/PrepareProviderConfig\&quot;
+//           \&quot;/tfplugin5.Provider/ValidateResourceTypeConfig\&quot;
+//           \&quot;/tfplugin5.Provider/ValidateDataSourceConfig\&quot;
+//           \&quot;/tfplugin5.Provider/UpgradeResourceState\&quot;
+//           \&quot;/tfplugin5.Provider/Configure\&quot;
+//           \&quot;/tfplugin5.Provider/ReadResource\&quot;
+//           \&quot;/tfplugin5.Provider/PlanResourceChange\&quot;
+//           \&quot;/tfplugin5.Provider/ApplyResourceChange\&quot;
+//           \&quot;/tfplugin5.Provider/ImportResourceState\&quot;
+//           \&quot;/tfplugin5.Provider/ReadDataSource\&quot;
+//           \&quot;/tfplugin5.Provider/Stop\&quot;
+//         grpc_controller.proto：
+//           \&quot;/plugin.GRPCController/Shutdown\&quot;
+//         &#x60;&#x60;&#x60;
+//      \&quot;request_data\&quot;：RFS传递给FG的HTTP函数中每个方法的请求内容。在每个方法的处理逻辑中，需要先将request_data中的数据使用base64解码，然后作为私有provider的gRPC方法的数据传入。
+//      \&quot;config_data\&quot;：用于自定义provider处理实际请求前的初始化，如果context中config_data非空，FG的HTTP函数需要先将config_data作为输入调用/tfplugin5.Provider/Configure方法，进行初始化，再根据method_name调用对应的方法获取响应。
+//      \&quot;session_id\&quot;：表示请求是否来自同一个模板中的同一批编排任务。session_id相同，表示请求来自同一个模板中的同一批编排任务。
+//      注意：用户启动的同一个provider进程不能接受多个来自RFS的请求。RFS推荐用户处理请求时，每次都启动新的进程处理相关请求。
+//   3. 在FG的HTTP函数中实现的请求响应按照固定格式进行返回，响应体的格式如下，成功响应码固定为200，任何其他响应码均视为失败请求，会导致资源编排失败。
 //     &#x60;&#x60;&#x60;
 //     {
-//     \&quot;response_data\&quot;: String,
-//     \&quot;error\&quot;: String
+//       \&quot;response_data\&quot;: String,
+//       \&quot;error\&quot;: String
 //     }
 //     &#x60;&#x60;&#x60;
 //     \&quot;response_data\&quot;：调用私有provider的gRPC方法返回的内容。在FG的HTTP函数中，需要将gRPC方法返回的响应序列化后使用base64编码返回。
 //     \&quot;error\&quot;：调用gRPC方法返回的错误信息。
 //
 // **约束与限制：**
-//  1. 私有provider为用户自行定义，提供给RFS的provider插件，RFS不负责校验其内部逻辑是否正确。
-//  2. RFS不负责维护私有provider的生命周期。用户使用私有provider部署的资源栈，由于私有provider缺失或问题，导致资源栈无法继续部署管理的，RFS不负责提供解决方案。
-//  3. RFS不负责保障私有provider的信息安全。用户使用私有provider部署的资源栈，由于模板中存在敏感数据，进而导致敏感信息泄露给第三方相关资源的，RFS不承担其相关责任。
-//  4. 当前调用私有provider过程中增加了网络因素，因此使用私有provider部署的失败概率会增加。如果出现因网络原因导致的部署失败，可以增加重试操作。
-//  5. 当前RFS会同步调用用户在FG中定义的一系列方法，单次方法需要确保运行时间不超过30s，否则会极大增加失败概率。
-//  6. 当前仅支持在模板中固定私有provider版本，不支持&gt;,&gt;&#x3D;,&lt;,&lt;&#x3D;,~&gt;等定义宽松版本的表达式。
+//   1. 私有provider为用户自行定义，提供给RFS的provider插件，RFS不负责校验其内部逻辑是否正确。
+//   2. RFS不负责维护私有provider的生命周期。用户使用私有provider部署的资源栈，由于私有provider缺失或问题，导致资源栈无法继续部署管理的，RFS不负责提供解决方案。
+//   3. RFS不负责保障私有provider的信息安全。用户使用私有provider部署的资源栈，由于模板中存在敏感数据，进而导致敏感信息泄露给第三方相关资源的，RFS不承担其相关责任。
+//   4. 当前调用私有provider过程中增加了网络因素，因此使用私有provider部署的失败概率会增加。如果出现因网络原因导致的部署失败，可以增加重试操作。
+//   5. 当前RFS会同步调用用户在FG中定义的一系列方法，单次方法需要确保运行时间不超过30s，否则会极大增加失败概率。
+//   6. 当前仅支持在模板中固定私有provider版本，不支持&gt;,&gt;&#x3D;,&lt;,&lt;&#x3D;,~&gt;等定义宽松版本的表达式。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) CreatePrivateProvider(request *model.CreatePrivateProviderRequest) (*model.CreatePrivateProviderResponse, error) {
@@ -139,9 +135,9 @@ func (c *AosClient) CreatePrivateProviderInvoker(request *model.CreatePrivatePro
 //
 // 创建私有provider版本（CreatePrivateProviderVersion）
 //
-//   - provider的版本号需遵循语义化版本号（Semantic Version），为用户自定义。
-//   - 如果provider_name和provider_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
-//   - 资源编排服务只会对function_graph_urn进行浅校验，如是否符合正则，是否仅指定为当前region等。并不会深度校验，即用户是否存在权限调用，是否真实存在等。
+//   * provider的版本号需遵循语义化版本号（Semantic Version），为用户自定义。
+//   * 如果provider_name和provider_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//   * 资源编排服务只会对function_graph_urn进行浅校验，如是否符合正则，是否仅指定为当前region等。并不会深度校验，即用户是否存在权限调用，是否真实存在等。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) CreatePrivateProviderVersion(request *model.CreatePrivateProviderVersionRequest) (*model.CreatePrivateProviderVersionResponse, error) {
@@ -174,13 +170,13 @@ func (c *AosClient) CreatePrivateProviderVersionInvoker(request *model.CreatePri
 // 如果不希望通过执行计划进行部署操作，也可以选择调用DeployStack进行直接部署
 //
 // 关于执行计划的过期失效：
-//  1. 如果指定资源栈下有多个执行计划，则在执行某个执行计划后（无论结果是否成功），剩余所有的执行计划将过期失效；
-//  2. 如果调用ApplyExecutionPlan时，指定的执行计划已经过期失效，则返回403
+//   1. 如果指定资源栈下有多个执行计划，则在执行某个执行计划后（无论结果是否成功），剩余所有的执行计划将过期失效；
+//   2. 如果调用ApplyExecutionPlan时，指定的执行计划已经过期失效，则返回403
 //
 // 如果资源栈状态处于非终态（即以&#x60;IN_PROGRESS&#x60;结尾，详细见下方）状态时，则不允许执行执行计划，并返回403。非终态状态包括但不限于以下状态：
-//   - 正在部署（DEPLOYMENT_IN_PROGRESS）
-//   - 正在删除（DELETION_IN_PROGRESS）
-//   - 正在回滚（ROLLBACK_IN_PROGRESS）
+//   * 正在部署（DEPLOYMENT_IN_PROGRESS）
+//   * 正在删除（DELETION_IN_PROGRESS）
+//   * 正在回滚（ROLLBACK_IN_PROGRESS）
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ApplyExecutionPlan(request *model.ApplyExecutionPlanRequest) (*model.ApplyExecutionPlanResponse, error) {
@@ -211,11 +207,11 @@ func (c *AosClient) ApplyExecutionPlanInvoker(request *model.ApplyExecutionPlanR
 // 执行计划不会做过多深层的检查和校验，如用户是否有权限生成、修改资源等
 //
 // **注意：**
-//   - 创建执行计划时，指定的资源栈必须存在。如果指定的资源栈不存在，则返回404，用户可通过调用创建资源栈（CreateStack）API来创建资源栈。
-//   - 如果请求中不含有template_body和template_uri，则返回400
-//   - 如果资源栈进行了某次部署操作，则在该次部署操作前生成的执行计划将全部失效
-//   - 执行计划只代表生成时刻的结果，如果执行计划生成后，用户手动修改资源状态，则执行计划不会自动更新
-//   - 如果资源栈状态处于&#x60;DEPLOYMENT_IN_PROGRESS&#x60;、&#x60;ROLLBACK_IN_PROGRESS&#x60;、&#x60;DELETION_IN_PROGRESS&#x60;等状态时，则不允许创建执行计划，并返回403
+//   * 创建执行计划时，指定的资源栈必须存在。如果指定的资源栈不存在，则返回404，用户可通过调用创建资源栈（CreateStack）API来创建资源栈。
+//   * 如果请求中不含有template_body和template_uri，则返回400
+//   * 如果资源栈进行了某次部署操作，则在该次部署操作前生成的执行计划将全部失效
+//   * 执行计划只代表生成时刻的结果，如果执行计划生成后，用户手动修改资源状态，则执行计划不会自动更新
+//   * 如果资源栈状态处于&#x60;DEPLOYMENT_IN_PROGRESS&#x60;、&#x60;ROLLBACK_IN_PROGRESS&#x60;、&#x60;DELETION_IN_PROGRESS&#x60;等状态时，则不允许创建执行计划，并返回403
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) CreateExecutionPlan(request *model.CreateExecutionPlanRequest) (*model.CreateExecutionPlanResponse, error) {
@@ -266,54 +262,54 @@ func (c *AosClient) DeleteExecutionPlanInvoker(request *model.DeleteExecutionPla
 // 此API可以基于一份已有的执行计划中增量的资源进行询价，当前支持询价的计费模式有包周期计费、按需计费、免费，暂不支持其他形式的计费模式，例如竞价计费模式等。
 //
 // 注：
-//   - 由于某些资源的属性值含有默认值，且该属性和询价参数相关。如果用户的模板中描述的资源没有声明这些属性，则询价结果可能存在偏差。
-//   - 询价结果仅为预估结果，具体请以实际为准。
-//   - 如果用户在模板中使用了depends_on参数，如A资源询价必要字段依赖于B资源的创建，则A资源不支持询价。
-//   - 暂不支持传入data sources的flavor.id的场景的询价。
-//   - 暂不支持镜像询价。
-//   - 如果A资源的询价必要字段设置了sensitive &#x3D; true，则A资源不支持询价。
-//   - 模板中询价的资源的个数是有限制的。当前一个模板中最多支持12个包周期计费资源和24个按需计费资源。
-//   - 支持询价的资源列表和询价必要参数
-//   - huaweicloud_cce_cluster:
-//   - 支持的计费模式：包周期、按需
-//   - huaweicloud_css_cluster:
-//   - 支持的计费模式：按需
-//   - huaweicloud_evs_volume:
-//   - 支持的计费模式：包周期、按需
-//   - 询价必要参数：size（磁盘规格）
-//   - huaweicloud_compute_instance:
-//   - 支持的计费模式：包周期、按需
-//   - 询价必要参数：flavor_id（规格ID）、flavor_name（规格名称，flavor_id和flavor_name至少给出一个）、system_disk_size（系统磁盘大小）
-//   - huaweicloud_vpc_bandwidth:
-//   - 支持的计费模式：按需
-//   - 询价必要参数：charge_mode仅支持bandwidth
-//   - huaweicloud_vpc_eip:
-//   - 支持的计费模式：包周期、按需
-//   - 询价必要参数：bandwidth.size（带宽大小）
-//   - huaweicloud_gaussdb_redis_instance:
-//   - 支持的计费模式：包周期、按需
-//   - huaweicloud_nat_gateway:
-//   - 支持的计费模式：按需
-//   - huaweicloud_rds_instance:
-//   - 支持的计费模式：包周期、按需
-//   - 支持的数据库类型：MySQL、PostgreSQL、Microsoft SQL Server
-//   - huaweicloud_sfs_turbo:
-//   - 支持的计费模式：按需
-//   - 询价必要参数：share_type（文件系统类型）
-//   - huaweicloud_dms_kafka_instance:
-//   - 支持的计费模式：按需
-//   - 询价必要参数：flavor_id（规格ID）、product_id（产品ID。flavor_id和product_id至少给出一个。）、storage_space（存储容量）
-//   - huaweicloud_dcs_instance:
-//   - 支持的计费模式：包周期、按需
-//   - huaweicloud_gaussdb_mysql_instance:
-//   - 支持的计费模式：包周期、按需
-//   - 询价必要参数：proxy_node_number（代理节点数量）、volume_size（挂载卷的存储空间）
-//   - huaweicloud_vpc:
-//   - 支持的计费模式：免费
-//   - huaweicloud_drs_job:
-//   - 支持的计费模式：按需
-//   - huaweicloud_apig_instance:
-//   - 支持的计费模式：按需
+//   * 由于某些资源的属性值含有默认值，且该属性和询价参数相关。如果用户的模板中描述的资源没有声明这些属性，则询价结果可能存在偏差。
+//   * 询价结果仅为预估结果，具体请以实际为准。
+//   * 如果用户在模板中使用了depends_on参数，如A资源询价必要字段依赖于B资源的创建，则A资源不支持询价。
+//   * 暂不支持传入data sources的flavor.id的场景的询价。
+//   * 暂不支持镜像询价。
+//   * 如果A资源的询价必要字段设置了sensitive &#x3D; true，则A资源不支持询价。
+//   * 模板中询价的资源的个数是有限制的。当前一个模板中最多支持12个包周期计费资源和24个按需计费资源。
+//   * 支持询价的资源列表和询价必要参数
+//       * huaweicloud_cce_cluster:
+//           * 支持的计费模式：包周期、按需
+//       * huaweicloud_css_cluster:
+//           * 支持的计费模式：按需
+//       * huaweicloud_evs_volume:
+//           * 支持的计费模式：包周期、按需
+//           * 询价必要参数：size（磁盘规格）
+//       * huaweicloud_compute_instance:
+//           * 支持的计费模式：包周期、按需
+//           * 询价必要参数：flavor_id（规格ID）、flavor_name（规格名称，flavor_id和flavor_name至少给出一个）、system_disk_size（系统磁盘大小）
+//       * huaweicloud_vpc_bandwidth:
+//           * 支持的计费模式：按需
+//           * 询价必要参数：charge_mode仅支持bandwidth
+//       * huaweicloud_vpc_eip:
+//           * 支持的计费模式：包周期、按需
+//           * 询价必要参数：bandwidth.size（带宽大小）
+//       * huaweicloud_gaussdb_redis_instance:
+//           * 支持的计费模式：包周期、按需
+//       * huaweicloud_nat_gateway:
+//           * 支持的计费模式：按需
+//       * huaweicloud_rds_instance:
+//           * 支持的计费模式：包周期、按需
+//           * 支持的数据库类型：MySQL、PostgreSQL、Microsoft SQL Server
+//       * huaweicloud_sfs_turbo:
+//           * 支持的计费模式：按需
+//           * 询价必要参数：share_type（文件系统类型）
+//       * huaweicloud_dms_kafka_instance:
+//           * 支持的计费模式：按需
+//           * 询价必要参数：flavor_id（规格ID）、product_id（产品ID。flavor_id和product_id至少给出一个。）、storage_space（存储容量）
+//       * huaweicloud_dcs_instance:
+//           * 支持的计费模式：包周期、按需
+//       * huaweicloud_gaussdb_mysql_instance:
+//           * 支持的计费模式：包周期、按需
+//           * 询价必要参数：proxy_node_number（代理节点数量）、volume_size（挂载卷的存储空间）
+//       * huaweicloud_vpc:
+//           * 支持的计费模式：免费
+//       * huaweicloud_drs_job:
+//           * 支持的计费模式：按需
+//       * huaweicloud_apig_instance:
+//           * 支持的计费模式：按需
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) EstimateExecutionPlanPrice(request *model.EstimateExecutionPlanPriceRequest) (*model.EstimateExecutionPlanPriceResponse, error) {
@@ -390,12 +386,12 @@ func (c *AosClient) GetExecutionPlanMetadataInvoker(request *model.GetExecutionP
 //
 // 列举当前局点下用户指定资源栈下所有的执行计划
 //
-//   - 默认按照生成时间降序排序，最新生成的在最前
-//   - 注意：目前暂时返回全量执行计划信息，即不支持分页
-//   - 如果指定的资源栈下没有任何执行计划，则返回空list
-//   - 如果指定的资源栈不存在，则返回404
+//   * 默认按照生成时间降序排序，最新生成的在最前
+//   * 注意：目前暂时返回全量执行计划信息，即不支持分页
+//   * 如果指定的资源栈下没有任何执行计划，则返回空list
+//   * 如果指定的资源栈不存在，则返回404
 //
-// # ListExecutionPlans返回的只有摘要信息（具体摘要信息见ListExecutionPlansResponseBody），如果用户需要详细的执行计划元数据请调用GetExecutionPlanMetadata
+// ListExecutionPlans返回的只有摘要信息（具体摘要信息见ListExecutionPlansResponseBody），如果用户需要详细的执行计划元数据请调用GetExecutionPlanMetadata
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListExecutionPlans(request *model.ListExecutionPlansRequest) (*model.ListExecutionPlansResponse, error) {
@@ -421,32 +417,32 @@ func (c *AosClient) ListExecutionPlansInvoker(request *model.ListExecutionPlansR
 // 创建一个带有初始默认版本的私有hook，创建私有hook的时候需要同时创建一个初始化的默认版本，不允许空私有hook的创建。
 // 设置配置(Configuration)后的私有hook才会在触发资源栈部署时生效，资源栈使用私有hook的默认版本。若创建私有hook时未指定配置项，则该私有hook在资源栈部署时不生效，后续可通过UpdatePrivateHook API更新配置。
 //
-//   - 支持hook策略模板检验的资源栈服务API：
-//     CreateExecutionPlan
-//     ApplyExecutionPlan
-//     CreateStack
-//     DeployStack
-//     ContinueDeployStack
-//     DeleteStack
-//     DeleteStackEnhanced
-//   - 创建私有hook时指定的版本为初始默认版本。
-//   - 如果同名的私有hook在当前domain_id+region下已经存在，则会返回409。
-//   - 私有hook版本号遵循语义化版本号（Semantic Version），为用户自定义。
-//   - 资源编排服务会对私有hook进行校验，如文件大小，策略文件语法校验等。若存在错误，则会创建失败。
-//   - 当前仅支持部署资源前的检测，不支持部署资源过程中的检测。如果通过了部署资源前的检测，资源栈则会继续部署资源。反之会停止部署资源，并记录资源栈事件（stack events）。
-//   - 仅支持OPA开源引擎识别的，以Rego（https://www.openpolicyagent.org/docs/latest/policy-language/）语言编写的策略模板(用户可以通过policy_uri或policy_body给予策略文件内容)。
-//   - 策略模板中的决策结果使用object类型的hook_result，hook_result所在包的包名必须使用policy。hook_result格式如下：
-//     &#x60;&#x60;&#x60;
-//     hook_result :&#x3D; {
-//     \&quot;is_passed\&quot;: Bool,
-//     \&quot;err_msg\&quot;: String,
-//     }
-//     &#x60;&#x60;&#x60;
+//   * 支持hook策略模板检验的资源栈服务API：
+//       CreateExecutionPlan
+//       ApplyExecutionPlan
+//       CreateStack
+//       DeployStack
+//       ContinueDeployStack
+//       DeleteStack
+//       DeleteStackEnhanced
+//   * 创建私有hook时指定的版本为初始默认版本。
+//   * 如果同名的私有hook在当前domain_id+region下已经存在，则会返回409。
+//   * 私有hook版本号遵循语义化版本号（Semantic Version），为用户自定义。
+//   * 资源编排服务会对私有hook进行校验，如文件大小，策略文件语法校验等。若存在错误，则会创建失败。
+//   * 当前仅支持部署资源前的检测，不支持部署资源过程中的检测。如果通过了部署资源前的检测，资源栈则会继续部署资源。反之会停止部署资源，并记录资源栈事件（stack events）。
+//   * 仅支持OPA开源引擎识别的，以Rego（https://www.openpolicyagent.org/docs/latest/policy-language/）语言编写的策略模板(用户可以通过policy_uri或policy_body给予策略文件内容)。
+//   * 策略模板中的决策结果使用object类型的hook_result，hook_result所在包的包名必须使用policy。hook_result格式如下：
+//       &#x60;&#x60;&#x60;
+//       hook_result :&#x3D; {
+//         \&quot;is_passed\&quot;: Bool,
+//         \&quot;err_msg\&quot;: String,
+//       }
+//       &#x60;&#x60;&#x60;
 //     其中is_passed必选，err_msg可选。RFS通过查询policy.hook_result[is_passed]判断是否通过策略校验。
-//   - 如果policy.hook_result[is_passed]的结果是true，则表示通过策略校验，资源编排服务会继续部署资源。
-//   - 如果policy.hook_result[is_passed]的结果是false，则表示没有通过策略校验，资源编排服务会停止部署资源。并记录资源栈事件信息，信息的内容为policy.hook_result[err_msg]。如果没有设置err_msg，则资源栈事件信息内容为默认错误信息（校验私有hook失败）。
-//   - 如果没有使用policy.hook_result，则该策略不会生效，资源编排服务会继续部署资源。
-//   - 策略模板中不支持调用其他服务API等方式获取数据、不支持任何形式的网络访问、不支持以任何形式的自定义函数或者方法等、不支持读取本地文件以及系统操作。
+//     * 如果policy.hook_result[is_passed]的结果是true，则表示通过策略校验，资源编排服务会继续部署资源。
+//     * 如果policy.hook_result[is_passed]的结果是false，则表示没有通过策略校验，资源编排服务会停止部署资源。并记录资源栈事件信息，信息的内容为policy.hook_result[err_msg]。如果没有设置err_msg，则资源栈事件信息内容为默认错误信息（校验私有hook失败）。
+//     * 如果没有使用policy.hook_result，则该策略不会生效，资源编排服务会继续部署资源。
+//   * 策略模板中不支持调用其他服务API等方式获取数据、不支持任何形式的网络访问、不支持以任何形式的自定义函数或者方法等、不支持读取本地文件以及系统操作。
 //
 // 私有hook的策略模板语法如下：
 // &#x60;&#x60;&#x60;
@@ -454,11 +450,10 @@ func (c *AosClient) ListExecutionPlansInvoker(request *model.ListExecutionPlansR
 //
 // import rego.v1
 //
-//	hook_result :&#x3D; {
-//	  \&quot;is_passed\&quot;: input.message &#x3D;&#x3D; \&quot;world\&quot;,
-//	  \&quot;err_msg\&quot;: \&quot;The error msg when private hook is not passed the validation\&quot;,
-//	}
-//
+// hook_result :&#x3D; {
+//   \&quot;is_passed\&quot;: input.message &#x3D;&#x3D; \&quot;world\&quot;,
+//   \&quot;err_msg\&quot;: \&quot;The error msg when private hook is not passed the validation\&quot;,
+// }
 // &#x60;&#x60;&#x60;
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -484,9 +479,9 @@ func (c *AosClient) CreatePrivateHookInvoker(request *model.CreatePrivateHookReq
 //
 // 创建私有hook版本，创建私有hook版本后需要调用UpdatePrivateHook API设置为默认版本才能生效。
 //
-//   - 版本号遵循语义化版本号（Semantic Version），为用户自定义。
-//   - 若hook_name和hook_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
-//   - 资源编排服务会对私有hook进行校验，如文件大小，策略文件语法校验等。若存在错误，则会创建失败。
+//   * 版本号遵循语义化版本号（Semantic Version），为用户自定义。
+//   * 若hook_name和hook_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//   * 资源编排服务会对私有hook进行校验，如文件大小，策略文件语法校验等。若存在错误，则会创建失败。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) CreatePrivateHookVersion(request *model.CreatePrivateHookVersionRequest) (*model.CreatePrivateHookVersionResponse, error) {
@@ -511,8 +506,8 @@ func (c *AosClient) CreatePrivateHookVersionInvoker(request *model.CreatePrivate
 //
 // 删除某个私有hook以及私有hook下的全部hook版本
 //
-//   - 默认版本只能调用本API删除，除默认版本外的其它版本可以调用DeletePrivateHookVersion API删除。
-//   - 若hook_name和hook_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//   * 默认版本只能调用本API删除，除默认版本外的其它版本可以调用DeletePrivateHookVersion API删除。
+//   * 若hook_name和hook_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
 //
 // **请谨慎操作，删除私有hook将会删除该私有hook和该私有hook下的所有私有hook版本。**
 //
@@ -539,8 +534,8 @@ func (c *AosClient) DeletePrivateHookInvoker(request *model.DeletePrivateHookReq
 //
 // 删除某个私有hook版本
 //
-//   - 默认版本只能调用DeletePrivateHook API删除，除默认版本外的其它版本都可以调用本API删除。
-//   - 若hook_name和hook_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//   * 默认版本只能调用DeletePrivateHook API删除，除默认版本外的其它版本都可以调用本API删除。
+//   * 若hook_name和hook_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
 //
 // **请谨慎操作**
 //
@@ -567,10 +562,10 @@ func (c *AosClient) DeletePrivateHookVersionInvoker(request *model.DeletePrivate
 //
 // 列举当前局点下用户所有的私有hook。
 //
-//   - 可以使用sort_key和sort_dir两个关键字对返回结果按创建时间（create_time）进行排序。给予的sort_key和sort_dir的数量须一致，否则返回400。若未给予sort_key和sort_dir，则默认按照创建时间降序排序。
-//   - 注意：目前暂时返回全量hook的信息，即不支持分页。
-//   - 若当前用户没有任何私有hook，则返回空list。
-//   - 具体返回的信息见ListPrivateHooksResponseBody。
+//   * 可以使用sort_key和sort_dir两个关键字对返回结果按创建时间（create_time）进行排序。给予的sort_key和sort_dir的数量须一致，否则返回400。若未给予sort_key和sort_dir，则默认按照创建时间降序排序。
+//   * 注意：目前暂时返回全量hook的信息，即不支持分页。
+//   * 若当前用户没有任何私有hook，则返回空list。
+//   * 具体返回的信息见ListPrivateHooksResponseBody。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListPrivateHooks(request *model.ListPrivateHooksRequest) (*model.ListPrivateHooksResponse, error) {
@@ -595,8 +590,8 @@ func (c *AosClient) ListPrivateHooksInvoker(request *model.ListPrivateHooksReque
 //
 // 获取某个私有hook的元数据信息
 //
-//   - 具体返回的信息见ShowPrivateHookMetadataResponseBody，若想查看私有hook下全部版本，请调用ListPrivateHookVersions。
-//   - 若hook_name和hook_id同时存在，则资源编排服务会检查两个是否匹配，如果不匹配则会返回400。
+//   * 具体返回的信息见ShowPrivateHookMetadataResponseBody，若想查看私有hook下全部版本，请调用ListPrivateHookVersions。
+//   * 若hook_name和hook_id同时存在，则资源编排服务会检查两个是否匹配，如果不匹配则会返回400。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ShowPrivateHookMetadata(request *model.ShowPrivateHookMetadataRequest) (*model.ShowPrivateHookMetadataResponse, error) {
@@ -621,8 +616,8 @@ func (c *AosClient) ShowPrivateHookMetadataInvoker(request *model.ShowPrivateHoo
 //
 // 获取当前私有hook对应版本的元数据信息
 //
-//   - 具体返回的信息见ShowPrivateHookVersionMetadataResponseBody。
-//   - 如果hook_name和hook_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//   * 具体返回的信息见ShowPrivateHookVersionMetadataResponseBody。
+//   * 如果hook_name和hook_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ShowPrivateHookVersionMetadata(request *model.ShowPrivateHookVersionMetadataRequest) (*model.ShowPrivateHookVersionMetadataResponse, error) {
@@ -647,8 +642,8 @@ func (c *AosClient) ShowPrivateHookVersionMetadataInvoker(request *model.ShowPri
 //
 // 获取指定私有hook对应版本的策略。
 //
-//   - 如果获取成功，则以临时重定向形式返回私有hook版本策略下载链接（OBS Pre Signed地址，有效期为5分钟），大多数的客户端会进行自动重定向并下载私有hook版本策略。
-//   - 如果未进行自动重定向，请参考HTTP的重定向规则获取私有hook版本策略下载链接，手动下载私有hook版本策略。
+//   * 如果获取成功，则以临时重定向形式返回私有hook版本策略下载链接（OBS Pre Signed地址，有效期为5分钟），大多数的客户端会进行自动重定向并下载私有hook版本策略。
+//   * 如果未进行自动重定向，请参考HTTP的重定向规则获取私有hook版本策略下载链接，手动下载私有hook版本策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ShowPrivateHookVersionPolicy(request *model.ShowPrivateHookVersionPolicyRequest) (*model.ShowPrivateHookVersionPolicyResponse, error) {
@@ -673,12 +668,12 @@ func (c *AosClient) ShowPrivateHookVersionPolicyInvoker(request *model.ShowPriva
 //
 // 更新当前私有hook的元数据信息
 //
-//   - 目前支持更新私有hook的描述、默认版本、配置。
-//   - 如果需要创建新的版本，请调用CreatePrivateHookVersion。
-//   - 更新为增量更新，即如果某个参数不提供，则保持原始值。
-//   - 如果请求中没有需要被更新的参数（如请求中没有任何内容，或仅有hook_id），则返回400。注意：即使更新原始值和目标值一致也被认为是有效更新
-//   - 更新后私有hook的更新时间（update_time）也会被更新
-//   - 若hook_name和hook_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//   * 目前支持更新私有hook的描述、默认版本、配置。
+//   * 如果需要创建新的版本，请调用CreatePrivateHookVersion。
+//   * 更新为增量更新，即如果某个参数不提供，则保持原始值。
+//   * 如果请求中没有需要被更新的参数（如请求中没有任何内容，或仅有hook_id），则返回400。注意：即使更新原始值和目标值一致也被认为是有效更新
+//   * 更新后私有hook的更新时间（update_time）也会被更新
+//   * 若hook_name和hook_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) UpdatePrivateHookMetadata(request *model.UpdatePrivateHookMetadataRequest) (*model.UpdatePrivateHookMetadataResponse, error) {
@@ -702,31 +697,27 @@ func (c *AosClient) UpdatePrivateHookMetadataInvoker(request *model.UpdatePrivat
 // 创建私有模块（CreatePrivateModule）
 //
 // 创建一个空的私有模块。如果用户给予了module_version与module_uri，则在创建私有模块的同时，在私有模块下创建一个私有模块版本。
-//   - 模块允许用户将可复用的代码编辑在一起供模块使用。
-//   - 如果同名私有模块在当前账户中已经存在，则会返回失败。
-//   - 版本号遵循语义化版本号（Semantic Version），为用户自定义。
-//   - 资源编排服务只会对模块进行浅校验，如文件大小、是否可以解压、文件数量等。并不会深度校验，即不会做语法类校验。
+//   * 模块允许用户将可复用的代码编辑在一起供模块使用。
+//   * 如果同名私有模块在当前账户中已经存在，则会返回失败。
+//   * 版本号遵循语义化版本号（Semantic Version），为用户自定义。
+//   * 资源编排服务只会对模块进行浅校验，如文件大小、是否可以解压、文件数量等。并不会深度校验，即不会做语法类校验。
 //
 // 以HCL格式的模板为例，模板中引用私有模块的语法如下：
 // &#x60;&#x60;&#x60;
-//
-//	module \&quot;my_hello_word_module\&quot; {
-//	  source &#x3D; \&quot;rf://rfs.{region_id}.myhuaweicloud.com/private/{domain_id}/{module_name}?version&#x3D;&#x3D;{module_version}\&quot;
-//	}
-//
+// module \&quot;my_hello_word_module\&quot; {
+//   source &#x3D; \&quot;rf://rfs.{region_id}.myhuaweicloud.com/private/{domain_id}/{module_name}?version&#x3D;&#x3D;{module_version}\&quot;
+// }
 // &#x60;&#x60;&#x60;
 //
 // 以JSON格式的模板为例，模板中引用私有模块的语法如下：
 // &#x60;&#x60;&#x60;
-//
-//	{
-//	  \&quot;module\&quot;: {
-//	    \&quot;my_hello_word_module\&quot;: {
-//	      \&quot;source\&quot;: \&quot;rf://rfs.{region_id}.myhuaweicloud.com/private/{domain_id}/{module_name}?version&#x3D;&#x3D;{module_version}\&quot;
-//	    }
-//	  }
-//	}
-//
+// {
+//   \&quot;module\&quot;: {
+//     \&quot;my_hello_word_module\&quot;: {
+//       \&quot;source\&quot;: \&quot;rf://rfs.{region_id}.myhuaweicloud.com/private/{domain_id}/{module_name}?version&#x3D;&#x3D;{module_version}\&quot;
+//     }
+//   }
+// }
 // &#x60;&#x60;&#x60;
 // 对应上述两个例子中的模块链接（source字段的内容）可以调用ShowPrivateModuleVersionMetadata返回的module_source字段中获取
 //
@@ -753,9 +744,9 @@ func (c *AosClient) CreatePrivateModuleInvoker(request *model.CreatePrivateModul
 //
 // 创建新的私有模块版本
 //
-//   - 模块的版本号需遵循语义化版本号（Semantic Version），为用户自定义。
-//   - 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
-//   - 资源编排服务只会对模块进行浅校验，如文件大小、是否可以解压、文件数量等。并不会深度校验，即不会做语法类校验。
+//   * 模块的版本号需遵循语义化版本号（Semantic Version），为用户自定义。
+//   * 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//   * 资源编排服务只会对模块进行浅校验，如文件大小、是否可以解压、文件数量等。并不会深度校验，即不会做语法类校验。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) CreatePrivateModuleVersion(request *model.CreatePrivateModuleVersionRequest) (*model.CreatePrivateModuleVersionResponse, error) {
@@ -780,7 +771,7 @@ func (c *AosClient) CreatePrivateModuleVersionInvoker(request *model.CreatePriva
 //
 // 删除某个私有模块以及私有模块下的全部模块版本
 //
-//   - 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//   * 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
 //
 // **请谨慎操作，删除私有模块将会删除该私有模块下的所有的模块版本。**
 //
@@ -807,7 +798,7 @@ func (c *AosClient) DeletePrivateModuleInvoker(request *model.DeletePrivateModul
 //
 // 删除某个私有模块版本
 //
-//   - 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//   * 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
 //
 // **请谨慎操作**
 //
@@ -834,11 +825,11 @@ func (c *AosClient) DeletePrivateModuleVersionInvoker(request *model.DeletePriva
 //
 // 列举所选择的私有模块中所有的模块版本信息。
 //
-//   - 可以使用sort_key和sort_dir两个关键字对返回结果按创建时间（create_time）进行排序。给予的sort_key和sort_dir数量须一致，否则返回400。如果未给予sort_key和sort_dir，则默认按照创建时间降序排序。
-//   - 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
-//   - 如果模块不存在则返回404。
+//   * 可以使用sort_key和sort_dir两个关键字对返回结果按创建时间（create_time）进行排序。给予的sort_key和sort_dir数量须一致，否则返回400。如果未给予sort_key和sort_dir，则默认按照创建时间降序排序。
+//   * 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//   * 如果模块不存在则返回404。
 //
-// # ListPrivateModuleVersions返回的只有摘要信息（具体摘要信息见ListPrivateModuleVersionsResponseBody），如果用户需要详细的模块版本元数据请调用ShowPrivateModuleVersionMetadata
+// ListPrivateModuleVersions返回的只有摘要信息（具体摘要信息见ListPrivateModuleVersionsResponseBody），如果用户需要详细的模块版本元数据请调用ShowPrivateModuleVersionMetadata
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListPrivateModuleVersions(request *model.ListPrivateModuleVersionsRequest) (*model.ListPrivateModuleVersionsResponse, error) {
@@ -863,11 +854,11 @@ func (c *AosClient) ListPrivateModuleVersionsInvoker(request *model.ListPrivateM
 //
 // 列举当前局点下用户所有的私有模块。
 //
-//   - 可以使用sort_key和sort_dir两个关键字对返回结果按创建时间（create_time）进行排序。给予的sort_key和sort_dir数量须一致，否则返回400。如果未给予sort_key和sort_dir，则默认按照创建时间降序排序。
-//   - 如果当前用户下没有任何私有模块，则返回空list。
-//   - 如果需要某个模块的所有版本信息，可以调用ListModuleVersions。
+//   * 可以使用sort_key和sort_dir两个关键字对返回结果按创建时间（create_time）进行排序。给予的sort_key和sort_dir数量须一致，否则返回400。如果未给予sort_key和sort_dir，则默认按照创建时间降序排序。
+//   * 如果当前用户下没有任何私有模块，则返回空list。
+//   * 如果需要某个模块的所有版本信息，可以调用ListModuleVersions。
 //
-// # ListPrivateModules返回的只有摘要信息（具体摘要信息见ListPrivateModulesResponseBody），如果用户需要详细的模块元数据请调用ShowPrivateModuleMetadata
+// ListPrivateModules返回的只有摘要信息（具体摘要信息见ListPrivateModulesResponseBody），如果用户需要详细的模块元数据请调用ShowPrivateModuleMetadata
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListPrivateModules(request *model.ListPrivateModulesRequest) (*model.ListPrivateModulesResponse, error) {
@@ -892,8 +883,8 @@ func (c *AosClient) ListPrivateModulesInvoker(request *model.ListPrivateModulesR
 //
 // 获取当前私有模块的元数据信息
 //
-//   - 具体返回的信息见ShowPrivateModuleMetadataResponseBody，如果想查看私有模块下全部模块版本，请调用ListPrivateModuleVersions。
-//   - 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//   * 具体返回的信息见ShowPrivateModuleMetadataResponseBody，如果想查看私有模块下全部模块版本，请调用ListPrivateModuleVersions。
+//   * 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ShowPrivateModuleMetadata(request *model.ShowPrivateModuleMetadataRequest) (*model.ShowPrivateModuleMetadataResponse, error) {
@@ -918,8 +909,8 @@ func (c *AosClient) ShowPrivateModuleMetadataInvoker(request *model.ShowPrivateM
 //
 // 获取指定私有模块对应版本的内容。
 //
-//   - 如果获取成功，则以临时重定向形式返回模块下载链接（OBS Pre Signed地址，有效期为5分钟），大多数的客户端会进行自动重定向并下载模块；
-//   - 如果未进行自动重定向，请参考HTTP的重定向规则获取模块下载链接，手动下载模块。
+//   * 如果获取成功，则以临时重定向形式返回模块下载链接（OBS Pre Signed地址，有效期为5分钟），大多数的客户端会进行自动重定向并下载模块；
+//   * 如果未进行自动重定向，请参考HTTP的重定向规则获取模块下载链接，手动下载模块。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ShowPrivateModuleVersionContent(request *model.ShowPrivateModuleVersionContentRequest) (*model.ShowPrivateModuleVersionContentResponse, error) {
@@ -944,8 +935,8 @@ func (c *AosClient) ShowPrivateModuleVersionContentInvoker(request *model.ShowPr
 //
 // 获取当前私有模块对应的版本的元数据信息
 //
-//   - 具体返回的信息见ShowPrivateModuleVersionMetadataResponseBody。
-//   - 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//   * 具体返回的信息见ShowPrivateModuleVersionMetadataResponseBody。
+//   * 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ShowPrivateModuleVersionMetadata(request *model.ShowPrivateModuleVersionMetadataRequest) (*model.ShowPrivateModuleVersionMetadataResponse, error) {
@@ -970,12 +961,12 @@ func (c *AosClient) ShowPrivateModuleVersionMetadataInvoker(request *model.ShowP
 //
 // 更新当前私有模块的元数据信息
 //
-//   - 目前只支持更新私有模块的描述
-//   - 如果需要创建新的版本，请调用CreatePrivateModuleVersion
-//   - 更新为增量更新，即如果某个参数不提供，则保持原始值
-//   - 如果请求中没有需要被更新的参数，则返回400。注意：即使更新原始值和目标值一致也被认为是有效更新
-//   - 更新后私有模块的更新时间（update_time）也会被更新
-//   - 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//   * 目前只支持更新私有模块的描述
+//   * 如果需要创建新的版本，请调用CreatePrivateModuleVersion
+//   * 更新为增量更新，即如果某个参数不提供，则保持原始值
+//   * 如果请求中没有需要被更新的参数，则返回400。注意：即使更新原始值和目标值一致也被认为是有效更新
+//   * 更新后私有模块的更新时间（update_time）也会被更新
+//   * 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) UpdatePrivateModuleMetadata(request *model.UpdatePrivateModuleMetadataRequest) (*model.UpdatePrivateModuleMetadataResponse, error) {
@@ -1051,7 +1042,7 @@ func (c *AosClient) ContinueRollbackStackInvoker(request *model.ContinueRollback
 
 // CreateStack 创建资源栈
 //
-// # CreateStack用于生成一个资源栈
+// CreateStack用于生成一个资源栈
 //
 // * 当请求中不含有模板（template）、参数（vars）等信息，将生成一个无任何资源的空资源栈，返回资源栈ID（stack_id）
 // * 当请求中携带了模板（template）、参数（vars）等信息，则会同时创建并部署资源栈，返回资源栈ID（stack_id）和部署ID（deployment_id）
@@ -1082,14 +1073,13 @@ func (c *AosClient) CreateStackInvoker(request *model.CreateStackRequest) *Creat
 //
 // * 此API会触发删除资源栈，并以最终一致性删除所有数据（包括通过资源栈模板创建以及通过Import模块导入的已有资源），用户可以调用GetStackMetadata或ListStacks跟踪资源栈删除情况
 // * 如果资源栈状态处于非终态（状态以&#x60;IN_PROGRESS&#x60;结尾）状态时，则不允许删除。包括但不限于以下状态：
-//   - 正在部署（DEPLOYMENT_IN_PROGRESS）
-//   - 正在删除（DELETION_IN_PROGRESS）
-//   - 正在回滚（ROLLBACK_IN_PROGRESS）
-//
+//   * 正在部署（DEPLOYMENT_IN_PROGRESS）
+//   * 正在删除（DELETION_IN_PROGRESS）
+//   * 正在回滚（ROLLBACK_IN_PROGRESS）
 // * 如果资源栈开启了删除保护，则不允许删除。用户可调用GetStackMetadata，查看返回中的&#x60;enable_deletion_protection&#x60;字段判断删除保护是否开启。用户可通过调用UpdateStack关闭删除保护。
 // * 如果资源栈删除失败，可以根据StackEvents提示信息修复当前模板中的错误后，部署成功后再次删除资源栈。有以下两种方式触发部署：
-//   - 调用CreateExecutionPlan创建执行计划，执行计划创建成功后调用ApplyExecutionPlan部署资源栈。
-//   - 调用DeployStack部署资源栈
+//   * 调用CreateExecutionPlan创建执行计划，执行计划创建成功后调用ApplyExecutionPlan部署资源栈。
+//   * 调用DeployStack部署资源栈
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) DeleteStack(request *model.DeleteStackRequest) (*model.DeleteStackResponse, error) {
@@ -1118,14 +1108,14 @@ func (c *AosClient) DeleteStackInvoker(request *model.DeleteStackRequest) *Delet
 //
 // * 此API会触发删除资源栈，并以最终一致性删除数据，用户可以调用GetStackMetadata或ListStacks跟踪资源栈删除情况。当删除完成后，被删除资源栈将不会在上述API中返回。
 // * 如果资源栈状态处于非终态（状态以&#x60;IN_PROGRESS&#x60;结尾）状态时，则不允许删除。包括但不限于以下状态：
-//   - 正在部署（DEPLOYMENT_IN_PROGRESS）
-//   - 正在删除（DELETION_IN_PROGRESS）
-//   - 正在回滚（ROLLBACK_IN_PROGRESS）
+//   * 正在部署（DEPLOYMENT_IN_PROGRESS）
+//   * 正在删除（DELETION_IN_PROGRESS）
+//   * 正在回滚（ROLLBACK_IN_PROGRESS）
 //
 // * 如果资源栈开启了删除保护，则不允许删除。用户可调用GetStackMetadata，查看返回中的&#x60;enable_deletion_protection&#x60;字段判断删除保护是否开启。用户可通过调用UpdateStack关闭删除保护。
 // * 如果资源栈删除失败，可以根据StackEvents提示信息修复当前模板中的错误后，部署成功后再次删除资源栈。有以下两种方式触发部署：
-//   - 调用CreateExecutionPlan创建执行计划，执行计划创建成功后调用ApplyExecutionPlan部署资源栈。
-//   - 调用DeployStack部署资源栈。
+//   * 调用CreateExecutionPlan创建执行计划，执行计划创建成功后调用ApplyExecutionPlan部署资源栈。
+//   * 调用DeployStack部署资源栈。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) DeleteStackEnhanced(request *model.DeleteStackEnhancedRequest) (*model.DeleteStackEnhancedResponse, error) {
@@ -1190,17 +1180,17 @@ func (c *AosClient) DeployStackInvoker(request *model.DeployStackRequest) *Deplo
 // 只有当资源栈状态处于终态（即以&#x60;COMPLETE&#x60;或&#x60;FAILED&#x60;结尾，详细见下方）时，资源栈的元数据信息才是部署后的状态
 //
 // 非终态状态包括但不限于以下状态：
-//   - 正在部署（DEPLOYMENT_IN_PROGRESS）
-//   - 正在回滚（ROLLBACK_IN_PROGRESS）
-//   - 正在删除（DELETION_IN_PROGRESS）
+//   * 正在部署（DEPLOYMENT_IN_PROGRESS）
+//   * 正在回滚（ROLLBACK_IN_PROGRESS）
+//   * 正在删除（DELETION_IN_PROGRESS）
 //
 // 终态状态包括但不限于以下状态：
-//   - 生成空资源栈完成（CREATION_COMPLETE）
-//   - 部署失败（DEPLOYMENT_FAILED）
-//   - 部署完成（DEPLOYMENT_COMPLETE）
-//   - 回滚失败（ROLLBACK_FAILED）
-//   - 回滚完成（ROLLBACK_COMPLETE）
-//   - 删除失败（DELETION_FAILED）
+//   * 生成空资源栈完成（CREATION_COMPLETE）
+//   * 部署失败（DEPLOYMENT_FAILED）
+//   * 部署完成（DEPLOYMENT_COMPLETE）
+//   * 回滚失败（ROLLBACK_FAILED）
+//   * 回滚完成（ROLLBACK_COMPLETE）
+//   * 删除失败（DELETION_FAILED）
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) GetStackMetadata(request *model.GetStackMetadataRequest) (*model.GetStackMetadataResponse, error) {
@@ -1230,17 +1220,17 @@ func (c *AosClient) GetStackMetadataInvoker(request *model.GetStackMetadataReque
 // 只有当资源栈状态处于终态（即以&#x60;COMPLETE&#x60;或&#x60;FAILED&#x60;结尾，详细见下方）时，此API获取当前最新一次部署使用的模板。CREATION_COMPLETE除外，此时资源栈没有模板，返回404，并提示模板不存在
 //
 // 非终态状态包括但不限于以下状态：
-//   - 正在部署（DEPLOYMENT_IN_PROGRESS）
-//   - 正在回滚（ROLLBACK_IN_PROGRESS）
-//   - 正在删除（DELETION_IN_PROGRESS）
+//   * 正在部署（DEPLOYMENT_IN_PROGRESS）
+//   * 正在回滚（ROLLBACK_IN_PROGRESS）
+//   * 正在删除（DELETION_IN_PROGRESS）
 //
 // 终态状态包括但不限于以下状态：
-//   - 生成空资源栈完成（CREATION_COMPLETE）
-//   - 部署失败（DEPLOYMENT_FAILED）
-//   - 部署完成（DEPLOYMENT_COMPLETE）
-//   - 回滚失败（ROLLBACK_FAILED）
-//   - 回滚完成（ROLLBACK_COMPLETE）
-//   - 删除失败（DELETION_FAILED）
+//   * 生成空资源栈完成（CREATION_COMPLETE）
+//   * 部署失败（DEPLOYMENT_FAILED）
+//   * 部署完成（DEPLOYMENT_COMPLETE）
+//   * 回滚失败（ROLLBACK_FAILED）
+//   * 回滚完成（ROLLBACK_COMPLETE）
+//   * 删除失败（DELETION_FAILED）
 //
 // 如果获取成功，则以临时重定向形式返回模板下载链接（OBS Pre Signed地址，有效期为5分钟），大多数的客户端会进行自动重定向并下载模板；
 // 如果未进行自动重定向，请参考HTTP的重定向规则获取模板下载链接，手动下载模板。
@@ -1300,9 +1290,9 @@ func (c *AosClient) ListStackEventsInvoker(request *model.ListStackEventsRequest
 // 资源栈输出为用户在模板中定义的 output 语句块在部署结束后所产生的返回信息，用户可在部署结束后，调用此API获取其具体的输出信息
 //
 // 当资源栈状态处于非终态（状态以&#x60;IN_PROGRESS&#x60;结尾）状态时，此API将返回空。非终态包括但不限于以下状态：
-//   - 正在部署（DEPLOYMENT_IN_PROGRESS）
-//   - 正在删除（DELETION_IN_PROGRESS）
-//   - 正在回滚（ROLLBACK_IN_PROGRESS）
+//   * 正在部署（DEPLOYMENT_IN_PROGRESS）
+//   * 正在删除（DELETION_IN_PROGRESS）
+//   * 正在回滚（ROLLBACK_IN_PROGRESS）
 //
 // output为HCL官方定义的语法，其返回信息类似于常见编程语言中的返回值，详细定义请参考HCL官方的说明
 //
@@ -1332,9 +1322,9 @@ func (c *AosClient) ListStackOutputsInvoker(request *model.ListStackOutputsReque
 // 当资源栈处于非终态时，仅输出资源栈下资源的简要信息，包含逻辑资源名称（logical_resource_name），逻辑资源类型（logical_resource_type），物理资源id（physical_resource_id），物理资源名称（physical_resource_name），资源状态（status）等信息；当资源栈处于终态时，将额外输出具体信息，如资源属性（resource_attributes）
 //
 // 非终态包括但不限于以下状态：
-//   - 正在部署（DEPLOYMENT_IN_PROGRESS）
-//   - 正在删除（DELETION_IN_PROGRESS）
-//   - 正在回滚（ROLLBACK_IN_PROGRESS）
+//   * 正在部署（DEPLOYMENT_IN_PROGRESS）
+//   * 正在删除（DELETION_IN_PROGRESS）
+//   * 正在回滚（ROLLBACK_IN_PROGRESS）
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListStackResources(request *model.ListStackResourcesRequest) (*model.ListStackResourcesResponse, error) {
@@ -1359,11 +1349,11 @@ func (c *AosClient) ListStackResourcesInvoker(request *model.ListStackResourcesR
 //
 // 此API用于列举当前局点下用户所有的资源栈
 //
-//   - 默认按照生成时间降序排序，最新生成的在最前
-//   - 注意：目前暂时返回全量资源栈信息，即不支持分页
-//   - 如果没有任何资源栈，则返回空list
+//   * 默认按照生成时间降序排序，最新生成的在最前
+//   * 注意：目前暂时返回全量资源栈信息，即不支持分页
+//   * 如果没有任何资源栈，则返回空list
 //
-// # ListStacks返回的只有摘要信息（具体摘要信息见ListStacksResponseBody），如果用户需要详细的资源栈元数据请调用GetStackMetadata
+// ListStacks返回的只有摘要信息（具体摘要信息见ListStacksResponseBody），如果用户需要详细的资源栈元数据请调用GetStackMetadata
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListStacks(request *model.ListStacksRequest) (*model.ListStacksResponse, error) {
@@ -1395,14 +1385,14 @@ func (c *AosClient) ListStacksInvoker(request *model.ListStacksRequest) *ListSta
 // 例如，如果要新增agencies，请通过GetStackMetadata获取该资源栈原有的agencies信息，将新旧agencies信息进行整合后再调用UpdateStack
 //
 // * 如果资源栈状态处于非终态（状态以&#x60;IN_PROGRESS&#x60;结尾）状态时，则不允许更新。包括但不限于以下状态：
-//   - 正在部署（DEPLOYMENT_IN_PROGRESS）
-//   - 正在删除（DELETION_IN_PROGRESS）
-//   - 正在回滚（ROLLBACK_IN_PROGRESS）
+//   * 正在部署（DEPLOYMENT_IN_PROGRESS）
+//   * 正在删除（DELETION_IN_PROGRESS）
+//   * 正在回滚（ROLLBACK_IN_PROGRESS）
 //
 // * 对于“enable_auto_rollback”属性从false到true的更新操作，资源栈状态判定将更加严格，在失败（状态以&#x60;_FAILED&#x60;结尾）状态时也不允许更新，包括但不限于以下状态：
-//   - 部署失败（DEPLOYMENT_FAILED）
-//   - 回滚失败（ROLLBACK_FAILED）
-//   - 删除失败（DELETION_FAILED）
+//   * 部署失败（DEPLOYMENT_FAILED）
+//   * 回滚失败（ROLLBACK_FAILED）
+//   * 删除失败（DELETION_FAILED）
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) UpdateStack(request *model.UpdateStackRequest) (*model.UpdateStackResponse, error) {
@@ -1536,8 +1526,8 @@ func (c *AosClient) DeleteStackInstanceDeprecatedInvoker(request *model.DeleteSt
 // **请谨慎操作，删除资源栈集将会删除与该资源栈集相关的所有数据，如：资源栈集操作、资源栈集操作事件等。**
 //
 // 当且仅当指定的资源栈集满足以下所有条件时，资源栈集才能被成功删除，否则会报错：
-//   - 资源栈集下没有资源栈实例
-//   - 资源栈集状态处于空闲（&#x60;IDLE&#x60;）状态
+//   * 资源栈集下没有资源栈实例
+//   * 资源栈集状态处于空闲（&#x60;IDLE&#x60;）状态
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) DeleteStackSet(request *model.DeleteStackSetRequest) (*model.DeleteStackSetResponse, error) {
@@ -1810,10 +1800,10 @@ func (c *AosClient) UpdateStackInstancesInvoker(request *model.UpdateStackInstan
 // 该API只会更新用户给予的信息中所涉及的字段；如果某字段未给予，则不会对该资源栈集属性进行更新。
 //
 // 注：
-//   - 所有属性的更新都是覆盖式更新。即，所给予的参数将被完全覆盖至资源栈已有的属性上。
-//   - 只有在permission_model&#x3D;SELF_MANAGED时，才可更新administration_agency_name、managed_agency_name和administration_agency_urn。
-//   - permission_model目前只支持更新SELF_MANAGED
-//   - 如果资源栈集的状态是OPERATION_IN_PROGRESS，不允许更新资源栈集。
+//   * 所有属性的更新都是覆盖式更新。即，所给予的参数将被完全覆盖至资源栈已有的属性上。
+//   * 只有在permission_model&#x3D;SELF_MANAGED时，才可更新administration_agency_name、managed_agency_name和administration_agency_urn。
+//   * permission_model目前只支持更新SELF_MANAGED
+//   * 如果资源栈集的状态是OPERATION_IN_PROGRESS，不允许更新资源栈集。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) UpdateStackSet(request *model.UpdateStackSetRequest) (*model.UpdateStackSetResponse, error) {
@@ -1866,7 +1856,7 @@ func (c *AosClient) ParseTemplateVariablesInvoker(request *model.ParseTemplateVa
 // 此API用于删除某个模板以及模板下的全部模板版本
 // **请谨慎操作，删除模板将会删除模板下的所有模板版本。**
 //
-//   - template_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给予的template_id和当前模板管理的ID不一致，则返回400
+//   * template_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给予的template_id和当前模板管理的ID不一致，则返回400
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) DeleteTemplate(request *model.DeleteTemplateRequest) (*model.DeleteTemplateResponse, error) {
@@ -1891,8 +1881,8 @@ func (c *AosClient) DeleteTemplateInvoker(request *model.DeleteTemplateRequest) 
 //
 // 此API用于删除某个模板版本
 //
-//   - template_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给予的template_id和当前模板管理的ID不一致，则返回400
-//   - 如果模板下只存在唯一模板版本，此模板版本将无法被删除，如果需要删除此模板版本，请调用DeleteTemplate。模板服务不允许存在没有模板版本的模板
+//   * template_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给予的template_id和当前模板管理的ID不一致，则返回400
+//   * 如果模板下只存在唯一模板版本，此模板版本将无法被删除，如果需要删除此模板版本，请调用DeleteTemplate。模板服务不允许存在没有模板版本的模板
 //
 // **请谨慎操作**
 //
@@ -1919,13 +1909,13 @@ func (c *AosClient) DeleteTemplateVersionInvoker(request *model.DeleteTemplateVe
 //
 // 此API用于列举模板下所有的模板版本信息
 //
-//   - 默认按照生成时间降序排序，最新生成的模板排列在最前面
-//   - 注意：目前返回全量模板版本信息，即不支持分页
-//   - 如果没有任何模板版本，则返回空list
-//   - template_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给予的template_id和当前模板管理的ID不一致，则返回400
-//   - 如果模板不存在则返回404
+//   * 默认按照生成时间降序排序，最新生成的模板排列在最前面
+//   * 注意：目前返回全量模板版本信息，即不支持分页
+//   * 如果没有任何模板版本，则返回空list
+//   * template_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给予的template_id和当前模板管理的ID不一致，则返回400
+//   * 如果模板不存在则返回404
 //
-// # ListTemplateVersions返回的信息只包含模板版本摘要信息（具体摘要信息见ListTemplateVersionsResponseBody），如果用户需要了解模板版本内容，请调用ShowTemplateVersionContent
+// ListTemplateVersions返回的信息只包含模板版本摘要信息（具体摘要信息见ListTemplateVersionsResponseBody），如果用户需要了解模板版本内容，请调用ShowTemplateVersionContent
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListTemplateVersions(request *model.ListTemplateVersionsRequest) (*model.ListTemplateVersionsResponse, error) {
@@ -1950,12 +1940,12 @@ func (c *AosClient) ListTemplateVersionsInvoker(request *model.ListTemplateVersi
 //
 // 此API用于列举当前局点下用户所有的模板
 //
-//   - 默认按照生成时间降序排序，最新生成的模板排列在最前面
-//   - 注意：目前返回全量模板信息，即不支持分页
-//   - 如果没有任何模板，则返回空list
-//   - 如果用户需要详细的模板版本信息，请调用ListTemplateVersions
+//   * 默认按照生成时间降序排序，最新生成的模板排列在最前面
+//   * 注意：目前返回全量模板信息，即不支持分页
+//   * 如果没有任何模板，则返回空list
+//   * 如果用户需要详细的模板版本信息，请调用ListTemplateVersions
 //
-// # ListTemplates返回的信息只包含模板摘要信息（具体摘要信息见ListTemplatesResponseBody），如果用户需要详细的某个模板信息，请调用ShowTemplateMetadata
+// ListTemplates返回的信息只包含模板摘要信息（具体摘要信息见ListTemplatesResponseBody），如果用户需要详细的某个模板信息，请调用ShowTemplateMetadata
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListTemplates(request *model.ListTemplatesRequest) (*model.ListTemplatesResponse, error) {
@@ -1982,7 +1972,7 @@ func (c *AosClient) ListTemplatesInvoker(request *model.ListTemplatesRequest) *L
 //
 // 具体信息见ShowTemplateMetadataResponseBody，如果想查看模板下全部模板版本，请调用ListTemplateVersions。
 //
-//   - template_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给予的template_id和当前模板管理的ID不一致，则返回400
+//   * template_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给予的template_id和当前模板管理的ID不一致，则返回400
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ShowTemplateMetadata(request *model.ShowTemplateMetadataRequest) (*model.ShowTemplateMetadataResponse, error) {
@@ -2007,11 +1997,11 @@ func (c *AosClient) ShowTemplateMetadataInvoker(request *model.ShowTemplateMetad
 //
 // 此API用于获取用户的模板版本内容
 //
-//   - template_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给予的template_id和当前模板管理的ID不一致，则返回400
-//   - 此api会以临时重定向形式返回模板内容的下载链接，用户通过下载获取模板版本内容（OBS Pre Signed地址，有效期为5分钟）
-//   - 如果手动访问重定向的obs下载链接，请求时不可以携带任何的Request-Header，否则会导致签名失败
+//   * template_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给予的template_id和当前模板管理的ID不一致，则返回400
+//   * 此api会以临时重定向形式返回模板内容的下载链接，用户通过下载获取模板版本内容（OBS Pre Signed地址，有效期为5分钟）
+//   * 如果手动访问重定向的obs下载链接，请求时不可以携带任何的Request-Header，否则会导致签名失败
 //
-// # ShowTemplateVersionContent返回的信息只包含模板版本内容，如果想知道模板版本的元数据，请调用ShowTemplateVersionMetadata
+// ShowTemplateVersionContent返回的信息只包含模板版本内容，如果想知道模板版本的元数据，请调用ShowTemplateVersionMetadata
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ShowTemplateVersionContent(request *model.ShowTemplateVersionContentRequest) (*model.ShowTemplateVersionContentResponse, error) {
@@ -2036,9 +2026,9 @@ func (c *AosClient) ShowTemplateVersionContentInvoker(request *model.ShowTemplat
 //
 // 此API用于展示某一版本模板的元数据
 //
-//   - template_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给予的template_id和当前模板管理的ID不一致，则返回400
+//   * template_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给予的template_id和当前模板管理的ID不一致，则返回400
 //
-// # ShowTemplateVersionMetadata返回的信息只包含模板版本元数据信息（具体摘要信息见ShowTemplateVersionMetadataResponseBody），如果用户需要了解模板版本内容，请调用ShowTemplateVersionContent
+// ShowTemplateVersionMetadata返回的信息只包含模板版本元数据信息（具体摘要信息见ShowTemplateVersionMetadataResponseBody），如果用户需要了解模板版本内容，请调用ShowTemplateVersionContent
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ShowTemplateVersionMetadata(request *model.ShowTemplateVersionMetadataRequest) (*model.ShowTemplateVersionMetadataResponse, error) {

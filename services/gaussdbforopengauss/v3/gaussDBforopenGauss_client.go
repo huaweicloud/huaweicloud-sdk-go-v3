@@ -1618,7 +1618,7 @@ func (c *GaussDBforopenGaussClient) ResetPwdInvoker(request *model.ResetPwdReque
 
 // ResizeInstanceFlavor GaussDB数据库实例规格变更
 //
-// # GaussDB数据库实例规格变更
+// GaussDB数据库实例规格变更
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) ResizeInstanceFlavor(request *model.ResizeInstanceFlavorRequest) (*model.ResizeInstanceFlavorResponse, error) {
@@ -2121,6 +2121,7 @@ func (c *GaussDBforopenGaussClient) ShowParameterGroupDetailInvoker(request *mod
 }
 
 // ShowProjectQuotas 查询租户的实例配额
+//
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) ShowProjectQuotas(request *model.ShowProjectQuotasRequest) (*model.ShowProjectQuotasResponse, error) {

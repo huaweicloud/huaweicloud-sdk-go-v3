@@ -1236,11 +1236,11 @@ func (c *FunctionGraphClient) ShowEventInvoker(request *model.ShowEventRequest) 
 //
 // 查询函数实例使用情况指标。
 //
-//   - 指标单位为分钟：
+// - 指标单位为分钟：
 //     当查询时间范围小于1小时,指标周期为1分钟
 //     当查询时间范围小于1天,指标周期为30分钟
 //     当查询时间范围大于1天,指标周期为180分钟
-//   - 指标分为如下几类：reservedinstancenum（预留实例使用）、concurrency（实例使用/并发）
+// - 指标分为如下几类：reservedinstancenum（预留实例使用）、concurrency（实例使用/并发）
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *FunctionGraphClient) ShowFuncReservedInstanceMetrics(request *model.ShowFuncReservedInstanceMetricsRequest) (*model.ShowFuncReservedInstanceMetricsResponse, error) {

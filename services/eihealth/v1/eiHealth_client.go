@@ -5691,7 +5691,7 @@ func (c *EiHealthClient) CreateCssClusterInvoker(request *model.CreateCssCluster
 
 // DeleteCssCluster CSS集群解绑
 //
-// # CSS集群解绑
+// CSS集群解绑
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) DeleteCssCluster(request *model.DeleteCssClusterRequest) (*model.DeleteCssClusterResponse, error) {

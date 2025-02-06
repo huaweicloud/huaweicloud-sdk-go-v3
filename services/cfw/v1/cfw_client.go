@@ -1638,7 +1638,7 @@ func (c *CfwClient) UpdateAclRuleInvoker(request *model.UpdateAclRuleRequest) *U
 
 // UpdateAclRuleOrder ACL防护规则优先级设置
 //
-// # ACL防护规则优先级设置
+// ACL防护规则优先级设置
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CfwClient) UpdateAclRuleOrder(request *model.UpdateAclRuleOrderRequest) (*model.UpdateAclRuleOrderResponse, error) {

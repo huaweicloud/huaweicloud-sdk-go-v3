@@ -928,6 +928,7 @@ func (c *CssClient) ShowVpcepConnectionInvoker(request *model.ShowVpcepConnectio
 //
 // 该接口用于自动设置集群快照的基础配置，包括配置OBS桶和IAM委托。
 //
+//
 // - “OBS桶”：快照存储的OBS桶位置。
 //
 // - “备份路径”：快照在OBS桶中的存放路径。

@@ -546,6 +546,7 @@ func (c *RdsClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequest) 
 
 // DeleteJob 删除即时任务
 //
+//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RdsClient) DeleteJob(request *model.DeleteJobRequest) (*model.DeleteJobResponse, error) {
 	requestDef := GenReqDefForDeleteJob()
@@ -857,7 +858,7 @@ func (c *RdsClient) ListDrInfosInvoker(request *model.ListDrInfosRequest) *ListD
 	return &ListDrInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListDrRelations
+// ListDrRelations 批量查询容灾实例信息
 //
 // 批量查询容灾实例信息
 //
@@ -872,7 +873,7 @@ func (c *RdsClient) ListDrRelations(request *model.ListDrRelationsRequest) (*mod
 	}
 }
 
-// ListDrRelationsInvoker
+// ListDrRelationsInvoker 批量查询容灾实例信息
 func (c *RdsClient) ListDrRelationsInvoker(request *model.ListDrRelationsRequest) *ListDrRelationsInvoker {
 	requestDef := GenReqDefForListDrRelations()
 	return &ListDrRelationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2020,6 +2021,27 @@ func (c *RdsClient) SetAutoEnlargePolicyInvoker(request *model.SetAutoEnlargePol
 	return &SetAutoEnlargePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetAutoUpgradePolicy 设置实例内核小版本自动升级策略
+//
+// 设置实例内核小版本自动升级策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) SetAutoUpgradePolicy(request *model.SetAutoUpgradePolicyRequest) (*model.SetAutoUpgradePolicyResponse, error) {
+	requestDef := GenReqDefForSetAutoUpgradePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetAutoUpgradePolicyResponse), nil
+	}
+}
+
+// SetAutoUpgradePolicyInvoker 设置实例内核小版本自动升级策略
+func (c *RdsClient) SetAutoUpgradePolicyInvoker(request *model.SetAutoUpgradePolicyRequest) *SetAutoUpgradePolicyInvoker {
+	requestDef := GenReqDefForSetAutoUpgradePolicy()
+	return &SetAutoUpgradePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetBackupPolicy 设置自动备份策略
 //
 // 设置自动备份策略。
@@ -2171,7 +2193,7 @@ func (c *RdsClient) SetSecurityGroupInvoker(request *model.SetSecurityGroupReque
 
 // SetSensitiveSlowLog 慢日志敏感信息的开关
 //
-// # V3慢日志敏感信息的开关
+// V3慢日志敏感信息的开关
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RdsClient) SetSensitiveSlowLog(request *model.SetSensitiveSlowLogRequest) (*model.SetSensitiveSlowLogResponse, error) {
@@ -2251,6 +2273,27 @@ func (c *RdsClient) ShowAutoEnlargePolicy(request *model.ShowAutoEnlargePolicyRe
 func (c *RdsClient) ShowAutoEnlargePolicyInvoker(request *model.ShowAutoEnlargePolicyRequest) *ShowAutoEnlargePolicyInvoker {
 	requestDef := GenReqDefForShowAutoEnlargePolicy()
 	return &ShowAutoEnlargePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAutoUpgradePolicy 查询实例内核小版本自动升级策略
+//
+// 查询实例内核小版本自动升级策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowAutoUpgradePolicy(request *model.ShowAutoUpgradePolicyRequest) (*model.ShowAutoUpgradePolicyResponse, error) {
+	requestDef := GenReqDefForShowAutoUpgradePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAutoUpgradePolicyResponse), nil
+	}
+}
+
+// ShowAutoUpgradePolicyInvoker 查询实例内核小版本自动升级策略
+func (c *RdsClient) ShowAutoUpgradePolicyInvoker(request *model.ShowAutoUpgradePolicyRequest) *ShowAutoUpgradePolicyInvoker {
+	requestDef := GenReqDefForShowAutoUpgradePolicy()
+	return &ShowAutoUpgradePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAvailableVersion
@@ -2356,6 +2399,27 @@ func (c *RdsClient) ShowConfiguration(request *model.ShowConfigurationRequest) (
 func (c *RdsClient) ShowConfigurationInvoker(request *model.ShowConfigurationRequest) *ShowConfigurationInvoker {
 	requestDef := GenReqDefForShowConfiguration()
 	return &ShowConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDatabaseLevelDatabase 查询库级备份包含的库
+//
+// 查询库级备份包含的库
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowDatabaseLevelDatabase(request *model.ShowDatabaseLevelDatabaseRequest) (*model.ShowDatabaseLevelDatabaseResponse, error) {
+	requestDef := GenReqDefForShowDatabaseLevelDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDatabaseLevelDatabaseResponse), nil
+	}
+}
+
+// ShowDatabaseLevelDatabaseInvoker 查询库级备份包含的库
+func (c *RdsClient) ShowDatabaseLevelDatabaseInvoker(request *model.ShowDatabaseLevelDatabaseRequest) *ShowDatabaseLevelDatabaseInvoker {
+	requestDef := GenReqDefForShowDatabaseLevelDatabase()
+	return &ShowDatabaseLevelDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDnsName 查询实例ipv6域名。
@@ -3137,7 +3201,7 @@ func (c *RdsClient) UpdateTdeStatusInvoker(request *model.UpdateTdeStatusRequest
 
 // UpdateToPeriod RDS实例按需转包周期
 //
-// # RDS实例按需转包周期
+// RDS实例按需转包周期
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RdsClient) UpdateToPeriod(request *model.UpdateToPeriodRequest) (*model.UpdateToPeriodResponse, error) {

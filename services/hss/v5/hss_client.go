@@ -294,7 +294,7 @@ func (c *HssClient) ChangeVulStatusInvoker(request *model.ChangeVulStatusRequest
 
 // CreateQuotasOrder HSS服务创建订单订购配额
 //
-// # HSS服务创建订单订购配额，只支持包周期计费模式
+// HSS服务创建订单订购配额，只支持包周期计费模式
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateQuotasOrder(request *model.CreateQuotasOrderRequest) (*model.CreateQuotasOrderResponse, error) {

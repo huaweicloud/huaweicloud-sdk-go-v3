@@ -2000,7 +2000,7 @@ func (c *MetaStudioClient) ShowPictureModelingJobInvoker(request *model.ShowPict
 
 // CreateProduct 创建商品
 //
-// # Create product
+// Create product
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) CreateProduct(request *model.CreateProductRequest) (*model.CreateProductResponse, error) {
@@ -2084,7 +2084,7 @@ func (c *MetaStudioClient) SetProductAssetInvoker(request *model.SetProductAsset
 
 // ShowProduct 查询商品详情
 //
-// # Show product
+// Show product
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) ShowProduct(request *model.ShowProductRequest) (*model.ShowProductResponse, error) {
@@ -2105,7 +2105,7 @@ func (c *MetaStudioClient) ShowProductInvoker(request *model.ShowProductRequest)
 
 // UpdateProduct 更新商品
 //
-// # Update product
+// Update product
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) UpdateProduct(request *model.UpdateProductRequest) (*model.UpdateProductResponse, error) {

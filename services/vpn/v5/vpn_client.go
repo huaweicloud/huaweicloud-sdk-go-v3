@@ -336,7 +336,7 @@ func (c *VpnClient) ListP2cVgwAvailabilityZonesInvoker(request *model.ListP2cVgw
 
 // ListP2cVgwConnections 查询P2C VPN网关连接信息列表
 //
-// # List p2c vpn gateway connections
+// List p2c vpn gateway connections
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpnClient) ListP2cVgwConnections(request *model.ListP2cVgwConnectionsRequest) (*model.ListP2cVgwConnectionsResponse, error) {

@@ -615,9 +615,12 @@ func (c *IoTDAClient) ListBatchTaskFilesInvoker(request *model.ListBatchTaskFile
 // 应用服务器可调用此接口上传批量任务文件，用于创建批量任务。当前支持批量创建设备任务、批量删除设备任务、批量冻结设备任务、批量解冻设备任务的文件上传。
 // - [批量注册设备模板](https://developer.obs.cn-north-4.myhuaweicloud.com/template/BatchCreateDevices_Template.xlsx)
 //
+//
 // - [批量删除设备模板](https://developer.obs.cn-north-4.myhuaweicloud.com/template/BatchDeleteDevices_Template.xlsx)
 //
+//
 // - [批量冻结设备模板](https://developer.obs.cn-north-4.myhuaweicloud.com/template/BatchFreezeDevices_Template.xlsx)
+//
 //
 // - [批量解冻设备模板](https://developer.obs.cn-north-4.myhuaweicloud.com/template/BatchUnfreezeDevices_Template.xlsx)
 //
@@ -1341,14 +1344,14 @@ func (c *IoTDAClient) ResetFingerprintInvoker(request *model.ResetFingerprintReq
 //
 // - limit n ;示例(select * from device limit 10)
 //
-//	最大返回n条结果数据
+//   最大返回n条结果数据
 //
-//   - limit m,n; 示例(select * from device limit 20,10)
-//     搜索偏移量为m，最大返回n条结果数据
+// - limit m,n; 示例(select * from device limit 20,10)
+//   搜索偏移量为m，最大返回n条结果数据
 //
 // ###### 限制
 //
-//	offset 最大 500， rows最大50，如果不填写limit子句，默认为limit 10
+//  offset 最大 500， rows最大50，如果不填写limit子句，默认为limit 10
 //
 // ##### ORDER BY子句(可选)
 //

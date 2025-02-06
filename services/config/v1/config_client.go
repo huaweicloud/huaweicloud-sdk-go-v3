@@ -1512,7 +1512,7 @@ func (c *ConfigClient) DeleteStoredQueryInvoker(request *model.DeleteStoredQuery
 
 // ListSchemas 列举高级查询Schema
 //
-// # List Schemas
+// List Schemas
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ConfigClient) ListSchemas(request *model.ListSchemasRequest) (*model.ListSchemasResponse, error) {
@@ -1575,7 +1575,7 @@ func (c *ConfigClient) RunQueryInvoker(request *model.RunQueryRequest) *RunQuery
 
 // ShowStoredQuery 查询单个高级查询
 //
-// # Show Resource Query Language
+// Show Resource Query Language
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ConfigClient) ShowStoredQuery(request *model.ShowStoredQueryRequest) (*model.ShowStoredQueryResponse, error) {

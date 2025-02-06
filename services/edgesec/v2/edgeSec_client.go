@@ -252,7 +252,7 @@ func (c *EdgeSecClient) UpdateHttpReferenceTableInvoker(request *model.UpdateHtt
 
 // DownloadDdosAttackLogs Ddos攻击日志下载
 //
-// # Ddos攻击日志下载
+// Ddos攻击日志下载
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EdgeSecClient) DownloadDdosAttackLogs(request *model.DownloadDdosAttackLogsRequest) (*model.DownloadDdosAttackLogsResponse, error) {

@@ -73,17 +73,17 @@ func (c *CloudRTCClient) CreateIndividualStreamJobInvoker(request *model.CreateI
 //
 // - 纯音频录制
 //
-//	encode_template填audio_only，音频合流会动态选择最大三方的声音。
+//   encode_template填audio_only，音频合流会动态选择最大三方的声音。
 //
-//	layout_template、layout_panes以及其他视频相关参数都不填，填就忽略。
+//   layout_template、layout_panes以及其他视频相关参数都不填，填就忽略。
 //
 // - 音视频录制（包括共享桌面）
 //
-//	encode_template非audio_only，layout_template、layout_panes必须非空。
+//   encode_template非audio_only，layout_template、layout_panes必须非空。
 //
-//	音频合流会动态选择最大三方的声音。
+//   音频合流会动态选择最大三方的声音。
 //
-//	API触发合流录制流名规则：{jobtype}\\_{jobid}\\_{roomid}，其中jobtype取值为&#39;m&#39;代表合流录制。
+//   API触发合流录制流名规则：{jobtype}\\_{jobid}\\_{roomid}，其中jobtype取值为&#39;m&#39;代表合流录制。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) CreateMixJob(request *model.CreateMixJobRequest) (*model.CreateMixJobResponse, error) {
@@ -621,7 +621,7 @@ func (c *CloudRTCClient) ListObsBucketsInvoker(request *model.ListObsBucketsRequ
 
 // UpdateObsBucketAuthority OBS桶授权及取消授权
 //
-// # OBS桶授权及取消授权
+// OBS桶授权及取消授权
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CloudRTCClient) UpdateObsBucketAuthority(request *model.UpdateObsBucketAuthorityRequest) (*model.UpdateObsBucketAuthorityResponse, error) {
