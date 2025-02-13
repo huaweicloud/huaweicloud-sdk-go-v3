@@ -22,6 +22,7 @@ package signer
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
 	"github.com/stretchr/testify/assert"
+	"reflect"
 	"testing"
 )
 
@@ -78,7 +79,7 @@ func buildReqWithTestcase(tc TestCase) *request.DefaultHttpRequest {
 	}
 	if tc.Queries != nil {
 		for k, v := range tc.Queries {
-			builder.AddQueryParam(k, v)
+			builder.AddQueryParam(k, reflect.ValueOf(v))
 		}
 	}
 	if tc.Headers != nil {
@@ -94,12 +95,12 @@ func TestSigner_Sign(t *testing.T) {
 		{
 			TestParam: testParam1,
 			Expected: "SDK-HMAC-SHA256 Access=AccessKey, SignedHeaders=x-sdk-date, " +
-				"Signature=eb70b3a0caf6633a8b8e4317622d8a0f6819821ec84896ceb7739a57e2d9ed76",
+				"Signature=5a2ce64c865e0e6046321c6f3d5a77ba8413eeaf355c3166c03d58d02ac79624",
 		},
 		{
 			TestParam: testParam2,
 			Expected: "SDK-HMAC-SHA256 Access=AccessKey, SignedHeaders=x-sdk-date, " +
-				"Signature=7f587e76874c5079f7e98769ab285ee75bea28e30110ab10dec4fc4d12c32f62",
+				"Signature=cecc2af119b18ab70b4d094c0750f3b42c02f254903179a0fc2cc72fc9db4f59",
 		},
 	}
 
@@ -111,4 +112,16 @@ func TestSigner_Sign(t *testing.T) {
 			assert.Equal(t, c.Expected, result["Authorization"])
 		})
 	}
+}
+
+func TestSigner_canonicalQueryString(t *testing.T) {
+	req := request.NewHttpRequestBuilder().
+		AddQueryParam("limit", reflect.ValueOf(1)).
+		AddQueryParam("enable", reflect.ValueOf(true)).
+		AddQueryParam("test", reflect.ValueOf("一 (&=?!#%.*)")).
+		AddQueryParam("path", reflect.ValueOf("/tmp/123")).
+		AddQueryParam("multi", reflect.ValueOf([]int{1, 2, 3})).
+		Build()
+	str := canonicalQueryString(req)
+	assert.Equal(t, "enable=true&limit=1&multi=1&multi=2&multi=3&path=%2Ftmp%2F123&test=%E4%B8%80%20%28%26%3D%3F%21%23%25.%2A%29", str)
 }

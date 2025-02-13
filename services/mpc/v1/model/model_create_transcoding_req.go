@@ -17,6 +17,9 @@ type CreateTranscodingReq struct {
 	// 转码参数。  若同时设置“trans_template_id”和此参数，则优先使用此参数进行转码，不带trans_template_id时，该参数必选。
 	AvParameters *[]AvParameters `json:"av_parameters,omitempty"`
 
+	// 主索引定制参数。
+	AdditionalManifests *[]AdditionalManifests `json:"additional_manifests,omitempty"`
+
 	// 输出文件名称，每一路转码输出对应一个名称，需要与转码模板ID数组的顺序对应。  - 若设置该参数，表示输出文件按该参数命名。 - 若不设置该参数，表示输出文件按默认方式命名。
 	OutputFilenames *[]string `json:"output_filenames,omitempty"`
 

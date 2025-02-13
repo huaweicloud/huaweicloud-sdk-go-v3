@@ -100,6 +100,8 @@ type ConfigsGetBody struct {
 	BrowserCacheRules *[]BrowserCacheRules `json:"browser_cache_rules,omitempty"`
 
 	AccessAreaFilter *[]AccessAreaFilter `json:"access_area_filter,omitempty"`
+
+	ClientCert *ClientCert `json:"client_cert,omitempty"`
 }
 
 func (o ConfigsGetBody) String() string {

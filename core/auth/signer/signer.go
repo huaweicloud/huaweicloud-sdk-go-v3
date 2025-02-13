@@ -179,7 +179,7 @@ func canonicalURI(r *request.DefaultHttpRequest) string {
 }
 
 func canonicalQueryString(r *request.DefaultHttpRequest) string {
-	var query = make(map[string][]string, 0)
+	var query = make(map[string][]string)
 	for key, value := range r.GetQueryParams() {
 		valueWithType, ok := value.(reflect.Value)
 		if !ok {

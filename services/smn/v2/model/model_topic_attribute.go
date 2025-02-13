@@ -7,7 +7,9 @@ import (
 )
 
 type TopicAttribute struct {
-	AccessPolicy *AccessPolicy `json:"access_policy,omitempty"`
+
+	// topic的访问策略
+	AccessPolicy *string `json:"access_policy,omitempty"`
 
 	// topic的简介
 	Introduction *string `json:"introduction,omitempty"`

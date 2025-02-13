@@ -273,7 +273,9 @@ func (c *IDMEClassicAPIClient) BatchDeleteBranchInvoker(request *model.BatchDele
 
 // BatchDeleteLatestVersion 批量删除版本对象下最新分支的最新版本实例数据
 //
-// 根据主对象ID，批量删除版本对象下最新分支的最新版本实例数据。请您谨慎使用删除操作，删除后该数据将无法恢复。
+// 根据主对象ID，批量删除版本对象下最新分支的最新版本实例数据。单次调用此接口时，建议最多设置不超过100个主对象ID。
+//
+// 请您谨慎使用删除操作，删除后该数据将无法恢复。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IDMEClassicAPIClient) BatchDeleteLatestVersion(request *model.BatchDeleteLatestVersionRequest) (*model.BatchDeleteLatestVersionResponse, error) {
@@ -294,7 +296,9 @@ func (c *IDMEClassicAPIClient) BatchDeleteLatestVersionInvoker(request *model.Ba
 
 // BatchDeleteLogicalBranch 批量软删除最新大版本下的所有小版本
 //
-// 根据主对象ID，批量软删除最新大版本下的所有小版本。通过此接口进行删除操作时，系统会将当前删除的实例数据转存至XDM应用的XDMLogicDeleteData内置模型中。
+// 根据主对象ID，批量软删除最新大版本下的所有小版本。
+//
+// 通过此接口进行删除操作时，系统会将当前删除的实例数据转存至XDM应用的XDMLogicDeleteData内置模型中。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IDMEClassicAPIClient) BatchDeleteLogicalBranch(request *model.BatchDeleteLogicalBranchRequest) (*model.BatchDeleteLogicalBranchResponse, error) {
@@ -315,7 +319,9 @@ func (c *IDMEClassicAPIClient) BatchDeleteLogicalBranchInvoker(request *model.Ba
 
 // BatchDeleteLogicalLatestVersion 批量软删除版本对象下最新分支的最新版本实例数据
 //
-// 根据主对象ID，批量软删除版本对象下最新分支的最新版本实例数据。通过此接口进行删除操作时，系统会将当前删除的实例数据转存至XDM应用的XDMLogicDeleteData内置模型中。
+// 根据主对象ID，批量软删除版本对象下最新分支的最新版本实例数据。单次调用此接口时，建议最多设置不超过100个主对象ID。
+//
+// 通过此接口进行删除操作时，系统会将当前删除的实例数据转存至XDM应用的XDMLogicDeleteData内置模型中。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IDMEClassicAPIClient) BatchDeleteLogicalLatestVersion(request *model.BatchDeleteLogicalLatestVersionRequest) (*model.BatchDeleteLogicalLatestVersionResponse, error) {
@@ -972,7 +978,9 @@ func (c *IDMEClassicAPIClient) DeleteLatestVersionInvoker(request *model.DeleteL
 
 // DeleteLogicalBranch 软删除M-V模型实例下最新分支的所有小版本数据
 //
-// 根据父模型ID和版本对象，软删除M-V模型实例下最新分支的所有小版本数据。通过此接口进行删除操作时，系统会将当前删除的实例数据转存至XDM应用的XDMLogicDeleteData内置模型中。
+// 根据父模型ID和版本对象，软删除M-V模型实例下最新分支的所有小版本数据。
+//
+// 通过此接口进行删除操作时，系统会将当前删除的实例数据转存至XDM应用的XDMLogicDeleteData内置模型中。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IDMEClassicAPIClient) DeleteLogicalBranch(request *model.DeleteLogicalBranchRequest) (*model.DeleteLogicalBranchResponse, error) {
@@ -993,7 +1001,9 @@ func (c *IDMEClassicAPIClient) DeleteLogicalBranchInvoker(request *model.DeleteL
 
 // DeleteLogicalLatestVersion 软删除版本对象下最新分支的最新版本实例数据
 //
-// 根据主对象ID，软删除版本对象下最新分支的最新版本实例数据。通过此接口进行删除操作时，系统会将当前删除的实例数据转存至XDM应用的XDMLogicDeleteData内置模型中。
+// 根据主对象ID，软删除版本对象下最新分支的最新版本实例数据。
+//
+// 通过此接口进行删除操作时，系统会将当前删除的实例数据转存至XDM应用的XDMLogicDeleteData内置模型中。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IDMEClassicAPIClient) DeleteLogicalLatestVersion(request *model.DeleteLogicalLatestVersionRequest) (*model.DeleteLogicalLatestVersionResponse, error) {

@@ -24,7 +24,10 @@ type CreateInstanceReq struct {
 	// 消息引擎的版本。   - RabbitMQ版本有：3.8.35[、AMQP-0-9-1](tag:hws,hws_hk)[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
 	EngineVersion string `json:"engine_version"`
 
-	// 消息存储空间，单位GB。   [- 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)    [- 单机RabbitMQ实例的存储空间的取值范围100GB~30000GB。](tag:hcs)    [- 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)    [- 集群RabbitMQ实例的存储空间的取值范围为100GB乘以代理数~30000GB乘以代理数。](tag:hcs)
+	// ACL访问控制（仅AMQP版本支持此参数）
+	EnableAcl *bool `json:"enable_acl,omitempty"`
+
+	// 消息存储空间，单位GB。   [- 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,hk_tm,sbc)    [- 单机RabbitMQ实例的存储空间的取值范围100GB~30000GB。](tag:hcs)    [- 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,hk_tm,sbc)    [- 集群RabbitMQ实例的存储空间的取值范围为100GB乘以代理数~30000GB乘以代理数。](tag:hcs)
 	StorageSpace int32 `json:"storage_space"`
 
 	// 认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
@@ -45,7 +48,7 @@ type CreateInstanceReq struct {
 	// 创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。  该参数不能为空数组或者数组的值为空。
 	AvailableZones []string `json:"available_zones"`
 
-	// 产品标识。  [产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。](tag:hws,hws_hk,ctc,cmcc,hws_eu,g42,hk_g42,tm,hk_tm,ocb,hws_ocb) [产品ID可以从[查询产品规格列表](ListProducts.xml)获取。](tag:hk_sbc,sbc) [产品ID可以从“其他接口 > 查询产品规格列表”获取。](tag:hcs)  如果产品ID为集群类型（即对应的type为cluster），broker_num字段为必选。
+	// 产品标识。  [产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。](tag:hws,hws_hk,ctc,hws_eu,g42,hk_g42,tm,hk_tm,sbc,hcs) [产品ID可以从[查询产品规格列表](ListProducts.xml)获取。](tag:cmcc)  如果产品ID为集群类型（即对应的type为cluster），broker_num字段为必选。
 	ProductId string `json:"product_id"`
 
 	// 代理个数。  当产品为单机类型，代理个数只能为1；当产品为集群类型，可选3、5、7个代理个数。  产品类型为single时:   - 1  产品类型为cluster时:   - 3   - 5   - 7

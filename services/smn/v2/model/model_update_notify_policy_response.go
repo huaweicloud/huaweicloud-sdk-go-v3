@@ -8,7 +8,9 @@ import (
 
 // UpdateNotifyPolicyResponse Response Object
 type UpdateNotifyPolicyResponse struct {
-	Body           *string `json:"body,omitempty"`
+
+	// 请求的唯一标识ID
+	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

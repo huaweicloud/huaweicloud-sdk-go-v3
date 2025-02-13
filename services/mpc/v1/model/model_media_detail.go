@@ -16,6 +16,9 @@ type MediaDetail struct {
 	// 多路输出片源信息
 	OutputVideoParas *[]OutputVideoPara `json:"output_video_paras,omitempty"`
 
+	// 被替换的子索引文件
+	ReplaceSubIndex *[]string `json:"replace_sub_index,omitempty"`
+
 	OutputThumbnailPara *OutputThumbnailPara `json:"output_thumbnail_para,omitempty"`
 
 	OutputWatermarkParas *OutputWatermarkPara `json:"output_watermark_paras,omitempty"`

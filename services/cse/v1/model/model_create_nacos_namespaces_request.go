@@ -16,13 +16,13 @@ type CreateNacosNamespacesRequest struct {
 	XEnterpriseProjectID string `json:"X-Enterprise-Project-ID"`
 
 	// 命名空间ID，仅支持大小写字母、数字、短划线（-）和下划线（_），不超过128个字符。
-	CustomNamespaceId string `json:"custom_namespace_id"`
+	CustomNamespaceId string `json:"customNamespaceId"`
 
 	// 命名空间名，支持非@、#、$、%、^、&、*，不超过128个字符。
-	NamespaceName string `json:"namespace_name"`
+	NamespaceName string `json:"namespaceName"`
 
 	// 命名空间描述，不超过256个字符。
-	NamespaceDesc *string `json:"namespace_desc,omitempty"`
+	NamespaceDesc *string `json:"namespaceDesc,omitempty"`
 }
 
 func (o CreateNacosNamespacesRequest) String() string {

@@ -11,6 +11,8 @@ type AudioSelectorSettings struct {
 	AudioLanguageSelection *AudioSelectorLangSelection `json:"audio_language_selection,omitempty"`
 
 	AudioPidSelection *AudioSelectorPidSelection `json:"audio_pid_selection,omitempty"`
+
+	AudioHlsSelection *AudioSelectorHlsSelection `json:"audio_hls_selection,omitempty"`
 }
 
 func (o AudioSelectorSettings) String() string {

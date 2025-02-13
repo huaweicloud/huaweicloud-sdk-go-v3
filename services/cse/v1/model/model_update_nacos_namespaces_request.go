@@ -19,10 +19,10 @@ type UpdateNacosNamespacesRequest struct {
 	Namespace string `json:"namespace"`
 
 	// 命名空间名，支持非@、#、$、%、^、&、*，不超过128个字符。
-	NamespaceShowName string `json:"namespace_show_name"`
+	NamespaceShowName string `json:"namespaceShowName"`
 
 	// 命名空间描述，不超过256个字符。
-	NamespaceDesc string `json:"namespace_desc"`
+	NamespaceDesc string `json:"namespaceDesc"`
 }
 
 func (o UpdateNacosNamespacesRequest) String() string {

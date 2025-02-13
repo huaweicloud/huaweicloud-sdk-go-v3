@@ -12,6 +12,9 @@ type TranscodeDetail struct {
 	MultitaskInfo *[]MultiTaskInfo `json:"multitask_info,omitempty"`
 
 	InputFile *SourceInfo `json:"input_file,omitempty"`
+
+	// 被替换的子索引文件
+	ReplaceSubIndex *[]string `json:"replace_sub_index,omitempty"`
 }
 
 func (o TranscodeDetail) String() string {

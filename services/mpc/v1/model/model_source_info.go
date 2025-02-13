@@ -20,6 +20,9 @@ type SourceInfo struct {
 	// 片源大小
 	Size *int64 `json:"size,omitempty"`
 
+	// 独立mpd索引文件名
+	ManifestName *string `json:"manifest_name,omitempty"`
+
 	VideoInfo *VideoInfo `json:"video_info,omitempty"`
 
 	// 音频信息

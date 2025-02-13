@@ -60,6 +60,9 @@ type QueryTranscodingsTaskResponse struct {
 
 	// 转码参数。  若同时设置“trans_template_id”和此参数，则优先使用此参数进行转码。
 	AvParameters *[]AvParameters `json:"av_parameters,omitempty"`
+
+	// 主索引定制参数。
+	AdditionalManifests *[]AdditionalManifests `json:"additional_manifests,omitempty"`
 }
 
 func (o QueryTranscodingsTaskResponse) String() string {

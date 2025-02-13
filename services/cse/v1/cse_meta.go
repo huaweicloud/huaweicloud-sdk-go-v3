@@ -893,15 +893,15 @@ func GenReqDefForCreateNacosNamespaces() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("CustomNamespaceId").
-		WithJsonTag("custom_namespace_id").
+		WithJsonTag("customNamespaceId").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("NamespaceName").
-		WithJsonTag("namespace_name").
+		WithJsonTag("namespaceName").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("NamespaceDesc").
-		WithJsonTag("namespace_desc").
+		WithJsonTag("namespaceDesc").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -912,6 +912,10 @@ func GenReqDefForCreateNacosNamespaces() *def.HttpRequestDef {
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
 		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -926,7 +930,7 @@ func GenReqDefForDeleteNacosNamespaces() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("NamespaceId").
-		WithJsonTag("namespace_id").
+		WithJsonTag("namespaceId").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -937,6 +941,10 @@ func GenReqDefForDeleteNacosNamespaces() *def.HttpRequestDef {
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
 		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -967,6 +975,10 @@ func GenReqDefForListNacosNamespaces() *def.HttpRequestDef {
 		WithJsonTag("X-Enterprise-Project-ID").
 		WithLocationType(def.Header))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -984,11 +996,11 @@ func GenReqDefForUpdateNacosNamespaces() *def.HttpRequestDef {
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("NamespaceShowName").
-		WithJsonTag("namespace_show_name").
+		WithJsonTag("namespaceShowName").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("NamespaceDesc").
-		WithJsonTag("namespace_desc").
+		WithJsonTag("namespaceDesc").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -999,6 +1011,10 @@ func GenReqDefForUpdateNacosNamespaces() *def.HttpRequestDef {
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
 		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

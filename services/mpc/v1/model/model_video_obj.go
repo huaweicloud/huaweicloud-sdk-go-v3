@@ -16,6 +16,9 @@ type VideoObj struct {
 
 	// 输出平均码率。  取值范围：0或[40,30000]之间的整数。  单位：kbit/s  若设置为0，则输出平均码率为自适应值。
 	Bitrate int32 `json:"bitrate"`
+
+	// 流名称
+	StreamName *string `json:"stream_name,omitempty"`
 }
 
 func (o VideoObj) String() string {

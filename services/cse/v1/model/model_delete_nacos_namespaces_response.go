@@ -8,7 +8,8 @@ import (
 
 // DeleteNacosNamespacesResponse Response Object
 type DeleteNacosNamespacesResponse struct {
-	HttpStatusCode int `json:"-"`
+	Body           *string `json:"body,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteNacosNamespacesResponse) String() string {

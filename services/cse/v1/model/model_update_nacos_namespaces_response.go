@@ -8,7 +8,8 @@ import (
 
 // UpdateNacosNamespacesResponse Response Object
 type UpdateNacosNamespacesResponse struct {
-	HttpStatusCode int `json:"-"`
+	Body           *string `json:"body,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateNacosNamespacesResponse) String() string {

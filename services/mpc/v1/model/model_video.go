@@ -46,6 +46,9 @@ type Video struct {
 
 	// 黑边剪裁类型。  取值如下： - 0：不开启黑边剪裁。 - 1：开启黑边剪裁，低复杂度算法，针对长视频（>5分钟）。 - 2：开启黑边剪裁，高复杂度算法，针对短视频（<=5分钟）。
 	BlackCut *int32 `json:"black_cut,omitempty"`
+
+	// 流名称
+	StreamName *string `json:"stream_name,omitempty"`
 }
 
 func (o Video) String() string {

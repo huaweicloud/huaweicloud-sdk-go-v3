@@ -43,7 +43,7 @@ type StructuredDocView struct {
 	// **参数解释：**  文档标题。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Title *string `json:"title,omitempty"`
 
-	// **参数解释：**  文档类型。  **取值范围：**  - directory: 目录 - pageDocument: Page文档 - boardDocument: Board文档 - mindDocument: Mind文档 - drawDocument: Draw文档  **默认取值：**  不涉及。
+	// **参数解释：**  文档类型。  **取值范围：**  - directory：目录。 - pageDocument：Page文档。 - boardDocument：Board文档。 - mindDocument：Mind文档。 - drawDocument：Draw文档。  **默认取值：**  不涉及。
 	Type string `json:"type"`
 
 	// **参数解释：**  模板ID。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
@@ -64,7 +64,7 @@ type StructuredDocView struct {
 	// **参数解释：**  模型名称。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	ModelName *string `json:"model_name,omitempty"`
 
-	// **参数解释：**  创建者id。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
+	// **参数解释：**  创建者ID。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	CreateUserId *string `json:"create_user_id,omitempty"`
 
 	// **参数解释：**  修改人。  **取值范围：**  不涉及。  **默认取值：**  不涉及。

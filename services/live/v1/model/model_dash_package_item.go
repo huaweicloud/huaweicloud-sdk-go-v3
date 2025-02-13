@@ -34,8 +34,17 @@ type DashPackageItem struct {
 
 	RequestArgs *PackageRequestArgs `json:"request_args,omitempty"`
 
-	// 广告标识。  DASH取值：\"xml+bin\"。
+	// 广告标识。DASH取值：\"xml+bin\"
 	AdMarker *DashPackageItemAdMarker `json:"ad_marker,omitempty"`
+
+	// 建议播放延迟。单位：秒。取值范围：[1 - 120]
+	SuggestedPresentationDelay *int32 `json:"suggested_presentation_delay,omitempty"`
+
+	// 索引最短更新周期。单位：秒。取值范围：[1 - 120]
+	MinimumUpdatePeriod *int32 `json:"minimum_update_period,omitempty"`
+
+	// 最小缓冲时间。单位：秒。取值范围：[1 - 120]
+	MinBufferTime *int32 `json:"min_buffer_time,omitempty"`
 }
 
 func (o DashPackageItem) String() string {

@@ -35,13 +35,13 @@ func TestDerivedSigner_Sign(t *testing.T) {
 			TestParam: testParam1,
 			Expected: "V11-HMAC-SHA256 Credential=AccessKey/20060102/test-region-1/demo," +
 				" SignedHeaders=x-sdk-date," +
-				" Signature=5579214897b4b5def742b24620946119573bccdfe7b2ea7c720e64f1a0944d07",
+				" Signature=8fd3610508884bb19718317797c7378716a94bc740d97502e569322e366341cc",
 		},
 		{
 			TestParam: testParam2,
 			Expected: "V11-HMAC-SHA256 Credential=AccessKey/20060102/test-region-1/demo, " +
 				"SignedHeaders=x-sdk-date, " +
-				"Signature=638f6f0deca2285bf3af0dfd7b186b447e60ed8611d4c6c93537aa8711b9bce9",
+				"Signature=4112f88b92d82dd1e1b7dd142f1e99e4f1762c42ca8fe0968b3045120870a903",
 		},
 	}
 

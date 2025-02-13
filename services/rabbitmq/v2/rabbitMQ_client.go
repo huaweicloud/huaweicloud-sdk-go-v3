@@ -86,7 +86,7 @@ func (c *RabbitMQClient) CreatePostPaidInstanceInvoker(request *model.CreatePost
 
 // CreatePostPaidInstanceByEngine 创建实例
 //
-// 创建实例[，该接口支持创建按需[和包周期](tag:hws,hws_eu,hws_hk,ctc,cmcc)计费方式的实例](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,cmcc)。
+// 创建实例[，该接口支持创建按需[和包周期](tag:hws,hws_eu,hws_hk,ctc,cmcc)计费方式的实例](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,cmcc,sbc)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RabbitMQClient) CreatePostPaidInstanceByEngine(request *model.CreatePostPaidInstanceByEngineRequest) (*model.CreatePostPaidInstanceByEngineResponse, error) {
@@ -187,6 +187,27 @@ func (c *RabbitMQClient) DeleteUser(request *model.DeleteUserRequest) (*model.De
 func (c *RabbitMQClient) DeleteUserInvoker(request *model.DeleteUserRequest) *DeleteUserInvoker {
 	requestDef := GenReqDefForDeleteUser()
 	return &DeleteUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// EnableDns 开启RabbitMQ实例域名访问能力
+//
+// 开启RabbitMQ实例域名访问功能后，客户端可以通过域名连接RabbitMQ实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RabbitMQClient) EnableDns(request *model.EnableDnsRequest) (*model.EnableDnsResponse, error) {
+	requestDef := GenReqDefForEnableDns()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.EnableDnsResponse), nil
+	}
+}
+
+// EnableDnsInvoker 开启RabbitMQ实例域名访问能力
+func (c *RabbitMQClient) EnableDnsInvoker(request *model.EnableDnsRequest) *EnableDnsInvoker {
+	requestDef := GenReqDefForEnableDns()
+	return &EnableDnsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAvailableZones 查询可用区信息
@@ -529,6 +550,27 @@ func (c *RabbitMQClient) ShowMaintainWindows(request *model.ShowMaintainWindowsR
 func (c *RabbitMQClient) ShowMaintainWindowsInvoker(request *model.ShowMaintainWindowsRequest) *ShowMaintainWindowsInvoker {
 	requestDef := GenReqDefForShowMaintainWindows()
 	return &ShowMaintainWindowsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowQuotas 查看租户配额
+//
+// 查询租户最大可以创建的实例个数和已创建的实例个数，以及每个实例最大可以创建标签的个数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RabbitMQClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuotasResponse, error) {
+	requestDef := GenReqDefForShowQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowQuotasResponse), nil
+	}
+}
+
+// ShowQuotasInvoker 查看租户配额
+func (c *RabbitMQClient) ShowQuotasInvoker(request *model.ShowQuotasRequest) *ShowQuotasInvoker {
+	requestDef := GenReqDefForShowQuotas()
+	return &ShowQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowRabbitMqProjectTags 查询项目标签

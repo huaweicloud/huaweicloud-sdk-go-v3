@@ -16,7 +16,7 @@ type DeleteNacosNamespacesRequest struct {
 	XEnterpriseProjectID string `json:"X-Enterprise-Project-ID"`
 
 	// 命名空间ID
-	NamespaceId string `json:"namespace_id"`
+	NamespaceId string `json:"namespaceId"`
 }
 
 func (o DeleteNacosNamespacesRequest) String() string {

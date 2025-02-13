@@ -133,6 +133,22 @@ func (i *DeleteUserInvoker) Invoke() (*model.DeleteUserResponse, error) {
 	}
 }
 
+type EnableDnsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *EnableDnsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *EnableDnsInvoker) Invoke() (*model.EnableDnsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.EnableDnsResponse), nil
+	}
+}
+
 type ListAvailableZonesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -386,6 +402,22 @@ func (i *ShowMaintainWindowsInvoker) Invoke() (*model.ShowMaintainWindowsRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowMaintainWindowsResponse), nil
+	}
+}
+
+type ShowQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowQuotasResponse), nil
 	}
 }
 

@@ -35,8 +35,20 @@ type ShowInstanceResp struct {
 	// 已使用的消息存储空间，单位：GB。
 	UsedStorageSpace *int32 `json:"used_storage_space,omitempty"`
 
-	// 实例连接IP地址。
+	// 实例是否开启域名访问功能。 - true：开启 - false：未开启
+	DnsEnable *bool `json:"dns_enable,omitempty"`
+
+	// 实例内网连接IP地址。
 	ConnectAddress *string `json:"connect_address,omitempty"`
+
+	// 实例内网连接域名。
+	ConnectDomainName *string `json:"connect_domain_name,omitempty"`
+
+	// 实例公网连接IP地址。
+	PublicConnectAddress *string `json:"public_connect_address,omitempty"`
+
+	// 实例公网连接域名。
+	PublicConnectDomainName *string `json:"public_connect_domain_name,omitempty"`
 
 	// 实例连接端口。
 	Port *int32 `json:"port,omitempty"`
@@ -50,7 +62,7 @@ type ShowInstanceResp struct {
 	// 实例ID。
 	InstanceId *string `json:"instance_id,omitempty"`
 
-	// 资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)
+	// 资源规格标识。   [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g   - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g   - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g   - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g   - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点   - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点   - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点   - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
 	ResourceSpecCode *string `json:"resource_spec_code,omitempty"`
 
 	// 付费模式，1表示按需计费，0表示包年/包月计费。
@@ -92,6 +104,15 @@ type ShowInstanceResp struct {
 	// RabbitMQ实例的管理地址。
 	ManagementConnectAddress *string `json:"management_connect_address,omitempty"`
 
+	// RabbitMQ实例的管理域名。
+	ManagementConnectDomainName *string `json:"management_connect_domain_name,omitempty"`
+
+	// RabbitMQ实例的公网管理地址。
+	PublicManagementConnectAddress *string `json:"public_management_connect_address,omitempty"`
+
+	// RabbitMQ实例的公网管理域名。
+	PublicManagementConnectDomainName *string `json:"public_management_connect_domain_name,omitempty"`
+
 	// 是否开启安全认证。   - true：开启   - false：未开启
 	SslEnable *bool `json:"ssl_enable,omitempty"`
 
@@ -121,6 +142,9 @@ type ShowInstanceResp struct {
 
 	// 实例节点所在的可用区，返回“可用区ID”。
 	AvailableZones *[]string `json:"available_zones,omitempty"`
+
+	// 实例节点所在的可用区，返回“可用区名称”。
+	AvailableZoneNames *[]string `json:"available_zone_names,omitempty"`
 
 	// 总共消息存储空间，单位：GB。
 	TotalStorageSpace *int32 `json:"total_storage_space,omitempty"`

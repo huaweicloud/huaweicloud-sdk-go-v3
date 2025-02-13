@@ -12,7 +12,7 @@ import (
 type VolumeSpec struct {
 
 	// 资源类型，当前只支持“obs”和“sfs”。
-	ResourceType string `json:"resource_type"`
+	ResourceType VolumeSpecResourceType `json:"resource_type"`
 
 	// 对象存储类型。
 	ResourceSubType VolumeSpecResourceSubType `json:"resource_sub_type"`
@@ -31,6 +31,53 @@ func (o VolumeSpec) String() string {
 	}
 
 	return strings.Join([]string{"VolumeSpec", string(data)}, " ")
+}
+
+type VolumeSpecResourceType struct {
+	value string
+}
+
+type VolumeSpecResourceTypeEnum struct {
+	SFS VolumeSpecResourceType
+	OBS VolumeSpecResourceType
+}
+
+func GetVolumeSpecResourceTypeEnum() VolumeSpecResourceTypeEnum {
+	return VolumeSpecResourceTypeEnum{
+		SFS: VolumeSpecResourceType{
+			value: "sfs",
+		},
+		OBS: VolumeSpecResourceType{
+			value: "obs",
+		},
+	}
+}
+
+func (c VolumeSpecResourceType) Value() string {
+	return c.value
+}
+
+func (c VolumeSpecResourceType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *VolumeSpecResourceType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type VolumeSpecResourceSubType struct {

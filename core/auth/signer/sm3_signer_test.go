@@ -29,12 +29,12 @@ func TestSM3Signer_Sign(t *testing.T) {
 		{
 			TestParam: testParam1,
 			Expected: "SDK-HMAC-SM3 Access=AccessKey, SignedHeaders=x-sdk-date, " +
-				"Signature=89aaefc444abb883a30d0cb777afd186a777802b9e2bf2fe2f027d9bee1cb67e",
+				"Signature=acdeecf8061419275127135b54532c2c20b683bf9bbb8a32bee021a8c40befd4",
 		},
 		{
 			TestParam: testParam2,
 			Expected: "SDK-HMAC-SM3 Access=AccessKey, SignedHeaders=x-sdk-date, " +
-				"Signature=afa8c5174d72dd8b74eba5a1613945aaceb3cc579bce6ea7efc0cca350d12db2",
+				"Signature=359e49285fe5a469f82b86fd761b1a4a7ee16e3181de7d643c53a30667cde508",
 		},
 	}
 
@@ -43,7 +43,7 @@ func TestSM3Signer_Sign(t *testing.T) {
 			req := buildReqWithTestcase(c)
 			result, err := sm3SignerInst.Sign(req, ak, sk)
 			assert.Nil(t, err)
-			assert.Equal(t, result["Authorization"], c.Expected)
+			assert.Equal(t, c.Expected, result["Authorization"])
 		})
 	}
 }

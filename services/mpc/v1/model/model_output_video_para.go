@@ -24,6 +24,9 @@ type OutputVideoPara struct {
 	// 输出片源文件名
 	FileName *string `json:"file_name,omitempty"`
 
+	// 独立mpd索引文件名
+	ManifestName *string `json:"manifest_name,omitempty"`
+
 	// 折算后视频时长
 	ConverDuration *float64 `json:"conver_duration,omitempty"`
 

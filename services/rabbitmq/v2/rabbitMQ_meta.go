@@ -153,6 +153,22 @@ func GenReqDefForDeleteUser() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForEnableDns() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/rabbitmq/instances/{instance_id}/dns").
+		WithResponse(new(model.EnableDnsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListAvailableZones() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -494,6 +510,17 @@ func GenReqDefForShowMaintainWindows() *def.HttpRequestDef {
 		WithMethod(http.MethodGet).
 		WithPath("/v2/instances/maintain-windows").
 		WithResponse(new(model.ShowMaintainWindowsResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowQuotas() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/quotas").
+		WithResponse(new(model.ShowQuotasResponse)).
 		WithContentType("application/json")
 
 	requestDef := reqDefBuilder.Build()

@@ -42,16 +42,16 @@ type StructuredDocShareViewDto struct {
 	// **参数解释**：  分享用户名。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
 	ShareUserName *string `json:"shareUserName,omitempty"`
 
-	// **参数解释**：  被分享用户名。  **约束限制**：  不涉及。  **取值范围**：  - all: 所有人。  **默认取值**：  不涉及。
+	// **参数解释**：  被分享用户名。  **约束限制**：  不涉及。  **取值范围**：  all：表示所有人。  **默认取值**：  不涉及。
 	SharedUserName *string `json:"sharedUserName,omitempty"`
 
-	// **参数解释**：  被分享用户UserId。  **约束限制**：  不涉及。  **取值范围**：  - all: 所有人。  **默认取值**：  不涉及。
+	// **参数解释**：  被分享用户UserId。  **约束限制**：  不涉及。  **取值范围**：  all：表示所有人。  **默认取值**：  不涉及。
 	SharedUserId *string `json:"sharedUserId,omitempty"`
 
-	// **参数解释**：  认证类型。  **约束限制**：  不涉及。  **取值范围**：  - read: 只读 - write: 读写  **默认取值**：  不涉及。
+	// **参数解释**：  认证类型。  **约束限制**：  不涉及。  **取值范围**：  - read：只读。 - write：读写。  **默认取值**：  不涉及。
 	AuthType *string `json:"authType,omitempty"`
 
-	// **参数解释**：  被分享用户UserId。  **约束限制**：  不涉及。  **取值范围**：  - all: 所有人。  **默认取值**：  不涉及。
+	// **参数解释**：  被分享用户UserId。  **约束限制**：  不涉及。  **取值范围**：  all：表示所有人。  **默认取值**：  不涉及。
 	ShareUserId *string `json:"shareUserId,omitempty"`
 }
 
