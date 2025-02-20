@@ -2117,6 +2117,22 @@ func (i *ListEnvironmentsInvoker) Invoke() (*model.ListEnvironmentsResponse, err
 	}
 }
 
+type UploadStepImgInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadStepImgInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UploadStepImgInvoker) Invoke() (*model.UploadStepImgResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadStepImgResponse), nil
+	}
+}
+
 type BatchDeleteFacotrByIdsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2466,5 +2482,21 @@ func (i *UpdateMindmapNameInvoker) Invoke() (*model.UpdateMindmapNameResponse, e
 		return nil, err
 	} else {
 		return result.(*model.UpdateMindmapNameResponse), nil
+	}
+}
+
+type AddFeatureInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddFeatureInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddFeatureInvoker) Invoke() (*model.AddFeatureResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddFeatureResponse), nil
 	}
 }

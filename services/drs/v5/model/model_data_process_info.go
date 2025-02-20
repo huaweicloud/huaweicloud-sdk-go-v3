@@ -11,7 +11,7 @@ import (
 
 type DataProcessInfo struct {
 
-	// 指定任务数据加工规则请求体
+	// 指定任务数据加工规则请求体,  当进行数据过滤规则校验，必填 当数据过滤规则校验通过，需要更新数据过滤规则时，必填
 	FilterConditions *[]DataFilteringCondition `json:"filter_conditions,omitempty"`
 
 	// 库级、批量表级处理为true，单表操作为false
@@ -37,6 +37,9 @@ type DataProcessInfo struct {
 
 	// 对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
 	Source *DataProcessInfoSource `json:"source,omitempty"`
+
+	// 数据加工规则作用级别 - table 表示数据同步时的过滤 - combinations 表示组合集，对多个表的操作  当进行数据过滤规则校验，必填 当需要更新数据加工规则（数据过滤、列加工等）时，必填
+	ProcessRuleLevel *DataProcessInfoProcessRuleLevel `json:"process_rule_level,omitempty"`
 }
 
 func (o DataProcessInfo) String() string {
@@ -77,6 +80,53 @@ func (c DataProcessInfoSource) MarshalJSON() ([]byte, error) {
 }
 
 func (c *DataProcessInfoSource) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type DataProcessInfoProcessRuleLevel struct {
+	value string
+}
+
+type DataProcessInfoProcessRuleLevelEnum struct {
+	TABLE        DataProcessInfoProcessRuleLevel
+	COMBINATIONS DataProcessInfoProcessRuleLevel
+}
+
+func GetDataProcessInfoProcessRuleLevelEnum() DataProcessInfoProcessRuleLevelEnum {
+	return DataProcessInfoProcessRuleLevelEnum{
+		TABLE: DataProcessInfoProcessRuleLevel{
+			value: "table",
+		},
+		COMBINATIONS: DataProcessInfoProcessRuleLevel{
+			value: "combinations",
+		},
+	}
+}
+
+func (c DataProcessInfoProcessRuleLevel) Value() string {
+	return c.value
+}
+
+func (c DataProcessInfoProcessRuleLevel) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *DataProcessInfoProcessRuleLevel) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

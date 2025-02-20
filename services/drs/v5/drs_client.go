@@ -1612,6 +1612,27 @@ func (c *DrsClient) ShowSupportObjectTypeInvoker(request *model.ShowSupportObjec
 	return &ShowSupportObjectTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowTimeline 展示时间轴
+//
+// 指定不同的任务ID可以展示当前任务创建时间、启动时间、重试、重置等操作的时间轴信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowTimeline(request *model.ShowTimelineRequest) (*model.ShowTimelineResponse, error) {
+	requestDef := GenReqDefForShowTimeline()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTimelineResponse), nil
+	}
+}
+
+// ShowTimelineInvoker 展示时间轴
+func (c *DrsClient) ShowTimelineInvoker(request *model.ShowTimelineRequest) *ShowTimelineInvoker {
+	requestDef := GenReqDefForShowTimeline()
+	return &ShowTimelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowUpdateObjectSavingStatus 获取对象保存进度
 //
 // 获取对象保存进度。

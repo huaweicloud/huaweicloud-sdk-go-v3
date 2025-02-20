@@ -36,6 +36,12 @@ import (
 	"time"
 )
 
+var fileStreamContentTypes = []string{
+	"application/octet-stream",
+	"binary/octet-stream",
+	"application/zip",
+}
+
 type DefaultHttpClient struct {
 	httpHandler  *httphandler.HttpHandler
 	httpConfig   *config.HttpConfig
@@ -233,7 +239,13 @@ func isStream(header http.Header) bool {
 	if contentType == "" {
 		return false
 	}
-	return strings.Contains(contentType, "octet-stream")
+
+	for _, streamContentType := range fileStreamContentTypes {
+		if strings.HasPrefix(contentType, streamContentType) {
+			return true
+		}
+	}
+	return false
 }
 
 func processProgressResponse(request *request.DefaultHttpRequest, response *http.Response) {

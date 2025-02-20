@@ -13,13 +13,13 @@ type ShowClusterSupportConfigurationRequest struct {
 	ClusterId *string `json:"cluster_id,omitempty"`
 
 	// 集群类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-	ClusterType string `json:"cluster_type"`
+	ClusterType *string `json:"cluster_type,omitempty"`
 
 	// 集群版本，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-	ClusterVersion string `json:"cluster_version"`
+	ClusterVersion *string `json:"cluster_version,omitempty"`
 
 	// 集群网络类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-	NetworkMode string `json:"network_mode"`
+	NetworkMode *string `json:"network_mode,omitempty"`
 }
 
 func (o ShowClusterSupportConfigurationRequest) String() string {

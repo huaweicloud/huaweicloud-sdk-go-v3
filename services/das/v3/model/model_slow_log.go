@@ -11,6 +11,9 @@ type SlowLog struct {
 	// SQL语句。
 	Sql string `json:"sql"`
 
+	// SQL模板ID。
+	SqlTemplateId string `json:"sql_template_id"`
+
 	// 数据库名。
 	Database string `json:"database"`
 

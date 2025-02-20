@@ -329,6 +329,27 @@ func (c *DasClient) DeleteSqlLimitRulesInvoker(request *model.DeleteSqlLimitRule
 	return &DeleteSqlLimitRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExportFullSqlDetails 导出全量SQL明细
+//
+// 全量SQL开关打开后，创建SQL洞察任务，支持按节点、用户名、数据库、操作类型等导出全量SQL明细数据。该功能仅支持付费实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ExportFullSqlDetails(request *model.ExportFullSqlDetailsRequest) (*model.ExportFullSqlDetailsResponse, error) {
+	requestDef := GenReqDefForExportFullSqlDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportFullSqlDetailsResponse), nil
+	}
+}
+
+// ExportFullSqlDetailsInvoker 导出全量SQL明细
+func (c *DasClient) ExportFullSqlDetailsInvoker(request *model.ExportFullSqlDetailsRequest) *ExportFullSqlDetailsInvoker {
+	requestDef := GenReqDefForExportFullSqlDetails()
+	return &ExportFullSqlDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExportSlowQueryLogs 导出慢SQL数据
 //
 // DAS收集慢SQL开关打开后，一次性导出指定时间范围内的慢SQL数据，支持分页滚动获取。免费实例仅支持查看最近一小时数据。
@@ -538,6 +559,27 @@ func (c *DasClient) ListDbUsers(request *model.ListDbUsersRequest) (*model.ListD
 func (c *DasClient) ListDbUsersInvoker(request *model.ListDbUsersRequest) *ListDbUsersInvoker {
 	requestDef := GenReqDefForListDbUsers()
 	return &ListDbUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFullSqlTasks 查询SQL洞察任务列表
+//
+// 全量SQL开关打开后，查询SQL洞察任务列表。该功能仅支持付费实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListFullSqlTasks(request *model.ListFullSqlTasksRequest) (*model.ListFullSqlTasksResponse, error) {
+	requestDef := GenReqDefForListFullSqlTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFullSqlTasksResponse), nil
+	}
+}
+
+// ListFullSqlTasksInvoker 查询SQL洞察任务列表
+func (c *DasClient) ListFullSqlTasksInvoker(request *model.ListFullSqlTasksRequest) *ListFullSqlTasksInvoker {
+	requestDef := GenReqDefForListFullSqlTasks()
+	return &ListFullSqlTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListHealthReportTask 查询实例健康诊断报告列表

@@ -89,6 +89,16 @@ type JobDetailResp struct {
 
 	// 解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
 	IsWritable *JobDetailRespIsWritable `json:"is_writable,omitempty"`
+
+	// 一键诊断结果。
+	Diagnoses *[]QueryDiagnosisResult `json:"diagnoses,omitempty"`
+
+	RepairProgressInfo *JobDetailRespRepairProgressInfo `json:"repair_progress_info,omitempty"`
+
+	RepairDetailInfo *QueryRepairDetailResp `json:"repair_detail_info,omitempty"`
+
+	// 修复SQL导出状态。
+	RepairExportStatus *string `json:"repair_export_status,omitempty"`
 }
 
 func (o JobDetailResp) String() string {

@@ -81,6 +81,9 @@ type FlightItineraryResult struct {
 	// 开具状态
 	IssueStatus *string `json:"issue_status,omitempty"`
 
+	// gp单号。
+	GpNumber *string `json:"gp_number,omitempty"`
+
 	// 机票行程列表。
 	ItineraryList *[]ItineraryList `json:"itinerary_list,omitempty"`
 

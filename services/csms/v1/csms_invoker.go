@@ -21,6 +21,22 @@ func (i *BatchCreateOrDeleteTagsInvoker) Invoke() (*model.BatchCreateOrDeleteTag
 	}
 }
 
+type BatchImportSecretsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchImportSecretsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchImportSecretsInvoker) Invoke() (*model.BatchImportSecretsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchImportSecretsResponse), nil
+	}
+}
+
 type CreateAgencyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -530,6 +546,22 @@ func (i *ShowSecretVersionInvoker) Invoke() (*model.ShowSecretVersionResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowSecretVersionResponse), nil
+	}
+}
+
+type ShowUserDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowUserDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowUserDetailInvoker) Invoke() (*model.ShowUserDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowUserDetailResponse), nil
 	}
 }
 

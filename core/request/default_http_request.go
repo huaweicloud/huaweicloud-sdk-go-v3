@@ -126,11 +126,17 @@ func (httpRequest *DefaultHttpRequest) GetBodyToBytes() (*bytes.Buffer, error) {
 				encoder := xml.NewEncoder(buf)
 				err = encoder.Encode(httpRequest.body)
 			} else if httpRequest.headerParams["Content-Type"] == "application/bson" {
+				// Check if body is already BSON encoded
+				if encodedBuf, ok := httpRequest.body.([]uint8); ok {
+					return bytes.NewBuffer(encodedBuf), nil
+				}
 				buffer, err := bson.Marshal(httpRequest.body)
 				if err != nil {
 					return nil, err
 				}
 				buf.Write(buffer)
+				// Set buf as the new encoded body
+				httpRequest.body = buf.Bytes()
 			} else {
 				encoder := json.NewEncoder(buf)
 				encoder.SetEscapeHTML(false)

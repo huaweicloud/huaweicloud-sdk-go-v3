@@ -21,6 +21,38 @@ func (i *ListApplicationsInvoker) Invoke() (*model.ListApplicationsResponse, err
 	}
 }
 
+type ListApplicationModelInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListApplicationModelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListApplicationModelInvoker) Invoke() (*model.ListApplicationModelResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListApplicationModelResponse), nil
+	}
+}
+
+type BatchCreateApplicationViewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateApplicationViewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateApplicationViewInvoker) Invoke() (*model.BatchCreateApplicationViewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateApplicationViewResponse), nil
+	}
+}
+
 type ListInstanceCompliantInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +226,38 @@ func (i *ListAuthorizableTicketsExternalInvoker) Invoke() (*model.ListAuthorizab
 		return nil, err
 	} else {
 		return result.(*model.ListAuthorizableTicketsExternalResponse), nil
+	}
+}
+
+type ListMultiCloudResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMultiCloudResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListMultiCloudResourcesInvoker) Invoke() (*model.ListMultiCloudResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMultiCloudResourcesResponse), nil
+	}
+}
+
+type CountMultiResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountMultiResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CountMultiResourcesInvoker) Invoke() (*model.CountMultiResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountMultiResourcesResponse), nil
 	}
 }
 

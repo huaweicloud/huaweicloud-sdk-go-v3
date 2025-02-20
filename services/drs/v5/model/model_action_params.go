@@ -37,6 +37,8 @@ type ActionParams struct {
 	PublicIpConfig *PublicIpConfig `json:"public_ip_config,omitempty"`
 
 	ReplayConfig *ReplayConfigInfo `json:"replay_config,omitempty"`
+
+	RepairInfo *ActionParamsRepairInfo `json:"repair_info,omitempty"`
 }
 
 func (o ActionParams) String() string {

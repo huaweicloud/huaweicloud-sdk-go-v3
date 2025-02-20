@@ -40,6 +40,27 @@ func (c *CsmsClient) BatchCreateOrDeleteTagsInvoker(request *model.BatchCreateOr
 	return &BatchCreateOrDeleteTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchImportSecrets 批量导入凭据
+//
+// 批量导入凭据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) BatchImportSecrets(request *model.BatchImportSecretsRequest) (*model.BatchImportSecretsResponse, error) {
+	requestDef := GenReqDefForBatchImportSecrets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchImportSecretsResponse), nil
+	}
+}
+
+// BatchImportSecretsInvoker 批量导入凭据
+func (c *CsmsClient) BatchImportSecretsInvoker(request *model.BatchImportSecretsRequest) *BatchImportSecretsInvoker {
+	requestDef := GenReqDefForBatchImportSecrets()
+	return &BatchImportSecretsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAgency 创建服务委托
 //
 // 创建服务委托。用于创建凭据管理服务相关委托和函数工作流相关委托。
@@ -715,6 +736,27 @@ func (c *CsmsClient) ShowSecretVersion(request *model.ShowSecretVersionRequest) 
 func (c *CsmsClient) ShowSecretVersionInvoker(request *model.ShowSecretVersionRequest) *ShowSecretVersionInvoker {
 	requestDef := GenReqDefForShowSecretVersion()
 	return &ShowSecretVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowUserDetail 获取用户详情
+//
+// 根据用户id查询用户详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) ShowUserDetail(request *model.ShowUserDetailRequest) (*model.ShowUserDetailResponse, error) {
+	requestDef := GenReqDefForShowUserDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowUserDetailResponse), nil
+	}
+}
+
+// ShowUserDetailInvoker 获取用户详情
+func (c *CsmsClient) ShowUserDetailInvoker(request *model.ShowUserDetailRequest) *ShowUserDetailInvoker {
+	requestDef := GenReqDefForShowUserDetail()
+	return &ShowUserDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateGrant 更新授权

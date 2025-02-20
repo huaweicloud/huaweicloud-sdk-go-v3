@@ -40,6 +40,48 @@ func (c *CocClient) ListApplicationsInvoker(request *model.ListApplicationsReque
 	return &ListApplicationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListApplicationModel 查询下一级的子应用、组件、分组
+//
+// 查询下一级的子应用、组件、分组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListApplicationModel(request *model.ListApplicationModelRequest) (*model.ListApplicationModelResponse, error) {
+	requestDef := GenReqDefForListApplicationModel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApplicationModelResponse), nil
+	}
+}
+
+// ListApplicationModelInvoker 查询下一级的子应用、组件、分组
+func (c *CocClient) ListApplicationModelInvoker(request *model.ListApplicationModelRequest) *ListApplicationModelInvoker {
+	requestDef := GenReqDefForListApplicationModel()
+	return &ListApplicationModelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateApplicationView 批量创建应用视图
+//
+// 批量创建应用视图
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) BatchCreateApplicationView(request *model.BatchCreateApplicationViewRequest) (*model.BatchCreateApplicationViewResponse, error) {
+	requestDef := GenReqDefForBatchCreateApplicationView()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateApplicationViewResponse), nil
+	}
+}
+
+// BatchCreateApplicationViewInvoker 批量创建应用视图
+func (c *CocClient) BatchCreateApplicationViewInvoker(request *model.BatchCreateApplicationViewRequest) *BatchCreateApplicationViewInvoker {
+	requestDef := GenReqDefForBatchCreateApplicationView()
+	return &BatchCreateApplicationViewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInstanceCompliant 获取节点合规性报告
 //
 // 分页获取节点合规性报告
@@ -269,6 +311,48 @@ func (c *CocClient) ListAuthorizableTicketsExternal(request *model.ListAuthoriza
 func (c *CocClient) ListAuthorizableTicketsExternalInvoker(request *model.ListAuthorizableTicketsExternalRequest) *ListAuthorizableTicketsExternalInvoker {
 	requestDef := GenReqDefForListAuthorizableTicketsExternal()
 	return &ListAuthorizableTicketsExternalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMultiCloudResources 查询用户在云厂商中的资源
+//
+// 查询用户在云厂商中的资源
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListMultiCloudResources(request *model.ListMultiCloudResourcesRequest) (*model.ListMultiCloudResourcesResponse, error) {
+	requestDef := GenReqDefForListMultiCloudResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMultiCloudResourcesResponse), nil
+	}
+}
+
+// ListMultiCloudResourcesInvoker 查询用户在云厂商中的资源
+func (c *CocClient) ListMultiCloudResourcesInvoker(request *model.ListMultiCloudResourcesRequest) *ListMultiCloudResourcesInvoker {
+	requestDef := GenReqDefForListMultiCloudResources()
+	return &ListMultiCloudResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountMultiResources 查询用户各种资源总数
+//
+// 查询用户各种资源总数
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CountMultiResources(request *model.CountMultiResourcesRequest) (*model.CountMultiResourcesResponse, error) {
+	requestDef := GenReqDefForCountMultiResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountMultiResourcesResponse), nil
+	}
+}
+
+// CountMultiResourcesInvoker 查询用户各种资源总数
+func (c *CocClient) CountMultiResourcesInvoker(request *model.CountMultiResourcesRequest) *CountMultiResourcesInvoker {
+	requestDef := GenReqDefForCountMultiResources()
+	return &CountMultiResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListResource 查询用户所有资源

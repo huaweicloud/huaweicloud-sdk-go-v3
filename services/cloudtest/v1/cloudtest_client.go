@@ -2789,6 +2789,27 @@ func (c *CloudtestClient) ListEnvironmentsInvoker(request *model.ListEnvironment
 	return &ListEnvironmentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UploadStepImg 上传测试步骤图片
+//
+// 对外API
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) UploadStepImg(request *model.UploadStepImgRequest) (*model.UploadStepImgResponse, error) {
+	requestDef := GenReqDefForUploadStepImg()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadStepImgResponse), nil
+	}
+}
+
+// UploadStepImgInvoker 上传测试步骤图片
+func (c *CloudtestClient) UploadStepImgInvoker(request *model.UploadStepImgRequest) *UploadStepImgInvoker {
+	requestDef := GenReqDefForUploadStepImg()
+	return &UploadStepImgInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeleteFacotrByIds 批量删除因子
 //
 // 批量删除因子
@@ -3249,4 +3270,25 @@ func (c *CloudtestClient) UpdateMindmapName(request *model.UpdateMindmapNameRequ
 func (c *CloudtestClient) UpdateMindmapNameInvoker(request *model.UpdateMindmapNameRequest) *UpdateMindmapNameInvoker {
 	requestDef := GenReqDefForUpdateMindmapName()
 	return &UpdateMindmapNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddFeature 添加目录信息
+//
+// 添加目录信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) AddFeature(request *model.AddFeatureRequest) (*model.AddFeatureResponse, error) {
+	requestDef := GenReqDefForAddFeature()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddFeatureResponse), nil
+	}
+}
+
+// AddFeatureInvoker 添加目录信息
+func (c *CloudtestClient) AddFeatureInvoker(request *model.AddFeatureRequest) *AddFeatureInvoker {
+	requestDef := GenReqDefForAddFeature()
+	return &AddFeatureInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

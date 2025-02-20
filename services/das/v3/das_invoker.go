@@ -229,6 +229,22 @@ func (i *DeleteSqlLimitRulesInvoker) Invoke() (*model.DeleteSqlLimitRulesRespons
 	}
 }
 
+type ExportFullSqlDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportFullSqlDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExportFullSqlDetailsInvoker) Invoke() (*model.ExportFullSqlDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportFullSqlDetailsResponse), nil
+	}
+}
+
 type ExportSlowQueryLogsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -386,6 +402,22 @@ func (i *ListDbUsersInvoker) Invoke() (*model.ListDbUsersResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListDbUsersResponse), nil
+	}
+}
+
+type ListFullSqlTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFullSqlTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListFullSqlTasksInvoker) Invoke() (*model.ListFullSqlTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFullSqlTasksResponse), nil
 	}
 }
 

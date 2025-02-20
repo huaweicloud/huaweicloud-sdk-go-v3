@@ -9,8 +9,8 @@ import (
 // ClientCert 客户端证书配置
 type ClientCert struct {
 
-	// 客户端证书配置开关，1：打开；0：关闭。
-	Validation int32 `json:"validation"`
+	// 客户端证书配置开关，on：打开；off：关闭。
+	Status string `json:"status"`
 
 	// 客户端CA证书的内容，仅支持PEM格式。
 	TrustedCert string `json:"trusted_cert"`

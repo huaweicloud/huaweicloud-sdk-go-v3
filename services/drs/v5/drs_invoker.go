@@ -1205,6 +1205,22 @@ func (i *ShowSupportObjectTypeInvoker) Invoke() (*model.ShowSupportObjectTypeRes
 	}
 }
 
+type ShowTimelineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTimelineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTimelineInvoker) Invoke() (*model.ShowTimelineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTimelineResponse), nil
+	}
+}
+
 type ShowUpdateObjectSavingStatusInvoker struct {
 	*invoker.BaseInvoker
 }

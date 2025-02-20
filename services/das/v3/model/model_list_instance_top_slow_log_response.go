@@ -13,7 +13,7 @@ type ListInstanceTopSlowLogResponse struct {
 	TopExecuteSlowLogs *[]TopInstanceSlowLogTopExecuteSlowLogs `json:"top_execute_slow_logs,omitempty"`
 
 	// 平均执行时间列表
-	TopAvgQueryTimeSlowLogs *[]TopInstanceSlowLogTopAvgQueryTimeSlowLogs `json:"top_avg_query_time_slow_logs,omitempty"`
+	TopAvgQueryTimeSlowLogs *[]TopInstanceSlowLogTopExecuteSlowLogs `json:"top_avg_query_time_slow_logs,omitempty"`
 
 	// 最大执行时间列表
 	TopMaxQueryTimeSlowLogs *[]TopInstanceSlowLogTopExecuteSlowLogs `json:"top_max_query_time_slow_logs,omitempty"`

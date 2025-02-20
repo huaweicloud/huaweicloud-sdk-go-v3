@@ -9,7 +9,7 @@ import (
 // ExportCompareResultReq 生成对比任务结果文件请求体。
 type ExportCompareResultReq struct {
 
-	// 对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。
+	// 对比任务类型： - contents： 内容对比。 - lines：行数对比。 - random：抽样对比。 - objects_comparison：对象对比。 - repair_data：数据修复。
 	CompareType string `json:"compare_type"`
 
 	// 对比任务的ID，内容对比、抽样对比、行数对比场景必填。
