@@ -9,7 +9,7 @@ import (
 // CreateLoadBalancerPublicIpOption 参数解释：创建ELB时，新建公网IP请求参数
 type CreateLoadBalancerPublicIpOption struct {
 
-	// 参数解释：IP版本。  约束限制：取值只有4和6。4：IPv4, 6: IPv6。 [不支持IPv6，请勿设置为6。](tag:dt,dt_test)  取值范围：  - 4：表示IPv4。  - 6：表示IPv6。  默认取值：4
+	// 参数解释：IP版本。  约束限制：取值只有4和6。4：IPv4, 6: IPv6。 [不支持IPv6，请勿设置为6。](tag:dt)  取值范围：  - 4：表示IPv4。  - 6：表示IPv6。  默认取值：4
 	IpVersion *int32 `json:"ip_version,omitempty"`
 
 	// 参数解释：弹性公网IP的网络类型，默认5_bgp，更多请参考弹性公网ip创建。  [约束限制：华南-深圳局点该参数取值只能为5_gray。](tag:hws) [约束限制：只支持设置为5_gray。](tag:dt)  取值范围：5_bgp。  默认取值：5_bgp。

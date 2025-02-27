@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -26,6 +29,15 @@ type UpdateCertificateRequestBody struct {
 
 	// SSL证书的管理状态；  取值范围： true/false。  该字段为预留字段，暂未启用。只支持设定为true。
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
+
+	// 参数解释： 证书来源  约束限制： 当scm_certificate_id不为空，且未传入source时，默认取值为“scm”。  取值范围： 无  默认取值： 当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
+	Source *string `json:"source,omitempty"`
+
+	// 参数解释： 修改保护状态  约束限制： 无  取值范围： - nonProtection: 不保护 - consoleProtection: 控制台修改保护  默认取值： nonProtection
+	ProtectionStatus *UpdateCertificateRequestBodyProtectionStatus `json:"protection_status,omitempty"`
+
+	// 参数解释： 设置修改保护的原因  约束限制： 仅当protection_status为consoleProtection时有效  取值范围： 无  默认取值： 空
+	ProtectionReason *string `json:"protection_reason,omitempty"`
 }
 
 func (o UpdateCertificateRequestBody) String() string {
@@ -35,4 +47,51 @@ func (o UpdateCertificateRequestBody) String() string {
 	}
 
 	return strings.Join([]string{"UpdateCertificateRequestBody", string(data)}, " ")
+}
+
+type UpdateCertificateRequestBodyProtectionStatus struct {
+	value string
+}
+
+type UpdateCertificateRequestBodyProtectionStatusEnum struct {
+	NON_PROTECTION     UpdateCertificateRequestBodyProtectionStatus
+	CONSOLE_PROTECTION UpdateCertificateRequestBodyProtectionStatus
+}
+
+func GetUpdateCertificateRequestBodyProtectionStatusEnum() UpdateCertificateRequestBodyProtectionStatusEnum {
+	return UpdateCertificateRequestBodyProtectionStatusEnum{
+		NON_PROTECTION: UpdateCertificateRequestBodyProtectionStatus{
+			value: "nonProtection",
+		},
+		CONSOLE_PROTECTION: UpdateCertificateRequestBodyProtectionStatus{
+			value: "consoleProtection",
+		},
+	}
+}
+
+func (c UpdateCertificateRequestBodyProtectionStatus) Value() string {
+	return c.value
+}
+
+func (c UpdateCertificateRequestBodyProtectionStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateCertificateRequestBodyProtectionStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

@@ -853,6 +853,22 @@ func (i *AddDeviceInvoker) Invoke() (*model.AddDeviceResponse, error) {
 	}
 }
 
+type ChangeGatewayInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeGatewayInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeGatewayInvoker) Invoke() (*model.ChangeGatewayResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeGatewayResponse), nil
+	}
+}
+
 type DeleteDeviceInvoker struct {
 	*invoker.BaseInvoker
 }

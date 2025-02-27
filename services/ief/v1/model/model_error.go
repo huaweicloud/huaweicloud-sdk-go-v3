@@ -11,7 +11,7 @@ type Error struct {
 	// 错误详情
 	Detail string `json:"detail"`
 
-	// 铂金版实例ID，如果为空则表示是专业版实例。
+	// [铂金版实例ID，如果为空则表示是专业版实例。](tag:hws,hws_hk)[铂金版实例ID](tag:hcs,hcs_sm)
 	IefInstanceId string `json:"ief_instance_id"`
 
 	// 项目ID

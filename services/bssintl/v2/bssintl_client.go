@@ -376,6 +376,27 @@ func (c *BssintlClient) ListCustomerselfResourceRecordsInvoker(request *model.Li
 	return &ListCustomerselfResourceRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListEnterpriseSubCustomers 查询企业子账号列表
+//
+// 企业主账号在自建平台查询企业子账号信息列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssintlClient) ListEnterpriseSubCustomers(request *model.ListEnterpriseSubCustomersRequest) (*model.ListEnterpriseSubCustomersResponse, error) {
+	requestDef := GenReqDefForListEnterpriseSubCustomers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEnterpriseSubCustomersResponse), nil
+	}
+}
+
+// ListEnterpriseSubCustomersInvoker 查询企业子账号列表
+func (c *BssintlClient) ListEnterpriseSubCustomersInvoker(request *model.ListEnterpriseSubCustomersRequest) *ListEnterpriseSubCustomersInvoker {
+	requestDef := GenReqDefForListEnterpriseSubCustomers()
+	return &ListEnterpriseSubCustomersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListFreeResourceInfos 查询资源包列表
 //
 // 功能描述：客户在自建平台查询资源包列表。

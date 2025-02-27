@@ -27,7 +27,7 @@ type IpGroup struct {
 	// 参数解释：IP地址组的项目ID。
 	ProjectId string `json:"project_id"`
 
-	// 参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+	// 参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 参数解释：IP地址组的创建时间。

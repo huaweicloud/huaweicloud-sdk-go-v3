@@ -16,7 +16,7 @@ type ListPortsRequest struct {
 	Name *string `json:"name,omitempty"`
 
 	// 按照port_id过滤查询
-	Id *string `json:"id,omitempty"`
+	Id *[]string `json:"id,omitempty"`
 
 	// 每页返回的个数
 	Limit *int32 `json:"limit,omitempty"`

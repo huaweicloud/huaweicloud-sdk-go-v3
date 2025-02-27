@@ -36,7 +36,7 @@ type CreateCertificateOption struct {
 	// SSL证书的类型。分为服务器证书(server)、CA证书(client)。 默认值：server
 	Type *CreateCertificateOptionType `json:"type,omitempty"`
 
-	// 证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+	// 证书所属的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// HTTPS协议使用的SM加密证书内容。支持证书链，最大11层(含证书和证书链)。  取值：PEM编码格式。最大长度65536字符。  使用说明：仅type为server_sm时有效且必选。

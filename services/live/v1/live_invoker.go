@@ -101,6 +101,22 @@ func (i *CreateRecordRuleInvoker) Invoke() (*model.CreateRecordRuleResponse, err
 	}
 }
 
+type CreateScheduleRecordTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateScheduleRecordTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateScheduleRecordTasksInvoker) Invoke() (*model.CreateScheduleRecordTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateScheduleRecordTasksResponse), nil
+	}
+}
+
 type CreateSnapshotConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -274,6 +290,22 @@ func (i *DeleteRefererChainInvoker) Invoke() (*model.DeleteRefererChainResponse,
 		return nil, err
 	} else {
 		return result.(*model.DeleteRefererChainResponse), nil
+	}
+}
+
+type DeleteScheduleRecordTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteScheduleRecordTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteScheduleRecordTasksInvoker) Invoke() (*model.DeleteScheduleRecordTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteScheduleRecordTasksResponse), nil
 	}
 }
 
@@ -482,6 +514,22 @@ func (i *ListRecordRulesInvoker) Invoke() (*model.ListRecordRulesResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListRecordRulesResponse), nil
+	}
+}
+
+type ListScheduleRecordTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListScheduleRecordTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListScheduleRecordTasksInvoker) Invoke() (*model.ListScheduleRecordTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListScheduleRecordTasksResponse), nil
 	}
 }
 

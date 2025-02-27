@@ -8,7 +8,13 @@ import (
 
 // DeleteDeploymentResponse Response Object
 type DeleteDeploymentResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 错误码
+	ErrorCode *string `json:"error_code,omitempty"`
+
+	// 错误描述信息
+	ErrorMsg       *string `json:"error_msg,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteDeploymentResponse) String() string {

@@ -27,7 +27,7 @@ type CreateLoadBalancerOption struct {
 	// 参数解释：负载均衡器所在子网的IPv4子网ID，也称为该负载均衡器实例的前端子网。  约束限制： - 若创建带有IPv4私网IP的负载均衡实例，则字段必须传入。可以通过调用VPC的API, GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_subnet_id得到。 - vpc_id, vip_subnet_cidr_id, ipv6_vip_virsubnet_id不能同时为空，且需要在同一个vpc下。 - 若同时传入vpc_id和vip_subnet_cidr_id，则vip_subnet_cidr_id对应的子网必须属于vpc_id对应的VPC。 [- 创建网关型LB，vip_subnet_cidr_id和ipv6_vip_virsubnet_id不能同时为空。若都传入则必须是同一个子网的IPv4子网ID和IPv6网络ID。](tag:hws_eu)  取值范围：标准的UUID格式，长度为36个字符。
 	VipSubnetCidrId *string `json:"vip_subnet_cidr_id,omitempty"`
 
-	// 参数解释：双栈类型负载均衡器所在子网的IPv6网络ID，也称为该负载均衡器实例的前端子网。  约束限制： - 若创建带有IPv6 IP的负载均衡实例，则字段必须传入。可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_network_id得到。 - vpc_id，vip_subnet_cidr_id，ipv6_vip_virsubnet_id不能同时为空，且需要在同一个vpc下。 - 需要对应的子网开启IPv6。 [- 创建网关型LB，vip_subnet_cidr_id和ipv6_vip_virsubnet_id不能同时为空。若都传入则必须是同一个子网的IPv4子网ID和IPv6网络ID。](tag:hws_eu)  取值范围：标准的UUID格式，长度为36个字符。  [不支持IPv6，请勿使用。](tag:dt,dt_test)
+	// 参数解释：双栈类型负载均衡器所在子网的IPv6网络ID，也称为该负载均衡器实例的前端子网。  约束限制： - 若创建带有IPv6 IP的负载均衡实例，则字段必须传入。可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_network_id得到。 - vpc_id，vip_subnet_cidr_id，ipv6_vip_virsubnet_id不能同时为空，且需要在同一个vpc下。 - 需要对应的子网开启IPv6。 [- 创建网关型LB，vip_subnet_cidr_id和ipv6_vip_virsubnet_id不能同时为空。若都传入则必须是同一个子网的IPv4子网ID和IPv6网络ID。](tag:hws_eu)  取值范围：标准的UUID格式，长度为36个字符。  [不支持IPv6，请勿使用。](tag:dt)
 	Ipv6VipVirsubnetId *string `json:"ipv6_vip_virsubnet_id,omitempty"`
 
 	// 参数解释：负载均衡器的生产者名称。固定为vlb，无需指定。
@@ -48,13 +48,13 @@ type CreateLoadBalancerOption struct {
 	// 参数解释：负载均衡器实例所在的可用区列表。  约束限制： - 可通过GET https://{ELB_Endpoint}/v3/{project_id}/elb/availability-zones 接口来查询可用区集合列表。创建负载均衡器时，从查询结果选择某一个可用区集合，并从中选择一个或多个可用区。  >为了支持可用区容灾，建议选取不少于2个可用区。
 	AvailabilityZoneList []string `json:"availability_zone_list"`
 
-	// 参数解释：负载均衡器所属的企业项目ID。  约束限制：不能传入\"\"、\"0\"或不存在的企业项目ID，创建时不传则资源属于default企业项目，默认返回\"0\"。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+	// 参数解释：负载均衡器所属的企业项目ID。  约束限制：不能传入\"\"、\"0\"或不存在的企业项目ID，创建时不传则资源属于default企业项目，默认返回\"0\"。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 参数解释：负载均衡的标签列表。示例：\"tags\":[{\"key\":\"my_tag\",\"value\":\"my_tag_value\"}]
 	Tags *[]Tag `json:"tags,omitempty"`
 
-	// 参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  默认取值：true。  [不支持该字段，请勿使用。](tag:dt,dt_test)
+	// 参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  默认取值：true。  [不支持该字段，请勿使用。](tag:dt)
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 
 	// 参数解释: 预付费实例的订单信息。  取值范围： - 空：按需计费。 [- 非空：包周期计费，格式为：order_id:product_id:region_id:project_id。如：CS2107161019CDJZZ:OFFI569702121789763584:az1:057ef081eb00d2732fd1c01a9be75e6f](tag:hws)  不支持该字段，请勿使用](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,srg,fcs,fcs_vm,dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,ct)
@@ -80,7 +80,7 @@ type CreateLoadBalancerOption struct {
 
 	Autoscaling *CreateLoadbalancerAutoscalingOption `json:"autoscaling,omitempty"`
 
-	// 参数解释：WAF故障时的流量处理策略。  约束限制：只有绑定了waf的LB实例，该字段才会生效。 [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,dt_test,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)  取值范围： - discard:丢弃。 - forward: 转发到后端。  默认取值：forward。
+	// 参数解释：WAF故障时的流量处理策略。  约束限制：只有绑定了waf的LB实例，该字段才会生效。 [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)  取值范围： - discard:丢弃。 - forward: 转发到后端。  默认取值：forward。
 	WafFailureAction *CreateLoadBalancerOptionWafFailureAction `json:"waf_failure_action,omitempty"`
 
 	// 参数解释：修改保护状态。用于console控制台防误修改。console感知该状态为consoleProtection时，不允许用户直接修改资源其他配置属性。  约束限制：不影响通过API修改资源属性。类似资源标记，用于提升控制台等用户易用性场景，如防误修改。  取值范围： - nonProtection: 不保护。 - consoleProtection: 控制台修改保护。  默认取值：nonProtection。
@@ -92,7 +92,7 @@ type CreateLoadBalancerOption struct {
 	// 参数解释：负载均衡器实例的计费模式。  约束限制：不建议用户传该字段。系统会基于用户传入的l4_flavor_id/l7_flavor_id的规格类型，自动识别计费模式。  取值范围： - flavor：固定规格计费。 - lcu：弹性规格计费（按用户实际使用的lcu个数计费）。  默认取值： - 若是创建共享型实例，不传默认创建固定规格计费实例。 - 若是创建独享型实例，则系统会忽略该字段，而是基于用户传入的l4_flavor_id/l7_flavor_id的规格类型，自动识别计费模式。
 	ChargeMode *CreateLoadBalancerOptionChargeMode `json:"charge_mode,omitempty"`
 
-	// 参数解释：负载均衡器实例的IPv6地址。  约束限制：  - 必须属于ipv6_vip_virsubnet_id子网中地址。  - elb_virsubnet_ids中的后端子网必须支持双栈。  [- 网关型LB不支持指定ipv6_vip_address。](tag:hws_eu)  [不支持IPv6，请勿使用。](tag:dt,dt_test)
+	// 参数解释：负载均衡器实例的IPv6地址。  约束限制：  - 必须属于ipv6_vip_virsubnet_id子网中地址。  - elb_virsubnet_ids中的后端子网必须支持双栈。  [- 网关型LB不支持指定ipv6_vip_address。](tag:hws_eu)  [不支持IPv6，请勿使用。](tag:dt)
 	Ipv6VipAddress *string `json:"ipv6_vip_address,omitempty"`
 }
 

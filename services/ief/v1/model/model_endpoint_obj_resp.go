@@ -18,13 +18,13 @@ type EndpointObjResp struct {
 	// 端点ID
 	Id string `json:"id"`
 
-	// 铂金版实例ID，如果为空则表示是专业版实例。
+	// [铂金版实例ID，如果为空则表示是专业版实例。](tag:hws,hws_hk)[铂金版实例ID](tag:hcs,hcs_sm)
 	IefInstanceId string `json:"ief_instance_id"`
 
 	// 是否共享
 	IsShared bool `json:"is_shared"`
 
-	// 端点名称，只允许中文字符、英文字符、数字、下划线、中划线，最大长度64 同一个帐号中创建的端点名唯一
+	// 端点名称，只允许中文字符、英文字符、数字、下划线、中划线，最大长度64 同一个账号中创建的端点名唯一
 	Name string `json:"name"`
 
 	// 项目ID

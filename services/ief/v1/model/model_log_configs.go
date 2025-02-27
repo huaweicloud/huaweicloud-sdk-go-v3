@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// LogConfigs 边缘节点日志配置
+// LogConfigs 边缘节点日志配置。当用户未填写日志配置相关字段时，将默认打开日志上传到云端功能。
 type LogConfigs struct {
 
 	// 数据库保存的主键，不需要关注此字段。

@@ -277,6 +277,22 @@ func (i *ListCustomerselfResourceRecordsInvoker) Invoke() (*model.ListCustomerse
 	}
 }
 
+type ListEnterpriseSubCustomersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEnterpriseSubCustomersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListEnterpriseSubCustomersInvoker) Invoke() (*model.ListEnterpriseSubCustomersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEnterpriseSubCustomersResponse), nil
+	}
+}
+
 type ListFreeResourceInfosInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -6,14 +6,14 @@ import (
 	"strings"
 )
 
-// AgencyAuthorizeInfo 获取云堡垒机委托授权凭据管理、密钥管理服务权限列表返回对象。
+// AgencyAuthorizeInfo 设置云堡垒机委托授权凭据管理、密钥管理服务权限请求对象。（kms和csms必须传一个）
 type AgencyAuthorizeInfo struct {
 
 	// 凭据管理权限信息。
-	Csms bool `json:"csms"`
+	Csms *bool `json:"csms,omitempty"`
 
 	// 密钥管理权限信息。
-	Kms bool `json:"kms"`
+	Kms *bool `json:"kms,omitempty"`
 }
 
 func (o AgencyAuthorizeInfo) String() string {

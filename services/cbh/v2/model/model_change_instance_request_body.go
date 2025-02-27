@@ -8,7 +8,9 @@ import (
 
 // ChangeInstanceRequestBody 创建云堡垒机实例变更任务请求体。  > 说明： new_resource_spec_code和attach_disk_size字段只能选择使用，不能同时使用。
 type ChangeInstanceRequestBody struct {
-	ServerId *interface{} `json:"server_id"`
+
+	// 云堡垒机实例ID，使用UUID格式表示。
+	ServerId string `json:"server_id"`
 
 	// 待变更云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50  可参考接口\"查询云堡垒机规格信息\"获取
 	NewResourceSpecCode *string `json:"new_resource_spec_code,omitempty"`

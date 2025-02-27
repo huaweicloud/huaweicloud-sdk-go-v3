@@ -113,6 +113,7 @@ import (
 	vpcRegion "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/region"
 	"net"
 	"net/http"
+	"time"
 )
 
 func main() {
@@ -136,7 +137,7 @@ func main() {
     // 配置是否忽略SSL证书校验， 默认不忽略
     httpConfig.WithIgnoreSSLVerification(true)
     // 默认超时时间为120秒，可根据需要配置
-    httpConfig.WithTimeout(120)
+    httpConfig.WithTimeout(120 * time.Second)
     // 根据需要配置网络代理
     proxy := config.NewProxy().
         // 请根据实际情况替换示例中的代理协议、地址和端口号
@@ -294,7 +295,7 @@ client := vpc.NewVpcClient(hcClient)
 
 ``` go
 // 默认超时时间为120秒，可根据需要配置
-httpConfig := config.DefaultHttpConfig().WithTimeout(120)
+httpConfig := config.DefaultHttpConfig().WithTimeout(120 * time.Second)
 
 hcClient, err := vpc.VpcClientBuilder().
     WithHttpConfig(httpConfig).

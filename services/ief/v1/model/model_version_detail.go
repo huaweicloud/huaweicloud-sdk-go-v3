@@ -38,7 +38,7 @@ type VersionDetail struct {
 
 	ReadinessProbe *ProbeDetail `json:"readiness_probe,omitempty"`
 
-	// NPU类型，支持D310类型和D910类型。 - D310表示D310类型。 - D910表示D910类型。 - 不填表示为D310类型。
+	// NPU类型，支持D310、D310B，支持填写： - D310：D310类型 - D310B：D310B类型 - 不填表示为D310类型。
 	NpuType *string `json:"npu_type,omitempty"`
 }
 

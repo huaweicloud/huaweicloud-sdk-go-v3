@@ -17,6 +17,9 @@ type ListStarRocksDbParametersRequest struct {
 
 	// **参数解释**：  新增子任务的场景，用于区分库参数是否支持修改。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
 	AddTaskScenario *string `json:"add_task_scenario,omitempty"`
+
+	// **参数解释**：  新增子任务相应的主任务名。  **约束限制**：  非必填。  **取值范围**：  不涉及。  **默认值**：  不涉及。
+	MainTaskName *string `json:"main_task_name,omitempty"`
 }
 
 func (o ListStarRocksDbParametersRequest) String() string {

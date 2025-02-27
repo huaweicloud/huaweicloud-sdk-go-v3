@@ -8,8 +8,8 @@ import (
 
 // ListEdgeGroupCertsResponse Response Object
 type ListEdgeGroupCertsResponse struct {
-	Body           *[]EdgeGroupCertListResp `json:"body,omitempty"`
-	HttpStatusCode int                      `json:"-"`
+	Body           *interface{} `json:"body,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ListEdgeGroupCertsResponse) String() string {

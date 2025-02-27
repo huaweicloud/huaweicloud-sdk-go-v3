@@ -114,6 +114,7 @@ import (
 	vpcRegion "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2/region"
 	"net"
 	"net/http"
+	"time"
 )
 
 func main() {
@@ -137,7 +138,7 @@ func main() {
     // Configure whether to ignore the SSL certificate verification, default is false
     httpConfig.WithIgnoreSSLVerification(true)
     // Configure timeout as needed, default timeout is 120 seconds
-    httpConfig.WithTimeout(120)
+    httpConfig.WithTimeout(120 * time.Second)
     // Configure proxy as needed
     proxy := config.NewProxy().
         // Replace the proxy schema, host and port in the example according to the actual situation
@@ -295,7 +296,7 @@ client := vpc.NewVpcClient(hcClient)
 
 ``` go
 // The default timeout is 120 seconds, which can be adjusted as needed
-httpConfig := config.DefaultHttpConfig().WithTimeout(120)
+httpConfig := config.DefaultHttpConfig().WithTimeout(120 * time.Second)
 
 hcClient, err := vpc.VpcClientBuilder().
     WithHttpConfig(httpConfig).

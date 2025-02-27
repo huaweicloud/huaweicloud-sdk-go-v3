@@ -12,10 +12,10 @@ type EndpointObj struct {
 	// 端点描述，最大长度255，不允许^~#$%&*<>()[]{}'\"\\
 	Description *string `json:"description,omitempty"`
 
-	// 铂金版实例ID，如果为空则表示是专业版实例。
+	// [铂金版实例ID，如果为空则表示是专业版实例。](tag:hws,hws_hk)[铂金版实例ID](tag:hcs,hcs_sm)
 	IefInstanceId *string `json:"ief_instance_id,omitempty"`
 
-	// 端点名称，只允许中文字符、英文字符、数字、下划线、中划线，最大长度64 同一个帐号中创建的端点名唯一
+	// 端点名称，只允许中文字符、英文字符、数字、下划线、中划线，最大长度64 同一个账号中创建的端点名唯一
 	Name string `json:"name"`
 
 	// 端点的属性，端点需要对外展示的属性，示例： - dis: {\"domain_id\":\"user's domain id\"} - servicebus: {\"service_port\":8080} - apigw: {\"domain_id\":\"user's domain id\"}

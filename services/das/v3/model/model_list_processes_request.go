@@ -15,7 +15,7 @@ type ListProcessesRequest struct {
 	// 实例ID
 	InstanceId string `json:"instance_id"`
 
-	// 数据库用户ID
+	// 数据库用户ID。每个用户需绑定一个数据库账号（数据库用户由“注册数据库用户”接口创建）。
 	DbUserId string `json:"db_user_id"`
 
 	// 用户

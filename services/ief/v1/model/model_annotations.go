@@ -9,7 +9,7 @@ import (
 // Annotations 应用扩展功能配置选项
 type Annotations struct {
 
-	// 生成ranktablefile。该参数目前只支持赋值\"ascend-1980\"，指昇腾D910。
+	// 生成ranktablefile。该参数目前只支持赋值\"ascend-1980\"。
 	RingController *string `json:"ring_controller,omitempty"`
 
 	// 离线自愈功能配置字段，须填写调度的节点组id

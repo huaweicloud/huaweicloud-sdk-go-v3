@@ -152,6 +152,8 @@ type MonthlyBillRes struct {
 
 	// |参数名称：华为云运营实体ID。| |参数约束及描述：华为云运营实体ID。|
 	BeId *string `json:"be_id,omitempty"`
+
+	ExtendParams *ResRelation `json:"extend_params,omitempty"`
 }
 
 func (o MonthlyBillRes) String() string {

@@ -629,6 +629,22 @@ func (i *UpdateSecretStageInvoker) Invoke() (*model.UpdateSecretStageResponse, e
 	}
 }
 
+type UpdateUserPasswordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateUserPasswordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateUserPasswordInvoker) Invoke() (*model.UpdateUserPasswordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateUserPasswordResponse), nil
+	}
+}
+
 type UpdateVersionInvoker struct {
 	*invoker.BaseInvoker
 }

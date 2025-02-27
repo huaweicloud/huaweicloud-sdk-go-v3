@@ -8,6 +8,9 @@ import (
 
 // ListClustersRequest Request Object
 type ListClustersRequest struct {
+
+	// 企业项目ID，查询所有绑定eps集群，值为all_granted_eps
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o ListClustersRequest) String() string {

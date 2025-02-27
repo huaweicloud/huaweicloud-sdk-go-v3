@@ -15,7 +15,7 @@ type EipInfo struct {
 	// 参数解释：弹性IP的IP地址。
 	EipAddress *string `json:"eip_address,omitempty"`
 
-	// 参数解释：IP版本号。  取值范围： - 4表示IPv4。 - 6表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+	// 参数解释：IP版本号。  取值范围： - 4表示IPv4。 - 6表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt)
 	IpVersion *int32 `json:"ip_version,omitempty"`
 }
 

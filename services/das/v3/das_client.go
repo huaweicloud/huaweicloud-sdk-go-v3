@@ -19,6 +19,92 @@ func DasClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// CancelShareConnections 删除共享链接
+//
+// 删除共享链接，
+// 用于用户删除共享链接
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) CancelShareConnections(request *model.CancelShareConnectionsRequest) (*model.CancelShareConnectionsResponse, error) {
+	requestDef := GenReqDefForCancelShareConnections()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelShareConnectionsResponse), nil
+	}
+}
+
+// CancelShareConnectionsInvoker 删除共享链接
+func (c *DasClient) CancelShareConnectionsInvoker(request *model.CancelShareConnectionsRequest) *CancelShareConnectionsInvoker {
+	requestDef := GenReqDefForCancelShareConnections()
+	return &CancelShareConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateInstanceConnection 创建实例连接
+//
+// 创建实例连接
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) CreateInstanceConnection(request *model.CreateInstanceConnectionRequest) (*model.CreateInstanceConnectionResponse, error) {
+	requestDef := GenReqDefForCreateInstanceConnection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateInstanceConnectionResponse), nil
+	}
+}
+
+// CreateInstanceConnectionInvoker 创建实例连接
+func (c *DasClient) CreateInstanceConnectionInvoker(request *model.CreateInstanceConnectionRequest) *CreateInstanceConnectionInvoker {
+	requestDef := GenReqDefForCreateInstanceConnection()
+	return &CreateInstanceConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateShareConnections 设置共享链接
+//
+// 设置共享链接，
+// 用于用户添加共享链接
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) CreateShareConnections(request *model.CreateShareConnectionsRequest) (*model.CreateShareConnectionsResponse, error) {
+	requestDef := GenReqDefForCreateShareConnections()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateShareConnectionsResponse), nil
+	}
+}
+
+// CreateShareConnectionsInvoker 设置共享链接
+func (c *DasClient) CreateShareConnectionsInvoker(request *model.CreateShareConnectionsRequest) *CreateShareConnectionsInvoker {
+	requestDef := GenReqDefForCreateShareConnections()
+	return &CreateShareConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListConnections 查询实例连接列表
+//
+// 查询实例连接列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListConnections(request *model.ListConnectionsRequest) (*model.ListConnectionsResponse, error) {
+	requestDef := GenReqDefForListConnections()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConnectionsResponse), nil
+	}
+}
+
+// ListConnectionsInvoker 查询实例连接列表
+func (c *DasClient) ListConnectionsInvoker(request *model.ListConnectionsRequest) *ListConnectionsInvoker {
+	requestDef := GenReqDefForListConnections()
+	return &ListConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListApiVersions 查询API版本列表
 //
 // 查询API版本列表
@@ -59,28 +145,6 @@ func (c *DasClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model
 func (c *DasClient) ShowApiVersionInvoker(request *model.ShowApiVersionRequest) *ShowApiVersionInvoker {
 	requestDef := GenReqDefForShowApiVersion()
 	return &ShowApiVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CancelShareConnections 删除共享链接
-//
-// 删除共享链接，
-// 用于用户删除共享链接
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DasClient) CancelShareConnections(request *model.CancelShareConnectionsRequest) (*model.CancelShareConnectionsResponse, error) {
-	requestDef := GenReqDefForCancelShareConnections()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CancelShareConnectionsResponse), nil
-	}
-}
-
-// CancelShareConnectionsInvoker 删除共享链接
-func (c *DasClient) CancelShareConnectionsInvoker(request *model.CancelShareConnectionsRequest) *CancelShareConnectionsInvoker {
-	requestDef := GenReqDefForCancelShareConnections()
-	return &CancelShareConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ChangeSqlLimitSwitchStatus 设置SQL限流开关状态
@@ -166,28 +230,6 @@ func (c *DasClient) CreateHealthReportTask(request *model.CreateHealthReportTask
 func (c *DasClient) CreateHealthReportTaskInvoker(request *model.CreateHealthReportTaskRequest) *CreateHealthReportTaskInvoker {
 	requestDef := GenReqDefForCreateHealthReportTask()
 	return &CreateHealthReportTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateShareConnections 设置共享链接
-//
-// 设置共享链接，
-// 用于用户添加共享链接
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DasClient) CreateShareConnections(request *model.CreateShareConnectionsRequest) (*model.CreateShareConnectionsResponse, error) {
-	requestDef := GenReqDefForCreateShareConnections()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateShareConnectionsResponse), nil
-	}
-}
-
-// CreateShareConnectionsInvoker 设置共享链接
-func (c *DasClient) CreateShareConnectionsInvoker(request *model.CreateShareConnectionsRequest) *CreateShareConnectionsInvoker {
-	requestDef := GenReqDefForCreateShareConnections()
-	return &CreateShareConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateSpaceAnalysisTask 创建空间分析任务

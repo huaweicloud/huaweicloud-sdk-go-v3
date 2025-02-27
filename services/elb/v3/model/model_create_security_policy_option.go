@@ -18,7 +18,7 @@ type CreateSecurityPolicyOption struct {
 	// 自定义安全策略的描述信息。默认空字符串\"\"。
 	Description *string `json:"description,omitempty"`
 
-	// 所属企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+	// 所属企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 自定义安全策略选择的TLS协议列表。取值：TLSv1, TLSv1.1, TLSv1.2, TLSv1.3

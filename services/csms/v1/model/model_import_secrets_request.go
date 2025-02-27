@@ -10,9 +10,6 @@ type ImportSecretsRequest struct {
 
 	// 批量创建凭据参数
 	Secrets []CreateSecretRequestBody `json:"secrets"`
-
-	// 导入数据条数
-	Total int32 `json:"total"`
 }
 
 func (o ImportSecretsRequest) String() string {

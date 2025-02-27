@@ -50,7 +50,7 @@ type AppVersionDetail struct {
 
 	ReadinessProbe *ProbeDetail `json:"readiness_probe,omitempty"`
 
-	// NPU芯片类型，可填：D310，D910
+	// NPU类型，支持D310、D310B，支持填写： - D310：D310类型 - D310B：D310B类型 - 不填表示为D310类型。
 	NpuType *string `json:"npu_type,omitempty"`
 }
 

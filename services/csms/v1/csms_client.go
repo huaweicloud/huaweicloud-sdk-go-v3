@@ -843,6 +843,27 @@ func (c *CsmsClient) UpdateSecretStageInvoker(request *model.UpdateSecretStageRe
 	return &UpdateSecretStageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateUserPassword 修改用户密码
+//
+// 修改用户密码
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) UpdateUserPassword(request *model.UpdateUserPasswordRequest) (*model.UpdateUserPasswordResponse, error) {
+	requestDef := GenReqDefForUpdateUserPassword()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateUserPasswordResponse), nil
+	}
+}
+
+// UpdateUserPasswordInvoker 修改用户密码
+func (c *CsmsClient) UpdateUserPasswordInvoker(request *model.UpdateUserPasswordRequest) *UpdateUserPasswordInvoker {
+	requestDef := GenReqDefForUpdateUserPassword()
+	return &UpdateUserPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateVersion 更新凭据版本
 //
 // 当前支持更新指定凭据版本的有效期，只能更新ENABLED状态的凭据。在关联订阅的事件包含“版本过期”基础事件类型时，每次更新版本有效期后仅会触发一次事件通知。

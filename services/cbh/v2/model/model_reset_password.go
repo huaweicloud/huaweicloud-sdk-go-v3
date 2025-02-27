@@ -12,7 +12,8 @@ type ResetPassword struct {
 	// admin用户修改后的新密码，8-32位，大写字母、小写字母、数字和特殊字符。
 	NewPassword string `json:"new_password"`
 
-	ServerId *interface{} `json:"server_id"`
+	// 云堡垒机实例ID，使用UUID格式表示。
+	ServerId string `json:"server_id"`
 }
 
 func (o ResetPassword) String() string {

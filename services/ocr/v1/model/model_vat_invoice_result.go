@@ -11,10 +11,10 @@ type VatInvoiceResult struct {
 	// 增值税发票标题
 	Title *string `json:"title,omitempty"`
 
-	// 增值税发票类型，可选值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
+	// 增值税发票类型，取值包括： - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）  - fully_digitalized_special_electronic: 全电专用发票  - fully_digitalized_normal_electronic: 全电普通发票
 	Type *string `json:"type,omitempty"`
 
-	// 增值税发票左上角标志。当“advanced_mode”设置为“true”时才返回。包含：通行费、代开。
+	// 增值税发票左上角标志。取值包含：通行费、代开、成品油、收购、机动车、旅客运输服务。 当\"advanced_mode\"设置为\"true\"时才返回。
 	InvoiceTag *string `json:"invoice_tag,omitempty"`
 
 	// 小计金额，当传入多页PDF时返回此字段。
@@ -23,25 +23,25 @@ type VatInvoiceResult struct {
 	// 小计税额，当传入多页PDF时返回此字段。
 	SumTax *string `json:"sum_tax,omitempty"`
 
-	// 发票联次。 当“advanced_mode”设置为“true”时才返回。
+	// 发票联次。  当\"advanced_mode\"设置为\"true\"时才返回。
 	SerialNumber *string `json:"serial_number,omitempty"`
 
-	// 发票归属地。 当“advanced_mode”设置为“true”时才返回。
+	// 发票归属地。  当\"advanced_mode\"设置为\"true\"时才返回。
 	Attribution *string `json:"attribution,omitempty"`
 
-	// 发票监制章。 当“advanced_mode”设置为“true”时才返回。
+	// 发票监制章。  当\"advanced_mode\"设置为\"true\"时才返回。
 	SupervisionSeal *[]string `json:"supervision_seal,omitempty"`
 
 	// 发票代码。
 	Code *string `json:"code,omitempty"`
 
-	// 机打代码。当“advanced_mode”设置为“true”时才返回。
+	// 机打代码。 当\"advanced_mode\"设置为\"true\"时才返回。
 	PrintCode *string `json:"print_code,omitempty"`
 
-	// 机器编号。 当“advanced_mode”设置为“true”时才返回。
+	// 机器编号。  当\"advanced_mode\"设置为\"true\"时才返回。
 	MachineNumber *string `json:"machine_number,omitempty"`
 
-	// 机打号码。 当“advanced_mode”设置为“true”时才返回
+	// 机打号码。  当\"advanced_mode\"设置为\"true\"时才返回。
 	PrintNumber *string `json:"print_number,omitempty"`
 
 	// 发票校验码，特定类型增值税发票内不存在该信息时返回空字符串。
@@ -89,22 +89,22 @@ type VatInvoiceResult struct {
 	// 价税合计。
 	Total *string `json:"total,omitempty"`
 
-	// 价税合计（大写）。 当“advanced_mode”设置为“true”时才返回。
+	// 价税合计（大写）。  当\"advanced_mode\"设置为\"true\"时才返回。
 	TotalInWords *string `json:"total_in_words,omitempty"`
 
-	// 备注。 当“advanced_mode”设置为“true”时才返回。
+	// 备注。  当\"advanced_mode\"设置为\"true\"时才返回。
 	Remarks *string `json:"remarks,omitempty"`
 
-	// 收款人。 当“advanced_mode”设置为“true”时才返回。
+	// 收款人。  当\"advanced_mode\"设置为\"true\"时才返回。
 	Receiver *string `json:"receiver,omitempty"`
 
-	// 复核。 当“advanced_mode”设置为“true”时才返回。
+	// 复核。  当\"advanced_mode\"设置为\"true\"时才返回。
 	Reviewer *string `json:"reviewer,omitempty"`
 
-	// 开票人。 当“advanced_mode”设置为“true”时才返回。
+	// 开票人。  当\"advanced_mode\"设置为\"true\"时才返回。
 	Issuer *string `json:"issuer,omitempty"`
 
-	// 销售方发票专用章。 当“advanced_mode”设置为“true”时才返回。
+	// 销售方发票专用章。  当\"advanced_mode\"设置为\"true\"时才返回。
 	SellerSeal *[]string `json:"seller_seal,omitempty"`
 
 	// 货物或应税劳务列表。
@@ -119,7 +119,7 @@ type VatInvoiceResult struct {
 	// 各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
 	Confidence *interface{} `json:"confidence,omitempty"`
 
-	// 文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+	// 文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当\"return_text_location\"设置为“true”时才返回。
 	TextLocation *interface{} `json:"text_location,omitempty"`
 
 	// 销货清单的购买方名称。 当传入图片为发票销货清单时返回此字段。
@@ -169,6 +169,9 @@ type VatInvoiceResult struct {
 
 	// 销货清单的货物（劳务）名称列表。 当传入图片为发票销货清单时返回此字段。
 	BelongItemList *[]BelongItemList `json:"belong_item_list,omitempty"`
+
+	// 旅客运输服务的出行信息列表。 当传入图片为旅客运输服务发票时返回此字段。
+	PassengerTravelItemList *[]PassengerTravelItemList `json:"passenger_travel_item_list,omitempty"`
 }
 
 func (o VatInvoiceResult) String() string {

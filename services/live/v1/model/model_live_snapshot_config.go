@@ -33,6 +33,12 @@ type LiveSnapshotConfig struct {
 
 	// 通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
 	CallBackUrl *string `json:"call_back_url,omitempty"`
+
+	// 截图存储文件访问协议， 仅支持http、https格式
+	ImageAccessProtocol *LiveSnapshotConfigImageAccessProtocol `json:"image_access_protocol,omitempty"`
+
+	// 截图存储文件访问域名
+	ImageAccessDomain *string `json:"image_access_domain,omitempty"`
 }
 
 func (o LiveSnapshotConfig) String() string {
@@ -73,6 +79,53 @@ func (c LiveSnapshotConfigCallBackEnable) MarshalJSON() ([]byte, error) {
 }
 
 func (c *LiveSnapshotConfigCallBackEnable) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type LiveSnapshotConfigImageAccessProtocol struct {
+	value string
+}
+
+type LiveSnapshotConfigImageAccessProtocolEnum struct {
+	HTTP  LiveSnapshotConfigImageAccessProtocol
+	HTTPS LiveSnapshotConfigImageAccessProtocol
+}
+
+func GetLiveSnapshotConfigImageAccessProtocolEnum() LiveSnapshotConfigImageAccessProtocolEnum {
+	return LiveSnapshotConfigImageAccessProtocolEnum{
+		HTTP: LiveSnapshotConfigImageAccessProtocol{
+			value: "http",
+		},
+		HTTPS: LiveSnapshotConfigImageAccessProtocol{
+			value: "https",
+		},
+	}
+}
+
+func (c LiveSnapshotConfigImageAccessProtocol) Value() string {
+	return c.value
+}
+
+func (c LiveSnapshotConfigImageAccessProtocol) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *LiveSnapshotConfigImageAccessProtocol) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

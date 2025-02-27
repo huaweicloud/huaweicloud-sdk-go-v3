@@ -5,6 +5,70 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/das/v3/model"
 )
 
+type CancelShareConnectionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CancelShareConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CancelShareConnectionsInvoker) Invoke() (*model.CancelShareConnectionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CancelShareConnectionsResponse), nil
+	}
+}
+
+type CreateInstanceConnectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateInstanceConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateInstanceConnectionInvoker) Invoke() (*model.CreateInstanceConnectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateInstanceConnectionResponse), nil
+	}
+}
+
+type CreateShareConnectionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateShareConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateShareConnectionsInvoker) Invoke() (*model.CreateShareConnectionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateShareConnectionsResponse), nil
+	}
+}
+
+type ListConnectionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListConnectionsInvoker) Invoke() (*model.ListConnectionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListConnectionsResponse), nil
+	}
+}
+
 type ListApiVersionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -34,22 +98,6 @@ func (i *ShowApiVersionInvoker) Invoke() (*model.ShowApiVersionResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ShowApiVersionResponse), nil
-	}
-}
-
-type CancelShareConnectionsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CancelShareConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CancelShareConnectionsInvoker) Invoke() (*model.CancelShareConnectionsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CancelShareConnectionsResponse), nil
 	}
 }
 
@@ -114,22 +162,6 @@ func (i *CreateHealthReportTaskInvoker) Invoke() (*model.CreateHealthReportTaskR
 		return nil, err
 	} else {
 		return result.(*model.CreateHealthReportTaskResponse), nil
-	}
-}
-
-type CreateShareConnectionsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateShareConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateShareConnectionsInvoker) Invoke() (*model.CreateShareConnectionsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateShareConnectionsResponse), nil
 	}
 }
 

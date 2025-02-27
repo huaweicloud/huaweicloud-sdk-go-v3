@@ -21,7 +21,7 @@ type CreateIpGroupOption struct {
 	// 参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
 	IpList []CreateIpGroupIpOption `json:"ip_list"`
 
-	// 参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+	// 参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 

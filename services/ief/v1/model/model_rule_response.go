@@ -21,13 +21,13 @@ type RuleResponse struct {
 	// 规则ID
 	Id *string `json:"id,omitempty"`
 
-	// 铂金版实例ID，如果为空则表示是专业版实例。
+	// [铂金版实例ID，如果为空则表示是专业版实例。](tag:hws,hws_hk)[铂金版实例ID](tag:hcs,hcs_sm)
 	IefInstanceId *string `json:"ief_instance_id,omitempty"`
 
 	// 是否启用规则，默认为true（启用）
 	InUsing *bool `json:"in_using,omitempty"`
 
-	// 规则名称，只允许中文字符、英文字符、数字、下划线、中划线，最大长度64 同一个帐号中创建的规则名唯一
+	// 规则名称，只允许中文字符、英文字符、数字、下划线、中划线，最大长度64 同一个账号中创建的规则名唯一
 	Name string `json:"name"`
 
 	// 项目ID
@@ -35,7 +35,7 @@ type RuleResponse struct {
 
 	Source *EndpointObjResp `json:"source"`
 
-	// 源端点资源。 示例： - rest: path取值需要为标准URI格式。 {\"path\":\"/a/b/c\"} - eventbus: {\"topic\": \"<project id>/nodes/<node id>/user/<租户自定义且满足eventbus topic要求的字符串>\",\"node_id\":\"<node id>\"}
+	// 源端点资源。示例： - rest: {\"path\":\"\\<standard uri format\\>\"} - eventbus: {\"topic\":\"\\<project id\\>/nodes/\\<node id\\>/user/\\<租户自定义且满足eventbus topic要求的字符串\\>\",\"node_id\":\"\\<node id\\>\"}
 	SourceResource map[string]string `json:"source_resource"`
 
 	Target *EndpointObjResp `json:"target"`

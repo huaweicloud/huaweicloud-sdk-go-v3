@@ -145,6 +145,27 @@ func (c *LiveClient) CreateRecordRuleInvoker(request *model.CreateRecordRuleRequ
 	return &CreateRecordRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateScheduleRecordTasks 创建计划录制任务
+//
+// 通过使用指定录制模板ID对应的配置创建一个在指定时间启动、结束的录制任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) CreateScheduleRecordTasks(request *model.CreateScheduleRecordTasksRequest) (*model.CreateScheduleRecordTasksResponse, error) {
+	requestDef := GenReqDefForCreateScheduleRecordTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateScheduleRecordTasksResponse), nil
+	}
+}
+
+// CreateScheduleRecordTasksInvoker 创建计划录制任务
+func (c *LiveClient) CreateScheduleRecordTasksInvoker(request *model.CreateScheduleRecordTasksRequest) *CreateScheduleRecordTasksInvoker {
+	requestDef := GenReqDefForCreateScheduleRecordTasks()
+	return &CreateScheduleRecordTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSnapshotConfig 创建直播截图配置
 //
 // 创建直播截图配置接口
@@ -374,6 +395,27 @@ func (c *LiveClient) DeleteRefererChain(request *model.DeleteRefererChainRequest
 func (c *LiveClient) DeleteRefererChainInvoker(request *model.DeleteRefererChainRequest) *DeleteRefererChainInvoker {
 	requestDef := GenReqDefForDeleteRefererChain()
 	return &DeleteRefererChainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteScheduleRecordTasks 停止计划录制任务
+//
+// 停止计划录制任务，当前的录制任务会中止并生产录制文件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) DeleteScheduleRecordTasks(request *model.DeleteScheduleRecordTasksRequest) (*model.DeleteScheduleRecordTasksResponse, error) {
+	requestDef := GenReqDefForDeleteScheduleRecordTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteScheduleRecordTasksResponse), nil
+	}
+}
+
+// DeleteScheduleRecordTasksInvoker 停止计划录制任务
+func (c *LiveClient) DeleteScheduleRecordTasksInvoker(request *model.DeleteScheduleRecordTasksRequest) *DeleteScheduleRecordTasksInvoker {
+	requestDef := GenReqDefForDeleteScheduleRecordTasks()
+	return &DeleteScheduleRecordTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteSnapshotConfig 删除直播截图配置
@@ -650,6 +692,27 @@ func (c *LiveClient) ListRecordRules(request *model.ListRecordRulesRequest) (*mo
 func (c *LiveClient) ListRecordRulesInvoker(request *model.ListRecordRulesRequest) *ListRecordRulesInvoker {
 	requestDef := GenReqDefForListRecordRules()
 	return &ListRecordRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListScheduleRecordTasks 查询计划录制任务
+//
+// 查询指定时间范围内启动和结束的计划录制任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ListScheduleRecordTasks(request *model.ListScheduleRecordTasksRequest) (*model.ListScheduleRecordTasksResponse, error) {
+	requestDef := GenReqDefForListScheduleRecordTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListScheduleRecordTasksResponse), nil
+	}
+}
+
+// ListScheduleRecordTasksInvoker 查询计划录制任务
+func (c *LiveClient) ListScheduleRecordTasksInvoker(request *model.ListScheduleRecordTasksRequest) *ListScheduleRecordTasksInvoker {
+	requestDef := GenReqDefForListScheduleRecordTasks()
+	return &ListScheduleRecordTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSnapshotConfigs 查询直播截图配置

@@ -4668,6 +4668,10 @@ func GenReqDefForListStarRocksDbParameters() *def.HttpRequestDef {
 		WithName("AddTaskScenario").
 		WithJsonTag("add_task_scenario").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("MainTaskName").
+		WithJsonTag("main_task_name").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").

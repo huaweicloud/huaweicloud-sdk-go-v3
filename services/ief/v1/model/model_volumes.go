@@ -23,6 +23,9 @@ type Volumes struct {
 
 	// 读写权限，configMap和secret类型只支持读权限
 	ReadOnly *bool `json:"read_only,omitempty"`
+
+	// 挂载的文件权限，仅configMap和secret类型生效，填写值为十进制表示的linux文件权限，默认为420（对应权限644）
+	DefaultMode *int32 `json:"default_mode,omitempty"`
 }
 
 func (o Volumes) String() string {

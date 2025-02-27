@@ -57,7 +57,7 @@ type CertificateInfo struct {
 	// 证书绑定的主域名。
 	CommonName *string `json:"common_name,omitempty"`
 
-	// 证书指纹
+	// 证书指纹。
 	Fingerprint *string `json:"fingerprint,omitempty"`
 
 	// 证书绑定的所有域名。
