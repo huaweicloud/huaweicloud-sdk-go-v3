@@ -12,7 +12,7 @@ type WorkspaceTransformVo struct {
 	TargetModelId *string `json:"target_model_id,omitempty"`
 
 	// 工作区名字。
-	TargetModelName *string `json:"target_model_name,omitempty"`
+	TargetModelName string `json:"target_model_name"`
 
 	// 描述。
 	Description *string `json:"description,omitempty"`

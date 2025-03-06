@@ -16,7 +16,13 @@ type ChangeCloudPhoneServerResponse struct {
 	ServerId *string `json:"server_id,omitempty"`
 
 	// 任务id。
-	JobId          *string `json:"job_id,omitempty"`
+	JobId *string `json:"job_id,omitempty"`
+
+	// 任务错误码说明。
+	ErrorMsg *string `json:"error_msg,omitempty"`
+
+	// 任务错误码。
+	ErrorCode      *string `json:"error_code,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

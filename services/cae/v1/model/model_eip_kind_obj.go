@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// EipKindObj API类型，固定值“eip”，该值不可修改。
+// EipKindObj API类型，固定值“Eip”，该值不可修改。
 type EipKindObj struct {
 	value string
 }
@@ -21,7 +21,7 @@ type EipKindObjEnum struct {
 func GetEipKindObjEnum() EipKindObjEnum {
 	return EipKindObjEnum{
 		EIP: EipKindObj{
-			value: "eip",
+			value: "Eip",
 		},
 	}
 }

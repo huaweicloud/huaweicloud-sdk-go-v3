@@ -12,7 +12,7 @@ type ListCloudPhonesRequest struct {
 	// 偏移量为一个大于等于0整数，表示查询该偏移量后面的所有的资源数，默认值为0。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 每页返回的资源个数。取值范围：1~200（默认值为200），一般设置为10、20、50。
+	// 每页返回的资源个数。取值范围：1~200（默认值为100），一般设置为10、20、50。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 云手机名称，支持模糊查询。

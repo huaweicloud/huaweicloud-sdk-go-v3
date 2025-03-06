@@ -9,10 +9,10 @@ import (
 // CreateNet2CloudPhoneServerRequestBodyBandWidth 云手机使用的带宽信息。
 type CreateNet2CloudPhoneServerRequestBodyBandWidth struct {
 
-	// 云手机服务器的带宽唯一标识。
+	// 云手机服务器的带宽唯一标识，选共享带宽时必选。
 	BandWidthId *string `json:"band_width_id,omitempty"`
 
-	// 云手机服务器的带宽大小。
+	// 云手机服务器的带宽大小，选独享带宽时必选。
 	BandWidthSize *int32 `json:"band_width_size,omitempty"`
 
 	// 云手机服务器带宽的计费方式。  - 0：bandwidth, 按带宽计费  - 1：traffic, 按流量计费

@@ -12,7 +12,7 @@ type CreateNet2CloudPhoneServerRequestBodyPhoneDataVolume struct {
 	// 磁盘类型，只支持如下类型： - SSD - GPSSD
 	VolumeType string `json:"volume_type"`
 
-	// 磁盘大小，单位GB，取值范围[0，32768]。
+	// 手机磁盘大小，单位GiB，取值范围[10，32768]。
 	Size int32 `json:"size"`
 }
 

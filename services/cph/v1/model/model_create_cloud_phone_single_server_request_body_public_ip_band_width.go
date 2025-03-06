@@ -1,0 +1,32 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// CreateCloudPhoneSingleServerRequestBodyPublicIpBandWidth 云手机裸服务器使用的带宽信息。
+type CreateCloudPhoneSingleServerRequestBodyPublicIpBandWidth struct {
+
+	// 云手机服务器的带宽唯一标识，选共享带宽时必选。
+	BandWidthId *string `json:"band_width_id,omitempty"`
+
+	// 云手机服务器的带宽大小，选独享带宽时必选。
+	BandWidthSize *int32 `json:"band_width_size,omitempty"`
+
+	// 云手机服务器带宽的计费方式。 0：bandwidth, 按带宽计费 1：traffic, 按流量计费
+	BandWidthChargeMode int32 `json:"band_width_charge_mode"`
+
+	// 云手机服务器的带宽类型。 0：per，独享带宽 1：whole，共享带宽
+	BandWidthShareType int32 `json:"band_width_share_type"`
+}
+
+func (o CreateCloudPhoneSingleServerRequestBodyPublicIpBandWidth) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "CreateCloudPhoneSingleServerRequestBodyPublicIpBandWidth struct{}"
+	}
+
+	return strings.Join([]string{"CreateCloudPhoneSingleServerRequestBodyPublicIpBandWidth", string(data)}, " ")
+}

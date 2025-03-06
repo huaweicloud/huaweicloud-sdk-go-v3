@@ -155,6 +155,21 @@ func GenReqDefForChangeCloudPhoneServerModel() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateCloudPhoneSingleServer() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2.1/{project_id}/cloud-phone/servers").
+		WithResponse(new(model.CreateCloudPhoneSingleServerResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateNet2CloudPhoneServer() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -241,6 +256,21 @@ func GenReqDefForDeleteShareFiles() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/cloud-phone/phones/share-files").
 		WithResponse(new(model.DeleteShareFilesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForExpandPhoneDataVolumeSize() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/cloud-phone/phones/expand-volume").
+		WithResponse(new(model.ExpandPhoneDataVolumeSizeResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -813,6 +843,26 @@ func GenReqDefForUpdateCloudPhoneProperty() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/cloud-phone/phones/batch-update-property").
 		WithResponse(new(model.UpdateCloudPhonePropertyResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateImageMember() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/cloud-phone/images/{image_id}/members").
+		WithResponse(new(model.UpdateImageMemberResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ImageId").
+		WithJsonTag("image_id").
+		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

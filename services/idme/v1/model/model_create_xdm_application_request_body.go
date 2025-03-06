@@ -38,6 +38,12 @@ type CreateXdmApplicationRequestBody struct {
 	// 认证数据源编码。
 	CertifiedDataSourceNumber *string `json:"certified_data_source_number,omitempty"`
 
+	// App类型。 - default：基础版（体验版） - lite：轻量版
+	AppType *string `json:"app_type,omitempty"`
+
+	// App权限控制。 - NONE：关闭权限校验 - ALL：开启所有校验
+	PermissionControl *string `json:"permission_control,omitempty"`
+
 	// 集成模式。 - API - SDK
 	IntegrationMode string `json:"integration_mode"`
 

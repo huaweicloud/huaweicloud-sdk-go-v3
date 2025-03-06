@@ -15,6 +15,9 @@ type RuleAclListResponseDtoDataRecords struct {
 	// 规则id
 	RuleId *string `json:"rule_id,omitempty"`
 
+	// 应用列表
+	Applications *[]string `json:"applications,omitempty"`
+
 	// 地址类型0 ipv4，1 ipv6
 	AddressType *int32 `json:"address_type,omitempty"`
 

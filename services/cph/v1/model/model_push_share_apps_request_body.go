@@ -20,7 +20,7 @@ type PushShareAppsRequestBody struct {
 	// 合法的OBS对象key，最大长度1024字符。仅支持大小写字母、数字、小数点（.）、斜线（/）、中划线（-）、下划线（_）、加号（+）、井号（#）、等号等这些字符。 推送的文件只支持tar文件类型。推送时，按tar文件解压后的文件目录结构推送到手机。
 	ObjectPath string `json:"object_path"`
 
-	// 云手机服务器ID列表。
+	// 云手机服务器ID列表。传入的服务器id个数范围为[1, 100]。
 	ServerIds []string `json:"server_ids"`
 }
 

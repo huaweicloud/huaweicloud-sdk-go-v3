@@ -1723,9 +1723,9 @@ func (c *GaussDBforNoSQLClient) ResizeInstanceVolumeInvoker(request *model.Resiz
 	return &ResizeInstanceVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// RestartInstance 重启实例的数据库服务
+// RestartInstance 重启实例或节点的数据库服务
 //
-// 重启实例的数据库服务。
+// 重启实例或节点的数据库服务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) RestartInstance(request *model.RestartInstanceRequest) (*model.RestartInstanceResponse, error) {
@@ -1738,7 +1738,7 @@ func (c *GaussDBforNoSQLClient) RestartInstance(request *model.RestartInstanceRe
 	}
 }
 
-// RestartInstanceInvoker 重启实例的数据库服务
+// RestartInstanceInvoker 重启实例或节点的数据库服务
 func (c *GaussDBforNoSQLClient) RestartInstanceInvoker(request *model.RestartInstanceRequest) *RestartInstanceInvoker {
 	requestDef := GenReqDefForRestartInstance()
 	return &RestartInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

@@ -145,6 +145,7 @@ func (c *DrsClient) BatchStopJobsActionInvoker(request *model.BatchStopJobsActio
 	return &BatchStopJobsActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchTagAction 批量添加或删除资源标签
 //
 // 批量添加删除资源标签。
@@ -160,6 +161,7 @@ func (c *DrsClient) BatchTagAction(request *model.BatchTagActionRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchTagActionInvoker 批量添加或删除资源标签
 func (c *DrsClient) BatchTagActionInvoker(request *model.BatchTagActionRequest) *BatchTagActionInvoker {
 	requestDef := GenReqDefForBatchTagAction()
@@ -250,6 +252,7 @@ func (c *DrsClient) CollectColumnsInvoker(request *model.CollectColumnsRequest) 
 	return &CollectColumnsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CollectDbObjectsAsync 提交查询数据库对象信息
 //
 // 提交查询数据库对象信息。例如：
@@ -268,6 +271,7 @@ func (c *DrsClient) CollectDbObjectsAsync(request *model.CollectDbObjectsAsyncRe
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CollectDbObjectsAsyncInvoker 提交查询数据库对象信息
 func (c *DrsClient) CollectDbObjectsAsyncInvoker(request *model.CollectDbObjectsAsyncRequest) *CollectDbObjectsAsyncInvoker {
 	requestDef := GenReqDefForCollectDbObjectsAsync()
@@ -722,6 +726,7 @@ func (c *DrsClient) ListConnectionsInvoker(request *model.ListConnectionsRequest
 	return &ListConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListDbObjects 查询数据库对象信息
 //
 // 查询数据库对象信息。
@@ -737,6 +742,7 @@ func (c *DrsClient) ListDbObjects(request *model.ListDbObjectsRequest) (*model.L
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListDbObjectsInvoker 查询数据库对象信息
 func (c *DrsClient) ListDbObjectsInvoker(request *model.ListDbObjectsRequest) *ListDbObjectsInvoker {
 	requestDef := GenReqDefForListDbObjects()
@@ -913,6 +919,7 @@ func (c *DrsClient) ListLinksInvoker(request *model.ListLinksRequest) *ListLinks
 	return &ListLinksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListProjectTags 查询项目标签
 //
 // 查询指定project ID下不同任务类型的所有标签集合。
@@ -928,6 +935,7 @@ func (c *DrsClient) ListProjectTags(request *model.ListProjectTagsRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListProjectTagsInvoker 查询项目标签
 func (c *DrsClient) ListProjectTagsInvoker(request *model.ListProjectTagsRequest) *ListProjectTagsInvoker {
 	requestDef := GenReqDefForListProjectTags()
@@ -1397,6 +1405,7 @@ func (c *DrsClient) ShowIncrementComponentsDetailInvoker(request *model.ShowIncr
 	return &ShowIncrementComponentsDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowInstanceTags 查询资源标签
 //
 // 查询指定实例的标签信息。
@@ -1412,6 +1421,7 @@ func (c *DrsClient) ShowInstanceTags(request *model.ShowInstanceTagsRequest) (*m
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowInstanceTagsInvoker 查询资源标签
 func (c *DrsClient) ShowInstanceTagsInvoker(request *model.ShowInstanceTagsRequest) *ShowInstanceTagsInvoker {
 	requestDef := GenReqDefForShowInstanceTags()

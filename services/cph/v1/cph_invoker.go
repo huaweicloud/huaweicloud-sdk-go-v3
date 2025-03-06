@@ -133,6 +133,22 @@ func (i *ChangeCloudPhoneServerModelInvoker) Invoke() (*model.ChangeCloudPhoneSe
 	}
 }
 
+type CreateCloudPhoneSingleServerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCloudPhoneSingleServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateCloudPhoneSingleServerInvoker) Invoke() (*model.CreateCloudPhoneSingleServerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCloudPhoneSingleServerResponse), nil
+	}
+}
+
 type CreateNet2CloudPhoneServerInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -226,6 +242,22 @@ func (i *DeleteShareFilesInvoker) Invoke() (*model.DeleteShareFilesResponse, err
 		return nil, err
 	} else {
 		return result.(*model.DeleteShareFilesResponse), nil
+	}
+}
+
+type ExpandPhoneDataVolumeSizeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExpandPhoneDataVolumeSizeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExpandPhoneDataVolumeSizeInvoker) Invoke() (*model.ExpandPhoneDataVolumeSizeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExpandPhoneDataVolumeSizeResponse), nil
 	}
 }
 
@@ -658,6 +690,22 @@ func (i *UpdateCloudPhonePropertyInvoker) Invoke() (*model.UpdateCloudPhonePrope
 		return nil, err
 	} else {
 		return result.(*model.UpdateCloudPhonePropertyResponse), nil
+	}
+}
+
+type UpdateImageMemberInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateImageMemberInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateImageMemberInvoker) Invoke() (*model.UpdateImageMemberResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateImageMemberResponse), nil
 	}
 }
 

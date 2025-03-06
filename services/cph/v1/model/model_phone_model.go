@@ -24,7 +24,7 @@ type PhoneModel struct {
 	// 内存大小，单位：MB。
 	Memory *int32 `json:"memory,omitempty"`
 
-	// 系统存储大小，单位：GB。
+	// 系统存储大小，单位：GiB。
 	Disk *int32 `json:"disk,omitempty"`
 
 	// 分辨率，不超过16个字节。
@@ -56,6 +56,12 @@ type PhoneModel struct {
 
 	// 手机物理磁盘是否独立。 - 0：不独立 - 1：独立
 	VolumeMode *int32 `json:"volume_mode,omitempty"`
+
+	// 渲染帧率。
+	RenderFps *int32 `json:"render_fps,omitempty"`
+
+	// 出流帧率。
+	StreamFps *int32 `json:"stream_fps,omitempty"`
 }
 
 func (o PhoneModel) String() string {

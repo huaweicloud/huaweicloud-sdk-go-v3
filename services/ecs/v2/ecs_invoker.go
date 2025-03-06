@@ -521,12 +521,10 @@ type ListServerAzInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
-// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListServerAzInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListServerAzInfoInvoker) Invoke() (*model.ListServerAzInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -765,10 +763,12 @@ type NovaListAvailabilityZonesInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *NovaListAvailabilityZonesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *NovaListAvailabilityZonesInvoker) Invoke() (*model.NovaListAvailabilityZonesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1158,6 +1158,22 @@ func (i *UpdateServerBlockDeviceInvoker) Invoke() (*model.UpdateServerBlockDevic
 		return nil, err
 	} else {
 		return result.(*model.UpdateServerBlockDeviceResponse), nil
+	}
+}
+
+type UpdateServerInterfaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateServerInterfaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateServerInterfaceInvoker) Invoke() (*model.UpdateServerInterfaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateServerInterfaceResponse), nil
 	}
 }
 

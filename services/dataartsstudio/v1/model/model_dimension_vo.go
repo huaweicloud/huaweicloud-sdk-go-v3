@@ -23,7 +23,7 @@ type DimensionVo struct {
 	NameCh string `json:"name_ch"`
 
 	// 描述。
-	Description *string `json:"description,omitempty"`
+	Description string `json:"description"`
 
 	// 创建人。
 	CreateBy *string `json:"create_by,omitempty"`
@@ -75,10 +75,10 @@ type DimensionVo struct {
 	// 表映射信息。
 	Mappings *[]TableMappingVo `json:"mappings,omitempty"`
 
-	Datasource *BizDatasourceRelationVo `json:"datasource,omitempty"`
+	Datasource *BizDatasourceRelationVo `json:"datasource"`
 
 	// 资产责任人。
-	Owner *string `json:"owner,omitempty"`
+	Owner string `json:"owner"`
 
 	// 外表路径
 	ObsLocation *string `json:"obs_location,omitempty"`

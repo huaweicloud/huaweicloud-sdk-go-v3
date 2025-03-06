@@ -12,7 +12,7 @@ type ListShareFilesRequest struct {
 	// 偏移量为一个大于等于0整数，表示查询该偏移量后面的所有的资源数，默认值为0。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 每页返回的资源个数。取值范围：1~100（默认值为100），一般设置为10、20、50。
+	// 每页返回的资源个数。取值范围：1~50（默认值为50）。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 云手机服务器ID列表，多个服务器ID用逗号（,）分隔。

@@ -85,6 +85,22 @@ func (i *BatchShowUpgradeCandidateVersionsInvoker) Invoke() (*model.BatchShowUpg
 	}
 }
 
+type CancelScheduleTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CancelScheduleTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CancelScheduleTaskInvoker) Invoke() (*model.CancelScheduleTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CancelScheduleTaskResponse), nil
+	}
+}
+
 type ConfirmRestoredDataInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -293,6 +309,22 @@ func (i *CreateRestoreInstanceInvoker) Invoke() (*model.CreateRestoreInstanceRes
 	}
 }
 
+type CreateScheduleTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateScheduleTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateScheduleTaskInvoker) Invoke() (*model.CreateScheduleTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateScheduleTaskResponse), nil
+	}
+}
+
 type CreateSlowLogDownloadInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -418,6 +450,22 @@ func (i *DeleteManualBackupInvoker) Invoke() (*model.DeleteManualBackupResponse,
 		return nil, err
 	} else {
 		return result.(*model.DeleteManualBackupResponse), nil
+	}
+}
+
+type DeleteScheduleTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteScheduleTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteScheduleTaskInvoker) Invoke() (*model.DeleteScheduleTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteScheduleTaskResponse), nil
 	}
 }
 
@@ -869,6 +917,22 @@ func (i *ListInstanceDetailsInvoker) Invoke() (*model.ListInstanceDetailsRespons
 	}
 }
 
+type ListInstanceEngineDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceEngineDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceEngineDetailInvoker) Invoke() (*model.ListInstanceEngineDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceEngineDetailResponse), nil
+	}
+}
+
 type ListInstanceErrorLogsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1106,6 +1170,22 @@ func (i *ListRestoreTimesInvoker) Invoke() (*model.ListRestoreTimesResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListRestoreTimesResponse), nil
+	}
+}
+
+type ListScheduleTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListScheduleTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListScheduleTaskInvoker) Invoke() (*model.ListScheduleTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListScheduleTaskResponse), nil
 	}
 }
 

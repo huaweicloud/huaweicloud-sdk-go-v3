@@ -34,6 +34,9 @@ type LiveSnapshotConfig struct {
 	// 通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
 	CallBackUrl *string `json:"call_back_url,omitempty"`
 
+	// 截图存储文件命名规则， 仅支持jpg格式 包含 - '{obs_object}' OBS存储路径，即obs_location.object的值  - '{domain}' 域名 - '{app}' 应用名 - '{stream}'  流名  其中实时截图模式下  - '{unix_time}'  时间戳，秒 - '{unix_time_milli}'  时间戳，毫秒 - '{fmt_time_utc}'   格式化UTC时间, 格式：YYYYMMDDhhmmss, 如20060102070405 - '{fmt_time_local}'  格式化本地时间, 格式：YYYYMMDDhhmmss，如20060102150405 必选一个时间类型模板
+	ImageObjectFormat *string `json:"image_object_format,omitempty"`
+
 	// 截图存储文件访问协议， 仅支持http、https格式
 	ImageAccessProtocol *LiveSnapshotConfigImageAccessProtocol `json:"image_access_protocol,omitempty"`
 

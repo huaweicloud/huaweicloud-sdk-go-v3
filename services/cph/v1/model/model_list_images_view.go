@@ -33,7 +33,7 @@ type ListImagesView struct {
 	// 镜像AOSP版本
 	ImageVersion *string `json:"image_version,omitempty"`
 
-	// 镜像类型 公共镜像：public 私有镜像：private 共享镜像：share
+	// 镜像类型 私有镜像：private 共享镜像：share
 	ImageType *string `json:"image_type,omitempty"`
 
 	// 镜像状态。 - 0：CREATING 创建中 - 1：PRODUCTION 生产态，可使用 - 2：CREATE_FAILED 创建失败

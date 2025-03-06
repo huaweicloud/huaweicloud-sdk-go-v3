@@ -49,14 +49,20 @@ type ShowCloudPhoneDetailResponse struct {
 	// imei码。
 	Imei *string `json:"imei,omitempty"`
 
+	// 云手机类型。 - 0：普通云手机
+	Type *int32 `json:"type,omitempty"`
+
 	// 手机路由类型。 - direct：默认路由 - routing：路由到编码容器
 	TrafficType *string `json:"traffic_type,omitempty"`
 
 	// 手机物理磁盘是否独立。 - 0：不独立 - 1：独立
 	VolumeMode *int32 `json:"volume_mode,omitempty"`
 
-	// 云手机服务器所在的可用区。
+	// 云手机服务器所在的可用区。[如上海一可用区1为cn-east-3a。](tag:hws,hws_hk,cmcc)
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
+
+	// 当前手机是否开启文件级加密。
+	HasEncrypt *bool `json:"has_encrypt,omitempty"`
 
 	// 创建时间， 时间格式为UTC，YYYY-MM-DDTHH:MM:SSZ。
 	CreateTime *string `json:"create_time,omitempty"`

@@ -124,6 +124,27 @@ func (c *GaussDBforopenGaussClient) BatchShowUpgradeCandidateVersionsInvoker(req
 	return &BatchShowUpgradeCandidateVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CancelScheduleTask 取消定时任务
+//
+// 取消定时任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) CancelScheduleTask(request *model.CancelScheduleTaskRequest) (*model.CancelScheduleTaskResponse, error) {
+	requestDef := GenReqDefForCancelScheduleTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelScheduleTaskResponse), nil
+	}
+}
+
+// CancelScheduleTaskInvoker 取消定时任务
+func (c *GaussDBforopenGaussClient) CancelScheduleTaskInvoker(request *model.CancelScheduleTaskRequest) *CancelScheduleTaskInvoker {
+	requestDef := GenReqDefForCancelScheduleTask()
+	return &CancelScheduleTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ConfirmRestoredData 备份恢复到目标实例数据后执行数据确认
 //
 // 确认备份恢复到目标实例的数据正常。
@@ -397,6 +418,27 @@ func (c *GaussDBforopenGaussClient) CreateRestoreInstanceInvoker(request *model.
 	return &CreateRestoreInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateScheduleTask 批量实例内核版本定时升级
+//
+// 批量实例内核版本定时升级
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) CreateScheduleTask(request *model.CreateScheduleTaskRequest) (*model.CreateScheduleTaskResponse, error) {
+	requestDef := GenReqDefForCreateScheduleTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateScheduleTaskResponse), nil
+	}
+}
+
+// CreateScheduleTaskInvoker 批量实例内核版本定时升级
+func (c *GaussDBforopenGaussClient) CreateScheduleTaskInvoker(request *model.CreateScheduleTaskRequest) *CreateScheduleTaskInvoker {
+	requestDef := GenReqDefForCreateScheduleTask()
+	return &CreateScheduleTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSlowLogDownload 创建慢日志下载信息
 //
 // 创建慢日志下载信息
@@ -563,6 +605,27 @@ func (c *GaussDBforopenGaussClient) DeleteManualBackup(request *model.DeleteManu
 func (c *GaussDBforopenGaussClient) DeleteManualBackupInvoker(request *model.DeleteManualBackupRequest) *DeleteManualBackupInvoker {
 	requestDef := GenReqDefForDeleteManualBackup()
 	return &DeleteManualBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteScheduleTask 删除定时任务信息
+//
+// 删除定时任务信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) DeleteScheduleTask(request *model.DeleteScheduleTaskRequest) (*model.DeleteScheduleTaskResponse, error) {
+	requestDef := GenReqDefForDeleteScheduleTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteScheduleTaskResponse), nil
+	}
+}
+
+// DeleteScheduleTaskInvoker 删除定时任务信息
+func (c *GaussDBforopenGaussClient) DeleteScheduleTaskInvoker(request *model.DeleteScheduleTaskRequest) *DeleteScheduleTaskInvoker {
+	requestDef := GenReqDefForDeleteScheduleTask()
+	return &DeleteScheduleTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DownloadBackup 获取备份下载链接
@@ -1153,6 +1216,27 @@ func (c *GaussDBforopenGaussClient) ListInstanceDetailsInvoker(request *model.Li
 	return &ListInstanceDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInstanceEngineDetail 查看实例引擎版本分布
+//
+// 查看实例引擎版本分布
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListInstanceEngineDetail(request *model.ListInstanceEngineDetailRequest) (*model.ListInstanceEngineDetailResponse, error) {
+	requestDef := GenReqDefForListInstanceEngineDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceEngineDetailResponse), nil
+	}
+}
+
+// ListInstanceEngineDetailInvoker 查看实例引擎版本分布
+func (c *GaussDBforopenGaussClient) ListInstanceEngineDetailInvoker(request *model.ListInstanceEngineDetailRequest) *ListInstanceEngineDetailInvoker {
+	requestDef := GenReqDefForListInstanceEngineDetail()
+	return &ListInstanceEngineDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInstanceErrorLogs 查询错误日志下载链接
 //
 // 查询数据库错误日志下载链接。
@@ -1467,6 +1551,27 @@ func (c *GaussDBforopenGaussClient) ListRestoreTimes(request *model.ListRestoreT
 func (c *GaussDBforopenGaussClient) ListRestoreTimesInvoker(request *model.ListRestoreTimesRequest) *ListRestoreTimesInvoker {
 	requestDef := GenReqDefForListRestoreTimes()
 	return &ListRestoreTimesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListScheduleTask 查看定时任务列表
+//
+// 查看定时任务列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListScheduleTask(request *model.ListScheduleTaskRequest) (*model.ListScheduleTaskResponse, error) {
+	requestDef := GenReqDefForListScheduleTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListScheduleTaskResponse), nil
+	}
+}
+
+// ListScheduleTaskInvoker 查看定时任务列表
+func (c *GaussDBforopenGaussClient) ListScheduleTaskInvoker(request *model.ListScheduleTaskRequest) *ListScheduleTaskInvoker {
+	requestDef := GenReqDefForListScheduleTask()
+	return &ListScheduleTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListStorageTypes 查询数据库磁盘类型

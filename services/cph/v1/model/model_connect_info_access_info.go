@@ -9,7 +9,7 @@ import (
 // ConnectInfoAccessInfo 云手机接入信息
 type ConnectInfoAccessInfo struct {
 
-	// 云手机实例的访问IP
+	// 云手机实例的公网访问IP
 	AccessIp *string `json:"access_ip,omitempty"`
 
 	// 云手机实例的内网访问IP

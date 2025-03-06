@@ -9,7 +9,7 @@ import (
 // ListImagesRequest Request Object
 type ListImagesRequest struct {
 
-	// 镜像类型。 - public：公共镜像 - private：私有镜像 - share：共享镜像
+	// 镜像类型。 - private：私有镜像 - share：共享镜像
 	ImageType *string `json:"image_type,omitempty"`
 
 	// 镜像状态。 - 0：CREATING 创建中 - 1：PRODUCTION 生产态，可使用 - 2：CREATE_FAILED 创建失败

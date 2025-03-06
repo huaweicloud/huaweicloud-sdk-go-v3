@@ -68,6 +68,12 @@ type ShowInstanceBeanResponse struct {
 
 	// 包周期的实例，有订单id。
 	OrderId *string `json:"order_id,omitempty"`
+
+	// 是否开启SSL。
+	EnableSsl *bool `json:"enable_ssl,omitempty"`
+
+	// 规格码。
+	FlavorRef *string `json:"flavor_ref,omitempty"`
 }
 
 func (o ShowInstanceBeanResponse) String() string {

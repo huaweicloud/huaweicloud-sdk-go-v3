@@ -907,10 +907,6 @@ func GenReqDefForCreateNoticeRule() *def.HttpRequestDef {
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
 		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -936,10 +932,6 @@ func GenReqDefForDeleteNoticeRule() *def.HttpRequestDef {
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
 		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
@@ -959,10 +951,6 @@ func GenReqDefForListNoticeRules() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -985,10 +973,6 @@ func GenReqDefForShowNoticeRule() *def.HttpRequestDef {
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
 		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1009,10 +993,6 @@ func GenReqDefForUpdateNoticeRule() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XEnterpriseProjectID").
 		WithJsonTag("X-Enterprise-Project-ID").
-		WithLocationType(def.Header))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XEnvironmentID").
-		WithJsonTag("X-Environment-ID").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

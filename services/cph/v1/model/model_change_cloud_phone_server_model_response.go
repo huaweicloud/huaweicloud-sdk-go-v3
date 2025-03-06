@@ -16,7 +16,13 @@ type ChangeCloudPhoneServerModelResponse struct {
 	OrderId *string `json:"order_id,omitempty"`
 
 	// 产品ID，不超过64个字节。
-	ProductId      *string `json:"product_id,omitempty"`
+	ProductId *string `json:"product_id,omitempty"`
+
+	// 任务错误码说明。
+	ErrorMsg *string `json:"error_msg,omitempty"`
+
+	// 任务错误码。
+	ErrorCode      *string `json:"error_code,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

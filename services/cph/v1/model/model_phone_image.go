@@ -26,6 +26,9 @@ type PhoneImage struct {
 
 	// 手机镜像唯一标识ID，不超过32个字节。
 	ImageId *string `json:"image_id,omitempty"`
+
+	// 当前镜像是否支持文件级加密
+	IsSupportEncrypt *bool `json:"is_support_encrypt,omitempty"`
 }
 
 func (o PhoneImage) String() string {

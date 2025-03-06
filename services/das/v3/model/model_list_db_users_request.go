@@ -21,7 +21,7 @@ type ListDbUsersRequest struct {
 	// 查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 数据库用户ID。每个用户需绑定一个数据库账号（数据库用户由“注册数据库用户”接口创建）。
+	// 数据库用户ID。用户使用数据库账号与数据库建立的连接ID（数据库用户ID由注册数据库用户接口创建）。
 	DbUserId *string `json:"db_user_id,omitempty"`
 
 	// 数据库用户名称

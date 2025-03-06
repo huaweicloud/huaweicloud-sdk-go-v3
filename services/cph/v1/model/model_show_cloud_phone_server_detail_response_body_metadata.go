@@ -9,6 +9,9 @@ import (
 // ShowCloudPhoneServerDetailResponseBodyMetadata 订单以及产品相关信息。
 type ShowCloudPhoneServerDetailResponseBodyMetadata struct {
 
+	// 计费类型。 [- 0：包周期](tag:hws,hws_hk,cmcc)
+	ChargingMode *int32 `json:"charging_mode,omitempty"`
+
 	// 产品ID，不超过64个字节。
 	ProductId *string `json:"product_id,omitempty"`
 

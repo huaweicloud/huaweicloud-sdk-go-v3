@@ -12,7 +12,7 @@ type Server struct {
 	// 云手机服务器名称，不超过65字符，只支持英文字母、数字、汉字、下划线和中划线。
 	ServerName *string `json:"server_name,omitempty"`
 
-	// 云手机服务器所在的可用区。
+	// 云手机服务器所在的可用区。[如上海一可用区1为cn-east-3a。](tag:hws,hws_hk,cmcc)
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
 	// 云手机服务器的唯一标识，不超过32个字节。
@@ -48,7 +48,7 @@ type Server struct {
 	// 云手机服务器的IP相关信息。
 	Addresses *[]Address `json:"addresses,omitempty"`
 
-	// 云手机服务器的项目ID。
+	// 云手机服务器的项目ID。用于对使用系统定义网络的服务器创建对等连接，并非租户的项目ID。
 	ResourceProjectId *string `json:"resource_project_id,omitempty"`
 
 	Metadata *ServerMetadata `json:"metadata,omitempty"`

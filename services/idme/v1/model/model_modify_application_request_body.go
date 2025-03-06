@@ -17,6 +17,9 @@ type ModifyApplicationRequestBody struct {
 	// 应用的英文描述。
 	DescriptionEn string `json:"description_en"`
 
+	// app权限控制。 - NONE：关闭权限校验 - ALL：开启所有校验
+	PermissionControl *string `json:"permission_control,omitempty"`
+
 	// 应用责任人。
 	AppUserList []AppUserList `json:"app_user_list"`
 }

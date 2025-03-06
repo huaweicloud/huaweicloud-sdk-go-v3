@@ -49,6 +49,12 @@ type ListAppsResponseBodyResult struct {
 
 	// 应用责任人。
 	Owners *[]string `json:"owners,omitempty"`
+
+	// App类型。
+	AppType *string `json:"app_type,omitempty"`
+
+	// App权限控制。
+	PermissionControl *string `json:"permission_control,omitempty"`
 }
 
 func (o ListAppsResponseBodyResult) String() string {

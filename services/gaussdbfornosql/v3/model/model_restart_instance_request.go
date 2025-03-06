@@ -11,6 +11,8 @@ type RestartInstanceRequest struct {
 
 	// 实例ID。
 	InstanceId string `json:"instance_id"`
+
+	Body *RestartInstanceRequestBody `json:"body,omitempty"`
 }
 
 func (o RestartInstanceRequest) String() string {

@@ -23,6 +23,9 @@ type ServerModel struct {
 
 	ExtendSpec *ServerModelExtendSpec `json:"extend_spec,omitempty"`
 
+	// 云手机服务器最大挂载磁盘数量。值为0时表示该机型磁盘为本地盘。
+	DiskMaxNum *int32 `json:"disk_max_num,omitempty"`
+
 	// 产品类型。 - 0：云手机 - 1：云手游
 	ProductType *int32 `json:"product_type,omitempty"`
 

@@ -749,7 +749,6 @@ func (c *EcsClient) ListResizeFlavorsInvoker(request *model.ListResizeFlavorsReq
 	return &ListResizeFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListServerAzInfo 查询可用区列表
 //
 // 查询可用区列表
@@ -765,7 +764,6 @@ func (c *EcsClient) ListServerAzInfo(request *model.ListServerAzInfoRequest) (*m
 	}
 }
 
-// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListServerAzInfoInvoker 查询可用区列表
 func (c *EcsClient) ListServerAzInfoInvoker(request *model.ListServerAzInfoRequest) *ListServerAzInfoInvoker {
 	requestDef := GenReqDefForListServerAzInfo()
@@ -1084,6 +1082,7 @@ func (c *EcsClient) NovaDisassociateSecurityGroupInvoker(request *model.NovaDisa
 	return &NovaDisassociateSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaListAvailabilityZones 查询可用区列表
 //
 // 查询可用域列表。
@@ -1099,6 +1098,7 @@ func (c *EcsClient) NovaListAvailabilityZones(request *model.NovaListAvailabilit
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaListAvailabilityZonesInvoker 查询可用区列表
 func (c *EcsClient) NovaListAvailabilityZonesInvoker(request *model.NovaListAvailabilityZonesRequest) *NovaListAvailabilityZonesInvoker {
 	requestDef := GenReqDefForNovaListAvailabilityZones()
@@ -1633,6 +1633,27 @@ func (c *EcsClient) UpdateServerBlockDevice(request *model.UpdateServerBlockDevi
 func (c *EcsClient) UpdateServerBlockDeviceInvoker(request *model.UpdateServerBlockDeviceRequest) *UpdateServerBlockDeviceInvoker {
 	requestDef := GenReqDefForUpdateServerBlockDevice()
 	return &UpdateServerBlockDeviceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateServerInterface 更新云服务器网卡挂载信息
+//
+// 更新云服务器网卡挂载信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) UpdateServerInterface(request *model.UpdateServerInterfaceRequest) (*model.UpdateServerInterfaceResponse, error) {
+	requestDef := GenReqDefForUpdateServerInterface()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateServerInterfaceResponse), nil
+	}
+}
+
+// UpdateServerInterfaceInvoker 更新云服务器网卡挂载信息
+func (c *EcsClient) UpdateServerInterfaceInvoker(request *model.UpdateServerInterfaceRequest) *UpdateServerInterfaceInvoker {
+	requestDef := GenReqDefForUpdateServerInterface()
+	return &UpdateServerInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateServerMetadata 更新云服务器元数据

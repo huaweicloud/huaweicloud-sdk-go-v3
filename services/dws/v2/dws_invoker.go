@@ -565,6 +565,22 @@ func (i *DeleteDisasterRecoveryInvoker) Invoke() (*model.DeleteDisasterRecoveryR
 	}
 }
 
+type DeleteDwsClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDwsClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDwsClusterInvoker) Invoke() (*model.DeleteDwsClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDwsClusterResponse), nil
+	}
+}
+
 type DeleteEventSubInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2002,6 +2018,22 @@ func (i *ShowClusterRedistributionInvoker) Invoke() (*model.ShowClusterRedistrib
 		return nil, err
 	} else {
 		return result.(*model.ShowClusterRedistributionResponse), nil
+	}
+}
+
+type ShowClustersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowClustersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowClustersInvoker) Invoke() (*model.ShowClustersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowClustersResponse), nil
 	}
 }
 

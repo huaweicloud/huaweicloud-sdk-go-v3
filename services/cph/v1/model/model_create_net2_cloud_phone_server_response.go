@@ -19,8 +19,14 @@ type CreateNet2CloudPhoneServerResponse struct {
 	ProductId *string `json:"product_id,omitempty"`
 
 	// 服务器ID列表。
-	ServerIds      *[]string `json:"server_ids,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	ServerIds *[]string `json:"server_ids,omitempty"`
+
+	// 任务错误码说明。
+	ErrorMsg *string `json:"error_msg,omitempty"`
+
+	// 任务错误码。
+	ErrorCode      *string `json:"error_code,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateNet2CloudPhoneServerResponse) String() string {

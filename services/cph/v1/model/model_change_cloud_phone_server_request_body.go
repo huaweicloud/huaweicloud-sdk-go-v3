@@ -33,11 +33,14 @@ type ChangeCloudPhoneServerRequestBody struct {
 	// 多少个手机共用一个vip。默认为手机开数，表示所有手机共享1个vip。取值范围：1到手机规格开数。
 	PhoneCountPerIp *int32 `json:"phone_count_per_ip,omitempty"`
 
-	PhoneDataVolume *CreateNet2CloudPhoneServerRequestBodyPhoneDataVolume `json:"phone_data_volume,omitempty"`
+	PhoneDataVolume *ChangeCloudPhoneServerRequestBodyPhoneDataVolume `json:"phone_data_volume,omitempty"`
 
 	ServerShareDataVolume *ChangeCloudPhoneServerRequestBodyServerShareDataVolume `json:"server_share_data_volume,omitempty"`
 
 	BandWidth *ChangeCloudPhoneServerRequestBodyBandWidth `json:"band_width"`
+
+	// 云手机属性列表，为Json格式字符串。只可以预置有权限修改的属性。字符串长度[1,8192]。
+	Property *string `json:"property,omitempty"`
 }
 
 func (o ChangeCloudPhoneServerRequestBody) String() string {

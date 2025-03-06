@@ -51,6 +51,9 @@ type CreateVirtualInterface struct {
 	// 虚拟接口连接的虚拟网关的ID
 	VgwId string `json:"vgw_id"`
 
+	// 虚拟接口关联的网关的ID。 当虚拟接口接入网关类型为全域接入网关时该参数必填，gateway_id值为全域接入网关的id
+	GatewayId *string `json:"gateway_id,omitempty"`
+
 	// 路由模式：static/bgp
 	RouteMode CreateVirtualInterfaceRouteMode `json:"route_mode"`
 

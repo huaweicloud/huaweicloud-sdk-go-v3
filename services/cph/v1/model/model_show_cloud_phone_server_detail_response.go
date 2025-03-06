@@ -15,7 +15,7 @@ type ShowCloudPhoneServerDetailResponse struct {
 	// 云手机服务器名称， 不超过65字符，只支持英文字母、数字、汉字、下划线和中划线。
 	ServerName *string `json:"server_name,omitempty"`
 
-	// 云手机服务器所在的可用区。
+	// 云手机服务器所在的可用区。[如上海一可用区1为cn-east-3a。](tag:hws,hws_hk,cmcc)
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
 	// 云手机服务器的唯一标识，不超过32个字节。
@@ -48,7 +48,7 @@ type ShowCloudPhoneServerDetailResponse struct {
 	// 云手机服务器所属子网的网段。网络版本 network_version取值为“v2”时，表示租户创建服务器时指定子网的 CIDR；取值为“v1”时，表示云手机服务器所属资源租户的子网CIDR。
 	SubnetCidr *string `json:"subnet_cidr,omitempty"`
 
-	// 云手机服务器的项目ID。
+	// 云手机服务器的项目ID。用于对使用系统定义网络的服务器创建对等连接，并非租户的项目ID。
 	ResourceProjectId *string `json:"resource_project_id,omitempty"`
 
 	Metadata *ShowCloudPhoneServerDetailResponseBodyMetadata `json:"metadata,omitempty"`

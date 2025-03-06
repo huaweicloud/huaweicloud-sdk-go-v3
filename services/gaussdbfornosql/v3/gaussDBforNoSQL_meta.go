@@ -835,6 +835,14 @@ func GenReqDefForListFlavorInfos() *def.HttpRequestDef {
 		WithJsonTag("engine_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Mode").
+		WithJsonTag("mode").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProductType").
+		WithJsonTag("product_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
 		WithJsonTag("offset").
 		WithLocationType(def.Query))
@@ -1754,6 +1762,10 @@ func GenReqDefForRestartInstance() *def.HttpRequestDef {
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -2402,6 +2414,10 @@ func GenReqDefForShowQuotas() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Mode").
 		WithJsonTag("mode").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProductType").
+		WithJsonTag("product_type").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

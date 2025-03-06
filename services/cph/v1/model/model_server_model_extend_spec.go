@@ -32,6 +32,8 @@ type ServerModelExtendSpec struct {
 
 	// 云手机服务器numa数量。
 	NumaCount *int32 `json:"numa_count,omitempty"`
+
+	OsVolume *ServerModelExtendSpecOsVolume `json:"os_volume,omitempty"`
 }
 
 func (o ServerModelExtendSpec) String() string {

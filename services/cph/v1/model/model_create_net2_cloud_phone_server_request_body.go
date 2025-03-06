@@ -48,8 +48,11 @@ type CreateNet2CloudPhoneServerRequestBody struct {
 
 	BandWidth *CreateNet2CloudPhoneServerRequestBodyBandWidth `json:"band_width"`
 
-	// 待创建云服务器所在的可用区，需要指定可用区（AZ）的名称。如上海一可用区1为cn-east-3a。
+	// 待创建云服务器所在的可用区，需要指定可用区（AZ）的名称。[如上海一可用区1为cn-east-3a。](tag:hws,hws_hk,cmcc)
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
+
+	// 云手机属性列表，为Json格式字符串。只可以预置有权限修改的属性。字符串长度[1,8192]。
+	Property *string `json:"property,omitempty"`
 }
 
 func (o CreateNet2CloudPhoneServerRequestBody) String() string {

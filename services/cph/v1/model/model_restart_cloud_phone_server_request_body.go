@@ -8,7 +8,7 @@ import (
 
 type RestartCloudPhoneServerRequestBody struct {
 
-	// 云手机服务器id列表。
+	// 云手机服务器id列表。传入的服务器id个数范围为[1, 100]
 	ServerIds []string `json:"server_ids"`
 }
 

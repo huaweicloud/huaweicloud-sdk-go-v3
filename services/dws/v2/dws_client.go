@@ -770,6 +770,27 @@ func (c *DwsClient) DeleteDisasterRecoveryInvoker(request *model.DeleteDisasterR
 	return &DeleteDisasterRecoveryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteDwsCluster 删除集群V2
+//
+// 此接口用于删除集群。集群删除后将释放此集群的所有资源，包括客户数据。为了安全起见，请在删除集群前为这个集群创建快照。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) DeleteDwsCluster(request *model.DeleteDwsClusterRequest) (*model.DeleteDwsClusterResponse, error) {
+	requestDef := GenReqDefForDeleteDwsCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDwsClusterResponse), nil
+	}
+}
+
+// DeleteDwsClusterInvoker 删除集群V2
+func (c *DwsClient) DeleteDwsClusterInvoker(request *model.DeleteDwsClusterRequest) *DeleteDwsClusterInvoker {
+	requestDef := GenReqDefForDeleteDwsCluster()
+	return &DeleteDwsClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteEventSub 删除订阅事件
 //
 // 删除订阅的事件
@@ -2673,6 +2694,27 @@ func (c *DwsClient) ShowClusterRedistribution(request *model.ShowClusterRedistri
 func (c *DwsClient) ShowClusterRedistributionInvoker(request *model.ShowClusterRedistributionRequest) *ShowClusterRedistributionInvoker {
 	requestDef := GenReqDefForShowClusterRedistribution()
 	return &ShowClusterRedistributionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowClusters 查询集群列表V2
+//
+// 该接口用于查询并显示集群列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ShowClusters(request *model.ShowClustersRequest) (*model.ShowClustersResponse, error) {
+	requestDef := GenReqDefForShowClusters()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowClustersResponse), nil
+	}
+}
+
+// ShowClustersInvoker 查询集群列表V2
+func (c *DwsClient) ShowClustersInvoker(request *model.ShowClustersRequest) *ShowClustersInvoker {
+	requestDef := GenReqDefForShowClusters()
+	return &ShowClustersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDatabaseAuthority 查询数据库对象权限
