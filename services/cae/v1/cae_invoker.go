@@ -645,6 +645,86 @@ func (i *UpdateNoticeRuleInvoker) Invoke() (*model.UpdateNoticeRuleResponse, err
 	}
 }
 
+type CreateSecretInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSecretInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSecretInvoker) Invoke() (*model.CreateSecretResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSecretResponse), nil
+	}
+}
+
+type DeleteSecretInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSecretInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteSecretInvoker) Invoke() (*model.DeleteSecretResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSecretResponse), nil
+	}
+}
+
+type ListEffectiveComponentsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEffectiveComponentsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListEffectiveComponentsInvoker) Invoke() (*model.ListEffectiveComponentsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEffectiveComponentsResponse), nil
+	}
+}
+
+type ListSecretsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecretsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSecretsInvoker) Invoke() (*model.ListSecretsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecretsResponse), nil
+	}
+}
+
+type UpdateSecretInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSecretInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSecretInvoker) Invoke() (*model.UpdateSecretResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSecretResponse), nil
+	}
+}
+
 type CreateTimerRuleInvoker struct {
 	*invoker.BaseInvoker
 }

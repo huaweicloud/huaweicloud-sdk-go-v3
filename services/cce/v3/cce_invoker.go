@@ -1525,6 +1525,22 @@ func (i *CreateAutopilotKubernetesClusterCertInvoker) Invoke() (*model.CreateAut
 	}
 }
 
+type CreateAutopilotMaintenanceWindowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAutopilotMaintenanceWindowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAutopilotMaintenanceWindowInvoker) Invoke() (*model.CreateAutopilotMaintenanceWindowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAutopilotMaintenanceWindowResponse), nil
+	}
+}
+
 type CreateAutopilotPostCheckInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1634,6 +1650,22 @@ func (i *DeleteAutopilotClusterInvoker) Invoke() (*model.DeleteAutopilotClusterR
 		return nil, err
 	} else {
 		return result.(*model.DeleteAutopilotClusterResponse), nil
+	}
+}
+
+type DeleteAutopilotMaintenanceWindowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAutopilotMaintenanceWindowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAutopilotMaintenanceWindowInvoker) Invoke() (*model.DeleteAutopilotMaintenanceWindowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAutopilotMaintenanceWindowResponse), nil
 	}
 }
 
@@ -1829,6 +1861,22 @@ func (i *ListAutopilotUpgradeClusterTasksInvoker) Invoke() (*model.ListAutopilot
 	}
 }
 
+type ListAutopilotUpgradePlansInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAutopilotUpgradePlansInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAutopilotUpgradePlansInvoker) Invoke() (*model.ListAutopilotUpgradePlansResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAutopilotUpgradePlansResponse), nil
+	}
+}
+
 type ListAutopilotUpgradeWorkFlowsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1986,6 +2034,22 @@ func (i *ShowAutopilotJobInvoker) Invoke() (*model.ShowAutopilotJobResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowAutopilotJobResponse), nil
+	}
+}
+
+type ShowAutopilotMaintenanceWindowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAutopilotMaintenanceWindowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAutopilotMaintenanceWindowInvoker) Invoke() (*model.ShowAutopilotMaintenanceWindowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAutopilotMaintenanceWindowResponse), nil
 	}
 }
 
@@ -2165,6 +2229,22 @@ func (i *UpdateAutopilotClusterEipInvoker) Invoke() (*model.UpdateAutopilotClust
 	}
 }
 
+type UpdateAutopilotMaintenanceWindowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAutopilotMaintenanceWindowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAutopilotMaintenanceWindowInvoker) Invoke() (*model.UpdateAutopilotMaintenanceWindowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAutopilotMaintenanceWindowResponse), nil
+	}
+}
+
 type UpdateAutopilotReleaseInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2178,6 +2258,22 @@ func (i *UpdateAutopilotReleaseInvoker) Invoke() (*model.UpdateAutopilotReleaseR
 		return nil, err
 	} else {
 		return result.(*model.UpdateAutopilotReleaseResponse), nil
+	}
+}
+
+type UpdateAutopilotUpgradePlanInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAutopilotUpgradePlanInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAutopilotUpgradePlanInvoker) Invoke() (*model.UpdateAutopilotUpgradePlanResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAutopilotUpgradePlanResponse), nil
 	}
 }
 

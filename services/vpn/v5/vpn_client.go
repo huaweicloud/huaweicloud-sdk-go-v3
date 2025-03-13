@@ -817,6 +817,27 @@ func (c *VpnClient) ListAvailabilityZonesInvoker(request *model.ListAvailability
 	return &ListAvailabilityZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListExtendedAvailabilityZones 查询VPN网关可用区
+//
+// 查询VPN网关可用区
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) ListExtendedAvailabilityZones(request *model.ListExtendedAvailabilityZonesRequest) (*model.ListExtendedAvailabilityZonesResponse, error) {
+	requestDef := GenReqDefForListExtendedAvailabilityZones()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListExtendedAvailabilityZonesResponse), nil
+	}
+}
+
+// ListExtendedAvailabilityZonesInvoker 查询VPN网关可用区
+func (c *VpnClient) ListExtendedAvailabilityZonesInvoker(request *model.ListExtendedAvailabilityZonesRequest) *ListExtendedAvailabilityZonesInvoker {
+	requestDef := GenReqDefForListExtendedAvailabilityZones()
+	return &ListExtendedAvailabilityZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListVgws 查询VPN网关列表
 //
 // 查询VPN网关列表
@@ -1088,6 +1109,48 @@ func (c *VpnClient) UpdateVpnServer(request *model.UpdateVpnServerRequest) (*mod
 func (c *VpnClient) UpdateVpnServerInvoker(request *model.UpdateVpnServerRequest) *UpdateVpnServerInvoker {
 	requestDef := GenReqDefForUpdateVpnServer()
 	return &UpdateVpnServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateVpnUsers 批量创建VPN用户
+//
+// 批量创建P2C VPN用户
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) BatchCreateVpnUsers(request *model.BatchCreateVpnUsersRequest) (*model.BatchCreateVpnUsersResponse, error) {
+	requestDef := GenReqDefForBatchCreateVpnUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateVpnUsersResponse), nil
+	}
+}
+
+// BatchCreateVpnUsersInvoker 批量创建VPN用户
+func (c *VpnClient) BatchCreateVpnUsersInvoker(request *model.BatchCreateVpnUsersRequest) *BatchCreateVpnUsersInvoker {
+	requestDef := GenReqDefForBatchCreateVpnUsers()
+	return &BatchCreateVpnUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteVpnUsers 批量删除VPN用户
+//
+// 批量删除P2C VPN用户
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) BatchDeleteVpnUsers(request *model.BatchDeleteVpnUsersRequest) (*model.BatchDeleteVpnUsersResponse, error) {
+	requestDef := GenReqDefForBatchDeleteVpnUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteVpnUsersResponse), nil
+	}
+}
+
+// BatchDeleteVpnUsersInvoker 批量删除VPN用户
+func (c *VpnClient) BatchDeleteVpnUsersInvoker(request *model.BatchDeleteVpnUsersRequest) *BatchDeleteVpnUsersInvoker {
+	requestDef := GenReqDefForBatchDeleteVpnUsers()
+	return &BatchDeleteVpnUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateVpnUser 创建VPN用户

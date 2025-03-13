@@ -43,7 +43,7 @@ type ClusterSpec struct {
 
 	ContainerNetwork *ContainerNetwork `json:"containerNetwork"`
 
-	EniNetwork *EniNetwork `json:"eniNetwork,omitempty"`
+	EniNetwork *EniNetwork `json:"eniNetwork"`
 
 	ServiceNetwork *ServiceNetwork `json:"serviceNetwork,omitempty"`
 

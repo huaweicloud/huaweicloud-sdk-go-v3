@@ -5,6 +5,22 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dataartsstudio/v1/model"
 )
 
+type AcceptSecurityApplicationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AcceptSecurityApplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AcceptSecurityApplicationInvoker) Invoke() (*model.AcceptSecurityApplicationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AcceptSecurityApplicationResponse), nil
+	}
+}
+
 type AddDesignEntityTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -261,6 +277,22 @@ func (i *BatchDeleteSecurityPermissionSetPermissionsInvoker) Invoke() (*model.Ba
 	}
 }
 
+type BatchDeleteSecurityResourcePermissionPoliciesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteSecurityResourcePermissionPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteSecurityResourcePermissionPoliciesInvoker) Invoke() (*model.BatchDeleteSecurityResourcePermissionPoliciesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteSecurityResourcePermissionPoliciesResponse), nil
+	}
+}
+
 type BatchDeleteSecuritySecrecyLevelsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -466,6 +498,22 @@ func (i *CheckFactLogicTableStatusInvoker) Invoke() (*model.CheckFactLogicTableS
 		return nil, err
 	} else {
 		return result.(*model.CheckFactLogicTableStatusResponse), nil
+	}
+}
+
+type CheckSecurityDataClassificationCombineRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckSecurityDataClassificationCombineRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckSecurityDataClassificationCombineRuleInvoker) Invoke() (*model.CheckSecurityDataClassificationCombineRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckSecurityDataClassificationCombineRuleResponse), nil
 	}
 }
 
@@ -901,6 +949,22 @@ func (i *CreateSecurityAssignedQueueInvoker) Invoke() (*model.CreateSecurityAssi
 	}
 }
 
+type CreateSecurityDataClassificationCombineRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSecurityDataClassificationCombineRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSecurityDataClassificationCombineRuleInvoker) Invoke() (*model.CreateSecurityDataClassificationCombineRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSecurityDataClassificationCombineRuleResponse), nil
+	}
+}
+
 type CreateSecurityDataClassificationRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -914,6 +978,22 @@ func (i *CreateSecurityDataClassificationRuleInvoker) Invoke() (*model.CreateSec
 		return nil, err
 	} else {
 		return result.(*model.CreateSecurityDataClassificationRuleResponse), nil
+	}
+}
+
+type CreateSecurityDataClassificationRuleGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSecurityDataClassificationRuleGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSecurityDataClassificationRuleGroupInvoker) Invoke() (*model.CreateSecurityDataClassificationRuleGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSecurityDataClassificationRuleGroupResponse), nil
 	}
 }
 
@@ -978,6 +1058,22 @@ func (i *CreateSecurityPermissionSetPermissionInvoker) Invoke() (*model.CreateSe
 		return nil, err
 	} else {
 		return result.(*model.CreateSecurityPermissionSetPermissionResponse), nil
+	}
+}
+
+type CreateSecurityResourcePermissionPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSecurityResourcePermissionPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSecurityResourcePermissionPolicyInvoker) Invoke() (*model.CreateSecurityResourcePermissionPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSecurityResourcePermissionPolicyResponse), nil
 	}
 }
 
@@ -1170,6 +1266,22 @@ func (i *DebugSecurityDlfDataWareHousesInvoker) Invoke() (*model.DebugSecurityDl
 		return nil, err
 	} else {
 		return result.(*model.DebugSecurityDlfDataWareHousesResponse), nil
+	}
+}
+
+type DeclineSecurityApplicationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeclineSecurityApplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeclineSecurityApplicationInvoker) Invoke() (*model.DeclineSecurityApplicationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeclineSecurityApplicationResponse), nil
 	}
 }
 
@@ -1493,6 +1605,22 @@ func (i *DeleteSecurityDataClassificationRuleInvoker) Invoke() (*model.DeleteSec
 	}
 }
 
+type DeleteSecurityDataClassificationRuleGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSecurityDataClassificationRuleGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteSecurityDataClassificationRuleGroupInvoker) Invoke() (*model.DeleteSecurityDataClassificationRuleGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSecurityDataClassificationRuleGroupResponse), nil
+	}
+}
+
 type DeleteSecurityLevelFromEntityInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1701,6 +1829,22 @@ func (i *DeployFactoryPackagesInvoker) Invoke() (*model.DeployFactoryPackagesRes
 	}
 }
 
+type ExecuteSecurityDiagnoseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteSecurityDiagnoseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteSecurityDiagnoseInvoker) Invoke() (*model.ExecuteSecurityDiagnoseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteSecurityDiagnoseResponse), nil
+	}
+}
+
 type ExecuteTaskActionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1826,6 +1970,22 @@ func (i *ImportResultInvoker) Invoke() (*model.ImportResultResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ImportResultResponse), nil
+	}
+}
+
+type ImportSecurityBuiltinCategoryGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ImportSecurityBuiltinCategoryGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ImportSecurityBuiltinCategoryGroupsInvoker) Invoke() (*model.ImportSecurityBuiltinCategoryGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ImportSecurityBuiltinCategoryGroupsResponse), nil
 	}
 }
 
@@ -2677,6 +2837,22 @@ func (i *ListSchemasInvoker) Invoke() (*model.ListSchemasResponse, error) {
 	}
 }
 
+type ListSecurityApprovalsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecurityApprovalsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSecurityApprovalsInvoker) Invoke() (*model.ListSecurityApprovalsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecurityApprovalsResponse), nil
+	}
+}
+
 type ListSecurityAssignedQueuesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2690,6 +2866,22 @@ func (i *ListSecurityAssignedQueuesInvoker) Invoke() (*model.ListSecurityAssigne
 		return nil, err
 	} else {
 		return result.(*model.ListSecurityAssignedQueuesResponse), nil
+	}
+}
+
+type ListSecurityDataCategoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecurityDataCategoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSecurityDataCategoriesInvoker) Invoke() (*model.ListSecurityDataCategoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecurityDataCategoriesResponse), nil
 	}
 }
 
@@ -2869,6 +3061,22 @@ func (i *ListSecurityPermissionSetsInvoker) Invoke() (*model.ListSecurityPermiss
 	}
 }
 
+type ListSecurityResourcePermissionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecurityResourcePermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSecurityResourcePermissionsInvoker) Invoke() (*model.ListSecurityResourcePermissionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecurityResourcePermissionsResponse), nil
+	}
+}
+
 type ListSecurityRoleActionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2914,6 +3122,22 @@ func (i *ListSecuritySensitiveDataOverviewsInvoker) Invoke() (*model.ListSecurit
 		return nil, err
 	} else {
 		return result.(*model.ListSecuritySensitiveDataOverviewsResponse), nil
+	}
+}
+
+type ListSecurityUnreasonablePermissionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecurityUnreasonablePermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSecurityUnreasonablePermissionsInvoker) Invoke() (*model.ListSecurityUnreasonablePermissionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecurityUnreasonablePermissionsResponse), nil
 	}
 }
 
@@ -3074,6 +3298,22 @@ func (i *ModifyCustomizedFieldsInvoker) Invoke() (*model.ModifyCustomizedFieldsR
 		return nil, err
 	} else {
 		return result.(*model.ModifyCustomizedFieldsResponse), nil
+	}
+}
+
+type ModifySecurityAdminInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifySecurityAdminInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifySecurityAdminInvoker) Invoke() (*model.ModifySecurityAdminResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifySecurityAdminResponse), nil
 	}
 }
 
@@ -4325,6 +4565,22 @@ func (i *ShowRelationByIdInvoker) Invoke() (*model.ShowRelationByIdResponse, err
 	}
 }
 
+type ShowSecurityAdminInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSecurityAdminInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSecurityAdminInvoker) Invoke() (*model.ShowSecurityAdminResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSecurityAdminResponse), nil
+	}
+}
+
 type ShowSecurityDataClassificationRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4354,6 +4610,22 @@ func (i *ShowSecurityDataClassificationRuleGroupInvoker) Invoke() (*model.ShowSe
 		return nil, err
 	} else {
 		return result.(*model.ShowSecurityDataClassificationRuleGroupResponse), nil
+	}
+}
+
+type ShowSecurityDatasourceProtectionDiagnoseResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSecurityDatasourceProtectionDiagnoseResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSecurityDatasourceProtectionDiagnoseResultInvoker) Invoke() (*model.ShowSecurityDatasourceProtectionDiagnoseResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSecurityDatasourceProtectionDiagnoseResultResponse), nil
 	}
 }
 
@@ -4389,6 +4661,38 @@ func (i *ShowSecurityMemberSyncTaskInvoker) Invoke() (*model.ShowSecurityMemberS
 	}
 }
 
+type ShowSecurityNoMaskingTableResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSecurityNoMaskingTableResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSecurityNoMaskingTableResultInvoker) Invoke() (*model.ShowSecurityNoMaskingTableResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSecurityNoMaskingTableResultResponse), nil
+	}
+}
+
+type ShowSecurityPermissionManagementDiagnoseResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSecurityPermissionManagementDiagnoseResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSecurityPermissionManagementDiagnoseResultInvoker) Invoke() (*model.ShowSecurityPermissionManagementDiagnoseResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSecurityPermissionManagementDiagnoseResultResponse), nil
+	}
+}
+
 type ShowSecurityPermissionSetInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4405,6 +4709,22 @@ func (i *ShowSecurityPermissionSetInvoker) Invoke() (*model.ShowSecurityPermissi
 	}
 }
 
+type ShowSecurityResourcePermissionPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSecurityResourcePermissionPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSecurityResourcePermissionPolicyInvoker) Invoke() (*model.ShowSecurityResourcePermissionPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSecurityResourcePermissionPolicyResponse), nil
+	}
+}
+
 type ShowSecuritySecrecyLevelInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4418,6 +4738,22 @@ func (i *ShowSecuritySecrecyLevelInvoker) Invoke() (*model.ShowSecuritySecrecyLe
 		return nil, err
 	} else {
 		return result.(*model.ShowSecuritySecrecyLevelResponse), nil
+	}
+}
+
+type ShowSecuritySensitiveDataDiagnoseResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSecuritySensitiveDataDiagnoseResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSecuritySensitiveDataDiagnoseResultInvoker) Invoke() (*model.ShowSecuritySensitiveDataDiagnoseResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSecuritySensitiveDataDiagnoseResultResponse), nil
 	}
 }
 
@@ -4626,6 +4962,22 @@ func (i *StopFactorySupplementDataInstanceInvoker) Invoke() (*model.StopFactoryS
 		return nil, err
 	} else {
 		return result.(*model.StopFactorySupplementDataInstanceResponse), nil
+	}
+}
+
+type UnpublishSecurityApplicationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UnpublishSecurityApplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UnpublishSecurityApplicationInvoker) Invoke() (*model.UnpublishSecurityApplicationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UnpublishSecurityApplicationResponse), nil
 	}
 }
 
@@ -4869,6 +5221,22 @@ func (i *UpdateSecurityAssignedQueueInvoker) Invoke() (*model.UpdateSecurityAssi
 	}
 }
 
+type UpdateSecurityDataClassificationCombineRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSecurityDataClassificationCombineRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSecurityDataClassificationCombineRuleInvoker) Invoke() (*model.UpdateSecurityDataClassificationCombineRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSecurityDataClassificationCombineRuleResponse), nil
+	}
+}
+
 type UpdateSecurityDataClassificationRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4882,6 +5250,22 @@ func (i *UpdateSecurityDataClassificationRuleInvoker) Invoke() (*model.UpdateSec
 		return nil, err
 	} else {
 		return result.(*model.UpdateSecurityDataClassificationRuleResponse), nil
+	}
+}
+
+type UpdateSecurityDataClassificationRuleGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSecurityDataClassificationRuleGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSecurityDataClassificationRuleGroupInvoker) Invoke() (*model.UpdateSecurityDataClassificationRuleGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSecurityDataClassificationRuleGroupResponse), nil
 	}
 }
 
@@ -4930,6 +5314,22 @@ func (i *UpdateSecurityPermissionSetPermissionInvoker) Invoke() (*model.UpdateSe
 		return nil, err
 	} else {
 		return result.(*model.UpdateSecurityPermissionSetPermissionResponse), nil
+	}
+}
+
+type UpdateSecurityResourcePermissionPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSecurityResourcePermissionPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSecurityResourcePermissionPolicyInvoker) Invoke() (*model.UpdateSecurityResourcePermissionPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSecurityResourcePermissionPolicyResponse), nil
 	}
 }
 

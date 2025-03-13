@@ -12,13 +12,13 @@ import (
 type DataClassificationRuleOperateDto struct {
 
 	// 规则类型, CUSTOM, BUILTIN
-	RuleType *DataClassificationRuleOperateDtoRuleType `json:"rule_type,omitempty"`
+	RuleType DataClassificationRuleOperateDtoRuleType `json:"rule_type"`
 
 	// 密级ID
-	SecrecyLevelId *string `json:"secrecy_level_id,omitempty"`
+	SecrecyLevelId string `json:"secrecy_level_id"`
 
 	// 规则名称
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 规则方式, REGULAR, NONE, DEFAULT
 	Method *DataClassificationRuleOperateDtoMethod `json:"method,omitempty"`

@@ -8,7 +8,10 @@ import (
 
 // DeleteComponentResponse Response Object
 type DeleteComponentResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 任务ID。
+	JobId          *string `json:"job_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteComponentResponse) String() string {

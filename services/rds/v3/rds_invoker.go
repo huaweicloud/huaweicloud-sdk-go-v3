@@ -1349,6 +1349,22 @@ func (i *ListUpgradeHistoriesInvoker) Invoke() (*model.ListUpgradeHistoriesRespo
 	}
 }
 
+type ListVolumeInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVolumeInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListVolumeInfoInvoker) Invoke() (*model.ListVolumeInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVolumeInfoResponse), nil
+	}
+}
+
 type ListXellogFilesInvoker struct {
 	*invoker.BaseInvoker
 }

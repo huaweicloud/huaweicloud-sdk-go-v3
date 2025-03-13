@@ -859,6 +859,111 @@ func (c *CaeClient) UpdateNoticeRuleInvoker(request *model.UpdateNoticeRuleReque
 	return &UpdateNoticeRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateSecret 关联租户已注册的凭据。
+//
+// 关联租户已注册的凭据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CaeClient) CreateSecret(request *model.CreateSecretRequest) (*model.CreateSecretResponse, error) {
+	requestDef := GenReqDefForCreateSecret()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSecretResponse), nil
+	}
+}
+
+// CreateSecretInvoker 关联租户已注册的凭据。
+func (c *CaeClient) CreateSecretInvoker(request *model.CreateSecretRequest) *CreateSecretInvoker {
+	requestDef := GenReqDefForCreateSecret()
+	return &CreateSecretInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSecret 删除用户已在DEW服务上注册的凭据。
+//
+// 删除用户已在DEW服务上注册的凭据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CaeClient) DeleteSecret(request *model.DeleteSecretRequest) (*model.DeleteSecretResponse, error) {
+	requestDef := GenReqDefForDeleteSecret()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSecretResponse), nil
+	}
+}
+
+// DeleteSecretInvoker 删除用户已在DEW服务上注册的凭据。
+func (c *CaeClient) DeleteSecretInvoker(request *model.DeleteSecretRequest) *DeleteSecretInvoker {
+	requestDef := GenReqDefForDeleteSecret()
+	return &DeleteSecretInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEffectiveComponents 获取当前正在使用对应凭据组件列表。
+//
+// 获取当前正在使用的对应凭据组件列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CaeClient) ListEffectiveComponents(request *model.ListEffectiveComponentsRequest) (*model.ListEffectiveComponentsResponse, error) {
+	requestDef := GenReqDefForListEffectiveComponents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEffectiveComponentsResponse), nil
+	}
+}
+
+// ListEffectiveComponentsInvoker 获取当前正在使用对应凭据组件列表。
+func (c *CaeClient) ListEffectiveComponentsInvoker(request *model.ListEffectiveComponentsRequest) *ListEffectiveComponentsInvoker {
+	requestDef := GenReqDefForListEffectiveComponents()
+	return &ListEffectiveComponentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSecrets 获取用户现有的凭据。
+//
+// 获取用户现有的凭据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CaeClient) ListSecrets(request *model.ListSecretsRequest) (*model.ListSecretsResponse, error) {
+	requestDef := GenReqDefForListSecrets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecretsResponse), nil
+	}
+}
+
+// ListSecretsInvoker 获取用户现有的凭据。
+func (c *CaeClient) ListSecretsInvoker(request *model.ListSecretsRequest) *ListSecretsInvoker {
+	requestDef := GenReqDefForListSecrets()
+	return &ListSecretsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSecret 修改用户已在DEW服务上注册的凭据版本。
+//
+// 修改用户已在DEW服务上注册的凭据版本。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CaeClient) UpdateSecret(request *model.UpdateSecretRequest) (*model.UpdateSecretResponse, error) {
+	requestDef := GenReqDefForUpdateSecret()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSecretResponse), nil
+	}
+}
+
+// UpdateSecretInvoker 修改用户已在DEW服务上注册的凭据版本。
+func (c *CaeClient) UpdateSecretInvoker(request *model.UpdateSecretRequest) *UpdateSecretInvoker {
+	requestDef := GenReqDefForUpdateSecret()
+	return &UpdateSecretInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateTimerRule 创建定时启停规则
 //
 // 创建定时启停规则。

@@ -1787,6 +1787,27 @@ func (c *RdsClient) ListUpgradeHistoriesInvoker(request *model.ListUpgradeHistor
 	return &ListUpgradeHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListVolumeInfo 查询实例的磁盘信息
+//
+// 查询实例的磁盘信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListVolumeInfo(request *model.ListVolumeInfoRequest) (*model.ListVolumeInfoResponse, error) {
+	requestDef := GenReqDefForListVolumeInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVolumeInfoResponse), nil
+	}
+}
+
+// ListVolumeInfoInvoker 查询实例的磁盘信息
+func (c *RdsClient) ListVolumeInfoInvoker(request *model.ListVolumeInfoRequest) *ListVolumeInfoInvoker {
+	requestDef := GenReqDefForListVolumeInfo()
+	return &ListVolumeInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListXellogFiles 查询扩展日志文件列表
 //
 // 查询扩展日志文件列表。

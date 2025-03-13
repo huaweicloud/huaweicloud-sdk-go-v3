@@ -19,6 +19,9 @@ type RestoreSnapshotReq struct {
 
 	// 索引重命名的规则。0～1024个字符，不能包含空格和大写字母，且不能包含\\\"\\\\<|>/?,特殊字符。例如，“restored_index_$1”表示在所有恢复的索引名称前面加上“restored_”。    renamePattern参数与renameReplacement参数必须同时设置才能生效。
 	RenameReplacement *string `json:"renameReplacement,omitempty"`
+
+	// 替换已存在的索引。
+	ReplaceExistIndices *bool `json:"replace_exist_indices,omitempty"`
 }
 
 func (o RestoreSnapshotReq) String() string {

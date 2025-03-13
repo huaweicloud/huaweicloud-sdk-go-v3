@@ -2089,6 +2089,27 @@ func (c *CceClient) CreateAutopilotKubernetesClusterCertInvoker(request *model.C
 	return &CreateAutopilotKubernetesClusterCertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAutopilotMaintenanceWindow 创建集群维护窗口
+//
+// 该API用于创建集群维护窗口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) CreateAutopilotMaintenanceWindow(request *model.CreateAutopilotMaintenanceWindowRequest) (*model.CreateAutopilotMaintenanceWindowResponse, error) {
+	requestDef := GenReqDefForCreateAutopilotMaintenanceWindow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAutopilotMaintenanceWindowResponse), nil
+	}
+}
+
+// CreateAutopilotMaintenanceWindowInvoker 创建集群维护窗口
+func (c *CceClient) CreateAutopilotMaintenanceWindowInvoker(request *model.CreateAutopilotMaintenanceWindowRequest) *CreateAutopilotMaintenanceWindowInvoker {
+	requestDef := GenReqDefForCreateAutopilotMaintenanceWindow()
+	return &CreateAutopilotMaintenanceWindowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAutopilotPostCheck 集群升级后确认
 //
 // 集群升级后确认，该接口建议配合Console使用，主要用于升级步骤完成后，客户确认集群状态和业务正常后做反馈。
@@ -2236,6 +2257,27 @@ func (c *CceClient) DeleteAutopilotCluster(request *model.DeleteAutopilotCluster
 func (c *CceClient) DeleteAutopilotClusterInvoker(request *model.DeleteAutopilotClusterRequest) *DeleteAutopilotClusterInvoker {
 	requestDef := GenReqDefForDeleteAutopilotCluster()
 	return &DeleteAutopilotClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAutopilotMaintenanceWindow 删除集群维护窗口
+//
+// 该API用于删除集群维护窗口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) DeleteAutopilotMaintenanceWindow(request *model.DeleteAutopilotMaintenanceWindowRequest) (*model.DeleteAutopilotMaintenanceWindowResponse, error) {
+	requestDef := GenReqDefForDeleteAutopilotMaintenanceWindow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAutopilotMaintenanceWindowResponse), nil
+	}
+}
+
+// DeleteAutopilotMaintenanceWindowInvoker 删除集群维护窗口
+func (c *CceClient) DeleteAutopilotMaintenanceWindowInvoker(request *model.DeleteAutopilotMaintenanceWindowRequest) *DeleteAutopilotMaintenanceWindowInvoker {
+	requestDef := GenReqDefForDeleteAutopilotMaintenanceWindow()
+	return &DeleteAutopilotMaintenanceWindowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteAutopilotRelease 删除指定模板实例
@@ -2490,6 +2532,27 @@ func (c *CceClient) ListAutopilotUpgradeClusterTasksInvoker(request *model.ListA
 	return &ListAutopilotUpgradeClusterTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAutopilotUpgradePlans 获取自动升级计划
+//
+// 该API用于获取集群自动升级计划。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ListAutopilotUpgradePlans(request *model.ListAutopilotUpgradePlansRequest) (*model.ListAutopilotUpgradePlansResponse, error) {
+	requestDef := GenReqDefForListAutopilotUpgradePlans()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAutopilotUpgradePlansResponse), nil
+	}
+}
+
+// ListAutopilotUpgradePlansInvoker 获取自动升级计划
+func (c *CceClient) ListAutopilotUpgradePlansInvoker(request *model.ListAutopilotUpgradePlansRequest) *ListAutopilotUpgradePlansInvoker {
+	requestDef := GenReqDefForListAutopilotUpgradePlans()
+	return &ListAutopilotUpgradePlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAutopilotUpgradeWorkFlows 获取UpgradeWorkFlows列表
 //
 // 获取历史集群升级引导任务列表
@@ -2706,6 +2769,27 @@ func (c *CceClient) ShowAutopilotJob(request *model.ShowAutopilotJobRequest) (*m
 func (c *CceClient) ShowAutopilotJobInvoker(request *model.ShowAutopilotJobRequest) *ShowAutopilotJobInvoker {
 	requestDef := GenReqDefForShowAutopilotJob()
 	return &ShowAutopilotJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAutopilotMaintenanceWindow 获取集群维护窗口
+//
+// 该API用于获取集群维护窗口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ShowAutopilotMaintenanceWindow(request *model.ShowAutopilotMaintenanceWindowRequest) (*model.ShowAutopilotMaintenanceWindowResponse, error) {
+	requestDef := GenReqDefForShowAutopilotMaintenanceWindow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAutopilotMaintenanceWindowResponse), nil
+	}
+}
+
+// ShowAutopilotMaintenanceWindowInvoker 获取集群维护窗口
+func (c *CceClient) ShowAutopilotMaintenanceWindowInvoker(request *model.ShowAutopilotMaintenanceWindowRequest) *ShowAutopilotMaintenanceWindowInvoker {
+	requestDef := GenReqDefForShowAutopilotMaintenanceWindow()
+	return &ShowAutopilotMaintenanceWindowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAutopilotPreCheck 获取集群升级前检查任务详情
@@ -2943,6 +3027,27 @@ func (c *CceClient) UpdateAutopilotClusterEipInvoker(request *model.UpdateAutopi
 	return &UpdateAutopilotClusterEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateAutopilotMaintenanceWindow 更新集群维护窗口
+//
+// 该API用于更新集群维护窗口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) UpdateAutopilotMaintenanceWindow(request *model.UpdateAutopilotMaintenanceWindowRequest) (*model.UpdateAutopilotMaintenanceWindowResponse, error) {
+	requestDef := GenReqDefForUpdateAutopilotMaintenanceWindow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAutopilotMaintenanceWindowResponse), nil
+	}
+}
+
+// UpdateAutopilotMaintenanceWindowInvoker 更新集群维护窗口
+func (c *CceClient) UpdateAutopilotMaintenanceWindowInvoker(request *model.UpdateAutopilotMaintenanceWindowRequest) *UpdateAutopilotMaintenanceWindowInvoker {
+	requestDef := GenReqDefForUpdateAutopilotMaintenanceWindow()
+	return &UpdateAutopilotMaintenanceWindowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateAutopilotRelease 更新指定模板实例
 //
 // 更新指定模板实例
@@ -2962,6 +3067,27 @@ func (c *CceClient) UpdateAutopilotRelease(request *model.UpdateAutopilotRelease
 func (c *CceClient) UpdateAutopilotReleaseInvoker(request *model.UpdateAutopilotReleaseRequest) *UpdateAutopilotReleaseInvoker {
 	requestDef := GenReqDefForUpdateAutopilotRelease()
 	return &UpdateAutopilotReleaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAutopilotUpgradePlan 延期自动升级计划
+//
+// 该API用于延期集群自动升级计划。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) UpdateAutopilotUpgradePlan(request *model.UpdateAutopilotUpgradePlanRequest) (*model.UpdateAutopilotUpgradePlanResponse, error) {
+	requestDef := GenReqDefForUpdateAutopilotUpgradePlan()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAutopilotUpgradePlanResponse), nil
+	}
+}
+
+// UpdateAutopilotUpgradePlanInvoker 延期自动升级计划
+func (c *CceClient) UpdateAutopilotUpgradePlanInvoker(request *model.UpdateAutopilotUpgradePlanRequest) *UpdateAutopilotUpgradePlanInvoker {
+	requestDef := GenReqDefForUpdateAutopilotUpgradePlan()
+	return &UpdateAutopilotUpgradePlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpgradeAutopilotCluster 集群升级

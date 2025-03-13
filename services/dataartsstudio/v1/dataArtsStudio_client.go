@@ -19,6 +19,27 @@ func DataArtsStudioClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// AcceptSecurityApplication 审批通过工单
+//
+// 审批通过工单
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) AcceptSecurityApplication(request *model.AcceptSecurityApplicationRequest) (*model.AcceptSecurityApplicationResponse, error) {
+	requestDef := GenReqDefForAcceptSecurityApplication()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AcceptSecurityApplicationResponse), nil
+	}
+}
+
+// AcceptSecurityApplicationInvoker 审批通过工单
+func (c *DataArtsStudioClient) AcceptSecurityApplicationInvoker(request *model.AcceptSecurityApplicationRequest) *AcceptSecurityApplicationInvoker {
+	requestDef := GenReqDefForAcceptSecurityApplication()
+	return &AcceptSecurityApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddDesignEntityTags 添加标签
 //
 // 根据资产（表或属性）的ID给资产打上标签。
@@ -359,6 +380,27 @@ func (c *DataArtsStudioClient) BatchDeleteSecurityPermissionSetPermissionsInvoke
 	return &BatchDeleteSecurityPermissionSetPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteSecurityResourcePermissionPolicies 批量删除资源权限策略
+//
+// 批量删除资源权限策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) BatchDeleteSecurityResourcePermissionPolicies(request *model.BatchDeleteSecurityResourcePermissionPoliciesRequest) (*model.BatchDeleteSecurityResourcePermissionPoliciesResponse, error) {
+	requestDef := GenReqDefForBatchDeleteSecurityResourcePermissionPolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteSecurityResourcePermissionPoliciesResponse), nil
+	}
+}
+
+// BatchDeleteSecurityResourcePermissionPoliciesInvoker 批量删除资源权限策略
+func (c *DataArtsStudioClient) BatchDeleteSecurityResourcePermissionPoliciesInvoker(request *model.BatchDeleteSecurityResourcePermissionPoliciesRequest) *BatchDeleteSecurityResourcePermissionPoliciesInvoker {
+	requestDef := GenReqDefForBatchDeleteSecurityResourcePermissionPolicies()
+	return &BatchDeleteSecurityResourcePermissionPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeleteSecuritySecrecyLevels 批量删除密级
 //
 // 批量删除密级
@@ -630,6 +672,27 @@ func (c *DataArtsStudioClient) CheckFactLogicTableStatus(request *model.CheckFac
 func (c *DataArtsStudioClient) CheckFactLogicTableStatusInvoker(request *model.CheckFactLogicTableStatusRequest) *CheckFactLogicTableStatusInvoker {
 	requestDef := GenReqDefForCheckFactLogicTableStatus()
 	return &CheckFactLogicTableStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckSecurityDataClassificationCombineRule 组合识别规则测试
+//
+// 组合识别规则测试
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CheckSecurityDataClassificationCombineRule(request *model.CheckSecurityDataClassificationCombineRuleRequest) (*model.CheckSecurityDataClassificationCombineRuleResponse, error) {
+	requestDef := GenReqDefForCheckSecurityDataClassificationCombineRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckSecurityDataClassificationCombineRuleResponse), nil
+	}
+}
+
+// CheckSecurityDataClassificationCombineRuleInvoker 组合识别规则测试
+func (c *DataArtsStudioClient) CheckSecurityDataClassificationCombineRuleInvoker(request *model.CheckSecurityDataClassificationCombineRuleRequest) *CheckSecurityDataClassificationCombineRuleInvoker {
+	requestDef := GenReqDefForCheckSecurityDataClassificationCombineRule()
+	return &CheckSecurityDataClassificationCombineRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CompareDesignVersions 比较版本信息
@@ -1200,6 +1263,27 @@ func (c *DataArtsStudioClient) CreateSecurityAssignedQueueInvoker(request *model
 	return &CreateSecurityAssignedQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateSecurityDataClassificationCombineRule 创建组合识别规则
+//
+// 创建组合识别规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateSecurityDataClassificationCombineRule(request *model.CreateSecurityDataClassificationCombineRuleRequest) (*model.CreateSecurityDataClassificationCombineRuleResponse, error) {
+	requestDef := GenReqDefForCreateSecurityDataClassificationCombineRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSecurityDataClassificationCombineRuleResponse), nil
+	}
+}
+
+// CreateSecurityDataClassificationCombineRuleInvoker 创建组合识别规则
+func (c *DataArtsStudioClient) CreateSecurityDataClassificationCombineRuleInvoker(request *model.CreateSecurityDataClassificationCombineRuleRequest) *CreateSecurityDataClassificationCombineRuleInvoker {
+	requestDef := GenReqDefForCreateSecurityDataClassificationCombineRule()
+	return &CreateSecurityDataClassificationCombineRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSecurityDataClassificationRule 创建识别规则
 //
 // 创建识别规则
@@ -1219,6 +1303,27 @@ func (c *DataArtsStudioClient) CreateSecurityDataClassificationRule(request *mod
 func (c *DataArtsStudioClient) CreateSecurityDataClassificationRuleInvoker(request *model.CreateSecurityDataClassificationRuleRequest) *CreateSecurityDataClassificationRuleInvoker {
 	requestDef := GenReqDefForCreateSecurityDataClassificationRule()
 	return &CreateSecurityDataClassificationRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSecurityDataClassificationRuleGroup 创建规则分组接口
+//
+// 创建规则分组接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateSecurityDataClassificationRuleGroup(request *model.CreateSecurityDataClassificationRuleGroupRequest) (*model.CreateSecurityDataClassificationRuleGroupResponse, error) {
+	requestDef := GenReqDefForCreateSecurityDataClassificationRuleGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSecurityDataClassificationRuleGroupResponse), nil
+	}
+}
+
+// CreateSecurityDataClassificationRuleGroupInvoker 创建规则分组接口
+func (c *DataArtsStudioClient) CreateSecurityDataClassificationRuleGroupInvoker(request *model.CreateSecurityDataClassificationRuleGroupRequest) *CreateSecurityDataClassificationRuleGroupInvoker {
+	requestDef := GenReqDefForCreateSecurityDataClassificationRuleGroup()
+	return &CreateSecurityDataClassificationRuleGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateSecurityDynamicMaskingPolicy 创建数据脱敏策略
@@ -1303,6 +1408,27 @@ func (c *DataArtsStudioClient) CreateSecurityPermissionSetPermission(request *mo
 func (c *DataArtsStudioClient) CreateSecurityPermissionSetPermissionInvoker(request *model.CreateSecurityPermissionSetPermissionRequest) *CreateSecurityPermissionSetPermissionInvoker {
 	requestDef := GenReqDefForCreateSecurityPermissionSetPermission()
 	return &CreateSecurityPermissionSetPermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSecurityResourcePermissionPolicy 创建空间资源权限策略
+//
+// 创建空间资源权限策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateSecurityResourcePermissionPolicy(request *model.CreateSecurityResourcePermissionPolicyRequest) (*model.CreateSecurityResourcePermissionPolicyResponse, error) {
+	requestDef := GenReqDefForCreateSecurityResourcePermissionPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSecurityResourcePermissionPolicyResponse), nil
+	}
+}
+
+// CreateSecurityResourcePermissionPolicyInvoker 创建空间资源权限策略
+func (c *DataArtsStudioClient) CreateSecurityResourcePermissionPolicyInvoker(request *model.CreateSecurityResourcePermissionPolicyRequest) *CreateSecurityResourcePermissionPolicyInvoker {
+	requestDef := GenReqDefForCreateSecurityResourcePermissionPolicy()
+	return &CreateSecurityResourcePermissionPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateSecuritySecrecyLevel 创建密级
@@ -1555,6 +1681,27 @@ func (c *DataArtsStudioClient) DebugSecurityDlfDataWareHouses(request *model.Deb
 func (c *DataArtsStudioClient) DebugSecurityDlfDataWareHousesInvoker(request *model.DebugSecurityDlfDataWareHousesRequest) *DebugSecurityDlfDataWareHousesInvoker {
 	requestDef := GenReqDefForDebugSecurityDlfDataWareHouses()
 	return &DebugSecurityDlfDataWareHousesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeclineSecurityApplication 驳回工单
+//
+// 驳回工单
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) DeclineSecurityApplication(request *model.DeclineSecurityApplicationRequest) (*model.DeclineSecurityApplicationResponse, error) {
+	requestDef := GenReqDefForDeclineSecurityApplication()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeclineSecurityApplicationResponse), nil
+	}
+}
+
+// DeclineSecurityApplicationInvoker 驳回工单
+func (c *DataArtsStudioClient) DeclineSecurityApplicationInvoker(request *model.DeclineSecurityApplicationRequest) *DeclineSecurityApplicationInvoker {
+	requestDef := GenReqDefForDeclineSecurityApplication()
+	return &DeclineSecurityApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteApp 删除应用
@@ -1977,6 +2124,27 @@ func (c *DataArtsStudioClient) DeleteSecurityDataClassificationRuleInvoker(reque
 	return &DeleteSecurityDataClassificationRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteSecurityDataClassificationRuleGroup 删除规则分组接口
+//
+// 删除规则分组接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) DeleteSecurityDataClassificationRuleGroup(request *model.DeleteSecurityDataClassificationRuleGroupRequest) (*model.DeleteSecurityDataClassificationRuleGroupResponse, error) {
+	requestDef := GenReqDefForDeleteSecurityDataClassificationRuleGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSecurityDataClassificationRuleGroupResponse), nil
+	}
+}
+
+// DeleteSecurityDataClassificationRuleGroupInvoker 删除规则分组接口
+func (c *DataArtsStudioClient) DeleteSecurityDataClassificationRuleGroupInvoker(request *model.DeleteSecurityDataClassificationRuleGroupRequest) *DeleteSecurityDataClassificationRuleGroupInvoker {
+	requestDef := GenReqDefForDeleteSecurityDataClassificationRuleGroup()
+	return &DeleteSecurityDataClassificationRuleGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteSecurityLevelFromEntity 移除资产关联密级
 //
 // 移除资产关联密级
@@ -2251,6 +2419,27 @@ func (c *DataArtsStudioClient) DeployFactoryPackagesInvoker(request *model.Deplo
 	return &DeployFactoryPackagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExecuteSecurityDiagnose 执行数据安全诊断
+//
+// 执行数据安全诊断。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ExecuteSecurityDiagnose(request *model.ExecuteSecurityDiagnoseRequest) (*model.ExecuteSecurityDiagnoseResponse, error) {
+	requestDef := GenReqDefForExecuteSecurityDiagnose()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteSecurityDiagnoseResponse), nil
+	}
+}
+
+// ExecuteSecurityDiagnoseInvoker 执行数据安全诊断
+func (c *DataArtsStudioClient) ExecuteSecurityDiagnoseInvoker(request *model.ExecuteSecurityDiagnoseRequest) *ExecuteSecurityDiagnoseInvoker {
+	requestDef := GenReqDefForExecuteSecurityDiagnose()
+	return &ExecuteSecurityDiagnoseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExecuteTaskAction 启动、调度、停止采集任务
 //
 // 启动、调度、停止采集任务
@@ -2417,6 +2606,27 @@ func (c *DataArtsStudioClient) ImportResult(request *model.ImportResultRequest) 
 func (c *DataArtsStudioClient) ImportResultInvoker(request *model.ImportResultRequest) *ImportResultInvoker {
 	requestDef := GenReqDefForImportResult()
 	return &ImportResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportSecurityBuiltinCategoryGroups 导入预置分类
+//
+// 导入预置分类。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ImportSecurityBuiltinCategoryGroups(request *model.ImportSecurityBuiltinCategoryGroupsRequest) (*model.ImportSecurityBuiltinCategoryGroupsResponse, error) {
+	requestDef := GenReqDefForImportSecurityBuiltinCategoryGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ImportSecurityBuiltinCategoryGroupsResponse), nil
+	}
+}
+
+// ImportSecurityBuiltinCategoryGroupsInvoker 导入预置分类
+func (c *DataArtsStudioClient) ImportSecurityBuiltinCategoryGroupsInvoker(request *model.ImportSecurityBuiltinCategoryGroupsRequest) *ImportSecurityBuiltinCategoryGroupsInvoker {
+	requestDef := GenReqDefForImportSecurityBuiltinCategoryGroups()
+	return &ImportSecurityBuiltinCategoryGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // InitializeStandardTemplate 初始化数据标准模板
@@ -3531,6 +3741,27 @@ func (c *DataArtsStudioClient) ListSchemasInvoker(request *model.ListSchemasRequ
 	return &ListSchemasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSecurityApprovals 获取工单列表
+//
+// 获取工单列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListSecurityApprovals(request *model.ListSecurityApprovalsRequest) (*model.ListSecurityApprovalsResponse, error) {
+	requestDef := GenReqDefForListSecurityApprovals()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityApprovalsResponse), nil
+	}
+}
+
+// ListSecurityApprovalsInvoker 获取工单列表
+func (c *DataArtsStudioClient) ListSecurityApprovalsInvoker(request *model.ListSecurityApprovalsRequest) *ListSecurityApprovalsInvoker {
+	requestDef := GenReqDefForListSecurityApprovals()
+	return &ListSecurityApprovalsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSecurityAssignedQueues 查询当前空间下分配的队列资源
 //
 // 查询当前空间下分配的队列资源。
@@ -3550,6 +3781,27 @@ func (c *DataArtsStudioClient) ListSecurityAssignedQueues(request *model.ListSec
 func (c *DataArtsStudioClient) ListSecurityAssignedQueuesInvoker(request *model.ListSecurityAssignedQueuesRequest) *ListSecurityAssignedQueuesInvoker {
 	requestDef := GenReqDefForListSecurityAssignedQueues()
 	return &ListSecurityAssignedQueuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSecurityDataCategories 查询数据分类列表
+//
+// 查询数据分类列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListSecurityDataCategories(request *model.ListSecurityDataCategoriesRequest) (*model.ListSecurityDataCategoriesResponse, error) {
+	requestDef := GenReqDefForListSecurityDataCategories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityDataCategoriesResponse), nil
+	}
+}
+
+// ListSecurityDataCategoriesInvoker 查询数据分类列表
+func (c *DataArtsStudioClient) ListSecurityDataCategoriesInvoker(request *model.ListSecurityDataCategoriesRequest) *ListSecurityDataCategoriesInvoker {
+	requestDef := GenReqDefForListSecurityDataCategories()
+	return &ListSecurityDataCategoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSecurityDataClassificationRuleGroups 查询规则组列表
@@ -3783,6 +4035,27 @@ func (c *DataArtsStudioClient) ListSecurityPermissionSetsInvoker(request *model.
 	return &ListSecurityPermissionSetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSecurityResourcePermissions 查询空间资源权限策略列表
+//
+// 查询空间资源权限策略列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListSecurityResourcePermissions(request *model.ListSecurityResourcePermissionsRequest) (*model.ListSecurityResourcePermissionsResponse, error) {
+	requestDef := GenReqDefForListSecurityResourcePermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityResourcePermissionsResponse), nil
+	}
+}
+
+// ListSecurityResourcePermissionsInvoker 查询空间资源权限策略列表
+func (c *DataArtsStudioClient) ListSecurityResourcePermissionsInvoker(request *model.ListSecurityResourcePermissionsRequest) *ListSecurityResourcePermissionsInvoker {
+	requestDef := GenReqDefForListSecurityResourcePermissions()
+	return &ListSecurityResourcePermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSecurityRoleActions 查询角色对一组库、表的权限交集
 //
 // 查询角色对一组库、表的权限交集
@@ -3844,6 +4117,27 @@ func (c *DataArtsStudioClient) ListSecuritySensitiveDataOverviews(request *model
 func (c *DataArtsStudioClient) ListSecuritySensitiveDataOverviewsInvoker(request *model.ListSecuritySensitiveDataOverviewsRequest) *ListSecuritySensitiveDataOverviewsInvoker {
 	requestDef := GenReqDefForListSecuritySensitiveDataOverviews()
 	return &ListSecuritySensitiveDataOverviewsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSecurityUnreasonablePermissions 查询不合理的权限配置
+//
+// 查询不合理的权限配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListSecurityUnreasonablePermissions(request *model.ListSecurityUnreasonablePermissionsRequest) (*model.ListSecurityUnreasonablePermissionsResponse, error) {
+	requestDef := GenReqDefForListSecurityUnreasonablePermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityUnreasonablePermissionsResponse), nil
+	}
+}
+
+// ListSecurityUnreasonablePermissionsInvoker 查询不合理的权限配置
+func (c *DataArtsStudioClient) ListSecurityUnreasonablePermissionsInvoker(request *model.ListSecurityUnreasonablePermissionsRequest) *ListSecurityUnreasonablePermissionsInvoker {
+	requestDef := GenReqDefForListSecurityUnreasonablePermissions()
+	return &ListSecurityUnreasonablePermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSubjectLevels 获取主题层级
@@ -4055,6 +4349,27 @@ func (c *DataArtsStudioClient) ModifyCustomizedFields(request *model.ModifyCusto
 func (c *DataArtsStudioClient) ModifyCustomizedFieldsInvoker(request *model.ModifyCustomizedFieldsRequest) *ModifyCustomizedFieldsInvoker {
 	requestDef := GenReqDefForModifyCustomizedFields()
 	return &ModifyCustomizedFieldsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifySecurityAdmin 创建或更新安全管理员
+//
+// 创建或更新安全管理员。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ModifySecurityAdmin(request *model.ModifySecurityAdminRequest) (*model.ModifySecurityAdminResponse, error) {
+	requestDef := GenReqDefForModifySecurityAdmin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifySecurityAdminResponse), nil
+	}
+}
+
+// ModifySecurityAdminInvoker 创建或更新安全管理员
+func (c *DataArtsStudioClient) ModifySecurityAdminInvoker(request *model.ModifySecurityAdminRequest) *ModifySecurityAdminInvoker {
+	requestDef := GenReqDefForModifySecurityAdmin()
+	return &ModifySecurityAdminInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ParseUserBehavior 用户行为分析
@@ -5696,6 +6011,27 @@ func (c *DataArtsStudioClient) ShowRelationByIdInvoker(request *model.ShowRelati
 	return &ShowRelationByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSecurityAdmin 查看安全管理员
+//
+// 查看安全管理员。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowSecurityAdmin(request *model.ShowSecurityAdminRequest) (*model.ShowSecurityAdminResponse, error) {
+	requestDef := GenReqDefForShowSecurityAdmin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecurityAdminResponse), nil
+	}
+}
+
+// ShowSecurityAdminInvoker 查看安全管理员
+func (c *DataArtsStudioClient) ShowSecurityAdminInvoker(request *model.ShowSecurityAdminRequest) *ShowSecurityAdminInvoker {
+	requestDef := GenReqDefForShowSecurityAdmin()
+	return &ShowSecurityAdminInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSecurityDataClassificationRule 查询特定识别规则
 //
 // 查询特定识别规则
@@ -5736,6 +6072,27 @@ func (c *DataArtsStudioClient) ShowSecurityDataClassificationRuleGroup(request *
 func (c *DataArtsStudioClient) ShowSecurityDataClassificationRuleGroupInvoker(request *model.ShowSecurityDataClassificationRuleGroupRequest) *ShowSecurityDataClassificationRuleGroupInvoker {
 	requestDef := GenReqDefForShowSecurityDataClassificationRuleGroup()
 	return &ShowSecurityDataClassificationRuleGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSecurityDatasourceProtectionDiagnoseResult 查询数据源防护模块诊断结果
+//
+// 查询数据源防护模块诊断结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowSecurityDatasourceProtectionDiagnoseResult(request *model.ShowSecurityDatasourceProtectionDiagnoseResultRequest) (*model.ShowSecurityDatasourceProtectionDiagnoseResultResponse, error) {
+	requestDef := GenReqDefForShowSecurityDatasourceProtectionDiagnoseResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecurityDatasourceProtectionDiagnoseResultResponse), nil
+	}
+}
+
+// ShowSecurityDatasourceProtectionDiagnoseResultInvoker 查询数据源防护模块诊断结果
+func (c *DataArtsStudioClient) ShowSecurityDatasourceProtectionDiagnoseResultInvoker(request *model.ShowSecurityDatasourceProtectionDiagnoseResultRequest) *ShowSecurityDatasourceProtectionDiagnoseResultInvoker {
+	requestDef := GenReqDefForShowSecurityDatasourceProtectionDiagnoseResult()
+	return &ShowSecurityDatasourceProtectionDiagnoseResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSecurityDynamicMaskingPolicy 查询某个脱敏策略的详细信息
@@ -5780,6 +6137,48 @@ func (c *DataArtsStudioClient) ShowSecurityMemberSyncTaskInvoker(request *model.
 	return &ShowSecurityMemberSyncTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSecurityNoMaskingTableResult 查询未进行静态脱敏任务的表信息
+//
+// 查询未进行静态脱敏任务的表信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowSecurityNoMaskingTableResult(request *model.ShowSecurityNoMaskingTableResultRequest) (*model.ShowSecurityNoMaskingTableResultResponse, error) {
+	requestDef := GenReqDefForShowSecurityNoMaskingTableResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecurityNoMaskingTableResultResponse), nil
+	}
+}
+
+// ShowSecurityNoMaskingTableResultInvoker 查询未进行静态脱敏任务的表信息
+func (c *DataArtsStudioClient) ShowSecurityNoMaskingTableResultInvoker(request *model.ShowSecurityNoMaskingTableResultRequest) *ShowSecurityNoMaskingTableResultInvoker {
+	requestDef := GenReqDefForShowSecurityNoMaskingTableResult()
+	return &ShowSecurityNoMaskingTableResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSecurityPermissionManagementDiagnoseResult 查询数据权限控制模块诊断结果
+//
+// 查询数据权限控制模块诊断结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowSecurityPermissionManagementDiagnoseResult(request *model.ShowSecurityPermissionManagementDiagnoseResultRequest) (*model.ShowSecurityPermissionManagementDiagnoseResultResponse, error) {
+	requestDef := GenReqDefForShowSecurityPermissionManagementDiagnoseResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecurityPermissionManagementDiagnoseResultResponse), nil
+	}
+}
+
+// ShowSecurityPermissionManagementDiagnoseResultInvoker 查询数据权限控制模块诊断结果
+func (c *DataArtsStudioClient) ShowSecurityPermissionManagementDiagnoseResultInvoker(request *model.ShowSecurityPermissionManagementDiagnoseResultRequest) *ShowSecurityPermissionManagementDiagnoseResultInvoker {
+	requestDef := GenReqDefForShowSecurityPermissionManagementDiagnoseResult()
+	return &ShowSecurityPermissionManagementDiagnoseResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSecurityPermissionSet 查询权限集
 //
 // 查询权限集
@@ -5801,6 +6200,27 @@ func (c *DataArtsStudioClient) ShowSecurityPermissionSetInvoker(request *model.S
 	return &ShowSecurityPermissionSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSecurityResourcePermissionPolicy 查询单个资源权限策略
+//
+// 查询单个资源权限策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowSecurityResourcePermissionPolicy(request *model.ShowSecurityResourcePermissionPolicyRequest) (*model.ShowSecurityResourcePermissionPolicyResponse, error) {
+	requestDef := GenReqDefForShowSecurityResourcePermissionPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecurityResourcePermissionPolicyResponse), nil
+	}
+}
+
+// ShowSecurityResourcePermissionPolicyInvoker 查询单个资源权限策略
+func (c *DataArtsStudioClient) ShowSecurityResourcePermissionPolicyInvoker(request *model.ShowSecurityResourcePermissionPolicyRequest) *ShowSecurityResourcePermissionPolicyInvoker {
+	requestDef := GenReqDefForShowSecurityResourcePermissionPolicy()
+	return &ShowSecurityResourcePermissionPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSecuritySecrecyLevel 根据指定的id查询密级
 //
 // 根据指定的id查询密级
@@ -5820,6 +6240,27 @@ func (c *DataArtsStudioClient) ShowSecuritySecrecyLevel(request *model.ShowSecur
 func (c *DataArtsStudioClient) ShowSecuritySecrecyLevelInvoker(request *model.ShowSecuritySecrecyLevelRequest) *ShowSecuritySecrecyLevelInvoker {
 	requestDef := GenReqDefForShowSecuritySecrecyLevel()
 	return &ShowSecuritySecrecyLevelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSecuritySensitiveDataDiagnoseResult 查询敏感数据保护模块诊断结果
+//
+// 查询敏感数据保护模块诊断结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowSecuritySensitiveDataDiagnoseResult(request *model.ShowSecuritySensitiveDataDiagnoseResultRequest) (*model.ShowSecuritySensitiveDataDiagnoseResultResponse, error) {
+	requestDef := GenReqDefForShowSecuritySensitiveDataDiagnoseResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecuritySensitiveDataDiagnoseResultResponse), nil
+	}
+}
+
+// ShowSecuritySensitiveDataDiagnoseResultInvoker 查询敏感数据保护模块诊断结果
+func (c *DataArtsStudioClient) ShowSecuritySensitiveDataDiagnoseResultInvoker(request *model.ShowSecuritySensitiveDataDiagnoseResultRequest) *ShowSecuritySensitiveDataDiagnoseResultInvoker {
+	requestDef := GenReqDefForShowSecuritySensitiveDataDiagnoseResult()
+	return &ShowSecuritySensitiveDataDiagnoseResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowStandardById 查看数据标准详情
@@ -6093,6 +6534,27 @@ func (c *DataArtsStudioClient) StopFactorySupplementDataInstance(request *model.
 func (c *DataArtsStudioClient) StopFactorySupplementDataInstanceInvoker(request *model.StopFactorySupplementDataInstanceRequest) *StopFactorySupplementDataInstanceInvoker {
 	requestDef := GenReqDefForStopFactorySupplementDataInstance()
 	return &StopFactorySupplementDataInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UnpublishSecurityApplication 撤回工单申请
+//
+// 撤回工单申请
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UnpublishSecurityApplication(request *model.UnpublishSecurityApplicationRequest) (*model.UnpublishSecurityApplicationResponse, error) {
+	requestDef := GenReqDefForUnpublishSecurityApplication()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UnpublishSecurityApplicationResponse), nil
+	}
+}
+
+// UnpublishSecurityApplicationInvoker 撤回工单申请
+func (c *DataArtsStudioClient) UnpublishSecurityApplicationInvoker(request *model.UnpublishSecurityApplicationRequest) *UnpublishSecurityApplicationInvoker {
+	requestDef := GenReqDefForUnpublishSecurityApplication()
+	return &UnpublishSecurityApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateApp 更新应用
@@ -6410,6 +6872,27 @@ func (c *DataArtsStudioClient) UpdateSecurityAssignedQueueInvoker(request *model
 	return &UpdateSecurityAssignedQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateSecurityDataClassificationCombineRule 修改组合识别规则
+//
+// 修改组合识别规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UpdateSecurityDataClassificationCombineRule(request *model.UpdateSecurityDataClassificationCombineRuleRequest) (*model.UpdateSecurityDataClassificationCombineRuleResponse, error) {
+	requestDef := GenReqDefForUpdateSecurityDataClassificationCombineRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSecurityDataClassificationCombineRuleResponse), nil
+	}
+}
+
+// UpdateSecurityDataClassificationCombineRuleInvoker 修改组合识别规则
+func (c *DataArtsStudioClient) UpdateSecurityDataClassificationCombineRuleInvoker(request *model.UpdateSecurityDataClassificationCombineRuleRequest) *UpdateSecurityDataClassificationCombineRuleInvoker {
+	requestDef := GenReqDefForUpdateSecurityDataClassificationCombineRule()
+	return &UpdateSecurityDataClassificationCombineRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateSecurityDataClassificationRule 修改识别规则接口
 //
 // 修改识别规则接口
@@ -6429,6 +6912,27 @@ func (c *DataArtsStudioClient) UpdateSecurityDataClassificationRule(request *mod
 func (c *DataArtsStudioClient) UpdateSecurityDataClassificationRuleInvoker(request *model.UpdateSecurityDataClassificationRuleRequest) *UpdateSecurityDataClassificationRuleInvoker {
 	requestDef := GenReqDefForUpdateSecurityDataClassificationRule()
 	return &UpdateSecurityDataClassificationRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSecurityDataClassificationRuleGroup 修改规则分组接口
+//
+// 修改规则分组接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UpdateSecurityDataClassificationRuleGroup(request *model.UpdateSecurityDataClassificationRuleGroupRequest) (*model.UpdateSecurityDataClassificationRuleGroupResponse, error) {
+	requestDef := GenReqDefForUpdateSecurityDataClassificationRuleGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSecurityDataClassificationRuleGroupResponse), nil
+	}
+}
+
+// UpdateSecurityDataClassificationRuleGroupInvoker 修改规则分组接口
+func (c *DataArtsStudioClient) UpdateSecurityDataClassificationRuleGroupInvoker(request *model.UpdateSecurityDataClassificationRuleGroupRequest) *UpdateSecurityDataClassificationRuleGroupInvoker {
+	requestDef := GenReqDefForUpdateSecurityDataClassificationRuleGroup()
+	return &UpdateSecurityDataClassificationRuleGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSecurityDynamicMaskingPolicy 更新动态数据脱敏策略
@@ -6492,6 +6996,27 @@ func (c *DataArtsStudioClient) UpdateSecurityPermissionSetPermission(request *mo
 func (c *DataArtsStudioClient) UpdateSecurityPermissionSetPermissionInvoker(request *model.UpdateSecurityPermissionSetPermissionRequest) *UpdateSecurityPermissionSetPermissionInvoker {
 	requestDef := GenReqDefForUpdateSecurityPermissionSetPermission()
 	return &UpdateSecurityPermissionSetPermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSecurityResourcePermissionPolicy 更新空间资源权限策略
+//
+// 更新空间资源权限策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UpdateSecurityResourcePermissionPolicy(request *model.UpdateSecurityResourcePermissionPolicyRequest) (*model.UpdateSecurityResourcePermissionPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateSecurityResourcePermissionPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSecurityResourcePermissionPolicyResponse), nil
+	}
+}
+
+// UpdateSecurityResourcePermissionPolicyInvoker 更新空间资源权限策略
+func (c *DataArtsStudioClient) UpdateSecurityResourcePermissionPolicyInvoker(request *model.UpdateSecurityResourcePermissionPolicyRequest) *UpdateSecurityResourcePermissionPolicyInvoker {
+	requestDef := GenReqDefForUpdateSecurityResourcePermissionPolicy()
+	return &UpdateSecurityResourcePermissionPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSecurityRuleEnableStatus 修改识别规则状态接口

@@ -12,6 +12,8 @@ type ConditionExpression struct {
 	MultiFieldExpression *MultiFieldExpression `bson:"multi_field_expression,omitempty"`
 
 	ComposedExpression *ComposedExpression `bson:"composed_expression,omitempty"`
+
+	SingleKvExpression *SingleKvExpression `bson:"single_kv_expression,omitempty"`
 }
 
 func (o ConditionExpression) String() string {

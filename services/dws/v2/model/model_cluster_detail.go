@@ -85,6 +85,9 @@ type ClusterDetail struct {
 	// 安全组ID
 	SecurityGroupId string `json:"security_group_id"`
 
+	// 订单ID，仅包周期场景返回。
+	OrderId *string `json:"order_id,omitempty"`
+
 	// 内网IP地址列表
 	PrivateIp []string `json:"private_ip"`
 

@@ -613,6 +613,22 @@ func (i *ListAvailabilityZonesInvoker) Invoke() (*model.ListAvailabilityZonesRes
 	}
 }
 
+type ListExtendedAvailabilityZonesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListExtendedAvailabilityZonesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListExtendedAvailabilityZonesInvoker) Invoke() (*model.ListExtendedAvailabilityZonesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListExtendedAvailabilityZonesResponse), nil
+	}
+}
+
 type ListVgwsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -818,6 +834,38 @@ func (i *UpdateVpnServerInvoker) Invoke() (*model.UpdateVpnServerResponse, error
 		return nil, err
 	} else {
 		return result.(*model.UpdateVpnServerResponse), nil
+	}
+}
+
+type BatchCreateVpnUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateVpnUsersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateVpnUsersInvoker) Invoke() (*model.BatchCreateVpnUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateVpnUsersResponse), nil
+	}
+}
+
+type BatchDeleteVpnUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteVpnUsersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteVpnUsersInvoker) Invoke() (*model.BatchDeleteVpnUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteVpnUsersResponse), nil
 	}
 }
 
