@@ -27,6 +27,26 @@ func GenReqDefForCreateTable() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForDeleteTable() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/delete-table").
+		WithResponse(new(model.DeleteTableResponse)).
+		WithContentType("application/bson")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("StoreName").
+		WithJsonTag("store_name").
+		WithLocationType(def.Cname))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForDescribeTable() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

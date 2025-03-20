@@ -293,6 +293,22 @@ func (i *CreateTokenWithIdTokenInvoker) Invoke() (*model.CreateTokenWithIdTokenR
 	}
 }
 
+type CreateUnscopeTokenByIdpInitiatedInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateUnscopeTokenByIdpInitiatedInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateUnscopeTokenByIdpInitiatedInvoker) Invoke() (*model.CreateUnscopeTokenByIdpInitiatedResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateUnscopeTokenByIdpInitiatedResponse), nil
+	}
+}
+
 type CreateUnscopedTokenWithIdTokenInvoker struct {
 	*invoker.BaseInvoker
 }

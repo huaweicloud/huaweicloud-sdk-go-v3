@@ -36,6 +36,9 @@ type Route struct {
 
 	// 更新时间
 	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
+
+	// 路由描述信息
+	Description *string `json:"description,omitempty"`
 }
 
 func (o Route) String() string {

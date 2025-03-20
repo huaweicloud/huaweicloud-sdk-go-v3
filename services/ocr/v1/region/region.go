@@ -9,27 +9,38 @@ import (
 
 var (
 	CN_NORTH_4 = region.NewRegion("cn-north-4",
-		"https://ocr.cn-north-4.myhuaweicloud.com")
+		"https://ocr.cn-north-4.myhuaweicloud.com",
+		"https://ocr.cn-north-4.myhuaweicloud.cn")
 	CN_SOUTH_1 = region.NewRegion("cn-south-1",
-		"https://ocr.cn-south-1.myhuaweicloud.com")
+		"https://ocr.cn-south-1.myhuaweicloud.com",
+		"https://ocr.cn-south-1.myhuaweicloud.cn")
 	CN_EAST_3 = region.NewRegion("cn-east-3",
-		"https://ocr.cn-east-3.myhuaweicloud.com")
+		"https://ocr.cn-east-3.myhuaweicloud.com",
+		"https://ocr.cn-east-3.myhuaweicloud.cn")
 	CN_NORTH_1 = region.NewRegion("cn-north-1",
-		"https://ocr.cn-north-1.myhuaweicloud.com")
+		"https://ocr.cn-north-1.myhuaweicloud.com",
+		"https://ocr.cn-north-1.myhuaweicloud.cn")
 	AP_SOUTHEAST_2 = region.NewRegion("ap-southeast-2",
-		"https://ocr.ap-southeast-2.myhuaweicloud.com")
+		"https://ocr.ap-southeast-2.myhuaweicloud.com",
+		"https://ocr.ap-southeast-2.myhuaweicloud.cn")
 	CN_SOUTHWEST_2 = region.NewRegion("cn-southwest-2",
-		"https://ocr.cn-southwest-2.myhuaweicloud.com")
+		"https://ocr.cn-southwest-2.myhuaweicloud.com",
+		"https://ocr.cn-southwest-2.myhuaweicloud.cn")
 	AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1",
-		"https://ocr.ap-southeast-1.myhuaweicloud.com")
+		"https://ocr.ap-southeast-1.myhuaweicloud.com",
+		"https://ocr.ap-southeast-1.myhuaweicloud.cn")
 	AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3",
-		"https://ocr.ap-southeast-3.myhuaweicloud.com")
+		"https://ocr.ap-southeast-3.myhuaweicloud.com",
+		"https://ocr.ap-southeast-3.myhuaweicloud.cn")
 	LA_SOUTH_2 = region.NewRegion("la-south-2",
-		"https://ocr.la-south-2.myhuaweicloud.com")
+		"https://ocr.la-south-2.myhuaweicloud.com",
+		"https://ocr.la-south-2.myhuaweicloud.cn")
 	AF_SOUTH_1 = region.NewRegion("af-south-1",
-		"https://ocr.af-south-1.myhuaweicloud.com")
+		"https://ocr.af-south-1.myhuaweicloud.com",
+		"https://ocr.af-south-1.myhuaweicloud.cn")
 	LA_NORTH_2 = region.NewRegion("la-north-2",
-		"https://ocr.la-north-2.myhuaweicloud.com")
+		"https://ocr.la-north-2.myhuaweicloud.com",
+		"https://ocr.la-north-2.myhuaweicloud.lat")
 )
 
 var staticFields = map[string]*region.Region{

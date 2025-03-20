@@ -37,11 +37,14 @@ type DecoupledLiveDomainInfo struct {
 	// 状态描述
 	StatusDescribe *string `json:"status_describe,omitempty"`
 
-	// 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+	// 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球加速区域
 	ServiceArea *DecoupledLiveDomainInfoServiceArea `json:"service_area,omitempty"`
 
 	// 企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 域名支持的拉流协议；仅domain_type为pull时生效。若不填写此字段，视为默认支持FLV、RTMP拉流协议 - flv_rtmp表示支持FLV、RTMP协议 - hls表示支持HLS协议
+	PullProtocol *DecoupledLiveDomainInfoPullProtocol `json:"pull_protocol,omitempty"`
 
 	// IPV6开关是否开启，默认关闭，true为开启；false或空为关闭
 	IsIpv6 *bool `json:"is_ipv6,omitempty"`
@@ -236,6 +239,7 @@ type DecoupledLiveDomainInfoServiceArea struct {
 type DecoupledLiveDomainInfoServiceAreaEnum struct {
 	MAINLAND_CHINA         DecoupledLiveDomainInfoServiceArea
 	OUTSIDE_MAINLAND_CHINA DecoupledLiveDomainInfoServiceArea
+	GLOBAL                 DecoupledLiveDomainInfoServiceArea
 }
 
 func GetDecoupledLiveDomainInfoServiceAreaEnum() DecoupledLiveDomainInfoServiceAreaEnum {
@@ -245,6 +249,9 @@ func GetDecoupledLiveDomainInfoServiceAreaEnum() DecoupledLiveDomainInfoServiceA
 		},
 		OUTSIDE_MAINLAND_CHINA: DecoupledLiveDomainInfoServiceArea{
 			value: "outside_mainland_china",
+		},
+		GLOBAL: DecoupledLiveDomainInfoServiceArea{
+			value: "global",
 		},
 	}
 }
@@ -258,6 +265,53 @@ func (c DecoupledLiveDomainInfoServiceArea) MarshalJSON() ([]byte, error) {
 }
 
 func (c *DecoupledLiveDomainInfoServiceArea) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type DecoupledLiveDomainInfoPullProtocol struct {
+	value string
+}
+
+type DecoupledLiveDomainInfoPullProtocolEnum struct {
+	FLV_RTMP DecoupledLiveDomainInfoPullProtocol
+	HLS      DecoupledLiveDomainInfoPullProtocol
+}
+
+func GetDecoupledLiveDomainInfoPullProtocolEnum() DecoupledLiveDomainInfoPullProtocolEnum {
+	return DecoupledLiveDomainInfoPullProtocolEnum{
+		FLV_RTMP: DecoupledLiveDomainInfoPullProtocol{
+			value: "flv_rtmp",
+		},
+		HLS: DecoupledLiveDomainInfoPullProtocol{
+			value: "hls",
+		},
+	}
+}
+
+func (c DecoupledLiveDomainInfoPullProtocol) Value() string {
+	return c.value
+}
+
+func (c DecoupledLiveDomainInfoPullProtocol) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *DecoupledLiveDomainInfoPullProtocol) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

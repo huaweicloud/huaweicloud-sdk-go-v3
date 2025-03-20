@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -62,6 +65,9 @@ type ListVolumesRequest struct {
 
 	// 云服务器id。
 	ServerId *string `json:"server_id,omitempty"`
+
+	// 查询不包含所选元数据的云硬盘
+	NotMetadata *ListVolumesRequestNotMetadata `json:"not_metadata,omitempty"`
 }
 
 func (o ListVolumesRequest) String() string {
@@ -71,4 +77,59 @@ func (o ListVolumesRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListVolumesRequest", string(data)}, " ")
+}
+
+type ListVolumesRequestNotMetadata struct {
+	value string
+}
+
+type ListVolumesRequestNotMetadataEnum struct {
+	HWPASSTHROUGHTRUE   ListVolumesRequestNotMetadata
+	HWPASSTHROUGHFALSE  ListVolumesRequestNotMetadata
+	_SYSTEM__ENCRYPTED1 ListVolumesRequestNotMetadata
+	_SYSTEM__ENCRYPTED0 ListVolumesRequestNotMetadata
+}
+
+func GetListVolumesRequestNotMetadataEnum() ListVolumesRequestNotMetadataEnum {
+	return ListVolumesRequestNotMetadataEnum{
+		HWPASSTHROUGHTRUE: ListVolumesRequestNotMetadata{
+			value: "{\"hw:passthrough\":true}",
+		},
+		HWPASSTHROUGHFALSE: ListVolumesRequestNotMetadata{
+			value: "{\"hw:passthrough\":false}",
+		},
+		_SYSTEM__ENCRYPTED1: ListVolumesRequestNotMetadata{
+			value: "{\"__system__encrypted\":1}",
+		},
+		_SYSTEM__ENCRYPTED0: ListVolumesRequestNotMetadata{
+			value: "{\"__system__encrypted\":0}",
+		},
+	}
+}
+
+func (c ListVolumesRequestNotMetadata) Value() string {
+	return c.value
+}
+
+func (c ListVolumesRequestNotMetadata) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListVolumesRequestNotMetadata) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

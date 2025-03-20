@@ -12,7 +12,7 @@ type ListUnreadNewInstantMessagesRequest struct {
 	// 工单id
 	CaseIds []string `json:"case_ids"`
 
-	// 组id
+	// 华为云IAM组id，同组其他工单时，该id必传
 	GroupId *string `json:"group_id,omitempty"`
 
 	// 对接站点信息。  0（中国站） 1（国际站），不填的话默认为0。

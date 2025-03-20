@@ -8,7 +8,7 @@ import (
 
 type FaiureResource struct {
 
-	// 部署失败的资源信息,部署WAF与ELB时，此字段为资源ID，部署CDN时，本字段为加速域名。
+	// 部署失败的资源信息，部署WAF与ELB时，此字段为资源ID，部署CDN时，本字段为加速域名。
 	Resource *string `json:"resource,omitempty"`
 
 	// 失败原因，一般为目标服务返回的错误码信息。

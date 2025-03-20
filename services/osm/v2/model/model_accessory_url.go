@@ -11,6 +11,9 @@ type AccessoryUrl struct {
 	// 附件id
 	AccessoryId *string `json:"accessory_id,omitempty"`
 
+	// 文件名称
+	AccessoryName *string `json:"accessory_name,omitempty"`
+
 	// 附件链接
 	AccessoryUrl *string `json:"accessory_url,omitempty"`
 }

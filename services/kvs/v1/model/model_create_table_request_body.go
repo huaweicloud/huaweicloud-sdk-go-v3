@@ -27,6 +27,8 @@ type CreateTableRequestBody struct {
 	PreSplitKeyOptions *PreSplitKeyOptions `bson:"pre_split_key_options,omitempty"`
 
 	TtlSpecification *TtlSpecification `bson:"ttl_specification,omitempty"`
+
+	SseSpecification *SseSpecification `bson:"sse_specification,omitempty"`
 }
 
 func (o CreateTableRequestBody) String() string {

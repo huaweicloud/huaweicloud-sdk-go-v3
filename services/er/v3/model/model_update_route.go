@@ -14,6 +14,9 @@ type UpdateRoute struct {
 
 	// 是否为黑洞路由
 	IsBlackhole *bool `json:"is_blackhole,omitempty"`
+
+	// 路由描述信息
+	Description *string `json:"description,omitempty"`
 }
 
 func (o UpdateRoute) String() string {

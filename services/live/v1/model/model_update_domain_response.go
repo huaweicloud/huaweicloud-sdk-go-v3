@@ -32,12 +32,15 @@ type UpdateDomainResponse struct {
 	// 状态描述
 	StatusDescribe *string `json:"status_describe,omitempty"`
 
-	// 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+	// 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球加速区域
 	ServiceArea *UpdateDomainResponseServiceArea `json:"service_area,omitempty"`
 
 	// 企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
-	HttpStatusCode      int     `json:"-"`
+
+	// 域名支持的拉流协议；仅domain_type为pull时生效。若不填写此字段，视为默认支持FLV、RTMP拉流协议 - flv_rtmp表示支持FLV、RTMP协议 - hls表示支持HLS协议
+	PullProtocol   *UpdateDomainResponsePullProtocol `json:"pull_protocol,omitempty"`
+	HttpStatusCode int                               `json:"-"`
 }
 
 func (o UpdateDomainResponse) String() string {
@@ -158,6 +161,7 @@ type UpdateDomainResponseServiceArea struct {
 type UpdateDomainResponseServiceAreaEnum struct {
 	MAINLAND_CHINA         UpdateDomainResponseServiceArea
 	OUTSIDE_MAINLAND_CHINA UpdateDomainResponseServiceArea
+	GLOBAL                 UpdateDomainResponseServiceArea
 }
 
 func GetUpdateDomainResponseServiceAreaEnum() UpdateDomainResponseServiceAreaEnum {
@@ -167,6 +171,9 @@ func GetUpdateDomainResponseServiceAreaEnum() UpdateDomainResponseServiceAreaEnu
 		},
 		OUTSIDE_MAINLAND_CHINA: UpdateDomainResponseServiceArea{
 			value: "outside_mainland_china",
+		},
+		GLOBAL: UpdateDomainResponseServiceArea{
+			value: "global",
 		},
 	}
 }
@@ -180,6 +187,53 @@ func (c UpdateDomainResponseServiceArea) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateDomainResponseServiceArea) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type UpdateDomainResponsePullProtocol struct {
+	value string
+}
+
+type UpdateDomainResponsePullProtocolEnum struct {
+	FLV_RTMP UpdateDomainResponsePullProtocol
+	HLS      UpdateDomainResponsePullProtocol
+}
+
+func GetUpdateDomainResponsePullProtocolEnum() UpdateDomainResponsePullProtocolEnum {
+	return UpdateDomainResponsePullProtocolEnum{
+		FLV_RTMP: UpdateDomainResponsePullProtocol{
+			value: "flv_rtmp",
+		},
+		HLS: UpdateDomainResponsePullProtocol{
+			value: "hls",
+		},
+	}
+}
+
+func (c UpdateDomainResponsePullProtocol) Value() string {
+	return c.value
+}
+
+func (c UpdateDomainResponsePullProtocol) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateDomainResponsePullProtocol) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

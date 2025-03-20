@@ -3322,6 +3322,27 @@ func (c *DataArtsStudioClient) ListDerivativeIndexesInvoker(request *model.ListD
 	return &ListDerivativeIndexesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDesignDataLayers 获取数仓分层信息
+//
+// 获取数仓分层信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListDesignDataLayers(request *model.ListDesignDataLayersRequest) (*model.ListDesignDataLayersResponse, error) {
+	requestDef := GenReqDefForListDesignDataLayers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDesignDataLayersResponse), nil
+	}
+}
+
+// ListDesignDataLayersInvoker 获取数仓分层信息
+func (c *DataArtsStudioClient) ListDesignDataLayersInvoker(request *model.ListDesignDataLayersRequest) *ListDesignDataLayersInvoker {
+	requestDef := GenReqDefForListDesignDataLayers()
+	return &ListDesignDataLayersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDimensionGroups 查看维度颗粒度
 //
 // 查询维度颗粒度，依据tableId查询涉及所有维度，不传tableId查询所有维度组颗粒度。
@@ -6744,6 +6765,27 @@ func (c *DataArtsStudioClient) UpdateDesignCompoundMetric(request *model.UpdateD
 func (c *DataArtsStudioClient) UpdateDesignCompoundMetricInvoker(request *model.UpdateDesignCompoundMetricRequest) *UpdateDesignCompoundMetricInvoker {
 	requestDef := GenReqDefForUpdateDesignCompoundMetric()
 	return &UpdateDesignCompoundMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDesignDataLayers 修改或删除数仓分层
+//
+// 修改或删除数仓分层
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UpdateDesignDataLayers(request *model.UpdateDesignDataLayersRequest) (*model.UpdateDesignDataLayersResponse, error) {
+	requestDef := GenReqDefForUpdateDesignDataLayers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDesignDataLayersResponse), nil
+	}
+}
+
+// UpdateDesignDataLayersInvoker 修改或删除数仓分层
+func (c *DataArtsStudioClient) UpdateDesignDataLayersInvoker(request *model.UpdateDesignDataLayersRequest) *UpdateDesignDataLayersInvoker {
+	requestDef := GenReqDefForUpdateDesignDataLayers()
+	return &UpdateDesignDataLayersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDesignDerivativeIndex 更新衍生指标

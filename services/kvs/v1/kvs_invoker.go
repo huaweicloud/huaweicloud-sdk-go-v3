@@ -21,6 +21,22 @@ func (i *CreateTableInvoker) Invoke() (*model.CreateTableResponse, error) {
 	}
 }
 
+type DeleteTableInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteTableInvoker) Invoke() (*model.DeleteTableResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTableResponse), nil
+	}
+}
+
 type DescribeTableInvoker struct {
 	*invoker.BaseInvoker
 }

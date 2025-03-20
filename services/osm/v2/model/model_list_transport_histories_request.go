@@ -15,7 +15,7 @@ type ListTransportHistoriesRequest struct {
 	// 授权详情id
 	AuthorizationDetailId int64 `json:"authorization_detail_id"`
 
-	// 组id
+	// 华为云IAM组id，同组其他工单时，该id必传
 	GroupId *string `json:"group_id,omitempty"`
 
 	// 会话id

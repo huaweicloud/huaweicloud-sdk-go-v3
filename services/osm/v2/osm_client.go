@@ -82,9 +82,9 @@ func (c *OsmClient) CheckVerifyCodesInvoker(request *model.CheckVerifyCodesReque
 	return &CheckVerifyCodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ConfirmAuthorizations 租户确认授权
+// ConfirmAuthorizations 确认授权
 //
-// 租户确认授权
+// 确认授权
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ConfirmAuthorizations(request *model.ConfirmAuthorizationsRequest) (*model.ConfirmAuthorizationsResponse, error) {
@@ -97,7 +97,7 @@ func (c *OsmClient) ConfirmAuthorizations(request *model.ConfirmAuthorizationsRe
 	}
 }
 
-// ConfirmAuthorizationsInvoker 租户确认授权
+// ConfirmAuthorizationsInvoker 确认授权
 func (c *OsmClient) ConfirmAuthorizationsInvoker(request *model.ConfirmAuthorizationsRequest) *ConfirmAuthorizationsInvoker {
 	requestDef := GenReqDefForConfirmAuthorizations()
 	return &ConfirmAuthorizationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1680,7 +1680,7 @@ func (c *OsmClient) ShowConfigurationInvoker(request *model.ShowConfigurationReq
 
 // ShowCustomerPrivilegePolicy 查询提单权限
 //
-// 查询提单权限
+// 查询是否开启提单权限限制，主账号可以操作开启，开启之后子账号默认无法提单
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *OsmClient) ShowCustomerPrivilegePolicy(request *model.ShowCustomerPrivilegePolicyRequest) (*model.ShowCustomerPrivilegePolicyResponse, error) {

@@ -30,6 +30,8 @@ var (
 		"https://dayu-dlf.ru-moscow-1.myhuaweicloud.com")
 	MY_KUALALUMPUR_1 = region.NewRegion("my-kualalumpur-1",
 		"https://dayu-dlf.my-kualalumpur-1.myhuaweicloud.com")
+	TR_WEST_1 = region.NewRegion("tr-west-1",
+		"https://dayu-dlf.tr-west-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -44,6 +46,7 @@ var staticFields = map[string]*region.Region{
 	"cn-north-11":      CN_NORTH_11,
 	"ru-moscow-1":      RU_MOSCOW_1,
 	"my-kualalumpur-1": MY_KUALALUMPUR_1,
+	"tr-west-1":        TR_WEST_1,
 }
 
 var provider = region.DefaultProviderChain("DGC")

@@ -27,6 +27,12 @@ type IncidentInfoV2 struct {
 	// 工单类型名称
 	IncidentTypeName string `json:"incident_type_name"`
 
+	// 产品类型名称
+	ProductCategoryName *string `json:"product_category_name,omitempty"`
+
+	// 服务类型
+	IncidentServiceType *string `json:"incident_service_type,omitempty"`
+
 	// 客户id
 	CustomerId string `json:"customer_id"`
 
@@ -36,8 +42,17 @@ type IncidentInfoV2 struct {
 	// 简要描述
 	SimpleDescription string `json:"simple_description"`
 
+	// 问题归属方
+	RootCause *string `json:"root_cause,omitempty"`
+
+	// 解决方案
+	Resolution *string `json:"resolution,omitempty"`
+
 	// 创建时间
 	CreateTime *sdktime.SdkTime `json:"create_time"`
+
+	// 解决时间
+	ConfirmedTime *sdktime.SdkTime `json:"confirmed_time,omitempty"`
 
 	// 标签列表
 	LabelList *[]LabelInfo `json:"label_list,omitempty"`

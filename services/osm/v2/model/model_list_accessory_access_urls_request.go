@@ -9,8 +9,8 @@ import (
 // ListAccessoryAccessUrlsRequest Request Object
 type ListAccessoryAccessUrlsRequest struct {
 
-	// 组id
-	GroupId string `json:"group_id"`
+	// 华为云IAM组id，查询同组其他工单时，该id必传
+	GroupId *string `json:"group_id,omitempty"`
 
 	// 附件id列表
 	AccessoryIds []string `json:"accessory_ids"`

@@ -10,8 +10,10 @@ import (
 type ShowQuotasResponse struct {
 
 	// 配额使用详情
-	Quotas         *[]Quota `json:"quotas,omitempty"`
-	HttpStatusCode int      `json:"-"`
+	Quotas *[]Quota `json:"quotas,omitempty"`
+
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ShowQuotasResponse) String() string {

@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -10,7 +13,7 @@ import (
 type ListPrivilegesRequest struct {
 
 	// 权限标识
-	Privilege string `json:"privilege"`
+	Privilege ListPrivilegesRequestPrivilege `json:"privilege"`
 
 	// 对接站点信息。  0（中国站） 1（国际站），不填的话默认为0。
 	XSite *int32 `json:"X-Site,omitempty"`
@@ -29,4 +32,51 @@ func (o ListPrivilegesRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListPrivilegesRequest", string(data)}, " ")
+}
+
+type ListPrivilegesRequestPrivilege struct {
+	value string
+}
+
+type ListPrivilegesRequestPrivilegeEnum struct {
+	EXPORT      ListPrivilegesRequestPrivilege
+	CREATE_CASE ListPrivilegesRequestPrivilege
+}
+
+func GetListPrivilegesRequestPrivilegeEnum() ListPrivilegesRequestPrivilegeEnum {
+	return ListPrivilegesRequestPrivilegeEnum{
+		EXPORT: ListPrivilegesRequestPrivilege{
+			value: "export",
+		},
+		CREATE_CASE: ListPrivilegesRequestPrivilege{
+			value: "createCase",
+		},
+	}
+}
+
+func (c ListPrivilegesRequestPrivilege) Value() string {
+	return c.value
+}
+
+func (c ListPrivilegesRequestPrivilege) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListPrivilegesRequestPrivilege) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

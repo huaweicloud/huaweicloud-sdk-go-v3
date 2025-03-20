@@ -29,7 +29,7 @@ type PurchaseCertificateRequestBody struct {
 	// 是否同意隐私协议，此处仅能设置为true才能成功购买证书。 - true：同意隐私协议。 - false：不同意隐私协议。
 	AgreePrivacyProtection bool `json:"agree_privacy_protection"`
 
-	// 多域名中的主域名类型 - SINGLE_DOMAIN：主单域名 - WILDCARD_DOMAIN：主泛域名
+	// 多域名中的主域名类型。 - SINGLE_DOMAIN：主单域名 - WILDCARD_DOMAIN：主泛域名
 	PrimaryDomainType *string `json:"primary_domain_type,omitempty"`
 
 	// 附加单域名数量。
@@ -41,11 +41,14 @@ type PurchaseCertificateRequestBody struct {
 	// 是否开启自动支付。 - true：开启自动支付。 - false：不开启自动支付。
 	IsAutoPay *bool `json:"is_auto_pay,omitempty"`
 
-	// 企业多项目ID。用户未开通企业多项目时，不需要输入该字段。 用户开通企业多项目时，查询资源可以输入该字段。 若用户不输入该字段，默认查询租户所有有权限的企业多项目下的资源。 此时“enterprise_project_id”取值为“all”。 若用户输入该字段，取值满足以下任一条件.  取值为“all”  取值为“0”  满足正则匹配：“^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$”
+	// 企业多项目ID。用户未开通企业多项目时，不需要输入该字段。 用户开通企业多项目时，查询资源可以输入该字段。 若用户不输入该字段，默认查询租户所有有权限的企业多项目下的资源。 此时“enterprise_project_id”取值为“all”。 若用户输入该字段，取值满足以下任一条件。 - 取值为“all” - 取值为“0” - 满足正则匹配：“^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$”
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 订单号。仅组合购场景使用
+	// 订单号。仅组合购买场景使用。
 	OrderId *string `json:"order_id,omitempty"`
+
+	// 标签列表。
+	Tags *[]ScsResourceTag `json:"tags,omitempty"`
 }
 
 func (o PurchaseCertificateRequestBody) String() string {

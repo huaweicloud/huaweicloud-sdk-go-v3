@@ -39,7 +39,7 @@ type ListCasesRequest struct {
 	// 子用户名称
 	XCustomerName *string `json:"x_customer_name,omitempty"`
 
-	// 组id
+	// 华为云IAM组id，同组其他工单时，该id必传
 	GroupId *string `json:"group_id,omitempty"`
 
 	// 查询偏移量

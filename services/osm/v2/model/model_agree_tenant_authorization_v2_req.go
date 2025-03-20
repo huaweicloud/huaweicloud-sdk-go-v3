@@ -17,7 +17,7 @@ type AgreeTenantAuthorizationV2Req struct {
 	// 授权到期时间
 	AuthExpireTime *int64 `json:"auth_expire_time,omitempty"`
 
-	// 组id
+	// 华为云IAM组id，操作查询同组其他工单时，该id必传
 	GroupId *string `json:"group_id,omitempty"`
 
 	// 委托id

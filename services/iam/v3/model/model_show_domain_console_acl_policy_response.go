@@ -8,8 +8,8 @@ import (
 
 // ShowDomainConsoleAclPolicyResponse Response Object
 type ShowDomainConsoleAclPolicyResponse struct {
-	ConsoleAclPolicy *ConsoleAclPolicyResult `json:"console_acl_policy,omitempty"`
-	HttpStatusCode   int                     `json:"-"`
+	ConsoleAclPolicy *AclPolicyResult `json:"console_acl_policy,omitempty"`
+	HttpStatusCode   int              `json:"-"`
 }
 
 func (o ShowDomainConsoleAclPolicyResponse) String() string {

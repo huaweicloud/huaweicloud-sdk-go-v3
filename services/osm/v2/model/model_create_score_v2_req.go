@@ -14,7 +14,7 @@ type CreateScoreV2Req struct {
 	// 满意度列表
 	IncidentSatisfactionList []IncidentSatisfactionV2Do `json:"incident_satisfaction_list"`
 
-	// 组id
+	// 华为云IAM组id，操作查询同组其他工单时，该id必传
 	GroupId *string `json:"group_id,omitempty"`
 }
 

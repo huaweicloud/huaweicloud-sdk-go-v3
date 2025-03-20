@@ -28,6 +28,9 @@ type UpgradeInstanceData struct {
 
 	// 弹性业务带宽增加值
 	ElasticServiceBandwidth *int32 `json:"elastic_service_bandwidth,omitempty"`
+
+	// 业务QPS(如果实例没购买过QPS，需要在页面上升级一次规格开通QPS，之后才可以通过接口修改规格)
+	BasicQps *int32 `json:"basic_qps,omitempty"`
 }
 
 func (o UpgradeInstanceData) String() string {

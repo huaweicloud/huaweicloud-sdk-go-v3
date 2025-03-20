@@ -54,7 +54,7 @@ type ShowCertificateResponse struct {
 	// 域名类型，取值如下： - SINGLE_DOMAIN：单域名 - WILDCARD：通配符 - MULTI_DOMAIN：多域名
 	DomainType *string `json:"domain_type,omitempty"`
 
-	// 多域名类型，取值如下： - primary_single 主单 - primary_wildcard 主泛
+	// 多域名类型，取值如下： - primary_single：主单域名 - primary_wildcard：主泛域名
 	MultiDomainType *string `json:"multi_domain_type,omitempty"`
 
 	// 证书绑定域名。
@@ -71,6 +71,14 @@ type ShowCertificateResponse struct {
 
 	// 证书的SHA-1指纹。
 	Fingerprint *string `json:"fingerprint,omitempty"`
+
+	// 是否是共享资源。
+	Shared *bool `json:"shared,omitempty"`
+
+	ApplicationInfo *ShowCertificateResponseBodyApplicationInfo `json:"application_info,omitempty"`
+
+	// 证书的描述。
+	Description *string `json:"description,omitempty"`
 
 	// 企业项目ID，默认为“0”。 对于开通企业项目的用户，表示资源处于默认企业项目下。 对于未开通企业项目的用户，表示资源未处于企业项目下。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`

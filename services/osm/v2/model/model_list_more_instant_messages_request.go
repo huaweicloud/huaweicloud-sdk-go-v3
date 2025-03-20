@@ -18,7 +18,7 @@ type ListMoreInstantMessagesRequest struct {
 	// 上一条消息的留言方式 0是客户留言 1是客服回留言
 	Type int32 `json:"type"`
 
-	// 组id
+	// 华为云IAM组id，同组其他工单时，该id必传
 	GroupId *string `json:"group_id,omitempty"`
 
 	// 查询数量

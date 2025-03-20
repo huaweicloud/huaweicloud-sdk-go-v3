@@ -20,7 +20,7 @@ type UpdateCaseContactInfoReq struct {
 	// 联系时间
 	RemindTime *string `json:"remind_time,omitempty"`
 
-	// 组id
+	// 华为云IAM组id，操作查询同组其他工单时，该id必传
 	GroupId *string `json:"group_id,omitempty"`
 
 	// 扩展参数

@@ -13,6 +13,9 @@ type ListFlowLogsResponse struct {
 	// 请求ID
 	RequestId *string `json:"request_id,omitempty"`
 
+	// 总计数量
+	TotalCount *int64 `json:"total_count,omitempty"`
+
 	PageInfo       *PageInfo `json:"page_info,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

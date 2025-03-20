@@ -53,6 +53,9 @@ type CertificateDetail struct {
 	// 证书描述。
 	Description string `json:"description"`
 
+	// 账号ID。
+	DomainId *string `json:"domain_id,omitempty"`
+
 	// 企业项目ID，默认为“0”。 对于开通企业项目的用户，表示资源处于默认企业项目下。 对于未开通企业项目的用户，表示资源未处于企业项目下。
 	EnterpriseProjectId string `json:"enterprise_project_id"`
 }

@@ -12,7 +12,7 @@ type CheckNeedVerifyRequest struct {
 	// 联系方式值
 	ContactValue string `json:"contact_value"`
 
-	// 联系方式类型
+	// 联系方式类型，0: 手机; 1: 邮箱
 	ContactWay int32 `json:"contact_way"`
 
 	// 国家码

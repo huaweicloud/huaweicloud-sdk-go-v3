@@ -14,7 +14,7 @@ type WorkOrderOperateV2Req struct {
 	// 操作描述
 	OperateDesc *string `json:"operate_desc,omitempty"`
 
-	// 组id
+	// 华为云IAM组id，操作查询同组其他工单时，该id必传
 	GroupId *string `json:"group_id,omitempty"`
 
 	// 工单满意度列表

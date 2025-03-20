@@ -23,6 +23,9 @@ type EffectiveRoute struct {
 
 	// 路由类型
 	RouteType *string `json:"route_type,omitempty"`
+
+	// 路由描述信息
+	Description *string `json:"description,omitempty"`
 }
 
 func (o EffectiveRoute) String() string {

@@ -23,6 +23,8 @@ type DescribeTableResponse struct {
 	RunTimeInfo *RunTimeInfo `bson:"run_time_info,omitempty"`
 
 	TtlSpecification *TtlSpecification `bson:"ttl_specification,omitempty"`
+
+	SseSpecification *SseSpecification `bson:"sse_specification,omitempty"`
 	HttpStatusCode   int               `bson:"-"`
 }
 

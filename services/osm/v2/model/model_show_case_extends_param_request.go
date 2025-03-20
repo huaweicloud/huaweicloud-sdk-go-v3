@@ -9,8 +9,8 @@ import (
 // ShowCaseExtendsParamRequest Request Object
 type ShowCaseExtendsParamRequest struct {
 
-	// 组id
-	GroupId string `json:"group_id"`
+	// 华为云IAM组id，同组其他工单时，该id必传
+	GroupId *string `json:"group_id,omitempty"`
 
 	// 工单id
 	CaseId string `json:"case_id"`

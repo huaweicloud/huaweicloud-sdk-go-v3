@@ -58,22 +58,6 @@ func GenReqDefForRunCloseAudioStreamModerationJob() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForRunCloseVideoStreamModerationJob() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v3/{project_id}/moderation/video-stream/jobs/stop/{job_id}").
-		WithResponse(new(model.RunCloseVideoStreamModerationJobResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("JobId").
-		WithJsonTag("job_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForRunCreateAudioModerationJob() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -104,21 +88,6 @@ func GenReqDefForRunCreateAudioStreamModerationJob() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForRunCreateDocumentModerationJob() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v3/{project_id}/moderation/document/jobs").
-		WithResponse(new(model.RunCreateDocumentModerationJobResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForRunCreateVideoModerationJob() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -134,42 +103,11 @@ func GenReqDefForRunCreateVideoModerationJob() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForRunCreateVideoStreamModerationJob() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v3/{project_id}/moderation/video-stream/jobs").
-		WithResponse(new(model.RunCreateVideoStreamModerationJobResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForRunQueryAudioModerationJob() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/moderation/audio/jobs/{job_id}").
 		WithResponse(new(model.RunQueryAudioModerationJobResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("JobId").
-		WithJsonTag("job_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForRunQueryDocumentModerationJob() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v3/{project_id}/moderation/document/jobs/{job_id}").
-		WithResponse(new(model.RunQueryDocumentModerationJobResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

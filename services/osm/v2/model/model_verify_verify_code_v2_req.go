@@ -14,7 +14,7 @@ type VerifyVerifyCodeV2Req struct {
 	// 联系方式的值
 	ContactValue string `json:"contact_value"`
 
-	// 联系方式的类型。0：短信；1：邮件
+	// 联系方式的类型，0：短信；1：邮件
 	ContactWay int32 `json:"contact_way"`
 
 	// 国家码

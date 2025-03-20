@@ -147,7 +147,7 @@ func (c *ScmClient) ExportCertificateInvoker(request *model.ExportCertificateReq
 
 // ImportCertificate 导入证书
 //
-// 导入证书到SCM服务管理。
+// 导入证书到CCM服务管理。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ScmClient) ImportCertificate(request *model.ImportCertificateRequest) (*model.ImportCertificateResponse, error) {
@@ -189,7 +189,7 @@ func (c *ScmClient) ListCertificatesInvoker(request *model.ListCertificatesReque
 
 // ListDeployedResources 查询已部署资源
 //
-// 查询证书已部署的具体资源。针对已签发和上传的非国密证书
+// 查询证书已部署的具体资源。针对已签发和上传的非国密证书。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ScmClient) ListDeployedResources(request *model.ListDeployedResourcesRequest) (*model.ListDeployedResourcesResponse, error) {

@@ -40,6 +40,27 @@ func (c *KvsClient) CreateTableInvoker(request *model.CreateTableRequest) *Creat
 	return &CreateTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteTable 删除表
+//
+// 删除指定表及所有kv文档，表标记为删除后，空间不会立刻释放，并发的读写访问仍需继续完成。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KvsClient) DeleteTable(request *model.DeleteTableRequest) (*model.DeleteTableResponse, error) {
+	requestDef := GenReqDefForDeleteTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTableResponse), nil
+	}
+}
+
+// DeleteTableInvoker 删除表
+func (c *KvsClient) DeleteTableInvoker(request *model.DeleteTableRequest) *DeleteTableInvoker {
+	requestDef := GenReqDefForDeleteTable()
+	return &DeleteTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DescribeTable 查询表
 //
 // 指定仓查询表属性，如容量，规模，配额。

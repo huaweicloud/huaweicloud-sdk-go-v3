@@ -56,13 +56,13 @@ type ApplyCertificateRequestBody struct {
 	// 是否同意授权隐私协议。此处仅能设置为true才能成功申请证书。 - true：同意隐私协议。 - false：不同意隐私协议。
 	AgreePrivacyProtection bool `json:"agree_privacy_protection"`
 
-	// 域名验证方式。 - DNS: DNS验证，指在域名管理平台通过解析指定的DNS记录，验证域名所有权。 - FILE: 文件验证，指通过在服务器上创建指定文件的方式来验证域名所有权。 - EMAIL: 邮箱验证，指登录域名管理员邮箱，接收域名确认邮件并根据提示进行操作来验证域名所有权。 DV域名型和DV基础版证书（GeoTrust入门级SSL证书和DigiCert免费SSL证书）默认通过“DNS验证”方式进行验证。 纯IP（公网IP）的证书仅支持通过“文件验证”方式进行验证，且仅纯IP证书支持“文件验证”方式验证。
+	// 域名验证方式。 - DNS：DNS验证，指在域名管理平台通过解析指定的DNS记录，验证域名所有权。 - FILE：文件验证，指通过在服务器上创建指定文件的方式来验证域名所有权。 - EMAIL：邮箱验证，指登录域名管理员邮箱，接收域名确认邮件并根据提示进行操作来验证域名所有权。 DV域名型和DV基础版证书（GeoTrust入门级SSL证书和DigiCert免费SSL证书）默认通过“DNS验证”方式进行验证。 纯IP（公网IP）的证书仅支持通过“文件验证”方式进行验证，且仅纯IP证书支持“文件验证”方式验证。
 	DomainMethod string `json:"domain_method"`
 
 	// 密钥算法。默认RSA_2048
 	KeyAlgorithm *string `json:"key_algorithm,omitempty"`
 
-	// 签名算法。Geo OV证书必填 - DEFAULT - SHA-256
+	// 签名算法。Geo OV证书必填。 - DEFAULT - SHA-256
 	CaHashAlgorithm *string `json:"ca_hash_algorithm,omitempty"`
 }
 

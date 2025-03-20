@@ -3,14 +3,17 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // ShowSignedLatestPublishedAgreementRequest Request Object
 type ShowSignedLatestPublishedAgreementRequest struct {
 
-	// 协议类型
-	AgreementType *string `json:"agreement_type,omitempty"`
+	// 协议类型，0 新建工单-普通用户，1 新建工单-ISV用户，2 授权
+	AgreementType *ShowSignedLatestPublishedAgreementRequestAgreementType `json:"agreement_type,omitempty"`
 
 	// 对接站点信息。  0（中国站） 1（国际站），不填的话默认为0。
 	XSite *int32 `json:"X-Site,omitempty"`
@@ -29,4 +32,55 @@ func (o ShowSignedLatestPublishedAgreementRequest) String() string {
 	}
 
 	return strings.Join([]string{"ShowSignedLatestPublishedAgreementRequest", string(data)}, " ")
+}
+
+type ShowSignedLatestPublishedAgreementRequestAgreementType struct {
+	value string
+}
+
+type ShowSignedLatestPublishedAgreementRequestAgreementTypeEnum struct {
+	E_0 ShowSignedLatestPublishedAgreementRequestAgreementType
+	E_1 ShowSignedLatestPublishedAgreementRequestAgreementType
+	E_2 ShowSignedLatestPublishedAgreementRequestAgreementType
+}
+
+func GetShowSignedLatestPublishedAgreementRequestAgreementTypeEnum() ShowSignedLatestPublishedAgreementRequestAgreementTypeEnum {
+	return ShowSignedLatestPublishedAgreementRequestAgreementTypeEnum{
+		E_0: ShowSignedLatestPublishedAgreementRequestAgreementType{
+			value: "0",
+		},
+		E_1: ShowSignedLatestPublishedAgreementRequestAgreementType{
+			value: "1",
+		},
+		E_2: ShowSignedLatestPublishedAgreementRequestAgreementType{
+			value: "2",
+		},
+	}
+}
+
+func (c ShowSignedLatestPublishedAgreementRequestAgreementType) Value() string {
+	return c.value
+}
+
+func (c ShowSignedLatestPublishedAgreementRequestAgreementType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowSignedLatestPublishedAgreementRequestAgreementType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

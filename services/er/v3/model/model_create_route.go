@@ -17,6 +17,9 @@ type CreateRoute struct {
 
 	// 是否为黑洞路由，默认为false
 	IsBlackhole *bool `json:"is_blackhole,omitempty"`
+
+	// 路由描述信息
+	Description *string `json:"description,omitempty"`
 }
 
 func (o CreateRoute) String() string {

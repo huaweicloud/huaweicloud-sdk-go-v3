@@ -19,6 +19,69 @@ func CocClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// ShowAccount 查询客户账号
+//
+// show account ，使用场景：托管功能 sre 账号使用，查询自己管理的客户账号
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ShowAccount(request *model.ShowAccountRequest) (*model.ShowAccountResponse, error) {
+	requestDef := GenReqDefForShowAccount()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAccountResponse), nil
+	}
+}
+
+// ShowAccountInvoker 查询客户账号
+func (c *CocClient) ShowAccountInvoker(request *model.ShowAccountRequest) *ShowAccountInvoker {
+	requestDef := GenReqDefForShowAccount()
+	return &ShowAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAlarmHandleHistories 查询告警工单历史
+//
+// 查询告警工单历史
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListAlarmHandleHistories(request *model.ListAlarmHandleHistoriesRequest) (*model.ListAlarmHandleHistoriesResponse, error) {
+	requestDef := GenReqDefForListAlarmHandleHistories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAlarmHandleHistoriesResponse), nil
+	}
+}
+
+// ListAlarmHandleHistoriesInvoker 查询告警工单历史
+func (c *CocClient) ListAlarmHandleHistoriesInvoker(request *model.ListAlarmHandleHistoriesRequest) *ListAlarmHandleHistoriesInvoker {
+	requestDef := GenReqDefForListAlarmHandleHistories()
+	return &ListAlarmHandleHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAlarm 查询Alarm
+//
+// Get alarm info by id
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ShowAlarm(request *model.ShowAlarmRequest) (*model.ShowAlarmResponse, error) {
+	requestDef := GenReqDefForShowAlarm()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAlarmResponse), nil
+	}
+}
+
+// ShowAlarmInvoker 查询Alarm
+func (c *CocClient) ShowAlarmInvoker(request *model.ShowAlarmRequest) *ShowAlarmInvoker {
+	requestDef := GenReqDefForShowAlarm()
+	return &ShowAlarmInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListApplications 查询应用
 //
 // 查询应用
@@ -80,6 +143,48 @@ func (c *CocClient) BatchCreateApplicationView(request *model.BatchCreateApplica
 func (c *CocClient) BatchCreateApplicationViewInvoker(request *model.BatchCreateApplicationViewRequest) *BatchCreateApplicationViewInvoker {
 	requestDef := GenReqDefForBatchCreateApplicationView()
 	return &BatchCreateApplicationViewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPatchBaseline 查询Baseline
+//
+// Get baseline info by id
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ShowPatchBaseline(request *model.ShowPatchBaselineRequest) (*model.ShowPatchBaselineResponse, error) {
+	requestDef := GenReqDefForShowPatchBaseline()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPatchBaselineResponse), nil
+	}
+}
+
+// ShowPatchBaselineInvoker 查询Baseline
+func (c *CocClient) ShowPatchBaselineInvoker(request *model.ShowPatchBaselineRequest) *ShowPatchBaselineInvoker {
+	requestDef := GenReqDefForShowPatchBaseline()
+	return &ShowPatchBaselineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCceCompliant 获取合规性报告cce信息
+//
+// 分页获取合规性报告cce信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListCceCompliant(request *model.ListCceCompliantRequest) (*model.ListCceCompliantResponse, error) {
+	requestDef := GenReqDefForListCceCompliant()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCceCompliantResponse), nil
+	}
+}
+
+// ListCceCompliantInvoker 获取合规性报告cce信息
+func (c *CocClient) ListCceCompliantInvoker(request *model.ListCceCompliantRequest) *ListCceCompliantInvoker {
+	requestDef := GenReqDefForListCceCompliant()
+	return &ListCceCompliantInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListInstanceCompliant 获取节点合规性报告
@@ -334,6 +439,48 @@ func (c *CocClient) ListMultiCloudResourcesInvoker(request *model.ListMultiCloud
 	return &ListMultiCloudResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPersonnel 查询人员列表
+//
+// 获取人员列表（公网调用）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListPersonnel(request *model.ListPersonnelRequest) (*model.ListPersonnelResponse, error) {
+	requestDef := GenReqDefForListPersonnel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPersonnelResponse), nil
+	}
+}
+
+// ListPersonnelInvoker 查询人员列表
+func (c *CocClient) ListPersonnelInvoker(request *model.ListPersonnelRequest) *ListPersonnelInvoker {
+	requestDef := GenReqDefForListPersonnel()
+	return &ListPersonnelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SyncAddPersonnel 同步人员
+//
+// 同步人员
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) SyncAddPersonnel(request *model.SyncAddPersonnelRequest) (*model.SyncAddPersonnelResponse, error) {
+	requestDef := GenReqDefForSyncAddPersonnel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SyncAddPersonnelResponse), nil
+	}
+}
+
+// SyncAddPersonnelInvoker 同步人员
+func (c *CocClient) SyncAddPersonnelInvoker(request *model.SyncAddPersonnelRequest) *SyncAddPersonnelInvoker {
+	requestDef := GenReqDefForSyncAddPersonnel()
+	return &SyncAddPersonnelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CountMultiResources 查询用户各种资源总数
 //
 // 查询用户各种资源总数
@@ -395,6 +542,174 @@ func (c *CocClient) SyncResource(request *model.SyncResourceRequest) (*model.Syn
 func (c *CocClient) SyncResourceInvoker(request *model.SyncResourceRequest) *SyncResourceInvoker {
 	requestDef := GenReqDefForSyncResource()
 	return &SyncResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateScheduledTask 新建定时运维
+//
+// Create Scheduled Task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CreateScheduledTask(request *model.CreateScheduledTaskRequest) (*model.CreateScheduledTaskResponse, error) {
+	requestDef := GenReqDefForCreateScheduledTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateScheduledTaskResponse), nil
+	}
+}
+
+// CreateScheduledTaskInvoker 新建定时运维
+func (c *CocClient) CreateScheduledTaskInvoker(request *model.CreateScheduledTaskRequest) *CreateScheduledTaskInvoker {
+	requestDef := GenReqDefForCreateScheduledTask()
+	return &CreateScheduledTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteScheduledTask 删除ScheduledTask
+//
+// Delete scheduled task by id
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) DeleteScheduledTask(request *model.DeleteScheduledTaskRequest) (*model.DeleteScheduledTaskResponse, error) {
+	requestDef := GenReqDefForDeleteScheduledTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteScheduledTaskResponse), nil
+	}
+}
+
+// DeleteScheduledTaskInvoker 删除ScheduledTask
+func (c *CocClient) DeleteScheduledTaskInvoker(request *model.DeleteScheduledTaskRequest) *DeleteScheduledTaskInvoker {
+	requestDef := GenReqDefForDeleteScheduledTask()
+	return &DeleteScheduledTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisableScheduledTask 禁用ScheduledTask
+//
+// Disable scheduled task by id
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) DisableScheduledTask(request *model.DisableScheduledTaskRequest) (*model.DisableScheduledTaskResponse, error) {
+	requestDef := GenReqDefForDisableScheduledTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisableScheduledTaskResponse), nil
+	}
+}
+
+// DisableScheduledTaskInvoker 禁用ScheduledTask
+func (c *CocClient) DisableScheduledTaskInvoker(request *model.DisableScheduledTaskRequest) *DisableScheduledTaskInvoker {
+	requestDef := GenReqDefForDisableScheduledTask()
+	return &DisableScheduledTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// EnableScheduledTask 启用ScheduledTask
+//
+// Enable scheduled task by id
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) EnableScheduledTask(request *model.EnableScheduledTaskRequest) (*model.EnableScheduledTaskResponse, error) {
+	requestDef := GenReqDefForEnableScheduledTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.EnableScheduledTaskResponse), nil
+	}
+}
+
+// EnableScheduledTaskInvoker 启用ScheduledTask
+func (c *CocClient) EnableScheduledTaskInvoker(request *model.EnableScheduledTaskRequest) *EnableScheduledTaskInvoker {
+	requestDef := GenReqDefForEnableScheduledTask()
+	return &EnableScheduledTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListScheduledTask 查询ScheduledTask列表
+//
+// Get ScheduledTask infos
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListScheduledTask(request *model.ListScheduledTaskRequest) (*model.ListScheduledTaskResponse, error) {
+	requestDef := GenReqDefForListScheduledTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListScheduledTaskResponse), nil
+	}
+}
+
+// ListScheduledTaskInvoker 查询ScheduledTask列表
+func (c *CocClient) ListScheduledTaskInvoker(request *model.ListScheduledTaskRequest) *ListScheduledTaskInvoker {
+	requestDef := GenReqDefForListScheduledTask()
+	return &ListScheduledTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListScheduledTaskHistory 查询定时运维历史记录
+//
+// get scheduled task history list
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListScheduledTaskHistory(request *model.ListScheduledTaskHistoryRequest) (*model.ListScheduledTaskHistoryResponse, error) {
+	requestDef := GenReqDefForListScheduledTaskHistory()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListScheduledTaskHistoryResponse), nil
+	}
+}
+
+// ListScheduledTaskHistoryInvoker 查询定时运维历史记录
+func (c *CocClient) ListScheduledTaskHistoryInvoker(request *model.ListScheduledTaskHistoryRequest) *ListScheduledTaskHistoryInvoker {
+	requestDef := GenReqDefForListScheduledTaskHistory()
+	return &ListScheduledTaskHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowScheduledTask 查询ScheduledTask
+//
+// Get ScheduledTask info by id
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ShowScheduledTask(request *model.ShowScheduledTaskRequest) (*model.ShowScheduledTaskResponse, error) {
+	requestDef := GenReqDefForShowScheduledTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowScheduledTaskResponse), nil
+	}
+}
+
+// ShowScheduledTaskInvoker 查询ScheduledTask
+func (c *CocClient) ShowScheduledTaskInvoker(request *model.ShowScheduledTaskRequest) *ShowScheduledTaskInvoker {
+	requestDef := GenReqDefForShowScheduledTask()
+	return &ShowScheduledTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateScheduledTask 修改ScheduledTask
+//
+// Update ScheduledTask
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) UpdateScheduledTask(request *model.UpdateScheduledTaskRequest) (*model.UpdateScheduledTaskResponse, error) {
+	requestDef := GenReqDefForUpdateScheduledTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateScheduledTaskResponse), nil
+	}
+}
+
+// UpdateScheduledTaskInvoker 修改ScheduledTask
+func (c *CocClient) UpdateScheduledTaskInvoker(request *model.UpdateScheduledTaskRequest) *UpdateScheduledTaskInvoker {
+	requestDef := GenReqDefForUpdateScheduledTask()
+	return &UpdateScheduledTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // GetScriptJobBatch 展示批次详情
@@ -752,6 +1067,90 @@ func (c *CocClient) ListPublicScripts(request *model.ListPublicScriptsRequest) (
 func (c *CocClient) ListPublicScriptsInvoker(request *model.ListPublicScriptsRequest) *ListPublicScriptsInvoker {
 	requestDef := GenReqDefForListPublicScripts()
 	return &ListPublicScriptsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSlaCustomizedTemplate 查询Sla模板详情
+//
+// Get Sla Template info by id
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ShowSlaCustomizedTemplate(request *model.ShowSlaCustomizedTemplateRequest) (*model.ShowSlaCustomizedTemplateResponse, error) {
+	requestDef := GenReqDefForShowSlaCustomizedTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSlaCustomizedTemplateResponse), nil
+	}
+}
+
+// ShowSlaCustomizedTemplateInvoker 查询Sla模板详情
+func (c *CocClient) ShowSlaCustomizedTemplateInvoker(request *model.ShowSlaCustomizedTemplateRequest) *ShowSlaCustomizedTemplateInvoker {
+	requestDef := GenReqDefForShowSlaCustomizedTemplate()
+	return &ShowSlaCustomizedTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSlaOrder 查询SLA工单信息
+//
+// SLA 工单信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ShowSlaOrder(request *model.ShowSlaOrderRequest) (*model.ShowSlaOrderResponse, error) {
+	requestDef := GenReqDefForShowSlaOrder()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSlaOrderResponse), nil
+	}
+}
+
+// ShowSlaOrderInvoker 查询SLA工单信息
+func (c *CocClient) ShowSlaOrderInvoker(request *model.ShowSlaOrderRequest) *ShowSlaOrderInvoker {
+	requestDef := GenReqDefForShowSlaOrder()
+	return &ShowSlaOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInterruptRecords 查询中断记录
+//
+// 查询中断记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListInterruptRecords(request *model.ListInterruptRecordsRequest) (*model.ListInterruptRecordsResponse, error) {
+	requestDef := GenReqDefForListInterruptRecords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInterruptRecordsResponse), nil
+	}
+}
+
+// ListInterruptRecordsInvoker 查询中断记录
+func (c *CocClient) ListInterruptRecordsInvoker(request *model.ListInterruptRecordsRequest) *ListInterruptRecordsInvoker {
+	requestDef := GenReqDefForListInterruptRecords()
+	return &ListInterruptRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSloDetail 查询SLO详情
+//
+// 查询SLO详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ShowSloDetail(request *model.ShowSloDetailRequest) (*model.ShowSloDetailResponse, error) {
+	requestDef := GenReqDefForShowSloDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSloDetailResponse), nil
+	}
+}
+
+// ShowSloDetailInvoker 查询SLO详情
+func (c *CocClient) ShowSloDetailInvoker(request *model.ShowSloDetailRequest) *ShowSloDetailInvoker {
+	requestDef := GenReqDefForShowSloDetail()
+	return &ShowSloDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateWarRoom 创建租户区WarRoom

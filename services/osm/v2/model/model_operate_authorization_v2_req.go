@@ -11,7 +11,7 @@ type OperateAuthorizationV2Req struct {
 	// 拒绝理由
 	RejectReason *string `json:"reject_reason,omitempty"`
 
-	// 组id
+	// 华为云IAM组id，操作查询同组其他工单时，该id必传
 	GroupId *string `json:"group_id,omitempty"`
 }
 

@@ -597,6 +597,22 @@ func (i *ListServerTagsInvoker) Invoke() (*model.ListServerTagsResponse, error) 
 	}
 }
 
+type ListServerVolumeAttachmentsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListServerVolumeAttachmentsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListServerVolumeAttachmentsInvoker) Invoke() (*model.ListServerVolumeAttachmentsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListServerVolumeAttachmentsResponse), nil
+	}
+}
+
 type ListServersByTagInvoker struct {
 	*invoker.BaseInvoker
 }

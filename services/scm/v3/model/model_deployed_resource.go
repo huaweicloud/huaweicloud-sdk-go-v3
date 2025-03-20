@@ -8,7 +8,7 @@ import (
 
 type DeployedResource struct {
 
-	// 资源Id,部署WAF与ELB时，必传此字段。
+	// 资源Id，部署WAF与ELB时，必传此字段。
 	Id *string `json:"id,omitempty"`
 
 	// 资源类型，当前仅部署WAF资源时需传入，即独享模式（premium）与云模式（cloud）。

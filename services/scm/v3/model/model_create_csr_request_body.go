@@ -29,10 +29,10 @@ type CreateCsrRequestBody struct {
 	// 省份，当“usage”取值为“ENTERPRISE”时，本参数必填。取值示例：北京市。
 	CompanyProvince *string `json:"company_province,omitempty"`
 
-	// 城市，用途为企业证书场景下必填。当“usage”取值为“ENTERPRISE”时，本参数必填。取值示例：北京市。
+	// 城市。当“usage”取值为“ENTERPRISE”时，本参数必填。取值示例：北京市。
 	CompanyCity *string `json:"company_city,omitempty"`
 
-	// 公司名称，用途为企业证书场景下必填。当“usage”取值为“ENTERPRISE”时，本参数必填。
+	// 公司名称。当“usage”取值为“ENTERPRISE”时，本参数必填。
 	CompanyName *string `json:"company_name,omitempty"`
 }
 

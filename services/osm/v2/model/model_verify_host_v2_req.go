@@ -17,7 +17,7 @@ type VerifyHostV2Req struct {
 	// 主机密码
 	Password string `json:"password"`
 
-	// 组id
+	// 华为云IAM组id，操作查询同组其他工单时，该id必传
 	GroupId *string `json:"group_id,omitempty"`
 }
 

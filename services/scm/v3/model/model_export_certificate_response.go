@@ -24,7 +24,7 @@ type ExportCertificateResponse struct {
 	// 国密证书返回，加密证书内容。
 	EncCertificate *string `json:"enc_certificate,omitempty"`
 
-	// 国密证书返回，加密证书私钥。
+	// 国密证书返回，加密证书私钥。 - 自己生成csr的方式：该字段是加密状态，需要解密。   解密思路如下:    1、从数字信封中获取“对称密钥密文”和“加密私钥密文”；   2、使用签名私钥解密“对称密钥密文”，得到“对称密钥明文”；   3、使用对称密钥解密“加密私钥密文”，得到“加密私钥明文”。 - 非自己生成csr的方式：该字段不需要解密。
 	EncPrivateKey  *string `json:"enc_private_key,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

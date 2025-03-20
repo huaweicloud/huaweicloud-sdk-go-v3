@@ -53,22 +53,6 @@ func (i *RunCloseAudioStreamModerationJobInvoker) Invoke() (*model.RunCloseAudio
 	}
 }
 
-type RunCloseVideoStreamModerationJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RunCloseVideoStreamModerationJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *RunCloseVideoStreamModerationJobInvoker) Invoke() (*model.RunCloseVideoStreamModerationJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RunCloseVideoStreamModerationJobResponse), nil
-	}
-}
-
 type RunCreateAudioModerationJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -101,22 +85,6 @@ func (i *RunCreateAudioStreamModerationJobInvoker) Invoke() (*model.RunCreateAud
 	}
 }
 
-type RunCreateDocumentModerationJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RunCreateDocumentModerationJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *RunCreateDocumentModerationJobInvoker) Invoke() (*model.RunCreateDocumentModerationJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RunCreateDocumentModerationJobResponse), nil
-	}
-}
-
 type RunCreateVideoModerationJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -133,22 +101,6 @@ func (i *RunCreateVideoModerationJobInvoker) Invoke() (*model.RunCreateVideoMode
 	}
 }
 
-type RunCreateVideoStreamModerationJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RunCreateVideoStreamModerationJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *RunCreateVideoStreamModerationJobInvoker) Invoke() (*model.RunCreateVideoStreamModerationJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RunCreateVideoStreamModerationJobResponse), nil
-	}
-}
-
 type RunQueryAudioModerationJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -162,22 +114,6 @@ func (i *RunQueryAudioModerationJobInvoker) Invoke() (*model.RunQueryAudioModera
 		return nil, err
 	} else {
 		return result.(*model.RunQueryAudioModerationJobResponse), nil
-	}
-}
-
-type RunQueryDocumentModerationJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RunQueryDocumentModerationJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *RunQueryDocumentModerationJobInvoker) Invoke() (*model.RunQueryDocumentModerationJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RunQueryDocumentModerationJobResponse), nil
 	}
 }
 

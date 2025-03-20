@@ -2517,6 +2517,22 @@ func (i *ListDerivativeIndexesInvoker) Invoke() (*model.ListDerivativeIndexesRes
 	}
 }
 
+type ListDesignDataLayersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDesignDataLayersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDesignDataLayersInvoker) Invoke() (*model.ListDesignDataLayersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDesignDataLayersResponse), nil
+	}
+}
+
 type ListDimensionGroupsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -5122,6 +5138,22 @@ func (i *UpdateDesignCompoundMetricInvoker) Invoke() (*model.UpdateDesignCompoun
 		return nil, err
 	} else {
 		return result.(*model.UpdateDesignCompoundMetricResponse), nil
+	}
+}
+
+type UpdateDesignDataLayersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDesignDataLayersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDesignDataLayersInvoker) Invoke() (*model.UpdateDesignDataLayersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDesignDataLayersResponse), nil
 	}
 }
 

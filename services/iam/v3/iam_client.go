@@ -430,6 +430,32 @@ func (c *IamClient) CreateTokenWithIdTokenInvoker(request *model.CreateTokenWith
 	return &CreateTokenWithIdTokenInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateUnscopeTokenByIdpInitiated 获取联邦认证unscoped token(IdP initiated)
+//
+// 该接口可以用于通过IdP initiated的联邦认证方式获取unscoped token。
+//
+// Unscoped token不能用来鉴权，若联邦用户需要使用token进行鉴权，请参考[获取联邦认证scoped token](https://support.huaweicloud.com/api-iam/iam_13_0604.html)获取scoped token。
+//
+// 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+// &gt; - 该接口支持在命令行侧调用，需要客户端使用IdP initiated的联邦认证方式获取SAMLResponse，并采用浏览器提交表单数据的方式，获取unscoped token。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) CreateUnscopeTokenByIdpInitiated(request *model.CreateUnscopeTokenByIdpInitiatedRequest) (*model.CreateUnscopeTokenByIdpInitiatedResponse, error) {
+	requestDef := GenReqDefForCreateUnscopeTokenByIdpInitiated()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateUnscopeTokenByIdpInitiatedResponse), nil
+	}
+}
+
+// CreateUnscopeTokenByIdpInitiatedInvoker 获取联邦认证unscoped token(IdP initiated)
+func (c *IamClient) CreateUnscopeTokenByIdpInitiatedInvoker(request *model.CreateUnscopeTokenByIdpInitiatedRequest) *CreateUnscopeTokenByIdpInitiatedInvoker {
+	requestDef := GenReqDefForCreateUnscopeTokenByIdpInitiated()
+	return &CreateUnscopeTokenByIdpInitiatedInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateUnscopedTokenWithIdToken 获取联邦认证unscoped token(OpenId Connect Id token方式)
 //
 // 获取联邦认证token(OpenId Connect Id token方式)。

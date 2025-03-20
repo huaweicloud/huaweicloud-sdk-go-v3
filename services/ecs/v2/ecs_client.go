@@ -858,6 +858,27 @@ func (c *EcsClient) ListServerTagsInvoker(request *model.ListServerTagsRequest) 
 	return &ListServerTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListServerVolumeAttachments 查询弹性云服务器挂载磁盘列表信息
+//
+// 查询弹性云服务器挂载的磁盘信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ListServerVolumeAttachments(request *model.ListServerVolumeAttachmentsRequest) (*model.ListServerVolumeAttachmentsResponse, error) {
+	requestDef := GenReqDefForListServerVolumeAttachments()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListServerVolumeAttachmentsResponse), nil
+	}
+}
+
+// ListServerVolumeAttachmentsInvoker 查询弹性云服务器挂载磁盘列表信息
+func (c *EcsClient) ListServerVolumeAttachmentsInvoker(request *model.ListServerVolumeAttachmentsRequest) *ListServerVolumeAttachmentsInvoker {
+	requestDef := GenReqDefForListServerVolumeAttachments()
+	return &ListServerVolumeAttachmentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // Deprecated: This function is deprecated and will be removed in the future versions.
 // ListServersByTag 按标签查询云服务器列表
 //

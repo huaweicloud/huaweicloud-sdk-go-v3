@@ -384,6 +384,32 @@ func GenReqDefForCreateTokenWithIdToken() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateUnscopeTokenByIdpInitiated() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3.0/OS-FEDERATION/tokens").
+		WithResponse(new(model.CreateUnscopeTokenByIdpInitiatedResponse)).
+		WithContentType("application/x-www-form-urlencoded")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XIdpId").
+		WithJsonTag("X-Idp-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XSubjectToken").
+		WithJsonTag("X-Subject-Token").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateUnscopedTokenWithIdToken() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
