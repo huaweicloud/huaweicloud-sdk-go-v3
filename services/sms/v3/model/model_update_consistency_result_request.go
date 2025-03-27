@@ -12,7 +12,7 @@ type UpdateConsistencyResultRequest struct {
 	// 任务id
 	TaskId string `json:"task_id"`
 
-	Body *ConsistencyResultRequestBody `json:"body,omitempty"`
+	Body *SetConsistencyResultRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateConsistencyResultRequest) String() string {

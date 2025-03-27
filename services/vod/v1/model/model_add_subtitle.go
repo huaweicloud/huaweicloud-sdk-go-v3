@@ -11,7 +11,7 @@ import (
 
 type AddSubtitle struct {
 
-	// 字幕类型，字幕封装当前仅支持VTT
+	// 字幕类型，字幕封装当前仅支持VTT和SRT
 	Type AddSubtitleType `json:"type"`
 
 	// 字幕语言
@@ -35,12 +35,16 @@ type AddSubtitleType struct {
 
 type AddSubtitleTypeEnum struct {
 	VTT AddSubtitleType
+	SRT AddSubtitleType
 }
 
 func GetAddSubtitleTypeEnum() AddSubtitleTypeEnum {
 	return AddSubtitleTypeEnum{
 		VTT: AddSubtitleType{
 			value: "VTT",
+		},
+		SRT: AddSubtitleType{
+			value: "SRT",
 		},
 	}
 }

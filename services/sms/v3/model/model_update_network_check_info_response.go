@@ -8,6 +8,8 @@ import (
 
 // UpdateNetworkCheckInfoResponse Response Object
 type UpdateNetworkCheckInfoResponse struct {
+
+	// 更新网络检测结果成功。
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

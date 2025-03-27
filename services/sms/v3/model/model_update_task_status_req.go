@@ -12,7 +12,7 @@ import (
 // UpdateTaskStatusReq This is a auto create Body Object
 type UpdateTaskStatusReq struct {
 
-	// 操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测
+	// 操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源
 	Operation UpdateTaskStatusReqOperation `json:"operation"`
 
 	// 模板id
@@ -45,6 +45,8 @@ type UpdateTaskStatusReqOperationEnum struct {
 	CLONE_TEST    UpdateTaskStatusReqOperation
 	RESTART       UpdateTaskStatusReqOperation
 	NETWORK_CHECK UpdateTaskStatusReqOperation
+	SKIP          UpdateTaskStatusReqOperation
+	CLEAR         UpdateTaskStatusReqOperation
 }
 
 func GetUpdateTaskStatusReqOperationEnum() UpdateTaskStatusReqOperationEnum {
@@ -66,6 +68,12 @@ func GetUpdateTaskStatusReqOperationEnum() UpdateTaskStatusReqOperationEnum {
 		},
 		NETWORK_CHECK: UpdateTaskStatusReqOperation{
 			value: "network_check",
+		},
+		SKIP: UpdateTaskStatusReqOperation{
+			value: "skip",
+		},
+		CLEAR: UpdateTaskStatusReqOperation{
+			value: "clear",
 		},
 	}
 }

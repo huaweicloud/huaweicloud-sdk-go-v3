@@ -12,7 +12,7 @@ import (
 // ListServersRequest Request Object
 type ListServersRequest struct {
 
-	// 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
+	// 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
 	State *ListServersRequestState `json:"state,omitempty"`
 
 	// 源端服务器名称
@@ -67,11 +67,15 @@ type ListServersRequestStateEnum struct {
 	SYNCING     ListServersRequestState
 	STOPPING    ListServersRequestState
 	STOPPED     ListServersRequestState
+	SKIPPING    ListServersRequestState
 	DELETING    ListServersRequestState
 	ERROR       ListServersRequestState
 	CLONING     ListServersRequestState
 	CUTOVERING  ListServersRequestState
 	FINISHED    ListServersRequestState
+	CLEARING    ListServersRequestState
+	CLEARED     ListServersRequestState
+	CLEARFAILED ListServersRequestState
 }
 
 func GetListServersRequestStateEnum() ListServersRequestStateEnum {
@@ -97,6 +101,9 @@ func GetListServersRequestStateEnum() ListServersRequestStateEnum {
 		STOPPED: ListServersRequestState{
 			value: "stopped",
 		},
+		SKIPPING: ListServersRequestState{
+			value: "skipping",
+		},
 		DELETING: ListServersRequestState{
 			value: "deleting",
 		},
@@ -111,6 +118,15 @@ func GetListServersRequestStateEnum() ListServersRequestStateEnum {
 		},
 		FINISHED: ListServersRequestState{
 			value: "finished",
+		},
+		CLEARING: ListServersRequestState{
+			value: "clearing",
+		},
+		CLEARED: ListServersRequestState{
+			value: "cleared",
+		},
+		CLEARFAILED: ListServersRequestState{
+			value: "clearfailed",
 		},
 	}
 }

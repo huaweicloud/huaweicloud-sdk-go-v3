@@ -9,12 +9,12 @@ import (
 // ShowConsistencyResultResponse Response Object
 type ShowConsistencyResultResponse struct {
 
-	// 校验结果
-	ConsistencyResult *[]ConsistencyResult `json:"consistency_result,omitempty"`
+	// 一致性校验结果列表
+	ResultList *[]ConsistencyResultRequestBodyResultList `json:"result_list,omitempty"`
 
-	// 检验完成时间
-	FinishedTime   *int64 `json:"finished_time,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	// 任务id
+	TaskId         *string `json:"task_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowConsistencyResultResponse) String() string {

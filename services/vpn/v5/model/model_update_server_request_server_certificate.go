@@ -10,7 +10,7 @@ import (
 type UpdateServerRequestServerCertificate struct {
 
 	// 服务端证书ID,为CCM服务中的证书ID
-	Id *string `json:"id,omitempty"`
+	Id string `json:"id"`
 }
 
 func (o UpdateServerRequestServerCertificate) String() string {

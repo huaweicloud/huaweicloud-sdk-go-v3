@@ -8,7 +8,10 @@ import (
 
 // UnlockTargetEcsResponse Response Object
 type UnlockTargetEcsResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 解锁指定任务的目的端服务器成功
+	Body           *string `json:"body,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UnlockTargetEcsResponse) String() string {

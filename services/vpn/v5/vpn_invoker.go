@@ -229,6 +229,22 @@ func (i *UpdateCgwInvoker) Invoke() (*model.UpdateCgwResponse, error) {
 	}
 }
 
+type DeleteP2cVgwConnectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteP2cVgwConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteP2cVgwConnectionInvoker) Invoke() (*model.DeleteP2cVgwConnectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteP2cVgwConnectionResponse), nil
+	}
+}
+
 type ListP2cVgwAvailabilityZonesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -549,6 +565,22 @@ func (i *ShowVpnConnectionInvoker) Invoke() (*model.ShowVpnConnectionResponse, e
 	}
 }
 
+type ShowVpnConnectionLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVpnConnectionLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowVpnConnectionLogInvoker) Invoke() (*model.ShowVpnConnectionLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVpnConnectionLogResponse), nil
+	}
+}
+
 type UpdateVpnConnectionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -562,6 +594,54 @@ func (i *UpdateVpnConnectionInvoker) Invoke() (*model.UpdateVpnConnectionRespons
 		return nil, err
 	} else {
 		return result.(*model.UpdateVpnConnectionResponse), nil
+	}
+}
+
+type DeleteVpnConnectionsLogConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteVpnConnectionsLogConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteVpnConnectionsLogConfigInvoker) Invoke() (*model.DeleteVpnConnectionsLogConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteVpnConnectionsLogConfigResponse), nil
+	}
+}
+
+type ShowVpnConnectionsLogConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVpnConnectionsLogConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowVpnConnectionsLogConfigInvoker) Invoke() (*model.ShowVpnConnectionsLogConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVpnConnectionsLogConfigResponse), nil
+	}
+}
+
+type UpdateVpnConnectionsLogConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateVpnConnectionsLogConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateVpnConnectionsLogConfigInvoker) Invoke() (*model.UpdateVpnConnectionsLogConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateVpnConnectionsLogConfigResponse), nil
 	}
 }
 

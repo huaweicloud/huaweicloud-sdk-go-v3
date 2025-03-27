@@ -11,9 +11,6 @@ type UploadLogRequestBody struct {
 
 	// 指定桶名称
 	LogBucket string `json:"log_bucket"`
-
-	// 指定有效期
-	LogExpire int32 `json:"log_expire"`
 }
 
 func (o UploadLogRequestBody) String() string {

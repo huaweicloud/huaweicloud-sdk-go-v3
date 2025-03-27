@@ -41,6 +41,9 @@ type CreateResponseVpnConnection struct {
 	// 开启NQA检测
 	EnableNqa *bool `json:"enable_nqa,omitempty"`
 
+	// 开启分支互联
+	EnableHub *bool `json:"enable_hub,omitempty"`
+
 	// 策略模式的策略规则组
 	PolicyRules *[]PolicyRule `json:"policy_rules,omitempty"`
 
@@ -62,6 +65,18 @@ type CreateResponseVpnConnection struct {
 
 	// 标签
 	Tags *[]VpnResourceTag `json:"tags,omitempty"`
+
+	// 使能ipv6的对端子网
+	PeerSubnetsV6 *[]string `json:"peer_subnets_v6,omitempty"`
+
+	// 本端ipv6隧道口地址
+	TunnelLocalAddressV6 *string `json:"tunnel_local_address_v6,omitempty"`
+
+	// 对端ipv6隧道口地址
+	TunnelPeerAddressV6 *string `json:"tunnel_peer_address_v6,omitempty"`
+
+	// 策略模式的ipv6策略规则组
+	PolicyRulesV6 *[]PolicyRule `json:"policy_rules_v6,omitempty"`
 }
 
 func (o CreateResponseVpnConnection) String() string {

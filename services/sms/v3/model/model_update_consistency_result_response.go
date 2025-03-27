@@ -8,6 +8,8 @@ import (
 
 // UpdateConsistencyResultResponse Response Object
 type UpdateConsistencyResultResponse struct {
+
+	// 更新一致性校验结果成功。
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -22,16 +22,25 @@ type ResponseVpnGateway struct {
 	// 关联模式
 	AttachmentType *ResponseVpnGatewayAttachmentType `json:"attachment_type,omitempty"`
 
+	// 网关的IP协议版本
+	IpVersion *ResponseVpnGatewayIpVersion `json:"ip_version,omitempty"`
+
 	CertificateId *string `json:"certificate_id,omitempty"`
 
 	// VPN网关所连接的ER实例的ID
 	ErId *string `json:"er_id,omitempty"`
+
+	// VPN网关关联的ER连接ID
+	ErAttachmentId *string `json:"er_attachment_id,omitempty"`
 
 	// VPN网关所连接的VPC的ID
 	VpcId *string `json:"vpc_id,omitempty"`
 
 	// 本端子网
 	LocalSubnets *[]string `json:"local_subnets,omitempty"`
+
+	// 使能ipv6的本端子网
+	LocalSubnetsV6 *[]string `json:"local_subnets_v6,omitempty"`
 
 	// VPN网关所使用的VPC子网ID
 	ConnectSubnet *string `json:"connect_subnet,omitempty"`
@@ -59,6 +68,9 @@ type ResponseVpnGateway struct {
 
 	// 可用区列表
 	AvailabilityZoneIds *[]string `json:"availability_zone_ids,omitempty"`
+
+	// 公共边界组
+	PublicBorderGroup *string `json:"public_border_group,omitempty"`
 
 	// 最大可创建的VPN连接数
 	ConnectionNumber *int32 `json:"connection_number,omitempty"`
@@ -89,6 +101,9 @@ type ResponseVpnGateway struct {
 
 	// 网关可升配到的目标规格
 	SupportedFlavors *[]string `json:"supported_flavors,omitempty"`
+
+	// 网关可支持的特性功能
+	SupportedFeatures *[]string `json:"supported_features,omitempty"`
 
 	// 标签
 	Tags *[]VpnResourceTag `json:"tags,omitempty"`
@@ -132,6 +147,53 @@ func (c ResponseVpnGatewayAttachmentType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ResponseVpnGatewayAttachmentType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ResponseVpnGatewayIpVersion struct {
+	value string
+}
+
+type ResponseVpnGatewayIpVersionEnum struct {
+	IPV4 ResponseVpnGatewayIpVersion
+	IPV6 ResponseVpnGatewayIpVersion
+}
+
+func GetResponseVpnGatewayIpVersionEnum() ResponseVpnGatewayIpVersionEnum {
+	return ResponseVpnGatewayIpVersionEnum{
+		IPV4: ResponseVpnGatewayIpVersion{
+			value: "ipv4",
+		},
+		IPV6: ResponseVpnGatewayIpVersion{
+			value: "ipv6",
+		},
+	}
+}
+
+func (c ResponseVpnGatewayIpVersion) Value() string {
+	return c.value
+}
+
+func (c ResponseVpnGatewayIpVersion) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ResponseVpnGatewayIpVersion) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

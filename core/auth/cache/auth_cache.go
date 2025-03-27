@@ -23,36 +23,39 @@ import (
 	"sync"
 )
 
+type Cache interface {
+	PutAuth(key, value string)
+	GetAuth(key string) (string, bool)
+}
+
 var (
-	c    *Cache
-	m    sync.RWMutex
-	once sync.Once
+	instance Cache
+	once     sync.Once
 )
 
-type Cache struct {
-	value map[string]string
-}
-
-func GetCache() *Cache {
+func GetCache() Cache {
 	once.Do(func() {
-		c = &Cache{
-			value: make(map[string]string),
+		instance = &cacheImpl{
+			data: make(map[string]string),
 		}
 	})
-
-	return c
+	return instance
 }
 
-func (c *Cache) PutAuth(key string, value string) error {
-	m.Lock()
-	defer m.Unlock()
-	c.value[key] = value
-	return nil
+type cacheImpl struct {
+	data map[string]string
+	mu   sync.RWMutex
 }
 
-func (c *Cache) GetAuth(key string) (string, bool) {
-	m.RLock()
-	defer m.RUnlock()
-	value, ok := c.value[key]
-	return value, ok
+func (s *cacheImpl) PutAuth(key, value string) {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+	s.data[key] = value
+}
+
+func (s *cacheImpl) GetAuth(key string) (string, bool) {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+	val, ok := s.data[key]
+	return val, ok
 }

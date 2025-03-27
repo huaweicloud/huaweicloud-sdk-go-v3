@@ -99,6 +99,9 @@ type CreateFunctionRequestBody struct {
 	// 是否启动动态内存配置
 	EnableDynamicMemory *bool `json:"enable_dynamic_memory,omitempty"`
 
+	// 是否开启日志，缺省值为false。创建函数时，若此开关为true，且未传入log_config，则由FunctionGraph自动创建日志组日志流。
+	EnableLtsLog *bool `json:"enable_lts_log,omitempty"`
+
 	// 自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
 	LtsCustomTag map[string]string `json:"lts_custom_tag,omitempty"`
 }

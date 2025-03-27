@@ -117,6 +117,22 @@ func (i *ChangeOrderInvoker) Invoke() (*model.ChangeOrderResponse, error) {
 	}
 }
 
+type ChangeVaultChargeModeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeVaultChargeModeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeVaultChargeModeInvoker) Invoke() (*model.ChangeVaultChargeModeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeVaultChargeModeResponse), nil
+	}
+}
+
 type CheckAgentInvoker struct {
 	*invoker.BaseInvoker
 }

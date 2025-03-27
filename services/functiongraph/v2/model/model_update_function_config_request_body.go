@@ -107,6 +107,9 @@ type UpdateFunctionConfigRequestBody struct {
 	// 类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
 	EnableClassIsolation *bool `json:"enable_class_isolation,omitempty"`
 
+	// 是否开启日志。
+	EnableLtsLog *bool `json:"enable_lts_log,omitempty"`
+
 	// 自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
 	LtsCustomTag map[string]string `json:"lts_custom_tag,omitempty"`
 }

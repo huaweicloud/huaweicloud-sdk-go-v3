@@ -133,6 +133,22 @@ func (i *CreateDatakeyWithoutPlaintextInvoker) Invoke() (*model.CreateDatakeyWit
 	}
 }
 
+type CreateEcDatakeyPairInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateEcDatakeyPairInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateEcDatakeyPairInvoker) Invoke() (*model.CreateEcDatakeyPairResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateEcDatakeyPairResponse), nil
+	}
+}
+
 type CreateGrantInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -226,6 +242,22 @@ func (i *CreateRandomInvoker) Invoke() (*model.CreateRandomResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateRandomResponse), nil
+	}
+}
+
+type CreateRsaDatakeyPairInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRsaDatakeyPairInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateRsaDatakeyPairInvoker) Invoke() (*model.CreateRsaDatakeyPairResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRsaDatakeyPairResponse), nil
 	}
 }
 

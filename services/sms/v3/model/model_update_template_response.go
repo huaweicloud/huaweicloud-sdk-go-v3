@@ -8,7 +8,10 @@ import (
 
 // UpdateTemplateResponse Response Object
 type UpdateTemplateResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 修改模板信息
+	Body           *string `json:"body,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateTemplateResponse) String() string {

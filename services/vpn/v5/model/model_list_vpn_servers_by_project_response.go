@@ -10,6 +10,11 @@ import (
 type ListVpnServersByProjectResponse struct {
 	VpnServers *[]ShowServerResponse `json:"vpn_servers,omitempty"`
 
+	// 总数
+	TotalCount *int32 `json:"total_count,omitempty"`
+
+	PageInfo *PageInfo `json:"page_info,omitempty"`
+
 	// 请求id
 	RequestId *string `json:"request_id,omitempty"`
 

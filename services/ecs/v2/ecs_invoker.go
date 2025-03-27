@@ -517,6 +517,22 @@ func (i *ListResizeFlavorsInvoker) Invoke() (*model.ListResizeFlavorsResponse, e
 	}
 }
 
+type ListScheduledEventsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListScheduledEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListScheduledEventsInvoker) Invoke() (*model.ListScheduledEventsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListScheduledEventsResponse), nil
+	}
+}
+
 type ListServerAzInfoInvoker struct {
 	*invoker.BaseInvoker
 }

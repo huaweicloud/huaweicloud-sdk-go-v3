@@ -30,7 +30,7 @@ type SourceServerResponse struct {
 	// 是否是OEM操作系统(Windows)
 	OemSystem *bool `json:"oem_system,omitempty"`
 
-	// 当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成
+	// 当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
 	State *SourceServerResponseState `json:"state,omitempty"`
 
 	// 迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
@@ -110,6 +110,9 @@ type SourceServerResponseStateEnum struct {
 	CLONING     SourceServerResponseState
 	TESTING     SourceServerResponseState
 	FINISHED    SourceServerResponseState
+	CLEARING    SourceServerResponseState
+	CLEARED     SourceServerResponseState
+	CLEARFAILED SourceServerResponseState
 }
 
 func GetSourceServerResponseStateEnum() SourceServerResponseStateEnum {
@@ -149,6 +152,15 @@ func GetSourceServerResponseStateEnum() SourceServerResponseStateEnum {
 		},
 		FINISHED: SourceServerResponseState{
 			value: "finished",
+		},
+		CLEARING: SourceServerResponseState{
+			value: "clearing",
+		},
+		CLEARED: SourceServerResponseState{
+			value: "cleared",
+		},
+		CLEARFAILED: SourceServerResponseState{
+			value: "clearfailed",
 		},
 	}
 }

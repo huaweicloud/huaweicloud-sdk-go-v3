@@ -38,4 +38,10 @@ func TestIamEndpoint(t *testing.T) {
 	assert.Nil(t, err)
 	endpoint = GetIamEndpoint()
 	assert.Equal(t, "https://endpoint", endpoint)
+
+	endpoint1 := GetIamEndpoint()
+	endpoint2 := GetIamEndpointById("test")
+	assert.Equal(t, endpoint1, endpoint2)
+	endpoint3 := GetIamEndpointById("cn-north-4")
+	assert.NotEmpty(t, endpoint3)
 }

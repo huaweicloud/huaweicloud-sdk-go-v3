@@ -20,6 +20,9 @@ type CreateResponseVpnGateway struct {
 	// 关联模式
 	AttachmentType *CreateResponseVpnGatewayAttachmentType `json:"attachment_type,omitempty"`
 
+	// 网关的IP协议版本
+	IpVersion *CreateResponseVpnGatewayIpVersion `json:"ip_version,omitempty"`
+
 	CertificateId *string `json:"certificate_id,omitempty"`
 
 	// VPN网关所连接的ER实例的ID
@@ -30,6 +33,9 @@ type CreateResponseVpnGateway struct {
 
 	// 本端子网
 	LocalSubnets *[]string `json:"local_subnets,omitempty"`
+
+	// 使能ipv6的本端子网
+	LocalSubnetsV6 *[]string `json:"local_subnets_v6,omitempty"`
 
 	// VPN网关所使用的VPC子网ID
 	ConnectSubnet *string `json:"connect_subnet,omitempty"`
@@ -108,6 +114,53 @@ func (c CreateResponseVpnGatewayAttachmentType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateResponseVpnGatewayAttachmentType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateResponseVpnGatewayIpVersion struct {
+	value string
+}
+
+type CreateResponseVpnGatewayIpVersionEnum struct {
+	IPV4 CreateResponseVpnGatewayIpVersion
+	IPV6 CreateResponseVpnGatewayIpVersion
+}
+
+func GetCreateResponseVpnGatewayIpVersionEnum() CreateResponseVpnGatewayIpVersionEnum {
+	return CreateResponseVpnGatewayIpVersionEnum{
+		IPV4: CreateResponseVpnGatewayIpVersion{
+			value: "ipv4",
+		},
+		IPV6: CreateResponseVpnGatewayIpVersion{
+			value: "ipv6",
+		},
+	}
+}
+
+func (c CreateResponseVpnGatewayIpVersion) Value() string {
+	return c.value
+}
+
+func (c CreateResponseVpnGatewayIpVersion) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateResponseVpnGatewayIpVersion) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

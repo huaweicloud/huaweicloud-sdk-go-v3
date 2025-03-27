@@ -17,10 +17,13 @@ type CreateSubCustomerReqV2 struct {
 	// 子账号关联类型：1：同一法人。 关联类型目前只能是同一法人。
 	SubCustomerAssociationType int32 `json:"sub_customer_association_type"`
 
-	// 申请的权限列表。 支持的权限项请参见下表。
+	// 申请的权限列表。 支持的权限项请参见下表。当financial_custody为1时，此参数不生效，默认指定权限项：READ_FINANCE_INFO、READ_CONSUME_BILL、SHARE-BIZ-DISCOUNT-TO-SUB。
 	PermissionIds *[]string `json:"permission_ids,omitempty"`
 
 	NewSubCustomer *NewCustomerV2 `json:"new_sub_customer"`
+
+	// 是否开通财务托管，0：不开通；1：开通。默认值0，默认不开通。
+	FinancialCustody *int32 `json:"financial_custody,omitempty"`
 }
 
 func (o CreateSubCustomerReqV2) String() string {

@@ -749,6 +749,28 @@ func (c *EcsClient) ListResizeFlavorsInvoker(request *model.ListResizeFlavorsReq
 	return &ListResizeFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListScheduledEvents 查询计划事件列表
+//
+// 查询计划事件列表
+// 支持查看过去7天内计划事件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ListScheduledEvents(request *model.ListScheduledEventsRequest) (*model.ListScheduledEventsResponse, error) {
+	requestDef := GenReqDefForListScheduledEvents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListScheduledEventsResponse), nil
+	}
+}
+
+// ListScheduledEventsInvoker 查询计划事件列表
+func (c *EcsClient) ListScheduledEventsInvoker(request *model.ListScheduledEventsRequest) *ListScheduledEventsInvoker {
+	requestDef := GenReqDefForListScheduledEvents()
+	return &ListScheduledEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListServerAzInfo 查询可用区列表
 //
 // 查询可用区列表

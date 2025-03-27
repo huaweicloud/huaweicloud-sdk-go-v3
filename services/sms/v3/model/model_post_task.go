@@ -66,6 +66,15 @@ type PostTask struct {
 
 	// 是否开启网络检测
 	StartNetworkCheck *bool `json:"start_network_check,omitempty"`
+
+	// 迁移速率限制值
+	SpeedLimit *int32 `json:"speed_limit,omitempty"`
+
+	// 停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
+	OverSpeedThreshold *float64 `json:"over_speed_threshold,omitempty"`
+
+	// 是否进行一致性校验
+	IsNeedConsistencyCheck *bool `json:"is_need_consistency_check,omitempty"`
 }
 
 func (o PostTask) String() string {

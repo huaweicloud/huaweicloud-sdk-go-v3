@@ -8,7 +8,10 @@ import (
 
 // CollectLogResponse Response Object
 type CollectLogResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 上传迁移任务的日志成功
+	Body           *string `json:"body,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CollectLogResponse) String() string {

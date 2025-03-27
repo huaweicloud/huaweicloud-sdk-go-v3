@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// ComandParam 命令响应参数
-type ComandParam struct {
+// CommandParam 命令响应参数
+type CommandParam struct {
 
 	// 任务ID
 	TaskId *string `json:"task_id,omitempty"`
@@ -16,11 +16,11 @@ type ComandParam struct {
 	Bucket *string `json:"bucket,omitempty"`
 }
 
-func (o ComandParam) String() string {
+func (o CommandParam) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "ComandParam struct{}"
+		return "CommandParam struct{}"
 	}
 
-	return strings.Join([]string{"ComandParam", string(data)}, " ")
+	return strings.Join([]string{"CommandParam", string(data)}, " ")
 }

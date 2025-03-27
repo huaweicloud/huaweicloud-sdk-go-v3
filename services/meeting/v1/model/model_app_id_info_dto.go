@@ -12,7 +12,7 @@ type AppIdInfoDto struct {
 	// 企业应用名称
 	AppName *string `json:"app_name,omitempty"`
 
-	// 企业应用
+	// 企业应用ID
 	AppId *string `json:"app_id,omitempty"`
 
 	// 企业应用appkey

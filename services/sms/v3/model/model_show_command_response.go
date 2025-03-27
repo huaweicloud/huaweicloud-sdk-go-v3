@@ -9,11 +9,11 @@ import (
 // ShowCommandResponse Response Object
 type ShowCommandResponse struct {
 
-	// 命令名称，分为：START、STOP、DELETE、SYNC
+	// 命令名称，分为：START、STOP、DELETE、SYNC、SKIP
 	CommandName *string `json:"command_name,omitempty"`
 
-	CommandParam   *ComandParam `json:"command_param,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	CommandParam   *CommandParam `json:"command_param,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o ShowCommandResponse) String() string {

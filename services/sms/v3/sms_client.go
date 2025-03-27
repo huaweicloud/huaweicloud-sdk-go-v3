@@ -19,6 +19,7 @@ func SmsClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CheckNetAcl 检查网卡安全组端口是否符合要求
 //
 // 检查网卡安全组。
@@ -34,6 +35,7 @@ func (c *SmsClient) CheckNetAcl(request *model.CheckNetAclRequest) (*model.Check
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CheckNetAclInvoker 检查网卡安全组端口是否符合要求
 func (c *SmsClient) CheckNetAclInvoker(request *model.CheckNetAclRequest) *CheckNetAclInvoker {
 	requestDef := GenReqDefForCheckNetAcl()
@@ -418,9 +420,9 @@ func (c *SmsClient) RegisterServerInvoker(request *model.RegisterServerRequest) 
 	return &RegisterServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowCertKey 获取SSL目的端证书和私钥
+// ShowCertKey 获取SSL证书和私钥
 //
-// 当源端服务器为Windows操作系统时，安装在源端服务器上的迁移Agent通过SSLSocket同目的端服务器通信，该接口用于下载目的端服务器所需要的证书和私钥(PEM格式)。
+// 当迁移采用块级迁移的方式时，安装在源端服务器上的迁移Agent通过SSLSocket同目的端服务器通信，该接口用于下载迁移传输过程所需要的证书和私钥(PEM格式)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmsClient) ShowCertKey(request *model.ShowCertKeyRequest) (*model.ShowCertKeyResponse, error) {
@@ -433,7 +435,7 @@ func (c *SmsClient) ShowCertKey(request *model.ShowCertKeyRequest) (*model.ShowC
 	}
 }
 
-// ShowCertKeyInvoker 获取SSL目的端证书和私钥
+// ShowCertKeyInvoker 获取SSL证书和私钥
 func (c *SmsClient) ShowCertKeyInvoker(request *model.ShowCertKeyRequest) *ShowCertKeyInvoker {
 	requestDef := GenReqDefForShowCertKey()
 	return &ShowCertKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -462,7 +464,7 @@ func (c *SmsClient) ShowCommandInvoker(request *model.ShowCommandRequest) *ShowC
 
 // ShowConfigSetting 查询配置资源
 //
-// 使用该接口查询任指定任务的指定配置类型的配置信息
+// 使用该接口查询指定任务的指定配置类型的配置信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmsClient) ShowConfigSetting(request *model.ShowConfigSettingRequest) (*model.ShowConfigSettingResponse, error) {
@@ -607,6 +609,7 @@ func (c *SmsClient) ShowServerInvoker(request *model.ShowServerRequest) *ShowSer
 	return &ShowServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowSha256 计算sha256
 //
 // 计算sha256，加密字段值为uuid。
@@ -622,6 +625,7 @@ func (c *SmsClient) ShowSha256(request *model.ShowSha256Request) (*model.ShowSha
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowSha256Invoker 计算sha256
 func (c *SmsClient) ShowSha256Invoker(request *model.ShowSha256Request) *ShowSha256Invoker {
 	requestDef := GenReqDefForShowSha256()
@@ -712,6 +716,7 @@ func (c *SmsClient) ShowsSpeedLimitsInvoker(request *model.ShowsSpeedLimitsReque
 	return &ShowsSpeedLimitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UnlockTargetEcs 解锁指定任务的目的端服务器
 //
 // 解锁指定任务的目的端服务器。
@@ -727,6 +732,7 @@ func (c *SmsClient) UnlockTargetEcs(request *model.UnlockTargetEcsRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UnlockTargetEcsInvoker 解锁指定任务的目的端服务器
 func (c *SmsClient) UnlockTargetEcsInvoker(request *model.UnlockTargetEcsRequest) *UnlockTargetEcsInvoker {
 	requestDef := GenReqDefForUnlockTargetEcs()
@@ -880,9 +886,9 @@ func (c *SmsClient) UpdateNetworkCheckInfoInvoker(request *model.UpdateNetworkCh
 	return &UpdateNetworkCheckInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateServerName 修改指定ID的源端服务器名称
+// UpdateServerName 修改指定ID的源端服务器信息
 //
-// 该功能用来修改SMS服务端的源端名称，方便用户对源端进行管理。
+// 该功能用来修改SMS服务端的源端信息，方便用户对源端进行管理。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmsClient) UpdateServerName(request *model.UpdateServerNameRequest) (*model.UpdateServerNameResponse, error) {
@@ -895,7 +901,7 @@ func (c *SmsClient) UpdateServerName(request *model.UpdateServerNameRequest) (*m
 	}
 }
 
-// UpdateServerNameInvoker 修改指定ID的源端服务器名称
+// UpdateServerNameInvoker 修改指定ID的源端服务器信息
 func (c *SmsClient) UpdateServerNameInvoker(request *model.UpdateServerNameRequest) *UpdateServerNameInvoker {
 	requestDef := GenReqDefForUpdateServerName()
 	return &UpdateServerNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -946,7 +952,6 @@ func (c *SmsClient) UpdateTaskInvoker(request *model.UpdateTaskRequest) *UpdateT
 // UpdateTaskSpeed 上报数据迁移进度和速率
 //
 // 此接口由安装在源端服务器上的迁移Agent在数据迁移阶段调用，用来将迁移的具体进度上报给SMS服务端。
-//
 // 迁移Agent自动调用此接口用于上报数据迁移进度，您无需调用此接口。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -968,7 +973,7 @@ func (c *SmsClient) UpdateTaskSpeedInvoker(request *model.UpdateTaskSpeedRequest
 
 // UpdateTaskStatus 管理迁移任务
 //
-// 管理迁移任务，包括启动任务，暂停任务，同步任务，日志上传，回滚失败迁移任务。
+// 管理迁移任务，包括启动任务，暂停任务，同步任务，日志上传，回滚失败迁移任务，删除快照资源。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmsClient) UpdateTaskStatus(request *model.UpdateTaskStatusRequest) (*model.UpdateTaskStatusResponse, error) {

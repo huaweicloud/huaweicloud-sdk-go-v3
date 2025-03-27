@@ -1749,6 +1749,27 @@ func (c *IDMEClassicAPIClient) ShowLogicalDeleteUsingPostInvoker(request *model.
 	return &ShowLogicalDeleteUsingPostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowStaticsPage 分页查询数据实例的统计信息
+//
+// 分页查询数据实例的统计信息，支持分组和简单函数分页统计。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IDMEClassicAPIClient) ShowStaticsPage(request *model.ShowStaticsPageRequest) (*model.ShowStaticsPageResponse, error) {
+	requestDef := GenReqDefForShowStaticsPage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowStaticsPageResponse), nil
+	}
+}
+
+// ShowStaticsPageInvoker 分页查询数据实例的统计信息
+func (c *IDMEClassicAPIClient) ShowStaticsPageInvoker(request *model.ShowStaticsPageRequest) *ShowStaticsPageInvoker {
+	requestDef := GenReqDefForShowStaticsPage()
+	return &ShowStaticsPageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowStaticsUsingPost 查询指定数据模型的实例统计信息
 //
 // 根据指定函数，统计指定数据模型的实例信息。

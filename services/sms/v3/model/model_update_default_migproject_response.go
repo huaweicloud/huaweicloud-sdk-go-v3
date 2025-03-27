@@ -8,7 +8,10 @@ import (
 
 // UpdateDefaultMigprojectResponse Response Object
 type UpdateDefaultMigprojectResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 更改默认迁移项目成功
+	Body           *string `json:"body,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateDefaultMigprojectResponse) String() string {

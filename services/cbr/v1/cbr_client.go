@@ -174,6 +174,28 @@ func (c *CbrClient) ChangeOrderInvoker(request *model.ChangeOrderRequest) *Chang
 	return &ChangeOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeVaultChargeMode 修改付费模式
+//
+// 修改资源的付费模式，暂时只支持按需资源转包周期资源。
+// &gt; 该接口目前输入公测阶段，部分region暂时无法使用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) ChangeVaultChargeMode(request *model.ChangeVaultChargeModeRequest) (*model.ChangeVaultChargeModeResponse, error) {
+	requestDef := GenReqDefForChangeVaultChargeMode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeVaultChargeModeResponse), nil
+	}
+}
+
+// ChangeVaultChargeModeInvoker 修改付费模式
+func (c *CbrClient) ChangeVaultChargeModeInvoker(request *model.ChangeVaultChargeModeRequest) *ChangeVaultChargeModeInvoker {
+	requestDef := GenReqDefForChangeVaultChargeMode()
+	return &ChangeVaultChargeModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CheckAgent 查询agent状态
 //
 // 检查应用一致性Agent状态

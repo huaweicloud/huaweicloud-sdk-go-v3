@@ -39,7 +39,7 @@ type ShowServerResponse struct {
 	// 是否是OEM操作系统(Windows)
 	OemSystem *bool `json:"oem_system,omitempty"`
 
-	// 当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成
+	// 当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
 	State *ShowServerResponseState `json:"state,omitempty"`
 
 	// 与Agent连接状态
@@ -92,8 +92,11 @@ type ShowServerResponse struct {
 	StageActionTime *int64 `json:"stage_action_time,omitempty"`
 
 	// Agent版本信息
-	AgentVersion   *string `json:"agent_version,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	AgentVersion *string `json:"agent_version,omitempty"`
+
+	// 是否安装tc组件，Linux系统此参数为必选
+	HasTc          *bool `json:"has_tc,omitempty"`
+	HttpStatusCode int   `json:"-"`
 }
 
 func (o ShowServerResponse) String() string {
@@ -122,6 +125,9 @@ type ShowServerResponseStateEnum struct {
 	CLONING     ShowServerResponseState
 	TESTING     ShowServerResponseState
 	FINISHED    ShowServerResponseState
+	CLEARING    ShowServerResponseState
+	CLEARED     ShowServerResponseState
+	CLEARFAILED ShowServerResponseState
 }
 
 func GetShowServerResponseStateEnum() ShowServerResponseStateEnum {
@@ -161,6 +167,15 @@ func GetShowServerResponseStateEnum() ShowServerResponseStateEnum {
 		},
 		FINISHED: ShowServerResponseState{
 			value: "finished",
+		},
+		CLEARING: ShowServerResponseState{
+			value: "clearing",
+		},
+		CLEARED: ShowServerResponseState{
+			value: "cleared",
+		},
+		CLEARFAILED: ShowServerResponseState{
+			value: "clearfailed",
 		},
 	}
 }

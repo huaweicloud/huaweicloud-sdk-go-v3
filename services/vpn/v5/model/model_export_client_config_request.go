@@ -11,6 +11,8 @@ type ExportClientConfigRequest struct {
 
 	// VPN服务端 ID
 	VpnServerId string `json:"vpn_server_id"`
+
+	Body *ExportClientConfigRequestBody `json:"body,omitempty"`
 }
 
 func (o ExportClientConfigRequest) String() string {

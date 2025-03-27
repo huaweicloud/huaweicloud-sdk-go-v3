@@ -8,6 +8,8 @@ import (
 
 // CreatePrivacyAgreementsResponse Response Object
 type CreatePrivacyAgreementsResponse struct {
+
+	// 请求成功
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

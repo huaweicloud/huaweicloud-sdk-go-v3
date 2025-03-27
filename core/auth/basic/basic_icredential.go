@@ -75,7 +75,14 @@ func (s *Credentials) ProcessAuthParams(client *impl.DefaultHttpClient, region s
 
 	derivedPredicate := s.DerivedPredicate
 	s.DerivedPredicate = nil
-	r := internal.GetKeystoneListProjectsRequest(s.IamEndpoint, region, client.GetHttpConfig())
+
+	var iamEndpoint string
+	if s.IamEndpoint != "" {
+		iamEndpoint = s.IamEndpoint
+	} else {
+		iamEndpoint = internal.GetIamEndpointById(region)
+	}
+	r := internal.GetKeystoneListProjectsRequest(iamEndpoint, region, client.GetHttpConfig())
 	req, err := s.ProcessAuthRequest(client, r)
 	if err != nil {
 		panic(fmt.Errorf("failed to get project id of region '%s' automatically: %s", region, err.Error()))
@@ -101,7 +108,7 @@ func (s *Credentials) ProcessAuthParams(client *impl.DefaultHttpClient, region s
 
 	id := projects[0].Id
 	s.ProjectId = id
-	_ = authCache.PutAuth(akWithName, id)
+	authCache.PutAuth(akWithName, id)
 
 	s.DerivedPredicate = derivedPredicate
 
@@ -225,7 +232,13 @@ func (s *Credentials) updateAuthTokenByIdToken(client *impl.DefaultHttpClient) e
 		return err
 	}
 
-	req := internal.GetProjectTokenWithIdTokenRequest(s.IamEndpoint, s.IdpId, idToken, s.ProjectId, client.GetHttpConfig())
+	var iamEndpoint string
+	if s.IamEndpoint != "" {
+		iamEndpoint = s.IamEndpoint
+	} else {
+		iamEndpoint = internal.GetIamEndpoint()
+	}
+	req := internal.GetProjectTokenWithIdTokenRequest(iamEndpoint, s.IdpId, idToken, s.ProjectId, client.GetHttpConfig())
 	resp, err := internal.CreateTokenWithIdToken(client, req)
 	if err != nil {
 		return err
@@ -264,7 +277,7 @@ type CredentialsBuilder struct {
 
 func NewCredentialsBuilder() *CredentialsBuilder {
 	return &CredentialsBuilder{
-		Credentials: &Credentials{IamEndpoint: internal.GetIamEndpoint()},
+		Credentials: &Credentials{},
 		errMap:      make(map[string]string),
 	}
 }

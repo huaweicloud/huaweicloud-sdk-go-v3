@@ -93,7 +93,7 @@ type PostSourceServerBody struct {
 	// 迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
 	MigrationCycle *PostSourceServerBodyMigrationCycle `json:"migration_cycle,omitempty"`
 
-	// 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
+	// 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
 	State *PostSourceServerBodyState `json:"state,omitempty"`
 
 	// 是否是OEM操作系统(Windows)
@@ -104,6 +104,12 @@ type PostSourceServerBody struct {
 
 	// 磁盘IO读时延，单位为ms
 	IoReadWait *float64 `json:"io_read_wait,omitempty"`
+
+	// 是否安装tc组件，Linux系统此参数为必选
+	HasTc *bool `json:"has_tc,omitempty"`
+
+	// 平台信息: hw：华为  ali：阿里 aws：亚马逊 azure：微软云 gcp：谷歌云 tencent：腾讯云 vmware hyperv other：其他
+	Platform *PostSourceServerBodyPlatform `json:"platform,omitempty"`
 }
 
 func (o PostSourceServerBody) String() string {
@@ -336,6 +342,9 @@ type PostSourceServerBodyStateEnum struct {
 	CLONING     PostSourceServerBodyState
 	CUTOVERING  PostSourceServerBodyState
 	FINISHED    PostSourceServerBodyState
+	CLEARING    PostSourceServerBodyState
+	CLEARED     PostSourceServerBodyState
+	CLEARFAILED PostSourceServerBodyState
 }
 
 func GetPostSourceServerBodyStateEnum() PostSourceServerBodyStateEnum {
@@ -375,6 +384,15 @@ func GetPostSourceServerBodyStateEnum() PostSourceServerBodyStateEnum {
 		},
 		FINISHED: PostSourceServerBodyState{
 			value: "finished",
+		},
+		CLEARING: PostSourceServerBodyState{
+			value: "clearing",
+		},
+		CLEARED: PostSourceServerBodyState{
+			value: "cleared",
+		},
+		CLEARFAILED: PostSourceServerBodyState{
+			value: "clearfailed",
 		},
 	}
 }
@@ -439,6 +457,81 @@ func (c PostSourceServerBodyStartType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *PostSourceServerBodyStartType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type PostSourceServerBodyPlatform struct {
+	value string
+}
+
+type PostSourceServerBodyPlatformEnum struct {
+	HW      PostSourceServerBodyPlatform
+	ALI     PostSourceServerBodyPlatform
+	AWS     PostSourceServerBodyPlatform
+	AZURE   PostSourceServerBodyPlatform
+	GCP     PostSourceServerBodyPlatform
+	TENCENT PostSourceServerBodyPlatform
+	VMWARE  PostSourceServerBodyPlatform
+	HYPERV  PostSourceServerBodyPlatform
+	OTHER   PostSourceServerBodyPlatform
+}
+
+func GetPostSourceServerBodyPlatformEnum() PostSourceServerBodyPlatformEnum {
+	return PostSourceServerBodyPlatformEnum{
+		HW: PostSourceServerBodyPlatform{
+			value: "hw",
+		},
+		ALI: PostSourceServerBodyPlatform{
+			value: "ali",
+		},
+		AWS: PostSourceServerBodyPlatform{
+			value: "aws",
+		},
+		AZURE: PostSourceServerBodyPlatform{
+			value: "azure",
+		},
+		GCP: PostSourceServerBodyPlatform{
+			value: "gcp",
+		},
+		TENCENT: PostSourceServerBodyPlatform{
+			value: "tencent",
+		},
+		VMWARE: PostSourceServerBodyPlatform{
+			value: "vmware",
+		},
+		HYPERV: PostSourceServerBodyPlatform{
+			value: "hyperv",
+		},
+		OTHER: PostSourceServerBodyPlatform{
+			value: "other",
+		},
+	}
+}
+
+func (c PostSourceServerBodyPlatform) Value() string {
+	return c.value
+}
+
+func (c PostSourceServerBodyPlatform) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *PostSourceServerBodyPlatform) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

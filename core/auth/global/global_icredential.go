@@ -75,7 +75,13 @@ func (s *Credentials) ProcessAuthParams(client *impl.DefaultHttpClient, region s
 	derivedPredicate := s.DerivedPredicate
 	s.DerivedPredicate = nil
 
-	req, err := s.ProcessAuthRequest(client, internal.GetKeystoneListAuthDomainsRequest(s.IamEndpoint, client.GetHttpConfig()))
+	var iamEndpoint string
+	if s.IamEndpoint != "" {
+		iamEndpoint = s.IamEndpoint
+	} else {
+		iamEndpoint = internal.GetIamEndpointById(region)
+	}
+	req, err := s.ProcessAuthRequest(client, internal.GetKeystoneListAuthDomainsRequest(iamEndpoint, client.GetHttpConfig()))
 	if err != nil {
 		panic(fmt.Errorf("failed to get domain id automatically, %w", err))
 	}
@@ -93,7 +99,7 @@ func (s *Credentials) ProcessAuthParams(client *impl.DefaultHttpClient, region s
 
 	id := domains[0].Id
 	s.DomainId = id
-	_ = authCache.PutAuth(s.AK, id)
+	authCache.PutAuth(s.AK, id)
 
 	s.DerivedPredicate = derivedPredicate
 
@@ -234,7 +240,13 @@ func (s *Credentials) updateAuthTokenByIdToken(client *impl.DefaultHttpClient) e
 		return err
 	}
 
-	req := internal.GetDomainTokenWithIdTokenRequest(s.IamEndpoint, s.IdpId, idToken, s.DomainId, client.GetHttpConfig())
+	var iamEndpoint string
+	if s.IamEndpoint != "" {
+		iamEndpoint = s.IamEndpoint
+	} else {
+		iamEndpoint = internal.GetIamEndpoint()
+	}
+	req := internal.GetDomainTokenWithIdTokenRequest(iamEndpoint, s.IdpId, idToken, s.DomainId, client.GetHttpConfig())
 	resp, err := internal.CreateTokenWithIdToken(client, req)
 	if err != nil {
 		return err
@@ -256,7 +268,7 @@ type CredentialsBuilder struct {
 
 func NewCredentialsBuilder() *CredentialsBuilder {
 	return &CredentialsBuilder{
-		Credentials: &Credentials{IamEndpoint: internal.GetIamEndpoint()},
+		Credentials: &Credentials{},
 		errMap:      make(map[string]string),
 	}
 }

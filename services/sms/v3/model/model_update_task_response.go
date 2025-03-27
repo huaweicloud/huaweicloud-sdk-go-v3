@@ -8,6 +8,8 @@ import (
 
 // UpdateTaskResponse Response Object
 type UpdateTaskResponse struct {
+
+	// 更新指定ID的迁移任务
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

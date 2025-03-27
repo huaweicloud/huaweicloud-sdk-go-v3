@@ -9,6 +9,9 @@ import (
 
 type UpdateFields struct {
 
+	// 文档不存在时，插入该完整文档。
+	Upsert *bson.D `bson:"upsert,omitempty"`
+
 	// 新增或覆盖更新1个或多个字段的值。 > 禁止修改sortkey的字段。
 	Set *bson.D `bson:"set,omitempty"`
 

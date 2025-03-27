@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Version API版本
+// Version 查询主机迁移服务指定API版本信息成功
 type Version struct {
 
 	// API版本号。

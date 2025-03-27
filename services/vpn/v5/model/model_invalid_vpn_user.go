@@ -17,6 +17,9 @@ type InvalidVpnUser struct {
 	// 所属用户组名称
 	UserGroupName *string `json:"user_group_name,omitempty"`
 
+	// 静态客户端IP地址，默认值disable，表示随机分配客户端IP
+	StaticIp *string `json:"static_ip,omitempty"`
+
 	// 失败原因
 	Cause *string `json:"cause,omitempty"`
 }

@@ -8,7 +8,10 @@ import (
 
 // DeleteMigprojectResponse Response Object
 type DeleteMigprojectResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 删除迁移项目成功
+	Body           *string `json:"body,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteMigprojectResponse) String() string {

@@ -8,7 +8,10 @@ import (
 
 // DeleteTaskResponse Response Object
 type DeleteTaskResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 删除指定ID的迁移任务成功
+	Body           *string `json:"body,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteTaskResponse) String() string {

@@ -53,6 +53,9 @@ type ShowResponseP2cVgw struct {
 	// 冻结场景：0未冻结；1 冻结可删除；2冻结不可删除
 	FrozenEffect *int32 `json:"frozen_effect,omitempty"`
 
+	// 网关版本
+	Version *string `json:"version,omitempty"`
+
 	// 创建时间
 	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
 

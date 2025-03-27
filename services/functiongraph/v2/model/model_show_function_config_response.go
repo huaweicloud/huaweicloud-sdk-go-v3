@@ -180,6 +180,9 @@ type ShowFunctionConfigResponse struct {
 	// 是否返回流式数据（已废弃）
 	IsReturnStream *bool `json:"is_return_stream,omitempty"`
 
+	// 是否开启日志。
+	EnableLtsLog *bool `json:"enable_lts_log,omitempty"`
+
 	// 自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
 	LtsCustomTag   map[string]string `json:"lts_custom_tag,omitempty"`
 	HttpStatusCode int               `json:"-"`

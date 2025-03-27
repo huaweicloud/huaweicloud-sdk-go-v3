@@ -183,6 +183,9 @@ type CreateFunctionResponse struct {
 	// 是否允许在请求头中添加鉴权信息，只支持自定义镜像函数（创建函数时不支持修改）
 	EnableAuthInHeader *bool `json:"enable_auth_in_header,omitempty"`
 
+	// 是否开启日志。
+	EnableLtsLog *bool `json:"enable_lts_log,omitempty"`
+
 	// 自定义日志标签。函数执行时，可以按照自定义标签配置上报标签到云日志服务(LTS)，用户可以通过标签对日志进行过滤筛选。
 	LtsCustomTag   map[string]string `json:"lts_custom_tag,omitempty"`
 	HttpStatusCode int               `json:"-"`

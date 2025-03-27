@@ -12,7 +12,7 @@ import (
 type CreateServerRequest struct {
 
 	// 隧道协议类型
-	TunnelProtocol CreateServerRequestTunnelProtocol `json:"tunnel_protocol"`
+	TunnelProtocol *CreateServerRequestTunnelProtocol `json:"tunnel_protocol,omitempty"`
 
 	// 客户端网段
 	ClientCidr string `json:"client_cidr"`
@@ -21,7 +21,7 @@ type CreateServerRequest struct {
 	LocalSubnets []string `json:"local_subnets"`
 
 	// 客户端认证类型
-	ClientAuthType CreateServerRequestClientAuthType `json:"client_auth_type"`
+	ClientAuthType *CreateServerRequestClientAuthType `json:"client_auth_type,omitempty"`
 
 	ServerCertificate *CreateServerRequestServerCertificate `json:"server_certificate,omitempty"`
 

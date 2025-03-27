@@ -34,6 +34,9 @@ type AdjustRecordV3 struct {
 
 	// 事务ID。
 	TransId *string `json:"trans_id,omitempty"`
+
+	// 备注。
+	Memo *string `json:"memo,omitempty"`
 }
 
 func (o AdjustRecordV3) String() string {

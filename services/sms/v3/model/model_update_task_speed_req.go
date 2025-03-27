@@ -35,6 +35,27 @@ type UpdateTaskSpeedReq struct {
 
 	// 剩余时间
 	RemainTime *int64 `json:"remain_time,omitempty"`
+
+	// 主机的CPU使用率，0到100，单位是百分比
+	TotalCpuUsage *float64 `json:"total_cpu_usage,omitempty"`
+
+	// Agent的CPU使用率，0到100，单位是百分比
+	AgentCpuUsage *float64 `json:"agent_cpu_usage,omitempty"`
+
+	// 主机的内存使用值，单位是MB
+	TotalMemUsage *float64 `json:"total_mem_usage,omitempty"`
+
+	// Agent的内存使用值，单位是MB
+	AgentMemUsage *float64 `json:"agent_mem_usage,omitempty"`
+
+	// 主机的磁盘I/O值，单位是MB/s
+	TotalDiskIo *float64 `json:"total_disk_io,omitempty"`
+
+	// Agent的磁盘I/O值，单位是MB/s
+	AgentDiskIo *float64 `json:"agent_disk_io,omitempty"`
+
+	// Agent的当前时间，用于超速检测，因为限速值是可以分时间段设置的
+	AgentTime *string `json:"agent_time,omitempty"`
 }
 
 func (o UpdateTaskSpeedReq) String() string {

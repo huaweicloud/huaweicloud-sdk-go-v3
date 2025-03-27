@@ -1301,6 +1301,22 @@ func (i *ShowLogicalDeleteUsingPostInvoker) Invoke() (*model.ShowLogicalDeleteUs
 	}
 }
 
+type ShowStaticsPageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStaticsPageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowStaticsPageInvoker) Invoke() (*model.ShowStaticsPageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStaticsPageResponse), nil
+	}
+}
+
 type ShowStaticsUsingPostInvoker struct {
 	*invoker.BaseInvoker
 }

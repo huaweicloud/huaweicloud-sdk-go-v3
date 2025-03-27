@@ -46,7 +46,7 @@ type PostAlarmsReqV2 struct {
 	// 告警通知关闭时间
 	NotificationEndTime *string `json:"notification_end_time,omitempty"`
 
-	// 企业项目ID
+	// 企业项目ID，不填时会使用默认的企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 告警开关

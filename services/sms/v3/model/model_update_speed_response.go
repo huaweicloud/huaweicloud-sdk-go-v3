@@ -8,7 +8,10 @@ import (
 
 // UpdateSpeedResponse Response Object
 type UpdateSpeedResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 设置迁移限速规则成功
+	Body           *string `json:"body,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateSpeedResponse) String() string {

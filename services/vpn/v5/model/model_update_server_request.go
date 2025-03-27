@@ -23,6 +23,9 @@ type UpdateServerRequest struct {
 
 	// 客户端认证类型
 	ClientAuthType *UpdateServerRequestClientAuthType `json:"client_auth_type,omitempty"`
+
+	// DNS服务器列表，最多两个DNS
+	DnsServers *[]string `json:"dns_servers,omitempty"`
 }
 
 func (o UpdateServerRequest) String() string {

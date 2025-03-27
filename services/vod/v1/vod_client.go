@@ -703,7 +703,7 @@ func (c *VodClient) ListWatermarkTemplateInvoker(request *model.ListWatermarkTem
 
 // ModifySubtitle 多字幕封装
 //
-// 多字幕封装，仅支持 HLS VTT格式
+// 多字幕封装，仅支持 HLS VTT格式和HLS SRT格式
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VodClient) ModifySubtitle(request *model.ModifySubtitleRequest) (*model.ModifySubtitleResponse, error) {

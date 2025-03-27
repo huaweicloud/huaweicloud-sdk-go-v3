@@ -17,14 +17,20 @@ type CreateVgwRequestBodyContent struct {
 	// 关联模式
 	AttachmentType *CreateVgwRequestBodyContentAttachmentType `json:"attachment_type,omitempty"`
 
+	// 网关的IP协议版本
+	IpVersion *CreateVgwRequestBodyContentIpVersion `json:"ip_version,omitempty"`
+
 	// VPN网关所连接的ER实例的ID，当attachment_type配置为\"er\"时必填，否则不填
 	ErId *string `json:"er_id,omitempty"`
 
 	// VPN网关所连接的VPC的ID
 	VpcId *string `json:"vpc_id,omitempty"`
 
-	// 本端子网，当attachment_type配置为\"vpc\"时必填，否则不填
+	// 本端子网，当attachment_type配置为\"vpc\"且ip_version为\"ipv4\"时必填，否则不填
 	LocalSubnets *[]string `json:"local_subnets,omitempty"`
+
+	// 使能ipv6的本端子网，当attachment_type配置为\"vpc\"且ip_version为\"ipv6\"时必填，否则不填
+	LocalSubnetsV6 *[]string `json:"local_subnets_v6,omitempty"`
 
 	// VPN网关所使用的VPC子网ID
 	ConnectSubnet *string `json:"connect_subnet,omitempty"`
@@ -123,6 +129,53 @@ func (c *CreateVgwRequestBodyContentAttachmentType) UnmarshalJSON(b []byte) erro
 	}
 }
 
+type CreateVgwRequestBodyContentIpVersion struct {
+	value string
+}
+
+type CreateVgwRequestBodyContentIpVersionEnum struct {
+	IPV4 CreateVgwRequestBodyContentIpVersion
+	IPV6 CreateVgwRequestBodyContentIpVersion
+}
+
+func GetCreateVgwRequestBodyContentIpVersionEnum() CreateVgwRequestBodyContentIpVersionEnum {
+	return CreateVgwRequestBodyContentIpVersionEnum{
+		IPV4: CreateVgwRequestBodyContentIpVersion{
+			value: "ipv4",
+		},
+		IPV6: CreateVgwRequestBodyContentIpVersion{
+			value: "ipv6",
+		},
+	}
+}
+
+func (c CreateVgwRequestBodyContentIpVersion) Value() string {
+	return c.value
+}
+
+func (c CreateVgwRequestBodyContentIpVersion) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateVgwRequestBodyContentIpVersion) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
 type CreateVgwRequestBodyContentFlavor struct {
 	value string
 }
@@ -131,8 +184,11 @@ type CreateVgwRequestBodyContentFlavorEnum struct {
 	BASIC                      CreateVgwRequestBodyContentFlavor
 	PROFESSIONAL1              CreateVgwRequestBodyContentFlavor
 	PROFESSIONAL2              CreateVgwRequestBodyContentFlavor
+	PROFESSIONAL3              CreateVgwRequestBodyContentFlavor
 	PROFESSIONAL1_NON_FIXED_IP CreateVgwRequestBodyContentFlavor
 	PROFESSIONAL2_NON_FIXED_IP CreateVgwRequestBodyContentFlavor
+	PROFESSIONAL3_NON_FIXED_IP CreateVgwRequestBodyContentFlavor
+	GM                         CreateVgwRequestBodyContentFlavor
 }
 
 func GetCreateVgwRequestBodyContentFlavorEnum() CreateVgwRequestBodyContentFlavorEnum {
@@ -146,11 +202,20 @@ func GetCreateVgwRequestBodyContentFlavorEnum() CreateVgwRequestBodyContentFlavo
 		PROFESSIONAL2: CreateVgwRequestBodyContentFlavor{
 			value: "Professional2",
 		},
+		PROFESSIONAL3: CreateVgwRequestBodyContentFlavor{
+			value: "Professional3",
+		},
 		PROFESSIONAL1_NON_FIXED_IP: CreateVgwRequestBodyContentFlavor{
 			value: "Professional1-NonFixedIP",
 		},
 		PROFESSIONAL2_NON_FIXED_IP: CreateVgwRequestBodyContentFlavor{
 			value: "Professional2-NonFixedIP",
+		},
+		PROFESSIONAL3_NON_FIXED_IP: CreateVgwRequestBodyContentFlavor{
+			value: "Professional3-NonFixedIP",
+		},
+		GM: CreateVgwRequestBodyContentFlavor{
+			value: "GM",
 		},
 	}
 }

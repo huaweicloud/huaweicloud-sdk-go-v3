@@ -313,6 +313,27 @@ func (c *VpnClient) UpdateCgwInvoker(request *model.UpdateCgwRequest) *UpdateCgw
 	return &UpdateCgwInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteP2cVgwConnection 断开P2C VPN网关连接
+//
+// 断开P2C VPN网关连接
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) DeleteP2cVgwConnection(request *model.DeleteP2cVgwConnectionRequest) (*model.DeleteP2cVgwConnectionResponse, error) {
+	requestDef := GenReqDefForDeleteP2cVgwConnection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteP2cVgwConnectionResponse), nil
+	}
+}
+
+// DeleteP2cVgwConnectionInvoker 断开P2C VPN网关连接
+func (c *VpnClient) DeleteP2cVgwConnectionInvoker(request *model.DeleteP2cVgwConnectionRequest) *DeleteP2cVgwConnectionInvoker {
+	requestDef := GenReqDefForDeleteP2cVgwConnection()
+	return &DeleteP2cVgwConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListP2cVgwAvailabilityZones 查询P2C VPN网关可用区
 //
 // 查询P2C VPN网关可用区
@@ -733,6 +754,27 @@ func (c *VpnClient) ShowVpnConnectionInvoker(request *model.ShowVpnConnectionReq
 	return &ShowVpnConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowVpnConnectionLog 查询VPN连接日志
+//
+// 根据连接ID，查询指定的VPN连接日志
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) ShowVpnConnectionLog(request *model.ShowVpnConnectionLogRequest) (*model.ShowVpnConnectionLogResponse, error) {
+	requestDef := GenReqDefForShowVpnConnectionLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVpnConnectionLogResponse), nil
+	}
+}
+
+// ShowVpnConnectionLogInvoker 查询VPN连接日志
+func (c *VpnClient) ShowVpnConnectionLogInvoker(request *model.ShowVpnConnectionLogRequest) *ShowVpnConnectionLogInvoker {
+	requestDef := GenReqDefForShowVpnConnectionLog()
+	return &ShowVpnConnectionLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateVpnConnection 更新VPN连接
 //
 // 根据连接ID，更新指定的VPN连接的参数
@@ -752,6 +794,69 @@ func (c *VpnClient) UpdateVpnConnection(request *model.UpdateVpnConnectionReques
 func (c *VpnClient) UpdateVpnConnectionInvoker(request *model.UpdateVpnConnectionRequest) *UpdateVpnConnectionInvoker {
 	requestDef := GenReqDefForUpdateVpnConnection()
 	return &UpdateVpnConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteVpnConnectionsLogConfig 删除VPN连接日志配置
+//
+// 删除VPN连接日志配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) DeleteVpnConnectionsLogConfig(request *model.DeleteVpnConnectionsLogConfigRequest) (*model.DeleteVpnConnectionsLogConfigResponse, error) {
+	requestDef := GenReqDefForDeleteVpnConnectionsLogConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteVpnConnectionsLogConfigResponse), nil
+	}
+}
+
+// DeleteVpnConnectionsLogConfigInvoker 删除VPN连接日志配置
+func (c *VpnClient) DeleteVpnConnectionsLogConfigInvoker(request *model.DeleteVpnConnectionsLogConfigRequest) *DeleteVpnConnectionsLogConfigInvoker {
+	requestDef := GenReqDefForDeleteVpnConnectionsLogConfig()
+	return &DeleteVpnConnectionsLogConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVpnConnectionsLogConfig 查询VPN连接日志配置
+//
+// 查询VPN连接日志配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) ShowVpnConnectionsLogConfig(request *model.ShowVpnConnectionsLogConfigRequest) (*model.ShowVpnConnectionsLogConfigResponse, error) {
+	requestDef := GenReqDefForShowVpnConnectionsLogConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVpnConnectionsLogConfigResponse), nil
+	}
+}
+
+// ShowVpnConnectionsLogConfigInvoker 查询VPN连接日志配置
+func (c *VpnClient) ShowVpnConnectionsLogConfigInvoker(request *model.ShowVpnConnectionsLogConfigRequest) *ShowVpnConnectionsLogConfigInvoker {
+	requestDef := GenReqDefForShowVpnConnectionsLogConfig()
+	return &ShowVpnConnectionsLogConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateVpnConnectionsLogConfig 更新VPN连接日志配置
+//
+// 更新VPN连接日志配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) UpdateVpnConnectionsLogConfig(request *model.UpdateVpnConnectionsLogConfigRequest) (*model.UpdateVpnConnectionsLogConfigResponse, error) {
+	requestDef := GenReqDefForUpdateVpnConnectionsLogConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateVpnConnectionsLogConfigResponse), nil
+	}
+}
+
+// UpdateVpnConnectionsLogConfigInvoker 更新VPN连接日志配置
+func (c *VpnClient) UpdateVpnConnectionsLogConfigInvoker(request *model.UpdateVpnConnectionsLogConfigRequest) *UpdateVpnConnectionsLogConfigInvoker {
+	requestDef := GenReqDefForUpdateVpnConnectionsLogConfig()
+	return &UpdateVpnConnectionsLogConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateVgw 创建VPN网关

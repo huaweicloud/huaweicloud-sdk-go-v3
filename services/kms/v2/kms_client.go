@@ -197,6 +197,27 @@ func (c *KmsClient) CreateDatakeyWithoutPlaintextInvoker(request *model.CreateDa
 	return &CreateDatakeyWithoutPlaintextInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateEcDatakeyPair 创建EC数据密钥对
+//
+// - 功能介绍：创建EC数据密钥对，返回结果包含明文公钥和密文私钥，根据参数决定是否返回明文私钥。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) CreateEcDatakeyPair(request *model.CreateEcDatakeyPairRequest) (*model.CreateEcDatakeyPairResponse, error) {
+	requestDef := GenReqDefForCreateEcDatakeyPair()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateEcDatakeyPairResponse), nil
+	}
+}
+
+// CreateEcDatakeyPairInvoker 创建EC数据密钥对
+func (c *KmsClient) CreateEcDatakeyPairInvoker(request *model.CreateEcDatakeyPairRequest) *CreateEcDatakeyPairInvoker {
+	requestDef := GenReqDefForCreateEcDatakeyPair()
+	return &CreateEcDatakeyPairInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateGrant 创建授权
 //
 // - 功能介绍：创建授权，被授权用户可以对授权密钥进行操作。
@@ -327,6 +348,27 @@ func (c *KmsClient) CreateRandom(request *model.CreateRandomRequest) (*model.Cre
 func (c *KmsClient) CreateRandomInvoker(request *model.CreateRandomRequest) *CreateRandomInvoker {
 	requestDef := GenReqDefForCreateRandom()
 	return &CreateRandomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRsaDatakeyPair 创建RSA数据密钥对
+//
+// - 功能介绍：创建rsa数据密钥对，返回结果包含明文公钥和密文私钥，根据参数决定是否返回明文私钥。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) CreateRsaDatakeyPair(request *model.CreateRsaDatakeyPairRequest) (*model.CreateRsaDatakeyPairResponse, error) {
+	requestDef := GenReqDefForCreateRsaDatakeyPair()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRsaDatakeyPairResponse), nil
+	}
+}
+
+// CreateRsaDatakeyPairInvoker 创建RSA数据密钥对
+func (c *KmsClient) CreateRsaDatakeyPairInvoker(request *model.CreateRsaDatakeyPairRequest) *CreateRsaDatakeyPairInvoker {
+	requestDef := GenReqDefForCreateRsaDatakeyPair()
+	return &CreateRsaDatakeyPairInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DecryptData 解密数据

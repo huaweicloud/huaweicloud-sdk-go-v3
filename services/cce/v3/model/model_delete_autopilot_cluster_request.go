@@ -33,7 +33,7 @@ type DeleteAutopilotClusterRequest struct {
 	// 是否删除sfs3.0（文件存储卷3.0）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
 	DeleteSfs30 *DeleteAutopilotClusterRequestDeleteSfs30 `json:"delete_sfs30,omitempty"`
 
-	// 是否删除LTS LogStream（日志流）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
+	// 是否删除LTS资源（日志组/日志流）。 枚举取值： - Delete_Log_Group：删除日志组，失败则忽略，并继续执行后续流程。 - Delete_Master_Log_Stream：删除Master接入日志流，失败则忽略，并继续执行后续流程，默认选项。 - Retain：跳过删除流程。
 	LtsReclaimPolicy *DeleteAutopilotClusterRequestLtsReclaimPolicy `json:"lts_reclaim_policy,omitempty"`
 }
 
@@ -346,29 +346,21 @@ type DeleteAutopilotClusterRequestLtsReclaimPolicy struct {
 }
 
 type DeleteAutopilotClusterRequestLtsReclaimPolicyEnum struct {
-	TRUE  DeleteAutopilotClusterRequestLtsReclaimPolicy
-	BLOCK DeleteAutopilotClusterRequestLtsReclaimPolicy
-	TRY   DeleteAutopilotClusterRequestLtsReclaimPolicy
-	FALSE DeleteAutopilotClusterRequestLtsReclaimPolicy
-	SKIP  DeleteAutopilotClusterRequestLtsReclaimPolicy
+	DELETE_LOG_GROUP         DeleteAutopilotClusterRequestLtsReclaimPolicy
+	DELETE_MASTER_LOG_STREAM DeleteAutopilotClusterRequestLtsReclaimPolicy
+	RETAIN                   DeleteAutopilotClusterRequestLtsReclaimPolicy
 }
 
 func GetDeleteAutopilotClusterRequestLtsReclaimPolicyEnum() DeleteAutopilotClusterRequestLtsReclaimPolicyEnum {
 	return DeleteAutopilotClusterRequestLtsReclaimPolicyEnum{
-		TRUE: DeleteAutopilotClusterRequestLtsReclaimPolicy{
-			value: "true",
+		DELETE_LOG_GROUP: DeleteAutopilotClusterRequestLtsReclaimPolicy{
+			value: "Delete_Log_Group",
 		},
-		BLOCK: DeleteAutopilotClusterRequestLtsReclaimPolicy{
-			value: "block",
+		DELETE_MASTER_LOG_STREAM: DeleteAutopilotClusterRequestLtsReclaimPolicy{
+			value: "Delete_Master_Log_Stream",
 		},
-		TRY: DeleteAutopilotClusterRequestLtsReclaimPolicy{
-			value: "try",
-		},
-		FALSE: DeleteAutopilotClusterRequestLtsReclaimPolicy{
-			value: "false",
-		},
-		SKIP: DeleteAutopilotClusterRequestLtsReclaimPolicy{
-			value: "skip",
+		RETAIN: DeleteAutopilotClusterRequestLtsReclaimPolicy{
+			value: "Retain",
 		},
 	}
 }

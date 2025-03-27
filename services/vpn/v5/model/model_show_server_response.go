@@ -33,6 +33,9 @@ type ShowServerResponse struct {
 
 	SslOptions *ShowServerResponseSslOptions `json:"ssl_options,omitempty"`
 
+	// DNS服务器列表
+	DnsServers *[]string `json:"dns_servers,omitempty"`
+
 	// 服务端状态
 	Status *string `json:"status,omitempty"`
 

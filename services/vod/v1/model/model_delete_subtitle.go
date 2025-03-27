@@ -11,7 +11,7 @@ import (
 
 type DeleteSubtitle struct {
 
-	// 字幕类型，字幕封装当前仅支持VTT
+	// 字幕类型，字幕封装当前仅支持VTT和SRT
 	Type DeleteSubtitleType `json:"type"`
 
 	// 字幕语言
@@ -33,12 +33,16 @@ type DeleteSubtitleType struct {
 
 type DeleteSubtitleTypeEnum struct {
 	VTT DeleteSubtitleType
+	SRT DeleteSubtitleType
 }
 
 func GetDeleteSubtitleTypeEnum() DeleteSubtitleTypeEnum {
 	return DeleteSubtitleTypeEnum{
 		VTT: DeleteSubtitleType{
 			value: "VTT",
+		},
+		SRT: DeleteSubtitleType{
+			value: "SRT",
 		},
 	}
 }

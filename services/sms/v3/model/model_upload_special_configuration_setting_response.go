@@ -8,7 +8,10 @@ import (
 
 // UploadSpecialConfigurationSettingResponse Response Object
 type UploadSpecialConfigurationSettingResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 上传相关配置成功
+	Body           *string `json:"body,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UploadSpecialConfigurationSettingResponse) String() string {

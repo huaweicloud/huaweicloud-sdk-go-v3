@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// EnterpriseProjectId 企业项目ID
+// EnterpriseProjectId 企业项目ID，不填时会使用默认的企业项目ID
 type EnterpriseProjectId struct {
 }
 

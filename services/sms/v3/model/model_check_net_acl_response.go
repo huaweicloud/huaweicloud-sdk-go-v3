@@ -8,7 +8,10 @@ import (
 
 // CheckNetAclResponse Response Object
 type CheckNetAclResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 检查网卡安全组端口是否符合要求成功
+	Body           *string `json:"body,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CheckNetAclResponse) String() string {

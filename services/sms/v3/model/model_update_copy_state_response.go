@@ -8,7 +8,10 @@ import (
 
 // UpdateCopyStateResponse Response Object
 type UpdateCopyStateResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 更新任务对应源端复制状态成功
+	Body           *string `json:"body,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateCopyStateResponse) String() string {

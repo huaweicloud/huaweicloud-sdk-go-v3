@@ -15,7 +15,7 @@ type DeleteAppIdRequest struct {
 	// 语言参数，默认为中文zh-CN，英文为en-US。
 	AcceptLanguage *string `json:"Accept-Language,omitempty"`
 
-	// 需要修改的app
+	// 企业应用ID
 	AppId string `json:"app_id"`
 }
 

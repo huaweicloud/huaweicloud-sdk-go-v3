@@ -8,7 +8,10 @@ import (
 
 // UpdateTaskSpeedResponse Response Object
 type UpdateTaskSpeedResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 上报数据迁移进度和速率成功
+	Body           *string `json:"body,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateTaskSpeedResponse) String() string {

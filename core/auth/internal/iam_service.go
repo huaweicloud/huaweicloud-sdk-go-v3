@@ -20,6 +20,7 @@
 package internal
 
 import (
+	"encoding/json"
 	"errors"
 	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
@@ -28,9 +29,11 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/response"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdkerr"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"log"
 	"os"
 	"reflect"
 	"strings"
+	"sync"
 )
 
 const (
@@ -40,6 +43,11 @@ const (
 	IamEndpointEnv             = "HUAWEICLOUD_SDK_IAM_ENDPOINT"
 	CreateTokenWithIdTokenUri  = "/v3.0/OS-AUTH/id-token/tokens"
 	IamTraceId                 = "X-IAM-Trace-Id"
+)
+
+var (
+	endpoints = map[string]string{}
+	once      sync.Once
 )
 
 type IamResponse struct {
@@ -56,6 +64,12 @@ type ProjectResult struct {
 	Name string `json:"name"`
 }
 
+func updateEndpoints() {
+	if err := json.Unmarshal([]byte(iamEndpoint), &endpoints); err != nil {
+		log.Println("unmarshal iam endpoints file failed, use default")
+	}
+}
+
 func GetIamEndpoint() string {
 	if endpoint := os.Getenv(IamEndpointEnv); endpoint != "" {
 		https := "https://"
@@ -64,6 +78,23 @@ func GetIamEndpoint() string {
 		}
 		return endpoint
 	}
+	return DefaultIamEndpoint
+}
+
+func GetIamEndpointById(regionId string) string {
+	if endpoint := os.Getenv(IamEndpointEnv); endpoint != "" {
+		https := "https://"
+		if !strings.HasPrefix(endpoint, https) {
+			endpoint = https + endpoint
+		}
+		return endpoint
+	}
+
+	once.Do(updateEndpoints)
+	if endpoint, ok := endpoints[regionId]; ok {
+		return endpoint
+	}
+
 	return DefaultIamEndpoint
 }
 

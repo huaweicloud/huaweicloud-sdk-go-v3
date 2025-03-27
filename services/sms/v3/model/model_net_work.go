@@ -15,6 +15,9 @@ type NetWork struct {
 	// 该网卡绑定的IP
 	Ip string `json:"ip"`
 
+	// IPv6地址
+	Ipv6 *string `json:"ipv6,omitempty"`
+
 	// 掩码
 	Netmask string `json:"netmask"`
 

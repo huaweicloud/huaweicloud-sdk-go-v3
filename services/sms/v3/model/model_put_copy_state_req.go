@@ -12,7 +12,7 @@ import (
 // PutCopyStateReq 源端复制状态
 type PutCopyStateReq struct {
 
-	// 源端服务器状 UNAVAILABLE：环境校验不通过 WAITING：等待 INIT：初始化 REPLICATE：复制 SYNCING：持续同步 STOPPING：暂停中 STOPPED：已暂停 DELETING：删除中 ERROR：错误 CLONING：等待克隆完成 CUTOVERING：启动目的端中 FINISHED：启动目的端完成
+	// 源端服务器状态 UNAVAILABLE：环境校验不通过 WAITING：等待 INIT：初始化 REPLICATE：复制 SYNCING：持续同步 STOPPING：暂停中 STOPPED：已暂停 SKIPPING：跳过中 DELETING：删除中 ERROR：错误 CLONING：等待克隆完成 CUTOVERING：启动目的端中 FINISHED：启动目的端完成 CLEARING: 清理快照资源中 CLEARED：清理快照资源完成 CLEARFAILED：清理快照资源失败
 	Copystate *PutCopyStateReqCopystate `json:"copystate,omitempty"`
 
 	// 迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
@@ -40,11 +40,15 @@ type PutCopyStateReqCopystateEnum struct {
 	SYNCING     PutCopyStateReqCopystate
 	STOPPING    PutCopyStateReqCopystate
 	STOPPED     PutCopyStateReqCopystate
+	SKIPPING    PutCopyStateReqCopystate
 	DELETING    PutCopyStateReqCopystate
 	ERROR       PutCopyStateReqCopystate
 	CLONING     PutCopyStateReqCopystate
 	CUTOVERING  PutCopyStateReqCopystate
 	FINISHED    PutCopyStateReqCopystate
+	CLEARING    PutCopyStateReqCopystate
+	CLEARED     PutCopyStateReqCopystate
+	CLEARFAILED PutCopyStateReqCopystate
 }
 
 func GetPutCopyStateReqCopystateEnum() PutCopyStateReqCopystateEnum {
@@ -70,6 +74,9 @@ func GetPutCopyStateReqCopystateEnum() PutCopyStateReqCopystateEnum {
 		STOPPED: PutCopyStateReqCopystate{
 			value: "STOPPED",
 		},
+		SKIPPING: PutCopyStateReqCopystate{
+			value: "SKIPPING",
+		},
 		DELETING: PutCopyStateReqCopystate{
 			value: "DELETING",
 		},
@@ -84,6 +91,15 @@ func GetPutCopyStateReqCopystateEnum() PutCopyStateReqCopystateEnum {
 		},
 		FINISHED: PutCopyStateReqCopystate{
 			value: "FINISHED",
+		},
+		CLEARING: PutCopyStateReqCopystate{
+			value: "clearing",
+		},
+		CLEARED: PutCopyStateReqCopystate{
+			value: "cleared",
+		},
+		CLEARFAILED: PutCopyStateReqCopystate{
+			value: "clearfailed",
 		},
 	}
 }

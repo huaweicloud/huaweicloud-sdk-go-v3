@@ -36,7 +36,7 @@ type SourceServersResponseBody struct {
 	// 是否是OEM操作系统(Windows)
 	OemSystem *bool `json:"oem_system,omitempty"`
 
-	// 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
+	// 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
 	State *SourceServersResponseBodyState `json:"state,omitempty"`
 
 	// 源端服务器与主机迁移服务端是否连接
@@ -75,6 +75,9 @@ type SourceServersResponseBody struct {
 
 	// 是否有一致性校验结果
 	IsConsistencyResultExist *bool `json:"is_consistency_result_exist,omitempty"`
+
+	// 是否安装tc组件，Linux系统此参数为必选
+	HasTc *bool `json:"has_tc,omitempty"`
 }
 
 func (o SourceServersResponseBody) String() string {
@@ -150,6 +153,9 @@ type SourceServersResponseBodyStateEnum struct {
 	CLONING     SourceServersResponseBodyState
 	CUTOVERING  SourceServersResponseBodyState
 	FINISHED    SourceServersResponseBodyState
+	CLEARING    SourceServersResponseBodyState
+	CLEARED     SourceServersResponseBodyState
+	CLEARFAILED SourceServersResponseBodyState
 }
 
 func GetSourceServersResponseBodyStateEnum() SourceServersResponseBodyStateEnum {
@@ -189,6 +195,15 @@ func GetSourceServersResponseBodyStateEnum() SourceServersResponseBodyStateEnum 
 		},
 		FINISHED: SourceServersResponseBodyState{
 			value: "finished",
+		},
+		CLEARING: SourceServersResponseBodyState{
+			value: "clearing",
+		},
+		CLEARED: SourceServersResponseBodyState{
+			value: "cleared",
+		},
+		CLEARFAILED: SourceServersResponseBodyState{
+			value: "clearfailed",
 		},
 	}
 }

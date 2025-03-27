@@ -40,7 +40,7 @@ type TargetServer struct {
 	Memory *int64 `json:"memory,omitempty"`
 
 	// Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
-	BtrfsList *[]string `json:"btrfs_list,omitempty"`
+	BtrfsList *[]BtrfsFileSystem `json:"btrfs_list,omitempty"`
 
 	// 源端服务器的网卡信息
 	Networks *[]NetWork `json:"networks,omitempty"`

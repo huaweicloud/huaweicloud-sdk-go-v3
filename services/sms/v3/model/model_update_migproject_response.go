@@ -8,6 +8,8 @@ import (
 
 // UpdateMigprojectResponse Response Object
 type UpdateMigprojectResponse struct {
+
+	// 修改默认迁移项目信息成功
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

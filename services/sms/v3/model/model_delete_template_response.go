@@ -8,7 +8,10 @@ import (
 
 // DeleteTemplateResponse Response Object
 type DeleteTemplateResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 删除指定ID的模板成功
+	Body           *string `json:"body,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteTemplateResponse) String() string {
