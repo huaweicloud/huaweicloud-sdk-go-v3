@@ -39,6 +39,12 @@ type ShowDomainLocationStatsRequest struct {
 	// 数据分组方式，多个以英文逗号分隔，可选domain（域名）、country（国家）、province（省份，仅国家为中国时有效）、isp（区域运营商），默认不分组
 	GroupBy *string `json:"group_by,omitempty"`
 
+	// Ip版本，可选ipv4、ipv6，不选表示查询全部
+	IpVersion *string `json:"ip_version,omitempty"`
+
+	//http协议，可选http、https，不选表示查询全部
+	Protocol *string `json:"protocol,omitempty"`
+
 	// 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
