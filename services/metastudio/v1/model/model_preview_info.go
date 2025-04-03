@@ -13,6 +13,12 @@ type PreviewInfo struct {
 
 	// 文本对应音频文件下载链接
 	AudioFileDownloadUrl *string `json:"audio_file_download_url,omitempty"`
+
+	// 动作编排列表文件下载链接
+	ActionFileDownloadUrl *string `json:"action_file_download_url,omitempty"`
+
+	// 音频时长，单位秒。
+	AudioDuration *float32 `json:"audio_duration,omitempty"`
 }
 
 func (o PreviewInfo) String() string {

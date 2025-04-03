@@ -1269,6 +1269,22 @@ func (i *CreateOnceCodeInvoker) Invoke() (*model.CreateOnceCodeResponse, error) 
 	}
 }
 
+type CreateMetaStudioOrdersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateMetaStudioOrdersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateMetaStudioOrdersInvoker) Invoke() (*model.CreateMetaStudioOrdersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateMetaStudioOrdersResponse), nil
+	}
+}
+
 type BatchDeletePacifyWordsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1941,19 +1957,19 @@ func (i *StopSmartLiveInvoker) Invoke() (*model.StopSmartLiveResponse, error) {
 	}
 }
 
-type ConfirmSmartLiveRoomInvoker struct {
+type ConfirmSmarLiveRoomInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ConfirmSmartLiveRoomInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ConfirmSmarLiveRoomInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ConfirmSmartLiveRoomInvoker) Invoke() (*model.ConfirmSmartLiveRoomResponse, error) {
+func (i *ConfirmSmarLiveRoomInvoker) Invoke() (*model.ConfirmSmarLiveRoomResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ConfirmSmartLiveRoomResponse), nil
+		return result.(*model.ConfirmSmarLiveRoomResponse), nil
 	}
 }
 

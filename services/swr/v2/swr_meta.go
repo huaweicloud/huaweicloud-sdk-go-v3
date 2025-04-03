@@ -7,6 +7,33 @@ import (
 	"net/http"
 )
 
+func GenReqDefForCreateAuthorizationToken() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/manage/utils/authorizationtoken").
+		WithResponse(new(model.CreateAuthorizationTokenResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XSwrDockerlogin").
+		WithJsonTag("X-Swr-Dockerlogin").
+		WithKindName("string").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XSwrExpireat").
+		WithJsonTag("x-swr-expireat").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateImageSyncRepo() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

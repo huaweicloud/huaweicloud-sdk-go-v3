@@ -16,6 +16,9 @@ type ShootScriptDetail struct {
 
 	TextConfig *TextConfig `json:"text_config,omitempty"`
 
+	// 语音驱动时，音频时长，单位秒。 > * 创建剧本时此参数可以不设置，音频文件上传成功后，通过更新剧本接口设置 > * 查询剧本详情时，返回音频时长，用于预估视频时长
+	AudioDuration *float32 `json:"audio_duration,omitempty"`
+
 	// 语音驱动时的动作配置。
 	AudioDriveActionConfig *[]AudioDriveActionConfig `json:"audio_drive_action_config,omitempty"`
 

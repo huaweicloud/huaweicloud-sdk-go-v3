@@ -40,6 +40,10 @@ type VideoScriptsSimpleInfo struct {
 	BackgroundMusicConfig *BackgroundMusicConfig `json:"background_music_config,omitempty"`
 
 	ReviewConfig *ReviewConfig `json:"review_config,omitempty"`
+
+	AudioFiles *ShootScriptAudioFiles `json:"audio_files,omitempty"`
+
+	ActionConfig *ActionConfig `json:"action_config,omitempty"`
 }
 
 func (o VideoScriptsSimpleInfo) String() string {

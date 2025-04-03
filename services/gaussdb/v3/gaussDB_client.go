@@ -2877,6 +2877,27 @@ func (c *GaussDBClient) UpdateSlowlogSensitiveSwitchInvoker(request *model.Updat
 	return &UpdateSlowlogSensitiveSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateTaurusNodeDataIp 修改只读节点的读内网地址
+//
+// 修改只读节点的读内网地址。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateTaurusNodeDataIp(request *model.UpdateTaurusNodeDataIpRequest) (*model.UpdateTaurusNodeDataIpResponse, error) {
+	requestDef := GenReqDefForUpdateTaurusNodeDataIp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTaurusNodeDataIpResponse), nil
+	}
+}
+
+// UpdateTaurusNodeDataIpInvoker 修改只读节点的读内网地址
+func (c *GaussDBClient) UpdateTaurusNodeDataIpInvoker(request *model.UpdateTaurusNodeDataIpRequest) *UpdateTaurusNodeDataIpInvoker {
+	requestDef := GenReqDefForUpdateTaurusNodeDataIp()
+	return &UpdateTaurusNodeDataIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateTransactionSplitStatus 设置proxy事务拆分
 //
 // 设置proxy事务拆分。

@@ -29,6 +29,9 @@ type VpnUser struct {
 
 	// 更新时间
 	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
+
+	// 静态客户端IP地址，disable表示随机分配客户端IP
+	StaticIp *string `json:"static_ip,omitempty"`
 }
 
 func (o VpnUser) String() string {

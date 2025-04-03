@@ -31,10 +31,10 @@ type ResourceUsageInfo struct {
 	ResourceSource *string `json:"resource_source,omitempty"`
 
 	// 总量
-	Amount float32 `json:"amount,omitempty"`
+	Amount *float32 `json:"amount,omitempty"`
 
 	// 使用量
-	Usage float32 `json:"usage,omitempty"`
+	Usage *float32 `json:"usage,omitempty"`
 
 	// 单位。 * NUM：个数(形象/声音) * MIN：分钟（视频制作） * HOUR：小时 （直播） * CHANNEL：路（直播/交互） * GB：GB(资产管理) * MILLION_WORDS：百万字 * TEN_THOUSAND_WORDS：万字 * TIME：次
 	Unit *ResourceUsageInfoUnit `json:"unit,omitempty"`

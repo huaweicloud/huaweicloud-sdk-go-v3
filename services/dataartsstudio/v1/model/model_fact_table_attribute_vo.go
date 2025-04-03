@@ -26,6 +26,9 @@ type FactTableAttributeVo struct {
 
 	Dimension *DimensionVo `json:"dimension,omitempty"`
 
+	// 维度属性ID，ID字符串。
+	DimensionAttrId *string `json:"dimension_attr_id,omitempty"`
+
 	// 是否主键。
 	IsPrimaryKey bool `json:"is_primary_key"`
 

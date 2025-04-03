@@ -23,6 +23,8 @@ type BackgroundConfigInfo struct {
 
 	// **参数解释**： 背景资产ID。 > 背景是背景图片时，填图片资产ID。  **约束限制**： 不涉及 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
 	BackgroundAssetId *string `json:"background_asset_id,omitempty"`
+
+	BackgroundImageConfig *BackgroundImageConfig `json:"background_image_config,omitempty"`
 }
 
 func (o BackgroundConfigInfo) String() string {

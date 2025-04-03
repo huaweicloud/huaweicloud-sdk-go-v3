@@ -15,8 +15,8 @@ type VideoConfig struct {
 	// **参数解释**： 输出视频的剪辑方式。 **约束限制**： 不涉及。 **取值范围**： * RESIZE：视频缩放。 * CROP：视频裁剪。
 	ClipMode *VideoConfigClipMode `json:"clip_mode,omitempty"`
 
-	// **参数解释**： 视频编码格式及视频文件格式。 **约束限制**： 仅分身数字人视频制作支持VP8编码。  **取值范围**： * H264：h264编码，输出mp4文件。 * VP8：vp8编码，输出webm文件。  **默认取值**： 不涉及
-	Codec VideoConfigCodec `json:"codec"`
+	// **参数解释**： 视频编码格式及视频文件格式。 **约束限制**： 仅分身数字人视频制作支持VP8和QTRLE编码。QTRLE编码时文本驱动字符数限制小于1500字，音频驱动音频长度小于5分钟。 QTRLE编码需要先申请开通白名单后才能使用  **取值范围**： * H264：h264编码，输出mp4文件。 * VP8：vp8编码，输出webm文件。 * QTRLE：qtrle ，输出mov文件。  **默认取值**： 不涉及
+	Codec *VideoConfigCodec `json:"codec,omitempty"`
 
 	// **参数解释**： 输出平均码率。单位：kbps。 **约束限制**： * 分身数字人视频制作采用质量优先，可能会超过设置的码率。 * 分身数字人直播码率范围[1000, 8000]。  **默认取值**： 不涉及
 	Bitrate int32 `json:"bitrate"`
@@ -112,9 +112,10 @@ type VideoConfigCodec struct {
 }
 
 type VideoConfigCodecEnum struct {
-	H264 VideoConfigCodec
-	VP8  VideoConfigCodec
-	VP9  VideoConfigCodec
+	H264  VideoConfigCodec
+	VP8   VideoConfigCodec
+	VP9   VideoConfigCodec
+	QTRLE VideoConfigCodec
 }
 
 func GetVideoConfigCodecEnum() VideoConfigCodecEnum {
@@ -127,6 +128,9 @@ func GetVideoConfigCodecEnum() VideoConfigCodecEnum {
 		},
 		VP9: VideoConfigCodec{
 			value: "VP9",
+		},
+		QTRLE: VideoConfigCodec{
+			value: "QTRLE",
 		},
 	}
 }

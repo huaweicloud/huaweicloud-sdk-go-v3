@@ -1809,7 +1809,7 @@ func (c *WafClient) ShowPremiumHostInvoker(request *model.ShowPremiumHostRequest
 
 // ShowPrivacyRule 查询隐私屏蔽防护规则
 //
-// 删除隐私屏蔽防护规则
+// 查询隐私屏蔽防护规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ShowPrivacyRule(request *model.ShowPrivacyRuleRequest) (*model.ShowPrivacyRuleResponse, error) {

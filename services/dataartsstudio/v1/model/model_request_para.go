@@ -31,6 +31,9 @@ type RequestPara struct {
 
 	// 默认值
 	DefaultValue *string `json:"default_value,omitempty"`
+
+	// 支持NULL值。
+	SupportNull *bool `json:"support_null,omitempty"`
 }
 
 func (o RequestPara) String() string {

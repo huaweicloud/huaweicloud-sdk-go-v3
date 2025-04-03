@@ -14,6 +14,9 @@ type UpdateVgwRequestBodyContent struct {
 	// 本端子网
 	LocalSubnets *[]string `json:"local_subnets,omitempty"`
 
+	// 使能ipv6的本端子网
+	LocalSubnetsV6 *[]string `json:"local_subnets_v6,omitempty"`
+
 	// 有效的EIP的ID，表示绑定新的EIP作为双活VPN网关使用的第一个EIP或主备VPN网关的主EIP。
 	EipId1 *string `json:"eip_id_1,omitempty"`
 

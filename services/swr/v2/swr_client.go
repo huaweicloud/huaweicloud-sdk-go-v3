@@ -19,6 +19,27 @@ func SwrClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// CreateAuthorizationToken 生成增强型登录指令(新)
+//
+// 调用该接口，通过获取响应消息头的X-Swr-Dockerlogin的值及响应消息体的host值，可生成增强型登录指令,注：此接口只支持IAM新平面的调用方式。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) CreateAuthorizationToken(request *model.CreateAuthorizationTokenRequest) (*model.CreateAuthorizationTokenResponse, error) {
+	requestDef := GenReqDefForCreateAuthorizationToken()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAuthorizationTokenResponse), nil
+	}
+}
+
+// CreateAuthorizationTokenInvoker 生成增强型登录指令(新)
+func (c *SwrClient) CreateAuthorizationTokenInvoker(request *model.CreateAuthorizationTokenRequest) *CreateAuthorizationTokenInvoker {
+	requestDef := GenReqDefForCreateAuthorizationToken()
+	return &CreateAuthorizationTokenInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateImageSyncRepo 创建镜像自动同步任务
 //
 // 创建镜像自动同步任务，帮助您把最新推送的镜像自动同步到其他区域镜像仓库内。 镜像自动同步帮助您把最新推送的镜像自动同步到其他区域镜像仓库内，后期镜像有更新时，目标仓库的镜像也会自动更新，但已有的镜像不会自动同步。已有镜像的同步需要手动操作，详情请参见手动同步镜像。

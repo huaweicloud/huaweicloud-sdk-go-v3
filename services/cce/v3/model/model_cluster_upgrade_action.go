@@ -21,6 +21,9 @@ type ClusterUpgradeAction struct {
 
 	// 目标集群版本，例如\"v1.23\"
 	TargetVersion string `json:"targetVersion"`
+
+	// 是否在集群升级流程中执行升级前检查。默认为false，表示会执行升级前检查，如果您在集群升级编排中调用了升级前检查的API，则升级时可用将该字段置为false，不再额外执行一次检查
+	IsOnlyUpgrade *bool `json:"isOnlyUpgrade,omitempty"`
 }
 
 func (o ClusterUpgradeAction) String() string {

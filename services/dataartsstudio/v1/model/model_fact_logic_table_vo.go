@@ -175,6 +175,11 @@ type FactLogicTableVo struct {
 
 	// 密级
 	SecrecyLevels *[]SecrecyLevelVo `json:"secrecy_levels,omitempty"`
+
+	// 所属模型ID，ID字符串。
+	ModelId *string `json:"model_id,omitempty"`
+
+	Model *WorkspaceVo `json:"model,omitempty"`
 }
 
 func (o FactLogicTableVo) String() string {

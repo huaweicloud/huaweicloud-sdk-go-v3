@@ -75,12 +75,6 @@ type ResponseVpnConnection struct {
 	// 使能ipv6的对端子网
 	PeerSubnetsV6 *[]string `json:"peer_subnets_v6,omitempty"`
 
-	// 本端ipv6隧道口地址
-	TunnelLocalAddressV6 *string `json:"tunnel_local_address_v6,omitempty"`
-
-	// 对端ipv6隧道口地址
-	TunnelPeerAddressV6 *string `json:"tunnel_peer_address_v6,omitempty"`
-
 	// 策略模式的ipv6策略规则组
 	PolicyRulesV6 *[]PolicyRule `json:"policy_rules_v6,omitempty"`
 }

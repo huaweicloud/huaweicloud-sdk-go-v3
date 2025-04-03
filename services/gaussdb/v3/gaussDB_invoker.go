@@ -2181,6 +2181,22 @@ func (i *UpdateSlowlogSensitiveSwitchInvoker) Invoke() (*model.UpdateSlowlogSens
 	}
 }
 
+type UpdateTaurusNodeDataIpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTaurusNodeDataIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateTaurusNodeDataIpInvoker) Invoke() (*model.UpdateTaurusNodeDataIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTaurusNodeDataIpResponse), nil
+	}
+}
+
 type UpdateTransactionSplitStatusInvoker struct {
 	*invoker.BaseInvoker
 }

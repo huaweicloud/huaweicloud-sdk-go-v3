@@ -17,6 +17,12 @@ type VideoLayerConfig struct {
 
 	// **参数解释**： 循环播放视频次数。  特殊取值： * 0：表示不播放 * -1：表示持续循环播放  **约束限制**： 不涉及。
 	LoopCount *int32 `json:"loop_count,omitempty"`
+
+	// **参数解释**： 视频声音大小，0 - 100，表示开启视频声音原视频音量的百分比  特殊取值： * 0：表示不开启声音（默认值）  **约束限制**： 不涉及。
+	VideoSound *int32 `json:"video_sound,omitempty"`
+
+	// **参数解释**： 是否播放完整个视频，true表示播放完整个视频，false表示当场景文本/音频结束时，视频也同时不再播放。  特殊取值： 默认值为false  **约束限制**： 不涉及。
+	IsPlayTheEntireVideo *bool `json:"is_play_the_entire_video,omitempty"`
 }
 
 func (o VideoLayerConfig) String() string {

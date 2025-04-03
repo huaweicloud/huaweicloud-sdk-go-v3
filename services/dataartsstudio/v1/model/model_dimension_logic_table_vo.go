@@ -173,6 +173,11 @@ type DimensionLogicTableVo struct {
 	ProdVersionName *string `json:"prod_version_name,omitempty"`
 
 	EnvType *EnvTypeEnum `json:"env_type,omitempty"`
+
+	// 所属模型ID，ID字符串。
+	ModelId *string `json:"model_id,omitempty"`
+
+	Model *WorkspaceVo `json:"model,omitempty"`
 }
 
 func (o DimensionLogicTableVo) String() string {

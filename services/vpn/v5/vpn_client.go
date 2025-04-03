@@ -985,6 +985,26 @@ func (c *VpnClient) ShowVgwInvoker(request *model.ShowVgwRequest) *ShowVgwInvoke
 	return &ShowVgwInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowVpnGatewayRoutingTable 查询VPN网关路由表
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) ShowVpnGatewayRoutingTable(request *model.ShowVpnGatewayRoutingTableRequest) (*model.ShowVpnGatewayRoutingTableResponse, error) {
+	requestDef := GenReqDefForShowVpnGatewayRoutingTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVpnGatewayRoutingTableResponse), nil
+	}
+}
+
+// ShowVpnGatewayRoutingTableInvoker 查询VPN网关路由表
+func (c *VpnClient) ShowVpnGatewayRoutingTableInvoker(request *model.ShowVpnGatewayRoutingTableRequest) *ShowVpnGatewayRoutingTableInvoker {
+	requestDef := GenReqDefForShowVpnGatewayRoutingTable()
+	return &ShowVpnGatewayRoutingTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdatePostpaidVgwSpecification 修改网关规格
 //
 // 对单个网关规格进行修改，可以升配或降配

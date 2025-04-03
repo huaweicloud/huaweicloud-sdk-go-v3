@@ -34,6 +34,12 @@ type Policy struct {
 
 	// 告警级别, 1为紧急，2为重要，3为次要，4为提示
 	Level *int32 `json:"level,omitempty"`
+
+	// 查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+	Namespace *string `json:"namespace,omitempty"`
+
+	// 资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
+	DimensionName *string `json:"dimension_name,omitempty"`
 }
 
 func (o Policy) String() string {

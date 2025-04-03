@@ -40,6 +40,9 @@ type ResponseEip struct {
 
 	// 带宽订单信息
 	BandwidthBillingInfo *string `json:"bandwidth_billing_info,omitempty"`
+
+	// 功能说明：类型  \"WHOLE\"为共享带宽，\"PER\"为独占带宽
+	ShareType *string `json:"share_type,omitempty"`
 }
 
 func (o ResponseEip) String() string {

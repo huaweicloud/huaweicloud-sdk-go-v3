@@ -741,6 +741,22 @@ func (i *ShowVgwInvoker) Invoke() (*model.ShowVgwResponse, error) {
 	}
 }
 
+type ShowVpnGatewayRoutingTableInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVpnGatewayRoutingTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowVpnGatewayRoutingTableInvoker) Invoke() (*model.ShowVpnGatewayRoutingTableResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVpnGatewayRoutingTableResponse), nil
+	}
+}
+
 type UpdatePostpaidVgwSpecificationInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -9,10 +9,10 @@ import (
 type CreateVpnUser struct {
 
 	// 用户名
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 用户密码
-	Password *string `json:"password,omitempty"`
+	Password string `json:"password"`
 
 	// 用户描述，0-64字符，中文、英文、数字包含下划线
 	Description *string `json:"description,omitempty"`

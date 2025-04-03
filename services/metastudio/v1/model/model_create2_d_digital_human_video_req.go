@@ -28,6 +28,8 @@ type Create2DDigitalHumanVideoReq struct {
 	ReviewConfig *ReviewConfig `json:"review_config,omitempty"`
 
 	CallbackConfig *CallBackConfig `json:"callback_config,omitempty"`
+
+	ActionConfig *ActionConfig `json:"action_config,omitempty"`
 }
 
 func (o Create2DDigitalHumanVideoReq) String() string {

@@ -35,6 +35,9 @@ type CreateTtsAuditionRequestBody struct {
 
 	// 声道。（单声道|双声道） 默认值1，最小值1，最大值2。
 	Channels *int32 `json:"channels,omitempty"`
+
+	// 是否应用当前租户的读法配置
+	IsVocabularyConfigEnable *bool `json:"is_vocabulary_config_enable,omitempty"`
 }
 
 func (o CreateTtsAuditionRequestBody) String() string {

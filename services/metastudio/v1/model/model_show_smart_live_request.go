@@ -9,7 +9,7 @@ import (
 // ShowSmartLiveRequest Request Object
 type ShowSmartLiveRequest struct {
 
-	// 剧本ID。
+	// 直播间ID。
 	RoomId string `json:"room_id"`
 
 	// 任务ID。

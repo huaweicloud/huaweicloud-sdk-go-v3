@@ -37,6 +37,8 @@ type ApiParam struct {
 
 	// API创建结束时间。
 	EndTime *string `json:"end_time,omitempty"`
+
+	AuthorizationStatusType *ApiParamAuthorizationStatusType `json:"authorization_status_type,omitempty"`
 }
 
 func (o ApiParam) String() string {
@@ -132,6 +134,57 @@ func (c ApiParamApiSpecificTypeStr) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ApiParamApiSpecificTypeStr) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ApiParamAuthorizationStatusType struct {
+	value string
+}
+
+type ApiParamAuthorizationStatusTypeEnum struct {
+	NO_AUTHORIZATION_REQUIRED ApiParamAuthorizationStatusType
+	UNAUTHORIZED              ApiParamAuthorizationStatusType
+	AUTHORIZED                ApiParamAuthorizationStatusType
+}
+
+func GetApiParamAuthorizationStatusTypeEnum() ApiParamAuthorizationStatusTypeEnum {
+	return ApiParamAuthorizationStatusTypeEnum{
+		NO_AUTHORIZATION_REQUIRED: ApiParamAuthorizationStatusType{
+			value: "NO_AUTHORIZATION_REQUIRED",
+		},
+		UNAUTHORIZED: ApiParamAuthorizationStatusType{
+			value: "UNAUTHORIZED",
+		},
+		AUTHORIZED: ApiParamAuthorizationStatusType{
+			value: "AUTHORIZED",
+		},
+	}
+}
+
+func (c ApiParamAuthorizationStatusType) Value() string {
+	return c.value
+}
+
+func (c ApiParamAuthorizationStatusType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiParamAuthorizationStatusType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

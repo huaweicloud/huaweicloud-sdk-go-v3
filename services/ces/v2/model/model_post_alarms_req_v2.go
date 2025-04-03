@@ -54,6 +54,11 @@ type PostAlarmsReqV2 struct {
 
 	// 是否开启告警通知
 	NotificationEnabled bool `json:"notification_enabled"`
+
+	// 产品层级跨纬规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+	ProductName *string `json:"product_name,omitempty"`
+
+	ResourceLevel *ResourceLevel `json:"resource_level,omitempty"`
 }
 
 func (o PostAlarmsReqV2) String() string {

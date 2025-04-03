@@ -41,6 +41,10 @@ type VideoScriptsCreateInfo struct {
 
 	ReviewConfig *ReviewConfig `json:"review_config,omitempty"`
 
+	AudioFiles *ShootScriptAudioFiles `json:"audio_files,omitempty"`
+
+	ActionConfig *ActionConfig `json:"action_config,omitempty"`
+
 	// 拍摄脚本列表。
 	ShootScripts *[]ShootScriptItem `json:"shoot_scripts,omitempty"`
 }

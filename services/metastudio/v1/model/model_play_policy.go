@@ -26,6 +26,8 @@ type PlayPolicy struct {
 
 	// **参数解释**： 是否需要独立采集端。用于客户端播放与命令分离场景。 **约束限制**： 不涉及。 **取值范围**： * true：分配CAPTURE、PLAYER两个RTC用户。 * fasle：仅分配PLAYER一个RTC用户。
 	NeedIndependentCaptureClient *bool `json:"need_independent_capture_client,omitempty"`
+
+	LiveExitConfig *LiveExitConfig `json:"live_exit_config,omitempty"`
 }
 
 func (o PlayPolicy) String() string {

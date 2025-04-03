@@ -3175,6 +3175,27 @@ func (c *DataArtsStudioClient) ListDataArtsStudioInstancesInvoker(request *model
 	return &ListDataArtsStudioInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDataServiceInstanceAccesslogs 查询数据服务集群访问日志列表
+//
+// 查询数据服务集群访问日志列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListDataServiceInstanceAccesslogs(request *model.ListDataServiceInstanceAccesslogsRequest) (*model.ListDataServiceInstanceAccesslogsResponse, error) {
+	requestDef := GenReqDefForListDataServiceInstanceAccesslogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDataServiceInstanceAccesslogsResponse), nil
+	}
+}
+
+// ListDataServiceInstanceAccesslogsInvoker 查询数据服务集群访问日志列表
+func (c *DataArtsStudioClient) ListDataServiceInstanceAccesslogsInvoker(request *model.ListDataServiceInstanceAccesslogsRequest) *ListDataServiceInstanceAccesslogsInvoker {
+	requestDef := GenReqDefForListDataServiceInstanceAccesslogs()
+	return &ListDataServiceInstanceAccesslogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDataServiceInstancesDetail 查询集群详情信息列表
 //
 // 查询集群详情信息列表。
@@ -6681,6 +6702,48 @@ func (c *DataArtsStudioClient) UpdateCodeTableValues(request *model.UpdateCodeTa
 func (c *DataArtsStudioClient) UpdateCodeTableValuesInvoker(request *model.UpdateCodeTableValuesRequest) *UpdateCodeTableValuesInvoker {
 	requestDef := GenReqDefForUpdateCodeTableValues()
 	return &UpdateCodeTableValuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDataServiceInstanceLtsLog 开启数据服务集群LTS日志转储
+//
+// 开启数据服务集群LTS日志转储。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UpdateDataServiceInstanceLtsLog(request *model.UpdateDataServiceInstanceLtsLogRequest) (*model.UpdateDataServiceInstanceLtsLogResponse, error) {
+	requestDef := GenReqDefForUpdateDataServiceInstanceLtsLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDataServiceInstanceLtsLogResponse), nil
+	}
+}
+
+// UpdateDataServiceInstanceLtsLogInvoker 开启数据服务集群LTS日志转储
+func (c *DataArtsStudioClient) UpdateDataServiceInstanceLtsLogInvoker(request *model.UpdateDataServiceInstanceLtsLogRequest) *UpdateDataServiceInstanceLtsLogInvoker {
+	requestDef := GenReqDefForUpdateDataServiceInstanceLtsLog()
+	return &UpdateDataServiceInstanceLtsLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDataServiceInstanceObsLog 开启数据服务集群OBS日志转储
+//
+// 开启数据服务集群OBS日志转储。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UpdateDataServiceInstanceObsLog(request *model.UpdateDataServiceInstanceObsLogRequest) (*model.UpdateDataServiceInstanceObsLogResponse, error) {
+	requestDef := GenReqDefForUpdateDataServiceInstanceObsLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDataServiceInstanceObsLogResponse), nil
+	}
+}
+
+// UpdateDataServiceInstanceObsLogInvoker 开启数据服务集群OBS日志转储
+func (c *DataArtsStudioClient) UpdateDataServiceInstanceObsLogInvoker(request *model.UpdateDataServiceInstanceObsLogRequest) *UpdateDataServiceInstanceObsLogInvoker {
+	requestDef := GenReqDefForUpdateDataServiceInstanceObsLog()
+	return &UpdateDataServiceInstanceObsLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDataconnection 更新数据连接信息

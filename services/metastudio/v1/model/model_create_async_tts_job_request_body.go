@@ -53,6 +53,9 @@ type CreateAsyncTtsJobRequestBody struct {
 	// 字幕行数限制，默认为1
 	SrtLineLimit *int32 `json:"srt_line_limit,omitempty"`
 
+	// 是否对文本进行分段
+	SliceSegments *bool `json:"slice_segments,omitempty"`
+
 	// 声道。（单声道|双声道） 默认值1，最小值1，最大值2。
 	Channels *int32 `json:"channels,omitempty"`
 
@@ -64,6 +67,9 @@ type CreateAsyncTtsJobRequestBody struct {
 
 	// 动作信息文件上传的外部URL > * 需要先申请开通白名单， 才允许将时间戳等文件上传到外部URL。
 	ActionOutputExternalUrl *string `json:"action_output_external_url,omitempty"`
+
+	// 是否应用当前租户的读法配置
+	IsVocabularyConfigEnable *bool `json:"is_vocabulary_config_enable,omitempty"`
 }
 
 func (o CreateAsyncTtsJobRequestBody) String() string {

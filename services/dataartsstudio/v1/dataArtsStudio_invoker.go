@@ -2405,6 +2405,22 @@ func (i *ListDataArtsStudioInstancesInvoker) Invoke() (*model.ListDataArtsStudio
 	}
 }
 
+type ListDataServiceInstanceAccesslogsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDataServiceInstanceAccesslogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDataServiceInstanceAccesslogsInvoker) Invoke() (*model.ListDataServiceInstanceAccesslogsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDataServiceInstanceAccesslogsResponse), nil
+	}
+}
+
 type ListDataServiceInstancesDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -5074,6 +5090,38 @@ func (i *UpdateCodeTableValuesInvoker) Invoke() (*model.UpdateCodeTableValuesRes
 		return nil, err
 	} else {
 		return result.(*model.UpdateCodeTableValuesResponse), nil
+	}
+}
+
+type UpdateDataServiceInstanceLtsLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDataServiceInstanceLtsLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDataServiceInstanceLtsLogInvoker) Invoke() (*model.UpdateDataServiceInstanceLtsLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDataServiceInstanceLtsLogResponse), nil
+	}
+}
+
+type UpdateDataServiceInstanceObsLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDataServiceInstanceObsLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDataServiceInstanceObsLogInvoker) Invoke() (*model.UpdateDataServiceInstanceObsLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDataServiceInstanceObsLogResponse), nil
 	}
 }
 

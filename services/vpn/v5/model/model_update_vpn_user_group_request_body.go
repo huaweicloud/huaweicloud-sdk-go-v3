@@ -7,7 +7,7 @@ import (
 )
 
 type UpdateVpnUserGroupRequestBody struct {
-	UserGroup *UpdateVpnUserGroupRequestBodyContent `json:"user_group,omitempty"`
+	UserGroup *UpdateVpnUserGroupRequestBodyContent `json:"user_group"`
 }
 
 func (o UpdateVpnUserGroupRequestBody) String() string {

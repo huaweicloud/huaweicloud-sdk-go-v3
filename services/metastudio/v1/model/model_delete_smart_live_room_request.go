@@ -9,7 +9,7 @@ import (
 // DeleteSmartLiveRoomRequest Request Object
 type DeleteSmartLiveRoomRequest struct {
 
-	// 剧本ID。
+	// 直播间ID。
 	RoomId string `json:"room_id"`
 
 	// 使用AK/SK方式认证时必选，携带的鉴权信息。

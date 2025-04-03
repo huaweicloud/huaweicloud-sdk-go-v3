@@ -7,7 +7,7 @@ import (
 )
 
 type ImportClientCaCertificateRequestBody struct {
-	ClientCaCertificate *ImportClientCaCertificateRequestBodyClientCaCertificate `json:"client_ca_certificate,omitempty"`
+	ClientCaCertificate *ImportClientCaCertificateRequestBodyClientCaCertificate `json:"client_ca_certificate"`
 }
 
 func (o ImportClientCaCertificateRequestBody) String() string {

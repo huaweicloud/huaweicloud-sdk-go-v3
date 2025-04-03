@@ -33,7 +33,7 @@ type TriggerCondition struct {
 	PromqlExpr *[]string `json:"promql_expr,omitempty"`
 
 	// 连续周期个数。
-	TriggerTimes *string `json:"trigger_times,omitempty"`
+	TriggerTimes *int32 `json:"trigger_times,omitempty"`
 
 	// 检查频率周期。 - 当trigger_type 为“HOURLY”时，填“” - 当trigger_type为“DAILY”时，格式为：“小时” 例如 每天凌晨三点\"03:00\" - 当trigger_type为“WEEKLY”时，格式为：“星期 小时”例如每周一凌晨三点 “1 03:00” - 当trigger_type为“CRON”时，格式为 标准CRON表达式 - 当trigger_type为“FIXED_RATE”时，秒的取值为15s，30s，分钟为 1~59，小时为 1~24。例如：“15s”，“30s”，“1min”，“1h”
 	TriggerInterval *string `json:"trigger_interval,omitempty"`

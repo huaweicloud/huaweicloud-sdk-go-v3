@@ -15,6 +15,9 @@ type ActionTagInfo struct {
 	// 原子动作英文名称。
 	ActionNameEn string `json:"action_name_en"`
 
+	// 动作时长
+	ActionDuration *float32 `json:"action_duration,omitempty"`
+
 	// 动作分类名称。
 	Catalog *string `json:"catalog,omitempty"`
 

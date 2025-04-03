@@ -337,9 +337,10 @@ func (c *MetaStudioClient) CreateAssetByReplicationInfoInvoker(request *model.Cr
 // CreateDigitalAsset 创建资产
 //
 // 该接口用于在资产库中添加上传新的媒体资产。可上传的资产类型包括：分身数字人模型、背景图片、素材图片、素材视频、PPT等。
+// &gt; 上传的图片、视频和背景图片，如果需要在视频制作素材中可见，需要设置system_properties。
 // &gt; - 资产类型是IMAGE时，通过system_properties来区分背景图片（BACKGROUND_IMG）、素材图片（MATERIAL_IMG）。
 // &gt; - 资产类型是VIDEO时，通过system_properties来区分素材视频（MATERIAL_VIDEO）、名片视频（BUSSINESS_CARD_VIDEO）。
-// &gt; - MetaStudio平台生成的视频，system_properties带CREATED_BY_PLATFORM。
+// &gt; MetaStudio平台生成的视频，system_properties带CREATED_BY_PLATFORM。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) CreateDigitalAsset(request *model.CreateDigitalAssetRequest) (*model.CreateDigitalAssetResponse, error) {
@@ -1138,7 +1139,7 @@ func (c *MetaStudioClient) UpdateHotWordsSwitchInvoker(request *model.UpdateHotW
 
 // CreateIntentAndQuestion 创建知识库意图和问法
 //
-// 该接口用于创建知识库意图和问法。一个意图包含一个主题，一个答案，若干个问法等。
+// 该接口用于创建知识库意图和问法。一个意图包含一个主题，一个答案，若干个问法等。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) CreateIntentAndQuestion(request *model.CreateIntentAndQuestionRequest) (*model.CreateIntentAndQuestionResponse, error) {
@@ -1159,7 +1160,7 @@ func (c *MetaStudioClient) CreateIntentAndQuestionInvoker(request *model.CreateI
 
 // CreateKnowledgeIntent 创建知识库意图
 //
-// 该接口用于创建知识库意图。一个意图包含一个主题，一个答案，若干个问法等。
+// 该接口用于创建知识库意图。一个意图包含一个主题，一个答案，若干个问法等。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) CreateKnowledgeIntent(request *model.CreateKnowledgeIntentRequest) (*model.CreateKnowledgeIntentResponse, error) {
@@ -1180,7 +1181,7 @@ func (c *MetaStudioClient) CreateKnowledgeIntentInvoker(request *model.CreateKno
 
 // DeleteKnowledgeIntent 删除知识库意图
 //
-// 该接口用于删除知识库意图。
+// 该接口用于删除知识库意图。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) DeleteKnowledgeIntent(request *model.DeleteKnowledgeIntentRequest) (*model.DeleteKnowledgeIntentResponse, error) {
@@ -1201,7 +1202,7 @@ func (c *MetaStudioClient) DeleteKnowledgeIntentInvoker(request *model.DeleteKno
 
 // ListKnowledgeIntent 查询知识库意图列表
 //
-// 该接口用于查询知识库意图列表。
+// 该接口用于查询知识库意图列表。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) ListKnowledgeIntent(request *model.ListKnowledgeIntentRequest) (*model.ListKnowledgeIntentResponse, error) {
@@ -1222,7 +1223,7 @@ func (c *MetaStudioClient) ListKnowledgeIntentInvoker(request *model.ListKnowled
 
 // ShowKnowledgeIntent 查询知识库意图详情
 //
-// 该接口用于查询知识库意图详情。
+// 该接口用于查询知识库意图详情。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) ShowKnowledgeIntent(request *model.ShowKnowledgeIntentRequest) (*model.ShowKnowledgeIntentResponse, error) {
@@ -1243,7 +1244,7 @@ func (c *MetaStudioClient) ShowKnowledgeIntentInvoker(request *model.ShowKnowled
 
 // UpdateKnowledgeIntent 修改知识库意图
 //
-// 该接口用于修改知识库意图。
+// 该接口用于修改知识库意图。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) UpdateKnowledgeIntent(request *model.UpdateKnowledgeIntentRequest) (*model.UpdateKnowledgeIntentResponse, error) {
@@ -1264,7 +1265,7 @@ func (c *MetaStudioClient) UpdateKnowledgeIntentInvoker(request *model.UpdateKno
 
 // CreateBatchKnowledgeQuestion 批量创建知识库问法
 //
-// 该接口用于批量创建知识库问法。
+// 该接口用于批量创建知识库问法。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) CreateBatchKnowledgeQuestion(request *model.CreateBatchKnowledgeQuestionRequest) (*model.CreateBatchKnowledgeQuestionResponse, error) {
@@ -1285,7 +1286,7 @@ func (c *MetaStudioClient) CreateBatchKnowledgeQuestionInvoker(request *model.Cr
 
 // CreateKnowledgeQuestion 创建知识库问法
 //
-// 该接口用于创建知识库问法。
+// 该接口用于创建知识库问法。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) CreateKnowledgeQuestion(request *model.CreateKnowledgeQuestionRequest) (*model.CreateKnowledgeQuestionResponse, error) {
@@ -1306,7 +1307,7 @@ func (c *MetaStudioClient) CreateKnowledgeQuestionInvoker(request *model.CreateK
 
 // DeleteKnowledgeQuestion 删除知识库问法
 //
-// 该接口用于删除知识库问法。
+// 该接口用于删除知识库问法。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) DeleteKnowledgeQuestion(request *model.DeleteKnowledgeQuestionRequest) (*model.DeleteKnowledgeQuestionResponse, error) {
@@ -1327,7 +1328,7 @@ func (c *MetaStudioClient) DeleteKnowledgeQuestionInvoker(request *model.DeleteK
 
 // ListKnowledgeQuestion 查询知识库问法列表
 //
-// 该接口用于查询知识库问法列表。
+// 该接口用于查询知识库问法列表。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) ListKnowledgeQuestion(request *model.ListKnowledgeQuestionRequest) (*model.ListKnowledgeQuestionResponse, error) {
@@ -1348,7 +1349,7 @@ func (c *MetaStudioClient) ListKnowledgeQuestionInvoker(request *model.ListKnowl
 
 // ShowKnowledgeQuestion 查询知识库问法详情
 //
-// 该接口用于查询知识库问法详情。
+// 该接口用于查询知识库问法详情。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) ShowKnowledgeQuestion(request *model.ShowKnowledgeQuestionRequest) (*model.ShowKnowledgeQuestionResponse, error) {
@@ -1369,7 +1370,7 @@ func (c *MetaStudioClient) ShowKnowledgeQuestionInvoker(request *model.ShowKnowl
 
 // UpdateBatchKnowledgeQuestion 批量修改知识库问法
 //
-// 该接口用于批量修改知识库问法。
+// 该接口用于批量修改知识库问法。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) UpdateBatchKnowledgeQuestion(request *model.UpdateBatchKnowledgeQuestionRequest) (*model.UpdateBatchKnowledgeQuestionResponse, error) {
@@ -1390,7 +1391,7 @@ func (c *MetaStudioClient) UpdateBatchKnowledgeQuestionInvoker(request *model.Up
 
 // UpdateKnowledgeQuestion 修改知识库问法
 //
-// 该接口用于修改知识库问法。
+// 该接口用于修改知识库问法。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) UpdateKnowledgeQuestion(request *model.UpdateKnowledgeQuestionRequest) (*model.UpdateKnowledgeQuestionResponse, error) {
@@ -1411,7 +1412,7 @@ func (c *MetaStudioClient) UpdateKnowledgeQuestionInvoker(request *model.UpdateK
 
 // CreateKnowledgeSkill 创建知识库技能
 //
-// 该接口用于创建知识库技能。一个技能用于特定场景的交互问答，包含若干个意图等。
+// 该接口用于创建知识库技能。一个技能用于特定场景的交互问答，包含若干个意图等。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) CreateKnowledgeSkill(request *model.CreateKnowledgeSkillRequest) (*model.CreateKnowledgeSkillResponse, error) {
@@ -1432,7 +1433,7 @@ func (c *MetaStudioClient) CreateKnowledgeSkillInvoker(request *model.CreateKnow
 
 // DeleteKnowledgeSkill 删除知识库技能
 //
-// 该接口用于删除知识库技能。
+// 该接口用于删除知识库技能。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) DeleteKnowledgeSkill(request *model.DeleteKnowledgeSkillRequest) (*model.DeleteKnowledgeSkillResponse, error) {
@@ -1453,7 +1454,7 @@ func (c *MetaStudioClient) DeleteKnowledgeSkillInvoker(request *model.DeleteKnow
 
 // ExportKnowledgeSkill 导出知识库技能
 //
-// 该接口用于导出知识库技能。
+// 该接口用于导出知识库技能。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) ExportKnowledgeSkill(request *model.ExportKnowledgeSkillRequest) (*model.ExportKnowledgeSkillResponse, error) {
@@ -1474,7 +1475,7 @@ func (c *MetaStudioClient) ExportKnowledgeSkillInvoker(request *model.ExportKnow
 
 // ListKnowledgeSkill 查询知识库技能列表
 //
-// 该接口用于查询知识库技能列表。
+// 该接口用于查询知识库技能列表。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) ListKnowledgeSkill(request *model.ListKnowledgeSkillRequest) (*model.ListKnowledgeSkillResponse, error) {
@@ -1495,7 +1496,7 @@ func (c *MetaStudioClient) ListKnowledgeSkillInvoker(request *model.ListKnowledg
 
 // ShowKnowledgeSkill 查询知识库技能详情
 //
-// 该接口用于查询知识库技能详情。
+// 该接口用于查询知识库技能详情。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) ShowKnowledgeSkill(request *model.ShowKnowledgeSkillRequest) (*model.ShowKnowledgeSkillResponse, error) {
@@ -1516,7 +1517,7 @@ func (c *MetaStudioClient) ShowKnowledgeSkillInvoker(request *model.ShowKnowledg
 
 // UpdateKnowledgeSkill 修改知识库技能
 //
-// 该接口用于修改知识库技能。
+// 该接口用于修改知识库技能。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) UpdateKnowledgeSkill(request *model.UpdateKnowledgeSkillRequest) (*model.UpdateKnowledgeSkillResponse, error) {
@@ -1681,6 +1682,27 @@ func (c *MetaStudioClient) CreateOnceCode(request *model.CreateOnceCodeRequest) 
 func (c *MetaStudioClient) CreateOnceCodeInvoker(request *model.CreateOnceCodeRequest) *CreateOnceCodeInvoker {
 	requestDef := GenReqDefForCreateOnceCode()
 	return &CreateOnceCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateMetaStudioOrders 订购metastudio云服务产品
+//
+// 该接口用于订购MetaStudio服务的包周期,一次性,按需套餐包产品
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateMetaStudioOrders(request *model.CreateMetaStudioOrdersRequest) (*model.CreateMetaStudioOrdersResponse, error) {
+	requestDef := GenReqDefForCreateMetaStudioOrders()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateMetaStudioOrdersResponse), nil
+	}
+}
+
+// CreateMetaStudioOrdersInvoker 订购metastudio云服务产品
+func (c *MetaStudioClient) CreateMetaStudioOrdersInvoker(request *model.CreateMetaStudioOrdersRequest) *CreateMetaStudioOrdersInvoker {
+	requestDef := GenReqDefForCreateMetaStudioOrders()
+	return &CreateMetaStudioOrdersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchDeletePacifyWords 批量删除安抚话术
@@ -2565,25 +2587,25 @@ func (c *MetaStudioClient) StopSmartLiveInvoker(request *model.StopSmartLiveRequ
 	return &StopSmartLiveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ConfirmSmartLiveRoom 直播间确认
+// ConfirmSmarLiveRoom 直播间确认
 //
 // 该接口用直播间二次确认
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) ConfirmSmartLiveRoom(request *model.ConfirmSmartLiveRoomRequest) (*model.ConfirmSmartLiveRoomResponse, error) {
-	requestDef := GenReqDefForConfirmSmartLiveRoom()
+func (c *MetaStudioClient) ConfirmSmarLiveRoom(request *model.ConfirmSmarLiveRoomRequest) (*model.ConfirmSmarLiveRoomResponse, error) {
+	requestDef := GenReqDefForConfirmSmarLiveRoom()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ConfirmSmartLiveRoomResponse), nil
+		return resp.(*model.ConfirmSmarLiveRoomResponse), nil
 	}
 }
 
-// ConfirmSmartLiveRoomInvoker 直播间确认
-func (c *MetaStudioClient) ConfirmSmartLiveRoomInvoker(request *model.ConfirmSmartLiveRoomRequest) *ConfirmSmartLiveRoomInvoker {
-	requestDef := GenReqDefForConfirmSmartLiveRoom()
-	return &ConfirmSmartLiveRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ConfirmSmarLiveRoomInvoker 直播间确认
+func (c *MetaStudioClient) ConfirmSmarLiveRoomInvoker(request *model.ConfirmSmarLiveRoomRequest) *ConfirmSmarLiveRoomInvoker {
+	requestDef := GenReqDefForConfirmSmarLiveRoom()
+	return &ConfirmSmarLiveRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateInteractionRuleGroup 创建智能直播间互动规则库
@@ -2862,7 +2884,7 @@ func (c *MetaStudioClient) CountTenantResourcesInvoker(request *model.CountTenan
 // ListTenantResources 查看租户资源列表
 //
 // 查看租户资源列表。
-// &gt; 按需套餐包用量本接口无法查询，需要调用CBC接口查询。[按需套餐包用量查询](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0001239.html)和[查询资源包信息](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0000511.html)。
+//  &gt; 按需套餐包用量本接口无法查询，需要调用CBC接口查询，详见[按需套餐包用量查询](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0001239.html)和[查询资源包信息](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0000511.html)。
 // &gt; 各种资源的计费方式请参考[计费说明](https://support.huaweicloud.com/productdesc-metastudio/metastudio_01_0006.html)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -2885,7 +2907,7 @@ func (c *MetaStudioClient) ListTenantResourcesInvoker(request *model.ListTenantR
 // ShowResourceUsage 查看租户资源用量信息
 //
 // 查询租户一次性和包周期（包年/包月）资源用量信息。
-// &gt; 按需套餐包用量本接口无法查询，需要调用CBC接口查询。[按需套餐包用量查询](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0001239.html)和[查询资源包信息](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0000511.html)。
+// &gt; 按需套餐包用量本接口无法查询，需要调用CBC接口查询，详见[按需套餐包用量查询](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0001239.html)和[查询资源包信息](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0000511.html)。
 // &gt; 各种资源的计费方式请参考[计费说明](https://support.huaweicloud.com/productdesc-metastudio/metastudio_01_0006.html)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.

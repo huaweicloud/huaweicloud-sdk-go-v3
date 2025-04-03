@@ -55,6 +55,9 @@ type ShowSmartChatJobResponse struct {
 	// 智能交互接入地址。
 	ChatAccessAddress *string `json:"chat_access_address,omitempty"`
 
+	// 智能交互Rest接口接入地址。
+	ChatAccessRestAddress *string `json:"chat_access_rest_address,omitempty"`
+
 	// 是否透明背景
 	IsTransparent *bool `json:"is_transparent,omitempty"`
 

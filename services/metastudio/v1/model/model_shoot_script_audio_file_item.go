@@ -16,6 +16,9 @@ type ShootScriptAudioFileItem struct {
 
 	// 语音驱动音频文件下载URL。查询脚本详情时返回。
 	AudioFileDownloadUrl *string `json:"audio_file_download_url,omitempty"`
+
+	// audio id
+	AudioId *int32 `json:"audio_id,omitempty"`
 }
 
 func (o ShootScriptAudioFileItem) String() string {

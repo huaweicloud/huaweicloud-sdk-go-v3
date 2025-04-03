@@ -6,11 +6,8 @@ import (
 	"strings"
 )
 
-// ConfirmSmartLiveRoomRequest Request Object
-type ConfirmSmartLiveRoomRequest struct {
-
-	// 剧本ID。
-	RoomId string `json:"room_id"`
+// CreateMetaStudioOrdersRequest Request Object
+type CreateMetaStudioOrdersRequest struct {
 
 	// 使用AK/SK方式认证时必选，携带的鉴权信息。
 	Authorization *string `json:"Authorization,omitempty"`
@@ -21,17 +18,14 @@ type ConfirmSmartLiveRoomRequest struct {
 	// 使用AK/SK方式认证时必选，携带项目ID信息。
 	XProjectId *string `json:"X-Project-Id,omitempty"`
 
-	// 第三方用户ID。不允许输入中文。
-	XAppUserId *string `json:"X-App-UserId,omitempty"`
-
-	Body *ConfirmSmartLiveRoomReq `json:"body,omitempty"`
+	Body *CreateMetaStudioOrdersReq `json:"body,omitempty"`
 }
 
-func (o ConfirmSmartLiveRoomRequest) String() string {
+func (o CreateMetaStudioOrdersRequest) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "ConfirmSmartLiveRoomRequest struct{}"
+		return "CreateMetaStudioOrdersRequest struct{}"
 	}
 
-	return strings.Join([]string{"ConfirmSmartLiveRoomRequest", string(data)}, " ")
+	return strings.Join([]string{"CreateMetaStudioOrdersRequest", string(data)}, " ")
 }

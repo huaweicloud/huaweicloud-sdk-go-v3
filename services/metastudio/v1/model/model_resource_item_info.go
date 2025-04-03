@@ -18,6 +18,8 @@ type ResourceItemInfo struct {
 	// cloudServiceId的订单id。 云服务购买清单等场景必填（purchaseMode取值为3、4），每个CloudService生成一个订单；此场景如果为空，则报错。 其他场景，为空。
 	OrderId *string `json:"order_id,omitempty"`
 
+	BoundAsset *BoundAssetInfo `json:"bound_asset,omitempty"`
+
 	// 资源截止时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
 	ResourceExpireTime *string `json:"resource_expire_time,omitempty"`
 
@@ -40,10 +42,13 @@ type ResourceItemInfo struct {
 	ResourceSource *string `json:"resource_source,omitempty"`
 
 	// 总量
-	Amount float32 `json:"amount,omitempty"`
+	Amount *float32 `json:"amount,omitempty"`
 
 	// 使用量
-	Usage float32 `json:"usage,omitempty"`
+	Usage *float32 `json:"usage,omitempty"`
+
+	// 资源状态 0:正常 1:冻结
+	Status *int32 `json:"status,omitempty"`
 
 	// 单位。 * NUM：个数(形象/声音) * MIN：分钟（视频制作） * HOUR：小时 （直播） * CHANNEL：路（直播/交互） * GB：GB(资产管理) * MILLION_WORDS：百万字 * TEN_THOUSAND_WORDS：万字 * TIME：次
 	Unit *ResourceItemInfoUnit `json:"unit,omitempty"`

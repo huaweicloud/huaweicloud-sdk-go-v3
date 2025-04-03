@@ -51,6 +51,9 @@ type DatasourceConfig struct {
 
 	// 排序参数
 	OrderParas *[]DatasourceOrderPara `json:"order_paras,omitempty"`
+
+	// 总条数计算脚本SQL。
+	TotalSizeSql *string `json:"total_size_sql,omitempty"`
 }
 
 func (o DatasourceConfig) String() string {

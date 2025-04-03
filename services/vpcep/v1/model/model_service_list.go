@@ -66,6 +66,9 @@ type ServiceList struct {
 	// 描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
 	Description *string `json:"description,omitempty"`
 
+	// 终端节点服务支持的类型，取值范围为profession-专业型，basic-基础型
+	SupportedEditions *[]string `json:"supported_editions,omitempty"`
+
 	// 终端节点服务对应Pool的Public Border Group信息
 	PublicBorderGroup *string `json:"public_border_group,omitempty"`
 

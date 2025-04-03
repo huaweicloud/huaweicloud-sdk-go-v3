@@ -32,6 +32,8 @@ type StartSmartLiveReq struct {
 	ViewMode *StartSmartLiveReqViewMode `json:"view_mode,omitempty"`
 
 	CoStreamerConfig *CoStreamerConfig `json:"co_streamer_config,omitempty"`
+
+	JobRunConfig *LiveJobRunConfig `json:"job_run_config,omitempty"`
 }
 
 func (o StartSmartLiveReq) String() string {

@@ -12,7 +12,7 @@ import (
 // StandardPlatformApiConfig 自定义直播平台回调配置
 type StandardPlatformApiConfig struct {
 
-	// API类型
+	// API类型。 * PRODUCT_QUERY: 查询商品 * LIVE_EVENT_CALLBACK: 直播事件回调
 	ApiType StandardPlatformApiConfigApiType `json:"api_type"`
 
 	// URL。仅支持HTTPS形式URL

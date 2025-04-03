@@ -8,7 +8,7 @@ import (
 
 // UpdateBizMetricResponse Response Object
 type UpdateBizMetricResponse struct {
-	Data           *UpdateBizMetricResultData `json:"data,omitempty"`
+	Data           *CreateBizMetricResultData `json:"data,omitempty"`
 	HttpStatusCode int                        `json:"-"`
 }
 

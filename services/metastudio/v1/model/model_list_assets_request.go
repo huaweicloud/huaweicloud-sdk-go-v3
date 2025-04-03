@@ -107,6 +107,9 @@ type ListAssetsRequest struct {
 
 	// 资产支持的业务类型。默认查询所有资产。 * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
 	SupportedService *ListAssetsRequestSupportedService `json:"supported_service,omitempty"`
+
+	// 第三方用户ID。不允许输入中文。
+	AppUserId *string `json:"app_user_id,omitempty"`
 }
 
 func (o ListAssetsRequest) String() string {

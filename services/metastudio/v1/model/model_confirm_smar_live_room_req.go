@@ -9,54 +9,54 @@ import (
 	"strings"
 )
 
-// ConfirmSmartLiveRoomReq 确认直播间剧本请求
-type ConfirmSmartLiveRoomReq struct {
+// ConfirmSmarLiveRoomReq 确认直播间剧本请求
+type ConfirmSmarLiveRoomReq struct {
 
 	// 确认操作。 * confirm: 确认。 * reject: 拒绝。
-	Action *ConfirmSmartLiveRoomReqAction `json:"action,omitempty"`
+	Action *ConfirmSmarLiveRoomReqAction `json:"action,omitempty"`
 
 	// 剧本版本。从查询直播间详情接口中获取。
 	ScriptVersion *string `json:"script_version,omitempty"`
 }
 
-func (o ConfirmSmartLiveRoomReq) String() string {
+func (o ConfirmSmarLiveRoomReq) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "ConfirmSmartLiveRoomReq struct{}"
+		return "ConfirmSmarLiveRoomReq struct{}"
 	}
 
-	return strings.Join([]string{"ConfirmSmartLiveRoomReq", string(data)}, " ")
+	return strings.Join([]string{"ConfirmSmarLiveRoomReq", string(data)}, " ")
 }
 
-type ConfirmSmartLiveRoomReqAction struct {
+type ConfirmSmarLiveRoomReqAction struct {
 	value string
 }
 
-type ConfirmSmartLiveRoomReqActionEnum struct {
-	CONFIRM ConfirmSmartLiveRoomReqAction
-	REJECT  ConfirmSmartLiveRoomReqAction
+type ConfirmSmarLiveRoomReqActionEnum struct {
+	CONFIRM ConfirmSmarLiveRoomReqAction
+	REJECT  ConfirmSmarLiveRoomReqAction
 }
 
-func GetConfirmSmartLiveRoomReqActionEnum() ConfirmSmartLiveRoomReqActionEnum {
-	return ConfirmSmartLiveRoomReqActionEnum{
-		CONFIRM: ConfirmSmartLiveRoomReqAction{
+func GetConfirmSmarLiveRoomReqActionEnum() ConfirmSmarLiveRoomReqActionEnum {
+	return ConfirmSmarLiveRoomReqActionEnum{
+		CONFIRM: ConfirmSmarLiveRoomReqAction{
 			value: "confirm",
 		},
-		REJECT: ConfirmSmartLiveRoomReqAction{
+		REJECT: ConfirmSmarLiveRoomReqAction{
 			value: "reject",
 		},
 	}
 }
 
-func (c ConfirmSmartLiveRoomReqAction) Value() string {
+func (c ConfirmSmarLiveRoomReqAction) Value() string {
 	return c.value
 }
 
-func (c ConfirmSmartLiveRoomReqAction) MarshalJSON() ([]byte, error) {
+func (c ConfirmSmarLiveRoomReqAction) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *ConfirmSmartLiveRoomReqAction) UnmarshalJSON(b []byte) error {
+func (c *ConfirmSmarLiveRoomReqAction) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

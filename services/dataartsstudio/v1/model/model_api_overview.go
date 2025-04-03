@@ -43,6 +43,8 @@ type ApiOverview struct {
 
 	// API 创建时间
 	CreateTime *int64 `json:"create_time,omitempty"`
+
+	AuthorizationStatus *ApiOverviewAuthorizationStatus `json:"authorization_status,omitempty"`
 }
 
 func (o ApiOverview) String() string {
@@ -217,6 +219,57 @@ func (c ApiOverviewType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ApiOverviewType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ApiOverviewAuthorizationStatus struct {
+	value string
+}
+
+type ApiOverviewAuthorizationStatusEnum struct {
+	NO_AUTHORIZATION_REQUIRED ApiOverviewAuthorizationStatus
+	UNAUTHORIZED              ApiOverviewAuthorizationStatus
+	AUTHORIZED                ApiOverviewAuthorizationStatus
+}
+
+func GetApiOverviewAuthorizationStatusEnum() ApiOverviewAuthorizationStatusEnum {
+	return ApiOverviewAuthorizationStatusEnum{
+		NO_AUTHORIZATION_REQUIRED: ApiOverviewAuthorizationStatus{
+			value: "NO_AUTHORIZATION_REQUIRED",
+		},
+		UNAUTHORIZED: ApiOverviewAuthorizationStatus{
+			value: "UNAUTHORIZED",
+		},
+		AUTHORIZED: ApiOverviewAuthorizationStatus{
+			value: "AUTHORIZED",
+		},
+	}
+}
+
+func (c ApiOverviewAuthorizationStatus) Value() string {
+	return c.value
+}
+
+func (c ApiOverviewAuthorizationStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiOverviewAuthorizationStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

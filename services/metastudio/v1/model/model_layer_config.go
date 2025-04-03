@@ -25,6 +25,8 @@ type LayerConfig struct {
 
 	Size *LayerSizeConfig `json:"size,omitempty"`
 
+	Rotation *LayerRotationConfig `json:"rotation,omitempty"`
+
 	ImageConfig *ImageLayerConfig `json:"image_config,omitempty"`
 
 	VideoConfig *VideoLayerConfig `json:"video_config,omitempty"`

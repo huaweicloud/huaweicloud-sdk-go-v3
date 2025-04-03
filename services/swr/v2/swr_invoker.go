@@ -5,6 +5,22 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/swr/v2/model"
 )
 
+type CreateAuthorizationTokenInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAuthorizationTokenInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAuthorizationTokenInvoker) Invoke() (*model.CreateAuthorizationTokenResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAuthorizationTokenResponse), nil
+	}
+}
+
 type CreateImageSyncRepoInvoker struct {
 	*invoker.BaseInvoker
 }

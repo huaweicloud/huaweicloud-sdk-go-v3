@@ -64,6 +64,9 @@ type SmartLiveJob struct {
 	LiveJobLog *LiveJobLog `json:"live_job_log,omitempty"`
 
 	RelationLivePlatformInfo *PlatformLiveDetailInfo `json:"relation_live_platform_info,omitempty"`
+
+	// 使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * UNKNOW：未知资源类型。
+	UsedResourceType *SmartLiveJobUsedResourceType `json:"used_resource_type,omitempty"`
 }
 
 func (o SmartLiveJob) String() string {
@@ -116,6 +119,57 @@ func (c SmartLiveJobState) MarshalJSON() ([]byte, error) {
 }
 
 func (c *SmartLiveJobState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type SmartLiveJobUsedResourceType struct {
+	value string
+}
+
+type SmartLiveJobUsedResourceTypeEnum struct {
+	PERIOD   SmartLiveJobUsedResourceType
+	ONDEMAND SmartLiveJobUsedResourceType
+	UNKNOW   SmartLiveJobUsedResourceType
+}
+
+func GetSmartLiveJobUsedResourceTypeEnum() SmartLiveJobUsedResourceTypeEnum {
+	return SmartLiveJobUsedResourceTypeEnum{
+		PERIOD: SmartLiveJobUsedResourceType{
+			value: "PERIOD",
+		},
+		ONDEMAND: SmartLiveJobUsedResourceType{
+			value: "ONDEMAND",
+		},
+		UNKNOW: SmartLiveJobUsedResourceType{
+			value: "UNKNOW",
+		},
+	}
+}
+
+func (c SmartLiveJobUsedResourceType) Value() string {
+	return c.value
+}
+
+func (c SmartLiveJobUsedResourceType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SmartLiveJobUsedResourceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

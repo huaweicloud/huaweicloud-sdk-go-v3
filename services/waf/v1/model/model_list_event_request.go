@@ -15,7 +15,7 @@ type ListEventRequest struct {
 	// 语言，默认值为en-us。zh-cn（中文）/en-us（英文）
 	XLanguage *string `json:"X-Language,omitempty"`
 
-	// 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
+	// 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。若需要查询当前用户所有企业项目绑定的资源信息，请传参all_granted_eps。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 查询日志的时间范围（不能和from、to同时使用，同时使用以recent为准），且recent参数与from、to必须使用其中一个。当同时使用recent参数与from、to时，以recent参数为准

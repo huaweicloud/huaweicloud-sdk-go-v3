@@ -65,6 +65,9 @@ type ShowSmartLiveResponse struct {
 
 	RelationLivePlatformInfo *PlatformLiveDetailInfo `json:"relation_live_platform_info,omitempty"`
 
+	// 使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * UNKNOW：未知资源类型。
+	UsedResourceType *ShowSmartLiveResponseUsedResourceType `json:"used_resource_type,omitempty"`
+
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
@@ -119,6 +122,57 @@ func (c ShowSmartLiveResponseState) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ShowSmartLiveResponseState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ShowSmartLiveResponseUsedResourceType struct {
+	value string
+}
+
+type ShowSmartLiveResponseUsedResourceTypeEnum struct {
+	PERIOD   ShowSmartLiveResponseUsedResourceType
+	ONDEMAND ShowSmartLiveResponseUsedResourceType
+	UNKNOW   ShowSmartLiveResponseUsedResourceType
+}
+
+func GetShowSmartLiveResponseUsedResourceTypeEnum() ShowSmartLiveResponseUsedResourceTypeEnum {
+	return ShowSmartLiveResponseUsedResourceTypeEnum{
+		PERIOD: ShowSmartLiveResponseUsedResourceType{
+			value: "PERIOD",
+		},
+		ONDEMAND: ShowSmartLiveResponseUsedResourceType{
+			value: "ONDEMAND",
+		},
+		UNKNOW: ShowSmartLiveResponseUsedResourceType{
+			value: "UNKNOW",
+		},
+	}
+}
+
+func (c ShowSmartLiveResponseUsedResourceType) Value() string {
+	return c.value
+}
+
+func (c ShowSmartLiveResponseUsedResourceType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowSmartLiveResponseUsedResourceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

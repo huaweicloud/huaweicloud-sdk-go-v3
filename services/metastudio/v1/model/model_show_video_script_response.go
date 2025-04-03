@@ -41,6 +41,10 @@ type ShowVideoScriptResponse struct {
 
 	ReviewConfig *ReviewConfig `json:"review_config,omitempty"`
 
+	AudioFiles *ShootScriptAudioFiles `json:"audio_files,omitempty"`
+
+	ActionConfig *ActionConfig `json:"action_config,omitempty"`
+
 	// 拍摄脚本列表。
 	ShootScripts *[]ShootScriptShowItem `json:"shoot_scripts,omitempty"`
 
@@ -52,8 +56,6 @@ type ShowVideoScriptResponse struct {
 
 	// 更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
 	UpdateTime *string `json:"update_time,omitempty"`
-
-	AudioFiles *ShootScriptAudioFiles `json:"audio_files,omitempty"`
 
 	// 剧本封面下载url。
 	ScriptCoverUrl *string `json:"script_cover_url,omitempty"`

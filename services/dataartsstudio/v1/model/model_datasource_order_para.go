@@ -25,6 +25,9 @@ type DatasourceOrderPara struct {
 
 	// 排序参数顺序
 	Order *int32 `json:"order,omitempty"`
+
+	// 排序参数描述信息。
+	Description *string `json:"description,omitempty"`
 }
 
 func (o DatasourceOrderPara) String() string {
