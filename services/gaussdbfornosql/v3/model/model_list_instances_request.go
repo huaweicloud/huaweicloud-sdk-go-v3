@@ -15,11 +15,11 @@ type ListInstancesRequest struct {
 	// 实例名称。 如果name以“*”起始，表示按照“*”后面的值模糊匹配，否则，按照实际填写的name精确匹配查询。
 	Name *string `json:"name,omitempty"`
 
-	// 实例类型。   - 取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis集群实例类型。   - 取值为“Sharding”，表示GeminiDB Mongo集群实例类型。   - 取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。   - 取值为“InfluxdbCluster”，表示GeminiDB Influx集群实例类型。   - 取值为“InfluxdbSingle”，表示GeminiDB Influx单节点实例类型。   - 取值为“RedisReplica”，表示GeminiDB Redis性能版实例类型。   - 取值为“Replication”，表示GeminiDB Redis主备版实例类型。
-	Mode *string `json:"mode,omitempty"`
-
 	// 数据库类型。   - 取值为“cassandra”，表示查询GeminiDB Cassandra数据库实例。   - 取值为“mongodb”，表示查询GeminiDB Mongo数据库实例。   - 取值为“influxdb”，表示查询GeminiDB Influx数据库实例。   - 取值为“redis”，表示查询GeminiDB Redis数据库实例。   - 如果不传该参数，表示查询所有数据库实例。
 	DatastoreType *string `json:"datastore_type,omitempty"`
+
+	// 实例类型。   -  取值为“Cluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis Proxy经典部署模式集群实例类型。    -  取值为“CloudNativeCluster”，表示GeminiDB Cassandra、GeminiDB Influx、GeminiDB Redis云原生部署模式集群实例类型。   -  取值为“RedisCluster”，表示GeminiDB Redis Cluster经典部署模式集群实例类型。   -  取值为“Replication”，表示GeminiDB Redis经典部署模式主备实例类型。    -  取值为“InfluxdbSingle”，表示GeminiDB Influx经典部署模式单节点实例类型。   -  取值为“ReplicaSet”，表示GeminiDB Mongo副本集实例类型。   -  如果不传datastore_type参数，自动忽略该参数设置。   -  默认取值：不涉及。
+	Mode *string `json:"mode,omitempty"`
 
 	// 虚拟私有云ID，获取方法如下：   - 方法1：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。   - 方法2：通过虚拟私有云服务的API接口查询，具体操作可参考查询VPC列表。
 	VpcId *string `json:"vpc_id,omitempty"`

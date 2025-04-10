@@ -67,6 +67,9 @@ type ImageLocalInfo struct {
 
 	// Agent ID
 	AgentId *string `json:"agent_id,omitempty"`
+
+	// 该镜像不支持扫描的原因；若该字段为空则表示镜像可以扫描
+	NonScanReason *string `json:"non_scan_reason,omitempty"`
 }
 
 func (o ImageLocalInfo) String() string {

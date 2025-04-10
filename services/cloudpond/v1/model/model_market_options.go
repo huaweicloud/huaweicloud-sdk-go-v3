@@ -11,6 +11,8 @@ type MarketOptions struct {
 	ChargeMode *ChargeMode `json:"charge_mode,omitempty"`
 
 	PrepaidOptions *PrepaidOptions `json:"prepaid_options,omitempty"`
+
+	Strategies *[]Strategy `json:"strategies,omitempty"`
 }
 
 func (o MarketOptions) String() string {

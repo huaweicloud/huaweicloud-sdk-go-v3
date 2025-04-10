@@ -8,7 +8,7 @@ import (
 
 type UpdateDatabasesRequestBody struct {
 
-	// 对实例的操作: - flush:清理数据
+	// 对实例的操作:  flush:清理数据
 	Action string `json:"action"`
 
 	// 指定需要清理的DB_ID,当action为flush时,才会生效。

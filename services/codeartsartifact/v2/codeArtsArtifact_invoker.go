@@ -423,6 +423,22 @@ func (i *ShowStorageInvoker) Invoke() (*model.ShowStorageResponse, error) {
 	}
 }
 
+type ShowUserPrivilegesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowUserPrivilegesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowUserPrivilegesInvoker) Invoke() (*model.ShowUserPrivilegesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowUserPrivilegesResponse), nil
+	}
+}
+
 type UpdateArtifactoryInvoker struct {
 	*invoker.BaseInvoker
 }

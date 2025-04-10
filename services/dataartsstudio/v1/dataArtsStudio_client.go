@@ -103,6 +103,27 @@ func (c *DataArtsStudioClient) AddWorkSpaceUsersInvoker(request *model.AddWorkSp
 	return &AddWorkSpaceUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ApplySecurityTableAuthority 提交表权限申请
+//
+// 提交表权限申请
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ApplySecurityTableAuthority(request *model.ApplySecurityTableAuthorityRequest) (*model.ApplySecurityTableAuthorityResponse, error) {
+	requestDef := GenReqDefForApplySecurityTableAuthority()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ApplySecurityTableAuthorityResponse), nil
+	}
+}
+
+// ApplySecurityTableAuthorityInvoker 提交表权限申请
+func (c *DataArtsStudioClient) ApplySecurityTableAuthorityInvoker(request *model.ApplySecurityTableAuthorityRequest) *ApplySecurityTableAuthorityInvoker {
+	requestDef := GenReqDefForApplySecurityTableAuthority()
+	return &ApplySecurityTableAuthorityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AssociateClassificationToEntity 资产关联分类
 //
 // 将一个分类关联到一个或多个指定guid的资产上
@@ -185,6 +206,27 @@ func (c *DataArtsStudioClient) BatchApproveApply(request *model.BatchApproveAppl
 func (c *DataArtsStudioClient) BatchApproveApplyInvoker(request *model.BatchApproveApplyRequest) *BatchApproveApplyInvoker {
 	requestDef := GenReqDefForBatchApproveApply()
 	return &BatchApproveApplyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchApproveSecurityApplications 批量审批通过工单
+//
+// 批量审批通过工单
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) BatchApproveSecurityApplications(request *model.BatchApproveSecurityApplicationsRequest) (*model.BatchApproveSecurityApplicationsResponse, error) {
+	requestDef := GenReqDefForBatchApproveSecurityApplications()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchApproveSecurityApplicationsResponse), nil
+	}
+}
+
+// BatchApproveSecurityApplicationsInvoker 批量审批通过工单
+func (c *DataArtsStudioClient) BatchApproveSecurityApplicationsInvoker(request *model.BatchApproveSecurityApplicationsRequest) *BatchApproveSecurityApplicationsInvoker {
+	requestDef := GenReqDefForBatchApproveSecurityApplications()
+	return &BatchApproveSecurityApplicationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchAssociateClassificationToEntities 批量资产关联分类
@@ -483,6 +525,27 @@ func (c *DataArtsStudioClient) BatchPublish(request *model.BatchPublishRequest) 
 func (c *DataArtsStudioClient) BatchPublishInvoker(request *model.BatchPublishRequest) *BatchPublishInvoker {
 	requestDef := GenReqDefForBatchPublish()
 	return &BatchPublishInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchRejectSecurityApplications 批量驳回工单
+//
+// 批量驳回工单
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) BatchRejectSecurityApplications(request *model.BatchRejectSecurityApplicationsRequest) (*model.BatchRejectSecurityApplicationsResponse, error) {
+	requestDef := GenReqDefForBatchRejectSecurityApplications()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchRejectSecurityApplicationsResponse), nil
+	}
+}
+
+// BatchRejectSecurityApplicationsInvoker 批量驳回工单
+func (c *DataArtsStudioClient) BatchRejectSecurityApplicationsInvoker(request *model.BatchRejectSecurityApplicationsRequest) *BatchRejectSecurityApplicationsInvoker {
+	requestDef := GenReqDefForBatchRejectSecurityApplications()
+	return &BatchRejectSecurityApplicationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchSyncMetadata 元数据实时同步接口(邀测)
@@ -3993,6 +4056,27 @@ func (c *DataArtsStudioClient) ListSecurityDynamicMaskingPoliciesInvoker(request
 	return &ListSecurityDynamicMaskingPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSecurityMemberPermission 查询我的权限
+//
+// 查询我的权限、空间账号权限
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListSecurityMemberPermission(request *model.ListSecurityMemberPermissionRequest) (*model.ListSecurityMemberPermissionResponse, error) {
+	requestDef := GenReqDefForListSecurityMemberPermission()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityMemberPermissionResponse), nil
+	}
+}
+
+// ListSecurityMemberPermissionInvoker 查询我的权限
+func (c *DataArtsStudioClient) ListSecurityMemberPermissionInvoker(request *model.ListSecurityMemberPermissionRequest) *ListSecurityMemberPermissionInvoker {
+	requestDef := GenReqDefForListSecurityMemberPermission()
+	return &ListSecurityMemberPermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSecurityMemberSyncTasks 查询用户同步列表
 //
 // 查询用户同步列表。
@@ -4012,6 +4096,27 @@ func (c *DataArtsStudioClient) ListSecurityMemberSyncTasks(request *model.ListSe
 func (c *DataArtsStudioClient) ListSecurityMemberSyncTasksInvoker(request *model.ListSecurityMemberSyncTasksRequest) *ListSecurityMemberSyncTasksInvoker {
 	requestDef := GenReqDefForListSecurityMemberSyncTasks()
 	return &ListSecurityMemberSyncTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSecurityMemberTablePermission 查询用户表权限清单
+//
+// 查询用户表权限清单
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListSecurityMemberTablePermission(request *model.ListSecurityMemberTablePermissionRequest) (*model.ListSecurityMemberTablePermissionResponse, error) {
+	requestDef := GenReqDefForListSecurityMemberTablePermission()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityMemberTablePermissionResponse), nil
+	}
+}
+
+// ListSecurityMemberTablePermissionInvoker 查询用户表权限清单
+func (c *DataArtsStudioClient) ListSecurityMemberTablePermissionInvoker(request *model.ListSecurityMemberTablePermissionRequest) *ListSecurityMemberTablePermissionInvoker {
+	requestDef := GenReqDefForListSecurityMemberTablePermission()
+	return &ListSecurityMemberTablePermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSecurityPermissionSetMembers 查询权限集成员列表
@@ -4161,6 +4266,27 @@ func (c *DataArtsStudioClient) ListSecuritySensitiveDataOverviewsInvoker(request
 	return &ListSecuritySensitiveDataOverviewsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSecurityTableApprovers 获取表权限审批人列表
+//
+// 获取表权限审批人列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListSecurityTableApprovers(request *model.ListSecurityTableApproversRequest) (*model.ListSecurityTableApproversResponse, error) {
+	requestDef := GenReqDefForListSecurityTableApprovers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityTableApproversResponse), nil
+	}
+}
+
+// ListSecurityTableApproversInvoker 获取表权限审批人列表
+func (c *DataArtsStudioClient) ListSecurityTableApproversInvoker(request *model.ListSecurityTableApproversRequest) *ListSecurityTableApproversInvoker {
+	requestDef := GenReqDefForListSecurityTableApprovers()
+	return &ListSecurityTableApproversInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSecurityUnreasonablePermissions 查询不合理的权限配置
 //
 // 查询不合理的权限配置。
@@ -4180,6 +4306,27 @@ func (c *DataArtsStudioClient) ListSecurityUnreasonablePermissions(request *mode
 func (c *DataArtsStudioClient) ListSecurityUnreasonablePermissionsInvoker(request *model.ListSecurityUnreasonablePermissionsRequest) *ListSecurityUnreasonablePermissionsInvoker {
 	requestDef := GenReqDefForListSecurityUnreasonablePermissions()
 	return &ListSecurityUnreasonablePermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSecurityUserTablePermission 查询用户对表的权限
+//
+// 查询用户对表的权限
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListSecurityUserTablePermission(request *model.ListSecurityUserTablePermissionRequest) (*model.ListSecurityUserTablePermissionResponse, error) {
+	requestDef := GenReqDefForListSecurityUserTablePermission()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityUserTablePermissionResponse), nil
+	}
+}
+
+// ListSecurityUserTablePermissionInvoker 查询用户对表的权限
+func (c *DataArtsStudioClient) ListSecurityUserTablePermissionInvoker(request *model.ListSecurityUserTablePermissionRequest) *ListSecurityUserTablePermissionInvoker {
+	requestDef := GenReqDefForListSecurityUserTablePermission()
+	return &ListSecurityUserTablePermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSubjectLevels 获取主题层级
@@ -7059,6 +7206,27 @@ func (c *DataArtsStudioClient) UpdateSecurityDynamicMaskingPolicy(request *model
 func (c *DataArtsStudioClient) UpdateSecurityDynamicMaskingPolicyInvoker(request *model.UpdateSecurityDynamicMaskingPolicyRequest) *UpdateSecurityDynamicMaskingPolicyInvoker {
 	requestDef := GenReqDefForUpdateSecurityDynamicMaskingPolicy()
 	return &UpdateSecurityDynamicMaskingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSecurityMemberPermissionExpireTime 批量变更权限有效期
+//
+// 批量变更权限有效期
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UpdateSecurityMemberPermissionExpireTime(request *model.UpdateSecurityMemberPermissionExpireTimeRequest) (*model.UpdateSecurityMemberPermissionExpireTimeResponse, error) {
+	requestDef := GenReqDefForUpdateSecurityMemberPermissionExpireTime()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSecurityMemberPermissionExpireTimeResponse), nil
+	}
+}
+
+// UpdateSecurityMemberPermissionExpireTimeInvoker 批量变更权限有效期
+func (c *DataArtsStudioClient) UpdateSecurityMemberPermissionExpireTimeInvoker(request *model.UpdateSecurityMemberPermissionExpireTimeRequest) *UpdateSecurityMemberPermissionExpireTimeInvoker {
+	requestDef := GenReqDefForUpdateSecurityMemberPermissionExpireTime()
+	return &UpdateSecurityMemberPermissionExpireTimeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSecurityPermissionSet 更新权限集

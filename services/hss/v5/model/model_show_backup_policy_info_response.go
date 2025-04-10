@@ -18,7 +18,7 @@ type ShowBackupPolicyInfoResponse struct {
 	// 策略名称
 	Name *string `json:"name,omitempty"`
 
-	// 备份类型。备份（backup）、复制(replication)，包含如下2种。   - backup ：备份。   - replication ：复制。
+	// 备份类型。当前包含如下1种。   - backup ：备份
 	OperationType *string `json:"operation_type,omitempty"`
 
 	OperationDefinition *OperationDefinitionInfo `json:"operation_definition,omitempty"`

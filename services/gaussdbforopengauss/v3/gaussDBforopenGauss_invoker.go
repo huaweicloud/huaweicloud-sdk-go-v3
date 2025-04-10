@@ -149,6 +149,22 @@ func (i *CreateConfigurationTemplateInvoker) Invoke() (*model.CreateConfiguratio
 	}
 }
 
+type CreateCrossCloudConstructDisasterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCrossCloudConstructDisasterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateCrossCloudConstructDisasterInvoker) Invoke() (*model.CreateCrossCloudConstructDisasterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCrossCloudConstructDisasterResponse), nil
+	}
+}
+
 type CreateDatabaseInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -485,6 +501,134 @@ func (i *DownloadBackupInvoker) Invoke() (*model.DownloadBackupResponse, error) 
 	}
 }
 
+type ExecuteCrossCloudDisasterDataCacheEndInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteCrossCloudDisasterDataCacheEndInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteCrossCloudDisasterDataCacheEndInvoker) Invoke() (*model.ExecuteCrossCloudDisasterDataCacheEndResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteCrossCloudDisasterDataCacheEndResponse), nil
+	}
+}
+
+type ExecuteCrossCloudDisasterDataCacheStartInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteCrossCloudDisasterDataCacheStartInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteCrossCloudDisasterDataCacheStartInvoker) Invoke() (*model.ExecuteCrossCloudDisasterDataCacheStartResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteCrossCloudDisasterDataCacheStartResponse), nil
+	}
+}
+
+type ExecuteCrossCloudDisasterEndSimulationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteCrossCloudDisasterEndSimulationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteCrossCloudDisasterEndSimulationInvoker) Invoke() (*model.ExecuteCrossCloudDisasterEndSimulationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteCrossCloudDisasterEndSimulationResponse), nil
+	}
+}
+
+type ExecuteCrossCloudDisasterRecoveryFailoverInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteCrossCloudDisasterRecoveryFailoverInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteCrossCloudDisasterRecoveryFailoverInvoker) Invoke() (*model.ExecuteCrossCloudDisasterRecoveryFailoverResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteCrossCloudDisasterRecoveryFailoverResponse), nil
+	}
+}
+
+type ExecuteCrossCloudDisasterRestoreInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteCrossCloudDisasterRestoreInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteCrossCloudDisasterRestoreInvoker) Invoke() (*model.ExecuteCrossCloudDisasterRestoreResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteCrossCloudDisasterRestoreResponse), nil
+	}
+}
+
+type ExecuteCrossCloudDisasterStartSimulationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteCrossCloudDisasterStartSimulationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteCrossCloudDisasterStartSimulationInvoker) Invoke() (*model.ExecuteCrossCloudDisasterStartSimulationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteCrossCloudDisasterStartSimulationResponse), nil
+	}
+}
+
+type ExecuteCrossCloudDisasterSwitchoverInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteCrossCloudDisasterSwitchoverInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteCrossCloudDisasterSwitchoverInvoker) Invoke() (*model.ExecuteCrossCloudDisasterSwitchoverResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteCrossCloudDisasterSwitchoverResponse), nil
+	}
+}
+
+type ExecuteCrossCloudReleaseDisasterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteCrossCloudReleaseDisasterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteCrossCloudReleaseDisasterInvoker) Invoke() (*model.ExecuteCrossCloudReleaseDisasterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteCrossCloudReleaseDisasterResponse), nil
+	}
+}
+
 type InstallKernelPluginInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -802,6 +946,22 @@ func (i *ListDbUsersInvoker) Invoke() (*model.ListDbUsersResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListDbUsersResponse), nil
+	}
+}
+
+type ListDisasterRecoveryRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDisasterRecoveryRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDisasterRecoveryRecordInvoker) Invoke() (*model.ListDisasterRecoveryRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDisasterRecoveryRecordResponse), nil
 	}
 }
 
@@ -1285,6 +1445,22 @@ func (i *ResetConfigurationInvoker) Invoke() (*model.ResetConfigurationResponse,
 	}
 }
 
+type ResetDrConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetDrConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ResetDrConfigInvoker) Invoke() (*model.ResetDrConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetDrConfigResponse), nil
+	}
+}
+
 type ResetPwdInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1538,6 +1714,38 @@ func (i *ShowConfigurationDetailInvoker) Invoke() (*model.ShowConfigurationDetai
 		return nil, err
 	} else {
 		return result.(*model.ShowConfigurationDetailResponse), nil
+	}
+}
+
+type ShowCrossCloudDisasterInstanceMonitorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCrossCloudDisasterInstanceMonitorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowCrossCloudDisasterInstanceMonitorInvoker) Invoke() (*model.ShowCrossCloudDisasterInstanceMonitorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCrossCloudDisasterInstanceMonitorResponse), nil
+	}
+}
+
+type ShowCrossCloudDisasterRelationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCrossCloudDisasterRelationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowCrossCloudDisasterRelationsInvoker) Invoke() (*model.ShowCrossCloudDisasterRelationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCrossCloudDisasterRelationsResponse), nil
 	}
 }
 

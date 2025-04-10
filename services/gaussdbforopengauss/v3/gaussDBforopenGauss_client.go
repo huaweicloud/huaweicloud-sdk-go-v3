@@ -208,6 +208,27 @@ func (c *GaussDBforopenGaussClient) CreateConfigurationTemplateInvoker(request *
 	return &CreateConfigurationTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateCrossCloudConstructDisaster 搭建容灾关系
+//
+// 搭建容灾关系（从主实例端下发）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) CreateCrossCloudConstructDisaster(request *model.CreateCrossCloudConstructDisasterRequest) (*model.CreateCrossCloudConstructDisasterResponse, error) {
+	requestDef := GenReqDefForCreateCrossCloudConstructDisaster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCrossCloudConstructDisasterResponse), nil
+	}
+}
+
+// CreateCrossCloudConstructDisasterInvoker 搭建容灾关系
+func (c *GaussDBforopenGaussClient) CreateCrossCloudConstructDisasterInvoker(request *model.CreateCrossCloudConstructDisasterRequest) *CreateCrossCloudConstructDisasterInvoker {
+	requestDef := GenReqDefForCreateCrossCloudConstructDisaster()
+	return &CreateCrossCloudConstructDisasterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDatabase 创建数据库
 //
 // 在指定实例中创建数据库。
@@ -649,6 +670,174 @@ func (c *GaussDBforopenGaussClient) DownloadBackupInvoker(request *model.Downloa
 	return &DownloadBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExecuteCrossCloudDisasterDataCacheEnd 主实例结束容灾日志保持
+//
+// 结束stream流式容灾的日志保持功能，目前只有stream流容灾支持。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ExecuteCrossCloudDisasterDataCacheEnd(request *model.ExecuteCrossCloudDisasterDataCacheEndRequest) (*model.ExecuteCrossCloudDisasterDataCacheEndResponse, error) {
+	requestDef := GenReqDefForExecuteCrossCloudDisasterDataCacheEnd()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteCrossCloudDisasterDataCacheEndResponse), nil
+	}
+}
+
+// ExecuteCrossCloudDisasterDataCacheEndInvoker 主实例结束容灾日志保持
+func (c *GaussDBforopenGaussClient) ExecuteCrossCloudDisasterDataCacheEndInvoker(request *model.ExecuteCrossCloudDisasterDataCacheEndRequest) *ExecuteCrossCloudDisasterDataCacheEndInvoker {
+	requestDef := GenReqDefForExecuteCrossCloudDisasterDataCacheEnd()
+	return &ExecuteCrossCloudDisasterDataCacheEndInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteCrossCloudDisasterDataCacheStart 开始日志保持
+//
+// 主实例开始容灾日志保持，目前只有stream流容灾支持。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ExecuteCrossCloudDisasterDataCacheStart(request *model.ExecuteCrossCloudDisasterDataCacheStartRequest) (*model.ExecuteCrossCloudDisasterDataCacheStartResponse, error) {
+	requestDef := GenReqDefForExecuteCrossCloudDisasterDataCacheStart()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteCrossCloudDisasterDataCacheStartResponse), nil
+	}
+}
+
+// ExecuteCrossCloudDisasterDataCacheStartInvoker 开始日志保持
+func (c *GaussDBforopenGaussClient) ExecuteCrossCloudDisasterDataCacheStartInvoker(request *model.ExecuteCrossCloudDisasterDataCacheStartRequest) *ExecuteCrossCloudDisasterDataCacheStartInvoker {
+	requestDef := GenReqDefForExecuteCrossCloudDisasterDataCacheStart()
+	return &ExecuteCrossCloudDisasterDataCacheStartInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteCrossCloudDisasterEndSimulation 结束容灾演练
+//
+// 灾备实例结束容灾演练，目前只有stream流容灾支持。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ExecuteCrossCloudDisasterEndSimulation(request *model.ExecuteCrossCloudDisasterEndSimulationRequest) (*model.ExecuteCrossCloudDisasterEndSimulationResponse, error) {
+	requestDef := GenReqDefForExecuteCrossCloudDisasterEndSimulation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteCrossCloudDisasterEndSimulationResponse), nil
+	}
+}
+
+// ExecuteCrossCloudDisasterEndSimulationInvoker 结束容灾演练
+func (c *GaussDBforopenGaussClient) ExecuteCrossCloudDisasterEndSimulationInvoker(request *model.ExecuteCrossCloudDisasterEndSimulationRequest) *ExecuteCrossCloudDisasterEndSimulationInvoker {
+	requestDef := GenReqDefForExecuteCrossCloudDisasterEndSimulation()
+	return &ExecuteCrossCloudDisasterEndSimulationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteCrossCloudDisasterRecoveryFailover 备实例容灾升主
+//
+// 容灾升主failover（灾备实例端下发）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ExecuteCrossCloudDisasterRecoveryFailover(request *model.ExecuteCrossCloudDisasterRecoveryFailoverRequest) (*model.ExecuteCrossCloudDisasterRecoveryFailoverResponse, error) {
+	requestDef := GenReqDefForExecuteCrossCloudDisasterRecoveryFailover()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteCrossCloudDisasterRecoveryFailoverResponse), nil
+	}
+}
+
+// ExecuteCrossCloudDisasterRecoveryFailoverInvoker 备实例容灾升主
+func (c *GaussDBforopenGaussClient) ExecuteCrossCloudDisasterRecoveryFailoverInvoker(request *model.ExecuteCrossCloudDisasterRecoveryFailoverRequest) *ExecuteCrossCloudDisasterRecoveryFailoverInvoker {
+	requestDef := GenReqDefForExecuteCrossCloudDisasterRecoveryFailover()
+	return &ExecuteCrossCloudDisasterRecoveryFailoverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteCrossCloudDisasterRestore 重建容灾关系
+//
+// 流容灾备升主选择支持容灾回切，实现容灾关系的重建任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ExecuteCrossCloudDisasterRestore(request *model.ExecuteCrossCloudDisasterRestoreRequest) (*model.ExecuteCrossCloudDisasterRestoreResponse, error) {
+	requestDef := GenReqDefForExecuteCrossCloudDisasterRestore()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteCrossCloudDisasterRestoreResponse), nil
+	}
+}
+
+// ExecuteCrossCloudDisasterRestoreInvoker 重建容灾关系
+func (c *GaussDBforopenGaussClient) ExecuteCrossCloudDisasterRestoreInvoker(request *model.ExecuteCrossCloudDisasterRestoreRequest) *ExecuteCrossCloudDisasterRestoreInvoker {
+	requestDef := GenReqDefForExecuteCrossCloudDisasterRestore()
+	return &ExecuteCrossCloudDisasterRestoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteCrossCloudDisasterStartSimulation 开始容灾演练
+//
+// 开始容灾演练，目前只有stream流容灾支持。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ExecuteCrossCloudDisasterStartSimulation(request *model.ExecuteCrossCloudDisasterStartSimulationRequest) (*model.ExecuteCrossCloudDisasterStartSimulationResponse, error) {
+	requestDef := GenReqDefForExecuteCrossCloudDisasterStartSimulation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteCrossCloudDisasterStartSimulationResponse), nil
+	}
+}
+
+// ExecuteCrossCloudDisasterStartSimulationInvoker 开始容灾演练
+func (c *GaussDBforopenGaussClient) ExecuteCrossCloudDisasterStartSimulationInvoker(request *model.ExecuteCrossCloudDisasterStartSimulationRequest) *ExecuteCrossCloudDisasterStartSimulationInvoker {
+	requestDef := GenReqDefForExecuteCrossCloudDisasterStartSimulation()
+	return &ExecuteCrossCloudDisasterStartSimulationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteCrossCloudDisasterSwitchover 灾备实例主从切换
+//
+// 容灾switchover（可在主备任一一端下发）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ExecuteCrossCloudDisasterSwitchover(request *model.ExecuteCrossCloudDisasterSwitchoverRequest) (*model.ExecuteCrossCloudDisasterSwitchoverResponse, error) {
+	requestDef := GenReqDefForExecuteCrossCloudDisasterSwitchover()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteCrossCloudDisasterSwitchoverResponse), nil
+	}
+}
+
+// ExecuteCrossCloudDisasterSwitchoverInvoker 灾备实例主从切换
+func (c *GaussDBforopenGaussClient) ExecuteCrossCloudDisasterSwitchoverInvoker(request *model.ExecuteCrossCloudDisasterSwitchoverRequest) *ExecuteCrossCloudDisasterSwitchoverInvoker {
+	requestDef := GenReqDefForExecuteCrossCloudDisasterSwitchover()
+	return &ExecuteCrossCloudDisasterSwitchoverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteCrossCloudReleaseDisaster 解除容灾关系
+//
+// 解除容灾（从容灾主集群下发）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ExecuteCrossCloudReleaseDisaster(request *model.ExecuteCrossCloudReleaseDisasterRequest) (*model.ExecuteCrossCloudReleaseDisasterResponse, error) {
+	requestDef := GenReqDefForExecuteCrossCloudReleaseDisaster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteCrossCloudReleaseDisasterResponse), nil
+	}
+}
+
+// ExecuteCrossCloudReleaseDisasterInvoker 解除容灾关系
+func (c *GaussDBforopenGaussClient) ExecuteCrossCloudReleaseDisasterInvoker(request *model.ExecuteCrossCloudReleaseDisasterRequest) *ExecuteCrossCloudReleaseDisasterInvoker {
+	requestDef := GenReqDefForExecuteCrossCloudReleaseDisaster()
+	return &ExecuteCrossCloudReleaseDisasterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // InstallKernelPlugin 安装插件
 //
 // 安装插件
@@ -1067,6 +1256,27 @@ func (c *GaussDBforopenGaussClient) ListDbUsers(request *model.ListDbUsersReques
 func (c *GaussDBforopenGaussClient) ListDbUsersInvoker(request *model.ListDbUsersRequest) *ListDbUsersInvoker {
 	requestDef := GenReqDefForListDbUsers()
 	return &ListDbUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDisasterRecoveryRecord 查询操作记录
+//
+// 查询容灾操作记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListDisasterRecoveryRecord(request *model.ListDisasterRecoveryRecordRequest) (*model.ListDisasterRecoveryRecordResponse, error) {
+	requestDef := GenReqDefForListDisasterRecoveryRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDisasterRecoveryRecordResponse), nil
+	}
+}
+
+// ListDisasterRecoveryRecordInvoker 查询操作记录
+func (c *GaussDBforopenGaussClient) ListDisasterRecoveryRecordInvoker(request *model.ListDisasterRecoveryRecordRequest) *ListDisasterRecoveryRecordInvoker {
+	requestDef := GenReqDefForListDisasterRecoveryRecord()
+	return &ListDisasterRecoveryRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListEpsQuotas 查询企业项目配额组
@@ -1700,6 +1910,27 @@ func (c *GaussDBforopenGaussClient) ResetConfigurationInvoker(request *model.Res
 	return &ResetConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ResetDrConfig 重置容灾配置
+//
+// 重置容灾网络等配置。1.将自动“创建委托”以授权DBS云服务访问VPC资源信息、查询IAAS接口。2.重置实例容灾网络等配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ResetDrConfig(request *model.ResetDrConfigRequest) (*model.ResetDrConfigResponse, error) {
+	requestDef := GenReqDefForResetDrConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetDrConfigResponse), nil
+	}
+}
+
+// ResetDrConfigInvoker 重置容灾配置
+func (c *GaussDBforopenGaussClient) ResetDrConfigInvoker(request *model.ResetDrConfigRequest) *ResetDrConfigInvoker {
+	requestDef := GenReqDefForResetDrConfig()
+	return &ResetDrConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ResetPwd 重置数据库密码。
 //
 // 重置数据库密码。
@@ -2034,6 +2265,48 @@ func (c *GaussDBforopenGaussClient) ShowConfigurationDetail(request *model.ShowC
 func (c *GaussDBforopenGaussClient) ShowConfigurationDetailInvoker(request *model.ShowConfigurationDetailRequest) *ShowConfigurationDetailInvoker {
 	requestDef := GenReqDefForShowConfigurationDetail()
 	return &ShowConfigurationDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCrossCloudDisasterInstanceMonitor 查询实例容灾监控实时状态
+//
+// 查询实例容灾监控实时状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ShowCrossCloudDisasterInstanceMonitor(request *model.ShowCrossCloudDisasterInstanceMonitorRequest) (*model.ShowCrossCloudDisasterInstanceMonitorResponse, error) {
+	requestDef := GenReqDefForShowCrossCloudDisasterInstanceMonitor()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCrossCloudDisasterInstanceMonitorResponse), nil
+	}
+}
+
+// ShowCrossCloudDisasterInstanceMonitorInvoker 查询实例容灾监控实时状态
+func (c *GaussDBforopenGaussClient) ShowCrossCloudDisasterInstanceMonitorInvoker(request *model.ShowCrossCloudDisasterInstanceMonitorRequest) *ShowCrossCloudDisasterInstanceMonitorInvoker {
+	requestDef := GenReqDefForShowCrossCloudDisasterInstanceMonitor()
+	return &ShowCrossCloudDisasterInstanceMonitorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCrossCloudDisasterRelations 查询容灾关系列表
+//
+// 查询容灾关系列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ShowCrossCloudDisasterRelations(request *model.ShowCrossCloudDisasterRelationsRequest) (*model.ShowCrossCloudDisasterRelationsResponse, error) {
+	requestDef := GenReqDefForShowCrossCloudDisasterRelations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCrossCloudDisasterRelationsResponse), nil
+	}
+}
+
+// ShowCrossCloudDisasterRelationsInvoker 查询容灾关系列表
+func (c *GaussDBforopenGaussClient) ShowCrossCloudDisasterRelationsInvoker(request *model.ShowCrossCloudDisasterRelationsRequest) *ShowCrossCloudDisasterRelationsInvoker {
+	requestDef := GenReqDefForShowCrossCloudDisasterRelations()
+	return &ShowCrossCloudDisasterRelationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDeploymentForm 查询解决方案模板配置

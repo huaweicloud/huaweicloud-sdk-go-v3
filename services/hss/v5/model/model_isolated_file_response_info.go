@@ -36,7 +36,7 @@ type IsolatedFileResponseInfo struct {
 	// 弹性公网IP地址
 	PublicIp string `json:"public_ip"`
 
-	// 资产重要性
+	// 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
 	AssetValue string `json:"asset_value"`
 
 	// 更新时间，毫秒

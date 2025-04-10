@@ -14,6 +14,9 @@ type CreateEdgeSite struct {
 	// 边缘小站所属区域ID，最大长度为64个字节。只包含英文字母（a-z、A-Z）、数字（0-9）、下划线（_）、中划线（-）
 	RegionId string `json:"region_id"`
 
+	// 边缘小站所属项目ID
+	ProjectId *string `json:"project_id,omitempty"`
+
 	// 边缘小站描述，最大支持长度为255个字节，不允许包含<>
 	Description *string `json:"description,omitempty"`
 

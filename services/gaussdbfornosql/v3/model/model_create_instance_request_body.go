@@ -35,7 +35,7 @@ type CreateInstanceRequestBody struct {
 	// 实例类型。   -  GeminiDB Cassandra支持经典部署模式集群类型，取值为“Cluster”。   -  GeminiDB Cassandra支持云原生部署模式集群类型，取值“CloudNativeCluster”。   -  GeminiDB Mongo4.0版本支持副本集类型，取值为“ReplicaSet”。   -  GeminiDB Influx支持经典部署模式集群类型，取值为“Cluster”。   -  GeminiDB Influx支持云原生部署模式集群类型，取值为“CloudNativeCluster”。   -  GeminiDB Influx支持经典部署模式单节点类型，取值为“InfluxdbSingle”。   -  GeminiDB Redis支持经典部署模式Proxy集群类型，取值为“Cluster”。   -  GeminiDB redis支持云原生部署模式集群类型，取值为“CloudNativeCluster”。   -  GeminiDB Redis支持经典部署模式Cluster集群类型，取值为“RedisCluster”   -  GeminiDB Redis支持经典部署模式主备类型，取值为“Replication”。
 	Mode string `json:"mode"`
 
-	// 产品类型。   -  Capacity 容量型   -  Standard 标准型 当创建GeminiDB Redis云原生部署模式集群类型必传此参数。
+	// 产品类型   -  Capacity 容量型   -  Standard 标准型 当创建GeminiDB Redis云原生部署模式集群类型必传此参数。
 	ProductType *string `json:"product_type,omitempty"`
 
 	// 实例规格详情。获取方法请参见查询所有实例规格信息中响应“flavors”字段下参数的值。
@@ -62,7 +62,12 @@ type CreateInstanceRequestBody struct {
 	// 数据库访问端口号。 目前仅支持GeminiDB Redis实例支持自定义端口，取值范围为：1024~65535，禁用端口号为：2180、2887、3887、6377、6378、6380、8018、8079、8091、8479、8484、8999、12017、12333、50069。 不指定端口时，创建GeminiDB Redis实例的访问端口默认为6379。 如果该实例计划用于搭建双活容灾场景，请配置为8635端口。
 	Port *string `json:"port,omitempty"`
 
+	// 是否启用IPv6。默认 - true: 启用IPv6。 - false: 不启用IPv6，默认为不启用。
+	Ipv6Enabled *bool `json:"ipv6_enabled,omitempty"`
+
 	AvailabilityZoneDetail *AvailabilityZoneDetail `json:"availability_zone_detail,omitempty"`
+
+	LbAccessControlSettings *LbAccessControlSettings `json:"lb_access_control_settings,omitempty"`
 }
 
 func (o CreateInstanceRequestBody) String() string {

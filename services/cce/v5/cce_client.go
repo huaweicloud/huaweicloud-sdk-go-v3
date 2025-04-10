@@ -15,7 +15,7 @@ func NewCceClient(hcClient *httpclient.HcHttpClient) *CceClient {
 }
 
 func CceClientBuilder() *httpclient.HcHttpClientBuilder {
-	builder := httpclient.NewHcHttpClientBuilder()
+	builder := httpclient.NewHcHttpClientBuilder().WithErrorHandler(CceErrorHandler{})
 	return builder
 }
 

@@ -567,6 +567,27 @@ func (c *CodeArtsArtifactClient) ShowStorageInvoker(request *model.ShowStorageRe
 	return &ShowStorageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowUserPrivileges 查询用户在项目下的权限
+//
+// 查询用户在项目下的权限
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsArtifactClient) ShowUserPrivileges(request *model.ShowUserPrivilegesRequest) (*model.ShowUserPrivilegesResponse, error) {
+	requestDef := GenReqDefForShowUserPrivileges()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowUserPrivilegesResponse), nil
+	}
+}
+
+// ShowUserPrivilegesInvoker 查询用户在项目下的权限
+func (c *CodeArtsArtifactClient) ShowUserPrivilegesInvoker(request *model.ShowUserPrivilegesRequest) *ShowUserPrivilegesInvoker {
+	requestDef := GenReqDefForShowUserPrivileges()
+	return &ShowUserPrivilegesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateArtifactory 编辑非maven仓库信息
 //
 // 编辑非maven仓库信息

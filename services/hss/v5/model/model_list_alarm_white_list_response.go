@@ -12,6 +12,12 @@ type ListAlarmWhiteListResponse struct {
 	// 总数
 	TotalNum *int32 `json:"total_num,omitempty"`
 
+	// 可继续添加的白名单数量
+	RemainNum *int32 `json:"remain_num,omitempty"`
+
+	// 白名单数量上限
+	LimitNum *int32 `json:"limit_num,omitempty"`
+
 	// 支持筛选的事件类型
 	EventTypeList *[]int32 `json:"event_type_list,omitempty"`
 

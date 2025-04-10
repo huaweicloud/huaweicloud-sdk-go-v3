@@ -8,6 +8,12 @@ import (
 
 type ProtectionServerInfo struct {
 
+	// 项目ID
+	ProjectId *string `json:"project_id,omitempty"`
+
+	// 企业项目ID
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
 	// 服务器ID
 	HostId *string `json:"host_id,omitempty"`
 

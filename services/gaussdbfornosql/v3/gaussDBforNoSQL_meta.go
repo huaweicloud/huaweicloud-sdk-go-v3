@@ -634,6 +634,14 @@ func GenReqDefForListConfigurationTemplates() *def.HttpRequestDef {
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DatastoreName").
+		WithJsonTag("datastore_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Mode").
+		WithJsonTag("mode").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -645,6 +653,15 @@ func GenReqDefForListConfigurations() *def.HttpRequestDef {
 		WithPath("/v3/{project_id}/configurations").
 		WithResponse(new(model.ListConfigurationsResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DatastoreName").
+		WithJsonTag("datastore_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Mode").
+		WithJsonTag("mode").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -989,12 +1006,12 @@ func GenReqDefForListInstances() *def.HttpRequestDef {
 		WithJsonTag("name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Mode").
-		WithJsonTag("mode").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("DatastoreType").
 		WithJsonTag("datastore_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Mode").
+		WithJsonTag("mode").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VpcId").

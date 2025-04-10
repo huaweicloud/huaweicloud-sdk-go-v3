@@ -30,6 +30,12 @@ type ContainerNodeInfo struct {
 	// 防护是否中断
 	ProtectInterrupt *bool `json:"protect_interrupt,omitempty"`
 
+	// 防护是否降级
+	ProtectDegradation *bool `json:"protect_degradation,omitempty"`
+
+	// 防护降级原因
+	DegradationReason *string `json:"degradation_reason,omitempty"`
+
 	// 标签：用来识别cce容器节点和自建  - cce：cce节点  - self：自建节点  - other：其他节点
 	ContainerTags *string `json:"container_tags,omitempty"`
 

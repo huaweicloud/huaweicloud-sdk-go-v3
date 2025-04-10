@@ -40,6 +40,9 @@ type UpdateProtectionPolicyInfoRequestInfo struct {
 
 	// 进程白名单
 	ProcessWhitelist *[]TrustProcessInfo `json:"process_whitelist,omitempty"`
+
+	// 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。
+	AiProtectionStatus *string `json:"ai_protection_status,omitempty"`
 }
 
 func (o UpdateProtectionPolicyInfoRequestInfo) String() string {

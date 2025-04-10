@@ -24,6 +24,9 @@ type WeakPwdListInfoResponseInfo struct {
 	// 服务器公网IP
 	PublicIp *string `json:"public_ip,omitempty"`
 
+	// 最近扫描时间，时间戳单位：毫秒
+	UpdateTime *int64 `json:"update_time,omitempty"`
+
 	// 弱口令账号列表
 	WeakPwdAccounts *[]WeakPwdAccountInfoResponseInfo `json:"weak_pwd_accounts,omitempty"`
 }

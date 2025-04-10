@@ -9,7 +9,7 @@ import (
 // ExportVulsRequest Request Object
 type ExportVulsRequest struct {
 
-	// 企业租户ID，查询所有企业项目时填写：all_granted_eps
+	// 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 漏洞类型，包含如下：   -linux_vul : linux漏洞   -windows_vul : windows漏洞   -web_cms : Web-CMS漏洞   -app_vul : 应用漏洞   -urgent_vul : 应急漏洞
@@ -23,6 +23,12 @@ type ExportVulsRequest struct {
 
 	// 主机id，导出单台主机漏洞时会用到
 	HostId *string `json:"host_id,omitempty"`
+
+	// 导出数据条数
+	ExportSize int32 `json:"export_size"`
+
+	// 导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
+	Category string `json:"category"`
 
 	// limit
 	Limit *int32 `json:"limit,omitempty"`
@@ -50,12 +56,6 @@ type ExportVulsRequest struct {
 
 	// 服务器组名称
 	GroupName *string `json:"group_name,omitempty"`
-
-	// 导出数据条数
-	ExportSize int32 `json:"export_size"`
-
-	// 导出漏洞数据类别:   - vul ：漏洞   - host: 主机漏洞
-	Category string `json:"category"`
 
 	Body *ExportVulRequestBody `json:"body,omitempty"`
 }

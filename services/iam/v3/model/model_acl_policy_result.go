@@ -6,7 +6,6 @@ import (
 	"strings"
 )
 
-// AclPolicyResult
 type AclPolicyResult struct {
 
 	// 允许访问的IP地址或网段。

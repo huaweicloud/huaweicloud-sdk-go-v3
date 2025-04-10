@@ -9,7 +9,7 @@ import (
 // ListHostStatusRequest Request Object
 type ListHostStatusRequest struct {
 
-	// 企业项目ID，查询所有企业项目时填写：all_granted_eps
+	// 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise：容器版。
@@ -42,7 +42,7 @@ type ListHostStatusRequest struct {
 	// 公网或私网IP
 	IpAddr *string `json:"ip_addr,omitempty"`
 
-	// 防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
+	// 防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。   - protection_exception ：防护异常。
 	ProtectStatus *string `json:"protect_status,omitempty"`
 
 	// 服务器组ID
@@ -51,11 +51,26 @@ type ListHostStatusRequest struct {
 	// 服务器组名称
 	GroupName *string `json:"group_name,omitempty"`
 
+	// vpc id
+	VpcId *string `json:"vpc_id,omitempty"`
+
 	// Region ID
 	Region *string `json:"region,omitempty"`
 
 	// 存在告警事件
 	HasIntrusion *bool `json:"has_intrusion,omitempty"`
+
+	// 存在漏洞风险
+	HasVul *bool `json:"has_vul,omitempty"`
+
+	// 存在基线风险
+	HasBaseline *bool `json:"has_baseline,omitempty"`
+
+	// 排序字段，只支持risk_num - risk_num：风险总量
+	SortKey *string `json:"sort_key,omitempty"`
+
+	// 排序的顺序 - asc: 正序 - desc: 倒序
+	SortDir *string `json:"sort_dir,omitempty"`
 
 	// 策略组ID
 	PolicyGroupId *string `json:"policy_group_id,omitempty"`
@@ -68,6 +83,9 @@ type ListHostStatusRequest struct {
 
 	// 是否强制从ECS同步主机
 	Refresh *bool `json:"refresh,omitempty"`
+
+	// 是否获取主机常用登录地信息
+	GetCommonLoginLocations *bool `json:"get_common_login_locations,omitempty"`
 
 	// 是否返回比当前版本高的所有版本
 	AboveVersion *bool `json:"above_version,omitempty"`
@@ -86,6 +104,21 @@ type ListHostStatusRequest struct {
 
 	// agent是否可升级
 	AgentUpgradable *bool `json:"agent_upgradable,omitempty"`
+
+	// 是否安装模式场景
+	InstallMode *bool `json:"install_mode,omitempty"`
+
+	// 是否绑定DEW密钥
+	BindingKey *bool `json:"binding_key,omitempty"`
+
+	// 是否防护中断
+	ProtectInterrupt *bool `json:"protect_interrupt,omitempty"`
+
+	// 是否集群内节点
+	Incluster *bool `json:"incluster,omitempty"`
+
+	// 是否防护降级
+	ProtectDegradation *bool `json:"protect_degradation,omitempty"`
 
 	// 每页显示数量
 	Limit *int32 `json:"limit,omitempty"`

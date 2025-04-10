@@ -28,6 +28,9 @@ type VulScanTaskHostInfo struct {
 
 	// 扫描失败的原因列表
 	FailedReasons *[]VulScanTaskHostInfoFailedReasons `json:"failed_reasons,omitempty"`
+
+	// 该主机的扫描详情信息
+	VulScanDetails *[]VulScanTaskHostInfoVulScanDetails `json:"vul_scan_details,omitempty"`
 }
 
 func (o VulScanTaskHostInfo) String() string {

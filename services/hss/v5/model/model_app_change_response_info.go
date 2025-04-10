@@ -30,10 +30,10 @@ type AppChangeResponseInfo struct {
 	// 版本号
 	Version *string `json:"version,omitempty"`
 
-	// 软件更新时间
+	// 软件更新时间，单位毫秒
 	UpdateTime *int64 `json:"update_time,omitempty"`
 
-	// 最近扫描时间
+	// 最近扫描时间，单位毫秒
 	RecentScanTime *int64 `json:"recent_scan_time,omitempty"`
 }
 

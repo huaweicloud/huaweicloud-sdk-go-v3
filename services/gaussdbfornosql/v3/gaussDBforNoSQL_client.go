@@ -713,9 +713,9 @@ func (c *GaussDBforNoSQLClient) ListCassandraSlowLogsInvoker(request *model.List
 	return &ListCassandraSlowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListConfigurationDatastores 查询支持参数模板的引擎信息
+// ListConfigurationDatastores 查询支持参数模板的接口信息
 //
-// 查询支持参数模板的引擎信息
+// 查询支持参数模板的接口信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ListConfigurationDatastores(request *model.ListConfigurationDatastoresRequest) (*model.ListConfigurationDatastoresResponse, error) {
@@ -728,7 +728,7 @@ func (c *GaussDBforNoSQLClient) ListConfigurationDatastores(request *model.ListC
 	}
 }
 
-// ListConfigurationDatastoresInvoker 查询支持参数模板的引擎信息
+// ListConfigurationDatastoresInvoker 查询支持参数模板的接口信息
 func (c *GaussDBforNoSQLClient) ListConfigurationDatastoresInvoker(request *model.ListConfigurationDatastoresRequest) *ListConfigurationDatastoresInvoker {
 	requestDef := GenReqDefForListConfigurationDatastores()
 	return &ListConfigurationDatastoresInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1723,7 +1723,7 @@ func (c *GaussDBforNoSQLClient) ResizeInstanceVolumeInvoker(request *model.Resiz
 	return &ResizeInstanceVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// RestartInstance 重启实例或节点的数据库服务
+// RestartInstance 重启实例或节点
 //
 // 重启实例或节点的数据库服务。
 //
@@ -1738,7 +1738,7 @@ func (c *GaussDBforNoSQLClient) RestartInstance(request *model.RestartInstanceRe
 	}
 }
 
-// RestartInstanceInvoker 重启实例或节点的数据库服务
+// RestartInstanceInvoker 重启实例或节点
 func (c *GaussDBforNoSQLClient) RestartInstanceInvoker(request *model.RestartInstanceRequest) *RestartInstanceInvoker {
 	requestDef := GenReqDefForRestartInstance()
 	return &RestartInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2229,9 +2229,9 @@ func (c *GaussDBforNoSQLClient) ShowInstanceBiactiveRegionsInvoker(request *mode
 	return &ShowInstanceBiactiveRegionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowInstanceConfiguration 获取指定实例的参数
+// ShowInstanceConfiguration 查询实例参数配置
 //
-// 获取指定实例的参数信息。
+// 查询实例参数配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ShowInstanceConfiguration(request *model.ShowInstanceConfigurationRequest) (*model.ShowInstanceConfigurationResponse, error) {
@@ -2244,7 +2244,7 @@ func (c *GaussDBforNoSQLClient) ShowInstanceConfiguration(request *model.ShowIns
 	}
 }
 
-// ShowInstanceConfigurationInvoker 获取指定实例的参数
+// ShowInstanceConfigurationInvoker 查询实例参数配置
 func (c *GaussDBforNoSQLClient) ShowInstanceConfigurationInvoker(request *model.ShowInstanceConfigurationRequest) *ShowInstanceConfigurationInvoker {
 	requestDef := GenReqDefForShowInstanceConfiguration()
 	return &ShowInstanceConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2630,7 +2630,7 @@ func (c *GaussDBforNoSQLClient) SwitchIpGroupInvoker(request *model.SwitchIpGrou
 
 // SwitchOver Redis主备切换
 //
-// 切换实例下的主备节点
+// 切换实例的主备节点。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) SwitchOver(request *model.SwitchOverRequest) (*model.SwitchOverResponse, error) {

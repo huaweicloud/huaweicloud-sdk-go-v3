@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -29,6 +32,15 @@ type Host struct {
 	// 所属企业项目名称
 	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
 
+	// 系统名称
+	OsName *string `json:"os_name,omitempty"`
+
+	// 系统版本
+	OsVersion *string `json:"os_version,omitempty"`
+
+	// 内核版本
+	KernelVersion *string `json:"kernel_version,omitempty"`
+
 	// 服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。
 	HostStatus *string `json:"host_status,omitempty"`
 
@@ -41,7 +53,7 @@ type Host struct {
 	// 主机开通的版本，包含如下7种输入。   - hss.version.null ：无。   - hss.version.basic ：基础版。   - hss.version.advanced ：专业版。   - hss.version.enterprise ：企业版。   - hss.version.premium ：旗舰版。   - hss.version.wtp ：网页防篡改版。   - hss.version.container.enterprise ：容器版。
 	Version *string `json:"version,omitempty"`
 
-	// 防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。
+	// 防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
 	ProtectStatus *string `json:"protect_status,omitempty"`
 
 	// 系统镜像
@@ -121,6 +133,39 @@ type Host struct {
 
 	// 防护是否中断
 	ProtectInterrupt *bool `json:"protect_interrupt,omitempty"`
+
+	// 防护是否降级
+	ProtectDegradation *bool `json:"protect_degradation,omitempty"`
+
+	// 服务器来源
+	HostSources *HostHostSources `json:"host_sources,omitempty"`
+
+	// 防护中断原因
+	InterruptReason *string `json:"interrupt_reason,omitempty"`
+
+	// 防护降级原因
+	DegradationReason *string `json:"degradation_reason,omitempty"`
+
+	// 使用的密钥对名称
+	KeyName *string `json:"key_name,omitempty"`
+
+	// cce购买主机
+	AutoOpenVersion *string `json:"auto_open_version,omitempty"`
+
+	// 安装进度
+	InstallProgress *int32 `json:"install_progress,omitempty"`
+
+	// vpc id
+	VpcId *string `json:"vpc_id,omitempty"`
+
+	// 后台识别服务器常用登录地编号
+	CommonLoginAreaCodes *[]int32 `json:"common_login_area_codes,omitempty"`
+
+	// 集群名称
+	ClusterName *string `json:"cluster_name,omitempty"`
+
+	// 集群id
+	ClusterId *string `json:"cluster_id,omitempty"`
 }
 
 func (o Host) String() string {
@@ -130,4 +175,55 @@ func (o Host) String() string {
 	}
 
 	return strings.Join([]string{"Host", string(data)}, " ")
+}
+
+type HostHostSources struct {
+	value string
+}
+
+type HostHostSourcesEnum struct {
+	ECS       HostHostSources
+	OUTSIDE   HostHostSources
+	WORKSPACE HostHostSources
+}
+
+func GetHostHostSourcesEnum() HostHostSourcesEnum {
+	return HostHostSourcesEnum{
+		ECS: HostHostSources{
+			value: "ecs",
+		},
+		OUTSIDE: HostHostSources{
+			value: "outside",
+		},
+		WORKSPACE: HostHostSources{
+			value: "workspace",
+		},
+	}
+}
+
+func (c HostHostSources) Value() string {
+	return c.value
+}
+
+func (c HostHostSources) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *HostHostSources) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

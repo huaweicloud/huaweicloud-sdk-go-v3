@@ -43,6 +43,15 @@ type SimplePremiumWafHost struct {
 
 	// 企业项目id
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 云模式elb接入域名返回此字段，表示域名所属独享引擎组
+	PoolIds *[]string `json:"pool_ids,omitempty"`
+
+	// 云模式elb接入域名返回此字段，表示负载均衡器（ELB）id
+	LoadbalancerId *string `json:"loadbalancer_id,omitempty"`
+
+	// 云模式elb接入域名返回此字段，表示业务端口
+	ProtocolPort *string `json:"protocol_port,omitempty"`
 }
 
 func (o SimplePremiumWafHost) String() string {

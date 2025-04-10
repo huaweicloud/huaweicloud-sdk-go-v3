@@ -34,6 +34,9 @@ type VulScanTaskInfo struct {
 
 	// 该任务已扫描失败的主机数量
 	FailedHostNum *int32 `json:"failed_host_num,omitempty"`
+
+	// 预计完成时间
+	EstimatedTime *int32 `json:"estimated_time,omitempty"`
 }
 
 func (o VulScanTaskInfo) String() string {

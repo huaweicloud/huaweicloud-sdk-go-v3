@@ -36,7 +36,7 @@ type EdgeSiteDetail struct {
 
 	Location *LocationDetail `json:"location,omitempty"`
 
-	// [边缘小站](tag:hws)[分布式微型专属小站](tag:cmcc)所属企业项目ID
+	// 边缘小站所属企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 边缘小站创建时间

@@ -640,6 +640,22 @@ func GenReqDefForShowStorage() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowUserPrivileges() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/cloudartifact/v3/user/{project_id}/privileges").
+		WithResponse(new(model.ShowUserPrivilegesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateArtifactory() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
