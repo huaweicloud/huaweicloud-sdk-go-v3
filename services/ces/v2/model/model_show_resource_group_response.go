@@ -30,8 +30,11 @@ type ShowResourceGroupResponse struct {
 	AssociationEpIds *[]string `json:"association_ep_ids,omitempty"`
 
 	// 标签动态匹配时的关联标签,type为TAG时该字段不为空
-	Tags           *[]ResourceGroupTagRelation `json:"tags,omitempty"`
-	HttpStatusCode int                         `json:"-"`
+	Tags *[]ResourceGroupTagRelation `json:"tags,omitempty"`
+
+	// 实例名称匹配参数
+	Instances      *[]Instance `json:"instances,omitempty"`
+	HttpStatusCode int         `json:"-"`
 }
 
 func (o ShowResourceGroupResponse) String() string {

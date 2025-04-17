@@ -37,22 +37,6 @@ func (i *DeleteDefaultConfigInvoker) Invoke() (*model.DeleteDefaultConfigRespons
 	}
 }
 
-type ShowAlertConfigInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowAlertConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowAlertConfigInvoker) Invoke() (*model.ShowAlertConfigResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowAlertConfigResponse), nil
-	}
-}
-
 type ShowDefaultConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -69,19 +53,19 @@ func (i *ShowDefaultConfigInvoker) Invoke() (*model.ShowDefaultConfigResponse, e
 	}
 }
 
-type UpdateAlertConfigInvoker struct {
+type EnableDefensePolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *UpdateAlertConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *EnableDefensePolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *UpdateAlertConfigInvoker) Invoke() (*model.UpdateAlertConfigResponse, error) {
+func (i *EnableDefensePolicyInvoker) Invoke() (*model.EnableDefensePolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.UpdateAlertConfigResponse), nil
+		return result.(*model.EnableDefensePolicyResponse), nil
 	}
 }
 
@@ -133,19 +117,19 @@ func (i *ListDailyReportInvoker) Invoke() (*model.ListDailyReportResponse, error
 	}
 }
 
-type ListNewConfigsInvoker struct {
+type ListQuotaInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListNewConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ListQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ListNewConfigsInvoker) Invoke() (*model.ListNewConfigsResponse, error) {
+func (i *ListQuotaInvoker) Invoke() (*model.ListQuotaResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListNewConfigsResponse), nil
+		return result.(*model.ListQuotaResponse), nil
 	}
 }
 
@@ -197,19 +181,19 @@ func (i *ShowDDosStatusInvoker) Invoke() (*model.ShowDDosStatusResponse, error) 
 	}
 }
 
-type ShowNewTaskStatusInvoker struct {
+type ShowLogConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ShowNewTaskStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ShowLogConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ShowNewTaskStatusInvoker) Invoke() (*model.ShowNewTaskStatusResponse, error) {
+func (i *ShowLogConfigInvoker) Invoke() (*model.ShowLogConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ShowNewTaskStatusResponse), nil
+		return result.(*model.ShowLogConfigResponse), nil
 	}
 }
 
@@ -226,5 +210,21 @@ func (i *UpdateDDosInvoker) Invoke() (*model.UpdateDDosResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateDDosResponse), nil
+	}
+}
+
+type UpdateLogConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateLogConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateLogConfigInvoker) Invoke() (*model.UpdateLogConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateLogConfigResponse), nil
 	}
 }

@@ -27,7 +27,7 @@ type ShowWelcomeSpeechSwitchRequest struct {
 	// 应用ID。
 	RobotId string `json:"robot_id"`
 
-	// 智能交互语言  * CN:中文  * EN:英文
+	// 智能交互语言  * CN:中文  * EN:英文  * ESP：西班牙语（仅海外站点支持）  * por：葡萄牙语（仅海外站点支持）  * Arabic：阿拉伯语（仅海外站点支持）  * Thai：泰语（仅海外站点支持）
 	Language *ShowWelcomeSpeechSwitchRequestLanguage `json:"language,omitempty"`
 }
 
@@ -45,8 +45,12 @@ type ShowWelcomeSpeechSwitchRequestLanguage struct {
 }
 
 type ShowWelcomeSpeechSwitchRequestLanguageEnum struct {
-	CN ShowWelcomeSpeechSwitchRequestLanguage
-	EN ShowWelcomeSpeechSwitchRequestLanguage
+	CN     ShowWelcomeSpeechSwitchRequestLanguage
+	EN     ShowWelcomeSpeechSwitchRequestLanguage
+	ESP    ShowWelcomeSpeechSwitchRequestLanguage
+	POR    ShowWelcomeSpeechSwitchRequestLanguage
+	ARABIC ShowWelcomeSpeechSwitchRequestLanguage
+	THAI   ShowWelcomeSpeechSwitchRequestLanguage
 }
 
 func GetShowWelcomeSpeechSwitchRequestLanguageEnum() ShowWelcomeSpeechSwitchRequestLanguageEnum {
@@ -56,6 +60,18 @@ func GetShowWelcomeSpeechSwitchRequestLanguageEnum() ShowWelcomeSpeechSwitchRequ
 		},
 		EN: ShowWelcomeSpeechSwitchRequestLanguage{
 			value: "EN",
+		},
+		ESP: ShowWelcomeSpeechSwitchRequestLanguage{
+			value: "ESP",
+		},
+		POR: ShowWelcomeSpeechSwitchRequestLanguage{
+			value: "por",
+		},
+		ARABIC: ShowWelcomeSpeechSwitchRequestLanguage{
+			value: "Arabic",
+		},
+		THAI: ShowWelcomeSpeechSwitchRequestLanguage{
+			value: "Thai",
 		},
 	}
 }

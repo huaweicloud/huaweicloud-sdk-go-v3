@@ -14,11 +14,14 @@ type CreateAlarmTemplateRequestBody struct {
 	// 告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
 	TemplateName string `json:"template_name"`
 
+	// 自定义告警模板类型 0：指标 2： 事件
+	TemplateType *CreateAlarmTemplateRequestBodyTemplateType `json:"template_type,omitempty"`
+
 	// 告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
 	TemplateDescription *string `json:"template_description,omitempty"`
 
-	// 自定义告警模板类型 0：指标 2： 事件
-	TemplateType *CreateAlarmTemplateRequestBodyTemplateType `json:"template_type,omitempty"`
+	// 是否对模板名称已经存在的告警模板进行覆盖。true:覆盖同名告警模板；false：不覆盖，新建告警模板。
+	IsOverwrite *bool `json:"is_overwrite,omitempty"`
 
 	// 告警模板策略列表
 	Policies []Policies `json:"policies"`

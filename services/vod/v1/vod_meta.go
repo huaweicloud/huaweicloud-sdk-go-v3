@@ -674,6 +674,21 @@ func GenReqDefForPublishAssets() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForRefreshAsset() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/asset/refresh").
+		WithResponse(new(model.RefreshAssetResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowAssetCipher() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -843,6 +858,22 @@ func GenReqDefForShowPreheatingAsset() *def.HttpRequestDef {
 		WithMethod(http.MethodGet).
 		WithPath("/v1.0/{project_id}/asset/preheating").
 		WithResponse(new(model.ShowPreheatingAssetResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TaskId").
+		WithJsonTag("task_id").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowRefreshResult() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/asset/refresh").
+		WithResponse(new(model.ShowRefreshResultResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

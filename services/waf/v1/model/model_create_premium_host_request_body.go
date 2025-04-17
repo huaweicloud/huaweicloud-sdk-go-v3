@@ -46,6 +46,9 @@ type CreatePremiumHostRequestBody struct {
 
 	// 防护域名备注
 	Description *string `json:"description,omitempty"`
+
+	// 网站名称，对应WAF控制台域名详情中的网站名称
+	WebTag *string `json:"web_tag,omitempty"`
 }
 
 func (o CreatePremiumHostRequestBody) String() string {

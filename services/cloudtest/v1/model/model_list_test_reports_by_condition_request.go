@@ -15,8 +15,8 @@ type ListTestReportsByConditionRequest struct {
 	// 每页显示的条目数量,最大支持200条
 	PageSize int64 `json:"page_size"`
 
-	// 页数，page_no大于等于1
-	Offset int64 `json:"offset"`
+	// 当前页数
+	PageNo *string `json:"page_no,omitempty"`
 
 	// 名称关键词
 	KeyWord *string `json:"key_word,omitempty"`

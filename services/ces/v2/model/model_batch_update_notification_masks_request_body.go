@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -19,6 +22,18 @@ type BatchUpdateNotificationMasksRequestBody struct {
 
 	// 关联资源，relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION、RESOURCE_POLICY_ALARM时填屏蔽的资源信息；
 	Resources *[]Resource `json:"resources,omitempty"`
+
+	// 关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
+	MetricNames *[]string `json:"metric_names,omitempty"`
+
+	// 按云产品维度屏蔽时的指标信息
+	ProductMetrics *[]ProductMetric `json:"product_metrics,omitempty"`
+
+	// dimension: 子维度,product: 云产品
+	ResourceLevel *BatchUpdateNotificationMasksRequestBodyResourceLevel `json:"resource_level,omitempty"`
+
+	// 资源为云产品时的云产品名称
+	ProductName *string `json:"product_name,omitempty"`
 
 	MaskType *MaskType `json:"mask_type"`
 
@@ -42,4 +57,51 @@ func (o BatchUpdateNotificationMasksRequestBody) String() string {
 	}
 
 	return strings.Join([]string{"BatchUpdateNotificationMasksRequestBody", string(data)}, " ")
+}
+
+type BatchUpdateNotificationMasksRequestBodyResourceLevel struct {
+	value string
+}
+
+type BatchUpdateNotificationMasksRequestBodyResourceLevelEnum struct {
+	DIMENSION BatchUpdateNotificationMasksRequestBodyResourceLevel
+	PRODUCT   BatchUpdateNotificationMasksRequestBodyResourceLevel
+}
+
+func GetBatchUpdateNotificationMasksRequestBodyResourceLevelEnum() BatchUpdateNotificationMasksRequestBodyResourceLevelEnum {
+	return BatchUpdateNotificationMasksRequestBodyResourceLevelEnum{
+		DIMENSION: BatchUpdateNotificationMasksRequestBodyResourceLevel{
+			value: "dimension",
+		},
+		PRODUCT: BatchUpdateNotificationMasksRequestBodyResourceLevel{
+			value: "product",
+		},
+	}
+}
+
+func (c BatchUpdateNotificationMasksRequestBodyResourceLevel) Value() string {
+	return c.value
+}
+
+func (c BatchUpdateNotificationMasksRequestBodyResourceLevel) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *BatchUpdateNotificationMasksRequestBodyResourceLevel) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

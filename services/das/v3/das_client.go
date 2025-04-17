@@ -147,6 +147,48 @@ func (c *DasClient) ShowApiVersionInvoker(request *model.ShowApiVersionRequest) 
 	return &ShowApiVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddFullSqlTask 创建全量SQL明细解析任务
+//
+// 创建全量SQL明细解析任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) AddFullSqlTask(request *model.AddFullSqlTaskRequest) (*model.AddFullSqlTaskResponse, error) {
+	requestDef := GenReqDefForAddFullSqlTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddFullSqlTaskResponse), nil
+	}
+}
+
+// AddFullSqlTaskInvoker 创建全量SQL明细解析任务
+func (c *DasClient) AddFullSqlTaskInvoker(request *model.AddFullSqlTaskRequest) *AddFullSqlTaskInvoker {
+	requestDef := GenReqDefForAddFullSqlTask()
+	return &AddFullSqlTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeChargeMode 设置付费模式
+//
+// 设置付费实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ChangeChargeMode(request *model.ChangeChargeModeRequest) (*model.ChangeChargeModeResponse, error) {
+	requestDef := GenReqDefForChangeChargeMode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeChargeModeResponse), nil
+	}
+}
+
+// ChangeChargeModeInvoker 设置付费模式
+func (c *DasClient) ChangeChargeModeInvoker(request *model.ChangeChargeModeRequest) *ChangeChargeModeInvoker {
+	requestDef := GenReqDefForChangeChargeMode()
+	return &ChangeChargeModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ChangeSqlLimitSwitchStatus 设置SQL限流开关状态
 //
 // 设置SQL限流开关状态。目前仅支持MySQL数据库。

@@ -3292,3 +3292,24 @@ func (c *CloudtestClient) AddFeatureInvoker(request *model.AddFeatureRequest) *A
 	requestDef := GenReqDefForAddFeature()
 	return &AddFeatureInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// ListTestcasePlans 根据测试用例URI或用例编号查询测试用例对应的测试计划
+//
+// 根据测试用例URI或用例编号查询测试用例对应的测试计划
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ListTestcasePlans(request *model.ListTestcasePlansRequest) (*model.ListTestcasePlansResponse, error) {
+	requestDef := GenReqDefForListTestcasePlans()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTestcasePlansResponse), nil
+	}
+}
+
+// ListTestcasePlansInvoker 根据测试用例URI或用例编号查询测试用例对应的测试计划
+func (c *CloudtestClient) ListTestcasePlansInvoker(request *model.ListTestcasePlansRequest) *ListTestcasePlansInvoker {
+	requestDef := GenReqDefForListTestcasePlans()
+	return &ListTestcasePlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

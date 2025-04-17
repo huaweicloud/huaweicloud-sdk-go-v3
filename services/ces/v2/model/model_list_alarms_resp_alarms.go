@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -17,7 +20,7 @@ type ListAlarmsRespAlarms struct {
 	// 告警描述，长度0-256
 	Description *string `json:"description,omitempty"`
 
-	// 查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+	// 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
 	Namespace *string `json:"namespace,omitempty"`
 
 	// 告警策略
@@ -45,6 +48,12 @@ type ListAlarmsRespAlarms struct {
 
 	// 告警通知关闭时间
 	NotificationEndTime *string `json:"notification_end_time,omitempty"`
+
+	// NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+	NotificationManner *ListAlarmsRespAlarmsNotificationManner `json:"notification_manner,omitempty"`
+
+	// 关联的通知策略ID列表
+	NotificationPolicyIds *[]string `json:"notification_policy_ids,omitempty"`
 }
 
 func (o ListAlarmsRespAlarms) String() string {
@@ -54,4 +63,55 @@ func (o ListAlarmsRespAlarms) String() string {
 	}
 
 	return strings.Join([]string{"ListAlarmsRespAlarms", string(data)}, " ")
+}
+
+type ListAlarmsRespAlarmsNotificationManner struct {
+	value string
+}
+
+type ListAlarmsRespAlarmsNotificationMannerEnum struct {
+	NOTIFICATION_GROUP  ListAlarmsRespAlarmsNotificationManner
+	TOPIC_SUBSCRIPTION  ListAlarmsRespAlarmsNotificationManner
+	NOTIFICATION_POLICY ListAlarmsRespAlarmsNotificationManner
+}
+
+func GetListAlarmsRespAlarmsNotificationMannerEnum() ListAlarmsRespAlarmsNotificationMannerEnum {
+	return ListAlarmsRespAlarmsNotificationMannerEnum{
+		NOTIFICATION_GROUP: ListAlarmsRespAlarmsNotificationManner{
+			value: "NOTIFICATION_GROUP",
+		},
+		TOPIC_SUBSCRIPTION: ListAlarmsRespAlarmsNotificationManner{
+			value: "TOPIC_SUBSCRIPTION",
+		},
+		NOTIFICATION_POLICY: ListAlarmsRespAlarmsNotificationManner{
+			value: "NOTIFICATION_POLICY",
+		},
+	}
+}
+
+func (c ListAlarmsRespAlarmsNotificationManner) Value() string {
+	return c.value
+}
+
+func (c ListAlarmsRespAlarmsNotificationManner) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListAlarmsRespAlarmsNotificationManner) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

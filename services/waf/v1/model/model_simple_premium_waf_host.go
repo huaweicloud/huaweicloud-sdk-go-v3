@@ -51,7 +51,7 @@ type SimplePremiumWafHost struct {
 	LoadbalancerId *string `json:"loadbalancer_id,omitempty"`
 
 	// 云模式elb接入域名返回此字段，表示业务端口
-	ProtocolPort *string `json:"protocol_port,omitempty"`
+	ProtocolPort *int32 `json:"protocol_port,omitempty"`
 }
 
 func (o SimplePremiumWafHost) String() string {

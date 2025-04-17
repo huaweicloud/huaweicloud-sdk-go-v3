@@ -62,12 +62,7 @@ type CreateInstanceRequestBody struct {
 	// 数据库访问端口号。 目前仅支持GeminiDB Redis实例支持自定义端口，取值范围为：1024~65535，禁用端口号为：2180、2887、3887、6377、6378、6380、8018、8079、8091、8479、8484、8999、12017、12333、50069。 不指定端口时，创建GeminiDB Redis实例的访问端口默认为6379。 如果该实例计划用于搭建双活容灾场景，请配置为8635端口。
 	Port *string `json:"port,omitempty"`
 
-	// 是否启用IPv6。默认 - true: 启用IPv6。 - false: 不启用IPv6，默认为不启用。
-	Ipv6Enabled *bool `json:"ipv6_enabled,omitempty"`
-
 	AvailabilityZoneDetail *AvailabilityZoneDetail `json:"availability_zone_detail,omitempty"`
-
-	LbAccessControlSettings *LbAccessControlSettings `json:"lb_access_control_settings,omitempty"`
 }
 
 func (o CreateInstanceRequestBody) String() string {

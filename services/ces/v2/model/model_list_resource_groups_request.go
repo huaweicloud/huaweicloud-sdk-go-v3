@@ -27,7 +27,7 @@ type ListResourceGroupsRequest struct {
 	// 分页查询时每页的条目数，取值[1,100]，默认值为100
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加），不传代表查询所有资源分组类型
+	// 资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,Manual（手动添加），不传代表查询所有资源分组类型,COMB（智能添加-组合匹配）,NAME（资源名称模糊匹配）
 	Type *ListResourceGroupsRequestType `json:"type,omitempty"`
 }
 
@@ -48,6 +48,8 @@ type ListResourceGroupsRequestTypeEnum struct {
 	EPS    ListResourceGroupsRequestType
 	TAG    ListResourceGroupsRequestType
 	MANUAL ListResourceGroupsRequestType
+	COMB   ListResourceGroupsRequestType
+	NAME   ListResourceGroupsRequestType
 }
 
 func GetListResourceGroupsRequestTypeEnum() ListResourceGroupsRequestTypeEnum {
@@ -60,6 +62,12 @@ func GetListResourceGroupsRequestTypeEnum() ListResourceGroupsRequestTypeEnum {
 		},
 		MANUAL: ListResourceGroupsRequestType{
 			value: "Manual",
+		},
+		COMB: ListResourceGroupsRequestType{
+			value: "COMB",
+		},
+		NAME: ListResourceGroupsRequestType{
+			value: "NAME",
 		},
 	}
 }

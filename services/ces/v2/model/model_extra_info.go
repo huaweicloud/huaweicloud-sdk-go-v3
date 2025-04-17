@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// ExtraInfo 指标信息
 type ExtraInfo struct {
 
 	// 指标名称

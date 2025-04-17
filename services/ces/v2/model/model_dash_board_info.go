@@ -28,6 +28,18 @@ type DashBoardInfo struct {
 
 	// 监控看板创建时间
 	CreateTime *int64 `json:"create_time,omitempty"`
+
+	// 看板下的视图总数
+	WidgetsNum *int32 `json:"widgets_num,omitempty"`
+
+	// 命名空间
+	Namespace *string `json:"namespace,omitempty"`
+
+	// 子产品标识
+	SubProduct *string `json:"sub_product,omitempty"`
+
+	// 监控大盘模板id
+	DashboardTemplateId *string `json:"dashboard_template_id,omitempty"`
 }
 
 func (o DashBoardInfo) String() string {

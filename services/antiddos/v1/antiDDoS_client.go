@@ -61,27 +61,6 @@ func (c *AntiDDoSClient) DeleteDefaultConfigInvoker(request *model.DeleteDefault
 	return &DeleteDefaultConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowAlertConfig 查询告警配置信息
-//
-// 查询用户配置信息，用户可以通过此接口查询是否接收某类告警，同时可以配置是手机短信还是电子邮件接收告警信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *AntiDDoSClient) ShowAlertConfig(request *model.ShowAlertConfigRequest) (*model.ShowAlertConfigResponse, error) {
-	requestDef := GenReqDefForShowAlertConfig()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowAlertConfigResponse), nil
-	}
-}
-
-// ShowAlertConfigInvoker 查询告警配置信息
-func (c *AntiDDoSClient) ShowAlertConfigInvoker(request *model.ShowAlertConfigRequest) *ShowAlertConfigInvoker {
-	requestDef := GenReqDefForShowAlertConfig()
-	return &ShowAlertConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowDefaultConfig 查询Ani-DDoS默认防护策略
 //
 // 查询用户配置的默认防护策略。
@@ -103,25 +82,25 @@ func (c *AntiDDoSClient) ShowDefaultConfigInvoker(request *model.ShowDefaultConf
 	return &ShowDefaultConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateAlertConfig 更新告警配置信息
+// EnableDefensePolicy 开通DDoS服务
 //
-// 更新用户配置信息，用户可以通过此接口更新是否接收某类告警，同时可以配置是手机短信还是电子邮件接收告警信息。
+// 开通DDoS服务
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *AntiDDoSClient) UpdateAlertConfig(request *model.UpdateAlertConfigRequest) (*model.UpdateAlertConfigResponse, error) {
-	requestDef := GenReqDefForUpdateAlertConfig()
+func (c *AntiDDoSClient) EnableDefensePolicy(request *model.EnableDefensePolicyRequest) (*model.EnableDefensePolicyResponse, error) {
+	requestDef := GenReqDefForEnableDefensePolicy()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdateAlertConfigResponse), nil
+		return resp.(*model.EnableDefensePolicyResponse), nil
 	}
 }
 
-// UpdateAlertConfigInvoker 更新告警配置信息
-func (c *AntiDDoSClient) UpdateAlertConfigInvoker(request *model.UpdateAlertConfigRequest) *UpdateAlertConfigInvoker {
-	requestDef := GenReqDefForUpdateAlertConfig()
-	return &UpdateAlertConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// EnableDefensePolicyInvoker 开通DDoS服务
+func (c *AntiDDoSClient) EnableDefensePolicyInvoker(request *model.EnableDefensePolicyRequest) *EnableDefensePolicyInvoker {
+	requestDef := GenReqDefForEnableDefensePolicy()
+	return &EnableDefensePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDDosStatus 查询EIP防护状态列表
@@ -187,25 +166,25 @@ func (c *AntiDDoSClient) ListDailyReportInvoker(request *model.ListDailyReportRe
 	return &ListDailyReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListNewConfigs 查询Anti-DDoS配置可选范围
+// ListQuota 查询配额
 //
-// 查询系统支持的Anti-DDoS防护策略配置的可选范围，用户根据范围列表选择适合自已业务的防护策略进行Anti-DDoS流量清洗。
+// 查询配额
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *AntiDDoSClient) ListNewConfigs(request *model.ListNewConfigsRequest) (*model.ListNewConfigsResponse, error) {
-	requestDef := GenReqDefForListNewConfigs()
+func (c *AntiDDoSClient) ListQuota(request *model.ListQuotaRequest) (*model.ListQuotaResponse, error) {
+	requestDef := GenReqDefForListQuota()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListNewConfigsResponse), nil
+		return resp.(*model.ListQuotaResponse), nil
 	}
 }
 
-// ListNewConfigsInvoker 查询Anti-DDoS配置可选范围
-func (c *AntiDDoSClient) ListNewConfigsInvoker(request *model.ListNewConfigsRequest) *ListNewConfigsInvoker {
-	requestDef := GenReqDefForListNewConfigs()
-	return &ListNewConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListQuotaInvoker 查询配额
+func (c *AntiDDoSClient) ListQuotaInvoker(request *model.ListQuotaRequest) *ListQuotaInvoker {
+	requestDef := GenReqDefForListQuota()
+	return &ListQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListWeeklyReports 查询周防护统计情况
@@ -271,25 +250,25 @@ func (c *AntiDDoSClient) ShowDDosStatusInvoker(request *model.ShowDDosStatusRequ
 	return &ShowDDosStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowNewTaskStatus 查询Anti-DDoS任务
+// ShowLogConfig 查询全量日志设置
 //
-// 用户查询指定的Anti-DDoS防护配置任务，得到任务当前执行的状态。
+// 查询全量日志设置
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *AntiDDoSClient) ShowNewTaskStatus(request *model.ShowNewTaskStatusRequest) (*model.ShowNewTaskStatusResponse, error) {
-	requestDef := GenReqDefForShowNewTaskStatus()
+func (c *AntiDDoSClient) ShowLogConfig(request *model.ShowLogConfigRequest) (*model.ShowLogConfigResponse, error) {
+	requestDef := GenReqDefForShowLogConfig()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowNewTaskStatusResponse), nil
+		return resp.(*model.ShowLogConfigResponse), nil
 	}
 }
 
-// ShowNewTaskStatusInvoker 查询Anti-DDoS任务
-func (c *AntiDDoSClient) ShowNewTaskStatusInvoker(request *model.ShowNewTaskStatusRequest) *ShowNewTaskStatusInvoker {
-	requestDef := GenReqDefForShowNewTaskStatus()
-	return &ShowNewTaskStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ShowLogConfigInvoker 查询全量日志设置
+func (c *AntiDDoSClient) ShowLogConfigInvoker(request *model.ShowLogConfigRequest) *ShowLogConfigInvoker {
+	requestDef := GenReqDefForShowLogConfig()
+	return &ShowLogConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDDos 更新Anti-DDoS服务
@@ -311,4 +290,25 @@ func (c *AntiDDoSClient) UpdateDDos(request *model.UpdateDDosRequest) (*model.Up
 func (c *AntiDDoSClient) UpdateDDosInvoker(request *model.UpdateDDosRequest) *UpdateDDosInvoker {
 	requestDef := GenReqDefForUpdateDDos()
 	return &UpdateDDosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLogConfig 更新用户全量日志设置
+//
+// 更新用户全量日志设置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AntiDDoSClient) UpdateLogConfig(request *model.UpdateLogConfigRequest) (*model.UpdateLogConfigResponse, error) {
+	requestDef := GenReqDefForUpdateLogConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateLogConfigResponse), nil
+	}
+}
+
+// UpdateLogConfigInvoker 更新用户全量日志设置
+func (c *AntiDDoSClient) UpdateLogConfigInvoker(request *model.UpdateLogConfigRequest) *UpdateLogConfigInvoker {
+	requestDef := GenReqDefForUpdateLogConfig()
+	return &UpdateLogConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

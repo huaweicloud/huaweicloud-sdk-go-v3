@@ -2014,6 +2014,27 @@ func (c *OsmClient) UpdateNewInstantMessagesReadInvoker(request *model.UpdateNew
 	return &UpdateNewInstantMessagesReadInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UploadAccessory 上传附件
+//
+// 上传附件接口，使用form-data，上传附件需要满足\&quot;附件限制\&quot;返回的关于大小等限制
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OsmClient) UploadAccessory(request *model.UploadAccessoryRequest) (*model.UploadAccessoryResponse, error) {
+	requestDef := GenReqDefForUploadAccessory()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadAccessoryResponse), nil
+	}
+}
+
+// UploadAccessoryInvoker 上传附件
+func (c *OsmClient) UploadAccessoryInvoker(request *model.UploadAccessoryRequest) *UploadAccessoryInvoker {
+	requestDef := GenReqDefForUploadAccessory()
+	return &UploadAccessoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UploadJsonAccessories 上传附件
 //
 // 上传附件给SDK使用，上传附件需要满足\&quot;附件限制\&quot;返回的关于大小等限制

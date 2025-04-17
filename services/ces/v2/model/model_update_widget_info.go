@@ -12,6 +12,9 @@ import (
 // UpdateWidgetInfo 待修改的监控视图对象
 type UpdateWidgetInfo struct {
 
+	// 视图分区id
+	GroupId *string `json:"group_id,omitempty"`
+
 	// 视图id
 	WidgetId string `json:"widget_id"`
 
@@ -27,7 +30,7 @@ type UpdateWidgetInfo struct {
 	// 阈值是否展示，true:展示，false:不展示
 	ThresholdEnabled *bool `json:"threshold_enabled,omitempty"`
 
-	// 监控视图图表类型, bar柱状图，line折线图
+	// 监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
 	View *UpdateWidgetInfoView `json:"view,omitempty"`
 
 	// 指标展示类型，single 单指标展示，multiple 多指标展示
@@ -55,8 +58,12 @@ type UpdateWidgetInfoView struct {
 }
 
 type UpdateWidgetInfoViewEnum struct {
-	BAR  UpdateWidgetInfoView
-	LINE UpdateWidgetInfoView
+	BAR          UpdateWidgetInfoView
+	LINE         UpdateWidgetInfoView
+	BAR_CHART    UpdateWidgetInfoView
+	TABLE        UpdateWidgetInfoView
+	CIRCULAR_BAR UpdateWidgetInfoView
+	AREA_CHART   UpdateWidgetInfoView
 }
 
 func GetUpdateWidgetInfoViewEnum() UpdateWidgetInfoViewEnum {
@@ -66,6 +73,18 @@ func GetUpdateWidgetInfoViewEnum() UpdateWidgetInfoViewEnum {
 		},
 		LINE: UpdateWidgetInfoView{
 			value: "line",
+		},
+		BAR_CHART: UpdateWidgetInfoView{
+			value: "bar_chart",
+		},
+		TABLE: UpdateWidgetInfoView{
+			value: "table",
+		},
+		CIRCULAR_BAR: UpdateWidgetInfoView{
+			value: "circular_bar",
+		},
+		AREA_CHART: UpdateWidgetInfoView{
+			value: "area_chart",
 		},
 	}
 }

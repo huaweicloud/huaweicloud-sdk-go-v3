@@ -12,7 +12,7 @@ import (
 type SetInstanceDataDumpRequestBody struct {
 
 	// OBS桶名。
-	BucketName *string `json:"bucket_name,omitempty"`
+	BucketName string `json:"bucket_name"`
 
 	// 开启/关闭实例数据导出。
 	Action SetInstanceDataDumpRequestBodyAction `json:"action"`

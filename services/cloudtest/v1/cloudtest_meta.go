@@ -1338,8 +1338,8 @@ func GenReqDefForListTestReportsByCondition() *def.HttpRequestDef {
 		WithJsonTag("page_size").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
+		WithName("PageNo").
+		WithJsonTag("page_no").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("KeyWord").
@@ -3408,6 +3408,30 @@ func GenReqDefForAddFeature() *def.HttpRequestDef {
 		WithPath("/v4/features").
 		WithResponse(new(model.AddFeatureResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListTestcasePlans() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v4/{project_uuid}/branch/{branch_uri}/testcases/plans").
+		WithResponse(new(model.ListTestcasePlansResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectUuid").
+		WithJsonTag("project_uuid").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BranchUri").
+		WithJsonTag("branch_uri").
+		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

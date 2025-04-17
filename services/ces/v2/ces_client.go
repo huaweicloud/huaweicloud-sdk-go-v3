@@ -313,7 +313,7 @@ func (c *CesClient) BatchUpdateWidgetsInvoker(request *model.BatchUpdateWidgetsR
 	return &BatchUpdateWidgetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateAlarmRules 创建告警规则
+// CreateAlarmRules 创建告警规则（推荐）
 //
 // 创建告警规则
 //
@@ -328,7 +328,7 @@ func (c *CesClient) CreateAlarmRules(request *model.CreateAlarmRulesRequest) (*m
 	}
 }
 
-// CreateAlarmRulesInvoker 创建告警规则
+// CreateAlarmRulesInvoker 创建告警规则（推荐）
 func (c *CesClient) CreateAlarmRulesInvoker(request *model.CreateAlarmRulesRequest) *CreateAlarmRulesInvoker {
 	requestDef := GenReqDefForCreateAlarmRules()
 	return &CreateAlarmRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -418,7 +418,7 @@ func (c *CesClient) CreateOneDashboardInvoker(request *model.CreateOneDashboardR
 	return &CreateOneDashboardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateResourceGroup 创建资源分组
+// CreateResourceGroup 创建资源分组（推荐）
 //
 // 创建资源分组
 //
@@ -433,7 +433,7 @@ func (c *CesClient) CreateResourceGroup(request *model.CreateResourceGroupReques
 	}
 }
 
-// CreateResourceGroupInvoker 创建资源分组
+// CreateResourceGroupInvoker 创建资源分组（推荐）
 func (c *CesClient) CreateResourceGroupInvoker(request *model.CreateResourceGroupRequest) *CreateResourceGroupInvoker {
 	requestDef := GenReqDefForCreateResourceGroup()
 	return &CreateResourceGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -504,7 +504,7 @@ func (c *CesClient) DeleteOneWidgetInvoker(request *model.DeleteOneWidgetRequest
 
 // ListAgentDimensionInfo 查询主机监控维度指标信息
 //
-// 根据ECS/BMS资源ID查询磁盘、挂载点、进程、显卡、RAID控制器维度指标信息。
+// 根据ECS/BMS资源ID查询磁盘、挂载点、进程、显卡、RAID控制器维度指标信息；维度NPU已经为原始值，不需要调用该接口进行额外查询获取指标信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) ListAgentDimensionInfo(request *model.ListAgentDimensionInfoRequest) (*model.ListAgentDimensionInfoResponse, error) {
@@ -586,7 +586,7 @@ func (c *CesClient) ListAlarmRuleResourcesInvoker(request *model.ListAlarmRuleRe
 	return &ListAlarmRuleResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAlarmRules 查询告警规则列表
+// ListAlarmRules 查询告警规则列表（推荐）
 //
 // 查询告警规则列表
 //
@@ -601,7 +601,7 @@ func (c *CesClient) ListAlarmRules(request *model.ListAlarmRulesRequest) (*model
 	}
 }
 
-// ListAlarmRulesInvoker 查询告警规则列表
+// ListAlarmRulesInvoker 查询告警规则列表（推荐）
 func (c *CesClient) ListAlarmRulesInvoker(request *model.ListAlarmRulesRequest) *ListAlarmRulesInvoker {
 	requestDef := GenReqDefForListAlarmRules()
 	return &ListAlarmRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

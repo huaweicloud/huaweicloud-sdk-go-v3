@@ -20,6 +20,9 @@ type ModifyTransTemplate struct {
 	// 是否开启加密
 	IsAutoEncrypt *bool `json:"is_auto_encrypt,omitempty"`
 
+	// 自定义索引后缀列表，支持最大设置10个索引后缀。 如果填写索引后缀，则必须指定流名stream_name。
+	AdditionalManifests *[]AdditionalManifest `json:"additional_manifests,omitempty"`
+
 	// 画质配置信息列表<br/>
 	QualityInfoList *[]QualityInfoList `json:"quality_info_list,omitempty"`
 

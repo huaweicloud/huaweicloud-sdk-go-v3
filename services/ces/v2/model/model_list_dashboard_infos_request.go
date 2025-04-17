@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -20,6 +23,9 @@ type ListDashboardInfosRequest struct {
 
 	// 监控看板id
 	DashboardId *string `json:"dashboard_id,omitempty"`
+
+	// 监控看板类型, monitor_dashboard表示监控大盘,other表示自定义看板
+	DashboardType *ListDashboardInfosRequestDashboardType `json:"dashboard_type,omitempty"`
 }
 
 func (o ListDashboardInfosRequest) String() string {
@@ -29,4 +35,51 @@ func (o ListDashboardInfosRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListDashboardInfosRequest", string(data)}, " ")
+}
+
+type ListDashboardInfosRequestDashboardType struct {
+	value string
+}
+
+type ListDashboardInfosRequestDashboardTypeEnum struct {
+	MONITOR_DASHBOARD ListDashboardInfosRequestDashboardType
+	OTHER             ListDashboardInfosRequestDashboardType
+}
+
+func GetListDashboardInfosRequestDashboardTypeEnum() ListDashboardInfosRequestDashboardTypeEnum {
+	return ListDashboardInfosRequestDashboardTypeEnum{
+		MONITOR_DASHBOARD: ListDashboardInfosRequestDashboardType{
+			value: "monitor_dashboard",
+		},
+		OTHER: ListDashboardInfosRequestDashboardType{
+			value: "other",
+		},
+	}
+}
+
+func (c ListDashboardInfosRequestDashboardType) Value() string {
+	return c.value
+}
+
+func (c ListDashboardInfosRequestDashboardType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListDashboardInfosRequestDashboardType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

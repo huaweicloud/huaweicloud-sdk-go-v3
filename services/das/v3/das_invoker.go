@@ -101,6 +101,38 @@ func (i *ShowApiVersionInvoker) Invoke() (*model.ShowApiVersionResponse, error) 
 	}
 }
 
+type AddFullSqlTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddFullSqlTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddFullSqlTaskInvoker) Invoke() (*model.AddFullSqlTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddFullSqlTaskResponse), nil
+	}
+}
+
+type ChangeChargeModeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeChargeModeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeChargeModeInvoker) Invoke() (*model.ChangeChargeModeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeChargeModeResponse), nil
+	}
+}
+
 type ChangeSqlLimitSwitchStatusInvoker struct {
 	*invoker.BaseInvoker
 }

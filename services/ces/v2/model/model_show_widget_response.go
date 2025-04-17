@@ -15,27 +15,30 @@ type ShowWidgetResponse struct {
 	// 视图id
 	WidgetId *string `json:"widget_id,omitempty"`
 
+	// 视图分区id
+	GroupId *string `json:"group_id,omitempty"`
+
 	// 指标列表
-	Metrics *[]WidgetMetric `json:"metrics,omitempty"`
+	Metrics []WidgetMetric `json:"metrics"`
 
 	// 监控视图标题
-	Title *string `json:"title,omitempty"`
+	Title string `json:"title"`
 
 	// 监控视图指标的阈值
 	Threshold *float64 `json:"threshold,omitempty"`
 
 	// 阈值是否展示，true:展示，false:不展示
-	ThresholdEnabled *bool `json:"threshold_enabled,omitempty"`
+	ThresholdEnabled bool `json:"threshold_enabled"`
 
-	// 监控视图图表类型, bar柱状图，line折线图
-	View *ShowWidgetResponseView `json:"view,omitempty"`
+	// 监控视图图表类型, bar条形图，line折线图，bar_chart柱状图，table表格，circular_bar环形柱状图，area_chart面积图
+	View ShowWidgetResponseView `json:"view"`
 
 	// 指标展示类型，single 单指标展示，multiple 多指标展示
-	MetricDisplayMode *ShowWidgetResponseMetricDisplayMode `json:"metric_display_mode,omitempty"`
+	MetricDisplayMode ShowWidgetResponseMetricDisplayMode `json:"metric_display_mode"`
 
-	Properties *UpdateWidgetInfoProperties `json:"properties,omitempty"`
+	Properties *BaseWidgetInfoProperties `json:"properties,omitempty"`
 
-	Location *UpdateWidgetInfoLocation `json:"location,omitempty"`
+	Location *UpdateWidgetInfoLocation `json:"location"`
 
 	// 单位
 	Unit *string `json:"unit,omitempty"`
@@ -59,8 +62,12 @@ type ShowWidgetResponseView struct {
 }
 
 type ShowWidgetResponseViewEnum struct {
-	BAR  ShowWidgetResponseView
-	LINE ShowWidgetResponseView
+	BAR          ShowWidgetResponseView
+	LINE         ShowWidgetResponseView
+	BAR_CHART    ShowWidgetResponseView
+	TABLE        ShowWidgetResponseView
+	CIRCULAR_BAR ShowWidgetResponseView
+	AREA_CHART   ShowWidgetResponseView
 }
 
 func GetShowWidgetResponseViewEnum() ShowWidgetResponseViewEnum {
@@ -70,6 +77,18 @@ func GetShowWidgetResponseViewEnum() ShowWidgetResponseViewEnum {
 		},
 		LINE: ShowWidgetResponseView{
 			value: "line",
+		},
+		BAR_CHART: ShowWidgetResponseView{
+			value: "bar_chart",
+		},
+		TABLE: ShowWidgetResponseView{
+			value: "table",
+		},
+		CIRCULAR_BAR: ShowWidgetResponseView{
+			value: "circular_bar",
+		},
+		AREA_CHART: ShowWidgetResponseView{
+			value: "area_chart",
 		},
 	}
 }

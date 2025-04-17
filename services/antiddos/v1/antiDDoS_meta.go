@@ -33,17 +33,6 @@ func GenReqDefForDeleteDefaultConfig() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowAlertConfig() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/warnalert/alertconfig/query").
-		WithResponse(new(model.ShowAlertConfigResponse)).
-		WithContentType("application/json")
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForShowDefaultConfig() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -55,12 +44,17 @@ func GenReqDefForShowDefaultConfig() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUpdateAlertConfig() *def.HttpRequestDef {
+func GenReqDefForEnableDefensePolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v2/{project_id}/warnalert/alertconfig/update").
-		WithResponse(new(model.UpdateAlertConfigResponse)).
+		WithPath("/v1/{project_id}/antiddos/{floating_ip_id}").
+		WithResponse(new(model.EnableDefensePolicyResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FloatingIpId").
+		WithJsonTag("floating_ip_id").
+		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -152,11 +146,11 @@ func GenReqDefForListDailyReport() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListNewConfigs() *def.HttpRequestDef {
+func GenReqDefForListQuota() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/antiddos/query-config-list").
-		WithResponse(new(model.ListNewConfigsResponse)).
+		WithPath("/v1/{project_id}/antiddos/quotas").
+		WithResponse(new(model.ListQuotaResponse)).
 		WithContentType("application/json")
 
 	requestDef := reqDefBuilder.Build()
@@ -221,16 +215,16 @@ func GenReqDefForShowDDosStatus() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowNewTaskStatus() *def.HttpRequestDef {
+func GenReqDefForShowLogConfig() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/query-task-status").
-		WithResponse(new(model.ShowNewTaskStatusResponse)).
+		WithPath("/v1/{project_id}/antiddos/lts-config").
+		WithResponse(new(model.ShowLogConfigResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("TaskId").
-		WithJsonTag("task_id").
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -255,6 +249,30 @@ func GenReqDefForUpdateDDos() *def.HttpRequestDef {
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateLogConfig() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/antiddos/lts-config").
+		WithResponse(new(model.UpdateLogConfigResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 

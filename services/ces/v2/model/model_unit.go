@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Unit 单位
+// Unit 数据的单位。
 type Unit struct {
 }
 

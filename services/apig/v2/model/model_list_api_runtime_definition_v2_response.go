@@ -38,6 +38,15 @@ type ListApiRuntimeDefinitionV2Response struct {
 	// 是否支持跨域 - TRUE：支持 - FALSE：不支持
 	Cors *bool `json:"cors,omitempty"`
 
+	// 是否开启链路追踪，默认关闭。
+	TraceEnabled *bool `json:"trace_enabled,omitempty"`
+
+	// 采样策略，当选择开启链路追踪时，此字段必填。 - RATE：按比例采样
+	SamplingStrategy *ListApiRuntimeDefinitionV2ResponseSamplingStrategy `json:"sampling_strategy,omitempty"`
+
+	// 采样参数。 - 当采样策略为RATE时，此字段取值为字符串化的整数，范围为0-100，缺省为'100'，'100'为采集每个请求，建议与后端应用的采样率保持一致。
+	SamplingParam *string `json:"sampling_param,omitempty"`
+
 	// API的匹配方式 - SWA：前缀匹配 - NORMAL：正常匹配（绝对匹配） 默认：NORMAL
 	MatchMode *ListApiRuntimeDefinitionV2ResponseMatchMode `json:"match_mode,omitempty"`
 
@@ -327,6 +336,49 @@ func (c ListApiRuntimeDefinitionV2ResponseAuthType) MarshalJSON() ([]byte, error
 }
 
 func (c *ListApiRuntimeDefinitionV2ResponseAuthType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListApiRuntimeDefinitionV2ResponseSamplingStrategy struct {
+	value string
+}
+
+type ListApiRuntimeDefinitionV2ResponseSamplingStrategyEnum struct {
+	RATE ListApiRuntimeDefinitionV2ResponseSamplingStrategy
+}
+
+func GetListApiRuntimeDefinitionV2ResponseSamplingStrategyEnum() ListApiRuntimeDefinitionV2ResponseSamplingStrategyEnum {
+	return ListApiRuntimeDefinitionV2ResponseSamplingStrategyEnum{
+		RATE: ListApiRuntimeDefinitionV2ResponseSamplingStrategy{
+			value: "RATE",
+		},
+	}
+}
+
+func (c ListApiRuntimeDefinitionV2ResponseSamplingStrategy) Value() string {
+	return c.value
+}
+
+func (c ListApiRuntimeDefinitionV2ResponseSamplingStrategy) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListApiRuntimeDefinitionV2ResponseSamplingStrategy) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

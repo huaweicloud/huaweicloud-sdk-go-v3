@@ -27,7 +27,7 @@ type SmartChatVoiceConfig struct {
 	// 第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
 	Provider *string `json:"provider,omitempty"`
 
-	// 语言类型。默认值CN。 * CN：中文。 * EN：英文。
+	// 语言类型。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
 	Language *SmartChatVoiceConfigLanguage `json:"language,omitempty"`
 
 	// 语言描述。
@@ -48,8 +48,12 @@ type SmartChatVoiceConfigLanguage struct {
 }
 
 type SmartChatVoiceConfigLanguageEnum struct {
-	CN SmartChatVoiceConfigLanguage
-	EN SmartChatVoiceConfigLanguage
+	CN     SmartChatVoiceConfigLanguage
+	EN     SmartChatVoiceConfigLanguage
+	ESP    SmartChatVoiceConfigLanguage
+	POR    SmartChatVoiceConfigLanguage
+	ARABIC SmartChatVoiceConfigLanguage
+	THAI   SmartChatVoiceConfigLanguage
 }
 
 func GetSmartChatVoiceConfigLanguageEnum() SmartChatVoiceConfigLanguageEnum {
@@ -59,6 +63,18 @@ func GetSmartChatVoiceConfigLanguageEnum() SmartChatVoiceConfigLanguageEnum {
 		},
 		EN: SmartChatVoiceConfigLanguage{
 			value: "EN",
+		},
+		ESP: SmartChatVoiceConfigLanguage{
+			value: "ESP",
+		},
+		POR: SmartChatVoiceConfigLanguage{
+			value: "por",
+		},
+		ARABIC: SmartChatVoiceConfigLanguage{
+			value: "Arabic",
+		},
+		THAI: SmartChatVoiceConfigLanguage{
+			value: "Thai",
 		},
 	}
 }

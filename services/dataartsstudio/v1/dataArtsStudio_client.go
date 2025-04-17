@@ -3616,6 +3616,27 @@ func (c *DataArtsStudioClient) ListFactoryReleasePackagesInvoker(request *model.
 	return &ListFactoryReleasePackagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListFactoryScripts 查询脚本列表
+//
+// 此接口用来查询脚本列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListFactoryScripts(request *model.ListFactoryScriptsRequest) (*model.ListFactoryScriptsResponse, error) {
+	requestDef := GenReqDefForListFactoryScripts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFactoryScriptsResponse), nil
+	}
+}
+
+// ListFactoryScriptsInvoker 查询脚本列表
+func (c *DataArtsStudioClient) ListFactoryScriptsInvoker(request *model.ListFactoryScriptsRequest) *ListFactoryScriptsInvoker {
+	requestDef := GenReqDefForListFactoryScripts()
+	return &ListFactoryScriptsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListFactoryTaskCompletion 查询任务完成情况
 //
 // 查询任务完成情况

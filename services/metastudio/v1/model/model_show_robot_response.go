@@ -21,7 +21,7 @@ type ShowRobotResponse struct {
 	// 第三方应用ID。
 	AppId *string `json:"app_id,omitempty"`
 
-	// 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
+	// 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；7：交互助手；8：奇妙问
 	AppType *int32 `json:"app_type,omitempty"`
 
 	// 应用的AccessKey或帐号。
@@ -72,6 +72,11 @@ type ShowRobotResponse struct {
 
 	// 是否开启提问文本审核开关
 	EnableQuestionAudit *bool `json:"enable_question_audit,omitempty"`
+
+	AsrType *AsrTypeEnum `json:"asr_type,omitempty"`
+
+	// ASR帐号。
+	AsrAccount *string `json:"asr_account,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`

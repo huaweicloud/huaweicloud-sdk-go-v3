@@ -20,7 +20,7 @@ type AlarmHistoryItemV2 struct {
 	// 告警规则的名称，如：alarm-test01。
 	Name *string `json:"name,omitempty"`
 
-	// 告警记录的状态，取值为ok，alarm，invalid； ok为正常，alarm为告警，invalid为已失效。
+	// 告警记录的状态，取值为ok，alarm，invalid, ok_manual； ok为正常，alarm为告警，invalid为已失效,ok_manual为手动恢复。
 	Status *AlarmHistoryItemV2Status `json:"status,omitempty"`
 
 	// 告警记录的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
@@ -37,7 +37,7 @@ type AlarmHistoryItemV2 struct {
 	// 结束时间，UTC时间
 	EndTime *sdktime.SdkTime `json:"end_time,omitempty"`
 
-	// 第一次告警时间戳，UTC时间
+	// 第一次告警时间，UTC时间
 	FirstAlarmTime *sdktime.SdkTime `json:"first_alarm_time,omitempty"`
 
 	// 最后一次告警时间，UTC时间
@@ -76,9 +76,10 @@ type AlarmHistoryItemV2Status struct {
 }
 
 type AlarmHistoryItemV2StatusEnum struct {
-	OK      AlarmHistoryItemV2Status
-	ALARM   AlarmHistoryItemV2Status
-	INVALID AlarmHistoryItemV2Status
+	OK        AlarmHistoryItemV2Status
+	ALARM     AlarmHistoryItemV2Status
+	INVALID   AlarmHistoryItemV2Status
+	OK_MANUAL AlarmHistoryItemV2Status
 }
 
 func GetAlarmHistoryItemV2StatusEnum() AlarmHistoryItemV2StatusEnum {
@@ -91,6 +92,9 @@ func GetAlarmHistoryItemV2StatusEnum() AlarmHistoryItemV2StatusEnum {
 		},
 		INVALID: AlarmHistoryItemV2Status{
 			value: "invalid",
+		},
+		OK_MANUAL: AlarmHistoryItemV2Status{
+			value: "ok_manual",
 		},
 	}
 }

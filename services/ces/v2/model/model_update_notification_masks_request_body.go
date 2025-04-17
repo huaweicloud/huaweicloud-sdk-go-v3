@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -16,6 +19,18 @@ type UpdateNotificationMasksRequestBody struct {
 	RelationIds *[]string `json:"relation_ids,omitempty"`
 
 	RelationType *RelationType `json:"relation_type,omitempty"`
+
+	// 关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
+	MetricNames *[]string `json:"metric_names,omitempty"`
+
+	// 按云产品维度屏蔽时的指标信息
+	ProductMetrics *[]ProductMetric `json:"product_metrics,omitempty"`
+
+	// dimension: 子维度,product: 云产品
+	ResourceLevel *UpdateNotificationMasksRequestBodyResourceLevel `json:"resource_level,omitempty"`
+
+	// 资源为云产品时云产品名称
+	ProductName *string `json:"product_name,omitempty"`
 
 	// 关联资源
 	Resources []Resource `json:"resources"`
@@ -42,4 +57,51 @@ func (o UpdateNotificationMasksRequestBody) String() string {
 	}
 
 	return strings.Join([]string{"UpdateNotificationMasksRequestBody", string(data)}, " ")
+}
+
+type UpdateNotificationMasksRequestBodyResourceLevel struct {
+	value string
+}
+
+type UpdateNotificationMasksRequestBodyResourceLevelEnum struct {
+	DIMENSION UpdateNotificationMasksRequestBodyResourceLevel
+	PRODUCT   UpdateNotificationMasksRequestBodyResourceLevel
+}
+
+func GetUpdateNotificationMasksRequestBodyResourceLevelEnum() UpdateNotificationMasksRequestBodyResourceLevelEnum {
+	return UpdateNotificationMasksRequestBodyResourceLevelEnum{
+		DIMENSION: UpdateNotificationMasksRequestBodyResourceLevel{
+			value: "dimension",
+		},
+		PRODUCT: UpdateNotificationMasksRequestBodyResourceLevel{
+			value: "product",
+		},
+	}
+}
+
+func (c UpdateNotificationMasksRequestBodyResourceLevel) Value() string {
+	return c.value
+}
+
+func (c UpdateNotificationMasksRequestBodyResourceLevel) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateNotificationMasksRequestBodyResourceLevel) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

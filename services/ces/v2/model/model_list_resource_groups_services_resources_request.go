@@ -32,6 +32,21 @@ type ListResourceGroupsServicesResourcesRequest struct {
 
 	// 资源维度值，不支持模糊匹配，但是多维度资源可以只指定一个维度值
 	DimValue *string `json:"dim_value,omitempty"`
+
+	// 资源的标签信息，格式：\"[key]\":\"[value]\"，样例参考：\"ssss\":\"1111\"
+	Tag *string `json:"tag,omitempty"`
+
+	// 企业项目ID
+	ExtendRelationId *string `json:"extend_relation_id,omitempty"`
+
+	// 资源分组的云产品，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+	ProductName *string `json:"product_name,omitempty"`
+
+	// 资源名称
+	ResourceName *string `json:"resource_name,omitempty"`
+
+	// 按事件告警状态信息进行过滤，取值只能为health（已设置事件告警规则且无事件告警触发的资源）、unhealthy（已设置事件告警规则且有事件告警触发的资源）、no_alarm_rule（未设置事件告警规则的资源）
+	EventStatus *ListResourceGroupsServicesResourcesRequestEventStatus `json:"event_status,omitempty"`
 }
 
 func (o ListResourceGroupsServicesResourcesRequest) String() string {
@@ -76,6 +91,57 @@ func (c ListResourceGroupsServicesResourcesRequestStatus) MarshalJSON() ([]byte,
 }
 
 func (c *ListResourceGroupsServicesResourcesRequestStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListResourceGroupsServicesResourcesRequestEventStatus struct {
+	value string
+}
+
+type ListResourceGroupsServicesResourcesRequestEventStatusEnum struct {
+	HEALTH        ListResourceGroupsServicesResourcesRequestEventStatus
+	UNHEALTHY     ListResourceGroupsServicesResourcesRequestEventStatus
+	NO_ALARM_RULE ListResourceGroupsServicesResourcesRequestEventStatus
+}
+
+func GetListResourceGroupsServicesResourcesRequestEventStatusEnum() ListResourceGroupsServicesResourcesRequestEventStatusEnum {
+	return ListResourceGroupsServicesResourcesRequestEventStatusEnum{
+		HEALTH: ListResourceGroupsServicesResourcesRequestEventStatus{
+			value: "health",
+		},
+		UNHEALTHY: ListResourceGroupsServicesResourcesRequestEventStatus{
+			value: "unhealthy",
+		},
+		NO_ALARM_RULE: ListResourceGroupsServicesResourcesRequestEventStatus{
+			value: "no_alarm_rule",
+		},
+	}
+}
+
+func (c ListResourceGroupsServicesResourcesRequestEventStatus) Value() string {
+	return c.value
+}
+
+func (c ListResourceGroupsServicesResourcesRequestEventStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListResourceGroupsServicesResourcesRequestEventStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

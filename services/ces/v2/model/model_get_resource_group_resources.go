@@ -15,7 +15,13 @@ type GetResourceGroupResources struct {
 	Status GetResourceGroupResourcesStatus `json:"status"`
 
 	// 资源的维度信息
-	Dimensions []Dimension2 `json:"dimensions"`
+	Dimensions []ResourceDimension `json:"dimensions"`
+
+	// 资源的tag信息,格式为key/value的json字符串,样例为\"{\\\"sss\\\":\\\"aaa\\\"}\"
+	Tags *string `json:"tags,omitempty"`
+
+	// 企业项目ID
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o GetResourceGroupResources) String() string {

@@ -23,6 +23,9 @@ type TransTemplateRsp struct {
 	// 是否开启加密
 	IsAutoEncrypt *bool `json:"is_auto_encrypt,omitempty"`
 
+	// 自定义索引后缀列表。
+	AdditionalManifests *[]AdditionalManifest `json:"additional_manifests,omitempty"`
+
 	// 画质配置信息列表<br/>
 	QualityInfoList *[]QualityInfoList `json:"quality_info_list,omitempty"`
 

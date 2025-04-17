@@ -2741,6 +2741,22 @@ func (i *ListFactoryReleasePackagesInvoker) Invoke() (*model.ListFactoryReleaseP
 	}
 }
 
+type ListFactoryScriptsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFactoryScriptsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListFactoryScriptsInvoker) Invoke() (*model.ListFactoryScriptsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFactoryScriptsResponse), nil
+	}
+}
+
 type ListFactoryTaskCompletionInvoker struct {
 	*invoker.BaseInvoker
 }

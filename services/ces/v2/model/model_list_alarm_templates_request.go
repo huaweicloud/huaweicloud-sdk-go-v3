@@ -29,6 +29,9 @@ type ListAlarmTemplatesRequest struct {
 
 	// 告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]，支持模糊匹配
 	TemplateName *string `json:"template_name,omitempty"`
+
+	// 支持按照产品名称粒度进行查询告警模板，产品名称一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+	ProductName *string `json:"product_name,omitempty"`
 }
 
 func (o ListAlarmTemplatesRequest) String() string {

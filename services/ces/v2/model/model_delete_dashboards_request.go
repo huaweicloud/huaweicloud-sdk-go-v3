@@ -8,7 +8,7 @@ import (
 
 // DeleteDashboardsRequest Request Object
 type DeleteDashboardsRequest struct {
-	Body *BatchDeleteDashboardRequestBody `json:"body,omitempty"`
+	Body *BatchDeleteDashboardsRequestBody `json:"body,omitempty"`
 }
 
 func (o DeleteDashboardsRequest) String() string {

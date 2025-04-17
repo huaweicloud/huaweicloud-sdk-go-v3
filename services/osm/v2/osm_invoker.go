@@ -1525,6 +1525,22 @@ func (i *UpdateNewInstantMessagesReadInvoker) Invoke() (*model.UpdateNewInstantM
 	}
 }
 
+type UploadAccessoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadAccessoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UploadAccessoryInvoker) Invoke() (*model.UploadAccessoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadAccessoryResponse), nil
+	}
+}
+
 type UploadJsonAccessoriesInvoker struct {
 	*invoker.BaseInvoker
 }

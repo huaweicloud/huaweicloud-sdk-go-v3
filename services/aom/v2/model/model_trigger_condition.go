@@ -62,7 +62,7 @@ type TriggerCondition struct {
 	QueryMatch *string `json:"query_match,omitempty"`
 
 	// 查询参数
-	QueryParam string `json:"query_param"`
+	QueryParam *interface{} `json:"query_param"`
 
 	// 监控层级。
 	AomMonitorLevel *string `json:"aom_monitor_level,omitempty"`

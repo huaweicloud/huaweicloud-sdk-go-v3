@@ -9,9 +9,10 @@ import (
 	"strings"
 )
 
+// DimensionInfo 维度信息列表
 type DimensionInfo struct {
 
-	// 维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”
+	// 维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
 	Name string `json:"name"`
 
 	// 资源类型, all_instances: 全部资源, specific_instances: 指定资源

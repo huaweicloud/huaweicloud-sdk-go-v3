@@ -9,7 +9,7 @@ import (
 // ValidateRobotReq 校验应用请求。
 type ValidateRobotReq struct {
 
-	// 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；6：第三方语言模型；8：奇妙问
+	// 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；6：第三方语言模型；7：交互助手；8：奇妙问
 	AppType int32 `json:"app_type"`
 
 	HuaweiEiCbs *HuaweiEiCbs `json:"huawei_ei_cbs,omitempty"`
@@ -21,6 +21,8 @@ type ValidateRobotReq struct {
 	ThirdPartyModelConfig *ThirdPartyModelConfig `json:"third_party_model_config,omitempty"`
 
 	MobvoiConfig *MobvoiConfig `json:"mobvoi_config,omitempty"`
+
+	WiseBrainConfig *WiseBrainConfig `json:"wise_brain_config,omitempty"`
 }
 
 func (o ValidateRobotReq) String() string {

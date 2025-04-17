@@ -30,8 +30,16 @@ type ThirdPartyModelConfig struct {
 	// SIS所在区域的projectId
 	SisProjectId *string `json:"sis_project_id,omitempty"`
 
-	// 是否开启热词
+	// 是否开启热词（asr_type选择EI_SIS时生效）
 	EnableHotWords *bool `json:"enable_hot_words,omitempty"`
+
+	AsrType *AsrTypeEnum `json:"asr_type,omitempty"`
+
+	// ASR帐号（asr_type选择EI_SIS时不需要配置）。
+	AsrAccount *string `json:"asr_account,omitempty"`
+
+	// ASR密钥（asr_type选择EI_SIS时不需要配置）。
+	AsrSecret *string `json:"asr_secret,omitempty"`
 }
 
 func (o ThirdPartyModelConfig) String() string {

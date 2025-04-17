@@ -9,16 +9,20 @@ import (
 	"strings"
 )
 
-// LanguageEnum 智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文 * EN：英文
+// LanguageEnum 智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文 * EN：英文 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
 type LanguageEnum struct {
 	value string
 }
 
 type LanguageEnumEnum struct {
-	ZH_CN LanguageEnum
-	EN_US LanguageEnum
-	CN    LanguageEnum
-	EN    LanguageEnum
+	ZH_CN  LanguageEnum
+	EN_US  LanguageEnum
+	CN     LanguageEnum
+	EN     LanguageEnum
+	ESP    LanguageEnum
+	POR    LanguageEnum
+	ARABIC LanguageEnum
+	THAI   LanguageEnum
 }
 
 func GetLanguageEnumEnum() LanguageEnumEnum {
@@ -34,6 +38,18 @@ func GetLanguageEnumEnum() LanguageEnumEnum {
 		},
 		EN: LanguageEnum{
 			value: "EN",
+		},
+		ESP: LanguageEnum{
+			value: "ESP",
+		},
+		POR: LanguageEnum{
+			value: "por",
+		},
+		ARABIC: LanguageEnum{
+			value: "Arabic",
+		},
+		THAI: LanguageEnum{
+			value: "Thai",
 		},
 	}
 }

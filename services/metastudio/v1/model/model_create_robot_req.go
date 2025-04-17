@@ -12,7 +12,7 @@ type CreateRobotReq struct {
 	// 应用名称。
 	Name string `json:"name"`
 
-	// 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
+	// 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；7：交互助手；8：奇妙问
 	AppType int32 `json:"app_type"`
 
 	// 智能交互对话房间ID。
@@ -37,6 +37,8 @@ type CreateRobotReq struct {
 	ThirdPartyModelConfig *ThirdPartyModelConfig `json:"third_party_model_config,omitempty"`
 
 	MobvoiConfig *MobvoiConfig `json:"mobvoi_config,omitempty"`
+
+	WiseBrainConfig *WiseBrainConfig `json:"wise_brain_config,omitempty"`
 }
 
 func (o CreateRobotReq) String() string {

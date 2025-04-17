@@ -2500,3 +2500,19 @@ func (i *AddFeatureInvoker) Invoke() (*model.AddFeatureResponse, error) {
 		return result.(*model.AddFeatureResponse), nil
 	}
 }
+
+type ListTestcasePlansInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTestcasePlansInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTestcasePlansInvoker) Invoke() (*model.ListTestcasePlansResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTestcasePlansResponse), nil
+	}
+}

@@ -41,7 +41,7 @@ type StartSmartChatJobResponse struct {
 	// 是否透明背景
 	IsTransparent *bool `json:"is_transparent,omitempty"`
 
-	// 默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。
+	// 默认语言，智能交互接口使用。默认值CN。 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
 	DefaultLanguage *StartSmartChatJobResponseDefaultLanguage `json:"default_language,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
@@ -113,8 +113,12 @@ type StartSmartChatJobResponseDefaultLanguage struct {
 }
 
 type StartSmartChatJobResponseDefaultLanguageEnum struct {
-	CN StartSmartChatJobResponseDefaultLanguage
-	EN StartSmartChatJobResponseDefaultLanguage
+	CN     StartSmartChatJobResponseDefaultLanguage
+	EN     StartSmartChatJobResponseDefaultLanguage
+	ESP    StartSmartChatJobResponseDefaultLanguage
+	POR    StartSmartChatJobResponseDefaultLanguage
+	ARABIC StartSmartChatJobResponseDefaultLanguage
+	THAI   StartSmartChatJobResponseDefaultLanguage
 }
 
 func GetStartSmartChatJobResponseDefaultLanguageEnum() StartSmartChatJobResponseDefaultLanguageEnum {
@@ -124,6 +128,18 @@ func GetStartSmartChatJobResponseDefaultLanguageEnum() StartSmartChatJobResponse
 		},
 		EN: StartSmartChatJobResponseDefaultLanguage{
 			value: "EN",
+		},
+		ESP: StartSmartChatJobResponseDefaultLanguage{
+			value: "ESP",
+		},
+		POR: StartSmartChatJobResponseDefaultLanguage{
+			value: "por",
+		},
+		ARABIC: StartSmartChatJobResponseDefaultLanguage{
+			value: "Arabic",
+		},
+		THAI: StartSmartChatJobResponseDefaultLanguage{
+			value: "Thai",
 		},
 	}
 }

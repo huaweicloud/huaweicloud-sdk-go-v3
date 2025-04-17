@@ -28,6 +28,15 @@ type ApplicationQueryResponseData struct {
 
 	// 应用path路径，由应用id用.拼接
 	Path *string `json:"path,omitempty"`
+
+	// 是否为收藏应用
+	IsCollection *bool `json:"is_collection,omitempty"`
+
+	// 创建时间
+	CreateTime *string `json:"create_time,omitempty"`
+
+	// 修改时间
+	UpdateTime *string `json:"update_time,omitempty"`
 }
 
 func (o ApplicationQueryResponseData) String() string {

@@ -11,6 +11,9 @@ type ListDashboardWidgetsRequest struct {
 
 	// 监控看板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
 	DashboardId string `json:"dashboard_id"`
+
+	// 视图所在的分组id
+	GroupId *string `json:"group_id,omitempty"`
 }
 
 func (o ListDashboardWidgetsRequest) String() string {

@@ -9,7 +9,10 @@ import (
 type ResourcesReq struct {
 
 	// 资源信息
-	Resources []Resource `json:"resources"`
+	Resources *[]Resource `json:"resources,omitempty"`
+
+	// 手动创建，选择资源层级为云产品时的资源详情
+	ProductResources *[]ProductResource `json:"product_resources,omitempty"`
 }
 
 func (o ResourcesReq) String() string {

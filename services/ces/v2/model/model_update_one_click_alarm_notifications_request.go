@@ -12,7 +12,7 @@ type UpdateOneClickAlarmNotificationsRequest struct {
 	// 一键告警ID
 	OneClickAlarmId string `json:"one_click_alarm_id"`
 
-	Body *PutAlarmNotificationReq `json:"body,omitempty"`
+	Body *UpdateOneClickAlarmNotificationsRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateOneClickAlarmNotificationsRequest) String() string {

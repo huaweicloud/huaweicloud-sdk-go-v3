@@ -331,7 +331,7 @@ func GenReqDefForShowInstancePatchItems() *def.HttpRequestDef {
 func GenReqDefForCreateReportCustomEvent() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/event/huawei/custom/{integration_key}").
+		WithPath("/v1/event/huawei/custom/{integration_key}").
 		WithResponse(new(model.CreateReportCustomEventResponse)).
 		WithContentType("application/json; charset=utf-8")
 

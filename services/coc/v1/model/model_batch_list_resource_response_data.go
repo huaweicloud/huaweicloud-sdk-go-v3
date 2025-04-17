@@ -49,6 +49,9 @@ type BatchListResourceResponseData struct {
 
 	// 是否已托管
 	IsDelegated *bool `json:"is_delegated,omitempty"`
+
+	// 用户定义资源是否可运维实例
+	Operable *string `json:"operable,omitempty"`
 }
 
 func (o BatchListResourceResponseData) String() string {

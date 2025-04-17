@@ -565,6 +565,22 @@ func (i *PublishAssetsInvoker) Invoke() (*model.PublishAssetsResponse, error) {
 	}
 }
 
+type RefreshAssetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RefreshAssetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RefreshAssetInvoker) Invoke() (*model.RefreshAssetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RefreshAssetResponse), nil
+	}
+}
+
 type ShowAssetCipherInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -658,6 +674,22 @@ func (i *ShowPreheatingAssetInvoker) Invoke() (*model.ShowPreheatingAssetRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowPreheatingAssetResponse), nil
+	}
+}
+
+type ShowRefreshResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRefreshResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRefreshResultInvoker) Invoke() (*model.ShowRefreshResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRefreshResultResponse), nil
 	}
 }
 
