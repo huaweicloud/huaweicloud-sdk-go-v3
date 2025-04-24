@@ -9,13 +9,13 @@ import (
 // ListVhostsResponse Response Object
 type ListVhostsResponse struct {
 
-	// 当前显示数量
+	// **参数解释**： 当前显示的Vhost数量 **取值范围**： 不涉及。
 	Size *int32 `json:"size,omitempty"`
 
-	// 查询结果总数
+	// **参数解释**： 查询到的Vhost总数 **取值范围**： 不涉及。
 	Total *int32 `json:"total,omitempty"`
 
-	// 查询的Vhost信息列表
+	// **参数解释**： 查询的Vhost信息列表
 	Items          *[]ShowVhostDetailResp `json:"items,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

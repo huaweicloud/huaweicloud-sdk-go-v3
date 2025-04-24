@@ -65,6 +65,12 @@ type Quota struct {
 
 	// 单个监听器下的转发策略配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
 	L7policiesPerListener int32 `json:"l7policies_per_listener"`
+
+	// 单个pool实例下的免费member配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+	FreeInstanceMembersPerPool int32 `json:"free_instance_members_per_pool"`
+
+	// 单个LB实例下的免费监听器配额。 取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+	FreeInstanceListenersPerLoadbalancer int32 `json:"free_instance_listeners_per_loadbalancer"`
 }
 
 func (o Quota) String() string {

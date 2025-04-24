@@ -649,6 +649,27 @@ func (c *GaussDBClient) DeleteScheduleTasKInvoker(request *model.DeleteScheduleT
 	return &DeleteScheduleTasKInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteSqlFilterRule 删除SQL限流规则
+//
+// 删除SQL限流规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) DeleteSqlFilterRule(request *model.DeleteSqlFilterRuleRequest) (*model.DeleteSqlFilterRuleResponse, error) {
+	requestDef := GenReqDefForDeleteSqlFilterRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSqlFilterRuleResponse), nil
+	}
+}
+
+// DeleteSqlFilterRuleInvoker 删除SQL限流规则
+func (c *GaussDBClient) DeleteSqlFilterRuleInvoker(request *model.DeleteSqlFilterRuleRequest) *DeleteSqlFilterRuleInvoker {
+	requestDef := GenReqDefForDeleteSqlFilterRule()
+	return &DeleteSqlFilterRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteTaskRecord 删除指定任务记录
 //
 // 删除指定任务记录。
@@ -668,6 +689,27 @@ func (c *GaussDBClient) DeleteTaskRecord(request *model.DeleteTaskRecordRequest)
 func (c *GaussDBClient) DeleteTaskRecordInvoker(request *model.DeleteTaskRecordRequest) *DeleteTaskRecordInvoker {
 	requestDef := GenReqDefForDeleteTaskRecord()
 	return &DeleteTaskRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTaurusDbNodeProcesses 终止节点用户会话线程
+//
+// 终止TaurusDB节点中指定的用户会话线程，执行时将排除传入的内部会话线程。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) DeleteTaurusDbNodeProcesses(request *model.DeleteTaurusDbNodeProcessesRequest) (*model.DeleteTaurusDbNodeProcessesResponse, error) {
+	requestDef := GenReqDefForDeleteTaurusDbNodeProcesses()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTaurusDbNodeProcessesResponse), nil
+	}
+}
+
+// DeleteTaurusDbNodeProcessesInvoker 终止节点用户会话线程
+func (c *GaussDBClient) DeleteTaurusDbNodeProcessesInvoker(request *model.DeleteTaurusDbNodeProcessesRequest) *DeleteTaurusDbNodeProcessesInvoker {
+	requestDef := GenReqDefForDeleteTaurusDbNodeProcesses()
+	return &DeleteTaurusDbNodeProcessesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DescribeBackupEncryptStatus 查询实例是否开启备份加密功能
@@ -1259,6 +1301,27 @@ func (c *GaussDBClient) ListScheduleJobsInvoker(request *model.ListScheduleJobsR
 	return &ListScheduleJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTaurusDbNodeProcesses 查询节点用户会话线程
+//
+// 分页查询TaurusDB节点中的用户会话线程，对应于show processlist命令，返回结果不含内部会话线程。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListTaurusDbNodeProcesses(request *model.ListTaurusDbNodeProcessesRequest) (*model.ListTaurusDbNodeProcessesResponse, error) {
+	requestDef := GenReqDefForListTaurusDbNodeProcesses()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTaurusDbNodeProcessesResponse), nil
+	}
+}
+
+// ListTaurusDbNodeProcessesInvoker 查询节点用户会话线程
+func (c *GaussDBClient) ListTaurusDbNodeProcessesInvoker(request *model.ListTaurusDbNodeProcessesRequest) *ListTaurusDbNodeProcessesInvoker {
+	requestDef := GenReqDefForListTaurusDbNodeProcesses()
+	return &ListTaurusDbNodeProcessesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ModifyBackupEncryptStatus 打开或关闭备份加密
 //
 // 打开或关闭备份加密。
@@ -1551,6 +1614,27 @@ func (c *GaussDBClient) SetRecyclePolicy(request *model.SetRecyclePolicyRequest)
 func (c *GaussDBClient) SetRecyclePolicyInvoker(request *model.SetRecyclePolicyRequest) *SetRecyclePolicyInvoker {
 	requestDef := GenReqDefForSetRecyclePolicy()
 	return &SetRecyclePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetSqlFilterRule 设置SQL限流规则
+//
+// 设置SQL限流规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) SetSqlFilterRule(request *model.SetSqlFilterRuleRequest) (*model.SetSqlFilterRuleResponse, error) {
+	requestDef := GenReqDefForSetSqlFilterRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetSqlFilterRuleResponse), nil
+	}
+}
+
+// SetSqlFilterRuleInvoker 设置SQL限流规则
+func (c *GaussDBClient) SetSqlFilterRuleInvoker(request *model.SetSqlFilterRuleRequest) *SetSqlFilterRuleInvoker {
+	requestDef := GenReqDefForSetSqlFilterRule()
+	return &SetSqlFilterRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAuditLog 查询全量SQL开关状态
@@ -2225,6 +2309,48 @@ func (c *GaussDBClient) ShowSlowlogSensitiveStatusInvoker(request *model.ShowSlo
 	return &ShowSlowlogSensitiveStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSqlFilterControl 查询SQL限流开关状态
+//
+// 查询SQL限流开关状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowSqlFilterControl(request *model.ShowSqlFilterControlRequest) (*model.ShowSqlFilterControlResponse, error) {
+	requestDef := GenReqDefForShowSqlFilterControl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSqlFilterControlResponse), nil
+	}
+}
+
+// ShowSqlFilterControlInvoker 查询SQL限流开关状态
+func (c *GaussDBClient) ShowSqlFilterControlInvoker(request *model.ShowSqlFilterControlRequest) *ShowSqlFilterControlInvoker {
+	requestDef := GenReqDefForShowSqlFilterControl()
+	return &ShowSqlFilterControlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSqlFilterRule 查询SQL限流规则
+//
+// 查询SQL限流规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowSqlFilterRule(request *model.ShowSqlFilterRuleRequest) (*model.ShowSqlFilterRuleResponse, error) {
+	requestDef := GenReqDefForShowSqlFilterRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSqlFilterRuleResponse), nil
+	}
+}
+
+// ShowSqlFilterRuleInvoker 查询SQL限流规则
+func (c *GaussDBClient) ShowSqlFilterRuleInvoker(request *model.ShowSqlFilterRuleRequest) *ShowSqlFilterRuleInvoker {
+	requestDef := GenReqDefForShowSqlFilterRule()
+	return &ShowSqlFilterRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShrinkGaussMySqlProxy 减少数据库代理节点的数量
 //
 // 缩容数据库代理节点的数量。
@@ -2875,6 +3001,27 @@ func (c *GaussDBClient) UpdateSlowlogSensitiveSwitch(request *model.UpdateSlowlo
 func (c *GaussDBClient) UpdateSlowlogSensitiveSwitchInvoker(request *model.UpdateSlowlogSensitiveSwitchRequest) *UpdateSlowlogSensitiveSwitchInvoker {
 	requestDef := GenReqDefForUpdateSlowlogSensitiveSwitch()
 	return &UpdateSlowlogSensitiveSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSqlFilterControl 开启或者关闭SQL限流
+//
+// 开启或者关闭SQL限流。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateSqlFilterControl(request *model.UpdateSqlFilterControlRequest) (*model.UpdateSqlFilterControlResponse, error) {
+	requestDef := GenReqDefForUpdateSqlFilterControl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSqlFilterControlResponse), nil
+	}
+}
+
+// UpdateSqlFilterControlInvoker 开启或者关闭SQL限流
+func (c *GaussDBClient) UpdateSqlFilterControlInvoker(request *model.UpdateSqlFilterControlRequest) *UpdateSqlFilterControlInvoker {
+	requestDef := GenReqDefForUpdateSqlFilterControl()
+	return &UpdateSqlFilterControlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateTaurusNodeDataIp 修改只读节点的读内网地址
@@ -4240,109 +4387,4 @@ func (c *GaussDBClient) UpgradeSrKernelVersion(request *model.UpgradeSrKernelVer
 func (c *GaussDBClient) UpgradeSrKernelVersionInvoker(request *model.UpgradeSrKernelVersionRequest) *UpgradeSrKernelVersionInvoker {
 	requestDef := GenReqDefForUpgradeSrKernelVersion()
 	return &UpgradeSrKernelVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteSqlFilterRule 删除SQL限流规则
-//
-// 删除SQL限流规则。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *GaussDBClient) DeleteSqlFilterRule(request *model.DeleteSqlFilterRuleRequest) (*model.DeleteSqlFilterRuleResponse, error) {
-	requestDef := GenReqDefForDeleteSqlFilterRule()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteSqlFilterRuleResponse), nil
-	}
-}
-
-// DeleteSqlFilterRuleInvoker 删除SQL限流规则
-func (c *GaussDBClient) DeleteSqlFilterRuleInvoker(request *model.DeleteSqlFilterRuleRequest) *DeleteSqlFilterRuleInvoker {
-	requestDef := GenReqDefForDeleteSqlFilterRule()
-	return &DeleteSqlFilterRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// SetSqlFilterRule 设置SQL限流规则
-//
-// 设置SQL限流规则。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *GaussDBClient) SetSqlFilterRule(request *model.SetSqlFilterRuleRequest) (*model.SetSqlFilterRuleResponse, error) {
-	requestDef := GenReqDefForSetSqlFilterRule()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.SetSqlFilterRuleResponse), nil
-	}
-}
-
-// SetSqlFilterRuleInvoker 设置SQL限流规则
-func (c *GaussDBClient) SetSqlFilterRuleInvoker(request *model.SetSqlFilterRuleRequest) *SetSqlFilterRuleInvoker {
-	requestDef := GenReqDefForSetSqlFilterRule()
-	return &SetSqlFilterRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowSqlFilterControl 查询SQL限流开关状态
-//
-// 查询SQL限流开关状态。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *GaussDBClient) ShowSqlFilterControl(request *model.ShowSqlFilterControlRequest) (*model.ShowSqlFilterControlResponse, error) {
-	requestDef := GenReqDefForShowSqlFilterControl()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowSqlFilterControlResponse), nil
-	}
-}
-
-// ShowSqlFilterControlInvoker 查询SQL限流开关状态
-func (c *GaussDBClient) ShowSqlFilterControlInvoker(request *model.ShowSqlFilterControlRequest) *ShowSqlFilterControlInvoker {
-	requestDef := GenReqDefForShowSqlFilterControl()
-	return &ShowSqlFilterControlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowSqlFilterRule 查询SQL限流规则
-//
-// 查询SQL限流规则。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *GaussDBClient) ShowSqlFilterRule(request *model.ShowSqlFilterRuleRequest) (*model.ShowSqlFilterRuleResponse, error) {
-	requestDef := GenReqDefForShowSqlFilterRule()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowSqlFilterRuleResponse), nil
-	}
-}
-
-// ShowSqlFilterRuleInvoker 查询SQL限流规则
-func (c *GaussDBClient) ShowSqlFilterRuleInvoker(request *model.ShowSqlFilterRuleRequest) *ShowSqlFilterRuleInvoker {
-	requestDef := GenReqDefForShowSqlFilterRule()
-	return &ShowSqlFilterRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateSqlFilterControl 开启或者关闭SQL限流
-//
-// 开启或者关闭SQL限流。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *GaussDBClient) UpdateSqlFilterControl(request *model.UpdateSqlFilterControlRequest) (*model.UpdateSqlFilterControlResponse, error) {
-	requestDef := GenReqDefForUpdateSqlFilterControl()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateSqlFilterControlResponse), nil
-	}
-}
-
-// UpdateSqlFilterControlInvoker 开启或者关闭SQL限流
-func (c *GaussDBClient) UpdateSqlFilterControlInvoker(request *model.UpdateSqlFilterControlRequest) *UpdateSqlFilterControlInvoker {
-	requestDef := GenReqDefForUpdateSqlFilterControl()
-	return &UpdateSqlFilterControlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

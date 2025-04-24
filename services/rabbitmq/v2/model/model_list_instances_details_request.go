@@ -12,31 +12,31 @@ import (
 // ListInstancesDetailsRequest Request Object
 type ListInstancesDetailsRequest struct {
 
-	// 引擎类型：rabbitmq。
+	// **参数解释**： 引擎类型：rabbitmq。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Engine ListInstancesDetailsRequestEngine `json:"engine"`
 
-	// 实例名称。
+	// **参数解释**： 实例名称。获取方式：登录RabbitMQ控制台，在RabbitMQ实例详情页面查找实例名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 实例ID。
+	// **参数解释**： 实例ID。获取方法如下：登录RabbitMQ控制台，在RabbitMQ实例详情页面查找实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	InstanceId *string `json:"instance_id,omitempty"`
 
-	// 实例状态，[详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
+	// **参数解释**： 实例状态，[详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Status *ListInstancesDetailsRequestStatus `json:"status,omitempty"`
 
-	// 是否返回创建失败的实例数。  当参数值为“true”时，返回创建失败的实例数。参数值为“false”或者其他值，不返回创建失败的实例数。
+	// **参数解释**： 是否返回创建失败的实例数。 **约束限制**： 不涉及。 **取值范围**： - true：返回创建失败的实例数。 - false：不返回创建失败的实例数。  **默认取值**： 不涉及。
 	IncludeFailure *ListInstancesDetailsRequestIncludeFailure `json:"include_failure,omitempty"`
 
-	// 是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
+	// **参数解释**： 是否按照实例名称进行精确匹配查询。 **约束限制**： 不涉及。 **取值范围**： - true：按照实例名称进行精确匹配查询。 - false：按照模糊匹配实例名称查询。  **默认取值**： false
 	ExactMatchName *ListInstancesDetailsRequestExactMatchName `json:"exact_match_name,omitempty"`
 
-	// 企业项目ID。
+	// **参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 偏移量，表示从此偏移量开始查询， offset大于等于0。
+	// **参数解释**： 偏移量，表示从此偏移量开始查询。 **约束限制**： 不涉及。 **取值范围**： 大于等于0 **默认取值**： 不涉及。
 	Offset *string `json:"offset,omitempty"`
 
-	// 当次查询返回的最大实例个数，默认值为10，取值范围为1~50。
+	// **参数解释**： 当次查询返回的最大实例个数。 **约束限制**： 不涉及。 **取值范围**： 1~50 **默认取值**： 10
 	Limit *string `json:"limit,omitempty"`
 }
 

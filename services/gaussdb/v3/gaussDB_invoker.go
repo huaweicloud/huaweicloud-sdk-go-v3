@@ -485,6 +485,22 @@ func (i *DeleteScheduleTasKInvoker) Invoke() (*model.DeleteScheduleTasKResponse,
 	}
 }
 
+type DeleteSqlFilterRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSqlFilterRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteSqlFilterRuleInvoker) Invoke() (*model.DeleteSqlFilterRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSqlFilterRuleResponse), nil
+	}
+}
+
 type DeleteTaskRecordInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -498,6 +514,22 @@ func (i *DeleteTaskRecordInvoker) Invoke() (*model.DeleteTaskRecordResponse, err
 		return nil, err
 	} else {
 		return result.(*model.DeleteTaskRecordResponse), nil
+	}
+}
+
+type DeleteTaurusDbNodeProcessesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTaurusDbNodeProcessesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteTaurusDbNodeProcessesInvoker) Invoke() (*model.DeleteTaurusDbNodeProcessesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTaurusDbNodeProcessesResponse), nil
 	}
 }
 
@@ -949,6 +981,22 @@ func (i *ListScheduleJobsInvoker) Invoke() (*model.ListScheduleJobsResponse, err
 	}
 }
 
+type ListTaurusDbNodeProcessesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTaurusDbNodeProcessesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTaurusDbNodeProcessesInvoker) Invoke() (*model.ListTaurusDbNodeProcessesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTaurusDbNodeProcessesResponse), nil
+	}
+}
+
 type ModifyBackupEncryptStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1170,6 +1218,22 @@ func (i *SetRecyclePolicyInvoker) Invoke() (*model.SetRecyclePolicyResponse, err
 		return nil, err
 	} else {
 		return result.(*model.SetRecyclePolicyResponse), nil
+	}
+}
+
+type SetSqlFilterRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetSqlFilterRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetSqlFilterRuleInvoker) Invoke() (*model.SetSqlFilterRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetSqlFilterRuleResponse), nil
 	}
 }
 
@@ -1685,6 +1749,38 @@ func (i *ShowSlowlogSensitiveStatusInvoker) Invoke() (*model.ShowSlowlogSensitiv
 	}
 }
 
+type ShowSqlFilterControlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSqlFilterControlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSqlFilterControlInvoker) Invoke() (*model.ShowSqlFilterControlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSqlFilterControlResponse), nil
+	}
+}
+
+type ShowSqlFilterRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSqlFilterRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSqlFilterRuleInvoker) Invoke() (*model.ShowSqlFilterRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSqlFilterRuleResponse), nil
+	}
+}
+
 type ShrinkGaussMySqlProxyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2178,6 +2274,22 @@ func (i *UpdateSlowlogSensitiveSwitchInvoker) Invoke() (*model.UpdateSlowlogSens
 		return nil, err
 	} else {
 		return result.(*model.UpdateSlowlogSensitiveSwitchResponse), nil
+	}
+}
+
+type UpdateSqlFilterControlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSqlFilterControlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSqlFilterControlInvoker) Invoke() (*model.UpdateSqlFilterControlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSqlFilterControlResponse), nil
 	}
 }
 
@@ -3218,85 +3330,5 @@ func (i *UpgradeSrKernelVersionInvoker) Invoke() (*model.UpgradeSrKernelVersionR
 		return nil, err
 	} else {
 		return result.(*model.UpgradeSrKernelVersionResponse), nil
-	}
-}
-
-type DeleteSqlFilterRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteSqlFilterRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteSqlFilterRuleInvoker) Invoke() (*model.DeleteSqlFilterRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteSqlFilterRuleResponse), nil
-	}
-}
-
-type SetSqlFilterRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SetSqlFilterRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *SetSqlFilterRuleInvoker) Invoke() (*model.SetSqlFilterRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SetSqlFilterRuleResponse), nil
-	}
-}
-
-type ShowSqlFilterControlInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowSqlFilterControlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowSqlFilterControlInvoker) Invoke() (*model.ShowSqlFilterControlResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowSqlFilterControlResponse), nil
-	}
-}
-
-type ShowSqlFilterRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowSqlFilterRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowSqlFilterRuleInvoker) Invoke() (*model.ShowSqlFilterRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowSqlFilterRuleResponse), nil
-	}
-}
-
-type UpdateSqlFilterControlInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateSqlFilterControlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateSqlFilterControlInvoker) Invoke() (*model.UpdateSqlFilterControlResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateSqlFilterControlResponse), nil
 	}
 }

@@ -23,6 +23,9 @@ type AvailabilityZone struct {
 
 	// 参数解释：范围编码。  取值范围：0表示center，21表示homezone。
 	Category int32 `json:"category"`
+
+	// 参数解释：可用区的产品编码，仅边缘场景有效。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+	SpecCode *string `json:"spec_code,omitempty"`
 }
 
 func (o AvailabilityZone) String() string {

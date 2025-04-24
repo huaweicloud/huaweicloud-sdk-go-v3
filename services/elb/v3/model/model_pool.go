@@ -73,17 +73,17 @@ type Pool struct {
 	// 参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除'<'和'>'外通用Unicode字符集字符，最大255个字符。
 	ProtectionReason *string `json:"protection_reason,omitempty"`
 
-	// 参数解释：后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  约束限制： - 仅QUIC,TCP,UDP的pool支持。
+	// 参数解释：后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  约束限制： - 仅QUIC,TCP,UDP的pool支持。  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
 	AnyPortEnable *bool `json:"any_port_enable,omitempty"`
 
 	ConnectionDrain *ConnectionDrain `json:"connection_drain,omitempty"`
 
-	// 参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+	// 参数解释：后端服务器组所在的企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	PoolHealth *PoolHealth `json:"pool_health,omitempty"`
 
-	// 参数解释：网络公共边界组，如：center
+	// 参数解释：网络公共边界组，如：center。  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
 	PublicBorderGroup *string `json:"public_border_group,omitempty"`
 
 	QuicCidHashStrategy *QuicCidHashStrategy `json:"quic_cid_hash_strategy,omitempty"`

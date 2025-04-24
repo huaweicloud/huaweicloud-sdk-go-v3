@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// OperateSubscriptionResponse Response Object
-type OperateSubscriptionResponse struct {
+// ExecuteSubscriptionOperationResponse Response Object
+type ExecuteSubscriptionOperationResponse struct {
 
 	// 操作失败的订阅个数
 	FailedCount *int32 `json:"failed_count,omitempty"`
@@ -19,11 +19,11 @@ type OperateSubscriptionResponse struct {
 	HttpStatusCode int     `json:"-"`
 }
 
-func (o OperateSubscriptionResponse) String() string {
+func (o ExecuteSubscriptionOperationResponse) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "OperateSubscriptionResponse struct{}"
+		return "ExecuteSubscriptionOperationResponse struct{}"
 	}
 
-	return strings.Join([]string{"OperateSubscriptionResponse", string(data)}, " ")
+	return strings.Join([]string{"ExecuteSubscriptionOperationResponse", string(data)}, " ")
 }

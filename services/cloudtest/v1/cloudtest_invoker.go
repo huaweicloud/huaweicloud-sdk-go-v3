@@ -5,6 +5,22 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cloudtest/v1/model"
 )
 
+type AddCaseResultFourInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddCaseResultFourInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddCaseResultFourInvoker) Invoke() (*model.AddCaseResultFourResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddCaseResultFourResponse), nil
+	}
+}
+
 type AddTestCaseCommentInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -18,6 +34,22 @@ func (i *AddTestCaseCommentInvoker) Invoke() (*model.AddTestCaseCommentResponse,
 		return nil, err
 	} else {
 		return result.(*model.AddTestCaseCommentResponse), nil
+	}
+}
+
+type AddTestCaseResultLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddTestCaseResultLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddTestCaseResultLogInvoker) Invoke() (*model.AddTestCaseResultLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddTestCaseResultLogResponse), nil
 	}
 }
 

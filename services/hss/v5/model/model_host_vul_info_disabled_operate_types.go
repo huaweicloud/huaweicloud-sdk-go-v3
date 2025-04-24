@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type VulHostInfoDisabledOperateTypes struct {
+type HostVulInfoDisabledOperateTypes struct {
 
 	// 操作类型 - ignore : 忽略 - not_ignore : 取消忽略 - immediate_repair : 修复 - manual_repair: 人工修复 - verify : 验证 - add_to_whitelist : 加入白名单
 	OperateType *string `json:"operate_type,omitempty"`
@@ -15,11 +15,11 @@ type VulHostInfoDisabledOperateTypes struct {
 	Reason *string `json:"reason,omitempty"`
 }
 
-func (o VulHostInfoDisabledOperateTypes) String() string {
+func (o HostVulInfoDisabledOperateTypes) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "VulHostInfoDisabledOperateTypes struct{}"
+		return "HostVulInfoDisabledOperateTypes struct{}"
 	}
 
-	return strings.Join([]string{"VulHostInfoDisabledOperateTypes", string(data)}, " ")
+	return strings.Join([]string{"HostVulInfoDisabledOperateTypes", string(data)}, " ")
 }

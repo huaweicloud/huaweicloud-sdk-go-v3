@@ -8,7 +8,8 @@ import (
 
 // DeleteEventStreamingResponse Response Object
 type DeleteEventStreamingResponse struct {
-	HttpStatusCode int `json:"-"`
+	Body           *interface{} `json:"body,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o DeleteEventStreamingResponse) String() string {

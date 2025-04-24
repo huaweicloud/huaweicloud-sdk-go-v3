@@ -21,7 +21,7 @@ type ListMembersRequest struct {
 	// 是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
 	PageReverse *bool `json:"page_reverse,omitempty"`
 
-	// 后端服务器名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
+	// 后端服务器名称。注意：该名称并非ECS名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
 	Name *[]string `json:"name,omitempty"`
 
 	// 后端服务器的权重，请求将根据pool配置的负载均衡算法和后端服务器的权重进行负载分发。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值：0-100。  支持多值查询，查询条件格式：*weight=xxx&weight=xxx*。

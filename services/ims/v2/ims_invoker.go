@@ -69,6 +69,22 @@ func (i *BatchDeleteMembersInvoker) Invoke() (*model.BatchDeleteMembersResponse,
 	}
 }
 
+type BatchDeleteTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteTagsInvoker) Invoke() (*model.BatchDeleteTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteTagsResponse), nil
+	}
+}
+
 type BatchUpdateMembersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -245,6 +261,22 @@ func (i *ListImageByTagsInvoker) Invoke() (*model.ListImageByTagsResponse, error
 	}
 }
 
+type ListImageMembersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListImageMembersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListImageMembersInvoker) Invoke() (*model.ListImageMembersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListImageMembersResponse), nil
+	}
+}
+
 type ListImageTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -338,6 +370,22 @@ func (i *RegisterImageInvoker) Invoke() (*model.RegisterImageResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.RegisterImageResponse), nil
+	}
+}
+
+type ShowImageMemberInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowImageMemberInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowImageMemberInvoker) Invoke() (*model.ShowImageMemberResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowImageMemberResponse), nil
 	}
 }
 

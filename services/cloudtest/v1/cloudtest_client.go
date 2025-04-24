@@ -19,6 +19,27 @@ func CloudtestClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// AddCaseResultFour 设置用例结果
+//
+// 设置用例结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) AddCaseResultFour(request *model.AddCaseResultFourRequest) (*model.AddCaseResultFourResponse, error) {
+	requestDef := GenReqDefForAddCaseResultFour()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddCaseResultFourResponse), nil
+	}
+}
+
+// AddCaseResultFourInvoker 设置用例结果
+func (c *CloudtestClient) AddCaseResultFourInvoker(request *model.AddCaseResultFourRequest) *AddCaseResultFourInvoker {
+	requestDef := GenReqDefForAddCaseResultFour()
+	return &AddCaseResultFourInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddTestCaseComment 新增用例评论
 //
 // 新增用例评论
@@ -38,6 +59,27 @@ func (c *CloudtestClient) AddTestCaseComment(request *model.AddTestCaseCommentRe
 func (c *CloudtestClient) AddTestCaseCommentInvoker(request *model.AddTestCaseCommentRequest) *AddTestCaseCommentInvoker {
 	requestDef := GenReqDefForAddTestCaseComment()
 	return &AddTestCaseCommentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddTestCaseResultLog 初始化用例执行记录
+//
+// 初始化用例执行记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) AddTestCaseResultLog(request *model.AddTestCaseResultLogRequest) (*model.AddTestCaseResultLogResponse, error) {
+	requestDef := GenReqDefForAddTestCaseResultLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddTestCaseResultLogResponse), nil
+	}
+}
+
+// AddTestCaseResultLogInvoker 初始化用例执行记录
+func (c *CloudtestClient) AddTestCaseResultLogInvoker(request *model.AddTestCaseResultLogRequest) *AddTestCaseResultLogInvoker {
+	requestDef := GenReqDefForAddTestCaseResultLog()
+	return &AddTestCaseResultLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchAddRelationsByOneCase 添加需求/缺陷和多个用例关联关系

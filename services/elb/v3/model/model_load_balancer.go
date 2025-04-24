@@ -99,6 +99,12 @@ type LoadBalancer struct {
 	// 参数解释：七层弹性Flavor ID。  不支持该字段，请勿使用。
 	L7ScaleFlavorId string `json:"l7_scale_flavor_id"`
 
+	// 网关型LB的Flavor ID。  [使用说明：当gw_flavor_id不传时，会使用默认gateway flavor （默认gateway flavor根据不同局点有所不同，具体以实际值为准）。 ](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)  不支持该字段，请勿使用。
+	GwFlavorId *string `json:"gw_flavor_id,omitempty"`
+
+	// 参数解释：负载均衡器类别。  取值范围： - gateway 表示网关类型负载均衡器。 - null 表示其他非网关类型负载均衡器。  默认取值：null。  不支持该字段，请勿使用。
+	LoadbalancerType *string `json:"loadbalancer_type,omitempty"`
+
 	// 参数解释：负载均衡器绑定的公网IP。只支持绑定一个公网IP。  注：该字段与eips一致。
 	Publicips []PublicIpInfo `json:"publicips"`
 
@@ -117,8 +123,6 @@ type LoadBalancer struct {
 	// 参数解释：负载均衡器的冻结场景。 [若负载均衡器有多个冻结场景，用逗号分隔。  取值范围： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。](tag:hws,hws_hk)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
 	FrozenScene string `json:"frozen_scene"`
 
-	Ipv6Bandwidth *BandwidthRef `json:"ipv6_bandwidth"`
-
 	// 参数解释：是否开启删除保护。  约束限制： - 仅当前局点启用删除保护特性后才会返回该字段。 - 退场时需要先关闭所有资源的删除保护开关。  取值范围： - false：不开启。 - true：开启。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
 	DeletionProtectionEnable *bool `json:"deletion_protection_enable,omitempty"`
 
@@ -127,8 +131,20 @@ type LoadBalancer struct {
 	// 参数解释：LB所属AZ组。
 	PublicBorderGroup *string `json:"public_border_group,omitempty"`
 
-	// 参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。
+	// 参数解释：负载均衡器实例的计费模式。  取值范围： - flavor：按规格计费 - lcu：按使用量计费 - 空值：若是共享型表示免费实例。若是独享型则与flavor模式一致，都是按规格计费。  [不支持该字段，请勿使用。](tag:hws_hk,hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
 	ChargeMode *string `json:"charge_mode,omitempty"`
+
+	// 参数解释：lb 模式，默认为lb，ep模式LB支持跨租户访问。  不支持该字段，请勿使用。
+	ServiceLbMode *LoadBalancerServiceLbMode `json:"service_lb_mode,omitempty"`
+
+	// 参数解释：标识实例归属哪个内部服务。  不支持该字段，请勿使用。
+	InstanceType *string `json:"instance_type,omitempty"`
+
+	// 参数解释：标识实例绑定内部服务的实例id。  不支持该字段，请勿使用。
+	InstanceId *string `json:"instance_id,omitempty"`
+
+	// 参数解释：pp扩展。  不支持该字段，请勿使用。
+	ProxyProtocolExtensions *[]ProxyProtocolExtension `json:"proxy_protocol_extensions,omitempty"`
 
 	// 参数解释：WAF故障时的流量处理策略。  约束限制：只有绑定了waf的LB实例，该字段才会生效。  取值范围：discard:丢弃，forward: 转发到后端。  默认取值：forward  [不支持该字段，请勿使用。](tag:hws_eu,hws_test,hcs,hcs_sm,hcso,hk_vdf,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b,hcso_dt,dt,ocb,ctc,cmcc,tm,ct,sbc,g42,hws_ocb,hk_sbc,hk_tm,hk_g42)
 	WafFailureAction *string `json:"waf_failure_action,omitempty"`
@@ -184,6 +200,53 @@ func (c LoadBalancerElbVirsubnetType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *LoadBalancerElbVirsubnetType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type LoadBalancerServiceLbMode struct {
+	value string
+}
+
+type LoadBalancerServiceLbModeEnum struct {
+	LB LoadBalancerServiceLbMode
+	EP LoadBalancerServiceLbMode
+}
+
+func GetLoadBalancerServiceLbModeEnum() LoadBalancerServiceLbModeEnum {
+	return LoadBalancerServiceLbModeEnum{
+		LB: LoadBalancerServiceLbMode{
+			value: "lb",
+		},
+		EP: LoadBalancerServiceLbMode{
+			value: "ep",
+		},
+	}
+}
+
+func (c LoadBalancerServiceLbMode) Value() string {
+	return c.value
+}
+
+func (c LoadBalancerServiceLbMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *LoadBalancerServiceLbMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

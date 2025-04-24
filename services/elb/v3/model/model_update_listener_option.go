@@ -35,7 +35,7 @@ type UpdateListenerOption struct {
 	// 参数解释：监听器的名称。  约束限制：若名称为空，则在控制台的监听器列表无法选择并查看监听器详情。
 	Name *string `json:"name,omitempty"`
 
-	// 参数解释：监听器使用的SNI证书（带域名的服务器证书）ID列表。  约束限制： - 列表对应的所有SNI证书的域名不允许存在重复。 - 列表对应的所有SNI证书的域名总数不超过50。
+	// 参数解释：监听器使用的SNI证书（带域名的服务器证书）ID列表。  约束限制： - QUIC监听器仅支持RSA证书。 - 列表对应的所有SNI证书的域名不允许存在重复。 - 列表对应的所有SNI证书的域名总数不超过200。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt)
 	SniContainerRefs *[]string `json:"sni_container_refs,omitempty"`
 
 	// 参数解释：监听器使用的SNI证书泛域名匹配方式。  取值范围： - longest_suffix表示最长尾缀匹配。 - wildcard表示标准域名分级匹配。  默认取值：wildcard。

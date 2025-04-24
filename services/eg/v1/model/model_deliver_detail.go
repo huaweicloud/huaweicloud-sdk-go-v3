@@ -9,10 +9,10 @@ import (
 // DeliverDetail 投递详情
 type DeliverDetail struct {
 
-	// 投递时间 格式 yyyy/mm/dd xx:yy:zz
+	// 投递时间   格式 yyyy/mm/dd xx:yy:zz
 	DeliverTime *string `json:"deliverTime,omitempty"`
 
-	// 投递状态 SUCCESS Or FAILED
+	// 投递状态     SUCCESS Or  FAILED
 	DeliverStatus *string `json:"deliverStatus,omitempty"`
 
 	// 投递耗时，单位ms

@@ -8,7 +8,8 @@ import (
 
 // DeleteEndpointResponse Response Object
 type DeleteEndpointResponse struct {
-	HttpStatusCode int `json:"-"`
+	Body           *interface{} `json:"body,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o DeleteEndpointResponse) String() string {

@@ -16,6 +16,12 @@ type MemberStatus struct {
 	OperatingStatus string `json:"operating_status"`
 
 	Reason *MemberHealthCheckFailedReason `json:"reason,omitempty"`
+
+	// 创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+	CreatedAt *string `json:"created_at,omitempty"`
+
+	// 更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
+	UpdatedAt *string `json:"updated_at,omitempty"`
 }
 
 func (o MemberStatus) String() string {

@@ -10,10 +10,13 @@ import (
 var (
 	CN_NORTH_4 = region.NewRegion("cn-north-4",
 		"https://apm2.cn-north-4.myhuaweicloud.com")
+	RU_MOSCOW_1 = region.NewRegion("ru-moscow-1",
+		"https://apm2.ru-moscow-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
-	"cn-north-4": CN_NORTH_4,
+	"cn-north-4":  CN_NORTH_4,
+	"ru-moscow-1": RU_MOSCOW_1,
 }
 
 var provider = region.DefaultProviderChain("APM")

@@ -341,6 +341,22 @@ func (i *DiscoverEventSchemaFromDataInvoker) Invoke() (*model.DiscoverEventSchem
 	}
 }
 
+type ExecuteSubscriptionOperationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteSubscriptionOperationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteSubscriptionOperationInvoker) Invoke() (*model.ExecuteSubscriptionOperationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteSubscriptionOperationResponse), nil
+	}
+}
+
 type ListAgenciesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -594,22 +610,6 @@ func (i *ListWorkflowTriggersInvoker) Invoke() (*model.ListWorkflowTriggersRespo
 		return nil, err
 	} else {
 		return result.(*model.ListWorkflowTriggersResponse), nil
-	}
-}
-
-type OperateSubscriptionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *OperateSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *OperateSubscriptionInvoker) Invoke() (*model.OperateSubscriptionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.OperateSubscriptionResponse), nil
 	}
 }
 

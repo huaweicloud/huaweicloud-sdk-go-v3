@@ -51,7 +51,7 @@ type CertificateInfo struct {
 	// HTTPS协议使用的SM加密证书私钥。  取值：PEM编码格式。  注意：仅在当前局点的SM加密证书特性开启才会返回该字段。
 	EncPrivateKey *string `json:"enc_private_key,omitempty"`
 
-	// SCM证书ID
+	// SCM证书ID。
 	ScmCertificateId *string `json:"scm_certificate_id,omitempty"`
 
 	// 证书绑定的主域名。

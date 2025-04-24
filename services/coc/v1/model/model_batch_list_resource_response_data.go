@@ -14,6 +14,9 @@ type BatchListResourceResponseData struct {
 	// 云服务分配的资源ID
 	ResourceId *string `json:"resource_id,omitempty"`
 
+	// 租户ID
+	DomainId *string `json:"domain_id,omitempty"`
+
 	// 资源名称
 	Name *string `json:"name,omitempty"`
 
@@ -23,7 +26,7 @@ type BatchListResourceResponseData struct {
 	// 资源类型
 	Type *string `json:"type,omitempty"`
 
-	// Openstack中的项目I
+	// Openstack中的项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// region ID

@@ -460,6 +460,27 @@ func (c *EgClient) DiscoverEventSchemaFromDataInvoker(request *model.DiscoverEve
 	return &DiscoverEventSchemaFromDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExecuteSubscriptionOperation 操作事件订阅
+//
+// 操作事件订阅，支持启用、禁用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EgClient) ExecuteSubscriptionOperation(request *model.ExecuteSubscriptionOperationRequest) (*model.ExecuteSubscriptionOperationResponse, error) {
+	requestDef := GenReqDefForExecuteSubscriptionOperation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteSubscriptionOperationResponse), nil
+	}
+}
+
+// ExecuteSubscriptionOperationInvoker 操作事件订阅
+func (c *EgClient) ExecuteSubscriptionOperationInvoker(request *model.ExecuteSubscriptionOperationRequest) *ExecuteSubscriptionOperationInvoker {
+	requestDef := GenReqDefForExecuteSubscriptionOperation()
+	return &ExecuteSubscriptionOperationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAgencies 查询服务委托
 //
 // 查询服务委托。
@@ -794,27 +815,6 @@ func (c *EgClient) ListWorkflowTriggers(request *model.ListWorkflowTriggersReque
 func (c *EgClient) ListWorkflowTriggersInvoker(request *model.ListWorkflowTriggersRequest) *ListWorkflowTriggersInvoker {
 	requestDef := GenReqDefForListWorkflowTriggers()
 	return &ListWorkflowTriggersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// OperateSubscription 操作事件订阅
-//
-// 操作事件订阅，支持启用、禁用。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *EgClient) OperateSubscription(request *model.OperateSubscriptionRequest) (*model.OperateSubscriptionResponse, error) {
-	requestDef := GenReqDefForOperateSubscription()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.OperateSubscriptionResponse), nil
-	}
-}
-
-// OperateSubscriptionInvoker 操作事件订阅
-func (c *EgClient) OperateSubscriptionInvoker(request *model.OperateSubscriptionRequest) *OperateSubscriptionInvoker {
-	requestDef := GenReqDefForOperateSubscription()
-	return &OperateSubscriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // PutEvents 发布事件到事件通道

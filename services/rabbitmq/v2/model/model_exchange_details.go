@@ -17,6 +17,9 @@ type ExchangeDetails struct {
 	// 是否是内部Exchange
 	Internal *bool `json:"internal,omitempty"`
 
+	// 参数列表
+	Arguments *interface{} `json:"arguments,omitempty"`
+
 	// Exchange名称
 	Name *string `json:"name,omitempty"`
 

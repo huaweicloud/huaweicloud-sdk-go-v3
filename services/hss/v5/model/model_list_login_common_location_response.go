@@ -12,7 +12,7 @@ type ListLoginCommonLocationResponse struct {
 	// 常用登录地已设置的个数
 	TotalNum *int32 `json:"total_num,omitempty"`
 
-	// 返回常用登陆地信息列表
+	// 返回常用登录地信息列表
 	DataList       *[]LoginCommonLocationResponseInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                                `json:"-"`
 }

@@ -390,7 +390,7 @@ func (c *ElbClient) CreateLoadBalancerInvoker(request *model.CreateLoadBalancerR
 
 // CreateLogtank 创建云日志
 //
-// 创建云日志。[荷兰region不支持云日志功能，请勿使用。](tag:dt)
+// 创建云日志。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) CreateLogtank(request *model.CreateLogtankRequest) (*model.CreateLogtankResponse, error) {
@@ -689,7 +689,7 @@ func (c *ElbClient) DeleteLoadBalancerForceInvoker(request *model.DeleteLoadBala
 
 // DeleteLogtank 删除云日志
 //
-// 删除云日志。[荷兰region不支持云日志功能，请勿使用。](tag:dt)
+// 删除云日志。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) DeleteLogtank(request *model.DeleteLogtankRequest) (*model.DeleteLogtankResponse, error) {
@@ -1077,7 +1077,7 @@ func (c *ElbClient) ListLoadbalancerFeatureInvoker(request *model.ListLoadbalanc
 
 // ListLogtanks 查询云日志列表
 //
-// 查询云日志列表。[荷兰region不支持云日志功能，请勿使用。](tag:dt)
+// 查询云日志列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) ListLogtanks(request *model.ListLogtanksRequest) (*model.ListLogtanksResponse, error) {
@@ -1439,7 +1439,7 @@ func (c *ElbClient) ShowLoadBalancerStatusInvoker(request *model.ShowLoadBalance
 
 // ShowLogtank 查询云日志详情
 //
-// 云日志详情。[荷兰region不支持云日志功能，请勿使用。](tag:dt)
+// 云日志详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) ShowLogtank(request *model.ShowLogtankRequest) (*model.ShowLogtankResponse, error) {
@@ -1691,7 +1691,7 @@ func (c *ElbClient) UpdateLoadBalancerInvoker(request *model.UpdateLoadBalancerR
 
 // UpdateLogtank 更新云日志
 //
-// 更新云日志。[荷兰region不支持云日志功能，请勿使用。](tag:dt)
+// 更新云日志。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) UpdateLogtank(request *model.UpdateLogtankRequest) (*model.UpdateLogtankResponse, error) {

@@ -105,6 +105,27 @@ func (c *ImsClient) BatchDeleteMembersInvoker(request *model.BatchDeleteMembersR
 	return &BatchDeleteMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteTags 批量删除镜像标签
+//
+// 该接口用于为指定镜像批量删除标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImsClient) BatchDeleteTags(request *model.BatchDeleteTagsRequest) (*model.BatchDeleteTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteTagsResponse), nil
+	}
+}
+
+// BatchDeleteTagsInvoker 批量删除镜像标签
+func (c *ImsClient) BatchDeleteTagsInvoker(request *model.BatchDeleteTagsRequest) *BatchDeleteTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteTags()
+	return &BatchDeleteTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchUpdateMembers 批量更新镜像成员状态
 //
 // 该接口为扩展接口，主要用于用户接受或者拒绝多个共享镜像时批量更新镜像成员的状态。
@@ -353,6 +374,27 @@ func (c *ImsClient) ListImageByTagsInvoker(request *model.ListImageByTagsRequest
 	return &ListImageByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListImageMembers 获取镜像成员列表
+//
+// 该接口用于共享镜像过程中，获取接受该镜像的成员列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImsClient) ListImageMembers(request *model.ListImageMembersRequest) (*model.ListImageMembersResponse, error) {
+	requestDef := GenReqDefForListImageMembers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListImageMembersResponse), nil
+	}
+}
+
+// ListImageMembersInvoker 获取镜像成员列表
+func (c *ImsClient) ListImageMembersInvoker(request *model.ListImageMembersRequest) *ListImageMembersInvoker {
+	requestDef := GenReqDefForListImageMembers()
+	return &ListImageMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListImageTags 查询镜像标签
 //
 // 该接口用于为查询指定镜像上的所有标签
@@ -484,6 +526,27 @@ func (c *ImsClient) RegisterImage(request *model.RegisterImageRequest) (*model.R
 func (c *ImsClient) RegisterImageInvoker(request *model.RegisterImageRequest) *RegisterImageInvoker {
 	requestDef := GenReqDefForRegisterImage()
 	return &RegisterImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowImageMember 获取镜像成员详情
+//
+// 该接口主要用于镜像共享中查询某个镜像成员的详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImsClient) ShowImageMember(request *model.ShowImageMemberRequest) (*model.ShowImageMemberResponse, error) {
+	requestDef := GenReqDefForShowImageMember()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowImageMemberResponse), nil
+	}
+}
+
+// ShowImageMemberInvoker 获取镜像成员详情
+func (c *ImsClient) ShowImageMemberInvoker(request *model.ShowImageMemberRequest) *ShowImageMemberInvoker {
+	requestDef := GenReqDefForShowImageMember()
+	return &ShowImageMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowImageQuota 查询镜像配额

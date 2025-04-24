@@ -10,6 +10,12 @@ import (
 type UpdateDomainMultiCertificatesResponse struct {
 	Https *UpdateDomainMultiCertificatesResponseBodyContent `json:"https,omitempty"`
 
+	// 执行结果，success，fail
+	Status *string `json:"status,omitempty"`
+
+	// 详情
+	Result *[]UpdateDomainMultiCertificatesResponseBodyResult `json:"result,omitempty"`
+
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -573,6 +573,27 @@ func (c *RabbitMQClient) ShowQuotasInvoker(request *model.ShowQuotasRequest) *Sh
 	return &ShowQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowRabbitMqProductCores 查询RabbitMQ产品规格核数
+//
+// 查询RabbitMQ产品规格核数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RabbitMQClient) ShowRabbitMqProductCores(request *model.ShowRabbitMqProductCoresRequest) (*model.ShowRabbitMqProductCoresResponse, error) {
+	requestDef := GenReqDefForShowRabbitMqProductCores()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRabbitMqProductCoresResponse), nil
+	}
+}
+
+// ShowRabbitMqProductCoresInvoker 查询RabbitMQ产品规格核数
+func (c *RabbitMQClient) ShowRabbitMqProductCoresInvoker(request *model.ShowRabbitMqProductCoresRequest) *ShowRabbitMqProductCoresInvoker {
+	requestDef := GenReqDefForShowRabbitMqProductCores()
+	return &ShowRabbitMqProductCoresInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowRabbitMqProjectTags 查询项目标签
 //
 // 查询项目标签。

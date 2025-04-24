@@ -29,6 +29,9 @@ type RequestLimitRules struct {
 
 	// 限速值,单位Bps，取值范围 0-104857600。
 	LimitRateValue int32 `json:"limit_rate_value"`
+
+	// 指明限速的时段，按照每天24小时设置限速时段，格式为：HHMM-HHMM（HH为时，MM为分，时区为UTC+8），多个时段限速时用“,”分隔，最多可配置10个时段，例如：0100-0200,2200-2300。不传或传空时默认值为0000-2400，代表限速对所有时段生效。
+	LimitTime *string `json:"limit_time,omitempty"`
 }
 
 func (o RequestLimitRules) String() string {
