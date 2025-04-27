@@ -9,7 +9,7 @@ import (
 // ShowPublicZoneNameServerResponse Response Object
 type ShowPublicZoneNameServerResponse struct {
 
-	// 查询单个公网Zone的名称服务器响应。
+	// 查询公网域名的名称服务器响应。
 	Nameservers    *[]Nameserver `json:"nameservers,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }

@@ -9,7 +9,7 @@ import (
 // AssociateRouterRequest Request Object
 type AssociateRouterRequest struct {
 
-	// 关联VPC的Zone ID。
+	// 域名ID。
 	ZoneId string `json:"zone_id"`
 
 	Body *AssociateRouterRequestBody `json:"body,omitempty"`

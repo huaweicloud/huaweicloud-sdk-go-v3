@@ -9,7 +9,7 @@ import (
 // ShowPrivateZoneRequest Request Object
 type ShowPrivateZoneRequest struct {
 
-	// 待查询zone的ID。
+	// 域名ID。
 	ZoneId string `json:"zone_id"`
 }
 

@@ -18,10 +18,10 @@ type DeleteCustomLineResponse struct {
 	// IP地址段。
 	IpSegments *[]string `json:"ip_segments,omitempty"`
 
-	// 创建时间。
+	// 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
 	CreatedAt *string `json:"created_at,omitempty"`
 
-	// 更新时间。
+	// 更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
 	UpdatedAt *string `json:"updated_at,omitempty"`
 
 	// 资源状态。

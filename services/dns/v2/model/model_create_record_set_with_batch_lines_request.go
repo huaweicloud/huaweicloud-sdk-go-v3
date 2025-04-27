@@ -9,7 +9,7 @@ import (
 // CreateRecordSetWithBatchLinesRequest Request Object
 type CreateRecordSetWithBatchLinesRequest struct {
 
-	// 所属Zone的ID。
+	// 域名ID。
 	ZoneId string `json:"zone_id"`
 
 	Body *CreateRSetBatchLinesReq `json:"body,omitempty"`

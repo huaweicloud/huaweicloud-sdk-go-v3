@@ -9,7 +9,7 @@ import (
 // CreateRecordSetRequest Request Object
 type CreateRecordSetRequest struct {
 
-	// 所属zone的ID。
+	// 域名ID。
 	ZoneId string `json:"zone_id"`
 
 	Body *CreateRecordSetRequestBody `json:"body,omitempty"`

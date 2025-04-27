@@ -9,10 +9,10 @@ import (
 // ShowRecordSetWithLineRequest Request Object
 type ShowRecordSetWithLineRequest struct {
 
-	// 所属zone的ID。
+	// 域名ID。
 	ZoneId string `json:"zone_id"`
 
-	// 待查询recordset的ID信息。
+	// 记录集ID。
 	RecordsetId string `json:"recordset_id"`
 }
 

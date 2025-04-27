@@ -14,10 +14,10 @@ type CreateRecordSetWithLineRequestBody struct {
 	// 可选配置，对域名的描述。
 	Description *string `json:"description,omitempty"`
 
-	// Record Set的类型。
+	// 记录集的类型。
 	Type string `json:"type"`
 
-	// 解析记录的状态。 取值范围： ENABLE：启用 DISABLE：暂停 默认值为ENABLE。
+	// 解析记录的状态。  取值范围： ENABLE：启用 DISABLE：暂停  默认值为ENABLE。
 	Status *string `json:"status,omitempty"`
 
 	// 解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
@@ -26,10 +26,10 @@ type CreateRecordSetWithLineRequestBody struct {
 	// 解析记录的值。不同类型解析记录对应的值的规则不同。
 	Records *[]string `json:"records,omitempty"`
 
-	// 解析线路ID
+	// 解析线路ID。
 	Line *string `json:"line,omitempty"`
 
-	//  资源标签
+	// 资源标签。
 	Tags *[]Tag `json:"tags,omitempty"`
 
 	// 解析记录的权重。

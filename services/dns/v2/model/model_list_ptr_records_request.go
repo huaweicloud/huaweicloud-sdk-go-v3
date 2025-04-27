@@ -21,7 +21,7 @@ type ListPtrRecordsRequest struct {
 	// 反向解析关联的企业项目ID，长度不超过36个字符。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
+	// 资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用“|”分开，每个标签的键值用英文逗号“,”相隔。
 	Tags *string `json:"tags,omitempty"`
 
 	// 资源状态。

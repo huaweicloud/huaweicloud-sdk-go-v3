@@ -10,7 +10,7 @@ import (
 type ListRecordSetsResponse struct {
 	Links *PageLink `json:"links,omitempty"`
 
-	// recordset列表对象。
+	// 记录集列表对象。
 	Recordsets *[]ListRecordSetsWithTags `json:"recordsets,omitempty"`
 
 	Metadata       *Metadata `json:"metadata,omitempty"`

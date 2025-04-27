@@ -8,13 +8,13 @@ import (
 
 type RecordsetData struct {
 
-	// Record Set的ID。
+	// 记录集的ID。
 	Id *string `json:"id,omitempty"`
 
-	// Record Set的名称。
+	// 记录集的名称。
 	Name *string `json:"name,omitempty"`
 
-	// Record Set的描述信息。
+	// 记录集的描述信息。
 	Description *string `json:"description,omitempty"`
 
 	// 记录类型。
@@ -29,10 +29,10 @@ type RecordsetData struct {
 	// 资源状态。
 	Status *string `json:"status,omitempty"`
 
-	// 托管该记录的zone_id。
+	// 托管该记录的域名ID。
 	ZoneId *string `json:"zone_id,omitempty"`
 
-	// 托管该记录的zone_name。
+	// 托管该记录的域名。
 	ZoneName *string `json:"zone_name,omitempty"`
 
 	// 解析线路ID。
@@ -40,19 +40,19 @@ type RecordsetData struct {
 
 	AliasTarget *AliasTarget `json:"alias_target,omitempty"`
 
-	// 创建时间。
+	// 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
 	CreatedAt *string `json:"created_at,omitempty"`
 
-	// 更新时间。
+	// 更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
 	UpdatedAt *string `json:"updated_at,omitempty"`
 
 	// 健康检查ID。
 	HealthCheckId *string `json:"health_check_id,omitempty"`
 
-	// 标识是否由系统默认生成，系统默认生成的Record Set不能删除。
+	// 标识是否由系统默认生成，系统默认生成的记录集不能删除。
 	Default *bool `json:"default,omitempty"`
 
-	// 该Record Set所属的项目ID。
+	// 该记录集所属的项目ID。
 	ProjectId *string `json:"project_id,omitempty"`
 
 	Links *Link `json:"links,omitempty"`

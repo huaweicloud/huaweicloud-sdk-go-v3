@@ -9,7 +9,7 @@ import (
 // BatchDeleteRecordSetWithLineRequest Request Object
 type BatchDeleteRecordSetWithLineRequest struct {
 
-	// 所属zone的ID。
+	// 域名ID。
 	ZoneId string `json:"zone_id"`
 
 	Body *BatchDeleteRecordSetWithLineRequestBody `json:"body,omitempty"`

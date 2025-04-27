@@ -10,7 +10,7 @@ import (
 type BatchSetZonesStatusResponse struct {
 	Links *Link `json:"links,omitempty"`
 
-	// 设置zone的列表响应。
+	// 设置域名的列表响应。
 	Zones *[]ZoneData `json:"zones,omitempty"`
 
 	Metadata       *Metadata `json:"metadata,omitempty"`

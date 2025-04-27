@@ -10,7 +10,7 @@ import (
 type BatchUpdateRecordSetWithLineResponse struct {
 	Links *PageLink `json:"links,omitempty"`
 
-	// recordset的列表信息。
+	// 记录集的列表信息。
 	Recordsets *[]QueryRecordSetWithLineResp `json:"recordsets,omitempty"`
 
 	Metadata       *Metadata `json:"metadata,omitempty"`

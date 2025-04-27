@@ -9,7 +9,7 @@ import (
 // DeletePrivateZoneRequest Request Object
 type DeletePrivateZoneRequest struct {
 
-	// 待删除zone的ID。
+	// 域名ID。
 	ZoneId string `json:"zone_id"`
 }
 

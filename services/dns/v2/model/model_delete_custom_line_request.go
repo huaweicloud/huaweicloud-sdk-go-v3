@@ -9,7 +9,7 @@ import (
 // DeleteCustomLineRequest Request Object
 type DeleteCustomLineRequest struct {
 
-	// 自定义线路id
+	// 自定义线路ID。
 	LineId string `json:"line_id"`
 }
 

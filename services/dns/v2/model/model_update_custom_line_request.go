@@ -9,7 +9,7 @@ import (
 // UpdateCustomLineRequest Request Object
 type UpdateCustomLineRequest struct {
 
-	// 自定义线路id
+	// 自定义线路ID。
 	LineId string `json:"line_id"`
 
 	Body *UpdateCustomLineRequestBody `json:"body,omitempty"`

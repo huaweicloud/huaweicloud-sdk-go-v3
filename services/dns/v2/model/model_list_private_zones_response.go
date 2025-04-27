@@ -12,7 +12,7 @@ type ListPrivateZonesResponse struct {
 
 	Metadata *Metadata `json:"metadata,omitempty"`
 
-	// zone列表信息。
+	// 域名列表信息。
 	Zones          *[]PrivateZoneResp `json:"zones,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }

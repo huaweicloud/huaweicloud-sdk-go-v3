@@ -9,7 +9,7 @@ import (
 // DisassociateRouterRequest Request Object
 type DisassociateRouterRequest struct {
 
-	// 待解关联zone的ID。
+	// 域名ID。
 	ZoneId string `json:"zone_id"`
 
 	Body *DisassociaterouterRequestBody `json:"body,omitempty"`

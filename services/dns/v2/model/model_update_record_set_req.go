@@ -14,7 +14,7 @@ type UpdateRecordSetReq struct {
 	// 可选配置，对域名的描述。
 	Description *string `json:"description,omitempty"`
 
-	// Record Set的类型。
+	// 记录集的类型。
 	Type *string `json:"type,omitempty"`
 
 	// 解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。

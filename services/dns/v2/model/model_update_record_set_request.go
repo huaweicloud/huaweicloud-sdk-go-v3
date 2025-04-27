@@ -9,10 +9,10 @@ import (
 // UpdateRecordSetRequest Request Object
 type UpdateRecordSetRequest struct {
 
-	// 所属zone的ID。
+	// 域名ID。
 	ZoneId string `json:"zone_id"`
 
-	// 待修改的recordset的ID信息。
+	// 记录集ID。
 	RecordsetId string `json:"recordset_id"`
 
 	Body *UpdateRecordSetReq `json:"body,omitempty"`

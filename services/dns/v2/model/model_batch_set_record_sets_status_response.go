@@ -10,7 +10,7 @@ import (
 type BatchSetRecordSetsStatusResponse struct {
 	Links *Link `json:"links,omitempty"`
 
-	// 设置record set的列表响应。
+	// 设置记录集的列表响应。
 	Recordsets *[]RecordsetData `json:"recordsets,omitempty"`
 
 	Metadata       *Metadata `json:"metadata,omitempty"`

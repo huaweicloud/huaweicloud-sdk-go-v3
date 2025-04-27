@@ -9,10 +9,10 @@ import (
 // DeleteRecordSetsRequest Request Object
 type DeleteRecordSetsRequest struct {
 
-	// Record Set所属的zone_id。
+	// 域名ID。
 	ZoneId string `json:"zone_id"`
 
-	// Record Set的id信息。
+	// 记录集ID。
 	RecordsetId string `json:"recordset_id"`
 }
 

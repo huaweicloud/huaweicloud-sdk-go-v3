@@ -8,7 +8,7 @@ import (
 
 type BatchUpdateRecordSetWithLineRequestBody struct {
 
-	// RecordSet 列表。
+	// 记录集列表。
 	Recordsets []BatchUpdateRecordSet `json:"recordsets"`
 }
 

@@ -8,10 +8,10 @@ import (
 
 type BatchDeleteRecordSetsRequestBody struct {
 
-	// Zone的类型，取值为public或private。
+	// 域名的类型，取值为public或private。
 	ZoneType string `json:"zone_type"`
 
-	// 待删除的Record Set ID列表。 最多支持100个。
+	// 待删除的记录集ID列表。 最多支持100个。
 	RecordsetIds []string `json:"recordset_ids"`
 }
 

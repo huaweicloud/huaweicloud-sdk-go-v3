@@ -9,7 +9,7 @@ import (
 // UpdatePublicZoneRequest Request Object
 type UpdatePublicZoneRequest struct {
 
-	// 待修改zone的ID
+	// 域名ID。
 	ZoneId string `json:"zone_id"`
 
 	Body *UpdatePublicZoneInfo `json:"body,omitempty"`

@@ -9,7 +9,7 @@ import (
 // DeleteLineGroupRequest Request Object
 type DeleteLineGroupRequest struct {
 
-	// 线路分组ID
+	// 线路分组ID。
 	LinegroupId string `json:"linegroup_id"`
 }
 

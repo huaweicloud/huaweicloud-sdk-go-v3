@@ -65,6 +65,50 @@ func (c *DeHClient) BatchDeleteDedicatedHostTagsInvoker(request *model.BatchDele
 	return &BatchDeleteDedicatedHostTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDedicatedHost 分配专属主机
+//
+// 分配一台或多台专属主机，需要设置实例规格、所属AZ、数量等参数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DeHClient) CreateDedicatedHost(request *model.CreateDedicatedHostRequest) (*model.CreateDedicatedHostResponse, error) {
+	requestDef := GenReqDefForCreateDedicatedHost()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDedicatedHostResponse), nil
+	}
+}
+
+// CreateDedicatedHostInvoker 分配专属主机
+func (c *DeHClient) CreateDedicatedHostInvoker(request *model.CreateDedicatedHostRequest) *CreateDedicatedHostInvoker {
+	requestDef := GenReqDefForCreateDedicatedHost()
+	return &CreateDedicatedHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDedicatedHostTags 查询所有专属主机标签
+//
+// 查询所有专属主机的标签信息。
+//
+// 标签管理服务（TMS）使用该接口查询所有专属主机的标签数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DeHClient) ListDedicatedHostTags(request *model.ListDedicatedHostTagsRequest) (*model.ListDedicatedHostTagsResponse, error) {
+	requestDef := GenReqDefForListDedicatedHostTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDedicatedHostTagsResponse), nil
+	}
+}
+
+// ListDedicatedHostTagsInvoker 查询所有专属主机标签
+func (c *DeHClient) ListDedicatedHostTagsInvoker(request *model.ListDedicatedHostTagsRequest) *ListDedicatedHostTagsInvoker {
+	requestDef := GenReqDefForListDedicatedHostTags()
+	return &ListDedicatedHostTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDedicatedHostTypes 查询可用的专属主机类型
 //
 // 查询某一AZ内可用的专属主机类型。

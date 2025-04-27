@@ -19,10 +19,137 @@ func DnsClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
-// BatchDeleteRecordSets 批量删除Record Set
+// AssociateEndpointIpaddress 终端节点绑定IP地址
 //
-// 批量删除Record Set。
-// 响应结果中只包含本次实际删除的Record Set。
+// 终端节点绑定IP地址。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) AssociateEndpointIpaddress(request *model.AssociateEndpointIpaddressRequest) (*model.AssociateEndpointIpaddressResponse, error) {
+	requestDef := GenReqDefForAssociateEndpointIpaddress()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateEndpointIpaddressResponse), nil
+	}
+}
+
+// AssociateEndpointIpaddressInvoker 终端节点绑定IP地址
+func (c *DnsClient) AssociateEndpointIpaddressInvoker(request *model.AssociateEndpointIpaddressRequest) *AssociateEndpointIpaddressInvoker {
+	requestDef := GenReqDefForAssociateEndpointIpaddress()
+	return &AssociateEndpointIpaddressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateResolverRuleRouter 解析器转发规则关联VPC
+//
+// 解析器转发规则关联VPC。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) AssociateResolverRuleRouter(request *model.AssociateResolverRuleRouterRequest) (*model.AssociateResolverRuleRouterResponse, error) {
+	requestDef := GenReqDefForAssociateResolverRuleRouter()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateResolverRuleRouterResponse), nil
+	}
+}
+
+// AssociateResolverRuleRouterInvoker 解析器转发规则关联VPC
+func (c *DnsClient) AssociateResolverRuleRouterInvoker(request *model.AssociateResolverRuleRouterRequest) *AssociateResolverRuleRouterInvoker {
+	requestDef := GenReqDefForAssociateResolverRuleRouter()
+	return &AssociateResolverRuleRouterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateRouter 在内网域名上关联VPC
+//
+// 在内网域名上关联VPC。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) AssociateRouter(request *model.AssociateRouterRequest) (*model.AssociateRouterResponse, error) {
+	requestDef := GenReqDefForAssociateRouter()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateRouterResponse), nil
+	}
+}
+
+// AssociateRouterInvoker 在内网域名上关联VPC
+func (c *DnsClient) AssociateRouterInvoker(request *model.AssociateRouterRequest) *AssociateRouterInvoker {
+	requestDef := GenReqDefForAssociateRouter()
+	return &AssociateRouterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateTag 为指定实例批量添加或删除标签
+//
+// 为指定实例批量添加或删除标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) BatchCreateTag(request *model.BatchCreateTagRequest) (*model.BatchCreateTagResponse, error) {
+	requestDef := GenReqDefForBatchCreateTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateTagResponse), nil
+	}
+}
+
+// BatchCreateTagInvoker 为指定实例批量添加或删除标签
+func (c *DnsClient) BatchCreateTagInvoker(request *model.BatchCreateTagRequest) *BatchCreateTagInvoker {
+	requestDef := GenReqDefForBatchCreateTag()
+	return &BatchCreateTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeletePtrRecords 批量删除反向解析
+//
+// 批量删除反向解析。本接口为原子操作，所有记录应全部删除成功或全部失败。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) BatchDeletePtrRecords(request *model.BatchDeletePtrRecordsRequest) (*model.BatchDeletePtrRecordsResponse, error) {
+	requestDef := GenReqDefForBatchDeletePtrRecords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeletePtrRecordsResponse), nil
+	}
+}
+
+// BatchDeletePtrRecordsInvoker 批量删除反向解析
+func (c *DnsClient) BatchDeletePtrRecordsInvoker(request *model.BatchDeletePtrRecordsRequest) *BatchDeletePtrRecordsInvoker {
+	requestDef := GenReqDefForBatchDeletePtrRecords()
+	return &BatchDeletePtrRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteRecordSetWithLine 批量删除域名下的记录集
+//
+// 批量删除域名下的记录集，当删除的资源不存在时，则默认删除成功。
+// 响应结果中只包含本次实际删除的资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) BatchDeleteRecordSetWithLine(request *model.BatchDeleteRecordSetWithLineRequest) (*model.BatchDeleteRecordSetWithLineResponse, error) {
+	requestDef := GenReqDefForBatchDeleteRecordSetWithLine()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteRecordSetWithLineResponse), nil
+	}
+}
+
+// BatchDeleteRecordSetWithLineInvoker 批量删除域名下的记录集
+func (c *DnsClient) BatchDeleteRecordSetWithLineInvoker(request *model.BatchDeleteRecordSetWithLineRequest) *BatchDeleteRecordSetWithLineInvoker {
+	requestDef := GenReqDefForBatchDeleteRecordSetWithLine()
+	return &BatchDeleteRecordSetWithLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteRecordSets 批量删除记录集
+//
+// 批量删除记录集。
+// 响应结果中只包含本次实际删除的记录集。
 // 支持批量删除公网域名和内网域名的记录集。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -36,17 +163,17 @@ func (c *DnsClient) BatchDeleteRecordSets(request *model.BatchDeleteRecordSetsRe
 	}
 }
 
-// BatchDeleteRecordSetsInvoker 批量删除Record Set
+// BatchDeleteRecordSetsInvoker 批量删除记录集
 func (c *DnsClient) BatchDeleteRecordSetsInvoker(request *model.BatchDeleteRecordSetsRequest) *BatchDeleteRecordSetsInvoker {
 	requestDef := GenReqDefForBatchDeleteRecordSets()
 	return &BatchDeleteRecordSetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchDeleteZones 批量删除Zone
+// BatchDeleteZones 批量删除域名
 //
-// 批量删除Zone。
+// 批量删除域名。
 // 本接口为原子操作，所有记录应全部删除成功或全部失败。
-// 仅支持公网Zone、内网Zone。
+// 支持公网域名、内网域名。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) BatchDeleteZones(request *model.BatchDeleteZonesRequest) (*model.BatchDeleteZonesResponse, error) {
@@ -59,16 +186,16 @@ func (c *DnsClient) BatchDeleteZones(request *model.BatchDeleteZonesRequest) (*m
 	}
 }
 
-// BatchDeleteZonesInvoker 批量删除Zone
+// BatchDeleteZonesInvoker 批量删除域名
 func (c *DnsClient) BatchDeleteZonesInvoker(request *model.BatchDeleteZonesRequest) *BatchDeleteZonesInvoker {
 	requestDef := GenReqDefForBatchDeleteZones()
 	return &BatchDeleteZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchSetRecordSetsStatus 批量设置Record Set状态
+// BatchSetRecordSetsStatus 批量设置记录集状态
 //
-// 批量设置Record Set状态。
-// 响应结果中只包含本次实际更新的Record Set。
+// 批量设置记录集状态。
+// 响应结果中只包含本次实际更新的记录集。
 // 支持公网域名和内网域名的记录集。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -82,17 +209,17 @@ func (c *DnsClient) BatchSetRecordSetsStatus(request *model.BatchSetRecordSetsSt
 	}
 }
 
-// BatchSetRecordSetsStatusInvoker 批量设置Record Set状态
+// BatchSetRecordSetsStatusInvoker 批量设置记录集状态
 func (c *DnsClient) BatchSetRecordSetsStatusInvoker(request *model.BatchSetRecordSetsStatusRequest) *BatchSetRecordSetsStatusInvoker {
 	requestDef := GenReqDefForBatchSetRecordSetsStatus()
 	return &BatchSetRecordSetsStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchSetZonesStatus 批量设置Zone状态
+// BatchSetZonesStatus 批量设置域名状态
 //
-// 批量设置Zone状态。
-// 响应结果中只包含本次实际更新的Zone。
-// 仅支持公网Zone、内网Zone。
+// 批量设置域名状态。
+// 响应结果中只包含本次实际更新的域名。
+// 支持公网域名、内网域名。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) BatchSetZonesStatus(request *model.BatchSetZonesStatusRequest) (*model.BatchSetZonesStatusResponse, error) {
@@ -105,15 +232,37 @@ func (c *DnsClient) BatchSetZonesStatus(request *model.BatchSetZonesStatusReques
 	}
 }
 
-// BatchSetZonesStatusInvoker 批量设置Zone状态
+// BatchSetZonesStatusInvoker 批量设置域名状态
 func (c *DnsClient) BatchSetZonesStatusInvoker(request *model.BatchSetZonesStatusRequest) *BatchSetZonesStatusInvoker {
 	requestDef := GenReqDefForBatchSetZonesStatus()
 	return &BatchSetZonesStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateCustomLine 创建单个自定义线路
+// BatchUpdateRecordSetWithLine 批量修改记录集
 //
-// 创建单个自定义线路
+// 批量修改记录集。属于原子性操作，请求记录集将全部完成修改，或不做任何修改。
+// 仅公网域名支持。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) BatchUpdateRecordSetWithLine(request *model.BatchUpdateRecordSetWithLineRequest) (*model.BatchUpdateRecordSetWithLineResponse, error) {
+	requestDef := GenReqDefForBatchUpdateRecordSetWithLine()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateRecordSetWithLineResponse), nil
+	}
+}
+
+// BatchUpdateRecordSetWithLineInvoker 批量修改记录集
+func (c *DnsClient) BatchUpdateRecordSetWithLineInvoker(request *model.BatchUpdateRecordSetWithLineRequest) *BatchUpdateRecordSetWithLineInvoker {
+	requestDef := GenReqDefForBatchUpdateRecordSetWithLine()
+	return &BatchUpdateRecordSetWithLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCustomLine 创建自定义线路
+//
+// 创建自定义线路。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) CreateCustomLine(request *model.CreateCustomLineRequest) (*model.CreateCustomLineResponse, error) {
@@ -126,15 +275,57 @@ func (c *DnsClient) CreateCustomLine(request *model.CreateCustomLineRequest) (*m
 	}
 }
 
-// CreateCustomLineInvoker 创建单个自定义线路
+// CreateCustomLineInvoker 创建自定义线路
 func (c *DnsClient) CreateCustomLineInvoker(request *model.CreateCustomLineRequest) *CreateCustomLineInvoker {
 	requestDef := GenReqDefForCreateCustomLine()
 	return &CreateCustomLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateEipRecordSet 设置弹性公网IP的反向解析记录
+//
+// 设置弹性公网IP的反向解析记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) CreateEipRecordSet(request *model.CreateEipRecordSetRequest) (*model.CreateEipRecordSetResponse, error) {
+	requestDef := GenReqDefForCreateEipRecordSet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateEipRecordSetResponse), nil
+	}
+}
+
+// CreateEipRecordSetInvoker 设置弹性公网IP的反向解析记录
+func (c *DnsClient) CreateEipRecordSetInvoker(request *model.CreateEipRecordSetRequest) *CreateEipRecordSetInvoker {
+	requestDef := GenReqDefForCreateEipRecordSet()
+	return &CreateEipRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateEndpoint 创建终端节点
+//
+// 创建终端节点。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) CreateEndpoint(request *model.CreateEndpointRequest) (*model.CreateEndpointResponse, error) {
+	requestDef := GenReqDefForCreateEndpoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateEndpointResponse), nil
+	}
+}
+
+// CreateEndpointInvoker 创建终端节点
+func (c *DnsClient) CreateEndpointInvoker(request *model.CreateEndpointRequest) *CreateEndpointInvoker {
+	requestDef := GenReqDefForCreateEndpoint()
+	return &CreateEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateLineGroup 创建线路分组
 //
-// 创建一个线路分组。 该接口部分区域未上线、如需使用请提交工单申请开通。
+// 创建线路分组。该接口部分区域未上线，如需使用请提交工单申请开通。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) CreateLineGroup(request *model.CreateLineGroupRequest) (*model.CreateLineGroupResponse, error) {
@@ -153,9 +344,177 @@ func (c *DnsClient) CreateLineGroupInvoker(request *model.CreateLineGroupRequest
 	return &CreateLineGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteCustomLine 删除单个自定义线路
+// CreatePrivateZone 创建内网域名
 //
-// 删除单个自定义线路
+// 创建内网域名。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) CreatePrivateZone(request *model.CreatePrivateZoneRequest) (*model.CreatePrivateZoneResponse, error) {
+	requestDef := GenReqDefForCreatePrivateZone()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePrivateZoneResponse), nil
+	}
+}
+
+// CreatePrivateZoneInvoker 创建内网域名
+func (c *DnsClient) CreatePrivateZoneInvoker(request *model.CreatePrivateZoneRequest) *CreatePrivateZoneInvoker {
+	requestDef := GenReqDefForCreatePrivateZone()
+	return &CreatePrivateZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePtr 创建弹性公网IP的反向解析记录
+//
+// 创建弹性公网IP的反向解析记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) CreatePtr(request *model.CreatePtrRequest) (*model.CreatePtrResponse, error) {
+	requestDef := GenReqDefForCreatePtr()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePtrResponse), nil
+	}
+}
+
+// CreatePtrInvoker 创建弹性公网IP的反向解析记录
+func (c *DnsClient) CreatePtrInvoker(request *model.CreatePtrRequest) *CreatePtrInvoker {
+	requestDef := GenReqDefForCreatePtr()
+	return &CreatePtrInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePublicZone 创建公网域名
+//
+// 创建公网域名。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) CreatePublicZone(request *model.CreatePublicZoneRequest) (*model.CreatePublicZoneResponse, error) {
+	requestDef := GenReqDefForCreatePublicZone()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePublicZoneResponse), nil
+	}
+}
+
+// CreatePublicZoneInvoker 创建公网域名
+func (c *DnsClient) CreatePublicZoneInvoker(request *model.CreatePublicZoneRequest) *CreatePublicZoneInvoker {
+	requestDef := GenReqDefForCreatePublicZone()
+	return &CreatePublicZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRecordSet 创建记录集
+//
+// 创建记录集。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) CreateRecordSet(request *model.CreateRecordSetRequest) (*model.CreateRecordSetResponse, error) {
+	requestDef := GenReqDefForCreateRecordSet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRecordSetResponse), nil
+	}
+}
+
+// CreateRecordSetInvoker 创建记录集
+func (c *DnsClient) CreateRecordSetInvoker(request *model.CreateRecordSetRequest) *CreateRecordSetInvoker {
+	requestDef := GenReqDefForCreateRecordSet()
+	return &CreateRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRecordSetWithBatchLines 批量线路创建记录集
+//
+// 批量线路创建记录集。属于原子性操作，如果存在一个参数校验不通过，则创建失败。仅公网域名支持。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) CreateRecordSetWithBatchLines(request *model.CreateRecordSetWithBatchLinesRequest) (*model.CreateRecordSetWithBatchLinesResponse, error) {
+	requestDef := GenReqDefForCreateRecordSetWithBatchLines()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRecordSetWithBatchLinesResponse), nil
+	}
+}
+
+// CreateRecordSetWithBatchLinesInvoker 批量线路创建记录集
+func (c *DnsClient) CreateRecordSetWithBatchLinesInvoker(request *model.CreateRecordSetWithBatchLinesRequest) *CreateRecordSetWithBatchLinesInvoker {
+	requestDef := GenReqDefForCreateRecordSetWithBatchLines()
+	return &CreateRecordSetWithBatchLinesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRecordSetWithLine 创建记录集
+//
+// 创建记录集。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) CreateRecordSetWithLine(request *model.CreateRecordSetWithLineRequest) (*model.CreateRecordSetWithLineResponse, error) {
+	requestDef := GenReqDefForCreateRecordSetWithLine()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRecordSetWithLineResponse), nil
+	}
+}
+
+// CreateRecordSetWithLineInvoker 创建记录集
+func (c *DnsClient) CreateRecordSetWithLineInvoker(request *model.CreateRecordSetWithLineRequest) *CreateRecordSetWithLineInvoker {
+	requestDef := GenReqDefForCreateRecordSetWithLine()
+	return &CreateRecordSetWithLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateResolverRule 创建解析器转发规则
+//
+// 创建解析器转发规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) CreateResolverRule(request *model.CreateResolverRuleRequest) (*model.CreateResolverRuleResponse, error) {
+	requestDef := GenReqDefForCreateResolverRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateResolverRuleResponse), nil
+	}
+}
+
+// CreateResolverRuleInvoker 创建解析器转发规则
+func (c *DnsClient) CreateResolverRuleInvoker(request *model.CreateResolverRuleRequest) *CreateResolverRuleInvoker {
+	requestDef := GenReqDefForCreateResolverRule()
+	return &CreateResolverRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTag 为指定实例添加标签
+//
+// 为指定实例添加标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) CreateTag(request *model.CreateTagRequest) (*model.CreateTagResponse, error) {
+	requestDef := GenReqDefForCreateTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTagResponse), nil
+	}
+}
+
+// CreateTagInvoker 为指定实例添加标签
+func (c *DnsClient) CreateTagInvoker(request *model.CreateTagRequest) *CreateTagInvoker {
+	requestDef := GenReqDefForCreateTag()
+	return &CreateTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCustomLine 删除自定义线路
+//
+// 删除自定义线路。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) DeleteCustomLine(request *model.DeleteCustomLineRequest) (*model.DeleteCustomLineResponse, error) {
@@ -168,15 +527,36 @@ func (c *DnsClient) DeleteCustomLine(request *model.DeleteCustomLineRequest) (*m
 	}
 }
 
-// DeleteCustomLineInvoker 删除单个自定义线路
+// DeleteCustomLineInvoker 删除自定义线路
 func (c *DnsClient) DeleteCustomLineInvoker(request *model.DeleteCustomLineRequest) *DeleteCustomLineInvoker {
 	requestDef := GenReqDefForDeleteCustomLine()
 	return &DeleteCustomLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteEndpoint 删除终端节点
+//
+// 删除终端节点。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) DeleteEndpoint(request *model.DeleteEndpointRequest) (*model.DeleteEndpointResponse, error) {
+	requestDef := GenReqDefForDeleteEndpoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteEndpointResponse), nil
+	}
+}
+
+// DeleteEndpointInvoker 删除终端节点
+func (c *DnsClient) DeleteEndpointInvoker(request *model.DeleteEndpointRequest) *DeleteEndpointInvoker {
+	requestDef := GenReqDefForDeleteEndpoint()
+	return &DeleteEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteLineGroup 删除线路分组
 //
-// 删除单个线路分组。该接口部分区域未上线、如需使用请提交工单申请开通。
+// 删除线路分组。该接口部分区域未上线，如需使用请提交工单申请开通。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) DeleteLineGroup(request *model.DeleteLineGroupRequest) (*model.DeleteLineGroupResponse, error) {
@@ -195,9 +575,219 @@ func (c *DnsClient) DeleteLineGroupInvoker(request *model.DeleteLineGroupRequest
 	return &DeleteLineGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeletePrivateZone 删除内网域名
+//
+// 删除内网域名。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) DeletePrivateZone(request *model.DeletePrivateZoneRequest) (*model.DeletePrivateZoneResponse, error) {
+	requestDef := GenReqDefForDeletePrivateZone()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePrivateZoneResponse), nil
+	}
+}
+
+// DeletePrivateZoneInvoker 删除内网域名
+func (c *DnsClient) DeletePrivateZoneInvoker(request *model.DeletePrivateZoneRequest) *DeletePrivateZoneInvoker {
+	requestDef := GenReqDefForDeletePrivateZone()
+	return &DeletePrivateZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePtr 将弹性公网IP的反向解析记录恢复为默认值
+//
+// 将弹性公网IP的反向解析记录恢复为默认值。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) DeletePtr(request *model.DeletePtrRequest) (*model.DeletePtrResponse, error) {
+	requestDef := GenReqDefForDeletePtr()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePtrResponse), nil
+	}
+}
+
+// DeletePtrInvoker 将弹性公网IP的反向解析记录恢复为默认值
+func (c *DnsClient) DeletePtrInvoker(request *model.DeletePtrRequest) *DeletePtrInvoker {
+	requestDef := GenReqDefForDeletePtr()
+	return &DeletePtrInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePublicZone 删除公网域名
+//
+// 删除公网域名。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) DeletePublicZone(request *model.DeletePublicZoneRequest) (*model.DeletePublicZoneResponse, error) {
+	requestDef := GenReqDefForDeletePublicZone()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePublicZoneResponse), nil
+	}
+}
+
+// DeletePublicZoneInvoker 删除公网域名
+func (c *DnsClient) DeletePublicZoneInvoker(request *model.DeletePublicZoneRequest) *DeletePublicZoneInvoker {
+	requestDef := GenReqDefForDeletePublicZone()
+	return &DeletePublicZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRecordSet 删除记录集
+//
+// 删除记录集。删除有添加智能解析的记录集时，需要用记录集管理（新版本）模块中删除接口进行删除。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) DeleteRecordSet(request *model.DeleteRecordSetRequest) (*model.DeleteRecordSetResponse, error) {
+	requestDef := GenReqDefForDeleteRecordSet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteRecordSetResponse), nil
+	}
+}
+
+// DeleteRecordSetInvoker 删除记录集
+func (c *DnsClient) DeleteRecordSetInvoker(request *model.DeleteRecordSetRequest) *DeleteRecordSetInvoker {
+	requestDef := GenReqDefForDeleteRecordSet()
+	return &DeleteRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRecordSets 删除记录集
+//
+// 删除记录集。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) DeleteRecordSets(request *model.DeleteRecordSetsRequest) (*model.DeleteRecordSetsResponse, error) {
+	requestDef := GenReqDefForDeleteRecordSets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteRecordSetsResponse), nil
+	}
+}
+
+// DeleteRecordSetsInvoker 删除记录集
+func (c *DnsClient) DeleteRecordSetsInvoker(request *model.DeleteRecordSetsRequest) *DeleteRecordSetsInvoker {
+	requestDef := GenReqDefForDeleteRecordSets()
+	return &DeleteRecordSetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteResolverRule 删除解析器转发规则
+//
+// 删除解析器转发规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) DeleteResolverRule(request *model.DeleteResolverRuleRequest) (*model.DeleteResolverRuleResponse, error) {
+	requestDef := GenReqDefForDeleteResolverRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteResolverRuleResponse), nil
+	}
+}
+
+// DeleteResolverRuleInvoker 删除解析器转发规则
+func (c *DnsClient) DeleteResolverRuleInvoker(request *model.DeleteResolverRuleRequest) *DeleteResolverRuleInvoker {
+	requestDef := GenReqDefForDeleteResolverRule()
+	return &DeleteResolverRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTag 删除资源标签
+//
+// 删除资源标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) DeleteTag(request *model.DeleteTagRequest) (*model.DeleteTagResponse, error) {
+	requestDef := GenReqDefForDeleteTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTagResponse), nil
+	}
+}
+
+// DeleteTagInvoker 删除资源标签
+func (c *DnsClient) DeleteTagInvoker(request *model.DeleteTagRequest) *DeleteTagInvoker {
+	requestDef := GenReqDefForDeleteTag()
+	return &DeleteTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateEndpointIpaddress 终端节点解绑IP地址
+//
+// 终端节点解绑IP地址。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) DisassociateEndpointIpaddress(request *model.DisassociateEndpointIpaddressRequest) (*model.DisassociateEndpointIpaddressResponse, error) {
+	requestDef := GenReqDefForDisassociateEndpointIpaddress()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisassociateEndpointIpaddressResponse), nil
+	}
+}
+
+// DisassociateEndpointIpaddressInvoker 终端节点解绑IP地址
+func (c *DnsClient) DisassociateEndpointIpaddressInvoker(request *model.DisassociateEndpointIpaddressRequest) *DisassociateEndpointIpaddressInvoker {
+	requestDef := GenReqDefForDisassociateEndpointIpaddress()
+	return &DisassociateEndpointIpaddressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateResolverRuleRouter 解析器转发规则解关联VPC
+//
+// 解析器转发规则解关联VPC。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) DisassociateResolverRuleRouter(request *model.DisassociateResolverRuleRouterRequest) (*model.DisassociateResolverRuleRouterResponse, error) {
+	requestDef := GenReqDefForDisassociateResolverRuleRouter()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisassociateResolverRuleRouterResponse), nil
+	}
+}
+
+// DisassociateResolverRuleRouterInvoker 解析器转发规则解关联VPC
+func (c *DnsClient) DisassociateResolverRuleRouterInvoker(request *model.DisassociateResolverRuleRouterRequest) *DisassociateResolverRuleRouterInvoker {
+	requestDef := GenReqDefForDisassociateResolverRuleRouter()
+	return &DisassociateResolverRuleRouterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisassociateRouter 在内网域名上解关联VPC
+//
+// 在内网域名上解关联VPC。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) DisassociateRouter(request *model.DisassociateRouterRequest) (*model.DisassociateRouterResponse, error) {
+	requestDef := GenReqDefForDisassociateRouter()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisassociateRouterResponse), nil
+	}
+}
+
+// DisassociateRouterInvoker 在内网域名上解关联VPC
+func (c *DnsClient) DisassociateRouterInvoker(request *model.DisassociateRouterRequest) *DisassociateRouterInvoker {
+	requestDef := GenReqDefForDisassociateRouter()
+	return &DisassociateRouterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListApiVersions 查询所有的云解析服务API版本号
 //
-// 查询所有的云解析服务API版本号列表
+// 查询所有的云解析服务API版本号列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListApiVersions(request *model.ListApiVersionsRequest) (*model.ListApiVersionsResponse, error) {
@@ -218,7 +808,7 @@ func (c *DnsClient) ListApiVersionsInvoker(request *model.ListApiVersionsRequest
 
 // ListCustomLine 查询自定义线路
 //
-// 查询自定义线路
+// 查询自定义线路。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListCustomLine(request *model.ListCustomLineRequest) (*model.ListCustomLineResponse, error) {
@@ -237,9 +827,72 @@ func (c *DnsClient) ListCustomLineInvoker(request *model.ListCustomLineRequest) 
 	return &ListCustomLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListEndpointIpaddresses 查询IP地址列表
+//
+// 查询终端节点下的IP地址列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) ListEndpointIpaddresses(request *model.ListEndpointIpaddressesRequest) (*model.ListEndpointIpaddressesResponse, error) {
+	requestDef := GenReqDefForListEndpointIpaddresses()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEndpointIpaddressesResponse), nil
+	}
+}
+
+// ListEndpointIpaddressesInvoker 查询IP地址列表
+func (c *DnsClient) ListEndpointIpaddressesInvoker(request *model.ListEndpointIpaddressesRequest) *ListEndpointIpaddressesInvoker {
+	requestDef := GenReqDefForListEndpointIpaddresses()
+	return &ListEndpointIpaddressesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEndpointVpcs 查询终端节点VPC列表
+//
+// 查询终端节点VPC列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) ListEndpointVpcs(request *model.ListEndpointVpcsRequest) (*model.ListEndpointVpcsResponse, error) {
+	requestDef := GenReqDefForListEndpointVpcs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEndpointVpcsResponse), nil
+	}
+}
+
+// ListEndpointVpcsInvoker 查询终端节点VPC列表
+func (c *DnsClient) ListEndpointVpcsInvoker(request *model.ListEndpointVpcsRequest) *ListEndpointVpcsInvoker {
+	requestDef := GenReqDefForListEndpointVpcs()
+	return &ListEndpointVpcsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEndpoints 查询终端节点列表
+//
+// 查询终端节点列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) ListEndpoints(request *model.ListEndpointsRequest) (*model.ListEndpointsResponse, error) {
+	requestDef := GenReqDefForListEndpoints()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEndpointsResponse), nil
+	}
+}
+
+// ListEndpointsInvoker 查询终端节点列表
+func (c *DnsClient) ListEndpointsInvoker(request *model.ListEndpointsRequest) *ListEndpointsInvoker {
+	requestDef := GenReqDefForListEndpoints()
+	return &ListEndpointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListLineGroups 查询线路分组列表
 //
-// 查询线路分组列表。该接口部分区域未上线、如需使用请提交工单申请开通。
+// 查询线路分组列表。该接口部分区域未上线，如需使用请提交工单申请开通。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListLineGroups(request *model.ListLineGroupsRequest) (*model.ListLineGroupsResponse, error) {
@@ -279,135 +932,30 @@ func (c *DnsClient) ListNameServersInvoker(request *model.ListNameServersRequest
 	return &ListNameServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowApiInfo 查询指定的云解析服务API版本号
+// ListPrivateZones 查询内网域名列表
 //
-// 查询指定的云解析服务API版本号
+// 查询内网域名列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ShowApiInfo(request *model.ShowApiInfoRequest) (*model.ShowApiInfoResponse, error) {
-	requestDef := GenReqDefForShowApiInfo()
+func (c *DnsClient) ListPrivateZones(request *model.ListPrivateZonesRequest) (*model.ListPrivateZonesResponse, error) {
+	requestDef := GenReqDefForListPrivateZones()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowApiInfoResponse), nil
+		return resp.(*model.ListPrivateZonesResponse), nil
 	}
 }
 
-// ShowApiInfoInvoker 查询指定的云解析服务API版本号
-func (c *DnsClient) ShowApiInfoInvoker(request *model.ShowApiInfoRequest) *ShowApiInfoInvoker {
-	requestDef := GenReqDefForShowApiInfo()
-	return &ShowApiInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListPrivateZonesInvoker 查询内网域名列表
+func (c *DnsClient) ListPrivateZonesInvoker(request *model.ListPrivateZonesRequest) *ListPrivateZonesInvoker {
+	requestDef := GenReqDefForListPrivateZones()
+	return &ListPrivateZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDomainQuota 查询租户配额
+// ListPtrRecords 查询弹性公网IP的反向解析记录列表
 //
-// 查询单租户在DNS服务下的资源配额，包括公网zone配额、内网zone配额、Record Set配额、PTR Record配额、入站终端节点配额、出站终端节点配额、自定义线路配额、线路分组配额等。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ShowDomainQuota(request *model.ShowDomainQuotaRequest) (*model.ShowDomainQuotaResponse, error) {
-	requestDef := GenReqDefForShowDomainQuota()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowDomainQuotaResponse), nil
-	}
-}
-
-// ShowDomainQuotaInvoker 查询租户配额
-func (c *DnsClient) ShowDomainQuotaInvoker(request *model.ShowDomainQuotaRequest) *ShowDomainQuotaInvoker {
-	requestDef := GenReqDefForShowDomainQuota()
-	return &ShowDomainQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowLineGroup 查询线路分组
-//
-// 查询线路分组。该接口部分区域未上线、如需使用请提交工单申请开通。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ShowLineGroup(request *model.ShowLineGroupRequest) (*model.ShowLineGroupResponse, error) {
-	requestDef := GenReqDefForShowLineGroup()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowLineGroupResponse), nil
-	}
-}
-
-// ShowLineGroupInvoker 查询线路分组
-func (c *DnsClient) ShowLineGroupInvoker(request *model.ShowLineGroupRequest) *ShowLineGroupInvoker {
-	requestDef := GenReqDefForShowLineGroup()
-	return &ShowLineGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateCustomLine 更新单个自定义线路
-//
-// 更新单个自定义线路
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) UpdateCustomLine(request *model.UpdateCustomLineRequest) (*model.UpdateCustomLineResponse, error) {
-	requestDef := GenReqDefForUpdateCustomLine()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateCustomLineResponse), nil
-	}
-}
-
-// UpdateCustomLineInvoker 更新单个自定义线路
-func (c *DnsClient) UpdateCustomLineInvoker(request *model.UpdateCustomLineRequest) *UpdateCustomLineInvoker {
-	requestDef := GenReqDefForUpdateCustomLine()
-	return &UpdateCustomLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateLineGroups 更新线路分组
-//
-// 更新单个线路分组。该接口部分区域未上线、如需使用请提交工单申请开通。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) UpdateLineGroups(request *model.UpdateLineGroupsRequest) (*model.UpdateLineGroupsResponse, error) {
-	requestDef := GenReqDefForUpdateLineGroups()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateLineGroupsResponse), nil
-	}
-}
-
-// UpdateLineGroupsInvoker 更新线路分组
-func (c *DnsClient) UpdateLineGroupsInvoker(request *model.UpdateLineGroupsRequest) *UpdateLineGroupsInvoker {
-	requestDef := GenReqDefForUpdateLineGroups()
-	return &UpdateLineGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateEipRecordSet 设置弹性公网IP的PTR记录
-//
-// 设置弹性公网IP的PTR记录
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) CreateEipRecordSet(request *model.CreateEipRecordSetRequest) (*model.CreateEipRecordSetResponse, error) {
-	requestDef := GenReqDefForCreateEipRecordSet()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateEipRecordSetResponse), nil
-	}
-}
-
-// CreateEipRecordSetInvoker 设置弹性公网IP的PTR记录
-func (c *DnsClient) CreateEipRecordSetInvoker(request *model.CreateEipRecordSetRequest) *CreateEipRecordSetInvoker {
-	requestDef := GenReqDefForCreateEipRecordSet()
-	return &CreateEipRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListPtrRecords 查询租户弹性公网IP的PTR记录列表
-//
-// 查询租户弹性公网IP的PTR记录列表
+// 查询弹性公网IP的反向解析记录列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListPtrRecords(request *model.ListPtrRecordsRequest) (*model.ListPtrRecordsResponse, error) {
@@ -420,227 +968,78 @@ func (c *DnsClient) ListPtrRecords(request *model.ListPtrRecordsRequest) (*model
 	}
 }
 
-// ListPtrRecordsInvoker 查询租户弹性公网IP的PTR记录列表
+// ListPtrRecordsInvoker 查询弹性公网IP的反向解析记录列表
 func (c *DnsClient) ListPtrRecordsInvoker(request *model.ListPtrRecordsRequest) *ListPtrRecordsInvoker {
 	requestDef := GenReqDefForListPtrRecords()
 	return &ListPtrRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// RestorePtrRecord 将弹性公网IP的PTR记录恢复为默认值
+// ListPtrs 查询弹性公网IP的反向解析记录列表
 //
-// 将弹性公网IP的PTR记录恢复为默认值
+// 查询弹性公网IP的反向解析记录列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) RestorePtrRecord(request *model.RestorePtrRecordRequest) (*model.RestorePtrRecordResponse, error) {
-	requestDef := GenReqDefForRestorePtrRecord()
+func (c *DnsClient) ListPtrs(request *model.ListPtrsRequest) (*model.ListPtrsResponse, error) {
+	requestDef := GenReqDefForListPtrs()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.RestorePtrRecordResponse), nil
+		return resp.(*model.ListPtrsResponse), nil
 	}
 }
 
-// RestorePtrRecordInvoker 将弹性公网IP的PTR记录恢复为默认值
-func (c *DnsClient) RestorePtrRecordInvoker(request *model.RestorePtrRecordRequest) *RestorePtrRecordInvoker {
-	requestDef := GenReqDefForRestorePtrRecord()
-	return &RestorePtrRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListPtrsInvoker 查询弹性公网IP的反向解析记录列表
+func (c *DnsClient) ListPtrsInvoker(request *model.ListPtrsRequest) *ListPtrsInvoker {
+	requestDef := GenReqDefForListPtrs()
+	return &ListPtrsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPtrRecordSet 查询单个弹性公网IP的PTR记录
+// ListPublicZoneLines 查询公网域名的线路列表
 //
-// 查询单个弹性公网IP的PTR记录
+// 查询公网域名的线路列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ShowPtrRecordSet(request *model.ShowPtrRecordSetRequest) (*model.ShowPtrRecordSetResponse, error) {
-	requestDef := GenReqDefForShowPtrRecordSet()
+func (c *DnsClient) ListPublicZoneLines(request *model.ListPublicZoneLinesRequest) (*model.ListPublicZoneLinesResponse, error) {
+	requestDef := GenReqDefForListPublicZoneLines()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowPtrRecordSetResponse), nil
+		return resp.(*model.ListPublicZoneLinesResponse), nil
 	}
 }
 
-// ShowPtrRecordSetInvoker 查询单个弹性公网IP的PTR记录
-func (c *DnsClient) ShowPtrRecordSetInvoker(request *model.ShowPtrRecordSetRequest) *ShowPtrRecordSetInvoker {
-	requestDef := GenReqDefForShowPtrRecordSet()
-	return &ShowPtrRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListPublicZoneLinesInvoker 查询公网域名的线路列表
+func (c *DnsClient) ListPublicZoneLinesInvoker(request *model.ListPublicZoneLinesRequest) *ListPublicZoneLinesInvoker {
+	requestDef := GenReqDefForListPublicZoneLines()
+	return &ListPublicZoneLinesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdatePtrRecord 修改弹性公网IP的PTR记录
+// ListPublicZones 查询公网域名列表
 //
-// 修改弹性公网IP的PTR记录
+// 查询公网域名列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) UpdatePtrRecord(request *model.UpdatePtrRecordRequest) (*model.UpdatePtrRecordResponse, error) {
-	requestDef := GenReqDefForUpdatePtrRecord()
+func (c *DnsClient) ListPublicZones(request *model.ListPublicZonesRequest) (*model.ListPublicZonesResponse, error) {
+	requestDef := GenReqDefForListPublicZones()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdatePtrRecordResponse), nil
+		return resp.(*model.ListPublicZonesResponse), nil
 	}
 }
 
-// UpdatePtrRecordInvoker 修改弹性公网IP的PTR记录
-func (c *DnsClient) UpdatePtrRecordInvoker(request *model.UpdatePtrRecordRequest) *UpdatePtrRecordInvoker {
-	requestDef := GenReqDefForUpdatePtrRecord()
-	return &UpdatePtrRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListPublicZonesInvoker 查询公网域名列表
+func (c *DnsClient) ListPublicZonesInvoker(request *model.ListPublicZonesRequest) *ListPublicZonesInvoker {
+	requestDef := GenReqDefForListPublicZones()
+	return &ListPublicZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchDeleteRecordSetWithLine 批量删除某个Zone下的Record Set资源
+// ListRecordSets 查询租户记录集列表
 //
-// 批量删除某个Zone下的Record Set资源，当删除的资源不存在时，则默认删除成功。
-// 响应结果中只包含本次实际删除的资源。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) BatchDeleteRecordSetWithLine(request *model.BatchDeleteRecordSetWithLineRequest) (*model.BatchDeleteRecordSetWithLineResponse, error) {
-	requestDef := GenReqDefForBatchDeleteRecordSetWithLine()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchDeleteRecordSetWithLineResponse), nil
-	}
-}
-
-// BatchDeleteRecordSetWithLineInvoker 批量删除某个Zone下的Record Set资源
-func (c *DnsClient) BatchDeleteRecordSetWithLineInvoker(request *model.BatchDeleteRecordSetWithLineRequest) *BatchDeleteRecordSetWithLineInvoker {
-	requestDef := GenReqDefForBatchDeleteRecordSetWithLine()
-	return &BatchDeleteRecordSetWithLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// BatchUpdateRecordSetWithLine 批量修改RecordSet
-//
-// 批量修改RecordSet。属于原子性操作，请求Record Set将全部完成修改，或不做任何修改。
-// 仅公网Zone支持。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) BatchUpdateRecordSetWithLine(request *model.BatchUpdateRecordSetWithLineRequest) (*model.BatchUpdateRecordSetWithLineResponse, error) {
-	requestDef := GenReqDefForBatchUpdateRecordSetWithLine()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchUpdateRecordSetWithLineResponse), nil
-	}
-}
-
-// BatchUpdateRecordSetWithLineInvoker 批量修改RecordSet
-func (c *DnsClient) BatchUpdateRecordSetWithLineInvoker(request *model.BatchUpdateRecordSetWithLineRequest) *BatchUpdateRecordSetWithLineInvoker {
-	requestDef := GenReqDefForBatchUpdateRecordSetWithLine()
-	return &BatchUpdateRecordSetWithLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateRecordSet 创建单个Record Set
-//
-// 创建单个Record Set
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) CreateRecordSet(request *model.CreateRecordSetRequest) (*model.CreateRecordSetResponse, error) {
-	requestDef := GenReqDefForCreateRecordSet()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateRecordSetResponse), nil
-	}
-}
-
-// CreateRecordSetInvoker 创建单个Record Set
-func (c *DnsClient) CreateRecordSetInvoker(request *model.CreateRecordSetRequest) *CreateRecordSetInvoker {
-	requestDef := GenReqDefForCreateRecordSet()
-	return &CreateRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateRecordSetWithBatchLines 批量线路创建RecordSet
-//
-// 批量线路创建RecordSet。属于原子性操作，如果存在一个参数校验不通过，则创建失败。仅公网Zone支持。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) CreateRecordSetWithBatchLines(request *model.CreateRecordSetWithBatchLinesRequest) (*model.CreateRecordSetWithBatchLinesResponse, error) {
-	requestDef := GenReqDefForCreateRecordSetWithBatchLines()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateRecordSetWithBatchLinesResponse), nil
-	}
-}
-
-// CreateRecordSetWithBatchLinesInvoker 批量线路创建RecordSet
-func (c *DnsClient) CreateRecordSetWithBatchLinesInvoker(request *model.CreateRecordSetWithBatchLinesRequest) *CreateRecordSetWithBatchLinesInvoker {
-	requestDef := GenReqDefForCreateRecordSetWithBatchLines()
-	return &CreateRecordSetWithBatchLinesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateRecordSetWithLine 创建单个Record Set
-//
-// 创建单个Record Set，仅适用于公网DNS
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) CreateRecordSetWithLine(request *model.CreateRecordSetWithLineRequest) (*model.CreateRecordSetWithLineResponse, error) {
-	requestDef := GenReqDefForCreateRecordSetWithLine()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateRecordSetWithLineResponse), nil
-	}
-}
-
-// CreateRecordSetWithLineInvoker 创建单个Record Set
-func (c *DnsClient) CreateRecordSetWithLineInvoker(request *model.CreateRecordSetWithLineRequest) *CreateRecordSetWithLineInvoker {
-	requestDef := GenReqDefForCreateRecordSetWithLine()
-	return &CreateRecordSetWithLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteRecordSet 删除单个Record Set
-//
-// 删除单个Record Set。删除有添加智能解析的记录集时，需要用Record Set多线路管理模块中删除接口进行删除。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) DeleteRecordSet(request *model.DeleteRecordSetRequest) (*model.DeleteRecordSetResponse, error) {
-	requestDef := GenReqDefForDeleteRecordSet()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteRecordSetResponse), nil
-	}
-}
-
-// DeleteRecordSetInvoker 删除单个Record Set
-func (c *DnsClient) DeleteRecordSetInvoker(request *model.DeleteRecordSetRequest) *DeleteRecordSetInvoker {
-	requestDef := GenReqDefForDeleteRecordSet()
-	return &DeleteRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteRecordSets 删除单个Record Set
-//
-// 删除单个Record Set
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) DeleteRecordSets(request *model.DeleteRecordSetsRequest) (*model.DeleteRecordSetsResponse, error) {
-	requestDef := GenReqDefForDeleteRecordSets()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteRecordSetsResponse), nil
-	}
-}
-
-// DeleteRecordSetsInvoker 删除单个Record Set
-func (c *DnsClient) DeleteRecordSetsInvoker(request *model.DeleteRecordSetsRequest) *DeleteRecordSetsInvoker {
-	requestDef := GenReqDefForDeleteRecordSets()
-	return &DeleteRecordSetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListRecordSets 查询租户Record Set资源列表
-//
-// 查询租户Record Set资源列表
+// 查询租户记录集列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListRecordSets(request *model.ListRecordSetsRequest) (*model.ListRecordSetsResponse, error) {
@@ -653,15 +1052,15 @@ func (c *DnsClient) ListRecordSets(request *model.ListRecordSetsRequest) (*model
 	}
 }
 
-// ListRecordSetsInvoker 查询租户Record Set资源列表
+// ListRecordSetsInvoker 查询租户记录集列表
 func (c *DnsClient) ListRecordSetsInvoker(request *model.ListRecordSetsRequest) *ListRecordSetsInvoker {
 	requestDef := GenReqDefForListRecordSets()
 	return &ListRecordSetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListRecordSetsByZone 查询单个Zone下Record Set列表
+// ListRecordSetsByZone 查询域名下的记录集列表
 //
-// 查询单个Zone下Record Set列表
+// 查询域名下的记录集列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListRecordSetsByZone(request *model.ListRecordSetsByZoneRequest) (*model.ListRecordSetsByZoneResponse, error) {
@@ -674,15 +1073,15 @@ func (c *DnsClient) ListRecordSetsByZone(request *model.ListRecordSetsByZoneRequ
 	}
 }
 
-// ListRecordSetsByZoneInvoker 查询单个Zone下Record Set列表
+// ListRecordSetsByZoneInvoker 查询域名下的记录集列表
 func (c *DnsClient) ListRecordSetsByZoneInvoker(request *model.ListRecordSetsByZoneRequest) *ListRecordSetsByZoneInvoker {
 	requestDef := GenReqDefForListRecordSetsByZone()
 	return &ListRecordSetsByZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListRecordSetsWithLine 查询租户Record Set资源列表
+// ListRecordSetsWithLine 查询租户记录集列表
 //
-// 查询租户Record Set资源列表
+// 查询租户记录集列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) ListRecordSetsWithLine(request *model.ListRecordSetsWithLineRequest) (*model.ListRecordSetsWithLineResponse, error) {
@@ -695,199 +1094,31 @@ func (c *DnsClient) ListRecordSetsWithLine(request *model.ListRecordSetsWithLine
 	}
 }
 
-// ListRecordSetsWithLineInvoker 查询租户Record Set资源列表
+// ListRecordSetsWithLineInvoker 查询租户记录集列表
 func (c *DnsClient) ListRecordSetsWithLineInvoker(request *model.ListRecordSetsWithLineRequest) *ListRecordSetsWithLineInvoker {
 	requestDef := GenReqDefForListRecordSetsWithLine()
 	return &ListRecordSetsWithLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SetRecordSetsStatus 设置Record Set状态
+// ListResolverRules 查询解析器转发规则列表
 //
-// 设置Record Set状态
+// 查询解析器转发规则列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) SetRecordSetsStatus(request *model.SetRecordSetsStatusRequest) (*model.SetRecordSetsStatusResponse, error) {
-	requestDef := GenReqDefForSetRecordSetsStatus()
+func (c *DnsClient) ListResolverRules(request *model.ListResolverRulesRequest) (*model.ListResolverRulesResponse, error) {
+	requestDef := GenReqDefForListResolverRules()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.SetRecordSetsStatusResponse), nil
+		return resp.(*model.ListResolverRulesResponse), nil
 	}
 }
 
-// SetRecordSetsStatusInvoker 设置Record Set状态
-func (c *DnsClient) SetRecordSetsStatusInvoker(request *model.SetRecordSetsStatusRequest) *SetRecordSetsStatusInvoker {
-	requestDef := GenReqDefForSetRecordSetsStatus()
-	return &SetRecordSetsStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowRecordSet 查询单个Record Set
-//
-// 查询单个Record Set。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ShowRecordSet(request *model.ShowRecordSetRequest) (*model.ShowRecordSetResponse, error) {
-	requestDef := GenReqDefForShowRecordSet()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowRecordSetResponse), nil
-	}
-}
-
-// ShowRecordSetInvoker 查询单个Record Set
-func (c *DnsClient) ShowRecordSetInvoker(request *model.ShowRecordSetRequest) *ShowRecordSetInvoker {
-	requestDef := GenReqDefForShowRecordSet()
-	return &ShowRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowRecordSetByZone 查询单个Zone下Record Set列表
-//
-// 查询单个Zone下Record Set列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ShowRecordSetByZone(request *model.ShowRecordSetByZoneRequest) (*model.ShowRecordSetByZoneResponse, error) {
-	requestDef := GenReqDefForShowRecordSetByZone()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowRecordSetByZoneResponse), nil
-	}
-}
-
-// ShowRecordSetByZoneInvoker 查询单个Zone下Record Set列表
-func (c *DnsClient) ShowRecordSetByZoneInvoker(request *model.ShowRecordSetByZoneRequest) *ShowRecordSetByZoneInvoker {
-	requestDef := GenReqDefForShowRecordSetByZone()
-	return &ShowRecordSetByZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowRecordSetWithLine 查询单个Record Set
-//
-// 查询单个Record Set，仅适用于公网DNS
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ShowRecordSetWithLine(request *model.ShowRecordSetWithLineRequest) (*model.ShowRecordSetWithLineResponse, error) {
-	requestDef := GenReqDefForShowRecordSetWithLine()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowRecordSetWithLineResponse), nil
-	}
-}
-
-// ShowRecordSetWithLineInvoker 查询单个Record Set
-func (c *DnsClient) ShowRecordSetWithLineInvoker(request *model.ShowRecordSetWithLineRequest) *ShowRecordSetWithLineInvoker {
-	requestDef := GenReqDefForShowRecordSetWithLine()
-	return &ShowRecordSetWithLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateRecordSet 修改单个Record Set
-//
-// 修改单个Record Set
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) UpdateRecordSet(request *model.UpdateRecordSetRequest) (*model.UpdateRecordSetResponse, error) {
-	requestDef := GenReqDefForUpdateRecordSet()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateRecordSetResponse), nil
-	}
-}
-
-// UpdateRecordSetInvoker 修改单个Record Set
-func (c *DnsClient) UpdateRecordSetInvoker(request *model.UpdateRecordSetRequest) *UpdateRecordSetInvoker {
-	requestDef := GenReqDefForUpdateRecordSet()
-	return &UpdateRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateRecordSets 修改单个Record Set
-//
-// 修改单个Record Set
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) UpdateRecordSets(request *model.UpdateRecordSetsRequest) (*model.UpdateRecordSetsResponse, error) {
-	requestDef := GenReqDefForUpdateRecordSets()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateRecordSetsResponse), nil
-	}
-}
-
-// UpdateRecordSetsInvoker 修改单个Record Set
-func (c *DnsClient) UpdateRecordSetsInvoker(request *model.UpdateRecordSetsRequest) *UpdateRecordSetsInvoker {
-	requestDef := GenReqDefForUpdateRecordSets()
-	return &UpdateRecordSetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// BatchCreateTag 为指定实例批量添加或删除标签
-//
-// 为指定实例批量添加或删除标签
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) BatchCreateTag(request *model.BatchCreateTagRequest) (*model.BatchCreateTagResponse, error) {
-	requestDef := GenReqDefForBatchCreateTag()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchCreateTagResponse), nil
-	}
-}
-
-// BatchCreateTagInvoker 为指定实例批量添加或删除标签
-func (c *DnsClient) BatchCreateTagInvoker(request *model.BatchCreateTagRequest) *BatchCreateTagInvoker {
-	requestDef := GenReqDefForBatchCreateTag()
-	return &BatchCreateTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateTag 为指定实例添加标签
-//
-// 为指定实例添加标签
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) CreateTag(request *model.CreateTagRequest) (*model.CreateTagResponse, error) {
-	requestDef := GenReqDefForCreateTag()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateTagResponse), nil
-	}
-}
-
-// CreateTagInvoker 为指定实例添加标签
-func (c *DnsClient) CreateTagInvoker(request *model.CreateTagRequest) *CreateTagInvoker {
-	requestDef := GenReqDefForCreateTag()
-	return &CreateTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteTag 删除资源标签
-//
-// 删除资源标签
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) DeleteTag(request *model.DeleteTagRequest) (*model.DeleteTagResponse, error) {
-	requestDef := GenReqDefForDeleteTag()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteTagResponse), nil
-	}
-}
-
-// DeleteTagInvoker 删除资源标签
-func (c *DnsClient) DeleteTagInvoker(request *model.DeleteTagRequest) *DeleteTagInvoker {
-	requestDef := GenReqDefForDeleteTag()
-	return &DeleteTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListResolverRulesInvoker 查询解析器转发规则列表
+func (c *DnsClient) ListResolverRulesInvoker(request *model.ListResolverRulesRequest) *ListResolverRulesInvoker {
+	requestDef := GenReqDefForListResolverRules()
+	return &ListResolverRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListTag 使用标签查询资源实例
@@ -932,6 +1163,363 @@ func (c *DnsClient) ListTagsInvoker(request *model.ListTagsRequest) *ListTagsInv
 	return &ListTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RestorePtrRecord 将弹性公网IP的反向解析记录恢复为默认值
+//
+// 将弹性公网IP的反向解析记录恢复为默认值。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) RestorePtrRecord(request *model.RestorePtrRecordRequest) (*model.RestorePtrRecordResponse, error) {
+	requestDef := GenReqDefForRestorePtrRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestorePtrRecordResponse), nil
+	}
+}
+
+// RestorePtrRecordInvoker 将弹性公网IP的反向解析记录恢复为默认值
+func (c *DnsClient) RestorePtrRecordInvoker(request *model.RestorePtrRecordRequest) *RestorePtrRecordInvoker {
+	requestDef := GenReqDefForRestorePtrRecord()
+	return &RestorePtrRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetPrivateZoneProxyPattern 设置内网域名的子域名递归解析代理
+//
+// 设置内网域名的子域名递归解析代理。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) SetPrivateZoneProxyPattern(request *model.SetPrivateZoneProxyPatternRequest) (*model.SetPrivateZoneProxyPatternResponse, error) {
+	requestDef := GenReqDefForSetPrivateZoneProxyPattern()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetPrivateZoneProxyPatternResponse), nil
+	}
+}
+
+// SetPrivateZoneProxyPatternInvoker 设置内网域名的子域名递归解析代理
+func (c *DnsClient) SetPrivateZoneProxyPatternInvoker(request *model.SetPrivateZoneProxyPatternRequest) *SetPrivateZoneProxyPatternInvoker {
+	requestDef := GenReqDefForSetPrivateZoneProxyPattern()
+	return &SetPrivateZoneProxyPatternInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetRecordSetsStatus 设置记录集状态
+//
+// 设置记录集状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) SetRecordSetsStatus(request *model.SetRecordSetsStatusRequest) (*model.SetRecordSetsStatusResponse, error) {
+	requestDef := GenReqDefForSetRecordSetsStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetRecordSetsStatusResponse), nil
+	}
+}
+
+// SetRecordSetsStatusInvoker 设置记录集状态
+func (c *DnsClient) SetRecordSetsStatusInvoker(request *model.SetRecordSetsStatusRequest) *SetRecordSetsStatusInvoker {
+	requestDef := GenReqDefForSetRecordSetsStatus()
+	return &SetRecordSetsStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowApiInfo 查询指定的云解析服务API版本号
+//
+// 查询指定的云解析服务API版本号。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) ShowApiInfo(request *model.ShowApiInfoRequest) (*model.ShowApiInfoResponse, error) {
+	requestDef := GenReqDefForShowApiInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowApiInfoResponse), nil
+	}
+}
+
+// ShowApiInfoInvoker 查询指定的云解析服务API版本号
+func (c *DnsClient) ShowApiInfoInvoker(request *model.ShowApiInfoRequest) *ShowApiInfoInvoker {
+	requestDef := GenReqDefForShowApiInfo()
+	return &ShowApiInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDomainQuota 查询租户配额
+//
+// 查询租户在DNS服务下的资源配额，包括公网域名配额、内网域名配额、记录集配额、反向解析配额、自定义线路配额、线路分组配额、入站终端节点配额、出站终端节点配额、转发规则配额等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) ShowDomainQuota(request *model.ShowDomainQuotaRequest) (*model.ShowDomainQuotaResponse, error) {
+	requestDef := GenReqDefForShowDomainQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainQuotaResponse), nil
+	}
+}
+
+// ShowDomainQuotaInvoker 查询租户配额
+func (c *DnsClient) ShowDomainQuotaInvoker(request *model.ShowDomainQuotaRequest) *ShowDomainQuotaInvoker {
+	requestDef := GenReqDefForShowDomainQuota()
+	return &ShowDomainQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowEndpoint 查询终端节点
+//
+// 查询终端节点。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) ShowEndpoint(request *model.ShowEndpointRequest) (*model.ShowEndpointResponse, error) {
+	requestDef := GenReqDefForShowEndpoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowEndpointResponse), nil
+	}
+}
+
+// ShowEndpointInvoker 查询终端节点
+func (c *DnsClient) ShowEndpointInvoker(request *model.ShowEndpointRequest) *ShowEndpointInvoker {
+	requestDef := GenReqDefForShowEndpoint()
+	return &ShowEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLineGroup 查询线路分组
+//
+// 查询线路分组。该接口部分区域未上线，如需使用请提交工单申请开通。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) ShowLineGroup(request *model.ShowLineGroupRequest) (*model.ShowLineGroupResponse, error) {
+	requestDef := GenReqDefForShowLineGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLineGroupResponse), nil
+	}
+}
+
+// ShowLineGroupInvoker 查询线路分组
+func (c *DnsClient) ShowLineGroupInvoker(request *model.ShowLineGroupRequest) *ShowLineGroupInvoker {
+	requestDef := GenReqDefForShowLineGroup()
+	return &ShowLineGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPrivateZone 查询内网域名
+//
+// 查询内网域名。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) ShowPrivateZone(request *model.ShowPrivateZoneRequest) (*model.ShowPrivateZoneResponse, error) {
+	requestDef := GenReqDefForShowPrivateZone()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPrivateZoneResponse), nil
+	}
+}
+
+// ShowPrivateZoneInvoker 查询内网域名
+func (c *DnsClient) ShowPrivateZoneInvoker(request *model.ShowPrivateZoneRequest) *ShowPrivateZoneInvoker {
+	requestDef := GenReqDefForShowPrivateZone()
+	return &ShowPrivateZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPrivateZoneNameServer 查询内网域名的名称服务器
+//
+// 查询内网域名的名称服务器。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) ShowPrivateZoneNameServer(request *model.ShowPrivateZoneNameServerRequest) (*model.ShowPrivateZoneNameServerResponse, error) {
+	requestDef := GenReqDefForShowPrivateZoneNameServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPrivateZoneNameServerResponse), nil
+	}
+}
+
+// ShowPrivateZoneNameServerInvoker 查询内网域名的名称服务器
+func (c *DnsClient) ShowPrivateZoneNameServerInvoker(request *model.ShowPrivateZoneNameServerRequest) *ShowPrivateZoneNameServerInvoker {
+	requestDef := GenReqDefForShowPrivateZoneNameServer()
+	return &ShowPrivateZoneNameServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPtr 查询弹性公网IP的反向解析记录
+//
+// 查询弹性公网IP的反向解析记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) ShowPtr(request *model.ShowPtrRequest) (*model.ShowPtrResponse, error) {
+	requestDef := GenReqDefForShowPtr()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPtrResponse), nil
+	}
+}
+
+// ShowPtrInvoker 查询弹性公网IP的反向解析记录
+func (c *DnsClient) ShowPtrInvoker(request *model.ShowPtrRequest) *ShowPtrInvoker {
+	requestDef := GenReqDefForShowPtr()
+	return &ShowPtrInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPtrRecordSet 查询弹性公网IP的反向解析记录
+//
+// 查询弹性公网IP的反向解析记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) ShowPtrRecordSet(request *model.ShowPtrRecordSetRequest) (*model.ShowPtrRecordSetResponse, error) {
+	requestDef := GenReqDefForShowPtrRecordSet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPtrRecordSetResponse), nil
+	}
+}
+
+// ShowPtrRecordSetInvoker 查询弹性公网IP的反向解析记录
+func (c *DnsClient) ShowPtrRecordSetInvoker(request *model.ShowPtrRecordSetRequest) *ShowPtrRecordSetInvoker {
+	requestDef := GenReqDefForShowPtrRecordSet()
+	return &ShowPtrRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPublicZone 查询公网域名
+//
+// 查询公网域名。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) ShowPublicZone(request *model.ShowPublicZoneRequest) (*model.ShowPublicZoneResponse, error) {
+	requestDef := GenReqDefForShowPublicZone()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPublicZoneResponse), nil
+	}
+}
+
+// ShowPublicZoneInvoker 查询公网域名
+func (c *DnsClient) ShowPublicZoneInvoker(request *model.ShowPublicZoneRequest) *ShowPublicZoneInvoker {
+	requestDef := GenReqDefForShowPublicZone()
+	return &ShowPublicZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPublicZoneNameServer 查询公网域名的名称服务器
+//
+// 查询公网域名的名称服务器。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) ShowPublicZoneNameServer(request *model.ShowPublicZoneNameServerRequest) (*model.ShowPublicZoneNameServerResponse, error) {
+	requestDef := GenReqDefForShowPublicZoneNameServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPublicZoneNameServerResponse), nil
+	}
+}
+
+// ShowPublicZoneNameServerInvoker 查询公网域名的名称服务器
+func (c *DnsClient) ShowPublicZoneNameServerInvoker(request *model.ShowPublicZoneNameServerRequest) *ShowPublicZoneNameServerInvoker {
+	requestDef := GenReqDefForShowPublicZoneNameServer()
+	return &ShowPublicZoneNameServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRecordSet 查询记录集
+//
+// 查询记录集。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) ShowRecordSet(request *model.ShowRecordSetRequest) (*model.ShowRecordSetResponse, error) {
+	requestDef := GenReqDefForShowRecordSet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRecordSetResponse), nil
+	}
+}
+
+// ShowRecordSetInvoker 查询记录集
+func (c *DnsClient) ShowRecordSetInvoker(request *model.ShowRecordSetRequest) *ShowRecordSetInvoker {
+	requestDef := GenReqDefForShowRecordSet()
+	return &ShowRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRecordSetByZone 查询域名下的记录集列表
+//
+// 查询域名下的记录集列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) ShowRecordSetByZone(request *model.ShowRecordSetByZoneRequest) (*model.ShowRecordSetByZoneResponse, error) {
+	requestDef := GenReqDefForShowRecordSetByZone()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRecordSetByZoneResponse), nil
+	}
+}
+
+// ShowRecordSetByZoneInvoker 查询域名下的记录集列表
+func (c *DnsClient) ShowRecordSetByZoneInvoker(request *model.ShowRecordSetByZoneRequest) *ShowRecordSetByZoneInvoker {
+	requestDef := GenReqDefForShowRecordSetByZone()
+	return &ShowRecordSetByZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRecordSetWithLine 查询记录集
+//
+// 查询记录集。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) ShowRecordSetWithLine(request *model.ShowRecordSetWithLineRequest) (*model.ShowRecordSetWithLineResponse, error) {
+	requestDef := GenReqDefForShowRecordSetWithLine()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRecordSetWithLineResponse), nil
+	}
+}
+
+// ShowRecordSetWithLineInvoker 查询记录集
+func (c *DnsClient) ShowRecordSetWithLineInvoker(request *model.ShowRecordSetWithLineRequest) *ShowRecordSetWithLineInvoker {
+	requestDef := GenReqDefForShowRecordSetWithLine()
+	return &ShowRecordSetWithLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowResolverRule 查询解析器转发规则
+//
+// 查询解析器转发规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) ShowResolverRule(request *model.ShowResolverRuleRequest) (*model.ShowResolverRuleResponse, error) {
+	requestDef := GenReqDefForShowResolverRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowResolverRuleResponse), nil
+	}
+}
+
+// ShowResolverRuleInvoker 查询解析器转发规则
+func (c *DnsClient) ShowResolverRuleInvoker(request *model.ShowResolverRuleRequest) *ShowResolverRuleInvoker {
+	requestDef := GenReqDefForShowResolverRule()
+	return &ShowResolverRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowResourceTag 查询指定实例的标签信息
 //
 // 查询指定实例的标签信息
@@ -953,261 +1541,72 @@ func (c *DnsClient) ShowResourceTagInvoker(request *model.ShowResourceTagRequest
 	return &ShowResourceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// AssociateRouter 在内网Zone上关联VPC
+// UpdateCustomLine 更新自定义线路
 //
-// 在内网Zone上关联VPC
+// 更新自定义线路。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) AssociateRouter(request *model.AssociateRouterRequest) (*model.AssociateRouterResponse, error) {
-	requestDef := GenReqDefForAssociateRouter()
+func (c *DnsClient) UpdateCustomLine(request *model.UpdateCustomLineRequest) (*model.UpdateCustomLineResponse, error) {
+	requestDef := GenReqDefForUpdateCustomLine()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.AssociateRouterResponse), nil
+		return resp.(*model.UpdateCustomLineResponse), nil
 	}
 }
 
-// AssociateRouterInvoker 在内网Zone上关联VPC
-func (c *DnsClient) AssociateRouterInvoker(request *model.AssociateRouterRequest) *AssociateRouterInvoker {
-	requestDef := GenReqDefForAssociateRouter()
-	return &AssociateRouterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateCustomLineInvoker 更新自定义线路
+func (c *DnsClient) UpdateCustomLineInvoker(request *model.UpdateCustomLineRequest) *UpdateCustomLineInvoker {
+	requestDef := GenReqDefForUpdateCustomLine()
+	return &UpdateCustomLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePrivateZone 创建单个内网Zone
+// UpdateEndpoint 修改终端节点
 //
-// 创建单个内网Zone
+// 修改终端节点
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) CreatePrivateZone(request *model.CreatePrivateZoneRequest) (*model.CreatePrivateZoneResponse, error) {
-	requestDef := GenReqDefForCreatePrivateZone()
+func (c *DnsClient) UpdateEndpoint(request *model.UpdateEndpointRequest) (*model.UpdateEndpointResponse, error) {
+	requestDef := GenReqDefForUpdateEndpoint()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreatePrivateZoneResponse), nil
+		return resp.(*model.UpdateEndpointResponse), nil
 	}
 }
 
-// CreatePrivateZoneInvoker 创建单个内网Zone
-func (c *DnsClient) CreatePrivateZoneInvoker(request *model.CreatePrivateZoneRequest) *CreatePrivateZoneInvoker {
-	requestDef := GenReqDefForCreatePrivateZone()
-	return &CreatePrivateZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateEndpointInvoker 修改终端节点
+func (c *DnsClient) UpdateEndpointInvoker(request *model.UpdateEndpointRequest) *UpdateEndpointInvoker {
+	requestDef := GenReqDefForUpdateEndpoint()
+	return &UpdateEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePublicZone 创建单个公网Zone
+// UpdateLineGroups 更新线路分组
 //
-// 创建单个公网Zone
+// 更新线路分组。该接口部分区域未上线，如需使用请提交工单申请开通。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) CreatePublicZone(request *model.CreatePublicZoneRequest) (*model.CreatePublicZoneResponse, error) {
-	requestDef := GenReqDefForCreatePublicZone()
+func (c *DnsClient) UpdateLineGroups(request *model.UpdateLineGroupsRequest) (*model.UpdateLineGroupsResponse, error) {
+	requestDef := GenReqDefForUpdateLineGroups()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreatePublicZoneResponse), nil
+		return resp.(*model.UpdateLineGroupsResponse), nil
 	}
 }
 
-// CreatePublicZoneInvoker 创建单个公网Zone
-func (c *DnsClient) CreatePublicZoneInvoker(request *model.CreatePublicZoneRequest) *CreatePublicZoneInvoker {
-	requestDef := GenReqDefForCreatePublicZone()
-	return &CreatePublicZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateLineGroupsInvoker 更新线路分组
+func (c *DnsClient) UpdateLineGroupsInvoker(request *model.UpdateLineGroupsRequest) *UpdateLineGroupsInvoker {
+	requestDef := GenReqDefForUpdateLineGroups()
+	return &UpdateLineGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeletePrivateZone 删除单个内网Zone
+// UpdatePrivateZone 修改内网域名
 //
-// 删除单个内网Zone
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) DeletePrivateZone(request *model.DeletePrivateZoneRequest) (*model.DeletePrivateZoneResponse, error) {
-	requestDef := GenReqDefForDeletePrivateZone()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeletePrivateZoneResponse), nil
-	}
-}
-
-// DeletePrivateZoneInvoker 删除单个内网Zone
-func (c *DnsClient) DeletePrivateZoneInvoker(request *model.DeletePrivateZoneRequest) *DeletePrivateZoneInvoker {
-	requestDef := GenReqDefForDeletePrivateZone()
-	return &DeletePrivateZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeletePublicZone 删除单个公网Zone
-//
-// 删除单个公网Zone
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) DeletePublicZone(request *model.DeletePublicZoneRequest) (*model.DeletePublicZoneResponse, error) {
-	requestDef := GenReqDefForDeletePublicZone()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeletePublicZoneResponse), nil
-	}
-}
-
-// DeletePublicZoneInvoker 删除单个公网Zone
-func (c *DnsClient) DeletePublicZoneInvoker(request *model.DeletePublicZoneRequest) *DeletePublicZoneInvoker {
-	requestDef := GenReqDefForDeletePublicZone()
-	return &DeletePublicZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DisassociateRouter 在内网Zone上解关联VPC
-//
-// 在内网Zone上解关联VPC
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) DisassociateRouter(request *model.DisassociateRouterRequest) (*model.DisassociateRouterResponse, error) {
-	requestDef := GenReqDefForDisassociateRouter()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DisassociateRouterResponse), nil
-	}
-}
-
-// DisassociateRouterInvoker 在内网Zone上解关联VPC
-func (c *DnsClient) DisassociateRouterInvoker(request *model.DisassociateRouterRequest) *DisassociateRouterInvoker {
-	requestDef := GenReqDefForDisassociateRouter()
-	return &DisassociateRouterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListPrivateZones 查询内网Zone列表
-//
-// 查询内网Zone列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ListPrivateZones(request *model.ListPrivateZonesRequest) (*model.ListPrivateZonesResponse, error) {
-	requestDef := GenReqDefForListPrivateZones()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListPrivateZonesResponse), nil
-	}
-}
-
-// ListPrivateZonesInvoker 查询内网Zone列表
-func (c *DnsClient) ListPrivateZonesInvoker(request *model.ListPrivateZonesRequest) *ListPrivateZonesInvoker {
-	requestDef := GenReqDefForListPrivateZones()
-	return &ListPrivateZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListPublicZones 查询公网Zone列表
-//
-// 查询公网Zone列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ListPublicZones(request *model.ListPublicZonesRequest) (*model.ListPublicZonesResponse, error) {
-	requestDef := GenReqDefForListPublicZones()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListPublicZonesResponse), nil
-	}
-}
-
-// ListPublicZonesInvoker 查询公网Zone列表
-func (c *DnsClient) ListPublicZonesInvoker(request *model.ListPublicZonesRequest) *ListPublicZonesInvoker {
-	requestDef := GenReqDefForListPublicZones()
-	return &ListPublicZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowPrivateZone 查询单个内网Zone
-//
-// 查询单个内网Zone
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ShowPrivateZone(request *model.ShowPrivateZoneRequest) (*model.ShowPrivateZoneResponse, error) {
-	requestDef := GenReqDefForShowPrivateZone()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowPrivateZoneResponse), nil
-	}
-}
-
-// ShowPrivateZoneInvoker 查询单个内网Zone
-func (c *DnsClient) ShowPrivateZoneInvoker(request *model.ShowPrivateZoneRequest) *ShowPrivateZoneInvoker {
-	requestDef := GenReqDefForShowPrivateZone()
-	return &ShowPrivateZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowPrivateZoneNameServer 查询单个内网Zone的名称服务器
-//
-// 查询单个内网Zone的名称服务器
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ShowPrivateZoneNameServer(request *model.ShowPrivateZoneNameServerRequest) (*model.ShowPrivateZoneNameServerResponse, error) {
-	requestDef := GenReqDefForShowPrivateZoneNameServer()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowPrivateZoneNameServerResponse), nil
-	}
-}
-
-// ShowPrivateZoneNameServerInvoker 查询单个内网Zone的名称服务器
-func (c *DnsClient) ShowPrivateZoneNameServerInvoker(request *model.ShowPrivateZoneNameServerRequest) *ShowPrivateZoneNameServerInvoker {
-	requestDef := GenReqDefForShowPrivateZoneNameServer()
-	return &ShowPrivateZoneNameServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowPublicZone 查询单个公网Zone
-//
-// 查询单个公网Zone
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ShowPublicZone(request *model.ShowPublicZoneRequest) (*model.ShowPublicZoneResponse, error) {
-	requestDef := GenReqDefForShowPublicZone()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowPublicZoneResponse), nil
-	}
-}
-
-// ShowPublicZoneInvoker 查询单个公网Zone
-func (c *DnsClient) ShowPublicZoneInvoker(request *model.ShowPublicZoneRequest) *ShowPublicZoneInvoker {
-	requestDef := GenReqDefForShowPublicZone()
-	return &ShowPublicZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowPublicZoneNameServer 查询单个公网Zone的名称服务器
-//
-// 查询单个公网Zone的名称服务器
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DnsClient) ShowPublicZoneNameServer(request *model.ShowPublicZoneNameServerRequest) (*model.ShowPublicZoneNameServerResponse, error) {
-	requestDef := GenReqDefForShowPublicZoneNameServer()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowPublicZoneNameServerResponse), nil
-	}
-}
-
-// ShowPublicZoneNameServerInvoker 查询单个公网Zone的名称服务器
-func (c *DnsClient) ShowPublicZoneNameServerInvoker(request *model.ShowPublicZoneNameServerRequest) *ShowPublicZoneNameServerInvoker {
-	requestDef := GenReqDefForShowPublicZoneNameServer()
-	return &ShowPublicZoneNameServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdatePrivateZone 修改单个内网Zone
-//
-// 修改单个内网Zone
+// 修改内网域名。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) UpdatePrivateZone(request *model.UpdatePrivateZoneRequest) (*model.UpdatePrivateZoneResponse, error) {
@@ -1220,15 +1619,78 @@ func (c *DnsClient) UpdatePrivateZone(request *model.UpdatePrivateZoneRequest) (
 	}
 }
 
-// UpdatePrivateZoneInvoker 修改单个内网Zone
+// UpdatePrivateZoneInvoker 修改内网域名
 func (c *DnsClient) UpdatePrivateZoneInvoker(request *model.UpdatePrivateZoneRequest) *UpdatePrivateZoneInvoker {
 	requestDef := GenReqDefForUpdatePrivateZone()
 	return &UpdatePrivateZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdatePublicZone 修改单个公网Zone
+// UpdatePrivateZoneStatus 设置内网域名状态
 //
-// 修改单个公网Zone
+// 设置内网域名状态，支持暂停、启用域名。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) UpdatePrivateZoneStatus(request *model.UpdatePrivateZoneStatusRequest) (*model.UpdatePrivateZoneStatusResponse, error) {
+	requestDef := GenReqDefForUpdatePrivateZoneStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePrivateZoneStatusResponse), nil
+	}
+}
+
+// UpdatePrivateZoneStatusInvoker 设置内网域名状态
+func (c *DnsClient) UpdatePrivateZoneStatusInvoker(request *model.UpdatePrivateZoneStatusRequest) *UpdatePrivateZoneStatusInvoker {
+	requestDef := GenReqDefForUpdatePrivateZoneStatus()
+	return &UpdatePrivateZoneStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePtr 修改弹性公网IP的反向解析记录
+//
+// 修改弹性公网IP的反向解析记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) UpdatePtr(request *model.UpdatePtrRequest) (*model.UpdatePtrResponse, error) {
+	requestDef := GenReqDefForUpdatePtr()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePtrResponse), nil
+	}
+}
+
+// UpdatePtrInvoker 修改弹性公网IP的反向解析记录
+func (c *DnsClient) UpdatePtrInvoker(request *model.UpdatePtrRequest) *UpdatePtrInvoker {
+	requestDef := GenReqDefForUpdatePtr()
+	return &UpdatePtrInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePtrRecord 修改弹性公网IP的反向解析记录
+//
+// 修改弹性公网IP的反向解析记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) UpdatePtrRecord(request *model.UpdatePtrRecordRequest) (*model.UpdatePtrRecordResponse, error) {
+	requestDef := GenReqDefForUpdatePtrRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePtrRecordResponse), nil
+	}
+}
+
+// UpdatePtrRecordInvoker 修改弹性公网IP的反向解析记录
+func (c *DnsClient) UpdatePtrRecordInvoker(request *model.UpdatePtrRecordRequest) *UpdatePtrRecordInvoker {
+	requestDef := GenReqDefForUpdatePtrRecord()
+	return &UpdatePtrRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePublicZone 修改公网域名
+//
+// 修改公网域名。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) UpdatePublicZone(request *model.UpdatePublicZoneRequest) (*model.UpdatePublicZoneResponse, error) {
@@ -1241,15 +1703,15 @@ func (c *DnsClient) UpdatePublicZone(request *model.UpdatePublicZoneRequest) (*m
 	}
 }
 
-// UpdatePublicZoneInvoker 修改单个公网Zone
+// UpdatePublicZoneInvoker 修改公网域名
 func (c *DnsClient) UpdatePublicZoneInvoker(request *model.UpdatePublicZoneRequest) *UpdatePublicZoneInvoker {
 	requestDef := GenReqDefForUpdatePublicZone()
 	return &UpdatePublicZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdatePublicZoneStatus 设置单个公网Zone状态
+// UpdatePublicZoneStatus 设置公网域名状态
 //
-// 设置单个公网Zone状态，支持暂停、启用Zone
+// 设置公网域名状态，支持暂停、启用域名。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DnsClient) UpdatePublicZoneStatus(request *model.UpdatePublicZoneStatusRequest) (*model.UpdatePublicZoneStatusResponse, error) {
@@ -1262,8 +1724,134 @@ func (c *DnsClient) UpdatePublicZoneStatus(request *model.UpdatePublicZoneStatus
 	}
 }
 
-// UpdatePublicZoneStatusInvoker 设置单个公网Zone状态
+// UpdatePublicZoneStatusInvoker 设置公网域名状态
 func (c *DnsClient) UpdatePublicZoneStatusInvoker(request *model.UpdatePublicZoneStatusRequest) *UpdatePublicZoneStatusInvoker {
 	requestDef := GenReqDefForUpdatePublicZoneStatus()
 	return &UpdatePublicZoneStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRecordSet 修改记录集
+//
+// 修改记录集。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) UpdateRecordSet(request *model.UpdateRecordSetRequest) (*model.UpdateRecordSetResponse, error) {
+	requestDef := GenReqDefForUpdateRecordSet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRecordSetResponse), nil
+	}
+}
+
+// UpdateRecordSetInvoker 修改记录集
+func (c *DnsClient) UpdateRecordSetInvoker(request *model.UpdateRecordSetRequest) *UpdateRecordSetInvoker {
+	requestDef := GenReqDefForUpdateRecordSet()
+	return &UpdateRecordSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRecordSets 修改记录集
+//
+// 修改记录集。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) UpdateRecordSets(request *model.UpdateRecordSetsRequest) (*model.UpdateRecordSetsResponse, error) {
+	requestDef := GenReqDefForUpdateRecordSets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRecordSetsResponse), nil
+	}
+}
+
+// UpdateRecordSetsInvoker 修改记录集
+func (c *DnsClient) UpdateRecordSetsInvoker(request *model.UpdateRecordSetsRequest) *UpdateRecordSetsInvoker {
+	requestDef := GenReqDefForUpdateRecordSets()
+	return &UpdateRecordSetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateResolverRule 修改解析器转发规则
+//
+// 修改解析器转发规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) UpdateResolverRule(request *model.UpdateResolverRuleRequest) (*model.UpdateResolverRuleResponse, error) {
+	requestDef := GenReqDefForUpdateResolverRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateResolverRuleResponse), nil
+	}
+}
+
+// UpdateResolverRuleInvoker 修改解析器转发规则
+func (c *DnsClient) UpdateResolverRuleInvoker(request *model.UpdateResolverRuleRequest) *UpdateResolverRuleInvoker {
+	requestDef := GenReqDefForUpdateResolverRule()
+	return &UpdateResolverRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisableDnssecConfig 关闭DNSSEC
+//
+// 关闭公网域名的DNSSEC。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) DisableDnssecConfig(request *model.DisableDnssecConfigRequest) (*model.DisableDnssecConfigResponse, error) {
+	requestDef := GenReqDefForDisableDnssecConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisableDnssecConfigResponse), nil
+	}
+}
+
+// DisableDnssecConfigInvoker 关闭DNSSEC
+func (c *DnsClient) DisableDnssecConfigInvoker(request *model.DisableDnssecConfigRequest) *DisableDnssecConfigInvoker {
+	requestDef := GenReqDefForDisableDnssecConfig()
+	return &DisableDnssecConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// EnableDnssecConfig 开启DNSSEC
+//
+// 开启公网域名的DNSSEC。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) EnableDnssecConfig(request *model.EnableDnssecConfigRequest) (*model.EnableDnssecConfigResponse, error) {
+	requestDef := GenReqDefForEnableDnssecConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.EnableDnssecConfigResponse), nil
+	}
+}
+
+// EnableDnssecConfigInvoker 开启DNSSEC
+func (c *DnsClient) EnableDnssecConfigInvoker(request *model.EnableDnssecConfigRequest) *EnableDnssecConfigInvoker {
+	requestDef := GenReqDefForEnableDnssecConfig()
+	return &EnableDnssecConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDnssecConfig 查询DNSSEC
+//
+// 查询公网域名的DNSSEC。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) ShowDnssecConfig(request *model.ShowDnssecConfigRequest) (*model.ShowDnssecConfigResponse, error) {
+	requestDef := GenReqDefForShowDnssecConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDnssecConfigResponse), nil
+	}
+}
+
+// ShowDnssecConfigInvoker 查询DNSSEC
+func (c *DnsClient) ShowDnssecConfigInvoker(request *model.ShowDnssecConfigRequest) *ShowDnssecConfigInvoker {
+	requestDef := GenReqDefForShowDnssecConfig()
+	return &ShowDnssecConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

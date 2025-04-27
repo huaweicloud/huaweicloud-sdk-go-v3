@@ -17,7 +17,7 @@ type CreatePrivateZoneReq struct {
 	// 域名类型。取值：private。
 	ZoneType string `json:"zone_type"`
 
-	// 管理该zone的管理员邮箱，用于生成该Zone的SOA记录。
+	// 管理该域名的管理员邮箱，用于生成该域名的SOA记录。
 	Email *string `json:"email,omitempty"`
 
 	// 用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
@@ -25,13 +25,13 @@ type CreatePrivateZoneReq struct {
 
 	Router *Router `json:"router"`
 
-	// 内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
+	// 内网域名的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前域名未开启递归解析代理 RECURSIVE：当前域名已开启递归解析代理
 	ProxyPattern *string `json:"proxy_pattern,omitempty"`
 
 	// 资源标签。
 	Tags *[]Tag `json:"tags,omitempty"`
 
-	// 域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
+	// 域名关联的企业项目ID，长度不超过36个字符。默认值为0。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 

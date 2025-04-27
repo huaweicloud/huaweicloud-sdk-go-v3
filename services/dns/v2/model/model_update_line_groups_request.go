@@ -9,7 +9,7 @@ import (
 // UpdateLineGroupsRequest Request Object
 type UpdateLineGroupsRequest struct {
 
-	// 线路分组ID
+	// 线路分组ID。
 	LinegroupId string `json:"linegroup_id"`
 
 	Body *UpdateLineGroupsRequestBody `json:"body,omitempty"`

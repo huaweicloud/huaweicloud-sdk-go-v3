@@ -21,7 +21,7 @@ type ShowLineGroupResponse struct {
 	// 线路分组的描述信息
 	Description *string `json:"description,omitempty"`
 
-	// 线路分组的id。
+	// 线路分组的ID。
 	LineId *string `json:"line_id,omitempty"`
 
 	// 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。

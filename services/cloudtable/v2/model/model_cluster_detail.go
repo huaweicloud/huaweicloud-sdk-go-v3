@@ -13,6 +13,72 @@ type ClusterDetail struct {
 	// 集群操作记录
 	Actions *[]string `json:"actions,omitempty"`
 
+	// 是否开启hdfs。 - false：不开启 - true：开启
+	LocalHdfs *bool `json:"localHdfs,omitempty"`
+
+	// 是否开222版本特性。 - false：不开启 - true：开启
+	IsShow222VersionFeature *string `json:"is_show_222_version_feature,omitempty"`
+
+	// 集群操作记录
+	ActionsCount *[]string `json:"actionsCount,omitempty"`
+
+	// 是否支持开启认证。 - false：不支持 - true：支持
+	SupportAuth *bool `json:"support_auth,omitempty"`
+
+	// eps_id。
+	EpsId *string `json:"eps_id,omitempty"`
+
+	// 集群类型。
+	ClusterType *string `json:"cluster_type,omitempty"`
+
+	// 包周期订单号。
+	OrderId *string `json:"order_id,omitempty"`
+
+	// 包周期订单状态。
+	OrderStatus *string `json:"order_status,omitempty"`
+
+	// 是否开启hdfs。 - false：不开启 - true：开启
+	IsLocalHdfs *bool `json:"is_local_hdfs,omitempty"`
+
+	// ClickHouse部署模式。
+	CkDeployMode *string `json:"ck_deploy_mode,omitempty"`
+
+	// 节点磁盘类型。
+	FlavorTypeEn *string `json:"flavor_type_en,omitempty"`
+
+	// 集群是否支持开启冷热分离。
+	EnableHotColdFeatureCluster *string `json:"enable_hot_cold_feature_cluster,omitempty"`
+
+	// 集群是否开启冷热分离。
+	EnableHotColdFeature *string `json:"enable_hot_cold_feature,omitempty"`
+
+	// 数据节点规格。
+	DataFlavor *string `json:"data_flavor,omitempty"`
+
+	// 数据同步节点规格。
+	ControlFlavor *string `json:"control_flavor,omitempty"`
+
+	// 数据节点个数。
+	DataNodeNum *string `json:"data_node_num,omitempty"`
+
+	// 数据同步节点个数。
+	ControlNodeNum *string `json:"control_node_num,omitempty"`
+
+	// 数据节点磁盘容量。
+	DataNodeTotalStorageSize *string `json:"data_node_total_storage_size,omitempty"`
+
+	// 数据同步节点磁盘容量。
+	ControlNodeTotalStorageSize *string `json:"control_node_total_storage_size,omitempty"`
+
+	// 冷存储使用量。
+	ColdStorageUsedSize *string `json:"cold_storage_used_size,omitempty"`
+
+	// 数据节点磁盘类型。
+	DataNodeVolumeType *string `json:"data_node_volume_type,omitempty"`
+
+	// 数据同步节点磁盘类型。
+	ControlNodeVolumeType *string `json:"control_node_volume_type,omitempty"`
+
 	// 是否开启IAM权限认证。 - false：不开启 - true：开启
 	AuthMode *string `json:"auth_mode,omitempty"`
 

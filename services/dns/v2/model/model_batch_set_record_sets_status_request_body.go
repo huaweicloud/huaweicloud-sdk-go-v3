@@ -8,10 +8,10 @@ import (
 
 type BatchSetRecordSetsStatusRequestBody struct {
 
-	// 待设置Record Set状态，当前仅支持DISABLE或ENABLE。
+	// 待设置记录集状态，支持DISABLE或ENABLE。
 	Status string `json:"status"`
 
-	// 待设置Record Set ID列表。 最多支持50个。
+	// 待设置记录集ID列表。 最多支持50个。
 	RecordsetIds []string `json:"recordset_ids"`
 }
 

@@ -1322,6 +1322,27 @@ func (c *GaussDBClient) ListTaurusDbNodeProcessesInvoker(request *model.ListTaur
 	return &ListTaurusDbNodeProcessesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ModifyAutoExpandPolicy 修改存储空间自动扩容策略。
+//
+// 修改存储空间自动扩容策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ModifyAutoExpandPolicy(request *model.ModifyAutoExpandPolicyRequest) (*model.ModifyAutoExpandPolicyResponse, error) {
+	requestDef := GenReqDefForModifyAutoExpandPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyAutoExpandPolicyResponse), nil
+	}
+}
+
+// ModifyAutoExpandPolicyInvoker 修改存储空间自动扩容策略。
+func (c *GaussDBClient) ModifyAutoExpandPolicyInvoker(request *model.ModifyAutoExpandPolicyRequest) *ModifyAutoExpandPolicyInvoker {
+	requestDef := GenReqDefForModifyAutoExpandPolicy()
+	return &ModifyAutoExpandPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ModifyBackupEncryptStatus 打开或关闭备份加密
 //
 // 打开或关闭备份加密。
@@ -1656,6 +1677,27 @@ func (c *GaussDBClient) ShowAuditLog(request *model.ShowAuditLogRequest) (*model
 func (c *GaussDBClient) ShowAuditLogInvoker(request *model.ShowAuditLogRequest) *ShowAuditLogInvoker {
 	requestDef := GenReqDefForShowAuditLog()
 	return &ShowAuditLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAutoExpandPolicy 查询存储空间自动扩容策略。
+//
+// 查询存储空间自动扩容策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowAutoExpandPolicy(request *model.ShowAutoExpandPolicyRequest) (*model.ShowAutoExpandPolicyResponse, error) {
+	requestDef := GenReqDefForShowAutoExpandPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAutoExpandPolicyResponse), nil
+	}
+}
+
+// ShowAutoExpandPolicyInvoker 查询存储空间自动扩容策略。
+func (c *GaussDBClient) ShowAutoExpandPolicyInvoker(request *model.ShowAutoExpandPolicyRequest) *ShowAutoExpandPolicyInvoker {
+	requestDef := GenReqDefForShowAutoExpandPolicy()
+	return &ShowAutoExpandPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAutoScalingHistory 查询自动变配历史记录.
@@ -2244,6 +2286,27 @@ func (c *GaussDBClient) ShowRecyclePolicy(request *model.ShowRecyclePolicyReques
 func (c *GaussDBClient) ShowRecyclePolicyInvoker(request *model.ShowRecyclePolicyRequest) *ShowRecyclePolicyInvoker {
 	requestDef := GenReqDefForShowRecyclePolicy()
 	return &ShowRecyclePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRestoreAvailableTables 查询表级时间点恢复可选表
+//
+// 查询表级时间点恢复可选表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowRestoreAvailableTables(request *model.ShowRestoreAvailableTablesRequest) (*model.ShowRestoreAvailableTablesResponse, error) {
+	requestDef := GenReqDefForShowRestoreAvailableTables()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRestoreAvailableTablesResponse), nil
+	}
+}
+
+// ShowRestoreAvailableTablesInvoker 查询表级时间点恢复可选表
+func (c *GaussDBClient) ShowRestoreAvailableTablesInvoker(request *model.ShowRestoreAvailableTablesRequest) *ShowRestoreAvailableTablesInvoker {
+	requestDef := GenReqDefForShowRestoreAvailableTables()
+	return &ShowRestoreAvailableTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowRestoreTables 查询表级时间点恢复可选表

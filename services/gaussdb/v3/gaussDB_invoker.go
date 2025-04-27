@@ -997,6 +997,22 @@ func (i *ListTaurusDbNodeProcessesInvoker) Invoke() (*model.ListTaurusDbNodeProc
 	}
 }
 
+type ModifyAutoExpandPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyAutoExpandPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyAutoExpandPolicyInvoker) Invoke() (*model.ModifyAutoExpandPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyAutoExpandPolicyResponse), nil
+	}
+}
+
 type ModifyBackupEncryptStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1250,6 +1266,22 @@ func (i *ShowAuditLogInvoker) Invoke() (*model.ShowAuditLogResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowAuditLogResponse), nil
+	}
+}
+
+type ShowAutoExpandPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAutoExpandPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAutoExpandPolicyInvoker) Invoke() (*model.ShowAutoExpandPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAutoExpandPolicyResponse), nil
 	}
 }
 
@@ -1698,6 +1730,22 @@ func (i *ShowRecyclePolicyInvoker) Invoke() (*model.ShowRecyclePolicyResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowRecyclePolicyResponse), nil
+	}
+}
+
+type ShowRestoreAvailableTablesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRestoreAvailableTablesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRestoreAvailableTablesInvoker) Invoke() (*model.ShowRestoreAvailableTablesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRestoreAvailableTablesResponse), nil
 	}
 }
 
