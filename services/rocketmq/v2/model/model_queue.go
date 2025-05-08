@@ -8,19 +8,19 @@ import (
 
 type Queue struct {
 
-	// 队列ID。
+	// **参数解释**： 队列ID。 **取值范围**： 不涉及。
 	Id *int32 `json:"id,omitempty"`
 
-	// 队列消费堆积总数。
+	// **参数解释**： 队列消费堆积总数。 **取值范围**： 不涉及。
 	Lag *int64 `json:"lag,omitempty"`
 
-	// 队列消息总数。
+	// **参数解释**： 队列消息总数。 **取值范围**： 不涉及。
 	BrokerOffset *int64 `json:"broker_offset,omitempty"`
 
-	// 已消费消息数。
+	// **参数解释**： 已消费消息数。 **取值范围**： 不涉及。
 	ConsumerOffset *int64 `json:"consumer_offset,omitempty"`
 
-	// 最新消费消息的存储时间，unix毫秒时间戳格式。
+	// **参数解释**： 最新消费消息的存储时间，Unix毫秒时间戳格式。 **取值范围**： 不涉及。
 	LastMessageTime *int64 `json:"last_message_time,omitempty"`
 }
 

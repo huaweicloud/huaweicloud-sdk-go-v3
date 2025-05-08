@@ -15,7 +15,7 @@ type ShowSmartChatJobResponse struct {
 	// 数字人智能交互对话任务ID。
 	JobId *string `json:"job_id,omitempty"`
 
-	// 数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳
+	// 数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳 * IDLE: 空闲 * DELETING: 删除中
 	State *ShowSmartChatJobResponseState `json:"state,omitempty"`
 
 	// 数字人智能交互对话时长，单位秒。
@@ -91,6 +91,8 @@ type ShowSmartChatJobResponseStateEnum struct {
 	FAILED     ShowSmartChatJobResponseState
 	CANCELED   ShowSmartChatJobResponseState
 	HEARTBEAT  ShowSmartChatJobResponseState
+	IDLE       ShowSmartChatJobResponseState
+	DELETING   ShowSmartChatJobResponseState
 }
 
 func GetShowSmartChatJobResponseStateEnum() ShowSmartChatJobResponseStateEnum {
@@ -112,6 +114,12 @@ func GetShowSmartChatJobResponseStateEnum() ShowSmartChatJobResponseStateEnum {
 		},
 		HEARTBEAT: ShowSmartChatJobResponseState{
 			value: "HEARTBEAT",
+		},
+		IDLE: ShowSmartChatJobResponseState{
+			value: "IDLE",
+		},
+		DELETING: ShowSmartChatJobResponseState{
+			value: "DELETING",
 		},
 	}
 }

@@ -6961,6 +6961,14 @@ func GenReqDefForListTtscVocabularyConfigs() *def.HttpRequestDef {
 		WithJsonTag("type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TtsServiceName").
+		WithJsonTag("tts_service_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IsVocabularyConfigEnable").
+		WithJsonTag("is_vocabulary_config_enable").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))

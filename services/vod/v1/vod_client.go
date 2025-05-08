@@ -212,6 +212,28 @@ func (c *VodClient) CreateAssetReviewTaskInvoker(request *model.CreateAssetRevie
 	return &CreateAssetReviewTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateEditTask
+//
+// ## 典型场景 ##
+//   剪辑任务下发。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) CreateEditTask(request *model.CreateEditTaskRequest) (*model.CreateEditTaskResponse, error) {
+	requestDef := GenReqDefForCreateEditTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateEditTaskResponse), nil
+	}
+}
+
+// CreateEditTaskInvoker
+func (c *VodClient) CreateEditTaskInvoker(request *model.CreateEditTaskRequest) *CreateEditTaskInvoker {
+	requestDef := GenReqDefForCreateEditTask()
+	return &CreateEditTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateExtractAudioTask 音频提取
 //
 // 本接口为异步接口，创建音频提取任务下发成功后会返回asset_id和提取的audio_asset_id，但此时音频提取任务并没有立即完成，可通过消息订阅界面配置的音频提取完成事件来获取音频提取任务完成与否。
@@ -233,6 +255,76 @@ func (c *VodClient) CreateExtractAudioTaskInvoker(request *model.CreateExtractAu
 	return &CreateExtractAudioTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateObjectProcessTask 创建视频处理任务
+//
+// ## 典型场景 ##
+//   视频处理。
+//
+// ## 接口功能 ##
+//   工作流方式视频处理
+//
+// ## 接口约束 ##
+//   无。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) CreateObjectProcessTask(request *model.CreateObjectProcessTaskRequest) (*model.CreateObjectProcessTaskResponse, error) {
+	requestDef := GenReqDefForCreateObjectProcessTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateObjectProcessTaskResponse), nil
+	}
+}
+
+// CreateObjectProcessTaskInvoker 创建视频处理任务
+func (c *VodClient) CreateObjectProcessTaskInvoker(request *model.CreateObjectProcessTaskRequest) *CreateObjectProcessTaskInvoker {
+	requestDef := GenReqDefForCreateObjectProcessTask()
+	return &CreateObjectProcessTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateObjectReplication obs桶内容复制
+//
+// ## 典型场景 ##
+//   触发从用户obs桶复制内容到用户obs桶，当前仅为斗鱼提供&lt;br/&gt;
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) CreateObjectReplication(request *model.CreateObjectReplicationRequest) (*model.CreateObjectReplicationResponse, error) {
+	requestDef := GenReqDefForCreateObjectReplication()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateObjectReplicationResponse), nil
+	}
+}
+
+// CreateObjectReplicationInvoker obs桶内容复制
+func (c *VodClient) CreateObjectReplicationInvoker(request *model.CreateObjectReplicationRequest) *CreateObjectReplicationInvoker {
+	requestDef := GenReqDefForCreateObjectReplication()
+	return &CreateObjectReplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateObjectRetrieval obs桶内容解冻
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) CreateObjectRetrieval(request *model.CreateObjectRetrievalRequest) (*model.CreateObjectRetrievalResponse, error) {
+	requestDef := GenReqDefForCreateObjectRetrieval()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateObjectRetrievalResponse), nil
+	}
+}
+
+// CreateObjectRetrievalInvoker obs桶内容解冻
+func (c *VodClient) CreateObjectRetrievalInvoker(request *model.CreateObjectRetrievalRequest) *CreateObjectRetrievalInvoker {
+	requestDef := GenReqDefForCreateObjectRetrieval()
+	return &CreateObjectRetrievalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePreheatingAsset CDN预热
 //
 // 媒资发布后，可通过指定媒资ID或URL向CDN预热。用户初次请求时，将由CDN节点提供请求媒资，加快用户下载缓存时间，提高用户体验。单租户每天最多预热1000个。
@@ -252,6 +344,28 @@ func (c *VodClient) CreatePreheatingAsset(request *model.CreatePreheatingAssetRe
 func (c *VodClient) CreatePreheatingAssetInvoker(request *model.CreatePreheatingAssetRequest) *CreatePreheatingAssetInvoker {
 	requestDef := GenReqDefForCreatePreheatingAsset()
 	return &CreatePreheatingAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRealTimeClip 直播内容即时剪辑
+//
+// ## 典型场景 ##
+//   触发从直播时移桶截取一段流，当前仅为斗鱼提供&lt;br/&gt;
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) CreateRealTimeClip(request *model.CreateRealTimeClipRequest) (*model.CreateRealTimeClipResponse, error) {
+	requestDef := GenReqDefForCreateRealTimeClip()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRealTimeClipResponse), nil
+	}
+}
+
+// CreateRealTimeClipInvoker 直播内容即时剪辑
+func (c *VodClient) CreateRealTimeClipInvoker(request *model.CreateRealTimeClipRequest) *CreateRealTimeClipInvoker {
+	requestDef := GenReqDefForCreateRealTimeClip()
+	return &CreateRealTimeClipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateTakeOverTask 创建媒资：OBS托管方式
@@ -340,6 +454,28 @@ func (c *VodClient) CreateTranscodeTemplateInvoker(request *model.CreateTranscod
 	return &CreateTranscodeTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateUploadByUrl URL拉取上传
+//
+// ## 典型场景 ##
+//   UGC场景URL拉取上传，当前仅为斗鱼提供&lt;br/&gt;
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) CreateUploadByUrl(request *model.CreateUploadByUrlRequest) (*model.CreateUploadByUrlResponse, error) {
+	requestDef := GenReqDefForCreateUploadByUrl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateUploadByUrlResponse), nil
+	}
+}
+
+// CreateUploadByUrlInvoker URL拉取上传
+func (c *VodClient) CreateUploadByUrlInvoker(request *model.CreateUploadByUrlRequest) *CreateUploadByUrlInvoker {
+	requestDef := GenReqDefForCreateUploadByUrl()
+	return &CreateUploadByUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateWatermarkTemplate 创建水印模板
 //
 // 创建水印模板。
@@ -401,6 +537,28 @@ func (c *VodClient) DeleteAssets(request *model.DeleteAssetsRequest) (*model.Del
 func (c *VodClient) DeleteAssetsInvoker(request *model.DeleteAssetsRequest) *DeleteAssetsInvoker {
 	requestDef := GenReqDefForDeleteAssets()
 	return &DeleteAssetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDyAsset 删除斗鱼媒资
+//
+// ## 典型场景 ##
+//   斗鱼删除桶文件及媒资表数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) DeleteDyAsset(request *model.DeleteDyAssetRequest) (*model.DeleteDyAssetResponse, error) {
+	requestDef := GenReqDefForDeleteDyAsset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDyAssetResponse), nil
+	}
+}
+
+// DeleteDyAssetInvoker 删除斗鱼媒资
+func (c *VodClient) DeleteDyAssetInvoker(request *model.DeleteDyAssetRequest) *DeleteDyAssetInvoker {
+	requestDef := GenReqDefForDeleteDyAsset()
+	return &DeleteDyAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteTemplateGroup 删除自定义转码模板组
@@ -896,6 +1054,27 @@ func (c *VodClient) ShowCdnStatisticsInvoker(request *model.ShowCdnStatisticsReq
 	return &ShowCdnStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowObjectMetaData 查询媒体元数据
+//
+// 查询媒体元数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) ShowObjectMetaData(request *model.ShowObjectMetaDataRequest) (*model.ShowObjectMetaDataResponse, error) {
+	requestDef := GenReqDefForShowObjectMetaData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowObjectMetaDataResponse), nil
+	}
+}
+
+// ShowObjectMetaDataInvoker 查询媒体元数据
+func (c *VodClient) ShowObjectMetaDataInvoker(request *model.ShowObjectMetaDataRequest) *ShowObjectMetaDataInvoker {
+	requestDef := GenReqDefForShowObjectMetaData()
+	return &ShowObjectMetaDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowPreheatingAsset 查询CDN预热
 //
 // 查询预热结果。
@@ -957,6 +1136,28 @@ func (c *VodClient) ShowStorageModeType(request *model.ShowStorageModeTypeReques
 func (c *VodClient) ShowStorageModeTypeInvoker(request *model.ShowStorageModeTypeRequest) *ShowStorageModeTypeInvoker {
 	requestDef := GenReqDefForShowStorageModeType()
 	return &ShowStorageModeTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTaskDetail 查询任务详情
+//
+// ## 典型场景 ##
+//   任务详情查询
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) ShowTaskDetail(request *model.ShowTaskDetailRequest) (*model.ShowTaskDetailResponse, error) {
+	requestDef := GenReqDefForShowTaskDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTaskDetailResponse), nil
+	}
+}
+
+// ShowTaskDetailInvoker 查询任务详情
+func (c *VodClient) ShowTaskDetailInvoker(request *model.ShowTaskDetailRequest) *ShowTaskDetailInvoker {
+	requestDef := GenReqDefForShowTaskDetail()
+	return &ShowTaskDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowVodRetrieval 查询取回数据信息

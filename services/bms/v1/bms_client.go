@@ -353,6 +353,27 @@ func (c *BmsClient) ListBareMetalServersInvoker(request *model.ListBareMetalServ
 	return &ListBareMetalServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListBareMetalServersDetail 查询裸金属服务器列表
+//
+// 用户根据设置的请求条件筛选裸金属服务器，并获取裸金属服务器的详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BmsClient) ListBareMetalServersDetail(request *model.ListBareMetalServersDetailRequest) (*model.ListBareMetalServersDetailResponse, error) {
+	requestDef := GenReqDefForListBareMetalServersDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBareMetalServersDetailResponse), nil
+	}
+}
+
+// ListBareMetalServersDetailInvoker 查询裸金属服务器列表
+func (c *BmsClient) ListBareMetalServersDetailInvoker(request *model.ListBareMetalServersDetailRequest) *ListBareMetalServersDetailInvoker {
+	requestDef := GenReqDefForListBareMetalServersDetail()
+	return &ListBareMetalServersDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListBaremetalFlavorDetailExtends 查询规格详情和规格扩展信息列表
 //
 // 查询裸金属服务器的规格详情和规格的扩展信息。您可以调用此接口查询“baremetal:extBootType”参数取值，以确认某个规格是否支持快速发放

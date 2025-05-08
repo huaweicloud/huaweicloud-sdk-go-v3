@@ -14,6 +14,10 @@ type PutKv struct {
 
 	// 用户文档。
 	KvDoc *bson.D `bson:"kv_doc,omitempty"`
+
+	KvBlob *KvBlob `bson:"kv_blob,omitempty"`
+
+	ConditionExpression *ConditionExpression `bson:"condition_expression,omitempty"`
 }
 
 func (o PutKv) String() string {

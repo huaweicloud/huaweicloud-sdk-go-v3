@@ -21,7 +21,7 @@ type CreatePostPaidInstanceReq struct {
 	// 消息引擎。取值填写为：reliability。
 	Engine CreatePostPaidInstanceReqEngine `json:"engine"`
 
-	// 消息引擎的版本。取值填写为：[4.8.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[5.x](tag:hcs,fcs)。
+	// 消息引擎的版本。取值填写为：[4.8.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt)[5.x](tag:hcs,fcs)。
 	EngineVersion CreatePostPaidInstanceReqEngineVersion `json:"engine_version"`
 
 	// 存储空间。
@@ -36,10 +36,10 @@ type CreatePostPaidInstanceReq struct {
 	// 指定实例所属的安全组。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
 	SecurityGroupId string `json:"security_group_id"`
 
-	// 创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。 该参数不能为空数组或者数组的值为空， 请注意查看该可用区是否有资源。  创建RocketMQ实例，支持节点部署在1个或[3个及3个以上的可用区。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[2个可用区。](tag:fcs)在为节点指定可用区时，用逗号分隔开。
+	// 创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。 该参数不能为空数组或者数组的值为空， 请注意查看该可用区是否有资源。  创建RocketMQ实例，支持节点部署在1个或[3个及3个以上的可用区。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt)[2个可用区。](tag:fcs)在为节点指定可用区时，用逗号分隔开。
 	AvailableZones []string `json:"available_zones"`
 
-	// RocketMQ实例规格。[x86环境后缀为.x86，arm环境为.arm。](tag:hcs,fcs)   - [c6.4u8g.cluster：单个代理最大Topic数4000，单个代理最大消费组数4000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[c6.4u16g.cluster.x86或c6.4u16g.cluster.arm：单个代理最大分区数100，单个代理最大消费组数200](tag:hcs)   - [c6.8u16g.cluster：单个代理最大Topic数8000，单个代理最大消费组数8000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[c6.8u32g.cluster.x86或c6.8u32g.cluster.arm：单个代理最大Topic数200，单个代理最大消费组数400](tag:hcs,fcs)   - [c6.12u24g.cluster：单个代理最大Topic数12000，单个代理最大消费组数12000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[c6.16u64g.cluster.x86或c6.16u64g.cluster.arm：单个代理最大Topic数300，单个代理最大消费组数600](tag:hcs,fcs)   - [c6.16u32g.cluster：单个代理最大Topic数16000，单个代理最大消费组数16000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[c6.32u128g.cluster.x86或c6.32u128g.cluster.arm：单个代理最大Topic数400，单个代理最大消费组数800](tag:hcs,fcs)
+	// RocketMQ实例规格。[x86环境后缀为.x86，arm环境为.arm。](tag:hcs,fcs)   - [c6.2u8g.cluster.x86或c6.2u8g.cluster.arm：单个代理最大分区数50，单个代理最大消费组数100](tag:fcs)   - [c6.4u8g.cluster：单个代理最大Topic数4000，单个代理最大消费组数4000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt)[c6.4u16g.cluster.x86或c6.4u16g.cluster.arm：单个代理最大分区数100，单个代理最大消费组数200](tag:hcs)   - [c6.8u16g.cluster：单个代理最大Topic数8000，单个代理最大消费组数8000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt)[c6.8u32g.cluster.x86或c6.8u32g.cluster.arm：单个代理最大Topic数200，单个代理最大消费组数400](tag:hcs,fcs)   - [c6.12u24g.cluster：单个代理最大Topic数12000，单个代理最大消费组数12000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt)[c6.16u64g.cluster.x86或c6.16u64g.cluster.arm：单个代理最大Topic数300，单个代理最大消费组数600](tag:hcs,fcs)   - [c6.16u32g.cluster：单个代理最大Topic数16000，单个代理最大消费组数16000](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt)[c6.32u128g.cluster.x86或c6.32u128g.cluster.arm：单个代理最大Topic数400，单个代理最大消费组数800](tag:hcs,fcs)
 	ProductId CreatePostPaidInstanceReqProductId `json:"product_id"`
 
 	// 是否打开SSL加密访问。 - true：打开SSL加密访问。 - false：不打开SSL加密访问。
@@ -124,13 +124,13 @@ type CreatePostPaidInstanceReqEngineVersion struct {
 }
 
 type CreatePostPaidInstanceReqEngineVersionEnum struct {
-	E_4_8_0_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMSBCHK_SBCHK_TM_5_X_TAGHCS CreatePostPaidInstanceReqEngineVersion
+	E_4_8_0_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMSBCHK_SBCHK_TMDT_5_X_TAGHCS CreatePostPaidInstanceReqEngineVersion
 }
 
 func GetCreatePostPaidInstanceReqEngineVersionEnum() CreatePostPaidInstanceReqEngineVersionEnum {
 	return CreatePostPaidInstanceReqEngineVersionEnum{
-		E_4_8_0_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMSBCHK_SBCHK_TM_5_X_TAGHCS: CreatePostPaidInstanceReqEngineVersion{
-			value: "[4.8.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[5.x](tag:hcs)",
+		E_4_8_0_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMSBCHK_SBCHK_TMDT_5_X_TAGHCS: CreatePostPaidInstanceReqEngineVersion{
+			value: "[4.8.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt)[5.x](tag:hcs)",
 		},
 	}
 }
@@ -167,29 +167,37 @@ type CreatePostPaidInstanceReqProductId struct {
 }
 
 type CreatePostPaidInstanceReqProductIdEnum struct {
-	C6_4U8G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMSBCHK_SBCHK_TM_C6_4U16G_CLUSTER_X86_TAGHCSFCS     CreatePostPaidInstanceReqProductId
-	C6_8U16G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMSBCHK_SBCHK_TM_C6_8U32G_CLUSTER_X86_TAGHCSFCS    CreatePostPaidInstanceReqProductId
-	C6_12U24G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMSBCHK_SBCHK_TM_C6_16U64G_CLUSTER_X86_TAGHCSFCS  CreatePostPaidInstanceReqProductId
-	C6_16U32G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMSBCHK_SBCHK_TM_C6_32U128G_CLUSTER_X86_TAGHCSFCS CreatePostPaidInstanceReqProductId
-	C6_4U16G_CLUSTER_ARM_TAGHCSFCS                                                                              CreatePostPaidInstanceReqProductId
-	C6_8U32G_CLUSTER_ARM_TAGHCSFCS                                                                              CreatePostPaidInstanceReqProductId
-	C6_16U64G_CLUSTER_ARM_TAGHCSFCS                                                                             CreatePostPaidInstanceReqProductId
-	C6_32U128G_CLUSTER_ARM_TAGHCSFCS                                                                            CreatePostPaidInstanceReqProductId
+	C6_4U8G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMSBCHK_SBCHK_TMDT_C6_4U16G_CLUSTER_X86_TAGHCSFCS     CreatePostPaidInstanceReqProductId
+	C6_8U16G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMSBCHK_SBCHK_TMDT_C6_8U32G_CLUSTER_X86_TAGHCSFCS    CreatePostPaidInstanceReqProductId
+	C6_12U24G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMSBCHK_SBCHK_TMDT_C6_16U64G_CLUSTER_X86_TAGHCSFCS  CreatePostPaidInstanceReqProductId
+	C6_16U32G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMSBCHK_SBCHK_TMDT_C6_32U128G_CLUSTER_X86_TAGHCSFCS CreatePostPaidInstanceReqProductId
+	C6_2U8G_CLUSTER_X86_TAGFCS                                                                                    CreatePostPaidInstanceReqProductId
+	C6_2U8G_CLUSTER_ARM_TAGFCS                                                                                    CreatePostPaidInstanceReqProductId
+	C6_4U16G_CLUSTER_ARM_TAGHCSFCS                                                                                CreatePostPaidInstanceReqProductId
+	C6_8U32G_CLUSTER_ARM_TAGHCSFCS                                                                                CreatePostPaidInstanceReqProductId
+	C6_16U64G_CLUSTER_ARM_TAGHCSFCS                                                                               CreatePostPaidInstanceReqProductId
+	C6_32U128G_CLUSTER_ARM_TAGHCSFCS                                                                              CreatePostPaidInstanceReqProductId
 }
 
 func GetCreatePostPaidInstanceReqProductIdEnum() CreatePostPaidInstanceReqProductIdEnum {
 	return CreatePostPaidInstanceReqProductIdEnum{
-		C6_4U8G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMSBCHK_SBCHK_TM_C6_4U16G_CLUSTER_X86_TAGHCSFCS: CreatePostPaidInstanceReqProductId{
-			value: "[c6.4u8g.cluster](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[c6.4u16g.cluster.x86](tag:hcs,fcs)",
+		C6_4U8G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMSBCHK_SBCHK_TMDT_C6_4U16G_CLUSTER_X86_TAGHCSFCS: CreatePostPaidInstanceReqProductId{
+			value: "[c6.4u8g.cluster](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt)[c6.4u16g.cluster.x86](tag:hcs,fcs)",
 		},
-		C6_8U16G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMSBCHK_SBCHK_TM_C6_8U32G_CLUSTER_X86_TAGHCSFCS: CreatePostPaidInstanceReqProductId{
-			value: "[c6.8u16g.cluster](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[c6.8u32g.cluster.x86](tag:hcs,fcs)",
+		C6_8U16G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMSBCHK_SBCHK_TMDT_C6_8U32G_CLUSTER_X86_TAGHCSFCS: CreatePostPaidInstanceReqProductId{
+			value: "[c6.8u16g.cluster](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt)[c6.8u32g.cluster.x86](tag:hcs,fcs)",
 		},
-		C6_12U24G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMSBCHK_SBCHK_TM_C6_16U64G_CLUSTER_X86_TAGHCSFCS: CreatePostPaidInstanceReqProductId{
-			value: "[c6.12u24g.cluster](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[c6.16u64g.cluster.x86](tag:hcs,fcs)",
+		C6_12U24G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMSBCHK_SBCHK_TMDT_C6_16U64G_CLUSTER_X86_TAGHCSFCS: CreatePostPaidInstanceReqProductId{
+			value: "[c6.12u24g.cluster](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt)[c6.16u64g.cluster.x86](tag:hcs,fcs)",
 		},
-		C6_16U32G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMSBCHK_SBCHK_TM_C6_32U128G_CLUSTER_X86_TAGHCSFCS: CreatePostPaidInstanceReqProductId{
-			value: "[c6.16u32g.cluster](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[c6.32u128g.cluster.x86](tag:hcs,fcs)",
+		C6_16U32G_CLUSTER_TAGHWSHWS_EUHWS_HKOCBHWS_OCBCTCG42HK_G42TMSBCHK_SBCHK_TMDT_C6_32U128G_CLUSTER_X86_TAGHCSFCS: CreatePostPaidInstanceReqProductId{
+			value: "[c6.16u32g.cluster](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt)[c6.32u128g.cluster.x86](tag:hcs,fcs)",
+		},
+		C6_2U8G_CLUSTER_X86_TAGFCS: CreatePostPaidInstanceReqProductId{
+			value: "[c6.2u8g.cluster.x86](tag:fcs)",
+		},
+		C6_2U8G_CLUSTER_ARM_TAGFCS: CreatePostPaidInstanceReqProductId{
+			value: "[c6.2u8g.cluster.arm](tag:fcs)",
 		},
 		C6_4U16G_CLUSTER_ARM_TAGHCSFCS: CreatePostPaidInstanceReqProductId{
 			value: "[c6.4u16g.cluster.arm](tag:hcs,fcs)",

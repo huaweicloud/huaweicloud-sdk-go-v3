@@ -8,10 +8,10 @@ import (
 
 type BatchDeleteInstanceTopicRespTopics struct {
 
-	// Topic名称。
+	// **参数解释**： Topic名称。 **取值范围**： 不涉及。
 	Id *string `json:"id,omitempty"`
 
-	// 是否删除成功。
+	// **参数解释**： 是否删除成功。 **取值范围**： - true：删除成功。 - false：删除失败。
 	Success *bool `json:"success,omitempty"`
 }
 

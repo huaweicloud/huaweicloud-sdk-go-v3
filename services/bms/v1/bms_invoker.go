@@ -261,6 +261,22 @@ func (i *ListBareMetalServersInvoker) Invoke() (*model.ListBareMetalServersRespo
 	}
 }
 
+type ListBareMetalServersDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBareMetalServersDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBareMetalServersDetailInvoker) Invoke() (*model.ListBareMetalServersDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBareMetalServersDetailResponse), nil
+	}
+}
+
 type ListBaremetalFlavorDetailExtendsInvoker struct {
 	*invoker.BaseInvoker
 }

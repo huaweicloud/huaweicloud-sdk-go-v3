@@ -181,6 +181,134 @@ func (i *CreateReportCustomEventInvoker) Invoke() (*model.CreateReportCustomEven
 	}
 }
 
+type CreateDocumentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDocumentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDocumentInvoker) Invoke() (*model.CreateDocumentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDocumentResponse), nil
+	}
+}
+
+type DeleteDocumentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDocumentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDocumentInvoker) Invoke() (*model.DeleteDocumentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDocumentResponse), nil
+	}
+}
+
+type ExecuteDocumentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteDocumentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteDocumentInvoker) Invoke() (*model.ExecuteDocumentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteDocumentResponse), nil
+	}
+}
+
+type GetDocumentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetDocumentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetDocumentInvoker) Invoke() (*model.GetDocumentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetDocumentResponse), nil
+	}
+}
+
+type GetDocumentAtomicInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetDocumentAtomicInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetDocumentAtomicInfoInvoker) Invoke() (*model.GetDocumentAtomicInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetDocumentAtomicInfoResponse), nil
+	}
+}
+
+type ListDocumentAtomicsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDocumentAtomicsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDocumentAtomicsInvoker) Invoke() (*model.ListDocumentAtomicsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDocumentAtomicsResponse), nil
+	}
+}
+
+type ListDocumentsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDocumentsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDocumentsInvoker) Invoke() (*model.ListDocumentsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDocumentsResponse), nil
+	}
+}
+
+type UpdateDocumentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDocumentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDocumentInvoker) Invoke() (*model.UpdateDocumentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDocumentResponse), nil
+	}
+}
+
 type CreateReportPrometheusEventInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +322,86 @@ func (i *CreateReportPrometheusEventInvoker) Invoke() (*model.CreateReportPromet
 		return nil, err
 	} else {
 		return result.(*model.CreateReportPrometheusEventResponse), nil
+	}
+}
+
+type GetExecutionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetExecutionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetExecutionInvoker) Invoke() (*model.GetExecutionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetExecutionResponse), nil
+	}
+}
+
+type ListExecutionInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListExecutionInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListExecutionInstancesInvoker) Invoke() (*model.ListExecutionInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListExecutionInstancesResponse), nil
+	}
+}
+
+type ListExecutionStepsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListExecutionStepsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListExecutionStepsInvoker) Invoke() (*model.ListExecutionStepsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListExecutionStepsResponse), nil
+	}
+}
+
+type ListExecutionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListExecutionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListExecutionsInvoker) Invoke() (*model.ListExecutionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListExecutionsResponse), nil
+	}
+}
+
+type OperateExecutionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *OperateExecutionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *OperateExecutionInvoker) Invoke() (*model.OperateExecutionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.OperateExecutionResponse), nil
 	}
 }
 
@@ -402,6 +610,38 @@ func (i *SyncResourceInvoker) Invoke() (*model.SyncResourceResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.SyncResourceResponse), nil
+	}
+}
+
+type ListScriptResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListScriptResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListScriptResourceTagsInvoker) Invoke() (*model.ListScriptResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListScriptResourceTagsResponse), nil
+	}
+}
+
+type UpdateResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateResourceTagsInvoker) Invoke() (*model.UpdateResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateResourceTagsResponse), nil
 	}
 }
 
@@ -629,6 +869,38 @@ func (i *OperateScriptJobInvoker) Invoke() (*model.OperateScriptJobResponse, err
 	}
 }
 
+type AcceptScriptInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AcceptScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AcceptScriptInvoker) Invoke() (*model.AcceptScriptResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AcceptScriptResponse), nil
+	}
+}
+
+type CheckScriptRiskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckScriptRiskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckScriptRiskInvoker) Invoke() (*model.CheckScriptRiskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckScriptRiskResponse), nil
+	}
+}
+
 type CreateScriptInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -690,6 +962,22 @@ func (i *GetScriptInvoker) Invoke() (*model.GetScriptResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.GetScriptResponse), nil
+	}
+}
+
+type ListInstancesBatchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstancesBatchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstancesBatchInvoker) Invoke() (*model.ListInstancesBatchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstancesBatchResponse), nil
 	}
 }
 

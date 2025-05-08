@@ -11,7 +11,7 @@ import (
 
 type CreateConnectorReq struct {
 
-	// 部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB
+	// 部署Smart Connect的规格，基准带宽，表示单位时间内传送的最大数据量。请保持和当前实例规格一致。[仅老规格实例需要填写。 取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB](tag:hws,hws_hk,g42,hk_g42,ctc)
 	Specification *CreateConnectorReqSpecification `json:"specification,omitempty"`
 
 	// Smart Connect节点数量。不能小于2个。 如果不填，默认是2个。

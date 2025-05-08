@@ -17,6 +17,9 @@ type VocabularyConfig struct {
 	// 设置的自定义读法
 	Value *string `json:"value,omitempty"`
 
+	// TTSS支持配置的词表类型 * CHINESE_G2P:拼音 * PHONETIC_SYMBOL:音标 * CONTINUUM:连读 * ALIAS:别名 * SAY_AS:数字英文读法
+	Type *string `json:"type,omitempty"`
+
 	// 创建时间。
 	CreateTime *string `json:"create_time,omitempty"`
 

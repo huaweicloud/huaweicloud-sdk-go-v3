@@ -35,6 +35,9 @@ type ShowInstanceResp struct {
 	// 已使用的消息存储空间，单位：GB。
 	UsedStorageSpace *int32 `json:"used_storage_space,omitempty"`
 
+	// 实例是否开启域名访问功能。 - true：开启 - false：未开启
+	DnsEnable *bool `json:"dns_enable,omitempty"`
+
 	// 实例连接IP地址。
 	ConnectAddress *string `json:"connect_address,omitempty"`
 
@@ -98,7 +101,7 @@ type ShowInstanceResp struct {
 	// 是否开启broker间副本加密传输。 - true：开启 - false：未开启
 	BrokerSslEnable *bool `json:"broker_ssl_enable,omitempty"`
 
-	// 开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
+	// Kafka使用的安全协议。 若实例详情中不存在port_protocols返回参数，则kafka_security_protocol同时代表内网访问、公网访问以及跨VPC访问的安全协议。 若实例详情中存在port_protocols返回参数，则kafka_security_protocol仅代表跨VPC访问的安全协议。内网访问公网访问的安全协议请参考port_protocols参数。  - PLAINTEXT: 既未采用SSL证书进行加密传输，也不支持账号密码认证。性能更好，安全性较低，建议在生产环境下公网访问不使用此方式。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
 	KafkaSecurityProtocol *string `json:"kafka_security_protocol,omitempty"`
 
 	// 开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
@@ -152,6 +155,9 @@ type ShowInstanceResp struct {
 	// 实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。
 	PublicConnectAddress *string `json:"public_connect_address,omitempty"`
 
+	// 实例公网连接域名。当实例开启了公网访问，实例才包含该参数。
+	PublicConnectDomainName *string `json:"public_connect_domain_name,omitempty"`
+
 	// 存储资源ID。
 	StorageResourceId *string `json:"storage_resource_id,omitempty"`
 
@@ -172,12 +178,6 @@ type ShowInstanceResp struct {
 
 	// kafka公网访问带宽。
 	PublicBandwidth *int32 `json:"public_bandwidth,omitempty"`
-
-	// 是否已开启kafka manager
-	KafkaManagerEnable *bool `json:"kafka_manager_enable,omitempty"`
-
-	// 登录Kafka Manager的用户名。
-	KafkaManagerUser *string `json:"kafka_manager_user,omitempty"`
 
 	// 是否开启消息收集功能。
 	EnableLogCollection *bool `json:"enable_log_collection,omitempty"`
@@ -236,8 +236,11 @@ type ShowInstanceResp struct {
 	// 磁盘加密key，未开启磁盘加密时为空。
 	DiskEncryptedKey *string `json:"disk_encrypted_key,omitempty"`
 
-	// Kafka实例私有连接地址。
+	// Kafka实例内网连接地址。
 	KafkaPrivateConnectAddress *string `json:"kafka_private_connect_address,omitempty"`
+
+	// Kafka实例内网连接域名。
+	KafkaPrivateConnectDomainName *string `json:"kafka_private_connect_domain_name,omitempty"`
 
 	// 云监控版本。
 	CesVersion *string `json:"ces_version,omitempty"`
@@ -247,6 +250,8 @@ type ShowInstanceResp struct {
 
 	// 节点数。
 	NodeNum *int32 `json:"node_num,omitempty"`
+
+	PortProtocols *PortProtocolsEntity `json:"port_protocols,omitempty"`
 
 	// 是否开启访问控制。
 	EnableAcl *bool `json:"enable_acl,omitempty"`

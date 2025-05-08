@@ -8,31 +8,31 @@ import (
 
 type ConsumerGroup struct {
 
-	// 是否可以消费。
+	// **参数解释**： 是否可以消费。 **取值范围**： - true：可以消费。 - false：不可以消费。
 	Enabled *bool `json:"enabled,omitempty"`
 
-	// 是否广播。
+	// **参数解释**： 是否广播。 **取值范围**： - true：可以广播。 - false：不可以广播。
 	Broadcast *bool `json:"broadcast,omitempty"`
 
-	// 关联的代理列表。
+	// **参数解释**： 关联的代理列表。
 	Brokers *[]string `json:"brokers,omitempty"`
 
-	// 消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
+	// **参数解释**： 消费组名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 消费组描述，长度0~200个字符。
+	// **参数解释**： 消费组描述。 **取值范围**： 不涉及。
 	GroupDesc *string `json:"group_desc,omitempty"`
 
-	// 最大重试次数，取值范围为1~16。
+	// **参数解释**： 最大重试次数。 **取值范围**： 1~16。
 	RetryMaxTime *int32 `json:"retry_max_time,omitempty"`
 
-	// 创建时间戳。
+	// **参数解释**： 创建时间戳。 **取值范围**： 不涉及。
 	CreatedAt *int64 `json:"createdAt,omitempty"`
 
-	// 权限集。
+	// **参数解释**： 权限集。
 	Permissions *[]string `json:"permissions,omitempty"`
 
-	// 是否按顺序消费。
+	// **参数解释**： 是否按顺序消费。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。
 	ConsumeOrderly *bool `json:"consume_orderly,omitempty"`
 }
 

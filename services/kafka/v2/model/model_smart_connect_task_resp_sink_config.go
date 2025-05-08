@@ -8,18 +8,6 @@ import (
 
 type SmartConnectTaskRespSinkConfig struct {
 
-	// Redis实例地址。（仅目标端类型为Redis时会显示）
-	RedisAddress *string `json:"redis_address,omitempty"`
-
-	// Redis实例类型。（仅目标端类型为Redis时会显示）
-	RedisType *string `json:"redis_type,omitempty"`
-
-	// DCS实例ID。（仅目标端类型为Redis时会显示）
-	DcsInstanceId *string `json:"dcs_instance_id,omitempty"`
-
-	// 目标数据库，默认为-1。（仅目标端类型为Redis时会显示）
-	TargetDb *int32 `json:"target_db,omitempty"`
-
 	// 转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时会显示）
 	ConsumerStrategy *string `json:"consumer_strategy,omitempty"`
 

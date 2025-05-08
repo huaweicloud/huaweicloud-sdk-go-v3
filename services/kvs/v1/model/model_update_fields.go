@@ -23,6 +23,11 @@ type UpdateFields struct {
 
 	// 插入元素到数组中 > 非数组返回失败。
 	Insert *bson.D `bson:"insert,omitempty"`
+
+	// 从数组中删除某个元素 > 非数组返回失败。
+	Delete *bson.D `bson:"delete,omitempty"`
+
+	UpdateBlob *UpdateBlob `bson:"update_blob,omitempty"`
 }
 
 func (o UpdateFields) String() string {

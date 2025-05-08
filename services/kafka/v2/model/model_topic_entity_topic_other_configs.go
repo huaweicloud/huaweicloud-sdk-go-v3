@@ -8,22 +8,22 @@ import (
 
 type TopicEntityTopicOtherConfigs struct {
 
-	// 配置名称
+	// **参数解释**： 配置名称。 **取值范围**： 不涉及
 	Name *string `json:"name,omitempty"`
 
-	// 配置有效值
+	// **参数解释**： 配置有效值。 **取值范围**： 不涉及
 	ValidValues *string `json:"valid_values,omitempty"`
 
-	// 配置默认值
+	// **参数解释**： 配置默认值。 **取值范围**： 不涉及
 	DefaultValue *string `json:"default_value,omitempty"`
 
-	// 配置类型：dynamic/static
+	// **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
 	ConfigType *string `json:"config_type,omitempty"`
 
-	// 配置值
+	// **参数解释**： 配置值。 **取值范围**： 不涉及
 	Value *string `json:"value,omitempty"`
 
-	// 配置值类型
+	// **参数解释**： 配置值类型。 **取值范围**： 不涉及
 	ValueType *string `json:"value_type,omitempty"`
 }
 

@@ -13,6 +13,9 @@ type ObsInfo struct {
 
 	// OBS对象路径
 	Object string `json:"object"`
+
+	// 桶所在区域
+	Region *string `json:"region,omitempty"`
 }
 
 func (o ObsInfo) String() string {

@@ -149,6 +149,22 @@ func (i *CreateAssetReviewTaskInvoker) Invoke() (*model.CreateAssetReviewTaskRes
 	}
 }
 
+type CreateEditTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateEditTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateEditTaskInvoker) Invoke() (*model.CreateEditTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateEditTaskResponse), nil
+	}
+}
+
 type CreateExtractAudioTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -165,6 +181,54 @@ func (i *CreateExtractAudioTaskInvoker) Invoke() (*model.CreateExtractAudioTaskR
 	}
 }
 
+type CreateObjectProcessTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateObjectProcessTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateObjectProcessTaskInvoker) Invoke() (*model.CreateObjectProcessTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateObjectProcessTaskResponse), nil
+	}
+}
+
+type CreateObjectReplicationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateObjectReplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateObjectReplicationInvoker) Invoke() (*model.CreateObjectReplicationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateObjectReplicationResponse), nil
+	}
+}
+
+type CreateObjectRetrievalInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateObjectRetrievalInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateObjectRetrievalInvoker) Invoke() (*model.CreateObjectRetrievalResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateObjectRetrievalResponse), nil
+	}
+}
+
 type CreatePreheatingAssetInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -178,6 +242,22 @@ func (i *CreatePreheatingAssetInvoker) Invoke() (*model.CreatePreheatingAssetRes
 		return nil, err
 	} else {
 		return result.(*model.CreatePreheatingAssetResponse), nil
+	}
+}
+
+type CreateRealTimeClipInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRealTimeClipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateRealTimeClipInvoker) Invoke() (*model.CreateRealTimeClipResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRealTimeClipResponse), nil
 	}
 }
 
@@ -245,6 +325,22 @@ func (i *CreateTranscodeTemplateInvoker) Invoke() (*model.CreateTranscodeTemplat
 	}
 }
 
+type CreateUploadByUrlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateUploadByUrlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateUploadByUrlInvoker) Invoke() (*model.CreateUploadByUrlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateUploadByUrlResponse), nil
+	}
+}
+
 type CreateWatermarkTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -290,6 +386,22 @@ func (i *DeleteAssetsInvoker) Invoke() (*model.DeleteAssetsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteAssetsResponse), nil
+	}
+}
+
+type DeleteDyAssetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDyAssetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDyAssetInvoker) Invoke() (*model.DeleteDyAssetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDyAssetResponse), nil
 	}
 }
 
@@ -661,6 +773,22 @@ func (i *ShowCdnStatisticsInvoker) Invoke() (*model.ShowCdnStatisticsResponse, e
 	}
 }
 
+type ShowObjectMetaDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowObjectMetaDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowObjectMetaDataInvoker) Invoke() (*model.ShowObjectMetaDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowObjectMetaDataResponse), nil
+	}
+}
+
 type ShowPreheatingAssetInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -706,6 +834,22 @@ func (i *ShowStorageModeTypeInvoker) Invoke() (*model.ShowStorageModeTypeRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowStorageModeTypeResponse), nil
+	}
+}
+
+type ShowTaskDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTaskDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTaskDetailInvoker) Invoke() (*model.ShowTaskDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTaskDetailResponse), nil
 	}
 }
 

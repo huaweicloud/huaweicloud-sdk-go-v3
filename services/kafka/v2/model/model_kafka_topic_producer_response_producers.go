@@ -8,13 +8,13 @@ import (
 
 type KafkaTopicProducerResponseProducers struct {
 
-	// 生产者地址
+	// **参数解释**： 生产者地址。 **取值范围**： 不涉及
 	ProducerAddress *string `json:"producer_address,omitempty"`
 
-	// broker地址
+	// **参数解释**： broker地址。 **取值范围**： 不涉及
 	BrokerAddress *string `json:"broker_address,omitempty"`
 
-	// 加入时间
+	// **参数解释**： 加入时间，以Unix时间戳显示。 **取值范围**： 不涉及
 	JoinTime *int64 `json:"join_time,omitempty"`
 }
 

@@ -24,6 +24,9 @@ type UpdateFunctionCodeRequestBody struct {
 
 	// 依赖版本id列表
 	DependVersionList *[]string `json:"depend_version_list,omitempty"`
+
+	// 用于用户代码加密的kms主秘钥ID。
+	CodeEncryptKmsKeyId *string `json:"code_encrypt_kms_key_id,omitempty"`
 }
 
 func (o UpdateFunctionCodeRequestBody) String() string {

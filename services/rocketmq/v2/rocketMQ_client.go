@@ -271,6 +271,27 @@ func (c *RocketMQClient) DeleteUserInvoker(request *model.DeleteUserRequest) *De
 	return &DeleteUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// EnableDns 开启RocketMQ实例域名访问能力
+//
+// 开启RocketMQ实例域名访问能力。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RocketMQClient) EnableDns(request *model.EnableDnsRequest) (*model.EnableDnsResponse, error) {
+	requestDef := GenReqDefForEnableDns()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.EnableDnsResponse), nil
+	}
+}
+
+// EnableDnsInvoker 开启RocketMQ实例域名访问能力
+func (c *RocketMQClient) EnableDnsInvoker(request *model.EnableDnsRequest) *EnableDnsInvoker {
+	requestDef := GenReqDefForEnableDns()
+	return &EnableDnsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExportDlqMessage 导出死信消息
 //
 // 导出死信消息。
@@ -353,6 +374,27 @@ func (c *RocketMQClient) ListConsumeGroupAccessPolicy(request *model.ListConsume
 func (c *RocketMQClient) ListConsumeGroupAccessPolicyInvoker(request *model.ListConsumeGroupAccessPolicyRequest) *ListConsumeGroupAccessPolicyInvoker {
 	requestDef := GenReqDefForListConsumeGroupAccessPolicy()
 	return &ListConsumeGroupAccessPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEngineProducts 查询产品规格列表
+//
+// 查询相应引擎的产品规格列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RocketMQClient) ListEngineProducts(request *model.ListEngineProductsRequest) (*model.ListEngineProductsResponse, error) {
+	requestDef := GenReqDefForListEngineProducts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEngineProductsResponse), nil
+	}
+}
+
+// ListEngineProductsInvoker 查询产品规格列表
+func (c *RocketMQClient) ListEngineProductsInvoker(request *model.ListEngineProductsRequest) *ListEngineProductsInvoker {
+	requestDef := GenReqDefForListEngineProducts()
+	return &ListEngineProductsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListInstanceConsumerGroups 查询消费组列表
@@ -547,6 +589,27 @@ func (c *RocketMQClient) ResizeInstanceInvoker(request *model.ResizeInstanceRequ
 	return &ResizeInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RestartInstance 重启指定实例
+//
+// 重启指定实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RocketMQClient) RestartInstance(request *model.RestartInstanceRequest) (*model.RestartInstanceResponse, error) {
+	requestDef := GenReqDefForRestartInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestartInstanceResponse), nil
+	}
+}
+
+// RestartInstanceInvoker 重启指定实例
+func (c *RocketMQClient) RestartInstanceInvoker(request *model.RestartInstanceRequest) *RestartInstanceInvoker {
+	requestDef := GenReqDefForRestartInstance()
+	return &RestartInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SendDlqMessage 重发死信消息
 //
 // 重发死信消息。
@@ -671,6 +734,27 @@ func (c *RocketMQClient) ShowInstance(request *model.ShowInstanceRequest) (*mode
 func (c *RocketMQClient) ShowInstanceInvoker(request *model.ShowInstanceRequest) *ShowInstanceInvoker {
 	requestDef := GenReqDefForShowInstance()
 	return &ShowInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowQuotas 查看租户配额
+//
+// 查询租户最大可以创建的实例个数和已创建的实例个数，以及每个实例最大可以创建标签的个数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RocketMQClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuotasResponse, error) {
+	requestDef := GenReqDefForShowQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowQuotasResponse), nil
+	}
+}
+
+// ShowQuotasInvoker 查看租户配额
+func (c *RocketMQClient) ShowQuotasInvoker(request *model.ShowQuotasRequest) *ShowQuotasInvoker {
+	requestDef := GenReqDefForShowQuotas()
+	return &ShowQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowRocketMqConfigs 查询RocketMQ配置

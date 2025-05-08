@@ -8,27 +8,6 @@ import (
 
 type SmartConnectTaskRespSourceConfig struct {
 
-	// Redis实例地址。（仅源端类型为Redis时会显示）
-	RedisAddress *string `json:"redis_address,omitempty"`
-
-	// Redis实例类型。（仅源端类型为Redis时会显示）
-	RedisType *string `json:"redis_type,omitempty"`
-
-	// DCS实例ID。（仅源端类型为Redis时会显示）
-	DcsInstanceId *string `json:"dcs_instance_id,omitempty"`
-
-	// 同步类型，“RDB_ONLY”为全量同步，“CUSTOM_OFFSET”为全量同步+增量同步。（仅源端类型为Redis时会显示）
-	SyncMode *string `json:"sync_mode,omitempty"`
-
-	// 全量同步重试间隔时间，单位：毫秒。（仅源端类型为Redis时会显示）
-	FullSyncWaitMs *int32 `json:"full_sync_wait_ms,omitempty"`
-
-	// 全量同步最大重试次数。（仅源端类型为Redis时会显示）
-	FullSyncMaxRetry *int32 `json:"full_sync_max_retry,omitempty"`
-
-	// 限速，单位为KB/s。-1表示不限速（仅源端类型为Redis时会显示）
-	Ratelimit *int32 `json:"ratelimit,omitempty"`
-
 	// 当前Kafka实例别名。（仅源端类型为Kafka时会显示）
 	CurrentClusterName *string `json:"current_cluster_name,omitempty"`
 

@@ -13,6 +13,9 @@ type KvOperIds struct {
 
 	// 请求内的操作编码，未成功的操作返回该标识。 - 数组元素：请求内的操作编码，未成功的操作返回该标识。
 	DeleteKvIds *[]int32 `bson:"delete_kv_ids,omitempty"`
+
+	// 请求内的操作编码，未成功的操作返回该标识。 - 数组元素：请求内的操作编码，未成功的操作返回该标识。
+	UpdateKvIds *[]int32 `bson:"update_kv_ids,omitempty"`
 }
 
 func (o KvOperIds) String() string {

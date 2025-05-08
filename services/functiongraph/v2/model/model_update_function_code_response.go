@@ -52,8 +52,11 @@ type UpdateFunctionCodeResponse struct {
 	StrategyConfig *StrategyConfig `json:"strategy_config,omitempty"`
 
 	// 函数依赖代码包列表。
-	Dependencies   *[]Dependency `json:"dependencies,omitempty"`
-	HttpStatusCode int           `json:"-"`
+	Dependencies *[]Dependency `json:"dependencies,omitempty"`
+
+	// 用于用户代码加密的kms主秘钥ID。
+	CodeEncryptKmsKeyId *string `json:"code_encrypt_kms_key_id,omitempty"`
+	HttpStatusCode      int     `json:"-"`
 }
 
 func (o UpdateFunctionCodeResponse) String() string {

@@ -6,11 +6,13 @@ import (
 	"strings"
 )
 
-// OperItem put_kv或delete_kv或get_kv操作。
+// OperItem put_kv或delete_kv或update_kv操作。
 type OperItem struct {
 	PutKv *PutKv `bson:"put_kv,omitempty"`
 
 	DeleteKv *DeleteKv `bson:"delete_kv,omitempty"`
+
+	UpdateKv *UpdateKv `bson:"update_kv,omitempty"`
 }
 
 func (o OperItem) String() string {

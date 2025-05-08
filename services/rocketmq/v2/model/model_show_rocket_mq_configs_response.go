@@ -9,6 +9,15 @@ import (
 // ShowRocketMqConfigsResponse Response Object
 type ShowRocketMqConfigsResponse struct {
 
+	// 总数。
+	Total float32 `json:"total,omitempty"`
+
+	// 下个分页的offset。
+	NextOffset *int32 `json:"next_offset,omitempty"`
+
+	// 上个分页的offset。
+	PreviousOffset *int32 `json:"previous_offset,omitempty"`
+
 	// RocketMQ配置。
 	RocketmqConfigs *[]RocketMqConfigResp `json:"rocketmq_configs,omitempty"`
 	HttpStatusCode  int                   `json:"-"`

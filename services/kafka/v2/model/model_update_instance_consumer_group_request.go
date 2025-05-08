@@ -9,16 +9,16 @@ import (
 // UpdateInstanceConsumerGroupRequest Request Object
 type UpdateInstanceConsumerGroupRequest struct {
 
-	// 消息引擎的类型。
+	// 引擎。
 	Engine string `json:"engine"`
 
 	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
-	// 消费者组。
+	// 消费组ID。
 	Group string `json:"group"`
 
-	Body *CreateGroupReq `json:"body,omitempty"`
+	Body *GroupCreateReq `json:"body,omitempty"`
 }
 
 func (o UpdateInstanceConsumerGroupRequest) String() string {

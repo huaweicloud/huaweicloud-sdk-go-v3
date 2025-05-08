@@ -9,7 +9,7 @@ import (
 // CreateReassignmentTaskResponse Response Object
 type CreateReassignmentTaskResponse struct {
 
-	// 任务ID（当执行重平衡任务时仅返回job_id）。
+	// 任务ID（当执行分区平衡任务时仅返回job_id）。
 	JobId *string `json:"job_id,omitempty"`
 
 	// 预估时间，单位为秒（当执行预估时间任务时仅返回reassignment_time）。

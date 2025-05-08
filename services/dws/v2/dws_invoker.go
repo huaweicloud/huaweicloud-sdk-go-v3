@@ -421,6 +421,22 @@ func (i *CreateLogicalClusterInvoker) Invoke() (*model.CreateLogicalClusterRespo
 	}
 }
 
+type CreateLogicalClusterPlanInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateLogicalClusterPlanInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateLogicalClusterPlanInvoker) Invoke() (*model.CreateLogicalClusterPlanResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateLogicalClusterPlanResponse), nil
+	}
+}
+
 type CreateSnapshotInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -613,6 +629,22 @@ func (i *DeleteLogicalClusterInvoker) Invoke() (*model.DeleteLogicalClusterRespo
 	}
 }
 
+type DeleteLogicalClusterPlanInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteLogicalClusterPlanInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteLogicalClusterPlanInvoker) Invoke() (*model.DeleteLogicalClusterPlanResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteLogicalClusterPlanResponse), nil
+	}
+}
+
 type DeleteQueueUserListInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -725,6 +757,22 @@ func (i *DeleteWorkloadQueueInvoker) Invoke() (*model.DeleteWorkloadQueueRespons
 	}
 }
 
+type DisableLogicalClusterPlanInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisableLogicalClusterPlanInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DisableLogicalClusterPlanInvoker) Invoke() (*model.DisableLogicalClusterPlanResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisableLogicalClusterPlanResponse), nil
+	}
+}
+
 type DisableLtsLogsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -786,6 +834,22 @@ func (i *EnableLogicalClusterInvoker) Invoke() (*model.EnableLogicalClusterRespo
 		return nil, err
 	} else {
 		return result.(*model.EnableLogicalClusterResponse), nil
+	}
+}
+
+type EnableLogicalClusterPlanInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *EnableLogicalClusterPlanInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *EnableLogicalClusterPlanInvoker) Invoke() (*model.EnableLogicalClusterPlanResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.EnableLogicalClusterPlanResponse), nil
 	}
 }
 
@@ -1346,6 +1410,22 @@ func (i *ListJobDetailsInvoker) Invoke() (*model.ListJobDetailsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListJobDetailsResponse), nil
+	}
+}
+
+type ListLogicalClusterPlansInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLogicalClusterPlansInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListLogicalClusterPlansInvoker) Invoke() (*model.ListLogicalClusterPlansResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLogicalClusterPlansResponse), nil
 	}
 }
 
@@ -2546,6 +2626,22 @@ func (i *UpdateLogicalClusterInvoker) Invoke() (*model.UpdateLogicalClusterRespo
 		return nil, err
 	} else {
 		return result.(*model.UpdateLogicalClusterResponse), nil
+	}
+}
+
+type UpdateLogicalClusterPlanInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateLogicalClusterPlanInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateLogicalClusterPlanInvoker) Invoke() (*model.UpdateLogicalClusterPlanResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateLogicalClusterPlanResponse), nil
 	}
 }
 

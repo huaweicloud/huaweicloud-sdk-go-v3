@@ -197,6 +197,22 @@ func (i *DeleteUserInvoker) Invoke() (*model.DeleteUserResponse, error) {
 	}
 }
 
+type EnableDnsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *EnableDnsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *EnableDnsInvoker) Invoke() (*model.EnableDnsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.EnableDnsResponse), nil
+	}
+}
+
 type ExportDlqMessageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -258,6 +274,22 @@ func (i *ListConsumeGroupAccessPolicyInvoker) Invoke() (*model.ListConsumeGroupA
 		return nil, err
 	} else {
 		return result.(*model.ListConsumeGroupAccessPolicyResponse), nil
+	}
+}
+
+type ListEngineProductsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEngineProductsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListEngineProductsInvoker) Invoke() (*model.ListEngineProductsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEngineProductsResponse), nil
 	}
 }
 
@@ -405,6 +437,22 @@ func (i *ResizeInstanceInvoker) Invoke() (*model.ResizeInstanceResponse, error) 
 	}
 }
 
+type RestartInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestartInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RestartInstanceInvoker) Invoke() (*model.RestartInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestartInstanceResponse), nil
+	}
+}
+
 type SendDlqMessageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -498,6 +546,22 @@ func (i *ShowInstanceInvoker) Invoke() (*model.ShowInstanceResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceResponse), nil
+	}
+}
+
+type ShowQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowQuotasResponse), nil
 	}
 }
 

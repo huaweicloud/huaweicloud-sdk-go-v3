@@ -578,6 +578,27 @@ func (c *DwsClient) CreateLogicalClusterInvoker(request *model.CreateLogicalClus
 	return &CreateLogicalClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateLogicalClusterPlan 添加逻辑集群定时增删计划
+//
+// 此接口用于添加逻辑集群定时增删计划。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) CreateLogicalClusterPlan(request *model.CreateLogicalClusterPlanRequest) (*model.CreateLogicalClusterPlanResponse, error) {
+	requestDef := GenReqDefForCreateLogicalClusterPlan()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateLogicalClusterPlanResponse), nil
+	}
+}
+
+// CreateLogicalClusterPlanInvoker 添加逻辑集群定时增删计划
+func (c *DwsClient) CreateLogicalClusterPlanInvoker(request *model.CreateLogicalClusterPlanRequest) *CreateLogicalClusterPlanInvoker {
+	requestDef := GenReqDefForCreateLogicalClusterPlan()
+	return &CreateLogicalClusterPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSnapshot 创建快照
 //
 // 该接口用于为指定集群创建快照。
@@ -833,6 +854,27 @@ func (c *DwsClient) DeleteLogicalClusterInvoker(request *model.DeleteLogicalClus
 	return &DeleteLogicalClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteLogicalClusterPlan 删除逻辑集群定时增删计划
+//
+// 此接口用于删除逻辑集群定时增删计划。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) DeleteLogicalClusterPlan(request *model.DeleteLogicalClusterPlanRequest) (*model.DeleteLogicalClusterPlanResponse, error) {
+	requestDef := GenReqDefForDeleteLogicalClusterPlan()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteLogicalClusterPlanResponse), nil
+	}
+}
+
+// DeleteLogicalClusterPlanInvoker 删除逻辑集群定时增删计划
+func (c *DwsClient) DeleteLogicalClusterPlanInvoker(request *model.DeleteLogicalClusterPlanRequest) *DeleteLogicalClusterPlanInvoker {
+	requestDef := GenReqDefForDeleteLogicalClusterPlan()
+	return &DeleteLogicalClusterPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteQueueUserList 删除工作负载队列的绑定用户
 //
 // 删除工作负载队列的绑定用户。
@@ -980,6 +1022,27 @@ func (c *DwsClient) DeleteWorkloadQueueInvoker(request *model.DeleteWorkloadQueu
 	return &DeleteWorkloadQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DisableLogicalClusterPlan 停用逻辑集群定时增删计划
+//
+// 停用逻辑集群定时增删计划
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) DisableLogicalClusterPlan(request *model.DisableLogicalClusterPlanRequest) (*model.DisableLogicalClusterPlanResponse, error) {
+	requestDef := GenReqDefForDisableLogicalClusterPlan()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisableLogicalClusterPlanResponse), nil
+	}
+}
+
+// DisableLogicalClusterPlanInvoker 停用逻辑集群定时增删计划
+func (c *DwsClient) DisableLogicalClusterPlanInvoker(request *model.DisableLogicalClusterPlanRequest) *DisableLogicalClusterPlanInvoker {
+	requestDef := GenReqDefForDisableLogicalClusterPlan()
+	return &DisableLogicalClusterPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DisableLtsLogs 关闭云服务日志
 //
 // 该接口用于关闭集群LTS云日志服务
@@ -1062,6 +1125,27 @@ func (c *DwsClient) EnableLogicalCluster(request *model.EnableLogicalClusterRequ
 func (c *DwsClient) EnableLogicalClusterInvoker(request *model.EnableLogicalClusterRequest) *EnableLogicalClusterInvoker {
 	requestDef := GenReqDefForEnableLogicalCluster()
 	return &EnableLogicalClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// EnableLogicalClusterPlan 启用逻辑集群定时增删计划
+//
+// 启用逻辑集群定时增删计划
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) EnableLogicalClusterPlan(request *model.EnableLogicalClusterPlanRequest) (*model.EnableLogicalClusterPlanResponse, error) {
+	requestDef := GenReqDefForEnableLogicalClusterPlan()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.EnableLogicalClusterPlanResponse), nil
+	}
+}
+
+// EnableLogicalClusterPlanInvoker 启用逻辑集群定时增删计划
+func (c *DwsClient) EnableLogicalClusterPlanInvoker(request *model.EnableLogicalClusterPlanRequest) *EnableLogicalClusterPlanInvoker {
+	requestDef := GenReqDefForEnableLogicalClusterPlan()
+	return &EnableLogicalClusterPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // EnableLtsLogs 开启云服务日志
@@ -1805,6 +1889,27 @@ func (c *DwsClient) ListJobDetails(request *model.ListJobDetailsRequest) (*model
 func (c *DwsClient) ListJobDetailsInvoker(request *model.ListJobDetailsRequest) *ListJobDetailsInvoker {
 	requestDef := GenReqDefForListJobDetails()
 	return &ListJobDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLogicalClusterPlans 查询逻辑集群定时增删计划
+//
+// 此接口用于查询逻辑集群定时增删计划。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListLogicalClusterPlans(request *model.ListLogicalClusterPlansRequest) (*model.ListLogicalClusterPlansResponse, error) {
+	requestDef := GenReqDefForListLogicalClusterPlans()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLogicalClusterPlansResponse), nil
+	}
+}
+
+// ListLogicalClusterPlansInvoker 查询逻辑集群定时增删计划
+func (c *DwsClient) ListLogicalClusterPlansInvoker(request *model.ListLogicalClusterPlansRequest) *ListLogicalClusterPlansInvoker {
+	requestDef := GenReqDefForListLogicalClusterPlans()
+	return &ListLogicalClusterPlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListLogicalClusterRings 查询逻辑集群可用ring环节点信息
@@ -3407,6 +3512,27 @@ func (c *DwsClient) UpdateLogicalCluster(request *model.UpdateLogicalClusterRequ
 func (c *DwsClient) UpdateLogicalClusterInvoker(request *model.UpdateLogicalClusterRequest) *UpdateLogicalClusterInvoker {
 	requestDef := GenReqDefForUpdateLogicalCluster()
 	return &UpdateLogicalClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLogicalClusterPlan 编辑逻辑集群增删计划
+//
+// 此接口用于编辑修改编辑逻辑集群增删计划。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) UpdateLogicalClusterPlan(request *model.UpdateLogicalClusterPlanRequest) (*model.UpdateLogicalClusterPlanResponse, error) {
+	requestDef := GenReqDefForUpdateLogicalClusterPlan()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateLogicalClusterPlanResponse), nil
+	}
+}
+
+// UpdateLogicalClusterPlanInvoker 编辑逻辑集群增删计划
+func (c *DwsClient) UpdateLogicalClusterPlanInvoker(request *model.UpdateLogicalClusterPlanRequest) *UpdateLogicalClusterPlanInvoker {
+	requestDef := GenReqDefForUpdateLogicalClusterPlan()
+	return &UpdateLogicalClusterPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateMaintenanceWindow 修改运维时间窗

@@ -25,7 +25,7 @@ type GetScriptJobBatchRequest struct {
 	Limit int32 `json:"limit"`
 
 	// 分页参数：上一页最后一个记录id
-	Marker int64 `json:"marker"`
+	Marker *int64 `json:"marker,omitempty"`
 
 	// 国际化标记，zh-cn表示中文，en-us或不传表示英文
 	XLanguage *string `json:"X-Language,omitempty"`

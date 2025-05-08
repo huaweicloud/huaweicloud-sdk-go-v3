@@ -9,13 +9,13 @@ import (
 type ResendReq struct {
 
 	// Group ID。
-	Group *string `json:"group,omitempty"`
+	Group string `json:"group"`
 
 	// 消息所属Topic。
 	Topic *string `json:"topic,omitempty"`
 
 	// 客户端ID。
-	ClientId *string `json:"client_id,omitempty"`
+	ClientId string `json:"client_id"`
 
 	// 消息列表。
 	MsgIdList *[]string `json:"msg_id_list,omitempty"`

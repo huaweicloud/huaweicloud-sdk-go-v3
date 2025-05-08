@@ -12,22 +12,22 @@ import (
 // ShowOneTopicResponse Response Object
 type ShowOneTopicResponse struct {
 
-	// Topic名称。
+	// **参数解释**： Topic名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 总读队列个数。
+	// **参数解释**： 总读队列个数。 **取值范围**： 不涉及。
 	TotalReadQueueNum float32 `json:"total_read_queue_num,omitempty"`
 
-	// 总写队列个数。
+	// **参数解释**： 总写队列个数。 **取值范围**： 不涉及。
 	TotalWriteQueueNum float32 `json:"total_write_queue_num,omitempty"`
 
-	// 权限。
+	// **参数解释**： 权限。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。
 	Permission *ShowOneTopicResponsePermission `json:"permission,omitempty"`
 
 	// 关联的代理。
 	Brokers *[]TopicBrokers `json:"brokers,omitempty"`
 
-	// 消息类型（RocketMQ实例5.x版本才包含此参数）。
+	// **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。
 	MessageType    *ShowOneTopicResponseMessageType `json:"message_type,omitempty"`
 	HttpStatusCode int                              `json:"-"`
 }

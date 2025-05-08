@@ -25,7 +25,13 @@ type ListTtscVocabularyConfigsRequest struct {
 	XAppUserId *string `json:"X-App-UserId,omitempty"`
 
 	// 自定义读法类型 CHINESE_G2P：拼音
-	Type string `json:"type"`
+	Type *string `json:"type,omitempty"`
+
+	// 声音模型名称
+	TtsServiceName *string `json:"tts_service_name,omitempty"`
+
+	// 是否应用词表配置，从周边服务传递
+	IsVocabularyConfigEnable *string `json:"is_vocabulary_config_enable,omitempty"`
 
 	// 每页显示的条目数量。
 	Limit *int32 `json:"limit,omitempty"`

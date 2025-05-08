@@ -9,22 +9,22 @@ import (
 // ListInstanceTopicsResponse Response Object
 type ListInstanceTopicsResponse struct {
 
-	// topic总数。
+	// **参数解释**： Topic总数。 **取值范围**： 不涉及。
 	Total *int32 `json:"total,omitempty"`
 
-	// 分页查询的大小。
+	// **参数解释**： 分页查询的大小。 **取值范围**： 不涉及。
 	Size *int32 `json:"size,omitempty"`
 
-	// 剩余分区数。
+	// **参数解释**： 剩余分区数。 **取值范围**： 不涉及。
 	RemainPartitions *int32 `json:"remain_partitions,omitempty"`
 
-	// 分区总数。
+	// **参数解释**： 分区总数。 **取值范围**： 不涉及。
 	MaxPartitions *int32 `json:"max_partitions,omitempty"`
 
-	// 单个topic最大占用分区数。
+	// **参数解释**： 单个Topic最大占用分区数。 **取值范围**： 不涉及。
 	TopicMaxPartitions *int32 `json:"topic_max_partitions,omitempty"`
 
-	// topic列表。
+	// **参数解释**： topic列表。
 	Topics         *[]TopicEntity `json:"topics,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

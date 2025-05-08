@@ -8,18 +8,6 @@ import (
 
 type SmartConnectTaskReqSinkConfig struct {
 
-	// Redis实例地址。（仅目标端类型为Redis时需要填写）
-	RedisAddress *string `json:"redis_address,omitempty"`
-
-	// Redis实例类型。（仅目标端类型为Redis时需要填写）
-	RedisType *string `json:"redis_type,omitempty"`
-
-	// DCS实例ID。（仅目标端类型为Redis时需要填写）
-	DcsInstanceId *string `json:"dcs_instance_id,omitempty"`
-
-	// Redis密码。（仅目标端类型为Redis时需要填写）
-	RedisPassword *string `json:"redis_password,omitempty"`
-
 	// 转储启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅目标端类型为OBS时需要填写）
 	ConsumerStrategy *string `json:"consumer_strategy,omitempty"`
 

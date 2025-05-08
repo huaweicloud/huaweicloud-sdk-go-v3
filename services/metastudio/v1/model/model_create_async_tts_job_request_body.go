@@ -70,6 +70,9 @@ type CreateAsyncTtsJobRequestBody struct {
 
 	// 是否应用当前租户的读法配置
 	IsVocabularyConfigEnable *bool `json:"is_vocabulary_config_enable,omitempty"`
+
+	// 是否使用包周期路数资源进行计费
+	IsConcurrentResource *bool `json:"is_concurrent_resource,omitempty"`
 }
 
 func (o CreateAsyncTtsJobRequestBody) String() string {

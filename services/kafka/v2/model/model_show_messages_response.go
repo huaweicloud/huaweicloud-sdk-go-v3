@@ -9,16 +9,16 @@ import (
 // ShowMessagesResponse Response Object
 type ShowMessagesResponse struct {
 
-	// 消息列表。
+	// **参数解释**： 消息列表。
 	Messages *[]ShowMessagesRespMessages `json:"messages,omitempty"`
 
-	// 消息总数。
+	// **参数解释**： 消息总数。 **取值范围**： 不涉及。
 	MessagesCount *int32 `json:"messages_count,omitempty"`
 
-	// 总页数。
+	// **参数解释**： 总页数。 **取值范围**： 不涉及。
 	OffsetsCount *int32 `json:"offsets_count,omitempty"`
 
-	// 当前页数。
+	// **参数解释**： 当前页数。 **取值范围**： 不涉及。
 	Offset         *int32 `json:"offset,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

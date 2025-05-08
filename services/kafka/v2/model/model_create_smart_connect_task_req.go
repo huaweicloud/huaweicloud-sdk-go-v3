@@ -48,16 +48,12 @@ type CreateSmartConnectTaskReqSourceType struct {
 }
 
 type CreateSmartConnectTaskReqSourceTypeEnum struct {
-	REDIS_REPLICATOR_SOURCE CreateSmartConnectTaskReqSourceType
 	KAFKA_REPLICATOR_SOURCE CreateSmartConnectTaskReqSourceType
 	NONE                    CreateSmartConnectTaskReqSourceType
 }
 
 func GetCreateSmartConnectTaskReqSourceTypeEnum() CreateSmartConnectTaskReqSourceTypeEnum {
 	return CreateSmartConnectTaskReqSourceTypeEnum{
-		REDIS_REPLICATOR_SOURCE: CreateSmartConnectTaskReqSourceType{
-			value: "REDIS_REPLICATOR_SOURCE",
-		},
 		KAFKA_REPLICATOR_SOURCE: CreateSmartConnectTaskReqSourceType{
 			value: "KAFKA_REPLICATOR_SOURCE",
 		},
@@ -99,16 +95,12 @@ type CreateSmartConnectTaskReqSinkType struct {
 }
 
 type CreateSmartConnectTaskReqSinkTypeEnum struct {
-	REDIS_REPLICATOR_SINK CreateSmartConnectTaskReqSinkType
-	OBS_SINK              CreateSmartConnectTaskReqSinkType
-	NONE                  CreateSmartConnectTaskReqSinkType
+	OBS_SINK CreateSmartConnectTaskReqSinkType
+	NONE     CreateSmartConnectTaskReqSinkType
 }
 
 func GetCreateSmartConnectTaskReqSinkTypeEnum() CreateSmartConnectTaskReqSinkTypeEnum {
 	return CreateSmartConnectTaskReqSinkTypeEnum{
-		REDIS_REPLICATOR_SINK: CreateSmartConnectTaskReqSinkType{
-			value: "REDIS_REPLICATOR_SINK",
-		},
 		OBS_SINK: CreateSmartConnectTaskReqSinkType{
 			value: "OBS_SINK",
 		},

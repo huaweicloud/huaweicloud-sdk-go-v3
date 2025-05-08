@@ -9,7 +9,7 @@ import (
 // ShowPartitionMessageResponse Response Object
 type ShowPartitionMessageResponse struct {
 
-	// 消息列表。
+	// **参数解释**： 消息列表。
 	Message        *[]ShowPartitionMessageEntity `json:"message,omitempty"`
 	HttpStatusCode int                           `json:"-"`
 }

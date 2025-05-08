@@ -9,7 +9,7 @@ import (
 // BatchDeleteInstanceTopicResponse Response Object
 type BatchDeleteInstanceTopicResponse struct {
 
-	// Topic列表。
+	// **参数解释**： Topic列表。
 	Topics         *[]BatchDeleteInstanceTopicRespTopics `json:"topics,omitempty"`
 	HttpStatusCode int                                   `json:"-"`
 }

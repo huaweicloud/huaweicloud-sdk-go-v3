@@ -8,10 +8,10 @@ import (
 
 type Brokers struct {
 
-	// Topic关联代理名称。
+	// **参数解释**： Topic关联代理名称。 **取值范围**： 不涉及。
 	BrokerName *string `json:"broker_name,omitempty"`
 
-	// 关联代理的队列详情。
+	// **参数解释**： 关联代理的队列详情。
 	Queues *[]Queue `json:"queues,omitempty"`
 }
 

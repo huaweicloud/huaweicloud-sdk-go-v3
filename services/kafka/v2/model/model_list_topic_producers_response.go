@@ -9,10 +9,10 @@ import (
 // ListTopicProducersResponse Response Object
 type ListTopicProducersResponse struct {
 
-	// 总条数
+	// **参数解释**： 总条数。 **取值范围**： 0~10000。
 	Total *int32 `json:"total,omitempty"`
 
-	// 生产者列表
+	// **参数解释**： 生产者列表。
 	Producers      *[]KafkaTopicProducerResponseProducers `json:"producers,omitempty"`
 	HttpStatusCode int                                    `json:"-"`
 }

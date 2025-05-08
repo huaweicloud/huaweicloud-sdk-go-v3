@@ -250,6 +250,174 @@ func (c *CocClient) CreateReportCustomEventInvoker(request *model.CreateReportCu
 	return &CreateReportCustomEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDocument 创建自定义作业
+//
+// 创建自定义作业
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CreateDocument(request *model.CreateDocumentRequest) (*model.CreateDocumentResponse, error) {
+	requestDef := GenReqDefForCreateDocument()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDocumentResponse), nil
+	}
+}
+
+// CreateDocumentInvoker 创建自定义作业
+func (c *CocClient) CreateDocumentInvoker(request *model.CreateDocumentRequest) *CreateDocumentInvoker {
+	requestDef := GenReqDefForCreateDocument()
+	return &CreateDocumentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDocument 删除自定义作业
+//
+// 删除自定义作业
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) DeleteDocument(request *model.DeleteDocumentRequest) (*model.DeleteDocumentResponse, error) {
+	requestDef := GenReqDefForDeleteDocument()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDocumentResponse), nil
+	}
+}
+
+// DeleteDocumentInvoker 删除自定义作业
+func (c *CocClient) DeleteDocumentInvoker(request *model.DeleteDocumentRequest) *DeleteDocumentInvoker {
+	requestDef := GenReqDefForDeleteDocument()
+	return &DeleteDocumentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteDocument 执行自定义作业
+//
+// 执行自定义作业
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ExecuteDocument(request *model.ExecuteDocumentRequest) (*model.ExecuteDocumentResponse, error) {
+	requestDef := GenReqDefForExecuteDocument()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteDocumentResponse), nil
+	}
+}
+
+// ExecuteDocumentInvoker 执行自定义作业
+func (c *CocClient) ExecuteDocumentInvoker(request *model.ExecuteDocumentRequest) *ExecuteDocumentInvoker {
+	requestDef := GenReqDefForExecuteDocument()
+	return &ExecuteDocumentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetDocument 查询自定义作业详情
+//
+// 查询自定义作业详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) GetDocument(request *model.GetDocumentRequest) (*model.GetDocumentResponse, error) {
+	requestDef := GenReqDefForGetDocument()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetDocumentResponse), nil
+	}
+}
+
+// GetDocumentInvoker 查询自定义作业详情
+func (c *CocClient) GetDocumentInvoker(request *model.GetDocumentRequest) *GetDocumentInvoker {
+	requestDef := GenReqDefForGetDocument()
+	return &GetDocumentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetDocumentAtomicInfo 获取原子能力详细
+//
+// 获取原子能力详细
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) GetDocumentAtomicInfo(request *model.GetDocumentAtomicInfoRequest) (*model.GetDocumentAtomicInfoResponse, error) {
+	requestDef := GenReqDefForGetDocumentAtomicInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetDocumentAtomicInfoResponse), nil
+	}
+}
+
+// GetDocumentAtomicInfoInvoker 获取原子能力详细
+func (c *CocClient) GetDocumentAtomicInfoInvoker(request *model.GetDocumentAtomicInfoRequest) *GetDocumentAtomicInfoInvoker {
+	requestDef := GenReqDefForGetDocumentAtomicInfo()
+	return &GetDocumentAtomicInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDocumentAtomics 获取原子能力列表
+//
+// 获取原子能力列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListDocumentAtomics(request *model.ListDocumentAtomicsRequest) (*model.ListDocumentAtomicsResponse, error) {
+	requestDef := GenReqDefForListDocumentAtomics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDocumentAtomicsResponse), nil
+	}
+}
+
+// ListDocumentAtomicsInvoker 获取原子能力列表
+func (c *CocClient) ListDocumentAtomicsInvoker(request *model.ListDocumentAtomicsRequest) *ListDocumentAtomicsInvoker {
+	requestDef := GenReqDefForListDocumentAtomics()
+	return &ListDocumentAtomicsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDocuments 查询自定义作业列表
+//
+// 查询自定义作业列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListDocuments(request *model.ListDocumentsRequest) (*model.ListDocumentsResponse, error) {
+	requestDef := GenReqDefForListDocuments()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDocumentsResponse), nil
+	}
+}
+
+// ListDocumentsInvoker 查询自定义作业列表
+func (c *CocClient) ListDocumentsInvoker(request *model.ListDocumentsRequest) *ListDocumentsInvoker {
+	requestDef := GenReqDefForListDocuments()
+	return &ListDocumentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDocument 修改自定义作业
+//
+// 修改自定义作业
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) UpdateDocument(request *model.UpdateDocumentRequest) (*model.UpdateDocumentResponse, error) {
+	requestDef := GenReqDefForUpdateDocument()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDocumentResponse), nil
+	}
+}
+
+// UpdateDocumentInvoker 修改自定义作业
+func (c *CocClient) UpdateDocumentInvoker(request *model.UpdateDocumentRequest) *UpdateDocumentInvoker {
+	requestDef := GenReqDefForUpdateDocument()
+	return &UpdateDocumentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateReportPrometheusEvent Prometheus事件接入
 //
 // Prometheus事件接入
@@ -269,6 +437,111 @@ func (c *CocClient) CreateReportPrometheusEvent(request *model.CreateReportProme
 func (c *CocClient) CreateReportPrometheusEventInvoker(request *model.CreateReportPrometheusEventRequest) *CreateReportPrometheusEventInvoker {
 	requestDef := GenReqDefForCreateReportPrometheusEvent()
 	return &CreateReportPrometheusEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetExecution 查询作业工单详情
+//
+// 查询作业工单详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) GetExecution(request *model.GetExecutionRequest) (*model.GetExecutionResponse, error) {
+	requestDef := GenReqDefForGetExecution()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetExecutionResponse), nil
+	}
+}
+
+// GetExecutionInvoker 查询作业工单详情
+func (c *CocClient) GetExecutionInvoker(request *model.GetExecutionRequest) *GetExecutionInvoker {
+	requestDef := GenReqDefForGetExecution()
+	return &GetExecutionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListExecutionInstances 查询工单步骤批次实例
+//
+// 查询工单步骤批次实例，如脚本分批操作里的ECS实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListExecutionInstances(request *model.ListExecutionInstancesRequest) (*model.ListExecutionInstancesResponse, error) {
+	requestDef := GenReqDefForListExecutionInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListExecutionInstancesResponse), nil
+	}
+}
+
+// ListExecutionInstancesInvoker 查询工单步骤批次实例
+func (c *CocClient) ListExecutionInstancesInvoker(request *model.ListExecutionInstancesRequest) *ListExecutionInstancesInvoker {
+	requestDef := GenReqDefForListExecutionInstances()
+	return &ListExecutionInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListExecutionSteps 查询工单步骤详情
+//
+// 查询工单步骤详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListExecutionSteps(request *model.ListExecutionStepsRequest) (*model.ListExecutionStepsResponse, error) {
+	requestDef := GenReqDefForListExecutionSteps()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListExecutionStepsResponse), nil
+	}
+}
+
+// ListExecutionStepsInvoker 查询工单步骤详情
+func (c *CocClient) ListExecutionStepsInvoker(request *model.ListExecutionStepsRequest) *ListExecutionStepsInvoker {
+	requestDef := GenReqDefForListExecutionSteps()
+	return &ListExecutionStepsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListExecutions 查询作业工单列表
+//
+// 查询作业工单列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListExecutions(request *model.ListExecutionsRequest) (*model.ListExecutionsResponse, error) {
+	requestDef := GenReqDefForListExecutions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListExecutionsResponse), nil
+	}
+}
+
+// ListExecutionsInvoker 查询作业工单列表
+func (c *CocClient) ListExecutionsInvoker(request *model.ListExecutionsRequest) *ListExecutionsInvoker {
+	requestDef := GenReqDefForListExecutions()
+	return &ListExecutionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// OperateExecution 操作工单
+//
+// 操作工单
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) OperateExecution(request *model.OperateExecutionRequest) (*model.OperateExecutionResponse, error) {
+	requestDef := GenReqDefForOperateExecution()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.OperateExecutionResponse), nil
+	}
+}
+
+// OperateExecutionInvoker 操作工单
+func (c *CocClient) OperateExecutionInvoker(request *model.OperateExecutionRequest) *OperateExecutionInvoker {
+	requestDef := GenReqDefForOperateExecution()
+	return &OperateExecutionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateCocIncident CreateExternalIncident 创建事件单
@@ -542,6 +815,48 @@ func (c *CocClient) SyncResource(request *model.SyncResourceRequest) (*model.Syn
 func (c *CocClient) SyncResourceInvoker(request *model.SyncResourceRequest) *SyncResourceInvoker {
 	requestDef := GenReqDefForSyncResource()
 	return &SyncResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListScriptResourceTags 查询资源标签列表
+//
+// 查询资源标签列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListScriptResourceTags(request *model.ListScriptResourceTagsRequest) (*model.ListScriptResourceTagsResponse, error) {
+	requestDef := GenReqDefForListScriptResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListScriptResourceTagsResponse), nil
+	}
+}
+
+// ListScriptResourceTagsInvoker 查询资源标签列表
+func (c *CocClient) ListScriptResourceTagsInvoker(request *model.ListScriptResourceTagsRequest) *ListScriptResourceTagsInvoker {
+	requestDef := GenReqDefForListScriptResourceTags()
+	return &ListScriptResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateResourceTags 更新资源标签
+//
+// 更新资源标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) UpdateResourceTags(request *model.UpdateResourceTagsRequest) (*model.UpdateResourceTagsResponse, error) {
+	requestDef := GenReqDefForUpdateResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateResourceTagsResponse), nil
+	}
+}
+
+// UpdateResourceTagsInvoker 更新资源标签
+func (c *CocClient) UpdateResourceTagsInvoker(request *model.UpdateResourceTagsRequest) *UpdateResourceTagsInvoker {
+	requestDef := GenReqDefForUpdateResourceTags()
+	return &UpdateResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateScheduledTask 新建定时运维
@@ -845,6 +1160,50 @@ func (c *CocClient) OperateScriptJobInvoker(request *model.OperateScriptJobReque
 	return &OperateScriptJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AcceptScript 审批待审批的脚本
+//
+// 功能：审批脚本。
+// 约束条件：只有创建脚本填写了审批人，脚本为待审批状态才能审批。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) AcceptScript(request *model.AcceptScriptRequest) (*model.AcceptScriptResponse, error) {
+	requestDef := GenReqDefForAcceptScript()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AcceptScriptResponse), nil
+	}
+}
+
+// AcceptScriptInvoker 审批待审批的脚本
+func (c *CocClient) AcceptScriptInvoker(request *model.AcceptScriptRequest) *AcceptScriptInvoker {
+	requestDef := GenReqDefForAcceptScript()
+	return &AcceptScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckScriptRisk 评估脚本风险等级
+//
+// 根据作业内容，对作业评估风险，返回相关分析的结果和信息，结果仅供参考。
+// 高危命令指影响系统或服务的正常运行，或造成系统特殊文件被恶意删除或修改命令。 高危命令检测通过校验规则正则匹配脚本内容中是否包含高危命令。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CheckScriptRisk(request *model.CheckScriptRiskRequest) (*model.CheckScriptRiskResponse, error) {
+	requestDef := GenReqDefForCheckScriptRisk()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckScriptRiskResponse), nil
+	}
+}
+
+// CheckScriptRiskInvoker 评估脚本风险等级
+func (c *CocClient) CheckScriptRiskInvoker(request *model.CheckScriptRiskRequest) *CheckScriptRiskInvoker {
+	requestDef := GenReqDefForCheckScriptRisk()
+	return &CheckScriptRiskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateScript 创建脚本
 //
 // 创建作业脚本：自定义脚本
@@ -947,6 +1306,36 @@ func (c *CocClient) GetScript(request *model.GetScriptRequest) (*model.GetScript
 func (c *CocClient) GetScriptInvoker(request *model.GetScriptRequest) *GetScriptInvoker {
 	requestDef := GenReqDefForGetScript()
 	return &GetScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstancesBatch 获取自动分批结果
+//
+// 根据分批策略获取分批结果，只支持自动分批：
+// 规则如下：
+// 1.单个批次的所有实例必须属于同一个区域；
+//      * 2.单个批次的所有实例必须属于同一个可用区；
+//      * 3.单个批次的所有实例必须属于同一个应用；
+//      * 4.单个批次内同一分组下的实例不超过50%（除分组下仅以一个实例的情况外）；
+//      * 5.前三批每批节点数量不超过10。
+//      * 6.每批次实例数量不超过10。
+//
+//    总机器数量为200。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListInstancesBatch(request *model.ListInstancesBatchRequest) (*model.ListInstancesBatchResponse, error) {
+	requestDef := GenReqDefForListInstancesBatch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstancesBatchResponse), nil
+	}
+}
+
+// ListInstancesBatchInvoker 获取自动分批结果
+func (c *CocClient) ListInstancesBatchInvoker(request *model.ListInstancesBatchRequest) *ListInstancesBatchInvoker {
+	requestDef := GenReqDefForListInstancesBatch()
+	return &ListInstancesBatchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListScripts 查询脚本列表

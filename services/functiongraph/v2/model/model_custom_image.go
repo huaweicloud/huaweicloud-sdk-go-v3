@@ -29,6 +29,9 @@ type CustomImage struct {
 
 	// 镜像容器的用户组id
 	Gid *string `json:"gid,omitempty"`
+
+	// 是否是公共镜像
+	IsPublic *bool `json:"is_public,omitempty"`
 }
 
 func (o CustomImage) String() string {

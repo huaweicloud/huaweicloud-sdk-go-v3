@@ -8,10 +8,10 @@ import (
 
 type ConsumerList struct {
 
-	// Topic列表（当查询Topic消费“列表”时才显示此参数）。
+	// **参数解释**： Topic列表（当查询Topic消费“列表”时才显示此参数）。
 	Topics *[]string `json:"topics,omitempty"`
 
-	// Topic总数（当查询Topic消费“列表”时才显示此参数）。
+	// **参数解释**： Topic总数（当查询Topic消费“列表”时才显示此参数）。 **取值范围**： 不涉及。
 	Total *int32 `json:"total,omitempty"`
 }
 

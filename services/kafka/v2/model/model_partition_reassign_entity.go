@@ -11,7 +11,7 @@ type PartitionReassignEntity struct {
 	// topic名称
 	Topic string `json:"topic"`
 
-	// 分区重平衡到的broker列表，自动生成分配方案时需指定该参数。
+	// 分区平衡到的broker列表，自动生成分配方案时需指定该参数。
 	Brokers *[]int32 `json:"brokers,omitempty"`
 
 	// 副本因子，自动生成分配方案时可指定。

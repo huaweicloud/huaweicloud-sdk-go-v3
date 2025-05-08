@@ -26,9 +26,6 @@ type ConstructReq struct {
 
 	// 容灾任务名称
 	DrTaskName *string `json:"dr_task_name,omitempty"`
-
-	// 灾备实例为轻量化部署.
-	LiteDrMode *string `json:"lite_dr_mode,omitempty"`
 }
 
 func (o ConstructReq) String() string {

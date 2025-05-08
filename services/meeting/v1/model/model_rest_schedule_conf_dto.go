@@ -69,6 +69,9 @@ type RestScheduleConfDto struct {
 
 	// 会议是否支持同声传译。默认值false。 * true:支持 * false:不支持
 	SupportSimultaneousInterpretation *bool `json:"supportSimultaneousInterpretation,omitempty"`
+
+	// 会议资源类型：  * 0: 并发 * 1: 云会议室 * 2: 网络研讨会 * 3: 共享vmr * 4: 共享网络研讨会
+	ConfResType *int32 `json:"confResType,omitempty"`
 }
 
 func (o RestScheduleConfDto) String() string {

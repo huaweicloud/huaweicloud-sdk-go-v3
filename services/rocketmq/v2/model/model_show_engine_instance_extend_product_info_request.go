@@ -20,6 +20,12 @@ type ShowEngineInstanceExtendProductInfoRequest struct {
 
 	// 产品的类型。 advanced：专享版。
 	Type *ShowEngineInstanceExtendProductInfoRequestType `json:"type,omitempty"`
+
+	// 查询数量。
+	Limit *int32 `json:"limit,omitempty"`
+
+	// 偏移量，表示从此偏移量开始查询，offset大于等于0。
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ShowEngineInstanceExtendProductInfoRequest) String() string {
