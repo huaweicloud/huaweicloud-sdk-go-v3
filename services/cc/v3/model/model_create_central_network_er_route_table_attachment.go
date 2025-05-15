@@ -12,7 +12,7 @@ import (
 // CreateCentralNetworkErRouteTableAttachment 创建中心网络ER附件的请求体。
 type CreateCentralNetworkErRouteTableAttachment struct {
 
-	// 实例名字。
+	// 实例名称。
 	Name string `json:"name"`
 
 	// 实例描述。不支持 <>。

@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// CreateP2PSiteNetworkRequestBody 创建P2P类型的分支网络的请求体。
 type CreateP2PSiteNetworkRequestBody struct {
 	P2pSiteNetwork *CreateP2PSiteNetwork `json:"p2p_site_network"`
 }

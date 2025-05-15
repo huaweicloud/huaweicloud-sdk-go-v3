@@ -9,7 +9,7 @@ import (
 // UpdateCloudConnection 更新云连接实例的详细信息。
 type UpdateCloudConnection struct {
 
-	// 实例名字。
+	// 实例名称。
 	Name *string `json:"name,omitempty"`
 
 	// 实例描述。不支持 <>。

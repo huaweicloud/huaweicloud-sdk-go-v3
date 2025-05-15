@@ -17,6 +17,9 @@ type BackupPolicyItem struct {
 
 	// 备份周期配置。自动备份将在每星期指定的天进行。
 	Period *string `json:"period,omitempty"`
+
+	// 是否开启增量备份。true：表示增量备份策略为开启状态；false：表示增量备份策略为关闭状态。
+	EnableIncrementalBackup *bool `json:"enable_incremental_backup,omitempty"`
 }
 
 func (o BackupPolicyItem) String() string {

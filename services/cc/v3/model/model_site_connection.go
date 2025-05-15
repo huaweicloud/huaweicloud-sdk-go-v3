@@ -13,7 +13,7 @@ type SiteConnection struct {
 	// 实例ID。
 	Id string `json:"id"`
 
-	// 实例ID。
+	// 分支网络ID。
 	SiteNetworkId string `json:"site_network_id"`
 
 	State *SiteConnectionStateEnum `json:"state"`
@@ -24,7 +24,7 @@ type SiteConnection struct {
 	// 实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
 	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
 
-	// 分支网络连接的两个端点定义，可能为两个点，也可能为两个单向边，长度固定为2的数组。
+	// 分支网络连接的两个端点定义，长度固定为2的数组。
 	EdgePair []DirectedEdge `json:"edge_pair"`
 
 	CrossRegionType *CrossRegionTypeEnum `json:"cross_region_type"`
@@ -35,7 +35,7 @@ type SiteConnection struct {
 	// 带宽值，单位Mbps。
 	BandwidthSize *int64 `json:"bandwidth_size,omitempty"`
 
-	// 是否冻结
+	// 是否冻结。
 	IsFrozen bool `json:"is_frozen"`
 
 	FrozenEffect *FrozenEffectEnum `json:"frozen_effect,omitempty"`

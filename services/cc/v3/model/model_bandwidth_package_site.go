@@ -7,25 +7,25 @@ import (
 	"strings"
 )
 
-// BandwidthPackageSite 带宽包站点
+// BandwidthPackageSite 带宽包站点。
 type BandwidthPackageSite struct {
 
 	// 实例ID。
 	Id *string `json:"id,omitempty"`
 
-	// 站点编码
+	// 站点编码。
 	SiteCode *string `json:"site_code,omitempty"`
 
 	// RegionID。
 	RegionId *string `json:"region_id,omitempty"`
 
-	// 站点类型。默认Region级别
+	// 站点类型。默认Region级别。
 	SiteType *string `json:"site_type,omitempty"`
 
-	// 实例名字。
+	// 实例名称。
 	NameCn *string `json:"name_cn,omitempty"`
 
-	// 实例名字。
+	// 实例名称。
 	NameEn *string `json:"name_en,omitempty"`
 
 	// 描述。不支持 <>。

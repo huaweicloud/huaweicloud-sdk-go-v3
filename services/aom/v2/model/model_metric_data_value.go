@@ -12,7 +12,7 @@ type MetricDataValue struct {
 	// 重点指标。
 	DataPoints *[]MetricDataPoints `json:"dataPoints,omitempty"`
 
-	Metric *MetricQueryMeritcParam `json:"metric,omitempty"`
+	Metric *MetricQueryMetricParam `json:"metric,omitempty"`
 }
 
 func (o MetricDataValue) String() string {

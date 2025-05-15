@@ -13,7 +13,7 @@ type CentralNetworkGdgwAttachment struct {
 	// 实例ID。
 	Id string `json:"id"`
 
-	// 实例名字。
+	// 实例名称。
 	Name string `json:"name"`
 
 	// 实例描述。不支持 <>。
@@ -44,7 +44,7 @@ type CentralNetworkGdgwAttachment struct {
 	// 带宽值，单位Mbps。
 	BandwidthSize *int64 `json:"bandwidth_size,omitempty"`
 
-	// 是否冻结
+	// 是否冻结。
 	IsFrozen bool `json:"is_frozen"`
 
 	// 企业路由器的ID。
@@ -74,7 +74,7 @@ type CentralNetworkGdgwAttachment struct {
 	// 中心网络企业路由器的站点编码。
 	EnterpriseRouterSiteCode string `json:"enterprise_router_site_code"`
 
-	// 站点编码定义
+	// 站点编码。
 	GlobalDcGatewaySiteCode string `json:"global_dc_gateway_site_code"`
 }
 

@@ -63,6 +63,27 @@ func (c *OcrClient) RecognizeAutoClassificationInvoker(request *model.RecognizeA
 	return &RecognizeAutoClassificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RecognizeAutoIdDocClassification 智能证件分类
+//
+// 支持9类证件的分类和告警检测，以JSON格式返回结果。支持的证件类型有秘鲁身份证、柬文身份证、香港身份证、澳门身份证、缅文身份证、缅文驾驶证、泰文身份证、护照和中华人民共和国居民身份证。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OcrClient) RecognizeAutoIdDocClassification(request *model.RecognizeAutoIdDocClassificationRequest) (*model.RecognizeAutoIdDocClassificationResponse, error) {
+	requestDef := GenReqDefForRecognizeAutoIdDocClassification()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RecognizeAutoIdDocClassificationResponse), nil
+	}
+}
+
+// RecognizeAutoIdDocClassificationInvoker 智能证件分类
+func (c *OcrClient) RecognizeAutoIdDocClassificationInvoker(request *model.RecognizeAutoIdDocClassificationRequest) *RecognizeAutoIdDocClassificationInvoker {
+	requestDef := GenReqDefForRecognizeAutoIdDocClassification()
+	return &RecognizeAutoIdDocClassificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RecognizeBankReceipt 银行回单识别
 //
 // 支持对银行回单版式进行文字识别及键值对提取，实现高效的自动化结构化返回。

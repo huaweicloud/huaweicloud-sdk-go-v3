@@ -853,6 +853,22 @@ func (i *UpdateCloudConnectionInvoker) Invoke() (*model.UpdateCloudConnectionRes
 	}
 }
 
+type ListCloudConnectionCapabilitiesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCloudConnectionCapabilitiesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCloudConnectionCapabilitiesInvoker) Invoke() (*model.ListCloudConnectionCapabilitiesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCloudConnectionCapabilitiesResponse), nil
+	}
+}
+
 type ListCloudConnectionQuotasInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1557,6 +1573,38 @@ func (i *ListSiteNetworkQuotasInvoker) Invoke() (*model.ListSiteNetworkQuotasRes
 	}
 }
 
+type ListAreaBandwidthPackageSpecificationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAreaBandwidthPackageSpecificationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAreaBandwidthPackageSpecificationsInvoker) Invoke() (*model.ListAreaBandwidthPackageSpecificationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAreaBandwidthPackageSpecificationsResponse), nil
+	}
+}
+
+type ListAreasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAreasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAreasInvoker) Invoke() (*model.ListAreasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAreasResponse), nil
+	}
+}
+
 type ListBandwidthPackageLevelsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1602,5 +1650,37 @@ func (i *ListBandwidthPackageSitesInvoker) Invoke() (*model.ListBandwidthPackage
 		return nil, err
 	} else {
 		return result.(*model.ListBandwidthPackageSitesResponse), nil
+	}
+}
+
+type ListRegionBandwidthPackageSpecificationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRegionBandwidthPackageSpecificationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRegionBandwidthPackageSpecificationsInvoker) Invoke() (*model.ListRegionBandwidthPackageSpecificationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRegionBandwidthPackageSpecificationsResponse), nil
+	}
+}
+
+type ListRegionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRegionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRegionsInvoker) Invoke() (*model.ListRegionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRegionsResponse), nil
 	}
 }

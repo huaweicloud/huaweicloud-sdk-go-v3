@@ -7,22 +7,22 @@ import (
 	"strings"
 )
 
-// BandwidthPackageLevel 带宽包等级
+// BandwidthPackageLevel 带宽包等级。
 type BandwidthPackageLevel struct {
 
 	// 实例ID。
 	Id *string `json:"id,omitempty"`
 
-	// 带宽包等级
+	// 带宽包等级。
 	Level *string `json:"level,omitempty"`
 
-	// 实例名字。
+	// 实例名称。
 	NameCn *string `json:"name_cn,omitempty"`
 
-	// 实例名字。
+	// 实例名称。
 	NameEn *string `json:"name_en,omitempty"`
 
-	// 展示优先级，数值越低，优先级越高。 铂金系列优先级范围：1-50 金牌系列优先级范围：51-100 银牌系列优先级范围：101-150 其他：大于151
+	// 展示优先级，数值越低，优先级越高。 铂金系列优先级范围：1-50。 金牌系列优先级范围：51-100。 银牌系列优先级范围：101-150。 其他：大于151。
 	DisplayPriority *int32 `json:"display_priority,omitempty"`
 
 	// 描述。不支持 <>。

@@ -15,7 +15,7 @@ type UpdateSiteNetworkBandwidthRequest struct {
 	// 实例ID。
 	SiteConnectionId string `json:"site_connection_id"`
 
-	Body *AssociateSiteConnectionBandwidthRequestBody `json:"body,omitempty"`
+	Body *UpdateSiteConnectionBandwidthRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateSiteNetworkBandwidthRequest) String() string {

@@ -12,7 +12,7 @@ import (
 // CreateGlobalConnectionBandwidth 创建全域互联带宽实例的详细信息。
 type CreateGlobalConnectionBandwidth struct {
 
-	// 实例名字。
+	// 实例名称。
 	Name string `json:"name"`
 
 	// 实例描述。不支持 <>。

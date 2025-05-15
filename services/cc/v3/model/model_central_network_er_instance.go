@@ -23,7 +23,7 @@ type CentralNetworkErInstance struct {
 	// 网络实例BGP协议的AS号。
 	Asn int64 `json:"asn"`
 
-	// 站点编码定义
+	// 站点编码。
 	SiteCode string `json:"site_code"`
 }
 

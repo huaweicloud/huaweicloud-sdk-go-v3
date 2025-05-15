@@ -9,7 +9,7 @@ import (
 // CreateCentralNetwork 中心网络。
 type CreateCentralNetwork struct {
 
-	// 实例名字。
+	// 实例名称。
 	Name string `json:"name"`
 
 	// 实例描述。不支持 <>。

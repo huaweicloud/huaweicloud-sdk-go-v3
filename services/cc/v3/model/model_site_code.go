@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// SiteCode 站点编码
+// SiteCode 站点编码。
 type SiteCode struct {
 
-	// 站点编码定义
+	// 站点编码。
 	SiteCode string `json:"site_code"`
 }
 

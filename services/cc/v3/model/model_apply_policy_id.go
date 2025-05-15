@@ -8,7 +8,7 @@ import (
 
 type ApplyPolicyId struct {
 
-	// 实例ID。
+	// 应用策略ID。
 	ApplyPolicyId string `json:"apply_policy_id"`
 }
 

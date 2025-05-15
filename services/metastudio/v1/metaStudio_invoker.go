@@ -2741,6 +2741,22 @@ func (i *ShowTtsAuditionFileInvoker) Invoke() (*model.ShowTtsAuditionFileRespons
 	}
 }
 
+type ShowTtsPhoneticSymbolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTtsPhoneticSymbolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTtsPhoneticSymbolInvoker) Invoke() (*model.ShowTtsPhoneticSymbolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTtsPhoneticSymbolResponse), nil
+	}
+}
+
 type CreateVideoMotionCaptureJobInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -9,7 +9,7 @@ import (
 // CentralNetworkPlaneDocument 中心网络平面文档。
 type CentralNetworkPlaneDocument struct {
 
-	// 实例名字。
+	// 实例名称。
 	Name string `json:"name"`
 
 	// 关联的中心网络ER实例列表。

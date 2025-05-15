@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// FrozenEffectEnum 冻结效果。 - RELEASABLE(冻结可释放) - UNRELEASABLE(冻结不可释放)
+// FrozenEffectEnum 冻结效果。 - RELEASABLE（冻结可释放） - UNRELEASABLE（冻结不可释放）
 type FrozenEffectEnum struct {
 	value string
 }

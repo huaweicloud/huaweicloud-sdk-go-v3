@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// NameDef 实例名字。
+// NameDef 实例名称。
 type NameDef struct {
 }
 

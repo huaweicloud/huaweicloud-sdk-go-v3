@@ -16,11 +16,11 @@ type ListAuthorizableTicketsExternalResponse struct {
 	ErrorCode string `json:"error_code"`
 
 	// 请求响应描述
-	ErrorMsg *string `json:"error_msg,omitempty"`
+	ErrorMsg string `json:"error_msg"`
 
 	// 可授权单信息
-	Data           *[]AuthorizeTicketInfo `json:"data,omitempty"`
-	HttpStatusCode int                    `json:"-"`
+	Data           []AuthorizeTicketInfo `json:"data"`
+	HttpStatusCode int                   `json:"-"`
 }
 
 func (o ListAuthorizableTicketsExternalResponse) String() string {

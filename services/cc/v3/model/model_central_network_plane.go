@@ -12,7 +12,7 @@ type CentralNetworkPlane struct {
 	// 实例ID。
 	Id string `json:"id"`
 
-	// 实例名字。
+	// 实例名称。
 	Name string `json:"name"`
 
 	// 关联的中心网络ER实例列表。

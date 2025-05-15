@@ -14,7 +14,7 @@ type BandwidthPackage struct {
 	// 实例ID。
 	Id string `json:"id"`
 
-	// 实例名字。
+	// 实例名称。
 	Name string `json:"name"`
 
 	// 实例描述。不支持 <>。

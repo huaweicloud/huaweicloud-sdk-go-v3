@@ -1397,22 +1397,6 @@ func (i *ListTasksInvoker) Invoke() (*model.ListTasksResponse, error) {
 	}
 }
 
-type ListTopIoTrafficsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListTopIoTrafficsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListTopIoTrafficsInvoker) Invoke() (*model.ListTopIoTrafficsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListTopIoTrafficsResponse), nil
-	}
-}
-
 type ModifyEpsQuotaInvoker struct {
 	*invoker.BaseInvoker
 }

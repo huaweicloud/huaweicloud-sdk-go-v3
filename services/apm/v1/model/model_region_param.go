@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// Region region信息。
-type Region struct {
+// RegionParam region信息。
+type RegionParam struct {
 
 	// 区域id。
 	RegionId *string `json:"region_id,omitempty"`
@@ -25,11 +25,11 @@ type Region struct {
 	Status *string `json:"status,omitempty"`
 }
 
-func (o Region) String() string {
+func (o RegionParam) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "Region struct{}"
+		return "RegionParam struct{}"
 	}
 
-	return strings.Join([]string{"Region", string(data)}, " ")
+	return strings.Join([]string{"RegionParam", string(data)}, " ")
 }

@@ -12,7 +12,7 @@ import (
 // CentralNetworkElementChange 中心网络策略变化。
 type CentralNetworkElementChange struct {
 
-	// 实例状态。 - CreateCentralNetworkPlane: 新增中心网络平面 - DeleteCentralNetworkPlane: 移除中心网络平面 - UpdateCentralNetworkPlane: 更新中心网络平面 - CreateCentralNetworkErInstance: 新增中心网络ER实例 - DeleteCentralNetworkErInstance: 移除中心网络ER实例 - CreateCentralNetworkErConnection: 新增中心网络ER连接 - DeleteCentralNetworkErConnection: 移除中心网络ER连接 - CreateCentralNetworkErTable: 新增中心网络ER路由表 - DeleteCentralNetworkErTable: 移除中心网络ER路由表
+	// 实例状态。 - CreateCentralNetworkPlane: 新增中心网络平面 - DeleteCentralNetworkPlane: 移除中心网络平面 - UpdateCentralNetworkPlane: 更新中心网络平面 - CreateCentralNetworkErInstance: 新增中心网络ER实例 - DeleteCentralNetworkErInstance: 移除中心网络ER实例 - CreateCentralNetworkErConnection: 新增中心网络ER连接 - DeleteCentralNetworkErConnection: 移除中心网络ER连接 - CreateCentralNetworkErTable: 新增中心网络ER路由表 - DeleteCentralNetworkErTable: 移除中心网络ER路由表 - SwitchCentralNetworkErTable: 切换中心网络ER路由表
 	OperationId CentralNetworkElementChangeOperationId `json:"operation_id"`
 }
 
@@ -39,6 +39,7 @@ type CentralNetworkElementChangeOperationIdEnum struct {
 	DELETE_CENTRAL_NETWORK_ER_CONNECTION CentralNetworkElementChangeOperationId
 	CREATE_CENTRAL_NETWORK_ER_TABLE      CentralNetworkElementChangeOperationId
 	DELETE_CENTRAL_NETWORK_ER_TABLE      CentralNetworkElementChangeOperationId
+	SWITCH_CENTRAL_NETWORK_ER_TABLE      CentralNetworkElementChangeOperationId
 }
 
 func GetCentralNetworkElementChangeOperationIdEnum() CentralNetworkElementChangeOperationIdEnum {
@@ -69,6 +70,9 @@ func GetCentralNetworkElementChangeOperationIdEnum() CentralNetworkElementChange
 		},
 		DELETE_CENTRAL_NETWORK_ER_TABLE: CentralNetworkElementChangeOperationId{
 			value: "DeleteCentralNetworkErTable",
+		},
+		SWITCH_CENTRAL_NETWORK_ER_TABLE: CentralNetworkElementChangeOperationId{
+			value: "SwitchCentralNetworkErTable",
 		},
 	}
 }

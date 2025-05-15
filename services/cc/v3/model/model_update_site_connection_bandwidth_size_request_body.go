@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// UpdateSiteConnectionBandwidthSizeRequestBody 更改分支连接带宽大小的请求体。
 type UpdateSiteConnectionBandwidthSizeRequestBody struct {
 	SiteConnection *UpdateSiteConnectionBandwidthSize `json:"site_connection"`
 }

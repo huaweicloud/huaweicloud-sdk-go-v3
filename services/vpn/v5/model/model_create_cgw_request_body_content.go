@@ -20,7 +20,7 @@ type CreateCgwRequestBodyContent struct {
 	// 对端网关标识值
 	IdValue string `json:"id_value"`
 
-	// 网关的bgp asn号，默认值为65000
+	// 网关的bgp asn号
 	BgpAsn *int64 `json:"bgp_asn,omitempty"`
 
 	CaCertificate *CaCertificateRequest `json:"ca_certificate,omitempty"`

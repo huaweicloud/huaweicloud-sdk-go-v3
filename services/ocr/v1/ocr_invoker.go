@@ -37,6 +37,22 @@ func (i *RecognizeAutoClassificationInvoker) Invoke() (*model.RecognizeAutoClass
 	}
 }
 
+type RecognizeAutoIdDocClassificationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RecognizeAutoIdDocClassificationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RecognizeAutoIdDocClassificationInvoker) Invoke() (*model.RecognizeAutoIdDocClassificationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RecognizeAutoIdDocClassificationResponse), nil
+	}
+}
+
 type RecognizeBankReceiptInvoker struct {
 	*invoker.BaseInvoker
 }

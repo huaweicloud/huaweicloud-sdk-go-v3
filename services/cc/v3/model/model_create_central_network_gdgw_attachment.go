@@ -9,7 +9,7 @@ import (
 // CreateCentralNetworkGdgwAttachment 创建中心网络GDGW附件的请求体。
 type CreateCentralNetworkGdgwAttachment struct {
 
-	// 实例名字。
+	// 实例名称。
 	Name string `json:"name"`
 
 	// 实例描述。不支持 <>。

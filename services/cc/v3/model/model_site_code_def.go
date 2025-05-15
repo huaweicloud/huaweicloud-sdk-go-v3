@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// SiteCodeDef 站点编码定义
+// SiteCodeDef 站点编码。
 type SiteCodeDef struct {
 }
 

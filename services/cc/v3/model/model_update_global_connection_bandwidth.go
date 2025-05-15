@@ -12,7 +12,7 @@ import (
 // UpdateGlobalConnectionBandwidth 更新全域互联带宽的详细信息
 type UpdateGlobalConnectionBandwidth struct {
 
-	// 实例名字。
+	// 实例名称。
 	Name *string `json:"name,omitempty"`
 
 	// 实例描述。不支持 <>。

@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// FrozenEffect 冻结效果。
 type FrozenEffect struct {
 	FrozenEffect *FrozenEffectEnum `json:"frozen_effect,omitempty"`
 }

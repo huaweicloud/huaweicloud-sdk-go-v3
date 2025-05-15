@@ -9,7 +9,7 @@ import (
 // GatewayId 网关的ID。
 type GatewayId struct {
 
-	// 实例ID。
+	// 网关的ID。
 	GatewayId string `json:"gateway_id"`
 }
 

@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// Name 实例名字。只能由中文、英文字母、数字、下划线、中划线、点组成。
+// Name 实例名称。只能由中文、英文字母、数字、下划线、中划线、点组成。
 type Name struct {
 
-	// 实例名字。
+	// 实例名称。
 	Name string `json:"name"`
 }
 

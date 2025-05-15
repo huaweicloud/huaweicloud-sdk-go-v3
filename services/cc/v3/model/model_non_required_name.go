@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// NonRequiredName 实例名字。
+// NonRequiredName 实例名称。
 type NonRequiredName struct {
 
-	// 实例名字。
+	// 实例名称。
 	Name *string `json:"name,omitempty"`
 }
 

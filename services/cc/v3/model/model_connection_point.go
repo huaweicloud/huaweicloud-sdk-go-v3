@@ -18,7 +18,7 @@ type ConnectionPoint struct {
 	// RegionID。
 	RegionId string `json:"region_id"`
 
-	// 站点编码定义
+	// 站点编码。
 	SiteCode string `json:"site_code"`
 
 	// 连接点的实例ID。

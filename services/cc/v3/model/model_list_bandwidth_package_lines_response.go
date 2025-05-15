@@ -13,8 +13,10 @@ type ListBandwidthPackageLinesResponse struct {
 	BandwidthPackageLines *[]BandwidthPackageLine `json:"bandwidth_package_lines,omitempty"`
 
 	// 请求ID。
-	RequestId      *string `json:"request_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	RequestId *string `json:"request_id,omitempty"`
+
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListBandwidthPackageLinesResponse) String() string {

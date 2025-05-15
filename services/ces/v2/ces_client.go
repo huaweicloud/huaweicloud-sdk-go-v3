@@ -1047,3 +1047,24 @@ func (c *CesClient) UpdateResourceGroupInvoker(request *model.UpdateResourceGrou
 	requestDef := GenReqDefForUpdateResourceGroup()
 	return &UpdateResourceGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// UpdateResourceGroupAssociationAlarmTemplate 资源分组异步关联自定义告警模板
+//
+// 提交资源分组批量关联自定义告警模板异步任务，由异步任务覆盖性创建告警规则。每个用户创建处于待执行状态的异步任务数量上限为100个，单个资源分组仅可有1个未完成的任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) UpdateResourceGroupAssociationAlarmTemplate(request *model.UpdateResourceGroupAssociationAlarmTemplateRequest) (*model.UpdateResourceGroupAssociationAlarmTemplateResponse, error) {
+	requestDef := GenReqDefForUpdateResourceGroupAssociationAlarmTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateResourceGroupAssociationAlarmTemplateResponse), nil
+	}
+}
+
+// UpdateResourceGroupAssociationAlarmTemplateInvoker 资源分组异步关联自定义告警模板
+func (c *CesClient) UpdateResourceGroupAssociationAlarmTemplateInvoker(request *model.UpdateResourceGroupAssociationAlarmTemplateRequest) *UpdateResourceGroupAssociationAlarmTemplateInvoker {
+	requestDef := GenReqDefForUpdateResourceGroupAssociationAlarmTemplate()
+	return &UpdateResourceGroupAssociationAlarmTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// BandwidthPackageLine 带宽包线路
+// BandwidthPackageLine 带宽包线路。
 type BandwidthPackageLine struct {
 
 	// RegionID。
@@ -15,16 +15,16 @@ type BandwidthPackageLine struct {
 	// RegionID。
 	RemoteRegionId *string `json:"remote_region_id,omitempty"`
 
-	// 站点编码
+	// 站点编码。
 	LocalSiteCode *string `json:"local_site_code,omitempty"`
 
-	// 站点编码
+	// 站点编码。
 	RemoteSiteCode *string `json:"remote_site_code,omitempty"`
 
-	// 支持的等级列表
+	// 支持的等级列表。
 	SupportLevels *[]string `json:"support_levels,omitempty"`
 
-	// 产品编码列表
+	// 产品编码列表。
 	SpecCodes *[]BandwidthPackageLineSpecCode `json:"spec_codes,omitempty"`
 }
 

@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// AssociateSiteConnectionBandwidth 关联分支连接带宽的请求体。
 type AssociateSiteConnectionBandwidth struct {
 
 	// 全域互联带宽ID。

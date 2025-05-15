@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// SiteConnectionStateEnum 中心网络连接状态。 - AVAILABLE (可用) - CREATING (创建中) - UPDATING (更新中) - DELETING (删除中) - FREEZING (冻结中) - UNFREEZING (解冻中) - RECOVERING (恢复中) - FAILED (失败) - FREEZED (冻结) - DELETED (已刪除)
+// SiteConnectionStateEnum 分支网络连接状态。 - AVAILABLE （可用） - CREATING （创建中） - UPDATING （更新中） - DELETING （删除中） - FREEZING （冻结中） - UNFREEZING （解冻中） - RECOVERING （恢复中） - FAILED （失败） - FREEZED （冻结） - DELETED （已刪除）
 type SiteConnectionStateEnum struct {
 	value string
 }

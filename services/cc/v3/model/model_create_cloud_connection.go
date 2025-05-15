@@ -9,7 +9,7 @@ import (
 // CreateCloudConnection 创建云连接实例的详细信息。
 type CreateCloudConnection struct {
 
-	// 实例名字。
+	// 实例名称。
 	Name string `json:"name"`
 
 	// 实例描述。不支持 <>。

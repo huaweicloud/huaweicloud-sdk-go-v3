@@ -1141,6 +1141,27 @@ func (c *CcClient) UpdateCloudConnectionInvoker(request *model.UpdateCloudConnec
 	return &UpdateCloudConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCloudConnectionCapabilities 查询云连接的能力列表
+//
+// 查询云连接的能力列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListCloudConnectionCapabilities(request *model.ListCloudConnectionCapabilitiesRequest) (*model.ListCloudConnectionCapabilitiesResponse, error) {
+	requestDef := GenReqDefForListCloudConnectionCapabilities()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCloudConnectionCapabilitiesResponse), nil
+	}
+}
+
+// ListCloudConnectionCapabilitiesInvoker 查询云连接的能力列表
+func (c *CcClient) ListCloudConnectionCapabilitiesInvoker(request *model.ListCloudConnectionCapabilitiesRequest) *ListCloudConnectionCapabilitiesInvoker {
+	requestDef := GenReqDefForListCloudConnectionCapabilities()
+	return &ListCloudConnectionCapabilitiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCloudConnectionQuotas 查询云连接配额
 //
 // 查询云连接配额。
@@ -1781,7 +1802,7 @@ func (c *CcClient) DeleteNetworkInstanceInvoker(request *model.DeleteNetworkInst
 
 // ListNetworkInstances 查询网络实例列表
 //
-// 查询云连接列表。
+// 查询网络实例列表。
 // 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -2075,9 +2096,51 @@ func (c *CcClient) ListSiteNetworkQuotasInvoker(request *model.ListSiteNetworkQu
 	return &ListSiteNetworkQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAreaBandwidthPackageSpecifications 查询大区互通类型的带宽包资源规格列表
+//
+// 查询大区互通类型的带宽包资源规格列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListAreaBandwidthPackageSpecifications(request *model.ListAreaBandwidthPackageSpecificationsRequest) (*model.ListAreaBandwidthPackageSpecificationsResponse, error) {
+	requestDef := GenReqDefForListAreaBandwidthPackageSpecifications()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAreaBandwidthPackageSpecificationsResponse), nil
+	}
+}
+
+// ListAreaBandwidthPackageSpecificationsInvoker 查询大区互通类型的带宽包资源规格列表
+func (c *CcClient) ListAreaBandwidthPackageSpecificationsInvoker(request *model.ListAreaBandwidthPackageSpecificationsRequest) *ListAreaBandwidthPackageSpecificationsInvoker {
+	requestDef := GenReqDefForListAreaBandwidthPackageSpecifications()
+	return &ListAreaBandwidthPackageSpecificationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAreas 查询当前支持的Area列表
+//
+// 查询当前支持的大区列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListAreas(request *model.ListAreasRequest) (*model.ListAreasResponse, error) {
+	requestDef := GenReqDefForListAreas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAreasResponse), nil
+	}
+}
+
+// ListAreasInvoker 查询当前支持的Area列表
+func (c *CcClient) ListAreasInvoker(request *model.ListAreasRequest) *ListAreasInvoker {
+	requestDef := GenReqDefForListAreas()
+	return &ListAreasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListBandwidthPackageLevels 查询带宽包等级列表
 //
-// 查询带宽包等级列表
+// 查询带宽包等级列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcClient) ListBandwidthPackageLevels(request *model.ListBandwidthPackageLevelsRequest) (*model.ListBandwidthPackageLevelsResponse, error) {
@@ -2098,7 +2161,7 @@ func (c *CcClient) ListBandwidthPackageLevelsInvoker(request *model.ListBandwidt
 
 // ListBandwidthPackageLines 查询带宽包线路列表
 //
-// 查询带宽包线路列表
+// 查询带宽包线路列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcClient) ListBandwidthPackageLines(request *model.ListBandwidthPackageLinesRequest) (*model.ListBandwidthPackageLinesResponse, error) {
@@ -2119,7 +2182,7 @@ func (c *CcClient) ListBandwidthPackageLinesInvoker(request *model.ListBandwidth
 
 // ListBandwidthPackageSites 查询带宽包站点列表
 //
-// 查询带宽包站点列表
+// 查询带宽包站点列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CcClient) ListBandwidthPackageSites(request *model.ListBandwidthPackageSitesRequest) (*model.ListBandwidthPackageSitesResponse, error) {
@@ -2136,4 +2199,46 @@ func (c *CcClient) ListBandwidthPackageSites(request *model.ListBandwidthPackage
 func (c *CcClient) ListBandwidthPackageSitesInvoker(request *model.ListBandwidthPackageSitesRequest) *ListBandwidthPackageSitesInvoker {
 	requestDef := GenReqDefForListBandwidthPackageSites()
 	return &ListBandwidthPackageSitesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRegionBandwidthPackageSpecifications 查询区域互通类型的带宽包规格列表
+//
+// 查询区域互通类型的带宽包规格列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListRegionBandwidthPackageSpecifications(request *model.ListRegionBandwidthPackageSpecificationsRequest) (*model.ListRegionBandwidthPackageSpecificationsResponse, error) {
+	requestDef := GenReqDefForListRegionBandwidthPackageSpecifications()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRegionBandwidthPackageSpecificationsResponse), nil
+	}
+}
+
+// ListRegionBandwidthPackageSpecificationsInvoker 查询区域互通类型的带宽包规格列表
+func (c *CcClient) ListRegionBandwidthPackageSpecificationsInvoker(request *model.ListRegionBandwidthPackageSpecificationsRequest) *ListRegionBandwidthPackageSpecificationsInvoker {
+	requestDef := GenReqDefForListRegionBandwidthPackageSpecifications()
+	return &ListRegionBandwidthPackageSpecificationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRegions 查询当前支持的Region列表
+//
+// 查询当前支持的Region列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcClient) ListRegions(request *model.ListRegionsRequest) (*model.ListRegionsResponse, error) {
+	requestDef := GenReqDefForListRegions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRegionsResponse), nil
+	}
+}
+
+// ListRegionsInvoker 查询当前支持的Region列表
+func (c *CcClient) ListRegionsInvoker(request *model.ListRegionsRequest) *ListRegionsInvoker {
+	requestDef := GenReqDefForListRegions()
+	return &ListRegionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

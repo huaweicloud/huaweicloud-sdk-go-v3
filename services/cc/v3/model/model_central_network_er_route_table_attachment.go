@@ -13,7 +13,7 @@ type CentralNetworkErRouteTableAttachment struct {
 	// 实例ID。
 	Id string `json:"id"`
 
-	// 实例名字。
+	// 实例名称。
 	Name string `json:"name"`
 
 	// 实例描述。不支持 <>。
@@ -39,7 +39,7 @@ type CentralNetworkErRouteTableAttachment struct {
 	// 全域互联带宽ID。
 	GlobalConnectionBandwidthId *string `json:"global_connection_bandwidth_id,omitempty"`
 
-	// 是否冻结
+	// 是否冻结。
 	IsFrozen bool `json:"is_frozen"`
 
 	BandwidthType *BandwidthTypeEnum `json:"bandwidth_type"`

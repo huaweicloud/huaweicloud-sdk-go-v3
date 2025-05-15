@@ -16,10 +16,10 @@ type ListCocTicketOperationHistoriesResponse struct {
 	ErrorCode string `json:"error_code"`
 
 	// 请求响应描述
-	ErrorMsg *string `json:"error_msg,omitempty"`
+	ErrorMsg string `json:"error_msg"`
 
 	// 数据
-	Data           *interface{} `json:"data,omitempty"`
+	Data           *interface{} `json:"data"`
 	HttpStatusCode int          `json:"-"`
 }
 

@@ -13,7 +13,7 @@ type CentralNetworkAttachment struct {
 	// 实例ID。
 	Id string `json:"id"`
 
-	// 实例名字。
+	// 实例名称。
 	Name string `json:"name"`
 
 	// 实例描述。不支持 <>。
@@ -44,7 +44,7 @@ type CentralNetworkAttachment struct {
 	// 带宽值，单位Mbps。
 	BandwidthSize *int64 `json:"bandwidth_size,omitempty"`
 
-	// 是否冻结
+	// 是否冻结。
 	IsFrozen bool `json:"is_frozen"`
 
 	// 企业路由器的ID。

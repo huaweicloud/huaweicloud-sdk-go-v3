@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// BandwidthPackageLineSpecCode 带宽包线路产品
+// BandwidthPackageLineSpecCode 带宽包线路产品。
 type BandwidthPackageLineSpecCode struct {
 
-	// 带宽包等级
+	// 带宽包等级。
 	Level *string `json:"level,omitempty"`
 
-	// 实例名字。
+	// 实例名称。
 	NameCn *string `json:"name_cn,omitempty"`
 
-	// 实例名字。
+	// 实例名称。
 	NameEn *string `json:"name_en,omitempty"`
 
 	// 带宽包实例的规格编码。

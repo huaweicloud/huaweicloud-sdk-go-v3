@@ -13,7 +13,7 @@ type SiteNetworkEntry struct {
 	// 实例ID。
 	Id string `json:"id"`
 
-	// 实例名字。
+	// 实例名称。
 	Name string `json:"name"`
 
 	// 实例描述。不支持 <>。
@@ -33,7 +33,7 @@ type SiteNetworkEntry struct {
 	// 实例所属企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 实例ID。
+	// 应用策略ID。
 	ApplyPolicyId string `json:"apply_policy_id"`
 
 	// 实例标签。
@@ -44,7 +44,7 @@ type SiteNetworkEntry struct {
 	// 分支连接列表。
 	Connections []SiteConnection `json:"connections"`
 
-	// p2p拓扑或者网状(mesh)拓扑中的节点。
+	// 点对点拓扑或者网状拓扑中的节点。
 	Sites *[]SiteInformation `json:"sites,omitempty"`
 
 	HubSite *SiteInformation `json:"hub_site,omitempty"`

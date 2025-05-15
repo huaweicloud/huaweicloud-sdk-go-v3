@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// BaseResponse --
 type BaseResponse struct {
 
 	// 服务标识
@@ -15,7 +16,10 @@ type BaseResponse struct {
 	ErrorCode string `json:"error_code"`
 
 	// 请求响应描述
-	ErrorMsg *string `json:"error_msg,omitempty"`
+	ErrorMsg string `json:"error_msg"`
+
+	// 响应数据
+	Data *interface{} `json:"data"`
 }
 
 func (o BaseResponse) String() string {

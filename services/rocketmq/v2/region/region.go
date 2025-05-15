@@ -64,6 +64,10 @@ var (
 		"https://dms.af-north-1.myhuaweicloud.com")
 	AP_SOUTHEAST_5 = region.NewRegion("ap-southeast-5",
 		"https://dms.ap-southeast-5.myhuaweicloud.com")
+	RU_MOSCOW_1 = region.NewRegion("ru-moscow-1",
+		"https://dms.ru-moscow-1.myhuaweicloud.com")
+	SA_BRAZIL_1 = region.NewRegion("sa-brazil-1",
+		"https://dms.sa-brazil-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -95,6 +99,8 @@ var staticFields = map[string]*region.Region{
 	"cn-east-4":        CN_EAST_4,
 	"af-north-1":       AF_NORTH_1,
 	"ap-southeast-5":   AP_SOUTHEAST_5,
+	"ru-moscow-1":      RU_MOSCOW_1,
+	"sa-brazil-1":      SA_BRAZIL_1,
 }
 
 var provider = region.DefaultProviderChain("ROCKETMQ")

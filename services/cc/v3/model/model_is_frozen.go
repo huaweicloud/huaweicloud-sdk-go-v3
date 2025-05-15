@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// IsFrozen 是否冻结
+// IsFrozen 是否冻结。
 type IsFrozen struct {
 
-	// 是否冻结
+	// 是否冻结。
 	IsFrozen bool `json:"is_frozen"`
 }
 

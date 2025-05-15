@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// UpdateSiteConnectionBandwidthSize 更改分支连接带宽大小的请求体。
 type UpdateSiteConnectionBandwidthSize struct {
 
 	// 带宽值，单位Mbps。

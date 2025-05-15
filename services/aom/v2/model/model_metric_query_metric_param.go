@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// MetricQueryMeritcParam 查询参数集
-type MetricQueryMeritcParam struct {
+// MetricQueryMetricParam 查询参数集
+type MetricQueryMetricParam struct {
 
 	// 指标维度列表。取值范围：数组不能为空，同时数组中任何一个dimension对象name和value属性的值也不能为空。
 	Dimensions []Dimension `json:"dimensions"`
@@ -19,11 +19,11 @@ type MetricQueryMeritcParam struct {
 	Namespace string `json:"namespace"`
 }
 
-func (o MetricQueryMeritcParam) String() string {
+func (o MetricQueryMetricParam) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "MetricQueryMeritcParam struct{}"
+		return "MetricQueryMetricParam struct{}"
 	}
 
-	return strings.Join([]string{"MetricQueryMeritcParam", string(data)}, " ")
+	return strings.Join([]string{"MetricQueryMetricParam", string(data)}, " ")
 }

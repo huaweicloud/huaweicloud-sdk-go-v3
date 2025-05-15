@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// GatewayTypeEnum 网关的类型。 - GDGW
+// GatewayTypeEnum 网关的类型。GDGW：全球接入网关。
 type GatewayTypeEnum struct {
 	value string
 }

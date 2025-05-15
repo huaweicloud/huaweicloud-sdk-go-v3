@@ -9,7 +9,7 @@ import (
 // SiteNetworkId 分支网络ID。
 type SiteNetworkId struct {
 
-	// 实例ID。
+	// 分支网络ID。
 	SiteNetworkId string `json:"site_network_id"`
 }
 

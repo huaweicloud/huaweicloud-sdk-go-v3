@@ -17,10 +17,10 @@ type SiteInformation struct {
 
 	GatewayType *GatewayTypeEnum `json:"gateway_type"`
 
-	// 实例ID。
+	// 网关的ID。
 	GatewayId string `json:"gateway_id"`
 
-	// 站点编码定义
+	// 站点编码。
 	SiteCode string `json:"site_code"`
 
 	// 网络实例BGP协议的AS号。

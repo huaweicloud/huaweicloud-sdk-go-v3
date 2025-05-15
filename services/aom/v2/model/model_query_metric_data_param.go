@@ -10,7 +10,7 @@ import (
 type QueryMetricDataParam struct {
 
 	// 指标对象列表。 取值范围 JSON数组大小不超过20
-	Metrics []MetricQueryMeritcParam `json:"metrics"`
+	Metrics []MetricQueryMetricParam `json:"metrics"`
 
 	// 监控数据粒度。取值范围（枚举）：60（表示粒度为1分钟），300（表示粒度为5分钟），900（表示粒度为15分钟），3600（表示粒度为1小时）。
 	Period int32 `json:"period"`

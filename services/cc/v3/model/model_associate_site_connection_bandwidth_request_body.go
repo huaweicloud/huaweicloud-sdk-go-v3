@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// AssociateSiteConnectionBandwidthRequestBody 关联分支连接带宽的请求体。
 type AssociateSiteConnectionBandwidthRequestBody struct {
 	SiteConnection *AssociateSiteConnectionBandwidth `json:"site_connection"`
 }

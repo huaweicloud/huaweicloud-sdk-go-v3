@@ -8,6 +8,10 @@ import (
 
 // ShowFlameLineTreeRequest Request Object
 type ShowFlameLineTreeRequest struct {
+
+	// 应用id。
+	XBusinessId int64 `json:"x-business-id"`
+
 	Body *FlameLineTreeInfo `json:"body,omitempty"`
 }
 

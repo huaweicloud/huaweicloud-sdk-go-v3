@@ -6,9 +6,10 @@ import (
 	"strings"
 )
 
+// CreateP2PSiteNetwork 创建P2P类型的分支网络的请求体。
 type CreateP2PSiteNetwork struct {
 
-	// 实例名字。
+	// 实例名称。
 	Name string `json:"name"`
 
 	// 实例描述。不支持 <>。
@@ -20,7 +21,7 @@ type CreateP2PSiteNetwork struct {
 	// 实例所属企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 端到端(P2P)类型分支网络连接的两个端点定义，长度固定为2的数组。
+	// 端到端（P2P）类型分支网络连接的两个端点定义，长度固定为2的数组。
 	Sites []CreateSiteInformation `json:"sites"`
 }
 

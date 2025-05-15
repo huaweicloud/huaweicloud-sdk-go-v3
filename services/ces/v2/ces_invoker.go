@@ -788,3 +788,19 @@ func (i *UpdateResourceGroupInvoker) Invoke() (*model.UpdateResourceGroupRespons
 		return result.(*model.UpdateResourceGroupResponse), nil
 	}
 }
+
+type UpdateResourceGroupAssociationAlarmTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateResourceGroupAssociationAlarmTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateResourceGroupAssociationAlarmTemplateInvoker) Invoke() (*model.UpdateResourceGroupAssociationAlarmTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateResourceGroupAssociationAlarmTemplateResponse), nil
+	}
+}

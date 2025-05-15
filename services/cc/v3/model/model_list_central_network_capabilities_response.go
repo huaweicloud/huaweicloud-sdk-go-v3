@@ -12,6 +12,8 @@ type ListCentralNetworkCapabilitiesResponse struct {
 	// 请求ID。
 	RequestId string `json:"request_id"`
 
+	PageInfo *PageInfo `json:"page_info,omitempty"`
+
 	// 租户能力列表
 	Capabilities   []CentralNetworkCapability `json:"capabilities"`
 	HttpStatusCode int                        `json:"-"`

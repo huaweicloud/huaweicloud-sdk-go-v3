@@ -16,7 +16,7 @@ type CreateSiteInformation struct {
 
 	GatewayType *GatewayTypeEnum `json:"gateway_type"`
 
-	// 实例ID。
+	// 网关的ID。
 	GatewayId string `json:"gateway_id"`
 }
 

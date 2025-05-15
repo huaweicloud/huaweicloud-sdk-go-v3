@@ -3647,6 +3647,27 @@ func (c *MetaStudioClient) ShowTtsAuditionFileInvoker(request *model.ShowTtsAudi
 	return &ShowTtsAuditionFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowTtsPhoneticSymbol 获取英文单词音标
+//
+// 根据英文单词返回对应音标列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowTtsPhoneticSymbol(request *model.ShowTtsPhoneticSymbolRequest) (*model.ShowTtsPhoneticSymbolResponse, error) {
+	requestDef := GenReqDefForShowTtsPhoneticSymbol()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTtsPhoneticSymbolResponse), nil
+	}
+}
+
+// ShowTtsPhoneticSymbolInvoker 获取英文单词音标
+func (c *MetaStudioClient) ShowTtsPhoneticSymbolInvoker(request *model.ShowTtsPhoneticSymbolRequest) *ShowTtsPhoneticSymbolInvoker {
+	requestDef := GenReqDefForShowTtsPhoneticSymbol()
+	return &ShowTtsPhoneticSymbolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateVideoMotionCaptureJob 创建视频驱动任务
 //
 // 该接口用于创建视频驱动任务。

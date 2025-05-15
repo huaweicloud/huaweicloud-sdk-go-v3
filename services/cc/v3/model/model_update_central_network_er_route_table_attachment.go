@@ -9,7 +9,7 @@ import (
 // UpdateCentralNetworkErRouteTableAttachment 更新中心网络ER路由表附件的属性详情。
 type UpdateCentralNetworkErRouteTableAttachment struct {
 
-	// 实例名字。
+	// 实例名称。
 	Name *string `json:"name,omitempty"`
 
 	// 实例描述。不支持 <>。

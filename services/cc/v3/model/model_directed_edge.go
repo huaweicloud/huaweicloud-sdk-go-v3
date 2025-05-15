@@ -14,12 +14,12 @@ type DirectedEdge struct {
 	// RegionID。
 	RegionId string `json:"region_id"`
 
-	// 实例ID。
+	// 网关的ID。
 	GatewayId string `json:"gateway_id"`
 
 	GatewayType *GatewayTypeEnum `json:"gateway_type"`
 
-	// 站点编码定义
+	// 站点编码。
 	SiteCode string `json:"site_code"`
 
 	// 实例所属项目ID。

@@ -13,7 +13,7 @@ type CentralNetworkConnection struct {
 	// 实例ID。
 	Id string `json:"id"`
 
-	// 实例名字。
+	// 实例名称。
 	Name string `json:"name"`
 
 	// 实例描述。不支持 <>。
@@ -41,7 +41,7 @@ type CentralNetworkConnection struct {
 
 	State *CentralNetworkConnectionStateEnum `json:"state"`
 
-	// 是否冻结
+	// 是否冻结。
 	IsFrozen bool `json:"is_frozen"`
 
 	ConnectionType *ConnectionTypeEnum `json:"connection_type"`
