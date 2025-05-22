@@ -1137,6 +1137,90 @@ func (c *MetaStudioClient) UpdateHotWordsSwitchInvoker(request *model.UpdateHotW
 	return &UpdateHotWordsSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateInteractionRuleGroup 创建智能直播间互动规则库
+//
+// 该接口用于创建智能直播间互动规则库。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateInteractionRuleGroup(request *model.CreateInteractionRuleGroupRequest) (*model.CreateInteractionRuleGroupResponse, error) {
+	requestDef := GenReqDefForCreateInteractionRuleGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateInteractionRuleGroupResponse), nil
+	}
+}
+
+// CreateInteractionRuleGroupInvoker 创建智能直播间互动规则库
+func (c *MetaStudioClient) CreateInteractionRuleGroupInvoker(request *model.CreateInteractionRuleGroupRequest) *CreateInteractionRuleGroupInvoker {
+	requestDef := GenReqDefForCreateInteractionRuleGroup()
+	return &CreateInteractionRuleGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteInteractionRuleGroup 删除智能直播间互动规则库
+//
+// 该接口用于删除智能直播间互动规则库。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteInteractionRuleGroup(request *model.DeleteInteractionRuleGroupRequest) (*model.DeleteInteractionRuleGroupResponse, error) {
+	requestDef := GenReqDefForDeleteInteractionRuleGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteInteractionRuleGroupResponse), nil
+	}
+}
+
+// DeleteInteractionRuleGroupInvoker 删除智能直播间互动规则库
+func (c *MetaStudioClient) DeleteInteractionRuleGroupInvoker(request *model.DeleteInteractionRuleGroupRequest) *DeleteInteractionRuleGroupInvoker {
+	requestDef := GenReqDefForDeleteInteractionRuleGroup()
+	return &DeleteInteractionRuleGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInteractionRuleGroups 查询智能直播间互动规则库列表
+//
+// 该接口用于智能直播间互动规则库列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListInteractionRuleGroups(request *model.ListInteractionRuleGroupsRequest) (*model.ListInteractionRuleGroupsResponse, error) {
+	requestDef := GenReqDefForListInteractionRuleGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInteractionRuleGroupsResponse), nil
+	}
+}
+
+// ListInteractionRuleGroupsInvoker 查询智能直播间互动规则库列表
+func (c *MetaStudioClient) ListInteractionRuleGroupsInvoker(request *model.ListInteractionRuleGroupsRequest) *ListInteractionRuleGroupsInvoker {
+	requestDef := GenReqDefForListInteractionRuleGroups()
+	return &ListInteractionRuleGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInteractionRuleGroup 更新智能直播间互动规则库
+//
+// 该接口用于更新智能直播间互动规则库。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateInteractionRuleGroup(request *model.UpdateInteractionRuleGroupRequest) (*model.UpdateInteractionRuleGroupResponse, error) {
+	requestDef := GenReqDefForUpdateInteractionRuleGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInteractionRuleGroupResponse), nil
+	}
+}
+
+// UpdateInteractionRuleGroupInvoker 更新智能直播间互动规则库
+func (c *MetaStudioClient) UpdateInteractionRuleGroupInvoker(request *model.UpdateInteractionRuleGroupRequest) *UpdateInteractionRuleGroupInvoker {
+	requestDef := GenReqDefForUpdateInteractionRuleGroup()
+	return &UpdateInteractionRuleGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateIntentAndQuestion 创建知识库意图和问法
 //
 // 该接口用于创建知识库意图和问法。一个意图包含一个主题，一个答案，若干个问法等。接口使用限制详见[API使用限制](metastudio_02_0000.xml)。
@@ -2608,27 +2692,6 @@ func (c *MetaStudioClient) ConfirmSmarLiveRoomInvoker(request *model.ConfirmSmar
 	return &ConfirmSmarLiveRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateInteractionRuleGroup 创建智能直播间互动规则库
-//
-// 该接口用于创建智能直播间互动规则库。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) CreateInteractionRuleGroup(request *model.CreateInteractionRuleGroupRequest) (*model.CreateInteractionRuleGroupResponse, error) {
-	requestDef := GenReqDefForCreateInteractionRuleGroup()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateInteractionRuleGroupResponse), nil
-	}
-}
-
-// CreateInteractionRuleGroupInvoker 创建智能直播间互动规则库
-func (c *MetaStudioClient) CreateInteractionRuleGroupInvoker(request *model.CreateInteractionRuleGroupRequest) *CreateInteractionRuleGroupInvoker {
-	requestDef := GenReqDefForCreateInteractionRuleGroup()
-	return &CreateInteractionRuleGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateSmartLiveRoom 创建智能直播间
 //
 // 该接口用于创建智能直播间。
@@ -2648,27 +2711,6 @@ func (c *MetaStudioClient) CreateSmartLiveRoom(request *model.CreateSmartLiveRoo
 func (c *MetaStudioClient) CreateSmartLiveRoomInvoker(request *model.CreateSmartLiveRoomRequest) *CreateSmartLiveRoomInvoker {
 	requestDef := GenReqDefForCreateSmartLiveRoom()
 	return &CreateSmartLiveRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteInteractionRuleGroup 删除智能直播间互动规则库
-//
-// 该接口用于删除智能直播间互动规则库。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) DeleteInteractionRuleGroup(request *model.DeleteInteractionRuleGroupRequest) (*model.DeleteInteractionRuleGroupResponse, error) {
-	requestDef := GenReqDefForDeleteInteractionRuleGroup()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteInteractionRuleGroupResponse), nil
-	}
-}
-
-// DeleteInteractionRuleGroupInvoker 删除智能直播间互动规则库
-func (c *MetaStudioClient) DeleteInteractionRuleGroupInvoker(request *model.DeleteInteractionRuleGroupRequest) *DeleteInteractionRuleGroupInvoker {
-	requestDef := GenReqDefForDeleteInteractionRuleGroup()
-	return &DeleteInteractionRuleGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteSmartLiveRoom 删除智能直播间
@@ -2692,27 +2734,6 @@ func (c *MetaStudioClient) DeleteSmartLiveRoomInvoker(request *model.DeleteSmart
 	return &DeleteSmartLiveRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListInteractionRuleGroups 查询智能直播间互动规则库列表
-//
-// 该接口用于智能直播间互动规则库列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) ListInteractionRuleGroups(request *model.ListInteractionRuleGroupsRequest) (*model.ListInteractionRuleGroupsResponse, error) {
-	requestDef := GenReqDefForListInteractionRuleGroups()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListInteractionRuleGroupsResponse), nil
-	}
-}
-
-// ListInteractionRuleGroupsInvoker 查询智能直播间互动规则库列表
-func (c *MetaStudioClient) ListInteractionRuleGroupsInvoker(request *model.ListInteractionRuleGroupsRequest) *ListInteractionRuleGroupsInvoker {
-	requestDef := GenReqDefForListInteractionRuleGroups()
-	return &ListInteractionRuleGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ListSmartLiveRooms 查询智能直播间列表
 //
 // 该接口用于智能直播间列表。
@@ -2734,9 +2755,9 @@ func (c *MetaStudioClient) ListSmartLiveRoomsInvoker(request *model.ListSmartLiv
 	return &ListSmartLiveRoomsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowSmartLiveRoom 查询智能直播剧本详情
+// ShowSmartLiveRoom 查询智能直播间剧本详情
 //
-// 该接口用于查询智能直播剧本详情。
+// 该接口用于查询智能直播间剧本详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *MetaStudioClient) ShowSmartLiveRoom(request *model.ShowSmartLiveRoomRequest) (*model.ShowSmartLiveRoomResponse, error) {
@@ -2749,31 +2770,10 @@ func (c *MetaStudioClient) ShowSmartLiveRoom(request *model.ShowSmartLiveRoomReq
 	}
 }
 
-// ShowSmartLiveRoomInvoker 查询智能直播剧本详情
+// ShowSmartLiveRoomInvoker 查询智能直播间剧本详情
 func (c *MetaStudioClient) ShowSmartLiveRoomInvoker(request *model.ShowSmartLiveRoomRequest) *ShowSmartLiveRoomInvoker {
 	requestDef := GenReqDefForShowSmartLiveRoom()
 	return &ShowSmartLiveRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateInteractionRuleGroup 更新智能直播间互动规则库
-//
-// 该接口用于更新智能直播间互动规则库。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) UpdateInteractionRuleGroup(request *model.UpdateInteractionRuleGroupRequest) (*model.UpdateInteractionRuleGroupResponse, error) {
-	requestDef := GenReqDefForUpdateInteractionRuleGroup()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateInteractionRuleGroupResponse), nil
-	}
-}
-
-// UpdateInteractionRuleGroupInvoker 更新智能直播间互动规则库
-func (c *MetaStudioClient) UpdateInteractionRuleGroupInvoker(request *model.UpdateInteractionRuleGroupRequest) *UpdateInteractionRuleGroupInvoker {
-	requestDef := GenReqDefForUpdateInteractionRuleGroup()
-	return &UpdateInteractionRuleGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSmartLiveRoom 更新智能直播间信息
@@ -3473,7 +3473,7 @@ func (c *MetaStudioClient) ListTtsaJobsInvoker(request *model.ListTtsaJobsReques
 
 // CreateAsyncTtsJob 创建TTS异步任务
 //
-// 该接口用于对外生成音频文件
+// 该接口用于对外生成音频文件。每个预制音色的计费标准详见[预置音色计费标准](metastudio_02_0060.xml)。
 //
 // &gt; 使用本接口前，需要在MetaStudio控制台服务概览页面，开通“声音合成”的按需计费。
 // &gt; 详细操作为：单击“声音合成”卡片中的“去开通”，在弹出的“开通按需计费服务提示”对话框中，勾选同意协议。单击“确定”，开通按需计费。

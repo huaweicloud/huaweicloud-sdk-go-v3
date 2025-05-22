@@ -12,10 +12,10 @@ type ListDataSourceResponse struct {
 	// 数据源列表。
 	DataSources *[]ExtDataSource `json:"data_sources,omitempty"`
 
-	// 项目ID。
+	// **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 集群ID。
+	// **参数解释**： 集群ID。 **取值范围**： 36位UUID。
 	ClusterId *string `json:"cluster_id,omitempty"`
 
 	// 数据源类型。

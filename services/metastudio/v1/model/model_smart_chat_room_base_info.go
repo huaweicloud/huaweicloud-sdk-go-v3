@@ -36,7 +36,7 @@ type SmartChatRoomBaseInfo struct {
 	// 语音配置参数列表。
 	VoiceConfigList *[]VoiceConfigRsp `json:"voice_config_list,omitempty"`
 
-	// 默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+	// 默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
 	DefaultLanguage *SmartChatRoomBaseInfoDefaultLanguage `json:"default_language,omitempty"`
 
 	// 创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
@@ -44,6 +44,9 @@ type SmartChatRoomBaseInfo struct {
 
 	// 更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
 	UpdateTime *string `json:"update_time,omitempty"`
+
+	// **参数解释**： 静默退出时长。
+	ExitMuteThreshold *int32 `json:"exit_mute_threshold,omitempty"`
 }
 
 func (o SmartChatRoomBaseInfo) String() string {
@@ -60,8 +63,12 @@ type SmartChatRoomBaseInfoDefaultLanguage struct {
 }
 
 type SmartChatRoomBaseInfoDefaultLanguageEnum struct {
-	CN SmartChatRoomBaseInfoDefaultLanguage
-	EN SmartChatRoomBaseInfoDefaultLanguage
+	CN     SmartChatRoomBaseInfoDefaultLanguage
+	EN     SmartChatRoomBaseInfoDefaultLanguage
+	ESP    SmartChatRoomBaseInfoDefaultLanguage
+	POR    SmartChatRoomBaseInfoDefaultLanguage
+	ARABIC SmartChatRoomBaseInfoDefaultLanguage
+	THAI   SmartChatRoomBaseInfoDefaultLanguage
 }
 
 func GetSmartChatRoomBaseInfoDefaultLanguageEnum() SmartChatRoomBaseInfoDefaultLanguageEnum {
@@ -71,6 +78,18 @@ func GetSmartChatRoomBaseInfoDefaultLanguageEnum() SmartChatRoomBaseInfoDefaultL
 		},
 		EN: SmartChatRoomBaseInfoDefaultLanguage{
 			value: "EN",
+		},
+		ESP: SmartChatRoomBaseInfoDefaultLanguage{
+			value: "ESP",
+		},
+		POR: SmartChatRoomBaseInfoDefaultLanguage{
+			value: "por",
+		},
+		ARABIC: SmartChatRoomBaseInfoDefaultLanguage{
+			value: "Arabic",
+		},
+		THAI: SmartChatRoomBaseInfoDefaultLanguage{
+			value: "Thai",
 		},
 	}
 }

@@ -11,6 +11,8 @@ type EncoderSettingsExpand struct {
 
 	// 音频输出配置的描述信息
 	AudioDescriptions *[]EncoderSettingsExpandAudioDescriptions `json:"audio_descriptions,omitempty"`
+
+	VideoDescriptions *VideoDescriptions `json:"video_descriptions,omitempty"`
 }
 
 func (o EncoderSettingsExpand) String() string {

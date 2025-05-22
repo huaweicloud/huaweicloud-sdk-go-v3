@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// UpdateLogicalClusterPlanActions 更新逻辑集群增删计划细节信息
+// UpdateLogicalClusterPlanActions **参数解释**： 更新逻辑集群增删计划细节信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 type UpdateLogicalClusterPlanActions struct {
 
-	// 更新逻辑集群增删行动ID
+	// **参数解释**： 逻辑集群增删行动ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Id *string `json:"id,omitempty"`
 
-	// 更新逻辑集群增删计划行动类型，取值范围为(create|delete)
+	// **参数解释**： 更新逻辑集群增删计划行动类型。 **约束限制**： 不涉及。 **取值范围**： create：创建 delete：删除 **默认取值**： 不涉及。
 	Type *string `json:"type,omitempty"`
 
-	// 更新逻辑集群增删计划行为Cron策略表达式
+	// **参数解释**： 更新逻辑集群增删计划行为Cron策略表达式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Strategy *string `json:"strategy,omitempty"`
 }
 

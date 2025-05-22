@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// CreateLogicalClusterInfo 创建逻辑集群请求信息
+// CreateLogicalClusterInfo **参数解释**： 创建逻辑集群信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 type CreateLogicalClusterInfo struct {
 
-	// 逻辑集群名称
+	// **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	LogicalClusterName string `json:"logical_cluster_name"`
 
-	// 逻辑集群环信息
+	// **参数解释**： 逻辑集群环信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	ClusterRings []ClusterRing `json:"cluster_rings"`
 }
 

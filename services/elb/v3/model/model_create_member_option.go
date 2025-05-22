@@ -29,6 +29,9 @@ type CreateMemberOption struct {
 
 	// 参数解释：后端服务器的权重，请求将根据pool配置的负载均衡算法和后端服务器的权重进行负载分发。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  约束限制：若所在pool的lb_algorithm取值为SOURCE_IP或QUIC_CID，该字段无效。  取值范围：0-100，默认1。
 	Weight *int32 `json:"weight,omitempty"`
+
+	// 参数解释：后端服务器的可用区。 约束限制： - 仅支持iptarget类型的后端服务器设置该字段。且后端服务器组开启可用区亲和时，iptarget类型的后端服务器必须配置该字段为有效非空值。  取值范围：本region中ECS可选择的可用区。
+	AvailabilityZone *string `json:"availability_zone,omitempty"`
 }
 
 func (o CreateMemberOption) String() string {

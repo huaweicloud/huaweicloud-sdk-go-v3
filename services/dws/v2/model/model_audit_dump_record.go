@@ -9,11 +9,11 @@ import (
 // AuditDumpRecord 审计日志
 type AuditDumpRecord struct {
 
-	// 集群id。
+	// **参数解释**： 集群ID。 **取值范围**： 36位UUID。
 	ClusterId *string `json:"cluster_id,omitempty"`
 
 	// 执行时间。
-	ExectorTime *string `json:"exector_time,omitempty"`
+	ExecutorTime *string `json:"executor_time,omitempty"`
 
 	// 开始时间。
 	BeginTime *string `json:"begin_time,omitempty"`

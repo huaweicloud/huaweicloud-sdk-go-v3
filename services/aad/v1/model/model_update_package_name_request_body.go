@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// UpdatePackageNameRequestBody 更新防护包名的请求体
+// UpdatePackageNameRequestBody 更新实例名的请求体
 type UpdatePackageNameRequestBody struct {
 
 	// 名字

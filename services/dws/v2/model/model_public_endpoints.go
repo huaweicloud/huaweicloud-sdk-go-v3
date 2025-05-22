@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// PublicEndpoints
+// PublicEndpoints **参数解释**： 公网连接信息。 **取值范围**： 不涉及。
 type PublicEndpoints struct {
 
-	// 公网连接信息
+	// **参数解释**： 公网连接信息。 **取值范围**： 不涉及。
 	PublicConnectInfo *string `json:"public_connect_info,omitempty"`
 
-	// 公网JDBC URL，默认格式如下： jdbc:postgresql://<public_connect_info>/<YOUR_DATABASE_name>
+	// **参数解释**： 公网JDBC连接串。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： jdbc:postgresql://<public_connect_info>/<YOUR_DATABASE_name>
 	JdbcUrl *string `json:"jdbc_url,omitempty"`
 }
 

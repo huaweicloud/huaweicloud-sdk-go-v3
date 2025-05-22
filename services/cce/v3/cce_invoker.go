@@ -677,6 +677,22 @@ func (i *ListUpgradeWorkFlowsInvoker) Invoke() (*model.ListUpgradeWorkFlowsRespo
 	}
 }
 
+type LockNodepoolNodeScaleDownInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *LockNodepoolNodeScaleDownInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *LockNodepoolNodeScaleDownInvoker) Invoke() (*model.LockNodepoolNodeScaleDownResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.LockNodepoolNodeScaleDownResponse), nil
+	}
+}
+
 type MigrateNodeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1186,6 +1202,22 @@ func (i *SyncNodeInvoker) Invoke() (*model.SyncNodeResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.SyncNodeResponse), nil
+	}
+}
+
+type UnlockNodepoolNodeScaleDownInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UnlockNodepoolNodeScaleDownInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UnlockNodepoolNodeScaleDownInvoker) Invoke() (*model.UnlockNodepoolNodeScaleDownResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UnlockNodepoolNodeScaleDownResponse), nil
 	}
 }
 

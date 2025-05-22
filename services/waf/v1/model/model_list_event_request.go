@@ -33,6 +33,9 @@ type ListEventRequest struct {
 	// 域名id，从获取防护网站列表（ListHost）接口获取域名id
 	Hosts *[]string `json:"hosts,omitempty"`
 
+	// 源ip，Web访问者的IP地址（攻击者IP地址）
+	Sips *[]string `json:"sips,omitempty"`
+
 	// 分页查询时，返回第几页数据。默认值为1，表示返回第1页数据。
 	Page *int32 `json:"page,omitempty"`
 

@@ -16,6 +16,9 @@ type CommonQueueProperty struct {
 
 	// 队列预先启动的最大spark driver数量
 	ComputeEngineMaxPrefetchInstance *int32 `json:"computeEngine.maxPrefetchInstance,omitempty"`
+
+	// 是否使用DLI Native。当前只涉及开启两种算子：Scan 和 Filter。修改现有队列的本属性，需要重启队列才会生效。
+	ComputeEngineSparkNativeEnabled *string `json:"computeEngine.spark.nativeEnabled,omitempty"`
 }
 
 func (o CommonQueueProperty) String() string {

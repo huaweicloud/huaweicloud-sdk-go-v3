@@ -9,7 +9,7 @@ import (
 // ListUnboundProtectedIpRequest Request Object
 type ListUnboundProtectedIpRequest struct {
 
-	// 防护包id
+	// 实例id
 	PackageId string `json:"package_id"`
 
 	// 开始查询的偏移量,默认值:0

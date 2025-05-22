@@ -37,6 +37,22 @@ func (i *BatchImportSecretsInvoker) Invoke() (*model.BatchImportSecretsResponse,
 	}
 }
 
+type CheckSecretsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckSecretsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckSecretsInvoker) Invoke() (*model.CheckSecretsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckSecretsResponse), nil
+	}
+}
+
 type CreateAgencyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -549,6 +565,22 @@ func (i *ShowSecretVersionInvoker) Invoke() (*model.ShowSecretVersionResponse, e
 	}
 }
 
+type ShowSecretsConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSecretsConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSecretsConfigInvoker) Invoke() (*model.ShowSecretsConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSecretsConfigResponse), nil
+	}
+}
+
 type ShowUserDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -626,6 +658,22 @@ func (i *UpdateSecretStageInvoker) Invoke() (*model.UpdateSecretStageResponse, e
 		return nil, err
 	} else {
 		return result.(*model.UpdateSecretStageResponse), nil
+	}
+}
+
+type UpdateSecretsConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSecretsConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSecretsConfigInvoker) Invoke() (*model.UpdateSecretsConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSecretsConfigResponse), nil
 	}
 }
 

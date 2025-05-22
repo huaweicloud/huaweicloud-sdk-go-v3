@@ -36,6 +36,9 @@ type ListListenersRequest struct {
 	// 监听器的管理状态。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 
+	// 参数解释：查询结果是否包含回收站负载均衡器的监听器  取值范围： - true ：包含回收站elb的监听器。 - false：不包含回收站elb的监听器。
+	IncludeRecycleBin *bool `json:"include_recycle_bin,omitempty"`
+
 	// ​监听器的最大连接数。  取值：-1表示不限制连接数。  支持多值查询，查询条件格式：*connection_limit=xxx&connection_limit=xxx*。  不支持该字段，请勿使用。
 	ConnectionLimit *[]int32 `json:"connection_limit,omitempty"`
 

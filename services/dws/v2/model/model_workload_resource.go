@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// WorkloadResource 工作负载队列资源项
+// WorkloadResource **参数解释**： 工作负载队列资源项。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 type WorkloadResource struct {
 
-	// 资源名称。
+	// **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	ResourceName string `json:"resource_name"`
 
-	// 资源属性值。
+	// **参数解释**： 资源属性值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	ResourceValue int32 `json:"resource_value"`
 }
 

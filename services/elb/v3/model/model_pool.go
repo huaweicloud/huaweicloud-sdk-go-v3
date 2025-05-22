@@ -15,6 +15,8 @@ type Pool struct {
 	// 参数解释：后端服务器组的管理状态。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
 	AdminStateUp bool `json:"admin_state_up"`
 
+	AzAffinity *AzAffinity `json:"az_affinity,omitempty"`
+
 	// 参数解释：后端服务器组的描述信息。
 	Description string `json:"description"`
 
@@ -78,7 +80,7 @@ type Pool struct {
 
 	ConnectionDrain *ConnectionDrain `json:"connection_drain,omitempty"`
 
-	// 参数解释：后端服务器组所在的企业项目ID。
+	// 参数解释：IP地址组所在的企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	PoolHealth *PoolHealth `json:"pool_health,omitempty"`

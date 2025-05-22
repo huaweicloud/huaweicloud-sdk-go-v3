@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// WorkloadPlanReq 资源管理计划
+// WorkloadPlanReq **参数解释**： 资源管理计划请求。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 type WorkloadPlanReq struct {
 
-	// 计划名称
+	// **参数解释**： 计划名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	PlanName string `json:"plan_name"`
 
-	// 逻辑集群名称
+	// **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	LogicalClusterName *string `json:"logical_cluster_name,omitempty"`
 }
 

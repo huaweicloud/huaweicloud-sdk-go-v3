@@ -15,6 +15,8 @@ type CreatePoolOption struct {
 	// 参数解释：后端服务器组的管理状态，只支持设置为true。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 
+	AzAffinity *AzAffinity `json:"az_affinity,omitempty"`
+
 	// 参数解释：后端服务器组的描述信息。
 	Description *string `json:"description,omitempty"`
 

@@ -9,19 +9,19 @@ import (
 // ListWorkloadQueueUsersResponse Response Object
 type ListWorkloadQueueUsersResponse struct {
 
-	// 结果状态码。
+	// **参数解释**： 结果状态码。 **取值范围**： 不涉及。
 	WorkloadResCode *int32 `json:"workload_res_code,omitempty"`
 
-	// 结果描述。
+	// **参数解释**： 结果描述。 **取值范围**： 不涉及。
 	WorkloadResStr *string `json:"workload_res_str,omitempty"`
 
-	// 队列名称。
+	// **参数解释**： 队列名称。 **取值范围**： 不涉及。
 	QueueName *string `json:"queue_name,omitempty"`
 
-	// 队列用户列表。
+	// **参数解释**： 队列用户列表。 **取值范围**： 不涉及。
 	UserList *[]WorkloadQueueUser `json:"user_list,omitempty"`
 
-	// 总数量
+	// **参数解释**： 总数量。 **取值范围**： 不涉及。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

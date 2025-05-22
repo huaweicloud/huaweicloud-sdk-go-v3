@@ -9,10 +9,10 @@ import (
 // ListLogicalClusterVolumesResponse Response Object
 type ListLogicalClusterVolumesResponse struct {
 
-	// 逻辑集群磁盘信息列表
+	// **参数解释**： 逻辑集群磁盘信息列表。 **取值范围**： 不涉及。
 	Volumes *[]LogicalClusterVolume `json:"volumes,omitempty"`
 
-	// 逻辑集群磁盘总数
+	// **参数解释**： 逻辑集群磁盘总数。 **取值范围**： 不涉及。
 	Count          *int64 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

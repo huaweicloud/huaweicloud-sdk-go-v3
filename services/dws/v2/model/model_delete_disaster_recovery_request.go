@@ -9,7 +9,7 @@ import (
 // DeleteDisasterRecoveryRequest Request Object
 type DeleteDisasterRecoveryRequest struct {
 
-	// 集群的ID
+	// **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	DisasterRecoveryId string `json:"disaster_recovery_id"`
 }
 

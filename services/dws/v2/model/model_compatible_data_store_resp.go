@@ -6,12 +6,13 @@ import (
 	"strings"
 )
 
+// CompatibleDataStoreResp **参数解释**： 版本信息。 **取值范围**： 不涉及。
 type CompatibleDataStoreResp struct {
 
-	// 类型
+	// **参数解释**： 数据库类型。 **取值范围**： 不涉及。
 	Type *string `json:"type,omitempty"`
 
-	// 版本
+	// **参数解释**： 版本。 **取值范围**： 不涉及。
 	Version *string `json:"version,omitempty"`
 }
 

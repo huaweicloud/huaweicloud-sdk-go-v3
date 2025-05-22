@@ -29,7 +29,7 @@ type Restore struct {
 
 	PublicIp *PublicIp `json:"public_ip,omitempty"`
 
-	// 企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+	// **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 指定网络协议类型，表明是否支持IPv6,默认不使用IPv6。

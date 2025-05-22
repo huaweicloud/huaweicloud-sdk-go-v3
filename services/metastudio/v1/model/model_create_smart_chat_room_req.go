@@ -34,7 +34,7 @@ type CreateSmartChatRoomReq struct {
 	// **参数解释**： 并发路数。
 	Concurrency *int32 `json:"concurrency,omitempty"`
 
-	// 默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+	// 默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
 	DefaultLanguage *CreateSmartChatRoomReqDefaultLanguage `json:"default_language,omitempty"`
 
 	BackgroundConfig *BackgroundConfigInfo `json:"background_config,omitempty"`
@@ -48,6 +48,12 @@ type CreateSmartChatRoomReq struct {
 
 	// 智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
 	ChatVideoType *CreateSmartChatRoomReqChatVideoType `json:"chat_video_type,omitempty"`
+
+	// **参数解释**： 静默退出时长。
+	ExitMuteThreshold *int32 `json:"exit_mute_threshold,omitempty"`
+
+	// 资源配置。
+	ChatResourceConfig *[]ChatResourceConfig `json:"chat_resource_config,omitempty"`
 }
 
 func (o CreateSmartChatRoomReq) String() string {
@@ -64,8 +70,12 @@ type CreateSmartChatRoomReqDefaultLanguage struct {
 }
 
 type CreateSmartChatRoomReqDefaultLanguageEnum struct {
-	CN CreateSmartChatRoomReqDefaultLanguage
-	EN CreateSmartChatRoomReqDefaultLanguage
+	CN     CreateSmartChatRoomReqDefaultLanguage
+	EN     CreateSmartChatRoomReqDefaultLanguage
+	ESP    CreateSmartChatRoomReqDefaultLanguage
+	POR    CreateSmartChatRoomReqDefaultLanguage
+	ARABIC CreateSmartChatRoomReqDefaultLanguage
+	THAI   CreateSmartChatRoomReqDefaultLanguage
 }
 
 func GetCreateSmartChatRoomReqDefaultLanguageEnum() CreateSmartChatRoomReqDefaultLanguageEnum {
@@ -75,6 +85,18 @@ func GetCreateSmartChatRoomReqDefaultLanguageEnum() CreateSmartChatRoomReqDefaul
 		},
 		EN: CreateSmartChatRoomReqDefaultLanguage{
 			value: "EN",
+		},
+		ESP: CreateSmartChatRoomReqDefaultLanguage{
+			value: "ESP",
+		},
+		POR: CreateSmartChatRoomReqDefaultLanguage{
+			value: "por",
+		},
+		ARABIC: CreateSmartChatRoomReqDefaultLanguage{
+			value: "Arabic",
+		},
+		THAI: CreateSmartChatRoomReqDefaultLanguage{
+			value: "Thai",
 		},
 	}
 }

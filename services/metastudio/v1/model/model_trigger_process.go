@@ -15,7 +15,7 @@ type TriggerProcess struct {
 	// **参数解释**： 处理抑制时长。单位秒。 - -1：表示整场直播仅触发一次。 - 0：表示无抑制，每次都触发。 - 其他值n：表示n秒内仅触发一次。  **约束限制**： 不涉及 **默认取值**： 不涉及
 	TimeWindow *int32 `json:"time_window,omitempty"`
 
-	// **参数解释**： 回复类型。 **约束限制**： 不涉及 **取值范围**： * SYSTEM_REPLY：系统自动回复预先设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER：仅显示叠加图层，不影响话术。 * INTELLIGENT_REPLY：使用配置的大模型生成回复话术。  **默认取值**： 不涉及
+	// **参数解释**： 回复类型。 **约束限制**： 不涉及 **取值范围**： * SYSTEM_REPLY：系统自动回复预先设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SYSTEM_REPLY_AND_CALLBACK：系统自动回复预先设置的话术，同时回调给用户,携带设置的话术。 * SHOW_LAYER：仅显示叠加图层，不影响话术。 * INTELLIGENT_REPLY：使用配置的大模型生成回复话术。  **默认取值**： 不涉及
 	ReplyMode *TriggerProcessReplyMode `json:"reply_mode,omitempty"`
 
 	LayerConfig *SmartLayerConfig `json:"layer_config,omitempty"`
@@ -55,10 +55,11 @@ type TriggerProcessReplyMode struct {
 }
 
 type TriggerProcessReplyModeEnum struct {
-	SYSTEM_REPLY      TriggerProcessReplyMode
-	CALLBACK          TriggerProcessReplyMode
-	SHOW_LAYER        TriggerProcessReplyMode
-	INTELLIGENT_REPLY TriggerProcessReplyMode
+	SYSTEM_REPLY              TriggerProcessReplyMode
+	CALLBACK                  TriggerProcessReplyMode
+	SYSTEM_REPLY_AND_CALLBACK TriggerProcessReplyMode
+	SHOW_LAYER                TriggerProcessReplyMode
+	INTELLIGENT_REPLY         TriggerProcessReplyMode
 }
 
 func GetTriggerProcessReplyModeEnum() TriggerProcessReplyModeEnum {
@@ -68,6 +69,9 @@ func GetTriggerProcessReplyModeEnum() TriggerProcessReplyModeEnum {
 		},
 		CALLBACK: TriggerProcessReplyMode{
 			value: "CALLBACK",
+		},
+		SYSTEM_REPLY_AND_CALLBACK: TriggerProcessReplyMode{
+			value: "SYSTEM_REPLY_AND_CALLBACK",
 		},
 		SHOW_LAYER: TriggerProcessReplyMode{
 			value: "SHOW_LAYER",

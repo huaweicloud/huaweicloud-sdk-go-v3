@@ -30,6 +30,9 @@ type ListLoadBalancersRequest struct {
 	// 参数解释：负载均衡器的启用状态。  取值范围： - true ：启用。 - false：停用。  [不支持该字段，请勿使用。](tag:dt)
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 
+	// 参数解释：查询结果是否包含回收站负载均衡器  取值范围： - true ：包含回收站elb。 - false：不包含回收站elb。
+	IncludeRecycleBin *bool `json:"include_recycle_bin,omitempty"`
+
 	// 负载均衡器的配置状态。  取值： - ACTIVE：使用中。 - PENDING_DELETE：删除中。  支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。
 	ProvisioningStatus *[]string `json:"provisioning_status,omitempty"`
 

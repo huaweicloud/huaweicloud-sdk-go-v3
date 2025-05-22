@@ -6,15 +6,16 @@ import (
 	"strings"
 )
 
+// CompatibleInstanceVolumeResp **参数解释**： 容量相关信息。 **取值范围**： 不涉及。
 type CompatibleInstanceVolumeResp struct {
 
-	// 类型
+	// **参数解释**： 类型。 **取值范围**： 不涉及。
 	Type *string `json:"type,omitempty"`
 
-	// 连接
+	// **参数解释**： 已使用空间。 **取值范围**： 不涉及。
 	Used *float32 `json:"used,omitempty"`
 
-	// 大小
+	// **参数解释**： 总大小。 **取值范围**： 不涉及。
 	Size *int32 `json:"size,omitempty"`
 }
 

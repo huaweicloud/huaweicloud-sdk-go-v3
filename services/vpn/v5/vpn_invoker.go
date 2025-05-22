@@ -549,6 +549,22 @@ func (i *ListVpnConnectionsInvoker) Invoke() (*model.ListVpnConnectionsResponse,
 	}
 }
 
+type ResetVpnConnectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetVpnConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ResetVpnConnectionInvoker) Invoke() (*model.ResetVpnConnectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetVpnConnectionResponse), nil
+	}
+}
+
 type ShowVpnConnectionInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// RedisTableDetail 重分布表详情
+// RedisTableDetail **参数解释**： 重分布表详情。 **取值范围**： 不涉及。
 type RedisTableDetail struct {
 
-	// 具体数据
+	// **参数解释**： 重分布具体数据。 **取值范围**： 不涉及。
 	Data *[]RedisTable `json:"data,omitempty"`
 
-	// 总条数
+	// **参数解释**： 重分布表张数。 **取值范围**： 不涉及。
 	Total *int32 `json:"total,omitempty"`
 }
 

@@ -39,8 +39,7 @@ var (
 		"https://ocr.af-south-1.myhuaweicloud.com",
 		"https://ocr.af-south-1.myhuaweicloud.cn")
 	LA_NORTH_2 = region.NewRegion("la-north-2",
-		"https://ocr.la-north-2.myhuaweicloud.com",
-		"https://ocr.la-north-2.myhuaweicloud.lat")
+		"https://ocr.la-north-2.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{

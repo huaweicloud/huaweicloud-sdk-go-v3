@@ -30,8 +30,14 @@ type LiveEventReportRequest struct {
 	// 鉴权Key。通过HmacSHA256生成的鉴权key
 	AuthKey *string `json:"auth_key,omitempty"`
 
-	// **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的毫秒数。
+	// 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
 	ExpiresTime *int64 `json:"expires_time,omitempty"`
+
+	// 鉴权Key。通过HmacSHA256生成的鉴权key
+	XMssAuthKey *string `json:"x-mss-auth-key,omitempty"`
+
+	// **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的毫秒数。
+	XMssExpiresTime *int64 `json:"x-mss-expires-time,omitempty"`
 
 	// 是否刷新URL
 	RefreshUrl *bool `json:"refresh_url,omitempty"`

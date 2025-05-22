@@ -6,12 +6,13 @@ import (
 	"strings"
 )
 
+// FlavorAttributeInfo **参数解释**： 扩展信息。 **取值范围**： 不涉及。
 type FlavorAttributeInfo struct {
 
-	// 属性编码
+	// **参数解释**： 属性编码。 **取值范围**： 不涉及。
 	Code string `json:"code"`
 
-	// 属性值
+	// **参数解释**： 属性值。 **取值范围**： 不涉及。
 	Value string `json:"value"`
 }
 

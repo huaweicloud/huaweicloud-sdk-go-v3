@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// EnableLogicalClusterRequestBody 切换逻辑集群开关请求
+// EnableLogicalClusterRequestBody **参数解释**： 切换逻辑集群开关请求。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 type EnableLogicalClusterRequestBody struct {
 
-	// true-切换开关
+	// **参数解释**： 切换逻辑集群开关请求。 **约束限制**： 不涉及。 **取值范围**： true：打开开关 false：关闭开关 **默认取值**： 不涉及。
 	Enable bool `json:"enable"`
 }
 

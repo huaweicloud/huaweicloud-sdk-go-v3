@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// ChangeSecurityGroupRequestBody 修改集群安全组请求参数
+// ChangeSecurityGroupRequestBody **参数解释**： 安全组请求体。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 type ChangeSecurityGroupRequestBody struct {
 
-	// 安全组ID数组
+	// **参数解释**： 安全组ID数组。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	SecurityGroups []string `json:"security_groups"`
 }
 

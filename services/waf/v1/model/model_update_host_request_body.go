@@ -33,7 +33,7 @@ type UpdateHostRequestBody struct {
 	// 是否支持http2   - true：表示支持http2   - false：表示不支持http2
 	Http2Enable *bool `json:"http2_enable,omitempty"`
 
-	// 是否开启IPv6防护，仅专业版（原企业版）和铂金版（原旗舰版）支持IPv6防护。   - true：开启IPv6防护   - false：关闭IPV6防护
+	// 是否开启IPv6防护，仅专业版和企业版支持IPv6防护。   - true：开启IPv6防护   - false：关闭IPV6防护
 	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
 
 	// 网站名称，对应WAF控制台域名详情中的网站名称

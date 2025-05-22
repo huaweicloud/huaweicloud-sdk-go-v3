@@ -56,6 +56,9 @@ type ListMembersRequest struct {
 
 	// member关联的ECS实例ID，空表示跨VPC场景的member。  支持多值查询，查询条件格式：*instance_id=xxx&instance_id=xxx*。
 	InstanceId *[]string `json:"instance_id,omitempty"`
+
+	// 后端服务器的可用区。  支持多值查询，查询条件格式：*availability_zone=xxx&availability_zone=xxx*。
+	AvailabilityZone *[]string `json:"availability_zone,omitempty"`
 }
 
 func (o ListMembersRequest) String() string {

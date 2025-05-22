@@ -9,7 +9,7 @@ import (
 // StartClusterResponse Response Object
 type StartClusterResponse struct {
 
-	// 启动集群jobId
+	// **参数解释**： 启动集群的任务ID。 **取值范围**： 不涉及。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

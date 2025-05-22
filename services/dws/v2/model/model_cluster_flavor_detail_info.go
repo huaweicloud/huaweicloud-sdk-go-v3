@@ -6,30 +6,31 @@ import (
 	"strings"
 )
 
+// ClusterFlavorDetailInfo **参数解释**： 集群规格详情。 **取值范围**： 不涉及。
 type ClusterFlavorDetailInfo struct {
 
-	// 规格ID
+	// **参数解释**： 规格ID。 **取值范围**： 不涉及。
 	Id string `json:"id"`
 
-	// 规格编码
+	// **参数解释**： 规格编码。 **取值范围**： 不涉及。
 	SpecName string `json:"spec_name"`
 
-	// 当前节点数量
+	// **参数解释**： 当前节点数量。 **取值范围**： 不涉及。
 	CurrentNode int32 `json:"current_node"`
 
-	// 最小节点阈值
+	// **参数解释**： 最小节点阈值。 **取值范围**： 不涉及。
 	MinNode int32 `json:"min_node"`
 
-	// 最大节点阈值
+	// **参数解释**： 最大节点阈值。 **取值范围**： 不涉及。
 	MaxNode int32 `json:"max_node"`
 
-	// 规格类型
+	// **参数解释**： 规格类型。 **取值范围**： 不涉及。
 	Classify string `json:"classify"`
 
-	// 数据仓库版本
+	// **参数解释**： 数据仓库版本。 **取值范围**： 不涉及。
 	DatastoreVersion string `json:"datastore_version"`
 
-	// 扩展信息
+	// **参数解释**： 扩展信息。 **取值范围**： 不涉及。
 	Attribute []FlavorAttributeInfo `json:"attribute"`
 
 	VolumeNode *FlavorVolumeNodeInfo `json:"volume_node"`

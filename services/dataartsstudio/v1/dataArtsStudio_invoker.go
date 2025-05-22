@@ -901,6 +901,22 @@ func (i *CreateFactoryJobInvoker) Invoke() (*model.CreateFactoryJobResponse, err
 	}
 }
 
+type CreateFactoryPendingItemsPackageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFactoryPendingItemsPackageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateFactoryPendingItemsPackageInvoker) Invoke() (*model.CreateFactoryPendingItemsPackageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFactoryPendingItemsPackageResponse), nil
+	}
+}
+
 type CreateFactorySupplementDataInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2722,6 +2738,22 @@ func (i *ListFactoryJobsInvoker) Invoke() (*model.ListFactoryJobsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListFactoryJobsResponse), nil
+	}
+}
+
+type ListFactoryPendingItemsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFactoryPendingItemsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListFactoryPendingItemsInvoker) Invoke() (*model.ListFactoryPendingItemsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFactoryPendingItemsResponse), nil
 	}
 }
 

@@ -84,6 +84,8 @@ type ListInstancesResult struct {
 
 	// 实例可用区。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
+
+	DualActiveInfo *DualActiveInfo `json:"dual_active_info,omitempty"`
 }
 
 func (o ListInstancesResult) String() string {

@@ -21,6 +21,8 @@ type RedirectPoolsExtendConfig struct {
 	TrafficLimitConfig *TrafficLimitConfig `json:"traffic_limit_config,omitempty"`
 
 	CorsConfig *CorsConfig `json:"cors_config,omitempty"`
+
+	TrafficMirrorConfig *TrafficMirrorConfig `json:"traffic_mirror_config,omitempty"`
 }
 
 func (o RedirectPoolsExtendConfig) String() string {

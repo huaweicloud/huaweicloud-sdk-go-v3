@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// NodeTypeAvailableZones 节点类型支持的可用区及状态信息。
+// NodeTypeAvailableZones 规格支持的可用区及状态信息。
 type NodeTypeAvailableZones struct {
 
-	// 可用区ID。
+	// **参数解释**： 可用区ID。 **取值范围**： 不涉及。
 	Code string `json:"code"`
 
-	// 节点类型可用状态。 - normal：可用 - sellout：售罄 - abandon：不可用
+	// **参数解释**： 规格可用状态。 **取值范围**： - normal：可用 - sellout：售罄 - abandon：不可用
 	Status string `json:"status"`
 }
 

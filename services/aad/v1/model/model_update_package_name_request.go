@@ -9,7 +9,7 @@ import (
 // UpdatePackageNameRequest Request Object
 type UpdatePackageNameRequest struct {
 
-	// 防护包id
+	// 实例id
 	PackageId string `json:"package_id"`
 
 	Body *UpdatePackageNameRequestBody `json:"body,omitempty"`

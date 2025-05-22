@@ -15,7 +15,7 @@ type CreatePolicyResponse struct {
 	// 策略名
 	Name *string `json:"name,omitempty"`
 
-	// 防护包id
+	// 实例id
 	PackageId *string `json:"package_id,omitempty"`
 
 	// 描述

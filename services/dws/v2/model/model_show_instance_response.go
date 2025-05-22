@@ -9,58 +9,58 @@ import (
 // ShowInstanceResponse Response Object
 type ShowInstanceResponse struct {
 
-	// 配置状态
+	// **参数解释**： 配置状态。 **取值范围**： 不涉及。
 	ConfigurationStatus *string `json:"configuration_status,omitempty"`
 
-	// 参数组ID
+	// **参数解释**： 参数组ID。 **取值范围**： 不涉及。
 	ParamsGroupId *string `json:"params_group_id,omitempty"`
 
-	// 类型
+	// **参数解释**： 类型。 **取值范围**： 不涉及。
 	Type *string `json:"type,omitempty"`
 
-	// 子网ID
+	// **参数解释**： 子网ID。 **取值范围**： 不涉及。
 	SubnetId *string `json:"subnet_id,omitempty"`
 
-	// 角色
+	// **参数解释**： 角色。 **取值范围**： 不涉及。
 	Role *string `json:"role,omitempty"`
 
-	// 内部子网ID
+	// **参数解释**： 内部子网ID。 **取值范围**： 不涉及。
 	InternalSubnetId *string `json:"internal_subnet_id,omitempty"`
 
-	// 组
+	// **参数解释**： 分组信息。 **取值范围**： 不涉及。
 	Group *string `json:"group,omitempty"`
 
-	// 安全组
+	// **参数解释**： 安全组。 **取值范围**： 不涉及。
 	SecureGroup *string `json:"secure_group,omitempty"`
 
-	// VPC
+	// **参数解释**： VPC ID。 **取值范围**： 不涉及。
 	Vpc *string `json:"vpc,omitempty"`
 
-	// 编码
+	// **参数解释**： 可用区编码。 **取值范围**： 不涉及。
 	Azcode *string `json:"azcode,omitempty"`
 
-	// 区域
+	// **参数解释**： 局点编码。 **取值范围**： 不涉及。
 	Region *string `json:"region,omitempty"`
 
-	// 集群ID
+	// **参数解释**： 集群ID。 **取值范围**： 不涉及。
 	ClusterId *string `json:"cluster_id,omitempty"`
 
-	// 被创建的
+	// **参数解释**： 创建时间。 **取值范围**： 不涉及。
 	Created *string `json:"created,omitempty"`
 
-	// 被更新的
+	// **参数解释**： 更新时间。 **取值范围**： 不涉及。
 	Updated *string `json:"updated,omitempty"`
 
-	// 状态
+	// **参数解释**： 状态。 **取值范围**： 不涉及。
 	Status *string `json:"status,omitempty"`
 
-	// 名称
+	// **参数解释**： 节点名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 连接
+	// **参数解释**： 链接信息。 **取值范围**： 不涉及。
 	Links *[]LinkResp `json:"links,omitempty"`
 
-	// ID
+	// **参数解释**： 节点ID。 **取值范围**： 不涉及。
 	Id *string `json:"id,omitempty"`
 
 	Flavor *ClusterFlavorResp `json:"flavor,omitempty"`
@@ -73,25 +73,25 @@ type ShowInstanceResponse struct {
 
 	Configuration *CompatibleConfigurationResp `json:"configuration,omitempty"`
 
-	// 地点
+	// **参数解释**： 废弃字段，无实际含义。 **取值范围**： 不涉及。
 	Locality *string `json:"locality,omitempty"`
 
-	// 备份
+	// **参数解释**： 废弃字段，无实际含义。 **取值范围**： 不涉及。
 	Replicas *[]CompatibleReplicasResp `json:"replicas,omitempty"`
 
-	// 数据库用户
+	// **参数解释**： 数据库用户。 **取值范围**： 不涉及。
 	DbUser *string `json:"db_user,omitempty"`
 
-	// 存储引擎
+	// **参数解释**： 存储引擎。 **取值范围**： 不涉及。
 	StorageEngine *string `json:"storage_engine,omitempty"`
 
-	// 付款方式
+	// **参数解释**： 付款方式。 **取值范围**： 不涉及。
 	PayModel *int32 `json:"pay_model,omitempty"`
 
-	// 公网IP
+	// **参数解释**： 公网IP。 **取值范围**： 不涉及。
 	PublicIp *string `json:"public_ip,omitempty"`
 
-	// 流量IP
+	// **参数解释**： 流量IP。 **取值范围**： 不涉及。
 	TrafficIp      *string `json:"traffic_ip,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

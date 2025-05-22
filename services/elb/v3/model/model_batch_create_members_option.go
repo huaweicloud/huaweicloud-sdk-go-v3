@@ -12,6 +12,9 @@ type BatchCreateMembersOption struct {
 	// 后端服务器名称。
 	Name *string `json:"name,omitempty"`
 
+	// 参数解释：后端服务器的可用区。 约束限制：  仅支持iptarget类型的后端服务器设置该字段。且后端服务器组开启可用区亲和时，iptarget类型的后端服务器必须配置该字段为有效非空值。 取值范围：本region中ECS可选择的可用区。
+	AvailabilityZone *string `json:"availability_zone,omitempty"`
+
 	// 后端服务器的对应的IP地址，这个IP必须在subnet_cidr_id字段的子网网段中。例如：192.168.3.11。  subnet_cidr_id为空代表添加跨VPC后端，此时address必须为**私网IPv4**地址。
 	Address string `json:"address"`
 

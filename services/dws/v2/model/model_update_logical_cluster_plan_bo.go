@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// UpdateLogicalClusterPlanBo 更新逻辑集群增删计划
+// UpdateLogicalClusterPlanBo **参数解释**： 更新逻辑集群增删计划请求体。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 type UpdateLogicalClusterPlanBo struct {
 
-	// 更新逻辑集群增删计划细节信息列表
+	// **参数解释**： 更新逻辑集群增删计划细节信息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Actions []UpdateLogicalClusterPlanActions `json:"actions"`
 }
 

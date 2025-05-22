@@ -9,7 +9,7 @@ import (
 // BatchDeleteClusterCnResponse Response Object
 type BatchDeleteClusterCnResponse struct {
 
-	// 批量删除CN节点任务ID
+	// **参数解释**： 批量删除CN节点任务ID信息。 **取值范围**： 不涉及。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

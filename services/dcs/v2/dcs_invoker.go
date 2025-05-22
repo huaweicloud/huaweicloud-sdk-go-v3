@@ -549,6 +549,22 @@ func (i *DeleteSingleInstanceInvoker) Invoke() (*model.DeleteSingleInstanceRespo
 	}
 }
 
+type DownloadHotKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadHotKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadHotKeyInvoker) Invoke() (*model.DownloadHotKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadHotKeyResponse), nil
+	}
+}
+
 type DownloadSslCertInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1157,6 +1173,22 @@ func (i *LogoffWebCliInvoker) Invoke() (*model.LogoffWebCliResponse, error) {
 	}
 }
 
+type MigrateAzInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *MigrateAzInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *MigrateAzInvoker) Invoke() (*model.MigrateAzResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.MigrateAzResponse), nil
+	}
+}
+
 type ResetAclAccountPassWordInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1234,6 +1266,22 @@ func (i *RestoreInstanceInvoker) Invoke() (*model.RestoreInstanceResponse, error
 		return nil, err
 	} else {
 		return result.(*model.RestoreInstanceResponse), nil
+	}
+}
+
+type RollbackExchangeInstanceIpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RollbackExchangeInstanceIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RollbackExchangeInstanceIpInvoker) Invoke() (*model.RollbackExchangeInstanceIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RollbackExchangeInstanceIpResponse), nil
 	}
 }
 
@@ -1506,6 +1554,22 @@ func (i *ShowInstanceSslDetailInvoker) Invoke() (*model.ShowInstanceSslDetailRes
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceSslDetailResponse), nil
+	}
+}
+
+type ShowInstanceTopologyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceTopologyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceTopologyInvoker) Invoke() (*model.ShowInstanceTopologyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceTopologyResponse), nil
 	}
 }
 
@@ -1909,6 +1973,22 @@ func (i *UpdateInstanceConfigInvoker) Invoke() (*model.UpdateInstanceConfigRespo
 	}
 }
 
+type UpdateIpWhitelistAsyncInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateIpWhitelistAsyncInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateIpWhitelistAsyncInvoker) Invoke() (*model.UpdateIpWhitelistAsyncResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateIpWhitelistAsyncResponse), nil
+	}
+}
+
 type UpdateMigrationTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2050,5 +2130,69 @@ func (i *UpdateIpWhitelistInvoker) Invoke() (*model.UpdateIpWhitelistResponse, e
 		return nil, err
 	} else {
 		return result.(*model.UpdateIpWhitelistResponse), nil
+	}
+}
+
+type CreateOfflineKeyAnalysisInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateOfflineKeyAnalysisInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateOfflineKeyAnalysisInvoker) Invoke() (*model.CreateOfflineKeyAnalysisResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateOfflineKeyAnalysisResponse), nil
+	}
+}
+
+type DeleteOfflineKeyAnalysisTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteOfflineKeyAnalysisTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteOfflineKeyAnalysisTaskInvoker) Invoke() (*model.DeleteOfflineKeyAnalysisTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteOfflineKeyAnalysisTaskResponse), nil
+	}
+}
+
+type ListOfflineKeyAnalysisTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOfflineKeyAnalysisTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListOfflineKeyAnalysisTaskInvoker) Invoke() (*model.ListOfflineKeyAnalysisTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOfflineKeyAnalysisTaskResponse), nil
+	}
+}
+
+type ShowOfflineKeyAnalysisTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowOfflineKeyAnalysisTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowOfflineKeyAnalysisTaskInvoker) Invoke() (*model.ShowOfflineKeyAnalysisTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowOfflineKeyAnalysisTaskResponse), nil
 	}
 }

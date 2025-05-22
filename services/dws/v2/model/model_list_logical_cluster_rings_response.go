@@ -9,10 +9,10 @@ import (
 // ListLogicalClusterRingsResponse Response Object
 type ListLogicalClusterRingsResponse struct {
 
-	// 集群环列表信息
+	// **参数解释**： 集群环列表信息。 **取值范围**： 不涉及。
 	ClusterRings *[]LogicalClusterRingInfo `json:"cluster_rings,omitempty"`
 
-	// 集群环数量
+	// **参数解释**： 集群环数量。 **取值范围**： 不涉及。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

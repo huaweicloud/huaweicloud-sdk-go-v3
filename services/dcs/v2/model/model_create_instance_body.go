@@ -14,7 +14,7 @@ type CreateInstanceBody struct {
 	// 缓存引擎：Redis和Memcached。
 	Engine string `json:"engine"`
 
-	// 缓存版本。  当缓存引擎为Redis时，取值为3.0、4.0或5.0。  当缓存引擎为Memcached时，该字段为可选，取值为空。
+	// 缓存版本。 当缓存引擎为Redis时，取值为4.0及以上。
 	EngineVersion *string `json:"engine_version,omitempty"`
 
 	// 缓存容量（G Byte） - Redis3.0：单机和主备类型实例取值：2、4、8、16、32、64。Proxy集群实例规格支持64、128、256、512和1024。 - Redis4.0和Redis5.0：单机和主备类型实例取值：0.125、0.25、0.5、1、2、4、8、16、32、64。Cluster集群实例规格支持24、32、48、64、96、128、192、256、384、512、768、1024。 - Memcached：单机和主备类型实例取值：2、4、8、16、32、64。

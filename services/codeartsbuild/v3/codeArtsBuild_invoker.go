@@ -133,6 +133,22 @@ func (i *DownloadKeystoreInvoker) Invoke() (*model.DownloadKeystoreResponse, err
 	}
 }
 
+type DownloadRealTimeLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadRealTimeLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadRealTimeLogInvoker) Invoke() (*model.DownloadRealTimeLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadRealTimeLogResponse), nil
+	}
+}
+
 type DownloadTaskLogInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -162,6 +178,22 @@ func (i *EnableBuildJobInvoker) Invoke() (*model.EnableBuildJobResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.EnableBuildJobResponse), nil
+	}
+}
+
+type ListBuildInfoRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBuildInfoRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBuildInfoRecordInvoker) Invoke() (*model.ListBuildInfoRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBuildInfoRecordResponse), nil
 	}
 }
 
@@ -229,6 +261,22 @@ func (i *RunJobInvoker) Invoke() (*model.RunJobResponse, error) {
 	}
 }
 
+type ShowBuildRecordFullStagesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBuildRecordFullStagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowBuildRecordFullStagesInvoker) Invoke() (*model.ShowBuildRecordFullStagesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBuildRecordFullStagesResponse), nil
+	}
+}
+
 type ShowHistoryDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -242,6 +290,22 @@ func (i *ShowHistoryDetailsInvoker) Invoke() (*model.ShowHistoryDetailsResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowHistoryDetailsResponse), nil
+	}
+}
+
+type ShowJobBuildSuccessRatioInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowJobBuildSuccessRatioInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowJobBuildSuccessRatioInvoker) Invoke() (*model.ShowJobBuildSuccessRatioResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowJobBuildSuccessRatioResponse), nil
 	}
 }
 
@@ -370,6 +434,54 @@ func (i *ShowRecordDetailInvoker) Invoke() (*model.ShowRecordDetailResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowRecordDetailResponse), nil
+	}
+}
+
+type ShowReportSummaryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowReportSummaryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowReportSummaryInvoker) Invoke() (*model.ShowReportSummaryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowReportSummaryResponse), nil
+	}
+}
+
+type ShowRunningStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRunningStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRunningStatusInvoker) Invoke() (*model.ShowRunningStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRunningStatusResponse), nil
+	}
+}
+
+type ShowYamlTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowYamlTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowYamlTemplateInvoker) Invoke() (*model.ShowYamlTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowYamlTemplateResponse), nil
 	}
 }
 

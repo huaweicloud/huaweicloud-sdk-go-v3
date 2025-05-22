@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// WorkloadQueue 工作负载队列
+// WorkloadQueue **参数解释**： 资源池信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 type WorkloadQueue struct {
 
-	// 工作负载队列名称。
+	// **参数解释**： 工作负载队列名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	WorkloadQueueName string `json:"workload_queue_name"`
 
-	// 逻辑集群名称。
+	// **参数解释**： 逻辑集群名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	LogicalClusterName *string `json:"logical_cluster_name,omitempty"`
 
-	// 资源配置队列。
+	// **参数解释**： 资源配置队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	WorkloadResourceItemList []WorkloadResource `json:"workload_resource_item_list"`
 }
 

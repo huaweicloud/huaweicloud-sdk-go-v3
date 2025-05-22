@@ -41,6 +41,12 @@ type UpdatePolicy struct {
 
 	// 告警级别, 1为紧急，2为重要，3为次要，4为提示。默认值为2。
 	Level *int32 `json:"level,omitempty"`
+
+	// 产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属。各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+	Namespace *string `json:"namespace,omitempty"`
+
+	// 产品层级规则增加namespace（服务命名空间）和dimension_name（服务维度名称）指明生效策略归属，目前最大支持4个维度，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”
+	DimensionName *string `json:"dimension_name,omitempty"`
 }
 
 func (o UpdatePolicy) String() string {

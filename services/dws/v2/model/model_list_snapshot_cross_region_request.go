@@ -9,10 +9,10 @@ import (
 // ListSnapshotCrossRegionRequest Request Object
 type ListSnapshotCrossRegionRequest struct {
 
-	// 分页偏移，默认0
+	// **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 分页大小，默认10
+	// **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 10
 	Limit *int32 `json:"limit,omitempty"`
 }
 

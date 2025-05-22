@@ -9,7 +9,7 @@ import (
 // ListHostDiskRequest Request Object
 type ListHostDiskRequest struct {
 
-	// 集群ID。获取方法，请参见9.6-获取集群ID。
+	// **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
 	ClusterId *string `json:"cluster_id,omitempty"`
 
 	// 实例ID。
@@ -18,11 +18,11 @@ type ListHostDiskRequest struct {
 	// 实例名称。
 	InstanceName *string `json:"instance_name,omitempty"`
 
-	// 数据条目数。
-	Limit int32 `json:"limit"`
+	// **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 不限制。
+	Limit *int32 `json:"limit,omitempty"`
 
-	// 数据偏移量。
-	Offset int32 `json:"offset"`
+	// **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListHostDiskRequest) String() string {

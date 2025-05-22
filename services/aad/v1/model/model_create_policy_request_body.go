@@ -12,7 +12,7 @@ type CreatePolicyRequestBody struct {
 	// 策略名
 	Name string `json:"name"`
 
-	// 防护包id
+	// 实例id
 	PackageId string `json:"package_id"`
 
 	// 描述

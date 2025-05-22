@@ -48,7 +48,7 @@ type ListHealthMonitorsRequest struct {
 	// 健康检查请求协议。  取值：TCP、UDP_CONNECT、HTTP、HTTPS、TLS和GRPC。  支持多值查询，查询条件格式：*****type=xxx&type=xxx*****。
 	Type *[]string `json:"type,omitempty"`
 
-	// 期望响应状态码。  取值： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。   默认值：200。  仅支持HTTP/HTTPS/GRPC设置该字段，其他协议设置不会生效。  支持多值查询，查询条件格式：****expected_codes=xxx&expected_codes=xxx****。
+	// 期望响应状态码。  取值： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。   默认值：200。  该字段仅在HTTP/HTTPS/GRPC协议下有效，其他协议可以设置但不会生效。  支持多值查询，查询条件格式：****expected_codes=xxx&expected_codes=xxx****。
 	ExpectedCodes *[]string `json:"expected_codes,omitempty"`
 
 	// 健康检查测试member健康时发送的http请求路径。默认为“/”。  使用说明：以“/”开头。当type为HTTP/HTTPS时生效。  支持多值查询，查询条件格式：***url_path=xxx&url_path=xxx***。

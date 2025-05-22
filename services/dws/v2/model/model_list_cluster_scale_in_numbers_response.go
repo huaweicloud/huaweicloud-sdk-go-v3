@@ -9,7 +9,7 @@ import (
 // ListClusterScaleInNumbersResponse Response Object
 type ListClusterScaleInNumbersResponse struct {
 
-	// 合适的缩容数
+	// 参数解释: 合适的缩容数。 取值范围: 不涉及。
 	ShrinkSequence *[]string `json:"shrink_sequence,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

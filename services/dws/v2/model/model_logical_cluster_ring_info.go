@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// LogicalClusterRingInfo 集群实例环信息
+// LogicalClusterRingInfo **参数解释**： 集群实例环信息。 **取值范围**： 不涉及。
 type LogicalClusterRingInfo struct {
 
-	// 集群主机环信息
+	// **参数解释**： 集群实例环信息。 **取值范围**： 不涉及。
 	RingHosts *[]RingHost `json:"ring_hosts,omitempty"`
 }
 

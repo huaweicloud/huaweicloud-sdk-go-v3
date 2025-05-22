@@ -9,46 +9,46 @@ import (
 // RedisProgress 重分布进度信息
 type RedisProgress struct {
 
-	// 已完成字节数
+	// **参数解释**： 已完成字节数。 **取值范围**： 不涉及。
 	BytesDone *int64 `json:"bytes_done,omitempty"`
 
-	// 剩余字节数
+	// **参数解释**： 剩余字节数。 **取值范围**： 不涉及。
 	ByteLeft *int64 `json:"byte_left,omitempty"`
 
-	// 完成表数量
+	// **参数解释**： 完成表数量。 **取值范围**： 不涉及。
 	TablesDone *int32 `json:"tables_done,omitempty"`
 
-	// 剩余表数量
+	// **参数解释**： 剩余表数量。 **取值范围**： 不涉及。
 	TablesLeft *int32 `json:"tables_left,omitempty"`
 
-	// 表重分布进度
+	// **参数解释**： 表重分布进度。 **取值范围**： 1~100。
 	TableProgress *int32 `json:"table_progress,omitempty"`
 
-	// 总进度
+	// **参数解释**： 总进度。 **取值范围**： 1~100。
 	TotalProgress *int32 `json:"total_progress,omitempty"`
 
-	// 重分布比例
+	// **参数解释**： 重分布速度。 **取值范围**： 不涉及。
 	RedisRate *string `json:"redis_rate,omitempty"`
 
-	// 预计时间
+	// **参数解释**： 预估时间。 **取值范围**： 不涉及。
 	EstimatedTime *string `json:"estimated_time,omitempty"`
 
-	// 是否已完成
+	// **参数解释**： 是否已完成。 **取值范围**： 不涉及。
 	Completed *bool `json:"completed,omitempty"`
 
-	// 是否完成初始化
+	// **参数解释**： 是否完成初始化。 **取值范围**： 不涉及。
 	Initialed *bool `json:"initialed,omitempty"`
 
-	// 失败总数
+	// **参数解释**： 失败次数。 **取值范围**： 不涉及。
 	FailCount *int32 `json:"fail_count,omitempty"`
 
-	// cm_ctl 结果
+	// **参数解释**： cm_ctl查询的重分布结果。 **取值范围**： 不涉及。
 	Redistributing *bool `json:"redistributing,omitempty"`
 
-	// 状态
+	// **参数解释**： 状态。 **取值范围**： 不涉及。
 	Status *string `json:"status,omitempty"`
 
-	// 是否用户暂停
+	// **参数解释**： 是否用户暂停。 **取值范围**： 不涉及。
 	PauseByUser *bool `json:"pause_by_user,omitempty"`
 }
 

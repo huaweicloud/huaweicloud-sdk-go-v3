@@ -293,6 +293,22 @@ func (i *CreateDisasterRecoveryInvoker) Invoke() (*model.CreateDisasterRecoveryR
 	}
 }
 
+type CreateGeminiDbDualActiveInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateGeminiDbDualActiveInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateGeminiDbDualActiveInvoker) Invoke() (*model.CreateGeminiDbDualActiveResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateGeminiDbDualActiveResponse), nil
+	}
+}
+
 type CreateInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -418,6 +434,22 @@ func (i *DeleteEnlargeFailNodeInvoker) Invoke() (*model.DeleteEnlargeFailNodeRes
 		return nil, err
 	} else {
 		return result.(*model.DeleteEnlargeFailNodeResponse), nil
+	}
+}
+
+type DeleteGeminiDbDualActiveInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteGeminiDbDualActiveInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteGeminiDbDualActiveInvoker) Invoke() (*model.DeleteGeminiDbDualActiveResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteGeminiDbDualActiveResponse), nil
 	}
 }
 

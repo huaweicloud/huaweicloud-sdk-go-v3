@@ -12,10 +12,10 @@ type WorkloadPlanInfo struct {
 	// 计划状态。
 	Status *int32 `json:"status,omitempty"`
 
-	// 项目ID。
+	// **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	ProjectId string `json:"project_id"`
 
-	// 集群ID。
+	// **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
 	ClusterId string `json:"cluster_id"`
 
 	// 计划ID。

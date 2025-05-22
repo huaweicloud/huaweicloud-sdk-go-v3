@@ -9,7 +9,7 @@ import (
 // UpdatePackageIpRequest Request Object
 type UpdatePackageIpRequest struct {
 
-	// 防护包id
+	// 实例id
 	PackageId string `json:"package_id"`
 
 	Body *UpdatePackageIpRequestBody `json:"body,omitempty"`

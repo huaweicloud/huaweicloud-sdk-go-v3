@@ -12,6 +12,9 @@ type UpdateMemberOption struct {
 	// 后端服务器的管理状态。  取值：true、false。  虽然创建、更新请求支持该字段，但实际取值决定于后端服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。  请勿传入该字段。
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 
+	// 参数解释：后端服务器的可用区。  约束限制： 仅支持iptarget类型的后端服务器更新该字段。且后端服务器组开启可用区亲和时，iptarget类型的后端服务器必须配置该字段，且无法更新为\"\"。 取值范围：本region中ECS可选择的可用区。
+	AvailabilityZone *string `json:"availability_zone,omitempty"`
+
 	// 后端服务器名称。
 	Name *string `json:"name,omitempty"`
 

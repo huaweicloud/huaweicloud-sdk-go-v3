@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// DeleteClusterRequestBody This is a auto create Body Object
+// DeleteClusterRequestBody **参数解释**： 删除集群请求信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 type DeleteClusterRequestBody struct {
 
-	// 集群需要保留的快照数
+	// **参数解释**： 集群需要保留的快照数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	KeepLastManualSnapshot int32 `json:"keep_last_manual_snapshot"`
 }
 

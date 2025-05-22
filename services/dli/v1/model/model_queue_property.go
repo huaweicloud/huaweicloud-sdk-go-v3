@@ -11,7 +11,7 @@ import (
 
 type QueueProperty struct {
 
-	// 返回属性值对应的key值 computeEngine.maxInstances, 队列能启动的最大spark driver数量 computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量 job.maxConcurrent,单个spark driver能同时运行的最大任务数量 multipleSc.support,是否支持设置多个spark driver
+	// 返回属性值对应的key值: computeEngine.maxInstances, 队列能启动的最大spark driver数量; computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量; job.maxConcurrent,单个spark driver能同时运行的最大任务数量; multipleSc.support,是否支持设置多个spark driver; job.saveJobResultToJobBucket, 是否使用作业桶保存SQL查询结果，true代表开启; computeEngine.spark.nativeEnabled, 是否使用DLI Native;
 	Key QueuePropertyKey `json:"key"`
 
 	Value string `json:"value"`
@@ -35,6 +35,8 @@ type QueuePropertyKeyEnum struct {
 	COMPUTE_ENGINE_MAX_PREFETCH_INSTANCE QueuePropertyKey
 	JOB_MAX_CONCURRENT                   QueuePropertyKey
 	MULTIPLE_SC_SUPPORT                  QueuePropertyKey
+	JOB_SAVE_JOB_RESULT_TO_JOB_BUCKET    QueuePropertyKey
+	COMPUTE_ENGINE_SPARK_NATIVE_ENABLED  QueuePropertyKey
 }
 
 func GetQueuePropertyKeyEnum() QueuePropertyKeyEnum {
@@ -50,6 +52,12 @@ func GetQueuePropertyKeyEnum() QueuePropertyKeyEnum {
 		},
 		MULTIPLE_SC_SUPPORT: QueuePropertyKey{
 			value: "multipleSc.support",
+		},
+		JOB_SAVE_JOB_RESULT_TO_JOB_BUCKET: QueuePropertyKey{
+			value: "job.saveJobResultToJobBucket",
+		},
+		COMPUTE_ENGINE_SPARK_NATIVE_ENABLED: QueuePropertyKey{
+			value: "computeEngine.spark.nativeEnabled",
 		},
 	}
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CreateClusterRequestBody This is a auto create Body Object
+// CreateClusterRequestBody **参数解释**： 创建集群的请求体。 **取值范围**： 非空对象。
 type CreateClusterRequestBody struct {
 	Cluster *CreateClusterInfo `json:"cluster"`
 }

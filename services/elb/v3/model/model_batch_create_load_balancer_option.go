@@ -100,7 +100,7 @@ type BatchCreateLoadBalancerOption struct {
 	// 参数解释：设置保护的原因。作为protection_status的转态设置的原因。  约束限制：仅当protection_status为consoleProtection时有效。  取值范围：除<和>外通用Unicode字符集字符，最大255个字符。
 	ProtectionReason *string `json:"protection_reason,omitempty"`
 
-	// '创建实例采用的计费模式。flavor: 按实例规格收费，默认值。lcu: 按使用量收费。' 批量创建共享型实例时，该字段不允许指定。
+	// 创建实例采用的计费模式。flavor: 按实例规格收费，默认值。lcu: 按使用量收费。 批量创建共享型实例时，该字段不允许指定。
 	ChargeMode *BatchCreateLoadBalancerOptionChargeMode `json:"charge_mode,omitempty"`
 
 	// 双栈类型负载均衡器的IPv6地址。 当批量创建的number数量大于1时不支持传入该字段，返回400。 批量创建共享型实例的场景，该字段不允许指定。 [不支持IPv6，请勿使用。](tag:dt)

@@ -15,7 +15,7 @@ type InteractionRuleGroupDetail struct {
 	// 互动规则库名称
 	GroupName string `json:"group_name"`
 
-	// 互动规则列表
+	// 互动规则列表。 > 查询互动规则库列表接口不再返回该内容。请使用查询互动规则库详情接口查具体某个库的规则列表。
 	InteractionRules *[]InteractionRuleDetailInfo `json:"interaction_rules,omitempty"`
 
 	// 创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。

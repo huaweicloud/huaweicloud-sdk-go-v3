@@ -102,6 +102,9 @@ type TaskInfo struct {
 	// 部署记录序列号
 	ReleaseId *int32 `json:"release_id,omitempty"`
 
+	// 部署应用id
+	AppId *string `json:"app_id,omitempty"`
+
 	// 当前应用是否被禁用
 	IsDisable *bool `json:"is_disable,omitempty"`
 

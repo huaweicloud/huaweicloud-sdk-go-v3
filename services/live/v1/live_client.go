@@ -1620,3 +1620,24 @@ func (c *LiveClient) ModifyOttChannelInfoStatsInvoker(request *model.ModifyOttCh
 	requestDef := GenReqDefForModifyOttChannelInfoStats()
 	return &ModifyOttChannelInfoStatsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// ShowChannelStatistic 查询频道统计信息
+//
+// 查询频道的统计信息（入流scte35信号）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ShowChannelStatistic(request *model.ShowChannelStatisticRequest) (*model.ShowChannelStatisticResponse, error) {
+	requestDef := GenReqDefForShowChannelStatistic()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowChannelStatisticResponse), nil
+	}
+}
+
+// ShowChannelStatisticInvoker 查询频道统计信息
+func (c *LiveClient) ShowChannelStatisticInvoker(request *model.ShowChannelStatisticRequest) *ShowChannelStatisticInvoker {
+	requestDef := GenReqDefForShowChannelStatistic()
+	return &ShowChannelStatisticInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

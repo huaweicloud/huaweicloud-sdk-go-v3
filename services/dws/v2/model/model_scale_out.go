@@ -9,10 +9,10 @@ import (
 // ScaleOut 扩容集群详情
 type ScaleOut struct {
 
-	// 扩容节点数。
+	// **参数解释**： 扩容节点数。 **取值范围**： 大于等于3。
 	Count int32 `json:"count"`
 
-	// 指定子网ID。
+	// **参数解释**： 子网ID。 **取值范围**： 同VPC下有效的子网ID。
 	SubnetId *string `json:"subnet_id,omitempty"`
 }
 

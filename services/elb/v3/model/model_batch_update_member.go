@@ -55,6 +55,9 @@ type BatchUpdateMember struct {
 
 	// 更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
 	UpdatedAt *string `json:"updated_at,omitempty"`
+
+	// 后端服务器所在的可用区。
+	AvailabilityZone *string `json:"availability_zone,omitempty"`
 }
 
 func (o BatchUpdateMember) String() string {

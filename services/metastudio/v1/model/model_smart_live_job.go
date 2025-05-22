@@ -65,7 +65,7 @@ type SmartLiveJob struct {
 
 	RelationLivePlatformInfo *PlatformLiveDetailInfo `json:"relation_live_platform_info,omitempty"`
 
-	// 使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * UNKNOW：未知资源类型。
+	// 使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * ONE_TIME：一次性资源 * UNKNOW：未知资源类型。
 	UsedResourceType *SmartLiveJobUsedResourceType `json:"used_resource_type,omitempty"`
 }
 
@@ -144,6 +144,7 @@ type SmartLiveJobUsedResourceType struct {
 type SmartLiveJobUsedResourceTypeEnum struct {
 	PERIOD   SmartLiveJobUsedResourceType
 	ONDEMAND SmartLiveJobUsedResourceType
+	ONE_TIME SmartLiveJobUsedResourceType
 	UNKNOW   SmartLiveJobUsedResourceType
 }
 
@@ -154,6 +155,9 @@ func GetSmartLiveJobUsedResourceTypeEnum() SmartLiveJobUsedResourceTypeEnum {
 		},
 		ONDEMAND: SmartLiveJobUsedResourceType{
 			value: "ONDEMAND",
+		},
+		ONE_TIME: SmartLiveJobUsedResourceType{
+			value: "ONE_TIME",
 		},
 		UNKNOW: SmartLiveJobUsedResourceType{
 			value: "UNKNOW",

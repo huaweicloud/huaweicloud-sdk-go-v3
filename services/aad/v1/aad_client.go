@@ -187,9 +187,9 @@ func (c *AadClient) AssociateIpToPolicyInvoker(request *model.AssociateIpToPolic
 	return &AssociateIpToPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// AssociateIpToPolicyAndPackage 策略和防护包绑定防护对象
+// AssociateIpToPolicyAndPackage 策略和实例绑定防护对象
 //
-// 策略和防护包绑定防护对象
+// 策略和实例绑定防护对象
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AadClient) AssociateIpToPolicyAndPackage(request *model.AssociateIpToPolicyAndPackageRequest) (*model.AssociateIpToPolicyAndPackageResponse, error) {
@@ -202,7 +202,7 @@ func (c *AadClient) AssociateIpToPolicyAndPackage(request *model.AssociateIpToPo
 	}
 }
 
-// AssociateIpToPolicyAndPackageInvoker 策略和防护包绑定防护对象
+// AssociateIpToPolicyAndPackageInvoker 策略和实例绑定防护对象
 func (c *AadClient) AssociateIpToPolicyAndPackageInvoker(request *model.AssociateIpToPolicyAndPackageRequest) *AssociateIpToPolicyAndPackageInvoker {
 	requestDef := GenReqDefForAssociateIpToPolicyAndPackage()
 	return &AssociateIpToPolicyAndPackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -397,9 +397,9 @@ func (c *AadClient) DisassociateIpFromPolicyInvoker(request *model.DisassociateI
 	return &DisassociateIpFromPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DisassociateIpFromPolicyAndPackage 策略和防护包解绑防护对象
+// DisassociateIpFromPolicyAndPackage 策略和实例解绑防护对象
 //
-// 策略和防护包解绑防护对象
+// 策略和实例解绑防护对象
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AadClient) DisassociateIpFromPolicyAndPackage(request *model.DisassociateIpFromPolicyAndPackageRequest) (*model.DisassociateIpFromPolicyAndPackageResponse, error) {
@@ -412,7 +412,7 @@ func (c *AadClient) DisassociateIpFromPolicyAndPackage(request *model.Disassocia
 	}
 }
 
-// DisassociateIpFromPolicyAndPackageInvoker 策略和防护包解绑防护对象
+// DisassociateIpFromPolicyAndPackageInvoker 策略和实例解绑防护对象
 func (c *AadClient) DisassociateIpFromPolicyAndPackageInvoker(request *model.DisassociateIpFromPolicyAndPackageRequest) *DisassociateIpFromPolicyAndPackageInvoker {
 	requestDef := GenReqDefForDisassociateIpFromPolicyAndPackage()
 	return &DisassociateIpFromPolicyAndPackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -502,9 +502,9 @@ func (c *AadClient) ListInstanceIpRuleInvoker(request *model.ListInstanceIpRuleR
 	return &ListInstanceIpRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPackage 查询防护包列表
+// ListPackage 查询实例列表
 //
-// 查询防护包列表
+// 查询实例列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AadClient) ListPackage(request *model.ListPackageRequest) (*model.ListPackageResponse, error) {
@@ -517,7 +517,7 @@ func (c *AadClient) ListPackage(request *model.ListPackageRequest) (*model.ListP
 	}
 }
 
-// ListPackageInvoker 查询防护包列表
+// ListPackageInvoker 查询实例列表
 func (c *AadClient) ListPackageInvoker(request *model.ListPackageRequest) *ListPackageInvoker {
 	requestDef := GenReqDefForListPackage()
 	return &ListPackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -775,9 +775,9 @@ func (c *AadClient) UpdateInstanceIpRuleInvoker(request *model.UpdateInstanceIpR
 	return &UpdateInstanceIpRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdatePackageIp 更新防护包绑定的全量防护对象
+// UpdatePackageIp 更新实例绑定的全量防护对象
 //
-// 更新防护包绑定的全量防护对象
+// 更新实例绑定的全量防护对象
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AadClient) UpdatePackageIp(request *model.UpdatePackageIpRequest) (*model.UpdatePackageIpResponse, error) {
@@ -790,15 +790,15 @@ func (c *AadClient) UpdatePackageIp(request *model.UpdatePackageIpRequest) (*mod
 	}
 }
 
-// UpdatePackageIpInvoker 更新防护包绑定的全量防护对象
+// UpdatePackageIpInvoker 更新实例绑定的全量防护对象
 func (c *AadClient) UpdatePackageIpInvoker(request *model.UpdatePackageIpRequest) *UpdatePackageIpInvoker {
 	requestDef := GenReqDefForUpdatePackageIp()
 	return &UpdatePackageIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdatePackageName 更新防护包名字
+// UpdatePackageName 更新实例名字
 //
-// 更新防护包名字
+// 更新实例名字
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AadClient) UpdatePackageName(request *model.UpdatePackageNameRequest) (*model.UpdatePackageNameResponse, error) {
@@ -811,7 +811,7 @@ func (c *AadClient) UpdatePackageName(request *model.UpdatePackageNameRequest) (
 	}
 }
 
-// UpdatePackageNameInvoker 更新防护包名字
+// UpdatePackageNameInvoker 更新实例名字
 func (c *AadClient) UpdatePackageNameInvoker(request *model.UpdatePackageNameRequest) *UpdatePackageNameInvoker {
 	requestDef := GenReqDefForUpdatePackageName()
 	return &UpdatePackageNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

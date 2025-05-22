@@ -9,19 +9,19 @@ import (
 // ScheduleConf 调度配置信息
 type ScheduleConf struct {
 
-	// 调度开始时间
+	// **参数解释**： 调度开始时间。 **取值范围**： 不涉及。
 	ScheduleStart *string `json:"schedule_start,omitempty"`
 
-	// 调度结束时间
+	// **参数解释**： 调度结束时间。 **取值范围**： 不涉及。
 	ScheduleEnd *string `json:"schedule_end,omitempty"`
 
-	// 调度类型
+	// **参数解释**： 调度类型。 **取值范围**： 不涉及。
 	ScheduleType *string `json:"schedule_type,omitempty"`
 
-	// 调度日期
+	// **参数解释**： 调度日期。 **取值范围**： 不涉及。
 	ScheduleDate *[]int32 `json:"schedule_date,omitempty"`
 
-	// 调度时间列表
+	// **参数解释**： 调度时间列表。 **取值范围**： 不涉及。
 	ScheduleTime *[]string `json:"schedule_time,omitempty"`
 }
 

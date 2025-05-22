@@ -65,7 +65,7 @@ type ShowSmartLiveResponse struct {
 
 	RelationLivePlatformInfo *PlatformLiveDetailInfo `json:"relation_live_platform_info,omitempty"`
 
-	// 使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * UNKNOW：未知资源类型。
+	// 使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * ONE_TIME：一次性资源 * UNKNOW：未知资源类型。
 	UsedResourceType *ShowSmartLiveResponseUsedResourceType `json:"used_resource_type,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
@@ -147,6 +147,7 @@ type ShowSmartLiveResponseUsedResourceType struct {
 type ShowSmartLiveResponseUsedResourceTypeEnum struct {
 	PERIOD   ShowSmartLiveResponseUsedResourceType
 	ONDEMAND ShowSmartLiveResponseUsedResourceType
+	ONE_TIME ShowSmartLiveResponseUsedResourceType
 	UNKNOW   ShowSmartLiveResponseUsedResourceType
 }
 
@@ -157,6 +158,9 @@ func GetShowSmartLiveResponseUsedResourceTypeEnum() ShowSmartLiveResponseUsedRes
 		},
 		ONDEMAND: ShowSmartLiveResponseUsedResourceType{
 			value: "ONDEMAND",
+		},
+		ONE_TIME: ShowSmartLiveResponseUsedResourceType{
+			value: "ONE_TIME",
 		},
 		UNKNOW: ShowSmartLiveResponseUsedResourceType{
 			value: "UNKNOW",

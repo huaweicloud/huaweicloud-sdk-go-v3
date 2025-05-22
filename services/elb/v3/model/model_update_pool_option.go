@@ -51,6 +51,8 @@ type UpdatePoolOption struct {
 	PoolHealth *PoolHealth `json:"pool_health,omitempty"`
 
 	QuicCidHashStrategy *QuicCidHashStrategy `json:"quic_cid_hash_strategy,omitempty"`
+
+	AzAffinity *UpdateAzAffinity `json:"az_affinity,omitempty"`
 }
 
 func (o UpdatePoolOption) String() string {

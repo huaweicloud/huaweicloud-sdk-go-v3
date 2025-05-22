@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// CoordinatorNode CN节点详情。
+// CoordinatorNode **参数解释**： CN节点详情。 **取值范围**： 不涉及。
 type CoordinatorNode struct {
 
-	// 节点ID。
+	// **参数解释**： 节点ID。 **取值范围**： 不涉及。
 	Id string `json:"id"`
 
-	// 节点名称。
+	// **参数解释**： 节点名称。 **取值范围**： 不涉及。
 	Name string `json:"name"`
 
-	// 内网IP。
+	// **参数解释**： 内网IP。 **取值范围**： 不涉及。
 	PrivateIp string `json:"private_ip"`
 }
 

@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// RestartClusterRequestBody This is a auto create Body Object
+// RestartClusterRequestBody **参数解释**： 重启集群的请求体。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 type RestartClusterRequestBody struct {
 
-	// 重启标识
+	// **参数解释**： 重启标识。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Restart *interface{} `json:"restart"`
 }
 

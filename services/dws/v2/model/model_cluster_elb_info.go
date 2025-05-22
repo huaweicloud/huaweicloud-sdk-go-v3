@@ -12,7 +12,7 @@ type ClusterElbInfo struct {
 	// 弹性负载均衡ID
 	Id *string `json:"id,omitempty"`
 
-	// 集群ID
+	// **参数解释**： 集群ID。 **取值范围**： 36位UUID。
 	ClusterId *string `json:"cluster_id,omitempty"`
 
 	// 弹性负载均衡名称

@@ -9,7 +9,7 @@ import (
 // DisasterRecoveryClusterVo 容灾可用集群信息
 type DisasterRecoveryClusterVo struct {
 
-	// 集群ID
+	// **参数解释**： 集群ID。 **取值范围**： 36位UUID。
 	Id *string `json:"id,omitempty"`
 
 	// 集群名称

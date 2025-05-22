@@ -932,6 +932,27 @@ func (c *CceClient) ListUpgradeWorkFlowsInvoker(request *model.ListUpgradeWorkFl
 	return &ListUpgradeWorkFlowsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// LockNodepoolNodeScaleDown 节点开启缩容保护。
+//
+// 该API用于节点开启缩容保护，开启缩容保护的节点无法通过修改节点池个数的方式被缩容。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) LockNodepoolNodeScaleDown(request *model.LockNodepoolNodeScaleDownRequest) (*model.LockNodepoolNodeScaleDownResponse, error) {
+	requestDef := GenReqDefForLockNodepoolNodeScaleDown()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.LockNodepoolNodeScaleDownResponse), nil
+	}
+}
+
+// LockNodepoolNodeScaleDownInvoker 节点开启缩容保护。
+func (c *CceClient) LockNodepoolNodeScaleDownInvoker(request *model.LockNodepoolNodeScaleDownRequest) *LockNodepoolNodeScaleDownInvoker {
+	requestDef := GenReqDefForLockNodepoolNodeScaleDown()
+	return &LockNodepoolNodeScaleDownInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // MigrateNode 节点迁移
 //
 // 该API用于在指定集群下迁移节点到另一集群。
@@ -1627,6 +1648,27 @@ func (c *CceClient) SyncNode(request *model.SyncNodeRequest) (*model.SyncNodeRes
 func (c *CceClient) SyncNodeInvoker(request *model.SyncNodeRequest) *SyncNodeInvoker {
 	requestDef := GenReqDefForSyncNode()
 	return &SyncNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UnlockNodepoolNodeScaleDown 节点关闭缩容保护。
+//
+// 该API用于节点关闭缩容保护，关闭缩容保护的节点可以通过修改节点池个数的方式被缩容，只允许按需节点关闭缩容保护。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) UnlockNodepoolNodeScaleDown(request *model.UnlockNodepoolNodeScaleDownRequest) (*model.UnlockNodepoolNodeScaleDownResponse, error) {
+	requestDef := GenReqDefForUnlockNodepoolNodeScaleDown()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UnlockNodepoolNodeScaleDownResponse), nil
+	}
+}
+
+// UnlockNodepoolNodeScaleDownInvoker 节点关闭缩容保护。
+func (c *CceClient) UnlockNodepoolNodeScaleDownInvoker(request *model.UnlockNodepoolNodeScaleDownRequest) *UnlockNodepoolNodeScaleDownInvoker {
+	requestDef := GenReqDefForUnlockNodepoolNodeScaleDown()
+	return &UnlockNodepoolNodeScaleDownInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateAddonInstance 更新AddonInstance

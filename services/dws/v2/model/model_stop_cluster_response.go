@@ -9,7 +9,7 @@ import (
 // StopClusterResponse Response Object
 type StopClusterResponse struct {
 
-	// 停止集群jobId
+	// **参数解释**： 停止集群任务ID。 **取值范围**： 不涉及。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

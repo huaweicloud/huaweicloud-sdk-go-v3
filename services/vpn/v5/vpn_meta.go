@@ -806,6 +806,28 @@ func GenReqDefForListVpnConnections() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForResetVpnConnection() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v5/{project_id}/vpn-connection/{vpn_connection_id}/reset").
+		WithResponse(new(model.ResetVpnConnectionResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("VpnConnectionId").
+		WithJsonTag("vpn_connection_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("HeaderResponseToken").
+		WithJsonTag("header-response-token").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowVpnConnection() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

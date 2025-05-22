@@ -13,13 +13,13 @@ type QuotasResource struct {
 	Type string `json:"type"`
 
 	// 已使用的资源数量。
-	Used string `json:"used"`
+	Used int32 `json:"used"`
 
 	// 项目资源配额。
 	Quota int32 `json:"quota"`
 
 	// 资源计量单位。
-	Unit int32 `json:"unit"`
+	Unit string `json:"unit"`
 }
 
 func (o QuotasResource) String() string {

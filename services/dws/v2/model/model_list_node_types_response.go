@@ -9,10 +9,10 @@ import (
 // ListNodeTypesResponse Response Object
 type ListNodeTypesResponse struct {
 
-	// 节点类型对象列表。
+	// **参数解释**： 可用的规格列表。 **取值范围**： 非空对象列表。
 	NodeTypes *[]NodeTypes `json:"node_types,omitempty"`
 
-	// 节点类型总数
+	// **参数解释**： 规格总数 **取值范围**： 大于等于0的正整数。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

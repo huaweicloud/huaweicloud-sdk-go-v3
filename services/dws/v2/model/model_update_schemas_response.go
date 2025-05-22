@@ -9,7 +9,7 @@ import (
 // UpdateSchemasResponse Response Object
 type UpdateSchemasResponse struct {
 
-	// 响应编码。
+	// **参数解释**： 响应编码。 **取值范围**： 不涉及。
 	RetCode        *int32 `json:"ret_code,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

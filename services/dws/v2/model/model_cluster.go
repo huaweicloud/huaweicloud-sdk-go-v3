@@ -6,9 +6,10 @@ import (
 	"strings"
 )
 
+// Cluster **参数解释**： 集群对象信息。 **取值范围**： 不涉及。
 type Cluster struct {
 
-	// 集群ID
+	// **参数解释**： 集群ID。 **取值范围**： 不涉及。
 	Id string `json:"id"`
 }
 

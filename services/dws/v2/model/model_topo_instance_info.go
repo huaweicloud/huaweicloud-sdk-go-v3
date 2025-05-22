@@ -6,37 +6,37 @@ import (
 	"strings"
 )
 
-// TopoInstanceInfo 集群实例信息
+// TopoInstanceInfo **参数解释**： 集群实例信息。 **取值范围**： 不涉及。
 type TopoInstanceInfo struct {
 
-	// 实例ID
+	// **参数解释**： 实例ID。 **取值范围**： 不涉及。
 	Id *string `json:"id,omitempty"`
 
-	// 实例名称
+	// **参数解释**： 实例名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 实例管理IP
+	// **参数解释**： 实例管理IP。 **取值范围**： 不涉及。
 	ManageIp *string `json:"manage_ip,omitempty"`
 
-	// 业务IP
+	// **参数解释**： 业务IP。 **取值范围**： 不涉及。
 	TrafficIp *string `json:"traffic_ip,omitempty"`
 
-	// 内部通信IP
+	// **参数解释**： 内部通信IP。 **取值范围**： 不涉及。
 	InternalIp *string `json:"internal_ip,omitempty"`
 
-	// 内部管理IP
+	// **参数解释**： 内部管理IP。 **取值范围**： 不涉及。
 	InternalMgntIp *string `json:"internal_mgnt_ip,omitempty"`
 
-	// EIP
+	// **参数解释**： 公网IP信息。 **取值范围**： 不涉及。
 	Eip *string `json:"eip,omitempty"`
 
-	// elb地址
+	// **参数解释**： elb地址。 **取值范围**： 不涉及。
 	Elb *string `json:"elb,omitempty"`
 
-	// 实例状态
+	// **参数解释**： 实例状态。 **取值范围**： 不涉及。
 	Status *string `json:"status,omitempty"`
 
-	// 可用区编码
+	// **参数解释**： 可用区编码。 **取值范围**： 不涉及。
 	AzCode *string `json:"az_code,omitempty"`
 }
 

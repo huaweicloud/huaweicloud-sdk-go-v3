@@ -69,6 +69,22 @@ func (i *AddWorkloadQueueInvoker) Invoke() (*model.AddWorkloadQueueResponse, err
 	}
 }
 
+type AddWorkloadRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddWorkloadRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddWorkloadRuleInvoker) Invoke() (*model.AddWorkloadRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddWorkloadRuleResponse), nil
+	}
+}
+
 type AssociateEipInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -213,6 +229,22 @@ func (i *CheckClusterInvoker) Invoke() (*model.CheckClusterResponse, error) {
 	}
 }
 
+type CheckClusterShrinkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckClusterShrinkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckClusterShrinkInvoker) Invoke() (*model.CheckClusterShrinkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckClusterShrinkResponse), nil
+	}
+}
+
 type CheckDisasterNameInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -226,6 +258,22 @@ func (i *CheckDisasterNameInvoker) Invoke() (*model.CheckDisasterNameResponse, e
 		return nil, err
 	} else {
 		return result.(*model.CheckDisasterNameResponse), nil
+	}
+}
+
+type CheckGrowClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckGrowClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckGrowClusterInvoker) Invoke() (*model.CheckGrowClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckGrowClusterResponse), nil
 	}
 }
 
@@ -370,6 +418,22 @@ func (i *CreateDataSourceInvoker) Invoke() (*model.CreateDataSourceResponse, err
 		return nil, err
 	} else {
 		return result.(*model.CreateDataSourceResponse), nil
+	}
+}
+
+type CreateDatabaseUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDatabaseUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDatabaseUserInvoker) Invoke() (*model.CreateDatabaseUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDatabaseUserResponse), nil
 	}
 }
 
@@ -562,6 +626,22 @@ func (i *DeleteDataSourceInvoker) Invoke() (*model.DeleteDataSourceResponse, err
 		return nil, err
 	} else {
 		return result.(*model.DeleteDataSourceResponse), nil
+	}
+}
+
+type DeleteDatabaseUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDatabaseUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDatabaseUserInvoker) Invoke() (*model.DeleteDatabaseUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDatabaseUserResponse), nil
 	}
 }
 
@@ -869,6 +949,22 @@ func (i *EnableLtsLogsInvoker) Invoke() (*model.EnableLtsLogsResponse, error) {
 	}
 }
 
+type EncryptClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *EncryptClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *EncryptClusterInvoker) Invoke() (*model.EncryptClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.EncryptClusterResponse), nil
+	}
+}
+
 type ExecuteClusterUpgradeActionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -901,6 +997,22 @@ func (i *ExecuteDatabaseOmUserActionInvoker) Invoke() (*model.ExecuteDatabaseOmU
 	}
 }
 
+type ExecuteFlavorChangeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteFlavorChangeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteFlavorChangeInvoker) Invoke() (*model.ExecuteFlavorChangeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteFlavorChangeResponse), nil
+	}
+}
+
 type ExecuteRedistributionClusterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -930,6 +1042,38 @@ func (i *ExpandInstanceStorageInvoker) Invoke() (*model.ExpandInstanceStorageRes
 		return nil, err
 	} else {
 		return result.(*model.ExpandInstanceStorageResponse), nil
+	}
+}
+
+type ExportDatabaseUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportDatabaseUsersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExportDatabaseUsersInvoker) Invoke() (*model.ExportDatabaseUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportDatabaseUsersResponse), nil
+	}
+}
+
+type ExportUserAuthorityInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportUserAuthorityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExportUserAuthorityInvoker) Invoke() (*model.ExportUserAuthorityResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportUserAuthorityResponse), nil
 	}
 }
 
@@ -1045,6 +1189,22 @@ func (i *ListAvailableDisasterClustersInvoker) Invoke() (*model.ListAvailableDis
 	}
 }
 
+type ListClusterActionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListClusterActionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListClusterActionsInvoker) Invoke() (*model.ListClusterActionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListClusterActionsResponse), nil
+	}
+}
+
 type ListClusterCnInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1106,6 +1266,22 @@ func (i *ListClusterDetailsInvoker) Invoke() (*model.ListClusterDetailsResponse,
 		return nil, err
 	} else {
 		return result.(*model.ListClusterDetailsResponse), nil
+	}
+}
+
+type ListClusterEndpointsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListClusterEndpointsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListClusterEndpointsInvoker) Invoke() (*model.ListClusterEndpointsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListClusterEndpointsResponse), nil
 	}
 }
 
@@ -1234,6 +1410,22 @@ func (i *ListDataSourceInvoker) Invoke() (*model.ListDataSourceResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListDataSourceResponse), nil
+	}
+}
+
+type ListDatabaseUserAuthoritiesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDatabaseUserAuthoritiesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDatabaseUserAuthoritiesInvoker) Invoke() (*model.ListDatabaseUserAuthoritiesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDatabaseUserAuthoritiesResponse), nil
 	}
 }
 
@@ -1637,6 +1829,22 @@ func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
 	}
 }
 
+type ListRedistributionSchemaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRedistributionSchemaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRedistributionSchemaInvoker) Invoke() (*model.ListRedistributionSchemaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRedistributionSchemaResponse), nil
+	}
+}
+
 type ListSchemasInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1765,6 +1973,22 @@ func (i *ListStatisticsInvoker) Invoke() (*model.ListStatisticsResponse, error) 
 	}
 }
 
+type ListSyncRecordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSyncRecordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSyncRecordsInvoker) Invoke() (*model.ListSyncRecordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSyncRecordsResponse), nil
+	}
+}
+
 type ListTablesStatisticInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1794,6 +2018,38 @@ func (i *ListTagsInvoker) Invoke() (*model.ListTagsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListTagsResponse), nil
+	}
+}
+
+type ListTagsForResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTagsForResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTagsForResourceInvoker) Invoke() (*model.ListTagsForResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTagsForResourceResponse), nil
+	}
+}
+
+type ListTargetFlavorsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTargetFlavorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTargetFlavorsInvoker) Invoke() (*model.ListTargetFlavorsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTargetFlavorsResponse), nil
 	}
 }
 
@@ -1890,6 +2146,54 @@ func (i *ListWorkloadQueueUsersInvoker) Invoke() (*model.ListWorkloadQueueUsersR
 		return nil, err
 	} else {
 		return result.(*model.ListWorkloadQueueUsersResponse), nil
+	}
+}
+
+type ListWorkloadRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWorkloadRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListWorkloadRulesInvoker) Invoke() (*model.ListWorkloadRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWorkloadRulesResponse), nil
+	}
+}
+
+type ModifyClusterNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyClusterNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyClusterNameInvoker) Invoke() (*model.ModifyClusterNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyClusterNameResponse), nil
+	}
+}
+
+type ModifyClusterTimezoneInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyClusterTimezoneInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyClusterTimezoneInvoker) Invoke() (*model.ModifyClusterTimezoneResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyClusterTimezoneResponse), nil
 	}
 }
 
@@ -2053,6 +2357,22 @@ func (i *RestoreTableInvoker) Invoke() (*model.RestoreTableResponse, error) {
 	}
 }
 
+type RotateKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RotateKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RotateKeyInvoker) Invoke() (*model.RotateKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RotateKeyResponse), nil
+	}
+}
+
 type SaveClusterDescriptionInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2066,6 +2386,38 @@ func (i *SaveClusterDescriptionInfoInvoker) Invoke() (*model.SaveClusterDescript
 		return nil, err
 	} else {
 		return result.(*model.SaveClusterDescriptionInfoResponse), nil
+	}
+}
+
+type SetRedistributionPriorityInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetRedistributionPriorityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetRedistributionPriorityInvoker) Invoke() (*model.SetRedistributionPriorityResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetRedistributionPriorityResponse), nil
+	}
+}
+
+type ShowClusterEncryptInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterEncryptInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowClusterEncryptInfoInvoker) Invoke() (*model.ShowClusterEncryptInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowClusterEncryptInfoResponse), nil
 	}
 }
 
@@ -2098,6 +2450,38 @@ func (i *ShowClusterRedistributionInvoker) Invoke() (*model.ShowClusterRedistrib
 		return nil, err
 	} else {
 		return result.(*model.ShowClusterRedistributionResponse), nil
+	}
+}
+
+type ShowClusterStorageExpandRangeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterStorageExpandRangeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowClusterStorageExpandRangeInvoker) Invoke() (*model.ShowClusterStorageExpandRangeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowClusterStorageExpandRangeResponse), nil
+	}
+}
+
+type ShowClusterVolumeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterVolumeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowClusterVolumeInvoker) Invoke() (*model.ShowClusterVolumeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowClusterVolumeResponse), nil
 	}
 }
 
@@ -2306,6 +2690,22 @@ func (i *ShrinkClusterInvoker) Invoke() (*model.ShrinkClusterResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShrinkClusterResponse), nil
+	}
+}
+
+type ShrinkLogicalClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShrinkLogicalClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShrinkLogicalClusterInvoker) Invoke() (*model.ShrinkLogicalClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShrinkLogicalClusterResponse), nil
 	}
 }
 
@@ -2677,6 +3077,22 @@ func (i *UpdateQueueResourcesInvoker) Invoke() (*model.UpdateQueueResourcesRespo
 	}
 }
 
+type UpdateRedistributionConfigurationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateRedistributionConfigurationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateRedistributionConfigurationsInvoker) Invoke() (*model.UpdateRedistributionConfigurationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateRedistributionConfigurationsResponse), nil
+	}
+}
+
 type UpdateSchemasInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2690,5 +3106,21 @@ func (i *UpdateSchemasInvoker) Invoke() (*model.UpdateSchemasResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateSchemasResponse), nil
+	}
+}
+
+type UpdateWorkloadPlanStageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateWorkloadPlanStageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateWorkloadPlanStageInvoker) Invoke() (*model.UpdateWorkloadPlanStageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateWorkloadPlanStageResponse), nil
 	}
 }

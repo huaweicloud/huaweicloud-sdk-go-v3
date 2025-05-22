@@ -9,10 +9,10 @@ import (
 // ListTopoRingsResponse Response Object
 type ListTopoRingsResponse struct {
 
-	// 集群拓扑环列表信息
+	// **参数解释**： 集群拓扑环列表信息。 **取值范围**： 不涉及。
 	ClusterRings *[]TopoRingInfo `json:"cluster_rings,omitempty"`
 
-	// 集群环数量
+	// **参数解释**： 集群环数量。 **取值范围**： 不涉及。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

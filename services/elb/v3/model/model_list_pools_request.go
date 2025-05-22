@@ -89,6 +89,9 @@ type ListPoolsRequest struct {
 
 	// 查询相同QUIC CID策略配置的后端服务器组，仅用于查询条件，不作为响应参数字段。 支持多值查询，查询条件格式：*quic_cid_offset=1&quic_cid_offset=3*
 	QuicCidOffset *int32 `json:"quic_cid_offset,omitempty"`
+
+	// 查询后端服务器组可用区亲和性策略是否开启。示例如下： \"az_affinity\": {             \"enable\": \"true\"         }  支持多值查询，查询条件格式：  *az_affinity=enable=true&az_affinity=enable=false*。
+	AzAffinity *[]string `json:"az_affinity,omitempty"`
 }
 
 func (o ListPoolsRequest) String() string {

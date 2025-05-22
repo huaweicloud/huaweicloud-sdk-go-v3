@@ -61,6 +61,27 @@ func (c *CsmsClient) BatchImportSecretsInvoker(request *model.BatchImportSecrets
 	return &BatchImportSecretsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckSecrets 检测传入凭据的凭据强度
+//
+// 检测传入的凭据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) CheckSecrets(request *model.CheckSecretsRequest) (*model.CheckSecretsResponse, error) {
+	requestDef := GenReqDefForCheckSecrets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckSecretsResponse), nil
+	}
+}
+
+// CheckSecretsInvoker 检测传入凭据的凭据强度
+func (c *CsmsClient) CheckSecretsInvoker(request *model.CheckSecretsRequest) *CheckSecretsInvoker {
+	requestDef := GenReqDefForCheckSecrets()
+	return &CheckSecretsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAgency 创建服务委托
 //
 // 创建服务委托。用于创建凭据管理服务相关委托和函数工作流相关委托。
@@ -738,6 +759,27 @@ func (c *CsmsClient) ShowSecretVersionInvoker(request *model.ShowSecretVersionRe
 	return &ShowSecretVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSecretsConfig 获取租户的凭据检测配置
+//
+// 获取租户的凭据检测配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) ShowSecretsConfig(request *model.ShowSecretsConfigRequest) (*model.ShowSecretsConfigResponse, error) {
+	requestDef := GenReqDefForShowSecretsConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecretsConfigResponse), nil
+	}
+}
+
+// ShowSecretsConfigInvoker 获取租户的凭据检测配置
+func (c *CsmsClient) ShowSecretsConfigInvoker(request *model.ShowSecretsConfigRequest) *ShowSecretsConfigInvoker {
+	requestDef := GenReqDefForShowSecretsConfig()
+	return &ShowSecretsConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowUserDetail 获取用户详情
 //
 // 根据用户id查询用户详情。
@@ -841,6 +883,27 @@ func (c *CsmsClient) UpdateSecretStage(request *model.UpdateSecretStageRequest) 
 func (c *CsmsClient) UpdateSecretStageInvoker(request *model.UpdateSecretStageRequest) *UpdateSecretStageInvoker {
 	requestDef := GenReqDefForUpdateSecretStage()
 	return &UpdateSecretStageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSecretsConfig 更改获取租户的凭据检测配置
+//
+// 更改获取租户的凭据检测配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) UpdateSecretsConfig(request *model.UpdateSecretsConfigRequest) (*model.UpdateSecretsConfigResponse, error) {
+	requestDef := GenReqDefForUpdateSecretsConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSecretsConfigResponse), nil
+	}
+}
+
+// UpdateSecretsConfigInvoker 更改获取租户的凭据检测配置
+func (c *CsmsClient) UpdateSecretsConfigInvoker(request *model.UpdateSecretsConfigRequest) *UpdateSecretsConfigInvoker {
+	requestDef := GenReqDefForUpdateSecretsConfig()
+	return &UpdateSecretsConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateUserPassword 修改用户密码

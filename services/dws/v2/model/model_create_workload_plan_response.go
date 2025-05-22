@@ -9,10 +9,10 @@ import (
 // CreateWorkloadPlanResponse Response Object
 type CreateWorkloadPlanResponse struct {
 
-	// 响应编码。
+	// **参数解释**： 响应编码。 **取值范围**： 不涉及。
 	WorkloadResCode *int32 `json:"workload_res_code,omitempty"`
 
-	// 响应信息。
+	// **参数解释**： 响应信息。 **取值范围**： 不涉及。
 	WorkloadResStr *string `json:"workload_res_str,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

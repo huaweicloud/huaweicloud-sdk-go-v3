@@ -18,8 +18,8 @@ type ShowFlowGraphResponse struct {
 	// 错误码
 	ErrCode *string `json:"err_code,omitempty"`
 
-	Result         *FlowGraphResult `json:"result,omitempty"`
-	HttpStatusCode int              `json:"-"`
+	Result         *FlowGraph2Result `json:"result,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o ShowFlowGraphResponse) String() string {

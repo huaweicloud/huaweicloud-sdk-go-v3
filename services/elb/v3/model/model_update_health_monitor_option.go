@@ -21,7 +21,7 @@ type UpdateHealthMonitorOption struct {
 	// 发送健康检查请求的域名。  取值：以数字或字母开头，只能包含数字、字母、’-’、’.’。 不能传空，但可传null或不传，表示使用负载均衡器的vip作为http请求的目的地址。  使用说明：当type为HTTP/HTTPS时生效。
 	DomainName *string `json:"domain_name,omitempty"`
 
-	// 期望响应状态码。  取值： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  仅支持HTTP/HTTPS/GRPC设置该字段，其他协议设置不会生效。
+	// 期望响应状态码。  取值： - 单值：单个返回码，例如200。 - 列表：多个特定返回码，例如200，202。 - 区间：一个返回码区间，例如200-204。  该字段仅在HTTP/HTTPS/GRPC协议下有效，其他协议可以设置但不会生效。
 	ExpectedCodes *string `json:"expected_codes,omitempty"`
 
 	// HTTP请求方法。  取值：GET、HEAD、POST，默认GET。  使用说明：当type为HTTP/HTTPS时生效。

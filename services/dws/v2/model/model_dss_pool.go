@@ -6,31 +6,31 @@ import (
 	"strings"
 )
 
-// DssPool 专属分布式存储池详情。
+// DssPool **参数解释**： 专属分布式存储池详情。 **取值范围**： 不涉及。
 type DssPool struct {
 
-	// 专属分布式存储池名称。
+	// **参数解释**： 专属分布式存储池名称。 **取值范围**： 不涉及。
 	Id string `json:"id"`
 
-	// 专属分布式存储池ID。
+	// **参数解释**： 专属分布式存储池ID。 **取值范围**： 不涉及。
 	Name string `json:"name"`
 
-	// 专属分布式存储池的存储类型。 - SSD：超高IO专属分布式存储池。
+	// **参数解释**： 专属分布式存储池的存储类型。 - SSD：超高IO专属分布式存储池。 **取值范围**： 不涉及。
 	Type string `json:"type"`
 
-	// 专属分布式存储池归属的project_id。
+	// **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	ProjectId string `json:"project_id"`
 
-	// 专属分布式存储池所属可用区。
+	// **参数解释**： 专属分布式存储池所属可用区。 **取值范围**： 不涉及。
 	AvailabilityZone string `json:"availability_zone"`
 
-	// 申请的专属分布式存储容量，单位TB。
+	// **参数解释**： 申请的专属分布式存储容量，单位TB。 **取值范围**： 不涉及。
 	Capacity int32 `json:"capacity"`
 
-	// 专属分布式存储池的状态。 - available：专属分布式存储池处于可用状态。 - deploying：专属分布式存储池处于正在部署的过程中，不可使用。 - extending：专属分布式存储池处于正在扩容的过程中，可使用。
+	// **参数解释**： 专属分布式存储池的状态。 **取值范围**： available：专属分布式存储池处于可用状态。 deploying：专属分布式存储池处于正在部署的过程中，不可使用。 extending：专属分布式存储池处于正在扩容的过程中，可使用。
 	Status string `json:"status"`
 
-	// 专属分布式存储池的创建时间。 - 时间格式：UTC YYYY-MM-DDTHH:MM:SS
+	// **参数解释**： 专属分布式存储池的创建时间。 **取值范围**： 时间格式：UTC YYYY-MM-DDTHH:MM:SS
 	CreatedAt string `json:"created_at"`
 }
 

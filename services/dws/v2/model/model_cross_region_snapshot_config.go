@@ -9,7 +9,7 @@ import (
 // CrossRegionSnapshotConfig 快照跨区域配置信息
 type CrossRegionSnapshotConfig struct {
 
-	// 集群ID
+	// **参数解释**： 集群ID。 **取值范围**： 36位UUID。
 	ClusterId *string `json:"cluster_id,omitempty"`
 
 	// 集群名称

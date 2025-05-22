@@ -9,10 +9,10 @@ import (
 // UpdateLogicalClusterRequest Request Object
 type UpdateLogicalClusterRequest struct {
 
-	// 指定待编辑集群的ID
+	// **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	ClusterId string `json:"cluster_id"`
 
-	// 指定待编辑逻辑集群的ID
+	// **参数解释**： 指定待编辑逻辑集群的ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	LogicalClusterId string `json:"logical_cluster_id"`
 
 	Body *UpdateLogicalClusterRequestBody `json:"body,omitempty"`

@@ -9,19 +9,19 @@ import (
 // RdsRedisInfo 重分布信息
 type RdsRedisInfo struct {
 
-	// ID
+	// **参数解释**： 重分布信息ID。 **取值范围**： 不涉及。
 	Id *string `json:"id,omitempty"`
 
-	// 集群ID
+	// **参数解释**： 集群ID。 **取值范围**： 不涉及。
 	ClusterId *string `json:"cluster_id,omitempty"`
 
-	// 开始时间
+	// **参数解释**： 开始时间。 **取值范围**： 不涉及。
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 结束时间
+	// **参数解释**： 结束时间。 **取值范围**： 不涉及。
 	EndTime *string `json:"end_time,omitempty"`
 
-	// 状态
+	// **参数解释**： 状态。 **取值范围**： PREPARE|RUNNING|WAITING|PAUSE|PAUSING|SUCCESS|FAIL。
 	Status *string `json:"status,omitempty"`
 
 	RedisConf *RedisConf `json:"redis_conf,omitempty"`

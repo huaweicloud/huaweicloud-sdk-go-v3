@@ -15,7 +15,7 @@ type ListProtectedIpRequest struct {
 	// 每页显示的条目数量,默认值:2000
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 防护包id
+	// 实例id
 	PackageId *string `json:"package_id,omitempty"`
 
 	// 策略id

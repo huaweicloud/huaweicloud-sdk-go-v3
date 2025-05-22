@@ -9,10 +9,10 @@ import (
 // ListAvailabilityZonesResponse Response Object
 type ListAvailabilityZonesResponse struct {
 
-	// 可用区列表对象。
+	// **参数解释**： 可用区列表。 **取值范围**： 非空对象列表。
 	AvailabilityZones *[]AvailabilityZone `json:"availability_zones,omitempty"`
 
-	// 可用区数量。
+	// **参数解释**： 可用区数量。 **取值范围**： 不涉及。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

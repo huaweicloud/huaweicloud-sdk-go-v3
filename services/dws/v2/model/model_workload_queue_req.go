@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// WorkloadQueueReq 资源池
+// WorkloadQueueReq **参数解释**： 资源池信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 type WorkloadQueueReq struct {
 	WorkloadQueue *WorkloadQueue `json:"workload_queue"`
 }

@@ -12,7 +12,7 @@ type ShowPolicyResponse struct {
 	// 策略id
 	Id *string `json:"id,omitempty"`
 
-	// 防护包id
+	// 实例id
 	PackageId *string `json:"package_id,omitempty"`
 
 	// 策略名

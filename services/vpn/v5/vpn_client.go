@@ -733,6 +733,27 @@ func (c *VpnClient) ListVpnConnectionsInvoker(request *model.ListVpnConnectionsR
 	return &ListVpnConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ResetVpnConnection 重置VPN连接
+//
+// 根据连接ID，重置指定VPN连接
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) ResetVpnConnection(request *model.ResetVpnConnectionRequest) (*model.ResetVpnConnectionResponse, error) {
+	requestDef := GenReqDefForResetVpnConnection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetVpnConnectionResponse), nil
+	}
+}
+
+// ResetVpnConnectionInvoker 重置VPN连接
+func (c *VpnClient) ResetVpnConnectionInvoker(request *model.ResetVpnConnectionRequest) *ResetVpnConnectionInvoker {
+	requestDef := GenReqDefForResetVpnConnection()
+	return &ResetVpnConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowVpnConnection 查询VPN连接
 //
 // 根据连接ID，查询指定的VPN连接的参数

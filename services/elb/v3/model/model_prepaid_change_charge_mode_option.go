@@ -15,6 +15,9 @@ type PrepaidChangeChargeModeOption struct {
 	// 是否连同独享按带宽计费的弹性公网IP一起转包周期。 1. 弹性公网IP转包周期之后可以单独解绑，绑定到其他实例，删除 2. 只有独享且按带宽计费的弹性公网IP才被允许转包周期 默认值：false
 	IncludePublicip *bool `json:"include_publicip,omitempty"`
 
+	// 需要一起按需转包的弹性公网IP的ID。 若include_publicip为false，不能指定该字段。 若include_publicip为true，该字段为未指定时，表示所有绑定的v4 eip都需要一起转包周期。 若include_publicip为true，该字段列表非空，表示只将指定的v4 eip转包。 若include_publicip为true，该字段列表为空，表示不指定任一eip转包，与include_publicip为false等效。
+	PublicipIds *[]string `json:"publicip_ids,omitempty"`
+
 	// 订购周期类型，当前支持包月和包年： month：月（默认）； year：年；
 	PeriodType PrepaidChangeChargeModeOptionPeriodType `json:"period_type"`
 

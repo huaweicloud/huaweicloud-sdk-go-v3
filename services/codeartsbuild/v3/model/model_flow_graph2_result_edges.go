@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type FlowGraphResultEdges struct {
+type FlowGraph2ResultEdges struct {
 
 	// 依赖子任务ID
 	From *string `json:"from,omitempty"`
@@ -15,11 +15,11 @@ type FlowGraphResultEdges struct {
 	To *string `json:"to,omitempty"`
 }
 
-func (o FlowGraphResultEdges) String() string {
+func (o FlowGraph2ResultEdges) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "FlowGraphResultEdges struct{}"
+		return "FlowGraph2ResultEdges struct{}"
 	}
 
-	return strings.Join([]string{"FlowGraphResultEdges", string(data)}, " ")
+	return strings.Join([]string{"FlowGraph2ResultEdges", string(data)}, " ")
 }

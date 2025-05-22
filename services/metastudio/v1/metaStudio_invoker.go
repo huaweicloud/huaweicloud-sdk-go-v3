@@ -853,6 +853,70 @@ func (i *UpdateHotWordsSwitchInvoker) Invoke() (*model.UpdateHotWordsSwitchRespo
 	}
 }
 
+type CreateInteractionRuleGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateInteractionRuleGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateInteractionRuleGroupInvoker) Invoke() (*model.CreateInteractionRuleGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateInteractionRuleGroupResponse), nil
+	}
+}
+
+type DeleteInteractionRuleGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteInteractionRuleGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteInteractionRuleGroupInvoker) Invoke() (*model.DeleteInteractionRuleGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteInteractionRuleGroupResponse), nil
+	}
+}
+
+type ListInteractionRuleGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInteractionRuleGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInteractionRuleGroupsInvoker) Invoke() (*model.ListInteractionRuleGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInteractionRuleGroupsResponse), nil
+	}
+}
+
+type UpdateInteractionRuleGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInteractionRuleGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInteractionRuleGroupInvoker) Invoke() (*model.UpdateInteractionRuleGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInteractionRuleGroupResponse), nil
+	}
+}
+
 type CreateIntentAndQuestionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1973,22 +2037,6 @@ func (i *ConfirmSmarLiveRoomInvoker) Invoke() (*model.ConfirmSmarLiveRoomRespons
 	}
 }
 
-type CreateInteractionRuleGroupInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateInteractionRuleGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateInteractionRuleGroupInvoker) Invoke() (*model.CreateInteractionRuleGroupResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateInteractionRuleGroupResponse), nil
-	}
-}
-
 type CreateSmartLiveRoomInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2005,22 +2053,6 @@ func (i *CreateSmartLiveRoomInvoker) Invoke() (*model.CreateSmartLiveRoomRespons
 	}
 }
 
-type DeleteInteractionRuleGroupInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteInteractionRuleGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteInteractionRuleGroupInvoker) Invoke() (*model.DeleteInteractionRuleGroupResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteInteractionRuleGroupResponse), nil
-	}
-}
-
 type DeleteSmartLiveRoomInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2034,22 +2066,6 @@ func (i *DeleteSmartLiveRoomInvoker) Invoke() (*model.DeleteSmartLiveRoomRespons
 		return nil, err
 	} else {
 		return result.(*model.DeleteSmartLiveRoomResponse), nil
-	}
-}
-
-type ListInteractionRuleGroupsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListInteractionRuleGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListInteractionRuleGroupsInvoker) Invoke() (*model.ListInteractionRuleGroupsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListInteractionRuleGroupsResponse), nil
 	}
 }
 
@@ -2082,22 +2098,6 @@ func (i *ShowSmartLiveRoomInvoker) Invoke() (*model.ShowSmartLiveRoomResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowSmartLiveRoomResponse), nil
-	}
-}
-
-type UpdateInteractionRuleGroupInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateInteractionRuleGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateInteractionRuleGroupInvoker) Invoke() (*model.UpdateInteractionRuleGroupResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateInteractionRuleGroupResponse), nil
 	}
 }
 

@@ -9,10 +9,10 @@ import (
 // ShowDatabaseOmUserStatusResponse Response Object
 type ShowDatabaseOmUserStatusResponse struct {
 
-	// 错误码
-	ErrorCode *string `json:"error_code,omitempty"`
+	// **参数解释**： 错误码。非0皆为异常场景。 **取值范围**： 不涉及。
+	ErrorCode *int32 `json:"error_code,omitempty"`
 
-	// 错误信息
+	// **参数解释**： 错误信息。 **取值范围**： 不涉及。
 	ErrorMsg *string `json:"error_msg,omitempty"`
 
 	OmUserInfo     *DatabaseOmUserInfo `json:"om_user_info,omitempty"`

@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// WorkloadSchemaReq 模式空间信息
+// WorkloadSchemaReq **参数解释**： 模式空间信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 type WorkloadSchemaReq struct {
 
-	// 模式空间名称
+	// **参数解释**： 模式空间名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	SchemaName string `json:"schema_name"`
 
-	// Schema空间阈值
+	// **参数解释**： 模式空间阈值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	PermSpace string `json:"perm_space"`
 }
 

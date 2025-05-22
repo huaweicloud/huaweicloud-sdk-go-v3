@@ -22,6 +22,18 @@ type RenameCommandResp struct {
 
 	// 命令keys
 	Keys *string `json:"keys,omitempty"`
+
+	// 命令hscan
+	Hscan *string `json:"hscan,omitempty"`
+
+	// 命令scan
+	Scan *string `json:"scan,omitempty"`
+
+	// 命令sscan
+	Sscan *string `json:"sscan,omitempty"`
+
+	// 命令zscan
+	Zscan *string `json:"zscan,omitempty"`
 }
 
 func (o RenameCommandResp) String() string {

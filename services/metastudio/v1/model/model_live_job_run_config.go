@@ -12,7 +12,7 @@ import (
 // LiveJobRunConfig 数字人直播任务运行配置
 type LiveJobRunConfig struct {
 
-	// 允许使用资源类型。 * PERIOD：使用包周期资源 * ONDEMAND：使用按需资源 * UNLIMITED：不限制资源类型
+	// 允许使用资源类型。 * PERIOD：使用包周期资源 * ONDEMAND：使用按需资源 * UNLIMITED：不限制资源类型 * ONE_TIME：一次性资源
 	AllowResourceType *LiveJobRunConfigAllowResourceType `json:"allow_resource_type,omitempty"`
 
 	// 一个直播间是否仅允许一个正在直播的任务。 * true: 限制直播间仅允许一个任务运行。 * false: 不限制直播间任务运行数量。
@@ -36,6 +36,7 @@ type LiveJobRunConfigAllowResourceTypeEnum struct {
 	PERIOD    LiveJobRunConfigAllowResourceType
 	ONDEMAND  LiveJobRunConfigAllowResourceType
 	UNLIMITED LiveJobRunConfigAllowResourceType
+	ONE_TIME  LiveJobRunConfigAllowResourceType
 }
 
 func GetLiveJobRunConfigAllowResourceTypeEnum() LiveJobRunConfigAllowResourceTypeEnum {
@@ -48,6 +49,9 @@ func GetLiveJobRunConfigAllowResourceTypeEnum() LiveJobRunConfigAllowResourceTyp
 		},
 		UNLIMITED: LiveJobRunConfigAllowResourceType{
 			value: "UNLIMITED",
+		},
+		ONE_TIME: LiveJobRunConfigAllowResourceType{
+			value: "ONE_TIME",
 		},
 	}
 }

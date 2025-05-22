@@ -6,19 +6,19 @@ import (
 	"strings"
 )
 
-// LogicalClusterVolume 逻辑集群磁盘信息
+// LogicalClusterVolume **参数解释**： 逻辑集群磁盘信息。 **取值范围**： 不涉及。
 type LogicalClusterVolume struct {
 
-	// 逻辑集群名称
+	// **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
 	LogicalClusterName *string `json:"logical_cluster_name,omitempty"`
 
-	// 磁盘使用量
+	// **参数解释**： 磁盘使用量。 **取值范围**： 不涉及。
 	Usage *string `json:"usage,omitempty"`
 
-	// 磁盘总量
+	// **参数解释**： 磁盘总量。 **取值范围**： 不涉及。
 	Total *string `json:"total,omitempty"`
 
-	// 磁盘使用比例
+	// **参数解释**： 磁盘使用比例。 **取值范围**： 不涉及。
 	Percent *string `json:"percent,omitempty"`
 }
 

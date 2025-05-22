@@ -398,6 +398,27 @@ func (c *GaussDBforNoSQLClient) CreateDisasterRecoveryInvoker(request *model.Cre
 	return &CreateDisasterRecoveryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateGeminiDbDualActive 搭建双活
+//
+// 为了实现跨区域实例数据同步，GeminiDB提供了异地双活功能，即创建异地双活实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) CreateGeminiDbDualActive(request *model.CreateGeminiDbDualActiveRequest) (*model.CreateGeminiDbDualActiveResponse, error) {
+	requestDef := GenReqDefForCreateGeminiDbDualActive()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateGeminiDbDualActiveResponse), nil
+	}
+}
+
+// CreateGeminiDbDualActiveInvoker 搭建双活
+func (c *GaussDBforNoSQLClient) CreateGeminiDbDualActiveInvoker(request *model.CreateGeminiDbDualActiveRequest) *CreateGeminiDbDualActiveInvoker {
+	requestDef := GenReqDefForCreateGeminiDbDualActive()
+	return &CreateGeminiDbDualActiveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateInstance 创建实例
 //
 // 创建数据库实例。
@@ -564,6 +585,27 @@ func (c *GaussDBforNoSQLClient) DeleteEnlargeFailNode(request *model.DeleteEnlar
 func (c *GaussDBforNoSQLClient) DeleteEnlargeFailNodeInvoker(request *model.DeleteEnlargeFailNodeRequest) *DeleteEnlargeFailNodeInvoker {
 	requestDef := GenReqDefForDeleteEnlargeFailNode()
 	return &DeleteEnlargeFailNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteGeminiDbDualActive 解除双活
+//
+// 解除跨区域双活。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) DeleteGeminiDbDualActive(request *model.DeleteGeminiDbDualActiveRequest) (*model.DeleteGeminiDbDualActiveResponse, error) {
+	requestDef := GenReqDefForDeleteGeminiDbDualActive()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteGeminiDbDualActiveResponse), nil
+	}
+}
+
+// DeleteGeminiDbDualActiveInvoker 解除双活
+func (c *GaussDBforNoSQLClient) DeleteGeminiDbDualActiveInvoker(request *model.DeleteGeminiDbDualActiveRequest) *DeleteGeminiDbDualActiveInvoker {
+	requestDef := GenReqDefForDeleteGeminiDbDualActive()
+	return &DeleteGeminiDbDualActiveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteInstance 删除实例

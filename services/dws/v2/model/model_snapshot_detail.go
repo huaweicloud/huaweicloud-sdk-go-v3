@@ -33,7 +33,7 @@ type SnapshotDetail struct {
 	// 快照创建类型。
 	Type string `json:"type"`
 
-	// 快照对应的集群ID
+	// 快照对应的集群ID。
 	ClusterId string `json:"cluster_id"`
 
 	Datastore *Datastore `json:"datastore,omitempty"`

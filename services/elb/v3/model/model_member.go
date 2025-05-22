@@ -12,6 +12,9 @@ type Member struct {
 	// 参数解释：后端服务器ID。 > 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
 	Id string `json:"id"`
 
+	// 参数解释：后端服务器所在的可用区。
+	AvailabilityZone string `json:"availability_zone"`
+
 	// 参数解释：后端服务器名称。  注意：该名称并非ECS名称。
 	Name string `json:"name"`
 

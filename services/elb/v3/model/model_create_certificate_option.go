@@ -47,6 +47,15 @@ type CreateCertificateOption struct {
 
 	// SM证书ID。
 	ScmCertificateId *string `json:"scm_certificate_id,omitempty"`
+
+	// 参数解释：证书来源 取值范围：无  默认取值：当scm_certificate_id不为空，且未传入source时，默认取值为“scm”； 其他情况下默认为空。
+	Source *string `json:"source,omitempty"`
+
+	// 参数解释：修改保护状态  约束限制：无  取值范围： - nonProtection: 不保护  - consoleProtection: 控制台修改保护  默认取值：nonProtection
+	ProtectionStatus *CreateCertificateOptionProtectionStatus `json:"protection_status,omitempty"`
+
+	// 参数解释：设置修改保护的原因  约束限制：仅当protection_status为consoleProtection时有效  取值范围：无  默认取值：空
+	ProtectionReason *string `json:"protection_reason,omitempty"`
 }
 
 func (o CreateCertificateOption) String() string {
@@ -87,6 +96,53 @@ func (c CreateCertificateOptionType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateCertificateOptionType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateCertificateOptionProtectionStatus struct {
+	value string
+}
+
+type CreateCertificateOptionProtectionStatusEnum struct {
+	NON_PROTECTION     CreateCertificateOptionProtectionStatus
+	CONSOLE_PROTECTION CreateCertificateOptionProtectionStatus
+}
+
+func GetCreateCertificateOptionProtectionStatusEnum() CreateCertificateOptionProtectionStatusEnum {
+	return CreateCertificateOptionProtectionStatusEnum{
+		NON_PROTECTION: CreateCertificateOptionProtectionStatus{
+			value: "nonProtection",
+		},
+		CONSOLE_PROTECTION: CreateCertificateOptionProtectionStatus{
+			value: "consoleProtection",
+		},
+	}
+}
+
+func (c CreateCertificateOptionProtectionStatus) Value() string {
+	return c.value
+}
+
+func (c CreateCertificateOptionProtectionStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateCertificateOptionProtectionStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

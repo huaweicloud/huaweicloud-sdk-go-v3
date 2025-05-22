@@ -12,10 +12,10 @@ type PolicyResponse struct {
 	// id
 	Id string `json:"id"`
 
-	// 防护包id
+	// 实例id
 	PackageId string `json:"package_id"`
 
-	// 防护包名
+	// 实例名
 	PackageName string `json:"package_name"`
 
 	// 策略名

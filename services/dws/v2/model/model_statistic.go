@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// Statistic 资源数量详情。
+// Statistic **参数解释**： 资源数量详情。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 type Statistic struct {
 
-	// 资源名称。 - cluster.total：总集群（个）。 - cluster.normal：可用集群（个）。 - instance.total：总节点（个）。 - instance.normal：可用节点（个）。 - storage.total：总容量（GB）。
+	// **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： - cluster.total：总集群（个）。 - cluster.normal：可用集群（个）。 - instance.total：总节点（个）。 - instance.normal：可用节点（个）。 - storage.total：总容量（GB）。  **默认取值**： 不涉及。
 	Name string `json:"name"`
 
-	// 资源数量值。
+	// **参数解释**： 资源数量值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Value float64 `json:"value"`
 
-	// 资源数量单位。
+	// **参数解释**： 资源数量单位。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Unit string `json:"unit"`
 }
 

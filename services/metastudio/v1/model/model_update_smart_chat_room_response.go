@@ -34,7 +34,7 @@ type UpdateSmartChatRoomResponse struct {
 	// **参数解释**： 并发路数。
 	Concurrency *int32 `json:"concurrency,omitempty"`
 
-	// 默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。
+	// 默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
 	DefaultLanguage *UpdateSmartChatRoomResponseDefaultLanguage `json:"default_language,omitempty"`
 
 	BackgroundConfig *BackgroundConfigInfo `json:"background_config,omitempty"`
@@ -49,6 +49,9 @@ type UpdateSmartChatRoomResponse struct {
 	// 智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
 	ChatVideoType *UpdateSmartChatRoomResponseChatVideoType `json:"chat_video_type,omitempty"`
 
+	// **参数解释**： 静默退出时长。
+	ExitMuteThreshold *int32 `json:"exit_mute_threshold,omitempty"`
+
 	// 对话ID。
 	RoomId *string `json:"room_id,omitempty"`
 
@@ -60,6 +63,12 @@ type UpdateSmartChatRoomResponse struct {
 
 	// 对话封面图URL
 	CoverUrl *string `json:"cover_url,omitempty"`
+
+	// 是否是资源池模式
+	IsPoolMode *bool `json:"is_pool_mode,omitempty"`
+
+	// 资源配置。
+	ChatResourceConfig *[]ChatResourceConfigInfo `json:"chat_resource_config,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
@@ -79,8 +88,12 @@ type UpdateSmartChatRoomResponseDefaultLanguage struct {
 }
 
 type UpdateSmartChatRoomResponseDefaultLanguageEnum struct {
-	CN UpdateSmartChatRoomResponseDefaultLanguage
-	EN UpdateSmartChatRoomResponseDefaultLanguage
+	CN     UpdateSmartChatRoomResponseDefaultLanguage
+	EN     UpdateSmartChatRoomResponseDefaultLanguage
+	ESP    UpdateSmartChatRoomResponseDefaultLanguage
+	POR    UpdateSmartChatRoomResponseDefaultLanguage
+	ARABIC UpdateSmartChatRoomResponseDefaultLanguage
+	THAI   UpdateSmartChatRoomResponseDefaultLanguage
 }
 
 func GetUpdateSmartChatRoomResponseDefaultLanguageEnum() UpdateSmartChatRoomResponseDefaultLanguageEnum {
@@ -90,6 +103,18 @@ func GetUpdateSmartChatRoomResponseDefaultLanguageEnum() UpdateSmartChatRoomResp
 		},
 		EN: UpdateSmartChatRoomResponseDefaultLanguage{
 			value: "EN",
+		},
+		ESP: UpdateSmartChatRoomResponseDefaultLanguage{
+			value: "ESP",
+		},
+		POR: UpdateSmartChatRoomResponseDefaultLanguage{
+			value: "por",
+		},
+		ARABIC: UpdateSmartChatRoomResponseDefaultLanguage{
+			value: "Arabic",
+		},
+		THAI: UpdateSmartChatRoomResponseDefaultLanguage{
+			value: "Thai",
 		},
 	}
 }

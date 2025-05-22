@@ -9,16 +9,16 @@ import (
 // AvailabilityZone 可用区详情。
 type AvailabilityZone struct {
 
-	// 可用区唯一编码。
+	// **参数解释**： 可用区唯一编码。 **取值范围**： 不涉及。
 	Code string `json:"code"`
 
-	// 可用区名称。
+	// **参数解释**： 可用区名称。 **取值范围**： 不涉及。
 	Name string `json:"name"`
 
-	// 可用区状态。 - available：可用。 - unavailable：不可用。
+	// **参数解释**： 可用区状态。 **取值范围**： available：可用。 unavailable：不可用。
 	Status string `json:"status"`
 
-	// 可用区组，如：center。
+	// **参数解释**： 可用区组，如：center。 **取值范围**： 不涉及。
 	PublicBorderGroup string `json:"public_border_group"`
 }
 

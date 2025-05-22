@@ -323,6 +323,27 @@ func (c *CdnClient) ListDomainsInvoker(request *model.ListDomainsRequest) *ListD
 	return &ListDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ModifyAccountInfo 修改租户配置
+//
+// 修改租户配置，当前仅支持开启OBS和SCM委托授权。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ModifyAccountInfo(request *model.ModifyAccountInfoRequest) (*model.ModifyAccountInfoResponse, error) {
+	requestDef := GenReqDefForModifyAccountInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyAccountInfoResponse), nil
+	}
+}
+
+// ModifyAccountInfoInvoker 修改租户配置
+func (c *CdnClient) ModifyAccountInfoInvoker(request *model.ModifyAccountInfoRequest) *ModifyAccountInfoInvoker {
+	requestDef := GenReqDefForModifyAccountInfo()
+	return &ModifyAccountInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetChargeModes 设置用户计费模式
 //
 // - 设置用户计费模式。

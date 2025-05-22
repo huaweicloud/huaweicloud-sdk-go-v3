@@ -8,7 +8,7 @@ import (
 
 type WafProductInfo struct {
 
-	// waf规格   -  professional：标准   - enterprise：专业   - ultimate：铂金版
+	// waf规格   -  professional：标准   - enterprise：专业   - ultimate：企业版
 	ResourceSpecCode *string `json:"resource_spec_code,omitempty"`
 
 	// 订购周期类型 month: 月；year: 年

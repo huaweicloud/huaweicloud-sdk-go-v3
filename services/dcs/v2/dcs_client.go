@@ -744,6 +744,27 @@ func (c *DcsClient) DeleteSingleInstanceInvoker(request *model.DeleteSingleInsta
 	return &DeleteSingleInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DownloadHotKey 下载热key
+//
+// 下载热key。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) DownloadHotKey(request *model.DownloadHotKeyRequest) (*model.DownloadHotKeyResponse, error) {
+	requestDef := GenReqDefForDownloadHotKey()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadHotKeyResponse), nil
+	}
+}
+
+// DownloadHotKeyInvoker 下载热key
+func (c *DcsClient) DownloadHotKeyInvoker(request *model.DownloadHotKeyRequest) *DownloadHotKeyInvoker {
+	requestDef := GenReqDefForDownloadHotKey()
+	return &DownloadHotKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DownloadSslCert 下载实例SSL证书
 //
 // 下载实例SSL证书。该接口目前仅针对Redis 6.0[基础版](tag:hws,hws_hk)版本实例。
@@ -1544,6 +1565,27 @@ func (c *DcsClient) LogoffWebCliInvoker(request *model.LogoffWebCliRequest) *Log
 	return &LogoffWebCliInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// MigrateAz 变更可用区
+//
+// 迁移缓存实例可用区，完成单可用区实例跨可用区改造。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) MigrateAz(request *model.MigrateAzRequest) (*model.MigrateAzResponse, error) {
+	requestDef := GenReqDefForMigrateAz()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.MigrateAzResponse), nil
+	}
+}
+
+// MigrateAzInvoker 变更可用区
+func (c *DcsClient) MigrateAzInvoker(request *model.MigrateAzRequest) *MigrateAzInvoker {
+	requestDef := GenReqDefForMigrateAz()
+	return &MigrateAzInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ResetAclAccountPassWord 重置ACL账号密码
 //
 // 重置ACL账号密码。
@@ -1650,6 +1692,27 @@ func (c *DcsClient) RestoreInstance(request *model.RestoreInstanceRequest) (*mod
 func (c *DcsClient) RestoreInstanceInvoker(request *model.RestoreInstanceRequest) *RestoreInstanceInvoker {
 	requestDef := GenReqDefForRestoreInstance()
 	return &RestoreInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RollbackExchangeInstanceIp IP交换回滚
+//
+// IP交换回滚。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) RollbackExchangeInstanceIp(request *model.RollbackExchangeInstanceIpRequest) (*model.RollbackExchangeInstanceIpResponse, error) {
+	requestDef := GenReqDefForRollbackExchangeInstanceIp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RollbackExchangeInstanceIpResponse), nil
+	}
+}
+
+// RollbackExchangeInstanceIpInvoker IP交换回滚
+func (c *DcsClient) RollbackExchangeInstanceIpInvoker(request *model.RollbackExchangeInstanceIpRequest) *RollbackExchangeInstanceIpInvoker {
+	requestDef := GenReqDefForRollbackExchangeInstanceIp()
+	return &RollbackExchangeInstanceIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ScanClients 下发查询会话列表任务
@@ -2007,6 +2070,27 @@ func (c *DcsClient) ShowInstanceSslDetail(request *model.ShowInstanceSslDetailRe
 func (c *DcsClient) ShowInstanceSslDetailInvoker(request *model.ShowInstanceSslDetailRequest) *ShowInstanceSslDetailInvoker {
 	requestDef := GenReqDefForShowInstanceSslDetail()
 	return &ShowInstanceSslDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceTopology 查询集群实例拓扑关系图
+//
+// 查询集群实例拓扑关系图。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ShowInstanceTopology(request *model.ShowInstanceTopologyRequest) (*model.ShowInstanceTopologyResponse, error) {
+	requestDef := GenReqDefForShowInstanceTopology()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceTopologyResponse), nil
+	}
+}
+
+// ShowInstanceTopologyInvoker 查询集群实例拓扑关系图
+func (c *DcsClient) ShowInstanceTopologyInvoker(request *model.ShowInstanceTopologyRequest) *ShowInstanceTopologyInvoker {
+	requestDef := GenReqDefForShowInstanceTopology()
+	return &ShowInstanceTopologyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowInstanceVersion 根据实例ID获取实例内核版本信息
@@ -2536,6 +2620,28 @@ func (c *DcsClient) UpdateInstanceConfigInvoker(request *model.UpdateInstanceCon
 	return &UpdateInstanceConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateIpWhitelistAsync 设置IP白名单分组异步接口
+//
+// 为指定实例设置IP白名单分组，包含创建、停用、编辑、删除白名单四个功能。返回异步任务jobId，设置白名单分组信息会覆盖掉已有的白名单信息，因此在新增IP白名单分组时，需保留已有的白名单信息后再编辑新的白名单分组信息。
+// [仅Redis 4.0及以上版本的实例支持设置IP白名单分组，Redis 3.0实例不支持该功能。](tag:dt)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) UpdateIpWhitelistAsync(request *model.UpdateIpWhitelistAsyncRequest) (*model.UpdateIpWhitelistAsyncResponse, error) {
+	requestDef := GenReqDefForUpdateIpWhitelistAsync()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateIpWhitelistAsyncResponse), nil
+	}
+}
+
+// UpdateIpWhitelistAsyncInvoker 设置IP白名单分组异步接口
+func (c *DcsClient) UpdateIpWhitelistAsyncInvoker(request *model.UpdateIpWhitelistAsyncRequest) *UpdateIpWhitelistAsyncInvoker {
+	requestDef := GenReqDefForUpdateIpWhitelistAsync()
+	return &UpdateIpWhitelistAsyncInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateMigrationTask 设置迁移任务自动重连
 //
 // 设置迁移任务自动重连
@@ -2723,4 +2829,88 @@ func (c *DcsClient) UpdateIpWhitelist(request *model.UpdateIpWhitelistRequest) (
 func (c *DcsClient) UpdateIpWhitelistInvoker(request *model.UpdateIpWhitelistRequest) *UpdateIpWhitelistInvoker {
 	requestDef := GenReqDefForUpdateIpWhitelist()
 	return &UpdateIpWhitelistInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateOfflineKeyAnalysis 创建离线全量key分析任务
+//
+// 创建离线全量key分析任务。离线全量key分析用于分析实例指定节点备份文件中的TOP100大key，每种数据类型前缀数量TOP50的key和每种数据类型key的内存占用和数量的分布情况。仅Redis 4.0、5.0、6.0版本及Redis企业版实例支持。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) CreateOfflineKeyAnalysis(request *model.CreateOfflineKeyAnalysisRequest) (*model.CreateOfflineKeyAnalysisResponse, error) {
+	requestDef := GenReqDefForCreateOfflineKeyAnalysis()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateOfflineKeyAnalysisResponse), nil
+	}
+}
+
+// CreateOfflineKeyAnalysisInvoker 创建离线全量key分析任务
+func (c *DcsClient) CreateOfflineKeyAnalysisInvoker(request *model.CreateOfflineKeyAnalysisRequest) *CreateOfflineKeyAnalysisInvoker {
+	requestDef := GenReqDefForCreateOfflineKeyAnalysis()
+	return &CreateOfflineKeyAnalysisInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteOfflineKeyAnalysisTask 删除离线全量key分析记录
+//
+// 删除离线全量key分析记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) DeleteOfflineKeyAnalysisTask(request *model.DeleteOfflineKeyAnalysisTaskRequest) (*model.DeleteOfflineKeyAnalysisTaskResponse, error) {
+	requestDef := GenReqDefForDeleteOfflineKeyAnalysisTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteOfflineKeyAnalysisTaskResponse), nil
+	}
+}
+
+// DeleteOfflineKeyAnalysisTaskInvoker 删除离线全量key分析记录
+func (c *DcsClient) DeleteOfflineKeyAnalysisTaskInvoker(request *model.DeleteOfflineKeyAnalysisTaskRequest) *DeleteOfflineKeyAnalysisTaskInvoker {
+	requestDef := GenReqDefForDeleteOfflineKeyAnalysisTask()
+	return &DeleteOfflineKeyAnalysisTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListOfflineKeyAnalysisTask 查询离线全量key分析任务列表
+//
+// 查询离线全量key分析任务列表，支持Redis4.0、5.0、6.0版本及Redis企业版。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ListOfflineKeyAnalysisTask(request *model.ListOfflineKeyAnalysisTaskRequest) (*model.ListOfflineKeyAnalysisTaskResponse, error) {
+	requestDef := GenReqDefForListOfflineKeyAnalysisTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOfflineKeyAnalysisTaskResponse), nil
+	}
+}
+
+// ListOfflineKeyAnalysisTaskInvoker 查询离线全量key分析任务列表
+func (c *DcsClient) ListOfflineKeyAnalysisTaskInvoker(request *model.ListOfflineKeyAnalysisTaskRequest) *ListOfflineKeyAnalysisTaskInvoker {
+	requestDef := GenReqDefForListOfflineKeyAnalysisTask()
+	return &ListOfflineKeyAnalysisTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowOfflineKeyAnalysisTask 查询离线全量key分析详情
+//
+// 查询离线全量key分析详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcsClient) ShowOfflineKeyAnalysisTask(request *model.ShowOfflineKeyAnalysisTaskRequest) (*model.ShowOfflineKeyAnalysisTaskResponse, error) {
+	requestDef := GenReqDefForShowOfflineKeyAnalysisTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowOfflineKeyAnalysisTaskResponse), nil
+	}
+}
+
+// ShowOfflineKeyAnalysisTaskInvoker 查询离线全量key分析详情
+func (c *DcsClient) ShowOfflineKeyAnalysisTaskInvoker(request *model.ShowOfflineKeyAnalysisTaskRequest) *ShowOfflineKeyAnalysisTaskInvoker {
+	requestDef := GenReqDefForShowOfflineKeyAnalysisTask()
+	return &ShowOfflineKeyAnalysisTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

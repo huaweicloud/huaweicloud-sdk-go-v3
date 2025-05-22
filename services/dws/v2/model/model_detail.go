@@ -6,17 +6,17 @@ import (
 	"strings"
 )
 
-// Detail 节点类型详细
+// Detail 规格详细信息。
 type Detail struct {
 
-	// 属性类型。
+	// **参数解释**： 属性类型。 **取值范围**： 不涉及。
 	Type *string `json:"type,omitempty"`
 
-	// 属性值。
+	// **参数解释**： 属性值。 **取值范围**： 不涉及。
 	Value string `json:"value"`
 
-	// 属性单位。
-	Unit string `json:"unit"`
+	// **参数解释**： 属性单位。 **取值范围**： 不涉及。
+	Unit *string `json:"unit,omitempty"`
 }
 
 func (o Detail) String() string {

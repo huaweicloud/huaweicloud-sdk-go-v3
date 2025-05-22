@@ -27,7 +27,7 @@ type ChatVoiceConfig struct {
 	// 第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
 	Provider *string `json:"provider,omitempty"`
 
-	// 语言类型。默认值CN。 * CN：简体中文。 * EN：英语。
+	// 语言类型。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
 	Language *ChatVoiceConfigLanguage `json:"language,omitempty"`
 }
 
@@ -45,8 +45,12 @@ type ChatVoiceConfigLanguage struct {
 }
 
 type ChatVoiceConfigLanguageEnum struct {
-	CN ChatVoiceConfigLanguage
-	EN ChatVoiceConfigLanguage
+	CN     ChatVoiceConfigLanguage
+	EN     ChatVoiceConfigLanguage
+	ESP    ChatVoiceConfigLanguage
+	POR    ChatVoiceConfigLanguage
+	ARABIC ChatVoiceConfigLanguage
+	THAI   ChatVoiceConfigLanguage
 }
 
 func GetChatVoiceConfigLanguageEnum() ChatVoiceConfigLanguageEnum {
@@ -56,6 +60,18 @@ func GetChatVoiceConfigLanguageEnum() ChatVoiceConfigLanguageEnum {
 		},
 		EN: ChatVoiceConfigLanguage{
 			value: "EN",
+		},
+		ESP: ChatVoiceConfigLanguage{
+			value: "ESP",
+		},
+		POR: ChatVoiceConfigLanguage{
+			value: "por",
+		},
+		ARABIC: ChatVoiceConfigLanguage{
+			value: "Arabic",
+		},
+		THAI: ChatVoiceConfigLanguage{
+			value: "Thai",
 		},
 	}
 }

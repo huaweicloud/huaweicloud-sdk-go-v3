@@ -9,7 +9,7 @@ import (
 type EngineModifyReq struct {
 
 	// 变更的规格
-	Flavor *string `json:"flavor,omitempty"`
+	Flavor string `json:"flavor"`
 
 	// 变更的配置，覆盖组件bp的input参数
 	Inputs map[string]string `json:"inputs,omitempty"`

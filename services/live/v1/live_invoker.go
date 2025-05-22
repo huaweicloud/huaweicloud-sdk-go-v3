@@ -1220,3 +1220,19 @@ func (i *ModifyOttChannelInfoStatsInvoker) Invoke() (*model.ModifyOttChannelInfo
 		return result.(*model.ModifyOttChannelInfoStatsResponse), nil
 	}
 }
+
+type ShowChannelStatisticInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowChannelStatisticInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowChannelStatisticInvoker) Invoke() (*model.ShowChannelStatisticResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowChannelStatisticResponse), nil
+	}
+}

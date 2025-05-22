@@ -9,7 +9,7 @@ import (
 // IpBindingBody ip绑定请求体
 type IpBindingBody struct {
 
-	// 防护包id
+	// 实例id
 	PackageId string `json:"package_id"`
 
 	// 防护ip的id列表

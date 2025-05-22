@@ -217,6 +217,22 @@ func (i *ListDomainsInvoker) Invoke() (*model.ListDomainsResponse, error) {
 	}
 }
 
+type ModifyAccountInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyAccountInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyAccountInfoInvoker) Invoke() (*model.ModifyAccountInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyAccountInfoResponse), nil
+	}
+}
+
 type SetChargeModesInvoker struct {
 	*invoker.BaseInvoker
 }

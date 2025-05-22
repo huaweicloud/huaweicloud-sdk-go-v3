@@ -9,10 +9,10 @@ import (
 // ShowWorkloadPlanStageResponse Response Object
 type ShowWorkloadPlanStageResponse struct {
 
-	// 结果状态码。
+	// **参数解释**： 结果状态码。 **取值范围**： 不涉及。
 	WorkloadResCode *int32 `json:"workload_res_code,omitempty"`
 
-	// 结果描述。
+	// **参数解释**： 结果描述。 **取值范围**： 不涉及。
 	WorkloadResStr *string `json:"workload_res_str,omitempty"`
 
 	WorkloadPlanStage *PlanStage `json:"workload_plan_stage,omitempty"`

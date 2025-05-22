@@ -27,7 +27,7 @@ type VoiceConfigRsp struct {
 	// 第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
 	Provider *string `json:"provider,omitempty"`
 
-	// 语言类型。默认值CN。 * CN：简体中文。 * EN：英语。
+	// 语言类型。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
 	Language *VoiceConfigRspLanguage `json:"language,omitempty"`
 
 	// 语言描述
@@ -48,8 +48,12 @@ type VoiceConfigRspLanguage struct {
 }
 
 type VoiceConfigRspLanguageEnum struct {
-	CN VoiceConfigRspLanguage
-	EN VoiceConfigRspLanguage
+	CN     VoiceConfigRspLanguage
+	EN     VoiceConfigRspLanguage
+	ESP    VoiceConfigRspLanguage
+	POR    VoiceConfigRspLanguage
+	ARABIC VoiceConfigRspLanguage
+	THAI   VoiceConfigRspLanguage
 }
 
 func GetVoiceConfigRspLanguageEnum() VoiceConfigRspLanguageEnum {
@@ -59,6 +63,18 @@ func GetVoiceConfigRspLanguageEnum() VoiceConfigRspLanguageEnum {
 		},
 		EN: VoiceConfigRspLanguage{
 			value: "EN",
+		},
+		ESP: VoiceConfigRspLanguage{
+			value: "ESP",
+		},
+		POR: VoiceConfigRspLanguage{
+			value: "por",
+		},
+		ARABIC: VoiceConfigRspLanguage{
+			value: "Arabic",
+		},
+		THAI: VoiceConfigRspLanguage{
+			value: "Thai",
 		},
 	}
 }

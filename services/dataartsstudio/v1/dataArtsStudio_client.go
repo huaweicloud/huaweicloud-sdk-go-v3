@@ -1200,6 +1200,27 @@ func (c *DataArtsStudioClient) CreateFactoryJobInvoker(request *model.CreateFact
 	return &CreateFactoryJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateFactoryPendingItemsPackage 待发布包发布
+//
+// 待发布包发布
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateFactoryPendingItemsPackage(request *model.CreateFactoryPendingItemsPackageRequest) (*model.CreateFactoryPendingItemsPackageResponse, error) {
+	requestDef := GenReqDefForCreateFactoryPendingItemsPackage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFactoryPendingItemsPackageResponse), nil
+	}
+}
+
+// CreateFactoryPendingItemsPackageInvoker 待发布包发布
+func (c *DataArtsStudioClient) CreateFactoryPendingItemsPackageInvoker(request *model.CreateFactoryPendingItemsPackageRequest) *CreateFactoryPendingItemsPackageInvoker {
+	requestDef := GenReqDefForCreateFactoryPendingItemsPackage()
+	return &CreateFactoryPendingItemsPackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateFactorySupplementDataInstance 创建补数据实例
 //
 // 创建补数据实例
@@ -3593,6 +3614,27 @@ func (c *DataArtsStudioClient) ListFactoryJobs(request *model.ListFactoryJobsReq
 func (c *DataArtsStudioClient) ListFactoryJobsInvoker(request *model.ListFactoryJobsRequest) *ListFactoryJobsInvoker {
 	requestDef := GenReqDefForListFactoryJobs()
 	return &ListFactoryJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFactoryPendingItems 查询待发布包列表
+//
+// 查询待发布包列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListFactoryPendingItems(request *model.ListFactoryPendingItemsRequest) (*model.ListFactoryPendingItemsResponse, error) {
+	requestDef := GenReqDefForListFactoryPendingItems()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFactoryPendingItemsResponse), nil
+	}
+}
+
+// ListFactoryPendingItemsInvoker 查询待发布包列表
+func (c *DataArtsStudioClient) ListFactoryPendingItemsInvoker(request *model.ListFactoryPendingItemsRequest) *ListFactoryPendingItemsInvoker {
+	requestDef := GenReqDefForListFactoryPendingItems()
+	return &ListFactoryPendingItemsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListFactoryReleasePackages 查询发布包列表

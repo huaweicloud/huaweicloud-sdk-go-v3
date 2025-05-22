@@ -32,6 +32,12 @@ var (
 		"https://pipeline-external.tr-west-1.myhuaweicloud.com")
 	LA_SOUTH_2 = region.NewRegion("la-south-2",
 		"https://pipeline-external.la-south-2.myhuaweicloud.com")
+	AF_NORTH_1 = region.NewRegion("af-north-1",
+		"https://pipeline.af-north-1.myhuaweicloud.com")
+	ME_EAST_1 = region.NewRegion("me-east-1",
+		"https://pipeline.me-east-1.myhuaweicloud.com")
+	AF_SOUTH_1 = region.NewRegion("af-south-1",
+		"https://pipeline.af-south-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -47,6 +53,9 @@ var staticFields = map[string]*region.Region{
 	"la-north-2":     LA_NORTH_2,
 	"tr-west-1":      TR_WEST_1,
 	"la-south-2":     LA_SOUTH_2,
+	"af-north-1":     AF_NORTH_1,
+	"me-east-1":      ME_EAST_1,
+	"af-south-1":     AF_SOUTH_1,
 }
 
 var provider = region.DefaultProviderChain("CODEARTSPIPELINE")

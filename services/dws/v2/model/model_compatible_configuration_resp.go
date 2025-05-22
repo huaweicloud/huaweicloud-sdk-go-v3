@@ -6,15 +6,16 @@ import (
 	"strings"
 )
 
+// CompatibleConfigurationResp **参数解释**： 参数组信息。 **取值范围**： 不涉及。
 type CompatibleConfigurationResp struct {
 
-	// ID
+	// **参数解释**： 参数组ID。 **取值范围**： 不涉及。
 	Id *string `json:"id,omitempty"`
 
-	// 名称
+	// **参数解释**： 参数组名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 连接
+	// **参数解释**： 连接信息。 **取值范围**： 不涉及。
 	Links *[]LinkResp `json:"links,omitempty"`
 }
 

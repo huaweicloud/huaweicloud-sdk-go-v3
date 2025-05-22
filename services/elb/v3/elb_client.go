@@ -451,6 +451,27 @@ func (c *ElbClient) CreateMemberInvoker(request *model.CreateMemberRequest) *Cre
 	return &CreateMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateMemberHealthCheckJob 创建后端服务器检测任务
+//
+// 创建后端服务器检测任务。包括后端服务器的配置、ACL规则和安全组规则检查。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) CreateMemberHealthCheckJob(request *model.CreateMemberHealthCheckJobRequest) (*model.CreateMemberHealthCheckJobResponse, error) {
+	requestDef := GenReqDefForCreateMemberHealthCheckJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateMemberHealthCheckJobResponse), nil
+	}
+}
+
+// CreateMemberHealthCheckJobInvoker 创建后端服务器检测任务
+func (c *ElbClient) CreateMemberHealthCheckJobInvoker(request *model.CreateMemberHealthCheckJobRequest) *CreateMemberHealthCheckJobInvoker {
+	requestDef := GenReqDefForCreateMemberHealthCheckJob()
+	return &CreateMemberHealthCheckJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePool 创建后端服务器组
 //
 // 创建后端服务器组。
@@ -790,6 +811,27 @@ func (c *ElbClient) DeletePoolCascade(request *model.DeletePoolCascadeRequest) (
 func (c *ElbClient) DeletePoolCascadeInvoker(request *model.DeletePoolCascadeRequest) *DeletePoolCascadeInvoker {
 	requestDef := GenReqDefForDeletePoolCascade()
 	return &DeletePoolCascadeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRecycleLoadBalancer 销毁回收站负载均衡器
+//
+// 销毁回收站负载均衡器。销毁后无法再还原。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) DeleteRecycleLoadBalancer(request *model.DeleteRecycleLoadBalancerRequest) (*model.DeleteRecycleLoadBalancerResponse, error) {
+	requestDef := GenReqDefForDeleteRecycleLoadBalancer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteRecycleLoadBalancerResponse), nil
+	}
+}
+
+// DeleteRecycleLoadBalancerInvoker 销毁回收站负载均衡器
+func (c *ElbClient) DeleteRecycleLoadBalancerInvoker(request *model.DeleteRecycleLoadBalancerRequest) *DeleteRecycleLoadBalancerInvoker {
+	requestDef := GenReqDefForDeleteRecycleLoadBalancer()
+	return &DeleteRecycleLoadBalancerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteSecurityPolicy 删除自定义安全策略
@@ -1180,6 +1222,27 @@ func (c *ElbClient) ListQuotaDetailsInvoker(request *model.ListQuotaDetailsReque
 	return &ListQuotaDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListRecycleBinLoadBalancers 查询回收站负载均衡器列表
+//
+// 查询回收站负载均衡器列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) ListRecycleBinLoadBalancers(request *model.ListRecycleBinLoadBalancersRequest) (*model.ListRecycleBinLoadBalancersResponse, error) {
+	requestDef := GenReqDefForListRecycleBinLoadBalancers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRecycleBinLoadBalancersResponse), nil
+	}
+}
+
+// ListRecycleBinLoadBalancersInvoker 查询回收站负载均衡器列表
+func (c *ElbClient) ListRecycleBinLoadBalancersInvoker(request *model.ListRecycleBinLoadBalancersRequest) *ListRecycleBinLoadBalancersInvoker {
+	requestDef := GenReqDefForListRecycleBinLoadBalancers()
+	return &ListRecycleBinLoadBalancersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSecurityPolicies 查询自定义安全策略列表
 //
 // 查询自定义安全策略列表。[荷兰region不支持自定义安全策略功能，请勿使用。](tag:dt)
@@ -1222,6 +1285,27 @@ func (c *ElbClient) ListSystemSecurityPolicies(request *model.ListSystemSecurity
 func (c *ElbClient) ListSystemSecurityPoliciesInvoker(request *model.ListSystemSecurityPoliciesRequest) *ListSystemSecurityPoliciesInvoker {
 	requestDef := GenReqDefForListSystemSecurityPolicies()
 	return &ListSystemSecurityPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestoreLoadbalancer 还原负载均衡器
+//
+// 从回收站中还原负载均衡器
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) RestoreLoadbalancer(request *model.RestoreLoadbalancerRequest) (*model.RestoreLoadbalancerResponse, error) {
+	requestDef := GenReqDefForRestoreLoadbalancer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestoreLoadbalancerResponse), nil
+	}
+}
+
+// RestoreLoadbalancerInvoker 还原负载均衡器
+func (c *ElbClient) RestoreLoadbalancerInvoker(request *model.RestoreLoadbalancerRequest) *RestoreLoadbalancerInvoker {
+	requestDef := GenReqDefForRestoreLoadbalancer()
+	return &RestoreLoadbalancerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowCertificate 查询证书详情
@@ -1500,6 +1584,27 @@ func (c *ElbClient) ShowMemberInvoker(request *model.ShowMemberRequest) *ShowMem
 	return &ShowMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowMemberHealthCheckJob 查询后端服务器检测任务的结果
+//
+// 查询后端服务器检测任务的结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) ShowMemberHealthCheckJob(request *model.ShowMemberHealthCheckJobRequest) (*model.ShowMemberHealthCheckJobResponse, error) {
+	requestDef := GenReqDefForShowMemberHealthCheckJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMemberHealthCheckJobResponse), nil
+	}
+}
+
+// ShowMemberHealthCheckJobInvoker 查询后端服务器检测任务的结果
+func (c *ElbClient) ShowMemberHealthCheckJobInvoker(request *model.ShowMemberHealthCheckJobRequest) *ShowMemberHealthCheckJobInvoker {
+	requestDef := GenReqDefForShowMemberHealthCheckJob()
+	return &ShowMemberHealthCheckJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowPool 查询后端服务器组详情
 //
 // 后端服务器组详情。
@@ -1540,6 +1645,27 @@ func (c *ElbClient) ShowQuota(request *model.ShowQuotaRequest) (*model.ShowQuota
 func (c *ElbClient) ShowQuotaInvoker(request *model.ShowQuotaRequest) *ShowQuotaInvoker {
 	requestDef := GenReqDefForShowQuota()
 	return &ShowQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRecycleBin 查询回收站的配置
+//
+// 查询回收站的配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) ShowRecycleBin(request *model.ShowRecycleBinRequest) (*model.ShowRecycleBinResponse, error) {
+	requestDef := GenReqDefForShowRecycleBin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRecycleBinResponse), nil
+	}
+}
+
+// ShowRecycleBinInvoker 查询回收站的配置
+func (c *ElbClient) ShowRecycleBinInvoker(request *model.ShowRecycleBinRequest) *ShowRecycleBinInvoker {
+	requestDef := GenReqDefForShowRecycleBin()
+	return &ShowRecycleBinInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSecurityPolicy 查询自定义安全策略详情
@@ -1750,6 +1876,48 @@ func (c *ElbClient) UpdatePool(request *model.UpdatePoolRequest) (*model.UpdateP
 func (c *ElbClient) UpdatePoolInvoker(request *model.UpdatePoolRequest) *UpdatePoolInvoker {
 	requestDef := GenReqDefForUpdatePool()
 	return &UpdatePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRecycleBinEnable 开关回收站
+//
+// 开启或关闭回收站功能。开启后删除的LB可以进入回收站，否则将不进入回收站而是直接被删除无法恢复。关闭回收站前需要先将回收站中的实例还原或销毁。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) UpdateRecycleBinEnable(request *model.UpdateRecycleBinEnableRequest) (*model.UpdateRecycleBinEnableResponse, error) {
+	requestDef := GenReqDefForUpdateRecycleBinEnable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRecycleBinEnableResponse), nil
+	}
+}
+
+// UpdateRecycleBinEnableInvoker 开关回收站
+func (c *ElbClient) UpdateRecycleBinEnableInvoker(request *model.UpdateRecycleBinEnableRequest) *UpdateRecycleBinEnableInvoker {
+	requestDef := GenReqDefForUpdateRecycleBinEnable()
+	return &UpdateRecycleBinEnableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRecycleBinPolicy 更新回收站的配置
+//
+// 更新回收站的配置。若回收站未开启，则更新会报错。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) UpdateRecycleBinPolicy(request *model.UpdateRecycleBinPolicyRequest) (*model.UpdateRecycleBinPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateRecycleBinPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRecycleBinPolicyResponse), nil
+	}
+}
+
+// UpdateRecycleBinPolicyInvoker 更新回收站的配置
+func (c *ElbClient) UpdateRecycleBinPolicyInvoker(request *model.UpdateRecycleBinPolicyRequest) *UpdateRecycleBinPolicyInvoker {
+	requestDef := GenReqDefForUpdateRecycleBinPolicy()
+	return &UpdateRecycleBinPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSecurityPolicy 更新自定义安全策略

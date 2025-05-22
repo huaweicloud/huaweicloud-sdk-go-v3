@@ -44,6 +44,15 @@ type ListCertificatesRequest struct {
 
 	// 证书的指纹。  支持多值查询，查询条件格式：fingerprint=xxx&fingerprint=xxx。
 	Fingerprint *[]string `json:"fingerprint,omitempty"`
+
+	// 证书来源。  支持多值查询，查询条件格式：source=xxx&source=xxx。
+	Source *[]string `json:"source,omitempty"`
+
+	// 修改保护状态。  支持多值查询，查询条件格式：protection_status=xxx&protection_status=xxx。
+	ProtectionStatus *[]string `json:"protection_status,omitempty"`
+
+	// 设置修改保护的原因。  支持多值查询，查询条件格式：protection_reason=xxx&protection_reason=xxx。
+	ProtectionReason *[]string `json:"protection_reason,omitempty"`
 }
 
 func (o ListCertificatesRequest) String() string {

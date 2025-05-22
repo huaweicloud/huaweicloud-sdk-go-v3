@@ -9,10 +9,10 @@ import (
 // ListDssPoolsResponse Response Object
 type ListDssPoolsResponse struct {
 
-	// 专属分布式存储池详情列表。
+	// **参数解释**： 专属分布式存储池详情列表。 **取值范围**： 不涉及。
 	Pools *[]DssPool `json:"pools,omitempty"`
 
-	// 专属分布式存储池个数。
+	// **参数解释**： 专属分布式存储池个数。 **取值范围**： 不涉及。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

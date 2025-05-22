@@ -9,16 +9,16 @@ import (
 // ListWorkloadPlansResponse Response Object
 type ListWorkloadPlansResponse struct {
 
-	// 结果状态码。
+	// **参数解释**： 结果状态码。 **取值范围**： 不涉及。
 	WorkloadResCode *int32 `json:"workload_res_code,omitempty"`
 
-	// 结果描述。
+	// **参数解释**： 结果描述。 **取值范围**： 不涉及。
 	WorkloadResStr *string `json:"workload_res_str,omitempty"`
 
-	// 资源池名称。
+	// **参数解释**： 资源池名称。 **取值范围**： 不涉及。
 	PlanList *[]WorkloadPlanInfo `json:"plan_list,omitempty"`
 
-	// 总数量
+	// **参数解释**： 总数量。 **取值范围**： 不涉及。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

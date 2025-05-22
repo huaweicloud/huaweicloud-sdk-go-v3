@@ -12,10 +12,10 @@ import (
 // PackageResponse 包列表响应体
 type PackageResponse struct {
 
-	// 防护包id
+	// 实例id
 	PackageId string `json:"package_id"`
 
-	// 防护包名
+	// 实例名
 	PackageName string `json:"package_name"`
 
 	// 资源所属region
@@ -24,7 +24,7 @@ type PackageResponse struct {
 	// 防护类型
 	ProtectionType int32 `json:"protection_type"`
 
-	// 防护包类型。cnad_pro：专业版；cnad_ip：标准版；cnad_ep：铂金版；cnad_full_high：全力防高级版；cnad_vic：按需版；cnad_intl_ep：国际站铂金版
+	// 实例类型。cnad_pro：专业版；cnad_ip：标准版；cnad_ep：铂金版；cnad_full_high：全力防高级版；cnad_vic：按需版；cnad_intl_ep：国际站铂金版
 	InstanceType PackageResponseInstanceType `json:"instance_type"`
 
 	// 资源id
@@ -72,7 +72,7 @@ type PackageResponse struct {
 	// 策略模板数
 	PolicyNum int32 `json:"policy_num"`
 
-	// 是否旧防护包（旧防护包不支持升级规格）,默认不传为否
+	// 是否旧实例（旧实例不支持升级规格）,默认不传为否
 	IsOld *bool `json:"is_old,omitempty"`
 
 	// 专业版铂金版合并之后购买的专业版和铂金版均标识为true

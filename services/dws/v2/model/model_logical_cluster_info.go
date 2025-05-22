@@ -6,45 +6,45 @@ import (
 	"strings"
 )
 
-// LogicalClusterInfo This is a auto create Body Object
+// LogicalClusterInfo **参数解释**： 逻辑集群对象。 **取值范围**： 不涉及。
 type LogicalClusterInfo struct {
 
-	// 逻辑集群ID
+	// **参数解释**： 逻辑集群ID。 **取值范围**： 不涉及。
 	LogicalClusterId *string `json:"logical_cluster_id,omitempty"`
 
-	// 逻辑集群名称
+	// **参数解释**： 逻辑集群名称。 **取值范围**： 不涉及。
 	LogicalClusterName *string `json:"logical_cluster_name,omitempty"`
 
-	// 逻辑集群主机信息
+	// **参数解释**： 逻辑集群主机信息。 **取值范围**： 不涉及。
 	ClusterRings *[]ClusterRing `json:"cluster_rings,omitempty"`
 
-	// 逻辑集群状态
+	// **参数解释**： 逻辑集群状态。 **取值范围**： 不涉及。
 	Status *string `json:"status,omitempty"`
 
-	// 是否为第一个逻辑集群。第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图
+	// **参数解释**： 是否为第一个逻辑集群。历史版本中第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图。 **取值范围**： 不涉及。
 	FirstLogicalCluster *bool `json:"first_logical_cluster,omitempty"`
 
 	ActionInfo *ActionInfo `json:"action_info,omitempty"`
 
-	// 是否允许编辑
+	// **参数解释**： 是否允许编辑。 **取值范围**： 不涉及。
 	EditEnable *bool `json:"edit_enable,omitempty"`
 
-	// 是否允许重启
+	// **参数解释**： 是否允许重启。 **取值范围**： 不涉及。
 	RestartEnable *bool `json:"restart_enable,omitempty"`
 
-	// 是否允许删除
+	// **参数解释**： 是否允许删除。 **取值范围**： 不涉及。
 	DeleteEnable *bool `json:"delete_enable,omitempty"`
 
-	// 是否允许弹性伸缩
+	// **参数解释**： 是否允许弹性伸缩。 **取值范围**： 不涉及。
 	AddToElastic *bool `json:"add_to_elastic,omitempty"`
 
-	// 逻辑集群模式
+	// **参数解释**： 逻辑集群模式。 **取值范围**： 不涉及。
 	Mode *string `json:"mode,omitempty"`
 
-	// 等待被销毁
+	// **参数解释**： 作业等待时间。 **取值范围**： 不涉及。
 	WaitingForKilling *int32 `json:"waiting_for_killing,omitempty"`
 
-	// 集群类型
+	// **参数解释**： 集群类型。 **取值范围**： 不涉及。
 	ClusterType *string `json:"cluster_type,omitempty"`
 }
 

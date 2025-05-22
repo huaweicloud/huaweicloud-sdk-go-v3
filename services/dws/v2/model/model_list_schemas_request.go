@@ -9,25 +9,25 @@ import (
 // ListSchemasRequest Request Object
 type ListSchemasRequest struct {
 
-	// 集群ID
+	// **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
 	ClusterId string `json:"cluster_id"`
 
 	// 数据库名称
 	DatabaseName string `json:"database_name"`
 
-	// 排序字段
+	// **参数解释**： 排序字段。 **约束限制**： 不涉及。 **取值范围**： schemaName：模式名称排序。 **默认取值**： 不涉及。
 	SortKey *string `json:"sort_key,omitempty"`
 
-	// 排序字段
+	// **参数解释**： 排序字段。 **约束限制**： 不涉及。 **取值范围**： ASC：表示按升序排序。  DESC：表示按降序排序。 **默认取值**： 不涉及。
 	SortDir *string `json:"sort_dir,omitempty"`
 
-	// 查询关键词
+	// **参数解释**： 查询关键词。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Keywords *string `json:"keywords,omitempty"`
 
-	// 查询条数
+	// **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 10
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 偏移量
+	// **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
 	Offset *int32 `json:"offset,omitempty"`
 }
 

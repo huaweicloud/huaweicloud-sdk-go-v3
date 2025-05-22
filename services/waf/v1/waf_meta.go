@@ -1214,6 +1214,10 @@ func GenReqDefForListEvent() *def.HttpRequestDef {
 		WithJsonTag("hosts").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Sips").
+		WithJsonTag("sips").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Page").
 		WithJsonTag("page").
 		WithLocationType(def.Query))

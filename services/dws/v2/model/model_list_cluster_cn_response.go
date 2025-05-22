@@ -9,13 +9,13 @@ import (
 // ListClusterCnResponse Response Object
 type ListClusterCnResponse struct {
 
-	// 集群支持的最小CN节点数量。
+	// **参数解释**： 集群支持的最小CN节点数量。 **取值范围**： 不涉及。
 	MinNum *int32 `json:"min_num,omitempty"`
 
-	// 集群支持的最大CN节点数量。
+	// **参数解释**： 集群支持的最大CN节点数量。 **取值范围**： 不涉及。
 	MaxNum *int32 `json:"max_num,omitempty"`
 
-	// CN节点详情列表。
+	// **参数解释**： CN节点详情列表。 **取值范围**： 不涉及。
 	Instances      *[]CoordinatorNode `json:"instances,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }

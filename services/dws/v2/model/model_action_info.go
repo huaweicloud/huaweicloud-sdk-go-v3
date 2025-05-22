@@ -6,28 +6,28 @@ import (
 	"strings"
 )
 
-// ActionInfo 逻辑集群操作信息
+// ActionInfo **参数解释**： 逻辑集群操作信息。 **取值范围**： 不涉及。
 type ActionInfo struct {
 
-	// 操作名称。当前只允许Create,Expand,Restart,Delete,Shrink
+	// **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群
 	ActionName *string `json:"action_name,omitempty"`
 
-	// 操作进度，默认10
+	// **参数解释**： 操作进度，默认10。 **取值范围**： 0~100
 	Progress *int32 `json:"progress,omitempty"`
 
-	// 是否完成操作
+	// **参数解释**： 操作是否完成。 **取值范围**： 不涉及。
 	Completed *bool `json:"completed,omitempty"`
 
-	// 操作开始时间
+	// **参数解释**： 操作开始时间。 **取值范围**： 不涉及。
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 操作结束时间
+	// **参数解释**： 操作结束时间。 **取值范围**： 不涉及。
 	EndTime *string `json:"end_time,omitempty"`
 
-	// 操作结果。success或者failed，默认空字符串
+	// **参数解释**： 操作结果。。 **取值范围**： success：成功 failed：失败 默认空字符串。
 	Result *string `json:"result,omitempty"`
 
-	// 操作日志
+	// **参数解释**： 操作日志信息。 **取值范围**： 不涉及。
 	Logs *string `json:"logs,omitempty"`
 }
 
