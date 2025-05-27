@@ -1,3 +1,14 @@
+# 0.1.151 2025-05-27
+
+### HuaweiCloud SDK EdgeSec
+
+- _Features_
+  - None
+- _Bug Fix_
+  - Solve the authentication configuration issue
+- _Change_
+  - None
+
 # 0.1.150 2025-05-22
 
 ### HuaweiCloud SDK APM

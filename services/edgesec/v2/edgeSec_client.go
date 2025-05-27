@@ -15,7 +15,7 @@ func NewEdgeSecClient(hcClient *httpclient.HcHttpClient) *EdgeSecClient {
 }
 
 func EdgeSecClientBuilder() *httpclient.HcHttpClientBuilder {
-	builder := httpclient.NewHcHttpClientBuilder()
+	builder := httpclient.NewHcHttpClientBuilder().WithCredentialsType("global.Credentials,basic.Credentials")
 	return builder
 }
 

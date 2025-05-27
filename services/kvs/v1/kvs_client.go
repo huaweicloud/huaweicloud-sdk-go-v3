@@ -145,6 +145,27 @@ func (c *KvsClient) CheckHealthInvoker(request *model.CheckHealthRequest) *Check
 	return &CheckHealthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchGetKv 批量读请求
+//
+// 批量读请求，其中可以携带一或多个表的不同kv的查询操作。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KvsClient) BatchGetKv(request *model.BatchGetKvRequest) (*model.BatchGetKvResponse, error) {
+	requestDef := GenReqDefForBatchGetKv()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchGetKvResponse), nil
+	}
+}
+
+// BatchGetKvInvoker 批量读请求
+func (c *KvsClient) BatchGetKvInvoker(request *model.BatchGetKvRequest) *BatchGetKvInvoker {
+	requestDef := GenReqDefForBatchGetKv()
+	return &BatchGetKvInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchWriteKv 批量写请求
 //
 // 批量写请求，其中可以携带一或多个表的不同kv的写操作，上传kv/删除kv。

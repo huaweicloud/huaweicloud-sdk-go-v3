@@ -101,6 +101,22 @@ func (i *CheckHealthInvoker) Invoke() (*model.CheckHealthResponse, error) {
 	}
 }
 
+type BatchGetKvInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchGetKvInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchGetKvInvoker) Invoke() (*model.BatchGetKvResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchGetKvResponse), nil
+	}
+}
+
 type BatchWriteKvInvoker struct {
 	*invoker.BaseInvoker
 }

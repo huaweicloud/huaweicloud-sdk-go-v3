@@ -117,6 +117,26 @@ func GenReqDefForCheckHealth() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchGetKv() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/batch-get-kv").
+		WithResponse(new(model.BatchGetKvResponse)).
+		WithContentType("application/bson")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("StoreName").
+		WithJsonTag("store_name").
+		WithLocationType(def.Cname))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchWriteKv() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
