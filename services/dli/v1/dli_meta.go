@@ -2311,6 +2311,10 @@ func GenReqDefForListSqlJobs() *def.HttpRequestDef {
 		WithJsonTag("job-status").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("JobId").
+		WithJsonTag("job-id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobType").
 		WithJsonTag("job-type").
 		WithLocationType(def.Query))

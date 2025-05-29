@@ -5905,6 +5905,27 @@ func (c *DataArtsStudioClient) ShowFactoryEnvInvoker(request *model.ShowFactoryE
 	return &ShowFactoryEnvInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowFactoryFullText 全局搜索
+//
+// 全局搜索
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowFactoryFullText(request *model.ShowFactoryFullTextRequest) (*model.ShowFactoryFullTextResponse, error) {
+	requestDef := GenReqDefForShowFactoryFullText()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFactoryFullTextResponse), nil
+	}
+}
+
+// ShowFactoryFullTextInvoker 全局搜索
+func (c *DataArtsStudioClient) ShowFactoryFullTextInvoker(request *model.ShowFactoryFullTextRequest) *ShowFactoryFullTextInvoker {
+	requestDef := GenReqDefForShowFactoryFullText()
+	return &ShowFactoryFullTextInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowFactoryPackageDetail 查询指定发布包详情
 //
 // 查询指定发布包详情

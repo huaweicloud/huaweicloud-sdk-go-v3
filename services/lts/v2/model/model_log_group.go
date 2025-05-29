@@ -23,6 +23,9 @@ type LogGroup struct {
 
 	// 日志流所属标签
 	Tag map[string]string `json:"tag,omitempty"`
+
+	// 日志组别名
+	LogGroupNameAlias *string `json:"log_group_name_alias,omitempty"`
 }
 
 func (o LogGroup) String() string {

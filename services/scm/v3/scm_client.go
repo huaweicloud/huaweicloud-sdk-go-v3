@@ -40,6 +40,27 @@ func (c *ScmClient) ApplyCertificateInvoker(request *model.ApplyCertificateReque
 	return &ApplyCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreateOrDeleteTags 批量创建或删除标签
+//
+// 批量创建或删除标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ScmClient) BatchCreateOrDeleteTags(request *model.BatchCreateOrDeleteTagsRequest) (*model.BatchCreateOrDeleteTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateOrDeleteTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateOrDeleteTagsResponse), nil
+	}
+}
+
+// BatchCreateOrDeleteTagsInvoker 批量创建或删除标签
+func (c *ScmClient) BatchCreateOrDeleteTagsInvoker(request *model.BatchCreateOrDeleteTagsRequest) *BatchCreateOrDeleteTagsInvoker {
+	requestDef := GenReqDefForBatchCreateOrDeleteTags()
+	return &BatchCreateOrDeleteTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchPushCertificate 批量推送证书
 //
 // 批量推送SSL证书到弹性负载均衡（Elastic Load Balance，简称ELB）、Web应用防火墙（Web Application Firewall，WAF）、CDN（Content Delivery Network，内容分发网络）等其它华为云产品中。
@@ -80,6 +101,27 @@ func (c *ScmClient) CancelCertificateRequest(request *model.CancelCertificateReq
 func (c *ScmClient) CancelCertificateRequestInvoker(request *model.CancelCertificateRequestRequest) *CancelCertificateRequestInvoker {
 	requestDef := GenReqDefForCancelCertificateRequest()
 	return &CancelCertificateRequestInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCertificateTag 创建标签
+//
+// 创建标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ScmClient) CreateCertificateTag(request *model.CreateCertificateTagRequest) (*model.CreateCertificateTagResponse, error) {
+	requestDef := GenReqDefForCreateCertificateTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCertificateTagResponse), nil
+	}
+}
+
+// CreateCertificateTagInvoker 创建标签
+func (c *ScmClient) CreateCertificateTagInvoker(request *model.CreateCertificateTagRequest) *CreateCertificateTagInvoker {
+	requestDef := GenReqDefForCreateCertificateTag()
+	return &CreateCertificateTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteCertificate 删除证书
@@ -166,6 +208,27 @@ func (c *ScmClient) ImportCertificateInvoker(request *model.ImportCertificateReq
 	return &ImportCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAllTags 查询所有标签列表
+//
+// 查询所有标签列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ScmClient) ListAllTags(request *model.ListAllTagsRequest) (*model.ListAllTagsResponse, error) {
+	requestDef := GenReqDefForListAllTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAllTagsResponse), nil
+	}
+}
+
+// ListAllTagsInvoker 查询所有标签列表
+func (c *ScmClient) ListAllTagsInvoker(request *model.ListAllTagsRequest) *ListAllTagsInvoker {
+	requestDef := GenReqDefForListAllTags()
+	return &ListAllTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCertificates 查询证书列表
 //
 // 根据证书名称或绑定域名查询证书列表。
@@ -187,6 +250,27 @@ func (c *ScmClient) ListCertificatesInvoker(request *model.ListCertificatesReque
 	return &ListCertificatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCertificatesByTag 根据标签查询证书列表
+//
+// 根据标签查询证书列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ScmClient) ListCertificatesByTag(request *model.ListCertificatesByTagRequest) (*model.ListCertificatesByTagResponse, error) {
+	requestDef := GenReqDefForListCertificatesByTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCertificatesByTagResponse), nil
+	}
+}
+
+// ListCertificatesByTagInvoker 根据标签查询证书列表
+func (c *ScmClient) ListCertificatesByTagInvoker(request *model.ListCertificatesByTagRequest) *ListCertificatesByTagInvoker {
+	requestDef := GenReqDefForListCertificatesByTag()
+	return &ListCertificatesByTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDeployedResources 查询已部署资源
 //
 // 查询证书已部署的具体资源。针对已签发和上传的非国密证书。
@@ -206,6 +290,27 @@ func (c *ScmClient) ListDeployedResources(request *model.ListDeployedResourcesRe
 func (c *ScmClient) ListDeployedResourcesInvoker(request *model.ListDeployedResourcesRequest) *ListDeployedResourcesInvoker {
 	requestDef := GenReqDefForListDeployedResources()
 	return &ListDeployedResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTagsByCertificate 根据证书ID查询标签列表
+//
+// 根据证书ID查询标签列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ScmClient) ListTagsByCertificate(request *model.ListTagsByCertificateRequest) (*model.ListTagsByCertificateResponse, error) {
+	requestDef := GenReqDefForListTagsByCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTagsByCertificateResponse), nil
+	}
+}
+
+// ListTagsByCertificateInvoker 根据证书ID查询标签列表
+func (c *ScmClient) ListTagsByCertificateInvoker(request *model.ListTagsByCertificateRequest) *ListTagsByCertificateInvoker {
+	requestDef := GenReqDefForListTagsByCertificate()
+	return &ListTagsByCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // PushCertificate 推送证书

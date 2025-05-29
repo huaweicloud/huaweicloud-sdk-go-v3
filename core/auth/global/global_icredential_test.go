@@ -39,30 +39,30 @@ func TestCredentials_NeedUpdate(t *testing.T) {
 	// Manually specifying a security token
 	credentials, err = NewCredentialsBuilder().WithAk("ak").WithSk("sk").WithSecurityToken("token").SafeBuild()
 	assert.Nil(t, err)
-	assert.False(t, credentials.needUpdateSecurityToken())
+	assert.False(t, credentials.needUpdateSecurityTokenFromMetadata())
 	// Automatically update the expired security token
 	credentials.expiredAt = 1
-	assert.True(t, credentials.needUpdateSecurityToken())
+	assert.True(t, credentials.needUpdateSecurityTokenFromMetadata())
 	// The security token has not expired
-	credentials.expiredAt = time.Now().Unix() + 120
-	assert.False(t, credentials.needUpdateSecurityToken())
+	credentials.expiredAt = time.Now().Unix() + 10000
+	assert.False(t, credentials.needUpdateSecurityTokenFromMetadata())
 }
 
 func TestCredentials_NeedUpdateAuthToken(t *testing.T) {
 	credentials, err := NewCredentialsBuilder().SafeBuild()
 	assert.Nil(t, err)
 	// Without idp_id or id_token
-	assert.False(t, credentials.needUpdateAuthToken())
+	assert.False(t, credentials.needUpdateFederalAuthToken())
 	credentials.IdpId = "idp_id"
 	credentials.IdTokenFile = "file"
 	// Get the auth token for the first time
-	assert.True(t, credentials.needUpdateAuthToken())
+	assert.True(t, credentials.needUpdateFederalAuthToken())
 	// Automatically update the expired auth token
 	credentials.authToken = "auth_token"
-	assert.True(t, credentials.needUpdateAuthToken())
+	assert.True(t, credentials.needUpdateFederalAuthToken())
 	// The auth token has not expired
-	credentials.expiredAt = time.Now().Unix() + 120
-	assert.False(t, credentials.needUpdateAuthToken())
+	credentials.expiredAt = time.Now().Unix() + 10000
+	assert.False(t, credentials.needUpdateFederalAuthToken())
 }
 
 func TestCredentialsBuilder_SafeBuild(t *testing.T) {

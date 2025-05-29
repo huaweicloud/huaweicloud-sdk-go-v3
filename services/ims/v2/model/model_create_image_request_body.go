@@ -25,10 +25,10 @@ type CreateImageRequestBody struct {
 	ImageTags *[]TagKeyValue `json:"image_tags,omitempty"`
 
 	// 需要转换的云服务器ID。使用instance_id字段，从云服务器制作私有镜像时，该字段填写云服务器ID。
-	InstanceId string `json:"instance_id"`
+	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 镜像名称
-	Name string `json:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 镜像标签列表。默认为空。tags和image_tags只能使用一个。
 	Tags *[]string `json:"tags,omitempty"`

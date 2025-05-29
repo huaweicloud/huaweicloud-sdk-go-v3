@@ -9,7 +9,7 @@ import (
 // ListCitiesRequest Request Object
 type ListCitiesRequest struct {
 
-	// 语言。zh_CN：中文en_us：英文缺省为zh_CN。
+	// 语言，字段预留,目前仅支持中文。默认zh_cn，枚举：zh_cn：中文 en_us：英文
 	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 省份编码。

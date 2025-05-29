@@ -469,6 +469,22 @@ func (i *DeleteManualBackupInvoker) Invoke() (*model.DeleteManualBackupResponse,
 	}
 }
 
+type DeleteMongosNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteMongosNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteMongosNodeInvoker) Invoke() (*model.DeleteMongosNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteMongosNodeResponse), nil
+	}
+}
+
 type DeleteReadonlyNodeInvoker struct {
 	*invoker.BaseInvoker
 }

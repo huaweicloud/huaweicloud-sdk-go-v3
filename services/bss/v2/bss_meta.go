@@ -2011,6 +2011,21 @@ func GenReqDefForSendVerificationMessageCode() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForSetResourcesRenewConfig() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/orders/subscriptions/resources/renew/config").
+		WithResponse(new(model.SetResourcesRenewConfigResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowCustomerAccountBalances() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

@@ -1174,6 +1174,27 @@ func (c *CloudtestClient) ListTaskAssignCasesInvoker(request *model.ListTaskAssi
 	return &ListTaskAssignCasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTaskResultsDetail 查询单次测试套执行的详细结果
+//
+// 查询单次测试套执行的详细结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ListTaskResultsDetail(request *model.ListTaskResultsDetailRequest) (*model.ListTaskResultsDetailResponse, error) {
+	requestDef := GenReqDefForListTaskResultsDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTaskResultsDetailResponse), nil
+	}
+}
+
+// ListTaskResultsDetailInvoker 查询单次测试套执行的详细结果
+func (c *CloudtestClient) ListTaskResultsDetailInvoker(request *model.ListTaskResultsDetailRequest) *ListTaskResultsDetailInvoker {
+	requestDef := GenReqDefForListTaskResultsDetail()
+	return &ListTaskResultsDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListTaskTestCases 查询用例关联的测试任务列表
 //
 // 查询用例关联的测试任务列表
@@ -3354,4 +3375,25 @@ func (c *CloudtestClient) ListTestcasePlans(request *model.ListTestcasePlansRequ
 func (c *CloudtestClient) ListTestcasePlansInvoker(request *model.ListTestcasePlansRequest) *ListTestcasePlansInvoker {
 	requestDef := GenReqDefForListTestcasePlans()
 	return &ListTestcasePlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTaskResults 根据任务uri查询测试任务执行历史
+//
+// 根据任务uri查询测试任务执行历史
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ListTaskResults(request *model.ListTaskResultsRequest) (*model.ListTaskResultsResponse, error) {
+	requestDef := GenReqDefForListTaskResults()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTaskResultsResponse), nil
+	}
+}
+
+// ListTaskResultsInvoker 根据任务uri查询测试任务执行历史
+func (c *CloudtestClient) ListTaskResultsInvoker(request *model.ListTaskResultsRequest) *ListTaskResultsInvoker {
+	requestDef := GenReqDefForListTaskResults()
+	return &ListTaskResultsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

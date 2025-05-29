@@ -24,6 +24,8 @@ type ListSqlJobsRequest struct {
 
 	JobStatus *string `json:"job-status,omitempty"`
 
+	JobId *string `json:"job-id,omitempty"`
+
 	// 指定查询的作业类型，包含DDL、DCL、IMPORT、EXPORT、QUERY、INSERT，若要查询所有类型的作业，则传入ALL。
 	JobType *ListSqlJobsRequestJobType `json:"job-type,omitempty"`
 

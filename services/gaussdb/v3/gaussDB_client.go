@@ -2499,6 +2499,27 @@ func (c *GaussDBClient) SwitchGaussMySqlInstanceSslInvoker(request *model.Switch
 	return &SwitchGaussMySqlInstanceSslInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SwitchGaussMySqlProxyEip Proxy绑定解绑弹性公网IP
+//
+// Proxy绑定解绑弹性公网IP。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) SwitchGaussMySqlProxyEip(request *model.SwitchGaussMySqlProxyEipRequest) (*model.SwitchGaussMySqlProxyEipResponse, error) {
+	requestDef := GenReqDefForSwitchGaussMySqlProxyEip()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchGaussMySqlProxyEipResponse), nil
+	}
+}
+
+// SwitchGaussMySqlProxyEipInvoker Proxy绑定解绑弹性公网IP
+func (c *GaussDBClient) SwitchGaussMySqlProxyEipInvoker(request *model.SwitchGaussMySqlProxyEipRequest) *SwitchGaussMySqlProxyEipInvoker {
+	requestDef := GenReqDefForSwitchGaussMySqlProxyEip()
+	return &SwitchGaussMySqlProxyEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SwitchGaussMySqlProxySsl 开关数据库代理SSL
 //
 // 为数据库代理设置SSL数据加密。

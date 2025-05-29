@@ -75,6 +75,8 @@ type PostPaidServer struct {
 	Description *string `json:"description,omitempty"`
 
 	CpuOptions *CpuOptions `json:"cpu_options,omitempty"`
+
+	SerialConsoleOptions *SerialConsoleOptions `json:"serial_console_options,omitempty"`
 }
 
 func (o PostPaidServer) String() string {

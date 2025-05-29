@@ -9,7 +9,7 @@ import (
 // ListCostsRequest Request Object
 type ListCostsRequest struct {
 
-	// 语言。中文：zh_CN英文：en_US缺省为zh_CN。
+	// 语言，字段预留。默认zh_cn，枚举：zh_cn：中文 en_us：英文
 	XLanguage *string `json:"X-Language,omitempty"`
 
 	Body *ListCostsReq `json:"body,omitempty"`

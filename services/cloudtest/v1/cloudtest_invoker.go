@@ -885,6 +885,22 @@ func (i *ListTaskAssignCasesInvoker) Invoke() (*model.ListTaskAssignCasesRespons
 	}
 }
 
+type ListTaskResultsDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTaskResultsDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTaskResultsDetailInvoker) Invoke() (*model.ListTaskResultsDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTaskResultsDetailResponse), nil
+	}
+}
+
 type ListTaskTestCasesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2546,5 +2562,21 @@ func (i *ListTestcasePlansInvoker) Invoke() (*model.ListTestcasePlansResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ListTestcasePlansResponse), nil
+	}
+}
+
+type ListTaskResultsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTaskResultsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTaskResultsInvoker) Invoke() (*model.ListTaskResultsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTaskResultsResponse), nil
 	}
 }

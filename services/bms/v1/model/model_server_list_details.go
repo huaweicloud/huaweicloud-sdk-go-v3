@@ -47,7 +47,7 @@ type ServerListDetails struct {
 	Fault *Fault `json:"fault,omitempty"`
 
 	// 裸机是否在回收站中
-	InRecycleIn *bool `json:"in_recycle_in,omitempty"`
+	InRecycleBin *bool `json:"in_recycle_bin,omitempty"`
 }
 
 func (o ServerListDetails) String() string {

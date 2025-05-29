@@ -1189,6 +1189,22 @@ func (i *SendVerificationMessageCodeInvoker) Invoke() (*model.SendVerificationMe
 	}
 }
 
+type SetResourcesRenewConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetResourcesRenewConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetResourcesRenewConfigInvoker) Invoke() (*model.SetResourcesRenewConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetResourcesRenewConfigResponse), nil
+	}
+}
+
 type ShowCustomerAccountBalancesInvoker struct {
 	*invoker.BaseInvoker
 }

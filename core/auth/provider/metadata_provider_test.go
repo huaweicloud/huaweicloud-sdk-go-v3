@@ -29,14 +29,16 @@ import (
 func TestNewMetadataCredentialProvider(t *testing.T) {
 	p := NewMetadataCredentialProvider("test")
 	assert.Equal(t, &MetadataCredentialProvider{credentialType: "test"}, p)
+	_, err := p.GetCredentials()
+	assert.ErrorContains(t, err, "unsupported credential type")
 }
 
 func TestBasicCredentialMetadataProvider(t *testing.T) {
 	p := BasicCredentialMetadataProvider()
-	assert.Equal(t, &MetadataCredentialProvider{credentialType: basicCredentialType}, p)
+	assert.Equal(t, &MetadataBasicCredentialProvider{}, p)
 }
 
 func TestGlobalCredentialMetadataProvider(t *testing.T) {
 	p := GlobalCredentialMetadataProvider()
-	assert.Equal(t, &MetadataCredentialProvider{credentialType: globalCredentialType}, p)
+	assert.Equal(t, &MetadataGlobalCredentialProvider{}, p)
 }

@@ -197,6 +197,22 @@ func (i *ListBuildInfoRecordInvoker) Invoke() (*model.ListBuildInfoRecordRespons
 	}
 }
 
+type ListBuildInfoRecordByJobIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBuildInfoRecordByJobIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBuildInfoRecordByJobIdInvoker) Invoke() (*model.ListBuildInfoRecordByJobIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBuildInfoRecordByJobIdResponse), nil
+	}
+}
+
 type ListJobConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -226,6 +242,54 @@ func (i *ListNoticeInvoker) Invoke() (*model.ListNoticeResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListNoticeResponse), nil
+	}
+}
+
+type ListOfficialTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOfficialTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListOfficialTemplateInvoker) Invoke() (*model.ListOfficialTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOfficialTemplateResponse), nil
+	}
+}
+
+type ListProjectJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListProjectJobsInvoker) Invoke() (*model.ListProjectJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectJobsResponse), nil
+	}
+}
+
+type ListRecyclingJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRecyclingJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRecyclingJobInvoker) Invoke() (*model.ListRecyclingJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRecyclingJobResponse), nil
 	}
 }
 
@@ -261,6 +325,54 @@ func (i *RunJobInvoker) Invoke() (*model.RunJobResponse, error) {
 	}
 }
 
+type ShowBuildParamsListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBuildParamsListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowBuildParamsListInvoker) Invoke() (*model.ShowBuildParamsListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBuildParamsListResponse), nil
+	}
+}
+
+type ShowBuildRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBuildRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowBuildRecordInvoker) Invoke() (*model.ShowBuildRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBuildRecordResponse), nil
+	}
+}
+
+type ShowBuildRecordBuildScriptInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBuildRecordBuildScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowBuildRecordBuildScriptInvoker) Invoke() (*model.ShowBuildRecordBuildScriptResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBuildRecordBuildScriptResponse), nil
+	}
+}
+
 type ShowBuildRecordFullStagesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -293,6 +405,22 @@ func (i *ShowHistoryDetailsInvoker) Invoke() (*model.ShowHistoryDetailsResponse,
 	}
 }
 
+type ShowImageTemplateListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowImageTemplateListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowImageTemplateListInvoker) Invoke() (*model.ShowImageTemplateListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowImageTemplateListResponse), nil
+	}
+}
+
 type ShowJobBuildSuccessRatioInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -309,6 +437,70 @@ func (i *ShowJobBuildSuccessRatioInvoker) Invoke() (*model.ShowJobBuildSuccessRa
 	}
 }
 
+type ShowJobBuildTimeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowJobBuildTimeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowJobBuildTimeInvoker) Invoke() (*model.ShowJobBuildTimeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowJobBuildTimeResponse), nil
+	}
+}
+
+type ShowJobConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowJobConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowJobConfigInvoker) Invoke() (*model.ShowJobConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowJobConfigResponse), nil
+	}
+}
+
+type ShowJobConfigDiffInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowJobConfigDiffInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowJobConfigDiffInvoker) Invoke() (*model.ShowJobConfigDiffResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowJobConfigDiffResponse), nil
+	}
+}
+
+type ShowJobInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowJobInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowJobInfoInvoker) Invoke() (*model.ShowJobInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowJobInfoResponse), nil
+	}
+}
+
 type ShowJobListByProjectIdInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -322,6 +514,22 @@ func (i *ShowJobListByProjectIdInvoker) Invoke() (*model.ShowJobListByProjectIdR
 		return nil, err
 	} else {
 		return result.(*model.ShowJobListByProjectIdResponse), nil
+	}
+}
+
+type ShowJobRolePermissionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowJobRolePermissionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowJobRolePermissionInvoker) Invoke() (*model.ShowJobRolePermissionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowJobRolePermissionResponse), nil
 	}
 }
 
@@ -354,6 +562,22 @@ func (i *ShowJobSuccessRatioInvoker) Invoke() (*model.ShowJobSuccessRatioRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowJobSuccessRatioResponse), nil
+	}
+}
+
+type ShowJobSystemParametersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowJobSystemParametersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowJobSystemParametersInvoker) Invoke() (*model.ShowJobSystemParametersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowJobSystemParametersResponse), nil
 	}
 }
 
@@ -418,6 +642,22 @@ func (i *ShowOutputInfoInvoker) Invoke() (*model.ShowOutputInfoResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ShowOutputInfoResponse), nil
+	}
+}
+
+type ShowProjectPermissionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProjectPermissionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowProjectPermissionInvoker) Invoke() (*model.ShowProjectPermissionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProjectPermissionResponse), nil
 	}
 }
 

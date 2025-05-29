@@ -23,6 +23,7 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/global"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/internal"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdkerr"
 	"strings"
 )
@@ -38,13 +39,13 @@ func NewMetadataCredentialProvider(credentialType string) *MetadataCredentialPro
 }
 
 // BasicCredentialMetadataProvider return a metadata provider for basic.Credentials
-func BasicCredentialMetadataProvider() *MetadataCredentialProvider {
-	return NewMetadataCredentialProvider(basicCredentialType)
+func BasicCredentialMetadataProvider() *MetadataBasicCredentialProvider {
+	return &MetadataBasicCredentialProvider{}
 }
 
 // GlobalCredentialMetadataProvider return a metadata provider for global.Credentials
-func GlobalCredentialMetadataProvider() *MetadataCredentialProvider {
-	return NewMetadataCredentialProvider(globalCredentialType)
+func GlobalCredentialMetadataProvider() *MetadataGlobalCredentialProvider {
+	return &MetadataGlobalCredentialProvider{}
 }
 
 // GetCredentials get basic.Credentials or global.Credentials from the instance's metadata
@@ -54,20 +55,52 @@ func (p *MetadataCredentialProvider) GetCredentials() (auth.ICredential, error) 
 	}
 
 	if strings.HasPrefix(p.credentialType, basicCredentialType) {
-		credentials := basic.NewCredentialsBuilder().Build()
-		err := credentials.UpdateSecurityTokenFromMetadata()
-		if err != nil {
-			return nil, err
-		}
-		return credentials, nil
+		return BasicCredentialMetadataProvider().GetCredentials()
 	} else if strings.HasPrefix(p.credentialType, globalCredentialType) {
-		credentials := global.NewCredentialsBuilder().Build()
-		err := credentials.UpdateSecurityTokenFromMetadata()
-		if err != nil {
-			return nil, err
-		}
-		return credentials, nil
+		return GlobalCredentialMetadataProvider().GetCredentials()
 	}
 
 	return nil, sdkerr.NewCredentialsTypeError("unsupported credential type: " + p.credentialType)
+}
+
+type MetadataBasicCredentialProvider struct {
+	ProjectId string
+}
+
+type MetadataGlobalCredentialProvider struct {
+	DomainId string
+}
+
+func (p *MetadataBasicCredentialProvider) GetCredentials() (auth.ICredential, error) {
+	builder := basic.NewCredentialsBuilder()
+	if p.ProjectId != "" {
+		builder.WithProjectId(p.ProjectId)
+	}
+	credentials, err := builder.SafeBuild()
+	if err != nil {
+		return nil, err
+	}
+	credentials.MetadataAccessor = internal.NewMetadataAccessor()
+	err = credentials.UpdateSecurityTokenFromMetadata()
+	if err != nil {
+		return nil, err
+	}
+	return credentials, nil
+}
+
+func (p *MetadataGlobalCredentialProvider) GetCredentials() (auth.ICredential, error) {
+	builder := global.NewCredentialsBuilder()
+	if p.DomainId != "" {
+		builder.WithDomainId(p.DomainId)
+	}
+	credentials, err := builder.SafeBuild()
+	if err != nil {
+		return nil, err
+	}
+	credentials.MetadataAccessor = internal.NewMetadataAccessor()
+	err = credentials.UpdateSecurityTokenFromMetadata()
+	if err != nil {
+		return nil, err
+	}
+	return credentials, nil
 }

@@ -4485,6 +4485,22 @@ func (i *ShowFactoryEnvInvoker) Invoke() (*model.ShowFactoryEnvResponse, error) 
 	}
 }
 
+type ShowFactoryFullTextInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFactoryFullTextInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowFactoryFullTextInvoker) Invoke() (*model.ShowFactoryFullTextResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFactoryFullTextResponse), nil
+	}
+}
+
 type ShowFactoryPackageDetailInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -35,11 +35,12 @@ import (
 )
 
 const (
-	ProjectIdInHeader     = "X-Project-Id"
-	SecurityTokenInHeader = "X-Security-Token"
-	AuthTokenInHeader     = "X-Auth-Token"
-	emptyAk               = "EMPTY_AK"
-	emptySK               = "EMPTY_SK"
+	ProjectIdInHeader                 = "X-Project-Id"
+	SecurityTokenInHeader             = "X-Security-Token"
+	AuthTokenInHeader                 = "X-Auth-Token"
+	emptyAk                           = "EMPTY_AK"
+	emptySK                           = "EMPTY_SK"
+	defaultExpirationThresholdSeconds = 2 * 60 * 60 // 2h
 )
 
 var DefaultDerivedPredicate = auth.GetDefaultDerivedPredicate()
@@ -53,6 +54,7 @@ type Credentials struct {
 	IdpId            string
 	IdTokenFile      string
 	DerivedPredicate func(*request.DefaultHttpRequest) bool
+	MetadataAccessor *internal.MetadataAccessor
 
 	derivedAuthServiceName string
 	regionId               string
@@ -116,12 +118,12 @@ func (s *Credentials) ProcessAuthParams(client *impl.DefaultHttpClient, region s
 }
 
 func (s *Credentials) ProcessAuthRequest(client *impl.DefaultHttpClient, req *request.DefaultHttpRequest) (*request.DefaultHttpRequest, error) {
-	if s.needUpdateAuthToken() {
+	if s.needUpdateFederalAuthToken() {
 		err := s.updateAuthTokenByIdToken(client)
 		if err != nil {
 			return nil, err
 		}
-	} else if s.needUpdateSecurityToken() {
+	} else if s.needUpdateSecurityTokenFromMetadata() {
 		err := s.UpdateSecurityTokenFromMetadata()
 		if err != nil {
 			return nil, err
@@ -185,7 +187,7 @@ func (s *Credentials) IsDerivedAuth(httpRequest *request.DefaultHttpRequest) boo
 	return s.DerivedPredicate(httpRequest)
 }
 
-func (s *Credentials) needUpdateSecurityToken() bool {
+func (s *Credentials) needUpdateSecurityTokenFromMetadata() bool {
 	if s.authToken != "" {
 		return false
 	}
@@ -195,11 +197,14 @@ func (s *Credentials) needUpdateSecurityToken() bool {
 	if s.expiredAt == 0 || s.SecurityToken == "" {
 		return false
 	}
-	return s.expiredAt-time.Now().Unix() < 60
+	return s.expiredAt-time.Now().Unix() < defaultExpirationThresholdSeconds
 }
 
 func (s *Credentials) UpdateSecurityTokenFromMetadata() error {
-	credential, err := internal.GetCredentialFromMetadata()
+	if s.MetadataAccessor == nil {
+		s.MetadataAccessor = internal.NewMetadataAccessor()
+	}
+	credential, err := s.MetadataAccessor.GetCredentials()
 	if err != nil {
 		return err
 	}
@@ -216,14 +221,14 @@ func (s *Credentials) UpdateSecurityTokenFromMetadata() error {
 	return nil
 }
 
-func (s *Credentials) needUpdateAuthToken() bool {
+func (s *Credentials) needUpdateFederalAuthToken() bool {
 	if s.IdpId == "" || s.IdTokenFile == "" {
 		return false
 	}
 	if s.authToken == "" {
 		return true
 	}
-	return s.expiredAt-time.Now().Unix() < 60
+	return s.expiredAt-time.Now().Unix() < defaultExpirationThresholdSeconds
 }
 
 func (s *Credentials) updateAuthTokenByIdToken(client *impl.DefaultHttpClient) error {

@@ -5,54 +5,6 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/coc/v1/model"
 )
 
-type ShowAccountInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowAccountInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowAccountInvoker) Invoke() (*model.ShowAccountResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowAccountResponse), nil
-	}
-}
-
-type ListAlarmHandleHistoriesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListAlarmHandleHistoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListAlarmHandleHistoriesInvoker) Invoke() (*model.ListAlarmHandleHistoriesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListAlarmHandleHistoriesResponse), nil
-	}
-}
-
-type ShowAlarmInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowAlarmInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowAlarmInvoker) Invoke() (*model.ShowAlarmResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowAlarmResponse), nil
-	}
-}
-
 type ListApplicationsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -98,38 +50,6 @@ func (i *BatchCreateApplicationViewInvoker) Invoke() (*model.BatchCreateApplicat
 		return nil, err
 	} else {
 		return result.(*model.BatchCreateApplicationViewResponse), nil
-	}
-}
-
-type ShowPatchBaselineInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowPatchBaselineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowPatchBaselineInvoker) Invoke() (*model.ShowPatchBaselineResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowPatchBaselineResponse), nil
-	}
-}
-
-type ListCceCompliantInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListCceCompliantInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListCceCompliantInvoker) Invoke() (*model.ListCceCompliantResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListCceCompliantResponse), nil
 	}
 }
 
@@ -530,38 +450,6 @@ func (i *ListMultiCloudResourcesInvoker) Invoke() (*model.ListMultiCloudResource
 		return nil, err
 	} else {
 		return result.(*model.ListMultiCloudResourcesResponse), nil
-	}
-}
-
-type ListPersonnelInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListPersonnelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListPersonnelInvoker) Invoke() (*model.ListPersonnelResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListPersonnelResponse), nil
-	}
-}
-
-type SyncAddPersonnelInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SyncAddPersonnelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *SyncAddPersonnelInvoker) Invoke() (*model.SyncAddPersonnelResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SyncAddPersonnelResponse), nil
 	}
 }
 
@@ -1058,70 +946,6 @@ func (i *ListPublicScriptsInvoker) Invoke() (*model.ListPublicScriptsResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ListPublicScriptsResponse), nil
-	}
-}
-
-type ShowSlaCustomizedTemplateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowSlaCustomizedTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowSlaCustomizedTemplateInvoker) Invoke() (*model.ShowSlaCustomizedTemplateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowSlaCustomizedTemplateResponse), nil
-	}
-}
-
-type ShowSlaOrderInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowSlaOrderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowSlaOrderInvoker) Invoke() (*model.ShowSlaOrderResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowSlaOrderResponse), nil
-	}
-}
-
-type ListInterruptRecordsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListInterruptRecordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListInterruptRecordsInvoker) Invoke() (*model.ListInterruptRecordsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListInterruptRecordsResponse), nil
-	}
-}
-
-type ShowSloDetailInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowSloDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowSloDetailInvoker) Invoke() (*model.ShowSloDetailResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowSloDetailResponse), nil
 	}
 }
 

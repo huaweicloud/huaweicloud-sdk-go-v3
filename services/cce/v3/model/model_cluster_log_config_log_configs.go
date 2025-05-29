@@ -13,6 +13,9 @@ type ClusterLogConfigLogConfigs struct {
 
 	// 是否采集
 	Enable *bool `json:"enable,omitempty"`
+
+	// 组件类型
+	Type *string `json:"type,omitempty"`
 }
 
 func (o ClusterLogConfigLogConfigs) String() string {

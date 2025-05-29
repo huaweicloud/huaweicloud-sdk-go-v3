@@ -31,6 +31,9 @@ type AddOrUpdateAlarmRuleV4RequestBody struct {
 
 	// Prometheus实例id。
 	PromInstanceId *string `json:"prom_instance_id,omitempty"`
+
+	// 告警规则别名。最多可输入256个字符，只能包含中文、字母、数字、特殊字符（_-【】），开头、结尾不允许输入中划线、下划线。
+	Alias *string `json:"alias,omitempty"`
 }
 
 func (o AddOrUpdateAlarmRuleV4RequestBody) String() string {

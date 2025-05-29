@@ -1893,6 +1893,22 @@ func (i *SwitchGaussMySqlInstanceSslInvoker) Invoke() (*model.SwitchGaussMySqlIn
 	}
 }
 
+type SwitchGaussMySqlProxyEipInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchGaussMySqlProxyEipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SwitchGaussMySqlProxyEipInvoker) Invoke() (*model.SwitchGaussMySqlProxyEipResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchGaussMySqlProxyEipResponse), nil
+	}
+}
+
 type SwitchGaussMySqlProxySslInvoker struct {
 	*invoker.BaseInvoker
 }

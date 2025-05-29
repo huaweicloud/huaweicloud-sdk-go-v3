@@ -1384,6 +1384,27 @@ func (c *CfwClient) UpdateLogConfigInvoker(request *model.UpdateLogConfigRequest
 	return &UpdateLogConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateObjectConfigDesc 编辑对象组内成员的描述信息
+//
+// 编辑对象组内成员的描述信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) UpdateObjectConfigDesc(request *model.UpdateObjectConfigDescRequest) (*model.UpdateObjectConfigDescResponse, error) {
+	requestDef := GenReqDefForUpdateObjectConfigDesc()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateObjectConfigDescResponse), nil
+	}
+}
+
+// UpdateObjectConfigDescInvoker 编辑对象组内成员的描述信息
+func (c *CfwClient) UpdateObjectConfigDescInvoker(request *model.UpdateObjectConfigDescRequest) *UpdateObjectConfigDescInvoker {
+	requestDef := GenReqDefForUpdateObjectConfigDesc()
+	return &UpdateObjectConfigDescInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateServiceSet 修改服务组
 //
 // 更新服务组

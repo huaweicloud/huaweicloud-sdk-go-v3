@@ -26,6 +26,8 @@ type DataVolumes struct {
 
 	// 裸金属服务器数据盘对应的磁盘存储类型。磁盘存储类型枚举值：DSS（专属分布式存储）。 说明：使用专属分布式存储时需要该字段。存储池类型可以从管理控制台或者参考《专属分布式存储API参考》的“获取专属分布式存储池详情列表”章节获取。
 	ClusterType *DataVolumesClusterType `json:"cluster_type,omitempty"`
+
+	Metadata *DataVolumesMetadata `json:"metadata,omitempty"`
 }
 
 func (o DataVolumes) String() string {

@@ -9,7 +9,7 @@ import (
 // ListResourceUsageSummaryRequest Request Object
 type ListResourceUsageSummaryRequest struct {
 
-	// 语言。en_US：英文；zh_CN：中文。默认：zh_CN：中文
+	// 语言，字段预留。默认zh_CN，枚举：zh_CN：中文 en_US：英文
 	XLanguage *string `json:"X-Language,omitempty"`
 
 	// 账期，东八区时间，格式为yyyy-MM。

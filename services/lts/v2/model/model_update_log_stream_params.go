@@ -13,6 +13,9 @@ type UpdateLogStreamParams struct {
 
 	// 标签字段信息
 	Tags *[]TagsBody `json:"tags,omitempty"`
+
+	// 日志是否存储
+	WhetherLogStorage *bool `json:"whether_log_storage,omitempty"`
 }
 
 func (o UpdateLogStreamParams) String() string {

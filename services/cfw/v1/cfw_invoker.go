@@ -1045,6 +1045,22 @@ func (i *UpdateLogConfigInvoker) Invoke() (*model.UpdateLogConfigResponse, error
 	}
 }
 
+type UpdateObjectConfigDescInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateObjectConfigDescInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateObjectConfigDescInvoker) Invoke() (*model.UpdateObjectConfigDescResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateObjectConfigDescResponse), nil
+	}
+}
+
 type UpdateServiceSetInvoker struct {
 	*invoker.BaseInvoker
 }

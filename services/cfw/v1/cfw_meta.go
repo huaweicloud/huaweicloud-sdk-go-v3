@@ -2026,6 +2026,21 @@ func GenReqDefForUpdateLogConfig() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForUpdateObjectConfigDesc() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/config/object/description").
+		WithResponse(new(model.UpdateObjectConfigDescResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateServiceSet() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).

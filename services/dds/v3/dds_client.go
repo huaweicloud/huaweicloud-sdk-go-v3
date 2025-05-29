@@ -628,6 +628,27 @@ func (c *DdsClient) DeleteManualBackupInvoker(request *model.DeleteManualBackupR
 	return &DeleteManualBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteMongosNode 删除mongos节点
+//
+// 当集群实例需要缩减mongos节点时，需要调用此API。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) DeleteMongosNode(request *model.DeleteMongosNodeRequest) (*model.DeleteMongosNodeResponse, error) {
+	requestDef := GenReqDefForDeleteMongosNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteMongosNodeResponse), nil
+	}
+}
+
+// DeleteMongosNodeInvoker 删除mongos节点
+func (c *DdsClient) DeleteMongosNodeInvoker(request *model.DeleteMongosNodeRequest) *DeleteMongosNodeInvoker {
+	requestDef := GenReqDefForDeleteMongosNode()
+	return &DeleteMongosNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteReadonlyNode 删除只读节点
 //
 // 当副本集添加了只读节点后，需要删除对应的只读节点需要调用此API。

@@ -21,6 +21,22 @@ func (i *ApplyCertificateInvoker) Invoke() (*model.ApplyCertificateResponse, err
 	}
 }
 
+type BatchCreateOrDeleteTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateOrDeleteTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateOrDeleteTagsInvoker) Invoke() (*model.BatchCreateOrDeleteTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateOrDeleteTagsResponse), nil
+	}
+}
+
 type BatchPushCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,6 +66,22 @@ func (i *CancelCertificateRequestInvoker) Invoke() (*model.CancelCertificateRequ
 		return nil, err
 	} else {
 		return result.(*model.CancelCertificateRequestResponse), nil
+	}
+}
+
+type CreateCertificateTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCertificateTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateCertificateTagInvoker) Invoke() (*model.CreateCertificateTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCertificateTagResponse), nil
 	}
 }
 
@@ -117,6 +149,22 @@ func (i *ImportCertificateInvoker) Invoke() (*model.ImportCertificateResponse, e
 	}
 }
 
+type ListAllTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAllTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAllTagsInvoker) Invoke() (*model.ListAllTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAllTagsResponse), nil
+	}
+}
+
 type ListCertificatesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -133,6 +181,22 @@ func (i *ListCertificatesInvoker) Invoke() (*model.ListCertificatesResponse, err
 	}
 }
 
+type ListCertificatesByTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCertificatesByTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCertificatesByTagInvoker) Invoke() (*model.ListCertificatesByTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCertificatesByTagResponse), nil
+	}
+}
+
 type ListDeployedResourcesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -146,6 +210,22 @@ func (i *ListDeployedResourcesInvoker) Invoke() (*model.ListDeployedResourcesRes
 		return nil, err
 	} else {
 		return result.(*model.ListDeployedResourcesResponse), nil
+	}
+}
+
+type ListTagsByCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTagsByCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTagsByCertificateInvoker) Invoke() (*model.ListTagsByCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTagsByCertificateResponse), nil
 	}
 }
 

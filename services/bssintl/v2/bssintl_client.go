@@ -250,7 +250,7 @@ func (c *BssintlClient) FreezeSubCustomersInvoker(request *model.FreezeSubCustom
 	return &FreezeSubCustomersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListConversions 查询使用量单位进制
+// ListConversions 查询度量单位进制
 //
 // 功能描述：伙伴在伙伴销售平台上查询使用量单位的进制转换信息，用于不同度量单位之间的转换。
 //
@@ -265,7 +265,7 @@ func (c *BssintlClient) ListConversions(request *model.ListConversionsRequest) (
 	}
 }
 
-// ListConversionsInvoker 查询使用量单位进制
+// ListConversionsInvoker 查询度量单位进制
 func (c *BssintlClient) ListConversionsInvoker(request *model.ListConversionsRequest) *ListConversionsInvoker {
 	requestDef := GenReqDefForListConversions()
 	return &ListConversionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -525,6 +525,7 @@ func (c *BssintlClient) ListMeasureUnitsInvoker(request *model.ListMeasureUnitsR
 	return &ListMeasureUnitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListMonthlyExpenditures 查询消费汇总(客户)
 //
 // 功能描述：客户可以查询自身的消费汇总单的功能，消费按月汇总。
@@ -540,6 +541,7 @@ func (c *BssintlClient) ListMonthlyExpenditures(request *model.ListMonthlyExpend
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListMonthlyExpendituresInvoker 查询消费汇总(客户)
 func (c *BssintlClient) ListMonthlyExpendituresInvoker(request *model.ListMonthlyExpendituresRequest) *ListMonthlyExpendituresInvoker {
 	requestDef := GenReqDefForListMonthlyExpenditures()
@@ -882,6 +884,27 @@ func (c *BssintlClient) SendVerificationMessageCodeInvoker(request *model.SendVe
 	return &SendVerificationMessageCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetResourcesRenewConfig 设置包年/包月资源自动续费扣款日和续费后资源统一到期日
+//
+// 功能描述：客户的包年/包月资源可进行设置自动续费扣款日和续费后统一到期日
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssintlClient) SetResourcesRenewConfig(request *model.SetResourcesRenewConfigRequest) (*model.SetResourcesRenewConfigResponse, error) {
+	requestDef := GenReqDefForSetResourcesRenewConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetResourcesRenewConfigResponse), nil
+	}
+}
+
+// SetResourcesRenewConfigInvoker 设置包年/包月资源自动续费扣款日和续费后资源统一到期日
+func (c *BssintlClient) SetResourcesRenewConfigInvoker(request *model.SetResourcesRenewConfigRequest) *SetResourcesRenewConfigInvoker {
+	requestDef := GenReqDefForSetResourcesRenewConfig()
+	return &SetResourcesRenewConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowCustomerAccountBalances 查询账户余额
 //
 // 功能描述：客户可以查询自身的账户余额。
@@ -901,6 +924,29 @@ func (c *BssintlClient) ShowCustomerAccountBalances(request *model.ShowCustomerA
 func (c *BssintlClient) ShowCustomerAccountBalancesInvoker(request *model.ShowCustomerAccountBalancesRequest) *ShowCustomerAccountBalancesInvoker {
 	requestDef := GenReqDefForShowCustomerAccountBalances()
 	return &ShowCustomerAccountBalancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCustomerMonthlySum 查询汇总账单
+//
+// 客户在自建平台查询自身的消费汇总账单，此账单按月汇总消费数据。
+//
+// 客户登录费用中心查询自身的消费汇总账单请参见[这里](https://support.huaweicloud.com/intl/zh-cn/usermanual-billing/bills-topic_0000108.html)的“查看汇总”。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssintlClient) ShowCustomerMonthlySum(request *model.ShowCustomerMonthlySumRequest) (*model.ShowCustomerMonthlySumResponse, error) {
+	requestDef := GenReqDefForShowCustomerMonthlySum()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCustomerMonthlySumResponse), nil
+	}
+}
+
+// ShowCustomerMonthlySumInvoker 查询汇总账单
+func (c *BssintlClient) ShowCustomerMonthlySumInvoker(request *model.ShowCustomerMonthlySumRequest) *ShowCustomerMonthlySumInvoker {
+	requestDef := GenReqDefForShowCustomerMonthlySum()
+	return &ShowCustomerMonthlySumInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowCustomerOrderDetails 查询订单详情
