@@ -36,6 +36,9 @@ type QuotaResourcesResponseInfo struct {
 	// 过期时间，-1表示没有到期时间
 	ExpireTime *int64 `json:"expire_time,omitempty"`
 
+	// 创建时间
+	CreateTime *int64 `json:"create_time,omitempty"`
+
 	// 是否共享配额   - shared：共享的   - unshared：非共享的
 	SharedQuota *string `json:"shared_quota,omitempty"`
 

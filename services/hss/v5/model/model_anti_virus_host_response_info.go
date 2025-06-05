@@ -9,7 +9,7 @@ import (
 // AntiVirusHostResponseInfo 进程白名单可选服务器信息
 type AntiVirusHostResponseInfo struct {
 
-	// 主机ID
+	// 服务器ID
 	HostId *string `json:"host_id,omitempty"`
 
 	// 服务器名称

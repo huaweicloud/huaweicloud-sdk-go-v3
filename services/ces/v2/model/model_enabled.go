@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Enabled 开关
+// Enabled 是否启用一键告警。true:开启，false：关闭。
 type Enabled struct {
 }
 

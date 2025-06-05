@@ -292,6 +292,90 @@ func (c *MetaStudioClient) StopSmartChatJobInvoker(request *model.StopSmartChatJ
 	return &StopSmartChatJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDialogReportConfig 创建对话结果上报配置
+//
+// 该接口用于创建对话结果上报配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateDialogReportConfig(request *model.CreateDialogReportConfigRequest) (*model.CreateDialogReportConfigResponse, error) {
+	requestDef := GenReqDefForCreateDialogReportConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDialogReportConfigResponse), nil
+	}
+}
+
+// CreateDialogReportConfigInvoker 创建对话结果上报配置
+func (c *MetaStudioClient) CreateDialogReportConfigInvoker(request *model.CreateDialogReportConfigRequest) *CreateDialogReportConfigInvoker {
+	requestDef := GenReqDefForCreateDialogReportConfig()
+	return &CreateDialogReportConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDialogReportConfig 删除对话结果上报配置
+//
+// 该接口用于删除对话结果上报配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteDialogReportConfig(request *model.DeleteDialogReportConfigRequest) (*model.DeleteDialogReportConfigResponse, error) {
+	requestDef := GenReqDefForDeleteDialogReportConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDialogReportConfigResponse), nil
+	}
+}
+
+// DeleteDialogReportConfigInvoker 删除对话结果上报配置
+func (c *MetaStudioClient) DeleteDialogReportConfigInvoker(request *model.DeleteDialogReportConfigRequest) *DeleteDialogReportConfigInvoker {
+	requestDef := GenReqDefForDeleteDialogReportConfig()
+	return &DeleteDialogReportConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDialogReportConfig 查询对话结果上报配置
+//
+// 该接口用于查询对话结果上报配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowDialogReportConfig(request *model.ShowDialogReportConfigRequest) (*model.ShowDialogReportConfigResponse, error) {
+	requestDef := GenReqDefForShowDialogReportConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDialogReportConfigResponse), nil
+	}
+}
+
+// ShowDialogReportConfigInvoker 查询对话结果上报配置
+func (c *MetaStudioClient) ShowDialogReportConfigInvoker(request *model.ShowDialogReportConfigRequest) *ShowDialogReportConfigInvoker {
+	requestDef := GenReqDefForShowDialogReportConfig()
+	return &ShowDialogReportConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDialogReportConfig 修改对话结果上报配置
+//
+// 该接口用于修改对话结果上报配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateDialogReportConfig(request *model.UpdateDialogReportConfigRequest) (*model.UpdateDialogReportConfigResponse, error) {
+	requestDef := GenReqDefForUpdateDialogReportConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDialogReportConfigResponse), nil
+	}
+}
+
+// UpdateDialogReportConfigInvoker 修改对话结果上报配置
+func (c *MetaStudioClient) UpdateDialogReportConfigInvoker(request *model.UpdateDialogReportConfigRequest) *UpdateDialogReportConfigInvoker {
+	requestDef := GenReqDefForUpdateDialogReportConfig()
+	return &UpdateDialogReportConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchExecuteAssetAction 批量资产操作
 //
 // 该接口用批量资产操作。

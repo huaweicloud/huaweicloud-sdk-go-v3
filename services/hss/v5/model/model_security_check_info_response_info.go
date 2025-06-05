@@ -21,6 +21,9 @@ type SecurityCheckInfoResponseInfo struct {
 	// 标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
 	Standard *string `json:"standard,omitempty"`
 
+	// 配置检查（基线）的路径信息
+	ExecutableFilePath *string `json:"executable_file_path,omitempty"`
+
 	// 当前配置检查（基线）类型下，用户共检测了多少个检查项。例如标准类型为hw_standard的SSH基线，主机安全提供了17个检查项，但用户所有主机都只检测了SSH基线的其中5个检查项，check_rule_num就是5。用户有一台主机进行了全量检查项检测，check_rule_num就是17。
 	CheckRuleNum *int32 `json:"check_rule_num,omitempty"`
 

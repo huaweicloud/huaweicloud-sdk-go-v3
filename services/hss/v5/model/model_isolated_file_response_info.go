@@ -12,7 +12,7 @@ type IsolatedFileResponseInfo struct {
 	// 操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
 	OsType string `json:"os_type"`
 
-	// 主机ID
+	// 服务器ID
 	HostId string `json:"host_id"`
 
 	// 服务器名称

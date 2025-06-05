@@ -13,7 +13,7 @@ type ListOrganizationTreeRequest struct {
 	XSecurityToken *string `json:"X-Security-Token,omitempty"`
 
 	// Region ID
-	Region string `json:"region"`
+	Region *string `json:"region,omitempty"`
 
 	// 是否强制从organization同步组织信息
 	IsRefresh *bool `json:"is_refresh,omitempty"`

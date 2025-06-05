@@ -15,7 +15,7 @@ type HostGroupItem struct {
 	// 服务器组名称
 	GroupName *string `json:"group_name,omitempty"`
 
-	// 关联服务器数
+	// 影响主机数量
 	HostNum *int32 `json:"host_num,omitempty"`
 
 	// 有风险服务器数
@@ -24,7 +24,7 @@ type HostGroupItem struct {
 	// 未防护服务器数
 	UnprotectHostNum *int32 `json:"unprotect_host_num,omitempty"`
 
-	// 服务器ID列表
+	// 主机id列表
 	HostIdList *[]string `json:"host_id_list,omitempty"`
 
 	// 是否是线下数据中心服务器组

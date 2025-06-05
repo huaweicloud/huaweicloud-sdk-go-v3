@@ -8,10 +8,10 @@ import (
 
 type DelResourcesReq struct {
 
-	// 手动创建，选择资源层级为子维度时的资源信息。只需要传递删除的资源
+	// 当资源添加方式为手动创建、资源层级为子维度时，删除资源分组中的资源只需传递删除的资源信息
 	Resources *[]Resource `json:"resources,omitempty"`
 
-	// 手动创建，选择资源层级为云产品时的资源详情。只需要传递删除的资源
+	// 当资源添加方式为手动创建、资源层级为云产品时，删除资源分组中的资源只需传递删除的资源信息
 	ProductResources *[]ProductResource `json:"product_resources,omitempty"`
 }
 

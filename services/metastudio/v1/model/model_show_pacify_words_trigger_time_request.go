@@ -27,7 +27,7 @@ type ShowPacifyWordsTriggerTimeRequest struct {
 	// 应用ID。
 	RobotId string `json:"robot_id"`
 
-	// 智能交互语言  * CN:中文  * EN:英文
+	// 智能交互语言 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
 	Language ShowPacifyWordsTriggerTimeRequestLanguage `json:"language"`
 }
 
@@ -45,8 +45,12 @@ type ShowPacifyWordsTriggerTimeRequestLanguage struct {
 }
 
 type ShowPacifyWordsTriggerTimeRequestLanguageEnum struct {
-	CN ShowPacifyWordsTriggerTimeRequestLanguage
-	EN ShowPacifyWordsTriggerTimeRequestLanguage
+	CN     ShowPacifyWordsTriggerTimeRequestLanguage
+	EN     ShowPacifyWordsTriggerTimeRequestLanguage
+	ESP    ShowPacifyWordsTriggerTimeRequestLanguage
+	POR    ShowPacifyWordsTriggerTimeRequestLanguage
+	ARABIC ShowPacifyWordsTriggerTimeRequestLanguage
+	THAI   ShowPacifyWordsTriggerTimeRequestLanguage
 }
 
 func GetShowPacifyWordsTriggerTimeRequestLanguageEnum() ShowPacifyWordsTriggerTimeRequestLanguageEnum {
@@ -56,6 +60,18 @@ func GetShowPacifyWordsTriggerTimeRequestLanguageEnum() ShowPacifyWordsTriggerTi
 		},
 		EN: ShowPacifyWordsTriggerTimeRequestLanguage{
 			value: "EN",
+		},
+		ESP: ShowPacifyWordsTriggerTimeRequestLanguage{
+			value: "ESP",
+		},
+		POR: ShowPacifyWordsTriggerTimeRequestLanguage{
+			value: "por",
+		},
+		ARABIC: ShowPacifyWordsTriggerTimeRequestLanguage{
+			value: "Arabic",
+		},
+		THAI: ShowPacifyWordsTriggerTimeRequestLanguage{
+			value: "Thai",
 		},
 	}
 }

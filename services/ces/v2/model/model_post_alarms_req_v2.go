@@ -46,10 +46,10 @@ type PostAlarmsReqV2 struct {
 	// 企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 告警开关
+	// 是否开启告警规则。true:开启，false:关闭。
 	Enabled bool `json:"enabled"`
 
-	// 是否开启告警通知
+	// 是否开启告警通知。true:开启，false:关闭。
 	NotificationEnabled bool `json:"notification_enabled"`
 
 	// 告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化

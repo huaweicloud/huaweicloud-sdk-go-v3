@@ -38,6 +38,12 @@ type QuerySessionResponse struct {
 
 	// 命名空间。
 	Namespace string `json:"namespace"`
+
+	// 正在操作的数据库名称。
+	Db *string `json:"db,omitempty"`
+
+	// 用户名称。仅支持4.2及以上版本,如果无法显示该字段，请升级内核版本。
+	User *string `json:"user,omitempty"`
 }
 
 func (o QuerySessionResponse) String() string {

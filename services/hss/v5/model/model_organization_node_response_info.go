@@ -12,7 +12,7 @@ type OrganizationNodeResponseInfo struct {
 	// 父节点Id
 	ParentId *string `json:"parent_id,omitempty"`
 
-	// 节点account_id
+	// 节点Id
 	Id *string `json:"id,omitempty"`
 
 	// 组织的统一资源名称,格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。

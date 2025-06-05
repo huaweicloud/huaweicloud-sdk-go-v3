@@ -5,6 +5,22 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/codeartsbuild/v3/model"
 )
 
+type CheckJobNameIsExistsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckJobNameIsExistsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckJobNameIsExistsInvoker) Invoke() (*model.CheckJobNameIsExistsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckJobNameIsExistsResponse), nil
+	}
+}
+
 type CreateBuildJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -133,6 +149,22 @@ func (i *DownloadKeystoreInvoker) Invoke() (*model.DownloadKeystoreResponse, err
 	}
 }
 
+type DownloadKeystoreByNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadKeystoreByNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadKeystoreByNameInvoker) Invoke() (*model.DownloadKeystoreByNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadKeystoreByNameResponse), nil
+	}
+}
+
 type DownloadRealTimeLogInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -229,6 +261,22 @@ func (i *ListJobConfigInvoker) Invoke() (*model.ListJobConfigResponse, error) {
 	}
 }
 
+type ListKeystoreInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListKeystoreInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListKeystoreInvoker) Invoke() (*model.ListKeystoreResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListKeystoreResponse), nil
+	}
+}
+
 type ListNoticeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -277,6 +325,22 @@ func (i *ListProjectJobsInvoker) Invoke() (*model.ListProjectJobsResponse, error
 	}
 }
 
+type ListRecordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRecordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRecordsInvoker) Invoke() (*model.ListRecordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRecordsResponse), nil
+	}
+}
+
 type ListRecyclingJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -290,6 +354,22 @@ func (i *ListRecyclingJobInvoker) Invoke() (*model.ListRecyclingJobResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListRecyclingJobResponse), nil
+	}
+}
+
+type ListRelatedProjectInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRelatedProjectInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRelatedProjectInfoInvoker) Invoke() (*model.ListRelatedProjectInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRelatedProjectInfoResponse), nil
 	}
 }
 
@@ -322,6 +402,22 @@ func (i *RunJobInvoker) Invoke() (*model.RunJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.RunJobResponse), nil
+	}
+}
+
+type ShowBuildInfoRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBuildInfoRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowBuildInfoRecordInvoker) Invoke() (*model.ShowBuildInfoRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBuildInfoRecordResponse), nil
 	}
 }
 
@@ -386,6 +482,38 @@ func (i *ShowBuildRecordFullStagesInvoker) Invoke() (*model.ShowBuildRecordFullS
 		return nil, err
 	} else {
 		return result.(*model.ShowBuildRecordFullStagesResponse), nil
+	}
+}
+
+type ShowDefaultBuildParametersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDefaultBuildParametersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDefaultBuildParametersInvoker) Invoke() (*model.ShowDefaultBuildParametersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDefaultBuildParametersResponse), nil
+	}
+}
+
+type ShowDockerfileTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDockerfileTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDockerfileTemplateInvoker) Invoke() (*model.ShowDockerfileTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDockerfileTemplateResponse), nil
 	}
 }
 
@@ -517,6 +645,22 @@ func (i *ShowJobListByProjectIdInvoker) Invoke() (*model.ShowJobListByProjectIdR
 	}
 }
 
+type ShowJobNoticeConfigInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowJobNoticeConfigInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowJobNoticeConfigInfoInvoker) Invoke() (*model.ShowJobNoticeConfigInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowJobNoticeConfigInfoResponse), nil
+	}
+}
+
 type ShowJobRolePermissionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -578,6 +722,22 @@ func (i *ShowJobSystemParametersInvoker) Invoke() (*model.ShowJobSystemParameter
 		return nil, err
 	} else {
 		return result.(*model.ShowJobSystemParametersResponse), nil
+	}
+}
+
+type ShowKeystorePermissionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowKeystorePermissionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowKeystorePermissionInvoker) Invoke() (*model.ShowKeystorePermissionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowKeystorePermissionResponse), nil
 	}
 }
 
@@ -674,6 +834,22 @@ func (i *ShowRecordDetailInvoker) Invoke() (*model.ShowRecordDetailResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowRecordDetailResponse), nil
+	}
+}
+
+type ShowRelatedProjectInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRelatedProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRelatedProjectInvoker) Invoke() (*model.ShowRelatedProjectResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRelatedProjectResponse), nil
 	}
 }
 

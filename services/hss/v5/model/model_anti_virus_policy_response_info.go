@@ -48,7 +48,7 @@ type AntiVirusPolicyResponseInfo struct {
 	// 失效，包含如下:   - true ：是   - fasle ：否
 	Invalidate *bool `json:"invalidate,omitempty"`
 
-	// 关联服务器数
+	// 影响主机数量
 	HostNum *int32 `json:"host_num,omitempty"`
 
 	// 主机信息

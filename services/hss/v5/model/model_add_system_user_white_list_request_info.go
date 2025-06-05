@@ -9,7 +9,7 @@ import (
 // AddSystemUserWhiteListRequestInfo 系统用户白名单
 type AddSystemUserWhiteListRequestInfo struct {
 
-	// 主机ID
+	// 服务器ID
 	HostId string `json:"host_id"`
 
 	// 系统用户名列表

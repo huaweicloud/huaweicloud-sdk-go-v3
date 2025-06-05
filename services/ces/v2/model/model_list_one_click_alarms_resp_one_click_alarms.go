@@ -17,7 +17,7 @@ type ListOneClickAlarmsRespOneClickAlarms struct {
 	// 一键告警描述，长度范围[0,256]，该字段默认值为空字符串
 	Description string `json:"description"`
 
-	// 开关
+	// 是否启用一键告警。true:开启，false：关闭。
 	Enabled bool `json:"enabled"`
 }
 

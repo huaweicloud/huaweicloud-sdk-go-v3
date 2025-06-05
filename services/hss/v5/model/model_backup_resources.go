@@ -9,7 +9,7 @@ import (
 // BackupResources 开启备份功能新版参数，必填；若为空代表兼容之前绑定HSS_projectid的存储库
 type BackupResources struct {
 
-	// 选择需要绑定的存储库ID，不为空
+	// **参数解释**: 选择需要绑定的存储库ID，不为空 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
 	VaultId *string `json:"vault_id,omitempty"`
 
 	// 需要开启备份功能的主机情况列表

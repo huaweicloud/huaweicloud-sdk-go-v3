@@ -18,7 +18,7 @@ type AntiVirusHandleHistory struct {
 	// 病毒名称
 	MalwareName *string `json:"malware_name,omitempty"`
 
-	// 威胁等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
+	// 威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
 	Severity *string `json:"severity,omitempty"`
 
 	// 文件路径
@@ -39,7 +39,7 @@ type AntiVirusHandleHistory struct {
 	// 发生时间，毫秒
 	OccurTime *int64 `json:"occur_time,omitempty"`
 
-	// 处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+	// 处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
 	HandleStatus *string `json:"handle_status,omitempty"`
 
 	// 处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - isolate_and_kill : 隔离文件

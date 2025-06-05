@@ -12,7 +12,7 @@ type ShowAntivirusStatisticResponse struct {
 	// 病毒总数
 	TotalMalwareNum *int32 `json:"total_malware_num,omitempty"`
 
-	// 关联服务器数
+	// 影响主机数量
 	MalwareHostNum *int32 `json:"malware_host_num,omitempty"`
 
 	// 累计扫描任务数

@@ -293,6 +293,22 @@ func (i *CreateServiceInvoker) Invoke() (*model.CreateServiceResponse, error) {
 	}
 }
 
+type CreateTaskDefaultResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTaskDefaultResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateTaskDefaultResultInvoker) Invoke() (*model.CreateTaskDefaultResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTaskDefaultResultResponse), nil
+	}
+}
+
 type CreateTestCaseInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ContainerName 容器实例名称，只有容器类型的告警有
+// ContainerName 容器实例名称
 type ContainerName struct {
 }
 

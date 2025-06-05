@@ -213,6 +213,70 @@ func (i *StopSmartChatJobInvoker) Invoke() (*model.StopSmartChatJobResponse, err
 	}
 }
 
+type CreateDialogReportConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDialogReportConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDialogReportConfigInvoker) Invoke() (*model.CreateDialogReportConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDialogReportConfigResponse), nil
+	}
+}
+
+type DeleteDialogReportConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDialogReportConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDialogReportConfigInvoker) Invoke() (*model.DeleteDialogReportConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDialogReportConfigResponse), nil
+	}
+}
+
+type ShowDialogReportConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDialogReportConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDialogReportConfigInvoker) Invoke() (*model.ShowDialogReportConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDialogReportConfigResponse), nil
+	}
+}
+
+type UpdateDialogReportConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDialogReportConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDialogReportConfigInvoker) Invoke() (*model.UpdateDialogReportConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDialogReportConfigResponse), nil
+	}
+}
+
 type BatchExecuteAssetActionInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -52,6 +52,9 @@ type JobInstance struct {
 
 	// 作业成功状态，是否强制成功
 	ForceSuccess *bool `json:"forceSuccess,omitempty"`
+
+	// 作业实例失败的错误信息。
+	ErrorMessage *string `json:"errorMessage,omitempty"`
 }
 
 func (o JobInstance) String() string {

@@ -12,7 +12,7 @@ type SystemUserWhiteListResponseInfo struct {
 	// 企业项目名称
 	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
 
-	// 主机ID
+	// 服务器ID
 	HostId *string `json:"host_id,omitempty"`
 
 	// 服务器名称

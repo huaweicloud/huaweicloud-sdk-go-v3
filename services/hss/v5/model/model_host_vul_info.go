@@ -51,7 +51,7 @@ type HostVulInfo struct {
 	RepairSuccessNum *int32 `json:"repair_success_num,omitempty"`
 
 	// CVE列表
-	CveList *[]HostVulInfoCveList `json:"cve_list,omitempty"`
+	CveList *[]GeneralImageVulsResponseInfoCveList `json:"cve_list,omitempty"`
 
 	// 是否影响业务
 	IsAffectBusiness *bool `json:"is_affect_business,omitempty"`

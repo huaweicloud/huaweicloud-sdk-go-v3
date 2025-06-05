@@ -21,7 +21,7 @@ type PolicyGroupResponseInfo struct {
 	// 是否允许删除该策略组
 	Deletable *bool `json:"deletable,omitempty"`
 
-	// 关联服务器数
+	// 影响主机数量
 	HostNum *int32 `json:"host_num,omitempty"`
 
 	// 是否是默认策略组

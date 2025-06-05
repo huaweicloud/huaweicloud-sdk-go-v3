@@ -30,7 +30,7 @@ type CreateSmartChatRoomRequestBody struct {
 	// 机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
 	RobotId *string `json:"robot_id,omitempty"`
 
-	// **参数解释**： 并发路数。
+	// **参数解释**： 并发路数。 **约束限制**： 默认没有并发路数，如果不配置并发数量，则无法启动智能交互对话任务。
 	Concurrency *int32 `json:"concurrency,omitempty"`
 
 	// 默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）

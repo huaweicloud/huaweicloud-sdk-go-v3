@@ -9,10 +9,10 @@ import (
 // ListJarPackageStatisticsResponse Response Object
 type ListJarPackageStatisticsResponse struct {
 
-	// Jar包统计信息总数
+	// **参数解释**: 中间件包的统计信息总数 **取值范围**: 取值0-10000
 	TotalNum *int32 `json:"total_num,omitempty"`
 
-	// Jar包统计信息列表
+	// **参数解释**: 中间件包统计信息列表
 	DataList       *[]JarPackageStatisticsResponseInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                                 `json:"-"`
 }

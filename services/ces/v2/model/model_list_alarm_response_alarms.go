@@ -31,10 +31,10 @@ type ListAlarmResponseAlarms struct {
 
 	Type *AlarmType `json:"type,omitempty"`
 
-	// 告警开关
+	// 是否开启告警规则。true:开启，false:关闭。
 	Enabled *bool `json:"enabled,omitempty"`
 
-	// 是否开启告警通知
+	// 是否开启告警通知。true:开启，false:关闭。
 	NotificationEnabled *bool `json:"notification_enabled,omitempty"`
 
 	// 告警触发的动作

@@ -12,7 +12,7 @@ type ListQueryExportTaskResponse struct {
 	// 任务ID
 	TaskId *string `json:"task_id,omitempty"`
 
-	// 任务ID
+	// 任务名称
 	TaskName *string `json:"task_name,omitempty"`
 
 	// 导出任务状态，success:成功，failure:失败，running:运行中

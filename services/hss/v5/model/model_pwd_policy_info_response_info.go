@@ -39,6 +39,24 @@ type PwdPolicyInfoResponseInfo struct {
 	// 特殊字符的设置是否符合要求，符合为true，不符合为false
 	SpecialCharacter *bool `json:"special_character,omitempty"`
 
+	// 复杂口令策略中定义的口令最小长度
+	MinLengthNum *int32 `json:"min_length_num,omitempty"`
+
+	// 复杂口令策略中定义的最少包含的大写字母数
+	MinUppercaseLetter *int32 `json:"min_uppercase_letter,omitempty"`
+
+	// 复杂口令策略中定义的最少包含的小写字母数
+	MinLowercaseLetter *int32 `json:"min_lowercase_letter,omitempty"`
+
+	// 复杂口令策略中定义的最少包含的数字数
+	MinNumber *int32 `json:"min_number,omitempty"`
+
+	// 复杂口令策略中定义的最少包含的特殊字母数
+	MinSpecialCharacter *int32 `json:"min_special_character,omitempty"`
+
+	// 最近扫描时间
+	UpdateTime *int64 `json:"update_time,omitempty"`
+
 	// 修改建议
 	Suggestion *string `json:"suggestion,omitempty"`
 }

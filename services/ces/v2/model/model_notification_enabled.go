@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// NotificationEnabled 是否开启告警通知
+// NotificationEnabled 是否开启告警通知。true:开启，false:关闭。
 type NotificationEnabled struct {
 }
 

@@ -9,7 +9,7 @@ import (
 // DelIsolatedFileRequestInfo 恢复的文件详情
 type DelIsolatedFileRequestInfo struct {
 
-	// 主机ID
+	// 服务器ID
 	HostId string `json:"host_id"`
 
 	// 文件哈希

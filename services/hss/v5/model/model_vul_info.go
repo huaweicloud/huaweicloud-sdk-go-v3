@@ -49,7 +49,7 @@ type VulInfo struct {
 	HostIdList *[]string `json:"host_id_list,omitempty"`
 
 	// CVE列表
-	CveList *[]VulInfoCveList `json:"cve_list,omitempty"`
+	CveList *[]ShowVulReportDataResponseInfoCveList `json:"cve_list,omitempty"`
 
 	// 补丁地址
 	PatchUrl *string `json:"patch_url,omitempty"`

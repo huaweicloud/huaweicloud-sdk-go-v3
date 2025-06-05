@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// RemoveLoginWhiteListRequestInfo 删除登录白名单列表,data_list为空时，删除所有；data_list不为空时，请填充里面所有属性
+// RemoveLoginWhiteListRequestInfo 删除登录白名单列表
 type RemoveLoginWhiteListRequestInfo struct {
 
 	// 删除登录白名单详情

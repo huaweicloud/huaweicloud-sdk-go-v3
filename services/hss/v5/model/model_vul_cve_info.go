@@ -9,7 +9,7 @@ import (
 // VulCveInfo cve 信息
 type VulCveInfo struct {
 
-	// cve id
+	// cve ID
 	CveId *string `json:"cve_id,omitempty"`
 
 	// cve评分

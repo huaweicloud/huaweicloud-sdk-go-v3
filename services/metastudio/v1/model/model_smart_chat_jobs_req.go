@@ -9,7 +9,7 @@ import (
 // SmartChatJobsReq 创建交互任务
 type SmartChatJobsReq struct {
 
-	// 扩展参数，按照Json格式携带 * city:所在城市
+	// 扩展参数，按照Json格式携带。 * city：所在城市 * client_id：客户端ID
 	ExtendParam *string `json:"extend_param,omitempty"`
 }
 

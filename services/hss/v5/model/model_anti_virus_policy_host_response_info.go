@@ -9,7 +9,7 @@ import (
 // AntiVirusPolicyHostResponseInfo 自定义查杀策略关联主机信息
 type AntiVirusPolicyHostResponseInfo struct {
 
-	// 主机ID
+	// 服务器ID
 	HostId *string `json:"host_id,omitempty"`
 
 	// 服务器名称

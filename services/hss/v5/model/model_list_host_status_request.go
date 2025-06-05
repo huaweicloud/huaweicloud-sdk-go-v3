@@ -120,6 +120,9 @@ type ListHostStatusRequest struct {
 	// 是否防护降级
 	ProtectDegradation *bool `json:"protect_degradation,omitempty"`
 
+	// 集群ID
+	ClusterId *string `json:"cluster_id,omitempty"`
+
 	// 每页显示数量
 	Limit *int32 `json:"limit,omitempty"`
 

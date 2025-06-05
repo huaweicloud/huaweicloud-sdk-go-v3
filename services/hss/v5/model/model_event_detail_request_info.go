@@ -12,7 +12,7 @@ type EventDetailRequestInfo struct {
 	// Agent ID
 	AgentId *string `json:"agent_id,omitempty"`
 
-	// 进程id
+	// 进程ID
 	ProcessPid *int32 `json:"process_pid,omitempty"`
 
 	// 文件哈希

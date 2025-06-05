@@ -9,7 +9,7 @@ import (
 // ListVulHandleHistoryResponse Response Object
 type ListVulHandleHistoryResponse struct {
 
-	// 列表
+	// 详情
 	DataList *[]VulhandleHistoryResponseInfoDataList `json:"data_list,omitempty"`
 
 	// 总数

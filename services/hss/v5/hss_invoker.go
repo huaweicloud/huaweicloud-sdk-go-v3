@@ -149,6 +149,22 @@ func (i *BatchScanSwrImageInvoker) Invoke() (*model.BatchScanSwrImageResponse, e
 	}
 }
 
+type BatchStartProtectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchStartProtectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchStartProtectionInvoker) Invoke() (*model.BatchStartProtectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchStartProtectionResponse), nil
+	}
+}
+
 type ChangeAntivirusPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -274,6 +290,22 @@ func (i *ChangeVulStatusInvoker) Invoke() (*model.ChangeVulStatusResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ChangeVulStatusResponse), nil
+	}
+}
+
+type CreateAgentDaemonsetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAgentDaemonsetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAgentDaemonsetInvoker) Invoke() (*model.CreateAgentDaemonsetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAgentDaemonsetResponse), nil
 	}
 }
 
@@ -1874,6 +1906,38 @@ func (i *SetWtpProtectionStatusInfoInvoker) Invoke() (*model.SetWtpProtectionSta
 		return nil, err
 	} else {
 		return result.(*model.SetWtpProtectionStatusInfoResponse), nil
+	}
+}
+
+type ShowAgentDaemonsetDetailInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAgentDaemonsetDetailInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAgentDaemonsetDetailInfoInvoker) Invoke() (*model.ShowAgentDaemonsetDetailInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAgentDaemonsetDetailInfoResponse), nil
+	}
+}
+
+type ShowAntivirusPayPerScanStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAntivirusPayPerScanStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAntivirusPayPerScanStatusInvoker) Invoke() (*model.ShowAntivirusPayPerScanStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAntivirusPayPerScanStatusResponse), nil
 	}
 }
 

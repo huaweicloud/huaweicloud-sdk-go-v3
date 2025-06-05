@@ -12,6 +12,7 @@ var (
 		"https://tms.myhuaweicloud.com",
 		"https://tms.myhuaweicloud.cn")
 	AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1",
+		"https://tms-intl.myhuaweicloud.com",
 		"https://tms.ap-southeast-1.myhuaweicloud.com",
 		"https://tms.ap-southeast-1.myhuaweicloud.cn")
 	EU_WEST_101 = region.NewRegion("eu-west-101",

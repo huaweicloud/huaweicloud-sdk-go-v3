@@ -9,7 +9,7 @@ import (
 // ListAgentInstallScriptResponse Response Object
 type ListAgentInstallScriptResponse struct {
 
-	// agent安装脚本
+	// 安装脚本列表
 	InstallScriptList *[]AgentInstallScriptResponseInfo `json:"install_script_list,omitempty"`
 	HttpStatusCode    int                               `json:"-"`
 }

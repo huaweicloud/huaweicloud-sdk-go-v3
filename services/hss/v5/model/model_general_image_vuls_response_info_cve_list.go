@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type VulInfoCveList struct {
+type GeneralImageVulsResponseInfoCveList struct {
 
 	// CVE ID
 	CveId *string `json:"cve_id,omitempty"`
@@ -15,11 +15,11 @@ type VulInfoCveList struct {
 	Cvss *float32 `json:"cvss,omitempty"`
 }
 
-func (o VulInfoCveList) String() string {
+func (o GeneralImageVulsResponseInfoCveList) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "VulInfoCveList struct{}"
+		return "GeneralImageVulsResponseInfoCveList struct{}"
 	}
 
-	return strings.Join([]string{"VulInfoCveList", string(data)}, " ")
+	return strings.Join([]string{"GeneralImageVulsResponseInfoCveList", string(data)}, " ")
 }

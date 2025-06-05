@@ -30,7 +30,7 @@ type PortResponseInfo struct {
 	// 进程可执行文件路径
 	Path *string `json:"path,omitempty"`
 
-	// Agent ID
+	// agent id
 	AgentId *string `json:"agent_id,omitempty"`
 
 	// 容器id

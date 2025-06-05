@@ -12,7 +12,7 @@ type ResultResourceResponseInfo struct {
 	// 服务器名称
 	HostName *string `json:"host_name,omitempty"`
 
-	// 主机ID
+	// 服务器ID
 	HostId *string `json:"host_id,omitempty"`
 
 	// Agent ID

@@ -31,10 +31,10 @@ type ListAlarmsRespAlarms struct {
 
 	Type *AlarmType `json:"type,omitempty"`
 
-	// 告警开关
+	// 是否开启告警规则。true:开启，false:关闭。
 	Enabled *bool `json:"enabled,omitempty"`
 
-	// 是否开启告警通知
+	// 是否开启告警通知。true:开启，false:关闭。
 	NotificationEnabled *bool `json:"notification_enabled,omitempty"`
 
 	// 告警触发的动作
@@ -48,6 +48,9 @@ type ListAlarmsRespAlarms struct {
 
 	// 告警通知关闭时间
 	NotificationEndTime *string `json:"notification_end_time,omitempty"`
+
+	// 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+	EffectiveTimezone *string `json:"effective_timezone,omitempty"`
 
 	// NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
 	NotificationManner *ListAlarmsRespAlarmsNotificationManner `json:"notification_manner,omitempty"`

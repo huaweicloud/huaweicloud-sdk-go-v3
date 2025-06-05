@@ -586,6 +586,27 @@ func (c *EiHealthClient) CreateCodeInvoker(request *model.CreateCodeRequest) *Cr
 	return &CreateCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateComputingCluster 绑定计算集群
+//
+// 绑定计算集群。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) CreateComputingCluster(request *model.CreateComputingClusterRequest) (*model.CreateComputingClusterResponse, error) {
+	requestDef := GenReqDefForCreateComputingCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateComputingClusterResponse), nil
+	}
+}
+
+// CreateComputingClusterInvoker 绑定计算集群
+func (c *EiHealthClient) CreateComputingClusterInvoker(request *model.CreateComputingClusterRequest) *CreateComputingClusterInvoker {
+	requestDef := GenReqDefForCreateComputingCluster()
+	return &CreateComputingClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateComputingResource 购买计算资源
 //
 // 购买计算资源
@@ -1298,6 +1319,27 @@ func (c *EiHealthClient) DeleteBackup(request *model.DeleteBackupRequest) (*mode
 func (c *EiHealthClient) DeleteBackupInvoker(request *model.DeleteBackupRequest) *DeleteBackupInvoker {
 	requestDef := GenReqDefForDeleteBackup()
 	return &DeleteBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteComputingCluster 解绑计算集群
+//
+// 解绑计算集群。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) DeleteComputingCluster(request *model.DeleteComputingClusterRequest) (*model.DeleteComputingClusterResponse, error) {
+	requestDef := GenReqDefForDeleteComputingCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteComputingClusterResponse), nil
+	}
+}
+
+// DeleteComputingClusterInvoker 解绑计算集群
+func (c *EiHealthClient) DeleteComputingClusterInvoker(request *model.DeleteComputingClusterRequest) *DeleteComputingClusterInvoker {
+	requestDef := GenReqDefForDeleteComputingCluster()
+	return &DeleteComputingClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteComputingResource 删除计算资源
@@ -2098,6 +2140,27 @@ func (c *EiHealthClient) ImportWorkflowInvoker(request *model.ImportWorkflowRequ
 	return &ImportWorkflowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// InitializePlatform 初始化平台
+//
+// 初始化平台。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) InitializePlatform(request *model.InitializePlatformRequest) (*model.InitializePlatformResponse, error) {
+	requestDef := GenReqDefForInitializePlatform()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.InitializePlatformResponse), nil
+	}
+}
+
+// InitializePlatformInvoker 初始化平台
+func (c *EiHealthClient) InitializePlatformInvoker(request *model.InitializePlatformRequest) *InitializePlatformInvoker {
+	requestDef := GenReqDefForInitializePlatform()
+	return &InitializePlatformInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListApp 获取应用列表
 //
 // 获取应用列表
@@ -2245,6 +2308,27 @@ func (c *EiHealthClient) ListBucketInvoker(request *model.ListBucketRequest) *Li
 	return &ListBucketInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCceCluster 获取CCE集群列表
+//
+// 获取CCE集群列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ListCceCluster(request *model.ListCceClusterRequest) (*model.ListCceClusterResponse, error) {
+	requestDef := GenReqDefForListCceCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCceClusterResponse), nil
+	}
+}
+
+// ListCceClusterInvoker 获取CCE集群列表
+func (c *EiHealthClient) ListCceClusterInvoker(request *model.ListCceClusterRequest) *ListCceClusterInvoker {
+	requestDef := GenReqDefForListCceCluster()
+	return &ListCceClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCheckpoint 获取数据作业执行日志
 //
 // 获取数据作业执行日志
@@ -2285,6 +2369,48 @@ func (c *EiHealthClient) ListClusterAllNodeLabel(request *model.ListClusterAllNo
 func (c *EiHealthClient) ListClusterAllNodeLabelInvoker(request *model.ListClusterAllNodeLabelRequest) *ListClusterAllNodeLabelInvoker {
 	requestDef := GenReqDefForListClusterAllNodeLabel()
 	return &ListClusterAllNodeLabelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListClusterInstallStep 查询指定集群安装步骤列表
+//
+// 查询指定集群安装步骤列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ListClusterInstallStep(request *model.ListClusterInstallStepRequest) (*model.ListClusterInstallStepResponse, error) {
+	requestDef := GenReqDefForListClusterInstallStep()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListClusterInstallStepResponse), nil
+	}
+}
+
+// ListClusterInstallStepInvoker 查询指定集群安装步骤列表
+func (c *EiHealthClient) ListClusterInstallStepInvoker(request *model.ListClusterInstallStepRequest) *ListClusterInstallStepInvoker {
+	requestDef := GenReqDefForListClusterInstallStep()
+	return &ListClusterInstallStepInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListComputingCluster 获取计算集群列表
+//
+// 获取计算集群列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ListComputingCluster(request *model.ListComputingClusterRequest) (*model.ListComputingClusterResponse, error) {
+	requestDef := GenReqDefForListComputingCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListComputingClusterResponse), nil
+	}
+}
+
+// ListComputingClusterInvoker 获取计算集群列表
+func (c *EiHealthClient) ListComputingClusterInvoker(request *model.ListComputingClusterRequest) *ListComputingClusterInvoker {
+	requestDef := GenReqDefForListComputingCluster()
+	return &ListComputingClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListComputingResourceFlavors 查询计算资源规格
@@ -2959,6 +3085,27 @@ func (c *EiHealthClient) ListProjectInvoker(request *model.ListProjectRequest) *
 	return &ListProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListProjectStatistics 获取当前用户所属空间资源统计信息
+//
+// 获取当前用户所属空间资源统计信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ListProjectStatistics(request *model.ListProjectStatisticsRequest) (*model.ListProjectStatisticsResponse, error) {
+	requestDef := GenReqDefForListProjectStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectStatisticsResponse), nil
+	}
+}
+
+// ListProjectStatisticsInvoker 获取当前用户所属空间资源统计信息
+func (c *EiHealthClient) ListProjectStatisticsInvoker(request *model.ListProjectStatisticsRequest) *ListProjectStatisticsInvoker {
+	requestDef := GenReqDefForListProjectStatistics()
+	return &ListProjectStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProperty 获取属性值列表
 //
 // 获取属性值列表
@@ -3041,6 +3188,27 @@ func (c *EiHealthClient) ListScalingHistory(request *model.ListScalingHistoryReq
 func (c *EiHealthClient) ListScalingHistoryInvoker(request *model.ListScalingHistoryRequest) *ListScalingHistoryInvoker {
 	requestDef := GenReqDefForListScalingHistory()
 	return &ListScalingHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSfsTurbos 获取sfs-turbo资源列表
+//
+// 获取sfs-turbo资源列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ListSfsTurbos(request *model.ListSfsTurbosRequest) (*model.ListSfsTurbosResponse, error) {
+	requestDef := GenReqDefForListSfsTurbos()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSfsTurbosResponse), nil
+	}
+}
+
+// ListSfsTurbosInvoker 获取sfs-turbo资源列表
+func (c *EiHealthClient) ListSfsTurbosInvoker(request *model.ListSfsTurbosRequest) *ListSfsTurbosInvoker {
+	requestDef := GenReqDefForListSfsTurbos()
+	return &ListSfsTurbosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListStar 获取收藏资产列表
@@ -3167,6 +3335,111 @@ func (c *EiHealthClient) ListUser(request *model.ListUserRequest) (*model.ListUs
 func (c *EiHealthClient) ListUserInvoker(request *model.ListUserRequest) *ListUserInvoker {
 	requestDef := GenReqDefForListUser()
 	return &ListUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUserApp 获取用户所属空间的应用列表
+//
+// 获取用户所属空间的应用列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ListUserApp(request *model.ListUserAppRequest) (*model.ListUserAppResponse, error) {
+	requestDef := GenReqDefForListUserApp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUserAppResponse), nil
+	}
+}
+
+// ListUserAppInvoker 获取用户所属空间的应用列表
+func (c *EiHealthClient) ListUserAppInvoker(request *model.ListUserAppRequest) *ListUserAppInvoker {
+	requestDef := GenReqDefForListUserApp()
+	return &ListUserAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUserDrugJob 获取用户所属空间的药物作业列表
+//
+// 获取用户所属空间的药物作业列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ListUserDrugJob(request *model.ListUserDrugJobRequest) (*model.ListUserDrugJobResponse, error) {
+	requestDef := GenReqDefForListUserDrugJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUserDrugJobResponse), nil
+	}
+}
+
+// ListUserDrugJobInvoker 获取用户所属空间的药物作业列表
+func (c *EiHealthClient) ListUserDrugJobInvoker(request *model.ListUserDrugJobRequest) *ListUserDrugJobInvoker {
+	requestDef := GenReqDefForListUserDrugJob()
+	return &ListUserDrugJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUserImage 获取用户所属空间的镜像列表
+//
+// 获取用户所属空间的镜像列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ListUserImage(request *model.ListUserImageRequest) (*model.ListUserImageResponse, error) {
+	requestDef := GenReqDefForListUserImage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUserImageResponse), nil
+	}
+}
+
+// ListUserImageInvoker 获取用户所属空间的镜像列表
+func (c *EiHealthClient) ListUserImageInvoker(request *model.ListUserImageRequest) *ListUserImageInvoker {
+	requestDef := GenReqDefForListUserImage()
+	return &ListUserImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUserJob 获取用户所属空间的作业列表
+//
+// 获取用户所属空间的作业列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ListUserJob(request *model.ListUserJobRequest) (*model.ListUserJobResponse, error) {
+	requestDef := GenReqDefForListUserJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUserJobResponse), nil
+	}
+}
+
+// ListUserJobInvoker 获取用户所属空间的作业列表
+func (c *EiHealthClient) ListUserJobInvoker(request *model.ListUserJobRequest) *ListUserJobInvoker {
+	requestDef := GenReqDefForListUserJob()
+	return &ListUserJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUserWorkflow 获取用户所属空间的流程列表
+//
+// 获取用户所属空间的流程列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ListUserWorkflow(request *model.ListUserWorkflowRequest) (*model.ListUserWorkflowResponse, error) {
+	requestDef := GenReqDefForListUserWorkflow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUserWorkflowResponse), nil
+	}
+}
+
+// ListUserWorkflowInvoker 获取用户所属空间的流程列表
+func (c *EiHealthClient) ListUserWorkflowInvoker(request *model.ListUserWorkflowRequest) *ListUserWorkflowInvoker {
+	requestDef := GenReqDefForListUserWorkflow()
+	return &ListUserWorkflowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListVendor 获取供应商列表
@@ -3524,6 +3797,27 @@ func (c *EiHealthClient) ShowAdmetJob(request *model.ShowAdmetJobRequest) (*mode
 func (c *EiHealthClient) ShowAdmetJobInvoker(request *model.ShowAdmetJobRequest) *ShowAdmetJobInvoker {
 	requestDef := GenReqDefForShowAdmetJob()
 	return &ShowAdmetJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAgency 获取业务委托
+//
+// 获取业务委托。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ShowAgency(request *model.ShowAgencyRequest) (*model.ShowAgencyResponse, error) {
+	requestDef := GenReqDefForShowAgency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAgencyResponse), nil
+	}
+}
+
+// ShowAgencyInvoker 获取业务委托
+func (c *EiHealthClient) ShowAgencyInvoker(request *model.ShowAgencyRequest) *ShowAgencyInvoker {
+	requestDef := GenReqDefForShowAgency()
+	return &ShowAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowApp 获取应用详情
@@ -4849,6 +5143,27 @@ func (c *EiHealthClient) TransferProjectInvoker(request *model.TransferProjectRe
 	return &TransferProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateAgency 更新业务委托
+//
+// 更新业务委托。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) UpdateAgency(request *model.UpdateAgencyRequest) (*model.UpdateAgencyResponse, error) {
+	requestDef := GenReqDefForUpdateAgency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAgencyResponse), nil
+	}
+}
+
+// UpdateAgencyInvoker 更新业务委托
+func (c *EiHealthClient) UpdateAgencyInvoker(request *model.UpdateAgencyRequest) *UpdateAgencyInvoker {
+	requestDef := GenReqDefForUpdateAgency()
+	return &UpdateAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateApp 更新应用
 //
 // 更新应用
@@ -5372,6 +5687,27 @@ func (c *EiHealthClient) UpdateStar(request *model.UpdateStarRequest) (*model.Up
 func (c *EiHealthClient) UpdateStarInvoker(request *model.UpdateStarRequest) *UpdateStarInvoker {
 	requestDef := GenReqDefForUpdateStar()
 	return &UpdateStarInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTopProject 置顶空间
+//
+// 置顶空间。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) UpdateTopProject(request *model.UpdateTopProjectRequest) (*model.UpdateTopProjectResponse, error) {
+	requestDef := GenReqDefForUpdateTopProject()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTopProjectResponse), nil
+	}
+}
+
+// UpdateTopProjectInvoker 置顶空间
+func (c *EiHealthClient) UpdateTopProjectInvoker(request *model.UpdateTopProjectRequest) *UpdateTopProjectInvoker {
+	requestDef := GenReqDefForUpdateTopProject()
+	return &UpdateTopProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateUser 修改用户基本信息
@@ -6716,6 +7052,27 @@ func (c *EiHealthClient) ListNotebookTool(request *model.ListNotebookToolRequest
 func (c *EiHealthClient) ListNotebookToolInvoker(request *model.ListNotebookToolRequest) *ListNotebookToolInvoker {
 	requestDef := GenReqDefForListNotebookTool()
 	return &ListNotebookToolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUserNotebook 获取用户所属空间的notebook列表
+//
+// 获取用户所属空间的notebook列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ListUserNotebook(request *model.ListUserNotebookRequest) (*model.ListUserNotebookResponse, error) {
+	requestDef := GenReqDefForListUserNotebook()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUserNotebookResponse), nil
+	}
+}
+
+// ListUserNotebookInvoker 获取用户所属空间的notebook列表
+func (c *EiHealthClient) ListUserNotebookInvoker(request *model.ListUserNotebookRequest) *ListUserNotebookInvoker {
+	requestDef := GenReqDefForListUserNotebook()
+	return &ListUserNotebookInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowNotebook 获取notebook详情

@@ -33,7 +33,7 @@ type AlarmWhiteListRequestInfo struct {
 	// 文件哈希
 	FileHash *string `json:"file_hash,omitempty"`
 
-	// 文件路径,需要对特殊字符进行转义，包含/等
+	// 文件路径
 	FilePath *string `json:"file_path,omitempty"`
 }
 

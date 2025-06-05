@@ -12,7 +12,7 @@ type ListCceClusterConfigResponse struct {
 	// 配置总数
 	TotalNum *int32 `json:"total_num,omitempty"`
 
-	// data list
+	// 配置信息列表
 	DataList       *[]ClusterConfigResponseInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                          `json:"-"`
 }

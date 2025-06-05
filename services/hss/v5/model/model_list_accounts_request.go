@@ -13,7 +13,7 @@ type ListAccountsRequest struct {
 	XSecurityToken *string `json:"X-Security-Token,omitempty"`
 
 	// Region ID
-	Region string `json:"region"`
+	Region *string `json:"region,omitempty"`
 
 	// 每页显示数量
 	Limit *int32 `json:"limit,omitempty"`

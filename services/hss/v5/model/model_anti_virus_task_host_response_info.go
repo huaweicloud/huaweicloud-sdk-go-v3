@@ -9,7 +9,7 @@ import (
 // AntiVirusTaskHostResponseInfo 扫描任务关联主机信息
 type AntiVirusTaskHostResponseInfo struct {
 
-	// 主机ID
+	// 服务器ID
 	HostId *string `json:"host_id,omitempty"`
 
 	// 服务器名称

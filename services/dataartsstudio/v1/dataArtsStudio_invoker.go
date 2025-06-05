@@ -2373,6 +2373,22 @@ func (i *ListCatalogTreeInvoker) Invoke() (*model.ListCatalogTreeResponse, error
 	}
 }
 
+type ListCategoriesTreeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCategoriesTreeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCategoriesTreeInvoker) Invoke() (*model.ListCategoriesTreeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCategoriesTreeResponse), nil
+	}
+}
+
 type ListCategoryInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2677,6 +2693,22 @@ func (i *ListDirectoriesInvoker) Invoke() (*model.ListDirectoriesResponse, error
 	}
 }
 
+type ListEntityDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEntityDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListEntityDetailsInvoker) Invoke() (*model.ListEntityDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEntityDetailsResponse), nil
+	}
+}
+
 type ListFactLogicTablesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2834,6 +2866,22 @@ func (i *ListInstancesInvoker) Invoke() (*model.ListInstancesResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListInstancesResponse), nil
+	}
+}
+
+type ListLogicEntitiesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLogicEntitiesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListLogicEntitiesInvoker) Invoke() (*model.ListLogicEntitiesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLogicEntitiesResponse), nil
 	}
 }
 

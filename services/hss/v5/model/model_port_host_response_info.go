@@ -42,7 +42,7 @@ type PortHostResponseInfo struct {
 	// 容器名称
 	ContainerName *string `json:"container_name,omitempty"`
 
-	// Agent ID
+	// agent id
 	AgentId *string `json:"agent_id,omitempty"`
 }
 

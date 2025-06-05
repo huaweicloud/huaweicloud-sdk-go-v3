@@ -14,7 +14,7 @@ type AsyncAssociateRgAndTemplatesReq struct {
 	// 告警模板编号列表，当ID列表为空时，将删除该资源分组已关联的告警模板所创建的告警规则
 	TemplateIds []string `json:"template_ids"`
 
-	// 是否开启告警通知
+	// 是否开启告警通知。true:开启，false:关闭。
 	NotificationEnabled bool `json:"notification_enabled"`
 
 	// 告警触发通知列表

@@ -397,6 +397,27 @@ func (c *CloudtestClient) CreateServiceInvoker(request *model.CreateServiceReque
 	return &CreateServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateTaskDefaultResult 初始化测试任务执行记录
+//
+// 初始化测试任务执行记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) CreateTaskDefaultResult(request *model.CreateTaskDefaultResultRequest) (*model.CreateTaskDefaultResultResponse, error) {
+	requestDef := GenReqDefForCreateTaskDefaultResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTaskDefaultResultResponse), nil
+	}
+}
+
+// CreateTaskDefaultResultInvoker 初始化测试任务执行记录
+func (c *CloudtestClient) CreateTaskDefaultResultInvoker(request *model.CreateTaskDefaultResultRequest) *CreateTaskDefaultResultInvoker {
+	requestDef := GenReqDefForCreateTaskDefaultResult()
+	return &CreateTaskDefaultResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateTestCase 创建自定义测试服务类型用例
 //
 // 创建自定义测试服务类型用例

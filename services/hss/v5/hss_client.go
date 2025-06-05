@@ -208,6 +208,27 @@ func (c *HssClient) BatchScanSwrImageInvoker(request *model.BatchScanSwrImageReq
 	return &BatchScanSwrImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchStartProtection 批量开启勒索病毒防护2.0
+//
+// 批量开启勒索病毒防护,若开启备份防护，请保证该region有cbr云备份服务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) BatchStartProtection(request *model.BatchStartProtectionRequest) (*model.BatchStartProtectionResponse, error) {
+	requestDef := GenReqDefForBatchStartProtection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchStartProtectionResponse), nil
+	}
+}
+
+// BatchStartProtectionInvoker 批量开启勒索病毒防护2.0
+func (c *HssClient) BatchStartProtectionInvoker(request *model.BatchStartProtectionRequest) *BatchStartProtectionInvoker {
+	requestDef := GenReqDefForBatchStartProtection()
+	return &BatchStartProtectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ChangeAntivirusPolicy 编辑自定义查杀策略
 //
 // 编辑自定义查杀策略
@@ -374,6 +395,27 @@ func (c *HssClient) ChangeVulStatus(request *model.ChangeVulStatusRequest) (*mod
 func (c *HssClient) ChangeVulStatusInvoker(request *model.ChangeVulStatusRequest) *ChangeVulStatusInvoker {
 	requestDef := GenReqDefForChangeVulStatus()
 	return &ChangeVulStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAgentDaemonset 创建集群daemonset
+//
+// 创建集群daemonset
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) CreateAgentDaemonset(request *model.CreateAgentDaemonsetRequest) (*model.CreateAgentDaemonsetResponse, error) {
+	requestDef := GenReqDefForCreateAgentDaemonset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAgentDaemonsetResponse), nil
+	}
+}
+
+// CreateAgentDaemonsetInvoker 创建集群daemonset
+func (c *HssClient) CreateAgentDaemonsetInvoker(request *model.CreateAgentDaemonsetRequest) *CreateAgentDaemonsetInvoker {
+	requestDef := GenReqDefForCreateAgentDaemonset()
+	return &CreateAgentDaemonsetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateAntiVirusPolicy 创建自定义查杀策略
@@ -2474,6 +2516,48 @@ func (c *HssClient) SetWtpProtectionStatusInfo(request *model.SetWtpProtectionSt
 func (c *HssClient) SetWtpProtectionStatusInfoInvoker(request *model.SetWtpProtectionStatusInfoRequest) *SetWtpProtectionStatusInfoInvoker {
 	requestDef := GenReqDefForSetWtpProtectionStatusInfo()
 	return &SetWtpProtectionStatusInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAgentDaemonsetDetailInfo 获取集群daemonset信息
+//
+// 获取集群daemonset信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowAgentDaemonsetDetailInfo(request *model.ShowAgentDaemonsetDetailInfoRequest) (*model.ShowAgentDaemonsetDetailInfoResponse, error) {
+	requestDef := GenReqDefForShowAgentDaemonsetDetailInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAgentDaemonsetDetailInfoResponse), nil
+	}
+}
+
+// ShowAgentDaemonsetDetailInfoInvoker 获取集群daemonset信息
+func (c *HssClient) ShowAgentDaemonsetDetailInfoInvoker(request *model.ShowAgentDaemonsetDetailInfoRequest) *ShowAgentDaemonsetDetailInfoInvoker {
+	requestDef := GenReqDefForShowAgentDaemonsetDetailInfo()
+	return &ShowAgentDaemonsetDetailInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAntivirusPayPerScanStatus 查询“病毒查杀按次计费”开关状态
+//
+// 查询“病毒查杀按次计费”开关状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowAntivirusPayPerScanStatus(request *model.ShowAntivirusPayPerScanStatusRequest) (*model.ShowAntivirusPayPerScanStatusResponse, error) {
+	requestDef := GenReqDefForShowAntivirusPayPerScanStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAntivirusPayPerScanStatusResponse), nil
+	}
+}
+
+// ShowAntivirusPayPerScanStatusInvoker 查询“病毒查杀按次计费”开关状态
+func (c *HssClient) ShowAntivirusPayPerScanStatusInvoker(request *model.ShowAntivirusPayPerScanStatusRequest) *ShowAntivirusPayPerScanStatusInvoker {
+	requestDef := GenReqDefForShowAntivirusPayPerScanStatus()
+	return &ShowAntivirusPayPerScanStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAntivirusStatistic 查询病毒查杀统计信息

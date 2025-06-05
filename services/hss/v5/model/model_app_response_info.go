@@ -9,7 +9,7 @@ import (
 // AppResponseInfo 软件信息
 type AppResponseInfo struct {
 
-	// Agent ID
+	// HSS的Agent ID
 	AgentId *string `json:"agent_id,omitempty"`
 
 	// 主机id

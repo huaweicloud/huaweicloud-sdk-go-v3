@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// HostNum 关联服务器数
+// HostNum 影响主机数量
 type HostNum struct {
 }
 

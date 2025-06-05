@@ -29,7 +29,7 @@ type PlayPolicy struct {
 
 	LiveExitConfig *LiveExitConfig `json:"live_exit_config,omitempty"`
 
-	// **参数解释**： 动态编辑未播放剧本是否需要下一轮生效。 **约束限制**： 不涉及。 **取值范围**： * true：马上生效。 * fasle：下一轮生效。 **默认取值**： false
+	// **参数解释**： 动态编辑未播放剧本是否需要下一轮生效。 **约束限制**： 不涉及。 **取值范围**： * true：下一轮生效。 * false：马上生效。 **默认取值**： false
 	IsRewriteDelay *bool `json:"is_rewrite_delay,omitempty"`
 }
 

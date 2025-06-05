@@ -23,10 +23,10 @@ type VulhandleHistoryResponseInfoDataList struct {
 	// 服务器名称
 	HostName *string `json:"host_name,omitempty"`
 
-	// 服务器公网ip
+	// 服务器公网IP
 	PublicIp *string `json:"public_ip,omitempty"`
 
-	// 服务器私网ip
+	// 服务器私网IP
 	PrivateIp *string `json:"private_ip,omitempty"`
 
 	// 处置时间
@@ -67,6 +67,12 @@ type VulhandleHistoryResponseInfoDataList struct {
 
 	// 集群ID
 	ClusterId *string `json:"cluster_id,omitempty"`
+
+	// 容器名称
+	ContainerName *string `json:"container_name,omitempty"`
+
+	// 容器ID
+	ContainerId *string `json:"container_id,omitempty"`
 }
 
 func (o VulhandleHistoryResponseInfoDataList) String() string {

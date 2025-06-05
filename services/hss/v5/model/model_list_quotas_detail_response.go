@@ -27,6 +27,9 @@ type ListQuotasDetailResponse struct {
 	// 过期配额数
 	ExpiredNum *int32 `json:"expired_num,omitempty"`
 
+	// 创建时间
+	CreateTime *int64 `json:"create_time,omitempty"`
+
 	// 冻结配额数
 	FreezeNum *int32 `json:"freeze_num,omitempty"`
 

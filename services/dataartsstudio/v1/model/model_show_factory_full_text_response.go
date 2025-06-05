@@ -19,7 +19,7 @@ type ShowFactoryFullTextResponse struct {
 	SearchDetails *[]SearchDetailV2 `json:"search_details,omitempty"`
 
 	// 成功命中数量。
-	TotalHits      *int32 `json:"total_hits,omitempty"`
+	TotalHits      *int64 `json:"total_hits,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

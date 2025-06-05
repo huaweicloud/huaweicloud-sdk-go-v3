@@ -8,7 +8,7 @@ import (
 
 type PutAlarmNotificationReq struct {
 
-	// 是否开启告警通知
+	// 是否开启告警通知。true:开启，false:关闭。
 	NotificationEnabled bool `json:"notification_enabled"`
 
 	// 告警触发的动作

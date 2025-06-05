@@ -33,7 +33,7 @@ type EventHandleHistory struct {
 	// 发生时间，毫秒
 	OccurTime *int64 `json:"occur_time,omitempty"`
 
-	// 处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+	// 处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
 	HandleStatus *string `json:"handle_status,omitempty"`
 
 	// 备注
@@ -51,7 +51,7 @@ type EventHandleHistory struct {
 	// 处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - add_to_login_whitelist : 加入登录白名单   - isolate_and_kill : 隔离查杀   - unhandle : 取消手动处理   - do_not_ignore : 取消忽略   - remove_from_alarm_whitelist : 删除告警白名单   - remove_from_login_whitelist : 删除登录白名单   - do_not_isolate_or_kill : 取消隔离查杀
 	OperateType *string `json:"operate_type,omitempty"`
 
-	// 威胁等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
+	// 威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
 	Severity *string `json:"severity,omitempty"`
 
 	// 用户名

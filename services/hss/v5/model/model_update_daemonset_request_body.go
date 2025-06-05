@@ -23,7 +23,7 @@ type UpdateDaemonsetRequestBody struct {
 	// 容器运行时配置
 	RuntimeInfo *[]RuntimeRequestBody `json:"runtime_info,omitempty"`
 
-	ScheduleInfo *UpdateDaemonsetRequestBodyScheduleInfo `json:"schedule_info,omitempty"`
+	ScheduleInfo *CreateDaemonsetRequestBodyScheduleInfo `json:"schedule_info,omitempty"`
 
 	// 调用服务，默认hss，cce集成防护调用场景使用:   - hss：hss服务    - cce：cce服务
 	InvokedService *string `json:"invoked_service,omitempty"`

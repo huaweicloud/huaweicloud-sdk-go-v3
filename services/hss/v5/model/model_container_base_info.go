@@ -9,6 +9,12 @@ import (
 // ContainerBaseInfo 容器基本信息
 type ContainerBaseInfo struct {
 
+	// ID
+	Id *string `json:"id,omitempty"`
+
+	// 区域
+	RegionId *string `json:"region_id,omitempty"`
+
 	// 容器ID
 	ContainerId *string `json:"container_id,omitempty"`
 

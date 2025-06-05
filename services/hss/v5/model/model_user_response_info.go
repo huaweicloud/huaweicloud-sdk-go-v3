@@ -42,6 +42,9 @@ type UserResponseInfo struct {
 	// 最近扫描时间
 	RecentScanTime *int64 `json:"recent_scan_time,omitempty"`
 
+	// 首次扫描时间
+	FirstScanTime *int64 `json:"first_scan_time,omitempty"`
+
 	// 容器id
 	ContainerId *string `json:"container_id,omitempty"`
 

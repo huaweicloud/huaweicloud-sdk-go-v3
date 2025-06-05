@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ProcessPid 进程id
+// ProcessPid 进程ID
 type ProcessPid struct {
 }
 

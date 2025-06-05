@@ -33,7 +33,7 @@ type ListPacifyWordsRequest struct {
 	// 应用ID。
 	RobotId string `json:"robot_id"`
 
-	// 智能交互语言  * CN:中文  * EN:英文
+	// 智能交互语言 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
 	Language *ListPacifyWordsRequestLanguage `json:"language,omitempty"`
 
 	// 安抚话术类型 > 0:通用安抚话术, 1:基于意图匹配安抚话术
@@ -57,8 +57,12 @@ type ListPacifyWordsRequestLanguage struct {
 }
 
 type ListPacifyWordsRequestLanguageEnum struct {
-	CN ListPacifyWordsRequestLanguage
-	EN ListPacifyWordsRequestLanguage
+	CN     ListPacifyWordsRequestLanguage
+	EN     ListPacifyWordsRequestLanguage
+	ESP    ListPacifyWordsRequestLanguage
+	POR    ListPacifyWordsRequestLanguage
+	ARABIC ListPacifyWordsRequestLanguage
+	THAI   ListPacifyWordsRequestLanguage
 }
 
 func GetListPacifyWordsRequestLanguageEnum() ListPacifyWordsRequestLanguageEnum {
@@ -68,6 +72,18 @@ func GetListPacifyWordsRequestLanguageEnum() ListPacifyWordsRequestLanguageEnum 
 		},
 		EN: ListPacifyWordsRequestLanguage{
 			value: "EN",
+		},
+		ESP: ListPacifyWordsRequestLanguage{
+			value: "ESP",
+		},
+		POR: ListPacifyWordsRequestLanguage{
+			value: "por",
+		},
+		ARABIC: ListPacifyWordsRequestLanguage{
+			value: "Arabic",
+		},
+		THAI: ListPacifyWordsRequestLanguage{
+			value: "Thai",
 		},
 	}
 }

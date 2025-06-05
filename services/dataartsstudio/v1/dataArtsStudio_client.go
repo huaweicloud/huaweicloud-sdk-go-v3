@@ -3133,6 +3133,27 @@ func (c *DataArtsStudioClient) ListCatalogTreeInvoker(request *model.ListCatalog
 	return &ListCatalogTreeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCategoriesTree 空间资产目录树(邀测)
+//
+// 获取某空间下资产目录树。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListCategoriesTree(request *model.ListCategoriesTreeRequest) (*model.ListCategoriesTreeResponse, error) {
+	requestDef := GenReqDefForListCategoriesTree()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCategoriesTreeResponse), nil
+	}
+}
+
+// ListCategoriesTreeInvoker 空间资产目录树(邀测)
+func (c *DataArtsStudioClient) ListCategoriesTreeInvoker(request *model.ListCategoriesTreeRequest) *ListCategoriesTreeInvoker {
+	requestDef := GenReqDefForListCategoriesTree()
+	return &ListCategoriesTreeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCategory 获取作业目录
 //
 // 获取作业目录
@@ -3532,6 +3553,27 @@ func (c *DataArtsStudioClient) ListDirectoriesInvoker(request *model.ListDirecto
 	return &ListDirectoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListEntityDetails 批量获取资产信息(邀测)
+//
+// 批量获取资产信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListEntityDetails(request *model.ListEntityDetailsRequest) (*model.ListEntityDetailsResponse, error) {
+	requestDef := GenReqDefForListEntityDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEntityDetailsResponse), nil
+	}
+}
+
+// ListEntityDetailsInvoker 批量获取资产信息(邀测)
+func (c *DataArtsStudioClient) ListEntityDetailsInvoker(request *model.ListEntityDetailsRequest) *ListEntityDetailsInvoker {
+	requestDef := GenReqDefForListEntityDetails()
+	return &ListEntityDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListFactLogicTables 查找事实表
 //
 // 通过中英文名称、创建者、审核人、状态、修改时间分页查找事实表信息。
@@ -3740,6 +3782,27 @@ func (c *DataArtsStudioClient) ListInstances(request *model.ListInstancesRequest
 func (c *DataArtsStudioClient) ListInstancesInvoker(request *model.ListInstancesRequest) *ListInstancesInvoker {
 	requestDef := GenReqDefForListInstances()
 	return &ListInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLogicEntities 获取目录下逻辑实体(邀测)
+//
+// 获取主题目录下逻辑实体。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListLogicEntities(request *model.ListLogicEntitiesRequest) (*model.ListLogicEntitiesResponse, error) {
+	requestDef := GenReqDefForListLogicEntities()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLogicEntitiesResponse), nil
+	}
+}
+
+// ListLogicEntitiesInvoker 获取目录下逻辑实体(邀测)
+func (c *DataArtsStudioClient) ListLogicEntitiesInvoker(request *model.ListLogicEntitiesRequest) *ListLogicEntitiesInvoker {
+	requestDef := GenReqDefForListLogicEntities()
+	return &ListLogicEntitiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListManagerWorkSpaces 获取工作空间列表

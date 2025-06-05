@@ -40,6 +40,9 @@ type ListLogStreamsResponseBody1LogStreams struct {
 
 	// 标准存储时间
 	HotStorageDays *int32 `json:"hot_storage_days,omitempty"`
+
+	// 日志组ID
+	LogGroupId *string `json:"log_group_id,omitempty"`
 }
 
 func (o ListLogStreamsResponseBody1LogStreams) String() string {

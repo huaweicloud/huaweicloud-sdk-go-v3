@@ -9,7 +9,7 @@ import (
 // BlockedIpRequestInfo 解除拦截的IP详情
 type BlockedIpRequestInfo struct {
 
-	// 主机ID
+	// 服务器ID
 	HostId string `json:"host_id"`
 
 	// 攻击源IP
