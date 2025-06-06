@@ -10,10 +10,13 @@ import (
 var (
 	CN_NORTH_1 = region.NewRegion("cn-north-1",
 		"https://bss.myhuaweicloud.com")
+	CN_NORTH_4 = region.NewRegion("cn-north-4",
+		"https://bss.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
 	"cn-north-1": CN_NORTH_1,
+	"cn-north-4": CN_NORTH_4,
 }
 
 var provider = region.DefaultProviderChain("BSS")
