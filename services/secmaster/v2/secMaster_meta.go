@@ -944,6 +944,32 @@ func GenReqDefForDeletePlaybookVersion() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForDeleteWorkspace() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/{project_id}/workspaces/{workspace_id}").
+		WithResponse(new(model.DeleteWorkspaceResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("WorkspaceId").
+		WithJsonTag("workspace_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PermanentDelete").
+		WithJsonTag("permanent_delete").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("content-type").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForDisableAlertRule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -2203,6 +2229,27 @@ func GenReqDefForShowPlaybookVersion() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowWorkspace() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/workspaces/{workspace_id}").
+		WithResponse(new(model.ShowWorkspaceResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("WorkspaceId").
+		WithJsonTag("workspace_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("content-type").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateAlertRule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -2411,6 +2458,31 @@ func GenReqDefForUpdatePlaybookVersion() *def.HttpRequestDef {
 		WithJsonTag("X-request-id").
 		WithKindName("string").
 		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateWorkspace() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/workspaces/{workspace_id}").
+		WithResponse(new(model.UpdateWorkspaceResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("WorkspaceId").
+		WithJsonTag("workspace_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("content-type").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

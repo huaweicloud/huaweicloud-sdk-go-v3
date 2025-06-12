@@ -8,16 +8,16 @@ import (
 
 type TopicEntity struct {
 
-	// **参数解释**： 是否为默认策略。 **取值范围**： - true：默认策略。 - fasle：不是默认策略。
+	// **参数解释**： 是否为默认策略。 **取值范围**： - true：默认策略。 - false：不是默认策略。
 	PoliciesOnly *bool `json:"policiesOnly,omitempty"`
 
-	// **参数解释**： topic名称。 **取值范围**： 不涉及
+	// **参数解释**： Topic名称。 **取值范围**： 不涉及
 	Name *string `json:"name,omitempty"`
 
 	// **参数解释**： 副本数，配置数据的可靠性。 **取值范围**： 不涉及
 	Replication *int32 `json:"replication,omitempty"`
 
-	// **参数解释**： topic分区数，设置消费的并发数。 **取值范围**： 不涉及
+	// **参数解释**： Topic分区数，设置消费的并发数。 **取值范围**： 不涉及
 	Partition *int32 `json:"partition,omitempty"`
 
 	// **参数解释**： 消息老化时间。 **取值范围**： 0-720
@@ -32,16 +32,16 @@ type TopicEntity struct {
 	// **参数解释**： 扩展配置。
 	ExternalConfigs *interface{} `json:"external_configs,omitempty"`
 
-	// **参数解释**： topic类型。 **取值范围**： - 0：普通Topic。 - 1：系统(内部)Topic。
+	// **参数解释**： Topic类型。 **取值范围**： - 0：普通Topic。 - 1：系统(内部)Topic。
 	TopicType *int32 `json:"topic_type,omitempty"`
 
-	// **参数解释**： topic其他配置。
+	// **参数解释**： Topic其他配置。
 	TopicOtherConfigs *[]TopicEntityTopicOtherConfigs `json:"topic_other_configs,omitempty"`
 
-	// **参数解释**： topic描述。 **取值范围**： 不涉及
+	// **参数解释**： Topic描述。 **取值范围**： 不涉及
 	TopicDesc *string `json:"topic_desc,omitempty"`
 
-	// **参数解释**： topic创建时间。 **取值范围**： 不涉及
+	// **参数解释**： Topic创建时间。 **取值范围**： 不涉及
 	CreatedAt *int64 `json:"created_at,omitempty"`
 }
 

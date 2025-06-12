@@ -8,7 +8,7 @@ import (
 
 type ResetMessageOffsetReq struct {
 
-	// topic名称。
+	// Topic名称。
 	Topic *string `json:"topic,omitempty"`
 
 	// 分区编号，默认值为-1，若传入值为-1，则重置所有分区。

@@ -14,13 +14,13 @@ type AlertResourceList struct {
 	// 资源名称
 	Name *string `json:"name,omitempty"`
 
-	// 资源类型；引用华为云RMS type字段
+	// 资源类型；引用云RMS type字段
 	Type *string `json:"type,omitempty"`
 
-	// 云服务名称；引用华为云RMS provider字段
+	// 云服务名称；引用云RMS provider字段
 	Provider *string `json:"provider,omitempty"`
 
-	// 区域；按照华为云regionId填写，如cn-north-1等
+	// 区域；按照云regionId填写
 	RegionId *string `json:"region_id,omitempty"`
 
 	// 资源所属账号ID，UUID格式

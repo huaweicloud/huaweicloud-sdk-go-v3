@@ -10,8 +10,10 @@ import (
 type ListStacksResponse struct {
 
 	// 资源栈列表。默认按照生成时间降序排序，最新生成的在最前
-	Stacks         *[]Stack `json:"stacks,omitempty"`
-	HttpStatusCode int      `json:"-"`
+	Stacks *[]Stack `json:"stacks,omitempty"`
+
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListStacksResponse) String() string {

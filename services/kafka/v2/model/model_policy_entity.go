@@ -11,7 +11,7 @@ import (
 
 type PolicyEntity struct {
 
-	// 是否为创建topic时所选择的用户。
+	// 是否为创建Topic时所选择的用户。
 	Owner *bool `json:"owner,omitempty"`
 
 	// 用户名。

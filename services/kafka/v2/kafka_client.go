@@ -298,9 +298,9 @@ func (c *KafkaClient) CreateKafkaRebalanceLogTaskInvoker(request *model.CreateKa
 	return &CreateKafkaRebalanceLogTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateKafkaTopicQuota 创建topic流控配置
+// CreateKafkaTopicQuota 创建Topic流控配置
 //
-// 该接口用于向Kafka实例提交创建topic级别的流控任务，若成功则返回流控任务的job_id。
+// 该接口用于向Kafka实例提交创建Topic级别的流控任务，若成功则返回流控任务的job_id。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) CreateKafkaTopicQuota(request *model.CreateKafkaTopicQuotaRequest) (*model.CreateKafkaTopicQuotaResponse, error) {
@@ -313,7 +313,7 @@ func (c *KafkaClient) CreateKafkaTopicQuota(request *model.CreateKafkaTopicQuota
 	}
 }
 
-// CreateKafkaTopicQuotaInvoker 创建topic流控配置
+// CreateKafkaTopicQuotaInvoker 创建Topic流控配置
 func (c *KafkaClient) CreateKafkaTopicQuotaInvoker(request *model.CreateKafkaTopicQuotaRequest) *CreateKafkaTopicQuotaInvoker {
 	requestDef := GenReqDefForCreateKafkaTopicQuota()
 	return &CreateKafkaTopicQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -386,7 +386,7 @@ func (c *KafkaClient) CreatePostPaidInstanceInvoker(request *model.CreatePostPai
 //
 // 创建实例。
 //
-// [该接口支持创建按需和包周期两种计费方式的实例。](tag:hws,hws_eu,hws_hk,ctc)
+// [该接口支持创建按需和包周期两种计费方式的实例。](tag:hws,hws_eu,hws_hk,ctc,cmcc)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) CreatePostPaidKafkaInstance(request *model.CreatePostPaidKafkaInstanceRequest) (*model.CreatePostPaidKafkaInstanceResponse, error) {
@@ -510,9 +510,9 @@ func (c *KafkaClient) DeleteKafkaMessageInvoker(request *model.DeleteKafkaMessag
 	return &DeleteKafkaMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteKafkaTopicQuota 删除topic流控配置
+// DeleteKafkaTopicQuota 删除Topic流控配置
 //
-// 该接口用于向Kafka实例提交删除topic级别的流控任务，若成功则返回流控任务的job_id。
+// 该接口用于向Kafka实例提交删除Topic级别的流控任务，若成功则返回流控任务的job_id。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) DeleteKafkaTopicQuota(request *model.DeleteKafkaTopicQuotaRequest) (*model.DeleteKafkaTopicQuotaResponse, error) {
@@ -525,7 +525,7 @@ func (c *KafkaClient) DeleteKafkaTopicQuota(request *model.DeleteKafkaTopicQuota
 	}
 }
 
-// DeleteKafkaTopicQuotaInvoker 删除topic流控配置
+// DeleteKafkaTopicQuotaInvoker 删除Topic流控配置
 func (c *KafkaClient) DeleteKafkaTopicQuotaInvoker(request *model.DeleteKafkaTopicQuotaRequest) *DeleteKafkaTopicQuotaInvoker {
 	requestDef := GenReqDefForDeleteKafkaTopicQuota()
 	return &DeleteKafkaTopicQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -894,9 +894,9 @@ func (c *KafkaClient) ModifyInstanceConfigsInvoker(request *model.ModifyInstance
 	return &ModifyInstanceConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ModifyKafkaTopicQuota 修改topic流控配置
+// ModifyKafkaTopicQuota 修改Topic流控配置
 //
-// 该接口用于向Kafka实例提交修改topic级别的流控任务，若成功则返回流控任务的job_id。
+// 该接口用于向Kafka实例提交修改Topic级别的流控任务，若成功则返回流控任务的job_id。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) ModifyKafkaTopicQuota(request *model.ModifyKafkaTopicQuotaRequest) (*model.ModifyKafkaTopicQuotaResponse, error) {
@@ -909,7 +909,7 @@ func (c *KafkaClient) ModifyKafkaTopicQuota(request *model.ModifyKafkaTopicQuota
 	}
 }
 
-// ModifyKafkaTopicQuotaInvoker 修改topic流控配置
+// ModifyKafkaTopicQuotaInvoker 修改Topic流控配置
 func (c *KafkaClient) ModifyKafkaTopicQuotaInvoker(request *model.ModifyKafkaTopicQuotaRequest) *ModifyKafkaTopicQuotaInvoker {
 	requestDef := GenReqDefForModifyKafkaTopicQuota()
 	return &ModifyKafkaTopicQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1510,9 +1510,9 @@ func (c *KafkaClient) ShowKafkaTopicPartitionDiskusageInvoker(request *model.Sho
 	return &ShowKafkaTopicPartitionDiskusageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowKafkaTopicQuota 查询topic流控配置
+// ShowKafkaTopicQuota 查询Topic流控配置
 //
-// 该接口用于查询topic级别的流控任务。
+// 该接口用于查询Topic级别的流控任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) ShowKafkaTopicQuota(request *model.ShowKafkaTopicQuotaRequest) (*model.ShowKafkaTopicQuotaResponse, error) {
@@ -1525,7 +1525,7 @@ func (c *KafkaClient) ShowKafkaTopicQuota(request *model.ShowKafkaTopicQuotaRequ
 	}
 }
 
-// ShowKafkaTopicQuotaInvoker 查询topic流控配置
+// ShowKafkaTopicQuotaInvoker 查询Topic流控配置
 func (c *KafkaClient) ShowKafkaTopicQuotaInvoker(request *model.ShowKafkaTopicQuotaRequest) *ShowKafkaTopicQuotaInvoker {
 	requestDef := GenReqDefForShowKafkaTopicQuota()
 	return &ShowKafkaTopicQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1764,9 +1764,9 @@ func (c *KafkaClient) UpdateInstanceInvoker(request *model.UpdateInstanceRequest
 	return &UpdateInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateInstanceAutoCreateTopic 开启或关闭实例自动创建topic功能
+// UpdateInstanceAutoCreateTopic 开启或关闭实例自动创建Topic功能
 //
-// 开启或关闭实例自动创建topic功能。
+// 开启或关闭实例自动创建Topic功能。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) UpdateInstanceAutoCreateTopic(request *model.UpdateInstanceAutoCreateTopicRequest) (*model.UpdateInstanceAutoCreateTopicResponse, error) {
@@ -1779,7 +1779,7 @@ func (c *KafkaClient) UpdateInstanceAutoCreateTopic(request *model.UpdateInstanc
 	}
 }
 
-// UpdateInstanceAutoCreateTopicInvoker 开启或关闭实例自动创建topic功能
+// UpdateInstanceAutoCreateTopicInvoker 开启或关闭实例自动创建Topic功能
 func (c *KafkaClient) UpdateInstanceAutoCreateTopicInvoker(request *model.UpdateInstanceAutoCreateTopicRequest) *UpdateInstanceAutoCreateTopicInvoker {
 	requestDef := GenReqDefForUpdateInstanceAutoCreateTopic()
 	return &UpdateInstanceAutoCreateTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2041,9 +2041,9 @@ func (c *KafkaClient) DeleteConnectorInvoker(request *model.DeleteConnectorReque
 	return &DeleteConnectorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteConnectorTask 删除Smart Connector任务
+// DeleteConnectorTask 删除Smart Connect任务
 //
-// 删除Smart Connector任务。
+// 删除Smart Connect任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) DeleteConnectorTask(request *model.DeleteConnectorTaskRequest) (*model.DeleteConnectorTaskResponse, error) {
@@ -2056,7 +2056,7 @@ func (c *KafkaClient) DeleteConnectorTask(request *model.DeleteConnectorTaskRequ
 	}
 }
 
-// DeleteConnectorTaskInvoker 删除Smart Connector任务
+// DeleteConnectorTaskInvoker 删除Smart Connect任务
 func (c *KafkaClient) DeleteConnectorTaskInvoker(request *model.DeleteConnectorTaskRequest) *DeleteConnectorTaskInvoker {
 	requestDef := GenReqDefForDeleteConnectorTask()
 	return &DeleteConnectorTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2081,6 +2081,27 @@ func (c *KafkaClient) ListConnectorTasks(request *model.ListConnectorTasksReques
 func (c *KafkaClient) ListConnectorTasksInvoker(request *model.ListConnectorTasksRequest) *ListConnectorTasksInvoker {
 	requestDef := GenReqDefForListConnectorTasks()
 	return &ListConnectorTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyConnectorTask 修改Smart Connect任务配置。
+//
+// 修改Smart Connect任务配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) ModifyConnectorTask(request *model.ModifyConnectorTaskRequest) (*model.ModifyConnectorTaskResponse, error) {
+	requestDef := GenReqDefForModifyConnectorTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyConnectorTaskResponse), nil
+	}
+}
+
+// ModifyConnectorTaskInvoker 修改Smart Connect任务配置。
+func (c *KafkaClient) ModifyConnectorTaskInvoker(request *model.ModifyConnectorTaskRequest) *ModifyConnectorTaskInvoker {
+	requestDef := GenReqDefForModifyConnectorTask()
+	return &ModifyConnectorTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // PauseConnectorTask 暂停Smart Connect任务
@@ -2167,9 +2188,9 @@ func (c *KafkaClient) ResumeConnectorTaskInvoker(request *model.ResumeConnectorT
 	return &ResumeConnectorTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowConnectorTask 查询Smart Connector任务详情
+// ShowConnectorTask 查询Smart Connect任务详情
 //
-// 查询Smart Connector任务详情。
+// 查询Smart Connect任务详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) ShowConnectorTask(request *model.ShowConnectorTaskRequest) (*model.ShowConnectorTaskResponse, error) {
@@ -2182,8 +2203,29 @@ func (c *KafkaClient) ShowConnectorTask(request *model.ShowConnectorTaskRequest)
 	}
 }
 
-// ShowConnectorTaskInvoker 查询Smart Connector任务详情
+// ShowConnectorTaskInvoker 查询Smart Connect任务详情
 func (c *KafkaClient) ShowConnectorTaskInvoker(request *model.ShowConnectorTaskRequest) *ShowConnectorTaskInvoker {
 	requestDef := GenReqDefForShowConnectorTask()
 	return &ShowConnectorTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ValidateConnectorConnectivity 校验Connector连通性
+//
+// 校验Connector连通性。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) ValidateConnectorConnectivity(request *model.ValidateConnectorConnectivityRequest) (*model.ValidateConnectorConnectivityResponse, error) {
+	requestDef := GenReqDefForValidateConnectorConnectivity()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ValidateConnectorConnectivityResponse), nil
+	}
+}
+
+// ValidateConnectorConnectivityInvoker 校验Connector连通性
+func (c *KafkaClient) ValidateConnectorConnectivityInvoker(request *model.ValidateConnectorConnectivityRequest) *ValidateConnectorConnectivityInvoker {
+	requestDef := GenReqDefForValidateConnectorConnectivity()
+	return &ValidateConnectorConnectivityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

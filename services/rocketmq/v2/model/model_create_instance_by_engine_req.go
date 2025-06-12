@@ -57,6 +57,9 @@ type CreateInstanceByEngineReq struct {
 	// 是否支持IPv6。   - true：支持   - false：不支持
 	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
 
+	// 是否开启Proxy功能。   - true：支持   - false：不支持
+	ProxyEnable *bool `json:"proxy_enable,omitempty"`
+
 	// 是否开启公网访问功能。默认不开启公网。 - true：开启 - false：不开启
 	EnablePublicip *bool `json:"enable_publicip,omitempty"`
 
@@ -65,6 +68,12 @@ type CreateInstanceByEngineReq struct {
 
 	// 代理个数。
 	BrokerNum int32 `json:"broker_num"`
+
+	// 架构类型。
+	ArchType *string `json:"arch_type,omitempty"`
+
+	// 实例使用的安全协议。
+	TlsMode *string `json:"tls_mode,omitempty"`
 
 	BssParam *BssParam `json:"bss_param,omitempty"`
 }

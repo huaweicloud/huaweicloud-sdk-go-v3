@@ -10,8 +10,10 @@ import (
 type ListStackEventsResponse struct {
 
 	// 资源栈事件列表
-	StackEvents    *[]StackEvent `json:"stack_events,omitempty"`
-	HttpStatusCode int           `json:"-"`
+	StackEvents *[]StackEvent `json:"stack_events,omitempty"`
+
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListStackEventsResponse) String() string {

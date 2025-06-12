@@ -24,7 +24,7 @@ type ListInstanceTopicsResponse struct {
 	// **参数解释**： 单个Topic最大占用分区数。 **取值范围**： 不涉及。
 	TopicMaxPartitions *int32 `json:"topic_max_partitions,omitempty"`
 
-	// **参数解释**： topic列表。
+	// **参数解释**： Topic列表。
 	Topics         *[]TopicEntity `json:"topics,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

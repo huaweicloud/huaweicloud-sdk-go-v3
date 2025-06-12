@@ -26,7 +26,7 @@ type CreateWorkspaceResponseBodyWorkspaceAgencyList struct {
 	// THIS_ACCOUNT:本账号空间,CROSS_ACCOUNT:跨账号空间
 	WorkspaceAttribution *CreateWorkspaceResponseBodyWorkspaceAgencyListWorkspaceAttribution `json:"workspace_attribution,omitempty"`
 
-	// 用户创建托管空间时使用的IAM委托版本，V3或者V5
+	// 委托版本
 	AgencyVersion *string `json:"agency_version,omitempty"`
 
 	// 委托租户id

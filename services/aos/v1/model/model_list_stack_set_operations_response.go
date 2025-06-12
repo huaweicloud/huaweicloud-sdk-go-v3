@@ -11,7 +11,9 @@ type ListStackSetOperationsResponse struct {
 
 	// 资源栈集操作列表
 	StackSetOperations *[]StackSetOperation `json:"stack_set_operations,omitempty"`
-	HttpStatusCode     int                  `json:"-"`
+
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListStackSetOperationsResponse) String() string {

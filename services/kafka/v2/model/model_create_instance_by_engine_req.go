@@ -21,7 +21,7 @@ type CreateInstanceByEngineReq struct {
 	// 消息引擎。取值填写为：kafka。
 	Engine CreateInstanceByEngineReqEngine `json:"engine"`
 
-	// 消息引擎的版本。取值填写为：   [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc)   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc)   - 2.7   [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu)
+	// 消息引擎的版本。取值填写为：   [- 1.1.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,sbc,cmcc)   [- 2.3.0](tag:g42,tm,hk_g42,ctc,hk_tm,dt,sbc,cmcc)   - 2.7   [- 3.x](tag:hws,hws_hk,dt,sbc,hcs,fcs,ctc,tm,hk_tm,hws_eu)
 	EngineVersion string `json:"engine_version"`
 
 	// 代理个数。
@@ -48,7 +48,7 @@ type CreateInstanceByEngineReq struct {
 	// 创建节点到指定且有资源的可用区ID。请参考[查询可用区信息](ListAvailableZones.xml)获取可用区ID。  该参数不能为空数组或者数组的值为空。  创建Kafka实例，支持节点部署在1个或3个及3个以上的可用区。在为节点指定可用区时，用逗号分隔开。
 	AvailableZones []string `json:"available_zones"`
 
-	// 产品ID。  [产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。](tag:hws,hws_hk,ocb,hws_ocb,dt,ctc,sbc,fcs,hcs,g42,hk_g42,tm,hk_tm,hws_eu)[产品ID可以从[查询产品规格列表](ListProducts.xml)获取。](tag:cmcc)
+	// 产品ID。  产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。
 	ProductId string `json:"product_id"`
 
 	// 维护时间窗开始时间，格式为HH:mm。
@@ -92,7 +92,7 @@ type CreateInstanceByEngineReq struct {
 	// 是否开启消息转储功能。  默认不开启消息转储。
 	ConnectorEnable *bool `json:"connector_enable,omitempty"`
 
-	// 是否打开kafka自动创建topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
+	// 是否打开kafka自动创建Topic功能。 - true：开启 - false：关闭  当您选择开启，表示生产或消费一个未创建的Topic时，会自动创建一个包含3个分区和3个副本的Topic。  默认是false关闭。
 	EnableAutoTopic *bool `json:"enable_auto_topic,omitempty"`
 
 	// 存储IO规格。  取值范围：   - dms.physical.storage.high.v2：使用高IO的磁盘类型。   - dms.physical.storage.ultra.v2：使用超高IO的磁盘类型。  [如何选择磁盘类型请参考《云硬盘 [产品介绍](tag:hws,hws_hk,hws_eu,cmcc)[用户指南](tag:dt,g42,hk_g42,ctc,tm,hk_tm,sbc,ocb,hws_ocb)》的“磁盘类型及性能介绍”。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
@@ -104,7 +104,7 @@ type CreateInstanceByEngineReq struct {
 	// 标签列表。
 	Tags *[]TagEntity `json:"tags,omitempty"`
 
-	// CPU架构。当前只支持X86架构[以及arm架构](tag:hcs,fcs)。  取值范围：   - X86   [- arm](tag:hcs,fcs)
+	// CPU架构。当前只支持X86架构[以及arm架构](tag:hcs,fcs,ctc)。  取值范围：   - X86   [- arm](tag:hcs,fcs,ctc)
 	ArchType *string `json:"arch_type,omitempty"`
 
 	// VPC内网明文访问。

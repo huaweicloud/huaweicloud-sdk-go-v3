@@ -8,7 +8,7 @@ import (
 
 type ShowCeshierarchyRespQueues struct {
 
-	// topic名称。
+	// Topic名称。
 	Name *string `json:"name,omitempty"`
 
 	// 分区列表。

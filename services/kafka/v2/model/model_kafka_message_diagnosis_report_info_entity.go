@@ -27,7 +27,7 @@ type KafkaMessageDiagnosisReportInfoEntity struct {
 	// 该次诊断任务诊断的消费组名称
 	GroupName string `json:"group_name"`
 
-	// 该次诊断任务诊断的topic名称
+	// 该次诊断任务诊断的Topic名称
 	TopicName string `json:"topic_name"`
 
 	// 该次诊断任务发现的存在消息堆积的分区数

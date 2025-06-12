@@ -17,7 +17,7 @@ type CreateTopicOrBatchDeleteTopicReq struct {
 	// 关联的代理（仅RocketMQ实例4.8.0版本需要填写此参数）。
 	Brokers *[]string `json:"brokers,omitempty"`
 
-	// 队列数，范围1~50。
+	// 总队列数，范围1~50。
 	QueueNum float32 `json:"queue_num,omitempty"`
 
 	// 队列（仅RocketMQ实例4.8.0版本需要填写此参数）。

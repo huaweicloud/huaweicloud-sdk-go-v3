@@ -35,6 +35,9 @@ type FuncVpc struct {
 
 	// 安全组
 	SecurityGroups *[]string `json:"security_groups,omitempty"`
+
+	// 是否开启安全访问。开启时，需要您自行配置VPCEP网络但可以提供更安全的VPC连接访问并打通内网域名。注意：开启后无法关闭。
+	IsSafety *bool `json:"is_safety,omitempty"`
 }
 
 func (o FuncVpc) String() string {

@@ -12,7 +12,7 @@ import (
 // ListAlertRsp 告警实体信息
 type ListAlertRsp struct {
 
-	// 告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+	// 告警对象的版本，该字段的值必须为云SSA服务确定的官方发布版本之一
 	Version *string `json:"version,omitempty"`
 
 	// 事件唯一标识，UUID格式，最大36个字符
@@ -92,13 +92,13 @@ type ListAlertRsp struct {
 	// 关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
 	CloseTime *string `json:"close_time,omitempty"`
 
-	// 周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+	// 周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
 	IpdrrPhase *ListAlertRspIpdrrPhase `json:"ipdrr_phase,omitempty"`
 
-	// 周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+	// 周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
 	ChopPhase *ListAlertRspChopPhase `json:"chop_phase,omitempty"`
 
-	// 周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+	// 周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
 	PpdrPhase *ListAlertRspPpdrPhase `json:"ppdr_phase,omitempty"`
 
 	// 调试字段
@@ -119,6 +119,15 @@ type ListAlertRsp struct {
 	// 关闭评论
 	CloseComment *string `json:"close_comment,omitempty"`
 
+	// 告警id列表，告警/事件/指标关联的告警列表
+	AlertList *[]string `json:"alert_list,omitempty"`
+
+	// 事件id列表，告警/事件/指标关联的告警列表
+	IncidentList *[]string `json:"incident_list,omitempty"`
+
+	// 指标列表，告警/事件关联的指标列表
+	IndicatorList *[]string `json:"indicator_list,omitempty"`
+
 	Malware *ShowAlertRspMalware `json:"malware,omitempty"`
 
 	// 系统信息
@@ -132,6 +141,18 @@ type ListAlertRsp struct {
 
 	// 文件信息
 	FileInfo *[]AlertFileInfo `json:"file_info,omitempty"`
+
+	// 告警事件原始来源id，最大128个字符
+	OriginId *string `json:"origin_id,omitempty"`
+
+	// 检测时间。单位：分钟
+	Ttd *int32 `json:"ttd,omitempty"`
+
+	// 响应时间。单位：分钟
+	Ttr *int32 `json:"ttr,omitempty"`
+
+	// 是否自动关闭，取值范围： AutoClosed - SOAR自动化关闭 Manual - 人工关闭
+	IsAutoClosed *string `json:"is_auto_closed,omitempty"`
 
 	// 告警管理列表的布局字段
 	SystemAlertTable *interface{} `json:"system_alert_table,omitempty"`
@@ -312,22 +333,22 @@ type ListAlertRspIpdrrPhase struct {
 }
 
 type ListAlertRspIpdrrPhaseEnum struct {
-	PREPARTION                   ListAlertRspIpdrrPhase
-	DETECTION_AND_ANALYSIS       ListAlertRspIpdrrPhase
-	CONTAINMERADICATION_RECOVERY ListAlertRspIpdrrPhase
-	POST_INCIDENT_ACTIVITY       ListAlertRspIpdrrPhase
+	PREPARATION                 ListAlertRspIpdrrPhase
+	DETECTION_AND_ANALYSIS      ListAlertRspIpdrrPhase
+	CONTAINERADICATION_RECOVERY ListAlertRspIpdrrPhase
+	POST_INCIDENT_ACTIVITY      ListAlertRspIpdrrPhase
 }
 
 func GetListAlertRspIpdrrPhaseEnum() ListAlertRspIpdrrPhaseEnum {
 	return ListAlertRspIpdrrPhaseEnum{
-		PREPARTION: ListAlertRspIpdrrPhase{
-			value: "Prepartion",
+		PREPARATION: ListAlertRspIpdrrPhase{
+			value: "Preparation",
 		},
 		DETECTION_AND_ANALYSIS: ListAlertRspIpdrrPhase{
 			value: "Detection and Analysis",
 		},
-		CONTAINMERADICATION_RECOVERY: ListAlertRspIpdrrPhase{
-			value: "Containm，Eradication& Recovery",
+		CONTAINERADICATION_RECOVERY: ListAlertRspIpdrrPhase{
+			value: "Contain，Eradication& Recovery",
 		},
 		POST_INCIDENT_ACTIVITY: ListAlertRspIpdrrPhase{
 			value: "Post-Incident-Activity",
@@ -367,22 +388,22 @@ type ListAlertRspChopPhase struct {
 }
 
 type ListAlertRspChopPhaseEnum struct {
-	PREPARTION                   ListAlertRspChopPhase
-	DETECTION_AND_ANALYSIS       ListAlertRspChopPhase
-	CONTAINMERADICATION_RECOVERY ListAlertRspChopPhase
-	POST_INCIDENT_ACTIVITY       ListAlertRspChopPhase
+	PREPARATION                 ListAlertRspChopPhase
+	DETECTION_AND_ANALYSIS      ListAlertRspChopPhase
+	CONTAINERADICATION_RECOVERY ListAlertRspChopPhase
+	POST_INCIDENT_ACTIVITY      ListAlertRspChopPhase
 }
 
 func GetListAlertRspChopPhaseEnum() ListAlertRspChopPhaseEnum {
 	return ListAlertRspChopPhaseEnum{
-		PREPARTION: ListAlertRspChopPhase{
-			value: "Prepartion",
+		PREPARATION: ListAlertRspChopPhase{
+			value: "Preparation",
 		},
 		DETECTION_AND_ANALYSIS: ListAlertRspChopPhase{
 			value: "Detection and Analysis",
 		},
-		CONTAINMERADICATION_RECOVERY: ListAlertRspChopPhase{
-			value: "Containm，Eradication& Recovery",
+		CONTAINERADICATION_RECOVERY: ListAlertRspChopPhase{
+			value: "Contain，Eradication& Recovery",
 		},
 		POST_INCIDENT_ACTIVITY: ListAlertRspChopPhase{
 			value: "Post-Incident-Activity",
@@ -422,22 +443,22 @@ type ListAlertRspPpdrPhase struct {
 }
 
 type ListAlertRspPpdrPhaseEnum struct {
-	PREPARTION                   ListAlertRspPpdrPhase
-	DETECTION_AND_ANALYSIS       ListAlertRspPpdrPhase
-	CONTAINMERADICATION_RECOVERY ListAlertRspPpdrPhase
-	POST_INCIDENT_ACTIVITY       ListAlertRspPpdrPhase
+	PREPARATION                 ListAlertRspPpdrPhase
+	DETECTION_AND_ANALYSIS      ListAlertRspPpdrPhase
+	CONTAINERADICATION_RECOVERY ListAlertRspPpdrPhase
+	POST_INCIDENT_ACTIVITY      ListAlertRspPpdrPhase
 }
 
 func GetListAlertRspPpdrPhaseEnum() ListAlertRspPpdrPhaseEnum {
 	return ListAlertRspPpdrPhaseEnum{
-		PREPARTION: ListAlertRspPpdrPhase{
-			value: "Prepartion",
+		PREPARATION: ListAlertRspPpdrPhase{
+			value: "Preparation",
 		},
 		DETECTION_AND_ANALYSIS: ListAlertRspPpdrPhase{
 			value: "Detection and Analysis",
 		},
-		CONTAINMERADICATION_RECOVERY: ListAlertRspPpdrPhase{
-			value: "Containm，Eradication& Recovery",
+		CONTAINERADICATION_RECOVERY: ListAlertRspPpdrPhase{
+			value: "Contain，Eradication& Recovery",
 		},
 		POST_INCIDENT_ACTIVITY: ListAlertRspPpdrPhase{
 			value: "Post-Incident-Activity",

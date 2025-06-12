@@ -54,6 +54,8 @@ type NodeSpecUpdate struct {
 	SecurityReinforcementType *NodeSpecUpdateSecurityReinforcementType `json:"securityReinforcementType,omitempty"`
 
 	ExtendParam *NodePoolUpdateExtendParam `json:"extendParam,omitempty"`
+
+	PublicIP *NodeEipSpec `json:"publicIP,omitempty"`
 }
 
 func (o NodeSpecUpdate) String() string {

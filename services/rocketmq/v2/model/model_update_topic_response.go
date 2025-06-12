@@ -8,7 +8,10 @@ import (
 
 // UpdateTopicResponse Response Object
 type UpdateTopicResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 规格变更任务ID。
+	JobId          *string `json:"job_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateTopicResponse) String() string {

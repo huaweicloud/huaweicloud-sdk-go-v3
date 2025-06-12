@@ -8,6 +8,8 @@ import (
 
 // BatchSearchMetricHitsResponse Response Object
 type BatchSearchMetricHitsResponse struct {
+
+	// 批量查询指标结果
 	Body           *[]ShowMetricResultResponseBody `json:"body,omitempty"`
 	HttpStatusCode int                             `json:"-"`
 }

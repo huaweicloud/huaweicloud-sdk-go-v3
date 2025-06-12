@@ -147,9 +147,9 @@ func (c *RabbitMQClient) DeleteBackgroundTaskInvoker(request *model.DeleteBackgr
 	return &DeleteBackgroundTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteInstance 删除指定的实例
+// DeleteInstance 删除指定实例
 //
-// 删除指定的实例，释放该实例的所有资源。
+// 删除指定实例，释放该实例的所有资源。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RabbitMQClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model.DeleteInstanceResponse, error) {
@@ -162,7 +162,7 @@ func (c *RabbitMQClient) DeleteInstance(request *model.DeleteInstanceRequest) (*
 	}
 }
 
-// DeleteInstanceInvoker 删除指定的实例
+// DeleteInstanceInvoker 删除指定实例
 func (c *RabbitMQClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequest) *DeleteInstanceInvoker {
 	requestDef := GenReqDefForDeleteInstance()
 	return &DeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

@@ -21,6 +21,22 @@ func (i *BatchCreateOrDeleteRocketmqTagInvoker) Invoke() (*model.BatchCreateOrDe
 	}
 }
 
+type BatchDeleteDiagnosisReportInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteDiagnosisReportInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteDiagnosisReportInvoker) Invoke() (*model.BatchDeleteDiagnosisReportResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteDiagnosisReportResponse), nil
+	}
+}
+
 type BatchDeleteInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -66,6 +82,22 @@ func (i *CreateConsumerGroupOrBatchDeleteConsumerGroupInvoker) Invoke() (*model.
 		return nil, err
 	} else {
 		return result.(*model.CreateConsumerGroupOrBatchDeleteConsumerGroupResponse), nil
+	}
+}
+
+type CreateDiagnosisTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDiagnosisTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDiagnosisTaskInvoker) Invoke() (*model.CreateDiagnosisTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDiagnosisTaskResponse), nil
 	}
 }
 
@@ -130,6 +162,22 @@ func (i *CreateUserInvoker) Invoke() (*model.CreateUserResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateUserResponse), nil
+	}
+}
+
+type DeleteBackgroundTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteBackgroundTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteBackgroundTaskInvoker) Invoke() (*model.DeleteBackgroundTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteBackgroundTaskResponse), nil
 	}
 }
 
@@ -245,6 +293,22 @@ func (i *ListAvailableZonesInvoker) Invoke() (*model.ListAvailableZonesResponse,
 	}
 }
 
+type ListBackgroundTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBackgroundTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBackgroundTasksInvoker) Invoke() (*model.ListBackgroundTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBackgroundTasksResponse), nil
+	}
+}
+
 type ListBrokersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -274,6 +338,22 @@ func (i *ListConsumeGroupAccessPolicyInvoker) Invoke() (*model.ListConsumeGroupA
 		return nil, err
 	} else {
 		return result.(*model.ListConsumeGroupAccessPolicyResponse), nil
+	}
+}
+
+type ListDiagnosisReportsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDiagnosisReportsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDiagnosisReportsInvoker) Invoke() (*model.ListDiagnosisReportsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDiagnosisReportsResponse), nil
 	}
 }
 
@@ -405,6 +485,22 @@ func (i *ListUserInvoker) Invoke() (*model.ListUserResponse, error) {
 	}
 }
 
+type ModifyInstanceSslConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyInstanceSslConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyInstanceSslConfigInvoker) Invoke() (*model.ModifyInstanceSslConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyInstanceSslConfigResponse), nil
+	}
+}
+
 type ResetConsumeOffsetInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -437,22 +533,6 @@ func (i *ResizeInstanceInvoker) Invoke() (*model.ResizeInstanceResponse, error) 
 	}
 }
 
-type RestartInstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RestartInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *RestartInstanceInvoker) Invoke() (*model.RestartInstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RestartInstanceResponse), nil
-	}
-}
-
 type SendDlqMessageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -466,6 +546,22 @@ func (i *SendDlqMessageInvoker) Invoke() (*model.SendDlqMessageResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.SendDlqMessageResponse), nil
+	}
+}
+
+type SendMessageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SendMessageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SendMessageInvoker) Invoke() (*model.SendMessageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SendMessageResponse), nil
 	}
 }
 
@@ -498,6 +594,38 @@ func (i *ShowConsumerListOrDetailsInvoker) Invoke() (*model.ShowConsumerListOrDe
 		return nil, err
 	} else {
 		return result.(*model.ShowConsumerListOrDetailsResponse), nil
+	}
+}
+
+type ShowDiagnosisReportInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDiagnosisReportInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDiagnosisReportInvoker) Invoke() (*model.ShowDiagnosisReportResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDiagnosisReportResponse), nil
+	}
+}
+
+type ShowDiagnosisStackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDiagnosisStackInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDiagnosisStackInvoker) Invoke() (*model.ShowDiagnosisStackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDiagnosisStackResponse), nil
 	}
 }
 

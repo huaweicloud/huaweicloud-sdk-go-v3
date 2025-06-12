@@ -97,6 +97,9 @@ type TasksResponseBody struct {
 
 	// Agent的磁盘I/O值，单位是MB/s
 	AgentDiskIo *float64 `json:"agent_disk_io,omitempty"`
+
+	// 是否开启迁移演练
+	NeedMigrationTest *bool `json:"need_migration_test,omitempty"`
 }
 
 func (o TasksResponseBody) String() string {

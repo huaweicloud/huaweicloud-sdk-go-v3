@@ -26,7 +26,7 @@ type DiskusageEntity struct {
 	// 消息标签。
 	Status *string `json:"status,omitempty"`
 
-	// topic磁盘容量使用列表。
+	// Topic磁盘容量使用列表。
 	TopicList *[]DiskusageTopicEntity `json:"topic_list,omitempty"`
 }
 

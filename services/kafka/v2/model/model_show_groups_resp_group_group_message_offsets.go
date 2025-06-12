@@ -14,7 +14,7 @@ type ShowGroupsRespGroupGroupMessageOffsets struct {
 	// 剩余可消费消息数，即消息堆积数。
 	Lag *int64 `json:"lag,omitempty"`
 
-	// topic名称。
+	// Topic名称。
 	Topic *string `json:"topic,omitempty"`
 
 	// 当前消费进度。

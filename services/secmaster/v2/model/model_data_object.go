@@ -12,7 +12,7 @@ import (
 // DataObject 告警实体信息
 type DataObject struct {
 
-	// 告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+	// 告警对象的版本，该字段的值必须为云SSA服务确定的官方发布版本之一
 	Version *string `json:"version,omitempty"`
 
 	// 事件唯一标识，UUID格式，最大36个字符
@@ -67,7 +67,7 @@ type DataObject struct {
 	AlertType *AlertAlertType `json:"alert_type,omitempty"`
 
 	// 网络信息
-	NetworkList *[]AlertNetworkList `json:"network_list,omitempty"`
+	NetworkList *[]DataObjectNetworkList `json:"network_list,omitempty"`
 
 	// 受影响资源
 	ResourceList *[]AlertResourceList `json:"resource_list,omitempty"`
@@ -89,7 +89,7 @@ type DataObject struct {
 	// 关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
 	CloseTime *string `json:"close_time,omitempty"`
 
-	// 周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+	// 周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
 	IpdrrPhase *DataObjectIpdrrPhase `json:"ipdrr_phase,omitempty"`
 
 	// 调试字段
@@ -300,22 +300,22 @@ type DataObjectIpdrrPhase struct {
 }
 
 type DataObjectIpdrrPhaseEnum struct {
-	PREPARTION                   DataObjectIpdrrPhase
-	DETECTION_AND_ANALYSIS       DataObjectIpdrrPhase
-	CONTAINMERADICATION_RECOVERY DataObjectIpdrrPhase
-	POST_INCIDENT_ACTIVITY       DataObjectIpdrrPhase
+	PREPARATION                 DataObjectIpdrrPhase
+	DETECTION_AND_ANALYSIS      DataObjectIpdrrPhase
+	CONTAINERADICATION_RECOVERY DataObjectIpdrrPhase
+	POST_INCIDENT_ACTIVITY      DataObjectIpdrrPhase
 }
 
 func GetDataObjectIpdrrPhaseEnum() DataObjectIpdrrPhaseEnum {
 	return DataObjectIpdrrPhaseEnum{
-		PREPARTION: DataObjectIpdrrPhase{
-			value: "Prepartion",
+		PREPARATION: DataObjectIpdrrPhase{
+			value: "Preparation",
 		},
 		DETECTION_AND_ANALYSIS: DataObjectIpdrrPhase{
 			value: "Detection and Analysis",
 		},
-		CONTAINMERADICATION_RECOVERY: DataObjectIpdrrPhase{
-			value: "Containm，Eradication& Recovery",
+		CONTAINERADICATION_RECOVERY: DataObjectIpdrrPhase{
+			value: "Contain，Eradication& Recovery",
 		},
 		POST_INCIDENT_ACTIVITY: DataObjectIpdrrPhase{
 			value: "Post-Incident-Activity",

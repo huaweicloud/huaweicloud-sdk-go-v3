@@ -9,7 +9,7 @@ import (
 // ListInstanceConsumerGroupTopicsResponse Response Object
 type ListInstanceConsumerGroupTopicsResponse struct {
 
-	// 消费组TOPIC
+	// 消费组Topic
 	Topics *[]GroupTopicEntity `json:"topics,omitempty"`
 
 	// 统计数量

@@ -9,7 +9,7 @@ import (
 // IndicatorDataObjectDetailDataSource 数据源信息
 type IndicatorDataObjectDetailDataSource struct {
 
-	// 数据源类型，取值范围如下：1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+	// 数据源类型，取值范围如下：1 - 云上产品 2 - 第三方产品 3 - 租户私有产品
 	SourceType *int32 `json:"source_type,omitempty"`
 
 	// 租户ID

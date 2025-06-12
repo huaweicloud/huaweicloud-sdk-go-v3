@@ -120,8 +120,11 @@ type ShowTaskResponse struct {
 	TotalDiskIo *float64 `json:"total_disk_io,omitempty"`
 
 	// Agent的磁盘I/O值，单位是MB/s
-	AgentDiskIo    *float64 `json:"agent_disk_io,omitempty"`
-	HttpStatusCode int      `json:"-"`
+	AgentDiskIo *float64 `json:"agent_disk_io,omitempty"`
+
+	// 是否开启迁移演练
+	NeedMigrationTest *bool `json:"need_migration_test,omitempty"`
+	HttpStatusCode    int   `json:"-"`
 }
 
 func (o ShowTaskResponse) String() string {

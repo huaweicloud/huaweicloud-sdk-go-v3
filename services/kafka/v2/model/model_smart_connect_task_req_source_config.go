@@ -56,7 +56,7 @@ type SmartConnectTaskReqSourceConfig struct {
 	// 复制消息所使用的压缩算法。（仅源端类型为Kafka时需要填写） - none - gzip - snappy - lz4 - zstd
 	CompressionType *string `json:"compression_type,omitempty"`
 
-	// topic映射，用于自定义目标端Topic名称。不能同时设置“重命名Topic”和“topic映射”。topic映射请按照“源端topic:目的端topic”的格式填写，如涉及多个topic映射，请用“,”分隔开，例如：topic-sc-1:topic-sc-2,topic-sc-3:topic-sc-4。（仅源端类型为Kafka时需要填写）
+	// Topic映射，用于自定义目标端Topic名称。不能同时设置“重命名Topic”和“Topic映射”。Topic映射请按照“源端Topic:目的端Topic”的格式填写，如涉及多个Topic映射，请用“,”分隔开，例如：topic-sc-1:topic-sc-2,topic-sc-3:topic-sc-4。（仅源端类型为Kafka时需要填写）
 	TopicsMapping *string `json:"topics_mapping,omitempty"`
 }
 

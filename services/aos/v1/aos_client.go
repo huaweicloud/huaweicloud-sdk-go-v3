@@ -182,6 +182,199 @@ func (c *AosClient) CreatePrivateProviderVersionInvoker(request *model.CreatePri
 	return &CreatePrivateProviderVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeletePrivateProvider 删除私有provider
+//
+// 删除私有provider（DeletePrivateProvider）
+//
+// 删除某个私有provider及私有provider下的所有provider版本。
+//
+//   * 如果provider_name和provider_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//
+// ** 请谨慎操作，删除私有provider将会删除该私有provider下的所有provider版本。 **
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) DeletePrivateProvider(request *model.DeletePrivateProviderRequest) (*model.DeletePrivateProviderResponse, error) {
+	requestDef := GenReqDefForDeletePrivateProvider()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePrivateProviderResponse), nil
+	}
+}
+
+// DeletePrivateProviderInvoker 删除私有provider
+func (c *AosClient) DeletePrivateProviderInvoker(request *model.DeletePrivateProviderRequest) *DeletePrivateProviderInvoker {
+	requestDef := GenReqDefForDeletePrivateProvider()
+	return &DeletePrivateProviderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePrivateProviderVersion 删除私有provider版本
+//
+// 删除私有provider版本（DeletePrivateProviderVersion）
+//
+// 删除某个私有provider版本
+//
+//   * 如果provider_name和provider_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//
+// **请谨慎操作**
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) DeletePrivateProviderVersion(request *model.DeletePrivateProviderVersionRequest) (*model.DeletePrivateProviderVersionResponse, error) {
+	requestDef := GenReqDefForDeletePrivateProviderVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePrivateProviderVersionResponse), nil
+	}
+}
+
+// DeletePrivateProviderVersionInvoker 删除私有provider版本
+func (c *AosClient) DeletePrivateProviderVersionInvoker(request *model.DeletePrivateProviderVersionRequest) *DeletePrivateProviderVersionInvoker {
+	requestDef := GenReqDefForDeletePrivateProviderVersion()
+	return &DeletePrivateProviderVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPrivateProviderVersions 列举私有provider版本
+//
+// 列举私有provider版本（ListPrivateProviderVersions）
+//
+// 列举所选择的私有provider中所有的provider版本信息。
+//
+//   * 可以使用sort_key和sort_dir两个关键字对返回结果按创建时间（create_time）进行排序。给予的sort_key和sort_dir数量须一致，否则返回400。如果未给予sort_key和sort_dir，则默认按照创建时间降序排序。
+//   * 如果provider_name和provider_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//   * 如果provider下不存在provider版本，则返回空list。
+//   * 如果provider不存在则返回404。
+//   * 支持分页返回。如果响应中存在next_marker，则表示实际总输出比当前响应中包含的输出多。在对请求的后续调用中，在请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) ListPrivateProviderVersions(request *model.ListPrivateProviderVersionsRequest) (*model.ListPrivateProviderVersionsResponse, error) {
+	requestDef := GenReqDefForListPrivateProviderVersions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPrivateProviderVersionsResponse), nil
+	}
+}
+
+// ListPrivateProviderVersionsInvoker 列举私有provider版本
+func (c *AosClient) ListPrivateProviderVersionsInvoker(request *model.ListPrivateProviderVersionsRequest) *ListPrivateProviderVersionsInvoker {
+	requestDef := GenReqDefForListPrivateProviderVersions()
+	return &ListPrivateProviderVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPrivateProviders 列举私有provider
+//
+// 列举私有provider（ListPrivateProviders）
+//
+// 列举当前局点下用户所有的私有provider。
+//
+//   * 可以使用sort_key和sort_dir两个关键字对返回结果按创建时间（create_time）进行排序。给予的sort_key和sort_dir数量须一致，否则返回400。如果未给予sort_key和sort_dir，则默认按照创建时间降序排序。
+//   * 如果当前用户下没有任何私有provider，则返回空list。
+//   * 如果需要某个provider的所有版本信息，可以调用ListPrivateProviderVersions。
+//   * 支持分页返回。如果响应中存在next_marker，则表示实际总输出比当前响应中包含的输出多。在对请求的后续调用中，在请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) ListPrivateProviders(request *model.ListPrivateProvidersRequest) (*model.ListPrivateProvidersResponse, error) {
+	requestDef := GenReqDefForListPrivateProviders()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPrivateProvidersResponse), nil
+	}
+}
+
+// ListPrivateProvidersInvoker 列举私有provider
+func (c *AosClient) ListPrivateProvidersInvoker(request *model.ListPrivateProvidersRequest) *ListPrivateProvidersInvoker {
+	requestDef := GenReqDefForListPrivateProviders()
+	return &ListPrivateProvidersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPrivateProviderMetadata 获取私有provider元数据
+//
+// 获取私有provider元数据（ShowPrivateProviderMetadata）
+//
+// 获取某个私有provider的元数据信息
+//
+//   * 具体返回的信息见ShowPrivateProviderMetadataResponseBody，如果想查看私有provider下全部provider版本，请调用ListPrivateProviderVersions。
+//   * 如果provider_name和provider_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) ShowPrivateProviderMetadata(request *model.ShowPrivateProviderMetadataRequest) (*model.ShowPrivateProviderMetadataResponse, error) {
+	requestDef := GenReqDefForShowPrivateProviderMetadata()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPrivateProviderMetadataResponse), nil
+	}
+}
+
+// ShowPrivateProviderMetadataInvoker 获取私有provider元数据
+func (c *AosClient) ShowPrivateProviderMetadataInvoker(request *model.ShowPrivateProviderMetadataRequest) *ShowPrivateProviderMetadataInvoker {
+	requestDef := GenReqDefForShowPrivateProviderMetadata()
+	return &ShowPrivateProviderMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPrivateProviderVersionMetadata 获取私有provider版本元数据
+//
+// 获取私有provider版本元数据（ShowPrivateProviderVersionMetadata）
+//
+// 获取某个私有provider版本的元数据信息
+//
+//   * 具体返回信息见ShowPrivateProviderVersionMetadataResponseBody
+//   * 如果provider_name和provider_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) ShowPrivateProviderVersionMetadata(request *model.ShowPrivateProviderVersionMetadataRequest) (*model.ShowPrivateProviderVersionMetadataResponse, error) {
+	requestDef := GenReqDefForShowPrivateProviderVersionMetadata()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPrivateProviderVersionMetadataResponse), nil
+	}
+}
+
+// ShowPrivateProviderVersionMetadataInvoker 获取私有provider版本元数据
+func (c *AosClient) ShowPrivateProviderVersionMetadataInvoker(request *model.ShowPrivateProviderVersionMetadataRequest) *ShowPrivateProviderVersionMetadataInvoker {
+	requestDef := GenReqDefForShowPrivateProviderVersionMetadata()
+	return &ShowPrivateProviderVersionMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePrivateProviderMetadata 更新私有provider元数据
+//
+// 更新私有provider元数据（UpdatePrivateProviderMetadata）
+//
+// 更新当前私有provider的元数据信息
+//
+//   * 目前只支持更新私有provider的描述
+//   * 如果需要创建新的版本，请调用CreatePrivateProviderVersion
+//   * 更新为增量更新，即如果某个参数不提供，则保持原始值
+//   * 如果请求中没有需要被更新的参数，则返回400。注意：即使更新原始值和目标值一致也被认为是有效更新
+//   * 更新后私有provider的更新时间（update_time）也会被更新
+//   * 如果provider_name和provider_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) UpdatePrivateProviderMetadata(request *model.UpdatePrivateProviderMetadataRequest) (*model.UpdatePrivateProviderMetadataResponse, error) {
+	requestDef := GenReqDefForUpdatePrivateProviderMetadata()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePrivateProviderMetadataResponse), nil
+	}
+}
+
+// UpdatePrivateProviderMetadataInvoker 更新私有provider元数据
+func (c *AosClient) UpdatePrivateProviderMetadataInvoker(request *model.UpdatePrivateProviderMetadataRequest) *UpdatePrivateProviderMetadataInvoker {
+	requestDef := GenReqDefForUpdatePrivateProviderMetadata()
+	return &UpdatePrivateProviderMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ApplyExecutionPlan 执行执行计划
 //
 // 执行执行计划（ApplyExecutionPlan）
@@ -467,10 +660,9 @@ func (c *AosClient) GetExecutionPlanMetadataInvoker(request *model.GetExecutionP
 // 列举当前局点下用户指定资源栈下所有的执行计划
 //
 //   * 默认按照生成时间降序排序，最新生成的在最前
-//   * 注意：目前暂时返回全量执行计划信息，即不支持分页
 //   * 如果指定的资源栈下没有任何执行计划，则返回空list
 //   * 如果指定的资源栈不存在，则返回404
-//
+//   * 支持分页返回。如果响应中存在next_marker，则表示实际总输出比当前响应中包含的输出多。在对请求的后续调用中，在请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null
 // ListExecutionPlans返回的只有摘要信息（具体摘要信息见ListExecutionPlansResponseBody），如果用户需要详细的执行计划元数据请调用GetExecutionPlanMetadata
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -643,9 +835,9 @@ func (c *AosClient) DeletePrivateHookVersionInvoker(request *model.DeletePrivate
 // 列举当前局点下用户所有的私有hook。
 //
 //   * 可以使用sort_key和sort_dir两个关键字对返回结果按创建时间（create_time）进行排序。给予的sort_key和sort_dir的数量须一致，否则返回400。若未给予sort_key和sort_dir，则默认按照创建时间降序排序。
-//   * 注意：目前暂时返回全量hook的信息，即不支持分页。
 //   * 若当前用户没有任何私有hook，则返回空list。
 //   * 具体返回的信息见ListPrivateHooksResponseBody。
+//   * 支持分页返回。如果响应中存在next_marker，则表示实际总输出比当前响应中包含的输出多。在对请求的后续调用中，在请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListPrivateHooks(request *model.ListPrivateHooksRequest) (*model.ListPrivateHooksResponse, error) {
@@ -908,6 +1100,7 @@ func (c *AosClient) DeletePrivateModuleVersionInvoker(request *model.DeletePriva
 //   * 可以使用sort_key和sort_dir两个关键字对返回结果按创建时间（create_time）进行排序。给予的sort_key和sort_dir数量须一致，否则返回400。如果未给予sort_key和sort_dir，则默认按照创建时间降序排序。
 //   * 如果module_name和module_id同时存在，则资源编排服务会检查是否两个匹配，如果不匹配则会返回400。
 //   * 如果模块不存在则返回404。
+//   * 支持分页返回。如果响应中存在next_marker，则表示实际总输出比当前响应中包含的输出多。在对请求的后续调用中，在请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null
 //
 // ListPrivateModuleVersions返回的只有摘要信息（具体摘要信息见ListPrivateModuleVersionsResponseBody），如果用户需要详细的模块版本元数据请调用ShowPrivateModuleVersionMetadata
 //
@@ -937,6 +1130,7 @@ func (c *AosClient) ListPrivateModuleVersionsInvoker(request *model.ListPrivateM
 //   * 可以使用sort_key和sort_dir两个关键字对返回结果按创建时间（create_time）进行排序。给予的sort_key和sort_dir数量须一致，否则返回400。如果未给予sort_key和sort_dir，则默认按照创建时间降序排序。
 //   * 如果当前用户下没有任何私有模块，则返回空list。
 //   * 如果需要某个模块的所有版本信息，可以调用ListModuleVersions。
+//   * 支持分页返回。如果响应中存在next_marker，则表示实际总输出比当前响应中包含的输出多。在对请求的后续调用中，在请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null
 //
 // ListPrivateModules返回的只有摘要信息（具体摘要信息见ListPrivateModulesResponseBody），如果用户需要详细的模块元数据请调用ShowPrivateModuleMetadata
 //
@@ -1343,6 +1537,7 @@ func (c *AosClient) GetStackTemplateInvoker(request *model.GetStackTemplateReque
 // * 可以使用filter作为过滤器，过滤出指定事件类型（event_type）、资源类型（resource_type）、资源名称（resource_name）的资源栈事件
 // * 可以使用field选择数据应返回的属性，属性事件类型（event_type）不可配置，一定会返回，可选择的属性有逝去时间（elapsed_seconds）、事件消息（event_message）、 资源ID键（resource_id_key）、资源ID值（resource_id_value）、资源键（resource_key）、资源类型（resource_type）、资源名称（resource_name）和时间戳（timestamp）
 // * 事件返回将以时间降序排列
+// * 支持分页返回。如果响应中存在next_marker，则表示实际总输出比当前响应中包含的输出多。在对请求的后续调用中，在请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListStackEvents(request *model.ListStackEventsRequest) (*model.ListStackEventsResponse, error) {
@@ -1375,6 +1570,7 @@ func (c *AosClient) ListStackEventsInvoker(request *model.ListStackEventsRequest
 //   * 正在回滚（ROLLBACK_IN_PROGRESS）
 //
 // output为HCL官方定义的语法，其返回信息类似于常见编程语言中的返回值，详细定义请参考HCL官方的说明
+// 支持分页返回。如果响应中存在next_marker，则表示实际总输出比当前响应中包含的输出多。在对请求的后续调用中，在请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListStackOutputs(request *model.ListStackOutputsRequest) (*model.ListStackOutputsResponse, error) {
@@ -1406,6 +1602,8 @@ func (c *AosClient) ListStackOutputsInvoker(request *model.ListStackOutputsReque
 //   * 正在删除（DELETION_IN_PROGRESS）
 //   * 正在回滚（ROLLBACK_IN_PROGRESS）
 //
+// 支持分页返回。如果响应中存在next_marker，则表示实际总输出比当前响应中包含的输出多。在对请求的后续调用中，在请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null
+//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListStackResources(request *model.ListStackResourcesRequest) (*model.ListStackResourcesResponse, error) {
 	requestDef := GenReqDefForListStackResources()
@@ -1430,8 +1628,8 @@ func (c *AosClient) ListStackResourcesInvoker(request *model.ListStackResourcesR
 // 此API用于列举当前局点下用户所有的资源栈
 //
 //   * 默认按照生成时间降序排序，最新生成的在最前
-//   * 注意：目前暂时返回全量资源栈信息，即不支持分页
 //   * 如果没有任何资源栈，则返回空list
+//   * 支持分页返回。如果响应中存在next_marker，则表示实际总输出比当前响应中包含的输出多。在对请求的后续调用中，在请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null
 //
 // ListStacks返回的只有摘要信息（具体摘要信息见ListStacksResponseBody），如果用户需要详细的资源栈元数据请调用GetStackMetadata
 //
@@ -1668,6 +1866,7 @@ func (c *AosClient) DeployStackSetInvoker(request *model.DeployStackSetRequest) 
 // * 可以使用filter作为过滤器，过滤出指定局点（region）或指定成员账号（stack_domain_id）下的资源栈实例
 // * 可以使用sort_key和sort_dir两个关键字对返回结果按创建时间（create_time）进行排序。给予的sort_key和sort_dir数量须一致，否则返回400。如果未给予sort_key和sort_dir，则默认按照创建时间降序排序。
 // * 如果指定资源栈集下没有任何资源栈实例，则返回空list
+// * 支持分页返回。如果响应中存在next_marker，则表示实际总输出比当前响应中包含的输出多。在对请求的后续调用中，在请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListStackInstances(request *model.ListStackInstancesRequest) (*model.ListStackInstancesResponse, error) {
@@ -1695,6 +1894,7 @@ func (c *AosClient) ListStackInstancesInvoker(request *model.ListStackInstancesR
 // 可以使用filter作为过滤器，过滤出指定操作状态（status）或操作类型（action）下的资源栈集操作。
 // 可以使用sort_key和sort_dir两个关键字对返回结果按创建时间（create_time）进行排序。给予的sort_key和sort_dir数量须一致，否则返回400。如果未给予sort_key和sort_dir，则默认按照创建时间降序排序。
 // 如果指定资源栈集下没有任何资源栈集操作，则返回空list。
+// 支持分页返回。如果响应中存在next_marker，则表示实际总输出比当前响应中包含的输出多。在对请求的后续调用中，在请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListStackSetOperations(request *model.ListStackSetOperationsRequest) (*model.ListStackSetOperationsResponse, error) {
@@ -1723,6 +1923,7 @@ func (c *AosClient) ListStackSetOperationsInvoker(request *model.ListStackSetOpe
 // * 可以使用sort_key和sort_dir两个关键字对返回结果按创建时间（create_time）进行排序。给予的sort_key和sort_dir数量须一致，否则返回400。如果未给予sort_key和sort_dir，则默认按照创建时间降序排序。
 // * 注意：目前暂时返回全量资源栈集信息，即不支持分页
 // * 如果没有任何资源栈集，则返回空list
+// * 支持分页返回。如果响应中存在next_marker，则表示实际总输出比当前响应中包含的输出多。在对请求的后续调用中，在请求参数中使用此值，以获取输出的下一部分。您应该重复此操作，直到next_marker响应元素返回为null
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AosClient) ListStackSets(request *model.ListStackSetsRequest) (*model.ListStackSetsResponse, error) {
@@ -1927,6 +2128,62 @@ func (c *AosClient) ParseTemplateVariables(request *model.ParseTemplateVariables
 func (c *AosClient) ParseTemplateVariablesInvoker(request *model.ParseTemplateVariablesRequest) *ParseTemplateVariablesInvoker {
 	requestDef := GenReqDefForParseTemplateVariables()
 	return &ParseTemplateVariablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTemplate 创建模板
+//
+// 创建模板（CreateTemplate）
+//
+// 此API用于创建一个带有版本的模板
+//
+//   * 请求中必须包括template_uri或是template_body。前者为模板内容obs链接，后者为模板内容
+//   * 模板管理名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板
+//   * 模板创建时，会自动生成模板版本号为V1的模板版本
+//   * 模板必须存在一个或多个模板版本，即不存在没有模板版本的模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) CreateTemplate(request *model.CreateTemplateRequest) (*model.CreateTemplateResponse, error) {
+	requestDef := GenReqDefForCreateTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTemplateResponse), nil
+	}
+}
+
+// CreateTemplateInvoker 创建模板
+func (c *AosClient) CreateTemplateInvoker(request *model.CreateTemplateRequest) *CreateTemplateInvoker {
+	requestDef := GenReqDefForCreateTemplate()
+	return &CreateTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTemplateVersion 创建模板版本
+//
+// 创建模板版本（CreateTemplateVersion）
+//
+// 此API用于创建新的模板版本
+//
+//   * 请求中必须包括template_uri或template_body。前者为模板内容obs链接，后者为模板内容
+//   * 新创建的模板版本版本ID会自动在当前最大模板版本ID的基础上加1
+//   * 创建模板版本需要的具体信息详见：CreateTemplateVersionRequestBody
+//   * template_id是模板的唯一Id。此Id由资源编排服务在生成模板的时候生成，为UUID。由于模板名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的模板，删除，再重新创建一个同名模板。对于团队并行开发，用户可能希望确保，当前我操作的模板就是我认为的那个，而不是其他队友删除后创建的同名模板。因此，使用ID就可以做到强匹配。资源编排服务保证每次创建的模板所对应的ID都不相同，更新不会影响ID。如果给予的template_id和当前模板管理的ID不一致，则返回400
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AosClient) CreateTemplateVersion(request *model.CreateTemplateVersionRequest) (*model.CreateTemplateVersionResponse, error) {
+	requestDef := GenReqDefForCreateTemplateVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTemplateVersionResponse), nil
+	}
+}
+
+// CreateTemplateVersionInvoker 创建模板版本
+func (c *AosClient) CreateTemplateVersionInvoker(request *model.CreateTemplateVersionRequest) *CreateTemplateVersionInvoker {
+	requestDef := GenReqDefForCreateTemplateVersion()
+	return &CreateTemplateVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteTemplate 删除模板

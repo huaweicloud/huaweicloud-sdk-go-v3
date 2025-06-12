@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// UpdateInstanceTopicReqTopics 修改的topic。
+// UpdateInstanceTopicReqTopics 修改的Topic。
 type UpdateInstanceTopicReqTopics struct {
 
-	// topic名称，不支持修改。
+	// Topic名称，不支持修改。
 	Id string `json:"id"`
 
 	// 老化时间，单位小时。
@@ -27,10 +27,10 @@ type UpdateInstanceTopicReqTopics struct {
 	// 增加分区时指定broker列表
 	NewPartitionBrokers *[]int32 `json:"new_partition_brokers,omitempty"`
 
-	// topic配置
+	// Topic配置
 	TopicOtherConfigs *[]CreateInstanceTopicReqTopicOtherConfigs `json:"topic_other_configs,omitempty"`
 
-	// topic描述
+	// Topic描述
 	TopicDesc *string `json:"topic_desc,omitempty"`
 }
 

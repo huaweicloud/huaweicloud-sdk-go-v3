@@ -27,6 +27,30 @@ func GenReqDefForBatchCreateOrDeleteRocketmqTag() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchDeleteDiagnosisReport() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2/{engine}/{project_id}/instances/{instance_id}/diagnosis").
+		WithResponse(new(model.BatchDeleteDiagnosisReportResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Engine").
+		WithJsonTag("engine").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchDeleteInstances() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -78,6 +102,30 @@ func GenReqDefForCreateConsumerGroupOrBatchDeleteConsumerGroup() *def.HttpReques
 		WithName("Action").
 		WithJsonTag("action").
 		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateDiagnosisTask() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{engine}/{project_id}/instances/{instance_id}/diagnosis").
+		WithResponse(new(model.CreateDiagnosisTaskResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Engine").
+		WithJsonTag("engine").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -170,6 +218,26 @@ func GenReqDefForCreateUser() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteBackgroundTask() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2/{project_id}/instances/{instance_id}/tasks/{task_id}").
+		WithResponse(new(model.DeleteBackgroundTaskResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TaskId").
+		WithJsonTag("task_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -302,6 +370,39 @@ func GenReqDefForListAvailableZones() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListBackgroundTasks() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/instances/{instance_id}/tasks").
+		WithResponse(new(model.ListBackgroundTasksResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Start").
+		WithJsonTag("start").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BeginTime").
+		WithJsonTag("begin_time").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EndTime").
+		WithJsonTag("end_time").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListBrokers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -345,6 +446,35 @@ func GenReqDefForListConsumeGroupAccessPolicy() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("GroupId").
 		WithJsonTag("group_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListDiagnosisReports() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{engine}/{project_id}/instances/{instance_id}/diagnosis").
+		WithResponse(new(model.ListDiagnosisReportsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Engine").
+		WithJsonTag("engine").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -524,6 +654,10 @@ func GenReqDefForListMessages() *def.HttpRequestDef {
 		WithJsonTag("topic").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Queue").
+		WithJsonTag("queue").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
@@ -643,6 +777,30 @@ func GenReqDefForListUser() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForModifyInstanceSslConfig() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/{engine}/instances/{instance_id}/plain-ssl-switch").
+		WithResponse(new(model.ModifyInstanceSslConfigResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Engine").
+		WithJsonTag("engine").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForResetConsumeOffset() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -695,11 +853,11 @@ func GenReqDefForResizeInstance() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForRestartInstance() *def.HttpRequestDef {
+func GenReqDefForSendDlqMessage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v2/{project_id}/{engine}/instances/{instance_id}/restart").
-		WithResponse(new(model.RestartInstanceResponse)).
+		WithPath("/v2/{engine}/{project_id}/instances/{instance_id}/messages/deadletter-resend").
+		WithResponse(new(model.SendDlqMessageResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -711,15 +869,19 @@ func GenReqDefForRestartInstance() *def.HttpRequestDef {
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenReqDefForSendDlqMessage() *def.HttpRequestDef {
+func GenReqDefForSendMessage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v2/{engine}/{project_id}/instances/{instance_id}/messages/deadletter-resend").
-		WithResponse(new(model.SendDlqMessageResponse)).
+		WithPath("/v2/{engine}/{project_id}/instances/{instance_id}/messages").
+		WithResponse(new(model.SendMessageResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -800,6 +962,46 @@ func GenReqDefForShowConsumerListOrDetails() *def.HttpRequestDef {
 		WithName("Offset").
 		WithJsonTag("offset").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowDiagnosisReport() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{engine}/{project_id}/diagnosis/{report_id}").
+		WithResponse(new(model.ShowDiagnosisReportResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Engine").
+		WithJsonTag("engine").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ReportId").
+		WithJsonTag("report_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowDiagnosisStack() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{engine}/{project_id}/diagnosis/stack/{stack_id}").
+		WithResponse(new(model.ShowDiagnosisStackResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Engine").
+		WithJsonTag("engine").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("StackId").
+		WithJsonTag("stack_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

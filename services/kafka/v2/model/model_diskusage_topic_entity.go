@@ -11,7 +11,7 @@ type DiskusageTopicEntity struct {
 	// 磁盘使用量。
 	Size *string `json:"size,omitempty"`
 
-	// topic名称。
+	// Topic名称。
 	TopicName *string `json:"topic_name,omitempty"`
 
 	// 分区。

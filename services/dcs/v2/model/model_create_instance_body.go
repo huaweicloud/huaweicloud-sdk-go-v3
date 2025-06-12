@@ -89,6 +89,8 @@ type CreateInstanceBody struct {
 
 	// 参数模板ID
 	TemplateId *string `json:"template_id,omitempty"`
+
+	SpecParam *SpecParam `json:"spec_param,omitempty"`
 }
 
 func (o CreateInstanceBody) String() string {

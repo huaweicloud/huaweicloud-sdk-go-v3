@@ -65,7 +65,7 @@ type CreateWorkspaceResponseBody struct {
 	// 视图绑定的空间名称
 	ViewBindName *string `json:"view_bind_name,omitempty"`
 
-	// 仅用于视图场景，列出了该视图纳管的空间列表
+	// 纳管空间列表
 	WorkspaceAgencyList *[]CreateWorkspaceResponseBodyWorkspaceAgencyList `json:"workspace_agency_list,omitempty"`
 }
 

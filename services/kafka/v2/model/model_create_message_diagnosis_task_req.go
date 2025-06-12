@@ -11,7 +11,7 @@ type CreateMessageDiagnosisTaskReq struct {
 	// 消费组名称
 	GroupName string `json:"group_name"`
 
-	// topic名称
+	// Topic名称
 	TopicName string `json:"topic_name"`
 }
 

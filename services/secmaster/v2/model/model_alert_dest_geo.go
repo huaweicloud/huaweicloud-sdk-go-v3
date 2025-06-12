@@ -15,7 +15,7 @@ type AlertDestGeo struct {
 	// 经度
 	Longitude float32 `json:"longitude,omitempty"`
 
-	// 城市编码，Beijing | Shanghai
+	// 城市编码
 	CityCode *string `json:"city_code,omitempty"`
 
 	// 国家简码，参考ISO 3166-1 alpha-2，例如：CN | US | DE | IT | SG

@@ -8,7 +8,7 @@ import (
 
 type ShowMessagesRespMessages struct {
 
-	// **参数解释**： topic名称。 **取值范围**： 不涉及。
+	// **参数解释**： Topic名称。 **取值范围**： 不涉及。
 	Topic *string `json:"topic,omitempty"`
 
 	// **参数解释**： 分区编号。 **取值范围**： 不涉及。

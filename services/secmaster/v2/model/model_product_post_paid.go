@@ -23,7 +23,7 @@ type ProductPostPaid struct {
 	// 用户购买云服务产品的资源类型，例如SecMaster中的典型场景配置，资源类型为hws.resource.type.secmaster.typical
 	ResourceType string `json:"resource_type"`
 
-	// 用户购买云服务产品的资源规格，例如安全云脑中的的基础版，资源规格为secmaster.basic
+	// 用户购买云服务产品的资源规格，例如安全云脑中的基础版，资源规格为secmaster.basic
 	ResourceSpecCode string `json:"resource_spec_code"`
 
 	// 使用量单位标识，按需询价必填，例如按小时询价，使用量值为1，使用量单位为小时，枚举值如下： 4：小时 10：GB（带宽按流量询价使用） 11：MB（带宽按流量询价使用）

@@ -8,7 +8,7 @@ import (
 
 type ShowGroupsRespGroupAssignment struct {
 
-	// topic名称。
+	// Topic名称。
 	Topic *string `json:"topic,omitempty"`
 
 	// 分区列表。

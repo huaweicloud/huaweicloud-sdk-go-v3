@@ -18,6 +18,9 @@ type ListFunctionsRequest struct {
 	// 自定义分组名称。
 	PackageName *string `json:"package_name,omitempty"`
 
+	// 函数名称。支持模糊查询
+	FuncName *string `json:"func_name,omitempty"`
+
 	// 消息体的类型（格式）
 	ContentType string `json:"Content-Type"`
 }

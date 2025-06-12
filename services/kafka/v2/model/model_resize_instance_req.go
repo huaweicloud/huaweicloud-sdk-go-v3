@@ -20,7 +20,7 @@ type ResizeInstanceReq struct {
 	// 扩容后集群节点数。
 	NewBrokerNum *int32 `json:"new_broker_num,omitempty"`
 
-	// 新规格变更后的产品ID。 涉及垂直扩容场景，需指定该项。 [产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。](tag:hws,hws_hk,ocb,hws_ocb,dt,ctc,sbc,fcs,hcs,g42,hk_g42,tm,hk_tm,hws_eu)[产品ID可以从[查询产品规格列表](ListProducts.xml)获取。](tag:cmcc)
+	// 新规格变更后的产品ID。 涉及垂直扩容场景，需指定该项。 产品ID可以从[查询产品规格列表](ListEngineProducts.xml)获取。
 	NewProductId *string `json:"new_product_id,omitempty"`
 
 	// 实例绑定的弹性IP地址的ID。 以英文逗号隔开多个弹性IP地址的ID。 如果开启了公网再进行扩容，需要填写此参数。

@@ -337,6 +337,7 @@ type PostSourceServerBodyStateEnum struct {
 	SYNCING     PostSourceServerBodyState
 	STOPPING    PostSourceServerBodyState
 	STOPPED     PostSourceServerBodyState
+	SKIPPING    PostSourceServerBodyState
 	DELETING    PostSourceServerBodyState
 	ERROR       PostSourceServerBodyState
 	CLONING     PostSourceServerBodyState
@@ -369,6 +370,9 @@ func GetPostSourceServerBodyStateEnum() PostSourceServerBodyStateEnum {
 		},
 		STOPPED: PostSourceServerBodyState{
 			value: "stopped",
+		},
+		SKIPPING: PostSourceServerBodyState{
+			value: "skipping",
 		},
 		DELETING: PostSourceServerBodyState{
 			value: "deleting",

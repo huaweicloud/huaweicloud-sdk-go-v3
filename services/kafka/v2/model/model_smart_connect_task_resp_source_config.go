@@ -53,7 +53,7 @@ type SmartConnectTaskRespSourceConfig struct {
 	// 压缩算法。（仅源端类型为Kafka时会显示）
 	CompressionType *string `json:"compression_type,omitempty"`
 
-	// topic映射。（仅源端类型为Kafka时会显示）
+	// Topic映射。（仅源端类型为Kafka时会显示）
 	TopicsMapping *string `json:"topics_mapping,omitempty"`
 }
 

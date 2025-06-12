@@ -11,7 +11,9 @@ type ListStackResourcesResponse struct {
 
 	// 资源栈中所管理的资源信息列表
 	StackResources *[]StackResource `json:"stack_resources,omitempty"`
-	HttpStatusCode int              `json:"-"`
+
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListStackResourcesResponse) String() string {

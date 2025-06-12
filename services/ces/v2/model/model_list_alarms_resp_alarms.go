@@ -20,7 +20,7 @@ type ListAlarmsRespAlarms struct {
 	// 告警描述，长度0-256
 	Description *string `json:"description,omitempty"`
 
-	// 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+	// 服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
 	Namespace *string `json:"namespace,omitempty"`
 
 	// 告警策略

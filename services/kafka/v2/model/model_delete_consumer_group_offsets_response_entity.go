@@ -8,7 +8,7 @@ import (
 
 type DeleteConsumerGroupOffsetsResponseEntity struct {
 
-	// topic名称
+	// Topic名称
 	Name string `json:"name"`
 
 	// 消费位点删除是否成功

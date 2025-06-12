@@ -9,7 +9,7 @@ import (
 // IndicatorDataObjectDetailEnvironment 环境信息
 type IndicatorDataObjectDetailEnvironment struct {
 
-	// 环境供应商（如HWC,AWS,Azure等）
+	// 环境供应商
 	VendorType *string `json:"vendor_type,omitempty"`
 
 	// 租户ID

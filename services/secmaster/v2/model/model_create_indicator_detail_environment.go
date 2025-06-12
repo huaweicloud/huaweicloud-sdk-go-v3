@@ -9,7 +9,7 @@ import (
 // CreateIndicatorDetailEnvironment 环境信息
 type CreateIndicatorDetailEnvironment struct {
 
-	// 环境供应商，如：HWC/AWS等
+	// 环境供应商
 	VendorType string `json:"vendor_type"`
 
 	// 租户ID

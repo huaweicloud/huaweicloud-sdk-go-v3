@@ -9,10 +9,10 @@ import (
 // ShowTopicAccessPolicyResponse Response Object
 type ShowTopicAccessPolicyResponse struct {
 
-	// topic名称。
+	// Topic名称。
 	Name *string `json:"name,omitempty"`
 
-	// topic类型。
+	// Topic类型。
 	TopicType *int32 `json:"topic_type,omitempty"`
 
 	// 权限列表。

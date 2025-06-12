@@ -8,7 +8,7 @@ import (
 
 type DeleteConsumerGroupOffsetsRequestBody struct {
 
-	// topic列表
+	// Topic列表
 	Topics *[]string `json:"topics,omitempty"`
 }
 

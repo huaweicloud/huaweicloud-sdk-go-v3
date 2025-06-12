@@ -21,6 +21,9 @@ type ListMessagesRequest struct {
 	// 主题名称。
 	Topic string `json:"topic"`
 
+	// 队列。
+	Queue *string `json:"queue,omitempty"`
+
 	// 查询数量。
 	Limit *string `json:"limit,omitempty"`
 

@@ -9,9 +9,12 @@ import (
 // ShowKafkaTopicQuotaResponse Response Object
 type ShowKafkaTopicQuotaResponse struct {
 
-	// topic流控配置
-	Partitions     *[]KafkaTopicQuota `json:"partitions,omitempty"`
-	HttpStatusCode int                `json:"-"`
+	// Topic流控配置
+	Quotas *[]KafkaTopicQuota `json:"quotas,omitempty"`
+
+	// Topic流控数量
+	Count          *int32 `json:"count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowKafkaTopicQuotaResponse) String() string {

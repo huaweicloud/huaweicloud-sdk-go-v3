@@ -22,6 +22,9 @@ type CreateExchangeBody struct {
 
 	// 内部Exchange[（AMQP版本不支持内部Exchange，不涉及此参数）](tag:hws,hws_hk)。
 	Internal *bool `json:"internal,omitempty"`
+
+	// 参数列表
+	Arguments *interface{} `json:"arguments,omitempty"`
 }
 
 func (o CreateExchangeBody) String() string {

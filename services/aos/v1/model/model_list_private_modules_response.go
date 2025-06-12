@@ -10,8 +10,10 @@ import (
 type ListPrivateModulesResponse struct {
 
 	// 私有模块的列表。默认以创建时间升序排序。
-	Modules        *[]PrivateModuleSummary `json:"modules,omitempty"`
-	HttpStatusCode int                     `json:"-"`
+	Modules *[]PrivateModuleSummary `json:"modules,omitempty"`
+
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListPrivateModulesResponse) String() string {

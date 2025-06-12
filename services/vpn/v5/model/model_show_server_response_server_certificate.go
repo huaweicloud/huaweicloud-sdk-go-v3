@@ -30,6 +30,9 @@ type ShowServerResponseServerCertificate struct {
 
 	// 证书签名算法
 	SignatureAlgorithm *string `json:"signature_algorithm,omitempty"`
+
+	// 证书来源
+	Source *string `json:"source,omitempty"`
 }
 
 func (o ShowServerResponseServerCertificate) String() string {

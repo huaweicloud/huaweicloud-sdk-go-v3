@@ -9,7 +9,7 @@ import (
 // AccessPolicyTopicEntity 权限实体。
 type AccessPolicyTopicEntity struct {
 
-	// topic名称。
+	// Topic名称。
 	Name string `json:"name"`
 
 	// 权限列表。

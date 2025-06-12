@@ -12,7 +12,7 @@ import (
 // Alert 告警实体信息
 type Alert struct {
 
-	// 告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+	// 告警对象的版本，该字段的值必须为云SSA服务确定的官方发布版本之一
 	Version *string `json:"version,omitempty"`
 
 	// 事件唯一标识，UUID格式，最大36个字符
@@ -92,7 +92,7 @@ type Alert struct {
 	// 关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
 	CloseTime *string `json:"close_time,omitempty"`
 
-	// 周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+	// 周期/处置阶段编号 Preparation|Detection and Analysis|Contain，Eradication& Recovery|Post-Incident-Activity
 	IpdrrPhase *AlertIpdrrPhase `json:"ipdrr_phase,omitempty"`
 
 	// 调试字段
@@ -306,22 +306,22 @@ type AlertIpdrrPhase struct {
 }
 
 type AlertIpdrrPhaseEnum struct {
-	PREPARTION                   AlertIpdrrPhase
-	DETECTION_AND_ANALYSIS       AlertIpdrrPhase
-	CONTAINMERADICATION_RECOVERY AlertIpdrrPhase
-	POST_INCIDENT_ACTIVITY       AlertIpdrrPhase
+	PREPARATION                 AlertIpdrrPhase
+	DETECTION_AND_ANALYSIS      AlertIpdrrPhase
+	CONTAINERADICATION_RECOVERY AlertIpdrrPhase
+	POST_INCIDENT_ACTIVITY      AlertIpdrrPhase
 }
 
 func GetAlertIpdrrPhaseEnum() AlertIpdrrPhaseEnum {
 	return AlertIpdrrPhaseEnum{
-		PREPARTION: AlertIpdrrPhase{
-			value: "Prepartion",
+		PREPARATION: AlertIpdrrPhase{
+			value: "Preparation",
 		},
 		DETECTION_AND_ANALYSIS: AlertIpdrrPhase{
 			value: "Detection and Analysis",
 		},
-		CONTAINMERADICATION_RECOVERY: AlertIpdrrPhase{
-			value: "Containm，Eradication& Recovery",
+		CONTAINERADICATION_RECOVERY: AlertIpdrrPhase{
+			value: "Contain，Eradication& Recovery",
 		},
 		POST_INCIDENT_ACTIVITY: AlertIpdrrPhase{
 			value: "Post-Incident-Activity",

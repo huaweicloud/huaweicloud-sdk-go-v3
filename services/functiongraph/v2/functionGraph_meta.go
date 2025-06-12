@@ -1262,6 +1262,10 @@ func GenReqDefForListFunctions() *def.HttpRequestDef {
 		WithName("PackageName").
 		WithJsonTag("package_name").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FuncName").
+		WithJsonTag("func_name").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").

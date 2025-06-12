@@ -9,13 +9,13 @@ import (
 // ShowInstanceTopicDetailResponse Response Object
 type ShowInstanceTopicDetailResponse struct {
 
-	// **参数解释**： topic名称。 **取值范围**： 不涉及
+	// **参数解释**： Topic名称。 **取值范围**： 不涉及
 	Topic *string `json:"topic,omitempty"`
 
 	// **参数解释**： 分区列表。
 	Partitions *[]ShowInstanceTopicDetailRespPartitions `json:"partitions,omitempty"`
 
-	// **参数解释**： 订阅该topic的消费组名称列表。
+	// **参数解释**： 订阅该Topic的消费组名称列表。
 	GroupSubscribed *[]string `json:"group_subscribed,omitempty"`
 	HttpStatusCode  int       `json:"-"`
 }

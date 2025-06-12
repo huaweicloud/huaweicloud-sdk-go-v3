@@ -9,7 +9,7 @@ import (
 // ShowKafkaInstanceExtendProductInfoResponse Response Object
 type ShowKafkaInstanceExtendProductInfoResponse struct {
 
-	// 消息引擎类型:kafka。
+	// 消息引擎类型：kafka。
 	Engine *string `json:"engine,omitempty"`
 
 	// 消息引擎支持的版本。

@@ -12,7 +12,7 @@ import (
 // CreatePostPaidOrderRequest Request Object
 type CreatePostPaidOrderRequest struct {
 
-	// 用户当前语言环境
+	// 用户当前语言环境 zh-cn or en-us.
 	XLanguage CreatePostPaidOrderRequestXLanguage `json:"X-Language"`
 
 	Body *PostPaidParam `json:"body,omitempty"`

@@ -16,13 +16,13 @@ type ListTaskResultsRequest struct {
 	TaskUri string `json:"task_uri"`
 
 	// 测试计划id
-	IteratorUri string `json:"iterator_uri"`
+	IteratorUri *string `json:"iterator_uri,omitempty"`
 
 	// 当前页数
-	PageNo *string `json:"page_no,omitempty"`
+	PageNo string `json:"page_no"`
 
 	// 每页多少记录
-	PageSize *string `json:"page_size,omitempty"`
+	PageSize string `json:"page_size"`
 
 	// 发布版本
 	ReleaseDev *string `json:"release_dev,omitempty"`

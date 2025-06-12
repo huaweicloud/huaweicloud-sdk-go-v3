@@ -8,7 +8,10 @@ import (
 
 // UpdateConsumerGroupResponse Response Object
 type UpdateConsumerGroupResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 规格变更任务ID。
+	JobId          *string `json:"job_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateConsumerGroupResponse) String() string {

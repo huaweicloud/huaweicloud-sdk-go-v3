@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// KafkaTopicQuota topic流控配置
+// KafkaTopicQuota Topic流控配置
 type KafkaTopicQuota struct {
 
-	// topic名称
+	// Topic名称
 	Topic *string `json:"topic,omitempty"`
 
 	// 生产者速率

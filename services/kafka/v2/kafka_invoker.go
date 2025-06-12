@@ -1557,6 +1557,22 @@ func (i *ListConnectorTasksInvoker) Invoke() (*model.ListConnectorTasksResponse,
 	}
 }
 
+type ModifyConnectorTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyConnectorTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyConnectorTaskInvoker) Invoke() (*model.ModifyConnectorTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyConnectorTaskResponse), nil
+	}
+}
+
 type PauseConnectorTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1634,5 +1650,21 @@ func (i *ShowConnectorTaskInvoker) Invoke() (*model.ShowConnectorTaskResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowConnectorTaskResponse), nil
+	}
+}
+
+type ValidateConnectorConnectivityInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ValidateConnectorConnectivityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ValidateConnectorConnectivityInvoker) Invoke() (*model.ValidateConnectorConnectivityResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ValidateConnectorConnectivityResponse), nil
 	}
 }

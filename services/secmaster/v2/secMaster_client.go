@@ -649,6 +649,27 @@ func (c *SecMasterClient) DeletePlaybookVersionInvoker(request *model.DeletePlay
 	return &DeletePlaybookVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteWorkspace 删除工作空间
+//
+// 删除工作空间
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) DeleteWorkspace(request *model.DeleteWorkspaceRequest) (*model.DeleteWorkspaceResponse, error) {
+	requestDef := GenReqDefForDeleteWorkspace()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteWorkspaceResponse), nil
+	}
+}
+
+// DeleteWorkspaceInvoker 删除工作空间
+func (c *SecMasterClient) DeleteWorkspaceInvoker(request *model.DeleteWorkspaceRequest) *DeleteWorkspaceInvoker {
+	requestDef := GenReqDefForDeleteWorkspace()
+	return &DeleteWorkspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DisableAlertRule 停用告警规则
 //
 // Disable alert rule
@@ -1027,9 +1048,9 @@ func (c *SecMasterClient) ListWorkflowsInvoker(request *model.ListWorkflowsReque
 	return &ListWorkflowsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListWorkspaces 工作空间列表查询
+// ListWorkspaces 查询工作空间列表
 //
-// 工作空间列表查询:可通过工作空间名称、工作空间描述、创建时间等条件对租户的工作空间进行筛选。
+// 可通过工作空间名称、工作空间描述、创建时间等条件对租户的工作空间进行筛选。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ListWorkspaces(request *model.ListWorkspacesRequest) (*model.ListWorkspacesResponse, error) {
@@ -1042,7 +1063,7 @@ func (c *SecMasterClient) ListWorkspaces(request *model.ListWorkspacesRequest) (
 	}
 }
 
-// ListWorkspacesInvoker 工作空间列表查询
+// ListWorkspacesInvoker 查询工作空间列表
 func (c *SecMasterClient) ListWorkspacesInvoker(request *model.ListWorkspacesRequest) *ListWorkspacesInvoker {
 	requestDef := GenReqDefForListWorkspaces()
 	return &ListWorkspacesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1321,6 +1342,27 @@ func (c *SecMasterClient) ShowPlaybookVersionInvoker(request *model.ShowPlaybook
 	return &ShowPlaybookVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowWorkspace 查询工作空间详情
+//
+// 查询工作空间名称、描述等详情信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) ShowWorkspace(request *model.ShowWorkspaceRequest) (*model.ShowWorkspaceResponse, error) {
+	requestDef := GenReqDefForShowWorkspace()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWorkspaceResponse), nil
+	}
+}
+
+// ShowWorkspaceInvoker 查询工作空间详情
+func (c *SecMasterClient) ShowWorkspaceInvoker(request *model.ShowWorkspaceRequest) *ShowWorkspaceInvoker {
+	requestDef := GenReqDefForShowWorkspace()
+	return &ShowWorkspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateAlertRule 更新告警规则
 //
 // Update alert rule
@@ -1445,4 +1487,25 @@ func (c *SecMasterClient) UpdatePlaybookVersion(request *model.UpdatePlaybookVer
 func (c *SecMasterClient) UpdatePlaybookVersionInvoker(request *model.UpdatePlaybookVersionRequest) *UpdatePlaybookVersionInvoker {
 	requestDef := GenReqDefForUpdatePlaybookVersion()
 	return &UpdatePlaybookVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateWorkspace 更新工作空间
+//
+// 更新工作空间名称、描述等信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) UpdateWorkspace(request *model.UpdateWorkspaceRequest) (*model.UpdateWorkspaceResponse, error) {
+	requestDef := GenReqDefForUpdateWorkspace()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateWorkspaceResponse), nil
+	}
+}
+
+// UpdateWorkspaceInvoker 更新工作空间
+func (c *SecMasterClient) UpdateWorkspaceInvoker(request *model.UpdateWorkspaceRequest) *UpdateWorkspaceInvoker {
+	requestDef := GenReqDefForUpdateWorkspace()
+	return &UpdateWorkspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

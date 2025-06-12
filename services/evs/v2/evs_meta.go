@@ -47,6 +47,21 @@ func GenReqDefForBatchDeleteVolumeTags() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchResizeVolumes() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v5/{project_id}/volumes/batch-extend").
+		WithResponse(new(model.BatchResizeVolumesResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCinderAcceptVolumeTransfer() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

@@ -11,7 +11,7 @@ type ShowCeshierarchyRespGroups struct {
 	// 消费组名称。
 	Name *string `json:"name,omitempty"`
 
-	// topic信息。
+	// Topic信息。
 	Queues *[]ShowCeshierarchyRespQueues1 `json:"queues,omitempty"`
 }
 

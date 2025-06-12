@@ -38,6 +38,9 @@ type DbObjectSpaceInfo struct {
 
 	// 估算值行数，以字节为单位
 	EstimatedRows *int64 `json:"estimated_rows,omitempty"`
+
+	// 数据库名称
+	DbName *string `json:"db_name,omitempty"`
 }
 
 func (o DbObjectSpaceInfo) String() string {

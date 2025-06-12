@@ -126,7 +126,7 @@ type ShowInstanceResponse struct {
 	// 实例扩容磁盘次数，如果超过20次则无法扩容磁盘。
 	ExtendTimes *int32 `json:"extend_times,omitempty"`
 
-	// 是否打开kafka自动创建topic功能。   - true：开启   - false：关闭
+	// 是否打开kafka自动创建Topic功能。   - true：开启   - false：关闭
 	EnableAutoTopic *bool `json:"enable_auto_topic,omitempty"`
 
 	// 实例类型：集群，cluster。

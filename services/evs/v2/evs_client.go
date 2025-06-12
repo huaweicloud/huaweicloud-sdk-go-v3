@@ -64,6 +64,31 @@ func (c *EvsClient) BatchDeleteVolumeTagsInvoker(request *model.BatchDeleteVolum
 	return &BatchDeleteVolumeTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchResizeVolumes 批量扩容云硬盘
+//
+// 对按需或者包周期云硬盘进行批量扩容。
+// [在批量扩容存在包周期云硬盘的场景下：](tag:hws)
+// - [如果您需要查看订单可用的优惠券，请参考\&quot;[查询订单可用优惠券](https://support.huaweicloud.com/api-oce/zh-cn_topic_0092953630.html)\&quot;。](tag:hws)
+// - [如果您需要支付订单，请参考\&quot;[支付包周期产品订单](https://support.huaweicloud.com/api-oce/api_order_00030.html)\&quot;。](tag:hws)
+// - [如果您需要退订该包周期资源，请参考“[退订包周期资源](https://support.huaweicloud.com/api-oce/zh-cn_topic_0082522030.html)”。](tag:hws)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) BatchResizeVolumes(request *model.BatchResizeVolumesRequest) (*model.BatchResizeVolumesResponse, error) {
+	requestDef := GenReqDefForBatchResizeVolumes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchResizeVolumesResponse), nil
+	}
+}
+
+// BatchResizeVolumesInvoker 批量扩容云硬盘
+func (c *EvsClient) BatchResizeVolumesInvoker(request *model.BatchResizeVolumesRequest) *BatchResizeVolumesInvoker {
+	requestDef := GenReqDefForBatchResizeVolumes()
+	return &BatchResizeVolumesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CinderAcceptVolumeTransfer 接受云硬盘过户
 //
 // 通过云硬盘过户记录ID以及身份认证密钥来接受云硬盘过户。

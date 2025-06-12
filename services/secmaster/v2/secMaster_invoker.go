@@ -485,6 +485,22 @@ func (i *DeletePlaybookVersionInvoker) Invoke() (*model.DeletePlaybookVersionRes
 	}
 }
 
+type DeleteWorkspaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteWorkspaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteWorkspaceInvoker) Invoke() (*model.DeleteWorkspaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteWorkspaceResponse), nil
+	}
+}
+
 type DisableAlertRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -997,6 +1013,22 @@ func (i *ShowPlaybookVersionInvoker) Invoke() (*model.ShowPlaybookVersionRespons
 	}
 }
 
+type ShowWorkspaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowWorkspaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowWorkspaceInvoker) Invoke() (*model.ShowWorkspaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowWorkspaceResponse), nil
+	}
+}
+
 type UpdateAlertRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1090,5 +1122,21 @@ func (i *UpdatePlaybookVersionInvoker) Invoke() (*model.UpdatePlaybookVersionRes
 		return nil, err
 	} else {
 		return result.(*model.UpdatePlaybookVersionResponse), nil
+	}
+}
+
+type UpdateWorkspaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateWorkspaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateWorkspaceInvoker) Invoke() (*model.UpdateWorkspaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateWorkspaceResponse), nil
 	}
 }

@@ -512,6 +512,26 @@ func (c *EcsClient) CreateServersInvoker(request *model.CreateServersRequest) *C
 	return &CreateServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteRecycleBinServer 删除回收站中虚拟机
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) DeleteRecycleBinServer(request *model.DeleteRecycleBinServerRequest) (*model.DeleteRecycleBinServerResponse, error) {
+	requestDef := GenReqDefForDeleteRecycleBinServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteRecycleBinServerResponse), nil
+	}
+}
+
+// DeleteRecycleBinServerInvoker 删除回收站中虚拟机
+func (c *EcsClient) DeleteRecycleBinServerInvoker(request *model.DeleteRecycleBinServerRequest) *DeleteRecycleBinServerInvoker {
+	requestDef := GenReqDefForDeleteRecycleBinServer()
+	return &DeleteRecycleBinServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteServerGroup 删除云服务器组
 //
 // 删除云服务器组。
@@ -726,6 +746,26 @@ func (c *EcsClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListF
 func (c *EcsClient) ListFlavorsInvoker(request *model.ListFlavorsRequest) *ListFlavorsInvoker {
 	requestDef := GenReqDefForListFlavors()
 	return &ListFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRecycleBinServers 查询回收站中虚拟机列表
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ListRecycleBinServers(request *model.ListRecycleBinServersRequest) (*model.ListRecycleBinServersResponse, error) {
+	requestDef := GenReqDefForListRecycleBinServers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRecycleBinServersResponse), nil
+	}
+}
+
+// ListRecycleBinServersInvoker 查询回收站中虚拟机列表
+func (c *EcsClient) ListRecycleBinServersInvoker(request *model.ListRecycleBinServersRequest) *ListRecycleBinServersInvoker {
+	requestDef := GenReqDefForListRecycleBinServers()
+	return &ListRecycleBinServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListResizeFlavors 查询云服务器规格变更支持列表
@@ -1439,6 +1479,68 @@ func (c *EcsClient) ResizeServerInvoker(request *model.ResizeServerRequest) *Res
 	return &ResizeServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RevertRecycleBinServer 恢复回收站中虚拟机
+//
+// 回收站中的虚拟机从回收站中恢复
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) RevertRecycleBinServer(request *model.RevertRecycleBinServerRequest) (*model.RevertRecycleBinServerResponse, error) {
+	requestDef := GenReqDefForRevertRecycleBinServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RevertRecycleBinServerResponse), nil
+	}
+}
+
+// RevertRecycleBinServerInvoker 恢复回收站中虚拟机
+func (c *EcsClient) RevertRecycleBinServerInvoker(request *model.RevertRecycleBinServerRequest) *RevertRecycleBinServerInvoker {
+	requestDef := GenReqDefForRevertRecycleBinServer()
+	return &RevertRecycleBinServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRecycleBin 查询回收站配置
+//
+// 查询回收站配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ShowRecycleBin(request *model.ShowRecycleBinRequest) (*model.ShowRecycleBinResponse, error) {
+	requestDef := GenReqDefForShowRecycleBin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRecycleBinResponse), nil
+	}
+}
+
+// ShowRecycleBinInvoker 查询回收站配置
+func (c *EcsClient) ShowRecycleBinInvoker(request *model.ShowRecycleBinRequest) *ShowRecycleBinInvoker {
+	requestDef := GenReqDefForShowRecycleBin()
+	return &ShowRecycleBinInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRecycleBinServer 查询回收站中指定云服务器
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ShowRecycleBinServer(request *model.ShowRecycleBinServerRequest) (*model.ShowRecycleBinServerResponse, error) {
+	requestDef := GenReqDefForShowRecycleBinServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRecycleBinServerResponse), nil
+	}
+}
+
+// ShowRecycleBinServerInvoker 查询回收站中指定云服务器
+func (c *EcsClient) ShowRecycleBinServerInvoker(request *model.ShowRecycleBinServerRequest) *ShowRecycleBinServerInvoker {
+	requestDef := GenReqDefForShowRecycleBinServer()
+	return &ShowRecycleBinServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowResetPasswordFlag 查询是否支持一键重置密码
 //
 // 查询弹性云服务器是否支持一键重置密码。
@@ -1548,6 +1650,27 @@ func (c *EcsClient) ShowServerLimitsInvoker(request *model.ShowServerLimitsReque
 	return &ShowServerLimitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowServerMetadataOptions 查询云服务器元数据配置
+//
+// 查询云服务器元数据配置，通过本接口，您可以查询指定云服务器的元数据配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ShowServerMetadataOptions(request *model.ShowServerMetadataOptionsRequest) (*model.ShowServerMetadataOptionsResponse, error) {
+	requestDef := GenReqDefForShowServerMetadataOptions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowServerMetadataOptionsResponse), nil
+	}
+}
+
+// ShowServerMetadataOptionsInvoker 查询云服务器元数据配置
+func (c *EcsClient) ShowServerMetadataOptionsInvoker(request *model.ShowServerMetadataOptionsRequest) *ShowServerMetadataOptionsInvoker {
+	requestDef := GenReqDefForShowServerMetadataOptions()
+	return &ShowServerMetadataOptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowServerPassword 云服务器获取密码(企业项目)
 //
 // 当通过支持Cloudbase-init功能的镜像创建Windows云服务器时，获取云服务器初始安装时系统生成的管理员帐户（Administrator帐户或Cloudbase-init设置的帐户）随机密码。
@@ -1611,6 +1734,48 @@ func (c *EcsClient) ShowServerTags(request *model.ShowServerTagsRequest) (*model
 func (c *EcsClient) ShowServerTagsInvoker(request *model.ShowServerTagsRequest) *ShowServerTagsInvoker {
 	requestDef := GenReqDefForShowServerTags()
 	return &ShowServerTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRecycleBin 更新回收站配置
+//
+// 更新回收站属性信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) UpdateRecycleBin(request *model.UpdateRecycleBinRequest) (*model.UpdateRecycleBinResponse, error) {
+	requestDef := GenReqDefForUpdateRecycleBin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRecycleBinResponse), nil
+	}
+}
+
+// UpdateRecycleBinInvoker 更新回收站配置
+func (c *EcsClient) UpdateRecycleBinInvoker(request *model.UpdateRecycleBinRequest) *UpdateRecycleBinInvoker {
+	requestDef := GenReqDefForUpdateRecycleBin()
+	return &UpdateRecycleBinInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRecycleBinPolicy 更新回收站策略
+//
+// 更新回收站策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) UpdateRecycleBinPolicy(request *model.UpdateRecycleBinPolicyRequest) (*model.UpdateRecycleBinPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateRecycleBinPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRecycleBinPolicyResponse), nil
+	}
+}
+
+// UpdateRecycleBinPolicyInvoker 更新回收站策略
+func (c *EcsClient) UpdateRecycleBinPolicyInvoker(request *model.UpdateRecycleBinPolicyRequest) *UpdateRecycleBinPolicyInvoker {
+	requestDef := GenReqDefForUpdateRecycleBinPolicy()
+	return &UpdateRecycleBinPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateServer 修改云服务器
@@ -1724,6 +1889,27 @@ func (c *EcsClient) UpdateServerMetadata(request *model.UpdateServerMetadataRequ
 func (c *EcsClient) UpdateServerMetadataInvoker(request *model.UpdateServerMetadataRequest) *UpdateServerMetadataInvoker {
 	requestDef := GenReqDefForUpdateServerMetadata()
 	return &UpdateServerMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateServerMetadataOptions 更新云服务器元数据配置
+//
+// 更新云服务器元数据配置，通过本接口，您可以选择启用或关闭IMDS服务，也可以选择IMDS服务的版本。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) UpdateServerMetadataOptions(request *model.UpdateServerMetadataOptionsRequest) (*model.UpdateServerMetadataOptionsResponse, error) {
+	requestDef := GenReqDefForUpdateServerMetadataOptions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateServerMetadataOptionsResponse), nil
+	}
+}
+
+// UpdateServerMetadataOptionsInvoker 更新云服务器元数据配置
+func (c *EcsClient) UpdateServerMetadataOptionsInvoker(request *model.UpdateServerMetadataOptionsRequest) *UpdateServerMetadataOptionsInvoker {
+	requestDef := GenReqDefForUpdateServerMetadataOptions()
+	return &UpdateServerMetadataOptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // NovaListVersions 查询API版本信息列表

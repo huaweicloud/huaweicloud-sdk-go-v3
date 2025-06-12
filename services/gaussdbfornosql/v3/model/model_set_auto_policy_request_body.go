@@ -14,8 +14,7 @@ type SetAutoPolicyRequestBody struct {
 	// 自动扩容开关。  “on”，表示开启磁盘自动扩容策略。  “off”，表示关闭磁盘自动扩容策略。 默认值为“on”。
 	SwitchOption *string `json:"switch_option,omitempty"`
 
-	// 磁盘自动扩容策略
-	Policy *[]DiskAutoExpansionPolicy `json:"policy,omitempty"`
+	Policy *DiskAutoExpansionPolicy `json:"policy,omitempty"`
 }
 
 func (o SetAutoPolicyRequestBody) String() string {

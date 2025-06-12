@@ -9,7 +9,7 @@ import (
 // AlertDataSource 首次上报数据源
 type AlertDataSource struct {
 
-	// 数据源类型，取值范围如下： 1 - 华为产品 2 - 第三方产品 3 - 租户私有产品
+	// 数据源类型，取值范围如下： 1 - 云上产品 2 - 第三方产品 3 - 租户私有产品
 	SourceType *int32 `json:"source_type,omitempty"`
 
 	// 数据源产品所属账号的id
@@ -18,7 +18,7 @@ type AlertDataSource struct {
 	// 数据源产品所属项目的id
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 数据源产品所在区域，具体取值范围查看华为云地区和终端节点定义，例如cn-north-1
+	// 数据源产品所在区域，具体取值范围查看云地区和终端节点定义
 	RegionId *string `json:"region_id,omitempty"`
 
 	// 数据源产品所属公司的名称

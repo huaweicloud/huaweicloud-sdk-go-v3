@@ -11,7 +11,7 @@ import (
 
 type Policies struct {
 
-	// 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+	// 服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
 	Namespace string `json:"namespace"`
 
 	// 资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32, 事件告警模板DimensionName为空

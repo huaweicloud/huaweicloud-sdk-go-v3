@@ -143,6 +143,8 @@ type ServerDetail struct {
 
 	CpuOptions *CpuOptions `json:"cpu_options,omitempty"`
 
+	SecurityOptions *SecurityOptions `json:"security_options,omitempty"`
+
 	Hypervisor *Hypervisor `json:"hypervisor,omitempty"`
 }
 

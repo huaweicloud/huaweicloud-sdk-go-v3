@@ -9,7 +9,7 @@ import (
 // AlertEnvironment 告警产生的环境坐标信息
 type AlertEnvironment struct {
 
-	// 环境供应商：HWCP/HWC/AWS/Azure/GCP
+	// 环境供应商
 	VendorType *string `json:"vendor_type,omitempty"`
 
 	// 租户id

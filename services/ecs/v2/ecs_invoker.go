@@ -341,6 +341,22 @@ func (i *CreateServersInvoker) Invoke() (*model.CreateServersResponse, error) {
 	}
 }
 
+type DeleteRecycleBinServerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteRecycleBinServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteRecycleBinServerInvoker) Invoke() (*model.DeleteRecycleBinServerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteRecycleBinServerResponse), nil
+	}
+}
+
 type DeleteServerGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -498,6 +514,22 @@ func (i *ListFlavorsInvoker) Invoke() (*model.ListFlavorsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListFlavorsResponse), nil
+	}
+}
+
+type ListRecycleBinServersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRecycleBinServersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRecycleBinServersInvoker) Invoke() (*model.ListRecycleBinServersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRecycleBinServersResponse), nil
 	}
 }
 
@@ -1017,6 +1049,54 @@ func (i *ResizeServerInvoker) Invoke() (*model.ResizeServerResponse, error) {
 	}
 }
 
+type RevertRecycleBinServerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RevertRecycleBinServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RevertRecycleBinServerInvoker) Invoke() (*model.RevertRecycleBinServerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RevertRecycleBinServerResponse), nil
+	}
+}
+
+type ShowRecycleBinInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRecycleBinInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRecycleBinInvoker) Invoke() (*model.ShowRecycleBinResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRecycleBinResponse), nil
+	}
+}
+
+type ShowRecycleBinServerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRecycleBinServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRecycleBinServerInvoker) Invoke() (*model.ShowRecycleBinServerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRecycleBinServerResponse), nil
+	}
+}
+
 type ShowResetPasswordFlagInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1097,6 +1177,22 @@ func (i *ShowServerLimitsInvoker) Invoke() (*model.ShowServerLimitsResponse, err
 	}
 }
 
+type ShowServerMetadataOptionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowServerMetadataOptionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowServerMetadataOptionsInvoker) Invoke() (*model.ShowServerMetadataOptionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowServerMetadataOptionsResponse), nil
+	}
+}
+
 type ShowServerPasswordInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1142,6 +1238,38 @@ func (i *ShowServerTagsInvoker) Invoke() (*model.ShowServerTagsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ShowServerTagsResponse), nil
+	}
+}
+
+type UpdateRecycleBinInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateRecycleBinInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateRecycleBinInvoker) Invoke() (*model.UpdateRecycleBinResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateRecycleBinResponse), nil
+	}
+}
+
+type UpdateRecycleBinPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateRecycleBinPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateRecycleBinPolicyInvoker) Invoke() (*model.UpdateRecycleBinPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateRecycleBinPolicyResponse), nil
 	}
 }
 
@@ -1222,6 +1350,22 @@ func (i *UpdateServerMetadataInvoker) Invoke() (*model.UpdateServerMetadataRespo
 		return nil, err
 	} else {
 		return result.(*model.UpdateServerMetadataResponse), nil
+	}
+}
+
+type UpdateServerMetadataOptionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateServerMetadataOptionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateServerMetadataOptionsInvoker) Invoke() (*model.UpdateServerMetadataOptionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateServerMetadataOptionsResponse), nil
 	}
 }
 

@@ -341,6 +341,22 @@ func (i *ShowBaremetalServerInterfaceAttachmentsInvoker) Invoke() (*model.ShowBa
 	}
 }
 
+type ShowBaremetalServerMetadataOptionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBaremetalServerMetadataOptionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowBaremetalServerMetadataOptionsInvoker) Invoke() (*model.ShowBaremetalServerMetadataOptionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBaremetalServerMetadataOptionsResponse), nil
+	}
+}
+
 type ShowBaremetalServerTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -466,6 +482,22 @@ func (i *UpdateBaremetalServerMetadataInvoker) Invoke() (*model.UpdateBaremetalS
 		return nil, err
 	} else {
 		return result.(*model.UpdateBaremetalServerMetadataResponse), nil
+	}
+}
+
+type UpdateBaremetalServerMetadataOptionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateBaremetalServerMetadataOptionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateBaremetalServerMetadataOptionsInvoker) Invoke() (*model.UpdateBaremetalServerMetadataOptionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateBaremetalServerMetadataOptionsResponse), nil
 	}
 }
 

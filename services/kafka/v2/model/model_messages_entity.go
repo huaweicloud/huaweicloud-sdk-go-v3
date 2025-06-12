@@ -8,7 +8,7 @@ import (
 
 type MessagesEntity struct {
 
-	// topic名称。
+	// Topic名称。
 	Topic *string `json:"topic,omitempty"`
 
 	// 消息所在的分区。

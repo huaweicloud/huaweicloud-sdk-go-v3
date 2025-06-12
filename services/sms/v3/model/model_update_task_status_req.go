@@ -12,7 +12,7 @@ import (
 // UpdateTaskStatusReq This is a auto create Body Object
 type UpdateTaskStatusReq struct {
 
-	// 操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源
+	// 操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测 skip:跳过一致性校验子任务 clear:清理快照资源 migration_test: 开始迁移演练
 	Operation UpdateTaskStatusReqOperation `json:"operation"`
 
 	// 模板id
@@ -39,14 +39,15 @@ type UpdateTaskStatusReqOperation struct {
 }
 
 type UpdateTaskStatusReqOperationEnum struct {
-	START         UpdateTaskStatusReqOperation
-	STOP          UpdateTaskStatusReqOperation
-	TEST          UpdateTaskStatusReqOperation
-	CLONE_TEST    UpdateTaskStatusReqOperation
-	RESTART       UpdateTaskStatusReqOperation
-	NETWORK_CHECK UpdateTaskStatusReqOperation
-	SKIP          UpdateTaskStatusReqOperation
-	CLEAR         UpdateTaskStatusReqOperation
+	START          UpdateTaskStatusReqOperation
+	STOP           UpdateTaskStatusReqOperation
+	TEST           UpdateTaskStatusReqOperation
+	CLONE_TEST     UpdateTaskStatusReqOperation
+	RESTART        UpdateTaskStatusReqOperation
+	NETWORK_CHECK  UpdateTaskStatusReqOperation
+	SKIP           UpdateTaskStatusReqOperation
+	CLEAR          UpdateTaskStatusReqOperation
+	MIGRATION_TEST UpdateTaskStatusReqOperation
 }
 
 func GetUpdateTaskStatusReqOperationEnum() UpdateTaskStatusReqOperationEnum {
@@ -74,6 +75,9 @@ func GetUpdateTaskStatusReqOperationEnum() UpdateTaskStatusReqOperationEnum {
 		},
 		CLEAR: UpdateTaskStatusReqOperation{
 			value: "clear",
+		},
+		MIGRATION_TEST: UpdateTaskStatusReqOperation{
+			value: "migration_test",
 		},
 	}
 }

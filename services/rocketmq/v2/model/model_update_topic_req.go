@@ -11,14 +11,20 @@ import (
 
 type UpdateTopicReq struct {
 
-	// 总读队列个数。
+	// **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	ReadQueueNum float32 `json:"read_queue_num,omitempty"`
 
-	// 总写队列个数。
+	// **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	WriteQueueNum float32 `json:"write_queue_num,omitempty"`
 
-	// 权限。
+	// **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Permission *UpdateTopicReqPermission `json:"permission,omitempty"`
+
+	// **参数解释**： 队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	Queues *[]UpdateTopicQueueEntity `json:"queues,omitempty"`
+
+	// **参数解释**： Topic描述。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	TopicDesc *string `json:"topic_desc,omitempty"`
 }
 
 func (o UpdateTopicReq) String() string {

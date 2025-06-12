@@ -30,7 +30,7 @@ type SourceServerAssociatedWithTask struct {
 	// 是否是OEM操作系统(Windows)
 	OemSystem *bool `json:"oem_system,omitempty"`
 
-	// 当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
+	// 当前源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 testing：测试中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready: 迁移演练已就绪 premiging: 迁移演练中 premiged: 迁移演练已完成 premigfailed: 迁移演练失败
 	State *SourceServerAssociatedWithTaskState `json:"state,omitempty"`
 }
 
@@ -95,21 +95,26 @@ type SourceServerAssociatedWithTaskState struct {
 }
 
 type SourceServerAssociatedWithTaskStateEnum struct {
-	UNAVAILABLE SourceServerAssociatedWithTaskState
-	WAITING     SourceServerAssociatedWithTaskState
-	INITIALIZE  SourceServerAssociatedWithTaskState
-	REPLICATE   SourceServerAssociatedWithTaskState
-	SYNCING     SourceServerAssociatedWithTaskState
-	STOPPING    SourceServerAssociatedWithTaskState
-	STOPPED     SourceServerAssociatedWithTaskState
-	DELETING    SourceServerAssociatedWithTaskState
-	ERROR       SourceServerAssociatedWithTaskState
-	CLONING     SourceServerAssociatedWithTaskState
-	TESTING     SourceServerAssociatedWithTaskState
-	FINISHED    SourceServerAssociatedWithTaskState
-	CLEARING    SourceServerAssociatedWithTaskState
-	CLEARED     SourceServerAssociatedWithTaskState
-	CLEARFAILED SourceServerAssociatedWithTaskState
+	UNAVAILABLE  SourceServerAssociatedWithTaskState
+	WAITING      SourceServerAssociatedWithTaskState
+	INITIALIZE   SourceServerAssociatedWithTaskState
+	REPLICATE    SourceServerAssociatedWithTaskState
+	SYNCING      SourceServerAssociatedWithTaskState
+	STOPPING     SourceServerAssociatedWithTaskState
+	STOPPED      SourceServerAssociatedWithTaskState
+	SKIPPING     SourceServerAssociatedWithTaskState
+	DELETING     SourceServerAssociatedWithTaskState
+	ERROR        SourceServerAssociatedWithTaskState
+	CLONING      SourceServerAssociatedWithTaskState
+	TESTING      SourceServerAssociatedWithTaskState
+	FINISHED     SourceServerAssociatedWithTaskState
+	CLEARING     SourceServerAssociatedWithTaskState
+	CLEARED      SourceServerAssociatedWithTaskState
+	CLEARFAILED  SourceServerAssociatedWithTaskState
+	PREMIGREADY  SourceServerAssociatedWithTaskState
+	PREMIGING    SourceServerAssociatedWithTaskState
+	PREMIGED     SourceServerAssociatedWithTaskState
+	PREMIGFAILED SourceServerAssociatedWithTaskState
 }
 
 func GetSourceServerAssociatedWithTaskStateEnum() SourceServerAssociatedWithTaskStateEnum {
@@ -135,6 +140,9 @@ func GetSourceServerAssociatedWithTaskStateEnum() SourceServerAssociatedWithTask
 		STOPPED: SourceServerAssociatedWithTaskState{
 			value: "stopped",
 		},
+		SKIPPING: SourceServerAssociatedWithTaskState{
+			value: "skipping",
+		},
 		DELETING: SourceServerAssociatedWithTaskState{
 			value: "deleting",
 		},
@@ -158,6 +166,18 @@ func GetSourceServerAssociatedWithTaskStateEnum() SourceServerAssociatedWithTask
 		},
 		CLEARFAILED: SourceServerAssociatedWithTaskState{
 			value: "clearfailed",
+		},
+		PREMIGREADY: SourceServerAssociatedWithTaskState{
+			value: "premigready",
+		},
+		PREMIGING: SourceServerAssociatedWithTaskState{
+			value: "premiging",
+		},
+		PREMIGED: SourceServerAssociatedWithTaskState{
+			value: "premiged",
+		},
+		PREMIGFAILED: SourceServerAssociatedWithTaskState{
+			value: "premigfailed",
 		},
 	}
 }

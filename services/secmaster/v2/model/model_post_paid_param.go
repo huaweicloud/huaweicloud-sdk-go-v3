@@ -12,7 +12,7 @@ import (
 // PostPaidParam 按需订阅请求体
 type PostPaidParam struct {
 
-	// 区域ID，如cn-north-4
+	// 区域ID
 	RegionId string `json:"region_id"`
 
 	// domainId

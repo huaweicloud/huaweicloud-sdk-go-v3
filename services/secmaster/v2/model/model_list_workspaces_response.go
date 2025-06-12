@@ -9,7 +9,7 @@ import (
 // ListWorkspacesResponse Response Object
 type ListWorkspacesResponse struct {
 
-	// 空间信息
+	// list of informations of workspaces
 	Workspaces *[]CreateWorkspaceResponseBody `json:"workspaces,omitempty"`
 
 	// 数据总量

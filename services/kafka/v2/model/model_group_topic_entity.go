@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// GroupTopicEntity 消费组TOPIC详情
+// GroupTopicEntity 消费组Topic详情
 type GroupTopicEntity struct {
 
-	// TOPIC名称
+	// Topic名称
 	Topic *string `json:"topic,omitempty"`
 
 	// 分区

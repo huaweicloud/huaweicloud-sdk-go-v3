@@ -8,7 +8,7 @@ import (
 
 type PartitionReassignEntity struct {
 
-	// topic名称
+	// Topic名称
 	Topic string `json:"topic"`
 
 	// 分区平衡到的broker列表，自动生成分配方案时需指定该参数。

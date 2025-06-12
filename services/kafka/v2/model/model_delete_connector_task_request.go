@@ -12,7 +12,7 @@ type DeleteConnectorTaskRequest struct {
 	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
-	// Smart Connector任务ID。
+	// Smart Connect任务ID。
 	TaskId string `json:"task_id"`
 }
 

@@ -9,13 +9,13 @@ import (
 // SendKafkaMessageRequestBody Kafka生产消息请求体
 type SendKafkaMessageRequestBody struct {
 
-	// Kafka的topic
+	// Kafka的Topic
 	Topic string `json:"topic"`
 
 	// 消息内容
 	Body string `json:"body"`
 
-	// topic的分区信息等
+	// Topic的分区信息等
 	PropertyList []SendKafkaMessageRequestBodyPropertyList `json:"property_list"`
 }
 

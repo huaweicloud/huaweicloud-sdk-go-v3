@@ -21,16 +21,16 @@ type ListInstanceConsumerGroupTopicsRequest struct {
 	// 偏移量，表示从此偏移量开始查询， offset大于等于0。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 当次查询返回的最大topic个数，默认值为10，取值范围为1~50。
+	// 当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 排序规则： - topic：按topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
+	// 排序规则： - topic：按Topic名称排序。 - partition：按分区数排序。 - messages：按消息数量排序，默认方式。
 	SortKey *string `json:"sort_key,omitempty"`
 
 	// 排序方式。 - asc：升序。 - desc：降序，默认方式。
 	SortDir *string `json:"sort_dir,omitempty"`
 
-	// topic名称。
+	// Topic名称。
 	Topic *string `json:"topic,omitempty"`
 }
 

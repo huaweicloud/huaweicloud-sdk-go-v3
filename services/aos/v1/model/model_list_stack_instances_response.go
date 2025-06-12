@@ -11,7 +11,9 @@ type ListStackInstancesResponse struct {
 
 	// 资源栈实例列表
 	StackInstances *[]StackInstance `json:"stack_instances,omitempty"`
-	HttpStatusCode int              `json:"-"`
+
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListStackInstancesResponse) String() string {

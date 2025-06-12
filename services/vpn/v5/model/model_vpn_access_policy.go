@@ -15,6 +15,9 @@ type VpnAccessPolicy struct {
 	// 访问策略名称
 	Name *string `json:"name,omitempty"`
 
+	// 访问策略类型
+	Type *string `json:"type,omitempty"`
+
 	// 关联用户组ID
 	UserGroupId *string `json:"user_group_id,omitempty"`
 

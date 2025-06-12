@@ -37,6 +37,118 @@ func (i *CreatePrivateProviderVersionInvoker) Invoke() (*model.CreatePrivateProv
 	}
 }
 
+type DeletePrivateProviderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePrivateProviderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeletePrivateProviderInvoker) Invoke() (*model.DeletePrivateProviderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePrivateProviderResponse), nil
+	}
+}
+
+type DeletePrivateProviderVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePrivateProviderVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeletePrivateProviderVersionInvoker) Invoke() (*model.DeletePrivateProviderVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePrivateProviderVersionResponse), nil
+	}
+}
+
+type ListPrivateProviderVersionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPrivateProviderVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPrivateProviderVersionsInvoker) Invoke() (*model.ListPrivateProviderVersionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPrivateProviderVersionsResponse), nil
+	}
+}
+
+type ListPrivateProvidersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPrivateProvidersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPrivateProvidersInvoker) Invoke() (*model.ListPrivateProvidersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPrivateProvidersResponse), nil
+	}
+}
+
+type ShowPrivateProviderMetadataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPrivateProviderMetadataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPrivateProviderMetadataInvoker) Invoke() (*model.ShowPrivateProviderMetadataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPrivateProviderMetadataResponse), nil
+	}
+}
+
+type ShowPrivateProviderVersionMetadataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPrivateProviderVersionMetadataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPrivateProviderVersionMetadataInvoker) Invoke() (*model.ShowPrivateProviderVersionMetadataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPrivateProviderVersionMetadataResponse), nil
+	}
+}
+
+type UpdatePrivateProviderMetadataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePrivateProviderMetadataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePrivateProviderMetadataInvoker) Invoke() (*model.UpdatePrivateProviderMetadataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePrivateProviderMetadataResponse), nil
+	}
+}
+
 type ApplyExecutionPlanInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -914,6 +1026,38 @@ func (i *ParseTemplateVariablesInvoker) Invoke() (*model.ParseTemplateVariablesR
 		return nil, err
 	} else {
 		return result.(*model.ParseTemplateVariablesResponse), nil
+	}
+}
+
+type CreateTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateTemplateInvoker) Invoke() (*model.CreateTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTemplateResponse), nil
+	}
+}
+
+type CreateTemplateVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTemplateVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateTemplateVersionInvoker) Invoke() (*model.CreateTemplateVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTemplateVersionResponse), nil
 	}
 }
 

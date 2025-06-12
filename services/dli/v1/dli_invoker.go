@@ -37,6 +37,22 @@ func (i *AssociateQueueToEnhancedConnectionInvoker) Invoke() (*model.AssociateQu
 	}
 }
 
+type BatchCreateResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateResourceTagsInvoker) Invoke() (*model.BatchCreateResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateResourceTagsResponse), nil
+	}
+}
+
 type BatchDeleteQueuePlansInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -52,6 +68,38 @@ func (i *BatchDeleteQueuePlansInvoker) Invoke() (*model.BatchDeleteQueuePlansRes
 		return nil, err
 	} else {
 		return result.(*model.BatchDeleteQueuePlansResponse), nil
+	}
+}
+
+type BatchDeleteResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteResourceTagsInvoker) Invoke() (*model.BatchDeleteResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteResourceTagsResponse), nil
+	}
+}
+
+type CountResourcesByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountResourcesByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CountResourcesByTagsInvoker) Invoke() (*model.CountResourcesByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountResourcesByTagsResponse), nil
 	}
 }
 
@@ -759,6 +807,38 @@ func (i *ListQueuesInvoker) Invoke() (*model.ListQueuesResponse, error) {
 	}
 }
 
+type ListResourcesByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResourcesByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListResourcesByTagsInvoker) Invoke() (*model.ListResourcesByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResourcesByTagsResponse), nil
+	}
+}
+
+type ListResourcesTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResourcesTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListResourcesTagsInvoker) Invoke() (*model.ListResourcesTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResourcesTagsResponse), nil
+	}
+}
+
 type ListTablePrivilegesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1026,6 +1106,22 @@ func (i *ShowQuotaInvoker) Invoke() (*model.ShowQuotaResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowQuotaResponse), nil
+	}
+}
+
+type ShowResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowResourceTagsInvoker) Invoke() (*model.ShowResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowResourceTagsResponse), nil
 	}
 }
 

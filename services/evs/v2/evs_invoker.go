@@ -37,6 +37,22 @@ func (i *BatchDeleteVolumeTagsInvoker) Invoke() (*model.BatchDeleteVolumeTagsRes
 	}
 }
 
+type BatchResizeVolumesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchResizeVolumesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchResizeVolumesInvoker) Invoke() (*model.BatchResizeVolumesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchResizeVolumesResponse), nil
+	}
+}
+
 type CinderAcceptVolumeTransferInvoker struct {
 	*invoker.BaseInvoker
 }

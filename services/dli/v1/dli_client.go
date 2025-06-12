@@ -61,6 +61,27 @@ func (c *DliClient) AssociateQueueToEnhancedConnectionInvoker(request *model.Ass
 	return &AssociateQueueToEnhancedConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreateResourceTags 批量添加资源标签
+//
+// 批量添加资源标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) BatchCreateResourceTags(request *model.BatchCreateResourceTagsRequest) (*model.BatchCreateResourceTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateResourceTagsResponse), nil
+	}
+}
+
+// BatchCreateResourceTagsInvoker 批量添加资源标签
+func (c *DliClient) BatchCreateResourceTagsInvoker(request *model.BatchCreateResourceTagsRequest) *BatchCreateResourceTagsInvoker {
+	requestDef := GenReqDefForBatchCreateResourceTags()
+	return &BatchCreateResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchDeleteQueuePlans 批量删除队列定时扩缩容计划
 //
@@ -82,6 +103,48 @@ func (c *DliClient) BatchDeleteQueuePlans(request *model.BatchDeleteQueuePlansRe
 func (c *DliClient) BatchDeleteQueuePlansInvoker(request *model.BatchDeleteQueuePlansRequest) *BatchDeleteQueuePlansInvoker {
 	requestDef := GenReqDefForBatchDeleteQueuePlans()
 	return &BatchDeleteQueuePlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteResourceTags 批量删除资源标签
+//
+// 批量删除资源标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) BatchDeleteResourceTags(request *model.BatchDeleteResourceTagsRequest) (*model.BatchDeleteResourceTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteResourceTagsResponse), nil
+	}
+}
+
+// BatchDeleteResourceTagsInvoker 批量删除资源标签
+func (c *DliClient) BatchDeleteResourceTagsInvoker(request *model.BatchDeleteResourceTagsRequest) *BatchDeleteResourceTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteResourceTags()
+	return &BatchDeleteResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountResourcesByTags 查询资源实例数量
+//
+// 查询资源实例数量。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) CountResourcesByTags(request *model.CountResourcesByTagsRequest) (*model.CountResourcesByTagsResponse, error) {
+	requestDef := GenReqDefForCountResourcesByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountResourcesByTagsResponse), nil
+	}
+}
+
+// CountResourcesByTagsInvoker 查询资源实例数量
+func (c *DliClient) CountResourcesByTagsInvoker(request *model.CountResourcesByTagsRequest) *CountResourcesByTagsInvoker {
+	requestDef := GenReqDefForCountResourcesByTags()
+	return &CountResourcesByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -1005,6 +1068,48 @@ func (c *DliClient) ListQueuesInvoker(request *model.ListQueuesRequest) *ListQue
 	return &ListQueuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListResourcesByTags 查询资源实例列表
+//
+// 查询资源实例列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) ListResourcesByTags(request *model.ListResourcesByTagsRequest) (*model.ListResourcesByTagsResponse, error) {
+	requestDef := GenReqDefForListResourcesByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourcesByTagsResponse), nil
+	}
+}
+
+// ListResourcesByTagsInvoker 查询资源实例列表
+func (c *DliClient) ListResourcesByTagsInvoker(request *model.ListResourcesByTagsRequest) *ListResourcesByTagsInvoker {
+	requestDef := GenReqDefForListResourcesByTags()
+	return &ListResourcesByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResourcesTags 查询指定资源类型的标签信息
+//
+// 查询指定资源类型的标签信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) ListResourcesTags(request *model.ListResourcesTagsRequest) (*model.ListResourcesTagsResponse, error) {
+	requestDef := GenReqDefForListResourcesTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourcesTagsResponse), nil
+	}
+}
+
+// ListResourcesTagsInvoker 查询指定资源类型的标签信息
+func (c *DliClient) ListResourcesTagsInvoker(request *model.ListResourcesTagsRequest) *ListResourcesTagsInvoker {
+	requestDef := GenReqDefForListResourcesTags()
+	return &ListResourcesTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // Deprecated: This function is deprecated and will be removed in the future versions.
 // ListTablePrivileges 查看表的用户权限
 //
@@ -1356,6 +1461,27 @@ func (c *DliClient) ShowQuota(request *model.ShowQuotaRequest) (*model.ShowQuota
 func (c *DliClient) ShowQuotaInvoker(request *model.ShowQuotaRequest) *ShowQuotaInvoker {
 	requestDef := GenReqDefForShowQuota()
 	return &ShowQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowResourceTags 查询指定资源实例的标签信息
+//
+// 查询指定资源实例的标签信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) ShowResourceTags(request *model.ShowResourceTagsRequest) (*model.ShowResourceTagsResponse, error) {
+	requestDef := GenReqDefForShowResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowResourceTagsResponse), nil
+	}
+}
+
+// ShowResourceTagsInvoker 查询指定资源实例的标签信息
+func (c *DliClient) ShowResourceTagsInvoker(request *model.ShowResourceTagsRequest) *ShowResourceTagsInvoker {
+	requestDef := GenReqDefForShowResourceTags()
+	return &ShowResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
