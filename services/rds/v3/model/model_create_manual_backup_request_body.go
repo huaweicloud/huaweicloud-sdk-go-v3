@@ -17,10 +17,10 @@ type CreateManualBackupRequestBody struct {
 	// 备份描述，不能包含>!<\"&'=特殊字符，不大于256个字符。
 	Description *string `json:"description,omitempty"`
 
-	// 只支持Microsoft SQL Server，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
+	// 只支持Microsoft SQL Server和RDS for PostgreSQL，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
 	Databases *[]BackupDatabase `json:"databases,omitempty"`
 
-	// 是否分库备份，只适用于SQLServer，默认为false
+	// 是否分库备份，只适用于SQLServer、RDS for PostgreSQL，默认为false
 	BackupDatabaseIndividually *bool `json:"backup_database_individually,omitempty"`
 }
 

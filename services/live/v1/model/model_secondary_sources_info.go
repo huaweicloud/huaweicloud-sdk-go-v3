@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// SecondarySourcesInfo 主入流信息
+// SecondarySourcesInfo 备入流信息
 type SecondarySourcesInfo struct {
 
 	// 频道源流URL，用于外部拉流
@@ -26,6 +26,9 @@ type SecondarySourcesInfo struct {
 
 	// 协议为SRT_PUSH时的加密信息
 	Passphrase *string `json:"passphrase,omitempty"`
+
+	// srt加密算法
+	Pbkeylen *int32 `json:"pbkeylen,omitempty"`
 
 	// 备入流地址列表
 	BackupUrls *[]string `json:"backup_urls,omitempty"`

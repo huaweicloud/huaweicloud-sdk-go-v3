@@ -9,10 +9,10 @@ import (
 // ListFlinkJobsResponse Response Object
 type ListFlinkJobsResponse struct {
 
-	// 执行请求是否成功。“true”表示请求执行成功。
+	// 参数解释:  执行请求是否成功。“true”表示请求执行成功 示例: true 约束限制:  无 取值范围: true,false 默认取值: 无
 	IsSuccess *string `json:"is_success,omitempty"`
 
-	// 系统提示信息，执行成功时，信息可能为空。
+	// 参数解释:  系统提示信息，执行成功时，信息可能为空 示例: success 约束限制:  无 取值范围: 无 默认取值: 无
 	Message *string `json:"message,omitempty"`
 
 	JobList        *FlinkJobList `json:"job_list,omitempty"`

@@ -347,6 +347,27 @@ func (c *DliClient) CreateJobAuthInfoInvoker(request *model.CreateJobAuthInfoReq
 	return &CreateJobAuthInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePeriodElasticResourcePoolSpecChangeOrder 包周期弹性资源池规格变更下单接口
+//
+// 包周期弹性资源池规格变更下单接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) CreatePeriodElasticResourcePoolSpecChangeOrder(request *model.CreatePeriodElasticResourcePoolSpecChangeOrderRequest) (*model.CreatePeriodElasticResourcePoolSpecChangeOrderResponse, error) {
+	requestDef := GenReqDefForCreatePeriodElasticResourcePoolSpecChangeOrder()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePeriodElasticResourcePoolSpecChangeOrderResponse), nil
+	}
+}
+
+// CreatePeriodElasticResourcePoolSpecChangeOrderInvoker 包周期弹性资源池规格变更下单接口
+func (c *DliClient) CreatePeriodElasticResourcePoolSpecChangeOrderInvoker(request *model.CreatePeriodElasticResourcePoolSpecChangeOrderRequest) *CreatePeriodElasticResourcePoolSpecChangeOrderInvoker {
+	requestDef := GenReqDefForCreatePeriodElasticResourcePoolSpecChangeOrder()
+	return &CreatePeriodElasticResourcePoolSpecChangeOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateQueue 创建队列
 //
 // 该API用于创建队列，该队列将会绑定用户指定的计算资源。
@@ -2655,6 +2676,27 @@ func (c *DliClient) CreateSqlJobInvoker(request *model.CreateSqlJobRequest) *Cre
 	return &CreateSqlJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateSqlJobDefendRule 创建SQL拦截规则
+//
+// 该API用于创建SQL拦截规则，拦截匹配规则的SQL。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) CreateSqlJobDefendRule(request *model.CreateSqlJobDefendRuleRequest) (*model.CreateSqlJobDefendRuleResponse, error) {
+	requestDef := GenReqDefForCreateSqlJobDefendRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSqlJobDefendRuleResponse), nil
+	}
+}
+
+// CreateSqlJobDefendRuleInvoker 创建SQL拦截规则
+func (c *DliClient) CreateSqlJobDefendRuleInvoker(request *model.CreateSqlJobDefendRuleRequest) *CreateSqlJobDefendRuleInvoker {
+	requestDef := GenReqDefForCreateSqlJobDefendRule()
+	return &CreateSqlJobDefendRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSqlJobTemplate 存储指定SQL语句
 //
 // 该API用于存储指定的SQL语句，后续可以重复使用。
@@ -2676,6 +2718,27 @@ func (c *DliClient) CreateSqlJobTemplateInvoker(request *model.CreateSqlJobTempl
 	return &CreateSqlJobTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteSqlJobDefendRule 删除SQL拦截规则
+//
+// 该API用于删除SQL拦截规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) DeleteSqlJobDefendRule(request *model.DeleteSqlJobDefendRuleRequest) (*model.DeleteSqlJobDefendRuleResponse, error) {
+	requestDef := GenReqDefForDeleteSqlJobDefendRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSqlJobDefendRuleResponse), nil
+	}
+}
+
+// DeleteSqlJobDefendRuleInvoker 删除SQL拦截规则
+func (c *DliClient) DeleteSqlJobDefendRuleInvoker(request *model.DeleteSqlJobDefendRuleRequest) *DeleteSqlJobDefendRuleInvoker {
+	requestDef := GenReqDefForDeleteSqlJobDefendRule()
+	return &DeleteSqlJobDefendRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExportSqlJobResult 导出查询结果
 //
 // 该API用于将SQL语句的查询结果导出到OBS对象存储中，只支持导出“QUERY”类型作业的查询结果。
@@ -2695,6 +2758,48 @@ func (c *DliClient) ExportSqlJobResult(request *model.ExportSqlJobResultRequest)
 func (c *DliClient) ExportSqlJobResultInvoker(request *model.ExportSqlJobResultRequest) *ExportSqlJobResultInvoker {
 	requestDef := GenReqDefForExportSqlJobResult()
 	return &ExportSqlJobResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSqlJobDefendRules 批量获取SQL拦截规则
+//
+// 该API用于批量获取SQL拦截规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) ListSqlJobDefendRules(request *model.ListSqlJobDefendRulesRequest) (*model.ListSqlJobDefendRulesResponse, error) {
+	requestDef := GenReqDefForListSqlJobDefendRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSqlJobDefendRulesResponse), nil
+	}
+}
+
+// ListSqlJobDefendRulesInvoker 批量获取SQL拦截规则
+func (c *DliClient) ListSqlJobDefendRulesInvoker(request *model.ListSqlJobDefendRulesRequest) *ListSqlJobDefendRulesInvoker {
+	requestDef := GenReqDefForListSqlJobDefendRules()
+	return &ListSqlJobDefendRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSqlJobSystemDefendRules 批量获取系统预制SQL拦截规则
+//
+// 该API用于获取系统预制SQL拦截规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) ListSqlJobSystemDefendRules(request *model.ListSqlJobSystemDefendRulesRequest) (*model.ListSqlJobSystemDefendRulesResponse, error) {
+	requestDef := GenReqDefForListSqlJobSystemDefendRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSqlJobSystemDefendRulesResponse), nil
+	}
+}
+
+// ListSqlJobSystemDefendRulesInvoker 批量获取系统预制SQL拦截规则
+func (c *DliClient) ListSqlJobSystemDefendRulesInvoker(request *model.ListSqlJobSystemDefendRulesRequest) *ListSqlJobSystemDefendRulesInvoker {
+	requestDef := GenReqDefForListSqlJobSystemDefendRules()
+	return &ListSqlJobSystemDefendRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSqlJobTemplates 查看所有SQL模板
@@ -2761,6 +2866,27 @@ func (c *DliClient) PreviewSqlJobResultInvoker(request *model.PreviewSqlJobResul
 	return &PreviewSqlJobResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSqlJobDefendRule 获取SQL拦截规则
+//
+// 该API用于获取单个SQL拦截规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) ShowSqlJobDefendRule(request *model.ShowSqlJobDefendRuleRequest) (*model.ShowSqlJobDefendRuleResponse, error) {
+	requestDef := GenReqDefForShowSqlJobDefendRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSqlJobDefendRuleResponse), nil
+	}
+}
+
+// ShowSqlJobDefendRuleInvoker 获取SQL拦截规则
+func (c *DliClient) ShowSqlJobDefendRuleInvoker(request *model.ShowSqlJobDefendRuleRequest) *ShowSqlJobDefendRuleInvoker {
+	requestDef := GenReqDefForShowSqlJobDefendRule()
+	return &ShowSqlJobDefendRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSqlJobDetail 查询作业详细信息
 //
 // 该API用于查询作业的详细信息，如作业的databasename、tablename、file size和export mode等信息。
@@ -2822,6 +2948,48 @@ func (c *DliClient) ShowSqlJobStatus(request *model.ShowSqlJobStatusRequest) (*m
 func (c *DliClient) ShowSqlJobStatusInvoker(request *model.ShowSqlJobStatusRequest) *ShowSqlJobStatusInvoker {
 	requestDef := GenReqDefForShowSqlJobStatus()
 	return &ShowSqlJobStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSqlJobSystemDefendRule 获取单个系统预制SQL拦截规则
+//
+// 该API用于获取系统预制SQL拦截规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) ShowSqlJobSystemDefendRule(request *model.ShowSqlJobSystemDefendRuleRequest) (*model.ShowSqlJobSystemDefendRuleResponse, error) {
+	requestDef := GenReqDefForShowSqlJobSystemDefendRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSqlJobSystemDefendRuleResponse), nil
+	}
+}
+
+// ShowSqlJobSystemDefendRuleInvoker 获取单个系统预制SQL拦截规则
+func (c *DliClient) ShowSqlJobSystemDefendRuleInvoker(request *model.ShowSqlJobSystemDefendRuleRequest) *ShowSqlJobSystemDefendRuleInvoker {
+	requestDef := GenReqDefForShowSqlJobSystemDefendRule()
+	return &ShowSqlJobSystemDefendRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSqlJobDefendRule 更新SQL拦截规则
+//
+// 该API用于更新SQL拦截规则，拦截匹配规则的SQL。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DliClient) UpdateSqlJobDefendRule(request *model.UpdateSqlJobDefendRuleRequest) (*model.UpdateSqlJobDefendRuleResponse, error) {
+	requestDef := GenReqDefForUpdateSqlJobDefendRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSqlJobDefendRuleResponse), nil
+	}
+}
+
+// UpdateSqlJobDefendRuleInvoker 更新SQL拦截规则
+func (c *DliClient) UpdateSqlJobDefendRuleInvoker(request *model.UpdateSqlJobDefendRuleRequest) *UpdateSqlJobDefendRuleInvoker {
+	requestDef := GenReqDefForUpdateSqlJobDefendRule()
+	return &UpdateSqlJobDefendRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSqlJobTemplate 更新SQL模板

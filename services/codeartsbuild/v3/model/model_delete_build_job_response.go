@@ -8,7 +8,7 @@ import (
 
 // DeleteBuildJobResponse Response Object
 type DeleteBuildJobResponse struct {
-	Result *DeleteBuildJobResponseBodyResult `json:"result,omitempty"`
+	Result *DeleteTheJobResponseBodyResult `json:"result,omitempty"`
 
 	// 状态信息
 	Status         *string `json:"status,omitempty"`

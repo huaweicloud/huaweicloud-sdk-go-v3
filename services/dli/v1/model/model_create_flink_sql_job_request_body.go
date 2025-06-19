@@ -92,6 +92,14 @@ type CreateFlinkSqlJobRequestBody struct {
 
 	// Flink版本。当前只支持1.10和1.12。
 	FlinkVersion *string `json:"flink_version,omitempty"`
+
+	// 授权给DLI的委托名。Flink1.15版本时支持配置该参数。
+	ExecutionAgencyUrn *string `json:"execution_agency_urn,omitempty"`
+
+	// 资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。v2版本对比于v1模版不支持设置CU数量，支持直接设置Job Manager Memory和Task Manager Memory。v1：适用于Flink 1.12、Flink 1.13、Flink 1.15。v2：适用于Flink 1.13、Flink 1.15、Flink 1.17。优先推荐使用V2版本的参数设置。
+	ResourceConfigVersion *string `json:"resource_config_version,omitempty"`
+
+	ResourceConfig *ResourceConfig `json:"resource_config,omitempty"`
 }
 
 func (o CreateFlinkSqlJobRequestBody) String() string {

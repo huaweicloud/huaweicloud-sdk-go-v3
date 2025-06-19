@@ -9,10 +9,10 @@ import (
 // JobResource 创建会话请求参数resources的元素。
 type JobResource struct {
 
-	// 资源名称。
+	// 参数解释:   资源名称 示例: group.tesddws/gsjdbc3.jar 约束限制:  无 取值范围: 无 默认取值: 无
 	Name *string `json:"name,omitempty"`
 
-	// 资源类型。
+	// 参数解释:   资源类型 示例: jar 约束限制:  无 取值范围: 无 默认取值: 无
 	Type *string `json:"type,omitempty"`
 }
 

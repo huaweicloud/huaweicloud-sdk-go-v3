@@ -597,6 +597,118 @@ func (i *CheckJobNameIsExistsInvoker) Invoke() (*model.CheckJobNameIsExistsRespo
 	}
 }
 
+type CheckWebhookUrlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckWebhookUrlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckWebhookUrlInvoker) Invoke() (*model.CheckWebhookUrlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckWebhookUrlResponse), nil
+	}
+}
+
+type ClearRecyclingJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ClearRecyclingJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ClearRecyclingJobsInvoker) Invoke() (*model.ClearRecyclingJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ClearRecyclingJobsResponse), nil
+	}
+}
+
+type CopyJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CopyJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CopyJobInvoker) Invoke() (*model.CopyJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CopyJobResponse), nil
+	}
+}
+
+type DeleteRecyclingJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteRecyclingJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteRecyclingJobsInvoker) Invoke() (*model.DeleteRecyclingJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteRecyclingJobsResponse), nil
+	}
+}
+
+type DeleteTheJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTheJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteTheJobInvoker) Invoke() (*model.DeleteTheJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTheJobResponse), nil
+	}
+}
+
+type DisableTheJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisableTheJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DisableTheJobInvoker) Invoke() (*model.DisableTheJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisableTheJobResponse), nil
+	}
+}
+
+type ExecuteJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteJobInvoker) Invoke() (*model.ExecuteJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteJobResponse), nil
+	}
+}
+
 type ListBuildParameterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -674,6 +786,38 @@ func (i *ListUpdateJobHistoryInvoker) Invoke() (*model.ListUpdateJobHistoryRespo
 		return nil, err
 	} else {
 		return result.(*model.ListUpdateJobHistoryResponse), nil
+	}
+}
+
+type RestoreRecyclingJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestoreRecyclingJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RestoreRecyclingJobsInvoker) Invoke() (*model.RestoreRecyclingJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestoreRecyclingJobsResponse), nil
+	}
+}
+
+type SetKeepTimeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetKeepTimeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetKeepTimeInvoker) Invoke() (*model.SetKeepTimeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetKeepTimeResponse), nil
 	}
 }
 
@@ -885,6 +1029,54 @@ func (i *ShowRunningStatusInvoker) Invoke() (*model.ShowRunningStatusResponse, e
 	}
 }
 
+type UpdateNewJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateNewJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateNewJobInvoker) Invoke() (*model.UpdateNewJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateNewJobResponse), nil
+	}
+}
+
+type DeleteKeystoreInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteKeystoreInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteKeystoreInvoker) Invoke() (*model.DeleteKeystoreResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteKeystoreResponse), nil
+	}
+}
+
+type DeleteKeystorePermissionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteKeystorePermissionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteKeystorePermissionInvoker) Invoke() (*model.DeleteKeystorePermissionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteKeystorePermissionResponse), nil
+	}
+}
+
 type DownloadKeystoreByNameInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1010,6 +1202,22 @@ func (i *StopJobInvoker) Invoke() (*model.StopJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.StopJobResponse), nil
+	}
+}
+
+type ListBriefRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBriefRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBriefRecordInvoker) Invoke() (*model.ListBriefRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBriefRecordResponse), nil
 	}
 }
 
@@ -1269,6 +1477,22 @@ func (i *ShowReportSummaryInvoker) Invoke() (*model.ShowReportSummaryResponse, e
 	}
 }
 
+type DeleteTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteTemplateInvoker) Invoke() (*model.DeleteTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTemplateResponse), nil
+	}
+}
+
 type ListCustomTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1298,6 +1522,22 @@ func (i *ListOfficialTemplateInvoker) Invoke() (*model.ListOfficialTemplateRespo
 		return nil, err
 	} else {
 		return result.(*model.ListOfficialTemplateResponse), nil
+	}
+}
+
+type ListRecommendOfficialTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRecommendOfficialTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRecommendOfficialTemplateInvoker) Invoke() (*model.ListRecommendOfficialTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRecommendOfficialTemplateResponse), nil
 	}
 }
 

@@ -796,6 +796,153 @@ func (c *CodeArtsBuildClient) CheckJobNameIsExistsInvoker(request *model.CheckJo
 	return &CheckJobNameIsExistsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckWebhookUrl 检查webhook地址参数
+//
+// 检查webhook地址参数
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) CheckWebhookUrl(request *model.CheckWebhookUrlRequest) (*model.CheckWebhookUrlResponse, error) {
+	requestDef := GenReqDefForCheckWebhookUrl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckWebhookUrlResponse), nil
+	}
+}
+
+// CheckWebhookUrlInvoker 检查webhook地址参数
+func (c *CodeArtsBuildClient) CheckWebhookUrlInvoker(request *model.CheckWebhookUrlRequest) *CheckWebhookUrlInvoker {
+	requestDef := GenReqDefForCheckWebhookUrl()
+	return &CheckWebhookUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ClearRecyclingJobs 清空回收站中的任务
+//
+// 清空回收站中的任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) ClearRecyclingJobs(request *model.ClearRecyclingJobsRequest) (*model.ClearRecyclingJobsResponse, error) {
+	requestDef := GenReqDefForClearRecyclingJobs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ClearRecyclingJobsResponse), nil
+	}
+}
+
+// ClearRecyclingJobsInvoker 清空回收站中的任务
+func (c *CodeArtsBuildClient) ClearRecyclingJobsInvoker(request *model.ClearRecyclingJobsRequest) *ClearRecyclingJobsInvoker {
+	requestDef := GenReqDefForClearRecyclingJobs()
+	return &ClearRecyclingJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CopyJob 复制构建任务
+//
+// 复制构建任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) CopyJob(request *model.CopyJobRequest) (*model.CopyJobResponse, error) {
+	requestDef := GenReqDefForCopyJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CopyJobResponse), nil
+	}
+}
+
+// CopyJobInvoker 复制构建任务
+func (c *CodeArtsBuildClient) CopyJobInvoker(request *model.CopyJobRequest) *CopyJobInvoker {
+	requestDef := GenReqDefForCopyJob()
+	return &CopyJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRecyclingJobs 删除回收站中的任务
+//
+// 删除回收站中的任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) DeleteRecyclingJobs(request *model.DeleteRecyclingJobsRequest) (*model.DeleteRecyclingJobsResponse, error) {
+	requestDef := GenReqDefForDeleteRecyclingJobs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteRecyclingJobsResponse), nil
+	}
+}
+
+// DeleteRecyclingJobsInvoker 删除回收站中的任务
+func (c *CodeArtsBuildClient) DeleteRecyclingJobsInvoker(request *model.DeleteRecyclingJobsRequest) *DeleteRecyclingJobsInvoker {
+	requestDef := GenReqDefForDeleteRecyclingJobs()
+	return &DeleteRecyclingJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTheJob 删除任务
+//
+// 删除任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) DeleteTheJob(request *model.DeleteTheJobRequest) (*model.DeleteTheJobResponse, error) {
+	requestDef := GenReqDefForDeleteTheJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTheJobResponse), nil
+	}
+}
+
+// DeleteTheJobInvoker 删除任务
+func (c *CodeArtsBuildClient) DeleteTheJobInvoker(request *model.DeleteTheJobRequest) *DeleteTheJobInvoker {
+	requestDef := GenReqDefForDeleteTheJob()
+	return &DeleteTheJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisableTheJob 禁用任务
+//
+// 禁用任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) DisableTheJob(request *model.DisableTheJobRequest) (*model.DisableTheJobResponse, error) {
+	requestDef := GenReqDefForDisableTheJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisableTheJobResponse), nil
+	}
+}
+
+// DisableTheJobInvoker 禁用任务
+func (c *CodeArtsBuildClient) DisableTheJobInvoker(request *model.DisableTheJobRequest) *DisableTheJobInvoker {
+	requestDef := GenReqDefForDisableTheJob()
+	return &DisableTheJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteJob 执行构建
+//
+// 执行构建任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) ExecuteJob(request *model.ExecuteJobRequest) (*model.ExecuteJobResponse, error) {
+	requestDef := GenReqDefForExecuteJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteJobResponse), nil
+	}
+}
+
+// ExecuteJobInvoker 执行构建
+func (c *CodeArtsBuildClient) ExecuteJobInvoker(request *model.ExecuteJobRequest) *ExecuteJobInvoker {
+	requestDef := GenReqDefForExecuteJob()
+	return &ExecuteJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListBuildParameter 详情页获取构建参数
 //
 // 详情页获取构建参数
@@ -899,6 +1046,48 @@ func (c *CodeArtsBuildClient) ListUpdateJobHistory(request *model.ListUpdateJobH
 func (c *CodeArtsBuildClient) ListUpdateJobHistoryInvoker(request *model.ListUpdateJobHistoryRequest) *ListUpdateJobHistoryInvoker {
 	requestDef := GenReqDefForListUpdateJobHistory()
 	return &ListUpdateJobHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestoreRecyclingJobs 恢复回收站中的任务
+//
+// 恢复回收站中的任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) RestoreRecyclingJobs(request *model.RestoreRecyclingJobsRequest) (*model.RestoreRecyclingJobsResponse, error) {
+	requestDef := GenReqDefForRestoreRecyclingJobs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestoreRecyclingJobsResponse), nil
+	}
+}
+
+// RestoreRecyclingJobsInvoker 恢复回收站中的任务
+func (c *CodeArtsBuildClient) RestoreRecyclingJobsInvoker(request *model.RestoreRecyclingJobsRequest) *RestoreRecyclingJobsInvoker {
+	requestDef := GenReqDefForRestoreRecyclingJobs()
+	return &RestoreRecyclingJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetKeepTime 设置回收站中的任务保留时间
+//
+// 设置回收站中的任务保留时间,该接口需要租户账号才能访问，租户子账号无权限访问。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) SetKeepTime(request *model.SetKeepTimeRequest) (*model.SetKeepTimeResponse, error) {
+	requestDef := GenReqDefForSetKeepTime()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetKeepTimeResponse), nil
+	}
+}
+
+// SetKeepTimeInvoker 设置回收站中的任务保留时间
+func (c *CodeArtsBuildClient) SetKeepTimeInvoker(request *model.SetKeepTimeRequest) *SetKeepTimeInvoker {
+	requestDef := GenReqDefForSetKeepTime()
+	return &SetKeepTimeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowBuildParamsList 编辑页获取参数类型的接口
@@ -1174,6 +1363,69 @@ func (c *CodeArtsBuildClient) ShowRunningStatusInvoker(request *model.ShowRunnin
 	return &ShowRunningStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateNewJob 更新构建任务
+//
+// 更新构建任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) UpdateNewJob(request *model.UpdateNewJobRequest) (*model.UpdateNewJobResponse, error) {
+	requestDef := GenReqDefForUpdateNewJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateNewJobResponse), nil
+	}
+}
+
+// UpdateNewJobInvoker 更新构建任务
+func (c *CodeArtsBuildClient) UpdateNewJobInvoker(request *model.UpdateNewJobRequest) *UpdateNewJobInvoker {
+	requestDef := GenReqDefForUpdateNewJob()
+	return &UpdateNewJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteKeystore 删除文件管理文件
+//
+// 删除文件管理文件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) DeleteKeystore(request *model.DeleteKeystoreRequest) (*model.DeleteKeystoreResponse, error) {
+	requestDef := GenReqDefForDeleteKeystore()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteKeystoreResponse), nil
+	}
+}
+
+// DeleteKeystoreInvoker 删除文件管理文件
+func (c *CodeArtsBuildClient) DeleteKeystoreInvoker(request *model.DeleteKeystoreRequest) *DeleteKeystoreInvoker {
+	requestDef := GenReqDefForDeleteKeystore()
+	return &DeleteKeystoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteKeystorePermission 文件管理删除权限
+//
+// 文件管理删除权限
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) DeleteKeystorePermission(request *model.DeleteKeystorePermissionRequest) (*model.DeleteKeystorePermissionResponse, error) {
+	requestDef := GenReqDefForDeleteKeystorePermission()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteKeystorePermissionResponse), nil
+	}
+}
+
+// DeleteKeystorePermissionInvoker 文件管理删除权限
+func (c *CodeArtsBuildClient) DeleteKeystorePermissionInvoker(request *model.DeleteKeystorePermissionRequest) *DeleteKeystorePermissionInvoker {
+	requestDef := GenReqDefForDeleteKeystorePermission()
+	return &DeleteKeystorePermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DownloadKeystoreByName 文件管理文件下载
 //
 // 文件管理文件下载
@@ -1340,6 +1592,27 @@ func (c *CodeArtsBuildClient) StopJob(request *model.StopJobRequest) (*model.Sto
 func (c *CodeArtsBuildClient) StopJobInvoker(request *model.StopJobRequest) *StopJobInvoker {
 	requestDef := GenReqDefForStopJob()
 	return &StopJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBriefRecord 获取指定工程的简要构建信息
+//
+// 获取指定工程的简要构建信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) ListBriefRecord(request *model.ListBriefRecordRequest) (*model.ListBriefRecordResponse, error) {
+	requestDef := GenReqDefForListBriefRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBriefRecordResponse), nil
+	}
+}
+
+// ListBriefRecordInvoker 获取指定工程的简要构建信息
+func (c *CodeArtsBuildClient) ListBriefRecordInvoker(request *model.ListBriefRecordRequest) *ListBriefRecordInvoker {
+	requestDef := GenReqDefForListBriefRecord()
+	return &ListBriefRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListBuildInfoRecordByJobId 获取任务构建记录列表v1
@@ -1678,6 +1951,27 @@ func (c *CodeArtsBuildClient) ShowReportSummaryInvoker(request *model.ShowReport
 	return &ShowReportSummaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteTemplate 删除构建模板
+//
+// 删除构建模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) DeleteTemplate(request *model.DeleteTemplateRequest) (*model.DeleteTemplateResponse, error) {
+	requestDef := GenReqDefForDeleteTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTemplateResponse), nil
+	}
+}
+
+// DeleteTemplateInvoker 删除构建模板
+func (c *CodeArtsBuildClient) DeleteTemplateInvoker(request *model.DeleteTemplateRequest) *DeleteTemplateInvoker {
+	requestDef := GenReqDefForDeleteTemplate()
+	return &DeleteTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCustomTemplate 根据条件查询特定模板
 //
 // 根据条件查询特定模板
@@ -1718,6 +2012,27 @@ func (c *CodeArtsBuildClient) ListOfficialTemplate(request *model.ListOfficialTe
 func (c *CodeArtsBuildClient) ListOfficialTemplateInvoker(request *model.ListOfficialTemplateRequest) *ListOfficialTemplateInvoker {
 	requestDef := GenReqDefForListOfficialTemplate()
 	return &ListOfficialTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRecommendOfficialTemplate 获取官方推荐模板
+//
+// 获取官方推荐模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) ListRecommendOfficialTemplate(request *model.ListRecommendOfficialTemplateRequest) (*model.ListRecommendOfficialTemplateResponse, error) {
+	requestDef := GenReqDefForListRecommendOfficialTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRecommendOfficialTemplateResponse), nil
+	}
+}
+
+// ListRecommendOfficialTemplateInvoker 获取官方推荐模板
+func (c *CodeArtsBuildClient) ListRecommendOfficialTemplateInvoker(request *model.ListRecommendOfficialTemplateRequest) *ListRecommendOfficialTemplateInvoker {
+	requestDef := GenReqDefForListRecommendOfficialTemplate()
+	return &ListRecommendOfficialTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowYamlTemplate 获取代码化构建默认模板

@@ -14,6 +14,9 @@ type RunAuthorizationActionRequestBody struct {
 	// 被赋权的用户名称，该用户将有权访问指定的DLI资源权限，被收回或者更新访问权限。
 	UserName *string `json:"user_name,omitempty"`
 
+	// 被赋权的项目ID，数据赋权给其他项目后，该项目的管理员将有权访问指定的数据库或数据表。
+	ProjectId *string `json:"projectId,omitempty"`
+
 	// 被赋权的项目ID，数据赋权给其他项目后，该项目的管理员将 有权访问指定的DLI资源权限，被收回或者更新访问权限。
 	GrantProjectId *string `json:"grant_project_id,omitempty"`
 

@@ -7229,6 +7229,27 @@ func (c *DataArtsStudioClient) UpdateDirectoryInvoker(request *model.UpdateDirec
 	return &UpdateDirectoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateEntityAttribute 修改资产指定属性
+//
+// 修改资产指定属性。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UpdateEntityAttribute(request *model.UpdateEntityAttributeRequest) (*model.UpdateEntityAttributeResponse, error) {
+	requestDef := GenReqDefForUpdateEntityAttribute()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEntityAttributeResponse), nil
+	}
+}
+
+// UpdateEntityAttributeInvoker 修改资产指定属性
+func (c *DataArtsStudioClient) UpdateEntityAttributeInvoker(request *model.UpdateEntityAttributeRequest) *UpdateEntityAttributeInvoker {
+	requestDef := GenReqDefForUpdateEntityAttribute()
+	return &UpdateEntityAttributeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateFactoryJobName 修改作业名称
 //
 // 修改作业名称

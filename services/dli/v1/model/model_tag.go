@@ -9,10 +9,10 @@ import (
 // Tag 资源标签
 type Tag struct {
 
-	// 键
+	// 参数解释:  键 示例: key 约束限制:  长度大于等于1且小于等于128 取值范围: 无 默认取值: 无
 	Key string `json:"key"`
 
-	// 值
+	// 参数解释:  值 示例: value 约束限制:  长度大于等于1且小于等于255 取值范围: 无 默认取值: 无
 	Value string `json:"value"`
 }
 

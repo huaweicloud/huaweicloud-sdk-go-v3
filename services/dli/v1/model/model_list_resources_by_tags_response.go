@@ -8,8 +8,13 @@ import (
 
 // ListResourcesByTagsResponse Response Object
 type ListResourcesByTagsResponse struct {
-	Body           *string `json:"body,omitempty"`
-	HttpStatusCode int     `json:"-"`
+
+	// 总记录数。
+	TotalCount *int32 `json:"total_count,omitempty"`
+
+	// 资源实例列表。
+	Resources      *[]Resource `json:"resources,omitempty"`
+	HttpStatusCode int         `json:"-"`
 }
 
 func (o ListResourcesByTagsResponse) String() string {

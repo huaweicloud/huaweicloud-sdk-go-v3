@@ -19,6 +19,8 @@ type ModifyOttChannelInputReq struct {
 	Id string `json:"id"`
 
 	Input *InputStreamInfo `json:"input,omitempty"`
+
+	EncoderSettingsExpand *EncoderSettingsExpand `json:"encoder_settings_expand,omitempty"`
 }
 
 func (o ModifyOttChannelInputReq) String() string {

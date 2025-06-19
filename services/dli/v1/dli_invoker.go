@@ -255,6 +255,22 @@ func (i *CreateJobAuthInfoInvoker) Invoke() (*model.CreateJobAuthInfoResponse, e
 	}
 }
 
+type CreatePeriodElasticResourcePoolSpecChangeOrderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePeriodElasticResourcePoolSpecChangeOrderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreatePeriodElasticResourcePoolSpecChangeOrderInvoker) Invoke() (*model.CreatePeriodElasticResourcePoolSpecChangeOrderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePeriodElasticResourcePoolSpecChangeOrderResponse), nil
+	}
+}
+
 type CreateQueueInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2019,6 +2035,22 @@ func (i *CreateSqlJobInvoker) Invoke() (*model.CreateSqlJobResponse, error) {
 	}
 }
 
+type CreateSqlJobDefendRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSqlJobDefendRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSqlJobDefendRuleInvoker) Invoke() (*model.CreateSqlJobDefendRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSqlJobDefendRuleResponse), nil
+	}
+}
+
 type CreateSqlJobTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2035,6 +2067,22 @@ func (i *CreateSqlJobTemplateInvoker) Invoke() (*model.CreateSqlJobTemplateRespo
 	}
 }
 
+type DeleteSqlJobDefendRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSqlJobDefendRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteSqlJobDefendRuleInvoker) Invoke() (*model.DeleteSqlJobDefendRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSqlJobDefendRuleResponse), nil
+	}
+}
+
 type ExportSqlJobResultInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2048,6 +2096,38 @@ func (i *ExportSqlJobResultInvoker) Invoke() (*model.ExportSqlJobResultResponse,
 		return nil, err
 	} else {
 		return result.(*model.ExportSqlJobResultResponse), nil
+	}
+}
+
+type ListSqlJobDefendRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSqlJobDefendRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSqlJobDefendRulesInvoker) Invoke() (*model.ListSqlJobDefendRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSqlJobDefendRulesResponse), nil
+	}
+}
+
+type ListSqlJobSystemDefendRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSqlJobSystemDefendRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSqlJobSystemDefendRulesInvoker) Invoke() (*model.ListSqlJobSystemDefendRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSqlJobSystemDefendRulesResponse), nil
 	}
 }
 
@@ -2099,6 +2179,22 @@ func (i *PreviewSqlJobResultInvoker) Invoke() (*model.PreviewSqlJobResultRespons
 	}
 }
 
+type ShowSqlJobDefendRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSqlJobDefendRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSqlJobDefendRuleInvoker) Invoke() (*model.ShowSqlJobDefendRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSqlJobDefendRuleResponse), nil
+	}
+}
+
 type ShowSqlJobDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2144,6 +2240,38 @@ func (i *ShowSqlJobStatusInvoker) Invoke() (*model.ShowSqlJobStatusResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowSqlJobStatusResponse), nil
+	}
+}
+
+type ShowSqlJobSystemDefendRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSqlJobSystemDefendRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSqlJobSystemDefendRuleInvoker) Invoke() (*model.ShowSqlJobSystemDefendRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSqlJobSystemDefendRuleResponse), nil
+	}
+}
+
+type UpdateSqlJobDefendRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSqlJobDefendRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSqlJobDefendRuleInvoker) Invoke() (*model.UpdateSqlJobDefendRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSqlJobDefendRuleResponse), nil
 	}
 }
 

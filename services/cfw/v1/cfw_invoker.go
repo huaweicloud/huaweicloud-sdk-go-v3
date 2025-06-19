@@ -389,6 +389,22 @@ func (i *DeleteFirewallInvoker) Invoke() (*model.DeleteFirewallResponse, error) 
 	}
 }
 
+type DeleteIpBlacklistInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteIpBlacklistInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteIpBlacklistInvoker) Invoke() (*model.DeleteIpBlacklistResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteIpBlacklistResponse), nil
+	}
+}
+
 type DeleteServiceItemInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -434,6 +450,54 @@ func (i *DeleteTagInvoker) Invoke() (*model.DeleteTagResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteTagResponse), nil
+	}
+}
+
+type EnableIpBlacklistInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *EnableIpBlacklistInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *EnableIpBlacklistInvoker) Invoke() (*model.EnableIpBlacklistResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.EnableIpBlacklistResponse), nil
+	}
+}
+
+type ExportIpBlacklistInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportIpBlacklistInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExportIpBlacklistInvoker) Invoke() (*model.ExportIpBlacklistResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportIpBlacklistResponse), nil
+	}
+}
+
+type ImportIpBlacklistInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ImportIpBlacklistInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ImportIpBlacklistInvoker) Invoke() (*model.ImportIpBlacklistResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ImportIpBlacklistResponse), nil
 	}
 }
 
@@ -709,6 +773,38 @@ func (i *ListFlowLogsInvoker) Invoke() (*model.ListFlowLogsResponse, error) {
 	}
 }
 
+type ListIpBlacklistInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIpBlacklistInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListIpBlacklistInvoker) Invoke() (*model.ListIpBlacklistResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIpBlacklistResponse), nil
+	}
+}
+
+type ListIpBlacklistSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIpBlacklistSwitchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListIpBlacklistSwitchInvoker) Invoke() (*model.ListIpBlacklistSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIpBlacklistSwitchResponse), nil
+	}
+}
+
 type ListJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -834,6 +930,22 @@ func (i *ListServiceSetsInvoker) Invoke() (*model.ListServiceSetsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListServiceSetsResponse), nil
+	}
+}
+
+type RetryIpBlacklistInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RetryIpBlacklistInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RetryIpBlacklistInvoker) Invoke() (*model.RetryIpBlacklistResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RetryIpBlacklistResponse), nil
 	}
 }
 

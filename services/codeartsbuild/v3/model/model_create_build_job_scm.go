@@ -27,6 +27,9 @@ type CreateBuildJobScm struct {
 	// 是否自动构建
 	IsAutoBuild *bool `json:"is_auto_build,omitempty"`
 
+	// 是否启用gitlfs
+	EnableGitLfs *bool `json:"enable_git_lfs,omitempty"`
+
 	// 构建类别
 	BuildType *string `json:"build_type,omitempty"`
 
@@ -38,6 +41,12 @@ type CreateBuildJobScm struct {
 
 	// source
 	Source *string `json:"source,omitempty"`
+
+	// 仓库分组
+	GroupName *string `json:"group_name,omitempty"`
+
+	// 仓库名称
+	RepoName *string `json:"repo_name,omitempty"`
 }
 
 func (o CreateBuildJobScm) String() string {

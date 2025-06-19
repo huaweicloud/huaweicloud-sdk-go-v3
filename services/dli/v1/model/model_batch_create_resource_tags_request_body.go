@@ -9,8 +9,11 @@ import (
 // BatchCreateResourceTagsRequestBody 批量添加资源标签请求体。
 type BatchCreateResourceTagsRequestBody struct {
 
-	// 标签列表
-	Tags *[]Tag `json:"tags,omitempty"`
+	// 标签列表。
+	Tags []TagWithValues `json:"tags"`
+
+	// 标签数量。
+	Count *int64 `json:"count,omitempty"`
 }
 
 func (o BatchCreateResourceTagsRequestBody) String() string {

@@ -677,6 +677,22 @@ func (i *ShowInstanceInvoker) Invoke() (*model.ShowInstanceResponse, error) {
 	}
 }
 
+type ShowInstanceNodesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceNodesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceNodesInvoker) Invoke() (*model.ShowInstanceNodesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceNodesResponse), nil
+	}
+}
+
 type ShowQuotasInvoker struct {
 	*invoker.BaseInvoker
 }

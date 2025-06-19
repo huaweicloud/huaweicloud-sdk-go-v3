@@ -28,7 +28,7 @@ type UpdateInstanceTopicReqTopics struct {
 	NewPartitionBrokers *[]int32 `json:"new_partition_brokers,omitempty"`
 
 	// Topic配置
-	TopicOtherConfigs *[]CreateInstanceTopicReqTopicOtherConfigs `json:"topic_other_configs,omitempty"`
+	TopicOtherConfigs *[]UpdateInstanceTopicReqTopicOtherConfigs `json:"topic_other_configs,omitempty"`
 
 	// Topic描述
 	TopicDesc *string `json:"topic_desc,omitempty"`

@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// DeleteBuildJobResponseBodyResult 结果
-type DeleteBuildJobResponseBodyResult struct {
+// DeleteTheJobResponseBodyResult 结果
+type DeleteTheJobResponseBodyResult struct {
 
 	// 构建任务ID
 	JobId *string `json:"job_id,omitempty"`
@@ -16,11 +16,11 @@ type DeleteBuildJobResponseBodyResult struct {
 	ProjectId *string `json:"project_id,omitempty"`
 }
 
-func (o DeleteBuildJobResponseBodyResult) String() string {
+func (o DeleteTheJobResponseBodyResult) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "DeleteBuildJobResponseBodyResult struct{}"
+		return "DeleteTheJobResponseBodyResult struct{}"
 	}
 
-	return strings.Join([]string{"DeleteBuildJobResponseBodyResult", string(data)}, " ")
+	return strings.Join([]string{"DeleteTheJobResponseBodyResult", string(data)}, " ")
 }

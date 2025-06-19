@@ -523,6 +523,27 @@ func (c *CfwClient) DeleteFirewallInvoker(request *model.DeleteFirewallRequest) 
 	return &DeleteFirewallInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteIpBlacklist 删除已经导入的IP黑名单
+//
+// 删除流量过滤功能下已经导入的IP黑名单，指定生效范围进行删除。 标准版的墙只会存在生效范围为EIP的IP黑名单，专业版的墙会存在生效范围为EIP和NAT的IP黑名单。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) DeleteIpBlacklist(request *model.DeleteIpBlacklistRequest) (*model.DeleteIpBlacklistResponse, error) {
+	requestDef := GenReqDefForDeleteIpBlacklist()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteIpBlacklistResponse), nil
+	}
+}
+
+// DeleteIpBlacklistInvoker 删除已经导入的IP黑名单
+func (c *CfwClient) DeleteIpBlacklistInvoker(request *model.DeleteIpBlacklistRequest) *DeleteIpBlacklistInvoker {
+	requestDef := GenReqDefForDeleteIpBlacklist()
+	return &DeleteIpBlacklistInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteServiceItem 删除服务成员
 //
 // 删除服务组成员
@@ -584,6 +605,72 @@ func (c *CfwClient) DeleteTag(request *model.DeleteTagRequest) (*model.DeleteTag
 func (c *CfwClient) DeleteTagInvoker(request *model.DeleteTagRequest) *DeleteTagInvoker {
 	requestDef := GenReqDefForDeleteTag()
 	return &DeleteTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// EnableIpBlacklist 开启或者关闭流量过滤的IP黑名单功能
+//
+// 开启或者关闭流量过滤功能，当前流量过滤是通过导入IP黑名单实现的。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) EnableIpBlacklist(request *model.EnableIpBlacklistRequest) (*model.EnableIpBlacklistResponse, error) {
+	requestDef := GenReqDefForEnableIpBlacklist()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.EnableIpBlacklistResponse), nil
+	}
+}
+
+// EnableIpBlacklistInvoker 开启或者关闭流量过滤的IP黑名单功能
+func (c *CfwClient) EnableIpBlacklistInvoker(request *model.EnableIpBlacklistRequest) *EnableIpBlacklistInvoker {
+	requestDef := GenReqDefForEnableIpBlacklist()
+	return &EnableIpBlacklistInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportIpBlacklist 导出用于流量过滤的IP黑名单
+//
+// 指定IP黑名单的名字进行导出，当前只有两种文件名，在EIP生效的文件名为ip-blacklist-eip.txt，在 NAT生效的文件名为ip-blacklist-nat.txt。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) ExportIpBlacklist(request *model.ExportIpBlacklistRequest) (*model.ExportIpBlacklistResponse, error) {
+	requestDef := GenReqDefForExportIpBlacklist()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportIpBlacklistResponse), nil
+	}
+}
+
+// ExportIpBlacklistInvoker 导出用于流量过滤的IP黑名单
+func (c *CfwClient) ExportIpBlacklistInvoker(request *model.ExportIpBlacklistRequest) *ExportIpBlacklistInvoker {
+	requestDef := GenReqDefForExportIpBlacklist()
+	return &ExportIpBlacklistInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportIpBlacklist 导入IP黑名单用于流量过滤
+//
+// 此接口用来导入IP黑名单，IP列表保存在request的body中，IP列表支持的格式如下：
+// 单个IP地址，例如：100.1.1.10
+// 连续的IP地址段，例如：80.1.1.3-80.1.1.30
+// 掩码格式的网段，例如：6.6.6.0/24
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) ImportIpBlacklist(request *model.ImportIpBlacklistRequest) (*model.ImportIpBlacklistResponse, error) {
+	requestDef := GenReqDefForImportIpBlacklist()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ImportIpBlacklistResponse), nil
+	}
+}
+
+// ImportIpBlacklistInvoker 导入IP黑名单用于流量过滤
+func (c *CfwClient) ImportIpBlacklistInvoker(request *model.ImportIpBlacklistRequest) *ImportIpBlacklistInvoker {
+	requestDef := GenReqDefForImportIpBlacklist()
+	return &ImportIpBlacklistInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAccessControlLogs 查询访问控制日志
@@ -943,6 +1030,48 @@ func (c *CfwClient) ListFlowLogsInvoker(request *model.ListFlowLogsRequest) *Lis
 	return &ListFlowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListIpBlacklist 获取导入的IP黑名单列表信息
+//
+// 获取防火墙实例中已经导入的IP黑名单信息，标准版防火墙只会显示一条EIP的记录，专业版防火墙可能显示EIP、NAT或EIP和NAT的记录，根据导入的情况确定。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) ListIpBlacklist(request *model.ListIpBlacklistRequest) (*model.ListIpBlacklistResponse, error) {
+	requestDef := GenReqDefForListIpBlacklist()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIpBlacklistResponse), nil
+	}
+}
+
+// ListIpBlacklistInvoker 获取导入的IP黑名单列表信息
+func (c *CfwClient) ListIpBlacklistInvoker(request *model.ListIpBlacklistRequest) *ListIpBlacklistInvoker {
+	requestDef := GenReqDefForListIpBlacklist()
+	return &ListIpBlacklistInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIpBlacklistSwitch 获取流量过滤功能的开关信息
+//
+// 流量过滤功能可以打开或者关闭，通过此接口可以获取当前的开关信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) ListIpBlacklistSwitch(request *model.ListIpBlacklistSwitchRequest) (*model.ListIpBlacklistSwitchResponse, error) {
+	requestDef := GenReqDefForListIpBlacklistSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIpBlacklistSwitchResponse), nil
+	}
+}
+
+// ListIpBlacklistSwitchInvoker 获取流量过滤功能的开关信息
+func (c *CfwClient) ListIpBlacklistSwitchInvoker(request *model.ListIpBlacklistSwitchRequest) *ListIpBlacklistSwitchInvoker {
+	requestDef := GenReqDefForListIpBlacklistSwitch()
+	return &ListIpBlacklistSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListJob 获取CFW任务执行状态
 //
 // 获取CFW任务执行状态
@@ -1109,6 +1238,27 @@ func (c *CfwClient) ListServiceSets(request *model.ListServiceSetsRequest) (*mod
 func (c *CfwClient) ListServiceSetsInvoker(request *model.ListServiceSetsRequest) *ListServiceSetsInvoker {
 	requestDef := GenReqDefForListServiceSets()
 	return &ListServiceSetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RetryIpBlacklist 用于流量过滤的IP黑名单导入失败后进行重新导入
+//
+// 用于流量过滤的IP黑名单导入失败后，调用此接口进行重试。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) RetryIpBlacklist(request *model.RetryIpBlacklistRequest) (*model.RetryIpBlacklistResponse, error) {
+	requestDef := GenReqDefForRetryIpBlacklist()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RetryIpBlacklistResponse), nil
+	}
+}
+
+// RetryIpBlacklistInvoker 用于流量过滤的IP黑名单导入失败后进行重新导入
+func (c *CfwClient) RetryIpBlacklistInvoker(request *model.RetryIpBlacklistRequest) *RetryIpBlacklistInvoker {
+	requestDef := GenReqDefForRetryIpBlacklist()
+	return &RetryIpBlacklistInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SaveTags 保存资源标签接口

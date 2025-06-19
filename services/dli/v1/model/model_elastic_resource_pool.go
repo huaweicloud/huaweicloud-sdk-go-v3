@@ -67,6 +67,12 @@ type ElasticResourcePool struct {
 
 	// 弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
 	Label map[string]string `json:"label,omitempty"`
+
+	// 是否启用IPv6
+	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
+
+	// IPv6子网网段
+	Ipv6CidrInSubnet *string `json:"ipv6_cidr_in_subnet,omitempty"`
 }
 
 func (o ElasticResourcePool) String() string {

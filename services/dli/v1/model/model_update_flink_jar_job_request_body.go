@@ -83,6 +83,11 @@ type UpdateFlinkJarJobRequestBody struct {
 
 	// 作业类型。
 	JobType *string `json:"job_type,omitempty"`
+
+	ResourceConfig *ResourceConfig `json:"resource_config,omitempty"`
+
+	// 资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
+	ResourceConfigVersion *string `json:"resource_config_version,omitempty"`
 }
 
 func (o UpdateFlinkJarJobRequestBody) String() string {

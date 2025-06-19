@@ -5493,6 +5493,22 @@ func (i *UpdateDirectoryInvoker) Invoke() (*model.UpdateDirectoryResponse, error
 	}
 }
 
+type UpdateEntityAttributeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateEntityAttributeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateEntityAttributeInvoker) Invoke() (*model.UpdateEntityAttributeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateEntityAttributeResponse), nil
+	}
+}
+
 type UpdateFactoryJobNameInvoker struct {
 	*invoker.BaseInvoker
 }

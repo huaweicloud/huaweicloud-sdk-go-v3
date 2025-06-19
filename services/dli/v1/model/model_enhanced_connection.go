@@ -38,6 +38,9 @@ type EnhancedConnection struct {
 
 	// 该增强跨源连接如果做过项目赋权，则该字段是\"false\"，否则为\"true\"。
 	IsPrivis *bool `json:"isPrivis,omitempty"`
+
+	// 是否启用IPv6。
+	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
 }
 
 func (o EnhancedConnection) String() string {

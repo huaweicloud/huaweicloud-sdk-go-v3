@@ -20,8 +20,6 @@ type ModifyOttChannelEncoderSettings struct {
 
 	// 转码模板配置
 	EncoderSettings *[]ModifyOttChannelEncoderSettingsEncoderSettings `json:"encoder_settings,omitempty"`
-
-	EncoderSettingsExpand *EncoderSettingsExpand `json:"encoder_settings_expand,omitempty"`
 }
 
 func (o ModifyOttChannelEncoderSettings) String() string {

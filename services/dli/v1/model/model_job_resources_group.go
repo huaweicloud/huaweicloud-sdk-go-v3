@@ -9,7 +9,7 @@ import (
 // JobResourcesGroup 创建会话请求参数groups的元素。
 type JobResourcesGroup struct {
 
-	// 用户组名称。
+	// 参数解释:   用户组名称 示例: group.tesddws 约束限制:  无 取值范围: 无 默认取值: 无
 	Name *string `json:"name,omitempty"`
 
 	// 用户组资源。

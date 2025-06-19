@@ -14,6 +14,12 @@ type ListResourcesTagsRequest struct {
 
 	// 资源类型
 	ResourceType ListResourcesTagsRequestResourceType `json:"resource_type"`
+
+	// 查询记录数。
+	Limit *int32 `json:"limit,omitempty"`
+
+	// 索引位置偏移量。
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListResourcesTagsRequest) String() string {

@@ -30,6 +30,9 @@ type SourcesInfo struct {
 	// 协议为SRT_PUSH时的加密信息
 	Passphrase *string `json:"passphrase,omitempty"`
 
+	// srt加密算法
+	Pbkeylen *int32 `json:"pbkeylen,omitempty"`
+
 	// 备入流地址列表
 	BackupUrls *[]string `json:"backup_urls,omitempty"`
 

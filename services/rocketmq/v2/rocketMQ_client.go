@@ -904,6 +904,27 @@ func (c *RocketMQClient) ShowInstanceInvoker(request *model.ShowInstanceRequest)
 	return &ShowInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowInstanceNodes 查询实例节点
+//
+// 查询实例节点信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RocketMQClient) ShowInstanceNodes(request *model.ShowInstanceNodesRequest) (*model.ShowInstanceNodesResponse, error) {
+	requestDef := GenReqDefForShowInstanceNodes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceNodesResponse), nil
+	}
+}
+
+// ShowInstanceNodesInvoker 查询实例节点
+func (c *RocketMQClient) ShowInstanceNodesInvoker(request *model.ShowInstanceNodesRequest) *ShowInstanceNodesInvoker {
+	requestDef := GenReqDefForShowInstanceNodes()
+	return &ShowInstanceNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowQuotas 查看租户配额
 //
 // 查询租户最大可以创建的实例个数和已创建的实例个数，以及每个实例最大可以创建标签的个数。

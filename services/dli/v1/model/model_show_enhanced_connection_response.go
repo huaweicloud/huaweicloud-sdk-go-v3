@@ -40,8 +40,11 @@ type ShowEnhancedConnectionResponse struct {
 	CreateTime *int64 `json:"create_time,omitempty"`
 
 	// 用户自定义主机信息。
-	Hosts          *[]EnhancedConnectionHost `json:"hosts,omitempty"`
-	HttpStatusCode int                       `json:"-"`
+	Hosts *[]EnhancedConnectionHost `json:"hosts,omitempty"`
+
+	// 是否启用IPv6
+	Ipv6Enable     *bool `json:"ipv6_enable,omitempty"`
+	HttpStatusCode int   `json:"-"`
 }
 
 func (o ShowEnhancedConnectionResponse) String() string {

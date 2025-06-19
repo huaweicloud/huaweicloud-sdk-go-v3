@@ -24,6 +24,9 @@ type RuleAclListResponseDtoDataRecords struct {
 	// 规则名称
 	Name *string `json:"name,omitempty"`
 
+	// 排序id
+	OrderId *int32 `json:"order_id,omitempty"`
+
 	// 规则方向0：外到内1：内到外
 	Direction *RuleAclListResponseDtoDataRecordsDirection `json:"direction,omitempty"`
 

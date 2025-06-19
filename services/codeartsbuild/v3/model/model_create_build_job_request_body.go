@@ -27,6 +27,11 @@ type CreateBuildJobRequestBody struct {
 	// 构建执行参数列表
 	Parameters *[]CreateBuildJobParameter `json:"parameters,omitempty"`
 
+	// 任务分组id
+	GroupId *string `json:"group_id,omitempty"`
+
+	Timeout *CreateBuildTimeout `json:"timeout,omitempty"`
+
 	// 构建执行SCM
 	Scms *[]CreateBuildJobScm `json:"scms,omitempty"`
 
@@ -38,6 +43,12 @@ type CreateBuildJobRequestBody struct {
 
 	// 构建的配置类型
 	BuildConfigType *string `json:"build_config_type,omitempty"`
+
+	// 提交代码触发构建开关
+	BuildIfCodeUpdated *bool `json:"build_if_code_updated,omitempty"`
+
+	// 定时任务触发器集合
+	Triggers *[]Trigger `json:"triggers,omitempty"`
 }
 
 func (o CreateBuildJobRequestBody) String() string {

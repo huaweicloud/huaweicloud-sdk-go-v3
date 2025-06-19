@@ -58,6 +58,33 @@ type Job struct {
 
 	// 是否有查看任务权限
 	IsView *bool `json:"is_view,omitempty"`
+
+	// 最后一次构建用户
+	LastBuildUser *string `json:"last_build_user,omitempty"`
+
+	// 触发类型
+	TriggerType *string `json:"trigger_type,omitempty"`
+
+	// 构建时间
+	BuildTime *int64 `json:"build_time,omitempty"`
+
+	// 代码仓web地址
+	ScmWebUrl *string `json:"scm_web_url,omitempty"`
+
+	// 代码仓类型
+	ScmType *string `json:"scm_type,omitempty"`
+
+	// 代码仓ID
+	RepoId *string `json:"repo_id,omitempty"`
+
+	// 构建项目ID
+	BuildProjectId *string `json:"build_project_id,omitempty"`
+
+	// 最后一次构建时间
+	LastJobRunningStatus *string `json:"last_job_running_status,omitempty"`
+
+	// 最后一次构建用户ID
+	LastBuildUserId *string `json:"last_build_user_id,omitempty"`
 }
 
 func (o Job) String() string {

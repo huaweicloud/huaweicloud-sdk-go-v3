@@ -9,7 +9,7 @@ import (
 // FlinkJobList 作业列表详情。
 type FlinkJobList struct {
 
-	// 作业查询结果条数。
+	// 参数解释:  作业查询结果条数 示例: 1 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
 	TotalCount *int64 `json:"total_count,omitempty"`
 
 	// 作业信息

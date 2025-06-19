@@ -46,6 +46,9 @@ type CreateQueueRequestBody struct {
 	ElasticResourcePoolName *string `json:"elastic_resource_pool_name,omitempty"`
 
 	Properties *CreateQueueRequestBodyProperties `json:"properties,omitempty"`
+
+	// 只有在queue_type是sql条件下才可配置，默认是spark。可以选择spark引擎或hetuEngin。
+	Engine *string `json:"engine,omitempty"`
 }
 
 func (o CreateQueueRequestBody) String() string {

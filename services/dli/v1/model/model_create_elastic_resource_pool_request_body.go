@@ -35,6 +35,9 @@ type CreateElasticResourcePoolRequestBody struct {
 
 	// 弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
 	Label map[string]string `json:"label,omitempty"`
+
+	// 是否启用IPv6。开启IPv6后，将自动为资源池分配IPv6网段，暂不支持自定义IPv6网段。该功能一旦开启，将不能关闭。
+	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
 }
 
 func (o CreateElasticResourcePoolRequestBody) String() string {

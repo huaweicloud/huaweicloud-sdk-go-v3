@@ -15,7 +15,7 @@ type SyncTaskInfo struct {
 	// 同步任务ID
 	SyncTaskId *string `json:"sync_task_id,omitempty"`
 
-	// 源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、UCloud。默认值为Aliyun。
+	// 源端云服务提供商。  可选值有AWS、Azure、Aliyun、Tencent、HuaweiCloud、QingCloud、KingsoftCloud、Baidu、Qiniu、UCloud、Google。默认值为Aliyun。
 	SrcCloudType *SyncTaskInfoSrcCloudType `json:"src_cloud_type,omitempty"`
 
 	// 源端桶所处的区域
@@ -90,6 +90,7 @@ type SyncTaskInfoSrcCloudTypeEnum struct {
 	BAIDU          SyncTaskInfoSrcCloudType
 	QINIU          SyncTaskInfoSrcCloudType
 	U_CLOUD        SyncTaskInfoSrcCloudType
+	GOOGLE         SyncTaskInfoSrcCloudType
 }
 
 func GetSyncTaskInfoSrcCloudTypeEnum() SyncTaskInfoSrcCloudTypeEnum {
@@ -123,6 +124,9 @@ func GetSyncTaskInfoSrcCloudTypeEnum() SyncTaskInfoSrcCloudTypeEnum {
 		},
 		U_CLOUD: SyncTaskInfoSrcCloudType{
 			value: "UCloud",
+		},
+		GOOGLE: SyncTaskInfoSrcCloudType{
+			value: "Google",
 		},
 	}
 }
