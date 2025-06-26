@@ -9,7 +9,7 @@ import (
 // ListElbsResponse Response Object
 type ListElbsResponse struct {
 
-	// 弹性负载均衡列表
+	// **参数解释**： 弹性负载均衡列表。 **取值范围**： 不涉及。
 	Elbs           *[]ClusterElbInfo `json:"elbs,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

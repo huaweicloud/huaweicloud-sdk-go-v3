@@ -31,7 +31,7 @@ type SqlJobDefendRule struct {
 	EngineRules *interface{} `json:"engine_rules,omitempty"`
 
 	// 队列名称
-	QueueNames *[]string `json:"queueNames,omitempty"`
+	QueueNames *[]string `json:"queue_names,omitempty"`
 
 	// 用户规则描述
 	Desc *string `json:"desc,omitempty"`

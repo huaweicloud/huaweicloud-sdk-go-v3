@@ -9,19 +9,19 @@ import (
 // ListDataSourceResponse Response Object
 type ListDataSourceResponse struct {
 
-	// 数据源列表。
+	// **参数解释**： 数据源列表。 **取值范围**： 不涉及。
 	DataSources *[]ExtDataSource `json:"data_sources,omitempty"`
 
-	// **参数解释**： 项目ID。获取方式方法请参见[获取项目ID](dws_02_0011.xml)。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	// **参数解释**： 项目ID。 **取值范围**： 不涉及。
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// **参数解释**： 集群ID。 **取值范围**： 36位UUID。
 	ClusterId *string `json:"cluster_id,omitempty"`
 
-	// 数据源类型。
+	// **参数解释**： 数据源类型。 **取值范围**： 不涉及。
 	Type *string `json:"type,omitempty"`
 
-	// 总数。
+	// **参数解释**： 总数。 **取值范围**： 不涉及。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

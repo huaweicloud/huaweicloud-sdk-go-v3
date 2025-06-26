@@ -8,7 +8,10 @@ import (
 
 // DeleteServersResponse Response Object
 type DeleteServersResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 批量删除源端服务器的返回
+	Body           *string `json:"body,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteServersResponse) String() string {

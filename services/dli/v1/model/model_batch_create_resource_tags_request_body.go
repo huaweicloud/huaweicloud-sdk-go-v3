@@ -10,10 +10,7 @@ import (
 type BatchCreateResourceTagsRequestBody struct {
 
 	// 标签列表。
-	Tags []TagWithValues `json:"tags"`
-
-	// 标签数量。
-	Count *int64 `json:"count,omitempty"`
+	Tags []Tag `json:"tags"`
 }
 
 func (o BatchCreateResourceTagsRequestBody) String() string {

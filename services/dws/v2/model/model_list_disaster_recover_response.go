@@ -9,7 +9,7 @@ import (
 // ListDisasterRecoverResponse Response Object
 type ListDisasterRecoverResponse struct {
 
-	// 容灾对象
+	// **参数解释**： 容灾对象。 **取值范围**： 不涉及。
 	DisasterRecovery *[]DisasterRecovery `json:"disaster_recovery,omitempty"`
 	HttpStatusCode   int                 `json:"-"`
 }

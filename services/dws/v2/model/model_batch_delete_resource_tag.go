@@ -9,10 +9,10 @@ import (
 // BatchDeleteResourceTag 标签详情。
 type BatchDeleteResourceTag struct {
 
-	// 标签键。
+	// **参数解释**： 标签键。 **取值范围**： 不涉及。
 	Key string `json:"key"`
 
-	// 标签值。
+	// **参数解释**： 标签值。 **取值范围**： 不涉及。
 	Value string `json:"value"`
 }
 

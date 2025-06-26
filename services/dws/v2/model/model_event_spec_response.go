@@ -6,34 +6,34 @@ import (
 	"strings"
 )
 
-// EventSpecResponse 事件配置对象
+// EventSpecResponse **参数解释**： 事件配置对象。 **取值范围**： 不涉及。
 type EventSpecResponse struct {
 
-	// 事件配置ID
+	// **参数解释**： 事件配置ID。 **取值范围**： 不涉及。
 	Id *string `json:"id,omitempty"`
 
-	// 事件配置定义名称
+	// **参数解释**： 事件配置定义名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 事件配置显示名称
+	// **参数解释**： 事件配置显示名称。 **取值范围**： 不涉及。
 	DisplayName *string `json:"display_name,omitempty"`
 
-	// 事件配置描述
+	// **参数解释**： 事件配置描述。 **取值范围**： 不涉及。
 	Description *string `json:"description,omitempty"`
 
-	// 事件主题
+	// **参数解释**： 事件主题。 **取值范围**： 不涉及。
 	Subject *string `json:"subject,omitempty"`
 
-	// 事件类别
+	// **参数解释**： 事件类别。 **取值范围**： 不涉及。
 	Category *string `json:"category,omitempty"`
 
-	// 事件级别
+	// **参数解释**： 事件级别。 **取值范围**： 不涉及。
 	Severity *string `json:"severity,omitempty"`
 
-	// 事件源类型
+	// **参数解释**： 事件源类型。 **取值范围**： 不涉及。
 	SourceType *string `json:"source_type,omitempty"`
 
-	// 所属服务
+	// **参数解释**： 所属服务。 **取值范围**： 不涉及。
 	NameSpace *string `json:"name_space,omitempty"`
 }
 

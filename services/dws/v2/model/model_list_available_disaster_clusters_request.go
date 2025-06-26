@@ -9,31 +9,31 @@ import (
 // ListAvailableDisasterClustersRequest Request Object
 type ListAvailableDisasterClustersRequest struct {
 
-	// 主集群ID
+	// **参数解释**： 主集群ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	PrimaryClusterId string `json:"primary_cluster_id"`
 
-	// 主集群规格ID
-	PrimarySpecId *string `json:"primary_spec_id,omitempty"`
-
-	// 主集群DN数量
-	PrimaryClusterDnNum *string `json:"primary_cluster_dn_num,omitempty"`
-
-	// 备集群所在region
-	StandbyRegion *string `json:"standby_region,omitempty"`
-
-	// 备集群项目ID
-	StandbyProjectId *string `json:"standby_project_id,omitempty"`
-
-	// 备集群所在AZ
+	// **参数解释**： 备集群所在AZ。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	StandbyAzCode string `json:"standby_az_code"`
 
-	// 容灾类型
+	// **参数解释**： 主集群规格ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	PrimarySpecId *string `json:"primary_spec_id,omitempty"`
+
+	// **参数解释**： 主集群DN数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	PrimaryClusterDnNum *string `json:"primary_cluster_dn_num,omitempty"`
+
+	// **参数解释**： 备集群所在局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	StandbyRegion *string `json:"standby_region,omitempty"`
+
+	// **参数解释**： 备集群项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	StandbyProjectId *string `json:"standby_project_id,omitempty"`
+
+	// **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	DrType *string `json:"dr_type,omitempty"`
 
-	// 数仓类型
+	// **参数解释**： 数仓类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	DatastoreType *string `json:"datastore_type,omitempty"`
 
-	// 数仓版本
+	// **参数解释**： 数仓版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	DatastoreVersion *string `json:"datastore_version,omitempty"`
 }
 

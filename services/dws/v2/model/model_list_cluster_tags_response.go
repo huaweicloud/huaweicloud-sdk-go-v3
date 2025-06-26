@@ -9,7 +9,7 @@ import (
 // ListClusterTagsResponse Response Object
 type ListClusterTagsResponse struct {
 
-	// 标签列表。
+	// **参数解释**： 标签列表。 **取值范围**： 不涉及。
 	Tags           *[]ResourceTag `json:"tags,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

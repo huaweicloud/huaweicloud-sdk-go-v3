@@ -45,8 +45,8 @@ type UpdateTaskStatusReqOperationEnum struct {
 	CLONE_TEST     UpdateTaskStatusReqOperation
 	RESTART        UpdateTaskStatusReqOperation
 	NETWORK_CHECK  UpdateTaskStatusReqOperation
-	SKIP           UpdateTaskStatusReqOperation
 	CLEAR          UpdateTaskStatusReqOperation
+	SKIP           UpdateTaskStatusReqOperation
 	MIGRATION_TEST UpdateTaskStatusReqOperation
 }
 
@@ -70,11 +70,11 @@ func GetUpdateTaskStatusReqOperationEnum() UpdateTaskStatusReqOperationEnum {
 		NETWORK_CHECK: UpdateTaskStatusReqOperation{
 			value: "network_check",
 		},
-		SKIP: UpdateTaskStatusReqOperation{
-			value: "skip",
-		},
 		CLEAR: UpdateTaskStatusReqOperation{
 			value: "clear",
+		},
+		SKIP: UpdateTaskStatusReqOperation{
+			value: "skip",
 		},
 		MIGRATION_TEST: UpdateTaskStatusReqOperation{
 			value: "migration_test",

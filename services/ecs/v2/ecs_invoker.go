@@ -1081,22 +1081,6 @@ func (i *ShowRecycleBinInvoker) Invoke() (*model.ShowRecycleBinResponse, error) 
 	}
 }
 
-type ShowRecycleBinServerInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowRecycleBinServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowRecycleBinServerInvoker) Invoke() (*model.ShowRecycleBinServerResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowRecycleBinServerResponse), nil
-	}
-}
-
 type ShowResetPasswordFlagInvoker struct {
 	*invoker.BaseInvoker
 }

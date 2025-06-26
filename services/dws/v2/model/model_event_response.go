@@ -6,52 +6,52 @@ import (
 	"strings"
 )
 
-// EventResponse 事件返回体
+// EventResponse **参数解释**： 事件返回体。 **取值范围**： 不涉及。
 type EventResponse struct {
 
-	// 事件类别
+	// **参数解释**： 事件类别。 **取值范围**： 不涉及。
 	Category *string `json:"category,omitempty"`
 
-	// 事件描述
+	// **参数解释**： 事件描述。 **取值范围**： 不涉及。
 	Description *string `json:"description,omitempty"`
 
-	// 事件ID
+	// **参数解释**： 事件ID。 **取值范围**： 不涉及。
 	EventId *string `json:"event_id,omitempty"`
 
-	// 事件定义名称
+	// **参数解释**： 事件定义名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 事件显示名称
+	// **参数解释**： 事件显示名称。 **取值范围**： 不涉及。
 	DisplayName *string `json:"display_name,omitempty"`
 
-	// 所属服务
+	// **参数解释**： 所属服务。 **取值范围**： 不涉及。
 	NameSpace *string `json:"name_space,omitempty"`
 
-	// 事件级别
+	// **参数解释**： 事件级别。 **取值范围**： 不涉及。
 	Severity *string `json:"severity,omitempty"`
 
-	// 事件源类别
+	// **参数解释**： 事件源类别。 **取值范围**： 不涉及。
 	SourceType *string `json:"source_type,omitempty"`
 
-	// 时间
+	// **参数解释**： 时间。 **取值范围**： 不涉及。
 	OccurTime *int64 `json:"occur_time,omitempty"`
 
-	// 租户凭证ID
+	// **参数解释**： 租户凭证ID。 **取值范围**： 不涉及。
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 事件源ID
+	// **参数解释**： 事件源ID。 **取值范围**： 不涉及。
 	SourceId *string `json:"source_id,omitempty"`
 
-	// 事件源名称
+	// **参数解释**： 事件源名称。 **取值范围**： 不涉及。
 	SourceName *string `json:"source_name,omitempty"`
 
-	// 状态
+	// **参数解释**： 状态。 **取值范围**： 不涉及。
 	Status *int32 `json:"status,omitempty"`
 
-	// 事件主题
+	// **参数解释**： 事件主题。 **取值范围**： 不涉及。
 	Subject *string `json:"subject,omitempty"`
 
-	// 事件信息
+	// **参数解释**： 事件信息。 **取值范围**： 不涉及。
 	Context *string `json:"context,omitempty"`
 }
 

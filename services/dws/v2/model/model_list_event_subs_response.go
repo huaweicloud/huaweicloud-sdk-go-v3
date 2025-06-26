@@ -9,10 +9,10 @@ import (
 // ListEventSubsResponse Response Object
 type ListEventSubsResponse struct {
 
-	// 事件订阅总数
+	// **参数解释**： 事件订阅总数。 **取值范围**： 不涉及。
 	Count *int32 `json:"count,omitempty"`
 
-	// 事件订阅详情列表
+	// **参数解释**： 事件订阅详情列表。 **取值范围**： 不涉及。
 	EventSubscriptions *[]EventSubscriptionResponse `json:"event_subscriptions,omitempty"`
 	HttpStatusCode     int                          `json:"-"`
 }

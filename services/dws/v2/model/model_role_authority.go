@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// RoleAuthority 角色权限信息
+// RoleAuthority **参数解释**： 角色权限信息。 **取值范围**： 不涉及。
 type RoleAuthority struct {
 
-	// 角色名称
+	// **参数解释**： 角色名称。 **取值范围**： 不涉及。
 	Role *string `json:"role,omitempty"`
 
-	// 权限列表
+	// **参数解释**： 权限列表。 **取值范围**： 不涉及。
 	RightList *[]string `json:"right_list,omitempty"`
 }
 

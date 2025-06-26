@@ -57,6 +57,9 @@ type SqlJob struct {
 	// SQL查询的相关列信息的Json字符串 示例: {\\\"type\\\":\\\"struct\\\",\\\"fields\\\":[{\\\"name\\\":\\\"name\\\",\\\"type\\\":\\\"string\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}},{\\\"name\\\":\\\"age\\\",\\\"type\\\":\\\"integer\\\",\\\"nullable\\\":true,\\\"metadata\\\":{}}]} 约束限制:  符合Json格式的字符串 取值范围: 无 默认取值: 无
 	Detail string `json:"detail"`
 
+	// 引擎类型 示例: spark 约束限制:  无 取值范围: spark, hetuEngine 默认取值: 无
+	EngineType *SqlJobEngineType `json:"engine_type,omitempty"`
+
 	// 作业执行的SQL语句 示例: select * from t_json_002 约束限制:  无 取值范围: 无 默认取值: 无
 	Statement string `json:"statement"`
 
@@ -135,6 +138,53 @@ func (c SqlJobStatus) MarshalJSON() ([]byte, error) {
 }
 
 func (c *SqlJobStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type SqlJobEngineType struct {
+	value string
+}
+
+type SqlJobEngineTypeEnum struct {
+	SPARK       SqlJobEngineType
+	HETU_ENGINE SqlJobEngineType
+}
+
+func GetSqlJobEngineTypeEnum() SqlJobEngineTypeEnum {
+	return SqlJobEngineTypeEnum{
+		SPARK: SqlJobEngineType{
+			value: "spark",
+		},
+		HETU_ENGINE: SqlJobEngineType{
+			value: "hetuEngine",
+		},
+	}
+}
+
+func (c SqlJobEngineType) Value() string {
+	return c.value
+}
+
+func (c SqlJobEngineType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SqlJobEngineType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

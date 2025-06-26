@@ -9,7 +9,7 @@ import (
 // ListWorkloadQueueResponse Response Object
 type ListWorkloadQueueResponse struct {
 
-	// **参数解释**： 工作负载队列名称。 **取值范围**： 不涉及。
+	// **参数解释**： 资源池名称。 **取值范围**： 不涉及。
 	WorkloadQueueNameList *[]string `json:"workload_queue_name_list,omitempty"`
 
 	// **参数解释**： 结果状态码。 **取值范围**： 不涉及。

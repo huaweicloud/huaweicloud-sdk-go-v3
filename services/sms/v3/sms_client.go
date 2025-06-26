@@ -19,29 +19,6 @@ func SmsClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
-// Deprecated: This function is deprecated and will be removed in the future versions.
-// CheckNetAcl 检查网卡安全组端口是否符合要求
-//
-// 检查网卡安全组。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *SmsClient) CheckNetAcl(request *model.CheckNetAclRequest) (*model.CheckNetAclResponse, error) {
-	requestDef := GenReqDefForCheckNetAcl()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CheckNetAclResponse), nil
-	}
-}
-
-// Deprecated: This function is deprecated and will be removed in the future versions.
-// CheckNetAclInvoker 检查网卡安全组端口是否符合要求
-func (c *SmsClient) CheckNetAclInvoker(request *model.CheckNetAclRequest) *CheckNetAclInvoker {
-	requestDef := GenReqDefForCheckNetAcl()
-	return &CheckNetAclInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CollectLog 上传迁移任务的日志
 //
 // 上传迁移任务的日志。
@@ -292,6 +269,27 @@ func (c *SmsClient) DeleteTemplates(request *model.DeleteTemplatesRequest) (*mod
 func (c *SmsClient) DeleteTemplatesInvoker(request *model.DeleteTemplatesRequest) *DeleteTemplatesInvoker {
 	requestDef := GenReqDefForDeleteTemplates()
 	return &DeleteTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportConsistencyResults 批量获取一致性校验结果
+//
+// 使用该接口批量导出一致性校验结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmsClient) ExportConsistencyResults(request *model.ExportConsistencyResultsRequest) (*model.ExportConsistencyResultsResponse, error) {
+	requestDef := GenReqDefForExportConsistencyResults()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportConsistencyResultsResponse), nil
+	}
+}
+
+// ExportConsistencyResultsInvoker 批量获取一致性校验结果
+func (c *SmsClient) ExportConsistencyResultsInvoker(request *model.ExportConsistencyResultsRequest) *ExportConsistencyResultsInvoker {
+	requestDef := GenReqDefForExportConsistencyResults()
+	return &ExportConsistencyResultsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListErrorServers 查询待迁移源端的所有错误
@@ -609,29 +607,6 @@ func (c *SmsClient) ShowServerInvoker(request *model.ShowServerRequest) *ShowSer
 	return &ShowServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// Deprecated: This function is deprecated and will be removed in the future versions.
-// ShowSha256 计算sha256
-//
-// 计算sha256，加密字段值为uuid。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *SmsClient) ShowSha256(request *model.ShowSha256Request) (*model.ShowSha256Response, error) {
-	requestDef := GenReqDefForShowSha256()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowSha256Response), nil
-	}
-}
-
-// Deprecated: This function is deprecated and will be removed in the future versions.
-// ShowSha256Invoker 计算sha256
-func (c *SmsClient) ShowSha256Invoker(request *model.ShowSha256Request) *ShowSha256Invoker {
-	requestDef := GenReqDefForShowSha256()
-	return &ShowSha256Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowTargetPassword 查询指定ID的模板中的目的端服务器的密码
 //
 // 查询指定ID的模板中的目的端服务器的密码。
@@ -714,29 +689,6 @@ func (c *SmsClient) ShowsSpeedLimits(request *model.ShowsSpeedLimitsRequest) (*m
 func (c *SmsClient) ShowsSpeedLimitsInvoker(request *model.ShowsSpeedLimitsRequest) *ShowsSpeedLimitsInvoker {
 	requestDef := GenReqDefForShowsSpeedLimits()
 	return &ShowsSpeedLimitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// Deprecated: This function is deprecated and will be removed in the future versions.
-// UnlockTargetEcs 解锁指定任务的目的端服务器
-//
-// 解锁指定任务的目的端服务器。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *SmsClient) UnlockTargetEcs(request *model.UnlockTargetEcsRequest) (*model.UnlockTargetEcsResponse, error) {
-	requestDef := GenReqDefForUnlockTargetEcs()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UnlockTargetEcsResponse), nil
-	}
-}
-
-// Deprecated: This function is deprecated and will be removed in the future versions.
-// UnlockTargetEcsInvoker 解锁指定任务的目的端服务器
-func (c *SmsClient) UnlockTargetEcsInvoker(request *model.UnlockTargetEcsRequest) *UnlockTargetEcsInvoker {
-	requestDef := GenReqDefForUnlockTargetEcs()
-	return &UnlockTargetEcsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateCommandResult 上报服务端命令执行结果
@@ -1055,6 +1007,29 @@ func (c *SmsClient) ShowConfigInvoker(request *model.ShowConfigRequest) *ShowCon
 	return &ShowConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
+// CheckNetAcl 检查网卡安全组端口是否符合要求
+//
+// 检查网卡安全组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmsClient) CheckNetAcl(request *model.CheckNetAclRequest) (*model.CheckNetAclResponse, error) {
+	requestDef := GenReqDefForCheckNetAcl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckNetAclResponse), nil
+	}
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+// CheckNetAclInvoker 检查网卡安全组端口是否符合要求
+func (c *SmsClient) CheckNetAclInvoker(request *model.CheckNetAclRequest) *CheckNetAclInvoker {
+	requestDef := GenReqDefForCheckNetAcl()
+	return &CheckNetAclInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListApiVersion 查询主机迁移服务的API版本信息
 //
 // 查询主机迁移服务的API版本信息。
@@ -1095,4 +1070,50 @@ func (c *SmsClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model
 func (c *SmsClient) ShowApiVersionInvoker(request *model.ShowApiVersionRequest) *ShowApiVersionInvoker {
 	requestDef := GenReqDefForShowApiVersion()
 	return &ShowApiVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+// ShowSha256 计算sha256
+//
+// 计算sha256，加密字段值为uuid。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmsClient) ShowSha256(request *model.ShowSha256Request) (*model.ShowSha256Response, error) {
+	requestDef := GenReqDefForShowSha256()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSha256Response), nil
+	}
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+// ShowSha256Invoker 计算sha256
+func (c *SmsClient) ShowSha256Invoker(request *model.ShowSha256Request) *ShowSha256Invoker {
+	requestDef := GenReqDefForShowSha256()
+	return &ShowSha256Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+// UnlockTargetEcs 解锁指定任务的目的端服务器
+//
+// 解锁指定任务的目的端服务器。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmsClient) UnlockTargetEcs(request *model.UnlockTargetEcsRequest) (*model.UnlockTargetEcsResponse, error) {
+	requestDef := GenReqDefForUnlockTargetEcs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UnlockTargetEcsResponse), nil
+	}
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+// UnlockTargetEcsInvoker 解锁指定任务的目的端服务器
+func (c *SmsClient) UnlockTargetEcsInvoker(request *model.UnlockTargetEcsRequest) *UnlockTargetEcsInvoker {
+	requestDef := GenReqDefForUnlockTargetEcs()
+	return &UnlockTargetEcsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

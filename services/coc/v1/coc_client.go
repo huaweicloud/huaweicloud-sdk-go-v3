@@ -145,6 +145,153 @@ func (c *CocClient) CreateReportCustomEventInvoker(request *model.CreateReportCu
 	return &CreateReportCustomEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CancelDiagnosisTask 取消诊断任务
+//
+// 取消诊断任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CancelDiagnosisTask(request *model.CancelDiagnosisTaskRequest) (*model.CancelDiagnosisTaskResponse, error) {
+	requestDef := GenReqDefForCancelDiagnosisTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelDiagnosisTaskResponse), nil
+	}
+}
+
+// CancelDiagnosisTaskInvoker 取消诊断任务
+func (c *CocClient) CancelDiagnosisTaskInvoker(request *model.CancelDiagnosisTaskRequest) *CancelDiagnosisTaskInvoker {
+	requestDef := GenReqDefForCancelDiagnosisTask()
+	return &CancelDiagnosisTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDiagnosisTask 提交诊断任务
+//
+// 提交诊断任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CreateDiagnosisTask(request *model.CreateDiagnosisTaskRequest) (*model.CreateDiagnosisTaskResponse, error) {
+	requestDef := GenReqDefForCreateDiagnosisTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDiagnosisTaskResponse), nil
+	}
+}
+
+// CreateDiagnosisTaskInvoker 提交诊断任务
+func (c *CocClient) CreateDiagnosisTaskInvoker(request *model.CreateDiagnosisTaskRequest) *CreateDiagnosisTaskInvoker {
+	requestDef := GenReqDefForCreateDiagnosisTask()
+	return &CreateDiagnosisTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDiagnosisTasks 查询诊断记录
+//
+// 查询诊断记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListDiagnosisTasks(request *model.ListDiagnosisTasksRequest) (*model.ListDiagnosisTasksResponse, error) {
+	requestDef := GenReqDefForListDiagnosisTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDiagnosisTasksResponse), nil
+	}
+}
+
+// ListDiagnosisTasksInvoker 查询诊断记录
+func (c *CocClient) ListDiagnosisTasksInvoker(request *model.ListDiagnosisTasksRequest) *ListDiagnosisTasksInvoker {
+	requestDef := GenReqDefForListDiagnosisTasks()
+	return &ListDiagnosisTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RetryDiagnosisTask 重试诊断任务
+//
+// 重试诊断任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) RetryDiagnosisTask(request *model.RetryDiagnosisTaskRequest) (*model.RetryDiagnosisTaskResponse, error) {
+	requestDef := GenReqDefForRetryDiagnosisTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RetryDiagnosisTaskResponse), nil
+	}
+}
+
+// RetryDiagnosisTaskInvoker 重试诊断任务
+func (c *CocClient) RetryDiagnosisTaskInvoker(request *model.RetryDiagnosisTaskRequest) *RetryDiagnosisTaskInvoker {
+	requestDef := GenReqDefForRetryDiagnosisTask()
+	return &RetryDiagnosisTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDiagnosisNode 查询指定诊断记录下的指定诊断步骤的详情
+//
+// 查询指定诊断记录下的指定诊断步骤的详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ShowDiagnosisNode(request *model.ShowDiagnosisNodeRequest) (*model.ShowDiagnosisNodeResponse, error) {
+	requestDef := GenReqDefForShowDiagnosisNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDiagnosisNodeResponse), nil
+	}
+}
+
+// ShowDiagnosisNodeInvoker 查询指定诊断记录下的指定诊断步骤的详情
+func (c *CocClient) ShowDiagnosisNodeInvoker(request *model.ShowDiagnosisNodeRequest) *ShowDiagnosisNodeInvoker {
+	requestDef := GenReqDefForShowDiagnosisNode()
+	return &ShowDiagnosisNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDiagnosisSummary 查询批量诊断任务的结果概要
+//
+// 查询诊断任务的结果概要
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ShowDiagnosisSummary(request *model.ShowDiagnosisSummaryRequest) (*model.ShowDiagnosisSummaryResponse, error) {
+	requestDef := GenReqDefForShowDiagnosisSummary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDiagnosisSummaryResponse), nil
+	}
+}
+
+// ShowDiagnosisSummaryInvoker 查询批量诊断任务的结果概要
+func (c *CocClient) ShowDiagnosisSummaryInvoker(request *model.ShowDiagnosisSummaryRequest) *ShowDiagnosisSummaryInvoker {
+	requestDef := GenReqDefForShowDiagnosisSummary()
+	return &ShowDiagnosisSummaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDiagnosisTask 查询单个诊断任务详情
+//
+// 查询单个诊断任务详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ShowDiagnosisTask(request *model.ShowDiagnosisTaskRequest) (*model.ShowDiagnosisTaskResponse, error) {
+	requestDef := GenReqDefForShowDiagnosisTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDiagnosisTaskResponse), nil
+	}
+}
+
+// ShowDiagnosisTaskInvoker 查询单个诊断任务详情
+func (c *CocClient) ShowDiagnosisTaskInvoker(request *model.ShowDiagnosisTaskRequest) *ShowDiagnosisTaskInvoker {
+	requestDef := GenReqDefForShowDiagnosisTask()
+	return &ShowDiagnosisTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDocument 创建自定义作业
 //
 // 创建自定义作业

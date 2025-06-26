@@ -19,6 +19,9 @@ type Catalog struct {
 
 	// 描述
 	Description *string `json:"description,omitempty"`
+
+	// catalog状态。CREATING：catalog创建中；ACTIVE：catalog可使用；FAILED：catalog创建失败。
+	Status *string `json:"status,omitempty"`
 }
 
 func (o Catalog) String() string {

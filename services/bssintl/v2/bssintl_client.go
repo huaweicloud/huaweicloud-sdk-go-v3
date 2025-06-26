@@ -758,6 +758,27 @@ func (c *BssintlClient) ListSubCustomerBudgetInvoker(request *model.ListSubCusto
 	return &ListSubCustomerBudgetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSubCustomerBudgetRecords 查询客户预算调整记录
+//
+// 功能描述：查询客户预算调整记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssintlClient) ListSubCustomerBudgetRecords(request *model.ListSubCustomerBudgetRecordsRequest) (*model.ListSubCustomerBudgetRecordsResponse, error) {
+	requestDef := GenReqDefForListSubCustomerBudgetRecords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSubCustomerBudgetRecordsResponse), nil
+	}
+}
+
+// ListSubCustomerBudgetRecordsInvoker 查询客户预算调整记录
+func (c *BssintlClient) ListSubCustomerBudgetRecordsInvoker(request *model.ListSubCustomerBudgetRecordsRequest) *ListSubCustomerBudgetRecordsInvoker {
+	requestDef := GenReqDefForListSubCustomerBudgetRecords()
+	return &ListSubCustomerBudgetRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSubCustomerCoupons 查询优惠券列表
 //
 // 功能描述：伙伴/客户可以查询自身的优惠券信息。

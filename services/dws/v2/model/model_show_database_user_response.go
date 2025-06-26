@@ -9,52 +9,52 @@ import (
 // ShowDatabaseUserResponse Response Object
 type ShowDatabaseUserResponse struct {
 
-	// 用户名称
+	// **参数解释**： 用户名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 是否可以登陆
+	// **参数解释**： 是否可以登录。 **取值范围**： 不涉及。
 	Login *bool `json:"login,omitempty"`
 
-	// 创建角色权限
+	// **参数解释**： 创建角色权限。 **取值范围**： 不涉及。
 	Createrole *bool `json:"createrole,omitempty"`
 
-	// 创建数据库权限
+	// **参数解释**： 创建数据库权限。 **取值范围**： 不涉及。
 	Createdb *bool `json:"createdb,omitempty"`
 
-	// 系统管理员
+	// **参数解释**： 系统管理员。 **取值范围**： 不涉及。
 	Systemadmin *bool `json:"systemadmin,omitempty"`
 
-	// 审计管理员
+	// **参数解释**： 审计管理员。 **取值范围**： 不涉及。
 	Auditadmin *bool `json:"auditadmin,omitempty"`
 
-	// 继承所在组权限
+	// **参数解释**： 继承所在组权限。 **取值范围**： 不涉及。
 	Inherit *bool `json:"inherit,omitempty"`
 
-	// 访问外表权限
+	// **参数解释**： 访问外表权限。 **取值范围**： 不涉及。
 	Useft *bool `json:"useft,omitempty"`
 
-	// 连接数限制
+	// **参数解释**： 连接数限制。 **取值范围**： 不涉及。
 	ConnLimit *int32 `json:"conn_limit,omitempty"`
 
-	// 是否允许流复制
+	// **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
 	Replication *bool `json:"replication,omitempty"`
 
-	// 角色生效时间
+	// **参数解释**： 角色生效时间。 **取值范围**： 不涉及。
 	ValidBegin *int64 `json:"valid_begin,omitempty"`
 
-	// 角色过期时间
+	// **参数解释**： 角色过期时间。 **取值范围**： 不涉及。
 	ValidUntil *int64 `json:"valid_until,omitempty"`
 
-	// 是否锁定
+	// **参数解释**： 是否锁定。 **取值范围**： 不涉及。
 	Lock *bool `json:"lock,omitempty"`
 
-	// 描述
+	// **参数解释**： 描述。 **取值范围**： 不涉及。
 	Desc *string `json:"desc,omitempty"`
 
-	// 用户类型
+	// **参数解释**： 用户类型。 **取值范围**： 不涉及。
 	UserType *string `json:"user_type,omitempty"`
 
-	// 所属逻辑集群
+	// **参数解释**： description: 所属逻辑集群。 **取值范围**： 不涉及。
 	LogicalCluster *string `json:"logical_cluster,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

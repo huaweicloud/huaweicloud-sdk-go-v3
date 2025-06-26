@@ -9,13 +9,13 @@ import (
 // ListTablesStatisticResponse Response Object
 type ListTablesStatisticResponse struct {
 
-	// 数据采集时间毫秒级时间戳。
+	// **参数解释**： 数据采集时间毫秒级时间戳。 **取值范围**： 不涉及。
 	CollectTime *int64 `json:"collect_time,omitempty"`
 
-	// 表倾斜率或脏页率列表。
+	// **参数解释**： 表倾斜率或脏页率列表。 **取值范围**： 不涉及。
 	Data *[]ListTablesStatisticDto `json:"data,omitempty"`
 
-	// 总列表大小。
+	// **参数解释**： 总列表大小。 **取值范围**： 不涉及。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

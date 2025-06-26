@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// SnapshotRegion 快照区域信息
+// SnapshotRegion **参数解释**： 快照区域信息。 **取值范围**： 不涉及。
 type SnapshotRegion struct {
 
-	// 区域ID
+	// **参数解释**： 区域ID。 **取值范围**： 不涉及。
 	RegionId *string `json:"region_id,omitempty"`
 }
 

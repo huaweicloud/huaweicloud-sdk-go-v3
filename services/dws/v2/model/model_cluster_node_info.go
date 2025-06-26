@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ClusterNodeInfo 集群节点信息
+// ClusterNodeInfo **参数解释**： 集群节点信息。 **取值范围**： 不涉及。
 type ClusterNodeInfo struct {
 
 	// **参数解释**： 节点ID。 **取值范围**： 不涉及。

@@ -18,6 +18,9 @@ type RunCatalogActionRequestBody struct {
 	Name string `json:"name"`
 
 	Parameters map[string]string `json:"parameters"`
+
+	// Catalog的描述信息。
+	Description *string `json:"description,omitempty"`
 }
 
 func (o RunCatalogActionRequestBody) String() string {

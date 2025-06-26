@@ -61,6 +61,9 @@ type ShowResponseP2cVgw struct {
 
 	// 更新时间
 	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
+
+	// 生效时间
+	AppliedAt *sdktime.SdkTime `json:"applied_at,omitempty"`
 }
 
 func (o ShowResponseP2cVgw) String() string {

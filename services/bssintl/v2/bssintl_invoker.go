@@ -567,6 +567,22 @@ func (i *ListSubCustomerBudgetInvoker) Invoke() (*model.ListSubCustomerBudgetRes
 	}
 }
 
+type ListSubCustomerBudgetRecordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSubCustomerBudgetRecordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSubCustomerBudgetRecordsInvoker) Invoke() (*model.ListSubCustomerBudgetRecordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSubCustomerBudgetRecordsResponse), nil
+	}
+}
+
 type ListSubCustomerCouponsInvoker struct {
 	*invoker.BaseInvoker
 }

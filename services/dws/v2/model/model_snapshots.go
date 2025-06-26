@@ -6,34 +6,34 @@ import (
 	"strings"
 )
 
-// Snapshots 快照对象列表
+// Snapshots **参数解释**： 快照对象列表。 **取值范围**： 不涉及。
 type Snapshots struct {
 
-	// 快照ID。
+	// **参数解释**： 快照ID。 **取值范围**： 不涉及。
 	Id string `json:"id"`
 
-	// 快照名称。
+	// **参数解释**： 快照名称。 **取值范围**： 不涉及。
 	Name string `json:"name"`
 
-	// 快照描述。
+	// **参数解释**： 快照描述。 **取值范围**： 不涉及。
 	Description string `json:"description"`
 
-	// 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
+	// **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
 	Started string `json:"started"`
 
-	// 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
+	// **参数解释**： 快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
 	Finished string `json:"finished"`
 
-	// 快照大小，单位 GB。
+	// **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
 	Size float64 `json:"size"`
 
-	// 快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
+	// **参数解释**： 快照状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
 	Status string `json:"status"`
 
-	// 快照创建类型
+	// **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
 	Type string `json:"type"`
 
-	// 快照对应的集群ID
+	// **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
 	ClusterId string `json:"cluster_id"`
 }
 

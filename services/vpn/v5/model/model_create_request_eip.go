@@ -25,6 +25,9 @@ type CreateRequestEip struct {
 
 	// 带宽名称
 	BandwidthName *string `json:"bandwidth_name,omitempty"`
+
+	// 功能说明：带宽ID，创建弹性IP弹性公网IP时可以指定已有的共享带宽  取值范围：共享（WHOLE类型）带宽ID  约束：指定带宽ID时，带宽的其他字段会被忽略；不指定ID时，size/name/charge_mode/share_type必选，用于创建绑定公网IP的独享带宽
+	BandwidthId *string `json:"bandwidth_id,omitempty"`
 }
 
 func (o CreateRequestEip) String() string {

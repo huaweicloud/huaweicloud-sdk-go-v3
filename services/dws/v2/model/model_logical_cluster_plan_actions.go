@@ -24,7 +24,7 @@ type LogicalClusterPlanActions struct {
 	// **参数解释**： 周期信息。Cron表达式：如\"0 0 0 ? * 3\"。 **取值范围**： 不涉及。
 	Strategy *string `json:"strategy,omitempty"`
 
-	// 行动状态，取值范围为(running|waiting|deleted|finished|disabled|failed)
+	// **参数解释**： 任务状态。 **取值范围**： running|waiting|deleted|finished|disabled|failed。
 	Status *string `json:"status,omitempty"`
 
 	// **参数解释**： 上一次触发时间。 **取值范围**： 不涉及。

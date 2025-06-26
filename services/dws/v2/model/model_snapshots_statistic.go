@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// SnapshotsStatistic 快照统计信息。
+// SnapshotsStatistic **参数解释**： 快照统计信息。 **取值范围**： 不涉及。
 type SnapshotsStatistic struct {
 
-	// 资源统计信息名称。 - storage.free：免费容量。 - storage.paid：付费容量。 - storage.used：已用容量。
+	// **参数解释**： 资源统计信息名称。 **取值范围**： storage.free：免费容量。 storage.paid：付费容量。 storage.used：已用容量。
 	Name string `json:"name"`
 
-	// 资源统计信息值。
+	// **参数解释**： 资源统计信息值。 **取值范围**： 不涉及。
 	Value float32 `json:"value"`
 
-	// 资源统计信息单位。
+	// **参数解释**： 资源统计信息单位。 **取值范围**： 不涉及。
 	Unit string `json:"unit"`
 }
 

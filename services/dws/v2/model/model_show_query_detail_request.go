@@ -9,13 +9,13 @@ import (
 // ShowQueryDetailRequest Request Object
 type ShowQueryDetailRequest struct {
 
-	// **参数解释**： 集群ID。获取方式方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
+	// **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
 	ClusterId string `json:"cluster_id"`
 
-	// 查询ID。
+	// **参数解释**： 查询ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	QueryId string `json:"query_id"`
 
-	// 采集时间。
+	// **参数解释**： 采集时间，时间戳。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Ctime *int64 `json:"ctime,omitempty"`
 }
 

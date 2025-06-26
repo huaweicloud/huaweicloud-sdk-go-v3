@@ -9,7 +9,7 @@ import (
 // ListHostOverviewResponse Response Object
 type ListHostOverviewResponse struct {
 
-	// openApi查询主机概览
+	// **参数解释**： 查询主机概览响应。 **取值范围**： 不涉及。
 	Body           *[]HostOverviewResponse `json:"body,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }

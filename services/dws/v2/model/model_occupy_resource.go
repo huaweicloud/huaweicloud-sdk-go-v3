@@ -6,19 +6,19 @@ import (
 	"strings"
 )
 
-// OccupyResource 用户占用资源列表
+// OccupyResource **参数解释**： 用户占用资源列表。 **取值范围**： 不涉及。
 type OccupyResource struct {
 
-	// 资源项名称
+	// **参数解释**： 资源项名称。 **取值范围**： 不涉及。
 	ResourceName *string `json:"resource_name,omitempty"`
 
-	// 资源属性数值
+	// **参数解释**： 资源属性数值。 **取值范围**： 不涉及。
 	ResourceValue *int32 `json:"resource_value,omitempty"`
 
-	// 资源属性单位
+	// **参数解释**： 资源属性单位。 **取值范围**： 不涉及。
 	ValueUnit *string `json:"value_unit,omitempty"`
 
-	// 资源附加描述
+	// **参数解释**： 资源附加描述。 **取值范围**： 不涉及。
 	ResourceDescription *string `json:"resource_description,omitempty"`
 }
 

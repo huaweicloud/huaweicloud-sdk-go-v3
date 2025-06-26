@@ -1511,22 +1511,6 @@ func GenReqDefForShowRecycleBin() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowRecycleBinServer() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/recycle-bin/cloudservers/{server_id}").
-		WithResponse(new(model.ShowRecycleBinServerResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServerId").
-		WithJsonTag("server_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForShowResetPasswordFlag() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

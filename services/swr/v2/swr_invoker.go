@@ -804,3 +804,1619 @@ func (i *ShowApiVersionInvoker) Invoke() (*model.ShowApiVersionResponse, error) 
 		return result.(*model.ShowApiVersionResponse), nil
 	}
 }
+
+type AddDomainNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddDomainNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddDomainNameInvoker) Invoke() (*model.AddDomainNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddDomainNameResponse), nil
+	}
+}
+
+type CreateImmutableRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateImmutableRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateImmutableRuleInvoker) Invoke() (*model.CreateImmutableRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateImmutableRuleResponse), nil
+	}
+}
+
+type CreateInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateInstanceInvoker) Invoke() (*model.CreateInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateInstanceResponse), nil
+	}
+}
+
+type CreateInstanceEndpointPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateInstanceEndpointPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateInstanceEndpointPolicyInvoker) Invoke() (*model.CreateInstanceEndpointPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateInstanceEndpointPolicyResponse), nil
+	}
+}
+
+type CreateInstanceInternalEndpointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateInstanceInternalEndpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateInstanceInternalEndpointInvoker) Invoke() (*model.CreateInstanceInternalEndpointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateInstanceInternalEndpointResponse), nil
+	}
+}
+
+type CreateInstanceLtCredentialInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateInstanceLtCredentialInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateInstanceLtCredentialInvoker) Invoke() (*model.CreateInstanceLtCredentialResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateInstanceLtCredentialResponse), nil
+	}
+}
+
+type CreateInstanceNamespaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateInstanceNamespaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateInstanceNamespaceInvoker) Invoke() (*model.CreateInstanceNamespaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateInstanceNamespaceResponse), nil
+	}
+}
+
+type CreateInstanceRegistryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateInstanceRegistryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateInstanceRegistryInvoker) Invoke() (*model.CreateInstanceRegistryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateInstanceRegistryResponse), nil
+	}
+}
+
+type CreateInstanceReplicationPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateInstanceReplicationPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateInstanceReplicationPolicyInvoker) Invoke() (*model.CreateInstanceReplicationPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateInstanceReplicationPolicyResponse), nil
+	}
+}
+
+type CreateInstanceResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateInstanceResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateInstanceResourceTagsInvoker) Invoke() (*model.CreateInstanceResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateInstanceResourceTagsResponse), nil
+	}
+}
+
+type CreateInstanceRetentionPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateInstanceRetentionPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateInstanceRetentionPolicyInvoker) Invoke() (*model.CreateInstanceRetentionPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateInstanceRetentionPolicyResponse), nil
+	}
+}
+
+type CreateInstanceSignPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateInstanceSignPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateInstanceSignPolicyInvoker) Invoke() (*model.CreateInstanceSignPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateInstanceSignPolicyResponse), nil
+	}
+}
+
+type CreateInstanceTempCredentialInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateInstanceTempCredentialInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateInstanceTempCredentialInvoker) Invoke() (*model.CreateInstanceTempCredentialResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateInstanceTempCredentialResponse), nil
+	}
+}
+
+type CreateInstanceWebhookInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateInstanceWebhookInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateInstanceWebhookInvoker) Invoke() (*model.CreateInstanceWebhookResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateInstanceWebhookResponse), nil
+	}
+}
+
+type CreateSubResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSubResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSubResourceTagsInvoker) Invoke() (*model.CreateSubResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSubResourceTagsResponse), nil
+	}
+}
+
+type DeleteDomainNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDomainNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDomainNameInvoker) Invoke() (*model.DeleteDomainNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDomainNameResponse), nil
+	}
+}
+
+type DeleteImmutableRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteImmutableRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteImmutableRuleInvoker) Invoke() (*model.DeleteImmutableRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteImmutableRuleResponse), nil
+	}
+}
+
+type DeleteInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteInstanceInvoker) Invoke() (*model.DeleteInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteInstanceResponse), nil
+	}
+}
+
+type DeleteInstanceArtifactInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstanceArtifactInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteInstanceArtifactInvoker) Invoke() (*model.DeleteInstanceArtifactResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteInstanceArtifactResponse), nil
+	}
+}
+
+type DeleteInstanceInternalEndpointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstanceInternalEndpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteInstanceInternalEndpointInvoker) Invoke() (*model.DeleteInstanceInternalEndpointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteInstanceInternalEndpointResponse), nil
+	}
+}
+
+type DeleteInstanceJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstanceJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteInstanceJobInvoker) Invoke() (*model.DeleteInstanceJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteInstanceJobResponse), nil
+	}
+}
+
+type DeleteInstanceLtCredentialInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstanceLtCredentialInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteInstanceLtCredentialInvoker) Invoke() (*model.DeleteInstanceLtCredentialResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteInstanceLtCredentialResponse), nil
+	}
+}
+
+type DeleteInstanceNamespaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstanceNamespaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteInstanceNamespaceInvoker) Invoke() (*model.DeleteInstanceNamespaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteInstanceNamespaceResponse), nil
+	}
+}
+
+type DeleteInstanceRegistryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstanceRegistryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteInstanceRegistryInvoker) Invoke() (*model.DeleteInstanceRegistryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteInstanceRegistryResponse), nil
+	}
+}
+
+type DeleteInstanceReplicationPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstanceReplicationPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteInstanceReplicationPolicyInvoker) Invoke() (*model.DeleteInstanceReplicationPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteInstanceReplicationPolicyResponse), nil
+	}
+}
+
+type DeleteInstanceRepositoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstanceRepositoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteInstanceRepositoryInvoker) Invoke() (*model.DeleteInstanceRepositoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteInstanceRepositoryResponse), nil
+	}
+}
+
+type DeleteInstanceResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstanceResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteInstanceResourceTagsInvoker) Invoke() (*model.DeleteInstanceResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteInstanceResourceTagsResponse), nil
+	}
+}
+
+type DeleteInstanceRetentionPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstanceRetentionPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteInstanceRetentionPolicyInvoker) Invoke() (*model.DeleteInstanceRetentionPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteInstanceRetentionPolicyResponse), nil
+	}
+}
+
+type DeleteInstanceSignPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstanceSignPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteInstanceSignPolicyInvoker) Invoke() (*model.DeleteInstanceSignPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteInstanceSignPolicyResponse), nil
+	}
+}
+
+type DeleteInstanceWebhookInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstanceWebhookInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteInstanceWebhookInvoker) Invoke() (*model.DeleteInstanceWebhookResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteInstanceWebhookResponse), nil
+	}
+}
+
+type DeleteSubResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSubResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteSubResourceTagsInvoker) Invoke() (*model.DeleteSubResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSubResourceTagsResponse), nil
+	}
+}
+
+type ExecuteInstanceReplicationPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteInstanceReplicationPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteInstanceReplicationPolicyInvoker) Invoke() (*model.ExecuteInstanceReplicationPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteInstanceReplicationPolicyResponse), nil
+	}
+}
+
+type ExecuteInstanceRetentionPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteInstanceRetentionPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteInstanceRetentionPolicyInvoker) Invoke() (*model.ExecuteInstanceRetentionPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteInstanceRetentionPolicyResponse), nil
+	}
+}
+
+type ExecuteInstanceSignPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteInstanceSignPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteInstanceSignPolicyInvoker) Invoke() (*model.ExecuteInstanceSignPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteInstanceSignPolicyResponse), nil
+	}
+}
+
+type ListAuditLogsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAuditLogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAuditLogsInvoker) Invoke() (*model.ListAuditLogsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAuditLogsResponse), nil
+	}
+}
+
+type ListDomainNamesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDomainNamesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDomainNamesInvoker) Invoke() (*model.ListDomainNamesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDomainNamesResponse), nil
+	}
+}
+
+type ListFeatureGatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFeatureGatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListFeatureGatesInvoker) Invoke() (*model.ListFeatureGatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFeatureGatesResponse), nil
+	}
+}
+
+type ListGlobalFeatureGatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGlobalFeatureGatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListGlobalFeatureGatesInvoker) Invoke() (*model.ListGlobalFeatureGatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGlobalFeatureGatesResponse), nil
+	}
+}
+
+type ListImmutableRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListImmutableRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListImmutableRulesInvoker) Invoke() (*model.ListImmutableRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListImmutableRulesResponse), nil
+	}
+}
+
+type ListInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceInvoker) Invoke() (*model.ListInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceResponse), nil
+	}
+}
+
+type ListInstanceAccessoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceAccessoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceAccessoriesInvoker) Invoke() (*model.ListInstanceAccessoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceAccessoriesResponse), nil
+	}
+}
+
+type ListInstanceAllArtifactsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceAllArtifactsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceAllArtifactsInvoker) Invoke() (*model.ListInstanceAllArtifactsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceAllArtifactsResponse), nil
+	}
+}
+
+type ListInstanceArtifactsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceArtifactsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceArtifactsInvoker) Invoke() (*model.ListInstanceArtifactsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceArtifactsResponse), nil
+	}
+}
+
+type ListInstanceInternalEndpointsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceInternalEndpointsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceInternalEndpointsInvoker) Invoke() (*model.ListInstanceInternalEndpointsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceInternalEndpointsResponse), nil
+	}
+}
+
+type ListInstanceJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceJobsInvoker) Invoke() (*model.ListInstanceJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceJobsResponse), nil
+	}
+}
+
+type ListInstanceLtCredentialsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceLtCredentialsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceLtCredentialsInvoker) Invoke() (*model.ListInstanceLtCredentialsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceLtCredentialsResponse), nil
+	}
+}
+
+type ListInstanceNamespacesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceNamespacesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceNamespacesInvoker) Invoke() (*model.ListInstanceNamespacesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceNamespacesResponse), nil
+	}
+}
+
+type ListInstanceProjectTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceProjectTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceProjectTagsInvoker) Invoke() (*model.ListInstanceProjectTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceProjectTagsResponse), nil
+	}
+}
+
+type ListInstanceRegistriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceRegistriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceRegistriesInvoker) Invoke() (*model.ListInstanceRegistriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceRegistriesResponse), nil
+	}
+}
+
+type ListInstanceReplicationPoliciesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceReplicationPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceReplicationPoliciesInvoker) Invoke() (*model.ListInstanceReplicationPoliciesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceReplicationPoliciesResponse), nil
+	}
+}
+
+type ListInstanceReplicationPolicyExecSubTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceReplicationPolicyExecSubTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceReplicationPolicyExecSubTasksInvoker) Invoke() (*model.ListInstanceReplicationPolicyExecSubTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceReplicationPolicyExecSubTasksResponse), nil
+	}
+}
+
+type ListInstanceReplicationPolicyExecTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceReplicationPolicyExecTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceReplicationPolicyExecTasksInvoker) Invoke() (*model.ListInstanceReplicationPolicyExecTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceReplicationPolicyExecTasksResponse), nil
+	}
+}
+
+type ListInstanceReplicationPolicyExecutionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceReplicationPolicyExecutionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceReplicationPolicyExecutionsInvoker) Invoke() (*model.ListInstanceReplicationPolicyExecutionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceReplicationPolicyExecutionsResponse), nil
+	}
+}
+
+type ListInstanceRepositoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceRepositoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceRepositoriesInvoker) Invoke() (*model.ListInstanceRepositoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceRepositoriesResponse), nil
+	}
+}
+
+type ListInstanceResourceInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceResourceInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceResourceInstancesInvoker) Invoke() (*model.ListInstanceResourceInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceResourceInstancesResponse), nil
+	}
+}
+
+type ListInstanceResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceResourceTagsInvoker) Invoke() (*model.ListInstanceResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceResourceTagsResponse), nil
+	}
+}
+
+type ListInstanceRetentionPoliciesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceRetentionPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceRetentionPoliciesInvoker) Invoke() (*model.ListInstanceRetentionPoliciesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceRetentionPoliciesResponse), nil
+	}
+}
+
+type ListInstanceRetentionPolicyExecSubTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceRetentionPolicyExecSubTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceRetentionPolicyExecSubTasksInvoker) Invoke() (*model.ListInstanceRetentionPolicyExecSubTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceRetentionPolicyExecSubTasksResponse), nil
+	}
+}
+
+type ListInstanceRetentionPolicyExecTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceRetentionPolicyExecTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceRetentionPolicyExecTasksInvoker) Invoke() (*model.ListInstanceRetentionPolicyExecTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceRetentionPolicyExecTasksResponse), nil
+	}
+}
+
+type ListInstanceRetentionPolicyExecutionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceRetentionPolicyExecutionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceRetentionPolicyExecutionsInvoker) Invoke() (*model.ListInstanceRetentionPolicyExecutionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceRetentionPolicyExecutionsResponse), nil
+	}
+}
+
+type ListInstanceSignPoliciesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceSignPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceSignPoliciesInvoker) Invoke() (*model.ListInstanceSignPoliciesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceSignPoliciesResponse), nil
+	}
+}
+
+type ListInstanceSignPolicyExecTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceSignPolicyExecTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceSignPolicyExecTasksInvoker) Invoke() (*model.ListInstanceSignPolicyExecTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceSignPolicyExecTasksResponse), nil
+	}
+}
+
+type ListInstanceSignPolicyExecutionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceSignPolicyExecutionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceSignPolicyExecutionsInvoker) Invoke() (*model.ListInstanceSignPolicyExecutionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceSignPolicyExecutionsResponse), nil
+	}
+}
+
+type ListInstanceSignatureExecutionSubtasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceSignatureExecutionSubtasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceSignatureExecutionSubtasksInvoker) Invoke() (*model.ListInstanceSignatureExecutionSubtasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceSignatureExecutionSubtasksResponse), nil
+	}
+}
+
+type ListInstanceStatisticsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceStatisticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceStatisticsInvoker) Invoke() (*model.ListInstanceStatisticsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceStatisticsResponse), nil
+	}
+}
+
+type ListInstanceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceTagsInvoker) Invoke() (*model.ListInstanceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceTagsResponse), nil
+	}
+}
+
+type ListInstanceWebhookJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceWebhookJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceWebhookJobsInvoker) Invoke() (*model.ListInstanceWebhookJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceWebhookJobsResponse), nil
+	}
+}
+
+type ListInstanceWebhooksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceWebhooksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceWebhooksInvoker) Invoke() (*model.ListInstanceWebhooksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceWebhooksResponse), nil
+	}
+}
+
+type ListNamespaceRepositoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNamespaceRepositoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListNamespaceRepositoriesInvoker) Invoke() (*model.ListNamespaceRepositoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNamespaceRepositoriesResponse), nil
+	}
+}
+
+type ListNamespaceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNamespaceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListNamespaceTagsInvoker) Invoke() (*model.ListNamespaceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNamespaceTagsResponse), nil
+	}
+}
+
+type ListSubResourceInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSubResourceInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSubResourceInstancesInvoker) Invoke() (*model.ListSubResourceInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSubResourceInstancesResponse), nil
+	}
+}
+
+type ListSubResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSubResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSubResourceTagsInvoker) Invoke() (*model.ListSubResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSubResourceTagsResponse), nil
+	}
+}
+
+type ShowInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceInvoker) Invoke() (*model.ShowInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceResponse), nil
+	}
+}
+
+type ShowInstanceArtifactInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceArtifactInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceArtifactInvoker) Invoke() (*model.ShowInstanceArtifactResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceArtifactResponse), nil
+	}
+}
+
+type ShowInstanceArtifactAdditionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceArtifactAdditionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceArtifactAdditionInvoker) Invoke() (*model.ShowInstanceArtifactAdditionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceArtifactAdditionResponse), nil
+	}
+}
+
+type ShowInstanceConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceConfigurationInvoker) Invoke() (*model.ShowInstanceConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceConfigurationResponse), nil
+	}
+}
+
+type ShowInstanceEndpointPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceEndpointPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceEndpointPolicyInvoker) Invoke() (*model.ShowInstanceEndpointPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceEndpointPolicyResponse), nil
+	}
+}
+
+type ShowInstanceInternalEndpointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceInternalEndpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceInternalEndpointInvoker) Invoke() (*model.ShowInstanceInternalEndpointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceInternalEndpointResponse), nil
+	}
+}
+
+type ShowInstanceJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceJobInvoker) Invoke() (*model.ShowInstanceJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceJobResponse), nil
+	}
+}
+
+type ShowInstanceNamespaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceNamespaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceNamespaceInvoker) Invoke() (*model.ShowInstanceNamespaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceNamespaceResponse), nil
+	}
+}
+
+type ShowInstanceRegistryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceRegistryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceRegistryInvoker) Invoke() (*model.ShowInstanceRegistryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceRegistryResponse), nil
+	}
+}
+
+type ShowInstanceReplicationPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceReplicationPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceReplicationPolicyInvoker) Invoke() (*model.ShowInstanceReplicationPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceReplicationPolicyResponse), nil
+	}
+}
+
+type ShowInstanceRepositoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceRepositoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceRepositoryInvoker) Invoke() (*model.ShowInstanceRepositoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceRepositoryResponse), nil
+	}
+}
+
+type ShowInstanceResourceInstancesCountInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceResourceInstancesCountInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceResourceInstancesCountInvoker) Invoke() (*model.ShowInstanceResourceInstancesCountResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceResourceInstancesCountResponse), nil
+	}
+}
+
+type ShowInstanceRetentionPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceRetentionPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceRetentionPolicyInvoker) Invoke() (*model.ShowInstanceRetentionPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceRetentionPolicyResponse), nil
+	}
+}
+
+type ShowInstanceSignPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceSignPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceSignPolicyInvoker) Invoke() (*model.ShowInstanceSignPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceSignPolicyResponse), nil
+	}
+}
+
+type ShowInstanceWebhookInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceWebhookInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceWebhookInvoker) Invoke() (*model.ShowInstanceWebhookResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceWebhookResponse), nil
+	}
+}
+
+type ShowSubResourceInstancesCountInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSubResourceInstancesCountInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSubResourceInstancesCountInvoker) Invoke() (*model.ShowSubResourceInstancesCountResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSubResourceInstancesCountResponse), nil
+	}
+}
+
+type StopInstanceReplicationPolicyExecutionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopInstanceReplicationPolicyExecutionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StopInstanceReplicationPolicyExecutionInvoker) Invoke() (*model.StopInstanceReplicationPolicyExecutionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopInstanceReplicationPolicyExecutionResponse), nil
+	}
+}
+
+type UpdateDomainNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDomainNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDomainNameInvoker) Invoke() (*model.UpdateDomainNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDomainNameResponse), nil
+	}
+}
+
+type UpdateImmutableRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateImmutableRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateImmutableRuleInvoker) Invoke() (*model.UpdateImmutableRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateImmutableRuleResponse), nil
+	}
+}
+
+type UpdateInstanceConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInstanceConfigurationInvoker) Invoke() (*model.UpdateInstanceConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceConfigurationResponse), nil
+	}
+}
+
+type UpdateInstanceEndpointPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceEndpointPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInstanceEndpointPolicyInvoker) Invoke() (*model.UpdateInstanceEndpointPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceEndpointPolicyResponse), nil
+	}
+}
+
+type UpdateInstanceLtCredentialInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceLtCredentialInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInstanceLtCredentialInvoker) Invoke() (*model.UpdateInstanceLtCredentialResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceLtCredentialResponse), nil
+	}
+}
+
+type UpdateInstanceNamespaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceNamespaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInstanceNamespaceInvoker) Invoke() (*model.UpdateInstanceNamespaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceNamespaceResponse), nil
+	}
+}
+
+type UpdateInstanceRegistryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceRegistryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInstanceRegistryInvoker) Invoke() (*model.UpdateInstanceRegistryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceRegistryResponse), nil
+	}
+}
+
+type UpdateInstanceReplicationPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceReplicationPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInstanceReplicationPolicyInvoker) Invoke() (*model.UpdateInstanceReplicationPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceReplicationPolicyResponse), nil
+	}
+}
+
+type UpdateInstanceRepositoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceRepositoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInstanceRepositoryInvoker) Invoke() (*model.UpdateInstanceRepositoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceRepositoryResponse), nil
+	}
+}
+
+type UpdateInstanceRetentionPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceRetentionPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInstanceRetentionPolicyInvoker) Invoke() (*model.UpdateInstanceRetentionPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceRetentionPolicyResponse), nil
+	}
+}
+
+type UpdateInstanceSignPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceSignPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInstanceSignPolicyInvoker) Invoke() (*model.UpdateInstanceSignPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceSignPolicyResponse), nil
+	}
+}
+
+type UpdateInstanceWebhookInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceWebhookInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInstanceWebhookInvoker) Invoke() (*model.UpdateInstanceWebhookResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceWebhookResponse), nil
+	}
+}

@@ -9,7 +9,7 @@ import (
 // CopySnapshotResponse Response Object
 type CopySnapshotResponse struct {
 
-	// 快照id。
+	// **参数解释**： 快照ID。 **取值范围**： 不涉及。
 	SnapshotId     *string `json:"snapshot_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -13,6 +13,9 @@ type UpdateVpnUserRequestBodyContent struct {
 
 	// 所属用户组ID
 	UserGroupId *string `json:"user_group_id,omitempty"`
+
+	// 静态客户端IP地址，disable表示随机分配客户端IP
+	StaticIp *string `json:"static_ip,omitempty"`
 }
 
 func (o UpdateVpnUserRequestBodyContent) String() string {

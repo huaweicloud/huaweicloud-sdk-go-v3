@@ -9,10 +9,10 @@ import (
 // ListAlarmConfigsResponse Response Object
 type ListAlarmConfigsResponse struct {
 
-	// 告警配置总数
+	// **参数解释**： 告警配置总数。 **取值范围**： 不涉及。
 	Count *int32 `json:"count,omitempty"`
 
-	// 告警配置列表
+	// **参数解释**： 告警配置列表。 **取值范围**： 不涉及。
 	AlarmConfigs   *[]AlarmConfigResponse `json:"alarm_configs,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

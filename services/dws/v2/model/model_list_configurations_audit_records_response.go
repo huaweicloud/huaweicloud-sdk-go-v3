@@ -9,10 +9,10 @@ import (
 // ListConfigurationsAuditRecordsResponse Response Object
 type ListConfigurationsAuditRecordsResponse struct {
 
-	// 记录
+	// **参数解释**： 记录。 **取值范围**： 不涉及。
 	Records *[]ConfigurationRecordResp `json:"records,omitempty"`
 
-	// 总数
+	// **参数解释**： 总数。 **取值范围**： 不涉及。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

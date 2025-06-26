@@ -8,61 +8,61 @@ import (
 
 type DisasterRecovery struct {
 
-	// ID
+	// **参数解释**： 容灾ID。 **取值范围**： 不涉及。
 	Id *string `json:"id,omitempty"`
 
-	// 状态
+	// **参数解释**： 状态。 **取值范围**： 不涉及。
 	Status *string `json:"status,omitempty"`
 
-	// 名称
+	// **参数解释**： 名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 容灾类型
+	// **参数解释**： 容灾类型。 **取值范围**： 不涉及。
 	DrType *string `json:"dr_type,omitempty"`
 
-	// 主集群ID
+	// **参数解释**： 主集群ID。 **取值范围**： 不涉及。
 	PrimaryClusterId *string `json:"primary_cluster_id,omitempty"`
 
-	// 主集群名称
+	// **参数解释**： 主集群名称。 **取值范围**： 不涉及。
 	PrimaryClusterName *string `json:"primary_cluster_name,omitempty"`
 
-	// 备集群ID
+	// **参数解释**： 备集群ID。 **取值范围**： 不涉及。
 	StandbyClusterId *string `json:"standby_cluster_id,omitempty"`
 
-	// 备集群名称
+	// **参数解释**： 备集群名称。 **取值范围**： 不涉及。
 	StandbyClusterName *string `json:"standby_cluster_name,omitempty"`
 
-	// 主集群角色
+	// **参数解释**： 主集群角色。 **取值范围**： 不涉及。
 	PrimaryClusterRole *string `json:"primary_cluster_role,omitempty"`
 
-	// 备集群角色
+	// **参数解释**： 备集群角色。 **取值范围**： 不涉及。
 	StandbyClusterRole *string `json:"standby_cluster_role,omitempty"`
 
-	// 主集群状态
+	// **参数解释**： 主集群状态。 **取值范围**： 不涉及。
 	PrimaryClusterStatus *string `json:"primary_cluster_status,omitempty"`
 
-	// 备集群状态
+	// **参数解释**： 备集群状态。 **取值范围**： 不涉及。
 	StandbyClusterStatus *string `json:"standby_cluster_status,omitempty"`
 
-	// 主集群region
+	// **参数解释**： 主集群region。 **取值范围**： 不涉及。
 	PrimaryClusterRegion *string `json:"primary_cluster_region,omitempty"`
 
-	// 备集群region
+	// **参数解释**： 备集群region。 **取值范围**： 不涉及。
 	StandbyClusterRegion *string `json:"standby_cluster_region,omitempty"`
 
-	// 主集群project_id
+	// **参数解释**： 主集群项目ID。 **取值范围**： 不涉及。
 	PrimaryClusterProjectId *string `json:"primary_cluster_project_id,omitempty"`
 
-	// 备集群project_id
+	// **参数解释**： 备集群项目ID。 **取值范围**： 不涉及。
 	StandbyClusterProjectId *string `json:"standby_cluster_project_id,omitempty"`
 
-	// 最近同步时间
+	// **参数解释**： 最近同步时间。 **取值范围**： 不涉及。
 	LastDisasterTime *string `json:"last_disaster_time,omitempty"`
 
-	// 启动时间
+	// **参数解释**： 启动时间。 **取值范围**： 不涉及。
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 创建时间
+	// **参数解释**： 创建时间。 **取值范围**： 不涉及。
 	CreateTime *string `json:"create_time,omitempty"`
 }
 

@@ -633,6 +633,27 @@ func (c *SmnClient) ListTopicDetailsInvoker(request *model.ListTopicDetailsReque
 	return &ListTopicDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTopicMessageStatistics 查询主题的发送详情
+//
+// 查询Topic的发送数据详情，最多支持查询31天内所有计量数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) ListTopicMessageStatistics(request *model.ListTopicMessageStatisticsRequest) (*model.ListTopicMessageStatisticsResponse, error) {
+	requestDef := GenReqDefForListTopicMessageStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTopicMessageStatisticsResponse), nil
+	}
+}
+
+// ListTopicMessageStatisticsInvoker 查询主题的发送详情
+func (c *SmnClient) ListTopicMessageStatisticsInvoker(request *model.ListTopicMessageStatisticsRequest) *ListTopicMessageStatisticsInvoker {
+	requestDef := GenReqDefForListTopicMessageStatistics()
+	return &ListTopicMessageStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListTopics 查询主题列表
 //
 // 分页查询Topic列表，Topic列表按照Topic创建时间进行降序排列。分页查询可以指定offset以及limit。如果不存在Topic，则返回空列表。

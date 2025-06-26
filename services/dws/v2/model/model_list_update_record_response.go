@@ -9,10 +9,10 @@ import (
 // ListUpdateRecordResponse Response Object
 type ListUpdateRecordResponse struct {
 
-	// 集群升级记录总数
+	// **参数解释**： 集群升级记录总数。 **取值范围**： 不涉及。
 	Count *int32 `json:"count,omitempty"`
 
-	// 集群升级记录列表
+	// **参数解释**： 集群升级记录列表。 **取值范围**： 不涉及。
 	Records        *[]ClusterUpdateRecordResp `json:"records,omitempty"`
 	HttpStatusCode int                        `json:"-"`
 }

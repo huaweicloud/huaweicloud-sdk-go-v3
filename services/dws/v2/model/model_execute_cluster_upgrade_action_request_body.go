@@ -8,10 +8,10 @@ import (
 
 type ExecuteClusterUpgradeActionRequestBody struct {
 
-	// 当前集群要做的操作
+	// **参数解释**： 当前集群要做的操作。 **取值范围**： 不涉及。
 	Action string `json:"action"`
 
-	// 升级项ID
+	// **参数解释**： 升级项ID。 **取值范围**： 不涉及。
 	ItemId string `json:"item_id"`
 }
 

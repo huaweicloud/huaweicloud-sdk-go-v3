@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// RedisProgress 重分布进度信息
+// RedisProgress **参数解释**： 重分布进度信息。 **取值范围**： 不涉及。
 type RedisProgress struct {
 
 	// **参数解释**： 已完成字节数。 **取值范围**： 不涉及。

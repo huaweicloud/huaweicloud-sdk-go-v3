@@ -6,37 +6,37 @@ import (
 	"strings"
 )
 
-// AlarmDetailResponse 告警详情
+// AlarmDetailResponse **参数解释**： 告警详情。 **取值范围**： 不涉及。
 type AlarmDetailResponse struct {
 
-	// 告警定义ID
+	// **参数解释**： 告警定义ID。 **取值范围**： 不涉及。
 	AlarmId *string `json:"alarm_id,omitempty"`
 
-	// 告警名称
+	// **参数解释**： 告警名称。 **取值范围**： 不涉及。
 	AlarmName *string `json:"alarm_name,omitempty"`
 
-	// 告警级别
+	// **参数解释**： 告警级别。 **取值范围**： 不涉及。
 	AlarmLevel *string `json:"alarm_level,omitempty"`
 
-	// 告警服务
+	// **参数解释**： 告警服务。 **取值范围**： 不涉及。
 	AlarmSource *string `json:"alarm_source,omitempty"`
 
-	// 告警消息
+	// **参数解释**： 告警消息。 **取值范围**： 不涉及。
 	AlarmMessage *string `json:"alarm_message,omitempty"`
 
-	// 告警定位信息
+	// **参数解释**： 告警定位信息。 **取值范围**： 不涉及。
 	AlarmLocation *string `json:"alarm_location,omitempty"`
 
-	// 告警源ID
+	// **参数解释**： 告警源ID。 **取值范围**： 不涉及。
 	ResourceId *string `json:"resource_id,omitempty"`
 
-	// 告警源名称
+	// **参数解释**： 告警源名称。 **取值范围**： 不涉及。
 	ResourceIdName *string `json:"resource_id_name,omitempty"`
 
-	// 告警日期
+	// **参数解释**： 告警日期。 **取值范围**： 不涉及。
 	AlarmGenerateDate *string `json:"alarm_generate_date,omitempty"`
 
-	// 告警状态
+	// **参数解释**： 告警状态。 **取值范围**： 不涉及。
 	AlarmStatus *string `json:"alarm_status,omitempty"`
 }
 

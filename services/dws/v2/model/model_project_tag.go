@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// ProjectTag 标签详情。
+// ProjectTag **参数解释**： 标签详情。 **取值范围**： 不涉及。
 type ProjectTag struct {
 
-	// 键。
+	// **参数解释**： 键。 **取值范围**： 不涉及。
 	Key string `json:"key"`
 
-	// 值。
+	// **参数解释**： 值。 **取值范围**： 不涉及。
 	Values []string `json:"values"`
 }
 

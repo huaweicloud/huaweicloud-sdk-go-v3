@@ -6,19 +6,19 @@ import (
 	"strings"
 )
 
-// QuotasResource 资源配额详情。
+// QuotasResource **参数解释**： 资源配额详情。 **取值范围**： 不涉及。
 type QuotasResource struct {
 
-	// 项目资源类型。
+	// **参数解释**： 项目资源类型。 **取值范围**： 不涉及。
 	Type string `json:"type"`
 
-	// 已使用的资源数量。
+	// **参数解释**： 已使用的资源数量。 **取值范围**： 不涉及。
 	Used int32 `json:"used"`
 
-	// 项目资源配额。
+	// **参数解释**： 项目资源配额。 **取值范围**： 不涉及。
 	Quota int32 `json:"quota"`
 
-	// 资源计量单位。
+	// **参数解释**： 资源计量单位。 **取值范围**： 不涉及。
 	Unit string `json:"unit"`
 }
 

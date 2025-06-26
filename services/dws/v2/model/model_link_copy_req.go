@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// LinkCopyReq 快照复制请求
+// LinkCopyReq **参数解释**： 快照复制请求。 **取值范围**： 不涉及。
 type LinkCopyReq struct {
 
-	// 快照名称
+	// **参数解释**： 快照名称。 **取值范围**： 不涉及。
 	BackupName string `json:"backup_name"`
 
-	// 描述
+	// **参数解释**： 描述信息。 **取值范围**： 不涉及。
 	Description *string `json:"description,omitempty"`
 }
 

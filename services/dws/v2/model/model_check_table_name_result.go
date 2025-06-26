@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// CheckTableNameResult 表名检查结果
+// CheckTableNameResult **参数解释**： 表名检查结果。 **取值范围**： 不涉及。
 type CheckTableNameResult struct {
 
-	// 数据库名称
+	// **参数解释**： 数据库名称。 **取值范围**： 不涉及。
 	Database *string `json:"database,omitempty"`
 
-	// 恢复源表信息
+	// **参数解释**： 恢复源表信息。 **取值范围**： 不涉及。
 	RestoreTableList *[]string `json:"restore_table_list,omitempty"`
 
-	// 恢复目的表信息
+	// **参数解释**： 恢复目的表信息。 **取值范围**： 不涉及。
 	TargetTableList *[]string `json:"target_table_list,omitempty"`
 }
 

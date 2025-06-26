@@ -9,16 +9,16 @@ import (
 // CheckDisasterNameRequest Request Object
 type CheckDisasterNameRequest struct {
 
-	// 容灾名称
+	// **参数解释**： 容灾名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	DrName string `json:"dr_name"`
 
-	// 容灾类型
+	// **参数解释**： 容灾类型。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Type *string `json:"type,omitempty"`
 
-	// 备集群所在region
+	// **参数解释**： 备集群所在局点。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	StandbyRegion *string `json:"standby_region,omitempty"`
 
-	// 备集群所在项目ID
+	// **参数解释**： 备集群所在项目ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	StandbyProjectId *string `json:"standby_project_id,omitempty"`
 }
 

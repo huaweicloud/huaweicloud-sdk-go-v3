@@ -501,6 +501,22 @@ func (i *UpdateVpnAccessPolicyInvoker) Invoke() (*model.UpdateVpnAccessPolicyRes
 	}
 }
 
+type BatchCreateVpnConnectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateVpnConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateVpnConnectionInvoker) Invoke() (*model.BatchCreateVpnConnectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateVpnConnectionResponse), nil
+	}
+}
+
 type CreateVpnConnectionInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// SetConsistencyResultRequestBody 设置一致性校验的结果body体
+// SetConsistencyResultRequestBody 设置一致性校验的结果请求体
 type SetConsistencyResultRequestBody struct {
 
 	// 一致性校验结果

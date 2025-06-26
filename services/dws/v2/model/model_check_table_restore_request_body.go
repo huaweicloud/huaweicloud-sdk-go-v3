@@ -6,19 +6,19 @@ import (
 	"strings"
 )
 
-// CheckTableRestoreRequestBody 恢复表前检查表名请求体
+// CheckTableRestoreRequestBody **参数解释**： 恢复表前检查表名请求体。 **取值范围**： 不涉及。
 type CheckTableRestoreRequestBody struct {
 
-	// 名称是否区分大小写
+	// **参数解释**： 名称是否区分大小写。 **取值范围**： 不涉及。
 	CaseSensitive bool `json:"case_sensitive"`
 
-	// 数据库名称
+	// **参数解释**： 数据库名称。 **取值范围**： 不涉及。
 	Database string `json:"database"`
 
-	// 源表信息
+	// **参数解释**： 源表信息。 **取值范围**： 不涉及。
 	RestoreTableList []TableDetail `json:"restore_table_list"`
 
-	// 目的表信息
+	// **参数解释**： 目的表信息。 **取值范围**： 不涉及。
 	TargetTableList []TableDetail `json:"target_table_list"`
 }
 

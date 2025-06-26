@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// QuotasQuotas 配额列表对象。
+// QuotasQuotas **参数解释**： 配额列表对象。 **取值范围**： 不涉及。
 type QuotasQuotas struct {
 
-	// 资源列表对象。
+	// **参数解释**： 资源列表对象。 **取值范围**： 不涉及。
 	Resources *[]QuotasResource `json:"resources,omitempty"`
 }
 

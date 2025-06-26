@@ -6,22 +6,22 @@ import (
 	"strings"
 )
 
-// LtslogInfo LTS日志信息
+// LtslogInfo **参数解释**： LTS日志信息。 **取值范围**： 不涉及。
 type LtslogInfo struct {
 
-	// 配置状态
+	// **参数解释**： 配置状态。 **取值范围**： 不涉及。
 	Status string `json:"status"`
 
-	// 日志ID
+	// **参数解释**： 日志ID。 **取值范围**： 不涉及。
 	Id string `json:"id"`
 
-	// 日志类型
+	// **参数解释**： 日志类型。 **取值范围**： 不涉及。
 	LogType string `json:"log_type"`
 
-	// 日志描述
+	// **参数解释**： 日志描述。 **取值范围**： 不涉及。
 	LogDesc string `json:"log_desc"`
 
-	// LTS日志访问URL
+	// **参数解释**： LTS日志访问URL。 **取值范围**： 不涉及。
 	AccessUrl string `json:"access_url"`
 }
 

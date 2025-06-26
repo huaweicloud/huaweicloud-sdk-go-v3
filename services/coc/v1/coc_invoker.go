@@ -101,6 +101,118 @@ func (i *CreateReportCustomEventInvoker) Invoke() (*model.CreateReportCustomEven
 	}
 }
 
+type CancelDiagnosisTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CancelDiagnosisTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CancelDiagnosisTaskInvoker) Invoke() (*model.CancelDiagnosisTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CancelDiagnosisTaskResponse), nil
+	}
+}
+
+type CreateDiagnosisTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDiagnosisTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDiagnosisTaskInvoker) Invoke() (*model.CreateDiagnosisTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDiagnosisTaskResponse), nil
+	}
+}
+
+type ListDiagnosisTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDiagnosisTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDiagnosisTasksInvoker) Invoke() (*model.ListDiagnosisTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDiagnosisTasksResponse), nil
+	}
+}
+
+type RetryDiagnosisTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RetryDiagnosisTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RetryDiagnosisTaskInvoker) Invoke() (*model.RetryDiagnosisTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RetryDiagnosisTaskResponse), nil
+	}
+}
+
+type ShowDiagnosisNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDiagnosisNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDiagnosisNodeInvoker) Invoke() (*model.ShowDiagnosisNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDiagnosisNodeResponse), nil
+	}
+}
+
+type ShowDiagnosisSummaryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDiagnosisSummaryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDiagnosisSummaryInvoker) Invoke() (*model.ShowDiagnosisSummaryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDiagnosisSummaryResponse), nil
+	}
+}
+
+type ShowDiagnosisTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDiagnosisTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDiagnosisTaskInvoker) Invoke() (*model.ShowDiagnosisTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDiagnosisTaskResponse), nil
+	}
+}
+
 type CreateDocumentInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -8,8 +8,10 @@ import (
 
 // DeleteDisasterRecoveryResponse Response Object
 type DeleteDisasterRecoveryResponse struct {
-	Body           *string `json:"body,omitempty"`
-	HttpStatusCode int     `json:"-"`
+
+	// **参数解释**： 请求成功时的空白响应。 **取值范围**： 不涉及。
+	Body           *interface{} `json:"body,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o DeleteDisasterRecoveryResponse) String() string {

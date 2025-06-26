@@ -9,10 +9,10 @@ import (
 // CreateDataSourceResponse Response Object
 type CreateDataSourceResponse struct {
 
-	// 数据源id。
+	// **参数解释**： 数据源ID。 **取值范围**： 不涉及。
 	Id *string `json:"id,omitempty"`
 
-	// 创建数据源job_id。
+	// **参数解释**： 创建数据源任务ID。 **取值范围**： 不涉及。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

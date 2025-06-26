@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Detail 规格详细信息。
+// Detail **参数解释**： 规格详细信息。 **取值范围**： 不涉及。
 type Detail struct {
 
 	// **参数解释**： 属性类型。 **取值范围**： 不涉及。

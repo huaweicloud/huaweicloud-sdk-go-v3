@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// DatabaseOmUserInfo 数据库运维账户信息 包含账户状态  账户过期时间（时间戳） **参数解释**： 数据库运维账户信息。包含账户状态  账户过期时间（时间戳）。 **取值范围**： 不涉及。
+// DatabaseOmUserInfo **参数解释**： 数据库运维账户信息。包含账户状态  账户过期时间（时间戳）。 **取值范围**： 不涉及。
 type DatabaseOmUserInfo struct {
 
 	// **参数解释**： 运维账户状态。 **取值范围**： on、off

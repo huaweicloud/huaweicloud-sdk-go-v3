@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// NodeTypeAvailableZones 规格支持的可用区及状态信息。
+// NodeTypeAvailableZones **参数解释**： 规格支持的可用区及状态信息。 **取值范围**： 不涉及。
 type NodeTypeAvailableZones struct {
 
 	// **参数解释**： 可用区ID。 **取值范围**： 不涉及。

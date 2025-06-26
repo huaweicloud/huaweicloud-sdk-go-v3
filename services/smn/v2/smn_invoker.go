@@ -469,6 +469,22 @@ func (i *ListTopicDetailsInvoker) Invoke() (*model.ListTopicDetailsResponse, err
 	}
 }
 
+type ListTopicMessageStatisticsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTopicMessageStatisticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTopicMessageStatisticsInvoker) Invoke() (*model.ListTopicMessageStatisticsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTopicMessageStatisticsResponse), nil
+	}
+}
+
 type ListTopicsInvoker struct {
 	*invoker.BaseInvoker
 }

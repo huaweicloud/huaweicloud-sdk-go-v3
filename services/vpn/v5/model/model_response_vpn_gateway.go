@@ -94,6 +94,9 @@ type ResponseVpnGateway struct {
 	// 创建时间
 	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
 
+	// 生效时间
+	AppliedAt *sdktime.SdkTime `json:"applied_at,omitempty"`
+
 	// 更新时间
 	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
 

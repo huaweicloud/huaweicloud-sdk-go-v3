@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// NodeTypes 节点类型对象
+// NodeTypes **参数解释**： 节点规格对象。 **取值范围**： 不涉及。
 type NodeTypes struct {
 
 	// **参数解释**： 规格名称。 **取值范围**： 字母、数字、小数点、下划线、短横线。
@@ -18,10 +18,10 @@ type NodeTypes struct {
 	// **参数解释**： 规格ID。 **取值范围**： 一般为UUID。
 	Id string `json:"id"`
 
-	// **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。 - stream：IoT数仓。
+	// **参数解释**： 产品类型。 **取值范围**： - dws：云数仓。 - hybrid：实时数仓。
 	DatastoreType string `json:"datastore_type"`
 
-	// **参数解释**： 架构类型。 **取值范围**： - x86； - arm；
+	// **参数解释**： 架构类型。 **取值范围**： - x86。 - arm。
 	Architecture string `json:"architecture"`
 
 	// **参数解释**： 支持的可用区及状态信息。 **取值范围**： 不涉及。
@@ -38,7 +38,7 @@ type NodeTypes struct {
 
 	Volume *VolumeResp `json:"volume"`
 
-	// **参数解释**： 弹性弹性容量规格的规格容量信息 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
+	// **参数解释**： 弹性容量规格的规格容量信息。 **取值范围**： 如果规格为弹性容量规格，则该属性为规格典配的弹性容量信息，包括存储类型、最小容量、最大容量以及步长信息，如果为固定存储规格，则该属性为null。
 	ElasticVolumeSpecs []NodeTypeElasticVolumeSpecs `json:"elastic_volume_specs"`
 }
 

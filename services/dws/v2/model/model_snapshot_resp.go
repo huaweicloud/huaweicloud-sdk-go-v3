@@ -6,9 +6,10 @@ import (
 	"strings"
 )
 
+// SnapshotResp **参数解释**： 创建快照响应。 **取值范围**： 不涉及。
 type SnapshotResp struct {
 
-	// Snapshot ID
+	// **参数解释**： 快照ID。 **取值范围**： 不涉及。
 	Id *string `json:"id,omitempty"`
 }
 

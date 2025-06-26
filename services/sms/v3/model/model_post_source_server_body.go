@@ -93,7 +93,7 @@ type PostSourceServerBody struct {
 	// 迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
 	MigrationCycle *PostSourceServerBodyMigrationCycle `json:"migration_cycle,omitempty"`
 
-	// 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败
+	// 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready: 迁移演练已就绪 premiging: 迁移演练中 premiged: 迁移演练已完成 premigfailed: 迁移演练失败
 	State *PostSourceServerBodyState `json:"state,omitempty"`
 
 	// 是否是OEM操作系统(Windows)
@@ -330,22 +330,26 @@ type PostSourceServerBodyState struct {
 }
 
 type PostSourceServerBodyStateEnum struct {
-	UNAVAILABLE PostSourceServerBodyState
-	WAITING     PostSourceServerBodyState
-	INITIALIZE  PostSourceServerBodyState
-	REPLICATE   PostSourceServerBodyState
-	SYNCING     PostSourceServerBodyState
-	STOPPING    PostSourceServerBodyState
-	STOPPED     PostSourceServerBodyState
-	SKIPPING    PostSourceServerBodyState
-	DELETING    PostSourceServerBodyState
-	ERROR       PostSourceServerBodyState
-	CLONING     PostSourceServerBodyState
-	CUTOVERING  PostSourceServerBodyState
-	FINISHED    PostSourceServerBodyState
-	CLEARING    PostSourceServerBodyState
-	CLEARED     PostSourceServerBodyState
-	CLEARFAILED PostSourceServerBodyState
+	UNAVAILABLE  PostSourceServerBodyState
+	WAITING      PostSourceServerBodyState
+	INITIALIZE   PostSourceServerBodyState
+	REPLICATE    PostSourceServerBodyState
+	SYNCING      PostSourceServerBodyState
+	STOPPING     PostSourceServerBodyState
+	STOPPED      PostSourceServerBodyState
+	SKIPPING     PostSourceServerBodyState
+	DELETING     PostSourceServerBodyState
+	ERROR        PostSourceServerBodyState
+	CLONING      PostSourceServerBodyState
+	CUTOVERING   PostSourceServerBodyState
+	FINISHED     PostSourceServerBodyState
+	CLEARING     PostSourceServerBodyState
+	CLEARED      PostSourceServerBodyState
+	CLEARFAILED  PostSourceServerBodyState
+	PREMIGREADY  PostSourceServerBodyState
+	PREMIGING    PostSourceServerBodyState
+	PREMIGED     PostSourceServerBodyState
+	PREMIGFAILED PostSourceServerBodyState
 }
 
 func GetPostSourceServerBodyStateEnum() PostSourceServerBodyStateEnum {
@@ -397,6 +401,18 @@ func GetPostSourceServerBodyStateEnum() PostSourceServerBodyStateEnum {
 		},
 		CLEARFAILED: PostSourceServerBodyState{
 			value: "clearfailed",
+		},
+		PREMIGREADY: PostSourceServerBodyState{
+			value: "premigready",
+		},
+		PREMIGING: PostSourceServerBodyState{
+			value: "premiging",
+		},
+		PREMIGED: PostSourceServerBodyState{
+			value: "premiged",
+		},
+		PREMIGFAILED: PostSourceServerBodyState{
+			value: "premigfailed",
 		},
 	}
 }

@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// Datastore 集群版本
+// Datastore **参数解释**： 集群版本。 **取值范围**： 不涉及。
 type Datastore struct {
 
-	// 集群类型。
+	// **参数解释**： 集群类型。 **取值范围**： 不涉及。
 	Type *string `json:"type,omitempty"`
 
-	// 集群版本。
+	// **参数解释**： 集群版本。 **取值范围**： 不涉及。
 	Version *string `json:"version,omitempty"`
 }
 

@@ -9,7 +9,7 @@ import (
 // UpdateEventSubRequest Request Object
 type UpdateEventSubRequest struct {
 
-	// 事件订阅ID
+	// **参数解释**： 事件订阅ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	EventSubId string `json:"event_sub_id"`
 
 	Body *EventSubUpdateRequest `json:"body,omitempty"`

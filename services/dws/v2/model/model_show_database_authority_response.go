@@ -9,7 +9,7 @@ import (
 // ShowDatabaseAuthorityResponse Response Object
 type ShowDatabaseAuthorityResponse struct {
 
-	// 对象权限集合
+	// **参数解释**： 对象权限集合。 **取值范围**： 不涉及。
 	Authorities    *[]ObjectAuthority `json:"authorities,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }

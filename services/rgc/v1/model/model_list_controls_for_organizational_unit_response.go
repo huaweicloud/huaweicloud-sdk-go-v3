@@ -12,9 +12,6 @@ type ListControlsForOrganizationalUnitResponse struct {
 	// 治理策略概要。
 	ControlSummaries *[]TargetControl `json:"control_summaries,omitempty"`
 
-	// 控制策略启用状态。
-	State *string `json:"state,omitempty"`
-
 	PageInfo       *PageInfoDto `json:"page_info,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

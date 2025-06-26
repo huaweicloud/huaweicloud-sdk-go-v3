@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// RdsRedisInfo 重分布信息
+// RdsRedisInfo **参数解释**： 重分布信息。 **取值范围**： 不涉及。
 type RdsRedisInfo struct {
 
 	// **参数解释**： 重分布信息ID。 **取值范围**： 不涉及。

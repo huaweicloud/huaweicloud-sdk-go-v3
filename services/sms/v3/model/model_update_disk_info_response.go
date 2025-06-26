@@ -8,7 +8,10 @@ import (
 
 // UpdateDiskInfoResponse Response Object
 type UpdateDiskInfoResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 更新磁盘信息成功
+	Body           *string `json:"body,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateDiskInfoResponse) String() string {

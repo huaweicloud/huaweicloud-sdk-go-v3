@@ -1521,26 +1521,6 @@ func (c *EcsClient) ShowRecycleBinInvoker(request *model.ShowRecycleBinRequest) 
 	return &ShowRecycleBinInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowRecycleBinServer 查询回收站中指定云服务器
-//
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *EcsClient) ShowRecycleBinServer(request *model.ShowRecycleBinServerRequest) (*model.ShowRecycleBinServerResponse, error) {
-	requestDef := GenReqDefForShowRecycleBinServer()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowRecycleBinServerResponse), nil
-	}
-}
-
-// ShowRecycleBinServerInvoker 查询回收站中指定云服务器
-func (c *EcsClient) ShowRecycleBinServerInvoker(request *model.ShowRecycleBinServerRequest) *ShowRecycleBinServerInvoker {
-	requestDef := GenReqDefForShowRecycleBinServer()
-	return &ShowRecycleBinServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowResetPasswordFlag 查询是否支持一键重置密码
 //
 // 查询弹性云服务器是否支持一键重置密码。

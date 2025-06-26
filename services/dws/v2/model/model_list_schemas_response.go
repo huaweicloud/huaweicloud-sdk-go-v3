@@ -9,10 +9,10 @@ import (
 // ListSchemasResponse Response Object
 type ListSchemasResponse struct {
 
-	// 集群模式空间信息列表。
+	// **参数解释**： 集群模式空间信息列表。 **取值范围**： 不涉及。
 	Schemas *[]SchemaInfo `json:"schemas,omitempty"`
 
-	// 总数量
+	// **参数解释**： 总数量。 **取值范围**： 不涉及。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

@@ -1522,6 +1522,10 @@ func GenReqDefForListSlowlog() *def.HttpRequestDef {
 		WithName("EndTime").
 		WithJsonTag("end_time").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Role").
+		WithJsonTag("role").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

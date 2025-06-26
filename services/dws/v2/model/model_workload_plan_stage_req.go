@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// WorkloadPlanStageReq 资源管理计划阶段
+// WorkloadPlanStageReq **参数解释**： 资源管理计划阶段请求。 **取值范围**： 不涉及。
 type WorkloadPlanStageReq struct {
 	WorkloadPlanStage *WorkloadPlanStageReqWorkloadPlanStage `json:"workload_plan_stage,omitempty"`
 }

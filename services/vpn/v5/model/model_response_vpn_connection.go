@@ -77,6 +77,8 @@ type ResponseVpnConnection struct {
 
 	// 策略模式的ipv6策略规则组
 	PolicyRulesV6 *[]PolicyRule `json:"policy_rules_v6,omitempty"`
+
+	BgpPeer *BgpPeer `json:"bgp_peer,omitempty"`
 }
 
 func (o ResponseVpnConnection) String() string {

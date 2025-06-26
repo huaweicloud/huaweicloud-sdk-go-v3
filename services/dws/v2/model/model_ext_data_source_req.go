@@ -6,31 +6,31 @@ import (
 	"strings"
 )
 
-// ExtDataSourceReq 数据源请求
+// ExtDataSourceReq **参数解释**： 数据源请求。 **取值范围**： 不涉及。
 type ExtDataSourceReq struct {
 
-	// 数据源id
+	// **参数解释**： 外部数据源ID。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
 	DataSourceId *string `json:"data_source_id,omitempty"`
 
-	// 类型
+	// **参数解释**： 数据源类型。 **取值范围**： 不涉及。
 	Type string `json:"type"`
 
-	// 数据源名称
+	// **参数解释**： 外部数据源名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，1到64个字符。
 	DataSourceName string `json:"data_source_name"`
 
-	// 用户名
+	// **参数解释**： 用户名。数据源类型为OBS时，传对应OBS委托名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，3到20个字符。
 	UserName string `json:"user_name"`
 
-	// 密码
+	// **参数解释**： 密码。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
 	UserPwd *string `json:"user_pwd,omitempty"`
 
-	// 描述
+	// **参数解释**： 描述。 **取值范围**： 除!<>'=&等特殊字符外的字符。长度256个字符以内。
 	Description *string `json:"description,omitempty"`
 
-	// 重启
+	// **参数解释**： 是否重启集群。 **取值范围**： 不涉及。
 	Reboot *bool `json:"reboot,omitempty"`
 
-	// 数据库
+	// **参数解释**： 连接的数据库。当数据源为OBS时为必选字段。 **取值范围**： 不涉及。
 	ConnectInfo *string `json:"connect_info,omitempty"`
 }
 

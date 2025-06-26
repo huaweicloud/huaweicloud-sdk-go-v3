@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// WorkloadPlanStageIdReq 资源管理计划阶段ID
+// WorkloadPlanStageIdReq **参数解释**： 资源管理计划阶段对象。 **取值范围**： 不涉及。
 type WorkloadPlanStageIdReq struct {
 
-	// 计划阶段ID
+	// **参数解释**： 资源管理计划阶段ID。 **取值范围**： 不涉及。
 	StageId string `json:"stage_id"`
 }
 

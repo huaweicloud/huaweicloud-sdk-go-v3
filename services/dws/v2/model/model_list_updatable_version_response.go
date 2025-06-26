@@ -9,10 +9,10 @@ import (
 // ListUpdatableVersionResponse Response Object
 type ListUpdatableVersionResponse struct {
 
-	// 集群升级路径总条数
+	// **参数解释**： 集群升级路径总条数。 **取值范围**： 不涉及。
 	Count *int32 `json:"count,omitempty"`
 
-	// 集群升级路径列表
+	// **参数解释**： 集群升级路径列表。 **取值范围**： 不涉及。
 	Items          *[]UpdateItemResp `json:"items,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

@@ -837,6 +837,22 @@ func (i *DeleteWorkloadQueueInvoker) Invoke() (*model.DeleteWorkloadQueueRespons
 	}
 }
 
+type DeleteWorkloadRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteWorkloadRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteWorkloadRuleInvoker) Invoke() (*model.DeleteWorkloadRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteWorkloadRuleResponse), nil
+	}
+}
+
 type DisableLogicalClusterPlanInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1413,6 +1429,22 @@ func (i *ListDataSourceInvoker) Invoke() (*model.ListDataSourceResponse, error) 
 	}
 }
 
+type ListDatabaseObjectsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDatabaseObjectsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDatabaseObjectsInvoker) Invoke() (*model.ListDatabaseObjectsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDatabaseObjectsResponse), nil
+	}
+}
+
 type ListDatabaseUserAuthoritiesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1906,6 +1938,22 @@ func (i *ListSnapshotDetailsInvoker) Invoke() (*model.ListSnapshotDetailsRespons
 		return nil, err
 	} else {
 		return result.(*model.ListSnapshotDetailsResponse), nil
+	}
+}
+
+type ListSnapshotFlavorInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSnapshotFlavorInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSnapshotFlavorInfoInvoker) Invoke() (*model.ListSnapshotFlavorInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSnapshotFlavorInfoResponse), nil
 	}
 }
 
@@ -3122,5 +3170,21 @@ func (i *UpdateWorkloadPlanStageInvoker) Invoke() (*model.UpdateWorkloadPlanStag
 		return nil, err
 	} else {
 		return result.(*model.UpdateWorkloadPlanStageResponse), nil
+	}
+}
+
+type UpdateWorkloadRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateWorkloadRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateWorkloadRuleInvoker) Invoke() (*model.UpdateWorkloadRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateWorkloadRuleResponse), nil
 	}
 }

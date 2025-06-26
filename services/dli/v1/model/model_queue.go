@@ -24,6 +24,15 @@ type Queue struct {
 	// 参数解释: 创建队列的用户 示例: ei_dlics_c00228924 约束限制:  无 取值范围: 无 默认取值: 无
 	Owner *string `json:"owner,omitempty"`
 
+	// 参数解释: 引擎 示例: spark 约束限制:  无 取值范围: spark, hetuEngine 默认取值: 无
+	Engine *QueueEngine `json:"engine,omitempty"`
+
+	// 参数解释: 队列已使用的cu 示例: 6.0 约束限制:  无 取值范围: 大于等于0 默认取值: 无
+	UsedCu *float32 `json:"used_cu,omitempty"`
+
+	// 参数解释: 支持的flink版本列表 示例: [1.12, 1.15] 约束限制:  无 取值范围: 无 默认取值: 无
+	SupportOpensourceFlinkVersions *[]string `json:"support_opensource_flink_versions,omitempty"`
+
 	// 参数解释: 创建队列的时间。是单位为“毫秒”的时间戳 示例: 1553168198000 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
 	CreateTime *int64 `json:"create_time,omitempty"`
 
@@ -67,7 +76,7 @@ type Queue struct {
 	Feature *string `json:"feature,omitempty"`
 
 	// 参数解释: 队列所属资源类型 示例: vm 约束限制:  无 取值范围: vm container 默认取值: 无
-	ResourceType *string `json:"resource_type,omitempty"`
+	QueueResourceType *string `json:"queue_resource_type,omitempty"`
 
 	// 参数解释: 队列的规格大小。对于包周期队列，表示包周期部分的CU值；对于按需队列，表示用户购买队列时的初始值 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
 	CuSpec *int32 `json:"cu_spec,omitempty"`
@@ -113,6 +122,53 @@ func (o Queue) String() string {
 	}
 
 	return strings.Join([]string{"Queue", string(data)}, " ")
+}
+
+type QueueEngine struct {
+	value string
+}
+
+type QueueEngineEnum struct {
+	SPARK       QueueEngine
+	HETU_ENGINE QueueEngine
+}
+
+func GetQueueEngineEnum() QueueEngineEnum {
+	return QueueEngineEnum{
+		SPARK: QueueEngine{
+			value: "spark",
+		},
+		HETU_ENGINE: QueueEngine{
+			value: "hetuEngine",
+		},
+	}
+}
+
+func (c QueueEngine) Value() string {
+	return c.value
+}
+
+func (c QueueEngine) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *QueueEngine) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type QueueQueueType struct {

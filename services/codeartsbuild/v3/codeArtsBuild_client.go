@@ -859,6 +859,27 @@ func (c *CodeArtsBuildClient) CopyJobInvoker(request *model.CopyJobRequest) *Cop
 	return &CopyJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateNewJob 创建构建任务
+//
+// 创建构建任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) CreateNewJob(request *model.CreateNewJobRequest) (*model.CreateNewJobResponse, error) {
+	requestDef := GenReqDefForCreateNewJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateNewJobResponse), nil
+	}
+}
+
+// CreateNewJobInvoker 创建构建任务
+func (c *CodeArtsBuildClient) CreateNewJobInvoker(request *model.CreateNewJobRequest) *CreateNewJobInvoker {
+	requestDef := GenReqDefForCreateNewJob()
+	return &CreateNewJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteRecyclingJobs 删除回收站中的任务
 //
 // 删除回收站中的任务
@@ -1342,6 +1363,27 @@ func (c *CodeArtsBuildClient) ShowJobSystemParametersInvoker(request *model.Show
 	return &ShowJobSystemParametersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowProjectJobPermission 获取任务权限矩阵
+//
+// 获取任务权限矩阵
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) ShowProjectJobPermission(request *model.ShowProjectJobPermissionRequest) (*model.ShowProjectJobPermissionResponse, error) {
+	requestDef := GenReqDefForShowProjectJobPermission()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProjectJobPermissionResponse), nil
+	}
+}
+
+// ShowProjectJobPermissionInvoker 获取任务权限矩阵
+func (c *CodeArtsBuildClient) ShowProjectJobPermissionInvoker(request *model.ShowProjectJobPermissionRequest) *ShowProjectJobPermissionInvoker {
+	requestDef := GenReqDefForShowProjectJobPermission()
+	return &ShowProjectJobPermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowRunningStatus 查看任务是否在构建
 //
 // 查看任务是否在构建
@@ -1508,6 +1550,48 @@ func (c *CodeArtsBuildClient) ShowKeystorePermission(request *model.ShowKeystore
 func (c *CodeArtsBuildClient) ShowKeystorePermissionInvoker(request *model.ShowKeystorePermissionRequest) *ShowKeystorePermissionInvoker {
 	requestDef := GenReqDefForShowKeystorePermission()
 	return &ShowKeystorePermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateKeystore 更新文件信息
+//
+// 更新文件信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) UpdateKeystore(request *model.UpdateKeystoreRequest) (*model.UpdateKeystoreResponse, error) {
+	requestDef := GenReqDefForUpdateKeystore()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateKeystoreResponse), nil
+	}
+}
+
+// UpdateKeystoreInvoker 更新文件信息
+func (c *CodeArtsBuildClient) UpdateKeystoreInvoker(request *model.UpdateKeystoreRequest) *UpdateKeystoreInvoker {
+	requestDef := GenReqDefForUpdateKeystore()
+	return &UpdateKeystoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadKeystore 上传文件
+//
+// 上传文件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) UploadKeystore(request *model.UploadKeystoreRequest) (*model.UploadKeystoreResponse, error) {
+	requestDef := GenReqDefForUploadKeystore()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadKeystoreResponse), nil
+	}
+}
+
+// UploadKeystoreInvoker 上传文件
+func (c *CodeArtsBuildClient) UploadKeystoreInvoker(request *model.UploadKeystoreRequest) *UploadKeystoreInvoker {
+	requestDef := GenReqDefForUploadKeystore()
+	return &UploadKeystoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DownloadLogByRecordId 下载构建日志(待下线)
@@ -1951,6 +2035,27 @@ func (c *CodeArtsBuildClient) ShowReportSummaryInvoker(request *model.ShowReport
 	return &ShowReportSummaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateTemplate 创建构建模板
+//
+// 创建构建模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) CreateTemplate(request *model.CreateTemplateRequest) (*model.CreateTemplateResponse, error) {
+	requestDef := GenReqDefForCreateTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTemplateResponse), nil
+	}
+}
+
+// CreateTemplateInvoker 创建构建模板
+func (c *CodeArtsBuildClient) CreateTemplateInvoker(request *model.CreateTemplateRequest) *CreateTemplateInvoker {
+	requestDef := GenReqDefForCreateTemplate()
+	return &CreateTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteTemplate 删除构建模板
 //
 // 删除构建模板
@@ -2033,6 +2138,27 @@ func (c *CodeArtsBuildClient) ListRecommendOfficialTemplate(request *model.ListR
 func (c *CodeArtsBuildClient) ListRecommendOfficialTemplateInvoker(request *model.ListRecommendOfficialTemplateRequest) *ListRecommendOfficialTemplateInvoker {
 	requestDef := GenReqDefForListRecommendOfficialTemplate()
 	return &ListRecommendOfficialTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SaveTemplateUsedInfo 保存模板使用记录
+//
+// 保存模板使用记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) SaveTemplateUsedInfo(request *model.SaveTemplateUsedInfoRequest) (*model.SaveTemplateUsedInfoResponse, error) {
+	requestDef := GenReqDefForSaveTemplateUsedInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SaveTemplateUsedInfoResponse), nil
+	}
+}
+
+// SaveTemplateUsedInfoInvoker 保存模板使用记录
+func (c *CodeArtsBuildClient) SaveTemplateUsedInfoInvoker(request *model.SaveTemplateUsedInfoRequest) *SaveTemplateUsedInfoInvoker {
+	requestDef := GenReqDefForSaveTemplateUsedInfo()
+	return &SaveTemplateUsedInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowYamlTemplate 获取代码化构建默认模板

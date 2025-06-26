@@ -8,6 +8,8 @@ import (
 
 // ListHostDiskResponse Response Object
 type ListHostDiskResponse struct {
+
+	// **参数解释**： 磁盘信息响应体。 **取值范围**： 不涉及。
 	Body           *[]DiskResp `json:"body,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }

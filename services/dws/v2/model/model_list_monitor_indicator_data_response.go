@@ -8,6 +8,8 @@ import (
 
 // ListMonitorIndicatorDataResponse Response Object
 type ListMonitorIndicatorDataResponse struct {
+
+	// **参数解释**： 历史监控数据响应。 **取值范围**： 不涉及。
 	Body           *[]TrendQueryDataResp `json:"body,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }

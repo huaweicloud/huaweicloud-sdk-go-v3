@@ -8,22 +8,22 @@ import (
 
 type ConfigurationRecordResp struct {
 
-	// ID
+	// **参数解释**： 记录ID。 **取值范围**： 不涉及。
 	Id *string `json:"id,omitempty"`
 
-	// 操作
+	// **参数解释**： 操作名称。 **取值范围**： 不涉及。
 	Operator *string `json:"operator,omitempty"`
 
-	// 开始时间
+	// **参数解释**： 开始时间。 **取值范围**： 不涉及。
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 结束时间
+	// **参数解释**： 结束时间。 **取值范围**： 不涉及。
 	EndTime *string `json:"end_time,omitempty"`
 
-	// 状态
+	// **参数解释**： 状态。 **取值范围**： 不涉及。
 	Status *string `json:"status,omitempty"`
 
-	// 失败原因
+	// **参数解释**： 失败原因。 **取值范围**： 不涉及。
 	FailedReason *string `json:"failed_reason,omitempty"`
 }
 

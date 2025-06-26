@@ -9,10 +9,10 @@ import (
 // ShowQueryDetailResponse Response Object
 type ShowQueryDetailResponse struct {
 
-	// 响应码。
+	// **参数解释**： 响应码。 **取值范围**： 不涉及。
 	Code *int32 `json:"code,omitempty"`
 
-	// 响应信息。
+	// **参数解释**： 响应信息。 **取值范围**： 不涉及。
 	Msg *string `json:"msg,omitempty"`
 
 	Data           *ListQueriesDto `json:"data,omitempty"`

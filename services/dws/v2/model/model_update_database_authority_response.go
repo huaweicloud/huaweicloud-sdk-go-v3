@@ -9,7 +9,7 @@ import (
 // UpdateDatabaseAuthorityResponse Response Object
 type UpdateDatabaseAuthorityResponse struct {
 
-	// sql列表
+	// **参数解释**： sql列表。 **取值范围**： 不涉及。
 	ViewSql        *[]string `json:"view_sql,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

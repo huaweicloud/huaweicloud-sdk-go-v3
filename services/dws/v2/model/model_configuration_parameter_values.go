@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// ConfigurationParameterValues 集群参数配置列表信息
+// ConfigurationParameterValues **参数解释**： 集群参数配置列表信息。 **取值范围**： 不涉及。
 type ConfigurationParameterValues struct {
 
-	// 集群参数配置列表
+	// **参数解释**： 集群参数配置列表。 **取值范围**： 不涉及。
 	Configurations []ConfigurationParameterValue `json:"configurations"`
 }
 

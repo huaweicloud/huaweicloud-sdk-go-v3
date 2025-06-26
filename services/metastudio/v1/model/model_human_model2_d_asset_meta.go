@@ -21,7 +21,7 @@ type HumanModel2DAssetMeta struct {
 	// **参数解释**： 是否支持直播 **约束限制**： 不涉及 **取值范围**： * true: 支持直播 * false: 不支持直播。
 	SupportLive *bool `json:"support_live,omitempty"`
 
-	// **参数解释**： 分身数字人模型版本 **约束限制**： 不涉及 **取值范围**： * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
+	// **参数解释**： 分身数字人模型版本 **约束限制**： 不涉及 **取值范围**： * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型 * V3_3：V3.3版本模型
 	ModelVersion *HumanModel2DAssetMetaModelVersion `json:"model_version,omitempty"`
 
 	// **参数解释**： 分身数字人模型分辨率。 **约束限制**： 不涉及 **取值范围**： * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
@@ -57,6 +57,7 @@ type HumanModel2DAssetMetaModelVersionEnum struct {
 	V2   HumanModel2DAssetMetaModelVersion
 	V3   HumanModel2DAssetMetaModelVersion
 	V3_2 HumanModel2DAssetMetaModelVersion
+	V3_3 HumanModel2DAssetMetaModelVersion
 }
 
 func GetHumanModel2DAssetMetaModelVersionEnum() HumanModel2DAssetMetaModelVersionEnum {
@@ -69,6 +70,9 @@ func GetHumanModel2DAssetMetaModelVersionEnum() HumanModel2DAssetMetaModelVersio
 		},
 		V3_2: HumanModel2DAssetMetaModelVersion{
 			value: "V3_2",
+		},
+		V3_3: HumanModel2DAssetMetaModelVersion{
+			value: "V3_3",
 		},
 	}
 }

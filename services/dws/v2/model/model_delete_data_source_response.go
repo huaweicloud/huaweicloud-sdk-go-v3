@@ -9,7 +9,7 @@ import (
 // DeleteDataSourceResponse Response Object
 type DeleteDataSourceResponse struct {
 
-	// 删除数据源job_id。
+	// **参数解释**： 删除数据源任务ID。 **取值范围**： 不涉及。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

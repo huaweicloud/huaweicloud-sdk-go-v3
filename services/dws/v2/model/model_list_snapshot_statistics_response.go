@@ -9,7 +9,7 @@ import (
 // ListSnapshotStatisticsResponse Response Object
 type ListSnapshotStatisticsResponse struct {
 
-	// 快照统计信息。
+	// **参数解释**： 快照统计信息。 **取值范围**： 不涉及。
 	Statistics     *[]SnapshotsStatistic `json:"statistics,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }

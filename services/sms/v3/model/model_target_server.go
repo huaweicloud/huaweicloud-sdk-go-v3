@@ -12,25 +12,25 @@ import (
 // TargetServer 目的端服务器
 type TargetServer struct {
 
-	// 源端在SMS数据库中的ID
+	// 服务器在SMS数据库中的ID
 	Id *string `json:"id,omitempty"`
 
-	// 源端服务器IP，注册源端时必选，更新非必选
+	// 服务器IP，注册源端时必选，更新非必选
 	Ip string `json:"ip"`
 
-	// 用来区分不同源端服务器的名称
+	// 用来区分不同服务器的名称
 	Name string `json:"name"`
 
-	// 源端主机名，注册源端必选，更新非必选
+	// 主机名，注册源端必选，更新非必选
 	Hostname *string `json:"hostname,omitempty"`
 
-	// 源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
+	// 服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
 	OsType TargetServerOsType `json:"os_type"`
 
 	// 操作系统版本，注册必选，更新非必选
 	OsVersion *string `json:"os_version,omitempty"`
 
-	// 源端服务器启动类型，如BIOS或者UEFI
+	// 服务器启动类型，如BIOS或者UEFI
 	Firmware *TargetServerFirmware `json:"firmware,omitempty"`
 
 	// CPU个数，单位vCPU
@@ -39,10 +39,10 @@ type TargetServer struct {
 	// 内存大小，单位MB
 	Memory *int64 `json:"memory,omitempty"`
 
-	// Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
+	// Linux 必选，服务器的Btrfs信息。如果不存在Btrfs，则为[]
 	BtrfsList *[]BtrfsFileSystem `json:"btrfs_list,omitempty"`
 
-	// 源端服务器的网卡信息
+	// 服务器的网卡信息
 	Networks *[]NetWork `json:"networks,omitempty"`
 
 	// 租户的domainId

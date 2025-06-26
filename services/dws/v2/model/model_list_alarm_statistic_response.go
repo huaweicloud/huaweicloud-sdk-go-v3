@@ -9,7 +9,7 @@ import (
 // ListAlarmStatisticResponse Response Object
 type ListAlarmStatisticResponse struct {
 
-	// 告警统计列表
+	// **参数解释**： 告警统计列表。 **取值范围**： 不涉及。
 	AlarmStatistics *[]AlarmStatisticResponse `json:"alarm_statistics,omitempty"`
 	HttpStatusCode  int                       `json:"-"`
 }

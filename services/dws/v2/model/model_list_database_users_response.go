@@ -9,7 +9,7 @@ import (
 // ListDatabaseUsersResponse Response Object
 type ListDatabaseUsersResponse struct {
 
-	// user list
+	// **参数解释**： 用户/角色列表。 **取值范围**： 不涉及。
 	Users          *[]DatabaseUser `json:"users,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

@@ -1909,7 +1909,7 @@ func (c *HssClient) ListQuotasDetailInvoker(request *model.ListQuotasDetailReque
 	return &ListQuotasDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListRansomwareProtectionNodes 查询勒索防护服务器列表
+// ListRansomwareProtectionNodes 查询勒索防护服务器列表2.0
 //
 // 查询勒索防护服务器列表，与云备份服务配合使用。因此使用勒索相关接口之前确保该局点有云备份服务
 //
@@ -1924,7 +1924,7 @@ func (c *HssClient) ListRansomwareProtectionNodes(request *model.ListRansomwareP
 	}
 }
 
-// ListRansomwareProtectionNodesInvoker 查询勒索防护服务器列表
+// ListRansomwareProtectionNodesInvoker 查询勒索防护服务器列表2.0
 func (c *HssClient) ListRansomwareProtectionNodesInvoker(request *model.ListRansomwareProtectionNodesRequest) *ListRansomwareProtectionNodesInvoker {
 	requestDef := GenReqDefForListRansomwareProtectionNodes()
 	return &ListRansomwareProtectionNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// ReconfigureExtDataSourceAction 更新数据源配置
+// ReconfigureExtDataSourceAction **参数解释**： 更新数据源配置。 **取值范围**： 不涉及。
 type ReconfigureExtDataSourceAction struct {
 
-	// 重启。
+	// **参数解释**： 重启。 **取值范围**： 不涉及。
 	Reboot *bool `json:"reboot,omitempty"`
 
-	// 委托。
+	// **参数解释**： 委托。 **取值范围**： 不涉及。
 	Agency *string `json:"agency,omitempty"`
 }
 

@@ -944,6 +944,10 @@ func GenReqDefForListAssets() *def.HttpRequestDef {
 		WithName("AppUserId").
 		WithJsonTag("app_user_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectGroupId").
+		WithJsonTag("project_group_id").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Authorization").

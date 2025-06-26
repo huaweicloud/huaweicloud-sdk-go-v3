@@ -6,22 +6,22 @@ import (
 	"strings"
 )
 
-// AlarmStatisticResponse 告警统计
+// AlarmStatisticResponse **参数解释**： 告警统计。 **取值范围**： 不涉及。
 type AlarmStatisticResponse struct {
 
-	// 日期
+	// **参数解释**： 日期。 **取值范围**： 不涉及。
 	Date *string `json:"date,omitempty"`
 
-	// 紧急
+	// **参数解释**： 紧急。 **取值范围**： 不涉及。
 	Urgent *string `json:"urgent,omitempty"`
 
-	// 重要
+	// **参数解释**： 重要。 **取值范围**： 不涉及。
 	Important *string `json:"important,omitempty"`
 
-	// 次要
+	// **参数解释**： 次要。 **取值范围**： 不涉及。
 	Minor *string `json:"minor,omitempty"`
 
-	// 提示
+	// **参数解释**： 提示。 **取值范围**： 不涉及。
 	Prompt *string `json:"prompt,omitempty"`
 }
 

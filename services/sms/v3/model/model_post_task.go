@@ -75,6 +75,9 @@ type PostTask struct {
 
 	// 是否进行一致性校验
 	IsNeedConsistencyCheck *bool `json:"is_need_consistency_check,omitempty"`
+
+	// 是否开启迁移演练
+	NeedMigrationTest *bool `json:"need_migration_test,omitempty"`
 }
 
 func (o PostTask) String() string {

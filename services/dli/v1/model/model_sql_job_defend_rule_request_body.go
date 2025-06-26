@@ -25,7 +25,7 @@ type SqlJobDefendRuleRequestBody struct {
 	EngineRules *interface{} `json:"engine_rules"`
 
 	// 队列名称
-	QueueNames *[]string `json:"queueNames,omitempty"`
+	QueueNames *[]string `json:"queue_names,omitempty"`
 }
 
 func (o SqlJobDefendRuleRequestBody) String() string {

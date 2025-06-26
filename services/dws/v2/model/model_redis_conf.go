@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// RedisConf 重分布配置信息
+// RedisConf **参数解释**： 重分布配置信息。 **取值范围**： 不涉及。
 type RedisConf struct {
 
 	// **参数解释**： 重分布模式。 **取值范围**： online|offline。
@@ -20,7 +20,7 @@ type RedisConf struct {
 	// **参数解释**： 重分布并发数，已经废弃。 **取值范围**： 1~200。
 	ParallelJob int32 `json:"parallel_job"`
 
-	// **参数解释**： 优先级策略,支持large优先对大表进行重分布，small优先对小表进行重分布，default默认顺序进行重分布。 **取值范围**： large|small|default。
+	// **参数解释**： 优先级策略。 **取值范围**： large：优先对大表进行重分布。 small：优先对小表进行重分布 default：默认顺序进行重分布。
 	PriorityPolicy *string `json:"priority_policy,omitempty"`
 
 	BucketSplitInfo *BucketSplitInfo `json:"bucket_split_info,omitempty"`

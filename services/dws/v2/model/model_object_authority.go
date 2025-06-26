@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// ObjectAuthority 对象权限信息
+// ObjectAuthority **参数解释**： 对象权限信息。 **取值范围**： 不涉及。
 type ObjectAuthority struct {
 
-	// 对象名称
+	// **参数解释**： 对象名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 角色权限集合
+	// **参数解释**： 角色权限集合。 **取值范围**： 不涉及。
 	RoleAuthority *[]RoleAuthority `json:"role_authority,omitempty"`
 }
 

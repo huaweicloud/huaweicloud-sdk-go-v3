@@ -9,7 +9,7 @@ import (
 // RestoreClusterRequest Request Object
 type RestoreClusterRequest struct {
 
-	// 待恢复的快照ID。
+	// **参数解释**： 待恢复的快照ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	SnapshotId string `json:"snapshot_id"`
 
 	Body *RestoreClusterRequestBody `json:"body,omitempty"`

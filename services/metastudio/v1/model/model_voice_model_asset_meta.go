@@ -51,6 +51,12 @@ type VoiceModelAssetMeta struct {
 
 	// 是否是Flexus版本声音。
 	IsFlexus *bool `json:"is_flexus,omitempty"`
+
+	// 是否增强韵律
+	IsEnhanceRhythm *bool `json:"is_enhance_rhythm,omitempty"`
+
+	// 音色年龄段：青年、中年、老年
+	Age *string `json:"age,omitempty"`
 }
 
 func (o VoiceModelAssetMeta) String() string {

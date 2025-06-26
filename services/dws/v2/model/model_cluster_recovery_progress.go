@@ -6,22 +6,22 @@ import (
 	"strings"
 )
 
-// ClusterRecoveryProgress 集群容灾进度详情
+// ClusterRecoveryProgress **参数解释**： 集群容灾进度详情。 **取值范围**： 不涉及。
 type ClusterRecoveryProgress struct {
 
-	// key
+	// **参数解释**： 本次备份恢复ID。 **取值范围**： 不涉及。
 	Key *string `json:"key,omitempty"`
 
-	// action_type
+	// **参数解释**： 动作类型。 **取值范围**： 不涉及。
 	ActionType *string `json:"action_type,omitempty"`
 
-	// unrestore_keys
+	// **参数解释**： 待恢复的备份集ID。 **取值范围**： 不涉及。
 	UnrestoreKeys *string `json:"unrestore_keys,omitempty"`
 
-	// action_start_time
+	// **参数解释**： 当前动作开始时间。 **取值范围**： 不涉及。
 	ActionStartTime *string `json:"action_start_time,omitempty"`
 
-	// action_end_time
+	// **参数解释**： 当前动作结束时间。 **取值范围**： 不涉及。
 	ActionEndTime *string `json:"action_end_time,omitempty"`
 }
 

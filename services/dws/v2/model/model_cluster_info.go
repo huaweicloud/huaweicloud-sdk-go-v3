@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ClusterInfo 集群列表对象。
+// ClusterInfo **参数解释**： 集群列表对象。 **取值范围**： 不涉及。
 type ClusterInfo struct {
 
 	// **参数解释**： 集群ID。 **取值范围**： 不涉及。
@@ -15,7 +15,7 @@ type ClusterInfo struct {
 	// **参数解释**： 集群名称。 **取值范围**： 同一个账号ID下唯一。
 	Name string `json:"name"`
 
-	// **参数解释**： 集群状态,字符串枚举。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
+	// **参数解释**： 集群状态，字符串枚举。 **取值范围**： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
 	Status string `json:"status"`
 
 	// **参数解释**： 数据仓库集群版本。 **取值范围**： 小数点分割的3~4段字符串，如9.1.0.200，每一段数字越大版本越新。

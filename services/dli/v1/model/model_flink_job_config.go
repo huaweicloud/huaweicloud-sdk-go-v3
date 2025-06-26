@@ -72,6 +72,9 @@ type FlinkJobConfig struct {
 	// 参数解释:  计算节点cu数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 无
 	ExecutorCuNumber *int32 `json:"executor_cu_number,omitempty"`
 
+	// 参数解释:  授权给DLI的委托名。Flink1.15版本时支持配置该参数。 示例: agency 约束限制:  无 取值范围: 无 默认取值: 无
+	ExecutionAgencyUrn *string `json:"execution_agency_urn,omitempty"`
+
 	// 参数解释:  异常自动重启时，是否从最新checkpoint恢复，默认false 示例: 0 约束限制:  无 取值范围: true,false 默认取值: false
 	ResumeCheckpoint *bool `json:"resume_checkpoint,omitempty"`
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ScaleOut 扩容集群详情
+// ScaleOut **参数解释**： 扩容集群详情。 **取值范围**： 不涉及。
 type ScaleOut struct {
 
 	// **参数解释**： 扩容节点数。 **取值范围**： 大于等于3。

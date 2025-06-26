@@ -645,6 +645,22 @@ func (i *CopyJobInvoker) Invoke() (*model.CopyJobResponse, error) {
 	}
 }
 
+type CreateNewJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateNewJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateNewJobInvoker) Invoke() (*model.CreateNewJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateNewJobResponse), nil
+	}
+}
+
 type DeleteRecyclingJobsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1013,6 +1029,22 @@ func (i *ShowJobSystemParametersInvoker) Invoke() (*model.ShowJobSystemParameter
 	}
 }
 
+type ShowProjectJobPermissionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProjectJobPermissionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowProjectJobPermissionInvoker) Invoke() (*model.ShowProjectJobPermissionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProjectJobPermissionResponse), nil
+	}
+}
+
 type ShowRunningStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1138,6 +1170,38 @@ func (i *ShowKeystorePermissionInvoker) Invoke() (*model.ShowKeystorePermissionR
 		return nil, err
 	} else {
 		return result.(*model.ShowKeystorePermissionResponse), nil
+	}
+}
+
+type UpdateKeystoreInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateKeystoreInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateKeystoreInvoker) Invoke() (*model.UpdateKeystoreResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateKeystoreResponse), nil
+	}
+}
+
+type UploadKeystoreInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadKeystoreInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UploadKeystoreInvoker) Invoke() (*model.UploadKeystoreResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadKeystoreResponse), nil
 	}
 }
 
@@ -1477,6 +1541,22 @@ func (i *ShowReportSummaryInvoker) Invoke() (*model.ShowReportSummaryResponse, e
 	}
 }
 
+type CreateTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateTemplateInvoker) Invoke() (*model.CreateTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTemplateResponse), nil
+	}
+}
+
 type DeleteTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1538,6 +1618,22 @@ func (i *ListRecommendOfficialTemplateInvoker) Invoke() (*model.ListRecommendOff
 		return nil, err
 	} else {
 		return result.(*model.ListRecommendOfficialTemplateResponse), nil
+	}
+}
+
+type SaveTemplateUsedInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SaveTemplateUsedInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SaveTemplateUsedInfoInvoker) Invoke() (*model.SaveTemplateUsedInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SaveTemplateUsedInfoResponse), nil
 	}
 }
 

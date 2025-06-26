@@ -5,24 +5,6 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/sms/v3/model"
 )
 
-type CheckNetAclInvoker struct {
-	*invoker.BaseInvoker
-}
-
-// Deprecated: This function is deprecated and will be removed in the future versions.
-func (i *CheckNetAclInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-// Deprecated: This function is deprecated and will be removed in the future versions.
-func (i *CheckNetAclInvoker) Invoke() (*model.CheckNetAclResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CheckNetAclResponse), nil
-	}
-}
-
 type CollectLogInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -212,6 +194,22 @@ func (i *DeleteTemplatesInvoker) Invoke() (*model.DeleteTemplatesResponse, error
 		return nil, err
 	} else {
 		return result.(*model.DeleteTemplatesResponse), nil
+	}
+}
+
+type ExportConsistencyResultsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportConsistencyResultsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExportConsistencyResultsInvoker) Invoke() (*model.ExportConsistencyResultsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportConsistencyResultsResponse), nil
 	}
 }
 
@@ -455,24 +453,6 @@ func (i *ShowServerInvoker) Invoke() (*model.ShowServerResponse, error) {
 	}
 }
 
-type ShowSha256Invoker struct {
-	*invoker.BaseInvoker
-}
-
-// Deprecated: This function is deprecated and will be removed in the future versions.
-func (i *ShowSha256Invoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-// Deprecated: This function is deprecated and will be removed in the future versions.
-func (i *ShowSha256Invoker) Invoke() (*model.ShowSha256Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowSha256Response), nil
-	}
-}
-
 type ShowTargetPasswordInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -534,24 +514,6 @@ func (i *ShowsSpeedLimitsInvoker) Invoke() (*model.ShowsSpeedLimitsResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowsSpeedLimitsResponse), nil
-	}
-}
-
-type UnlockTargetEcsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-// Deprecated: This function is deprecated and will be removed in the future versions.
-func (i *UnlockTargetEcsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-// Deprecated: This function is deprecated and will be removed in the future versions.
-func (i *UnlockTargetEcsInvoker) Invoke() (*model.UnlockTargetEcsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UnlockTargetEcsResponse), nil
 	}
 }
 
@@ -795,6 +757,24 @@ func (i *ShowConfigInvoker) Invoke() (*model.ShowConfigResponse, error) {
 	}
 }
 
+type CheckNetAclInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *CheckNetAclInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *CheckNetAclInvoker) Invoke() (*model.CheckNetAclResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckNetAclResponse), nil
+	}
+}
+
 type ListApiVersionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -824,5 +804,41 @@ func (i *ShowApiVersionInvoker) Invoke() (*model.ShowApiVersionResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ShowApiVersionResponse), nil
+	}
+}
+
+type ShowSha256Invoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowSha256Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowSha256Invoker) Invoke() (*model.ShowSha256Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSha256Response), nil
+	}
+}
+
+type UnlockTargetEcsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *UnlockTargetEcsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *UnlockTargetEcsInvoker) Invoke() (*model.UnlockTargetEcsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UnlockTargetEcsResponse), nil
 	}
 }

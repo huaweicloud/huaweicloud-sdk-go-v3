@@ -6,37 +6,37 @@ import (
 	"strings"
 )
 
-// SchemaInfo 集群模式空间信息
+// SchemaInfo **参数解释**： 集群模式空间信息。 **取值范围**： 不涉及。
 type SchemaInfo struct {
 
-	// Schema名称。
+	// **参数解释**： 集群模式名称。 **取值范围**： 不涉及。
 	SchemaName string `json:"schema_name"`
 
-	// 数据库名称。
+	// **参数解释**： 数据库名称。 **取值范围**： 不涉及。
 	DatabaseName string `json:"database_name"`
 
-	// 集群schema使用空间总值。
+	// **参数解释**： 集群模式使用空间总值。 **取值范围**： 不涉及。
 	TotalValue int32 `json:"total_value"`
 
-	// Schema空间阈值。
+	// **参数解释**： 集群模式空间阈值。 **取值范围**： 不涉及。
 	PermSpace int32 `json:"perm_space"`
 
-	// 倾斜率。
+	// **参数解释**： 倾斜率。 **取值范围**： 不涉及。
 	SkewPercent float64 `json:"skew_percent"`
 
-	// 最小值。
+	// **参数解释**： 最小值。 **取值范围**： 不涉及。
 	MinValue int32 `json:"min_value"`
 
-	// 最大值。
+	// **参数解释**： 最大值。 **取值范围**： 不涉及。
 	MaxValue int32 `json:"max_value"`
 
-	// 最小dn节点。
+	// **参数解释**： 最小dn节点。 **取值范围**： 不涉及。
 	MinDn string `json:"min_dn"`
 
-	// 最大cn节点。
+	// **参数解释**： 最大cn节点。 **取值范围**： 不涉及。
 	MaxDn string `json:"max_dn"`
 
-	// dn节点数量。
+	// **参数解释**： dn节点数量。 **取值范围**： 不涉及。
 	DnNum int32 `json:"dn_num"`
 }
 

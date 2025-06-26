@@ -9,7 +9,7 @@ import (
 // ListAlarmSubsRequest Request Object
 type ListAlarmSubsRequest struct {
 
-	// **参数解释**： 分页查询，偏移量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
+	// **参数解释**： 分页偏移量，从0开始，页数减1。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0
 	Offset *string `json:"offset,omitempty"`
 
 	// **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 1000

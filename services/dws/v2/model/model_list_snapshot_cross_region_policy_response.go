@@ -9,10 +9,10 @@ import (
 // ListSnapshotCrossRegionPolicyResponse Response Object
 type ListSnapshotCrossRegionPolicyResponse struct {
 
-	// 跨区域配置信息
+	// **参数解释**： 跨区域配置信息。 **取值范围**： 不涉及。
 	CrossRegionConfigs *[]CrossRegionSnapshotConfig `json:"cross_region_configs,omitempty"`
 
-	// 总数
+	// **参数解释**： 总数。 **取值范围**： 不涉及。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

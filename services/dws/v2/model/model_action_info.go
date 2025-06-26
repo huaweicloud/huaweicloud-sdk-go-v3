@@ -24,7 +24,7 @@ type ActionInfo struct {
 	// **参数解释**： 操作结束时间。 **取值范围**： 不涉及。
 	EndTime *string `json:"end_time,omitempty"`
 
-	// **参数解释**： 操作结果。。 **取值范围**： success：成功 failed：失败 默认空字符串。
+	// **参数解释**： 操作结果。默认为空字符串。 **取值范围**： success：成功。 failed：失败。
 	Result *string `json:"result,omitempty"`
 
 	// **参数解释**： 操作日志信息。 **取值范围**： 不涉及。

@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// QueueResourceItem 工作负载资源池
+// QueueResourceItem **参数解释**： 资源池信息。 **取值范围**： 不涉及。
 type QueueResourceItem struct {
 
-	// 资源池名称。
+	// **参数解释**： 资源池名称。 **取值范围**： 不涉及。
 	QueueName string `json:"queue_name"`
 
-	// 资源配置队列。
+	// **参数解释**： 资源配置队列。 **取值范围**： 不涉及。
 	QueueResources []WorkloadResourceItem `json:"queue_resources"`
 }
 

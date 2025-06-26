@@ -81,6 +81,9 @@ type CreateFlinkJarJobRequestBody struct {
 	// Flink作业运行时自定义优化参数。
 	RuntimeConfig *string `json:"runtime_config,omitempty"`
 
+	// 授权给DLI的委托名。Flink1.15版本时支持配置该参数。
+	ExecutionAgencyUrn *string `json:"execution_agency_urn,omitempty"`
+
 	// 标签
 	Tags *[]Tag `json:"tags,omitempty"`
 

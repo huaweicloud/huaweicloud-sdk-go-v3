@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ClusterDescriptionInfo 集群描述对象
+// ClusterDescriptionInfo **参数解释**： 集群描述信息对象。 **取值范围**： 不涉及。
 type ClusterDescriptionInfo struct {
 
 	// **参数解释**: 集群描述信息。 **取值范围**: 不涉及。

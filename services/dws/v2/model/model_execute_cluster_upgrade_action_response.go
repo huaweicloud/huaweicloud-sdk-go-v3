@@ -9,7 +9,7 @@ import (
 // ExecuteClusterUpgradeActionResponse Response Object
 type ExecuteClusterUpgradeActionResponse struct {
 
-	// 集群升级任务ID
+	// **参数解释**： 集群升级任务ID。 **取值范围**： 不涉及。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -9,8 +9,8 @@ import (
 // UpdateTaskResponse Response Object
 type UpdateTaskResponse struct {
 
-	// 更新指定ID的迁移任务
-	Body           *string `json:"body,omitempty"`
+	// 任务ID
+	Id             *string `json:"id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

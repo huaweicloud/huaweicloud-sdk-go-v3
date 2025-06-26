@@ -8,7 +8,9 @@ import (
 
 // RunCatalogActionResponse Response Object
 type RunCatalogActionResponse struct {
-	Body           *string `json:"body,omitempty"`
+
+	// 系统提示信息，执行成功时，信息可能为空。
+	Message        *string `json:"message,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

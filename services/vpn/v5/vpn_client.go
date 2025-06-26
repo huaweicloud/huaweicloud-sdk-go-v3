@@ -670,6 +670,27 @@ func (c *VpnClient) UpdateVpnAccessPolicyInvoker(request *model.UpdateVpnAccessP
 	return &UpdateVpnAccessPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreateVpnConnection 批量创建VPN连接
+//
+// 同时创建1-2条VPN连接
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) BatchCreateVpnConnection(request *model.BatchCreateVpnConnectionRequest) (*model.BatchCreateVpnConnectionResponse, error) {
+	requestDef := GenReqDefForBatchCreateVpnConnection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateVpnConnectionResponse), nil
+	}
+}
+
+// BatchCreateVpnConnectionInvoker 批量创建VPN连接
+func (c *VpnClient) BatchCreateVpnConnectionInvoker(request *model.BatchCreateVpnConnectionRequest) *BatchCreateVpnConnectionInvoker {
+	requestDef := GenReqDefForBatchCreateVpnConnection()
+	return &BatchCreateVpnConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateVpnConnection 创建VPN连接
 //
 // 创建VPN连接，连接VPN网关与对端网关

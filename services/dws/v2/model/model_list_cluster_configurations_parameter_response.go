@@ -9,7 +9,7 @@ import (
 // ListClusterConfigurationsParameterResponse Response Object
 type ListClusterConfigurationsParameterResponse struct {
 
-	// 集群使用的参数配置信息。
+	// **参数解释**： 集群使用的参数配置信息。 **取值范围**： 不涉及。
 	Configurations *[]ConfigurationParameter `json:"configurations,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }

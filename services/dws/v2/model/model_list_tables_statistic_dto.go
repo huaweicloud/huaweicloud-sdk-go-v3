@@ -6,28 +6,28 @@ import (
 	"strings"
 )
 
-// ListTablesStatisticDto 表倾斜率或脏页率列表。
+// ListTablesStatisticDto **参数解释**： 表倾斜率或脏页率列表。 **取值范围**： 不涉及。
 type ListTablesStatisticDto struct {
 
-	// 数据库名称。
+	// **参数解释**： 数据库名称。 **取值范围**： 不涉及。
 	DbName *string `json:"db_name,omitempty"`
 
-	// schema名称。
+	// **参数解释**： 模式名称。 **取值范围**： 不涉及。
 	SchemaName *string `json:"schema_name,omitempty"`
 
-	// 表名。
+	// **参数解释**： 表名。 **取值范围**： 不涉及。
 	TableName *string `json:"table_name,omitempty"`
 
-	// 所属用户。
+	// **参数解释**： 所属用户。 **取值范围**： 不涉及。
 	TableOwner *string `json:"table_owner,omitempty"`
 
-	// 表大小。
+	// **参数解释**： 表大小。 **取值范围**： 不涉及。
 	TableSize *string `json:"table_size,omitempty"`
 
-	// 表倾斜率。
+	// **参数解释**： 表倾斜率。 **取值范围**： 不涉及。
 	SkewRate *float64 `json:"skew_rate,omitempty"`
 
-	// 脏页率。
+	// **参数解释**： 脏页率。 **取值范围**： 不涉及。
 	DirtyPageRate *float64 `json:"dirty_page_rate,omitempty"`
 }
 

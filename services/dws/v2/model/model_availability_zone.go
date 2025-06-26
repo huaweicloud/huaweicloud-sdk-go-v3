@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// AvailabilityZone 可用区详情。
+// AvailabilityZone **参数解释**： 可用区详情。 **取值范围**： 不涉及。
 type AvailabilityZone struct {
 
 	// **参数解释**： 可用区唯一编码。 **取值范围**： 不涉及。

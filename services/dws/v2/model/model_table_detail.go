@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// TableDetail 恢复表信息
+// TableDetail **参数解释**： 恢复表信息。 **取值范围**： 不涉及。
 type TableDetail struct {
 
-	// schema名称
+	// **参数解释**： Schema名称。 **取值范围**： 不涉及。
 	SchemaName string `json:"schema_name"`
 
-	// 表名称
+	// **参数解释**： 表名称。 **取值范围**： 不涉及。
 	TableName string `json:"table_name"`
 }
 

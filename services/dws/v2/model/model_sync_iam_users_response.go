@@ -9,7 +9,7 @@ import (
 // SyncIamUsersResponse Response Object
 type SyncIamUsersResponse struct {
 
-	// 创建成功用户列表
+	// **参数解释**： 创建成功用户列表。 **取值范围**： 不涉及。
 	SyncUser       *[]string `json:"sync_user,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

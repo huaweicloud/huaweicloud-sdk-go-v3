@@ -8,25 +8,25 @@ import (
 
 type CreateDisasterRecovery struct {
 
-	// 名称
+	// **参数解释**： 名称。 **取值范围**： 不涉及。
 	Name string `json:"name"`
 
-	// 容灾类型
+	// **参数解释**： 容灾类型。 **取值范围**： 不涉及。
 	DrType string `json:"dr_type"`
 
-	// 主集群ID
+	// **参数解释**： 主集群ID。 **取值范围**： 不涉及。
 	PrimaryClusterId string `json:"primary_cluster_id"`
 
-	// 备集群ID
+	// **参数解释**： 备集群ID。 **取值范围**： 不涉及。
 	StandbyClusterId string `json:"standby_cluster_id"`
 
-	// 同步周期
+	// **参数解释**： 同步周期。 **取值范围**： 不涉及。
 	DrSyncPeriod string `json:"dr_sync_period"`
 
-	// 主集群OBS桶
+	// **参数解释**： 主集群OBS桶。 **取值范围**： 不涉及。
 	PrimaryObsBucket *string `json:"primary_obs_bucket,omitempty"`
 
-	// 备集群obs桶
+	// **参数解释**： 备集群obs桶。 **取值范围**： 不涉及。
 	StandbyObsBucket *string `json:"standby_obs_bucket,omitempty"`
 }
 

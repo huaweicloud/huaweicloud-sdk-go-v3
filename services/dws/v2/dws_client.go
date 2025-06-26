@@ -19,9 +19,9 @@ func DwsClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
-// AddQueueUserList 添加工作负载队列的绑定用户
+// AddQueueUserList 添加资源池的绑定用户
 //
-// 添加工作负载队列的绑定用户。
+// 添加资源池的绑定用户。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) AddQueueUserList(request *model.AddQueueUserListRequest) (*model.AddQueueUserListResponse, error) {
@@ -34,7 +34,7 @@ func (c *DwsClient) AddQueueUserList(request *model.AddQueueUserListRequest) (*m
 	}
 }
 
-// AddQueueUserListInvoker 添加工作负载队列的绑定用户
+// AddQueueUserListInvoker 添加资源池的绑定用户
 func (c *DwsClient) AddQueueUserListInvoker(request *model.AddQueueUserListRequest) *AddQueueUserListInvoker {
 	requestDef := GenReqDefForAddQueueUserList()
 	return &AddQueueUserListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -61,9 +61,9 @@ func (c *DwsClient) AddSnapshotCrossRegionPolicyInvoker(request *model.AddSnapsh
 	return &AddSnapshotCrossRegionPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// AddWorkloadPlanStage 添加工作负载计划阶段
+// AddWorkloadPlanStage 添加资源管理计划阶段
 //
-// 添加工作负载计划阶段。
+// 添加资源管理计划阶段。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) AddWorkloadPlanStage(request *model.AddWorkloadPlanStageRequest) (*model.AddWorkloadPlanStageResponse, error) {
@@ -76,15 +76,15 @@ func (c *DwsClient) AddWorkloadPlanStage(request *model.AddWorkloadPlanStageRequ
 	}
 }
 
-// AddWorkloadPlanStageInvoker 添加工作负载计划阶段
+// AddWorkloadPlanStageInvoker 添加资源管理计划阶段
 func (c *DwsClient) AddWorkloadPlanStageInvoker(request *model.AddWorkloadPlanStageRequest) *AddWorkloadPlanStageInvoker {
 	requestDef := GenReqDefForAddWorkloadPlanStage()
 	return &AddWorkloadPlanStageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// AddWorkloadQueue 添加工作负载队列
+// AddWorkloadQueue 添加资源池
 //
-// 添加工作负载队列。
+// 添加资源池。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) AddWorkloadQueue(request *model.AddWorkloadQueueRequest) (*model.AddWorkloadQueueResponse, error) {
@@ -97,7 +97,7 @@ func (c *DwsClient) AddWorkloadQueue(request *model.AddWorkloadQueueRequest) (*m
 	}
 }
 
-// AddWorkloadQueueInvoker 添加工作负载队列
+// AddWorkloadQueueInvoker 添加资源池
 func (c *DwsClient) AddWorkloadQueueInvoker(request *model.AddWorkloadQueueRequest) *AddWorkloadQueueInvoker {
 	requestDef := GenReqDefForAddWorkloadQueue()
 	return &AddWorkloadQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -258,7 +258,9 @@ func (c *DwsClient) BatchDeleteResourceTagInvoker(request *model.BatchDeleteReso
 
 // CancelReadonlyCluster 解除只读
 //
-// 当集群进入只读状态时，无法进行数据库相关操作，用户可以在管理控制台解除集群的只读状态。触发只读状态可能是由于磁盘使用率过高，因此需要对集群数据进行清理或扩容。 - 解除只读支持1.7.2及以上版本。
+// 当集群进入只读状态时，无法进行数据库相关操作，用户可以在管理控制台解除集群的只读状态。触发只读状态可能是由于磁盘使用率过高，因此需要对集群数据进行清理或扩容。
+//  **约束限制**：
+//  解除只读支持1.7.2及以上版本。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) CancelReadonlyCluster(request *model.CancelReadonlyClusterRequest) (*model.CancelReadonlyClusterResponse, error) {
@@ -363,7 +365,7 @@ func (c *DwsClient) CheckDisasterNameInvoker(request *model.CheckDisasterNameReq
 
 // CheckGrowCluster 集群扩容前检查
 //
-// 此接口用于集群扩容前检查，提前识别子网不足、权限不足等问题导致的扩容失败。
+// 集群扩容前检查，提前识别子网不足、权限不足等问题导致的扩容失败。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) CheckGrowCluster(request *model.CheckGrowClusterRequest) (*model.CheckGrowClusterResponse, error) {
@@ -663,7 +665,7 @@ func (c *DwsClient) CreateLogicalClusterInvoker(request *model.CreateLogicalClus
 
 // CreateLogicalClusterPlan 添加逻辑集群定时增删计划
 //
-// 此接口用于添加逻辑集群定时增删计划。
+// 添加逻辑集群定时增删计划。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) CreateLogicalClusterPlan(request *model.CreateLogicalClusterPlanRequest) (*model.CreateLogicalClusterPlanResponse, error) {
@@ -724,9 +726,9 @@ func (c *DwsClient) CreateSnapshotPolicyInvoker(request *model.CreateSnapshotPol
 	return &CreateSnapshotPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateWorkloadPlan 添加工作负载计划
+// CreateWorkloadPlan 添加资源管理计划
 //
-// 添加工作负载计划。
+// 添加资源管理计划。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) CreateWorkloadPlan(request *model.CreateWorkloadPlanRequest) (*model.CreateWorkloadPlanResponse, error) {
@@ -739,7 +741,7 @@ func (c *DwsClient) CreateWorkloadPlan(request *model.CreateWorkloadPlanRequest)
 	}
 }
 
-// CreateWorkloadPlanInvoker 添加工作负载计划
+// CreateWorkloadPlanInvoker 添加资源管理计划
 func (c *DwsClient) CreateWorkloadPlanInvoker(request *model.CreateWorkloadPlanRequest) *CreateWorkloadPlanInvoker {
 	requestDef := GenReqDefForCreateWorkloadPlan()
 	return &CreateWorkloadPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -768,7 +770,7 @@ func (c *DwsClient) DeleteAlarmSubInvoker(request *model.DeleteAlarmSubRequest) 
 
 // DeleteCluster 删除集群
 //
-// 此接口用于删除集群。集群删除后将释放此集群的所有资源，包括客户数据。为了安全起见，请在删除集群前为这个集群创建快照。
+// 删除集群。集群删除后将释放此集群的所有资源，包括客户数据。为了安全起见，请在删除集群前为这个集群创建快照。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) DeleteCluster(request *model.DeleteClusterRequest) (*model.DeleteClusterResponse, error) {
@@ -810,7 +812,7 @@ func (c *DwsClient) DeleteClusterDnsInvoker(request *model.DeleteClusterDnsReque
 
 // DeleteClusterNodes 删除空闲节点
 //
-// 此接口用于删除空闲节点。
+// 删除空闲节点。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) DeleteClusterNodes(request *model.DeleteClusterNodesRequest) (*model.DeleteClusterNodesResponse, error) {
@@ -897,7 +899,7 @@ func (c *DwsClient) DeleteDisasterRecoveryInvoker(request *model.DeleteDisasterR
 
 // DeleteDwsCluster 删除集群V2
 //
-// 此接口用于删除集群。集群删除后将释放此集群的所有资源，包括客户数据。为了安全起见，请在删除集群前为这个集群创建快照。
+// 删除集群。集群删除后将释放此集群的所有资源，包括客户数据。为了安全起见，请在删除集群前为这个集群创建快照。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) DeleteDwsCluster(request *model.DeleteDwsClusterRequest) (*model.DeleteDwsClusterResponse, error) {
@@ -939,7 +941,7 @@ func (c *DwsClient) DeleteEventSubInvoker(request *model.DeleteEventSubRequest) 
 
 // DeleteLogicalCluster 删除逻辑集群
 //
-// 此接口用于删除逻辑集群。
+// 删除逻辑集群。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) DeleteLogicalCluster(request *model.DeleteLogicalClusterRequest) (*model.DeleteLogicalClusterResponse, error) {
@@ -960,7 +962,7 @@ func (c *DwsClient) DeleteLogicalClusterInvoker(request *model.DeleteLogicalClus
 
 // DeleteLogicalClusterPlan 删除逻辑集群定时增删计划
 //
-// 此接口用于删除逻辑集群定时增删计划。
+// 删除逻辑集群定时增删计划。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) DeleteLogicalClusterPlan(request *model.DeleteLogicalClusterPlanRequest) (*model.DeleteLogicalClusterPlanResponse, error) {
@@ -979,9 +981,9 @@ func (c *DwsClient) DeleteLogicalClusterPlanInvoker(request *model.DeleteLogical
 	return &DeleteLogicalClusterPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteQueueUserList 删除工作负载队列的绑定用户
+// DeleteQueueUserList 删除资源池的绑定用户
 //
-// 删除工作负载队列的绑定用户。
+// 删除资源池的绑定用户。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) DeleteQueueUserList(request *model.DeleteQueueUserListRequest) (*model.DeleteQueueUserListResponse, error) {
@@ -994,7 +996,7 @@ func (c *DwsClient) DeleteQueueUserList(request *model.DeleteQueueUserListReques
 	}
 }
 
-// DeleteQueueUserListInvoker 删除工作负载队列的绑定用户
+// DeleteQueueUserListInvoker 删除资源池的绑定用户
 func (c *DwsClient) DeleteQueueUserListInvoker(request *model.DeleteQueueUserListRequest) *DeleteQueueUserListInvoker {
 	requestDef := GenReqDefForDeleteQueueUserList()
 	return &DeleteQueueUserListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1063,9 +1065,9 @@ func (c *DwsClient) DeleteSnapshotPolicyInvoker(request *model.DeleteSnapshotPol
 	return &DeleteSnapshotPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteWorkloadPlan 删除工作负载计划
+// DeleteWorkloadPlan 删除资源管理计划
 //
-// 删除工作负载计划。
+// 删除资源管理计划。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) DeleteWorkloadPlan(request *model.DeleteWorkloadPlanRequest) (*model.DeleteWorkloadPlanResponse, error) {
@@ -1078,15 +1080,15 @@ func (c *DwsClient) DeleteWorkloadPlan(request *model.DeleteWorkloadPlanRequest)
 	}
 }
 
-// DeleteWorkloadPlanInvoker 删除工作负载计划
+// DeleteWorkloadPlanInvoker 删除资源管理计划
 func (c *DwsClient) DeleteWorkloadPlanInvoker(request *model.DeleteWorkloadPlanRequest) *DeleteWorkloadPlanInvoker {
 	requestDef := GenReqDefForDeleteWorkloadPlan()
 	return &DeleteWorkloadPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteWorkloadPlanStage 删除工作负载计划阶段
+// DeleteWorkloadPlanStage 删除资源管理计划阶段
 //
-// 删除工作负载计划删除工作负载计划阶段。
+// 删除资源管理计划阶段。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) DeleteWorkloadPlanStage(request *model.DeleteWorkloadPlanStageRequest) (*model.DeleteWorkloadPlanStageResponse, error) {
@@ -1099,7 +1101,7 @@ func (c *DwsClient) DeleteWorkloadPlanStage(request *model.DeleteWorkloadPlanSta
 	}
 }
 
-// DeleteWorkloadPlanStageInvoker 删除工作负载计划阶段
+// DeleteWorkloadPlanStageInvoker 删除资源管理计划阶段
 func (c *DwsClient) DeleteWorkloadPlanStageInvoker(request *model.DeleteWorkloadPlanStageRequest) *DeleteWorkloadPlanStageInvoker {
 	requestDef := GenReqDefForDeleteWorkloadPlanStage()
 	return &DeleteWorkloadPlanStageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1124,6 +1126,27 @@ func (c *DwsClient) DeleteWorkloadQueue(request *model.DeleteWorkloadQueueReques
 func (c *DwsClient) DeleteWorkloadQueueInvoker(request *model.DeleteWorkloadQueueRequest) *DeleteWorkloadQueueInvoker {
 	requestDef := GenReqDefForDeleteWorkloadQueue()
 	return &DeleteWorkloadQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteWorkloadRule 删除异常规则
+//
+// 删除异常规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) DeleteWorkloadRule(request *model.DeleteWorkloadRuleRequest) (*model.DeleteWorkloadRuleResponse, error) {
+	requestDef := GenReqDefForDeleteWorkloadRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteWorkloadRuleResponse), nil
+	}
+}
+
+// DeleteWorkloadRuleInvoker 删除异常规则
+func (c *DwsClient) DeleteWorkloadRuleInvoker(request *model.DeleteWorkloadRuleRequest) *DeleteWorkloadRuleInvoker {
+	requestDef := GenReqDefForDeleteWorkloadRule()
+	return &DeleteWorkloadRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DisableLogicalClusterPlan 停用逻辑集群定时增删计划
@@ -1212,7 +1235,8 @@ func (c *DwsClient) DisassociateElbInvoker(request *model.DisassociateElbRequest
 
 // EnableLogicalCluster 切换逻辑集群开关
 //
-// 此接口用于切换逻辑集群开关，仅用于控制逻辑集群相关功能模块是否在页面展示。在集群已经是逻辑集群的场景下，修改该接口无任何作用及影响。
+// 切换逻辑集群开关，仅用于控制逻辑集群相关功能模块是否在页面展示。
+// 在集群已经是逻辑集群的场景下，修改该接口无任何作用及影响。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) EnableLogicalCluster(request *model.EnableLogicalClusterRequest) (*model.EnableLogicalClusterResponse, error) {
@@ -1391,8 +1415,9 @@ func (c *DwsClient) ExecuteRedistributionClusterInvoker(request *model.ExecuteRe
 // ExpandInstanceStorage 磁盘扩容
 //
 // 随着客户业务的发展，磁盘空间往往最先出现资源瓶颈，在其他资源尚且充足的情况下，通过磁盘扩容可快速缓解存储资源瓶颈现象，操作过程中无需暂停业务，并且不会造成CPU、内存等资源浪费。
-// - 磁盘扩容功能仅8.1.1.203及以上版本支持，并且创建集群规格需要为云数仓SSD云盘或实时数仓类型。
-// - 按需+折扣套餐包消费模式下，存储扩容后超出折扣套餐包部分将按需收费。
+//  **约束限制**：
+// 磁盘扩容功能仅8.1.1.203及以上版本支持，并且创建集群规格需要为云数仓SSD云盘或实时数仓类型。
+// 按需+折扣套餐包消费模式下，存储扩容后超出折扣套餐包部分将按需收费。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ExpandInstanceStorage(request *model.ExpandInstanceStorageRequest) (*model.ExpandInstanceStorageResponse, error) {
@@ -1686,7 +1711,7 @@ func (c *DwsClient) ListClusterConfigurationsParameterInvoker(request *model.Lis
 
 // ListClusterDetails 查询集群详情
 //
-// 该接口用于查询集群详情。
+// 查询集群详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListClusterDetails(request *model.ListClusterDetailsRequest) (*model.ListClusterDetailsResponse, error) {
@@ -1810,9 +1835,9 @@ func (c *DwsClient) ListClusterTagsInvoker(request *model.ListClusterTagsRequest
 	return &ListClusterTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListClusterWorkload 查询资源管理
+// ListClusterWorkload 查询资源管理开关状态
 //
-// 查询资管管理开关。
+// 查询资源管理开关状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListClusterWorkload(request *model.ListClusterWorkloadRequest) (*model.ListClusterWorkloadResponse, error) {
@@ -1825,7 +1850,7 @@ func (c *DwsClient) ListClusterWorkload(request *model.ListClusterWorkloadReques
 	}
 }
 
-// ListClusterWorkloadInvoker 查询资源管理
+// ListClusterWorkloadInvoker 查询资源管理开关状态
 func (c *DwsClient) ListClusterWorkloadInvoker(request *model.ListClusterWorkloadRequest) *ListClusterWorkloadInvoker {
 	requestDef := GenReqDefForListClusterWorkload()
 	return &ListClusterWorkloadInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1833,7 +1858,7 @@ func (c *DwsClient) ListClusterWorkloadInvoker(request *model.ListClusterWorkloa
 
 // ListClusters 查询集群列表
 //
-// 该接口用于查询并显示集群列表。
+// 查询集群列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListClusters(request *model.ListClustersRequest) (*model.ListClustersResponse, error) {
@@ -1892,6 +1917,29 @@ func (c *DwsClient) ListDataSource(request *model.ListDataSourceRequest) (*model
 func (c *DwsClient) ListDataSourceInvoker(request *model.ListDataSourceRequest) *ListDataSourceInvoker {
 	requestDef := GenReqDefForListDataSource()
 	return &ListDataSourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDatabaseObjects 查询数据库对象
+//
+// 查询数据库对象。
+// **约束限制**：
+// 集群guestAgent插件大于等于8.2.1.1开始支持。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListDatabaseObjects(request *model.ListDatabaseObjectsRequest) (*model.ListDatabaseObjectsResponse, error) {
+	requestDef := GenReqDefForListDatabaseObjects()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDatabaseObjectsResponse), nil
+	}
+}
+
+// ListDatabaseObjectsInvoker 查询数据库对象
+func (c *DwsClient) ListDatabaseObjectsInvoker(request *model.ListDatabaseObjectsRequest) *ListDatabaseObjectsInvoker {
+	requestDef := GenReqDefForListDatabaseObjects()
+	return &ListDatabaseObjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDatabaseUserAuthorities 查询用户/角色拥有权限
@@ -1981,7 +2029,7 @@ func (c *DwsClient) ListDssPoolsInvoker(request *model.ListDssPoolsRequest) *Lis
 
 // ListElbs 获取集群可绑定的ELB列表
 //
-// 查询集群可以关联的Elb列表。
+// 查询集群可以关联的ELB列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListElbs(request *model.ListElbsRequest) (*model.ListElbsResponse, error) {
@@ -2063,9 +2111,9 @@ func (c *DwsClient) ListEventsInvoker(request *model.ListEventsRequest) *ListEve
 	return &ListEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListHostDisk openApi查询磁盘信息
+// ListHostDisk 查询磁盘信息
 //
-// openApi查询磁盘信息。
+// 查询磁盘信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListHostDisk(request *model.ListHostDiskRequest) (*model.ListHostDiskResponse, error) {
@@ -2078,15 +2126,15 @@ func (c *DwsClient) ListHostDisk(request *model.ListHostDiskRequest) (*model.Lis
 	}
 }
 
-// ListHostDiskInvoker openApi查询磁盘信息
+// ListHostDiskInvoker 查询磁盘信息
 func (c *DwsClient) ListHostDiskInvoker(request *model.ListHostDiskRequest) *ListHostDiskInvoker {
 	requestDef := GenReqDefForListHostDisk()
 	return &ListHostDiskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListHostNet openapi获取网卡状态
+// ListHostNet 获取网卡状态
 //
-// openapi获取网卡状态。
+// 获取网卡状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListHostNet(request *model.ListHostNetRequest) (*model.ListHostNetResponse, error) {
@@ -2099,15 +2147,15 @@ func (c *DwsClient) ListHostNet(request *model.ListHostNetRequest) (*model.ListH
 	}
 }
 
-// ListHostNetInvoker openapi获取网卡状态
+// ListHostNetInvoker 获取网卡状态
 func (c *DwsClient) ListHostNetInvoker(request *model.ListHostNetRequest) *ListHostNetInvoker {
 	requestDef := GenReqDefForListHostNet()
 	return &ListHostNetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListHostOverview openApi查询主机概览
+// ListHostOverview 查询主机概览
 //
-// openApi查询主机概览。
+// 查询主机概览。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListHostOverview(request *model.ListHostOverviewRequest) (*model.ListHostOverviewResponse, error) {
@@ -2120,7 +2168,7 @@ func (c *DwsClient) ListHostOverview(request *model.ListHostOverviewRequest) (*m
 	}
 }
 
-// ListHostOverviewInvoker openApi查询主机概览
+// ListHostOverviewInvoker 查询主机概览
 func (c *DwsClient) ListHostOverviewInvoker(request *model.ListHostOverviewRequest) *ListHostOverviewInvoker {
 	requestDef := GenReqDefForListHostOverview()
 	return &ListHostOverviewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2149,7 +2197,7 @@ func (c *DwsClient) ListJobDetailsInvoker(request *model.ListJobDetailsRequest) 
 
 // ListLogicalClusterPlans 查询逻辑集群定时增删计划
 //
-// 此接口用于查询逻辑集群定时增删计划。
+// 查询逻辑集群定时增删计划。定时增删计划业务支持最多保存20条数据，接口最大返回20条数据。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListLogicalClusterPlans(request *model.ListLogicalClusterPlansRequest) (*model.ListLogicalClusterPlansResponse, error) {
@@ -2168,9 +2216,9 @@ func (c *DwsClient) ListLogicalClusterPlansInvoker(request *model.ListLogicalClu
 	return &ListLogicalClusterPlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListLogicalClusterRings 查询逻辑集群可用ring环节点信息
+// ListLogicalClusterRings 查询逻辑集群可用环节点信息
 //
-// 查询逻辑集群可用ring环节点信息。
+// 查询逻辑集群可用环节点信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListLogicalClusterRings(request *model.ListLogicalClusterRingsRequest) (*model.ListLogicalClusterRingsResponse, error) {
@@ -2183,7 +2231,7 @@ func (c *DwsClient) ListLogicalClusterRings(request *model.ListLogicalClusterRin
 	}
 }
 
-// ListLogicalClusterRingsInvoker 查询逻辑集群可用ring环节点信息
+// ListLogicalClusterRingsInvoker 查询逻辑集群可用环节点信息
 func (c *DwsClient) ListLogicalClusterRingsInvoker(request *model.ListLogicalClusterRingsRequest) *ListLogicalClusterRingsInvoker {
 	requestDef := GenReqDefForListLogicalClusterRings()
 	return &ListLogicalClusterRingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2315,9 +2363,9 @@ func (c *DwsClient) ListMetricsDataInvoker(request *model.ListMetricsDataRequest
 	return &ListMetricsDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListMonitorIndicatorData openApi查询历史监控数据
+// ListMonitorIndicatorData 查询历史监控数据
 //
-// openApi查询历史监控数据。
+// 查询历史监控数据。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListMonitorIndicatorData(request *model.ListMonitorIndicatorDataRequest) (*model.ListMonitorIndicatorDataResponse, error) {
@@ -2330,7 +2378,7 @@ func (c *DwsClient) ListMonitorIndicatorData(request *model.ListMonitorIndicator
 	}
 }
 
-// ListMonitorIndicatorDataInvoker openApi查询历史监控数据
+// ListMonitorIndicatorDataInvoker 查询历史监控数据
 func (c *DwsClient) ListMonitorIndicatorDataInvoker(request *model.ListMonitorIndicatorDataRequest) *ListMonitorIndicatorDataInvoker {
 	requestDef := GenReqDefForListMonitorIndicatorData()
 	return &ListMonitorIndicatorDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2546,6 +2594,27 @@ func (c *DwsClient) ListSnapshotDetailsInvoker(request *model.ListSnapshotDetail
 	return &ListSnapshotDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSnapshotFlavorInfo 根据快照ID查询规格信息
+//
+// 根据快照ID查询规格信息。支持用来查询某个快照的规格信息，或者快照可恢复到的目标规格信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListSnapshotFlavorInfo(request *model.ListSnapshotFlavorInfoRequest) (*model.ListSnapshotFlavorInfoResponse, error) {
+	requestDef := GenReqDefForListSnapshotFlavorInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSnapshotFlavorInfoResponse), nil
+	}
+}
+
+// ListSnapshotFlavorInfoInvoker 根据快照ID查询规格信息
+func (c *DwsClient) ListSnapshotFlavorInfoInvoker(request *model.ListSnapshotFlavorInfoRequest) *ListSnapshotFlavorInfoInvoker {
+	requestDef := GenReqDefForListSnapshotFlavorInfo()
+	return &ListSnapshotFlavorInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSnapshotPolicy 查询快照策略
 //
 // 查询快照策略。
@@ -2718,7 +2787,7 @@ func (c *DwsClient) ListTagsForResourceInvoker(request *model.ListTagsForResourc
 
 // ListTargetFlavors 查询支持变更的目标规格列表
 //
-// 查询支持变更的目标规格列表。
+// 查询支持变更的目标规格列表。接口返回的规格列表最多为20条。
 // **约束限制**：
 // 无cluster_id时：可查询所有支持转换的目标规格，但是由于配额等原因，部分规格可能存在售罄无法使用。
 // 存在cluster_id时：会自动关联此集群所在可用区下的配额充足的目标规格。
@@ -2824,9 +2893,9 @@ func (c *DwsClient) ListWorkloadPlansInvoker(request *model.ListWorkloadPlansReq
 	return &ListWorkloadPlansInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListWorkloadQueue 查询工作负载队列
+// ListWorkloadQueue 查询资源池
 //
-// 查询工作负载队列。
+// 查询资源池。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListWorkloadQueue(request *model.ListWorkloadQueueRequest) (*model.ListWorkloadQueueResponse, error) {
@@ -2839,15 +2908,15 @@ func (c *DwsClient) ListWorkloadQueue(request *model.ListWorkloadQueueRequest) (
 	}
 }
 
-// ListWorkloadQueueInvoker 查询工作负载队列
+// ListWorkloadQueueInvoker 查询资源池
 func (c *DwsClient) ListWorkloadQueueInvoker(request *model.ListWorkloadQueueRequest) *ListWorkloadQueueInvoker {
 	requestDef := GenReqDefForListWorkloadQueue()
 	return &ListWorkloadQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListWorkloadQueueUsers 获得工作负载队列的绑定用户列表
+// ListWorkloadQueueUsers 获得资源池的绑定用户列表
 //
-// 获得工作负载队列的绑定用户列表。
+// 获得资源池的绑定用户列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListWorkloadQueueUsers(request *model.ListWorkloadQueueUsersRequest) (*model.ListWorkloadQueueUsersResponse, error) {
@@ -2860,7 +2929,7 @@ func (c *DwsClient) ListWorkloadQueueUsers(request *model.ListWorkloadQueueUsers
 	}
 }
 
-// ListWorkloadQueueUsersInvoker 获得工作负载队列的绑定用户列表
+// ListWorkloadQueueUsersInvoker 获得资源池的绑定用户列表
 func (c *DwsClient) ListWorkloadQueueUsersInvoker(request *model.ListWorkloadQueueUsersRequest) *ListWorkloadQueueUsersInvoker {
 	requestDef := GenReqDefForListWorkloadQueueUsers()
 	return &ListWorkloadQueueUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2959,7 +3028,7 @@ func (c *DwsClient) PauseDisasterRecoveryInvoker(request *model.PauseDisasterRec
 
 // ResetPassword 重置密码
 //
-// 此接口用于重置集群管理员密码。
+// 重置集群管理员密码。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ResetPassword(request *model.ResetPasswordRequest) (*model.ResetPasswordResponse, error) {
@@ -2980,7 +3049,7 @@ func (c *DwsClient) ResetPasswordInvoker(request *model.ResetPasswordRequest) *R
 
 // ResizeCluster 扩容集群
 //
-// 此接口用于扩容集群，亦可用于添加空闲节点。默认情况下：表示执行扩容操作。
+// 扩容集群，亦可用于添加空闲节点。默认情况下：表示执行扩容操作。
 // 通过create_node_only字段用以区分当前是**扩容**、**添加空闲节点**：
 // - true：仅添加空闲节点
 // - false：表示执行扩容操作
@@ -3004,7 +3073,7 @@ func (c *DwsClient) ResizeClusterInvoker(request *model.ResizeClusterRequest) *R
 
 // ResizeClusterWithExistedNodes 从空闲节点扩容
 //
-// 此接口用于从空闲节点扩容。
+// 从空闲节点扩容。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ResizeClusterWithExistedNodes(request *model.ResizeClusterWithExistedNodesRequest) (*model.ResizeClusterWithExistedNodesResponse, error) {
@@ -3025,7 +3094,7 @@ func (c *DwsClient) ResizeClusterWithExistedNodesInvoker(request *model.ResizeCl
 
 // RestartCluster 重启集群
 //
-// 此接口用于重启集群。
+// 重启集群。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) RestartCluster(request *model.RestartClusterRequest) (*model.RestartClusterResponse, error) {
@@ -3046,7 +3115,7 @@ func (c *DwsClient) RestartClusterInvoker(request *model.RestartClusterRequest) 
 
 // RestartLogicalCluster 重启逻辑集群
 //
-// 此接口用于重启逻辑集群。
+// 重启逻辑集群。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) RestartLogicalCluster(request *model.RestartLogicalClusterRequest) (*model.RestartLogicalClusterResponse, error) {
@@ -3112,7 +3181,7 @@ func (c *DwsClient) RestoreDisasterInvoker(request *model.RestoreDisasterRequest
 
 // RestoreRedistribution 恢复重分布
 //
-// 此接口用于恢复暂停状态下的重分布操作，仅支持DWS2.0集群。
+// 恢复暂停状态下的重分布操作，仅支持DWS2.0集群。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) RestoreRedistribution(request *model.RestoreRedistributionRequest) (*model.RestoreRedistributionResponse, error) {
@@ -3285,9 +3354,9 @@ func (c *DwsClient) ShowClusterRedistributionInvoker(request *model.ShowClusterR
 // ShowClusterStorageExpandRange 查询磁盘扩容范围
 //
 // 此接口可用于查看磁盘扩容操作时支持的扩容范围。
-//
-//  - 磁盘扩容功能仅8.1.1.203及以上版本支持，并且创建集群规格需要为云数仓SSD云盘或实时数仓类型。
-//  - 按需+折扣套餐包消费模式下，存储扩容后超出折扣套餐包部分将按需收费。
+// **约束限制**：
+// 磁盘扩容功能仅8.1.1.203及以上版本支持，并且创建集群规格需要为云数仓SSD云盘或实时数仓类型。
+// 按需+折扣套餐包消费模式下，存储扩容后超出折扣套餐包部分将按需收费。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ShowClusterStorageExpandRange(request *model.ShowClusterStorageExpandRangeRequest) (*model.ShowClusterStorageExpandRangeResponse, error) {
@@ -3432,7 +3501,7 @@ func (c *DwsClient) ShowDisasterDetailInvoker(request *model.ShowDisasterDetailR
 	return &ShowDisasterDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDisasterProgress 容灾-查询容灾进度详情
+// ShowDisasterProgress 查询容灾进度详情
 //
 // 该接口用于查询容灾进度详情信息操作。
 //
@@ -3447,7 +3516,7 @@ func (c *DwsClient) ShowDisasterProgress(request *model.ShowDisasterProgressRequ
 	}
 }
 
-// ShowDisasterProgressInvoker 容灾-查询容灾进度详情
+// ShowDisasterProgressInvoker 查询容灾进度详情
 func (c *DwsClient) ShowDisasterProgressInvoker(request *model.ShowDisasterProgressRequest) *ShowDisasterProgressInvoker {
 	requestDef := GenReqDefForShowDisasterProgress()
 	return &ShowDisasterProgressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3455,7 +3524,7 @@ func (c *DwsClient) ShowDisasterProgressInvoker(request *model.ShowDisasterProgr
 
 // ShowInstance 查询单个实例
 //
-// 查询单个实例。
+// 查询单个实例信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ShowInstance(request *model.ShowInstanceRequest) (*model.ShowInstanceResponse, error) {
@@ -3516,9 +3585,9 @@ func (c *DwsClient) ShowResourceStatisticsInvoker(request *model.ShowResourceSta
 	return &ShowResourceStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowWorkloadPlan 查询某个工作负载计划详细信息
+// ShowWorkloadPlan 查询某个资源管理计划详细信息
 //
-// 查询某个工作负载计划详细信息。
+// 查询某个资源管理计划详细信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ShowWorkloadPlan(request *model.ShowWorkloadPlanRequest) (*model.ShowWorkloadPlanResponse, error) {
@@ -3531,15 +3600,15 @@ func (c *DwsClient) ShowWorkloadPlan(request *model.ShowWorkloadPlanRequest) (*m
 	}
 }
 
-// ShowWorkloadPlanInvoker 查询某个工作负载计划详细信息
+// ShowWorkloadPlanInvoker 查询某个资源管理计划详细信息
 func (c *DwsClient) ShowWorkloadPlanInvoker(request *model.ShowWorkloadPlanRequest) *ShowWorkloadPlanInvoker {
 	requestDef := GenReqDefForShowWorkloadPlan()
 	return &ShowWorkloadPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowWorkloadPlanStage 查询工作负载计划阶段详细信息
+// ShowWorkloadPlanStage 查询资源管理计划阶段详细信息
 //
-// 查询工作负载计划阶段详细信息。
+// 查询资源管理计划阶段详细信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ShowWorkloadPlanStage(request *model.ShowWorkloadPlanStageRequest) (*model.ShowWorkloadPlanStageResponse, error) {
@@ -3552,15 +3621,15 @@ func (c *DwsClient) ShowWorkloadPlanStage(request *model.ShowWorkloadPlanStageRe
 	}
 }
 
-// ShowWorkloadPlanStageInvoker 查询工作负载计划阶段详细信息
+// ShowWorkloadPlanStageInvoker 查询资源管理计划阶段详细信息
 func (c *DwsClient) ShowWorkloadPlanStageInvoker(request *model.ShowWorkloadPlanStageRequest) *ShowWorkloadPlanStageInvoker {
 	requestDef := GenReqDefForShowWorkloadPlanStage()
 	return &ShowWorkloadPlanStageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowWorkloadQueue 获得工作负载队列详细信息
+// ShowWorkloadQueue 获得资源池详细信息
 //
-// 获得工作负载队列详细信息。
+// 获得资源池详细信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ShowWorkloadQueue(request *model.ShowWorkloadQueueRequest) (*model.ShowWorkloadQueueResponse, error) {
@@ -3573,7 +3642,7 @@ func (c *DwsClient) ShowWorkloadQueue(request *model.ShowWorkloadQueueRequest) (
 	}
 }
 
-// ShowWorkloadQueueInvoker 获得工作负载队列详细信息
+// ShowWorkloadQueueInvoker 获得资源池详细信息
 func (c *DwsClient) ShowWorkloadQueueInvoker(request *model.ShowWorkloadQueueRequest) *ShowWorkloadQueueInvoker {
 	requestDef := GenReqDefForShowWorkloadQueue()
 	return &ShowWorkloadQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3667,9 +3736,9 @@ func (c *DwsClient) StartDisasterRecoveryInvoker(request *model.StartDisasterRec
 	return &StartDisasterRecoveryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// StartWorkloadPlan 启动工作负载计划
+// StartWorkloadPlan 启动资源管理计划
 //
-// 启动工作负载计划。
+// 启动资源管理计划。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) StartWorkloadPlan(request *model.StartWorkloadPlanRequest) (*model.StartWorkloadPlanResponse, error) {
@@ -3682,7 +3751,7 @@ func (c *DwsClient) StartWorkloadPlan(request *model.StartWorkloadPlanRequest) (
 	}
 }
 
-// StartWorkloadPlanInvoker 启动工作负载计划
+// StartWorkloadPlanInvoker 启动资源管理计划
 func (c *DwsClient) StartWorkloadPlanInvoker(request *model.StartWorkloadPlanRequest) *StartWorkloadPlanInvoker {
 	requestDef := GenReqDefForStartWorkloadPlan()
 	return &StartWorkloadPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3731,9 +3800,9 @@ func (c *DwsClient) StopRedistributionInvoker(request *model.StopRedistributionR
 	return &StopRedistributionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// StopWorkloadPlan 停止工作负载计划
+// StopWorkloadPlan 停止资源管理计划
 //
-// 停止工作负载计划。
+// 停止资源管理计划。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) StopWorkloadPlan(request *model.StopWorkloadPlanRequest) (*model.StopWorkloadPlanResponse, error) {
@@ -3746,7 +3815,7 @@ func (c *DwsClient) StopWorkloadPlan(request *model.StopWorkloadPlanRequest) (*m
 	}
 }
 
-// StopWorkloadPlanInvoker 停止工作负载计划
+// StopWorkloadPlanInvoker 停止资源管理计划
 func (c *DwsClient) StopWorkloadPlanInvoker(request *model.StopWorkloadPlanRequest) *StopWorkloadPlanInvoker {
 	requestDef := GenReqDefForStopWorkloadPlan()
 	return &StopWorkloadPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3779,9 +3848,10 @@ func (c *DwsClient) SwitchFailoverDisasterInvoker(request *model.SwitchFailoverD
 
 // SwitchOverCluster 主备恢复
 //
-// 当集群状态为“非均衡”时会出现某些节点主实例增多，从而负载压力较大。这种情况下集群状态是正常的，但整体性能要低于均衡状态。可进行集群主备恢复操作将集群状态切换为“可用“状态。
-// - 集群主备恢复仅8.1.1.202及以上版本支持。
-// - 集群主备恢复将会短暂中断业务，中断时间根据用户自身业务量所决定，建议用户在业务低峰期执行此操作。
+// 当集群状态为“非均衡”时会出现某些节点主实例增多，从而负载压力较大。这种情况下集群状态是正常的，但整体性能要低于均衡状态。可进行集群主备恢复操作将集群状态切换为“可用”状态。
+// **约束限制**：
+//  集群主备恢复仅8.1.1.202及以上版本支持。
+//  集群主备恢复将会短暂中断业务，中断时间根据用户自身业务量所决定，建议用户在业务低峰期执行此操作。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) SwitchOverCluster(request *model.SwitchOverClusterRequest) (*model.SwitchOverClusterResponse, error) {
@@ -3800,9 +3870,9 @@ func (c *DwsClient) SwitchOverClusterInvoker(request *model.SwitchOverClusterReq
 	return &SwitchOverClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SwitchPlanStage 切换工作负载计划阶段
+// SwitchPlanStage 切换资源管理计划阶段
 //
-// 切换工作负载计划阶段。
+// 切换资源管理计划阶段。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) SwitchPlanStage(request *model.SwitchPlanStageRequest) (*model.SwitchPlanStageResponse, error) {
@@ -3815,7 +3885,7 @@ func (c *DwsClient) SwitchPlanStage(request *model.SwitchPlanStageRequest) (*mod
 	}
 }
 
-// SwitchPlanStageInvoker 切换工作负载计划阶段
+// SwitchPlanStageInvoker 切换资源管理计划阶段
 func (c *DwsClient) SwitchPlanStageInvoker(request *model.SwitchPlanStageRequest) *SwitchPlanStageInvoker {
 	requestDef := GenReqDefForSwitchPlanStage()
 	return &SwitchPlanStageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -4042,7 +4112,9 @@ func (c *DwsClient) UpdateEventSubInvoker(request *model.UpdateEventSubRequest) 
 
 // UpdateLogicalCluster 编辑逻辑集群
 //
-// 此接口用于编辑修改逻辑集群。
+// 编辑修改逻辑集群。接口根据提交的请求体判断当前操作是逻辑集群缩容或者扩容。
+// 场景一：原始的逻辑集群有6个节点（两个环），提交请求时的请求体只有1个环，此时为逻辑集群缩容。
+// 场景二：原始的逻辑集群有6个节点（两个环），提交请求时的请求体中有3个环，此时为逻辑集群扩容。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) UpdateLogicalCluster(request *model.UpdateLogicalClusterRequest) (*model.UpdateLogicalClusterResponse, error) {
@@ -4063,7 +4135,7 @@ func (c *DwsClient) UpdateLogicalClusterInvoker(request *model.UpdateLogicalClus
 
 // UpdateLogicalClusterPlan 编辑逻辑集群增删计划
 //
-// 此接口用于编辑修改编辑逻辑集群增删计划。
+// 编辑逻辑集群增删计划。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) UpdateLogicalClusterPlan(request *model.UpdateLogicalClusterPlanRequest) (*model.UpdateLogicalClusterPlanResponse, error) {
@@ -4103,9 +4175,9 @@ func (c *DwsClient) UpdateMaintenanceWindowInvoker(request *model.UpdateMaintena
 	return &UpdateMaintenanceWindowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateQueueResources 更新工作负载队列资源配置信息
+// UpdateQueueResources 更新资源池资源配置信息
 //
-// 更新工作负载队列资源配置信息。
+// 更新资源池资源配置信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) UpdateQueueResources(request *model.UpdateQueueResourcesRequest) (*model.UpdateQueueResourcesResponse, error) {
@@ -4118,7 +4190,7 @@ func (c *DwsClient) UpdateQueueResources(request *model.UpdateQueueResourcesRequ
 	}
 }
 
-// UpdateQueueResourcesInvoker 更新工作负载队列资源配置信息
+// UpdateQueueResourcesInvoker 更新资源池资源配置信息
 func (c *DwsClient) UpdateQueueResourcesInvoker(request *model.UpdateQueueResourcesRequest) *UpdateQueueResourcesInvoker {
 	requestDef := GenReqDefForUpdateQueueResources()
 	return &UpdateQueueResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -4185,4 +4257,25 @@ func (c *DwsClient) UpdateWorkloadPlanStage(request *model.UpdateWorkloadPlanSta
 func (c *DwsClient) UpdateWorkloadPlanStageInvoker(request *model.UpdateWorkloadPlanStageRequest) *UpdateWorkloadPlanStageInvoker {
 	requestDef := GenReqDefForUpdateWorkloadPlanStage()
 	return &UpdateWorkloadPlanStageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateWorkloadRule 更新异常规则
+//
+// 更新异常规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) UpdateWorkloadRule(request *model.UpdateWorkloadRuleRequest) (*model.UpdateWorkloadRuleResponse, error) {
+	requestDef := GenReqDefForUpdateWorkloadRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateWorkloadRuleResponse), nil
+	}
+}
+
+// UpdateWorkloadRuleInvoker 更新异常规则
+func (c *DwsClient) UpdateWorkloadRuleInvoker(request *model.UpdateWorkloadRuleRequest) *UpdateWorkloadRuleInvoker {
+	requestDef := GenReqDefForUpdateWorkloadRule()
+	return &UpdateWorkloadRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

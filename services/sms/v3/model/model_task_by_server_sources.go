@@ -70,6 +70,9 @@ type TaskByServerSources struct {
 	// 上传日志指定桶名称
 	LogBucket *string `json:"log_bucket,omitempty"`
 
+	// 分享链接有效期
+	LogExpire *int64 `json:"log_expire,omitempty"`
+
 	// 日志上传时间
 	LogUploadTime *int64 `json:"log_upload_time,omitempty"`
 

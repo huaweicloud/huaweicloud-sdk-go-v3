@@ -6,25 +6,25 @@ import (
 	"strings"
 )
 
-// WorkloadPlanStageReqWorkloadPlanStage 资源管理计划阶段详情
+// WorkloadPlanStageReqWorkloadPlanStage **参数解释**： 资源管理计划阶段详情。 **取值范围**： 不涉及。
 type WorkloadPlanStageReqWorkloadPlanStage struct {
 
-	// 日期
+	// **参数解释**： 日期。 **取值范围**： 不涉及。
 	Day *string `json:"day,omitempty"`
 
-	// 月份
+	// **参数解释**： 月份。 **取值范围**： 不涉及。
 	Month *string `json:"month,omitempty"`
 
-	// 计划阶段
+	// **参数解释**： 计划阶段。 **取值范围**： 不涉及。
 	StageName *string `json:"stage_name,omitempty"`
 
-	// 开始时间
+	// **参数解释**： 开始时间。 **取值范围**： 不涉及。
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 结束时间
+	// **参数解释**： 结束时间。 **取值范围**： 不涉及。
 	EndTime *string `json:"end_time,omitempty"`
 
-	// 资源队列
+	// **参数解释**： 资源队列。 **取值范围**： 不涉及。
 	QueueList *[]QueueResourceItem `json:"queue_list,omitempty"`
 }
 

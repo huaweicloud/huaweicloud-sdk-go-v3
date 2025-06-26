@@ -9,10 +9,10 @@ import (
 // ListAlarmSubsResponse Response Object
 type ListAlarmSubsResponse struct {
 
-	// 告警订阅总数
+	// **参数解释**： 告警订阅总数。 **取值范围**： 不涉及。
 	Count *int32 `json:"count,omitempty"`
 
-	// 告警订阅列表
+	// **参数解释**： 告警订阅列表。 **取值范围**： 不涉及。
 	AlarmSubscriptions *[]AlarmSubscriptionResponse `json:"alarm_subscriptions,omitempty"`
 	HttpStatusCode     int                          `json:"-"`
 }

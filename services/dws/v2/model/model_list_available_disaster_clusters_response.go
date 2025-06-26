@@ -9,7 +9,7 @@ import (
 // ListAvailableDisasterClustersResponse Response Object
 type ListAvailableDisasterClustersResponse struct {
 
-	// 容灾可用集群列表
+	// **参数解释**： 容灾可用集群列表。 **取值范围**： 不涉及。
 	DisasterRecoveryClusters *[]DisasterRecoveryClusterVo `json:"disaster_recovery_clusters,omitempty"`
 	HttpStatusCode           int                          `json:"-"`
 }

@@ -9,37 +9,37 @@ import (
 // CreateAlarmSubResponse Response Object
 type CreateAlarmSubResponse struct {
 
-	// 告警订阅ID
+	// **参数解释**： 告警订阅ID。 **取值范围**： 不涉及。
 	Id *string `json:"id,omitempty"`
 
-	// 告警订阅名称
+	// **参数解释**： 告警订阅名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 是否开启订阅
+	// **参数解释**： 是否开启订阅。 **取值范围**： 不涉及。
 	Enable *int32 `json:"enable,omitempty"`
 
-	// 告警级别
+	// **参数解释**： 告警级别。 **取值范围**： 不涉及。
 	AlarmLevel *string `json:"alarm_level,omitempty"`
 
-	// 租户凭证ID
+	// **参数解释**： 项目ID。 **取值范围**： 不涉及。
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 所属服务，支持DWS,DLI,DGC,CloudTable,CDM,GES,CSS
+	// **参数解释**： 所属服务。 **取值范围**： 不涉及。
 	NameSpace *string `json:"name_space,omitempty"`
 
-	// 消息主题地址
+	// **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
 	NotificationTarget *string `json:"notification_target,omitempty"`
 
-	// 消息主题名称
+	// **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
 	NotificationTargetName *string `json:"notification_target_name,omitempty"`
 
-	// 消息主题类型
+	// **参数解释**： 消息主题类型。 **取值范围**： 不涉及。
 	NotificationTargetType *string `json:"notification_target_type,omitempty"`
 
-	// 语言
+	// **参数解释**： 语言。 **取值范围**： 不涉及。
 	Language *string `json:"language,omitempty"`
 
-	// 时区
+	// **参数解释**： 时区。 **取值范围**： 不涉及。
 	TimeZone       *string `json:"time_zone,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

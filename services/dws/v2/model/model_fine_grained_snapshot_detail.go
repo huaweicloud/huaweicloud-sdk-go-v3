@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// FineGrainedSnapshotDetail 细粒度备份信息
+// FineGrainedSnapshotDetail **参数解释**： 细粒度备份信息。 **取值范围**： 不涉及。
 type FineGrainedSnapshotDetail struct {
 
-	// 数据库。
+	// **参数解释**： 数据库。 **取值范围**： 不涉及。
 	Database *string `json:"database,omitempty"`
 
-	// 模式列表。
+	// **参数解释**： 模式列表。 **取值范围**： 不涉及。
 	SchemaList *[]string `json:"schema_list,omitempty"`
 
-	// 表集合。
+	// **参数解释**： 表集合。 **取值范围**： 不涉及。
 	TableList *[]string `json:"table_list,omitempty"`
 }
 

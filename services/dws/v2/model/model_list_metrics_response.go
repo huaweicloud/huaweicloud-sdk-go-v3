@@ -9,16 +9,16 @@ import (
 // ListMetricsResponse Response Object
 type ListMetricsResponse struct {
 
-	// 响应码
+	// **参数解释**： 响应码。 **取值范围**： 不涉及。
 	Code *int32 `json:"code,omitempty"`
 
-	// 响应信息
+	// **参数解释**： 响应信息。 **取值范围**： 不涉及。
 	Msg *string `json:"msg,omitempty"`
 
-	// 指标列表。
+	// **参数解释**： 指标列表。 **取值范围**： 不涉及。
 	Data *[]ClusterMetric `json:"data,omitempty"`
 
-	// 总列表大小。
+	// **参数解释**： 总列表大小。 **取值范围**： 不涉及。
 	Count          *int64 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ResizeInfo 集群扩容状态详情
+// ResizeInfo **参数解释**： 集群扩容状态详情。 **取值范围**： 不涉及。
 type ResizeInfo struct {
 
 	// **参数解释**： 扩容后的节点数量。 **取值范围**： 不涉及。

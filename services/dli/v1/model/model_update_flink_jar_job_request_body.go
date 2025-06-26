@@ -66,6 +66,9 @@ type UpdateFlinkJarJobRequestBody struct {
 	// Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本。
 	FlinkVersion *string `json:"flink_version,omitempty"`
 
+	// 授权给DLI的委托名。Flink1.15版本时支持配置该参数。
+	ExecutionAgencyUrn *string `json:"execution_agency_urn,omitempty"`
+
 	// 自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像。关于如何使用自定义镜像，请参考《数据湖探索用户指南》。
 	Image *string `json:"image,omitempty"`
 

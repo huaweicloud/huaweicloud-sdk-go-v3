@@ -32,6 +32,9 @@ type ListSlowlogRequest struct {
 
 	// 查询结束时间，时间为UTC时间的Unix时间戳。如：1599494399000。
 	EndTime string `json:"end_time"`
+
+	// 查询节点，分为proxy和server。
+	Role *string `json:"role,omitempty"`
 }
 
 func (o ListSlowlogRequest) String() string {

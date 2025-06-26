@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ElbResp 集群ELB的相关信息
+// ElbResp **参数解释**： 集群ELB的相关信息。 **取值范围**： 不涉及。
 type ElbResp struct {
 
 	// **参数解释**： 公网ip。 **取值范围**： 有效的公网ipv4地址。

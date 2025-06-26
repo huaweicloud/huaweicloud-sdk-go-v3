@@ -723,6 +723,21 @@ func GenReqDefForUpdateVpnAccessPolicy() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchCreateVpnConnection() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v5/{project_id}/vpn-connections/batch-create").
+		WithResponse(new(model.BatchCreateVpnConnectionResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateVpnConnection() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

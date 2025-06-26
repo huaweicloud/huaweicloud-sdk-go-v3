@@ -8,6 +8,8 @@ import (
 
 // ListMonitorIndicatorsResponse Response Object
 type ListMonitorIndicatorsResponse struct {
+
+	// **参数解释**： 性能监控指标信息。 **取值范围**： 不涉及。
 	Body           *[]IndicatorInfo `json:"body,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

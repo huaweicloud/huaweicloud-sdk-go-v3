@@ -9,15 +9,15 @@ import (
 // ListQueriesResponse Response Object
 type ListQueriesResponse struct {
 
-	// 响应码。
+	// **参数解释**： 响应码。 **取值范围**： 不涉及。
 	Code *int32 `json:"code,omitempty"`
 
-	// 响应信息。
+	// **参数解释**： 响应信息。 **取值范围**： 不涉及。
 	Msg *string `json:"msg,omitempty"`
 
 	Data *ListQueriesData `json:"data,omitempty"`
 
-	// 总条数。
+	// **参数解释**： 总条数。 **取值范围**： 不涉及。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

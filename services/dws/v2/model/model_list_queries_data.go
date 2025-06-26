@@ -8,7 +8,7 @@ import (
 
 type ListQueriesData struct {
 
-	// 查询数据列表。
+	// **参数解释**： 查询数据列表。 **取值范围**： 不涉及。
 	Queries *[]ListQueriesDto `json:"queries,omitempty"`
 
 	Status *ListQueriesStatus `json:"status,omitempty"`

@@ -29,6 +29,9 @@ type CreateServerRequest struct {
 	ClientCaCertificates *[]CreateServerRequestClientCaCertificates `json:"client_ca_certificates,omitempty"`
 
 	SslOptions *CreateServerRequestSslOptions `json:"ssl_options,omitempty"`
+
+	// DNS服务器列表，最多两个DNS
+	DnsServers *[]string `json:"dns_servers,omitempty"`
 }
 
 func (o CreateServerRequest) String() string {

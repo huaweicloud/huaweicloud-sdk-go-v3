@@ -9,28 +9,28 @@ import (
 // ListJobDetailsResponse Response Object
 type ListJobDetailsResponse struct {
 
-	// 任务ID
+	// **参数解释**： 任务ID。 **取值范围**： 不涉及。
 	JobId *string `json:"job_id,omitempty"`
 
-	// 任务名称
+	// **参数解释**： 任务名称。 **取值范围**： 不涉及。
 	JobName *string `json:"job_name,omitempty"`
 
-	// 任务开始时间
+	// **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
 	BeginTime *string `json:"begin_time,omitempty"`
 
-	// 任务结束时间
+	// **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
 	EndTime *string `json:"end_time,omitempty"`
 
-	// 任务当前状态
+	// **参数解释**： 任务当前状态。 **取值范围**： 不涉及。
 	Status *string `json:"status,omitempty"`
 
-	// 任务失败错误码
+	// **参数解释**： 任务失败错误码。 **取值范围**： 不涉及。
 	FailedCode *string `json:"failed_code,omitempty"`
 
-	// 任务失败错误详情
+	// **参数解释**： 任务失败错误详情。 **取值范围**： 不涉及。
 	FailedDetail *string `json:"failed_detail,omitempty"`
 
-	// 任务进度
+	// **参数解释**： 任务进度。 **取值范围**： 不涉及。
 	Progress       *string `json:"progress,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -8,6 +8,8 @@ import (
 
 // ListHostNetResponse Response Object
 type ListHostNetResponse struct {
+
+	// **参数解释**： 网卡状态响应体。 **取值范围**： 不涉及。
 	Body           *[]NetResp `json:"body,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }

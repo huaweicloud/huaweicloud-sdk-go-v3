@@ -46,7 +46,7 @@ type PostMigProjectBody struct {
 	Syncing bool `json:"syncing"`
 
 	// 是否启动网络质量检测
-	StartNetworckCheck *bool `json:"start_networck_check,omitempty"`
+	StartNetworkCheck *bool `json:"start_network_check,omitempty"`
 }
 
 func (o PostMigProjectBody) String() string {

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ScheduleConf 调度配置信息
+// ScheduleConf **参数解释**： 调度配置信息。 **取值范围**： 不涉及。
 type ScheduleConf struct {
 
 	// **参数解释**： 调度开始时间。 **取值范围**： 不涉及。
