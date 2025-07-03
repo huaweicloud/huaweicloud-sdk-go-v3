@@ -82,6 +82,27 @@ func (c *LiveClient) CreateDomainMappingInvoker(request *model.CreateDomainMappi
 	return &CreateDomainMappingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateFlows 创建流
+//
+// 创建流
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) CreateFlows(request *model.CreateFlowsRequest) (*model.CreateFlowsResponse, error) {
+	requestDef := GenReqDefForCreateFlows()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFlowsResponse), nil
+	}
+}
+
+// CreateFlowsInvoker 创建流
+func (c *LiveClient) CreateFlowsInvoker(request *model.CreateFlowsRequest) *CreateFlowsInvoker {
+	requestDef := GenReqDefForCreateFlows()
+	return &CreateFlowsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateRecordCallbackConfig 创建录制回调配置
 //
 // 创建录制回调配置接口
@@ -313,6 +334,27 @@ func (c *LiveClient) DeleteDomainMappingInvoker(request *model.DeleteDomainMappi
 	return &DeleteDomainMappingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteFlow 删除流
+//
+// 删除流
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) DeleteFlow(request *model.DeleteFlowRequest) (*model.DeleteFlowResponse, error) {
+	requestDef := GenReqDefForDeleteFlow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteFlowResponse), nil
+	}
+}
+
+// DeleteFlowInvoker 删除流
+func (c *LiveClient) DeleteFlowInvoker(request *model.DeleteFlowRequest) *DeleteFlowInvoker {
+	requestDef := GenReqDefForDeleteFlow()
+	return &DeleteFlowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeletePublishTemplate 删除直播推流通知配置
 //
 // 删除直播推流通知配置
@@ -500,6 +542,27 @@ func (c *LiveClient) ListDelayConfig(request *model.ListDelayConfigRequest) (*mo
 func (c *LiveClient) ListDelayConfigInvoker(request *model.ListDelayConfigRequest) *ListDelayConfigInvoker {
 	requestDef := GenReqDefForListDelayConfig()
 	return &ListDelayConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFlows 获取流列表
+//
+// 获取流列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ListFlows(request *model.ListFlowsRequest) (*model.ListFlowsResponse, error) {
+	requestDef := GenReqDefForListFlows()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFlowsResponse), nil
+	}
+}
+
+// ListFlowsInvoker 获取流列表
+func (c *LiveClient) ListFlowsInvoker(request *model.ListFlowsRequest) *ListFlowsInvoker {
+	requestDef := GenReqDefForListFlows()
+	return &ListFlowsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListGeoBlockingConfig 获取地域限制配置列表
@@ -757,6 +820,69 @@ func (c *LiveClient) ListStreamForbiddenInvoker(request *model.ListStreamForbidd
 	return &ListStreamForbiddenInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ModifyFlowSources 修改流来源
+//
+// 修改流来源
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ModifyFlowSources(request *model.ModifyFlowSourcesRequest) (*model.ModifyFlowSourcesResponse, error) {
+	requestDef := GenReqDefForModifyFlowSources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyFlowSourcesResponse), nil
+	}
+}
+
+// ModifyFlowSourcesInvoker 修改流来源
+func (c *LiveClient) ModifyFlowSourcesInvoker(request *model.ModifyFlowSourcesRequest) *ModifyFlowSourcesInvoker {
+	requestDef := GenReqDefForModifyFlowSources()
+	return &ModifyFlowSourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyFlowStart 启动流任务
+//
+// 启动流任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ModifyFlowStart(request *model.ModifyFlowStartRequest) (*model.ModifyFlowStartResponse, error) {
+	requestDef := GenReqDefForModifyFlowStart()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyFlowStartResponse), nil
+	}
+}
+
+// ModifyFlowStartInvoker 启动流任务
+func (c *LiveClient) ModifyFlowStartInvoker(request *model.ModifyFlowStartRequest) *ModifyFlowStartInvoker {
+	requestDef := GenReqDefForModifyFlowStart()
+	return &ModifyFlowStartInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyFlowStop 停止流任务
+//
+// 停止流任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ModifyFlowStop(request *model.ModifyFlowStopRequest) (*model.ModifyFlowStopResponse, error) {
+	requestDef := GenReqDefForModifyFlowStop()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyFlowStopResponse), nil
+	}
+}
+
+// ModifyFlowStopInvoker 停止流任务
+func (c *LiveClient) ModifyFlowStopInvoker(request *model.ModifyFlowStopRequest) *ModifyFlowStopInvoker {
+	requestDef := GenReqDefForModifyFlowStop()
+	return &ModifyFlowStopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RunRecord 提交录制控制命令
 //
 // 对单条流的实时录制控制接口。
@@ -839,6 +965,27 @@ func (c *LiveClient) ShowDomainKeyChain(request *model.ShowDomainKeyChainRequest
 func (c *LiveClient) ShowDomainKeyChainInvoker(request *model.ShowDomainKeyChainRequest) *ShowDomainKeyChainInvoker {
 	requestDef := GenReqDefForShowDomainKeyChain()
 	return &ShowDomainKeyChainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFlowDetail 获取流详情
+//
+// 获取流详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ShowFlowDetail(request *model.ShowFlowDetailRequest) (*model.ShowFlowDetailResponse, error) {
+	requestDef := GenReqDefForShowFlowDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFlowDetailResponse), nil
+	}
+}
+
+// ShowFlowDetailInvoker 获取流详情
+func (c *LiveClient) ShowFlowDetailInvoker(request *model.ShowFlowDetailRequest) *ShowFlowDetailInvoker {
+	requestDef := GenReqDefForShowFlowDetail()
+	return &ShowFlowDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowPullSourcesConfig 查询直播拉流回源配置

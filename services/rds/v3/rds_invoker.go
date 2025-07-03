@@ -197,6 +197,22 @@ func (i *ChangeOpsWindowInvoker) Invoke() (*model.ChangeOpsWindowResponse, error
 	}
 }
 
+type CheckInstanceForUpgradeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckInstanceForUpgradeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckInstanceForUpgradeInvoker) Invoke() (*model.CheckInstanceForUpgradeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckInstanceForUpgradeResponse), nil
+	}
+}
+
 type CopyConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1941,6 +1957,22 @@ func (i *ShowOffSiteBackupPolicyInvoker) Invoke() (*model.ShowOffSiteBackupPolic
 	}
 }
 
+type ShowPrecheckResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPrecheckResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPrecheckResultInvoker) Invoke() (*model.ShowPrecheckResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPrecheckResultResponse), nil
+	}
+}
+
 type ShowQuotasInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2514,6 +2546,22 @@ func (i *UpgradeDbVersionNewInvoker) Invoke() (*model.UpgradeDbVersionNewRespons
 		return nil, err
 	} else {
 		return result.(*model.UpgradeDbVersionNewResponse), nil
+	}
+}
+
+type UpgradeLargeVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeLargeVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpgradeLargeVersionInvoker) Invoke() (*model.UpgradeLargeVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeLargeVersionResponse), nil
 	}
 }
 

@@ -12,7 +12,7 @@ type CreateCnfReq struct {
 	Name string `json:"name"`
 
 	// 配置文件内容。
-	ConfContent string `json:"confContent"`
+	ConfContent string `json:"conf_content"`
 
 	Setting *Setting `json:"setting"`
 

@@ -23,10 +23,10 @@ type CreatePoolOption struct {
 	// 参数解释：后端服务器组的负载均衡算法。  约束限制： - 当该字段的取值为SOURCE_IP或QUIC_CID时，后端服务器组绑定的后端服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  取值范围： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。 [- 2_TUPLE_HASH：二元组hash算法，仅IP类型的pool支持。 - 3_TUPLE_HASH：三元组hash算法，仅IP类型的pool支持。 - 5_TUPLE_HASH：五元组hash算法，仅IP类型的pool支持。 - IP型pool不指定该字段时，默认设置为5_TUPLE_HASH。](tag:hws_eu)  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
 	LbAlgorithm string `json:"lb_algorithm"`
 
-	// 参数解释：后端服务器组关联的监听器的ID。  约束限制： - listener_id，loadbalancer_id，type至少指定一个。 [- 独享型实例的后端服务器组loadbalancer_id和listener_id可以都不指定，但共享型实例至少指定一个。。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
+	// 参数解释：后端服务器组关联的监听器的ID。  约束限制： - listener_id，loadbalancer_id，type至少指定一个。 [- 独享型实例的后端服务器组loadbalancer_id和listener_id可以都不指定，但共享型实例至少指定一个。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
 	ListenerId *string `json:"listener_id,omitempty"`
 
-	// 参数解释：后端服务器组关联的负载均衡器ID。  约束限制： - listener_id，loadbalancer_id，type至少指定一个。 [- 独享型实例的后端服务器组loadbalancer_id和listener_id可以都不指定，但共享型实例至少指定一个。。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
+	// 参数解释：后端服务器组关联的负载均衡器ID。  约束限制： - listener_id，loadbalancer_id，type至少指定一个。 [- 独享型实例的后端服务器组loadbalancer_id和listener_id可以都不指定，但共享型实例至少指定一个。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
 	LoadbalancerId *string `json:"loadbalancer_id,omitempty"`
 
 	// 参数解释：后端服务器组的名称。
@@ -42,7 +42,7 @@ type CreatePoolOption struct {
 
 	SlowStart *CreatePoolSlowStartOption `json:"slow_start,omitempty"`
 
-	// 参数解释：是否开启删除保护。  取值范围：false不开启，true开启，默认false。  > 退场时需要先关闭所有资源的删除保护开关。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+	// 参数解释：是否开启后端服务器移除保护。开关开启后，不允许从该ELB后端服务器组下移除后端服务器。  约束限制： - 开关开启后，移除member会报错拦截，涉及如下API:   + 级联删除负载均衡器（DELETE /v3/{project_id}/elb/loadbalancers/{loadbalancer_id}/force-elb）   + 级联删除负载均衡器及关联EIP（POST /v3/{project_id}/elb/loadbalancers/{loadbalancer_id}/delete-cascade）   + 级联删除监听器（DELETE /v3/{project_id}/elb/listeners/{listener_id}/force）   + 级联删除后端服务器组（DELETE /v3/{project_id}/elb/pools/{pool_id}/delete-cascade）   + 删除后端服务器（DELETE /v3/{project_id}/elb/pools/{pool_id}/members/{member_id}）   + 批量删除后端服务器（POST /v3/{project_id}/elb/pools/{pool_id}/members/batch-delete）  取值范围：false不开启，true开启。  默认取值：false  > 退场时需要先关闭所有资源的删除保护开关。  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42)  [荷兰region不支持该字段，请勿使用。](tag:dt)
 	MemberDeletionProtectionEnable *bool `json:"member_deletion_protection_enable,omitempty"`
 
 	// 参数解释：后端服务器组关联的虚拟私有云的ID。  约束限制： - 只能挂载到该虚拟私有云下。 - 只能添加该虚拟私有云下的后端服务器或跨VPC的后端服务器。 - type必须指定为instance。 [- pool的protocol为IP时，必须指定vpc_id，且与LB的vpc_id相同。](tag:hws_eu) - 若未指定vpc_id，则后续添加后端服务器时，vpc_id由后端服务器所在的虚拟私有云确定。

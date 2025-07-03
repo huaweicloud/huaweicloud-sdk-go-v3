@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// QueryRequestVo 查询请求对象。
 type QueryRequestVo struct {
 	CharacterSet *CharacterSetEnum `json:"characterSet,omitempty"`
 

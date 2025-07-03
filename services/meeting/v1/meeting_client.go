@@ -251,6 +251,27 @@ func (c *MeetingClient) AddUserInvoker(request *model.AddUserRequest) *AddUserIn
 	return &AddUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AllowAudienceJoin 主持人允许观众入会
+//
+// 主持人通过接口控制是否允许观众入会。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) AllowAudienceJoin(request *model.AllowAudienceJoinRequest) (*model.AllowAudienceJoinResponse, error) {
+	requestDef := GenReqDefForAllowAudienceJoin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AllowAudienceJoinResponse), nil
+	}
+}
+
+// AllowAudienceJoinInvoker 主持人允许观众入会
+func (c *MeetingClient) AllowAudienceJoinInvoker(request *model.AllowAudienceJoinRequest) *AllowAudienceJoinInvoker {
+	requestDef := GenReqDefForAllowAudienceJoin()
+	return &AllowAudienceJoinInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AllowClientRecord 允许客户端录制
 //
 // 该接口用于设置允许/禁止与会者客户端本地录制（非云端录制）。
@@ -481,6 +502,27 @@ func (c *MeetingClient) BatchHand(request *model.BatchHandRequest) (*model.Batch
 func (c *MeetingClient) BatchHandInvoker(request *model.BatchHandRequest) *BatchHandInvoker {
 	requestDef := GenReqDefForBatchHand()
 	return &BatchHandInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchMoveToWaitingRoom 批量移入等候室
+//
+// 主持人通过该接口批量移动用户到等候室。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) BatchMoveToWaitingRoom(request *model.BatchMoveToWaitingRoomRequest) (*model.BatchMoveToWaitingRoomResponse, error) {
+	requestDef := GenReqDefForBatchMoveToWaitingRoom()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchMoveToWaitingRoomResponse), nil
+	}
+}
+
+// BatchMoveToWaitingRoomInvoker 批量移入等候室
+func (c *MeetingClient) BatchMoveToWaitingRoomInvoker(request *model.BatchMoveToWaitingRoomRequest) *BatchMoveToWaitingRoomInvoker {
+	requestDef := GenReqDefForBatchMoveToWaitingRoom()
+	return &BatchMoveToWaitingRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchSearchAppId 分页查询企业应用
@@ -1622,6 +1664,27 @@ func (c *MeetingClient) MuteParticipantInvoker(request *model.MuteParticipantReq
 	return &MuteParticipantInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// PauseConference 主持人暂停/取消暂停会议
+//
+// 主持人通过接口控制暂停/取消暂停。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) PauseConference(request *model.PauseConferenceRequest) (*model.PauseConferenceResponse, error) {
+	requestDef := GenReqDefForPauseConference()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PauseConferenceResponse), nil
+	}
+}
+
+// PauseConferenceInvoker 主持人暂停/取消暂停会议
+func (c *MeetingClient) PauseConferenceInvoker(request *model.PauseConferenceRequest) *PauseConferenceInvoker {
+	requestDef := GenReqDefForPauseConference()
+	return &PauseConferenceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ProlongMeeting 延长会议
 //
 // 该接口用于延长会议时间。默认会议自动延长。
@@ -2510,6 +2573,48 @@ func (c *MeetingClient) SetInterpreterGroupInvoker(request *model.SetInterpreter
 	return &SetInterpreterGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetMmrLive 启动/停止Mmr会议直播
+//
+// 使用场景：会议主持人可以通过该接口启动/停止Mmr会议直播 功能描述：提供启动/停止会议Mmr直播的能力
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) SetMmrLive(request *model.SetMmrLiveRequest) (*model.SetMmrLiveResponse, error) {
+	requestDef := GenReqDefForSetMmrLive()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetMmrLiveResponse), nil
+	}
+}
+
+// SetMmrLiveInvoker 启动/停止Mmr会议直播
+func (c *MeetingClient) SetMmrLiveInvoker(request *model.SetMmrLiveRequest) *SetMmrLiveInvoker {
+	requestDef := GenReqDefForSetMmrLive()
+	return &SetMmrLiveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetMmrRecord 启动/暂停/停止mmr会议录制
+//
+// 使用场景：管理员或UC账号主席可以通过该接口启动/停止mmr会议录制 功能描述：提供启动/暂停/停止MMR会议录制的能力
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) SetMmrRecord(request *model.SetMmrRecordRequest) (*model.SetMmrRecordResponse, error) {
+	requestDef := GenReqDefForSetMmrRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetMmrRecordResponse), nil
+	}
+}
+
+// SetMmrRecordInvoker 启动/暂停/停止mmr会议录制
+func (c *MeetingClient) SetMmrRecordInvoker(request *model.SetMmrRecordRequest) *SetMmrRecordInvoker {
+	requestDef := GenReqDefForSetMmrRecord()
+	return &SetMmrRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetMultiPicture 设置多画面
 //
 // 设置会议多画面。该接口废弃不用，请使用“[[设置自定义多画面](https://support.huaweicloud.com/api-meeting/meeting_21_0418.html)](tag:hws)[[设置自定义多画面](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0418.html)](tag:hk)”接口。
@@ -2974,6 +3079,27 @@ func (c *MeetingClient) ShowMeetingFileList(request *model.ShowMeetingFileListRe
 func (c *MeetingClient) ShowMeetingFileListInvoker(request *model.ShowMeetingFileListRequest) *ShowMeetingFileListInvoker {
 	requestDef := GenReqDefForShowMeetingFileList()
 	return &ShowMeetingFileListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMgmtSiteStatus 查询会管状态
+//
+// 终端通过会控查询会管状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MeetingClient) ShowMgmtSiteStatus(request *model.ShowMgmtSiteStatusRequest) (*model.ShowMgmtSiteStatusResponse, error) {
+	requestDef := GenReqDefForShowMgmtSiteStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMgmtSiteStatusResponse), nil
+	}
+}
+
+// ShowMgmtSiteStatusInvoker 查询会管状态
+func (c *MeetingClient) ShowMgmtSiteStatusInvoker(request *model.ShowMgmtSiteStatusRequest) *ShowMgmtSiteStatusInvoker {
+	requestDef := GenReqDefForShowMgmtSiteStatus()
+	return &ShowMgmtSiteStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowMyInfo 用户查询自己的信息

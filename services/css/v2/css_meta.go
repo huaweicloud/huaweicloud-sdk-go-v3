@@ -45,7 +45,7 @@ func GenReqDefForRestartCluster() *def.HttpRequestDef {
 func GenReqDefForRollingRestart() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v2.0/{project_id}/clusters/{cluster_id}/rolling_restart").
+		WithPath("/v2.0/{project_id}/clusters/{cluster_id}/rolling-restart").
 		WithResponse(new(model.RollingRestartResponse)).
 		WithContentType("application/json")
 

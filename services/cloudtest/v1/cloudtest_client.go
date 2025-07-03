@@ -1613,6 +1613,27 @@ func (c *CloudtestClient) SaveTaskSettingInvoker(request *model.SaveTaskSettingR
 	return &SaveTaskSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetTaskResult 设置测试套结果
+//
+// 设置测试套结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) SetTaskResult(request *model.SetTaskResultRequest) (*model.SetTaskResultResponse, error) {
+	requestDef := GenReqDefForSetTaskResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetTaskResultResponse), nil
+	}
+}
+
+// SetTaskResultInvoker 设置测试套结果
+func (c *CloudtestClient) SetTaskResultInvoker(request *model.SetTaskResultRequest) *SetTaskResultInvoker {
+	requestDef := GenReqDefForSetTaskResult()
+	return &SetTaskResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowAllConfigValueByTypeAndKey 查询任务配置
 //
 // 查询任务配置

@@ -389,6 +389,22 @@ func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
 	}
 }
 
+type ListRepoDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRepoDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRepoDetailsInvoker) Invoke() (*model.ListRepoDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRepoDetailsResponse), nil
+	}
+}
+
 type ListRepoDomainsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -418,6 +434,22 @@ func (i *ListReposDetailsInvoker) Invoke() (*model.ListReposDetailsResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListReposDetailsResponse), nil
+	}
+}
+
+type ListRepositoryTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRepositoryTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRepositoryTagInvoker) Invoke() (*model.ListRepositoryTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRepositoryTagResponse), nil
 	}
 }
 
@@ -466,6 +498,22 @@ func (i *ListRetentionsInvoker) Invoke() (*model.ListRetentionsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListRetentionsResponse), nil
+	}
+}
+
+type ListSharedRepoDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSharedRepoDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSharedRepoDetailsInvoker) Invoke() (*model.ListSharedRepoDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSharedRepoDetailsResponse), nil
 	}
 }
 
@@ -578,6 +626,22 @@ func (i *ShowNamespaceAuthInvoker) Invoke() (*model.ShowNamespaceAuthResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowNamespaceAuthResponse), nil
+	}
+}
+
+type ShowRepoTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRepoTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRepoTagInvoker) Invoke() (*model.ShowRepoTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRepoTagResponse), nil
 	}
 }
 

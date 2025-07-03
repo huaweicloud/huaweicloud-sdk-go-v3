@@ -9,7 +9,7 @@ import (
 type UpdateClusterNameReq struct {
 
 	// 修改后集群名称。
-	DisplayName string `json:"displayName"`
+	DisplayName string `json:"display_name"`
 }
 
 func (o UpdateClusterNameReq) String() string {

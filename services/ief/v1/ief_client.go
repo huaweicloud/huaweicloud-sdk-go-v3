@@ -762,6 +762,27 @@ func (c *IefClient) DeleteNodeEncryptdatasInvoker(request *model.DeleteNodeEncry
 	return &DeleteNodeEncryptdatasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeletePod 删除容器应用实例
+//
+// 删除部署下的应用实例。应用实例在删除后会自动重新拉起。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IefClient) DeletePod(request *model.DeletePodRequest) (*model.DeletePodResponse, error) {
+	requestDef := GenReqDefForDeletePod()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePodResponse), nil
+	}
+}
+
+// DeletePodInvoker 删除容器应用实例
+func (c *IefClient) DeletePodInvoker(request *model.DeletePodRequest) *DeletePodInvoker {
+	requestDef := GenReqDefForDeletePod()
+	return &DeletePodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteProduct 删除批量节点注册作业
 //
 // 删除批量节点注册作业。接口调用成功后，与该批量注册任务关联的批量注册凭证将会失效

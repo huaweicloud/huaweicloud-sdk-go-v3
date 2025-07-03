@@ -39,10 +39,10 @@ type Member struct {
 	// 参数解释：当前后端服务器的IP地址版本，由后端系统自动根据传入的address字段确定。  取值范围：v4、v6。
 	IpVersion string `json:"ip_version"`
 
-	// 参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
+	// 参数解释：后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值范围： - INITIAL：初始化中，表示负载均衡实例配置了健康检查，但查不到数据。 - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
 	OperatingStatus string `json:"operating_status"`
 
-	// 参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
+	// 参数解释：后端服务器监听器粒度的的健康状态。  约束限制： - 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 - 若绑定的监听器不在该字段中，则以外层的operating_status为准。
 	Status []MemberStatus `json:"status"`
 
 	Reason *MemberHealthCheckFailedReason `json:"reason,omitempty"`

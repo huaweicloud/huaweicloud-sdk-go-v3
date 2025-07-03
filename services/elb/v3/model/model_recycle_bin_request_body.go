@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// RecycleBinRequestBody 更新回收站启用开关的请求体。
 type RecycleBinRequestBody struct {
 
 	// 是否启用回收站。  取值： - true：启用回收站。 - false：不启用回收站。

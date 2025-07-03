@@ -53,6 +53,22 @@ func (i *CreateDomainMappingInvoker) Invoke() (*model.CreateDomainMappingRespons
 	}
 }
 
+type CreateFlowsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFlowsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateFlowsInvoker) Invoke() (*model.CreateFlowsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFlowsResponse), nil
+	}
+}
+
 type CreateRecordCallbackConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -229,6 +245,22 @@ func (i *DeleteDomainMappingInvoker) Invoke() (*model.DeleteDomainMappingRespons
 	}
 }
 
+type DeleteFlowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteFlowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteFlowInvoker) Invoke() (*model.DeleteFlowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteFlowResponse), nil
+	}
+}
+
 type DeletePublishTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -370,6 +402,22 @@ func (i *ListDelayConfigInvoker) Invoke() (*model.ListDelayConfigResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListDelayConfigResponse), nil
+	}
+}
+
+type ListFlowsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFlowsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListFlowsInvoker) Invoke() (*model.ListFlowsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFlowsResponse), nil
 	}
 }
 
@@ -565,6 +613,54 @@ func (i *ListStreamForbiddenInvoker) Invoke() (*model.ListStreamForbiddenRespons
 	}
 }
 
+type ModifyFlowSourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyFlowSourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyFlowSourcesInvoker) Invoke() (*model.ModifyFlowSourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyFlowSourcesResponse), nil
+	}
+}
+
+type ModifyFlowStartInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyFlowStartInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyFlowStartInvoker) Invoke() (*model.ModifyFlowStartResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyFlowStartResponse), nil
+	}
+}
+
+type ModifyFlowStopInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyFlowStopInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyFlowStopInvoker) Invoke() (*model.ModifyFlowStopResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyFlowStopResponse), nil
+	}
+}
+
 type RunRecordInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -626,6 +722,22 @@ func (i *ShowDomainKeyChainInvoker) Invoke() (*model.ShowDomainKeyChainResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowDomainKeyChainResponse), nil
+	}
+}
+
+type ShowFlowDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFlowDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowFlowDetailInvoker) Invoke() (*model.ShowFlowDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFlowDetailResponse), nil
 	}
 }
 

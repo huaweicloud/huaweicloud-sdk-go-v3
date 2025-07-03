@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// CreatePoolSessionPersistenceOption 参数解释：会话持久性对象。
+// CreatePoolSessionPersistenceOption 参数解释：会话持久性对象。  约束限制：慢启动与会话保持不能同时开启。若都开启则会导致会话保持失效。  [荷兰region不支持该字段，请勿使用。](tag:dt)
 type CreatePoolSessionPersistenceOption struct {
 
 	// 参数解释：cookie名称。  约束限制： - 只有当type为APP_COOKIE时才有效。其他情况下传该字段会报错。  [- 网关型LB，不支持该特性，请勿使用。](tag:hws_eu)  [取值范围： - 共享型LB，支持字母、数字、中划线(-)和下划线(_)，最大长度64个字符。 - 独享型LB，支持字母、数字、中划线(-)、下划线(_)和点号(.)，最大长度255个字符。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,srg,fcs,dt,hk_tm)  [取值范围：支持字母、数字、中划线(-)、下划线(_)和点号(.)，最大长度255个字符。](tag:hws_eu,hcso_dt)  [不支持该字段，请勿使用。](tag:hws_eu,hcso_dt)

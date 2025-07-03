@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// DeleteByConditionVo 条件删除请求参数对象。
 type DeleteByConditionVo struct {
 	Condition *QueryRequestVo `json:"condition"`
 

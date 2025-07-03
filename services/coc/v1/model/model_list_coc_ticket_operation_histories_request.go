@@ -12,7 +12,7 @@ import (
 // ListCocTicketOperationHistoriesRequest Request Object
 type ListCocTicketOperationHistoriesRequest struct {
 
-	// 工单类型:incident,issues_mgmt
+	// 需要查询的工单类型，事件单传值为incident，问题单传值为issues_mgmt。
 	TicketType ListCocTicketOperationHistoriesRequestTicketType `json:"ticket_type"`
 
 	Body *ListTicketParams `json:"body,omitempty"`

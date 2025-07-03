@@ -5,38 +5,6 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/coc/v1/model"
 )
 
-type ListApplicationsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListApplicationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListApplicationsInvoker) Invoke() (*model.ListApplicationsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListApplicationsResponse), nil
-	}
-}
-
-type ListApplicationModelInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListApplicationModelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListApplicationModelInvoker) Invoke() (*model.ListApplicationModelResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListApplicationModelResponse), nil
-	}
-}
-
 type BatchCreateApplicationViewInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,6 +18,70 @@ func (i *BatchCreateApplicationViewInvoker) Invoke() (*model.BatchCreateApplicat
 		return nil, err
 	} else {
 		return result.(*model.BatchCreateApplicationViewResponse), nil
+	}
+}
+
+type HandleIncidentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *HandleIncidentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *HandleIncidentInvoker) Invoke() (*model.HandleIncidentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.HandleIncidentResponse), nil
+	}
+}
+
+type ListIncidentsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIncidentsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListIncidentsInvoker) Invoke() (*model.ListIncidentsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIncidentsResponse), nil
+	}
+}
+
+type ListIncidentsHistoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIncidentsHistoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListIncidentsHistoriesInvoker) Invoke() (*model.ListIncidentsHistoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIncidentsHistoriesResponse), nil
+	}
+}
+
+type ShowIncidentTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIncidentTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowIncidentTaskInvoker) Invoke() (*model.ShowIncidentTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIncidentTaskResponse), nil
 	}
 }
 
@@ -453,6 +485,22 @@ func (i *CreateCocIncidentInvoker) Invoke() (*model.CreateCocIncidentResponse, e
 	}
 }
 
+type CreateExternalCocAttachmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateExternalCocAttachmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateExternalCocAttachmentInvoker) Invoke() (*model.CreateExternalCocAttachmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateExternalCocAttachmentResponse), nil
+	}
+}
+
 type HandleCocIncidentInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -482,6 +530,22 @@ func (i *ListCocTicketOperationHistoriesInvoker) Invoke() (*model.ListCocTicketO
 		return nil, err
 	} else {
 		return result.(*model.ListCocTicketOperationHistoriesResponse), nil
+	}
+}
+
+type ListIncidentSimpleTicketsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIncidentSimpleTicketsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListIncidentSimpleTicketsInvoker) Invoke() (*model.ListIncidentSimpleTicketsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIncidentSimpleTicketsResponse), nil
 	}
 }
 
@@ -533,6 +597,38 @@ func (i *ShowCocIssuesDetailInvoker) Invoke() (*model.ShowCocIssuesDetailRespons
 	}
 }
 
+type CreateAttachmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAttachmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAttachmentInvoker) Invoke() (*model.CreateAttachmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAttachmentResponse), nil
+	}
+}
+
+type CreateTicketInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTicketInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateTicketInvoker) Invoke() (*model.CreateTicketResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTicketResponse), nil
+	}
+}
+
 type ListAuthorizableTicketsExternalInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -546,22 +642,6 @@ func (i *ListAuthorizableTicketsExternalInvoker) Invoke() (*model.ListAuthorizab
 		return nil, err
 	} else {
 		return result.(*model.ListAuthorizableTicketsExternalResponse), nil
-	}
-}
-
-type ListMultiCloudResourcesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListMultiCloudResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListMultiCloudResourcesInvoker) Invoke() (*model.ListMultiCloudResourcesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListMultiCloudResourcesResponse), nil
 	}
 }
 

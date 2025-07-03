@@ -17,7 +17,7 @@ type PostAlarmsReqV2 struct {
 	// 告警描述，长度0-256
 	Description *string `json:"description,omitempty"`
 
-	// 查询服务的命名空间，各服务命名空间请参考[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)
+	// 查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
 	Namespace string `json:"namespace"`
 
 	// 资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串

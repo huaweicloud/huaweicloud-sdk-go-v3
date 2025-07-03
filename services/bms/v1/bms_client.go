@@ -458,27 +458,6 @@ func (c *BmsClient) ShowBaremetalServerInterfaceAttachmentsInvoker(request *mode
 	return &ShowBaremetalServerInterfaceAttachmentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowBaremetalServerMetadataOptions 查询裸金属服务器元数据配置
-//
-// 查询云服务器元数据配置，通过本接口，您可以查询指裸金属服务器的元数据配置。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *BmsClient) ShowBaremetalServerMetadataOptions(request *model.ShowBaremetalServerMetadataOptionsRequest) (*model.ShowBaremetalServerMetadataOptionsResponse, error) {
-	requestDef := GenReqDefForShowBaremetalServerMetadataOptions()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowBaremetalServerMetadataOptionsResponse), nil
-	}
-}
-
-// ShowBaremetalServerMetadataOptionsInvoker 查询裸金属服务器元数据配置
-func (c *BmsClient) ShowBaremetalServerMetadataOptionsInvoker(request *model.ShowBaremetalServerMetadataOptionsRequest) *ShowBaremetalServerMetadataOptionsInvoker {
-	requestDef := GenReqDefForShowBaremetalServerMetadataOptions()
-	return &ShowBaremetalServerMetadataOptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowBaremetalServerTags 查询裸金属服务器标签
 //
 // - 查询指定云服务器的标签信息。
@@ -519,6 +498,27 @@ func (c *BmsClient) ShowBaremetalServerVolumeInfo(request *model.ShowBaremetalSe
 func (c *BmsClient) ShowBaremetalServerVolumeInfoInvoker(request *model.ShowBaremetalServerVolumeInfoRequest) *ShowBaremetalServerVolumeInfoInvoker {
 	requestDef := GenReqDefForShowBaremetalServerVolumeInfo()
 	return &ShowBaremetalServerVolumeInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMetadataOptions 查询裸金属服务器元数据配置
+//
+// 查询云服务器元数据配置，通过本接口，您可以查询指裸金属服务器的元数据配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BmsClient) ShowMetadataOptions(request *model.ShowMetadataOptionsRequest) (*model.ShowMetadataOptionsResponse, error) {
+	requestDef := GenReqDefForShowMetadataOptions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMetadataOptionsResponse), nil
+	}
+}
+
+// ShowMetadataOptionsInvoker 查询裸金属服务器元数据配置
+func (c *BmsClient) ShowMetadataOptionsInvoker(request *model.ShowMetadataOptionsRequest) *ShowMetadataOptionsInvoker {
+	requestDef := GenReqDefForShowMetadataOptions()
+	return &ShowMetadataOptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowResetPwd 查询是否支持一键重置密码
@@ -645,25 +645,25 @@ func (c *BmsClient) UpdateBaremetalServerMetadataInvoker(request *model.UpdateBa
 	return &UpdateBaremetalServerMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateBaremetalServerMetadataOptions 更新裸金属服务器元数据配置
+// UpdateMetadataOptions 更新裸金属服务器元数据配置
 //
 // 更新裸金属服务器元数据配置，通过本接口，您可以选择启用或关闭IMDS服务，也可以选择IMDS服务的版本。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *BmsClient) UpdateBaremetalServerMetadataOptions(request *model.UpdateBaremetalServerMetadataOptionsRequest) (*model.UpdateBaremetalServerMetadataOptionsResponse, error) {
-	requestDef := GenReqDefForUpdateBaremetalServerMetadataOptions()
+func (c *BmsClient) UpdateMetadataOptions(request *model.UpdateMetadataOptionsRequest) (*model.UpdateMetadataOptionsResponse, error) {
+	requestDef := GenReqDefForUpdateMetadataOptions()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdateBaremetalServerMetadataOptionsResponse), nil
+		return resp.(*model.UpdateMetadataOptionsResponse), nil
 	}
 }
 
-// UpdateBaremetalServerMetadataOptionsInvoker 更新裸金属服务器元数据配置
-func (c *BmsClient) UpdateBaremetalServerMetadataOptionsInvoker(request *model.UpdateBaremetalServerMetadataOptionsRequest) *UpdateBaremetalServerMetadataOptionsInvoker {
-	requestDef := GenReqDefForUpdateBaremetalServerMetadataOptions()
-	return &UpdateBaremetalServerMetadataOptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateMetadataOptionsInvoker 更新裸金属服务器元数据配置
+func (c *BmsClient) UpdateMetadataOptionsInvoker(request *model.UpdateMetadataOptionsRequest) *UpdateMetadataOptionsInvoker {
+	requestDef := GenReqDefForUpdateMetadataOptions()
+	return &UpdateMetadataOptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSpecifiedVersion 查询指定API版本信息

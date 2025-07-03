@@ -181,6 +181,22 @@ func (i *AddUserInvoker) Invoke() (*model.AddUserResponse, error) {
 	}
 }
 
+type AllowAudienceJoinInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AllowAudienceJoinInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AllowAudienceJoinInvoker) Invoke() (*model.AllowAudienceJoinResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AllowAudienceJoinResponse), nil
+	}
+}
+
 type AllowClientRecordInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -354,6 +370,22 @@ func (i *BatchHandInvoker) Invoke() (*model.BatchHandResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.BatchHandResponse), nil
+	}
+}
+
+type BatchMoveToWaitingRoomInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchMoveToWaitingRoomInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchMoveToWaitingRoomInvoker) Invoke() (*model.BatchMoveToWaitingRoomResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchMoveToWaitingRoomResponse), nil
 	}
 }
 
@@ -1221,6 +1253,22 @@ func (i *MuteParticipantInvoker) Invoke() (*model.MuteParticipantResponse, error
 	}
 }
 
+type PauseConferenceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PauseConferenceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *PauseConferenceInvoker) Invoke() (*model.PauseConferenceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PauseConferenceResponse), nil
+	}
+}
+
 type ProlongMeetingInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1893,6 +1941,38 @@ func (i *SetInterpreterGroupInvoker) Invoke() (*model.SetInterpreterGroupRespons
 	}
 }
 
+type SetMmrLiveInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetMmrLiveInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetMmrLiveInvoker) Invoke() (*model.SetMmrLiveResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetMmrLiveResponse), nil
+	}
+}
+
+type SetMmrRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetMmrRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetMmrRecordInvoker) Invoke() (*model.SetMmrRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetMmrRecordResponse), nil
+	}
+}
+
 type SetMultiPictureInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2242,6 +2322,22 @@ func (i *ShowMeetingFileListInvoker) Invoke() (*model.ShowMeetingFileListRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowMeetingFileListResponse), nil
+	}
+}
+
+type ShowMgmtSiteStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMgmtSiteStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowMgmtSiteStatusInvoker) Invoke() (*model.ShowMgmtSiteStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMgmtSiteStatusResponse), nil
 	}
 }
 

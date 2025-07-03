@@ -565,6 +565,22 @@ func (i *DeleteNodeEncryptdatasInvoker) Invoke() (*model.DeleteNodeEncryptdatasR
 	}
 }
 
+type DeletePodInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePodInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeletePodInvoker) Invoke() (*model.DeletePodResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePodResponse), nil
+	}
+}
+
 type DeleteProductInvoker struct {
 	*invoker.BaseInvoker
 }

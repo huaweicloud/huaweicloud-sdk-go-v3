@@ -17,9 +17,6 @@ type RunAuthorizationActionRequestBody struct {
 	// 被赋权的项目ID，数据赋权给其他项目后，该项目的管理员将有权访问指定的数据库或数据表。
 	ProjectId *string `json:"projectId,omitempty"`
 
-	// 被赋权的项目ID，数据赋权给其他项目后，该项目的管理员将 有权访问指定的DLI资源权限，被收回或者更新访问权限。
-	GrantProjectId *string `json:"grant_project_id,omitempty"`
-
 	// 指定赋权或回收。值为：grant，revoke或update。  说明：当用户同时拥有grant和revoke权限的时候才有权限使用update操作。
 	Action RunAuthorizationActionRequestBodyAction `json:"action"`
 

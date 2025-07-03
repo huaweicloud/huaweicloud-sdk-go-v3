@@ -32,8 +32,6 @@ type UpgradeV3RequestBody struct {
 
 	// 下联面子网的网络ID列表。仅action为start时生效。 可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_network_id得到。  若不指定该字段，则选择vip_subnet_cidr_id子网对应的网络ID。  下联面子网必须属于该LB所在的VPC。
 	ElbVirsubnetIds *[]string `json:"elb_virsubnet_ids,omitempty"`
-
-	PrepaidOptions *UpgradePrepaidOption `json:"prepaid_options,omitempty"`
 }
 
 func (o UpgradeV3RequestBody) String() string {

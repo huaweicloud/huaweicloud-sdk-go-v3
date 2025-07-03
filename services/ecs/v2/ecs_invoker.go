@@ -5,6 +5,22 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/ecs/v2/model"
 )
 
+type AcceptScheduledEventInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AcceptScheduledEventInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AcceptScheduledEventInvoker) Invoke() (*model.AcceptScheduledEventResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AcceptScheduledEventResponse), nil
+	}
+}
+
 type AddServerGroupMemberInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -341,6 +357,22 @@ func (i *CreateServersInvoker) Invoke() (*model.CreateServersResponse, error) {
 	}
 }
 
+type DeleteLaunchTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteLaunchTemplatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteLaunchTemplatesInvoker) Invoke() (*model.DeleteLaunchTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteLaunchTemplatesResponse), nil
+	}
+}
+
 type DeleteRecycleBinServerInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -514,6 +546,22 @@ func (i *ListFlavorsInvoker) Invoke() (*model.ListFlavorsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListFlavorsResponse), nil
+	}
+}
+
+type ListLaunchTemplateVersionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLaunchTemplateVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListLaunchTemplateVersionsInvoker) Invoke() (*model.ListLaunchTemplateVersionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLaunchTemplateVersionsResponse), nil
 	}
 }
 
@@ -695,6 +743,22 @@ func (i *ListServersDetailsInvoker) Invoke() (*model.ListServersDetailsResponse,
 	}
 }
 
+type ListTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTemplatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTemplatesInvoker) Invoke() (*model.ListTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTemplatesResponse), nil
+	}
+}
+
 type MigrateServerInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -870,6 +934,22 @@ func (i *NovaListServerSecurityGroupsInvoker) Invoke() (*model.NovaListServerSec
 		return nil, err
 	} else {
 		return result.(*model.NovaListServerSecurityGroupsResponse), nil
+	}
+}
+
+type NovaListServersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NovaListServersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *NovaListServersInvoker) Invoke() (*model.NovaListServersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NovaListServersResponse), nil
 	}
 }
 
@@ -1065,6 +1145,22 @@ func (i *RevertRecycleBinServerInvoker) Invoke() (*model.RevertRecycleBinServerR
 	}
 }
 
+type ShowMetadataOptionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMetadataOptionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowMetadataOptionsInvoker) Invoke() (*model.ShowMetadataOptionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMetadataOptionsResponse), nil
+	}
+}
+
 type ShowRecycleBinInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1161,22 +1257,6 @@ func (i *ShowServerLimitsInvoker) Invoke() (*model.ShowServerLimitsResponse, err
 	}
 }
 
-type ShowServerMetadataOptionsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowServerMetadataOptionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowServerMetadataOptionsInvoker) Invoke() (*model.ShowServerMetadataOptionsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowServerMetadataOptionsResponse), nil
-	}
-}
-
 type ShowServerPasswordInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1225,6 +1305,22 @@ func (i *ShowServerTagsInvoker) Invoke() (*model.ShowServerTagsResponse, error) 
 	}
 }
 
+type UpdateMetadataOptionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateMetadataOptionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateMetadataOptionsInvoker) Invoke() (*model.UpdateMetadataOptionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateMetadataOptionsResponse), nil
+	}
+}
+
 type UpdateRecycleBinInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1254,6 +1350,22 @@ func (i *UpdateRecycleBinPolicyInvoker) Invoke() (*model.UpdateRecycleBinPolicyR
 		return nil, err
 	} else {
 		return result.(*model.UpdateRecycleBinPolicyResponse), nil
+	}
+}
+
+type UpdateScheduledEventInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateScheduledEventInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateScheduledEventInvoker) Invoke() (*model.UpdateScheduledEventResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateScheduledEventResponse), nil
 	}
 }
 
@@ -1334,22 +1446,6 @@ func (i *UpdateServerMetadataInvoker) Invoke() (*model.UpdateServerMetadataRespo
 		return nil, err
 	} else {
 		return result.(*model.UpdateServerMetadataResponse), nil
-	}
-}
-
-type UpdateServerMetadataOptionsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateServerMetadataOptionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateServerMetadataOptionsInvoker) Invoke() (*model.UpdateServerMetadataOptionsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateServerMetadataOptionsResponse), nil
 	}
 }
 

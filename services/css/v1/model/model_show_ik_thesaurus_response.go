@@ -24,9 +24,6 @@ type ShowIkThesaurusResponse struct {
 	// 同义词词库文件对象。
 	SynonymObj *string `json:"synonymObj,omitempty"`
 
-	// 词库最近更新时间。
-	UpdateTime *string `json:"updateTime,omitempty"`
-
 	// 更新详情。
 	UpdateDetails *string `json:"updateDetails,omitempty"`
 

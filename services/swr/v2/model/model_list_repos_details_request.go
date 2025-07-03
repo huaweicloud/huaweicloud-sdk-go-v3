@@ -24,7 +24,7 @@ type ListReposDetailsRequest struct {
 	// 镜像仓库分类，可设置为app_server, linux, framework_app, database, lang, other, windows, arm。注意：和filter最好分开使用，如果同时使用，此过滤参数将失效，以filter为准。
 	Category *string `json:"category,omitempty"`
 
-	// 返回条数。注意：offset和limit参数需要配套使用。
+	// 返回条数，默认情况下返回100条记录，最多返回1000条记录。注意：offset和limit参数需要配套使用。
 	Limit *string `json:"limit,omitempty"`
 
 	// 起始索引。注意：offset和limit参数需要配套使用。

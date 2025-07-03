@@ -523,6 +523,27 @@ func (c *SwrClient) ListQuotasInvoker(request *model.ListQuotasRequest) *ListQuo
 	return &ListQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListRepoDetails 查询镜像仓库列表详情
+//
+// 查询镜像仓库列表详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) ListRepoDetails(request *model.ListRepoDetailsRequest) (*model.ListRepoDetailsResponse, error) {
+	requestDef := GenReqDefForListRepoDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRepoDetailsResponse), nil
+	}
+}
+
+// ListRepoDetailsInvoker 查询镜像仓库列表详情
+func (c *SwrClient) ListRepoDetailsInvoker(request *model.ListRepoDetailsRequest) *ListRepoDetailsInvoker {
+	requestDef := GenReqDefForListRepoDetails()
+	return &ListRepoDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListRepoDomains 获取共享帐号列表
 //
 // 获取共享帐号列表
@@ -563,6 +584,27 @@ func (c *SwrClient) ListReposDetails(request *model.ListReposDetailsRequest) (*m
 func (c *SwrClient) ListReposDetailsInvoker(request *model.ListReposDetailsRequest) *ListReposDetailsInvoker {
 	requestDef := GenReqDefForListReposDetails()
 	return &ListReposDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRepositoryTag 查询镜像tag列表详情
+//
+// 查询镜像tag列表详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) ListRepositoryTag(request *model.ListRepositoryTagRequest) (*model.ListRepositoryTagResponse, error) {
+	requestDef := GenReqDefForListRepositoryTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRepositoryTagResponse), nil
+	}
+}
+
+// ListRepositoryTagInvoker 查询镜像tag列表详情
+func (c *SwrClient) ListRepositoryTagInvoker(request *model.ListRepositoryTagRequest) *ListRepositoryTagInvoker {
+	requestDef := GenReqDefForListRepositoryTag()
+	return &ListRepositoryTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListRepositoryTags 查询镜像tag列表
@@ -626,6 +668,27 @@ func (c *SwrClient) ListRetentions(request *model.ListRetentionsRequest) (*model
 func (c *SwrClient) ListRetentionsInvoker(request *model.ListRetentionsRequest) *ListRetentionsInvoker {
 	requestDef := GenReqDefForListRetentions()
 	return &ListRetentionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSharedRepoDetails 查询共享镜像列表详情
+//
+// 查询共享镜像列表详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) ListSharedRepoDetails(request *model.ListSharedRepoDetailsRequest) (*model.ListSharedRepoDetailsResponse, error) {
+	requestDef := GenReqDefForListSharedRepoDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSharedRepoDetailsResponse), nil
+	}
+}
+
+// ListSharedRepoDetailsInvoker 查询共享镜像列表详情
+func (c *SwrClient) ListSharedRepoDetailsInvoker(request *model.ListSharedRepoDetailsRequest) *ListSharedRepoDetailsInvoker {
+	requestDef := GenReqDefForListSharedRepoDetails()
+	return &ListSharedRepoDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSharedReposDetails 查询共享镜像列表
@@ -773,6 +836,27 @@ func (c *SwrClient) ShowNamespaceAuth(request *model.ShowNamespaceAuthRequest) (
 func (c *SwrClient) ShowNamespaceAuthInvoker(request *model.ShowNamespaceAuthRequest) *ShowNamespaceAuthInvoker {
 	requestDef := GenReqDefForShowNamespaceAuth()
 	return &ShowNamespaceAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRepoTag 查询指定tag的镜像详情
+//
+// 查询镜像仓库中指定tag的镜像
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) ShowRepoTag(request *model.ShowRepoTagRequest) (*model.ShowRepoTagResponse, error) {
+	requestDef := GenReqDefForShowRepoTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRepoTagResponse), nil
+	}
+}
+
+// ShowRepoTagInvoker 查询指定tag的镜像详情
+func (c *SwrClient) ShowRepoTagInvoker(request *model.ShowRepoTagRequest) *ShowRepoTagInvoker {
+	requestDef := GenReqDefForShowRepoTag()
+	return &ShowRepoTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowRepository 查询镜像仓库概要信息

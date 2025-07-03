@@ -19,48 +19,6 @@ func CocClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
-// ListApplications 查询应用
-//
-// 查询应用
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CocClient) ListApplications(request *model.ListApplicationsRequest) (*model.ListApplicationsResponse, error) {
-	requestDef := GenReqDefForListApplications()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListApplicationsResponse), nil
-	}
-}
-
-// ListApplicationsInvoker 查询应用
-func (c *CocClient) ListApplicationsInvoker(request *model.ListApplicationsRequest) *ListApplicationsInvoker {
-	requestDef := GenReqDefForListApplications()
-	return &ListApplicationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListApplicationModel 查询下一级的子应用、组件、分组
-//
-// 查询下一级的子应用、组件、分组
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CocClient) ListApplicationModel(request *model.ListApplicationModelRequest) (*model.ListApplicationModelResponse, error) {
-	requestDef := GenReqDefForListApplicationModel()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListApplicationModelResponse), nil
-	}
-}
-
-// ListApplicationModelInvoker 查询下一级的子应用、组件、分组
-func (c *CocClient) ListApplicationModelInvoker(request *model.ListApplicationModelRequest) *ListApplicationModelInvoker {
-	requestDef := GenReqDefForListApplicationModel()
-	return &ListApplicationModelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // BatchCreateApplicationView 批量创建应用视图
 //
 // 批量创建应用视图
@@ -80,6 +38,90 @@ func (c *CocClient) BatchCreateApplicationView(request *model.BatchCreateApplica
 func (c *CocClient) BatchCreateApplicationViewInvoker(request *model.BatchCreateApplicationViewRequest) *BatchCreateApplicationViewInvoker {
 	requestDef := GenReqDefForBatchCreateApplicationView()
 	return &BatchCreateApplicationViewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// HandleIncident HandleIncident 处理事件单
+//
+// HandleIncident 处理事件单
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) HandleIncident(request *model.HandleIncidentRequest) (*model.HandleIncidentResponse, error) {
+	requestDef := GenReqDefForHandleIncident()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.HandleIncidentResponse), nil
+	}
+}
+
+// HandleIncidentInvoker HandleIncident 处理事件单
+func (c *CocClient) HandleIncidentInvoker(request *model.HandleIncidentRequest) *HandleIncidentInvoker {
+	requestDef := GenReqDefForHandleIncident()
+	return &HandleIncidentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIncidents ListIncidents 查询事件单列表
+//
+// ListIncidents 查询事件单列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListIncidents(request *model.ListIncidentsRequest) (*model.ListIncidentsResponse, error) {
+	requestDef := GenReqDefForListIncidents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIncidentsResponse), nil
+	}
+}
+
+// ListIncidentsInvoker ListIncidents 查询事件单列表
+func (c *CocClient) ListIncidentsInvoker(request *model.ListIncidentsRequest) *ListIncidentsInvoker {
+	requestDef := GenReqDefForListIncidents()
+	return &ListIncidentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIncidentsHistories ListIncidentsHistories 获取事件单历史
+//
+// ListIncidentsHistories  获取事件单历史
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListIncidentsHistories(request *model.ListIncidentsHistoriesRequest) (*model.ListIncidentsHistoriesResponse, error) {
+	requestDef := GenReqDefForListIncidentsHistories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIncidentsHistoriesResponse), nil
+	}
+}
+
+// ListIncidentsHistoriesInvoker ListIncidentsHistories 获取事件单历史
+func (c *CocClient) ListIncidentsHistoriesInvoker(request *model.ListIncidentsHistoriesRequest) *ListIncidentsHistoriesInvoker {
+	requestDef := GenReqDefForListIncidentsHistories()
+	return &ListIncidentsHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIncidentTask ShowIncidentTask 获取事件任务
+//
+// ShowIncidentTask 获取事件任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ShowIncidentTask(request *model.ShowIncidentTaskRequest) (*model.ShowIncidentTaskResponse, error) {
+	requestDef := GenReqDefForShowIncidentTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIncidentTaskResponse), nil
+	}
+}
+
+// ShowIncidentTaskInvoker ShowIncidentTask 获取事件任务
+func (c *CocClient) ShowIncidentTaskInvoker(request *model.ShowIncidentTaskRequest) *ShowIncidentTaskInvoker {
+	requestDef := GenReqDefForShowIncidentTask()
+	return &ShowIncidentTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListInstanceCompliant 获取节点合规性报告
@@ -607,6 +649,27 @@ func (c *CocClient) CreateCocIncidentInvoker(request *model.CreateCocIncidentReq
 	return &CreateCocIncidentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateExternalCocAttachment 上传附件
+//
+// 上传附件，创建事件单的场景下，如需上传附件，需要先调用该接口将文件上传到obs。上传成功时，该接口将返回文档唯一id。支持文件类型：.jpg,.png,.docx,.txt,.pdf，且文本大小不超10M
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CreateExternalCocAttachment(request *model.CreateExternalCocAttachmentRequest) (*model.CreateExternalCocAttachmentResponse, error) {
+	requestDef := GenReqDefForCreateExternalCocAttachment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateExternalCocAttachmentResponse), nil
+	}
+}
+
+// CreateExternalCocAttachmentInvoker 上传附件
+func (c *CocClient) CreateExternalCocAttachmentInvoker(request *model.CreateExternalCocAttachmentRequest) *CreateExternalCocAttachmentInvoker {
+	requestDef := GenReqDefForCreateExternalCocAttachment()
+	return &CreateExternalCocAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // HandleCocIncident HandleCocIncident处理事件单
 //
 // HandleCocIncident 处理事件单
@@ -647,6 +710,27 @@ func (c *CocClient) ListCocTicketOperationHistories(request *model.ListCocTicket
 func (c *CocClient) ListCocTicketOperationHistoriesInvoker(request *model.ListCocTicketOperationHistoriesRequest) *ListCocTicketOperationHistoriesInvoker {
 	requestDef := GenReqDefForListCocTicketOperationHistories()
 	return &ListCocTicketOperationHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIncidentSimpleTickets 查询简易版事件单列表
+//
+// 该接口可分页查询到事件单列表信息，分页参数为limit与offset。该接口不支持对事件单进行除分页参数外的条件过滤，且返回的列表字段相对简单，只有事件单标题、事件单单号、描述信息、工单状态、事件级别、企业项目ID、事件单来源、创建人及责任人。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListIncidentSimpleTickets(request *model.ListIncidentSimpleTicketsRequest) (*model.ListIncidentSimpleTicketsResponse, error) {
+	requestDef := GenReqDefForListIncidentSimpleTickets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIncidentSimpleTicketsResponse), nil
+	}
+}
+
+// ListIncidentSimpleTicketsInvoker 查询简易版事件单列表
+func (c *CocClient) ListIncidentSimpleTicketsInvoker(request *model.ListIncidentSimpleTicketsRequest) *ListIncidentSimpleTicketsInvoker {
+	requestDef := GenReqDefForListIncidentSimpleTickets()
+	return &ListIncidentSimpleTicketsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowCocIncidentDetail GetCocIncidentDetail 获取事件单详细
@@ -712,6 +796,48 @@ func (c *CocClient) ShowCocIssuesDetailInvoker(request *model.ShowCocIssuesDetai
 	return &ShowCocIssuesDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAttachment 上传附件
+//
+// 上传附件，创建工单（事件单、变更单、问题单）的场景下，如需上传附件，需要先调用该接口将文件上传到obs。上传成功时，该接口将返回文档唯一id。支持文件类型：.jpg,.png,.docx,.txt,.pdf，且文本大小不超10M。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CreateAttachment(request *model.CreateAttachmentRequest) (*model.CreateAttachmentResponse, error) {
+	requestDef := GenReqDefForCreateAttachment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAttachmentResponse), nil
+	}
+}
+
+// CreateAttachmentInvoker 上传附件
+func (c *CocClient) CreateAttachmentInvoker(request *model.CreateAttachmentRequest) *CreateAttachmentInvoker {
+	requestDef := GenReqDefForCreateAttachment()
+	return &CreateAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTicket 新建工单
+//
+// 创建变更单或问题单的接口，通过路径参数ticket_type区分需要创建的工单类型。ticket_type为change表示要创建变更单，ticket_type为issues_mgmt为创建问题单。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CreateTicket(request *model.CreateTicketRequest) (*model.CreateTicketResponse, error) {
+	requestDef := GenReqDefForCreateTicket()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTicketResponse), nil
+	}
+}
+
+// CreateTicketInvoker 新建工单
+func (c *CocClient) CreateTicketInvoker(request *model.CreateTicketRequest) *CreateTicketInvoker {
+	requestDef := GenReqDefForCreateTicket()
+	return &CreateTicketInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAuthorizableTicketsExternal 查询COC可授权单列表
 //
 // 查询COC可授权单列表（变更单号、事件单号、warroom和告警）
@@ -731,27 +857,6 @@ func (c *CocClient) ListAuthorizableTicketsExternal(request *model.ListAuthoriza
 func (c *CocClient) ListAuthorizableTicketsExternalInvoker(request *model.ListAuthorizableTicketsExternalRequest) *ListAuthorizableTicketsExternalInvoker {
 	requestDef := GenReqDefForListAuthorizableTicketsExternal()
 	return &ListAuthorizableTicketsExternalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListMultiCloudResources 查询用户在云厂商中的资源
-//
-// 查询用户在云厂商中的资源
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CocClient) ListMultiCloudResources(request *model.ListMultiCloudResourcesRequest) (*model.ListMultiCloudResourcesResponse, error) {
-	requestDef := GenReqDefForListMultiCloudResources()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListMultiCloudResourcesResponse), nil
-	}
-}
-
-// ListMultiCloudResourcesInvoker 查询用户在云厂商中的资源
-func (c *CocClient) ListMultiCloudResourcesInvoker(request *model.ListMultiCloudResourcesRequest) *ListMultiCloudResourcesInvoker {
-	requestDef := GenReqDefForListMultiCloudResources()
-	return &ListMultiCloudResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CountMultiResources 查询用户各种资源总数

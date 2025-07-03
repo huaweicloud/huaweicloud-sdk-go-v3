@@ -32,6 +32,9 @@ type ShowShareFeatureGatesResponse struct {
 
 	// 是否支持流水线服务
 	EnablePipeline *bool `json:"enable_pipeline,omitempty"`
+
+	// 是否支持list v3接口
+	EnableListV3   *bool `json:"enable_list_v3,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }
 

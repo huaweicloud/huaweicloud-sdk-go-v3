@@ -12,10 +12,10 @@ type UpdateLogSettingReq struct {
 	Agency string `json:"agency"`
 
 	// 日志在OBS桶中的备份路径。
-	LogBasePath string `json:"logBasePath"`
+	LogBasePath string `json:"log_base_path"`
 
 	// 用于存储日志的OBS桶的桶名。
-	LogBucket string `json:"logBucket"`
+	LogBucket string `json:"log_bucket"`
 }
 
 func (o UpdateLogSettingReq) String() string {

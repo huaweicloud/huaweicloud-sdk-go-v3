@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// RecycleBinPolicy 回收站的回收配置。
 type RecycleBinPolicy struct {
 
 	// 允许进入回收站的最小创建时间，不足此时长则删除时不满足进入回收站的条件。

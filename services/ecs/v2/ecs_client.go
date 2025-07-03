@@ -19,6 +19,26 @@ func EcsClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// AcceptScheduledEvent 接受并授权执行计划事件操作
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) AcceptScheduledEvent(request *model.AcceptScheduledEventRequest) (*model.AcceptScheduledEventResponse, error) {
+	requestDef := GenReqDefForAcceptScheduledEvent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AcceptScheduledEventResponse), nil
+	}
+}
+
+// AcceptScheduledEventInvoker 接受并授权执行计划事件操作
+func (c *EcsClient) AcceptScheduledEventInvoker(request *model.AcceptScheduledEventRequest) *AcceptScheduledEventInvoker {
+	requestDef := GenReqDefForAcceptScheduledEvent()
+	return &AcceptScheduledEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddServerGroupMember 添加云服务器组成员
 //
 // 将云服务器加入云服务器组。添加成功后，如果该云服务器组是反亲和性策略的，则该云服务器与云服务器组中的其他成员尽量分散地创建在不同主机上。如果该云服务器时故障域类型的，则该云服务器会拥有故障域属性。
@@ -512,6 +532,27 @@ func (c *EcsClient) CreateServersInvoker(request *model.CreateServersRequest) *C
 	return &CreateServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteLaunchTemplates 删除模板
+//
+// 删除启动模板。删除一个启动模板。并同时删除模板下所有的版本。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) DeleteLaunchTemplates(request *model.DeleteLaunchTemplatesRequest) (*model.DeleteLaunchTemplatesResponse, error) {
+	requestDef := GenReqDefForDeleteLaunchTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteLaunchTemplatesResponse), nil
+	}
+}
+
+// DeleteLaunchTemplatesInvoker 删除模板
+func (c *EcsClient) DeleteLaunchTemplatesInvoker(request *model.DeleteLaunchTemplatesRequest) *DeleteLaunchTemplatesInvoker {
+	requestDef := GenReqDefForDeleteLaunchTemplates()
+	return &DeleteLaunchTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteRecycleBinServer 删除回收站中虚拟机
 //
 //
@@ -746,6 +787,27 @@ func (c *EcsClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListF
 func (c *EcsClient) ListFlavorsInvoker(request *model.ListFlavorsRequest) *ListFlavorsInvoker {
 	requestDef := GenReqDefForListFlavors()
 	return &ListFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLaunchTemplateVersions 查询模板版本列表
+//
+// 根据用户请求条件从数据库筛选、查询启动模板的版本相关信息，支持按照image_id和flavor_id进行过滤。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ListLaunchTemplateVersions(request *model.ListLaunchTemplateVersionsRequest) (*model.ListLaunchTemplateVersionsResponse, error) {
+	requestDef := GenReqDefForListLaunchTemplateVersions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLaunchTemplateVersionsResponse), nil
+	}
+}
+
+// ListLaunchTemplateVersionsInvoker 查询模板版本列表
+func (c *EcsClient) ListLaunchTemplateVersionsInvoker(request *model.ListLaunchTemplateVersionsRequest) *ListLaunchTemplateVersionsInvoker {
+	requestDef := GenReqDefForListLaunchTemplateVersions()
+	return &ListLaunchTemplateVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListRecycleBinServers 查询回收站中虚拟机列表
@@ -985,6 +1047,27 @@ func (c *EcsClient) ListServersDetails(request *model.ListServersDetailsRequest)
 func (c *EcsClient) ListServersDetailsInvoker(request *model.ListServersDetailsRequest) *ListServersDetailsInvoker {
 	requestDef := GenReqDefForListServersDetails()
 	return &ListServersDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTemplates 查询模板列表
+//
+// 根据用户请求条件从数据库筛选、查询启动模板相关信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ListTemplates(request *model.ListTemplatesRequest) (*model.ListTemplatesResponse, error) {
+	requestDef := GenReqDefForListTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTemplatesResponse), nil
+	}
+}
+
+// ListTemplatesInvoker 查询模板列表
+func (c *EcsClient) ListTemplatesInvoker(request *model.ListTemplatesRequest) *ListTemplatesInvoker {
+	requestDef := GenReqDefForListTemplates()
+	return &ListTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // MigrateServer 冷迁移云服务器
@@ -1228,6 +1311,27 @@ func (c *EcsClient) NovaListServerSecurityGroups(request *model.NovaListServerSe
 func (c *EcsClient) NovaListServerSecurityGroupsInvoker(request *model.NovaListServerSecurityGroupsRequest) *NovaListServerSecurityGroupsInvoker {
 	requestDef := GenReqDefForNovaListServerSecurityGroups()
 	return &NovaListServerSecurityGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NovaListServers 查询云服务器列表
+//
+// 查询云服务器信息列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) NovaListServers(request *model.NovaListServersRequest) (*model.NovaListServersResponse, error) {
+	requestDef := GenReqDefForNovaListServers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NovaListServersResponse), nil
+	}
+}
+
+// NovaListServersInvoker 查询云服务器列表
+func (c *EcsClient) NovaListServersInvoker(request *model.NovaListServersRequest) *NovaListServersInvoker {
+	requestDef := GenReqDefForNovaListServers()
+	return &NovaListServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // NovaListServersDetails 查询云服务器详情列表
@@ -1500,6 +1604,27 @@ func (c *EcsClient) RevertRecycleBinServerInvoker(request *model.RevertRecycleBi
 	return &RevertRecycleBinServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowMetadataOptions 查询云服务器元数据配置
+//
+// 查询云服务器元数据配置，通过本接口，您可以查询指定云服务器的元数据配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ShowMetadataOptions(request *model.ShowMetadataOptionsRequest) (*model.ShowMetadataOptionsResponse, error) {
+	requestDef := GenReqDefForShowMetadataOptions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMetadataOptionsResponse), nil
+	}
+}
+
+// ShowMetadataOptionsInvoker 查询云服务器元数据配置
+func (c *EcsClient) ShowMetadataOptionsInvoker(request *model.ShowMetadataOptionsRequest) *ShowMetadataOptionsInvoker {
+	requestDef := GenReqDefForShowMetadataOptions()
+	return &ShowMetadataOptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowRecycleBin 查询回收站配置
 //
 // 查询回收站配置
@@ -1630,27 +1755,6 @@ func (c *EcsClient) ShowServerLimitsInvoker(request *model.ShowServerLimitsReque
 	return &ShowServerLimitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowServerMetadataOptions 查询云服务器元数据配置
-//
-// 查询云服务器元数据配置，通过本接口，您可以查询指定云服务器的元数据配置。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *EcsClient) ShowServerMetadataOptions(request *model.ShowServerMetadataOptionsRequest) (*model.ShowServerMetadataOptionsResponse, error) {
-	requestDef := GenReqDefForShowServerMetadataOptions()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowServerMetadataOptionsResponse), nil
-	}
-}
-
-// ShowServerMetadataOptionsInvoker 查询云服务器元数据配置
-func (c *EcsClient) ShowServerMetadataOptionsInvoker(request *model.ShowServerMetadataOptionsRequest) *ShowServerMetadataOptionsInvoker {
-	requestDef := GenReqDefForShowServerMetadataOptions()
-	return &ShowServerMetadataOptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowServerPassword 云服务器获取密码(企业项目)
 //
 // 当通过支持Cloudbase-init功能的镜像创建Windows云服务器时，获取云服务器初始安装时系统生成的管理员帐户（Administrator帐户或Cloudbase-init设置的帐户）随机密码。
@@ -1716,6 +1820,27 @@ func (c *EcsClient) ShowServerTagsInvoker(request *model.ShowServerTagsRequest) 
 	return &ShowServerTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateMetadataOptions 更新云服务器元数据配置
+//
+// 更新云服务器元数据配置，通过本接口，您可以选择启用或关闭IMDS服务，也可以选择IMDS服务的版本。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) UpdateMetadataOptions(request *model.UpdateMetadataOptionsRequest) (*model.UpdateMetadataOptionsResponse, error) {
+	requestDef := GenReqDefForUpdateMetadataOptions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateMetadataOptionsResponse), nil
+	}
+}
+
+// UpdateMetadataOptionsInvoker 更新云服务器元数据配置
+func (c *EcsClient) UpdateMetadataOptionsInvoker(request *model.UpdateMetadataOptionsRequest) *UpdateMetadataOptionsInvoker {
+	requestDef := GenReqDefForUpdateMetadataOptions()
+	return &UpdateMetadataOptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateRecycleBin 更新回收站配置
 //
 // 更新回收站属性信息
@@ -1756,6 +1881,26 @@ func (c *EcsClient) UpdateRecycleBinPolicy(request *model.UpdateRecycleBinPolicy
 func (c *EcsClient) UpdateRecycleBinPolicyInvoker(request *model.UpdateRecycleBinPolicyRequest) *UpdateRecycleBinPolicyInvoker {
 	requestDef := GenReqDefForUpdateRecycleBinPolicy()
 	return &UpdateRecycleBinPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateScheduledEvent 更新计划事件
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) UpdateScheduledEvent(request *model.UpdateScheduledEventRequest) (*model.UpdateScheduledEventResponse, error) {
+	requestDef := GenReqDefForUpdateScheduledEvent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateScheduledEventResponse), nil
+	}
+}
+
+// UpdateScheduledEventInvoker 更新计划事件
+func (c *EcsClient) UpdateScheduledEventInvoker(request *model.UpdateScheduledEventRequest) *UpdateScheduledEventInvoker {
+	requestDef := GenReqDefForUpdateScheduledEvent()
+	return &UpdateScheduledEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateServer 修改云服务器
@@ -1869,27 +2014,6 @@ func (c *EcsClient) UpdateServerMetadata(request *model.UpdateServerMetadataRequ
 func (c *EcsClient) UpdateServerMetadataInvoker(request *model.UpdateServerMetadataRequest) *UpdateServerMetadataInvoker {
 	requestDef := GenReqDefForUpdateServerMetadata()
 	return &UpdateServerMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateServerMetadataOptions 更新云服务器元数据配置
-//
-// 更新云服务器元数据配置，通过本接口，您可以选择启用或关闭IMDS服务，也可以选择IMDS服务的版本。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *EcsClient) UpdateServerMetadataOptions(request *model.UpdateServerMetadataOptionsRequest) (*model.UpdateServerMetadataOptionsResponse, error) {
-	requestDef := GenReqDefForUpdateServerMetadataOptions()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateServerMetadataOptionsResponse), nil
-	}
-}
-
-// UpdateServerMetadataOptionsInvoker 更新云服务器元数据配置
-func (c *EcsClient) UpdateServerMetadataOptionsInvoker(request *model.UpdateServerMetadataOptionsRequest) *UpdateServerMetadataOptionsInvoker {
-	requestDef := GenReqDefForUpdateServerMetadataOptions()
-	return &UpdateServerMetadataOptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // NovaListVersions 查询API版本信息列表

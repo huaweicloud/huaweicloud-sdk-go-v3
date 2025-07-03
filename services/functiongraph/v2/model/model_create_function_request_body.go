@@ -110,6 +110,12 @@ type CreateFunctionRequestBody struct {
 
 	// 用于用户代码加密的kms主秘钥ID。
 	CodeEncryptKmsKeyId *string `json:"code_encrypt_kms_key_id,omitempty"`
+
+	// vpc中配置的内网域名。在函数配置调用DNS服务的接口解析内网域名时，则函数必须具备读取DNS资源权限的委托。
+	DomainNames *string `json:"domain_names,omitempty"`
+
+	// 函数标签。
+	Tags *string `json:"tags,omitempty"`
 }
 
 func (o CreateFunctionRequestBody) String() string {

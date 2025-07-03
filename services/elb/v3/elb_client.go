@@ -1497,6 +1497,27 @@ func (c *ElbClient) ShowLoadBalancerInvoker(request *model.ShowLoadBalancerReque
 	return &ShowLoadBalancerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowLoadBalancerPorts 查询负载均衡器占用的port列表
+//
+// 查询负载均衡器内部转发占用的port列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) ShowLoadBalancerPorts(request *model.ShowLoadBalancerPortsRequest) (*model.ShowLoadBalancerPortsResponse, error) {
+	requestDef := GenReqDefForShowLoadBalancerPorts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLoadBalancerPortsResponse), nil
+	}
+}
+
+// ShowLoadBalancerPortsInvoker 查询负载均衡器占用的port列表
+func (c *ElbClient) ShowLoadBalancerPortsInvoker(request *model.ShowLoadBalancerPortsRequest) *ShowLoadBalancerPortsInvoker {
+	requestDef := GenReqDefForShowLoadBalancerPorts()
+	return &ShowLoadBalancerPortsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowLoadBalancerStatus 查询负载均衡器状态树
 //
 // 查询负载均衡器状态树，包括负载均衡器及其关联的子资源的状态信息。

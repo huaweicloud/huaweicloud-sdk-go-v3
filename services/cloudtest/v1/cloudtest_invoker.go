@@ -1221,6 +1221,22 @@ func (i *SaveTaskSettingInvoker) Invoke() (*model.SaveTaskSettingResponse, error
 	}
 }
 
+type SetTaskResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetTaskResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetTaskResultInvoker) Invoke() (*model.SetTaskResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetTaskResultResponse), nil
+	}
+}
+
 type ShowAllConfigValueByTypeAndKeyInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -341,22 +341,6 @@ func (i *ShowBaremetalServerInterfaceAttachmentsInvoker) Invoke() (*model.ShowBa
 	}
 }
 
-type ShowBaremetalServerMetadataOptionsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowBaremetalServerMetadataOptionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowBaremetalServerMetadataOptionsInvoker) Invoke() (*model.ShowBaremetalServerMetadataOptionsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowBaremetalServerMetadataOptionsResponse), nil
-	}
-}
-
 type ShowBaremetalServerTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -386,6 +370,22 @@ func (i *ShowBaremetalServerVolumeInfoInvoker) Invoke() (*model.ShowBaremetalSer
 		return nil, err
 	} else {
 		return result.(*model.ShowBaremetalServerVolumeInfoResponse), nil
+	}
+}
+
+type ShowMetadataOptionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMetadataOptionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowMetadataOptionsInvoker) Invoke() (*model.ShowMetadataOptionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMetadataOptionsResponse), nil
 	}
 }
 
@@ -485,19 +485,19 @@ func (i *UpdateBaremetalServerMetadataInvoker) Invoke() (*model.UpdateBaremetalS
 	}
 }
 
-type UpdateBaremetalServerMetadataOptionsInvoker struct {
+type UpdateMetadataOptionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *UpdateBaremetalServerMetadataOptionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *UpdateMetadataOptionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *UpdateBaremetalServerMetadataOptionsInvoker) Invoke() (*model.UpdateBaremetalServerMetadataOptionsResponse, error) {
+func (i *UpdateMetadataOptionsInvoker) Invoke() (*model.UpdateMetadataOptionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.UpdateBaremetalServerMetadataOptionsResponse), nil
+		return result.(*model.UpdateMetadataOptionsResponse), nil
 	}
 }
 

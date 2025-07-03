@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// TrafficMirrorConfig 参数解释：流量镜像的配置
 type TrafficMirrorConfig struct {
 
 	// 流量镜像的目的后端服务器组ID。

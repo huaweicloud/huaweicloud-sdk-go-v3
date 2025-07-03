@@ -17,7 +17,7 @@ type CreateResourceGroupRequestBody struct {
 	// 资源分组归属企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,NAME（实例名称）,不传为手动添加
+	// 资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,NAME（实例名称）,COMB（组合匹配）,Manual（手动添加）
 	Type *string `json:"type,omitempty"`
 
 	// 标签动态匹配时的关联标签,type为TAG时必传

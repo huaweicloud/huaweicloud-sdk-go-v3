@@ -12,7 +12,7 @@ type UpdateVpcepConnectionReq struct {
 	Action string `json:"action"`
 
 	// 终端节点ID列表。
-	EndpointIdList []string `json:"endpointIdList"`
+	EndpointIdList []string `json:"endpoint_id_list"`
 }
 
 func (o UpdateVpcepConnectionReq) String() string {

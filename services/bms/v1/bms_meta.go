@@ -430,22 +430,6 @@ func GenReqDefForShowBaremetalServerInterfaceAttachments() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowBaremetalServerMetadataOptions() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/baremetalservers/{server_id}/metadata-options").
-		WithResponse(new(model.ShowBaremetalServerMetadataOptionsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServerId").
-		WithJsonTag("server_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForShowBaremetalServerTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -467,6 +451,22 @@ func GenReqDefForShowBaremetalServerVolumeInfo() *def.HttpRequestDef {
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/baremetalservers/{server_id}/os-volume_attachments").
 		WithResponse(new(model.ShowBaremetalServerVolumeInfoResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ServerId").
+		WithJsonTag("server_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowMetadataOptions() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/baremetalservers/{server_id}/metadata-options").
+		WithResponse(new(model.ShowMetadataOptionsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -585,11 +585,11 @@ func GenReqDefForUpdateBaremetalServerMetadata() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUpdateBaremetalServerMetadataOptions() *def.HttpRequestDef {
+func GenReqDefForUpdateMetadataOptions() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1/{project_id}/baremetalservers/{server_id}/metadata-options").
-		WithResponse(new(model.UpdateBaremetalServerMetadataOptionsResponse)).
+		WithResponse(new(model.UpdateMetadataOptionsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

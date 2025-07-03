@@ -21,7 +21,7 @@ type ListRepositoryTagsRequest struct {
 	// 镜像仓库名称
 	Repository string `json:"repository"`
 
-	// 返回条数。注意：offset和limit参数需要配套使用。
+	// 返回条数,默认返回100条，最多返回1000条数据。注意：offset和limit参数需要配套使用。
 	Limit *string `json:"limit,omitempty"`
 
 	// 起始索引。注意：offset和limit参数需要配套使用。

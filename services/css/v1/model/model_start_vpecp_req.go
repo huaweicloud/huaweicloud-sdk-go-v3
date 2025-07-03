@@ -9,7 +9,7 @@ import (
 type StartVpecpReq struct {
 
 	// 是否开启内网域名。 - true：开启。 - false：不开启。
-	EndpointWithDnsName *bool `json:"endpointWithDnsName,omitempty"`
+	EndpointWithDnsName *bool `json:"endpoint_with_dns_name,omitempty"`
 }
 
 func (o StartVpecpReq) String() string {

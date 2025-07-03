@@ -10,7 +10,7 @@ import (
 type ListInstancesRequest struct {
 
 	// 云堡垒机实例ID。（非必传，需要查询单个实例详情时传入）
-	InstanceId float32 `json:"instance_id,omitempty"`
+	InstanceId *int64 `json:"instance_id,omitempty"`
 }
 
 func (o ListInstancesRequest) String() string {

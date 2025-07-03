@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// RecycleBinResponseBody 回收站响应体。
 type RecycleBinResponseBody struct {
 
 	// 参数解释：项目ID。

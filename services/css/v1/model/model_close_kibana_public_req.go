@@ -9,9 +9,9 @@ import (
 type CloseKibanaPublicReq struct {
 
 	// 带宽。单位：Mbit/s
-	EipSize *int32 `json:"eipSize,omitempty"`
+	EipSize *int32 `json:"eip_size,omitempty"`
 
-	ElbWhiteList *StartKibanaPublicReqElbWhitelist `json:"elbWhiteList,omitempty"`
+	ElbWhiteList *StartKibanaPublicReqElbWhitelist `json:"elb_white_list,omitempty"`
 }
 
 func (o CloseKibanaPublicReq) String() string {

@@ -41,6 +41,8 @@ type CreateLoadbalancerReq struct {
 
 	// 设置保护的原因 >仅当protection_status为consoleProtection时有效。
 	ProtectionReason *string `json:"protection_reason,omitempty"`
+
+	PrepaidOptions *PrepaidCreateOption `json:"prepaid_options,omitempty"`
 }
 
 func (o CreateLoadbalancerReq) String() string {

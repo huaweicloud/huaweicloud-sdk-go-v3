@@ -1093,6 +1093,22 @@ func (i *ShowLoadBalancerInvoker) Invoke() (*model.ShowLoadBalancerResponse, err
 	}
 }
 
+type ShowLoadBalancerPortsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLoadBalancerPortsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowLoadBalancerPortsInvoker) Invoke() (*model.ShowLoadBalancerPortsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLoadBalancerPortsResponse), nil
+	}
+}
+
 type ShowLoadBalancerStatusInvoker struct {
 	*invoker.BaseInvoker
 }

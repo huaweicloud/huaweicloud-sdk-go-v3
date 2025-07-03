@@ -788,6 +788,35 @@ func GenReqDefForDeleteNodeEncryptdatas() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForDeletePod() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v3/{project_id}/edgemgr/deployments/{deployment_id}/pods/{pod_name}").
+		WithResponse(new(model.DeletePodResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DeploymentId").
+		WithJsonTag("deployment_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PodName").
+		WithJsonTag("pod_name").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IefInstanceId").
+		WithJsonTag("ief-instance-id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForDeleteProduct() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).

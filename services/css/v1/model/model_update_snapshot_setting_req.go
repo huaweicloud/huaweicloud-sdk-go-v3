@@ -15,7 +15,7 @@ type UpdateSnapshotSettingReq struct {
 	Agency string `json:"agency"`
 
 	// 快照在OBS桶中的存放路径。
-	BasePath string `json:"basePath"`
+	BasePath string `json:"base_path"`
 }
 
 func (o UpdateSnapshotSettingReq) String() string {

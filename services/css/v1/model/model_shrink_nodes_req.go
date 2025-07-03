@@ -12,7 +12,7 @@ type ShrinkNodesReq struct {
 	MigrateData *string `json:"migrate_data,omitempty"`
 
 	// 需要缩容的节点ID。  通过[查询集群详情](ShowClusterDetail.xml)获取instances中的id属性。
-	ShrinkNodes []string `json:"shrinkNodes"`
+	ShrinkNodes []string `json:"shrink_nodes"`
 }
 
 func (o ShrinkNodesReq) String() string {

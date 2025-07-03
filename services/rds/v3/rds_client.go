@@ -271,6 +271,27 @@ func (c *RdsClient) ChangeOpsWindowInvoker(request *model.ChangeOpsWindowRequest
 	return &ChangeOpsWindowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckInstanceForUpgrade 大版本升级预检查
+//
+// 提供mysql5.7升级mysql8.0预检查接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) CheckInstanceForUpgrade(request *model.CheckInstanceForUpgradeRequest) (*model.CheckInstanceForUpgradeResponse, error) {
+	requestDef := GenReqDefForCheckInstanceForUpgrade()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckInstanceForUpgradeResponse), nil
+	}
+}
+
+// CheckInstanceForUpgradeInvoker 大版本升级预检查
+func (c *RdsClient) CheckInstanceForUpgradeInvoker(request *model.CheckInstanceForUpgradeRequest) *CheckInstanceForUpgradeInvoker {
+	requestDef := GenReqDefForCheckInstanceForUpgrade()
+	return &CheckInstanceForUpgradeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CopyConfiguration 复制参数模板
 //
 // 复制参数模板
@@ -2569,6 +2590,27 @@ func (c *RdsClient) ShowOffSiteBackupPolicyInvoker(request *model.ShowOffSiteBac
 	return &ShowOffSiteBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowPrecheckResult 获取mysql5.7升级mysql8.0预检查结果
+//
+// 获取mysql5.7升级mysql8.0预检查结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowPrecheckResult(request *model.ShowPrecheckResultRequest) (*model.ShowPrecheckResultResponse, error) {
+	requestDef := GenReqDefForShowPrecheckResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPrecheckResultResponse), nil
+	}
+}
+
+// ShowPrecheckResultInvoker 获取mysql5.7升级mysql8.0预检查结果
+func (c *RdsClient) ShowPrecheckResultInvoker(request *model.ShowPrecheckResultRequest) *ShowPrecheckResultInvoker {
+	requestDef := GenReqDefForShowPrecheckResult()
+	return &ShowPrecheckResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowQuotas 查询配额
 //
 // 查询当前项目下资源配额情况。
@@ -3323,6 +3365,27 @@ func (c *RdsClient) UpgradeDbVersionNew(request *model.UpgradeDbVersionNewReques
 func (c *RdsClient) UpgradeDbVersionNewInvoker(request *model.UpgradeDbVersionNewRequest) *UpgradeDbVersionNewInvoker {
 	requestDef := GenReqDefForUpgradeDbVersionNew()
 	return &UpgradeDbVersionNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpgradeLargeVersion MySQL大版本升级
+//
+// 提供mysql5.7升级mysql8.0的下发接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) UpgradeLargeVersion(request *model.UpgradeLargeVersionRequest) (*model.UpgradeLargeVersionResponse, error) {
+	requestDef := GenReqDefForUpgradeLargeVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeLargeVersionResponse), nil
+	}
+}
+
+// UpgradeLargeVersionInvoker MySQL大版本升级
+func (c *RdsClient) UpgradeLargeVersionInvoker(request *model.UpgradeLargeVersionRequest) *UpgradeLargeVersionInvoker {
+	requestDef := GenReqDefForUpgradeLargeVersion()
+	return &UpgradeLargeVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListApiVersion 查询API版本列表

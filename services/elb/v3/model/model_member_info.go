@@ -48,10 +48,10 @@ type MemberInfo struct {
 	// 关联的ECS ID，为空表示后端服务器未关联到ECS。  不支持该字段，请勿使用。
 	DeviceId *string `json:"device_id,omitempty"`
 
-	// 后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值： - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
+	// 后端服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值： - INITIAL：初始化中，表示负载均衡实例配置了健康检查，但查不到数据。 - ONLINE：后端服务器正常。 - NO_MONITOR：后端服务器所在的服务器组没有健康检查器。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。
 	OperatingStatus string `json:"operating_status"`
 
-	// 后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
+	// 后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
 	Status []MemberStatus `json:"status"`
 
 	// 所属负载均衡器ID。  不支持该字段，请勿使用。

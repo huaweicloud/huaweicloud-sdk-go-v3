@@ -24,7 +24,7 @@ type SetRdsBackupCnfReq struct {
 	Enable string `json:"enable"`
 
 	// 表示关闭自动创建快照策略时，是否需要清除所有自动创建的快照。 默认为“false”，表示不会删除之前已自动创建的快照。 设置为true，表示在关闭自动创建快照策略的同时，删除所有已创建的快照。
-	DeleteAuto *string `json:"deleteAuto,omitempty"`
+	DeleteAuto *string `json:"delete_auto,omitempty"`
 }
 
 func (o SetRdsBackupCnfReq) String() string {

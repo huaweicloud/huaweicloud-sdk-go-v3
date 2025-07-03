@@ -13,9 +13,6 @@ type BatchAddOrDeleteTagOnClusterReq struct {
 
 	// 标签列表。
 	Tags []Tag `json:"tags"`
-
-	// 系统标签列表。 - key固定为：_sys_enterprise_project_id。 - value是UUID或0,value为0表示默认企业项目。
-	SysTags *[]SysTags `json:"sysTags,omitempty"`
 }
 
 func (o BatchAddOrDeleteTagOnClusterReq) String() string {

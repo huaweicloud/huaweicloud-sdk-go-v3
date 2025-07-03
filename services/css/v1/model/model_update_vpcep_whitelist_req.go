@@ -9,7 +9,7 @@ import (
 type UpdateVpcepWhitelistReq struct {
 
 	// 白名单(用户的账号ID)。
-	VpcPermissions []string `json:"vpcPermissions"`
+	VpcPermissions []string `json:"vpc_permissions"`
 }
 
 func (o UpdateVpcepWhitelistReq) String() string {

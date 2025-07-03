@@ -9,7 +9,7 @@ import (
 type UpdatePublicKibanaWhitelistReq struct {
 
 	// 允许kibana公网访问的白名单ip或网段，以逗号隔开，不可重复。
-	WhiteList string `json:"whiteList"`
+	WhiteList string `json:"white_list"`
 }
 
 func (o UpdatePublicKibanaWhitelistReq) String() string {

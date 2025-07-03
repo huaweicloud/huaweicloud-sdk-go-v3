@@ -20,6 +20,9 @@ type PolicyStatement struct {
 
 	// obs对象
 	Resource []string `json:"Resource"`
+
+	// statement生效的条件
+	Condition *interface{} `json:"Condition,omitempty"`
 }
 
 func (o PolicyStatement) String() string {

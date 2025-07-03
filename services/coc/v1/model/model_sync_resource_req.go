@@ -8,11 +8,11 @@ import (
 
 type SyncResourceReq struct {
 
-	// 资源提供者
-	Provider string `json:"provider"`
+	// 资源提供者。
+	Provider *string `json:"provider,omitempty"`
 
-	// 资源类型
-	Type string `json:"type"`
+	// 资源类型。
+	Type *string `json:"type,omitempty"`
 }
 
 func (o SyncResourceReq) String() string {
