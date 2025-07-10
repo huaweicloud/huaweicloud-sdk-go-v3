@@ -74,23 +74,11 @@ type Product struct {
 	// 产品状态，normal：正常、sellout：售空、abandon：下线。
 	Status *string `json:"status,omitempty"`
 
-	// 专属主机的子产品。
-	SubProductList *[]string `json:"sub_product_list,omitempty"`
-
 	// 套餐类型。 - ultimate：尊享版 - enterprise：企业版 - general: 通用办公版 - workstation: 云工作站 - dedicated: 专属办公版 - solver: 解算版 - agile: 敏捷办公版
 	PackageType *string `json:"package_type,omitempty"`
 
-	// 套餐下的系列类型。 - 云工作站下分为云工作站D5、云工作站D7 - 专属办公版下分为鲲鹏专属、通用专属、G6a、G6r、G7a
-	SeriesType *string `json:"series_type,omitempty"`
-
 	// 产品名称<语言，各语言对应的产品名>。
 	Name map[string]string `json:"name,omitempty"`
-
-	// 专享主机套餐默认的桌面数。
-	DefaultDesktopNum *int32 `json:"default_desktop_num,omitempty"`
-
-	// 专享主机支持创建的最大桌面数。
-	MaxApplyDesktopNum *int32 `json:"max_apply_desktop_num,omitempty"`
 
 	// 协同方数。该套餐支持的最大协同人数。
 	ShareSpaceSize *int32 `json:"share_space_size,omitempty"`

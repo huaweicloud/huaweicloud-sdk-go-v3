@@ -774,6 +774,27 @@ func (c *RdsClient) ListAuditlogsInvoker(request *model.ListAuditlogsRequest) *L
 	return &ListAuditlogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListBackupTransfers 查询转储任务列表
+//
+// 查询转储任务列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListBackupTransfers(request *model.ListBackupTransfersRequest) (*model.ListBackupTransfersResponse, error) {
+	requestDef := GenReqDefForListBackupTransfers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBackupTransfersResponse), nil
+	}
+}
+
+// ListBackupTransfersInvoker 查询转储任务列表
+func (c *RdsClient) ListBackupTransfersInvoker(request *model.ListBackupTransfersRequest) *ListBackupTransfersInvoker {
+	requestDef := GenReqDefForListBackupTransfers()
+	return &ListBackupTransfersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListBackups 获取备份列表
 //
 // 获取备份列表。
@@ -2254,6 +2275,27 @@ func (c *RdsClient) SetSensitiveSlowLogInvoker(request *model.SetSensitiveSlowLo
 	return &SetSensitiveSlowLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetTransferPolicy 设置自动转储策略
+//
+// 设置自动转储策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) SetTransferPolicy(request *model.SetTransferPolicyRequest) (*model.SetTransferPolicyResponse, error) {
+	requestDef := GenReqDefForSetTransferPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetTransferPolicyResponse), nil
+	}
+}
+
+// SetTransferPolicyInvoker 设置自动转储策略
+func (c *RdsClient) SetTransferPolicyInvoker(request *model.SetTransferPolicyRequest) *SetTransferPolicyInvoker {
+	requestDef := GenReqDefForSetTransferPolicy()
+	return &SetTransferPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowAuditlogDownloadLink 生成审计日志下载链接
 //
 // 生成审计日志下载链接。
@@ -2737,6 +2779,27 @@ func (c *RdsClient) ShowTdeStatusInvoker(request *model.ShowTdeStatusRequest) *S
 	return &ShowTdeStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowTransferPolicy 查询自动转储策略
+//
+// 查询自动转储策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowTransferPolicy(request *model.ShowTransferPolicyRequest) (*model.ShowTransferPolicyResponse, error) {
+	requestDef := GenReqDefForShowTransferPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTransferPolicyResponse), nil
+	}
+}
+
+// ShowTransferPolicyInvoker 查询自动转储策略
+func (c *RdsClient) ShowTransferPolicyInvoker(request *model.ShowTransferPolicyRequest) *ShowTransferPolicyInvoker {
+	requestDef := GenReqDefForShowTransferPolicy()
+	return &ShowTransferPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowUpgradeDbMajorVersionStatus
 //
 // 查询大版本检查状态或升级状态。
@@ -3008,6 +3071,27 @@ func (c *RdsClient) SwitchSsl(request *model.SwitchSslRequest) (*model.SwitchSsl
 func (c *RdsClient) SwitchSslInvoker(request *model.SwitchSslRequest) *SwitchSslInvoker {
 	requestDef := GenReqDefForSwitchSsl()
 	return &SwitchSslInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// TransferBackup 手动转储备份
+//
+// 手动转储备份
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) TransferBackup(request *model.TransferBackupRequest) (*model.TransferBackupResponse, error) {
+	requestDef := GenReqDefForTransferBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.TransferBackupResponse), nil
+	}
+}
+
+// TransferBackupInvoker 手动转储备份
+func (c *RdsClient) TransferBackupInvoker(request *model.TransferBackupRequest) *TransferBackupInvoker {
+	requestDef := GenReqDefForTransferBackup()
+	return &TransferBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UnlockNodeReadonlyStatus 解除节点只读状态接口

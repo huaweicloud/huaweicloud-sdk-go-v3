@@ -9,10 +9,10 @@ import (
 // ListMetricNotifyRecordResponse Response Object
 type ListMetricNotifyRecordResponse struct {
 
-	// 总数
+	// 总数。
 	Count *int32 `json:"count,omitempty"`
 
-	// 通知记录
+	// 通知记录。
 	Items          *[]DesktopMetricNotifyRecord `json:"items,omitempty"`
 	HttpStatusCode int                          `json:"-"`
 }

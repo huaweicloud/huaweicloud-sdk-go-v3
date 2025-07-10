@@ -9,10 +9,10 @@ import (
 // ShowQuotaDetailsResponse Response Object
 type ShowQuotaDetailsResponse struct {
 
-	// 配额资源列表
+	// 配额资源列表。
 	Resources []ResourceNoLimit `json:"resources"`
 
-	// 站点ID
+	// 站点ID。
 	SiteId         *string `json:"site_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

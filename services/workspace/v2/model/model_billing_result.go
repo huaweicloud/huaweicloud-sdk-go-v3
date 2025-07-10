@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// BillingResult 批价基础结果
+// BillingResult 批价基础结果。
 type BillingResult struct {
 }
 

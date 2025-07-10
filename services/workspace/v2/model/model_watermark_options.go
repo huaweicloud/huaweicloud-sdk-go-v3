@@ -14,7 +14,7 @@ type WatermarkOptions struct {
 	// 展示方式。取值为：FIXED：固定位置。RANDOM：随机运动。
 	ShowStyle *WatermarkOptionsShowStyle `json:"show_style,omitempty"`
 
-	// 颜色。格式：RRGGBB。默认：2a2a2a
+	// 颜色。格式：RRGGBB。默认：2a2a2a。
 	Color *string `json:"color,omitempty"`
 
 	// 字体大小。取值范围为[1-200]。默认：30。

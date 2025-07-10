@@ -9,25 +9,25 @@ import (
 // ListAgentsInstallConditionRequest Request Object
 type ListAgentsInstallConditionRequest struct {
 
-	// 企业项目ID
+	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 桌面ID
+	// 桌面ID。
 	DesktopId *string `json:"desktop_id,omitempty"`
 
-	// 桌面名称
+	// 桌面名称。
 	DesktopName *string `json:"desktop_name,omitempty"`
 
-	// 桌面状态
+	// 桌面状态。
 	Status *string `json:"status,omitempty"`
 
-	// ip地址
+	// ip地址。
 	IpAddress *string `json:"ip_address,omitempty"`
 
-	// 插件是否已安装
+	// 插件是否已安装。
 	IsInstalled *bool `json:"is_installed,omitempty"`
 
-	// 桌面池id
+	// 桌面池id。
 	DesktopPoolId *string `json:"desktop_pool_id,omitempty"`
 
 	// 每页显示的数量。

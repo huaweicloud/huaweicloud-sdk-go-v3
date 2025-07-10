@@ -6,19 +6,22 @@ import (
 	"strings"
 )
 
-// NeutronPort 端口详情
+// NeutronPort 端口详情。
 type NeutronPort struct {
 
-	// 端口唯一标识
+	// 端口唯一标识。
 	Id *string `json:"id,omitempty"`
 
-	// 私有ip状态
+	// 私有ip状态。
 	Status *string `json:"status,omitempty"`
 
-	// 端口所属网络的ID
+	// 端口所属网络的ID。
 	NetworkId *string `json:"network_id,omitempty"`
 
-	// 端口IP
+	// 端口所属设备的Id。
+	DeviceId *string `json:"device_id,omitempty"`
+
+	// 端口IP。
 	FixedIps *[]FixedIp `json:"fixed_ips,omitempty"`
 }
 

@@ -12,9 +12,6 @@ type ListProductsRequest struct {
 	// 产品ID。
 	ProductId *string `json:"product_id,omitempty"`
 
-	// 产品flavor_id。
-	FlavorId *string `json:"flavor_id,omitempty"`
-
 	// 可用分区。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
@@ -27,17 +24,8 @@ type ListProductsRequest struct {
 	// 架构类型，当前支持：arm、x86。
 	Architecture *string `json:"architecture,omitempty"`
 
-	// wdh套餐id。
-	DehProductId *string `json:"deh_product_id,omitempty"`
-
-	// 是否为wdh产品。
-	IsDeh *bool `json:"is_deh,omitempty"`
-
 	// 套餐系列。
 	PackageType *string `json:"package_type,omitempty"`
-
-	// 查询套餐的范围(all：查询所有套餐，包括培训版；若为null则不包含培训版套餐）
-	ProductsRange *string `json:"products_range,omitempty"`
 
 	// 每页数量，范围0-100，默认100。
 	Limit *int32 `json:"limit,omitempty"`

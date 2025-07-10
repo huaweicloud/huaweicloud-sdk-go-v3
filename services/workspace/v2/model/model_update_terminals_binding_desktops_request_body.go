@@ -8,16 +8,16 @@ import (
 
 type UpdateTerminalsBindingDesktopsRequestBody struct {
 
-	// 策略id
+	// 策略id。
 	Id string `json:"id"`
 
-	// 终端MAC地址
+	// 终端MAC地址。
 	Mac string `json:"mac"`
 
-	// 虚拟机名称
+	// 虚拟机名称。
 	DesktopName string `json:"desktop_name"`
 
-	// 描述
+	// 描述。
 	Description *string `json:"description,omitempty"`
 }
 

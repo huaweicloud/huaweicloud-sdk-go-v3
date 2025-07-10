@@ -6,25 +6,25 @@ import (
 	"strings"
 )
 
-// InterfacesRequest 接口请求
+// InterfacesRequest 接口请求。
 type InterfacesRequest struct {
 
-	// 方法
+	// 方法。
 	Method *string `json:"method,omitempty"`
 
-	// 请求参数
+	// 请求参数。
 	Params map[string]string `json:"params,omitempty"`
 
-	// 请求头信息
+	// 请求头信息。
 	Headers map[string]string `json:"headers,omitempty"`
 
-	// 请求体
+	// 请求体。
 	Body *string `json:"body,omitempty"`
 
-	// URL
+	// URL。
 	Url *string `json:"url,omitempty"`
 
-	// 配置
+	// 配置。
 	Configs map[string]interface{} `json:"configs,omitempty"`
 }
 

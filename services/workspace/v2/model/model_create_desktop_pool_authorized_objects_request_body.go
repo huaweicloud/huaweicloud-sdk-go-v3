@@ -14,7 +14,7 @@ type CreateDesktopPoolAuthorizedObjectsRequestBody struct {
 	// 要授权的用户/用户组。
 	Objects *[]AuthorizedObjects `json:"objects,omitempty"`
 
-	// 执行动作，ADD：增加授权用户/用户组，REMOVE：移除已授权用户/用户组
+	// 执行动作，ADD：增加授权用户/用户组，REMOVE：移除已授权用户/用户组。
 	Action CreateDesktopPoolAuthorizedObjectsRequestBodyAction `json:"action"`
 }
 

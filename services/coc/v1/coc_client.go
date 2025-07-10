@@ -19,6 +19,111 @@ func CocClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// ClearAlarm 批量清除告警
+//
+// 清除告警
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ClearAlarm(request *model.ClearAlarmRequest) (*model.ClearAlarmResponse, error) {
+	requestDef := GenReqDefForClearAlarm()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ClearAlarmResponse), nil
+	}
+}
+
+// ClearAlarmInvoker 批量清除告警
+func (c *CocClient) ClearAlarmInvoker(request *model.ClearAlarmRequest) *ClearAlarmInvoker {
+	requestDef := GenReqDefForClearAlarm()
+	return &ClearAlarmInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// HandlerAlarm 自动处理设置脚本和runbook
+//
+// 自动处理设置脚本和runbook
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) HandlerAlarm(request *model.HandlerAlarmRequest) (*model.HandlerAlarmResponse, error) {
+	requestDef := GenReqDefForHandlerAlarm()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.HandlerAlarmResponse), nil
+	}
+}
+
+// HandlerAlarmInvoker 自动处理设置脚本和runbook
+func (c *CocClient) HandlerAlarmInvoker(request *model.HandlerAlarmRequest) *HandlerAlarmInvoker {
+	requestDef := GenReqDefForHandlerAlarm()
+	return &HandlerAlarmInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAlarmHandleHistories 查询告警工单历史
+//
+// 查询告警工单历史
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListAlarmHandleHistories(request *model.ListAlarmHandleHistoriesRequest) (*model.ListAlarmHandleHistoriesResponse, error) {
+	requestDef := GenReqDefForListAlarmHandleHistories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAlarmHandleHistoriesResponse), nil
+	}
+}
+
+// ListAlarmHandleHistoriesInvoker 查询告警工单历史
+func (c *CocClient) ListAlarmHandleHistoriesInvoker(request *model.ListAlarmHandleHistoriesRequest) *ListAlarmHandleHistoriesInvoker {
+	requestDef := GenReqDefForListAlarmHandleHistories()
+	return &ListAlarmHandleHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAlarm 查询Alarm
+//
+// Get alarm info by id
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ShowAlarm(request *model.ShowAlarmRequest) (*model.ShowAlarmResponse, error) {
+	requestDef := GenReqDefForShowAlarm()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAlarmResponse), nil
+	}
+}
+
+// ShowAlarmInvoker 查询Alarm
+func (c *CocClient) ShowAlarmInvoker(request *model.ShowAlarmRequest) *ShowAlarmInvoker {
+	requestDef := GenReqDefForShowAlarm()
+	return &ShowAlarmInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// TransferAlarmToIncident 批量告警转事件
+//
+// 批量告警转事件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) TransferAlarmToIncident(request *model.TransferAlarmToIncidentRequest) (*model.TransferAlarmToIncidentResponse, error) {
+	requestDef := GenReqDefForTransferAlarmToIncident()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.TransferAlarmToIncidentResponse), nil
+	}
+}
+
+// TransferAlarmToIncidentInvoker 批量告警转事件
+func (c *CocClient) TransferAlarmToIncidentInvoker(request *model.TransferAlarmToIncidentRequest) *TransferAlarmToIncidentInvoker {
+	requestDef := GenReqDefForTransferAlarmToIncident()
+	return &TransferAlarmToIncidentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchCreateApplicationView 批量创建应用视图
 //
 // 批量创建应用视图
@@ -38,6 +143,27 @@ func (c *CocClient) BatchCreateApplicationView(request *model.BatchCreateApplica
 func (c *CocClient) BatchCreateApplicationViewInvoker(request *model.BatchCreateApplicationViewRequest) *BatchCreateApplicationViewInvoker {
 	requestDef := GenReqDefForBatchCreateApplicationView()
 	return &BatchCreateApplicationViewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateChange UpdateChange 更新变更单
+//
+// UpdateChange 更新变更单
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) UpdateChange(request *model.UpdateChangeRequest) (*model.UpdateChangeResponse, error) {
+	requestDef := GenReqDefForUpdateChange()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateChangeResponse), nil
+	}
+}
+
+// UpdateChangeInvoker UpdateChange 更新变更单
+func (c *CocClient) UpdateChangeInvoker(request *model.UpdateChangeRequest) *UpdateChangeInvoker {
+	requestDef := GenReqDefForUpdateChange()
+	return &UpdateChangeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // HandleIncident HandleIncident 处理事件单
@@ -628,6 +754,153 @@ func (c *CocClient) OperateExecutionInvoker(request *model.OperateExecutionReque
 	return &OperateExecutionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSubTickets 搜索变更工单子单
+//
+// 搜索变更工单子单。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListSubTickets(request *model.ListSubTicketsRequest) (*model.ListSubTicketsResponse, error) {
+	requestDef := GenReqDefForListSubTickets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSubTicketsResponse), nil
+	}
+}
+
+// ListSubTicketsInvoker 搜索变更工单子单
+func (c *CocClient) ListSubTicketsInvoker(request *model.ListSubTicketsRequest) *ListSubTicketsInvoker {
+	requestDef := GenReqDefForListSubTickets()
+	return &ListSubTicketsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteTicketAction 工单操作
+//
+// 变更单审批、撤销以及问题单的所有操作均通过此接口完成。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ExecuteTicketAction(request *model.ExecuteTicketActionRequest) (*model.ExecuteTicketActionResponse, error) {
+	requestDef := GenReqDefForExecuteTicketAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteTicketActionResponse), nil
+	}
+}
+
+// ExecuteTicketActionInvoker 工单操作
+func (c *CocClient) ExecuteTicketActionInvoker(request *model.ExecuteTicketActionRequest) *ExecuteTicketActionInvoker {
+	requestDef := GenReqDefForExecuteTicketAction()
+	return &ExecuteTicketActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTicketOperationHistories 搜索工单历史
+//
+// List Histories
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListTicketOperationHistories(request *model.ListTicketOperationHistoriesRequest) (*model.ListTicketOperationHistoriesResponse, error) {
+	requestDef := GenReqDefForListTicketOperationHistories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTicketOperationHistoriesResponse), nil
+	}
+}
+
+// ListTicketOperationHistoriesInvoker 搜索工单历史
+func (c *CocClient) ListTicketOperationHistoriesInvoker(request *model.ListTicketOperationHistoriesRequest) *ListTicketOperationHistoriesInvoker {
+	requestDef := GenReqDefForListTicketOperationHistories()
+	return &ListTicketOperationHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTickets 搜索工单
+//
+// List ticket
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListTickets(request *model.ListTicketsRequest) (*model.ListTicketsResponse, error) {
+	requestDef := GenReqDefForListTickets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTicketsResponse), nil
+	}
+}
+
+// ListTicketsInvoker 搜索工单
+func (c *CocClient) ListTicketsInvoker(request *model.ListTicketsRequest) *ListTicketsInvoker {
+	requestDef := GenReqDefForListTickets()
+	return &ListTicketsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTicketInfo 查询Ticket
+//
+// Get Ticket info by id
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ShowTicketInfo(request *model.ShowTicketInfoRequest) (*model.ShowTicketInfoResponse, error) {
+	requestDef := GenReqDefForShowTicketInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTicketInfoResponse), nil
+	}
+}
+
+// ShowTicketInfoInvoker 查询Ticket
+func (c *CocClient) ShowTicketInfoInvoker(request *model.ShowTicketInfoRequest) *ShowTicketInfoInvoker {
+	requestDef := GenReqDefForShowTicketInfo()
+	return &ShowTicketInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTicketInfo 删除变更单
+//
+// 删除变更单，当变更单为撤销状态下，变更单可进行删除操作。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) DeleteTicketInfo(request *model.DeleteTicketInfoRequest) (*model.DeleteTicketInfoResponse, error) {
+	requestDef := GenReqDefForDeleteTicketInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTicketInfoResponse), nil
+	}
+}
+
+// DeleteTicketInfoInvoker 删除变更单
+func (c *CocClient) DeleteTicketInfoInvoker(request *model.DeleteTicketInfoRequest) *DeleteTicketInfoInvoker {
+	requestDef := GenReqDefForDeleteTicketInfo()
+	return &DeleteTicketInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTicket 变更单状态修改
+//
+// 变更单状态修改，请求路径中的ticket_type为固定值change，且ticket_id传递变更单单号。此接口可操作变更开始、变更结束、变更取消和添加变更结果操作。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) UpdateTicket(request *model.UpdateTicketRequest) (*model.UpdateTicketResponse, error) {
+	requestDef := GenReqDefForUpdateTicket()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTicketResponse), nil
+	}
+}
+
+// UpdateTicketInvoker 变更单状态修改
+func (c *CocClient) UpdateTicketInvoker(request *model.UpdateTicketRequest) *UpdateTicketInvoker {
+	requestDef := GenReqDefForUpdateTicket()
+	return &UpdateTicketInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCocIncident CreateExternalIncident 创建事件单
 //
 // CreateExternalIncident 创建事件单
@@ -836,6 +1109,27 @@ func (c *CocClient) CreateTicket(request *model.CreateTicketRequest) (*model.Cre
 func (c *CocClient) CreateTicketInvoker(request *model.CreateTicketRequest) *CreateTicketInvoker {
 	requestDef := GenReqDefForCreateTicket()
 	return &CreateTicketInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadAttachment 下载附件
+//
+// 附件下载操作需基于已上传的附件资源。上传附件时，需调用/v1/{ticket_type}/attachments接口完成上传；成功上传后，可从接口响应中获取doc_id参数。下载附件时，凭借此doc_id再次调用/v1/{ticket_type}/attachments接口，即可获取已上传的对应附件资源，实现附件全生命周期管理。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) DownloadAttachment(request *model.DownloadAttachmentRequest) (*model.DownloadAttachmentResponse, error) {
+	requestDef := GenReqDefForDownloadAttachment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadAttachmentResponse), nil
+	}
+}
+
+// DownloadAttachmentInvoker 下载附件
+func (c *CocClient) DownloadAttachmentInvoker(request *model.DownloadAttachmentRequest) *DownloadAttachmentInvoker {
+	requestDef := GenReqDefForDownloadAttachment()
+	return &DownloadAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAuthorizableTicketsExternal 查询COC可授权单列表

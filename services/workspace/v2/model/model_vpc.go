@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// Vpc vpc信息
+// Vpc vpc信息。
 type Vpc struct {
 
-	// 桌面所在vpcId
+	// 桌面所在vpcId。
 	Id *string `json:"id,omitempty"`
 
-	// 桌面所在vpc名称
+	// 桌面所在vpc名称。
 	Name *string `json:"name,omitempty"`
 
-	// 桌面所在vpc网段
+	// 桌面所在vpc网段。
 	Cidr *string `json:"cidr,omitempty"`
 }
 

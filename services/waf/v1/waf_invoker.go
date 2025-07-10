@@ -37,6 +37,22 @@ func (i *ChangePrepaidCloudWafInvoker) Invoke() (*model.ChangePrepaidCloudWafRes
 	}
 }
 
+type ConfirmUserBundleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ConfirmUserBundleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ConfirmUserBundleInvoker) Invoke() (*model.ConfirmUserBundleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ConfirmUserBundleResponse), nil
+	}
+}
+
 type CreateAntiTamperRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -677,6 +693,22 @@ func (i *ListAntitamperRuleInvoker) Invoke() (*model.ListAntitamperRuleResponse,
 	}
 }
 
+type ListAttackActionTypesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAttackActionTypesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAttackActionTypesInvoker) Invoke() (*model.ListAttackActionTypesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAttackActionTypesResponse), nil
+	}
+}
+
 type ListBandwidthTimelineInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -853,6 +885,22 @@ func (i *ListInstanceInvoker) Invoke() (*model.ListInstanceResponse, error) {
 	}
 }
 
+type ListInstanceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceTagsInvoker) Invoke() (*model.ListInstanceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceTagsResponse), nil
+	}
+}
+
 type ListIpGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -997,6 +1045,22 @@ func (i *ListRequestTimelineInvoker) Invoke() (*model.ListRequestTimelineRespons
 	}
 }
 
+type ListSecurityReportSubscriptionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecurityReportSubscriptionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSecurityReportSubscriptionsInvoker) Invoke() (*model.ListSecurityReportSubscriptionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecurityReportSubscriptionsResponse), nil
+	}
+}
+
 type ListStatisticsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1029,6 +1093,22 @@ func (i *ListTopAbnormalInvoker) Invoke() (*model.ListTopAbnormalResponse, error
 	}
 }
 
+type ListTopDomainsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTopDomainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTopDomainsInvoker) Invoke() (*model.ListTopDomainsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTopDomainsResponse), nil
+	}
+}
+
 type ListValueListInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1042,6 +1122,22 @@ func (i *ListValueListInvoker) Invoke() (*model.ListValueListResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListValueListResponse), nil
+	}
+}
+
+type ListWebBasicProtectionRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWebBasicProtectionRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListWebBasicProtectionRulesInvoker) Invoke() (*model.ListWebBasicProtectionRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWebBasicProtectionRulesResponse), nil
 	}
 }
 
@@ -1269,6 +1365,22 @@ func (i *ShowHostInvoker) Invoke() (*model.ShowHostResponse, error) {
 	}
 }
 
+type ShowHostStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHostStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowHostStatusInvoker) Invoke() (*model.ShowHostStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHostStatusResponse), nil
+	}
+}
+
 type ShowIgnoreRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1346,6 +1458,22 @@ func (i *ShowPolicyInvoker) Invoke() (*model.ShowPolicyResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowPolicyResponse), nil
+	}
+}
+
+type ShowPolicyGeoipMapInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPolicyGeoipMapInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPolicyGeoipMapInvoker) Invoke() (*model.ShowPolicyGeoipMapResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPolicyGeoipMapResponse), nil
 	}
 }
 

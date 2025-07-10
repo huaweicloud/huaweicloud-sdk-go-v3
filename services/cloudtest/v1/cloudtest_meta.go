@@ -1967,6 +1967,21 @@ func GenReqDefForShowEchoTestPackageUsing() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowEtlData() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v4/testhub/etl/query-data").
+		WithResponse(new(model.ShowEtlDataResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowFactorByAssetId() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

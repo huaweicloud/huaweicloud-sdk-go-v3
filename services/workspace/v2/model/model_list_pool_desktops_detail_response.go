@@ -9,7 +9,7 @@ import (
 // ListPoolDesktopsDetailResponse Response Object
 type ListPoolDesktopsDetailResponse struct {
 
-	// 池桌面详情
+	// 池桌面详情。
 	PoolDesktops *[]PoolDesktopsDetailInfo `json:"pool_desktops,omitempty"`
 
 	// 桌面总数。

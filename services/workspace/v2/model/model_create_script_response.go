@@ -9,7 +9,7 @@ import (
 // CreateScriptResponse Response Object
 type CreateScriptResponse struct {
 
-	// 脚本ID
+	// 脚本ID。
 	ScriptId       *string `json:"script_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

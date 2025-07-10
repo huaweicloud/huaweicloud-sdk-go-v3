@@ -12,9 +12,6 @@ type UpdateSubnetBandwidthRequest struct {
 	// 云办公带宽id。
 	BandwidthId string `json:"bandwidth_id"`
 
-	// CBC接口回调时，请求头里带上的业务ID
-	ServiceTransactionId *string `json:"Service-Transaction-Id,omitempty"`
-
 	Body *UpdateSubnetBandwidthReq `json:"body,omitempty"`
 }
 

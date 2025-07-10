@@ -9,7 +9,7 @@ import (
 // SendDesktopPoolNotificationsResponse Response Object
 type SendDesktopPoolNotificationsResponse struct {
 
-	// 发送桌面消息任务id
+	// 发送桌面消息任务id。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

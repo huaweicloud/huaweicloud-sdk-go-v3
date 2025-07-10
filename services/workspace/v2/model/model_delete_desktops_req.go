@@ -18,7 +18,7 @@ type DeleteDesktopsReq struct {
 	// 是否邮件通知，true：邮件通知，false：不通知，默认值true。
 	EmailNotification *bool `json:"email_notification,omitempty"`
 
-	// 是否强制删除，true：强制删除，false：不强制删除
+	// 是否强制删除，true：强制删除，false：不强制删除。
 	IsForceDelete *bool `json:"is_force_delete,omitempty"`
 }
 

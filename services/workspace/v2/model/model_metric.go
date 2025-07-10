@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// Metric 指标
+// Metric 指标。
 type Metric struct {
 
-	// 指标名称
+	// 指标名称。
 	MetricName *string `json:"metric_name,omitempty"`
 
-	// 指标值
+	// 指标值。
 	MetricValue *float64 `json:"metric_value,omitempty"`
 }
 

@@ -10,13 +10,13 @@ import (
 type UpdateScriptReq struct {
 
 	// 脚本名称。
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 描述。
 	Description *string `json:"description,omitempty"`
 
 	// 脚本内容。
-	Content *string `json:"content,omitempty"`
+	Content string `json:"content"`
 
 	// 脚本版本。
 	Version *string `json:"version,omitempty"`

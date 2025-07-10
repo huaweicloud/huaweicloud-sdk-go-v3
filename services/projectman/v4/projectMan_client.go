@@ -607,6 +607,132 @@ func (c *ProjectManClient) UpdateProjectV4Invoker(request *model.UpdateProjectV4
 	return &UpdateProjectV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListIssueFields 查询字段模板列表
+//
+// 工作项类型中查询字段模板列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) ListIssueFields(request *model.ListIssueFieldsRequest) (*model.ListIssueFieldsResponse, error) {
+	requestDef := GenReqDefForListIssueFields()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIssueFieldsResponse), nil
+	}
+}
+
+// ListIssueFieldsInvoker 查询字段模板列表
+func (c *ProjectManClient) ListIssueFieldsInvoker(request *model.ListIssueFieldsRequest) *ListIssueFieldsInvoker {
+	requestDef := GenReqDefForListIssueFields()
+	return &ListIssueFieldsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIssueStatues 查询工作项状态
+//
+// 根据工作项查询工作项下的状态信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) ListIssueStatues(request *model.ListIssueStatuesRequest) (*model.ListIssueStatuesResponse, error) {
+	requestDef := GenReqDefForListIssueStatues()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIssueStatuesResponse), nil
+	}
+}
+
+// ListIssueStatuesInvoker 查询工作项状态
+func (c *ProjectManClient) ListIssueStatuesInvoker(request *model.ListIssueStatuesRequest) *ListIssueStatuesInvoker {
+	requestDef := GenReqDefForListIssueStatues()
+	return &ListIssueStatuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIssueConfigFields 查询工作流字段配置信息
+//
+// 查询工作流字段配置信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) ShowIssueConfigFields(request *model.ShowIssueConfigFieldsRequest) (*model.ShowIssueConfigFieldsResponse, error) {
+	requestDef := GenReqDefForShowIssueConfigFields()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIssueConfigFieldsResponse), nil
+	}
+}
+
+// ShowIssueConfigFieldsInvoker 查询工作流字段配置信息
+func (c *ProjectManClient) ShowIssueConfigFieldsInvoker(request *model.ShowIssueConfigFieldsRequest) *ShowIssueConfigFieldsInvoker {
+	requestDef := GenReqDefForShowIssueConfigFields()
+	return &ShowIssueConfigFieldsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIssueDetail 查询工作项详情
+//
+// 查询工作项详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) ShowIssueDetail(request *model.ShowIssueDetailRequest) (*model.ShowIssueDetailResponse, error) {
+	requestDef := GenReqDefForShowIssueDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIssueDetailResponse), nil
+	}
+}
+
+// ShowIssueDetailInvoker 查询工作项详情
+func (c *ProjectManClient) ShowIssueDetailInvoker(request *model.ShowIssueDetailRequest) *ShowIssueDetailInvoker {
+	requestDef := GenReqDefForShowIssueDetail()
+	return &ShowIssueDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowWorkflowTemplate 获取工作流的详情及每条流转线的详情
+//
+// 获取工作流的详情及每条流转线的详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) ShowWorkflowTemplate(request *model.ShowWorkflowTemplateRequest) (*model.ShowWorkflowTemplateResponse, error) {
+	requestDef := GenReqDefForShowWorkflowTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWorkflowTemplateResponse), nil
+	}
+}
+
+// ShowWorkflowTemplateInvoker 获取工作流的详情及每条流转线的详情
+func (c *ProjectManClient) ShowWorkflowTemplateInvoker(request *model.ShowWorkflowTemplateRequest) *ShowWorkflowTemplateInvoker {
+	requestDef := GenReqDefForShowWorkflowTemplate()
+	return &ShowWorkflowTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// TransferWorkItemFlow 修改工作项的状态
+//
+// 工作项流程流转
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) TransferWorkItemFlow(request *model.TransferWorkItemFlowRequest) (*model.TransferWorkItemFlowResponse, error) {
+	requestDef := GenReqDefForTransferWorkItemFlow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.TransferWorkItemFlowResponse), nil
+	}
+}
+
+// TransferWorkItemFlowInvoker 修改工作项的状态
+func (c *ProjectManClient) TransferWorkItemFlowInvoker(request *model.TransferWorkItemFlowRequest) *TransferWorkItemFlowInvoker {
+	requestDef := GenReqDefForTransferWorkItemFlow()
+	return &TransferWorkItemFlowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddIssueWorkHours 添加指定工作项工时
 //
 // 添加指定工作项工时

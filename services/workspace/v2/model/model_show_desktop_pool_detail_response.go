@@ -33,9 +33,6 @@ type ShowDesktopPoolDetailResponse struct {
 	// 桌面池绑定用户的桌面个数。
 	DesktopUsed *int32 `json:"desktop_used,omitempty"`
 
-	// 桌面池按需桌面个数（不包含删除中的桌面）。
-	OnDemandDesktopNum *int32 `json:"on_demand_desktop_num,omitempty"`
-
 	// 可用区。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
@@ -68,7 +65,7 @@ type ShowDesktopPoolDetailResponse struct {
 	DataVolumes *[]VolumeInfo `json:"data_volumes,omitempty"`
 
 	// 桌面安全组。
-	SecurityGroups *[]SecurityGroup `json:"security_groups,omitempty"`
+	SecurityGroups *[]SecurityGroupInfo `json:"security_groups,omitempty"`
 
 	// 动态池桌面断连多少分钟内，保留用户与桌面的绑定关系，超时后自动解绑。
 	DisconnectedRetentionPeriod *int32 `json:"disconnected_retention_period,omitempty"`
@@ -81,10 +78,10 @@ type ShowDesktopPoolDetailResponse struct {
 	// 桌面池状态。 - STEADY：稳态 - TEMPORARY：临时态 - EXIST_FROZEN：存在冻结桌面 - UNKNOWN：未知态
 	Status *string `json:"status,omitempty"`
 
-	// 企业项目ID
+	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 桌面池是否处于管理员维护模式
+	// 桌面池是否处于管理员维护模式。
 	InMaintenanceMode *bool `json:"in_maintenance_mode,omitempty"`
 
 	// 策略id，用于指定生成桌面名称策略。

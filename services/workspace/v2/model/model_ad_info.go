@@ -18,7 +18,7 @@ type AdInfo struct {
 	// 域名，域类型为LOCAL_AD时有值。
 	DomainName *string `json:"domain_name,omitempty"`
 
-	// 域管理员帐号，域类型为LOCAL_AD时有值。
+	// 域管理员账号，域类型为LOCAL_AD时有值。
 	DomainAdminAccount *string `json:"domain_admin_account,omitempty"`
 
 	// 主域控制器名称，域类型为LOCAL_AD时有值。

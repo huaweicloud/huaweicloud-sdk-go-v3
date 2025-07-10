@@ -9,19 +9,23 @@ import (
 	"strings"
 )
 
-// HotWordsTypeEnum 热词类型。 > SIS:使用的语音识别服务为SIS时选此类型
+// HotWordsTypeEnum 热词类型。 > SIS:使用的语音识别服务为SIS时选此类型 > MOBVOI:使用的语音识别服务为MOBVOI时选择此类型
 type HotWordsTypeEnum struct {
 	value string
 }
 
 type HotWordsTypeEnumEnum struct {
-	SIS HotWordsTypeEnum
+	SIS    HotWordsTypeEnum
+	MOBVOI HotWordsTypeEnum
 }
 
 func GetHotWordsTypeEnumEnum() HotWordsTypeEnumEnum {
 	return HotWordsTypeEnumEnum{
 		SIS: HotWordsTypeEnum{
 			value: "SIS",
+		},
+		MOBVOI: HotWordsTypeEnum{
+			value: "MOBVOI",
 		},
 	}
 }

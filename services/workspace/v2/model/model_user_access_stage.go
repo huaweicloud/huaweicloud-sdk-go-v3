@@ -11,25 +11,25 @@ import (
 
 type UserAccessStage struct {
 
-	// 接入阶段 | LOGIN - 登录 PRECONNECT - 预连接 CONNECT - 正式连接
+	// 接入阶段 | LOGIN - 登录 PRECONNECT - 预连接 CONNECT - 正式连接。
 	Stage *UserAccessStageStage `json:"stage,omitempty"`
 
-	// 花费时长，单位：ms
+	// 花费时长，单位：ms。
 	Duration *int32 `json:"duration,omitempty"`
 
-	// 接入阶段是否成功
+	// 接入阶段是否成功。
 	IsSuccess *bool `json:"is_success,omitempty"`
 
-	// 开始时间戳
+	// 开始时间戳。
 	StartTime *int64 `json:"start_time,omitempty"`
 
-	// 结束时间戳
+	// 结束时间戳。
 	EndTime *int64 `json:"end_time,omitempty"`
 
-	// 错误码
+	// 错误码。
 	ErrorCode *string `json:"error_code,omitempty"`
 
-	// 错误描述
+	// 错误描述。
 	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 

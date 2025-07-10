@@ -9,7 +9,7 @@ import (
 // ShowDesktopNetworksResponse Response Object
 type ShowDesktopNetworksResponse struct {
 
-	// 桌面网络信息列表
+	// 桌面网络信息列表。
 	Networks       *[]DesktopNetworkResult `json:"networks,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }

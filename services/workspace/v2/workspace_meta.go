@@ -695,6 +695,32 @@ func GenReqDefForListRestrictedRule() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForSetRuleRestriction() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/app-center/app-rules/actions/set-rule-restriction").
+		WithResponse(new(model.SetRuleRestrictionResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowRuleRestriction() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/app-center/app-rules/actions/get-rule-restriction").
+		WithResponse(new(model.ShowRuleRestrictionResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateAppRule() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPatch).
@@ -846,45 +872,6 @@ func GenReqDefForExportUserLoginInfoNew() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListDesktopsStatus() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/desktops/status").
-		WithResponse(new(model.ListDesktopsStatusResponse)).
-		WithContentType("application/json")
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListHistoryOnlineInfo() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/desktops/online-users").
-		WithResponse(new(model.ListHistoryOnlineInfoResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("StartTime").
-		WithJsonTag("start_time").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("EndTime").
-		WithJsonTag("end_time").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("QueryType").
-		WithJsonTag("query_type").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ClientHour").
-		WithJsonTag("client_hour").
-		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForListHistoryOnlineInfoNew() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -903,10 +890,6 @@ func GenReqDefForListHistoryOnlineInfoNew() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("QueryType").
 		WithJsonTag("query_type").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ClientHour").
-		WithJsonTag("client_hour").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -978,11 +961,6 @@ func GenReqDefForAttachInstances() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/desktops/attach").
 		WithResponse(new(model.AttachInstancesResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -1090,11 +1068,6 @@ func GenReqDefForBatchLogoffDesktops() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -1108,11 +1081,6 @@ func GenReqDefForBatchRebuildDesktopsSystemDisk() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/desktops/rebuild").
 		WithResponse(new(model.BatchRebuildDesktopsSystemDiskResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -1209,11 +1177,6 @@ func GenReqDefForCreateDesktop() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/desktops").
 		WithResponse(new(model.CreateDesktopResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -1356,22 +1319,6 @@ func GenReqDefForListDesktopActions() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListDesktopDetachInfo() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/desktops/{desktop_id}/detach-info").
-		WithResponse(new(model.ListDesktopDetachInfoResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("DesktopId").
-		WithJsonTag("desktop_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForListDesktops() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -1392,20 +1339,12 @@ func GenReqDefForListDesktops() *def.HttpRequestDef {
 		WithJsonTag("desktop_ip").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Sids").
-		WithJsonTag("sids").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
 		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
 		WithJsonTag("limit").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("SiteId").
-		WithJsonTag("site_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PoolId").
@@ -1508,10 +1447,6 @@ func GenReqDefForListDesktopsDetail() *def.HttpRequestDef {
 		WithJsonTag("desktop_ip").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Sids").
-		WithJsonTag("sids").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
 		WithJsonTag("offset").
 		WithLocationType(def.Query))
@@ -1528,16 +1463,8 @@ func GenReqDefForListDesktopsDetail() *def.HttpRequestDef {
 		WithJsonTag("desktop_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("LoginStatus").
-		WithJsonTag("login_status").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Tag").
 		WithJsonTag("tag").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("FuzzyQuery").
-		WithJsonTag("fuzzy_query").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PoolId").
@@ -1606,11 +1533,6 @@ func GenReqDefForResizeDesktop() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/desktops/resize").
 		WithResponse(new(model.ResizeDesktopResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -1920,11 +1842,6 @@ func GenReqDefForAddDesktopPoolVolumes() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -1938,11 +1855,6 @@ func GenReqDefForCreateDesktopPool() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/desktop-pools").
 		WithResponse(new(model.CreateDesktopPoolResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -2061,11 +1973,6 @@ func GenReqDefForExpandDesktopPool() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -2084,11 +1991,6 @@ func GenReqDefForExpandDesktopPoolVolumes() *def.HttpRequestDef {
 		WithName("PoolId").
 		WithJsonTag("pool_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -2201,11 +2103,6 @@ func GenReqDefForRebuildDesktopPool() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -2224,11 +2121,6 @@ func GenReqDefForResizeDesktopPool() *def.HttpRequestDef {
 		WithName("PoolId").
 		WithJsonTag("pool_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -2586,6 +2478,10 @@ func GenReqDefForListUsersOfGroup() *def.HttpRequestDef {
 		WithJsonTag("active_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
@@ -2922,11 +2818,6 @@ func GenReqDefForApplyDesktopsInternet() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -2955,11 +2846,6 @@ func GenReqDefForApplySubnetBandwidth() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/bandwidths").
 		WithResponse(new(model.ApplySubnetBandwidthResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -3271,11 +3157,6 @@ func GenReqDefForUpdateSubnetBandwidth() *def.HttpRequestDef {
 		WithName("BandwidthId").
 		WithJsonTag("bandwidth_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -3667,10 +3548,6 @@ func GenReqDefForListPolicyGroup() *def.HttpRequestDef {
 		WithJsonTag("description").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ScopeFlag").
-		WithJsonTag("scope_flag").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("IsGroupNameAccurate").
 		WithJsonTag("is_group_name_accurate").
 		WithLocationType(def.Query))
@@ -3713,10 +3590,6 @@ func GenReqDefForListPolicyGroupInfo() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Description").
 		WithJsonTag("description").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ScopeFlag").
-		WithJsonTag("scope_flag").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -3828,10 +3701,6 @@ func GenReqDefForListProducts() *def.HttpRequestDef {
 		WithJsonTag("product_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("FlavorId").
-		WithJsonTag("flavor_id").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AvailabilityZone").
 		WithJsonTag("availability_zone").
 		WithLocationType(def.Query))
@@ -3848,20 +3717,8 @@ func GenReqDefForListProducts() *def.HttpRequestDef {
 		WithJsonTag("architecture").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("DehProductId").
-		WithJsonTag("deh_product_id").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("IsDeh").
-		WithJsonTag("is_deh").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PackageType").
 		WithJsonTag("package_type").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProductsRange").
-		WithJsonTag("products_range").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -3972,11 +3829,6 @@ func GenReqDefForShowQuotas() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/quotas").
 		WithResponse(new(model.ShowQuotasResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Type").
-		WithJsonTag("type").
-		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -4621,11 +4473,6 @@ func GenReqDefForAddDesktopSubResources() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -4639,11 +4486,6 @@ func GenReqDefForDeleteDesktopSubResources() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/desktop/delete-sub-resources").
 		WithResponse(new(model.DeleteDesktopSubResourcesResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -5639,10 +5481,6 @@ func GenReqDefForListUsers() *def.HttpRequestDef {
 		WithJsonTag("user_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("UserEmail").
-		WithJsonTag("user_email").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
@@ -5673,6 +5511,10 @@ func GenReqDefForListUsers() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("IsQueryTotalDesktops").
 		WithJsonTag("is_query_total_desktops").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -5764,8 +5606,12 @@ func GenReqDefForListUserEvents() *def.HttpRequestDef {
 		WithJsonTag("event_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("EventTraceId").
-		WithJsonTag("event_trace_id").
+		WithName("ResourceId").
+		WithJsonTag("resource_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceName").
+		WithJsonTag("resource_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
@@ -5775,6 +5621,32 @@ func GenReqDefForListUserEvents() *def.HttpRequestDef {
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListUserEventsLtsConfigurations() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/user-events/lts-configurations").
+		WithResponse(new(model.ListUserEventsLtsConfigurationsResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForSetUserEventsLtsConfigurations() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/user-events/lts-configurations").
+		WithResponse(new(model.SetUserEventsLtsConfigurationsResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -5793,11 +5665,6 @@ func GenReqDefForAddDesktopVolumes() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -5811,11 +5678,6 @@ func GenReqDefForAddVolumes() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/volumes").
 		WithResponse(new(model.AddVolumesResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -5836,11 +5698,6 @@ func GenReqDefForDeleteDesktopVolumes() *def.HttpRequestDef {
 		WithName("DesktopId").
 		WithJsonTag("desktop_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -5867,11 +5724,6 @@ func GenReqDefForExpandDesktopVolume() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -5885,11 +5737,6 @@ func GenReqDefForExpandVolumes() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/volumes/expand").
 		WithResponse(new(model.ExpandVolumesResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ServiceTransactionId").
-		WithJsonTag("Service-Transaction-Id").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

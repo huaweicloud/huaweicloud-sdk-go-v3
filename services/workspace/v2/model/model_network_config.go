@@ -6,22 +6,22 @@ import (
 	"strings"
 )
 
-// NetworkConfig 网络信息
+// NetworkConfig 网络信息。
 type NetworkConfig struct {
 
-	// VPC ID
+	// VPC ID。
 	VpcId *string `json:"vpc_id,omitempty"`
 
-	// VPC名称
+	// VPC名称。
 	VpcName *string `json:"vpc_name,omitempty"`
 
-	// 业务子网，可以指定返回的网络ID订购桌面
+	// 业务子网，可以指定返回的网络ID订购桌面。
 	SubnetIds *[]string `json:"subnet_ids,omitempty"`
 
-	// 后端管理组件占用的子网网段
+	// 后端管理组件占用的子网网段。
 	ManagementSubnetCidr *string `json:"management_subnet_cidr,omitempty"`
 
-	// subnet_ids所返回的业务子网中,被管理节点所占用的子网id
+	// subnet_ids所返回的业务子网中,被管理节点所占用的子网id。
 	ManagementNodeSubnetId *string `json:"management_node_subnet_id,omitempty"`
 
 	// VPC配置信息列表。

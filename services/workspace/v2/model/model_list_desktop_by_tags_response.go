@@ -9,13 +9,13 @@ import (
 // ListDesktopByTagsResponse Response Object
 type ListDesktopByTagsResponse struct {
 
-	// 指定查询信息列表的偏移量，默认为0
+	// 指定查询信息列表的偏移量，默认为0。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 资源对象
+	// 资源对象。
 	Resources *[]TagResource `json:"resources,omitempty"`
 
-	// 数量
+	// 数量。
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

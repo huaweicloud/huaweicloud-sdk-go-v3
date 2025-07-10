@@ -8,13 +8,13 @@ import (
 
 type AdOuUserInfo struct {
 
-	// 名称
+	// 名称。
 	UserName *string `json:"user_name,omitempty"`
 
-	// 过期时间 -1代表永不过期
+	// 过期时间 -1代表永不过期。
 	ExpiredTime *string `json:"expired_time,omitempty"`
 
-	// 是否存在于用户列表
+	// 是否存在于用户列表。
 	HasExisted *bool `json:"has_existed,omitempty"`
 }
 

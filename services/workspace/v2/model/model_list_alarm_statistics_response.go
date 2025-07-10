@@ -9,19 +9,19 @@ import (
 // ListAlarmStatisticsResponse Response Object
 type ListAlarmStatisticsResponse struct {
 
-	// 紧急告警记录列表总数
+	// 紧急告警记录列表总数。
 	CriticalCount *int32 `json:"critical_count,omitempty"`
 
-	// 重要告警记录列表总数
+	// 重要告警记录列表总数。
 	MajorCount *int32 `json:"major_count,omitempty"`
 
-	// 次要告警记录列表总数
+	// 次要告警记录列表总数。
 	MinorCount *int32 `json:"minor_count,omitempty"`
 
-	// 提示告警记录列表总数
+	// 提示告警记录列表总数。
 	InfoCount *int32 `json:"info_count,omitempty"`
 
-	// 告警记录列表总数
+	// 告警记录列表总数。
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

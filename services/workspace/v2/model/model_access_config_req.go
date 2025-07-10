@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// AccessConfigReq 接入配置
+// AccessConfigReq 接入配置。
 type AccessConfigReq struct {
 
 	// 接入方式。 - INTERNET：表示Internet接入。 - DEDICATED：表示专线接入。 - BOTH：表示两种接入方式都支持。

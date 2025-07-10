@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// UpdateAccessModeReq 修改接入方式请求
+// UpdateAccessModeReq 修改接入方式请求。
 type UpdateAccessModeReq struct {
 
 	// 接入模式。 - INTERNET：互联网接入。 - DEDICATED：专线接入。 - BOTH：代表两种接入方式都支持。

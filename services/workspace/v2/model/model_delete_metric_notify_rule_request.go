@@ -9,7 +9,7 @@ import (
 // DeleteMetricNotifyRuleRequest Request Object
 type DeleteMetricNotifyRuleRequest struct {
 
-	// 通知规则ID
+	// 通知规则ID。
 	RuleId string `json:"rule_id"`
 }
 

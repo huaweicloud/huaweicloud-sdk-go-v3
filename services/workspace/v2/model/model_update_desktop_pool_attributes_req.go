@@ -29,13 +29,13 @@ type UpdateDesktopPoolAttributesReq struct {
 
 	AutoscalePolicy *AutoscalePolicy `json:"autoscale_policy,omitempty"`
 
-	// 是否处于管理员维护模式
+	// 是否处于管理员维护模式。
 	InMaintenanceMode *bool `json:"in_maintenance_mode,omitempty"`
 
 	// 策略id，用于指定生成桌面名称策略。
 	DesktopNamePolicyId *string `json:"desktop_name_policy_id,omitempty"`
 
-	// 桌面池的可用区。
+	// 桌面池的可用区。桌面池的可用区是边缘可用区时，不支持修改。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 }
 

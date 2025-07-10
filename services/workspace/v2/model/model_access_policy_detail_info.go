@@ -11,7 +11,7 @@ import (
 
 type AccessPolicyDetailInfo struct {
 
-	// 策略名
+	// 策略名。
 	PolicyName *string `json:"policy_name,omitempty"`
 
 	// 黑名单类型，当前黑名单只支持互联网。 * INTERNET： 互联网
@@ -22,6 +22,12 @@ type AccessPolicyDetailInfo struct {
 
 	// 策略的ip列表。
 	IpList *[]IpInfo `json:"ip_list,omitempty"`
+
+	// IP白名单是否生效。只能单独更新，此值的优先级最高，传此值只修改该策略是否生效。
+	IsEnable *bool `json:"is_enable,omitempty"`
+
+	// IP白名单是否禁止所有Ip接入。is_enable为false时，无法修改此值。此值也只能单独更新。
+	IsBlockAll *bool `json:"is_block_all,omitempty"`
 
 	// 策略总数。
 	IpTotalCount *int32 `json:"ip_total_count,omitempty"`

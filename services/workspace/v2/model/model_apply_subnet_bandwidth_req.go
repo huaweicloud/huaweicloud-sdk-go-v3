@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// ApplySubnetBandwidthReq 开通云办公带宽请求体。
 type ApplySubnetBandwidthReq struct {
 
 	// 云办公带宽名称。
@@ -20,11 +21,8 @@ type ApplySubnetBandwidthReq struct {
 	// 云办公带宽大小。
 	BandwidthSize *int32 `json:"bandwidth_size,omitempty"`
 
-	// 企业项目ID，默认\"0\"
+	// 企业项目ID，默认\"0。\"
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
-
-	// 包周期订购ID，CBC订购回调时使用。
-	OrderId *string `json:"order_id,omitempty"`
 }
 
 func (o ApplySubnetBandwidthReq) String() string {

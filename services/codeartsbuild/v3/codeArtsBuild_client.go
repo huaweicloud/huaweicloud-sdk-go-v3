@@ -1300,6 +1300,27 @@ func (c *CodeArtsBuildClient) ShowJobNoticeConfigInfoInvoker(request *model.Show
 	return &ShowJobNoticeConfigInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowJobPipelineInfo 流水线查看构建任务信息
+//
+// 流水线查看构建任务信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) ShowJobPipelineInfo(request *model.ShowJobPipelineInfoRequest) (*model.ShowJobPipelineInfoResponse, error) {
+	requestDef := GenReqDefForShowJobPipelineInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowJobPipelineInfoResponse), nil
+	}
+}
+
+// ShowJobPipelineInfoInvoker 流水线查看构建任务信息
+func (c *CodeArtsBuildClient) ShowJobPipelineInfoInvoker(request *model.ShowJobPipelineInfoRequest) *ShowJobPipelineInfoInvoker {
+	requestDef := GenReqDefForShowJobPipelineInfo()
+	return &ShowJobPipelineInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowJobRolePermission 获取构建任务的角色权限矩阵信息
 //
 // 获取构建任务的角色权限矩阵信息
@@ -1405,6 +1426,27 @@ func (c *CodeArtsBuildClient) ShowRunningStatusInvoker(request *model.ShowRunnin
 	return &ShowRunningStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// StopTheJob 停止构建任务v1
+//
+// 停止构建任务v1
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) StopTheJob(request *model.StopTheJobRequest) (*model.StopTheJobResponse, error) {
+	requestDef := GenReqDefForStopTheJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopTheJobResponse), nil
+	}
+}
+
+// StopTheJobInvoker 停止构建任务v1
+func (c *CodeArtsBuildClient) StopTheJobInvoker(request *model.StopTheJobRequest) *StopTheJobInvoker {
+	requestDef := GenReqDefForStopTheJob()
+	return &StopTheJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateNewJob 更新构建任务
 //
 // 更新构建任务
@@ -1424,6 +1466,27 @@ func (c *CodeArtsBuildClient) UpdateNewJob(request *model.UpdateNewJobRequest) (
 func (c *CodeArtsBuildClient) UpdateNewJobInvoker(request *model.UpdateNewJobRequest) *UpdateNewJobInvoker {
 	requestDef := GenReqDefForUpdateNewJob()
 	return &UpdateNewJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddKeystorePermission 添加文件权限
+//
+// 添加文件权限
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) AddKeystorePermission(request *model.AddKeystorePermissionRequest) (*model.AddKeystorePermissionResponse, error) {
+	requestDef := GenReqDefForAddKeystorePermission()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddKeystorePermissionResponse), nil
+	}
+}
+
+// AddKeystorePermissionInvoker 添加文件权限
+func (c *CodeArtsBuildClient) AddKeystorePermissionInvoker(request *model.AddKeystorePermissionRequest) *AddKeystorePermissionInvoker {
+	requestDef := GenReqDefForAddKeystorePermission()
+	return &AddKeystorePermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteKeystore 删除文件管理文件
@@ -1571,6 +1634,27 @@ func (c *CodeArtsBuildClient) UpdateKeystore(request *model.UpdateKeystoreReques
 func (c *CodeArtsBuildClient) UpdateKeystoreInvoker(request *model.UpdateKeystoreRequest) *UpdateKeystoreInvoker {
 	requestDef := GenReqDefForUpdateKeystore()
 	return &UpdateKeystoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateKeystorePermission 配置文件权限
+//
+// 配置文件权限
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) UpdateKeystorePermission(request *model.UpdateKeystorePermissionRequest) (*model.UpdateKeystorePermissionResponse, error) {
+	requestDef := GenReqDefForUpdateKeystorePermission()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateKeystorePermissionResponse), nil
+	}
+}
+
+// UpdateKeystorePermissionInvoker 配置文件权限
+func (c *CodeArtsBuildClient) UpdateKeystorePermissionInvoker(request *model.UpdateKeystorePermissionRequest) *UpdateKeystorePermissionInvoker {
+	requestDef := GenReqDefForUpdateKeystorePermission()
+	return &UpdateKeystorePermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UploadKeystore 上传文件

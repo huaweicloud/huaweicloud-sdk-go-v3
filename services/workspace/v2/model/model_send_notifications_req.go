@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// SendNotificationsReq 发送消息通知请求体
+// SendNotificationsReq 发送消息通知请求体。
 type SendNotificationsReq struct {
 
-	// 桌面列表
+	// 桌面列表。
 	DesktopIds []string `json:"desktop_ids"`
 
-	// 消息通知内容
+	// 消息通知内容。
 	Notifications string `json:"notifications"`
 }
 

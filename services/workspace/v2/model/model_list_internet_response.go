@@ -9,7 +9,7 @@ import (
 // ListInternetResponse Response Object
 type ListInternetResponse struct {
 
-	// 上网信息
+	// 上网信息。
 	InternetInfos  *[]InternetInfo `json:"internet_infos,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

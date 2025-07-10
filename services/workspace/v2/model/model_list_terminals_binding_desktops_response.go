@@ -9,10 +9,10 @@ import (
 // ListTerminalsBindingDesktopsResponse Response Object
 type ListTerminalsBindingDesktopsResponse struct {
 
-	// MAC绑定VM信息列表
+	// MAC绑定VM信息列表。
 	BindList *[]TerminalsBindingDesktopsInfo `json:"bind_list,omitempty"`
 
-	// 返回结果总条数
+	// 返回结果总条数。
 	TotalNum       *int32 `json:"total_num,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

@@ -11,13 +11,13 @@ import (
 
 type TerminalsBindingDesktopsConfig struct {
 
-	// 绑定开关，只取值ON或OFF
+	// 绑定开关，只取值ON或OFF。
 	TcBindSwitch TerminalsBindingDesktopsConfigTcBindSwitch `json:"tc_bind_switch"`
 
-	// 自动绑定开关，只取值ON或OFF
+	// 自动绑定开关，只取值ON或OFF。
 	TcAutoBindSwitch *TerminalsBindingDesktopsConfigTcAutoBindSwitch `json:"tc_auto_bind_switch,omitempty"`
 
-	// 最大绑定数量，默认值为1
+	// 最大绑定数量，默认值为1。
 	TcAutoBindMax *int32 `json:"tc_auto_bind_max,omitempty"`
 }
 

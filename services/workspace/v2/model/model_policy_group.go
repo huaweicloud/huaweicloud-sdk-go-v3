@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// PolicyGroup 策略组
+// PolicyGroup 策略组。
 type PolicyGroup struct {
 
 	// 策略组ID。
@@ -23,12 +23,6 @@ type PolicyGroup struct {
 
 	// 策略组描述。
 	Description *string `json:"description,omitempty"`
-
-	// 策略来源。
-	ScopeFlag *int32 `json:"scope_flag,omitempty"`
-
-	// 租户ID。
-	TenantId *string `json:"tenant_id,omitempty"`
 
 	// 应用对象列表。
 	Targets *[]Target `json:"targets,omitempty"`

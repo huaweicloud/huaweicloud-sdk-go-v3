@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// TagsReq 批量修改标签请求
+// TagsReq 批量修改标签请求。
 type TagsReq struct {
 
-	// 操作字符串create或delete
+	// 操作字符串create或delete。
 	Action *string `json:"action,omitempty"`
 
-	// 标签对象
+	// 标签对象。
 	Tags *[]Tag `json:"tags,omitempty"`
 
-	// 标签对象（已废弃）
+	// 标签对象（已废弃）。
 	SysTags *[]Tag `json:"sys_tags,omitempty"`
 }
 

@@ -54,13 +54,13 @@ type UpdateScheduledTasksReq struct {
 	// 任务名称。
 	TaskName *string `json:"task_name,omitempty"`
 
-	// 是否强制执行
+	// 是否强制执行。
 	ForceExecute *bool `json:"force_execute,omitempty"`
 
 	// 描述。
 	Description *string `json:"description,omitempty"`
 
-	// 是否启用
+	// 是否启用。
 	Enable *bool `json:"enable,omitempty"`
 
 	// 扩展参数，json格式。

@@ -9,7 +9,7 @@ import (
 // PoliciesCustom 自定义策略。
 type PoliciesCustom struct {
 
-	// 自定义配置启用
+	// 自定义配置启用。
 	CustomConfiguration1Enable *bool `json:"custom_configuration1_enable,omitempty"`
 
 	Options *PoliciesCustomOptions `json:"options,omitempty"`

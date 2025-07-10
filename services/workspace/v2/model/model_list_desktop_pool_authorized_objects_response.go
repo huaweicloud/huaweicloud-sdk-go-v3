@@ -9,10 +9,10 @@ import (
 // ListDesktopPoolAuthorizedObjectsResponse Response Object
 type ListDesktopPoolAuthorizedObjectsResponse struct {
 
-	// 授权对象
+	// 授权对象。
 	Objects *[]AuthorizedObjects `json:"objects,omitempty"`
 
-	// 满足条件的用户、用户组总数
+	// 满足条件的用户、用户组总数。
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

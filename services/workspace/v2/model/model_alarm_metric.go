@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// AlarmMetric 告警指标信息
+// AlarmMetric 告警指标信息。
 type AlarmMetric struct {
 
-	// 查询服务的命名空间
+	// 查询服务的命名空间。
 	Namespace *string `json:"namespace,omitempty"`
 
-	// 资源的监控指标名称
+	// 资源的监控指标名称。
 	MetricName *string `json:"metric_name,omitempty"`
 
 	// 指标维度，目前最大可添加4个维度。

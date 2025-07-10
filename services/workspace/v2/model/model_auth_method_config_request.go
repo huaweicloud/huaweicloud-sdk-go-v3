@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// AuthMethodConfigRequest 认证配置请求
+// AuthMethodConfigRequest 认证配置请求。
 type AuthMethodConfigRequest struct {
 	AuthType *AuthTypeEnum `json:"auth_type,omitempty"`
 

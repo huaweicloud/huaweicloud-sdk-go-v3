@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// AddDesktopSubResourcesReq 桌面购买协同资源请求体
+// AddDesktopSubResourcesReq 桌面购买协同资源请求体。
 type AddDesktopSubResourcesReq struct {
 
-	// 桌面协同资源SKU码
+	// 桌面协同资源SKU码。
 	SubResourceSku string `json:"sub_resource_sku"`
 
-	// 订单ID
+	// 订单ID。
 	OrderId *string `json:"order_id,omitempty"`
 
-	// 桌面ID列表
+	// 桌面ID列表。
 	DesktopIds []string `json:"desktop_ids"`
 }
 

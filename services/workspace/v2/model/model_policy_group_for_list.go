@@ -23,12 +23,6 @@ type PolicyGroupForList struct {
 	// 策略组描述。
 	Description *string `json:"description,omitempty"`
 
-	// 策略来源。
-	ScopeFlag *int32 `json:"scope_flag,omitempty"`
-
-	// 租户ID。
-	TenantId *string `json:"tenant_id,omitempty"`
-
 	Policies *Policies `json:"policies,omitempty"`
 
 	// 应用对象列表。

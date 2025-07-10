@@ -1429,6 +1429,22 @@ func (i *ShowEchoTestPackageUsingInvoker) Invoke() (*model.ShowEchoTestPackageUs
 	}
 }
 
+type ShowEtlDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowEtlDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowEtlDataInvoker) Invoke() (*model.ShowEtlDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowEtlDataResponse), nil
+	}
+}
+
 type ShowFactorByAssetIdInvoker struct {
 	*invoker.BaseInvoker
 }

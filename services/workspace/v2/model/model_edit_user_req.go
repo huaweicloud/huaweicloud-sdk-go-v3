@@ -32,17 +32,14 @@ type EditUserReq struct {
 	// 下次登录是否需要重置密码，true表示需要重置密码，false表示不需要。
 	NextLoginChangePassword *bool `json:"next_login_change_password,omitempty"`
 
-	// 用户组的专有ID列表。
-	GroupIds *[]string `json:"group_ids,omitempty"`
-
-	// 别名。
-	AliasName *string `json:"alias_name,omitempty"`
-
 	// 密码是否永不过期，true表示密码永不过期，false表示密码会过期。
 	PasswordNeverExpired *bool `json:"password_never_expired,omitempty"`
 
 	// 账户是否禁用，true表示被禁用，false表示未禁用。
 	Disabled *bool `json:"disabled,omitempty"`
+
+	// 用户信息映射，包含用户的服务等级、操作模式和类型。
+	UserInfoMap *string `json:"user_info_map,omitempty"`
 }
 
 func (o EditUserReq) String() string {

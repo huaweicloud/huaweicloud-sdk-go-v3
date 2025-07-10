@@ -1886,6 +1886,27 @@ func (c *CloudtestClient) ShowEchoTestPackageUsingInvoker(request *model.ShowEch
 	return &ShowEchoTestPackageUsingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowEtlData 查询指定表的内容
+//
+// 查询指定表的内容
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ShowEtlData(request *model.ShowEtlDataRequest) (*model.ShowEtlDataResponse, error) {
+	requestDef := GenReqDefForShowEtlData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowEtlDataResponse), nil
+	}
+}
+
+// ShowEtlDataInvoker 查询指定表的内容
+func (c *CloudtestClient) ShowEtlDataInvoker(request *model.ShowEtlDataRequest) *ShowEtlDataInvoker {
+	requestDef := GenReqDefForShowEtlData()
+	return &ShowEtlDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowFactorByAssetId 根据目录查询因子
 //
 // 根据目录查询因子

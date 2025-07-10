@@ -15,9 +15,6 @@ type ApplyDesktopsInternetReq struct {
 	// 需要开通上网功能的桌面id列表。
 	DesktopIds *[]string `json:"desktop_ids,omitempty"`
 
-	// 需要开通上网功能的桌面instInfoId列表。供包周期回调使用
-	InstInfoIds *[]string `json:"inst_info_ids,omitempty"`
-
 	// 支持的类型请参考EIP服务支持的类型。可通过调用如下链接的接口查询，https://support.huaweicloud.com/api-eip/ShowPublicIpType.html。
 	EipType string `json:"eip_type"`
 
@@ -27,10 +24,7 @@ type ApplyDesktopsInternetReq struct {
 	// 带宽大小，单位Mbit/s。默认1Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。
 	BandwidthSize int32 `json:"bandwidth_size"`
 
-	// 包周期订购ID，CBC订购回调时使用。
-	OrderId *string `json:"order_id,omitempty"`
-
-	// 企业项目ID，默认\"0\"
+	// 企业项目ID，默认\"0。\"
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 需要购买EIP的数量，当desktop_ids为空时需要填，兼容单独购买EIP场景。

@@ -6,15 +6,15 @@ import (
 	"strings"
 )
 
-// CloudServiceRatingResult 询价结果
+// CloudServiceRatingResult 询价结果。
 type CloudServiceRatingResult struct {
 
-	// 下单请求体中的orderRequestId
+	// 下单请求体中的orderRequestId。
 	OrderRequestId *string `json:"order_request_id,omitempty"`
 
 	OfficialWebsiteRatingResult *OfficialWebsiteRatingResult `json:"official_website_rating_result,omitempty"`
 
-	// 优惠询价结果
+	// 优惠询价结果。
 	OptionalDiscountRatingResults *[]OptionalDiscountRatingResult `json:"optional_discount_rating_results,omitempty"`
 }
 

@@ -18,11 +18,7 @@ type Policies struct {
 
 	FileAndClipboard *PoliciesFileAndClipboard `json:"file_and_clipboard,omitempty"`
 
-	AccessControl *AccessControl `json:"access_control,omitempty"`
-
 	Session *Session `json:"session,omitempty"`
-
-	Bandwidth *Bandwidth `json:"bandwidth,omitempty"`
 
 	VirtualChannel *VirtualChannel `json:"virtual_channel,omitempty"`
 
@@ -32,7 +28,7 @@ type Policies struct {
 
 	Seamless *PoliciesSeamless `json:"seamless,omitempty"`
 
-	PersonalizedDataMgmt *PoliciesPersonalizedDataMgmt `json:"personalizedDataMgmt,omitempty"`
+	PersonalizedDataMgmt *PoliciesPersonalizedDataMgmt `json:"personalized_data_mgmt,omitempty"`
 
 	Custom *PoliciesCustom `json:"custom,omitempty"`
 

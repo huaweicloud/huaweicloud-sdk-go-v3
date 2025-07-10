@@ -15,7 +15,7 @@ type ShowSmartChatJobResponse struct {
 	// 数字人智能交互对话任务ID。
 	JobId *string `json:"job_id,omitempty"`
 
-	// 数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * CANCELED: 取消 * HEARTBEAT: 心跳 * IDLE: 空闲 * DELETING: 删除中
+	// 数字人智能交互对话任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * DELETING: 删除中
 	State *ShowSmartChatJobResponseState `json:"state,omitempty"`
 
 	// 数字人智能交互对话时长，单位秒。
@@ -35,8 +35,6 @@ type ShowSmartChatJobResponse struct {
 	// 数字人智能交互对话任务最后更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
 	LastupdateTime *string `json:"lastupdate_time,omitempty"`
 
-	RtcRoomInfo *RtcRoomInfoList `json:"rtc_room_info,omitempty"`
-
 	ChatSubtitleConfig *SmartChatSubtitleConfig `json:"chat_subtitle_config,omitempty"`
 
 	VideoConfig *SmartChatVideoConfig `json:"video_config,omitempty"`
@@ -44,19 +42,8 @@ type ShowSmartChatJobResponse struct {
 	// 语音配置参数列表。
 	VoiceConfigList *[]SmartChatVoiceConfig `json:"voice_config_list,omitempty"`
 
-	// 数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
-	ChatState *int32 `json:"chat_state,omitempty"`
-
-	Language *LanguageEnum `json:"language,omitempty"`
-
 	// 智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
 	ChatVideoType *ShowSmartChatJobResponseChatVideoType `json:"chat_video_type,omitempty"`
-
-	// 智能交互接入地址。
-	ChatAccessAddress *string `json:"chat_access_address,omitempty"`
-
-	// 智能交互Rest接口接入地址。
-	ChatAccessRestAddress *string `json:"chat_access_rest_address,omitempty"`
 
 	// 是否透明背景
 	IsTransparent *bool `json:"is_transparent,omitempty"`
@@ -66,6 +53,25 @@ type ShowSmartChatJobResponse struct {
 
 	// clientId
 	ClientId *string `json:"client_id,omitempty"`
+
+	// 是否是资源池模式
+	IsPoolMode *bool `json:"is_pool_mode,omitempty"`
+
+	// 对话结束原因 * NORMAL：正常结束 * MUTE_TIMEOUT：静音超时
+	JobFinishReason *ShowSmartChatJobResponseJobFinishReason `json:"job_finish_reason,omitempty"`
+
+	RtcRoomInfo *RtcRoomInfoList `json:"rtc_room_info,omitempty"`
+
+	// 数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
+	ChatState *int32 `json:"chat_state,omitempty"`
+
+	Language *LanguageEnum `json:"language,omitempty"`
+
+	// 智能交互接入地址。
+	ChatAccessAddress *string `json:"chat_access_address,omitempty"`
+
+	// 智能交互Rest接口接入地址。
+	ChatAccessRestAddress *string `json:"chat_access_rest_address,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
@@ -247,6 +253,53 @@ func (c ShowSmartChatJobResponseDefaultLanguage) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ShowSmartChatJobResponseDefaultLanguage) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ShowSmartChatJobResponseJobFinishReason struct {
+	value string
+}
+
+type ShowSmartChatJobResponseJobFinishReasonEnum struct {
+	NORMAL       ShowSmartChatJobResponseJobFinishReason
+	MUTE_TIMEOUT ShowSmartChatJobResponseJobFinishReason
+}
+
+func GetShowSmartChatJobResponseJobFinishReasonEnum() ShowSmartChatJobResponseJobFinishReasonEnum {
+	return ShowSmartChatJobResponseJobFinishReasonEnum{
+		NORMAL: ShowSmartChatJobResponseJobFinishReason{
+			value: "NORMAL",
+		},
+		MUTE_TIMEOUT: ShowSmartChatJobResponseJobFinishReason{
+			value: "MUTE_TIMEOUT",
+		},
+	}
+}
+
+func (c ShowSmartChatJobResponseJobFinishReason) Value() string {
+	return c.value
+}
+
+func (c ShowSmartChatJobResponseJobFinishReason) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowSmartChatJobResponseJobFinishReason) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

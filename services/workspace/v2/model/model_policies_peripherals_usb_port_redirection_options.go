@@ -3,9 +3,6 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
@@ -36,11 +33,11 @@ type PoliciesPeripheralsUsbPortRedirectionOptions struct {
 	// 是否开启其他USB设备重定向。取值为： false：表示关闭。 true：表示开启。
 	OtherUsbDevicesEnable *bool `json:"other_usb_devices_enable,omitempty"`
 
-	// USB端口重定向自定义策略。
+	// USB端口重定向自定义策略，长度不能超过18000个字符。
 	UsbRedirectionCustomizationPolicy *string `json:"usb_redirection_customization_policy,omitempty"`
 
 	// USB 重定向模式。取值为： 经典模式：Classical mode。 通用模式：Common mode。
-	UsbRedirectionMode *PoliciesPeripheralsUsbPortRedirectionOptionsUsbRedirectionMode `json:"usb_redirection_mode,omitempty"`
+	UsbRedirectionMode *string `json:"usb_redirection_mode,omitempty"`
 }
 
 func (o PoliciesPeripheralsUsbPortRedirectionOptions) String() string {
@@ -50,51 +47,4 @@ func (o PoliciesPeripheralsUsbPortRedirectionOptions) String() string {
 	}
 
 	return strings.Join([]string{"PoliciesPeripheralsUsbPortRedirectionOptions", string(data)}, " ")
-}
-
-type PoliciesPeripheralsUsbPortRedirectionOptionsUsbRedirectionMode struct {
-	value string
-}
-
-type PoliciesPeripheralsUsbPortRedirectionOptionsUsbRedirectionModeEnum struct {
-	CLASSICAL_MODE PoliciesPeripheralsUsbPortRedirectionOptionsUsbRedirectionMode
-	COMMON_MODE    PoliciesPeripheralsUsbPortRedirectionOptionsUsbRedirectionMode
-}
-
-func GetPoliciesPeripheralsUsbPortRedirectionOptionsUsbRedirectionModeEnum() PoliciesPeripheralsUsbPortRedirectionOptionsUsbRedirectionModeEnum {
-	return PoliciesPeripheralsUsbPortRedirectionOptionsUsbRedirectionModeEnum{
-		CLASSICAL_MODE: PoliciesPeripheralsUsbPortRedirectionOptionsUsbRedirectionMode{
-			value: "Classical mode",
-		},
-		COMMON_MODE: PoliciesPeripheralsUsbPortRedirectionOptionsUsbRedirectionMode{
-			value: "Common mode",
-		},
-	}
-}
-
-func (c PoliciesPeripheralsUsbPortRedirectionOptionsUsbRedirectionMode) Value() string {
-	return c.value
-}
-
-func (c PoliciesPeripheralsUsbPortRedirectionOptionsUsbRedirectionMode) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *PoliciesPeripheralsUsbPortRedirectionOptionsUsbRedirectionMode) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

@@ -6,33 +6,33 @@ import (
 	"strings"
 )
 
-// InterfacesConfig 接口配置
+// InterfacesConfig 接口配置。
 type InterfacesConfig struct {
 
-	// 应用平台
+	// 应用平台。
 	ApplyPlatform *string `json:"apply_platform,omitempty"`
 
-	// ID
+	// ID。
 	Id *string `json:"id,omitempty"`
 
-	// 名称
+	// 名称。
 	Name *string `json:"name,omitempty"`
 
-	// 类型
+	// 类型。
 	Type *string `json:"type,omitempty"`
 
-	// 结果
+	// 结果。
 	Results map[string]string `json:"results,omitempty"`
 
-	// 分页信息
+	// 分页信息。
 	Pagination map[string]interface{} `json:"pagination,omitempty"`
 
 	Request *InterfacesRequest `json:"request,omitempty"`
 
-	// 响应
+	// 响应。
 	Response *string `json:"response,omitempty"`
 
-	// 检查结果
+	// 检查结果。
 	ResultCheck *string `json:"result_check,omitempty"`
 }
 

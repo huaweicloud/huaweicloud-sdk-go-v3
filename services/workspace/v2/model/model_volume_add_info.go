@@ -17,9 +17,6 @@ type VolumeAddInfo struct {
 
 	// 磁盘容量，单位GB。
 	Size int32 `json:"size"`
-
-	// 云服务器系统盘对应的存储池的ID。
-	ClusterId *string `json:"cluster_id,omitempty"`
 }
 
 func (o VolumeAddInfo) String() string {

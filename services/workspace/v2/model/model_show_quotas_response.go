@@ -10,7 +10,7 @@ import (
 type ShowQuotasResponse struct {
 	Quotas *QuotaNoLimit `json:"quotas,omitempty"`
 
-	// 站点配额信息，暂不包括中心站点
+	// 站点配额信息，暂不包括中心站点。
 	SiteQuotas     *[]SiteQuotaNoLimit `json:"site_quotas,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }

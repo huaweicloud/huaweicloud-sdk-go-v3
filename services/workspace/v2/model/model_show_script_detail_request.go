@@ -12,7 +12,7 @@ type ShowScriptDetailRequest struct {
 	// 脚本ID。
 	ScriptId string `json:"script_id"`
 
-	// 执行脚本的任务ID
+	// 执行脚本的任务ID。
 	ScriptTaskId *string `json:"script_task_id,omitempty"`
 }
 

@@ -9,13 +9,13 @@ import (
 // CreateRemoteAssistanceResponse Response Object
 type CreateRemoteAssistanceResponse struct {
 
-	// 协同空间ID
+	// 协同空间ID。
 	ShareSpaceId *string `json:"share_space_id,omitempty"`
 
 	// 协同空间状态 - OPEN 协同空间已创建 - CLOSE 协同空间已关闭 - WAIT_USER_CONFIRM 等待用户确认进入远程协助 - WAIT_USER_ACCESS 等待用户进入远程协助
 	Status *string `json:"status,omitempty"`
 
-	// 桌面的desktopId
+	// 桌面的desktopId。
 	DesktopId *string `json:"desktop_id,omitempty"`
 
 	// 发起方类型 - ADMIN_INITIATE 管理员发起 - ENDUSER_INITIATE 终端用户发起

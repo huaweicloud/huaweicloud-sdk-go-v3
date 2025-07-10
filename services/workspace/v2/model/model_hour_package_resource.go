@@ -12,20 +12,17 @@ import (
 // HourPackageResource 桌面小时包资源。
 type HourPackageResource struct {
 
-	// 订购周期类型：2：月；3：年;必填
+	// 订购周期类型：2：月；3：年;必填。
 	PeriodType *int32 `json:"period_type,omitempty"`
 
-	// 订购周期数
+	// 订购周期数。
 	PeriodNum *int32 `json:"period_num,omitempty"`
 
-	// 是否自动续订
+	// 是否自动续订。
 	IsAutoRenew *int32 `json:"is_auto_renew,omitempty"`
 
 	// 时长用尽策略：   - SHUTDOWN_OR_HIBERNATE：自动关机/休眠。 - PAY_PER_USE：自动按需计费。
 	UsedUpPolicy *HourPackageResourceUsedUpPolicy `json:"used_up_policy,omitempty"`
-
-	// 支付后跳转url
-	CloudServiceConsoleUrl *string `json:"cloud_service_console_url,omitempty"`
 
 	CreateDesktops *CreateDesktopReq `json:"create_desktops,omitempty"`
 }

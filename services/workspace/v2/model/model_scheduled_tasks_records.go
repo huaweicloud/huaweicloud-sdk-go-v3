@@ -9,7 +9,7 @@ import (
 // ScheduledTasksRecords 定时任务执行记录。
 type ScheduledTasksRecords struct {
 
-	// 任务执行记录id
+	// 任务执行记录id。
 	Id *string `json:"id,omitempty"`
 
 	// 执行时间，格式为yyyy-MM-dd HH:mm:ss。
@@ -20,6 +20,9 @@ type ScheduledTasksRecords struct {
 
 	// 执行周期类型。FIXED_TIME：指定时间，DAY：按天，WEEK：按周，MONTH：按月。
 	ScheduledType *string `json:"scheduled_type,omitempty"`
+
+	// 触发场景类型。
+	LifeCycleType *string `json:"life_cycle_type,omitempty"`
 
 	// 本次执行状态。
 	Status *string `json:"status,omitempty"`
@@ -33,7 +36,7 @@ type ScheduledTasksRecords struct {
 	// 跳过桌面个数。
 	SkipNum *int32 `json:"skip_num,omitempty"`
 
-	// 时区
+	// 时区。
 	TimeZone *string `json:"time_zone,omitempty"`
 
 	// 执行定时任务的任务id，只有定时执行脚本返回。

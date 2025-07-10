@@ -30,13 +30,13 @@ type NatMappingConfig struct {
 	// vag端口。
 	VagPort *string `json:"vag_port,omitempty"`
 
-	// 0标识不开启，1表示开启。
+	// 是否支持标签、企业项目管理。0表示不开启，1表示开启。
 	AccessFilterType *int32 `json:"access_filter_type,omitempty"`
 
 	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 标签对象
+	// 标签对象。
 	Tags *[]Tag `json:"tags,omitempty"`
 }
 

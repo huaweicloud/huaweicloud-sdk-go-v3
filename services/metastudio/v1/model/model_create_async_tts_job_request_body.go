@@ -18,7 +18,7 @@ type CreateAsyncTtsJobRequestBody struct {
 	// 发送给tts的待合成文本
 	TtsText *string `json:"tts_text,omitempty"`
 
-	// 音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。
+	// 音色ID，获取方式详见[获取音色ID](metastudio_02_0054.xml)。  不同Region的计费标准详见[预置音色计费标准](metastudio_02_0060.xml)。
 	VoiceAssetId string `json:"voice_asset_id"`
 
 	// 语速。 * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
@@ -73,6 +73,9 @@ type CreateAsyncTtsJobRequestBody struct {
 
 	// 是否使用包周期路数资源进行计费
 	IsConcurrentResource *bool `json:"is_concurrent_resource,omitempty"`
+
+	// 优先级（0-10），0为最高优先级，默认5
+	Priority *int32 `json:"priority,omitempty"`
 }
 
 func (o CreateAsyncTtsJobRequestBody) String() string {

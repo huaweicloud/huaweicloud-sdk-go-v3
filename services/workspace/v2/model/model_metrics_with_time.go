@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// MetricsWithTime 带时间的指标
+// MetricsWithTime 带时间的指标。
 type MetricsWithTime struct {
 
-	// 时间
+	// 时间。
 	Time *string `json:"time,omitempty"`
 
-	// 指标值
+	// 指标值。
 	Metrics *[]Metric `json:"metrics,omitempty"`
 }
 

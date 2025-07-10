@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// BaseResponse API响应基类
+// BaseResponse API响应基类。
 type BaseResponse struct {
 
 	// 错误码。

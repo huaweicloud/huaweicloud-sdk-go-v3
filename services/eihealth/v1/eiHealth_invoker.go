@@ -565,6 +565,22 @@ func (i *CreateDrugModelInvoker) Invoke() (*model.CreateDrugModelResponse, error
 	}
 }
 
+type CreateDrugModelResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDrugModelResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDrugModelResourceInvoker) Invoke() (*model.CreateDrugModelResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDrugModelResourceResponse), nil
+	}
+}
+
 type CreateFavoriteInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1122,6 +1138,22 @@ func (i *DeleteDrugModelInvoker) Invoke() (*model.DeleteDrugModelResponse, error
 		return nil, err
 	} else {
 		return result.(*model.DeleteDrugModelResponse), nil
+	}
+}
+
+type DeleteDrugModelResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDrugModelResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDrugModelResourceInvoker) Invoke() (*model.DeleteDrugModelResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDrugModelResourceResponse), nil
 	}
 }
 
@@ -1986,6 +2018,22 @@ func (i *ListDrugModelInvoker) Invoke() (*model.ListDrugModelResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListDrugModelResponse), nil
+	}
+}
+
+type ListDrugModelResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDrugModelResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDrugModelResourceInvoker) Invoke() (*model.ListDrugModelResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDrugModelResourceResponse), nil
 	}
 }
 
@@ -5442,6 +5490,22 @@ func (i *UpdateNotebookInvoker) Invoke() (*model.UpdateNotebookResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdateNotebookResponse), nil
+	}
+}
+
+type DownloadPublicDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadPublicDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadPublicDataInvoker) Invoke() (*model.DownloadPublicDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadPublicDataResponse), nil
 	}
 }
 

@@ -9,9 +9,6 @@ import (
 // AddDesktopPoolVolumesRequest Request Object
 type AddDesktopPoolVolumesRequest struct {
 
-	// CBC接口回调时，请求头里带上的业务ID
-	ServiceTransactionId *string `json:"Service-Transaction-Id,omitempty"`
-
 	// 桌面池ID。
 	PoolId string `json:"pool_id"`
 

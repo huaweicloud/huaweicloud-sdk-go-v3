@@ -9,7 +9,7 @@ import (
 // ListNatMappingConfigsRequest Request Object
 type ListNatMappingConfigsRequest struct {
 
-	// 站点ID
+	// 站点ID。
 	SiteId *string `json:"site_id,omitempty"`
 }
 

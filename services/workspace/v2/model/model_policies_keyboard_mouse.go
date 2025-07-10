@@ -21,7 +21,7 @@ type PoliciesKeyboardMouse struct {
 	// 虚拟机外部光标反馈。取值为： false：表示关闭。 true：表示开启。
 	ExternalCursorFeedback *bool `json:"external_cursor_feedback,omitempty"`
 
-	// 自助维护台抢占登陆。取值为： false：表示关闭。 true：表示开启。
+	// 自助维护台抢占登录。取值为： false：表示关闭。 true：表示开启。
 	SelfhelpConsoleEnable *bool `json:"selfhelp_console_enable,omitempty"`
 
 	// 客户端鼠标发送间隔。取值范围为[1-30]。默认：30。

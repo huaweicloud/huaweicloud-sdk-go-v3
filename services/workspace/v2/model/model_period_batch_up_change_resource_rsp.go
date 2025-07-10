@@ -6,18 +6,18 @@ import (
 	"strings"
 )
 
-// PeriodBatchUpChangeResourceRsp 桌面池升配变更询价响应体
+// PeriodBatchUpChangeResourceRsp 桌面池升配变更询价响应体。
 type PeriodBatchUpChangeResourceRsp struct {
 
-	// 币种，比如CNY
+	// 币种，比如CNY。
 	Currency *string `json:"currency,omitempty"`
 
-	// 扩展参数
+	// 扩展参数。
 	ExtendParams *string `json:"extend_params,omitempty"`
 
 	OfficialWebsiteRatingResult *OfficialWebsiteRatingResult `json:"official_website_rating_result,omitempty"`
 
-	// 存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果
+	// 存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果。
 	OptionalDiscountRatingResults *[]OptionalDiscountRatingResult `json:"optional_discount_rating_results,omitempty"`
 }
 

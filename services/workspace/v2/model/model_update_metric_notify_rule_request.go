@@ -9,7 +9,7 @@ import (
 // UpdateMetricNotifyRuleRequest Request Object
 type UpdateMetricNotifyRuleRequest struct {
 
-	// 通知规则ID
+	// 通知规则ID。
 	RuleId string `json:"rule_id"`
 
 	Body *UpdateMetricNotifyRuleReq `json:"body,omitempty"`

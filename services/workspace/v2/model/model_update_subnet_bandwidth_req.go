@@ -14,11 +14,8 @@ type UpdateSubnetBandwidthReq struct {
 	// 云办公带宽大小。
 	BandwidthSize *int32 `json:"bandwidth_size,omitempty"`
 
-	// 企业项目ID，默认\"0\"
+	// 企业项目ID，默认\"0。\"
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
-
-	// 包周期订购ID，CBC订购回调时使用。
-	OrderId *string `json:"order_id,omitempty"`
 
 	// 计费模式 - wks_bandwidth：按带宽计费。 - free: 不计费，不支持包周期订购。 - wks_traffic：按流量计费
 	ChargeMode *string `json:"charge_mode,omitempty"`

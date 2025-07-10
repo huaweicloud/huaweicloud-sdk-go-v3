@@ -36,8 +36,11 @@ type ListHotWordsRequest struct {
 	// sis服务所在区域
 	Region *int32 `json:"region,omitempty"`
 
-	// 智能交互语言  * zh_CN：简体中文（已下线，请使用CN）  * en_US：英语（已下线，请使用EN）  * CN: 中文  * EN: 英文
+	// 智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
 	Language *ListHotWordsRequestLanguage `json:"language,omitempty"`
+
+	// * SIS:SIS热词 * MOBVOI:奇妙问ASR热词
+	HotWordsType *ListHotWordsRequestHotWordsType `json:"hot_words_type,omitempty"`
 }
 
 func (o ListHotWordsRequest) String() string {
@@ -54,10 +57,14 @@ type ListHotWordsRequestLanguage struct {
 }
 
 type ListHotWordsRequestLanguageEnum struct {
-	ZH_CN ListHotWordsRequestLanguage
-	EN_US ListHotWordsRequestLanguage
-	CN    ListHotWordsRequestLanguage
-	EN    ListHotWordsRequestLanguage
+	ZH_CN  ListHotWordsRequestLanguage
+	EN_US  ListHotWordsRequestLanguage
+	CN     ListHotWordsRequestLanguage
+	EN     ListHotWordsRequestLanguage
+	ESP    ListHotWordsRequestLanguage
+	POR    ListHotWordsRequestLanguage
+	ARABIC ListHotWordsRequestLanguage
+	THAI   ListHotWordsRequestLanguage
 }
 
 func GetListHotWordsRequestLanguageEnum() ListHotWordsRequestLanguageEnum {
@@ -74,6 +81,18 @@ func GetListHotWordsRequestLanguageEnum() ListHotWordsRequestLanguageEnum {
 		EN: ListHotWordsRequestLanguage{
 			value: "EN",
 		},
+		ESP: ListHotWordsRequestLanguage{
+			value: "ESP",
+		},
+		POR: ListHotWordsRequestLanguage{
+			value: "por",
+		},
+		ARABIC: ListHotWordsRequestLanguage{
+			value: "Arabic",
+		},
+		THAI: ListHotWordsRequestLanguage{
+			value: "Thai",
+		},
 	}
 }
 
@@ -86,6 +105,53 @@ func (c ListHotWordsRequestLanguage) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ListHotWordsRequestLanguage) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListHotWordsRequestHotWordsType struct {
+	value string
+}
+
+type ListHotWordsRequestHotWordsTypeEnum struct {
+	SIS    ListHotWordsRequestHotWordsType
+	MOBVOI ListHotWordsRequestHotWordsType
+}
+
+func GetListHotWordsRequestHotWordsTypeEnum() ListHotWordsRequestHotWordsTypeEnum {
+	return ListHotWordsRequestHotWordsTypeEnum{
+		SIS: ListHotWordsRequestHotWordsType{
+			value: "SIS",
+		},
+		MOBVOI: ListHotWordsRequestHotWordsType{
+			value: "MOBVOI",
+		},
+	}
+}
+
+func (c ListHotWordsRequestHotWordsType) Value() string {
+	return c.value
+}
+
+func (c ListHotWordsRequestHotWordsType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListHotWordsRequestHotWordsType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

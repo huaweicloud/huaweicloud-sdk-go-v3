@@ -837,6 +837,22 @@ func (i *UpdateInstanceParamInvoker) Invoke() (*model.UpdateInstanceParamRespons
 	}
 }
 
+type UpdateInstancePortInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstancePortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInstancePortInvoker) Invoke() (*model.UpdateInstancePortResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstancePortResponse), nil
+	}
+}
+
 type UpdateInstanceSecurityGroupInvoker struct {
 	*invoker.BaseInvoker
 }

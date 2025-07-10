@@ -9,29 +9,26 @@ import (
 	"strings"
 )
 
-// SiteInfo 站点信息
+// SiteInfo 站点信息。
 type SiteInfo struct {
 
-	// 站点id
+	// 站点id。
 	SiteId *string `json:"site_id,omitempty"`
 
-	// 站点名字
+	// 站点名字。
 	SiteName *string `json:"site_name,omitempty"`
 
 	// 配置状态。 - CENTER： 中心初始化 - IES： 边缘初始化
 	SiteType *SiteInfoSiteType `json:"site_type,omitempty"`
 
-	// 项目ID
+	// 项目ID。
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 站点状态
+	// 站点状态。
 	Status *string `json:"status,omitempty"`
 
-	// 创建时间
+	// 创建时间。
 	CreateTime *string `json:"create_time,omitempty"`
-
-	// 网关节点信息
-	AgentInfo *[]Vag `json:"agent_info,omitempty"`
 }
 
 func (o SiteInfo) String() string {

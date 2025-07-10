@@ -9,10 +9,10 @@ import (
 // PublicIp 弹性IP信息。
 type PublicIp struct {
 
-	// 弹性IP唯一标识
+	// 弹性IP唯一标识。
 	Id *string `json:"id,omitempty"`
 
-	// 弹性IP地址
+	// 弹性IP地址。
 	PublicIpAddress *string `json:"public_ip_address,omitempty"`
 }
 

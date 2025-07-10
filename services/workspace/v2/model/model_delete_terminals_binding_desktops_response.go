@@ -9,7 +9,7 @@ import (
 // DeleteTerminalsBindingDesktopsResponse Response Object
 type DeleteTerminalsBindingDesktopsResponse struct {
 
-	// 需删除的策略ID列表
+	// 需删除的策略ID列表。
 	ResultList     *[]DeleteTerminalsBindingDesktopsResult `json:"result_list,omitempty"`
 	HttpStatusCode int                                     `json:"-"`
 }

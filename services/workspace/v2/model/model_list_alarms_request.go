@@ -9,13 +9,13 @@ import (
 // ListAlarmsRequest Request Object
 type ListAlarmsRequest struct {
 
-	// 告警级别 | 1 - 紧急 2 - 重要 3 - 次要 4 - 提示
+	// 告警级别 | 1 - 紧急 2 - 重要 3 - 次要 4 - 提示。
 	Level *int32 `json:"level,omitempty"`
 
-	// 分页偏移量
+	// 分页偏移量。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 分页大小
+	// 分页大小，默认100。
 	Limit *int32 `json:"limit,omitempty"`
 }
 

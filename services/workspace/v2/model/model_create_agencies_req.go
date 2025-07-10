@@ -12,7 +12,7 @@ import (
 // CreateAgenciesReq 开通委托功能请求体。
 type CreateAgenciesReq struct {
 
-	// 委托场景。 - WORKSPACE：云桌面。 - CLOUD_GAME：云游戏。
+	// 委托场景。   - WORKSPACE：云桌面。   - CLOUD_GAME：云游戏。   - CLOUD_STORAGE：云存储。   - SCREEN_RECORD：录屏审计。
 	Scene *CreateAgenciesReqScene `json:"scene,omitempty"`
 }
 
@@ -30,8 +30,10 @@ type CreateAgenciesReqScene struct {
 }
 
 type CreateAgenciesReqSceneEnum struct {
-	WORKSPACE  CreateAgenciesReqScene
-	CLOUD_GAME CreateAgenciesReqScene
+	WORKSPACE     CreateAgenciesReqScene
+	CLOUD_GAME    CreateAgenciesReqScene
+	CLOUD_STORAGE CreateAgenciesReqScene
+	SCREEN_RECORD CreateAgenciesReqScene
 }
 
 func GetCreateAgenciesReqSceneEnum() CreateAgenciesReqSceneEnum {
@@ -41,6 +43,12 @@ func GetCreateAgenciesReqSceneEnum() CreateAgenciesReqSceneEnum {
 		},
 		CLOUD_GAME: CreateAgenciesReqScene{
 			value: "CLOUD_GAME",
+		},
+		CLOUD_STORAGE: CreateAgenciesReqScene{
+			value: "CLOUD_STORAGE",
+		},
+		SCREEN_RECORD: CreateAgenciesReqScene{
+			value: "SCREEN_RECORD",
 		},
 	}
 }

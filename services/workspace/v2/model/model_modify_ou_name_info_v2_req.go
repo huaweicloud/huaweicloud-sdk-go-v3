@@ -11,10 +11,10 @@ type ModifyOuNameInfoV2Req struct {
 	// ouid。
 	Id *string `json:"id,omitempty"`
 
-	// OU名称
+	// OU名称。
 	OuName string `json:"ou_name"`
 
-	// 描述
+	// 描述。
 	Description *string `json:"description,omitempty"`
 }
 

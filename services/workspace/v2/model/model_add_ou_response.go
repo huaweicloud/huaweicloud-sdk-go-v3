@@ -9,7 +9,7 @@ import (
 // AddOuResponse Response Object
 type AddOuResponse struct {
 
-	// 创建OU的id
+	// 创建OU的id。
 	Id             *string `json:"id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

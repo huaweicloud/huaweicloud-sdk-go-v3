@@ -9,13 +9,13 @@ import (
 // ScheduledTasksRecordsDetails 定时任务执行记录详情。
 type ScheduledTasksRecordsDetails struct {
 
-	// 任务执行记录详情id
+	// 任务执行记录详情id。
 	Id *string `json:"id,omitempty"`
 
-	// 任务执行记录id
+	// 任务执行记录id。
 	RecordId *string `json:"record_id,omitempty"`
 
-	// 桌面id
+	// 桌面id。
 	DesktopId *string `json:"desktop_id,omitempty"`
 
 	// 桌面名称。
@@ -39,7 +39,7 @@ type ScheduledTasksRecordsDetails struct {
 	// 执行结束时间，格式为yyyy-MM-dd HH:mm:ss。
 	EndTime *string `json:"end_time,omitempty"`
 
-	// 时区
+	// 时区。
 	TimeZone *string `json:"time_zone,omitempty"`
 }
 

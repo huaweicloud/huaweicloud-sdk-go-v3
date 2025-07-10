@@ -18,7 +18,7 @@ type ListTargetOfPolicyGroupRequest struct {
 	// 对象名称，支持模糊查询。
 	TargetName *string `json:"target_name,omitempty"`
 
-	// 每页数量。范围0-1000
+	// 每页数量。范围0-1000。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 偏移量。

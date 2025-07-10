@@ -10,7 +10,7 @@ import (
 type ListScreenRecordsResponse struct {
 
 	// 录屏记录。
-	ScreenRecords *[]QueryScreenRecordDetailRsp `json:"screen_records,omitempty"`
+	ScreenRecords *[]ScreenRecordDetail `json:"screen_records,omitempty"`
 
 	// 总数。
 	TotalCount     *int32 `json:"total_count,omitempty"`

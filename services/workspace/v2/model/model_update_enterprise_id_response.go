@@ -9,7 +9,7 @@ import (
 // UpdateEnterpriseIdResponse Response Object
 type UpdateEnterpriseIdResponse struct {
 
-	// 企业ID
+	// 企业ID。
 	EnterpriseId   *string `json:"enterprise_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

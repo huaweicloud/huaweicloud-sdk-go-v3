@@ -12,7 +12,7 @@ type Eips struct {
 	// EIP的id。
 	Id *string `json:"id,omitempty"`
 
-	// Eip地址。
+	// EIP地址。
 	Address *string `json:"address,omitempty"`
 
 	// 带宽大小。
@@ -30,7 +30,7 @@ type Eips struct {
 	// 绑定的桌面名称。
 	AttachedDesktopName *string `json:"attached_desktop_name,omitempty"`
 
-	// 企业项目ID
+	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 

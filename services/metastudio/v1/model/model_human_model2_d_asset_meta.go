@@ -38,6 +38,9 @@ type HumanModel2DAssetMeta struct {
 
 	// 是否是Flexus版本分身数字人。
 	IsFlexus *bool `json:"is_flexus,omitempty"`
+
+	// 形象关联的声音资产ID。
+	VoiceAssetId *string `json:"voice_asset_id,omitempty"`
 }
 
 func (o HumanModel2DAssetMeta) String() string {

@@ -9,13 +9,13 @@ import (
 // DesktopMetricNotifyRecord 对应指标维度产生的告警记录
 type DesktopMetricNotifyRecord struct {
 
-	// 满足通知规则阈值的桌面数
+	// 满足通知规则阈值的桌面数。
 	MatchCount *int32 `json:"match_count,omitempty"`
 
-	// 指标名称
+	// 指标名称。
 	MetricName *string `json:"metric_name,omitempty"`
 
-	// 统计持续周期(天)
+	// 统计持续周期(天)。
 	Threshold *int32 `json:"threshold,omitempty"`
 
 	// 统计指标对应的统计值和threshold进行比较的条件 * `>=` -  统计指标大于等于threshold时触发 * `>` -   统计指标大于threshold时触发 * `=` -  统计指标等于threshold时触发 * `<=` -  统计指标小于等于threshold时触发 * `<` -  统计指标小于threshold时触发

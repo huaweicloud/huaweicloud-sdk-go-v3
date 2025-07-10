@@ -32,8 +32,7 @@ type GetJobInfoResponseBodyJob struct {
 
 	Instance *GetTaskDetailListRspJobsInstance `json:"instance"`
 
-	// 根据不同的任务，显示不同的内容。
-	Entities *interface{} `json:"entities,omitempty"`
+	Entities *GetJobInfoResponseBodyJobEntities `json:"entities,omitempty"`
 
 	// 任务执行失败时的错误信息。
 	FailReason *string `json:"fail_reason,omitempty"`

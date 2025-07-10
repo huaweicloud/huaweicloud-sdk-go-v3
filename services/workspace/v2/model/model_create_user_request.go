@@ -43,6 +43,12 @@ type CreateUserRequest struct {
 
 	// 别名。
 	AliasName *string `json:"alias_name,omitempty"`
+
+	// 企业项目ID
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 用户信息映射，包含用户的服务等级、操作模式和类型。
+	UserInfoMap *string `json:"user_info_map,omitempty"`
 }
 
 func (o CreateUserRequest) String() string {

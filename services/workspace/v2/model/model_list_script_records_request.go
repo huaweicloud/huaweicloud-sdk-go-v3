@@ -9,10 +9,10 @@ import (
 // ListScriptRecordsRequest Request Object
 type ListScriptRecordsRequest struct {
 
-	// 查询的偏移量。
+	// 查询的偏移量，默认值0。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 单次查询的大小[1-100]。
+	// 单次查询的大小[1-100]，默认值10。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 执行脚本的资源ID列表。

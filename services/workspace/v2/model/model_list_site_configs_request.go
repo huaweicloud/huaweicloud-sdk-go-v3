@@ -9,7 +9,7 @@ import (
 // ListSiteConfigsRequest Request Object
 type ListSiteConfigsRequest struct {
 
-	// 可用区
+	// 可用区。
 	AvailabilityZoneId *string `json:"availability_zone_id,omitempty"`
 
 	// 站点类型，支持CENTER、IES。

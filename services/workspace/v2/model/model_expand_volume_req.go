@@ -6,11 +6,8 @@ import (
 	"strings"
 )
 
-// ExpandVolumeReq 扩容磁盘请求
+// ExpandVolumeReq 扩容磁盘请求。
 type ExpandVolumeReq struct {
-
-	// 订单ID，包周期桌面扩容时使用。
-	OrderId *string `json:"order_id,omitempty"`
 
 	// 扩容后的磁盘大小，单位为GB。
 	NewSize int32 `json:"new_size"`

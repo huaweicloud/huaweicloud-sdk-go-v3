@@ -10,7 +10,9 @@ import (
 type UpdateHotWordsReq struct {
 	HotWordsType *HotWordsTypeEnum `json:"hot_words_type"`
 
-	SisHotWords *UpdateSisHotWords `json:"sis_hot_words"`
+	SisHotWords *UpdateSisHotWords `json:"sis_hot_words,omitempty"`
+
+	MobvoiHotWords *UpdateMobvoiHotWords `json:"mobvoi_hot_words,omitempty"`
 }
 
 func (o UpdateHotWordsReq) String() string {

@@ -81,6 +81,8 @@ type PrePaidServer struct {
 	SerialConsoleOptions *SerialConsoleOptions `json:"serial_console_options,omitempty"`
 
 	MetadataOptions *UpdateServerMetadataOptionsRequestBody `json:"metadata_options,omitempty"`
+
+	EnclaveOptions *EnclaveOptions `json:"enclave_options,omitempty"`
 }
 
 func (o PrePaidServer) String() string {

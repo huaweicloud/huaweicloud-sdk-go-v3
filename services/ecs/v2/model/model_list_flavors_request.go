@@ -14,6 +14,10 @@ type ListFlavorsRequest struct {
 
 	// 规格id
 	FlavorId *string `json:"flavor_id,omitempty"`
+
+	Limit *int32 `json:"limit,omitempty"`
+
+	Marker *string `json:"marker,omitempty"`
 }
 
 func (o ListFlavorsRequest) String() string {

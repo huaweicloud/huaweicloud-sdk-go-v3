@@ -9,10 +9,10 @@ import (
 // ListDesktopUsageMetricResponse Response Object
 type ListDesktopUsageMetricResponse struct {
 
-	// 总数
+	// 总数。
 	Count *int32 `json:"count,omitempty"`
 
-	// 桌面统计指标
+	// 桌面统计指标。
 	Items          *[]DesktopMetric `json:"items,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

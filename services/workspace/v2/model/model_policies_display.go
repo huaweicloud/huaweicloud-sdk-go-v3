@@ -45,7 +45,7 @@ type PoliciesDisplay struct {
 	// 计算机修改分辨率：取值为： false：表示关闭。 true：表示开启。
 	ChangeResolutionVm *bool `json:"change_resolution_vm,omitempty"`
 
-	// 应用感知配置。
+	// 应用感知配置。长度不能超过1024个字符。
 	ApplicationRecognition *string `json:"application_recognition,omitempty"`
 
 	// 同屏显示。取值为： false：表示关闭。 true：表示开启。
@@ -55,7 +55,7 @@ type PoliciesDisplay struct {
 	DefaultMappingOrder *string `json:"default_mapping_order,omitempty"`
 
 	// 同屏显示模式。取值为： One-to-One：表示仅支持单路。 One-to-Many：表示支持多路。
-	DuplicateDisplayMode *PoliciesDisplayDuplicateDisplayMode `json:"duplicate_display_mode,omitempty"`
+	DuplicateDisplayMode *string `json:"duplicate_display_mode,omitempty"`
 }
 
 func (o PoliciesDisplay) String() string {
@@ -108,53 +108,6 @@ func (c PoliciesDisplayDisplayLevel) MarshalJSON() ([]byte, error) {
 }
 
 func (c *PoliciesDisplayDisplayLevel) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type PoliciesDisplayDuplicateDisplayMode struct {
-	value string
-}
-
-type PoliciesDisplayDuplicateDisplayModeEnum struct {
-	ONE_TO_ONE  PoliciesDisplayDuplicateDisplayMode
-	ONE_TO_MANY PoliciesDisplayDuplicateDisplayMode
-}
-
-func GetPoliciesDisplayDuplicateDisplayModeEnum() PoliciesDisplayDuplicateDisplayModeEnum {
-	return PoliciesDisplayDuplicateDisplayModeEnum{
-		ONE_TO_ONE: PoliciesDisplayDuplicateDisplayMode{
-			value: "One-to-One",
-		},
-		ONE_TO_MANY: PoliciesDisplayDuplicateDisplayMode{
-			value: "One-to-Many",
-		},
-	}
-}
-
-func (c PoliciesDisplayDuplicateDisplayMode) Value() string {
-	return c.value
-}
-
-func (c PoliciesDisplayDuplicateDisplayMode) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *PoliciesDisplayDuplicateDisplayMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

@@ -18,7 +18,7 @@ type AdDomain struct {
 	// 域名称。域类型为LOCAL_AD时需要配置。 域名必须为AD服务器上已经存在的域名，且长度不超过55。
 	DomainName *string `json:"domain_name,omitempty"`
 
-	// 域管理员帐号。域类型为LOCAL_AD时需要配置。 必须为AD服务器上已经存在的域管理员帐号。
+	// 域管理员账号。域类型为LOCAL_AD时需要配置。 必须为AD服务器上已经存在的域管理员账号。
 	DomainAdminAccount *string `json:"domain_admin_account,omitempty"`
 
 	// 域管理员账号密码。域类型为LOCAL_AD时需要配置。

@@ -9,17 +9,14 @@ import (
 
 var (
 	CN_NORTH_4 = region.NewRegion("cn-north-4",
-		"https://eihealth.cn-north-4.myhuaweicloud.com")
+		"https://ai4sservice.cn-north-4.myhuaweicloud.com")
 	CN_EAST_3 = region.NewRegion("cn-east-3",
-		"https://eihealth.cn-east-3.myhuaweicloud.com")
-	CN_SOUTH_1 = region.NewRegion("cn-south-1",
-		"https://eihealth.cn-south-1.myhuaweicloud.com")
+		"https://ai4sservice.cn-east-3.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
 	"cn-north-4": CN_NORTH_4,
 	"cn-east-3":  CN_EAST_3,
-	"cn-south-1": CN_SOUTH_1,
 }
 
 var provider = region.DefaultProviderChain("EIHEALTH")

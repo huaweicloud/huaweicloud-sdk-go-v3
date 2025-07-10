@@ -15,17 +15,11 @@ type BatchActionDesktopsReq struct {
 	// 操作的桌面ID列表。
 	DesktopIds []string `json:"desktop_ids"`
 
-	// 操作类型。 -os-start 启动。 -reboot 重启。 -os-stop 关机。 -os-hibernate 休眠。
+	// 操作类型。 - os-start 启动。 - reboot 重启。 - os-stop 关机。 - os-hibernate 休眠。
 	OpType string `json:"op_type"`
 
 	// SOFT：普通操作；HARD：强制操作。例如type为HARD，op_type为os-stop代表强制关机。
 	Type *BatchActionDesktopsReqType `json:"type,omitempty"`
-
-	// 专属主机id，op_type值为os-start时本参数才生效，仅支持单个桌面操作，实现将关机的桌面先迁移到指定专属主机再开机，迁移过程耗时较长，需要等待一段时间。
-	HostId *string `json:"host_id,omitempty"`
-
-	// 项目ID。
-	ProjectId *string `json:"project_id,omitempty"`
 }
 
 func (o BatchActionDesktopsReq) String() string {

@@ -18,7 +18,7 @@ type ListDesktopsStatisticsResponse struct {
 
 	LoginStateStatistics *DesktopLoginStatisticsRsp `json:"login_state_statistics,omitempty"`
 
-	// 每个桌面池的情况统计，当desktop_type指定为POOL时返回
+	// 每个桌面池的情况统计，当desktop_type指定为POOL时返回。
 	DesktopPoolStatistics *[]DesktopPoolStatistics `json:"desktop_pool_statistics,omitempty"`
 	HttpStatusCode        int                      `json:"-"`
 }

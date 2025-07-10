@@ -9,19 +9,19 @@ import (
 // ListJobsRequest Request Object
 type ListJobsRequest struct {
 
-	// 查询的偏移量。
+	// 查询的偏移量，默认值0。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 单次查询的大小[1-100]。
+	// 单次查询的大小[1-100]，默认值10。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 实例ID
+	// 实例ID。
 	InstanceId *string `json:"instance_id,omitempty"`
 
-	// 应用ID
+	// 应用ID。
 	AppId *string `json:"app_id,omitempty"`
 
-	// 安装实例的用户
+	// 安装实例的用户。
 	Target *string `json:"target,omitempty"`
 
 	// 任务状态： * `INIT` - 初始化中 * `WAITING` - 等待安装结束 * `SUCCESS` - 成功 * `FAIL` - 失败任务状态

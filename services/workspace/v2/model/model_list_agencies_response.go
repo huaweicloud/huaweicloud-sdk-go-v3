@@ -9,7 +9,7 @@ import (
 // ListAgenciesResponse Response Object
 type ListAgenciesResponse struct {
 
-	// 委托信息
+	// 委托信息。
 	ExistingAgencies *[]AgenciesInfo `json:"existing_agencies,omitempty"`
 	HttpStatusCode   int             `json:"-"`
 }

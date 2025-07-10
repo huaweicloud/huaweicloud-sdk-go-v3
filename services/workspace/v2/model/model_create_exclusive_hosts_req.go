@@ -21,16 +21,13 @@ type CreateExclusiveHostsReq struct {
 	// 购买数量。
 	Quantity int32 `json:"quantity"`
 
-	// 订单ID。
-	OrderId *string `json:"order_id,omitempty"`
-
 	// 产品套餐ID。
 	ProductId string `json:"product_id"`
 
 	// 镜像盘列表。
 	ImageVolumes []Volume `json:"image_volumes"`
 
-	// 企业项目ID，默认\"0\"
+	// 企业项目ID，默认\"0。\"
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 存储盘列表。

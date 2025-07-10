@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// VdiDisconnectHibernateOptions 休眠断开选项
+// VdiDisconnectHibernateOptions 休眠断开选项。
 type VdiDisconnectHibernateOptions struct {
 
 	// 断连休眠时间。

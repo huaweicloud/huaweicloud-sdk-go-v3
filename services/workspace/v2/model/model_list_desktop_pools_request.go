@@ -15,7 +15,7 @@ type ListDesktopPoolsRequest struct {
 	// 桌面池类型，DYNAMIC：动态池，STATIC：静态池。
 	Type *string `json:"type,omitempty"`
 
-	// 企业项目ID
+	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 用于分页查询，查询的起始记录序号，从0开始。
@@ -24,7 +24,7 @@ type ListDesktopPoolsRequest struct {
 	// 用于分页查询，取值范围0-1000，默认值1000。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 按照维护状态过滤
+	// 按照维护状态过滤。
 	InMaintenanceMode *bool `json:"in_maintenance_mode,omitempty"`
 }
 

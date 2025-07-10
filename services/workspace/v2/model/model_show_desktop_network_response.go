@@ -9,13 +9,13 @@ import (
 // ShowDesktopNetworkResponse Response Object
 type ShowDesktopNetworkResponse struct {
 
-	// 桌面名称
+	// 桌面名称。
 	ComputerName *string `json:"computer_name,omitempty"`
 
-	// 桌面ID
+	// 桌面ID。
 	ComputerId *string `json:"computer_id,omitempty"`
 
-	// 桌面网络信息
+	// 桌面网络信息。
 	NetworkInfos   *[]NetworkInfo `json:"network_infos,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

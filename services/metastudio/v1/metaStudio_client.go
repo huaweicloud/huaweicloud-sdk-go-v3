@@ -229,6 +229,27 @@ func (c *MetaStudioClient) CreateDialogUrlInvoker(request *model.CreateDialogUrl
 	return &CreateDialogUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSmartChatJob 查询数字人智能交互任务列表
+//
+// 该接口用于查询数字人智能交互任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListSmartChatJob(request *model.ListSmartChatJobRequest) (*model.ListSmartChatJobResponse, error) {
+	requestDef := GenReqDefForListSmartChatJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSmartChatJobResponse), nil
+	}
+}
+
+// ListSmartChatJobInvoker 查询数字人智能交互任务列表
+func (c *MetaStudioClient) ListSmartChatJobInvoker(request *model.ListSmartChatJobRequest) *ListSmartChatJobInvoker {
+	requestDef := GenReqDefForListSmartChatJob()
+	return &ListSmartChatJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSmartChatJob 查询数字人智能交互任务
 //
 // 该接口用于查询数字人智能交互任务。
@@ -3557,7 +3578,7 @@ func (c *MetaStudioClient) ListTtsaJobsInvoker(request *model.ListTtsaJobsReques
 
 // CreateAsyncTtsJob 创建TTS异步任务
 //
-// 该接口用于对外生成音频文件。每个预制音色的计费标准详见[预置音色计费标准](metastudio_02_0060.xml)。
+// 该接口用于对外生成音频文件。每个预置音色的计费标准详见[预置音色计费标准](metastudio_02_0060.xml)。
 //
 // &gt; 使用本接口前，需要在MetaStudio控制台服务概览页面，开通“声音合成”的按需计费。
 // &gt; 详细操作为：单击“声音合成”卡片中的“去开通”，在弹出的“开通按需计费服务提示”对话框中，勾选同意协议。单击“确定”，开通按需计费。

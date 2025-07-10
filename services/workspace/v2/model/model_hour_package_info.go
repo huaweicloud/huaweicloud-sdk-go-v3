@@ -30,7 +30,7 @@ type HourPackageInfo struct {
 	// 小时包总时长。
 	PackageDuration *int32 `json:"package_duration,omitempty"`
 
-	// 小时包已用用时长。
+	// 小时包已用时长。
 	UseDuration *int32 `json:"use_duration,omitempty"`
 }
 

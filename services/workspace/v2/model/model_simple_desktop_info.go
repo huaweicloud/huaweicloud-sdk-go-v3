@@ -8,6 +8,12 @@ import (
 
 type SimpleDesktopInfo struct {
 
+	// domainId。
+	DomainId *string `json:"domain_id,omitempty"`
+
+	// 项目id。
+	ProjectId *string `json:"project_id,omitempty"`
+
 	// 桌面ID。
 	DesktopId *string `json:"desktop_id,omitempty"`
 
@@ -38,19 +44,19 @@ type SimpleDesktopInfo struct {
 	// ou名称。
 	OuName *string `json:"ou_name,omitempty"`
 
-	// 企业项目ID
+	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 标签列表。
 	Tags *[]Tag `json:"tags,omitempty"`
 
-	// 是否处于管理员维护模式
+	// 是否处于管理员维护模式。
 	InMaintenanceMode *bool `json:"in_maintenance_mode,omitempty"`
 
-	// 桌面协同资源SKU码
+	// 桌面协同资源SKU码。
 	ShareResourceSku *string `json:"share_resource_sku,omitempty"`
 
-	// 桌面类型
+	// 桌面类型。
 	DesktopType *string `json:"desktop_type,omitempty"`
 
 	// 桌面的子网ID。

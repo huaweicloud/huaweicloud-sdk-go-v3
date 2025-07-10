@@ -9,7 +9,7 @@ import (
 // ListTimeZonesRequest Request Object
 type ListTimeZonesRequest struct {
 
-	// 按照时区name过滤
+	// 按照时区name过滤。
 	TimeZoneName *string `json:"time_zone_name,omitempty"`
 }
 

@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// NetworkConfigReq 网络配置
+// NetworkConfigReq 网络配置。
 type NetworkConfigReq struct {
 
-	// VPC ID
+	// VPC ID。
 	VpcId *string `json:"vpc_id,omitempty"`
 
-	// 指定业务子网的网络id
+	// 指定业务子网的网络id。
 	SubnetIds *[]string `json:"subnet_ids,omitempty"`
 }
 

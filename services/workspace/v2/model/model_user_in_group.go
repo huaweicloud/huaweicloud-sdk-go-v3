@@ -24,6 +24,9 @@ type UserInGroup struct {
 	// 用户桌面数。
 	TotalDesktops *int32 `json:"total_desktops,omitempty"`
 
+	// 企业项ID。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
 	// 用户描述。
 	Description *string `json:"description,omitempty"`
 }

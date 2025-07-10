@@ -44,7 +44,7 @@ type UserDetail struct {
 	// 用户在域树上的唯一位置。
 	DistinguishedName *string `json:"distinguished_name,omitempty"`
 
-	// 帐号类型(0：用户；1：用户组)。
+	// 账号类型(0：用户；1：用户组)。
 	AccountType *int32 `json:"account_type,omitempty"`
 
 	// UTC时间毫秒数对应的字符，格式为：yyyy-MM-ddTHH:mm:ss.SSSZ。
@@ -53,7 +53,7 @@ type UserDetail struct {
 	// 账号有效期最后一天对应的UTC时间，以毫秒为单位。
 	AccountExpires *int64 `json:"account_expires,omitempty"`
 
-	// 是否是预创建的用户，true表示是预创建用户，false表示不是预创建用户
+	// 是否是预创建的用户，true表示是预创建用户，false表示不是预创建用户。
 	IsPreUser *bool `json:"is_pre_user,omitempty"`
 
 	// 账户是否过期，true表示过期，false表示未过期。
@@ -77,10 +77,10 @@ type UserDetail struct {
 	// 加入的组列表。
 	GroupNames *[]string `json:"group_names,omitempty"`
 
-	// 用户是否订阅协同，true表示已订阅，false表示未订阅
+	// 用户是否订阅协同，true表示已订阅，false表示未订阅。
 	ShareSpaceSubscription *bool `json:"share_space_subscription,omitempty"`
 
-	// 用户已绑定协同桌面数
+	// 用户已绑定协同桌面数。
 	ShareSpaceDesktops *int32 `json:"share_space_desktops,omitempty"`
 
 	// 用户绑定桌面云总数。

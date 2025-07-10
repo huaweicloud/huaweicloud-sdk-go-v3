@@ -981,6 +981,22 @@ func (i *ShowJobNoticeConfigInfoInvoker) Invoke() (*model.ShowJobNoticeConfigInf
 	}
 }
 
+type ShowJobPipelineInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowJobPipelineInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowJobPipelineInfoInvoker) Invoke() (*model.ShowJobPipelineInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowJobPipelineInfoResponse), nil
+	}
+}
+
 type ShowJobRolePermissionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1061,6 +1077,22 @@ func (i *ShowRunningStatusInvoker) Invoke() (*model.ShowRunningStatusResponse, e
 	}
 }
 
+type StopTheJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopTheJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StopTheJobInvoker) Invoke() (*model.StopTheJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopTheJobResponse), nil
+	}
+}
+
 type UpdateNewJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1074,6 +1106,22 @@ func (i *UpdateNewJobInvoker) Invoke() (*model.UpdateNewJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateNewJobResponse), nil
+	}
+}
+
+type AddKeystorePermissionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddKeystorePermissionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddKeystorePermissionInvoker) Invoke() (*model.AddKeystorePermissionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddKeystorePermissionResponse), nil
 	}
 }
 
@@ -1186,6 +1234,22 @@ func (i *UpdateKeystoreInvoker) Invoke() (*model.UpdateKeystoreResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdateKeystoreResponse), nil
+	}
+}
+
+type UpdateKeystorePermissionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateKeystorePermissionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateKeystorePermissionInvoker) Invoke() (*model.UpdateKeystorePermissionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateKeystorePermissionResponse), nil
 	}
 }
 

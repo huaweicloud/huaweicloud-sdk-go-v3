@@ -15,7 +15,7 @@ type CreateResizeOrderRequestBody struct {
 	// 包周期桌面ID列表。 不可同时存在普通桌面和池桌面ID。
 	DesktopIds *[]string `json:"desktop_ids,omitempty"`
 
-	// 促销计划ID
+	// 促销计划ID。
 	PromotionPlanId *string `json:"promotion_plan_id,omitempty"`
 
 	// 目标规格产品ID。
@@ -23,8 +23,6 @@ type CreateResizeOrderRequestBody struct {
 
 	// 是否支持开机状态下执行变更规格操作。固定传值STOP_DESKTOP，如果桌面处于开机状态，会先关机再变更规格。
 	Mode *string `json:"mode,omitempty"`
-
-	ExtendParam *ResizeDesktopExtendParam `json:"extend_param,omitempty"`
 }
 
 func (o CreateResizeOrderRequestBody) String() string {

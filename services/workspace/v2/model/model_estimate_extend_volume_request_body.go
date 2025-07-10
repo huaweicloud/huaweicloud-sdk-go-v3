@@ -15,7 +15,7 @@ type EstimateExtendVolumeRequestBody struct {
 	// 包周期桌面ID列表。 不可同时存在普通桌面和池桌面ID。
 	DesktopIds *[]string `json:"desktop_ids,omitempty"`
 
-	// 促销计划ID
+	// 促销计划ID。
 	PromotionPlanId *string `json:"promotion_plan_id,omitempty"`
 }
 

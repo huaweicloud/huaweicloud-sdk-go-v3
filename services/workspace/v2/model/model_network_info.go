@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// NetworkInfo 桌面网络信息：vpc、子网、私有ip、弹性ip、安全组
+// NetworkInfo 桌面网络信息：vpc、子网、私有ip、弹性ip、安全组。
 type NetworkInfo struct {
 	VpcInfo *Vpc `json:"vpc_info,omitempty"`
 
@@ -16,8 +16,8 @@ type NetworkInfo struct {
 
 	PublicIpInfo *PublicIp `json:"public_ip_info,omitempty"`
 
-	// 桌面绑定的安全组列表
-	SecurityGroups *[]SecurityGroup `json:"security_groups,omitempty"`
+	// 桌面绑定的安全组列表。
+	SecurityGroups *[]SecurityGroupInfo `json:"security_groups,omitempty"`
 }
 
 func (o NetworkInfo) String() string {

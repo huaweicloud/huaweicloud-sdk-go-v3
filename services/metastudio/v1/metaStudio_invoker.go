@@ -165,6 +165,22 @@ func (i *CreateDialogUrlInvoker) Invoke() (*model.CreateDialogUrlResponse, error
 	}
 }
 
+type ListSmartChatJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSmartChatJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSmartChatJobInvoker) Invoke() (*model.ListSmartChatJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSmartChatJobResponse), nil
+	}
+}
+
 type ShowSmartChatJobInvoker struct {
 	*invoker.BaseInvoker
 }

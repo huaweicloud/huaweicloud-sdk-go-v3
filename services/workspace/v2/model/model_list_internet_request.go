@@ -9,13 +9,13 @@ import (
 // ListInternetRequest Request Object
 type ListInternetRequest struct {
 
-	// 企业项目ID
+	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// NAT网关名称
+	// NAT网关名称。
 	NatName *string `json:"nat_name,omitempty"`
 
-	// EIP地址
+	// EIP地址。
 	Eip *string `json:"eip,omitempty"`
 }
 

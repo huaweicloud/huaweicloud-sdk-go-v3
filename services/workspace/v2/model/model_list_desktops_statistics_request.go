@@ -12,10 +12,10 @@ import (
 // ListDesktopsStatisticsRequest Request Object
 type ListDesktopsStatisticsRequest struct {
 
-	// 桌面类型
+	// 桌面类型，为空时查所有桌面。 - DEDICATED：普通桌面，包括专享桌面、专属桌面等 - POOLED：池桌面，即桌面池里的桌面
 	DesktopType *[]string `json:"desktop_type,omitempty"`
 
-	// 统计类型，为空时仅统计桌面总数 |- - attach-state 按照分配状态统计 - login-state 按照登录状态统计 - run-state 按照运行状态统计
+	// 统计类型，为空时仅统计桌面总数 |- - attach-state 按照分配状态统计 - login-state 按照登录状态统计 - run-state 按照运行状态统计。
 	StatisticsType *[]ListDesktopsStatisticsRequestStatisticsType `json:"statistics_type,omitempty"`
 }
 

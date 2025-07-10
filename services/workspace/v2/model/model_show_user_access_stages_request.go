@@ -9,7 +9,7 @@ import (
 // ShowUserAccessStagesRequest Request Object
 type ShowUserAccessStagesRequest struct {
 
-	// 事务id
+	// 事务id。
 	TransactionId string `json:"transaction_id"`
 }
 

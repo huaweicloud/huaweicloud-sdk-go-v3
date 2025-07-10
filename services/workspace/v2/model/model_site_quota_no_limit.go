@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// SiteQuotaNoLimit 单个站点的配额
+// SiteQuotaNoLimit 单个站点的配额。
 type SiteQuotaNoLimit struct {
 
-	// 配额资源列表
+	// 配额资源列表。
 	Resources []ResourceNoLimit `json:"resources"`
 
-	// 站点ID
+	// 站点ID。
 	SiteId *string `json:"site_id,omitempty"`
 }
 

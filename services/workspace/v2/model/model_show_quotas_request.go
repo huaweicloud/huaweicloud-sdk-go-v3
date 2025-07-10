@@ -8,9 +8,6 @@ import (
 
 // ShowQuotasRequest Request Object
 type ShowQuotasRequest struct {
-
-	// 要查询的配额类型，只支持user。
-	Type *string `json:"type,omitempty"`
 }
 
 func (o ShowQuotasRequest) String() string {

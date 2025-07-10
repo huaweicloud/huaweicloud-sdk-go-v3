@@ -40,9 +40,6 @@ type JobDetailInfo struct {
 	// 任务ID。
 	JobId *string `json:"job_id,omitempty"`
 
-	// 任务成功结果。
-	SuccessResult *string `json:"success_result,omitempty"`
-
 	// 任务进度。
 	Process *int32 `json:"process,omitempty"`
 

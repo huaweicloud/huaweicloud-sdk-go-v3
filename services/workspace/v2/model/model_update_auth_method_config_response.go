@@ -9,7 +9,7 @@ import (
 // UpdateAuthMethodConfigResponse Response Object
 type UpdateAuthMethodConfigResponse struct {
 
-	// 项目ID
+	// 项目ID。
 	ProjectId      *string `json:"project_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

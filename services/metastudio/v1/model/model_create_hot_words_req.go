@@ -13,7 +13,9 @@ type CreateHotWordsReq struct {
 	// 应用ID。
 	RobotId string `json:"robot_id"`
 
-	SisHotWords *CreateSisHotWords `json:"sis_hot_words"`
+	SisHotWords *CreateSisHotWords `json:"sis_hot_words,omitempty"`
+
+	MobvoiHotWords *CreateMobvoiHotWords `json:"mobvoi_hot_words,omitempty"`
 }
 
 func (o CreateHotWordsReq) String() string {

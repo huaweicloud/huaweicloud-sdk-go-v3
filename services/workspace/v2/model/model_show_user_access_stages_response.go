@@ -12,13 +12,13 @@ import (
 // ShowUserAccessStagesResponse Response Object
 type ShowUserAccessStagesResponse struct {
 
-	// 用户名
+	// 用户名。
 	Username *string `json:"username,omitempty"`
 
-	// 接入阶段 | APP - 应用 DESKTOP - 桌面
+	// 接入阶段 | APP - 应用 DESKTOP - 桌面。
 	BizType *ShowUserAccessStagesResponseBizType `json:"biz_type,omitempty"`
 
-	// 接入各阶段详情
+	// 接入各阶段详情。
 	Stages         *[]UserAccessStage `json:"stages,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }

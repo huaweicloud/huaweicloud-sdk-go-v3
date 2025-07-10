@@ -21,10 +21,10 @@ type ListImagesRequest struct {
 	// 镜像架构：x86。
 	Architecture *string `json:"architecture,omitempty"`
 
-	// 套餐系列
+	// 套餐系列。
 	PackageType *string `json:"package_type,omitempty"`
 
-	// 镜像Id
+	// 镜像Id。
 	ImageId *string `json:"image_id,omitempty"`
 
 	// 每页数量，范围0-100，默认100。

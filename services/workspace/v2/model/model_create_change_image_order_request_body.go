@@ -15,7 +15,7 @@ type CreateChangeImageOrderRequestBody struct {
 	// 包周期桌面ID列表。 不可同时存在普通桌面和池桌面ID。
 	DesktopIds *[]string `json:"desktop_ids,omitempty"`
 
-	// 促销计划ID
+	// 促销计划ID。
 	PromotionPlanId *string `json:"promotion_plan_id,omitempty"`
 
 	// 云市场镜像的specCode，即将停用。image_spec_code与image_id同时存在时取image_id的值，两者不可同时为空。

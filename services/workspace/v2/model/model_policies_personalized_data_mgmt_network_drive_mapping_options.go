@@ -9,10 +9,10 @@ import (
 // PoliciesPersonalizedDataMgmtNetworkDriveMappingOptions 网络驱动器映射选项。
 type PoliciesPersonalizedDataMgmtNetworkDriveMappingOptions struct {
 
-	// 网络驱动器映射路径
+	// 网络驱动器映射路径。
 	NetworkDriveMappingPath *string `json:"network_drive_mapping_path,omitempty"`
 
-	// 排除文件夹路径
+	// 排除文件夹路径。
 	DriveLetter *string `json:"drive_letter,omitempty"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 type UpdateSubnetIdsRequestBody struct {
 
-	// 业务子网id
+	// 业务子网id。
 	SubnetIds *[]string `json:"subnet_ids,omitempty"`
 
 	// VPC配置信息列表。

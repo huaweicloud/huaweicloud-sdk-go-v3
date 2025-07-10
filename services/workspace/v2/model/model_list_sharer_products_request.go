@@ -18,10 +18,10 @@ type ListSharerProductsRequest struct {
 	// 周期套餐标识。0表示包周期，1表示按需, 6表示一次性计费。
 	ChargeMode *string `json:"charge_mode,omitempty"`
 
-	// 是否是GPU套餐。1表示GPU套餐，0表示非GPU套餐，默认null查询所有类型
+	// 是否是GPU套餐。1表示GPU套餐，0表示非GPU套餐，默认null查询所有类型。
 	IsGpu *int32 `json:"is_gpu,omitempty"`
 
-	// 套餐系列。user_sharer表示用户协同套餐，desktop_sharer表示桌面协同套餐
+	// 套餐系列。user_sharer表示用户协同套餐，desktop_sharer表示桌面协同套餐。
 	PackageType *string `json:"package_type,omitempty"`
 
 	// 每页数量，范围0-100，默认100。

@@ -23,16 +23,16 @@ type InstanceStatusStatistics struct {
 	// 其他(未知、删除失败、删除中)。
 	OtherNum *int32 `json:"other_num,omitempty"`
 
-	// 已分配数目
+	// 已分配数目。
 	AttachedNum *int32 `json:"attached_num,omitempty"`
 
-	// 未分配数目
+	// 未分配数目。
 	UnattachedNum *int32 `json:"unattached_num,omitempty"`
 
-	// 不可分配数目(分配失败、解分配失败、解分配成功)
+	// 不可分配数目(分配失败、解分配失败、解分配成功)。
 	CannotAttachNum *int32 `json:"cannot_attach_num,omitempty"`
 
-	// 处理中(分配中、解分配中)
+	// 处理中(分配中、解分配中)。
 	InProcessNum *int32 `json:"in_process_num,omitempty"`
 
 	// 使用中数目。

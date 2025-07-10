@@ -581,6 +581,22 @@ func (i *ListAuditlogsInvoker) Invoke() (*model.ListAuditlogsResponse, error) {
 	}
 }
 
+type ListBackupTransfersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBackupTransfersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBackupTransfersInvoker) Invoke() (*model.ListBackupTransfersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBackupTransfersResponse), nil
+	}
+}
+
 type ListBackupsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1701,6 +1717,22 @@ func (i *SetSensitiveSlowLogInvoker) Invoke() (*model.SetSensitiveSlowLogRespons
 	}
 }
 
+type SetTransferPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetTransferPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetTransferPolicyInvoker) Invoke() (*model.SetTransferPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetTransferPolicyResponse), nil
+	}
+}
+
 type ShowAuditlogDownloadLinkInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2069,6 +2101,22 @@ func (i *ShowTdeStatusInvoker) Invoke() (*model.ShowTdeStatusResponse, error) {
 	}
 }
 
+type ShowTransferPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTransferPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTransferPolicyInvoker) Invoke() (*model.ShowTransferPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTransferPolicyResponse), nil
+	}
+}
+
 type ShowUpgradeDbMajorVersionStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2274,6 +2322,22 @@ func (i *SwitchSslInvoker) Invoke() (*model.SwitchSslResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.SwitchSslResponse), nil
+	}
+}
+
+type TransferBackupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *TransferBackupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *TransferBackupInvoker) Invoke() (*model.TransferBackupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.TransferBackupResponse), nil
 	}
 }
 

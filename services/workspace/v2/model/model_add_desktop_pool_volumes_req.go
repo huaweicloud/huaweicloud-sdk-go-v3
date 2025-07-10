@@ -9,9 +9,6 @@ import (
 // AddDesktopPoolVolumesReq 扩容桌面池请求。
 type AddDesktopPoolVolumesReq struct {
 
-	// 包周期订购ID，CBC订购回调时使用。
-	OrderId *string `json:"order_id,omitempty"`
-
 	// 增加的磁盘列表。
 	Volumes *[]VolumeAddInfo `json:"volumes,omitempty"`
 }

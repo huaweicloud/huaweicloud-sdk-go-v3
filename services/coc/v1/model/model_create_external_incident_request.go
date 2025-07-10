@@ -47,6 +47,12 @@ type CreateExternalIncidentRequest struct {
 
 	// 创单人
 	Creator string `json:"creator"`
+
+	// 事件归属
+	IncidentOwnership *string `json:"incident_ownership,omitempty"`
+
+	// 故障发生时间戳
+	StartTime *int64 `json:"start_time,omitempty"`
 }
 
 func (o CreateExternalIncidentRequest) String() string {

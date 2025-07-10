@@ -17,7 +17,7 @@ type ProductInfo struct {
 	// 产品类型。  - BASE：表示产品基础套餐，套餐镜像中不包括除操作系统之外的其他商业软件，私有镜像场景只能使用此类套餐。
 	Type *string `json:"type,omitempty"`
 
-	// CPU
+	// CPU。
 	Cpu *string `json:"cpu,omitempty"`
 
 	// 内存。
@@ -32,9 +32,6 @@ type ProductInfo struct {
 	// 产品架构。
 	Architecture *string `json:"architecture,omitempty"`
 
-	// CPU描述。
-	CpuDesc *string `json:"cpu_desc,omitempty"`
-
 	// 是否是GPU类型的规格。
 	IsGpu *bool `json:"is_gpu,omitempty"`
 
@@ -47,10 +44,7 @@ type ProductInfo struct {
 	// 系统盘大小。
 	SystemDiskSize *string `json:"system_disk_size,omitempty"`
 
-	// GPU描述。
-	GpuDesc *string `json:"gpu_desc,omitempty"`
-
-	// 套餐计费是否包含了数据盘,off-不包含
+	// 套餐计费是否包含了数据盘,off-不包含。
 	ContainDataDisk *bool `json:"contain_data_disk,omitempty"`
 
 	// 资源类型。
@@ -64,9 +58,6 @@ type ProductInfo struct {
 
 	// 默认在售状态，normal代表正常，sellout代表售空，abandon代表下线。
 	Status *string `json:"status,omitempty"`
-
-	// 专属主机的子产品。
-	SubProductList *[]string `json:"sub_product_list,omitempty"`
 }
 
 func (o ProductInfo) String() string {

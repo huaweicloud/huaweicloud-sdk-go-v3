@@ -8,7 +8,7 @@ import (
 
 type CreateTerminalsBindingDesktopsRequestBody struct {
 
-	// 需要新增的MAC绑定VM策略信息列表
+	// 需要新增的MAC绑定VM策略信息列表。
 	BindList *[]CreateTerminalsBindingDesktopsInfo `json:"bind_list,omitempty"`
 }
 

@@ -9,7 +9,7 @@ import (
 // OrderExtendParam 订单的扩展参数。
 type OrderExtendParam struct {
 
-	// 是否自动付款。true:自动支付; false：不自动支付;默认false
+	// 是否自动付款。true:自动支付; false：不自动支付;默认false。
 	IsAutoPay *string `json:"is_auto_pay,omitempty"`
 }
 

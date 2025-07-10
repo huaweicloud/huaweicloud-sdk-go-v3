@@ -9,7 +9,7 @@ import (
 // ListVolumeProductInfoResponse Response Object
 type ListVolumeProductInfoResponse struct {
 
-	// 磁盘产品信息列表
+	// 磁盘产品信息列表。
 	Volumes        *[]VolumeProductInfo `json:"volumes,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

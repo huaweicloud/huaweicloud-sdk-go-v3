@@ -5,6 +5,86 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/coc/v1/model"
 )
 
+type ClearAlarmInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ClearAlarmInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ClearAlarmInvoker) Invoke() (*model.ClearAlarmResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ClearAlarmResponse), nil
+	}
+}
+
+type HandlerAlarmInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *HandlerAlarmInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *HandlerAlarmInvoker) Invoke() (*model.HandlerAlarmResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.HandlerAlarmResponse), nil
+	}
+}
+
+type ListAlarmHandleHistoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAlarmHandleHistoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAlarmHandleHistoriesInvoker) Invoke() (*model.ListAlarmHandleHistoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAlarmHandleHistoriesResponse), nil
+	}
+}
+
+type ShowAlarmInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAlarmInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAlarmInvoker) Invoke() (*model.ShowAlarmResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAlarmResponse), nil
+	}
+}
+
+type TransferAlarmToIncidentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *TransferAlarmToIncidentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *TransferAlarmToIncidentInvoker) Invoke() (*model.TransferAlarmToIncidentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.TransferAlarmToIncidentResponse), nil
+	}
+}
+
 type BatchCreateApplicationViewInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -18,6 +98,22 @@ func (i *BatchCreateApplicationViewInvoker) Invoke() (*model.BatchCreateApplicat
 		return nil, err
 	} else {
 		return result.(*model.BatchCreateApplicationViewResponse), nil
+	}
+}
+
+type UpdateChangeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateChangeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateChangeInvoker) Invoke() (*model.UpdateChangeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateChangeResponse), nil
 	}
 }
 
@@ -469,6 +565,118 @@ func (i *OperateExecutionInvoker) Invoke() (*model.OperateExecutionResponse, err
 	}
 }
 
+type ListSubTicketsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSubTicketsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSubTicketsInvoker) Invoke() (*model.ListSubTicketsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSubTicketsResponse), nil
+	}
+}
+
+type ExecuteTicketActionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteTicketActionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteTicketActionInvoker) Invoke() (*model.ExecuteTicketActionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteTicketActionResponse), nil
+	}
+}
+
+type ListTicketOperationHistoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTicketOperationHistoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTicketOperationHistoriesInvoker) Invoke() (*model.ListTicketOperationHistoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTicketOperationHistoriesResponse), nil
+	}
+}
+
+type ListTicketsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTicketsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTicketsInvoker) Invoke() (*model.ListTicketsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTicketsResponse), nil
+	}
+}
+
+type ShowTicketInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTicketInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTicketInfoInvoker) Invoke() (*model.ShowTicketInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTicketInfoResponse), nil
+	}
+}
+
+type DeleteTicketInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTicketInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteTicketInfoInvoker) Invoke() (*model.DeleteTicketInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTicketInfoResponse), nil
+	}
+}
+
+type UpdateTicketInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTicketInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateTicketInvoker) Invoke() (*model.UpdateTicketResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTicketResponse), nil
+	}
+}
+
 type CreateCocIncidentInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -626,6 +834,22 @@ func (i *CreateTicketInvoker) Invoke() (*model.CreateTicketResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateTicketResponse), nil
+	}
+}
+
+type DownloadAttachmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadAttachmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadAttachmentInvoker) Invoke() (*model.DownloadAttachmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadAttachmentResponse), nil
 	}
 }
 

@@ -62,6 +62,27 @@ func (c *CdnClient) BatchDeleteTagsInvoker(request *model.BatchDeleteTagsRequest
 	return &BatchDeleteTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchUpdateRuleStatus 批量更新规则状态及优先级
+//
+// 批量更新规则状态及优先级。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) BatchUpdateRuleStatus(request *model.BatchUpdateRuleStatusRequest) (*model.BatchUpdateRuleStatusResponse, error) {
+	requestDef := GenReqDefForBatchUpdateRuleStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateRuleStatusResponse), nil
+	}
+}
+
+// BatchUpdateRuleStatusInvoker 批量更新规则状态及优先级
+func (c *CdnClient) BatchUpdateRuleStatusInvoker(request *model.BatchUpdateRuleStatusRequest) *BatchUpdateRuleStatusInvoker {
+	requestDef := GenReqDefForBatchUpdateRuleStatus()
+	return &BatchUpdateRuleStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDomain 创建加速域名
 //
 // 创建加速域名。
@@ -125,6 +146,52 @@ func (c *CdnClient) CreateRefreshTasksInvoker(request *model.CreateRefreshTasksR
 	return &CreateRefreshTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateRuleNew 创建规则引擎规则
+//
+// 规则引擎功能通过图形化的方式实现各种规则配置，实现更加灵活、细粒度的规则配置。通过限制触发条件，控制当前配置生效的资源范围，满足多种场景的配置需求。
+// - 请提交工单开通规则引擎功能后再使用当前接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) CreateRuleNew(request *model.CreateRuleNewRequest) (*model.CreateRuleNewResponse, error) {
+	requestDef := GenReqDefForCreateRuleNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRuleNewResponse), nil
+	}
+}
+
+// CreateRuleNewInvoker 创建规则引擎规则
+func (c *CdnClient) CreateRuleNewInvoker(request *model.CreateRuleNewRequest) *CreateRuleNewInvoker {
+	requestDef := GenReqDefForCreateRuleNew()
+	return &CreateRuleNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateShareCacheGroups 创建共享缓存组
+//
+// 配置共享缓存组，将一个域名设置为主域名，组内其他域名共享该域名的缓存，提高缓存命中率。
+// - 只有缓存规则中“URL参数”的配置为“忽略参数”或者“不忽略参数”的域名才能加入共享缓存组。
+// - 每个账号最多配置500个共享缓存组。
+// - 单租户调用频率：5次/s。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) CreateShareCacheGroups(request *model.CreateShareCacheGroupsRequest) (*model.CreateShareCacheGroupsResponse, error) {
+	requestDef := GenReqDefForCreateShareCacheGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateShareCacheGroupsResponse), nil
+	}
+}
+
+// CreateShareCacheGroupsInvoker 创建共享缓存组
+func (c *CdnClient) CreateShareCacheGroupsInvoker(request *model.CreateShareCacheGroupsRequest) *CreateShareCacheGroupsInvoker {
+	requestDef := GenReqDefForCreateShareCacheGroups()
+	return &CreateShareCacheGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateTags 创建资源标签配置接口
 //
 // 用于创建资源标签。
@@ -165,6 +232,50 @@ func (c *CdnClient) DeleteDomain(request *model.DeleteDomainRequest) (*model.Del
 func (c *CdnClient) DeleteDomainInvoker(request *model.DeleteDomainRequest) *DeleteDomainInvoker {
 	requestDef := GenReqDefForDeleteDomain()
 	return &DeleteDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRuleNew 删除规则引擎规则
+//
+// 删除规则引擎规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) DeleteRuleNew(request *model.DeleteRuleNewRequest) (*model.DeleteRuleNewResponse, error) {
+	requestDef := GenReqDefForDeleteRuleNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteRuleNewResponse), nil
+	}
+}
+
+// DeleteRuleNewInvoker 删除规则引擎规则
+func (c *CdnClient) DeleteRuleNewInvoker(request *model.DeleteRuleNewRequest) *DeleteRuleNewInvoker {
+	requestDef := GenReqDefForDeleteRuleNew()
+	return &DeleteRuleNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteShareCacheGroups 删除共享缓存组
+//
+// 删除新共享缓存组。
+// - 共享缓存组内不包含关联域名时才可以删除。
+// - 单租户调用频率：5次/s。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) DeleteShareCacheGroups(request *model.DeleteShareCacheGroupsRequest) (*model.DeleteShareCacheGroupsResponse, error) {
+	requestDef := GenReqDefForDeleteShareCacheGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteShareCacheGroupsResponse), nil
+	}
+}
+
+// DeleteShareCacheGroupsInvoker 删除共享缓存组
+func (c *CdnClient) DeleteShareCacheGroupsInvoker(request *model.DeleteShareCacheGroupsRequest) *DeleteShareCacheGroupsInvoker {
+	requestDef := GenReqDefForDeleteShareCacheGroups()
+	return &DeleteShareCacheGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DisableDomain 停用加速域名
@@ -321,6 +432,49 @@ func (c *CdnClient) ListDomains(request *model.ListDomainsRequest) (*model.ListD
 func (c *CdnClient) ListDomainsInvoker(request *model.ListDomainsRequest) *ListDomainsInvoker {
 	requestDef := GenReqDefForListDomains()
 	return &ListDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRuleDetails 查询规则引擎列表
+//
+// 查询规则引擎列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ListRuleDetails(request *model.ListRuleDetailsRequest) (*model.ListRuleDetailsResponse, error) {
+	requestDef := GenReqDefForListRuleDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRuleDetailsResponse), nil
+	}
+}
+
+// ListRuleDetailsInvoker 查询规则引擎列表
+func (c *CdnClient) ListRuleDetailsInvoker(request *model.ListRuleDetailsRequest) *ListRuleDetailsInvoker {
+	requestDef := GenReqDefForListRuleDetails()
+	return &ListRuleDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListShareCacheGroups 查询共享缓存组列表
+//
+// 查询共享缓存组列表。
+// - 单租户调用频率：5次/s。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ListShareCacheGroups(request *model.ListShareCacheGroupsRequest) (*model.ListShareCacheGroupsResponse, error) {
+	requestDef := GenReqDefForListShareCacheGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListShareCacheGroupsResponse), nil
+	}
+}
+
+// ListShareCacheGroupsInvoker 查询共享缓存组列表
+func (c *CdnClient) ListShareCacheGroupsInvoker(request *model.ListShareCacheGroupsRequest) *ListShareCacheGroupsInvoker {
+	requestDef := GenReqDefForListShareCacheGroups()
+	return &ListShareCacheGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ModifyAccountInfo 修改租户配置
@@ -844,6 +998,27 @@ func (c *CdnClient) UpdateDomainMultiCertificatesInvoker(request *model.UpdateDo
 	return &UpdateDomainMultiCertificatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateFullRule 全量更新规则引擎规则
+//
+// 全量更新规则引擎规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) UpdateFullRule(request *model.UpdateFullRuleRequest) (*model.UpdateFullRuleResponse, error) {
+	requestDef := GenReqDefForUpdateFullRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateFullRuleResponse), nil
+	}
+}
+
+// UpdateFullRuleInvoker 全量更新规则引擎规则
+func (c *CdnClient) UpdateFullRuleInvoker(request *model.UpdateFullRuleRequest) *UpdateFullRuleInvoker {
+	requestDef := GenReqDefForUpdateFullRule()
+	return &UpdateFullRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdatePrivateBucketAccess 修改私有桶开启关闭状态
 //
 // 修改私有桶开启关闭状态。
@@ -863,6 +1038,49 @@ func (c *CdnClient) UpdatePrivateBucketAccess(request *model.UpdatePrivateBucket
 func (c *CdnClient) UpdatePrivateBucketAccessInvoker(request *model.UpdatePrivateBucketAccessRequest) *UpdatePrivateBucketAccessInvoker {
 	requestDef := GenReqDefForUpdatePrivateBucketAccess()
 	return &UpdatePrivateBucketAccessInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRuleNew 更新规则引擎规则
+//
+// 更新规则引擎规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) UpdateRuleNew(request *model.UpdateRuleNewRequest) (*model.UpdateRuleNewResponse, error) {
+	requestDef := GenReqDefForUpdateRuleNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRuleNewResponse), nil
+	}
+}
+
+// UpdateRuleNewInvoker 更新规则引擎规则
+func (c *CdnClient) UpdateRuleNewInvoker(request *model.UpdateRuleNewRequest) *UpdateRuleNewInvoker {
+	requestDef := GenReqDefForUpdateRuleNew()
+	return &UpdateRuleNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateShareCacheGroups 更新共享缓存组
+//
+// 更新共享缓存组。
+// - 单租户调用频率：5次/s。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) UpdateShareCacheGroups(request *model.UpdateShareCacheGroupsRequest) (*model.UpdateShareCacheGroupsResponse, error) {
+	requestDef := GenReqDefForUpdateShareCacheGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateShareCacheGroupsResponse), nil
+	}
+}
+
+// UpdateShareCacheGroupsInvoker 更新共享缓存组
+func (c *CdnClient) UpdateShareCacheGroupsInvoker(request *model.UpdateShareCacheGroupsRequest) *UpdateShareCacheGroupsInvoker {
+	requestDef := GenReqDefForUpdateShareCacheGroups()
+	return &UpdateShareCacheGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // VerifyDomainOwner 域名归属校验

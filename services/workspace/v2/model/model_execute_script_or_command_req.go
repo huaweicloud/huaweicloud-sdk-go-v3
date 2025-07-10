@@ -27,26 +27,8 @@ type ExecuteScriptOrCommandReq struct {
 	// 执行的脚本列表。
 	ScriptIds *[]string `json:"script_ids,omitempty"`
 
-	// 执行的命令行，与scripts二选一。
-	Command *string `json:"command,omitempty"`
-
-	// 命令行的类型（POWERSHELL，BAT，SHELL）。
-	CommandType *string `json:"command_type,omitempty"`
-
 	// 执行脚本的超时时间，单位分钟。
 	ExecutionTimeout *int32 `json:"execution_timeout,omitempty"`
-
-	// 执行脚本前置步骤。
-	PreStart *string `json:"pre_start,omitempty"`
-
-	// 执行脚本后置步骤(STOP,REBOOT)。
-	PostFinish *string `json:"post_finish,omitempty"`
-
-	// 资源组类型，如桌面池(DESKTOP_POOL)。
-	ResourceGroupType *string `json:"resource_group_type,omitempty"`
-
-	// 资源组ID。
-	ResourceGroupId *string `json:"resource_group_id,omitempty"`
 }
 
 func (o ExecuteScriptOrCommandReq) String() string {

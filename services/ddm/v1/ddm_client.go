@@ -1113,6 +1113,27 @@ func (c *DdmClient) UpdateInstanceParamInvoker(request *model.UpdateInstancePara
 	return &UpdateInstanceParamInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateInstancePort 修改实例端口
+//
+// 修改实例端口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) UpdateInstancePort(request *model.UpdateInstancePortRequest) (*model.UpdateInstancePortResponse, error) {
+	requestDef := GenReqDefForUpdateInstancePort()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstancePortResponse), nil
+	}
+}
+
+// UpdateInstancePortInvoker 修改实例端口
+func (c *DdmClient) UpdateInstancePortInvoker(request *model.UpdateInstancePortRequest) *UpdateInstancePortInvoker {
+	requestDef := GenReqDefForUpdateInstancePort()
+	return &UpdateInstancePortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateInstanceSecurityGroup 修改DDM实例安全组
 //
 // 修改DDM实例安全组。

@@ -9,10 +9,10 @@ import (
 // ListSiteConfigsResponse Response Object
 type ListSiteConfigsResponse struct {
 
-	// 站点信息列表
+	// 站点信息列表。
 	SiteInfos *[]SiteInfo `json:"site_infos,omitempty"`
 
-	// 站点总数
+	// 站点总数。
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

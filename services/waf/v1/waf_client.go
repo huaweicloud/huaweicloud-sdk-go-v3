@@ -64,6 +64,27 @@ func (c *WafClient) ChangePrepaidCloudWafInvoker(request *model.ChangePrepaidClo
 	return &ChangePrepaidCloudWafInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ConfirmUserBundle 获取用户套餐信息
+//
+// 获取用户购买的WAF规格信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ConfirmUserBundle(request *model.ConfirmUserBundleRequest) (*model.ConfirmUserBundleResponse, error) {
+	requestDef := GenReqDefForConfirmUserBundle()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ConfirmUserBundleResponse), nil
+	}
+}
+
+// ConfirmUserBundleInvoker 获取用户套餐信息
+func (c *WafClient) ConfirmUserBundleInvoker(request *model.ConfirmUserBundleRequest) *ConfirmUserBundleInvoker {
+	requestDef := GenReqDefForConfirmUserBundle()
+	return &ConfirmUserBundleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAntiTamperRule 创建防篡改规则
 //
 // 创建防篡改规则
@@ -904,6 +925,27 @@ func (c *WafClient) ListAntitamperRuleInvoker(request *model.ListAntitamperRuleR
 	return &ListAntitamperRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAttackActionTypes 查询攻击防护类型
+//
+// 查询攻击防护类型
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ListAttackActionTypes(request *model.ListAttackActionTypesRequest) (*model.ListAttackActionTypesResponse, error) {
+	requestDef := GenReqDefForListAttackActionTypes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAttackActionTypesResponse), nil
+	}
+}
+
+// ListAttackActionTypesInvoker 查询攻击防护类型
+func (c *WafClient) ListAttackActionTypesInvoker(request *model.ListAttackActionTypesRequest) *ListAttackActionTypesInvoker {
+	requestDef := GenReqDefForListAttackActionTypes()
+	return &ListAttackActionTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListBandwidthTimeline 查询安全统计带宽数据
 //
 // 查询安全统计带宽数据，统计的带宽数据为平均值，单位为bit/s。
@@ -1135,6 +1177,27 @@ func (c *WafClient) ListInstanceInvoker(request *model.ListInstanceRequest) *Lis
 	return &ListInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInstanceTags 查询WAF独享引擎标签
+//
+// 查询WAF独享引擎标签。独享模式只在部分局点支持，包括：华北-北京四、华东-上海一、华南-广州、华南-深圳  、中国-香港、亚太-曼谷、 亚太-新加坡。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ListInstanceTags(request *model.ListInstanceTagsRequest) (*model.ListInstanceTagsResponse, error) {
+	requestDef := GenReqDefForListInstanceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceTagsResponse), nil
+	}
+}
+
+// ListInstanceTagsInvoker 查询WAF独享引擎标签
+func (c *WafClient) ListInstanceTagsInvoker(request *model.ListInstanceTagsRequest) *ListInstanceTagsInvoker {
+	requestDef := GenReqDefForListInstanceTags()
+	return &ListInstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListIpGroup 查询地址组列表
 //
 // 查询地址组列表
@@ -1324,6 +1387,27 @@ func (c *WafClient) ListRequestTimelineInvoker(request *model.ListRequestTimelin
 	return &ListRequestTimelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSecurityReportSubscriptions 查询安全报告订阅列表
+//
+// 查询安全报告订阅列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ListSecurityReportSubscriptions(request *model.ListSecurityReportSubscriptionsRequest) (*model.ListSecurityReportSubscriptionsResponse, error) {
+	requestDef := GenReqDefForListSecurityReportSubscriptions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityReportSubscriptionsResponse), nil
+	}
+}
+
+// ListSecurityReportSubscriptionsInvoker 查询安全报告订阅列表
+func (c *WafClient) ListSecurityReportSubscriptionsInvoker(request *model.ListSecurityReportSubscriptionsRequest) *ListSecurityReportSubscriptionsInvoker {
+	requestDef := GenReqDefForListSecurityReportSubscriptions()
+	return &ListSecurityReportSubscriptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListStatistics 查询安全总览请求与攻击数量
 //
 // 查询安全总览请求与攻击数量。
@@ -1366,6 +1450,27 @@ func (c *WafClient) ListTopAbnormalInvoker(request *model.ListTopAbnormalRequest
 	return &ListTopAbnormalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTopDomains 查询top受攻击域名
+//
+// 查询top受攻击域名
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ListTopDomains(request *model.ListTopDomainsRequest) (*model.ListTopDomainsResponse, error) {
+	requestDef := GenReqDefForListTopDomains()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTopDomainsResponse), nil
+	}
+}
+
+// ListTopDomainsInvoker 查询top受攻击域名
+func (c *WafClient) ListTopDomainsInvoker(request *model.ListTopDomainsRequest) *ListTopDomainsInvoker {
+	requestDef := GenReqDefForListTopDomains()
+	return &ListTopDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListValueList 查询引用表列表
 //
 // 查询引用表列表
@@ -1385,6 +1490,27 @@ func (c *WafClient) ListValueList(request *model.ListValueListRequest) (*model.L
 func (c *WafClient) ListValueListInvoker(request *model.ListValueListRequest) *ListValueListInvoker {
 	requestDef := GenReqDefForListValueList()
 	return &ListValueListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWebBasicProtectionRules 查询web基础防护内置规则列表
+//
+// 查询web基础防护内置规则列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ListWebBasicProtectionRules(request *model.ListWebBasicProtectionRulesRequest) (*model.ListWebBasicProtectionRulesResponse, error) {
+	requestDef := GenReqDefForListWebBasicProtectionRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWebBasicProtectionRulesResponse), nil
+	}
+}
+
+// ListWebBasicProtectionRulesInvoker 查询web基础防护内置规则列表
+func (c *WafClient) ListWebBasicProtectionRulesInvoker(request *model.ListWebBasicProtectionRulesRequest) *ListWebBasicProtectionRulesInvoker {
+	requestDef := GenReqDefForListWebBasicProtectionRules()
+	return &ListWebBasicProtectionRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListWhiteblackipRule 查询黑白名单规则列表
@@ -1681,6 +1807,27 @@ func (c *WafClient) ShowHostInvoker(request *model.ShowHostRequest) *ShowHostInv
 	return &ShowHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowHostStatus 查询域名运行状态
+//
+// 查询域名运行状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ShowHostStatus(request *model.ShowHostStatusRequest) (*model.ShowHostStatusResponse, error) {
+	requestDef := GenReqDefForShowHostStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHostStatusResponse), nil
+	}
+}
+
+// ShowHostStatusInvoker 查询域名运行状态
+func (c *WafClient) ShowHostStatusInvoker(request *model.ShowHostStatusRequest) *ShowHostStatusInvoker {
+	requestDef := GenReqDefForShowHostStatus()
+	return &ShowHostStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowIgnoreRule 查询全局白名单(原误报屏蔽)防护规则
 //
 // 查询全局白名单(原误报屏蔽)防护规则
@@ -1784,6 +1931,27 @@ func (c *WafClient) ShowPolicy(request *model.ShowPolicyRequest) (*model.ShowPol
 func (c *WafClient) ShowPolicyInvoker(request *model.ShowPolicyRequest) *ShowPolicyInvoker {
 	requestDef := GenReqDefForShowPolicy()
 	return &ShowPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPolicyGeoipMap 查询地理位置选项的详细信息
+//
+// 查询地理位置选项的详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ShowPolicyGeoipMap(request *model.ShowPolicyGeoipMapRequest) (*model.ShowPolicyGeoipMapResponse, error) {
+	requestDef := GenReqDefForShowPolicyGeoipMap()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPolicyGeoipMapResponse), nil
+	}
+}
+
+// ShowPolicyGeoipMapInvoker 查询地理位置选项的详细信息
+func (c *WafClient) ShowPolicyGeoipMapInvoker(request *model.ShowPolicyGeoipMapRequest) *ShowPolicyGeoipMapInvoker {
+	requestDef := GenReqDefForShowPolicyGeoipMap()
+	return &ShowPolicyGeoipMapInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowPremiumHost 查看独享模式域名配置

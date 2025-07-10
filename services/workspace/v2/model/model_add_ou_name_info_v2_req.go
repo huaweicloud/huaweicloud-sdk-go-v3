@@ -8,13 +8,13 @@ import (
 
 type AddOuNameInfoV2Req struct {
 
-	// 域名称
+	// 域名称。
 	Domain string `json:"domain"`
 
-	// OU名称
+	// OU名称。
 	OuName string `json:"ou_name"`
 
-	// 描述
+	// 描述。
 	Description *string `json:"description,omitempty"`
 }
 

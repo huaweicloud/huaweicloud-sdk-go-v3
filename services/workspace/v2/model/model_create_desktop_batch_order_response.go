@@ -9,7 +9,7 @@ import (
 // CreateDesktopBatchOrderResponse Response Object
 type CreateDesktopBatchOrderResponse struct {
 
-	// 批量生成订单结果
+	// 批量生成订单结果。
 	Orders         *[]OrderV5 `json:"orders,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }

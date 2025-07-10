@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// UpdateDesktopSidReq 更新桌面sid请求
+// UpdateDesktopSidReq 更新桌面sid请求。
 type UpdateDesktopSidReq struct {
 
-	// 虚拟机列表
+	// 虚拟机列表。
 	DesktopIds []string `json:"desktop_ids"`
 }
 

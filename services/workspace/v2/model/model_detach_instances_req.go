@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// DetachInstancesReq 解绑用户请求
+// DetachInstancesReq 解绑用户请求。
 type DetachInstancesReq struct {
 
-	// 桌面id,不能为空
+	// 桌面id列表，不能为空。
 	DesktopIds *[]string `json:"desktop_ids,omitempty"`
 
 	// 解绑后是否关机。

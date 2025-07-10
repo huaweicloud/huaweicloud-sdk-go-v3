@@ -30,6 +30,9 @@ type CreateDesktopPoolReq struct {
 	// 套餐ID。
 	ProductId string `json:"product_id"`
 
+	// 产品规格ID。可用区是边缘可用区时，必填此参数。
+	FlavorId *string `json:"flavor_id,omitempty"`
+
 	// 镜像类型。默认值为private。  - private：私有镜像。 - gold：公共镜像。
 	ImageType string `json:"image_type"`
 
@@ -53,16 +56,13 @@ type CreateDesktopPoolReq struct {
 	// 要授权的用户/用户组列表。
 	AuthorizedObjects *[]AuthorizedObjects `json:"authorized_objects,omitempty"`
 
-	// 包周期订购ID，CBC订购回调时使用。
-	OrderId *string `json:"order_id,omitempty"`
-
 	// OU名称，在对接AD时使用，需提前在AD中创建OU。
 	OuName *string `json:"ou_name,omitempty"`
 
 	// 标签列表。
 	Tags *[]Tag `json:"tags,omitempty"`
 
-	// 企业项目ID，默认\"0\"
+	// 企业项目ID，默认\"0。\"
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 动态池桌面断连多少分钟内，保留用户与桌面的绑定关系，超时后自动解绑。

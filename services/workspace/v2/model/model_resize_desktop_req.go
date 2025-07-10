@@ -15,19 +15,11 @@ type ResizeDesktopReq struct {
 	// 套餐id。批量变更时，则变更为同一规格的虚拟机。
 	ProductId string `json:"product_id"`
 
-	// 套餐flavorId。批量变更时，则变更为同一规格的虚拟机。
-	FlavorId *string `json:"flavor_id,omitempty"`
-
 	// 是否支持开机状态下执行变更规格操作。固定传值STOP_DESKTOP，如果桌面处于开机状态，会先关机再变更规格。
 	Mode string `json:"mode"`
 
-	// 专属主机ID。
-	DedicatedHostId *string `json:"dedicated_host_id,omitempty"`
-
-	// 订单ID，包周期变更规格时使用。
-	OrderId *string `json:"order_id,omitempty"`
-
-	ExtendParam *ResizeDesktopExtendParam `json:"extend_param,omitempty"`
+	// 是否自动放置，专属主机桌面变更规格时使用，默认是off关闭自动放置，on表示开启自动放置。
+	AutoPlacement *string `json:"auto_placement,omitempty"`
 }
 
 func (o ResizeDesktopReq) String() string {

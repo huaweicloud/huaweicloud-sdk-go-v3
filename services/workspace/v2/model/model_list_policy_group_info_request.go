@@ -9,10 +9,10 @@ import (
 // ListPolicyGroupInfoRequest Request Object
 type ListPolicyGroupInfoRequest struct {
 
-	// 用于分页查询。范围0-100
+	// 用于分页查询。范围0-100。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 用于分页查询，查询的起始记录序号，从0开始。
+	// 用于分页查询，查询的起始记录序号，范围0-10000。
 	Offset *int32 `json:"offset,omitempty"`
 
 	// 根据策略组ID过滤结果。
@@ -27,11 +27,8 @@ type ListPolicyGroupInfoRequest struct {
 	// 根据更新时间过滤结果。时间格式满足：yyyy-MM-dd HH:mm:ss。
 	UpdateTime *string `json:"update_time,omitempty"`
 
-	// 策略组描述
+	// 策略组描述。
 	Description *string `json:"description,omitempty"`
-
-	// 策略来源，取值范围0或者1
-	ScopeFlag *int32 `json:"scope_flag,omitempty"`
 }
 
 func (o ListPolicyGroupInfoRequest) String() string {

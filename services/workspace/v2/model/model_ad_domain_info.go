@@ -15,7 +15,7 @@ type AdDomainInfo struct {
 	// 域类型。 - LITE_AS：LiteAS。 - LOCAL_AD：本地AD。 说明：域类型为“LOCAL_AD”时，请确保所选VPC网络与“LOCAL_AD”所属网络可连通。
 	DomainType AdDomainInfoDomainType `json:"domain_type"`
 
-	// 域管理员帐号。
+	// 域管理员账号。
 	DomainAdminAccount string `json:"domain_admin_account"`
 
 	// 域管理员账号密码。

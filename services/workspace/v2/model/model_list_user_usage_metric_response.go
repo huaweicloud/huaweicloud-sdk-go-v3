@@ -9,10 +9,10 @@ import (
 // ListUserUsageMetricResponse Response Object
 type ListUserUsageMetricResponse struct {
 
-	// 总数
+	// 总数。
 	Count *int32 `json:"count,omitempty"`
 
-	// 用户统计指标
+	// 用户统计指标。
 	Items          *[]UserMetric `json:"items,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }

@@ -8,10 +8,10 @@ import (
 
 type AdOuInfo struct {
 
-	// 名称
+	// 名称。
 	OuName *string `json:"ou_name,omitempty"`
 
-	// 域名地址
+	// 域名地址。
 	OuDn *string `json:"ou_dn,omitempty"`
 }
 

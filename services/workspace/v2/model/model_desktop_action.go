@@ -6,25 +6,25 @@ import (
 	"strings"
 )
 
-// DesktopAction 桌面开关机实体
+// DesktopAction 桌面开关机实体。
 type DesktopAction struct {
 
-	// 行为动作
+	// 行为动作。
 	Action *string `json:"action,omitempty"`
 
-	// 行为完成状态信息
+	// 行为完成状态信息。
 	Message *string `json:"message,omitempty"`
 
-	// 开始时间
+	// 开始时间。
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 结束时间
+	// 结束时间。
 	FinishTime *string `json:"finish_time,omitempty"`
 
-	// 结果
+	// 结果。
 	Result *string `json:"result,omitempty"`
 
-	// 异常信息
+	// 异常信息。
 	Traceback *string `json:"traceback,omitempty"`
 }
 

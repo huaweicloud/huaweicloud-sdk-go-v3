@@ -9,13 +9,13 @@ import (
 // ShowRemoteConsoleAddressResponse Response Object
 type ShowRemoteConsoleAddressResponse struct {
 
-	// 登录类型
+	// 登录类型。
 	Type *string `json:"type,omitempty"`
 
-	// 远程登录控制台地址
+	// 远程登录控制台地址。
 	Url *string `json:"url,omitempty"`
 
-	// 登录协议
+	// 登录协议。
 	Protocol       *string `json:"protocol,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

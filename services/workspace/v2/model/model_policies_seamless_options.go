@@ -9,7 +9,7 @@ import (
 // PoliciesSeamlessOptions 通用音视频设置项。
 type PoliciesSeamlessOptions struct {
 
-	// 软件路径。
+	// 软件路径。长度不能超过1000个字符。
 	SeamlessApplyPath *string `json:"seamless_apply_path,omitempty"`
 }
 

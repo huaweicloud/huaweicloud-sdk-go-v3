@@ -9,40 +9,40 @@ import (
 	"strings"
 )
 
-// LdapConfig ldap认证配置
+// LdapConfig ldap认证配置。
 type LdapConfig struct {
 
-	// host
+	// host。
 	Host *string `json:"host,omitempty"`
 
-	// 端口,取值范围1-65535,默认389
+	// 端口,取值范围1-65535,默认389。
 	Port *int32 `json:"port,omitempty"`
 
-	// base_dn
+	// base_dn。
 	BaseDn *string `json:"base_dn,omitempty"`
 
-	// 管理员dn
+	// 管理员dn。
 	AdministratorDn *string `json:"administrator_dn,omitempty"`
 
-	// 管理员密码
+	// 管理员密码。
 	AdministratorPassword *string `json:"administrator_password,omitempty"`
 
-	// 用户dn
+	// 用户dn。
 	UserDn *string `json:"user_dn,omitempty"`
 
-	// 是否启用ssl
+	// 是否启用ssl。
 	UseSsl *bool `json:"use_ssl,omitempty"`
 
-	// 证书
+	// 证书。
 	CertContent *string `json:"cert_content,omitempty"`
 
-	// 用户名属性
+	// 用户名属性。
 	UsernameAttribute *string `json:"username_attribute,omitempty"`
 
-	// 用户ObjectClass
+	// 用户ObjectClass。
 	ObjectClass *string `json:"object_class,omitempty"`
 
-	// 安全类型
+	// 安全类型。
 	SecurityType *LdapConfigSecurityType `json:"security_type,omitempty"`
 }
 

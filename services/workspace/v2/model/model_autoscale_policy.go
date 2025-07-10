@@ -15,13 +15,13 @@ type AutoscalePolicy struct {
 	// 弹性伸缩类型，ACCESS_CREATED：接入时创建，AUTO_CREATED：弹性伸缩。
 	AutoscaleType *AutoscalePolicyAutoscaleType `json:"autoscale_type,omitempty"`
 
-	// 自动创建桌面上限
+	// 自动创建桌面上限。
 	MaxAutoCreated *int32 `json:"max_auto_created,omitempty"`
 
-	// 空闲桌面低于多少时开始自动创建桌面
+	// 空闲桌面低于多少时开始自动创建桌面。
 	MinIdle *int32 `json:"min_idle,omitempty"`
 
-	// 一次自动创建桌面的数量
+	// 一次自动创建桌面的数量。
 	OnceAutoCreated *int32 `json:"once_auto_created,omitempty"`
 }
 

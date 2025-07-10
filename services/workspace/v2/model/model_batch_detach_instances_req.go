@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// BatchDetachInstancesReq 批量解绑用户请求
+// BatchDetachInstancesReq 批量解绑用户请求。
 type BatchDetachInstancesReq struct {
 
 	// 解绑的桌面信息列表。

@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// JobEntities 任务。
 type JobEntities struct {
 
 	// 桌面ID。

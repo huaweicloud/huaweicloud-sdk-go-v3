@@ -9,10 +9,10 @@ import (
 // AgenciesInfo 委托信息。
 type AgenciesInfo struct {
 
-	// 名称
+	// 名称。
 	Name *string `json:"name,omitempty"`
 
-	// 委托权限信息
+	// 委托权限信息。
 	Permissions *[]AgenciesPermissionInfo `json:"permissions,omitempty"`
 }
 

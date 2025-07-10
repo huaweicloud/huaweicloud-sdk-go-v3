@@ -8,25 +8,25 @@ import (
 
 type AlarmHistoryItem struct {
 
-	// 告警记录
+	// 告警记录。
 	RecordId *string `json:"record_id,omitempty"`
 
-	// 告警规则ID
+	// 告警规则ID。
 	AlarmId *string `json:"alarm_id,omitempty"`
 
-	// 告警规则的名称
+	// 告警规则的名称。
 	Name *string `json:"name,omitempty"`
 
 	// 告警记录的状态，取值为ok，alarm，invalid； ok为正常，alarm为告警，invalid为已失效。
 	Status *string `json:"status,omitempty"`
 
-	// 告警规则类型 | ALL_INSTANCE为全部资源指标告警， RESOURCE_GROUP为资源分组指标告警， MULTI_INSTANCE为指定资源指标告警， EVENT.SYS为系统事件告警， EVENT.CUSTOM自定义事件告警， DNSHealthCheck为健康检查告警；
+	// 告警规则类型 | ALL_INSTANCE为全部资源指标告警， RESOURCE_GROUP为资源分组指标告警， MULTI_INSTANCE为指定资源指标告警， EVENT.SYS为系统事件告警， EVENT.CUSTOM自定义事件告警， DNSHealthCheck为健康检查告警。
 	Type *string `json:"type,omitempty"`
 
 	// 告警记录的告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
 	Level *int32 `json:"level,omitempty"`
 
-	// 产生时间,UTC时间
+	// 产生时间,UTC时间。
 	BeginTime *string `json:"begin_time,omitempty"`
 
 	Metric *AlarmMetric `json:"metric,omitempty"`

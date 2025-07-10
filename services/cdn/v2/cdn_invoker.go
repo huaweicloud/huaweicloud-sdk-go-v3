@@ -37,6 +37,22 @@ func (i *BatchDeleteTagsInvoker) Invoke() (*model.BatchDeleteTagsResponse, error
 	}
 }
 
+type BatchUpdateRuleStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateRuleStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateRuleStatusInvoker) Invoke() (*model.BatchUpdateRuleStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateRuleStatusResponse), nil
+	}
+}
+
 type CreateDomainInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -85,6 +101,38 @@ func (i *CreateRefreshTasksInvoker) Invoke() (*model.CreateRefreshTasksResponse,
 	}
 }
 
+type CreateRuleNewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRuleNewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateRuleNewInvoker) Invoke() (*model.CreateRuleNewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRuleNewResponse), nil
+	}
+}
+
+type CreateShareCacheGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateShareCacheGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateShareCacheGroupsInvoker) Invoke() (*model.CreateShareCacheGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateShareCacheGroupsResponse), nil
+	}
+}
+
 type CreateTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -114,6 +162,38 @@ func (i *DeleteDomainInvoker) Invoke() (*model.DeleteDomainResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteDomainResponse), nil
+	}
+}
+
+type DeleteRuleNewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteRuleNewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteRuleNewInvoker) Invoke() (*model.DeleteRuleNewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteRuleNewResponse), nil
+	}
+}
+
+type DeleteShareCacheGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteShareCacheGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteShareCacheGroupsInvoker) Invoke() (*model.DeleteShareCacheGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteShareCacheGroupsResponse), nil
 	}
 }
 
@@ -214,6 +294,38 @@ func (i *ListDomainsInvoker) Invoke() (*model.ListDomainsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListDomainsResponse), nil
+	}
+}
+
+type ListRuleDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRuleDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRuleDetailsInvoker) Invoke() (*model.ListRuleDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRuleDetailsResponse), nil
+	}
+}
+
+type ListShareCacheGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListShareCacheGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListShareCacheGroupsInvoker) Invoke() (*model.ListShareCacheGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListShareCacheGroupsResponse), nil
 	}
 }
 
@@ -557,6 +669,22 @@ func (i *UpdateDomainMultiCertificatesInvoker) Invoke() (*model.UpdateDomainMult
 	}
 }
 
+type UpdateFullRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateFullRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateFullRuleInvoker) Invoke() (*model.UpdateFullRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateFullRuleResponse), nil
+	}
+}
+
 type UpdatePrivateBucketAccessInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -570,6 +698,38 @@ func (i *UpdatePrivateBucketAccessInvoker) Invoke() (*model.UpdatePrivateBucketA
 		return nil, err
 	} else {
 		return result.(*model.UpdatePrivateBucketAccessResponse), nil
+	}
+}
+
+type UpdateRuleNewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateRuleNewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateRuleNewInvoker) Invoke() (*model.UpdateRuleNewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateRuleNewResponse), nil
+	}
+}
+
+type UpdateShareCacheGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateShareCacheGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateShareCacheGroupsInvoker) Invoke() (*model.UpdateShareCacheGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateShareCacheGroupsResponse), nil
 	}
 }
 

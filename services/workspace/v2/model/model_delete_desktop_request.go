@@ -18,7 +18,7 @@ type DeleteDesktopRequest struct {
 	// 删除桌面后，是否给桌面用户发送系统通知邮件。true：发送，false：不发送。默认为true。
 	EmailNotification *bool `json:"email_notification,omitempty"`
 
-	// 是否强制删除
+	// 是否强制删除。
 	IsForceDelete *bool `json:"is_force_delete,omitempty"`
 }
 

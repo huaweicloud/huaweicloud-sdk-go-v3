@@ -8,16 +8,16 @@ import (
 
 type TagResource struct {
 
-	// 计算机信息
+	// 计算机信息。
 	ResourceDetail *string `json:"resource_detail,omitempty"`
 
-	// 计算机id
+	// 计算机id。
 	ResourceId *string `json:"resource_id,omitempty"`
 
-	// 计算机名称
+	// 计算机名称。
 	ResourceName *string `json:"resource_name,omitempty"`
 
-	// 标签对象
+	// 标签对象。
 	Tags *[]Tag `json:"tags,omitempty"`
 }
 

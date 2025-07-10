@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// Datapoints 桌面监控Cpu与Mem时间点信息
+// Datapoints 桌面监控Cpu与Mem时间点信息。
 type Datapoints struct {
 
-	// 平均数值
+	// 平均数值。
 	Average *float64 `json:"average,omitempty"`
 
-	// 时间戳
+	// 时间戳。
 	Timestamp *int64 `json:"timestamp,omitempty"`
 }
 

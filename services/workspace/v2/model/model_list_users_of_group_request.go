@@ -24,6 +24,9 @@ type ListUsersOfGroupRequest struct {
 	// 激活类型。 - USER_ACTIVATE：用户激活 - ADMIN_ACTIVATE：管理员激活
 	ActiveType *ListUsersOfGroupRequestActiveType `json:"active_type,omitempty"`
 
+	// 企业项目ID。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
 	// 用于分页查询，返回桌面数量限制。如果不指定或为0，默认2000，最大2000。
 	Limit *string `json:"limit,omitempty"`
 

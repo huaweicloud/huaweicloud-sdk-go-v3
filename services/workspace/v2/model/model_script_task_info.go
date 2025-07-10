@@ -16,32 +16,14 @@ type ScriptTaskInfo struct {
 	// 脚本列表。
 	TaskScripts *[]ScriptTaskInfoTaskScripts `json:"task_scripts,omitempty"`
 
-	// 执行命令时输入的命令。
-	CommandContent *string `json:"command_content,omitempty"`
-
-	// 命令行类型(POWERSHELL/BAT/SHELL)。
-	CommandType *string `json:"command_type,omitempty"`
-
 	// 资源类型，如DESKTOP。
 	ResourceType *string `json:"resource_type,omitempty"`
-
-	// 资源组ID，如桌面池ID。
-	ResourceGroupId *string `json:"resource_group_id,omitempty"`
-
-	// 资源组类型，如DESKTOP_POOL。
-	ResourceGroupType *string `json:"resource_group_type,omitempty"`
 
 	// 执行脚本的资源ID列表。
 	ResourceIds *[]string `json:"resource_ids,omitempty"`
 
 	// 灰度批次执行资源ID列表。
 	GrayResourceIds *[]string `json:"gray_resource_ids,omitempty"`
-
-	// 执行脚本前置步骤。
-	PreStart *string `json:"pre_start,omitempty"`
-
-	// 执行脚本后置步骤。
-	PostFinish *string `json:"post_finish,omitempty"`
 
 	// task中成功的执行记录数量。
 	SuccessNum *int32 `json:"success_num,omitempty"`

@@ -9,10 +9,10 @@ import (
 // EstimateAddResourcesResponse Response Object
 type EstimateAddResourcesResponse struct {
 
-	// 币种，比如CNY
+	// 币种，比如CNY。
 	Currency *string `json:"currency,omitempty"`
 
-	// 询价结果
+	// 询价结果。
 	CloudServiceRatingResults *[]CloudServiceRatingResult `json:"cloud_service_rating_results,omitempty"`
 	HttpStatusCode            int                         `json:"-"`
 }

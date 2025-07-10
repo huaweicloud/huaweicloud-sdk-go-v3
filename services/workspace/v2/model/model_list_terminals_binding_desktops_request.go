@@ -21,7 +21,7 @@ type ListTerminalsBindingDesktopsRequest struct {
 	// 数量。
 	Limit int32 `json:"limit"`
 
-	// 是否只查询结果总条数
+	// 是否只查询结果总条数。
 	CountOnly *bool `json:"count_only,omitempty"`
 }
 

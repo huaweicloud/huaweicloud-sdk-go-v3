@@ -9,7 +9,7 @@ import (
 // ShowTagByDesktopIdResponse Response Object
 type ShowTagByDesktopIdResponse struct {
 
-	// 标签
+	// 标签。
 	Tags           *[]Tag `json:"tags,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

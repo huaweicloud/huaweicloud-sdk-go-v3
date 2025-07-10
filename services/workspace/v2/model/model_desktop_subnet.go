@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// DesktopSubnet 子网信息
+// DesktopSubnet 子网信息。
 type DesktopSubnet struct {
 
-	// 桌面所在子网Id
+	// 桌面所在子网Id。
 	Id *string `json:"id,omitempty"`
 
-	// 桌面所在子网名称
+	// 桌面所在子网名称。
 	Name *string `json:"name,omitempty"`
 
-	// 桌面所在子网网段
+	// 桌面所在子网网段。
 	Cidr *string `json:"cidr,omitempty"`
 }
 

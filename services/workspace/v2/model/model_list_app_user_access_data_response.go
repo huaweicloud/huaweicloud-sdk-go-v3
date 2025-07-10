@@ -9,10 +9,10 @@ import (
 // ListAppUserAccessDataResponse Response Object
 type ListAppUserAccessDataResponse struct {
 
-	// 总数
+	// 总数。
 	Count *int32 `json:"count,omitempty"`
 
-	// 用户统计指标
+	// 用户统计指标。
 	Items          *[]AppUserAccessData `json:"items,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

@@ -231,7 +231,7 @@ func (c *WorkspaceClient) ListAgenciesInvoker(request *model.ListAgenciesRequest
 
 // ListAlarmStatistics 查询告警统计
 //
-// 返回各级别告警数
+// 返回各级别告警数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListAlarmStatistics(request *model.ListAlarmStatisticsRequest) (*model.ListAlarmStatisticsResponse, error) {
@@ -252,7 +252,7 @@ func (c *WorkspaceClient) ListAlarmStatisticsInvoker(request *model.ListAlarmSta
 
 // ListAlarms 查询告警列表
 //
-// 从ces查询告警列表
+// 从ces查询告警列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListAlarms(request *model.ListAlarmsRequest) (*model.ListAlarmsResponse, error) {
@@ -441,7 +441,7 @@ func (c *WorkspaceClient) CreateBucketCredentialInvoker(request *model.CreateBuc
 
 // DeleteApp 删除应用
 //
-// 删除应用
+// 删除应用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) DeleteApp(request *model.DeleteAppRequest) (*model.DeleteAppResponse, error) {
@@ -733,9 +733,9 @@ func (c *WorkspaceClient) DeleteAppRuleInvoker(request *model.DeleteAppRuleReque
 	return &DeleteAppRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteRestrictedRule 批量删除管控规则列表
+// DeleteRestrictedRule 批量删除管控规则
 //
-// 批量删除管控规则列表。
+// 批量删除管控规则。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) DeleteRestrictedRule(request *model.DeleteRestrictedRuleRequest) (*model.DeleteRestrictedRuleResponse, error) {
@@ -748,7 +748,7 @@ func (c *WorkspaceClient) DeleteRestrictedRule(request *model.DeleteRestrictedRu
 	}
 }
 
-// DeleteRestrictedRuleInvoker 批量删除管控规则列表
+// DeleteRestrictedRuleInvoker 批量删除管控规则
 func (c *WorkspaceClient) DeleteRestrictedRuleInvoker(request *model.DeleteRestrictedRuleRequest) *DeleteRestrictedRuleInvoker {
 	requestDef := GenReqDefForDeleteRestrictedRule()
 	return &DeleteRestrictedRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -798,7 +798,7 @@ func (c *WorkspaceClient) EnableRuleRestrictionInvoker(request *model.EnableRule
 
 // ListAppRule 查询应用规则
 //
-// 查询应用规则
+// 查询应用规则。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListAppRule(request *model.ListAppRuleRequest) (*model.ListAppRuleResponse, error) {
@@ -838,6 +838,48 @@ func (c *WorkspaceClient) ListRestrictedRuleInvoker(request *model.ListRestricte
 	return &ListRestrictedRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetRuleRestriction 设置管控规则
+//
+// 设置管控规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) SetRuleRestriction(request *model.SetRuleRestrictionRequest) (*model.SetRuleRestrictionResponse, error) {
+	requestDef := GenReqDefForSetRuleRestriction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetRuleRestrictionResponse), nil
+	}
+}
+
+// SetRuleRestrictionInvoker 设置管控规则
+func (c *WorkspaceClient) SetRuleRestrictionInvoker(request *model.SetRuleRestrictionRequest) *SetRuleRestrictionInvoker {
+	requestDef := GenReqDefForSetRuleRestriction()
+	return &SetRuleRestrictionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRuleRestriction 查询管控规则
+//
+// 查询管控规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowRuleRestriction(request *model.ShowRuleRestrictionRequest) (*model.ShowRuleRestrictionResponse, error) {
+	requestDef := GenReqDefForShowRuleRestriction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRuleRestrictionResponse), nil
+	}
+}
+
+// ShowRuleRestrictionInvoker 查询管控规则
+func (c *WorkspaceClient) ShowRuleRestrictionInvoker(request *model.ShowRuleRestrictionRequest) *ShowRuleRestrictionInvoker {
+	requestDef := GenReqDefForShowRuleRestriction()
+	return &ShowRuleRestrictionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateAppRule 修改应用规则
 //
 // 修改应用规则。
@@ -861,7 +903,7 @@ func (c *WorkspaceClient) UpdateAppRuleInvoker(request *model.UpdateAppRuleReque
 
 // ShowAssistAuthConfig 查询辅助认证配置
 //
-// 查询辅助认证的配置信息
+// 查询辅助认证的配置信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ShowAssistAuthConfig(request *model.ShowAssistAuthConfigRequest) (*model.ShowAssistAuthConfigResponse, error) {
@@ -903,7 +945,7 @@ func (c *WorkspaceClient) ShowAuthConfigInvoker(request *model.ShowAuthConfigReq
 
 // UpdateAssistAuthMethodConfig 更新辅助认证策略配置
 //
-// 更新辅助认证策略配置
+// 更新辅助认证策略配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) UpdateAssistAuthMethodConfig(request *model.UpdateAssistAuthMethodConfigRequest) (*model.UpdateAssistAuthMethodConfigResponse, error) {
@@ -966,7 +1008,7 @@ func (c *WorkspaceClient) ListAvailabilityZonesInvoker(request *model.ListAvaila
 
 // ListAzs 查询可用分区列表概要
 //
-// 该接口用于查询云桌面支持的可用分区列表
+// 该接口用于查询云桌面支持的可用分区列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListAzs(request *model.ListAzsRequest) (*model.ListAzsResponse, error) {
@@ -1025,50 +1067,6 @@ func (c *WorkspaceClient) ExportUserLoginInfoNew(request *model.ExportUserLoginI
 func (c *WorkspaceClient) ExportUserLoginInfoNewInvoker(request *model.ExportUserLoginInfoNewRequest) *ExportUserLoginInfoNewInvoker {
 	requestDef := GenReqDefForExportUserLoginInfoNew()
 	return &ExportUserLoginInfoNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// Deprecated: This function is deprecated and will be removed in the future versions.
-// ListDesktopsStatus 查询桌面登录状态
-//
-// 该接口用于查询桌面登录状态
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *WorkspaceClient) ListDesktopsStatus(request *model.ListDesktopsStatusRequest) (*model.ListDesktopsStatusResponse, error) {
-	requestDef := GenReqDefForListDesktopsStatus()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListDesktopsStatusResponse), nil
-	}
-}
-
-// Deprecated: This function is deprecated and will be removed in the future versions.
-// ListDesktopsStatusInvoker 查询桌面登录状态
-func (c *WorkspaceClient) ListDesktopsStatusInvoker(request *model.ListDesktopsStatusRequest) *ListDesktopsStatusInvoker {
-	requestDef := GenReqDefForListDesktopsStatus()
-	return &ListDesktopsStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListHistoryOnlineInfo 查询登录人数
-//
-// 该接口用于查询登录人数
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *WorkspaceClient) ListHistoryOnlineInfo(request *model.ListHistoryOnlineInfoRequest) (*model.ListHistoryOnlineInfoResponse, error) {
-	requestDef := GenReqDefForListHistoryOnlineInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListHistoryOnlineInfoResponse), nil
-	}
-}
-
-// ListHistoryOnlineInfoInvoker 查询登录人数
-func (c *WorkspaceClient) ListHistoryOnlineInfoInvoker(request *model.ListHistoryOnlineInfoRequest) *ListHistoryOnlineInfoInvoker {
-	requestDef := GenReqDefForListHistoryOnlineInfo()
-	return &ListHistoryOnlineInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListHistoryOnlineInfoNew 查询登录人数
@@ -1136,7 +1134,7 @@ func (c *WorkspaceClient) ListLoginRecordsNewInvoker(request *model.ListLoginRec
 
 // AttachInstances 分配用户
 //
-// 将桌面分配给用户
+// 将桌面分配给用户。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) AttachInstances(request *model.AttachInstancesRequest) (*model.AttachInstancesResponse, error) {
@@ -1199,7 +1197,7 @@ func (c *WorkspaceClient) BatchAttachInstancesInvoker(request *model.BatchAttach
 
 // BatchChangeDesktopNetwork 批量切换桌面网络
 //
-// 批量切换桌面vpc、子网、ip、安全组
+// 批量切换桌面vpc、子网、ip、安全组。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) BatchChangeDesktopNetwork(request *model.BatchChangeDesktopNetworkRequest) (*model.BatchChangeDesktopNetworkResponse, error) {
@@ -1241,7 +1239,7 @@ func (c *WorkspaceClient) BatchDeleteDesktopsInvoker(request *model.BatchDeleteD
 
 // BatchDetachInstances 批量解绑用户
 //
-// 批量将桌面和用户解绑
+// 批量将桌面和用户解绑。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) BatchDetachInstances(request *model.BatchDetachInstancesRequest) (*model.BatchDetachInstancesResponse, error) {
@@ -1260,9 +1258,9 @@ func (c *WorkspaceClient) BatchDetachInstancesInvoker(request *model.BatchDetach
 	return &BatchDetachInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchInstallAgent 安装ces-agent
+// BatchInstallAgent 安装agent
 //
-// 批量为桌面安装agent
+// 批量为桌面安装agent。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) BatchInstallAgent(request *model.BatchInstallAgentRequest) (*model.BatchInstallAgentResponse, error) {
@@ -1275,7 +1273,7 @@ func (c *WorkspaceClient) BatchInstallAgent(request *model.BatchInstallAgentRequ
 	}
 }
 
-// BatchInstallAgentInvoker 安装ces-agent
+// BatchInstallAgentInvoker 安装agent
 func (c *WorkspaceClient) BatchInstallAgentInvoker(request *model.BatchInstallAgentRequest) *BatchInstallAgentInvoker {
 	requestDef := GenReqDefForBatchInstallAgent()
 	return &BatchInstallAgentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1325,7 +1323,7 @@ func (c *WorkspaceClient) BatchRebuildDesktopsSystemDiskInvoker(request *model.B
 
 // BatchRunDesktops 操作桌面
 //
-// 批量操作桌面，用于批量开机、关机和重启。
+// 批量操作桌面，用于批量开机、关机、休眠和重启。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) BatchRunDesktops(request *model.BatchRunDesktopsRequest) (*model.BatchRunDesktopsResponse, error) {
@@ -1367,7 +1365,7 @@ func (c *WorkspaceClient) CancelRemoteAssistanceInvoker(request *model.CancelRem
 
 // ChangeDesktopNetwork 切换桌面网络
 //
-// 切换桌面vpc、子网、ip、安全组
+// 切换桌面vpc、子网、ip、安全组。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ChangeDesktopNetwork(request *model.ChangeDesktopNetworkRequest) (*model.ChangeDesktopNetworkResponse, error) {
@@ -1388,7 +1386,7 @@ func (c *WorkspaceClient) ChangeDesktopNetworkInvoker(request *model.ChangeDeskt
 
 // ChangeDesktopToImage 桌面转镜像
 //
-// 桌面转镜像
+// 桌面转镜像。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ChangeDesktopToImage(request *model.ChangeDesktopToImageRequest) (*model.ChangeDesktopToImageResponse, error) {
@@ -1493,7 +1491,7 @@ func (c *WorkspaceClient) DeleteDesktopInvoker(request *model.DeleteDesktopReque
 
 // DetachInstances 解绑用户
 //
-// 将桌面和用户解绑
+// 将桌面和用户解绑。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) DetachInstances(request *model.DetachInstancesRequest) (*model.DetachInstancesResponse, error) {
@@ -1552,27 +1550,6 @@ func (c *WorkspaceClient) ListDesktopActions(request *model.ListDesktopActionsRe
 func (c *WorkspaceClient) ListDesktopActionsInvoker(request *model.ListDesktopActionsRequest) *ListDesktopActionsInvoker {
 	requestDef := GenReqDefForListDesktopActions()
 	return &ListDesktopActionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListDesktopDetachInfo 查询桌面解绑信息
-//
-// 查询桌面解绑信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *WorkspaceClient) ListDesktopDetachInfo(request *model.ListDesktopDetachInfoRequest) (*model.ListDesktopDetachInfoResponse, error) {
-	requestDef := GenReqDefForListDesktopDetachInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListDesktopDetachInfoResponse), nil
-	}
-}
-
-// ListDesktopDetachInfoInvoker 查询桌面解绑信息
-func (c *WorkspaceClient) ListDesktopDetachInfoInvoker(request *model.ListDesktopDetachInfoRequest) *ListDesktopDetachInfoInvoker {
-	requestDef := GenReqDefForListDesktopDetachInfo()
-	return &ListDesktopDetachInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDesktops 查询桌面列表
@@ -1682,7 +1659,7 @@ func (c *WorkspaceClient) ResizeDesktopInvoker(request *model.ResizeDesktopReque
 
 // SendNotifications 发送消息通知
 //
-// 用于管理员向桌面发送消息通知
+// 用于管理员向桌面发送消息通知。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) SendNotifications(request *model.SendNotificationsRequest) (*model.SendNotificationsResponse, error) {
@@ -1703,7 +1680,7 @@ func (c *WorkspaceClient) SendNotificationsInvoker(request *model.SendNotificati
 
 // SetMaintenanceMode 批量设置桌面维护模式
 //
-// 批量设置桌面管理员维护模式
+// 批量设置桌面管理员维护模式。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) SetMaintenanceMode(request *model.SetMaintenanceModeRequest) (*model.SetMaintenanceModeResponse, error) {
@@ -1766,7 +1743,7 @@ func (c *WorkspaceClient) ShowDesktopMonitorDataInvoker(request *model.ShowDeskt
 
 // ShowDesktopNetwork 查询桌面网络
 //
-// 查询桌面vpc、子网、privateIp、EIP、安全组
+// 查询桌面vpc、子网、privateIp、EIP、安全组。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ShowDesktopNetwork(request *model.ShowDesktopNetworkRequest) (*model.ShowDesktopNetworkResponse, error) {
@@ -1787,7 +1764,7 @@ func (c *WorkspaceClient) ShowDesktopNetworkInvoker(request *model.ShowDesktopNe
 
 // ShowDesktopNetworks 批量查询桌面网络
 //
-// 查询桌面vpc、子网、privateIp、EIP、安全组
+// 查询桌面vpc、子网、privateIp、EIP、安全组。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ShowDesktopNetworks(request *model.ShowDesktopNetworksRequest) (*model.ShowDesktopNetworksResponse, error) {
@@ -2292,7 +2269,7 @@ func (c *WorkspaceClient) RebuildDesktopPoolInvoker(request *model.RebuildDeskto
 
 // ResizeDesktopPool 桌面池变更规格
 //
-// 桌面池变更规格
+// 桌面池变更规格。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ResizeDesktopPool(request *model.ResizeDesktopPoolRequest) (*model.ResizeDesktopPoolResponse, error) {
@@ -2313,7 +2290,7 @@ func (c *WorkspaceClient) ResizeDesktopPoolInvoker(request *model.ResizeDesktopP
 
 // SendDesktopPoolNotifications 发送消息通知
 //
-// 用于管理员向桌面发送消息通知
+// 用于管理员向桌面发送消息通知。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) SendDesktopPoolNotifications(request *model.SendDesktopPoolNotificationsRequest) (*model.SendDesktopPoolNotificationsResponse, error) {
@@ -2397,7 +2374,7 @@ func (c *WorkspaceClient) UpdateDesktopPoolInvoker(request *model.UpdateDesktopP
 
 // BatchAddDesktopsTags 批量添加多个桌面标签
 //
-// 同时对多个桌面批量添加标签，如果创建的标签已经存在（key相同）则覆，最大支持100个桌面，每个桌面最大20个标签
+// 同时对多个桌面批量添加标签，如果创建的标签已经存在（key相同）则覆，最大支持100个桌面，每个桌面最大20个标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) BatchAddDesktopsTags(request *model.BatchAddDesktopsTagsRequest) (*model.BatchAddDesktopsTagsResponse, error) {
@@ -2418,7 +2395,7 @@ func (c *WorkspaceClient) BatchAddDesktopsTagsInvoker(request *model.BatchAddDes
 
 // BatchChangeTags 批量添加删除标签
 //
-// 为指定桌面批量添加或删除标签。创建时，如果创建的标签已经存在（key相同），则覆盖。删除时，如果删除的标签不存在，默认处理成功
+// 为指定桌面批量添加或删除标签。创建时，如果创建的标签已经存在（key相同），则覆盖。删除时，如果删除的标签不存在，默认处理成功。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) BatchChangeTags(request *model.BatchChangeTagsRequest) (*model.BatchChangeTagsResponse, error) {
@@ -2439,7 +2416,7 @@ func (c *WorkspaceClient) BatchChangeTagsInvoker(request *model.BatchChangeTagsR
 
 // BatchDeleteDesktopsTags 批量删除多个桌面标签
 //
-// 同时对多个桌面批量添加标签，删除时，如果删除的标签不存在默认处理成功，最大支持100个桌面，每个桌面最大20个标签
+// 同时对多个桌面批量添加标签，删除时，如果删除的标签不存在默认处理成功，最大支持100个桌面，每个桌面最大20个标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) BatchDeleteDesktopsTags(request *model.BatchDeleteDesktopsTagsRequest) (*model.BatchDeleteDesktopsTagsResponse, error) {
@@ -2502,7 +2479,7 @@ func (c *WorkspaceClient) DeleteTagInvoker(request *model.DeleteTagRequest) *Del
 
 // ListDesktopByTags 使用标签过滤桌面
 //
-// 使用标签过滤桌面
+// 使用标签过滤桌面。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListDesktopByTags(request *model.ListDesktopByTagsRequest) (*model.ListDesktopByTagsResponse, error) {
@@ -2523,7 +2500,7 @@ func (c *WorkspaceClient) ListDesktopByTagsInvoker(request *model.ListDesktopByT
 
 // ListProjectTags 查询项目标签
 //
-// 查询租户的所有标签集合
+// 查询租户的所有标签集合。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListProjectTags(request *model.ListProjectTagsRequest) (*model.ListProjectTagsResponse, error) {
@@ -2544,7 +2521,7 @@ func (c *WorkspaceClient) ListProjectTagsInvoker(request *model.ListProjectTagsR
 
 // ShowTagByDesktopId 查询桌面标签
 //
-// 查询指定桌面的标签信息
+// 查询指定桌面的标签信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ShowTagByDesktopId(request *model.ShowTagByDesktopIdRequest) (*model.ShowTagByDesktopIdResponse, error) {
@@ -2754,7 +2731,7 @@ func (c *WorkspaceClient) ListMarketImagesInvoker(request *model.ListMarketImage
 
 // EstimateAddResources 包周期桌面增配变更批量询价
 //
-// 包周期桌面增配变更批量询价
+// 包周期桌面增配变更批量询价。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) EstimateAddResources(request *model.EstimateAddResourcesRequest) (*model.EstimateAddResourcesResponse, error) {
@@ -2796,7 +2773,7 @@ func (c *WorkspaceClient) EstimateChangeImagesInvoker(request *model.EstimateCha
 
 // EstimateDesktopPoolAddVolume 包周期桌面池添加单个磁盘批量询价
 //
-// 包周期桌面池添加单个磁盘批量询价
+// 包周期桌面池添加单个磁盘批量询价。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) EstimateDesktopPoolAddVolume(request *model.EstimateDesktopPoolAddVolumeRequest) (*model.EstimateDesktopPoolAddVolumeResponse, error) {
@@ -2817,7 +2794,7 @@ func (c *WorkspaceClient) EstimateDesktopPoolAddVolumeInvoker(request *model.Est
 
 // EstimateDesktopPoolChangeImage 包周期桌面池切换镜像批量询价
 //
-// 包周期桌面池切换镜像(由不收费镜像变更至收费镜像)批量询价
+// 包周期桌面池切换镜像(由不收费镜像变更至收费镜像)批量询价。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) EstimateDesktopPoolChangeImage(request *model.EstimateDesktopPoolChangeImageRequest) (*model.EstimateDesktopPoolChangeImageResponse, error) {
@@ -2838,7 +2815,7 @@ func (c *WorkspaceClient) EstimateDesktopPoolChangeImageInvoker(request *model.E
 
 // EstimateDesktopPoolExtendVolume 包周期桌面池扩容磁盘批量询价
 //
-// 包周期桌面池扩容磁盘批量询价
+// 包周期桌面池扩容磁盘批量询价。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) EstimateDesktopPoolExtendVolume(request *model.EstimateDesktopPoolExtendVolumeRequest) (*model.EstimateDesktopPoolExtendVolumeResponse, error) {
@@ -2859,7 +2836,7 @@ func (c *WorkspaceClient) EstimateDesktopPoolExtendVolumeInvoker(request *model.
 
 // EstimateDesktopPoolResize 包周期桌面池变更规格批量询价
 //
-// 包周期桌面池变更规格批量询价
+// 包周期桌面池变更规格批量询价。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) EstimateDesktopPoolResize(request *model.EstimateDesktopPoolResizeRequest) (*model.EstimateDesktopPoolResizeResponse, error) {
@@ -3130,9 +3107,9 @@ func (c *WorkspaceClient) DeleteSubnetBandwidthInvoker(request *model.DeleteSubn
 	return &DeleteSubnetBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListDesktopsEips 查询已绑定桌面和未绑定的Eip
+// ListDesktopsEips 查询已绑定桌面和未绑定的EIP
 //
-// 查询已绑定桌面和未绑定的Eip。
+// 查询已绑定桌面和未绑定的EIP。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListDesktopsEips(request *model.ListDesktopsEipsRequest) (*model.ListDesktopsEipsResponse, error) {
@@ -3145,7 +3122,7 @@ func (c *WorkspaceClient) ListDesktopsEips(request *model.ListDesktopsEipsReques
 	}
 }
 
-// ListDesktopsEipsInvoker 查询已绑定桌面和未绑定的Eip
+// ListDesktopsEipsInvoker 查询已绑定桌面和未绑定的EIP
 func (c *WorkspaceClient) ListDesktopsEipsInvoker(request *model.ListDesktopsEipsRequest) *ListDesktopsEipsInvoker {
 	requestDef := GenReqDefForListDesktopsEips()
 	return &ListDesktopsEipsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3172,7 +3149,7 @@ func (c *WorkspaceClient) ListInternetInvoker(request *model.ListInternetRequest
 	return &ListInternetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListNatGateways 查询Nat网关列表
+// ListNatGateways 查询NAT网关列表
 //
 // 查询NAT网关列表。
 //
@@ -3187,7 +3164,7 @@ func (c *WorkspaceClient) ListNatGateways(request *model.ListNatGatewaysRequest)
 	}
 }
 
-// ListNatGatewaysInvoker 查询Nat网关列表
+// ListNatGatewaysInvoker 查询NAT网关列表
 func (c *WorkspaceClient) ListNatGatewaysInvoker(request *model.ListNatGatewaysRequest) *ListNatGatewaysInvoker {
 	requestDef := GenReqDefForListNatGateways()
 	return &ListNatGatewaysInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3279,7 +3256,7 @@ func (c *WorkspaceClient) ShowUsingSubnetsInvoker(request *model.ShowUsingSubnet
 
 // UpdateSubnetBandwidth 修改云办公带宽
 //
-// 修改云办公带宽
+// 修改云办公带宽。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) UpdateSubnetBandwidth(request *model.UpdateSubnetBandwidthRequest) (*model.UpdateSubnetBandwidthResponse, error) {
@@ -3300,7 +3277,7 @@ func (c *WorkspaceClient) UpdateSubnetBandwidthInvoker(request *model.UpdateSubn
 
 // UpdateSubnetBandwidthControlList 修改云办公带宽的控制配置
 //
-// 修改云办公带宽的控制配置
+// 修改云办公带宽的控制配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) UpdateSubnetBandwidthControlList(request *model.UpdateSubnetBandwidthControlListRequest) (*model.UpdateSubnetBandwidthControlListResponse, error) {
@@ -3321,7 +3298,7 @@ func (c *WorkspaceClient) UpdateSubnetBandwidthControlListInvoker(request *model
 
 // CreateChangeOrder 创建变更订单
 //
-// 变更规格、扩容磁盘[、按需转包周期生成订单](tag:inner)
+// 变更规格、扩容磁盘。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) CreateChangeOrder(request *model.CreateChangeOrderRequest) (*model.CreateChangeOrderResponse, error) {
@@ -3342,7 +3319,7 @@ func (c *WorkspaceClient) CreateChangeOrderInvoker(request *model.CreateChangeOr
 
 // CreateDesktopBatchOrder 包周期桌面批量变更下单
 //
-// 包周期桌面批量变更下单
+// 包周期桌面批量变更下单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) CreateDesktopBatchOrder(request *model.CreateDesktopBatchOrderRequest) (*model.CreateDesktopBatchOrderResponse, error) {
@@ -3384,7 +3361,7 @@ func (c *WorkspaceClient) CreateDesktopOrderInvoker(request *model.CreateDesktop
 
 // CreateDesktopPoolChangeOrder 包周期桌面池批量变更下单
 //
-// 包周期桌面池批量变更下单
+// 包周期桌面池批量变更下单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) CreateDesktopPoolChangeOrder(request *model.CreateDesktopPoolChangeOrderRequest) (*model.CreateDesktopPoolChangeOrderResponse, error) {
@@ -3405,7 +3382,7 @@ func (c *WorkspaceClient) CreateDesktopPoolChangeOrderInvoker(request *model.Cre
 
 // CreateOrder 包周期下单
 //
-// 包周期资源（桌面、磁盘[、云办公主机](tag:ZQ)）下订单。
+// 包周期资源（桌面、磁盘）下订单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) CreateOrder(request *model.CreateOrderRequest) (*model.CreateOrderResponse, error) {
@@ -3489,7 +3466,7 @@ func (c *WorkspaceClient) DeleteOuInvoker(request *model.DeleteOuRequest) *Delet
 
 // ListAdOuUsers 查询OU下用户信息
 //
-// 查询OU下用户信息
+// 查询OU下用户信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListAdOuUsers(request *model.ListAdOuUsersRequest) (*model.ListAdOuUsersResponse, error) {
@@ -3508,9 +3485,9 @@ func (c *WorkspaceClient) ListAdOuUsersInvoker(request *model.ListAdOuUsersReque
 	return &ListAdOuUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAdOus 查询OU信息
+// ListAdOus 查询AD里的OU列表
 //
-// 查询OU信息
+// 查询AD里的OU列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListAdOus(request *model.ListAdOusRequest) (*model.ListAdOusResponse, error) {
@@ -3523,15 +3500,15 @@ func (c *WorkspaceClient) ListAdOus(request *model.ListAdOusRequest) (*model.Lis
 	}
 }
 
-// ListAdOusInvoker 查询OU信息
+// ListAdOusInvoker 查询AD里的OU列表
 func (c *WorkspaceClient) ListAdOusInvoker(request *model.ListAdOusRequest) *ListAdOusInvoker {
 	requestDef := GenReqDefForListAdOus()
 	return &ListAdOusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListOuDetails 查询OU信息
+// ListOuDetails 查询OU列表
 //
-// 查询OU信息
+// 查询OU列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListOuDetails(request *model.ListOuDetailsRequest) (*model.ListOuDetailsResponse, error) {
@@ -3544,7 +3521,7 @@ func (c *WorkspaceClient) ListOuDetails(request *model.ListOuDetailsRequest) (*m
 	}
 }
 
-// ListOuDetailsInvoker 查询OU信息
+// ListOuDetailsInvoker 查询OU列表
 func (c *WorkspaceClient) ListOuDetailsInvoker(request *model.ListOuDetailsRequest) *ListOuDetailsInvoker {
 	requestDef := GenReqDefForListOuDetails()
 	return &ListOuDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3552,7 +3529,7 @@ func (c *WorkspaceClient) ListOuDetailsInvoker(request *model.ListOuDetailsReque
 
 // UpdateOuInfo 更新OU信息
 //
-// 更新OU信息
+// 更新OU信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) UpdateOuInfo(request *model.UpdateOuInfoRequest) (*model.UpdateOuInfoResponse, error) {
@@ -3594,7 +3571,7 @@ func (c *WorkspaceClient) BatchUpdateTargetOfPolicyGroupInvoker(request *model.B
 
 // CreatePolicyGroup 新增策略组
 //
-// 新增策略组
+// 新增策略组。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) CreatePolicyGroup(request *model.CreatePolicyGroupRequest) (*model.CreatePolicyGroupResponse, error) {
@@ -3615,7 +3592,7 @@ func (c *WorkspaceClient) CreatePolicyGroupInvoker(request *model.CreatePolicyGr
 
 // DeletePolicyGroup 删除策略组
 //
-// 删除指定策略组，包含策略组对应的策略信息以及应用对象信息
+// 删除指定策略组，包含策略组对应的策略信息以及应用对象信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) DeletePolicyGroup(request *model.DeletePolicyGroupRequest) (*model.DeletePolicyGroupResponse, error) {
@@ -3636,7 +3613,7 @@ func (c *WorkspaceClient) DeletePolicyGroupInvoker(request *model.DeletePolicyGr
 
 // ListOriginalPolicyInfo 查询初始策略项
 //
-// 查询初始策略项
+// 查询初始策略项。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListOriginalPolicyInfo(request *model.ListOriginalPolicyInfoRequest) (*model.ListOriginalPolicyInfoResponse, error) {
@@ -3678,7 +3655,7 @@ func (c *WorkspaceClient) ListPoliciesOfPolicyGroupInvoker(request *model.ListPo
 
 // ListPolicyDetailInfoById 查询策略组
 //
-// 根据策略组ID查询策略组详细信息，包含策略信息以及应用对象信息
+// 根据策略组ID查询策略组详细信息，包含策略信息以及应用对象信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListPolicyDetailInfoById(request *model.ListPolicyDetailInfoByIdRequest) (*model.ListPolicyDetailInfoByIdResponse, error) {
@@ -3783,7 +3760,7 @@ func (c *WorkspaceClient) UpdatePoliciesOfPolicyGroupInvoker(request *model.Upda
 
 // UpdatePolicyGroup 修改策略组
 //
-// 修改指定策略组的信息
+// 修改指定策略组的信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) UpdatePolicyGroup(request *model.UpdatePolicyGroupRequest) (*model.UpdatePolicyGroupResponse, error) {
@@ -3909,7 +3886,7 @@ func (c *WorkspaceClient) UpdateTenantProfileInvoker(request *model.UpdateTenant
 
 // ShowQuotaDetails 查询租户单个站点配额详情
 //
-// 查询租户单个站点配额详情
+// 查询租户单个站点配额详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ShowQuotaDetails(request *model.ShowQuotaDetailsRequest) (*model.ShowQuotaDetailsResponse, error) {
@@ -4099,7 +4076,7 @@ func (c *WorkspaceClient) ListScheduledTasksRecordsDetailsInvoker(request *model
 
 // ListTimeZones 获取时区配置
 //
-// 获取时区配置
+// 获取时区配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListTimeZones(request *model.ListTimeZonesRequest) (*model.ListTimeZonesResponse, error) {
@@ -4246,7 +4223,7 @@ func (c *WorkspaceClient) ListScreenRecordsInvoker(request *model.ListScreenReco
 
 // ShowScreenRecord 查询录屏详情
 //
-// 查询录屏详情
+// 查询录屏详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ShowScreenRecord(request *model.ShowScreenRecordRequest) (*model.ShowScreenRecordResponse, error) {
@@ -4498,7 +4475,7 @@ func (c *WorkspaceClient) UpdateScriptInvoker(request *model.UpdateScriptRequest
 
 // AddDesktopSubResources 桌面购买附属资源
 //
-// 存量桌面购买附属资源
+// 存量桌面购买附属资源。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) AddDesktopSubResources(request *model.AddDesktopSubResourcesRequest) (*model.AddDesktopSubResourcesResponse, error) {
@@ -4519,7 +4496,7 @@ func (c *WorkspaceClient) AddDesktopSubResourcesInvoker(request *model.AddDeskto
 
 // DeleteDesktopSubResources 桌面删除附属资源
 //
-// 桌面删除附属资源
+// 桌面删除附属资源。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) DeleteDesktopSubResources(request *model.DeleteDesktopSubResourcesRequest) (*model.DeleteDesktopSubResourcesResponse, error) {
@@ -4540,7 +4517,7 @@ func (c *WorkspaceClient) DeleteDesktopSubResourcesInvoker(request *model.Delete
 
 // ShowShareSpaceConfig 查询协同桌面默认用户配置
 //
-// 查询协同桌面默认用户配置（当前功能公测中,需要使用请联系管理员申请使用）
+// 查询协同桌面默认用户配置（当前功能公测中,需要使用请联系管理员申请使用）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ShowShareSpaceConfig(request *model.ShowShareSpaceConfigRequest) (*model.ShowShareSpaceConfigResponse, error) {
@@ -4561,7 +4538,7 @@ func (c *WorkspaceClient) ShowShareSpaceConfigInvoker(request *model.ShowShareSp
 
 // UpdateShareSpaceConfig 设置协同桌面默认用户配置
 //
-// 设置协同桌面默认用户配置（当前功能公测中，需要使用请联系管理员申请使用）
+// 设置协同桌面默认用户配置（当前功能公测中，需要使用请联系管理员申请使用）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) UpdateShareSpaceConfig(request *model.UpdateShareSpaceConfigRequest) (*model.UpdateShareSpaceConfigResponse, error) {
@@ -4582,7 +4559,7 @@ func (c *WorkspaceClient) UpdateShareSpaceConfigInvoker(request *model.UpdateSha
 
 // AddSite 新增站点
 //
-// 用于查询站点信息的接口
+// 用于查询站点信息的接口。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) AddSite(request *model.AddSiteRequest) (*model.AddSiteResponse, error) {
@@ -4603,7 +4580,7 @@ func (c *WorkspaceClient) AddSiteInvoker(request *model.AddSiteRequest) *AddSite
 
 // DeleteSite 删除站点
 //
-// 用于删除站点的接口
+// 用于删除站点的接口。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) DeleteSite(request *model.DeleteSiteRequest) (*model.DeleteSiteResponse, error) {
@@ -4624,7 +4601,7 @@ func (c *WorkspaceClient) DeleteSiteInvoker(request *model.DeleteSiteRequest) *D
 
 // ListSiteConfigs 查询站点信息
 //
-// 用于查询站点信息的接口
+// 用于查询站点信息的接口。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListSiteConfigs(request *model.ListSiteConfigsRequest) (*model.ListSiteConfigsResponse, error) {
@@ -4666,7 +4643,7 @@ func (c *WorkspaceClient) ListWksEdgeSitesInvoker(request *model.ListWksEdgeSite
 
 // UpdateAccessMode 修改站点接入方式
 //
-// 用于修改站点接入方式
+// 用于修改站点接入方式。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) UpdateAccessMode(request *model.UpdateAccessModeRequest) (*model.UpdateAccessModeResponse, error) {
@@ -4687,7 +4664,7 @@ func (c *WorkspaceClient) UpdateAccessModeInvoker(request *model.UpdateAccessMod
 
 // UpdateSubnetIds 修改站点业务子网
 //
-// 用于修改站点业务子网
+// 用于修改站点业务子网。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) UpdateSubnetIds(request *model.UpdateSubnetIdsRequest) (*model.UpdateSubnetIdsResponse, error) {
@@ -4708,7 +4685,7 @@ func (c *WorkspaceClient) UpdateSubnetIdsInvoker(request *model.UpdateSubnetIdsR
 
 // BatchCreateDesktopSnapshot 批量创建快照
 //
-// 批量创建快照
+// 批量创建快照。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) BatchCreateDesktopSnapshot(request *model.BatchCreateDesktopSnapshotRequest) (*model.BatchCreateDesktopSnapshotResponse, error) {
@@ -4729,7 +4706,7 @@ func (c *WorkspaceClient) BatchCreateDesktopSnapshotInvoker(request *model.Batch
 
 // BatchDeleteDesktopSnapshot 批量删除快照
 //
-// 批量删除快照
+// 批量删除快照。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) BatchDeleteDesktopSnapshot(request *model.BatchDeleteDesktopSnapshotRequest) (*model.BatchDeleteDesktopSnapshotResponse, error) {
@@ -4750,7 +4727,7 @@ func (c *WorkspaceClient) BatchDeleteDesktopSnapshotInvoker(request *model.Batch
 
 // BatchRestoreDesktopSnapshot 批量恢复快照
 //
-// 批量恢快照
+// 批量恢快照。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) BatchRestoreDesktopSnapshot(request *model.BatchRestoreDesktopSnapshotRequest) (*model.BatchRestoreDesktopSnapshotResponse, error) {
@@ -4771,7 +4748,7 @@ func (c *WorkspaceClient) BatchRestoreDesktopSnapshotInvoker(request *model.Batc
 
 // ListDesktopSnapshot 查询快照列表
 //
-// 查询快照列表
+// 查询快照列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListDesktopSnapshot(request *model.ListDesktopSnapshotRequest) (*model.ListDesktopSnapshotResponse, error) {
@@ -4838,8 +4815,7 @@ func (c *WorkspaceClient) DeleteMetricNotifyRuleInvoker(request *model.DeleteMet
 
 // ListAppUserAccessData 查询云应用接入统计数据
 //
-// 查询云应用接入统计数据;
-// 最多查询30天内的数据;
+// 查询云应用接入统计数据，一次最多查询30天，支持最近30天的数据查询。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListAppUserAccessData(request *model.ListAppUserAccessDataRequest) (*model.ListAppUserAccessDataResponse, error) {
@@ -4886,7 +4862,7 @@ func (c *WorkspaceClient) ListDesktopUsageMetricInvoker(request *model.ListDeskt
 
 // ListDesktopsStatistics 桌面统计
 //
-// 统计租户下的普通桌面、桌面池状态，默认仅统计总数
+// 统计租户下的普通桌面、桌面池状态，默认仅统计总数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListDesktopsStatistics(request *model.ListDesktopsStatisticsRequest) (*model.ListDesktopsStatisticsResponse, error) {
@@ -4950,7 +4926,7 @@ func (c *WorkspaceClient) ListMetricNotifyRecordInvoker(request *model.ListMetri
 
 // ListMetricNotifyRule 查询通知规则
 //
-// 查询对应指标的通知规则;
+// 查询对应指标的通知规则;。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListMetricNotifyRule(request *model.ListMetricNotifyRuleRequest) (*model.ListMetricNotifyRuleResponse, error) {
@@ -4971,7 +4947,7 @@ func (c *WorkspaceClient) ListMetricNotifyRuleInvoker(request *model.ListMetricN
 
 // ListMetrics 查询指标
 //
-// 查询指标
+// 查询指标。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListMetrics(request *model.ListMetricsRequest) (*model.ListMetricsResponse, error) {
@@ -4992,7 +4968,7 @@ func (c *WorkspaceClient) ListMetricsInvoker(request *model.ListMetricsRequest) 
 
 // ListMetricsTrend 查询指标趋势
 //
-// 查询指标趋势
+// 查询指标趋势。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListMetricsTrend(request *model.ListMetricsTrendRequest) (*model.ListMetricsTrendResponse, error) {
@@ -5098,7 +5074,7 @@ func (c *WorkspaceClient) ListUserUsageMetricInvoker(request *model.ListUserUsag
 
 // ShowGrowthRate 查询指标环比值
 //
-// 查询指标环比值
+// 查询指标环比值。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ShowGrowthRate(request *model.ShowGrowthRateRequest) (*model.ShowGrowthRateResponse, error) {
@@ -5119,7 +5095,7 @@ func (c *WorkspaceClient) ShowGrowthRateInvoker(request *model.ShowGrowthRateReq
 
 // ShowUserAccessStages 查询接入云桌面或云应用各阶段时长数据
 //
-// 查询接入云桌面或云应用各阶段时长数据
+// 查询接入云桌面或云应用各阶段时长数据。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ShowUserAccessStages(request *model.ShowUserAccessStagesRequest) (*model.ShowUserAccessStagesResponse, error) {
@@ -5140,7 +5116,7 @@ func (c *WorkspaceClient) ShowUserAccessStagesInvoker(request *model.ShowUserAcc
 
 // UpdateMetricNotifyRule 更新通知规则
 //
-// 更新对应指标的通知规则;对应指标满足相应的规则条件时发送通知
+// 更新对应指标的通知规则;对应指标满足相应的规则条件时发送通知。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) UpdateMetricNotifyRule(request *model.UpdateMetricNotifyRuleRequest) (*model.UpdateMetricNotifyRuleResponse, error) {
@@ -5182,7 +5158,7 @@ func (c *WorkspaceClient) ShowAvailableIpInvoker(request *model.ShowAvailableIpR
 
 // ListTenantConfigs 查询租户个性配置列表
 //
-// 查询租户个性配置列表
+// 查询租户个性配置列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListTenantConfigs(request *model.ListTenantConfigsRequest) (*model.ListTenantConfigsResponse, error) {
@@ -5602,7 +5578,7 @@ func (c *WorkspaceClient) UpdateUserInfoInvoker(request *model.UpdateUserInfoReq
 
 // ListUserEvents 查询用户事件
 //
-// 查询用户事件
+// 查询用户事件，一次最多查询30天，支持最近30天的数据查询。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListUserEvents(request *model.ListUserEventsRequest) (*model.ListUserEventsResponse, error) {
@@ -5619,6 +5595,48 @@ func (c *WorkspaceClient) ListUserEvents(request *model.ListUserEventsRequest) (
 func (c *WorkspaceClient) ListUserEventsInvoker(request *model.ListUserEventsRequest) *ListUserEventsInvoker {
 	requestDef := GenReqDefForListUserEvents()
 	return &ListUserEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUserEventsLtsConfigurations 查询用户事件LTS配置
+//
+// 查询用户事件LTS配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListUserEventsLtsConfigurations(request *model.ListUserEventsLtsConfigurationsRequest) (*model.ListUserEventsLtsConfigurationsResponse, error) {
+	requestDef := GenReqDefForListUserEventsLtsConfigurations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUserEventsLtsConfigurationsResponse), nil
+	}
+}
+
+// ListUserEventsLtsConfigurationsInvoker 查询用户事件LTS配置
+func (c *WorkspaceClient) ListUserEventsLtsConfigurationsInvoker(request *model.ListUserEventsLtsConfigurationsRequest) *ListUserEventsLtsConfigurationsInvoker {
+	requestDef := GenReqDefForListUserEventsLtsConfigurations()
+	return &ListUserEventsLtsConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetUserEventsLtsConfigurations 配置用户事件LTS
+//
+// 配置用户事件LTS。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) SetUserEventsLtsConfigurations(request *model.SetUserEventsLtsConfigurationsRequest) (*model.SetUserEventsLtsConfigurationsResponse, error) {
+	requestDef := GenReqDefForSetUserEventsLtsConfigurations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetUserEventsLtsConfigurationsResponse), nil
+	}
+}
+
+// SetUserEventsLtsConfigurationsInvoker 配置用户事件LTS
+func (c *WorkspaceClient) SetUserEventsLtsConfigurationsInvoker(request *model.SetUserEventsLtsConfigurationsRequest) *SetUserEventsLtsConfigurationsInvoker {
+	requestDef := GenReqDefForSetUserEventsLtsConfigurations()
+	return &SetUserEventsLtsConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AddDesktopVolumes 增加桌面磁盘
@@ -5642,9 +5660,9 @@ func (c *WorkspaceClient) AddDesktopVolumesInvoker(request *model.AddDesktopVolu
 	return &AddDesktopVolumesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// AddVolumes 增加桌面磁盘
+// AddVolumes 批量增加桌面磁盘
 //
-// 增加桌面磁盘。
+// 批量增加桌面磁盘。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) AddVolumes(request *model.AddVolumesRequest) (*model.AddVolumesResponse, error) {
@@ -5657,7 +5675,7 @@ func (c *WorkspaceClient) AddVolumes(request *model.AddVolumesRequest) (*model.A
 	}
 }
 
-// AddVolumesInvoker 增加桌面磁盘
+// AddVolumesInvoker 批量增加桌面磁盘
 func (c *WorkspaceClient) AddVolumesInvoker(request *model.AddVolumesRequest) *AddVolumesInvoker {
 	requestDef := GenReqDefForAddVolumes()
 	return &AddVolumesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -5686,7 +5704,7 @@ func (c *WorkspaceClient) DeleteDesktopVolumesInvoker(request *model.DeleteDeskt
 
 // ExpandDesktopVolume 扩容磁盘
 //
-// 扩容磁盘
+// 扩容磁盘。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ExpandDesktopVolume(request *model.ExpandDesktopVolumeRequest) (*model.ExpandDesktopVolumeResponse, error) {
@@ -5728,7 +5746,7 @@ func (c *WorkspaceClient) ExpandVolumesInvoker(request *model.ExpandVolumesReque
 
 // ListVolumeProductInfo 查询磁盘产品信息
 //
-// 查询磁盘产品信息
+// 查询磁盘产品信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListVolumeProductInfo(request *model.ListVolumeProductInfoRequest) (*model.ListVolumeProductInfoResponse, error) {

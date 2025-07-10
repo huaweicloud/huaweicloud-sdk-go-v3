@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// BatchSetMaintenanceModeReq 批量设置桌面管理员维护模式
+// BatchSetMaintenanceModeReq 批量设置桌面管理员维护模式。
 type BatchSetMaintenanceModeReq struct {
 
-	// 需要设置维护模式的desktopId列表
+	// 需要设置维护模式的desktopId列表。
 	DesktopIds []string `json:"desktop_ids"`
 
 	// 进入或退出管理员维护模式 false:  退出维护模式 true: 维护模式

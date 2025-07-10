@@ -8,7 +8,7 @@ import (
 
 type DeleteTerminalsBindingDesktopsRequestBody struct {
 
-	// 绑定策略ID列表
+	// 绑定策略ID列表。
 	IdList *[]string `json:"id_list,omitempty"`
 }
 

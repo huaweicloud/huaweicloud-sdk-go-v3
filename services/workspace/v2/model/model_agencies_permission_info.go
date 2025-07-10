@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// AgenciesPermissionInfo 委托权限信息
+// AgenciesPermissionInfo 委托权限信息。
 type AgenciesPermissionInfo struct {
 
-	// 委托权限项
+	// 委托权限项。
 	SystemPermissionDisplayNames *[]string `json:"system_permission_display_names,omitempty"`
 
-	// 需要委托的权限项
+	// 需要委托的权限项。
 	WantedSystemPermissionDisplayNames *[]string `json:"wanted_system_permission_display_names,omitempty"`
 }
 

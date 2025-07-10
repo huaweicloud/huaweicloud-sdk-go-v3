@@ -9,7 +9,7 @@ import (
 // ListAgentsInstallConditionResponse Response Object
 type ListAgentsInstallConditionResponse struct {
 
-	// 桌面agent安装情况
+	// 桌面agent安装情况。
 	AgentsCondition *[]AgentsCondition `json:"agents_condition,omitempty"`
 
 	// 总共条数。

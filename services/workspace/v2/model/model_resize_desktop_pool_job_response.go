@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ResizeDesktopPoolJobResponse 按需桌面变更规格返回的任务信息
+// ResizeDesktopPoolJobResponse 按需桌面变更规格返回的任务信息。
 type ResizeDesktopPoolJobResponse struct {
 
 	// 桌面ID。

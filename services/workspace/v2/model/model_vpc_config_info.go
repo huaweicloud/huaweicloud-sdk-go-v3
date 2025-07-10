@@ -12,13 +12,13 @@ type VpcConfigInfo struct {
 	// 已使用的子网信息。
 	UsedSubnetIds *[]string `json:"used_subnet_ids,omitempty"`
 
-	// VPC ID
+	// VPC ID。
 	VpcId *string `json:"vpc_id,omitempty"`
 
-	// 子网ID列表
+	// 子网ID列表。
 	SubnetIds *[]string `json:"subnet_ids,omitempty"`
 
-	// 是否为默认接入VPC
+	// 是否为默认接入VPC。
 	DefaultAccessVpc *bool `json:"default_access_vpc,omitempty"`
 }
 

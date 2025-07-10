@@ -9,10 +9,10 @@ import (
 // ListProjectTagsResponse Response Object
 type ListProjectTagsResponse struct {
 
-	// 标签对象
+	// 标签对象。
 	Tags *[]Tags `json:"tags,omitempty"`
 
-	// 标签总数
+	// 标签总数。
 	TotalCount     *int32 `json:"totalCount,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

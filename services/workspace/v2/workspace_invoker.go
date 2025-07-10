@@ -629,6 +629,38 @@ func (i *ListRestrictedRuleInvoker) Invoke() (*model.ListRestrictedRuleResponse,
 	}
 }
 
+type SetRuleRestrictionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetRuleRestrictionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetRuleRestrictionInvoker) Invoke() (*model.SetRuleRestrictionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetRuleRestrictionResponse), nil
+	}
+}
+
+type ShowRuleRestrictionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRuleRestrictionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRuleRestrictionInvoker) Invoke() (*model.ShowRuleRestrictionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRuleRestrictionResponse), nil
+	}
+}
+
 type UpdateAppRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -770,40 +802,6 @@ func (i *ExportUserLoginInfoNewInvoker) Invoke() (*model.ExportUserLoginInfoNewR
 		return nil, err
 	} else {
 		return result.(*model.ExportUserLoginInfoNewResponse), nil
-	}
-}
-
-type ListDesktopsStatusInvoker struct {
-	*invoker.BaseInvoker
-}
-
-// Deprecated: This function is deprecated and will be removed in the future versions.
-func (i *ListDesktopsStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-// Deprecated: This function is deprecated and will be removed in the future versions.
-func (i *ListDesktopsStatusInvoker) Invoke() (*model.ListDesktopsStatusResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListDesktopsStatusResponse), nil
-	}
-}
-
-type ListHistoryOnlineInfoInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListHistoryOnlineInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListHistoryOnlineInfoInvoker) Invoke() (*model.ListHistoryOnlineInfoResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListHistoryOnlineInfoResponse), nil
 	}
 }
 
@@ -1172,22 +1170,6 @@ func (i *ListDesktopActionsInvoker) Invoke() (*model.ListDesktopActionsResponse,
 		return nil, err
 	} else {
 		return result.(*model.ListDesktopActionsResponse), nil
-	}
-}
-
-type ListDesktopDetachInfoInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListDesktopDetachInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListDesktopDetachInfoInvoker) Invoke() (*model.ListDesktopDetachInfoResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListDesktopDetachInfoResponse), nil
 	}
 }
 
@@ -4260,6 +4242,38 @@ func (i *ListUserEventsInvoker) Invoke() (*model.ListUserEventsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListUserEventsResponse), nil
+	}
+}
+
+type ListUserEventsLtsConfigurationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUserEventsLtsConfigurationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListUserEventsLtsConfigurationsInvoker) Invoke() (*model.ListUserEventsLtsConfigurationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUserEventsLtsConfigurationsResponse), nil
+	}
+}
+
+type SetUserEventsLtsConfigurationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetUserEventsLtsConfigurationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetUserEventsLtsConfigurationsInvoker) Invoke() (*model.SetUserEventsLtsConfigurationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetUserEventsLtsConfigurationsResponse), nil
 	}
 }
 

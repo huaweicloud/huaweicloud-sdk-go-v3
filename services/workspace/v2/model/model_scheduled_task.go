@@ -39,7 +39,7 @@ type ScheduledTask struct {
 	// 优先级。触发式任务使用。
 	Priority *int32 `json:"priority,omitempty"`
 
-	// 时区
+	// 时区。
 	TimeZone *string `json:"time_zone,omitempty"`
 
 	// 触发式任务触发后，等待时长。

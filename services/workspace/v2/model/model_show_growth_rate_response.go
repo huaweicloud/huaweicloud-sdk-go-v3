@@ -9,7 +9,7 @@ import (
 // ShowGrowthRateResponse Response Object
 type ShowGrowthRateResponse struct {
 
-	// 环比值
+	// 环比值。
 	GrowthRate     *float64 `json:"growth_rate,omitempty"`
 	HttpStatusCode int      `json:"-"`
 }

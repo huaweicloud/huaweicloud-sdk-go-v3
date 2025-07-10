@@ -9,10 +9,10 @@ import (
 // Port 私有IP信息。
 type Port struct {
 
-	// 私有IP唯一标识
+	// 私有IP唯一标识。
 	Id *string `json:"id,omitempty"`
 
-	// 私有IP地址
+	// 私有IP地址。
 	IpAddress *string `json:"ip_address,omitempty"`
 }
 

@@ -9,7 +9,7 @@ import (
 // BatchAttachInstancesResponse Response Object
 type BatchAttachInstancesResponse struct {
 
-	// 分配桌面总任务id
+	// 分配桌面总任务id。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

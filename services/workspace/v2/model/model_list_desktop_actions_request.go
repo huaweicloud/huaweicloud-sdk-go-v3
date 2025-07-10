@@ -12,10 +12,10 @@ type ListDesktopActionsRequest struct {
 	// 桌面ID。
 	DesktopId string `json:"desktop_id"`
 
-	// 每页限制数
+	// 每页限制数。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 起始位置
+	// 起始位置。
 	Limit *int32 `json:"limit,omitempty"`
 }
 

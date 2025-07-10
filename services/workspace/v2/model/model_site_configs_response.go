@@ -9,16 +9,16 @@ import (
 	"strings"
 )
 
-// SiteConfigsResponse 站点配置
+// SiteConfigsResponse 站点配置。
 type SiteConfigsResponse struct {
 
-	// 站点id
+	// 站点id。
 	SiteId *string `json:"site_id,omitempty"`
 
 	// 配置状态。 - CENTER： 中心初始化 - IES： 边缘初始化
 	SiteType *SiteConfigsResponseSiteType `json:"site_type,omitempty"`
 
-	// 站点名称
+	// 站点名称。
 	SiteName *string `json:"site_name,omitempty"`
 
 	// 云办公服务的状态。 - PREPARING：准备初始化服务 - SUBSCRIBING：初始化服务中 - SUBSCRIBED：已初始化服务 - SUBSCRIPTION_FAILED：初始化服务失败 - DEREGISTERING：清理资源中 - DEREGISTRATION_FAILED：清理资源失败 - RECYCLING：清理资源中。 - RECYCLED：清理资源成功。 - RECYCLE_FAILED：清理资源失败。 - CLOSED：已销户未初始化服务
@@ -34,19 +34,19 @@ type SiteConfigsResponse struct {
 
 	DesktopSecurityGroup *SecurityGroup `json:"desktop_security_group,omitempty"`
 
-	// 开通服务资源使用的可用分区
+	// 开通服务资源使用的可用分区。
 	AvailabilityZones *[]string `json:"availability_zones,omitempty"`
 
-	// 开通服务或取消服务的任务ID
+	// 开通服务或取消服务的任务ID。
 	JobId *string `json:"job_id,omitempty"`
 
-	// 初始化服务或清理资源的进度，格式为100%
+	// 初始化服务或清理资源的进度，格式为100%。
 	Progress *string `json:"progress,omitempty"`
 
-	// 失败错误码
+	// 失败错误码。
 	FailCode *int32 `json:"fail_code,omitempty"`
 
-	// 失败原因
+	// 失败原因。
 	FailReason *string `json:"fail_reason,omitempty"`
 
 	NetworkConfig *NetworkConfig `json:"network_config,omitempty"`

@@ -13,11 +13,8 @@ type ListDesktopsResponse struct {
 	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 桌面信息。
-	Desktops *[]SimpleDesktopInfo `json:"desktops,omitempty"`
-
-	// Workspace桌面列表。
-	DesktopInfos   *[]SimpleDesktopInfoDetail `json:"desktop_infos,omitempty"`
-	HttpStatusCode int                        `json:"-"`
+	Desktops       *[]SimpleDesktopInfo `json:"desktops,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o ListDesktopsResponse) String() string {

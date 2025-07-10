@@ -9,7 +9,7 @@ import (
 // AddVolumesResponse Response Object
 type AddVolumesResponse struct {
 
-	// 增加磁盘任务ID
+	// 增加磁盘任务ID。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

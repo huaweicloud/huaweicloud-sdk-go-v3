@@ -6,16 +6,14 @@ import (
 	"strings"
 )
 
+// PolicyGroupForUpdate 需要修改的协议策略组。
 type PolicyGroupForUpdate struct {
 
-	// 策略组名称。
+	// 策略组名称，长度不能超过255个字符。
 	PolicyGroupName *string `json:"policy_group_name,omitempty"`
 
-	// 策略组描述。
+	// 策略组描述，长度不能超过255个字符。
 	Description *string `json:"description,omitempty"`
-
-	// 策略来源。
-	ScopeFlag *int32 `json:"scope_flag,omitempty"`
 
 	// 优先级。
 	Priority *int32 `json:"priority,omitempty"`

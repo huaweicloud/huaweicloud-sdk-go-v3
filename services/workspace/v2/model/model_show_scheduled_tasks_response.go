@@ -9,7 +9,7 @@ import (
 // ShowScheduledTasksResponse Response Object
 type ShowScheduledTasksResponse struct {
 
-	// 任务id
+	// 任务id。
 	Id *string `json:"id,omitempty"`
 
 	// 任务类型。START：开机，STOP：关机，REBOOT：重启，HIBERNATE：休眠，REBUILD：重建系统盘，EXECUTE_SCRIPT：执行脚本。scheduled_type为LIFE_CYCLE时，不支持START、REBUILD。

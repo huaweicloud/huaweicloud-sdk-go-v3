@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// AttachStatistics 分配情况统计
+// AttachStatistics 分配情况统计。
 type AttachStatistics struct {
 
 	// 已分配个数。

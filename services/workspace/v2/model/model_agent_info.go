@@ -8,13 +8,13 @@ import (
 
 type AgentInfo struct {
 
-	// 插件名称
+	// 插件名称。
 	AgentName *string `json:"agent_name,omitempty"`
 
-	// 插件版本
+	// 插件版本。
 	AgentVersion *string `json:"agent_version,omitempty"`
 
-	// 是否安装插件（是否）
+	// 是否安装插件（是否）。
 	IsInstalled *bool `json:"is_installed,omitempty"`
 }
 

@@ -9,7 +9,7 @@ import (
 // PoliciesPeripheralsDeviceRedirectionSessionPrinterOptions 会话打印机控制选项。
 type PoliciesPeripheralsDeviceRedirectionSessionPrinterOptions struct {
 
-	// 会话打印机自定义策略。
+	// 会话打印机自定义策略。长度不能超过1000个字符。
 	SessionPrinterCustomizationPolicy *string `json:"session_printer_customization_policy,omitempty"`
 }
 

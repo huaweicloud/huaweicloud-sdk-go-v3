@@ -8,13 +8,13 @@ import (
 
 type Record struct {
 
-	// 租户id，不对外展示
+	// 租户id，不对外展示。
 	TenantId *string `json:"tenantId,omitempty"`
 
-	// 桌面sid
+	// 桌面sid。
 	Sid *string `json:"sid,omitempty"`
 
-	// 事务id
+	// 事务id。
 	TransactionId *string `json:"transaction_id,omitempty"`
 
 	// 计算机名。
@@ -59,11 +59,17 @@ type Record struct {
 	// 连接失败原因。
 	ConnectionFailureReason *string `json:"connection_failure_reason,omitempty"`
 
-	// 网络时延ms
+	// 网络时延ms。
 	NetworkRtt *int32 `json:"network_rtt,omitempty"`
 
-	// 端到端时延 ms
+	// 端到端时延 ms。
 	E2eRtt *int32 `json:"e2e_rtt,omitempty"`
+
+	// 客户端源ip
+	SourceIp *string `json:"source_ip,omitempty"`
+
+	// 客户端出网IP
+	PublicIp *string `json:"public_ip,omitempty"`
 }
 
 func (o Record) String() string {

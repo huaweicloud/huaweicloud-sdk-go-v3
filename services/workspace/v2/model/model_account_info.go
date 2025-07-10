@@ -9,7 +9,7 @@ import (
 // AccountInfo 账户详细信息。
 type AccountInfo struct {
 
-	// 账户，账户的格式必须为:<i>账户(组)</i>的形式。
+	// 账户，账户的格式必须为:账户(组)的形式。
 	Account string `json:"account"`
 
 	// 域名(用户组必填，不填时使用默认值 local.com)。

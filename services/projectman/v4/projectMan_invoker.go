@@ -453,6 +453,102 @@ func (i *UpdateProjectV4Invoker) Invoke() (*model.UpdateProjectV4Response, error
 	}
 }
 
+type ListIssueFieldsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIssueFieldsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListIssueFieldsInvoker) Invoke() (*model.ListIssueFieldsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIssueFieldsResponse), nil
+	}
+}
+
+type ListIssueStatuesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIssueStatuesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListIssueStatuesInvoker) Invoke() (*model.ListIssueStatuesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIssueStatuesResponse), nil
+	}
+}
+
+type ShowIssueConfigFieldsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIssueConfigFieldsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowIssueConfigFieldsInvoker) Invoke() (*model.ShowIssueConfigFieldsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIssueConfigFieldsResponse), nil
+	}
+}
+
+type ShowIssueDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIssueDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowIssueDetailInvoker) Invoke() (*model.ShowIssueDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIssueDetailResponse), nil
+	}
+}
+
+type ShowWorkflowTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowWorkflowTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowWorkflowTemplateInvoker) Invoke() (*model.ShowWorkflowTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowWorkflowTemplateResponse), nil
+	}
+}
+
+type TransferWorkItemFlowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *TransferWorkItemFlowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *TransferWorkItemFlowInvoker) Invoke() (*model.TransferWorkItemFlowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.TransferWorkItemFlowResponse), nil
+	}
+}
+
 type AddIssueWorkHoursInvoker struct {
 	*invoker.BaseInvoker
 }

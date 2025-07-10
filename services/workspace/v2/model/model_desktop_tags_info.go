@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// DesktopTagsInfo 桌面携带标签数据结构
+// DesktopTagsInfo 桌面携带标签数据结构。
 type DesktopTagsInfo struct {
 
-	// 桌面ID
+	// 桌面ID。
 	DesktopId string `json:"desktop_id"`
 
-	// 携带标签列表
+	// 携带标签列表。
 	Tags []Tag `json:"tags"`
 }
 

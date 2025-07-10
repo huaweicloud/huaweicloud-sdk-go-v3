@@ -15,12 +15,10 @@ type ListWorkspacesResponse struct {
 	// 唯一标识ID。
 	Id *string `json:"id,omitempty"`
 
-	// 主认证方式。 - KERBEROS：KERBEROS。 - KERBEROS_THIRD_SSO：第三方登录认证。
-	AuthType *string `json:"auth_type,omitempty"`
+	// 开通服务是否是全局服务
+	IsGlobal *bool `json:"is_global,omitempty"`
 
 	AdDomains *AdInfo `json:"ad_domains,omitempty"`
-
-	ThirdGatewayInfo *ThirdGatewayInfo `json:"third_gateway_info,omitempty"`
 
 	// VPC ID。
 	VpcId *string `json:"vpc_id,omitempty"`
@@ -40,14 +38,8 @@ type ListWorkspacesResponse struct {
 	// 专线接入地址，只有access_mode为“DEDICATED”或“BOTH”时才会返回该参数。
 	DedicatedAccessAddress *string `json:"dedicated_access_address,omitempty"`
 
-	// 专线接入ipv6地址，只有access_mode为“DEDICATED”或“BOTH”时才会返回该参数。
-	DedicatedAccessAddressIpv6 *string `json:"dedicated_access_address_ipv6,omitempty"`
-
 	// 互联网接入地址，只有access_mode为“INTERNET”或“BOTH”时才会返回该参数。
 	InternetAccessAddress *string `json:"internet_access_address,omitempty"`
-
-	// 互联网接入ipv6地址，只有access_mode为“INTERNET”或“BOTH”时才会返回该参数。
-	InternetAccessAddressIpv6 *string `json:"internet_access_address_ipv6,omitempty"`
 
 	// 互联网接入端口。
 	InternetAccessPort *string `json:"internet_access_port,omitempty"`
@@ -95,11 +87,6 @@ type ListWorkspacesResponse struct {
 	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 资源池类型。 - \"public\"： 私有资源池 - \"private\"： 公有资源池
-	ProjectResourceType *string `json:"project_resource_type,omitempty"`
-
-	AssistAuthConfigInfo *AssistAuthConfigInfo `json:"assist_auth_config_info,omitempty"`
-
 	// 桌面退订是否发送邮件通知。
 	IsSendEmail *bool `json:"is_send_email,omitempty"`
 
@@ -109,20 +96,11 @@ type ListWorkspacesResponse struct {
 	// 是否授权hda升级。
 	AuthorizedHdaUpgrade *bool `json:"authorized_hda_upgrade,omitempty"`
 
-	// 站点配置
+	// 站点配置。
 	SiteConfigs *[]SiteConfigsResponse `json:"site_configs,omitempty"`
 
-	// 是否支持多VPC。
-	IsMultiVpc *bool `json:"is_multi_vpc,omitempty"`
-
-	// 是否支持配置nat映射。
-	IsConfigNatMapping *bool `json:"is_config_nat_mapping,omitempty"`
-
-	// 自定义的专线VNC地址
+	// 自定义的专线VNC地址。
 	DcVncIp *string `json:"dc_vnc_ip,omitempty"`
-
-	// 专线VNC VPC终端节点ID
-	DcVncVpcepId *string `json:"dc_vnc_vpcep_id,omitempty"`
 
 	// 是否授权桌面自动安装agent插件。
 	IsAuthorizedInstallAgent *bool `json:"is_authorized_install_agent,omitempty"`

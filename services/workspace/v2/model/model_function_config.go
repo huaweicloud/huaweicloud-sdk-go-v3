@@ -11,16 +11,16 @@ import (
 
 type FunctionConfig struct {
 
-	// 功能配置id
+	// 功能配置id。
 	Id *string `json:"id,omitempty"`
 
-	// 功能配置名称
+	// 功能配置名称。
 	Name *string `json:"name,omitempty"`
 
-	// 功能配置开关的状态，标识开启还是关闭 ON/OFF。 - ON： 开启该功能 - OFF： 关闭该功能
+	// 功能配置开关的状态，表示开启还是关闭 ON/OFF。 - ON： 开启该功能 - OFF： 关闭该功能。
 	Status *FunctionConfigStatus `json:"status,omitempty"`
 
-	// 配置项列表，键值对格式
+	// 配置项列表，键值对格式。
 	Values *[]MapObject `json:"values,omitempty"`
 }
 

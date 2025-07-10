@@ -18,7 +18,7 @@ type SimpleProduct struct {
 	// 产品类型。  - BASE：表示产品基础套餐，套餐镜像中不包括除操作系统之外的其他商业软件，私有镜像场景只能使用此类套餐。
 	Type *string `json:"type,omitempty"`
 
-	// CPU
+	// CPU。
 	Cpu *string `json:"cpu,omitempty"`
 
 	// 内存。

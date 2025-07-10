@@ -15,10 +15,10 @@ type ListMetricNotifyRecordRequest struct {
 	// 通知规则ID (metric_name和rule_id不允许同时为空)
 	RuleId *string `json:"rule_id,omitempty"`
 
-	// 查询的偏移量,默认值0
+	// 查询的偏移量,默认值0。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 单次查询的大小[1-100],默认值10
+	// 单次查询的大小[1-100],默认值10。
 	Limit *int32 `json:"limit,omitempty"`
 }
 

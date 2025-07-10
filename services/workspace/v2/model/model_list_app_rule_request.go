@@ -9,13 +9,13 @@ import (
 // ListAppRuleRequest Request Object
 type ListAppRuleRequest struct {
 
-	// 查询的偏移量。
+	// 查询的偏移量，默认值0。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 单次查询的大小[1-100]。
+	// 单次查询的大小[1-100]，默认值10。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 应用规则名称
+	// 应用规则名称。
 	Name *string `json:"name,omitempty"`
 }
 

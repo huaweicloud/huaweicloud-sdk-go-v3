@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// ModifyEnterpriseIdReq 修改企业ID请求
+// ModifyEnterpriseIdReq 修改企业ID请求。
 type ModifyEnterpriseIdReq struct {
 
-	// 企业ID
+	// 企业ID。
 	EnterpriseId string `json:"enterprise_id"`
 }
 

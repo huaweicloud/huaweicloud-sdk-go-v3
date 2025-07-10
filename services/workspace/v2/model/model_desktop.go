@@ -26,12 +26,6 @@ type Desktop struct {
 	// 系统计算机名。
 	OsHostName *string `json:"os_host_name,omitempty"`
 
-	// 桌面对应的网卡信息，如果不指定则使用默认网卡。
-	Nics *[]Nic `json:"nics,omitempty"`
-
-	// 此参数仅在开通云桌面服务的domain_type为LOCAL_AD时有效。只允许输入汉字，半角字母，数字，空格，以及-_/$!@&*?.范围内的特殊字符，字符范围是1～255，OU名称不能包含分隔符(/),多级OU使用/隔开，最多支持五级，/前后不能有空格，例如3级的OU格式:ab/cd/ef。
-	OuName *string `json:"ou_name,omitempty"`
-
 	// 桌面名称前缀，不指定\"computer_name\"时生效。
 	DesktopNamePrefix *string `json:"desktop_name_prefix,omitempty"`
 }

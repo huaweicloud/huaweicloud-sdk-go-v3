@@ -9,7 +9,7 @@ import (
 // AssociateDesktopsEipReq 桌面绑定EIP请求体。
 type AssociateDesktopsEipReq struct {
 
-	// 桌面绑定的Eip的id。
+	// 桌面绑定的EIP的id。
 	EipId string `json:"eip_id"`
 
 	// 桌面id。

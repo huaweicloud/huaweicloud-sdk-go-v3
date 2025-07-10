@@ -12,7 +12,7 @@ type Image struct {
 	// 镜像id。
 	ImageId *string `json:"image_id,omitempty"`
 
-	// 镜像运行需要的最小磁盘容量，单位为GB。取值为40～1024GB。。
+	// 镜像运行需要的最小磁盘容量，单位为GB。取值为40～1024GB。
 	MinDisk *int32 `json:"min_disk,omitempty"`
 
 	// 创建时间，格式为UTC时间，yyyy-MM-ddTHH:mm:ssZ。

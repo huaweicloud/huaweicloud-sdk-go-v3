@@ -43,12 +43,6 @@ type ScriptRecordSimpleInfo struct {
 	// 执行批次（默认：0，灰度：1，非灰度：2）。
 	ExecuteOrder *int32 `json:"execute_order,omitempty"`
 
-	// 命令行内容。
-	CommandContent *string `json:"command_content,omitempty"`
-
-	// 命令行类型(POWERSHELL/BAT/SHELL)。
-	CommandType *string `json:"command_type,omitempty"`
-
 	// 错误码。
 	ResultCode *string `json:"result_code,omitempty"`
 

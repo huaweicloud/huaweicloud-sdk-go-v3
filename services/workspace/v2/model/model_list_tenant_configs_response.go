@@ -9,7 +9,7 @@ import (
 // ListTenantConfigsResponse Response Object
 type ListTenantConfigsResponse struct {
 
-	// 租户个性配置列表
+	// 租户个性配置列表。
 	FunctionConfigs *[]FunctionConfig `json:"function_configs,omitempty"`
 	HttpStatusCode  int               `json:"-"`
 }

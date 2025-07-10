@@ -9,7 +9,7 @@ import (
 // EstimateDesktopPoolResizeResponse Response Object
 type EstimateDesktopPoolResizeResponse struct {
 
-	// 是否为升配
+	// 是否为升配。
 	IsUpgrade *bool `json:"is_upgrade,omitempty"`
 
 	BatchInquiryRspWhenUpgrade *PeriodBatchUpChangeResourceRsp `json:"batch_inquiry_rsp_when_upgrade,omitempty"`

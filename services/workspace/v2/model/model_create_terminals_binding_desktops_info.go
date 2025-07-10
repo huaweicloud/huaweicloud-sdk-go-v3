@@ -8,16 +8,16 @@ import (
 
 type CreateTerminalsBindingDesktopsInfo struct {
 
-	// 行号,用于批量导入
+	// 行号,用于批量导入。
 	Line *int32 `json:"line,omitempty"`
 
-	// 终端mac地址
+	// 终端mac地址。
 	Mac *string `json:"mac,omitempty"`
 
-	// 桌面名称，用于批量导入
+	// 桌面名称，用于批量导入。
 	DesktopName *string `json:"desktop_name,omitempty"`
 
-	// 描述
+	// 描述。
 	Description *string `json:"description,omitempty"`
 }
 

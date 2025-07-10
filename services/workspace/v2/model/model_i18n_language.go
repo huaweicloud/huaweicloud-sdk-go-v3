@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// I18nLanguage 国际命名
+// I18nLanguage 国际命名。
 type I18nLanguage struct {
 
-	// 语言
+	// 语言。
 	Language *string `json:"language,omitempty"`
 
-	// 值
+	// 值。
 	Value *string `json:"value,omitempty"`
 }
 

@@ -9,10 +9,10 @@ import (
 // ListUserEventsResponse Response Object
 type ListUserEventsResponse struct {
 
-	// 事件总数
+	// 事件总数。
 	Count *int32 `json:"count,omitempty"`
 
-	// 用户事件列表
+	// 用户事件列表。
 	Items          *[]UserEventRsp `json:"items,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

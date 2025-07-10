@@ -41,7 +41,7 @@ type User struct {
 	// 密码是否永不过期，true表示密码永不过期，false表示密码会过期。
 	PasswordNeverExpired *bool `json:"password_never_expired,omitempty"`
 
-	// 帐号是否过期，true表示已过期，false表示未过期。
+	// 账号是否过期，true表示已过期，false表示未过期。
 	AccountExpired *bool `json:"account_expired,omitempty"`
 
 	// 是否允许修改密码，true表示允许，false表示不允许。
@@ -59,14 +59,20 @@ type User struct {
 	// 账户是否禁用，true表示被禁用，false表示未禁用。
 	Disabled *bool `json:"disabled,omitempty"`
 
-	// 用户是否订阅协同，true表示已订阅，false表示未订阅
+	// 用户是否订阅协同，true表示已订阅，false表示未订阅。
 	ShareSpaceSubscription *bool `json:"share_space_subscription,omitempty"`
 
-	// 用户已绑定协同桌面数
+	// 用户已绑定协同桌面数。
 	ShareSpaceDesktops *int32 `json:"share_space_desktops,omitempty"`
 
 	// 加入的组列表。
 	GroupNames *[]string `json:"group_names,omitempty"`
+
+	// 企业项目ID
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 用户信息映射，包含用户的服务等级、操作模式和类型。
+	UserInfoMap *string `json:"user_info_map,omitempty"`
 }
 
 func (o User) String() string {

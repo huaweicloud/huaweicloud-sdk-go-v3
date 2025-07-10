@@ -24,7 +24,7 @@ type RebuildDesktopPoolReq struct {
 	// 下发重建系统盘任务时，给用户发送的提示信息。
 	Message *string `json:"message,omitempty"`
 
-	// 订单ID，包周期桌面重建系统盘，涉及收费镜像时需传
+	// 订单ID，包周期桌面重建系统盘，涉及收费镜像时需传。
 	OrderId *string `json:"order_id,omitempty"`
 
 	// 是否是修复行为，修复行为只修复镜像ID与桌面池镜像ID不一致的桌面，用于桌面池切换镜像失败场景的修复。

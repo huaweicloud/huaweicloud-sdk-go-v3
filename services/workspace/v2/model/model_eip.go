@@ -9,19 +9,19 @@ import (
 	"strings"
 )
 
-// Eip Eip信息。
+// Eip EIP信息。
 type Eip struct {
 
-	// 桌面绑定的Eip的id，有值时优先绑定Eip。
+	// 桌面绑定的EIP的id，有值时优先绑定EIP。
 	Id *string `json:"id,omitempty"`
 
-	// EIP的类型，5_bgp（全动态BGP），5_sbgp（静态BGP）
+	// EIP的类型，5_bgp（全动态BGP），5_sbgp（静态BGP）。
 	Type *string `json:"type,omitempty"`
 
 	// eip带宽计费模式 - TRAFFIC：按流量计费。 - BANDWIDTH：按带宽计费。
 	ChargeMode *EipChargeMode `json:"charge_mode,omitempty"`
 
-	// 带宽大小
+	// 带宽大小。
 	BandwidthSize *int32 `json:"bandwidth_size,omitempty"`
 }
 

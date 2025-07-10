@@ -12,7 +12,7 @@ type ListPortsRequest struct {
 	// 分页查询的起始资源ID。
 	Marker *string `json:"marker,omitempty"`
 
-	// 分页查询每页返回的记录个数。
+	// 功能说明：每页返回的个数。取值范围：1~2000。默认值：2000。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// ip地址。

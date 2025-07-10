@@ -9,7 +9,7 @@ import (
 // CreateDesktopPoolChangeOrderResponse Response Object
 type CreateDesktopPoolChangeOrderResponse struct {
 
-	// 批量生成订单结果
+	// 批量生成订单结果。
 	Orders         *[]OrderV5 `json:"orders,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }

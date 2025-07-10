@@ -9,7 +9,7 @@ import (
 // ListMetricsResponse Response Object
 type ListMetricsResponse struct {
 
-	// 查询指标响应体
+	// 查询指标响应体。
 	Body           *[]Metric `json:"body,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

@@ -8,13 +8,13 @@ import (
 
 type DesktopMetric struct {
 
-	// 桌面ID
+	// 桌面ID。
 	ResourceId *string `json:"resource_id,omitempty"`
 
-	// 桌面池ID(仅桌面池中的桌面存在该字段)
+	// 桌面池ID(仅桌面池中的桌面存在该字段)。
 	ResourcePoolId *string `json:"resource_pool_id,omitempty"`
 
-	// 桌面名称
+	// 桌面名称。
 	ResourceName *string `json:"resource_name,omitempty"`
 
 	// 统计信息 * `desktop_usage` -  桌面使用时长(单位:秒) * `desktop_idle_duration` -  桌面空闲时长(单位:秒)

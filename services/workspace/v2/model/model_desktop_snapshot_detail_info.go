@@ -42,13 +42,13 @@ type DesktopSnapshotDetailInfo struct {
 	// 快照描述。
 	Description *string `json:"description,omitempty"`
 
-	// 快照的创建时间，UTC时间，格式为：yyyy-MM-dd'T'HH:mm:ss'Z'。
+	// 快照的创建时间，UTC时间，格式为：yyyy-MM-dd'T'HH:mm:ss'Z。'
 	CreateTime *string `json:"create_time,omitempty"`
 
 	// 快照创建类型。 - AUTO 定时任务自动创建。 - MANUALLY 手动创建。
 	CreateType *DesktopSnapshotDetailInfoCreateType `json:"create_type,omitempty"`
 
-	// 快照的最近恢复时间，UTC时间，格式为：yyyy-MM-dd'T'HH:mm:ss'Z'。
+	// 快照的最近恢复时间，UTC时间，格式为：yyyy-MM-dd'T'HH:mm:ss'Z。'
 	LastRestoreTime *string `json:"last_restore_time,omitempty"`
 
 	// 快照恢复失败原因。

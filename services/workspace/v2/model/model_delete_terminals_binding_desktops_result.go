@@ -8,13 +8,13 @@ import (
 
 type DeleteTerminalsBindingDesktopsResult struct {
 
-	// 需删除的策略ID
+	// 需删除的策略ID。
 	Id *string `json:"id,omitempty"`
 
-	// 删除操作的结果码
+	// 删除操作的结果码。
 	DeleteResultCode *string `json:"delete_result_code,omitempty"`
 
-	// 删除操作的结果信息
+	// 删除操作的结果信息。
 	DeleteResultMsg *string `json:"delete_result_msg,omitempty"`
 }
 

@@ -16,6 +16,12 @@ type UpdateAccessPolicyReq struct {
 
 	// 策略的ip列表。
 	IpWhiteList *[]IpInfo `json:"ip_white_list,omitempty"`
+
+	// IP白名单是否生效。
+	IsEnable *bool `json:"is_enable,omitempty"`
+
+	// IP白名单是否禁止所有Ip接入。
+	IsBlockAll *bool `json:"is_block_all,omitempty"`
 }
 
 func (o UpdateAccessPolicyReq) String() string {

@@ -754,6 +754,27 @@ func (c *EiHealthClient) CreateDrugModelInvoker(request *model.CreateDrugModelRe
 	return &CreateDrugModelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDrugModelResource 创建盘古药物分子大模型
+//
+// 创建盘古药物分子大模型。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) CreateDrugModelResource(request *model.CreateDrugModelResourceRequest) (*model.CreateDrugModelResourceResponse, error) {
+	requestDef := GenReqDefForCreateDrugModelResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDrugModelResourceResponse), nil
+	}
+}
+
+// CreateDrugModelResourceInvoker 创建盘古药物分子大模型
+func (c *EiHealthClient) CreateDrugModelResourceInvoker(request *model.CreateDrugModelResourceRequest) *CreateDrugModelResourceInvoker {
+	requestDef := GenReqDefForCreateDrugModelResource()
+	return &CreateDrugModelResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateFavorite 添加收藏
 //
 // 添加收藏。
@@ -1487,6 +1508,27 @@ func (c *EiHealthClient) DeleteDrugModel(request *model.DeleteDrugModelRequest) 
 func (c *EiHealthClient) DeleteDrugModelInvoker(request *model.DeleteDrugModelRequest) *DeleteDrugModelInvoker {
 	requestDef := GenReqDefForDeleteDrugModel()
 	return &DeleteDrugModelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDrugModelResource 退订盘古药物分子大模型
+//
+// 退订盘古药物分子大模型。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) DeleteDrugModelResource(request *model.DeleteDrugModelResourceRequest) (*model.DeleteDrugModelResourceResponse, error) {
+	requestDef := GenReqDefForDeleteDrugModelResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDrugModelResourceResponse), nil
+	}
+}
+
+// DeleteDrugModelResourceInvoker 退订盘古药物分子大模型
+func (c *EiHealthClient) DeleteDrugModelResourceInvoker(request *model.DeleteDrugModelResourceRequest) *DeleteDrugModelResourceInvoker {
+	requestDef := GenReqDefForDeleteDrugModelResource()
+	return &DeleteDrugModelResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteFavorite 取消收藏
@@ -2621,6 +2663,27 @@ func (c *EiHealthClient) ListDrugModel(request *model.ListDrugModelRequest) (*mo
 func (c *EiHealthClient) ListDrugModelInvoker(request *model.ListDrugModelRequest) *ListDrugModelInvoker {
 	requestDef := GenReqDefForListDrugModel()
 	return &ListDrugModelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDrugModelResource 查询盘古药物分子大模型
+//
+// 查询盘古药物分子大模型。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ListDrugModelResource(request *model.ListDrugModelResourceRequest) (*model.ListDrugModelResourceResponse, error) {
+	requestDef := GenReqDefForListDrugModelResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDrugModelResourceResponse), nil
+	}
+}
+
+// ListDrugModelResourceInvoker 查询盘古药物分子大模型
+func (c *EiHealthClient) ListDrugModelResourceInvoker(request *model.ListDrugModelResourceRequest) *ListDrugModelResourceInvoker {
+	requestDef := GenReqDefForListDrugModelResource()
+	return &ListDrugModelResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListFavorite 获取收藏夹列表
@@ -7157,6 +7220,27 @@ func (c *EiHealthClient) UpdateNotebook(request *model.UpdateNotebookRequest) (*
 func (c *EiHealthClient) UpdateNotebookInvoker(request *model.UpdateNotebookRequest) *UpdateNotebookInvoker {
 	requestDef := GenReqDefForUpdateNotebook()
 	return &UpdateNotebookInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadPublicData 文件下载
+//
+// 文件下载
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) DownloadPublicData(request *model.DownloadPublicDataRequest) (*model.DownloadPublicDataResponse, error) {
+	requestDef := GenReqDefForDownloadPublicData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadPublicDataResponse), nil
+	}
+}
+
+// DownloadPublicDataInvoker 文件下载
+func (c *EiHealthClient) DownloadPublicDataInvoker(request *model.DownloadPublicDataRequest) *DownloadPublicDataInvoker {
+	requestDef := GenReqDefForDownloadPublicData()
+	return &DownloadPublicDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListObsBucket 获取用户OBS桶列表

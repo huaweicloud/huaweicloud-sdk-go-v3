@@ -9,7 +9,7 @@ import (
 // ShowShareSpaceConfigRequest Request Object
 type ShowShareSpaceConfigRequest struct {
 
-	// 查询协同桌面默认用户配置, share-space-user-conf
+	// 查询协同桌面默认用户配置, share-space-user-conf。
 	Name string `json:"name"`
 }
 

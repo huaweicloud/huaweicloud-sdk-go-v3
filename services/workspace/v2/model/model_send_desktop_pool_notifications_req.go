@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// SendDesktopPoolNotificationsReq 发送桌面池消息通知请求体
+// SendDesktopPoolNotificationsReq 发送桌面池消息通知请求体。
 type SendDesktopPoolNotificationsReq struct {
 
-	// 消息通知内容
+	// 消息通知内容。
 	Notifications string `json:"notifications"`
 }
 

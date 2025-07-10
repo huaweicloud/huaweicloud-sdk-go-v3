@@ -14,13 +14,10 @@ type ImageInfo struct {
 	// 镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private。
 	ImageType *string `json:"image_type,omitempty"`
 
-	// 镜像平台分类，取值为Windows。
-	OsPlatform *string `json:"os_platform,omitempty"`
-
 	// 操作系统类型，目前取值Linux， Windows，Other。
 	OsType *string `json:"os_type,omitempty"`
 
-	// 操作系统架构，目前取值arm，x86
+	// 操作系统架构，目前取值arm，x86。
 	Architecture *string `json:"architecture,omitempty"`
 
 	// 操作系统具体版本。

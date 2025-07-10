@@ -6,15 +6,11 @@ import (
 	"strings"
 )
 
-// AssistAuthMethodConfigRequest 辅助认证策略请求
+// AssistAuthMethodConfigRequest 辅助认证策略请求。
 type AssistAuthMethodConfigRequest struct {
 	AuthType *AuthAssistEnum `json:"auth_type,omitempty"`
 
 	OtpConfigInfo *OtpConfigInfo `json:"otp_config_info,omitempty"`
-
-	RadiusAuthConfig *RadiusAuthConfig `json:"radius_auth_config,omitempty"`
-
-	RadiusGatewayConfig *RadiusGatewayConfig `json:"radius_gateway_config,omitempty"`
 }
 
 func (o AssistAuthMethodConfigRequest) String() string {

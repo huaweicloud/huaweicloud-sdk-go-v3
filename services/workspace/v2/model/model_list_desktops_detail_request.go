@@ -33,9 +33,6 @@ type ListDesktopsDetailRequest struct {
 	// 桌面IP地址。
 	DesktopIp *string `json:"desktop_ip,omitempty"`
 
-	// 桌面的sid列表。
-	Sids *string `json:"sids,omitempty"`
-
 	// 用于分页查询，查询的起始记录序号，从0开始。
 	Offset *int32 `json:"offset,omitempty"`
 
@@ -48,14 +45,8 @@ type ListDesktopsDetailRequest struct {
 	// 桌面类型，为空时查所有桌面。 - DEDICATED：普通桌面，包括专享桌面、专属桌面等 - POOLED：池桌面，即桌面池里的桌面
 	DesktopType *string `json:"desktop_type,omitempty"`
 
-	// 桌面的登录状态。  - UNREGISTER：表示桌面未注册时的状态（桌面启动后，会自动注册）。关机后也会出现未注册的状态。 - REGISTERED：表示桌面注册以后，等待用户连接的状态。 - CONNECTED：表示用户已经成功登录，正在使用桌面。 - DISCONNECTED：表示桌面与客户端断开会话后显示的状态，可能为关闭客户端窗口，或客户端与桌面网络断开引起。
-	LoginStatus *string `json:"login_status,omitempty"`
-
 	// 桌面的标签。样例：  - key1=value1。 - key1=value1，key2=value2。
 	Tag *string `json:"tag,omitempty"`
-
-	// 是不是模糊用户查询。
-	FuzzyQuery *bool `json:"fuzzy_query,omitempty"`
 
 	// 桌面池ID,多个桌面池ID用逗号隔开。
 	PoolId *string `json:"pool_id,omitempty"`
@@ -63,19 +54,19 @@ type ListDesktopsDetailRequest struct {
 	// 是否分配了用户。
 	UserAttached *bool `json:"user_attached,omitempty"`
 
-	// 企业项目ID
+	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 镜像ID
+	// 镜像ID。
 	ImageId *string `json:"image_id,omitempty"`
 
 	// 计费模式，0：包周期，1：按需。
 	ChargeMode *string `json:"charge_mode,omitempty"`
 
-	// 按照维护模式过滤
+	// 按照维护模式过滤。
 	InMaintenanceMode *bool `json:"in_maintenance_mode,omitempty"`
 
-	// 是否为协同桌面
+	// 是否为协同桌面。
 	IsShareDesktop *bool `json:"is_share_desktop,omitempty"`
 
 	// 桌面的子网ID。
@@ -84,7 +75,7 @@ type ListDesktopsDetailRequest struct {
 	// 是否支持上网。
 	IsSupportInternet *bool `json:"is_support_internet,omitempty"`
 
-	// 查询可用区
+	// 查询可用区。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 }
 

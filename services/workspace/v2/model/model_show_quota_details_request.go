@@ -9,10 +9,10 @@ import (
 // ShowQuotaDetailsRequest Request Object
 type ShowQuotaDetailsRequest struct {
 
-	// 站点ID
+	// 站点ID。
 	SiteId *string `json:"site_id,omitempty"`
 
-	// 可用分区code
+	// 可用分区code。
 	AzCode *string `json:"az_code,omitempty"`
 }
 

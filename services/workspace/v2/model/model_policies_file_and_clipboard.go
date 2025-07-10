@@ -13,16 +13,16 @@ import (
 type PoliciesFileAndClipboard struct {
 	FileRedirection *PoliciesFileAndClipboardFileRedirection `json:"file_redirection,omitempty"`
 
-	// 剪切板长度表示
+	// 剪切板长度表示。
 	ClipLengthLimitFlagC2s *bool `json:"clip_length_limit_flag_c2s,omitempty"`
 
-	// 剪切板客户端长度
+	// 剪切板客户端长度。
 	ClipLengthLimitC2s *int32 `json:"clip_length_limit_c2s,omitempty"`
 
-	// 剪切板长度表示
+	// 剪切板长度表示。
 	ClipLengthLimitFlagS2c *bool `json:"clip_length_limit_flag_s2c,omitempty"`
 
-	// 剪切板客户端长度
+	// 剪切板客户端长度。
 	ClipLengthLimitS2c *int32 `json:"clip_length_limit_s2c,omitempty"`
 
 	// 移动客户端文件重定向：取值为： false：表示关闭。 true：表示开启。

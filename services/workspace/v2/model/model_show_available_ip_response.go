@@ -9,7 +9,7 @@ import (
 // ShowAvailableIpResponse Response Object
 type ShowAvailableIpResponse struct {
 
-	// 可用ip数
+	// 可用ip数。
 	AvailableIp    *int32 `json:"available_ip,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

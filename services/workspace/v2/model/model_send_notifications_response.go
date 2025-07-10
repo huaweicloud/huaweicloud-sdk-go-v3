@@ -9,7 +9,7 @@ import (
 // SendNotificationsResponse Response Object
 type SendNotificationsResponse struct {
 
-	// 发送桌面消息任务id
+	// 发送桌面消息任务id。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

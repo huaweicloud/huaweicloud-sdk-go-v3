@@ -40,6 +40,15 @@ type RecordAuditRule struct {
 
 	// 注册表路径，多个用\"|\"分隔
 	RegitPaths *string `json:"regit_paths,omitempty"`
+
+	// 应用过滤类型，black（黑名单）或者white（白名单）二选一
+	AppFilterType *string `json:"app_filter_type,omitempty"`
+
+	// APP开启/关闭白名单，仅监控配置的白名单应用列表
+	AppWhiteList *string `json:"app_white_list,omitempty"`
+
+	// APP开启/关闭黑名单，忽略黑名单里面的应用列表
+	AppBlackList *string `json:"app_black_list,omitempty"`
 }
 
 func (o RecordAuditRule) String() string {

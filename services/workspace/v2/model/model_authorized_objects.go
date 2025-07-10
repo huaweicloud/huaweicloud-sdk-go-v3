@@ -9,16 +9,16 @@ import (
 	"strings"
 )
 
-// AuthorizedObjects 查询桌面池授权的用户、用户组响应的用户/用户组信息
+// AuthorizedObjects 查询桌面池授权的用户、用户组响应的用户/用户组信息。
 type AuthorizedObjects struct {
 
 	// 绑定对象类型枚举。  - USER：用户 - USER_GROUP：用户组
 	ObjectType AuthorizedObjectsObjectType `json:"object_type"`
 
-	// 用户/用户组id
+	// 用户/用户组id。
 	ObjectId string `json:"object_id"`
 
-	// 用户/用户组名称
+	// 用户/用户组名称。
 	ObjectName string `json:"object_name"`
 
 	// 桌面用户所属的用户权限组。  - sudo：Linux管理员组。 - default：Linux默认用户组。 - administrators：Windows管理员组。管理员拥有对该桌面的完全访问权，可以做任何需要的更改（禁用操作除外）。 - users：Windows标准用户组。标准用户可以使用大多数软件，并可以更改不影响其他用户的系统设置。

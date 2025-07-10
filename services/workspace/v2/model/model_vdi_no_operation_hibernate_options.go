@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// VdiNoOperationHibernateOptions 不操作休眠选项
+// VdiNoOperationHibernateOptions 不操作休眠选项。
 type VdiNoOperationHibernateOptions struct {
 
 	// 策略组ID。

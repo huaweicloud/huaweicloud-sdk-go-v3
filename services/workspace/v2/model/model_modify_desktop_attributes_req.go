@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ModifyDesktopAttributesReq 查询云桌面列表响应
+// ModifyDesktopAttributesReq 修改云桌面属性响应。
 type ModifyDesktopAttributesReq struct {
 	Desktop *ModifyDesktopAttributesReqDesktop `json:"desktop,omitempty"`
 }

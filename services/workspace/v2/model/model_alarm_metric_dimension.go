@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// AlarmMetricDimension 指标维度，目前最大可添加4个维度
+// AlarmMetricDimension 指标维度，目前最大可添加4个维度。
 type AlarmMetricDimension struct {
 
-	// 资源维度
+	// 资源维度。
 	Name *string `json:"name,omitempty"`
 
-	// 资源维度值
+	// 资源维度值。
 	Value *string `json:"value,omitempty"`
 }
 

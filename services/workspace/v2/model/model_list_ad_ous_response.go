@@ -9,10 +9,10 @@ import (
 // ListAdOusResponse Response Object
 type ListAdOusResponse struct {
 
-	// OU对象
+	// OU对象。
 	OuInfos *[]AdOuInfo `json:"ou_infos,omitempty"`
 
-	// OU总记录数
+	// OU总记录数。
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

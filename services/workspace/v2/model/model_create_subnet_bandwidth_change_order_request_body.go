@@ -15,10 +15,7 @@ type CreateSubnetBandwidthChangeOrderRequestBody struct {
 	// 变更云办公带宽的带宽大小。
 	BandwidthSize string `json:"bandwidth_size"`
 
-	// 支付后跳转url
-	CloudServiceConsoleUrl *string `json:"cloud_service_console_url,omitempty"`
-
-	// 企业项目ID
+	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	ExtendParam *OrderExtendParam `json:"extend_param,omitempty"`

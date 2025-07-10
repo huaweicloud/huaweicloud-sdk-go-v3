@@ -9,7 +9,7 @@ import (
 // ListMetricsTrendResponse Response Object
 type ListMetricsTrendResponse struct {
 
-	// 查询指标趋势响应
+	// 查询指标趋势响应。
 	Body           *[]MetricsWithTime `json:"body,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }

@@ -8,10 +8,10 @@ import (
 
 type MapObject struct {
 
-	// 配置项的键
+	// 配置项的键。
 	Key *string `json:"key,omitempty"`
 
-	// 配置项对应的值
+	// 配置项对应的值。
 	Value *string `json:"value,omitempty"`
 }
 

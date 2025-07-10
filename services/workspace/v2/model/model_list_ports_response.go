@@ -9,7 +9,7 @@ import (
 // ListPortsResponse Response Object
 type ListPortsResponse struct {
 
-	// 端口列表
+	// 端口列表。
 	Ports          *[]NeutronPort `json:"ports,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

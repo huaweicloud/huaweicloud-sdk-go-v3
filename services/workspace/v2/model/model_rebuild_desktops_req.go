@@ -27,10 +27,10 @@ type RebuildDesktopsReq struct {
 	// 下发重建系统盘任务时，给用户发送的提示信息。
 	Message *string `json:"message,omitempty"`
 
-	// 订单ID，包周期桌面重建系统盘，涉及收费镜像时需传
+	// 订单ID，包周期桌面重建系统盘，涉及收费镜像时需传。
 	OrderId *string `json:"order_id,omitempty"`
 
-	// 企业项目ID，默认\"0\"
+	// 企业项目ID，默认\"0。\"
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 

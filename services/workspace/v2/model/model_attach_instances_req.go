@@ -12,20 +12,11 @@ type AttachInstancesReq struct {
 	// 桌面信息列表。
 	Desktops *[]AttachInstancesDesktopInfo `json:"desktops,omitempty"`
 
-	// 镜像类型，涉及变更镜像时需传（可选）
+	// 镜像类型，涉及变更镜像时需传（可选）。
 	ImageType *string `json:"image_type,omitempty"`
 
-	// 模板ID，涉及变更镜像时需传（可选）
+	// 模板ID，涉及变更镜像时需传（可选）。
 	ImageId *string `json:"image_id,omitempty"`
-
-	// os类型，涉及变更镜像时需传（可选，该参数已废弃）。
-	OsType *string `json:"os_type,omitempty"`
-
-	// 包周期订购ID，CBC订购回调时使用。（可选）
-	OrderId *string `json:"order_id,omitempty"`
-
-	// 企业项目ID，默认\"0\",无用参数,废弃
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 策略id，用于指定生成桌面名称策略，如果指定了桌面名称则优先使用指定的桌面名称。
 	DesktopNamePolicyId *string `json:"desktop_name_policy_id,omitempty"`

@@ -9,7 +9,7 @@ import (
 // UpdateSubnetIdsResponse Response Object
 type UpdateSubnetIdsResponse struct {
 
-	// 任务id
+	// 任务id。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

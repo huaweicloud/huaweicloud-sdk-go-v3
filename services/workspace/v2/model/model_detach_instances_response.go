@@ -9,10 +9,10 @@ import (
 // DetachInstancesResponse Response Object
 type DetachInstancesResponse struct {
 
-	// 操作失败桌面列表
+	// 操作失败桌面列表。
 	FailedOperationList *[]VmOperateResult `json:"failed_operation_list,omitempty"`
 
-	// 任务ID
+	// 任务ID。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
