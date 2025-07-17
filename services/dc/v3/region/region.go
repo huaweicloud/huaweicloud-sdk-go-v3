@@ -50,12 +50,12 @@ var (
 		"https://dcaas.cn-south-4.myhuaweicloud.com")
 	ME_EAST_1 = region.NewRegion("me-east-1",
 		"https://dcaas.me-east-1.myhuaweicloud.com")
-	AF_NORTH_1 = region.NewRegion("af-north-1",
-		"https://dcaas.af-north-1.myhuaweicloud.com")
-	RU_MOSCOW_1 = region.NewRegion("ru-moscow-1",
-		"https://dcaas.ru-moscow-1.myhuaweicloud.com")
 	MY_KUALALUMPUR_1 = region.NewRegion("my-kualalumpur-1",
 		"https://dcaas.my-kualalumpur-1.myhuaweicloud.com")
+	EU_WEST_101 = region.NewRegion("eu-west-101",
+		"https://dcaas.eu-west-101.myhuaweicloud.com")
+	EU_WEST_0 = region.NewRegion("eu-west-0",
+		"https://dcaas.eu-west-0.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -80,9 +80,9 @@ var staticFields = map[string]*region.Region{
 	"tr-west-1":        TR_WEST_1,
 	"cn-south-4":       CN_SOUTH_4,
 	"me-east-1":        ME_EAST_1,
-	"af-north-1":       AF_NORTH_1,
-	"ru-moscow-1":      RU_MOSCOW_1,
 	"my-kualalumpur-1": MY_KUALALUMPUR_1,
+	"eu-west-101":      EU_WEST_101,
+	"eu-west-0":        EU_WEST_0,
 }
 
 var provider = region.DefaultProviderChain("DC")

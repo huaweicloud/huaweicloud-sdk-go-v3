@@ -17,6 +17,9 @@ type AggregationAuthorizationResp struct {
 
 	// 资源聚合器授权的创建时间。
 	CreatedAt *string `json:"created_at,omitempty"`
+
+	// 标签列表
+	Tags *[]ResourceTag `json:"tags,omitempty"`
 }
 
 func (o AggregationAuthorizationResp) String() string {

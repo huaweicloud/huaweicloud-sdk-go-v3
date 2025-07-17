@@ -11,6 +11,9 @@ type AggregationAuthorizationRequest struct {
 
 	// 要授权的资源聚合器的帐号ID。
 	AuthorizedAccountId string `json:"authorized_account_id"`
+
+	// 标签列表
+	Tags *[]ResourceTag `json:"tags,omitempty"`
 }
 
 func (o AggregationAuthorizationRequest) String() string {

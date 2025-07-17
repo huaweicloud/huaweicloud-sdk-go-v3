@@ -30,16 +30,26 @@ type IAKSKSigner interface {
 }
 
 func GetSigner(alg algorithm.SigningAlgorithm) (IAKSKSigner, error) {
+	var sig IAKSKSigner
+	var err error
 	switch alg {
 	case algorithm.HmacSHA256:
-		return signerInst, nil
+		sig = signerInst
 	case algorithm.HmacSM3:
-		return sm3SignerInst, nil
+		sig = sm3SignerInst
 	case algorithm.EcdsaP256SHA256:
-		return p256sha256SignerInst, nil
+		sig = p256sha256SignerInst
 	case algorithm.SM2SM3:
-		return sm2sm3SignerInst, nil
+		sig = sm2sm3SignerInst
 	default:
-		return nil, errors.New("unsupported signing algorithm: " + string(alg))
+		err = errors.New("unsupported signing algorithm: " + string(alg))
 	}
+
+	if err != nil {
+		return nil, err
+	}
+	if sig == nil {
+		return nil, errors.New("signing algorithm is nil")
+	}
+	return sig, nil
 }

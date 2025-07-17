@@ -16,8 +16,11 @@ type CreateAggregationAuthorizationResponse struct {
 	AuthorizedAccountId *string `json:"authorized_account_id,omitempty"`
 
 	// 资源聚合器授权的创建时间。
-	CreatedAt      *string `json:"created_at,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	CreatedAt *string `json:"created_at,omitempty"`
+
+	// 标签列表
+	Tags           *[]ResourceTag `json:"tags,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o CreateAggregationAuthorizationResponse) String() string {

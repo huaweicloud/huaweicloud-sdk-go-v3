@@ -33,13 +33,21 @@ type ListTagsForResourceRequestResourceType struct {
 }
 
 type ListTagsForResourceRequestResourceTypeEnum struct {
-	CONFIGPOLICY_ASSIGNMENTS ListTagsForResourceRequestResourceType
+	CONFIGPOLICY_ASSIGNMENTS         ListTagsForResourceRequestResourceType
+	CONFIGAGGREGATORS                ListTagsForResourceRequestResourceType
+	CONFIGAGGREGATION_AUTHORIZATIONS ListTagsForResourceRequestResourceType
 }
 
 func GetListTagsForResourceRequestResourceTypeEnum() ListTagsForResourceRequestResourceTypeEnum {
 	return ListTagsForResourceRequestResourceTypeEnum{
 		CONFIGPOLICY_ASSIGNMENTS: ListTagsForResourceRequestResourceType{
 			value: "config:policyAssignments",
+		},
+		CONFIGAGGREGATORS: ListTagsForResourceRequestResourceType{
+			value: "config:aggregators",
+		},
+		CONFIGAGGREGATION_AUTHORIZATIONS: ListTagsForResourceRequestResourceType{
+			value: "config:aggregationAuthorizations",
 		},
 	}
 }

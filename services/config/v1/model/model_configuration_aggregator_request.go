@@ -16,6 +16,9 @@ type ConfigurationAggregatorRequest struct {
 	AggregatorType string `json:"aggregator_type"`
 
 	AccountAggregationSources *AccountAggregationSource `json:"account_aggregation_sources,omitempty"`
+
+	// 标签列表
+	Tags *[]ResourceTag `json:"tags,omitempty"`
 }
 
 func (o ConfigurationAggregatorRequest) String() string {

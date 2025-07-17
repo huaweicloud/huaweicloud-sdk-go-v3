@@ -28,6 +28,9 @@ type ConfigurationAggregatorResp struct {
 
 	// 资源聚合器创建时间。
 	CreatedAt *string `json:"created_at,omitempty"`
+
+	// 标签列表
+	Tags *[]ResourceTag `json:"tags,omitempty"`
 }
 
 func (o ConfigurationAggregatorResp) String() string {

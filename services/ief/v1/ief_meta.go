@@ -2192,6 +2192,11 @@ func GenReqDefForShowQuota() *def.HttpRequestDef {
 		WithJsonTag("types").
 		WithLocationType(def.Query))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IefInstanceId").
+		WithJsonTag("ief-instance-id").
+		WithLocationType(def.Header))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }

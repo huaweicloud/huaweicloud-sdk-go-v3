@@ -32,13 +32,21 @@ type CountResourcesByTagRequestResourceType struct {
 }
 
 type CountResourcesByTagRequestResourceTypeEnum struct {
-	CONFIGPOLICY_ASSIGNMENTS CountResourcesByTagRequestResourceType
+	CONFIGPOLICY_ASSIGNMENTS         CountResourcesByTagRequestResourceType
+	CONFIGAGGREGATORS                CountResourcesByTagRequestResourceType
+	CONFIGAGGREGATION_AUTHORIZATIONS CountResourcesByTagRequestResourceType
 }
 
 func GetCountResourcesByTagRequestResourceTypeEnum() CountResourcesByTagRequestResourceTypeEnum {
 	return CountResourcesByTagRequestResourceTypeEnum{
 		CONFIGPOLICY_ASSIGNMENTS: CountResourcesByTagRequestResourceType{
 			value: "config:policyAssignments",
+		},
+		CONFIGAGGREGATORS: CountResourcesByTagRequestResourceType{
+			value: "config:aggregators",
+		},
+		CONFIGAGGREGATION_AUTHORIZATIONS: CountResourcesByTagRequestResourceType{
+			value: "config:aggregationAuthorizations",
 		},
 	}
 }

@@ -208,6 +208,132 @@ func (c *MetaStudioClient) ShowAgencyInvoker(request *model.ShowAgencyRequest) *
 	return &ShowAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAsrVocabulary 创建热词表
+//
+// 该接口用于创建热词表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateAsrVocabulary(request *model.CreateAsrVocabularyRequest) (*model.CreateAsrVocabularyResponse, error) {
+	requestDef := GenReqDefForCreateAsrVocabulary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAsrVocabularyResponse), nil
+	}
+}
+
+// CreateAsrVocabularyInvoker 创建热词表
+func (c *MetaStudioClient) CreateAsrVocabularyInvoker(request *model.CreateAsrVocabularyRequest) *CreateAsrVocabularyInvoker {
+	requestDef := GenReqDefForCreateAsrVocabulary()
+	return &CreateAsrVocabularyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAsrVocabulary 删除热词表
+//
+// 该接口用于删除热词表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteAsrVocabulary(request *model.DeleteAsrVocabularyRequest) (*model.DeleteAsrVocabularyResponse, error) {
+	requestDef := GenReqDefForDeleteAsrVocabulary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAsrVocabularyResponse), nil
+	}
+}
+
+// DeleteAsrVocabularyInvoker 删除热词表
+func (c *MetaStudioClient) DeleteAsrVocabularyInvoker(request *model.DeleteAsrVocabularyRequest) *DeleteAsrVocabularyInvoker {
+	requestDef := GenReqDefForDeleteAsrVocabulary()
+	return &DeleteAsrVocabularyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAsrVocabulary 查询热词表列表
+//
+// 该接口用于查询热词表列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListAsrVocabulary(request *model.ListAsrVocabularyRequest) (*model.ListAsrVocabularyResponse, error) {
+	requestDef := GenReqDefForListAsrVocabulary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAsrVocabularyResponse), nil
+	}
+}
+
+// ListAsrVocabularyInvoker 查询热词表列表
+func (c *MetaStudioClient) ListAsrVocabularyInvoker(request *model.ListAsrVocabularyRequest) *ListAsrVocabularyInvoker {
+	requestDef := GenReqDefForListAsrVocabulary()
+	return &ListAsrVocabularyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAsrVocabulary 查询热词表详情
+//
+// 该接口用于查询热词表详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowAsrVocabulary(request *model.ShowAsrVocabularyRequest) (*model.ShowAsrVocabularyResponse, error) {
+	requestDef := GenReqDefForShowAsrVocabulary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAsrVocabularyResponse), nil
+	}
+}
+
+// ShowAsrVocabularyInvoker 查询热词表详情
+func (c *MetaStudioClient) ShowAsrVocabularyInvoker(request *model.ShowAsrVocabularyRequest) *ShowAsrVocabularyInvoker {
+	requestDef := GenReqDefForShowAsrVocabulary()
+	return &ShowAsrVocabularyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAsrVocabularyAssociation 查询热词表关联详情
+//
+// 该接口用于查询热词表关联详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowAsrVocabularyAssociation(request *model.ShowAsrVocabularyAssociationRequest) (*model.ShowAsrVocabularyAssociationResponse, error) {
+	requestDef := GenReqDefForShowAsrVocabularyAssociation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAsrVocabularyAssociationResponse), nil
+	}
+}
+
+// ShowAsrVocabularyAssociationInvoker 查询热词表关联详情
+func (c *MetaStudioClient) ShowAsrVocabularyAssociationInvoker(request *model.ShowAsrVocabularyAssociationRequest) *ShowAsrVocabularyAssociationInvoker {
+	requestDef := GenReqDefForShowAsrVocabularyAssociation()
+	return &ShowAsrVocabularyAssociationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAsrVocabulary 修改热词表
+//
+// 该接口用于修改热词表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateAsrVocabulary(request *model.UpdateAsrVocabularyRequest) (*model.UpdateAsrVocabularyResponse, error) {
+	requestDef := GenReqDefForUpdateAsrVocabulary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAsrVocabularyResponse), nil
+	}
+}
+
+// UpdateAsrVocabularyInvoker 修改热词表
+func (c *MetaStudioClient) UpdateAsrVocabularyInvoker(request *model.UpdateAsrVocabularyRequest) *UpdateAsrVocabularyInvoker {
+	requestDef := GenReqDefForUpdateAsrVocabulary()
+	return &UpdateAsrVocabularyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDialogUrl 创建对话链接
 //
 // 该接口用于创建对话链接。
