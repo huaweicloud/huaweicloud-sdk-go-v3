@@ -12,7 +12,7 @@ import (
 // ShowBackendTargetInfoResponseBody 查询文件系统后端存储详情返回体
 type ShowBackendTargetInfoResponseBody struct {
 
-	// 绑定关系id
+	// 绑定关系ID
 	TargetId *string `json:"target_id,omitempty"`
 
 	// 绑定关系创建时间

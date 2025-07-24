@@ -12,7 +12,7 @@ import (
 // DeleteBackendTargetResponse Response Object
 type DeleteBackendTargetResponse struct {
 
-	// 绑定关系id
+	// 绑定关系ID
 	TargetId *string `json:"target_id,omitempty"`
 
 	// 删除后端存储时是否同时删除文件系统内的联动目录及其数据文件
@@ -39,26 +39,14 @@ type DeleteBackendTargetResponseLifecycle struct {
 }
 
 type DeleteBackendTargetResponseLifecycleEnum struct {
-	DELETING      DeleteBackendTargetResponseLifecycle
-	AVAILABLE     DeleteBackendTargetResponseLifecycle
-	MISCONFIGURED DeleteBackendTargetResponseLifecycle
-	CREATING      DeleteBackendTargetResponseLifecycle
-	FAILED        DeleteBackendTargetResponseLifecycle
+	DELETING DeleteBackendTargetResponseLifecycle
+	FAILED   DeleteBackendTargetResponseLifecycle
 }
 
 func GetDeleteBackendTargetResponseLifecycleEnum() DeleteBackendTargetResponseLifecycleEnum {
 	return DeleteBackendTargetResponseLifecycleEnum{
 		DELETING: DeleteBackendTargetResponseLifecycle{
 			value: "DELETING",
-		},
-		AVAILABLE: DeleteBackendTargetResponseLifecycle{
-			value: "AVAILABLE",
-		},
-		MISCONFIGURED: DeleteBackendTargetResponseLifecycle{
-			value: "MISCONFIGURED",
-		},
-		CREATING: DeleteBackendTargetResponseLifecycle{
-			value: "CREATING",
 		},
 		FAILED: DeleteBackendTargetResponseLifecycle{
 			value: "FAILED",

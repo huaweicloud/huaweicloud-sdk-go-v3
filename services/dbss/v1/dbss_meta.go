@@ -117,6 +117,22 @@ func GenReqDefForDeleteInstances() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListAlarmTopicConfigInfo() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/{instance_id}/audit/alarm/topic").
+		WithResponse(new(model.ListAlarmTopicConfigInfoResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListAuditAlarmLog() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -409,6 +425,26 @@ func GenReqDefForRebootAuditInstance() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/dbss/audit/instance/reboot").
 		WithResponse(new(model.RebootAuditInstanceResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForSetAlarmTopicConfigInfo() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/{instance_id}/audit/alarm/topic").
+		WithResponse(new(model.SetAlarmTopicConfigInfoResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

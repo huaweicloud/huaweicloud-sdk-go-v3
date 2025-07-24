@@ -10,8 +10,10 @@ import (
 type ListFsTasksResponse struct {
 
 	// 任务列表
-	Tasks          *[]OneFsTaskResp `json:"tasks,omitempty"`
-	HttpStatusCode int              `json:"-"`
+	Tasks *[]OneFsTaskResp `json:"tasks,omitempty"`
+
+	XRequestId     *string `json:"X-request-id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListFsTasksResponse) String() string {

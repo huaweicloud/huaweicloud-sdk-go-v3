@@ -12,7 +12,7 @@ type ListSharesByTagResponse struct {
 	// 通过标签查询文件系统的资源列表
 	Resources *[]ListSharesByTagResource `json:"resources,omitempty"`
 
-	// 设置返回的文件系统的偏移量
+	// 返回的文件系统的总量
 	TotalCount *int32 `json:"total_count,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

@@ -1285,6 +1285,22 @@ func (i *CreateMessageInvoker) Invoke() (*model.CreateMessageResponse, error) {
 	}
 }
 
+type DeleteDeviceMessageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDeviceMessageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDeviceMessageInvoker) Invoke() (*model.DeleteDeviceMessageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDeviceMessageResponse), nil
+	}
+}
+
 type ListDeviceMessagesInvoker struct {
 	*invoker.BaseInvoker
 }

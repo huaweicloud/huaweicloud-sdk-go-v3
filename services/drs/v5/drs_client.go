@@ -579,6 +579,27 @@ func (c *DrsClient) DownloadBatchCreateTemplateInvoker(request *model.DownloadBa
 	return &DownloadBatchCreateTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DownloadCreateTemplate 下载创建模板
+//
+// 下载根据已有任务导出的创建模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) DownloadCreateTemplate(request *model.DownloadCreateTemplateRequest) (*model.DownloadCreateTemplateResponse, error) {
+	requestDef := GenReqDefForDownloadCreateTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadCreateTemplateResponse), nil
+	}
+}
+
+// DownloadCreateTemplateInvoker 下载创建模板
+func (c *DrsClient) DownloadCreateTemplateInvoker(request *model.DownloadCreateTemplateRequest) *DownloadCreateTemplateInvoker {
+	requestDef := GenReqDefForDownloadCreateTemplate()
+	return &DownloadCreateTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DownloadDbObjectTemplate 对象选择（文件导入 - 模板下载）
 //
 // 对象选择（文件导入 - 模板下载）。
@@ -619,6 +640,27 @@ func (c *DrsClient) ExecuteJobAction(request *model.ExecuteJobActionRequest) (*m
 func (c *DrsClient) ExecuteJobActionInvoker(request *model.ExecuteJobActionRequest) *ExecuteJobActionInvoker {
 	requestDef := GenReqDefForExecuteJobAction()
 	return &ExecuteJobActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportCreationTemplate 导出创建模板
+//
+// 根据已有任务导出创建模板。（异步操作，需要调查询导出进度接口查询结果。）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ExportCreationTemplate(request *model.ExportCreationTemplateRequest) (*model.ExportCreationTemplateResponse, error) {
+	requestDef := GenReqDefForExportCreationTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportCreationTemplateResponse), nil
+	}
+}
+
+// ExportCreationTemplateInvoker 导出创建模板
+func (c *DrsClient) ExportCreationTemplateInvoker(request *model.ExportCreationTemplateRequest) *ExportCreationTemplateInvoker {
+	requestDef := GenReqDefForExportCreationTemplate()
+	return &ExportCreationTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ExportOperationInfo 导出任务操作统计信息
@@ -984,6 +1026,27 @@ func (c *DrsClient) ListTagsInvoker(request *model.ListTagsRequest) *ListTagsInv
 	return &ListTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTemplates 查询创建模板列表
+//
+// 查询批量创建模板列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ListTemplates(request *model.ListTemplatesRequest) (*model.ListTemplatesResponse, error) {
+	requestDef := GenReqDefForListTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTemplatesResponse), nil
+	}
+}
+
+// ListTemplatesInvoker 查询创建模板列表
+func (c *DrsClient) ListTemplatesInvoker(request *model.ListTemplatesRequest) *ListTemplatesInvoker {
+	requestDef := GenReqDefForListTemplates()
+	return &ListTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListUserJdbcDrivers 查询驱动文件列表
 //
 // 查询驱动文件列表。
@@ -1318,6 +1381,27 @@ func (c *DrsClient) ShowEnterpriseProject(request *model.ShowEnterpriseProjectRe
 func (c *DrsClient) ShowEnterpriseProjectInvoker(request *model.ShowEnterpriseProjectRequest) *ShowEnterpriseProjectInvoker {
 	requestDef := GenReqDefForShowEnterpriseProject()
 	return &ShowEnterpriseProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowExportProgress 查询导出创建模板进度
+//
+// 查询导出批量创建模板进度。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowExportProgress(request *model.ShowExportProgressRequest) (*model.ShowExportProgressResponse, error) {
+	requestDef := GenReqDefForShowExportProgress()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowExportProgressResponse), nil
+	}
+}
+
+// ShowExportProgressInvoker 查询导出创建模板进度
+func (c *DrsClient) ShowExportProgressInvoker(request *model.ShowExportProgressRequest) *ShowExportProgressInvoker {
+	requestDef := GenReqDefForShowExportProgress()
+	return &ShowExportProgressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowHealthCompareJobDetail 查询健康对比任务详情

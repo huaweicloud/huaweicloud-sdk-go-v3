@@ -26,7 +26,7 @@ type Share struct {
 	// 用户在某一区域下的安全组ID。
 	SecurityGroupId string `json:"security_group_id"`
 
-	// 文件系统共享协议，有效值为NFS。NFS（Network File System），即网络文件系统。一种使用于分散式文件系统的协议，通过网络让不同的机器、不同的操作系统能够彼此分享数据。
+	// - NFS（Network File System），即网络文件系统。一种使用于分散式文件系统的协议，通过网络让不同的机器、不同的操作系统能够彼此分享数据。Linux系统建议使用NFS协议类型的文件系统。 - CIFS（Common Internet File System），通用Internet文件系统，是一种网络文件系统访问协议。CIFS协议是SMB协议的方言（定义特定版本的协议的消息数据包集称为方言），CIFS协议也是公共的或开放的SMB协议版本，它使程序可以访问远程Internet计算机上的文件并要求此计算机提供服务。通过CIFS协议，可实现Windows系统主机之间的网络文件共享。CIFS类型的文件系统不支持使用Linux操作系统的云服务器进行挂载。Windows系统建议使用CIFS协议类型的文件系统。
 	ShareProto string `json:"share_proto"`
 
 	// 文件系统类型，有效值为STANDARD或者PERFORMANCE。当文件系统正在创建时，该字段不返回。  - SFS Turbo上一代文件系统规格类型：标准型和标准型增强版填写STANDARD，性能型和性能型增强版填写PERFORMANCE。  - 20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/TiB：不校验该字段，填写STANDARD或者PERFORMANCE。  - HPC缓存型：不校验该字段，填写STANDARD或者PERFORMANCE。

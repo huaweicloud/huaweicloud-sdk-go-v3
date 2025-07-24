@@ -425,6 +425,22 @@ func (i *DownloadBatchCreateTemplateInvoker) Invoke() (*model.DownloadBatchCreat
 	}
 }
 
+type DownloadCreateTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadCreateTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadCreateTemplateInvoker) Invoke() (*model.DownloadCreateTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadCreateTemplateResponse), nil
+	}
+}
+
 type DownloadDbObjectTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -454,6 +470,22 @@ func (i *ExecuteJobActionInvoker) Invoke() (*model.ExecuteJobActionResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ExecuteJobActionResponse), nil
+	}
+}
+
+type ExportCreationTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportCreationTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExportCreationTemplateInvoker) Invoke() (*model.ExportCreationTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportCreationTemplateResponse), nil
 	}
 }
 
@@ -733,6 +765,22 @@ func (i *ListTagsInvoker) Invoke() (*model.ListTagsResponse, error) {
 	}
 }
 
+type ListTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTemplatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTemplatesInvoker) Invoke() (*model.ListTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTemplatesResponse), nil
+	}
+}
+
 type ListUserJdbcDriversInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -986,6 +1034,22 @@ func (i *ShowEnterpriseProjectInvoker) Invoke() (*model.ShowEnterpriseProjectRes
 		return nil, err
 	} else {
 		return result.(*model.ShowEnterpriseProjectResponse), nil
+	}
+}
+
+type ShowExportProgressInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowExportProgressInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowExportProgressInvoker) Invoke() (*model.ShowExportProgressResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowExportProgressResponse), nil
 	}
 }
 

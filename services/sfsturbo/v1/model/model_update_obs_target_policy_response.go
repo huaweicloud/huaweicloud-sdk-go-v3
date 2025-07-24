@@ -9,7 +9,7 @@ import (
 // UpdateObsTargetPolicyResponse Response Object
 type UpdateObsTargetPolicyResponse struct {
 
-	// 绑定关系id
+	// 绑定关系ID
 	TargetId *string `json:"target_id,omitempty"`
 
 	Policy *ObsDataRepositoryPolicy `json:"policy,omitempty"`

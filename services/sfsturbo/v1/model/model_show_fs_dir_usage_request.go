@@ -12,7 +12,7 @@ type ShowFsDirUsageRequest struct {
 	// MIME类型, application/json
 	ContentType string `json:"Content-Type"`
 
-	// 文件系统id
+	// 文件系统ID
 	ShareId string `json:"share_id"`
 
 	// 文件系统内合法的目录全路径

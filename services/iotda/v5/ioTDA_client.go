@@ -1872,6 +1872,27 @@ func (c *IoTDAClient) CreateMessageInvoker(request *model.CreateMessageRequest) 
 	return &CreateMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteDeviceMessage 删除指定消息id的消息
+//
+// 应用服务器可调用此接口删除平台下发给设备的指定消息id的消息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) DeleteDeviceMessage(request *model.DeleteDeviceMessageRequest) (*model.DeleteDeviceMessageResponse, error) {
+	requestDef := GenReqDefForDeleteDeviceMessage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDeviceMessageResponse), nil
+	}
+}
+
+// DeleteDeviceMessageInvoker 删除指定消息id的消息
+func (c *IoTDAClient) DeleteDeviceMessageInvoker(request *model.DeleteDeviceMessageRequest) *DeleteDeviceMessageInvoker {
+	requestDef := GenReqDefForDeleteDeviceMessage()
+	return &DeleteDeviceMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDeviceMessages 查询设备消息
 //
 // 应用服务器可调用此接口查询平台下发给设备的消息，平台为每个设备默认最多保存20条消息，超过20条后， 后续的消息会替换下发最早的消息。

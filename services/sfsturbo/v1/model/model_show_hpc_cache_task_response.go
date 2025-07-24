@@ -60,9 +60,10 @@ type ShowHpcCacheTaskResponseStatus struct {
 }
 
 type ShowHpcCacheTaskResponseStatusEnum struct {
-	SUCCESS ShowHpcCacheTaskResponseStatus
-	DOING   ShowHpcCacheTaskResponseStatus
-	FAIL    ShowHpcCacheTaskResponseStatus
+	SUCCESS  ShowHpcCacheTaskResponseStatus
+	DOING    ShowHpcCacheTaskResponseStatus
+	FAIL     ShowHpcCacheTaskResponseStatus
+	DELETING ShowHpcCacheTaskResponseStatus
 }
 
 func GetShowHpcCacheTaskResponseStatusEnum() ShowHpcCacheTaskResponseStatusEnum {
@@ -75,6 +76,9 @@ func GetShowHpcCacheTaskResponseStatusEnum() ShowHpcCacheTaskResponseStatusEnum 
 		},
 		FAIL: ShowHpcCacheTaskResponseStatus{
 			value: "FAIL",
+		},
+		DELETING: ShowHpcCacheTaskResponseStatus{
+			value: "DELETING",
 		},
 	}
 }

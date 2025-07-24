@@ -9,7 +9,7 @@ import (
 // ShowLdapConfigResponse Response Object
 type ShowLdapConfigResponse struct {
 
-	// ldap服务器的url
+	// LDAP服务器的url
 	Url *string `json:"url,omitempty"`
 
 	// 数据库中的域
@@ -21,17 +21,19 @@ type ShowLdapConfigResponse struct {
 	// 过滤条件。保留字段，暂不支持
 	FilterCondition *string `json:"filter_condition,omitempty"`
 
-	// ldap备节点的url
+	// 保留字段，暂不支持
+	VpcId *string `json:"vpc_id,omitempty"`
+
+	// LDAP备节点的url
 	BackupUrl *string `json:"backup_url,omitempty"`
 
-	// ldap的schema，不填写则默认为RFC2307
+	// LDAP的schema，不填写则默认为RFC2307
 	Schema *string `json:"schema,omitempty"`
 
-	// ldap搜索的超时时间，单位为秒。不填写则默认为3秒
+	// LDAP搜索的超时时间，单位为秒。不填写则默认为3秒
 	SearchTimeout *int32 `json:"search_timeout,omitempty"`
 
-	// 访问ldap服务器失败后是否允许使用本地用户鉴权
-	AllowLocalUser *string `json:"allow_local_user,omitempty"`
+	XRequestId     *string `json:"X-request-id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

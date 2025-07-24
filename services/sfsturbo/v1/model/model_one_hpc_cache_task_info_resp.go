@@ -57,9 +57,10 @@ type OneHpcCacheTaskInfoRespStatus struct {
 }
 
 type OneHpcCacheTaskInfoRespStatusEnum struct {
-	SUCCESS OneHpcCacheTaskInfoRespStatus
-	DOING   OneHpcCacheTaskInfoRespStatus
-	FAIL    OneHpcCacheTaskInfoRespStatus
+	SUCCESS  OneHpcCacheTaskInfoRespStatus
+	DOING    OneHpcCacheTaskInfoRespStatus
+	FAIL     OneHpcCacheTaskInfoRespStatus
+	DELETING OneHpcCacheTaskInfoRespStatus
 }
 
 func GetOneHpcCacheTaskInfoRespStatusEnum() OneHpcCacheTaskInfoRespStatusEnum {
@@ -72,6 +73,9 @@ func GetOneHpcCacheTaskInfoRespStatusEnum() OneHpcCacheTaskInfoRespStatusEnum {
 		},
 		FAIL: OneHpcCacheTaskInfoRespStatus{
 			value: "FAIL",
+		},
+		DELETING: OneHpcCacheTaskInfoRespStatus{
+			value: "DELETING",
 		},
 	}
 }

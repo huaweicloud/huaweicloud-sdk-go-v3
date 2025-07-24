@@ -9,8 +9,10 @@ import (
 // DeleteLdapConfigResponse Response Object
 type DeleteLdapConfigResponse struct {
 
-	// ldap异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
-	JobId          *string `json:"jobId,omitempty"`
+	// LDAP异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
+	JobId *string `json:"jobId,omitempty"`
+
+	XRequestId     *string `json:"X-request-id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -13,7 +13,7 @@ import (
 type ListSharesByTagRequestBody struct {
 
 	// 通过标签查询文件系统列表的操作类型。仅支持取值为\"filter\" 或 \"count\"。
-	Action *ListSharesByTagRequestBodyAction `json:"action,omitempty"`
+	Action ListSharesByTagRequestBodyAction `json:"action"`
 
 	// 设置返回的文件系统个数的最大值。
 	Limit *string `json:"limit,omitempty"`

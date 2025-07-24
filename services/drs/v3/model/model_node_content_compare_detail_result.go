@@ -41,6 +41,18 @@ type NodeContentCompareDetailResult struct {
 
 	// 行过滤配置条件
 	CompareLineConfigFilter *string `json:"compare_line_config_filter,omitempty"`
+
+	// 全量比对状态。 -1：对比中 -2：已完成 -3：待对比 -4：已取消
+	Status *int32 `json:"status,omitempty"`
+
+	// 已对比分片数。
+	CompleteShardCount *int32 `json:"complete_shard_count,omitempty"`
+
+	// 总分片数。
+	TotalShardCount *int32 `json:"total_shard_count,omitempty"`
+
+	// 比对进度。
+	Progress *float64 `json:"progress,omitempty"`
 }
 
 func (o NodeContentCompareDetailResult) String() string {

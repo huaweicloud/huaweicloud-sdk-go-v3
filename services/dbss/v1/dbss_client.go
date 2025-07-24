@@ -146,6 +146,27 @@ func (c *DbssClient) DeleteInstancesInvoker(request *model.DeleteInstancesReques
 	return &DeleteInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAlarmTopicConfigInfo 获取实例告警配置
+//
+// 获取实例告警配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DbssClient) ListAlarmTopicConfigInfo(request *model.ListAlarmTopicConfigInfoRequest) (*model.ListAlarmTopicConfigInfoResponse, error) {
+	requestDef := GenReqDefForListAlarmTopicConfigInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAlarmTopicConfigInfoResponse), nil
+	}
+}
+
+// ListAlarmTopicConfigInfoInvoker 获取实例告警配置
+func (c *DbssClient) ListAlarmTopicConfigInfoInvoker(request *model.ListAlarmTopicConfigInfoRequest) *ListAlarmTopicConfigInfoInvoker {
+	requestDef := GenReqDefForListAlarmTopicConfigInfo()
+	return &ListAlarmTopicConfigInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAuditAlarmLog 查询审计告警信息
 //
 // 查询审计告警信息
@@ -459,6 +480,27 @@ func (c *DbssClient) RebootAuditInstance(request *model.RebootAuditInstanceReque
 func (c *DbssClient) RebootAuditInstanceInvoker(request *model.RebootAuditInstanceRequest) *RebootAuditInstanceInvoker {
 	requestDef := GenReqDefForRebootAuditInstance()
 	return &RebootAuditInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetAlarmTopicConfigInfo 设置实例告警配置
+//
+// 设置实例告警配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DbssClient) SetAlarmTopicConfigInfo(request *model.SetAlarmTopicConfigInfoRequest) (*model.SetAlarmTopicConfigInfoResponse, error) {
+	requestDef := GenReqDefForSetAlarmTopicConfigInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetAlarmTopicConfigInfoResponse), nil
+	}
+}
+
+// SetAlarmTopicConfigInfoInvoker 设置实例告警配置
+func (c *DbssClient) SetAlarmTopicConfigInfoInvoker(request *model.SetAlarmTopicConfigInfoRequest) *SetAlarmTopicConfigInfoInvoker {
+	requestDef := GenReqDefForSetAlarmTopicConfigInfo()
+	return &SetAlarmTopicConfigInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAuditQuota 查询账户配额信息

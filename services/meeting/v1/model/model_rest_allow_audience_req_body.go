@@ -10,7 +10,7 @@ import (
 type RestAllowAudienceReqBody struct {
 
 	// 主持人是否允许入会 1：允许入会
-	AllowAudience *int32 `json:"allowAudience,omitempty"`
+	AllowAudience int32 `json:"allowAudience"`
 }
 
 func (o RestAllowAudienceReqBody) String() string {

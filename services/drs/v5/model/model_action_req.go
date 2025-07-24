@@ -111,13 +111,13 @@ func GetActionReqActionNameEnum() ActionReqActionNameEnum {
 			value: "set_readonly",
 		},
 		DIAGNOSIS: ActionReqActionName{
-			value: "diagnosis：一键诊断。",
+			value: "diagnosis",
 		},
 		START_REPAIR: ActionReqActionName{
-			value: "start_repair：开始数据修复。",
+			value: "start_repair",
 		},
 		STOP_REPAIR: ActionReqActionName{
-			value: "stop_repair：停止数据修复。",
+			value: "stop_repair",
 		},
 	}
 }

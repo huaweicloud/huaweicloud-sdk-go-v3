@@ -260,6 +260,8 @@ func (hc *HcHttpClient) fillParamsFromReq(req interface{}, t reflect.Type, reqDe
 			hasBody = true
 		case def.Form:
 			builder.AddFormParam(fieldDef.JsonTag, value.Interface().(def.FormData))
+		default:
+
 		}
 	}
 

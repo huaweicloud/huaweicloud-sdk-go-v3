@@ -101,6 +101,22 @@ func (i *DeleteInstancesInvoker) Invoke() (*model.DeleteInstancesResponse, error
 	}
 }
 
+type ListAlarmTopicConfigInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAlarmTopicConfigInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAlarmTopicConfigInfoInvoker) Invoke() (*model.ListAlarmTopicConfigInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAlarmTopicConfigInfoResponse), nil
+	}
+}
+
 type ListAuditAlarmLogInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -338,6 +354,22 @@ func (i *RebootAuditInstanceInvoker) Invoke() (*model.RebootAuditInstanceRespons
 		return nil, err
 	} else {
 		return result.(*model.RebootAuditInstanceResponse), nil
+	}
+}
+
+type SetAlarmTopicConfigInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetAlarmTopicConfigInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetAlarmTopicConfigInfoInvoker) Invoke() (*model.SetAlarmTopicConfigInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetAlarmTopicConfigInfoResponse), nil
 	}
 }
 

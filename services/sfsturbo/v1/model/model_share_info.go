@@ -51,7 +51,7 @@ type ShareInfo struct {
 	// 用户指定的安全组ID。
 	SecurityGroupId *string `json:"security_group_id,omitempty"`
 
-	// SFS Turbo文件系统的协议类型，当前为NFS
+	// SFS Turbo文件系统的协议类型，当前为NFS或 CIFS。
 	ShareProto *string `json:"share_proto,omitempty"`
 
 	// SFS Turbo文件系统性能类型，包括“STANDARD”标准型和“PERFORMANCE”性能型。

@@ -4,6 +4,7 @@ go 1.14
 
 require (
 	github.com/json-iterator/go v1.1.12
+	github.com/shopspring/decimal v1.4.0
 	github.com/stretchr/testify v1.7.5
 	github.com/tjfoc/gmsm v1.4.1
 	go.mongodb.org/mongo-driver v1.13.1

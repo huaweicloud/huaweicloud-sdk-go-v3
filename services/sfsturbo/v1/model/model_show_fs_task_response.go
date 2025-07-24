@@ -24,7 +24,9 @@ type ShowFsTaskResponse struct {
 	BeginTime *string `json:"begin_time,omitempty"`
 
 	// 任务结束时间，UTC时间，例如：2006-01-02 15:04:06'
-	EndTime        *string `json:"end_time,omitempty"`
+	EndTime *string `json:"end_time,omitempty"`
+
+	XRequestId     *string `json:"X-request-id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -12,7 +12,7 @@ type ListPermRulesRequest struct {
 	// MIME类型
 	ContentType string `json:"Content-Type"`
 
-	// 文件系统id
+	// 文件系统ID
 	ShareId string `json:"share_id"`
 
 	// 返回的权限规则个数

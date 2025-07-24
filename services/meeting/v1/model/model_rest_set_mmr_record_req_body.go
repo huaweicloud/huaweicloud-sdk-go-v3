@@ -10,7 +10,7 @@ import (
 type RestSetMmrRecordReqBody struct {
 
 	// 0：暂停MMR会议录制 1：启动MMR会议录制 2：停止MMR会议录制
-	RecordType *int32 `json:"recordType,omitempty"`
+	RecordType int32 `json:"recordType"`
 }
 
 func (o RestSetMmrRecordReqBody) String() string {

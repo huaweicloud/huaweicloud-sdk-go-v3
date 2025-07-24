@@ -82,7 +82,7 @@ type QueryJobResp struct {
 	// 迁移方案 - Replication-主从复制 - Tungsten-日志解析 - PGBaseBackup-PG备份
 	SchemaType *QueryJobRespSchemaType `json:"schema_type,omitempty"`
 
-	// 节点个数。MongoDB数据库时对应源端分片个数，源库为集群时必填，[1-32]，MySQL双主灾备时会默认设置为2。
+	// 节点个数。
 	NodeNum *int32 `json:"node_num,omitempty"`
 
 	// 对象选择开关

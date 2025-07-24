@@ -8,7 +8,8 @@ import (
 
 // DeleteFsTaskResponse Response Object
 type DeleteFsTaskResponse struct {
-	HttpStatusCode int `json:"-"`
+	XRequestId     *string `json:"X-request-id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteFsTaskResponse) String() string {

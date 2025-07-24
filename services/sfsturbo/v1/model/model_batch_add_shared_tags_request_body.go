@@ -14,11 +14,8 @@ type BatchAddSharedTagsRequestBody struct {
 	// 操作标识，取值范围为：create。 为指定共享批量添加标签时使用create。
 	Action BatchAddSharedTagsRequestBodyAction `json:"action"`
 
-	// 标签列表。 用户权限时该字段必选。如果有op_service权限时，tags和sys_tags二选一。
-	Tags *[]ResourceTag `json:"tags,omitempty"`
-
-	// 系统标签列表。 op_service权限可以访问，和tags二选一。目前TMS调用时只包含一个resource_tag结构体，key固定为：_sys_enterprise_project_id。
-	SysTags *[]ResourceTag `json:"sys_tags,omitempty"`
+	// 标签列表。
+	Tags []ResourceTag `json:"tags"`
 }
 
 func (o BatchAddSharedTagsRequestBody) String() string {

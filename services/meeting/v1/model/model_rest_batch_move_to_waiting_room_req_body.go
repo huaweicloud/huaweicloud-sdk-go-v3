@@ -10,7 +10,7 @@ import (
 type RestBatchMoveToWaitingRoomReqBody struct {
 
 	// 需要移入等候室的全部与会者pid
-	BatchParticipants *[]string `json:"batchParticipants,omitempty"`
+	BatchParticipants []string `json:"batchParticipants"`
 }
 
 func (o RestBatchMoveToWaitingRoomReqBody) String() string {

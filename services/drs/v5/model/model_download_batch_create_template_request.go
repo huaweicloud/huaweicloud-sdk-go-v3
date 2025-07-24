@@ -14,6 +14,9 @@ type DownloadBatchCreateTemplateRequest struct {
 
 	// 请求语言类型。
 	XLanguage *DownloadBatchCreateTemplateRequestXLanguage `json:"X-Language,omitempty"`
+
+	// 数据库引擎。 - postgresql
+	EngineType *string `json:"engine_type,omitempty"`
 }
 
 func (o DownloadBatchCreateTemplateRequest) String() string {

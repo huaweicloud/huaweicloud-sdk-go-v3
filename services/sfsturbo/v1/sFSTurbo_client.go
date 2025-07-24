@@ -19,6 +19,27 @@ func SFSTurboClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// AddActiveDirectoryDomain 加入AD域
+//
+// 加入AD域。Active Directory域（简称：AD域）提供统一的身份认证和授权管理。通过将SFS Turbo文件系统的挂载点接入AD域内，您可以在AD域中实现文件系统用户身份的认证管理和文件级别的访问权限控制。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) AddActiveDirectoryDomain(request *model.AddActiveDirectoryDomainRequest) (*model.AddActiveDirectoryDomainResponse, error) {
+	requestDef := GenReqDefForAddActiveDirectoryDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddActiveDirectoryDomainResponse), nil
+	}
+}
+
+// AddActiveDirectoryDomainInvoker 加入AD域
+func (c *SFSTurboClient) AddActiveDirectoryDomainInvoker(request *model.AddActiveDirectoryDomainRequest) *AddActiveDirectoryDomainInvoker {
+	requestDef := GenReqDefForAddActiveDirectoryDomain()
+	return &AddActiveDirectoryDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchAddSharedTags 批量添加共享标签
 //
 // 指定共享批量添加标签。
@@ -63,6 +84,27 @@ func (c *SFSTurboClient) ChangeSecurityGroup(request *model.ChangeSecurityGroupR
 func (c *SFSTurboClient) ChangeSecurityGroupInvoker(request *model.ChangeSecurityGroupRequest) *ChangeSecurityGroupInvoker {
 	requestDef := GenReqDefForChangeSecurityGroup()
 	return &ChangeSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeShareChargeModeV2 修改文件系统计费模式由按需转为包周期
+//
+// 修改文件系统计费模式由按需转为包周期。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) ChangeShareChargeModeV2(request *model.ChangeShareChargeModeV2Request) (*model.ChangeShareChargeModeV2Response, error) {
+	requestDef := GenReqDefForChangeShareChargeModeV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeShareChargeModeV2Response), nil
+	}
+}
+
+// ChangeShareChargeModeV2Invoker 修改文件系统计费模式由按需转为包周期
+func (c *SFSTurboClient) ChangeShareChargeModeV2Invoker(request *model.ChangeShareChargeModeV2Request) *ChangeShareChargeModeV2Invoker {
+	requestDef := GenReqDefForChangeShareChargeModeV2()
+	return &ChangeShareChargeModeV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ChangeShareName 修改文件系统名称
@@ -128,9 +170,9 @@ func (c *SFSTurboClient) CreateFsDirInvoker(request *model.CreateFsDirRequest) *
 	return &CreateFsDirInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateFsDirQuota 创建目标文件夹quota
+// CreateFsDirQuota 创建目标文件夹配额
 //
-// 创建目标文件夹quota。
+// 创建目标文件夹配额。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) CreateFsDirQuota(request *model.CreateFsDirQuotaRequest) (*model.CreateFsDirQuotaResponse, error) {
@@ -143,7 +185,7 @@ func (c *SFSTurboClient) CreateFsDirQuota(request *model.CreateFsDirQuotaRequest
 	}
 }
 
-// CreateFsDirQuotaInvoker 创建目标文件夹quota
+// CreateFsDirQuotaInvoker 创建目标文件夹配额
 func (c *SFSTurboClient) CreateFsDirQuotaInvoker(request *model.CreateFsDirQuotaRequest) *CreateFsDirQuotaInvoker {
 	requestDef := GenReqDefForCreateFsDirQuota()
 	return &CreateFsDirQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -191,13 +233,9 @@ func (c *SFSTurboClient) CreateHpcCacheTaskInvoker(request *model.CreateHpcCache
 	return &CreateHpcCacheTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateLdapConfig 创建并绑定ldap配置
+// CreateLdapConfig 创建并绑定LDAP配置
 //
-// 创建并绑定ldap配置。LDAP（Lightweight Directory Access Protocol），中文名称轻量级目录访问协议，是对目录服务器（Directory Server）进行访问、控制的一种标准协议。LDAP服务器可以集中式地管理用户和群组的归属关系，通过绑定LDAP服务器，当一个用户访问您的文件系统的文件时，SFS Turbo将会访问您的LDAP服务器以进行用户身份验证，并且获取用户和群组的归属关系，从而进行Linux标准的文件UGO权限的检查。要使用此功能，首先您需要搭建好LDAP服务器（当前SFS Turbo仅支持LDAP v3协议），常见提供LDAP协议访问的目录服务器实现有OpenLdap(Linux)，Active Directory(Windows)等，不同目录服务器的实现细节有所差别，绑定时需要指定对应的Schema（Schema配置错误将会导致SFS Turbo无法正确获取用户以及群组信息，可能导致无权限访问文件系统内文件），当前SFS Turbo支持的Schema有：
-// 1. RFC2307（Openldap通常选择此Schema）
-// 2. MS-AD-BIS（Active Directory通常选择此Schema，支持RFC2307bis，支持嵌套的群组）
-//
-// SFS Turbo还支持配置主备LDAP服务器，当您的一台LDAP服务器故障无法访问后，SFS Turbo将会自动切换到备LDAP服务器访问，以免影响您的业务。同时，若您还选择将allow_local_user配置为Yes（默认为No），那么当您的LDAP服务器全部故障无法访问时，SFS Turbo将会使用您的本地用户以及群组信息，而非LDAP服务器中配置的信息进行身份验证和UGO权限检查，以最大程度减少故障影响面。
+// 创建并绑定LDAP配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) CreateLdapConfig(request *model.CreateLdapConfigRequest) (*model.CreateLdapConfigResponse, error) {
@@ -210,7 +248,7 @@ func (c *SFSTurboClient) CreateLdapConfig(request *model.CreateLdapConfigRequest
 	}
 }
 
-// CreateLdapConfigInvoker 创建并绑定ldap配置
+// CreateLdapConfigInvoker 创建并绑定LDAP配置
 func (c *SFSTurboClient) CreateLdapConfigInvoker(request *model.CreateLdapConfigRequest) *CreateLdapConfigInvoker {
 	requestDef := GenReqDefForCreateLdapConfig()
 	return &CreateLdapConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -282,6 +320,27 @@ func (c *SFSTurboClient) CreateSharedTagInvoker(request *model.CreateSharedTagRe
 	return &CreateSharedTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteActiveDirectoryDomain 退出AD域
+//
+// 退出AD域。Active Directory域（简称：AD域）提供统一的身份认证和授权管理。通过将SFS Turbo文件系统的挂载点接入AD域内，您可以在AD域中实现文件系统用户身份的认证管理和文件级别的访问权限控制。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) DeleteActiveDirectoryDomain(request *model.DeleteActiveDirectoryDomainRequest) (*model.DeleteActiveDirectoryDomainResponse, error) {
+	requestDef := GenReqDefForDeleteActiveDirectoryDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteActiveDirectoryDomainResponse), nil
+	}
+}
+
+// DeleteActiveDirectoryDomainInvoker 退出AD域
+func (c *SFSTurboClient) DeleteActiveDirectoryDomainInvoker(request *model.DeleteActiveDirectoryDomainRequest) *DeleteActiveDirectoryDomainInvoker {
+	requestDef := GenReqDefForDeleteActiveDirectoryDomain()
+	return &DeleteActiveDirectoryDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteBackendTarget 删除后端存储
 //
 // 删除后端存储
@@ -324,9 +383,9 @@ func (c *SFSTurboClient) DeleteFsDirInvoker(request *model.DeleteFsDirRequest) *
 	return &DeleteFsDirInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteFsDirQuota 删除目标文件夹quota
+// DeleteFsDirQuota 删除目标文件夹配额
 //
-// 删除目标文件夹quota。
+// 删除目标文件夹配额。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) DeleteFsDirQuota(request *model.DeleteFsDirQuotaRequest) (*model.DeleteFsDirQuotaResponse, error) {
@@ -339,7 +398,7 @@ func (c *SFSTurboClient) DeleteFsDirQuota(request *model.DeleteFsDirQuotaRequest
 	}
 }
 
-// DeleteFsDirQuotaInvoker 删除目标文件夹quota
+// DeleteFsDirQuotaInvoker 删除目标文件夹配额
 func (c *SFSTurboClient) DeleteFsDirQuotaInvoker(request *model.DeleteFsDirQuotaRequest) *DeleteFsDirQuotaInvoker {
 	requestDef := GenReqDefForDeleteFsDirQuota()
 	return &DeleteFsDirQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -387,13 +446,9 @@ func (c *SFSTurboClient) DeleteHpcCacheTaskInvoker(request *model.DeleteHpcCache
 	return &DeleteHpcCacheTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteLdapConfig 删除ldap配置
+// DeleteLdapConfig 删除LDAP配置
 //
-// 删除ldap配置。LDAP（Lightweight Directory Access Protocol），中文名称轻量级目录访问协议，是对目录服务器（Directory Server）进行访问、控制的一种标准协议。LDAP服务器可以集中式地管理用户和群组的归属关系，通过绑定LDAP服务器，当一个用户访问您的文件系统的文件时，SFS Turbo将会访问您的LDAP服务器以进行用户身份验证，并且获取用户和群组的归属关系，从而进行Linux标准的文件UGO权限的检查。要使用此功能，首先您需要搭建好LDAP服务器（当前SFS Turbo仅支持LDAP v3协议），常见提供LDAP协议访问的目录服务器实现有OpenLdap(Linux)，Active Directory(Windows)等，不同目录服务器的实现细节有所差别，绑定时需要指定对应的Schema（Schema配置错误将会导致SFS Turbo无法正确获取用户以及群组信息，可能导致无权限访问文件系统内文件），当前SFS Turbo支持的Schema有：
-// 1. RFC2307（Openldap通常选择此Schema）
-// 2. MS-AD-BIS（Active Directory通常选择此Schema，支持RFC2307bis，支持嵌套的群组）
-//
-// SFS Turbo还支持配置主备LDAP服务器，当您的一台LDAP服务器故障无法访问后，SFS Turbo将会自动切换到备LDAP服务器访问，以免影响您的业务。同时，若您还选择将allow_local_user配置为Yes（默认为No），那么当您的LDAP服务器全部故障无法访问时，SFS Turbo将会使用您的本地用户以及群组信息，而非LDAP服务器中配置的信息进行身份验证和UGO权限检查，以最大程度减少故障影响面。
+// 删除LDAP配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) DeleteLdapConfig(request *model.DeleteLdapConfigRequest) (*model.DeleteLdapConfigResponse, error) {
@@ -406,7 +461,7 @@ func (c *SFSTurboClient) DeleteLdapConfig(request *model.DeleteLdapConfigRequest
 	}
 }
 
-// DeleteLdapConfigInvoker 删除ldap配置
+// DeleteLdapConfigInvoker 删除LDAP配置
 func (c *SFSTurboClient) DeleteLdapConfigInvoker(request *model.DeleteLdapConfigRequest) *DeleteLdapConfigInvoker {
 	requestDef := GenReqDefForDeleteLdapConfig()
 	return &DeleteLdapConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -580,6 +635,27 @@ func (c *SFSTurboClient) ListPermRulesInvoker(request *model.ListPermRulesReques
 	return &ListPermRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListShareTypes 查询文件系统类型和配额
+//
+// 查询文件系统类型和配额
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) ListShareTypes(request *model.ListShareTypesRequest) (*model.ListShareTypesResponse, error) {
+	requestDef := GenReqDefForListShareTypes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListShareTypesResponse), nil
+	}
+}
+
+// ListShareTypesInvoker 查询文件系统类型和配额
+func (c *SFSTurboClient) ListShareTypesInvoker(request *model.ListShareTypesRequest) *ListShareTypesInvoker {
+	requestDef := GenReqDefForListShareTypes()
+	return &ListShareTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSharedTags 查询租户所有共享的标签
 //
 // 查询租户所有共享的标签集合。
@@ -664,6 +740,27 @@ func (c *SFSTurboClient) SetHpcCacheBackendInvoker(request *model.SetHpcCacheBac
 	return &SetHpcCacheBackendInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowActiveDirectoryDomain 查询AD域配置
+//
+// 查询AD域配置。Active Directory域（简称：AD域）提供统一的身份认证和授权管理。通过将SFS Turbo文件系统的挂载点接入AD域内，您可以在AD域中实现文件系统用户身份的认证管理和文件级别的访问权限控制。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) ShowActiveDirectoryDomain(request *model.ShowActiveDirectoryDomainRequest) (*model.ShowActiveDirectoryDomainResponse, error) {
+	requestDef := GenReqDefForShowActiveDirectoryDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowActiveDirectoryDomainResponse), nil
+	}
+}
+
+// ShowActiveDirectoryDomainInvoker 查询AD域配置
+func (c *SFSTurboClient) ShowActiveDirectoryDomainInvoker(request *model.ShowActiveDirectoryDomainRequest) *ShowActiveDirectoryDomainInvoker {
+	requestDef := GenReqDefForShowActiveDirectoryDomain()
+	return &ShowActiveDirectoryDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowBackendTargetInfo 获取后端存储详细信息
 //
 // 获取后端存储详细信息
@@ -683,6 +780,27 @@ func (c *SFSTurboClient) ShowBackendTargetInfo(request *model.ShowBackendTargetI
 func (c *SFSTurboClient) ShowBackendTargetInfoInvoker(request *model.ShowBackendTargetInfoRequest) *ShowBackendTargetInfoInvoker {
 	requestDef := GenReqDefForShowBackendTargetInfo()
 	return &ShowBackendTargetInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowClientIpInfo 获取已挂载的客户端ip信息
+//
+// 获取已挂载的客户端ip信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) ShowClientIpInfo(request *model.ShowClientIpInfoRequest) (*model.ShowClientIpInfoResponse, error) {
+	requestDef := GenReqDefForShowClientIpInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowClientIpInfoResponse), nil
+	}
+}
+
+// ShowClientIpInfoInvoker 获取已挂载的客户端ip信息
+func (c *SFSTurboClient) ShowClientIpInfoInvoker(request *model.ShowClientIpInfoRequest) *ShowClientIpInfoInvoker {
+	requestDef := GenReqDefForShowClientIpInfo()
+	return &ShowClientIpInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowFsDir 查询目录是否存在
@@ -706,9 +824,9 @@ func (c *SFSTurboClient) ShowFsDirInvoker(request *model.ShowFsDirRequest) *Show
 	return &ShowFsDirInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowFsDirQuota 查询目标文件夹quota
+// ShowFsDirQuota 查询目标文件夹配额
 //
-// 查询目标文件夹quota。查询的used_capacity、used_inode数据可能有延迟。
+// 查询目标文件夹配额。查询的used_capacity、used_inode数据可能有延迟。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) ShowFsDirQuota(request *model.ShowFsDirQuotaRequest) (*model.ShowFsDirQuotaResponse, error) {
@@ -721,7 +839,7 @@ func (c *SFSTurboClient) ShowFsDirQuota(request *model.ShowFsDirQuotaRequest) (*
 	}
 }
 
-// ShowFsDirQuotaInvoker 查询目标文件夹quota
+// ShowFsDirQuotaInvoker 查询目标文件夹配额
 func (c *SFSTurboClient) ShowFsDirQuotaInvoker(request *model.ShowFsDirQuotaRequest) *ShowFsDirQuotaInvoker {
 	requestDef := GenReqDefForShowFsDirQuota()
 	return &ShowFsDirQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -792,7 +910,7 @@ func (c *SFSTurboClient) ShowHpcCacheTaskInvoker(request *model.ShowHpcCacheTask
 
 // ShowJobDetail 查询job的状态详情
 //
-// 查询job的执行状态。 可用于查询SFS Turbo异步API的执行状态。例如：可使用调用创建并绑定ldap配置接口时返回的jobId，通过该接口查询job的执行状态。
+// 用于查询SFS Turbo异步API的执行状态。例如：可使用调用创建并绑定LDAP配置接口时返回的jobId，通过该接口查询job的执行状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) ShowJobDetail(request *model.ShowJobDetailRequest) (*model.ShowJobDetailResponse, error) {
@@ -811,13 +929,9 @@ func (c *SFSTurboClient) ShowJobDetailInvoker(request *model.ShowJobDetailReques
 	return &ShowJobDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowLdapConfig 查询Ldap的配置
+// ShowLdapConfig 查询LDAP的配置
 //
-// 查询Ldap的配置。LDAP（Lightweight Directory Access Protocol），中文名称轻量级目录访问协议，是对目录服务器（Directory Server）进行访问、控制的一种标准协议。LDAP服务器可以集中式地管理用户和群组的归属关系，通过绑定LDAP服务器，当一个用户访问您的文件系统的文件时，SFS Turbo将会访问您的LDAP服务器以进行用户身份验证，并且获取用户和群组的归属关系，从而进行Linux标准的文件UGO权限的检查。要使用此功能，首先您需要搭建好LDAP服务器（当前SFS Turbo仅支持LDAP v3协议），常见提供LDAP协议访问的目录服务器实现有OpenLdap(Linux)，Active Directory(Windows)等，不同目录服务器的实现细节有所差别，绑定时需要指定对应的Schema（Schema配置错误将会导致SFS Turbo无法正确获取用户以及群组信息，可能导致无权限访问文件系统内文件），当前SFS Turbo支持的Schema有：
-// 1. RFC2307（Openldap通常选择此Schema）
-// 2. MS-AD-BIS（Active Directory通常选择此Schema，支持RFC2307bis，支持嵌套的群组）
-//
-// SFS Turbo还支持配置主备LDAP服务器，当您的一台LDAP服务器故障无法访问后，SFS Turbo将会自动切换到备LDAP服务器访问，以免影响您的业务。同时，若您还选择将allow_local_user配置为Yes（默认为No），那么当您的LDAP服务器全部故障无法访问时，SFS Turbo将会使用您的本地用户以及群组信息，而非LDAP服务器中配置的信息进行身份验证和UGO权限检查，以最大程度减少故障影响面。
+// 查询LDAP的配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) ShowLdapConfig(request *model.ShowLdapConfigRequest) (*model.ShowLdapConfigResponse, error) {
@@ -830,7 +944,7 @@ func (c *SFSTurboClient) ShowLdapConfig(request *model.ShowLdapConfigRequest) (*
 	}
 }
 
-// ShowLdapConfigInvoker 查询Ldap的配置
+// ShowLdapConfigInvoker 查询LDAP的配置
 func (c *SFSTurboClient) ShowLdapConfigInvoker(request *model.ShowLdapConfigRequest) *ShowLdapConfigInvoker {
 	requestDef := GenReqDefForShowLdapConfig()
 	return &ShowLdapConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -899,9 +1013,30 @@ func (c *SFSTurboClient) ShowSharedTagsInvoker(request *model.ShowSharedTagsRequ
 	return &ShowSharedTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateFsDirQuota 更新目标文件夹quota
+// UpdateActiveDirectoryDomain 修改AD域配置
 //
-// 更新目标文件夹quota
+// 修改AD域配置。Active Directory域（简称：AD域）提供统一的身份认证和授权管理。通过将SFS Turbo文件系统的挂载点接入AD域内，您可以在AD域中实现文件系统用户身份的认证管理和文件级别的访问权限控制。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) UpdateActiveDirectoryDomain(request *model.UpdateActiveDirectoryDomainRequest) (*model.UpdateActiveDirectoryDomainResponse, error) {
+	requestDef := GenReqDefForUpdateActiveDirectoryDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateActiveDirectoryDomainResponse), nil
+	}
+}
+
+// UpdateActiveDirectoryDomainInvoker 修改AD域配置
+func (c *SFSTurboClient) UpdateActiveDirectoryDomainInvoker(request *model.UpdateActiveDirectoryDomainRequest) *UpdateActiveDirectoryDomainInvoker {
+	requestDef := GenReqDefForUpdateActiveDirectoryDomain()
+	return &UpdateActiveDirectoryDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateFsDirQuota 更新目标文件夹配额
+//
+// 更新目标文件夹配额
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) UpdateFsDirQuota(request *model.UpdateFsDirQuotaRequest) (*model.UpdateFsDirQuotaResponse, error) {
@@ -914,7 +1049,7 @@ func (c *SFSTurboClient) UpdateFsDirQuota(request *model.UpdateFsDirQuotaRequest
 	}
 }
 
-// UpdateFsDirQuotaInvoker 更新目标文件夹quota
+// UpdateFsDirQuotaInvoker 更新目标文件夹配额
 func (c *SFSTurboClient) UpdateFsDirQuotaInvoker(request *model.UpdateFsDirQuotaRequest) *UpdateFsDirQuotaInvoker {
 	requestDef := GenReqDefForUpdateFsDirQuota()
 	return &UpdateFsDirQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -941,13 +1076,9 @@ func (c *SFSTurboClient) UpdateHpcShareInvoker(request *model.UpdateHpcShareRequ
 	return &UpdateHpcShareInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateLdapConfig 修改ldap配置
+// UpdateLdapConfig 修改LDAP配置
 //
-// 修改ldap配置。LDAP（Lightweight Directory Access Protocol），中文名称轻量级目录访问协议，是对目录服务器（Directory Server）进行访问、控制的一种标准协议。LDAP服务器可以集中式地管理用户和群组的归属关系，通过绑定LDAP服务器，当一个用户访问您的文件系统的文件时，SFS Turbo将会访问您的LDAP服务器以进行用户身份验证，并且获取用户和群组的归属关系，从而进行Linux标准的文件UGO权限的检查。要使用此功能，首先您需要搭建好LDAP服务器（当前SFS Turbo仅支持LDAP v3协议），常见提供LDAP协议访问的目录服务器实现有OpenLdap(Linux)，Active Directory(Windows)等，不同目录服务器的实现细节有所差别，绑定时需要指定对应的Schema（Schema配置错误将会导致SFS Turbo无法正确获取用户以及群组信息，可能导致无权限访问文件系统内文件），当前SFS Turbo支持的Schema有：
-// 1. RFC2307（Openldap通常选择此Schema）
-// 2. MS-AD-BIS（Active Directory通常选择此Schema，支持RFC2307bis，支持嵌套的群组）
-//
-// SFS Turbo还支持配置主备LDAP服务器，当您的一台LDAP服务器故障无法访问后，SFS Turbo将会自动切换到备LDAP服务器访问，以免影响您的业务。同时，若您还选择将allow_local_user配置为Yes（默认为No），那么当您的LDAP服务器全部故障无法访问时，SFS Turbo将会使用您的本地用户以及群组信息，而非LDAP服务器中配置的信息进行身份验证和UGO权限检查，以最大程度减少故障影响面。
+// 修改LDAP配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SFSTurboClient) UpdateLdapConfig(request *model.UpdateLdapConfigRequest) (*model.UpdateLdapConfigResponse, error) {
@@ -960,7 +1091,7 @@ func (c *SFSTurboClient) UpdateLdapConfig(request *model.UpdateLdapConfigRequest
 	}
 }
 
-// UpdateLdapConfigInvoker 修改ldap配置
+// UpdateLdapConfigInvoker 修改LDAP配置
 func (c *SFSTurboClient) UpdateLdapConfigInvoker(request *model.UpdateLdapConfigRequest) *UpdateLdapConfigInvoker {
 	requestDef := GenReqDefForUpdateLdapConfig()
 	return &UpdateLdapConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

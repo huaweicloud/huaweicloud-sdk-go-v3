@@ -17,6 +17,9 @@ type ImportBatchCreateJobsRequestBody struct {
 
 	// 待上传的模板文件。
 	File *def.FilePart `json:"file"`
+
+	// 任务类型，迁移，同步，灾备等。 - migration - sync - cloudDataGuard
+	Type *def.MultiPart `json:"type,omitempty"`
 }
 
 func (o ImportBatchCreateJobsRequestBody) String() string {

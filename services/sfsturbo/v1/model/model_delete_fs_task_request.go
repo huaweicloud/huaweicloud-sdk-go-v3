@@ -12,7 +12,7 @@ type DeleteFsTaskRequest struct {
 	// MIME类型, application/json
 	ContentType string `json:"Content-Type"`
 
-	// 文件系统id
+	// 文件系统ID
 	ShareId string `json:"share_id"`
 
 	// 任务类型。例，DU任务取值为dir-usage

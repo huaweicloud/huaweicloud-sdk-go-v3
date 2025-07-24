@@ -12,7 +12,7 @@ import (
 // BssInfo 计费参数详情
 type BssInfo struct {
 
-	// 是否自动续费
+	// 是否自动续费。0表示不自动续费，1表示自动续费。
 	IsAutoRenew *BssInfoIsAutoRenew `json:"is_auto_renew,omitempty"`
 
 	// 包周期订购的周期数
@@ -21,7 +21,7 @@ type BssInfo struct {
 	// 包周期的类型，可选包年或包月，2 表示包月，3 表示包年
 	PeriodType BssInfoPeriodType `json:"period_type"`
 
-	// 是否生成订单后自动扣款
+	// 是否生成订单后自动扣款。0表示不自动续费，1表示自动续费。
 	IsAutoPay *BssInfoIsAutoPay `json:"is_auto_pay,omitempty"`
 }
 

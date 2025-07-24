@@ -15,8 +15,10 @@ type ListFlavorsRequest struct {
 	// 规格id
 	FlavorId *string `json:"flavor_id,omitempty"`
 
+	// 查询返回云服务器规格列表当前页面的数量。默认为1000
 	Limit *int32 `json:"limit,omitempty"`
 
+	// 从marker指定的flavor_id的下一条数据开始查询
 	Marker *string `json:"marker,omitempty"`
 }
 

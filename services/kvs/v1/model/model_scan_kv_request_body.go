@@ -26,6 +26,9 @@ type ScanKvRequestBody struct {
 
 	FilterExpression *ConditionExpression `bson:"filter_expression,omitempty"`
 
+	// 对kv_doc有效，返回指定字段列表，默认全部。
+	ProjectionFields *[]string `bson:"projection_fields,omitempty"`
+
 	// 对表进行采样，尽最大努力保证返回的段列表均分整张表。举例：sample_segments_count=4，返回的段列表[MinKey, KV1)、[KV1,KV2)、[KV2,KV3)和[KV3,MaxKey)。用户可以使用scan-kv对这四个分区执行并发扫描，提高遍历效率。 - 范围: [1, 10000]。默认值：不执行采样。 - sample_segments_count仅能和table_name、start_key和end_key字段配合使用。Range分区模式下支持全表采样和范围采样；Hash分区模式仅支持全表扫描。 - 仅支持对Primary key进行采样，不支持本地/全局二级索引。 - 返回的段列表仅包含主键，不包含键值；且段列表是编码后的数据 ，不可修改。
 	SampleSegmentsCount *int32 `bson:"sample_segments_count,omitempty"`
 

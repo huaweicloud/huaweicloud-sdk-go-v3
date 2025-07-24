@@ -24,7 +24,7 @@ type ListHpcCacheTasksRequest struct {
 	// offset，默认值为 0
 	Offset *int64 `json:"offset,omitempty"`
 
-	// limit，默认值为 20
+	// limit，默认值为 1000
 	Limit *int64 `json:"limit,omitempty"`
 
 	// start_time

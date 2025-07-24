@@ -20,6 +20,9 @@ type NetworkInterfaces struct {
 	// ipv6地址
 	Ipv6Addresses *[]string `json:"ipv6_addresses,omitempty"`
 
+	// 子网id
+	SubnetId *string `json:"subnet_id,omitempty"`
+
 	Association *Association `json:"association,omitempty"`
 }
 

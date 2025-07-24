@@ -10,7 +10,7 @@ import (
 type RestSetMmrLiveReqBody struct {
 
 	// 0：停止Mmr会议直播 1：启动Mmr会议直播
-	LiveState *int32 `json:"liveState,omitempty"`
+	LiveState int32 `json:"liveState"`
 }
 
 func (o RestSetMmrLiveReqBody) String() string {

@@ -10,7 +10,7 @@ import (
 type PauseConferenceReq struct {
 
 	// 主持人暂停/取消暂停会议 0：会议正常 1：会议暂停
-	Pause *int32 `json:"pause,omitempty"`
+	Pause int32 `json:"pause"`
 }
 
 func (o PauseConferenceReq) String() string {

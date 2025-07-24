@@ -12,7 +12,7 @@ type ShowFsDirRequest struct {
 	// MIME类型
 	ContentType string `json:"Content-Type"`
 
-	// 文件系统id
+	// 文件系统ID
 	ShareId string `json:"share_id"`
 
 	// 需要查询的目录的全路径

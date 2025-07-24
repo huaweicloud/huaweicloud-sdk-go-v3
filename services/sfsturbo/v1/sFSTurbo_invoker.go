@@ -5,6 +5,22 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/sfsturbo/v1/model"
 )
 
+type AddActiveDirectoryDomainInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddActiveDirectoryDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddActiveDirectoryDomainInvoker) Invoke() (*model.AddActiveDirectoryDomainResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddActiveDirectoryDomainResponse), nil
+	}
+}
+
 type BatchAddSharedTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -34,6 +50,22 @@ func (i *ChangeSecurityGroupInvoker) Invoke() (*model.ChangeSecurityGroupRespons
 		return nil, err
 	} else {
 		return result.(*model.ChangeSecurityGroupResponse), nil
+	}
+}
+
+type ChangeShareChargeModeV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeShareChargeModeV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeShareChargeModeV2Invoker) Invoke() (*model.ChangeShareChargeModeV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeShareChargeModeV2Response), nil
 	}
 }
 
@@ -194,6 +226,22 @@ func (i *CreateSharedTagInvoker) Invoke() (*model.CreateSharedTagResponse, error
 		return nil, err
 	} else {
 		return result.(*model.CreateSharedTagResponse), nil
+	}
+}
+
+type DeleteActiveDirectoryDomainInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteActiveDirectoryDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteActiveDirectoryDomainInvoker) Invoke() (*model.DeleteActiveDirectoryDomainResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteActiveDirectoryDomainResponse), nil
 	}
 }
 
@@ -421,6 +469,22 @@ func (i *ListPermRulesInvoker) Invoke() (*model.ListPermRulesResponse, error) {
 	}
 }
 
+type ListShareTypesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListShareTypesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListShareTypesInvoker) Invoke() (*model.ListShareTypesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListShareTypesResponse), nil
+	}
+}
+
 type ListSharedTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -485,6 +549,22 @@ func (i *SetHpcCacheBackendInvoker) Invoke() (*model.SetHpcCacheBackendResponse,
 	}
 }
 
+type ShowActiveDirectoryDomainInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowActiveDirectoryDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowActiveDirectoryDomainInvoker) Invoke() (*model.ShowActiveDirectoryDomainResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowActiveDirectoryDomainResponse), nil
+	}
+}
+
 type ShowBackendTargetInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -498,6 +578,22 @@ func (i *ShowBackendTargetInfoInvoker) Invoke() (*model.ShowBackendTargetInfoRes
 		return nil, err
 	} else {
 		return result.(*model.ShowBackendTargetInfoResponse), nil
+	}
+}
+
+type ShowClientIpInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowClientIpInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowClientIpInfoInvoker) Invoke() (*model.ShowClientIpInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowClientIpInfoResponse), nil
 	}
 }
 
@@ -658,6 +754,22 @@ func (i *ShowSharedTagsInvoker) Invoke() (*model.ShowSharedTagsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ShowSharedTagsResponse), nil
+	}
+}
+
+type UpdateActiveDirectoryDomainInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateActiveDirectoryDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateActiveDirectoryDomainInvoker) Invoke() (*model.UpdateActiveDirectoryDomainResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateActiveDirectoryDomainResponse), nil
 	}
 }
 
