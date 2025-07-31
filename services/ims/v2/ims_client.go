@@ -193,6 +193,28 @@ func (c *ImsClient) CopyImageInRegionInvoker(request *model.CopyImageInRegionReq
 	return &CopyImageInRegionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CopyImageInRegionInSafeMode Region内复制镜像（新）
+//
+// 该接口为扩展接口，主要用于用户将一个已有镜像复制为另一个镜像。复制镜像时，可以更改镜像的加密等属性，以满足不同的场景。
+// 该接口为异步接口，返回job_id说明任务下发成功，查询异步任务状态，如果是success说明任务执行成功，如果是failed说明任务执行失败。如何查询异步任务，请参见异步任务查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImsClient) CopyImageInRegionInSafeMode(request *model.CopyImageInRegionInSafeModeRequest) (*model.CopyImageInRegionInSafeModeResponse, error) {
+	requestDef := GenReqDefForCopyImageInRegionInSafeMode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CopyImageInRegionInSafeModeResponse), nil
+	}
+}
+
+// CopyImageInRegionInSafeModeInvoker Region内复制镜像（新）
+func (c *ImsClient) CopyImageInRegionInSafeModeInvoker(request *model.CopyImageInRegionInSafeModeRequest) *CopyImageInRegionInSafeModeInvoker {
+	requestDef := GenReqDefForCopyImageInRegionInSafeMode()
+	return &CopyImageInRegionInSafeModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDataImage 使用外部镜像文件制作数据镜像
 //
 // 使用上传至OBS桶中的外部数据卷镜像文件制作数据镜像。作为异步接口，调用成功，只是说明后台收到了制作请求，镜像是否制作成功需要通过异步任务查询接口查询该任务的执行状态。具体请参考异步任务查询。
@@ -212,6 +234,27 @@ func (c *ImsClient) CreateDataImage(request *model.CreateDataImageRequest) (*mod
 func (c *ImsClient) CreateDataImageInvoker(request *model.CreateDataImageRequest) *CreateDataImageInvoker {
 	requestDef := GenReqDefForCreateDataImage()
 	return &CreateDataImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDataImageInSafeMode 使用外部镜像文件制作数据镜像（新）
+//
+// 使用上传至OBS桶中的外部数据卷镜像文件制作数据镜像。作为异步接口，调用成功，只是说明后台收到了制作请求，镜像是否制作成功需要通过异步任务查询接口查询该任务的执行状态。具体请参考异步任务查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImsClient) CreateDataImageInSafeMode(request *model.CreateDataImageInSafeModeRequest) (*model.CreateDataImageInSafeModeResponse, error) {
+	requestDef := GenReqDefForCreateDataImageInSafeMode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDataImageInSafeModeResponse), nil
+	}
+}
+
+// CreateDataImageInSafeModeInvoker 使用外部镜像文件制作数据镜像（新）
+func (c *ImsClient) CreateDataImageInSafeModeInvoker(request *model.CreateDataImageInSafeModeRequest) *CreateDataImageInSafeModeInvoker {
+	requestDef := GenReqDefForCreateDataImageInSafeMode()
+	return &CreateDataImageInSafeModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateImage 制作镜像
@@ -244,6 +287,38 @@ func (c *ImsClient) CreateImage(request *model.CreateImageRequest) (*model.Creat
 func (c *ImsClient) CreateImageInvoker(request *model.CreateImageRequest) *CreateImageInvoker {
 	requestDef := GenReqDefForCreateImage()
 	return &CreateImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateImageInSafeMode 制作镜像（新）
+//
+// 本接口用于制作私有镜像，支持：
+// - 使用云服务器制作私有镜像。
+// - 使用上传至OBS桶中的外部镜像文件制作私有镜像。
+// - 使用数据卷制作系统盘镜像。
+//
+// 作为异步接口，调用成功，只是说明云平台收到了制作请求，镜像是否制作成功需要通过异步任务查询接口查询该任务的执行状态，具体请参考异步任务查询。
+//
+// 不同场景必选参数说明：
+//
+// - 使用云服务器制作镜像时的请求的必选参数：name,instance_id。
+// - 使用上传至OBS桶中的外部镜像文件时的请求必选参数：name,image_url,min_disk。
+// - 使用数据卷制作系统盘镜像时的请求必选参数：name,volume_id,os_version
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImsClient) CreateImageInSafeMode(request *model.CreateImageInSafeModeRequest) (*model.CreateImageInSafeModeResponse, error) {
+	requestDef := GenReqDefForCreateImageInSafeMode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateImageInSafeModeResponse), nil
+	}
+}
+
+// CreateImageInSafeModeInvoker 制作镜像（新）
+func (c *ImsClient) CreateImageInSafeModeInvoker(request *model.CreateImageInSafeModeRequest) *CreateImageInSafeModeInvoker {
+	requestDef := GenReqDefForCreateImageInSafeMode()
+	return &CreateImageInSafeModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateOrUpdateTags 增加或修改标签
@@ -330,6 +405,27 @@ func (c *ImsClient) ExportImageInvoker(request *model.ExportImageRequest) *Expor
 	return &ExportImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExportImageInSafeMode 导出镜像（新）
+//
+// 该接口为扩展接口，用于用户将自己的私有镜像导出到指定的OBS桶中。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImsClient) ExportImageInSafeMode(request *model.ExportImageInSafeModeRequest) (*model.ExportImageInSafeModeResponse, error) {
+	requestDef := GenReqDefForExportImageInSafeMode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportImageInSafeModeResponse), nil
+	}
+}
+
+// ExportImageInSafeModeInvoker 导出镜像（新）
+func (c *ImsClient) ExportImageInSafeModeInvoker(request *model.ExportImageInSafeModeRequest) *ExportImageInSafeModeInvoker {
+	requestDef := GenReqDefForExportImageInSafeMode()
+	return &ExportImageInSafeModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ImportImageQuick 镜像文件快速导入
 //
 // 使用上传至OBS桶中的超大外部镜像文件制作私有镜像，目前仅支持RAW或ZVHD2格式镜像文件。且要求镜像文件大小不能超过1TB。
@@ -351,6 +447,29 @@ func (c *ImsClient) ImportImageQuick(request *model.ImportImageQuickRequest) (*m
 func (c *ImsClient) ImportImageQuickInvoker(request *model.ImportImageQuickRequest) *ImportImageQuickInvoker {
 	requestDef := GenReqDefForImportImageQuick()
 	return &ImportImageQuickInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportImageQuickInSafeMode 镜像文件快速导入（新）
+//
+// 使用上传至OBS桶中的超大外部镜像文件制作私有镜像，目前仅支持RAW或ZVHD2格式镜像文件。且要求镜像文件大小不能超过1TB。
+// 由于快速导入功能要求提前转换镜像文件格式为RAW或ZVHD2格式，因此镜像文件小于128GB时推荐您优先使用常规的创建私有镜像的方式。
+// 作为异步接口，调用成功，只是说明后台收到了制作请求，镜像是否制作成功需要通过异步任务查询接口查询该任务的执行状态，具体请参考异步任务查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ImsClient) ImportImageQuickInSafeMode(request *model.ImportImageQuickInSafeModeRequest) (*model.ImportImageQuickInSafeModeResponse, error) {
+	requestDef := GenReqDefForImportImageQuickInSafeMode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ImportImageQuickInSafeModeResponse), nil
+	}
+}
+
+// ImportImageQuickInSafeModeInvoker 镜像文件快速导入（新）
+func (c *ImsClient) ImportImageQuickInSafeModeInvoker(request *model.ImportImageQuickInSafeModeRequest) *ImportImageQuickInSafeModeInvoker {
+	requestDef := GenReqDefForImportImageQuickInSafeMode()
+	return &ImportImageQuickInSafeModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListImageByTags 按标签查询镜像

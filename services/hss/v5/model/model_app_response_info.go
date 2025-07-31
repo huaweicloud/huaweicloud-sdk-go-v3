@@ -9,34 +9,34 @@ import (
 // AppResponseInfo 软件信息
 type AppResponseInfo struct {
 
-	// HSS的Agent ID
+	// **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
 	AgentId *string `json:"agent_id,omitempty"`
 
-	// 主机id
+	// **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
 	HostId *string `json:"host_id,omitempty"`
 
-	// 服务器名称
+	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
 	HostName *string `json:"host_name,omitempty"`
 
-	// 服务器ip
+	// **参数解释**: 主机IP **取值范围**: 字符长度1-128位
 	HostIp *string `json:"host_ip,omitempty"`
 
-	// 软件名称
+	// **参数解释**: 软件名称 **取值范围**: 字符长度1-256位
 	AppName *string `json:"app_name,omitempty"`
 
-	// 版本号
+	// **参数解释**: 版本号 **取值范围**: 字符长度1-128位
 	Version *string `json:"version,omitempty"`
 
-	// 更新时间，最近一次更新的时间，用毫秒表示
+	// **参数解释**: 更新时间，最近一次更新的时间，用毫秒表示 **取值范围**: 最小值0，最大值9223372036854775807
 	UpdateTime *int64 `json:"update_time,omitempty"`
 
-	// 最近扫描时间，用毫秒表示
+	// **参数解释**: 最近扫描时间，用毫秒表示 **取值范围**: 最小值0，最大值9223372036854775807
 	RecentScanTime *int64 `json:"recent_scan_time,omitempty"`
 
-	// 容器id
+	// **参数解释**: 容器ID **取值范围**: 字符长度1-128位
 	ContainerId *string `json:"container_id,omitempty"`
 
-	// 容器名称
+	// **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
 	ContainerName *string `json:"container_name,omitempty"`
 }
 

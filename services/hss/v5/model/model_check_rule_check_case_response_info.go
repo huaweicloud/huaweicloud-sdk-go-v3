@@ -9,13 +9,13 @@ import (
 // CheckRuleCheckCaseResponseInfo 配置检测检查项的检测用例信息
 type CheckRuleCheckCaseResponseInfo struct {
 
-	// 检测用例描述
+	// **参数解释**: 检测用例描述 **取值范围**: 不涉及
 	CheckDescription *string `json:"check_description,omitempty"`
 
-	// 当前结果
+	// **参数解释**: 当前结果 **取值范围**: 不涉及
 	CurrentValue *string `json:"current_value,omitempty"`
 
-	// 期待结果
+	// **参数解释**: 期待结果 **取值范围**: 不涉及
 	SuggestValue *string `json:"suggest_value,omitempty"`
 }
 

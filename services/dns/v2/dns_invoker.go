@@ -197,22 +197,6 @@ func (i *CreateCustomLineInvoker) Invoke() (*model.CreateCustomLineResponse, err
 	}
 }
 
-type CreateEipRecordSetInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateEipRecordSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateEipRecordSetInvoker) Invoke() (*model.CreateEipRecordSetResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateEipRecordSetResponse), nil
-	}
-}
-
 type CreateEndpointInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -261,22 +245,6 @@ func (i *CreatePrivateZoneInvoker) Invoke() (*model.CreatePrivateZoneResponse, e
 	}
 }
 
-type CreatePtrInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreatePtrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreatePtrInvoker) Invoke() (*model.CreatePtrResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreatePtrResponse), nil
-	}
-}
-
 type CreatePublicZoneInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -293,22 +261,6 @@ func (i *CreatePublicZoneInvoker) Invoke() (*model.CreatePublicZoneResponse, err
 	}
 }
 
-type CreateRecordSetInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateRecordSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateRecordSetInvoker) Invoke() (*model.CreateRecordSetResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateRecordSetResponse), nil
-	}
-}
-
 type CreateRecordSetWithBatchLinesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -322,22 +274,6 @@ func (i *CreateRecordSetWithBatchLinesInvoker) Invoke() (*model.CreateRecordSetW
 		return nil, err
 	} else {
 		return result.(*model.CreateRecordSetWithBatchLinesResponse), nil
-	}
-}
-
-type CreateRecordSetWithLineInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateRecordSetWithLineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateRecordSetWithLineInvoker) Invoke() (*model.CreateRecordSetWithLineResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateRecordSetWithLineResponse), nil
 	}
 }
 
@@ -437,22 +373,6 @@ func (i *DeletePrivateZoneInvoker) Invoke() (*model.DeletePrivateZoneResponse, e
 	}
 }
 
-type DeletePtrInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeletePtrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeletePtrInvoker) Invoke() (*model.DeletePtrResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeletePtrResponse), nil
-	}
-}
-
 type DeletePublicZoneInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -466,38 +386,6 @@ func (i *DeletePublicZoneInvoker) Invoke() (*model.DeletePublicZoneResponse, err
 		return nil, err
 	} else {
 		return result.(*model.DeletePublicZoneResponse), nil
-	}
-}
-
-type DeleteRecordSetInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteRecordSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteRecordSetInvoker) Invoke() (*model.DeleteRecordSetResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteRecordSetResponse), nil
-	}
-}
-
-type DeleteRecordSetsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteRecordSetsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteRecordSetsInvoker) Invoke() (*model.DeleteRecordSetsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteRecordSetsResponse), nil
 	}
 }
 
@@ -709,54 +597,6 @@ func (i *ListPrivateZonesInvoker) Invoke() (*model.ListPrivateZonesResponse, err
 	}
 }
 
-type ListPtrRecordsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListPtrRecordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListPtrRecordsInvoker) Invoke() (*model.ListPtrRecordsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListPtrRecordsResponse), nil
-	}
-}
-
-type ListPtrsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListPtrsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListPtrsInvoker) Invoke() (*model.ListPtrsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListPtrsResponse), nil
-	}
-}
-
-type ListPublicZoneLinesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListPublicZoneLinesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListPublicZoneLinesInvoker) Invoke() (*model.ListPublicZoneLinesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListPublicZoneLinesResponse), nil
-	}
-}
-
 type ListPublicZonesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -770,54 +610,6 @@ func (i *ListPublicZonesInvoker) Invoke() (*model.ListPublicZonesResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListPublicZonesResponse), nil
-	}
-}
-
-type ListRecordSetsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListRecordSetsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListRecordSetsInvoker) Invoke() (*model.ListRecordSetsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListRecordSetsResponse), nil
-	}
-}
-
-type ListRecordSetsByZoneInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListRecordSetsByZoneInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListRecordSetsByZoneInvoker) Invoke() (*model.ListRecordSetsByZoneResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListRecordSetsByZoneResponse), nil
-	}
-}
-
-type ListRecordSetsWithLineInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListRecordSetsWithLineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListRecordSetsWithLineInvoker) Invoke() (*model.ListRecordSetsWithLineResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListRecordSetsWithLineResponse), nil
 	}
 }
 
@@ -869,22 +661,6 @@ func (i *ListTagsInvoker) Invoke() (*model.ListTagsResponse, error) {
 	}
 }
 
-type RestorePtrRecordInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RestorePtrRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *RestorePtrRecordInvoker) Invoke() (*model.RestorePtrRecordResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RestorePtrRecordResponse), nil
-	}
-}
-
 type SetPrivateZoneProxyPatternInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -898,22 +674,6 @@ func (i *SetPrivateZoneProxyPatternInvoker) Invoke() (*model.SetPrivateZoneProxy
 		return nil, err
 	} else {
 		return result.(*model.SetPrivateZoneProxyPatternResponse), nil
-	}
-}
-
-type SetRecordSetsStatusInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SetRecordSetsStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *SetRecordSetsStatusInvoker) Invoke() (*model.SetRecordSetsStatusResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SetRecordSetsStatusResponse), nil
 	}
 }
 
@@ -1013,38 +773,6 @@ func (i *ShowPrivateZoneNameServerInvoker) Invoke() (*model.ShowPrivateZoneNameS
 	}
 }
 
-type ShowPtrInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowPtrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowPtrInvoker) Invoke() (*model.ShowPtrResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowPtrResponse), nil
-	}
-}
-
-type ShowPtrRecordSetInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowPtrRecordSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowPtrRecordSetInvoker) Invoke() (*model.ShowPtrRecordSetResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowPtrRecordSetResponse), nil
-	}
-}
-
 type ShowPublicZoneInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1074,54 +802,6 @@ func (i *ShowPublicZoneNameServerInvoker) Invoke() (*model.ShowPublicZoneNameSer
 		return nil, err
 	} else {
 		return result.(*model.ShowPublicZoneNameServerResponse), nil
-	}
-}
-
-type ShowRecordSetInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowRecordSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowRecordSetInvoker) Invoke() (*model.ShowRecordSetResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowRecordSetResponse), nil
-	}
-}
-
-type ShowRecordSetByZoneInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowRecordSetByZoneInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowRecordSetByZoneInvoker) Invoke() (*model.ShowRecordSetByZoneResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowRecordSetByZoneResponse), nil
-	}
-}
-
-type ShowRecordSetWithLineInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowRecordSetWithLineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowRecordSetWithLineInvoker) Invoke() (*model.ShowRecordSetWithLineResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowRecordSetWithLineResponse), nil
 	}
 }
 
@@ -1237,38 +917,6 @@ func (i *UpdatePrivateZoneStatusInvoker) Invoke() (*model.UpdatePrivateZoneStatu
 	}
 }
 
-type UpdatePtrInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdatePtrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdatePtrInvoker) Invoke() (*model.UpdatePtrResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdatePtrResponse), nil
-	}
-}
-
-type UpdatePtrRecordInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdatePtrRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdatePtrRecordInvoker) Invoke() (*model.UpdatePtrRecordResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdatePtrRecordResponse), nil
-	}
-}
-
 type UpdatePublicZoneInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1298,38 +946,6 @@ func (i *UpdatePublicZoneStatusInvoker) Invoke() (*model.UpdatePublicZoneStatusR
 		return nil, err
 	} else {
 		return result.(*model.UpdatePublicZoneStatusResponse), nil
-	}
-}
-
-type UpdateRecordSetInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateRecordSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateRecordSetInvoker) Invoke() (*model.UpdateRecordSetResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateRecordSetResponse), nil
-	}
-}
-
-type UpdateRecordSetsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateRecordSetsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateRecordSetsInvoker) Invoke() (*model.UpdateRecordSetsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateRecordSetsResponse), nil
 	}
 }
 
@@ -1394,5 +1010,389 @@ func (i *ShowDnssecConfigInvoker) Invoke() (*model.ShowDnssecConfigResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowDnssecConfigResponse), nil
+	}
+}
+
+type CreateEipRecordSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateEipRecordSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateEipRecordSetInvoker) Invoke() (*model.CreateEipRecordSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateEipRecordSetResponse), nil
+	}
+}
+
+type CreateRecordSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRecordSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateRecordSetInvoker) Invoke() (*model.CreateRecordSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRecordSetResponse), nil
+	}
+}
+
+type DeleteRecordSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteRecordSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteRecordSetInvoker) Invoke() (*model.DeleteRecordSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteRecordSetResponse), nil
+	}
+}
+
+type ListPtrRecordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPtrRecordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPtrRecordsInvoker) Invoke() (*model.ListPtrRecordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPtrRecordsResponse), nil
+	}
+}
+
+type ListRecordSetsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRecordSetsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRecordSetsInvoker) Invoke() (*model.ListRecordSetsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRecordSetsResponse), nil
+	}
+}
+
+type ListRecordSetsByZoneInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRecordSetsByZoneInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRecordSetsByZoneInvoker) Invoke() (*model.ListRecordSetsByZoneResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRecordSetsByZoneResponse), nil
+	}
+}
+
+type RestorePtrRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestorePtrRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RestorePtrRecordInvoker) Invoke() (*model.RestorePtrRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestorePtrRecordResponse), nil
+	}
+}
+
+type ShowPtrRecordSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPtrRecordSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPtrRecordSetInvoker) Invoke() (*model.ShowPtrRecordSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPtrRecordSetResponse), nil
+	}
+}
+
+type ShowRecordSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRecordSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRecordSetInvoker) Invoke() (*model.ShowRecordSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRecordSetResponse), nil
+	}
+}
+
+type UpdatePtrRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePtrRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePtrRecordInvoker) Invoke() (*model.UpdatePtrRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePtrRecordResponse), nil
+	}
+}
+
+type UpdateRecordSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateRecordSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateRecordSetInvoker) Invoke() (*model.UpdateRecordSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateRecordSetResponse), nil
+	}
+}
+
+type CreatePtrInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePtrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreatePtrInvoker) Invoke() (*model.CreatePtrResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePtrResponse), nil
+	}
+}
+
+type CreateRecordSetWithLineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRecordSetWithLineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateRecordSetWithLineInvoker) Invoke() (*model.CreateRecordSetWithLineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRecordSetWithLineResponse), nil
+	}
+}
+
+type DeletePtrInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePtrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeletePtrInvoker) Invoke() (*model.DeletePtrResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePtrResponse), nil
+	}
+}
+
+type DeleteRecordSetsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteRecordSetsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteRecordSetsInvoker) Invoke() (*model.DeleteRecordSetsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteRecordSetsResponse), nil
+	}
+}
+
+type ListPtrsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPtrsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPtrsInvoker) Invoke() (*model.ListPtrsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPtrsResponse), nil
+	}
+}
+
+type ListPublicZoneLinesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPublicZoneLinesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPublicZoneLinesInvoker) Invoke() (*model.ListPublicZoneLinesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPublicZoneLinesResponse), nil
+	}
+}
+
+type ListRecordSetsWithLineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRecordSetsWithLineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRecordSetsWithLineInvoker) Invoke() (*model.ListRecordSetsWithLineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRecordSetsWithLineResponse), nil
+	}
+}
+
+type SetRecordSetsStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetRecordSetsStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetRecordSetsStatusInvoker) Invoke() (*model.SetRecordSetsStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetRecordSetsStatusResponse), nil
+	}
+}
+
+type ShowPtrInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPtrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPtrInvoker) Invoke() (*model.ShowPtrResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPtrResponse), nil
+	}
+}
+
+type ShowRecordSetByZoneInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRecordSetByZoneInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRecordSetByZoneInvoker) Invoke() (*model.ShowRecordSetByZoneResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRecordSetByZoneResponse), nil
+	}
+}
+
+type ShowRecordSetWithLineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRecordSetWithLineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRecordSetWithLineInvoker) Invoke() (*model.ShowRecordSetWithLineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRecordSetWithLineResponse), nil
+	}
+}
+
+type UpdatePtrInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePtrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePtrInvoker) Invoke() (*model.UpdatePtrResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePtrResponse), nil
+	}
+}
+
+type UpdateRecordSetsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateRecordSetsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateRecordSetsInvoker) Invoke() (*model.UpdateRecordSetsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateRecordSetsResponse), nil
 	}
 }

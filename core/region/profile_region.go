@@ -21,7 +21,7 @@ package region
 
 import (
 	"fmt"
-	"gopkg.in/yaml.v3"
+	"github.com/goccy/go-yaml"
 	"io/ioutil"
 	"os"
 	"path/filepath"

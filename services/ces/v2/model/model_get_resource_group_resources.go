@@ -11,7 +11,7 @@ import (
 
 type GetResourceGroupResources struct {
 
-	// 资源健康状态，取值为health（已设置告警规则且无告警触发的资源）、unhealthy（已设置告警规则且有告警触发的资源）、no_alarm_rule（未关联告警规则）
+	// 指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
 	Status GetResourceGroupResourcesStatus `json:"status"`
 
 	// 资源的维度信息
@@ -22,6 +22,12 @@ type GetResourceGroupResources struct {
 
 	// 企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+	EventStatus *GetResourceGroupResourcesEventStatus `json:"event_status,omitempty"`
+
+	// 资源名称
+	ResourceName *string `json:"resource_name,omitempty"`
 }
 
 func (o GetResourceGroupResources) String() string {
@@ -66,6 +72,57 @@ func (c GetResourceGroupResourcesStatus) MarshalJSON() ([]byte, error) {
 }
 
 func (c *GetResourceGroupResourcesStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type GetResourceGroupResourcesEventStatus struct {
+	value string
+}
+
+type GetResourceGroupResourcesEventStatusEnum struct {
+	HEALTH        GetResourceGroupResourcesEventStatus
+	UNHEALTHY     GetResourceGroupResourcesEventStatus
+	NO_ALARM_RULE GetResourceGroupResourcesEventStatus
+}
+
+func GetGetResourceGroupResourcesEventStatusEnum() GetResourceGroupResourcesEventStatusEnum {
+	return GetResourceGroupResourcesEventStatusEnum{
+		HEALTH: GetResourceGroupResourcesEventStatus{
+			value: "health",
+		},
+		UNHEALTHY: GetResourceGroupResourcesEventStatus{
+			value: "unhealthy",
+		},
+		NO_ALARM_RULE: GetResourceGroupResourcesEventStatus{
+			value: "no_alarm_rule",
+		},
+	}
+}
+
+func (c GetResourceGroupResourcesEventStatus) Value() string {
+	return c.value
+}
+
+func (c GetResourceGroupResourcesEventStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *GetResourceGroupResourcesEventStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

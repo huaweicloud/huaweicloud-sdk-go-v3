@@ -21,7 +21,7 @@ type AntivirusResultDetailInfo struct {
 	// 文件哈希
 	FileHash *string `json:"file_hash,omitempty"`
 
-	// 文件大小
+	// **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
 	FileSize *int64 `json:"file_size,omitempty"`
 
 	// 文件属主
@@ -39,7 +39,7 @@ type AntivirusResultDetailInfo struct {
 	// 更新时间，毫秒
 	UpdateTime *int64 `json:"update_time,omitempty"`
 
-	// Agent ID
+	// **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
 	AgentId *string `json:"agent_id,omitempty"`
 }
 

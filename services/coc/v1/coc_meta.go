@@ -2,10 +2,54 @@ package v1
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
-
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/coc/v1/model"
 	"net/http"
 )
+
+func GenReqDefForCreatePasswordChangePlan() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/account-mgmt/accounts/password-change-plan").
+		WithResponse(new(model.CreatePasswordChangePlanResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForResetAccountPassword() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/account-mgmt/accounts/password/reset").
+		WithResponse(new(model.ResetAccountPasswordResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateAccountPassword() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/account-mgmt/accounts/password/update").
+		WithResponse(new(model.UpdateAccountPasswordResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
 
 func GenReqDefForClearAlarm() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().

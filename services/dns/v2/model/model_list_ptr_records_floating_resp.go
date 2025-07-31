@@ -31,7 +31,7 @@ type ListPtrRecordsFloatingResp struct {
 
 	Links *PageLink `json:"links,omitempty"`
 
-	// 资源标签。
+	// **参数解释：** 资源标签。 **取值范围：** 不涉及。
 	Tags *[]Tag `json:"tags,omitempty"`
 
 	// 反向解析关联的企业项目ID，长度不超过36个字符。

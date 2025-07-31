@@ -9,7 +9,7 @@ import (
 // UpdateSystemUserWhiteListRequestInfo 系统用户白名单
 type UpdateSystemUserWhiteListRequestInfo struct {
 
-	// 服务器ID
+	// **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
 	HostId string `json:"host_id"`
 
 	// 系统用户名列表

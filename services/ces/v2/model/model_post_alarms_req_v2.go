@@ -17,7 +17,7 @@ type PostAlarmsReqV2 struct {
 	// 告警描述，长度0-256
 	Description *string `json:"description,omitempty"`
 
-	// 查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
+	// 查询服务的命名空间，各服务命名空间请参考“[服务命名名称](ces_03_0059.xml)”
 	Namespace string `json:"namespace"`
 
 	// 资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
@@ -42,6 +42,9 @@ type PostAlarmsReqV2 struct {
 
 	// 告警通知关闭时间
 	NotificationEndTime *string `json:"notification_end_time,omitempty"`
+
+	// 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+	EffectiveTimezone *string `json:"effective_timezone,omitempty"`
 
 	// 企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`

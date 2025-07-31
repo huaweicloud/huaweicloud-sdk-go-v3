@@ -9,15 +9,19 @@ import (
 	"strings"
 )
 
-// JobTag 任务标签。 * ECOMMERCE: 电商 * NEWS: 新闻 * MARKETING: 营销
+// JobTag 任务标签。 * ECOMMERCE: 电商 * NEWS: 新闻 * MARKETING: 营销 * LIVE: 直播 * EDUCATION: 教培 * CUSTOMER: 客服 * STORYTELLING: 故事
 type JobTag struct {
 	value string
 }
 
 type JobTagEnum struct {
-	ECOMMERCE JobTag
-	NEWS      JobTag
-	MARKETING JobTag
+	ECOMMERCE    JobTag
+	NEWS         JobTag
+	MARKETING    JobTag
+	LIVE         JobTag
+	EDUCATION    JobTag
+	CUSTOMER     JobTag
+	STORYTELLING JobTag
 }
 
 func GetJobTagEnum() JobTagEnum {
@@ -30,6 +34,18 @@ func GetJobTagEnum() JobTagEnum {
 		},
 		MARKETING: JobTag{
 			value: "MARKETING",
+		},
+		LIVE: JobTag{
+			value: "LIVE",
+		},
+		EDUCATION: JobTag{
+			value: "EDUCATION",
+		},
+		CUSTOMER: JobTag{
+			value: "CUSTOMER",
+		},
+		STORYTELLING: JobTag{
+			value: "STORYTELLING",
 		},
 	}
 }

@@ -14,8 +14,8 @@ type ExtendInfo struct {
 	// 表示指标聚合方式，average表示平均值，min表示最小值，max表示最大值，sum表示求合
 	Filter *ExtendInfoFilter `json:"filter,omitempty"`
 
-	// 表示指标聚合周期，1表示原始值，60表示一分钟，300表示5分钟，1200表示20分钟，3600表示1小时，14400表示4小时，86400表示1天
-	Period *ExtendInfoPeriod `json:"period,omitempty"`
+	// '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}'
+	Period *string `json:"period,omitempty"`
 
 	// 展示时间，0表示使用自定义时间展示， 5分钟，15分钟，30分钟，1小时，2小时，3小时，12小时，24小时，7天，30天
 	DisplayTime *ExtendInfoDisplayTime `json:"display_time,omitempty"`
@@ -106,67 +106,6 @@ func (c *ExtendInfoFilter) UnmarshalJSON(b []byte) error {
 		return nil
 	} else {
 		return errors.New("convert enum data to string error")
-	}
-}
-
-type ExtendInfoPeriod struct {
-	value int32
-}
-
-type ExtendInfoPeriodEnum struct {
-	E_1     ExtendInfoPeriod
-	E_60    ExtendInfoPeriod
-	E_300   ExtendInfoPeriod
-	E_1200  ExtendInfoPeriod
-	E_3600  ExtendInfoPeriod
-	E_14400 ExtendInfoPeriod
-	E_86400 ExtendInfoPeriod
-}
-
-func GetExtendInfoPeriodEnum() ExtendInfoPeriodEnum {
-	return ExtendInfoPeriodEnum{
-		E_1: ExtendInfoPeriod{
-			value: 1,
-		}, E_60: ExtendInfoPeriod{
-			value: 60,
-		}, E_300: ExtendInfoPeriod{
-			value: 300,
-		}, E_1200: ExtendInfoPeriod{
-			value: 1200,
-		}, E_3600: ExtendInfoPeriod{
-			value: 3600,
-		}, E_14400: ExtendInfoPeriod{
-			value: 14400,
-		}, E_86400: ExtendInfoPeriod{
-			value: 86400,
-		},
-	}
-}
-
-func (c ExtendInfoPeriod) Value() int32 {
-	return c.value
-}
-
-func (c ExtendInfoPeriod) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ExtendInfoPeriod) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: int32")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(int32); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to int32 error")
 	}
 }
 

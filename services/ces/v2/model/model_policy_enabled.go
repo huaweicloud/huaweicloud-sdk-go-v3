@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// PolicyEnabled 是否启用告警策略。true:开启，false:关闭。
+// PolicyEnabled 是否启用告警策略。true:开启，false：关闭。
 type PolicyEnabled struct {
 }
 

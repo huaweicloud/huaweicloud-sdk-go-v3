@@ -9,7 +9,7 @@ import (
 // ListAutoLaunchChangeHistoriesResponse Response Object
 type ListAutoLaunchChangeHistoriesResponse struct {
 
-	// 自启动项变动总数
+	// **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
 	TotalNum *int32 `json:"total_num,omitempty"`
 
 	// 软件历史变动记录列表

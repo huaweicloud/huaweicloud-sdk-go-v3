@@ -9,55 +9,55 @@ import (
 // PwdPolicyInfoResponseInfo 服务器的口令复杂度策略。建议设置最小口令长度不小于8，同时包含大写字母、小写字母、数字和特殊字符。
 type PwdPolicyInfoResponseInfo struct {
 
-	// 主机id
+	// **参数解释**: 主机id **取值范围**: 不涉及
 	HostId *string `json:"host_id,omitempty"`
 
-	// 服务器名称
+	// **参数解释**: 服务器名称 **取值范围**: 不涉及
 	HostName *string `json:"host_name,omitempty"`
 
-	// 服务器IP（私有IP），为兼容用户使用，不删除此字段
+	// **参数解释**: 服务器IP（私有IP），为兼容用户使用，不删除此字段 **取值范围**: 不涉及
 	HostIp *string `json:"host_ip,omitempty"`
 
-	// 服务器私有IP
+	// **参数解释**: 服务器私有IP **取值范围**: 不涉及
 	PrivateIp *string `json:"private_ip,omitempty"`
 
-	// 服务器公网IP
+	// **参数解释**: 服务器公网IP **取值范围**: 不涉及
 	PublicIp *string `json:"public_ip,omitempty"`
 
-	// 口令最小长度的设置是否符合要求，符合为true，不符合为false
+	// **参数解释**: 口令最小长度的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
 	MinLength *bool `json:"min_length,omitempty"`
 
-	// 大写字母的设置是否符合要求，符合为true，不符合为false
+	// **参数解释**: 大写字母的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
 	UppercaseLetter *bool `json:"uppercase_letter,omitempty"`
 
-	// 小写字母的设置是否符合要求，符合为true，不符合为false
+	// **参数解释**: 小写字母的设置是否符合要求 **取值范围**: - true：符合要求 - false：不符合要求
 	LowercaseLetter *bool `json:"lowercase_letter,omitempty"`
 
-	// 数字的设置是否符合要求，符合为true，不符合为false
+	// **参数解释**: 数字的设置是否符合要求，符合为true，不符合为false **取值范围**: - true：符合要求 - false：不符合要求
 	Number *bool `json:"number,omitempty"`
 
-	// 特殊字符的设置是否符合要求，符合为true，不符合为false
+	// **参数解释**: 特殊字符的设置是否符合要求，符合为true，不符合为false **取值范围**: - true：符合要求 - false：不符合要求
 	SpecialCharacter *bool `json:"special_character,omitempty"`
 
-	// 复杂口令策略中定义的口令最小长度
+	// **参数解释**: 复杂口令策略中定义的口令最小长度 **取值范围**: 8 - 26
 	MinLengthNum *int32 `json:"min_length_num,omitempty"`
 
-	// 复杂口令策略中定义的最少包含的大写字母数
+	// **参数解释**: 复杂口令策略中定义的最少包含的大写字母数 **取值范围**: 0 - 10
 	MinUppercaseLetter *int32 `json:"min_uppercase_letter,omitempty"`
 
-	// 复杂口令策略中定义的最少包含的小写字母数
+	// **参数解释**: 复杂口令策略中定义的最少包含的小写字母数 **取值范围**: 0 - 10
 	MinLowercaseLetter *int32 `json:"min_lowercase_letter,omitempty"`
 
-	// 复杂口令策略中定义的最少包含的数字数
+	// **参数解释**: 复杂口令策略中定义的最少包含的数字数 **取值范围**: 0 - 10
 	MinNumber *int32 `json:"min_number,omitempty"`
 
-	// 复杂口令策略中定义的最少包含的特殊字母数
+	// **参数解释**: 复杂口令策略中定义的最少包含的特殊字母数 **取值范围**: 0 - 10
 	MinSpecialCharacter *int32 `json:"min_special_character,omitempty"`
 
-	// 最近扫描时间
+	// **参数解释**: 最近扫描时间 **取值范围**: 不涉及
 	UpdateTime *int64 `json:"update_time,omitempty"`
 
-	// 修改建议
+	// **参数解释**: 修改建议 **取值范围**: 不涉及
 	Suggestion *string `json:"suggestion,omitempty"`
 }
 

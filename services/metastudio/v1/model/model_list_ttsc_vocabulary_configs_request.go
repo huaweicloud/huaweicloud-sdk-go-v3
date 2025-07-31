@@ -33,6 +33,12 @@ type ListTtscVocabularyConfigsRequest struct {
 	// 是否应用词表配置，从周边服务传递
 	IsVocabularyConfigEnable *string `json:"is_vocabulary_config_enable,omitempty"`
 
+	// 分组id
+	GroupId *string `json:"group_id,omitempty"`
+
+	// 资产id
+	AssetId *string `json:"asset_id,omitempty"`
+
 	// 每页显示的条目数量。
 	Limit *int32 `json:"limit,omitempty"`
 

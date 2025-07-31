@@ -13,7 +13,7 @@ type ListAgentInvocationsResponse struct {
 	Invocations *[]InvocationInfo `json:"invocations,omitempty"`
 
 	// 任务列表总量
-	Count          *int32 `json:"count,omitempty"`
+	Count          *int64 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

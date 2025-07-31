@@ -51,7 +51,7 @@ type ListAssetsRequest struct {
 	// 排序方式。 * asc：升序 * desc：降序  默认asc升序。
 	SortDir *string `json:"sort_dir,omitempty"`
 
-	// 资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * GROUP_CUSTOMIZATION：租户组资产 * ALL：所有资产  默认查询租户资产。
+	// 资产来源。 * SYSTEM：系统资产 * CUSTOMIZATION：租户资产 * ALL：所有资产  默认查询租户资产。
 	AssetSource *ListAssetsRequestAssetSource `json:"asset_source,omitempty"`
 
 	// 资产状态。多个资产状态使用英文逗号分隔。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK：资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线 默认查询所有状态的资产。
@@ -72,7 +72,7 @@ type ListAssetsRequest struct {
 	// 语言。多选使用英文逗号分隔。
 	Language *string `json:"language,omitempty"`
 
-	// 系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes  数字人资产属性： * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）  租户组资产验签属性： * SIG：加签秘钥。取值方式SIG=HexEncode(HMAC-SHA256(group_id:EXP_TIME:NONCE,key)) * EXP_TIME：过期时间，当前时间增加增加10分钟。取值示例1627768613 * NONCE：随机字符串。取值示例：EycLQsHwxhzK9OW8UEKWNfH2I3CGR2nINuU1EBpv162d42d92s
+	// 系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes  数字人资产属性： * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
 	SystemProperty *string `json:"system_property,omitempty"`
 
 	// 动作是否可编辑。仅在分身数字人模型查询时有效。
@@ -107,9 +107,6 @@ type ListAssetsRequest struct {
 
 	// 第三方用户ID。不允许输入中文。
 	AppUserId *string `json:"app_user_id,omitempty"`
-
-	// 租户组id。只支持asset_souce是ALL 或者GROUP_CUSTOMIZATION 来源。
-	ProjectGroupId *string `json:"project_group_id,omitempty"`
 }
 
 func (o ListAssetsRequest) String() string {
@@ -173,10 +170,9 @@ type ListAssetsRequestAssetSource struct {
 }
 
 type ListAssetsRequestAssetSourceEnum struct {
-	SYSTEM              ListAssetsRequestAssetSource
-	CUSTOMIZATION       ListAssetsRequestAssetSource
-	GROUP_CUSTOMIZATION ListAssetsRequestAssetSource
-	ALL                 ListAssetsRequestAssetSource
+	SYSTEM        ListAssetsRequestAssetSource
+	CUSTOMIZATION ListAssetsRequestAssetSource
+	ALL           ListAssetsRequestAssetSource
 }
 
 func GetListAssetsRequestAssetSourceEnum() ListAssetsRequestAssetSourceEnum {
@@ -186,9 +182,6 @@ func GetListAssetsRequestAssetSourceEnum() ListAssetsRequestAssetSourceEnum {
 		},
 		CUSTOMIZATION: ListAssetsRequestAssetSource{
 			value: "CUSTOMIZATION",
-		},
-		GROUP_CUSTOMIZATION: ListAssetsRequestAssetSource{
-			value: "GROUP_CUSTOMIZATION",
 		},
 		ALL: ListAssetsRequestAssetSource{
 			value: "ALL",

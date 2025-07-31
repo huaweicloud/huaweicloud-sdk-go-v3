@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// Condition 匹配条件
 type Condition struct {
 
 	// 企业项目ID

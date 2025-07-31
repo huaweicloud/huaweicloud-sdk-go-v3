@@ -26,6 +26,9 @@ type UpdateOneClickAlarmNotificationsRequestBody struct {
 	// 告警通知关闭时间
 	NotificationEndTime *string `json:"notification_end_time,omitempty"`
 
+	// 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+	EffectiveTimezone *string `json:"effective_timezone,omitempty"`
+
 	// NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
 	NotificationManner *UpdateOneClickAlarmNotificationsRequestBodyNotificationManner `json:"notification_manner,omitempty"`
 

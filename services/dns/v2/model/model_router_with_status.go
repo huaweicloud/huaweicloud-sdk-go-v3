@@ -8,13 +8,13 @@ import (
 
 type RouterWithStatus struct {
 
-	// 资源状态。
+	// **参数解释：** 关联VPC的状态。 **取值范围：** 不涉及。
 	Status *string `json:"status,omitempty"`
 
-	// 关联VPC的ID。
+	// **参数解释：** 关联VPC的ID。 **取值范围：** 不涉及。
 	RouterId *string `json:"router_id,omitempty"`
 
-	// 关联VPC所在的region。
+	// **参数解释：** 关联VPC所在的region。 **取值范围：** 不涉及。
 	RouterRegion *string `json:"router_region,omitempty"`
 }
 

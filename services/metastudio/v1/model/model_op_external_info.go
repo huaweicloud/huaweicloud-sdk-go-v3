@@ -11,6 +11,9 @@ type OpExternalInfo struct {
 
 	// 审核详情id列表
 	ReviewIdList *[]string `json:"review_id_list,omitempty"`
+
+	// 算法侧失败原因
+	AlgorithmFailureReason *string `json:"algorithm_failure_reason,omitempty"`
 }
 
 func (o OpExternalInfo) String() string {

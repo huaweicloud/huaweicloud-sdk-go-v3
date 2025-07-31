@@ -14,7 +14,7 @@ type BatchCreateInvocationRequestBody struct {
 	// 主机id列表（INSTALL和UPDATE时必须）
 	InstanceIds *[]string `json:"instance_ids,omitempty"`
 
-	// 任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试
+	// 任务类型，INSTALL 安装，UPDATE升级，ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALL_HOST设置远程安装主机，REMOTE_INSTALL执行远程安装
 	InvocationType BatchCreateInvocationRequestBodyInvocationType `json:"invocation_type"`
 
 	// 任务对象，目前仅支持telescope
@@ -31,6 +31,9 @@ type BatchCreateInvocationRequestBody struct {
 
 	// 版本号
 	Version *string `json:"version,omitempty"`
+
+	// 创建远程安装任务时需要下发的被安装主机相关信息
+	RemoteInstallMeta *[]RemoteInstallHostInfo `json:"remote_install_meta,omitempty"`
 }
 
 func (o BatchCreateInvocationRequestBody) String() string {
@@ -47,10 +50,12 @@ type BatchCreateInvocationRequestBodyInvocationType struct {
 }
 
 type BatchCreateInvocationRequestBodyInvocationTypeEnum struct {
-	INSTALL  BatchCreateInvocationRequestBodyInvocationType
-	UPDATE   BatchCreateInvocationRequestBodyInvocationType
-	ROLLBACK BatchCreateInvocationRequestBodyInvocationType
-	RETRY    BatchCreateInvocationRequestBodyInvocationType
+	INSTALL                 BatchCreateInvocationRequestBodyInvocationType
+	UPDATE                  BatchCreateInvocationRequestBodyInvocationType
+	ROLLBACK                BatchCreateInvocationRequestBodyInvocationType
+	RETRY                   BatchCreateInvocationRequestBodyInvocationType
+	SET_REMOTE_INSTALL_HOST BatchCreateInvocationRequestBodyInvocationType
+	REMOTE_INSTALL          BatchCreateInvocationRequestBodyInvocationType
 }
 
 func GetBatchCreateInvocationRequestBodyInvocationTypeEnum() BatchCreateInvocationRequestBodyInvocationTypeEnum {
@@ -66,6 +71,12 @@ func GetBatchCreateInvocationRequestBodyInvocationTypeEnum() BatchCreateInvocati
 		},
 		RETRY: BatchCreateInvocationRequestBodyInvocationType{
 			value: "RETRY",
+		},
+		SET_REMOTE_INSTALL_HOST: BatchCreateInvocationRequestBodyInvocationType{
+			value: "SET_REMOTE_INSTALL_HOST",
+		},
+		REMOTE_INSTALL: BatchCreateInvocationRequestBodyInvocationType{
+			value: "REMOTE_INSTALL",
 		},
 	}
 }

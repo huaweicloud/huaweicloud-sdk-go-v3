@@ -2837,6 +2837,22 @@ func (i *CreateTtscVocabularyConfigsInvoker) Invoke() (*model.CreateTtscVocabula
 	}
 }
 
+type CreateTtscVocabularyGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTtscVocabularyGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateTtscVocabularyGroupsInvoker) Invoke() (*model.CreateTtscVocabularyGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTtscVocabularyGroupsResponse), nil
+	}
+}
+
 type DeleteTtscVocabularyConfigsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2850,6 +2866,22 @@ func (i *DeleteTtscVocabularyConfigsInvoker) Invoke() (*model.DeleteTtscVocabula
 		return nil, err
 	} else {
 		return result.(*model.DeleteTtscVocabularyConfigsResponse), nil
+	}
+}
+
+type DeleteTtscVocabularyGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTtscVocabularyGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteTtscVocabularyGroupsInvoker) Invoke() (*model.DeleteTtscVocabularyGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTtscVocabularyGroupsResponse), nil
 	}
 }
 
@@ -2869,6 +2901,22 @@ func (i *ListTtscVocabularyConfigsInvoker) Invoke() (*model.ListTtscVocabularyCo
 	}
 }
 
+type ListTtscVocabularyGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTtscVocabularyGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTtscVocabularyGroupsInvoker) Invoke() (*model.ListTtscVocabularyGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTtscVocabularyGroupsResponse), nil
+	}
+}
+
 type SaveTtscVocabularyConfigsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2882,6 +2930,22 @@ func (i *SaveTtscVocabularyConfigsInvoker) Invoke() (*model.SaveTtscVocabularyCo
 		return nil, err
 	} else {
 		return result.(*model.SaveTtscVocabularyConfigsResponse), nil
+	}
+}
+
+type SetTtscGroupAssetsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetTtscGroupAssetsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetTtscGroupAssetsInvoker) Invoke() (*model.SetTtscGroupAssetsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetTtscGroupAssetsResponse), nil
 	}
 }
 
@@ -2930,6 +2994,22 @@ func (i *ShowTtsPhoneticSymbolInvoker) Invoke() (*model.ShowTtsPhoneticSymbolRes
 		return nil, err
 	} else {
 		return result.(*model.ShowTtsPhoneticSymbolResponse), nil
+	}
+}
+
+type UpdateTtscVocabularyGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTtscVocabularyGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateTtscVocabularyGroupsInvoker) Invoke() (*model.UpdateTtscVocabularyGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTtscVocabularyGroupsResponse), nil
 	}
 }
 

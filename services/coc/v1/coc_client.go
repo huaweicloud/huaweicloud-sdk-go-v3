@@ -19,6 +19,69 @@ func CocClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// CreatePasswordChangePlan 创建改密计划
+//
+// 创建改密计划
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CreatePasswordChangePlan(request *model.CreatePasswordChangePlanRequest) (*model.CreatePasswordChangePlanResponse, error) {
+	requestDef := GenReqDefForCreatePasswordChangePlan()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePasswordChangePlanResponse), nil
+	}
+}
+
+// CreatePasswordChangePlanInvoker 创建改密计划
+func (c *CocClient) CreatePasswordChangePlanInvoker(request *model.CreatePasswordChangePlanRequest) *CreatePasswordChangePlanInvoker {
+	requestDef := GenReqDefForCreatePasswordChangePlan()
+	return &CreatePasswordChangePlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetAccountPassword 主机密码重置
+//
+// 主机密码重置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ResetAccountPassword(request *model.ResetAccountPasswordRequest) (*model.ResetAccountPasswordResponse, error) {
+	requestDef := GenReqDefForResetAccountPassword()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetAccountPasswordResponse), nil
+	}
+}
+
+// ResetAccountPasswordInvoker 主机密码重置
+func (c *CocClient) ResetAccountPasswordInvoker(request *model.ResetAccountPasswordRequest) *ResetAccountPasswordInvoker {
+	requestDef := GenReqDefForResetAccountPassword()
+	return &ResetAccountPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAccountPassword 回写改密结果
+//
+// 回写改密结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) UpdateAccountPassword(request *model.UpdateAccountPasswordRequest) (*model.UpdateAccountPasswordResponse, error) {
+	requestDef := GenReqDefForUpdateAccountPassword()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAccountPasswordResponse), nil
+	}
+}
+
+// UpdateAccountPasswordInvoker 回写改密结果
+func (c *CocClient) UpdateAccountPasswordInvoker(request *model.UpdateAccountPasswordRequest) *UpdateAccountPasswordInvoker {
+	requestDef := GenReqDefForUpdateAccountPassword()
+	return &UpdateAccountPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ClearAlarm 批量清除告警
 //
 // 清除告警

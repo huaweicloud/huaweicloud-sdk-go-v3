@@ -20,6 +20,9 @@ type SaveTtscVocabularyConfigsRequestBody struct {
 
 	// 自定义读法。其中，音标的读法请参考[词典](https://www.youdao.com/)。
 	Value *string `json:"value,omitempty"`
+
+	// 分组id
+	GroupId *string `json:"group_id,omitempty"`
 }
 
 func (o SaveTtscVocabularyConfigsRequestBody) String() string {

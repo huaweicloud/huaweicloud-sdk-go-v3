@@ -9,10 +9,10 @@ import (
 // ListPasswordComplexityResponse Response Object
 type ListPasswordComplexityResponse struct {
 
-	// 记录总数
+	// **参数解释**: 记录总数 **取值范围**: 不涉及
 	TotalNum *int64 `json:"total_num,omitempty"`
 
-	// 口令复杂度策略检测列表
+	// **参数解释**: 口令复杂度策略检测列表 **取值范围**: 不涉及
 	DataList       *[]PwdPolicyInfoResponseInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                          `json:"-"`
 }

@@ -9,10 +9,10 @@ import (
 // ListRiskConfigCheckRulesResponse Response Object
 type ListRiskConfigCheckRulesResponse struct {
 
-	// 风险总数
+	// **参数解释**: 风险总数 **取值范围**: 不涉及
 	TotalNum *int64 `json:"total_num,omitempty"`
 
-	// 数据列表
+	// **参数解释**: 数据列表 **取值范围**: 不涉及
 	DataList       *[]CheckRuleRiskInfoResponseInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                              `json:"-"`
 }

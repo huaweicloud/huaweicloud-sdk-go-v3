@@ -9,11 +9,11 @@ import (
 // ListBackupVaultsRequest Request Object
 type ListBackupVaultsRequest struct {
 
-	// 偏移量：指定返回记录的开始位置
-	Offset int32 `json:"offset"`
+	// **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
+	Offset *int32 `json:"offset,omitempty"`
 
-	// 每页显示个数
-	Limit int32 `json:"limit"`
+	// **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 备份存储库名称
 	VaultName *string `json:"vault_name,omitempty"`

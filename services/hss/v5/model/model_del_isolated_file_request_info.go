@@ -9,7 +9,7 @@ import (
 // DelIsolatedFileRequestInfo 恢复的文件详情
 type DelIsolatedFileRequestInfo struct {
 
-	// 服务器ID
+	// **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
 	HostId string `json:"host_id"`
 
 	// 文件哈希

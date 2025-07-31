@@ -65,7 +65,13 @@ type ShowTenantDurationCfgResponse struct {
 
 	// 逻辑智能建议时长（秒）
 	LjznAdviceValue *int32 `json:"ljzn_advice_value,omitempty"`
-	HttpStatusCode  int    `json:"-"`
+
+	// 短任务质量检测最低时长（秒）
+	ShortAssessMin *int32 `json:"short_assess_min,omitempty"`
+
+	// 短任务质量检测最高时长（秒）
+	ShortAssessMax *int32 `json:"short_assess_max,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowTenantDurationCfgResponse) String() string {

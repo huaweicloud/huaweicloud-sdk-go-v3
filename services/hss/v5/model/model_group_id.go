@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// GroupId 服务器组ID
+// GroupId **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
 type GroupId struct {
 }
 

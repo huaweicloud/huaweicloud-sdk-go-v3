@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// HostNum 影响主机数量
+// HostNum **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
 type HostNum struct {
 }
 

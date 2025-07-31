@@ -9,7 +9,7 @@ import (
 // ListAccountsResponse Response Object
 type ListAccountsResponse struct {
 
-	// 总数
+	// **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
 	TotalNum *int32 `json:"total_num,omitempty"`
 
 	// 事件列表详情

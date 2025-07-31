@@ -71,6 +71,11 @@ type TrainingJobInfo struct {
 
 	// 任务是否重做
 	IsRemake *bool `json:"is_remake,omitempty"`
+
+	AssessResult *AssessResult `json:"assess_result,omitempty"`
+
+	// 是否是按需任务
+	IsOndemandResource *bool `json:"is_ondemand_resource,omitempty"`
 }
 
 func (o TrainingJobInfo) String() string {

@@ -9,7 +9,7 @@ import (
 // ShowResourceQuotasResponse Response Object
 type ShowResourceQuotasResponse struct {
 
-	// 配额统计列表
+	// **参数解释**： 配额统计列表 **取值范围**： 不涉及
 	DataList       *[]ResourceQuotasInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }

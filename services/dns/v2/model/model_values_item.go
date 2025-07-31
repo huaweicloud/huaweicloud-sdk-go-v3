@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// ValuesItem 版本对象。
+// ValuesItem **参数解释：** 版本对象。 **取值范围：** 不涉及。
 type ValuesItem struct {
 
-	// 所有版本列表。
+	// **参数解释：** 所有版本列表。 **取值范围：** 不涉及。
 	Values *[]ListApiVersionsItem `json:"values,omitempty"`
 }
 

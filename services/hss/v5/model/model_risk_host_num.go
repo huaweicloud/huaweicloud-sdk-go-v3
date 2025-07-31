@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// RiskHostNum 有风险服务器数
+// RiskHostNum **参数解释**: 有风险服务器数 **取值范围**: 0到2147483647
 type RiskHostNum struct {
 }
 

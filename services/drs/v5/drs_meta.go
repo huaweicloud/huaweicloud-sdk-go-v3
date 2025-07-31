@@ -2,7 +2,6 @@ package v5
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
-
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/drs/v5/model"
 	"net/http"
 )
@@ -1535,6 +1534,31 @@ func GenReqDefForShowComparePolicy() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("JobId").
 		WithJsonTag("job_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowCompareProgress() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v5/{project_id}/jobs/{job_id}/compare-progress/{compare_job_id}").
+		WithResponse(new(model.ShowCompareProgressResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("JobId").
+		WithJsonTag("job_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CompareJobId").
+		WithJsonTag("compare_job_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

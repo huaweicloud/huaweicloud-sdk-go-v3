@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// TotalNum 总数
+// TotalNum **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
 type TotalNum struct {
 }
 

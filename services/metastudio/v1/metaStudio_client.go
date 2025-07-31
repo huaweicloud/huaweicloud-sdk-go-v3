@@ -3773,6 +3773,27 @@ func (c *MetaStudioClient) CreateTtscVocabularyConfigsInvoker(request *model.Cre
 	return &CreateTtscVocabularyConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateTtscVocabularyGroups 设置TTS租户级词表分组配置
+//
+// 该接口用于设置TTS租户级词表分组配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateTtscVocabularyGroups(request *model.CreateTtscVocabularyGroupsRequest) (*model.CreateTtscVocabularyGroupsResponse, error) {
+	requestDef := GenReqDefForCreateTtscVocabularyGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTtscVocabularyGroupsResponse), nil
+	}
+}
+
+// CreateTtscVocabularyGroupsInvoker 设置TTS租户级词表分组配置
+func (c *MetaStudioClient) CreateTtscVocabularyGroupsInvoker(request *model.CreateTtscVocabularyGroupsRequest) *CreateTtscVocabularyGroupsInvoker {
+	requestDef := GenReqDefForCreateTtscVocabularyGroups()
+	return &CreateTtscVocabularyGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteTtscVocabularyConfigs 删除TTS租户级自定义读法配置
 //
 // 该接口用于删除TTS租户级自定义读法配置。
@@ -3792,6 +3813,27 @@ func (c *MetaStudioClient) DeleteTtscVocabularyConfigs(request *model.DeleteTtsc
 func (c *MetaStudioClient) DeleteTtscVocabularyConfigsInvoker(request *model.DeleteTtscVocabularyConfigsRequest) *DeleteTtscVocabularyConfigsInvoker {
 	requestDef := GenReqDefForDeleteTtscVocabularyConfigs()
 	return &DeleteTtscVocabularyConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTtscVocabularyGroups 删除TTS租户级词表分组
+//
+// 该接口用于删除TTS租户级词表分组配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteTtscVocabularyGroups(request *model.DeleteTtscVocabularyGroupsRequest) (*model.DeleteTtscVocabularyGroupsResponse, error) {
+	requestDef := GenReqDefForDeleteTtscVocabularyGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTtscVocabularyGroupsResponse), nil
+	}
+}
+
+// DeleteTtscVocabularyGroupsInvoker 删除TTS租户级词表分组
+func (c *MetaStudioClient) DeleteTtscVocabularyGroupsInvoker(request *model.DeleteTtscVocabularyGroupsRequest) *DeleteTtscVocabularyGroupsInvoker {
+	requestDef := GenReqDefForDeleteTtscVocabularyGroups()
+	return &DeleteTtscVocabularyGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListTtscVocabularyConfigs 获取TTS租户级自定义读法配置
@@ -3815,6 +3857,27 @@ func (c *MetaStudioClient) ListTtscVocabularyConfigsInvoker(request *model.ListT
 	return &ListTtscVocabularyConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTtscVocabularyGroups 获取TTS租户级词表分组列表
+//
+// 该接口用于获取TTS租户级词表分组列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListTtscVocabularyGroups(request *model.ListTtscVocabularyGroupsRequest) (*model.ListTtscVocabularyGroupsResponse, error) {
+	requestDef := GenReqDefForListTtscVocabularyGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTtscVocabularyGroupsResponse), nil
+	}
+}
+
+// ListTtscVocabularyGroupsInvoker 获取TTS租户级词表分组列表
+func (c *MetaStudioClient) ListTtscVocabularyGroupsInvoker(request *model.ListTtscVocabularyGroupsRequest) *ListTtscVocabularyGroupsInvoker {
+	requestDef := GenReqDefForListTtscVocabularyGroups()
+	return &ListTtscVocabularyGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SaveTtscVocabularyConfigs 修改TTS租户级自定义读法配置
 //
 // 该接口用于修改TTS租户级自定义读法配置。
@@ -3834,6 +3897,27 @@ func (c *MetaStudioClient) SaveTtscVocabularyConfigs(request *model.SaveTtscVoca
 func (c *MetaStudioClient) SaveTtscVocabularyConfigsInvoker(request *model.SaveTtscVocabularyConfigsRequest) *SaveTtscVocabularyConfigsInvoker {
 	requestDef := GenReqDefForSaveTtscVocabularyConfigs()
 	return &SaveTtscVocabularyConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetTtscGroupAssets 设置TTS租户级词表分组的资产列表
+//
+// 该接口用于设置TTS租户级词表分组的资产列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) SetTtscGroupAssets(request *model.SetTtscGroupAssetsRequest) (*model.SetTtscGroupAssetsResponse, error) {
+	requestDef := GenReqDefForSetTtscGroupAssets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetTtscGroupAssetsResponse), nil
+	}
+}
+
+// SetTtscGroupAssetsInvoker 设置TTS租户级词表分组的资产列表
+func (c *MetaStudioClient) SetTtscGroupAssetsInvoker(request *model.SetTtscGroupAssetsRequest) *SetTtscGroupAssetsInvoker {
+	requestDef := GenReqDefForSetTtscGroupAssets()
+	return &SetTtscGroupAssetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAsyncTtsJob 获取TTS异步任务
@@ -3897,6 +3981,27 @@ func (c *MetaStudioClient) ShowTtsPhoneticSymbol(request *model.ShowTtsPhoneticS
 func (c *MetaStudioClient) ShowTtsPhoneticSymbolInvoker(request *model.ShowTtsPhoneticSymbolRequest) *ShowTtsPhoneticSymbolInvoker {
 	requestDef := GenReqDefForShowTtsPhoneticSymbol()
 	return &ShowTtsPhoneticSymbolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTtscVocabularyGroups TTS租户级词表分组重命名
+//
+// 该接口用于对TTS租户级词表分组重命名。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateTtscVocabularyGroups(request *model.UpdateTtscVocabularyGroupsRequest) (*model.UpdateTtscVocabularyGroupsResponse, error) {
+	requestDef := GenReqDefForUpdateTtscVocabularyGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTtscVocabularyGroupsResponse), nil
+	}
+}
+
+// UpdateTtscVocabularyGroupsInvoker TTS租户级词表分组重命名
+func (c *MetaStudioClient) UpdateTtscVocabularyGroupsInvoker(request *model.UpdateTtscVocabularyGroupsRequest) *UpdateTtscVocabularyGroupsInvoker {
+	requestDef := GenReqDefForUpdateTtscVocabularyGroups()
+	return &UpdateTtscVocabularyGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateVideoMotionCaptureJob 创建视频驱动任务

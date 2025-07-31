@@ -10,7 +10,7 @@ import (
 type ListRecordSetsByZoneResponse struct {
 	Links *PageLink `json:"links,omitempty"`
 
-	// 记录集列表对象。
+	// **参数解释：** 记录集列表信息。 **取值范围：** 不涉及。
 	Recordsets *[]ListRecordSets `json:"recordsets,omitempty"`
 
 	Metadata       *Metadata `json:"metadata,omitempty"`

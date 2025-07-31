@@ -41,6 +41,12 @@ type CreateTrainingJobReq struct {
 
 	// 自定义试听文本
 	CustomText *string `json:"custom_text,omitempty"`
+
+	// 是否使用按需资源
+	IsOndemandResource *bool `json:"is_ondemand_resource,omitempty"`
+
+	// 支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+	SupportedService *[]SupportedServiceEnum `json:"supported_service,omitempty"`
 }
 
 func (o CreateTrainingJobReq) String() string {

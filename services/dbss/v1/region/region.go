@@ -58,6 +58,16 @@ var (
 		"https://dbss.my-kualalumpur-1.myhuaweicloud.com")
 	RU_MOSCOW_1 = region.NewRegion("ru-moscow-1",
 		"https://dbss.ru-moscow-1.myhuaweicloud.com")
+	CN_NORTH_12 = region.NewRegion("cn-north-12",
+		"https://dbss.cn-north-12.myhuaweicloud.com")
+	CN_EAST_4 = region.NewRegion("cn-east-4",
+		"https://dbss.cn-east-4.myhuaweicloud.com")
+	CN_SOUTHWEST_3 = region.NewRegion("cn-southwest-3",
+		"https://dbss.cn-southwest-3.myhuaweicloud.com")
+	AP_SOUTHEAST_5 = region.NewRegion("ap-southeast-5",
+		"https://dbss.ap-southeast-5.myhuaweicloud.com")
+	AF_NORTH_1 = region.NewRegion("af-north-1",
+		"https://dbss.af-north-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -86,6 +96,11 @@ var staticFields = map[string]*region.Region{
 	"cn-east-5":        CN_EAST_5,
 	"my-kualalumpur-1": MY_KUALALUMPUR_1,
 	"ru-moscow-1":      RU_MOSCOW_1,
+	"cn-north-12":      CN_NORTH_12,
+	"cn-east-4":        CN_EAST_4,
+	"cn-southwest-3":   CN_SOUTHWEST_3,
+	"ap-southeast-5":   AP_SOUTHEAST_5,
+	"af-north-1":       AF_NORTH_1,
 }
 
 var provider = region.DefaultProviderChain("DBSS")

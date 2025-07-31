@@ -6,19 +6,19 @@ import (
 	"strings"
 )
 
-// PortStatisticResponseInfo 开放端口统计信息
+// PortStatisticResponseInfo **参数解释**: 开放端口统计信息
 type PortStatisticResponseInfo struct {
 
-	// 端口号
+	// **参数解释**: 端口号 **取值范围**: 最小值0，最大值65535
 	Port *int32 `json:"port,omitempty"`
 
-	// 端口类型
+	// **参数解释**: 端口类型 **取值范围**: - UDP - UDP6 - TCP - TCP6
 	Type *string `json:"type,omitempty"`
 
-	// 端口数量
+	// **参数解释**: 端口数量 **取值范围**: 最小值0，最大值65535
 	Num *int32 `json:"num,omitempty"`
 
-	// 危险类型:danger/unknown
+	// **参数解释**: 危险类型 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口
 	Status *string `json:"status,omitempty"`
 }
 

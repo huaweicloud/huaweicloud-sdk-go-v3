@@ -9,10 +9,10 @@ import (
 // AntiVirusTaskHostResponseInfo 扫描任务关联主机信息
 type AntiVirusTaskHostResponseInfo struct {
 
-	// 服务器ID
+	// **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
 	HostId *string `json:"host_id,omitempty"`
 
-	// 服务器名称
+	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
 	HostName *string `json:"host_name,omitempty"`
 
 	// 服务器私有IP
@@ -51,7 +51,7 @@ type AntiVirusTaskHostResponseInfo struct {
 	// 是否使用病毒查杀按次计费配额
 	WhetherUsingQuota *int32 `json:"whether_using_quota,omitempty"`
 
-	// Agent ID
+	// **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
 	AgentId *string `json:"agent_id,omitempty"`
 
 	// 操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。

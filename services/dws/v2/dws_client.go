@@ -3671,7 +3671,7 @@ func (c *DwsClient) ShrinkClusterInvoker(request *model.ShrinkClusterRequest) *S
 
 // ShrinkLogicalCluster 逻辑集群缩容
 //
-// 逻辑集群缩容，支持从弹性池缩容，或是从逻辑集群中缩容。
+// 逻辑集群缩容，支持从弹性池缩容。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ShrinkLogicalCluster(request *model.ShrinkLogicalClusterRequest) (*model.ShrinkLogicalClusterResponse, error) {

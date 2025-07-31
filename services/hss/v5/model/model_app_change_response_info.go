@@ -9,31 +9,31 @@ import (
 // AppChangeResponseInfo 软件变动历史信息
 type AppChangeResponseInfo struct {
 
-	// Agent ID
+	// **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
 	AgentId *string `json:"agent_id,omitempty"`
 
-	// the type of change   - add ：新建   - delete ：删除   - modify ：修改
+	// **参数解释**: 变更类型 **取值范围**: - add：新建 - delete：删除 - modify：修改
 	VariationType *string `json:"variation_type,omitempty"`
 
-	// host_id
+	// **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
 	HostId *string `json:"host_id,omitempty"`
 
-	// 软件名称
+	// **参数解释**: 软件名称 **取值范围**: 字符长度1-256位
 	AppName *string `json:"app_name,omitempty"`
 
-	// 服务器名称
+	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
 	HostName *string `json:"host_name,omitempty"`
 
-	// 服务器ip
+	// **参数解释**: 主机IP **取值范围**: 字符长度1-128位
 	HostIp *string `json:"host_ip,omitempty"`
 
-	// 版本号
+	// **参数解释**: 版本号 **取值范围**: 字符长度1-128位
 	Version *string `json:"version,omitempty"`
 
-	// 软件更新时间，单位毫秒
+	// **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值10000
 	UpdateTime *int64 `json:"update_time,omitempty"`
 
-	// 最近扫描时间，单位毫秒
+	// **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值10000
 	RecentScanTime *int64 `json:"recent_scan_time,omitempty"`
 }
 

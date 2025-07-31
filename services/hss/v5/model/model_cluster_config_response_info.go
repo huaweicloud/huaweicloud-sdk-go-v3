@@ -17,6 +17,9 @@ type ClusterConfigResponseInfo struct {
 	// 集群防护中断节点数量
 	ProtectInterruptNodeNum *int32 `json:"protect_interrupt_node_num,omitempty"`
 
+	// 集群防护降级节点数量
+	ProtectDegradationNodeNum *int32 `json:"protect_degradation_node_num,omitempty"`
+
 	// 集群防护中断节点数量
 	UnprotectNodeNum *int32 `json:"unprotect_node_num,omitempty"`
 

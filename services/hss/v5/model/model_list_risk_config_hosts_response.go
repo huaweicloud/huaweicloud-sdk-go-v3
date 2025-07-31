@@ -9,10 +9,10 @@ import (
 // ListRiskConfigHostsResponse Response Object
 type ListRiskConfigHostsResponse struct {
 
-	// 受配置检测影响的服务器数据总量
+	// **参数解释**: 受配置检测影响的服务器数据总量 **取值范围**: 不涉及
 	TotalNum *int64 `json:"total_num,omitempty"`
 
-	// 数据列表
+	// **参数解释**: 数据列表 **取值范围**: 不涉及
 	DataList       *[]SecurityCheckHostInfoResponseInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                                  `json:"-"`
 }

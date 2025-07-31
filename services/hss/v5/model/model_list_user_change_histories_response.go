@@ -9,10 +9,10 @@ import (
 // ListUserChangeHistoriesResponse Response Object
 type ListUserChangeHistoriesResponse struct {
 
-	// 账号变动总数
+	// **参数解释**: 账号变动总数 **取值范围**: 0-10000000
 	TotalNum *int32 `json:"total_num,omitempty"`
 
-	// 账号历史变动记录列表
+	// **参数解释**: 账号历史变动记录列表 **取值范围**: 0-200
 	DataList       *[]UserChangeHistoryResponseInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                              `json:"-"`
 }

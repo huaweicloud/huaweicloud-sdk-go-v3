@@ -11,20 +11,20 @@ import (
 
 type BatchCreateInvocationInfo struct {
 
-	// 主机id
+	// 机器id
 	InstanceId *string `json:"instance_id,omitempty"`
-
-	// 任务结果, successful成功，error失败
-	RetStatus *BatchCreateInvocationInfoRetStatus `json:"ret_status,omitempty"`
-
-	// 错误信息
-	ErrorMsg *string `json:"error_msg,omitempty"`
 
 	// 任务id
 	InvocationId *string `json:"invocation_id,omitempty"`
 
+	// 任务结果, successful成功，error失败
+	RetStatus *BatchCreateInvocationInfoRetStatus `json:"ret_status,omitempty"`
+
 	// 错误码
 	ErrorCode *string `json:"error_code,omitempty"`
+
+	// 错误信息
+	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 
 func (o BatchCreateInvocationInfo) String() string {

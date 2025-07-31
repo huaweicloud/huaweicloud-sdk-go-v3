@@ -11,7 +11,7 @@ import (
 
 type Policies struct {
 
-	// 服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+	// 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
 	Namespace string `json:"namespace"`
 
 	// 资源维度，必须以字母开头，多维度用\",\"分割，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32, 事件告警模板DimensionName为空
@@ -23,13 +23,13 @@ type Policies struct {
 	// 告警条件判断周期,单位为秒
 	Period PoliciesPeriod `json:"period"`
 
-	// 数据聚合方式
+	// 聚合方式。average： 平均值，variance：方差，min：最小值，max：最大值，sum：求和，tp99：99百分位数，tp95：95百分位数，tp90：90百分位数
 	Filter string `json:"filter"`
 
 	// 阈值符号, 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动； 指标告警可以使用的阈值符号有>、>=、<、<=、=、!=、cycle_decrease、cycle_increase、cycle_wave； 事件告警可以使用的阈值符号为>、>=、<、<=、=、!=；
 	ComparisonOperator string `json:"comparison_operator"`
 
-	// 告警阈值(Number.MAX_VALUE)。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。
+	// 告警阈值。单一阈值时value和alarm_level配对使用，当hierarchical_value和value同时使用时以hierarchical_value为准。
 	Value float32 `json:"value,omitempty"`
 
 	HierarchicalValue *HierarchicalValue `json:"hierarchical_value,omitempty"`

@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// ResourceGroupTagRelation 标签的匹配规则
 type ResourceGroupTagRelation struct {
 
 	// TMS标签键规范。

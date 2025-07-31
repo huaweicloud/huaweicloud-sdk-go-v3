@@ -21,7 +21,7 @@ func BssintlClientBuilder() *httpclient.HcHttpClientBuilder {
 
 // AutoRenewalResources 设置包年/包月资源自动续费
 //
-// 功能描述：客户可以设置包年/包月资源到期后转为按需资源计费
+// 功能描述：为防止资源到期被删除，客户可为长期使用的包年/包月资源开通自动续费。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssintlClient) AutoRenewalResources(request *model.AutoRenewalResourcesRequest) (*model.AutoRenewalResourcesResponse, error) {
@@ -418,9 +418,9 @@ func (c *BssintlClient) ListFreeResourceInfosInvoker(request *model.ListFreeReso
 	return &ListFreeResourceInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListFreeResourceUsages 查询资源内使用量
+// ListFreeResourceUsages 查询资源包使用量
 //
-// 功能描述：客户在自建平台查询客户自己的资源包列表
+// 功能描述：客户在自建平台根据资源项维度查询资源包使用量。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssintlClient) ListFreeResourceUsages(request *model.ListFreeResourceUsagesRequest) (*model.ListFreeResourceUsagesResponse, error) {
@@ -433,7 +433,7 @@ func (c *BssintlClient) ListFreeResourceUsages(request *model.ListFreeResourceUs
 	}
 }
 
-// ListFreeResourceUsagesInvoker 查询资源内使用量
+// ListFreeResourceUsagesInvoker 查询资源包使用量
 func (c *BssintlClient) ListFreeResourceUsagesInvoker(request *model.ListFreeResourceUsagesRequest) *ListFreeResourceUsagesInvoker {
 	requestDef := GenReqDefForListFreeResourceUsages()
 	return &ListFreeResourceUsagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -504,9 +504,9 @@ func (c *BssintlClient) ListInvoicesInvoker(request *model.ListInvoicesRequest) 
 	return &ListInvoicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListMeasureUnits 查询使用量单位列表
+// ListMeasureUnits 查询度量单位列表
 //
-// 功能描述：伙伴在伙伴销售平台上查询资源使用量的度量单位及名称，度量单位类型等。
+// 功能描述：查询资源使用量，包年包月资源的时长及金额的度量单位及名称，度量单位类型等。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssintlClient) ListMeasureUnits(request *model.ListMeasureUnitsRequest) (*model.ListMeasureUnitsResponse, error) {
@@ -519,33 +519,10 @@ func (c *BssintlClient) ListMeasureUnits(request *model.ListMeasureUnitsRequest)
 	}
 }
 
-// ListMeasureUnitsInvoker 查询使用量单位列表
+// ListMeasureUnitsInvoker 查询度量单位列表
 func (c *BssintlClient) ListMeasureUnitsInvoker(request *model.ListMeasureUnitsRequest) *ListMeasureUnitsInvoker {
 	requestDef := GenReqDefForListMeasureUnits()
 	return &ListMeasureUnitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// Deprecated: This function is deprecated and will be removed in the future versions.
-// ListMonthlyExpenditures 查询消费汇总(客户)
-//
-// 功能描述：客户可以查询自身的消费汇总单的功能，消费按月汇总。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *BssintlClient) ListMonthlyExpenditures(request *model.ListMonthlyExpendituresRequest) (*model.ListMonthlyExpendituresResponse, error) {
-	requestDef := GenReqDefForListMonthlyExpenditures()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListMonthlyExpendituresResponse), nil
-	}
-}
-
-// Deprecated: This function is deprecated and will be removed in the future versions.
-// ListMonthlyExpendituresInvoker 查询消费汇总(客户)
-func (c *BssintlClient) ListMonthlyExpendituresInvoker(request *model.ListMonthlyExpendituresRequest) *ListMonthlyExpendituresInvoker {
-	requestDef := GenReqDefForListMonthlyExpenditures()
-	return &ListMonthlyExpendituresInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListOnDemandResourceRatings 查询按需产品价格

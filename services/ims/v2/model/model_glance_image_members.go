@@ -26,6 +26,12 @@ type GlanceImageMembers struct {
 
 	// 共享视图。
 	Schema string `json:"schema"`
+
+	// 共享成员类型。
+	MemberType *string `json:"member_type,omitempty"`
+
+	// 共享组织的URN仅当member_type类型为organization时，才会返回urn字段。
+	Urn *string `json:"urn,omitempty"`
 }
 
 func (o GlanceImageMembers) String() string {

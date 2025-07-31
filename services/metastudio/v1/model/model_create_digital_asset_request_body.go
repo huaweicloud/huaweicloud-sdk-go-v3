@@ -41,6 +41,9 @@ type CreateDigitalAssetRequestBody struct {
 
 	// 支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
 	SupportedService *[]SupportedServiceEnum `json:"supported_service,omitempty"`
+
+	// 资产自动处理任务。
+	AutoOperationConfig *[]AutoOperationConfig `json:"auto_operation_config,omitempty"`
 }
 
 func (o CreateDigitalAssetRequestBody) String() string {

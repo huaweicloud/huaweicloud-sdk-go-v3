@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// AdditionalInfo 告警记录额外字段，仅针对事件监控告警场景所产生的告警记录信息。
+// AdditionalInfo **参数解释**： 告警记录额外字段，仅针对事件监控告警场景所产生的告警记录信息。
 type AdditionalInfo struct {
 
-	// 该条告警记录对应的资源ID；如：22d98f6c-16d2-4c2d-b424-50e79d82838f。
+	// **参数解释**： 该条告警记录对应的资源ID；如：22d98f6c-16d2-4c2d-b424-50e79d82838f。 **取值范围**： 字符串长度最大为128。
 	ResourceId *string `json:"resource_id,omitempty"`
 
-	// 该条告警记录对应的资源名称；如：ECS-Test01。
+	// **参数解释**： 该条告警记录对应的资源名称；如：ECS-Test01。 **取值范围**： 字符串长度最大为128。
 	ResourceName *string `json:"resource_name,omitempty"`
 
-	// 该条告警记录对应的事件监控ID，资源所产生的事件；如：ev16031292300990kKN8p17J。
+	// **参数解释**： 该条告警记录对应的事件监控ID，资源所产生的事件；如：ev16031292300990kKN8p17J。 **取值范围**： 字符串长度为24。
 	EventId *string `json:"event_id,omitempty"`
 }
 

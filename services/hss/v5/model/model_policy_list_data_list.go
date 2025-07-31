@@ -14,7 +14,7 @@ type PolicyListDataList struct {
 	// 策略ID
 	PolicyId *string `json:"policy_id,omitempty"`
 
-	// 总数
+	// **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
 	HostNum *int32 `json:"host_num,omitempty"`
 
 	// 是否默认

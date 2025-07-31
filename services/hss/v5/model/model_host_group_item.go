@@ -6,28 +6,28 @@ import (
 	"strings"
 )
 
-// HostGroupItem 服务器组信息
+// HostGroupItem **参数解释**: 服务器组信息 **取值范围**: 不涉及
 type HostGroupItem struct {
 
-	// 服务器组ID
+	// **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
 	GroupId *string `json:"group_id,omitempty"`
 
-	// 服务器组名称
+	// **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
 	GroupName *string `json:"group_name,omitempty"`
 
-	// 影响主机数量
+	// **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647
 	HostNum *int32 `json:"host_num,omitempty"`
 
-	// 有风险服务器数
+	// **参数解释**: 有风险服务器数 **取值范围**: 0到2147483647
 	RiskHostNum *int32 `json:"risk_host_num,omitempty"`
 
-	// 未防护服务器数
+	// **参数解释**: 未防护服务器数 **取值范围**: 0到2147483647
 	UnprotectHostNum *int32 `json:"unprotect_host_num,omitempty"`
 
-	// 主机id列表
+	// **参数解释**: 主机id列表 **取值范围**: 不涉及
 	HostIdList *[]string `json:"host_id_list,omitempty"`
 
-	// 是否是线下数据中心服务器组
+	// **参数解释**: 是否是线下数据中心服务器组 **取值范围**: true或者false
 	IsOutside *bool `json:"is_outside,omitempty"`
 }
 

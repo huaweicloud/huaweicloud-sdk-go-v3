@@ -8,13 +8,13 @@ import (
 
 type PublicZoneLines struct {
 
-	// 线路ID。
+	// **参数解释：** 线路ID。 **取值范围：** 不涉及。
 	Line *string `json:"line,omitempty"`
 
-	// 线路名称。
+	// **参数解释：** 线路名称。 **取值范围：** 不涉及。
 	LineName *string `json:"line_name,omitempty"`
 
-	// 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
+	// **参数解释：** 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。 **取值范围：** 不涉及。
 	CreateTime *string `json:"create_time,omitempty"`
 }
 

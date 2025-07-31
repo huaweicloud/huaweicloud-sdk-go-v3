@@ -14,6 +14,12 @@ type BatchAddMembersRequestBody struct {
 
 	// 项目ID列表
 	Projects []string `json:"projects"`
+
+	// 账号ID列表
+	Domains *[]string `json:"domains,omitempty"`
+
+	// 组织URN列表
+	Organizations *[]string `json:"organizations,omitempty"`
 }
 
 func (o BatchAddMembersRequestBody) String() string {

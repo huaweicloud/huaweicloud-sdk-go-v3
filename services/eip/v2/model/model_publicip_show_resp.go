@@ -44,6 +44,9 @@ type PublicipShowResp struct {
 	// IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
 	PublicIpAddress *string `json:"public_ip_address,omitempty"`
 
+	// - 功能说明：\"公网EIP标签\"
+	Tags *[]string `json:"tags,omitempty"`
+
 	// 功能说明：弹性公网IP的状态  取值范围：冻结FREEZED，绑定失败BIND_ERROR，绑定中BINDING，释放中PENDING_DELETE， 创建中PENDING_CREATE，创建中NOTIFYING，释放中NOTIFY_DELETE，更新中PENDING_UPDATE， 未绑定DOWN ，绑定ACTIVE，绑定ELB，绑定VPN，失败ERROR。
 	Status *PublicipShowRespStatus `json:"status,omitempty"`
 

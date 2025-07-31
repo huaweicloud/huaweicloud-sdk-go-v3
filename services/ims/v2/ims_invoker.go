@@ -133,6 +133,22 @@ func (i *CopyImageInRegionInvoker) Invoke() (*model.CopyImageInRegionResponse, e
 	}
 }
 
+type CopyImageInRegionInSafeModeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CopyImageInRegionInSafeModeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CopyImageInRegionInSafeModeInvoker) Invoke() (*model.CopyImageInRegionInSafeModeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CopyImageInRegionInSafeModeResponse), nil
+	}
+}
+
 type CreateDataImageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -149,6 +165,22 @@ func (i *CreateDataImageInvoker) Invoke() (*model.CreateDataImageResponse, error
 	}
 }
 
+type CreateDataImageInSafeModeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDataImageInSafeModeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDataImageInSafeModeInvoker) Invoke() (*model.CreateDataImageInSafeModeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDataImageInSafeModeResponse), nil
+	}
+}
+
 type CreateImageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -162,6 +194,22 @@ func (i *CreateImageInvoker) Invoke() (*model.CreateImageResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateImageResponse), nil
+	}
+}
+
+type CreateImageInSafeModeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateImageInSafeModeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateImageInSafeModeInvoker) Invoke() (*model.CreateImageInSafeModeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateImageInSafeModeResponse), nil
 	}
 }
 
@@ -229,6 +277,22 @@ func (i *ExportImageInvoker) Invoke() (*model.ExportImageResponse, error) {
 	}
 }
 
+type ExportImageInSafeModeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportImageInSafeModeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExportImageInSafeModeInvoker) Invoke() (*model.ExportImageInSafeModeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportImageInSafeModeResponse), nil
+	}
+}
+
 type ImportImageQuickInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -242,6 +306,22 @@ func (i *ImportImageQuickInvoker) Invoke() (*model.ImportImageQuickResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ImportImageQuickResponse), nil
+	}
+}
+
+type ImportImageQuickInSafeModeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ImportImageQuickInSafeModeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ImportImageQuickInSafeModeInvoker) Invoke() (*model.ImportImageQuickInSafeModeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ImportImageQuickInSafeModeResponse), nil
 	}
 }
 

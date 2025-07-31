@@ -8,7 +8,7 @@ import (
 
 type UpdateZoneStatusRequestBody struct {
 
-	// 域名状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+	// **参数解释：** 域名状态。 **约束限制：** 不涉及。 **取值范围：** - ENABLE：启用解析 - DISABLE：暂停解析  **默认取值：** 不涉及。
 	Status string `json:"status"`
 }
 

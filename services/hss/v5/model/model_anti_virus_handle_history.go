@@ -24,7 +24,7 @@ type AntiVirusHandleHistory struct {
 	// 文件路径
 	FilePath *string `json:"file_path,omitempty"`
 
-	// 服务器名称
+	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
 	HostName *string `json:"host_name,omitempty"`
 
 	// 服务器私有IP

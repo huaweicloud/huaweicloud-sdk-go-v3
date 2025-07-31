@@ -8,10 +8,10 @@ import (
 
 type BatchDeleteZonesRequestBody struct {
 
-	// 待删除域名类型，支持public或private。
+	// **参数解释：** 待删除域名的类型。 **约束限制：** 不涉及。 **取值范围：** - public：公网域名 - private：内网域名  **默认取值：** 不涉及。
 	ZoneType string `json:"zone_type"`
 
-	// 待删除域名ID列表。 最多支持50个。
+	// **参数解释：** 待删除域名ID列表。 **约束限制：** 最多支持50个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	ZoneIds []string `json:"zone_ids"`
 }
 

@@ -24,16 +24,16 @@ type EventManagementResponseInfo struct {
 	// 威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
 	Severity *string `json:"severity,omitempty"`
 
-	// 容器实例名称
+	// **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
 	ContainerName *string `json:"container_name,omitempty"`
 
 	// 镜像名称，只有容器类型的告警有
 	ImageName *string `json:"image_name,omitempty"`
 
-	// 服务器名称
+	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
 	HostName *string `json:"host_name,omitempty"`
 
-	// 服务器ID
+	// **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
 	HostId *string `json:"host_id,omitempty"`
 
 	// 服务器私有IP

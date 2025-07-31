@@ -10,7 +10,7 @@ import (
 type ListPublicZonesResponse struct {
 	Links *PageLink `json:"links,omitempty"`
 
-	// 查询公网域名的列表响应。
+	// **参数解释：** 查询公网域名的列表响应。 **取值范围：** 不涉及。
 	Zones *[]PublicZoneResp `json:"zones,omitempty"`
 
 	Metadata       *Metadata `json:"metadata,omitempty"`

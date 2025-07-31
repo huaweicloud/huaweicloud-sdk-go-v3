@@ -24,7 +24,7 @@ type WidgetMetric struct {
 
 	ExtraInfo *ExtraInfo `json:"extra_info,omitempty"`
 
-	// 是否开启聚合
+	// **参数解释** 是否开启聚合 **约束限制** 当RollupEnable开启时，RollupFilter和RollupDimension必填 **取值范围** true，表示开启聚合；false表示不开启聚合 **默认取值** false
 	RollupEnable *bool `json:"rollup_enable,omitempty"`
 
 	RollupFilter *RollupFilter `json:"rollup_filter,omitempty"`

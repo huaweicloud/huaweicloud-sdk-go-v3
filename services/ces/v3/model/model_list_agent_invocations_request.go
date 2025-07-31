@@ -21,14 +21,14 @@ type ListAgentInvocationsRequest struct {
 	// 任务id
 	InvocationId *string `json:"invocation_id,omitempty"`
 
-	// 任务类型，INSTALL 安装，UPDATE 升级，ROLLBACK 回退，RETRY 重试
+	// 任务类型, INSTALL安装, UPDATE升级, ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALLER设置远程安装主机，REMOTE_INSTALL执行远程安装
 	InvocationType *ListAgentInvocationsRequestInvocationType `json:"invocation_type,omitempty"`
 
-	// 任务对象，目前仅支持telescope
+	// 任务对象, 支持 telescope监控
 	InvocationTarget *ListAgentInvocationsRequestInvocationTarget `json:"invocation_target,omitempty"`
 
 	// 分页偏移量
-	Offset *int32 `json:"offset,omitempty"`
+	Offset *int64 `json:"offset,omitempty"`
 
 	// 分页大小
 	Limit *int32 `json:"limit,omitempty"`
@@ -95,10 +95,12 @@ type ListAgentInvocationsRequestInvocationType struct {
 }
 
 type ListAgentInvocationsRequestInvocationTypeEnum struct {
-	INSTALL  ListAgentInvocationsRequestInvocationType
-	UPDATE   ListAgentInvocationsRequestInvocationType
-	ROLLBACK ListAgentInvocationsRequestInvocationType
-	RETRY    ListAgentInvocationsRequestInvocationType
+	INSTALL              ListAgentInvocationsRequestInvocationType
+	UPDATE               ListAgentInvocationsRequestInvocationType
+	ROLLBACK             ListAgentInvocationsRequestInvocationType
+	RETRY                ListAgentInvocationsRequestInvocationType
+	SET_REMOTE_INSTALLER ListAgentInvocationsRequestInvocationType
+	REMOTE_INSTALL       ListAgentInvocationsRequestInvocationType
 }
 
 func GetListAgentInvocationsRequestInvocationTypeEnum() ListAgentInvocationsRequestInvocationTypeEnum {
@@ -114,6 +116,12 @@ func GetListAgentInvocationsRequestInvocationTypeEnum() ListAgentInvocationsRequ
 		},
 		RETRY: ListAgentInvocationsRequestInvocationType{
 			value: "RETRY",
+		},
+		SET_REMOTE_INSTALLER: ListAgentInvocationsRequestInvocationType{
+			value: "SET_REMOTE_INSTALLER",
+		},
+		REMOTE_INSTALL: ListAgentInvocationsRequestInvocationType{
+			value: "REMOTE_INSTALL",
 		},
 	}
 }

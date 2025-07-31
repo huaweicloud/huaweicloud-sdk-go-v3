@@ -893,6 +893,22 @@ func (i *ShowComparePolicyInvoker) Invoke() (*model.ShowComparePolicyResponse, e
 	}
 }
 
+type ShowCompareProgressInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCompareProgressInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowCompareProgressInvoker) Invoke() (*model.ShowCompareProgressResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCompareProgressResponse), nil
+	}
+}
+
 type ShowDataFilteringResultInvoker struct {
 	*invoker.BaseInvoker
 }

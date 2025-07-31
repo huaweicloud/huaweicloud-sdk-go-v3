@@ -1194,6 +1194,30 @@ func (c *DrsClient) ShowComparePolicyInvoker(request *model.ShowComparePolicyReq
 	return &ShowComparePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowCompareProgress 查询对比任务进度
+//
+// 查询运行中对比任务的对比进度。
+// 说明：
+// - 目前仅MySQL-&gt;MySQL、MySQL-&gt;GaussDB主备、GaussDB分布式-&gt;GaussDB分布式、GaussDB主备-&gt;MySQL、GaussDBv1-&gt;GaussDB主备、GaussDB主备-&gt;GaussDBv1的同步任务与独立校验任务支持查看对比进度。
+// - 运行中的行对比与内容对比支持。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowCompareProgress(request *model.ShowCompareProgressRequest) (*model.ShowCompareProgressResponse, error) {
+	requestDef := GenReqDefForShowCompareProgress()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCompareProgressResponse), nil
+	}
+}
+
+// ShowCompareProgressInvoker 查询对比任务进度
+func (c *DrsClient) ShowCompareProgressInvoker(request *model.ShowCompareProgressRequest) *ShowCompareProgressInvoker {
+	requestDef := GenReqDefForShowCompareProgress()
+	return &ShowCompareProgressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDataFilteringResult 获取数据过滤校验结果
 //
 // 获取数据过滤校验结果

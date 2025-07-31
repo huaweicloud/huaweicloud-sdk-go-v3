@@ -2,7 +2,6 @@ package v4
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
-
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/codehub/v4/model"
 	"net/http"
 )

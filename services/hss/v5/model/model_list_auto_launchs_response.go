@@ -9,10 +9,10 @@ import (
 // ListAutoLaunchsResponse Response Object
 type ListAutoLaunchsResponse struct {
 
-	// 自启动项总数
+	// **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
 	TotalNum *int32 `json:"total_num,omitempty"`
 
-	// 自启动项列表
+	// **参数解释**： 自启动项列表 **取值范围**： 不涉及
 	DataList       *[]AutoLauchResponseInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }

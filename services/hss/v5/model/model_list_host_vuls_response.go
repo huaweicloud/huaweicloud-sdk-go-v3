@@ -9,10 +9,10 @@ import (
 // ListHostVulsResponse Response Object
 type ListHostVulsResponse struct {
 
-	// 总数
+	// **参数解释**: 服务器上的漏洞总数 **取值范围**: 最小值0，最大值2147483647
 	TotalNum *int64 `json:"total_num,omitempty"`
 
-	// 服务器上的漏洞列表
+	// **参数解释**: 服务器上的漏洞列表 **取值范围**: 最小值0，最大值2147483647
 	DataList       *[]HostVulInfo `json:"data_list,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

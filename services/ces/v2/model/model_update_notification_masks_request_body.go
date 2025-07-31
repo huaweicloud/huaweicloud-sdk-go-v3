@@ -48,6 +48,9 @@ type UpdateNotificationMasksRequestBody struct {
 
 	// 屏蔽截止时间，HH:mm:ss。
 	EndTime *string `json:"end_time,omitempty"`
+
+	// 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+	EffectiveTimezone *string `json:"effective_timezone,omitempty"`
 }
 
 func (o UpdateNotificationMasksRequestBody) String() string {

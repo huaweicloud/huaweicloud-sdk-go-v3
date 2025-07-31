@@ -229,6 +229,27 @@ func (c *LiveClient) CreateStreamForbiddenInvoker(request *model.CreateStreamFor
 	return &CreateStreamForbiddenInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateStreamForbiddenOnce 禁推闪断
+//
+// 直播推流闪断接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) CreateStreamForbiddenOnce(request *model.CreateStreamForbiddenOnceRequest) (*model.CreateStreamForbiddenOnceResponse, error) {
+	requestDef := GenReqDefForCreateStreamForbiddenOnce()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateStreamForbiddenOnceResponse), nil
+	}
+}
+
+// CreateStreamForbiddenOnceInvoker 禁推闪断
+func (c *LiveClient) CreateStreamForbiddenOnceInvoker(request *model.CreateStreamForbiddenOnceRequest) *CreateStreamForbiddenOnceInvoker {
+	requestDef := GenReqDefForCreateStreamForbiddenOnce()
+	return &CreateStreamForbiddenOnceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateTranscodingsTemplate 创建直播转码模板
 //
 // 创建直播转码模板

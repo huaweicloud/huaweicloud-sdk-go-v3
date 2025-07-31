@@ -12,10 +12,10 @@ type IsolatedFileResponseInfo struct {
 	// 操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
 	OsType string `json:"os_type"`
 
-	// 服务器ID
+	// **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
 	HostId string `json:"host_id"`
 
-	// 服务器名称
+	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
 	HostName string `json:"host_name"`
 
 	// 文件哈希

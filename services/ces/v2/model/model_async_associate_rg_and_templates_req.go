@@ -29,6 +29,9 @@ type AsyncAssociateRgAndTemplatesReq struct {
 	// 告警通知关闭时间
 	NotificationEndTime *string `json:"notification_end_time,omitempty"`
 
+	// 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+	EffectiveTimezone *string `json:"effective_timezone,omitempty"`
+
 	// 企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 

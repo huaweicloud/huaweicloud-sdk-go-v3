@@ -9,10 +9,10 @@ import (
 // ListWeakPasswordUsersResponse Response Object
 type ListWeakPasswordUsersResponse struct {
 
-	// 弱口令总数
+	// **参数解释**: 弱口令总数 **取值范围**: 不涉及
 	TotalNum *int64 `json:"total_num,omitempty"`
 
-	// 弱口令列表
+	// **参数解释**: 弱口令列表 **取值范围**: 不涉及
 	DataList       *[]WeakPwdListInfoResponseInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                            `json:"-"`
 }

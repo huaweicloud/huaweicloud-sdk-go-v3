@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ContainerName 容器实例名称
+// ContainerName **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
 type ContainerName struct {
 }
 

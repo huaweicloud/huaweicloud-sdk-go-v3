@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// PageInfo 分页信息。
+// PageInfo **参数解释：** 分页信息。 **取值范围：** 不涉及。
 type PageInfo struct {
 
-	// 下一页的页面标识。
+	// **参数解释：** 下一页的页面标识。 **取值范围：** 不涉及。
 	NextMarker *string `json:"next_marker,omitempty"`
 
-	// 上一页的页面标识。
+	// **参数解释：** 上一页的页面标识。 **取值范围：** 不涉及。
 	PreviousMarker *string `json:"previous_marker,omitempty"`
 
-	// 页面数量。
+	// **参数解释：** 页面数量。 **取值范围：** 不涉及。
 	CurrentCount *int32 `json:"current_count,omitempty"`
 }
 

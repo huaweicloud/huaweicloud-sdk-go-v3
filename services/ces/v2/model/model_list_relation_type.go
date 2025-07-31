@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ListRelationType 关联类型。ALARM_RULE：关联告警规则，RESOURCE：关联资源，RESOURCE_POLICY_NOTIFICATION：关联资源策略屏蔽告警通知，RESOURCE_POLICY_ALARM：关联资源策略不计算告警，DEFAULT：默认包含RESOURCE、RESOURCE_POLICY_NOTIFICATION（查询告警屏蔽列表时使用）。
+// ListRelationType 屏蔽告警通知或者屏蔽告警计算的实现方式。ALARM_RULE：通过告警规则屏蔽告警通知，RESOURCE：通过资源屏蔽告警通知，RESOURCE_POLICY_NOTIFICATION：通过告警策略和告警资源屏蔽告警通知，RESOURCE_POLICY_ALARM：通过告警策略和告警资源屏蔽计算告警，DEFAULT：默认包含RESOURCE、RESOURCE_POLICY_NOTIFICATION（查询告警屏蔽列表时使用）。
 type ListRelationType struct {
 	value string
 }

@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// EnterpriseProjectIdAndTags 企业项目Id或标签信息
 type EnterpriseProjectIdAndTags struct {
 
 	// 企业项目ID

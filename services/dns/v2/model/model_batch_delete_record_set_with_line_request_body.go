@@ -8,7 +8,7 @@ import (
 
 type BatchDeleteRecordSetWithLineRequestBody struct {
 
-	// 记录集ID列表。最多支持100个。
+	// **参数解释：** 记录集ID列表。 **约束限制：** 最多支持100个。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	RecordsetIds []string `json:"recordset_ids"`
 }
 

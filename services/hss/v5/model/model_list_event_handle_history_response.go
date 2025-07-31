@@ -9,7 +9,7 @@ import (
 // ListEventHandleHistoryResponse Response Object
 type ListEventHandleHistoryResponse struct {
 
-	// 总数
+	// **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
 	TotalNum *int32 `json:"total_num,omitempty"`
 
 	// 告警事件历史处置记录

@@ -9,7 +9,7 @@ import (
 // BatchDeleteZonesResponse Response Object
 type BatchDeleteZonesResponse struct {
 
-	// 删除域名的列表响应。
+	// **参数解释：** 域名列表信息。 **取值范围：** 不涉及。
 	Zones *[]ZoneData `json:"zones,omitempty"`
 
 	Metadata       *Metadata `json:"metadata,omitempty"`

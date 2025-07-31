@@ -9,7 +9,7 @@ import (
 // ShowPrivateZoneNameServerResponse Response Object
 type ShowPrivateZoneNameServerResponse struct {
 
-	// 名称服务器列表信息。
+	// **参数解释：** 名称服务器列表信息。 **取值范围：** 不涉及。
 	Nameservers    *[]PrivateNameServer `json:"nameservers,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

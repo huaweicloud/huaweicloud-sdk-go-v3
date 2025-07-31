@@ -53,6 +53,9 @@ type ListVoiceTrainingJobRequest struct {
 
 	// 排序规则：desc(降序)/asc(升序)
 	SortDir *string `json:"sort_dir,omitempty"`
+
+	// 是否是按需任务
+	IsOndemandResource *bool `json:"is_ondemand_resource,omitempty"`
 }
 
 func (o ListVoiceTrainingJobRequest) String() string {

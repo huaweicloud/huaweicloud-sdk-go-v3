@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Description 描述信息
+// Description **参数解释**: 描述信息。 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
 type Description struct {
 }
 

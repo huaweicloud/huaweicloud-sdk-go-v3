@@ -17,7 +17,7 @@ type CreateResourceGroupRequestBody struct {
 	// 资源分组归属企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,NAME（实例名称）,COMB（组合匹配）,Manual（手动添加）
+	// 资源分组添加资源方式，取值只能为EPS（同步企业项目）,TAG（标签动态匹配）,NAME（实例名称）,不传为手动添加
 	Type *string `json:"type,omitempty"`
 
 	// 标签动态匹配时的关联标签,type为TAG时必传
@@ -26,10 +26,10 @@ type CreateResourceGroupRequestBody struct {
 	// 该资源分组内包含的资源来源的企业项目ID，type为EPS时必传
 	AssociationEpIds *[]string `json:"association_ep_ids,omitempty"`
 
-	// 云服务名称,格式为\"dcs,ecs\",支持的云服务providers请参考https://support.huaweicloud.com/api-rms/rms_06_0100.html
+	// 云服务名称,格式为\"dcs,ecs\",支持的云服务providers请参考《配置审计API参考》中的\"支持的服务和资源类型\"章节
 	Providers *string `json:"providers,omitempty"`
 
-	// 组合匹配参数
+	// 匹配企业项目或匹配标签参数
 	EnterpriseProjectIdAndTags *[]EnterpriseProjectIdAndTags `json:"enterprise_project_id_and_tags,omitempty"`
 
 	// 手动创建时的资源详情

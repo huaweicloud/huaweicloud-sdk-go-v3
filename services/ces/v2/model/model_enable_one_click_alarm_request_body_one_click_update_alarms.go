@@ -20,14 +20,14 @@ type EnableOneClickAlarmRequestBodyOneClickUpdateAlarms struct {
 	// 告警描述，长度0-256
 	Description *string `json:"description,omitempty"`
 
-	// 服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+	// 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
 	Namespace *string `json:"namespace,omitempty"`
 
 	// 告警策略
 	Policies *[]Policy `json:"policies,omitempty"`
 
 	// 资源列表，关联资源需要使用查询告警规则资源接口获取
-	Resources *[]ResourcesInListResp `json:"resources,omitempty"`
+	Resources *[][]Dimension `json:"resources,omitempty"`
 
 	Type *AlarmType `json:"type,omitempty"`
 
@@ -49,7 +49,7 @@ type EnableOneClickAlarmRequestBodyOneClickUpdateAlarms struct {
 	// 告警通知关闭时间
 	NotificationEndTime *string `json:"notification_end_time,omitempty"`
 
-	// NOTIFICATION_POLICY(通知策略)
+	// 通知方式。NOTIFICATION_POLICY表示通知策略，NOTIFICATION_GROUP表示通知组，TOPIC_SUBSCRIPTION表示主题订阅。
 	NotificationManner *EnableOneClickAlarmRequestBodyOneClickUpdateAlarmsNotificationManner `json:"notification_manner,omitempty"`
 
 	// 关联的通知策略ID列表
@@ -71,12 +71,20 @@ type EnableOneClickAlarmRequestBodyOneClickUpdateAlarmsNotificationManner struct
 
 type EnableOneClickAlarmRequestBodyOneClickUpdateAlarmsNotificationMannerEnum struct {
 	NOTIFICATION_POLICY EnableOneClickAlarmRequestBodyOneClickUpdateAlarmsNotificationManner
+	NOTIFICATION_GROUP  EnableOneClickAlarmRequestBodyOneClickUpdateAlarmsNotificationManner
+	TOPIC_SUBSCRIPTION  EnableOneClickAlarmRequestBodyOneClickUpdateAlarmsNotificationManner
 }
 
 func GetEnableOneClickAlarmRequestBodyOneClickUpdateAlarmsNotificationMannerEnum() EnableOneClickAlarmRequestBodyOneClickUpdateAlarmsNotificationMannerEnum {
 	return EnableOneClickAlarmRequestBodyOneClickUpdateAlarmsNotificationMannerEnum{
 		NOTIFICATION_POLICY: EnableOneClickAlarmRequestBodyOneClickUpdateAlarmsNotificationManner{
 			value: "NOTIFICATION_POLICY",
+		},
+		NOTIFICATION_GROUP: EnableOneClickAlarmRequestBodyOneClickUpdateAlarmsNotificationManner{
+			value: "NOTIFICATION_GROUP",
+		},
+		TOPIC_SUBSCRIPTION: EnableOneClickAlarmRequestBodyOneClickUpdateAlarmsNotificationManner{
+			value: "TOPIC_SUBSCRIPTION",
 		},
 	}
 }

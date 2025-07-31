@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// NamespaceAllowedEmpty 查询服务的命名空间，各服务命名空间请参考“[服务维度名称](ces_03_0059.xml)”
+// NamespaceAllowedEmpty 查询服务的命名空间，各服务命名空间请参考“[服务命名名称](ces_03_0059.xml)”
 type NamespaceAllowedEmpty struct {
 }
 

@@ -11,7 +11,7 @@ type Match struct {
 	// 键。当前值限定为resource_name。
 	Key string `json:"key"`
 
-	// 值。每个值最大长度43个unicode字符。
+	// 值。每个值最大长度255个unicode字符。
 	Value *string `json:"value,omitempty"`
 }
 

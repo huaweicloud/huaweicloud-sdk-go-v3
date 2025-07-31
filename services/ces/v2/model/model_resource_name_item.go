@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// ResourceNameItem 资源名称
 type ResourceNameItem struct {
 
 	// 资源名称条件值
@@ -16,6 +17,9 @@ type ResourceNameItem struct {
 
 	// 实例操作符，含义是真实资源的名称与资源名称条件值的运算关系。   include表示包含   prefix表示前缀   suffix表示后缀   notInclude表示不包含   equal表示相等   all表示全部
 	Operator ResourceNameItemOperator `json:"operator"`
+
+	// 资源名称忽略大小写
+	ResourceNameIsIgnoreCase *bool `json:"resource_name_is_ignore_case,omitempty"`
 }
 
 func (o ResourceNameItem) String() string {

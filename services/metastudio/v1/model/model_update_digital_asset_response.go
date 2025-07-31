@@ -42,6 +42,9 @@ type UpdateDigitalAssetResponse struct {
 	// 失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
 	FailType *UpdateDigitalAssetResponseFailType `json:"fail_type,omitempty"`
 
+	// 冻结原因编号。
+	BlockReasonCode *string `json:"block_reason_code,omitempty"`
+
 	// 冻结/解冻/失败 原因。
 	Reason *string `json:"reason,omitempty"`
 
@@ -61,6 +64,9 @@ type UpdateDigitalAssetResponse struct {
 
 	// 支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
 	SupportedService *[]SupportedServiceEnum `json:"supported_service,omitempty"`
+
+	// 资产自动处理任务。
+	AutoOperationConfig *[]AutoOperationConfig `json:"auto_operation_config,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`

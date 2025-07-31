@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// CombRelation 组合匹配参数
 type CombRelation struct {
 
 	// 逻辑运算符  ALL 所有条件匹配成功  ANY 任意条件匹配成功

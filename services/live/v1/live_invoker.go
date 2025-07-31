@@ -165,6 +165,22 @@ func (i *CreateStreamForbiddenInvoker) Invoke() (*model.CreateStreamForbiddenRes
 	}
 }
 
+type CreateStreamForbiddenOnceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateStreamForbiddenOnceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateStreamForbiddenOnceInvoker) Invoke() (*model.CreateStreamForbiddenOnceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateStreamForbiddenOnceResponse), nil
+	}
+}
+
 type CreateTranscodingsTemplateInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -12,8 +12,6 @@ type ExportIpBlacklistResponse struct {
 
 	ContentDisposition *string `json:"Content-Disposition,omitempty"`
 
-	ContentLength *int32 `json:"Content-Length,omitempty"`
-
 	ContentType    *string `json:"Content-Type,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

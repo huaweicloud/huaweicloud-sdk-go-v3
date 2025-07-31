@@ -8,6 +8,10 @@ import (
 
 // SetJobBatchNameRequest Request Object
 type SetJobBatchNameRequest struct {
+
+	// 第三方用户ID。不允许输入中文。
+	XAppUserId *string `json:"X-App-UserId,omitempty"`
+
 	Body *SetJobBatchNameReq `json:"body,omitempty"`
 }
 

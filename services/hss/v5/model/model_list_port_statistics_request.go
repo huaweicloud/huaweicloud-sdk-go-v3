@@ -9,35 +9,35 @@ import (
 // ListPortStatisticsRequest Request Object
 type ListPortStatisticsRequest struct {
 
-	// 端口号，精确匹配
-	Port *int32 `json:"port,omitempty"`
-
-	// 端口字符串，用来进行模糊匹配
-	PortString *string `json:"port_string,omitempty"`
-
-	// 端口类型
-	Type *string `json:"type,omitempty"`
-
-	// 端口状态，包含如下： - danger：危险端口 - unknow: 无已知危险的端口
-	Status *string `json:"status,omitempty"`
-
-	// 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+	// **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 排序的key值，目前支持按照端口号port排序
-	SortKey *string `json:"sort_key,omitempty"`
+	// **参数解释**: 类别 **约束限制**: 不涉及 **取值范围**: - host：主机 - container：容器  **默认取值**: 不涉及
+	Category *string `json:"category,omitempty"`
 
-	// 升序还是降序，默认升序，asc
+	// **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc  : 正序   - desc : 倒序  **默认取值**: 正序排序
 	SortDir *string `json:"sort_dir,omitempty"`
 
-	// 每页显示数量
+	// **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 偏移量：指定返回记录的开始位置
+	// **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 类别，默认为host，包含如下： - host：主机 - container：容器
-	Category *string `json:"category,omitempty"`
+	// **参数解释**: 端口号，该字段用来进行精确匹配 **约束限制**: 与port_string同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果 为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
+	Port *int32 `json:"port,omitempty"`
+
+	// **参数解释**: 端口字符串，该字段用来进行模糊匹配 **约束限制**: 与port同时使用的话，二者有包含关系则按精确匹配，无包含关系则结果 为空 **取值范围**: 最小值1，最大值65535 **默认取值**: 不涉及
+	PortString *string `json:"port_string,omitempty"`
+
+	// **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: - UDP - UDP6 - TCP - TCP6  **默认取值**: 不涉及
+	Type *string `json:"type,omitempty"`
+
+	// **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口  **默认取值**: 不涉及
+	Status *string `json:"status,omitempty"`
+
+	// **参数解释**: 排序的key值，目前支持按照端口号port排序 **约束限制**: 不涉及 **取值范围**: - port: 端口号  **默认取值**: 不涉及
+	SortKey *string `json:"sort_key,omitempty"`
 }
 
 func (o ListPortStatisticsRequest) String() string {

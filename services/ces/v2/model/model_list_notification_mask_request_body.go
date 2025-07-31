@@ -33,7 +33,7 @@ type ListNotificationMaskRequestBody struct {
 	// 资源维度值,提供一个维度的资源ID即可,可选
 	ResourceId *string `json:"resource_id,omitempty"`
 
-	// 服务的命名空间，查询各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+	// 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
 	Namespace *string `json:"namespace,omitempty"`
 
 	// 资源的维度信息

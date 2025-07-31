@@ -778,6 +778,27 @@ func (c *CfwClient) ListAttackLogsInvoker(request *model.ListAttackLogsRequest) 
 	return &ListAttackLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAttackStatistic 查询攻击统计
+//
+// 根据防火墙攻击日志，查询攻击统计信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) ListAttackStatistic(request *model.ListAttackStatisticRequest) (*model.ListAttackStatisticResponse, error) {
+	requestDef := GenReqDefForListAttackStatistic()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAttackStatisticResponse), nil
+	}
+}
+
+// ListAttackStatisticInvoker 查询攻击统计
+func (c *CfwClient) ListAttackStatisticInvoker(request *model.ListAttackStatisticRequest) *ListAttackStatisticInvoker {
+	requestDef := GenReqDefForListAttackStatistic()
+	return &ListAttackStatisticInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListBlackWhiteLists 查询黑白名单列表
 //
 // 查询黑白名单列表
@@ -1282,6 +1303,27 @@ func (c *CfwClient) SaveTagsInvoker(request *model.SaveTagsRequest) *SaveTagsInv
 	return &SaveTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAccessTop 查询访问日志统计信息
+//
+// 获取访问日志的TOP统计信息，如TOP命中规则等
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) ShowAccessTop(request *model.ShowAccessTopRequest) (*model.ShowAccessTopResponse, error) {
+	requestDef := GenReqDefForShowAccessTop()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAccessTopResponse), nil
+	}
+}
+
+// ShowAccessTopInvoker 查询访问日志统计信息
+func (c *CfwClient) ShowAccessTopInvoker(request *model.ShowAccessTopRequest) *ShowAccessTopInvoker {
+	requestDef := GenReqDefForShowAccessTop()
+	return &ShowAccessTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowAlarmConfig 获取告警配置信息
 //
 // 获取告警配置信息
@@ -1345,6 +1387,48 @@ func (c *CfwClient) ShowAntiVirusSwitchInvoker(request *model.ShowAntiVirusSwitc
 	return &ShowAntiVirusSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAttackTotal 查询攻击概览
+//
+// 查询攻击概览
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) ShowAttackTotal(request *model.ShowAttackTotalRequest) (*model.ShowAttackTotalResponse, error) {
+	requestDef := GenReqDefForShowAttackTotal()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAttackTotalResponse), nil
+	}
+}
+
+// ShowAttackTotalInvoker 查询攻击概览
+func (c *CfwClient) ShowAttackTotalInvoker(request *model.ShowAttackTotalRequest) *ShowAttackTotalInvoker {
+	requestDef := GenReqDefForShowAttackTotal()
+	return &ShowAttackTotalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAttackTrend 查询攻击趋势
+//
+// 查询攻击趋势
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) ShowAttackTrend(request *model.ShowAttackTrendRequest) (*model.ShowAttackTrendResponse, error) {
+	requestDef := GenReqDefForShowAttackTrend()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAttackTrendResponse), nil
+	}
+}
+
+// ShowAttackTrendInvoker 查询攻击趋势
+func (c *CfwClient) ShowAttackTrendInvoker(request *model.ShowAttackTrendRequest) *ShowAttackTrendInvoker {
+	requestDef := GenReqDefForShowAttackTrend()
+	return &ShowAttackTrendInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDomainSetDetail 查看域名组详情
 //
 // 查看域名组详情
@@ -1364,6 +1448,27 @@ func (c *CfwClient) ShowDomainSetDetail(request *model.ShowDomainSetDetailReques
 func (c *CfwClient) ShowDomainSetDetailInvoker(request *model.ShowDomainSetDetailRequest) *ShowDomainSetDetailInvoker {
 	requestDef := GenReqDefForShowDomainSetDetail()
 	return &ShowDomainSetDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTrafficTrend 查询流量趋势
+//
+// 查询流量趋势，包括南北向、EIP、东西向的流量趋势
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) ShowTrafficTrend(request *model.ShowTrafficTrendRequest) (*model.ShowTrafficTrendResponse, error) {
+	requestDef := GenReqDefForShowTrafficTrend()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTrafficTrendResponse), nil
+	}
+}
+
+// ShowTrafficTrendInvoker 查询流量趋势
+func (c *CfwClient) ShowTrafficTrendInvoker(request *model.ShowTrafficTrendRequest) *ShowTrafficTrendInvoker {
+	requestDef := GenReqDefForShowTrafficTrend()
+	return &ShowTrafficTrendInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateAddressSet 更新地址组信息
@@ -2122,6 +2227,27 @@ func (c *CfwClient) ListIpsSwitchStatusInvoker(request *model.ListIpsSwitchStatu
 	return &ListIpsSwitchStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowCustomerIpsInfo 查询自定义IPS规则详情
+//
+// 功能说明：自定义IPS规则详情，特性:根据路径输入的IPS ID查看对应的自定义IPS详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) ShowCustomerIpsInfo(request *model.ShowCustomerIpsInfoRequest) (*model.ShowCustomerIpsInfoResponse, error) {
+	requestDef := GenReqDefForShowCustomerIpsInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCustomerIpsInfoResponse), nil
+	}
+}
+
+// ShowCustomerIpsInfoInvoker 查询自定义IPS规则详情
+func (c *CfwClient) ShowCustomerIpsInfoInvoker(request *model.ShowCustomerIpsInfoRequest) *ShowCustomerIpsInfoInvoker {
+	requestDef := GenReqDefForShowCustomerIpsInfo()
+	return &ShowCustomerIpsInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowIpsUpdateTime 获取ips规则细节
 //
 // 获取ips规则细节
@@ -2162,4 +2288,25 @@ func (c *CfwClient) UpdateAdvancedIpsRule(request *model.UpdateAdvancedIpsRuleRe
 func (c *CfwClient) UpdateAdvancedIpsRuleInvoker(request *model.UpdateAdvancedIpsRuleRequest) *UpdateAdvancedIpsRuleInvoker {
 	requestDef := GenReqDefForUpdateAdvancedIpsRule()
 	return &UpdateAdvancedIpsRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCustomerIps 更新自定义IPS规则
+//
+// 更新自定义IPS规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CfwClient) UpdateCustomerIps(request *model.UpdateCustomerIpsRequest) (*model.UpdateCustomerIpsResponse, error) {
+	requestDef := GenReqDefForUpdateCustomerIps()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateCustomerIpsResponse), nil
+	}
+}
+
+// UpdateCustomerIpsInvoker 更新自定义IPS规则
+func (c *CfwClient) UpdateCustomerIpsInvoker(request *model.UpdateCustomerIpsRequest) *UpdateCustomerIpsInvoker {
+	requestDef := GenReqDefForUpdateCustomerIps()
+	return &UpdateCustomerIpsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

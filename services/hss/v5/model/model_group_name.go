@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// GroupName 服务器组名称
+// GroupName **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
 type GroupName struct {
 }
 

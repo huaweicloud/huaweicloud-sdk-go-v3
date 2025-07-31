@@ -29,13 +29,13 @@ type InvocationInfo struct {
 	// 弹性公网ip列表
 	ElasticIps *[]string `json:"elastic_ips,omitempty"`
 
-	// 任务类型(INSTALL 安装，UPDATE 升级，ROLLBACK 回滚，RETRY 重试)
+	// 任务类型(INSTALL 安装，UPDATE升级，ROLLBACK回滚，RETRY重试)
 	InvocationType *InvocationInfoInvocationType `json:"invocation_type,omitempty"`
 
 	// 任务状态，PENDING 待执行，RUNNING 运行中，TIMEOUT 超时，FAILED 失败，SUCCEEDED 成功，CANCELED 取消，ROLLBACKED已回退
 	InvocationStatus *InvocationInfoInvocationStatus `json:"invocation_status,omitempty"`
 
-	// 任务对象，目前仅支持telescope
+	// 任务对象，目前支持telescope
 	InvocationTarget *InvocationInfoInvocationTarget `json:"invocation_target,omitempty"`
 
 	// 任务创建时间
@@ -49,6 +49,9 @@ type InvocationInfo struct {
 
 	// 目标版本
 	TargetVersion *string `json:"target_version,omitempty"`
+
+	// 任务执行结果信息
+	ResultMsg *string `json:"result_msg,omitempty"`
 }
 
 func (o InvocationInfo) String() string {

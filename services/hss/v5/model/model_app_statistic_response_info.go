@@ -9,10 +9,10 @@ import (
 // AppStatisticResponseInfo 进程统计信息
 type AppStatisticResponseInfo struct {
 
-	// 软件名称
+	// **参数解释**: 软件名称 **取值范围**: 字符长度1-128位
 	AppName *string `json:"app_name,omitempty"`
 
-	// 进程数量
+	// **参数解释**: 进程数量 **取值范围**: 字符长度0-100000位
 	Num *int32 `json:"num,omitempty"`
 }
 

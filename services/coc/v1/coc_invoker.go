@@ -5,6 +5,54 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/coc/v1/model"
 )
 
+type CreatePasswordChangePlanInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePasswordChangePlanInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreatePasswordChangePlanInvoker) Invoke() (*model.CreatePasswordChangePlanResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePasswordChangePlanResponse), nil
+	}
+}
+
+type ResetAccountPasswordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetAccountPasswordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ResetAccountPasswordInvoker) Invoke() (*model.ResetAccountPasswordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetAccountPasswordResponse), nil
+	}
+}
+
+type UpdateAccountPasswordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAccountPasswordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAccountPasswordInvoker) Invoke() (*model.UpdateAccountPasswordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAccountPasswordResponse), nil
+	}
+}
+
 type ClearAlarmInvoker struct {
 	*invoker.BaseInvoker
 }

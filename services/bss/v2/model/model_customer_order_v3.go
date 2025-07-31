@@ -20,7 +20,7 @@ type CustomerOrderV3 struct {
 	// 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
 	ServiceTypeName *string `json:"service_type_name,omitempty"`
 
-	// 客户订单来源类型： 1：客户2：代理3：合同4：分销商
+	// 客户订单来源类型。1：客户 2：代理 3：合同 4：分销商 5：页面删除资源 6：补录订单 7：补偿订单 8：系统自动创建
 	SourceType *int32 `json:"source_type,omitempty"`
 
 	// 订单状态。 1：待审核2：待退款3：处理中4：已取消5：已完成6：待付款9：待确认10：待发货11：待收货12：待上门取货13：换新中

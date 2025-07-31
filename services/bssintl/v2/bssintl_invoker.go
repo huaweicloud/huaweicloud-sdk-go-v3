@@ -389,24 +389,6 @@ func (i *ListMeasureUnitsInvoker) Invoke() (*model.ListMeasureUnitsResponse, err
 	}
 }
 
-type ListMonthlyExpendituresInvoker struct {
-	*invoker.BaseInvoker
-}
-
-// Deprecated: This function is deprecated and will be removed in the future versions.
-func (i *ListMonthlyExpendituresInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-// Deprecated: This function is deprecated and will be removed in the future versions.
-func (i *ListMonthlyExpendituresInvoker) Invoke() (*model.ListMonthlyExpendituresResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListMonthlyExpendituresResponse), nil
-	}
-}
-
 type ListOnDemandResourceRatingsInvoker struct {
 	*invoker.BaseInvoker
 }

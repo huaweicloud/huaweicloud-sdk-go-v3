@@ -26,6 +26,8 @@ var (
 		"https://eg.cn-north-9.myhuaweicloud.com")
 	NA_MEXICO_1 = region.NewRegion("na-mexico-1",
 		"https://eg.na-mexico-1.myhuaweicloud.com")
+	EU_WEST_101 = region.NewRegion("eu-west-101",
+		"https://eg.eu-west-101.myhuaweicloud.eu")
 )
 
 var staticFields = map[string]*region.Region{
@@ -38,6 +40,7 @@ var staticFields = map[string]*region.Region{
 	"cn-north-11":    CN_NORTH_11,
 	"cn-north-9":     CN_NORTH_9,
 	"na-mexico-1":    NA_MEXICO_1,
+	"eu-west-101":    EU_WEST_101,
 }
 
 var provider = region.DefaultProviderChain("EG")

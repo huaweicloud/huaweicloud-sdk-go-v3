@@ -2,7 +2,6 @@ package v5
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
-
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/iam/v5/model"
 	"net/http"
 )

@@ -9,7 +9,7 @@ import (
 // EventDetailResponseInfo 操作详情信息
 type EventDetailResponseInfo struct {
 
-	// Agent ID
+	// **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
 	AgentId *string `json:"agent_id,omitempty"`
 
 	// 进程ID

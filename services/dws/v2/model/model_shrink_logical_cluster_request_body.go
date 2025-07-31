@@ -10,7 +10,7 @@ import (
 type ShrinkLogicalClusterRequestBody struct {
 
 	// **参数解释**： 缩容主机环信息。  **约束限制**：  不涉及。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
-	ClusterRings []ClusterRingVo `json:"cluster_rings"`
+	ClusterRings []ClusterRing `json:"cluster_rings"`
 
 	// **参数解释**： 重分布并发配置数。  **约束限制**：  不涉及。 **取值范围**：  1~200。 **默认取值**：  4。
 	ParallelJobs *int32 `json:"parallel_jobs,omitempty"`

@@ -9,7 +9,7 @@ import (
 // ListLoginWhiteListResponse Response Object
 type ListLoginWhiteListResponse struct {
 
-	// 总数
+	// **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
 	TotalNum *int32 `json:"total_num,omitempty"`
 
 	// 登录白名单详情

@@ -9,7 +9,7 @@ import (
 // ListUsersResponse Response Object
 type ListUsersResponse struct {
 
-	// 账号总数
+	// **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
 	TotalNum *int32 `json:"total_num,omitempty"`
 
 	// 账号信息列表

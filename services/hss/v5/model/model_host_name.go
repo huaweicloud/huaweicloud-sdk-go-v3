@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// HostName 服务器名称
+// HostName **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
 type HostName struct {
 }
 

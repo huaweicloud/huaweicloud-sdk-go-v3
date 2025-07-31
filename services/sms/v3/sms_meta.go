@@ -2,7 +2,6 @@ package v3
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
-
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/sms/v3/model"
 	"net/http"
 )

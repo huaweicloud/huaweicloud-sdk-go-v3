@@ -9,7 +9,7 @@ import (
 // ListBackupVaultsResponse Response Object
 type ListBackupVaultsResponse struct {
 
-	// 总数
+	// 查询备份存储库总数
 	TotalNum *int32 `json:"total_num,omitempty"`
 
 	// 查询备份存储库列表
