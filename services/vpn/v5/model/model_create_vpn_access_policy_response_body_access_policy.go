@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// CreateVpnAccessPolicyResponseBodyAccessPolicy VPN访问策略请求体对象
 type CreateVpnAccessPolicyResponseBodyAccessPolicy struct {
 
 	// 访问策略ID

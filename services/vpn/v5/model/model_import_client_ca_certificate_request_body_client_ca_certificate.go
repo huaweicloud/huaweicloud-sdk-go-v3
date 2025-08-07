@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// ImportClientCaCertificateRequestBodyClientCaCertificate 客户端CA证书
 type ImportClientCaCertificateRequestBodyClientCaCertificate struct {
 
 	// 证书名

@@ -1555,6 +1555,27 @@ func (c *RdsClient) ListRestoreTimesInvoker(request *model.ListRestoreTimesReque
 	return &ListRestoreTimesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListScheduleTasks 查询定时任务列表
+//
+// 查询定时任务列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListScheduleTasks(request *model.ListScheduleTasksRequest) (*model.ListScheduleTasksResponse, error) {
+	requestDef := GenReqDefForListScheduleTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListScheduleTasksResponse), nil
+	}
+}
+
+// ListScheduleTasksInvoker 查询定时任务列表
+func (c *RdsClient) ListScheduleTasksInvoker(request *model.ListScheduleTasksRequest) *ListScheduleTasksInvoker {
+	requestDef := GenReqDefForListScheduleTasks()
+	return &ListScheduleTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListShareBackups 查询共享备份列表
 //
 // 查询共享备份列表
@@ -1785,6 +1806,27 @@ func (c *RdsClient) ListStorageTypes(request *model.ListStorageTypesRequest) (*m
 func (c *RdsClient) ListStorageTypesInvoker(request *model.ListStorageTypesRequest) *ListStorageTypesInvoker {
 	requestDef := GenReqDefForListStorageTypes()
 	return &ListStorageTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTasks 查询及时任务列表
+//
+// 查询及时任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListTasks(request *model.ListTasksRequest) (*model.ListTasksResponse, error) {
+	requestDef := GenReqDefForListTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTasksResponse), nil
+	}
+}
+
+// ListTasksInvoker 查询及时任务列表
+func (c *RdsClient) ListTasksInvoker(request *model.ListTasksRequest) *ListTasksInvoker {
+	requestDef := GenReqDefForListTasks()
+	return &ListTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListUpdateBackupEnhancePolicy 查询高级备份策略
@@ -4843,6 +4885,48 @@ func (c *RdsClient) ListAuthorizedSqlserverDbUsersInvoker(request *model.ListAut
 	return &ListAuthorizedSqlserverDbUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListBusinessPartners 查询云市场服务商列表
+//
+// 查询云市场服务商列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListBusinessPartners(request *model.ListBusinessPartnersRequest) (*model.ListBusinessPartnersResponse, error) {
+	requestDef := GenReqDefForListBusinessPartners()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBusinessPartnersResponse), nil
+	}
+}
+
+// ListBusinessPartnersInvoker 查询云市场服务商列表
+func (c *RdsClient) ListBusinessPartnersInvoker(request *model.ListBusinessPartnersRequest) *ListBusinessPartnersInvoker {
+	requestDef := GenReqDefForListBusinessPartners()
+	return &ListBusinessPartnersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMarketplaceEngineProducts 查询云市场引擎商品列表
+//
+// 查询云市场引擎商品列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListMarketplaceEngineProducts(request *model.ListMarketplaceEngineProductsRequest) (*model.ListMarketplaceEngineProductsResponse, error) {
+	requestDef := GenReqDefForListMarketplaceEngineProducts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMarketplaceEngineProductsResponse), nil
+	}
+}
+
+// ListMarketplaceEngineProductsInvoker 查询云市场引擎商品列表
+func (c *RdsClient) ListMarketplaceEngineProductsInvoker(request *model.ListMarketplaceEngineProductsRequest) *ListMarketplaceEngineProductsInvoker {
+	requestDef := GenReqDefForListMarketplaceEngineProducts()
+	return &ListMarketplaceEngineProductsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListMsdtcHosts 查询MSDTC的hosts信息
 //
 // 查询MSDTC的hosts信息
@@ -4988,4 +5072,46 @@ func (c *RdsClient) SetInstancesNewDbShrink(request *model.SetInstancesNewDbShri
 func (c *RdsClient) SetInstancesNewDbShrinkInvoker(request *model.SetInstancesNewDbShrinkRequest) *SetInstancesNewDbShrinkInvoker {
 	requestDef := GenReqDefForSetInstancesNewDbShrink()
 	return &SetInstancesNewDbShrinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSqlStatistics 查询sql统计列表
+//
+// 查询sql统计列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListSqlStatistics(request *model.ListSqlStatisticsRequest) (*model.ListSqlStatisticsResponse, error) {
+	requestDef := GenReqDefForListSqlStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSqlStatisticsResponse), nil
+	}
+}
+
+// ListSqlStatisticsInvoker 查询sql统计列表
+func (c *RdsClient) ListSqlStatisticsInvoker(request *model.ListSqlStatisticsRequest) *ListSqlStatisticsInvoker {
+	requestDef := GenReqDefForListSqlStatistics()
+	return &ListSqlStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetViewSqlStatistics sql统计视图重置
+//
+// sql统计视图重置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ResetViewSqlStatistics(request *model.ResetViewSqlStatisticsRequest) (*model.ResetViewSqlStatisticsResponse, error) {
+	requestDef := GenReqDefForResetViewSqlStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetViewSqlStatisticsResponse), nil
+	}
+}
+
+// ResetViewSqlStatisticsInvoker sql统计视图重置
+func (c *RdsClient) ResetViewSqlStatisticsInvoker(request *model.ResetViewSqlStatisticsRequest) *ResetViewSqlStatisticsInvoker {
+	requestDef := GenReqDefForResetViewSqlStatistics()
+	return &ResetViewSqlStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

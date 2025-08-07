@@ -5,22 +5,6 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/aom/v1/model"
 )
 
-type CreateFastExecuteScriptInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateFastExecuteScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateFastExecuteScriptInvoker) Invoke() (*model.CreateFastExecuteScriptResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateFastExecuteScriptResponse), nil
-	}
-}
-
 type CreateWorkflowInvoker struct {
 	*invoker.BaseInvoker
 }

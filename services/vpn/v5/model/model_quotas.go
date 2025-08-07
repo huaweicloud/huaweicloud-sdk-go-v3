@@ -7,6 +7,8 @@ import (
 )
 
 type Quotas struct {
+
+	// 资源对象
 	Resources *[]QuotaInfo `json:"resources,omitempty"`
 }
 

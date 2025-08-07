@@ -8,6 +8,8 @@ import (
 
 // ShowResourceTagsResponse Response Object
 type ShowResourceTagsResponse struct {
+
+	// 资源标签
 	Tags           *[]ResourceTag `json:"tags,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

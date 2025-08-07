@@ -8,6 +8,8 @@ import (
 
 // BatchCreateVpnConnectionResponse Response Object
 type BatchCreateVpnConnectionResponse struct {
+
+	// VPN连接对象数组
 	VpnConnections *[]CreateResponseVpnConnection `json:"vpn_connections,omitempty"`
 
 	// 请求ID

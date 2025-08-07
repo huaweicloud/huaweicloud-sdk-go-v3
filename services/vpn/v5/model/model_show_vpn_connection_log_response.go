@@ -8,11 +8,14 @@ import (
 
 // ShowVpnConnectionLogResponse Response Object
 type ShowVpnConnectionLogResponse struct {
+
+	// 日志
 	Logs *[]Log `json:"logs,omitempty"`
 
 	// 请求ID
 	RequestId *string `json:"request_id,omitempty"`
 
+	// 响应头令牌
 	HeaderResponseToken *string `json:"header-response-token,omitempty"`
 	HttpStatusCode      int     `json:"-"`
 }

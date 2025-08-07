@@ -23,6 +23,9 @@ type PolicyStatement struct {
 
 	// statement生效的条件
 	Condition *interface{} `json:"Condition,omitempty"`
+
+	// 策略Id
+	Sid *string `json:"Sid,omitempty"`
 }
 
 func (o PolicyStatement) String() string {

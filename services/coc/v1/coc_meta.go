@@ -66,11 +66,11 @@ func GenReqDefForClearAlarm() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForHandlerAlarm() *def.HttpRequestDef {
+func GenReqDefForHandleAlarm() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/alarm-mgmt/alarm/{alarm_id}/auto-process").
-		WithResponse(new(model.HandlerAlarmResponse)).
+		WithResponse(new(model.HandleAlarmResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

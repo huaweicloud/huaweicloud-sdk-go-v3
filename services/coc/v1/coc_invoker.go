@@ -69,19 +69,19 @@ func (i *ClearAlarmInvoker) Invoke() (*model.ClearAlarmResponse, error) {
 	}
 }
 
-type HandlerAlarmInvoker struct {
+type HandleAlarmInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *HandlerAlarmInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *HandleAlarmInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *HandlerAlarmInvoker) Invoke() (*model.HandlerAlarmResponse, error) {
+func (i *HandleAlarmInvoker) Invoke() (*model.HandleAlarmResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.HandlerAlarmResponse), nil
+		return result.(*model.HandleAlarmResponse), nil
 	}
 }
 

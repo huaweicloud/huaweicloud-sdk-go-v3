@@ -181,6 +181,22 @@ func (i *ShowPermissionInvoker) Invoke() (*model.ShowPermissionResponse, error) 
 	}
 }
 
+type SearchDistinctPrincipalsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchDistinctPrincipalsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SearchDistinctPrincipalsInvoker) Invoke() (*model.SearchDistinctPrincipalsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchDistinctPrincipalsResponse), nil
+	}
+}
+
 type SearchSharedPrincipalsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +210,22 @@ func (i *SearchSharedPrincipalsInvoker) Invoke() (*model.SearchSharedPrincipalsR
 		return nil, err
 	} else {
 		return result.(*model.SearchSharedPrincipalsResponse), nil
+	}
+}
+
+type SearchDistinctSharedResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchDistinctSharedResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SearchDistinctSharedResourcesInvoker) Invoke() (*model.SearchDistinctSharedResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchDistinctSharedResourcesResponse), nil
 	}
 }
 

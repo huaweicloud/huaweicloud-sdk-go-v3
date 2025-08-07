@@ -47,6 +47,9 @@ type BackupTransferInfo struct {
 
 	// 转储目标前缀
 	Prefix *string `json:"prefix,omitempty"`
+
+	// 转储备份类型
+	Type *string `json:"type,omitempty"`
 }
 
 func (o BackupTransferInfo) String() string {

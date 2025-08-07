@@ -37,6 +37,70 @@ func (i *ChangePrepaidCloudWafInvoker) Invoke() (*model.ChangePrepaidCloudWafRes
 	}
 }
 
+type CheckAgencyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckAgencyInvoker) Invoke() (*model.CheckAgencyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckAgencyResponse), nil
+	}
+}
+
+type ConfirmPolicyAntileakageMapInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ConfirmPolicyAntileakageMapInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ConfirmPolicyAntileakageMapInvoker) Invoke() (*model.ConfirmPolicyAntileakageMapResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ConfirmPolicyAntileakageMapResponse), nil
+	}
+}
+
+type ConfirmPolicyIpReputationMapInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ConfirmPolicyIpReputationMapInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ConfirmPolicyIpReputationMapInvoker) Invoke() (*model.ConfirmPolicyIpReputationMapResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ConfirmPolicyIpReputationMapResponse), nil
+	}
+}
+
+type ConfirmThreatMapInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ConfirmThreatMapInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ConfirmThreatMapInvoker) Invoke() (*model.ConfirmThreatMapResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ConfirmThreatMapResponse), nil
+	}
+}
+
 type ConfirmUserBundleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -917,6 +981,22 @@ func (i *ListIpGroupInvoker) Invoke() (*model.ListIpGroupResponse, error) {
 	}
 }
 
+type ListIpReputationRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIpReputationRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListIpReputationRulesInvoker) Invoke() (*model.ListIpReputationRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIpReputationRulesResponse), nil
+	}
+}
+
 type ListNoticeConfigsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -994,6 +1074,22 @@ func (i *ListPrivacyRuleInvoker) Invoke() (*model.ListPrivacyRuleResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListPrivacyRuleResponse), nil
+	}
+}
+
+type ListProtectableResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProtectableResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListProtectableResourcesInvoker) Invoke() (*model.ListProtectableResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProtectableResourcesResponse), nil
 	}
 }
 
@@ -1589,6 +1685,22 @@ func (i *ShowWhiteBlackIpRuleInvoker) Invoke() (*model.ShowWhiteBlackIpRuleRespo
 	}
 }
 
+type UpdateAccessProgressInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAccessProgressInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAccessProgressInvoker) Invoke() (*model.UpdateAccessProgressResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAccessProgressResponse), nil
+	}
+}
+
 type UpdateAlertNoticeConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1749,6 +1861,22 @@ func (i *UpdateHostInvoker) Invoke() (*model.UpdateHostResponse, error) {
 	}
 }
 
+type UpdateHostAccessStatusOfUnderlineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateHostAccessStatusOfUnderlineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateHostAccessStatusOfUnderlineInvoker) Invoke() (*model.UpdateHostAccessStatusOfUnderlineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateHostAccessStatusOfUnderlineResponse), nil
+	}
+}
+
 type UpdateHostProtectStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1877,6 +2005,22 @@ func (i *UpdatePremiumHostInvoker) Invoke() (*model.UpdatePremiumHostResponse, e
 	}
 }
 
+type UpdatePremiumHostAccessStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePremiumHostAccessStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePremiumHostAccessStatusInvoker) Invoke() (*model.UpdatePremiumHostAccessStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePremiumHostAccessStatusResponse), nil
+	}
+}
+
 type UpdatePremiumHostProtectStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1890,6 +2034,22 @@ func (i *UpdatePremiumHostProtectStatusInvoker) Invoke() (*model.UpdatePremiumHo
 		return nil, err
 	} else {
 		return result.(*model.UpdatePremiumHostProtectStatusResponse), nil
+	}
+}
+
+type UpdatePremiumInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePremiumInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePremiumInstanceInvoker) Invoke() (*model.UpdatePremiumInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePremiumInstanceResponse), nil
 	}
 }
 

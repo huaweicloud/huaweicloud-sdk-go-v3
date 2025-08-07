@@ -8,6 +8,8 @@ import (
 
 // ListVpnConnectionsResponse Response Object
 type ListVpnConnectionsResponse struct {
+
+	// VPN连接对象数组
 	VpnConnections *[]ResponseVpnConnection `json:"vpn_connections,omitempty"`
 
 	PageInfo *PageInfo `json:"page_info,omitempty"`

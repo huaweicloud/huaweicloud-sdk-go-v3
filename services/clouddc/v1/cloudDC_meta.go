@@ -354,11 +354,11 @@ func GenReqDefForListIDcs() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListIRack() *def.HttpRequestDef {
+func GenReqDefForListIRacks() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/iracks").
-		WithResponse(new(model.ListIRackResponse)).
+		WithResponse(new(model.ListIRacksResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

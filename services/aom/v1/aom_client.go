@@ -19,27 +19,6 @@ func AomClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
-// CreateFastExecuteScript 快速创建并执行脚本
-//
-// 该接口用于创建快速执行脚本的任务，可以指定脚本类型，执行用户，脚本参数，执行机器，脚本内容，在用户指定的机器上执行脚本。（注：接口目前开放的region为：华东-苏州二零一）。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *AomClient) CreateFastExecuteScript(request *model.CreateFastExecuteScriptRequest) (*model.CreateFastExecuteScriptResponse, error) {
-	requestDef := GenReqDefForCreateFastExecuteScript()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateFastExecuteScriptResponse), nil
-	}
-}
-
-// CreateFastExecuteScriptInvoker 快速创建并执行脚本
-func (c *AomClient) CreateFastExecuteScriptInvoker(request *model.CreateFastExecuteScriptRequest) *CreateFastExecuteScriptInvoker {
-	requestDef := GenReqDefForCreateFastExecuteScript()
-	return &CreateFastExecuteScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateWorkflow 创建任务
 //
 // 该接口用于创建工作流（任务），返回工作流详情。任务类型取决于模板名称和&#39;input&#39;参数。（注：接口目前开放的region为：华北-北京四,华东-上海一,华东-上海二,华南-广州）。

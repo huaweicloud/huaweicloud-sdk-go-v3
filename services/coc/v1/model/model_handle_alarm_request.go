@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// HandlerAlarmRequest Request Object
-type HandlerAlarmRequest struct {
+// HandleAlarmRequest Request Object
+type HandleAlarmRequest struct {
 
 	// 告警ID
 	AlarmId string `json:"alarm_id"`
@@ -15,11 +15,11 @@ type HandlerAlarmRequest struct {
 	Body *AutoHandlerAlarmRequestBody `json:"body,omitempty"`
 }
 
-func (o HandlerAlarmRequest) String() string {
+func (o HandleAlarmRequest) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "HandlerAlarmRequest struct{}"
+		return "HandleAlarmRequest struct{}"
 	}
 
-	return strings.Join([]string{"HandlerAlarmRequest", string(data)}, " ")
+	return strings.Join([]string{"HandleAlarmRequest", string(data)}, " ")
 }

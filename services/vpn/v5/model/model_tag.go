@@ -7,8 +7,11 @@ import (
 )
 
 type Tag struct {
+
+	// 标签的键
 	Key string `json:"key"`
 
+	// 标签的值列表
 	Values []string `json:"values"`
 }
 

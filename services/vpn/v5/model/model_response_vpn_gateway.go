@@ -25,6 +25,7 @@ type ResponseVpnGateway struct {
 	// 网关的IP协议版本
 	IpVersion *ResponseVpnGatewayIpVersion `json:"ip_version,omitempty"`
 
+	// 证书ID
 	CertificateId *string `json:"certificate_id,omitempty"`
 
 	// VPN网关所连接的ER实例的ID

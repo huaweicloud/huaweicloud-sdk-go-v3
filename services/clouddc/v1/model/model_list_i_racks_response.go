@@ -6,19 +6,19 @@ import (
 	"strings"
 )
 
-// ListIRackResponse Response Object
-type ListIRackResponse struct {
+// ListIRacksResponse Response Object
+type ListIRacksResponse struct {
 	Iracks *[]IRack `json:"iracks,omitempty"`
 
 	PageInfo       *PageInfo `json:"page_info,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 
-func (o ListIRackResponse) String() string {
+func (o ListIRacksResponse) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "ListIRackResponse struct{}"
+		return "ListIRacksResponse struct{}"
 	}
 
-	return strings.Join([]string{"ListIRackResponse", string(data)}, " ")
+	return strings.Join([]string{"ListIRacksResponse", string(data)}, " ")
 }

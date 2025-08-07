@@ -7,6 +7,8 @@ import (
 )
 
 type DeleteResourcesTagsRequestBody struct {
+
+	// 资源标签
 	Tags []ResourceTag `json:"tags"`
 }
 

@@ -6,17 +6,17 @@ import (
 	"strings"
 )
 
-// HandlerAlarmResponse Response Object
-type HandlerAlarmResponse struct {
+// HandleAlarmResponse Response Object
+type HandleAlarmResponse struct {
 	Body           *interface{} `json:"body,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 
-func (o HandlerAlarmResponse) String() string {
+func (o HandleAlarmResponse) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "HandlerAlarmResponse struct{}"
+		return "HandleAlarmResponse struct{}"
 	}
 
-	return strings.Join([]string{"HandlerAlarmResponse", string(data)}, " ")
+	return strings.Join([]string{"HandleAlarmResponse", string(data)}, " ")
 }

@@ -8,6 +8,8 @@ import (
 
 // ListConnectionMonitorsResponse Response Object
 type ListConnectionMonitorsResponse struct {
+
+	// VPN连接监控列表
 	ConnectionMonitors *[]ConnectionMonitorInfo `json:"connection_monitors,omitempty"`
 
 	// 请求id

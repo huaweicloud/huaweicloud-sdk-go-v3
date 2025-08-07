@@ -61,6 +61,27 @@ func (c *OrganizationsClient) CreateAccountInvoker(request *model.CreateAccountR
 	return &CreateAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateResourceAccount 创建帐号
+//
+// 创建一个帐号，不携带手机号邮箱联系方式，生成的帐号将自动成为调用此接口的帐号所属组织的成员。此操作只能由组织的管理帐号调用。组织云服务将在新帐号中创建所需的服务关联委托和帐号访问委托。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OrganizationsClient) CreateResourceAccount(request *model.CreateResourceAccountRequest) (*model.CreateResourceAccountResponse, error) {
+	requestDef := GenReqDefForCreateResourceAccount()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateResourceAccountResponse), nil
+	}
+}
+
+// CreateResourceAccountInvoker 创建帐号
+func (c *OrganizationsClient) CreateResourceAccountInvoker(request *model.CreateResourceAccountRequest) *CreateResourceAccountInvoker {
+	requestDef := GenReqDefForCreateResourceAccount()
+	return &CreateResourceAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // InviteAccount 邀请账号加入组织
 //
 // 向另一个账号发送邀请，受邀账号将以成员账号加入您的组织。此操作只能由组织的管理账号调用。

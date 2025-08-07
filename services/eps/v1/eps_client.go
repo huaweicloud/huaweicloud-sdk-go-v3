@@ -40,6 +40,27 @@ func (c *EpsClient) CreateEnterpriseProjectInvoker(request *model.CreateEnterpri
 	return &CreateEnterpriseProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteEnterpriseProject 删除企业项目
+//
+// 删除企业项目
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EpsClient) DeleteEnterpriseProject(request *model.DeleteEnterpriseProjectRequest) (*model.DeleteEnterpriseProjectResponse, error) {
+	requestDef := GenReqDefForDeleteEnterpriseProject()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteEnterpriseProjectResponse), nil
+	}
+}
+
+// DeleteEnterpriseProjectInvoker 删除企业项目
+func (c *EpsClient) DeleteEnterpriseProjectInvoker(request *model.DeleteEnterpriseProjectRequest) *DeleteEnterpriseProjectInvoker {
+	requestDef := GenReqDefForDeleteEnterpriseProject()
+	return &DeleteEnterpriseProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DisableEnterpriseProject 停用企业项目
 //
 // 停用企业项目。
@@ -124,6 +145,27 @@ func (c *EpsClient) ListEnterpriseProjectInvoker(request *model.ListEnterprisePr
 	return &ListEnterpriseProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListMigrationRecord 查询资源迁移记录
+//
+// 查询资源迁移记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EpsClient) ListMigrationRecord(request *model.ListMigrationRecordRequest) (*model.ListMigrationRecordResponse, error) {
+	requestDef := GenReqDefForListMigrationRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMigrationRecordResponse), nil
+	}
+}
+
+// ListMigrationRecordInvoker 查询资源迁移记录
+func (c *EpsClient) ListMigrationRecordInvoker(request *model.ListMigrationRecordRequest) *ListMigrationRecordInvoker {
+	requestDef := GenReqDefForListMigrationRecord()
+	return &ListMigrationRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProviders 查询企业项目支持的服务
 //
 // 查询企业项目支持的服务
@@ -143,6 +185,27 @@ func (c *EpsClient) ListProviders(request *model.ListProvidersRequest) (*model.L
 func (c *EpsClient) ListProvidersInvoker(request *model.ListProvidersRequest) *ListProvidersInvoker {
 	requestDef := GenReqDefForListProviders()
 	return &ListProvidersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResourceMapping 查询资源类型映射
+//
+// 查询资源类型映射
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EpsClient) ListResourceMapping(request *model.ListResourceMappingRequest) (*model.ListResourceMappingResponse, error) {
+	requestDef := GenReqDefForListResourceMapping()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourceMappingResponse), nil
+	}
+}
+
+// ListResourceMappingInvoker 查询资源类型映射
+func (c *EpsClient) ListResourceMappingInvoker(request *model.ListResourceMappingRequest) *ListResourceMappingInvoker {
+	requestDef := GenReqDefForListResourceMapping()
+	return &ListResourceMappingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // MigrateResource 迁移资源
@@ -187,6 +250,27 @@ func (c *EpsClient) ShowApiVersionInvoker(request *model.ShowApiVersionRequest) 
 	return &ShowApiVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAssociatedResources 查询关联资源
+//
+// 查询关联资源
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EpsClient) ShowAssociatedResources(request *model.ShowAssociatedResourcesRequest) (*model.ShowAssociatedResourcesResponse, error) {
+	requestDef := GenReqDefForShowAssociatedResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAssociatedResourcesResponse), nil
+	}
+}
+
+// ShowAssociatedResourcesInvoker 查询关联资源
+func (c *EpsClient) ShowAssociatedResourcesInvoker(request *model.ShowAssociatedResourcesRequest) *ShowAssociatedResourcesInvoker {
+	requestDef := GenReqDefForShowAssociatedResources()
+	return &ShowAssociatedResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowEnterpriseProject 查询企业项目详情
 //
 // 查询企业项目详情。
@@ -227,6 +311,27 @@ func (c *EpsClient) ShowEnterpriseProjectQuota(request *model.ShowEnterpriseProj
 func (c *EpsClient) ShowEnterpriseProjectQuotaInvoker(request *model.ShowEnterpriseProjectQuotaRequest) *ShowEnterpriseProjectQuotaInvoker {
 	requestDef := GenReqDefForShowEnterpriseProjectQuota()
 	return &ShowEnterpriseProjectQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowEpConfigs 查询服务配置
+//
+// 查询服务配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EpsClient) ShowEpConfigs(request *model.ShowEpConfigsRequest) (*model.ShowEpConfigsResponse, error) {
+	requestDef := GenReqDefForShowEpConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowEpConfigsResponse), nil
+	}
+}
+
+// ShowEpConfigsInvoker 查询服务配置
+func (c *EpsClient) ShowEpConfigsInvoker(request *model.ShowEpConfigsRequest) *ShowEpConfigsInvoker {
+	requestDef := GenReqDefForShowEpConfigs()
+	return &ShowEpConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowResourceBindEnterpriseProject 查询企业项目绑定的资源列表

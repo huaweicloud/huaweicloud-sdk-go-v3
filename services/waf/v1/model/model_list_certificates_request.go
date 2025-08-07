@@ -26,6 +26,9 @@ type ListCertificatesRequest struct {
 
 	// 证书过期状态，0-未过期，1-已过期，2-即将过期（证书将在一个月内过期）
 	ExpStatus *int32 `json:"exp_status,omitempty"`
+
+	// 查询结果的证书来源服务是否包括SCM服务，值为true或者false。
+	QueryScm *bool `json:"query_scm,omitempty"`
 }
 
 func (o ListCertificatesRequest) String() string {

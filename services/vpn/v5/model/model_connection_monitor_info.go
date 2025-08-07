@@ -11,6 +11,7 @@ type ConnectionMonitorInfo struct {
 	// VPN连接监控ID
 	Id *string `json:"id,omitempty"`
 
+	// VPN连接监控状态
 	Status *string `json:"status,omitempty"`
 
 	// VPN连接监控对应的VPN连接ID

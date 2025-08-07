@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// CreateVpnUserGroupResponseBodyUserGroup VPN用户组
 type CreateVpnUserGroupResponseBodyUserGroup struct {
 
 	// VPN用户组ID

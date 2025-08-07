@@ -21,6 +21,18 @@ type ListFactoryPendingItemsRequest struct {
 	// 任务名称。
 	ItemName *string `json:"item_name,omitempty"`
 
+	// 变更类型。
+	UpdateType *string `json:"update_type,omitempty"`
+
+	// 任务类型。
+	TaskType *string `json:"task_type,omitempty"`
+
+	// 开始时间。
+	StartTime *string `json:"start_time,omitempty"`
+
+	// 结束时间。
+	EndTime *string `json:"end_time,omitempty"`
+
 	// 分页返回结果，指定每页最大记录数。范围[1,100] 默认值：10
 	Limit *int32 `json:"limit,omitempty"`
 

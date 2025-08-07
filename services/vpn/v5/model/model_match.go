@@ -10,8 +10,11 @@ import (
 )
 
 type Match struct {
+
+	// 匹配的键
 	Key MatchKey `json:"key"`
 
+	// 匹配的值
 	Value string `json:"value"`
 }
 

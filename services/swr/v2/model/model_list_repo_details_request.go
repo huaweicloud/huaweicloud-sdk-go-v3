@@ -28,7 +28,7 @@ type ListRepoDetailsRequest struct {
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 分页查询下一次查询起始标记，接口的返回值nextMarker为下一次查询的起始标记。
-	Marker *string `json:"marker,omitempty"`
+	Marker *int32 `json:"marker,omitempty"`
 
 	// 是否公开私有，true为公开，false为私有。
 	IsPublic *bool `json:"is_public,omitempty"`

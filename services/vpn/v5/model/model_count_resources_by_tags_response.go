@@ -8,6 +8,8 @@ import (
 
 // CountResourcesByTagsResponse Response Object
 type CountResourcesByTagsResponse struct {
+
+	// 总记录数
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

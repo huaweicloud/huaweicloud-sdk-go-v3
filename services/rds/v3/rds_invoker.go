@@ -1173,6 +1173,22 @@ func (i *ListRestoreTimesInvoker) Invoke() (*model.ListRestoreTimesResponse, err
 	}
 }
 
+type ListScheduleTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListScheduleTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListScheduleTasksInvoker) Invoke() (*model.ListScheduleTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListScheduleTasksResponse), nil
+	}
+}
+
 type ListShareBackupsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1346,6 +1362,22 @@ func (i *ListStorageTypesInvoker) Invoke() (*model.ListStorageTypesResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListStorageTypesResponse), nil
+	}
+}
+
+type ListTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTasksInvoker) Invoke() (*model.ListTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTasksResponse), nil
 	}
 }
 
@@ -3669,6 +3701,38 @@ func (i *ListAuthorizedSqlserverDbUsersInvoker) Invoke() (*model.ListAuthorizedS
 	}
 }
 
+type ListBusinessPartnersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBusinessPartnersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBusinessPartnersInvoker) Invoke() (*model.ListBusinessPartnersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBusinessPartnersResponse), nil
+	}
+}
+
+type ListMarketplaceEngineProductsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMarketplaceEngineProductsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListMarketplaceEngineProductsInvoker) Invoke() (*model.ListMarketplaceEngineProductsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMarketplaceEngineProductsResponse), nil
+	}
+}
+
 type ListMsdtcHostsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3778,5 +3842,37 @@ func (i *SetInstancesNewDbShrinkInvoker) Invoke() (*model.SetInstancesNewDbShrin
 		return nil, err
 	} else {
 		return result.(*model.SetInstancesNewDbShrinkResponse), nil
+	}
+}
+
+type ListSqlStatisticsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSqlStatisticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSqlStatisticsInvoker) Invoke() (*model.ListSqlStatisticsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSqlStatisticsResponse), nil
+	}
+}
+
+type ResetViewSqlStatisticsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetViewSqlStatisticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ResetViewSqlStatisticsInvoker) Invoke() (*model.ResetViewSqlStatisticsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetViewSqlStatisticsResponse), nil
 	}
 }

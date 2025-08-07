@@ -29,6 +29,7 @@ type ShowServerResponse struct {
 
 	ServerCertificate *ShowServerResponseServerCertificate `json:"server_certificate,omitempty"`
 
+	// 客户端CA证书列表
 	ClientCaCertificates *[]QueryClientCaCertificateBody `json:"client_ca_certificates,omitempty"`
 
 	SslOptions *ShowServerResponseSslOptions `json:"ssl_options,omitempty"`

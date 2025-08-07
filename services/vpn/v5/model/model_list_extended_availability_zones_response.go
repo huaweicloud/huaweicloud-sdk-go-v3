@@ -8,6 +8,8 @@ import (
 
 // ListExtendedAvailabilityZonesResponse Response Object
 type ListExtendedAvailabilityZonesResponse struct {
+
+	// 可用区列表
 	AvailabilityZones *[]ExtendedAvailabilityZone `json:"availability_zones,omitempty"`
 
 	// 请求id

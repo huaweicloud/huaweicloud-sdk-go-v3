@@ -1,0 +1,24 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// UpdateHostAccessStatusOfUnderlineResponse Response Object
+type UpdateHostAccessStatusOfUnderlineResponse struct {
+
+	// **参数解释：** 完成情况（0:未接入，1:接入） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	AccessStatus   *int32 `json:"access_status,omitempty"`
+	HttpStatusCode int    `json:"-"`
+}
+
+func (o UpdateHostAccessStatusOfUnderlineResponse) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "UpdateHostAccessStatusOfUnderlineResponse struct{}"
+	}
+
+	return strings.Join([]string{"UpdateHostAccessStatusOfUnderlineResponse", string(data)}, " ")
+}

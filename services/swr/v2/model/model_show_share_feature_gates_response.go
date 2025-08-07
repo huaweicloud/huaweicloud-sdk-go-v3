@@ -33,6 +33,12 @@ type ShowShareFeatureGatesResponse struct {
 	// 是否支持流水线服务
 	EnablePipeline *bool `json:"enable_pipeline,omitempty"`
 
+	// 是否支持增强型临时登录指令。设置为true时，前端获取登录指令时可以选择获取增强型登录指令。
+	EnableAuthorizationToken *bool `json:"enable_authorization_token,omitempty"`
+
+	// 是否支持镜像资源。设置为true时，前端界面显示“镜像资源”页签，可查看镜像中心。
+	EnableResource *bool `json:"enable_resource,omitempty"`
+
 	// 是否支持list v3接口
 	EnableListV3   *bool `json:"enable_list_v3,omitempty"`
 	HttpStatusCode int   `json:"-"`

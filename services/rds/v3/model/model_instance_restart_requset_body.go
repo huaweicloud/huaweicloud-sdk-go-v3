@@ -7,9 +7,7 @@ import (
 )
 
 type InstanceRestartRequsetBody struct {
-
-	// 空值
-	Restart *interface{} `json:"restart"`
+	Restart *RestartConfiguration `json:"restart"`
 }
 
 func (o InstanceRestartRequsetBody) String() string {

@@ -7,12 +7,17 @@ import (
 )
 
 type Resource struct {
+
+	// 资源ID
 	ResourceId *string `json:"resource_id,omitempty"`
 
+	// 资源详情
 	ResourceDetail *interface{} `json:"resource_detail,omitempty"`
 
+	// 标签列表
 	Tags *[]ResourceTag `json:"tags,omitempty"`
 
+	// 资源名称
 	ResourceName *string `json:"resource_name,omitempty"`
 }
 

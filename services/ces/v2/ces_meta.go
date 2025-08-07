@@ -650,10 +650,6 @@ func GenReqDefForListAlarmTemplates() *def.HttpRequestDef {
 		WithName("TemplateName").
 		WithJsonTag("template_name").
 		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProductName").
-		WithJsonTag("product_name").
-		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

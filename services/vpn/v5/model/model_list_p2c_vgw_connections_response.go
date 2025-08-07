@@ -8,6 +8,8 @@ import (
 
 // ListP2cVgwConnectionsResponse Response Object
 type ListP2cVgwConnectionsResponse struct {
+
+	// 连接信息
 	Connections *[]Connection `json:"connections,omitempty"`
 
 	// 总计数量

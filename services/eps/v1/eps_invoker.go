@@ -21,6 +21,22 @@ func (i *CreateEnterpriseProjectInvoker) Invoke() (*model.CreateEnterpriseProjec
 	}
 }
 
+type DeleteEnterpriseProjectInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteEnterpriseProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteEnterpriseProjectInvoker) Invoke() (*model.DeleteEnterpriseProjectResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteEnterpriseProjectResponse), nil
+	}
+}
+
 type DisableEnterpriseProjectInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -85,6 +101,22 @@ func (i *ListEnterpriseProjectInvoker) Invoke() (*model.ListEnterpriseProjectRes
 	}
 }
 
+type ListMigrationRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMigrationRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListMigrationRecordInvoker) Invoke() (*model.ListMigrationRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMigrationRecordResponse), nil
+	}
+}
+
 type ListProvidersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -98,6 +130,22 @@ func (i *ListProvidersInvoker) Invoke() (*model.ListProvidersResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListProvidersResponse), nil
+	}
+}
+
+type ListResourceMappingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResourceMappingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListResourceMappingInvoker) Invoke() (*model.ListResourceMappingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResourceMappingResponse), nil
 	}
 }
 
@@ -133,6 +181,22 @@ func (i *ShowApiVersionInvoker) Invoke() (*model.ShowApiVersionResponse, error) 
 	}
 }
 
+type ShowAssociatedResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAssociatedResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAssociatedResourcesInvoker) Invoke() (*model.ShowAssociatedResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAssociatedResourcesResponse), nil
+	}
+}
+
 type ShowEnterpriseProjectInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -162,6 +226,22 @@ func (i *ShowEnterpriseProjectQuotaInvoker) Invoke() (*model.ShowEnterpriseProje
 		return nil, err
 	} else {
 		return result.(*model.ShowEnterpriseProjectQuotaResponse), nil
+	}
+}
+
+type ShowEpConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowEpConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowEpConfigsInvoker) Invoke() (*model.ShowEpConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowEpConfigsResponse), nil
 	}
 }
 

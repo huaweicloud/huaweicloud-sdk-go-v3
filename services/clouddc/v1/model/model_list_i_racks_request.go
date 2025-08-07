@@ -9,8 +9,8 @@ import (
 	"strings"
 )
 
-// ListIRackRequest Request Object
-type ListIRackRequest struct {
+// ListIRacksRequest Request Object
+type ListIRacksRequest struct {
 
 	// 区域
 	Region string `json:"region"`
@@ -22,47 +22,47 @@ type ListIRackRequest struct {
 	Limit *string `json:"limit,omitempty"`
 
 	// 排序升、降序
-	Order *ListIRackRequestOrder `json:"order,omitempty"`
+	Order *ListIRacksRequestOrder `json:"order,omitempty"`
 }
 
-func (o ListIRackRequest) String() string {
+func (o ListIRacksRequest) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "ListIRackRequest struct{}"
+		return "ListIRacksRequest struct{}"
 	}
 
-	return strings.Join([]string{"ListIRackRequest", string(data)}, " ")
+	return strings.Join([]string{"ListIRacksRequest", string(data)}, " ")
 }
 
-type ListIRackRequestOrder struct {
+type ListIRacksRequestOrder struct {
 	value string
 }
 
-type ListIRackRequestOrderEnum struct {
-	ASC  ListIRackRequestOrder
-	DESC ListIRackRequestOrder
+type ListIRacksRequestOrderEnum struct {
+	ASC  ListIRacksRequestOrder
+	DESC ListIRacksRequestOrder
 }
 
-func GetListIRackRequestOrderEnum() ListIRackRequestOrderEnum {
-	return ListIRackRequestOrderEnum{
-		ASC: ListIRackRequestOrder{
+func GetListIRacksRequestOrderEnum() ListIRacksRequestOrderEnum {
+	return ListIRacksRequestOrderEnum{
+		ASC: ListIRacksRequestOrder{
 			value: "asc",
 		},
-		DESC: ListIRackRequestOrder{
+		DESC: ListIRacksRequestOrder{
 			value: "desc",
 		},
 	}
 }
 
-func (c ListIRackRequestOrder) Value() string {
+func (c ListIRacksRequestOrder) Value() string {
 	return c.value
 }
 
-func (c ListIRackRequestOrder) MarshalJSON() ([]byte, error) {
+func (c ListIRacksRequestOrder) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *ListIRackRequestOrder) UnmarshalJSON(b []byte) error {
+func (c *ListIRacksRequestOrder) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

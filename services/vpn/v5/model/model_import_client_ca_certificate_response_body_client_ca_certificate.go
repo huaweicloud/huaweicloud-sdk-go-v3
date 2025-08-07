@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// ImportClientCaCertificateResponseBodyClientCaCertificate 客户端CA证书
 type ImportClientCaCertificateResponseBodyClientCaCertificate struct {
 
 	// ID

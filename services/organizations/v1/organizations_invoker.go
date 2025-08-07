@@ -37,6 +37,22 @@ func (i *CreateAccountInvoker) Invoke() (*model.CreateAccountResponse, error) {
 	}
 }
 
+type CreateResourceAccountInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateResourceAccountInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateResourceAccountInvoker) Invoke() (*model.CreateResourceAccountResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateResourceAccountResponse), nil
+	}
+}
+
 type InviteAccountInvoker struct {
 	*invoker.BaseInvoker
 }

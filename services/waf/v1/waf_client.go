@@ -64,6 +64,90 @@ func (c *WafClient) ChangePrepaidCloudWafInvoker(request *model.ChangePrepaidClo
 	return &ChangePrepaidCloudWafInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckAgency 检查代理
+//
+// 查询独享引擎的代理
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) CheckAgency(request *model.CheckAgencyRequest) (*model.CheckAgencyResponse, error) {
+	requestDef := GenReqDefForCheckAgency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckAgencyResponse), nil
+	}
+}
+
+// CheckAgencyInvoker 检查代理
+func (c *WafClient) CheckAgencyInvoker(request *model.CheckAgencyRequest) *CheckAgencyInvoker {
+	requestDef := GenReqDefForCheckAgency()
+	return &CheckAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ConfirmPolicyAntileakageMap SMN告警通知
+//
+// 查询敏感信息选项的详细信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ConfirmPolicyAntileakageMap(request *model.ConfirmPolicyAntileakageMapRequest) (*model.ConfirmPolicyAntileakageMapResponse, error) {
+	requestDef := GenReqDefForConfirmPolicyAntileakageMap()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ConfirmPolicyAntileakageMapResponse), nil
+	}
+}
+
+// ConfirmPolicyAntileakageMapInvoker SMN告警通知
+func (c *WafClient) ConfirmPolicyAntileakageMapInvoker(request *model.ConfirmPolicyAntileakageMapRequest) *ConfirmPolicyAntileakageMapInvoker {
+	requestDef := GenReqDefForConfirmPolicyAntileakageMap()
+	return &ConfirmPolicyAntileakageMapInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ConfirmPolicyIpReputationMap SMN告警通知
+//
+// 查询威胁情报控制防护选项的详细信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ConfirmPolicyIpReputationMap(request *model.ConfirmPolicyIpReputationMapRequest) (*model.ConfirmPolicyIpReputationMapResponse, error) {
+	requestDef := GenReqDefForConfirmPolicyIpReputationMap()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ConfirmPolicyIpReputationMapResponse), nil
+	}
+}
+
+// ConfirmPolicyIpReputationMapInvoker SMN告警通知
+func (c *WafClient) ConfirmPolicyIpReputationMapInvoker(request *model.ConfirmPolicyIpReputationMapRequest) *ConfirmPolicyIpReputationMapInvoker {
+	requestDef := GenReqDefForConfirmPolicyIpReputationMap()
+	return &ConfirmPolicyIpReputationMapInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ConfirmThreatMap SMN告警通知
+//
+// 查询告警可选事件类型
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ConfirmThreatMap(request *model.ConfirmThreatMapRequest) (*model.ConfirmThreatMapResponse, error) {
+	requestDef := GenReqDefForConfirmThreatMap()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ConfirmThreatMapResponse), nil
+	}
+}
+
+// ConfirmThreatMapInvoker SMN告警通知
+func (c *WafClient) ConfirmThreatMapInvoker(request *model.ConfirmThreatMapRequest) *ConfirmThreatMapInvoker {
+	requestDef := GenReqDefForConfirmThreatMap()
+	return &ConfirmThreatMapInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ConfirmUserBundle 获取用户套餐信息
 //
 // 获取用户购买的WAF规格信息
@@ -1219,6 +1303,27 @@ func (c *WafClient) ListIpGroupInvoker(request *model.ListIpGroupRequest) *ListI
 	return &ListIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListIpReputationRules 查询威胁情报规则列表
+//
+// 查询威胁情报规则列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ListIpReputationRules(request *model.ListIpReputationRulesRequest) (*model.ListIpReputationRulesResponse, error) {
+	requestDef := GenReqDefForListIpReputationRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIpReputationRulesResponse), nil
+	}
+}
+
+// ListIpReputationRulesInvoker 查询威胁情报规则列表
+func (c *WafClient) ListIpReputationRulesInvoker(request *model.ListIpReputationRulesRequest) *ListIpReputationRulesInvoker {
+	requestDef := GenReqDefForListIpReputationRules()
+	return &ListIpReputationRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListNoticeConfigs 查询告警通知配置
 //
 // 查询告警通知配置
@@ -1322,6 +1427,27 @@ func (c *WafClient) ListPrivacyRule(request *model.ListPrivacyRuleRequest) (*mod
 func (c *WafClient) ListPrivacyRuleInvoker(request *model.ListPrivacyRuleRequest) *ListPrivacyRuleInvoker {
 	requestDef := GenReqDefForListPrivacyRule()
 	return &ListPrivacyRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProtectableResources 查询可防护的资源列表
+//
+// 查询可防护的资源列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ListProtectableResources(request *model.ListProtectableResourcesRequest) (*model.ListProtectableResourcesResponse, error) {
+	requestDef := GenReqDefForListProtectableResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProtectableResourcesResponse), nil
+	}
+}
+
+// ListProtectableResourcesInvoker 查询可防护的资源列表
+func (c *WafClient) ListProtectableResourcesInvoker(request *model.ListProtectableResourcesRequest) *ListProtectableResourcesInvoker {
+	requestDef := GenReqDefForListProtectableResources()
+	return &ListProtectableResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPunishmentRules 查询攻击惩罚规则列表
@@ -2101,6 +2227,27 @@ func (c *WafClient) ShowWhiteBlackIpRuleInvoker(request *model.ShowWhiteBlackIpR
 	return &ShowWhiteBlackIpRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateAccessProgress 修改域名接入进度
+//
+// 返回接入进度
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) UpdateAccessProgress(request *model.UpdateAccessProgressRequest) (*model.UpdateAccessProgressResponse, error) {
+	requestDef := GenReqDefForUpdateAccessProgress()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAccessProgressResponse), nil
+	}
+}
+
+// UpdateAccessProgressInvoker 修改域名接入进度
+func (c *WafClient) UpdateAccessProgressInvoker(request *model.UpdateAccessProgressRequest) *UpdateAccessProgressInvoker {
+	requestDef := GenReqDefForUpdateAccessProgress()
+	return &UpdateAccessProgressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateAlertNoticeConfig 更新告警通知配置
 //
 // 更新告警通知配置
@@ -2311,6 +2458,27 @@ func (c *WafClient) UpdateHostInvoker(request *model.UpdateHostRequest) *UpdateH
 	return &UpdateHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateHostAccessStatusOfUnderline 修改域名接入状态
+//
+// 返回接入状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) UpdateHostAccessStatusOfUnderline(request *model.UpdateHostAccessStatusOfUnderlineRequest) (*model.UpdateHostAccessStatusOfUnderlineResponse, error) {
+	requestDef := GenReqDefForUpdateHostAccessStatusOfUnderline()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateHostAccessStatusOfUnderlineResponse), nil
+	}
+}
+
+// UpdateHostAccessStatusOfUnderlineInvoker 修改域名接入状态
+func (c *WafClient) UpdateHostAccessStatusOfUnderlineInvoker(request *model.UpdateHostAccessStatusOfUnderlineRequest) *UpdateHostAccessStatusOfUnderlineInvoker {
+	requestDef := GenReqDefForUpdateHostAccessStatusOfUnderline()
+	return &UpdateHostAccessStatusOfUnderlineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateHostProtectStatus 修改域名防护状态
 //
 // 修改域名防护状态
@@ -2479,6 +2647,27 @@ func (c *WafClient) UpdatePremiumHostInvoker(request *model.UpdatePremiumHostReq
 	return &UpdatePremiumHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdatePremiumHostAccessStatus 修改独享模式域名接入状态
+//
+// 修改独享模式域名接入状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) UpdatePremiumHostAccessStatus(request *model.UpdatePremiumHostAccessStatusRequest) (*model.UpdatePremiumHostAccessStatusResponse, error) {
+	requestDef := GenReqDefForUpdatePremiumHostAccessStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePremiumHostAccessStatusResponse), nil
+	}
+}
+
+// UpdatePremiumHostAccessStatusInvoker 修改独享模式域名接入状态
+func (c *WafClient) UpdatePremiumHostAccessStatusInvoker(request *model.UpdatePremiumHostAccessStatusRequest) *UpdatePremiumHostAccessStatusInvoker {
+	requestDef := GenReqDefForUpdatePremiumHostAccessStatus()
+	return &UpdatePremiumHostAccessStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdatePremiumHostProtectStatus 修改独享模式域名防护状态
 //
 // 修改独享模式域名防护状态
@@ -2498,6 +2687,27 @@ func (c *WafClient) UpdatePremiumHostProtectStatus(request *model.UpdatePremiumH
 func (c *WafClient) UpdatePremiumHostProtectStatusInvoker(request *model.UpdatePremiumHostProtectStatusRequest) *UpdatePremiumHostProtectStatusInvoker {
 	requestDef := GenReqDefForUpdatePremiumHostProtectStatus()
 	return &UpdatePremiumHostProtectStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePremiumInstance 操作WAF独享引擎
+//
+// 操作WAF独享引擎
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) UpdatePremiumInstance(request *model.UpdatePremiumInstanceRequest) (*model.UpdatePremiumInstanceResponse, error) {
+	requestDef := GenReqDefForUpdatePremiumInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePremiumInstanceResponse), nil
+	}
+}
+
+// UpdatePremiumInstanceInvoker 操作WAF独享引擎
+func (c *WafClient) UpdatePremiumInstanceInvoker(request *model.UpdatePremiumInstanceRequest) *UpdatePremiumInstanceInvoker {
+	requestDef := GenReqDefForUpdatePremiumInstance()
+	return &UpdatePremiumInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdatePrivacyRule 更新隐私屏蔽防护规则

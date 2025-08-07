@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// CreateServerResponseBodyVpnServer VPN服务端
 type CreateServerResponseBodyVpnServer struct {
 
 	// VPN服务端 ID

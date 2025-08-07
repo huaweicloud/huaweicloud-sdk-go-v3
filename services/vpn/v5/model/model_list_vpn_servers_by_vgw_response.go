@@ -8,6 +8,8 @@ import (
 
 // ListVpnServersByVgwResponse Response Object
 type ListVpnServersByVgwResponse struct {
+
+	// 服务端列表
 	VpnServers *[]ShowServerResponse `json:"vpn_servers,omitempty"`
 
 	// 总数

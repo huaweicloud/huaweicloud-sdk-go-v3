@@ -7,6 +7,8 @@ import (
 )
 
 type BatchCreateVpnConnectionRequestBody struct {
+
+	// VPN连接对象数组
 	VpnConnections []CreateVpnConnectionRequestBodyContent `json:"vpn_connections"`
 }
 

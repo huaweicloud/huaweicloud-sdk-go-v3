@@ -14,7 +14,7 @@ type UpdateAlarmTemplateRequestBody struct {
 	// 告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
 	TemplateName string `json:"template_name"`
 
-	// 自定义告警模板类型 0：指标 2： 事件
+	// **参数解释**： 自定义告警模板类型 **约束限制**： 不涉及。 **取值范围**： 枚举值。0：指标；2： 事件。 **默认取值**： 0
 	TemplateType *UpdateAlarmTemplateRequestBodyTemplateType `json:"template_type,omitempty"`
 
 	// 告警模板的描述，长度范围[0,256]，该字段默认值为空字符串

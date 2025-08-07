@@ -50,6 +50,9 @@ type ShowUserResult struct {
 	// IAM用户最后登录时间。
 	LastLoginTime *string `json:"last_login_time,omitempty"`
 
+	// IAM用户最后使用密码认证时间。
+	LastPwdAuthTime *string `json:"last_pwd_auth_time,omitempty"`
+
 	// IAM用户密码强度。结果为Low/Middle/High/None，分别表示密码强度低/中/高/无。
 	PwdStrength *string `json:"pwd_strength,omitempty"`
 

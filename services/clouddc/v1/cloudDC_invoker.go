@@ -229,19 +229,19 @@ func (i *ListIDcsInvoker) Invoke() (*model.ListIDcsResponse, error) {
 	}
 }
 
-type ListIRackInvoker struct {
+type ListIRacksInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListIRackInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ListIRacksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ListIRackInvoker) Invoke() (*model.ListIRackResponse, error) {
+func (i *ListIRacksInvoker) Invoke() (*model.ListIRacksResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListIRackResponse), nil
+		return result.(*model.ListIRacksResponse), nil
 	}
 }
 

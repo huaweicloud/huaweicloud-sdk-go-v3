@@ -30,6 +30,8 @@ type CreateAccountStatusDto struct {
 
 	// 如果请求失败，则说明失败原因。
 	FailureReason *string `json:"failure_reason,omitempty"`
+
+	FailureDetailMsg *CreateAccountStatusDtoFailureDetailMsg `json:"failure_detail_msg,omitempty"`
 }
 
 func (o CreateAccountStatusDto) String() string {

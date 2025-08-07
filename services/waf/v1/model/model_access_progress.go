@@ -6,13 +6,12 @@ import (
 	"strings"
 )
 
-// AccessProgress 冗余参数，仅用于新版console（前端）使用
 type AccessProgress struct {
 
-	// 步骤   - 1: 指回源IP加白   - 2: 指本地验证   - 3：指修改DNS解析
+	// **参数解释：** 接入步骤（1:回源IP加白步骤，2:本地验证步骤 3:修改DNS解析步骤） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Step *int32 `json:"step,omitempty"`
 
-	// 状态，0：未完成这个步骤；1：已完成这个状态”
+	// **参数解释：** 完成情况（0:未完成，1:完成，2:跳过） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Status *int32 `json:"status,omitempty"`
 }
 

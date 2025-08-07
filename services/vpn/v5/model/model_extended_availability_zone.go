@@ -14,6 +14,7 @@ type ExtendedAvailabilityZone struct {
 	// 公共边界组
 	PublicBorderGroup *string `json:"public_border_group,omitempty"`
 
+	// 该可用区下可选的VPN网关规格组合
 	AvailableSpecs *[]AvailableSpec `json:"available_specs,omitempty"`
 }
 

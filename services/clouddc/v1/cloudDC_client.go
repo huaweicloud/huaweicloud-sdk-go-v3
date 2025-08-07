@@ -327,25 +327,25 @@ func (c *CloudDCClient) ListIDcsInvoker(request *model.ListIDcsRequest) *ListIDc
 	return &ListIDcsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListIRack 查询 iRack 实例列表
+// ListIRacks 查询 iRack 实例列表
 //
 // 用户下单后，用户上报iRack设备列表。该 API 可以查看 iRack 实例与关联imetal数量列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CloudDCClient) ListIRack(request *model.ListIRackRequest) (*model.ListIRackResponse, error) {
-	requestDef := GenReqDefForListIRack()
+func (c *CloudDCClient) ListIRacks(request *model.ListIRacksRequest) (*model.ListIRacksResponse, error) {
+	requestDef := GenReqDefForListIRacks()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListIRackResponse), nil
+		return resp.(*model.ListIRacksResponse), nil
 	}
 }
 
-// ListIRackInvoker 查询 iRack 实例列表
-func (c *CloudDCClient) ListIRackInvoker(request *model.ListIRackRequest) *ListIRackInvoker {
-	requestDef := GenReqDefForListIRack()
-	return &ListIRackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListIRacksInvoker 查询 iRack 实例列表
+func (c *CloudDCClient) ListIRacksInvoker(request *model.ListIRacksRequest) *ListIRacksInvoker {
+	requestDef := GenReqDefForListIRacks()
+	return &ListIRacksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListInstances 批量查询实例
