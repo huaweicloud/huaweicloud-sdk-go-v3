@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// FileHash 文件哈希
+// FileHash **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
 type FileHash struct {
 }
 

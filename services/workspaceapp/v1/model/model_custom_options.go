@@ -11,6 +11,8 @@ type CustomOptions struct {
 
 	// 配置项1内容。
 	CustomConfiguration1Rule *string `json:"custom_configuration1_rule,omitempty"`
+
+	RailTransparentConfig *RailTransparentConfig `json:"rail_transparent_config,omitempty"`
 }
 
 func (o CustomOptions) String() string {

@@ -12,19 +12,19 @@ type ResultResourceResponseInfo struct {
 	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
 	HostName *string `json:"host_name,omitempty"`
 
-	// **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+	// **参数解释**： 主机ID **取值范围**： 字符长度1-64位
 	HostId *string `json:"host_id,omitempty"`
 
 	// **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
 	AgentId *string `json:"agent_id,omitempty"`
 
-	// 服务器私有IP
+	// **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
 	PrivateIp *string `json:"private_ip,omitempty"`
 
-	// 弹性公网IP地址
+	// **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
 	PublicIp *string `json:"public_ip,omitempty"`
 
-	// 操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+	// **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
 	OsType *string `json:"os_type,omitempty"`
 
 	// 服务器状态，包含如下4种。   - ACTIVE ：运行中。   - SHUTOFF ：关机。   - BUILDING ：创建中。   - ERROR ：故障。

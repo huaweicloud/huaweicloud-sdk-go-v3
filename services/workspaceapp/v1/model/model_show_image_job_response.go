@@ -26,7 +26,7 @@ type ShowImageJobResponse struct {
 	// 子任务总数。
 	SubJobsTotal *int32 `json:"sub_jobs_total,omitempty"`
 
-	// 子任务列表
+	// 子任务列表。
 	SubJobs        *[]ImageJobDetailInfo `json:"sub_jobs,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }

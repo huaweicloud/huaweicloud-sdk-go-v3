@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CreateResourceTagReq tags
+// CreateResourceTagReq tags。
 type CreateResourceTagReq struct {
 
 	// 标签列表。

@@ -12,7 +12,7 @@ import (
 // EmailDto The email address associated with the user.
 type EmailDto struct {
 
-	// 一个布尔值，表示这是否为用户的主电子邮箱
+	// 一个布尔值，表示这是否是用户的主电子邮箱
 	Primary bool `json:"primary"`
 
 	// 表示电子邮箱类型的字符串

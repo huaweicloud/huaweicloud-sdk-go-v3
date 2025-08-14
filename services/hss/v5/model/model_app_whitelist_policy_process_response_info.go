@@ -36,7 +36,7 @@ type AppWhitelistPolicyProcessResponseInfo struct {
 	// **参数解释**： 进程类型 **约束限制**: 不涉及 **取值范围**: - 1：系统程序 - 2：解释类程序 - 3：普通可执行程序
 	ProcessType *int32 `json:"process_type,omitempty"`
 
-	// 操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+	// **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
 	OsType *string `json:"os_type,omitempty"`
 
 	// **参数解释**： 应用类型 **约束限制**： 不涉及

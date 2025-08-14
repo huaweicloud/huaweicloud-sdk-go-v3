@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ImageJobExecuteInfo 任务执行失败信息
+// ImageJobExecuteInfo 任务执行失败信息。
 type ImageJobExecuteInfo struct {
 
 	// 任务执行失败时的错误码。

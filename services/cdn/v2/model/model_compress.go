@@ -17,6 +17,12 @@ type Compress struct {
 
 	// 压缩格式，内容总长度不可超过200个字符，  多种格式用“,”分割，每组内容不可超过50个字符， 开启状态下，首次传空时默认值为.js,.html,.css,.xml,.json,.shtml,.htm，否则为上次设置的结果。
 	FileType *string `json:"file_type,omitempty"`
+
+	// 压缩区间最小范围
+	CompressMinLength *int64 `json:"compress_min_length,omitempty"`
+
+	// 压缩区间最大范围
+	CompressMaxLength *int64 `json:"compress_max_length,omitempty"`
 }
 
 func (o Compress) String() string {

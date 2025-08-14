@@ -40,13 +40,13 @@ type ImageServer struct {
 	// 应用组授权用户， * 限制用户类型：'USER' - 用户
 	AuthorizeAccounts *[]ImageAccountInfo `json:"authorize_accounts,omitempty"`
 
-	// 镜像实例创建时间
+	// 镜像实例创建时间。
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
-	// 更新时间
+	// 更新时间。
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
-	// 企业项目ID,仅企业项目需配置(字段为空或者0表示使用默认default企业项目)
+	// 企业项目ID,仅企业项目需配置(字段为空或者0表示使用默认default企业项目)。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 

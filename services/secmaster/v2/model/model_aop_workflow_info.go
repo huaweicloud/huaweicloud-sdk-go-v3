@@ -49,7 +49,7 @@ type AopWorkflowInfo struct {
 	CurrentApprovalVersionId *string `json:"current_approval_version_id,omitempty"`
 
 	// 当前拒绝的版本号
-	CurrentRejectedVersoinId *string `json:"current_rejected_versoin_id,omitempty"`
+	CurrentRejectedVersionId *string `json:"current_rejected_version_id,omitempty"`
 
 	// aop的类型有以下的值     NORMAL, 通用     SURVEY, 调查     HEMOSTASIS,止血     EASE;缓解
 	AopType *string `json:"aop_type,omitempty"`

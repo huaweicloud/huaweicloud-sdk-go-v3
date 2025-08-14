@@ -229,6 +229,22 @@ func (i *CreateParametersForImportInvoker) Invoke() (*model.CreateParametersForI
 	}
 }
 
+type CreatePinInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePinInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreatePinInvoker) Invoke() (*model.CreatePinResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePinResponse), nil
+	}
+}
+
 type CreateRandomInvoker struct {
 	*invoker.BaseInvoker
 }

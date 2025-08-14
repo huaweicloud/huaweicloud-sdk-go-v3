@@ -9,16 +9,16 @@ import (
 // ShowBackupPolicyInfoResponse Response Object
 type ShowBackupPolicyInfoResponse struct {
 
-	// **参数解释**: 策略是否启用 **约束限制**: 不涉及 **取值范围**: true或者false **默认取值**: 不涉及
+	// **参数解释**: 策略是否启用 **取值范围**: - true：策略已启用 - false：策略未启用
 	Enabled *bool `json:"enabled,omitempty"`
 
-	// **参数解释**: 策略ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
+	// **参数解释**: 策略ID **取值范围**: 字符长度1-128
 	Id *string `json:"id,omitempty"`
 
-	// **参数解释**: 策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
+	// **参数解释**: 策略名称 **取值范围**: 字符长度1-128
 	Name *string `json:"name,omitempty"`
 
-	// **参数解释**: 备份类型。当前包含如下1种。   - backup ：备份 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
+	// **参数解释**: 备份类型 **取值范围**: - backup ：备份
 	OperationType *string `json:"operation_type,omitempty"`
 
 	OperationDefinition *OperationDefinitionInfo `json:"operation_definition,omitempty"`

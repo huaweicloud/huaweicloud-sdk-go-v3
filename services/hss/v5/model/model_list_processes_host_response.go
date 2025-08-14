@@ -9,7 +9,7 @@ import (
 // ListProcessesHostResponse Response Object
 type ListProcessesHostResponse struct {
 
-	// 主机统计信息总数,
+	// 主机统计信息总数
 	TotalNum *int32 `json:"total_num,omitempty"`
 
 	// 主机统计信息列表

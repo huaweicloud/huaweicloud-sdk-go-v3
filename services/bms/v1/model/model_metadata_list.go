@@ -12,6 +12,9 @@ import (
 // MetadataList metadata数据结构说明
 type MetadataList struct {
 
+	// 裸机的冻结状态
+	EcmResStatus *string `json:"EcmResStatus,omitempty"`
+
 	// 裸金属服务器的计费类型。1：按包年包月计费（即prePaid：预付费方式）。
 	ChargingMode *MetadataListChargingMode `json:"chargingMode,omitempty"`
 

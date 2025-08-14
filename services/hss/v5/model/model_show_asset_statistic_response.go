@@ -9,40 +9,40 @@ import (
 // ShowAssetStatisticResponse Response Object
 type ShowAssetStatisticResponse struct {
 
-	// 主机账号数量
+	// **参数解释**： 主机账号数量 **取值范围**： 最小值0，最大值2147483647
 	AccountNum *int64 `json:"account_num,omitempty"`
 
-	// 开放端口数量
+	// **参数解释**： 开放端口数量 **取值范围**： 最小值0，最大值2147483647
 	PortNum *int64 `json:"port_num,omitempty"`
 
-	// 进程数量
+	// **参数解释**： 进程数量 **取值范围**： 最小值0，最大值2147483647
 	ProcessNum *int64 `json:"process_num,omitempty"`
 
-	// 软件数量
+	// **参数解释**： 软件数量 **取值范围**： 最小值0，最大值2147483647
 	AppNum *int64 `json:"app_num,omitempty"`
 
-	// 自启动进程数量
+	// **参数解释**： 自启动进程数量 **取值范围**： 最小值0，最大值2147483647
 	AutoLaunchNum *int64 `json:"auto_launch_num,omitempty"`
 
-	// web框架数量
+	// **参数解释**： web框架数量 **取值范围**： 最小值0，最大值2147483647
 	WebFrameworkNum *int64 `json:"web_framework_num,omitempty"`
 
-	// Web站点数量
+	// **参数解释**： Web站点数量 **取值范围**： 最小值0，最大值2147483647
 	WebSiteNum *int64 `json:"web_site_num,omitempty"`
 
-	// Jar包数量
+	// **参数解释**： Jar包数量 **取值范围**： 最小值0，最大值2147483647
 	JarPackageNum *int64 `json:"jar_package_num,omitempty"`
 
-	// 内核模块数量
+	// **参数解释**： 内核模块数量 **取值范围**： 最小值0，最大值2147483647
 	KernelModuleNum *int64 `json:"kernel_module_num,omitempty"`
 
-	// web服务数量
+	// **参数解释**： web服务数量 **取值范围**： 最小值0，最大值2147483647
 	WebServiceNum *int64 `json:"web_service_num,omitempty"`
 
-	// web应用数量
+	// **参数解释**： web应用数量 **取值范围**： 最小值0，最大值2147483647
 	WebAppNum *int64 `json:"web_app_num,omitempty"`
 
-	// 数据库数量
+	// **参数解释**： 数据库数量 **取值范围**： 最小值0，最大值2147483647
 	DatabaseNum    *int64 `json:"database_num,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

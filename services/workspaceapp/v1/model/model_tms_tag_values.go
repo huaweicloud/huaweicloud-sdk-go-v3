@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// TmsTagValues tms标签
+// TmsTagValues tms标签。
 type TmsTagValues struct {
 
 	// 键，最大长度128个unicode字符。

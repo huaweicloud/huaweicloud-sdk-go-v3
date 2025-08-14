@@ -9,10 +9,10 @@ import (
 // ListRansomwareProtectionNodesResponse Response Object
 type ListRansomwareProtectionNodesResponse struct {
 
-	// 总数
+	// **参数解释**: 总数 **取值范围**: 取值0-65535
 	TotalNum *int32 `json:"total_num,omitempty"`
 
-	// 查询勒索防护服务器列表
+	// **参数解释**: 查询勒索防护服务器列表 **取值范围**: 取值0-65535个ProtectionServerInfo对象
 	DataList       *[]ProtectionServerInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }

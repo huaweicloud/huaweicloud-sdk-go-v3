@@ -20,10 +20,10 @@ type WebAppAndServiceResponseInfo struct {
 	// agent_id
 	AgentId *string `json:"agent_id,omitempty"`
 
-	// install_path
+	// 安装路径
 	InstallPath *string `json:"install_path,omitempty"`
 
-	// config_path 配置文件路径
+	// 配置文件路径
 	ConfigPath *string `json:"config_path,omitempty"`
 
 	// uid

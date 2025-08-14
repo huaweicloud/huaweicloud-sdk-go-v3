@@ -17,7 +17,7 @@ type BackupVaultInfo struct {
 	// 存储库总容量，单位GB
 	VaultSize *int32 `json:"vault_size,omitempty"`
 
-	// 已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G,则已使用容量为60G。
+	// 已使用容量，单位MB，指的是已有备份占用的容量，例如绑定了1台主机，已经有两个备份数，两个备份60G，则已使用容量为60G。
 	VaultUsed *int32 `json:"vault_used,omitempty"`
 
 	// 已分配容量，单位GB，指绑定的服务器大小，例如绑定了1台主机，主机大小40G，则已分配容量为40G。

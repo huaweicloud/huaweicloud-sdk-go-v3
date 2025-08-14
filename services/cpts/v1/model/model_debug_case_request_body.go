@@ -20,6 +20,9 @@ type DebugCaseRequestBody struct {
 
 	// 套餐包VUM不足的情况下用户选择是不是要走按需计费模式（当前版本固定值：0）
 	WithoutPackage int32 `json:"without_package"`
+
+	// 类型（0：事务（默认）；1：用例）
+	Type *int32 `json:"type,omitempty"`
 }
 
 func (o DebugCaseRequestBody) String() string {

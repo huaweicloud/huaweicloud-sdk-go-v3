@@ -9,10 +9,10 @@ import (
 // AutoLauchResponseInfo 中间件信息
 type AutoLauchResponseInfo struct {
 
-	// **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+	// **参数解释**: Agent ID **取值范围**: 字符长度1-64位
 	AgentId *string `json:"agent_id,omitempty"`
 
-	// **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+	// **参数解释**： 主机ID **取值范围**： 字符长度1-64位
 	HostId *string `json:"host_id,omitempty"`
 
 	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位

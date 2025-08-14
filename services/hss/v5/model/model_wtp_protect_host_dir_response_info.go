@@ -26,7 +26,7 @@ type WtpProtectHostDirResponseInfo struct {
 	// 本地备份路径
 	LocalBackupDir *string `json:"local_backup_dir,omitempty"`
 
-	// 防护状态（closed-未开启，opened-防护中, opening-开启中, closing-关闭中, open_failed-防护失败)
+	// 防护状态（closed-未开启，opened-防护中，opening-开启中，closing-关闭中，open_failed-防护失败）
 	ProtectStatus *WtpProtectHostDirResponseInfoProtectStatus `json:"protect_status,omitempty"`
 
 	// 失败原因

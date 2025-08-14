@@ -17,7 +17,7 @@ type UpdateWebTamperHostPolicyRequestInfo struct {
 	// 动态网页防篡改开启状态
 	EnableRaspProtect *bool `json:"enable_rasp_protect,omitempty"`
 
-	// rasp path
+	// 动态网页防篡改的Tomcat bin目录
 	RaspPath *string `json:"rasp_path,omitempty"`
 
 	// 特权进程状态

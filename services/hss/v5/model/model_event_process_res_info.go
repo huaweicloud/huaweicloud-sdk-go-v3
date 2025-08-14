@@ -15,7 +15,7 @@ type EventProcessResInfo struct {
 	// **参数解释**： 进程路径 **取值范围**： 字符长度1-256位
 	ProcessPath *string `json:"process_path,omitempty"`
 
-	// 进程ID
+	// **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
 	ProcessPid *int32 `json:"process_pid,omitempty"`
 
 	// **参数解释**： 进程名称 **取值范围**： 最小值0，最大值2147483647
@@ -111,7 +111,7 @@ type EventProcessResInfo struct {
 	// **参数解释**： 逃逸方式 **取值范围**： 字符长度1-64位
 	EscapeMode *string `json:"escape_mode,omitempty"`
 
-	// **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-128位
+	// **参数解释**： 逃逸后执行的命令 **取值范围**： 字符长度1-128位
 	EscapeCmd *string `json:"escape_cmd,omitempty"`
 
 	// **参数解释**： 进程启动文件hash **取值范围**： 字符长度1-64位

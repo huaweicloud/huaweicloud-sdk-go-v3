@@ -8,10 +8,10 @@ import (
 
 type LoginWhiteIpResponseInfo struct {
 
-	// 白名单启用状态, 包含如下:   - true : 已启用   - false : 已禁用
+	// 白名单启用状态，包含如下：   - true：已启用   - false：已禁用
 	Enabled *bool `json:"enabled,omitempty"`
 
-	// 白名单IP或IP网段,IP网段由IP地址和掩码组成,以'/'连接。
+	// 白名单IP或IP网段，IP网段由IP地址和掩码组成，以‘/’连接。
 	WhiteIp *string `json:"white_ip,omitempty"`
 
 	// 服务器ID总数

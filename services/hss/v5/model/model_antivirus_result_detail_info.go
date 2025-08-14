@@ -15,10 +15,10 @@ type AntivirusResultDetailInfo struct {
 	// 病毒名称
 	MalwareName *string `json:"malware_name,omitempty"`
 
-	// 文件路径
+	// **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
 	FilePath *string `json:"file_path,omitempty"`
 
-	// 文件哈希
+	// **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
 	FileHash *string `json:"file_hash,omitempty"`
 
 	// **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
@@ -27,7 +27,7 @@ type AntivirusResultDetailInfo struct {
 	// 文件属主
 	FileOwner *string `json:"file_owner,omitempty"`
 
-	// 文件属性
+	// **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
 	FileAttr *string `json:"file_attr,omitempty"`
 
 	// 文件创建时间

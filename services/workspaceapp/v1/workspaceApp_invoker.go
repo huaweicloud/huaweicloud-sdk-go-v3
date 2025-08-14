@@ -37,6 +37,22 @@ func (i *BatchDeleteWarehouseAppInvoker) Invoke() (*model.BatchDeleteWarehouseAp
 	}
 }
 
+type BindAppWarehouseBucketInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BindAppWarehouseBucketInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BindAppWarehouseBucketInvoker) Invoke() (*model.BindAppWarehouseBucketResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BindAppWarehouseBucketResponse), nil
+	}
+}
+
 type CreateBucketOrAclInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -98,6 +114,22 @@ func (i *ListWarehouseAppsInvoker) Invoke() (*model.ListWarehouseAppsResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ListWarehouseAppsResponse), nil
+	}
+}
+
+type ShowAppWarehouseBucketInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAppWarehouseBucketInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAppWarehouseBucketInvoker) Invoke() (*model.ShowAppWarehouseBucketResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAppWarehouseBucketResponse), nil
 	}
 }
 
@@ -274,6 +306,22 @@ func (i *UpdateAppInvoker) Invoke() (*model.UpdateAppResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateAppResponse), nil
+	}
+}
+
+type UpdatePreBootPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePreBootPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePreBootPolicyInvoker) Invoke() (*model.UpdatePreBootPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePreBootPolicyResponse), nil
 	}
 }
 
@@ -594,6 +642,166 @@ func (i *ListAzInvoker) Invoke() (*model.ListAzResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListAzResponse), nil
+	}
+}
+
+type BatchDeleteCloudStorageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteCloudStorageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteCloudStorageInvoker) Invoke() (*model.BatchDeleteCloudStorageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteCloudStorageResponse), nil
+	}
+}
+
+type CreateCloudStorageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCloudStorageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateCloudStorageInvoker) Invoke() (*model.CreateCloudStorageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCloudStorageResponse), nil
+	}
+}
+
+type CreateUserFolderAssignmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateUserFolderAssignmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateUserFolderAssignmentInvoker) Invoke() (*model.CreateUserFolderAssignmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateUserFolderAssignmentResponse), nil
+	}
+}
+
+type DeleteCloudStorageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCloudStorageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteCloudStorageInvoker) Invoke() (*model.DeleteCloudStorageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCloudStorageResponse), nil
+	}
+}
+
+type DeleteCloudStorageAttachmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCloudStorageAttachmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteCloudStorageAttachmentInvoker) Invoke() (*model.DeleteCloudStorageAttachmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCloudStorageAttachmentResponse), nil
+	}
+}
+
+type ListCloudStorageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCloudStorageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCloudStorageInvoker) Invoke() (*model.ListCloudStorageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCloudStorageResponse), nil
+	}
+}
+
+type ListCloudStorageAssignmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCloudStorageAssignmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCloudStorageAssignmentInvoker) Invoke() (*model.ListCloudStorageAssignmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCloudStorageAssignmentResponse), nil
+	}
+}
+
+type ListProjectConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListProjectConfigsInvoker) Invoke() (*model.ListProjectConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectConfigsResponse), nil
+	}
+}
+
+type ShowProjectConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProjectConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowProjectConfigInvoker) Invoke() (*model.ShowProjectConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProjectConfigResponse), nil
+	}
+}
+
+type UpdateCloudUserFolderAssignmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateCloudUserFolderAssignmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateCloudUserFolderAssignmentInvoker) Invoke() (*model.UpdateCloudUserFolderAssignmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateCloudUserFolderAssignmentResponse), nil
 	}
 }
 

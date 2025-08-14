@@ -10,7 +10,7 @@ import (
 type ListUsersResponse struct {
 	PageInfo *PageInfoDto `json:"page_info,omitempty"`
 
-	// 身份源中的用户列表
+	// IdentityStore中的用户列表。
 	Users          *[]UserDto `json:"users,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }

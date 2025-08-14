@@ -9,7 +9,7 @@ import (
 // InstanceAccessControlAttributeConfigurationDto Specifies the attributes to add to your attribute-based access control (ABAC) configuration.
 type InstanceAccessControlAttributeConfigurationDto struct {
 
-	// IAM身份中心实例中ABAC配置的属性
+	// IAM Identity Center实例中ABAC配置的属性
 	AccessControlAttributes []AccessControlAttributeDto `json:"access_control_attributes"`
 }
 

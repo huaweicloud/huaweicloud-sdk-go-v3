@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// ContainerExtraLinuxInfo 沙箱类型,linux沙箱专用
+// ContainerExtraLinuxInfo 沙箱类型，linux沙箱专用
 type ContainerExtraLinuxInfo struct {
 
-	// 操作系统: - ubt : ubuntu - centos : centos - debian, - redhat, - opensuse, - kylin - uos - euleros
+	// 操作系统: - ubt : ubuntu - centos : centos - debian - redhat - opensuse - kylin - uos - euleros
 	Os *string `json:"os,omitempty"`
 }
 

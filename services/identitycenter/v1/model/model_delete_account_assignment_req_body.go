@@ -21,7 +21,7 @@ type DeleteAccountAssignmentReqBody struct {
 	// 实体类型.
 	PrincipalType DeleteAccountAssignmentReqBodyPrincipalType `json:"principal_type"`
 
-	// 目标账号身份标识
+	// 目标账户身份标识
 	TargetId string `json:"target_id"`
 
 	// 目标类型.

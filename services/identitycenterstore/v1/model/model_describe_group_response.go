@@ -21,7 +21,7 @@ type DescribeGroupResponse struct {
 	// 包含外部身份提供商颁发给此资源的标识符的对象列表
 	ExternalIds *[]ExternalIdDto `json:"external_ids,omitempty"`
 
-	// 身份源中IAM身份中心用户组的全局唯一标识符（ID）
+	// 身份源中IdentityCenter用户组的全局唯一标识符（ID）
 	GroupId *string `json:"group_id,omitempty"`
 
 	// 身份源的全局唯一标识符（ID）

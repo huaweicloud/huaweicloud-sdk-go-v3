@@ -9,31 +9,31 @@ import (
 // IsolatedFileResponseInfo 已隔离文件详情
 type IsolatedFileResponseInfo struct {
 
-	// 操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+	// **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
 	OsType string `json:"os_type"`
 
-	// **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+	// **参数解释**： 主机ID **取值范围**： 字符长度1-64位
 	HostId string `json:"host_id"`
 
 	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
 	HostName string `json:"host_name"`
 
-	// 文件哈希
+	// **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
 	FileHash string `json:"file_hash"`
 
-	// 文件路径
+	// **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
 	FilePath string `json:"file_path"`
 
-	// 文件属性
+	// **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
 	FileAttr string `json:"file_attr"`
 
 	// 隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
 	IsolationStatus string `json:"isolation_status"`
 
-	// 服务器私有IP
+	// **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
 	PrivateIp string `json:"private_ip"`
 
-	// 弹性公网IP地址
+	// **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
 	PublicIp string `json:"public_ip"`
 
 	// 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
@@ -48,7 +48,7 @@ type IsolatedFileResponseInfo struct {
 	// 隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
 	IsolateSource string `json:"isolate_source"`
 
-	// 事件名称
+	// **参数解释**： 事件名称 **取值范围**： 字符长度1-256位
 	EventName string `json:"event_name"`
 
 	AgentEventInfo *IsolateEventResponseInfo `json:"agent_event_info"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// PoliciesCustom 自定义策略
+// PoliciesCustom 自定义策略。
 type PoliciesCustom struct {
 
 	// 自定义策略配置项1： false: 表示关闭 true: 表示开启

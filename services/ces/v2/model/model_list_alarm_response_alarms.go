@@ -63,6 +63,9 @@ type ListAlarmResponseAlarms struct {
 
 	// 产品层级跨纬规则需要指明为产品层级规则，resource_level取值为product即为产品层级跨纬规则，不填或者取值为dimension则为旧的规则类型
 	ResourceLevel *ListAlarmResponseAlarmsResourceLevel `json:"resource_level,omitempty"`
+
+	// 租户标签列表
+	Tags *[]ResourceTag `json:"tags,omitempty"`
 }
 
 func (o ListAlarmResponseAlarms) String() string {

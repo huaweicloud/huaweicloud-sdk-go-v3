@@ -54,7 +54,7 @@ type Bandwidth struct {
 
 	ComBandwidthControlOptions *ComBandwidthControlOptions `json:"com_bandwidth_control_options,omitempty"`
 
-	// 是否开启文件重定向带宽控制。取值为：false：表示关闭。true：表示开启
+	// 是否开启文件重定向带宽控制。取值为：false：表示关闭。true：表示开启。
 	FileRedirectionBandwidthControlEnable *bool `json:"file_redirection_bandwidth_control_enable,omitempty"`
 
 	FileRedirectionBandwidthControlOptions *FileRedirectionBandwidthControlOptions `json:"file_redirection_bandwidth_control_options,omitempty"`

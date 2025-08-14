@@ -27,7 +27,7 @@ type ImageRiskConfigsCheckRulesResponseInfo struct {
 	// 检查项ID
 	CheckRuleId *string `json:"check_rule_id,omitempty"`
 
-	// 检测结果，包含如下：   - pass    通过   - failed  未通过
+	// 检测结果，包含如下：   - pass：通过   - failed：未通过
 	ScanResult *string `json:"scan_result,omitempty"`
 }
 

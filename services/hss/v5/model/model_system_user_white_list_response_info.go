@@ -12,16 +12,16 @@ type SystemUserWhiteListResponseInfo struct {
 	// 企业项目名称
 	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
 
-	// **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+	// **参数解释**： 主机ID **取值范围**： 字符长度1-64位
 	HostId *string `json:"host_id,omitempty"`
 
 	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
 	HostName *string `json:"host_name,omitempty"`
 
-	// 服务器私有IP
+	// **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
 	PrivateIp *string `json:"private_ip,omitempty"`
 
-	// 弹性公网IP地址
+	// **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
 	PublicIp *string `json:"public_ip,omitempty"`
 
 	// 系统用户名列表

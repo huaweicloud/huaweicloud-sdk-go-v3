@@ -9,7 +9,7 @@ import (
 // AntiVirusPaidHostResponseInfo 付费病毒查杀服务器信息
 type AntiVirusPaidHostResponseInfo struct {
 
-	// **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+	// **参数解释**： 主机ID **取值范围**： 字符长度1-64位
 	HostId *string `json:"host_id,omitempty"`
 
 	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
@@ -18,10 +18,10 @@ type AntiVirusPaidHostResponseInfo struct {
 	// **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
 	GroupId *string `json:"group_id,omitempty"`
 
-	// 弹性公网IP地址
+	// **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
 	PublicIp *string `json:"public_ip,omitempty"`
 
-	// 服务器私有IP
+	// **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
 	PrivateIp *string `json:"private_ip,omitempty"`
 
 	// **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及

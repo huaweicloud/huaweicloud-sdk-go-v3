@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Handler 备注信息，已处理的告警才有
+// Handler **参数解释**： 备注信息，已处理的告警才有 **取值范围**： 字符长度1-256位
 type Handler struct {
 }
 

@@ -36,6 +36,9 @@ type EventItemDetail struct {
 	// 事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
 	EventType *string `json:"event_type,omitempty"`
 
+	// 事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
+	SubEventType *EventItemDetailSubEventType `json:"sub_event_type,omitempty"`
+
 	// 一个或者多个资源维度。
 	Dimensions *[]MetricsDimension `json:"dimensions,omitempty"`
 }
@@ -137,6 +140,57 @@ func (c EventItemDetailEventLevel) MarshalJSON() ([]byte, error) {
 }
 
 func (c *EventItemDetailEventLevel) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type EventItemDetailSubEventType struct {
+	value string
+}
+
+type EventItemDetailSubEventTypeEnum struct {
+	SUB_EVENT_OPS    EventItemDetailSubEventType
+	SUB_EVENT_PLAN   EventItemDetailSubEventType
+	SUB_EVENT_CUSTOM EventItemDetailSubEventType
+}
+
+func GetEventItemDetailSubEventTypeEnum() EventItemDetailSubEventTypeEnum {
+	return EventItemDetailSubEventTypeEnum{
+		SUB_EVENT_OPS: EventItemDetailSubEventType{
+			value: "SUB_EVENT.OPS",
+		},
+		SUB_EVENT_PLAN: EventItemDetailSubEventType{
+			value: "SUB_EVENT.PLAN",
+		},
+		SUB_EVENT_CUSTOM: EventItemDetailSubEventType{
+			value: "SUB_EVENT.CUSTOM",
+		},
+	}
+}
+
+func (c EventItemDetailSubEventType) Value() string {
+	return c.value
+}
+
+func (c EventItemDetailSubEventType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *EventItemDetailSubEventType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

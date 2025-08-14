@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// HostId **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+// HostId **参数解释**： 主机ID **取值范围**： 字符长度1-64位
 type HostId struct {
 }
 

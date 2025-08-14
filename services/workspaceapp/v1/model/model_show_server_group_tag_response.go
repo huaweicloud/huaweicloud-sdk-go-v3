@@ -9,7 +9,7 @@ import (
 // ShowServerGroupTagResponse Response Object
 type ShowServerGroupTagResponse struct {
 
-	// 标签列表
+	// 标签列表。
 	Tags *[]TmsTag `json:"tags,omitempty"`
 
 	// 仅op_service权限才可以获取此字段，非op_service场景不能返回此字段，目前只包含一个resource_tag结构体。 > - key：_sys_enterprise_project_id。 > - value：企业项目id，0表示默认企业项目。

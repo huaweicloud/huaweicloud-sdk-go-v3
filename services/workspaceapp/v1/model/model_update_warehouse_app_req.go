@@ -27,6 +27,8 @@ type UpdateWarehouseAppReq struct {
 
 	// > - 图片的默认大小当前限制为8KB，即1024 * 8字节。 > - 如果数据格式为data;image/png;base64,iVBORw0KGgoAAAANS时实际大小约为字段约为：size * 4/3 + 4bytes。
 	AppIcon *string `json:"app_icon,omitempty"`
+
+	AppExtendedInfo *AppExtendedInfo `json:"app_extended_info,omitempty"`
 }
 
 func (o UpdateWarehouseAppReq) String() string {

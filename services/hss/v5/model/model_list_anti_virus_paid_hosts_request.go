@@ -33,7 +33,7 @@ type ListAntiVirusPaidHostsRequest struct {
 	// 服务器组ID
 	GroupId *string `json:"group_id,omitempty"`
 
-	// 任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+	// 任务类型，包含如下:   - quick ：快速扫描   - full：全盘扫描   - custom : 自定义扫描
 	ScanType string `json:"scan_type"`
 
 	// 启动类型，包含如下:   - now ：立即启动   - period : 周期启动

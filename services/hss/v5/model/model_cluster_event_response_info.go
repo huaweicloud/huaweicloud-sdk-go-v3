@@ -33,7 +33,7 @@ type ClusterEventResponseInfo struct {
 	// 事件内容
 	EventContent *string `json:"event_content,omitempty"`
 
-	// 处理状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+	// 处理状态，包含如下:   - unhandled：未处理   - handled：已处理
 	HandleStatus *string `json:"handle_status,omitempty"`
 
 	// 创建时间

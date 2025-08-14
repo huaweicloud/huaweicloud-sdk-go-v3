@@ -60,6 +60,8 @@ type WarehouseApp struct {
 
 	// app的图标文件。
 	AppIcon *string `json:"app_icon,omitempty"`
+
+	AppExtendedInfo *AppExtendedInfo `json:"app_extended_info,omitempty"`
 }
 
 func (o WarehouseApp) String() string {

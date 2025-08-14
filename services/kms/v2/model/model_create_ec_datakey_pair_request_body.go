@@ -25,6 +25,12 @@ type CreateEcDatakeyPairRequestBody struct {
 
 	// 请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
 	Sequence *string `json:"sequence,omitempty"`
+
+	// 指定PIN码保护。仅四级密评场景支持该参数。
+	Pin *string `json:"pin,omitempty"`
+
+	// pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
+	PinType *string `json:"pin_type,omitempty"`
 }
 
 func (o CreateEcDatakeyPairRequestBody) String() string {

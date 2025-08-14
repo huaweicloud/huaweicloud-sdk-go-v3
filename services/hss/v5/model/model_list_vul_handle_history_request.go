@@ -15,16 +15,16 @@ type ListVulHandleHistoryRequest struct {
 	// 企业项目ID
 	EnterpriseProjectId string `json:"enterprise_project_id"`
 
-	// 漏洞状态,包含如下:   - vul_status_unfix : 未处理   - vul_status_ignored : 已忽略   - vul_status_verified : 验证中   - vul_status_fixing : 修复中   - vul_status_fixed : 修复成功   - vul_status_reboot : 修复成功待重启   - vul_status_failed : 修复失败   - vul_status_fix_after_reboot : 请重启主机再次修复
+	// 漏洞状态，包含如下：   - vul_status_unfix：未处理   - vul_status_ignored：已忽略   - vul_status_verified：验证中   - vul_status_fixing：修复中   - vul_status_fixed：修复成功   - vul_status_reboot：修复成功待重启   - vul_status_failed：修复失败   - vul_status_fix_after_reboot：请重启主机再次修复
 	Status *[]string `json:"status,omitempty"`
 
 	// 漏洞ID
 	VulId *string `json:"vul_id,omitempty"`
 
-	// 漏洞类型,包含如下:   - linux_vul : Linux漏洞   - windows_vul : Windows漏洞   - web_cms : Web-CMS漏洞   - app_vul : 应用漏洞   - urgent_vul : 应急漏洞
+	// 漏洞类型，包含如下:   - linux_vul：Linux漏洞   - windows_vul：Windows漏洞   - web_cms：Web-CMS漏洞   - app_vul：应用漏洞   - urgent_vul：应急漏洞
 	VulType *string `json:"vul_type,omitempty"`
 
-	// 资产重要性,包含如下:   - important : 重要资产   - common  : 一般资产   - test  : 测试资产
+	// 资产重要性，包含如下:   - important：重要资产   - common：一般资产   - test：测试资产
 	AssetValue *string `json:"asset_value,omitempty"`
 
 	// 服务器组
@@ -33,16 +33,16 @@ type ListVulHandleHistoryRequest struct {
 	// 服务器名称
 	HostName *string `json:"host_name,omitempty"`
 
-	// 服务器IP。
+	// 服务器IP
 	HostIp *string `json:"host_ip,omitempty"`
 
-	// 集群ID。
+	// 集群ID
 	ClusterId *string `json:"cluster_id,omitempty"`
 
-	// 排序字段，包含如下:   - handle_time : 处置时间
+	// 排序字段，包含如下：   - handle_time：处置时间
 	SortKey *ListVulHandleHistoryRequestSortKey `json:"sort_key,omitempty"`
 
-	// 排序顺序，若sort_key不为空,设置返回结果按照sort_key升序或降序排序,默认降序排序,包含如下:   - asc : 升序   - desc : 降序
+	// 排序顺序，若sort_key不为空，设置返回结果按照sort_key升序或降序排序，默认降序排序，包含如下：   - asc：升序   - desc：降序
 	SortDir *ListVulHandleHistoryRequestSortDir `json:"sort_dir,omitempty"`
 
 	// 服务器公网IP

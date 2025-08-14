@@ -21,7 +21,7 @@ type AntiVirusTaskResponseInfo struct {
 	// 启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
 	StartType *string `json:"start_type,omitempty"`
 
-	// 处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+	// 处置动作，包含如下:   - auto：自动处置   - manual：人工处置
 	Action *string `json:"action,omitempty"`
 
 	// 启动时间，毫秒

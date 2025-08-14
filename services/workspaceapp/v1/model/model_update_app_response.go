@@ -61,8 +61,13 @@ type UpdateAppResponse struct {
 	Publishable *bool `json:"publishable,omitempty"`
 
 	// 是否使用沙箱模式运行，取值为： - false: 表示不以沙箱模式运行。 - true: 表示以沙箱模式运行。
-	SandboxEnable  *bool `json:"sandbox_enable,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	SandboxEnable *bool `json:"sandbox_enable,omitempty"`
+
+	// 是否开启应用预开，取值为： - false: 表示关闭应用预开。 - true: 表示开启应用预开。
+	IsPreBoot *bool `json:"is_pre_boot,omitempty"`
+
+	AppExtendedInfo *AppExtendedInfo `json:"app_extended_info,omitempty"`
+	HttpStatusCode  int              `json:"-"`
 }
 
 func (o UpdateAppResponse) String() string {

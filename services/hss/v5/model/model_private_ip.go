@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// PrivateIp 服务器私有IP
+// PrivateIp **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
 type PrivateIp struct {
 }
 

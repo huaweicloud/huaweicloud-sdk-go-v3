@@ -31,7 +31,7 @@ type JobDetail struct {
 	// 云服务预估的Job处理结束时间，只针对job有效，针对子job无效。
 	ExpectedEndTime *sdktime.SdkTime `json:"expected_end_time,omitempty"`
 
-	// Job执行结果码
+	// Job执行结果码。
 	ExecuteCode *string `json:"execute_code,omitempty"`
 
 	// Job执行结果描述，以及每个SubJob的执行结果描述。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ContainerExtraMysqlInfo 沙箱类型,MYSQL、MYSQLCHEAT沙箱专用
+// ContainerExtraMysqlInfo 沙箱类型，MYSQL、MYSQLCHEAT沙箱专用
 type ContainerExtraMysqlInfo struct {
 
 	// 自定义反制路径

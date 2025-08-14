@@ -14,13 +14,13 @@ type ProtectionPolicyInfo struct {
 	// **参数解释**: 防护策略名称 **取值范围**: 字符长度1-128
 	PolicyName *string `json:"policy_name,omitempty"`
 
-	// **参数解释**: 防护动作，包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **取值范围**: 字符长度0-128
+	// **参数解释**: 防护动作 **取值范围**: 包含如下2种。   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。
 	ProtectionMode *string `json:"protection_mode,omitempty"`
 
-	// **参数解释**: 是否开启诱饵防护，包含如下1种, 默认为开启防护诱饵防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度0-128
+	// **参数解释**: 是否开启诱饵防护 **取值范围**: 包含如下1种，默认为开启防护诱饵防护。   - opened ：开启。
 	BaitProtectionStatus *string `json:"bait_protection_status,omitempty"`
 
-	// **参数解释**: 是否开启动态诱饵防护，包含如下2种, 默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。   **取值范围**: 字符长度0-128
+	// **参数解释**: 是否开启动态诱饵防护 **取值范围**: 包含如下2种，默认为关闭动态诱饵防护。   - opened ：开启。   - closed ：关闭。
 	DeployMode *string `json:"deploy_mode,omitempty"`
 
 	// **参数解释**: 防护目录 **取值范围**: 字符长度1-128
@@ -32,7 +32,7 @@ type ProtectionPolicyInfo struct {
 	// **参数解释**: 排除目录，选填 **取值范围**: 字符长度1-128
 	ExcludeDirectory *string `json:"exclude_directory,omitempty"`
 
-	// **参数解释**: 是否运行时检测，包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。 **取值范围**: 字符长度0-128
+	// **参数解释**: 是否运行时检测 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。
 	RuntimeDetectionStatus *string `json:"runtime_detection_status,omitempty"`
 
 	// **参数解释**: 运行时检测目录，现在为保留字段 **取值范围**: 字符长度1-128
@@ -47,7 +47,7 @@ type ProtectionPolicyInfo struct {
 	// 进程白名单
 	ProcessWhitelist *[]TrustProcessInfo `json:"process_whitelist,omitempty"`
 
-	// **参数解释**: 是否为默认策略，包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略 **取值范围**: 取值大小0-10
+	// **参数解释**: 是否为默认策略 **取值范围**: 包含如下2种。   - 0 ：非默认策略。   - 1 ：默认策略
 	DefaultPolicy *int32 `json:"default_policy,omitempty"`
 
 	// **参数解释**: 是否开启AI勒索防护，包含如下1种, 默认为开启AI勒索防护。   - opened ：开启。   - closed ：关闭。  **取值范围**: 字符长度1-128

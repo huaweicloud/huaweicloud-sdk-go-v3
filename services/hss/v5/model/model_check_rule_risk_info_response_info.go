@@ -9,7 +9,7 @@ import (
 // CheckRuleRiskInfoResponseInfo 检查项风险信息
 type CheckRuleRiskInfoResponseInfo struct {
 
-	// **参数解释**: 风险等级 **取值范围**: - Low : 低危 - Medium : 中危 - High : 高危
+	// **参数解释**: 风险等级 **取值范围**: - Low：低危 - Medium：中危 - High：高危
 	Severity *string `json:"severity,omitempty"`
 
 	// **参数解释**: 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **取值范围**: 不涉及

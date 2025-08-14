@@ -9,7 +9,7 @@ import (
 // ListAccountsForProvisionedPermissionSetResponse Response Object
 type ListAccountsForProvisionedPermissionSetResponse struct {
 
-	// 账号ID列表
+	// 账户ID列表
 	AccountIds *[]string `json:"account_ids,omitempty"`
 
 	PageInfo       *PageInfoDto `json:"page_info,omitempty"`

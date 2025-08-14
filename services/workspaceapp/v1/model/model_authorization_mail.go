@@ -27,10 +27,10 @@ type AuthorizationMail struct {
 	// 应用组名称。
 	AppGroupName *string `json:"app_group_name,omitempty"`
 
-	// 授权类型： - ADD_GROUP_AUTHORIZATION 添加组授权邮件 - DEL_GROUP_AUTHORIZATION 删除组授权邮件 - ADD_GROUP_AUTHORIZATION_SMS 添加组授权短信 - DEL_GROUP_AUTHORIZATION_SMS 删除组授权短信
+	// 授权类型： - ADD_GROUP_AUTHORIZATION 添加组授权邮件 - DEL_GROUP_AUTHORIZATION 删除组授权邮件 - ADD_GROUP_AUTHORIZATION_SMS 添加组授权短信 - DEL_GROUP_AUTHORIZATION_SMS 删除组授权短信。
 	MailSendType *string `json:"mail_send_type,omitempty"`
 
-	// 发送结果。 - SUEECESS -发送成功 - FAIL -发送失败
+	// 发送结果。 - SUEECESS -发送成功 - FAIL -发送失败。
 	MailSendResult *string `json:"mail_send_result,omitempty"`
 
 	// 报错信息。

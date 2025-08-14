@@ -18,6 +18,9 @@ type ListEventDetailResponse struct {
 	// 事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
 	EventType *ListEventDetailResponseEventType `json:"event_type,omitempty"`
 
+	// 事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
+	SubEventType *ListEventDetailResponseSubEventType `json:"sub_event_type,omitempty"`
+
 	// 上报事件时用户的名称，也可能为projectID。
 	EventUsers *[]string `json:"event_users,omitempty"`
 
@@ -69,6 +72,57 @@ func (c ListEventDetailResponseEventType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ListEventDetailResponseEventType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListEventDetailResponseSubEventType struct {
+	value string
+}
+
+type ListEventDetailResponseSubEventTypeEnum struct {
+	SUB_EVENT_OPS    ListEventDetailResponseSubEventType
+	SUB_EVENT_PLAN   ListEventDetailResponseSubEventType
+	SUB_EVENT_CUSTOM ListEventDetailResponseSubEventType
+}
+
+func GetListEventDetailResponseSubEventTypeEnum() ListEventDetailResponseSubEventTypeEnum {
+	return ListEventDetailResponseSubEventTypeEnum{
+		SUB_EVENT_OPS: ListEventDetailResponseSubEventType{
+			value: "SUB_EVENT.OPS",
+		},
+		SUB_EVENT_PLAN: ListEventDetailResponseSubEventType{
+			value: "SUB_EVENT.PLAN",
+		},
+		SUB_EVENT_CUSTOM: ListEventDetailResponseSubEventType{
+			value: "SUB_EVENT.CUSTOM",
+		},
+	}
+}
+
+func (c ListEventDetailResponseSubEventType) Value() string {
+	return c.value
+}
+
+func (c ListEventDetailResponseSubEventType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListEventDetailResponseSubEventType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

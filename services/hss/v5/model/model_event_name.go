@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// EventName 事件名称
+// EventName **参数解释**： 事件名称 **取值范围**： 字符长度1-256位
 type EventName struct {
 }
 

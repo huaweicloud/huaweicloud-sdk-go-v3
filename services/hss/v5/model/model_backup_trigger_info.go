@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// BackupTriggerInfo 备份:策略时间调度规则
+// BackupTriggerInfo **参数解释**: 备份:策略时间调度规则 **取值范围**: 不涉及
 type BackupTriggerInfo struct {
 
 	// **参数解释**: 调度器id **取值范围**: 字符长度0-256
@@ -15,7 +15,7 @@ type BackupTriggerInfo struct {
 	// **参数解释**: 调度器名称 **取值范围**: 字符长度0-256
 	Name *string `json:"name,omitempty"`
 
-	// **参数解释**: 调度器类型,目前只支持 time,定时调度。 **取值范围**: 字符长度0-256
+	// **参数解释**: 调度器类型，目前只支持time，定时调度。 **取值范围**: 字符长度0-256
 	Type *string `json:"type,omitempty"`
 
 	Properties *BackupTriggerPropertiesInfo `json:"properties,omitempty"`

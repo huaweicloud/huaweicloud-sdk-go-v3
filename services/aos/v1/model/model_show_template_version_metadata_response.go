@@ -12,7 +12,7 @@ type ShowTemplateVersionMetadataResponse struct {
 	// 模板的唯一ID，由模板服务随机生成
 	TemplateId string `json:"template_id"`
 
-	// 用户希望创建的模板名称
+	// 模板（Template）的名字。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
 	TemplateName string `json:"template_name"`
 
 	// 模板版本的描述。可用于客户识别自己的模板版本

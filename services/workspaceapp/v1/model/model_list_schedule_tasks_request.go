@@ -9,13 +9,13 @@ import (
 // ListScheduleTasksRequest Request Object
 type ListScheduleTasksRequest struct {
 
-	// 查询的偏移量。
+	// 查询的偏移量，默认值0。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 查询的数量，值区间[1-100]。
+	// 查询的数量，值区间[1-100]，默认值10。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 定时任务名称
+	// 定时任务名称。
 	TaskName *string `json:"task_name,omitempty"`
 
 	// 任务类型： * `RESTART_SERVER` - 定时重启服务器 * `START_SERVER` - 定时开机 * `STOP_SERVER` - 定时关机 * `REINSTALL_OS` - 定时重装操作系统

@@ -9,13 +9,13 @@ import (
 // ListContainersResponse Response Object
 type ListContainersResponse struct {
 
-	// 容器总数
+	// **参数解释**: 容器总数 **取值范围**: 取值0-2147483647
 	TotalNum *int32 `json:"total_num,omitempty"`
 
-	// 最近更新时间
+	// **参数解释**: 最近更新时间 **取值范围**: 取值0-4071095999000
 	LastUpdateTime *int64 `json:"last_update_time,omitempty"`
 
-	// 容器基本信息列表
+	// **参数解释**: 容器基本信息列表 **取值范围**: 取值0-2147483647个ContainerBaseInfo对象
 	DataList       *[]ContainerBaseInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

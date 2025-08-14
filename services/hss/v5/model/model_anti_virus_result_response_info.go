@@ -18,7 +18,7 @@ type AntiVirusResultResponseInfo struct {
 	// 病毒名称
 	MalwareName *string `json:"malware_name,omitempty"`
 
-	// 威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 致命
+	// 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
 	Severity *string `json:"severity,omitempty"`
 
 	// 任务ID
@@ -34,13 +34,13 @@ type AntiVirusResultResponseInfo struct {
 	// 事件类型
 	EventType *int32 `json:"event_type,omitempty"`
 
-	// 发生时间，毫秒
+	// **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
 	OccurTime *int64 `json:"occur_time,omitempty"`
 
-	// 处置状态，包含如下:   - unhandled：未处理   - handled: 已处理
+	// **参数解释**： 处理状态 **取值范围**： - unhandled：未处理 - handled：已处理
 	HandleStatus *string `json:"handle_status,omitempty"`
 
-	// 处理方式，包含如下:   - mark_as_handled : 手动处理   - ignore : 忽略   - add_to_alarm_whitelist : 加入告警白名单   - isolate_and_kill : 隔离文件
+	// 处理方式，包含如下:   - mark_as_handled：手动处理   - ignore：忽略   - add_to_alarm_whitelist：加入告警白名单   - isolate_and_kill：隔离文件
 	HandleMethod *string `json:"handle_method,omitempty"`
 
 	// 备注信息

@@ -645,6 +645,38 @@ func (i *BatchDeleteRemediationExceptionsInvoker) Invoke() (*model.BatchDeleteRe
 	}
 }
 
+type CollectPolicyAssignmentsStatesSummaryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CollectPolicyAssignmentsStatesSummaryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CollectPolicyAssignmentsStatesSummaryInvoker) Invoke() (*model.CollectPolicyAssignmentsStatesSummaryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CollectPolicyAssignmentsStatesSummaryResponse), nil
+	}
+}
+
+type CollectPolicyStatesSummaryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CollectPolicyStatesSummaryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CollectPolicyStatesSummaryInvoker) Invoke() (*model.CollectPolicyStatesSummaryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CollectPolicyStatesSummaryResponse), nil
+	}
+}
+
 type CollectRemediationExecutionStatusesSummaryInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -658,6 +690,22 @@ func (i *CollectRemediationExecutionStatusesSummaryInvoker) Invoke() (*model.Col
 		return nil, err
 	} else {
 		return result.(*model.CollectRemediationExecutionStatusesSummaryResponse), nil
+	}
+}
+
+type CollectResourcesPolicyStatesSummaryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CollectResourcesPolicyStatesSummaryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CollectResourcesPolicyStatesSummaryInvoker) Invoke() (*model.CollectResourcesPolicyStatesSummaryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CollectResourcesPolicyStatesSummaryResponse), nil
 	}
 }
 
@@ -1330,6 +1378,22 @@ func (i *CountTrackedResourcesInvoker) Invoke() (*model.CountTrackedResourcesRes
 		return nil, err
 	} else {
 		return result.(*model.CountTrackedResourcesResponse), nil
+	}
+}
+
+type ListAllProvidersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAllProvidersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAllProvidersInvoker) Invoke() (*model.ListAllProvidersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAllProvidersResponse), nil
 	}
 }
 

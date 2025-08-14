@@ -165,22 +165,6 @@ func (i *BatchCreateTagsInvoker) Invoke() (*model.BatchCreateTagsResponse, error
 	}
 }
 
-type BatchDeleteAgentDaemonsetInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchDeleteAgentDaemonsetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchDeleteAgentDaemonsetInvoker) Invoke() (*model.BatchDeleteAgentDaemonsetResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchDeleteAgentDaemonsetResponse), nil
-	}
-}
-
 type BatchScanSwrImageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -210,38 +194,6 @@ func (i *BatchStartProtectionInvoker) Invoke() (*model.BatchStartProtectionRespo
 		return nil, err
 	} else {
 		return result.(*model.BatchStartProtectionResponse), nil
-	}
-}
-
-type BatchUpgradeAgentDaemonsetInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchUpgradeAgentDaemonsetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchUpgradeAgentDaemonsetInvoker) Invoke() (*model.BatchUpgradeAgentDaemonsetResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchUpgradeAgentDaemonsetResponse), nil
-	}
-}
-
-type ChangeAntivirusPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ChangeAntivirusPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ChangeAntivirusPolicyInvoker) Invoke() (*model.ChangeAntivirusPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ChangeAntivirusPolicyResponse), nil
 	}
 }
 
@@ -389,22 +341,6 @@ func (i *ChangePasswordComplexityStatusInvoker) Invoke() (*model.ChangePasswordC
 	}
 }
 
-type ChangeVulScanPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ChangeVulScanPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ChangeVulScanPolicyInvoker) Invoke() (*model.ChangeVulScanPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ChangeVulScanPolicyResponse), nil
-	}
-}
-
 type ChangeVulStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -418,54 +354,6 @@ func (i *ChangeVulStatusInvoker) Invoke() (*model.ChangeVulStatusResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ChangeVulStatusResponse), nil
-	}
-}
-
-type CreateAgentDaemonsetInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateAgentDaemonsetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateAgentDaemonsetInvoker) Invoke() (*model.CreateAgentDaemonsetResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateAgentDaemonsetResponse), nil
-	}
-}
-
-type CreateAntiVirusPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateAntiVirusPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateAntiVirusPolicyInvoker) Invoke() (*model.CreateAntiVirusPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateAntiVirusPolicyResponse), nil
-	}
-}
-
-type CreateAntiVirusTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateAntiVirusTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateAntiVirusTaskInvoker) Invoke() (*model.CreateAntiVirusTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateAntiVirusTaskResponse), nil
 	}
 }
 
@@ -549,22 +437,6 @@ func (i *CreateGlobalAssetScanTaskInvoker) Invoke() (*model.CreateGlobalAssetSca
 	}
 }
 
-type CreateMultiCloudClustersInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateMultiCloudClustersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateMultiCloudClustersInvoker) Invoke() (*model.CreateMultiCloudClustersResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateMultiCloudClustersResponse), nil
-	}
-}
-
 type CreateQuotasOrderInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -597,22 +469,6 @@ func (i *CreateSecurityGroupPolicyInvoker) Invoke() (*model.CreateSecurityGroupP
 	}
 }
 
-type CreateVulnerabilityScanTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateVulnerabilityScanTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateVulnerabilityScanTaskInvoker) Invoke() (*model.CreateVulnerabilityScanTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateVulnerabilityScanTaskResponse), nil
-	}
-}
-
 type DeleteAccountInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -626,38 +482,6 @@ func (i *DeleteAccountInvoker) Invoke() (*model.DeleteAccountResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteAccountResponse), nil
-	}
-}
-
-type DeleteAgentDaemonsetInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteAgentDaemonsetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteAgentDaemonsetInvoker) Invoke() (*model.DeleteAgentDaemonsetResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteAgentDaemonsetResponse), nil
-	}
-}
-
-type DeleteAntivirusPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteAntivirusPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteAntivirusPolicyInvoker) Invoke() (*model.DeleteAntivirusPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteAntivirusPolicyResponse), nil
 	}
 }
 
@@ -837,22 +661,6 @@ func (i *DeleteSecurityGroupPolicyInvoker) Invoke() (*model.DeleteSecurityGroupP
 	}
 }
 
-type ExportAntiVirusResultInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ExportAntiVirusResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ExportAntiVirusResultInvoker) Invoke() (*model.ExportAntiVirusResultResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ExportAntiVirusResultResponse), nil
-	}
-}
-
 type ExportContainerListInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -866,38 +674,6 @@ func (i *ExportContainerListInvoker) Invoke() (*model.ExportContainerListRespons
 		return nil, err
 	} else {
 		return result.(*model.ExportContainerListResponse), nil
-	}
-}
-
-type ExportVulsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ExportVulsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ExportVulsInvoker) Invoke() (*model.ExportVulsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ExportVulsResponse), nil
-	}
-}
-
-type HandleAntiVirusResultInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *HandleAntiVirusResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *HandleAntiVirusResultInvoker) Invoke() (*model.HandleAntiVirusResultResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.HandleAntiVirusResultResponse), nil
 	}
 }
 
@@ -946,70 +722,6 @@ func (i *ListAlarmWhiteListInvoker) Invoke() (*model.ListAlarmWhiteListResponse,
 		return nil, err
 	} else {
 		return result.(*model.ListAlarmWhiteListResponse), nil
-	}
-}
-
-type ListAntiVirusHostInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListAntiVirusHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListAntiVirusHostInvoker) Invoke() (*model.ListAntiVirusHostResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListAntiVirusHostResponse), nil
-	}
-}
-
-type ListAntiVirusPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListAntiVirusPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListAntiVirusPolicyInvoker) Invoke() (*model.ListAntiVirusPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListAntiVirusPolicyResponse), nil
-	}
-}
-
-type ListAntiVirusResultInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListAntiVirusResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListAntiVirusResultInvoker) Invoke() (*model.ListAntiVirusResultResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListAntiVirusResultResponse), nil
-	}
-}
-
-type ListAntiVirusTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListAntiVirusTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListAntiVirusTaskInvoker) Invoke() (*model.ListAntiVirusTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListAntiVirusTaskResponse), nil
 	}
 }
 
@@ -1621,38 +1333,6 @@ func (i *ListHostGroupsInvoker) Invoke() (*model.ListHostGroupsResponse, error) 
 	}
 }
 
-type ListHostProtectHistoryInfoInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListHostProtectHistoryInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListHostProtectHistoryInfoInvoker) Invoke() (*model.ListHostProtectHistoryInfoResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListHostProtectHistoryInfoResponse), nil
-	}
-}
-
-type ListHostRaspProtectHistoryInfoInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListHostRaspProtectHistoryInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListHostRaspProtectHistoryInfoInvoker) Invoke() (*model.ListHostRaspProtectHistoryInfoResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListHostRaspProtectHistoryInfoResponse), nil
-	}
-}
-
 type ListHostStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1666,22 +1346,6 @@ func (i *ListHostStatusInvoker) Invoke() (*model.ListHostStatusResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListHostStatusResponse), nil
-	}
-}
-
-type ListHostVulsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListHostVulsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListHostVulsInvoker) Invoke() (*model.ListHostVulsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListHostVulsResponse), nil
 	}
 }
 
@@ -2034,22 +1698,6 @@ func (i *ListLoginWhiteListInvoker) Invoke() (*model.ListLoginWhiteListResponse,
 		return nil, err
 	} else {
 		return result.(*model.ListLoginWhiteListResponse), nil
-	}
-}
-
-type ListMultiCloudClustersInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListMultiCloudClustersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListMultiCloudClustersInvoker) Invoke() (*model.ListMultiCloudClustersResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListMultiCloudClustersResponse), nil
 	}
 }
 
@@ -2581,70 +2229,6 @@ func (i *ListVulHandleHistoryInvoker) Invoke() (*model.ListVulHandleHistoryRespo
 	}
 }
 
-type ListVulHostsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListVulHostsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListVulHostsInvoker) Invoke() (*model.ListVulHostsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListVulHostsResponse), nil
-	}
-}
-
-type ListVulScanTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListVulScanTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListVulScanTaskInvoker) Invoke() (*model.ListVulScanTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListVulScanTaskResponse), nil
-	}
-}
-
-type ListVulScanTaskHostInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListVulScanTaskHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListVulScanTaskHostInvoker) Invoke() (*model.ListVulScanTaskHostResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListVulScanTaskHostResponse), nil
-	}
-}
-
-type ListVulnerabilitiesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListVulnerabilitiesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListVulnerabilitiesInvoker) Invoke() (*model.ListVulnerabilitiesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListVulnerabilitiesResponse), nil
-	}
-}
-
 type ListVulnerabilityCveInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2789,22 +2373,6 @@ func (i *ListWorkLoadsInvoker) Invoke() (*model.ListWorkLoadsResponse, error) {
 	}
 }
 
-type ListWtpProtectHostInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListWtpProtectHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListWtpProtectHostInvoker) Invoke() (*model.ListWtpProtectHostResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListWtpProtectHostResponse), nil
-	}
-}
-
 type ModifyDecoyPortPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2818,22 +2386,6 @@ func (i *ModifyDecoyPortPolicyInvoker) Invoke() (*model.ModifyDecoyPortPolicyRes
 		return nil, err
 	} else {
 		return result.(*model.ModifyDecoyPortPolicyResponse), nil
-	}
-}
-
-type ParseMultiCloudClusterConfigInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ParseMultiCloudClusterConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ParseMultiCloudClusterConfigInvoker) Invoke() (*model.ParseMultiCloudClusterConfigResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ParseMultiCloudClusterConfigResponse), nil
 	}
 }
 
@@ -2866,22 +2418,6 @@ func (i *RemoveLoginWhiteListInvoker) Invoke() (*model.RemoveLoginWhiteListRespo
 		return nil, err
 	} else {
 		return result.(*model.RemoveLoginWhiteListResponse), nil
-	}
-}
-
-type RemoveMultiCloudClustersInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RemoveMultiCloudClustersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *RemoveMultiCloudClustersInvoker) Invoke() (*model.RemoveMultiCloudClustersResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RemoveMultiCloudClustersResponse), nil
 	}
 }
 
@@ -2933,22 +2469,6 @@ func (i *RunImageSynchronizeInvoker) Invoke() (*model.RunImageSynchronizeRespons
 	}
 }
 
-type SetRaspSwitchInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SetRaspSwitchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *SetRaspSwitchInvoker) Invoke() (*model.SetRaspSwitchResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SetRaspSwitchResponse), nil
-	}
-}
-
 type SetTwoFactorLoginConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2965,54 +2485,6 @@ func (i *SetTwoFactorLoginConfigInvoker) Invoke() (*model.SetTwoFactorLoginConfi
 	}
 }
 
-type SetWtpProtectionStatusInfoInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SetWtpProtectionStatusInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *SetWtpProtectionStatusInfoInvoker) Invoke() (*model.SetWtpProtectionStatusInfoResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SetWtpProtectionStatusInfoResponse), nil
-	}
-}
-
-type ShowAgentDaemonsetDeployTemplateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowAgentDaemonsetDeployTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowAgentDaemonsetDeployTemplateInvoker) Invoke() (*model.ShowAgentDaemonsetDeployTemplateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowAgentDaemonsetDeployTemplateResponse), nil
-	}
-}
-
-type ShowAgentDaemonsetDetailInfoInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowAgentDaemonsetDetailInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowAgentDaemonsetDetailInfoInvoker) Invoke() (*model.ShowAgentDaemonsetDetailInfoResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowAgentDaemonsetDetailInfoResponse), nil
-	}
-}
-
 type ShowAgentStatisticsStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3026,38 +2498,6 @@ func (i *ShowAgentStatisticsStatusInvoker) Invoke() (*model.ShowAgentStatisticsS
 		return nil, err
 	} else {
 		return result.(*model.ShowAgentStatisticsStatusResponse), nil
-	}
-}
-
-type ShowAntivirusPayPerScanStatusInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowAntivirusPayPerScanStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowAntivirusPayPerScanStatusInvoker) Invoke() (*model.ShowAntivirusPayPerScanStatusResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowAntivirusPayPerScanStatusResponse), nil
-	}
-}
-
-type ShowAntivirusStatisticInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowAntivirusStatisticInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowAntivirusStatisticInvoker) Invoke() (*model.ShowAntivirusStatisticResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowAntivirusStatisticResponse), nil
 	}
 }
 
@@ -3413,38 +2853,6 @@ func (i *ShowLatestExportTaskByTypeInvoker) Invoke() (*model.ShowLatestExportTas
 	}
 }
 
-type ShowMultiCloudClusterImageCommandInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowMultiCloudClusterImageCommandInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowMultiCloudClusterImageCommandInvoker) Invoke() (*model.ShowMultiCloudClusterImageCommandResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowMultiCloudClusterImageCommandResponse), nil
-	}
-}
-
-type ShowMultiCloudClusterProxyScriptInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowMultiCloudClusterProxyScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowMultiCloudClusterProxyScriptInvoker) Invoke() (*model.ShowMultiCloudClusterProxyScriptResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowMultiCloudClusterProxyScriptResponse), nil
-	}
-}
-
 type ShowNetworkStatisticsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3621,38 +3029,6 @@ func (i *ShowSingleBackupPolicyInfoInvoker) Invoke() (*model.ShowSingleBackupPol
 	}
 }
 
-type ShowVulScanPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowVulScanPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowVulScanPolicyInvoker) Invoke() (*model.ShowVulScanPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowVulScanPolicyResponse), nil
-	}
-}
-
-type ShowVulStaticsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowVulStaticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowVulStaticsInvoker) Invoke() (*model.ShowVulStaticsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowVulStaticsResponse), nil
-	}
-}
-
 type StartProtectionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3682,22 +3058,6 @@ func (i *StopProtectionInvoker) Invoke() (*model.StopProtectionResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.StopProtectionResponse), nil
-	}
-}
-
-type SwitchAntivirusTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SwitchAntivirusTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *SwitchAntivirusTaskInvoker) Invoke() (*model.SwitchAntivirusTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SwitchAntivirusTaskResponse), nil
 	}
 }
 
@@ -3845,22 +3205,6 @@ func (i *SyncContainerNetworkPolicyListInvoker) Invoke() (*model.SyncContainerNe
 	}
 }
 
-type SyncMultiCloudClusterStatusInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SyncMultiCloudClusterStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *SyncMultiCloudClusterStatusInvoker) Invoke() (*model.SyncMultiCloudClusterStatusResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SyncMultiCloudClusterStatusResponse), nil
-	}
-}
-
 type SyncSecurityGroupPoliciesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3874,22 +3218,6 @@ func (i *SyncSecurityGroupPoliciesInvoker) Invoke() (*model.SyncSecurityGroupPol
 		return nil, err
 	} else {
 		return result.(*model.SyncSecurityGroupPoliciesResponse), nil
-	}
-}
-
-type UpdateAgentDaemonsetInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateAgentDaemonsetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateAgentDaemonsetInvoker) Invoke() (*model.UpdateAgentDaemonsetResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateAgentDaemonsetResponse), nil
 	}
 }
 
@@ -3922,22 +3250,6 @@ func (i *UpdateContainerNetworkPolicyInvoker) Invoke() (*model.UpdateContainerNe
 		return nil, err
 	} else {
 		return result.(*model.UpdateContainerNetworkPolicyResponse), nil
-	}
-}
-
-type UpdateMultiCloudClustersInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateMultiCloudClustersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateMultiCloudClustersInvoker) Invoke() (*model.UpdateMultiCloudClustersResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateMultiCloudClustersResponse), nil
 	}
 }
 
@@ -4021,6 +3333,22 @@ func (i *ChangeAntivirusPayPerScanStatusInvoker) Invoke() (*model.ChangeAntiviru
 	}
 }
 
+type ChangeAntivirusPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeAntivirusPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeAntivirusPolicyInvoker) Invoke() (*model.ChangeAntivirusPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeAntivirusPolicyResponse), nil
+	}
+}
+
 type CreateAntiVirusPaidTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4034,6 +3362,102 @@ func (i *CreateAntiVirusPaidTaskInvoker) Invoke() (*model.CreateAntiVirusPaidTas
 		return nil, err
 	} else {
 		return result.(*model.CreateAntiVirusPaidTaskResponse), nil
+	}
+}
+
+type CreateAntiVirusPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAntiVirusPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAntiVirusPolicyInvoker) Invoke() (*model.CreateAntiVirusPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAntiVirusPolicyResponse), nil
+	}
+}
+
+type CreateAntiVirusTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAntiVirusTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAntiVirusTaskInvoker) Invoke() (*model.CreateAntiVirusTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAntiVirusTaskResponse), nil
+	}
+}
+
+type DeleteAntivirusPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAntivirusPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAntivirusPolicyInvoker) Invoke() (*model.DeleteAntivirusPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAntivirusPolicyResponse), nil
+	}
+}
+
+type ExportAntiVirusResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportAntiVirusResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExportAntiVirusResultInvoker) Invoke() (*model.ExportAntiVirusResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportAntiVirusResultResponse), nil
+	}
+}
+
+type HandleAntiVirusResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *HandleAntiVirusResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *HandleAntiVirusResultInvoker) Invoke() (*model.HandleAntiVirusResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.HandleAntiVirusResultResponse), nil
+	}
+}
+
+type ListAntiVirusHostInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAntiVirusHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAntiVirusHostInvoker) Invoke() (*model.ListAntiVirusHostResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAntiVirusHostResponse), nil
 	}
 }
 
@@ -4053,6 +3477,54 @@ func (i *ListAntiVirusPaidHostsInvoker) Invoke() (*model.ListAntiVirusPaidHostsR
 	}
 }
 
+type ListAntiVirusPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAntiVirusPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAntiVirusPolicyInvoker) Invoke() (*model.ListAntiVirusPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAntiVirusPolicyResponse), nil
+	}
+}
+
+type ListAntiVirusResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAntiVirusResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAntiVirusResultInvoker) Invoke() (*model.ListAntiVirusResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAntiVirusResultResponse), nil
+	}
+}
+
+type ListAntiVirusTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAntiVirusTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAntiVirusTaskInvoker) Invoke() (*model.ListAntiVirusTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAntiVirusTaskResponse), nil
+	}
+}
+
 type ShowAntivirusFreeQuotaInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4066,6 +3538,54 @@ func (i *ShowAntivirusFreeQuotaInvoker) Invoke() (*model.ShowAntivirusFreeQuotaR
 		return nil, err
 	} else {
 		return result.(*model.ShowAntivirusFreeQuotaResponse), nil
+	}
+}
+
+type ShowAntivirusPayPerScanStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAntivirusPayPerScanStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAntivirusPayPerScanStatusInvoker) Invoke() (*model.ShowAntivirusPayPerScanStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAntivirusPayPerScanStatusResponse), nil
+	}
+}
+
+type ShowAntivirusStatisticInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAntivirusStatisticInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAntivirusStatisticInvoker) Invoke() (*model.ShowAntivirusStatisticResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAntivirusStatisticResponse), nil
+	}
+}
+
+type SwitchAntivirusTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchAntivirusTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SwitchAntivirusTaskInvoker) Invoke() (*model.SwitchAntivirusTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchAntivirusTaskResponse), nil
 	}
 }
 
@@ -4437,22 +3957,6 @@ func (i *ShowClusterScanStatisticsInvoker) Invoke() (*model.ShowClusterScanStati
 	}
 }
 
-type BatchUploadFilesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchUploadFilesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchUploadFilesInvoker) Invoke() (*model.BatchUploadFilesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchUploadFilesResponse), nil
-	}
-}
-
 type ListProjectConfigsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4498,6 +4002,86 @@ func (i *SaveBrowsingHistoryInvoker) Invoke() (*model.SaveBrowsingHistoryRespons
 		return nil, err
 	} else {
 		return result.(*model.SaveBrowsingHistoryResponse), nil
+	}
+}
+
+type BatchDeleteAgentDaemonsetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteAgentDaemonsetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteAgentDaemonsetInvoker) Invoke() (*model.BatchDeleteAgentDaemonsetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteAgentDaemonsetResponse), nil
+	}
+}
+
+type BatchUpgradeAgentDaemonsetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpgradeAgentDaemonsetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpgradeAgentDaemonsetInvoker) Invoke() (*model.BatchUpgradeAgentDaemonsetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpgradeAgentDaemonsetResponse), nil
+	}
+}
+
+type CreateAgentDaemonsetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAgentDaemonsetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAgentDaemonsetInvoker) Invoke() (*model.CreateAgentDaemonsetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAgentDaemonsetResponse), nil
+	}
+}
+
+type CreateMultiCloudClustersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateMultiCloudClustersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateMultiCloudClustersInvoker) Invoke() (*model.CreateMultiCloudClustersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateMultiCloudClustersResponse), nil
+	}
+}
+
+type DeleteAgentDaemonsetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAgentDaemonsetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAgentDaemonsetInvoker) Invoke() (*model.DeleteAgentDaemonsetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAgentDaemonsetResponse), nil
 	}
 }
 
@@ -4565,6 +4149,22 @@ func (i *ListCicdConfigurationsInvoker) Invoke() (*model.ListCicdConfigurationsR
 	}
 }
 
+type ListMultiCloudClustersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMultiCloudClustersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListMultiCloudClustersInvoker) Invoke() (*model.ListMultiCloudClustersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMultiCloudClustersResponse), nil
+	}
+}
+
 type ModifyCicdConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4581,6 +4181,70 @@ func (i *ModifyCicdConfigurationInvoker) Invoke() (*model.ModifyCicdConfiguratio
 	}
 }
 
+type ParseMultiCloudClusterConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ParseMultiCloudClusterConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ParseMultiCloudClusterConfigInvoker) Invoke() (*model.ParseMultiCloudClusterConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ParseMultiCloudClusterConfigResponse), nil
+	}
+}
+
+type RemoveMultiCloudClustersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RemoveMultiCloudClustersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RemoveMultiCloudClustersInvoker) Invoke() (*model.RemoveMultiCloudClustersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RemoveMultiCloudClustersResponse), nil
+	}
+}
+
+type ShowAgentDaemonsetDeployTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAgentDaemonsetDeployTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAgentDaemonsetDeployTemplateInvoker) Invoke() (*model.ShowAgentDaemonsetDeployTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAgentDaemonsetDeployTemplateResponse), nil
+	}
+}
+
+type ShowAgentDaemonsetDetailInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAgentDaemonsetDetailInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAgentDaemonsetDetailInfoInvoker) Invoke() (*model.ShowAgentDaemonsetDetailInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAgentDaemonsetDetailInfoResponse), nil
+	}
+}
+
 type ShowCicdConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4594,6 +4258,86 @@ func (i *ShowCicdConfigurationInvoker) Invoke() (*model.ShowCicdConfigurationRes
 		return nil, err
 	} else {
 		return result.(*model.ShowCicdConfigurationResponse), nil
+	}
+}
+
+type ShowMultiCloudClusterImageCommandInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMultiCloudClusterImageCommandInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowMultiCloudClusterImageCommandInvoker) Invoke() (*model.ShowMultiCloudClusterImageCommandResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMultiCloudClusterImageCommandResponse), nil
+	}
+}
+
+type ShowMultiCloudClusterProxyScriptInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMultiCloudClusterProxyScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowMultiCloudClusterProxyScriptInvoker) Invoke() (*model.ShowMultiCloudClusterProxyScriptResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMultiCloudClusterProxyScriptResponse), nil
+	}
+}
+
+type SyncMultiCloudClusterStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SyncMultiCloudClusterStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SyncMultiCloudClusterStatusInvoker) Invoke() (*model.SyncMultiCloudClusterStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SyncMultiCloudClusterStatusResponse), nil
+	}
+}
+
+type UpdateAgentDaemonsetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAgentDaemonsetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAgentDaemonsetInvoker) Invoke() (*model.UpdateAgentDaemonsetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAgentDaemonsetResponse), nil
+	}
+}
+
+type UpdateMultiCloudClustersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateMultiCloudClustersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateMultiCloudClustersInvoker) Invoke() (*model.UpdateMultiCloudClustersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateMultiCloudClustersResponse), nil
 	}
 }
 
@@ -4773,6 +4517,38 @@ func (i *ShowTaskStatisticsInvoker) Invoke() (*model.ShowTaskStatisticsResponse,
 	}
 }
 
+type ChangeVulScanPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeVulScanPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeVulScanPolicyInvoker) Invoke() (*model.ChangeVulScanPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeVulScanPolicyResponse), nil
+	}
+}
+
+type CreateVulnerabilityScanTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateVulnerabilityScanTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateVulnerabilityScanTaskInvoker) Invoke() (*model.CreateVulnerabilityScanTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateVulnerabilityScanTaskResponse), nil
+	}
+}
+
 type ExportHandledVulnerabilitiesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4802,6 +4578,38 @@ func (i *ExportVulHandleHistoryInvoker) Invoke() (*model.ExportVulHandleHistoryR
 		return nil, err
 	} else {
 		return result.(*model.ExportVulHandleHistoryResponse), nil
+	}
+}
+
+type ExportVulsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportVulsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExportVulsInvoker) Invoke() (*model.ExportVulsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportVulsResponse), nil
+	}
+}
+
+type ListHostVulsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHostVulsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListHostVulsInvoker) Invoke() (*model.ListHostVulsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHostVulsResponse), nil
 	}
 }
 
@@ -4837,6 +4645,70 @@ func (i *ListVulContainersInvoker) Invoke() (*model.ListVulContainersResponse, e
 	}
 }
 
+type ListVulHostsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVulHostsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListVulHostsInvoker) Invoke() (*model.ListVulHostsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVulHostsResponse), nil
+	}
+}
+
+type ListVulScanTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVulScanTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListVulScanTaskInvoker) Invoke() (*model.ListVulScanTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVulScanTaskResponse), nil
+	}
+}
+
+type ListVulScanTaskHostInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVulScanTaskHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListVulScanTaskHostInvoker) Invoke() (*model.ListVulScanTaskHostResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVulScanTaskHostResponse), nil
+	}
+}
+
+type ListVulnerabilitiesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVulnerabilitiesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListVulnerabilitiesInvoker) Invoke() (*model.ListVulnerabilitiesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVulnerabilitiesResponse), nil
+	}
+}
+
 type RecordUserViewVulTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4850,6 +4722,38 @@ func (i *RecordUserViewVulTaskInvoker) Invoke() (*model.RecordUserViewVulTaskRes
 		return nil, err
 	} else {
 		return result.(*model.RecordUserViewVulTaskResponse), nil
+	}
+}
+
+type ShowVulScanPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVulScanPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowVulScanPolicyInvoker) Invoke() (*model.ShowVulScanPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVulScanPolicyResponse), nil
+	}
+}
+
+type ShowVulStaticsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVulStaticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowVulStaticsInvoker) Invoke() (*model.ShowVulStaticsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVulStaticsResponse), nil
 	}
 }
 
@@ -4901,6 +4805,38 @@ func (i *ExportWebTamperHostInvoker) Invoke() (*model.ExportWebTamperHostRespons
 	}
 }
 
+type ListHostProtectHistoryInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHostProtectHistoryInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListHostProtectHistoryInfoInvoker) Invoke() (*model.ListHostProtectHistoryInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHostProtectHistoryInfoResponse), nil
+	}
+}
+
+type ListHostRaspProtectHistoryInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHostRaspProtectHistoryInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListHostRaspProtectHistoryInfoInvoker) Invoke() (*model.ListHostRaspProtectHistoryInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHostRaspProtectHistoryInfoResponse), nil
+	}
+}
+
 type ListWebTamperHostInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4914,6 +4850,54 @@ func (i *ListWebTamperHostInvoker) Invoke() (*model.ListWebTamperHostResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ListWebTamperHostResponse), nil
+	}
+}
+
+type ListWtpProtectHostInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWtpProtectHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListWtpProtectHostInvoker) Invoke() (*model.ListWtpProtectHostResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWtpProtectHostResponse), nil
+	}
+}
+
+type SetRaspSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetRaspSwitchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetRaspSwitchInvoker) Invoke() (*model.SetRaspSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetRaspSwitchResponse), nil
+	}
+}
+
+type SetWtpProtectionStatusInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetWtpProtectionStatusInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetWtpProtectionStatusInfoInvoker) Invoke() (*model.SetWtpProtectionStatusInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetWtpProtectionStatusInfoResponse), nil
 	}
 }
 

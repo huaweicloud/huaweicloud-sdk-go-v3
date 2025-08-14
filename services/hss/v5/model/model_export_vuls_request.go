@@ -36,7 +36,7 @@ type ExportVulsRequest struct {
 	// 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 修复优先级 Critical 紧急 High  高 Medium 中 Low 低
+	// 修复优先级 Critical：紧急 High：高 Medium：中 Low：低
 	RepairPriority *string `json:"repair_priority,omitempty"`
 
 	// 处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理

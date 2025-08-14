@@ -24,7 +24,7 @@ type ListBaselineWhiteListsRequest struct {
 	// 基线检查的操作系统 - Linux - Windows
 	OsType *string `json:"os_type,omitempty"`
 
-	// 基线检查白名单的规则范围 - specific_host 部分主机 - all_host      全部主机
+	// 基线检查白名单的规则范围 - specific_host：部分主机 - all_host：全部主机
 	RuleType *string `json:"rule_type,omitempty"`
 
 	// 基线检查中检查项的检查类型 - 访问控制 - 服务配置

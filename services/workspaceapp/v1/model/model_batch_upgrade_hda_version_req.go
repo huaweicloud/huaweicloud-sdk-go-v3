@@ -9,7 +9,7 @@ import (
 // BatchUpgradeHdaVersionReq 批量升级HDA版本请求。
 type BatchUpgradeHdaVersionReq struct {
 
-	// 批量唯一标识请求列表，一次请求数量区间 [1, 20]
+	// 批量唯一标识请求列表，一次请求数量区间 [1, 20]。
 	Items []string `json:"items"`
 }
 

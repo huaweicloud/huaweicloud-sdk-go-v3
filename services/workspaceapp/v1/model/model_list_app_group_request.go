@@ -9,10 +9,10 @@ import (
 // ListAppGroupRequest Request Object
 type ListAppGroupRequest struct {
 
-	// 单次查询的大小[1-100]。
+	// 单次查询的大小[1-100]，默认值10。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 查询的偏移量。
+	// 查询的偏移量，默认值0。
 	Offset *int32 `json:"offset,omitempty"`
 
 	// 应用服务器组ID。
@@ -21,7 +21,7 @@ type ListAppGroupRequest struct {
 	// 应用组ID。
 	AppGroupId *string `json:"app_group_id,omitempty"`
 
-	// 应用组名称
+	// 应用组名称。
 	Name *string `json:"name,omitempty"`
 
 	// 授权类型： * `APP` - 应用 * `APP_GROUP` - 应用组

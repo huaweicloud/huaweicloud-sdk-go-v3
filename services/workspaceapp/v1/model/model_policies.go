@@ -27,6 +27,10 @@ type Policies struct {
 	Bandwidth *Bandwidth `json:"bandwidth,omitempty"`
 
 	Custom *PoliciesCustom `json:"custom,omitempty"`
+
+	CloudStorage *PoliciesCloudStorage `json:"cloud_storage,omitempty"`
+
+	UserProfile *PoliciesUserProfile `json:"user_profile,omitempty"`
 }
 
 func (o Policies) String() string {

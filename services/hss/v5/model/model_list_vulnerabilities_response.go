@@ -9,10 +9,10 @@ import (
 // ListVulnerabilitiesResponse Response Object
 type ListVulnerabilitiesResponse struct {
 
-	// 漏洞总数
+	// **参数解释**: 漏洞总数 **取值范围**: 取值0-2147483647
 	TotalNum *int64 `json:"total_num,omitempty"`
 
-	// 软件漏洞列表
+	// **参数解释**: 漏洞数据列表 **取值范围**: 不涉及
 	DataList       *[]VulInfo `json:"data_list,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }

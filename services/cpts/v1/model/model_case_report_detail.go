@@ -27,7 +27,7 @@ type CaseReportDetail struct {
 	AvgNetworkTraffic *float64 `json:"avgNetworkTraffic,omitempty"`
 
 	// 平均下行带宽
-	AvgRecBytes *int32 `json:"avgRecBytes,omitempty"`
+	AvgRecBytes *float64 `json:"avgRecBytes,omitempty"`
 
 	// 平均下行带宽检查点
 	AvgRecBytesCheckPoint *float64 `json:"avgRecBytesCheckPoint,omitempty"`
@@ -36,7 +36,7 @@ type CaseReportDetail struct {
 	AvgRecBytesCheckRes *bool `json:"avgRecBytesCheckRes,omitempty"`
 
 	// 平均上行带宽
-	AvgSentBytes *int32 `json:"avgSentBytes,omitempty"`
+	AvgSentBytes *float64 `json:"avgSentBytes,omitempty"`
 
 	// 平均上行带宽检查点
 	AvgSentBytesCheckPoint *float64 `json:"avgSentBytesCheckPoint,omitempty"`

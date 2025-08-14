@@ -27,7 +27,7 @@ type ListRansomwareProtectionNodesRequest struct {
 	// 操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
 	OsType *string `json:"os_type,omitempty"`
 
-	// 服务器IP地址,服务器公网IP地址
+	// 服务器IP地址，服务器公网IP地址
 	HostIp *string `json:"host_ip,omitempty"`
 
 	// 服务器私有IP

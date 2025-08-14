@@ -38,7 +38,7 @@ type ShowAppGroupDetailResponse struct {
 	// 应用数量。
 	AppCount *int32 `json:"app_count,omitempty"`
 
-	// 应用组描述
+	// 应用组描述。
 	AppServerGroupDescription *string `json:"app_server_group_description,omitempty"`
 	HttpStatusCode            int     `json:"-"`
 }

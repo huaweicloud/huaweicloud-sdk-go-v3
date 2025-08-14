@@ -21,10 +21,10 @@ type ListAppWhitelistPolicyProcessRequest struct {
 	// **参数解释**： 策略ID **约束限制**： 必填 **取值范围**： 字符长度1-64位 **默认取值**： 不涉及
 	PolicyId string `json:"policy_id"`
 
-	// **参数解释**： 服务器名称 **约束限制**: 不涉及 **取值范围**: - trust：可信 - suspicious：可疑 - malicious：未知 - unknown：未知  **默认取值**: 不涉及
+	// **参数解释**： 信任状态 **约束限制**: 不涉及 **取值范围**: - trust：可信 - suspicious：可疑 - malicious：未知 - unknown：未知  **默认取值**: 不涉及
 	ProcessStatus *string `json:"process_status,omitempty"`
 
-	// **参数解释**： 服务器名称 **约束限制**: 不涉及 **取值范围**: - system：系统程序 - interpretive：解释类程序 - normal：普通可执行程序  **默认取值**: 不涉及
+	// **参数解释**： 进程类型 **约束限制**: 不涉及 **取值范围**: - system：系统程序 - interpretive：解释类程序 - normal：普通可执行程序  **默认取值**: 不涉及
 	ProcessType *string `json:"process_type,omitempty"`
 
 	// **参数解释**： 进程名称 **约束限制**： 不涉及 **取值范围**： 字符长度1-128位 **默认取值**： 不涉及
@@ -36,7 +36,7 @@ type ListAppWhitelistPolicyProcessRequest struct {
 	// **参数解释**： 进程路径 **约束限制**： 不涉及 **取值范围**： 字符长度1-256位 **默认取值**： 不涉及
 	ProcessPath *string `json:"process_path,omitempty"`
 
-	// **参数解释**： 服务器名称 **约束限制**: 不涉及 **取值范围**: - confirmed：已确认 - unconfirmed：未确认  **默认取值**: 不涉及
+	// **参数解释**： 确认状态 **约束限制**: 不涉及 **取值范围**: - confirmed：已确认 - unconfirmed：未确认  **默认取值**: 不涉及
 	HandleStatus *string `json:"handle_status,omitempty"`
 
 	// 操作系统类型，包含如下2种。   - Linux：Linux。   - Windows：Windows。

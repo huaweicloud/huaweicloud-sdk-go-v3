@@ -39,7 +39,7 @@ type ProcessEventResourceResponseInfo struct {
 	// **参数解释**： 镜像ID **取值范围**： 字符长度1-64位
 	ImageId *string `json:"image_id,omitempty"`
 
-	// 镜像名称，只有容器类型的告警有
+	// **参数解释**： 镜像名称，只有容器类型的告警有 **取值范围**： 字符长度1-256位
 	ImageName *string `json:"image_name,omitempty"`
 
 	// **参数解释**： 主机属性 **取值范围**： 字符长度1-64位
@@ -57,7 +57,7 @@ type ProcessEventResourceResponseInfo struct {
 	// **参数解释**： 操作系统位数 **取值范围**： 字符长度1-64位
 	OsBit *string `json:"os_bit,omitempty"`
 
-	// 操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows。
+	// **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
 	OsType *string `json:"os_type,omitempty"`
 
 	// 操作系统名称
@@ -69,10 +69,10 @@ type ProcessEventResourceResponseInfo struct {
 	// **参数解释**: 主机IP **取值范围**: 字符长度1-128位
 	HostIp *string `json:"host_ip,omitempty"`
 
-	// 弹性公网IP地址
+	// **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
 	PublicIp *string `json:"public_ip,omitempty"`
 
-	// **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+	// **参数解释**： 主机ID **取值范围**： 字符长度1-64位
 	HostId *string `json:"host_id,omitempty"`
 
 	// **参数解释**： pod uid **取值范围**： 字符长度1-64位

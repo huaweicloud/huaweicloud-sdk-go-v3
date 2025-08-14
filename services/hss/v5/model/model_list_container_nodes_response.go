@@ -9,10 +9,10 @@ import (
 // ListContainerNodesResponse Response Object
 type ListContainerNodesResponse struct {
 
-	// 容器节点总数
+	// **参数解释**: 容器节点总数 **取值范围**: 取值0-65535
 	TotalNum *int32 `json:"total_num,omitempty"`
 
-	// 容器节点列表
+	// **参数解释**: 容器节点列表 **取值范围**: 取值0-65535
 	DataList       *[]ContainerNodeInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                  `json:"-"`
 }

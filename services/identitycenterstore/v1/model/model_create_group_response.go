@@ -9,7 +9,7 @@ import (
 // CreateGroupResponse Response Object
 type CreateGroupResponse struct {
 
-	// 身份源中IAM身份中心用户组的全局唯一标识符（ID）
+	// 身份源中IdentityCenter用户组的全局唯一标识符（ID）
 	GroupId *string `json:"group_id,omitempty"`
 
 	// 身份源的全局唯一标识符（ID）

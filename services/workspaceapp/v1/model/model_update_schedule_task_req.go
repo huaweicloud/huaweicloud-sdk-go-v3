@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// UpdateScheduleTaskReq 更新定时任务
+// UpdateScheduleTaskReq 更新定时任务。
 type UpdateScheduleTaskReq struct {
 	ScheduledType *ScheduledTypeEnum `json:"scheduled_type,omitempty"`
 

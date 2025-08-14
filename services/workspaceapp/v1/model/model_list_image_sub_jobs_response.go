@@ -12,7 +12,7 @@ type ListImageSubJobsResponse struct {
 	// 总数。
 	Count *int32 `json:"count,omitempty"`
 
-	// 任务明细信息列表，返回列表条目数量上限为分页的最大上限值
+	// 任务明细信息列表，返回列表条目数量上限为分页的最大上限值。
 	Items          *[]ImageJobDetailInfo `json:"items,omitempty"`
 	HttpStatusCode int                   `json:"-"`
 }

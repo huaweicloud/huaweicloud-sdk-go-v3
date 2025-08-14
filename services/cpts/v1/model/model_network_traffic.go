@@ -21,7 +21,7 @@ type NetworkTraffic struct {
 	MaxUpstream *int32 `json:"max_upstream,omitempty"`
 
 	// 最小网络流量
-	MinNetworkTraffic *int32 `json:"min_network_traffic,omitempty"`
+	MinNetworkTraffic *float64 `json:"min_network_traffic,omitempty"`
 }
 
 func (o NetworkTraffic) String() string {

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ContainerExtraInfo 沙箱额外配置,包括VPN引流沙箱，linux沙箱，RDP沙箱，mysql沙箱，其他沙箱默认为空
+// ContainerExtraInfo 沙箱额外配置，包括VPN引流沙箱、linux沙箱、RDP沙箱、mysql沙箱，其他沙箱默认为空
 type ContainerExtraInfo struct {
 	Openvpn *ContainerExtraOpenvpnInfo `json:"openvpn,omitempty"`
 

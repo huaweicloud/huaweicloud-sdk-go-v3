@@ -9,7 +9,7 @@ import (
 // AutoLaunchChangeResponseInfo 自启动项变动历史信息
 type AutoLaunchChangeResponseInfo struct {
 
-	// **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+	// **参数解释**: Agent ID **取值范围**: 字符长度1-64位
 	AgentId *string `json:"agent_id,omitempty"`
 
 	// **参数解释**: 变更类型 **取值范围**: - add：新建 - delete：删除 - modify：修改
@@ -18,7 +18,7 @@ type AutoLaunchChangeResponseInfo struct {
 	// **参数解释**: 自启动项类型 **取值范围**: - 0：自启动服务 - 1：定时任务 - 2：预加载动态库 - 3：Run注册表键 - 4：开机启动文件夹
 	Type *int32 `json:"type,omitempty"`
 
-	// **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+	// **参数解释**： 主机ID **取值范围**： 字符长度1-64位
 	HostId *string `json:"host_id,omitempty"`
 
 	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位

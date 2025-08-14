@@ -24,22 +24,22 @@ type ListWebAppAndServicesRequest struct {
 	// 返回的资产类别 - 0: 主机 - 1: 容器
 	Category string `json:"category"`
 
-	// 资产类型 - web-app       web应用 - web-service   web服务 - database      数据库
+	// 资产类型 - web-app：web应用 - web-service：web服务 - database：数据库
 	Catalogue string `json:"catalogue"`
 
-	// 服务器名称(可选).可让用户根据主机名字搜索
+	// 服务器名称(可选)，可让用户根据主机名字搜索
 	HostName *string `json:"host_name,omitempty"`
 
-	// 服务器id(可选).可让用户根据主机id搜索
+	// 服务器id(可选)，可让用户根据主机id搜索
 	HostId *string `json:"host_id,omitempty"`
 
-	// 服务器ip(可选).可让用户根据主机ip搜索
+	// 服务器ip(可选)，可让用户根据主机ip搜索
 	HostIp *string `json:"host_ip,omitempty"`
 
-	// WebAppAndService资产版本.可让用户根据版本搜索
+	// WebAppAndService资产版本，可让用户根据版本搜索
 	Version *string `json:"version,omitempty"`
 
-	// WebAppAndService资产安装目录.可让用户根据安装目录搜索
+	// WebAppAndService资产安装目录，可让用户根据安装目录搜索
 	InstallDir *string `json:"install_dir,omitempty"`
 
 	// 是否模糊匹配，默认false表示精确匹配

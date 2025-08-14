@@ -9,7 +9,7 @@ import (
 // SystemUserWhiteListRequestInfo 系统用户白名单
 type SystemUserWhiteListRequestInfo struct {
 
-	// **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+	// **参数解释**： 主机ID **取值范围**： 字符长度1-64位
 	HostId *string `json:"host_id,omitempty"`
 
 	// 系统用户名列表

@@ -9,7 +9,7 @@ import (
 func GenReqDefForBatchCreateIrackTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v1/{project_id}/irack/{id}/tags/create").
+		WithPath("/v1/{project_id}/iracks/{id}/tags/create").
 		WithResponse(new(model.BatchCreateIrackTagsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
@@ -53,7 +53,7 @@ func GenReqDefForBatchCreateTags() *def.HttpRequestDef {
 func GenReqDefForBatchDeleteIrackTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v1/{project_id}/irack/{id}/tags/delete").
+		WithPath("/v1/{project_id}/iracks/{id}/tags/delete").
 		WithResponse(new(model.BatchDeleteIrackTagsResponse)).
 		WithContentType("application/json;charset=UTF-8")
 

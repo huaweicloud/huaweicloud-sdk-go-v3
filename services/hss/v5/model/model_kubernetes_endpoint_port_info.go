@@ -12,7 +12,7 @@ type KubernetesEndpointPortInfo struct {
 	// ID
 	Id *string `json:"id,omitempty"`
 
-	// 关联端点 ID
+	// 关联端点ID
 	EndpointId *string `json:"endpoint_id,omitempty"`
 
 	// 端口名

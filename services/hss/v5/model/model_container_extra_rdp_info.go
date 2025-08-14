@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ContainerExtraRdpInfo 沙箱类型,RDP沙箱专用
+// ContainerExtraRdpInfo 沙箱类型，RDP沙箱专用
 type ContainerExtraRdpInfo struct {
 
 	// 协议类型: - 0 : 协议模拟 - 1 : 系统模拟

@@ -18,16 +18,16 @@ type OperateResultRequestInfo struct {
 	// 事件类型
 	EventType int32 `json:"event_type"`
 
-	// 发生时间，毫秒
+	// **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807
 	OccurTime *int64 `json:"occur_time,omitempty"`
 
-	// 文件哈希
+	// **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
 	FileHash string `json:"file_hash"`
 
-	// 文件路径
+	// **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
 	FilePath string `json:"file_path"`
 
-	// 文件属性
+	// **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
 	FileAttr string `json:"file_attr"`
 }
 

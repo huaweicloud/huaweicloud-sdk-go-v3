@@ -12,7 +12,7 @@ type MultiCloudClusterCreateRequestBody struct {
 	// 集群名称
 	Name *string `json:"name,omitempty"`
 
-	// 集群服务商:   - ali：阿里   - tencent：腾讯   - azure：微软   - aws：亚马逊   - self_built_hw：华为自建   - self_built_idc：IDC自建
+	// **参数解释** 集群服务商 **约束限制**   - ali：阿里。   - tencent：腾讯。   - azure：微软。   - aws：亚马逊。   - self_built_hw：华为自建。   - self_built_idc：IDC自建。  **取值范围** 字符长度范围0-64 **默认取值** 不涉及
 	Provider *string `json:"provider,omitempty"`
 
 	// 集群apiserver地址
@@ -30,7 +30,7 @@ type MultiCloudClusterCreateRequestBody struct {
 	// 组织
 	Organization *string `json:"organization,omitempty"`
 
-	// 镜像仓类型： - harbor Harbor镜像仓 - quay Quay镜像仓 - jfrog Jfrog镜像仓 - other 其他镜像仓
+	// **参数解释** 镜像仓类型 **约束限制** - harbor：Harbor镜像仓。 - quay：Quay镜像仓。 - jfrog：Jfrog镜像仓。 - other：其他镜像仓。  **取值范围** 字符长度范围0-64 **默认取值** 不涉及
 	ImageRepoType *string `json:"image_repo_type,omitempty"`
 
 	// 当前有效期结束时间

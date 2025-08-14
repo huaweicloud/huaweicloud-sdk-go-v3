@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// LoginUserName 登录用户名
+// LoginUserName **参数解释**： 登录用户名 **取值范围**： 字符长度1-256位
 type LoginUserName struct {
 }
 

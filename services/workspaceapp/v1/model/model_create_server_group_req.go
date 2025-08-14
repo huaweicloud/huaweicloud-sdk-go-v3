@@ -65,10 +65,10 @@ type CreateServerGroupReq struct {
 	// 付费会话数，单位/个。
 	ExtraSessionSize *int32 `json:"extra_session_size,omitempty"`
 
-	// 标签信息，最多包含20个key,不允许重复
+	// 标签信息，最多包含20个key,不允许重复。
 	Tags *[]TmsTag `json:"tags,omitempty"`
 
-	// 企业项目ID,仅企业项目需配置(字段为空或者0表示使用默认default企业项目)
+	// 企业项目ID,仅企业项目需配置(字段为空或者0表示使用默认default企业项目)。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 主服务器组id,绑定主服务器组，则创建的是备服务器。

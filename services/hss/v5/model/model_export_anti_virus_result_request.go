@@ -27,10 +27,10 @@ type ExportAntiVirusResultRequest struct {
 	// 服务器公网IP
 	PublicIp *string `json:"public_ip,omitempty"`
 
-	// 处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
+	// 处置状态，包含如下:   - unhandled：未处理   - handled：已处理
 	HandleStatus *string `json:"handle_status,omitempty"`
 
-	// 威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 致命
+	// 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
 	SeverityList *[]string `json:"severity_list,omitempty"`
 
 	// 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
@@ -45,7 +45,7 @@ type ExportAntiVirusResultRequest struct {
 	// 导出条数
 	ExportSize *int32 `json:"export_size,omitempty"`
 
-	// 文件hash,当前为sha256
+	// 文件hash，当前为sha256
 	FileHash *string `json:"file_hash,omitempty"`
 
 	// 任务名称

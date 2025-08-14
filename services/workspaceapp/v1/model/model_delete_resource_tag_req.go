@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// DeleteResourceTagReq tags
+// DeleteResourceTagReq tags。
 type DeleteResourceTagReq struct {
 
-	// 标签列表
+	// 标签列表。
 	Tags *[]TmsTag `json:"tags,omitempty"`
 }
 

@@ -12,7 +12,7 @@ type ListFutureExecutionsResponse struct {
 	// 未来执行的具体时间列表。
 	FutureExecutions *[]string `json:"future_executions,omitempty"`
 
-	// 时区
+	// 时区。
 	TimeZone       *string `json:"time_zone,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

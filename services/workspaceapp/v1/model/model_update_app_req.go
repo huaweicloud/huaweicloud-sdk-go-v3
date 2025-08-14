@@ -31,6 +31,8 @@ type UpdateAppReq struct {
 
 	// 是否使用沙箱模式运行，取值为： - false: 表示不以沙箱模式运行 - true: 表示以沙箱模式运行
 	SandboxEnable *bool `json:"sandbox_enable,omitempty"`
+
+	AppExtendedInfo *AppExtendedInfo `json:"app_extended_info,omitempty"`
 }
 
 func (o UpdateAppReq) String() string {

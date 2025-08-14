@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ContainerExtraOpenvpnInfo 沙箱类型,VPN引流沙箱专用
+// ContainerExtraOpenvpnInfo 沙箱类型，VPN引流沙箱专用
 type ContainerExtraOpenvpnInfo struct {
 
 	// 映射ip

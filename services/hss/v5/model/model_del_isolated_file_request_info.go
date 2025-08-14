@@ -9,16 +9,16 @@ import (
 // DelIsolatedFileRequestInfo 恢复的文件详情
 type DelIsolatedFileRequestInfo struct {
 
-	// **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
+	// **参数解释**： 主机ID **取值范围**： 字符长度1-64位
 	HostId string `json:"host_id"`
 
-	// 文件哈希
+	// **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
 	FileHash string `json:"file_hash"`
 
-	// 文件路径
+	// **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
 	FilePath string `json:"file_path"`
 
-	// 文件属性
+	// **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
 	FileAttr string `json:"file_attr"`
 }
 

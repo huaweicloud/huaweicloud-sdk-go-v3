@@ -59,8 +59,10 @@ type CreateWarehouseAppResponse struct {
 	VerifyComment *string `json:"verify_comment,omitempty"`
 
 	// app的图标文件。
-	AppIcon        *string `json:"app_icon,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	AppIcon *string `json:"app_icon,omitempty"`
+
+	AppExtendedInfo *AppExtendedInfo `json:"app_extended_info,omitempty"`
+	HttpStatusCode  int              `json:"-"`
 }
 
 func (o CreateWarehouseAppResponse) String() string {

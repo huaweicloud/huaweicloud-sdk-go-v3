@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// FilePath 文件路径
+// FilePath **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
 type FilePath struct {
 }
 

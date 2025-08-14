@@ -8,7 +8,7 @@ import (
 
 type WebTamperProtectDirRequestInfo struct {
 
-	// protect dir list
+	// 防护目录列表
 	ProtectDirList *[]WebTamperProtectHostDirRequestInfo `json:"protect_dir_list,omitempty"`
 
 	// 排除文件类型

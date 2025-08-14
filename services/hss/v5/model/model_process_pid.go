@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ProcessPid 进程ID
+// ProcessPid **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
 type ProcessPid struct {
 }
 

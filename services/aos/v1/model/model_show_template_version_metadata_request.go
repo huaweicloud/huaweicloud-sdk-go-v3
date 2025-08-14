@@ -12,7 +12,7 @@ type ShowTemplateVersionMetadataRequest struct {
 	// 用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
 	ClientRequestId string `json:"Client-Request-Id"`
 
-	// 用户希望创建的模板名称
+	// 模板（Template）的名字。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
 	TemplateName string `json:"template_name"`
 
 	// 模板版本ID，以大写V开头，每次创建模板版本，模板版本ID数字部分会自增加一

@@ -273,6 +273,10 @@ func GenReqDefForListEventDetail() *def.HttpRequestDef {
 		WithJsonTag("event_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SubEventType").
+		WithJsonTag("sub_event_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EventSource").
 		WithJsonTag("event_source").
 		WithLocationType(def.Query))
@@ -319,6 +323,10 @@ func GenReqDefForListEvents() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EventType").
 		WithJsonTag("event_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SubEventType").
+		WithJsonTag("sub_event_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EventName").

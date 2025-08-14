@@ -9,10 +9,10 @@ import (
 // ListAuthorizationMailRecordRequest Request Object
 type ListAuthorizationMailRecordRequest struct {
 
-	// 单次查询的大小[1-100]。
+	// 单次查询的大小[1-100]，默认值10。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 查询的偏移量。
+	// 查询的偏移量，默认值0。
 	Offset *int32 `json:"offset,omitempty"`
 
 	// 应用组ID。
@@ -21,7 +21,7 @@ type ListAuthorizationMailRecordRequest struct {
 	// 用户(组)名称。
 	Account *string `json:"account,omitempty"`
 
-	// 授权类型： - ADD_GROUP_AUTHORIZATION 添加组授权 - DEL_GROUP_AUTHORIZATION 删除组授权
+	// 授权类型： - ADD_GROUP_AUTHORIZATION 添加组授权 - DEL_GROUP_AUTHORIZATION 删除组授权。
 	MailSendType *string `json:"mail_send_type,omitempty"`
 
 	// 邮件发送结果(SUCCESS|FAIL)。

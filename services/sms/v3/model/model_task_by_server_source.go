@@ -57,6 +57,9 @@ type TaskByServerSource struct {
 	UsePublicIp *bool `json:"use_public_ip,omitempty"`
 
 	CloneServer *CloneServer `json:"clone_server,omitempty"`
+
+	// 当前子任务及进度
+	SubtaskInfo *string `json:"subtask_info,omitempty"`
 }
 
 func (o TaskByServerSource) String() string {

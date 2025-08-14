@@ -208,6 +208,48 @@ func (c *CocClient) BatchCreateApplicationViewInvoker(request *model.BatchCreate
 	return &BatchCreateApplicationViewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAssessTask 创建应用评估任务
+//
+// 创建应用评估任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CreateAssessTask(request *model.CreateAssessTaskRequest) (*model.CreateAssessTaskResponse, error) {
+	requestDef := GenReqDefForCreateAssessTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAssessTaskResponse), nil
+	}
+}
+
+// CreateAssessTaskInvoker 创建应用评估任务
+func (c *CocClient) CreateAssessTaskInvoker(request *model.CreateAssessTaskRequest) *CreateAssessTaskInvoker {
+	requestDef := GenReqDefForCreateAssessTask()
+	return &CreateAssessTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAssessTask 分页查询评估任务列表
+//
+// 分页查询评估任务列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListAssessTask(request *model.ListAssessTaskRequest) (*model.ListAssessTaskResponse, error) {
+	requestDef := GenReqDefForListAssessTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAssessTaskResponse), nil
+	}
+}
+
+// ListAssessTaskInvoker 分页查询评估任务列表
+func (c *CocClient) ListAssessTaskInvoker(request *model.ListAssessTaskRequest) *ListAssessTaskInvoker {
+	requestDef := GenReqDefForListAssessTask()
+	return &ListAssessTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateChange UpdateChange 更新变更单
 //
 // UpdateChange 更新变更单

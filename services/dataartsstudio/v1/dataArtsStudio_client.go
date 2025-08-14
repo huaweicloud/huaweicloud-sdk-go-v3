@@ -4371,6 +4371,27 @@ func (c *DataArtsStudioClient) ListSecuritySecrecyLevelsInvoker(request *model.L
 	return &ListSecuritySecrecyLevelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSecuritySensitiveDataDetails 查询敏感数据发现详情
+//
+// 查询敏感数据发现详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListSecuritySensitiveDataDetails(request *model.ListSecuritySensitiveDataDetailsRequest) (*model.ListSecuritySensitiveDataDetailsResponse, error) {
+	requestDef := GenReqDefForListSecuritySensitiveDataDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecuritySensitiveDataDetailsResponse), nil
+	}
+}
+
+// ListSecuritySensitiveDataDetailsInvoker 查询敏感数据发现详情
+func (c *DataArtsStudioClient) ListSecuritySensitiveDataDetailsInvoker(request *model.ListSecuritySensitiveDataDetailsRequest) *ListSecuritySensitiveDataDetailsInvoker {
+	requestDef := GenReqDefForListSecuritySensitiveDataDetails()
+	return &ListSecuritySensitiveDataDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSecuritySensitiveDataOverviews 查询敏感数据发现概览结果(以分类和密级为单位)
 //
 // 查询敏感数据发现概览结果(以分类和密级为单位)

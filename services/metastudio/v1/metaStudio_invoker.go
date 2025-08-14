@@ -245,6 +245,118 @@ func (i *UpdateAsrVocabularyInvoker) Invoke() (*model.UpdateAsrVocabularyRespons
 	}
 }
 
+type DeleteTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteTaskInvoker) Invoke() (*model.DeleteTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTaskResponse), nil
+	}
+}
+
+type DownloadResultFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadResultFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadResultFileInvoker) Invoke() (*model.DownloadResultFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadResultFileResponse), nil
+	}
+}
+
+type DownloadTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadTemplateInvoker) Invoke() (*model.DownloadTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadTemplateResponse), nil
+	}
+}
+
+type ExportResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExportResourceInvoker) Invoke() (*model.ExportResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportResourceResponse), nil
+	}
+}
+
+type ImportResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ImportResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ImportResourceInvoker) Invoke() (*model.ImportResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ImportResourceResponse), nil
+	}
+}
+
+type SearchTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SearchTaskInvoker) Invoke() (*model.SearchTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchTaskResponse), nil
+	}
+}
+
+type ShowTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTaskInvoker) Invoke() (*model.ShowTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTaskResponse), nil
+	}
+}
+
 type CreateDialogUrlInvoker struct {
 	*invoker.BaseInvoker
 }

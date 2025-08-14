@@ -12,7 +12,7 @@ type CreateServices struct {
 	// 可用分区。 > - 将服务创建到指定的可用分区，如果不指定则使用系统随机的可用分区。 > - 获取方式详见可用区管理ListAvailabilityZone：\"GET  /v1/{project_id}/availability-zone\"。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
-	// 数据盘
+	// 数据盘。
 	DataVolumes *[]Volume `json:"data_volumes,omitempty"`
 
 	// 网卡信息，该字段当前未使用。

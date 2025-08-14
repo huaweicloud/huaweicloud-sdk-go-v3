@@ -334,6 +334,153 @@ func (c *MetaStudioClient) UpdateAsrVocabularyInvoker(request *model.UpdateAsrVo
 	return &UpdateAsrVocabularyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteTask 删除导入导出任务
+//
+// 删除导入导出任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteTask(request *model.DeleteTaskRequest) (*model.DeleteTaskResponse, error) {
+	requestDef := GenReqDefForDeleteTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTaskResponse), nil
+	}
+}
+
+// DeleteTaskInvoker 删除导入导出任务
+func (c *MetaStudioClient) DeleteTaskInvoker(request *model.DeleteTaskRequest) *DeleteTaskInvoker {
+	requestDef := GenReqDefForDeleteTask()
+	return &DeleteTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadResultFile 下载导入或导出的结果文件
+//
+// 下载导入或者导出结果文件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DownloadResultFile(request *model.DownloadResultFileRequest) (*model.DownloadResultFileResponse, error) {
+	requestDef := GenReqDefForDownloadResultFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadResultFileResponse), nil
+	}
+}
+
+// DownloadResultFileInvoker 下载导入或导出的结果文件
+func (c *MetaStudioClient) DownloadResultFileInvoker(request *model.DownloadResultFileRequest) *DownloadResultFileInvoker {
+	requestDef := GenReqDefForDownloadResultFile()
+	return &DownloadResultFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadTemplate 下载信息导入模板
+//
+// 下载导入模板，返回导入模板文件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DownloadTemplate(request *model.DownloadTemplateRequest) (*model.DownloadTemplateResponse, error) {
+	requestDef := GenReqDefForDownloadTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadTemplateResponse), nil
+	}
+}
+
+// DownloadTemplateInvoker 下载信息导入模板
+func (c *MetaStudioClient) DownloadTemplateInvoker(request *model.DownloadTemplateRequest) *DownloadTemplateInvoker {
+	requestDef := GenReqDefForDownloadTemplate()
+	return &DownloadTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportResource 导出文件
+//
+// 导出文件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ExportResource(request *model.ExportResourceRequest) (*model.ExportResourceResponse, error) {
+	requestDef := GenReqDefForExportResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportResourceResponse), nil
+	}
+}
+
+// ExportResourceInvoker 导出文件
+func (c *MetaStudioClient) ExportResourceInvoker(request *model.ExportResourceRequest) *ExportResourceInvoker {
+	requestDef := GenReqDefForExportResource()
+	return &ExportResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportResource 导入文件
+//
+// 导入文件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ImportResource(request *model.ImportResourceRequest) (*model.ImportResourceResponse, error) {
+	requestDef := GenReqDefForImportResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ImportResourceResponse), nil
+	}
+}
+
+// ImportResourceInvoker 导入文件
+func (c *MetaStudioClient) ImportResourceInvoker(request *model.ImportResourceRequest) *ImportResourceInvoker {
+	requestDef := GenReqDefForImportResource()
+	return &ImportResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SearchTask 分页查询导入导出任务列表
+//
+// 分页查询导入导出任务列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) SearchTask(request *model.SearchTaskRequest) (*model.SearchTaskResponse, error) {
+	requestDef := GenReqDefForSearchTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SearchTaskResponse), nil
+	}
+}
+
+// SearchTaskInvoker 分页查询导入导出任务列表
+func (c *MetaStudioClient) SearchTaskInvoker(request *model.SearchTaskRequest) *SearchTaskInvoker {
+	requestDef := GenReqDefForSearchTask()
+	return &SearchTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTask 查询导入导出任务详情
+//
+// 查询导入导出任务详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowTask(request *model.ShowTaskRequest) (*model.ShowTaskResponse, error) {
+	requestDef := GenReqDefForShowTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTaskResponse), nil
+	}
+}
+
+// ShowTaskInvoker 查询导入导出任务详情
+func (c *MetaStudioClient) ShowTaskInvoker(request *model.ShowTaskRequest) *ShowTaskInvoker {
+	requestDef := GenReqDefForShowTask()
+	return &ShowTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDialogUrl 创建对话链接
 //
 // 该接口用于创建对话链接。

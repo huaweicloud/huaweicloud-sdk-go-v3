@@ -12,6 +12,9 @@ type CreateDigitalAssetResponse struct {
 	// 数字资产ID。
 	AssetId *string `json:"asset_id,omitempty"`
 
+	// ai标识ID。
+	ProduceId *string `json:"produce_id,omitempty"`
+
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

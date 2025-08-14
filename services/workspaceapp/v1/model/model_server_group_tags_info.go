@@ -12,7 +12,7 @@ type ServerGroupTagsInfo struct {
 	// 服务器组唯一标识。
 	ServerGroupId *string `json:"server_group_id,omitempty"`
 
-	// 标签列表
+	// 标签列表。
 	Tags *[]TmsTag `json:"tags,omitempty"`
 }
 

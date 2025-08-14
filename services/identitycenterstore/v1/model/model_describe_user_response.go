@@ -50,7 +50,7 @@ type DescribeUserResponse struct {
 	// 用户头衔
 	Title *string `json:"title,omitempty"`
 
-	// 身份源中IAM身份中心用户的全局唯一标识符（ID）
+	// 身份源中IdentityCenter用户的全局唯一标识符（ID）
 	UserId *string `json:"user_id,omitempty"`
 
 	// 用户名，用于标识用户的唯一字符串

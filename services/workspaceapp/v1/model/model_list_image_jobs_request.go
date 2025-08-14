@@ -15,10 +15,10 @@ type ListImageJobsRequest struct {
 	// job类型： * `CREATE_SERVER` - 创建镜像实例 * `CREATE_SERVER_IMAGE` - 构建镜像 * `DELETE_SERVER` - 删除镜像实例
 	JobType string `json:"job_type"`
 
-	// 查询的偏移量。
+	// 查询的偏移量，默认值0。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 查询的数量，值区间[1-100]。
+	// 查询的数量，值区间[1-100]，默认值10。
 	Limit *int32 `json:"limit,omitempty"`
 }
 

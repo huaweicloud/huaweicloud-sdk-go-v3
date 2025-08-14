@@ -30,6 +30,15 @@ type UpdateCertificateResponse struct {
 	// 绑定的自注册模板ID。
 	TemplateId *string `json:"template_id,omitempty"`
 
+	// 是否开启该CA证书下的设备证书OCSP校验，当为true且设备证书信息中包含OCSP url时则平台会校验证书的状态，当证书状态为revoked时平台会拒绝设备连接，true：开启，false：关闭。
+	OcspEnable *bool `json:"ocsp_enable,omitempty"`
+
+	// ocsp服务器端CA证书id，仅当ocsp服务器开启SSL时配置，平台使用该CA证书认证ocsp服务器。
+	OcspServerCaId *string `json:"ocsp_server_ca_id,omitempty"`
+
+	// ocsp服务器是否开启SSL加密，开启后必须配置OCSP服务器CA证书。
+	OcspSslEnable *bool `json:"ocsp_ssl_enable,omitempty"`
+
 	// 创建证书日期。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
 	CreateDate *string `json:"create_date,omitempty"`
 

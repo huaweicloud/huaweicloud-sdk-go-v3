@@ -9,7 +9,7 @@ import (
 // ListServerGroupTagResponse Response Object
 type ListServerGroupTagResponse struct {
 
-	// 标签列表
+	// 标签列表。
 	Tags           *[]TmsTagValues `json:"tags,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

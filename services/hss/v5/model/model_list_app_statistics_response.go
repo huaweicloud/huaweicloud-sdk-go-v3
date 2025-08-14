@@ -12,7 +12,7 @@ type ListAppStatisticsResponse struct {
 	// **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
 	TotalNum *int32 `json:"total_num,omitempty"`
 
-	// 进程统计信息列表
+	// **参数解释**: 进程统计信息列表 **取值范围**: 最小值0，最大值10000
 	DataList       *[]AppStatisticResponseInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                         `json:"-"`
 }

@@ -32,8 +32,11 @@ type CreateKeyRequestBody struct {
 	// 请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
 	Sequence *string `json:"sequence,omitempty"`
 
-	// 密钥库ID，默认使用KMS默认密钥库
+	// 密钥库ID，默认为0，使用KMS默认密钥库；设置为1，则指定管理面CDMS集群；设置为2，则指定租户面共享CDMS集群；若需指定其他CDMS集群，需先执行创建密钥库操作
 	KeystoreId *string `json:"keystore_id,omitempty"`
+
+	// 虚机ID，密钥创建的虚机，仅四级密评场景生效
+	VmId *string `json:"vm_id,omitempty"`
 }
 
 func (o CreateKeyRequestBody) String() string {

@@ -20,7 +20,7 @@ type QueryTemplatesItems struct {
 	// uuid
 	Uuid *string `json:"uuid,omitempty"`
 
-	Template *QueryTemplate `json:"template,omitempty"`
+	Template *QueryTemplateVo `json:"template,omitempty"`
 
 	// 模板类别
 	Type *string `json:"type,omitempty"`

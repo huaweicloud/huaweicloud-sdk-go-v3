@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// QuotaRemainderData 配额剩余数量信息
+// QuotaRemainderData 配额剩余数量信息。
 type QuotaRemainderData struct {
 	Type *QuotaResourceTypeEnum `json:"type,omitempty"`
 

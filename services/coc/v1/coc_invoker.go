@@ -149,6 +149,38 @@ func (i *BatchCreateApplicationViewInvoker) Invoke() (*model.BatchCreateApplicat
 	}
 }
 
+type CreateAssessTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAssessTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAssessTaskInvoker) Invoke() (*model.CreateAssessTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAssessTaskResponse), nil
+	}
+}
+
+type ListAssessTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAssessTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAssessTaskInvoker) Invoke() (*model.ListAssessTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAssessTaskResponse), nil
+	}
+}
+
 type UpdateChangeInvoker struct {
 	*invoker.BaseInvoker
 }

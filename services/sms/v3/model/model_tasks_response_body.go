@@ -100,6 +100,9 @@ type TasksResponseBody struct {
 
 	// 是否开启迁移演练
 	NeedMigrationTest *bool `json:"need_migration_test,omitempty"`
+
+	// 当前子任务及进度
+	SubtaskInfo *string `json:"subtask_info,omitempty"`
 }
 
 func (o TasksResponseBody) String() string {

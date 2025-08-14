@@ -22,6 +22,9 @@ type QueueScalingPolicy struct {
 
 	// 最大cu数量
 	MaxCu int32 `json:"max_cu"`
+
+	// 是否继承资源池最大CU
+	InheritElasticResourcePoolMaxCu *bool `json:"inherit_elastic_resource_pool_max_cu,omitempty"`
 }
 
 func (o QueueScalingPolicy) String() string {

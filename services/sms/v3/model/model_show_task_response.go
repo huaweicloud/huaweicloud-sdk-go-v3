@@ -124,7 +124,10 @@ type ShowTaskResponse struct {
 
 	// 是否开启迁移演练
 	NeedMigrationTest *bool `json:"need_migration_test,omitempty"`
-	HttpStatusCode    int   `json:"-"`
+
+	// 当前子任务及进度
+	SubtaskInfo    *string `json:"subtask_info,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowTaskResponse) String() string {

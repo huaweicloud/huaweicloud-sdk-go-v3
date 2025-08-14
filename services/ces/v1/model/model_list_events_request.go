@@ -15,6 +15,9 @@ type ListEventsRequest struct {
 	// 事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
 	EventType *ListEventsRequestEventType `json:"event_type,omitempty"`
 
+	// 事件子类, 枚举类型：SUB_EVENT.OPS 运维事件, SUB_EVENT.PLAN 计划事件，SUB_EVENT.CUSTOM 自定义事件
+	SubEventType *ListEventsRequestSubEventType `json:"sub_event_type,omitempty"`
+
 	// 事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
 	EventName *string `json:"event_name,omitempty"`
 
@@ -69,6 +72,57 @@ func (c ListEventsRequestEventType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ListEventsRequestEventType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListEventsRequestSubEventType struct {
+	value string
+}
+
+type ListEventsRequestSubEventTypeEnum struct {
+	SUB_EVENT_OPS    ListEventsRequestSubEventType
+	SUB_EVENT_PLAN   ListEventsRequestSubEventType
+	SUB_EVENT_CUSTOM ListEventsRequestSubEventType
+}
+
+func GetListEventsRequestSubEventTypeEnum() ListEventsRequestSubEventTypeEnum {
+	return ListEventsRequestSubEventTypeEnum{
+		SUB_EVENT_OPS: ListEventsRequestSubEventType{
+			value: "SUB_EVENT.OPS",
+		},
+		SUB_EVENT_PLAN: ListEventsRequestSubEventType{
+			value: "SUB_EVENT.PLAN",
+		},
+		SUB_EVENT_CUSTOM: ListEventsRequestSubEventType{
+			value: "SUB_EVENT.CUSTOM",
+		},
+	}
+}
+
+func (c ListEventsRequestSubEventType) Value() string {
+	return c.value
+}
+
+func (c ListEventsRequestSubEventType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListEventsRequestSubEventType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

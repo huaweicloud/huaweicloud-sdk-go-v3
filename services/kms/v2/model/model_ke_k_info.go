@@ -14,6 +14,9 @@ type KeKInfo struct {
 
 	// 用户域ID。
 	DomainId *string `json:"domain_id,omitempty"`
+
+	// region ID。
+	RegionId *string `json:"region_id,omitempty"`
 }
 
 func (o KeKInfo) String() string {

@@ -18,6 +18,9 @@ type UpdateDigitalAssetResponse struct {
 	// 资产ID。
 	AssetId *string `json:"asset_id,omitempty"`
 
+	// ai标识ID。
+	ProduceId *string `json:"produce_id,omitempty"`
+
 	// 资产名称。
 	AssetName *string `json:"asset_name,omitempty"`
 

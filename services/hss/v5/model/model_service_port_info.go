@@ -12,10 +12,10 @@ type ServicePortInfo struct {
 	// 服务名称
 	Desc string `json:"desc"`
 
-	// 类型，可取值集合[http,https]
+	// 类型，可取值集合[http，https]
 	Type *string `json:"type,omitempty"`
 
-	// 默认tcp。可取值集合[tcp,udp]
+	// 默认tcp。可取值集合[tcp，udp]
 	Protocol string `json:"protocol"`
 
 	// 用户端口

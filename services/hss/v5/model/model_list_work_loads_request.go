@@ -18,7 +18,7 @@ type ListWorkLoadsRequest struct {
 	// 命名空间
 	Namespace string `json:"namespace"`
 
-	// 工作负载类型,包含如下：   - deployments：无状态负载   - statefulsets：有状态负载   - daemonsets：守护进程表
+	// 工作负载类型，包含如下：   - deployments：无状态负载   - statefulsets：有状态负载   - daemonsets：守护进程表
 	WorkloadType string `json:"workload_type"`
 }
 

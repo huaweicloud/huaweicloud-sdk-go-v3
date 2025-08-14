@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -22,6 +25,15 @@ type EncryptDatakeyRequestBody struct {
 
 	// 请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
 	Sequence *string `json:"sequence,omitempty"`
+
+	// 指定PIN码保护。仅四级密评场景支持该参数。
+	Pin *string `json:"pin,omitempty"`
+
+	// pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
+	PinType *string `json:"pin_type,omitempty"`
+
+	// 指定生成的密钥算法。有效值： SM2、RSA。
+	KeySpec *EncryptDatakeyRequestBodyKeySpec `json:"key_spec,omitempty"`
 }
 
 func (o EncryptDatakeyRequestBody) String() string {
@@ -31,4 +43,51 @@ func (o EncryptDatakeyRequestBody) String() string {
 	}
 
 	return strings.Join([]string{"EncryptDatakeyRequestBody", string(data)}, " ")
+}
+
+type EncryptDatakeyRequestBodyKeySpec struct {
+	value string
+}
+
+type EncryptDatakeyRequestBodyKeySpecEnum struct {
+	SM2 EncryptDatakeyRequestBodyKeySpec
+	RSA EncryptDatakeyRequestBodyKeySpec
+}
+
+func GetEncryptDatakeyRequestBodyKeySpecEnum() EncryptDatakeyRequestBodyKeySpecEnum {
+	return EncryptDatakeyRequestBodyKeySpecEnum{
+		SM2: EncryptDatakeyRequestBodyKeySpec{
+			value: "SM2",
+		},
+		RSA: EncryptDatakeyRequestBodyKeySpec{
+			value: "RSA",
+		},
+	}
+}
+
+func (c EncryptDatakeyRequestBodyKeySpec) Value() string {
+	return c.value
+}
+
+func (c EncryptDatakeyRequestBodyKeySpec) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *EncryptDatakeyRequestBodyKeySpec) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

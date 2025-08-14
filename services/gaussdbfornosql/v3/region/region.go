@@ -34,6 +34,14 @@ var (
 		"https://gaussdb-nosql.ap-southeast-5.myhuaweicloud.com")
 	ME_EAST_1 = region.NewRegion("me-east-1",
 		"https://gaussdb-nosql.me-east-1.myhuaweicloud.com")
+	CN_EAST_4 = region.NewRegion("cn-east-4",
+		"https://gaussdb-nosql.cn-east-4.myhuaweicloud.com")
+	CN_SOUTH_4 = region.NewRegion("cn-south-4",
+		"https://nosql-gemini.cn-south-4.myhuaweicloud.com")
+	CN_SOUTHWEST_3 = region.NewRegion("cn-southwest-3",
+		"https://gaussdb-nosql.cn-southwest-3.myhuaweicloud.com")
+	TR_WEST_1 = region.NewRegion("tr-west-1",
+		"https://gaussdb-nosql.tr-west-1.myhuaweicloud.com")
 	RU_NORTHWEST_2 = region.NewRegion("ru-northwest-2",
 		"https://gaussdb-nosql.ru-northwest-2.myhuaweicloud.com")
 	CN_SOUTH_2 = region.NewRegion("cn-south-2",
@@ -66,6 +74,10 @@ var staticFields = map[string]*region.Region{
 	"ap-southeast-4": AP_SOUTHEAST_4,
 	"ap-southeast-5": AP_SOUTHEAST_5,
 	"me-east-1":      ME_EAST_1,
+	"cn-east-4":      CN_EAST_4,
+	"cn-south-4":     CN_SOUTH_4,
+	"cn-southwest-3": CN_SOUTHWEST_3,
+	"tr-west-1":      TR_WEST_1,
 	"ru-northwest-2": RU_NORTHWEST_2,
 	"cn-south-2":     CN_SOUTH_2,
 	"cn-north-2":     CN_NORTH_2,

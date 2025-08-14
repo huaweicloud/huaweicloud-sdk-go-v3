@@ -15,7 +15,7 @@ type ShowAppWhitelistPolicyResponse struct {
 	// 策略名称
 	PolicyName *string `json:"policy_name,omitempty"`
 
-	// **参数解释**： 进程白名单策略类型进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
+	// **参数解释**： 进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
 	PolicyType *string `json:"policy_type,omitempty"`
 
 	// **参数解释**： 是否开启阻断 **取值范围**: - true：是 - false：否

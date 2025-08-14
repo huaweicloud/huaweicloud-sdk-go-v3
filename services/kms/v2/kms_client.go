@@ -328,6 +328,27 @@ func (c *KmsClient) CreateParametersForImportInvoker(request *model.CreateParame
 	return &CreateParametersForImportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePin 创建PIN码
+//
+// - 功能介绍：创建pin码。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) CreatePin(request *model.CreatePinRequest) (*model.CreatePinResponse, error) {
+	requestDef := GenReqDefForCreatePin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePinResponse), nil
+	}
+}
+
+// CreatePinInvoker 创建PIN码
+func (c *KmsClient) CreatePinInvoker(request *model.CreatePinRequest) *CreatePinInvoker {
+	requestDef := GenReqDefForCreatePin()
+	return &CreatePinInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateRandom 创建随机数
 //
 // - 功能介绍：

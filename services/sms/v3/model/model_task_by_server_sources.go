@@ -78,6 +78,9 @@ type TaskByServerSources struct {
 
 	// 分享链接url
 	LogShareUrl *string `json:"log_share_url,omitempty"`
+
+	// 当前子任务及进度
+	SubtaskInfo *string `json:"subtask_info,omitempty"`
 }
 
 func (o TaskByServerSources) String() string {

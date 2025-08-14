@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// RelativeResource 关联资源
+// RelativeResource 关联资源。
 type RelativeResource struct {
 
 	// 关联的资源ID。

@@ -15,7 +15,7 @@ type IDc struct {
 
 	Region *string `json:"region,omitempty"`
 
-	Deccription *string `json:"deccription,omitempty"`
+	Description *string `json:"description,omitempty"`
 }
 
 func (o IDc) String() string {

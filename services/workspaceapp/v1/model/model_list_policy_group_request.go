@@ -18,7 +18,7 @@ type ListPolicyGroupRequest struct {
 	// 根据策略组名字过滤结果。
 	PolicyGroupName *string `json:"policy_group_name,omitempty"`
 
-	// 根据策略组类型名字过滤结果。
+	// 根据策略组类型名字过滤结果, 0:VM类, 4:策略模板。
 	PolicyGroupType *int32 `json:"policy_group_type,omitempty"`
 }
 

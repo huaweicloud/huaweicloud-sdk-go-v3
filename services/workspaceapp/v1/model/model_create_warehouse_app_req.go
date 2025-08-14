@@ -33,6 +33,8 @@ type CreateWarehouseAppReq struct {
 
 	// 应用文件大小，单位为KB。
 	AppFileSize *int32 `json:"app_file_size,omitempty"`
+
+	AppExtendedInfo *AppExtendedInfo `json:"app_extended_info,omitempty"`
 }
 
 func (o CreateWarehouseAppReq) String() string {

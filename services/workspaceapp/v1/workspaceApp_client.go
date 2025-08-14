@@ -61,6 +61,27 @@ func (c *WorkspaceAppClient) BatchDeleteWarehouseAppInvoker(request *model.Batch
 	return &BatchDeleteWarehouseAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BindAppWarehouseBucket 添加用户应用仓库桶及桶授权
+//
+// 添加用户应用仓库桶及桶授权。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) BindAppWarehouseBucket(request *model.BindAppWarehouseBucketRequest) (*model.BindAppWarehouseBucketResponse, error) {
+	requestDef := GenReqDefForBindAppWarehouseBucket()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BindAppWarehouseBucketResponse), nil
+	}
+}
+
+// BindAppWarehouseBucketInvoker 添加用户应用仓库桶及桶授权
+func (c *WorkspaceAppClient) BindAppWarehouseBucketInvoker(request *model.BindAppWarehouseBucketRequest) *BindAppWarehouseBucketInvoker {
+	requestDef := GenReqDefForBindAppWarehouseBucket()
+	return &BindAppWarehouseBucketInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateBucketOrAcl 添加桶或者桶授权
 //
 // 添加桶或者桶授权。
@@ -145,9 +166,30 @@ func (c *WorkspaceAppClient) ListWarehouseAppsInvoker(request *model.ListWarehou
 	return &ListWarehouseAppsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAppWarehouseBucket 查询用户应用仓库桶
+//
+// 查询用户应用仓库桶
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ShowAppWarehouseBucket(request *model.ShowAppWarehouseBucketRequest) (*model.ShowAppWarehouseBucketResponse, error) {
+	requestDef := GenReqDefForShowAppWarehouseBucket()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAppWarehouseBucketResponse), nil
+	}
+}
+
+// ShowAppWarehouseBucketInvoker 查询用户应用仓库桶
+func (c *WorkspaceAppClient) ShowAppWarehouseBucketInvoker(request *model.ShowAppWarehouseBucketRequest) *ShowAppWarehouseBucketInvoker {
+	requestDef := GenReqDefForShowAppWarehouseBucket()
+	return &ShowAppWarehouseBucketInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateWarehouseApp 修改应用仓库中的指定应用信息
 //
-// 修改应用仓库中的指定应用信息
+// 修改应用仓库中的指定应用信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) UpdateWarehouseApp(request *model.UpdateWarehouseAppRequest) (*model.UpdateWarehouseAppResponse, error) {
@@ -375,6 +417,27 @@ func (c *WorkspaceAppClient) UpdateApp(request *model.UpdateAppRequest) (*model.
 func (c *WorkspaceAppClient) UpdateAppInvoker(request *model.UpdateAppRequest) *UpdateAppInvoker {
 	requestDef := GenReqDefForUpdateApp()
 	return &UpdateAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePreBootPolicy 批量设置应用预启动
+//
+// 批量设置应用预启动。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) UpdatePreBootPolicy(request *model.UpdatePreBootPolicyRequest) (*model.UpdatePreBootPolicyResponse, error) {
+	requestDef := GenReqDefForUpdatePreBootPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePreBootPolicyResponse), nil
+	}
+}
+
+// UpdatePreBootPolicyInvoker 批量设置应用预启动
+func (c *WorkspaceAppClient) UpdatePreBootPolicyInvoker(request *model.UpdatePreBootPolicyRequest) *UpdatePreBootPolicyInvoker {
+	requestDef := GenReqDefForUpdatePreBootPolicy()
+	return &UpdatePreBootPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UploadAppIcon 修改自定义应用图标
@@ -672,9 +735,9 @@ func (c *WorkspaceAppClient) ListSessionTypeInvoker(request *model.ListSessionTy
 	return &ListSessionTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowSessionTypes 查询会话套餐列表
+// ShowSessionTypes 查询会话套餐列表（已废弃）
 //
-// 该接口用于查询会话套餐列表
+// 该接口用于查询会话套餐列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ShowSessionTypes(request *model.ShowSessionTypesRequest) (*model.ShowSessionTypesResponse, error) {
@@ -687,7 +750,7 @@ func (c *WorkspaceAppClient) ShowSessionTypes(request *model.ShowSessionTypesReq
 	}
 }
 
-// ShowSessionTypesInvoker 查询会话套餐列表
+// ShowSessionTypesInvoker 查询会话套餐列表（已废弃）
 func (c *WorkspaceAppClient) ShowSessionTypesInvoker(request *model.ShowSessionTypesRequest) *ShowSessionTypesInvoker {
 	requestDef := GenReqDefForShowSessionTypes()
 	return &ShowSessionTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -777,7 +840,7 @@ func (c *WorkspaceAppClient) ListAvailabilityZoneInvoker(request *model.ListAvai
 	return &ListAvailabilityZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAz 查询可用分区列表
+// ListAz 查询可用分区列表（按站点分类）
 //
 // 该接口用于查询支持的可用分区列表，按站点分类。
 //
@@ -792,10 +855,220 @@ func (c *WorkspaceAppClient) ListAz(request *model.ListAzRequest) (*model.ListAz
 	}
 }
 
-// ListAzInvoker 查询可用分区列表
+// ListAzInvoker 查询可用分区列表（按站点分类）
 func (c *WorkspaceAppClient) ListAzInvoker(request *model.ListAzRequest) *ListAzInvoker {
 	requestDef := GenReqDefForListAz()
 	return &ListAzInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteCloudStorage 批量删除云存储
+//
+// 批量删除云存储。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) BatchDeleteCloudStorage(request *model.BatchDeleteCloudStorageRequest) (*model.BatchDeleteCloudStorageResponse, error) {
+	requestDef := GenReqDefForBatchDeleteCloudStorage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteCloudStorageResponse), nil
+	}
+}
+
+// BatchDeleteCloudStorageInvoker 批量删除云存储
+func (c *WorkspaceAppClient) BatchDeleteCloudStorageInvoker(request *model.BatchDeleteCloudStorageRequest) *BatchDeleteCloudStorageInvoker {
+	requestDef := GenReqDefForBatchDeleteCloudStorage()
+	return &BatchDeleteCloudStorageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCloudStorage 创建项目配置关联
+//
+// 创建项目配置关联，目前仅支持关联项目配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) CreateCloudStorage(request *model.CreateCloudStorageRequest) (*model.CreateCloudStorageResponse, error) {
+	requestDef := GenReqDefForCreateCloudStorage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCloudStorageResponse), nil
+	}
+}
+
+// CreateCloudStorageInvoker 创建项目配置关联
+func (c *WorkspaceAppClient) CreateCloudStorageInvoker(request *model.CreateCloudStorageRequest) *CreateCloudStorageInvoker {
+	requestDef := GenReqDefForCreateCloudStorage()
+	return &CreateCloudStorageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateUserFolderAssignment 创建个人文件夹
+//
+// 创建个人文件夹，已存在对应目录时，仅更新策略不会重复创建目录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) CreateUserFolderAssignment(request *model.CreateUserFolderAssignmentRequest) (*model.CreateUserFolderAssignmentResponse, error) {
+	requestDef := GenReqDefForCreateUserFolderAssignment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateUserFolderAssignmentResponse), nil
+	}
+}
+
+// CreateUserFolderAssignmentInvoker 创建个人文件夹
+func (c *WorkspaceAppClient) CreateUserFolderAssignmentInvoker(request *model.CreateUserFolderAssignmentRequest) *CreateUserFolderAssignmentInvoker {
+	requestDef := GenReqDefForCreateUserFolderAssignment()
+	return &CreateUserFolderAssignmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCloudStorage 删除云存储
+//
+// 删除共享存储，只会解除NAS与项目配置之间的关联关系。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) DeleteCloudStorage(request *model.DeleteCloudStorageRequest) (*model.DeleteCloudStorageResponse, error) {
+	requestDef := GenReqDefForDeleteCloudStorage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCloudStorageResponse), nil
+	}
+}
+
+// DeleteCloudStorageInvoker 删除云存储
+func (c *WorkspaceAppClient) DeleteCloudStorageInvoker(request *model.DeleteCloudStorageRequest) *DeleteCloudStorageInvoker {
+	requestDef := GenReqDefForDeleteCloudStorage()
+	return &DeleteCloudStorageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCloudStorageAttachment 删除个人文件夹
+//
+// 删除个人存储目录，个人目录中的数据也将永久删除且无法恢复。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) DeleteCloudStorageAttachment(request *model.DeleteCloudStorageAttachmentRequest) (*model.DeleteCloudStorageAttachmentResponse, error) {
+	requestDef := GenReqDefForDeleteCloudStorageAttachment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCloudStorageAttachmentResponse), nil
+	}
+}
+
+// DeleteCloudStorageAttachmentInvoker 删除个人文件夹
+func (c *WorkspaceAppClient) DeleteCloudStorageAttachmentInvoker(request *model.DeleteCloudStorageAttachmentRequest) *DeleteCloudStorageAttachmentInvoker {
+	requestDef := GenReqDefForDeleteCloudStorageAttachment()
+	return &DeleteCloudStorageAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCloudStorage 查询云存储
+//
+// 查询云存储。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ListCloudStorage(request *model.ListCloudStorageRequest) (*model.ListCloudStorageResponse, error) {
+	requestDef := GenReqDefForListCloudStorage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCloudStorageResponse), nil
+	}
+}
+
+// ListCloudStorageInvoker 查询云存储
+func (c *WorkspaceAppClient) ListCloudStorageInvoker(request *model.ListCloudStorageRequest) *ListCloudStorageInvoker {
+	requestDef := GenReqDefForListCloudStorage()
+	return &ListCloudStorageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCloudStorageAssignment 查询个人文件夹列表
+//
+// 查询个人文件夹列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ListCloudStorageAssignment(request *model.ListCloudStorageAssignmentRequest) (*model.ListCloudStorageAssignmentResponse, error) {
+	requestDef := GenReqDefForListCloudStorageAssignment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCloudStorageAssignmentResponse), nil
+	}
+}
+
+// ListCloudStorageAssignmentInvoker 查询个人文件夹列表
+func (c *WorkspaceAppClient) ListCloudStorageAssignmentInvoker(request *model.ListCloudStorageAssignmentRequest) *ListCloudStorageAssignmentInvoker {
+	requestDef := GenReqDefForListCloudStorageAssignment()
+	return &ListCloudStorageAssignmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectConfigs 查询项目配置列表
+//
+// 查询项目配置列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ListProjectConfigs(request *model.ListProjectConfigsRequest) (*model.ListProjectConfigsResponse, error) {
+	requestDef := GenReqDefForListProjectConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectConfigsResponse), nil
+	}
+}
+
+// ListProjectConfigsInvoker 查询项目配置列表
+func (c *WorkspaceAppClient) ListProjectConfigsInvoker(request *model.ListProjectConfigsRequest) *ListProjectConfigsInvoker {
+	requestDef := GenReqDefForListProjectConfigs()
+	return &ListProjectConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProjectConfig 查询项目配置信息
+//
+// 查询项目配置信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ShowProjectConfig(request *model.ShowProjectConfigRequest) (*model.ShowProjectConfigResponse, error) {
+	requestDef := GenReqDefForShowProjectConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProjectConfigResponse), nil
+	}
+}
+
+// ShowProjectConfigInvoker 查询项目配置信息
+func (c *WorkspaceAppClient) ShowProjectConfigInvoker(request *model.ShowProjectConfigRequest) *ShowProjectConfigInvoker {
+	requestDef := GenReqDefForShowProjectConfig()
+	return &ShowProjectConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCloudUserFolderAssignment 修改个人文件夹
+//
+// 创建个人文件夹。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) UpdateCloudUserFolderAssignment(request *model.UpdateCloudUserFolderAssignmentRequest) (*model.UpdateCloudUserFolderAssignmentResponse, error) {
+	requestDef := GenReqDefForUpdateCloudUserFolderAssignment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateCloudUserFolderAssignmentResponse), nil
+	}
+}
+
+// UpdateCloudUserFolderAssignmentInvoker 修改个人文件夹
+func (c *WorkspaceAppClient) UpdateCloudUserFolderAssignmentInvoker(request *model.UpdateCloudUserFolderAssignmentRequest) *UpdateCloudUserFolderAssignmentInvoker {
+	requestDef := GenReqDefForUpdateCloudUserFolderAssignment()
+	return &UpdateCloudUserFolderAssignmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AttachImageServerApp 分发软件信息至镜像实例
@@ -932,7 +1205,7 @@ func (c *WorkspaceAppClient) RecreateServerImageInvoker(request *model.RecreateS
 
 // ShowImageServer 查询指定镜像实例
 //
-// 查询指定的镜像实例当前这个接口的查询数据和list查询的一致
+// 查询指定的镜像实例当前这个接口的查询数据和list查询的一致。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ShowImageServer(request *model.ShowImageServerRequest) (*model.ShowImageServerResponse, error) {
@@ -1041,7 +1314,7 @@ func (c *WorkspaceAppClient) CountSubJobsInvoker(request *model.CountSubJobsRequ
 
 // ListImageJobs 查询租户的镜像任务列表
 //
-// 该接口用于查询租户的异步任务执行情况
+// 该接口用于查询租户的异步任务执行情况。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ListImageJobs(request *model.ListImageJobsRequest) (*model.ListImageJobsResponse, error) {
@@ -1062,7 +1335,7 @@ func (c *WorkspaceAppClient) ListImageJobsInvoker(request *model.ListImageJobsRe
 
 // ListImageSubJobs 镜像子任务查询
 //
-// 该接口用于查询异步子任务执行情况,sub_job_ids非空时offset和limit不会生效
+// 该接口用于查询异步子任务执行情况,sub_job_ids非空时offset和limit不会生效。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ListImageSubJobs(request *model.ListImageSubJobsRequest) (*model.ListImageSubJobsResponse, error) {
@@ -1123,7 +1396,7 @@ func (c *WorkspaceAppClient) ShowImageJobInvoker(request *model.ShowImageJobRequ
 	return &ShowImageJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowJob 查询任务的执行状态
+// ShowJob 查询任务的执行状态（已废弃）
 //
 // 查询Job的执行状态。
 //
@@ -1140,13 +1413,13 @@ func (c *WorkspaceAppClient) ShowJob(request *model.ShowJobRequest) (*model.Show
 	}
 }
 
-// ShowJobInvoker 查询任务的执行状态
+// ShowJobInvoker 查询任务的执行状态（已废弃）
 func (c *WorkspaceAppClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoker {
 	requestDef := GenReqDefForShowJob()
 	return &ShowJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowJobDetail 查询任务的执行状态
+// ShowJobDetail 查询任务的执行状态详情
 //
 // 查询Job的执行状态。
 //
@@ -1163,7 +1436,7 @@ func (c *WorkspaceAppClient) ShowJobDetail(request *model.ShowJobDetailRequest) 
 	}
 }
 
-// ShowJobDetailInvoker 查询任务的执行状态
+// ShowJobDetailInvoker 查询任务的执行状态详情
 func (c *WorkspaceAppClient) ShowJobDetailInvoker(request *model.ShowJobDetailRequest) *ShowJobDetailInvoker {
 	requestDef := GenReqDefForShowJobDetail()
 	return &ShowJobDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1232,9 +1505,9 @@ func (c *WorkspaceAppClient) SendAuthorizedMailInvoker(request *model.SendAuthor
 	return &SendAuthorizedMailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchDeletePersistentStorage 删除WKS存储
+// BatchDeletePersistentStorage 批量删除WKS存储
 //
-// 删除WKS存储。
+// 批量删除WKS存储。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) BatchDeletePersistentStorage(request *model.BatchDeletePersistentStorageRequest) (*model.BatchDeletePersistentStorageResponse, error) {
@@ -1247,7 +1520,7 @@ func (c *WorkspaceAppClient) BatchDeletePersistentStorage(request *model.BatchDe
 	}
 }
 
-// BatchDeletePersistentStorageInvoker 删除WKS存储
+// BatchDeletePersistentStorageInvoker 批量删除WKS存储
 func (c *WorkspaceAppClient) BatchDeletePersistentStorageInvoker(request *model.BatchDeletePersistentStorageRequest) *BatchDeletePersistentStorageInvoker {
 	requestDef := GenReqDefForBatchDeletePersistentStorage()
 	return &BatchDeletePersistentStorageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1529,7 +1802,7 @@ func (c *WorkspaceAppClient) UpdateUserFolderAssignmentInvoker(request *model.Up
 
 // CreatePolicyGroup 新增策略组
 //
-// 新增策略组，通过策略组能灵活的控制客户端访问与接入策略，如：文件、剪切板、会话等。
+// 新增策略组，通过策略组能灵活地控制客户端访问与接入策略，如：文件、剪切板、会话等。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) CreatePolicyGroup(request *model.CreatePolicyGroupRequest) (*model.CreatePolicyGroupResponse, error) {
@@ -2978,7 +3251,7 @@ func (c *WorkspaceAppClient) DeleteServerGroupTagsInvoker(request *model.DeleteS
 
 // ListServerGroupTag 查询租户在所有服务器组上的标签
 //
-// 查询租户在所有服务器组上的资源标签集合
+// 查询租户在所有服务器组上的资源标签集合。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ListServerGroupTag(request *model.ListServerGroupTagRequest) (*model.ListServerGroupTagResponse, error) {
@@ -2999,7 +3272,7 @@ func (c *WorkspaceAppClient) ListServerGroupTagInvoker(request *model.ListServer
 
 // ShowServerGroupTag 查询服务器组的标签
 //
-// 查询指定服务器组的标签信息
+// 查询指定服务器组的标签信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ShowServerGroupTag(request *model.ShowServerGroupTagRequest) (*model.ShowServerGroupTagResponse, error) {

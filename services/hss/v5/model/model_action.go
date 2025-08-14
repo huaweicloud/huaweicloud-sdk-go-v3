@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Action 处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+// Action 处置动作，包含如下:   - auto：自动处置   - manual：人工处置
 type Action struct {
 }
 

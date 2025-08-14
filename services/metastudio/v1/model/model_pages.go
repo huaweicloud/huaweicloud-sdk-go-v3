@@ -9,10 +9,10 @@ import (
 // Pages 分页查询的公共属性
 type Pages struct {
 
-	// 与第一条数据的偏移量
+	// 页面起始页,从0开始
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 页面大小
+	// 每页显示的条目数量
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 总数量

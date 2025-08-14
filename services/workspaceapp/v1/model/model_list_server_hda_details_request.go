@@ -9,10 +9,10 @@ import (
 // ListServerHdaDetailsRequest Request Object
 type ListServerHdaDetailsRequest struct {
 
-	// 查询的偏移量。
+	// 查询的偏移量，默认值0。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 查询的数量，值区间[1-100]。
+	// 查询的数量，值区间[1-100]，默认值10。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 服务器组id。

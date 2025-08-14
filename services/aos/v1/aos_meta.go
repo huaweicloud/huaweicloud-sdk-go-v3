@@ -2119,6 +2119,10 @@ func GenReqDefForShowTemplateVersionContent() *def.HttpRequestDef {
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Location").
 		WithJsonTag("Location").
 		WithKindName("string").

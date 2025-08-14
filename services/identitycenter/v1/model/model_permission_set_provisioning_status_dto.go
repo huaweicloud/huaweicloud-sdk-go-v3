@@ -12,7 +12,7 @@ import (
 // PermissionSetProvisioningStatusDto 为指定的权限集提供配置操作的状态
 type PermissionSetProvisioningStatusDto struct {
 
-	// 账号的唯一身份标识
+	// 指定账户的唯一身份标识.
 	AccountId *string `json:"account_id,omitempty"`
 
 	// 权限集创建日期

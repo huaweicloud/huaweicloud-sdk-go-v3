@@ -23,6 +23,15 @@ type ListTtscVocabularyGroupsRequest struct {
 
 	// 第三方用户ID。不允许输入中文。
 	XAppUserId *string `json:"X-App-UserId,omitempty"`
+
+	// 每页显示的条目数量。
+	Limit *int32 `json:"limit,omitempty"`
+
+	// 偏移量，表示从此偏移量开始查询。
+	Offset *int32 `json:"offset,omitempty"`
+
+	// 分组id
+	GroupId *string `json:"group_id,omitempty"`
 }
 
 func (o ListTtscVocabularyGroupsRequest) String() string {

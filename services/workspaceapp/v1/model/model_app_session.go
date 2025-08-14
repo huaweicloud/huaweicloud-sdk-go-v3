@@ -90,7 +90,7 @@ type AppSession struct {
 	// 状态最后变化时间。
 	LastUpdateStatusTime *string `json:"last_update_status_time,omitempty"`
 
-	// 租户ID
+	// 租户ID。
 	TenantId *string `json:"tenant_id,omitempty"`
 }
 

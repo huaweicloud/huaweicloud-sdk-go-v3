@@ -24,7 +24,7 @@ type ListClusterEventLogsRequest struct {
 	// 事件名称
 	EventName *string `json:"event_name,omitempty"`
 
-	// 事件类型，包含以下几种： - Warning 警告事件 - Normal 普通事件
+	// 事件类型，包含以下几种： - Warning：警告事件 - Normal：普通事件
 	EventType *string `json:"event_type,omitempty"`
 
 	// 产生事件的资源类型

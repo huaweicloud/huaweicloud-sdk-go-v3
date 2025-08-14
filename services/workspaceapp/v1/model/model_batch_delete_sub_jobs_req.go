@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// BatchDeleteSubJobsReq 批量删除子任务请求
+// BatchDeleteSubJobsReq 批量删除子任务请求。
 type BatchDeleteSubJobsReq struct {
 
-	// 批量唯一标识请求列表，一次请求数量区间 [1, 20]
+	// 批量唯一标识请求列表，一次请求数量区间 [1, 20]。
 	Items []string `json:"items"`
 }
 

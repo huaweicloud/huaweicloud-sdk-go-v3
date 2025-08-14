@@ -42,7 +42,7 @@ type CreateAntiVirusPolicyRequestBody struct {
 	// 排除目录，多个用;分隔
 	IgnoreDir *string `json:"ignore_dir,omitempty"`
 
-	// 处置动作，包含如下:   - auto ：自动处置   - manual : 人工处置
+	// 处置动作，包含如下:   - auto：自动处置   - manual：人工处置
 	Action string `json:"action"`
 
 	// 此次扫描任务是否付费

@@ -3317,6 +3317,22 @@ func (i *ListSecuritySecrecyLevelsInvoker) Invoke() (*model.ListSecuritySecrecyL
 	}
 }
 
+type ListSecuritySensitiveDataDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecuritySensitiveDataDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSecuritySensitiveDataDetailsInvoker) Invoke() (*model.ListSecuritySensitiveDataDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecuritySensitiveDataDetailsResponse), nil
+	}
+}
+
 type ListSecuritySensitiveDataOverviewsInvoker struct {
 	*invoker.BaseInvoker
 }

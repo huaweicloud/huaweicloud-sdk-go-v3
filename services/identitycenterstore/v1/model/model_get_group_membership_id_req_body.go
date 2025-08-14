@@ -9,7 +9,7 @@ import (
 // GetGroupMembershipIdReqBody 获取关联关系唯一标识请求体
 type GetGroupMembershipIdReqBody struct {
 
-	// 身份源中IAM身份中心用户组的全局唯一标识符（ID）
+	// 身份源中IdentityCenter用户组的全局唯一标识符（ID）
 	GroupId string `json:"group_id"`
 
 	MemberId *MemberIdDto `json:"member_id"`

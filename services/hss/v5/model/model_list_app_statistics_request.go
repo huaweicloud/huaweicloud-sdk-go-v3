@@ -21,7 +21,7 @@ type ListAppStatisticsRequest struct {
 	// **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
 	Offset *int32 `json:"offset,omitempty"`
 
-	// **参数解释**: 类别，默认为host，包含如下： **约束限制**: 不涉及 **取值范围**: - host：主机 - container：容器  **默认取值**: 不涉及
+	// **参数解释**: 类别 **约束限制**: 不涉及 **取值范围**: - host：主机 - container：容器  **默认取值**: 不涉及
 	Category *string `json:"category,omitempty"`
 }
 

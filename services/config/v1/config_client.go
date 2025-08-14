@@ -859,6 +859,48 @@ func (c *ConfigClient) BatchDeleteRemediationExceptionsInvoker(request *model.Ba
 	return &BatchDeleteRemediationExceptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CollectPolicyAssignmentsStatesSummary 查询规则的合规总结
+//
+// 根据规则ID查询此规则的合规总结
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) CollectPolicyAssignmentsStatesSummary(request *model.CollectPolicyAssignmentsStatesSummaryRequest) (*model.CollectPolicyAssignmentsStatesSummaryResponse, error) {
+	requestDef := GenReqDefForCollectPolicyAssignmentsStatesSummary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CollectPolicyAssignmentsStatesSummaryResponse), nil
+	}
+}
+
+// CollectPolicyAssignmentsStatesSummaryInvoker 查询规则的合规总结
+func (c *ConfigClient) CollectPolicyAssignmentsStatesSummaryInvoker(request *model.CollectPolicyAssignmentsStatesSummaryRequest) *CollectPolicyAssignmentsStatesSummaryInvoker {
+	requestDef := GenReqDefForCollectPolicyAssignmentsStatesSummary()
+	return &CollectPolicyAssignmentsStatesSummaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CollectPolicyStatesSummary 查询用户的合规总结
+//
+// 查询用户的合规总结
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) CollectPolicyStatesSummary(request *model.CollectPolicyStatesSummaryRequest) (*model.CollectPolicyStatesSummaryResponse, error) {
+	requestDef := GenReqDefForCollectPolicyStatesSummary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CollectPolicyStatesSummaryResponse), nil
+	}
+}
+
+// CollectPolicyStatesSummaryInvoker 查询用户的合规总结
+func (c *ConfigClient) CollectPolicyStatesSummaryInvoker(request *model.CollectPolicyStatesSummaryRequest) *CollectPolicyStatesSummaryInvoker {
+	requestDef := GenReqDefForCollectPolicyStatesSummary()
+	return &CollectPolicyStatesSummaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CollectRemediationExecutionStatusesSummary 列举修正最新记录
 //
 // 列举合规规则修正最新记录。
@@ -878,6 +920,27 @@ func (c *ConfigClient) CollectRemediationExecutionStatusesSummary(request *model
 func (c *ConfigClient) CollectRemediationExecutionStatusesSummaryInvoker(request *model.CollectRemediationExecutionStatusesSummaryRequest) *CollectRemediationExecutionStatusesSummaryInvoker {
 	requestDef := GenReqDefForCollectRemediationExecutionStatusesSummary()
 	return &CollectRemediationExecutionStatusesSummaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CollectResourcesPolicyStatesSummary 查询用户资源的合规总结
+//
+// 查询用户资源的合规总结
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) CollectResourcesPolicyStatesSummary(request *model.CollectResourcesPolicyStatesSummaryRequest) (*model.CollectResourcesPolicyStatesSummaryResponse, error) {
+	requestDef := GenReqDefForCollectResourcesPolicyStatesSummary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CollectResourcesPolicyStatesSummaryResponse), nil
+	}
+}
+
+// CollectResourcesPolicyStatesSummaryInvoker 查询用户资源的合规总结
+func (c *ConfigClient) CollectResourcesPolicyStatesSummaryInvoker(request *model.CollectResourcesPolicyStatesSummaryRequest) *CollectResourcesPolicyStatesSummaryInvoker {
+	requestDef := GenReqDefForCollectResourcesPolicyStatesSummary()
+	return &CollectResourcesPolicyStatesSummaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateOrUpdateRemediationConfiguration 创建或更新修正配置
@@ -1760,6 +1823,27 @@ func (c *ConfigClient) CountTrackedResources(request *model.CountTrackedResource
 func (c *ConfigClient) CountTrackedResourcesInvoker(request *model.CountTrackedResourcesRequest) *CountTrackedResourcesInvoker {
 	requestDef := GenReqDefForCountTrackedResources()
 	return &CountTrackedResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAllProviders 列举所有已对接的云服务
+//
+// 查询所有已对接Config的云服务、资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) ListAllProviders(request *model.ListAllProvidersRequest) (*model.ListAllProvidersResponse, error) {
+	requestDef := GenReqDefForListAllProviders()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAllProvidersResponse), nil
+	}
+}
+
+// ListAllProvidersInvoker 列举所有已对接的云服务
+func (c *ConfigClient) ListAllProvidersInvoker(request *model.ListAllProvidersRequest) *ListAllProvidersInvoker {
+	requestDef := GenReqDefForListAllProviders()
+	return &ListAllProvidersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAllResources 列举所有资源

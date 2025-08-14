@@ -29,7 +29,7 @@ type NodeDetectRiskResponseInfo struct {
 	// 集群id
 	ClusterId *string `json:"cluster_id,omitempty"`
 
-	// 付费模式 | on_demand 按需 free 免费
+	// 付费模式包括： - on_demand：按需 - free：免费
 	ChargingMode *string `json:"charging_mode,omitempty"`
 }
 

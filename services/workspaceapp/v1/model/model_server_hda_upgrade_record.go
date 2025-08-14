@@ -33,7 +33,7 @@ type ServerHdaUpgradeRecord struct {
 	// HDA升级状态。
 	UpgradeStatus *string `json:"upgrade_status,omitempty"`
 
-	// 更新时间
+	// 更新时间。
 	UpgradeTime *string `json:"upgrade_time,omitempty"`
 }
 

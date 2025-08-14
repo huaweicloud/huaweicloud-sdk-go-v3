@@ -9,7 +9,7 @@ import (
 // BatchAddAccountsRequestInfo 账号列表
 type BatchAddAccountsRequestInfo struct {
 
-	// 账号列表表详情
+	// 账号列表详情
 	DataList *[]AddAccountsRequestInfo `json:"data_list,omitempty"`
 }
 

@@ -8,10 +8,10 @@ import (
 
 type TagInfo struct {
 
-	// 键。最大长度128个unicode字符。 key不能为空
+	// **参数解释**： 键 **取值范围**: 最大长度128个unicode字符。 key不能为空
 	Key *string `json:"key,omitempty"`
 
-	// 值。最大长度255个unicode字符。
+	// **参数解释**： 值 **取值范围**: 最大长度255个unicode字符。
 	Value *string `json:"value,omitempty"`
 }
 

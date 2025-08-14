@@ -9,7 +9,7 @@ import (
 // GroupMembershipExistenceResultDto Indicates whether a resource is a member of a group in the identity store.
 type GroupMembershipExistenceResultDto struct {
 
-	// 身份源中IAM身份中心用户组的全局唯一标识符（ID）
+	// 身份源中IdentityCenter用户组的全局唯一标识符（ID）
 	GroupId *string `json:"group_id,omitempty"`
 
 	MemberId *MemberIdDto `json:"member_id,omitempty"`

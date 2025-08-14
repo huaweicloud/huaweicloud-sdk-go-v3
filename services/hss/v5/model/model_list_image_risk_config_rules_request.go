@@ -42,7 +42,7 @@ type ListImageRiskConfigRulesRequest struct {
 	// 标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
 	Standard string `json:"standard"`
 
-	// 结果类型，包含如下： - pass ： 已通过 - failed : 未通过
+	// 结果类型，包含如下： - pass：已通过 - failed：未通过
 	ResultType *string `json:"result_type,omitempty"`
 
 	// 检查项名称，支持模糊匹配

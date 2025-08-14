@@ -27,7 +27,7 @@ type ListIsolatedFileRequest struct {
 	// 服务器公网IP
 	PublicIp *string `json:"public_ip,omitempty"`
 
-	// 文件hash,当前为sha256
+	// 文件hash，当前为sha256
 	FileHash *string `json:"file_hash,omitempty"`
 
 	// 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
@@ -39,7 +39,7 @@ type ListIsolatedFileRequest struct {
 	// 每页显示个数
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 隔离状态，包含如下:   - isolated : 已隔离   - restored : 已恢复   - isolating : 已下发隔离任务   - restoring : 已下发恢复任务
+	// 隔离状态，包含如下:   - isolated：已隔离   - restored：已恢复   - isolating：已下发隔离任务   - restoring：已下发恢复任务
 	IsolationStatus *string `json:"isolation_status,omitempty"`
 
 	// 查询时间范围天数，与自定义查询时间begin_time，end_time互斥

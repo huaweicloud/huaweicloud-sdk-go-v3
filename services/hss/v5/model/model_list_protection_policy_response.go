@@ -9,10 +9,10 @@ import (
 // ListProtectionPolicyResponse Response Object
 type ListProtectionPolicyResponse struct {
 
-	// 策略总数
+	// **参数解释**: 策略总数 **取值范围**: 取值0-2097152
 	TotalNum *int32 `json:"total_num,omitempty"`
 
-	// 查询防护策略列表
+	// **参数解释**: 查询防护策略列表 **取值范围**: 取值0-2097152
 	DataList       *[]ProtectionPolicyInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }

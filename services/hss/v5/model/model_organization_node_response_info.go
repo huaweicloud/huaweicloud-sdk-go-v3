@@ -15,7 +15,7 @@ type OrganizationNodeResponseInfo struct {
 	// 节点Id
 	Id *string `json:"id,omitempty"`
 
-	// 组织的统一资源名称,格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
+	// 组织的统一资源名称，格式：organizations::{management_account_id}:xxxxx:{org_id}/xxxxxxxx。
 	Urn *string `json:"urn,omitempty"`
 
 	// 名称
