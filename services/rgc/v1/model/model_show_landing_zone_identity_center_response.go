@@ -15,8 +15,10 @@ type ShowLandingZoneIdentityCenterResponse struct {
 	// Identity Center登录URL。
 	UserPortalUrl *string `json:"user_portal_url,omitempty"`
 
+	// Identity Center权限集。
 	PermissionSets *[]PermissionSet `json:"permission_sets,omitempty"`
 
+	// Identity Center用户组。
 	Groups         *[]IdentityCenterGroup `json:"groups,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

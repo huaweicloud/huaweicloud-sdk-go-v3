@@ -1989,6 +1989,22 @@ func (i *ImportCatalogsInvoker) Invoke() (*model.ImportCatalogsResponse, error) 
 	}
 }
 
+type ImportDataMapLineageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ImportDataMapLineageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ImportDataMapLineageInvoker) Invoke() (*model.ImportDataMapLineageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ImportDataMapLineageResponse), nil
+	}
+}
+
 type ImportLineageInvoker struct {
 	*invoker.BaseInvoker
 }

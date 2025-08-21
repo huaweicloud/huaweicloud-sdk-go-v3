@@ -13,7 +13,7 @@ type ListCertsRequest struct {
 	ClusterId string `json:"cluster_id"`
 
 	// 指定查询起始值，默认值为1，即从第1个证书开始查询。
-	Start *string `json:"start,omitempty"`
+	Offset *string `json:"offset,omitempty"`
 
 	// 指定查询个数，默认值为10，即一次查询10个证书信息。
 	Limit *string `json:"limit,omitempty"`

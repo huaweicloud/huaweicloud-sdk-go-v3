@@ -13,7 +13,7 @@ type UpgradeDetailRequest struct {
 	ClusterId string `json:"cluster_id"`
 
 	// 偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
-	Start *int32 `json:"start,omitempty"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 查询返回终端节点服务的连接列表限制每页个数，即每页返回的个数。
 	Limit *int32 `json:"limit,omitempty"`

@@ -20,6 +20,7 @@ type AdvancedIpsRuleVo struct {
 	// 包含特殊参数的JSON字符串
 	Param *string `json:"param,omitempty"`
 
+	// 开关状态：0表示关闭、1表示开启
 	Status *int32 `json:"status,omitempty"`
 }
 

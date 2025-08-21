@@ -9,7 +9,7 @@ import (
 // AddTrustedIpAddressRequest Request Object
 type AddTrustedIpAddressRequest struct {
 
-	// 仓库id
+	// **参数解释：** 仓库id，代码仓首页，Repository ID后的数字Id。
 	Id int32 `json:"id"`
 
 	Body *AddTrustedIpAddressRequestBody `json:"body,omitempty"`

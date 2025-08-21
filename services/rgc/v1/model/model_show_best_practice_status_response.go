@@ -12,7 +12,7 @@ type ShowBestPracticeStatusResponse struct {
 	// 操作Id
 	OperationId *string `json:"operation_id,omitempty"`
 
-	// 状态：进行中，成功，成败
+	// 状态：进行中，成功，失败
 	Status *string `json:"status,omitempty"`
 
 	// 检测进度

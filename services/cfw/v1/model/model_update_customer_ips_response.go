@@ -8,8 +8,8 @@ import (
 
 // UpdateCustomerIpsResponse Response Object
 type UpdateCustomerIpsResponse struct {
-	Body           *interface{} `json:"body,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *UpdateCustomerIpsRespData `json:"data,omitempty"`
+	HttpStatusCode int                        `json:"-"`
 }
 
 func (o UpdateCustomerIpsResponse) String() string {

@@ -8,8 +8,15 @@ import (
 
 // ShowRecycleBinResponse Response Object
 type ShowRecycleBinResponse struct {
-	RecycleBin     *RecycleBin `json:"recycle_bin,omitempty"`
-	HttpStatusCode int         `json:"-"`
+
+	// 项目ID
+	ProjectId *string `json:"project_id,omitempty"`
+
+	// 回收站配置开关
+	Switch *string `json:"switch,omitempty"`
+
+	Policy         *RecycleBinPolicys `json:"policy,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o ShowRecycleBinResponse) String() string {

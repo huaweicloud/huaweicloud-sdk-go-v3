@@ -9,7 +9,7 @@ import (
 // DriftDetail 漂移详细信息。
 type DriftDetail struct {
 
-	// 管理纳管账号ID。
+	// 管理员账号ID。
 	ManagedAccountId *string `json:"managed_account_id,omitempty"`
 
 	// 漂移类型。

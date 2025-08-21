@@ -8,8 +8,16 @@ import (
 
 // BatchCreateApplicationViewResponse Response Object
 type BatchCreateApplicationViewResponse struct {
-	Body           *interface{} `json:"body,omitempty"`
-	HttpStatusCode int          `json:"-"`
+
+	// **参数解释：** 应用id列表。 **取值范围：** 不涉及。
+	ApplicationIds *[]string `json:"application_ids,omitempty"`
+
+	// **参数解释：** 组件id列表。 **取值范围：** 不涉及。
+	ComponentIds *[]string `json:"component_ids,omitempty"`
+
+	// **参数解释：** 分组id列表。 **取值范围：** 不涉及。
+	GroupIds       *[]string `json:"group_ids,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o BatchCreateApplicationViewResponse) String() string {

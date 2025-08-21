@@ -9,7 +9,7 @@ import (
 // DeleteTenantTrustedIpAddressRequest Request Object
 type DeleteTenantTrustedIpAddressRequest struct {
 
-	// ip的id
+	// **参数解释：** ip白名单id。
 	IpId int32 `json:"ip_id"`
 }
 

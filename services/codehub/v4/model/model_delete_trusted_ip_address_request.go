@@ -9,10 +9,10 @@ import (
 // DeleteTrustedIpAddressRequest Request Object
 type DeleteTrustedIpAddressRequest struct {
 
-	// ip的id
+	// **参数解释：** 仓库id，代码仓首页，Repository ID后的数字Id。
 	Id int32 `json:"id"`
 
-	// ip的id
+	// **参数解释：** ip白名单id。
 	IpId int32 `json:"ip_id"`
 }
 

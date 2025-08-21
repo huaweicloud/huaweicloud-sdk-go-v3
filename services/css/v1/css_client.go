@@ -40,6 +40,29 @@ func (c *CssClient) AddIndependentNodeInvoker(request *model.AddIndependentNodeR
 	return &AddIndependentNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeClusterSubnet 切换集群子网
+//
+// 该接口可以在集群创建成功后，切换集群子网，扩容等添加节点场景下使用新子网绑定新增节点。
+//
+// &gt;同VPC下的子网默认网络联通，请确保新子网与您业务系统的网络连通性。另：开启了自动创建ipv6地址的集群只支持切换到开启了ipv6的新子网。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CssClient) ChangeClusterSubnet(request *model.ChangeClusterSubnetRequest) (*model.ChangeClusterSubnetResponse, error) {
+	requestDef := GenReqDefForChangeClusterSubnet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeClusterSubnetResponse), nil
+	}
+}
+
+// ChangeClusterSubnetInvoker 切换集群子网
+func (c *CssClient) ChangeClusterSubnetInvoker(request *model.ChangeClusterSubnetRequest) *ChangeClusterSubnetInvoker {
+	requestDef := GenReqDefForChangeClusterSubnet()
+	return &ChangeClusterSubnetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ChangeMode 安全模式修改
 //
 // 该接口用于切换集群的安全模式。
@@ -1164,7 +1187,7 @@ func (c *CssClient) StopVpecpInvoker(request *model.StopVpecpRequest) *StopVpecp
 	return &StopVpecpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateAzByInstanceType 切换集群实例AZ
+// UpdateAzByInstanceType 切换集群实例可用区
 //
 // 该接口通过指定节点类型切换AZ。
 //
@@ -1179,7 +1202,7 @@ func (c *CssClient) UpdateAzByInstanceType(request *model.UpdateAzByInstanceType
 	}
 }
 
-// UpdateAzByInstanceTypeInvoker 切换集群实例AZ
+// UpdateAzByInstanceTypeInvoker 切换集群实例可用区
 func (c *CssClient) UpdateAzByInstanceTypeInvoker(request *model.UpdateAzByInstanceTypeRequest) *UpdateAzByInstanceTypeInvoker {
 	requestDef := GenReqDefForUpdateAzByInstanceType()
 	return &UpdateAzByInstanceTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

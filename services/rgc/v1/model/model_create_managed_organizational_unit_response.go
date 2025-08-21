@@ -10,7 +10,7 @@ import (
 // CreateManagedOrganizationalUnitResponse Response Object
 type CreateManagedOrganizationalUnitResponse struct {
 
-	// 管理纳管账号ID。
+	// 管理员账号ID。
 	ManageAccountId *string `json:"manage_account_id,omitempty"`
 
 	// 注册OU ID。
@@ -30,10 +30,10 @@ type CreateManagedOrganizationalUnitResponse struct {
 	// 父注册OU名称。
 	ParentOrganizationalUnitName *string `json:"parent_organizational_unit_name,omitempty"`
 
-	// 组织里某个注册OU下的纳管账号被创建的时间。
+	// 注册OU的创建时间。
 	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
 
-	// Landing Zone版本。
+	// 注册OU的Landing Zone版本。
 	LandingZoneVersion *string `json:"landing_zone_version,omitempty"`
 	HttpStatusCode     int     `json:"-"`
 }

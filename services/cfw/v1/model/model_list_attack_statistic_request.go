@@ -35,6 +35,9 @@ type ListAttackStatisticRequest struct {
 
 	// **参数解释**： 聚合类型 **约束限制**： 不涉及 **取值范围**： dst TOP攻击目的统计 src TOP攻击来源统计 **默认取值**： 不涉及
 	Item ListAttackStatisticRequestItem `json:"item"`
+
+	// **参数解释**： 聚合条数 **约束限制**： 不涉及 **取值范围**： 0到100条 **默认取值**： 50
+	Size *int32 `json:"size,omitempty"`
 }
 
 func (o ListAttackStatisticRequest) String() string {

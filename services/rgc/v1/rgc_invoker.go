@@ -21,6 +21,22 @@ func (i *CreateBestPracticeDetectInvoker) Invoke() (*model.CreateBestPracticeDet
 	}
 }
 
+type ShowBestPracticeAccountInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBestPracticeAccountInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowBestPracticeAccountInfoInvoker) Invoke() (*model.ShowBestPracticeAccountInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBestPracticeAccountInfoResponse), nil
+	}
+}
+
 type ShowBestPracticeDetailsInvoker struct {
 	*invoker.BaseInvoker
 }

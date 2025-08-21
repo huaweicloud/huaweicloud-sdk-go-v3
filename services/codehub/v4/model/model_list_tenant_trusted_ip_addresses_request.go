@@ -9,10 +9,10 @@ import (
 // ListTenantTrustedIpAddressesRequest Request Object
 type ListTenantTrustedIpAddressesRequest struct {
 
-	// 偏移量
+	// **参数解释：** 偏移量，从0开始。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 返回数量
+	// **参数解释：** 返回数量。
 	Limit *int32 `json:"limit,omitempty"`
 }
 

@@ -9,7 +9,7 @@ import (
 // ShowManagedAccountTemplateResponse Response Object
 type ShowManagedAccountTemplateResponse struct {
 
-	// 管理纳管账号ID。
+	// 管理员账号ID。
 	ManageAccountId *string `json:"manage_account_id,omitempty"`
 
 	// 纳管账号ID。

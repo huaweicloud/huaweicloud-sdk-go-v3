@@ -59,9 +59,8 @@ func (builder *HcHttpClientBuilder) WithDerivedAuthServiceName(derivedAuthServic
 	return builder
 }
 
-// Deprecated: As of 0.1.27, because of the support of the multi-endpoint feature, use WithEndpoints instead
-func (builder *HcHttpClientBuilder) WithEndpoint(endpoint string) *HcHttpClientBuilder {
-	return builder.WithEndpoints([]string{endpoint})
+func (builder *HcHttpClientBuilder) WithEndpoint(endpoint ...string) *HcHttpClientBuilder {
+	return builder.WithEndpoints(endpoint)
 }
 
 func (builder *HcHttpClientBuilder) WithEndpoints(endpoints []string) *HcHttpClientBuilder {

@@ -13,7 +13,7 @@ type ShowControlsForAccountResponse struct {
 	// 区域信息。
 	Regions *[]RegionConfigurationList `json:"regions,omitempty"`
 
-	// 是否允许启用控制策略。
+	// 状态。
 	State *string `json:"state,omitempty"`
 
 	// 状态说明。

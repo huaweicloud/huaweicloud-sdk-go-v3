@@ -9,7 +9,7 @@ import (
 // ListControlViolationsRequest Request Object
 type ListControlViolationsRequest struct {
 
-	// 账户ID。
+	// 纳管账号ID。
 	AccountId *string `json:"account_id,omitempty"`
 
 	// 注册OU ID。

@@ -9,7 +9,7 @@ import (
 // TargetControl 治理策略概要。
 type TargetControl struct {
 
-	// 管理纳管账号ID。
+	// 管理员账号ID。
 	ManageAccountId *string `json:"manage_account_id,omitempty"`
 
 	// 控制策略标识。
@@ -33,7 +33,7 @@ type TargetControl struct {
 	// 控制策略类型。包括主动性控制策略Proactive、检测性控制策略Detective、预防性控制策略Preventive。
 	Behavior *string `json:"behavior,omitempty"`
 
-	// 纳管账号的创建来源，包括CUSTOM和RGC。
+	// 控制策略来源。
 	Owner *string `json:"owner,omitempty"`
 
 	// 区域选项，取值有两种分别是：区域的regional和全局的global。
@@ -45,7 +45,7 @@ type TargetControl struct {
 	// 控制策略所属服务。
 	Service *string `json:"service,omitempty"`
 
-	// 服务控制策略（SCP），配置规则。
+	// 策略类别。
 	Implementation *string `json:"implementation,omitempty"`
 }
 

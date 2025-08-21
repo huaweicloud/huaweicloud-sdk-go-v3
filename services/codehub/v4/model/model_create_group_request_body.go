@@ -13,7 +13,7 @@ import (
 type CreateGroupRequestBody struct {
 
 	// 代码组名称
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 父级代码组id, 不传默认在项目下创建代码组
 	ParentId *int32 `json:"parent_id,omitempty"`

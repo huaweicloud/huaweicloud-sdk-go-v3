@@ -9,7 +9,7 @@ import (
 // ShowAvailableUpdatesResponse Response Object
 type ShowAvailableUpdatesResponse struct {
 
-	// Landing Zone基础配置是否可用。
+	// 用户当前的Landing Zone版本是否为最新版本。
 	BaselineUpdateAvailable *bool `json:"baseline_update_available,omitempty"`
 
 	// 当前账号下是否有新的控制策略。

@@ -27,6 +27,7 @@ type TemplateParamVariable struct {
 	// 变量类型。
 	Type *string `json:"type,omitempty"`
 
+	// 模板的部署参数变量的校验规则。
 	Validations *[]TemplateParamVariableValidation `json:"validations,omitempty"`
 }
 

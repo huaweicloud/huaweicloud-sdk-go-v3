@@ -2629,6 +2629,27 @@ func (c *DataArtsStudioClient) ImportCatalogsInvoker(request *model.ImportCatalo
 	return &ImportCatalogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ImportDataMapLineage 导入血缘(邀测)
+//
+// 血缘导入接口，一次性获取所有作业算子的血缘。该接口功能处于邀测阶段，后续将随功能公测将逐步开放。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ImportDataMapLineage(request *model.ImportDataMapLineageRequest) (*model.ImportDataMapLineageResponse, error) {
+	requestDef := GenReqDefForImportDataMapLineage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ImportDataMapLineageResponse), nil
+	}
+}
+
+// ImportDataMapLineageInvoker 导入血缘(邀测)
+func (c *DataArtsStudioClient) ImportDataMapLineageInvoker(request *model.ImportDataMapLineageRequest) *ImportDataMapLineageInvoker {
+	requestDef := GenReqDefForImportDataMapLineage()
+	return &ImportDataMapLineageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ImportLineage 血缘导入
 //
 // 血缘查询

@@ -12,7 +12,7 @@ type ShowComplianceStatusForOrganizationalUnitRequest struct {
 	// 注册OU ID。
 	ManagedOrganizationalUnitId string `json:"managed_organizational_unit_id"`
 
-	// 启用的控制策略信息。
+	// 控制策略ID。
 	ControlId *string `json:"control_id,omitempty"`
 }
 

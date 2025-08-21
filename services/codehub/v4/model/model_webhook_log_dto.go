@@ -1,0 +1,47 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// WebhookLogDto **参数解释：** Webhook执行日志数据。
+type WebhookLogDto struct {
+
+	// **参数解释：** Webhook 日志id。
+	Id *int32 `json:"id,omitempty"`
+
+	// **参数解释：** Webhook id。
+	WebHookId *int32 `json:"web_hook_id,omitempty"`
+
+	// **参数解释：** 触发类型。
+	Trigger *string `json:"trigger,omitempty"`
+
+	// **参数解释：** 请求地址。
+	Url *string `json:"url,omitempty"`
+
+	// **参数解释：** 响应状态，默认是响应码，如果webhook地址未返回或者其他异常情况，则记录为internal error
+	ResponseStatus *string `json:"response_status,omitempty"`
+
+	// **参数解释：** 响应耗时，单位是秒
+	ExecutionDuration *float64 `json:"execution_duration,omitempty"`
+
+	// **参数解释：** Webhook每次发送消息的时候，会在请求体中带上uuid字段，此处为该记录的uuid字段
+	Uuid *string `json:"uuid,omitempty"`
+
+	// **参数解释：** 创建时间。
+	CreatedAt *string `json:"created_at,omitempty"`
+
+	// **参数解释：** 更新时间。
+	UpdatedAt *string `json:"updated_at,omitempty"`
+}
+
+func (o WebhookLogDto) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "WebhookLogDto struct{}"
+	}
+
+	return strings.Join([]string{"WebhookLogDto", string(data)}, " ")
+}

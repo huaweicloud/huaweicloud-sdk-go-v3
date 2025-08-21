@@ -9,11 +9,9 @@ import (
 // ListManageableGroupsResponse Response Object
 type ListManageableGroupsResponse struct {
 
-	// 仓库ip白名单列表
-	Body *[]GroupsManageableDto `json:"body,omitempty"`
-
-	XTotal         *string `json:"X-Total,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	// 拥有管理权限的代码组列表
+	Body           *[]ManageableGroupDto `json:"body,omitempty"`
+	HttpStatusCode int                   `json:"-"`
 }
 
 func (o ListManageableGroupsResponse) String() string {

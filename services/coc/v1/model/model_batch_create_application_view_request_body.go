@@ -8,13 +8,13 @@ import (
 
 type BatchCreateApplicationViewRequestBody struct {
 
-	// 应用列表
+	// **参数解释：** 应用信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	ApplicationList []BatchCreateApplicationViewRequestBodyApplicationList `json:"application_list"`
 
-	// 组件列表
+	// **参数解释：** 组件信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	ComponentList *[]BatchCreateApplicationViewRequestBodyComponentList `json:"component_list,omitempty"`
 
-	// 分组列表
+	// **参数解释：** 分组信息组成的列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	GroupList *[]BatchCreateApplicationViewRequestBodyGroupList `json:"group_list,omitempty"`
 }
 

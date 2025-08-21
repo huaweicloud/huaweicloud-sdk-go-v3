@@ -16,7 +16,7 @@ type ListAiOpsRequest struct {
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
-	Start *int32 `json:"start,omitempty"`
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListAiOpsRequest) String() string {

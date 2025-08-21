@@ -15,11 +15,11 @@ type ShowAccessTopRequest struct {
 	// **参数解释**： 防火墙ID，用户创建防火墙实例后产生的唯一ID，配置后可区分不同防火墙，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取 **约束限制**： 不涉及 **取值范围**： 32位UUID **默认取值**： 不涉及
 	FwInstanceId string `json:"fw_instance_id"`
 
-	// **参数解释**： 会话方向 **约束限制**： 不涉及 **取值范围**： in2out为出云方向 out2in为入云方向 **默认取值**： 不涉及
-	Direction *ShowAccessTopRequestDirection `json:"direction,omitempty"`
-
 	// **参数解释**： 时间范围  **约束限制**： 不涉及 **取值范围**： 0为近一时 1近一天 2近七天   **默认取值**： 不涉及
 	Range *ShowAccessTopRequestRange `json:"range,omitempty"`
+
+	// **参数解释**： 会话方向 **约束限制**： 不涉及 **取值范围**： in2out为出云方向 out2in为入云方向 **默认取值**： 不涉及
+	Direction *ShowAccessTopRequestDirection `json:"direction,omitempty"`
 
 	// **参数解释**： 开始时间 **约束限制**： 不涉及 **取值范围**： 毫秒级时间戳 **默认取值**： 不涉及
 	StartTime *int64 `json:"start_time,omitempty"`
@@ -47,53 +47,6 @@ func (o ShowAccessTopRequest) String() string {
 	}
 
 	return strings.Join([]string{"ShowAccessTopRequest", string(data)}, " ")
-}
-
-type ShowAccessTopRequestDirection struct {
-	value string
-}
-
-type ShowAccessTopRequestDirectionEnum struct {
-	IN2OUT ShowAccessTopRequestDirection
-	OUT2IN ShowAccessTopRequestDirection
-}
-
-func GetShowAccessTopRequestDirectionEnum() ShowAccessTopRequestDirectionEnum {
-	return ShowAccessTopRequestDirectionEnum{
-		IN2OUT: ShowAccessTopRequestDirection{
-			value: "in2out",
-		},
-		OUT2IN: ShowAccessTopRequestDirection{
-			value: "out2in",
-		},
-	}
-}
-
-func (c ShowAccessTopRequestDirection) Value() string {
-	return c.value
-}
-
-func (c ShowAccessTopRequestDirection) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ShowAccessTopRequestDirection) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }
 
 type ShowAccessTopRequestRange struct {
@@ -142,6 +95,53 @@ func (c *ShowAccessTopRequestRange) UnmarshalJSON(b []byte) error {
 		return nil
 	} else {
 		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type ShowAccessTopRequestDirection struct {
+	value string
+}
+
+type ShowAccessTopRequestDirectionEnum struct {
+	IN2OUT ShowAccessTopRequestDirection
+	OUT2IN ShowAccessTopRequestDirection
+}
+
+func GetShowAccessTopRequestDirectionEnum() ShowAccessTopRequestDirectionEnum {
+	return ShowAccessTopRequestDirectionEnum{
+		IN2OUT: ShowAccessTopRequestDirection{
+			value: "in2out",
+		},
+		OUT2IN: ShowAccessTopRequestDirection{
+			value: "out2in",
+		},
+	}
+}
+
+func (c ShowAccessTopRequestDirection) Value() string {
+	return c.value
+}
+
+func (c ShowAccessTopRequestDirection) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowAccessTopRequestDirection) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
 	}
 }
 

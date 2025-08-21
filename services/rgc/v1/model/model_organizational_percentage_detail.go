@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// OrganizationalPercentageDetail 创建账号、纳管注册OU、纳管账号状态信息。
+// OrganizationalPercentageDetail 创建账号、注册OU、纳管账号状态信息。
 type OrganizationalPercentageDetail struct {
 
 	// 进度名称。

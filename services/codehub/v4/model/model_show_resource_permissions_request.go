@@ -1,0 +1,32 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// ShowResourcePermissionsRequest Request Object
+type ShowResourcePermissionsRequest struct {
+
+	// **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+	GroupId int32 `json:"group_id"`
+
+	// **参数解释：** 资源Id，通过获取代码组权限资源点列表获取的数据中的Id
+	ResourceId int32 `json:"resource_id"`
+
+	// **参数解释：** 偏移量，从0开始。
+	Offset *int32 `json:"offset,omitempty"`
+
+	// **参数解释：** 返回数量。
+	Limit *int32 `json:"limit,omitempty"`
+}
+
+func (o ShowResourcePermissionsRequest) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "ShowResourcePermissionsRequest struct{}"
+	}
+
+	return strings.Join([]string{"ShowResourcePermissionsRequest", string(data)}, " ")
+}

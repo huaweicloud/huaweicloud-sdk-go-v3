@@ -9,7 +9,7 @@ import (
 // ListOperationRequest Request Object
 type ListOperationRequest struct {
 
-	// 账户ID。
+	// 纳管账号ID。
 	AccountId *string `json:"account_id,omitempty"`
 
 	// 注册OU ID。

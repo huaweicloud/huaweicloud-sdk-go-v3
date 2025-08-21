@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// BestPracticeOverviewItem 最佳实践检测结果各个场景的概览。
+// BestPracticeOverviewItem 最佳实践检测结果中某个场景的概览。
 type BestPracticeOverviewItem struct {
 
 	// 分数

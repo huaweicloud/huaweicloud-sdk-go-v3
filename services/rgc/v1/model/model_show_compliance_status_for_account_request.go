@@ -12,7 +12,7 @@ type ShowComplianceStatusForAccountRequest struct {
 	// 纳管账号ID。
 	ManagedAccountId string `json:"managed_account_id"`
 
-	// 启用的控制策略信息。
+	// 控制策略ID。
 	ControlId *string `json:"control_id,omitempty"`
 }
 

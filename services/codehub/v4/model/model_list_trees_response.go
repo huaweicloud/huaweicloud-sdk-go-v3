@@ -1,0 +1,26 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// ListTreesResponse Response Object
+type ListTreesResponse struct {
+
+	// 文件列表
+	Body *[]TreeObjectDto `json:"body,omitempty"`
+
+	XTotal         *string `json:"X-Total,omitempty"`
+	HttpStatusCode int     `json:"-"`
+}
+
+func (o ListTreesResponse) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "ListTreesResponse struct{}"
+	}
+
+	return strings.Join([]string{"ListTreesResponse", string(data)}, " ")
+}

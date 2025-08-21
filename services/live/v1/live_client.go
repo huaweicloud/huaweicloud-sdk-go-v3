@@ -82,6 +82,27 @@ func (c *LiveClient) CreateDomainMappingInvoker(request *model.CreateDomainMappi
 	return &CreateDomainMappingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateFlowOutput 创建转推输出
+//
+// 创建转推输出
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) CreateFlowOutput(request *model.CreateFlowOutputRequest) (*model.CreateFlowOutputResponse, error) {
+	requestDef := GenReqDefForCreateFlowOutput()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFlowOutputResponse), nil
+	}
+}
+
+// CreateFlowOutputInvoker 创建转推输出
+func (c *LiveClient) CreateFlowOutputInvoker(request *model.CreateFlowOutputRequest) *CreateFlowOutputInvoker {
+	requestDef := GenReqDefForCreateFlowOutput()
+	return &CreateFlowOutputInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateFlows 创建流
 //
 // 创建流
@@ -374,6 +395,27 @@ func (c *LiveClient) DeleteFlow(request *model.DeleteFlowRequest) (*model.Delete
 func (c *LiveClient) DeleteFlowInvoker(request *model.DeleteFlowRequest) *DeleteFlowInvoker {
 	requestDef := GenReqDefForDeleteFlow()
 	return &DeleteFlowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteFlowOutput 删除转推输出
+//
+// 删除转推输出
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) DeleteFlowOutput(request *model.DeleteFlowOutputRequest) (*model.DeleteFlowOutputResponse, error) {
+	requestDef := GenReqDefForDeleteFlowOutput()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteFlowOutputResponse), nil
+	}
+}
+
+// DeleteFlowOutputInvoker 删除转推输出
+func (c *LiveClient) DeleteFlowOutputInvoker(request *model.DeleteFlowOutputRequest) *DeleteFlowOutputInvoker {
+	requestDef := GenReqDefForDeleteFlowOutput()
+	return &DeleteFlowOutputInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeletePublishTemplate 删除直播推流通知配置
@@ -841,6 +883,27 @@ func (c *LiveClient) ListStreamForbiddenInvoker(request *model.ListStreamForbidd
 	return &ListStreamForbiddenInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ModifyFlowOutput 更新转推输出
+//
+// 更新转推输出
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ModifyFlowOutput(request *model.ModifyFlowOutputRequest) (*model.ModifyFlowOutputResponse, error) {
+	requestDef := GenReqDefForModifyFlowOutput()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyFlowOutputResponse), nil
+	}
+}
+
+// ModifyFlowOutputInvoker 更新转推输出
+func (c *LiveClient) ModifyFlowOutputInvoker(request *model.ModifyFlowOutputRequest) *ModifyFlowOutputInvoker {
+	requestDef := GenReqDefForModifyFlowOutput()
+	return &ModifyFlowOutputInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ModifyFlowSources 修改流来源
 //
 // 修改流来源
@@ -1007,6 +1070,27 @@ func (c *LiveClient) ShowFlowDetail(request *model.ShowFlowDetailRequest) (*mode
 func (c *LiveClient) ShowFlowDetailInvoker(request *model.ShowFlowDetailRequest) *ShowFlowDetailInvoker {
 	requestDef := GenReqDefForShowFlowDetail()
 	return &ShowFlowDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowOutputInfo 查询转推输出
+//
+// 查询转推输出
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ShowOutputInfo(request *model.ShowOutputInfoRequest) (*model.ShowOutputInfoResponse, error) {
+	requestDef := GenReqDefForShowOutputInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowOutputInfoResponse), nil
+	}
+}
+
+// ShowOutputInfoInvoker 查询转推输出
+func (c *LiveClient) ShowOutputInfoInvoker(request *model.ShowOutputInfoRequest) *ShowOutputInfoInvoker {
+	requestDef := GenReqDefForShowOutputInfo()
+	return &ShowOutputInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowPullSourcesConfig 查询直播拉流回源配置
@@ -1409,6 +1493,48 @@ func (c *LiveClient) UpdateTranscodingsTemplate(request *model.UpdateTranscoding
 func (c *LiveClient) UpdateTranscodingsTemplateInvoker(request *model.UpdateTranscodingsTemplateRequest) *UpdateTranscodingsTemplateInvoker {
 	requestDef := GenReqDefForUpdateTranscodingsTemplate()
 	return &UpdateTranscodingsTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCesDimsInfo 维度配置信息查询
+//
+// 新增维度配置信息查询API
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ListCesDimsInfo(request *model.ListCesDimsInfoRequest) (*model.ListCesDimsInfoResponse, error) {
+	requestDef := GenReqDefForListCesDimsInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCesDimsInfoResponse), nil
+	}
+}
+
+// ListCesDimsInfoInvoker 维度配置信息查询
+func (c *LiveClient) ListCesDimsInfoInvoker(request *model.ListCesDimsInfoRequest) *ListCesDimsInfoInvoker {
+	requestDef := GenReqDefForListCesDimsInfo()
+	return &ListCesDimsInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCesInstance 实例查询
+//
+// 新增实例查询API
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ListCesInstance(request *model.ListCesInstanceRequest) (*model.ListCesInstanceResponse, error) {
+	requestDef := GenReqDefForListCesInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCesInstanceResponse), nil
+	}
+}
+
+// ListCesInstanceInvoker 实例查询
+func (c *LiveClient) ListCesInstanceInvoker(request *model.ListCesInstanceRequest) *ListCesInstanceInvoker {
+	requestDef := GenReqDefForListCesInstance()
+	return &ListCesInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteDomainHttpsCert 删除指定域名的https证书配置

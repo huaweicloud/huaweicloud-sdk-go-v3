@@ -5,6 +5,22 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cdn/v2/model"
 )
 
+type ApplyDomainTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ApplyDomainTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ApplyDomainTemplateInvoker) Invoke() (*model.ApplyDomainTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ApplyDomainTemplateResponse), nil
+	}
+}
+
 type BatchCopyDomainInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -66,6 +82,22 @@ func (i *CreateDomainInvoker) Invoke() (*model.CreateDomainResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateDomainResponse), nil
+	}
+}
+
+type CreateDomainTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDomainTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDomainTemplateInvoker) Invoke() (*model.CreateDomainTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDomainTemplateResponse), nil
 	}
 }
 
@@ -162,6 +194,22 @@ func (i *DeleteDomainInvoker) Invoke() (*model.DeleteDomainResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteDomainResponse), nil
+	}
+}
+
+type DeleteDomainTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDomainTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDomainTemplateInvoker) Invoke() (*model.DeleteDomainTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDomainTemplateResponse), nil
 	}
 }
 
@@ -361,6 +409,22 @@ func (i *SetChargeModesInvoker) Invoke() (*model.SetChargeModesResponse, error) 
 	}
 }
 
+type ShowAppliedTemplateRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAppliedTemplateRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAppliedTemplateRecordInvoker) Invoke() (*model.ShowAppliedTemplateRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAppliedTemplateRecordResponse), nil
+	}
+}
+
 type ShowBandwidthCalcInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -472,6 +536,22 @@ func (i *ShowDomainStatsInvoker) Invoke() (*model.ShowDomainStatsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ShowDomainStatsResponse), nil
+	}
+}
+
+type ShowDomainTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDomainTemplateInvoker) Invoke() (*model.ShowDomainTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainTemplateResponse), nil
 	}
 }
 
@@ -666,6 +746,22 @@ func (i *UpdateDomainMultiCertificatesInvoker) Invoke() (*model.UpdateDomainMult
 		return nil, err
 	} else {
 		return result.(*model.UpdateDomainMultiCertificatesResponse), nil
+	}
+}
+
+type UpdateDomainTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDomainTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDomainTemplateInvoker) Invoke() (*model.UpdateDomainTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDomainTemplateResponse), nil
 	}
 }
 

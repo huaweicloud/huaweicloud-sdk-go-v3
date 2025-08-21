@@ -8,6 +8,8 @@ import (
 
 // DeleteGroupResponse Response Object
 type DeleteGroupResponse struct {
+
+	// 删除结果
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

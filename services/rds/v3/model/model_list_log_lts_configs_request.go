@@ -12,7 +12,7 @@ import (
 // ListLogLtsConfigsRequest Request Object
 type ListLogLtsConfigsRequest struct {
 
-	// 引擎。
+	// 引擎，暂只支持mysql。
 	Engine ListLogLtsConfigsRequestEngine `json:"engine"`
 
 	// 企业项目ID。默认为空。
@@ -54,21 +54,13 @@ type ListLogLtsConfigsRequestEngine struct {
 }
 
 type ListLogLtsConfigsRequestEngineEnum struct {
-	MYSQL      ListLogLtsConfigsRequestEngine
-	POSTGRESQL ListLogLtsConfigsRequestEngine
-	SQLSERVER  ListLogLtsConfigsRequestEngine
+	MYSQL ListLogLtsConfigsRequestEngine
 }
 
 func GetListLogLtsConfigsRequestEngineEnum() ListLogLtsConfigsRequestEngineEnum {
 	return ListLogLtsConfigsRequestEngineEnum{
 		MYSQL: ListLogLtsConfigsRequestEngine{
 			value: "mysql",
-		},
-		POSTGRESQL: ListLogLtsConfigsRequestEngine{
-			value: "postgresql",
-		},
-		SQLSERVER: ListLogLtsConfigsRequestEngine{
-			value: "sqlserver",
 		},
 	}
 }

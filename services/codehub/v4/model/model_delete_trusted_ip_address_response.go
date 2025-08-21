@@ -9,7 +9,7 @@ import (
 // DeleteTrustedIpAddressResponse Response Object
 type DeleteTrustedIpAddressResponse struct {
 
-	// 状态码
+	// **参数解释：** 状态码。
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

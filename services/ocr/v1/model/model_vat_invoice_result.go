@@ -17,10 +17,10 @@ type VatInvoiceResult struct {
 	// 增值税发票左上角标志。取值包含：通行费、代开、成品油、收购、机动车、旅客运输服务。 当\"advanced_mode\"设置为\"true\"时才返回。
 	InvoiceTag *string `json:"invoice_tag,omitempty"`
 
-	// 小计金额，当传入多页PDF时返回此字段。
+	// 小计金额，当传入为全电发票时返回此字段。
 	SumAmount *string `json:"sum_amount,omitempty"`
 
-	// 小计税额，当传入多页PDF时返回此字段。
+	// 小计税额，当传入为全电发票时返回此字段。
 	SumTax *string `json:"sum_tax,omitempty"`
 
 	// 发票联次。  当\"advanced_mode\"设置为\"true\"时才返回。

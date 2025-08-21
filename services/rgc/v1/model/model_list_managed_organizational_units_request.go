@@ -9,7 +9,7 @@ import (
 // ListManagedOrganizationalUnitsRequest Request Object
 type ListManagedOrganizationalUnitsRequest struct {
 
-	// 启用的控制策略信息。
+	// 控制策略ID。
 	ControlId *string `json:"control_id,omitempty"`
 
 	// 分页页面的最大值。

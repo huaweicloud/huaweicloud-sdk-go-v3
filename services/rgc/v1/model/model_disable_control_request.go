@@ -8,7 +8,7 @@ import (
 
 // DisableControlRequest Request Object
 type DisableControlRequest struct {
-	Body *ControlOperateReqBody `json:"body,omitempty"`
+	Body *DisableControlOperateReqBody `json:"body,omitempty"`
 }
 
 func (o DisableControlRequest) String() string {

@@ -13,10 +13,10 @@ type ShowControlResponse struct {
 	// 控制策略ID。
 	Identifier *string `json:"identifier,omitempty"`
 
-	// 服务控制策略（SCP），配置规则。
+	// 策略类别。
 	Implementation *string `json:"implementation,omitempty"`
 
-	// 控制策略必须性。
+	// 实施建议。
 	Guidance *string `json:"guidance,omitempty"`
 
 	// 治理资源。
@@ -40,7 +40,7 @@ type ShowControlResponse struct {
 	// 控制策略别名。
 	Aliases *[]string `json:"aliases,omitempty"`
 
-	// 纳管账号的创建来源，包括CUSTOM和RGC。
+	// 控制策略来源。
 	Owner *string `json:"owner,omitempty"`
 
 	// 控制策略严重性。

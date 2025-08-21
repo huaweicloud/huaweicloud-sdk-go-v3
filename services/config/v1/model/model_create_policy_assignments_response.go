@@ -26,6 +26,8 @@ type CreatePolicyAssignmentsResponse struct {
 
 	PolicyFilter *PolicyFilterDefinition `json:"policy_filter,omitempty"`
 
+	PolicyFilterV2 *PolicyFilterDefinitionV2 `json:"policy_filter_v2,omitempty"`
+
 	// 触发周期值，可选值：One_Hour, Three_Hours, Six_Hours, Twelve_Hours, TwentyFour_Hours
 	Period *string `json:"period,omitempty"`
 

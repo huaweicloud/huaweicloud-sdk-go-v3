@@ -187,9 +187,9 @@ func (c *CocClient) TransferAlarmToIncidentInvoker(request *model.TransferAlarmT
 	return &TransferAlarmToIncidentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchCreateApplicationView 批量创建应用视图
+// BatchCreateApplicationView 批量创建应用，分组，组件
 //
-// 批量创建应用视图
+// 批量创建应用，分组，组件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) BatchCreateApplicationView(request *model.BatchCreateApplicationViewRequest) (*model.BatchCreateApplicationViewResponse, error) {
@@ -202,7 +202,7 @@ func (c *CocClient) BatchCreateApplicationView(request *model.BatchCreateApplica
 	}
 }
 
-// BatchCreateApplicationViewInvoker 批量创建应用视图
+// BatchCreateApplicationViewInvoker 批量创建应用，分组，组件
 func (c *CocClient) BatchCreateApplicationViewInvoker(request *model.BatchCreateApplicationViewRequest) *BatchCreateApplicationViewInvoker {
 	requestDef := GenReqDefForBatchCreateApplicationView()
 	return &BatchCreateApplicationViewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1258,6 +1258,48 @@ func (c *CocClient) ListAuthorizableTicketsExternalInvoker(request *model.ListAu
 	return &ListAuthorizableTicketsExternalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CountMultiCloudResources 查询用户在云厂商的资源总数
+//
+// 查询用户在云厂商（阿里云、AWS、Azure和HCS）的资源总数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CountMultiCloudResources(request *model.CountMultiCloudResourcesRequest) (*model.CountMultiCloudResourcesResponse, error) {
+	requestDef := GenReqDefForCountMultiCloudResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountMultiCloudResourcesResponse), nil
+	}
+}
+
+// CountMultiCloudResourcesInvoker 查询用户在云厂商的资源总数
+func (c *CocClient) CountMultiCloudResourcesInvoker(request *model.CountMultiCloudResourcesRequest) *CountMultiCloudResourcesInvoker {
+	requestDef := GenReqDefForCountMultiCloudResources()
+	return &CountMultiCloudResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SyncMultiCloudResource 手动从云厂商同步用户资源
+//
+// 手动从云厂商同步用户资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) SyncMultiCloudResource(request *model.SyncMultiCloudResourceRequest) (*model.SyncMultiCloudResourceResponse, error) {
+	requestDef := GenReqDefForSyncMultiCloudResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SyncMultiCloudResourceResponse), nil
+	}
+}
+
+// SyncMultiCloudResourceInvoker 手动从云厂商同步用户资源
+func (c *CocClient) SyncMultiCloudResourceInvoker(request *model.SyncMultiCloudResourceRequest) *SyncMultiCloudResourceInvoker {
+	requestDef := GenReqDefForSyncMultiCloudResource()
+	return &SyncMultiCloudResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CountMultiResources 查询用户各种资源总数
 //
 // 查询用户各种资源总数
@@ -1279,25 +1321,28 @@ func (c *CocClient) CountMultiResourcesInvoker(request *model.CountMultiResource
 	return &CountMultiResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListResource 查询用户所有资源
+// ListResources 查询用户所有资源
 //
-// 查询用户所有资源
+// 查询租户所有资源：
+//  - 查询租户所有资源等相关信息，便于租户详细了解资源总体情况。
+//  - 请求参数provider（云服务名称），type（云资源类型），limit（查询条数）必填，单次最大查询条数：500。
+//  - 返回信息包括：资源ID，资源名称，云服务名称，资源类型，项目ID，租户ID，区域ID，企业项目ID，资源标签，资源详细属性，资源ingest属性，uniagentID，uniagent状态，是否托管，是否可运维。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CocClient) ListResource(request *model.ListResourceRequest) (*model.ListResourceResponse, error) {
-	requestDef := GenReqDefForListResource()
+func (c *CocClient) ListResources(request *model.ListResourcesRequest) (*model.ListResourcesResponse, error) {
+	requestDef := GenReqDefForListResources()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListResourceResponse), nil
+		return resp.(*model.ListResourcesResponse), nil
 	}
 }
 
-// ListResourceInvoker 查询用户所有资源
-func (c *CocClient) ListResourceInvoker(request *model.ListResourceRequest) *ListResourceInvoker {
-	requestDef := GenReqDefForListResource()
-	return &ListResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListResourcesInvoker 查询用户所有资源
+func (c *CocClient) ListResourcesInvoker(request *model.ListResourcesRequest) *ListResourcesInvoker {
+	requestDef := GenReqDefForListResources()
+	return &ListResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SyncResource 从RMS同步用户所有资源

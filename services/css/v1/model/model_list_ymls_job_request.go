@@ -13,7 +13,7 @@ type ListYmlsJobRequest struct {
 	ClusterId string `json:"cluster_id"`
 
 	// 指定查询起始值，默认值为1，即从第1个任务开始查询。
-	Start *int32 `json:"start,omitempty"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 指定查询个数，默认值为10，即一次查询10个任务信息。
 	Limit *int32 `json:"limit,omitempty"`

@@ -16,7 +16,7 @@ type ListImagesRequest struct {
 	UpgradeType string `json:"upgrade_type"`
 
 	// 指定查询起始值，默认值为0。
-	Start *string `json:"start,omitempty"`
+	Offset *string `json:"offset,omitempty"`
 
 	// 指定查询个数，默认值为10。
 	Limit *string `json:"limit,omitempty"`

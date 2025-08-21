@@ -17,6 +17,17 @@ func GenReqDefForCreateBestPracticeDetect() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowBestPracticeAccountInfo() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/best-practice/account-info").
+		WithResponse(new(model.ShowBestPracticeAccountInfoResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowBestPracticeDetails() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

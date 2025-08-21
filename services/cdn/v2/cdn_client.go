@@ -19,6 +19,27 @@ func CdnClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// ApplyDomainTemplate 应用域名模板。
+//
+// 应用域名模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ApplyDomainTemplate(request *model.ApplyDomainTemplateRequest) (*model.ApplyDomainTemplateResponse, error) {
+	requestDef := GenReqDefForApplyDomainTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ApplyDomainTemplateResponse), nil
+	}
+}
+
+// ApplyDomainTemplateInvoker 应用域名模板。
+func (c *CdnClient) ApplyDomainTemplateInvoker(request *model.ApplyDomainTemplateRequest) *ApplyDomainTemplateInvoker {
+	requestDef := GenReqDefForApplyDomainTemplate()
+	return &ApplyDomainTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchCopyDomain 批量域名复制
 //
 // 批量域名复制接口。
@@ -102,6 +123,27 @@ func (c *CdnClient) CreateDomain(request *model.CreateDomainRequest) (*model.Cre
 func (c *CdnClient) CreateDomainInvoker(request *model.CreateDomainRequest) *CreateDomainInvoker {
 	requestDef := GenReqDefForCreateDomain()
 	return &CreateDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDomainTemplate 创建域名模板。
+//
+// 创建域名模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) CreateDomainTemplate(request *model.CreateDomainTemplateRequest) (*model.CreateDomainTemplateResponse, error) {
+	requestDef := GenReqDefForCreateDomainTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDomainTemplateResponse), nil
+	}
+}
+
+// CreateDomainTemplateInvoker 创建域名模板。
+func (c *CdnClient) CreateDomainTemplateInvoker(request *model.CreateDomainTemplateRequest) *CreateDomainTemplateInvoker {
+	requestDef := GenReqDefForCreateDomainTemplate()
+	return &CreateDomainTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreatePreheatingTasks 创建预热缓存任务
@@ -232,6 +274,27 @@ func (c *CdnClient) DeleteDomain(request *model.DeleteDomainRequest) (*model.Del
 func (c *CdnClient) DeleteDomainInvoker(request *model.DeleteDomainRequest) *DeleteDomainInvoker {
 	requestDef := GenReqDefForDeleteDomain()
 	return &DeleteDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDomainTemplate 删除域名模板。
+//
+// 删除域名模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) DeleteDomainTemplate(request *model.DeleteDomainTemplateRequest) (*model.DeleteDomainTemplateResponse, error) {
+	requestDef := GenReqDefForDeleteDomainTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDomainTemplateResponse), nil
+	}
+}
+
+// DeleteDomainTemplateInvoker 删除域名模板。
+func (c *CdnClient) DeleteDomainTemplateInvoker(request *model.DeleteDomainTemplateRequest) *DeleteDomainTemplateInvoker {
+	requestDef := GenReqDefForDeleteDomainTemplate()
+	return &DeleteDomainTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteRuleNew 删除规则引擎规则
@@ -527,6 +590,27 @@ func (c *CdnClient) SetChargeModesInvoker(request *model.SetChargeModesRequest) 
 	return &SetChargeModesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAppliedTemplateRecord 查询域名模板应用记录。
+//
+// 查询域名模板应用记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ShowAppliedTemplateRecord(request *model.ShowAppliedTemplateRecordRequest) (*model.ShowAppliedTemplateRecordResponse, error) {
+	requestDef := GenReqDefForShowAppliedTemplateRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAppliedTemplateRecordResponse), nil
+	}
+}
+
+// ShowAppliedTemplateRecordInvoker 查询域名模板应用记录。
+func (c *CdnClient) ShowAppliedTemplateRecordInvoker(request *model.ShowAppliedTemplateRecordRequest) *ShowAppliedTemplateRecordInvoker {
+	requestDef := GenReqDefForShowAppliedTemplateRecord()
+	return &ShowAppliedTemplateRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowBandwidthCalc 查询域名带宽峰值类数据
 //
@@ -718,6 +802,27 @@ func (c *CdnClient) ShowDomainStats(request *model.ShowDomainStatsRequest) (*mod
 func (c *CdnClient) ShowDomainStatsInvoker(request *model.ShowDomainStatsRequest) *ShowDomainStatsInvoker {
 	requestDef := GenReqDefForShowDomainStats()
 	return &ShowDomainStatsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDomainTemplate 查询域名模板列表
+//
+// 查询域名模板列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ShowDomainTemplate(request *model.ShowDomainTemplateRequest) (*model.ShowDomainTemplateResponse, error) {
+	requestDef := GenReqDefForShowDomainTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainTemplateResponse), nil
+	}
+}
+
+// ShowDomainTemplateInvoker 查询域名模板列表
+func (c *CdnClient) ShowDomainTemplateInvoker(request *model.ShowDomainTemplateRequest) *ShowDomainTemplateInvoker {
+	requestDef := GenReqDefForShowDomainTemplate()
+	return &ShowDomainTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowHistoryTaskDetails 查询刷新预热任务详情
@@ -996,6 +1101,27 @@ func (c *CdnClient) UpdateDomainMultiCertificates(request *model.UpdateDomainMul
 func (c *CdnClient) UpdateDomainMultiCertificatesInvoker(request *model.UpdateDomainMultiCertificatesRequest) *UpdateDomainMultiCertificatesInvoker {
 	requestDef := GenReqDefForUpdateDomainMultiCertificates()
 	return &UpdateDomainMultiCertificatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDomainTemplate 修改域名模板。
+//
+// 修改域名模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) UpdateDomainTemplate(request *model.UpdateDomainTemplateRequest) (*model.UpdateDomainTemplateResponse, error) {
+	requestDef := GenReqDefForUpdateDomainTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDomainTemplateResponse), nil
+	}
+}
+
+// UpdateDomainTemplateInvoker 修改域名模板。
+func (c *CdnClient) UpdateDomainTemplateInvoker(request *model.UpdateDomainTemplateRequest) *UpdateDomainTemplateInvoker {
+	requestDef := GenReqDefForUpdateDomainTemplate()
+	return &UpdateDomainTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateFullRule 全量更新规则引擎规则

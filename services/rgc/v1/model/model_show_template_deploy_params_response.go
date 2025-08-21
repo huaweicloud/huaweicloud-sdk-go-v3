@@ -8,6 +8,8 @@ import (
 
 // ShowTemplateDeployParamsResponse Response Object
 type ShowTemplateDeployParamsResponse struct {
+
+	// 模板的部署参数。
 	Variables      *[]TemplateParamVariable `json:"variables,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }

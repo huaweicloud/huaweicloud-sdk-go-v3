@@ -21,6 +21,22 @@ func (i *AddIndependentNodeInvoker) Invoke() (*model.AddIndependentNodeResponse,
 	}
 }
 
+type ChangeClusterSubnetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeClusterSubnetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeClusterSubnetInvoker) Invoke() (*model.ChangeClusterSubnetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeClusterSubnetResponse), nil
+	}
+}
+
 type ChangeModeInvoker struct {
 	*invoker.BaseInvoker
 }

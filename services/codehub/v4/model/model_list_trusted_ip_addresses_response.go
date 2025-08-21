@@ -8,8 +8,6 @@ import (
 
 // ListTrustedIpAddressesResponse Response Object
 type ListTrustedIpAddressesResponse struct {
-
-	// 仓库ip白名单列表
 	Body *[]TrustedIpAddressDto `json:"body,omitempty"`
 
 	XTotal         *string `json:"X-Total,omitempty"`

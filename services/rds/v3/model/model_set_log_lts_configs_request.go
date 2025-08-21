@@ -12,7 +12,7 @@ import (
 // SetLogLtsConfigsRequest Request Object
 type SetLogLtsConfigsRequest struct {
 
-	// 引擎。
+	// 引擎，暂只支持mysql。
 	Engine SetLogLtsConfigsRequestEngine `json:"engine"`
 
 	// 语言。
@@ -35,21 +35,13 @@ type SetLogLtsConfigsRequestEngine struct {
 }
 
 type SetLogLtsConfigsRequestEngineEnum struct {
-	MYSQL      SetLogLtsConfigsRequestEngine
-	POSTGRESQL SetLogLtsConfigsRequestEngine
-	SQLSERVER  SetLogLtsConfigsRequestEngine
+	MYSQL SetLogLtsConfigsRequestEngine
 }
 
 func GetSetLogLtsConfigsRequestEngineEnum() SetLogLtsConfigsRequestEngineEnum {
 	return SetLogLtsConfigsRequestEngineEnum{
 		MYSQL: SetLogLtsConfigsRequestEngine{
 			value: "mysql",
-		},
-		POSTGRESQL: SetLogLtsConfigsRequestEngine{
-			value: "postgresql",
-		},
-		SQLSERVER: SetLogLtsConfigsRequestEngine{
-			value: "sqlserver",
 		},
 	}
 }

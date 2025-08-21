@@ -9,7 +9,7 @@ import (
 // UpdateTenantTrustedIpAddressRequest Request Object
 type UpdateTenantTrustedIpAddressRequest struct {
 
-	// ip的ip
+	// **参数解释：** ip白名单id。
 	IpId int32 `json:"ip_id"`
 
 	Body *AddTrustedIpAddressRequestBody `json:"body,omitempty"`

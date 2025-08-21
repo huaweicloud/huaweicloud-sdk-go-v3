@@ -8,7 +8,7 @@ import (
 
 type AddLogConfigResponseBody struct {
 
-	// 实例日志配置信息。
+	// 实例日志配置信息，最多20条。
 	LogConfigs []AddLogConfigs `json:"log_configs"`
 }
 

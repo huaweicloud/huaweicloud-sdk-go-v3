@@ -18,6 +18,9 @@ type CreateClusterBackupStrategyBody struct {
 	// 自动创建快照的保留天数。取值范围：1-90。
 	Keepday int32 `json:"keepday"`
 
+	// 快照速率参数。
+	Frequency *string `json:"frequency,omitempty"`
+
 	// 备份使用的OBS桶名称。
 	Bucket *string `json:"bucket,omitempty"`
 
@@ -26,6 +29,12 @@ type CreateClusterBackupStrategyBody struct {
 
 	// 委托名称，委托给CSS，允许CSS调用您的其他云服务。  >如果bucket、basePath和agency三个参数同时为空，则系统会自动创建OBS桶和IAM代理（若创建失败，则需要手工配置正确的参数）。
 	Agency *string `json:"agency,omitempty"`
+
+	// 配置每个节点的最大备份速率（每秒），即当备份的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际备份速率不一定能达到该值，会受OBS、磁盘等影响。
+	MaxSnapshotBytesPerSeconds *string `json:"maxSnapshotBytesPerSeconds,omitempty"`
+
+	// 配置每个节点的最大恢复速率（每秒），即当恢复的速率超过该值时会被限流，避免速率太大导致资源占用过高，影响系统稳定性。实际恢复速率不一定能达到该值，会受OBS、磁盘等影响。
+	MaxRestoreBytesPerSeconds *string `json:"maxRestoreBytesPerSeconds,omitempty"`
 }
 
 func (o CreateClusterBackupStrategyBody) String() string {

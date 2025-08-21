@@ -40,6 +40,27 @@ func (c *RgcClient) CreateBestPracticeDetectInvoker(request *model.CreateBestPra
 	return &CreateBestPracticeDetectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowBestPracticeAccountInfo 查询治理成熟度的账号详情
+//
+// 查询治理成熟度的账号详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RgcClient) ShowBestPracticeAccountInfo(request *model.ShowBestPracticeAccountInfoRequest) (*model.ShowBestPracticeAccountInfoResponse, error) {
+	requestDef := GenReqDefForShowBestPracticeAccountInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBestPracticeAccountInfoResponse), nil
+	}
+}
+
+// ShowBestPracticeAccountInfoInvoker 查询治理成熟度的账号详情
+func (c *RgcClient) ShowBestPracticeAccountInfoInvoker(request *model.ShowBestPracticeAccountInfoRequest) *ShowBestPracticeAccountInfoInvoker {
+	requestDef := GenReqDefForShowBestPracticeAccountInfo()
+	return &ShowBestPracticeAccountInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowBestPracticeDetails 查询最近一次成功的治理成熟度检测的详情
 //
 // 查询最近一次成功的治理成熟度检测的详情。
@@ -397,9 +418,9 @@ func (c *RgcClient) ShowControlOperateInvoker(request *model.ShowControlOperateR
 	return &ShowControlOperateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowControlsForAccount 查询注册账号开启的控制策略
+// ShowControlsForAccount 查询纳管账号开启的控制策略
 //
-// 查询组织里某个注册账号下开启的某个控制策略的详细信息。
+// 查询组织里某个纳管账号下开启的某个控制策略的详细信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RgcClient) ShowControlsForAccount(request *model.ShowControlsForAccountRequest) (*model.ShowControlsForAccountResponse, error) {
@@ -412,7 +433,7 @@ func (c *RgcClient) ShowControlsForAccount(request *model.ShowControlsForAccount
 	}
 }
 
-// ShowControlsForAccountInvoker 查询注册账号开启的控制策略
+// ShowControlsForAccountInvoker 查询纳管账号开启的控制策略
 func (c *RgcClient) ShowControlsForAccountInvoker(request *model.ShowControlsForAccountRequest) *ShowControlsForAccountInvoker {
 	requestDef := GenReqDefForShowControlsForAccount()
 	return &ShowControlsForAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

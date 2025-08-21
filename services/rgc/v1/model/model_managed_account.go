@@ -10,10 +10,10 @@ import (
 // ManagedAccount 注册OU信息。
 type ManagedAccount struct {
 
-	// Landing Zone版本。
+	// 纳管账号的Landing Zone版本。
 	LandingZoneVersion *string `json:"landing_zone_version,omitempty"`
 
-	// 管理纳管账号ID。
+	// 管理员账号ID。
 	ManageAccountId *string `json:"manage_account_id,omitempty"`
 
 	// 纳管账号ID。
@@ -58,10 +58,10 @@ type ManagedAccount struct {
 	// 区域信息。
 	Regions *[]RegionManagedList `json:"regions,omitempty"`
 
-	// 组织里某个注册OU下的纳管账号被创建的时间。
+	// 纳管账号的创建时间。
 	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
 
-	// 组织里某个注册OU下的纳管账号最后一次更新的时间。
+	// 纳管账号的更新时间。
 	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
 }
 

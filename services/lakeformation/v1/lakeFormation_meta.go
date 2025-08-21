@@ -342,7 +342,7 @@ func GenReqDefForUpdateAccessClient() *def.HttpRequestDef {
 func GenReqDefForCreateAgency() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v1/{project_id}/agency").
+		WithPath("/v2/agency").
 		WithResponse(new(model.CreateAgencyResponse)).
 		WithContentType("application/json")
 
@@ -357,7 +357,7 @@ func GenReqDefForCreateAgency() *def.HttpRequestDef {
 func GenReqDefForDeleteAgency() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1/{project_id}/agency").
+		WithPath("/v2/agency").
 		WithResponse(new(model.DeleteAgencyResponse)).
 		WithContentType("application/json")
 
@@ -378,7 +378,7 @@ func GenReqDefForDeleteAgency() *def.HttpRequestDef {
 func GenReqDefForShowAgency() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/agency").
+		WithPath("/v2/agency").
 		WithResponse(new(model.ShowAgencyResponse)).
 		WithContentType("application/json")
 
@@ -968,7 +968,7 @@ func GenReqDefForAuthorizeAccessService() *def.HttpRequestDef {
 func GenReqDefForCreateAgreement() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v1/{project_id}/agreement").
+		WithPath("/v2/agreement").
 		WithResponse(new(model.CreateAgreementResponse)).
 		WithContentType("application/json")
 
@@ -989,7 +989,7 @@ func GenReqDefForCreateAgreement() *def.HttpRequestDef {
 func GenReqDefForDeleteAgreement() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1/{project_id}/agreement").
+		WithPath("/v2/agreement").
 		WithResponse(new(model.DeleteAgreementResponse)).
 		WithContentType("application/json")
 
@@ -1023,7 +1023,7 @@ func GenReqDefForShowAccessService() *def.HttpRequestDef {
 func GenReqDefForShowAgreement() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/agreement").
+		WithPath("/v2/agreement").
 		WithResponse(new(model.ShowAgreementResponse)).
 		WithContentType("application/json")
 

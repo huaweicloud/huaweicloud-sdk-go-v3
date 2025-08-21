@@ -23,6 +23,9 @@ type VatInvoiceRequestBody struct {
 
 	// 页码，默认为1，返回第一页结果。如果传参不大于PDF页数，则返回对应PDF页的结果。
 	PageNum *int32 `json:"page_num,omitempty"`
+
+	// OFD转图片的模式开关。针对输入文件为OFD时，有两种处理方案： 方案一：直接解析OFD文件，并提取结构化信息 方案二：转成图片后再进行识别，该方案更鲁棒，但是时延会显著增加 取值范围包括： •  false：选择方案一 •  true：选择方案二 未传入该参数时默认为false，即选择方案一。
+	OfdToImageMode *bool `json:"ofd_to_image_mode,omitempty"`
 }
 
 func (o VatInvoiceRequestBody) String() string {

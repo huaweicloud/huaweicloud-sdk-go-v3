@@ -14,7 +14,7 @@ type ExternalConfigRuleCompliance struct {
 	// 合规状态。
 	Status *string `json:"status,omitempty"`
 
-	// 控制策略ID。
+	// 外部规则ID。
 	ControlId *string `json:"control_id,omitempty"`
 }
 

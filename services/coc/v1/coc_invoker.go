@@ -949,6 +949,38 @@ func (i *ListAuthorizableTicketsExternalInvoker) Invoke() (*model.ListAuthorizab
 	}
 }
 
+type CountMultiCloudResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountMultiCloudResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CountMultiCloudResourcesInvoker) Invoke() (*model.CountMultiCloudResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountMultiCloudResourcesResponse), nil
+	}
+}
+
+type SyncMultiCloudResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SyncMultiCloudResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SyncMultiCloudResourceInvoker) Invoke() (*model.SyncMultiCloudResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SyncMultiCloudResourceResponse), nil
+	}
+}
+
 type CountMultiResourcesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -965,19 +997,19 @@ func (i *CountMultiResourcesInvoker) Invoke() (*model.CountMultiResourcesRespons
 	}
 }
 
-type ListResourceInvoker struct {
+type ListResourcesInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ListResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ListResourceInvoker) Invoke() (*model.ListResourceResponse, error) {
+func (i *ListResourcesInvoker) Invoke() (*model.ListResourcesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListResourceResponse), nil
+		return result.(*model.ListResourcesResponse), nil
 	}
 }
 

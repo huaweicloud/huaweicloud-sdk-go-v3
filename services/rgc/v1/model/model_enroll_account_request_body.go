@@ -9,7 +9,7 @@ import (
 // EnrollAccountRequestBody 纳管账号。
 type EnrollAccountRequestBody struct {
 
-	// 注册OU 标识。
+	// 父注册OU ID。
 	ParentOrganizationalUnitId string `json:"parent_organizational_unit_id"`
 
 	Blueprint *Blueprint `json:"blueprint,omitempty"`

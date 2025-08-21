@@ -12,7 +12,7 @@ import (
 // DeleteLogLtsConfigsRequest Request Object
 type DeleteLogLtsConfigsRequest struct {
 
-	// 引擎。
+	// 引擎，暂只支持mysql。
 	Engine DeleteLogLtsConfigsRequestEngine `json:"engine"`
 
 	// 语言。
@@ -35,21 +35,13 @@ type DeleteLogLtsConfigsRequestEngine struct {
 }
 
 type DeleteLogLtsConfigsRequestEngineEnum struct {
-	MYSQL      DeleteLogLtsConfigsRequestEngine
-	POSTGRESQL DeleteLogLtsConfigsRequestEngine
-	SQLSERVER  DeleteLogLtsConfigsRequestEngine
+	MYSQL DeleteLogLtsConfigsRequestEngine
 }
 
 func GetDeleteLogLtsConfigsRequestEngineEnum() DeleteLogLtsConfigsRequestEngineEnum {
 	return DeleteLogLtsConfigsRequestEngineEnum{
 		MYSQL: DeleteLogLtsConfigsRequestEngine{
 			value: "mysql",
-		},
-		POSTGRESQL: DeleteLogLtsConfigsRequestEngine{
-			value: "postgresql",
-		},
-		SQLSERVER: DeleteLogLtsConfigsRequestEngine{
-			value: "sqlserver",
 		},
 	}
 }

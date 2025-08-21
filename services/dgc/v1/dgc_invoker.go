@@ -21,22 +21,6 @@ func (i *CancelScriptInvoker) Invoke() (*model.CancelScriptResponse, error) {
 	}
 }
 
-type CreateConnectionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateConnectionInvoker) Invoke() (*model.CreateConnectionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateConnectionResponse), nil
-	}
-}
-
 type CreateJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -82,38 +66,6 @@ func (i *CreateScriptInvoker) Invoke() (*model.CreateScriptResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateScriptResponse), nil
-	}
-}
-
-type CreateSupplementdataInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateSupplementdataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateSupplementdataInvoker) Invoke() (*model.CreateSupplementdataResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateSupplementdataResponse), nil
-	}
-}
-
-type DeleteConnctionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteConnctionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteConnctionInvoker) Invoke() (*model.DeleteConnctionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteConnctionResponse), nil
 	}
 }
 
@@ -181,22 +133,6 @@ func (i *ExecuteScriptInvoker) Invoke() (*model.ExecuteScriptResponse, error) {
 	}
 }
 
-type ExportConnectionsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ExportConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ExportConnectionsInvoker) Invoke() (*model.ExportConnectionsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ExportConnectionsResponse), nil
-	}
-}
-
 type ExportJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -229,22 +165,6 @@ func (i *ExportJobListInvoker) Invoke() (*model.ExportJobListResponse, error) {
 	}
 }
 
-type ImportConnectionsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ImportConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ImportConnectionsInvoker) Invoke() (*model.ImportConnectionsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ImportConnectionsResponse), nil
-	}
-}
-
 type ImportJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -258,22 +178,6 @@ func (i *ImportJobInvoker) Invoke() (*model.ImportJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ImportJobResponse), nil
-	}
-}
-
-type ListConnectionsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListConnectionsInvoker) Invoke() (*model.ListConnectionsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListConnectionsResponse), nil
 	}
 }
 
@@ -357,22 +261,6 @@ func (i *ListScriptsInvoker) Invoke() (*model.ListScriptsResponse, error) {
 	}
 }
 
-type ListSupplementdataInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListSupplementdataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListSupplementdataInvoker) Invoke() (*model.ListSupplementdataResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListSupplementdataResponse), nil
-	}
-}
-
 type ListSystemTasksInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -418,22 +306,6 @@ func (i *RunOnceInvoker) Invoke() (*model.RunOnceResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.RunOnceResponse), nil
-	}
-}
-
-type ShowConnectionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowConnectionInvoker) Invoke() (*model.ShowConnectionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowConnectionResponse), nil
 	}
 }
 
@@ -578,38 +450,6 @@ func (i *StopJobInstanceInvoker) Invoke() (*model.StopJobInstanceResponse, error
 		return nil, err
 	} else {
 		return result.(*model.StopJobInstanceResponse), nil
-	}
-}
-
-type StopSupplementdataInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *StopSupplementdataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *StopSupplementdataInvoker) Invoke() (*model.StopSupplementdataResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.StopSupplementdataResponse), nil
-	}
-}
-
-type UpdateConnectionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateConnectionInvoker) Invoke() (*model.UpdateConnectionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateConnectionResponse), nil
 	}
 }
 

@@ -30,10 +30,10 @@ type EngineReference struct {
 	PublicIpId *string `json:"publicIpId,omitempty"`
 
 	// 微服务引擎可支持的微服务总数
-	ServiceLimit *int32 `json:"serviceLimit,omitempty"`
+	ServiceLimit *string `json:"serviceLimit,omitempty"`
 
 	// 微服务引擎可支持的实例总数
-	InstanceLimit *int32 `json:"instanceLimit,omitempty"`
+	InstanceLimit *string `json:"instanceLimit,omitempty"`
 
 	// 微服务引擎附加参数
 	Inputs map[string]string `json:"inputs,omitempty"`

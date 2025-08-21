@@ -39,26 +39,6 @@ func (c *DgcClient) CancelScriptInvoker(request *model.CancelScriptRequest) *Can
 	return &CancelScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateConnection 创建连接
-//
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DgcClient) CreateConnection(request *model.CreateConnectionRequest) (*model.CreateConnectionResponse, error) {
-	requestDef := GenReqDefForCreateConnection()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateConnectionResponse), nil
-	}
-}
-
-// CreateConnectionInvoker 创建连接
-func (c *DgcClient) CreateConnectionInvoker(request *model.CreateConnectionRequest) *CreateConnectionInvoker {
-	requestDef := GenReqDefForCreateConnection()
-	return &CreateConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateJob 创建作业
 //
 //
@@ -117,46 +97,6 @@ func (c *DgcClient) CreateScript(request *model.CreateScriptRequest) (*model.Cre
 func (c *DgcClient) CreateScriptInvoker(request *model.CreateScriptRequest) *CreateScriptInvoker {
 	requestDef := GenReqDefForCreateScript()
 	return &CreateScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateSupplementdata 创建补数据实例
-//
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DgcClient) CreateSupplementdata(request *model.CreateSupplementdataRequest) (*model.CreateSupplementdataResponse, error) {
-	requestDef := GenReqDefForCreateSupplementdata()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateSupplementdataResponse), nil
-	}
-}
-
-// CreateSupplementdataInvoker 创建补数据实例
-func (c *DgcClient) CreateSupplementdataInvoker(request *model.CreateSupplementdataRequest) *CreateSupplementdataInvoker {
-	requestDef := GenReqDefForCreateSupplementdata()
-	return &CreateSupplementdataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteConnction 删除连接
-//
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DgcClient) DeleteConnction(request *model.DeleteConnctionRequest) (*model.DeleteConnctionResponse, error) {
-	requestDef := GenReqDefForDeleteConnction()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteConnctionResponse), nil
-	}
-}
-
-// DeleteConnctionInvoker 删除连接
-func (c *DgcClient) DeleteConnctionInvoker(request *model.DeleteConnctionRequest) *DeleteConnctionInvoker {
-	requestDef := GenReqDefForDeleteConnction()
-	return &DeleteConnctionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteJob 删除作业
@@ -239,26 +179,6 @@ func (c *DgcClient) ExecuteScriptInvoker(request *model.ExecuteScriptRequest) *E
 	return &ExecuteScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ExportConnections 导出连接
-//
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DgcClient) ExportConnections(request *model.ExportConnectionsRequest) (*model.ExportConnectionsResponse, error) {
-	requestDef := GenReqDefForExportConnections()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ExportConnectionsResponse), nil
-	}
-}
-
-// ExportConnectionsInvoker 导出连接
-func (c *DgcClient) ExportConnectionsInvoker(request *model.ExportConnectionsRequest) *ExportConnectionsInvoker {
-	requestDef := GenReqDefForExportConnections()
-	return &ExportConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ExportJob 导出作业
 //
 //
@@ -299,26 +219,6 @@ func (c *DgcClient) ExportJobListInvoker(request *model.ExportJobListRequest) *E
 	return &ExportJobListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ImportConnections 导入连接
-//
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DgcClient) ImportConnections(request *model.ImportConnectionsRequest) (*model.ImportConnectionsResponse, error) {
-	requestDef := GenReqDefForImportConnections()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ImportConnectionsResponse), nil
-	}
-}
-
-// ImportConnectionsInvoker 导入连接
-func (c *DgcClient) ImportConnectionsInvoker(request *model.ImportConnectionsRequest) *ImportConnectionsInvoker {
-	requestDef := GenReqDefForImportConnections()
-	return &ImportConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ImportJob 导入作业
 //
 //
@@ -337,26 +237,6 @@ func (c *DgcClient) ImportJob(request *model.ImportJobRequest) (*model.ImportJob
 func (c *DgcClient) ImportJobInvoker(request *model.ImportJobRequest) *ImportJobInvoker {
 	requestDef := GenReqDefForImportJob()
 	return &ImportJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListConnections 查询连接列表
-//
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DgcClient) ListConnections(request *model.ListConnectionsRequest) (*model.ListConnectionsResponse, error) {
-	requestDef := GenReqDefForListConnections()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListConnectionsResponse), nil
-	}
-}
-
-// ListConnectionsInvoker 查询连接列表
-func (c *DgcClient) ListConnectionsInvoker(request *model.ListConnectionsRequest) *ListConnectionsInvoker {
-	requestDef := GenReqDefForListConnections()
-	return &ListConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListJobInstances 查询作业实例列表
@@ -458,26 +338,6 @@ func (c *DgcClient) ListScriptsInvoker(request *model.ListScriptsRequest) *ListS
 	return &ListScriptsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListSupplementdata 查询补数据实例
-//
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DgcClient) ListSupplementdata(request *model.ListSupplementdataRequest) (*model.ListSupplementdataResponse, error) {
-	requestDef := GenReqDefForListSupplementdata()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListSupplementdataResponse), nil
-	}
-}
-
-// ListSupplementdataInvoker 查询补数据实例
-func (c *DgcClient) ListSupplementdataInvoker(request *model.ListSupplementdataRequest) *ListSupplementdataInvoker {
-	requestDef := GenReqDefForListSupplementdata()
-	return &ListSupplementdataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ListSystemTasks 查询系统任务详情
 //
 //
@@ -536,26 +396,6 @@ func (c *DgcClient) RunOnce(request *model.RunOnceRequest) (*model.RunOnceRespon
 func (c *DgcClient) RunOnceInvoker(request *model.RunOnceRequest) *RunOnceInvoker {
 	requestDef := GenReqDefForRunOnce()
 	return &RunOnceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowConnection 查询连接详情
-//
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DgcClient) ShowConnection(request *model.ShowConnectionRequest) (*model.ShowConnectionResponse, error) {
-	requestDef := GenReqDefForShowConnection()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowConnectionResponse), nil
-	}
-}
-
-// ShowConnectionInvoker 查询连接详情
-func (c *DgcClient) ShowConnectionInvoker(request *model.ShowConnectionRequest) *ShowConnectionInvoker {
-	requestDef := GenReqDefForShowConnection()
-	return &ShowConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowFileInfo 查询作业文件
@@ -736,46 +576,6 @@ func (c *DgcClient) StopJobInstance(request *model.StopJobInstanceRequest) (*mod
 func (c *DgcClient) StopJobInstanceInvoker(request *model.StopJobInstanceRequest) *StopJobInstanceInvoker {
 	requestDef := GenReqDefForStopJobInstance()
 	return &StopJobInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// StopSupplementdata 停止补数据实例
-//
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DgcClient) StopSupplementdata(request *model.StopSupplementdataRequest) (*model.StopSupplementdataResponse, error) {
-	requestDef := GenReqDefForStopSupplementdata()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.StopSupplementdataResponse), nil
-	}
-}
-
-// StopSupplementdataInvoker 停止补数据实例
-func (c *DgcClient) StopSupplementdataInvoker(request *model.StopSupplementdataRequest) *StopSupplementdataInvoker {
-	requestDef := GenReqDefForStopSupplementdata()
-	return &StopSupplementdataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateConnection 修改连接
-//
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DgcClient) UpdateConnection(request *model.UpdateConnectionRequest) (*model.UpdateConnectionResponse, error) {
-	requestDef := GenReqDefForUpdateConnection()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateConnectionResponse), nil
-	}
-}
-
-// UpdateConnectionInvoker 修改连接
-func (c *DgcClient) UpdateConnectionInvoker(request *model.UpdateConnectionRequest) *UpdateConnectionInvoker {
-	requestDef := GenReqDefForUpdateConnection()
-	return &UpdateConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateJob 修改作业

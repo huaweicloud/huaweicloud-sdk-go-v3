@@ -8,7 +8,7 @@ import (
 
 // EnableControlRequest Request Object
 type EnableControlRequest struct {
-	Body *ControlOperateReqBody `json:"body,omitempty"`
+	Body *EnableControlOperateReqBody `json:"body,omitempty"`
 }
 
 func (o EnableControlRequest) String() string {

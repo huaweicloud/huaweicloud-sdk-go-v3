@@ -53,6 +53,22 @@ func (i *CreateDomainMappingInvoker) Invoke() (*model.CreateDomainMappingRespons
 	}
 }
 
+type CreateFlowOutputInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFlowOutputInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateFlowOutputInvoker) Invoke() (*model.CreateFlowOutputResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFlowOutputResponse), nil
+	}
+}
+
 type CreateFlowsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -274,6 +290,22 @@ func (i *DeleteFlowInvoker) Invoke() (*model.DeleteFlowResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteFlowResponse), nil
+	}
+}
+
+type DeleteFlowOutputInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteFlowOutputInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteFlowOutputInvoker) Invoke() (*model.DeleteFlowOutputResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteFlowOutputResponse), nil
 	}
 }
 
@@ -629,6 +661,22 @@ func (i *ListStreamForbiddenInvoker) Invoke() (*model.ListStreamForbiddenRespons
 	}
 }
 
+type ModifyFlowOutputInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyFlowOutputInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyFlowOutputInvoker) Invoke() (*model.ModifyFlowOutputResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyFlowOutputResponse), nil
+	}
+}
+
 type ModifyFlowSourcesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -754,6 +802,22 @@ func (i *ShowFlowDetailInvoker) Invoke() (*model.ShowFlowDetailResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ShowFlowDetailResponse), nil
+	}
+}
+
+type ShowOutputInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowOutputInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowOutputInfoInvoker) Invoke() (*model.ShowOutputInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowOutputInfoResponse), nil
 	}
 }
 
@@ -1058,6 +1122,38 @@ func (i *UpdateTranscodingsTemplateInvoker) Invoke() (*model.UpdateTranscodingsT
 		return nil, err
 	} else {
 		return result.(*model.UpdateTranscodingsTemplateResponse), nil
+	}
+}
+
+type ListCesDimsInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCesDimsInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCesDimsInfoInvoker) Invoke() (*model.ListCesDimsInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCesDimsInfoResponse), nil
+	}
+}
+
+type ListCesInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCesInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCesInstanceInvoker) Invoke() (*model.ListCesInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCesInstanceResponse), nil
 	}
 }
 
