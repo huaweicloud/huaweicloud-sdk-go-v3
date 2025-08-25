@@ -2197,6 +2197,22 @@ func (i *ListPipelineJobsInvoker) Invoke() (*model.ListPipelineJobsResponse, err
 	}
 }
 
+type ShowProjectSettingsInheritCfgInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProjectSettingsInheritCfgInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowProjectSettingsInheritCfgInvoker) Invoke() (*model.ShowProjectSettingsInheritCfgResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProjectSettingsInheritCfgResponse), nil
+	}
+}
+
 type ShowProjectWatermarkInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2210,6 +2226,22 @@ func (i *ShowProjectWatermarkInvoker) Invoke() (*model.ShowProjectWatermarkRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowProjectWatermarkResponse), nil
+	}
+}
+
+type UpdateProjectSettingsInheritCfgInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateProjectSettingsInheritCfgInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateProjectSettingsInheritCfgInvoker) Invoke() (*model.UpdateProjectSettingsInheritCfgResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateProjectSettingsInheritCfgResponse), nil
 	}
 }
 
@@ -2277,6 +2309,22 @@ func (i *BatchUpdateProtectedBranchesInvoker) Invoke() (*model.BatchUpdateProtec
 	}
 }
 
+type CreateProjectProtectedBranchesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateProjectProtectedBranchesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateProjectProtectedBranchesInvoker) Invoke() (*model.CreateProjectProtectedBranchesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateProjectProtectedBranchesResponse), nil
+	}
+}
+
 type DeleteProtectedBranchInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2290,6 +2338,22 @@ func (i *DeleteProtectedBranchInvoker) Invoke() (*model.DeleteProtectedBranchRes
 		return nil, err
 	} else {
 		return result.(*model.DeleteProtectedBranchResponse), nil
+	}
+}
+
+type ListProjectProtectedBranchesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectProtectedBranchesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListProjectProtectedBranchesInvoker) Invoke() (*model.ListProjectProtectedBranchesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectProtectedBranchesResponse), nil
 	}
 }
 

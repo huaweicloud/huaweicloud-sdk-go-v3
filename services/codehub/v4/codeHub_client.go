@@ -2896,6 +2896,27 @@ func (c *CodeHubClient) ListPipelineJobsInvoker(request *model.ListPipelineJobsR
 	return &ListPipelineJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowProjectSettingsInheritCfg 获取项目继承设置项
+//
+// 获取项目继承设置项
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ShowProjectSettingsInheritCfg(request *model.ShowProjectSettingsInheritCfgRequest) (*model.ShowProjectSettingsInheritCfgResponse, error) {
+	requestDef := GenReqDefForShowProjectSettingsInheritCfg()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProjectSettingsInheritCfgResponse), nil
+	}
+}
+
+// ShowProjectSettingsInheritCfgInvoker 获取项目继承设置项
+func (c *CodeHubClient) ShowProjectSettingsInheritCfgInvoker(request *model.ShowProjectSettingsInheritCfgRequest) *ShowProjectSettingsInheritCfgInvoker {
+	requestDef := GenReqDefForShowProjectSettingsInheritCfg()
+	return &ShowProjectSettingsInheritCfgInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowProjectWatermark 获取项目水印设置
 //
 // 获取项目水印设置
@@ -2915,6 +2936,27 @@ func (c *CodeHubClient) ShowProjectWatermark(request *model.ShowProjectWatermark
 func (c *CodeHubClient) ShowProjectWatermarkInvoker(request *model.ShowProjectWatermarkRequest) *ShowProjectWatermarkInvoker {
 	requestDef := GenReqDefForShowProjectWatermark()
 	return &ShowProjectWatermarkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateProjectSettingsInheritCfg 更新项目继承设置项
+//
+// 更新项目继承设置项
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) UpdateProjectSettingsInheritCfg(request *model.UpdateProjectSettingsInheritCfgRequest) (*model.UpdateProjectSettingsInheritCfgResponse, error) {
+	requestDef := GenReqDefForUpdateProjectSettingsInheritCfg()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateProjectSettingsInheritCfgResponse), nil
+	}
+}
+
+// UpdateProjectSettingsInheritCfgInvoker 更新项目继承设置项
+func (c *CodeHubClient) UpdateProjectSettingsInheritCfgInvoker(request *model.UpdateProjectSettingsInheritCfgRequest) *UpdateProjectSettingsInheritCfgInvoker {
+	requestDef := GenReqDefForUpdateProjectSettingsInheritCfg()
+	return &UpdateProjectSettingsInheritCfgInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateProjectWatermark 更新项目水印设置
@@ -3001,6 +3043,27 @@ func (c *CodeHubClient) BatchUpdateProtectedBranchesInvoker(request *model.Batch
 	return &BatchUpdateProtectedBranchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateProjectProtectedBranches 创建项目下保护分支
+//
+// 创建项目下保护分支
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) CreateProjectProtectedBranches(request *model.CreateProjectProtectedBranchesRequest) (*model.CreateProjectProtectedBranchesResponse, error) {
+	requestDef := GenReqDefForCreateProjectProtectedBranches()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateProjectProtectedBranchesResponse), nil
+	}
+}
+
+// CreateProjectProtectedBranchesInvoker 创建项目下保护分支
+func (c *CodeHubClient) CreateProjectProtectedBranchesInvoker(request *model.CreateProjectProtectedBranchesRequest) *CreateProjectProtectedBranchesInvoker {
+	requestDef := GenReqDefForCreateProjectProtectedBranches()
+	return &CreateProjectProtectedBranchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteProtectedBranch 删除仓库保护分支
 //
 // 删除仓库保护分支
@@ -3020,6 +3083,27 @@ func (c *CodeHubClient) DeleteProtectedBranch(request *model.DeleteProtectedBran
 func (c *CodeHubClient) DeleteProtectedBranchInvoker(request *model.DeleteProtectedBranchRequest) *DeleteProtectedBranchInvoker {
 	requestDef := GenReqDefForDeleteProtectedBranch()
 	return &DeleteProtectedBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectProtectedBranches 获取项目下保护分支列表
+//
+// 获取项目下保护分支列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListProjectProtectedBranches(request *model.ListProjectProtectedBranchesRequest) (*model.ListProjectProtectedBranchesResponse, error) {
+	requestDef := GenReqDefForListProjectProtectedBranches()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectProtectedBranchesResponse), nil
+	}
+}
+
+// ListProjectProtectedBranchesInvoker 获取项目下保护分支列表
+func (c *CodeHubClient) ListProjectProtectedBranchesInvoker(request *model.ListProjectProtectedBranchesRequest) *ListProjectProtectedBranchesInvoker {
+	requestDef := GenReqDefForListProjectProtectedBranches()
+	return &ListProjectProtectedBranchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListProtectedBranches 获取仓库保护分支列表
