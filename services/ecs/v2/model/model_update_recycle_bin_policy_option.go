@@ -9,10 +9,10 @@ import (
 type UpdateRecycleBinPolicyOption struct {
 
 	// 虚拟机进入回收站后多久删除
-	RetentionHour *int32 `json:"retention_hour,omitempty"`
+	RetentionHour int32 `json:"retention_hour"`
 
 	// 创建多久的虚拟机可以进入回收站
-	RecycleThresholdDay *int32 `json:"recycle_threshold_day,omitempty"`
+	RecycleThresholdDay int32 `json:"recycle_threshold_day"`
 }
 
 func (o UpdateRecycleBinPolicyOption) String() string {

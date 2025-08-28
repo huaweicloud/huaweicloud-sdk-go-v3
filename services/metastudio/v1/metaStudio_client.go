@@ -1179,6 +1179,237 @@ func (c *MetaStudioClient) ShowPhotoDigitalHumanVideoInvoker(request *model.Show
 	return &ShowPhotoDigitalHumanVideoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDocument 上传文档
+//
+// 该接口用于上传文档。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateDocument(request *model.CreateDocumentRequest) (*model.CreateDocumentResponse, error) {
+	requestDef := GenReqDefForCreateDocument()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDocumentResponse), nil
+	}
+}
+
+// CreateDocumentInvoker 上传文档
+func (c *MetaStudioClient) CreateDocumentInvoker(request *model.CreateDocumentRequest) *CreateDocumentInvoker {
+	requestDef := GenReqDefForCreateDocument()
+	return &CreateDocumentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDocument 批量删除文档
+//
+// 该接口用于批量删除文档。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteDocument(request *model.DeleteDocumentRequest) (*model.DeleteDocumentResponse, error) {
+	requestDef := GenReqDefForDeleteDocument()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDocumentResponse), nil
+	}
+}
+
+// DeleteDocumentInvoker 批量删除文档
+func (c *MetaStudioClient) DeleteDocumentInvoker(request *model.DeleteDocumentRequest) *DeleteDocumentInvoker {
+	requestDef := GenReqDefForDeleteDocument()
+	return &DeleteDocumentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadDocument 下载文档
+//
+// 该接口用于下载文档。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DownloadDocument(request *model.DownloadDocumentRequest) (*model.DownloadDocumentResponse, error) {
+	requestDef := GenReqDefForDownloadDocument()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadDocumentResponse), nil
+	}
+}
+
+// DownloadDocumentInvoker 下载文档
+func (c *MetaStudioClient) DownloadDocumentInvoker(request *model.DownloadDocumentRequest) *DownloadDocumentInvoker {
+	requestDef := GenReqDefForDownloadDocument()
+	return &DownloadDocumentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDocumentInfo 查询文档列表
+//
+// 该接口用于分页查询文档列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListDocumentInfo(request *model.ListDocumentInfoRequest) (*model.ListDocumentInfoResponse, error) {
+	requestDef := GenReqDefForListDocumentInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDocumentInfoResponse), nil
+	}
+}
+
+// ListDocumentInfoInvoker 查询文档列表
+func (c *MetaStudioClient) ListDocumentInfoInvoker(request *model.ListDocumentInfoRequest) *ListDocumentInfoInvoker {
+	requestDef := GenReqDefForListDocumentInfo()
+	return &ListDocumentInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDocumentInfo 查询文档详情
+//
+// 该接口用于查询文档详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowDocumentInfo(request *model.ShowDocumentInfoRequest) (*model.ShowDocumentInfoResponse, error) {
+	requestDef := GenReqDefForShowDocumentInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDocumentInfoResponse), nil
+	}
+}
+
+// ShowDocumentInfoInvoker 查询文档详情
+func (c *MetaStudioClient) ShowDocumentInfoInvoker(request *model.ShowDocumentInfoRequest) *ShowDocumentInfoInvoker {
+	requestDef := GenReqDefForShowDocumentInfo()
+	return &ShowDocumentInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDocument 修改文档
+//
+// 该接口用于修改文档
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateDocument(request *model.UpdateDocumentRequest) (*model.UpdateDocumentResponse, error) {
+	requestDef := GenReqDefForUpdateDocument()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDocumentResponse), nil
+	}
+}
+
+// UpdateDocumentInvoker 修改文档
+func (c *MetaStudioClient) UpdateDocumentInvoker(request *model.UpdateDocumentRequest) *UpdateDocumentInvoker {
+	requestDef := GenReqDefForUpdateDocument()
+	return &UpdateDocumentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDocumentSegment 分页查询文档分段信息
+//
+// 该接口用于分页查询文档分段信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListDocumentSegment(request *model.ListDocumentSegmentRequest) (*model.ListDocumentSegmentResponse, error) {
+	requestDef := GenReqDefForListDocumentSegment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDocumentSegmentResponse), nil
+	}
+}
+
+// ListDocumentSegmentInvoker 分页查询文档分段信息
+func (c *MetaStudioClient) ListDocumentSegmentInvoker(request *model.ListDocumentSegmentRequest) *ListDocumentSegmentInvoker {
+	requestDef := GenReqDefForListDocumentSegment()
+	return &ListDocumentSegmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// PreviewDocumentSegment 文档分段效果预览
+//
+// 该接口用于文档分段效果预览。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) PreviewDocumentSegment(request *model.PreviewDocumentSegmentRequest) (*model.PreviewDocumentSegmentResponse, error) {
+	requestDef := GenReqDefForPreviewDocumentSegment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PreviewDocumentSegmentResponse), nil
+	}
+}
+
+// PreviewDocumentSegmentInvoker 文档分段效果预览
+func (c *MetaStudioClient) PreviewDocumentSegmentInvoker(request *model.PreviewDocumentSegmentRequest) *PreviewDocumentSegmentInvoker {
+	requestDef := GenReqDefForPreviewDocumentSegment()
+	return &PreviewDocumentSegmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartDocumentSegment 开始文档分段
+//
+// 该接口用于开始文档分段任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) StartDocumentSegment(request *model.StartDocumentSegmentRequest) (*model.StartDocumentSegmentResponse, error) {
+	requestDef := GenReqDefForStartDocumentSegment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartDocumentSegmentResponse), nil
+	}
+}
+
+// StartDocumentSegmentInvoker 开始文档分段
+func (c *MetaStudioClient) StartDocumentSegmentInvoker(request *model.StartDocumentSegmentRequest) *StartDocumentSegmentInvoker {
+	requestDef := GenReqDefForStartDocumentSegment()
+	return &StartDocumentSegmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDocumentSegmentInfo 修改文档分段内容
+//
+// 该接口用于文档分段内容。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateDocumentSegmentInfo(request *model.UpdateDocumentSegmentInfoRequest) (*model.UpdateDocumentSegmentInfoResponse, error) {
+	requestDef := GenReqDefForUpdateDocumentSegmentInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDocumentSegmentInfoResponse), nil
+	}
+}
+
+// UpdateDocumentSegmentInfoInvoker 修改文档分段内容
+func (c *MetaStudioClient) UpdateDocumentSegmentInfoInvoker(request *model.UpdateDocumentSegmentInfoRequest) *UpdateDocumentSegmentInfoInvoker {
+	requestDef := GenReqDefForUpdateDocumentSegmentInfo()
+	return &UpdateDocumentSegmentInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDocumentSegmentParam 更新文档分段配置
+//
+// 该接口用于更新文档分段配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateDocumentSegmentParam(request *model.UpdateDocumentSegmentParamRequest) (*model.UpdateDocumentSegmentParamResponse, error) {
+	requestDef := GenReqDefForUpdateDocumentSegmentParam()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDocumentSegmentParamResponse), nil
+	}
+}
+
+// UpdateDocumentSegmentParamInvoker 更新文档分段配置
+func (c *MetaStudioClient) UpdateDocumentSegmentParamInvoker(request *model.UpdateDocumentSegmentParamRequest) *UpdateDocumentSegmentParamInvoker {
+	requestDef := GenReqDefForUpdateDocumentSegmentParam()
+	return &UpdateDocumentSegmentParamInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ConfirmFileUpload 确认文件已上传
 //
 // 资产文件上传完毕后，通过该接口确认上传完成。
@@ -1515,6 +1746,216 @@ func (c *MetaStudioClient) UpdateHotWordsSwitchInvoker(request *model.UpdateHotW
 	return &UpdateHotWordsSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateInstructionLibrary 创建指令集
+//
+// 该接口用于创建指令集。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateInstructionLibrary(request *model.CreateInstructionLibraryRequest) (*model.CreateInstructionLibraryResponse, error) {
+	requestDef := GenReqDefForCreateInstructionLibrary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateInstructionLibraryResponse), nil
+	}
+}
+
+// CreateInstructionLibraryInvoker 创建指令集
+func (c *MetaStudioClient) CreateInstructionLibraryInvoker(request *model.CreateInstructionLibraryRequest) *CreateInstructionLibraryInvoker {
+	requestDef := GenReqDefForCreateInstructionLibrary()
+	return &CreateInstructionLibraryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteInstructionLibrary 删除指令集
+//
+// 该接口用于删除指令集。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteInstructionLibrary(request *model.DeleteInstructionLibraryRequest) (*model.DeleteInstructionLibraryResponse, error) {
+	requestDef := GenReqDefForDeleteInstructionLibrary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteInstructionLibraryResponse), nil
+	}
+}
+
+// DeleteInstructionLibraryInvoker 删除指令集
+func (c *MetaStudioClient) DeleteInstructionLibraryInvoker(request *model.DeleteInstructionLibraryRequest) *DeleteInstructionLibraryInvoker {
+	requestDef := GenReqDefForDeleteInstructionLibrary()
+	return &DeleteInstructionLibraryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstructionLibrary 查询指令集列表
+//
+// 该接口用于查询指令集列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListInstructionLibrary(request *model.ListInstructionLibraryRequest) (*model.ListInstructionLibraryResponse, error) {
+	requestDef := GenReqDefForListInstructionLibrary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstructionLibraryResponse), nil
+	}
+}
+
+// ListInstructionLibraryInvoker 查询指令集列表
+func (c *MetaStudioClient) ListInstructionLibraryInvoker(request *model.ListInstructionLibraryRequest) *ListInstructionLibraryInvoker {
+	requestDef := GenReqDefForListInstructionLibrary()
+	return &ListInstructionLibraryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstructionLibrary 查询指令集详情
+//
+// 该接口用于查询指令集详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowInstructionLibrary(request *model.ShowInstructionLibraryRequest) (*model.ShowInstructionLibraryResponse, error) {
+	requestDef := GenReqDefForShowInstructionLibrary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstructionLibraryResponse), nil
+	}
+}
+
+// ShowInstructionLibraryInvoker 查询指令集详情
+func (c *MetaStudioClient) ShowInstructionLibraryInvoker(request *model.ShowInstructionLibraryRequest) *ShowInstructionLibraryInvoker {
+	requestDef := GenReqDefForShowInstructionLibrary()
+	return &ShowInstructionLibraryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstructionLibrary 修改指令集
+//
+// 该接口用于修改指令集。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateInstructionLibrary(request *model.UpdateInstructionLibraryRequest) (*model.UpdateInstructionLibraryResponse, error) {
+	requestDef := GenReqDefForUpdateInstructionLibrary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstructionLibraryResponse), nil
+	}
+}
+
+// UpdateInstructionLibraryInvoker 修改指令集
+func (c *MetaStudioClient) UpdateInstructionLibraryInvoker(request *model.UpdateInstructionLibraryRequest) *UpdateInstructionLibraryInvoker {
+	requestDef := GenReqDefForUpdateInstructionLibrary()
+	return &UpdateInstructionLibraryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateInstruction 创建指令
+//
+// 该接口用于创建指令。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateInstruction(request *model.CreateInstructionRequest) (*model.CreateInstructionResponse, error) {
+	requestDef := GenReqDefForCreateInstruction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateInstructionResponse), nil
+	}
+}
+
+// CreateInstructionInvoker 创建指令
+func (c *MetaStudioClient) CreateInstructionInvoker(request *model.CreateInstructionRequest) *CreateInstructionInvoker {
+	requestDef := GenReqDefForCreateInstruction()
+	return &CreateInstructionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteInstruction 删除指令
+//
+// 该接口用于删除指令。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteInstruction(request *model.DeleteInstructionRequest) (*model.DeleteInstructionResponse, error) {
+	requestDef := GenReqDefForDeleteInstruction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteInstructionResponse), nil
+	}
+}
+
+// DeleteInstructionInvoker 删除指令
+func (c *MetaStudioClient) DeleteInstructionInvoker(request *model.DeleteInstructionRequest) *DeleteInstructionInvoker {
+	requestDef := GenReqDefForDeleteInstruction()
+	return &DeleteInstructionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstruction 查询指令列表
+//
+// 该接口用于查询指令列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListInstruction(request *model.ListInstructionRequest) (*model.ListInstructionResponse, error) {
+	requestDef := GenReqDefForListInstruction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstructionResponse), nil
+	}
+}
+
+// ListInstructionInvoker 查询指令列表
+func (c *MetaStudioClient) ListInstructionInvoker(request *model.ListInstructionRequest) *ListInstructionInvoker {
+	requestDef := GenReqDefForListInstruction()
+	return &ListInstructionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstruction 查询指令详情
+//
+// 该接口用于查询指令详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowInstruction(request *model.ShowInstructionRequest) (*model.ShowInstructionResponse, error) {
+	requestDef := GenReqDefForShowInstruction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstructionResponse), nil
+	}
+}
+
+// ShowInstructionInvoker 查询指令详情
+func (c *MetaStudioClient) ShowInstructionInvoker(request *model.ShowInstructionRequest) *ShowInstructionInvoker {
+	requestDef := GenReqDefForShowInstruction()
+	return &ShowInstructionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstruction 修改指令
+//
+// 该接口用于修改指令。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateInstruction(request *model.UpdateInstructionRequest) (*model.UpdateInstructionResponse, error) {
+	requestDef := GenReqDefForUpdateInstruction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstructionResponse), nil
+	}
+}
+
+// UpdateInstructionInvoker 修改指令
+func (c *MetaStudioClient) UpdateInstructionInvoker(request *model.UpdateInstructionRequest) *UpdateInstructionInvoker {
+	requestDef := GenReqDefForUpdateInstruction()
+	return &UpdateInstructionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateInteractionRuleGroup 创建智能直播间互动规则库
 //
 // 该接口用于创建智能直播间互动规则库。
@@ -1597,6 +2038,27 @@ func (c *MetaStudioClient) UpdateInteractionRuleGroup(request *model.UpdateInter
 func (c *MetaStudioClient) UpdateInteractionRuleGroupInvoker(request *model.UpdateInteractionRuleGroupRequest) *UpdateInteractionRuleGroupInvoker {
 	requestDef := GenReqDefForUpdateInteractionRuleGroup()
 	return &UpdateInteractionRuleGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateInteractiveChat 交互助手对话
+//
+// 该接口用于交互助手对话。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateInteractiveChat(request *model.CreateInteractiveChatRequest) (*model.CreateInteractiveChatResponse, error) {
+	requestDef := GenReqDefForCreateInteractiveChat()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateInteractiveChatResponse), nil
+	}
+}
+
+// CreateInteractiveChatInvoker 交互助手对话
+func (c *MetaStudioClient) CreateInteractiveChatInvoker(request *model.CreateInteractiveChatRequest) *CreateInteractiveChatInvoker {
+	requestDef := GenReqDefForCreateInteractiveChat()
+	return &CreateInteractiveChatInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateIntentAndQuestion 创建知识库意图和问法
@@ -1723,6 +2185,132 @@ func (c *MetaStudioClient) UpdateKnowledgeIntent(request *model.UpdateKnowledgeI
 func (c *MetaStudioClient) UpdateKnowledgeIntentInvoker(request *model.UpdateKnowledgeIntentRequest) *UpdateKnowledgeIntentInvoker {
 	requestDef := GenReqDefForUpdateKnowledgeIntent()
 	return &UpdateKnowledgeIntentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckRecallKnowledgeLibrary 知识库召回测试
+//
+// 该接口用于知识库召回测试。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CheckRecallKnowledgeLibrary(request *model.CheckRecallKnowledgeLibraryRequest) (*model.CheckRecallKnowledgeLibraryResponse, error) {
+	requestDef := GenReqDefForCheckRecallKnowledgeLibrary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckRecallKnowledgeLibraryResponse), nil
+	}
+}
+
+// CheckRecallKnowledgeLibraryInvoker 知识库召回测试
+func (c *MetaStudioClient) CheckRecallKnowledgeLibraryInvoker(request *model.CheckRecallKnowledgeLibraryRequest) *CheckRecallKnowledgeLibraryInvoker {
+	requestDef := GenReqDefForCheckRecallKnowledgeLibrary()
+	return &CheckRecallKnowledgeLibraryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateKnowledgeLibrary 创建知识库
+//
+// 该接口用于创建知识库。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateKnowledgeLibrary(request *model.CreateKnowledgeLibraryRequest) (*model.CreateKnowledgeLibraryResponse, error) {
+	requestDef := GenReqDefForCreateKnowledgeLibrary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateKnowledgeLibraryResponse), nil
+	}
+}
+
+// CreateKnowledgeLibraryInvoker 创建知识库
+func (c *MetaStudioClient) CreateKnowledgeLibraryInvoker(request *model.CreateKnowledgeLibraryRequest) *CreateKnowledgeLibraryInvoker {
+	requestDef := GenReqDefForCreateKnowledgeLibrary()
+	return &CreateKnowledgeLibraryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteKnowledgeLibrary 删除知识库
+//
+// 该接口用于删除知识库。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteKnowledgeLibrary(request *model.DeleteKnowledgeLibraryRequest) (*model.DeleteKnowledgeLibraryResponse, error) {
+	requestDef := GenReqDefForDeleteKnowledgeLibrary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteKnowledgeLibraryResponse), nil
+	}
+}
+
+// DeleteKnowledgeLibraryInvoker 删除知识库
+func (c *MetaStudioClient) DeleteKnowledgeLibraryInvoker(request *model.DeleteKnowledgeLibraryRequest) *DeleteKnowledgeLibraryInvoker {
+	requestDef := GenReqDefForDeleteKnowledgeLibrary()
+	return &DeleteKnowledgeLibraryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListKnowledgeLibrary 查询知识库列表
+//
+// 该接口用于查询知识库列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListKnowledgeLibrary(request *model.ListKnowledgeLibraryRequest) (*model.ListKnowledgeLibraryResponse, error) {
+	requestDef := GenReqDefForListKnowledgeLibrary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListKnowledgeLibraryResponse), nil
+	}
+}
+
+// ListKnowledgeLibraryInvoker 查询知识库列表
+func (c *MetaStudioClient) ListKnowledgeLibraryInvoker(request *model.ListKnowledgeLibraryRequest) *ListKnowledgeLibraryInvoker {
+	requestDef := GenReqDefForListKnowledgeLibrary()
+	return &ListKnowledgeLibraryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowKnowledgeLibrary 查询知识库详情
+//
+// 该接口用于查询知识库详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowKnowledgeLibrary(request *model.ShowKnowledgeLibraryRequest) (*model.ShowKnowledgeLibraryResponse, error) {
+	requestDef := GenReqDefForShowKnowledgeLibrary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKnowledgeLibraryResponse), nil
+	}
+}
+
+// ShowKnowledgeLibraryInvoker 查询知识库详情
+func (c *MetaStudioClient) ShowKnowledgeLibraryInvoker(request *model.ShowKnowledgeLibraryRequest) *ShowKnowledgeLibraryInvoker {
+	requestDef := GenReqDefForShowKnowledgeLibrary()
+	return &ShowKnowledgeLibraryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateKnowledgeLibrary 修改知识库
+//
+// 该接口用于修改知识库。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateKnowledgeLibrary(request *model.UpdateKnowledgeLibraryRequest) (*model.UpdateKnowledgeLibraryResponse, error) {
+	requestDef := GenReqDefForUpdateKnowledgeLibrary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateKnowledgeLibraryResponse), nil
+	}
+}
+
+// UpdateKnowledgeLibraryInvoker 修改知识库
+func (c *MetaStudioClient) UpdateKnowledgeLibraryInvoker(request *model.UpdateKnowledgeLibraryRequest) *UpdateKnowledgeLibraryInvoker {
+	requestDef := GenReqDefForUpdateKnowledgeLibrary()
+	return &UpdateKnowledgeLibraryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateBatchKnowledgeQuestion 批量创建知识库问法
@@ -2124,6 +2712,216 @@ func (c *MetaStudioClient) UpdateLivePlatformInvoker(request *model.UpdateLivePl
 	return &UpdateLivePlatformInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateLlmConfig 创建大语言模型配置
+//
+// 该接口用于创建大语言模型配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateLlmConfig(request *model.CreateLlmConfigRequest) (*model.CreateLlmConfigResponse, error) {
+	requestDef := GenReqDefForCreateLlmConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateLlmConfigResponse), nil
+	}
+}
+
+// CreateLlmConfigInvoker 创建大语言模型配置
+func (c *MetaStudioClient) CreateLlmConfigInvoker(request *model.CreateLlmConfigRequest) *CreateLlmConfigInvoker {
+	requestDef := GenReqDefForCreateLlmConfig()
+	return &CreateLlmConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteLlmConfig 删除大语言模型配置
+//
+// 该接口用于删除大语言模型配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteLlmConfig(request *model.DeleteLlmConfigRequest) (*model.DeleteLlmConfigResponse, error) {
+	requestDef := GenReqDefForDeleteLlmConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteLlmConfigResponse), nil
+	}
+}
+
+// DeleteLlmConfigInvoker 删除大语言模型配置
+func (c *MetaStudioClient) DeleteLlmConfigInvoker(request *model.DeleteLlmConfigRequest) *DeleteLlmConfigInvoker {
+	requestDef := GenReqDefForDeleteLlmConfig()
+	return &DeleteLlmConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLlmConfig 查询大语言模型配置列表
+//
+// 该接口用于查询大语言模型配置列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListLlmConfig(request *model.ListLlmConfigRequest) (*model.ListLlmConfigResponse, error) {
+	requestDef := GenReqDefForListLlmConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLlmConfigResponse), nil
+	}
+}
+
+// ListLlmConfigInvoker 查询大语言模型配置列表
+func (c *MetaStudioClient) ListLlmConfigInvoker(request *model.ListLlmConfigRequest) *ListLlmConfigInvoker {
+	requestDef := GenReqDefForListLlmConfig()
+	return &ListLlmConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLlmConfig 查询大语言模型配置详情
+//
+// 该接口用于查询大语言模型配置详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowLlmConfig(request *model.ShowLlmConfigRequest) (*model.ShowLlmConfigResponse, error) {
+	requestDef := GenReqDefForShowLlmConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLlmConfigResponse), nil
+	}
+}
+
+// ShowLlmConfigInvoker 查询大语言模型配置详情
+func (c *MetaStudioClient) ShowLlmConfigInvoker(request *model.ShowLlmConfigRequest) *ShowLlmConfigInvoker {
+	requestDef := GenReqDefForShowLlmConfig()
+	return &ShowLlmConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLlmConfig 修改大语言模型配置
+//
+// 该接口用于修改大语言模型配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateLlmConfig(request *model.UpdateLlmConfigRequest) (*model.UpdateLlmConfigResponse, error) {
+	requestDef := GenReqDefForUpdateLlmConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateLlmConfigResponse), nil
+	}
+}
+
+// UpdateLlmConfigInvoker 修改大语言模型配置
+func (c *MetaStudioClient) UpdateLlmConfigInvoker(request *model.UpdateLlmConfigRequest) *UpdateLlmConfigInvoker {
+	requestDef := GenReqDefForUpdateLlmConfig()
+	return &UpdateLlmConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateMcpServer 创建MCP服务端对接配置
+//
+// 该接口用于创建MCP服务端对接配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateMcpServer(request *model.CreateMcpServerRequest) (*model.CreateMcpServerResponse, error) {
+	requestDef := GenReqDefForCreateMcpServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateMcpServerResponse), nil
+	}
+}
+
+// CreateMcpServerInvoker 创建MCP服务端对接配置
+func (c *MetaStudioClient) CreateMcpServerInvoker(request *model.CreateMcpServerRequest) *CreateMcpServerInvoker {
+	requestDef := GenReqDefForCreateMcpServer()
+	return &CreateMcpServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteMcpServer 删除MCP服务端对接配置
+//
+// 该接口用于删除MCP服务端对接配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteMcpServer(request *model.DeleteMcpServerRequest) (*model.DeleteMcpServerResponse, error) {
+	requestDef := GenReqDefForDeleteMcpServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteMcpServerResponse), nil
+	}
+}
+
+// DeleteMcpServerInvoker 删除MCP服务端对接配置
+func (c *MetaStudioClient) DeleteMcpServerInvoker(request *model.DeleteMcpServerRequest) *DeleteMcpServerInvoker {
+	requestDef := GenReqDefForDeleteMcpServer()
+	return &DeleteMcpServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMcpServer 查询MCP服务端对接配置列表
+//
+// 该接口用于查询MCP服务端对接配置列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListMcpServer(request *model.ListMcpServerRequest) (*model.ListMcpServerResponse, error) {
+	requestDef := GenReqDefForListMcpServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMcpServerResponse), nil
+	}
+}
+
+// ListMcpServerInvoker 查询MCP服务端对接配置列表
+func (c *MetaStudioClient) ListMcpServerInvoker(request *model.ListMcpServerRequest) *ListMcpServerInvoker {
+	requestDef := GenReqDefForListMcpServer()
+	return &ListMcpServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMcpServer 查询MCP服务端对接配置详情
+//
+// 该接口用于查询MCP服务端对接配置详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowMcpServer(request *model.ShowMcpServerRequest) (*model.ShowMcpServerResponse, error) {
+	requestDef := GenReqDefForShowMcpServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMcpServerResponse), nil
+	}
+}
+
+// ShowMcpServerInvoker 查询MCP服务端对接配置详情
+func (c *MetaStudioClient) ShowMcpServerInvoker(request *model.ShowMcpServerRequest) *ShowMcpServerInvoker {
+	requestDef := GenReqDefForShowMcpServer()
+	return &ShowMcpServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateMcpServer 修改MCP服务端对接配置
+//
+// 该接口用于修改MCP服务端对接配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateMcpServer(request *model.UpdateMcpServerRequest) (*model.UpdateMcpServerResponse, error) {
+	requestDef := GenReqDefForUpdateMcpServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateMcpServerResponse), nil
+	}
+}
+
+// UpdateMcpServerInvoker 修改MCP服务端对接配置
+func (c *MetaStudioClient) UpdateMcpServerInvoker(request *model.UpdateMcpServerRequest) *UpdateMcpServerInvoker {
+	requestDef := GenReqDefForUpdateMcpServer()
+	return &UpdateMcpServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateOnceCode 创建一次性鉴权码
 //
 // 该接口用于创建一次性鉴权码，有效期5分钟，鉴权码只能使用一次，每次使用后需要重新获取。
@@ -2482,6 +3280,132 @@ func (c *MetaStudioClient) ShowPictureModelingJobInvoker(request *model.ShowPict
 	return &ShowPictureModelingJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePluginConfig 创建插件配置
+//
+// 该接口用于创建插件配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreatePluginConfig(request *model.CreatePluginConfigRequest) (*model.CreatePluginConfigResponse, error) {
+	requestDef := GenReqDefForCreatePluginConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePluginConfigResponse), nil
+	}
+}
+
+// CreatePluginConfigInvoker 创建插件配置
+func (c *MetaStudioClient) CreatePluginConfigInvoker(request *model.CreatePluginConfigRequest) *CreatePluginConfigInvoker {
+	requestDef := GenReqDefForCreatePluginConfig()
+	return &CreatePluginConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePluginConfig 删除插件配置
+//
+// 该接口用于删除插件配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeletePluginConfig(request *model.DeletePluginConfigRequest) (*model.DeletePluginConfigResponse, error) {
+	requestDef := GenReqDefForDeletePluginConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePluginConfigResponse), nil
+	}
+}
+
+// DeletePluginConfigInvoker 删除插件配置
+func (c *MetaStudioClient) DeletePluginConfigInvoker(request *model.DeletePluginConfigRequest) *DeletePluginConfigInvoker {
+	requestDef := GenReqDefForDeletePluginConfig()
+	return &DeletePluginConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPluginConfig 查询插件配置列表
+//
+// 该接口用于查询插件配置列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListPluginConfig(request *model.ListPluginConfigRequest) (*model.ListPluginConfigResponse, error) {
+	requestDef := GenReqDefForListPluginConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPluginConfigResponse), nil
+	}
+}
+
+// ListPluginConfigInvoker 查询插件配置列表
+func (c *MetaStudioClient) ListPluginConfigInvoker(request *model.ListPluginConfigRequest) *ListPluginConfigInvoker {
+	requestDef := GenReqDefForListPluginConfig()
+	return &ListPluginConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPluginConfig 查询插件配置详情
+//
+// 该接口用于查询插件配置详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowPluginConfig(request *model.ShowPluginConfigRequest) (*model.ShowPluginConfigResponse, error) {
+	requestDef := GenReqDefForShowPluginConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPluginConfigResponse), nil
+	}
+}
+
+// ShowPluginConfigInvoker 查询插件配置详情
+func (c *MetaStudioClient) ShowPluginConfigInvoker(request *model.ShowPluginConfigRequest) *ShowPluginConfigInvoker {
+	requestDef := GenReqDefForShowPluginConfig()
+	return &ShowPluginConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPluginConfigDefaultInfo 查询插件配置默认信息
+//
+// 该接口用于查询插件配置默认信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowPluginConfigDefaultInfo(request *model.ShowPluginConfigDefaultInfoRequest) (*model.ShowPluginConfigDefaultInfoResponse, error) {
+	requestDef := GenReqDefForShowPluginConfigDefaultInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPluginConfigDefaultInfoResponse), nil
+	}
+}
+
+// ShowPluginConfigDefaultInfoInvoker 查询插件配置默认信息
+func (c *MetaStudioClient) ShowPluginConfigDefaultInfoInvoker(request *model.ShowPluginConfigDefaultInfoRequest) *ShowPluginConfigDefaultInfoInvoker {
+	requestDef := GenReqDefForShowPluginConfigDefaultInfo()
+	return &ShowPluginConfigDefaultInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePluginConfig 修改插件配置
+//
+// 该接口用于修改插件配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdatePluginConfig(request *model.UpdatePluginConfigRequest) (*model.UpdatePluginConfigResponse, error) {
+	requestDef := GenReqDefForUpdatePluginConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePluginConfigResponse), nil
+	}
+}
+
+// UpdatePluginConfigInvoker 修改插件配置
+func (c *MetaStudioClient) UpdatePluginConfigInvoker(request *model.UpdatePluginConfigRequest) *UpdatePluginConfigInvoker {
+	requestDef := GenReqDefForUpdatePluginConfig()
+	return &UpdatePluginConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateProduct 创建商品
 //
 // Create product
@@ -2608,6 +3532,111 @@ func (c *MetaStudioClient) UpdateProductInvoker(request *model.UpdateProductRequ
 	return &UpdateProductInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateQuestionAnswer 创建问答对
+//
+// 该接口用于创建问答对。一个问答对包含一个标准问题，一个答案，若干个相似问题等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateQuestionAnswer(request *model.CreateQuestionAnswerRequest) (*model.CreateQuestionAnswerResponse, error) {
+	requestDef := GenReqDefForCreateQuestionAnswer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateQuestionAnswerResponse), nil
+	}
+}
+
+// CreateQuestionAnswerInvoker 创建问答对
+func (c *MetaStudioClient) CreateQuestionAnswerInvoker(request *model.CreateQuestionAnswerRequest) *CreateQuestionAnswerInvoker {
+	requestDef := GenReqDefForCreateQuestionAnswer()
+	return &CreateQuestionAnswerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteQuestionAnswer 删除问答对
+//
+// 该接口用于删除问答对。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteQuestionAnswer(request *model.DeleteQuestionAnswerRequest) (*model.DeleteQuestionAnswerResponse, error) {
+	requestDef := GenReqDefForDeleteQuestionAnswer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteQuestionAnswerResponse), nil
+	}
+}
+
+// DeleteQuestionAnswerInvoker 删除问答对
+func (c *MetaStudioClient) DeleteQuestionAnswerInvoker(request *model.DeleteQuestionAnswerRequest) *DeleteQuestionAnswerInvoker {
+	requestDef := GenReqDefForDeleteQuestionAnswer()
+	return &DeleteQuestionAnswerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListQuestionAnswer 查询问答对列表
+//
+// 该接口用于查询问答对列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListQuestionAnswer(request *model.ListQuestionAnswerRequest) (*model.ListQuestionAnswerResponse, error) {
+	requestDef := GenReqDefForListQuestionAnswer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListQuestionAnswerResponse), nil
+	}
+}
+
+// ListQuestionAnswerInvoker 查询问答对列表
+func (c *MetaStudioClient) ListQuestionAnswerInvoker(request *model.ListQuestionAnswerRequest) *ListQuestionAnswerInvoker {
+	requestDef := GenReqDefForListQuestionAnswer()
+	return &ListQuestionAnswerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowQuestionAnswer 查询问答对详情
+//
+// 该接口用于查询问答对详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowQuestionAnswer(request *model.ShowQuestionAnswerRequest) (*model.ShowQuestionAnswerResponse, error) {
+	requestDef := GenReqDefForShowQuestionAnswer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowQuestionAnswerResponse), nil
+	}
+}
+
+// ShowQuestionAnswerInvoker 查询问答对详情
+func (c *MetaStudioClient) ShowQuestionAnswerInvoker(request *model.ShowQuestionAnswerRequest) *ShowQuestionAnswerInvoker {
+	requestDef := GenReqDefForShowQuestionAnswer()
+	return &ShowQuestionAnswerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateQuestionAnswer 修改问答对
+//
+// 该接口用于修改问答对。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateQuestionAnswer(request *model.UpdateQuestionAnswerRequest) (*model.UpdateQuestionAnswerResponse, error) {
+	requestDef := GenReqDefForUpdateQuestionAnswer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateQuestionAnswerResponse), nil
+	}
+}
+
+// UpdateQuestionAnswerInvoker 修改问答对
+func (c *MetaStudioClient) UpdateQuestionAnswerInvoker(request *model.UpdateQuestionAnswerRequest) *UpdateQuestionAnswerInvoker {
+	requestDef := GenReqDefForUpdateQuestionAnswer()
+	return &UpdateQuestionAnswerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateRobot 创建应用
 //
 // 该接口用于创建应用。
@@ -2732,6 +3761,111 @@ func (c *MetaStudioClient) ValidateRobot(request *model.ValidateRobotRequest) (*
 func (c *MetaStudioClient) ValidateRobotInvoker(request *model.ValidateRobotRequest) *ValidateRobotInvoker {
 	requestDef := GenReqDefForValidateRobot()
 	return &ValidateRobotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRole 创建角色
+//
+// 该接口用于创建角色。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateRole(request *model.CreateRoleRequest) (*model.CreateRoleResponse, error) {
+	requestDef := GenReqDefForCreateRole()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRoleResponse), nil
+	}
+}
+
+// CreateRoleInvoker 创建角色
+func (c *MetaStudioClient) CreateRoleInvoker(request *model.CreateRoleRequest) *CreateRoleInvoker {
+	requestDef := GenReqDefForCreateRole()
+	return &CreateRoleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRole 删除角色
+//
+// 该接口用于删除角色。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteRole(request *model.DeleteRoleRequest) (*model.DeleteRoleResponse, error) {
+	requestDef := GenReqDefForDeleteRole()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteRoleResponse), nil
+	}
+}
+
+// DeleteRoleInvoker 删除角色
+func (c *MetaStudioClient) DeleteRoleInvoker(request *model.DeleteRoleRequest) *DeleteRoleInvoker {
+	requestDef := GenReqDefForDeleteRole()
+	return &DeleteRoleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRole 查询角色列表
+//
+// 该接口用于查询角色列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListRole(request *model.ListRoleRequest) (*model.ListRoleResponse, error) {
+	requestDef := GenReqDefForListRole()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRoleResponse), nil
+	}
+}
+
+// ListRoleInvoker 查询角色列表
+func (c *MetaStudioClient) ListRoleInvoker(request *model.ListRoleRequest) *ListRoleInvoker {
+	requestDef := GenReqDefForListRole()
+	return &ListRoleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRole 查询角色详情
+//
+// 该接口用于查询角色详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowRole(request *model.ShowRoleRequest) (*model.ShowRoleResponse, error) {
+	requestDef := GenReqDefForShowRole()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRoleResponse), nil
+	}
+}
+
+// ShowRoleInvoker 查询角色详情
+func (c *MetaStudioClient) ShowRoleInvoker(request *model.ShowRoleRequest) *ShowRoleInvoker {
+	requestDef := GenReqDefForShowRole()
+	return &ShowRoleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRole 修改角色
+//
+// 该接口用于修改角色。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateRole(request *model.UpdateRoleRequest) (*model.UpdateRoleResponse, error) {
+	requestDef := GenReqDefForUpdateRole()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRoleResponse), nil
+	}
+}
+
+// UpdateRoleInvoker 修改角色
+func (c *MetaStudioClient) UpdateRoleInvoker(request *model.UpdateRoleRequest) *UpdateRoleInvoker {
+	requestDef := GenReqDefForUpdateRole()
+	return &UpdateRoleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateSmartChatRoom 创建智能交互对话
@@ -3849,6 +4983,69 @@ func (c *MetaStudioClient) ListTtsaJobsInvoker(request *model.ListTtsaJobsReques
 	return &ListTtsaJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckVoiceAsset 校验音色模型是否可用（自研和第三方音色）
+//
+// 该接口用于校验音色模型是否可用，模型可用返回模型信息，不可用返回具体不可用的原因
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CheckVoiceAsset(request *model.CheckVoiceAssetRequest) (*model.CheckVoiceAssetResponse, error) {
+	requestDef := GenReqDefForCheckVoiceAsset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckVoiceAssetResponse), nil
+	}
+}
+
+// CheckVoiceAssetInvoker 校验音色模型是否可用（自研和第三方音色）
+func (c *MetaStudioClient) CheckVoiceAssetInvoker(request *model.CheckVoiceAssetRequest) *CheckVoiceAssetInvoker {
+	requestDef := GenReqDefForCheckVoiceAsset()
+	return &CheckVoiceAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTtsJob 获取TTS语音合成任务记录
+//
+// 该接口用于获取TTS语音合成任务记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowTtsJob(request *model.ShowTtsJobRequest) (*model.ShowTtsJobResponse, error) {
+	requestDef := GenReqDefForShowTtsJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTtsJobResponse), nil
+	}
+}
+
+// ShowTtsJobInvoker 获取TTS语音合成任务记录
+func (c *MetaStudioClient) ShowTtsJobInvoker(request *model.ShowTtsJobRequest) *ShowTtsJobInvoker {
+	requestDef := GenReqDefForShowTtsJob()
+	return &ShowTtsJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTtsPhoneticSymbol 获取英文单词音标
+//
+// 根据英文单词返回对应音标列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowTtsPhoneticSymbol(request *model.ShowTtsPhoneticSymbolRequest) (*model.ShowTtsPhoneticSymbolResponse, error) {
+	requestDef := GenReqDefForShowTtsPhoneticSymbol()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTtsPhoneticSymbolResponse), nil
+	}
+}
+
+// ShowTtsPhoneticSymbolInvoker 获取英文单词音标
+func (c *MetaStudioClient) ShowTtsPhoneticSymbolInvoker(request *model.ShowTtsPhoneticSymbolRequest) *ShowTtsPhoneticSymbolInvoker {
+	requestDef := GenReqDefForShowTtsPhoneticSymbol()
+	return &ShowTtsPhoneticSymbolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAsyncTtsJob 创建TTS异步任务
 //
 // 该接口用于对外生成音频文件。每个预置音色的计费标准详见[预置音色计费标准](metastudio_02_0060.xml)。
@@ -3897,6 +5094,48 @@ func (c *MetaStudioClient) CreateTtsAudition(request *model.CreateTtsAuditionReq
 func (c *MetaStudioClient) CreateTtsAuditionInvoker(request *model.CreateTtsAuditionRequest) *CreateTtsAuditionInvoker {
 	requestDef := GenReqDefForCreateTtsAudition()
 	return &CreateTtsAuditionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAsyncTtsJob 获取TTS异步任务
+//
+// 该接口用于获取TTS音频文件下载链接。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowAsyncTtsJob(request *model.ShowAsyncTtsJobRequest) (*model.ShowAsyncTtsJobResponse, error) {
+	requestDef := GenReqDefForShowAsyncTtsJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAsyncTtsJobResponse), nil
+	}
+}
+
+// ShowAsyncTtsJobInvoker 获取TTS异步任务
+func (c *MetaStudioClient) ShowAsyncTtsJobInvoker(request *model.ShowAsyncTtsJobRequest) *ShowAsyncTtsJobInvoker {
+	requestDef := GenReqDefForShowAsyncTtsJob()
+	return &ShowAsyncTtsJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTtsAuditionFile 获取TTS试听文件
+//
+// 该接口用于获取TTS试听文件下载链接，返回List中包含当前已生产的试听文件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowTtsAuditionFile(request *model.ShowTtsAuditionFileRequest) (*model.ShowTtsAuditionFileResponse, error) {
+	requestDef := GenReqDefForShowTtsAuditionFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTtsAuditionFileResponse), nil
+	}
+}
+
+// ShowTtsAuditionFileInvoker 获取TTS试听文件
+func (c *MetaStudioClient) ShowTtsAuditionFileInvoker(request *model.ShowTtsAuditionFileRequest) *ShowTtsAuditionFileInvoker {
+	requestDef := GenReqDefForShowTtsAuditionFile()
+	return &ShowTtsAuditionFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateTtscVocabularyConfigs 设置TTS租户级自定义读法配置
@@ -4025,6 +5264,27 @@ func (c *MetaStudioClient) ListTtscVocabularyGroupsInvoker(request *model.ListTt
 	return &ListTtscVocabularyGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SaveTtscTenantConfigs 设置租户级配置
+//
+// 该接口用于设置租户级配置，当前用于租户级自定义读法配置的全局开关。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) SaveTtscTenantConfigs(request *model.SaveTtscTenantConfigsRequest) (*model.SaveTtscTenantConfigsResponse, error) {
+	requestDef := GenReqDefForSaveTtscTenantConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SaveTtscTenantConfigsResponse), nil
+	}
+}
+
+// SaveTtscTenantConfigsInvoker 设置租户级配置
+func (c *MetaStudioClient) SaveTtscTenantConfigsInvoker(request *model.SaveTtscTenantConfigsRequest) *SaveTtscTenantConfigsInvoker {
+	requestDef := GenReqDefForSaveTtscTenantConfigs()
+	return &SaveTtscTenantConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SaveTtscVocabularyConfigs 修改TTS租户级自定义读法配置
 //
 // 该接口用于修改TTS租户级自定义读法配置。
@@ -4067,67 +5327,25 @@ func (c *MetaStudioClient) SetTtscGroupAssetsInvoker(request *model.SetTtscGroup
 	return &SetTtscGroupAssetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowAsyncTtsJob 获取TTS异步任务
+// ShowVocabularySwitchConfigs 获取租户级全局配置
 //
-// 该接口用于获取TTS音频文件下载链接。
+// 该接口用于获取租户级全局配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) ShowAsyncTtsJob(request *model.ShowAsyncTtsJobRequest) (*model.ShowAsyncTtsJobResponse, error) {
-	requestDef := GenReqDefForShowAsyncTtsJob()
+func (c *MetaStudioClient) ShowVocabularySwitchConfigs(request *model.ShowVocabularySwitchConfigsRequest) (*model.ShowVocabularySwitchConfigsResponse, error) {
+	requestDef := GenReqDefForShowVocabularySwitchConfigs()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowAsyncTtsJobResponse), nil
+		return resp.(*model.ShowVocabularySwitchConfigsResponse), nil
 	}
 }
 
-// ShowAsyncTtsJobInvoker 获取TTS异步任务
-func (c *MetaStudioClient) ShowAsyncTtsJobInvoker(request *model.ShowAsyncTtsJobRequest) *ShowAsyncTtsJobInvoker {
-	requestDef := GenReqDefForShowAsyncTtsJob()
-	return &ShowAsyncTtsJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowTtsAuditionFile 获取TTS试听文件
-//
-// 该接口用于获取TTS试听文件下载链接，返回List中包含当前已生产的试听文件。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) ShowTtsAuditionFile(request *model.ShowTtsAuditionFileRequest) (*model.ShowTtsAuditionFileResponse, error) {
-	requestDef := GenReqDefForShowTtsAuditionFile()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowTtsAuditionFileResponse), nil
-	}
-}
-
-// ShowTtsAuditionFileInvoker 获取TTS试听文件
-func (c *MetaStudioClient) ShowTtsAuditionFileInvoker(request *model.ShowTtsAuditionFileRequest) *ShowTtsAuditionFileInvoker {
-	requestDef := GenReqDefForShowTtsAuditionFile()
-	return &ShowTtsAuditionFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowTtsPhoneticSymbol 获取英文单词音标
-//
-// 根据英文单词返回对应音标列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) ShowTtsPhoneticSymbol(request *model.ShowTtsPhoneticSymbolRequest) (*model.ShowTtsPhoneticSymbolResponse, error) {
-	requestDef := GenReqDefForShowTtsPhoneticSymbol()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowTtsPhoneticSymbolResponse), nil
-	}
-}
-
-// ShowTtsPhoneticSymbolInvoker 获取英文单词音标
-func (c *MetaStudioClient) ShowTtsPhoneticSymbolInvoker(request *model.ShowTtsPhoneticSymbolRequest) *ShowTtsPhoneticSymbolInvoker {
-	requestDef := GenReqDefForShowTtsPhoneticSymbol()
-	return &ShowTtsPhoneticSymbolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ShowVocabularySwitchConfigsInvoker 获取租户级全局配置
+func (c *MetaStudioClient) ShowVocabularySwitchConfigsInvoker(request *model.ShowVocabularySwitchConfigsRequest) *ShowVocabularySwitchConfigsInvoker {
+	requestDef := GenReqDefForShowVocabularySwitchConfigs()
+	return &ShowVocabularySwitchConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateTtscVocabularyGroups TTS租户级词表分组重命名

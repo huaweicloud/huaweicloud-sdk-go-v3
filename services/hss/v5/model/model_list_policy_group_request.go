@@ -21,7 +21,7 @@ type ListPolicyGroupRequest struct {
 	// **参数解释**: 策略组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
 	GroupName *string `json:"group_name,omitempty"`
 
-	// **参数解释**: 是否只查询容器版策略组 **约束限制**: 不涉及 **取值范围**: - true: 只查询容器版策略组 - false: 查询全部策略组 **默认取值**: false
+	// **参数解释**: 是否只查询容器版策略组 **约束限制**: 不涉及 **取值范围**: - true: 只查询容器版策略组。注：当limit传参为200时，仅返回容器版策略组。 - false: 查询全部策略组。注：当limit传参为200时，仅返回旗舰版策略组。  **默认取值**: false
 	ContainerMode *bool `json:"container_mode,omitempty"`
 
 	// **参数解释**: 策略组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及

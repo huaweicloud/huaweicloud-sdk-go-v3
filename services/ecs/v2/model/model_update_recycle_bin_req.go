@@ -8,7 +8,7 @@ import (
 
 // UpdateRecycleBinReq This is a auto create Body Object
 type UpdateRecycleBinReq struct {
-	RecycleBin *UpdateRecycleBinOption `json:"recycle_bin,omitempty"`
+	RecycleBin *UpdateRecycleBinOption `json:"recycle_bin"`
 }
 
 func (o UpdateRecycleBinReq) String() string {

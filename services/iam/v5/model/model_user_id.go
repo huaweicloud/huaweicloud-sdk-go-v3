@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// UserId IAM用户ID，长度为1到64个字符，只包含字母、数字和\"-\"的字符串。
+// UserId IAM用户ID。
 type UserId struct {
 }
 

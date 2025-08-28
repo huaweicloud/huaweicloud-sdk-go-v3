@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// BatchDeleteIpListOption 批量删除IP地址组中的IP。
+// BatchDeleteIpListOption **参数解释**：批量删除IP地址项的请求参数。  **约束限制**：不涉及
 type BatchDeleteIpListOption struct {
 
-	// 参数解释：IP列表。
+	// **参数解释**：IP地址组中IP列表的IP地址信息。  **约束限制**：不涉及
 	IpList *[]IpGroupIp `json:"ip_list,omitempty"`
 }
 

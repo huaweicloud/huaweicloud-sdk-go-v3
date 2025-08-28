@@ -432,6 +432,27 @@ func (c *EcsClient) ChangeVpcInvoker(request *model.ChangeVpcRequest) *ChangeVpc
 	return &ChangeVpcInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateLaunchTemplate 创建模板
+//
+// 创建启动模板。将创建一个全新的模板，并自动生成版本号为1的作为默认版本。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) CreateLaunchTemplate(request *model.CreateLaunchTemplateRequest) (*model.CreateLaunchTemplateResponse, error) {
+	requestDef := GenReqDefForCreateLaunchTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateLaunchTemplateResponse), nil
+	}
+}
+
+// CreateLaunchTemplateInvoker 创建模板
+func (c *EcsClient) CreateLaunchTemplateInvoker(request *model.CreateLaunchTemplateRequest) *CreateLaunchTemplateInvoker {
+	requestDef := GenReqDefForCreateLaunchTemplate()
+	return &CreateLaunchTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePostPaidServers 创建云服务器(按需)
 //
 // 创建一台或多台[按需付费](https://support.huaweicloud.com/productdesc-ecs/ecs_01_0065.html)方式的云服务器。

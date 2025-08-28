@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// MemberCheckJobResult 参数解释：后端服务器检测任务各检查项的检测结果。
+// MemberCheckJobResult **参数解释**：后端服务器检测任务各检查项的检测结果。
 type MemberCheckJobResult struct {
 	Config *MemberCheckJobResultGroup `json:"config,omitempty"`
 

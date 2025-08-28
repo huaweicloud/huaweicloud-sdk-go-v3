@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// MemberCheckJob 参数解释：后端服务器检测任务信息。
+// MemberCheckJob **参数解释**：后端服务器检测任务信息。
 type MemberCheckJob struct {
 
-	// 参数解释：任务ID，根据该任务ID可以查询到任务执行结果。
+	// **参数解释**：任务ID，根据该任务ID可以查询到任务执行结果。  **取值范围**：不涉及
 	JobId *string `json:"job_id,omitempty"`
 }
 

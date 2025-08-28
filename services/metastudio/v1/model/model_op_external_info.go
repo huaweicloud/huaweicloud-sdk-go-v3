@@ -14,6 +14,9 @@ type OpExternalInfo struct {
 
 	// 算法侧失败原因
 	AlgorithmFailureReason *string `json:"algorithm_failure_reason,omitempty"`
+
+	// 管理员驳回的原因
+	AdminAuditFailureReason *string `json:"admin_audit_failure_reason,omitempty"`
 }
 
 func (o OpExternalInfo) String() string {

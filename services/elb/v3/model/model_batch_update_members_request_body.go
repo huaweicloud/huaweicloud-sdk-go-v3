@@ -9,7 +9,7 @@ import (
 // BatchUpdateMembersRequestBody This is a auto create Body Object
 type BatchUpdateMembersRequestBody struct {
 
-	// 后端服务器对象。
+	// **参数解释**：后端服务器对象。  **约束限制**：不涉及
 	Members []BatchUpdateMembersOption `json:"members"`
 }
 

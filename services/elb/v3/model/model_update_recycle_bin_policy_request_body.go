@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// UpdateRecycleBinPolicyRequestBody 更新回收站配置的请求体。
+// UpdateRecycleBinPolicyRequestBody **参数解释**：更新回收站配置的请求体。
 type UpdateRecycleBinPolicyRequestBody struct {
 	RecycleBin *RecycleBinPolicyRequestBody `json:"recycle_bin,omitempty"`
 }

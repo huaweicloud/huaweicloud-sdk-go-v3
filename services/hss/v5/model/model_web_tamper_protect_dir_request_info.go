@@ -17,7 +17,7 @@ type WebTamperProtectDirRequestInfo struct {
 	// 排除文件类型
 	ExclueFileType *string `json:"exclue_file_type,omitempty"`
 
-	// 防护模式，包含如下4种   - recovery ：恢复模式   - alarm ：告警模式
+	// **参数解释**: 防护模式 **约束限制**: 不涉及 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式。  **默认取值**: recovery
 	ProtectMode *string `json:"protect_mode,omitempty"`
 }
 

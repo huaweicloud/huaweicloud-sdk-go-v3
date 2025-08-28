@@ -30,8 +30,17 @@ type SmartChatRoomBaseInfo struct {
 
 	VoiceConfig *VoiceConfig `json:"voice_config,omitempty"`
 
+	// 计费模式，默认值CONCURRENCY * CONCURRENCY：并发计费 * CLIENT：按接入端计费 * CLIENT_TOKENS: 按接入端计费（TOKENS）
+	BillingMode *SmartChatRoomBaseInfoBillingMode `json:"billing_mode,omitempty"`
+
+	// 是否允许使用未分配的并发数（端模式下不能复用），默认不使用。
+	ReuseResource *bool `json:"reuse_resource,omitempty"`
+
 	// **参数解释**： 并发路数。
 	Concurrency *int32 `json:"concurrency,omitempty"`
+
+	// **参数解释**： 允许接入终端端数量。
+	ClientNums *int32 `json:"client_nums,omitempty"`
 
 	// 语音配置参数列表。
 	VoiceConfigList *[]VoiceConfigRsp `json:"voice_config_list,omitempty"`
@@ -56,6 +65,57 @@ func (o SmartChatRoomBaseInfo) String() string {
 	}
 
 	return strings.Join([]string{"SmartChatRoomBaseInfo", string(data)}, " ")
+}
+
+type SmartChatRoomBaseInfoBillingMode struct {
+	value string
+}
+
+type SmartChatRoomBaseInfoBillingModeEnum struct {
+	CONCURRENCY   SmartChatRoomBaseInfoBillingMode
+	CLIENT        SmartChatRoomBaseInfoBillingMode
+	CLIENT_TOKENS SmartChatRoomBaseInfoBillingMode
+}
+
+func GetSmartChatRoomBaseInfoBillingModeEnum() SmartChatRoomBaseInfoBillingModeEnum {
+	return SmartChatRoomBaseInfoBillingModeEnum{
+		CONCURRENCY: SmartChatRoomBaseInfoBillingMode{
+			value: "CONCURRENCY",
+		},
+		CLIENT: SmartChatRoomBaseInfoBillingMode{
+			value: "CLIENT",
+		},
+		CLIENT_TOKENS: SmartChatRoomBaseInfoBillingMode{
+			value: "CLIENT_TOKENS",
+		},
+	}
+}
+
+func (c SmartChatRoomBaseInfoBillingMode) Value() string {
+	return c.value
+}
+
+func (c SmartChatRoomBaseInfoBillingMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SmartChatRoomBaseInfoBillingMode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type SmartChatRoomBaseInfoDefaultLanguage struct {

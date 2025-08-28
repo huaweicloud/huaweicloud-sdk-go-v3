@@ -31,8 +31,17 @@ type UpdateSmartChatRoomResponse struct {
 	// 机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
 	RobotId *string `json:"robot_id,omitempty"`
 
+	// 计费模式，默认值CONCURRENCY * CONCURRENCY：并发计费 * CLIENT：按接入端计费 * CLIENT_TOKENS: 按接入端计费（TOKENS）
+	BillingMode *UpdateSmartChatRoomResponseBillingMode `json:"billing_mode,omitempty"`
+
+	// 是否允许使用未分配的并发数（端模式下不能复用），默认不使用。
+	ReuseResource *bool `json:"reuse_resource,omitempty"`
+
 	// **参数解释**： 并发路数。 **约束限制**： 默认没有并发路数，如果不配置并发数量，则无法启动智能交互对话任务。
 	Concurrency *int32 `json:"concurrency,omitempty"`
+
+	// **参数解释**： 允许接入终端端数量。
+	ClientNums *int32 `json:"client_nums,omitempty"`
 
 	// 默认语言，智能交互接口使用。默认值CN。 * CN：简体中文。 * EN：英语。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
 	DefaultLanguage *UpdateSmartChatRoomResponseDefaultLanguage `json:"default_language,omitempty"`
@@ -81,6 +90,57 @@ func (o UpdateSmartChatRoomResponse) String() string {
 	}
 
 	return strings.Join([]string{"UpdateSmartChatRoomResponse", string(data)}, " ")
+}
+
+type UpdateSmartChatRoomResponseBillingMode struct {
+	value string
+}
+
+type UpdateSmartChatRoomResponseBillingModeEnum struct {
+	CONCURRENCY   UpdateSmartChatRoomResponseBillingMode
+	CLIENT        UpdateSmartChatRoomResponseBillingMode
+	CLIENT_TOKENS UpdateSmartChatRoomResponseBillingMode
+}
+
+func GetUpdateSmartChatRoomResponseBillingModeEnum() UpdateSmartChatRoomResponseBillingModeEnum {
+	return UpdateSmartChatRoomResponseBillingModeEnum{
+		CONCURRENCY: UpdateSmartChatRoomResponseBillingMode{
+			value: "CONCURRENCY",
+		},
+		CLIENT: UpdateSmartChatRoomResponseBillingMode{
+			value: "CLIENT",
+		},
+		CLIENT_TOKENS: UpdateSmartChatRoomResponseBillingMode{
+			value: "CLIENT_TOKENS",
+		},
+	}
+}
+
+func (c UpdateSmartChatRoomResponseBillingMode) Value() string {
+	return c.value
+}
+
+func (c UpdateSmartChatRoomResponseBillingMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateSmartChatRoomResponseBillingMode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type UpdateSmartChatRoomResponseDefaultLanguage struct {

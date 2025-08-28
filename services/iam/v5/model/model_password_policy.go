@@ -24,7 +24,7 @@ type PasswordPolicy struct {
 	// 密码不能与历史密码重复次数。
 	PasswordReusePrevention int32 `json:"password_reuse_prevention"`
 
-	// 密码是否可以是用户名或用户名的反序。
+	// 密码是否可以是用户名或用户名的反序。默认值为true，为true时表示密码不可以是用户名或用户名的反序。
 	PasswordNotUsernameOrInvert bool `json:"password_not_username_or_invert"`
 
 	// 设置密码必须包含的字符要求。

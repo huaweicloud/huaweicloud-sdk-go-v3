@@ -229,6 +229,27 @@ func (c *TmsClient) ListTagValuesInvoker(request *model.ListTagValuesRequest) *L
 	return &ListTagValuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTags 查询标签列表
+//
+// 查询指定区域和实例类型中租户的所有标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *TmsClient) ListTags(request *model.ListTagsRequest) (*model.ListTagsResponse, error) {
+	requestDef := GenReqDefForListTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTagsResponse), nil
+	}
+}
+
+// ListTagsInvoker 查询标签列表
+func (c *TmsClient) ListTagsInvoker(request *model.ListTagsRequest) *ListTagsInvoker {
+	requestDef := GenReqDefForListTags()
+	return &ListTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowApiVersion 查询API版本号详情
 //
 // 查询指定的标签管理服务API版本号详情。

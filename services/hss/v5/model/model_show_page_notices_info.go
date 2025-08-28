@@ -11,7 +11,7 @@ type ShowPageNoticesInfo struct {
 	// 页面位置
 	PageLocation *string `json:"page_location,omitempty"`
 
-	// 通知类型，包含如下两种。 - links :超链接 - text  :文本
+	// 通知类型，包含如下两种。 - links：超链接 - text：文本
 	Type *string `json:"type,omitempty"`
 
 	// 通知内容
@@ -23,7 +23,7 @@ type ShowPageNoticesInfo struct {
 	// 超链接
 	Url *string `json:"url,omitempty"`
 
-	// 通知等级，包含如下3种。 - error :紧急 - warn :重要 - prompt :提示
+	// **参数解释** 通知等级 **取值范围** - error：紧急 - warn：重要 - prompt：提示
 	Level *string `json:"level,omitempty"`
 }
 

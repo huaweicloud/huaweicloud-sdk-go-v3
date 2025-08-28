@@ -10,7 +10,7 @@ import (
 // User IAM用户。
 type User struct {
 
-	// IAM用户描述信息，不能包含特定字符\"@\"、\"#\"、\"%\"、\"&\"、\"<\"、\">\"、\"\\\\\"、\"$\"、\"^\"和\"*\"的字符串。
+	// IAM用户描述信息，长度为0到255个字符，不能包含特定字符\"@\"、\"#\"、\"%\"、\"&\"、\"<\"、\">\"、\"\\\\\"、\"$\"、\"^\"和\"*\"的字符串。
 	Description *string `json:"description,omitempty"`
 
 	// IAM用户名，长度为1到64个字符，只包含字母、数字、\"_\"、\"-\"、\".\"和空格的字符串，且首位不能为数字。
@@ -22,7 +22,7 @@ type User struct {
 	// IAM用户创建时间。
 	CreatedAt *sdktime.SdkTime `json:"created_at"`
 
-	// IAM用户ID，长度为1到64个字符，只包含字母、数字和\"-\"的字符串。
+	// IAM用户ID。
 	UserId string `json:"user_id"`
 
 	// 统一资源名称。

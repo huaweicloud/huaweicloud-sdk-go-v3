@@ -33,6 +33,9 @@ type CreateVirtualInterface struct {
 	// 虚拟接口接入带宽
 	Bandwidth int32 `json:"bandwidth"`
 
+	// 虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
+	Priority *CreateVirtualInterfacePriority `json:"priority,omitempty"`
+
 	// 云侧网关IPv4接口地址,如果address_family是IPv4，是必选参数
 	LocalGatewayV4Ip *string `json:"local_gateway_v4_ip,omitempty"`
 
@@ -177,6 +180,53 @@ func (c CreateVirtualInterfaceServiceType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateVirtualInterfaceServiceType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateVirtualInterfacePriority struct {
+	value string
+}
+
+type CreateVirtualInterfacePriorityEnum struct {
+	NORMAL CreateVirtualInterfacePriority
+	LOW    CreateVirtualInterfacePriority
+}
+
+func GetCreateVirtualInterfacePriorityEnum() CreateVirtualInterfacePriorityEnum {
+	return CreateVirtualInterfacePriorityEnum{
+		NORMAL: CreateVirtualInterfacePriority{
+			value: "normal",
+		},
+		LOW: CreateVirtualInterfacePriority{
+			value: "low",
+		},
+	}
+}
+
+func (c CreateVirtualInterfacePriority) Value() string {
+	return c.value
+}
+
+func (c CreateVirtualInterfacePriority) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateVirtualInterfacePriority) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

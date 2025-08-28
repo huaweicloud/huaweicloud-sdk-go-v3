@@ -21,7 +21,7 @@ type ShowElbDetailResponse struct {
 	// ca证书ID。
 	CacertId *string `json:"cacertId,omitempty"`
 
-	// elb开关信息。
+	// 是否开启elb。 - true: 打开elb - false： 关闭elb
 	ElbEnable *bool `json:"elb_enable,omitempty"`
 
 	// 认证方式。

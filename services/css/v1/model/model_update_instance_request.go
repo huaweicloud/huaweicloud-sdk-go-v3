@@ -14,6 +14,12 @@ type UpdateInstanceRequest struct {
 
 	// 指定替换节点ID。
 	InstanceId string `json:"instance_id"`
+
+	// 是否迁移数据。
+	MigrateData *string `json:"migrateData,omitempty"`
+
+	// 委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
+	Agency *string `json:"agency,omitempty"`
 }
 
 func (o UpdateInstanceRequest) String() string {

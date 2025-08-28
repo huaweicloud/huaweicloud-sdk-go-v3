@@ -9,7 +9,7 @@ import (
 // UpdateAccessKeyV5Request Request Object
 type UpdateAccessKeyV5Request struct {
 
-	// IAM用户ID，长度为1到64个字符，只包含字母、数字和\"-\"的字符串。
+	// IAM用户ID。
 	UserId string `json:"user_id"`
 
 	// 永久访问密钥ID，即AK。

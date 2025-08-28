@@ -9,7 +9,7 @@ import (
 // CreateL7RuleRequest Request Object
 type CreateL7RuleRequest struct {
 
-	// 参数解释：转发策略ID。
+	// **参数解释**：转发策略ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
 	L7policyId string `json:"l7policy_id"`
 
 	Body *CreateL7RuleRequestBody `json:"body,omitempty"`

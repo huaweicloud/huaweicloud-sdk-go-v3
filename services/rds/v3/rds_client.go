@@ -585,7 +585,7 @@ func (c *RdsClient) DeleteJobInvoker(request *model.DeleteJobRequest) *DeleteJob
 	return &DeleteJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteLogLtsConfigs
+// DeleteLogLtsConfigs 解除LTS配置信息
 //
 // 解除LTS配置信息
 //
@@ -600,7 +600,7 @@ func (c *RdsClient) DeleteLogLtsConfigs(request *model.DeleteLogLtsConfigsReques
 	}
 }
 
-// DeleteLogLtsConfigsInvoker
+// DeleteLogLtsConfigsInvoker 解除LTS配置信息
 func (c *RdsClient) DeleteLogLtsConfigsInvoker(request *model.DeleteLogLtsConfigsRequest) *DeleteLogLtsConfigsInvoker {
 	requestDef := GenReqDefForDeleteLogLtsConfigs()
 	return &DeleteLogLtsConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -984,7 +984,7 @@ func (c *RdsClient) ListErrorLogsNewInvoker(request *model.ListErrorLogsNewReque
 	return &ListErrorLogsNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListErrorlogForLts
+// ListErrorlogForLts 查询实例的错误日志数据
 //
 // 查询实例的错误日志数据。
 //
@@ -999,7 +999,7 @@ func (c *RdsClient) ListErrorlogForLts(request *model.ListErrorlogForLtsRequest)
 	}
 }
 
-// ListErrorlogForLtsInvoker
+// ListErrorlogForLtsInvoker 查询实例的错误日志数据
 func (c *RdsClient) ListErrorlogForLtsInvoker(request *model.ListErrorlogForLtsRequest) *ListErrorlogForLtsInvoker {
 	requestDef := GenReqDefForListErrorlogForLts()
 	return &ListErrorlogForLtsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1068,7 +1068,7 @@ func (c *RdsClient) ListHistoryDatabaseInvoker(request *model.ListHistoryDatabas
 	return &ListHistoryDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListInspectionHistories
+// ListInspectionHistories 查询实例大版本升级检查历史
 //
 // 查询实例大版本升级检查历史。
 //
@@ -1083,7 +1083,7 @@ func (c *RdsClient) ListInspectionHistories(request *model.ListInspectionHistori
 	}
 }
 
-// ListInspectionHistoriesInvoker
+// ListInspectionHistoriesInvoker 查询实例大版本升级检查历史
 func (c *RdsClient) ListInspectionHistoriesInvoker(request *model.ListInspectionHistoriesRequest) *ListInspectionHistoriesInvoker {
 	requestDef := GenReqDefForListInspectionHistories()
 	return &ListInspectionHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1259,7 +1259,7 @@ func (c *RdsClient) ListJobInfoDetailInvoker(request *model.ListJobInfoDetailReq
 	return &ListJobInfoDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListLogLtsConfigs
+// ListLogLtsConfigs 获取LTS配置信息
 //
 // 获取LTS配置信息
 //
@@ -1274,7 +1274,7 @@ func (c *RdsClient) ListLogLtsConfigs(request *model.ListLogLtsConfigsRequest) (
 	}
 }
 
-// ListLogLtsConfigsInvoker
+// ListLogLtsConfigsInvoker 获取LTS配置信息
 func (c *RdsClient) ListLogLtsConfigsInvoker(request *model.ListLogLtsConfigsRequest) *ListLogLtsConfigsInvoker {
 	requestDef := GenReqDefForListLogLtsConfigs()
 	return &ListLogLtsConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1407,7 +1407,7 @@ func (c *RdsClient) ListPostgresqlListHistoryTablesInvoker(request *model.ListPo
 	return &ListPostgresqlListHistoryTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPredefinedTag
+// ListPredefinedTag 查询预定义标签
 //
 // 查询预定义标签
 //
@@ -1422,7 +1422,7 @@ func (c *RdsClient) ListPredefinedTag(request *model.ListPredefinedTagRequest) (
 	}
 }
 
-// ListPredefinedTagInvoker
+// ListPredefinedTagInvoker 查询预定义标签
 func (c *RdsClient) ListPredefinedTagInvoker(request *model.ListPredefinedTagRequest) *ListPredefinedTagInvoker {
 	requestDef := GenReqDefForListPredefinedTag()
 	return &ListPredefinedTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1597,7 +1597,7 @@ func (c *RdsClient) ListShareBackupsInvoker(request *model.ListShareBackupsReque
 	return &ListShareBackupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListSimplifiedInstances
+// ListSimplifiedInstances 获取指定实例详情
 //
 // 获取指定实例详情
 //
@@ -1612,7 +1612,7 @@ func (c *RdsClient) ListSimplifiedInstances(request *model.ListSimplifiedInstanc
 	}
 }
 
-// ListSimplifiedInstancesInvoker
+// ListSimplifiedInstancesInvoker 获取指定实例详情
 func (c *RdsClient) ListSimplifiedInstancesInvoker(request *model.ListSimplifiedInstancesRequest) *ListSimplifiedInstancesInvoker {
 	requestDef := GenReqDefForListSimplifiedInstances()
 	return &ListSimplifiedInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1640,7 +1640,7 @@ func (c *RdsClient) ListSlowLogFileInvoker(request *model.ListSlowLogFileRequest
 	return &ListSlowLogFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListSlowLogStatisticsForLts
+// ListSlowLogStatisticsForLts 查询实例慢日志的统计数据
 //
 // 查询实例慢日志的统计数据。
 //
@@ -1655,7 +1655,7 @@ func (c *RdsClient) ListSlowLogStatisticsForLts(request *model.ListSlowLogStatis
 	}
 }
 
-// ListSlowLogStatisticsForLtsInvoker
+// ListSlowLogStatisticsForLtsInvoker 查询实例慢日志的统计数据
 func (c *RdsClient) ListSlowLogStatisticsForLtsInvoker(request *model.ListSlowLogStatisticsForLtsRequest) *ListSlowLogStatisticsForLtsInvoker {
 	requestDef := GenReqDefForListSlowLogStatisticsForLts()
 	return &ListSlowLogStatisticsForLtsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1703,7 +1703,7 @@ func (c *RdsClient) ListSlowLogsNewInvoker(request *model.ListSlowLogsNewRequest
 	return &ListSlowLogsNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListSlowlogForLts
+// ListSlowlogForLts 查询实例的慢日志数据
 //
 // 查询实例的慢日志数据。
 //
@@ -1718,7 +1718,7 @@ func (c *RdsClient) ListSlowlogForLts(request *model.ListSlowlogForLtsRequest) (
 	}
 }
 
-// ListSlowlogForLtsInvoker
+// ListSlowlogForLtsInvoker 查询实例的慢日志数据
 func (c *RdsClient) ListSlowlogForLtsInvoker(request *model.ListSlowlogForLtsRequest) *ListSlowlogForLtsInvoker {
 	requestDef := GenReqDefForListSlowlogForLts()
 	return &ListSlowlogForLtsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1850,7 +1850,7 @@ func (c *RdsClient) ListUpdateBackupEnhancePolicyInvoker(request *model.ListUpda
 	return &ListUpdateBackupEnhancePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListUpgradeHistories
+// ListUpgradeHistories 查询实例大版本升级历史信息
 //
 // 查询实例大版本升级历史信息。
 //
@@ -1865,7 +1865,7 @@ func (c *RdsClient) ListUpgradeHistories(request *model.ListUpgradeHistoriesRequ
 	}
 }
 
-// ListUpgradeHistoriesInvoker
+// ListUpgradeHistoriesInvoker 查询实例大版本升级历史信息
 func (c *RdsClient) ListUpgradeHistoriesInvoker(request *model.ListUpgradeHistoriesRequest) *ListUpgradeHistoriesInvoker {
 	requestDef := GenReqDefForListUpgradeHistories()
 	return &ListUpgradeHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2210,7 +2210,7 @@ func (c *RdsClient) SetInstancesProxyRestartInvoker(request *model.SetInstancesP
 	return &SetInstancesProxyRestartInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SetLogLtsConfigs
+// SetLogLtsConfigs 关联LTS配置信息
 //
 // 关联LTS配置信息
 //
@@ -2225,7 +2225,7 @@ func (c *RdsClient) SetLogLtsConfigs(request *model.SetLogLtsConfigsRequest) (*m
 	}
 }
 
-// SetLogLtsConfigsInvoker
+// SetLogLtsConfigsInvoker 关联LTS配置信息
 func (c *RdsClient) SetLogLtsConfigsInvoker(request *model.SetLogLtsConfigsRequest) *SetLogLtsConfigsInvoker {
 	requestDef := GenReqDefForSetLogLtsConfigs()
 	return &SetLogLtsConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2422,7 +2422,7 @@ func (c *RdsClient) ShowAutoUpgradePolicyInvoker(request *model.ShowAutoUpgradeP
 	return &ShowAutoUpgradePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowAvailableVersion
+// ShowAvailableVersion 查询实例可升级的目标版本
 //
 // 查询实例可升级的目标版本
 //
@@ -2437,7 +2437,7 @@ func (c *RdsClient) ShowAvailableVersion(request *model.ShowAvailableVersionRequ
 	}
 }
 
-// ShowAvailableVersionInvoker
+// ShowAvailableVersionInvoker 查询实例可升级的目标版本
 func (c *RdsClient) ShowAvailableVersionInvoker(request *model.ShowAvailableVersionRequest) *ShowAvailableVersionInvoker {
 	requestDef := GenReqDefForShowAvailableVersion()
 	return &ShowAvailableVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2569,7 +2569,7 @@ func (c *RdsClient) ShowDnsNameInvoker(request *model.ShowDnsNameRequest) *ShowD
 	return &ShowDnsNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDomainName
+// ShowDomainName 查询实例ipv4域名
 //
 // 查询实例ipv4域名
 //
@@ -2584,7 +2584,7 @@ func (c *RdsClient) ShowDomainName(request *model.ShowDomainNameRequest) (*model
 	}
 }
 
-// ShowDomainNameInvoker
+// ShowDomainNameInvoker 查询实例ipv4域名
 func (c *RdsClient) ShowDomainNameInvoker(request *model.ShowDomainNameRequest) *ShowDomainNameInvoker {
 	requestDef := GenReqDefForShowDomainName()
 	return &ShowDomainNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2842,7 +2842,7 @@ func (c *RdsClient) ShowTransferPolicyInvoker(request *model.ShowTransferPolicyR
 	return &ShowTransferPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowUpgradeDbMajorVersionStatus
+// ShowUpgradeDbMajorVersionStatus 查询大版本检查状态或升级状态
 //
 // 查询大版本检查状态或升级状态。
 //
@@ -2857,7 +2857,7 @@ func (c *RdsClient) ShowUpgradeDbMajorVersionStatus(request *model.ShowUpgradeDb
 	}
 }
 
-// ShowUpgradeDbMajorVersionStatusInvoker
+// ShowUpgradeDbMajorVersionStatusInvoker 查询大版本检查状态或升级状态
 func (c *RdsClient) ShowUpgradeDbMajorVersionStatusInvoker(request *model.ShowUpgradeDbMajorVersionStatusRequest) *ShowUpgradeDbMajorVersionStatusInvoker {
 	requestDef := GenReqDefForShowUpgradeDbMajorVersionStatus()
 	return &ShowUpgradeDbMajorVersionStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3409,7 +3409,7 @@ func (c *RdsClient) UpdateToPeriodInvoker(request *model.UpdateToPeriodRequest) 
 	return &UpdateToPeriodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpgradeDbMajorVersion
+// UpgradeDbMajorVersion PostgreSQL数据库升级大版本
 //
 // PostgreSQL数据库升级大版本。
 //
@@ -3424,13 +3424,13 @@ func (c *RdsClient) UpgradeDbMajorVersion(request *model.UpgradeDbMajorVersionRe
 	}
 }
 
-// UpgradeDbMajorVersionInvoker
+// UpgradeDbMajorVersionInvoker PostgreSQL数据库升级大版本
 func (c *RdsClient) UpgradeDbMajorVersionInvoker(request *model.UpgradeDbMajorVersionRequest) *UpgradeDbMajorVersionInvoker {
 	requestDef := GenReqDefForUpgradeDbMajorVersion()
 	return &UpgradeDbMajorVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpgradeDbMajorVersionPreCheck
+// UpgradeDbMajorVersionPreCheck 大版本升级前进行升级检查
 //
 // 大版本升级前进行升级检查。
 //
@@ -3445,7 +3445,7 @@ func (c *RdsClient) UpgradeDbMajorVersionPreCheck(request *model.UpgradeDbMajorV
 	}
 }
 
-// UpgradeDbMajorVersionPreCheckInvoker
+// UpgradeDbMajorVersionPreCheckInvoker 大版本升级前进行升级检查
 func (c *RdsClient) UpgradeDbMajorVersionPreCheckInvoker(request *model.UpgradeDbMajorVersionPreCheckRequest) *UpgradeDbMajorVersionPreCheckInvoker {
 	requestDef := GenReqDefForUpgradeDbMajorVersionPreCheck()
 	return &UpgradeDbMajorVersionPreCheckInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -4549,7 +4549,7 @@ func (c *RdsClient) UpdateDatabaseOwnerInvoker(request *model.UpdateDatabaseOwne
 	return &UpdateDatabaseOwnerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateDbUserPrivilege
+// UpdateDbUserPrivilege 数据库帐号授权
 //
 // 数据库帐号授权。
 //
@@ -4564,7 +4564,7 @@ func (c *RdsClient) UpdateDbUserPrivilege(request *model.UpdateDbUserPrivilegeRe
 	}
 }
 
-// UpdateDbUserPrivilegeInvoker
+// UpdateDbUserPrivilegeInvoker 数据库帐号授权
 func (c *RdsClient) UpdateDbUserPrivilegeInvoker(request *model.UpdateDbUserPrivilegeRequest) *UpdateDbUserPrivilegeInvoker {
 	requestDef := GenReqDefForUpdateDbUserPrivilege()
 	return &UpdateDbUserPrivilegeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

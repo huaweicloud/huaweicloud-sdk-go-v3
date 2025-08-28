@@ -15,10 +15,10 @@ type ListEntitiesForPolicyV5Request struct {
 	// 身份策略ID，长度为1到64个字符，只包含字母、数字和\"-\"的字符串。
 	PolicyId string `json:"policy_id"`
 
-	// 实体类型。
+	// 实体类型，包含user、 group 和 agency三种类型。
 	EntityType *ListEntitiesForPolicyV5RequestEntityType `json:"entity_type,omitempty"`
 
-	// 每页显示的条目数量。
+	// 每页显示的条目数量，范围为1到200条，默认为100条。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 分页标记，长度为4到400个字符，只包含字母、数字、\"+\"、\"/\"、\"=\"、\"-\"和\"_\"的字符串。

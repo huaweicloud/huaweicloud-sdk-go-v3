@@ -943,6 +943,27 @@ func (c *LtsClient) ListLogStreamInvoker(request *model.ListLogStreamRequest) *L
 	return &ListLogStreamInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListLogStreamIndex 查询日志流索引
+//
+// 查询日志流索引。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LtsClient) ListLogStreamIndex(request *model.ListLogStreamIndexRequest) (*model.ListLogStreamIndexResponse, error) {
+	requestDef := GenReqDefForListLogStreamIndex()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLogStreamIndexResponse), nil
+	}
+}
+
+// ListLogStreamIndexInvoker 查询日志流索引
+func (c *LtsClient) ListLogStreamIndexInvoker(request *model.ListLogStreamIndexRequest) *ListLogStreamIndexInvoker {
+	requestDef := GenReqDefForListLogStreamIndex()
+	return &ListLogStreamIndexInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListLogStreams 查询日志流信息
 //
 // 该接口用于查询LTS日志流信息。

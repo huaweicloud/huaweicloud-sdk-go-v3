@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// LoadBalancerStatusResult
+// LoadBalancerStatusResult **参数解释**：负载均衡器状态树信息。  **默认取值**：不涉及
 type LoadBalancerStatusResult struct {
 	Loadbalancer *LoadBalancerStatus `json:"loadbalancer"`
 }

@@ -709,6 +709,22 @@ func (i *ListLogStreamInvoker) Invoke() (*model.ListLogStreamResponse, error) {
 	}
 }
 
+type ListLogStreamIndexInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLogStreamIndexInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListLogStreamIndexInvoker) Invoke() (*model.ListLogStreamIndexResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLogStreamIndexResponse), nil
+	}
+}
+
 type ListLogStreamsInvoker struct {
 	*invoker.BaseInvoker
 }

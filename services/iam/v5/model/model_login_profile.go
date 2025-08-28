@@ -10,7 +10,7 @@ import (
 // LoginProfile IAM用户登录信息。
 type LoginProfile struct {
 
-	// IAM用户ID，长度为1到64个字符，只包含字母、数字和\"-\"的字符串。
+	// IAM用户ID。
 	UserId string `json:"user_id"`
 
 	// IAM用户下次登录时是否需要修改密码。

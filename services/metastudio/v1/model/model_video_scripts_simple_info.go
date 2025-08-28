@@ -24,15 +24,12 @@ type VideoScriptsSimpleInfo struct {
 	// **参数解释**： 数字人模型资产ID。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
 	ModelAssetId *string `json:"model_asset_id,omitempty"`
 
-	// **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人  **默认取值**： 不涉及
+	// **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人  **默认取值**： 不涉及
 	ModelAssetType *VideoScriptsSimpleInfoModelAssetType `json:"model_asset_type,omitempty"`
 
 	VoiceConfig *VoiceConfig `json:"voice_config,omitempty"`
 
 	VideoConfig *VideoConfig `json:"video_config,omitempty"`
-
-	// **参数解释**： 场景资产ID。 **约束限制**： 分身数字人视频制作不需要填写该参数。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
-	SceneAssetId *string `json:"scene_asset_id,omitempty"`
 
 	// **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
 	PrivData *string `json:"priv_data,omitempty"`
@@ -108,16 +105,12 @@ type VideoScriptsSimpleInfoModelAssetType struct {
 
 type VideoScriptsSimpleInfoModelAssetTypeEnum struct {
 	HUMAN_MODEL_2_D VideoScriptsSimpleInfoModelAssetType
-	HUMAN_MODEL_3_D VideoScriptsSimpleInfoModelAssetType
 }
 
 func GetVideoScriptsSimpleInfoModelAssetTypeEnum() VideoScriptsSimpleInfoModelAssetTypeEnum {
 	return VideoScriptsSimpleInfoModelAssetTypeEnum{
 		HUMAN_MODEL_2_D: VideoScriptsSimpleInfoModelAssetType{
 			value: "HUMAN_MODEL_2D",
-		},
-		HUMAN_MODEL_3_D: VideoScriptsSimpleInfoModelAssetType{
-			value: "HUMAN_MODEL_3D",
 		},
 	}
 }

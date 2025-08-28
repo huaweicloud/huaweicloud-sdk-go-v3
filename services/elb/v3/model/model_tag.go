@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// Tag 标签
+// Tag **参数解释**：资源标签。
 type Tag struct {
 
-	// 参数解释：标签键
+	// **参数解释**：标签键。  **取值范围**：不涉及
 	Key *string `json:"key,omitempty"`
 
-	// 参数解释：标签值
+	// **参数解释**：标签值。  **取值范围**：不涉及
 	Value *string `json:"value,omitempty"`
 }
 

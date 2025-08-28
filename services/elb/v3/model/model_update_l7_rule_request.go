@@ -9,10 +9,10 @@ import (
 // UpdateL7RuleRequest Request Object
 type UpdateL7RuleRequest struct {
 
-	// 策略ID。
+	// **参数解释**：策略ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
 	L7policyId string `json:"l7policy_id"`
 
-	// 规则ID。
+	// **参数解释**：规则ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
 	L7ruleId string `json:"l7rule_id"`
 
 	Body *UpdateL7RuleRequestBody `json:"body,omitempty"`

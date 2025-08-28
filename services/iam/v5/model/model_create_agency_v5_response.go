@@ -8,8 +8,8 @@ import (
 
 // CreateAgencyV5Response Response Object
 type CreateAgencyV5Response struct {
-	Agency         *Agency `json:"agency,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Agency         *TrustAgency `json:"agency,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o CreateAgencyV5Response) String() string {

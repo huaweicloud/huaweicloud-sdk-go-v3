@@ -7,7 +7,7 @@ import (
 )
 
 type RdmParamVoMultiViewModelMasterIdModifierDto struct {
-	Params *MultiViewModelMasterIdModifierDto `json:"params,omitempty"`
+	Params *MultiViewModelMasterIdModifierDto `json:"params"`
 
 	// 应用ID。
 	ApplicationId *string `json:"applicationId,omitempty"`

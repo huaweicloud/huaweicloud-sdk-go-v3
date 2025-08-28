@@ -250,6 +250,27 @@ func (c *AsClient) BatchUnsetScalingInstancesStantbyInvoker(request *model.Batch
 	return &BatchUnsetScalingInstancesStantbyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CloseWarmPool 关闭暖池
+//
+// 关闭伸缩组的暖池
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AsClient) CloseWarmPool(request *model.CloseWarmPoolRequest) (*model.CloseWarmPoolResponse, error) {
+	requestDef := GenReqDefForCloseWarmPool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CloseWarmPoolResponse), nil
+	}
+}
+
+// CloseWarmPoolInvoker 关闭暖池
+func (c *AsClient) CloseWarmPoolInvoker(request *model.CloseWarmPoolRequest) *CloseWarmPoolInvoker {
+	requestDef := GenReqDefForCloseWarmPool()
+	return &CloseWarmPoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateGroupScheduledTask 创建计划任务
 //
 // 创建计划任务
@@ -880,6 +901,27 @@ func (c *AsClient) ListScalingTagInfosByTenantIdInvoker(request *model.ListScali
 	return &ListScalingTagInfosByTenantIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListWarmPoolInstances 查询暖池内实例信息
+//
+// 查询暖池内实例信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AsClient) ListWarmPoolInstances(request *model.ListWarmPoolInstancesRequest) (*model.ListWarmPoolInstancesResponse, error) {
+	requestDef := GenReqDefForListWarmPoolInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWarmPoolInstancesResponse), nil
+	}
+}
+
+// ListWarmPoolInstancesInvoker 查询暖池内实例信息
+func (c *AsClient) ListWarmPoolInstancesInvoker(request *model.ListWarmPoolInstancesRequest) *ListWarmPoolInstancesInvoker {
+	requestDef := GenReqDefForListWarmPoolInstances()
+	return &ListWarmPoolInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // PauseScalingGroup 停止弹性伸缩组
 //
 // 启用或停止一个指定弹性伸缩组。已停用状态的伸缩组，不会自动触发任何伸缩活动。当伸缩组正在进行伸缩活动，即使停用，正在进行的伸缩活动也不会立即停止。
@@ -920,6 +962,27 @@ func (c *AsClient) PauseScalingPolicy(request *model.PauseScalingPolicyRequest) 
 func (c *AsClient) PauseScalingPolicyInvoker(request *model.PauseScalingPolicyRequest) *PauseScalingPolicyInvoker {
 	requestDef := GenReqDefForPauseScalingPolicy()
 	return &PauseScalingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// PutWarmPool 开启暖池
+//
+// 开启并修改暖池参数
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AsClient) PutWarmPool(request *model.PutWarmPoolRequest) (*model.PutWarmPoolResponse, error) {
+	requestDef := GenReqDefForPutWarmPool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PutWarmPoolResponse), nil
+	}
+}
+
+// PutWarmPoolInvoker 开启暖池
+func (c *AsClient) PutWarmPoolInvoker(request *model.PutWarmPoolRequest) *PutWarmPoolInvoker {
+	requestDef := GenReqDefForPutWarmPool()
+	return &PutWarmPoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ResumeScalingGroup 启用弹性伸缩组
@@ -1088,6 +1151,27 @@ func (c *AsClient) ShowScalingPolicy(request *model.ShowScalingPolicyRequest) (*
 func (c *AsClient) ShowScalingPolicyInvoker(request *model.ShowScalingPolicyRequest) *ShowScalingPolicyInvoker {
 	requestDef := GenReqDefForShowScalingPolicy()
 	return &ShowScalingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowWarmPool 查询暖池信息
+//
+// 查询暖池信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AsClient) ShowWarmPool(request *model.ShowWarmPoolRequest) (*model.ShowWarmPoolResponse, error) {
+	requestDef := GenReqDefForShowWarmPool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWarmPoolResponse), nil
+	}
+}
+
+// ShowWarmPoolInvoker 查询暖池信息
+func (c *AsClient) ShowWarmPoolInvoker(request *model.ShowWarmPoolRequest) *ShowWarmPoolInvoker {
+	requestDef := GenReqDefForShowWarmPool()
+	return &ShowWarmPoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateGroupScheduledTask 更新计划任务

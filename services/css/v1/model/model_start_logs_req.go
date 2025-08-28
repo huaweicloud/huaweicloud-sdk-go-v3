@@ -17,6 +17,12 @@ type StartLogsReq struct {
 	// 用于存储日志的OBS桶的桶名。
 	LogBucket string `json:"log_bucket"`
 
+	// 集群日志是否开启自动备份。
+	AutoEnable *bool `json:"auto_enable,omitempty"`
+
+	// 集群日志备份开始时间。
+	Period *string `json:"period,omitempty"`
+
 	// 保存日志的索引前缀。action等于real_time_log_collect时必选
 	IndexPrefix *string `json:"index_prefix,omitempty"`
 

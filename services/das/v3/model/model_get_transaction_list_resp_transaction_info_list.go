@@ -18,7 +18,7 @@ type GetTransactionListRespTransactionInfoList struct {
 	HoldLocks int32 `json:"hold_locks"`
 
 	// 发生时间
-	OccurrenceTime int32 `json:"occurrence_time"`
+	OccurrenceTime int64 `json:"occurrence_time"`
 
 	// 事务内容
 	Detail string `json:"detail"`

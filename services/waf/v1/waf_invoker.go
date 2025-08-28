@@ -53,6 +53,22 @@ func (i *CheckAgencyInvoker) Invoke() (*model.CheckAgencyResponse, error) {
 	}
 }
 
+type ConfirmIpReputationRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ConfirmIpReputationRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ConfirmIpReputationRuleInvoker) Invoke() (*model.ConfirmIpReputationRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ConfirmIpReputationRuleResponse), nil
+	}
+}
+
 type ConfirmPolicyAntileakageMapInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -306,6 +322,22 @@ func (i *CreateIpGroupInvoker) Invoke() (*model.CreateIpGroupResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateIpGroupResponse), nil
+	}
+}
+
+type CreateIpReputationRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateIpReputationRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateIpReputationRuleInvoker) Invoke() (*model.CreateIpReputationRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateIpReputationRuleResponse), nil
 	}
 }
 
@@ -613,6 +645,22 @@ func (i *DeleteIpGroupInvoker) Invoke() (*model.DeleteIpGroupResponse, error) {
 	}
 }
 
+type DeleteIpReputationRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteIpReputationRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteIpReputationRuleInvoker) Invoke() (*model.DeleteIpReputationRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteIpReputationRuleResponse), nil
+	}
+}
+
 type DeletePolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -786,6 +834,70 @@ func (i *ListBandwidthTimelineInvoker) Invoke() (*model.ListBandwidthTimelineRes
 		return nil, err
 	} else {
 		return result.(*model.ListBandwidthTimelineResponse), nil
+	}
+}
+
+type ListBotMRequestDistributionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBotMRequestDistributionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBotMRequestDistributionInvoker) Invoke() (*model.ListBotMRequestDistributionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBotMRequestDistributionResponse), nil
+	}
+}
+
+type ListBotMScoreDistributionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBotMScoreDistributionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBotMScoreDistributionInvoker) Invoke() (*model.ListBotMScoreDistributionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBotMScoreDistributionResponse), nil
+	}
+}
+
+type ListBotMTimelineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBotMTimelineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBotMTimelineInvoker) Invoke() (*model.ListBotMTimelineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBotMTimelineResponse), nil
+	}
+}
+
+type ListBotMTopnRequestInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBotMTopnRequestInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBotMTopnRequestInvoker) Invoke() (*model.ListBotMTopnRequestResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBotMTopnRequestResponse), nil
 	}
 }
 
@@ -1141,6 +1253,22 @@ func (i *ListRequestTimelineInvoker) Invoke() (*model.ListRequestTimelineRespons
 	}
 }
 
+type ListResponseCodeTimelineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResponseCodeTimelineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListResponseCodeTimelineInvoker) Invoke() (*model.ListResponseCodeTimelineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResponseCodeTimelineResponse), nil
+	}
+}
+
 type ListSecurityReportSubscriptionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1202,6 +1330,38 @@ func (i *ListTopDomainsInvoker) Invoke() (*model.ListTopDomainsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListTopDomainsResponse), nil
+	}
+}
+
+type ListTopIpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTopIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTopIpInvoker) Invoke() (*model.ListTopIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTopIpResponse), nil
+	}
+}
+
+type ListTopUrlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTopUrlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTopUrlInvoker) Invoke() (*model.ListTopUrlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTopUrlResponse), nil
 	}
 }
 
@@ -1922,6 +2082,22 @@ func (i *UpdateIpGroupInvoker) Invoke() (*model.UpdateIpGroupResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateIpGroupResponse), nil
+	}
+}
+
+type UpdateIpReputationRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateIpReputationRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateIpReputationRuleInvoker) Invoke() (*model.UpdateIpReputationRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateIpReputationRuleResponse), nil
 	}
 }
 

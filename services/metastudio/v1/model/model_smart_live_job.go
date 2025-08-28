@@ -67,6 +67,9 @@ type SmartLiveJob struct {
 
 	// 使用的资源类型。 * PERIOD：包周期资源 * ONDEMAND：按需资源 * ONE_TIME：一次性资源 * UNKNOW：未知资源类型。
 	UsedResourceType *SmartLiveJobUsedResourceType `json:"used_resource_type,omitempty"`
+
+	// AI标识开关
+	IsAiMarkOn *bool `json:"is_ai_mark_on,omitempty"`
 }
 
 func (o SmartLiveJob) String() string {

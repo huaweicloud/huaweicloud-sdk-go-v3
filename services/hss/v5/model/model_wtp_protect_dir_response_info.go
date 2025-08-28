@@ -6,18 +6,19 @@ import (
 	"strings"
 )
 
+// WtpProtectDirResponseInfo 防护目录信息
 type WtpProtectDirResponseInfo struct {
 
-	// 防护目录列表
+	// **参数解释**: 防护目录列表 **取值范围**: 最少0条，最多50条
 	ProtectDirList *[]WtpProtectHostDirResponseInfo `json:"protect_dir_list,omitempty"`
 
 	// 排除文件类型
 	ExclueFileType *string `json:"exclue_file_type,omitempty"`
 
-	// 排除文件类型
+	// **参数解释**: 排除文件类型 **取值范围**: 字符长度0-512位
 	ExcludeFileType *string `json:"exclude_file_type,omitempty"`
 
-	// 防护模式，包含如下4种   - recovery ：恢复模式   - alarm ：告警模式
+	// **参数解释**: 防护模式 **取值范围**: - recovery ：拦截模式。 - alarm ：告警模式。
 	ProtectMode *string `json:"protect_mode,omitempty"`
 }
 

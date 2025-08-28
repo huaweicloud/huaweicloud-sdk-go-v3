@@ -15,6 +15,9 @@ type HumanModel2DAssetMeta struct {
 	// **参数解释**： 分身数字人的动作是否可编辑 **约束限制**： 不涉及 **取值范围**： * true: 动作可编辑 * false: 动作不可编辑
 	IsActionEditable *bool `json:"is_action_editable,omitempty"`
 
+	// **参数解释**： 是否是直播间复刻任务 **约束限制**： 不涉及 **取值范围**： * true: 是直播间复刻任务 * false: 不是直播间复刻任务
+	IsLiveCopy *bool `json:"is_live_copy,omitempty"`
+
 	// **参数解释**： 是否是实景分身数字人 **约束限制**： 实景分身数字人不做背景替换。 **取值范围**： * true: 实景分身数字人 * false: 普通分身数字人，不带背景。
 	IsRealBackground *bool `json:"is_real_background,omitempty"`
 

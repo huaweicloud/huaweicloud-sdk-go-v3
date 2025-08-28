@@ -14,7 +14,7 @@ type EsLoadBalancerResource struct {
 	// 负载均衡器名称。
 	Name *string `json:"name,omitempty"`
 
-	// 是否独享型LB。 - false：共享型。 - true：独享型。
+	// Indicates whether the LB is an exclusive LB. - false：共享型。 - true：独享型。
 	Guaranteed *string `json:"guaranteed,omitempty"`
 
 	// 资源账单信息 - 空：按需计费。 - 非空：包周期计费。

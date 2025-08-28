@@ -8,7 +8,7 @@ import (
 
 type CloneLoadbalancerResponseBodyLoadbalancerList struct {
 
-	// 新实例id
+	// **参数解释**：新实例的ID。  **取值范围**：不涉及
 	Id *string `json:"id,omitempty"`
 }
 

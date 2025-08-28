@@ -21,6 +21,9 @@ type LayerConfig struct {
 	// **参数解释**： 多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
 	GroupId *string `json:"group_id,omitempty"`
 
+	// **参数解释**： 播放到对应的段落，显示对应的图层。该字段向前兼容，可以不填，字段可选。 只支持直播业务。 **约束限制**： 段落sequence_no。 **默认取值**： 不涉及。
+	SequenceNo *int32 `json:"sequence_no,omitempty"`
+
 	Position *LayerPositionConfig `json:"position,omitempty"`
 
 	Size *LayerSizeConfig `json:"size,omitempty"`

@@ -693,6 +693,22 @@ func (i *ShowCustomerAccountBalancesInvoker) Invoke() (*model.ShowCustomerAccoun
 	}
 }
 
+type ShowCustomerExpenditureQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCustomerExpenditureQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowCustomerExpenditureQuotaInvoker) Invoke() (*model.ShowCustomerExpenditureQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCustomerExpenditureQuotaResponse), nil
+	}
+}
+
 type ShowCustomerMonthlySumInvoker struct {
 	*invoker.BaseInvoker
 }

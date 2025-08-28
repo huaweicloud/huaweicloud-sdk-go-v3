@@ -8,10 +8,10 @@ import (
 
 type TimingRangeConfigInfo struct {
 
-	// 时间范围
+	// **参数解释**: 自动关闭防护的时间段范围 **取值范围**: 字符长度0-512位
 	TimeRange *string `json:"time_range,omitempty"`
 
-	// 描述
+	// **参数解释**: 自动关闭防护的时间段描述 **取值范围**: 字符长度0-512位
 	Description *string `json:"description,omitempty"`
 }
 

@@ -9,16 +9,16 @@ import (
 // ChangeLoadbalancerChargeModeResponse Response Object
 type ChangeLoadbalancerChargeModeResponse struct {
 
-	// 转包周期下单成功的EIP ID列表
+	// **参数解释**：转包周期下单成功的EIP ID列表。  **取值范围**：不涉及
 	EipIdList *[]string `json:"eip_id_list,omitempty"`
 
-	// 转包周期下单成功的LB ID列表
+	// **参数解释**：转包周期下单成功的LB ID列表。  **取值范围**：不涉及
 	LoadbalancerIdList *[]string `json:"loadbalancer_id_list,omitempty"`
 
-	// 转包周期订单号
+	// **参数解释**：转包周期订单号。  **取值范围**：不涉及
 	OrderId *string `json:"order_id,omitempty"`
 
-	// 请求的UUIID
+	// **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
 	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

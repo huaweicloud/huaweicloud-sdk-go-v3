@@ -120,7 +120,7 @@ type EventProcessResponseInfo struct {
 	// **参数解释**： 逃逸方式 **取值范围**： 字符长度1-256位
 	EscapeMode *string `json:"escape_mode,omitempty"`
 
-	// **参数解释**： 逃逸后后执行的命令 **取值范围**： 字符长度1-256位
+	// **参数解释**： 逃逸后执行的命令 **取值范围**： 字符长度1-256位
 	EscapeCmd *string `json:"escape_cmd,omitempty"`
 
 	// **参数解释**： 进程启动文件hash **取值范围**： 字符长度1-256位

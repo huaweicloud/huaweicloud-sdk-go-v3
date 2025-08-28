@@ -309,6 +309,22 @@ func (i *ChangeVpcInvoker) Invoke() (*model.ChangeVpcResponse, error) {
 	}
 }
 
+type CreateLaunchTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateLaunchTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateLaunchTemplateInvoker) Invoke() (*model.CreateLaunchTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateLaunchTemplateResponse), nil
+	}
+}
+
 type CreatePostPaidServersInvoker struct {
 	*invoker.BaseInvoker
 }

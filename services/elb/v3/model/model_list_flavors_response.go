@@ -9,12 +9,12 @@ import (
 // ListFlavorsResponse Response Object
 type ListFlavorsResponse struct {
 
-	// 参数解释：规格列表。
+	// **参数解释**：规格列表。
 	Flavors *[]Flavor `json:"flavors,omitempty"`
 
 	PageInfo *PageInfo `json:"page_info,omitempty"`
 
-	// 参数解释：请求ID。  注：自动生成 。
+	// **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
 	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

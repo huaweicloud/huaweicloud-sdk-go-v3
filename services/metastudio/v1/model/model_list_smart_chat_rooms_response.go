@@ -15,6 +15,12 @@ type ListSmartChatRoomsResponse struct {
 	// **参数解释**： 智能交互对话总并发路数。
 	CountConcurrency *int32 `json:"count_concurrency,omitempty"`
 
+	// **参数解释**： 智能交互对话按接入端计费总路数。
+	CountClientNums *int32 `json:"count_client_nums,omitempty"`
+
+	// **参数解释**： 智能交互对话按接入端计费（Token）总路数。
+	CountClientNumsToken *int32 `json:"count_client_nums_token,omitempty"`
+
 	// 智能交互对话列表。
 	SmartChatRooms *[]SmartChatRoomBaseInfo `json:"smart_chat_rooms,omitempty"`
 

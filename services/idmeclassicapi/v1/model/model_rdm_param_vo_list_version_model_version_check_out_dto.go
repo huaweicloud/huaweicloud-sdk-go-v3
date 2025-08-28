@@ -12,7 +12,7 @@ type RdmParamVoListVersionModelVersionCheckOutDto struct {
 	ApplicationId *string `json:"applicationId,omitempty"`
 
 	// **参数解释：**  请求参数对象。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
-	Params *[]VersionModelVersionCheckOutDto `json:"params,omitempty"`
+	Params []VersionModelVersionCheckOutDto `json:"params"`
 }
 
 func (o RdmParamVoListVersionModelVersionCheckOutDto) String() string {

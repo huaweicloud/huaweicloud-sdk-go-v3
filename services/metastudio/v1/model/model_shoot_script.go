@@ -23,7 +23,7 @@ type ShootScript struct {
 	// 语音驱动时的动作配置。
 	AudioDriveActionConfig *[]AudioDriveActionConfig `json:"audio_drive_action_config,omitempty"`
 
-	// 语音驱动音频文件外部下载URL。  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。
+	// 语音驱动音频文件外部下载URL。  > * 只支持分身数字人视频制作  > * 需要先申请开通白名单后，才允许通过外部URL的音频文件来驱动分身数字人视频。  > * 音频文件需要存放在华为云OBS
 	AudioDriveFileExternalUrl *string `json:"audio_drive_file_external_url,omitempty"`
 
 	// 背景配置。

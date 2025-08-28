@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// JobEntities 子任务关联的资源列表
+// JobEntities **参数解释**：子任务关联的资源列表
 type JobEntities struct {
 
-	// 子任务关联的资源ID
+	// **参数解释**：子任务关联的资源ID。  **取值范围**：不涉及
 	ResourceId *string `json:"resource_id,omitempty"`
 
-	// 子任务关联的资源类型
+	// **参数解释**：子任务关联的资源类型。  **取值范围**：不涉及
 	ResourceType *string `json:"resource_type,omitempty"`
 }
 

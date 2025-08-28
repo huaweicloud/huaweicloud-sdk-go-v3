@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// RedirectPoolsExtendConfig 参数解释：转发到的后端主机组的配置。  约束限制：当action为REDIRECT_TO_POOL时生效。
+// RedirectPoolsExtendConfig **参数解释**：转发到的后端服务器组的配置。
 type RedirectPoolsExtendConfig struct {
 
-	// 参数解释：是否开启url重定向。
+	// **参数解释**：是否开启url重定向。  **取值范围**：true 开启，false 未开启。
 	RewriteUrlEnable *bool `json:"rewrite_url_enable,omitempty"`
 
 	RewriteUrlConfig *RewriteUrlConfig `json:"rewrite_url_config,omitempty"`

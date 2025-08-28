@@ -69,22 +69,6 @@ func (i *ConfirmAuthorizationsInvoker) Invoke() (*model.ConfirmAuthorizationsRes
 	}
 }
 
-type CreateAskQuestionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateAskQuestionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateAskQuestionInvoker) Invoke() (*model.CreateAskQuestionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateAskQuestionResponse), nil
-	}
-}
-
 type CreateCaseExtendsParamInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -165,22 +149,6 @@ func (i *CreateDiagnoseJobInvoker) Invoke() (*model.CreateDiagnoseJobResponse, e
 	}
 }
 
-type CreateEvaluateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateEvaluateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateEvaluateInvoker) Invoke() (*model.CreateEvaluateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateEvaluateResponse), nil
-	}
-}
-
 type CreateFeedbackInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -245,54 +213,6 @@ func (i *CreatePrivilegesInvoker) Invoke() (*model.CreatePrivilegesResponse, err
 	}
 }
 
-type CreateQaAskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateQaAskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateQaAskInvoker) Invoke() (*model.CreateQaAskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateQaAskResponse), nil
-	}
-}
-
-type CreateQaFeedbacksInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateQaFeedbacksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateQaFeedbacksInvoker) Invoke() (*model.CreateQaFeedbacksResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateQaFeedbacksResponse), nil
-	}
-}
-
-type CreateQuestionInSessionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateQuestionInSessionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateQuestionInSessionInvoker) Invoke() (*model.CreateQuestionInSessionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateQuestionInSessionResponse), nil
-	}
-}
-
 type CreateRelationsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -322,22 +242,6 @@ func (i *CreateScoresInvoker) Invoke() (*model.CreateScoresResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateScoresResponse), nil
-	}
-}
-
-type CreateSessionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateSessionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateSessionInvoker) Invoke() (*model.CreateSessionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateSessionResponse), nil
 	}
 }
 
@@ -498,22 +402,6 @@ func (i *ListAreaCodesInvoker) Invoke() (*model.ListAreaCodesResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListAreaCodesResponse), nil
-	}
-}
-
-type ListArticlesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListArticlesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListArticlesInvoker) Invoke() (*model.ListArticlesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListArticlesResponse), nil
 	}
 }
 
@@ -773,22 +661,6 @@ func (i *ListExtendsParamsInvoker) Invoke() (*model.ListExtendsParamsResponse, e
 	}
 }
 
-type ListFeedbackOptionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListFeedbackOptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListFeedbackOptionInvoker) Invoke() (*model.ListFeedbackOptionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListFeedbackOptionResponse), nil
-	}
-}
-
 type ListHasVerifiedContactsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -901,22 +773,6 @@ func (i *ListNewInstantMessagesInvoker) Invoke() (*model.ListNewInstantMessagesR
 	}
 }
 
-type ListNoticesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListNoticesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListNoticesInvoker) Invoke() (*model.ListNoticesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListNoticesResponse), nil
-	}
-}
-
 type ListOrderIncidentInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -978,22 +834,6 @@ func (i *ListProductCategoriesInvoker) Invoke() (*model.ListProductCategoriesRes
 		return nil, err
 	} else {
 		return result.(*model.ListProductCategoriesResponse), nil
-	}
-}
-
-type ListRecommendWordsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListRecommendWordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListRecommendWordsInvoker) Invoke() (*model.ListRecommendWordsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListRecommendWordsResponse), nil
 	}
 }
 
@@ -1077,22 +917,6 @@ func (i *ListSubCustomersInvoker) Invoke() (*model.ListSubCustomersResponse, err
 	}
 }
 
-type ListToolsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListToolsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListToolsInvoker) Invoke() (*model.ListToolsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListToolsResponse), nil
-	}
-}
-
 type ListTransportHistoriesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1170,22 +994,6 @@ func (i *ShowAccessoryLimitsInvoker) Invoke() (*model.ShowAccessoryLimitsRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowAccessoryLimitsResponse), nil
-	}
-}
-
-type ShowAssociatedQuestionsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowAssociatedQuestionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowAssociatedQuestionsInvoker) Invoke() (*model.ShowAssociatedQuestionsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowAssociatedQuestionsResponse), nil
 	}
 }
 
@@ -1365,38 +1173,6 @@ func (i *ShowPartnersServiceInfoInvoker) Invoke() (*model.ShowPartnersServiceInf
 	}
 }
 
-type ShowQaPairDetailInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowQaPairDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowQaPairDetailInvoker) Invoke() (*model.ShowQaPairDetailResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowQaPairDetailResponse), nil
-	}
-}
-
-type ShowQaPairsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowQaPairsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowQaPairsInvoker) Invoke() (*model.ShowQaPairsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowQaPairsResponse), nil
-	}
-}
-
 type ShowSignedLatestPublishedAgreementInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1410,22 +1186,6 @@ func (i *ShowSignedLatestPublishedAgreementInvoker) Invoke() (*model.ShowSignedL
 		return nil, err
 	} else {
 		return result.(*model.ShowSignedLatestPublishedAgreementResponse), nil
-	}
-}
-
-type ShowThemeInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowThemeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowThemeInvoker) Invoke() (*model.ShowThemeResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowThemeResponse), nil
 	}
 }
 

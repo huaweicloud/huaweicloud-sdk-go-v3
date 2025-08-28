@@ -1008,6 +1008,27 @@ func (c *IamClient) ShowPasswordPolicyV5Invoker(request *model.ShowPasswordPolic
 	return &ShowPasswordPolicyV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowTokenPolicyV5 查询账号的Token策略
+//
+// 查询账号的Token策略，Token策略控制账号下的所有身份类型（IAM用户、委托、联邦用户）是否允许获取Token（联邦认证获取的unscoped token不受Token策略影响）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) ShowTokenPolicyV5(request *model.ShowTokenPolicyV5Request) (*model.ShowTokenPolicyV5Response, error) {
+	requestDef := GenReqDefForShowTokenPolicyV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTokenPolicyV5Response), nil
+	}
+}
+
+// ShowTokenPolicyV5Invoker 查询账号的Token策略
+func (c *IamClient) ShowTokenPolicyV5Invoker(request *model.ShowTokenPolicyV5Request) *ShowTokenPolicyV5Invoker {
+	requestDef := GenReqDefForShowTokenPolicyV5()
+	return &ShowTokenPolicyV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateLoginPolicyV5 修改账号登录策略
 //
 // 该接口可以用于修改账号登录策略。
@@ -1048,6 +1069,27 @@ func (c *IamClient) UpdatePasswordPolicyV5(request *model.UpdatePasswordPolicyV5
 func (c *IamClient) UpdatePasswordPolicyV5Invoker(request *model.UpdatePasswordPolicyV5Request) *UpdatePasswordPolicyV5Invoker {
 	requestDef := GenReqDefForUpdatePasswordPolicyV5()
 	return &UpdatePasswordPolicyV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTokenPolicyV5 修改账号的Token策略
+//
+// 修改账号的Token策略，Token策略控制账号下的所有身份类型（IAM用户、委托、联邦用户）是否允许获取Token（联邦认证获取的unscoped token不受Token策略影响）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) UpdateTokenPolicyV5(request *model.UpdateTokenPolicyV5Request) (*model.UpdateTokenPolicyV5Response, error) {
+	requestDef := GenReqDefForUpdateTokenPolicyV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTokenPolicyV5Response), nil
+	}
+}
+
+// UpdateTokenPolicyV5Invoker 修改账号的Token策略
+func (c *IamClient) UpdateTokenPolicyV5Invoker(request *model.UpdateTokenPolicyV5Request) *UpdateTokenPolicyV5Invoker {
+	requestDef := GenReqDefForUpdateTokenPolicyV5()
+	return &UpdateTokenPolicyV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateServiceLinkedAgencyV5 创建服务关联委托

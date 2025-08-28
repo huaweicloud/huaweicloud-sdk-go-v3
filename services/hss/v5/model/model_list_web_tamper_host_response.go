@@ -12,7 +12,7 @@ type ListWebTamperHostResponse struct {
 	// **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
 	TotalNum *int32 `json:"total_num,omitempty"`
 
-	// data list
+	// 可开启网页防篡改的服务器列表
 	DataList       *[]WebTamperHostResponseInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                          `json:"-"`
 }

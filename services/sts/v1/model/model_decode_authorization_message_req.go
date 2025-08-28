@@ -9,7 +9,7 @@ import (
 // DecodeAuthorizationMessageReq 接口/v5/decode-authorization-message的Http请求体。
 type DecodeAuthorizationMessageReq struct {
 
-	// 加密的鉴权失败原因。
+	// 加密的鉴权失败原因，字符串长度范围[1,10240]。
 	EncodedMessage string `json:"encoded_message"`
 }
 

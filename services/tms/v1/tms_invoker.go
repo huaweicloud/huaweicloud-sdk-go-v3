@@ -165,6 +165,22 @@ func (i *ListTagValuesInvoker) Invoke() (*model.ListTagValuesResponse, error) {
 	}
 }
 
+type ListTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTagsInvoker) Invoke() (*model.ListTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTagsResponse), nil
+	}
+}
+
 type ShowApiVersionInvoker struct {
 	*invoker.BaseInvoker
 }

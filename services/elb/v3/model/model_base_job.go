@@ -36,7 +36,7 @@ type BaseJob struct {
 	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 参数解释：资源ID。
+	// **参数解释**：资源ID。
 	ResourceId *string `json:"resource_id,omitempty"`
 }
 

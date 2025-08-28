@@ -12,7 +12,7 @@ type WebTamperTimingOffConfigInfoRequestInfo struct {
 	WeekOffList *[]int32 `json:"week_off_list,omitempty"`
 
 	// 时间段
-	TimingRangeList *[]TimingRangeConfigInfo `json:"timing_range_list,omitempty"`
+	TimingRangeList *[]TimingRangeConfigRequestInfo `json:"timing_range_list,omitempty"`
 }
 
 func (o WebTamperTimingOffConfigInfoRequestInfo) String() string {

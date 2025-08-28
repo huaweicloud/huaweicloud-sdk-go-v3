@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// PoolRef
+// PoolRef **参数解释**：关联的后端服务器组。
 type PoolRef struct {
 
-	// 参数解释：后端服务器组ID。
+	// **参数解释**：后端服务器组ID。  **取值范围**：不涉及
 	Id string `json:"id"`
 }
 

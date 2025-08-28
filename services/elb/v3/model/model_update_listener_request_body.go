@@ -6,7 +6,6 @@ import (
 	"strings"
 )
 
-// UpdateListenerRequestBody This is a auto create Body Object
 type UpdateListenerRequestBody struct {
 	Listener *UpdateListenerOption `json:"listener"`
 }

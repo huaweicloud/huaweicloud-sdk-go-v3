@@ -37,6 +37,18 @@ type CustomerAccountChangeRecord struct {
 
 	// |参数名称：交易渠道流水号| |参数约束及描述：交易渠道流水号|
 	PaymentChannelNo *string `json:"payment_channel_no,omitempty"`
+
+	// |参数名称：消费时间| |参数约束及描述：消费时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ。包年/包月：与账单交易时间一致（交易类型为调帐时为账单的计费开始时间和结束时间），按需/分期：为账单的计费开始时间和结束时间。|
+	ConsumeTime *string `json:"consume_time,omitempty"`
+
+	// |参数名称：账号名称| |参数约束及描述：账号名称，范围限制：0-128|
+	AccountName *string `json:"account_name,omitempty"`
+
+	// |参数名称：云服务类型名称| |参数约束及描述：产品的云服务名称，范围限制：0-200|
+	CloudServiceTypeName *string `json:"cloud_service_type_name,omitempty"`
+
+	// |参数名称：资源类型名称，该字段为预留字段。| |参数约束及描述：产品的资源类型名称，范围限制：0-200|
+	ResourceTypeName *string `json:"resource_type_name,omitempty"`
 }
 
 func (o CustomerAccountChangeRecord) String() string {

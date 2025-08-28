@@ -6,7 +6,6 @@ import (
 	"strings"
 )
 
-// UpdateLogtankRequestBody 更新云日志请求体
 type UpdateLogtankRequestBody struct {
 	Logtank *UpdateLogtankOption `json:"logtank"`
 }

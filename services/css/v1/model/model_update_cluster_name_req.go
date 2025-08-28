@@ -10,6 +10,9 @@ type UpdateClusterNameReq struct {
 
 	// 修改后集群名称。
 	DisplayName string `json:"display_name"`
+
+	// 修改后集群描述。
+	Desc *string `json:"desc,omitempty"`
 }
 
 func (o UpdateClusterNameReq) String() string {

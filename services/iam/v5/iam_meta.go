@@ -918,6 +918,17 @@ func GenReqDefForShowPasswordPolicyV5() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowTokenPolicyV5() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v5/token-policy").
+		WithResponse(new(model.ShowTokenPolicyV5Response)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateLoginPolicyV5() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -938,6 +949,21 @@ func GenReqDefForUpdatePasswordPolicyV5() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v5/password-policy").
 		WithResponse(new(model.UpdatePasswordPolicyV5Response)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateTokenPolicyV5() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v5/token-policy").
+		WithResponse(new(model.UpdateTokenPolicyV5Response)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

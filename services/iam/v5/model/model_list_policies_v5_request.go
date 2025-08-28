@@ -12,7 +12,7 @@ import (
 // ListPoliciesV5Request Request Object
 type ListPoliciesV5Request struct {
 
-	// 每页显示的条目数量。
+	// 每页显示的条目数量，范围为1到200条，默认为100条。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 分页标记，长度为4到400个字符，只包含字母、数字、\"+\"、\"/\"、\"=\"、\"-\"和\"_\"的字符串。

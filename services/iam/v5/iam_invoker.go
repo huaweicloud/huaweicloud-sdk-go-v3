@@ -757,6 +757,22 @@ func (i *ShowPasswordPolicyV5Invoker) Invoke() (*model.ShowPasswordPolicyV5Respo
 	}
 }
 
+type ShowTokenPolicyV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTokenPolicyV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTokenPolicyV5Invoker) Invoke() (*model.ShowTokenPolicyV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTokenPolicyV5Response), nil
+	}
+}
+
 type UpdateLoginPolicyV5Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -786,6 +802,22 @@ func (i *UpdatePasswordPolicyV5Invoker) Invoke() (*model.UpdatePasswordPolicyV5R
 		return nil, err
 	} else {
 		return result.(*model.UpdatePasswordPolicyV5Response), nil
+	}
+}
+
+type UpdateTokenPolicyV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTokenPolicyV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateTokenPolicyV5Invoker) Invoke() (*model.UpdateTokenPolicyV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTokenPolicyV5Response), nil
 	}
 }
 

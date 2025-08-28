@@ -9,7 +9,7 @@ import (
 // CreateMemberHealthCheckJobRequest Request Object
 type CreateMemberHealthCheckJobRequest struct {
 
-	// 参数解释：后端服务器ID。
+	// **参数解释**：后端服务器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
 	MemberId string `json:"member_id"`
 
 	Body *CreateMemberHealthCheckJobRequestBody `json:"body,omitempty"`

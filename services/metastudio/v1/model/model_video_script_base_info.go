@@ -23,7 +23,7 @@ type VideoScriptBaseInfo struct {
 	// 数字人模型资产ID，可以从资产库中查询。
 	ModelAssetId *string `json:"model_asset_id,omitempty"`
 
-	// 数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
+	// 数字人模型类型。  * HUMAN_MODEL_2D：分身数字人
 	ModelAssetType *VideoScriptBaseInfoModelAssetType `json:"model_asset_type,omitempty"`
 
 	// 剧本封面下载url。
@@ -57,16 +57,12 @@ type VideoScriptBaseInfoModelAssetType struct {
 
 type VideoScriptBaseInfoModelAssetTypeEnum struct {
 	HUMAN_MODEL_2_D VideoScriptBaseInfoModelAssetType
-	HUMAN_MODEL_3_D VideoScriptBaseInfoModelAssetType
 }
 
 func GetVideoScriptBaseInfoModelAssetTypeEnum() VideoScriptBaseInfoModelAssetTypeEnum {
 	return VideoScriptBaseInfoModelAssetTypeEnum{
 		HUMAN_MODEL_2_D: VideoScriptBaseInfoModelAssetType{
 			value: "HUMAN_MODEL_2D",
-		},
-		HUMAN_MODEL_3_D: VideoScriptBaseInfoModelAssetType{
-			value: "HUMAN_MODEL_3D",
 		},
 	}
 }

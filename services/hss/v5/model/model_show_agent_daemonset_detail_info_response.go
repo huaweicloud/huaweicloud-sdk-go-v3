@@ -23,7 +23,7 @@ type ShowAgentDaemonsetDetailInfoResponse struct {
 
 	DsInfo *ClusterInfoResponseDsInfo `json:"ds_info,omitempty"`
 
-	// **参数解释**: 集群ds安装状态 **约束限制**: 不涉及 **取值范围**: 包含如下： - installing：安装中。 - install_success：安装成功。 - install_failed：安装失败。 - partically_success：部分安装成功。 - upgrade_success：升级成功。  - upgrade_failed：升级失败。 - upgrading：升级中。 - none：未安装。  **默认取值**: 不涉及
+	// **参数解释**: 集群ds安装状态 **约束限制**: 不涉及 **取值范围**: 包含如下： - installing：安装中。 - install_success：安装成功。 - install_failed：安装失败。 - partially_success：部分安装成功。 - upgrade_success：升级成功。  - upgrade_failed：升级失败。 - upgrading：升级中。 - none：未安装。  **默认取值**: 不涉及
 	InstalledStatus *string `json:"installed_status,omitempty"`
 
 	ScheduleInfo   *CreateDaemonsetRequestBodyScheduleInfo `json:"schedule_info,omitempty"`

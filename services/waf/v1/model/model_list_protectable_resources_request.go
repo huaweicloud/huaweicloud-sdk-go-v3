@@ -15,6 +15,7 @@ type ListProtectableResourcesRequest struct {
 	// **参数解释：** 租户region **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Region *string `json:"region,omitempty"`
 
+	// **参数解释：** 查询的防护资源类型，目前支持的资源类型为:elb **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** elb
 	ResourceType string `json:"resource_type"`
 }
 

@@ -11,7 +11,7 @@ type RdmParamVoMultiViewModelDto struct {
 	// 应用ID。
 	ApplicationId *string `json:"applicationId,omitempty"`
 
-	Params *MultiViewModelCreateDto `json:"params,omitempty"`
+	Params *MultiViewModelCreateDto `json:"params"`
 }
 
 func (o RdmParamVoMultiViewModelDto) String() string {

@@ -9,7 +9,7 @@ import (
 // ShowMemberHealthCheckJobRequest Request Object
 type ShowMemberHealthCheckJobRequest struct {
 
-	// 参数解释：创建后端服务器检测任务的接口返回的job_id。
+	// **参数解释**：创建后端服务器检测任务的接口返回的job_id。
 	JobId string `json:"job_id"`
 }
 

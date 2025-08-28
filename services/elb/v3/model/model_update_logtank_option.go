@@ -6,13 +6,12 @@ import (
 	"strings"
 )
 
-// UpdateLogtankOption 更新云日志请求参数。
 type UpdateLogtankOption struct {
 
-	// 日志组别id，其他（非ELB）服务提供
+	// **参数解释**：日志组别id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
 	LogGroupId *string `json:"log_group_id,omitempty"`
 
-	// 日志订阅主题id，其他（非ELB）服务提供
+	// **参数解释**：日志订阅主题id，其他（非ELB）服务提供。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
 	LogTopicId *string `json:"log_topic_id,omitempty"`
 }
 

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// SubJob 子任务
+// SubJob **参数解释**：子任务
 type SubJob struct {
 
 	// 任务状态
@@ -36,10 +36,10 @@ type SubJob struct {
 	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 参数解释：资源ID。
+	// **参数解释**：资源ID。
 	ResourceId *string `json:"resource_id,omitempty"`
 
-	// 任务关联的资源列表
+	// **参数解释**：任务关联的资源列表。
 	Entities *[]JobEntities `json:"entities,omitempty"`
 }
 

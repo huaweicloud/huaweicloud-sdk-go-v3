@@ -9,7 +9,7 @@ import (
 // PreoccupyIp
 type PreoccupyIp struct {
 
-	// 预占IP总数
+	// **参数解释**：预占IP总数。  **取值范围**：大于等于0整数。
 	Total int32 `json:"total"`
 }
 

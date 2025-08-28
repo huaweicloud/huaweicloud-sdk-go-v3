@@ -24,10 +24,10 @@ type BudgetRecordInfo struct {
 	// |参数名称：预算模式| |参数的约束及描述：范围限制：0-10。MONTHLY：月度预算 PACKAGE：一次性预算|
 	BudgetType *string `json:"budget_type,omitempty"`
 
-	// |参数名称：伙伴名称| |参数的约束及描述：范围限制：0-64|
+	// |参数名称：伙伴名称| |参数的约束及描述：范围限制：0-256|
 	PartnerCorpName *string `json:"partner_corp_name,omitempty"`
 
-	// |参数名称：伙伴账号名| |参数的约束及描述：范围限制：0-256|
+	// |参数名称：伙伴账号名| |参数的约束及描述：范围限制：0-128|
 	PartnerAccountName *string `json:"partner_account_name,omitempty"`
 }
 

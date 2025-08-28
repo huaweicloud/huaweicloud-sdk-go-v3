@@ -8,10 +8,10 @@ import (
 
 type Extension struct {
 
-	// ep id
+	// **参数解释**：EP ID.  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
 	EpId *string `json:"ep_id,omitempty"`
 
-	// ep service id
+	// **参数解释**：EP Service ID.  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
 	EpServiceId *string `json:"ep_service_id,omitempty"`
 }
 

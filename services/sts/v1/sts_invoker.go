@@ -5,6 +5,22 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/sts/v1/model"
 )
 
+type AssumeAgencyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssumeAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AssumeAgencyInvoker) Invoke() (*model.AssumeAgencyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssumeAgencyResponse), nil
+	}
+}
+
 type DecodeAuthorizationMessageInvoker struct {
 	*invoker.BaseInvoker
 }

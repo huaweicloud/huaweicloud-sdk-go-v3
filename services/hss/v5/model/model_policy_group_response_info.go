@@ -21,19 +21,19 @@ type PolicyGroupResponseInfo struct {
 	// **参数解释**: 关联服务器数 **取值范围**: 取值0-1000000
 	HostNum *int32 `json:"host_num,omitempty"`
 
-	// **参数解释**: 是否是默认策略组 **取值范围**: - true: 是默认策略组 - false: 不是默认策略组
+	// **参数解释**: 是否是默认策略组 **取值范围**: - true: 是默认策略组。 - false: 不是默认策略组。
 	DefaultGroup *bool `json:"default_group,omitempty"`
 
-	// **参数解释**: 是否可以删除，只有default_group为false且host_num为1时可以删除 **取值范围**: - true: 支持删除 - false: 不支持删除
+	// **参数解释**: 是否可以删除，只有default_group为false且host_num为0时可以删除 **取值范围**: - true: 可以删除。 - false: 不可以删除。
 	Deletable *bool `json:"deletable,omitempty"`
 
-	// **参数解释**: 支持的操作系统 **取值范围**: - Linux: 支持Linux操作系统 - Windows: 支持Windows操作系统
+	// **参数解释**: 支持的操作系统 **取值范围**: - Linux: 支持Linux操作系统。 - Windows: 支持Windows操作系统。
 	SupportOs *string `json:"support_os,omitempty"`
 
-	// **参数解释**: 支持的版本 **取值范围**: - hss.version.advanced: 专业版 - hss.version.enterprise: 企业版 - hss.version.premium: 旗舰版 - hss.version.wtp: 网页防篡改版 - hss.version.container.enterprise: 容器版
+	// **参数解释**: 支持的版本 **取值范围**: - hss.version.advanced: 专业版。 - hss.version.enterprise: 企业版。 - hss.version.premium: 旗舰版。 - hss.version.wtp: 网页防篡改版。 - hss.version.container.enterprise: 容器版。
 	SupportVersion *string `json:"support_version,omitempty"`
 
-	// **参数解释**: 防护模式 **取值范围**: - high_detection: 高检出模式 - equalization: 均衡模式
+	// **参数解释**: 防护模式 **取值范围**: - high_detection: 高检出模式。 - equalization: 均衡模式。
 	ProtectMode *string `json:"protect_mode,omitempty"`
 }
 

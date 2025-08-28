@@ -10,7 +10,7 @@ import (
 type UpdateIpGroupRequestBody struct {
 
 	// 地址组名称
-	Name string `json:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 以逗号分隔的ip或ip段
 	Ips string `json:"ips"`

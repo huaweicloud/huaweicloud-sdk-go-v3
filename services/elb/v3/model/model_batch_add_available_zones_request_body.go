@@ -6,10 +6,9 @@ import (
 	"strings"
 )
 
-// BatchAddAvailableZonesRequestBody 新增负载均衡器可用区请求体
 type BatchAddAvailableZonesRequestBody struct {
 
-	// 新增的可用区列表，不能为空。
+	// **参数解释**：新增的可用区列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
 	AvailabilityZoneList []string `json:"availability_zone_list"`
 }
 

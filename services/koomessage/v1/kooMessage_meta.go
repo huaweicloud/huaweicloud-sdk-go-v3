@@ -416,7 +416,7 @@ func GenReqDefForListAimTemplateMaterials() *def.HttpRequestDef {
 func GenReqDefForListAimTemplateReports() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v1/aim/tempalte-reports/query").
+		WithPath("/v1/aim/template-reports/query").
 		WithResponse(new(model.ListAimTemplateReportsResponse)).
 		WithContentType("application/json")
 

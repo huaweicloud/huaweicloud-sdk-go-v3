@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// MainJob 实例复制等异步任务查询的响应体定义
+// MainJob **参数解释**：实例复制等异步任务查询的响应体定义。
 type MainJob struct {
 
 	// 任务状态
@@ -36,10 +36,10 @@ type MainJob struct {
 	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 参数解释：资源ID。
+	// **参数解释**：资源ID。
 	ResourceId *string `json:"resource_id,omitempty"`
 
-	// 子任务列表
+	// **参数解释**：子任务列表。
 	SubJobs *[]SubJob `json:"sub_jobs,omitempty"`
 }
 

@@ -924,6 +924,27 @@ func (c *BssintlClient) ShowCustomerAccountBalancesInvoker(request *model.ShowCu
 	return &ShowCustomerAccountBalancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowCustomerExpenditureQuota 查询消费配额
+//
+// 功能描述：客户可以查询自身的消费配额信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssintlClient) ShowCustomerExpenditureQuota(request *model.ShowCustomerExpenditureQuotaRequest) (*model.ShowCustomerExpenditureQuotaResponse, error) {
+	requestDef := GenReqDefForShowCustomerExpenditureQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCustomerExpenditureQuotaResponse), nil
+	}
+}
+
+// ShowCustomerExpenditureQuotaInvoker 查询消费配额
+func (c *BssintlClient) ShowCustomerExpenditureQuotaInvoker(request *model.ShowCustomerExpenditureQuotaRequest) *ShowCustomerExpenditureQuotaInvoker {
+	requestDef := GenReqDefForShowCustomerExpenditureQuota()
+	return &ShowCustomerExpenditureQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowCustomerMonthlySum 查询汇总账单
 //
 // 客户在自建平台查询自身的消费汇总账单，此账单按月汇总消费数据。

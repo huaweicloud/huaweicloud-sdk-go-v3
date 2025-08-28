@@ -14,6 +14,9 @@ type StartAutoCreateSnapshotsReq struct {
 	// 设置快照保留的天数，范围是1～90。系统在半点时刻会自动删除超过保留天数的快照。
 	Keepday int32 `json:"keepday"`
 
+	// 自动创建快照的执行频次。
+	Frequency *string `json:"frequency,omitempty"`
+
 	// 每天创建快照的时刻，只支持整点，后面需加上时区，格式为“HH:mm z”，“HH:mm”表示整点时间，“z”表示时区。比如“00:00 GMT+08:00”、“01:00 GMT+08:00”等。
 	Period string `json:"period"`
 

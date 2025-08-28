@@ -9,7 +9,7 @@ import (
 // GetCallerIdentityResponse Response Object
 type GetCallerIdentityResponse struct {
 
-	// 华为云账号ID。
+	// 账号ID。
 	AccountId *string `json:"account_id,omitempty"`
 
 	// 主体URN。

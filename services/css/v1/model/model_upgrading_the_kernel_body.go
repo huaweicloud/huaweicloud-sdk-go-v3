@@ -24,7 +24,10 @@ type UpgradingTheKernelBody struct {
 	Agency string `json:"agency"`
 
 	// 是否校验负载。默认为true。 - true：进行校验。 - false：不进行校验。
-	CheckLoad *bool `json:"check_load,omitempty"`
+	ClusterLoadCheck *bool `json:"cluster_load_check,omitempty"`
+
+	// 数据节点迁移数据并发度。
+	BatchSize *int32 `json:"batch_size,omitempty"`
 }
 
 func (o UpgradingTheKernelBody) String() string {

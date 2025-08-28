@@ -998,9 +998,9 @@ func (c *CssClient) StartLogAutoBackupPolicyInvoker(request *model.StartLogAutoB
 	return &StartLogAutoBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// StartLogs 开启日志功能
+// StartLogs 开启日志备份或日志采集功能
 //
-// 该接口用于开启日志功能。
+// 该接口用于开启集群的日志备份或日志采集功能开关。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CssClient) StartLogs(request *model.StartLogsRequest) (*model.StartLogsResponse, error) {
@@ -1013,7 +1013,7 @@ func (c *CssClient) StartLogs(request *model.StartLogsRequest) (*model.StartLogs
 	}
 }
 
-// StartLogsInvoker 开启日志功能
+// StartLogsInvoker 开启日志备份或日志采集功能
 func (c *CssClient) StartLogsInvoker(request *model.StartLogsRequest) *StartLogsInvoker {
 	requestDef := GenReqDefForStartLogs()
 	return &StartLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1229,9 +1229,9 @@ func (c *CssClient) UpdateBatchClustersTagsInvoker(request *model.UpdateBatchClu
 	return &UpdateBatchClustersTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateClusterName 修改集群名称
+// UpdateClusterName 修改集群名称或描述
 //
-// 该接口用于修改集群名称。
+// 该接口用于修改集群名称或描述。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CssClient) UpdateClusterName(request *model.UpdateClusterNameRequest) (*model.UpdateClusterNameResponse, error) {
@@ -1244,7 +1244,7 @@ func (c *CssClient) UpdateClusterName(request *model.UpdateClusterNameRequest) (
 	}
 }
 
-// UpdateClusterNameInvoker 修改集群名称
+// UpdateClusterNameInvoker 修改集群名称或描述
 func (c *CssClient) UpdateClusterNameInvoker(request *model.UpdateClusterNameRequest) *UpdateClusterNameInvoker {
 	requestDef := GenReqDefForUpdateClusterName()
 	return &UpdateClusterNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

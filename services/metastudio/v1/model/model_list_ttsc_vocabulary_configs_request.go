@@ -24,7 +24,7 @@ type ListTtscVocabularyConfigsRequest struct {
 	// 第三方用户ID。不允许输入中文。
 	XAppUserId *string `json:"X-App-UserId,omitempty"`
 
-	// 自定义读法类型 CHINESE_G2P：拼音
+	// 自定义读法类型。 - CHINESE_G2P：拼音 - PHONETIC_SYMBOL：音标 - CONTINUUM：连读 - ALIAS：别名 - SAY_AS：数字英文读法
 	Type *string `json:"type,omitempty"`
 
 	// 声音模型名称

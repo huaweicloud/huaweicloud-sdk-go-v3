@@ -9,7 +9,7 @@ import (
 // AttachUserPolicyReqBody Contains information about a id of a user.
 type AttachUserPolicyReqBody struct {
 
-	// IAM用户ID，长度为1到64个字符，只包含字母、数字和\"-\"的字符串。
+	// IAM用户ID。
 	UserId string `json:"user_id"`
 }
 

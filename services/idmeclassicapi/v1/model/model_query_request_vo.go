@@ -16,7 +16,7 @@ type QueryRequestVo struct {
 	// **参数解释：**  是否加密。  **约束限制：**  不涉及。  **取值范围：**  - true：加密。 - false：不加密。  **默认取值：**  不涉及。
 	Decrypt *bool `json:"decrypt,omitempty"`
 
-	// **参数解释：**  实体类型。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
+	// **参数解释：**  实体类型。  **约束限制：**  不涉及。  **取值范围：**  - ENTITY：数据实体。 - RRELATION：关系实体。  **默认取值：**  不涉及。
 	EntityType *string `json:"entityType,omitempty"`
 
 	Filter *QueryCondition `json:"filter,omitempty"`

@@ -27,10 +27,10 @@ type ContainerNodeInfo struct {
 	// **参数解释**: 防护状态 **取值范围**: 包含如下2种。   - closed ：关闭。   - opened ：开启。
 	ProtectStatus *string `json:"protect_status,omitempty"`
 
-	// **参数解释**: 防护是否中断 **取值范围**:   - ture：防护中断。   - false：防护未中断。
+	// **参数解释**: 防护是否中断 **取值范围**:   - true：防护中断。   - false：防护未中断。
 	ProtectInterrupt *bool `json:"protect_interrupt,omitempty"`
 
-	// **参数解释**: 防护是否降级 **取值范围**:   - ture：防护降级。   - false：防护未降级。
+	// **参数解释**: 防护是否降级 **取值范围**:   - true：防护降级。   - false：防护未降级。
 	ProtectDegradation *bool `json:"protect_degradation,omitempty"`
 
 	// **参数解释**: 防护降级原因 **取值范围**: 字符长度1-32位

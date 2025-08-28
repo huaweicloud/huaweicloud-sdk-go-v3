@@ -21,6 +21,9 @@ type UpdateVirtualInterface struct {
 	// 虚拟接口带宽配置
 	Bandwidth *int32 `json:"bandwidth,omitempty"`
 
+	// 虚拟接口的优先级，支持两种优先级状态normal和low。 接口优先级相同时表示负载关系，接口优先级不同时表示主备关系，出云流量优先转到优先级更高的normal接口。 目前仅BGP模式接口支持。
+	Priority *UpdateVirtualInterfacePriority `json:"priority,omitempty"`
+
 	// 远端子网列表，记录租户侧的cidrs
 	RemoteEpGroup *[]string `json:"remote_ep_group,omitempty"`
 
@@ -44,6 +47,53 @@ func (o UpdateVirtualInterface) String() string {
 	}
 
 	return strings.Join([]string{"UpdateVirtualInterface", string(data)}, " ")
+}
+
+type UpdateVirtualInterfacePriority struct {
+	value string
+}
+
+type UpdateVirtualInterfacePriorityEnum struct {
+	NORMAL UpdateVirtualInterfacePriority
+	LOW    UpdateVirtualInterfacePriority
+}
+
+func GetUpdateVirtualInterfacePriorityEnum() UpdateVirtualInterfacePriorityEnum {
+	return UpdateVirtualInterfacePriorityEnum{
+		NORMAL: UpdateVirtualInterfacePriority{
+			value: "normal",
+		},
+		LOW: UpdateVirtualInterfacePriority{
+			value: "low",
+		},
+	}
+}
+
+func (c UpdateVirtualInterfacePriority) Value() string {
+	return c.value
+}
+
+func (c UpdateVirtualInterfacePriority) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateVirtualInterfacePriority) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type UpdateVirtualInterfaceStatus struct {

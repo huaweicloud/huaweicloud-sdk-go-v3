@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CreateMemberHealthCheckJobRequestBody 参数解释：创建后端服务器检测任务请求body体。
+// CreateMemberHealthCheckJobRequestBody **参数解释**：创建后端服务器检测任务请求body体。
 type CreateMemberHealthCheckJobRequestBody struct {
 	MemberCheck *CreateMemberHealthCheckJobOption `json:"member_check,omitempty"`
 }

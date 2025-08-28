@@ -56,6 +56,9 @@ type ListDigitalHumanVideoRequest struct {
 
 	// 任务ID。
 	JobId *string `json:"job_id,omitempty"`
+
+	// 批量查询的任务ID
+	JobIds *[]string `json:"job_ids,omitempty"`
 }
 
 func (o ListDigitalHumanVideoRequest) String() string {

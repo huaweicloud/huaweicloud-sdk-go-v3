@@ -12,7 +12,7 @@ type RdmParamVoQueryShareDocs struct {
 	ApplicationId *string `json:"applicationId,omitempty"`
 
 	// **参数解释**：  结构化文档ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-	Params *string `json:"params,omitempty"`
+	Params string `json:"params"`
 }
 
 func (o RdmParamVoQueryShareDocs) String() string {

@@ -9,7 +9,7 @@ import (
 // BatchDeleteMembersRequestBody This is a auto create Body Object
 type BatchDeleteMembersRequestBody struct {
 
-	// 批量删除后端服务器请求body。
+	// **参数解释**：批量删除后端服务器请求body。  **约束限制**：不涉及
 	Members []BatchDeleteMembersOption `json:"members"`
 }
 

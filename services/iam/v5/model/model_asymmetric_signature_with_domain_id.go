@@ -12,7 +12,7 @@ type AsymmetricSignatureWithDomainId struct {
 	// 账号ID。
 	DomainId string `json:"domain_id"`
 
-	// 凭证非对称签名开关。
+	// 非对称签名开关。
 	AsymmetricSignatureSwitch bool `json:"asymmetric_signature_switch"`
 }
 

@@ -21,7 +21,7 @@ type ListContainersRequest struct {
 	// **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
 	ImageName *string `json:"image_name,omitempty"`
 
-	// **参数解释**: 是否是集群纳管的容器 **约束限制**: 不涉及 **取值范围**:   - ture：是集群纳管的容器。   - false：不是集群纳管的容器。 **默认取值**: false
+	// **参数解释**: 是否是集群纳管的容器 **约束限制**: 不涉及 **取值范围**:   - true：是集群纳管的容器。   - false：不是集群纳管的容器。 **默认取值**: false
 	ClusterContainer *bool `json:"cluster_container,omitempty"`
 
 	// **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10

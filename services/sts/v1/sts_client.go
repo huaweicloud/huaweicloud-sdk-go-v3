@@ -19,6 +19,27 @@ func StsClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// AssumeAgency 通过委托或者信任委托获取临时安全凭证
+//
+// 通过委托或者信任委托获取临时安全凭证，临时安全凭证可用于对云资源发起访问。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *StsClient) AssumeAgency(request *model.AssumeAgencyRequest) (*model.AssumeAgencyResponse, error) {
+	requestDef := GenReqDefForAssumeAgency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssumeAgencyResponse), nil
+	}
+}
+
+// AssumeAgencyInvoker 通过委托或者信任委托获取临时安全凭证
+func (c *StsClient) AssumeAgencyInvoker(request *model.AssumeAgencyRequest) *AssumeAgencyInvoker {
+	requestDef := GenReqDefForAssumeAgency()
+	return &AssumeAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DecodeAuthorizationMessage 解密鉴权失败的原因
 //
 // 解密鉴权失败的原因。
@@ -42,7 +63,7 @@ func (c *StsClient) DecodeAuthorizationMessageInvoker(request *model.DecodeAutho
 
 // GetCallerIdentity 获取调用者身份信息
 //
-// 获取调用者（华为云用户，代理等）身份信息。
+// 获取调用者（用户，委托等）身份信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *StsClient) GetCallerIdentity(request *model.GetCallerIdentityRequest) (*model.GetCallerIdentityResponse, error) {

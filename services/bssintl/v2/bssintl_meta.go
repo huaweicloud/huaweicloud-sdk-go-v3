@@ -967,6 +967,17 @@ func GenReqDefForShowCustomerAccountBalances() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowCustomerExpenditureQuota() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/accounts/customer-accounts/expenditure-quota").
+		WithResponse(new(model.ShowCustomerExpenditureQuotaResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowCustomerMonthlySum() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

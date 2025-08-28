@@ -60,6 +60,10 @@ var (
 		"https://bms.my-kualalumpur-1.myhuaweicloud.com")
 	RU_MOSCOW_1 = region.NewRegion("ru-moscow-1",
 		"https://bms.ru-moscow-1.myhuaweicloud.com")
+	CN_SOUTH_4 = region.NewRegion("cn-south-4",
+		"https://bms.cn-south-4.myhuaweicloud.com")
+	CN_SOUTHWEST_3 = region.NewRegion("cn-southwest-3",
+		"https://bms.cn-southwest-3.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -89,6 +93,8 @@ var staticFields = map[string]*region.Region{
 	"cn-east-4":        CN_EAST_4,
 	"my-kualalumpur-1": MY_KUALALUMPUR_1,
 	"ru-moscow-1":      RU_MOSCOW_1,
+	"cn-south-4":       CN_SOUTH_4,
+	"cn-southwest-3":   CN_SOUTHWEST_3,
 }
 
 var provider = region.DefaultProviderChain("BMS")
