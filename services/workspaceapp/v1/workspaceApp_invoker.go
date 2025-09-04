@@ -405,6 +405,22 @@ func (i *BatchDeleteAppGroupInvoker) Invoke() (*model.BatchDeleteAppGroupRespons
 	}
 }
 
+type CheckAppGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckAppGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckAppGroupInvoker) Invoke() (*model.CheckAppGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckAppGroupResponse), nil
+	}
+}
+
 type CreateAppGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -757,6 +773,22 @@ func (i *ListCloudStorageAssignmentInvoker) Invoke() (*model.ListCloudStorageAss
 	}
 }
 
+type ListFoldersAndFilesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFoldersAndFilesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListFoldersAndFilesInvoker) Invoke() (*model.ListFoldersAndFilesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFoldersAndFilesResponse), nil
+	}
+}
+
 type ListProjectConfigsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -773,6 +805,22 @@ func (i *ListProjectConfigsInvoker) Invoke() (*model.ListProjectConfigsResponse,
 	}
 }
 
+type ResetUserProfileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetUserProfileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ResetUserProfileInvoker) Invoke() (*model.ResetUserProfileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetUserProfileResponse), nil
+	}
+}
+
 type ShowProjectConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -786,6 +834,38 @@ func (i *ShowProjectConfigInvoker) Invoke() (*model.ShowProjectConfigResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowProjectConfigResponse), nil
+	}
+}
+
+type TransferFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *TransferFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *TransferFileInvoker) Invoke() (*model.TransferFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.TransferFileResponse), nil
+	}
+}
+
+type TransferFilePreInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *TransferFilePreInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *TransferFilePreInvoker) Invoke() (*model.TransferFilePreResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.TransferFilePreResponse), nil
 	}
 }
 
@@ -962,6 +1042,22 @@ func (i *BatchDeleteImageSubJobsInvoker) Invoke() (*model.BatchDeleteImageSubJob
 		return nil, err
 	} else {
 		return result.(*model.BatchDeleteImageSubJobsResponse), nil
+	}
+}
+
+type CountImageSubJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountImageSubJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CountImageSubJobsInvoker) Invoke() (*model.CountImageSubJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountImageSubJobsResponse), nil
 	}
 }
 
@@ -1557,6 +1653,38 @@ func (i *UpdatePolicyTemplateInvoker) Invoke() (*model.UpdatePolicyTemplateRespo
 	}
 }
 
+type ShowPrivacyStatementInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPrivacyStatementInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPrivacyStatementInvoker) Invoke() (*model.ShowPrivacyStatementResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPrivacyStatementResponse), nil
+	}
+}
+
+type SignPrivacyStatementInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SignPrivacyStatementInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SignPrivacyStatementInvoker) Invoke() (*model.SignPrivacyStatementResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SignPrivacyStatementResponse), nil
+	}
+}
+
 type CheckQuotaInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2101,6 +2229,22 @@ func (i *ShowAccessAgentLatestVersionInvoker) Invoke() (*model.ShowAccessAgentLa
 	}
 }
 
+type ShowHdaUpgradeFlagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHdaUpgradeFlagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowHdaUpgradeFlagInvoker) Invoke() (*model.ShowHdaUpgradeFlagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHdaUpgradeFlagResponse), nil
+	}
+}
+
 type ShowServerInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2290,6 +2434,70 @@ func (i *UpdateServerGroupInvoker) Invoke() (*model.UpdateServerGroupResponse, e
 		return nil, err
 	} else {
 		return result.(*model.UpdateServerGroupResponse), nil
+	}
+}
+
+type ValidateServerGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ValidateServerGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ValidateServerGroupInvoker) Invoke() (*model.ValidateServerGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ValidateServerGroupResponse), nil
+	}
+}
+
+type ExportAppConnectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportAppConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExportAppConnectionInvoker) Invoke() (*model.ExportAppConnectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportAppConnectionResponse), nil
+	}
+}
+
+type ExportSessionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportSessionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExportSessionsInvoker) Invoke() (*model.ExportSessionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportSessionsResponse), nil
+	}
+}
+
+type ExportUserConnectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportUserConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExportUserConnectionInvoker) Invoke() (*model.ExportUserConnectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportUserConnectionResponse), nil
 	}
 }
 

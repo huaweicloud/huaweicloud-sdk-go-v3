@@ -55,16 +55,16 @@ type ListUserConnectionReq struct {
 	// 客户端出口ip。
 	PublicIp *string `json:"public_ip,omitempty"`
 
-	// 登录应用开始时间，格式 2022-10-31 08:07:39。
+	// 登录应用开始时间，格式 2022-10-31T08:07:39Z。
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
 	// 租户id。
 	TenantId *string `json:"tenant_id,omitempty"`
 
-	// 登录应用开始时间，格式 2022-10-31 08:07:39。
+	// 登录应用开始时间，格式 2022-10-31T08:07:39Z。
 	LoginStartTime *sdktime.SdkTime `json:"login_start_time,omitempty"`
 
-	// 登录应用结束时间，格式 2022-10-31 08:07:39。
+	// 登录应用结束时间，格式 2022-10-31T08:07:39Z。
 	LoginEndTime *sdktime.SdkTime `json:"login_end_time,omitempty"`
 
 	// 会话虚拟ip。

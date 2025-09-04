@@ -12,6 +12,9 @@ type ListPolicyGroupResponse struct {
 	// 总数。
 	Count *int32 `json:"count,omitempty"`
 
+	// 去除条件查询影响的策略总数量。
+	TotalCount *int32 `json:"total_count,omitempty"`
+
 	// 策略组列表，返回列表条目数量上限为分页的最大上限值。
 	Items          *[]PolicyGroup `json:"items,omitempty"`
 	HttpStatusCode int            `json:"-"`

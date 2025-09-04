@@ -61,10 +61,10 @@ type ListAppConnectionReq struct {
 	// 租户id。
 	TenantId *string `json:"tenant_id,omitempty"`
 
-	// 登录应用开始时间，格式 2022-10-31 08:07:39。
+	// 登录应用开始时间，格式 2022-10-31T08:07:39Z。
 	BrokeringStartTime *sdktime.SdkTime `json:"brokering_start_time,omitempty"`
 
-	// 登录应用结束时间，格式 2022-10-31 08:07:39。
+	// 登录应用结束时间，格式 2022-10-31T08:07:39Z。
 	BrokeringEndTime *sdktime.SdkTime `json:"brokering_end_time,omitempty"`
 
 	// 会话虚拟ip。

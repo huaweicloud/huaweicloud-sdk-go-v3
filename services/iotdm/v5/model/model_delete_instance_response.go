@@ -8,8 +8,7 @@ import (
 
 // DeleteInstanceResponse Response Object
 type DeleteInstanceResponse struct {
-	Body           *string `json:"body,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteInstanceResponse) String() string {

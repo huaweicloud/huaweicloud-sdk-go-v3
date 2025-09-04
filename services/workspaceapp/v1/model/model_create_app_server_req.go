@@ -15,7 +15,7 @@ type CreateAppServerReq struct {
 	// 服务器组唯一标识。
 	ServerGroupId string `json:"server_group_id"`
 
-	// 可用分区。 > - 将服务创建到指定的可用分区，如果不指定则使用系统随机的可用分区。 > - 获取方式详见可用区管理ListAvailabilityZone：\"GET  /v1/{project_id}/availability-zone\"。
+	// 可用分区。 > - [将服务创建到指定的可用分区，如果不指定则使用系统随机的可用分区](tag:HW)[将服务创建到指定的可用分区](tag:HCS)。 > - [获取方式详见可用区管理ListAvailabilityZone：\"GET  /v1/{project_id}/availability-zone\"。](tag:HW)[获取方式详见可用区管理ListAvailabilityZone：\"GET  /v1/{project_id}/availability-zone/summary\"。](tag:HCS)
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
 	// 订购数量。

@@ -133,6 +133,22 @@ func (i *ChangeChargeModeInvoker) Invoke() (*model.ChangeChargeModeResponse, err
 	}
 }
 
+type ChangeFullDeadLockSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeFullDeadLockSwitchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeFullDeadLockSwitchInvoker) Invoke() (*model.ChangeFullDeadLockSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeFullDeadLockSwitchResponse), nil
+	}
+}
+
 type ChangeSqlLimitSwitchStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +210,22 @@ func (i *CreateHealthReportTaskInvoker) Invoke() (*model.CreateHealthReportTaskR
 		return nil, err
 	} else {
 		return result.(*model.CreateHealthReportTaskResponse), nil
+	}
+}
+
+type CreateSnapshotsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSnapshotsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSnapshotsInvoker) Invoke() (*model.CreateSnapshotsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSnapshotsResponse), nil
 	}
 }
 
@@ -645,6 +677,22 @@ func (i *ListRiskTrendInvoker) Invoke() (*model.ListRiskTrendResponse, error) {
 	}
 }
 
+type ListSnapshotsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSnapshotsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSnapshotsInvoker) Invoke() (*model.ListSnapshotsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSnapshotsResponse), nil
+	}
+}
+
 type ListSpaceAnalysisInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -773,6 +821,38 @@ func (i *ShowDbUserInvoker) Invoke() (*model.ShowDbUserResponse, error) {
 	}
 }
 
+type ShowFullDeadLockListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFullDeadLockListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowFullDeadLockListInvoker) Invoke() (*model.ShowFullDeadLockListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFullDeadLockListResponse), nil
+	}
+}
+
+type ShowFullDeadLockSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFullDeadLockSwitchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowFullDeadLockSwitchInvoker) Invoke() (*model.ShowFullDeadLockSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFullDeadLockSwitchResponse), nil
+	}
+}
+
 type ShowInstanceHealthReportInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -786,6 +866,22 @@ func (i *ShowInstanceHealthReportInvoker) Invoke() (*model.ShowInstanceHealthRep
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceHealthReportResponse), nil
+	}
+}
+
+type ShowLatestDeadLockSnapshotInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLatestDeadLockSnapshotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowLatestDeadLockSnapshotInvoker) Invoke() (*model.ShowLatestDeadLockSnapshotResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLatestDeadLockSnapshotResponse), nil
 	}
 }
 

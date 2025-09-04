@@ -1,0 +1,25 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+type UpdateBackupDownloadPolicyRequestBody struct {
+
+	// 备份下载策略id。
+	Id string `json:"id"`
+
+	// 备份下载开关。open表示打开备份下载开关，允许外网下载。close表示关闭备份下载开关，不允许外网下载。
+	Action string `json:"action"`
+}
+
+func (o UpdateBackupDownloadPolicyRequestBody) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "UpdateBackupDownloadPolicyRequestBody struct{}"
+	}
+
+	return strings.Join([]string{"UpdateBackupDownloadPolicyRequestBody", string(data)}, " ")
+}

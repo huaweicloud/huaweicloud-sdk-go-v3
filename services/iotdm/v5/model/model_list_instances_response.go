@@ -9,13 +9,13 @@ import (
 // ListInstancesResponse Response Object
 type ListInstancesResponse struct {
 
-	// 设备接入实例的总数
+	// **参数说明**：设备接入实例的总数。
 	Count *int32 `json:"count,omitempty"`
 
-	// 本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用
+	// **参数说明**：本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
 	Marker *string `json:"marker,omitempty"`
 
-	// 设备接入实例的详情列表
+	// **参数说明**：设备接入实例的详情列表。
 	Instances      *[]QueryInstanceSimplify `json:"instances,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }

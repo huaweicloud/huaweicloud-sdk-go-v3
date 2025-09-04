@@ -149,6 +149,22 @@ func (i *BatchDeleteServerTagsInvoker) Invoke() (*model.BatchDeleteServerTagsRes
 	}
 }
 
+type BatchDetachVolumesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDetachVolumesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDetachVolumesInvoker) Invoke() (*model.BatchDetachVolumesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDetachVolumesResponse), nil
+	}
+}
+
 type BatchRebootServersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -178,6 +194,22 @@ func (i *BatchResetServersPasswordInvoker) Invoke() (*model.BatchResetServersPas
 		return nil, err
 	} else {
 		return result.(*model.BatchResetServersPasswordResponse), nil
+	}
+}
+
+type BatchResizeServersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchResizeServersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchResizeServersInvoker) Invoke() (*model.BatchResizeServersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchResizeServersResponse), nil
 	}
 }
 
@@ -514,6 +546,38 @@ func (i *DisassociateServerVirtualIpInvoker) Invoke() (*model.DisassociateServer
 		return nil, err
 	} else {
 		return result.(*model.DisassociateServerVirtualIpResponse), nil
+	}
+}
+
+type ExecuteServerDumpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteServerDumpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteServerDumpInvoker) Invoke() (*model.ExecuteServerDumpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteServerDumpResponse), nil
+	}
+}
+
+type ExecuteServerRedeployInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteServerRedeployInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteServerRedeployInvoker) Invoke() (*model.ExecuteServerRedeployResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteServerRedeployResponse), nil
 	}
 }
 
@@ -1158,6 +1222,22 @@ func (i *RevertRecycleBinServerInvoker) Invoke() (*model.RevertRecycleBinServerR
 		return nil, err
 	} else {
 		return result.(*model.RevertRecycleBinServerResponse), nil
+	}
+}
+
+type ShowAppendableVolumeQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAppendableVolumeQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAppendableVolumeQuotaInvoker) Invoke() (*model.ShowAppendableVolumeQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAppendableVolumeQuotaResponse), nil
 	}
 }
 

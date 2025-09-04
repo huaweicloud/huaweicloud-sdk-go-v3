@@ -10,7 +10,7 @@ import (
 type LogoffUserSessionReq struct {
 
 	// 会话信息id列表。
-	SessionIds *[]string `json:"session_ids,omitempty"`
+	SessionIds []string `json:"session_ids"`
 
 	// 客户端弹框级别，代表给会话发消息时的严重程度（比如info、warning、error级别） 0->info; 1-> warn; 2->serious。
 	MessageType int32 `json:"message_type"`
@@ -21,7 +21,7 @@ type LogoffUserSessionReq struct {
 	// 弹框标题。
 	Title *string `json:"title,omitempty"`
 
-	// 延迟多长时间注销会话。
+	// 延迟多长时间注销会话， 单位：秒。
 	DelayTime int32 `json:"delay_time"`
 
 	// 事务id，用作客户端日志定位跟踪。

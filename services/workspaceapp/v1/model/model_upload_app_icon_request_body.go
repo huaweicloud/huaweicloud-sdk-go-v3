@@ -16,7 +16,10 @@ import (
 type UploadAppIconRequestBody struct {
 
 	// 应用图标，png格式，限制大小8KB。
-	Data *def.FilePart `json:"data"`
+	Data *def.FilePart `json:"data,omitempty"`
+
+	// base64编码后的png格式图标。
+	IconUrl *def.MultiPart `json:"icon_url,omitempty"`
 }
 
 func (o UploadAppIconRequestBody) String() string {

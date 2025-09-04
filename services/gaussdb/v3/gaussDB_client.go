@@ -61,6 +61,27 @@ func (c *GaussDBClient) BatchTagActionInvoker(request *model.BatchTagActionReque
 	return &BatchTagActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchUpgradeDatabases 批量实例小版本升级
+//
+// 批量实例小版本升级
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) BatchUpgradeDatabases(request *model.BatchUpgradeDatabasesRequest) (*model.BatchUpgradeDatabasesResponse, error) {
+	requestDef := GenReqDefForBatchUpgradeDatabases()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpgradeDatabasesResponse), nil
+	}
+}
+
+// BatchUpgradeDatabasesInvoker 批量实例小版本升级
+func (c *GaussDBClient) BatchUpgradeDatabasesInvoker(request *model.BatchUpgradeDatabasesRequest) *BatchUpgradeDatabasesInvoker {
+	requestDef := GenReqDefForBatchUpgradeDatabases()
+	return &BatchUpgradeDatabasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CancelGaussMySqlInstanceEip 解绑弹性公网IP
 //
 // 实例解绑弹性公网IP。
@@ -418,6 +439,27 @@ func (c *GaussDBClient) CreateLtsConfigsInvoker(request *model.CreateLtsConfigsR
 	return &CreateLtsConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateProxyDnsName 开启proxy内网DNS
+//
+// 开启proxy内网DNS。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) CreateProxyDnsName(request *model.CreateProxyDnsNameRequest) (*model.CreateProxyDnsNameResponse, error) {
+	requestDef := GenReqDefForCreateProxyDnsName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateProxyDnsNameResponse), nil
+	}
+}
+
+// CreateProxyDnsNameInvoker 开启proxy内网DNS
+func (c *GaussDBClient) CreateProxyDnsNameInvoker(request *model.CreateProxyDnsNameRequest) *CreateProxyDnsNameInvoker {
+	requestDef := GenReqDefForCreateProxyDnsName()
+	return &CreateProxyDnsNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateRestoreTables 表级时间点恢复
 //
 // 表级时间点恢复。
@@ -626,6 +668,27 @@ func (c *GaussDBClient) DeleteLtsConfigs(request *model.DeleteLtsConfigsRequest)
 func (c *GaussDBClient) DeleteLtsConfigsInvoker(request *model.DeleteLtsConfigsRequest) *DeleteLtsConfigsInvoker {
 	requestDef := GenReqDefForDeleteLtsConfigs()
 	return &DeleteLtsConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteProxyPrivateDnsName 删除proxy内网dns
+//
+// 删除proxy内网dns。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) DeleteProxyPrivateDnsName(request *model.DeleteProxyPrivateDnsNameRequest) (*model.DeleteProxyPrivateDnsNameResponse, error) {
+	requestDef := GenReqDefForDeleteProxyPrivateDnsName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteProxyPrivateDnsNameResponse), nil
+	}
+}
+
+// DeleteProxyPrivateDnsNameInvoker 删除proxy内网dns
+func (c *GaussDBClient) DeleteProxyPrivateDnsNameInvoker(request *model.DeleteProxyPrivateDnsNameRequest) *DeleteProxyPrivateDnsNameInvoker {
+	requestDef := GenReqDefForDeleteProxyPrivateDnsName()
+	return &DeleteProxyPrivateDnsNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteScheduleTasK 删除定时任务
@@ -837,6 +900,27 @@ func (c *GaussDBClient) ListAuditLogDownloadLink(request *model.ListAuditLogDown
 func (c *GaussDBClient) ListAuditLogDownloadLinkInvoker(request *model.ListAuditLogDownloadLinkRequest) *ListAuditLogDownloadLinkInvoker {
 	requestDef := GenReqDefForListAuditLogDownloadLink()
 	return &ListAuditLogDownloadLinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAuditLogs 获取审计日志列表
+//
+// 获取审计日志列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListAuditLogs(request *model.ListAuditLogsRequest) (*model.ListAuditLogsResponse, error) {
+	requestDef := GenReqDefForListAuditLogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAuditLogsResponse), nil
+	}
+}
+
+// ListAuditLogsInvoker 获取审计日志列表
+func (c *GaussDBClient) ListAuditLogsInvoker(request *model.ListAuditLogsRequest) *ListAuditLogsInvoker {
+	requestDef := GenReqDefForListAuditLogs()
+	return &ListAuditLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListConfigurationsDifferences 对比参数模板
@@ -1574,6 +1658,27 @@ func (c *GaussDBClient) RestoreOldInstanceInvoker(request *model.RestoreOldInsta
 	return &RestoreOldInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetAuditLogPolicy 设置审计日志策略
+//
+// 设置审计日志策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) SetAuditLogPolicy(request *model.SetAuditLogPolicyRequest) (*model.SetAuditLogPolicyResponse, error) {
+	requestDef := GenReqDefForSetAuditLogPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetAuditLogPolicyResponse), nil
+	}
+}
+
+// SetAuditLogPolicyInvoker 设置审计日志策略
+func (c *GaussDBClient) SetAuditLogPolicyInvoker(request *model.SetAuditLogPolicyRequest) *SetAuditLogPolicyInvoker {
+	requestDef := GenReqDefForSetAuditLogPolicy()
+	return &SetAuditLogPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetGaussMySqlProxyWeight 设置读写分离权重
 //
 // 设置读写分离权重。
@@ -1679,6 +1784,48 @@ func (c *GaussDBClient) ShowAuditLogInvoker(request *model.ShowAuditLogRequest) 
 	return &ShowAuditLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAuditLogDownloadLink 生成审计日志下载链接
+//
+// 生成审计日志下载链接。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowAuditLogDownloadLink(request *model.ShowAuditLogDownloadLinkRequest) (*model.ShowAuditLogDownloadLinkResponse, error) {
+	requestDef := GenReqDefForShowAuditLogDownloadLink()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAuditLogDownloadLinkResponse), nil
+	}
+}
+
+// ShowAuditLogDownloadLinkInvoker 生成审计日志下载链接
+func (c *GaussDBClient) ShowAuditLogDownloadLinkInvoker(request *model.ShowAuditLogDownloadLinkRequest) *ShowAuditLogDownloadLinkInvoker {
+	requestDef := GenReqDefForShowAuditLogDownloadLink()
+	return &ShowAuditLogDownloadLinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAuditLogPolicy 查询审计日志策略
+//
+// 查询审计日志策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowAuditLogPolicy(request *model.ShowAuditLogPolicyRequest) (*model.ShowAuditLogPolicyResponse, error) {
+	requestDef := GenReqDefForShowAuditLogPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAuditLogPolicyResponse), nil
+	}
+}
+
+// ShowAuditLogPolicyInvoker 查询审计日志策略
+func (c *GaussDBClient) ShowAuditLogPolicyInvoker(request *model.ShowAuditLogPolicyRequest) *ShowAuditLogPolicyInvoker {
+	requestDef := GenReqDefForShowAuditLogPolicy()
+	return &ShowAuditLogPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowAutoExpandPolicy 查询存储空间自动扩容策略。
 //
 // 查询存储空间自动扩容策略。
@@ -1782,6 +1929,27 @@ func (c *GaussDBClient) ShowDedicatedResourceInfo(request *model.ShowDedicatedRe
 func (c *GaussDBClient) ShowDedicatedResourceInfoInvoker(request *model.ShowDedicatedResourceInfoRequest) *ShowDedicatedResourceInfoInvoker {
 	requestDef := GenReqDefForShowDedicatedResourceInfo()
 	return &ShowDedicatedResourceInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowErrorLogDownloadLink 错误日志下载
+//
+// 错误日志下载。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowErrorLogDownloadLink(request *model.ShowErrorLogDownloadLinkRequest) (*model.ShowErrorLogDownloadLinkResponse, error) {
+	requestDef := GenReqDefForShowErrorLogDownloadLink()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowErrorLogDownloadLinkResponse), nil
+	}
+}
+
+// ShowErrorLogDownloadLinkInvoker 错误日志下载
+func (c *GaussDBClient) ShowErrorLogDownloadLinkInvoker(request *model.ShowErrorLogDownloadLinkRequest) *ShowErrorLogDownloadLinkInvoker {
+	requestDef := GenReqDefForShowErrorLogDownloadLink()
+	return &ShowErrorLogDownloadLinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowGaussMySqlBackupList 查询全量备份列表
@@ -2225,6 +2393,27 @@ func (c *GaussDBClient) ShowProxyConfigurationsInvoker(request *model.ShowProxyC
 	return &ShowProxyConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowProxyFlavorsByAzCode 根据azCode查询数据库代理规格信息
+//
+// 根据azCode查询数据库代理规格信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowProxyFlavorsByAzCode(request *model.ShowProxyFlavorsByAzCodeRequest) (*model.ShowProxyFlavorsByAzCodeResponse, error) {
+	requestDef := GenReqDefForShowProxyFlavorsByAzCode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProxyFlavorsByAzCodeResponse), nil
+	}
+}
+
+// ShowProxyFlavorsByAzCodeInvoker 根据azCode查询数据库代理规格信息
+func (c *GaussDBClient) ShowProxyFlavorsByAzCodeInvoker(request *model.ShowProxyFlavorsByAzCodeRequest) *ShowProxyFlavorsByAzCodeInvoker {
+	requestDef := GenReqDefForShowProxyFlavorsByAzCode()
+	return &ShowProxyFlavorsByAzCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowProxyIpgroup 查询代理实例访问控制
 //
 // 查询代理实例访问控制
@@ -2412,6 +2601,27 @@ func (c *GaussDBClient) ShowSqlFilterRule(request *model.ShowSqlFilterRuleReques
 func (c *GaussDBClient) ShowSqlFilterRuleInvoker(request *model.ShowSqlFilterRuleRequest) *ShowSqlFilterRuleInvoker {
 	requestDef := GenReqDefForShowSqlFilterRule()
 	return &ShowSqlFilterRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTableMetaInfo 查询实例库表信息
+//
+// 查询实例库表信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowTableMetaInfo(request *model.ShowTableMetaInfoRequest) (*model.ShowTableMetaInfoResponse, error) {
+	requestDef := GenReqDefForShowTableMetaInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTableMetaInfoResponse), nil
+	}
+}
+
+// ShowTableMetaInfoInvoker 查询实例库表信息
+func (c *GaussDBClient) ShowTableMetaInfoInvoker(request *model.ShowTableMetaInfoRequest) *ShowTableMetaInfoInvoker {
+	requestDef := GenReqDefForShowTableMetaInfo()
+	return &ShowTableMetaInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShrinkGaussMySqlProxy 减少数据库代理节点的数量
@@ -3022,6 +3232,27 @@ func (c *GaussDBClient) UpdateProxyPort(request *model.UpdateProxyPortRequest) (
 func (c *GaussDBClient) UpdateProxyPortInvoker(request *model.UpdateProxyPortRequest) *UpdateProxyPortInvoker {
 	requestDef := GenReqDefForUpdateProxyPort()
 	return &UpdateProxyPortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateProxyPrivateDnsName 修改proxy内网dns
+//
+// 修改proxy内网dns
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateProxyPrivateDnsName(request *model.UpdateProxyPrivateDnsNameRequest) (*model.UpdateProxyPrivateDnsNameResponse, error) {
+	requestDef := GenReqDefForUpdateProxyPrivateDnsName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateProxyPrivateDnsNameResponse), nil
+	}
+}
+
+// UpdateProxyPrivateDnsNameInvoker 修改proxy内网dns
+func (c *GaussDBClient) UpdateProxyPrivateDnsNameInvoker(request *model.UpdateProxyPrivateDnsNameRequest) *UpdateProxyPrivateDnsNameInvoker {
+	requestDef := GenReqDefForUpdateProxyPrivateDnsName()
+	return &UpdateProxyPrivateDnsNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateProxySessionConsistence 修改代理会话一致性
@@ -3822,6 +4053,27 @@ func (c *GaussDBClient) ListHtapStorageTypeInvoker(request *model.ListHtapStorag
 	return &ListHtapStorageTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInstanceNode 查询节点信息
+//
+// 查询节点信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListInstanceNode(request *model.ListInstanceNodeRequest) (*model.ListInstanceNodeResponse, error) {
+	requestDef := GenReqDefForListInstanceNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceNodeResponse), nil
+	}
+}
+
+// ListInstanceNodeInvoker 查询节点信息
+func (c *GaussDBClient) ListInstanceNodeInvoker(request *model.ListInstanceNodeRequest) *ListInstanceNodeInvoker {
+	requestDef := GenReqDefForListInstanceNode()
+	return &ListInstanceNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListStarRocksDataBases 查询StarRocks数据库
 //
 // 查询StarRocks数据库。
@@ -3967,6 +4219,27 @@ func (c *GaussDBClient) ModifyDataSync(request *model.ModifyDataSyncRequest) (*m
 func (c *GaussDBClient) ModifyDataSyncInvoker(request *model.ModifyDataSyncRequest) *ModifyDataSyncInvoker {
 	requestDef := GenReqDefForModifyDataSync()
 	return &ModifyDataSyncInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyStarRocksSecurityGroup 修改StarRocks安全组
+//
+// 修改StarRocks安全组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ModifyStarRocksSecurityGroup(request *model.ModifyStarRocksSecurityGroupRequest) (*model.ModifyStarRocksSecurityGroupResponse, error) {
+	requestDef := GenReqDefForModifyStarRocksSecurityGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyStarRocksSecurityGroupResponse), nil
+	}
+}
+
+// ModifyStarRocksSecurityGroupInvoker 修改StarRocks安全组
+func (c *GaussDBClient) ModifyStarRocksSecurityGroupInvoker(request *model.ModifyStarRocksSecurityGroupRequest) *ModifyStarRocksSecurityGroupInvoker {
+	requestDef := GenReqDefForModifyStarRocksSecurityGroup()
+	return &ModifyStarRocksSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // PauseStarRocksDataReplication 暂停StarRocks数据同步
@@ -4219,6 +4492,90 @@ func (c *GaussDBClient) ShowClickHouseSlowLogSensitiveStatus(request *model.Show
 func (c *GaussDBClient) ShowClickHouseSlowLogSensitiveStatusInvoker(request *model.ShowClickHouseSlowLogSensitiveStatusRequest) *ShowClickHouseSlowLogSensitiveStatusInvoker {
 	requestDef := GenReqDefForShowClickHouseSlowLogSensitiveStatus()
 	return &ShowClickHouseSlowLogSensitiveStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHtapErrorLogDetail 查询错误日志
+//
+// 获取内核错误日志信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowHtapErrorLogDetail(request *model.ShowHtapErrorLogDetailRequest) (*model.ShowHtapErrorLogDetailResponse, error) {
+	requestDef := GenReqDefForShowHtapErrorLogDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHtapErrorLogDetailResponse), nil
+	}
+}
+
+// ShowHtapErrorLogDetailInvoker 查询错误日志
+func (c *GaussDBClient) ShowHtapErrorLogDetailInvoker(request *model.ShowHtapErrorLogDetailRequest) *ShowHtapErrorLogDetailInvoker {
+	requestDef := GenReqDefForShowHtapErrorLogDetail()
+	return &ShowHtapErrorLogDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHtapLtsConfig 查询实例LTS日志配置列表
+//
+// 查询实例LTS日志配置列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowHtapLtsConfig(request *model.ShowHtapLtsConfigRequest) (*model.ShowHtapLtsConfigResponse, error) {
+	requestDef := GenReqDefForShowHtapLtsConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHtapLtsConfigResponse), nil
+	}
+}
+
+// ShowHtapLtsConfigInvoker 查询实例LTS日志配置列表
+func (c *GaussDBClient) ShowHtapLtsConfigInvoker(request *model.ShowHtapLtsConfigRequest) *ShowHtapLtsConfigInvoker {
+	requestDef := GenReqDefForShowHtapLtsConfig()
+	return &ShowHtapLtsConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceDatabasesForHtap 查询HTAP主实例数据库
+//
+// 查询HTAP主实例数据库。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowInstanceDatabasesForHtap(request *model.ShowInstanceDatabasesForHtapRequest) (*model.ShowInstanceDatabasesForHtapResponse, error) {
+	requestDef := GenReqDefForShowInstanceDatabasesForHtap()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceDatabasesForHtapResponse), nil
+	}
+}
+
+// ShowInstanceDatabasesForHtapInvoker 查询HTAP主实例数据库
+func (c *GaussDBClient) ShowInstanceDatabasesForHtapInvoker(request *model.ShowInstanceDatabasesForHtapRequest) *ShowInstanceDatabasesForHtapInvoker {
+	requestDef := GenReqDefForShowInstanceDatabasesForHtap()
+	return &ShowInstanceDatabasesForHtapInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceTablesForHtap 查询HTAP主实例数据库表列表
+//
+// 查询HTAP主实例数据表列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowInstanceTablesForHtap(request *model.ShowInstanceTablesForHtapRequest) (*model.ShowInstanceTablesForHtapResponse, error) {
+	requestDef := GenReqDefForShowInstanceTablesForHtap()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceTablesForHtapResponse), nil
+	}
+}
+
+// ShowInstanceTablesForHtapInvoker 查询HTAP主实例数据库表列表
+func (c *GaussDBClient) ShowInstanceTablesForHtapInvoker(request *model.ShowInstanceTablesForHtapRequest) *ShowInstanceTablesForHtapInvoker {
+	requestDef := GenReqDefForShowInstanceTablesForHtap()
+	return &ShowInstanceTablesForHtapInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowStarRocksDatabaseUser 查询数据库账户

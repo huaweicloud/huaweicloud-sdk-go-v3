@@ -234,6 +234,27 @@ func (c *CdnClient) CreateShareCacheGroupsInvoker(request *model.CreateShareCach
 	return &CreateShareCacheGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateSubscriptionTask 创建运营报表订阅任务
+//
+// create subscription task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) CreateSubscriptionTask(request *model.CreateSubscriptionTaskRequest) (*model.CreateSubscriptionTaskResponse, error) {
+	requestDef := GenReqDefForCreateSubscriptionTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSubscriptionTaskResponse), nil
+	}
+}
+
+// CreateSubscriptionTaskInvoker 创建运营报表订阅任务
+func (c *CdnClient) CreateSubscriptionTaskInvoker(request *model.CreateSubscriptionTaskRequest) *CreateSubscriptionTaskInvoker {
+	requestDef := GenReqDefForCreateSubscriptionTask()
+	return &CreateSubscriptionTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateTags 创建资源标签配置接口
 //
 // 用于创建资源标签。
@@ -339,6 +360,27 @@ func (c *CdnClient) DeleteShareCacheGroups(request *model.DeleteShareCacheGroups
 func (c *CdnClient) DeleteShareCacheGroupsInvoker(request *model.DeleteShareCacheGroupsRequest) *DeleteShareCacheGroupsInvoker {
 	requestDef := GenReqDefForDeleteShareCacheGroups()
 	return &DeleteShareCacheGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSubscriptionTask 删除运营报表订阅任务
+//
+// delete subscription task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) DeleteSubscriptionTask(request *model.DeleteSubscriptionTaskRequest) (*model.DeleteSubscriptionTaskResponse, error) {
+	requestDef := GenReqDefForDeleteSubscriptionTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSubscriptionTaskResponse), nil
+	}
+}
+
+// DeleteSubscriptionTaskInvoker 删除运营报表订阅任务
+func (c *CdnClient) DeleteSubscriptionTaskInvoker(request *model.DeleteSubscriptionTaskRequest) *DeleteSubscriptionTaskInvoker {
+	requestDef := GenReqDefForDeleteSubscriptionTask()
+	return &DeleteSubscriptionTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DisableDomain 停用加速域名
@@ -449,6 +491,48 @@ func (c *CdnClient) EnableDomainInvoker(request *model.EnableDomainRequest) *Ena
 	return &EnableDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCdnDomainTopIps 查询域名top ip统计分析数据
+//
+// - 查询域名top ip统计分析数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ListCdnDomainTopIps(request *model.ListCdnDomainTopIpsRequest) (*model.ListCdnDomainTopIpsResponse, error) {
+	requestDef := GenReqDefForListCdnDomainTopIps()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCdnDomainTopIpsResponse), nil
+	}
+}
+
+// ListCdnDomainTopIpsInvoker 查询域名top ip统计分析数据
+func (c *CdnClient) ListCdnDomainTopIpsInvoker(request *model.ListCdnDomainTopIpsRequest) *ListCdnDomainTopIpsInvoker {
+	requestDef := GenReqDefForListCdnDomainTopIps()
+	return &ListCdnDomainTopIpsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCdnDomainTopOriginUrl 查询域名top回源URL数据
+//
+// - 查询域名top 回源URL数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ListCdnDomainTopOriginUrl(request *model.ListCdnDomainTopOriginUrlRequest) (*model.ListCdnDomainTopOriginUrlResponse, error) {
+	requestDef := GenReqDefForListCdnDomainTopOriginUrl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCdnDomainTopOriginUrlResponse), nil
+	}
+}
+
+// ListCdnDomainTopOriginUrlInvoker 查询域名top回源URL数据
+func (c *CdnClient) ListCdnDomainTopOriginUrlInvoker(request *model.ListCdnDomainTopOriginUrlRequest) *ListCdnDomainTopOriginUrlInvoker {
+	requestDef := GenReqDefForListCdnDomainTopOriginUrl()
+	return &ListCdnDomainTopOriginUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCdnDomainTopRefers 查询统计TOP100 referer数据明细
 //
 // - 查询TOP100 referer数据。
@@ -474,6 +558,53 @@ func (c *CdnClient) ListCdnDomainTopRefers(request *model.ListCdnDomainTopRefers
 func (c *CdnClient) ListCdnDomainTopRefersInvoker(request *model.ListCdnDomainTopRefersRequest) *ListCdnDomainTopRefersInvoker {
 	requestDef := GenReqDefForListCdnDomainTopRefers()
 	return &ListCdnDomainTopRefersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCdnDomainTopUas 查询域名top ua统计分析数据
+//
+// - 统计分析TOP UA统计数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ListCdnDomainTopUas(request *model.ListCdnDomainTopUasRequest) (*model.ListCdnDomainTopUasResponse, error) {
+	requestDef := GenReqDefForListCdnDomainTopUas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCdnDomainTopUasResponse), nil
+	}
+}
+
+// ListCdnDomainTopUasInvoker 查询域名top ua统计分析数据
+func (c *CdnClient) ListCdnDomainTopUasInvoker(request *model.ListCdnDomainTopUasRequest) *ListCdnDomainTopUasInvoker {
+	requestDef := GenReqDefForListCdnDomainTopUas()
+	return &ListCdnDomainTopUasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDomainClientStats 按域名维度查询每天客户端访问详情统计
+//
+// - 按域名维度查询每天客户端访问详情统计。
+// - 支持查询90天内的数据。
+// - ip_num查询跨度只支持1天,uv查询跨度只支持5分钟。
+// - 起始时间和结束时间，左闭右开，需要同时指定。如查询2022-07-12 00:00:00 到 2022-07-13 00:00:00 的数据，表示取 [2022-07-12 00:00:00, 2022-07-13 00:00:00)的统计数据。
+// - ip_num开始时间、结束时间必须传毫秒级时间戳，必须为凌晨0点整时刻点，如果传的不是凌晨0点整时刻点，返回数据可能与预期不一致。
+// - uv必须为5分钟整时刻点，如：0分、5分、10分、15分等，如果传的不是5分钟时刻点，返回数据可能与预期不一致
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ListDomainClientStats(request *model.ListDomainClientStatsRequest) (*model.ListDomainClientStatsResponse, error) {
+	requestDef := GenReqDefForListDomainClientStats()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDomainClientStatsResponse), nil
+	}
+}
+
+// ListDomainClientStatsInvoker 按域名维度查询每天客户端访问详情统计
+func (c *CdnClient) ListDomainClientStatsInvoker(request *model.ListDomainClientStatsRequest) *ListDomainClientStatsInvoker {
+	requestDef := GenReqDefForListDomainClientStats()
+	return &ListDomainClientStatsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDomains 查询加速域名
@@ -540,6 +671,27 @@ func (c *CdnClient) ListShareCacheGroupsInvoker(request *model.ListShareCacheGro
 	return &ListShareCacheGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSubscriptionTasks 分页查询运营报表订阅任务
+//
+// query subscription task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ListSubscriptionTasks(request *model.ListSubscriptionTasksRequest) (*model.ListSubscriptionTasksResponse, error) {
+	requestDef := GenReqDefForListSubscriptionTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSubscriptionTasksResponse), nil
+	}
+}
+
+// ListSubscriptionTasksInvoker 分页查询运营报表订阅任务
+func (c *CdnClient) ListSubscriptionTasksInvoker(request *model.ListSubscriptionTasksRequest) *ListSubscriptionTasksInvoker {
+	requestDef := GenReqDefForListSubscriptionTasks()
+	return &ListSubscriptionTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ModifyAccountInfo 修改租户配置
 //
 // 修改租户配置，当前仅支持开启OBS和SCM委托授权。
@@ -588,6 +740,27 @@ func (c *CdnClient) SetChargeModes(request *model.SetChargeModesRequest) (*model
 func (c *CdnClient) SetChargeModesInvoker(request *model.SetChargeModesRequest) *SetChargeModesInvoker {
 	requestDef := GenReqDefForSetChargeModes()
 	return &SetChargeModesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetStatsConfig 设置统计配置
+//
+// - 设置统计配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) SetStatsConfig(request *model.SetStatsConfigRequest) (*model.SetStatsConfigResponse, error) {
+	requestDef := GenReqDefForSetStatsConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetStatsConfigResponse), nil
+	}
+}
+
+// SetStatsConfigInvoker 设置统计配置
+func (c *CdnClient) SetStatsConfigInvoker(request *model.SetStatsConfigRequest) *SetStatsConfigInvoker {
+	requestDef := GenReqDefForSetStatsConfig()
+	return &SetStatsConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAppliedTemplateRecord 查询域名模板应用记录。
@@ -930,6 +1103,29 @@ func (c *CdnClient) ShowQuotaInvoker(request *model.ShowQuotaRequest) *ShowQuota
 	return &ShowQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowStatsConfigs 查询统计配置
+//
+// - 配置类型：目前支持，
+// - 0：热点统计。
+// - 1：ces上报。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ShowStatsConfigs(request *model.ShowStatsConfigsRequest) (*model.ShowStatsConfigsResponse, error) {
+	requestDef := GenReqDefForShowStatsConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowStatsConfigsResponse), nil
+	}
+}
+
+// ShowStatsConfigsInvoker 查询统计配置
+func (c *CdnClient) ShowStatsConfigsInvoker(request *model.ShowStatsConfigsRequest) *ShowStatsConfigsInvoker {
+	requestDef := GenReqDefForShowStatsConfigs()
+	return &ShowStatsConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowTags 查询资源标签列表配置接口
 //
 // 用于查询资源标签列表。
@@ -1207,6 +1403,27 @@ func (c *CdnClient) UpdateShareCacheGroups(request *model.UpdateShareCacheGroups
 func (c *CdnClient) UpdateShareCacheGroupsInvoker(request *model.UpdateShareCacheGroupsRequest) *UpdateShareCacheGroupsInvoker {
 	requestDef := GenReqDefForUpdateShareCacheGroups()
 	return &UpdateShareCacheGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSubscriptionTask 修改运营报表订阅任务
+//
+// modify subscription task
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) UpdateSubscriptionTask(request *model.UpdateSubscriptionTaskRequest) (*model.UpdateSubscriptionTaskResponse, error) {
+	requestDef := GenReqDefForUpdateSubscriptionTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSubscriptionTaskResponse), nil
+	}
+}
+
+// UpdateSubscriptionTaskInvoker 修改运营报表订阅任务
+func (c *CdnClient) UpdateSubscriptionTaskInvoker(request *model.UpdateSubscriptionTaskRequest) *UpdateSubscriptionTaskInvoker {
+	requestDef := GenReqDefForUpdateSubscriptionTask()
+	return &UpdateSubscriptionTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // VerifyDomainOwner 域名归属校验

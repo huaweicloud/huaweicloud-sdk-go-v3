@@ -19,6 +19,27 @@ func CodeArtsBuildClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// BatchDeleteBuildJobs 批量删除构建任务
+//
+// 批量删除构建任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) BatchDeleteBuildJobs(request *model.BatchDeleteBuildJobsRequest) (*model.BatchDeleteBuildJobsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteBuildJobs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteBuildJobsResponse), nil
+	}
+}
+
+// BatchDeleteBuildJobsInvoker 批量删除构建任务
+func (c *CodeArtsBuildClient) BatchDeleteBuildJobsInvoker(request *model.BatchDeleteBuildJobsRequest) *BatchDeleteBuildJobsInvoker {
+	requestDef := GenReqDefForBatchDeleteBuildJobs()
+	return &BatchDeleteBuildJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateBuildJob 创建构建任务
 //
 // 创建构建任务
@@ -628,6 +649,69 @@ func (c *CodeArtsBuildClient) ListRelatedProjectInfoInvoker(request *model.ListR
 	return &ListRelatedProjectInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAvailableInnerSpec 查内置执行机规格
+//
+// 查内置执行机规格。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) ShowAvailableInnerSpec(request *model.ShowAvailableInnerSpecRequest) (*model.ShowAvailableInnerSpecResponse, error) {
+	requestDef := GenReqDefForShowAvailableInnerSpec()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAvailableInnerSpecResponse), nil
+	}
+}
+
+// ShowAvailableInnerSpecInvoker 查内置执行机规格
+func (c *CodeArtsBuildClient) ShowAvailableInnerSpecInvoker(request *model.ShowAvailableInnerSpecRequest) *ShowAvailableInnerSpecInvoker {
+	requestDef := GenReqDefForShowAvailableInnerSpec()
+	return &ShowAvailableInnerSpecInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDomainStatus 查询租户状态
+//
+// 查询租户状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) ShowDomainStatus(request *model.ShowDomainStatusRequest) (*model.ShowDomainStatusResponse, error) {
+	requestDef := GenReqDefForShowDomainStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainStatusResponse), nil
+	}
+}
+
+// ShowDomainStatusInvoker 查询租户状态
+func (c *CodeArtsBuildClient) ShowDomainStatusInvoker(request *model.ShowDomainStatusRequest) *ShowDomainStatusInvoker {
+	requestDef := GenReqDefForShowDomainStatus()
+	return &ShowDomainStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPackageSpecCountDown 获取套餐临期信息
+//
+// 获取套餐临期信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) ShowPackageSpecCountDown(request *model.ShowPackageSpecCountDownRequest) (*model.ShowPackageSpecCountDownResponse, error) {
+	requestDef := GenReqDefForShowPackageSpecCountDown()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPackageSpecCountDownResponse), nil
+	}
+}
+
+// ShowPackageSpecCountDownInvoker 获取套餐临期信息
+func (c *CodeArtsBuildClient) ShowPackageSpecCountDownInvoker(request *model.ShowPackageSpecCountDownRequest) *ShowPackageSpecCountDownInvoker {
+	requestDef := GenReqDefForShowPackageSpecCountDown()
+	return &ShowPackageSpecCountDownInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowProjectPermission 获取用户权限
 //
 // 获取用户权限
@@ -691,6 +775,27 @@ func (c *CodeArtsBuildClient) ShowSummaryBuildJobInfoInvoker(request *model.Show
 	return &ShowSummaryBuildJobInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowUserChargeType 查询当前租户（计费）类型
+//
+// 查询当前租户（计费）类型。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) ShowUserChargeType(request *model.ShowUserChargeTypeRequest) (*model.ShowUserChargeTypeResponse, error) {
+	requestDef := GenReqDefForShowUserChargeType()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowUserChargeTypeResponse), nil
+	}
+}
+
+// ShowUserChargeTypeInvoker 查询当前租户（计费）类型
+func (c *CodeArtsBuildClient) ShowUserChargeTypeInvoker(request *model.ShowUserChargeTypeRequest) *ShowUserChargeTypeInvoker {
+	requestDef := GenReqDefForShowUserChargeType()
+	return &ShowUserChargeTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowUserOverPackageQuota 当前用户所在项目所属租户的包周期每月时长是否超额
 //
 // 当前用户所在项目所属租户的包周期每月时长是否超额
@@ -710,6 +815,132 @@ func (c *CodeArtsBuildClient) ShowUserOverPackageQuota(request *model.ShowUserOv
 func (c *CodeArtsBuildClient) ShowUserOverPackageQuotaInvoker(request *model.ShowUserOverPackageQuotaRequest) *ShowUserOverPackageQuotaInvoker {
 	requestDef := GenReqDefForShowUserOverPackageQuota()
 	return &ShowUserOverPackageQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateJobGroup 创建构建任务分组
+//
+// 创建构建任务分组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) CreateJobGroup(request *model.CreateJobGroupRequest) (*model.CreateJobGroupResponse, error) {
+	requestDef := GenReqDefForCreateJobGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateJobGroupResponse), nil
+	}
+}
+
+// CreateJobGroupInvoker 创建构建任务分组
+func (c *CodeArtsBuildClient) CreateJobGroupInvoker(request *model.CreateJobGroupRequest) *CreateJobGroupInvoker {
+	requestDef := GenReqDefForCreateJobGroup()
+	return &CreateJobGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteGroup 删除分组
+//
+// 删除分组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) DeleteGroup(request *model.DeleteGroupRequest) (*model.DeleteGroupResponse, error) {
+	requestDef := GenReqDefForDeleteGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteGroupResponse), nil
+	}
+}
+
+// DeleteGroupInvoker 删除分组
+func (c *CodeArtsBuildClient) DeleteGroupInvoker(request *model.DeleteGroupRequest) *DeleteGroupInvoker {
+	requestDef := GenReqDefForDeleteGroup()
+	return &DeleteGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGroupTree 查询分组树
+//
+// 查询分组树
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) ListGroupTree(request *model.ListGroupTreeRequest) (*model.ListGroupTreeResponse, error) {
+	requestDef := GenReqDefForListGroupTree()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGroupTreeResponse), nil
+	}
+}
+
+// ListGroupTreeInvoker 查询分组树
+func (c *CodeArtsBuildClient) ListGroupTreeInvoker(request *model.ListGroupTreeRequest) *ListGroupTreeInvoker {
+	requestDef := GenReqDefForListGroupTree()
+	return &ListGroupTreeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// MoveGroup 移动构建任务至指定分组
+//
+// 移动构建任务至指定分组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) MoveGroup(request *model.MoveGroupRequest) (*model.MoveGroupResponse, error) {
+	requestDef := GenReqDefForMoveGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.MoveGroupResponse), nil
+	}
+}
+
+// MoveGroupInvoker 移动构建任务至指定分组
+func (c *CodeArtsBuildClient) MoveGroupInvoker(request *model.MoveGroupRequest) *MoveGroupInvoker {
+	requestDef := GenReqDefForMoveGroup()
+	return &MoveGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchedPacket 交换分组顺序
+//
+// 交换分组顺序
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) SwitchedPacket(request *model.SwitchedPacketRequest) (*model.SwitchedPacketResponse, error) {
+	requestDef := GenReqDefForSwitchedPacket()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchedPacketResponse), nil
+	}
+}
+
+// SwitchedPacketInvoker 交换分组顺序
+func (c *CodeArtsBuildClient) SwitchedPacketInvoker(request *model.SwitchedPacketRequest) *SwitchedPacketInvoker {
+	requestDef := GenReqDefForSwitchedPacket()
+	return &SwitchedPacketInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateJobGroup 修改分组信息
+//
+// 修改分组信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) UpdateJobGroup(request *model.UpdateJobGroupRequest) (*model.UpdateJobGroupResponse, error) {
+	requestDef := GenReqDefForUpdateJobGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateJobGroupResponse), nil
+	}
+}
+
+// UpdateJobGroupInvoker 修改分组信息
+func (c *CodeArtsBuildClient) UpdateJobGroupInvoker(request *model.UpdateJobGroupRequest) *UpdateJobGroupInvoker {
+	requestDef := GenReqDefForUpdateJobGroup()
+	return &UpdateJobGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDockerfileTemplate 获取dockerfileTemplate
@@ -754,6 +985,48 @@ func (c *CodeArtsBuildClient) ShowImageTemplateListInvoker(request *model.ShowIm
 	return &ShowImageTemplateListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ApplyProjectPermission 任务是否使用项目级权限
+//
+// 任务是否使用项目级权限
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) ApplyProjectPermission(request *model.ApplyProjectPermissionRequest) (*model.ApplyProjectPermissionResponse, error) {
+	requestDef := GenReqDefForApplyProjectPermission()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ApplyProjectPermissionResponse), nil
+	}
+}
+
+// ApplyProjectPermissionInvoker 任务是否使用项目级权限
+func (c *CodeArtsBuildClient) ApplyProjectPermissionInvoker(request *model.ApplyProjectPermissionRequest) *ApplyProjectPermissionInvoker {
+	requestDef := GenReqDefForApplyProjectPermission()
+	return &ApplyProjectPermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchUpdateJobRolePermission 批量修改任务权限
+//
+// 批量修改任务权限
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) BatchUpdateJobRolePermission(request *model.BatchUpdateJobRolePermissionRequest) (*model.BatchUpdateJobRolePermissionResponse, error) {
+	requestDef := GenReqDefForBatchUpdateJobRolePermission()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateJobRolePermissionResponse), nil
+	}
+}
+
+// BatchUpdateJobRolePermissionInvoker 批量修改任务权限
+func (c *CodeArtsBuildClient) BatchUpdateJobRolePermissionInvoker(request *model.BatchUpdateJobRolePermissionRequest) *BatchUpdateJobRolePermissionInvoker {
+	requestDef := GenReqDefForBatchUpdateJobRolePermission()
+	return &BatchUpdateJobRolePermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CheckJobCountIsTopLimit 检查任务数量是否上限
 //
 // 检查任务数量是否上限
@@ -773,6 +1046,27 @@ func (c *CodeArtsBuildClient) CheckJobCountIsTopLimit(request *model.CheckJobCou
 func (c *CodeArtsBuildClient) CheckJobCountIsTopLimitInvoker(request *model.CheckJobCountIsTopLimitRequest) *CheckJobCountIsTopLimitInvoker {
 	requestDef := GenReqDefForCheckJobCountIsTopLimit()
 	return &CheckJobCountIsTopLimitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckJobInternal 是否已开启内网安全访问
+//
+// 是否已开启内网安全访问。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) CheckJobInternal(request *model.CheckJobInternalRequest) (*model.CheckJobInternalResponse, error) {
+	requestDef := GenReqDefForCheckJobInternal()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckJobInternalResponse), nil
+	}
+}
+
+// CheckJobInternalInvoker 是否已开启内网安全访问
+func (c *CodeArtsBuildClient) CheckJobInternalInvoker(request *model.CheckJobInternalRequest) *CheckJobInternalInvoker {
+	requestDef := GenReqDefForCheckJobInternal()
+	return &CheckJobInternalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CheckJobNameIsExists 查看项目下任务名是否存在
@@ -985,6 +1279,27 @@ func (c *CodeArtsBuildClient) ListBuildParameterInvoker(request *model.ListBuild
 	return &ListBuildParameterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListEndPoints 查询私有依赖仓库列表
+//
+// 查询私有依赖仓库列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) ListEndPoints(request *model.ListEndPointsRequest) (*model.ListEndPointsResponse, error) {
+	requestDef := GenReqDefForListEndPoints()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEndPointsResponse), nil
+	}
+}
+
+// ListEndPointsInvoker 查询私有依赖仓库列表
+func (c *CodeArtsBuildClient) ListEndPointsInvoker(request *model.ListEndPointsRequest) *ListEndPointsInvoker {
+	requestDef := GenReqDefForListEndPoints()
+	return &ListEndPointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListJob 查看用户全部的构建任务列表
 //
 // 查看用户全部的构建任务列表
@@ -1111,6 +1426,27 @@ func (c *CodeArtsBuildClient) SetKeepTimeInvoker(request *model.SetKeepTimeReque
 	return &SetKeepTimeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowBuildDetails 根据持续构建名称，获取任务构建状态、百分比、剩余时间
+//
+// 根据持续构建名称，获取任务构建状态、百分比、剩余时间
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) ShowBuildDetails(request *model.ShowBuildDetailsRequest) (*model.ShowBuildDetailsResponse, error) {
+	requestDef := GenReqDefForShowBuildDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBuildDetailsResponse), nil
+	}
+}
+
+// ShowBuildDetailsInvoker 根据持续构建名称，获取任务构建状态、百分比、剩余时间
+func (c *CodeArtsBuildClient) ShowBuildDetailsInvoker(request *model.ShowBuildDetailsRequest) *ShowBuildDetailsInvoker {
+	requestDef := GenReqDefForShowBuildDetails()
+	return &ShowBuildDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowBuildParamsList 编辑页获取参数类型的接口
 //
 // 编辑页获取参数类型的接口
@@ -1214,6 +1550,27 @@ func (c *CodeArtsBuildClient) ShowDisable(request *model.ShowDisableRequest) (*m
 func (c *CodeArtsBuildClient) ShowDisableInvoker(request *model.ShowDisableRequest) *ShowDisableInvoker {
 	requestDef := GenReqDefForShowDisable()
 	return &ShowDisableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDomainsStatuses 查询跨租户场景下其他租户的状态
+//
+// 查询跨租户场景下其他租户的状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) ShowDomainsStatuses(request *model.ShowDomainsStatusesRequest) (*model.ShowDomainsStatusesResponse, error) {
+	requestDef := GenReqDefForShowDomainsStatuses()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainsStatusesResponse), nil
+	}
+}
+
+// ShowDomainsStatusesInvoker 查询跨租户场景下其他租户的状态
+func (c *CodeArtsBuildClient) ShowDomainsStatusesInvoker(request *model.ShowDomainsStatusesRequest) *ShowDomainsStatusesInvoker {
+	requestDef := GenReqDefForShowDomainsStatuses()
+	return &ShowDomainsStatusesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowJobConfig 获取构建任务详情
@@ -1466,6 +1823,27 @@ func (c *CodeArtsBuildClient) UpdateNewJob(request *model.UpdateNewJobRequest) (
 func (c *CodeArtsBuildClient) UpdateNewJobInvoker(request *model.UpdateNewJobRequest) *UpdateNewJobInvoker {
 	requestDef := GenReqDefForUpdateNewJob()
 	return &UpdateNewJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateNewNoticeNew 更新通知配置
+//
+// 更新通知配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) UpdateNewNoticeNew(request *model.UpdateNewNoticeNewRequest) (*model.UpdateNewNoticeNewResponse, error) {
+	requestDef := GenReqDefForUpdateNewNoticeNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateNewNoticeNewResponse), nil
+	}
+}
+
+// UpdateNewNoticeNewInvoker 更新通知配置
+func (c *CodeArtsBuildClient) UpdateNewNoticeNewInvoker(request *model.UpdateNewNoticeNewRequest) *UpdateNewNoticeNewInvoker {
+	requestDef := GenReqDefForUpdateNewNoticeNew()
+	return &UpdateNewNoticeNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AddKeystorePermission 添加文件权限
@@ -2119,6 +2497,27 @@ func (c *CodeArtsBuildClient) ShowReportSummaryInvoker(request *model.ShowReport
 	return &ShowReportSummaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddFavouriteCustomTemplate 收藏自定义模板
+//
+// 收藏自定义模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) AddFavouriteCustomTemplate(request *model.AddFavouriteCustomTemplateRequest) (*model.AddFavouriteCustomTemplateResponse, error) {
+	requestDef := GenReqDefForAddFavouriteCustomTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddFavouriteCustomTemplateResponse), nil
+	}
+}
+
+// AddFavouriteCustomTemplateInvoker 收藏自定义模板
+func (c *CodeArtsBuildClient) AddFavouriteCustomTemplateInvoker(request *model.AddFavouriteCustomTemplateRequest) *AddFavouriteCustomTemplateInvoker {
+	requestDef := GenReqDefForAddFavouriteCustomTemplate()
+	return &AddFavouriteCustomTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateTemplate 创建构建模板
 //
 // 创建构建模板
@@ -2224,6 +2623,27 @@ func (c *CodeArtsBuildClient) ListRecommendOfficialTemplateInvoker(request *mode
 	return &ListRecommendOfficialTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RemoverFavouriteCustomTemplate 取消收藏自定义模板
+//
+// 取消收藏自定义模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) RemoverFavouriteCustomTemplate(request *model.RemoverFavouriteCustomTemplateRequest) (*model.RemoverFavouriteCustomTemplateResponse, error) {
+	requestDef := GenReqDefForRemoverFavouriteCustomTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoverFavouriteCustomTemplateResponse), nil
+	}
+}
+
+// RemoverFavouriteCustomTemplateInvoker 取消收藏自定义模板
+func (c *CodeArtsBuildClient) RemoverFavouriteCustomTemplateInvoker(request *model.RemoverFavouriteCustomTemplateRequest) *RemoverFavouriteCustomTemplateInvoker {
+	requestDef := GenReqDefForRemoverFavouriteCustomTemplate()
+	return &RemoverFavouriteCustomTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SaveTemplateUsedInfo 保存模板使用记录
 //
 // 保存模板使用记录
@@ -2243,6 +2663,27 @@ func (c *CodeArtsBuildClient) SaveTemplateUsedInfo(request *model.SaveTemplateUs
 func (c *CodeArtsBuildClient) SaveTemplateUsedInfoInvoker(request *model.SaveTemplateUsedInfoRequest) *SaveTemplateUsedInfoInvoker {
 	requestDef := GenReqDefForSaveTemplateUsedInfo()
 	return &SaveTemplateUsedInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTemplate 根据模板uuid查询特定模板
+//
+// 根据模板uuid查询特定模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) ShowTemplate(request *model.ShowTemplateRequest) (*model.ShowTemplateResponse, error) {
+	requestDef := GenReqDefForShowTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTemplateResponse), nil
+	}
+}
+
+// ShowTemplateInvoker 根据模板uuid查询特定模板
+func (c *CodeArtsBuildClient) ShowTemplateInvoker(request *model.ShowTemplateRequest) *ShowTemplateInvoker {
+	requestDef := GenReqDefForShowTemplate()
+	return &ShowTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowYamlTemplate 获取代码化构建默认模板

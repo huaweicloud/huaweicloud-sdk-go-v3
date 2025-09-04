@@ -629,6 +629,22 @@ func (i *ExecuteCrossCloudReleaseDisasterInvoker) Invoke() (*model.ExecuteCrossC
 	}
 }
 
+type ExportSlowSqlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportSlowSqlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExportSlowSqlInvoker) Invoke() (*model.ExportSlowSqlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportSlowSqlResponse), nil
+	}
+}
+
 type InstallKernelPluginInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1346,6 +1362,22 @@ func (i *ListScheduleTaskInvoker) Invoke() (*model.ListScheduleTaskResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListScheduleTaskResponse), nil
+	}
+}
+
+type ListSchemaAndTableInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSchemaAndTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSchemaAndTableInvoker) Invoke() (*model.ListSchemaAndTableResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSchemaAndTableResponse), nil
 	}
 }
 

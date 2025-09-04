@@ -545,6 +545,29 @@ func (c *WorkspaceAppClient) BatchDeleteAppGroupInvoker(request *model.BatchDele
 	return &BatchDeleteAppGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckAppGroup 校验应用组
+//
+// 校验应用组是否符合指定的规则。
+// 1. 校验应用组名称是否符合规则。
+// 2. 校验应用组名称是否重复。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) CheckAppGroup(request *model.CheckAppGroupRequest) (*model.CheckAppGroupResponse, error) {
+	requestDef := GenReqDefForCheckAppGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckAppGroupResponse), nil
+	}
+}
+
+// CheckAppGroupInvoker 校验应用组
+func (c *WorkspaceAppClient) CheckAppGroupInvoker(request *model.CheckAppGroupRequest) *CheckAppGroupInvoker {
+	requestDef := GenReqDefForCheckAppGroup()
+	return &CheckAppGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAppGroup 创建应用组
 //
 // 该API用于创建应用组。
@@ -840,9 +863,9 @@ func (c *WorkspaceAppClient) ListAvailabilityZoneInvoker(request *model.ListAvai
 	return &ListAvailabilityZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAz 查询可用分区列表（按站点分类）
+// ListAz 查询可用分区列表
 //
-// 该接口用于查询支持的可用分区列表，按站点分类。
+// [该接口用于查询支持的可用分区列表，按站点分类。](tag:HW)[该接口用于查询支持的可用分区列表。](tag:HCS)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ListAz(request *model.ListAzRequest) (*model.ListAzResponse, error) {
@@ -855,7 +878,7 @@ func (c *WorkspaceAppClient) ListAz(request *model.ListAzRequest) (*model.ListAz
 	}
 }
 
-// ListAzInvoker 查询可用分区列表（按站点分类）
+// ListAzInvoker 查询可用分区列表
 func (c *WorkspaceAppClient) ListAzInvoker(request *model.ListAzRequest) *ListAzInvoker {
 	requestDef := GenReqDefForListAz()
 	return &ListAzInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1008,6 +1031,27 @@ func (c *WorkspaceAppClient) ListCloudStorageAssignmentInvoker(request *model.Li
 	return &ListCloudStorageAssignmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListFoldersAndFiles 查询文件夹和文件信息
+//
+// 查询指定目录下文件夹和文件信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ListFoldersAndFiles(request *model.ListFoldersAndFilesRequest) (*model.ListFoldersAndFilesResponse, error) {
+	requestDef := GenReqDefForListFoldersAndFiles()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFoldersAndFilesResponse), nil
+	}
+}
+
+// ListFoldersAndFilesInvoker 查询文件夹和文件信息
+func (c *WorkspaceAppClient) ListFoldersAndFilesInvoker(request *model.ListFoldersAndFilesRequest) *ListFoldersAndFilesInvoker {
+	requestDef := GenReqDefForListFoldersAndFiles()
+	return &ListFoldersAndFilesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProjectConfigs 查询项目配置列表
 //
 // 查询项目配置列表。
@@ -1029,6 +1073,27 @@ func (c *WorkspaceAppClient) ListProjectConfigsInvoker(request *model.ListProjec
 	return &ListProjectConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ResetUserProfile 重置userprofile
+//
+// 重置userprofile，初始化或重置并备份userprofile。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ResetUserProfile(request *model.ResetUserProfileRequest) (*model.ResetUserProfileResponse, error) {
+	requestDef := GenReqDefForResetUserProfile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetUserProfileResponse), nil
+	}
+}
+
+// ResetUserProfileInvoker 重置userprofile
+func (c *WorkspaceAppClient) ResetUserProfileInvoker(request *model.ResetUserProfileRequest) *ResetUserProfileInvoker {
+	requestDef := GenReqDefForResetUserProfile()
+	return &ResetUserProfileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowProjectConfig 查询项目配置信息
 //
 // 查询项目配置信息。
@@ -1048,6 +1113,48 @@ func (c *WorkspaceAppClient) ShowProjectConfig(request *model.ShowProjectConfigR
 func (c *WorkspaceAppClient) ShowProjectConfigInvoker(request *model.ShowProjectConfigRequest) *ShowProjectConfigInvoker {
 	requestDef := GenReqDefForShowProjectConfig()
 	return &ShowProjectConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// TransferFile 文件流转
+//
+// 云存储文件流转与分享
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) TransferFile(request *model.TransferFileRequest) (*model.TransferFileResponse, error) {
+	requestDef := GenReqDefForTransferFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.TransferFileResponse), nil
+	}
+}
+
+// TransferFileInvoker 文件流转
+func (c *WorkspaceAppClient) TransferFileInvoker(request *model.TransferFileRequest) *TransferFileInvoker {
+	requestDef := GenReqDefForTransferFile()
+	return &TransferFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// TransferFilePre 文件预流转
+//
+// 文件预流转，在接收方接收文件前返回可用的文件路径
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) TransferFilePre(request *model.TransferFilePreRequest) (*model.TransferFilePreResponse, error) {
+	requestDef := GenReqDefForTransferFilePre()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.TransferFilePreResponse), nil
+	}
+}
+
+// TransferFilePreInvoker 文件预流转
+func (c *WorkspaceAppClient) TransferFilePreInvoker(request *model.TransferFilePreRequest) *TransferFilePreInvoker {
+	requestDef := GenReqDefForTransferFilePre()
+	return &TransferFilePreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateCloudUserFolderAssignment 修改个人文件夹
@@ -1289,6 +1396,28 @@ func (c *WorkspaceAppClient) BatchDeleteImageSubJobs(request *model.BatchDeleteI
 func (c *WorkspaceAppClient) BatchDeleteImageSubJobsInvoker(request *model.BatchDeleteImageSubJobsRequest) *BatchDeleteImageSubJobsInvoker {
 	requestDef := GenReqDefForBatchDeleteImageSubJobs()
 	return &BatchDeleteImageSubJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountImageSubJobs 镜像子任务数量查询
+//
+// 该接口用于查询异步子任务数量,job_type未传递时,
+// 则查询JobType为CREATE_SERVER|DELETE_SERVER|REJOIN_DOMAIN|CHANGE_SERVER_IMAGE|REINSTALL_OS的子任务总数
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) CountImageSubJobs(request *model.CountImageSubJobsRequest) (*model.CountImageSubJobsResponse, error) {
+	requestDef := GenReqDefForCountImageSubJobs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountImageSubJobsResponse), nil
+	}
+}
+
+// CountImageSubJobsInvoker 镜像子任务数量查询
+func (c *WorkspaceAppClient) CountImageSubJobsInvoker(request *model.CountImageSubJobsRequest) *CountImageSubJobsInvoker {
+	requestDef := GenReqDefForCountImageSubJobs()
+	return &CountImageSubJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CountSubJobs 子任务数量查询
@@ -1802,7 +1931,7 @@ func (c *WorkspaceAppClient) UpdateUserFolderAssignmentInvoker(request *model.Up
 
 // CreatePolicyGroup 新增策略组
 //
-// 新增策略组，通过策略组能灵活地控制客户端访问与接入策略，如：文件、剪切板、会话等。
+// 新增策略组，通过策略组能灵活的控制客户端访问与接入策略，如：文件、剪切板、会话等。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) CreatePolicyGroup(request *model.CreatePolicyGroupRequest) (*model.CreatePolicyGroupResponse, error) {
@@ -2071,6 +2200,48 @@ func (c *WorkspaceAppClient) UpdatePolicyTemplate(request *model.UpdatePolicyTem
 func (c *WorkspaceAppClient) UpdatePolicyTemplateInvoker(request *model.UpdatePolicyTemplateRequest) *UpdatePolicyTemplateInvoker {
 	requestDef := GenReqDefForUpdatePolicyTemplate()
 	return &UpdatePolicyTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPrivacyStatement 查询最新版本的隐私声明
+//
+// 查询最新版本的隐私声明。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ShowPrivacyStatement(request *model.ShowPrivacyStatementRequest) (*model.ShowPrivacyStatementResponse, error) {
+	requestDef := GenReqDefForShowPrivacyStatement()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPrivacyStatementResponse), nil
+	}
+}
+
+// ShowPrivacyStatementInvoker 查询最新版本的隐私声明
+func (c *WorkspaceAppClient) ShowPrivacyStatementInvoker(request *model.ShowPrivacyStatementRequest) *ShowPrivacyStatementInvoker {
+	requestDef := GenReqDefForShowPrivacyStatement()
+	return &ShowPrivacyStatementInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SignPrivacyStatement 签署隐私声明
+//
+// 签署隐私声明。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) SignPrivacyStatement(request *model.SignPrivacyStatementRequest) (*model.SignPrivacyStatementResponse, error) {
+	requestDef := GenReqDefForSignPrivacyStatement()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SignPrivacyStatementResponse), nil
+	}
+}
+
+// SignPrivacyStatementInvoker 签署隐私声明
+func (c *WorkspaceAppClient) SignPrivacyStatementInvoker(request *model.SignPrivacyStatementRequest) *SignPrivacyStatementInvoker {
+	requestDef := GenReqDefForSignPrivacyStatement()
+	return &SignPrivacyStatementInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CheckQuota 配额校验
@@ -2392,7 +2563,7 @@ func (c *WorkspaceAppClient) BatchChangeServerMaintainModeInvoker(request *model
 // BatchDeleteServer 批量删除服务器
 //
 // 批量删除服务器。
-// &gt; - 仅支持删除按需订购的服务器，包周期订购的服务器需要到Console界面进行退订，订单退订成功后服务器将会自动删除。
+// &gt; - [仅支持删除按需订购的服务器，包周期订购的服务器需要到Console界面进行退订，订单退订成功后服务器将会自动删除。](tag:HW)[批量删除服务器。](tag:HCS)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) BatchDeleteServer(request *model.BatchDeleteServerRequest) (*model.BatchDeleteServerResponse, error) {
@@ -2792,6 +2963,27 @@ func (c *WorkspaceAppClient) ShowAccessAgentLatestVersionInvoker(request *model.
 	return &ShowAccessAgentLatestVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowHdaUpgradeFlag 查询HDA升级提醒标识
+//
+// 查询HDA升级提醒标识(仅内部访问使用)。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ShowHdaUpgradeFlag(request *model.ShowHdaUpgradeFlagRequest) (*model.ShowHdaUpgradeFlagResponse, error) {
+	requestDef := GenReqDefForShowHdaUpgradeFlag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHdaUpgradeFlagResponse), nil
+	}
+}
+
+// ShowHdaUpgradeFlagInvoker 查询HDA升级提醒标识
+func (c *WorkspaceAppClient) ShowHdaUpgradeFlagInvoker(request *model.ShowHdaUpgradeFlagRequest) *ShowHdaUpgradeFlagInvoker {
+	requestDef := GenReqDefForShowHdaUpgradeFlag()
+	return &ShowHdaUpgradeFlagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowServer 查询指定服务器
 //
 // 查询指定的服务器当前这个接口的查询数据和list查询的一致。
@@ -3046,6 +3238,92 @@ func (c *WorkspaceAppClient) UpdateServerGroup(request *model.UpdateServerGroupR
 func (c *WorkspaceAppClient) UpdateServerGroupInvoker(request *model.UpdateServerGroupRequest) *UpdateServerGroupInvoker {
 	requestDef := GenReqDefForUpdateServerGroup()
 	return &UpdateServerGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ValidateServerGroup 校验服务器组
+//
+// 校验服务器组是否符合指定的规则。
+// 1. 校验服务器组名称是否符合规则。
+// 2. 校验服务器组名称是否重复。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ValidateServerGroup(request *model.ValidateServerGroupRequest) (*model.ValidateServerGroupResponse, error) {
+	requestDef := GenReqDefForValidateServerGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ValidateServerGroupResponse), nil
+	}
+}
+
+// ValidateServerGroupInvoker 校验服务器组
+func (c *WorkspaceAppClient) ValidateServerGroupInvoker(request *model.ValidateServerGroupRequest) *ValidateServerGroupInvoker {
+	requestDef := GenReqDefForValidateServerGroup()
+	return &ValidateServerGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportAppConnection 导出应用使用记录
+//
+// 导出应用使用记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ExportAppConnection(request *model.ExportAppConnectionRequest) (*model.ExportAppConnectionResponse, error) {
+	requestDef := GenReqDefForExportAppConnection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportAppConnectionResponse), nil
+	}
+}
+
+// ExportAppConnectionInvoker 导出应用使用记录
+func (c *WorkspaceAppClient) ExportAppConnectionInvoker(request *model.ExportAppConnectionRequest) *ExportAppConnectionInvoker {
+	requestDef := GenReqDefForExportAppConnection()
+	return &ExportAppConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportSessions 导出用户会话列表
+//
+// 导出用户会话列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ExportSessions(request *model.ExportSessionsRequest) (*model.ExportSessionsResponse, error) {
+	requestDef := GenReqDefForExportSessions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportSessionsResponse), nil
+	}
+}
+
+// ExportSessionsInvoker 导出用户会话列表
+func (c *WorkspaceAppClient) ExportSessionsInvoker(request *model.ExportSessionsRequest) *ExportSessionsInvoker {
+	requestDef := GenReqDefForExportSessions()
+	return &ExportSessionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportUserConnection 导出用户登录记录
+//
+// 导出用户登录记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) ExportUserConnection(request *model.ExportUserConnectionRequest) (*model.ExportUserConnectionResponse, error) {
+	requestDef := GenReqDefForExportUserConnection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportUserConnectionResponse), nil
+	}
+}
+
+// ExportUserConnectionInvoker 导出用户登录记录
+func (c *WorkspaceAppClient) ExportUserConnectionInvoker(request *model.ExportUserConnectionRequest) *ExportUserConnectionInvoker {
+	requestDef := GenReqDefForExportUserConnection()
+	return &ExportUserConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAppConnection 查询应用使用记录

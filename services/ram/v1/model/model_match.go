@@ -8,7 +8,7 @@ import (
 
 type Match struct {
 
-	// 键。取值范围为policy , organizational-unit, account。
+	// 键。第一期限定为resource_name,后续扩展。
 	Key string `json:"key"`
 
 	// 值。每个值最大长度255个字符。

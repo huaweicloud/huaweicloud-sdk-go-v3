@@ -8,7 +8,7 @@ import (
 
 type UnbindInstanceTags struct {
 
-	// 实例标签
+	// **参数说明**：实例标签。
 	Tags []Tag `json:"tags"`
 }
 

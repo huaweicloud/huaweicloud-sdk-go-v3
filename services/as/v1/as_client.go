@@ -1216,6 +1216,27 @@ func (c *AsClient) UpdateLifeCycleHookInvoker(request *model.UpdateLifeCycleHook
 	return &UpdateLifeCycleHookInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateScalingConfig 修改伸缩配置
+//
+// 修改伸缩配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AsClient) UpdateScalingConfig(request *model.UpdateScalingConfigRequest) (*model.UpdateScalingConfigResponse, error) {
+	requestDef := GenReqDefForUpdateScalingConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateScalingConfigResponse), nil
+	}
+}
+
+// UpdateScalingConfigInvoker 修改伸缩配置
+func (c *AsClient) UpdateScalingConfigInvoker(request *model.UpdateScalingConfigRequest) *UpdateScalingConfigInvoker {
+	requestDef := GenReqDefForUpdateScalingConfig()
+	return &UpdateScalingConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateScalingGroup 修改弹性伸缩组
 //
 // 修改一个指定弹性伸缩组中的信息。更换伸缩组的伸缩配置，伸缩组中已经存在的使用之前伸缩配置创建的云服务器云主机不受影响。伸缩组为没有正在进行的伸缩活动时，可以修改伸缩组的子网、可用区和负载均衡配置。当伸缩组的期望实例数改变时，会触发伸缩活动加入或移出实例。期望实例数必须大于或等于最小实例数，必须小于或等于最大实例数。

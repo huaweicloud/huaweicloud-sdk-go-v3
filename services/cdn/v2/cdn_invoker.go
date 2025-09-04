@@ -165,6 +165,22 @@ func (i *CreateShareCacheGroupsInvoker) Invoke() (*model.CreateShareCacheGroupsR
 	}
 }
 
+type CreateSubscriptionTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSubscriptionTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSubscriptionTaskInvoker) Invoke() (*model.CreateSubscriptionTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSubscriptionTaskResponse), nil
+	}
+}
+
 type CreateTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -245,6 +261,22 @@ func (i *DeleteShareCacheGroupsInvoker) Invoke() (*model.DeleteShareCacheGroupsR
 	}
 }
 
+type DeleteSubscriptionTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSubscriptionTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteSubscriptionTaskInvoker) Invoke() (*model.DeleteSubscriptionTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSubscriptionTaskResponse), nil
+	}
+}
+
 type DisableDomainInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -313,6 +345,38 @@ func (i *EnableDomainInvoker) Invoke() (*model.EnableDomainResponse, error) {
 	}
 }
 
+type ListCdnDomainTopIpsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCdnDomainTopIpsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCdnDomainTopIpsInvoker) Invoke() (*model.ListCdnDomainTopIpsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCdnDomainTopIpsResponse), nil
+	}
+}
+
+type ListCdnDomainTopOriginUrlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCdnDomainTopOriginUrlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCdnDomainTopOriginUrlInvoker) Invoke() (*model.ListCdnDomainTopOriginUrlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCdnDomainTopOriginUrlResponse), nil
+	}
+}
+
 type ListCdnDomainTopRefersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -326,6 +390,38 @@ func (i *ListCdnDomainTopRefersInvoker) Invoke() (*model.ListCdnDomainTopRefersR
 		return nil, err
 	} else {
 		return result.(*model.ListCdnDomainTopRefersResponse), nil
+	}
+}
+
+type ListCdnDomainTopUasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCdnDomainTopUasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCdnDomainTopUasInvoker) Invoke() (*model.ListCdnDomainTopUasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCdnDomainTopUasResponse), nil
+	}
+}
+
+type ListDomainClientStatsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDomainClientStatsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDomainClientStatsInvoker) Invoke() (*model.ListDomainClientStatsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDomainClientStatsResponse), nil
 	}
 }
 
@@ -377,6 +473,22 @@ func (i *ListShareCacheGroupsInvoker) Invoke() (*model.ListShareCacheGroupsRespo
 	}
 }
 
+type ListSubscriptionTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSubscriptionTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSubscriptionTasksInvoker) Invoke() (*model.ListSubscriptionTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSubscriptionTasksResponse), nil
+	}
+}
+
 type ModifyAccountInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -406,6 +518,22 @@ func (i *SetChargeModesInvoker) Invoke() (*model.SetChargeModesResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.SetChargeModesResponse), nil
+	}
+}
+
+type SetStatsConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetStatsConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetStatsConfigInvoker) Invoke() (*model.SetStatsConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetStatsConfigResponse), nil
 	}
 }
 
@@ -635,6 +763,22 @@ func (i *ShowQuotaInvoker) Invoke() (*model.ShowQuotaResponse, error) {
 	}
 }
 
+type ShowStatsConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStatsConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowStatsConfigsInvoker) Invoke() (*model.ShowStatsConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStatsConfigsResponse), nil
+	}
+}
+
 type ShowTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -826,6 +970,22 @@ func (i *UpdateShareCacheGroupsInvoker) Invoke() (*model.UpdateShareCacheGroupsR
 		return nil, err
 	} else {
 		return result.(*model.UpdateShareCacheGroupsResponse), nil
+	}
+}
+
+type UpdateSubscriptionTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSubscriptionTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSubscriptionTaskInvoker) Invoke() (*model.UpdateSubscriptionTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSubscriptionTaskResponse), nil
 	}
 }
 

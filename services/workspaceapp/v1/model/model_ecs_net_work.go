@@ -9,7 +9,7 @@ import (
 // EcsNetWork 服务器网络信息。
 type EcsNetWork struct {
 
-	// IP地址信息。
+	// IP地址信息
 	Addr *string `json:"addr,omitempty"`
 
 	// IP地址类型： `4` - IPV4 `6` - IPV6

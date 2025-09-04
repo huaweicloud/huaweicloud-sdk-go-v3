@@ -31,6 +31,10 @@ type Policies struct {
 	CloudStorage *PoliciesCloudStorage `json:"cloud_storage,omitempty"`
 
 	UserProfile *PoliciesUserProfile `json:"user_profile,omitempty"`
+
+	UrlRedirection *PoliciesUrlRedirection `json:"url_redirection,omitempty"`
+
+	FolderRedirection *PoliciesFolderRedirection `json:"folder_redirection,omitempty"`
 }
 
 func (o Policies) String() string {

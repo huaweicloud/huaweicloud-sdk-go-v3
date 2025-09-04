@@ -9,7 +9,7 @@ import (
 // CreateAppServersResponse Response Object
 type CreateAppServersResponse struct {
 
-	// 对于创建云应用服务器命令下发后会返回job_id，通过job_id可以查询任务的执行状态,按需购买返回该参数。
+	// [对于创建云应用服务器命令下发后会返回job_id，通过job_id可以查询任务的执行状态,按需购买返回该参数。](tag:HW)[对于创建云应用服务器命令下发后会返回job_id，通过job_id可以查询任务的执行状态。](tag:HCS)
 	JobId *string `json:"job_id,omitempty"`
 
 	// 订单号，创建包年包月的弹性云服务器时返回该参数。

@@ -68,6 +68,8 @@ var (
 		"https://sfs-turbo.af-north-1.myhuaweicloud.com")
 	CN_NORTH_12 = region.NewRegion("cn-north-12",
 		"https://sfs-turbo.cn-north-12.myhuaweicloud.com")
+	CN_SOUTHWEST_3 = region.NewRegion("cn-southwest-3",
+		"https://sfs-turbo.cn-southwest-3.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -101,6 +103,7 @@ var staticFields = map[string]*region.Region{
 	"cn-north-11":      CN_NORTH_11,
 	"af-north-1":       AF_NORTH_1,
 	"cn-north-12":      CN_NORTH_12,
+	"cn-southwest-3":   CN_SOUTHWEST_3,
 }
 
 var provider = region.DefaultProviderChain("SFSTURBO")

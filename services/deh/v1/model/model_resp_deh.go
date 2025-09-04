@@ -13,7 +13,7 @@ type RespDeh struct {
 	ResourceId string `json:"resource_id"`
 
 	// 专属主机详情。  该字段用于后续扩展，默认为空。
-	ResouceDetail string `json:"resouce_detail"`
+	ResourceDetail string `json:"resource_detail"`
 
 	// 标签列表。
 	Tags []ResourceTag `json:"tags"`

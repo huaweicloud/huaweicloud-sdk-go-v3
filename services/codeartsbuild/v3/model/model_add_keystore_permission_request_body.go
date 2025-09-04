@@ -24,6 +24,9 @@ type AddKeystorePermissionRequestBody struct {
 	// 用户名
 	UserName string `json:"user_name"`
 
+	// 用户ID
+	UserId *string `json:"user_id,omitempty"`
+
 	// 是否有设置权限
 	Setting bool `json:"setting"`
 

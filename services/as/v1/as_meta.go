@@ -1212,6 +1212,26 @@ func GenReqDefForUpdateLifeCycleHook() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForUpdateScalingConfig() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/autoscaling-api/v1/{project_id}/scaling_configuration/{scaling_configuration_id}").
+		WithResponse(new(model.UpdateScalingConfigResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ScalingConfigurationId").
+		WithJsonTag("scaling_configuration_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateScalingGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).

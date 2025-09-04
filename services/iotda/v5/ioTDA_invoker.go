@@ -645,6 +645,86 @@ func (i *CreateCommandInvoker) Invoke() (*model.CreateCommandResponse, error) {
 	}
 }
 
+type CreateDeviceAuthenticationTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDeviceAuthenticationTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDeviceAuthenticationTemplateInvoker) Invoke() (*model.CreateDeviceAuthenticationTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDeviceAuthenticationTemplateResponse), nil
+	}
+}
+
+type DeleteDeviceAuthenticationTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDeviceAuthenticationTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDeviceAuthenticationTemplateInvoker) Invoke() (*model.DeleteDeviceAuthenticationTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDeviceAuthenticationTemplateResponse), nil
+	}
+}
+
+type ListDeviceAuthenticationTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDeviceAuthenticationTemplatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDeviceAuthenticationTemplatesInvoker) Invoke() (*model.ListDeviceAuthenticationTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDeviceAuthenticationTemplatesResponse), nil
+	}
+}
+
+type ShowDeviceAuthenticationTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDeviceAuthenticationTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDeviceAuthenticationTemplateInvoker) Invoke() (*model.ShowDeviceAuthenticationTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDeviceAuthenticationTemplateResponse), nil
+	}
+}
+
+type UpdateDeviceAuthenticationTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDeviceAuthenticationTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDeviceAuthenticationTemplateInvoker) Invoke() (*model.UpdateDeviceAuthenticationTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDeviceAuthenticationTemplateResponse), nil
+	}
+}
+
 type CreateDeviceAuthorizerInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -722,6 +802,86 @@ func (i *UpdateDeviceAuthorizerInvoker) Invoke() (*model.UpdateDeviceAuthorizerR
 		return nil, err
 	} else {
 		return result.(*model.UpdateDeviceAuthorizerResponse), nil
+	}
+}
+
+type DeleteDeviceCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDeviceCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDeviceCertificateInvoker) Invoke() (*model.DeleteDeviceCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDeviceCertificateResponse), nil
+	}
+}
+
+type ListDeviceByDeviceCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDeviceByDeviceCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDeviceByDeviceCertificateInvoker) Invoke() (*model.ListDeviceByDeviceCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDeviceByDeviceCertificateResponse), nil
+	}
+}
+
+type ListDeviceCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDeviceCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDeviceCertificateInvoker) Invoke() (*model.ListDeviceCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDeviceCertificateResponse), nil
+	}
+}
+
+type ShowDeviceCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDeviceCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDeviceCertificateInvoker) Invoke() (*model.ShowDeviceCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDeviceCertificateResponse), nil
+	}
+}
+
+type UpdateDeviceCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDeviceCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDeviceCertificateInvoker) Invoke() (*model.UpdateDeviceCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDeviceCertificateResponse), nil
 	}
 }
 
@@ -1109,6 +1269,22 @@ func (i *UpdateDeviceProxyInvoker) Invoke() (*model.UpdateDeviceProxyResponse, e
 	}
 }
 
+type DeleteDeviceShadowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDeviceShadowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDeviceShadowInvoker) Invoke() (*model.DeleteDeviceShadowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDeviceShadowResponse), nil
+	}
+}
+
 type ShowDeviceShadowInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1266,6 +1442,102 @@ func (i *ListFunctionsInvoker) Invoke() (*model.ListFunctionsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListFunctionsResponse), nil
+	}
+}
+
+type AddHarmonySoftBusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddHarmonySoftBusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddHarmonySoftBusInvoker) Invoke() (*model.AddHarmonySoftBusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddHarmonySoftBusResponse), nil
+	}
+}
+
+type CreateSyncHarmonySoftBusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSyncHarmonySoftBusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSyncHarmonySoftBusInvoker) Invoke() (*model.CreateSyncHarmonySoftBusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSyncHarmonySoftBusResponse), nil
+	}
+}
+
+type DeleteHarmonySoftBusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteHarmonySoftBusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteHarmonySoftBusInvoker) Invoke() (*model.DeleteHarmonySoftBusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteHarmonySoftBusResponse), nil
+	}
+}
+
+type ListHarmonySoftBusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHarmonySoftBusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListHarmonySoftBusInvoker) Invoke() (*model.ListHarmonySoftBusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHarmonySoftBusResponse), nil
+	}
+}
+
+type ResetHarmonySoftBusKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetHarmonySoftBusKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ResetHarmonySoftBusKeyInvoker) Invoke() (*model.ResetHarmonySoftBusKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetHarmonySoftBusKeyResponse), nil
+	}
+}
+
+type ShowHarmonySoftBusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHarmonySoftBusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowHarmonySoftBusInvoker) Invoke() (*model.ShowHarmonySoftBusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHarmonySoftBusResponse), nil
 	}
 }
 
@@ -1970,6 +2242,86 @@ func (i *UpdateRuleInvoker) Invoke() (*model.UpdateRuleResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateRuleResponse), nil
+	}
+}
+
+type CreateSecurityProfileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSecurityProfileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSecurityProfileInvoker) Invoke() (*model.CreateSecurityProfileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSecurityProfileResponse), nil
+	}
+}
+
+type DeleteSecurityProfileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSecurityProfileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteSecurityProfileInvoker) Invoke() (*model.DeleteSecurityProfileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSecurityProfileResponse), nil
+	}
+}
+
+type ListSecurityProfilesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecurityProfilesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSecurityProfilesInvoker) Invoke() (*model.ListSecurityProfilesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecurityProfilesResponse), nil
+	}
+}
+
+type ShowSecurityProfileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSecurityProfileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSecurityProfileInvoker) Invoke() (*model.ShowSecurityProfileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSecurityProfileResponse), nil
+	}
+}
+
+type UpdateSecurityProfileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSecurityProfileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSecurityProfileInvoker) Invoke() (*model.UpdateSecurityProfileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSecurityProfileResponse), nil
 	}
 }
 

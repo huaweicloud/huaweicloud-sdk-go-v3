@@ -389,6 +389,22 @@ func (i *DeleteBasicAwByIdInvoker) Invoke() (*model.DeleteBasicAwByIdResponse, e
 	}
 }
 
+type DeleteCacheFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCacheFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteCacheFileInvoker) Invoke() (*model.DeleteCacheFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCacheFileResponse), nil
+	}
+}
+
 type DeleteFacotrByIdInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -450,6 +466,22 @@ func (i *DeleteTestCaseCommentInvoker) Invoke() (*model.DeleteTestCaseCommentRes
 		return nil, err
 	} else {
 		return result.(*model.DeleteTestCaseCommentResponse), nil
+	}
+}
+
+type DeleteTestReportCustomDetailByUriInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTestReportCustomDetailByUriInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteTestReportCustomDetailByUriInvoker) Invoke() (*model.DeleteTestReportCustomDetailByUriResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTestReportCustomDetailByUriResponse), nil
 	}
 }
 
@@ -722,6 +754,22 @@ func (i *ListIteratorsInvoker) Invoke() (*model.ListIteratorsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListIteratorsResponse), nil
+	}
+}
+
+type ListIteratorsInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIteratorsInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListIteratorsInfoInvoker) Invoke() (*model.ListIteratorsInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIteratorsInfoResponse), nil
 	}
 }
 
@@ -1218,6 +1266,22 @@ func (i *SaveTaskSettingInvoker) Invoke() (*model.SaveTaskSettingResponse, error
 		return nil, err
 	} else {
 		return result.(*model.SaveTaskSettingResponse), nil
+	}
+}
+
+type SaveTestReportCustomDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SaveTestReportCustomDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SaveTestReportCustomDetailInvoker) Invoke() (*model.SaveTestReportCustomDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SaveTestReportCustomDetailResponse), nil
 	}
 }
 
@@ -2149,6 +2213,22 @@ func (i *UpdateTestCaseResultInvoker) Invoke() (*model.UpdateTestCaseResultRespo
 	}
 }
 
+type UpdateTestReportCustomDetailByUriInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTestReportCustomDetailByUriInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateTestReportCustomDetailByUriInvoker) Invoke() (*model.UpdateTestReportCustomDetailByUriResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTestReportCustomDetailByUriResponse), nil
+	}
+}
+
 type UpdateUserDnsMappingInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2178,6 +2258,22 @@ func (i *UpdateVersionTestCaseInvoker) Invoke() (*model.UpdateVersionTestCaseRes
 		return nil, err
 	} else {
 		return result.(*model.UpdateVersionTestCaseResponse), nil
+	}
+}
+
+type UploadCacheFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadCacheFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UploadCacheFileInvoker) Invoke() (*model.UploadCacheFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadCacheFileResponse), nil
 	}
 }
 

@@ -31,6 +31,9 @@ type EpDetail struct {
 
 	// 项目类型： - prod：商用项目 - poc：测试项目
 	Type EpDetailType `json:"type"`
+
+	// 删除标识，false-未删除；true-已删除
+	DeleteFlag bool `json:"delete_flag"`
 }
 
 func (o EpDetail) String() string {

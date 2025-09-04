@@ -250,9 +250,9 @@ func (c *RamClient) ShowPermissionInvoker(request *model.ShowPermissionRequest) 
 	return &ShowPermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SearchDistinctPrincipals 检索资源使用者并去除其中的重复项
+// SearchDistinctPrincipals 检索不同的资源使用者或者资源所有者
 //
-// 检索您正在共享资源的不同使用者或被共享资源给您的不同使用者并去除其中的重复项。
+// 检索您正在共享资源的不同使用者或共享给您的不同资源所有者。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RamClient) SearchDistinctPrincipals(request *model.SearchDistinctPrincipalsRequest) (*model.SearchDistinctPrincipalsResponse, error) {
@@ -265,15 +265,15 @@ func (c *RamClient) SearchDistinctPrincipals(request *model.SearchDistinctPrinci
 	}
 }
 
-// SearchDistinctPrincipalsInvoker 检索资源使用者并去除其中的重复项
+// SearchDistinctPrincipalsInvoker 检索不同的资源使用者或者资源所有者
 func (c *RamClient) SearchDistinctPrincipalsInvoker(request *model.SearchDistinctPrincipalsRequest) *SearchDistinctPrincipalsInvoker {
 	requestDef := GenReqDefForSearchDistinctPrincipals()
 	return &SearchDistinctPrincipalsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SearchSharedPrincipals 检索资源使用者
+// SearchSharedPrincipals 检索资源使用者或者资源所有者
 //
-// 检索共享资源的使用者。
+// 检索共享资源的使用者或者共享给您的资源所有者。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RamClient) SearchSharedPrincipals(request *model.SearchSharedPrincipalsRequest) (*model.SearchSharedPrincipalsResponse, error) {
@@ -286,15 +286,15 @@ func (c *RamClient) SearchSharedPrincipals(request *model.SearchSharedPrincipals
 	}
 }
 
-// SearchSharedPrincipalsInvoker 检索资源使用者
+// SearchSharedPrincipalsInvoker 检索资源使用者或者资源所有者
 func (c *RamClient) SearchSharedPrincipalsInvoker(request *model.SearchSharedPrincipalsRequest) *SearchSharedPrincipalsInvoker {
 	requestDef := GenReqDefForSearchSharedPrincipals()
 	return &SearchSharedPrincipalsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SearchDistinctSharedResources 检索共享的资源并去除其中的重复项
+// SearchDistinctSharedResources 检索共享的不同资源
 //
-// 检索您添加到资源共享或被共享给您的不同资源并去除其中的重复项。
+// 检索您添加到资源共享或被共享给您的不同资源。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RamClient) SearchDistinctSharedResources(request *model.SearchDistinctSharedResourcesRequest) (*model.SearchDistinctSharedResourcesResponse, error) {
@@ -307,7 +307,7 @@ func (c *RamClient) SearchDistinctSharedResources(request *model.SearchDistinctS
 	}
 }
 
-// SearchDistinctSharedResourcesInvoker 检索共享的资源并去除其中的重复项
+// SearchDistinctSharedResourcesInvoker 检索共享的不同资源
 func (c *RamClient) SearchDistinctSharedResourcesInvoker(request *model.SearchDistinctSharedResourcesRequest) *SearchDistinctSharedResourcesInvoker {
 	requestDef := GenReqDefForSearchDistinctSharedResources()
 	return &SearchDistinctSharedResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

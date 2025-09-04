@@ -37,6 +37,22 @@ func (i *BatchTagActionInvoker) Invoke() (*model.BatchTagActionResponse, error) 
 	}
 }
 
+type BatchUpgradeDatabasesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpgradeDatabasesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpgradeDatabasesInvoker) Invoke() (*model.BatchUpgradeDatabasesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpgradeDatabasesResponse), nil
+	}
+}
+
 type CancelGaussMySqlInstanceEipInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -309,6 +325,22 @@ func (i *CreateLtsConfigsInvoker) Invoke() (*model.CreateLtsConfigsResponse, err
 	}
 }
 
+type CreateProxyDnsNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateProxyDnsNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateProxyDnsNameInvoker) Invoke() (*model.CreateProxyDnsNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateProxyDnsNameResponse), nil
+	}
+}
+
 type CreateRestoreTablesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -469,6 +501,22 @@ func (i *DeleteLtsConfigsInvoker) Invoke() (*model.DeleteLtsConfigsResponse, err
 	}
 }
 
+type DeleteProxyPrivateDnsNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteProxyPrivateDnsNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteProxyPrivateDnsNameInvoker) Invoke() (*model.DeleteProxyPrivateDnsNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteProxyPrivateDnsNameResponse), nil
+	}
+}
+
 type DeleteScheduleTasKInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -626,6 +674,22 @@ func (i *ListAuditLogDownloadLinkInvoker) Invoke() (*model.ListAuditLogDownloadL
 		return nil, err
 	} else {
 		return result.(*model.ListAuditLogDownloadLinkResponse), nil
+	}
+}
+
+type ListAuditLogsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAuditLogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAuditLogsInvoker) Invoke() (*model.ListAuditLogsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAuditLogsResponse), nil
 	}
 }
 
@@ -1189,6 +1253,22 @@ func (i *RestoreOldInstanceInvoker) Invoke() (*model.RestoreOldInstanceResponse,
 	}
 }
 
+type SetAuditLogPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetAuditLogPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetAuditLogPolicyInvoker) Invoke() (*model.SetAuditLogPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetAuditLogPolicyResponse), nil
+	}
+}
+
 type SetGaussMySqlProxyWeightInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1269,6 +1349,38 @@ func (i *ShowAuditLogInvoker) Invoke() (*model.ShowAuditLogResponse, error) {
 	}
 }
 
+type ShowAuditLogDownloadLinkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAuditLogDownloadLinkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAuditLogDownloadLinkInvoker) Invoke() (*model.ShowAuditLogDownloadLinkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAuditLogDownloadLinkResponse), nil
+	}
+}
+
+type ShowAuditLogPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAuditLogPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAuditLogPolicyInvoker) Invoke() (*model.ShowAuditLogPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAuditLogPolicyResponse), nil
+	}
+}
+
 type ShowAutoExpandPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1346,6 +1458,22 @@ func (i *ShowDedicatedResourceInfoInvoker) Invoke() (*model.ShowDedicatedResourc
 		return nil, err
 	} else {
 		return result.(*model.ShowDedicatedResourceInfoResponse), nil
+	}
+}
+
+type ShowErrorLogDownloadLinkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowErrorLogDownloadLinkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowErrorLogDownloadLinkInvoker) Invoke() (*model.ShowErrorLogDownloadLinkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowErrorLogDownloadLinkResponse), nil
 	}
 }
 
@@ -1685,6 +1813,22 @@ func (i *ShowProxyConfigurationsInvoker) Invoke() (*model.ShowProxyConfiguration
 	}
 }
 
+type ShowProxyFlavorsByAzCodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProxyFlavorsByAzCodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowProxyFlavorsByAzCodeInvoker) Invoke() (*model.ShowProxyFlavorsByAzCodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProxyFlavorsByAzCodeResponse), nil
+	}
+}
+
 type ShowProxyIpgroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1826,6 +1970,22 @@ func (i *ShowSqlFilterRuleInvoker) Invoke() (*model.ShowSqlFilterRuleResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowSqlFilterRuleResponse), nil
+	}
+}
+
+type ShowTableMetaInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTableMetaInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTableMetaInfoInvoker) Invoke() (*model.ShowTableMetaInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTableMetaInfoResponse), nil
 	}
 }
 
@@ -2290,6 +2450,22 @@ func (i *UpdateProxyPortInvoker) Invoke() (*model.UpdateProxyPortResponse, error
 		return nil, err
 	} else {
 		return result.(*model.UpdateProxyPortResponse), nil
+	}
+}
+
+type UpdateProxyPrivateDnsNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateProxyPrivateDnsNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateProxyPrivateDnsNameInvoker) Invoke() (*model.UpdateProxyPrivateDnsNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateProxyPrivateDnsNameResponse), nil
 	}
 }
 
@@ -2901,6 +3077,22 @@ func (i *ListHtapStorageTypeInvoker) Invoke() (*model.ListHtapStorageTypeRespons
 	}
 }
 
+type ListInstanceNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceNodeInvoker) Invoke() (*model.ListInstanceNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceNodeResponse), nil
+	}
+}
+
 type ListStarRocksDataBasesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3010,6 +3202,22 @@ func (i *ModifyDataSyncInvoker) Invoke() (*model.ModifyDataSyncResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ModifyDataSyncResponse), nil
+	}
+}
+
+type ModifyStarRocksSecurityGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyStarRocksSecurityGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyStarRocksSecurityGroupInvoker) Invoke() (*model.ModifyStarRocksSecurityGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyStarRocksSecurityGroupResponse), nil
 	}
 }
 
@@ -3202,6 +3410,70 @@ func (i *ShowClickHouseSlowLogSensitiveStatusInvoker) Invoke() (*model.ShowClick
 		return nil, err
 	} else {
 		return result.(*model.ShowClickHouseSlowLogSensitiveStatusResponse), nil
+	}
+}
+
+type ShowHtapErrorLogDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHtapErrorLogDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowHtapErrorLogDetailInvoker) Invoke() (*model.ShowHtapErrorLogDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHtapErrorLogDetailResponse), nil
+	}
+}
+
+type ShowHtapLtsConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHtapLtsConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowHtapLtsConfigInvoker) Invoke() (*model.ShowHtapLtsConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHtapLtsConfigResponse), nil
+	}
+}
+
+type ShowInstanceDatabasesForHtapInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceDatabasesForHtapInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceDatabasesForHtapInvoker) Invoke() (*model.ShowInstanceDatabasesForHtapResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceDatabasesForHtapResponse), nil
+	}
+}
+
+type ShowInstanceTablesForHtapInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceTablesForHtapInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceTablesForHtapInvoker) Invoke() (*model.ShowInstanceTablesForHtapResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceTablesForHtapResponse), nil
 	}
 }
 

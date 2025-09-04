@@ -33,10 +33,10 @@ type CloudStorageAssignmentCreateInfo struct {
 	AttachType *AttachType `json:"attach_type,omitempty"`
 
 	// 错误信息。
-	ErrorMessage *string `json:"errorMessage,omitempty"`
+	ErrorMessage *string `json:"error_message,omitempty"`
 
 	// 是否创建成功。
-	IsSuccess *bool `json:"isSuccess,omitempty"`
+	IsSuccess *bool `json:"is_success,omitempty"`
 }
 
 func (o CloudStorageAssignmentCreateInfo) String() string {

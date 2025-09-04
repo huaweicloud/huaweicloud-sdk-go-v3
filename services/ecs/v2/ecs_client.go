@@ -217,6 +217,26 @@ func (c *EcsClient) BatchDeleteServerTagsInvoker(request *model.BatchDeleteServe
 	return &BatchDeleteServerTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDetachVolumes 批量卸载卷
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) BatchDetachVolumes(request *model.BatchDetachVolumesRequest) (*model.BatchDetachVolumesResponse, error) {
+	requestDef := GenReqDefForBatchDetachVolumes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDetachVolumesResponse), nil
+	}
+}
+
+// BatchDetachVolumesInvoker 批量卸载卷
+func (c *EcsClient) BatchDetachVolumesInvoker(request *model.BatchDetachVolumesRequest) *BatchDetachVolumesInvoker {
+	requestDef := GenReqDefForBatchDetachVolumes()
+	return &BatchDetachVolumesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchRebootServers 批量重启云服务器
 //
 // 根据给定的云服务器ID列表，批量重启云服务器，一次最多可以重启1000台。
@@ -257,6 +277,27 @@ func (c *EcsClient) BatchResetServersPassword(request *model.BatchResetServersPa
 func (c *EcsClient) BatchResetServersPasswordInvoker(request *model.BatchResetServersPasswordRequest) *BatchResetServersPasswordInvoker {
 	requestDef := GenReqDefForBatchResetServersPassword()
 	return &BatchResetServersPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchResizeServers 批量变更云服务器规格
+//
+// 批量变更云服务器规格
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) BatchResizeServers(request *model.BatchResizeServersRequest) (*model.BatchResizeServersResponse, error) {
+	requestDef := GenReqDefForBatchResizeServers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchResizeServersResponse), nil
+	}
+}
+
+// BatchResizeServersInvoker 批量变更云服务器规格
+func (c *EcsClient) BatchResizeServersInvoker(request *model.BatchResizeServersRequest) *BatchResizeServersInvoker {
+	requestDef := GenReqDefForBatchResizeServers()
+	return &BatchResizeServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchStartServers 批量启动云服务器
@@ -745,6 +786,48 @@ func (c *EcsClient) DisassociateServerVirtualIp(request *model.DisassociateServe
 func (c *EcsClient) DisassociateServerVirtualIpInvoker(request *model.DisassociateServerVirtualIpRequest) *DisassociateServerVirtualIpInvoker {
 	requestDef := GenReqDefForDisassociateServerVirtualIp()
 	return &DisassociateServerVirtualIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteServerDump 触发云服务器内核dump
+//
+// 触发云服务器内核dump
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ExecuteServerDump(request *model.ExecuteServerDumpRequest) (*model.ExecuteServerDumpResponse, error) {
+	requestDef := GenReqDefForExecuteServerDump()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteServerDumpResponse), nil
+	}
+}
+
+// ExecuteServerDumpInvoker 触发云服务器内核dump
+func (c *EcsClient) ExecuteServerDumpInvoker(request *model.ExecuteServerDumpRequest) *ExecuteServerDumpInvoker {
+	requestDef := GenReqDefForExecuteServerDump()
+	return &ExecuteServerDumpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteServerRedeploy 重部署云服务器
+//
+// 重部署云服务器
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ExecuteServerRedeploy(request *model.ExecuteServerRedeployRequest) (*model.ExecuteServerRedeployResponse, error) {
+	requestDef := GenReqDefForExecuteServerRedeploy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteServerRedeployResponse), nil
+	}
+}
+
+// ExecuteServerRedeployInvoker 重部署云服务器
+func (c *EcsClient) ExecuteServerRedeployInvoker(request *model.ExecuteServerRedeployRequest) *ExecuteServerRedeployInvoker {
+	requestDef := GenReqDefForExecuteServerRedeploy()
+	return &ExecuteServerRedeployInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListCloudServers 查询云服务器列表接口
@@ -1623,6 +1706,27 @@ func (c *EcsClient) RevertRecycleBinServer(request *model.RevertRecycleBinServer
 func (c *EcsClient) RevertRecycleBinServerInvoker(request *model.RevertRecycleBinServerRequest) *RevertRecycleBinServerInvoker {
 	requestDef := GenReqDefForRevertRecycleBinServer()
 	return &RevertRecycleBinServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAppendableVolumeQuota 查询包周期虚拟机可以追加卷数量
+//
+// 查询包周期虚拟机可以追加卷数量
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ShowAppendableVolumeQuota(request *model.ShowAppendableVolumeQuotaRequest) (*model.ShowAppendableVolumeQuotaResponse, error) {
+	requestDef := GenReqDefForShowAppendableVolumeQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAppendableVolumeQuotaResponse), nil
+	}
+}
+
+// ShowAppendableVolumeQuotaInvoker 查询包周期虚拟机可以追加卷数量
+func (c *EcsClient) ShowAppendableVolumeQuotaInvoker(request *model.ShowAppendableVolumeQuotaRequest) *ShowAppendableVolumeQuotaInvoker {
+	requestDef := GenReqDefForShowAppendableVolumeQuota()
+	return &ShowAppendableVolumeQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowMetadataOptions 查询云服务器元数据配置

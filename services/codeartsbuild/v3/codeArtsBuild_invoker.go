@@ -5,6 +5,22 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/codeartsbuild/v3/model"
 )
 
+type BatchDeleteBuildJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteBuildJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteBuildJobsInvoker) Invoke() (*model.BatchDeleteBuildJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteBuildJobsResponse), nil
+	}
+}
+
 type CreateBuildJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -469,6 +485,54 @@ func (i *ListRelatedProjectInfoInvoker) Invoke() (*model.ListRelatedProjectInfoR
 	}
 }
 
+type ShowAvailableInnerSpecInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAvailableInnerSpecInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAvailableInnerSpecInvoker) Invoke() (*model.ShowAvailableInnerSpecResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAvailableInnerSpecResponse), nil
+	}
+}
+
+type ShowDomainStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDomainStatusInvoker) Invoke() (*model.ShowDomainStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainStatusResponse), nil
+	}
+}
+
+type ShowPackageSpecCountDownInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPackageSpecCountDownInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPackageSpecCountDownInvoker) Invoke() (*model.ShowPackageSpecCountDownResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPackageSpecCountDownResponse), nil
+	}
+}
+
 type ShowProjectPermissionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -517,6 +581,22 @@ func (i *ShowSummaryBuildJobInfoInvoker) Invoke() (*model.ShowSummaryBuildJobInf
 	}
 }
 
+type ShowUserChargeTypeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowUserChargeTypeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowUserChargeTypeInvoker) Invoke() (*model.ShowUserChargeTypeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowUserChargeTypeResponse), nil
+	}
+}
+
 type ShowUserOverPackageQuotaInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -530,6 +610,102 @@ func (i *ShowUserOverPackageQuotaInvoker) Invoke() (*model.ShowUserOverPackageQu
 		return nil, err
 	} else {
 		return result.(*model.ShowUserOverPackageQuotaResponse), nil
+	}
+}
+
+type CreateJobGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateJobGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateJobGroupInvoker) Invoke() (*model.CreateJobGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateJobGroupResponse), nil
+	}
+}
+
+type DeleteGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteGroupInvoker) Invoke() (*model.DeleteGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteGroupResponse), nil
+	}
+}
+
+type ListGroupTreeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGroupTreeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListGroupTreeInvoker) Invoke() (*model.ListGroupTreeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGroupTreeResponse), nil
+	}
+}
+
+type MoveGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *MoveGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *MoveGroupInvoker) Invoke() (*model.MoveGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.MoveGroupResponse), nil
+	}
+}
+
+type SwitchedPacketInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchedPacketInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SwitchedPacketInvoker) Invoke() (*model.SwitchedPacketResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchedPacketResponse), nil
+	}
+}
+
+type UpdateJobGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateJobGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateJobGroupInvoker) Invoke() (*model.UpdateJobGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateJobGroupResponse), nil
 	}
 }
 
@@ -565,6 +741,38 @@ func (i *ShowImageTemplateListInvoker) Invoke() (*model.ShowImageTemplateListRes
 	}
 }
 
+type ApplyProjectPermissionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ApplyProjectPermissionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ApplyProjectPermissionInvoker) Invoke() (*model.ApplyProjectPermissionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ApplyProjectPermissionResponse), nil
+	}
+}
+
+type BatchUpdateJobRolePermissionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateJobRolePermissionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateJobRolePermissionInvoker) Invoke() (*model.BatchUpdateJobRolePermissionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateJobRolePermissionResponse), nil
+	}
+}
+
 type CheckJobCountIsTopLimitInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -578,6 +786,22 @@ func (i *CheckJobCountIsTopLimitInvoker) Invoke() (*model.CheckJobCountIsTopLimi
 		return nil, err
 	} else {
 		return result.(*model.CheckJobCountIsTopLimitResponse), nil
+	}
+}
+
+type CheckJobInternalInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckJobInternalInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckJobInternalInvoker) Invoke() (*model.CheckJobInternalResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckJobInternalResponse), nil
 	}
 }
 
@@ -741,6 +965,22 @@ func (i *ListBuildParameterInvoker) Invoke() (*model.ListBuildParameterResponse,
 	}
 }
 
+type ListEndPointsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEndPointsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListEndPointsInvoker) Invoke() (*model.ListEndPointsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEndPointsResponse), nil
+	}
+}
+
 type ListJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -837,6 +1077,22 @@ func (i *SetKeepTimeInvoker) Invoke() (*model.SetKeepTimeResponse, error) {
 	}
 }
 
+type ShowBuildDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBuildDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowBuildDetailsInvoker) Invoke() (*model.ShowBuildDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBuildDetailsResponse), nil
+	}
+}
+
 type ShowBuildParamsListInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -914,6 +1170,22 @@ func (i *ShowDisableInvoker) Invoke() (*model.ShowDisableResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowDisableResponse), nil
+	}
+}
+
+type ShowDomainsStatusesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainsStatusesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDomainsStatusesInvoker) Invoke() (*model.ShowDomainsStatusesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainsStatusesResponse), nil
 	}
 }
 
@@ -1106,6 +1378,22 @@ func (i *UpdateNewJobInvoker) Invoke() (*model.UpdateNewJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateNewJobResponse), nil
+	}
+}
+
+type UpdateNewNoticeNewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateNewNoticeNewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateNewNoticeNewInvoker) Invoke() (*model.UpdateNewNoticeNewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateNewNoticeNewResponse), nil
 	}
 }
 
@@ -1605,6 +1893,22 @@ func (i *ShowReportSummaryInvoker) Invoke() (*model.ShowReportSummaryResponse, e
 	}
 }
 
+type AddFavouriteCustomTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddFavouriteCustomTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddFavouriteCustomTemplateInvoker) Invoke() (*model.AddFavouriteCustomTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddFavouriteCustomTemplateResponse), nil
+	}
+}
+
 type CreateTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1685,6 +1989,22 @@ func (i *ListRecommendOfficialTemplateInvoker) Invoke() (*model.ListRecommendOff
 	}
 }
 
+type RemoverFavouriteCustomTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RemoverFavouriteCustomTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RemoverFavouriteCustomTemplateInvoker) Invoke() (*model.RemoverFavouriteCustomTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RemoverFavouriteCustomTemplateResponse), nil
+	}
+}
+
 type SaveTemplateUsedInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1698,6 +2018,22 @@ func (i *SaveTemplateUsedInfoInvoker) Invoke() (*model.SaveTemplateUsedInfoRespo
 		return nil, err
 	} else {
 		return result.(*model.SaveTemplateUsedInfoResponse), nil
+	}
+}
+
+type ShowTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTemplateInvoker) Invoke() (*model.ShowTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTemplateResponse), nil
 	}
 }
 

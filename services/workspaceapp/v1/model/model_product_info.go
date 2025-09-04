@@ -81,7 +81,7 @@ type ProductInfo struct {
 	// 系列类型。
 	SeriesType *string `json:"series_type,omitempty"`
 
-	// 产品套餐过期时间,产品将在改时间点后逐步下架。
+	// 产品套餐过期时间,产品将在该时间点后逐步下架。
 	ExpireTime *sdktime.SdkTime `json:"expire_time,omitempty"`
 
 	// 产品套餐支持的GPU类型。

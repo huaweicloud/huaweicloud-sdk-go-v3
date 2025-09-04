@@ -917,6 +917,22 @@ func (i *UpdateLifeCycleHookInvoker) Invoke() (*model.UpdateLifeCycleHookRespons
 	}
 }
 
+type UpdateScalingConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateScalingConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateScalingConfigInvoker) Invoke() (*model.UpdateScalingConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateScalingConfigResponse), nil
+	}
+}
+
 type UpdateScalingGroupInvoker struct {
 	*invoker.BaseInvoker
 }

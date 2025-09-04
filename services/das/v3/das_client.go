@@ -189,6 +189,27 @@ func (c *DasClient) ChangeChargeModeInvoker(request *model.ChangeChargeModeReque
 	return &ChangeChargeModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeFullDeadLockSwitch 设置全量死锁开关
+//
+// 设置全量死锁开关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ChangeFullDeadLockSwitch(request *model.ChangeFullDeadLockSwitchRequest) (*model.ChangeFullDeadLockSwitchResponse, error) {
+	requestDef := GenReqDefForChangeFullDeadLockSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeFullDeadLockSwitchResponse), nil
+	}
+}
+
+// ChangeFullDeadLockSwitchInvoker 设置全量死锁开关
+func (c *DasClient) ChangeFullDeadLockSwitchInvoker(request *model.ChangeFullDeadLockSwitchRequest) *ChangeFullDeadLockSwitchInvoker {
+	requestDef := GenReqDefForChangeFullDeadLockSwitch()
+	return &ChangeFullDeadLockSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ChangeSqlLimitSwitchStatus 设置SQL限流开关状态
 //
 // 设置SQL限流开关状态。目前仅支持MySQL数据库。
@@ -272,6 +293,27 @@ func (c *DasClient) CreateHealthReportTask(request *model.CreateHealthReportTask
 func (c *DasClient) CreateHealthReportTaskInvoker(request *model.CreateHealthReportTaskRequest) *CreateHealthReportTaskInvoker {
 	requestDef := GenReqDefForCreateHealthReportTask()
 	return &CreateHealthReportTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSnapshots 创建快照
+//
+// 创建快照
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) CreateSnapshots(request *model.CreateSnapshotsRequest) (*model.CreateSnapshotsResponse, error) {
+	requestDef := GenReqDefForCreateSnapshots()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSnapshotsResponse), nil
+	}
+}
+
+// CreateSnapshotsInvoker 创建快照
+func (c *DasClient) CreateSnapshotsInvoker(request *model.CreateSnapshotsRequest) *CreateSnapshotsInvoker {
+	requestDef := GenReqDefForCreateSnapshots()
+	return &CreateSnapshotsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateSpaceAnalysisTask 创建空间分析任务
@@ -879,6 +921,27 @@ func (c *DasClient) ListRiskTrendInvoker(request *model.ListRiskTrendRequest) *L
 	return &ListRiskTrendInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSnapshots 查询快照列表
+//
+// 查询快照列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListSnapshots(request *model.ListSnapshotsRequest) (*model.ListSnapshotsResponse, error) {
+	requestDef := GenReqDefForListSnapshots()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSnapshotsResponse), nil
+	}
+}
+
+// ListSnapshotsInvoker 查询快照列表
+func (c *DasClient) ListSnapshotsInvoker(request *model.ListSnapshotsRequest) *ListSnapshotsInvoker {
+	requestDef := GenReqDefForListSnapshots()
+	return &ListSnapshotsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSpaceAnalysis 获取空间分析数据列表
 //
 // 获取空间分析数据列表。实例级别数据来源于文件系统，库级别和表级别数据来源于information_schema.tables表。空间&amp;元数据分析最多分析10000张表，若缺少库表空间数据，可能是因为数据库实例表个数过多或者账号未保存密码。如果为保存密码，请使用用户管理接口或页面录入数据库账号。 支持MySQL、GaussDB(for MySQL)和SQLServer引擎。
@@ -1050,6 +1113,48 @@ func (c *DasClient) ShowDbUserInvoker(request *model.ShowDbUserRequest) *ShowDbU
 	return &ShowDbUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowFullDeadLockList 获取全量死锁信息
+//
+// 获取全量死锁信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowFullDeadLockList(request *model.ShowFullDeadLockListRequest) (*model.ShowFullDeadLockListResponse, error) {
+	requestDef := GenReqDefForShowFullDeadLockList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFullDeadLockListResponse), nil
+	}
+}
+
+// ShowFullDeadLockListInvoker 获取全量死锁信息
+func (c *DasClient) ShowFullDeadLockListInvoker(request *model.ShowFullDeadLockListRequest) *ShowFullDeadLockListInvoker {
+	requestDef := GenReqDefForShowFullDeadLockList()
+	return &ShowFullDeadLockListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFullDeadLockSwitch 获取全量死锁开关
+//
+// 获取全量死锁开关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowFullDeadLockSwitch(request *model.ShowFullDeadLockSwitchRequest) (*model.ShowFullDeadLockSwitchResponse, error) {
+	requestDef := GenReqDefForShowFullDeadLockSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFullDeadLockSwitchResponse), nil
+	}
+}
+
+// ShowFullDeadLockSwitchInvoker 获取全量死锁开关
+func (c *DasClient) ShowFullDeadLockSwitchInvoker(request *model.ShowFullDeadLockSwitchRequest) *ShowFullDeadLockSwitchInvoker {
+	requestDef := GenReqDefForShowFullDeadLockSwitch()
+	return &ShowFullDeadLockSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowInstanceHealthReport 获取实例健康诊断报告内容
 //
 // 获取实例健康诊断报告内容。
@@ -1069,6 +1174,27 @@ func (c *DasClient) ShowInstanceHealthReport(request *model.ShowInstanceHealthRe
 func (c *DasClient) ShowInstanceHealthReportInvoker(request *model.ShowInstanceHealthReportRequest) *ShowInstanceHealthReportInvoker {
 	requestDef := GenReqDefForShowInstanceHealthReport()
 	return &ShowInstanceHealthReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLatestDeadLockSnapshot 获取死锁的快照信息
+//
+// 获取死锁的快照信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowLatestDeadLockSnapshot(request *model.ShowLatestDeadLockSnapshotRequest) (*model.ShowLatestDeadLockSnapshotResponse, error) {
+	requestDef := GenReqDefForShowLatestDeadLockSnapshot()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLatestDeadLockSnapshotResponse), nil
+	}
+}
+
+// ShowLatestDeadLockSnapshotInvoker 获取死锁的快照信息
+func (c *DasClient) ShowLatestDeadLockSnapshotInvoker(request *model.ShowLatestDeadLockSnapshotRequest) *ShowLatestDeadLockSnapshotInvoker {
+	requestDef := GenReqDefForShowLatestDeadLockSnapshot()
+	return &ShowLatestDeadLockSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowMetricNamesSupport 多节点单指标支持指标信息

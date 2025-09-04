@@ -523,6 +523,27 @@ func (c *CloudtestClient) DeleteBasicAwByIdInvoker(request *model.DeleteBasicAwB
 	return &DeleteBasicAwByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteCacheFile 删除附件
+//
+// 删除附件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) DeleteCacheFile(request *model.DeleteCacheFileRequest) (*model.DeleteCacheFileResponse, error) {
+	requestDef := GenReqDefForDeleteCacheFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCacheFileResponse), nil
+	}
+}
+
+// DeleteCacheFileInvoker 删除附件
+func (c *CloudtestClient) DeleteCacheFileInvoker(request *model.DeleteCacheFileRequest) *DeleteCacheFileInvoker {
+	requestDef := GenReqDefForDeleteCacheFile()
+	return &DeleteCacheFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteFacotrById 删除因子
 //
 // 删除因子
@@ -605,6 +626,27 @@ func (c *CloudtestClient) DeleteTestCaseComment(request *model.DeleteTestCaseCom
 func (c *CloudtestClient) DeleteTestCaseCommentInvoker(request *model.DeleteTestCaseCommentRequest) *DeleteTestCaseCommentInvoker {
 	requestDef := GenReqDefForDeleteTestCaseComment()
 	return &DeleteTestCaseCommentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTestReportCustomDetailByUri 删除测试报告自定义模块
+//
+// 删除测试报告自定义模块
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) DeleteTestReportCustomDetailByUri(request *model.DeleteTestReportCustomDetailByUriRequest) (*model.DeleteTestReportCustomDetailByUriResponse, error) {
+	requestDef := GenReqDefForDeleteTestReportCustomDetailByUri()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTestReportCustomDetailByUriResponse), nil
+	}
+}
+
+// DeleteTestReportCustomDetailByUriInvoker 删除测试报告自定义模块
+func (c *CloudtestClient) DeleteTestReportCustomDetailByUriInvoker(request *model.DeleteTestReportCustomDetailByUriRequest) *DeleteTestReportCustomDetailByUriInvoker {
+	requestDef := GenReqDefForDeleteTestReportCustomDetailByUri()
+	return &DeleteTestReportCustomDetailByUriInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAlarmStatisticsUsing 查询告警统计数据
@@ -962,6 +1004,27 @@ func (c *CloudtestClient) ListIterators(request *model.ListIteratorsRequest) (*m
 func (c *CloudtestClient) ListIteratorsInvoker(request *model.ListIteratorsRequest) *ListIteratorsInvoker {
 	requestDef := GenReqDefForListIterators()
 	return &ListIteratorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIteratorsInfo 查询迭代计划列表，包含统计信息，对版本强校验
+//
+// 查询迭代计划列表，包含统计信息，对版本强校验
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ListIteratorsInfo(request *model.ListIteratorsInfoRequest) (*model.ListIteratorsInfoResponse, error) {
+	requestDef := GenReqDefForListIteratorsInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIteratorsInfoResponse), nil
+	}
+}
+
+// ListIteratorsInfoInvoker 查询迭代计划列表，包含统计信息，对版本强校验
+func (c *CloudtestClient) ListIteratorsInfoInvoker(request *model.ListIteratorsInfoRequest) *ListIteratorsInfoInvoker {
+	requestDef := GenReqDefForListIteratorsInfo()
+	return &ListIteratorsInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListLinesUsing 查询仪表盘折线图数据
@@ -1611,6 +1674,27 @@ func (c *CloudtestClient) SaveTaskSetting(request *model.SaveTaskSettingRequest)
 func (c *CloudtestClient) SaveTaskSettingInvoker(request *model.SaveTaskSettingRequest) *SaveTaskSettingInvoker {
 	requestDef := GenReqDefForSaveTaskSetting()
 	return &SaveTaskSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SaveTestReportCustomDetail 创建测试报告自定义模块
+//
+// 创建测试报告自定义模块
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) SaveTestReportCustomDetail(request *model.SaveTestReportCustomDetailRequest) (*model.SaveTestReportCustomDetailResponse, error) {
+	requestDef := GenReqDefForSaveTestReportCustomDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SaveTestReportCustomDetailResponse), nil
+	}
+}
+
+// SaveTestReportCustomDetailInvoker 创建测试报告自定义模块
+func (c *CloudtestClient) SaveTestReportCustomDetailInvoker(request *model.SaveTestReportCustomDetailRequest) *SaveTestReportCustomDetailInvoker {
+	requestDef := GenReqDefForSaveTestReportCustomDetail()
+	return &SaveTestReportCustomDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SetTaskResult 设置测试套结果
@@ -2831,6 +2915,27 @@ func (c *CloudtestClient) UpdateTestCaseResultInvoker(request *model.UpdateTestC
 	return &UpdateTestCaseResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateTestReportCustomDetailByUri 修改测试报告自定义模块
+//
+// 修改测试报告自定义模块
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) UpdateTestReportCustomDetailByUri(request *model.UpdateTestReportCustomDetailByUriRequest) (*model.UpdateTestReportCustomDetailByUriResponse, error) {
+	requestDef := GenReqDefForUpdateTestReportCustomDetailByUri()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTestReportCustomDetailByUriResponse), nil
+	}
+}
+
+// UpdateTestReportCustomDetailByUriInvoker 修改测试报告自定义模块
+func (c *CloudtestClient) UpdateTestReportCustomDetailByUriInvoker(request *model.UpdateTestReportCustomDetailByUriRequest) *UpdateTestReportCustomDetailByUriInvoker {
+	requestDef := GenReqDefForUpdateTestReportCustomDetailByUri()
+	return &UpdateTestReportCustomDetailByUriInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateUserDnsMapping 更新用户DNS映射
 //
 // 更新用户DNS映射，执行器自定义映射
@@ -2871,6 +2976,27 @@ func (c *CloudtestClient) UpdateVersionTestCase(request *model.UpdateVersionTest
 func (c *CloudtestClient) UpdateVersionTestCaseInvoker(request *model.UpdateVersionTestCaseRequest) *UpdateVersionTestCaseInvoker {
 	requestDef := GenReqDefForUpdateVersionTestCase()
 	return &UpdateVersionTestCaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadCacheFile 上传附件
+//
+// 上传附件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) UploadCacheFile(request *model.UploadCacheFileRequest) (*model.UploadCacheFileResponse, error) {
+	requestDef := GenReqDefForUploadCacheFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadCacheFileResponse), nil
+	}
+}
+
+// UploadCacheFileInvoker 上传附件
+func (c *CloudtestClient) UploadCacheFileInvoker(request *model.UploadCacheFileRequest) *UploadCacheFileInvoker {
+	requestDef := GenReqDefForUploadCacheFile()
+	return &UploadCacheFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateApiTestSuiteByRepoFile 通过导入仓库中的文件生成接口测试套

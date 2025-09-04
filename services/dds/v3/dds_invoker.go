@@ -629,6 +629,22 @@ func (i *ListAz2MigrateInvoker) Invoke() (*model.ListAz2MigrateResponse, error) 
 	}
 }
 
+type ListBackupDownloadPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBackupDownloadPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBackupDownloadPolicyInvoker) Invoke() (*model.ListBackupDownloadPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBackupDownloadPolicyResponse), nil
+	}
+}
+
 type ListBackupsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1189,6 +1205,22 @@ func (i *RestoreNewInstanceInvoker) Invoke() (*model.RestoreNewInstanceResponse,
 	}
 }
 
+type SaveBackupDownloadPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SaveBackupDownloadPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SaveBackupDownloadPolicyInvoker) Invoke() (*model.SaveBackupDownloadPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SaveBackupDownloadPolicyResponse), nil
+	}
+}
+
 type SetAuditlogPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1746,6 +1778,22 @@ func (i *SwitchoverReplicaSetInvoker) Invoke() (*model.SwitchoverReplicaSetRespo
 		return nil, err
 	} else {
 		return result.(*model.SwitchoverReplicaSetResponse), nil
+	}
+}
+
+type UpdateBackupDownloadPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateBackupDownloadPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateBackupDownloadPolicyInvoker) Invoke() (*model.UpdateBackupDownloadPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateBackupDownloadPolicyResponse), nil
 	}
 }
 

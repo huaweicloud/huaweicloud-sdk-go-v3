@@ -8,8 +8,7 @@ import (
 
 // BindInstanceTagsResponse Response Object
 type BindInstanceTagsResponse struct {
-	Body           *string `json:"body,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o BindInstanceTagsResponse) String() string {

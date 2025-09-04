@@ -879,6 +879,111 @@ func (c *IoTDAClient) CreateCommandInvoker(request *model.CreateCommandRequest) 
 	return &CreateCommandInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDeviceAuthenticationTemplate 创建设备鉴权模板
+//
+// 应用服务器可调用此接口在物联网平台创建一个设备鉴权模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) CreateDeviceAuthenticationTemplate(request *model.CreateDeviceAuthenticationTemplateRequest) (*model.CreateDeviceAuthenticationTemplateResponse, error) {
+	requestDef := GenReqDefForCreateDeviceAuthenticationTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDeviceAuthenticationTemplateResponse), nil
+	}
+}
+
+// CreateDeviceAuthenticationTemplateInvoker 创建设备鉴权模板
+func (c *IoTDAClient) CreateDeviceAuthenticationTemplateInvoker(request *model.CreateDeviceAuthenticationTemplateRequest) *CreateDeviceAuthenticationTemplateInvoker {
+	requestDef := GenReqDefForCreateDeviceAuthenticationTemplate()
+	return &CreateDeviceAuthenticationTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDeviceAuthenticationTemplate 删除设备鉴权模板
+//
+// 应用服务器可调用此接口在物联网平台上删除指定设备鉴权模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) DeleteDeviceAuthenticationTemplate(request *model.DeleteDeviceAuthenticationTemplateRequest) (*model.DeleteDeviceAuthenticationTemplateResponse, error) {
+	requestDef := GenReqDefForDeleteDeviceAuthenticationTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDeviceAuthenticationTemplateResponse), nil
+	}
+}
+
+// DeleteDeviceAuthenticationTemplateInvoker 删除设备鉴权模板
+func (c *IoTDAClient) DeleteDeviceAuthenticationTemplateInvoker(request *model.DeleteDeviceAuthenticationTemplateRequest) *DeleteDeviceAuthenticationTemplateInvoker {
+	requestDef := GenReqDefForDeleteDeviceAuthenticationTemplate()
+	return &DeleteDeviceAuthenticationTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDeviceAuthenticationTemplates 查询设备鉴权模板列表
+//
+// 应用服务器可调用此接口在物联网平台查询设备鉴权模板列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ListDeviceAuthenticationTemplates(request *model.ListDeviceAuthenticationTemplatesRequest) (*model.ListDeviceAuthenticationTemplatesResponse, error) {
+	requestDef := GenReqDefForListDeviceAuthenticationTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDeviceAuthenticationTemplatesResponse), nil
+	}
+}
+
+// ListDeviceAuthenticationTemplatesInvoker 查询设备鉴权模板列表
+func (c *IoTDAClient) ListDeviceAuthenticationTemplatesInvoker(request *model.ListDeviceAuthenticationTemplatesRequest) *ListDeviceAuthenticationTemplatesInvoker {
+	requestDef := GenReqDefForListDeviceAuthenticationTemplates()
+	return &ListDeviceAuthenticationTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDeviceAuthenticationTemplate 查询设备鉴权模板详情
+//
+// 应用服务器可调用此接口在物联网平台查询指定设备鉴权模板ID的详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ShowDeviceAuthenticationTemplate(request *model.ShowDeviceAuthenticationTemplateRequest) (*model.ShowDeviceAuthenticationTemplateResponse, error) {
+	requestDef := GenReqDefForShowDeviceAuthenticationTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDeviceAuthenticationTemplateResponse), nil
+	}
+}
+
+// ShowDeviceAuthenticationTemplateInvoker 查询设备鉴权模板详情
+func (c *IoTDAClient) ShowDeviceAuthenticationTemplateInvoker(request *model.ShowDeviceAuthenticationTemplateRequest) *ShowDeviceAuthenticationTemplateInvoker {
+	requestDef := GenReqDefForShowDeviceAuthenticationTemplate()
+	return &ShowDeviceAuthenticationTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDeviceAuthenticationTemplate 修改设备鉴权模板
+//
+// 应用服务器可调用此接口在物联网平台上修改指定设备鉴权模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) UpdateDeviceAuthenticationTemplate(request *model.UpdateDeviceAuthenticationTemplateRequest) (*model.UpdateDeviceAuthenticationTemplateResponse, error) {
+	requestDef := GenReqDefForUpdateDeviceAuthenticationTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDeviceAuthenticationTemplateResponse), nil
+	}
+}
+
+// UpdateDeviceAuthenticationTemplateInvoker 修改设备鉴权模板
+func (c *IoTDAClient) UpdateDeviceAuthenticationTemplateInvoker(request *model.UpdateDeviceAuthenticationTemplateRequest) *UpdateDeviceAuthenticationTemplateInvoker {
+	requestDef := GenReqDefForUpdateDeviceAuthenticationTemplate()
+	return &UpdateDeviceAuthenticationTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDeviceAuthorizer 创建自定义鉴权
 //
 // 应用服务器可调用此接口在物联网平台创建一个自定义鉴权。自定义鉴权是指用户可以通过函数服务自定义实现鉴权逻辑，以对接入平台的设备进行身份认证。
@@ -984,6 +1089,111 @@ func (c *IoTDAClient) UpdateDeviceAuthorizer(request *model.UpdateDeviceAuthoriz
 func (c *IoTDAClient) UpdateDeviceAuthorizerInvoker(request *model.UpdateDeviceAuthorizerRequest) *UpdateDeviceAuthorizerInvoker {
 	requestDef := GenReqDefForUpdateDeviceAuthorizer()
 	return &UpdateDeviceAuthorizerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDeviceCertificate 删除设备证书
+//
+// 应用服务器可调用此接口在物联网平台删除一个设备证书。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) DeleteDeviceCertificate(request *model.DeleteDeviceCertificateRequest) (*model.DeleteDeviceCertificateResponse, error) {
+	requestDef := GenReqDefForDeleteDeviceCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDeviceCertificateResponse), nil
+	}
+}
+
+// DeleteDeviceCertificateInvoker 删除设备证书
+func (c *IoTDAClient) DeleteDeviceCertificateInvoker(request *model.DeleteDeviceCertificateRequest) *DeleteDeviceCertificateInvoker {
+	requestDef := GenReqDefForDeleteDeviceCertificate()
+	return &DeleteDeviceCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDeviceByDeviceCertificate 查询使用指定设备证书的设备列表
+//
+// 应用服务器可调用此接口在物联网平台查询使用指定设备证书的设备列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ListDeviceByDeviceCertificate(request *model.ListDeviceByDeviceCertificateRequest) (*model.ListDeviceByDeviceCertificateResponse, error) {
+	requestDef := GenReqDefForListDeviceByDeviceCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDeviceByDeviceCertificateResponse), nil
+	}
+}
+
+// ListDeviceByDeviceCertificateInvoker 查询使用指定设备证书的设备列表
+func (c *IoTDAClient) ListDeviceByDeviceCertificateInvoker(request *model.ListDeviceByDeviceCertificateRequest) *ListDeviceByDeviceCertificateInvoker {
+	requestDef := GenReqDefForListDeviceByDeviceCertificate()
+	return &ListDeviceByDeviceCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDeviceCertificate 查询设备证书列表
+//
+// 应用服务器可调用此接口在物联网平台查询设备证书列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ListDeviceCertificate(request *model.ListDeviceCertificateRequest) (*model.ListDeviceCertificateResponse, error) {
+	requestDef := GenReqDefForListDeviceCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDeviceCertificateResponse), nil
+	}
+}
+
+// ListDeviceCertificateInvoker 查询设备证书列表
+func (c *IoTDAClient) ListDeviceCertificateInvoker(request *model.ListDeviceCertificateRequest) *ListDeviceCertificateInvoker {
+	requestDef := GenReqDefForListDeviceCertificate()
+	return &ListDeviceCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDeviceCertificate 查询设备证书
+//
+// 应用服务器可调用此接口在物联网平台更新一个设备证书状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ShowDeviceCertificate(request *model.ShowDeviceCertificateRequest) (*model.ShowDeviceCertificateResponse, error) {
+	requestDef := GenReqDefForShowDeviceCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDeviceCertificateResponse), nil
+	}
+}
+
+// ShowDeviceCertificateInvoker 查询设备证书
+func (c *IoTDAClient) ShowDeviceCertificateInvoker(request *model.ShowDeviceCertificateRequest) *ShowDeviceCertificateInvoker {
+	requestDef := GenReqDefForShowDeviceCertificate()
+	return &ShowDeviceCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDeviceCertificate 更新设备证书
+//
+// 应用服务器可调用此接口在物联网平台更新一个设备证书状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) UpdateDeviceCertificate(request *model.UpdateDeviceCertificateRequest) (*model.UpdateDeviceCertificateResponse, error) {
+	requestDef := GenReqDefForUpdateDeviceCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDeviceCertificateResponse), nil
+	}
+}
+
+// UpdateDeviceCertificateInvoker 更新设备证书
+func (c *IoTDAClient) UpdateDeviceCertificateInvoker(request *model.UpdateDeviceCertificateRequest) *UpdateDeviceCertificateInvoker {
+	requestDef := GenReqDefForUpdateDeviceCertificate()
+	return &UpdateDeviceCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AddDeviceGroup 添加设备组
@@ -1617,6 +1827,27 @@ func (c *IoTDAClient) UpdateDeviceProxyInvoker(request *model.UpdateDeviceProxyR
 	return &UpdateDeviceProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteDeviceShadow 删除设备影子数据
+//
+// 应用服务器可调用此接口删除指定设备的设备影子信息，包括对设备的期望属性信息（desired区）和设备最新上报的属性信息（reported区）中的所有数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) DeleteDeviceShadow(request *model.DeleteDeviceShadowRequest) (*model.DeleteDeviceShadowResponse, error) {
+	requestDef := GenReqDefForDeleteDeviceShadow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDeviceShadowResponse), nil
+	}
+}
+
+// DeleteDeviceShadowInvoker 删除设备影子数据
+func (c *IoTDAClient) DeleteDeviceShadowInvoker(request *model.DeleteDeviceShadowRequest) *DeleteDeviceShadowInvoker {
+	requestDef := GenReqDefForDeleteDeviceShadow()
+	return &DeleteDeviceShadowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDeviceShadow 查询设备影子数据
 //
 // 应用服务器可调用此接口查询指定设备的设备影子信息，包括对设备的期望属性信息（desired区）和设备最新上报的属性信息（reported区）。
@@ -1846,6 +2077,132 @@ func (c *IoTDAClient) ListFunctions(request *model.ListFunctionsRequest) (*model
 func (c *IoTDAClient) ListFunctionsInvoker(request *model.ListFunctionsRequest) *ListFunctionsInvoker {
 	requestDef := GenReqDefForListFunctions()
 	return &ListFunctionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddHarmonySoftBus 创建鸿蒙软总线
+//
+// 应用服务器可调用此接口新建鸿蒙软总线。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) AddHarmonySoftBus(request *model.AddHarmonySoftBusRequest) (*model.AddHarmonySoftBusResponse, error) {
+	requestDef := GenReqDefForAddHarmonySoftBus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddHarmonySoftBusResponse), nil
+	}
+}
+
+// AddHarmonySoftBusInvoker 创建鸿蒙软总线
+func (c *IoTDAClient) AddHarmonySoftBusInvoker(request *model.AddHarmonySoftBusRequest) *AddHarmonySoftBusInvoker {
+	requestDef := GenReqDefForAddHarmonySoftBus()
+	return &AddHarmonySoftBusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSyncHarmonySoftBus 同步鸿蒙软总线信息
+//
+// 应用服务器可调用此接口向组内设备同步鸿蒙软总线信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) CreateSyncHarmonySoftBus(request *model.CreateSyncHarmonySoftBusRequest) (*model.CreateSyncHarmonySoftBusResponse, error) {
+	requestDef := GenReqDefForCreateSyncHarmonySoftBus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSyncHarmonySoftBusResponse), nil
+	}
+}
+
+// CreateSyncHarmonySoftBusInvoker 同步鸿蒙软总线信息
+func (c *IoTDAClient) CreateSyncHarmonySoftBusInvoker(request *model.CreateSyncHarmonySoftBusRequest) *CreateSyncHarmonySoftBusInvoker {
+	requestDef := GenReqDefForCreateSyncHarmonySoftBus()
+	return &CreateSyncHarmonySoftBusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteHarmonySoftBus 删除鸿蒙软总线
+//
+// 应用服务器可调用此接口删除指定鸿蒙软总线。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) DeleteHarmonySoftBus(request *model.DeleteHarmonySoftBusRequest) (*model.DeleteHarmonySoftBusResponse, error) {
+	requestDef := GenReqDefForDeleteHarmonySoftBus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteHarmonySoftBusResponse), nil
+	}
+}
+
+// DeleteHarmonySoftBusInvoker 删除鸿蒙软总线
+func (c *IoTDAClient) DeleteHarmonySoftBusInvoker(request *model.DeleteHarmonySoftBusRequest) *DeleteHarmonySoftBusInvoker {
+	requestDef := GenReqDefForDeleteHarmonySoftBus()
+	return &DeleteHarmonySoftBusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHarmonySoftBus 查询鸿蒙软总线列表
+//
+// 应用服务器可调用此接口查询鸿蒙软总线列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ListHarmonySoftBus(request *model.ListHarmonySoftBusRequest) (*model.ListHarmonySoftBusResponse, error) {
+	requestDef := GenReqDefForListHarmonySoftBus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHarmonySoftBusResponse), nil
+	}
+}
+
+// ListHarmonySoftBusInvoker 查询鸿蒙软总线列表
+func (c *IoTDAClient) ListHarmonySoftBusInvoker(request *model.ListHarmonySoftBusRequest) *ListHarmonySoftBusInvoker {
+	requestDef := GenReqDefForListHarmonySoftBus()
+	return &ListHarmonySoftBusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetHarmonySoftBusKey 重置鸿蒙软总线秘钥
+//
+// 应用服务器可调用此接口重置鸿蒙软总线秘钥, 重置后状态变为未同步需要用户调用同步接口想组内设备同步最新秘钥。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ResetHarmonySoftBusKey(request *model.ResetHarmonySoftBusKeyRequest) (*model.ResetHarmonySoftBusKeyResponse, error) {
+	requestDef := GenReqDefForResetHarmonySoftBusKey()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetHarmonySoftBusKeyResponse), nil
+	}
+}
+
+// ResetHarmonySoftBusKeyInvoker 重置鸿蒙软总线秘钥
+func (c *IoTDAClient) ResetHarmonySoftBusKeyInvoker(request *model.ResetHarmonySoftBusKeyRequest) *ResetHarmonySoftBusKeyInvoker {
+	requestDef := GenReqDefForResetHarmonySoftBusKey()
+	return &ResetHarmonySoftBusKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHarmonySoftBus 查询鸿蒙软总线
+//
+// 应用服务器可调用此接口查询指定ID的鸿蒙软总线。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ShowHarmonySoftBus(request *model.ShowHarmonySoftBusRequest) (*model.ShowHarmonySoftBusResponse, error) {
+	requestDef := GenReqDefForShowHarmonySoftBus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHarmonySoftBusResponse), nil
+	}
+}
+
+// ShowHarmonySoftBusInvoker 查询鸿蒙软总线
+func (c *IoTDAClient) ShowHarmonySoftBusInvoker(request *model.ShowHarmonySoftBusRequest) *ShowHarmonySoftBusInvoker {
+	requestDef := GenReqDefForShowHarmonySoftBus()
+	return &ShowHarmonySoftBusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateMessage 下发设备消息
@@ -2784,6 +3141,133 @@ func (c *IoTDAClient) UpdateRule(request *model.UpdateRuleRequest) (*model.Updat
 func (c *IoTDAClient) UpdateRuleInvoker(request *model.UpdateRuleRequest) *UpdateRuleInvoker {
 	requestDef := GenReqDefForUpdateRule()
 	return &UpdateRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSecurityProfile 创建或更新安全态势感知配置
+//
+// #### 接口说明
+// 应用服务器调用该接口创建安全态势感知配置。
+// #### 限制
+// #### 目前支持的安全配置项有：
+//
+// | 配置名              | 默认告警级别 |   默认安全级别   | 设备维度 | 平台检测/设备上报 | 配置结构体   | 说明        |
+// | :------------------ | :----------- | :--------------- | :------- | :---------------- | :----------------- | :-----------|
+// | DEVICE_MEMORY_CHECK | CRITICAL  | ADVANCE_SECURITY | 是       | 设备上报          | [{\&quot;key\&quot;:\&quot;memory_threshold\&quot;,\&quot;value\&quot;:80},{\&quot;key\&quot;:\&quot;report_period\&quot;,\&quot;value\&quot;:1}] | 设备内存泄漏检测，report_period：上报周期单位(小时) 取值范围[1, 24]；memory_threshold内存检测阈值百分比，取值范围：[1, 100] |
+// | DEVICE_PORT_CHECK   | CRITICAL     | ADVANCE_SECURITY | 是       | 设备上报          | [{\&quot;key\&quot;:\&quot;safety_ports\&quot;,\&quot;value\&quot;:[80,8080]},{\&quot;key\&quot;:\&quot;report_period\&quot;,\&quot;value\&quot;:1}] | 设备异常端口检测，report_period：上报周期单位(小时) 取值范围[1, 24]；safety_ports：安全端口白名单，数组，取值范围:[1, 65535] |
+// | DEVICE_CPU_USAGE_CHECK | CRITICAL  | ADVANCE_SECURITY | 是       | 设备上报          | [{\&quot;key\&quot;:\&quot;cpu_usage_threshold\&quot;,\&quot;value\&quot;:80},{\&quot;key\&quot;:\&quot;report_period\&quot;,\&quot;value\&quot;:1}] | 设备CPU使用率检测，report_period：上报周期单位(小时) 取值范围[1, 24]；cpu_usage_threshold：CPU检测阈值百分比，取值范围：[1, 100] |
+// | DEVICE_DISK_SPACE_CHECK | CRITICAL  | ADVANCE_SECURITY | 是       | 设备上报          | [{\&quot;key\&quot;:\&quot;disk_space_threshold\&quot;,\&quot;value\&quot;:80},{\&quot;key\&quot;:\&quot;report_period\&quot;,\&quot;value\&quot;:1}] | 设备磁盘使用率检测，report_period：上报周期单位(小时) 取值范围[1, 24]；disk_space_threshold：磁盘检测阈值百分比，取值范围：[1, 100] |
+// | DEVICE_BATTERY_PERCENTAGE_CHECK | CRITICAL  | ADVANCE_SECURITY | 是       | 设备上报          | [{\&quot;key\&quot;:\&quot;battery_percentage_threshold\&quot;,\&quot;value\&quot;:20},{\&quot;key\&quot;:\&quot;report_period\&quot;,\&quot;value\&quot;:1}] | 设备电池电量检测，report_period：上报周期单位(小时) 取值范围[1, 24]；battery_percentage_threshold：电池检测阈值百分比，取值范围：[1, 100] |
+// | DEVICE_LOGIN_LOCAL_CHECK | MINOR  | BASIC_SECURITY | 是       | 设备上报          | NA | 设备本地登录检测 |
+// | DEVICE_MALICIOUS_IP_CHECK | MINOR  | BASIC_SECURITY | 是       | 设备上报          | {\&quot;key\&quot;:\&quot;safety_ips\&quot;,\&quot;value\&quot;:[\&quot;192.168.0.0/16\&quot;]} | 设备恶意ip检测 |
+// | DEVICE_LOGIN_BRUTE_FORCE_CHECK | MINOR  | BASIC_SECURITY | 是       | 设备上报          | NA | 设备暴力破解登录检测 |
+// | DEVICE_FILE_TAMPER_CHECK | MINOR  | BASIC_SECURITY | 是       | 设备上报          | NA | 设备本地文件篡改检测 |
+// | INSECURE_TLS_PROTOCOL_CHECK | MAJOR  | ULTIMATE_SECURITY | 是       | 平台检测          | NA | 设备使用不安全的TLS协议接入检测 |
+// | INSECURE_CIPHER_SUITE_CHECK | MAJOR  | ULTIMATE_SECURITY | 是       | 平台检测          | NA | 设备使用不安全TLS加密套件接入检测 |
+// | CONNECT_MULTIPLE_TIMES_CHECK | CRITICAL  | ULTIMATE_SECURITY | 是       | 平台检测          | NA | 设备单位时间内多次建链检测 |
+// | SECRET_COMPLEXITY_CHECK | MAJOR  | ULTIMATE_SECURITY | 是       | 平台检测          | NA | 设备弱密码检测 |
+// | TLS_CONNECT_CHECK | MINOR  | ULTIMATE_SECURITY | 是       | 平台检测          | NA | 设备是否使用TLS加密通讯协议检测 |
+// | DEVICE_AUTH_FAIL_CHECK | CRITICAL  | ULTIMATE_SECURITY | 是       | 平台检测          | NA | 设备鉴权失败检测 |
+// | DEVICE_OFFLINE_CHECK | CRITICAL  | ULTIMATE_SECURITY | 是       | 平台检测          | NA | 设备异常离线检测 |
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) CreateSecurityProfile(request *model.CreateSecurityProfileRequest) (*model.CreateSecurityProfileResponse, error) {
+	requestDef := GenReqDefForCreateSecurityProfile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSecurityProfileResponse), nil
+	}
+}
+
+// CreateSecurityProfileInvoker 创建或更新安全态势感知配置
+func (c *IoTDAClient) CreateSecurityProfileInvoker(request *model.CreateSecurityProfileRequest) *CreateSecurityProfileInvoker {
+	requestDef := GenReqDefForCreateSecurityProfile()
+	return &CreateSecurityProfileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSecurityProfile 删除某个具体id的安全态势感知配置信息
+//
+// 应用服务器可调用此接口删除某个具体id的安全态势感知配置信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) DeleteSecurityProfile(request *model.DeleteSecurityProfileRequest) (*model.DeleteSecurityProfileResponse, error) {
+	requestDef := GenReqDefForDeleteSecurityProfile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSecurityProfileResponse), nil
+	}
+}
+
+// DeleteSecurityProfileInvoker 删除某个具体id的安全态势感知配置信息
+func (c *IoTDAClient) DeleteSecurityProfileInvoker(request *model.DeleteSecurityProfileRequest) *DeleteSecurityProfileInvoker {
+	requestDef := GenReqDefForDeleteSecurityProfile()
+	return &DeleteSecurityProfileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSecurityProfiles 查询安全态势感知配置信息列表
+//
+// 接口说明：应用服务器调用该接口查询安全态势感知配置列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ListSecurityProfiles(request *model.ListSecurityProfilesRequest) (*model.ListSecurityProfilesResponse, error) {
+	requestDef := GenReqDefForListSecurityProfiles()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityProfilesResponse), nil
+	}
+}
+
+// ListSecurityProfilesInvoker 查询安全态势感知配置信息列表
+func (c *IoTDAClient) ListSecurityProfilesInvoker(request *model.ListSecurityProfilesRequest) *ListSecurityProfilesInvoker {
+	requestDef := GenReqDefForListSecurityProfiles()
+	return &ListSecurityProfilesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSecurityProfile 查询某个具体id的安全态势感知配置详情
+//
+// 应用服务器可调用此接口查询某个具体id的安全态势感知配置详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ShowSecurityProfile(request *model.ShowSecurityProfileRequest) (*model.ShowSecurityProfileResponse, error) {
+	requestDef := GenReqDefForShowSecurityProfile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecurityProfileResponse), nil
+	}
+}
+
+// ShowSecurityProfileInvoker 查询某个具体id的安全态势感知配置详情
+func (c *IoTDAClient) ShowSecurityProfileInvoker(request *model.ShowSecurityProfileRequest) *ShowSecurityProfileInvoker {
+	requestDef := GenReqDefForShowSecurityProfile()
+	return &ShowSecurityProfileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSecurityProfile 更新某个具体id的安全态势感知配置信息
+//
+// 应用服务器可调用此接口更新某个具体id的安全态势感知配置信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) UpdateSecurityProfile(request *model.UpdateSecurityProfileRequest) (*model.UpdateSecurityProfileResponse, error) {
+	requestDef := GenReqDefForUpdateSecurityProfile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSecurityProfileResponse), nil
+	}
+}
+
+// UpdateSecurityProfileInvoker 更新某个具体id的安全态势感知配置信息
+func (c *IoTDAClient) UpdateSecurityProfileInvoker(request *model.UpdateSecurityProfileRequest) *UpdateSecurityProfileInvoker {
+	requestDef := GenReqDefForUpdateSecurityProfile()
+	return &UpdateSecurityProfileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListResourcesByTags 按标签查询资源

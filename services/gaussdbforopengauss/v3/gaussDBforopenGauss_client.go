@@ -838,6 +838,27 @@ func (c *GaussDBforopenGaussClient) ExecuteCrossCloudReleaseDisasterInvoker(requ
 	return &ExecuteCrossCloudReleaseDisasterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExportSlowSql 表信息导出
+//
+// 表信息导出
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ExportSlowSql(request *model.ExportSlowSqlRequest) (*model.ExportSlowSqlResponse, error) {
+	requestDef := GenReqDefForExportSlowSql()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportSlowSqlResponse), nil
+	}
+}
+
+// ExportSlowSqlInvoker 表信息导出
+func (c *GaussDBforopenGaussClient) ExportSlowSqlInvoker(request *model.ExportSlowSqlRequest) *ExportSlowSqlInvoker {
+	requestDef := GenReqDefForExportSlowSql()
+	return &ExportSlowSqlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // InstallKernelPlugin 安装插件
 //
 // 安装插件
@@ -1782,6 +1803,27 @@ func (c *GaussDBforopenGaussClient) ListScheduleTask(request *model.ListSchedule
 func (c *GaussDBforopenGaussClient) ListScheduleTaskInvoker(request *model.ListScheduleTaskRequest) *ListScheduleTaskInvoker {
 	requestDef := GenReqDefForListScheduleTask()
 	return &ListScheduleTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSchemaAndTable 识别SQL文本中的表信息
+//
+// 识别SQL文本中的表信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListSchemaAndTable(request *model.ListSchemaAndTableRequest) (*model.ListSchemaAndTableResponse, error) {
+	requestDef := GenReqDefForListSchemaAndTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSchemaAndTableResponse), nil
+	}
+}
+
+// ListSchemaAndTableInvoker 识别SQL文本中的表信息
+func (c *GaussDBforopenGaussClient) ListSchemaAndTableInvoker(request *model.ListSchemaAndTableRequest) *ListSchemaAndTableInvoker {
+	requestDef := GenReqDefForListSchemaAndTable()
+	return &ListSchemaAndTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListStorageTypes 查询数据库磁盘类型

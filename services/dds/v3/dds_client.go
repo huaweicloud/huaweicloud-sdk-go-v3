@@ -838,6 +838,27 @@ func (c *DdsClient) ListAz2MigrateInvoker(request *model.ListAz2MigrateRequest) 
 	return &ListAz2MigrateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListBackupDownloadPolicy 查询备份下载策略
+//
+// 查询备份下载策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) ListBackupDownloadPolicy(request *model.ListBackupDownloadPolicyRequest) (*model.ListBackupDownloadPolicyResponse, error) {
+	requestDef := GenReqDefForListBackupDownloadPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBackupDownloadPolicyResponse), nil
+	}
+}
+
+// ListBackupDownloadPolicyInvoker 查询备份下载策略
+func (c *DdsClient) ListBackupDownloadPolicyInvoker(request *model.ListBackupDownloadPolicyRequest) *ListBackupDownloadPolicyInvoker {
+	requestDef := GenReqDefForListBackupDownloadPolicy()
+	return &ListBackupDownloadPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListBackups 查询备份列表
 //
 // 根据指定条件查询备份列表。
@@ -1573,6 +1594,27 @@ func (c *DdsClient) RestoreNewInstanceInvoker(request *model.RestoreNewInstanceR
 	return &RestoreNewInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SaveBackupDownloadPolicy 创建备份下载策略
+//
+// 创建备份下载策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) SaveBackupDownloadPolicy(request *model.SaveBackupDownloadPolicyRequest) (*model.SaveBackupDownloadPolicyResponse, error) {
+	requestDef := GenReqDefForSaveBackupDownloadPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SaveBackupDownloadPolicyResponse), nil
+	}
+}
+
+// SaveBackupDownloadPolicyInvoker 创建备份下载策略
+func (c *DdsClient) SaveBackupDownloadPolicyInvoker(request *model.SaveBackupDownloadPolicyRequest) *SaveBackupDownloadPolicyInvoker {
+	requestDef := GenReqDefForSaveBackupDownloadPolicy()
+	return &SaveBackupDownloadPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetAuditlogPolicy 设置审计日志策略
 //
 // 设置审计日志策略。
@@ -2306,6 +2348,27 @@ func (c *DdsClient) SwitchoverReplicaSet(request *model.SwitchoverReplicaSetRequ
 func (c *DdsClient) SwitchoverReplicaSetInvoker(request *model.SwitchoverReplicaSetRequest) *SwitchoverReplicaSetInvoker {
 	requestDef := GenReqDefForSwitchoverReplicaSet()
 	return &SwitchoverReplicaSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateBackupDownloadPolicy 更新备份下载策略
+//
+// 更新备份下载策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) UpdateBackupDownloadPolicy(request *model.UpdateBackupDownloadPolicyRequest) (*model.UpdateBackupDownloadPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateBackupDownloadPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateBackupDownloadPolicyResponse), nil
+	}
+}
+
+// UpdateBackupDownloadPolicyInvoker 更新备份下载策略
+func (c *DdsClient) UpdateBackupDownloadPolicyInvoker(request *model.UpdateBackupDownloadPolicyRequest) *UpdateBackupDownloadPolicyInvoker {
+	requestDef := GenReqDefForUpdateBackupDownloadPolicy()
+	return &UpdateBackupDownloadPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateClientNetwork 副本集跨网段访问配置。
