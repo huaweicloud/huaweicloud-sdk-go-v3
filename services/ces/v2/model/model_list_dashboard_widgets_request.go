@@ -9,7 +9,7 @@ import (
 // ListDashboardWidgetsRequest Request Object
 type ListDashboardWidgetsRequest struct {
 
-	// 监控看板id，以db开头，包含22个字母和数字例：db16564943172807wjOmoLyn'
+	// **参数解释**: 监控看板id **约束限制**: 不涉及。 **取值范围**: 以db开头，包含22个字母和数字，长度为24个字符 **默认取值**: 不涉及。
 	DashboardId string `json:"dashboard_id"`
 
 	// 视图所在的分组id

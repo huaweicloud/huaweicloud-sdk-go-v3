@@ -26,7 +26,7 @@ type RuleRiskResponseRules struct {
 	// 风险规则优先级。数字越小优先级越高。
 	Rank *int32 `json:"rank,omitempty"`
 
-	// 风险级别 - LOW - MEDIUM - HIGH - NO_RISK]
+	// 风险级别 - LOW - MEDIUM - HIGH - NO_RISK
 	RiskLevel *string `json:"risk_level,omitempty"`
 
 	// 规则类型

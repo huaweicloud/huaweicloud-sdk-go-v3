@@ -8,7 +8,7 @@ import (
 
 type WidgetDisplayMode struct {
 
-	// 监控视图展示模式，0表示自定义坐标，1代表每行一个
+	// **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
 	RowWidgetNum *int32 `json:"row_widget_num,omitempty"`
 }
 

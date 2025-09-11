@@ -1,7 +1,6 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
@@ -9,7 +8,7 @@ import (
 
 type AuditLog struct {
 
-	// audit log ID
+	// Audit log ID
 	Id *int64 `json:"id,omitempty"`
 
 	// 操作(e.g., create, update, delete)
@@ -25,7 +24,7 @@ type AuditLog struct {
 	Username *string `json:"username,omitempty"`
 
 	// 操作时间
-	OpTime *sdktime.SdkTime `json:"op_time,omitempty"`
+	OpTime *string `json:"op_time,omitempty"`
 }
 
 func (o AuditLog) String() string {

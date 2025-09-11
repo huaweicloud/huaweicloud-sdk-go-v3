@@ -8,6 +8,12 @@ import (
 
 type SqlRuleRequest struct {
 
+	// 当前页
+	Page *int32 `json:"page,omitempty"`
+
+	// 每页大小
+	Size *int32 `json:"size,omitempty"`
+
 	// 风险级别 - HIGH - MEDIUM - LOW - NO_RISK
 	RiskLevels *string `json:"risk_levels,omitempty"`
 }

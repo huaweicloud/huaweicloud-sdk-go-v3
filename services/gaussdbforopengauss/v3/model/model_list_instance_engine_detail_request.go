@@ -12,7 +12,7 @@ import (
 // ListInstanceEngineDetailRequest Request Object
 type ListInstanceEngineDetailRequest struct {
 
-	// 语言。
+	// **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
 	XLanguage *ListInstanceEngineDetailRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。

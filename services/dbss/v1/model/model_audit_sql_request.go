@@ -3,17 +3,14 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
 type AuditSqlRequest struct {
 	Time *AuditSqlRequestTime `json:"time"`
 
-	// 风险级别 - HIGH - MEDIUM - LOW - NO_RISK
-	RiskLevels *AuditSqlRequestRiskLevels `json:"risk_levels,omitempty"`
+	// 风险级别 - HIGH：高 - MEDIUM：中 - LOW：低 - NO_RISK：无
+	RiskLevels *string `json:"risk_levels,omitempty"`
 
 	// 客户端IP
 	ClientIp *string `json:"client_ip,omitempty"`
@@ -40,13 +37,13 @@ type AuditSqlRequest struct {
 	SqlResponse *string `json:"sql_response,omitempty"`
 
 	// 页码
-	Page *int32 `json:"page,omitempty"`
+	Page int32 `json:"page"`
 
 	// 条数
-	Size *int32 `json:"size,omitempty"`
+	Size int32 `json:"size"`
 
 	// 时间顺序 - DESC - ASC
-	TimeOrder *string `json:"time_order,omitempty"`
+	TimeOrder string `json:"time_order"`
 }
 
 func (o AuditSqlRequest) String() string {
@@ -56,59 +53,4 @@ func (o AuditSqlRequest) String() string {
 	}
 
 	return strings.Join([]string{"AuditSqlRequest", string(data)}, " ")
-}
-
-type AuditSqlRequestRiskLevels struct {
-	value string
-}
-
-type AuditSqlRequestRiskLevelsEnum struct {
-	HIGH    AuditSqlRequestRiskLevels
-	MEDIUM  AuditSqlRequestRiskLevels
-	LOW     AuditSqlRequestRiskLevels
-	NO_RISK AuditSqlRequestRiskLevels
-}
-
-func GetAuditSqlRequestRiskLevelsEnum() AuditSqlRequestRiskLevelsEnum {
-	return AuditSqlRequestRiskLevelsEnum{
-		HIGH: AuditSqlRequestRiskLevels{
-			value: "HIGH",
-		},
-		MEDIUM: AuditSqlRequestRiskLevels{
-			value: "MEDIUM",
-		},
-		LOW: AuditSqlRequestRiskLevels{
-			value: "LOW",
-		},
-		NO_RISK: AuditSqlRequestRiskLevels{
-			value: "NO_RISK",
-		},
-	}
-}
-
-func (c AuditSqlRequestRiskLevels) Value() string {
-	return c.value
-}
-
-func (c AuditSqlRequestRiskLevels) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *AuditSqlRequestRiskLevels) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

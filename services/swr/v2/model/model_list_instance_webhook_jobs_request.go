@@ -15,7 +15,7 @@ type ListInstanceWebhookJobsRequest struct {
 	// 命名空间名称
 	NamespaceName string `json:"namespace_name"`
 
-	// 触发器策略ID
+	// 触发器ID
 	PolicyId int32 `json:"policy_id"`
 
 	// 起始索引，默认值为0。**注意：offset和limit参数需要配套使用，offset必须为0或者为limit的倍数。**

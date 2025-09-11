@@ -11,19 +11,19 @@ import (
 
 type BatchCreateInvocationInfo struct {
 
-	// 机器id
+	// **参数解释**: 机器id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
 	InstanceId *string `json:"instance_id,omitempty"`
 
-	// 任务id
+	// **参数解释**: 任务id **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符
 	InvocationId *string `json:"invocation_id,omitempty"`
 
-	// 任务结果, successful成功，error失败
+	// **参数解释**: 任务结果, successful成功，error失败 **取值范围**: - successful: 成功 - error: 失败
 	RetStatus *BatchCreateInvocationInfoRetStatus `json:"ret_status,omitempty"`
 
-	// 错误码
+	// **参数解释**: 错误码 **取值范围**: 以\"invocationmgr.\"开头且后跟4位数字的完整字符串
 	ErrorCode *string `json:"error_code,omitempty"`
 
-	// 错误信息
+	// **参数解释**: 错误信息 **取值范围**: 数组长度范围为[1,128]
 	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 

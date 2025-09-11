@@ -11,7 +11,7 @@ type CreateImmutableRuleBody struct {
 	// 优先级，默认值为0
 	Priority *int32 `json:"priority,omitempty"`
 
-	// 不可变规则是否生效，默认值为false
+	// 不可变策略是否生效，默认值为false
 	Disabled *bool `json:"disabled,omitempty"`
 
 	// 预留字段，支持填immutable

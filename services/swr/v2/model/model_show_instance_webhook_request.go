@@ -15,7 +15,7 @@ type ShowInstanceWebhookRequest struct {
 	// 命名空间名称
 	NamespaceName string `json:"namespace_name"`
 
-	// 触发器策略ID
+	// 触发器ID
 	PolicyId int32 `json:"policy_id"`
 }
 

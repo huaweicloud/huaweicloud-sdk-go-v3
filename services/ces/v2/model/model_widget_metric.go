@@ -11,46 +11,46 @@ import (
 
 type WidgetMetric struct {
 
-	// 服务维度
+	// **参数解释** 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)” **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值** 不涉及
 	Namespace string `json:"namespace"`
 
 	Dimensions *DimensionInfo `json:"dimensions"`
 
-	// 多个指标名称，用逗号隔开
+	// **参数解释** 多个指标名称 **约束限制** 不涉及 **取值范围** 长度为[1,1080]个字符，多个指标名称之间用逗号隔开 **默认取值** 不涉及
 	MetricName string `json:"metric_name"`
 
-	// 监控视图的指标别名列表
+	// **参数解释** 监控视图的指标别名列表 **约束限制** 当资源类型为指定资源时才允许传该参数
 	Alias *[]string `json:"alias,omitempty"`
 
 	ExtraInfo *ExtraInfo `json:"extra_info,omitempty"`
 
-	// **参数解释** 是否开启聚合 **约束限制** 当RollupEnable开启时，RollupFilter和RollupDimension必填 **取值范围** true，表示开启聚合；false表示不开启聚合 **默认取值** false
+	// **参数解释** 是否开启聚合 **约束限制** 当rollup_enable开启时，rollup_filter和rollup_dimension必填 **取值范围** - true：表示开启聚合 - false：表示不开启聚合 **默认取值** false
 	RollupEnable *bool `json:"rollup_enable,omitempty"`
 
 	RollupFilter *RollupFilter `json:"rollup_filter,omitempty"`
 
-	// 聚合维度
+	// **参数解释** 聚合维度 **约束限制** 不涉及 **取值范围** 长度为[1,32]个字符 **默认取值** 不涉及
 	RollupDimension *string `json:"rollup_dimension,omitempty"`
 
-	// 是否展示同比（上周同一时间）数据，true:展示，false:不展示
+	// **参数解释** 是否展示同比（上周同一时间）数据 **约束限制** 不涉及 **取值范围** - true:展示 - false:不展示 **默认取值** 不涉及
 	LastWeekCompareEnable *bool `json:"last_week_compare_enable,omitempty"`
 
-	// 是否展示环比（昨天同一时间）数据，true:展示，false:不展示
+	// **参数解释** 是否展示环比（昨天同一时间）数据 **约束限制** 不涉及 **取值范围** - true:展示 - false:不展示 **默认取值** 不涉及
 	YesterdayCompareEnable *bool `json:"yesterday_compare_enable,omitempty"`
 
-	// 维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”
+	// **参数解释** 维度名称，多维度用逗号分隔，各服务支持的维度可参考：“[服务维度名称](ces_03_0059.xml)”，必须以字母开头，只能包含0-9/a-z/A-Z/_/-，多维度用\",\"分隔，每个维度的最大长度为32。总长度为[1,131]个字符。目前最大支持4个维度。举例：单维度场景：instance_id；多维度场景：instance_id,disk **约束限制** 不涉及           **取值范围** 长度为[1,131]个字符 **默认取值** 不涉及
 	MetricDimension *string `json:"metric_dimension,omitempty"`
 
-	// 展示数据数量
+	// **参数解释** 展示数据数量 **约束限制** 不涉及                 **取值范围** 最小值为1，最大值为200 **默认取值** 不涉及
 	TopNum *int32 `json:"top_num,omitempty"`
 
-	// 单位
+	// **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
 	Unit *string `json:"unit,omitempty"`
 
-	// 排序字段，asc正序，desc倒序
+	// **参数解释** 排序字段 **约束限制** 不涉及                **取值范围** - asc:正序 - desc:倒序 **默认取值** 不涉及
 	Order *WidgetMetricOrder `json:"order,omitempty"`
 
-	// 资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+	// **参数解释** 资源的监控指标名称，必须以字母开头，只能包含0-9/a-z/A-Z/_，字符长度最短为1，最大为64；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 长度为[1,96]个字符 **默认取值** 不涉及
 	TopnMetricName *string `json:"topn_metric_name,omitempty"`
 }
 

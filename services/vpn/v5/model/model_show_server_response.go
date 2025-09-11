@@ -37,6 +37,9 @@ type ShowServerResponse struct {
 	// DNS服务器列表
 	DnsServers *[]string `json:"dns_servers,omitempty"`
 
+	// 身份提供商名称。
+	IdpName *string `json:"idp_name,omitempty"`
+
 	// 服务端状态
 	Status *string `json:"status,omitempty"`
 

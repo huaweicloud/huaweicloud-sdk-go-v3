@@ -36,7 +36,7 @@ type CreateLimitTaskResponse struct {
 	// 限流任务状态，当前支持：CREATING，UPDATEING，DELETING，WAIT_EXCUTE，EXCUTING，TIME_OVER，DELETED，CREATE_FAILED，UPDATE_FAILED，DELETE_FAILED，EXCEPTION，NODE_SHUT_DOWN。
 	Status *string `json:"status,omitempty"`
 
-	// 实例id。
+	// **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
 	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 规则名。

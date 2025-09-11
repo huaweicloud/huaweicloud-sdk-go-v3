@@ -9,7 +9,7 @@ import (
 // CreateImmutableRuleResponse Response Object
 type CreateImmutableRuleResponse struct {
 
-	// 规则ID
+	// 策略ID
 	Id             *int32 `json:"id,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

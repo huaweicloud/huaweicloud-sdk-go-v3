@@ -844,6 +844,48 @@ func (c *GaClient) UpdateLogtankInvoker(request *model.UpdateLogtankRequest) *Up
 	return &UpdateLogtankInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAllPops 查询pop列表
+//
+// 查询pop列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) ListAllPops(request *model.ListAllPopsRequest) (*model.ListAllPopsResponse, error) {
+	requestDef := GenReqDefForListAllPops()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAllPopsResponse), nil
+	}
+}
+
+// ListAllPopsInvoker 查询pop列表
+func (c *GaClient) ListAllPopsInvoker(request *model.ListAllPopsRequest) *ListAllPopsInvoker {
+	requestDef := GenReqDefForListAllPops()
+	return &ListAllPopsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTenantQuotas 查询配额列表
+//
+// 查询配额列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) ListTenantQuotas(request *model.ListTenantQuotasRequest) (*model.ListTenantQuotasResponse, error) {
+	requestDef := GenReqDefForListTenantQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTenantQuotasResponse), nil
+	}
+}
+
+// ListTenantQuotasInvoker 查询配额列表
+func (c *GaClient) ListTenantQuotasInvoker(request *model.ListTenantQuotasRequest) *ListTenantQuotasInvoker {
+	requestDef := GenReqDefForListTenantQuotas()
+	return &ListTenantQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListRegions 查询区域列表
 //
 // 查询区域列表。

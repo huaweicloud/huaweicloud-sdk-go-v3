@@ -23,7 +23,7 @@ type UpdateWebhookPolicyRequestBody struct {
 	// 触发器触发条件，当前支持PUSH_ARTIFACT
 	EventTypes *[]string `json:"event_types,omitempty"`
 
-	// 是否使用
+	// 是否启用
 	Enabled bool `json:"enabled"`
 }
 

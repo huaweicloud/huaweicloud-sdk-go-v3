@@ -21,7 +21,7 @@ type ListAlarmTemplatesRequest struct {
 	// 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
 	Namespace *string `json:"namespace,omitempty"`
 
-	// 资源维度，多维度用\",\"分割，只能包含0-9、a-z、A-Z、_、-、#、/、(、），每个维度的最大长度为32。字符串总长度最小为1，最大为131。
+	// 资源维度，必须以字母开头，多维度用\",\"分隔，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
 	DimName *string `json:"dim_name,omitempty"`
 
 	// 模板类型(system代表默认指标模板，custom代表自定义指标模板，system_event代表默认事件模板，custom_event代表自定义事件模板，system_custom_event代表全部事件模板),不传返回全部指标模板
@@ -29,6 +29,9 @@ type ListAlarmTemplatesRequest struct {
 
 	// 告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]，支持模糊匹配
 	TemplateName *string `json:"template_name,omitempty"`
+
+	// 支持按照产品名称粒度进行查询告警模板，产品名称一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+	ProductName *string `json:"product_name,omitempty"`
 }
 
 func (o ListAlarmTemplatesRequest) String() string {

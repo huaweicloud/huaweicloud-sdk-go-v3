@@ -9,13 +9,13 @@ import (
 	"strings"
 )
 
-// CombRelation 组合匹配参数
+// CombRelation **参数解释** 组合匹配参数。 **约束限制** 不涉及。
 type CombRelation struct {
 
-	// 逻辑运算符  ALL 所有条件匹配成功  ANY 任意条件匹配成功
+	// **参数解释** 逻辑运算符。 **约束限制** 不涉及。 **取值范围** - ALL: 所有条件匹配成功。 - ANY: 任意条件匹配成功。 **默认取值** 不涉及。
 	LogicalOperator CombRelationLogicalOperator `json:"logical_operator"`
 
-	// 组合匹配资源分组的匹配条件
+	// **参数解释** 组合匹配资源分组的匹配条件。 **约束限制** 不超过50个条件。
 	Conditions []Condition `json:"conditions"`
 }
 

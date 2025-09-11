@@ -629,6 +629,38 @@ func (i *UpdateLogtankInvoker) Invoke() (*model.UpdateLogtankResponse, error) {
 	}
 }
 
+type ListAllPopsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAllPopsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAllPopsInvoker) Invoke() (*model.ListAllPopsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAllPopsResponse), nil
+	}
+}
+
+type ListTenantQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTenantQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTenantQuotasInvoker) Invoke() (*model.ListTenantQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTenantQuotasResponse), nil
+	}
+}
+
 type ListRegionsInvoker struct {
 	*invoker.BaseInvoker
 }

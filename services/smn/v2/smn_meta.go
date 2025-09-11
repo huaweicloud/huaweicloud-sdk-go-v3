@@ -85,6 +85,41 @@ func GenReqDefForBatchCreateSubscriptionsFilterPolices() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchDeleteSubscriptions() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2/{project_id}/notifications/subscriptions").
+		WithResponse(new(model.BatchDeleteSubscriptionsResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBatchDeleteSubscriptionsByTopic() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2/{project_id}/notifications/topics/{topic_urn}/subscriptions").
+		WithResponse(new(model.BatchDeleteSubscriptionsByTopicResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TopicUrn").
+		WithJsonTag("topic_urn").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchDeleteSubscriptionsFilterPolices() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
@@ -126,6 +161,30 @@ func GenReqDefForCancelSubscription() *def.HttpRequestDef {
 		WithName("SubscriptionUrn").
 		WithJsonTag("subscription_urn").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForConfirmSubscription() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/rest/v2/notifications/subscription/confirm").
+		WithResponse(new(model.ConfirmSubscriptionResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TopicUrn").
+		WithJsonTag("topic_urn").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Endpoint").
+		WithJsonTag("endpoint").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Token").
+		WithJsonTag("token").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -305,6 +364,26 @@ func GenReqDefForDeleteResourceTag() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForDeleteSubscriptionsByTopic() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2/{project_id}/notifications/topics/{topic_urn}/subscriptions/{subscription_urn}").
+		WithResponse(new(model.DeleteSubscriptionsByTopicResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TopicUrn").
+		WithJsonTag("topic_urn").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SubscriptionUrn").
+		WithJsonTag("subscription_urn").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForDeleteTopic() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
@@ -352,6 +431,43 @@ func GenReqDefForDeleteTopicAttributes() *def.HttpRequestDef {
 		WithName("TopicUrn").
 		WithJsonTag("topic_urn").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDownloadHttpCert() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/smn/{certificate_id}").
+		WithResponse(new(model.DownloadHttpCertResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CertificateId").
+		WithJsonTag("certificate_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("content-type").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListCloudService() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/notifications/cloud_service").
+		WithResponse(new(model.ListCloudServiceResponse)).
+		WithContentType("application/json")
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -428,6 +544,17 @@ func GenReqDefForListProjectTags() *def.HttpRequestDef {
 		WithName("ResourceType").
 		WithJsonTag("resource_type").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListProtocols() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/notifications/protocols").
+		WithResponse(new(model.ListProtocolsResponse)).
+		WithContentType("application/json")
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -733,6 +860,22 @@ func GenReqDefForShowNotifyPolicy() *def.HttpRequestDef {
 		WithName("TopicUrn").
 		WithJsonTag("topic_urn").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUnsubscribeSubscription() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/rest/v2/notifications/subscription/unsubscribe").
+		WithResponse(new(model.UnsubscribeSubscriptionResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SubscriptionUrn").
+		WithJsonTag("subscription_urn").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

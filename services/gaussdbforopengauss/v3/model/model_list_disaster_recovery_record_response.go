@@ -9,9 +9,9 @@ import (
 // ListDisasterRecoveryRecordResponse Response Object
 type ListDisasterRecoveryRecordResponse struct {
 
-	// 操作记录
-	Records        *[]RecordInfoResponse `json:"records,omitempty"`
-	HttpStatusCode int                   `json:"-"`
+	// **参数解释**: 操作记录。
+	Records        *[]RecordInfoResponseResult `json:"records,omitempty"`
+	HttpStatusCode int                         `json:"-"`
 }
 
 func (o ListDisasterRecoveryRecordResponse) String() string {

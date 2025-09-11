@@ -17,7 +17,7 @@ type CreateInstanceRequestBody struct {
 	// 企业仓库实例描述
 	Description *string `json:"description,omitempty"`
 
-	// 企业仓库实例规格，目前支持基础版(swr.ee.basic)，企业版(swr.ee.professional)
+	// 企业仓库实例规格，目前支持企业版(swr.ee.professional)
 	Spec CreateInstanceRequestBodySpec `json:"spec"`
 
 	// 用户虚拟私有云ID

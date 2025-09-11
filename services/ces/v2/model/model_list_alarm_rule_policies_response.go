@@ -9,10 +9,10 @@ import (
 // ListAlarmRulePoliciesResponse Response Object
 type ListAlarmRulePoliciesResponse struct {
 
-	// 策略信息
-	Policies *[]ListPolicy `json:"policies,omitempty"`
+	// **参数解释**： 告警策略信息列表。
+	Policies *[]ListPolicyResp `json:"policies,omitempty"`
 
-	// 指定告警规则对应的策略总数
+	// **参数解释**： 指定告警规则对应的策略总数。 **取值范围**： 0-100
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

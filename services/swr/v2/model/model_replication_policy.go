@@ -14,7 +14,7 @@ type ReplicationPolicy struct {
 	// 策略名称
 	Name *string `json:"name,omitempty"`
 
-	// 策略描述描述
+	// 策略描述
 	Description *string `json:"description,omitempty"`
 
 	SrcRegistry *ReplicationRegistry `json:"src_registry,omitempty"`
@@ -27,7 +27,7 @@ type ReplicationPolicy struct {
 	// 源资源过滤器
 	Filters *[]Filter `json:"filters,omitempty"`
 
-	// repo的范围模式
+	// repo过滤类型
 	RepoScopeMode *string `json:"repo_scope_mode,omitempty"`
 
 	Trigger *TriggerConfig `json:"trigger,omitempty"`
@@ -35,7 +35,7 @@ type ReplicationPolicy struct {
 	// 是否覆盖
 	Override *bool `json:"override,omitempty"`
 
-	// 是否使用
+	// 是否启用
 	Enabled *bool `json:"enabled,omitempty"`
 
 	// 创建时间

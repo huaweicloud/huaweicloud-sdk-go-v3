@@ -1241,6 +1241,22 @@ func (i *ShowAppendableVolumeQuotaInvoker) Invoke() (*model.ShowAppendableVolume
 	}
 }
 
+type ShowFlavorCapacityInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFlavorCapacityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowFlavorCapacityInvoker) Invoke() (*model.ShowFlavorCapacityResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFlavorCapacityResponse), nil
+	}
+}
+
 type ShowMetadataOptionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1302,6 +1318,22 @@ func (i *ShowServerInvoker) Invoke() (*model.ShowServerResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowServerResponse), nil
+	}
+}
+
+type ShowServerAttachableNicNumInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowServerAttachableNicNumInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowServerAttachableNicNumInvoker) Invoke() (*model.ShowServerAttachableNicNumResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowServerAttachableNicNumResponse), nil
 	}
 }
 

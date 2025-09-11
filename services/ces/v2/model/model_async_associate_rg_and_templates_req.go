@@ -14,7 +14,7 @@ type AsyncAssociateRgAndTemplatesReq struct {
 	// 告警模板编号列表，当ID列表为空时，将删除该资源分组已关联的告警模板所创建的告警规则
 	TemplateIds []string `json:"template_ids"`
 
-	// 是否开启告警通知。true:开启，false:关闭。
+	// **参数解释**： 是否开启告警通知。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
 	NotificationEnabled bool `json:"notification_enabled"`
 
 	// 告警触发通知列表
@@ -23,16 +23,16 @@ type AsyncAssociateRgAndTemplatesReq struct {
 	// 告警恢复通知列表
 	OkNotifications *[]Notification `json:"ok_notifications,omitempty"`
 
-	// **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+	// **参数解释**： 告警通知开启时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
 	NotificationBeginTime *string `json:"notification_begin_time,omitempty"`
 
-	// **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+	// **参数解释**： 告警通知关闭时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
 	NotificationEndTime *string `json:"notification_end_time,omitempty"`
 
-	// 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+	// **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
 	EffectiveTimezone *string `json:"effective_timezone,omitempty"`
 
-	// 企业项目ID
+	// **参数解释**： 企业项目ID。     **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”。           **默认取值**： 不涉及。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)

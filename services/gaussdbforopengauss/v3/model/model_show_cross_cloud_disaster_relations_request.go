@@ -12,7 +12,7 @@ import (
 // ShowCrossCloudDisasterRelationsRequest Request Object
 type ShowCrossCloudDisasterRelationsRequest struct {
 
-	// 语言。
+	// **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
 	XLanguage *ShowCrossCloudDisasterRelationsRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 查询记录数。默认为100，不能为负数，最小值为1，最大值为100。

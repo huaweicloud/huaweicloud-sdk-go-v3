@@ -60,7 +60,7 @@ type CreateInstancePeriodRequest struct {
 	PromotionInfo *string `json:"promotion_info,omitempty"`
 
 	// 自动续费 - 1: 自动续费 - 0: 不自动续费
-	IsAutoRenew *int32 `json:"is_auto_renew,omitempty"`
+	IsAutoRenew int32 `json:"is_auto_renew"`
 }
 
 func (o CreateInstancePeriodRequest) String() string {

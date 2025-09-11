@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// ResourceTag 资源标签
+// ResourceTag **参数解释**： 资源标签。   **约束限制**： 不涉及。
 type ResourceTag struct {
 
-	// 键；最大长度128个unicode字符。
+	// **参数解释**： 标签名。 **约束限制**： 不涉及。 **取值范围**： 最大长度128个unicode字符。           **默认取值**： 不涉及。
 	Key string `json:"key"`
 
-	// 值。最大长度255个unicode字符。
+	// **参数解释**： 标签值。 **约束限制**： 不涉及。 **取值范围**： 最大长度255个unicode字符。           **默认取值**： 不涉及。
 	Value string `json:"value"`
 }
 

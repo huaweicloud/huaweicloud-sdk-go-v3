@@ -85,70 +85,6 @@ func (i *BatchDeleteLabelInvoker) Invoke() (*model.BatchDeleteLabelResponse, err
 	}
 }
 
-type BatchDeleteMemberInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchDeleteMemberInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchDeleteMemberInvoker) Invoke() (*model.BatchDeleteMemberResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchDeleteMemberResponse), nil
-	}
-}
-
-type BatchDeleteNoticeInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchDeleteNoticeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchDeleteNoticeInvoker) Invoke() (*model.BatchDeleteNoticeResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchDeleteNoticeResponse), nil
-	}
-}
-
-type BatchDeleteTagInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchDeleteTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchDeleteTagInvoker) Invoke() (*model.BatchDeleteTagResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchDeleteTagResponse), nil
-	}
-}
-
-type BatchDownloadResourceStatDataInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchDownloadResourceStatDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchDownloadResourceStatDataInvoker) Invoke() (*model.BatchDownloadResourceStatDataResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchDownloadResourceStatDataResponse), nil
-	}
-}
-
 type BatchImportAppInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -178,38 +114,6 @@ func (i *BatchRetryJobInvoker) Invoke() (*model.BatchRetryJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.BatchRetryJobResponse), nil
-	}
-}
-
-type BatchUpdateNodeLabelInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchUpdateNodeLabelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchUpdateNodeLabelInvoker) Invoke() (*model.BatchUpdateNodeLabelResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchUpdateNodeLabelResponse), nil
-	}
-}
-
-type BatchUpdateNoticeInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchUpdateNoticeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchUpdateNoticeInvoker) Invoke() (*model.BatchUpdateNoticeResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchUpdateNoticeResponse), nil
 	}
 }
 
@@ -277,22 +181,6 @@ func (i *ChangePasswordInvoker) Invoke() (*model.ChangePasswordResponse, error) 
 	}
 }
 
-type CheckEmailConnectionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CheckEmailConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CheckEmailConnectionInvoker) Invoke() (*model.CheckEmailConnectionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CheckEmailConnectionResponse), nil
-	}
-}
-
 type CheckTokenVerificationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -354,38 +242,6 @@ func (i *CreateAppInvoker) Invoke() (*model.CreateAppResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateAppResponse), nil
-	}
-}
-
-type CreateAutoJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateAutoJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateAutoJobInvoker) Invoke() (*model.CreateAutoJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateAutoJobResponse), nil
-	}
-}
-
-type CreateBackupInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateBackupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateBackupInvoker) Invoke() (*model.CreateBackupResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateBackupResponse), nil
 	}
 }
 
@@ -453,22 +309,6 @@ func (i *CreateComputingClusterInvoker) Invoke() (*model.CreateComputingClusterR
 	}
 }
 
-type CreateComputingResourceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateComputingResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateComputingResourceInvoker) Invoke() (*model.CreateComputingResourceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateComputingResourceResponse), nil
-	}
-}
-
 type CreateDataInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -482,38 +322,6 @@ func (i *CreateDataInvoker) Invoke() (*model.CreateDataResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateDataResponse), nil
-	}
-}
-
-type CreateDatabaseDataInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateDatabaseDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateDatabaseDataInvoker) Invoke() (*model.CreateDatabaseDataResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateDatabaseDataResponse), nil
-	}
-}
-
-type CreateDatabaseResourceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateDatabaseResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateDatabaseResourceInvoker) Invoke() (*model.CreateDatabaseResourceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateDatabaseResourceResponse), nil
 	}
 }
 
@@ -645,22 +453,6 @@ func (i *CreateImageInvoker) Invoke() (*model.CreateImageResponse, error) {
 	}
 }
 
-type CreateInstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateInstanceInvoker) Invoke() (*model.CreateInstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateInstanceResponse), nil
-	}
-}
-
 type CreateLabelInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -674,22 +466,6 @@ func (i *CreateLabelInvoker) Invoke() (*model.CreateLabelResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateLabelResponse), nil
-	}
-}
-
-type CreateLabelPageInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateLabelPageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateLabelPageInvoker) Invoke() (*model.CreateLabelPageResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateLabelPageResponse), nil
 	}
 }
 
@@ -805,22 +581,6 @@ func (i *CreateProjectInvoker) Invoke() (*model.CreateProjectResponse, error) {
 	}
 }
 
-type CreateScaleOutPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateScaleOutPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateScaleOutPolicyInvoker) Invoke() (*model.CreateScaleOutPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateScaleOutPolicyResponse), nil
-	}
-}
-
 type CreateSearchJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -837,54 +597,6 @@ func (i *CreateSearchJobInvoker) Invoke() (*model.CreateSearchJobResponse, error
 	}
 }
 
-type CreateStudyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateStudyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateStudyInvoker) Invoke() (*model.CreateStudyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateStudyResponse), nil
-	}
-}
-
-type CreateStudyJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateStudyJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateStudyJobInvoker) Invoke() (*model.CreateStudyJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateStudyJobResponse), nil
-	}
-}
-
-type CreateSynthesisJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateSynthesisJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateSynthesisJobInvoker) Invoke() (*model.CreateSynthesisJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateSynthesisJobResponse), nil
-	}
-}
-
 type CreateTargetOptJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -898,22 +610,6 @@ func (i *CreateTargetOptJobInvoker) Invoke() (*model.CreateTargetOptJobResponse,
 		return nil, err
 	} else {
 		return result.(*model.CreateTargetOptJobResponse), nil
-	}
-}
-
-type CreateTemplateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateTemplateInvoker) Invoke() (*model.CreateTemplateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateTemplateResponse), nil
 	}
 }
 
@@ -965,54 +661,6 @@ func (i *DeleteAppInvoker) Invoke() (*model.DeleteAppResponse, error) {
 	}
 }
 
-type DeleteAssetVersionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteAssetVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteAssetVersionInvoker) Invoke() (*model.DeleteAssetVersionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteAssetVersionResponse), nil
-	}
-}
-
-type DeleteAutoJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteAutoJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteAutoJobInvoker) Invoke() (*model.DeleteAutoJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteAutoJobResponse), nil
-	}
-}
-
-type DeleteBackupInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteBackupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteBackupInvoker) Invoke() (*model.DeleteBackupResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteBackupResponse), nil
-	}
-}
-
 type DeleteComputingClusterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1029,22 +677,6 @@ func (i *DeleteComputingClusterInvoker) Invoke() (*model.DeleteComputingClusterR
 	}
 }
 
-type DeleteComputingResourceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteComputingResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteComputingResourceInvoker) Invoke() (*model.DeleteComputingResourceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteComputingResourceResponse), nil
-	}
-}
-
 type DeleteDataJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1058,38 +690,6 @@ func (i *DeleteDataJobInvoker) Invoke() (*model.DeleteDataJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteDataJobResponse), nil
-	}
-}
-
-type DeleteDatabaseDataInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteDatabaseDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteDatabaseDataInvoker) Invoke() (*model.DeleteDatabaseDataResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteDatabaseDataResponse), nil
-	}
-}
-
-type DeleteDatabaseResourceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteDatabaseResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteDatabaseResourceInvoker) Invoke() (*model.DeleteDatabaseResourceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteDatabaseResourceResponse), nil
 	}
 }
 
@@ -1189,22 +789,6 @@ func (i *DeleteImageInvoker) Invoke() (*model.DeleteImageResponse, error) {
 	}
 }
 
-type DeleteInstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteInstanceInvoker) Invoke() (*model.DeleteInstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteInstanceResponse), nil
-	}
-}
-
 type DeleteJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1237,22 +821,6 @@ func (i *DeleteLabelInvoker) Invoke() (*model.DeleteLabelResponse, error) {
 	}
 }
 
-type DeleteLabelPageInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteLabelPageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteLabelPageInvoker) Invoke() (*model.DeleteLabelPageResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteLabelPageResponse), nil
-	}
-}
-
 type DeleteMemberInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1266,22 +834,6 @@ func (i *DeleteMemberInvoker) Invoke() (*model.DeleteMemberResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteMemberResponse), nil
-	}
-}
-
-type DeleteMessageEmailConfigInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteMessageEmailConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteMessageEmailConfigInvoker) Invoke() (*model.DeleteMessageEmailConfigResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteMessageEmailConfigResponse), nil
 	}
 }
 
@@ -1317,54 +869,6 @@ func (i *DeleteProjectInvoker) Invoke() (*model.DeleteProjectResponse, error) {
 	}
 }
 
-type DeleteScaleOutPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteScaleOutPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteScaleOutPolicyInvoker) Invoke() (*model.DeleteScaleOutPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteScaleOutPolicyResponse), nil
-	}
-}
-
-type DeleteStarInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteStarInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteStarInvoker) Invoke() (*model.DeleteStarResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteStarResponse), nil
-	}
-}
-
-type DeleteStudyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteStudyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteStudyInvoker) Invoke() (*model.DeleteStudyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteStudyResponse), nil
-	}
-}
-
 type DeleteTagInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1378,22 +882,6 @@ func (i *DeleteTagInvoker) Invoke() (*model.DeleteTagResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteTagResponse), nil
-	}
-}
-
-type DeleteTemplateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteTemplateInvoker) Invoke() (*model.DeleteTemplateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteTemplateResponse), nil
 	}
 }
 
@@ -1426,54 +914,6 @@ func (i *DeleteWorkflowInvoker) Invoke() (*model.DeleteWorkflowResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.DeleteWorkflowResponse), nil
-	}
-}
-
-type DownloadDataJobLogInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DownloadDataJobLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DownloadDataJobLogInvoker) Invoke() (*model.DownloadDataJobLogResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DownloadDataJobLogResponse), nil
-	}
-}
-
-type DownloadDataTraceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DownloadDataTraceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DownloadDataTraceInvoker) Invoke() (*model.DownloadDataTraceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DownloadDataTraceResponse), nil
-	}
-}
-
-type ExecuteAssetActionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ExecuteAssetActionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ExecuteAssetActionInvoker) Invoke() (*model.ExecuteAssetActionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ExecuteAssetActionResponse), nil
 	}
 }
 
@@ -1557,22 +997,6 @@ func (i *ImportDataInvoker) Invoke() (*model.ImportDataResponse, error) {
 	}
 }
 
-type ImportDatabaseDataInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ImportDatabaseDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ImportDatabaseDataInvoker) Invoke() (*model.ImportDatabaseDataResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ImportDatabaseDataResponse), nil
-	}
-}
-
 type ImportImageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1602,22 +1026,6 @@ func (i *ImportNetworkDataInvoker) Invoke() (*model.ImportNetworkDataResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ImportNetworkDataResponse), nil
-	}
-}
-
-type ImportTemplateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ImportTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ImportTemplateInvoker) Invoke() (*model.ImportTemplateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ImportTemplateResponse), nil
 	}
 }
 
@@ -1685,22 +1093,6 @@ func (i *ListAppInvoker) Invoke() (*model.ListAppResponse, error) {
 	}
 }
 
-type ListArchiveConfigsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListArchiveConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListArchiveConfigsInvoker) Invoke() (*model.ListArchiveConfigsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListArchiveConfigsResponse), nil
-	}
-}
-
 type ListAssetInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1714,38 +1106,6 @@ func (i *ListAssetInvoker) Invoke() (*model.ListAssetResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListAssetResponse), nil
-	}
-}
-
-type ListAutoJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListAutoJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListAutoJobInvoker) Invoke() (*model.ListAutoJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListAutoJobResponse), nil
-	}
-}
-
-type ListBackupInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListBackupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListBackupInvoker) Invoke() (*model.ListBackupResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListBackupResponse), nil
 	}
 }
 
@@ -1797,22 +1157,6 @@ func (i *ListCceClusterInvoker) Invoke() (*model.ListCceClusterResponse, error) 
 	}
 }
 
-type ListCheckpointInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListCheckpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListCheckpointInvoker) Invoke() (*model.ListCheckpointResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListCheckpointResponse), nil
-	}
-}
-
 type ListClusterAllNodeLabelInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1861,38 +1205,6 @@ func (i *ListComputingClusterInvoker) Invoke() (*model.ListComputingClusterRespo
 	}
 }
 
-type ListComputingResourceFlavorsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListComputingResourceFlavorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListComputingResourceFlavorsInvoker) Invoke() (*model.ListComputingResourceFlavorsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListComputingResourceFlavorsResponse), nil
-	}
-}
-
-type ListComputingResourcesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListComputingResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListComputingResourcesInvoker) Invoke() (*model.ListComputingResourcesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListComputingResourcesResponse), nil
-	}
-}
-
 type ListDataInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1922,54 +1234,6 @@ func (i *ListDataJobInvoker) Invoke() (*model.ListDataJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListDataJobResponse), nil
-	}
-}
-
-type ListDatabaseDataInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListDatabaseDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListDatabaseDataInvoker) Invoke() (*model.ListDatabaseDataResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListDatabaseDataResponse), nil
-	}
-}
-
-type ListDatabaseResourceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListDatabaseResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListDatabaseResourceInvoker) Invoke() (*model.ListDatabaseResourceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListDatabaseResourceResponse), nil
-	}
-}
-
-type ListDatabaseResourceFlavorInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListDatabaseResourceFlavorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListDatabaseResourceFlavorInvoker) Invoke() (*model.ListDatabaseResourceFlavorResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListDatabaseResourceFlavorResponse), nil
 	}
 }
 
@@ -2149,22 +1413,6 @@ func (i *ListImageTagInvoker) Invoke() (*model.ListImageTagResponse, error) {
 	}
 }
 
-type ListInstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListInstanceInvoker) Invoke() (*model.ListInstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListInstanceResponse), nil
-	}
-}
-
 type ListJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2197,54 +1445,6 @@ func (i *ListLabelInvoker) Invoke() (*model.ListLabelResponse, error) {
 	}
 }
 
-type ListLabelPageInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListLabelPageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListLabelPageInvoker) Invoke() (*model.ListLabelPageResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListLabelPageResponse), nil
-	}
-}
-
-type ListMessageInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListMessageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListMessageInvoker) Invoke() (*model.ListMessageResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListMessageResponse), nil
-	}
-}
-
-type ListMessageStatisticsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListMessageStatisticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListMessageStatisticsInvoker) Invoke() (*model.ListMessageStatisticsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListMessageStatisticsResponse), nil
-	}
-}
-
 type ListMfaInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2258,54 +1458,6 @@ func (i *ListMfaInvoker) Invoke() (*model.ListMfaResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListMfaResponse), nil
-	}
-}
-
-type ListNodeLabelInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListNodeLabelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListNodeLabelInvoker) Invoke() (*model.ListNodeLabelResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListNodeLabelResponse), nil
-	}
-}
-
-type ListNodesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListNodesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListNodesInvoker) Invoke() (*model.ListNodesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListNodesResponse), nil
-	}
-}
-
-type ListNoticeInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListNoticeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListNoticeInvoker) Invoke() (*model.ListNoticeResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListNoticeResponse), nil
 	}
 }
 
@@ -2338,38 +1490,6 @@ func (i *ListPerformanceResourcesInvoker) Invoke() (*model.ListPerformanceResour
 		return nil, err
 	} else {
 		return result.(*model.ListPerformanceResourcesResponse), nil
-	}
-}
-
-type ListPolicyEventsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListPolicyEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListPolicyEventsInvoker) Invoke() (*model.ListPolicyEventsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListPolicyEventsResponse), nil
-	}
-}
-
-type ListPresetLabelInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListPresetLabelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListPresetLabelInvoker) Invoke() (*model.ListPresetLabelResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListPresetLabelResponse), nil
 	}
 }
 
@@ -2437,38 +1557,6 @@ func (i *ListQuotaInvoker) Invoke() (*model.ListQuotaResponse, error) {
 	}
 }
 
-type ListScaleOutPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListScaleOutPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListScaleOutPolicyInvoker) Invoke() (*model.ListScaleOutPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListScaleOutPolicyResponse), nil
-	}
-}
-
-type ListScalingHistoryInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListScalingHistoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListScalingHistoryInvoker) Invoke() (*model.ListScalingHistoryResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListScalingHistoryResponse), nil
-	}
-}
-
 type ListSfsTurbosInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2482,86 +1570,6 @@ func (i *ListSfsTurbosInvoker) Invoke() (*model.ListSfsTurbosResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListSfsTurbosResponse), nil
-	}
-}
-
-type ListStarInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListStarInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListStarInvoker) Invoke() (*model.ListStarResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListStarResponse), nil
-	}
-}
-
-type ListStorageResourcesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListStorageResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListStorageResourcesInvoker) Invoke() (*model.ListStorageResourcesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListStorageResourcesResponse), nil
-	}
-}
-
-type ListStudyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListStudyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListStudyInvoker) Invoke() (*model.ListStudyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListStudyResponse), nil
-	}
-}
-
-type ListStudyJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListStudyJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListStudyJobInvoker) Invoke() (*model.ListStudyJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListStudyJobResponse), nil
-	}
-}
-
-type ListTemplateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListTemplateInvoker) Invoke() (*model.ListTemplateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListTemplateResponse), nil
 	}
 }
 
@@ -2693,86 +1701,6 @@ func (i *ListWorkflowInvoker) Invoke() (*model.ListWorkflowResponse, error) {
 	}
 }
 
-type ListWorkflowStatisticInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListWorkflowStatisticInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListWorkflowStatisticInvoker) Invoke() (*model.ListWorkflowStatisticResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListWorkflowStatisticResponse), nil
-	}
-}
-
-type PublishAppInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *PublishAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *PublishAppInvoker) Invoke() (*model.PublishAppResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.PublishAppResponse), nil
-	}
-}
-
-type PublishDataInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *PublishDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *PublishDataInvoker) Invoke() (*model.PublishDataResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.PublishDataResponse), nil
-	}
-}
-
-type PublishImageInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *PublishImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *PublishImageInvoker) Invoke() (*model.PublishImageResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.PublishImageResponse), nil
-	}
-}
-
-type PublishWorkflowInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *PublishWorkflowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *PublishWorkflowInvoker) Invoke() (*model.PublishWorkflowResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.PublishWorkflowResponse), nil
-	}
-}
-
 type QuoteDataInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2786,54 +1714,6 @@ func (i *QuoteDataInvoker) Invoke() (*model.QuoteDataResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.QuoteDataResponse), nil
-	}
-}
-
-type QuoteInstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *QuoteInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *QuoteInstanceInvoker) Invoke() (*model.QuoteInstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.QuoteInstanceResponse), nil
-	}
-}
-
-type RebootNodeInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RebootNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *RebootNodeInvoker) Invoke() (*model.RebootNodeResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RebootNodeResponse), nil
-	}
-}
-
-type RestoreBackupInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RestoreBackupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *RestoreBackupInvoker) Invoke() (*model.RestoreBackupResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RestoreBackupResponse), nil
 	}
 }
 
@@ -2898,22 +1778,6 @@ func (i *RunFormatConverterInvoker) Invoke() (*model.RunFormatConverterResponse,
 		return nil, err
 	} else {
 		return result.(*model.RunFormatConverterResponse), nil
-	}
-}
-
-type Show3dStructureContentInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *Show3dStructureContentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *Show3dStructureContentInvoker) Invoke() (*model.Show3dStructureContentResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.Show3dStructureContentResponse), nil
 	}
 }
 
@@ -2997,54 +1861,6 @@ func (i *ShowAssetVersionInvoker) Invoke() (*model.ShowAssetVersionResponse, err
 	}
 }
 
-type ShowAutoJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowAutoJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowAutoJobInvoker) Invoke() (*model.ShowAutoJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowAutoJobResponse), nil
-	}
-}
-
-type ShowBackupPathInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowBackupPathInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowBackupPathInvoker) Invoke() (*model.ShowBackupPathResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowBackupPathResponse), nil
-	}
-}
-
-type ShowBmsDevicesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowBmsDevicesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowBmsDevicesInvoker) Invoke() (*model.ShowBmsDevicesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowBmsDevicesResponse), nil
-	}
-}
-
 type ShowBucketStorageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3109,22 +1925,6 @@ func (i *ShowDataJobInvoker) Invoke() (*model.ShowDataJobResponse, error) {
 	}
 }
 
-type ShowDataPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowDataPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowDataPolicyInvoker) Invoke() (*model.ShowDataPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowDataPolicyResponse), nil
-	}
-}
-
 type ShowDockerLoginInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3173,38 +1973,6 @@ func (i *ShowEnvInvoker) Invoke() (*model.ShowEnvResponse, error) {
 	}
 }
 
-type ShowEvsQuotaInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowEvsQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowEvsQuotaInvoker) Invoke() (*model.ShowEvsQuotaResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowEvsQuotaResponse), nil
-	}
-}
-
-type ShowExtremumInfoInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowExtremumInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowExtremumInfoInvoker) Invoke() (*model.ShowExtremumInfoResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowExtremumInfoResponse), nil
-	}
-}
-
 type ShowFepJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3237,22 +2005,6 @@ func (i *ShowGenJobInvoker) Invoke() (*model.ShowGenJobResponse, error) {
 	}
 }
 
-type ShowInstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowInstanceInvoker) Invoke() (*model.ShowInstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowInstanceResponse), nil
-	}
-}
-
 type ShowJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3266,22 +2018,6 @@ func (i *ShowJobInvoker) Invoke() (*model.ShowJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowJobResponse), nil
-	}
-}
-
-type ShowJobConfigInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowJobConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowJobConfigInvoker) Invoke() (*model.ShowJobConfigResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowJobConfigResponse), nil
 	}
 }
 
@@ -3314,70 +2050,6 @@ func (i *ShowJobLogInvoker) Invoke() (*model.ShowJobLogResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowJobLogResponse), nil
-	}
-}
-
-type ShowLeftQuotaInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowLeftQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowLeftQuotaInvoker) Invoke() (*model.ShowLeftQuotaResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowLeftQuotaResponse), nil
-	}
-}
-
-type ShowMessageClearRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowMessageClearRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowMessageClearRuleInvoker) Invoke() (*model.ShowMessageClearRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowMessageClearRuleResponse), nil
-	}
-}
-
-type ShowMessageEmailConfigInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowMessageEmailConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowMessageEmailConfigInvoker) Invoke() (*model.ShowMessageEmailConfigResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowMessageEmailConfigResponse), nil
-	}
-}
-
-type ShowMessageReceiveConfigInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowMessageReceiveConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowMessageReceiveConfigInvoker) Invoke() (*model.ShowMessageReceiveConfigResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowMessageReceiveConfigResponse), nil
 	}
 }
 
@@ -3461,118 +2133,6 @@ func (i *ShowProjectInvoker) Invoke() (*model.ShowProjectResponse, error) {
 	}
 }
 
-type ShowProjectTraceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowProjectTraceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowProjectTraceInvoker) Invoke() (*model.ShowProjectTraceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowProjectTraceResponse), nil
-	}
-}
-
-type ShowProjectTraceDataInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowProjectTraceDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowProjectTraceDataInvoker) Invoke() (*model.ShowProjectTraceDataResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowProjectTraceDataResponse), nil
-	}
-}
-
-type ShowProjectTrackerInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowProjectTrackerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowProjectTrackerInvoker) Invoke() (*model.ShowProjectTrackerResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowProjectTrackerResponse), nil
-	}
-}
-
-type ShowResourceMetricDataInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowResourceMetricDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowResourceMetricDataInvoker) Invoke() (*model.ShowResourceMetricDataResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowResourceMetricDataResponse), nil
-	}
-}
-
-type ShowScaleInPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowScaleInPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowScaleInPolicyInvoker) Invoke() (*model.ShowScaleInPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowScaleInPolicyResponse), nil
-	}
-}
-
-type ShowScaleOutPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowScaleOutPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowScaleOutPolicyInvoker) Invoke() (*model.ShowScaleOutPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowScaleOutPolicyResponse), nil
-	}
-}
-
-type ShowScheduleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowScheduleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowScheduleInvoker) Invoke() (*model.ShowScheduleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowScheduleResponse), nil
-	}
-}
-
 type ShowSearchJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3586,22 +2146,6 @@ func (i *ShowSearchJobInvoker) Invoke() (*model.ShowSearchJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowSearchJobResponse), nil
-	}
-}
-
-type ShowSynthesisJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowSynthesisJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowSynthesisJobInvoker) Invoke() (*model.ShowSynthesisJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowSynthesisJobResponse), nil
 	}
 }
 
@@ -3701,22 +2245,6 @@ func (i *ShowTaskInstancesInvoker) Invoke() (*model.ShowTaskInstancesResponse, e
 	}
 }
 
-type ShowTemplateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowTemplateInvoker) Invoke() (*model.ShowTemplateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowTemplateResponse), nil
-	}
-}
-
 type ShowUserInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3781,102 +2309,6 @@ func (i *ShowWorkflowInvoker) Invoke() (*model.ShowWorkflowResponse, error) {
 	}
 }
 
-type StartAutoJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *StartAutoJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *StartAutoJobInvoker) Invoke() (*model.StartAutoJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.StartAutoJobResponse), nil
-	}
-}
-
-type StartNodeInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *StartNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *StartNodeInvoker) Invoke() (*model.StartNodeResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.StartNodeResponse), nil
-	}
-}
-
-type StartScaleOutPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *StartScaleOutPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *StartScaleOutPolicyInvoker) Invoke() (*model.StartScaleOutPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.StartScaleOutPolicyResponse), nil
-	}
-}
-
-type StopAutoJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *StopAutoJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *StopAutoJobInvoker) Invoke() (*model.StopAutoJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.StopAutoJobResponse), nil
-	}
-}
-
-type StopNodeInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *StopNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *StopNodeInvoker) Invoke() (*model.StopNodeResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.StopNodeResponse), nil
-	}
-}
-
-type StopScaleOutPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *StopScaleOutPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *StopScaleOutPolicyInvoker) Invoke() (*model.StopScaleOutPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.StopScaleOutPolicyResponse), nil
-	}
-}
-
 type SubscribeAppInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3890,22 +2322,6 @@ func (i *SubscribeAppInvoker) Invoke() (*model.SubscribeAppResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.SubscribeAppResponse), nil
-	}
-}
-
-type SubscribeDataInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SubscribeDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *SubscribeDataInvoker) Invoke() (*model.SubscribeDataResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SubscribeDataResponse), nil
 	}
 }
 
@@ -3986,102 +2402,6 @@ func (i *UpdateAppInvoker) Invoke() (*model.UpdateAppResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateAppResponse), nil
-	}
-}
-
-type UpdateArchiveConfigInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateArchiveConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateArchiveConfigInvoker) Invoke() (*model.UpdateArchiveConfigResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateArchiveConfigResponse), nil
-	}
-}
-
-type UpdateAssetVersionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateAssetVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateAssetVersionInvoker) Invoke() (*model.UpdateAssetVersionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateAssetVersionResponse), nil
-	}
-}
-
-type UpdateAutoJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateAutoJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateAutoJobInvoker) Invoke() (*model.UpdateAutoJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateAutoJobResponse), nil
-	}
-}
-
-type UpdateDataPathPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateDataPathPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateDataPathPolicyInvoker) Invoke() (*model.UpdateDataPathPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateDataPathPolicyResponse), nil
-	}
-}
-
-type UpdateDataPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateDataPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateDataPolicyInvoker) Invoke() (*model.UpdateDataPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateDataPolicyResponse), nil
-	}
-}
-
-type UpdateDatabaseDataInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateDatabaseDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateDatabaseDataInvoker) Invoke() (*model.UpdateDatabaseDataResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateDatabaseDataResponse), nil
 	}
 }
 
@@ -4181,22 +2501,6 @@ func (i *UpdateJobInvoker) Invoke() (*model.UpdateJobResponse, error) {
 	}
 }
 
-type UpdateJobConfigInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateJobConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateJobConfigInvoker) Invoke() (*model.UpdateJobConfigResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateJobConfigResponse), nil
-	}
-}
-
 type UpdateMemberInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4210,54 +2514,6 @@ func (i *UpdateMemberInvoker) Invoke() (*model.UpdateMemberResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateMemberResponse), nil
-	}
-}
-
-type UpdateMessageClearRuleRequestBodyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateMessageClearRuleRequestBodyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateMessageClearRuleRequestBodyInvoker) Invoke() (*model.UpdateMessageClearRuleRequestBodyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateMessageClearRuleRequestBodyResponse), nil
-	}
-}
-
-type UpdateMessageEmailConfigInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateMessageEmailConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateMessageEmailConfigInvoker) Invoke() (*model.UpdateMessageEmailConfigResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateMessageEmailConfigResponse), nil
-	}
-}
-
-type UpdateMessageReceiveConfigInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateMessageReceiveConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateMessageReceiveConfigInvoker) Invoke() (*model.UpdateMessageReceiveConfigResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateMessageReceiveConfigResponse), nil
 	}
 }
 
@@ -4290,86 +2546,6 @@ func (i *UpdateProjectInvoker) Invoke() (*model.UpdateProjectResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateProjectResponse), nil
-	}
-}
-
-type UpdateProjectTrackerInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateProjectTrackerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateProjectTrackerInvoker) Invoke() (*model.UpdateProjectTrackerResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateProjectTrackerResponse), nil
-	}
-}
-
-type UpdateScaleInPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateScaleInPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateScaleInPolicyInvoker) Invoke() (*model.UpdateScaleInPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateScaleInPolicyResponse), nil
-	}
-}
-
-type UpdateScaleOutPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateScaleOutPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateScaleOutPolicyInvoker) Invoke() (*model.UpdateScaleOutPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateScaleOutPolicyResponse), nil
-	}
-}
-
-type UpdateScheduleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateScheduleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateScheduleInvoker) Invoke() (*model.UpdateScheduleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateScheduleResponse), nil
-	}
-}
-
-type UpdateStarInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateStarInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateStarInvoker) Invoke() (*model.UpdateStarResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateStarResponse), nil
 	}
 }
 
@@ -4501,22 +2677,6 @@ func (i *UploadDataInvoker) Invoke() (*model.UploadDataResponse, error) {
 	}
 }
 
-type UploadTemplateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UploadTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UploadTemplateInvoker) Invoke() (*model.UploadTemplateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UploadTemplateResponse), nil
-	}
-}
-
 type ValidateCodeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4565,22 +2725,6 @@ func (i *CreateCpiJobInvoker) Invoke() (*model.CreateCpiJobResponse, error) {
 	}
 }
 
-type CreateCpiTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateCpiTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateCpiTaskInvoker) Invoke() (*model.CreateCpiTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateCpiTaskResponse), nil
-	}
-}
-
 type ShowCpiJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4594,22 +2738,6 @@ func (i *ShowCpiJobInvoker) Invoke() (*model.ShowCpiJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowCpiJobResponse), nil
-	}
-}
-
-type ShowCpiTaskResultInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowCpiTaskResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowCpiTaskResultInvoker) Invoke() (*model.ShowCpiTaskResultResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowCpiTaskResultResponse), nil
 	}
 }
 
@@ -4690,70 +2818,6 @@ func (i *ValidateCssConnectionInvoker) Invoke() (*model.ValidateCssConnectionRes
 		return nil, err
 	} else {
 		return result.(*model.ValidateCssConnectionResponse), nil
-	}
-}
-
-type CreateCustomPropsTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateCustomPropsTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateCustomPropsTaskInvoker) Invoke() (*model.CreateCustomPropsTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateCustomPropsTaskResponse), nil
-	}
-}
-
-type ShowCustomPropsTaskResultInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowCustomPropsTaskResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowCustomPropsTaskResultInvoker) Invoke() (*model.ShowCustomPropsTaskResultResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowCustomPropsTaskResultResponse), nil
-	}
-}
-
-type CreateGenerationTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateGenerationTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateGenerationTaskInvoker) Invoke() (*model.CreateGenerationTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateGenerationTaskResponse), nil
-	}
-}
-
-type ShowGenerationTaskResultInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowGenerationTaskResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowGenerationTaskResultInvoker) Invoke() (*model.ShowGenerationTaskResultResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowGenerationTaskResultResponse), nil
 	}
 }
 
@@ -5013,342 +3077,6 @@ func (i *ShowOverviewInvoker) Invoke() (*model.ShowOverviewResponse, error) {
 	}
 }
 
-type CleanNextflowCacheInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CleanNextflowCacheInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CleanNextflowCacheInvoker) Invoke() (*model.CleanNextflowCacheResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CleanNextflowCacheResponse), nil
-	}
-}
-
-type CreateNextflowJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateNextflowJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateNextflowJobInvoker) Invoke() (*model.CreateNextflowJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateNextflowJobResponse), nil
-	}
-}
-
-type CreateNextflowWorkflowInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateNextflowWorkflowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateNextflowWorkflowInvoker) Invoke() (*model.CreateNextflowWorkflowResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateNextflowWorkflowResponse), nil
-	}
-}
-
-type DeleteNextflowJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteNextflowJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteNextflowJobInvoker) Invoke() (*model.DeleteNextflowJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteNextflowJobResponse), nil
-	}
-}
-
-type DeleteNextflowWorkflowInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteNextflowWorkflowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteNextflowWorkflowInvoker) Invoke() (*model.DeleteNextflowWorkflowResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteNextflowWorkflowResponse), nil
-	}
-}
-
-type InstallNextflowInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *InstallNextflowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *InstallNextflowInvoker) Invoke() (*model.InstallNextflowResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.InstallNextflowResponse), nil
-	}
-}
-
-type ListNextflowJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListNextflowJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListNextflowJobInvoker) Invoke() (*model.ListNextflowJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListNextflowJobResponse), nil
-	}
-}
-
-type ListNextflowTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListNextflowTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListNextflowTaskInvoker) Invoke() (*model.ListNextflowTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListNextflowTaskResponse), nil
-	}
-}
-
-type ListNextflowVersionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListNextflowVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListNextflowVersionInvoker) Invoke() (*model.ListNextflowVersionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListNextflowVersionResponse), nil
-	}
-}
-
-type ListNextflowWorkflowInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListNextflowWorkflowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListNextflowWorkflowInvoker) Invoke() (*model.ListNextflowWorkflowResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListNextflowWorkflowResponse), nil
-	}
-}
-
-type RetryNextflowJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RetryNextflowJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *RetryNextflowJobInvoker) Invoke() (*model.RetryNextflowJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RetryNextflowJobResponse), nil
-	}
-}
-
-type ShowNextflowInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowNextflowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowNextflowInvoker) Invoke() (*model.ShowNextflowResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowNextflowResponse), nil
-	}
-}
-
-type ShowNextflowJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowNextflowJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowNextflowJobInvoker) Invoke() (*model.ShowNextflowJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowNextflowJobResponse), nil
-	}
-}
-
-type ShowNextflowJobLogInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowNextflowJobLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowNextflowJobLogInvoker) Invoke() (*model.ShowNextflowJobLogResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowNextflowJobLogResponse), nil
-	}
-}
-
-type ShowNextflowJobReportsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowNextflowJobReportsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowNextflowJobReportsInvoker) Invoke() (*model.ShowNextflowJobReportsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowNextflowJobReportsResponse), nil
-	}
-}
-
-type ShowNextflowTaskDetailInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowNextflowTaskDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowNextflowTaskDetailInvoker) Invoke() (*model.ShowNextflowTaskDetailResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowNextflowTaskDetailResponse), nil
-	}
-}
-
-type ShowNextflowTaskLogInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowNextflowTaskLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowNextflowTaskLogInvoker) Invoke() (*model.ShowNextflowTaskLogResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowNextflowTaskLogResponse), nil
-	}
-}
-
-type ShowNextflowWorkflowInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowNextflowWorkflowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowNextflowWorkflowInvoker) Invoke() (*model.ShowNextflowWorkflowResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowNextflowWorkflowResponse), nil
-	}
-}
-
-type StopNextflowJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *StopNextflowJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *StopNextflowJobInvoker) Invoke() (*model.StopNextflowJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.StopNextflowJobResponse), nil
-	}
-}
-
-type UninstallNextflowInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UninstallNextflowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UninstallNextflowInvoker) Invoke() (*model.UninstallNextflowResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UninstallNextflowResponse), nil
-	}
-}
-
-type UpdateNextflowWorkflowInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateNextflowWorkflowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateNextflowWorkflowInvoker) Invoke() (*model.UpdateNextflowWorkflowResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateNextflowWorkflowResponse), nil
-	}
-}
-
 type CreateNotebookInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -5538,101 +3266,5 @@ func (i *ListObsBucketObjectInvoker) Invoke() (*model.ListObsBucketObjectRespons
 		return nil, err
 	} else {
 		return result.(*model.ListObsBucketObjectResponse), nil
-	}
-}
-
-type CreateOptimizationTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateOptimizationTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateOptimizationTaskInvoker) Invoke() (*model.CreateOptimizationTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateOptimizationTaskResponse), nil
-	}
-}
-
-type ShowOptimizationTaskResultInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowOptimizationTaskResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowOptimizationTaskResultInvoker) Invoke() (*model.ShowOptimizationTaskResultResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowOptimizationTaskResultResponse), nil
-	}
-}
-
-type CreateSearchTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateSearchTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateSearchTaskInvoker) Invoke() (*model.CreateSearchTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateSearchTaskResponse), nil
-	}
-}
-
-type ShowSearchTaskResultInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowSearchTaskResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowSearchTaskResultInvoker) Invoke() (*model.ShowSearchTaskResultResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowSearchTaskResultResponse), nil
-	}
-}
-
-type CreateSynthesisTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateSynthesisTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateSynthesisTaskInvoker) Invoke() (*model.CreateSynthesisTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateSynthesisTaskResponse), nil
-	}
-}
-
-type ShowSynthesisTaskResultInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowSynthesisTaskResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowSynthesisTaskResultInvoker) Invoke() (*model.ShowSynthesisTaskResultResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowSynthesisTaskResultResponse), nil
 	}
 }

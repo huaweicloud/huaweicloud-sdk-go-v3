@@ -12,7 +12,7 @@ import (
 // CreateDatabaseRequestDatabase 数据库信息
 type CreateDatabaseRequestDatabase struct {
 
-	// 数据库分类 - ECS:自建数据库
+	// 数据库分类 - RDS: RDS数据库 - ECS:自建数据库
 	DbClassification string `json:"db_classification"`
 
 	// 数据库名称

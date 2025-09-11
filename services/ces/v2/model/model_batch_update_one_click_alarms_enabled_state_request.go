@@ -9,7 +9,7 @@ import (
 // BatchUpdateOneClickAlarmsEnabledStateRequest Request Object
 type BatchUpdateOneClickAlarmsEnabledStateRequest struct {
 
-	// 一键告警ID
+	// **参数解释**： 一键告警ID。 **约束限制**： 不涉及。 **取值范围**： 只能为字母或者数字，字符长度为[1,64] **默认取值**： 不涉及。
 	OneClickAlarmId string `json:"one_click_alarm_id"`
 
 	Body *BatchEnableAlarmsRequestBody `json:"body,omitempty"`

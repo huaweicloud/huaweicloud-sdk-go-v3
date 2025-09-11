@@ -7,6 +7,8 @@ import (
 )
 
 type RetentionRuleResponseBody struct {
+
+	// 镜像老化策略ID
 	Id *int32 `json:"id,omitempty"`
 
 	// 预留字段，目前只支持0

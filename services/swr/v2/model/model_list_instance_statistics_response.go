@@ -30,7 +30,7 @@ type ListInstanceStatisticsResponse struct {
 	// 镜像老化策略的配额
 	RetentionPolicyQuota *int64 `json:"retention_policy_quota,omitempty"`
 
-	// 触发器策略的配额
+	// 触发器的配额
 	NotifyPolicyQuota *int64 `json:"notify_policy_quota,omitempty"`
 
 	// 镜像同步的目标仓库配额
@@ -45,7 +45,7 @@ type ListInstanceStatisticsResponse struct {
 	// 镜像老化策略的总数
 	RetentionPolicyCount *int64 `json:"retention_policy_count,omitempty"`
 
-	// 触发器策略的总数
+	// 触发器的总数
 	NotifyPolicyCount *int64 `json:"notify_policy_count,omitempty"`
 
 	// 镜像同步策略的目标仓库总数

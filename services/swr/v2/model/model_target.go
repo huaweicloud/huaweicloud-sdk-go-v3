@@ -8,7 +8,7 @@ import (
 
 type Target struct {
 
-	// 触发器类型，可选http
+	// 触发类型，可选http
 	Type string `json:"type"`
 
 	// 触发地址，不可修改

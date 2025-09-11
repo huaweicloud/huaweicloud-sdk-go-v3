@@ -453,6 +453,54 @@ func (i *UpdateProjectV4Invoker) Invoke() (*model.UpdateProjectV4Response, error
 	}
 }
 
+type CreateIpdProjectIssueInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateIpdProjectIssueInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateIpdProjectIssueInvoker) Invoke() (*model.CreateIpdProjectIssueResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateIpdProjectIssueResponse), nil
+	}
+}
+
+type CreateIpdProjectIssueAttachmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateIpdProjectIssueAttachmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateIpdProjectIssueAttachmentInvoker) Invoke() (*model.CreateIpdProjectIssueAttachmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateIpdProjectIssueAttachmentResponse), nil
+	}
+}
+
+type ListIpdProjectIssuesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIpdProjectIssuesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListIpdProjectIssuesInvoker) Invoke() (*model.ListIpdProjectIssuesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIpdProjectIssuesResponse), nil
+	}
+}
+
 type ListIssueFieldsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -546,6 +594,102 @@ func (i *TransferWorkItemFlowInvoker) Invoke() (*model.TransferWorkItemFlowRespo
 		return nil, err
 	} else {
 		return result.(*model.TransferWorkItemFlowResponse), nil
+	}
+}
+
+type DownloadIpdIssueAttachmentInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadIpdIssueAttachmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadIpdIssueAttachmentInvoker) Invoke() (*model.DownloadIpdIssueAttachmentResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadIpdIssueAttachmentResponse), nil
+	}
+}
+
+type ShowIpdAttachmentByWorkItemIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIpdAttachmentByWorkItemIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowIpdAttachmentByWorkItemIdInvoker) Invoke() (*model.ShowIpdAttachmentByWorkItemIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIpdAttachmentByWorkItemIdResponse), nil
+	}
+}
+
+type CreateScrumPlanToProjectInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateScrumPlanToProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateScrumPlanToProjectInvoker) Invoke() (*model.CreateScrumPlanToProjectResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateScrumPlanToProjectResponse), nil
+	}
+}
+
+type DeleteScrumPlanInProjectInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteScrumPlanInProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteScrumPlanInProjectInvoker) Invoke() (*model.DeleteScrumPlanInProjectResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteScrumPlanInProjectResponse), nil
+	}
+}
+
+type ShowScrumPlansByConditionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowScrumPlansByConditionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowScrumPlansByConditionInvoker) Invoke() (*model.ShowScrumPlansByConditionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowScrumPlansByConditionResponse), nil
+	}
+}
+
+type UpdateScrumPlanInProjectInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateScrumPlanInProjectInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateScrumPlanInProjectInvoker) Invoke() (*model.UpdateScrumPlanInProjectResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateScrumPlanInProjectResponse), nil
 	}
 }
 
@@ -1330,5 +1474,21 @@ func (i *UploadIssueImgInvoker) Invoke() (*model.UploadIssueImgResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UploadIssueImgResponse), nil
+	}
+}
+
+type ShowScrumIssueSeveritiesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowScrumIssueSeveritiesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowScrumIssueSeveritiesInvoker) Invoke() (*model.ShowScrumIssueSeveritiesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowScrumIssueSeveritiesResponse), nil
 	}
 }

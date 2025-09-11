@@ -9,10 +9,10 @@ import (
 // ListInstanceResourceInstancesResponse Response Object
 type ListInstanceResourceInstancesResponse struct {
 
-	// 资源实例列表
+	// 资源列表
 	Resources *[]Resource `json:"resources,omitempty"`
 
-	// 资源实例数量
+	// 资源数量
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

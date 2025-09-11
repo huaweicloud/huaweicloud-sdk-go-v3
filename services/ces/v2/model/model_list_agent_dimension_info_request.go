@@ -18,7 +18,7 @@ type ListAgentDimensionInfoRequest struct {
 	// **参数描述**： 维度名称。 **约束限制**： 不涉及。 **取值范围**： 枚举类型，mount_point:挂载点，disk:磁盘，proc:进程，gpu:显卡，raid:RAID控制器。 **默认取值**： 不涉及。
 	DimName ListAgentDimensionInfoRequestDimName `json:"dim_name"`
 
-	// **参数描述**： 维度值。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
+	// **参数描述**： 维度值(建议：同一个instance_id下相同dim_value对应的原始维度值origin_value是一样的，无需多次调用，建议根据instance_id + dim_value作为key进行缓存重复使用)。 **约束限制**： 不涉及。  **取值范围**： 32位字符串，如：2e84018fc8b4484b94e89aae212fe615。 **默认取值**： 不涉及。
 	DimValue *string `json:"dim_value,omitempty"`
 
 	// **参数描述**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为2147483647。 **默认取值**： 0

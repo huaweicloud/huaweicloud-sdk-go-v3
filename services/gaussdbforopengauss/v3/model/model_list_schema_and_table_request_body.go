@@ -6,14 +6,13 @@ import (
 	"strings"
 )
 
-// ListSchemaAndTableRequestBody 查询table和schema请求体
 type ListSchemaAndTableRequestBody struct {
 
-	// SQL文本
+	// **参数解释**: SQL文本。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
 	SqlText string `json:"sql_text"`
 
-	// 实例ID
-	InstanceId string `json:"instance_id"`
+	// **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。 **默认取值**: 不涉及。
+	InstanceId *string `json:"instance_id,omitempty"`
 }
 
 func (o ListSchemaAndTableRequestBody) String() string {

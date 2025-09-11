@@ -8,10 +8,10 @@ import (
 
 type ParaErrorResponseBody struct {
 
-	// 错误码。
+	// **参数解释**: 错误码。 **取值范围**: 不涉及。
 	ErrorCode string `json:"error_code"`
 
-	// 错误消息。
+	// **参数解释**: 错误消息。 **取值范围**: 不涉及。
 	ErrorMsg string `json:"error_msg"`
 }
 

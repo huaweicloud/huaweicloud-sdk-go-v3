@@ -11,7 +11,7 @@ type UpdateReplicationPolicyRequestBody struct {
 	// 策略名称, 1-256字符组成，只能包含英文大小写、数字、汉字、中划线和下划线。
 	Name string `json:"name"`
 
-	// 策略描述描述
+	// 策略描述
 	Description *string `json:"description,omitempty"`
 
 	SrcRegistry *ReplicationRegistry `json:"src_registry,omitempty"`
@@ -32,7 +32,7 @@ type UpdateReplicationPolicyRequestBody struct {
 	// 是否覆盖，默认为false
 	Override *bool `json:"override,omitempty"`
 
-	// 是否使用，默认为false
+	// 是否启用，默认为false
 	Enabled bool `json:"enabled"`
 }
 

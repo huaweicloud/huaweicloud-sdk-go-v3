@@ -15,13 +15,13 @@ type AuditAgentRequest struct {
 	DbId string `json:"db_id"`
 
 	// 模式 - 0：创建agent - 1：选择已有agent
-	Mode AuditAgentRequestMode `json:"mode"`
+	Mode int32 `json:"mode"`
 
 	// 选择已有agent时必输
 	AgentId *string `json:"agent_id,omitempty"`
 
 	// agent类型 - APP：应用端 - DB：数据库端
-	AgentType AuditAgentRequestAgentType `json:"agent_type"`
+	AgentType string `json:"agent_type"`
 
 	// agent OS类型: - LINUX64_X86 - LINUX64_ARM - WINDOWS64
 	AgentOs AuditAgentRequestAgentOs `json:"agent_os"`
@@ -46,99 +46,6 @@ func (o AuditAgentRequest) String() string {
 	}
 
 	return strings.Join([]string{"AuditAgentRequest", string(data)}, " ")
-}
-
-type AuditAgentRequestMode struct {
-	value int32
-}
-
-type AuditAgentRequestModeEnum struct {
-	E_0 AuditAgentRequestMode
-	E_1 AuditAgentRequestMode
-}
-
-func GetAuditAgentRequestModeEnum() AuditAgentRequestModeEnum {
-	return AuditAgentRequestModeEnum{
-		E_0: AuditAgentRequestMode{
-			value: 0,
-		}, E_1: AuditAgentRequestMode{
-			value: 1,
-		},
-	}
-}
-
-func (c AuditAgentRequestMode) Value() int32 {
-	return c.value
-}
-
-func (c AuditAgentRequestMode) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *AuditAgentRequestMode) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: int32")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(int32); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to int32 error")
-	}
-}
-
-type AuditAgentRequestAgentType struct {
-	value string
-}
-
-type AuditAgentRequestAgentTypeEnum struct {
-	APP AuditAgentRequestAgentType
-	DB  AuditAgentRequestAgentType
-}
-
-func GetAuditAgentRequestAgentTypeEnum() AuditAgentRequestAgentTypeEnum {
-	return AuditAgentRequestAgentTypeEnum{
-		APP: AuditAgentRequestAgentType{
-			value: "APP",
-		},
-		DB: AuditAgentRequestAgentType{
-			value: "DB",
-		},
-	}
-}
-
-func (c AuditAgentRequestAgentType) Value() string {
-	return c.value
-}
-
-func (c AuditAgentRequestAgentType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *AuditAgentRequestAgentType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }
 
 type AuditAgentRequestAgentOs struct {

@@ -40,7 +40,7 @@ type UpdateWidgetInfo struct {
 
 	Location *UpdateWidgetInfoLocation `json:"location,omitempty"`
 
-	// 单位
+	// **参数解释** 单位 **约束限制** 不涉及 **取值范围** 长度为[0,32]个字符 **默认取值** 不涉及
 	Unit *string `json:"unit,omitempty"`
 }
 

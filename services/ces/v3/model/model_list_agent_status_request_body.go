@@ -11,16 +11,16 @@ import (
 
 type ListAgentStatusRequestBody struct {
 
-	// 机器实例id列表
+	// **参数解释**: 机器实例id列表 **约束限制**: 包含的机器实例id最多为2000个，最少为1个
 	InstanceIds []string `json:"instance_ids"`
 
-	// uniagent运行状态，不传查所有状态,none无，running运行中，silent静默中，unknown故障
+	// **参数解释**: uniagent运行状态，不传值则查出所有状态 **约束限制**: 不涉及。 **取值范围**: - none: 未安装 - running: 运行中 - silent: 静默状态，用于大规模插件异常时，紧急规避的一种措施，现象是kill掉telescope，只保留uniagent的心跳功能 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障 **默认取值**: 不涉及
 	UniagentStatus *ListAgentStatusRequestBodyUniagentStatus `json:"uniagent_status,omitempty"`
 
-	// 插件名称，不传查所有插件，目前仅支持telescope
+	// **参数解释**: 插件名称，不传查所有插件 **约束限制**: 当前仅支持查询telescope插件 **取值范围**: - telescope: 主机监控插件telescope **默认取值**: telescope
 	ExtensionName *ListAgentStatusRequestBodyExtensionName `json:"extension_name,omitempty"`
 
-	// 插件状态，不传查所有状态, none未安装，running运行中，stopped已停止，fault故障（进程异常），unknown故障（连接异常）
+	// **参数解释**: 插件状态，不传查所有状态  **约束限制**: 不涉及 **取值范围**: - none: 未安装 - running: 运行中 - stopped：已停止 - fault: 进程故障，应该运行的插件，没运行，属于客户端故障 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障 **默认取值**: 不涉及
 	ExtensionStatus *ListAgentStatusRequestBodyExtensionStatus `json:"extension_status,omitempty"`
 }
 

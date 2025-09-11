@@ -607,6 +607,69 @@ func (c *ProjectManClient) UpdateProjectV4Invoker(request *model.UpdateProjectV4
 	return &UpdateProjectV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateIpdProjectIssue 创建工作项
+//
+// 创建IPD项目的工作项
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) CreateIpdProjectIssue(request *model.CreateIpdProjectIssueRequest) (*model.CreateIpdProjectIssueResponse, error) {
+	requestDef := GenReqDefForCreateIpdProjectIssue()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateIpdProjectIssueResponse), nil
+	}
+}
+
+// CreateIpdProjectIssueInvoker 创建工作项
+func (c *ProjectManClient) CreateIpdProjectIssueInvoker(request *model.CreateIpdProjectIssueRequest) *CreateIpdProjectIssueInvoker {
+	requestDef := GenReqDefForCreateIpdProjectIssue()
+	return &CreateIpdProjectIssueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateIpdProjectIssueAttachment 上传issue附件
+//
+// 上传issue附件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) CreateIpdProjectIssueAttachment(request *model.CreateIpdProjectIssueAttachmentRequest) (*model.CreateIpdProjectIssueAttachmentResponse, error) {
+	requestDef := GenReqDefForCreateIpdProjectIssueAttachment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateIpdProjectIssueAttachmentResponse), nil
+	}
+}
+
+// CreateIpdProjectIssueAttachmentInvoker 上传issue附件
+func (c *ProjectManClient) CreateIpdProjectIssueAttachmentInvoker(request *model.CreateIpdProjectIssueAttachmentRequest) *CreateIpdProjectIssueAttachmentInvoker {
+	requestDef := GenReqDefForCreateIpdProjectIssueAttachment()
+	return &CreateIpdProjectIssueAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIpdProjectIssues 查询项目工作项列表
+//
+// 查询Ipd项目的工作项列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) ListIpdProjectIssues(request *model.ListIpdProjectIssuesRequest) (*model.ListIpdProjectIssuesResponse, error) {
+	requestDef := GenReqDefForListIpdProjectIssues()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIpdProjectIssuesResponse), nil
+	}
+}
+
+// ListIpdProjectIssuesInvoker 查询项目工作项列表
+func (c *ProjectManClient) ListIpdProjectIssuesInvoker(request *model.ListIpdProjectIssuesRequest) *ListIpdProjectIssuesInvoker {
+	requestDef := GenReqDefForListIpdProjectIssues()
+	return &ListIpdProjectIssuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListIssueFields 查询字段模板列表
 //
 // 工作项类型中查询字段模板列表
@@ -731,6 +794,132 @@ func (c *ProjectManClient) TransferWorkItemFlow(request *model.TransferWorkItemF
 func (c *ProjectManClient) TransferWorkItemFlowInvoker(request *model.TransferWorkItemFlowRequest) *TransferWorkItemFlowInvoker {
 	requestDef := GenReqDefForTransferWorkItemFlow()
 	return &TransferWorkItemFlowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadIpdIssueAttachment 根据ID下载工作项附件
+//
+// 根据ID下载工作项附件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) DownloadIpdIssueAttachment(request *model.DownloadIpdIssueAttachmentRequest) (*model.DownloadIpdIssueAttachmentResponse, error) {
+	requestDef := GenReqDefForDownloadIpdIssueAttachment()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadIpdIssueAttachmentResponse), nil
+	}
+}
+
+// DownloadIpdIssueAttachmentInvoker 根据ID下载工作项附件
+func (c *ProjectManClient) DownloadIpdIssueAttachmentInvoker(request *model.DownloadIpdIssueAttachmentRequest) *DownloadIpdIssueAttachmentInvoker {
+	requestDef := GenReqDefForDownloadIpdIssueAttachment()
+	return &DownloadIpdIssueAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIpdAttachmentByWorkItemId 查询工作项附件列表
+//
+// 查询工作项附件列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) ShowIpdAttachmentByWorkItemId(request *model.ShowIpdAttachmentByWorkItemIdRequest) (*model.ShowIpdAttachmentByWorkItemIdResponse, error) {
+	requestDef := GenReqDefForShowIpdAttachmentByWorkItemId()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIpdAttachmentByWorkItemIdResponse), nil
+	}
+}
+
+// ShowIpdAttachmentByWorkItemIdInvoker 查询工作项附件列表
+func (c *ProjectManClient) ShowIpdAttachmentByWorkItemIdInvoker(request *model.ShowIpdAttachmentByWorkItemIdRequest) *ShowIpdAttachmentByWorkItemIdInvoker {
+	requestDef := GenReqDefForShowIpdAttachmentByWorkItemId()
+	return &ShowIpdAttachmentByWorkItemIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateScrumPlanToProject 新增需求规划
+//
+// 新增需求规划
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) CreateScrumPlanToProject(request *model.CreateScrumPlanToProjectRequest) (*model.CreateScrumPlanToProjectResponse, error) {
+	requestDef := GenReqDefForCreateScrumPlanToProject()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateScrumPlanToProjectResponse), nil
+	}
+}
+
+// CreateScrumPlanToProjectInvoker 新增需求规划
+func (c *ProjectManClient) CreateScrumPlanToProjectInvoker(request *model.CreateScrumPlanToProjectRequest) *CreateScrumPlanToProjectInvoker {
+	requestDef := GenReqDefForCreateScrumPlanToProject()
+	return &CreateScrumPlanToProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteScrumPlanInProject 删除规划(支持批量)
+//
+// 删除规划(支持批量)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) DeleteScrumPlanInProject(request *model.DeleteScrumPlanInProjectRequest) (*model.DeleteScrumPlanInProjectResponse, error) {
+	requestDef := GenReqDefForDeleteScrumPlanInProject()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteScrumPlanInProjectResponse), nil
+	}
+}
+
+// DeleteScrumPlanInProjectInvoker 删除规划(支持批量)
+func (c *ProjectManClient) DeleteScrumPlanInProjectInvoker(request *model.DeleteScrumPlanInProjectRequest) *DeleteScrumPlanInProjectInvoker {
+	requestDef := GenReqDefForDeleteScrumPlanInProject()
+	return &DeleteScrumPlanInProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowScrumPlansByCondition 查询项目下当前用户可见的所有规划，分页
+//
+// 查询项目下当前用户可见的所有规划，分页
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) ShowScrumPlansByCondition(request *model.ShowScrumPlansByConditionRequest) (*model.ShowScrumPlansByConditionResponse, error) {
+	requestDef := GenReqDefForShowScrumPlansByCondition()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowScrumPlansByConditionResponse), nil
+	}
+}
+
+// ShowScrumPlansByConditionInvoker 查询项目下当前用户可见的所有规划，分页
+func (c *ProjectManClient) ShowScrumPlansByConditionInvoker(request *model.ShowScrumPlansByConditionRequest) *ShowScrumPlansByConditionInvoker {
+	requestDef := GenReqDefForShowScrumPlansByCondition()
+	return &ShowScrumPlansByConditionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateScrumPlanInProject 更新需求规划
+//
+// 更新需求规划
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) UpdateScrumPlanInProject(request *model.UpdateScrumPlanInProjectRequest) (*model.UpdateScrumPlanInProjectResponse, error) {
+	requestDef := GenReqDefForUpdateScrumPlanInProject()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateScrumPlanInProjectResponse), nil
+	}
+}
+
+// UpdateScrumPlanInProjectInvoker 更新需求规划
+func (c *ProjectManClient) UpdateScrumPlanInProjectInvoker(request *model.UpdateScrumPlanInProjectRequest) *UpdateScrumPlanInProjectInvoker {
+	requestDef := GenReqDefForUpdateScrumPlanInProject()
+	return &UpdateScrumPlanInProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AddIssueWorkHours 添加指定工作项工时
@@ -1760,4 +1949,25 @@ func (c *ProjectManClient) UploadIssueImg(request *model.UploadIssueImgRequest) 
 func (c *ProjectManClient) UploadIssueImgInvoker(request *model.UploadIssueImgRequest) *UploadIssueImgInvoker {
 	requestDef := GenReqDefForUploadIssueImg()
 	return &UploadIssueImgInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowScrumIssueSeverities 查询所有的严重程度
+//
+// 查询所有的严重程度
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) ShowScrumIssueSeverities(request *model.ShowScrumIssueSeveritiesRequest) (*model.ShowScrumIssueSeveritiesResponse, error) {
+	requestDef := GenReqDefForShowScrumIssueSeverities()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowScrumIssueSeveritiesResponse), nil
+	}
+}
+
+// ShowScrumIssueSeveritiesInvoker 查询所有的严重程度
+func (c *ProjectManClient) ShowScrumIssueSeveritiesInvoker(request *model.ShowScrumIssueSeveritiesRequest) *ShowScrumIssueSeveritiesInvoker {
+	requestDef := GenReqDefForShowScrumIssueSeverities()
+	return &ShowScrumIssueSeveritiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

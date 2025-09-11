@@ -30,7 +30,7 @@ type ListInstanceAccessoriesRequest struct {
 	// 返回条数，默认为10，最大值为100。**注意：offset和limit参数需要配套使用，offset必须为0或者为limit的倍数。**
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 附件类型，signature.cosign
+	// 附件类型，支持的附件类型有：signature.cosign
 	Type *ListInstanceAccessoriesRequestType `json:"type,omitempty"`
 }
 

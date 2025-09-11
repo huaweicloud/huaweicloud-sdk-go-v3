@@ -12,7 +12,7 @@ type AlarmTemplates struct {
 	// 告警模板的ID，以at开头，后跟字母、数字，长度最长为64
 	TemplateId string `json:"template_id"`
 
-	// 告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]
+	// **参数解释**： 告警模板的名称。 **约束限制**： 不涉及。 **取值范围**： 以字母或汉字开头，可包含字母、数字、汉字、_、-，长度为[1,128]个字符。           **默认取值**： 不涉及。
 	TemplateName string `json:"template_name"`
 
 	TemplateType *TemplateType `json:"template_type"`
@@ -20,7 +20,7 @@ type AlarmTemplates struct {
 	// 告警模板的创建时间
 	CreateTime *sdktime.SdkTime `json:"create_time"`
 
-	// 告警模板的描述，长度范围[0,256]，该字段默认值为空字符串
+	// **参数解释**： 告警模板的描述     **约束限制**： 不涉及。 **取值范围**： 长度范围[0,256]。          **默认取值**： 空字符串。
 	TemplateDescription *string `json:"template_description,omitempty"`
 }
 

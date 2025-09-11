@@ -12,11 +12,14 @@ var (
 		"https://scm.cn-north-4.myhuaweicloud.com")
 	AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1",
 		"https://scm.ap-southeast-1.myhuaweicloud.com")
+	MY_KUALALUMPUR_1 = region.NewRegion("my-kualalumpur-1",
+		"https://scm.my-kualalumpur-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
-	"cn-north-4":     CN_NORTH_4,
-	"ap-southeast-1": AP_SOUTHEAST_1,
+	"cn-north-4":       CN_NORTH_4,
+	"ap-southeast-1":   AP_SOUTHEAST_1,
+	"my-kualalumpur-1": MY_KUALALUMPUR_1,
 }
 
 var provider = region.DefaultProviderChain("SCM")

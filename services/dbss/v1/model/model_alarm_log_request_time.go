@@ -51,22 +51,22 @@ func GetAlarmLogRequestTimeTimeRangeEnum() AlarmLogRequestTimeTimeRangeEnum {
 			value: "HALF_HOUR",
 		},
 		HOUR: AlarmLogRequestTimeTimeRange{
-			value: " HOUR",
+			value: "HOUR",
 		},
 		THREE_HOUR: AlarmLogRequestTimeTimeRange{
-			value: " THREE_HOUR",
+			value: "THREE_HOUR",
 		},
 		TWELVE_HOUR: AlarmLogRequestTimeTimeRange{
-			value: " TWELVE_HOUR",
+			value: "TWELVE_HOUR",
 		},
 		DAY: AlarmLogRequestTimeTimeRange{
-			value: " DAY",
+			value: "DAY",
 		},
 		WEEK: AlarmLogRequestTimeTimeRange{
-			value: " WEEK",
+			value: "WEEK",
 		},
 		MONTH: AlarmLogRequestTimeTimeRange{
-			value: " MONTH;",
+			value: "MONTH",
 		},
 	}
 }

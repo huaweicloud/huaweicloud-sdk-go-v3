@@ -13,7 +13,7 @@ type ListResourceTag struct {
 	Key string `json:"key"`
 
 	// 标签值列表\"。
-	Value []string `json:"value"`
+	Values []string `json:"values"`
 }
 
 func (o ListResourceTag) String() string {

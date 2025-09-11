@@ -8,7 +8,7 @@ import (
 
 type CreateManualBackupRequestBody struct {
 
-	// 实例ID。
+	// **参数解释**: 实例ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
 	InstanceId string `json:"instance_id"`
 
 	// 备份名称，不可重复，4~64个字符，必须以英文字母开头，区分大小写，可以包含英文字母、数字、中划线或者下划线，不能包含其他特殊字符。

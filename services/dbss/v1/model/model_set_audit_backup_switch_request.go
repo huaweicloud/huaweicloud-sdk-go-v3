@@ -1,0 +1,28 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// SetAuditBackupSwitchRequest Request Object
+type SetAuditBackupSwitchRequest struct {
+
+	// **参数解释**： 账户ID。 通过调用IAM服务[查询IAM用户详情]接口获取 **约束限制**： 不涉及 **取值范围**： 以IAM服务[查询IAM用户详情]接口值为准。 **默认取值**： 不涉及
+	DomainId string `json:"domain_id"`
+
+	// **参数解释**： 实例ID。可通过查询实例列表接口ID字段获取 **约束限制**： 不涉及 **取值范围**： 以查询实例列表接口值为准，字符长度32-64。 **默认取值**： 不涉及
+	InstanceId string `json:"instance_id"`
+
+	Body *BackupSwitchRequest `json:"body,omitempty"`
+}
+
+func (o SetAuditBackupSwitchRequest) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "SetAuditBackupSwitchRequest struct{}"
+	}
+
+	return strings.Join([]string{"SetAuditBackupSwitchRequest", string(data)}, " ")
+}

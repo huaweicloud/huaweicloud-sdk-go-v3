@@ -1,7 +1,6 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
@@ -22,10 +21,10 @@ type ArtifactTag struct {
 	Name *string `json:"name,omitempty"`
 
 	// tag的上传时间
-	PushTime *sdktime.SdkTime `json:"push_time,omitempty"`
+	PushTime *string `json:"push_time,omitempty"`
 
 	// tag的下载时间
-	PullTime *sdktime.SdkTime `json:"pull_time,omitempty"`
+	PullTime *string `json:"pull_time,omitempty"`
 }
 
 func (o ArtifactTag) String() string {

@@ -8,14 +8,14 @@ import (
 
 type ResourcesInListResp struct {
 
-	// 资源分组ID，监控范围为资源分组时存在该值
+	// **参数解释**： 资源分组ID，监控范围为资源分组时存在该值。 **取值范围**： 以rg开头，后跟22个字母或数字。
 	ResourceGroupId *string `json:"resource_group_id,omitempty"`
 
-	// 资源分组名称，监控范围为资源分组时存在该值
+	// **参数解释**： 资源分组名称，监控范围为资源分组时存在该值。 **取值范围**： 长度为[1,128]个字符。
 	ResourceGroupName *string `json:"resource_group_name,omitempty"`
 
-	// 维度信息
-	Dimensions *[]MetricDimension `json:"dimensions,omitempty"`
+	// **参数解释**： 维度信息。
+	Dimensions *[]MetricDimensionResp `json:"dimensions,omitempty"`
 }
 
 func (o ResourcesInListResp) String() string {

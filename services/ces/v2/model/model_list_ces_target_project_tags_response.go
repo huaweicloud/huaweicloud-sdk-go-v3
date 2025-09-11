@@ -9,9 +9,9 @@ import (
 // ListCesTargetProjectTagsResponse Response Object
 type ListCesTargetProjectTagsResponse struct {
 
-	// 租户标签列表
-	Tags           *[]Tag `json:"tags,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	// **参数解释**： 租户标签列表。
+	Tags           *[]TagResp `json:"tags,omitempty"`
+	HttpStatusCode int        `json:"-"`
 }
 
 func (o ListCesTargetProjectTagsResponse) String() string {

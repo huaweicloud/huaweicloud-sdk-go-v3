@@ -5,6 +5,22 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/iotdm/v5/model"
 )
 
+type ListInstanceFlavorsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceFlavorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceFlavorsInvoker) Invoke() (*model.ListInstanceFlavorsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceFlavorsResponse), nil
+	}
+}
+
 type BindInstanceTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -146,5 +162,53 @@ func (i *UpdateInstanceInvoker) Invoke() (*model.UpdateInstanceResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdateInstanceResponse), nil
+	}
+}
+
+type ListInstanceTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceTasksInvoker) Invoke() (*model.ListInstanceTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceTasksResponse), nil
+	}
+}
+
+type RetryInstanceTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RetryInstanceTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RetryInstanceTaskInvoker) Invoke() (*model.RetryInstanceTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RetryInstanceTaskResponse), nil
+	}
+}
+
+type ShowInstanceTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceTaskInvoker) Invoke() (*model.ShowInstanceTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceTaskResponse), nil
 	}
 }

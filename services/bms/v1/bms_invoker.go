@@ -293,6 +293,22 @@ func (i *ListBaremetalFlavorDetailExtendsInvoker) Invoke() (*model.ListBaremetal
 	}
 }
 
+type ModifyVmNicInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyVmNicInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyVmNicInvoker) Invoke() (*model.ModifyVmNicResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyVmNicResponse), nil
+	}
+}
+
 type ReinstallBaremetalServerOsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -322,6 +338,22 @@ func (i *ResetPwdOneClickInvoker) Invoke() (*model.ResetPwdOneClickResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ResetPwdOneClickResponse), nil
+	}
+}
+
+type ShowAvailableResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAvailableResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAvailableResourceInvoker) Invoke() (*model.ShowAvailableResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAvailableResourceResponse), nil
 	}
 }
 

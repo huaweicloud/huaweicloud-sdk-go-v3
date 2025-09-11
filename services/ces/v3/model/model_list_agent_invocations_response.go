@@ -9,10 +9,10 @@ import (
 // ListAgentInvocationsResponse Response Object
 type ListAgentInvocationsResponse struct {
 
-	// 任务列表
+	// **参数解释**: 任务列表 **取值范围**: 返回数组长度为[0,100]
 	Invocations *[]InvocationInfo `json:"invocations,omitempty"`
 
-	// 任务列表总量
+	// **参数解释**: 任务列表总量 **取值范围**: 数字范围为[0,9999999999999]
 	Count          *int64 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

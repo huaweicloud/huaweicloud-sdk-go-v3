@@ -14,7 +14,7 @@ type CreateRegistryRequestBody struct {
 	// 目标仓库描述
 	Description *string `json:"description,omitempty"`
 
-	// 仓库类型，swr-pro(开源harbor仓库)、swr-pro-internal(SWR企业版仓库)、huawei-SWR(SWR共享版仓库)
+	// 仓库类型，swr-pro(开源harbor仓库)、swr-pro-internal(SWR企业版仓库)、huawei-SWR(SWR基础版仓库)
 	Type string `json:"type"`
 
 	// 企业仓库实例所属的项目ID，当type为swr-pro-internal时必填

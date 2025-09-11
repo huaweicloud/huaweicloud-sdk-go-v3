@@ -9,10 +9,10 @@ import (
 // ListAlarmRulesResponse Response Object
 type ListAlarmRulesResponse struct {
 
-	// 告警规则列表
-	Alarms *[]ListAlarmResponseAlarms `json:"alarms,omitempty"`
+	// **参数解释**： 告警规则列表。 **取值范围**： 长度为[1,100]个字符。
+	Alarms *[]ListAlarmRespBodyAlarms `json:"alarms,omitempty"`
 
-	// 告警规则总数
+	// **参数解释**： 告警规则总数。 **取值范围**： [0,10000]
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

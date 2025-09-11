@@ -8,6 +8,8 @@ import (
 
 // ShowClusterAccessKeyListResponse Response Object
 type ShowClusterAccessKeyListResponse struct {
+
+	// 已授权的访问密钥列表
 	Result         *[]ShowClusterAccessKeyListResponseBodyResult `json:"result,omitempty"`
 	HttpStatusCode int                                           `json:"-"`
 }

@@ -1,10 +1,11 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"strings"
 )
 
@@ -17,7 +18,7 @@ type Accessory struct {
 	// 附件制品ID
 	ArtifactId *int64 `json:"artifact_id,omitempty"`
 
-	// 附件所属制品ID.
+	// 附件所属的父制品ID.
 	SubjectArtifactId *int64 `json:"subject_artifact_id,omitempty"`
 
 	// 附件的大小
@@ -30,7 +31,7 @@ type Accessory struct {
 	Type *AccessoryType `json:"type,omitempty"`
 
 	// 附件的创建时间
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+	CreatedAt *string `json:"created_at,omitempty"`
 }
 
 func (o Accessory) String() string {

@@ -395,6 +395,27 @@ func (c *BmsClient) ListBaremetalFlavorDetailExtendsInvoker(request *model.ListB
 	return &ListBaremetalFlavorDetailExtendsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ModifyVmNic 编辑port
+//
+// 编辑port
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BmsClient) ModifyVmNic(request *model.ModifyVmNicRequest) (*model.ModifyVmNicResponse, error) {
+	requestDef := GenReqDefForModifyVmNic()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyVmNicResponse), nil
+	}
+}
+
+// ModifyVmNicInvoker 编辑port
+func (c *BmsClient) ModifyVmNicInvoker(request *model.ModifyVmNicRequest) *ModifyVmNicInvoker {
+	requestDef := GenReqDefForModifyVmNic()
+	return &ModifyVmNicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ReinstallBaremetalServerOs 重装裸金属服务器操作系统
 //
 // 重装裸金属服务器的操作系统。快速发放裸金属服务器支持裸金属服务器数据盘不变的情况下，使用原镜像重装系统盘。重装操作系统支持密码或者密钥注入
@@ -435,6 +456,27 @@ func (c *BmsClient) ResetPwdOneClick(request *model.ResetPwdOneClickRequest) (*m
 func (c *BmsClient) ResetPwdOneClickInvoker(request *model.ResetPwdOneClickRequest) *ResetPwdOneClickInvoker {
 	requestDef := GenReqDefForResetPwdOneClick()
 	return &ResetPwdOneClickInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAvailableResource 查询可用资源
+//
+// 查询可用资源
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BmsClient) ShowAvailableResource(request *model.ShowAvailableResourceRequest) (*model.ShowAvailableResourceResponse, error) {
+	requestDef := GenReqDefForShowAvailableResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAvailableResourceResponse), nil
+	}
+}
+
+// ShowAvailableResourceInvoker 查询可用资源
+func (c *BmsClient) ShowAvailableResourceInvoker(request *model.ShowAvailableResourceRequest) *ShowAvailableResourceInvoker {
+	requestDef := GenReqDefForShowAvailableResource()
+	return &ShowAvailableResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowBaremetalServerInterfaceAttachments 查询裸金属服务器网卡信息

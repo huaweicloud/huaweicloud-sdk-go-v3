@@ -26,6 +26,9 @@ type UpdateServerRequest struct {
 
 	// DNS服务器列表，最多两个DNS
 	DnsServers *[]string `json:"dns_servers,omitempty"`
+
+	// 身份提供商名称。
+	IdpName *string `json:"idp_name,omitempty"`
 }
 
 func (o UpdateServerRequest) String() string {
@@ -44,6 +47,8 @@ type UpdateServerRequestClientAuthType struct {
 type UpdateServerRequestClientAuthTypeEnum struct {
 	CERT           UpdateServerRequestClientAuthType
 	LOCAL_PASSWORD UpdateServerRequestClientAuthType
+	IAM            UpdateServerRequestClientAuthType
+	FEDERATED      UpdateServerRequestClientAuthType
 }
 
 func GetUpdateServerRequestClientAuthTypeEnum() UpdateServerRequestClientAuthTypeEnum {
@@ -53,6 +58,12 @@ func GetUpdateServerRequestClientAuthTypeEnum() UpdateServerRequestClientAuthTyp
 		},
 		LOCAL_PASSWORD: UpdateServerRequestClientAuthType{
 			value: "LOCAL_PASSWORD",
+		},
+		IAM: UpdateServerRequestClientAuthType{
+			value: "IAM",
+		},
+		FEDERATED: UpdateServerRequestClientAuthType{
+			value: "FEDERATED",
 		},
 	}
 }

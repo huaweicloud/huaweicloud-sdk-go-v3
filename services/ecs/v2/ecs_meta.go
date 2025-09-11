@@ -1804,6 +1804,22 @@ func GenReqDefForShowAppendableVolumeQuota() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowFlavorCapacity() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/cloudservers/flavors/{flavor_id}/resources").
+		WithResponse(new(model.ShowFlavorCapacityResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FlavorId").
+		WithJsonTag("flavor_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowMetadataOptions() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -1852,6 +1868,22 @@ func GenReqDefForShowServer() *def.HttpRequestDef {
 		WithMethod(http.MethodGet).
 		WithPath("/v1/{project_id}/cloudservers/{server_id}").
 		WithResponse(new(model.ShowServerResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ServerId").
+		WithJsonTag("server_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowServerAttachableNicNum() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/cloudservers/{server_id}/os-interface_extension").
+		WithResponse(new(model.ShowServerAttachableNicNumResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

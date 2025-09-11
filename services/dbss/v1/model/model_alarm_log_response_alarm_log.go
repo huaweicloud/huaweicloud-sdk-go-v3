@@ -29,7 +29,7 @@ type AlarmLogResponseAlarmLog struct {
 	// 告警确认状态 - DONE: 已确认 - UNDO: 未确认
 	AlarmStatus *string `json:"alarm_status,omitempty"`
 
-	// 告警风险等级 - LOW - MEDIUM - HIGH
+	// 告警风险等级 - LOW：低 - MEDIUM：中 - HIGH：高
 	AlarmRisk *string `json:"alarm_risk,omitempty"`
 
 	// 告警描述信息

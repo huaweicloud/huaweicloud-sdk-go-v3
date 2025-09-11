@@ -9,7 +9,7 @@ import (
 // ShowSubResourceInstancesCountResponse Response Object
 type ShowSubResourceInstancesCountResponse struct {
 
-	// 资源实例数量
+	// 资源数量
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

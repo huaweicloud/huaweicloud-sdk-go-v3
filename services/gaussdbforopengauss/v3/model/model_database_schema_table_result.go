@@ -6,13 +6,12 @@ import (
 	"strings"
 )
 
-// DatabaseSchemaTableResult 数据库表结构及其所属 schema
 type DatabaseSchemaTableResult struct {
 
-	// 表名称
+	// **参数解释**: 表名称。 **取值范围**: 不涉及。
 	TableName *string `json:"table_name,omitempty"`
 
-	// schema名称
+	// **参数解释**: schema名称。 **取值范围**: 不涉及。
 	SchemaName *string `json:"schema_name,omitempty"`
 }
 

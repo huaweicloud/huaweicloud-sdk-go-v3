@@ -12,7 +12,7 @@ import (
 // ModifyEpsQuotaRequest Request Object
 type ModifyEpsQuotaRequest struct {
 
-	// 语言。默认值：en-us。
+	// **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
 	XLanguage *ModifyEpsQuotaRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *ModifyEpsQuotaRequestBody `json:"body,omitempty"`

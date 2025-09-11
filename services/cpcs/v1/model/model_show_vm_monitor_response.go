@@ -13,8 +13,14 @@ type ShowVmMonitorResponse struct {
 	Datapoints *[]Datapoint `json:"datapoints,omitempty"`
 
 	// 指标名称，比如:cpu_util
-	MetricName     *string `json:"metric_name,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	MetricName *string `json:"metric_name,omitempty"`
+
+	// 最大值，未计算默认为0
+	Max *float64 `json:"max,omitempty"`
+
+	// 平均值，未计算默认为0
+	Average        *float64 `json:"average,omitempty"`
+	HttpStatusCode int      `json:"-"`
 }
 
 func (o ShowVmMonitorResponse) String() string {

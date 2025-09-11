@@ -1729,6 +1729,27 @@ func (c *EcsClient) ShowAppendableVolumeQuotaInvoker(request *model.ShowAppendab
 	return &ShowAppendableVolumeQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowFlavorCapacity 查询flavor的容量
+//
+// 查询flavor的容量
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ShowFlavorCapacity(request *model.ShowFlavorCapacityRequest) (*model.ShowFlavorCapacityResponse, error) {
+	requestDef := GenReqDefForShowFlavorCapacity()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFlavorCapacityResponse), nil
+	}
+}
+
+// ShowFlavorCapacityInvoker 查询flavor的容量
+func (c *EcsClient) ShowFlavorCapacityInvoker(request *model.ShowFlavorCapacityRequest) *ShowFlavorCapacityInvoker {
+	requestDef := GenReqDefForShowFlavorCapacity()
+	return &ShowFlavorCapacityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowMetadataOptions 查询云服务器元数据配置
 //
 // 查询云服务器元数据配置，通过本接口，您可以查询指定云服务器的元数据配置。
@@ -1813,6 +1834,27 @@ func (c *EcsClient) ShowServer(request *model.ShowServerRequest) (*model.ShowSer
 func (c *EcsClient) ShowServerInvoker(request *model.ShowServerRequest) *ShowServerInvoker {
 	requestDef := GenReqDefForShowServer()
 	return &ShowServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowServerAttachableNicNum 查询虚拟机可挂载网卡
+//
+// 查询虚拟机可挂载网卡
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ShowServerAttachableNicNum(request *model.ShowServerAttachableNicNumRequest) (*model.ShowServerAttachableNicNumResponse, error) {
+	requestDef := GenReqDefForShowServerAttachableNicNum()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowServerAttachableNicNumResponse), nil
+	}
+}
+
+// ShowServerAttachableNicNumInvoker 查询虚拟机可挂载网卡
+func (c *EcsClient) ShowServerAttachableNicNumInvoker(request *model.ShowServerAttachableNicNumRequest) *ShowServerAttachableNicNumInvoker {
+	requestDef := GenReqDefForShowServerAttachableNicNum()
+	return &ShowServerAttachableNicNumInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowServerBlockDevice 查询弹性云服务器单个磁盘信息

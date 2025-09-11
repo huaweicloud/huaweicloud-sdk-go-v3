@@ -8,16 +8,19 @@ import (
 
 type ImmutableRule struct {
 
-	// 不可变规则ID
+	// 不可变策略ID
 	Id *int32 `json:"id,omitempty"`
 
+	// 命名空间ID
 	NamespaceId *int32 `json:"namespace_id,omitempty"`
 
+	// 命名空间名称
 	NamespaceName *string `json:"namespace_name,omitempty"`
 
+	// 优先级，保留字段
 	Priority *int32 `json:"priority,omitempty"`
 
-	// 不可变规则是否生效
+	// 不可变策略是否生效
 	Disabled *bool `json:"disabled,omitempty"`
 
 	// 预留字段，仅支持填immutable

@@ -156,6 +156,21 @@ func GenReqDefForBatchEnableAlarmRules() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchListSpecifiedMetricData() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/batch-query-metric-data").
+		WithResponse(new(model.BatchListSpecifiedMetricDataResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchUpdateNotificationMaskTime() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -649,6 +664,10 @@ func GenReqDefForListAlarmTemplates() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TemplateName").
 		WithJsonTag("template_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProductName").
+		WithJsonTag("product_name").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

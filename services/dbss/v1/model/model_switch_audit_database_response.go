@@ -9,7 +9,7 @@ import (
 // SwitchAuditDatabaseResponse Response Object
 type SwitchAuditDatabaseResponse struct {
 
-	// 响应状态
+	// 状态  - SUCCESS:成功  - FAILED:失败
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

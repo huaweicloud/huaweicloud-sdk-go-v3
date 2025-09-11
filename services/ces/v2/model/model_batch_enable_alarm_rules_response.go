@@ -9,7 +9,7 @@ import (
 // BatchEnableAlarmRulesResponse Response Object
 type BatchEnableAlarmRulesResponse struct {
 
-	// 成功启停的告警规则ID列表
+	// **参数解释**： 成功启停的告警规则ID列表。
 	AlarmIds       *[]string `json:"alarm_ids,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

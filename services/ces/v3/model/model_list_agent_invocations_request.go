@@ -12,25 +12,25 @@ import (
 // ListAgentInvocationsRequest Request Object
 type ListAgentInvocationsRequest struct {
 
-	// 主机id
+	// **参数解释**: 主机id **约束限制**: 不涉及 **取值范围**: 1到64个字符的字符串，且只包含字母、数字和连字符 **默认取值**: 不涉及
 	InstanceId *string `json:"instance_id,omitempty"`
 
-	// 主机类型，ECS弹性云服务器，BMS裸金属服务器
+	// **参数解释**: 主机类型，仅支持ECS弹性云服务器和BMS裸金属服务器 **约束限制**: 不涉及 **取值范围**: - ECS: 弹性云服务器 - BMS：裸金属服务器 **默认取值**: 不涉及
 	InstanceType *ListAgentInvocationsRequestInstanceType `json:"instance_type,omitempty"`
 
-	// 任务id
+	// **参数解释**: 任务id **约束限制**: 不涉及 **取值范围**: 以字母或数字开头，后续可包含字母、数字、下划线或连字符的字符串，长度至少为 1 **默认取值**: 不涉及
 	InvocationId *string `json:"invocation_id,omitempty"`
 
-	// 任务类型, INSTALL安装, UPDATE升级, ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALLER设置远程安装主机，REMOTE_INSTALL执行远程安装
+	// **参数解释**: 任务类型, 仅包含：INSTALL安装, UPDATE升级, ROLLBACK回退，RETRY重试，SET_REMOTE_INSTALLER设置远程安装主机，REMOTE_INSTALL执行远程安装。 **约束限制**: 不涉及。 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回退 - RETRY：重试 - SET_REMOTE_INSTALLER：设置远程安装主机 - REMOTE_INSTALL：执行远程安装 **默认取值**: 不涉及
 	InvocationType *ListAgentInvocationsRequestInvocationType `json:"invocation_type,omitempty"`
 
-	// 任务对象, 支持 telescope监控
+	// **参数解释**: 任务对象, 支持telescope监控 **约束限制**: 不涉及。 **取值范围**: - telescope: 主机监控插件telescope **默认取值**: telescope。
 	InvocationTarget *ListAgentInvocationsRequestInvocationTarget `json:"invocation_target,omitempty"`
 
-	// 分页偏移量
+	// **参数解释**: 分页偏移量 **约束限制**: 不涉及 **取值范围**: 数字范围为[0,9999999999999] **默认取值**: 0
 	Offset *int64 `json:"offset,omitempty"`
 
-	// 分页大小
+	// **参数解释**: 分页大小。 **约束限制**: 不涉及。 **取值范围**: 数字范围为[1,100] **默认取值**: 100
 	Limit *int32 `json:"limit,omitempty"`
 }
 

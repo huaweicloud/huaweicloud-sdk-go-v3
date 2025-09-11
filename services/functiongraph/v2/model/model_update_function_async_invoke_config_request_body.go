@@ -19,6 +19,18 @@ type UpdateFunctionAsyncInvokeConfigRequestBody struct {
 
 	// 开启异步调用状态持久化
 	EnableAsyncStatusLog *bool `json:"enable_async_status_log,omitempty"`
+
+	// 自定义日志查询组id。
+	LogGroupId *string `json:"log_group_id,omitempty"`
+
+	// 自定义日志查询流id。
+	LogStreamId *string `json:"log_stream_id,omitempty"`
+
+	// 自定义日志查询组名称。
+	LogGroupName *string `json:"log_group_name,omitempty"`
+
+	// 自定义日志查询流名称。
+	LogStreamName *string `json:"log_stream_name,omitempty"`
 }
 
 func (o UpdateFunctionAsyncInvokeConfigRequestBody) String() string {

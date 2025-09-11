@@ -13,7 +13,10 @@ type ListAuditRuleRisksResponse struct {
 	Rules *[]RuleRiskResponseRules `json:"rules,omitempty"`
 
 	// 总数
-	Total          *int32 `json:"total,omitempty"`
+	Total *int32 `json:"total,omitempty"`
+
+	// 自定义规则总数
+	CustomizeTotal *int32 `json:"customize_total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

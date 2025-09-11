@@ -1,7 +1,6 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
@@ -31,10 +30,10 @@ type SignatureExecutionTask struct {
 	Repository *string `json:"repository,omitempty"`
 
 	// 创建时间
-	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
+	CreatedAt *string `json:"created_at,omitempty"`
 
 	// 更新时间
-	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
 }
 
 func (o SignatureExecutionTask) String() string {

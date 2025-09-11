@@ -8,7 +8,7 @@ import (
 
 type BatchDeleteOneClickAlarmsRequestBody struct {
 
-	// 需要批量删除的一键告警ID列表
+	// **参数解释**： 需要批量删除的一键告警ID列表。 **约束限制**： 一键告警ID数量最多为100个，至少1个。
 	OneClickAlarmIds []string `json:"one_click_alarm_ids"`
 }
 

@@ -9,16 +9,16 @@ import (
 	"strings"
 )
 
-// Instance 资源名称匹配参数
+// Instance **参数解释** 资源名称匹配参数 **约束限制** 不涉及
 type Instance struct {
 
-	// 云产品名称
+	// **参数解释** 云产品名称 **约束限制** 不涉及 **取值范围** 长度为[1,16]个字符 **默认取值** 不涉及
 	ProductName string `json:"product_name"`
 
-	// 逻辑运算符  ALL 所有条件匹配成功  ANY 任意条件匹配成功
+	// **参数解释** 逻辑运算符 **约束限制** 不涉及 **取值范围** - ALL: 所有条件匹配成功 - ANY: 任意条件匹配成功 **默认取值** 不涉及
 	LogicalOperator InstanceLogicalOperator `json:"logical_operator"`
 
-	// 资源名称匹配参数数组
+	// **参数解释** 资源名称匹配参数数组 **约束限制** 不超过10个名称
 	InstanceNames []ResourceNameItem `json:"instance_names"`
 }
 

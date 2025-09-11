@@ -149,102 +149,6 @@ func (i *ShowAgencyInvoker) Invoke() (*model.ShowAgencyResponse, error) {
 	}
 }
 
-type CreateAsrVocabularyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateAsrVocabularyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateAsrVocabularyInvoker) Invoke() (*model.CreateAsrVocabularyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateAsrVocabularyResponse), nil
-	}
-}
-
-type DeleteAsrVocabularyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteAsrVocabularyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteAsrVocabularyInvoker) Invoke() (*model.DeleteAsrVocabularyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteAsrVocabularyResponse), nil
-	}
-}
-
-type ListAsrVocabularyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListAsrVocabularyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListAsrVocabularyInvoker) Invoke() (*model.ListAsrVocabularyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListAsrVocabularyResponse), nil
-	}
-}
-
-type ShowAsrVocabularyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowAsrVocabularyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowAsrVocabularyInvoker) Invoke() (*model.ShowAsrVocabularyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowAsrVocabularyResponse), nil
-	}
-}
-
-type ShowAsrVocabularyAssociationInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowAsrVocabularyAssociationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowAsrVocabularyAssociationInvoker) Invoke() (*model.ShowAsrVocabularyAssociationResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowAsrVocabularyAssociationResponse), nil
-	}
-}
-
-type UpdateAsrVocabularyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateAsrVocabularyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateAsrVocabularyInvoker) Invoke() (*model.UpdateAsrVocabularyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateAsrVocabularyResponse), nil
-	}
-}
-
 type DeleteTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3362,6 +3266,38 @@ func (i *ShowResourceUsageInvoker) Invoke() (*model.ShowResourceUsageResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowResourceUsageResponse), nil
+	}
+}
+
+type SignAgreementInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SignAgreementInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SignAgreementInvoker) Invoke() (*model.SignAgreementResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SignAgreementResponse), nil
+	}
+}
+
+type SignSpecialAgreementInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SignSpecialAgreementInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SignSpecialAgreementInvoker) Invoke() (*model.SignSpecialAgreementResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SignSpecialAgreementResponse), nil
 	}
 }
 

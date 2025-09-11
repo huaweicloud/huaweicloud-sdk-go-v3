@@ -32,7 +32,7 @@ type CreateReplicationPolicyRequestBody struct {
 	// 是否覆盖，默认为false
 	Override *bool `json:"override,omitempty"`
 
-	// 是否使用，默认为false
+	// 是否启用，默认为false
 	Enabled bool `json:"enabled"`
 }
 

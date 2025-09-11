@@ -1,10 +1,11 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
 	"strings"
 )
 
@@ -54,8 +55,8 @@ type ShowInstanceInternalEndpointResponse struct {
 	StatusText *string `json:"status_text,omitempty"`
 
 	// 访问控制的创建时间
-	CreatedAt      *sdktime.SdkTime `json:"created_at,omitempty"`
-	HttpStatusCode int              `json:"-"`
+	CreatedAt      *string `json:"created_at,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowInstanceInternalEndpointResponse) String() string {

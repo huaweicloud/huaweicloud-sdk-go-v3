@@ -1333,6 +1333,22 @@ func (i *DeleteInstanceSignPolicyInvoker) Invoke() (*model.DeleteInstanceSignPol
 	}
 }
 
+type DeleteInstanceTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstanceTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteInstanceTagInvoker) Invoke() (*model.DeleteInstanceTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteInstanceTagResponse), nil
+	}
+}
+
 type DeleteInstanceWebhookInvoker struct {
 	*invoker.BaseInvoker
 }

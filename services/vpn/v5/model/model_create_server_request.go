@@ -32,6 +32,9 @@ type CreateServerRequest struct {
 
 	// DNS服务器列表，最多两个DNS
 	DnsServers *[]string `json:"dns_servers,omitempty"`
+
+	// 身份提供商名称。
+	IdpName *string `json:"idp_name,omitempty"`
 }
 
 func (o CreateServerRequest) String() string {
@@ -93,6 +96,8 @@ type CreateServerRequestClientAuthType struct {
 type CreateServerRequestClientAuthTypeEnum struct {
 	CERT           CreateServerRequestClientAuthType
 	LOCAL_PASSWORD CreateServerRequestClientAuthType
+	IAM            CreateServerRequestClientAuthType
+	FEDERATED      CreateServerRequestClientAuthType
 }
 
 func GetCreateServerRequestClientAuthTypeEnum() CreateServerRequestClientAuthTypeEnum {
@@ -102,6 +107,12 @@ func GetCreateServerRequestClientAuthTypeEnum() CreateServerRequestClientAuthTyp
 		},
 		LOCAL_PASSWORD: CreateServerRequestClientAuthType{
 			value: "LOCAL_PASSWORD",
+		},
+		IAM: CreateServerRequestClientAuthType{
+			value: "IAM",
+		},
+		FEDERATED: CreateServerRequestClientAuthType{
+			value: "FEDERATED",
 		},
 	}
 }

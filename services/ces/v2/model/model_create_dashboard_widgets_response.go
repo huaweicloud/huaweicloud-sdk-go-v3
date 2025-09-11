@@ -9,7 +9,7 @@ import (
 // CreateDashboardWidgetsResponse Response Object
 type CreateDashboardWidgetsResponse struct {
 
-	// 批量创建监控视图返回结果
+	// **参数解释** 批量创建监控视图返回结果
 	WidgetIds      *[]string `json:"widget_ids,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

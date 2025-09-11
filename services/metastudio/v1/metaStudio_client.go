@@ -208,132 +208,6 @@ func (c *MetaStudioClient) ShowAgencyInvoker(request *model.ShowAgencyRequest) *
 	return &ShowAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateAsrVocabulary 创建热词表
-//
-// 该接口用于创建热词表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) CreateAsrVocabulary(request *model.CreateAsrVocabularyRequest) (*model.CreateAsrVocabularyResponse, error) {
-	requestDef := GenReqDefForCreateAsrVocabulary()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateAsrVocabularyResponse), nil
-	}
-}
-
-// CreateAsrVocabularyInvoker 创建热词表
-func (c *MetaStudioClient) CreateAsrVocabularyInvoker(request *model.CreateAsrVocabularyRequest) *CreateAsrVocabularyInvoker {
-	requestDef := GenReqDefForCreateAsrVocabulary()
-	return &CreateAsrVocabularyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteAsrVocabulary 删除热词表
-//
-// 该接口用于删除热词表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) DeleteAsrVocabulary(request *model.DeleteAsrVocabularyRequest) (*model.DeleteAsrVocabularyResponse, error) {
-	requestDef := GenReqDefForDeleteAsrVocabulary()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteAsrVocabularyResponse), nil
-	}
-}
-
-// DeleteAsrVocabularyInvoker 删除热词表
-func (c *MetaStudioClient) DeleteAsrVocabularyInvoker(request *model.DeleteAsrVocabularyRequest) *DeleteAsrVocabularyInvoker {
-	requestDef := GenReqDefForDeleteAsrVocabulary()
-	return &DeleteAsrVocabularyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListAsrVocabulary 查询热词表列表
-//
-// 该接口用于查询热词表列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) ListAsrVocabulary(request *model.ListAsrVocabularyRequest) (*model.ListAsrVocabularyResponse, error) {
-	requestDef := GenReqDefForListAsrVocabulary()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAsrVocabularyResponse), nil
-	}
-}
-
-// ListAsrVocabularyInvoker 查询热词表列表
-func (c *MetaStudioClient) ListAsrVocabularyInvoker(request *model.ListAsrVocabularyRequest) *ListAsrVocabularyInvoker {
-	requestDef := GenReqDefForListAsrVocabulary()
-	return &ListAsrVocabularyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowAsrVocabulary 查询热词表详情
-//
-// 该接口用于查询热词表详情。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) ShowAsrVocabulary(request *model.ShowAsrVocabularyRequest) (*model.ShowAsrVocabularyResponse, error) {
-	requestDef := GenReqDefForShowAsrVocabulary()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowAsrVocabularyResponse), nil
-	}
-}
-
-// ShowAsrVocabularyInvoker 查询热词表详情
-func (c *MetaStudioClient) ShowAsrVocabularyInvoker(request *model.ShowAsrVocabularyRequest) *ShowAsrVocabularyInvoker {
-	requestDef := GenReqDefForShowAsrVocabulary()
-	return &ShowAsrVocabularyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowAsrVocabularyAssociation 查询热词表关联详情
-//
-// 该接口用于查询热词表关联详情。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) ShowAsrVocabularyAssociation(request *model.ShowAsrVocabularyAssociationRequest) (*model.ShowAsrVocabularyAssociationResponse, error) {
-	requestDef := GenReqDefForShowAsrVocabularyAssociation()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowAsrVocabularyAssociationResponse), nil
-	}
-}
-
-// ShowAsrVocabularyAssociationInvoker 查询热词表关联详情
-func (c *MetaStudioClient) ShowAsrVocabularyAssociationInvoker(request *model.ShowAsrVocabularyAssociationRequest) *ShowAsrVocabularyAssociationInvoker {
-	requestDef := GenReqDefForShowAsrVocabularyAssociation()
-	return &ShowAsrVocabularyAssociationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateAsrVocabulary 修改热词表
-//
-// 该接口用于修改热词表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) UpdateAsrVocabulary(request *model.UpdateAsrVocabularyRequest) (*model.UpdateAsrVocabularyResponse, error) {
-	requestDef := GenReqDefForUpdateAsrVocabulary()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateAsrVocabularyResponse), nil
-	}
-}
-
-// UpdateAsrVocabularyInvoker 修改热词表
-func (c *MetaStudioClient) UpdateAsrVocabularyInvoker(request *model.UpdateAsrVocabularyRequest) *UpdateAsrVocabularyInvoker {
-	requestDef := GenReqDefForUpdateAsrVocabulary()
-	return &UpdateAsrVocabularyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // DeleteTask 删除导入导出任务
 //
 // 删除导入导出任务
@@ -4437,6 +4311,48 @@ func (c *MetaStudioClient) ShowResourceUsage(request *model.ShowResourceUsageReq
 func (c *MetaStudioClient) ShowResourceUsageInvoker(request *model.ShowResourceUsageRequest) *ShowResourceUsageInvoker {
 	requestDef := GenReqDefForShowResourceUsage()
 	return &ShowResourceUsageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SignAgreement 签署云服务声明
+//
+// 签署云服务声明。调用此接口前请知悉[[metastudio隐私协议](https://www.huaweicloud.com/declaration/tsa_metastudio.html)](tag:hws)[[metastudio隐私协议](https://www.huaweicloud.com/intl/en-us/declaration-sg/tsa-metastudio.html)](tag:hws_hk)。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) SignAgreement(request *model.SignAgreementRequest) (*model.SignAgreementResponse, error) {
+	requestDef := GenReqDefForSignAgreement()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SignAgreementResponse), nil
+	}
+}
+
+// SignAgreementInvoker 签署云服务声明
+func (c *MetaStudioClient) SignAgreementInvoker(request *model.SignAgreementRequest) *SignAgreementInvoker {
+	requestDef := GenReqDefForSignAgreement()
+	return &SignAgreementInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SignSpecialAgreement 签署特殊云服务声明
+//
+// 签署特殊云服务声明,目前可签署自动支付协议。开启自动支付协议之后,调用下单接口时，华为云将进行自动扣费。若因账户余额不足导致扣费失败，系统会生成待支付订单，您可前往费用中心-我的订单查看，届时您需手动完成支付。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) SignSpecialAgreement(request *model.SignSpecialAgreementRequest) (*model.SignSpecialAgreementResponse, error) {
+	requestDef := GenReqDefForSignSpecialAgreement()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SignSpecialAgreementResponse), nil
+	}
+}
+
+// SignSpecialAgreementInvoker 签署特殊云服务声明
+func (c *MetaStudioClient) SignSpecialAgreementInvoker(request *model.SignSpecialAgreementRequest) *SignSpecialAgreementInvoker {
+	requestDef := GenReqDefForSignSpecialAgreement()
+	return &SignSpecialAgreementInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CommitVoiceTrainingJob 提交语音训练任务

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// StartTime 屏蔽起始时间，HH:mm:ss。
+// StartTime **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
 type StartTime struct {
 }
 

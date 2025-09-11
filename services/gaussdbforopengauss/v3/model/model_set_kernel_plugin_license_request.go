@@ -12,7 +12,7 @@ import (
 // SetKernelPluginLicenseRequest Request Object
 type SetKernelPluginLicenseRequest struct {
 
-	// 语言。
+	// **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
 	XLanguage *SetKernelPluginLicenseRequestXLanguage `json:"X-Language,omitempty"`
 
 	// 需要配置license的实例

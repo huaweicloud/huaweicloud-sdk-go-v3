@@ -12,7 +12,7 @@ import (
 // BatchUpdateNotificationMasksRequestBody 通知屏蔽信请求体
 type BatchUpdateNotificationMasksRequestBody struct {
 
-	// 屏蔽规则名称，只能为字母、数字、汉字、-、_，最大长度为64
+	// **参数解释**： 屏蔽规则名称。    **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。      **默认取值**： 不涉及。
 	MaskName *string `json:"mask_name,omitempty"`
 
 	RelationType *RelationType `json:"relation_type"`
@@ -37,19 +37,19 @@ type BatchUpdateNotificationMasksRequestBody struct {
 
 	MaskType *MaskType `json:"mask_type"`
 
-	// 屏蔽起始日期，yyyy-MM-dd。
+	// **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
 	StartDate *string `json:"start_date,omitempty"`
 
-	// 屏蔽起始时间，HH:mm:ss。
+	// **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 屏蔽截止日期，yyyy-MM-dd。
+	// **参数解释**： 屏蔽截止日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
 	EndDate *string `json:"end_date,omitempty"`
 
-	// 屏蔽截止时间，HH:mm:ss。
+	// **参数解释**： 屏蔽截止时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
 	EndTime *string `json:"end_time,omitempty"`
 
-	// 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+	// **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
 	EffectiveTimezone *string `json:"effective_timezone,omitempty"`
 }
 

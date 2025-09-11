@@ -11,7 +11,7 @@ import (
 
 type BatchDeleteDashboardRespInfo struct {
 
-	// 监控看板id
+	// **参数描述**： 监控看板id **约束限制** 不涉及 **取值范围** 以db开头，包含22个字母和数字，长度为24个字符 **默认取值** 不涉及
 	DashboardId *string `json:"dashboard_id,omitempty"`
 
 	// 处理结果, successful: 成功, error: 失败

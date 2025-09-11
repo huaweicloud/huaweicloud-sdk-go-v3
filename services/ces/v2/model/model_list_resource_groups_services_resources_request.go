@@ -18,7 +18,7 @@ type ListResourceGroupsServicesResourcesRequest struct {
 	// 服务类别，如SYS.ECS
 	Service string `json:"service"`
 
-	// 资源维度信息，多个维度按字母序使用逗号分割
+	// 资源维度信息，多个维度按字母序使用逗号分隔
 	DimName *string `json:"dim_name,omitempty"`
 
 	// 分页查询时每页的条目数，取值[1,100]，默认值为100

@@ -9,7 +9,7 @@ import (
 // BatchDeleteAlarmRulesResponse Response Object
 type BatchDeleteAlarmRulesResponse struct {
 
-	// 成功删除的告警规则ID列表
+	// **参数解释**： 成功删除的告警规则ID列表
 	AlarmIds       *[]string `json:"alarm_ids,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

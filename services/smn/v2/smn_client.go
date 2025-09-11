@@ -106,6 +106,48 @@ func (c *SmnClient) BatchCreateSubscriptionsFilterPolicesInvoker(request *model.
 	return &BatchCreateSubscriptionsFilterPolicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteSubscriptions 批量删除订阅
+//
+// 批量删除订阅，每个订阅终端的删除结果在响应体中依次展示。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) BatchDeleteSubscriptions(request *model.BatchDeleteSubscriptionsRequest) (*model.BatchDeleteSubscriptionsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteSubscriptions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteSubscriptionsResponse), nil
+	}
+}
+
+// BatchDeleteSubscriptionsInvoker 批量删除订阅
+func (c *SmnClient) BatchDeleteSubscriptionsInvoker(request *model.BatchDeleteSubscriptionsRequest) *BatchDeleteSubscriptionsInvoker {
+	requestDef := GenReqDefForBatchDeleteSubscriptions()
+	return &BatchDeleteSubscriptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteSubscriptionsByTopic 批量删除指定主题的订阅
+//
+// 批量删除指定主题的订阅，每个订阅终端的删除结果在响应体中依次展示。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) BatchDeleteSubscriptionsByTopic(request *model.BatchDeleteSubscriptionsByTopicRequest) (*model.BatchDeleteSubscriptionsByTopicResponse, error) {
+	requestDef := GenReqDefForBatchDeleteSubscriptionsByTopic()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteSubscriptionsByTopicResponse), nil
+	}
+}
+
+// BatchDeleteSubscriptionsByTopicInvoker 批量删除指定主题的订阅
+func (c *SmnClient) BatchDeleteSubscriptionsByTopicInvoker(request *model.BatchDeleteSubscriptionsByTopicRequest) *BatchDeleteSubscriptionsByTopicInvoker {
+	requestDef := GenReqDefForBatchDeleteSubscriptionsByTopic()
+	return &BatchDeleteSubscriptionsByTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeleteSubscriptionsFilterPolices 批量删除订阅过滤策略
 //
 // 删除订阅者的消息过滤策略。
@@ -167,6 +209,27 @@ func (c *SmnClient) CancelSubscription(request *model.CancelSubscriptionRequest)
 func (c *SmnClient) CancelSubscriptionInvoker(request *model.CancelSubscriptionRequest) *CancelSubscriptionInvoker {
 	requestDef := GenReqDefForCancelSubscription()
 	return &CancelSubscriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ConfirmSubscription 确认订阅
+//
+// 确认订阅主题消息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) ConfirmSubscription(request *model.ConfirmSubscriptionRequest) (*model.ConfirmSubscriptionResponse, error) {
+	requestDef := GenReqDefForConfirmSubscription()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ConfirmSubscriptionResponse), nil
+	}
+}
+
+// ConfirmSubscriptionInvoker 确认订阅
+func (c *SmnClient) ConfirmSubscriptionInvoker(request *model.ConfirmSubscriptionRequest) *ConfirmSubscriptionInvoker {
+	requestDef := GenReqDefForConfirmSubscription()
+	return &ConfirmSubscriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateLogtank 绑定云日志
@@ -360,6 +423,27 @@ func (c *SmnClient) DeleteResourceTagInvoker(request *model.DeleteResourceTagReq
 	return &DeleteResourceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteSubscriptionsByTopic 删除指定主题的订阅
+//
+// 删除指定主题的订阅
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) DeleteSubscriptionsByTopic(request *model.DeleteSubscriptionsByTopicRequest) (*model.DeleteSubscriptionsByTopicResponse, error) {
+	requestDef := GenReqDefForDeleteSubscriptionsByTopic()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSubscriptionsByTopicResponse), nil
+	}
+}
+
+// DeleteSubscriptionsByTopicInvoker 删除指定主题的订阅
+func (c *SmnClient) DeleteSubscriptionsByTopicInvoker(request *model.DeleteSubscriptionsByTopicRequest) *DeleteSubscriptionsByTopicInvoker {
+	requestDef := GenReqDefForDeleteSubscriptionsByTopic()
+	return &DeleteSubscriptionsByTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteTopic 删除主题
 //
 // 删除主题。
@@ -421,6 +505,48 @@ func (c *SmnClient) DeleteTopicAttributes(request *model.DeleteTopicAttributesRe
 func (c *SmnClient) DeleteTopicAttributesInvoker(request *model.DeleteTopicAttributesRequest) *DeleteTopicAttributesInvoker {
 	requestDef := GenReqDefForDeleteTopicAttributes()
 	return &DeleteTopicAttributesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadHttpCert 下载证书
+//
+// 下载http消息校验证书
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) DownloadHttpCert(request *model.DownloadHttpCertRequest) (*model.DownloadHttpCertResponse, error) {
+	requestDef := GenReqDefForDownloadHttpCert()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadHttpCertResponse), nil
+	}
+}
+
+// DownloadHttpCertInvoker 下载证书
+func (c *SmnClient) DownloadHttpCertInvoker(request *model.DownloadHttpCertRequest) *DownloadHttpCertInvoker {
+	requestDef := GenReqDefForDownloadHttpCert()
+	return &DownloadHttpCertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCloudService 查询授权云服务列表
+//
+// 查询授权云服务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) ListCloudService(request *model.ListCloudServiceRequest) (*model.ListCloudServiceResponse, error) {
+	requestDef := GenReqDefForListCloudService()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCloudServiceResponse), nil
+	}
+}
+
+// ListCloudServiceInvoker 查询授权云服务列表
+func (c *SmnClient) ListCloudServiceInvoker(request *model.ListCloudServiceRequest) *ListCloudServiceInvoker {
+	requestDef := GenReqDefForListCloudService()
+	return &ListCloudServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListLogtank 查询云日志
@@ -505,6 +631,27 @@ func (c *SmnClient) ListProjectTags(request *model.ListProjectTagsRequest) (*mod
 func (c *SmnClient) ListProjectTagsInvoker(request *model.ListProjectTagsRequest) *ListProjectTagsInvoker {
 	requestDef := GenReqDefForListProjectTags()
 	return &ListProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProtocols 查询协议列表
+//
+// 查询SMN支持的协议列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) ListProtocols(request *model.ListProtocolsRequest) (*model.ListProtocolsResponse, error) {
+	requestDef := GenReqDefForListProtocols()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProtocolsResponse), nil
+	}
+}
+
+// ListProtocolsInvoker 查询协议列表
+func (c *SmnClient) ListProtocolsInvoker(request *model.ListProtocolsRequest) *ListProtocolsInvoker {
+	requestDef := GenReqDefForListProtocols()
+	return &ListProtocolsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListResourceInstances 查询资源实例
@@ -809,6 +956,27 @@ func (c *SmnClient) ShowNotifyPolicy(request *model.ShowNotifyPolicyRequest) (*m
 func (c *SmnClient) ShowNotifyPolicyInvoker(request *model.ShowNotifyPolicyRequest) *ShowNotifyPolicyInvoker {
 	requestDef := GenReqDefForShowNotifyPolicy()
 	return &ShowNotifyPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UnsubscribeSubscription 取消订阅
+//
+// 取消订阅主题
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) UnsubscribeSubscription(request *model.UnsubscribeSubscriptionRequest) (*model.UnsubscribeSubscriptionResponse, error) {
+	requestDef := GenReqDefForUnsubscribeSubscription()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UnsubscribeSubscriptionResponse), nil
+	}
+}
+
+// UnsubscribeSubscriptionInvoker 取消订阅
+func (c *SmnClient) UnsubscribeSubscriptionInvoker(request *model.UnsubscribeSubscriptionRequest) *UnsubscribeSubscriptionInvoker {
+	requestDef := GenReqDefForUnsubscribeSubscription()
+	return &UnsubscribeSubscriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateLogtank 更新云日志

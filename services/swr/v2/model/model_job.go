@@ -11,7 +11,7 @@ type Job struct {
 	// 任务ID
 	Id int32 `json:"id"`
 
-	// 触发器策略ID
+	// 触发器ID
 	PolicyId int32 `json:"policy_id"`
 
 	// 事件类型

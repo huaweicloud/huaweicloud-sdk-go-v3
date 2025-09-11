@@ -149,6 +149,22 @@ func (i *BatchEnableAlarmRulesInvoker) Invoke() (*model.BatchEnableAlarmRulesRes
 	}
 }
 
+type BatchListSpecifiedMetricDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchListSpecifiedMetricDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchListSpecifiedMetricDataInvoker) Invoke() (*model.BatchListSpecifiedMetricDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchListSpecifiedMetricDataResponse), nil
+	}
+}
+
 type BatchUpdateNotificationMaskTimeInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -208,6 +208,27 @@ func (c *CesClient) BatchEnableAlarmRulesInvoker(request *model.BatchEnableAlarm
 	return &BatchEnableAlarmRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchListSpecifiedMetricData 批量查询指标数据
+//
+// 批量查询指标数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CesClient) BatchListSpecifiedMetricData(request *model.BatchListSpecifiedMetricDataRequest) (*model.BatchListSpecifiedMetricDataResponse, error) {
+	requestDef := GenReqDefForBatchListSpecifiedMetricData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchListSpecifiedMetricDataResponse), nil
+	}
+}
+
+// BatchListSpecifiedMetricDataInvoker 批量查询指标数据
+func (c *CesClient) BatchListSpecifiedMetricDataInvoker(request *model.BatchListSpecifiedMetricDataRequest) *BatchListSpecifiedMetricDataInvoker {
+	requestDef := GenReqDefForBatchListSpecifiedMetricData()
+	return &BatchListSpecifiedMetricDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchUpdateNotificationMaskTime 批量修改告警通知屏蔽规则的屏蔽时间
 //
 // 批量修改告警通知屏蔽规则的屏蔽时间
@@ -502,9 +523,9 @@ func (c *CesClient) DeleteOneWidgetInvoker(request *model.DeleteOneWidgetRequest
 	return &DeleteOneWidgetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAgentDimensionInfo 查询主机监控维度指标信息
+// ListAgentDimensionInfo 查询主机监控原始维度值
 //
-// 根据ECS/BMS资源ID查询磁盘、挂载点、进程、显卡、RAID控制器维度指标信息；维度NPU已经为原始值，不需要调用该接口进行额外查询获取指标信息
+// 根据ECS/BMS资源ID及特殊维度值(仅支持磁盘、挂载点、进程、显卡、RAID控制器)查询该特殊维度对应的原始维度值；其他维度无需调用该接口
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) ListAgentDimensionInfo(request *model.ListAgentDimensionInfoRequest) (*model.ListAgentDimensionInfoResponse, error) {
@@ -517,7 +538,7 @@ func (c *CesClient) ListAgentDimensionInfo(request *model.ListAgentDimensionInfo
 	}
 }
 
-// ListAgentDimensionInfoInvoker 查询主机监控维度指标信息
+// ListAgentDimensionInfoInvoker 查询主机监控原始维度值
 func (c *CesClient) ListAgentDimensionInfoInvoker(request *model.ListAgentDimensionInfoRequest) *ListAgentDimensionInfoInvoker {
 	requestDef := GenReqDefForListAgentDimensionInfo()
 	return &ListAgentDimensionInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

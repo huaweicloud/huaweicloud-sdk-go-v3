@@ -11,27 +11,27 @@ import (
 
 type EnableOneClickAlarmRequestBody struct {
 
-	// 一键告警ID
+	// **参数解释**： 一键告警ID。 **约束限制**： 不涉及。 **取值范围**： 只能为字母或者数字，字符长度为[1,64] **默认取值**： 不涉及。
 	OneClickAlarmId string `json:"one_click_alarm_id"`
 
 	DimensionNames *DimensionNames `json:"dimension_names"`
 
-	// 是否开启告警通知。true:开启，false:关闭。
+	// **参数解释**： 是否开启告警通知。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
 	NotificationEnabled bool `json:"notification_enabled"`
 
-	// **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警触发的动作数量最多为10个。 **默认取值**： 不涉及。
+	// **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 包含的通知信息的数量最多为10个。 **默认取值**： 不涉及。
 	AlarmNotifications *[]Notification `json:"alarm_notifications,omitempty"`
 
-	// **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 告警恢复触发的动作数量最多为10个。 **默认取值**： 不涉及。
+	// **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 不涉及。 **取值范围**： 包含的通知信息的数量最多为10个。 **默认取值**： 不涉及。
 	OkNotifications *[]Notification `json:"ok_notifications,omitempty"`
 
-	// **参数解释**： 每天告警通知的开始时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+	// **参数解释**： 告警通知开启时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
 	NotificationBeginTime *string `json:"notification_begin_time,omitempty"`
 
-	// **参数解释**： 每天告警通知的结束时间。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
+	// **参数解释**： 告警通知关闭时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
 	NotificationEndTime *string `json:"notification_end_time,omitempty"`
 
-	// 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"
+	// **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
 	EffectiveTimezone *string `json:"effective_timezone,omitempty"`
 
 	// NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
@@ -42,6 +42,9 @@ type EnableOneClickAlarmRequestBody struct {
 
 	// 是否以默认一键告警规则重置创建
 	IsReset *bool `json:"is_reset,omitempty"`
+
+	// **参数解释**: 开启一键告警时可选需要的开启的一键告警规则ID，默认为该服务下的所有一键告警规则ID。 **约束限制**: 数组元素个数[0,50] **取值范围**: 不涉及。 **默认取值**: 该服务下一键告警全部告警规则。
+	EnabledAlarmIds *[]string `json:"enabled_alarm_ids,omitempty"`
 
 	// 打开一键告警需要同时修改告警策略及通知(当前仅支持通知策略修改)时传递的参数
 	OneClickUpdateAlarms *[]EnableOneClickAlarmRequestBodyOneClickUpdateAlarms `json:"one_click_update_alarms,omitempty"`

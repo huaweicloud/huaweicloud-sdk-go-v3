@@ -69,6 +69,38 @@ func (i *BatchCreateSubscriptionsFilterPolicesInvoker) Invoke() (*model.BatchCre
 	}
 }
 
+type BatchDeleteSubscriptionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteSubscriptionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteSubscriptionsInvoker) Invoke() (*model.BatchDeleteSubscriptionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteSubscriptionsResponse), nil
+	}
+}
+
+type BatchDeleteSubscriptionsByTopicInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteSubscriptionsByTopicInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteSubscriptionsByTopicInvoker) Invoke() (*model.BatchDeleteSubscriptionsByTopicResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteSubscriptionsByTopicResponse), nil
+	}
+}
+
 type BatchDeleteSubscriptionsFilterPolicesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -114,6 +146,22 @@ func (i *CancelSubscriptionInvoker) Invoke() (*model.CancelSubscriptionResponse,
 		return nil, err
 	} else {
 		return result.(*model.CancelSubscriptionResponse), nil
+	}
+}
+
+type ConfirmSubscriptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ConfirmSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ConfirmSubscriptionInvoker) Invoke() (*model.ConfirmSubscriptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ConfirmSubscriptionResponse), nil
 	}
 }
 
@@ -261,6 +309,22 @@ func (i *DeleteResourceTagInvoker) Invoke() (*model.DeleteResourceTagResponse, e
 	}
 }
 
+type DeleteSubscriptionsByTopicInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSubscriptionsByTopicInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteSubscriptionsByTopicInvoker) Invoke() (*model.DeleteSubscriptionsByTopicResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSubscriptionsByTopicResponse), nil
+	}
+}
+
 type DeleteTopicInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -306,6 +370,38 @@ func (i *DeleteTopicAttributesInvoker) Invoke() (*model.DeleteTopicAttributesRes
 		return nil, err
 	} else {
 		return result.(*model.DeleteTopicAttributesResponse), nil
+	}
+}
+
+type DownloadHttpCertInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadHttpCertInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadHttpCertInvoker) Invoke() (*model.DownloadHttpCertResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadHttpCertResponse), nil
+	}
+}
+
+type ListCloudServiceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCloudServiceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCloudServiceInvoker) Invoke() (*model.ListCloudServiceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCloudServiceResponse), nil
 	}
 }
 
@@ -370,6 +466,22 @@ func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListProjectTagsResponse), nil
+	}
+}
+
+type ListProtocolsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProtocolsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListProtocolsInvoker) Invoke() (*model.ListProtocolsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProtocolsResponse), nil
 	}
 }
 
@@ -594,6 +706,22 @@ func (i *ShowNotifyPolicyInvoker) Invoke() (*model.ShowNotifyPolicyResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowNotifyPolicyResponse), nil
+	}
+}
+
+type UnsubscribeSubscriptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UnsubscribeSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UnsubscribeSubscriptionInvoker) Invoke() (*model.UnsubscribeSubscriptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UnsubscribeSubscriptionResponse), nil
 	}
 }
 

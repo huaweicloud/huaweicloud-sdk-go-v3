@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// EnterpriseProjectId 企业项目ID
+// EnterpriseProjectId **参数解释**： 企业项目ID。     **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”。           **默认取值**： 不涉及。
 type EnterpriseProjectId struct {
 }
 

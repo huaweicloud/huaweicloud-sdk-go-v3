@@ -1426,9 +1426,9 @@ func (c *SwrClient) CreateInstanceTempCredentialInvoker(request *model.CreateIns
 	return &CreateInstanceTempCredentialInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateInstanceWebhook 创建触发器策略
+// CreateInstanceWebhook 创建触发器
 //
-// 创建触发器策略
+// 创建触发器
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SwrClient) CreateInstanceWebhook(request *model.CreateInstanceWebhookRequest) (*model.CreateInstanceWebhookResponse, error) {
@@ -1441,7 +1441,7 @@ func (c *SwrClient) CreateInstanceWebhook(request *model.CreateInstanceWebhookRe
 	}
 }
 
-// CreateInstanceWebhookInvoker 创建触发器策略
+// CreateInstanceWebhookInvoker 创建触发器
 func (c *SwrClient) CreateInstanceWebhookInvoker(request *model.CreateInstanceWebhookRequest) *CreateInstanceWebhookInvoker {
 	requestDef := GenReqDefForCreateInstanceWebhook()
 	return &CreateInstanceWebhookInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1531,9 +1531,9 @@ func (c *SwrClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequest) 
 	return &DeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteInstanceArtifact 删除制品
+// DeleteInstanceArtifact 删除制品版本
 //
-// 删除制品
+// 删除制品版本
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SwrClient) DeleteInstanceArtifact(request *model.DeleteInstanceArtifactRequest) (*model.DeleteInstanceArtifactResponse, error) {
@@ -1546,7 +1546,7 @@ func (c *SwrClient) DeleteInstanceArtifact(request *model.DeleteInstanceArtifact
 	}
 }
 
-// DeleteInstanceArtifactInvoker 删除制品
+// DeleteInstanceArtifactInvoker 删除制品版本
 func (c *SwrClient) DeleteInstanceArtifactInvoker(request *model.DeleteInstanceArtifactRequest) *DeleteInstanceArtifactInvoker {
 	requestDef := GenReqDefForDeleteInstanceArtifact()
 	return &DeleteInstanceArtifactInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1762,9 +1762,30 @@ func (c *SwrClient) DeleteInstanceSignPolicyInvoker(request *model.DeleteInstanc
 	return &DeleteInstanceSignPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteInstanceWebhook 删除触发器策略
+// DeleteInstanceTag 删除制品的Tag
 //
-// 删除触发器策略
+// 删除制品Tag
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) DeleteInstanceTag(request *model.DeleteInstanceTagRequest) (*model.DeleteInstanceTagResponse, error) {
+	requestDef := GenReqDefForDeleteInstanceTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteInstanceTagResponse), nil
+	}
+}
+
+// DeleteInstanceTagInvoker 删除制品的Tag
+func (c *SwrClient) DeleteInstanceTagInvoker(request *model.DeleteInstanceTagRequest) *DeleteInstanceTagInvoker {
+	requestDef := GenReqDefForDeleteInstanceTag()
+	return &DeleteInstanceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteInstanceWebhook 删除触发器
+//
+// 删除触发器
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SwrClient) DeleteInstanceWebhook(request *model.DeleteInstanceWebhookRequest) (*model.DeleteInstanceWebhookResponse, error) {
@@ -1777,7 +1798,7 @@ func (c *SwrClient) DeleteInstanceWebhook(request *model.DeleteInstanceWebhookRe
 	}
 }
 
-// DeleteInstanceWebhookInvoker 删除触发器策略
+// DeleteInstanceWebhookInvoker 删除触发器
 func (c *SwrClient) DeleteInstanceWebhookInvoker(request *model.DeleteInstanceWebhookRequest) *DeleteInstanceWebhookInvoker {
 	requestDef := GenReqDefForDeleteInstanceWebhook()
 	return &DeleteInstanceWebhookInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2016,7 +2037,7 @@ func (c *SwrClient) ListInstanceAccessoriesInvoker(request *model.ListInstanceAc
 
 // ListInstanceAllArtifacts 获取仓库实例的所有制品版本列表
 //
-// 获取仓库实例的所有制品版本列表（此接口只在企业仓库实例版本大于25.6.0以上的版本才支持）
+// 获取仓库实例的所有制品版本列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SwrClient) ListInstanceAllArtifacts(request *model.ListInstanceAllArtifactsRequest) (*model.ListInstanceAllArtifactsResponse, error) {
@@ -2560,9 +2581,9 @@ func (c *SwrClient) ListInstanceWebhookJobsInvoker(request *model.ListInstanceWe
 	return &ListInstanceWebhookJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListInstanceWebhooks 获取触发器策略列表
+// ListInstanceWebhooks 获取触发器列表
 //
-// 获取触发器策略列表
+// 获取触发器列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SwrClient) ListInstanceWebhooks(request *model.ListInstanceWebhooksRequest) (*model.ListInstanceWebhooksResponse, error) {
@@ -2575,7 +2596,7 @@ func (c *SwrClient) ListInstanceWebhooks(request *model.ListInstanceWebhooksRequ
 	}
 }
 
-// ListInstanceWebhooksInvoker 获取触发器策略列表
+// ListInstanceWebhooksInvoker 获取触发器列表
 func (c *SwrClient) ListInstanceWebhooksInvoker(request *model.ListInstanceWebhooksRequest) *ListInstanceWebhooksInvoker {
 	requestDef := GenReqDefForListInstanceWebhooks()
 	return &ListInstanceWebhooksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2686,9 +2707,9 @@ func (c *SwrClient) ShowInstanceInvoker(request *model.ShowInstanceRequest) *Sho
 	return &ShowInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowInstanceArtifact 获取制品详情
+// ShowInstanceArtifact 获取制品版本详情
 //
-// 获取制品详情
+// 获取制品版本详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SwrClient) ShowInstanceArtifact(request *model.ShowInstanceArtifactRequest) (*model.ShowInstanceArtifactResponse, error) {
@@ -2701,7 +2722,7 @@ func (c *SwrClient) ShowInstanceArtifact(request *model.ShowInstanceArtifactRequ
 	}
 }
 
-// ShowInstanceArtifactInvoker 获取制品详情
+// ShowInstanceArtifactInvoker 获取制品版本详情
 func (c *SwrClient) ShowInstanceArtifactInvoker(request *model.ShowInstanceArtifactRequest) *ShowInstanceArtifactInvoker {
 	requestDef := GenReqDefForShowInstanceArtifact()
 	return &ShowInstanceArtifactInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2959,9 +2980,9 @@ func (c *SwrClient) ShowInstanceSignPolicyInvoker(request *model.ShowInstanceSig
 	return &ShowInstanceSignPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowInstanceWebhook 获取触发器策略详情
+// ShowInstanceWebhook 获取触发器详情
 //
-// 获取触发器策略详情
+// 获取触发器详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SwrClient) ShowInstanceWebhook(request *model.ShowInstanceWebhookRequest) (*model.ShowInstanceWebhookResponse, error) {
@@ -2974,7 +2995,7 @@ func (c *SwrClient) ShowInstanceWebhook(request *model.ShowInstanceWebhookReques
 	}
 }
 
-// ShowInstanceWebhookInvoker 获取触发器策略详情
+// ShowInstanceWebhookInvoker 获取触发器详情
 func (c *SwrClient) ShowInstanceWebhookInvoker(request *model.ShowInstanceWebhookRequest) *ShowInstanceWebhookInvoker {
 	requestDef := GenReqDefForShowInstanceWebhook()
 	return &ShowInstanceWebhookInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3087,7 +3108,7 @@ func (c *SwrClient) UpdateInstanceConfigurationInvoker(request *model.UpdateInst
 
 // UpdateInstanceEndpointPolicy 更新公网访问白名单
 //
-// 更新公网访问白名单，更新为全量更新方式
+// 更新公网访问白名单，更新方式为全量更新方式
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SwrClient) UpdateInstanceEndpointPolicy(request *model.UpdateInstanceEndpointPolicyRequest) (*model.UpdateInstanceEndpointPolicyResponse, error) {
@@ -3253,9 +3274,9 @@ func (c *SwrClient) UpdateInstanceSignPolicyInvoker(request *model.UpdateInstanc
 	return &UpdateInstanceSignPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateInstanceWebhook 修改触发器策略
+// UpdateInstanceWebhook 修改触发器
 //
-// 修改触发器策略
+// 修改触发器
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SwrClient) UpdateInstanceWebhook(request *model.UpdateInstanceWebhookRequest) (*model.UpdateInstanceWebhookResponse, error) {
@@ -3268,7 +3289,7 @@ func (c *SwrClient) UpdateInstanceWebhook(request *model.UpdateInstanceWebhookRe
 	}
 }
 
-// UpdateInstanceWebhookInvoker 修改触发器策略
+// UpdateInstanceWebhookInvoker 修改触发器
 func (c *SwrClient) UpdateInstanceWebhookInvoker(request *model.UpdateInstanceWebhookRequest) *UpdateInstanceWebhookInvoker {
 	requestDef := GenReqDefForUpdateInstanceWebhook()
 	return &UpdateInstanceWebhookInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

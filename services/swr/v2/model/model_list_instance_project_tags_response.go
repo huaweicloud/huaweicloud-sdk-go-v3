@@ -9,7 +9,7 @@ import (
 // ListInstanceProjectTagsResponse Response Object
 type ListInstanceProjectTagsResponse struct {
 
-	// 项目下资源标签列表
+	// 标签列表
 	Tags           *[]ProjectTag `json:"tags,omitempty"`
 	HttpStatusCode int           `json:"-"`
 }

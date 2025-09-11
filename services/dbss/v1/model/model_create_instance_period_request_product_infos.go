@@ -20,7 +20,7 @@ type CreateInstancePeriodRequestProductInfos struct {
 	// 资源规格： - dbss.bypassaudit.low - dbss.bypassaudit.medium - dbss.bypassaudit.high
 	ResourceSpecCode string `json:"resource_spec_code"`
 
-	// 产品规格描述。json字符串格式 ：{\"specDesc\":{\"zh-cn\":{\"key1\":\"value1\"},\"en-us\":{\"key1\":\"value1\"}}}。key和value为用户自定义希望展示的产品描述信息。
+	// 产品规格描述。json字符串格式 ：{\"specDesc\":{\"zh-cn\":{\"key1\":\"value1\"},\"en-us\":{\"key1\":\"value1\"}}}
 	ProductSpecDesc *string `json:"product_spec_desc,omitempty"`
 }
 

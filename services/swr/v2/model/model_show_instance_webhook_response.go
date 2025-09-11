@@ -12,10 +12,10 @@ type ShowInstanceWebhookResponse struct {
 	// 触发器ID
 	Id *int32 `json:"id,omitempty"`
 
-	// 触发器策略名称
+	// 触发器名称
 	Name *string `json:"name,omitempty"`
 
-	// 触发器策略描述
+	// 触发器描述
 	Description *string `json:"description,omitempty"`
 
 	// 触发目标
@@ -24,7 +24,7 @@ type ShowInstanceWebhookResponse struct {
 	// 事件类型
 	EventTypes *[]string `json:"event_types,omitempty"`
 
-	// 是否使用，可选true或false
+	// 是否启用，可选true或false
 	Enabled *bool `json:"enabled,omitempty"`
 
 	// 命名空间ID

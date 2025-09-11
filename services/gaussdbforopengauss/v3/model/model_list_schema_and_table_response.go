@@ -9,7 +9,7 @@ import (
 // ListSchemaAndTableResponse Response Object
 type ListSchemaAndTableResponse struct {
 
-	// 数据库表信息列表
+	// **参数解释**: 数据库表信息列表。
 	DatabaseTables *[]DatabaseSchemaTableResult `json:"database_tables,omitempty"`
 	HttpStatusCode int                          `json:"-"`
 }

@@ -19,11 +19,11 @@ type ShowBatchUpgradeCandidateVersionsResponse struct {
 	UpgradeCandidateVersions *[]string `json:"upgrade_candidate_versions,omitempty"`
 
 	// 可以升级的热补丁信息。
-	HotfixUpgradeInfos *[]HotfixInfo `json:"hotfix_upgrade_infos,omitempty"`
+	HotfixUpgradeInfos *[]HotfixInfoResult `json:"hotfix_upgrade_infos,omitempty"`
 
 	// 可以回滚的热补丁信息。
-	HotfixRollbackInfos *[]HotfixInfo `json:"hotfix_rollback_infos,omitempty"`
-	HttpStatusCode      int           `json:"-"`
+	HotfixRollbackInfos *[]HotfixInfoResult `json:"hotfix_rollback_infos,omitempty"`
+	HttpStatusCode      int                 `json:"-"`
 }
 
 func (o ShowBatchUpgradeCandidateVersionsResponse) String() string {

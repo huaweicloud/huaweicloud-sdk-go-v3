@@ -9,10 +9,10 @@ import (
 // ListInstanceWebhooksResponse Response Object
 type ListInstanceWebhooksResponse struct {
 
-	// 触发器策略列表
+	// 触发器列表
 	Policies *[]WebhookPolicyDetail `json:"policies,omitempty"`
 
-	// 触发器策略总数
+	// 触发器总数
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

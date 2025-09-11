@@ -9,10 +9,10 @@ import (
 // UpdateAlarmRulePoliciesRequest Request Object
 type UpdateAlarmRulePoliciesRequest struct {
 
-	// Alarm实例ID
+	// **参数解释**： 告警规则ID。 **约束限制**： 不涉及。 **取值范围**： 以al开头，只能由大写字母、小写字母、数字组成，且长度为24个字符。           **默认取值**： 不涉及。
 	AlarmId string `json:"alarm_id"`
 
-	Body *PoliciesReqV2 `json:"body,omitempty"`
+	Body *UpdateAlarmRulePoliciesReqBodyV2 `json:"body,omitempty"`
 }
 
 func (o UpdateAlarmRulePoliciesRequest) String() string {

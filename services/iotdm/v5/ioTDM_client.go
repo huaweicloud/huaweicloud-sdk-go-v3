@@ -19,6 +19,27 @@ func IoTDMClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// ListInstanceFlavors 查询实例规格列表
+//
+// 用户可以调用此接口查询设备接入服务支持的实例规格列表。支持的实例规格请参见[[产品规格说明](https://support.huaweicloud.com/productdesc-iothub/iot_04_0014.html)](tag:hws)[[产品规格说明](https://support.huaweicloud.com/intl/zh-cn/productdesc-iothub/iot_04_0014.html)](tag:hws_hk)。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDMClient) ListInstanceFlavors(request *model.ListInstanceFlavorsRequest) (*model.ListInstanceFlavorsResponse, error) {
+	requestDef := GenReqDefForListInstanceFlavors()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceFlavorsResponse), nil
+	}
+}
+
+// ListInstanceFlavorsInvoker 查询实例规格列表
+func (c *IoTDMClient) ListInstanceFlavorsInvoker(request *model.ListInstanceFlavorsRequest) *ListInstanceFlavorsInvoker {
+	requestDef := GenReqDefForListInstanceFlavors()
+	return &ListInstanceFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BindInstanceTags 添加实例标签
 //
 // 添加实例标签。
@@ -211,4 +232,67 @@ func (c *IoTDMClient) UpdateInstance(request *model.UpdateInstanceRequest) (*mod
 func (c *IoTDMClient) UpdateInstanceInvoker(request *model.UpdateInstanceRequest) *UpdateInstanceInvoker {
 	requestDef := GenReqDefForUpdateInstance()
 	return &UpdateInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstanceTasks 查询实例任务列表
+//
+// 用户可以调用此接口查询设备接入实例任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDMClient) ListInstanceTasks(request *model.ListInstanceTasksRequest) (*model.ListInstanceTasksResponse, error) {
+	requestDef := GenReqDefForListInstanceTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceTasksResponse), nil
+	}
+}
+
+// ListInstanceTasksInvoker 查询实例任务列表
+func (c *IoTDMClient) ListInstanceTasksInvoker(request *model.ListInstanceTasksRequest) *ListInstanceTasksInvoker {
+	requestDef := GenReqDefForListInstanceTasks()
+	return &ListInstanceTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RetryInstanceTask 重试实例任务
+//
+// 用户可以调用此接口对运行失败的实例任务进行重试。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDMClient) RetryInstanceTask(request *model.RetryInstanceTaskRequest) (*model.RetryInstanceTaskResponse, error) {
+	requestDef := GenReqDefForRetryInstanceTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RetryInstanceTaskResponse), nil
+	}
+}
+
+// RetryInstanceTaskInvoker 重试实例任务
+func (c *IoTDMClient) RetryInstanceTaskInvoker(request *model.RetryInstanceTaskRequest) *RetryInstanceTaskInvoker {
+	requestDef := GenReqDefForRetryInstanceTask()
+	return &RetryInstanceTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceTask 查询实例任务详情
+//
+// 用户可以调用此接口查询设备接入实例任务详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDMClient) ShowInstanceTask(request *model.ShowInstanceTaskRequest) (*model.ShowInstanceTaskResponse, error) {
+	requestDef := GenReqDefForShowInstanceTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceTaskResponse), nil
+	}
+}
+
+// ShowInstanceTaskInvoker 查询实例任务详情
+func (c *IoTDMClient) ShowInstanceTaskInvoker(request *model.ShowInstanceTaskRequest) *ShowInstanceTaskInvoker {
+	requestDef := GenReqDefForShowInstanceTask()
+	return &ShowInstanceTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

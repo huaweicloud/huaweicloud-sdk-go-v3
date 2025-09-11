@@ -9,12 +9,13 @@ import (
 	"strings"
 )
 
+// ExtendInfo 看板相关拓展信息
 type ExtendInfo struct {
 
 	// 表示指标聚合方式，average表示平均值，min表示最小值，max表示最大值，sum表示求合
 	Filter *ExtendInfoFilter `json:"filter,omitempty"`
 
-	// '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}'
+	// '表示指标聚合周期，{1:表示原始值，60:表示一分钟，300:表示5分钟，1200:表示20分钟，3600:表示1小时，14400:表示4小时，86400:表示1天}''
 	Period *string `json:"period,omitempty"`
 
 	// 展示时间，0表示使用自定义时间展示， 5分钟，15分钟，30分钟，1小时，2小时，3小时，12小时，24小时，7天，30天
@@ -24,10 +25,10 @@ type ExtendInfo struct {
 	RefreshTime *ExtendInfoRefreshTime `json:"refresh_time,omitempty"`
 
 	// 开始时间
-	From *int32 `json:"from,omitempty"`
+	From *int64 `json:"from,omitempty"`
 
 	// 结束时间
-	To *int32 `json:"to,omitempty"`
+	To *int64 `json:"to,omitempty"`
 
 	// 监控大屏背景颜色
 	ScreenColor *string `json:"screen_color,omitempty"`

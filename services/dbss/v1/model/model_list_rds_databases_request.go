@@ -12,13 +12,13 @@ import (
 // ListRdsDatabasesRequest Request Object
 type ListRdsDatabasesRequest struct {
 
-	// 数据库类型 - MYSQL - POSTGRESQL - SQLSERVER - TAURUS - DWS - MARIADB - GAUSSDBOPENGAUSS
+	// **参数解释**： 数据库类型 **约束限制**： 区分大小写，只能传递取值范围内的值 **取值范围**：   - MYSQL   - ORACLE   - POSTGRESQL   - SQLSERVER   - DAMENG   - TAURUS   - DWS   - KINGBASE   - MARIADB   - GAUSSDBOPENGAUSS **默认取值**： 不涉及
 	DbType ListRdsDatabasesRequestDbType `json:"db_type"`
 
-	// 偏移量，从第一条数据偏移offset条数据后开始查询，默认为0。
+	// **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
 	Offset *string `json:"offset,omitempty"`
 
-	// 查询记录数，默认为100。
+	// **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为100
 	Limit *string `json:"limit,omitempty"`
 }
 
@@ -37,10 +37,13 @@ type ListRdsDatabasesRequestDbType struct {
 
 type ListRdsDatabasesRequestDbTypeEnum struct {
 	MYSQL            ListRdsDatabasesRequestDbType
+	ORACLE           ListRdsDatabasesRequestDbType
 	POSTGRESQL       ListRdsDatabasesRequestDbType
 	SQLSERVER        ListRdsDatabasesRequestDbType
+	DAMENG           ListRdsDatabasesRequestDbType
 	TAURUS           ListRdsDatabasesRequestDbType
 	DWS              ListRdsDatabasesRequestDbType
+	KINGBASE         ListRdsDatabasesRequestDbType
 	MARIADB          ListRdsDatabasesRequestDbType
 	GAUSSDBOPENGAUSS ListRdsDatabasesRequestDbType
 }
@@ -50,17 +53,26 @@ func GetListRdsDatabasesRequestDbTypeEnum() ListRdsDatabasesRequestDbTypeEnum {
 		MYSQL: ListRdsDatabasesRequestDbType{
 			value: "MYSQL",
 		},
+		ORACLE: ListRdsDatabasesRequestDbType{
+			value: "ORACLE",
+		},
 		POSTGRESQL: ListRdsDatabasesRequestDbType{
 			value: "POSTGRESQL",
 		},
 		SQLSERVER: ListRdsDatabasesRequestDbType{
 			value: "SQLSERVER",
 		},
+		DAMENG: ListRdsDatabasesRequestDbType{
+			value: "DAMENG",
+		},
 		TAURUS: ListRdsDatabasesRequestDbType{
 			value: "TAURUS",
 		},
 		DWS: ListRdsDatabasesRequestDbType{
 			value: "DWS",
+		},
+		KINGBASE: ListRdsDatabasesRequestDbType{
+			value: "KINGBASE",
 		},
 		MARIADB: ListRdsDatabasesRequestDbType{
 			value: "MARIADB",

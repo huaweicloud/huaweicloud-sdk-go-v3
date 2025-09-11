@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// EnterpriseProjectIdAndTags 企业项目Id或标签信息
+// EnterpriseProjectIdAndTags **参数解释** 企业项目Id或标签信息 **约束限制** 不涉及
 type EnterpriseProjectIdAndTags struct {
 
-	// 企业项目ID
+	// **参数解释** 企业项目ID **约束限制** 不涉及 **取值范围** 由字母、数字、_和-组成，长度为[1,128]个字符 **默认取值** 不涉及
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	Tag *ResourceGroupTagRelation `json:"tag,omitempty"`

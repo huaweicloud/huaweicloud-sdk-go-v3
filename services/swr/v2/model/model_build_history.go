@@ -17,13 +17,13 @@ type BuildHistory struct {
 	// 是否空层
 	EmptyLayer bool `json:"empty_layer"`
 
-	// 层格式
+	// 镜像层格式
 	MediaType string `json:"mediaType"`
 
-	// 层大小
+	// 镜像层大小
 	Size int32 `json:"size"`
 
-	// 层sha256信息
+	// 镜像层sha256信息
 	Digest string `json:"digest"`
 }
 

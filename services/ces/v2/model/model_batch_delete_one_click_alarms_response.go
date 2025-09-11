@@ -9,7 +9,7 @@ import (
 // BatchDeleteOneClickAlarmsResponse Response Object
 type BatchDeleteOneClickAlarmsResponse struct {
 
-	// 成功删除的一键告警ID列表
+	// **参数解释**： 成功删除的一键告警ID列表。
 	OneClickAlarmIds *[]string `json:"one_click_alarm_ids,omitempty"`
 	HttpStatusCode   int       `json:"-"`
 }
