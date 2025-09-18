@@ -9,16 +9,16 @@ import (
 // PackageInfo 流水线产物
 type PackageInfo struct {
 
-	// 产物名
+	// **参数解释**： 产物名。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 产物类型
+	// **参数解释**： 产物类型。 **取值范围**： 不涉及。
 	PackageType *string `json:"packageType,omitempty"`
 
-	// 产物版本号
+	// **参数解释**： 产物版本号。 **取值范围**： 不涉及。
 	Version *string `json:"version,omitempty"`
 
-	// 产物下载地址
+	// **参数解释**： 产物下载地址。 **取值范围**： 不涉及。
 	DownloadUrl *string `json:"downloadUrl,omitempty"`
 }
 

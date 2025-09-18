@@ -18,14 +18,8 @@ type DomainInfo struct {
 	// 企业项目id
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// - 调度状态: - 调度异常：dispatch_abnormal - 未调度：un_dispatch - 调度中：dispatching - 已调度：dispatched - 删除中：dispatch_deleting
-	DispatchStatus *string `json:"dispatch_status,omitempty"`
-
-	// 网站名称
-	WebName *string `json:"web_name,omitempty"`
-
-	// 描述
-	Description *string `json:"description,omitempty"`
+	// - 调度状态: - 1：调度中 - 2：已调度 - 3：删除中
+	DispatchStatus *int32 `json:"dispatch_status,omitempty"`
 
 	// 策略id
 	PolicyId *string `json:"policy_id,omitempty"`

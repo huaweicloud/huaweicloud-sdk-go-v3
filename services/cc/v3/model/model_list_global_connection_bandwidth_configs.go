@@ -50,6 +50,9 @@ type ListGlobalConnectionBandwidthConfigs struct {
 
 	// 是否支持多SKU产品功能。
 	EnableSpecCode *bool `json:"enable_spec_code,omitempty"`
+
+	// 是否支持CES监控。
+	CesEnabled *bool `json:"ces_enabled,omitempty"`
 }
 
 func (o ListGlobalConnectionBandwidthConfigs) String() string {

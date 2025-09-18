@@ -8,22 +8,22 @@ import (
 
 type Rule struct {
 
-	// 规则ID
+	// **参数解释**： 规则ID。 **取值范围**： 不涉及。
 	Id string `json:"id"`
 
-	// 规则类型
+	// **参数解释**： 规则类型。 **取值范围**： 不涉及。
 	Type string `json:"type"`
 
-	// 规则名称
+	// **参数解释**： 规则名称。 **取值范围**： 不涉及。
 	Name string `json:"name"`
 
-	// 规则版本
+	// **参数解释**： 规则版本。 **取值范围**： 不涉及。
 	Version string `json:"version"`
 
-	// 最近操作人员
+	// **参数解释**： 最近操作人员。 **取值范围**： 不涉及。
 	Operator string `json:"operator"`
 
-	// 最近操作时间
+	// **参数解释**： 最近操作时间。 **取值范围**： 不涉及。
 	OperateTime int64 `json:"operate_time"`
 }
 

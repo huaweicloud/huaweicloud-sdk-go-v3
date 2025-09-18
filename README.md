@@ -6,6 +6,10 @@ English | [简体中文](./README_CN.md)
 
 <h1 align="center">Huawei Cloud Go Software Development Kit (Go SDK)</h1>
 
+[![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/huaweicloud/huaweicloud-sdk-go-v3)](https://go.dev/)
+[![GitHub Release](https://img.shields.io/github/v/release/huaweicloud/huaweicloud-sdk-go-v3)](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/releases)
+[![License](https://img.shields.io/badge/license-Apache--2.0-green)](https://www.apache.org/licenses/LICENSE-2.0)
+
 The Huawei Cloud Go SDK allows you to easily work with Huawei Cloud services such as Elastic Compute Service (ECS) and
 Virtual Private Cloud (VPC) without the need to handle API related tasks.
 
@@ -235,6 +239,7 @@ the [CHANGELOG.md](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/blob/mas
   * [3.3 Custom Configuration](#33-custom-configuration-top)
     * [3.3.1 IAM endpoint configuration](#331-iam-endpoint-configuration-top)
     * [3.3.2 Region configuration](#332-region-configuration-top)
+    * [3.4 User Agent](#34-user-agent-top)
 * [4. Send Request and Handle response](#4-send-requests-and-handle-responses-top)
     * [4.1 Exceptions](#41-exceptions-top)
 * [5. Troubleshooting](#5-troubleshooting-top)
@@ -974,6 +979,32 @@ if err == nil {
 } else {
     fmt.Println(err)
 }
+```
+
+#### 3.4 User Agent [:top:](#user-manual-top)
+
+Additional information will be appended to the User-Agent in the request header by default since **v0.1.169**. It is used by service to identify what SDK language, go version, and platform info a client is using to call into their service, and a random identifier will be generated and appended to the User-Agent. The identifier will be stored in the user's home directory, as `~/.huaweicloud/application_id` on Linux and `C:\Users\USER_NAME\.huaweicloud\application_id` on Windows.
+
+The above information will be used to protect the security of your and your users' Huawei Cloud accounts.
+
+You can disable this automatic User-Agent augmentation by explicitly setting a custom User-Agent header value. The value is recommended to be less than 50 characters and should use US-ASCII visible characters:
+
+```go
+import (
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
+    vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
+)
+
+// Append custom User-Agent information to replace the default
+httpConfig := config.DefaultHttpConfig().WithUserAgent("custom user agent...")
+
+hcClient, err := vpc.VpcClientBuilder().
+    WithHttpConfig(httpConfig).
+    SafeBuild()
+if err != nil {
+    // handle error
+}
+client := vpc.NewVpcClient(hcClient)
 ```
 
 #### 4.1 Exceptions [:top:](#user-manual-top)

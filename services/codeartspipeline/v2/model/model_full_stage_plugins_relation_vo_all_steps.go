@@ -8,13 +8,13 @@ import (
 
 type FullStagePluginsRelationVoAllSteps struct {
 
-	// 插件名
+	// **参数解释**： 扩展插件插件名。 **取值范围**： 不涉及。
 	PluginName *string `json:"plugin_name,omitempty"`
 
-	// 展示名
+	// **参数解释**： 扩展插件展示名。 **取值范围**： 不涉及。
 	DisplayName *string `json:"display_name,omitempty"`
 
-	// 版本
+	// **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
 	Version *string `json:"version,omitempty"`
 }
 

@@ -9,7 +9,7 @@ import (
 // ListStagePluginsResponse Response Object
 type ListStagePluginsResponse struct {
 
-	// 结果集
+	// **参数解释**： 结果集。 **取值范围**： 不涉及。
 	FullStagePluginsItemList *[]FullStagePluginsRelationVoFullStagePluginsItemList `json:"full_stage_plugins_item_list,omitempty"`
 	HttpStatusCode           int                                                   `json:"-"`
 }

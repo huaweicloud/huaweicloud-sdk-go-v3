@@ -9,7 +9,7 @@ import (
 // ListTemplatesResponse Response Object
 type ListTemplatesResponse struct {
 
-	// 总数
+	// **参数解释**： 总条目数量。 **取值范围**： 大于等于0。
 	Total *int32 `json:"total,omitempty"`
 
 	// 页码数
@@ -18,7 +18,7 @@ type ListTemplatesResponse struct {
 	// 每页显示数
 	PageSize *int32 `json:"page_size,omitempty"`
 
-	// 模板数据,list类型数据
+	// 模板数据，list类型数据。
 	Content        *[]TemplateView `json:"content,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

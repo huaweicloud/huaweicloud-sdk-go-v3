@@ -23,10 +23,13 @@ type GlobalConnectionBandwidthSites struct {
 	// 实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
 	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
 
-	// 功能说明：站点信息自定义的英文名字。 取值范围：1-255个字符
+	// RegionID。
+	RegionId string `json:"region_id"`
+
+	// 功能说明：站点信息自定义的英文名称。 取值范围：1-255个字符
 	NameEn *string `json:"name_en,omitempty"`
 
-	// 功能说明：站点信息自定义的中文名字。 取值范围：1-64个字符。
+	// 功能说明：站点信息自定义的中文名称。 取值范围：1-64个字符。
 	NameCn *string `json:"name_cn,omitempty"`
 
 	// 功能说明：站点编码，格式为<area_code>[-<subarea_code>[-<region_code>]]。 取值范围：1-64个字符。
@@ -39,9 +42,6 @@ type GlobalConnectionBandwidthSites struct {
 	ServiceList *string `json:"service_list,omitempty"`
 
 	GroupList *[]SiteGroupReferenceInfo `json:"group_list,omitempty"`
-
-	// 功能说明：对应华为云标准region的id，该站点继承自华为云region时才需要填写该字段。 取值范围：0-64个字符。
-	RegionId *string `json:"region_id,omitempty"`
 
 	// 功能说明：用于标记是中心还是边缘站点。中心：center 取值范围：0-255个字符。
 	PublicBorderGroup *string `json:"public_border_group,omitempty"`

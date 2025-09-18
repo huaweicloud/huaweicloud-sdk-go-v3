@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// CentralNetworkStateEnum 中心网络状态。 - AVAILABLE (可用) - UPDATING (处理中) - FAILED (失败) - CREATING (创建中) - DELETING (删除中) - DELETED (已刪除) - RESTORING (恢复中)
+// CentralNetworkStateEnum 中心网络状态。 - AVAILABLE (可用) - UPDATING (处理中) - FAILED (失败) - CREATING (创建中) - DELETING (删除中) - DELETED (已删除) - RESTORING (恢复中)
 type CentralNetworkStateEnum struct {
 	value string
 }

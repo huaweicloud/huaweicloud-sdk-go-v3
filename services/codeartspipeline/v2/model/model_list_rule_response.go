@@ -9,10 +9,10 @@ import (
 // ListRuleResponse Response Object
 type ListRuleResponse struct {
 
-	// 静态规则列表
+	// **参数解释**： 静态规则列表。 **取值范围**： 不涉及。
 	Data *[]Rule `json:"data,omitempty"`
 
-	// 总数
+	// **参数解释**： 本次查询的静态规则总数。 **取值范围**： 不涉及。
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

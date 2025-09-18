@@ -565,6 +565,27 @@ func (c *CodeArtsDeployClient) UpdateAppInfoInvoker(request *model.UpdateAppInfo
 	return &UpdateAppInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckDeployStatus 获取部署任务状态
+//
+// 获取部署任务状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) CheckDeployStatus(request *model.CheckDeployStatusRequest) (*model.CheckDeployStatusResponse, error) {
+	requestDef := GenReqDefForCheckDeployStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckDeployStatusResponse), nil
+	}
+}
+
+// CheckDeployStatusInvoker 获取部署任务状态
+func (c *CodeArtsDeployClient) CheckDeployStatusInvoker(request *model.CheckDeployStatusRequest) *CheckDeployStatusInvoker {
+	requestDef := GenReqDefForCheckDeployStatus()
+	return &CheckDeployStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateEnvironment 应用下创建环境
 //
 // 应用下创建环境。
@@ -773,6 +794,27 @@ func (c *CodeArtsDeployClient) UpdateEnvironmentPermission(request *model.Update
 func (c *CodeArtsDeployClient) UpdateEnvironmentPermissionInvoker(request *model.UpdateEnvironmentPermissionRequest) *UpdateEnvironmentPermissionInvoker {
 	requestDef := GenReqDefForUpdateEnvironmentPermission()
 	return &UpdateEnvironmentPermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopDeployTask 停止部署任务
+//
+// 停止部署任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) StopDeployTask(request *model.StopDeployTaskRequest) (*model.StopDeployTaskResponse, error) {
+	requestDef := GenReqDefForStopDeployTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopDeployTaskResponse), nil
+	}
+}
+
+// StopDeployTaskInvoker 停止部署任务
+func (c *CodeArtsDeployClient) StopDeployTaskInvoker(request *model.StopDeployTaskRequest) *StopDeployTaskInvoker {
+	requestDef := GenReqDefForStopDeployTask()
+	return &StopDeployTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchDeleteHosts 批量删除主机集群下的主机

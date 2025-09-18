@@ -9,9 +9,9 @@ import (
 type BatchResizeServersOption struct {
 
 	// flavor
-	FlavorRef *string `json:"flavorRef,omitempty"`
+	FlavorRef string `json:"flavorRef"`
 
-	Servers *[]ServerId `json:"servers,omitempty"`
+	Servers []ServerId `json:"servers"`
 
 	CpuOptions *CpuOptions `json:"cpu_options,omitempty"`
 

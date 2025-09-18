@@ -12,7 +12,7 @@ import (
 // SetLogLtsConfigsRequest Request Object
 type SetLogLtsConfigsRequest struct {
 
-	// 引擎，暂只支持mysql。
+	// 发动机类型。
 	Engine SetLogLtsConfigsRequestEngine `json:"engine"`
 
 	// 语言。

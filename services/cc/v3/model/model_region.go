@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// Region 支持的Region。
+// Region 支持的区域。
 type Region struct {
 
 	// 实例名称。
@@ -17,13 +17,13 @@ type Region struct {
 
 	AreaId *AreaIdDef `json:"area_id"`
 
-	// Region ID。
+	// 区域ID。
 	Id *string `json:"id,omitempty"`
 
-	// 大区名。
+	// 大区名称。
 	AreaName *string `json:"area_name,omitempty"`
 
-	// 云连接使用场景 er vpc vgw。
+	// 云连接使用场景。  - er（企业路由器） - vpc（虚拟私有云） - vgw（虚拟网关）
 	UsedScenes *[]RegionUsedScenes `json:"used_scenes,omitempty"`
 }
 

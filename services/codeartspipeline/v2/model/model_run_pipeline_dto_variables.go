@@ -8,10 +8,10 @@ import (
 
 type RunPipelineDtoVariables struct {
 
-	// 参数名
+	// **参数解释**： 参数名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Name string `json:"name"`
 
-	// 参数值
+	// **参数解释**： 参数值。 **约束限制**： 不涉及。 **取值范围**： 不超过8192字符。 **默认取值**： 不涉及。
 	Value string `json:"value"`
 }
 

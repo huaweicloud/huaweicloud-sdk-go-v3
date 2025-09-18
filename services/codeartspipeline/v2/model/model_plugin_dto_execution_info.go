@@ -6,11 +6,9 @@ import (
 	"strings"
 )
 
-// PluginDtoExecutionInfo 执行信息
+// PluginDtoExecutionInfo **参数解释**： 执行信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 type PluginDtoExecutionInfo struct {
-
-	// 执行信息
-	InnerExecutionInfo *interface{} `json:"inner_execution_info,omitempty"`
+	InnerExecutionInfo *PluginDtoExecutionInfoInnerExecutionInfo `json:"inner_execution_info"`
 }
 
 func (o PluginDtoExecutionInfo) String() string {

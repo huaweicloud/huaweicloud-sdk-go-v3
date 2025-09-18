@@ -16,7 +16,7 @@ type ListExecutionStepsResponse struct {
 	ErrorMsg *string `json:"error_msg,omitempty"`
 
 	// 返回数据
-	Data *[]ExcutionStep `json:"data,omitempty"`
+	Data *[]ExecutionStep `json:"data,omitempty"`
 
 	// 总数
 	Total *int64 `json:"total,omitempty"`

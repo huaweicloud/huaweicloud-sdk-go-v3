@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// PipelineMoveToGroupResponseVo PipelineMoveToGroupResponseVo
+// PipelineMoveToGroupResponseVo **参数解释**： 响应详情。 **取值范围**： 不涉及。
 type PipelineMoveToGroupResponseVo struct {
 
-	// 响应码 [\"failed\", \"success\"]
+	// **参数解释**： 响应码。 **取值范围**： - failed：失败。 - success：成功。
 	Code string `json:"code"`
 
-	// 流水线ID
+	// **参数解释**： 流水线ID。 **取值范围**： 32位字符，由数字和字母组成。
 	PipelineId string `json:"pipeline_id"`
 
-	// 流水线名
+	// **参数解释**： 流水线名。 **取值范围**： 不涉及。
 	PipelineName string `json:"pipeline_name"`
 }
 

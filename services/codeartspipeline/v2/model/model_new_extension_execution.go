@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// NewExtensionExecution 执行信息
+// NewExtensionExecution **参数解释**： 插件类型。 **取值范围**： 不涉及。
 type NewExtensionExecution struct {
 
-	// 入口
+	// **参数解释**： 插件类型。 **取值范围**： 不涉及。
 	Target *string `json:"target,omitempty"`
 
-	// 类型
+	// **参数解释**： 插件类型。 **取值范围**： 不涉及。
 	Type *string `json:"type,omitempty"`
 
-	// sha256
+	// **参数解释**： sha256。 **取值范围**： 不涉及。
 	Sha256 *string `json:"sha256,omitempty"`
 }
 

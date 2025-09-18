@@ -6,43 +6,43 @@ import (
 	"strings"
 )
 
-// PipelineGroupVo PipelineGroupVo
+// PipelineGroupVo 流水线分组详情
 type PipelineGroupVo struct {
 
-	// 分组ID
+	// **参数解释**： 分组ID。 **取值范围**： 32位字符，由数字和字母组成。
 	Id string `json:"id"`
 
-	// 租户ID
+	// **参数解释**： 租户ID。 **取值范围**： 32位字符，由数字和字母组成。
 	DomainId string `json:"domain_id"`
 
-	// 项目ID
+	// **参数解释**： 项目ID。 **取值范围**： 32位字符，由数字和字母组成。
 	ProjectId string `json:"project_id"`
 
-	// 分组名
+	// **参数解释**： 分组名。 **取值范围**： 32位字符，由数字和字母组成。
 	Name string `json:"name"`
 
-	// 父分组ID
+	// **参数解释**： 父分组ID。 **取值范围**： 32位字符，由数字和字母组成。
 	ParentId *string `json:"parent_id,omitempty"`
 
-	// 分组路径ID
+	// **参数解释**： 分组路径ID。例如id1.id2.id3 代表分组id3的父分组为id2，分组id2的父分组为id1。 **取值范围**： 不涉及。
 	PathId string `json:"path_id"`
 
-	// 序号
+	// **参数解释**： 序号。 **取值范围**： 大于等于1。
 	Ordinal *int32 `json:"ordinal,omitempty"`
 
-	// 创建用户ID
+	// **参数解释**： 创建用户ID。 **取值范围**： 32位字符，由数字和字母组成。
 	Creator string `json:"creator"`
 
-	// 更新用户ID
+	// **参数解释**： 更新用户ID。 **取值范围**： 32位字符，由数字和字母组成。
 	Updater *string `json:"updater,omitempty"`
 
-	// 创建时间
+	// **参数解释**： 创建时间。 **取值范围**： 不涉及。
 	CreateTime *int64 `json:"create_time,omitempty"`
 
-	// 更新时间
+	// **参数解释**： 更新时间。 **取值范围**： 不涉及。
 	UpdateTime *int64 `json:"update_time,omitempty"`
 
-	// 子分组列表
+	// **参数解释**： 流水线分组详情。 **取值范围**： 不涉及。
 	Children *[]PipelineGroupVo `json:"children,omitempty"`
 }
 

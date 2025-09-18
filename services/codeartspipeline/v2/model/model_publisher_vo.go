@@ -8,49 +8,49 @@ import (
 
 type PublisherVo struct {
 
-	// 发布商ID
+	// **参数解释**： 发布商ID。可通过[查询发布商详情](ShowPublisher.xml)查询。 **取值范围**： 不涉及。
 	PublisherUniqueId *string `json:"publisher_unique_id,omitempty"`
 
-	// 用户ID
+	// **参数解释**： 用户ID。 **取值范围**： 不涉及。
 	UserId *string `json:"user_id,omitempty"`
 
-	// 租户ID
+	// **参数解释**： 租户ID。 **取值范围**： 不涉及。
 	TenantId *string `json:"tenant_id,omitempty"`
 
-	// 描述
+	// **参数解释**： 发布商描述。 **取值范围**： 不涉及。
 	Description *string `json:"description,omitempty"`
 
-	// 图标URL
+	// **参数解释**： 发布商图标URL。 **取值范围**： 不涉及。
 	LogoUrl *string `json:"logo_url,omitempty"`
 
-	// 网页地址
+	// **参数解释**： 创建发布商时填入的网页地址。 **取值范围**： 不涉及。
 	Website *string `json:"website,omitempty"`
 
-	// 地址
+	// **参数解释**： 创建发布商时填入的帮助地址。 **取值范围**： 不涉及。
 	SupportUrl *string `json:"support_url,omitempty"`
 
-	// 地址
+	// **参数解释**： 创建发布商时填入的源地址。 **取值范围**： 不涉及。
 	SourceUrl *string `json:"source_url,omitempty"`
 
-	// 英文名
+	// **参数解释**： 发布商英文名。 **取值范围**： 不涉及。
 	EnName *string `json:"en_name,omitempty"`
 
-	// 名称
+	// **参数解释**： 发布商中文名。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 授权状态
+	// **参数解释**： 授权状态。 **取值范围**： 不涉及。
 	AuthStatus *string `json:"auth_status,omitempty"`
 
-	// 是否删除
+	// **参数解释**： 是否删除。 **取值范围**： - 0：未删除。 - 1：已删除。
 	IsDelete *int32 `json:"is_delete,omitempty"`
 
-	// 最后更新人
+	// **参数解释**： 最后更新人名称。 **取值范围**： 不涉及。
 	LastUpdateUserName *string `json:"last_update_user_name,omitempty"`
 
-	// 最后更新人ID
+	// **参数解释**： 最后更新人用户ID。 **取值范围**： 不涉及。
 	LastUpdateUserId *string `json:"last_update_user_id,omitempty"`
 
-	// 最后更新时间
+	// **参数解释**： 最后更新时间。 **取值范围**： 不涉及。
 	LastUpdateTime *string `json:"last_update_time,omitempty"`
 }
 

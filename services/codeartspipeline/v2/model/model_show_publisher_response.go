@@ -9,7 +9,7 @@ import (
 // ShowPublisherResponse Response Object
 type ShowPublisherResponse struct {
 
-	// 发布商详情
+	// **参数解释**： 发布商详情。 **取值范围**： 不涉及。
 	PublisherDetailMap map[string]PublisherVo `json:"publisher_detail_map,omitempty"`
 	HttpStatusCode     int                    `json:"-"`
 }

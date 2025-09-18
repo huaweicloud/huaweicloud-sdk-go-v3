@@ -16,7 +16,7 @@ type ListEngineProductsRequest struct {
 	Type string `json:"type"`
 
 	// **参数解释**： 产品ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-	ProductId string `json:"product_id"`
+	ProductId *string `json:"product_id,omitempty"`
 
 	// **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
 	Limit *int32 `json:"limit,omitempty"`

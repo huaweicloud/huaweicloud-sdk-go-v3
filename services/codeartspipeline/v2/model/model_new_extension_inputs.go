@@ -8,22 +8,22 @@ import (
 
 type NewExtensionInputs struct {
 
-	// 名称
+	// **参数解释**： 名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 类型
+	// **参数解释**： 类型。 **取值范围**： 不涉及。
 	Type *string `json:"type,omitempty"`
 
-	// 标签
+	// **参数解释**： 标签。 **取值范围**： 不涉及。
 	Label *string `json:"label,omitempty"`
 
-	// 说明
+	// **参数解释**： 说明。 **取值范围**： 不涉及。
 	Description *string `json:"description,omitempty"`
 
-	// 默认值
+	// **参数解释**： 默认值。 **取值范围**： 不涉及。
 	DefaultValue *string `json:"default_value,omitempty"`
 
-	// 必填
+	// **参数解释**： 是否必填。 **取值范围**： - true：必填。 - false：非必填。
 	Required *bool `json:"required,omitempty"`
 
 	ExtendProp *ExtensionExtendProp `json:"extend_prop,omitempty"`

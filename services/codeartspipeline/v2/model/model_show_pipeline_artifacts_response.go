@@ -9,7 +9,7 @@ import (
 // ShowPipelineArtifactsResponse Response Object
 type ShowPipelineArtifactsResponse struct {
 
-	// 产物列表
+	// **参数解释**： 流水线任务产物列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Artifacts      *[]Artifact `json:"artifacts,omitempty"`
 	HttpStatusCode int         `json:"-"`
 }

@@ -21,7 +21,7 @@ type CloudConnectionQuota struct {
 	// RegionID。
 	RegionId string `json:"region_id"`
 
-	// 配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
+	// 配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 云连接实例下可加载的Region数 - cloud_connection_route: 云连接实例下可加载的路由数 - region_network_instance: 云连接实例下某个Region下可加载的网络实例数
 	QuotaType *CloudConnectionQuotaQuotaType `json:"quota_type,omitempty"`
 
 	// 配额数量。

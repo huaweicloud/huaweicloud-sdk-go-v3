@@ -1300,3 +1300,99 @@ func (i *UploadPublisherIconInvoker) Invoke() (*model.UploadPublisherIconRespons
 		return result.(*model.UploadPublisherIconResponse), nil
 	}
 }
+
+type DeleteActionsRunPipelineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteActionsRunPipelineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteActionsRunPipelineInvoker) Invoke() (*model.DeleteActionsRunPipelineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteActionsRunPipelineResponse), nil
+	}
+}
+
+type ListActionsPipelineRunsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListActionsPipelineRunsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListActionsPipelineRunsInvoker) Invoke() (*model.ListActionsPipelineRunsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListActionsPipelineRunsResponse), nil
+	}
+}
+
+type ListActionsPipelineRunsByRunIdsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListActionsPipelineRunsByRunIdsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListActionsPipelineRunsByRunIdsInvoker) Invoke() (*model.ListActionsPipelineRunsByRunIdsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListActionsPipelineRunsByRunIdsResponse), nil
+	}
+}
+
+type RetryRunActionsPipelineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RetryRunActionsPipelineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RetryRunActionsPipelineInvoker) Invoke() (*model.RetryRunActionsPipelineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RetryRunActionsPipelineResponse), nil
+	}
+}
+
+type RunActionsPipelineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunActionsPipelineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RunActionsPipelineInvoker) Invoke() (*model.RunActionsPipelineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunActionsPipelineResponse), nil
+	}
+}
+
+type ShowActionsRunsDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowActionsRunsDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowActionsRunsDetailInvoker) Invoke() (*model.ShowActionsRunsDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowActionsRunsDetailResponse), nil
+	}
+}

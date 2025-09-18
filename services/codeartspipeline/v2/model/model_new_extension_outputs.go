@@ -8,14 +8,17 @@ import (
 
 type NewExtensionOutputs struct {
 
-	// 名称
+	// **参数解释**： 名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 类型
+	// **参数解释**： 类型。 **取值范围**： 不涉及。
 	Type *string `json:"type,omitempty"`
 
-	// 描述
+	// **参数解释**： 描述。 **取值范围**： 不涉及。
 	Description *string `json:"description,omitempty"`
+
+	// **参数解释**： 扩展信息定义。 **取值范围**： 不涉及。
+	Prop map[string]string `json:"prop,omitempty"`
 }
 
 func (o NewExtensionOutputs) String() string {

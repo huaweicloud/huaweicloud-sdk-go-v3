@@ -24,14 +24,14 @@ type CreateBandwidthPackage struct {
 	// 实例所属项目ID。
 	ProjectId string `json:"project_id"`
 
-	LocalAreaId *AreaIdDef `json:"local_area_id"`
+	LocalAreaId *LocalAreaIdDef `json:"local_area_id"`
 
-	RemoteAreaId *AreaIdDef `json:"remote_area_id"`
+	RemoteAreaId *RemoteAreaIdDef `json:"remote_area_id"`
 
 	// 带宽包实例的计费方式。 bandwidth是按带宽计费。
 	ChargeMode CreateBandwidthPackageChargeMode `json:"charge_mode"`
 
-	// 带宽包实例在大陆站或国际站的计费方式： - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+	// 带宽包实例在大陆站或国际站的计费方式： - 1：大陆站包周期 - 2：国际站包周期 - 3：大陆站按需计费 - 4：国际站按需计费 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
 	BillingMode CreateBandwidthPackageBillingMode `json:"billing_mode"`
 
 	// 带宽包实例中的带宽值。
@@ -48,6 +48,8 @@ type CreateBandwidthPackage struct {
 
 	// 互通类型: - Area: 大区互通 - Region: 城域互通
 	InterflowMode *CreateBandwidthPackageInterflowMode `json:"interflow_mode,omitempty"`
+
+	PrepaidOptions *CreatePrepaidOptions `json:"prepaid_options,omitempty"`
 }
 
 func (o CreateBandwidthPackage) String() string {
@@ -107,6 +109,8 @@ type CreateBandwidthPackageBillingMode struct {
 }
 
 type CreateBandwidthPackageBillingModeEnum struct {
+	E_1 CreateBandwidthPackageBillingMode
+	E_2 CreateBandwidthPackageBillingMode
 	E_3 CreateBandwidthPackageBillingMode
 	E_4 CreateBandwidthPackageBillingMode
 	E_5 CreateBandwidthPackageBillingMode
@@ -115,7 +119,11 @@ type CreateBandwidthPackageBillingModeEnum struct {
 
 func GetCreateBandwidthPackageBillingModeEnum() CreateBandwidthPackageBillingModeEnum {
 	return CreateBandwidthPackageBillingModeEnum{
-		E_3: CreateBandwidthPackageBillingMode{
+		E_1: CreateBandwidthPackageBillingMode{
+			value: 1,
+		}, E_2: CreateBandwidthPackageBillingMode{
+			value: 2,
+		}, E_3: CreateBandwidthPackageBillingMode{
 			value: 3,
 		}, E_4: CreateBandwidthPackageBillingMode{
 			value: 4,

@@ -1719,3 +1719,129 @@ func (c *CodeArtsPipelineClient) UploadPublisherIconInvoker(request *model.Uploa
 	requestDef := GenReqDefForUploadPublisherIcon()
 	return &UploadPublisherIconInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// DeleteActionsRunPipeline 删除gitcode流水线运行详情
+//
+// 删除gitcode流水线运行详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) DeleteActionsRunPipeline(request *model.DeleteActionsRunPipelineRequest) (*model.DeleteActionsRunPipelineResponse, error) {
+	requestDef := GenReqDefForDeleteActionsRunPipeline()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteActionsRunPipelineResponse), nil
+	}
+}
+
+// DeleteActionsRunPipelineInvoker 删除gitcode流水线运行详情
+func (c *CodeArtsPipelineClient) DeleteActionsRunPipelineInvoker(request *model.DeleteActionsRunPipelineRequest) *DeleteActionsRunPipelineInvoker {
+	requestDef := GenReqDefForDeleteActionsRunPipeline()
+	return &DeleteActionsRunPipelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListActionsPipelineRuns 查询gitcode流水线运行记录
+//
+// 查询gitcode流水线运行记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) ListActionsPipelineRuns(request *model.ListActionsPipelineRunsRequest) (*model.ListActionsPipelineRunsResponse, error) {
+	requestDef := GenReqDefForListActionsPipelineRuns()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListActionsPipelineRunsResponse), nil
+	}
+}
+
+// ListActionsPipelineRunsInvoker 查询gitcode流水线运行记录
+func (c *CodeArtsPipelineClient) ListActionsPipelineRunsInvoker(request *model.ListActionsPipelineRunsRequest) *ListActionsPipelineRunsInvoker {
+	requestDef := GenReqDefForListActionsPipelineRuns()
+	return &ListActionsPipelineRunsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListActionsPipelineRunsByRunIds 查询gitcode流水线action列表
+//
+// 查询gitcode流水线action列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) ListActionsPipelineRunsByRunIds(request *model.ListActionsPipelineRunsByRunIdsRequest) (*model.ListActionsPipelineRunsByRunIdsResponse, error) {
+	requestDef := GenReqDefForListActionsPipelineRunsByRunIds()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListActionsPipelineRunsByRunIdsResponse), nil
+	}
+}
+
+// ListActionsPipelineRunsByRunIdsInvoker 查询gitcode流水线action列表
+func (c *CodeArtsPipelineClient) ListActionsPipelineRunsByRunIdsInvoker(request *model.ListActionsPipelineRunsByRunIdsRequest) *ListActionsPipelineRunsByRunIdsInvoker {
+	requestDef := GenReqDefForListActionsPipelineRunsByRunIds()
+	return &ListActionsPipelineRunsByRunIdsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RetryRunActionsPipeline 重试运行gitcode流水线
+//
+// 重试运行gitcode流水线
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) RetryRunActionsPipeline(request *model.RetryRunActionsPipelineRequest) (*model.RetryRunActionsPipelineResponse, error) {
+	requestDef := GenReqDefForRetryRunActionsPipeline()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RetryRunActionsPipelineResponse), nil
+	}
+}
+
+// RetryRunActionsPipelineInvoker 重试运行gitcode流水线
+func (c *CodeArtsPipelineClient) RetryRunActionsPipelineInvoker(request *model.RetryRunActionsPipelineRequest) *RetryRunActionsPipelineInvoker {
+	requestDef := GenReqDefForRetryRunActionsPipeline()
+	return &RetryRunActionsPipelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunActionsPipeline 运行gitcode流水线
+//
+// 运行gitcode流水线
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) RunActionsPipeline(request *model.RunActionsPipelineRequest) (*model.RunActionsPipelineResponse, error) {
+	requestDef := GenReqDefForRunActionsPipeline()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunActionsPipelineResponse), nil
+	}
+}
+
+// RunActionsPipelineInvoker 运行gitcode流水线
+func (c *CodeArtsPipelineClient) RunActionsPipelineInvoker(request *model.RunActionsPipelineRequest) *RunActionsPipelineInvoker {
+	requestDef := GenReqDefForRunActionsPipeline()
+	return &RunActionsPipelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowActionsRunsDetail 查询gitcode流水线运行详情
+//
+// 查询gitcode流水线运行详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) ShowActionsRunsDetail(request *model.ShowActionsRunsDetailRequest) (*model.ShowActionsRunsDetailResponse, error) {
+	requestDef := GenReqDefForShowActionsRunsDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowActionsRunsDetailResponse), nil
+	}
+}
+
+// ShowActionsRunsDetailInvoker 查询gitcode流水线运行详情
+func (c *CodeArtsPipelineClient) ShowActionsRunsDetailInvoker(request *model.ShowActionsRunsDetailRequest) *ShowActionsRunsDetailInvoker {
+	requestDef := GenReqDefForShowActionsRunsDetail()
+	return &ShowActionsRunsDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

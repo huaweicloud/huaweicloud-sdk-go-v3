@@ -22,6 +22,9 @@ type MediaDetail struct {
 	OutputThumbnailPara *OutputThumbnailPara `json:"output_thumbnail_para,omitempty"`
 
 	OutputWatermarkParas *OutputWatermarkPara `json:"output_watermark_paras,omitempty"`
+
+	// 输出文件的metadata信息
+	Metadata *[]FileMetaData `json:"metadata,omitempty"`
 }
 
 func (o MediaDetail) String() string {

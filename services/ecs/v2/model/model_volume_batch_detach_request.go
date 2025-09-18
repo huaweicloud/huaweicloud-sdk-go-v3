@@ -7,7 +7,7 @@ import (
 )
 
 type VolumeBatchDetachRequest struct {
-	Serverinfo *[]string `json:"serverinfo,omitempty"`
+	Serverinfo []string `json:"serverinfo"`
 }
 
 func (o VolumeBatchDetachRequest) String() string {

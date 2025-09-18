@@ -9,7 +9,7 @@ import (
 // CentralNetworkPolicyDocument 中心网络策略文档。
 type CentralNetworkPolicyDocument struct {
 
-	// 中心网络默认平面的名字。
+	// 中心网络默认平面的名称。
 	DefaultPlane string `json:"default_plane"`
 
 	// 中心网络平面列表。

@@ -11,6 +11,9 @@ type UpdatePremiumInstanceRequestBody struct {
 
 	// 独享引擎操作名称
 	Action string `json:"action"`
+
+	// 具体的请求体
+	Params *[]string `json:"params,omitempty"`
 }
 
 func (o UpdatePremiumInstanceRequestBody) String() string {

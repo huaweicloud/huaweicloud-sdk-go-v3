@@ -46,10 +46,7 @@ type UpdatePremiumInstanceResponse struct {
 	FloatIp *string `json:"floatIp,omitempty"`
 
 	// **参数解释：** 独享引擎ECS绑定的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-	SecurityGroupId *[]string `json:"securityGroupId,omitempty"`
-
-	// **参数解释：** 独享引擎ECS绑定的用于WAF服务的安全组 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-	MgrSecurityGroupId *string `json:"mgrSecurityGroupId,omitempty"`
+	SecurityGroupIds *[]string `json:"security_group_ids,omitempty"`
 
 	// **参数解释：** 独享引擎计费状态（0：正常计费,1：冻结（资源和数据会保留，但租户无法再正常使用云服务）,2：终止（资源和数据将清除）,3：受限（UDS控制用户桶访问权限）） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Status *int32 `json:"status,omitempty"`

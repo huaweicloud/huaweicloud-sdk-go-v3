@@ -9,16 +9,16 @@ import (
 // ListPipelineRunsResponse Response Object
 type ListPipelineRunsResponse struct {
 
-	// 起始偏移
+	// **参数解释**： 起始偏移。 **取值范围**： 不涉及。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 查询大小
+	// **参数解释**： 查询大小。 **取值范围**： 不涉及。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 总数
+	// **参数解释**： 执行记录总数。 **取值范围**： 不涉及。
 	Total *int32 `json:"total,omitempty"`
 
-	// 流水线运行信息
+	// **参数解释**： 流水线运行信息列表。 **取值范围**： 不涉及。
 	PipelineRuns   *[]ListPipelineRunsPagePipelineRuns `json:"pipeline_runs,omitempty"`
 	HttpStatusCode int                                 `json:"-"`
 }

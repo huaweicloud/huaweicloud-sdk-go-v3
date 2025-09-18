@@ -13,8 +13,8 @@ type ListCloudConnectionCapabilitiesResponse struct {
 	RequestId string `json:"request_id"`
 
 	// 租户能力列表。
-	Capabilities   []CloudConnectionCapability `json:"capabilities"`
-	HttpStatusCode int                         `json:"-"`
+	Capabilities   []CloudConnectionCapabilityInfo `json:"capabilities"`
+	HttpStatusCode int                             `json:"-"`
 }
 
 func (o ListCloudConnectionCapabilitiesResponse) String() string {

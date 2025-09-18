@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// BillingMode 本端大区ID。
+// BillingMode 计费方式。
 type BillingMode struct {
 	BillingMode *BillingModeEnum `json:"billing_mode"`
 }

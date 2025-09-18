@@ -35,8 +35,8 @@ type CreateHttpCcRuleRequestBody struct {
 	// 阻断时长
 	LockTime *int32 `json:"lock_time,omitempty"`
 
-	// 防护模式
-	TagType string `json:"tag_type"`
+	// 限速模式：   - ip：IP限速，根据IP区分单个Web访问者。   - cookie：用户限速，根据Cookie键值区分单个Web访问者   - header：用户限速，根据Header区分单个Web访问者。   - ip_segment_c：根据IP C段区分单个Web访问者。
+	TagType CreateHttpCcRuleRequestBodyTagType `json:"tag_type"`
 
 	// 防护模式标签
 	TagIndex *string `json:"tag_index,omitempty"`
@@ -77,6 +77,61 @@ func (o CreateHttpCcRuleRequestBody) String() string {
 	}
 
 	return strings.Join([]string{"CreateHttpCcRuleRequestBody", string(data)}, " ")
+}
+
+type CreateHttpCcRuleRequestBodyTagType struct {
+	value string
+}
+
+type CreateHttpCcRuleRequestBodyTagTypeEnum struct {
+	IP           CreateHttpCcRuleRequestBodyTagType
+	COOKIE       CreateHttpCcRuleRequestBodyTagType
+	HEADER       CreateHttpCcRuleRequestBodyTagType
+	IP_SEGMENT_C CreateHttpCcRuleRequestBodyTagType
+}
+
+func GetCreateHttpCcRuleRequestBodyTagTypeEnum() CreateHttpCcRuleRequestBodyTagTypeEnum {
+	return CreateHttpCcRuleRequestBodyTagTypeEnum{
+		IP: CreateHttpCcRuleRequestBodyTagType{
+			value: "ip",
+		},
+		COOKIE: CreateHttpCcRuleRequestBodyTagType{
+			value: "cookie",
+		},
+		HEADER: CreateHttpCcRuleRequestBodyTagType{
+			value: "header",
+		},
+		IP_SEGMENT_C: CreateHttpCcRuleRequestBodyTagType{
+			value: "ip_segment_c",
+		},
+	}
+}
+
+func (c CreateHttpCcRuleRequestBodyTagType) Value() string {
+	return c.value
+}
+
+func (c CreateHttpCcRuleRequestBodyTagType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateHttpCcRuleRequestBodyTagType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type CreateHttpCcRuleRequestBodyTimeMode struct {

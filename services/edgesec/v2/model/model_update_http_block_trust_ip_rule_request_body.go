@@ -14,9 +14,6 @@ type UpdateHttpBlockTrustIpRuleRequestBody struct {
 	// 规则描述，最长512字符
 	Description *string `json:"description,omitempty"`
 
-	// 规则开关： - 0：关闭 - 1：开启
-	Status *int32 `json:"status,omitempty"`
-
 	// ip地址/地址段；ip地址/地址段或者ip地址组id至少有一个
 	Addr *string `json:"addr,omitempty"`
 

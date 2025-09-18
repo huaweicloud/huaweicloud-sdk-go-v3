@@ -6,6 +6,10 @@
 
 <h1 align="center">华为云开发者 Go 软件开发工具包（Go SDK）</h1>
 
+[![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/huaweicloud/huaweicloud-sdk-go-v3)](https://go.dev/)
+[![GitHub Release](https://img.shields.io/github/v/release/huaweicloud/huaweicloud-sdk-go-v3)](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/releases)
+[![License](https://img.shields.io/badge/license-Apache--2.0-green)](https://www.apache.org/licenses/LICENSE-2.0)
+
 欢迎使用华为云 Go SDK。
 
 华为云 Go SDK 让您无需关心请求细节即可快速使用弹性云服务器（ECS）、虚拟私有云（VPC）等多个华为云服务。
@@ -234,6 +238,7 @@ func main() {
   * [3.3 自定义配置](#33-自定义配置-top)
     * [3.3.1 IAM endpoint配置](#331-iam-endpoint配置-top)
     * [3.3.2 Region配置](#332-region配置-top)
+    * [3.4 用户代理](#34-用户代理-top)
 * [4. 发送请求并查看响应](#4-发送请求并查看响应-top)
     * [4.1 异常处理](#41-异常处理-top)
 * [5. 故障处理](#5-故障处理-top)
@@ -982,6 +987,32 @@ if err == nil {
 } else {
     fmt.Println(err)
 }
+```
+
+#### 3.4 用户代理 [:top:](#用户手册-top)
+
+从**0.1.169**版本起，默认会在请求头User-Agent中附加额外信息，用于识别客户端调用服务时所使用的SDK语言、客户端库版本以及平台信息等。 User-Agent包含Go版本、操作系统和时区语言信息，同时会生成一个随机标识符追加到User-Agent信息中。随机标识符会存储在用户主目录下，linux为 `~/.huaweicloud/application_id`，windows为`C:\Users\USER_NAME\.huaweicloud\application_id`。
+
+上述信息将用于保护您及您的用户的华为云账号安全。
+
+您可以通过自定义User-Agent的方式关闭上述行为，自定义User-Agent信息建议长度不超过50个字符，仅可包含ASCII可打印字符：
+
+```go
+import (
+    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
+    vpc "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/vpc/v2"
+)
+
+// 追加自定义User-Agent信息，替代默认追加内容
+httpConfig := config.DefaultHttpConfig().WithUserAgent("custom user agent...")
+
+hcClient, err := vpc.VpcClientBuilder().
+    WithHttpConfig(httpConfig).
+    SafeBuild()
+if err != nil {
+    // 处理错误
+}
+client := vpc.NewVpcClient(hcClient)
 ```
 
 #### 4.1 异常处理 [:top:](#用户手册-top)

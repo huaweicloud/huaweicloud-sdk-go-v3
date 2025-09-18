@@ -9,16 +9,16 @@ import (
 // ListPublisherResponse Response Object
 type ListPublisherResponse struct {
 
-	// 查询偏移量
+	// **参数解释**： 查询偏移量，与查询参数的偏移量相同。 **取值范围**： 不涉及。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 每次查询的条目数量
+	// **参数解释**： 每次查询的条目数量。 **取值范围**： 大于等于0。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 查询总数
+	// **参数解释**： 本次查询到的数据条数。 **取值范围**： 不涉及。
 	Total *int64 `json:"total,omitempty"`
 
-	// 数据列表
+	// **参数解释**： 本次查询到的数据列表。 **取值范围**： 不涉及。
 	Data           *[]PublisherVo `json:"data,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }

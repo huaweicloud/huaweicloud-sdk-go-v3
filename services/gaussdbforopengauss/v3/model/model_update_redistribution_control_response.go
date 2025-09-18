@@ -9,7 +9,7 @@ import (
 // UpdateRedistributionControlResponse Response Object
 type UpdateRedistributionControlResponse struct {
 
-	// 任务流id
+	// **参数解释**: 修改重分布参数的任务ID。 **取值范围**: 不涉及。
 	Result         *string `json:"result,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

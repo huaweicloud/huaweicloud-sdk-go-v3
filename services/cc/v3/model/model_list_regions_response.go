@@ -12,7 +12,9 @@ type ListRegionsResponse struct {
 	// 请求ID。
 	RequestId string `json:"request_id"`
 
-	// 网络实例列表。
+	PageInfo *PageInfo `json:"page_info,omitempty"`
+
+	// 区域列表。
 	Regions        []Region `json:"regions"`
 	HttpStatusCode int      `json:"-"`
 }

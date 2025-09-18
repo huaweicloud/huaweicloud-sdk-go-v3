@@ -2117,6 +2117,22 @@ func (i *ShowStorageUsedSpaceInvoker) Invoke() (*model.ShowStorageUsedSpaceRespo
 	}
 }
 
+type ShowTaskDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTaskDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTaskDetailInvoker) Invoke() (*model.ShowTaskDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTaskDetailResponse), nil
+	}
+}
+
 type ShowTdeStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3538,6 +3554,22 @@ func (i *UpdateReadWeightInvoker) Invoke() (*model.UpdateReadWeightResponse, err
 		return nil, err
 	} else {
 		return result.(*model.UpdateReadWeightResponse), nil
+	}
+}
+
+type ListInstancesNoIndexTablesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstancesNoIndexTablesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstancesNoIndexTablesInvoker) Invoke() (*model.ListInstancesNoIndexTablesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstancesNoIndexTablesResponse), nil
 	}
 }
 

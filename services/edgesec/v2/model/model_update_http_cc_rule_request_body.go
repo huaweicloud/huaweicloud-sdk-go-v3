@@ -38,7 +38,7 @@ type UpdateHttpCcRuleRequestBody struct {
 	// 锁定时长
 	LockTime *int32 `json:"lock_time,omitempty"`
 
-	// 限速模式：   - ip：IP限速，根据IP区分单个Web访问者。   - cookie：用户限速，根据Cookie键值区分单个Web访问者。   - header：用户限速，根据Header区分单个Web访问者。   - other：根据Referer（自定义请求访问的来源）字段区分单个Web访问者。   - policy: 策略限速   - domain: 域名限速     - url: url限速
+	// 限速模式：   - ip：IP限速，根据IP区分单个Web访问者。   - cookie：用户限速，根据Cookie键值区分单个Web访问者   - header：用户限速，根据Header区分单个Web访问者。   - ip_segment_c：根据IP C段区分单个Web访问者。
 	TagType UpdateHttpCcRuleRequestBodyTagType `json:"tag_type"`
 
 	// 用户标识，当限速模式为用户限速(cookie或header)时，需要传该参数。   - 选择cookie时，设置cookie字段名，即用户需要根据网站实际情况配置唯一可识别Web访问者的cookie中的某属性变量名。用户标识的cookie，不支持正则，必须完全匹配。例如：如果网站使用cookie中的某个字段name唯一标识用户，那么可以选取name字段来区分Web访问者。   - 选择header时，设置需要防护的自定义HTTP首部，即用户需要根据网站实际情况配置可识别Web访问者的HTTP首部。
@@ -90,8 +90,10 @@ type UpdateHttpCcRuleRequestBodyTagType struct {
 }
 
 type UpdateHttpCcRuleRequestBodyTagTypeEnum struct {
-	IP     UpdateHttpCcRuleRequestBodyTagType
-	COOKIE UpdateHttpCcRuleRequestBodyTagType
+	IP           UpdateHttpCcRuleRequestBodyTagType
+	COOKIE       UpdateHttpCcRuleRequestBodyTagType
+	HEADER       UpdateHttpCcRuleRequestBodyTagType
+	IP_SEGMENT_C UpdateHttpCcRuleRequestBodyTagType
 }
 
 func GetUpdateHttpCcRuleRequestBodyTagTypeEnum() UpdateHttpCcRuleRequestBodyTagTypeEnum {
@@ -101,6 +103,12 @@ func GetUpdateHttpCcRuleRequestBodyTagTypeEnum() UpdateHttpCcRuleRequestBodyTagT
 		},
 		COOKIE: UpdateHttpCcRuleRequestBodyTagType{
 			value: "cookie",
+		},
+		HEADER: UpdateHttpCcRuleRequestBodyTagType{
+			value: "header",
+		},
+		IP_SEGMENT_C: UpdateHttpCcRuleRequestBodyTagType{
+			value: "ip_segment_c",
 		},
 	}
 }

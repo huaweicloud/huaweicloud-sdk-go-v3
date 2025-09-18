@@ -12,16 +12,16 @@ type Area struct {
 	// 实例名称。
 	Name string `json:"name"`
 
-	// Area ID。
+	// 大区ID。
 	Id *string `json:"id,omitempty"`
 
-	// 英文 Area Name。
+	// 大区英文名称。
 	EnName *string `json:"en_name,omitempty"`
 
-	// 西语 Area Name。
+	// 大区西语名称。
 	EsName *string `json:"es_name,omitempty"`
 
-	// 葡语 Area Name。
+	// 大区葡语名称。
 	PtName *string `json:"pt_name,omitempty"`
 
 	// 站点。

@@ -8,25 +8,25 @@ import (
 
 type PageInfoOptionalSinglePluginVoData struct {
 
-	// 名称
+	// **参数解释**： 扩展插件唯一标识。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 展示名
+	// **参数解释**： 扩展插件在插件市场和流水线显示的名称。 **取值范围**： 不涉及。
 	DisplayName *string `json:"display_name,omitempty"`
 
-	// 属性
+	// **参数解释**： 标识是否为官方插件。 **取值范围**： 不涉及。
 	PluginAttribution *string `json:"plugin_attribution,omitempty"`
 
-	// 图标URL
+	// **参数解释**： 图标URL。 **取值范围**： 不涉及。
 	IconUrl *string `json:"icon_url,omitempty"`
 
-	// 描述
+	// **参数解释**： 插件描述。 **取值范围**： 不涉及。
 	Description *string `json:"description,omitempty"`
 
-	// 发布商ID
+	// **参数解释**： 发布商ID。 **取值范围**： 不涉及。
 	PublisherId *string `json:"publisher_id,omitempty"`
 
-	// 版本
+	// **参数解释**： 版本。 **取值范围**： 不涉及。
 	ManifestVersion *string `json:"manifest_version,omitempty"`
 }
 

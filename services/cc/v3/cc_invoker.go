@@ -917,134 +917,6 @@ func (i *ShowCloudConnectionRoutesInvoker) Invoke() (*model.ShowCloudConnectionR
 	}
 }
 
-type BatchCreateGcbResourceTagsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchCreateGcbResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchCreateGcbResourceTagsInvoker) Invoke() (*model.BatchCreateGcbResourceTagsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchCreateGcbResourceTagsResponse), nil
-	}
-}
-
-type BatchDeleteGcbResourceTagsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchDeleteGcbResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchDeleteGcbResourceTagsInvoker) Invoke() (*model.BatchDeleteGcbResourceTagsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchDeleteGcbResourceTagsResponse), nil
-	}
-}
-
-type CountGcbResourceByTagInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CountGcbResourceByTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CountGcbResourceByTagInvoker) Invoke() (*model.CountGcbResourceByTagResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CountGcbResourceByTagResponse), nil
-	}
-}
-
-type CreateGcbResourceTagInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateGcbResourceTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateGcbResourceTagInvoker) Invoke() (*model.CreateGcbResourceTagResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateGcbResourceTagResponse), nil
-	}
-}
-
-type DeleteGcbResourceTagInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteGcbResourceTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteGcbResourceTagInvoker) Invoke() (*model.DeleteGcbResourceTagResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteGcbResourceTagResponse), nil
-	}
-}
-
-type ListGcbResourceByTagInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListGcbResourceByTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListGcbResourceByTagInvoker) Invoke() (*model.ListGcbResourceByTagResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListGcbResourceByTagResponse), nil
-	}
-}
-
-type ListGcbResourceTagsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListGcbResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListGcbResourceTagsInvoker) Invoke() (*model.ListGcbResourceTagsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListGcbResourceTagsResponse), nil
-	}
-}
-
-type ListGcbTenantTagsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListGcbTenantTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListGcbTenantTagsInvoker) Invoke() (*model.ListGcbTenantTagsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListGcbTenantTagsResponse), nil
-	}
-}
-
 type AssociateGlobalConnectionBandwidthInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1234,6 +1106,134 @@ func (i *UpdateGlobalConnectionBandwidthInvoker) Invoke() (*model.UpdateGlobalCo
 		return nil, err
 	} else {
 		return result.(*model.UpdateGlobalConnectionBandwidthResponse), nil
+	}
+}
+
+type BatchCreateGcbResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateGcbResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateGcbResourceTagsInvoker) Invoke() (*model.BatchCreateGcbResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateGcbResourceTagsResponse), nil
+	}
+}
+
+type BatchDeleteGcbResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteGcbResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteGcbResourceTagsInvoker) Invoke() (*model.BatchDeleteGcbResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteGcbResourceTagsResponse), nil
+	}
+}
+
+type CountGcbResourceByTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountGcbResourceByTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CountGcbResourceByTagInvoker) Invoke() (*model.CountGcbResourceByTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountGcbResourceByTagResponse), nil
+	}
+}
+
+type CreateGcbResourceTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateGcbResourceTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateGcbResourceTagInvoker) Invoke() (*model.CreateGcbResourceTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateGcbResourceTagResponse), nil
+	}
+}
+
+type DeleteGcbResourceTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteGcbResourceTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteGcbResourceTagInvoker) Invoke() (*model.DeleteGcbResourceTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteGcbResourceTagResponse), nil
+	}
+}
+
+type ListGcbResourceByTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGcbResourceByTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListGcbResourceByTagInvoker) Invoke() (*model.ListGcbResourceByTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGcbResourceByTagResponse), nil
+	}
+}
+
+type ListGcbResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGcbResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListGcbResourceTagsInvoker) Invoke() (*model.ListGcbResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGcbResourceTagsResponse), nil
+	}
+}
+
+type ListGcbTenantTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGcbTenantTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListGcbTenantTagsInvoker) Invoke() (*model.ListGcbTenantTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGcbTenantTagsResponse), nil
 	}
 }
 

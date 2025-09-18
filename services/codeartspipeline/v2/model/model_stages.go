@@ -18,7 +18,7 @@ type Stages struct {
 	// 阶段名字
 	Name string `json:"name"`
 
-	// -
+	// 阶段运行参数
 	Parameters *interface{} `json:"parameters"`
 
 	// 阶段顺序

@@ -41,12 +41,22 @@ type CcConditionCategory struct {
 }
 
 type CcConditionCategoryEnum struct {
-	URL    CcConditionCategory
-	IP     CcConditionCategory
-	IPV6   CcConditionCategory
-	PARAMS CcConditionCategory
-	COOKIE CcConditionCategory
-	HEADER CcConditionCategory
+	URL                 CcConditionCategory
+	IP                  CcConditionCategory
+	IPV6                CcConditionCategory
+	ASN                 CcConditionCategory
+	PARAMS              CcConditionCategory
+	COOKIE              CcConditionCategory
+	REFERER             CcConditionCategory
+	USER_AGENT          CcConditionCategory
+	HEADER              CcConditionCategory
+	RESPONSE_CODE       CcConditionCategory
+	RESPONSE_HEADER     CcConditionCategory
+	RESPONSE_BODY       CcConditionCategory
+	REQUEST_BODY        CcConditionCategory
+	METHOD              CcConditionCategory
+	TLS_FINGERPRINT     CcConditionCategory
+	TLS_JA3_FINGERPRINT CcConditionCategory
 }
 
 func GetCcConditionCategoryEnum() CcConditionCategoryEnum {
@@ -60,14 +70,44 @@ func GetCcConditionCategoryEnum() CcConditionCategoryEnum {
 		IPV6: CcConditionCategory{
 			value: "ipv6",
 		},
+		ASN: CcConditionCategory{
+			value: "asn",
+		},
 		PARAMS: CcConditionCategory{
 			value: "params",
 		},
 		COOKIE: CcConditionCategory{
 			value: "cookie",
 		},
+		REFERER: CcConditionCategory{
+			value: "referer",
+		},
+		USER_AGENT: CcConditionCategory{
+			value: "user-agent",
+		},
 		HEADER: CcConditionCategory{
 			value: "header",
+		},
+		RESPONSE_CODE: CcConditionCategory{
+			value: "response_code",
+		},
+		RESPONSE_HEADER: CcConditionCategory{
+			value: "response_header",
+		},
+		RESPONSE_BODY: CcConditionCategory{
+			value: "response_body",
+		},
+		REQUEST_BODY: CcConditionCategory{
+			value: "request_body",
+		},
+		METHOD: CcConditionCategory{
+			value: "method",
+		},
+		TLS_FINGERPRINT: CcConditionCategory{
+			value: "tls_fingerprint",
+		},
+		TLS_JA3_FINGERPRINT: CcConditionCategory{
+			value: "tls_ja3_fingerprint",
 		},
 	}
 }

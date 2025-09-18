@@ -8,7 +8,7 @@ import (
 
 // RemoteAreaId 对端大区ID。
 type RemoteAreaId struct {
-	RemoteAreaId *AreaIdDef `json:"remote_area_id"`
+	RemoteAreaId *RemoteAreaIdDef `json:"remote_area_id"`
 }
 
 func (o RemoteAreaId) String() string {

@@ -9,52 +9,52 @@ import (
 // StageRun 阶段运行信息
 type StageRun struct {
 
-	// 阶段ID
+	// **参数解释**： 阶段ID。 **取值范围**： 32位字符，由数字和字母组成。
 	Id *string `json:"id,omitempty"`
 
-	// 阶段类型
+	// **参数解释**： 阶段类型。 **取值范围**： 不涉及。
 	Category *string `json:"category,omitempty"`
 
-	// 阶段名称
+	// **参数解释**： 阶段名称。 **取值范围**： 仅支持输入中文、大小写英文字母、数字、'-'、'_'、','、';'、':'、'.'、'/'、'('、')'、'（'、'）'及空格，其中空格不可在名称开头或结尾使用，且长度为[1,128]个字符。
 	Name *string `json:"name,omitempty"`
 
-	// 唯一标识
+	// **参数解释**： 阶段唯一标识。 **取值范围**： 不涉及。
 	Identifier *string `json:"identifier,omitempty"`
 
-	// 是否总是运行
+	// **参数解释**： 是否总是运行。 **取值范围**： - true：总是运行。 - false：非总是运行。
 	RunAlways *bool `json:"run_always,omitempty"`
 
-	// 是否并行
+	// **参数解释**： 是否并行。 **取值范围**： 不涉及。
 	Parallel *string `json:"parallel,omitempty"`
 
-	// 是否选中
+	// **参数解释**： 是否选中。 **取值范围**： - true：选中。 - false：未选中。
 	IsSelect *bool `json:"is_select,omitempty"`
 
-	// 序列号
+	// **参数解释**： 序列号。 **取值范围**： 大于等于0。
 	Sequence *int32 `json:"sequence,omitempty"`
 
-	// 依赖
+	// **参数解释**： 依赖阶段的identifier信息。 **取值范围**： 不涉及。
 	DependsOn *[]string `json:"depends_on,omitempty"`
 
-	// 运行条件
+	// **参数解释**： 运行条件。 **取值范围**： 不涉及。
 	Condition *string `json:"condition,omitempty"`
 
-	// 状态
+	// **参数解释**： 状态。 **取值范围**： - INIT：初始化。 - QUEUED：排队。 - RUNNING：运行中。 - CANCELED：取消。 - COMPLETED：已完成。 - FAILED：失败。 - SKIPPED：跳过。 - IGNORED：忽略。 - PAUSED：暂停。 - SUSPEND：挂起。 - ASYNC_RUNNING：异步运行。 - ASYNC_FAILED：异步失败。 - UNSELECTED：未选择。 - REDISPATCH：重新调度。
 	Status *string `json:"status,omitempty"`
 
-	// 开始时间
+	// **参数解释**： 阶段开始时间。 **取值范围**： 不涉及。
 	StartTime *int64 `json:"start_time,omitempty"`
 
-	// 结束时间
+	// **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
 	EndTime *int64 `json:"end_time,omitempty"`
 
-	// 阶段准入
+	// **参数解释**： 阶段准入。 **取值范围**： 不涉及。
 	Pre *[]StepRun `json:"pre,omitempty"`
 
-	// 阶段准出
+	// **参数解释**： 阶段准出。 **取值范围**： 不涉及。
 	Post *[]StepRun `json:"post,omitempty"`
 
-	// 任务
+	// **参数解释**： 任务列表。 **取值范围**： 不涉及。
 	Jobs *[]JobRun `json:"jobs,omitempty"`
 }
 

@@ -63,6 +63,9 @@ type QueryTranscodingsTaskResponse struct {
 
 	// 主索引定制参数。
 	AdditionalManifests *[]AdditionalManifests `json:"additional_manifests,omitempty"`
+
+	// 输出文件的metadata信息
+	Metadata *[]FileMetaData `json:"metadata,omitempty"`
 }
 
 func (o QueryTranscodingsTaskResponse) String() string {

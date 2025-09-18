@@ -9,16 +9,16 @@ import (
 // ShowInstanceStatusResponse Response Object
 type ShowInstanceStatusResponse struct {
 
-	// 实例ID
+	// 流水线创建实例ID
 	TaskId *string `json:"task_id,omitempty"`
 
-	// 实例创建状态，取值和含义:initializing：初始化中；processing：处理中；finished：已完成；succeeded：成功
+	// 实例创建状态，取值和含义：initializing：初始化中；processing：处理中；finished：已完成；succeeded：成功
 	TaskStatus *string `json:"task_status,omitempty"`
 
 	// 流水线ID
 	PipelineId *string `json:"pipeline_id,omitempty"`
 
-	// 流水线名字
+	// 流水线名称
 	PipelineName *string `json:"pipeline_name,omitempty"`
 
 	// 流水线详情页面url

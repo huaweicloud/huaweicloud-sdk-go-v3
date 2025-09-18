@@ -8,7 +8,7 @@ import (
 
 // LocalAreaId 本端大区ID。
 type LocalAreaId struct {
-	LocalAreaId *AreaIdDef `json:"local_area_id"`
+	LocalAreaId *LocalAreaIdDef `json:"local_area_id"`
 }
 
 func (o LocalAreaId) String() string {

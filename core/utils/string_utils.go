@@ -19,10 +19,54 @@
 
 package utils
 
-import "strings"
+import (
+	"crypto/rand"
+	"encoding/hex"
+	"fmt"
+	"io"
+	"strings"
+)
 
 func UnderscoreToCamel(name string) string {
 	name = strings.Replace(name, "_", " ", -1)
 	name = strings.Title(name)
 	return strings.Replace(name, " ", "", -1)
+}
+
+func ReplaceNonASCII(input string, replacement rune) string {
+	var b strings.Builder
+	b.Grow(len(input) * 4)
+
+	for _, r := range input {
+		if r <= 127 {
+			b.WriteRune(r)
+		} else {
+			b.WriteRune(replacement)
+		}
+	}
+	return b.String()
+}
+
+func generateUUIDv4() (string, error) {
+	uuid := make([]byte, 16)
+
+	if _, err := io.ReadFull(rand.Reader, uuid); err != nil {
+		return "", fmt.Errorf("failed to generate UUID: %w", err)
+	}
+
+	uuid[6] = (uuid[6] & 0x0f) | 0x40 // Version 4
+	uuid[8] = (uuid[8] & 0x3f) | 0x80 // RFC 4122 variant
+
+	buf := make([]byte, 36)
+	hex.Encode(buf[0:8], uuid[0:4])
+	buf[8] = '-'
+	hex.Encode(buf[9:13], uuid[4:6])
+	buf[13] = '-'
+	hex.Encode(buf[14:18], uuid[6:8])
+	buf[18] = '-'
+	hex.Encode(buf[19:23], uuid[8:10])
+	buf[23] = '-'
+	hex.Encode(buf[24:36], uuid[10:16])
+
+	return string(buf), nil
 }

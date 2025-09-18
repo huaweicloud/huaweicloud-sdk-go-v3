@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// BillingModeEnum 带宽包实例在大陆站或国际站的计费方式。 1：大陆站包周期。 2：国际站包周期。 3：大陆站按需计费。 4：国际站按需计费。 5：大陆站按95方式计费。 6：国际站按95方式计费。
+// BillingModeEnum 带宽包实例在大陆站或国际站的计费方式。 1：大陆站包周期。 2：国际站包周期。 3：大陆站按需计费。 4：国际站按需计费。 5：大陆站按95方式计费。 6：国际站按95方式计费。 7：大陆站按日95方式计费。 8：国际站按日95方式计费。
 type BillingModeEnum struct {
 	value int32
 }
@@ -21,6 +21,8 @@ type BillingModeEnumEnum struct {
 	E_4 BillingModeEnum
 	E_5 BillingModeEnum
 	E_6 BillingModeEnum
+	E_7 BillingModeEnum
+	E_8 BillingModeEnum
 }
 
 func GetBillingModeEnumEnum() BillingModeEnumEnum {
@@ -37,6 +39,10 @@ func GetBillingModeEnumEnum() BillingModeEnumEnum {
 			value: 5,
 		}, E_6: BillingModeEnum{
 			value: 6,
+		}, E_7: BillingModeEnum{
+			value: 7,
+		}, E_8: BillingModeEnum{
+			value: 8,
 		},
 	}
 }

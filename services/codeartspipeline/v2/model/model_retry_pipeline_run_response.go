@@ -9,7 +9,7 @@ import (
 // RetryPipelineRunResponse Response Object
 type RetryPipelineRunResponse struct {
 
-	// 操作是否成功
+	// **参数解释**： 操作是否成功。 **取值范围**： - true：操作成功。 - false：操作失败。
 	Success        *bool `json:"success,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }

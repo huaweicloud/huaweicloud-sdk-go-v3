@@ -18,7 +18,7 @@ type CreateGlobalConnectionBandwidth struct {
 	// 实例描述。不支持 <>。
 	Description *string `json:"description,omitempty"`
 
-	// 功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+	// 全域互联带宽跨境属性。
 	Bordercross bool `json:"bordercross"`
 
 	// 功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽

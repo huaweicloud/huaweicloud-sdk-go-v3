@@ -8,22 +8,22 @@ import (
 
 type PluginPartQueryVoListAgentPluginOutputVoData struct {
 
-	// 唯一ID
+	// **参数解释**： 唯一ID。 **取值范围**： 不涉及。
 	UniqueId *string `json:"unique_id,omitempty"`
 
-	// 插件名
+	// **参数解释**： 扩展插件名称。 **取值范围**： 不涉及。
 	PluginName *string `json:"plugin_name,omitempty"`
 
-	// 版本
+	// **参数解释**： 扩展插件版本号。 **取值范围**： 不涉及。
 	Version *string `json:"version,omitempty"`
 
-	// 租户ID
+	// **参数解释**： 租户ID。 **取值范围**： 不涉及。
 	WorkspaceId *string `json:"workspace_id,omitempty"`
 
-	// 名称
+	// **参数解释**： 定义的插件输出名称。 **取值范围**： 不涉及。
 	OutputKey *string `json:"output_key,omitempty"`
 
-	// 值
+	// **参数解释**： 定义的插件输出内容。 **取值范围**： 不涉及。
 	OutputValue *string `json:"output_value,omitempty"`
 }
 

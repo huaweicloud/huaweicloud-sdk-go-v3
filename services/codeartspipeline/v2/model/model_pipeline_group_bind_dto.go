@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// PipelineGroupBindDto PipelineGroupBindDTO
+// PipelineGroupBindDto **参数解释**： 流水线分组参数详情。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 type PipelineGroupBindDto struct {
 
-	// 分组ID
+	// **参数解释**： 分组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	GroupId string `json:"group_id"`
 
-	// 流水线集合
+	// **参数解释**： 流水线集合。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Pipelines []PipelineGroupBindDtoPipelines `json:"pipelines"`
 }
 

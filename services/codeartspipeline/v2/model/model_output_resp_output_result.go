@@ -8,10 +8,10 @@ import (
 
 type OutputRespOutputResult struct {
 
-	// output名称
+	// **参数解释**： 步骤输出key值。 **取值范围**： 不涉及。
 	Key *string `json:"key,omitempty"`
 
-	// output值
+	// **参数解释**： 步骤输出value值。 **取值范围**： 不涉及。
 	Value *string `json:"value,omitempty"`
 }
 

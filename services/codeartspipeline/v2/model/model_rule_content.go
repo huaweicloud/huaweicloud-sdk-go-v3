@@ -8,13 +8,13 @@ import (
 
 type RuleContent struct {
 
-	// 分组名称
+	// **参数解释**： 分组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	GroupName string `json:"group_name"`
 
-	// 继承后的子策略是否可以修改阈值
+	// **参数解释**： 继承后的子策略是否可以修改阈值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	CanModifyWhenInherit *bool `json:"can_modify_when_inherit,omitempty"`
 
-	// 规则属性列表
+	// **参数解释**： 规则属性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Properties []RuleProperty `json:"properties"`
 }
 

@@ -8,7 +8,7 @@ import (
 
 type PipelineSource struct {
 
-	// 流水线源类型
+	// **参数解释**： 流水线源类型。 **取值范围**： 不涉及。
 	Type *string `json:"type,omitempty"`
 
 	Params *PipelineSourceParam `json:"params,omitempty"`

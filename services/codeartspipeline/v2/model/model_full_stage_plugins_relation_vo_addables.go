@@ -8,13 +8,13 @@ import (
 
 type FullStagePluginsRelationVoAddables struct {
 
-	// 额外属性1
+	// **参数解释**： 额外属性1。 **取值范围**： 不涉及。
 	AdditionalProp1 *bool `json:"additionalProp1,omitempty"`
 
-	// 额外属性2
+	// **参数解释**： 额外属性2。 **取值范围**： 不涉及。
 	AdditionalProp2 *bool `json:"additionalProp2,omitempty"`
 
-	// 额外属性3
+	// **参数解释**： 额外属性3。 **取值范围**： 不涉及。
 	AdditionalProp3 *bool `json:"additionalProp3,omitempty"`
 }
 

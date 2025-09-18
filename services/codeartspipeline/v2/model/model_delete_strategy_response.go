@@ -9,7 +9,7 @@ import (
 // DeleteStrategyResponse Response Object
 type DeleteStrategyResponse struct {
 
-	// 状态
+	// **参数解释**： 是否删除成功。 **取值范围**： - true：删除成功。 - false：删除失败。
 	Status         *bool `json:"status,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }

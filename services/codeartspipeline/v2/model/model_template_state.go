@@ -27,7 +27,7 @@ type TemplateState struct {
 	// 流水线可挂载任务类型
 	DslMethod string `json:"dsl_method"`
 
-	// 任务参数,map类型数据
+	// 任务参数，map类型数据
 	Parameters map[string]interface{} `json:"parameters"`
 
 	// 是否手动执行

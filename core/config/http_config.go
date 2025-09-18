@@ -57,6 +57,8 @@ type HttpConfig struct {
 	// the default value is false
 	IgnoreContentTypeForGetRequest bool
 	SigningAlgorithm               algorithm.SigningAlgorithm
+	// custom extra user-agent value in header
+	UserAgent string
 }
 
 func DefaultHttpConfig() *HttpConfig {
@@ -121,6 +123,11 @@ func (config *HttpConfig) WithHttpRoundTripper(roundTripper http.RoundTripper) *
 
 func (config *HttpConfig) WithProxy(proxy *Proxy) *HttpConfig {
 	config.HttpProxy = proxy
+	return config
+}
+
+func (config *HttpConfig) WithUserAgent(userAgent string) *HttpConfig {
+	config.UserAgent = userAgent
 	return config
 }
 

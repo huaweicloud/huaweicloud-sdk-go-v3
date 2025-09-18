@@ -68,6 +68,8 @@ var (
 		"https://rds.me-east-1.myhuaweicloud.com")
 	AF_NORTH_1 = region.NewRegion("af-north-1",
 		"https://rds.af-north-1.myhuaweicloud.com")
+	CN_NORTH_12 = region.NewRegion("cn-north-12",
+		"https://rds.cn-north-12.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -101,6 +103,7 @@ var staticFields = map[string]*region.Region{
 	"ru-moscow-1":      RU_MOSCOW_1,
 	"me-east-1":        ME_EAST_1,
 	"af-north-1":       AF_NORTH_1,
+	"cn-north-12":      CN_NORTH_12,
 }
 
 var provider = region.DefaultProviderChain("RDS")

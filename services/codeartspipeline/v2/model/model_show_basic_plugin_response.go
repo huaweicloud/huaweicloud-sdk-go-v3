@@ -9,31 +9,34 @@ import (
 // ShowBasicPluginResponse Response Object
 type ShowBasicPluginResponse struct {
 
-	// 类型
+	// **参数解释**： 插件类型。 **取值范围**： 不涉及。
 	Type *string `json:"type,omitempty"`
 
-	// 名称
+	// **参数解释**： 插件名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 展示名
+	// **参数解释**： 插件展示名。 **取值范围**： 不涉及。
 	FriendlyName *string `json:"friendly_name,omitempty"`
 
-	// 业务类型
+	// **参数解释**： 业务类型。 **取值范围**： 不涉及。
 	Category *string `json:"category,omitempty"`
 
-	// 描述
+	// **参数解释**： 插件描述。 **取值范围**： 不涉及。
 	Description *string `json:"description,omitempty"`
 
-	// 版本
+	// **参数解释**： 插件版本。 **取值范围**： 不涉及。
 	Version *string `json:"version,omitempty"`
 
-	// 版本说明
+	// **参数解释**： 插件版本说明。 **取值范围**： 不涉及。
 	VersionDescription *string `json:"version_description,omitempty"`
 
-	// 输入信息
+	// **参数解释**： 输入信息。 **取值范围**： 不涉及。
 	Inputs *[]NewExtensionInputs `json:"inputs,omitempty"`
 
-	// 输出信息
+	// **参数解释**： 数据源绑定信息。 **取值范围**： 不涉及。
+	DataSourceBindings *[]NewExtensionDataSourceBindings `json:"data_source_bindings,omitempty"`
+
+	// **参数解释**： 输出信息。 **取值范围**： 不涉及。
 	Outputs *[]NewExtensionOutputs `json:"outputs,omitempty"`
 
 	Execution      *NewExtensionExecution `json:"execution,omitempty"`

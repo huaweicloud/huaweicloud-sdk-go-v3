@@ -33,7 +33,7 @@ type ShowTemplateDetailResponse struct {
 	// 是否内置模板
 	IsBuildIn *bool `json:"is_build_in,omitempty"`
 
-	// region
+	// 局点
 	Region *string `json:"region,omitempty"`
 
 	// 项目ID

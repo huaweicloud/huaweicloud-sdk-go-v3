@@ -15,19 +15,19 @@ type RegionBandwidthPackageSpecification struct {
 	// RegionID。
 	RemoteRegionId string `json:"remote_region_id"`
 
-	// 互通Region带宽包的规格ID。
+	// 互通区域带宽包的规格ID。
 	Id *string `json:"id,omitempty"`
 
-	// 互通Region带宽包的规格名字。
+	// 互通区域带宽包的规格名称。
 	Name *string `json:"name,omitempty"`
 
-	// 互通Region带宽包的规格英文名字。
+	// 互通区域带宽包的规格英文名称。
 	EnName *string `json:"en_name,omitempty"`
 
-	// 互通Region带宽包的规格西语名字。
+	// 互通区域带宽包的规格西语名称。
 	EsName *string `json:"es_name,omitempty"`
 
-	// 互通Region带宽包的规格葡语名字。
+	// 互通区域带宽包的规格葡语名称。
 	PtName *string `json:"pt_name,omitempty"`
 
 	// 带宽包产品规格列表。

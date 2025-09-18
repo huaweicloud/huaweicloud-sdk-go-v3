@@ -9,7 +9,7 @@ import (
 // RunPipelineSource 流水线运行源参数
 type RunPipelineSource struct {
 
-	// 源类型
+	// **参数解释**： 源类型。 **取值范围**： 目前支持code - 代码源类型。
 	Type *string `json:"type,omitempty"`
 
 	Params *RunPipelineSourceParams `json:"params,omitempty"`

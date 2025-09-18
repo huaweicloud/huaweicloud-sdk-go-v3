@@ -8,34 +8,34 @@ import (
 
 type RuleInstance struct {
 
-	// 规则实例ID
+	// **参数解释**： 规则实例ID。 **取值范围**： 32位字符，由数字和字母组成。
 	Id string `json:"id"`
 
-	// 规则类型ID
+	// **参数解释**： 规则类型。 **取值范围**： 不涉及。
 	Type string `json:"type"`
 
-	// 规则名称
+	// **参数解释**： 规则名称。 **取值范围**： 不涉及。
 	Name string `json:"name"`
 
-	// 规则版本
+	// **参数解释**： 规则版本。 **取值范围**： 不涉及。
 	Version string `json:"version"`
 
-	// 插件ID
+	// **参数解释**： 插件ID。 **取值范围**： 不涉及。
 	PluginId *string `json:"plugin_id,omitempty"`
 
-	// 插件名称
+	// **参数解释**： 插件名称。 **取值范围**： 不涉及。
 	PluginName *string `json:"plugin_name,omitempty"`
 
-	// 插件版本号
+	// **参数解释**： 插件版本号。 **取值范围**： 不涉及。
 	PluginVersion *string `json:"plugin_version,omitempty"`
 
-	// 是否生效
+	// **参数解释**： 规则是否生效。 **取值范围**： - true：规则生效。 - false：规则不生效。
 	IsValid bool `json:"is_valid"`
 
-	// 是否可编辑
+	// **参数解释**： 规则是否可编辑。 **取值范围**： - true：规则可编辑。 - false：规则不可编辑。
 	Editable *bool `json:"editable,omitempty"`
 
-	// 规则属性列表
+	// **参数解释**： 规则实例集合。 **取值范围**： 不涉及。
 	Content []RuleInstanceContent `json:"content"`
 
 	Parent *RuleSet `json:"parent,omitempty"`

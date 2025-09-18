@@ -9,7 +9,7 @@ import (
 // UpdatePipelineInfoResponse Response Object
 type UpdatePipelineInfoResponse struct {
 
-	// 流水线ID
+	// **参数解释**： 流水线ID，可以通过[查询流水线列表](ListPipelines.xml)接口，其中pipelines.pipelineId即为流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
 	PipelineId     *string `json:"pipeline_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

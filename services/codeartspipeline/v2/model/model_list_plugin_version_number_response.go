@@ -9,16 +9,16 @@ import (
 // ListPluginVersionNumberResponse Response Object
 type ListPluginVersionNumberResponse struct {
 
-	// 偏移
+	// **参数解释**： 偏移量，表示从此偏移量开始查询。 **取值范围**： offset大于等于0。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 大小
+	// **参数解释**： 每次查询的条目数量。 **取值范围**： 大于等于0。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 总数
+	// **参数解释**： 本次查询的静态规则总数。 **取值范围**： 不涉及。
 	Total *int32 `json:"total,omitempty"`
 
-	// 结果集
+	// **参数解释**： 结果集。 **取值范围**： 不涉及。
 	Data           *[]string `json:"data,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

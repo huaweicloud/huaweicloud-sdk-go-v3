@@ -12,6 +12,8 @@ type ListAreasResponse struct {
 	// 请求ID。
 	RequestId string `json:"request_id"`
 
+	PageInfo *PageInfo `json:"page_info,omitempty"`
+
 	// 大区列表。
 	Areas          []Area `json:"areas"`
 	HttpStatusCode int    `json:"-"`

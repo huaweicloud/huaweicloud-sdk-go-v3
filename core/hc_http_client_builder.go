@@ -27,6 +27,7 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/region"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdkerr"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"reflect"
 	"strings"
 )
@@ -92,6 +93,10 @@ func (builder *HcHttpClientBuilder) WithErrorHandler(errorHandler sdkerr.ErrorHa
 func (builder *HcHttpClientBuilder) Build() *HcHttpClient {
 	if builder.httpConfig == nil {
 		builder.httpConfig = config.DefaultHttpConfig()
+	}
+
+	if builder.httpConfig.UserAgent == "" {
+		builder.httpConfig.UserAgent = utils.GetEnvInfoString()
 	}
 
 	defaultHttpClient := impl.NewDefaultHttpClient(builder.httpConfig)

@@ -48,6 +48,7 @@ const (
 	contentType     = "Content-Type"
 	applicationXml  = "application/xml"
 	applicationBson = "application/bson"
+	usdkValue       = "huaweicloud-usdk-go/3.0"
 )
 
 type HcHttpClient struct {
@@ -215,10 +216,13 @@ func (hc *HcHttpClient) fillExtraHeaders(builder *request.HttpRequestBuilder, ex
 	}
 
 	// user-agent
-	uaValue := "huaweicloud-usdk-go/3.0"
+	uaValue := usdkValue
+	if hc.httpClient.GetHttpConfig().UserAgent != "" {
+		uaValue = uaValue + "; " + hc.httpClient.GetHttpConfig().UserAgent
+	}
 	for k, v := range headers {
 		if strings.ToLower(k) == strings.ToLower(userAgent) {
-			uaValue = uaValue + ";" + v
+			uaValue = uaValue + "; " + v
 		} else {
 			builder.AddHeaderParam(k, v)
 		}

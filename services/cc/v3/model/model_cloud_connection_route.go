@@ -30,11 +30,11 @@ type CloudConnectionRoute struct {
 	// RegionID。
 	RegionId string `json:"region_id"`
 
+	// 目的地址。
+	Destination string `json:"destination"`
+
 	// 路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
 	Type *CloudConnectionRouteType `json:"type,omitempty"`
-
-	// 目的地址。
-	Destination *string `json:"destination,omitempty"`
 }
 
 func (o CloudConnectionRoute) String() string {

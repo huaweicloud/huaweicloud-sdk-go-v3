@@ -9,7 +9,7 @@ import (
 // CreatePipelineByTemplateResponse Response Object
 type CreatePipelineByTemplateResponse struct {
 
-	// 实例ID
+	// **参数解释**： 实例ID。 **取值范围**： 32位字符，由数字和字母组成。
 	TaskId         *string `json:"task_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -15,10 +15,10 @@ type SiteGroupReferenceInfo struct {
 	// 实例描述。不支持 <>。
 	Description *string `json:"description,omitempty"`
 
-	// 功能说明：站点分组自定义的英文名字。 取值范围：1-255个字符。
+	// 功能说明：站点分组自定义的英文名称。 取值范围：1-255个字符。
 	NameEn *string `json:"name_en,omitempty"`
 
-	// 功能说明：站点分组自定义的中文名字。 取值范围：1-64个字符。
+	// 功能说明：站点分组自定义的中文名称。 取值范围：1-64个字符。
 	NameCn *string `json:"name_cn,omitempty"`
 }
 

@@ -36,10 +36,10 @@ type ShowPipleineStatusResponse struct {
 	// 执行耗时
 	ElapsedTime *string `json:"elapsed_time,omitempty"`
 
-	// 流水线运行状态
+	// 流水线运行状态。取值及含义：waiting：等待；running：执行中；verifying：待审核；suspending：挂起；completed：完成。
 	Status *string `json:"status,omitempty"`
 
-	// 流水线执行结果
+	// 流水线执行结果。取值及含义：success：成功；error：失败；aborted：终止
 	Outcome *string `json:"outcome,omitempty"`
 
 	// 流水线详情页地址

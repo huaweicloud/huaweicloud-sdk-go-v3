@@ -9,7 +9,7 @@ import (
 // ShowAutoEnlargePolicyResponse Response Object
 type ShowAutoEnlargePolicyResponse struct {
 
-	// 自动扩容开关。 - on：开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。 默认值为on。
+	// **参数解释：** 自动扩容开关。 **取值范围：** - on:开启磁盘自动扩容策略。 - off: 关闭磁盘自动扩容策略。
 	SwitchOption *string `json:"switch_option,omitempty"`
 
 	Policy         *DiskAutoExpansionPolicy `json:"policy,omitempty"`

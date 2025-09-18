@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// CentralNetworkPolicyStateEnum 中心网络策略状态。 - AVAILABLE (可用) - CANCELING (取消中) - APPLYING (应用中) - FAILED (失败) - DELETED (已刪除)
+// CentralNetworkPolicyStateEnum 中心网络策略状态。 - AVAILABLE (可用) - CANCELING (取消中) - APPLYING (应用中) - FAILED (失败) - DELETED (已删除)
 type CentralNetworkPolicyStateEnum struct {
 	value string
 }

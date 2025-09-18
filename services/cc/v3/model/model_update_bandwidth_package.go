@@ -21,8 +21,10 @@ type UpdateBandwidthPackage struct {
 	// 带宽包实例中的带宽值。
 	Bandwidth *int32 `json:"bandwidth,omitempty"`
 
-	// 带宽包实例在大陆站或国际站的计费方式： - 5：大陆站按95方式计费 - 6：国际站按95方式计费
+	// 带宽包实例在大陆站或国际站的计费方式： - 1：大陆站包周期 - 2：国际站包周期 - 5：大陆站按95方式计费 - 6：国际站按95方式计费
 	BillingMode *UpdateBandwidthPackageBillingMode `json:"billing_mode,omitempty"`
+
+	PrepaidOptions *UpdatePrepaidOptions `json:"prepaid_options,omitempty"`
 }
 
 func (o UpdateBandwidthPackage) String() string {
@@ -39,13 +41,19 @@ type UpdateBandwidthPackageBillingMode struct {
 }
 
 type UpdateBandwidthPackageBillingModeEnum struct {
+	E_1 UpdateBandwidthPackageBillingMode
+	E_2 UpdateBandwidthPackageBillingMode
 	E_5 UpdateBandwidthPackageBillingMode
 	E_6 UpdateBandwidthPackageBillingMode
 }
 
 func GetUpdateBandwidthPackageBillingModeEnum() UpdateBandwidthPackageBillingModeEnum {
 	return UpdateBandwidthPackageBillingModeEnum{
-		E_5: UpdateBandwidthPackageBillingMode{
+		E_1: UpdateBandwidthPackageBillingMode{
+			value: 1,
+		}, E_2: UpdateBandwidthPackageBillingMode{
+			value: 2,
+		}, E_5: UpdateBandwidthPackageBillingMode{
 			value: 5,
 		}, E_6: UpdateBandwidthPackageBillingMode{
 			value: 6,

@@ -2800,6 +2800,27 @@ func (c *RdsClient) ShowStorageUsedSpaceInvoker(request *model.ShowStorageUsedSp
 	return &ShowStorageUsedSpaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowTaskDetail 获取任务信息
+//
+// 获取任务信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowTaskDetail(request *model.ShowTaskDetailRequest) (*model.ShowTaskDetailResponse, error) {
+	requestDef := GenReqDefForShowTaskDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTaskDetailResponse), nil
+	}
+}
+
+// ShowTaskDetailInvoker 获取任务信息
+func (c *RdsClient) ShowTaskDetailInvoker(request *model.ShowTaskDetailRequest) *ShowTaskDetailInvoker {
+	requestDef := GenReqDefForShowTaskDetail()
+	return &ShowTaskDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowTdeStatus 根据实例id查询sqlserver TDE状态
 //
 // 根据实例id查询sqlserver TDE状态
@@ -4673,6 +4694,27 @@ func (c *RdsClient) UpdateReadWeight(request *model.UpdateReadWeightRequest) (*m
 func (c *RdsClient) UpdateReadWeightInvoker(request *model.UpdateReadWeightRequest) *UpdateReadWeightInvoker {
 	requestDef := GenReqDefForUpdateReadWeight()
 	return &UpdateReadWeightInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstancesNoIndexTables 查询无索引表诊断数据
+//
+// 查询无索引表诊断数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListInstancesNoIndexTables(request *model.ListInstancesNoIndexTablesRequest) (*model.ListInstancesNoIndexTablesResponse, error) {
+	requestDef := GenReqDefForListInstancesNoIndexTables()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstancesNoIndexTablesResponse), nil
+	}
+}
+
+// ListInstancesNoIndexTablesInvoker 查询无索引表诊断数据
+func (c *RdsClient) ListInstancesNoIndexTablesInvoker(request *model.ListInstancesNoIndexTablesRequest) *ListInstancesNoIndexTablesInvoker {
+	requestDef := GenReqDefForListInstancesNoIndexTables()
+	return &ListInstancesNoIndexTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AllowSqlserverDbUserPrivilege 授权数据库帐号

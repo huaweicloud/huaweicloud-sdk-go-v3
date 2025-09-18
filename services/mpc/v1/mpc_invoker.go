@@ -229,54 +229,6 @@ func (i *ListEditingJobInvoker) Invoke() (*model.ListEditingJobResponse, error) 
 	}
 }
 
-type CreateEncryptTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateEncryptTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateEncryptTaskInvoker) Invoke() (*model.CreateEncryptTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateEncryptTaskResponse), nil
-	}
-}
-
-type DeleteEncryptTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteEncryptTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteEncryptTaskInvoker) Invoke() (*model.DeleteEncryptTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteEncryptTaskResponse), nil
-	}
-}
-
-type ListEncryptTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListEncryptTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListEncryptTaskInvoker) Invoke() (*model.ListEncryptTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListEncryptTaskResponse), nil
-	}
-}
-
 type CreateExtractTaskInvoker struct {
 	*invoker.BaseInvoker
 }

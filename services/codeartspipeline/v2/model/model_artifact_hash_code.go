@@ -8,10 +8,10 @@ import (
 
 type ArtifactHashCode struct {
 
-	// 哈希算法
+	// **参数解释**： 哈希算法。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	HashType *string `json:"hash_type,omitempty"`
 
-	// 哈希值
+	// **参数解释**： 哈希值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	HashValue *string `json:"hash_value,omitempty"`
 }
 

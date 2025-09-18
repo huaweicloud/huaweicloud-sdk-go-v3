@@ -12,9 +12,6 @@ type UpdateLtsInfoConfigRequestBody struct {
 	Enabled *bool `json:"enabled,omitempty"`
 
 	LtsIdInfo *LtsIdInfo `json:"ltsIdInfo,omitempty"`
-
-	// 该参数废弃，请忽略
-	Enabale *bool `json:"enabale,omitempty"`
 }
 
 func (o UpdateLtsInfoConfigRequestBody) String() string {

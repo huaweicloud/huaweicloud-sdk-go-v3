@@ -9,10 +9,10 @@ import (
 // CreateStrategyResponse Response Object
 type CreateStrategyResponse struct {
 
-	// 状态
+	// **参数解释**： 是否创建成功。 **取值范围**： - true：创建成功。 - false：创建失败。
 	Status *bool `json:"status,omitempty"`
 
-	// 策略ID
+	// **参数解释**： 策略ID **取值范围**： 32位字符，由数字和字母组成。
 	RuleSetId      *string `json:"rule_set_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

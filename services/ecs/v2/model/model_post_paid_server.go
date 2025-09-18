@@ -21,7 +21,7 @@ type PostPaidServer struct {
 	// 是否支持随机多AZ部署。  - “true”：批量创建的ecs部署在多个AZ上 - “false”：批量创建的ecs部署在单个AZ上  > 说明： >  > 当availability_zone为空时该字段生效。
 	BatchCreateInMultiAz *bool `json:"batch_create_in_multi_az,omitempty"`
 
-	// 创建云服务器数量。  约束：  - 不传该字段时默认取值为1。 - 租户的配额足够时，最大值为500。
+	// 创建云服务器数量。  约束：  - 不传该字段时默认取值为1。 - 租户的配额足够时，最大值为100。
 	Count *int32 `json:"count,omitempty"`
 
 	// 云服务器对应数据盘相关配置。每一个数据结构代表一块待创建的数据盘。 约束：目前新创建的弹性云服务器最多可挂载23块数据盘。

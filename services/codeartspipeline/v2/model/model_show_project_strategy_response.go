@@ -9,36 +9,45 @@ import (
 // ShowProjectStrategyResponse Response Object
 type ShowProjectStrategyResponse struct {
 
-	// 规则模版实例ID
+	// **参数解释**： 规则模板实例ID。 **取值范围**： 32位字符，由数字和字母组成。
 	Id *string `json:"id,omitempty"`
 
-	// 规则模版实例名称
+	// **参数解释**： 规则模板实例名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 类型
+	// **参数解释**： 规则模板类型。 **取值范围**： 不涉及。
 	Type *string `json:"type,omitempty"`
 
-	// 版本
+	// **参数解释**： 规则模板策略。 **取值范围**： 不涉及。
 	Version *string `json:"version,omitempty"`
 
-	// 创建人
+	// **参数解释**： 策略创建人。 **取值范围**： 不涉及。
 	Creator *string `json:"creator,omitempty"`
 
-	// 创建时间
+	// **参数解释**： 策略创建时间。 **取值范围**： 不涉及。
 	CreateTime *string `json:"create_time,omitempty"`
 
-	// 最近更新人
+	// **参数解释**： 策略最近更新人。 **取值范围**： 不涉及。
 	Updater *string `json:"updater,omitempty"`
 
-	// 最近更新时间
+	// **参数解释**： 策略最近更新时间。 **取值范围**： 不涉及。
 	UpdateTime *string `json:"update_time,omitempty"`
 
-	// 是否生效
+	// **参数解释**： 策略是否生效。 **取值范围**： - true：策略生效。 - false：策略不生效。
 	IsValid *bool `json:"is_valid,omitempty"`
 
-	// 规则实例集合
-	RuleInstances  *[]RuleInstance `json:"rule_instances,omitempty"`
-	HttpStatusCode int             `json:"-"`
+	// **参数解释**： 规则实例集合。 **取值范围**： 不涉及。
+	RuleInstances *[]RuleInstance `json:"rule_instances,omitempty"`
+
+	// **参数解释**： 规则实例生效级别。 **取值范围**： 不涉及。
+	Level *string `json:"level,omitempty"`
+
+	// **参数解释**： 规则实例是否系统级。 **取值范围**： - true：规则实例是系统级。 - false：规则实例不是系统级。
+	IsPublic *bool `json:"is_public,omitempty"`
+
+	// **参数解释**： 规则实例是1.0的数据。 **取值范围**： - true：规则实例是1.0的数据。 - false：规则实例是1.0的数据。
+	IsLegacy       *bool `json:"is_legacy,omitempty"`
+	HttpStatusCode int   `json:"-"`
 }
 
 func (o ShowProjectStrategyResponse) String() string {

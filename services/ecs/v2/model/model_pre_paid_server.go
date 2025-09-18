@@ -38,7 +38,7 @@ type PrePaidServer struct {
 
 	Publicip *PrePaidServerPublicip `json:"publicip,omitempty"`
 
-	// 创建云服务器数量。  约束：  - 不传该字段时默认取值为1。 - 租户的配额足够时，最大值为500。
+	// 创建云服务器数量。  约束：  - 不传该字段时默认取值为1。 - 租户的配额足够时，最大值为100。
 	Count *int32 `json:"count,omitempty"`
 
 	// 当批量创建弹性云服务器时，云服务器名称是否允许重名，当count大于1的时候该参数生效。默认为True。  - True，表示允许重名。 - False，表示不允许重名。

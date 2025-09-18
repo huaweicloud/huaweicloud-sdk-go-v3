@@ -8,7 +8,8 @@ import (
 
 // DeleteCloudConnectionResponse Response Object
 type DeleteCloudConnectionResponse struct {
-	HttpStatusCode int `json:"-"`
+	XRequestId     *string `json:"x-request-id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteCloudConnectionResponse) String() string {

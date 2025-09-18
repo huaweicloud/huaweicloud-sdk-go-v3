@@ -7,9 +7,9 @@ import (
 )
 
 type AreaBandwidthPackageSpecification struct {
-	LocalAreaId *AreaIdDef `json:"local_area_id"`
+	LocalAreaId *LocalAreaIdDef `json:"local_area_id"`
 
-	RemoteAreaId *AreaIdDef `json:"remote_area_id"`
+	RemoteAreaId *RemoteAreaIdDef `json:"remote_area_id"`
 
 	// 互通大区带宽包的规格ID。
 	Id string `json:"id"`

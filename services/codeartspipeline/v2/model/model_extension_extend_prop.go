@@ -8,19 +8,22 @@ import (
 
 type ExtensionExtendProp struct {
 
-	// API 选项
+	// **参数解释**： API选项。 **取值范围**： 不涉及。
 	ApiOptions *string `json:"api_options,omitempty"`
 
-	// API 类型
+	// **参数解释**： API类型。 **取值范围**： 不涉及。
 	ApiType *string `json:"api_type,omitempty"`
 
-	// 选项
+	// **参数解释**： 显示占位符。 **取值范围**： 不涉及。
+	ShowPlaceholder *string `json:"show_placeholder,omitempty"`
+
+	// **参数解释**： 选项。 **取值范围**： 不涉及。
 	Options *string `json:"options,omitempty"`
 
-	// 禁用条件
+	// **参数解释**： 禁用条件。 **取值范围**： 不涉及。
 	DisabledConditions *string `json:"disabled_conditions,omitempty"`
 
-	// 可见条件
+	// **参数解释**： 可见条件。 **取值范围**： 不涉及。
 	VisibleConditions *string `json:"visible_conditions,omitempty"`
 }
 

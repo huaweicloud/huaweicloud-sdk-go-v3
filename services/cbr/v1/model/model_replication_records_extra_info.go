@@ -22,7 +22,7 @@ type ReplicationRecordsExtraInfo struct {
 	AutoTrigger *bool `json:"auto_trigger,omitempty"`
 
 	// 目标端的存储库id
-	DestinatioVaultId *string `json:"destinatio_vault_id,omitempty"`
+	DestinationVaultId *string `json:"destination_vault_id,omitempty"`
 }
 
 func (o ReplicationRecordsExtraInfo) String() string {

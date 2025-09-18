@@ -28,6 +28,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"net/http"
 	"net/http/httptest"
+	"strings"
 	"testing"
 )
 
@@ -40,7 +41,10 @@ func TestHcHttpClient_SyncInvokeWithExtraHeaders(t *testing.T) {
 		_, err := fmt.Fprintln(w, "{}")
 		assert.Nil(t, err)
 		// assert custom user-agent
-		assert.Equal(t, "huaweicloud-usdk-go/3.0;test-user-agent", r.Header.Get("User-Agent"))
+		ua := r.Header.Get("User-Agent")
+		assert.True(t, strings.Count(ua, ";") >= 2)
+		assert.True(t, strings.HasPrefix(ua, "huaweicloud-usdk-go/3.0"))
+		assert.True(t, strings.HasSuffix(ua, "test-user-agent"))
 		// assert client header
 		assert.Equal(t, "test-value-1", r.Header.Get("test-header-1"))
 		// assert request header override client header
@@ -72,6 +76,40 @@ func TestHcHttpClient_SyncInvokeWithExtraHeaders(t *testing.T) {
 		"test-header-2": "test-value-override",
 		"test-header-3": "test-value-3"}
 	resp, err := client.SyncInvokeWithExtraHeaders(req, reqDef, exc, extraHeaders)
+	assert.Nil(t, err)
+	s, ok := resp.(*testStruct)
+	assert.True(t, ok)
+	assert.Equal(t, 200, s.HttpStatusCode)
+}
+
+func TestHcHttpClient_SyncInvoke(t *testing.T) {
+	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		_, err := fmt.Fprintln(w, "{}")
+		assert.Nil(t, err)
+		// assert custom user-agent
+		ua := r.Header.Get("User-Agent")
+		assert.Equal(t, "huaweicloud-usdk-go/3.0; custom-user-agent", ua)
+	}))
+	defer ts.Close()
+
+	client, err := NewHcHttpClientBuilder().
+		WithHttpConfig(config.DefaultHttpConfig().WithUserAgent("custom-user-agent")).
+		WithEndpoints([]string{ts.URL}).
+		WithCredential(&basic.Credentials{AK: "test", SK: "test"}).
+		SafeBuild()
+	assert.Nil(t, err)
+
+	reqDef := def.NewHttpRequestDefBuilder().
+		WithMethod("GET").WithPath("/").
+		WithContentType("application/json").
+		WithResponse(&testStruct{}).
+		Build()
+	req := &testStruct{}
+	exc := &exchange.SdkExchange{
+		ApiReference: &exchange.ApiReference{},
+		Attributes:   make(map[string]interface{}),
+	}
+	resp, err := client.SyncInvoke(req, reqDef, exc)
 	assert.Nil(t, err)
 	s, ok := resp.(*testStruct)
 	assert.True(t, ok)

@@ -8,10 +8,10 @@ import (
 
 type StepRunInputs struct {
 
-	// 输入参数名
+	// **参数解释**： 输入参数名。 **取值范围**： 不涉及。
 	Key *string `json:"key,omitempty"`
 
-	// 输入参数值
+	// **参数解释**： 输入参数值。 **取值范围**： 不涉及。
 	Value *interface{} `json:"value,omitempty"`
 }
 

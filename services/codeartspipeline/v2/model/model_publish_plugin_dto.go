@@ -8,13 +8,13 @@ import (
 
 type PublishPluginDto struct {
 
-	// 插件名
+	// **参数解释**： 插件名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	PluginName string `json:"plugin_name"`
 
-	// 版本
+	// **参数解释**： 版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Version string `json:"version"`
 
-	// 发布商ID
+	// **参数解释**： 发布商ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	PublisherUniqueId string `json:"publisher_unique_id"`
 }
 

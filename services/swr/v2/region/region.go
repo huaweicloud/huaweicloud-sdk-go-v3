@@ -64,6 +64,10 @@ var (
 		"https://swr-api.eu-west-0.myhuaweicloud.com")
 	AP_SOUTHEAST_5 = region.NewRegion("ap-southeast-5",
 		"https://swr-api.ap-southeast-5.myhuaweicloud.com")
+	CN_EAST_5 = region.NewRegion("cn-east-5",
+		"https://swr-api.cn-east-5.myhuaweicloud.com")
+	AF_NORTH_1 = region.NewRegion("af-north-1",
+		"https://swr-api.af-north-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -95,6 +99,8 @@ var staticFields = map[string]*region.Region{
 	"me-east-1":        ME_EAST_1,
 	"eu-west-0":        EU_WEST_0,
 	"ap-southeast-5":   AP_SOUTHEAST_5,
+	"cn-east-5":        CN_EAST_5,
+	"af-north-1":       AF_NORTH_1,
 }
 
 var provider = region.DefaultProviderChain("SWR")
