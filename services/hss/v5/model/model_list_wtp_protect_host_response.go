@@ -9,10 +9,10 @@ import (
 // ListWtpProtectHostResponse Response Object
 type ListWtpProtectHostResponse struct {
 
-	// data list
+	// **参数解释**: 网页防篡改防护列表信息 **取值范围**: 最小值0，最大值200
 	DataList *[]WtpProtectHostResponseInfo `json:"data_list,omitempty"`
 
-	// total number of WTP protected servers
+	// **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
 	TotalNum       *int32 `json:"total_num,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

@@ -9,13 +9,13 @@ import (
 type StartLogsReq struct {
 
 	// 委托名称，委托给CSS，允许CSS调用您的其他云服务。
-	Agency string `json:"agency"`
+	Agency *string `json:"agency,omitempty"`
 
 	// 日志在OBS桶中的备份路径。
-	LogBasePath string `json:"log_base_path"`
+	LogBasePath *string `json:"log_base_path,omitempty"`
 
 	// 用于存储日志的OBS桶的桶名。
-	LogBucket string `json:"log_bucket"`
+	LogBucket *string `json:"log_bucket,omitempty"`
 
 	// 集群日志是否开启自动备份。
 	AutoEnable *bool `json:"auto_enable,omitempty"`

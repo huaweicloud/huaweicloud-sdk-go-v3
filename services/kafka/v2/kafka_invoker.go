@@ -405,22 +405,6 @@ func (i *DeleteKafkaUserClientQuotaTaskInvoker) Invoke() (*model.DeleteKafkaUser
 	}
 }
 
-type EnableDnsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *EnableDnsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *EnableDnsInvoker) Invoke() (*model.EnableDnsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.EnableDnsResponse), nil
-	}
-}
-
 type ListAvailableZonesInvoker struct {
 	*invoker.BaseInvoker
 }

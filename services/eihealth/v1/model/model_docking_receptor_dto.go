@@ -23,6 +23,11 @@ type DockingReceptorDto struct {
 
 	// 增加氢原子
 	AddHydrogen *bool `json:"add_hydrogen,omitempty"`
+
+	// **参数解释**： 对接类型。 **约束限制**： 不支持 **取值范围**： - BLIND_DOCKING：全局对接 - POCKET_DOCKING：口袋对接 **默认取值**： POCKET_DOCKING
+	DockingType *string `json:"docking_type,omitempty"`
+
+	ReferenceFile *ReferenceLigandFile `json:"reference_file,omitempty"`
 }
 
 func (o DockingReceptorDto) String() string {

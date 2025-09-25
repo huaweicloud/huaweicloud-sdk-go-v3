@@ -17,6 +17,9 @@ type CreateClusterInstanceNicsBody struct {
 
 	// 安全组ID。
 	SecurityGroupId string `json:"securityGroupId"`
+
+	// 节点IP信息，在指定IP创建集群时配置。
+	Ips *[]string `json:"ips,omitempty"`
 }
 
 func (o CreateClusterInstanceNicsBody) String() string {

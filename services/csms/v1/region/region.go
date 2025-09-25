@@ -66,6 +66,8 @@ var (
 		"https://kms.af-north-1.myhuaweicloud.com")
 	CN_SOUTHWEST_3 = region.NewRegion("cn-southwest-3",
 		"https://kms.cn-southwest-3.myhuaweicloud.com")
+	AF_SOUTH_1 = region.NewRegion("af-south-1",
+		"https://kms.af-south-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -98,6 +100,7 @@ var staticFields = map[string]*region.Region{
 	"cn-north-11":      CN_NORTH_11,
 	"af-north-1":       AF_NORTH_1,
 	"cn-southwest-3":   CN_SOUTHWEST_3,
+	"af-south-1":       AF_SOUTH_1,
 }
 
 var provider = region.DefaultProviderChain("CSMS")

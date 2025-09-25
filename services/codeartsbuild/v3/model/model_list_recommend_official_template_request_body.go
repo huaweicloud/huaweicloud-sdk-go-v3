@@ -10,10 +10,10 @@ import (
 type ListRecommendOfficialTemplateRequestBody struct {
 
 	// 代码仓地址
-	GitUrl *string `json:"git_url,omitempty"`
+	GitUrl string `json:"git_url"`
 
 	// 代码仓分支名称你
-	Branch *string `json:"branch,omitempty"`
+	Branch string `json:"branch"`
 
 	// 代码仓TAG
 	Tags *string `json:"tags,omitempty"`

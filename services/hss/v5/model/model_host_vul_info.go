@@ -77,7 +77,7 @@ type HostVulInfo struct {
 	// **参数解释**: 该漏洞不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
 	DisabledOperateTypes *[]HostVulInfoDisabledOperateTypes `json:"disabled_operate_types,omitempty"`
 
-	// **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急  - High     : 高  - Medium   : 中  - Low      : 低
+	// **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
 	RepairPriority *string `json:"repair_priority,omitempty"`
 }
 

@@ -9,7 +9,9 @@ import (
 // ShowGetLogSettingResponse Response Object
 type ShowGetLogSettingResponse struct {
 	LogConfiguration *LogConfiguration `json:"logConfiguration,omitempty"`
-	HttpStatusCode   int               `json:"-"`
+
+	RealTimeLogCollectRecord *RealTimeLogCollect `json:"realTimeLogCollectRecord,omitempty"`
+	HttpStatusCode           int                 `json:"-"`
 }
 
 func (o ShowGetLogSettingResponse) String() string {

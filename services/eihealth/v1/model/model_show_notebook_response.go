@@ -15,6 +15,12 @@ type ShowNotebookResponse struct {
 	// notebook名称
 	Name *string `json:"name,omitempty"`
 
+	// **参数解释**： 空间ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	EihealthProjectId *string `json:"eihealth_project_id,omitempty"`
+
+	// **参数解释**： 空间名称。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	EihealthProjectName *string `json:"eihealth_project_name,omitempty"`
+
 	// notebook描述
 	Description *string `json:"description,omitempty"`
 

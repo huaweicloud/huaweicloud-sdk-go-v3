@@ -245,6 +245,22 @@ func (i *CreateAppInvoker) Invoke() (*model.CreateAppResponse, error) {
 	}
 }
 
+type CreateAssetResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAssetResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAssetResourceInvoker) Invoke() (*model.CreateAssetResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAssetResourceResponse), nil
+	}
+}
+
 type CreateClusterJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -469,6 +485,22 @@ func (i *CreateLabelInvoker) Invoke() (*model.CreateLabelResponse, error) {
 	}
 }
 
+type CreateMessageAdditionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateMessageAdditionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateMessageAdditionsInvoker) Invoke() (*model.CreateMessageAdditionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateMessageAdditionsResponse), nil
+	}
+}
+
 type CreateMolBatchDownloadTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -658,6 +690,38 @@ func (i *DeleteAppInvoker) Invoke() (*model.DeleteAppResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteAppResponse), nil
+	}
+}
+
+type DeleteAssetResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAssetResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAssetResourceInvoker) Invoke() (*model.DeleteAssetResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAssetResourceResponse), nil
+	}
+}
+
+type DeleteChatInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteChatInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteChatInvoker) Invoke() (*model.DeleteChatResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteChatResponse), nil
 	}
 }
 
@@ -1109,6 +1173,22 @@ func (i *ListAssetInvoker) Invoke() (*model.ListAssetResponse, error) {
 	}
 }
 
+type ListAssetResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAssetResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAssetResourceInvoker) Invoke() (*model.ListAssetResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAssetResourceResponse), nil
+	}
+}
+
 type ListBaseModelInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1154,6 +1234,22 @@ func (i *ListCceClusterInvoker) Invoke() (*model.ListCceClusterResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListCceClusterResponse), nil
+	}
+}
+
+type ListChatInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListChatInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListChatInvoker) Invoke() (*model.ListChatResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListChatResponse), nil
 	}
 }
 
@@ -1285,19 +1381,19 @@ func (i *ListDrugModelInvoker) Invoke() (*model.ListDrugModelResponse, error) {
 	}
 }
 
-type ListDrugModelResourceInvoker struct {
+type ListDrugModelResource1Invoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListDrugModelResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ListDrugModelResource1Invoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ListDrugModelResourceInvoker) Invoke() (*model.ListDrugModelResourceResponse, error) {
+func (i *ListDrugModelResource1Invoker) Invoke() (*model.ListDrugModelResource1Response, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListDrugModelResourceResponse), nil
+		return result.(*model.ListDrugModelResource1Response), nil
 	}
 }
 
@@ -1877,6 +1973,22 @@ func (i *ShowBucketStorageInvoker) Invoke() (*model.ShowBucketStorageResponse, e
 	}
 }
 
+type ShowChatInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowChatInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowChatInvoker) Invoke() (*model.ShowChatResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowChatResponse), nil
+	}
+}
+
 type ShowClusteringJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2402,6 +2514,22 @@ func (i *UpdateAppInvoker) Invoke() (*model.UpdateAppResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateAppResponse), nil
+	}
+}
+
+type UpdateChatInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateChatInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateChatInvoker) Invoke() (*model.UpdateChatResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateChatResponse), nil
 	}
 }
 

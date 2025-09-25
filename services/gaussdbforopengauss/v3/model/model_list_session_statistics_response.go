@@ -13,7 +13,7 @@ type ListSessionStatisticsResponse struct {
 	Total *int32 `json:"total,omitempty"`
 
 	// **参数解释**: 会话统计列表。
-	Statistics     *[]DimensionListResult `json:"statistics,omitempty"`
+	StatisticsList *[]DimensionListResult `json:"statistics_list,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }
 

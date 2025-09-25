@@ -12,7 +12,7 @@ type ChangePasswordComplexityStatusRequestBody struct {
 	// 是否是全量操作。每次最多处理1000个主机。
 	OperateAll *bool `json:"operate_all,omitempty"`
 
-	// 主机id列表。operate_all=ture时不处理host_ids参数。
+	// 主机id列表。operate_all=true时不处理host_ids参数。
 	HostIds *[]string `json:"host_ids,omitempty"`
 }
 

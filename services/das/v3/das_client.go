@@ -274,6 +274,27 @@ func (c *DasClient) ChangeTransactionSwitchStatusInvoker(request *model.ChangeTr
 	return &ChangeTransactionSwitchStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckCredential 测试AK/SK
+//
+// 测试AK/SK，测试用户AK/SK能否正常访问OBS桶。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) CheckCredential(request *model.CheckCredentialRequest) (*model.CheckCredentialResponse, error) {
+	requestDef := GenReqDefForCheckCredential()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckCredentialResponse), nil
+	}
+}
+
+// CheckCredentialInvoker 测试AK/SK
+func (c *DasClient) CheckCredentialInvoker(request *model.CheckCredentialRequest) *CheckCredentialInvoker {
+	requestDef := GenReqDefForCheckCredential()
+	return &CheckCredentialInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateHealthReportTask 创建实例健康诊断任务
 //
 // 创建实例健康诊断任务。
@@ -1070,6 +1091,27 @@ func (c *DasClient) RegisterDbUserInvoker(request *model.RegisterDbUserRequest) 
 	return &RegisterDbUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SaveCredential 保存AK/SK
+//
+// 保存AK/SK，用于后台任务访问OBS上传实例诊断报告
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) SaveCredential(request *model.SaveCredentialRequest) (*model.SaveCredentialResponse, error) {
+	requestDef := GenReqDefForSaveCredential()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SaveCredentialResponse), nil
+	}
+}
+
+// SaveCredentialInvoker 保存AK/SK
+func (c *DasClient) SaveCredentialInvoker(request *model.SaveCredentialRequest) *SaveCredentialInvoker {
+	requestDef := GenReqDefForSaveCredential()
+	return &SaveCredentialInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetThresholdForMetric 设置指标阈值
 //
 // 设置指标阈值
@@ -1153,6 +1195,27 @@ func (c *DasClient) ShowFullDeadLockSwitch(request *model.ShowFullDeadLockSwitch
 func (c *DasClient) ShowFullDeadLockSwitchInvoker(request *model.ShowFullDeadLockSwitchRequest) *ShowFullDeadLockSwitchInvoker {
 	requestDef := GenReqDefForShowFullDeadLockSwitch()
 	return &ShowFullDeadLockSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHealthReportSettings 查看实例诊断报告设置
+//
+// 查看实例诊断报告设置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowHealthReportSettings(request *model.ShowHealthReportSettingsRequest) (*model.ShowHealthReportSettingsResponse, error) {
+	requestDef := GenReqDefForShowHealthReportSettings()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHealthReportSettingsResponse), nil
+	}
+}
+
+// ShowHealthReportSettingsInvoker 查看实例诊断报告设置
+func (c *DasClient) ShowHealthReportSettingsInvoker(request *model.ShowHealthReportSettingsRequest) *ShowHealthReportSettingsInvoker {
+	requestDef := GenReqDefForShowHealthReportSettings()
+	return &ShowHealthReportSettingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowInstanceHealthReport 获取实例健康诊断报告内容
@@ -1431,6 +1494,27 @@ func (c *DasClient) UpdateDbUser(request *model.UpdateDbUserRequest) (*model.Upd
 func (c *DasClient) UpdateDbUserInvoker(request *model.UpdateDbUserRequest) *UpdateDbUserInvoker {
 	requestDef := GenReqDefForUpdateDbUser()
 	return &UpdateDbUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateHealthReportSettings 更新实例诊断报告设置
+//
+// 更新实例诊断报告设置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) UpdateHealthReportSettings(request *model.UpdateHealthReportSettingsRequest) (*model.UpdateHealthReportSettingsResponse, error) {
+	requestDef := GenReqDefForUpdateHealthReportSettings()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateHealthReportSettingsResponse), nil
+	}
+}
+
+// UpdateHealthReportSettingsInvoker 更新实例诊断报告设置
+func (c *DasClient) UpdateHealthReportSettingsInvoker(request *model.UpdateHealthReportSettingsRequest) *UpdateHealthReportSettingsInvoker {
+	requestDef := GenReqDefForUpdateHealthReportSettings()
+	return &UpdateHealthReportSettingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSqlLimitRules 修改SQL限流规则

@@ -9,7 +9,7 @@ import (
 // VerifyOrderRequest Request Object
 type VerifyOrderRequest struct {
 
-	// 工单号
+	// 服务单号
 	Number string `json:"number"`
 
 	Body *VerifyOrderRequestBody `json:"body,omitempty"`

@@ -13,7 +13,13 @@ type ListJobResponse struct {
 	Jobs *[]JobListDto `json:"jobs,omitempty"`
 
 	// 作业总数
-	Count          *int32 `json:"count,omitempty"`
+	Count *int32 `json:"count,omitempty"`
+
+	// **参数解释**： 运行中作业总数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	RunningCount *int32 `json:"running_count,omitempty"`
+
+	// **参数解释**： 等待中作业总数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	WaitingCount   *int32 `json:"waiting_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

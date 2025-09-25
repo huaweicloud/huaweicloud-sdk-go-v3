@@ -12,7 +12,7 @@ type LoginCommonLocationResponseInfo struct {
 	// 国家城市的编码
 	AreaCode *int32 `json:"area_code,omitempty"`
 
-	// 这个常用登陆地的主机个数
+	// 这个常用登录地的主机个数
 	TotalNum *int32 `json:"total_num,omitempty"`
 
 	// 服务器列表

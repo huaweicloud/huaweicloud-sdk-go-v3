@@ -1813,6 +1813,27 @@ func (c *EcsClient) ShowResetPasswordFlagInvoker(request *model.ShowResetPasswor
 	return &ShowResetPasswordFlagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSerialConsoleActions 获取串口登录地址
+//
+// 获取云服务器云主机串口登录地址。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ShowSerialConsoleActions(request *model.ShowSerialConsoleActionsRequest) (*model.ShowSerialConsoleActionsResponse, error) {
+	requestDef := GenReqDefForShowSerialConsoleActions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSerialConsoleActionsResponse), nil
+	}
+}
+
+// ShowSerialConsoleActionsInvoker 获取串口登录地址
+func (c *EcsClient) ShowSerialConsoleActionsInvoker(request *model.ShowSerialConsoleActionsRequest) *ShowSerialConsoleActionsInvoker {
+	requestDef := GenReqDefForShowSerialConsoleActions()
+	return &ShowSerialConsoleActionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowServer 查询云服务器详情
 //
 // 查询弹性云服务器的详细信息。
@@ -2068,6 +2089,27 @@ func (c *EcsClient) UpdateScheduledEvent(request *model.UpdateScheduledEventRequ
 func (c *EcsClient) UpdateScheduledEventInvoker(request *model.UpdateScheduledEventRequest) *UpdateScheduledEventInvoker {
 	requestDef := GenReqDefForUpdateScheduledEvent()
 	return &UpdateScheduledEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSerialConsoleOptions 设置云服务器云主机串口登录
+//
+// 设置云服务器云主机串口登录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) UpdateSerialConsoleOptions(request *model.UpdateSerialConsoleOptionsRequest) (*model.UpdateSerialConsoleOptionsResponse, error) {
+	requestDef := GenReqDefForUpdateSerialConsoleOptions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSerialConsoleOptionsResponse), nil
+	}
+}
+
+// UpdateSerialConsoleOptionsInvoker 设置云服务器云主机串口登录
+func (c *EcsClient) UpdateSerialConsoleOptionsInvoker(request *model.UpdateSerialConsoleOptionsRequest) *UpdateSerialConsoleOptionsInvoker {
+	requestDef := GenReqDefForUpdateSerialConsoleOptions()
+	return &UpdateSerialConsoleOptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateServer 修改云服务器

@@ -485,6 +485,22 @@ func (i *ListExternalVaultInvoker) Invoke() (*model.ListExternalVaultResponse, e
 	}
 }
 
+type ListFeaturesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFeaturesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListFeaturesInvoker) Invoke() (*model.ListFeaturesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFeaturesResponse), nil
+	}
+}
+
 type ListOpLogsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -770,6 +786,22 @@ func (i *ShowDomainInvoker) Invoke() (*model.ShowDomainResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowDomainResponse), nil
+	}
+}
+
+type ShowFeatureInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFeatureInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowFeatureInvoker) Invoke() (*model.ShowFeatureResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFeatureResponse), nil
 	}
 }
 

@@ -50,6 +50,9 @@ type ShowClusterDetailResponse struct {
 	// 终端节点IP。
 	VpcepIp *string `json:"vpcepIp,omitempty"`
 
+	// 终端节点IPv6。
+	VpcepIpv6Address *string `json:"vpcepIpv6Address,omitempty"`
+
 	// 公网带宽大小。单位：Mbit/s
 	BandwidthSize *int32 `json:"bandwidthSize,omitempty"`
 
@@ -84,7 +87,22 @@ type ShowClusterDetailResponse struct {
 
 	// es公网访问的资源id
 	BandwidthResourceId *string `json:"bandwidthResourceId,omitempty"`
-	HttpStatusCode      int     `json:"-"`
+
+	// 集群内网访问IPv6地址和端口号。
+	Ipv6Endpoint *string `json:"ipv6Endpoint,omitempty"`
+
+	// 当前集群是否支持开启终端节点服务。
+	SupportVpcep *bool `json:"supportVpcep,omitempty"`
+
+	// 当前集群使用的磁盘加密密钥ID。
+	CmkId *string `json:"cmkId,omitempty"`
+
+	// 包周期集群的订单号。
+	OrderId *string `json:"orderId,omitempty"`
+
+	// 集群当前所有节点用到的子网，如果存在多个（最多支持两个），使用英文逗号隔开。
+	CurrentSubnetIds *string `json:"currentSubnetIds,omitempty"`
+	HttpStatusCode   int     `json:"-"`
 }
 
 func (o ShowClusterDetailResponse) String() string {

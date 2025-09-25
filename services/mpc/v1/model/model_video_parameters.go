@@ -47,6 +47,9 @@ type VideoParameters struct {
 	// 帧率。  取值范围：0或[5,60]，0表示自适应。  单位：帧每秒。  > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
 	FrameRate *int32 `json:"frame_rate,omitempty"`
 
+	// 帧率。  取值范围：0或[5,60]，0表示自适应。  单位：帧每秒。  > 若设置的帧率不在取值范围内，则自动调整为0，若设置的帧率高于片源帧率，则自动调整为片源帧率。
+	FrameRateFloat *float32 `json:"frame_rate_float,omitempty"`
+
 	// 视频宽度（单位：像素）  - H264：范围[32,4096]，必须为2的倍数 - H265：范围[320,4096]，必须是4的倍数
 	Width *int32 `json:"width,omitempty"`
 

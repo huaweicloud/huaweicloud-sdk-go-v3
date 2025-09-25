@@ -338,6 +338,27 @@ func (c *DataArtsStudioClient) BatchCreateSecurityPermissionSetPermissionsInvoke
 	return &BatchCreateSecurityPermissionSetPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteSecurityDataCategories 删除数据分类
+//
+// 删除数据分类。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) BatchDeleteSecurityDataCategories(request *model.BatchDeleteSecurityDataCategoriesRequest) (*model.BatchDeleteSecurityDataCategoriesResponse, error) {
+	requestDef := GenReqDefForBatchDeleteSecurityDataCategories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteSecurityDataCategoriesResponse), nil
+	}
+}
+
+// BatchDeleteSecurityDataCategoriesInvoker 删除数据分类
+func (c *DataArtsStudioClient) BatchDeleteSecurityDataCategoriesInvoker(request *model.BatchDeleteSecurityDataCategoriesRequest) *BatchDeleteSecurityDataCategoriesInvoker {
+	requestDef := GenReqDefForBatchDeleteSecurityDataCategories()
+	return &BatchDeleteSecurityDataCategoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeleteSecurityDataClassificationRule 批量删除识别规则接口
 //
 // 批量删除识别规则接口
@@ -1345,6 +1366,27 @@ func (c *DataArtsStudioClient) CreateSecurityAssignedQueue(request *model.Create
 func (c *DataArtsStudioClient) CreateSecurityAssignedQueueInvoker(request *model.CreateSecurityAssignedQueueRequest) *CreateSecurityAssignedQueueInvoker {
 	requestDef := GenReqDefForCreateSecurityAssignedQueue()
 	return &CreateSecurityAssignedQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSecurityDataCategory 创建数据分类
+//
+// 创建数据分类。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateSecurityDataCategory(request *model.CreateSecurityDataCategoryRequest) (*model.CreateSecurityDataCategoryResponse, error) {
+	requestDef := GenReqDefForCreateSecurityDataCategory()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSecurityDataCategoryResponse), nil
+	}
+}
+
+// CreateSecurityDataCategoryInvoker 创建数据分类
+func (c *DataArtsStudioClient) CreateSecurityDataCategoryInvoker(request *model.CreateSecurityDataCategoryRequest) *CreateSecurityDataCategoryInvoker {
+	requestDef := GenReqDefForCreateSecurityDataCategory()
+	return &CreateSecurityDataCategoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateSecurityDataClassificationCombineRule 创建组合识别规则
@@ -7332,6 +7374,27 @@ func (c *DataArtsStudioClient) UpdateSecurityAssignedQueue(request *model.Update
 func (c *DataArtsStudioClient) UpdateSecurityAssignedQueueInvoker(request *model.UpdateSecurityAssignedQueueRequest) *UpdateSecurityAssignedQueueInvoker {
 	requestDef := GenReqDefForUpdateSecurityAssignedQueue()
 	return &UpdateSecurityAssignedQueueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSecurityDataCategories 修改数据分类
+//
+// 修改数据分类。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UpdateSecurityDataCategories(request *model.UpdateSecurityDataCategoriesRequest) (*model.UpdateSecurityDataCategoriesResponse, error) {
+	requestDef := GenReqDefForUpdateSecurityDataCategories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSecurityDataCategoriesResponse), nil
+	}
+}
+
+// UpdateSecurityDataCategoriesInvoker 修改数据分类
+func (c *DataArtsStudioClient) UpdateSecurityDataCategoriesInvoker(request *model.UpdateSecurityDataCategoriesRequest) *UpdateSecurityDataCategoriesInvoker {
+	requestDef := GenReqDefForUpdateSecurityDataCategories()
+	return &UpdateSecurityDataCategoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSecurityDataClassificationCombineRule 修改组合识别规则

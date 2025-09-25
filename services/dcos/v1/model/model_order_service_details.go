@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// OrderServiceDetails 工单服务详情
+// OrderServiceDetails 服务单服务详情
 type OrderServiceDetails struct {
 
 	// 服务设备对象

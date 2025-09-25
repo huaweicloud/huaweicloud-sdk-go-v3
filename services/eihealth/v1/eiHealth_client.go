@@ -334,6 +334,27 @@ func (c *EiHealthClient) CreateAppInvoker(request *model.CreateAppRequest) *Crea
 	return &CreateAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAssetResource 创建计费资产资源
+//
+// 创建计费资产资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) CreateAssetResource(request *model.CreateAssetResourceRequest) (*model.CreateAssetResourceResponse, error) {
+	requestDef := GenReqDefForCreateAssetResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAssetResourceResponse), nil
+	}
+}
+
+// CreateAssetResourceInvoker 创建计费资产资源
+func (c *EiHealthClient) CreateAssetResourceInvoker(request *model.CreateAssetResourceRequest) *CreateAssetResourceInvoker {
+	requestDef := GenReqDefForCreateAssetResource()
+	return &CreateAssetResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateClusterJob 创建分子聚类作业
 //
 // 创建分子聚类作业
@@ -628,6 +649,27 @@ func (c *EiHealthClient) CreateLabelInvoker(request *model.CreateLabelRequest) *
 	return &CreateLabelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateMessageAdditions 绑定问答额外信息
+//
+// 绑定问答额外信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) CreateMessageAdditions(request *model.CreateMessageAdditionsRequest) (*model.CreateMessageAdditionsResponse, error) {
+	requestDef := GenReqDefForCreateMessageAdditions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateMessageAdditionsResponse), nil
+	}
+}
+
+// CreateMessageAdditionsInvoker 绑定问答额外信息
+func (c *EiHealthClient) CreateMessageAdditionsInvoker(request *model.CreateMessageAdditionsRequest) *CreateMessageAdditionsInvoker {
+	requestDef := GenReqDefForCreateMessageAdditions()
+	return &CreateMessageAdditionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateMolBatchDownloadTask 创建分子或分子复合物批量下载任务
 //
 // 创建分子或分子复合物批量下载任务
@@ -878,6 +920,48 @@ func (c *EiHealthClient) DeleteApp(request *model.DeleteAppRequest) (*model.Dele
 func (c *EiHealthClient) DeleteAppInvoker(request *model.DeleteAppRequest) *DeleteAppInvoker {
 	requestDef := GenReqDefForDeleteApp()
 	return &DeleteAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAssetResource 退订计费资产资源
+//
+// 退订计费资产资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) DeleteAssetResource(request *model.DeleteAssetResourceRequest) (*model.DeleteAssetResourceResponse, error) {
+	requestDef := GenReqDefForDeleteAssetResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAssetResourceResponse), nil
+	}
+}
+
+// DeleteAssetResourceInvoker 退订计费资产资源
+func (c *EiHealthClient) DeleteAssetResourceInvoker(request *model.DeleteAssetResourceRequest) *DeleteAssetResourceInvoker {
+	requestDef := GenReqDefForDeleteAssetResource()
+	return &DeleteAssetResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteChat 删除对话
+//
+// 删除对话。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) DeleteChat(request *model.DeleteChatRequest) (*model.DeleteChatResponse, error) {
+	requestDef := GenReqDefForDeleteChat()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteChatResponse), nil
+	}
+}
+
+// DeleteChatInvoker 删除对话
+func (c *EiHealthClient) DeleteChatInvoker(request *model.DeleteChatRequest) *DeleteChatInvoker {
+	requestDef := GenReqDefForDeleteChat()
+	return &DeleteChatInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteComputingCluster 解绑计算集群
@@ -1468,6 +1552,27 @@ func (c *EiHealthClient) ListAssetInvoker(request *model.ListAssetRequest) *List
 	return &ListAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAssetResource 查询计费资产资源
+//
+// 查询计费资产资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ListAssetResource(request *model.ListAssetResourceRequest) (*model.ListAssetResourceResponse, error) {
+	requestDef := GenReqDefForListAssetResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAssetResourceResponse), nil
+	}
+}
+
+// ListAssetResourceInvoker 查询计费资产资源
+func (c *EiHealthClient) ListAssetResourceInvoker(request *model.ListAssetResourceRequest) *ListAssetResourceInvoker {
+	requestDef := GenReqDefForListAssetResource()
+	return &ListAssetResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListBaseModel 获取基模型列表
 //
 // 获取基模型列表
@@ -1529,6 +1634,27 @@ func (c *EiHealthClient) ListCceCluster(request *model.ListCceClusterRequest) (*
 func (c *EiHealthClient) ListCceClusterInvoker(request *model.ListCceClusterRequest) *ListCceClusterInvoker {
 	requestDef := GenReqDefForListCceCluster()
 	return &ListCceClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListChat 获取对话列表
+//
+// 获取对话列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ListChat(request *model.ListChatRequest) (*model.ListChatResponse, error) {
+	requestDef := GenReqDefForListChat()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListChatResponse), nil
+	}
+}
+
+// ListChatInvoker 获取对话列表
+func (c *EiHealthClient) ListChatInvoker(request *model.ListChatRequest) *ListChatInvoker {
+	requestDef := GenReqDefForListChat()
+	return &ListChatInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListClusterAllNodeLabel 获取节点标签集
@@ -1699,25 +1825,25 @@ func (c *EiHealthClient) ListDrugModelInvoker(request *model.ListDrugModelReques
 	return &ListDrugModelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListDrugModelResource 查询盘古药物分子大模型
+// ListDrugModelResource1 查询盘古药物分子大模型
 //
 // 查询盘古药物分子大模型。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *EiHealthClient) ListDrugModelResource(request *model.ListDrugModelResourceRequest) (*model.ListDrugModelResourceResponse, error) {
-	requestDef := GenReqDefForListDrugModelResource()
+func (c *EiHealthClient) ListDrugModelResource1(request *model.ListDrugModelResource1Request) (*model.ListDrugModelResource1Response, error) {
+	requestDef := GenReqDefForListDrugModelResource1()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListDrugModelResourceResponse), nil
+		return resp.(*model.ListDrugModelResource1Response), nil
 	}
 }
 
-// ListDrugModelResourceInvoker 查询盘古药物分子大模型
-func (c *EiHealthClient) ListDrugModelResourceInvoker(request *model.ListDrugModelResourceRequest) *ListDrugModelResourceInvoker {
-	requestDef := GenReqDefForListDrugModelResource()
-	return &ListDrugModelResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListDrugModelResource1Invoker 查询盘古药物分子大模型
+func (c *EiHealthClient) ListDrugModelResource1Invoker(request *model.ListDrugModelResource1Request) *ListDrugModelResource1Invoker {
+	requestDef := GenReqDefForListDrugModelResource1()
+	return &ListDrugModelResource1Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListFavorite 获取收藏夹列表
@@ -1972,9 +2098,9 @@ func (c *EiHealthClient) ListPerformanceResourcesInvoker(request *model.ListPerf
 	return &ListPerformanceResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListProject 获取项目列表
+// ListProject 获取空间列表
 //
-// 获取项目列表
+// 获取空间列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *EiHealthClient) ListProject(request *model.ListProjectRequest) (*model.ListProjectResponse, error) {
@@ -1987,7 +2113,7 @@ func (c *EiHealthClient) ListProject(request *model.ListProjectRequest) (*model.
 	}
 }
 
-// ListProjectInvoker 获取项目列表
+// ListProjectInvoker 获取空间列表
 func (c *EiHealthClient) ListProjectInvoker(request *model.ListProjectRequest) *ListProjectInvoker {
 	requestDef := GenReqDefForListProject()
 	return &ListProjectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2474,6 +2600,27 @@ func (c *EiHealthClient) ShowBucketStorage(request *model.ShowBucketStorageReque
 func (c *EiHealthClient) ShowBucketStorageInvoker(request *model.ShowBucketStorageRequest) *ShowBucketStorageInvoker {
 	requestDef := GenReqDefForShowBucketStorage()
 	return &ShowBucketStorageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowChat 获取对话详情
+//
+// 获取对话详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) ShowChat(request *model.ShowChatRequest) (*model.ShowChatResponse, error) {
+	requestDef := GenReqDefForShowChat()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowChatResponse), nil
+	}
+}
+
+// ShowChatInvoker 获取对话详情
+func (c *EiHealthClient) ShowChatInvoker(request *model.ShowChatRequest) *ShowChatInvoker {
+	requestDef := GenReqDefForShowChat()
+	return &ShowChatInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowClusteringJob 查询聚类分析作业详情
@@ -3167,6 +3314,27 @@ func (c *EiHealthClient) UpdateApp(request *model.UpdateAppRequest) (*model.Upda
 func (c *EiHealthClient) UpdateAppInvoker(request *model.UpdateAppRequest) *UpdateAppInvoker {
 	requestDef := GenReqDefForUpdateApp()
 	return &UpdateAppInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateChat 更新对话
+//
+// 更新对话。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EiHealthClient) UpdateChat(request *model.UpdateChatRequest) (*model.UpdateChatResponse, error) {
+	requestDef := GenReqDefForUpdateChat()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateChatResponse), nil
+	}
+}
+
+// UpdateChatInvoker 更新对话
+func (c *EiHealthClient) UpdateChatInvoker(request *model.UpdateChatRequest) *UpdateChatInvoker {
+	requestDef := GenReqDefForUpdateChat()
+	return &UpdateChatInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDrugDatabase 更新药物数据库

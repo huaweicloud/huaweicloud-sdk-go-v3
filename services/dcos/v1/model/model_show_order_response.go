@@ -15,13 +15,13 @@ type ShowOrderResponse struct {
 	// 标题
 	Title *string `json:"title,omitempty"`
 
-	// 工单类型:IDC运维 设备运维 设备检查 客户陪同
+	// 服务单类型:IDC运维 设备运维 设备检查 客户陪同
 	Type *string `json:"type,omitempty"`
 
 	// 具体操作类型:设备物理上下电
 	SubType *string `json:"sub_type,omitempty"`
 
-	// 工单类型编码
+	// 服务单类型编码
 	ModelCode *string `json:"model_code,omitempty"`
 
 	// 操作对象
@@ -52,7 +52,7 @@ type ShowOrderResponse struct {
 	// 当前状态
 	Status *string `json:"status,omitempty"`
 
-	// 工单日志
+	// 服务单日志
 	Logs *[]OrderLog `json:"logs,omitempty"`
 
 	// 扩展字段

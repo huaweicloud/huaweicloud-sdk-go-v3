@@ -15,7 +15,7 @@ type ShowPwdDirectoryInfo struct {
 	// 口令检查包含子标签，包含如下:   - weak_pwd : 经典弱口令检测   - pwd_complexity : 口令复杂度策略检
 	SubTag *string `json:"sub_tag,omitempty"`
 
-	// **参数解释** 该项是否被选中 **取值范围**  - true : 被选中 - false: 未被选中
+	// **参数解释** 该项是否被选中 **取值范围** - true : 被选中 - false: 未被选中
 	Checked *bool `json:"checked,omitempty"`
 
 	// 表示目录中的唯一值:   - weak_pwd : 经典弱口令检测   - pwd_complexity : 口令复杂度策略检测

@@ -34,6 +34,9 @@ type ClusterListInstances struct {
 
 	// 该实例对应的资源Id。
 	ResourceId *string `json:"resourceId,omitempty"`
+
+	// 集群当前节点所属子网ID。
+	SubnetId *string `json:"subnetId,omitempty"`
 }
 
 func (o ClusterListInstances) String() string {

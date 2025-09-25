@@ -12,7 +12,7 @@ type DownloadObject struct {
 	Name *string `json:"name,omitempty"`
 
 	// 文件大小。
-	Size float32 `json:"size,omitempty"`
+	Size *int32 `json:"size,omitempty"`
 
 	// 下载链接。
 	DownloadLink *string `json:"download_link,omitempty"`

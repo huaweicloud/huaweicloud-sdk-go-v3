@@ -30,7 +30,10 @@ type ShowSecurityReportContentResponse struct {
 	// **参数解释：** 订阅类型，标识安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	SubscriptionType *string `json:"subscription_type,omitempty"`
 
-	ReportContentSubscriptionInfo *SecurityReportContentResponseReportContentSubscriptionInfo `json:"report_content_subscription_info,omitempty"`
+	ReportContentInfo *SecurityReportContentResponseReportContentInfo `json:"report_content_info,omitempty"`
+
+	// **参数解释：** 创建时间，报告的创建时间。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	CreateTime *int64 `json:"create_time,omitempty"`
 
 	StatPeriod     *SecurityReportContentResponseStatPeriod `json:"stat_period,omitempty"`
 	HttpStatusCode int                                      `json:"-"`

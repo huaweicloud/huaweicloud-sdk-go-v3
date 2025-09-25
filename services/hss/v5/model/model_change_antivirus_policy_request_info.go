@@ -18,6 +18,9 @@ type ChangeAntivirusPolicyRequestInfo struct {
 	// 启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
 	StartType string `json:"start_type"`
 
+	// 任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+	ScanType *string `json:"scan_type,omitempty"`
+
 	// 启动类型，包含如下:   - day ：每天   - week : 每周   - month : 每月
 	ScanPeriod *string `json:"scan_period,omitempty"`
 

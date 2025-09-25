@@ -8,7 +8,10 @@ import (
 
 // DownloadAssetFileResponse Response Object
 type DownloadAssetFileResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 导出任务ID
+	TaskId         *string `json:"task_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DownloadAssetFileResponse) String() string {

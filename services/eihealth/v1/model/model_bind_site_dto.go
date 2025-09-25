@@ -14,6 +14,12 @@ type BindSiteDto struct {
 
 	Receptor *ReceptorDrugFile `json:"receptor"`
 
+	// **参数解释**： 引擎[，仅支持VINA，默认值为VINA](tag:hcs)[，支持DSDP、AUTODOCK_VINA，默认值为AUTODOCK_VINA](tag:hws)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	Engine *string `json:"engine,omitempty"`
+
+	// **参数解释**： 对接类型[，仅支持POCKET_DOCKING](tag:hws)[，支持BLIND_DOCKING、POCKET_DOCKING](tag:hcs)。 **约束限制**： 不涉及 **取值范围**： * POCKET_DOCKING：口袋对接 * [BLIND_DOCKING：全局对接](tag:hcs) **默认取值**： POCKET_DOCKING
+	DockingType *string `json:"docking_type,omitempty"`
+
 	BoundingBox *BoundingBoxDto `json:"bounding_box,omitempty"`
 
 	// 去除受体中的离子

@@ -245,6 +245,22 @@ func (i *BatchCreateSecurityPermissionSetPermissionsInvoker) Invoke() (*model.Ba
 	}
 }
 
+type BatchDeleteSecurityDataCategoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteSecurityDataCategoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteSecurityDataCategoriesInvoker) Invoke() (*model.BatchDeleteSecurityDataCategoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteSecurityDataCategoriesResponse), nil
+	}
+}
+
 type BatchDeleteSecurityDataClassificationRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1010,6 +1026,22 @@ func (i *CreateSecurityAssignedQueueInvoker) Invoke() (*model.CreateSecurityAssi
 		return nil, err
 	} else {
 		return result.(*model.CreateSecurityAssignedQueueResponse), nil
+	}
+}
+
+type CreateSecurityDataCategoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSecurityDataCategoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSecurityDataCategoryInvoker) Invoke() (*model.CreateSecurityDataCategoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSecurityDataCategoryResponse), nil
 	}
 }
 
@@ -5570,6 +5602,22 @@ func (i *UpdateSecurityAssignedQueueInvoker) Invoke() (*model.UpdateSecurityAssi
 		return nil, err
 	} else {
 		return result.(*model.UpdateSecurityAssignedQueueResponse), nil
+	}
+}
+
+type UpdateSecurityDataCategoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSecurityDataCategoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSecurityDataCategoriesInvoker) Invoke() (*model.UpdateSecurityDataCategoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSecurityDataCategoriesResponse), nil
 	}
 }
 

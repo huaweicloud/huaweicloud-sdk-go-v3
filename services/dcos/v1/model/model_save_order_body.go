@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// SaveOrderBody 客户工单
+// SaveOrderBody 客户服务单
 type SaveOrderBody struct {
 
-	// 工单号，修改已保存的草稿时使用
+	// 服务单号，修改已保存的草稿时使用
 	Number *string `json:"number,omitempty"`
 
 	// 标题
 	Title string `json:"title"`
 
-	// 工单类型编码
+	// 服务单类型编码
 	ModelCode string `json:"model_code"`
 
 	AccessWhitelist *AccessWhiteList `json:"access_whitelist,omitempty"`

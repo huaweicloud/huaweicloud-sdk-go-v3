@@ -15,22 +15,19 @@ type ListAppWhitelistEventRequest struct {
 	// **参数解释**: 查询时间范围天数，与自定义查询时间begin_time，end_time互斥 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值30 **默认取值**: 不涉及
 	LastDays *int32 `json:"last_days,omitempty"`
 
-	// 自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+	// 自定义查询时间，开始时间
 	BeginTime int64 `json:"begin_time"`
 
-	// 自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+	// 自定义查询时间，结束时间
 	EndTime int64 `json:"end_time"`
 
 	// **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
 	HostName *string `json:"host_name,omitempty"`
 
-	// **参数解释**: 主机IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+	// **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
 	HostIp *string `json:"host_ip,omitempty"`
 
-	// **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-	PrivateIp *string `json:"private_ip,omitempty"`
-
-	// **参数解释**： 是否已处理 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
+	// **参数解释**： 是否已处理 **约束限制**: 不涉及 **取值范围**: - handled：已处理 - unhandled：未处理  **默认取值**: 不涉及
 	HandleStatus *string `json:"handle_status,omitempty"`
 
 	// **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及

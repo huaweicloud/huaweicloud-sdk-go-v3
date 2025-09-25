@@ -14,7 +14,7 @@ type ExportHandledVulnerabilitiesRequestBody struct {
 	// 漏洞名称
 	VulName *string `json:"vul_name,omitempty"`
 
-	// 漏洞修复优先级,包含如下 - Critical 紧急  - High 高  - Medium 中  - Low 低
+	// 漏洞修复优先级,包含如下 - Critical 紧急 - High 高 - Medium 中 - Low 低
 	RepairPriority *ExportHandledVulnerabilitiesRequestBodyRepairPriority `json:"repair_priority,omitempty"`
 
 	// 主机名称

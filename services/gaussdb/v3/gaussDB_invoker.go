@@ -1909,6 +1909,22 @@ func (i *ShowRestoreTablesInvoker) Invoke() (*model.ShowRestoreTablesResponse, e
 	}
 }
 
+type ShowSlowLogDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSlowLogDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSlowLogDetailInvoker) Invoke() (*model.ShowSlowLogDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSlowLogDetailResponse), nil
+	}
+}
+
 type ShowSlowLogStatisticsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1970,6 +1986,22 @@ func (i *ShowSqlFilterRuleInvoker) Invoke() (*model.ShowSqlFilterRuleResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowSqlFilterRuleResponse), nil
+	}
+}
+
+type ShowStarRocksSlowlogSensitiveStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStarRocksSlowlogSensitiveStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowStarRocksSlowlogSensitiveStatusInvoker) Invoke() (*model.ShowStarRocksSlowlogSensitiveStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStarRocksSlowlogSensitiveStatusResponse), nil
 	}
 }
 
@@ -2498,6 +2530,22 @@ func (i *UpdateServerlessPolicyInvoker) Invoke() (*model.UpdateServerlessPolicyR
 		return nil, err
 	} else {
 		return result.(*model.UpdateServerlessPolicyResponse), nil
+	}
+}
+
+type UpdateSlowlogSensitiveStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSlowlogSensitiveStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSlowlogSensitiveStatusInvoker) Invoke() (*model.UpdateSlowlogSensitiveStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSlowlogSensitiveStatusResponse), nil
 	}
 }
 

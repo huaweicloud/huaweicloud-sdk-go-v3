@@ -985,6 +985,27 @@ func (c *CodeArtsBuildClient) ShowImageTemplateListInvoker(request *model.ShowIm
 	return &ShowImageTemplateListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddFavouriteTask 收藏任务
+//
+// 收藏任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) AddFavouriteTask(request *model.AddFavouriteTaskRequest) (*model.AddFavouriteTaskResponse, error) {
+	requestDef := GenReqDefForAddFavouriteTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddFavouriteTaskResponse), nil
+	}
+}
+
+// AddFavouriteTaskInvoker 收藏任务
+func (c *CodeArtsBuildClient) AddFavouriteTaskInvoker(request *model.AddFavouriteTaskRequest) *AddFavouriteTaskInvoker {
+	requestDef := GenReqDefForAddFavouriteTask()
+	return &AddFavouriteTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ApplyProjectPermission 任务是否使用项目级权限
 //
 // 任务是否使用项目级权限
@@ -1382,6 +1403,27 @@ func (c *CodeArtsBuildClient) ListUpdateJobHistory(request *model.ListUpdateJobH
 func (c *CodeArtsBuildClient) ListUpdateJobHistoryInvoker(request *model.ListUpdateJobHistoryRequest) *ListUpdateJobHistoryInvoker {
 	requestDef := GenReqDefForListUpdateJobHistory()
 	return &ListUpdateJobHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RemoverFavouriteTask 取消收藏任务
+//
+// 取消收藏任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) RemoverFavouriteTask(request *model.RemoverFavouriteTaskRequest) (*model.RemoverFavouriteTaskResponse, error) {
+	requestDef := GenReqDefForRemoverFavouriteTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoverFavouriteTaskResponse), nil
+	}
+}
+
+// RemoverFavouriteTaskInvoker 取消收藏任务
+func (c *CodeArtsBuildClient) RemoverFavouriteTaskInvoker(request *model.RemoverFavouriteTaskRequest) *RemoverFavouriteTaskInvoker {
+	requestDef := GenReqDefForRemoverFavouriteTask()
+	return &RemoverFavouriteTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RestoreRecyclingJobs 恢复回收站中的任务
@@ -2056,6 +2098,69 @@ func (c *CodeArtsBuildClient) UploadKeystoreInvoker(request *model.UploadKeystor
 	return &UploadKeystoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DownloadBuildFullLog 下载全量构建日志
+//
+// 下载全量构建日志
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) DownloadBuildFullLog(request *model.DownloadBuildFullLogRequest) (*model.DownloadBuildFullLogResponse, error) {
+	requestDef := GenReqDefForDownloadBuildFullLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadBuildFullLogResponse), nil
+	}
+}
+
+// DownloadBuildFullLogInvoker 下载全量构建日志
+func (c *CodeArtsBuildClient) DownloadBuildFullLogInvoker(request *model.DownloadBuildFullLogRequest) *DownloadBuildFullLogInvoker {
+	requestDef := GenReqDefForDownloadBuildFullLog()
+	return &DownloadBuildFullLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadBuildRealTimeLog 获取运行全量日志
+//
+// 获取运行全量日志
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) DownloadBuildRealTimeLog(request *model.DownloadBuildRealTimeLogRequest) (*model.DownloadBuildRealTimeLogResponse, error) {
+	requestDef := GenReqDefForDownloadBuildRealTimeLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadBuildRealTimeLogResponse), nil
+	}
+}
+
+// DownloadBuildRealTimeLogInvoker 获取运行全量日志
+func (c *CodeArtsBuildClient) DownloadBuildRealTimeLogInvoker(request *model.DownloadBuildRealTimeLogRequest) *DownloadBuildRealTimeLogInvoker {
+	requestDef := GenReqDefForDownloadBuildRealTimeLog()
+	return &DownloadBuildRealTimeLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowActionIInfo 任务执行后获取构建日志
+//
+// 任务执行后获取构建日志
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) ShowActionIInfo(request *model.ShowActionIInfoRequest) (*model.ShowActionIInfoResponse, error) {
+	requestDef := GenReqDefForShowActionIInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowActionIInfoResponse), nil
+	}
+}
+
+// ShowActionIInfoInvoker 任务执行后获取构建日志
+func (c *CodeArtsBuildClient) ShowActionIInfoInvoker(request *model.ShowActionIInfoRequest) *ShowActionIInfoInvoker {
+	requestDef := GenReqDefForShowActionIInfo()
+	return &ShowActionIInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DownloadLogByRecordId 下载构建日志(待下线)
 //
 // 下载构建日志(待下线)
@@ -2518,6 +2623,27 @@ func (c *CodeArtsBuildClient) AddFavouriteCustomTemplateInvoker(request *model.A
 	return &AddFavouriteCustomTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddFavouriteOfficialTemplate 收藏官方模板
+//
+// 收藏官方模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) AddFavouriteOfficialTemplate(request *model.AddFavouriteOfficialTemplateRequest) (*model.AddFavouriteOfficialTemplateResponse, error) {
+	requestDef := GenReqDefForAddFavouriteOfficialTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddFavouriteOfficialTemplateResponse), nil
+	}
+}
+
+// AddFavouriteOfficialTemplateInvoker 收藏官方模板
+func (c *CodeArtsBuildClient) AddFavouriteOfficialTemplateInvoker(request *model.AddFavouriteOfficialTemplateRequest) *AddFavouriteOfficialTemplateInvoker {
+	requestDef := GenReqDefForAddFavouriteOfficialTemplate()
+	return &AddFavouriteOfficialTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateTemplate 创建构建模板
 //
 // 创建构建模板
@@ -2642,6 +2768,27 @@ func (c *CodeArtsBuildClient) RemoverFavouriteCustomTemplate(request *model.Remo
 func (c *CodeArtsBuildClient) RemoverFavouriteCustomTemplateInvoker(request *model.RemoverFavouriteCustomTemplateRequest) *RemoverFavouriteCustomTemplateInvoker {
 	requestDef := GenReqDefForRemoverFavouriteCustomTemplate()
 	return &RemoverFavouriteCustomTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RemoverFavouriteOfficialTemplate 取消收藏官方模板
+//
+// 取消收藏官方模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsBuildClient) RemoverFavouriteOfficialTemplate(request *model.RemoverFavouriteOfficialTemplateRequest) (*model.RemoverFavouriteOfficialTemplateResponse, error) {
+	requestDef := GenReqDefForRemoverFavouriteOfficialTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoverFavouriteOfficialTemplateResponse), nil
+	}
+}
+
+// RemoverFavouriteOfficialTemplateInvoker 取消收藏官方模板
+func (c *CodeArtsBuildClient) RemoverFavouriteOfficialTemplateInvoker(request *model.RemoverFavouriteOfficialTemplateRequest) *RemoverFavouriteOfficialTemplateInvoker {
+	requestDef := GenReqDefForRemoverFavouriteOfficialTemplate()
+	return &RemoverFavouriteOfficialTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SaveTemplateUsedInfo 保存模板使用记录

@@ -14,7 +14,7 @@ type ChangeHostsGroupRequestInfo struct {
 	// **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
 	GroupId string `json:"group_id"`
 
-	// **参数解释**: 主机id列表 **取值范围**: 不涉及
+	// **参数解释**: 服务器ID列表 **取值范围**: 不涉及
 	HostIdList *[]string `json:"host_id_list,omitempty"`
 }
 

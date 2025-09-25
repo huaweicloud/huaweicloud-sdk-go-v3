@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// LearningDays **参数解释**: 策略学习天数 **取值范围**: 最小值1，最大值1000
+// LearningDays **参数解释**: 策略学习天数 **取值范围**: 最小值3，最大值30
 type LearningDays struct {
 }
 

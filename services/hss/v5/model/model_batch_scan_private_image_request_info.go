@@ -26,7 +26,7 @@ type BatchScanPrivateImageRequestInfo struct {
 	// 镜像版本
 	ImageVersion *string `json:"image_version,omitempty"`
 
-	// 镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库
+	// 镜像类型，包含如下:   - private_image：SWR私有镜像仓库。   - shared_image：SWR共享镜像仓库。   - instance_image：SWR企业仓库。
 	ImageType string `json:"image_type"`
 
 	// 扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大

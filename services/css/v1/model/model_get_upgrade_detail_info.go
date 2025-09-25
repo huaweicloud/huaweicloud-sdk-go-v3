@@ -45,6 +45,12 @@ type GetUpgradeDetailInfo struct {
 	FinalAzInfoMap *string `json:"finalAzInfoMap,omitempty"`
 
 	CurrentNodeDetail *[]CurrentNodeDetail `json:"currentNodeDetail,omitempty"`
+
+	// 同时有多少个节点在迁移数据。
+	BatchSize *int32 `json:"batchSize,omitempty"`
+
+	// 当前正在迁移数据的节点。
+	CurrentBatchNodes *string `json:"currentBatchNodes,omitempty"`
 }
 
 func (o GetUpgradeDetailInfo) String() string {

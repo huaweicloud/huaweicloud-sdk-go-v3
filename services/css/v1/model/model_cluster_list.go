@@ -10,6 +10,9 @@ import (
 type ClusterList struct {
 	Datastore *ClusterListDatastore `json:"datastore,omitempty"`
 
+	// 集群自动快照策略相关信息。
+	SnapshotPolicy *interface{} `json:"snapshotPolicy,omitempty"`
+
 	// 节点对象列表。
 	Instances *[]ClusterListInstances `json:"instances,omitempty"`
 
@@ -84,6 +87,12 @@ type ClusterList struct {
 
 	// 集群内网访问IPv6地址和端口号。
 	Ipv6Endpoint *string `json:"ipv6Endpoint,omitempty"`
+
+	// 当前集群使用的磁盘加密密钥ID。
+	CmkId *string `json:"cmkId,omitempty"`
+
+	// 集群节点的当前子网。
+	CurrentSubnetIds *string `json:"currentSubnetIds,omitempty"`
 }
 
 func (o ClusterList) String() string {

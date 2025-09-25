@@ -25,13 +25,13 @@ type UpdateDaemonsetRequestBody struct {
 
 	ScheduleInfo *CreateDaemonsetRequestBodyScheduleInfo `json:"schedule_info,omitempty"`
 
-	// 调用服务，默认hss，cce集成防护调用场景使用:   - hss：hss服务    - cce：cce服务
+	// 调用服务，默认hss，cce集成防护调用场景使用:   - hss：hss服务   - cce：cce服务
 	InvokedService *string `json:"invoked_service,omitempty"`
 
-	// 付费模式，cce集成防护调用场景使用:   - on_demand:按需    - free_security_check:免费安全体检
+	// 付费模式，cce集成防护调用场景使用:   - on_demand:按需   - free_security_check:免费安全体检
 	ChargingMode *UpdateDaemonsetRequestBodyChargingMode `json:"charging_mode,omitempty"`
 
-	// cce防护类型，cce集成防护调用场景使用:   - cluster_level:集群级别防护    - node_level:节点级别防护
+	// cce防护类型，cce集成防护调用场景使用:   - cluster_level:集群级别防护   - node_level:节点级别防护
 	CceProtectionType *UpdateDaemonsetRequestBodyCceProtectionType `json:"cce_protection_type,omitempty"`
 
 	// 优先使用包周期配额，cce集成防护调用场景使用，默认false

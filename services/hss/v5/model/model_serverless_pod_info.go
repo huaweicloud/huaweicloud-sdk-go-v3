@@ -33,14 +33,14 @@ type ServerlessPodInfo struct {
 	// 实例 IP
 	PodIp *string `json:"pod_ip,omitempty"`
 
-	// 防护状态，包含如下2种。 - closed ：未防护。 - opened ：防护中。 - protection_exception ：防护异常。
+	// **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - closed：未防护。 - opened：防护中。 - protection_exception：防护异常。  **默认取值**: 不涉及
 	ProtectStatus *string `json:"protect_status,omitempty"`
 
 	// Serverless安全检测结果，包含如下4种。 - undetected ：未检测。 - clean ：无风险。 - risk ：有风险。 - scanning ：检测中。
 	DetectResult *string `json:"detect_result,omitempty"`
 
 	// Pod状态，包含以下几种 -Pending：pod已被Kubernetes系统接受，但尚未创建一个或多个容器镜像 -Running：pod已经绑定到一个节点，并且所有的容器都已经创建完毕 -Succeeded：pod中的所有容器都已成功终止，不会重新启动 -Failed：pod中的所有容器都已终止，并且至少有一个容器因故障而终止 -Unknown：由于某种原因无法获取pod的状态，通常是由于与pod的主机通信时出错
-	Status *interface{} `json:"status,omitempty"`
+	Status *string `json:"status,omitempty"`
 
 	// 创建时间
 	CreateTime *int64 `json:"create_time,omitempty"`

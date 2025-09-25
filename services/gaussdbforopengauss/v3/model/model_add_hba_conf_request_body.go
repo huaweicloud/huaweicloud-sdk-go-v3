@@ -9,7 +9,7 @@ import (
 type AddHbaConfRequestBody struct {
 
 	// **参数解释**: 需要新增的hba配置信息。 **约束限制**: 不涉及。
-	HbaConfs *[]HbaConfOption `json:"hba_confs,omitempty"`
+	HbaConfs []HbaConfOption `json:"hba_confs"`
 }
 
 func (o AddHbaConfRequestBody) String() string {

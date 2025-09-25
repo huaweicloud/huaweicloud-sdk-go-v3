@@ -19,7 +19,7 @@ type ListAgentInstallScriptRequest struct {
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// os类型：Windows和Linux
-	OsType *ListAgentInstallScriptRequestOsType `json:"os_type,omitempty"`
+	OsType ListAgentInstallScriptRequestOsType `json:"os_type"`
 
 	// 系统架构：x86_64和aarch64；当os_type为Windows时，只能选择x86_64
 	OsArch ListAgentInstallScriptRequestOsArch `json:"os_arch"`

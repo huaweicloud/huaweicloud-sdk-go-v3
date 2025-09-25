@@ -245,22 +245,6 @@ func (i *DeleteUserInvoker) Invoke() (*model.DeleteUserResponse, error) {
 	}
 }
 
-type EnableDnsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *EnableDnsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *EnableDnsInvoker) Invoke() (*model.EnableDnsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.EnableDnsResponse), nil
-	}
-}
-
 type ExportDlqMessageInvoker struct {
 	*invoker.BaseInvoker
 }

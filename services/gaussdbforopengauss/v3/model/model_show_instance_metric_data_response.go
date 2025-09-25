@@ -9,7 +9,7 @@ import (
 // ShowInstanceMetricDataResponse Response Object
 type ShowInstanceMetricDataResponse struct {
 
-	// **参数解释**: 实例ID。 **取值范围**: 不涉及。
+	// **参数解释**: 实例ID。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。
 	InstanceId *string `json:"instance_id,omitempty"`
 
 	// **参数解释**: 指标数据集合。

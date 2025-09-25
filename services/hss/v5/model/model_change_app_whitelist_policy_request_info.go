@@ -15,10 +15,10 @@ type ChangeAppWhitelistPolicyRequestInfo struct {
 	// 策略名称
 	PolicyName string `json:"policy_name"`
 
-	// **参数解释**： 进程白名单策略类型 **取值范围**: - allow：允许指定/授权进程运行 - block：阻止潜在恶意软件运行
+	// **参数解释**： 进程白名单策略类型 **取值范围**: - block：日常运营模式
 	PolicyType string `json:"policy_type"`
 
-	// **参数解释**: 策略学习天数 **取值范围**: 最小值1，最大值1000
+	// **参数解释**: 策略学习天数 **取值范围**: 最小值3，最大值30
 	LearningDays int32 `json:"learning_days"`
 
 	// **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否 **默认取值**： 不涉及

@@ -26,6 +26,9 @@ type CreateProjectReq struct {
 
 	// 桶名, 仅气象支持该字段
 	BucketName *string `json:"bucket_name,omitempty"`
+
+	// **参数解释**： 空间桶来源租户，TERMINATE表示最终租户桶。 **约束限制**： 不涉及 **取值范围**： * TERMINATE： 最终租户桶。 * RESOURCE： 资源租户桶。 **默认取值**： TERMINATE
+	StorageTenant *string `json:"storage_tenant,omitempty"`
 }
 
 func (o CreateProjectReq) String() string {

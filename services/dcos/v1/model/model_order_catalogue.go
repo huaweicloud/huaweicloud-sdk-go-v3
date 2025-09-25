@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// OrderCatalogue 工单目录-后续结合项目信息
+// OrderCatalogue 服务单目录-后续结合项目信息
 type OrderCatalogue struct {
 
-	// 工单类型编码
+	// 服务单类型编码
 	Code *string `json:"code,omitempty"`
 
 	// 类型

@@ -24,7 +24,7 @@ type AntiVirusHostResponseInfo struct {
 	// **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
 	AgentId *string `json:"agent_id,omitempty"`
 
-	// 操作系统类型，包含如下2种。   - Linux ：Linux   - Windows ：Winodws
+	// 操作系统类型，包含如下2种。   - Linux ：Linux   - Windows ：Windows
 	OsType *string `json:"os_type,omitempty"`
 
 	// 服务器组ID

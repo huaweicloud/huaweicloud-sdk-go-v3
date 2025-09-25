@@ -15,13 +15,13 @@ import (
 
 type UploadFileRequestBody struct {
 
-	// 文件上传场景,如工单附件上传:order
+	// 文件上传场景,如服务单附件上传:order
 	SceneCode *def.MultiPart `json:"scene_code"`
 
-	// 文件名称,用户上传工单附件的文件名
+	// 文件名称,用户上传服务单附件的文件名
 	FileName *def.MultiPart `json:"file_name"`
 
-	// 文件,用户上传的工单附件
+	// 文件,用户上传的服务单附件
 	File *def.FilePart `json:"file"`
 }
 

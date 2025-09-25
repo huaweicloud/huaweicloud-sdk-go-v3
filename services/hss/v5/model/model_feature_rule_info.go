@@ -23,13 +23,13 @@ type FeatureRuleInfo struct {
 	// 检测特性规则配置信息
 	FeatureConfigure *string `json:"feature_configure,omitempty"`
 
-	// 可选防护动作，包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
+	// 可选防护动作，包含如下 -1 检测 -2 检测并阻断/拦截 -3 都可以
 	OptionalProtectiveAction *int32 `json:"optional_protective_action,omitempty"`
 
-	// 默认防护动作，包含如下 -1 检测   -2 检测并阻断/拦截
+	// 默认防护动作，包含如下 -1 检测 -2 检测并阻断/拦截
 	ProtectiveAction *int32 `json:"protective_action,omitempty"`
 
-	// 是否可编辑配置信息，包含如下 -0 否   -1 是
+	// 是否可编辑配置信息，包含如下 -0 否 -1 是
 	Editable *int32 `json:"editable,omitempty"`
 }
 

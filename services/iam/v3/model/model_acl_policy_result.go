@@ -13,6 +13,9 @@ type AclPolicyResult struct {
 
 	// 允许访问的IP地址区间。
 	AllowIpRanges *[]AllowIpRangesResult `json:"allow_ip_ranges,omitempty"`
+
+	// 允许访问的VPC端点。
+	AllowVpcEndpoints *[]AllowVpcEndpointsResult `json:"allow_vpc_endpoints,omitempty"`
 }
 
 func (o AclPolicyResult) String() string {

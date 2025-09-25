@@ -15,6 +15,9 @@ type CheckAgencyResponse struct {
 	// **参数解释：** 代理名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Name *string `json:"name,omitempty"`
 
+	// **参数解释：** 版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	Version *string `json:"version,omitempty"`
+
 	// **参数解释：** 代理存在时间段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Duration *string `json:"duration,omitempty"`
 

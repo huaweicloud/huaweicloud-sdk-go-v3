@@ -14,6 +14,12 @@ type JobListDto struct {
 	// 作业的名称，取值范围：[1,63]，允许大小写字母、数字、以及特殊字符中划线(-)
 	Name *string `json:"name,omitempty"`
 
+	// **参数解释**： 作业所属空间ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	EihealthProjectId *string `json:"eihealth_project_id,omitempty"`
+
+	// **参数解释**： 作业所属空间名称。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	EihealthProjectName *string `json:"eihealth_project_name,omitempty"`
+
 	// 作业的描述,取值范围：输入字符最大长度为255
 	Description *string `json:"description,omitempty"`
 
@@ -34,6 +40,9 @@ type JobListDto struct {
 
 	// 作业创建时间
 	CreateTime *string `json:"create_time,omitempty"`
+
+	// **参数解释**： 作业开始时间。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	StartTime *string `json:"start_time,omitempty"`
 
 	// 作业结束时间
 	FinishTime *string `json:"finish_time,omitempty"`

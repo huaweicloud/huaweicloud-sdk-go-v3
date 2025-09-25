@@ -552,27 +552,6 @@ func (c *KafkaClient) DeleteKafkaUserClientQuotaTaskInvoker(request *model.Delet
 	return &DeleteKafkaUserClientQuotaTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// EnableDns 开启Kafka实例域名访问能力
-//
-// 开启Kafka实例域名访问后，客户端可以通过域名连接Kafka实例。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) EnableDns(request *model.EnableDnsRequest) (*model.EnableDnsResponse, error) {
-	requestDef := GenReqDefForEnableDns()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.EnableDnsResponse), nil
-	}
-}
-
-// EnableDnsInvoker 开启Kafka实例域名访问能力
-func (c *KafkaClient) EnableDnsInvoker(request *model.EnableDnsRequest) *EnableDnsInvoker {
-	requestDef := GenReqDefForEnableDns()
-	return &EnableDnsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ListAvailableZones 查询可用区信息
 //
 // 在创建实例时，需要配置实例所在的可用区ID，可通过该接口查询可用区的ID。

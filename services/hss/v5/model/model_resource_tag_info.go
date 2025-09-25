@@ -8,10 +8,10 @@ import (
 
 type ResourceTagInfo struct {
 
-	// 键。最大长度128个unicode字符。 key不能为空
+	// **参数解释**: 键 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位，key不能为空 **默认取值**: 不涉及
 	Key string `json:"key"`
 
-	// 值
+	// **参数解释**: 值 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
 	Value string `json:"value"`
 }
 

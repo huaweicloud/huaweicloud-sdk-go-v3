@@ -22,11 +22,11 @@ type ListDatabaseVolumeSummaryResponse struct {
 	EstimatedRemainingDays *string `json:"estimated_remaining_days,omitempty"`
 
 	// **参数解释**: CN节点信息。
-	CnComponents *[]ComponentInfoResult `json:"cn_components,omitempty"`
+	CnComponents *[]CnComponentInfoResult `json:"cn_components,omitempty"`
 
 	// **参数解释**: DN节点信息。
-	DnComponents   *[]ComponentInfoResult `json:"dn_components,omitempty"`
-	HttpStatusCode int                    `json:"-"`
+	DnComponents   *[]DnComponentInfoResult `json:"dn_components,omitempty"`
+	HttpStatusCode int                      `json:"-"`
 }
 
 func (o ListDatabaseVolumeSummaryResponse) String() string {

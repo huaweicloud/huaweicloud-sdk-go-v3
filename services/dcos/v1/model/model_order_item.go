@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// OrderItem 客户工单-列表值
+// OrderItem 客户服务单-列表值
 type OrderItem struct {
 
 	// 服务单号
@@ -15,13 +15,13 @@ type OrderItem struct {
 	// 标题
 	Title string `json:"title"`
 
-	// 工单类型:IDC运维 设备运维 设备检查 客户陪同
+	// 服务单类型:IDC运维 设备运维 设备检查 客户陪同
 	Type *string `json:"type,omitempty"`
 
 	// 具体操作类型:设备物理上下电
 	SubType *string `json:"sub_type,omitempty"`
 
-	// 工单类型编码
+	// 服务单类型编码
 	ModelCode string `json:"model_code"`
 
 	// 机房编码

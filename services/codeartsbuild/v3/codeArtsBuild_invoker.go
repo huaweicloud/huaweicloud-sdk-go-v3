@@ -741,6 +741,22 @@ func (i *ShowImageTemplateListInvoker) Invoke() (*model.ShowImageTemplateListRes
 	}
 }
 
+type AddFavouriteTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddFavouriteTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddFavouriteTaskInvoker) Invoke() (*model.AddFavouriteTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddFavouriteTaskResponse), nil
+	}
+}
+
 type ApplyProjectPermissionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1042,6 +1058,22 @@ func (i *ListUpdateJobHistoryInvoker) Invoke() (*model.ListUpdateJobHistoryRespo
 		return nil, err
 	} else {
 		return result.(*model.ListUpdateJobHistoryResponse), nil
+	}
+}
+
+type RemoverFavouriteTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RemoverFavouriteTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RemoverFavouriteTaskInvoker) Invoke() (*model.RemoverFavouriteTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RemoverFavouriteTaskResponse), nil
 	}
 }
 
@@ -1557,6 +1589,54 @@ func (i *UploadKeystoreInvoker) Invoke() (*model.UploadKeystoreResponse, error) 
 	}
 }
 
+type DownloadBuildFullLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadBuildFullLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadBuildFullLogInvoker) Invoke() (*model.DownloadBuildFullLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadBuildFullLogResponse), nil
+	}
+}
+
+type DownloadBuildRealTimeLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadBuildRealTimeLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadBuildRealTimeLogInvoker) Invoke() (*model.DownloadBuildRealTimeLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadBuildRealTimeLogResponse), nil
+	}
+}
+
+type ShowActionIInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowActionIInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowActionIInfoInvoker) Invoke() (*model.ShowActionIInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowActionIInfoResponse), nil
+	}
+}
+
 type DownloadLogByRecordIdInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1909,6 +1989,22 @@ func (i *AddFavouriteCustomTemplateInvoker) Invoke() (*model.AddFavouriteCustomT
 	}
 }
 
+type AddFavouriteOfficialTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddFavouriteOfficialTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddFavouriteOfficialTemplateInvoker) Invoke() (*model.AddFavouriteOfficialTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddFavouriteOfficialTemplateResponse), nil
+	}
+}
+
 type CreateTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2002,6 +2098,22 @@ func (i *RemoverFavouriteCustomTemplateInvoker) Invoke() (*model.RemoverFavourit
 		return nil, err
 	} else {
 		return result.(*model.RemoverFavouriteCustomTemplateResponse), nil
+	}
+}
+
+type RemoverFavouriteOfficialTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RemoverFavouriteOfficialTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RemoverFavouriteOfficialTemplateInvoker) Invoke() (*model.RemoverFavouriteOfficialTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RemoverFavouriteOfficialTemplateResponse), nil
 	}
 }
 

@@ -14,6 +14,15 @@ type ClusterDetailDatastore struct {
 
 	// CSS集群引擎版本号。详细请参考CSS[支持的集群版本](css_03_0056.xml)。
 	Version *string `json:"version,omitempty"`
+
+	// 集群发布版本号。
+	SubVersion *string `json:"subVersion,omitempty"`
+
+	// 表示集群发布版本是否EOS。
+	IsEosCluster *bool `json:"isEosCluster,omitempty"`
+
+	// 集群认证是否支持安全模式。
+	SupportSecuritymode *bool `json:"supportSecuritymode,omitempty"`
 }
 
 func (o ClusterDetailDatastore) String() string {

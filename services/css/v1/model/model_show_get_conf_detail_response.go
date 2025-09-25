@@ -18,7 +18,7 @@ type ShowGetConfDetailResponse struct {
 	// 配置文件内容。
 	ConfContent *string `json:"confContent,omitempty"`
 
-	Setting *Confsetting `json:"setting,omitempty"`
+	Setting *Setting `json:"setting,omitempty"`
 
 	// 更新时间。
 	UpdateAt       *string `json:"updateAt,omitempty"`

@@ -1,0 +1,25 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+type CreateImageSynchronizeTaskRequestInfoRegistryInfo struct {
+
+	// 镜像仓库Id
+	RegistryId *string `json:"registry_id,omitempty"`
+
+	// 镜像仓库类型 | SwrPrivate swr私有 SwrShared  swr共享 SwrEnterprise  swr企业 Harbor harbor仓库 Jfrog  jfrog仓库 Other  其他仓库
+	RegistryType *string `json:"registry_type,omitempty"`
+}
+
+func (o CreateImageSynchronizeTaskRequestInfoRegistryInfo) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "CreateImageSynchronizeTaskRequestInfoRegistryInfo struct{}"
+	}
+
+	return strings.Join([]string{"CreateImageSynchronizeTaskRequestInfoRegistryInfo", string(data)}, " ")
+}

@@ -36,6 +36,9 @@ type ShowJobResponse struct {
 	// 作业创建时间
 	CreateTime *string `json:"create_time,omitempty"`
 
+	// **参数解释**： 作业开始时间。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	StartTime *string `json:"start_time,omitempty"`
+
 	// 作业完成时间
 	FinishTime *string `json:"finish_time,omitempty"`
 

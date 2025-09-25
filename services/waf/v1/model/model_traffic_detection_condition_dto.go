@@ -24,7 +24,7 @@ type TrafficDetectionConditionDto struct {
 	MatchContents *[]string `json:"match_contents,omitempty"`
 
 	// **参数解释：** 引用表Id，关联预设的匹配内容列表ID（如无则不填）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-	ValueListRef *string `json:"value_list_ref,omitempty"`
+	ValueListRes *string `json:"value_list_res,omitempty"`
 }
 
 func (o TrafficDetectionConditionDto) String() string {

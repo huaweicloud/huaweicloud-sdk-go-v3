@@ -21,6 +21,54 @@ func (i *GetAccountSummaryV5Invoker) Invoke() (*model.GetAccountSummaryV5Respons
 	}
 }
 
+type GetAsymmetricSignatureSwitchV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetAsymmetricSignatureSwitchV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetAsymmetricSignatureSwitchV5Invoker) Invoke() (*model.GetAsymmetricSignatureSwitchV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetAsymmetricSignatureSwitchV5Response), nil
+	}
+}
+
+type GetFeatureStatusV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetFeatureStatusV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetFeatureStatusV5Invoker) Invoke() (*model.GetFeatureStatusV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetFeatureStatusV5Response), nil
+	}
+}
+
+type SetAsymmetricSignatureSwitchV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetAsymmetricSignatureSwitchV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetAsymmetricSignatureSwitchV5Invoker) Invoke() (*model.SetAsymmetricSignatureSwitchV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetAsymmetricSignatureSwitchV5Response), nil
+	}
+}
+
 type CreateAgencyV5Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -34,6 +82,22 @@ func (i *CreateAgencyV5Invoker) Invoke() (*model.CreateAgencyV5Response, error) 
 		return nil, err
 	} else {
 		return result.(*model.CreateAgencyV5Response), nil
+	}
+}
+
+type CreateServiceLinkedAgencyV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateServiceLinkedAgencyV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateServiceLinkedAgencyV5Invoker) Invoke() (*model.CreateServiceLinkedAgencyV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateServiceLinkedAgencyV5Response), nil
 	}
 }
 
@@ -53,6 +117,22 @@ func (i *DeleteAgencyV5Invoker) Invoke() (*model.DeleteAgencyV5Response, error) 
 	}
 }
 
+type DeleteServiceLinkedAgencyV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteServiceLinkedAgencyV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteServiceLinkedAgencyV5Invoker) Invoke() (*model.DeleteServiceLinkedAgencyV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteServiceLinkedAgencyV5Response), nil
+	}
+}
+
 type GetAgencyV5Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -66,6 +146,22 @@ func (i *GetAgencyV5Invoker) Invoke() (*model.GetAgencyV5Response, error) {
 		return nil, err
 	} else {
 		return result.(*model.GetAgencyV5Response), nil
+	}
+}
+
+type GetServiceLinkedAgencyDeletionStatusV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetServiceLinkedAgencyDeletionStatusV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetServiceLinkedAgencyDeletionStatusV5Invoker) Invoke() (*model.GetServiceLinkedAgencyDeletionStatusV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetServiceLinkedAgencyDeletionStatusV5Response), nil
 	}
 }
 
@@ -117,38 +213,6 @@ func (i *UpdateTrustPolicyV5Invoker) Invoke() (*model.UpdateTrustPolicyV5Respons
 	}
 }
 
-type GetAsymmetricSignatureSwitchV5Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *GetAsymmetricSignatureSwitchV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *GetAsymmetricSignatureSwitchV5Invoker) Invoke() (*model.GetAsymmetricSignatureSwitchV5Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.GetAsymmetricSignatureSwitchV5Response), nil
-	}
-}
-
-type SetAsymmetricSignatureSwitchV5Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SetAsymmetricSignatureSwitchV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *SetAsymmetricSignatureSwitchV5Invoker) Invoke() (*model.SetAsymmetricSignatureSwitchV5Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SetAsymmetricSignatureSwitchV5Response), nil
-	}
-}
-
 type GetAuthorizationSchemaV5Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -178,6 +242,22 @@ func (i *ListRegisteredServicesForAuthSchemaV5Invoker) Invoke() (*model.ListRegi
 		return nil, err
 	} else {
 		return result.(*model.ListRegisteredServicesForAuthSchemaV5Response), nil
+	}
+}
+
+type ListServicePrincipalsV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListServicePrincipalsV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListServicePrincipalsV5Invoker) Invoke() (*model.ListServicePrincipalsV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListServicePrincipalsV5Response), nil
 	}
 }
 
@@ -389,6 +469,22 @@ func (i *CreatePolicyV5Invoker) Invoke() (*model.CreatePolicyV5Response, error) 
 	}
 }
 
+type CreatePolicyVersionV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePolicyVersionV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreatePolicyVersionV5Invoker) Invoke() (*model.CreatePolicyVersionV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePolicyVersionV5Response), nil
+	}
+}
+
 type DeletePolicyV5Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -402,6 +498,22 @@ func (i *DeletePolicyV5Invoker) Invoke() (*model.DeletePolicyV5Response, error) 
 		return nil, err
 	} else {
 		return result.(*model.DeletePolicyV5Response), nil
+	}
+}
+
+type DeletePolicyVersionV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePolicyVersionV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeletePolicyVersionV5Invoker) Invoke() (*model.DeletePolicyVersionV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePolicyVersionV5Response), nil
 	}
 }
 
@@ -421,6 +533,22 @@ func (i *GetPolicyV5Invoker) Invoke() (*model.GetPolicyV5Response, error) {
 	}
 }
 
+type GetPolicyVersionV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetPolicyVersionV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetPolicyVersionV5Invoker) Invoke() (*model.GetPolicyVersionV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetPolicyVersionV5Response), nil
+	}
+}
+
 type ListPoliciesV5Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -434,6 +562,38 @@ func (i *ListPoliciesV5Invoker) Invoke() (*model.ListPoliciesV5Response, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListPoliciesV5Response), nil
+	}
+}
+
+type ListPolicyVersionsV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPolicyVersionsV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPolicyVersionsV5Invoker) Invoke() (*model.ListPolicyVersionsV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPolicyVersionsV5Response), nil
+	}
+}
+
+type SetDefaultPolicyVersionV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetDefaultPolicyVersionV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetDefaultPolicyVersionV5Invoker) Invoke() (*model.SetDefaultPolicyVersionV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetDefaultPolicyVersionV5Response), nil
 	}
 }
 
@@ -597,86 +757,6 @@ func (i *ListEntitiesForPolicyV5Invoker) Invoke() (*model.ListEntitiesForPolicyV
 	}
 }
 
-type CreatePolicyVersionV5Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreatePolicyVersionV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreatePolicyVersionV5Invoker) Invoke() (*model.CreatePolicyVersionV5Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreatePolicyVersionV5Response), nil
-	}
-}
-
-type DeletePolicyVersionV5Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeletePolicyVersionV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeletePolicyVersionV5Invoker) Invoke() (*model.DeletePolicyVersionV5Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeletePolicyVersionV5Response), nil
-	}
-}
-
-type GetPolicyVersionV5Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *GetPolicyVersionV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *GetPolicyVersionV5Invoker) Invoke() (*model.GetPolicyVersionV5Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.GetPolicyVersionV5Response), nil
-	}
-}
-
-type ListPolicyVersionsV5Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListPolicyVersionsV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListPolicyVersionsV5Invoker) Invoke() (*model.ListPolicyVersionsV5Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListPolicyVersionsV5Response), nil
-	}
-}
-
-type SetDefaultPolicyVersionV5Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SetDefaultPolicyVersionV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *SetDefaultPolicyVersionV5Invoker) Invoke() (*model.SetDefaultPolicyVersionV5Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SetDefaultPolicyVersionV5Response), nil
-	}
-}
-
 type DeleteResourceTagsV5Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -818,70 +898,6 @@ func (i *UpdateTokenPolicyV5Invoker) Invoke() (*model.UpdateTokenPolicyV5Respons
 		return nil, err
 	} else {
 		return result.(*model.UpdateTokenPolicyV5Response), nil
-	}
-}
-
-type CreateServiceLinkedAgencyV5Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateServiceLinkedAgencyV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateServiceLinkedAgencyV5Invoker) Invoke() (*model.CreateServiceLinkedAgencyV5Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateServiceLinkedAgencyV5Response), nil
-	}
-}
-
-type DeleteServiceLinkedAgencyV5Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteServiceLinkedAgencyV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteServiceLinkedAgencyV5Invoker) Invoke() (*model.DeleteServiceLinkedAgencyV5Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteServiceLinkedAgencyV5Response), nil
-	}
-}
-
-type GetServiceLinkedAgencyDeletionStatusV5Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *GetServiceLinkedAgencyDeletionStatusV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *GetServiceLinkedAgencyDeletionStatusV5Invoker) Invoke() (*model.GetServiceLinkedAgencyDeletionStatusV5Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.GetServiceLinkedAgencyDeletionStatusV5Response), nil
-	}
-}
-
-type ListServicePrincipalsV5Invoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListServicePrincipalsV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListServicePrincipalsV5Invoker) Invoke() (*model.ListServicePrincipalsV5Response, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListServicePrincipalsV5Response), nil
 	}
 }
 

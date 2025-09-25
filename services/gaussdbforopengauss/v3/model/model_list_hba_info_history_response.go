@@ -10,7 +10,7 @@ import (
 type ListHbaInfoHistoryResponse struct {
 
 	// **参数解释**: hba修改历史信息。
-	HbaConfs *[]HbaHistoryResult `json:"hba_confs,omitempty"`
+	HbaHistories *[]HbaHistoryResult `json:"hba_histories,omitempty"`
 
 	// **参数解释**: hba配置总数。 **取值范围**: 不涉及。
 	TotalCount     *int64 `json:"total_count,omitempty"`

@@ -17,6 +17,12 @@ type ClusterListDatastore struct {
 
 	// 是否支持安全模式
 	SupportSecuritymode *bool `json:"supportSecuritymode,omitempty"`
+
+	// 集群发布版本号。
+	SubVersion *string `json:"subVersion,omitempty"`
+
+	// 表示集群发布版本是否EOS。
+	IsEosCluster *bool `json:"isEosCluster,omitempty"`
 }
 
 func (o ClusterListDatastore) String() string {

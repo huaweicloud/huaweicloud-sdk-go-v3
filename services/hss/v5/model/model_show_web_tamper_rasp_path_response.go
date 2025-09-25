@@ -9,7 +9,7 @@ import (
 // ShowWebTamperRaspPathResponse Response Object
 type ShowWebTamperRaspPathResponse struct {
 
-	// rasp path
+	// **参数解释**: 动态网页防篡改的Tomcat bin目录 **取值范围**: 字符长度0-512位
 	RaspPath       *string `json:"rasp_path,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

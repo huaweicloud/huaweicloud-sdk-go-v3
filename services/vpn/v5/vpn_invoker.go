@@ -229,6 +229,38 @@ func (i *UpdateCgwInvoker) Invoke() (*model.UpdateCgwResponse, error) {
 	}
 }
 
+type CreateP2cVgwInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateP2cVgwInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateP2cVgwInvoker) Invoke() (*model.CreateP2cVgwResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateP2cVgwResponse), nil
+	}
+}
+
+type DeleteP2cVgwInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteP2cVgwInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteP2cVgwInvoker) Invoke() (*model.DeleteP2cVgwResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteP2cVgwResponse), nil
+	}
+}
+
 type DeleteP2cVgwConnectionInvoker struct {
 	*invoker.BaseInvoker
 }

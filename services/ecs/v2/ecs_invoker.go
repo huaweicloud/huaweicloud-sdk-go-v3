@@ -1305,6 +1305,22 @@ func (i *ShowResetPasswordFlagInvoker) Invoke() (*model.ShowResetPasswordFlagRes
 	}
 }
 
+type ShowSerialConsoleActionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSerialConsoleActionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSerialConsoleActionsInvoker) Invoke() (*model.ShowSerialConsoleActionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSerialConsoleActionsResponse), nil
+	}
+}
+
 type ShowServerInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1494,6 +1510,22 @@ func (i *UpdateScheduledEventInvoker) Invoke() (*model.UpdateScheduledEventRespo
 		return nil, err
 	} else {
 		return result.(*model.UpdateScheduledEventResponse), nil
+	}
+}
+
+type UpdateSerialConsoleOptionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSerialConsoleOptionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSerialConsoleOptionsInvoker) Invoke() (*model.UpdateSerialConsoleOptionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSerialConsoleOptionsResponse), nil
 	}
 }
 

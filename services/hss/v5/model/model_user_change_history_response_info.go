@@ -12,7 +12,7 @@ type UserChangeHistoryResponseInfo struct {
 	// **参数解释** agent标识 **取值范围** 长度1-128
 	AgentId *string `json:"agent_id,omitempty"`
 
-	// **参数解释** 变更类型 **取值范围**     - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
+	// **参数解释** 变更类型 **取值范围** - ADD ：添加 - DELETE ：删除 - MODIFY ： 修改
 	ChangeType *string `json:"change_type,omitempty"`
 
 	// **参数解释** 主机ID **取值范围** 长度1-128

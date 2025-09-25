@@ -40,7 +40,7 @@ type Artifact struct {
 	JobId *string `json:"job_id,omitempty"`
 
 	// **参数解释**： 构建任务编号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-	BuildNo *int32 `json:"build_no,omitempty"`
+	BuildNo *string `json:"build_no,omitempty"`
 
 	// **参数解释**： 构建任务序号。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	DailyBuildNumber *string `json:"daily_build_number,omitempty"`

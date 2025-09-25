@@ -40,6 +40,69 @@ func (c *IamClient) GetAccountSummaryV5Invoker(request *model.GetAccountSummaryV
 	return &GetAccountSummaryV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// GetAsymmetricSignatureSwitchV5 获取账号非对称签名开关状态
+//
+// 该接口用于获取账号非对称签名开关的状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) GetAsymmetricSignatureSwitchV5(request *model.GetAsymmetricSignatureSwitchV5Request) (*model.GetAsymmetricSignatureSwitchV5Response, error) {
+	requestDef := GenReqDefForGetAsymmetricSignatureSwitchV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetAsymmetricSignatureSwitchV5Response), nil
+	}
+}
+
+// GetAsymmetricSignatureSwitchV5Invoker 获取账号非对称签名开关状态
+func (c *IamClient) GetAsymmetricSignatureSwitchV5Invoker(request *model.GetAsymmetricSignatureSwitchV5Request) *GetAsymmetricSignatureSwitchV5Invoker {
+	requestDef := GenReqDefForGetAsymmetricSignatureSwitchV5()
+	return &GetAsymmetricSignatureSwitchV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetFeatureStatusV5 获取此账号的功能状态
+//
+// 该接口可以用于获取此账号的功能状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) GetFeatureStatusV5(request *model.GetFeatureStatusV5Request) (*model.GetFeatureStatusV5Response, error) {
+	requestDef := GenReqDefForGetFeatureStatusV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetFeatureStatusV5Response), nil
+	}
+}
+
+// GetFeatureStatusV5Invoker 获取此账号的功能状态
+func (c *IamClient) GetFeatureStatusV5Invoker(request *model.GetFeatureStatusV5Request) *GetFeatureStatusV5Invoker {
+	requestDef := GenReqDefForGetFeatureStatusV5()
+	return &GetFeatureStatusV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetAsymmetricSignatureSwitchV5 设置账号开启或关闭非对称签名
+//
+// 该接口用于设置账号开启或关闭非对称签名功能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) SetAsymmetricSignatureSwitchV5(request *model.SetAsymmetricSignatureSwitchV5Request) (*model.SetAsymmetricSignatureSwitchV5Response, error) {
+	requestDef := GenReqDefForSetAsymmetricSignatureSwitchV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetAsymmetricSignatureSwitchV5Response), nil
+	}
+}
+
+// SetAsymmetricSignatureSwitchV5Invoker 设置账号开启或关闭非对称签名
+func (c *IamClient) SetAsymmetricSignatureSwitchV5Invoker(request *model.SetAsymmetricSignatureSwitchV5Request) *SetAsymmetricSignatureSwitchV5Invoker {
+	requestDef := GenReqDefForSetAsymmetricSignatureSwitchV5()
+	return &SetAsymmetricSignatureSwitchV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAgencyV5 创建信任委托
 //
 // 该接口可以用于创建信任委托。
@@ -63,6 +126,27 @@ func (c *IamClient) CreateAgencyV5Invoker(request *model.CreateAgencyV5Request) 
 	return &CreateAgencyV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateServiceLinkedAgencyV5 创建服务关联委托
+//
+// 该接口可以用于创建服务关联委托。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) CreateServiceLinkedAgencyV5(request *model.CreateServiceLinkedAgencyV5Request) (*model.CreateServiceLinkedAgencyV5Response, error) {
+	requestDef := GenReqDefForCreateServiceLinkedAgencyV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateServiceLinkedAgencyV5Response), nil
+	}
+}
+
+// CreateServiceLinkedAgencyV5Invoker 创建服务关联委托
+func (c *IamClient) CreateServiceLinkedAgencyV5Invoker(request *model.CreateServiceLinkedAgencyV5Request) *CreateServiceLinkedAgencyV5Invoker {
+	requestDef := GenReqDefForCreateServiceLinkedAgencyV5()
+	return &CreateServiceLinkedAgencyV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteAgencyV5 删除信任委托
 //
 // 该接口可以用于删除信任委托。
@@ -84,6 +168,27 @@ func (c *IamClient) DeleteAgencyV5Invoker(request *model.DeleteAgencyV5Request) 
 	return &DeleteAgencyV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteServiceLinkedAgencyV5 删除服务关联委托
+//
+// 该接口可以用于服务关联委托删除自己。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) DeleteServiceLinkedAgencyV5(request *model.DeleteServiceLinkedAgencyV5Request) (*model.DeleteServiceLinkedAgencyV5Response, error) {
+	requestDef := GenReqDefForDeleteServiceLinkedAgencyV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteServiceLinkedAgencyV5Response), nil
+	}
+}
+
+// DeleteServiceLinkedAgencyV5Invoker 删除服务关联委托
+func (c *IamClient) DeleteServiceLinkedAgencyV5Invoker(request *model.DeleteServiceLinkedAgencyV5Request) *DeleteServiceLinkedAgencyV5Invoker {
+	requestDef := GenReqDefForDeleteServiceLinkedAgencyV5()
+	return &DeleteServiceLinkedAgencyV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // GetAgencyV5 查询委托或信任委托详情
 //
 // 该接口可以用于查询委托或信任委托详情。
@@ -103,6 +208,27 @@ func (c *IamClient) GetAgencyV5(request *model.GetAgencyV5Request) (*model.GetAg
 func (c *IamClient) GetAgencyV5Invoker(request *model.GetAgencyV5Request) *GetAgencyV5Invoker {
 	requestDef := GenReqDefForGetAgencyV5()
 	return &GetAgencyV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetServiceLinkedAgencyDeletionStatusV5 获取服务关联委托删除状态
+//
+// 该接口可以用于获取服务关联委托删除状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) GetServiceLinkedAgencyDeletionStatusV5(request *model.GetServiceLinkedAgencyDeletionStatusV5Request) (*model.GetServiceLinkedAgencyDeletionStatusV5Response, error) {
+	requestDef := GenReqDefForGetServiceLinkedAgencyDeletionStatusV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetServiceLinkedAgencyDeletionStatusV5Response), nil
+	}
+}
+
+// GetServiceLinkedAgencyDeletionStatusV5Invoker 获取服务关联委托删除状态
+func (c *IamClient) GetServiceLinkedAgencyDeletionStatusV5Invoker(request *model.GetServiceLinkedAgencyDeletionStatusV5Request) *GetServiceLinkedAgencyDeletionStatusV5Invoker {
+	requestDef := GenReqDefForGetServiceLinkedAgencyDeletionStatusV5()
+	return &GetServiceLinkedAgencyDeletionStatusV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAgenciesV5 查询指定条件下的委托及信任委托列表
@@ -168,48 +294,6 @@ func (c *IamClient) UpdateTrustPolicyV5Invoker(request *model.UpdateTrustPolicyV
 	return &UpdateTrustPolicyV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// GetAsymmetricSignatureSwitchV5 获取账号非对称签名开关状态
-//
-// 该接口用于获取账号非对称签名开关的状态。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *IamClient) GetAsymmetricSignatureSwitchV5(request *model.GetAsymmetricSignatureSwitchV5Request) (*model.GetAsymmetricSignatureSwitchV5Response, error) {
-	requestDef := GenReqDefForGetAsymmetricSignatureSwitchV5()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.GetAsymmetricSignatureSwitchV5Response), nil
-	}
-}
-
-// GetAsymmetricSignatureSwitchV5Invoker 获取账号非对称签名开关状态
-func (c *IamClient) GetAsymmetricSignatureSwitchV5Invoker(request *model.GetAsymmetricSignatureSwitchV5Request) *GetAsymmetricSignatureSwitchV5Invoker {
-	requestDef := GenReqDefForGetAsymmetricSignatureSwitchV5()
-	return &GetAsymmetricSignatureSwitchV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// SetAsymmetricSignatureSwitchV5 设置账号开启或关闭非对称签名
-//
-// 该接口用于设置账号开启或关闭非对称签名功能。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *IamClient) SetAsymmetricSignatureSwitchV5(request *model.SetAsymmetricSignatureSwitchV5Request) (*model.SetAsymmetricSignatureSwitchV5Response, error) {
-	requestDef := GenReqDefForSetAsymmetricSignatureSwitchV5()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.SetAsymmetricSignatureSwitchV5Response), nil
-	}
-}
-
-// SetAsymmetricSignatureSwitchV5Invoker 设置账号开启或关闭非对称签名
-func (c *IamClient) SetAsymmetricSignatureSwitchV5Invoker(request *model.SetAsymmetricSignatureSwitchV5Request) *SetAsymmetricSignatureSwitchV5Invoker {
-	requestDef := GenReqDefForSetAsymmetricSignatureSwitchV5()
-	return &SetAsymmetricSignatureSwitchV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // GetAuthorizationSchemaV5 查询指定服务授权概要
 //
 // 该接口可以用于查询指定云服务的授权概要。
@@ -250,6 +334,27 @@ func (c *IamClient) ListRegisteredServicesForAuthSchemaV5(request *model.ListReg
 func (c *IamClient) ListRegisteredServicesForAuthSchemaV5Invoker(request *model.ListRegisteredServicesForAuthSchemaV5Request) *ListRegisteredServicesForAuthSchemaV5Invoker {
 	requestDef := GenReqDefForListRegisteredServicesForAuthSchemaV5()
 	return &ListRegisteredServicesForAuthSchemaV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListServicePrincipalsV5 获取全部服务主体
+//
+// 该接口可以用于获取全部服务主体。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) ListServicePrincipalsV5(request *model.ListServicePrincipalsV5Request) (*model.ListServicePrincipalsV5Response, error) {
+	requestDef := GenReqDefForListServicePrincipalsV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListServicePrincipalsV5Response), nil
+	}
+}
+
+// ListServicePrincipalsV5Invoker 获取全部服务主体
+func (c *IamClient) ListServicePrincipalsV5Invoker(request *model.ListServicePrincipalsV5Request) *ListServicePrincipalsV5Invoker {
+	requestDef := GenReqDefForListServicePrincipalsV5()
+	return &ListServicePrincipalsV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AddUserToGroupV5 添加IAM用户到用户组
@@ -525,6 +630,27 @@ func (c *IamClient) CreatePolicyV5Invoker(request *model.CreatePolicyV5Request) 
 	return &CreatePolicyV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePolicyVersionV5 为指定身份策略创建一个新版本
+//
+// 该接口可以用于为指定身份策略创建一个新版本。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) CreatePolicyVersionV5(request *model.CreatePolicyVersionV5Request) (*model.CreatePolicyVersionV5Response, error) {
+	requestDef := GenReqDefForCreatePolicyVersionV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePolicyVersionV5Response), nil
+	}
+}
+
+// CreatePolicyVersionV5Invoker 为指定身份策略创建一个新版本
+func (c *IamClient) CreatePolicyVersionV5Invoker(request *model.CreatePolicyVersionV5Request) *CreatePolicyVersionV5Invoker {
+	requestDef := GenReqDefForCreatePolicyVersionV5()
+	return &CreatePolicyVersionV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeletePolicyV5 删除自定义身份策略
 //
 // 该接口可以用于删除一个存在的自定义身份策略，必须确保该自定义身份策略没有附加在任何IAM用户、用户组、委托或信任委托上。
@@ -544,6 +670,27 @@ func (c *IamClient) DeletePolicyV5(request *model.DeletePolicyV5Request) (*model
 func (c *IamClient) DeletePolicyV5Invoker(request *model.DeletePolicyV5Request) *DeletePolicyV5Invoker {
 	requestDef := GenReqDefForDeletePolicyV5()
 	return &DeletePolicyV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePolicyVersionV5 删除指定身份策略版本
+//
+// 该接口可以用于删除指定身份策略的指定版本。默认身份策略版本不能被删除。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) DeletePolicyVersionV5(request *model.DeletePolicyVersionV5Request) (*model.DeletePolicyVersionV5Response, error) {
+	requestDef := GenReqDefForDeletePolicyVersionV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePolicyVersionV5Response), nil
+	}
+}
+
+// DeletePolicyVersionV5Invoker 删除指定身份策略版本
+func (c *IamClient) DeletePolicyVersionV5Invoker(request *model.DeletePolicyVersionV5Request) *DeletePolicyVersionV5Invoker {
+	requestDef := GenReqDefForDeletePolicyVersionV5()
+	return &DeletePolicyVersionV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // GetPolicyV5 通过身份策略ID获取身份策略
@@ -567,6 +714,27 @@ func (c *IamClient) GetPolicyV5Invoker(request *model.GetPolicyV5Request) *GetPo
 	return &GetPolicyV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// GetPolicyVersionV5 查询指定身份策略版本
+//
+// 该接口可以用于查询指定身份策略的指定版本的相关信息，包括身份策略文档。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) GetPolicyVersionV5(request *model.GetPolicyVersionV5Request) (*model.GetPolicyVersionV5Response, error) {
+	requestDef := GenReqDefForGetPolicyVersionV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetPolicyVersionV5Response), nil
+	}
+}
+
+// GetPolicyVersionV5Invoker 查询指定身份策略版本
+func (c *IamClient) GetPolicyVersionV5Invoker(request *model.GetPolicyVersionV5Request) *GetPolicyVersionV5Invoker {
+	requestDef := GenReqDefForGetPolicyVersionV5()
+	return &GetPolicyVersionV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListPoliciesV5 查询所有身份策略
 //
 // 该接口可以用于查询所有身份策略，包含系统预置身份策略和自定义身份策略。
@@ -586,6 +754,48 @@ func (c *IamClient) ListPoliciesV5(request *model.ListPoliciesV5Request) (*model
 func (c *IamClient) ListPoliciesV5Invoker(request *model.ListPoliciesV5Request) *ListPoliciesV5Invoker {
 	requestDef := GenReqDefForListPoliciesV5()
 	return &ListPoliciesV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPolicyVersionsV5 查询指定身份策略的所有版本
+//
+// 该接口可以用于查询指定身份策略的所有版本信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) ListPolicyVersionsV5(request *model.ListPolicyVersionsV5Request) (*model.ListPolicyVersionsV5Response, error) {
+	requestDef := GenReqDefForListPolicyVersionsV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPolicyVersionsV5Response), nil
+	}
+}
+
+// ListPolicyVersionsV5Invoker 查询指定身份策略的所有版本
+func (c *IamClient) ListPolicyVersionsV5Invoker(request *model.ListPolicyVersionsV5Request) *ListPolicyVersionsV5Invoker {
+	requestDef := GenReqDefForListPolicyVersionsV5()
+	return &ListPolicyVersionsV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetDefaultPolicyVersionV5 将指定身份策略版本设置为默认版本
+//
+// 该接口可以用于将指定身份策略的指定版本设置为默认版本。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) SetDefaultPolicyVersionV5(request *model.SetDefaultPolicyVersionV5Request) (*model.SetDefaultPolicyVersionV5Response, error) {
+	requestDef := GenReqDefForSetDefaultPolicyVersionV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetDefaultPolicyVersionV5Response), nil
+	}
+}
+
+// SetDefaultPolicyVersionV5Invoker 将指定身份策略版本设置为默认版本
+func (c *IamClient) SetDefaultPolicyVersionV5Invoker(request *model.SetDefaultPolicyVersionV5Request) *SetDefaultPolicyVersionV5Invoker {
+	requestDef := GenReqDefForSetDefaultPolicyVersionV5()
+	return &SetDefaultPolicyVersionV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AttachAgencyPolicyV5 为委托或信任委托附加身份策略
@@ -798,111 +1008,6 @@ func (c *IamClient) ListEntitiesForPolicyV5Invoker(request *model.ListEntitiesFo
 	return &ListEntitiesForPolicyV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePolicyVersionV5 为指定身份策略创建一个新版本
-//
-// 该接口可以用于为指定身份策略创建一个新版本。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *IamClient) CreatePolicyVersionV5(request *model.CreatePolicyVersionV5Request) (*model.CreatePolicyVersionV5Response, error) {
-	requestDef := GenReqDefForCreatePolicyVersionV5()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreatePolicyVersionV5Response), nil
-	}
-}
-
-// CreatePolicyVersionV5Invoker 为指定身份策略创建一个新版本
-func (c *IamClient) CreatePolicyVersionV5Invoker(request *model.CreatePolicyVersionV5Request) *CreatePolicyVersionV5Invoker {
-	requestDef := GenReqDefForCreatePolicyVersionV5()
-	return &CreatePolicyVersionV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeletePolicyVersionV5 删除指定身份策略版本
-//
-// 该接口可以用于删除指定身份策略的指定版本。默认身份策略版本不能被删除。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *IamClient) DeletePolicyVersionV5(request *model.DeletePolicyVersionV5Request) (*model.DeletePolicyVersionV5Response, error) {
-	requestDef := GenReqDefForDeletePolicyVersionV5()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeletePolicyVersionV5Response), nil
-	}
-}
-
-// DeletePolicyVersionV5Invoker 删除指定身份策略版本
-func (c *IamClient) DeletePolicyVersionV5Invoker(request *model.DeletePolicyVersionV5Request) *DeletePolicyVersionV5Invoker {
-	requestDef := GenReqDefForDeletePolicyVersionV5()
-	return &DeletePolicyVersionV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// GetPolicyVersionV5 查询指定身份策略版本
-//
-// 该接口可以用于查询指定身份策略的指定版本的相关信息，包括身份策略文档。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *IamClient) GetPolicyVersionV5(request *model.GetPolicyVersionV5Request) (*model.GetPolicyVersionV5Response, error) {
-	requestDef := GenReqDefForGetPolicyVersionV5()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.GetPolicyVersionV5Response), nil
-	}
-}
-
-// GetPolicyVersionV5Invoker 查询指定身份策略版本
-func (c *IamClient) GetPolicyVersionV5Invoker(request *model.GetPolicyVersionV5Request) *GetPolicyVersionV5Invoker {
-	requestDef := GenReqDefForGetPolicyVersionV5()
-	return &GetPolicyVersionV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListPolicyVersionsV5 查询指定身份策略的所有版本
-//
-// 该接口可以用于查询指定身份策略的所有版本信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *IamClient) ListPolicyVersionsV5(request *model.ListPolicyVersionsV5Request) (*model.ListPolicyVersionsV5Response, error) {
-	requestDef := GenReqDefForListPolicyVersionsV5()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListPolicyVersionsV5Response), nil
-	}
-}
-
-// ListPolicyVersionsV5Invoker 查询指定身份策略的所有版本
-func (c *IamClient) ListPolicyVersionsV5Invoker(request *model.ListPolicyVersionsV5Request) *ListPolicyVersionsV5Invoker {
-	requestDef := GenReqDefForListPolicyVersionsV5()
-	return &ListPolicyVersionsV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// SetDefaultPolicyVersionV5 将指定身份策略版本设置为默认版本
-//
-// 该接口可以用于将指定身份策略的指定版本设置为默认版本。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *IamClient) SetDefaultPolicyVersionV5(request *model.SetDefaultPolicyVersionV5Request) (*model.SetDefaultPolicyVersionV5Response, error) {
-	requestDef := GenReqDefForSetDefaultPolicyVersionV5()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.SetDefaultPolicyVersionV5Response), nil
-	}
-}
-
-// SetDefaultPolicyVersionV5Invoker 将指定身份策略版本设置为默认版本
-func (c *IamClient) SetDefaultPolicyVersionV5Invoker(request *model.SetDefaultPolicyVersionV5Request) *SetDefaultPolicyVersionV5Invoker {
-	requestDef := GenReqDefForSetDefaultPolicyVersionV5()
-	return &SetDefaultPolicyVersionV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // DeleteResourceTagsV5 删除指定资源的部分标签
 //
 // 该接口可以用于删除指定资源的部分标签。
@@ -1090,90 +1195,6 @@ func (c *IamClient) UpdateTokenPolicyV5(request *model.UpdateTokenPolicyV5Reques
 func (c *IamClient) UpdateTokenPolicyV5Invoker(request *model.UpdateTokenPolicyV5Request) *UpdateTokenPolicyV5Invoker {
 	requestDef := GenReqDefForUpdateTokenPolicyV5()
 	return &UpdateTokenPolicyV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateServiceLinkedAgencyV5 创建服务关联委托
-//
-// 该接口可以用于创建服务关联委托。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *IamClient) CreateServiceLinkedAgencyV5(request *model.CreateServiceLinkedAgencyV5Request) (*model.CreateServiceLinkedAgencyV5Response, error) {
-	requestDef := GenReqDefForCreateServiceLinkedAgencyV5()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateServiceLinkedAgencyV5Response), nil
-	}
-}
-
-// CreateServiceLinkedAgencyV5Invoker 创建服务关联委托
-func (c *IamClient) CreateServiceLinkedAgencyV5Invoker(request *model.CreateServiceLinkedAgencyV5Request) *CreateServiceLinkedAgencyV5Invoker {
-	requestDef := GenReqDefForCreateServiceLinkedAgencyV5()
-	return &CreateServiceLinkedAgencyV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteServiceLinkedAgencyV5 删除服务关联委托
-//
-// 该接口可以用于服务关联委托删除自己。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *IamClient) DeleteServiceLinkedAgencyV5(request *model.DeleteServiceLinkedAgencyV5Request) (*model.DeleteServiceLinkedAgencyV5Response, error) {
-	requestDef := GenReqDefForDeleteServiceLinkedAgencyV5()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteServiceLinkedAgencyV5Response), nil
-	}
-}
-
-// DeleteServiceLinkedAgencyV5Invoker 删除服务关联委托
-func (c *IamClient) DeleteServiceLinkedAgencyV5Invoker(request *model.DeleteServiceLinkedAgencyV5Request) *DeleteServiceLinkedAgencyV5Invoker {
-	requestDef := GenReqDefForDeleteServiceLinkedAgencyV5()
-	return &DeleteServiceLinkedAgencyV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// GetServiceLinkedAgencyDeletionStatusV5 获取服务关联委托删除状态
-//
-// 该接口可以用于获取服务关联委托删除状态。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *IamClient) GetServiceLinkedAgencyDeletionStatusV5(request *model.GetServiceLinkedAgencyDeletionStatusV5Request) (*model.GetServiceLinkedAgencyDeletionStatusV5Response, error) {
-	requestDef := GenReqDefForGetServiceLinkedAgencyDeletionStatusV5()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.GetServiceLinkedAgencyDeletionStatusV5Response), nil
-	}
-}
-
-// GetServiceLinkedAgencyDeletionStatusV5Invoker 获取服务关联委托删除状态
-func (c *IamClient) GetServiceLinkedAgencyDeletionStatusV5Invoker(request *model.GetServiceLinkedAgencyDeletionStatusV5Request) *GetServiceLinkedAgencyDeletionStatusV5Invoker {
-	requestDef := GenReqDefForGetServiceLinkedAgencyDeletionStatusV5()
-	return &GetServiceLinkedAgencyDeletionStatusV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListServicePrincipalsV5 获取全部服务主体
-//
-// 该接口可以用于获取全部服务主体。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *IamClient) ListServicePrincipalsV5(request *model.ListServicePrincipalsV5Request) (*model.ListServicePrincipalsV5Response, error) {
-	requestDef := GenReqDefForListServicePrincipalsV5()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListServicePrincipalsV5Response), nil
-	}
-}
-
-// ListServicePrincipalsV5Invoker 获取全部服务主体
-func (c *IamClient) ListServicePrincipalsV5Invoker(request *model.ListServicePrincipalsV5Request) *ListServicePrincipalsV5Invoker {
-	requestDef := GenReqDefForListServicePrincipalsV5()
-	return &ListServicePrincipalsV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateUserV5 创建IAM用户

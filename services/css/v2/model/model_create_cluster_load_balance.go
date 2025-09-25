@@ -14,6 +14,12 @@ type CreateClusterLoadBalance struct {
 
 	// 访问控制。
 	VpcPermissions *[]string `json:"vpcPermissions,omitempty"`
+
+	// 创建专业型终端节点。
+	ProfessionVpcep *bool `json:"professionVpcep,omitempty"`
+
+	// 是否开启IPv4/IPv6双栈网络。
+	DualstackEnable *bool `json:"dualstackEnable,omitempty"`
 }
 
 func (o CreateClusterLoadBalance) String() string {

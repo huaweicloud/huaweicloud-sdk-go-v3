@@ -210,9 +210,9 @@ func (c *CssClient) CreateClustersTagsInvoker(request *model.CreateClustersTagsR
 	return &CreateClustersTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateElbListener es监听器配置。
+// CreateElbListener 集群负载均衡监听器配置。
 //
-// 该接口用于es监听器配置。
+// 该接口用于集群负载均衡监听器配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CssClient) CreateElbListener(request *model.CreateElbListenerRequest) (*model.CreateElbListenerResponse, error) {
@@ -225,7 +225,7 @@ func (c *CssClient) CreateElbListener(request *model.CreateElbListenerRequest) (
 	}
 }
 
-// CreateElbListenerInvoker es监听器配置。
+// CreateElbListenerInvoker 集群负载均衡监听器配置。
 func (c *CssClient) CreateElbListenerInvoker(request *model.CreateElbListenerRequest) *CreateElbListenerInvoker {
 	requestDef := GenReqDefForCreateElbListener()
 	return &CreateElbListenerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -422,9 +422,9 @@ func (c *CssClient) DownloadCertInvoker(request *model.DownloadCertRequest) *Dow
 	return &DownloadCertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// EnableOrDisableElb 打开或关闭es负载均衡器
+// EnableOrDisableElb 为集群打开或关闭负载均衡器
 //
-// 该接口打开或关闭es负载均衡器。
+// 该接口为集群打开或关闭负载均衡器。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CssClient) EnableOrDisableElb(request *model.EnableOrDisableElbRequest) (*model.EnableOrDisableElbResponse, error) {
@@ -437,7 +437,7 @@ func (c *CssClient) EnableOrDisableElb(request *model.EnableOrDisableElbRequest)
 	}
 }
 
-// EnableOrDisableElbInvoker 打开或关闭es负载均衡器
+// EnableOrDisableElbInvoker 为集群打开或关闭负载均衡器
 func (c *CssClient) EnableOrDisableElbInvoker(request *model.EnableOrDisableElbRequest) *EnableOrDisableElbInvoker {
 	requestDef := GenReqDefForEnableOrDisableElb()
 	return &EnableOrDisableElbInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -569,7 +569,7 @@ func (c *CssClient) ListFlavorsInvoker(request *model.ListFlavorsRequest) *ListF
 	return &ListFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListImages 获取目标镜像ID
+// ListImages 获取可升级的目标镜像ID
 //
 // 该接口用于获取当前集群的可升级目标镜像ID。
 //
@@ -584,7 +584,7 @@ func (c *CssClient) ListImages(request *model.ListImagesRequest) (*model.ListIma
 	}
 }
 
-// ListImagesInvoker 获取目标镜像ID
+// ListImagesInvoker 获取可升级的目标镜像ID
 func (c *CssClient) ListImagesInvoker(request *model.ListImagesRequest) *ListImagesInvoker {
 	requestDef := GenReqDefForListImages()
 	return &ListImagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -842,9 +842,9 @@ func (c *CssClient) ShowClusterTagInvoker(request *model.ShowClusterTagRequest) 
 	return &ShowClusterTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowElbDetail 获取该esELB的信息，以及页面需要展示健康检查状态
+// ShowElbDetail 获取集群的负载均衡器信息
 //
-// 该接口用于获取该esELB的信息，以及页面需要展示健康检查状态。
+// 该接口用于获取集群的负载均衡器信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CssClient) ShowElbDetail(request *model.ShowElbDetailRequest) (*model.ShowElbDetailResponse, error) {
@@ -857,7 +857,7 @@ func (c *CssClient) ShowElbDetail(request *model.ShowElbDetailRequest) (*model.S
 	}
 }
 
-// ShowElbDetailInvoker 获取该esELB的信息，以及页面需要展示健康检查状态
+// ShowElbDetailInvoker 获取集群的负载均衡器信息
 func (c *CssClient) ShowElbDetailInvoker(request *model.ShowElbDetailRequest) *ShowElbDetailInvoker {
 	requestDef := GenReqDefForShowElbDetail()
 	return &ShowElbDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1250,9 +1250,9 @@ func (c *CssClient) UpdateClusterNameInvoker(request *model.UpdateClusterNameReq
 	return &UpdateClusterNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateEsListener 更新es监听器
+// UpdateEsListener 更新集群负载均衡监听器
 //
-// 该接口用于更新es监听器。
+// 该接口用于更新集群负载均衡监听器。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CssClient) UpdateEsListener(request *model.UpdateEsListenerRequest) (*model.UpdateEsListenerResponse, error) {
@@ -1265,7 +1265,7 @@ func (c *CssClient) UpdateEsListener(request *model.UpdateEsListenerRequest) (*m
 	}
 }
 
-// UpdateEsListenerInvoker 更新es监听器
+// UpdateEsListenerInvoker 更新集群负载均衡监听器
 func (c *CssClient) UpdateEsListenerInvoker(request *model.UpdateEsListenerRequest) *UpdateEsListenerInvoker {
 	requestDef := GenReqDefForUpdateEsListener()
 	return &UpdateEsListenerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1615,7 +1615,7 @@ func (c *CssClient) UpgradeCoreInvoker(request *model.UpgradeCoreRequest) *Upgra
 	return &UpgradeCoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpgradeDetail 获取升级详情信息
+// UpgradeDetail 获取集群升级或切换AZ的详情信息
 //
 // 由于升级过程时间较长，该接口可以展示当前升级（切换AZ）节点的各个阶段信息。
 //
@@ -1630,7 +1630,7 @@ func (c *CssClient) UpgradeDetail(request *model.UpgradeDetailRequest) (*model.U
 	}
 }
 
-// UpgradeDetailInvoker 获取升级详情信息
+// UpgradeDetailInvoker 获取集群升级或切换AZ的详情信息
 func (c *CssClient) UpgradeDetailInvoker(request *model.UpgradeDetailRequest) *UpgradeDetailInvoker {
 	requestDef := GenReqDefForUpgradeDetail()
 	return &UpgradeDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

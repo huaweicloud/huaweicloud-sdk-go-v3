@@ -19,6 +19,9 @@ type CreateEsListenerRequestBody struct {
 
 	// CA证书Id。如protocol为HTTPS且为双向认证时则该字段必选。
 	CaCertId *string `json:"ca_cert_id,omitempty"`
+
+	// 类型：searchTool 表示对Elasticsearch/Opensearch进行监听器配，viewTool 表示对Kibana/Opensearch Dashboard进行监听器配置，默认为searchTool 。
+	Type *string `json:"type,omitempty"`
 }
 
 func (o CreateEsListenerRequestBody) String() string {

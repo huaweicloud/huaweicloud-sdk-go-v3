@@ -42,6 +42,9 @@ type OrganizationPolicy struct {
 
 	// 组织策略所属账号
 	DomainName *string `json:"domain_name,omitempty"`
+
+	// 组织策略生效范围
+	EffectiveScope *string `json:"effective_scope,omitempty"`
 }
 
 func (o OrganizationPolicy) String() string {

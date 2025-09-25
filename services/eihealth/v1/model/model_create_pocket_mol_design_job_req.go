@@ -24,6 +24,9 @@ type CreatePocketMolDesignJobReq struct {
 	MolecularWeight *[]int32 `json:"molecular_weight,omitempty"`
 
 	OptimizationMode *OptimizationMode `json:"optimization_mode,omitempty"`
+
+	// **参数解释**： 基模型ID。 **约束限制**： 当optimization_mode为generation时，可选择PanguDrug3D、Lingo3DMol，当为其他方式时，仅可选择可选择PanguDrug3D。 **取值范围**： - PanguDrug3D - Lingo3DMol **默认取值**： 不涉及
+	BaseModelId *string `json:"base_model_id,omitempty"`
 }
 
 func (o CreatePocketMolDesignJobReq) String() string {

@@ -36,7 +36,7 @@ type ListEventHandleHistoryRequest struct {
 	// 处置状态，包含如下:   - unhandled：未处理   - handled：已处理
 	HandleStatus *string `json:"handle_status,omitempty"`
 
-	// **参数解释**: 主机IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+	// **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
 	HostIp *string `json:"host_ip,omitempty"`
 
 	// **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10

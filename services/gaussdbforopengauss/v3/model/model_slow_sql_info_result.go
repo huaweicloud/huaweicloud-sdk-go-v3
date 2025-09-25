@@ -24,7 +24,7 @@ type SlowSqlInfoResult struct {
 	QueryPlan *string `json:"query_plan,omitempty"`
 
 	// **参数解释**: 执行次数（次）。 **取值范围**: 不涉及。
-	Calls *string `json:"calls,omitempty"`
+	Calls *int32 `json:"calls,omitempty"`
 
 	// **参数解释**: 平均执行时间（us）。 **取值范围**: 不涉及。
 	AvgExecTime *string `json:"avg_exec_time,omitempty"`

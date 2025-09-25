@@ -9,10 +9,10 @@ import (
 // ShowBackgroundTaskResponse Response Object
 type ShowBackgroundTaskResponse struct {
 
-	// 任务数量。
+	// **参数解释**： 任务数量。 **取值范围**： 不涉及。
 	TaskCount *string `json:"task_count,omitempty"`
 
-	// 任务列表。
+	// **参数解释**： 任务列表。
 	Tasks          *[]ListBackgroundTasksRespTasks `json:"tasks,omitempty"`
 	HttpStatusCode int                             `json:"-"`
 }

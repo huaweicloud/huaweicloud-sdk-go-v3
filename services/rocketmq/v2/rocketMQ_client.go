@@ -334,27 +334,6 @@ func (c *RocketMQClient) DeleteUserInvoker(request *model.DeleteUserRequest) *De
 	return &DeleteUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// EnableDns 开启RocketMQ实例域名访问能力
-//
-// 开启RocketMQ实例域名访问能力。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *RocketMQClient) EnableDns(request *model.EnableDnsRequest) (*model.EnableDnsResponse, error) {
-	requestDef := GenReqDefForEnableDns()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.EnableDnsResponse), nil
-	}
-}
-
-// EnableDnsInvoker 开启RocketMQ实例域名访问能力
-func (c *RocketMQClient) EnableDnsInvoker(request *model.EnableDnsRequest) *EnableDnsInvoker {
-	requestDef := GenReqDefForEnableDns()
-	return &EnableDnsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ExportDlqMessage 导出死信消息
 //
 // 导出死信消息。

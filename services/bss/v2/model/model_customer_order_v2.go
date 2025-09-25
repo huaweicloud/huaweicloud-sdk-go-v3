@@ -57,6 +57,8 @@ type CustomerOrderV2 struct {
 
 	// 客户订单下属的订单详情信息。具体请参见表 SubCustomerOrderV2 说明：当查询订单为组合交易订单时，订单信息会返回下属的订单信息，当查询为普通订单时，此字段返回为空
 	SubOrderInfos *[]SubCustomerOrderV2 `json:"sub_order_infos,omitempty"`
+
+	AgentPayInfo *AgentPayInfoV2 `json:"agent_pay_info,omitempty"`
 }
 
 func (o CustomerOrderV2) String() string {

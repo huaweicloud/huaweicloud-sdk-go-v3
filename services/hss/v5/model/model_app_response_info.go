@@ -6,38 +6,41 @@ import (
 	"strings"
 )
 
-// AppResponseInfo 软件信息
+// AppResponseInfo 软件响应信息
 type AppResponseInfo struct {
 
-	// **参数解释**: Agent ID **取值范围**: 字符长度1-64位
+	// **参数解释**： agent ID **取值范围**： 不涉及
 	AgentId *string `json:"agent_id,omitempty"`
 
-	// **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+	// **参数解释**： 服务器 ID **取值范围**： 不涉及
 	HostId *string `json:"host_id,omitempty"`
 
-	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
+	// **参数解释**： 服务器名称 **取值范围**： 不涉及
 	HostName *string `json:"host_name,omitempty"`
 
-	// **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+	// **参数解释**： 服务器 IP **取值范围**： 不涉及
 	HostIp *string `json:"host_ip,omitempty"`
 
-	// **参数解释**: 软件名称 **取值范围**: 字符长度1-256位
+	// **参数解释**： 软件名称 **取值范围**： 不涉及
 	AppName *string `json:"app_name,omitempty"`
 
-	// **参数解释**: 版本号 **取值范围**: 字符长度1-128位
+	// **参数解释**： 软件版本 **取值范围**： 不涉及
 	Version *string `json:"version,omitempty"`
 
-	// **参数解释**: 更新时间，最近一次更新的时间，用毫秒表示 **取值范围**: 最小值0，最大值9223372036854775807
-	UpdateTime *int64 `json:"update_time,omitempty"`
+	// **参数解释**： 软件安装路径 **取值范围**： 不涉及
+	InstallDir *string `json:"install_dir,omitempty"`
 
-	// **参数解释**: 最近扫描时间，用毫秒表示 **取值范围**: 最小值0，最大值9223372036854775807
-	RecentScanTime *int64 `json:"recent_scan_time,omitempty"`
-
-	// **参数解释**: 容器ID **取值范围**: 字符长度1-128位
+	// **参数解释**： 容器 ID **取值范围**： 不涉及
 	ContainerId *string `json:"container_id,omitempty"`
 
-	// **参数解释**： 容器实例名称，只有容器类型的告警有 **取值范围**： 字符长度1-256位
+	// **参数解释**： 容器名称 **取值范围**： 不涉及
 	ContainerName *string `json:"container_name,omitempty"`
+
+	// **参数解释** 最近扫描时间 **取值范围** 不涉及
+	RecentScanTime *int64 `json:"recent_scan_time,omitempty"`
+
+	// **参数解释** 更新时间 **取值范围** 不涉及
+	UpdateTime *int64 `json:"update_time,omitempty"`
 }
 
 func (o AppResponseInfo) String() string {

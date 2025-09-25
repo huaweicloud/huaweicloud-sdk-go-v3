@@ -26,6 +26,9 @@ type TaskDto struct {
 
 	// 任务的输入参数信息
 	Inputs *[]TaskParameterDto `json:"inputs,omitempty"`
+
+	// **参数解释**： 任务的输出参数信息。 **约束限制**： 最多支持128个参数。 **取值范围**： 不涉及 **默认取值**： 不涉及
+	Outputs *[]TaskParameterDto `json:"outputs,omitempty"`
 }
 
 func (o TaskDto) String() string {

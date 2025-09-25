@@ -21,7 +21,7 @@ type OrganizationNodeResponseInfo struct {
 	// 名称
 	Name *string `json:"name,omitempty"`
 
-	// 节点类型，unit:组织单元、account:账号
+	// **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - unit：组织单元 - account：账号  **默认取值**: 不涉及
 	OrgType *string `json:"org_type,omitempty"`
 
 	// 组织或账号是否已授权。   - true: 已授权（无需授权）。   - false: 未授权。

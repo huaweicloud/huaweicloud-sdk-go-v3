@@ -9,16 +9,10 @@ import (
 // ListHostProtectHistoryInfoResponse Response Object
 type ListHostProtectHistoryInfoResponse struct {
 
-	// 服务器名称
-	HostName *string `json:"host_name,omitempty"`
+	// **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
+	TotalNum *int32 `json:"total_num,omitempty"`
 
-	// 防护状态   - close : 未开启   - opened : 防护中
-	ProtectStatus *string `json:"protect_status,omitempty"`
-
-	// total number of static WTPs
-	TotalNum *int64 `json:"total_num,omitempty"`
-
-	// data list
+	// **参数解释**: 静态网页防篡改防护事件列表 **取值范围**: 最小值0，最大值200
 	DataList       *[]HostProtectHistoryResponseInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                               `json:"-"`
 }

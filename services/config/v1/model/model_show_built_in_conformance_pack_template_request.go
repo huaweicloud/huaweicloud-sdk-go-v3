@@ -35,6 +35,9 @@ type ShowBuiltInConformancePackTemplateRequestXLanguage struct {
 type ShowBuiltInConformancePackTemplateRequestXLanguageEnum struct {
 	ZH_CN ShowBuiltInConformancePackTemplateRequestXLanguage
 	EN_US ShowBuiltInConformancePackTemplateRequestXLanguage
+	FR_FR ShowBuiltInConformancePackTemplateRequestXLanguage
+	ES_US ShowBuiltInConformancePackTemplateRequestXLanguage
+	PT_BR ShowBuiltInConformancePackTemplateRequestXLanguage
 }
 
 func GetShowBuiltInConformancePackTemplateRequestXLanguageEnum() ShowBuiltInConformancePackTemplateRequestXLanguageEnum {
@@ -44,6 +47,15 @@ func GetShowBuiltInConformancePackTemplateRequestXLanguageEnum() ShowBuiltInConf
 		},
 		EN_US: ShowBuiltInConformancePackTemplateRequestXLanguage{
 			value: "en-us",
+		},
+		FR_FR: ShowBuiltInConformancePackTemplateRequestXLanguage{
+			value: "fr-fr",
+		},
+		ES_US: ShowBuiltInConformancePackTemplateRequestXLanguage{
+			value: "es-us",
+		},
+		PT_BR: ShowBuiltInConformancePackTemplateRequestXLanguage{
+			value: "pt-br",
 		},
 	}
 }

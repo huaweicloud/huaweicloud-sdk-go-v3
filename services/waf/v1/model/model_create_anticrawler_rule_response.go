@@ -30,7 +30,7 @@ type CreateAnticrawlerRuleResponse struct {
 	// 规则状态，0：关闭，1：开启
 	Status *int32 `json:"status,omitempty"`
 
-	// 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
+	// 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
 	Priority       *int32 `json:"priority,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

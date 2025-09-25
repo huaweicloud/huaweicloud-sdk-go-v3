@@ -10,7 +10,7 @@ import (
 type BotMBehaviorDetectionRule struct {
 	Rule *BotMRule `json:"rule,omitempty"`
 
-	Strategy *BotMDefenseStrategy `json:"strategy,omitempty"`
+	DefenseStrategy *BotMDefenseStrategy `json:"defense_strategy,omitempty"`
 }
 
 func (o BotMBehaviorDetectionRule) String() string {

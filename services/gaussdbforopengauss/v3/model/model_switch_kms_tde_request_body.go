@@ -12,13 +12,13 @@ import (
 type SwitchKmsTdeRequestBody struct {
 
 	// **参数解释**: kms主密钥ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
-	KmsTdeKeyId *string `json:"kms_tde_key_id,omitempty"`
+	KmsTdeKeyId string `json:"kms_tde_key_id"`
 
 	// **参数解释**: GaussDB使用透明加密的KMS主密钥ID所在资源空间名称。 获取方法请参见[获取项目名称](https://support.huaweicloud.com/api-gaussdb/gaussdb_api_196.html)。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
-	KmsProjectName *string `json:"kms_project_name,omitempty"`
+	KmsProjectName string `json:"kms_project_name"`
 
 	// **参数解释**: 需要切换的状态：on表示开启。 **约束限制**: 不涉及。 **取值范围**: on: 开启。 **默认取值**: on
-	KmsTdeStatus *SwitchKmsTdeRequestBodyKmsTdeStatus `json:"kms_tde_status,omitempty"`
+	KmsTdeStatus SwitchKmsTdeRequestBodyKmsTdeStatus `json:"kms_tde_status"`
 }
 
 func (o SwitchKmsTdeRequestBody) String() string {

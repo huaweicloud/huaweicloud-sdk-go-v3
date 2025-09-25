@@ -18,6 +18,33 @@ type FullSqlStatisticInfoResult struct {
 	// **参数解释**: 汇总SQL条目数。 **取值范围**: 不涉及。
 	SqlCount *int64 `json:"sql_count,omitempty"`
 
+	// **参数解释**: 总SQL耗时（微秒）。 **取值范围**: 不涉及。
+	TotalSqlTime *int64 `json:"total_sql_time,omitempty"`
+
+	// **参数解释**: 平均SQL耗时（微秒）。 **取值范围**: 不涉及。
+	AvgSqlTime *int64 `json:"avg_sql_time,omitempty"`
+
+	// **参数解释**: 总有效DB耗时（微秒）。 **取值范围**: 不涉及。
+	TotalDbTime *int64 `json:"total_db_time,omitempty"`
+
+	// **参数解释**: 总CPU耗时（微秒）。 **取值范围**: 不涉及。
+	TotalCpuTime *int64 `json:"total_cpu_time,omitempty"`
+
+	// **参数解释**: 平均解释器时间（微秒）。 **取值范围**: 不涉及。
+	AvgParseTime *int64 `json:"avg_parse_time,omitempty"`
+
+	// **参数解释**: 平均执行计划时间（微秒）。 **取值范围**: 不涉及。
+	AvgPlanTime *int64 `json:"avg_plan_time,omitempty"`
+
+	// **参数解释**: 总IO耗时（微秒）。 **取值范围**: 不涉及。
+	TotalDataIoTime *int64 `json:"total_data_io_time,omitempty"`
+
+	// **参数解释**: 平均返回行数。 **取值范围**: 不涉及。
+	AvgNReturnedRows *int64 `json:"avg_n_returned_rows,omitempty"`
+
+	// **参数解释**: 平均扫描行数。 **取值范围**: 不涉及。
+	AvgNTuplesFetched *int64 `json:"avg_n_tuples_fetched,omitempty"`
+
 	// **参数解释**: 平均有效DB耗时（微秒）。 **取值范围**: 不涉及。
 	AvgDbTime *int64 `json:"avg_db_time,omitempty"`
 
@@ -34,10 +61,10 @@ type FullSqlStatisticInfoResult struct {
 	AvgNBlocksHit *int64 `json:"avg_n_blocks_hit,omitempty"`
 
 	// **参数解释**: 开始时间戳。 **取值范围**: 不涉及。
-	StartTimeStamp *string `json:"start_time_stamp,omitempty"`
+	StartTimeStamp *int64 `json:"start_time_stamp,omitempty"`
 
 	// **参数解释**: 结束时间戳。 **取值范围**: 不涉及。
-	EndTimeStamp *string `json:"end_time_stamp,omitempty"`
+	EndTimeStamp *int64 `json:"end_time_stamp,omitempty"`
 }
 
 func (o FullSqlStatisticInfoResult) String() string {

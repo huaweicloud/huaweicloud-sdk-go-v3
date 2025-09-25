@@ -11,6 +11,12 @@ import (
 
 type CcrulesListInfo struct {
 
+	// **参数解释：** 策略名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	Policyname *string `json:"policyname,omitempty"`
+
+	// 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
+	Priority *int32 `json:"priority,omitempty"`
+
 	// 规则名称
 	Name *string `json:"name,omitempty"`
 

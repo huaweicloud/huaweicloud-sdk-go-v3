@@ -38,6 +38,9 @@ type ListAllProvidersRequestXLanguage struct {
 type ListAllProvidersRequestXLanguageEnum struct {
 	ZH_CN ListAllProvidersRequestXLanguage
 	EN_US ListAllProvidersRequestXLanguage
+	FR_FR ListAllProvidersRequestXLanguage
+	ES_US ListAllProvidersRequestXLanguage
+	PT_BR ListAllProvidersRequestXLanguage
 }
 
 func GetListAllProvidersRequestXLanguageEnum() ListAllProvidersRequestXLanguageEnum {
@@ -47,6 +50,15 @@ func GetListAllProvidersRequestXLanguageEnum() ListAllProvidersRequestXLanguageE
 		},
 		EN_US: ListAllProvidersRequestXLanguage{
 			value: "en-us",
+		},
+		FR_FR: ListAllProvidersRequestXLanguage{
+			value: "fr-fr",
+		},
+		ES_US: ListAllProvidersRequestXLanguage{
+			value: "es-us",
+		},
+		PT_BR: ListAllProvidersRequestXLanguage{
+			value: "pt-br",
 		},
 	}
 }

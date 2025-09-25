@@ -18,6 +18,9 @@ type CreateMolBatchDownloadTaskReq struct {
 	// 下载类型：MOL（小分子）、COMPLEX（复合物）
 	Mode string `json:"mode"`
 
+	// **参数解释**： 文件格式：pdb、sdf（仅下载小分子时支持此格式）。 **约束限制**： 不涉及 **取值范围**： - pdb：pdb文件格式。 - sdf：sdf文件格式，仅下载小分子时支持此格式。 **默认取值**： pdb
+	Format *string `json:"format,omitempty"`
+
 	// 选中下载的分子下标
 	Selected []int32 `json:"selected"`
 }

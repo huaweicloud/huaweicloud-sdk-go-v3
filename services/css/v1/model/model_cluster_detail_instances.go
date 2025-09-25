@@ -34,6 +34,9 @@ type ClusterDetailInstances struct {
 	Ip *string `json:"ip,omitempty"`
 
 	Volume *ShowClusterVolumeRsp `json:"volume,omitempty"`
+
+	// 当前节点所属子网ID。
+	SubnetId *string `json:"subnetId,omitempty"`
 }
 
 func (o ClusterDetailInstances) String() string {

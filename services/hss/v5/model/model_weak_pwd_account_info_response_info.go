@@ -12,7 +12,7 @@ type WeakPwdAccountInfoResponseInfo struct {
 	// **参数解释**: 弱口令账号名称 **取值范围**: 不涉及
 	UserName *string `json:"user_name,omitempty"`
 
-	// **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql  : mysql账号 - redis  : redis账号
+	// **参数解释**: 账号类型 **取值范围**: - system : 系统账号 - mysql : mysql账号 - redis : redis账号 - tomcat : tomcat账号 - ftp : ftp账号
 	ServiceType *string `json:"service_type,omitempty"`
 
 	// **参数解释**: 弱口令使用时长，单位天 **取值范围**: 不涉及

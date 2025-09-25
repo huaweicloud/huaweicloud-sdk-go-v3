@@ -24,14 +24,26 @@ type ShowIkThesaurusResponse struct {
 	// 同义词词库文件对象。
 	SynonymObj *string `json:"synonymObj,omitempty"`
 
+	// 静态主词词库文件对象。
+	StaticMainObj *string `json:"staticMainObj,omitempty"`
+
+	// 静态主词词库文件对象。
+	StaticStopObj *string `json:"staticStopObj,omitempty"`
+
+	// Extra主词词库库文件对象。
+	ExtraMainObj *string `json:"extraMainObj,omitempty"`
+
+	// Extra停词词库对象。
+	ExtraStopObj *string `json:"extraStopObj,omitempty"`
+
+	// 词库最近更新时间。
+	UpdateTime *string `json:"updateTime,omitempty"`
+
 	// 更新详情。
 	UpdateDetails *string `json:"updateDetails,omitempty"`
 
 	// 指定配置自定义词库的集群ID。
 	ClusterId *string `json:"clusterId,omitempty"`
-
-	// 操作状态。
-	OperateStatus *string `json:"operateStatus,omitempty"`
 
 	// 词库的ID。
 	Id             *string `json:"id,omitempty"`

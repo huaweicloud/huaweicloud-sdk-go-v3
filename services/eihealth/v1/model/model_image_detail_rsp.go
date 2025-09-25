@@ -15,6 +15,12 @@ type ImageDetailRsp struct {
 	// 镜像ID
 	Id *string `json:"id,omitempty"`
 
+	// **参数解释**： 作业所属空间ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	EihealthProjectId *string `json:"eihealth_project_id,omitempty"`
+
+	// **参数解释**： 作业所属空间名称。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	EihealthProjectName *string `json:"eihealth_project_name,omitempty"`
+
 	// 镜像类型
 	Type *string `json:"type,omitempty"`
 
@@ -26,6 +32,15 @@ type ImageDetailRsp struct {
 
 	// 镜像版本列表
 	Tags *[]string `json:"tags,omitempty"`
+
+	// **参数解释**： 创建镜像的用户名称。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	UserName *string `json:"user_name,omitempty"`
+
+	// **参数解释**： 创建镜像的用户ID。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	UserId *string `json:"user_id,omitempty"`
+
+	// **参数解释**： 创建方式。 **约束限制**： 不涉及 **取值范围**： * PLATFORM_CREATED: 平台创建 * SWR_SYNC: swr同步 **默认取值**： 不涉及
+	CreateType *string `json:"create_type,omitempty"`
 
 	// 镜像创建时间
 	CreateTime *string `json:"create_time,omitempty"`

@@ -29,8 +29,10 @@ type ShowElbDetailResponse struct {
 
 	LoadBalancer *EsLoadBalancerResource `json:"loadBalancer,omitempty"`
 
-	Healthmonitors *EsHealthmonitorsResource `json:"healthmonitors,omitempty"`
-	HttpStatusCode int                       `json:"-"`
+	Listener *Elbv3Listener `json:"listener,omitempty"`
+
+	Healthmonitors *Member `json:"healthmonitors,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowElbDetailResponse) String() string {

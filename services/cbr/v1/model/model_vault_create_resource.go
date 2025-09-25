@@ -53,15 +53,6 @@ type VaultCreateResource struct {
 	// 存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
 	Threshold *int32 `json:"threshold,omitempty"`
 
-	// 包周期创建错误信息
-	ErrText *string `json:"errText,omitempty"`
-
-	// 包周期订购结果
-	RetCode *string `json:"retCode,omitempty"`
-
-	// 包周期创建订单信息
-	Orders *[]CbcOrderResult `json:"orders,omitempty"`
-
 	// 备份名称前缀
 	BackupNamePrefix *string `json:"backup_name_prefix,omitempty"`
 
@@ -79,6 +70,9 @@ type VaultCreateResource struct {
 
 	// 用于标识该存储库是否已锁定
 	Locked *bool `json:"locked,omitempty"`
+
+	// 存储库可用区信息，最大支持32字符。
+	AvailabilityZone *string `json:"availability_zone,omitempty"`
 }
 
 func (o VaultCreateResource) String() string {

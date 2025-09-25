@@ -9,7 +9,7 @@ import (
 // ShowOrderInformationRequest Request Object
 type ShowOrderInformationRequest struct {
 
-	// 工单类型编码
+	// 服务单类型编码
 	ModelCode string `json:"model_code"`
 }
 

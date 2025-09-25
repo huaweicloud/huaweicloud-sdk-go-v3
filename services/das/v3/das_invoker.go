@@ -197,6 +197,22 @@ func (i *ChangeTransactionSwitchStatusInvoker) Invoke() (*model.ChangeTransactio
 	}
 }
 
+type CheckCredentialInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckCredentialInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckCredentialInvoker) Invoke() (*model.CheckCredentialResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckCredentialResponse), nil
+	}
+}
+
 type CreateHealthReportTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -789,6 +805,22 @@ func (i *RegisterDbUserInvoker) Invoke() (*model.RegisterDbUserResponse, error) 
 	}
 }
 
+type SaveCredentialInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SaveCredentialInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SaveCredentialInvoker) Invoke() (*model.SaveCredentialResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SaveCredentialResponse), nil
+	}
+}
+
 type SetThresholdForMetricInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -850,6 +882,22 @@ func (i *ShowFullDeadLockSwitchInvoker) Invoke() (*model.ShowFullDeadLockSwitchR
 		return nil, err
 	} else {
 		return result.(*model.ShowFullDeadLockSwitchResponse), nil
+	}
+}
+
+type ShowHealthReportSettingsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHealthReportSettingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowHealthReportSettingsInvoker) Invoke() (*model.ShowHealthReportSettingsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHealthReportSettingsResponse), nil
 	}
 }
 
@@ -1058,6 +1106,22 @@ func (i *UpdateDbUserInvoker) Invoke() (*model.UpdateDbUserResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateDbUserResponse), nil
+	}
+}
+
+type UpdateHealthReportSettingsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateHealthReportSettingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateHealthReportSettingsInvoker) Invoke() (*model.UpdateHealthReportSettingsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateHealthReportSettingsResponse), nil
 	}
 }
 

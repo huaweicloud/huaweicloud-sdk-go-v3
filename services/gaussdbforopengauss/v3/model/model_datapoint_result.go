@@ -8,10 +8,10 @@ import (
 
 type DatapointResult struct {
 
-	// 指标项名，实例指标用实例ID、节点指标用节点名称、组件指标用组件名称。
+	// **参数解释**: 指标项名，实例指标用实例ID、节点指标用节点名称、组件指标用组件名称。 **取值范围**: 不涉及。
 	DatapointName string `json:"datapoint_name"`
 
-	// 指标值集合。
+	// **参数解释**: 指标值集合。
 	DatapointValues []string `json:"datapoint_values"`
 }
 

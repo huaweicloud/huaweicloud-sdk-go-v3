@@ -38,6 +38,9 @@ type ListRegionsRequestXLanguage struct {
 type ListRegionsRequestXLanguageEnum struct {
 	ZH_CN ListRegionsRequestXLanguage
 	EN_US ListRegionsRequestXLanguage
+	FR_FR ListRegionsRequestXLanguage
+	ES_US ListRegionsRequestXLanguage
+	PT_BR ListRegionsRequestXLanguage
 }
 
 func GetListRegionsRequestXLanguageEnum() ListRegionsRequestXLanguageEnum {
@@ -47,6 +50,15 @@ func GetListRegionsRequestXLanguageEnum() ListRegionsRequestXLanguageEnum {
 		},
 		EN_US: ListRegionsRequestXLanguage{
 			value: "en-us",
+		},
+		FR_FR: ListRegionsRequestXLanguage{
+			value: "fr-fr",
+		},
+		ES_US: ListRegionsRequestXLanguage{
+			value: "es-us",
+		},
+		PT_BR: ListRegionsRequestXLanguage{
+			value: "pt-br",
 		},
 	}
 }

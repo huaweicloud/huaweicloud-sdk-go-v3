@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// FileOwner 文件属主
+// FileOwner 文件属性
 type FileOwner struct {
 }
 

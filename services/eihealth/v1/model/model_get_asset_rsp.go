@@ -14,6 +14,9 @@ type GetAssetRsp struct {
 	// 类别
 	Category *string `json:"category,omitempty"`
 
+	// **参数解释**： 领域。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	Domain *string `json:"domain,omitempty"`
+
 	// 资产名
 	Name *string `json:"name,omitempty"`
 

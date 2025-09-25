@@ -2519,6 +2519,27 @@ func (c *GaussDBClient) ShowRestoreTablesInvoker(request *model.ShowRestoreTable
 	return &ShowRestoreTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSlowLogDetail 获取StarRocks实例内核慢日志信息
+//
+// 获取StarRocks实例内核慢日志信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowSlowLogDetail(request *model.ShowSlowLogDetailRequest) (*model.ShowSlowLogDetailResponse, error) {
+	requestDef := GenReqDefForShowSlowLogDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSlowLogDetailResponse), nil
+	}
+}
+
+// ShowSlowLogDetailInvoker 获取StarRocks实例内核慢日志信息
+func (c *GaussDBClient) ShowSlowLogDetailInvoker(request *model.ShowSlowLogDetailRequest) *ShowSlowLogDetailInvoker {
+	requestDef := GenReqDefForShowSlowLogDetail()
+	return &ShowSlowLogDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSlowLogStatistics 查询慢日志统计信息
 //
 // 查询慢日志统计信息
@@ -2601,6 +2622,27 @@ func (c *GaussDBClient) ShowSqlFilterRule(request *model.ShowSqlFilterRuleReques
 func (c *GaussDBClient) ShowSqlFilterRuleInvoker(request *model.ShowSqlFilterRuleRequest) *ShowSqlFilterRuleInvoker {
 	requestDef := GenReqDefForShowSqlFilterRule()
 	return &ShowSqlFilterRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowStarRocksSlowlogSensitiveStatus 查询StarRocks实例慢日志脱敏状态
+//
+// 查询StarRocks实例慢日志脱敏状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowStarRocksSlowlogSensitiveStatus(request *model.ShowStarRocksSlowlogSensitiveStatusRequest) (*model.ShowStarRocksSlowlogSensitiveStatusResponse, error) {
+	requestDef := GenReqDefForShowStarRocksSlowlogSensitiveStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowStarRocksSlowlogSensitiveStatusResponse), nil
+	}
+}
+
+// ShowStarRocksSlowlogSensitiveStatusInvoker 查询StarRocks实例慢日志脱敏状态
+func (c *GaussDBClient) ShowStarRocksSlowlogSensitiveStatusInvoker(request *model.ShowStarRocksSlowlogSensitiveStatusRequest) *ShowStarRocksSlowlogSensitiveStatusInvoker {
+	requestDef := GenReqDefForShowStarRocksSlowlogSensitiveStatus()
+	return &ShowStarRocksSlowlogSensitiveStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowTableMetaInfo 查询实例库表信息
@@ -3295,6 +3337,27 @@ func (c *GaussDBClient) UpdateServerlessPolicy(request *model.UpdateServerlessPo
 func (c *GaussDBClient) UpdateServerlessPolicyInvoker(request *model.UpdateServerlessPolicyRequest) *UpdateServerlessPolicyInvoker {
 	requestDef := GenReqDefForUpdateServerlessPolicy()
 	return &UpdateServerlessPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSlowlogSensitiveStatus 开启或关闭StarRocks实例慢日志脱敏状态
+//
+// 开启或关闭StarRocks实例慢日志脱敏状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateSlowlogSensitiveStatus(request *model.UpdateSlowlogSensitiveStatusRequest) (*model.UpdateSlowlogSensitiveStatusResponse, error) {
+	requestDef := GenReqDefForUpdateSlowlogSensitiveStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSlowlogSensitiveStatusResponse), nil
+	}
+}
+
+// UpdateSlowlogSensitiveStatusInvoker 开启或关闭StarRocks实例慢日志脱敏状态
+func (c *GaussDBClient) UpdateSlowlogSensitiveStatusInvoker(request *model.UpdateSlowlogSensitiveStatusRequest) *UpdateSlowlogSensitiveStatusInvoker {
+	requestDef := GenReqDefForUpdateSlowlogSensitiveStatus()
+	return &UpdateSlowlogSensitiveStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSlowlogSensitiveSwitch 开启或关闭慢日志脱敏状态

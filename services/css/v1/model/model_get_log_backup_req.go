@@ -12,7 +12,7 @@ type GetLogBackupReq struct {
 	InstanceName string `json:"instance_name"`
 
 	// 日志级别。可查询的日志级别为：INFO，ERROR，DEBUG，WARN。
-	Level string `json:"level"`
+	Level *string `json:"level,omitempty"`
 
 	// 日志类型。可查询的日志类型为：deprecation，indexingSlow，searchSlow， instance。
 	LogType string `json:"log_type"`

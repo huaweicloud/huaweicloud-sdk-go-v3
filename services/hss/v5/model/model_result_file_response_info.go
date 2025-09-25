@@ -18,7 +18,7 @@ type ResultFileResponseInfo struct {
 	// **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
 	FileSize *int64 `json:"file_size,omitempty"`
 
-	// 文件属主
+	// 文件属性
 	FileOwner *string `json:"file_owner,omitempty"`
 
 	// **参数解释**： 文件属性 **取值范围**： 字符长度1-256位

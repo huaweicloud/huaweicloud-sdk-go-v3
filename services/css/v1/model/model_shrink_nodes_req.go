@@ -13,6 +13,9 @@ type ShrinkNodesReq struct {
 
 	// 需要缩容的节点ID。  通过[查询集群详情](ShowClusterDetail.xml)获取instances中的id属性。
 	ShrinkNodes []string `json:"shrink_nodes"`
+
+	// 委托名称，委托给CSS服务，允许CSS调用您的其他云服务。
+	AgencyName *string `json:"agency_name,omitempty"`
 }
 
 func (o ShrinkNodesReq) String() string {

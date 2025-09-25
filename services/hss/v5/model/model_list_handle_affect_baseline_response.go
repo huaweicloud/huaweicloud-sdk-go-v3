@@ -9,13 +9,13 @@ import (
 // ListHandleAffectBaselineResponse Response Object
 type ListHandleAffectBaselineResponse struct {
 
-	// **参数解释** 该操作影响的范围的总数 **取值范围**   取值0-5000
+	// **参数解释** 该操作影响的范围的总数 **取值范围** 取值0-5000
 	TotalRuleNum *int32 `json:"total_rule_num,omitempty"`
 
-	// **参数解释** 该操作影响的检查项数 **取值范围**   取值0-5000
+	// **参数解释** 该操作影响的检查项数 **取值范围** 取值0-5000
 	RuleNum *int32 `json:"rule_num,omitempty"`
 
-	// **参数解释** 该操作影响的主机数 **取值范围**   取值0-5000
+	// **参数解释** 该操作影响的主机数 **取值范围** 取值0-5000
 	HostNum *int32 `json:"host_num,omitempty"`
 
 	// **参数解释** 该操作影响范围的详细信息的列表

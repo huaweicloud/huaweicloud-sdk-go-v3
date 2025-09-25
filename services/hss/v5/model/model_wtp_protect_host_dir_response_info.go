@@ -14,13 +14,10 @@ type WtpProtectHostDirResponseInfo struct {
 	// **参数解释**: 排除子目录 **取值范围**: 字符长度0-512位
 	ExcludeChildDir *string `json:"exclude_child_dir,omitempty"`
 
-	// **参数解释**: 排除文件路径 **取值范围**: 字符长度0-512位
-	ExcludeFilePath *string `json:"exclude_file_path,omitempty"`
-
 	// 排除文件路径
 	ExclueFilePath *string `json:"exclue_file_path,omitempty"`
 
-	// **参数解释**: 本地备份路径 **取值范围**: 字符长度0-512位
+	// **参数解释**: 本地备份路径，仅Linux服务器支持设置本地备份路径。 **取值范围**: 字符长度0-512位
 	LocalBackupDir *string `json:"local_backup_dir,omitempty"`
 
 	// **参数解释**: 防护状态 **取值范围**: - closed ：未开启。 - opened ：防护中。 - opening ：开启中。 - closing ：关闭中。 - open_failed ：防护失败。

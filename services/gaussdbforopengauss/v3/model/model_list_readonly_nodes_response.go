@@ -10,7 +10,7 @@ import (
 type ListReadonlyNodesResponse struct {
 
 	// **参数解释**: 只读节点列表。 **约束限制**: 不涉及。
-	Instances *[]ListReadonlyNodesResult `json:"instances,omitempty"`
+	Nodes *[]ListReadonlyNodesResult `json:"nodes,omitempty"`
 
 	// **参数解释**: 数据库名称。 **取值范围**: 不涉及。
 	MaxReadonlyNodeNum *int32 `json:"max_readonly_node_num,omitempty"`

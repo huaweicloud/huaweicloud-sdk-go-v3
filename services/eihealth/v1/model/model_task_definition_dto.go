@@ -30,6 +30,9 @@ type TaskDefinitionDto struct {
 	// 子任务的输入参数信息
 	Inputs *[]TaskParameterDto `json:"inputs,omitempty"`
 
+	// **参数解释**： 子任务的输出参数信息。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	Outputs *[]TaskParameterDto `json:"outputs,omitempty"`
+
 	AppInfo *AppInfoDto `json:"app_info,omitempty"`
 }
 

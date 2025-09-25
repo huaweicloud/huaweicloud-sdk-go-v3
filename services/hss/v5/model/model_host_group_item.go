@@ -24,7 +24,7 @@ type HostGroupItem struct {
 	// **参数解释**: 未防护服务器数 **取值范围**: 0到2147483647
 	UnprotectHostNum *int32 `json:"unprotect_host_num,omitempty"`
 
-	// **参数解释**: 主机id列表 **取值范围**: 不涉及
+	// **参数解释**: 服务器ID列表 **取值范围**: 不涉及
 	HostIdList *[]string `json:"host_id_list,omitempty"`
 
 	// **参数解释**: 是否是线下数据中心服务器组 **取值范围**: true或者false

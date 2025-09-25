@@ -8,10 +8,10 @@ import (
 
 type ShowLimitTaskNodeOption struct {
 
-	// 节点id。
+	// **参数解释**: 节点ID。 **取值范围**: 不涉及。
 	NodeId string `json:"node_id"`
 
-	// 该节点执行的sql语句id。
+	// **参数解释**: 该节点执行的sql语句ID。 **取值范围**: 不涉及。
 	SqlId string `json:"sql_id"`
 }
 

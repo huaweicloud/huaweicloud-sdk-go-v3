@@ -5,38 +5,6 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dcos/v1/model"
 )
 
-type ShowPageAssetListResultInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowPageAssetListResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowPageAssetListResultInvoker) Invoke() (*model.ShowPageAssetListResultResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowPageAssetListResultResponse), nil
-	}
-}
-
-type UploadFileInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UploadFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UploadFileInvoker) Invoke() (*model.UploadFileResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UploadFileResponse), nil
-	}
-}
-
 type ListOrderInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -114,6 +82,38 @@ func (i *ShowOrderInformationInvoker) Invoke() (*model.ShowOrderInformationRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowOrderInformationResponse), nil
+	}
+}
+
+type ShowPageAssetListResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPageAssetListResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPageAssetListResultInvoker) Invoke() (*model.ShowPageAssetListResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPageAssetListResultResponse), nil
+	}
+}
+
+type UploadFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UploadFileInvoker) Invoke() (*model.UploadFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadFileResponse), nil
 	}
 }
 

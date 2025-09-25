@@ -13,7 +13,7 @@ type ShowAlarmStatisticsResponse struct {
 	TotalAlarmCount *int32 `json:"total_alarm_count,omitempty"`
 
 	// **参数解释**: 环比比率。 **取值范围**: 值为0表示环比没有变化，值为空表示上一周期没有告警。
-	RingPercentage float32 `json:"ring_percentage,omitempty"`
+	RingPercentage *float64 `json:"ring_percentage,omitempty"`
 
 	// **参数解释**: 实例级别的告警统计。
 	InstanceAlarmLevelStatistics *[]InstanceAlarmLevelStatisticResult `json:"instance_alarm_level_statistics,omitempty"`

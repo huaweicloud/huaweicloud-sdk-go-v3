@@ -30,7 +30,7 @@ type ListWebTamperHostRequest struct {
 	// 服务器公网IP
 	PublicIp *string `json:"public_ip,omitempty"`
 
-	// 服务器组ID
+	// **参数解释**: 服务器组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
 	GroupId *string `json:"group_id,omitempty"`
 
 	// 操作系统类型，包含如下2种。   - Linux：Linux。   - Windows：Windows。

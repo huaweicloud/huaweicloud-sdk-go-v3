@@ -9,6 +9,9 @@ import (
 // ListAreaBandwidthPackageSpecificationsRequest Request Object
 type ListAreaBandwidthPackageSpecificationsRequest struct {
 
+	// 每页返回的个数。 取值范围：1~2000。
+	Limit *int32 `json:"limit,omitempty"`
+
 	// （索引位置，偏移量）， 从offset指定的下一条数据开始查询。 查询第一页数据时，不需要传入此参数，查询后续页码数据时，将查询前一页数据时响应体中的值带入此参数（action为count时无此参数） 从第一条数据偏移offset条数据后开始查询，如果action为filter默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数。
 	Offset *int32 `json:"offset,omitempty"`
 

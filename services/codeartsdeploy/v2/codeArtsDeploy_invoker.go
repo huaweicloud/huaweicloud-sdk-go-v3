@@ -421,22 +421,6 @@ func (i *UpdateAppInfoInvoker) Invoke() (*model.UpdateAppInfoResponse, error) {
 	}
 }
 
-type CheckDeployStatusInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CheckDeployStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CheckDeployStatusInvoker) Invoke() (*model.CheckDeployStatusResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CheckDeployStatusResponse), nil
-	}
-}
-
 type CreateEnvironmentInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -594,22 +578,6 @@ func (i *UpdateEnvironmentPermissionInvoker) Invoke() (*model.UpdateEnvironmentP
 		return nil, err
 	} else {
 		return result.(*model.UpdateEnvironmentPermissionResponse), nil
-	}
-}
-
-type StopDeployTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *StopDeployTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *StopDeployTaskInvoker) Invoke() (*model.StopDeployTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.StopDeployTaskResponse), nil
 	}
 }
 

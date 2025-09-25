@@ -23,7 +23,7 @@ type ProxyFlavor struct {
 	// **参数解释**：  az状态。
 	AzStatus *interface{} `json:"az_status,omitempty"`
 
-	// **参数解释**：  是否支持ipv6。  **取值范围**： - true: 支持ipv6。 - false: 不支持ipv6。
+	// **参数解释**：  是否支持ipv6。  **取值范围**：  - true: 支持ipv6。 - false: 不支持ipv6。
 	SupportedIpv6 *bool `json:"supported_ipv6,omitempty"`
 }
 

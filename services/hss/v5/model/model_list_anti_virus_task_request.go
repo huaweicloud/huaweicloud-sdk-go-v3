@@ -24,10 +24,10 @@ type ListAntiVirusTaskRequest struct {
 	// 查询时间范围天数，与自定义查询时间begin_time，end_time互斥
 	LastDays *int32 `json:"last_days,omitempty"`
 
-	// 自定义查询时间，与查询时间范围天数互斥，查询时间段的起始时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+	// 自定义查询时间，开始时间
 	BeginTime *string `json:"begin_time,omitempty"`
 
-	// 自定义时间，查询时间段的终止时间，毫秒级时间戳，end_time减去begin_time小于等于2天，与查询时间范围天数互斥
+	// 自定义查询时间，结束时间
 	EndTime *string `json:"end_time,omitempty"`
 
 	// 任务状态，包含如下4种   - scanning ：扫描中   - cancel ：已取消   - fail ：扫描失败   - finish ：已完成

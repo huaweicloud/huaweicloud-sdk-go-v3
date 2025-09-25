@@ -23,7 +23,7 @@ type PolicyListDataList struct {
 	// 端口列表
 	PortList *[]int32 `json:"port_list,omitempty"`
 
-	// 操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Winodws.
+	// 操作系统类型，包含如下2种。   - Linux ：Linux。   - Windows ：Windows.
 	OsType *string `json:"os_type,omitempty"`
 
 	// 防护状态，包含如下3种 - applying ：生效中 - success ：已生效 - disable ：未生效

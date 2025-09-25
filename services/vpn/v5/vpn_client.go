@@ -313,6 +313,48 @@ func (c *VpnClient) UpdateCgwInvoker(request *model.UpdateCgwRequest) *UpdateCgw
 	return &UpdateCgwInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateP2cVgw 创建P2C VPN网关
+//
+// 创建终端入云VPN网关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) CreateP2cVgw(request *model.CreateP2cVgwRequest) (*model.CreateP2cVgwResponse, error) {
+	requestDef := GenReqDefForCreateP2cVgw()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateP2cVgwResponse), nil
+	}
+}
+
+// CreateP2cVgwInvoker 创建P2C VPN网关
+func (c *VpnClient) CreateP2cVgwInvoker(request *model.CreateP2cVgwRequest) *CreateP2cVgwInvoker {
+	requestDef := GenReqDefForCreateP2cVgw()
+	return &CreateP2cVgwInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteP2cVgw 删除P2C VPN网关
+//
+// 根据P2C VPN网关ID，删除指定的VPN网关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) DeleteP2cVgw(request *model.DeleteP2cVgwRequest) (*model.DeleteP2cVgwResponse, error) {
+	requestDef := GenReqDefForDeleteP2cVgw()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteP2cVgwResponse), nil
+	}
+}
+
+// DeleteP2cVgwInvoker 删除P2C VPN网关
+func (c *VpnClient) DeleteP2cVgwInvoker(request *model.DeleteP2cVgwRequest) *DeleteP2cVgwInvoker {
+	requestDef := GenReqDefForDeleteP2cVgw()
+	return &DeleteP2cVgwInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteP2cVgwConnection 断开P2C VPN网关连接
 //
 // 断开P2C VPN网关连接

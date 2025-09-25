@@ -14,6 +14,9 @@ type CreateDrugJobBasicInfo struct {
 
 	// 标签，取值范围[0,5]，单个标签最大长度32字符，支持中文、字母、数字、空格、下划线和中划线，且不能以空格开头或者结尾。
 	Labels *[]string `json:"labels,omitempty"`
+
+	// **参数解释**： 上游作业信息。 **约束限制**： 不涉及 **取值范围**： 长度为[1-10240]个字符。 **默认取值**： 不涉及
+	UpstreamJobInfo *string `json:"upstream_job_info,omitempty"`
 }
 
 func (o CreateDrugJobBasicInfo) String() string {

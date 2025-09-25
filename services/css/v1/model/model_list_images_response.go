@@ -12,8 +12,11 @@ type ListImagesResponse struct {
 	// 是否需要上传升级后版本的插件。
 	NeedUploadUpgradePlugin *bool `json:"needUploadUpgradePlugin,omitempty"`
 
-	ImageInfoList  *[]GetTargetImageIdDetail `json:"imageInfoList,omitempty"`
-	HttpStatusCode int                       `json:"-"`
+	ImageInfoList *[]GetTargetImageIdDetail `json:"imageInfoList,omitempty"`
+
+	// 目标镜像数量。
+	TotalSize      *int32 `json:"totalSize,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListImagesResponse) String() string {

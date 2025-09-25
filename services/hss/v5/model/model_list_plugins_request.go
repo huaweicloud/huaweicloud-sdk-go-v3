@@ -24,7 +24,7 @@ type ListPluginsRequest struct {
 	// 服务器公网IP
 	PublicIp *string `json:"public_ip,omitempty"`
 
-	// 服务器组ID
+	// **参数解释**: 服务器组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
 	GroupId *string `json:"group_id,omitempty"`
 
 	// 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产

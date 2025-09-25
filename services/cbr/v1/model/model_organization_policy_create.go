@@ -30,6 +30,9 @@ type OrganizationPolicyCreate struct {
 	PolicyOperationDefinition *PolicyoOdCreate `json:"policy_operation_definition"`
 
 	PolicyTrigger *PolicyTriggerReq `json:"policy_trigger"`
+
+	// 组织策略生效范围
+	EffectiveScope *string `json:"effective_scope,omitempty"`
 }
 
 func (o OrganizationPolicyCreate) String() string {

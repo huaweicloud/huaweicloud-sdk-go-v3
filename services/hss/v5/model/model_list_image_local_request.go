@@ -71,6 +71,9 @@ type ListImageLocalRequest struct {
 
 	// 本地镜像所关联软件的名称
 	AppName *string `json:"app_name,omitempty"`
+
+	// **参数解释**: 是否存在容器 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
+	HasContainer *bool `json:"has_container,omitempty"`
 }
 
 func (o ListImageLocalRequest) String() string {

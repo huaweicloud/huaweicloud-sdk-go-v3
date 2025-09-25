@@ -9,10 +9,10 @@ import (
 type ModifyHbaConfRequestBody struct {
 
 	// **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
-	BeforeConfs *interface{} `json:"before_confs"`
+	BeforeConf *interface{} `json:"before_conf"`
 
 	// **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
-	AfterConfs *interface{} `json:"after_confs"`
+	AfterConf *interface{} `json:"after_conf"`
 }
 
 func (o ModifyHbaConfRequestBody) String() string {

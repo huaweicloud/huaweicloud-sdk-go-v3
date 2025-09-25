@@ -125,3 +125,45 @@ func (c *CssClient) StopAutoCreateSnapshotsInvoker(request *model.StopAutoCreate
 	requestDef := GenReqDefForStopAutoCreateSnapshots()
 	return &StopAutoCreateSnapshotsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// DeleteLogstashConf 删除配置文件
+//
+// 删除配置文件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CssClient) DeleteLogstashConf(request *model.DeleteLogstashConfRequest) (*model.DeleteLogstashConfResponse, error) {
+	requestDef := GenReqDefForDeleteLogstashConf()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteLogstashConfResponse), nil
+	}
+}
+
+// DeleteLogstashConfInvoker 删除配置文件
+func (c *CssClient) DeleteLogstashConfInvoker(request *model.DeleteLogstashConfRequest) *DeleteLogstashConfInvoker {
+	requestDef := GenReqDefForDeleteLogstashConf()
+	return &DeleteLogstashConfInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteLogstashTemplate Delete Custom Template
+//
+// This interface is used to delete custom templates.
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CssClient) DeleteLogstashTemplate(request *model.DeleteLogstashTemplateRequest) (*model.DeleteLogstashTemplateResponse, error) {
+	requestDef := GenReqDefForDeleteLogstashTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteLogstashTemplateResponse), nil
+	}
+}
+
+// DeleteLogstashTemplateInvoker Delete Custom Template
+func (c *CssClient) DeleteLogstashTemplateInvoker(request *model.DeleteLogstashTemplateRequest) *DeleteLogstashTemplateInvoker {
+	requestDef := GenReqDefForDeleteLogstashTemplate()
+	return &DeleteLogstashTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

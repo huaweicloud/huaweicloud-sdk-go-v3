@@ -16,6 +16,9 @@ type UpdateEsElbRequestBody struct {
 
 	// 负载均衡器id。
 	ElbId *string `json:"elb_id,omitempty"`
+
+	// 负载均衡器类型。当用于可观测集群时：不需要配置此参数。
+	Type *string `json:"type,omitempty"`
 }
 
 func (o UpdateEsElbRequestBody) String() string {

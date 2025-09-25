@@ -59,6 +59,9 @@ type VaultGet struct {
 	// 用于标识该存储库是否已锁定
 	Locked *bool `json:"locked,omitempty"`
 
+	// 存储库可用区信息，最大支持32字符。
+	AvailabilityZone *string `json:"availability_zone,omitempty"`
+
 	// 更新时间,例如:\"2020-02-05T10:38:34.209782\"
 	UpdatedAt string `json:"updated_at"`
 

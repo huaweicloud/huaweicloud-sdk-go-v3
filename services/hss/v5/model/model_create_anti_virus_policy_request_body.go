@@ -18,6 +18,9 @@ type CreateAntiVirusPolicyRequestBody struct {
 	// 启动类型，包含如下:   - day ：每天   - week : 每周   - month : 每月
 	ScanPeriod *string `json:"scan_period,omitempty"`
 
+	// 任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+	ScanType *string `json:"scan_type,omitempty"`
+
 	// 扫描周期日期（1-28；扫描周期为week时，1-7代表周日至周六；扫描周期为month时，1-28代表每月1日到28日）
 	ScanPeriodDate *int32 `json:"scan_period_date,omitempty"`
 

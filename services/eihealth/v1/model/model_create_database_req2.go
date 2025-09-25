@@ -16,7 +16,7 @@ type CreateDatabaseReq2 struct {
 	Description *string `json:"description,omitempty"`
 
 	// css集群id
-	CssId string `json:"css_id"`
+	CssId *string `json:"css_id,omitempty"`
 
 	File *DatabaseFile `json:"file"`
 

@@ -47,6 +47,9 @@ type CreateTranscodingReq struct {
 	VideoProcess *VideoProcess `json:"video_process,omitempty"`
 
 	AudioProcess *AudioProcess `json:"audio_process,omitempty"`
+
+	// metadata设置，默认只支持AIGC
+	Metadata *[]FileMetaData `json:"metadata,omitempty"`
 }
 
 func (o CreateTranscodingReq) String() string {

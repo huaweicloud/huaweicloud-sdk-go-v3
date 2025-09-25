@@ -12,7 +12,7 @@ type BatchDeleteDaemonsetRequestBody struct {
 	// 批量卸载列表
 	ClusterIds []string `json:"cluster_ids"`
 
-	// 调用服务，标识cce免费体检报告，cce调用传参为cce:    - hss hss服务    - cce cce服务
+	// 调用服务，标识cce免费体检报告，cce调用传参为cce:   - hss hss服务   - cce cce服务
 	InvokedService *string `json:"invoked_service,omitempty"`
 }
 

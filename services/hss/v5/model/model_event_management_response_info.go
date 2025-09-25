@@ -133,6 +133,9 @@ type EventManagementResponseInfo struct {
 
 	// **参数解释**： 事件发生次数 **取值范围**： 最小值0，最大值2147483647
 	EventCount *int32 `json:"event_count,omitempty"`
+
+	// **参数解释**： 操作类型 **取值范围**： - add ：创建。 - delete ：删除。 - change_attribute ： 修改文件属性。 - modify ：修改文件内容。 - move ：移动。
+	OperateType *string `json:"operate_type,omitempty"`
 }
 
 func (o EventManagementResponseInfo) String() string {

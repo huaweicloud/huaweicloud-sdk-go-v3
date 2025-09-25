@@ -13,10 +13,10 @@ type RouteBody struct {
 	Cname *string `json:"cname,omitempty"`
 
 	// WAF集群名称
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 防护域名源站服务器信息列表
-	Servers *[]RouteServerBody `json:"servers,omitempty"`
+	Servers []RouteServerBody `json:"servers"`
 }
 
 func (o RouteBody) String() string {

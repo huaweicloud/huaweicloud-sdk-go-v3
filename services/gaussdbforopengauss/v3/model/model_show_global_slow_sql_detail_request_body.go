@@ -15,7 +15,7 @@ type ShowGlobalSlowSqlDetailRequestBody struct {
 	InstanceId string `json:"instance_id"`
 
 	// **参数解释**: 节点ID列表。 **约束限制**: 节点ID数组不能为空。
-	NodeIds *[]string `json:"node_ids,omitempty"`
+	NodeIds []string `json:"node_ids"`
 
 	// **参数解释**: 起始日期。 **约束限制**: 13位UNIX时间戳格式，单位是毫秒，时区是UTC。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
 	StartTime int64 `json:"start_time"`

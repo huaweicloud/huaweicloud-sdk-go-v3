@@ -84,3 +84,35 @@ func (i *StopAutoCreateSnapshotsInvoker) Invoke() (*model.StopAutoCreateSnapshot
 		return result.(*model.StopAutoCreateSnapshotsResponse), nil
 	}
 }
+
+type DeleteLogstashConfInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteLogstashConfInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteLogstashConfInvoker) Invoke() (*model.DeleteLogstashConfResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteLogstashConfResponse), nil
+	}
+}
+
+type DeleteLogstashTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteLogstashTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteLogstashTemplateInvoker) Invoke() (*model.DeleteLogstashTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteLogstashTemplateResponse), nil
+	}
+}

@@ -659,6 +659,28 @@ func (c *CbrClient) ListExternalVaultInvoker(request *model.ListExternalVaultReq
 	return &ListExternalVaultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListFeatures 查询服务支持的特性列表
+//
+// 查询服务支持的特性列表
+// &gt; 该接口目前属于公测阶段，部分region暂时无法使用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) ListFeatures(request *model.ListFeaturesRequest) (*model.ListFeaturesResponse, error) {
+	requestDef := GenReqDefForListFeatures()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFeaturesResponse), nil
+	}
+}
+
+// ListFeaturesInvoker 查询服务支持的特性列表
+func (c *CbrClient) ListFeaturesInvoker(request *model.ListFeaturesRequest) *ListFeaturesInvoker {
+	requestDef := GenReqDefForListFeatures()
+	return &ListFeaturesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListOpLogs 查询任务列表
 //
 // 查询任务列表
@@ -1035,6 +1057,28 @@ func (c *CbrClient) ShowDomain(request *model.ShowDomainRequest) (*model.ShowDom
 func (c *CbrClient) ShowDomainInvoker(request *model.ShowDomainRequest) *ShowDomainInvoker {
 	requestDef := GenReqDefForShowDomain()
 	return &ShowDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFeature 查询指定特性
+//
+// 查询服务指定特性
+// &gt; 该接口目前属于公测阶段，部分region暂时无法使用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) ShowFeature(request *model.ShowFeatureRequest) (*model.ShowFeatureResponse, error) {
+	requestDef := GenReqDefForShowFeature()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFeatureResponse), nil
+	}
+}
+
+// ShowFeatureInvoker 查询指定特性
+func (c *CbrClient) ShowFeatureInvoker(request *model.ShowFeatureRequest) *ShowFeatureInvoker {
+	requestDef := GenReqDefForShowFeature()
+	return &ShowFeatureInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowMemberDetail 获取备份成员详情

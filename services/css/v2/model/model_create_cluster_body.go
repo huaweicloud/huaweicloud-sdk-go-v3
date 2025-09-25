@@ -12,6 +12,9 @@ type CreateClusterBody struct {
 	// 集群名称。4～32个字符，只能包含数字、字母、中划线和下划线，且必须以字母开头。
 	Name string `json:"name"`
 
+	// 集群描述。
+	Desc *string `json:"desc,omitempty"`
+
 	BackupStrategy *CreateClusterBackupStrategyBody `json:"backupStrategy,omitempty"`
 
 	Roles []CreateClusterRolesBody `json:"roles"`
@@ -25,7 +28,7 @@ type CreateClusterBody struct {
 	Tags *[]CreateClusterTagsBody `json:"tags,omitempty"`
 
 	// 可用区。
-	AvailabilityZone *string `json:"availability_zone,omitempty"`
+	AvailabilityZone string `json:"availability_zone"`
 
 	Datastore *CreateClusterDatastoreBody `json:"datastore"`
 
@@ -45,6 +48,11 @@ type CreateClusterBody struct {
 	PublicKibanaReq *CreateClusterPublicKibanaReq `json:"publicKibanaReq,omitempty"`
 
 	PayInfo *PayInfoBody `json:"payInfo,omitempty"`
+
+	// 集群是否开启自动分配IPv6地址。
+	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
+
+	DiskEncryption *DiskEncryptionInfo `json:"diskEncryption,omitempty"`
 }
 
 func (o CreateClusterBody) String() string {

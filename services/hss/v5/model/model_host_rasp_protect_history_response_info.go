@@ -8,25 +8,25 @@ import (
 
 type HostRaspProtectHistoryResponseInfo struct {
 
-	// 服务器ip
+	// **参数解释**: 服务器IP **取值范围**: 字符长度0-64位
 	HostIp *string `json:"host_ip,omitempty"`
 
-	// 服务器名称
+	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
 	HostName *string `json:"host_name,omitempty"`
 
-	// 动态网页防篡改的告警时间(ms)
+	// **参数解释**: 告警时间，单位毫秒。 **取值范围**: 最小值0，最大值4070880000000
 	AlarmTime *int64 `json:"alarm_time,omitempty"`
 
-	// 威胁类型
+	// **参数解释**： 威胁类型 **取值范围**： 字符长度0-128位
 	ThreatType *string `json:"threat_type,omitempty"`
 
-	// 告警级别
+	// **参数解释**: 告警等级 **取值范围**: - 1 : 紧急。 - 2 : 重要。 - 3 : 次要。 - 4 : 提示。
 	AlarmLevel *int32 `json:"alarm_level,omitempty"`
 
-	// 攻击主机的源IP
+	// **参数解释**： 攻击源IP **取值范围**： 字符长度0-128位
 	SourceIp *string `json:"source_ip,omitempty"`
 
-	// 攻击请求的URL
+	// **参数解释**： 攻击源URL **取值范围**： 字符长度0-2000位
 	AttackedUrl *string `json:"attacked_url,omitempty"`
 }
 

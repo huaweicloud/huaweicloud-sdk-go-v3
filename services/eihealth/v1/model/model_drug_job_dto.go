@@ -14,6 +14,15 @@ type DrugJobDto struct {
 	// 作业的名称，取值范围：[1,63]，允许大小写字母、数字、以及特殊字符中划线(-)
 	Name *string `json:"name,omitempty"`
 
+	// **参数解释**： 作业所属空间ID。 **约束限制**： 不涉及 **取值范围**： 长度为[1-63]个字符，允许大小写字母、数字、以及特殊字符中划线（-）。 **默认取值**： 不涉及
+	EihealthProjectId *string `json:"eihealth_project_id,omitempty"`
+
+	// **参数解释**： 作业所属空间名称。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	EihealthProjectName *string `json:"eihealth_project_name,omitempty"`
+
+	// **参数解释**： 上游作业信息。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	UpstreamJobInfo *string `json:"upstream_job_info,omitempty"`
+
 	// 作业标签
 	Labels *[]string `json:"labels,omitempty"`
 

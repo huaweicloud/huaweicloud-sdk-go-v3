@@ -485,7 +485,7 @@ func (c *BssClient) ListCouponQuotasRecordsInvoker(request *model.ListCouponQuot
 
 // ListCustomerAccountChangeRecords 查询收支明细(客户)
 //
-// 功能描述：客户可以查询自身的收支明细情况(此接口不适用于伙伴的代售类、转售类客户。)
+// 功能描述：客户可以查询自身的收支明细情况(此接口不适用于伙伴的转售类客户。)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListCustomerAccountChangeRecords(request *model.ListCustomerAccountChangeRecordsRequest) (*model.ListCustomerAccountChangeRecordsResponse, error) {

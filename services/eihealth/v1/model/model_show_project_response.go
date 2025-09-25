@@ -55,8 +55,11 @@ type ShowProjectResponse struct {
 	IsCore *bool `json:"is_core,omitempty"`
 
 	// 项目数据容量配额，-1表示无容量限制
-	StorageQuota   *int64 `json:"storage_quota,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	StorageQuota *int64 `json:"storage_quota,omitempty"`
+
+	// **参数解释**： 空间桶来源租户。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	StorageTenant  *string `json:"storage_tenant,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowProjectResponse) String() string {

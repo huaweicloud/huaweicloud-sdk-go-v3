@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// OrderLog 工单日志
+// OrderLog 服务单日志
 type OrderLog struct {
 
 	// 阶段
