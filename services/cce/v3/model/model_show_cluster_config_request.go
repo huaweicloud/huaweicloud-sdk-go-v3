@@ -12,7 +12,7 @@ import (
 // ShowClusterConfigRequest Request Object
 type ShowClusterConfigRequest struct {
 
-	// 组件类型 , 合法取值为control，audit，system-addon。不填写则查询全部类型。 - control 控制面组件日志。 - audit 控制面审计日志。 - system-addon 系统插件日志。
+	// **参数解释**： 组件类型，不填写则查询全部类型。  **约束限制**： 合法取值为control，audit，system-addon  **取值范围**： - control: 控制面组件日志。 - audit: 控制面审计日志。 - system-addon: 系统插件日志。  **默认取值**： 无
 	Type *ShowClusterConfigRequestType `json:"type,omitempty"`
 
 	// 集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。

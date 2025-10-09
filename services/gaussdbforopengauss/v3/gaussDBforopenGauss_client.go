@@ -124,6 +124,27 @@ func (c *GaussDBforopenGaussClient) AttachEipInvoker(request *model.AttachEipReq
 	return &AttachEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AuthorizeBackupDownload 授权备份文件下载
+//
+// 授权租户使用OBS Browser+方式下载备份文件，支持实例级、表级的全量备份及差量备份。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) AuthorizeBackupDownload(request *model.AuthorizeBackupDownloadRequest) (*model.AuthorizeBackupDownloadResponse, error) {
+	requestDef := GenReqDefForAuthorizeBackupDownload()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AuthorizeBackupDownloadResponse), nil
+	}
+}
+
+// AuthorizeBackupDownloadInvoker 授权备份文件下载
+func (c *GaussDBforopenGaussClient) AuthorizeBackupDownloadInvoker(request *model.AuthorizeBackupDownloadRequest) *AuthorizeBackupDownloadInvoker {
+	requestDef := GenReqDefForAuthorizeBackupDownload()
+	return &AuthorizeBackupDownloadInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchSetBackupPolicy 批量设置自动备份策略
 //
 // 批量设置自动备份策略。
@@ -605,6 +626,27 @@ func (c *GaussDBforopenGaussClient) DeleteDatabaseSchema(request *model.DeleteDa
 func (c *GaussDBforopenGaussClient) DeleteDatabaseSchemaInvoker(request *model.DeleteDatabaseSchemaRequest) *DeleteDatabaseSchemaInvoker {
 	requestDef := GenReqDefForDeleteDatabaseSchema()
 	return &DeleteDatabaseSchemaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDisasterRecord 删除容灾记录
+//
+// 删除容灾记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) DeleteDisasterRecord(request *model.DeleteDisasterRecordRequest) (*model.DeleteDisasterRecordResponse, error) {
+	requestDef := GenReqDefForDeleteDisasterRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDisasterRecordResponse), nil
+	}
+}
+
+// DeleteDisasterRecordInvoker 删除容灾记录
+func (c *GaussDBforopenGaussClient) DeleteDisasterRecordInvoker(request *model.DeleteDisasterRecordRequest) *DeleteDisasterRecordInvoker {
+	requestDef := GenReqDefForDeleteDisasterRecord()
+	return &DeleteDisasterRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteHbaConfs 删除客户端接入认证配置
@@ -1321,6 +1363,27 @@ func (c *GaussDBforopenGaussClient) ListDatabaseVersionsInvoker(request *model.L
 	return &ListDatabaseVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDatabaseVolume 查询数据库占用空间大小列表
+//
+// 查询限流任务详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListDatabaseVolume(request *model.ListDatabaseVolumeRequest) (*model.ListDatabaseVolumeResponse, error) {
+	requestDef := GenReqDefForListDatabaseVolume()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDatabaseVolumeResponse), nil
+	}
+}
+
+// ListDatabaseVolumeInvoker 查询数据库占用空间大小列表
+func (c *GaussDBforopenGaussClient) ListDatabaseVolumeInvoker(request *model.ListDatabaseVolumeRequest) *ListDatabaseVolumeInvoker {
+	requestDef := GenReqDefForListDatabaseVolume()
+	return &ListDatabaseVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDatabaseVolumeSummary 查询数据盘空间概况
 //
 // 查询数据盘空间概况。
@@ -1951,6 +2014,27 @@ func (c *GaussDBforopenGaussClient) ListPluginExtensionsInvoker(request *model.L
 	return &ListPluginExtensionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPluginInfoList 查询插件列表
+//
+// 查询插件列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListPluginInfoList(request *model.ListPluginInfoListRequest) (*model.ListPluginInfoListResponse, error) {
+	requestDef := GenReqDefForListPluginInfoList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPluginInfoListResponse), nil
+	}
+}
+
+// ListPluginInfoListInvoker 查询插件列表
+func (c *GaussDBforopenGaussClient) ListPluginInfoListInvoker(request *model.ListPluginInfoListRequest) *ListPluginInfoListInvoker {
+	requestDef := GenReqDefForListPluginInfoList()
+	return &ListPluginInfoListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListPredefinedTags 查询预定义标签
 //
 // 查询预预定义标签。
@@ -2414,25 +2498,25 @@ func (c *GaussDBforopenGaussClient) ModifyHbaConfInvoker(request *model.ModifyHb
 	return &ModifyHbaConfInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ModifyHotfixes 修改热补丁属性
+// ModifyInstancePort 修改指定实例端口号
 //
-// 修改热补丁属性。
+// 修改指定实例端口号。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *GaussDBforopenGaussClient) ModifyHotfixes(request *model.ModifyHotfixesRequest) (*model.ModifyHotfixesResponse, error) {
-	requestDef := GenReqDefForModifyHotfixes()
+func (c *GaussDBforopenGaussClient) ModifyInstancePort(request *model.ModifyInstancePortRequest) (*model.ModifyInstancePortResponse, error) {
+	requestDef := GenReqDefForModifyInstancePort()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ModifyHotfixesResponse), nil
+		return resp.(*model.ModifyInstancePortResponse), nil
 	}
 }
 
-// ModifyHotfixesInvoker 修改热补丁属性
-func (c *GaussDBforopenGaussClient) ModifyHotfixesInvoker(request *model.ModifyHotfixesRequest) *ModifyHotfixesInvoker {
-	requestDef := GenReqDefForModifyHotfixes()
-	return &ModifyHotfixesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ModifyInstancePortInvoker 修改指定实例端口号
+func (c *GaussDBforopenGaussClient) ModifyInstancePortInvoker(request *model.ModifyInstancePortRequest) *ModifyInstancePortInvoker {
+	requestDef := GenReqDefForModifyInstancePort()
+	return &ModifyInstancePortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ResetConfiguration 重置参数模板

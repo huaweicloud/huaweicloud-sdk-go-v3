@@ -1,9 +1,10 @@
 package model
 
 import (
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
-
 	"strings"
 )
 
@@ -56,6 +57,9 @@ type ShowResponseP2cVgw struct {
 	// 网关版本
 	Version *string `json:"version,omitempty"`
 
+	// 升级信息
+	UpgradeInfo *ShowResponseP2cVgwUpgradeInfo `json:"upgrade_info,omitempty"`
+
 	// 创建时间
 	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
 
@@ -73,4 +77,55 @@ func (o ShowResponseP2cVgw) String() string {
 	}
 
 	return strings.Join([]string{"ShowResponseP2cVgw", string(data)}, " ")
+}
+
+type ShowResponseP2cVgwUpgradeInfo struct {
+	value string
+}
+
+type ShowResponseP2cVgwUpgradeInfoEnum struct {
+	READY         ShowResponseP2cVgwUpgradeInfo
+	EXPIRING_SOON ShowResponseP2cVgwUpgradeInfo
+	UNREADY       ShowResponseP2cVgwUpgradeInfo
+}
+
+func GetShowResponseP2cVgwUpgradeInfoEnum() ShowResponseP2cVgwUpgradeInfoEnum {
+	return ShowResponseP2cVgwUpgradeInfoEnum{
+		READY: ShowResponseP2cVgwUpgradeInfo{
+			value: "ready",
+		},
+		EXPIRING_SOON: ShowResponseP2cVgwUpgradeInfo{
+			value: "expiring soon",
+		},
+		UNREADY: ShowResponseP2cVgwUpgradeInfo{
+			value: "unready",
+		},
+	}
+}
+
+func (c ShowResponseP2cVgwUpgradeInfo) Value() string {
+	return c.value
+}
+
+func (c ShowResponseP2cVgwUpgradeInfo) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowResponseP2cVgwUpgradeInfo) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

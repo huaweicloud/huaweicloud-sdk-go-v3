@@ -837,6 +837,27 @@ func (c *RdsClient) ListCollationsInvoker(request *model.ListCollationsRequest) 
 	return &ListCollationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListConfigurationApplyHistories 查询参数组应用历史
+//
+// 查询参数组应用历史
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListConfigurationApplyHistories(request *model.ListConfigurationApplyHistoriesRequest) (*model.ListConfigurationApplyHistoriesResponse, error) {
+	requestDef := GenReqDefForListConfigurationApplyHistories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConfigurationApplyHistoriesResponse), nil
+	}
+}
+
+// ListConfigurationApplyHistoriesInvoker 查询参数组应用历史
+func (c *RdsClient) ListConfigurationApplyHistoriesInvoker(request *model.ListConfigurationApplyHistoriesRequest) *ListConfigurationApplyHistoriesInvoker {
+	requestDef := GenReqDefForListConfigurationApplyHistories()
+	return &ListConfigurationApplyHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListConfigurations 获取参数模板列表
 //
 // 获取参数模板列表，包括所有数据库的默认参数模板和用户创建的参数模板。
@@ -1171,6 +1192,27 @@ func (c *RdsClient) ListInstances(request *model.ListInstancesRequest) (*model.L
 func (c *RdsClient) ListInstancesInvoker(request *model.ListInstancesRequest) *ListInstancesInvoker {
 	requestDef := GenReqDefForListInstances()
 	return &ListInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstancesConfigurations 查询应用参数模版的实例列表
+//
+// 查询应用参数模版的实例列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListInstancesConfigurations(request *model.ListInstancesConfigurationsRequest) (*model.ListInstancesConfigurationsResponse, error) {
+	requestDef := GenReqDefForListInstancesConfigurations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstancesConfigurationsResponse), nil
+	}
+}
+
+// ListInstancesConfigurationsInvoker 查询应用参数模版的实例列表
+func (c *RdsClient) ListInstancesConfigurationsInvoker(request *model.ListInstancesConfigurationsRequest) *ListInstancesConfigurationsInvoker {
+	requestDef := GenReqDefForListInstancesConfigurations()
+	return &ListInstancesConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListInstancesInfoDiagnosis 获取指定诊断项的诊断结果

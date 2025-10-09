@@ -79,6 +79,9 @@ type Instance struct {
 
 	// 子网的网段
 	SubnetCidr *string `json:"subnet_cidr,omitempty"`
+
+	// 实例对应的VPC终端节点服务ID
+	VpcepServiceId *string `json:"vpcep_service_id,omitempty"`
 }
 
 func (o Instance) String() string {

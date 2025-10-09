@@ -147,9 +147,9 @@ func (c *CssClient) DeleteLogstashConfInvoker(request *model.DeleteLogstashConfR
 	return &DeleteLogstashConfInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteLogstashTemplate Delete Custom Template
+// DeleteLogstashTemplate 删除自定义模板
 //
-// This interface is used to delete custom templates.
+// 此接口用于删除自定义模板。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CssClient) DeleteLogstashTemplate(request *model.DeleteLogstashTemplateRequest) (*model.DeleteLogstashTemplateResponse, error) {
@@ -162,7 +162,7 @@ func (c *CssClient) DeleteLogstashTemplate(request *model.DeleteLogstashTemplate
 	}
 }
 
-// DeleteLogstashTemplateInvoker Delete Custom Template
+// DeleteLogstashTemplateInvoker 删除自定义模板
 func (c *CssClient) DeleteLogstashTemplateInvoker(request *model.DeleteLogstashTemplateRequest) *DeleteLogstashTemplateInvoker {
 	requestDef := GenReqDefForDeleteLogstashTemplate()
 	return &DeleteLogstashTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

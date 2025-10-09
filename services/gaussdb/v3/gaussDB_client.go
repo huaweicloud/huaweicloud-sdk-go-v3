@@ -2519,6 +2519,48 @@ func (c *GaussDBClient) ShowRestoreTablesInvoker(request *model.ShowRestoreTable
 	return &ShowRestoreTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowServerlessComputeAbilityPolicy 查询Serverless算力策略
+//
+// 查询Serverless算力策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowServerlessComputeAbilityPolicy(request *model.ShowServerlessComputeAbilityPolicyRequest) (*model.ShowServerlessComputeAbilityPolicyResponse, error) {
+	requestDef := GenReqDefForShowServerlessComputeAbilityPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowServerlessComputeAbilityPolicyResponse), nil
+	}
+}
+
+// ShowServerlessComputeAbilityPolicyInvoker 查询Serverless算力策略
+func (c *GaussDBClient) ShowServerlessComputeAbilityPolicyInvoker(request *model.ShowServerlessComputeAbilityPolicyRequest) *ShowServerlessComputeAbilityPolicyInvoker {
+	requestDef := GenReqDefForShowServerlessComputeAbilityPolicy()
+	return &ShowServerlessComputeAbilityPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowServerlessScalingPolicy 查询Serverless自定义扩容策略
+//
+// 查询Serverless自定义扩容策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowServerlessScalingPolicy(request *model.ShowServerlessScalingPolicyRequest) (*model.ShowServerlessScalingPolicyResponse, error) {
+	requestDef := GenReqDefForShowServerlessScalingPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowServerlessScalingPolicyResponse), nil
+	}
+}
+
+// ShowServerlessScalingPolicyInvoker 查询Serverless自定义扩容策略
+func (c *GaussDBClient) ShowServerlessScalingPolicyInvoker(request *model.ShowServerlessScalingPolicyRequest) *ShowServerlessScalingPolicyInvoker {
+	requestDef := GenReqDefForShowServerlessScalingPolicy()
+	return &ShowServerlessScalingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSlowLogDetail 获取StarRocks实例内核慢日志信息
 //
 // 获取StarRocks实例内核慢日志信息。
@@ -2664,6 +2706,27 @@ func (c *GaussDBClient) ShowTableMetaInfo(request *model.ShowTableMetaInfoReques
 func (c *GaussDBClient) ShowTableMetaInfoInvoker(request *model.ShowTableMetaInfoRequest) *ShowTableMetaInfoInvoker {
 	requestDef := GenReqDefForShowTableMetaInfo()
 	return &ShowTableMetaInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTaskDetails 获取TaurusDB异步任务详情
+//
+// 获取TaurusDB异步任务详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowTaskDetails(request *model.ShowTaskDetailsRequest) (*model.ShowTaskDetailsResponse, error) {
+	requestDef := GenReqDefForShowTaskDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTaskDetailsResponse), nil
+	}
+}
+
+// ShowTaskDetailsInvoker 获取TaurusDB异步任务详情
+func (c *GaussDBClient) ShowTaskDetailsInvoker(request *model.ShowTaskDetailsRequest) *ShowTaskDetailsInvoker {
+	requestDef := GenReqDefForShowTaskDetails()
+	return &ShowTaskDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShrinkGaussMySqlProxy 减少数据库代理节点的数量
@@ -3318,6 +3381,27 @@ func (c *GaussDBClient) UpdateProxySessionConsistenceInvoker(request *model.Upda
 	return &UpdateProxySessionConsistenceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateServerlessComputeAbilityPolicy 设置Serverless算力策略
+//
+// 设置Serverless算力策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateServerlessComputeAbilityPolicy(request *model.UpdateServerlessComputeAbilityPolicyRequest) (*model.UpdateServerlessComputeAbilityPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateServerlessComputeAbilityPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateServerlessComputeAbilityPolicyResponse), nil
+	}
+}
+
+// UpdateServerlessComputeAbilityPolicyInvoker 设置Serverless算力策略
+func (c *GaussDBClient) UpdateServerlessComputeAbilityPolicyInvoker(request *model.UpdateServerlessComputeAbilityPolicyRequest) *UpdateServerlessComputeAbilityPolicyInvoker {
+	requestDef := GenReqDefForUpdateServerlessComputeAbilityPolicy()
+	return &UpdateServerlessComputeAbilityPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateServerlessPolicy 设置Serverless配置策略
 //
 // 设置Serverless配置策略。
@@ -3337,6 +3421,27 @@ func (c *GaussDBClient) UpdateServerlessPolicy(request *model.UpdateServerlessPo
 func (c *GaussDBClient) UpdateServerlessPolicyInvoker(request *model.UpdateServerlessPolicyRequest) *UpdateServerlessPolicyInvoker {
 	requestDef := GenReqDefForUpdateServerlessPolicy()
 	return &UpdateServerlessPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateServerlessScalingPolicy 设置Serverless自定义扩容策略
+//
+// 设置Serverless自定义扩容策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateServerlessScalingPolicy(request *model.UpdateServerlessScalingPolicyRequest) (*model.UpdateServerlessScalingPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateServerlessScalingPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateServerlessScalingPolicyResponse), nil
+	}
+}
+
+// UpdateServerlessScalingPolicyInvoker 设置Serverless自定义扩容策略
+func (c *GaussDBClient) UpdateServerlessScalingPolicyInvoker(request *model.UpdateServerlessScalingPolicyRequest) *UpdateServerlessScalingPolicyInvoker {
+	requestDef := GenReqDefForUpdateServerlessScalingPolicy()
+	return &UpdateServerlessScalingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSlowlogSensitiveStatus 开启或关闭StarRocks实例慢日志脱敏状态
@@ -4473,6 +4578,27 @@ func (c *GaussDBClient) ResumeStarRocksDataReplicationInvoker(request *model.Res
 	return &ResumeStarRocksDataReplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetHtapQueryQueuesRule 设置当前查询队列阈值
+//
+// 设置当前查询队列阈值。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) SetHtapQueryQueuesRule(request *model.SetHtapQueryQueuesRuleRequest) (*model.SetHtapQueryQueuesRuleResponse, error) {
+	requestDef := GenReqDefForSetHtapQueryQueuesRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetHtapQueryQueuesRuleResponse), nil
+	}
+}
+
+// SetHtapQueryQueuesRuleInvoker 设置当前查询队列阈值
+func (c *GaussDBClient) SetHtapQueryQueuesRuleInvoker(request *model.SetHtapQueryQueuesRuleRequest) *SetHtapQueryQueuesRuleInvoker {
+	requestDef := GenReqDefForSetHtapQueryQueuesRule()
+	return &SetHtapQueryQueuesRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowClickHouseDatabaseUser 查询数据库账户
 //
 // 查询数据库账户。
@@ -4597,6 +4723,27 @@ func (c *GaussDBClient) ShowHtapLtsConfig(request *model.ShowHtapLtsConfigReques
 func (c *GaussDBClient) ShowHtapLtsConfigInvoker(request *model.ShowHtapLtsConfigRequest) *ShowHtapLtsConfigInvoker {
 	requestDef := GenReqDefForShowHtapLtsConfig()
 	return &ShowHtapLtsConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHtapQueryQueuesRule 查询当前查询队列开关和阈值
+//
+// 查询当前查询队列开关和阈值。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowHtapQueryQueuesRule(request *model.ShowHtapQueryQueuesRuleRequest) (*model.ShowHtapQueryQueuesRuleResponse, error) {
+	requestDef := GenReqDefForShowHtapQueryQueuesRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHtapQueryQueuesRuleResponse), nil
+	}
+}
+
+// ShowHtapQueryQueuesRuleInvoker 查询当前查询队列开关和阈值
+func (c *GaussDBClient) ShowHtapQueryQueuesRuleInvoker(request *model.ShowHtapQueryQueuesRuleRequest) *ShowHtapQueryQueuesRuleInvoker {
+	requestDef := GenReqDefForShowHtapQueryQueuesRule()
+	return &ShowHtapQueryQueuesRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowInstanceDatabasesForHtap 查询HTAP主实例数据库
@@ -4807,6 +4954,27 @@ func (c *GaussDBClient) UpdateClickHouseSlowLogSensitiveStatus(request *model.Up
 func (c *GaussDBClient) UpdateClickHouseSlowLogSensitiveStatusInvoker(request *model.UpdateClickHouseSlowLogSensitiveStatusRequest) *UpdateClickHouseSlowLogSensitiveStatusInvoker {
 	requestDef := GenReqDefForUpdateClickHouseSlowLogSensitiveStatus()
 	return &UpdateClickHouseSlowLogSensitiveStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateHtapQueryQueuesControl 开启或者关闭查询队列功能
+//
+// 开启或者关闭查询队列功能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateHtapQueryQueuesControl(request *model.UpdateHtapQueryQueuesControlRequest) (*model.UpdateHtapQueryQueuesControlResponse, error) {
+	requestDef := GenReqDefForUpdateHtapQueryQueuesControl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateHtapQueryQueuesControlResponse), nil
+	}
+}
+
+// UpdateHtapQueryQueuesControlInvoker 开启或者关闭查询队列功能
+func (c *GaussDBClient) UpdateHtapQueryQueuesControlInvoker(request *model.UpdateHtapQueryQueuesControlRequest) *UpdateHtapQueryQueuesControlInvoker {
+	requestDef := GenReqDefForUpdateHtapQueryQueuesControl()
+	return &UpdateHtapQueryQueuesControlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateStarRocksDatabaseUserPassword 修改数据库账号密码

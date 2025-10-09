@@ -13,9 +13,11 @@ type MigrateNodesSpec struct {
 
 	ExtendParam *MigrateNodeExtendParam `json:"extendParam,omitempty"`
 
-	Login *Login `json:"login"`
+	Login *Login `json:"login,omitempty"`
 
 	Runtime *Runtime `json:"runtime,omitempty"`
+
+	ServerConfig *MigrateServerConfig `json:"serverConfig,omitempty"`
 
 	// 待操作节点列表
 	Nodes []NodeItem `json:"nodes"`

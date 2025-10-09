@@ -173,6 +173,27 @@ func (c *CceClient) ContinueUpgradeClusterTaskInvoker(request *model.ContinueUpg
 	return &ContinueUpgradeClusterTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAccessPolicy 创建访问策略
+//
+// 该API用于创建访问策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) CreateAccessPolicy(request *model.CreateAccessPolicyRequest) (*model.CreateAccessPolicyResponse, error) {
+	requestDef := GenReqDefForCreateAccessPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAccessPolicyResponse), nil
+	}
+}
+
+// CreateAccessPolicyInvoker 创建访问策略
+func (c *CceClient) CreateAccessPolicyInvoker(request *model.CreateAccessPolicyRequest) *CreateAccessPolicyInvoker {
+	requestDef := GenReqDefForCreateAccessPolicy()
+	return &CreateAccessPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAddonInstance 创建AddonInstance
 //
 // 根据提供的插件模板，安装插件实例。
@@ -442,6 +463,27 @@ func (c *CceClient) CreateUpgradeWorkFlowInvoker(request *model.CreateUpgradeWor
 	return &CreateUpgradeWorkFlowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteAccessPolicy 删除访问策略
+//
+// 该API用于删除单个访问策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) DeleteAccessPolicy(request *model.DeleteAccessPolicyRequest) (*model.DeleteAccessPolicyResponse, error) {
+	requestDef := GenReqDefForDeleteAccessPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAccessPolicyResponse), nil
+	}
+}
+
+// DeleteAccessPolicyInvoker 删除访问策略
+func (c *CceClient) DeleteAccessPolicyInvoker(request *model.DeleteAccessPolicyRequest) *DeleteAccessPolicyInvoker {
+	requestDef := GenReqDefForDeleteAccessPolicy()
+	return &DeleteAccessPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteAddonInstance 删除AddonInstance
 //
 // 删除插件实例的功能。
@@ -614,6 +656,175 @@ func (c *CceClient) DownloadChartInvoker(request *model.DownloadChartRequest) *D
 	return &DownloadChartInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// GetAccessPolicy 获取访问策略详情
+//
+// 该API用于获取单个访问策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) GetAccessPolicy(request *model.GetAccessPolicyRequest) (*model.GetAccessPolicyResponse, error) {
+	requestDef := GenReqDefForGetAccessPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetAccessPolicyResponse), nil
+	}
+}
+
+// GetAccessPolicyInvoker 获取访问策略详情
+func (c *CceClient) GetAccessPolicyInvoker(request *model.GetAccessPolicyRequest) *GetAccessPolicyInvoker {
+	requestDef := GenReqDefForGetAccessPolicy()
+	return &GetAccessPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetAvaliableZone 查询可用区列表
+//
+// 该API用于查询可用区列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) GetAvaliableZone(request *model.GetAvaliableZoneRequest) (*model.GetAvaliableZoneResponse, error) {
+	requestDef := GenReqDefForGetAvaliableZone()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetAvaliableZoneResponse), nil
+	}
+}
+
+// GetAvaliableZoneInvoker 查询可用区列表
+func (c *CceClient) GetAvaliableZoneInvoker(request *model.GetAvaliableZoneRequest) *GetAvaliableZoneInvoker {
+	requestDef := GenReqDefForGetAvaliableZone()
+	return &GetAvaliableZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetClusterFlavorSpecs 查询集群可售卖规格
+//
+// 该API用于查询集群可售卖规格
+// &gt; 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) GetClusterFlavorSpecs(request *model.GetClusterFlavorSpecsRequest) (*model.GetClusterFlavorSpecsResponse, error) {
+	requestDef := GenReqDefForGetClusterFlavorSpecs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetClusterFlavorSpecsResponse), nil
+	}
+}
+
+// GetClusterFlavorSpecsInvoker 查询集群可售卖规格
+func (c *CceClient) GetClusterFlavorSpecsInvoker(request *model.GetClusterFlavorSpecsRequest) *GetClusterFlavorSpecsInvoker {
+	requestDef := GenReqDefForGetClusterFlavorSpecs()
+	return &GetClusterFlavorSpecsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetClusterQuota 获取集群配额
+//
+// 该API用于获取集群配额
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) GetClusterQuota(request *model.GetClusterQuotaRequest) (*model.GetClusterQuotaResponse, error) {
+	requestDef := GenReqDefForGetClusterQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetClusterQuotaResponse), nil
+	}
+}
+
+// GetClusterQuotaInvoker 获取集群配额
+func (c *CceClient) GetClusterQuotaInvoker(request *model.GetClusterQuotaRequest) *GetClusterQuotaInvoker {
+	requestDef := GenReqDefForGetClusterQuota()
+	return &GetClusterQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetClusterSupportConfiguration 获取集群支持的可配置参数列表
+//
+// 该API用于根据集群版本类型等查询集群支持的详细配置项，用于集群创建时指定。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) GetClusterSupportConfiguration(request *model.GetClusterSupportConfigurationRequest) (*model.GetClusterSupportConfigurationResponse, error) {
+	requestDef := GenReqDefForGetClusterSupportConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetClusterSupportConfigurationResponse), nil
+	}
+}
+
+// GetClusterSupportConfigurationInvoker 获取集群支持的可配置参数列表
+func (c *CceClient) GetClusterSupportConfigurationInvoker(request *model.GetClusterSupportConfigurationRequest) *GetClusterSupportConfigurationInvoker {
+	requestDef := GenReqDefForGetClusterSupportConfiguration()
+	return &GetClusterSupportConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetCustomizeTags 查询自定义标签
+//
+// 该API用于查询自定义标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) GetCustomizeTags(request *model.GetCustomizeTagsRequest) (*model.GetCustomizeTagsResponse, error) {
+	requestDef := GenReqDefForGetCustomizeTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetCustomizeTagsResponse), nil
+	}
+}
+
+// GetCustomizeTagsInvoker 查询自定义标签
+func (c *CceClient) GetCustomizeTagsInvoker(request *model.GetCustomizeTagsRequest) *GetCustomizeTagsInvoker {
+	requestDef := GenReqDefForGetCustomizeTags()
+	return &GetCustomizeTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetLabels 获取节点标签
+//
+// 该API用于获取集群所有节点的标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) GetLabels(request *model.GetLabelsRequest) (*model.GetLabelsResponse, error) {
+	requestDef := GenReqDefForGetLabels()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetLabelsResponse), nil
+	}
+}
+
+// GetLabelsInvoker 获取节点标签
+func (c *CceClient) GetLabelsInvoker(request *model.GetLabelsRequest) *GetLabelsInvoker {
+	requestDef := GenReqDefForGetLabels()
+	return &GetLabelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetResourceTags 查询资源标签
+//
+// 该API用于查询资源标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) GetResourceTags(request *model.GetResourceTagsRequest) (*model.GetResourceTagsResponse, error) {
+	requestDef := GenReqDefForGetResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetResourceTagsResponse), nil
+	}
+}
+
+// GetResourceTagsInvoker 查询资源标签
+func (c *CceClient) GetResourceTagsInvoker(request *model.GetResourceTagsRequest) *GetResourceTagsInvoker {
+	requestDef := GenReqDefForGetResourceTags()
+	return &GetResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // HibernateCluster 集群休眠
 //
 // 集群休眠用于将运行中的集群置于休眠状态，休眠后，将不再收取控制节点资源费用。
@@ -633,6 +844,27 @@ func (c *CceClient) HibernateCluster(request *model.HibernateClusterRequest) (*m
 func (c *CceClient) HibernateClusterInvoker(request *model.HibernateClusterRequest) *HibernateClusterInvoker {
 	requestDef := GenReqDefForHibernateCluster()
 	return &HibernateClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAccessPolicy 获取访问策略列表
+//
+// 该API用于获取访问策略列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ListAccessPolicy(request *model.ListAccessPolicyRequest) (*model.ListAccessPolicyResponse, error) {
+	requestDef := GenReqDefForListAccessPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAccessPolicyResponse), nil
+	}
+}
+
+// ListAccessPolicyInvoker 获取访问策略列表
+func (c *CceClient) ListAccessPolicyInvoker(request *model.ListAccessPolicyRequest) *ListAccessPolicyInvoker {
+	requestDef := GenReqDefForListAccessPolicy()
+	return &ListAccessPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAddonInstances 获取AddonInstance列表
@@ -1306,27 +1538,6 @@ func (c *CceClient) ShowClusterEndpointsInvoker(request *model.ShowClusterEndpoi
 	return &ShowClusterEndpointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowClusterSupportConfiguration 根据集群版本类型等查询集群支持的详细配置项，用于集群创建时指定
-//
-// 该API用于根据集群版本类型等查询集群支持的详细配置项，用于集群创建时指定。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CceClient) ShowClusterSupportConfiguration(request *model.ShowClusterSupportConfigurationRequest) (*model.ShowClusterSupportConfigurationResponse, error) {
-	requestDef := GenReqDefForShowClusterSupportConfiguration()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowClusterSupportConfigurationResponse), nil
-	}
-}
-
-// ShowClusterSupportConfigurationInvoker 根据集群版本类型等查询集群支持的详细配置项，用于集群创建时指定
-func (c *CceClient) ShowClusterSupportConfigurationInvoker(request *model.ShowClusterSupportConfigurationRequest) *ShowClusterSupportConfigurationInvoker {
-	requestDef := GenReqDefForShowClusterSupportConfiguration()
-	return &ShowClusterSupportConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowClusterUpgradeInfo 获取集群升级相关信息
 //
 // 获取集群升级相关信息
@@ -1346,6 +1557,28 @@ func (c *CceClient) ShowClusterUpgradeInfo(request *model.ShowClusterUpgradeInfo
 func (c *CceClient) ShowClusterUpgradeInfoInvoker(request *model.ShowClusterUpgradeInfoRequest) *ShowClusterUpgradeInfoInvoker {
 	requestDef := GenReqDefForShowClusterUpgradeInfo()
 	return &ShowClusterUpgradeInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFeatureGates 查询特性开关状态
+//
+// 该API用于查询特性开关状态
+// &gt; 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ShowFeatureGates(request *model.ShowFeatureGatesRequest) (*model.ShowFeatureGatesResponse, error) {
+	requestDef := GenReqDefForShowFeatureGates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFeatureGatesResponse), nil
+	}
+}
+
+// ShowFeatureGatesInvoker 查询特性开关状态
+func (c *CceClient) ShowFeatureGatesInvoker(request *model.ShowFeatureGatesRequest) *ShowFeatureGatesInvoker {
+	requestDef := GenReqDefForShowFeatureGates()
+	return &ShowFeatureGatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowJob 获取任务信息
@@ -1669,6 +1902,27 @@ func (c *CceClient) UnlockNodepoolNodeScaleDown(request *model.UnlockNodepoolNod
 func (c *CceClient) UnlockNodepoolNodeScaleDownInvoker(request *model.UnlockNodepoolNodeScaleDownRequest) *UnlockNodepoolNodeScaleDownInvoker {
 	requestDef := GenReqDefForUnlockNodepoolNodeScaleDown()
 	return &UnlockNodepoolNodeScaleDownInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAccessPolicy 更新访问策略
+//
+// 该API用于更新单个访问策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) UpdateAccessPolicy(request *model.UpdateAccessPolicyRequest) (*model.UpdateAccessPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateAccessPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAccessPolicyResponse), nil
+	}
+}
+
+// UpdateAccessPolicyInvoker 更新访问策略
+func (c *CceClient) UpdateAccessPolicyInvoker(request *model.UpdateAccessPolicyRequest) *UpdateAccessPolicyInvoker {
+	requestDef := GenReqDefForUpdateAccessPolicy()
+	return &UpdateAccessPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateAddonInstance 更新AddonInstance

@@ -32,23 +32,14 @@ type ListSnapshotBackupsResp struct {
 	// 快照状态。
 	Status *string `json:"status,omitempty"`
 
-	// 快照更新时间，格式为ISO8601：CCYY-MM-DDThh:mm:ss。
-	Updated *string `json:"updated,omitempty"`
-
 	// 快照创建类型： - 0：表示自动创建。 - 1：表示手动创建。
 	BackupType *string `json:"backupType,omitempty"`
 
 	// 创建快照方式。
 	BackupMethod *string `json:"backupMethod,omitempty"`
 
-	// 快照开始执行时间。
-	BackupExpectedStartTime *string `json:"backupExpectedStartTime,omitempty"`
-
-	// 快照保留时间。
-	BackupKeepDay *int32 `json:"backupKeepDay,omitempty"`
-
-	// 快照每天执行的时间点。
-	BackupPeriod *string `json:"backupPeriod,omitempty"`
+	// 集群快照频率。
+	BackupFrequency *string `json:"backupFrequency,omitempty"`
 
 	// 要备份的索引。
 	Indices *string `json:"indices,omitempty"`
@@ -58,9 +49,6 @@ type ListSnapshotBackupsResp struct {
 
 	// 备份失败的shard数。
 	FailedShards *int32 `json:"failedShards,omitempty"`
-
-	// 快照的版本。
-	Version *string `json:"version,omitempty"`
 
 	// 快照恢复的状态。
 	RestoreStatus *string `json:"restoreStatus,omitempty"`

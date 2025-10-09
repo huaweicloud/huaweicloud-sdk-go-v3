@@ -85,6 +85,22 @@ func (i *AttachEipInvoker) Invoke() (*model.AttachEipResponse, error) {
 	}
 }
 
+type AuthorizeBackupDownloadInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AuthorizeBackupDownloadInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AuthorizeBackupDownloadInvoker) Invoke() (*model.AuthorizeBackupDownloadResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AuthorizeBackupDownloadResponse), nil
+	}
+}
+
 type BatchSetBackupPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -450,6 +466,22 @@ func (i *DeleteDatabaseSchemaInvoker) Invoke() (*model.DeleteDatabaseSchemaRespo
 		return nil, err
 	} else {
 		return result.(*model.DeleteDatabaseSchemaResponse), nil
+	}
+}
+
+type DeleteDisasterRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDisasterRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDisasterRecordInvoker) Invoke() (*model.DeleteDisasterRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDisasterRecordResponse), nil
 	}
 }
 
@@ -997,6 +1029,22 @@ func (i *ListDatabaseVersionsInvoker) Invoke() (*model.ListDatabaseVersionsRespo
 	}
 }
 
+type ListDatabaseVolumeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDatabaseVolumeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDatabaseVolumeInvoker) Invoke() (*model.ListDatabaseVolumeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDatabaseVolumeResponse), nil
+	}
+}
+
 type ListDatabaseVolumeSummaryInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1477,6 +1525,22 @@ func (i *ListPluginExtensionsInvoker) Invoke() (*model.ListPluginExtensionsRespo
 	}
 }
 
+type ListPluginInfoListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPluginInfoListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPluginInfoListInvoker) Invoke() (*model.ListPluginInfoListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPluginInfoListResponse), nil
+	}
+}
+
 type ListPredefinedTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1829,19 +1893,19 @@ func (i *ModifyHbaConfInvoker) Invoke() (*model.ModifyHbaConfResponse, error) {
 	}
 }
 
-type ModifyHotfixesInvoker struct {
+type ModifyInstancePortInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ModifyHotfixesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ModifyInstancePortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ModifyHotfixesInvoker) Invoke() (*model.ModifyHotfixesResponse, error) {
+func (i *ModifyInstancePortInvoker) Invoke() (*model.ModifyInstancePortResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ModifyHotfixesResponse), nil
+		return result.(*model.ModifyInstancePortResponse), nil
 	}
 }
 

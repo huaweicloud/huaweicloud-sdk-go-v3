@@ -7,7 +7,7 @@ import (
 )
 
 type UpdateServerRequestBody struct {
-	VpnServer *UpdateServerRequest `json:"vpn_server,omitempty"`
+	VpnServer *UpdateServerRequest `json:"vpn_server"`
 }
 
 func (o UpdateServerRequestBody) String() string {

@@ -102,7 +102,10 @@ type ShowClusterDetailResponse struct {
 
 	// 集群当前所有节点用到的子网，如果存在多个（最多支持两个），使用英文逗号隔开。
 	CurrentSubnetIds *string `json:"currentSubnetIds,omitempty"`
-	HttpStatusCode   int     `json:"-"`
+
+	// 集群描述。
+	Desc           *string `json:"desc,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowClusterDetailResponse) String() string {

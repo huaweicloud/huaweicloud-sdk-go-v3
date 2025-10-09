@@ -376,6 +376,27 @@ func (c *VpnClient) DeleteP2cVgwConnectionInvoker(request *model.DeleteP2cVgwCon
 	return &DeleteP2cVgwConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteP2cVpnGatewayJob 删除指定任务的记录
+//
+// delete resource job
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) DeleteP2cVpnGatewayJob(request *model.DeleteP2cVpnGatewayJobRequest) (*model.DeleteP2cVpnGatewayJobResponse, error) {
+	requestDef := GenReqDefForDeleteP2cVpnGatewayJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteP2cVpnGatewayJobResponse), nil
+	}
+}
+
+// DeleteP2cVpnGatewayJobInvoker 删除指定任务的记录
+func (c *VpnClient) DeleteP2cVpnGatewayJobInvoker(request *model.DeleteP2cVpnGatewayJobRequest) *DeleteP2cVpnGatewayJobInvoker {
+	requestDef := GenReqDefForDeleteP2cVpnGatewayJob()
+	return &DeleteP2cVpnGatewayJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListP2cVgwAvailabilityZones 查询P2C VPN网关可用区
 //
 // 查询P2C VPN网关可用区
@@ -439,6 +460,27 @@ func (c *VpnClient) ListP2cVgwsInvoker(request *model.ListP2cVgwsRequest) *ListP
 	return &ListP2cVgwsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListP2cVpnGatewayJobs 查询资源任务列表
+//
+// list resource jobs
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) ListP2cVpnGatewayJobs(request *model.ListP2cVpnGatewayJobsRequest) (*model.ListP2cVpnGatewayJobsResponse, error) {
+	requestDef := GenReqDefForListP2cVpnGatewayJobs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListP2cVpnGatewayJobsResponse), nil
+	}
+}
+
+// ListP2cVpnGatewayJobsInvoker 查询资源任务列表
+func (c *VpnClient) ListP2cVpnGatewayJobsInvoker(request *model.ListP2cVpnGatewayJobsRequest) *ListP2cVpnGatewayJobsInvoker {
+	requestDef := GenReqDefForListP2cVpnGatewayJobs()
+	return &ListP2cVpnGatewayJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowP2cVgw 查询P2C VPN网关
 //
 // 根据P2C VPN网关ID，查询指定的VPN网关
@@ -479,6 +521,27 @@ func (c *VpnClient) UpdateP2cVgw(request *model.UpdateP2cVgwRequest) (*model.Upd
 func (c *VpnClient) UpdateP2cVgwInvoker(request *model.UpdateP2cVgwRequest) *UpdateP2cVgwInvoker {
 	requestDef := GenReqDefForUpdateP2cVgw()
 	return &UpdateP2cVgwInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpgradeP2cVpnGateway 升级VPN资源
+//
+// upgrade VPN resource
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) UpgradeP2cVpnGateway(request *model.UpgradeP2cVpnGatewayRequest) (*model.UpgradeP2cVpnGatewayResponse, error) {
+	requestDef := GenReqDefForUpgradeP2cVpnGateway()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeP2cVpnGatewayResponse), nil
+	}
+}
+
+// UpgradeP2cVpnGatewayInvoker 升级VPN资源
+func (c *VpnClient) UpgradeP2cVpnGatewayInvoker(request *model.UpgradeP2cVpnGatewayRequest) *UpgradeP2cVpnGatewayInvoker {
+	requestDef := GenReqDefForUpgradeP2cVpnGateway()
+	return &UpgradeP2cVpnGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchCreateResourceTags 批量添加资源标签
@@ -985,6 +1048,27 @@ func (c *VpnClient) DeleteVgwInvoker(request *model.DeleteVgwRequest) *DeleteVgw
 	return &DeleteVgwInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteVpnGatewayJob 删除指定任务的记录
+//
+// delete resource job
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) DeleteVpnGatewayJob(request *model.DeleteVpnGatewayJobRequest) (*model.DeleteVpnGatewayJobResponse, error) {
+	requestDef := GenReqDefForDeleteVpnGatewayJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteVpnGatewayJobResponse), nil
+	}
+}
+
+// DeleteVpnGatewayJobInvoker 删除指定任务的记录
+func (c *VpnClient) DeleteVpnGatewayJobInvoker(request *model.DeleteVpnGatewayJobRequest) *DeleteVpnGatewayJobInvoker {
+	requestDef := GenReqDefForDeleteVpnGatewayJob()
+	return &DeleteVpnGatewayJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAvailabilityZones 查询VPN网关可用区
 //
 // 查询VPN网关可用区
@@ -1046,6 +1130,27 @@ func (c *VpnClient) ListVgws(request *model.ListVgwsRequest) (*model.ListVgwsRes
 func (c *VpnClient) ListVgwsInvoker(request *model.ListVgwsRequest) *ListVgwsInvoker {
 	requestDef := GenReqDefForListVgws()
 	return &ListVgwsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVpnGatewayJobs 查询资源任务列表
+//
+// list resource jobs
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) ListVpnGatewayJobs(request *model.ListVpnGatewayJobsRequest) (*model.ListVpnGatewayJobsResponse, error) {
+	requestDef := GenReqDefForListVpnGatewayJobs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVpnGatewayJobsResponse), nil
+	}
+}
+
+// ListVpnGatewayJobsInvoker 查询资源任务列表
+func (c *VpnClient) ListVpnGatewayJobsInvoker(request *model.ListVpnGatewayJobsRequest) *ListVpnGatewayJobsInvoker {
+	requestDef := GenReqDefForListVpnGatewayJobs()
+	return &ListVpnGatewayJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowVgw 查询VPN网关
@@ -1129,6 +1234,27 @@ func (c *VpnClient) UpdateVgw(request *model.UpdateVgwRequest) (*model.UpdateVgw
 func (c *VpnClient) UpdateVgwInvoker(request *model.UpdateVgwRequest) *UpdateVgwInvoker {
 	requestDef := GenReqDefForUpdateVgw()
 	return &UpdateVgwInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpgradeVpnGateway 升级VPN资源
+//
+// upgrade VPN resource
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) UpgradeVpnGateway(request *model.UpgradeVpnGatewayRequest) (*model.UpgradeVpnGatewayResponse, error) {
+	requestDef := GenReqDefForUpgradeVpnGateway()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeVpnGatewayResponse), nil
+	}
+}
+
+// UpgradeVpnGatewayInvoker 升级VPN资源
+func (c *VpnClient) UpgradeVpnGatewayInvoker(request *model.UpgradeVpnGatewayRequest) *UpgradeVpnGatewayInvoker {
+	requestDef := GenReqDefForUpgradeVpnGateway()
+	return &UpgradeVpnGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateVgwCertificate 导入VPN网关证书

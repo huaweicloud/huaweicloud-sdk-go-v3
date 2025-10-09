@@ -15,7 +15,7 @@ type NodePoolSpec struct {
 	// 节点池类型。不填写时默认为vm。  - vm：弹性云服务器 - ElasticBMS：C6型弹性裸金属通用计算增强型云服务器，规格示例：c6.22xlarge.2.physical - pm: 裸金属服务器
 	Type *NodePoolSpecType `json:"type,omitempty"`
 
-	NodeTemplate *NodeSpec `json:"nodeTemplate"`
+	NodeTemplate *NodeTemplate `json:"nodeTemplate"`
 
 	// 节点池初始化节点个数。查询时为节点池目标节点数量。
 	InitialNodeCount *int32 `json:"initialNodeCount,omitempty"`
@@ -32,6 +32,15 @@ type NodePoolSpec struct {
 
 	// 节点池自定义安全组相关配置。支持节点池新扩容节点绑定指定的安全组。  - 未指定安全组ID，新建节点将添加Node节点默认安全组。  - 指定有效安全组ID，新建节点将使用指定安全组。  - 指定安全组，应避免对CCE运行依赖的端口规则进行修改。[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/cce_faq/cce_faq_00265.html)。](tag:hws)[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00265.html)。](tag:hws_hk)
 	CustomSecurityGroups *[]string `json:"customSecurityGroups,omitempty"`
+
+	// **参数解释**： 存量节点污点同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的污点。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的污点。  **默认取值**： refresh
+	TaintPolicyOnExistingNodes *string `json:"taintPolicyOnExistingNodes,omitempty"`
+
+	// **参数解释**： 存量节点标签同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的标签。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的标签。  **默认取值**： refresh
+	LabelPolicyOnExistingNodes *string `json:"labelPolicyOnExistingNodes,omitempty"`
+
+	// **参数解释**： 存量节点资源标签同步策略 **约束限制**： 不涉及 **取值范围**： - ignore：配置为\"ignore\"后，节点池不再同步更新存量节点的资源标签。 - refresh：配置为\"refresh\"后，节点池将同步更新存量节点的资源标签。  **默认取值**： ignore
+	UserTagsPolicyOnExistingNodes *string `json:"userTagsPolicyOnExistingNodes,omitempty"`
 }
 
 func (o NodePoolSpec) String() string {

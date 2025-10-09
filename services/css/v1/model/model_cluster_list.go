@@ -10,8 +10,7 @@ import (
 type ClusterList struct {
 	Datastore *ClusterListDatastore `json:"datastore,omitempty"`
 
-	// 集群自动快照策略相关信息。
-	SnapshotPolicy *interface{} `json:"snapshotPolicy,omitempty"`
+	SnapshotPolicy *SnapshotPolicyResp `json:"snapshotPolicy,omitempty"`
 
 	// 节点对象列表。
 	Instances *[]ClusterListInstances `json:"instances,omitempty"`
@@ -93,6 +92,9 @@ type ClusterList struct {
 
 	// 集群节点的当前子网。
 	CurrentSubnetIds *string `json:"currentSubnetIds,omitempty"`
+
+	// 集群描述。
+	Desc *string `json:"desc,omitempty"`
 }
 
 func (o ClusterList) String() string {

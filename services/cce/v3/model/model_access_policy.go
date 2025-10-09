@@ -1,0 +1,38 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+type AccessPolicy struct {
+
+	// **参数解释：** API类型。 **约束限制：** 该值不可修改 **取值范围：** 不涉及 **默认取值：** AccessPolicy
+	Kind *string `json:"kind,omitempty"`
+
+	// **参数解释：** API版本。 **约束限制：** 该值不可修改 **取值范围：** 不涉及 **默认取值：** v3
+	ApiVersion *string `json:"apiVersion,omitempty"`
+
+	// **参数解释：** 访问策略名称。 **约束限制：** 以小写字母开头，由小写字母、数字、中划线(-)、点(.)组成，长度范围1-56位，且不能以中划线(-)结尾。 **取值范围：** 不涉及 **默认取值：** 不涉及
+	Name *string `json:"name,omitempty"`
+
+	// **参数解释：** 集群ID的列表，允许使用通配符（“\\*”），表示所有集群。获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制：** 当前最多支持同时授权200个集群。 **取值范围：** \\[\"\\*\"\\]或者集群ID列表。 **默认取值：** 不涉及
+	Clusters []string `json:"clusters"`
+
+	AccessScope *AccessScope `json:"accessScope"`
+
+	// **参数解释：** 权限类型。 **约束限制：** 不涉及 **取值范围：** - CCEAdminPolicy：管理员权限 - CCEClusterAdminPolicy：运维权限 - CCEEditPolicy：开发权限 - CCEViewPolicy：只读权限  **默认取值：** 不涉及
+	PolicyType string `json:"policyType"`
+
+	Principal *Principal `json:"principal"`
+}
+
+func (o AccessPolicy) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "AccessPolicy struct{}"
+	}
+
+	return strings.Join([]string{"AccessPolicy", string(data)}, " ")
+}

@@ -8,7 +8,10 @@ import (
 
 // ScaleNodePoolResponse Response Object
 type ScaleNodePoolResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// **参数解释**： 订单ID，仅扩容包周期节点时返回 **取值范围**： 不涉及
+	OrderID        *string `json:"orderID,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ScaleNodePoolResponse) String() string {

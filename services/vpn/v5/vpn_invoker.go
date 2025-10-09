@@ -277,6 +277,22 @@ func (i *DeleteP2cVgwConnectionInvoker) Invoke() (*model.DeleteP2cVgwConnectionR
 	}
 }
 
+type DeleteP2cVpnGatewayJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteP2cVpnGatewayJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteP2cVpnGatewayJobInvoker) Invoke() (*model.DeleteP2cVpnGatewayJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteP2cVpnGatewayJobResponse), nil
+	}
+}
+
 type ListP2cVgwAvailabilityZonesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -325,6 +341,22 @@ func (i *ListP2cVgwsInvoker) Invoke() (*model.ListP2cVgwsResponse, error) {
 	}
 }
 
+type ListP2cVpnGatewayJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListP2cVpnGatewayJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListP2cVpnGatewayJobsInvoker) Invoke() (*model.ListP2cVpnGatewayJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListP2cVpnGatewayJobsResponse), nil
+	}
+}
+
 type ShowP2cVgwInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -354,6 +386,22 @@ func (i *UpdateP2cVgwInvoker) Invoke() (*model.UpdateP2cVgwResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateP2cVgwResponse), nil
+	}
+}
+
+type UpgradeP2cVpnGatewayInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeP2cVpnGatewayInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpgradeP2cVpnGatewayInvoker) Invoke() (*model.UpgradeP2cVpnGatewayResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeP2cVpnGatewayResponse), nil
 	}
 }
 
@@ -741,6 +789,22 @@ func (i *DeleteVgwInvoker) Invoke() (*model.DeleteVgwResponse, error) {
 	}
 }
 
+type DeleteVpnGatewayJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteVpnGatewayJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteVpnGatewayJobInvoker) Invoke() (*model.DeleteVpnGatewayJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteVpnGatewayJobResponse), nil
+	}
+}
+
 type ListAvailabilityZonesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -786,6 +850,22 @@ func (i *ListVgwsInvoker) Invoke() (*model.ListVgwsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListVgwsResponse), nil
+	}
+}
+
+type ListVpnGatewayJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVpnGatewayJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListVpnGatewayJobsInvoker) Invoke() (*model.ListVpnGatewayJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVpnGatewayJobsResponse), nil
 	}
 }
 
@@ -850,6 +930,22 @@ func (i *UpdateVgwInvoker) Invoke() (*model.UpdateVgwResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateVgwResponse), nil
+	}
+}
+
+type UpgradeVpnGatewayInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeVpnGatewayInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpgradeVpnGatewayInvoker) Invoke() (*model.UpgradeVpnGatewayResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeVpnGatewayResponse), nil
 	}
 }
 

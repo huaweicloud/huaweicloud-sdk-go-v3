@@ -117,6 +117,22 @@ func (i *ContinueUpgradeClusterTaskInvoker) Invoke() (*model.ContinueUpgradeClus
 	}
 }
 
+type CreateAccessPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAccessPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAccessPolicyInvoker) Invoke() (*model.CreateAccessPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAccessPolicyResponse), nil
+	}
+}
+
 type CreateAddonInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -309,6 +325,22 @@ func (i *CreateUpgradeWorkFlowInvoker) Invoke() (*model.CreateUpgradeWorkFlowRes
 	}
 }
 
+type DeleteAccessPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAccessPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAccessPolicyInvoker) Invoke() (*model.DeleteAccessPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAccessPolicyResponse), nil
+	}
+}
+
 type DeleteAddonInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -437,6 +469,134 @@ func (i *DownloadChartInvoker) Invoke() (*model.DownloadChartResponse, error) {
 	}
 }
 
+type GetAccessPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetAccessPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetAccessPolicyInvoker) Invoke() (*model.GetAccessPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetAccessPolicyResponse), nil
+	}
+}
+
+type GetAvaliableZoneInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetAvaliableZoneInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetAvaliableZoneInvoker) Invoke() (*model.GetAvaliableZoneResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetAvaliableZoneResponse), nil
+	}
+}
+
+type GetClusterFlavorSpecsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetClusterFlavorSpecsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetClusterFlavorSpecsInvoker) Invoke() (*model.GetClusterFlavorSpecsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetClusterFlavorSpecsResponse), nil
+	}
+}
+
+type GetClusterQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetClusterQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetClusterQuotaInvoker) Invoke() (*model.GetClusterQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetClusterQuotaResponse), nil
+	}
+}
+
+type GetClusterSupportConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetClusterSupportConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetClusterSupportConfigurationInvoker) Invoke() (*model.GetClusterSupportConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetClusterSupportConfigurationResponse), nil
+	}
+}
+
+type GetCustomizeTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetCustomizeTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetCustomizeTagsInvoker) Invoke() (*model.GetCustomizeTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetCustomizeTagsResponse), nil
+	}
+}
+
+type GetLabelsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetLabelsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetLabelsInvoker) Invoke() (*model.GetLabelsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetLabelsResponse), nil
+	}
+}
+
+type GetResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetResourceTagsInvoker) Invoke() (*model.GetResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetResourceTagsResponse), nil
+	}
+}
+
 type HibernateClusterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -450,6 +610,22 @@ func (i *HibernateClusterInvoker) Invoke() (*model.HibernateClusterResponse, err
 		return nil, err
 	} else {
 		return result.(*model.HibernateClusterResponse), nil
+	}
+}
+
+type ListAccessPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAccessPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAccessPolicyInvoker) Invoke() (*model.ListAccessPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAccessPolicyResponse), nil
 	}
 }
 
@@ -949,22 +1125,6 @@ func (i *ShowClusterEndpointsInvoker) Invoke() (*model.ShowClusterEndpointsRespo
 	}
 }
 
-type ShowClusterSupportConfigurationInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowClusterSupportConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowClusterSupportConfigurationInvoker) Invoke() (*model.ShowClusterSupportConfigurationResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowClusterSupportConfigurationResponse), nil
-	}
-}
-
 type ShowClusterUpgradeInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -978,6 +1138,22 @@ func (i *ShowClusterUpgradeInfoInvoker) Invoke() (*model.ShowClusterUpgradeInfoR
 		return nil, err
 	} else {
 		return result.(*model.ShowClusterUpgradeInfoResponse), nil
+	}
+}
+
+type ShowFeatureGatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFeatureGatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowFeatureGatesInvoker) Invoke() (*model.ShowFeatureGatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFeatureGatesResponse), nil
 	}
 }
 
@@ -1218,6 +1394,22 @@ func (i *UnlockNodepoolNodeScaleDownInvoker) Invoke() (*model.UnlockNodepoolNode
 		return nil, err
 	} else {
 		return result.(*model.UnlockNodepoolNodeScaleDownResponse), nil
+	}
+}
+
+type UpdateAccessPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAccessPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAccessPolicyInvoker) Invoke() (*model.UpdateAccessPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAccessPolicyResponse), nil
 	}
 }
 

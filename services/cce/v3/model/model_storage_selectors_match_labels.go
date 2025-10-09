@@ -12,7 +12,7 @@ type StorageSelectorsMatchLabels struct {
 	// 匹配的磁盘大小，不填则无磁盘大小限制。例如：100.
 	Size *string `json:"size,omitempty"`
 
-	// 云硬盘类型，目前支持SSD\\GPSSD\\SAS\\ESSD\\SATA等。
+	// **参数解释**： 云硬盘类型，目前支持SSD、GPSSD、SAS、ESSD、SATA等，不填则无云硬盘类型限制。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	VolumeType *string `json:"volumeType,omitempty"`
 
 	// 匹配的磁盘iops大小，不填则无磁盘iops大小限制。当需要选择GPSSD2或ESSD2类型磁盘时，配置iops来准确选择磁盘。例如：3000.

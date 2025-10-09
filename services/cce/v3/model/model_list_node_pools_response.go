@@ -15,7 +15,7 @@ type ListNodePoolsResponse struct {
 	// API version. The value is fixed to v3.
 	ApiVersion *string `json:"apiVersion,omitempty"`
 
-	// /
+	// **参数解释**： 节点池的信息。
 	Items          *[]NodePoolResp `json:"items,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

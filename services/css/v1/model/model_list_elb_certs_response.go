@@ -8,8 +8,10 @@ import (
 
 // ListElbCertsResponse Response Object
 type ListElbCertsResponse struct {
-	Certificates   *CertificatesResource `json:"certificates,omitempty"`
-	HttpStatusCode int                   `json:"-"`
+
+	// 证书列表信息。
+	Certificates   *[]CertificatesResource `json:"certificates,omitempty"`
+	HttpStatusCode int                     `json:"-"`
 }
 
 func (o ListElbCertsResponse) String() string {

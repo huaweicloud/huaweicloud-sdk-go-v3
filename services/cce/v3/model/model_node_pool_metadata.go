@@ -23,6 +23,9 @@ type NodePoolMetadata struct {
 
 	// 创建时间
 	CreationTimestamp *string `json:"creationTimestamp,omitempty"`
+
+	// **参数解释**： 节点池最后更新时间的时间戳。 **约束限制**： 创建节点池时自动记录，不支持传入。 **取值范围**： 不涉及 **默认取值**： 不涉及
+	ResourceVersion *int32 `json:"resourceVersion,omitempty"`
 }
 
 func (o NodePoolMetadata) String() string {

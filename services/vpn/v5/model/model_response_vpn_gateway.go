@@ -111,6 +111,9 @@ type ResponseVpnGateway struct {
 
 	// 标签
 	Tags *[]VpnResourceTag `json:"tags,omitempty"`
+
+	// 升级信息
+	UpgradeInfo *ResponseVpnGatewayUpgradeInfo `json:"upgrade_info,omitempty"`
 }
 
 func (o ResponseVpnGateway) String() string {
@@ -245,6 +248,57 @@ func (c ResponseVpnGatewayNetworkType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ResponseVpnGatewayNetworkType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ResponseVpnGatewayUpgradeInfo struct {
+	value string
+}
+
+type ResponseVpnGatewayUpgradeInfoEnum struct {
+	READY         ResponseVpnGatewayUpgradeInfo
+	EXPIRING_SOON ResponseVpnGatewayUpgradeInfo
+	UNREADY       ResponseVpnGatewayUpgradeInfo
+}
+
+func GetResponseVpnGatewayUpgradeInfoEnum() ResponseVpnGatewayUpgradeInfoEnum {
+	return ResponseVpnGatewayUpgradeInfoEnum{
+		READY: ResponseVpnGatewayUpgradeInfo{
+			value: "ready",
+		},
+		EXPIRING_SOON: ResponseVpnGatewayUpgradeInfo{
+			value: "expiring soon",
+		},
+		UNREADY: ResponseVpnGatewayUpgradeInfo{
+			value: "unready",
+		},
+	}
+}
+
+func (c ResponseVpnGatewayUpgradeInfo) Value() string {
+	return c.value
+}
+
+func (c ResponseVpnGatewayUpgradeInfo) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ResponseVpnGatewayUpgradeInfo) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

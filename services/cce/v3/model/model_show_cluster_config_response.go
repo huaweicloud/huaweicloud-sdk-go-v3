@@ -9,10 +9,10 @@ import (
 // ShowClusterConfigResponse Response Object
 type ShowClusterConfigResponse struct {
 
-	// 存储时长
+	// **参数解释**： 日志存储时长，单位（天） **取值范围**： 0-30
 	TtlInDays *int32 `json:"ttl_in_days,omitempty"`
 
-	// 日志配置项
+	// **参数解释**： 日志配置项详细信息 **约束限制**: 不涉及
 	LogConfigs     *[]ClusterLogConfigLogConfigs `json:"log_configs,omitempty"`
 	HttpStatusCode int                           `json:"-"`
 }

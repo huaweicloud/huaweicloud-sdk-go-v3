@@ -629,6 +629,22 @@ func (i *ListCollationsInvoker) Invoke() (*model.ListCollationsResponse, error) 
 	}
 }
 
+type ListConfigurationApplyHistoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListConfigurationApplyHistoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListConfigurationApplyHistoriesInvoker) Invoke() (*model.ListConfigurationApplyHistoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListConfigurationApplyHistoriesResponse), nil
+	}
+}
+
 type ListConfigurationsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -882,6 +898,22 @@ func (i *ListInstancesInvoker) Invoke() (*model.ListInstancesResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListInstancesResponse), nil
+	}
+}
+
+type ListInstancesConfigurationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstancesConfigurationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstancesConfigurationsInvoker) Invoke() (*model.ListInstancesConfigurationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstancesConfigurationsResponse), nil
 	}
 }
 

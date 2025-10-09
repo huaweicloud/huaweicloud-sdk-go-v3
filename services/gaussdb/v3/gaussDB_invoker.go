@@ -1909,6 +1909,38 @@ func (i *ShowRestoreTablesInvoker) Invoke() (*model.ShowRestoreTablesResponse, e
 	}
 }
 
+type ShowServerlessComputeAbilityPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowServerlessComputeAbilityPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowServerlessComputeAbilityPolicyInvoker) Invoke() (*model.ShowServerlessComputeAbilityPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowServerlessComputeAbilityPolicyResponse), nil
+	}
+}
+
+type ShowServerlessScalingPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowServerlessScalingPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowServerlessScalingPolicyInvoker) Invoke() (*model.ShowServerlessScalingPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowServerlessScalingPolicyResponse), nil
+	}
+}
+
 type ShowSlowLogDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2018,6 +2050,22 @@ func (i *ShowTableMetaInfoInvoker) Invoke() (*model.ShowTableMetaInfoResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowTableMetaInfoResponse), nil
+	}
+}
+
+type ShowTaskDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTaskDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTaskDetailsInvoker) Invoke() (*model.ShowTaskDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTaskDetailsResponse), nil
 	}
 }
 
@@ -2517,6 +2565,22 @@ func (i *UpdateProxySessionConsistenceInvoker) Invoke() (*model.UpdateProxySessi
 	}
 }
 
+type UpdateServerlessComputeAbilityPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateServerlessComputeAbilityPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateServerlessComputeAbilityPolicyInvoker) Invoke() (*model.UpdateServerlessComputeAbilityPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateServerlessComputeAbilityPolicyResponse), nil
+	}
+}
+
 type UpdateServerlessPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2530,6 +2594,22 @@ func (i *UpdateServerlessPolicyInvoker) Invoke() (*model.UpdateServerlessPolicyR
 		return nil, err
 	} else {
 		return result.(*model.UpdateServerlessPolicyResponse), nil
+	}
+}
+
+type UpdateServerlessScalingPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateServerlessScalingPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateServerlessScalingPolicyInvoker) Invoke() (*model.UpdateServerlessScalingPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateServerlessScalingPolicyResponse), nil
 	}
 }
 
@@ -3397,6 +3477,22 @@ func (i *ResumeStarRocksDataReplicationInvoker) Invoke() (*model.ResumeStarRocks
 	}
 }
 
+type SetHtapQueryQueuesRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetHtapQueryQueuesRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetHtapQueryQueuesRuleInvoker) Invoke() (*model.SetHtapQueryQueuesRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetHtapQueryQueuesRuleResponse), nil
+	}
+}
+
 type ShowClickHouseDatabaseUserInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3490,6 +3586,22 @@ func (i *ShowHtapLtsConfigInvoker) Invoke() (*model.ShowHtapLtsConfigResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowHtapLtsConfigResponse), nil
+	}
+}
+
+type ShowHtapQueryQueuesRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHtapQueryQueuesRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowHtapQueryQueuesRuleInvoker) Invoke() (*model.ShowHtapQueryQueuesRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHtapQueryQueuesRuleResponse), nil
 	}
 }
 
@@ -3650,6 +3762,22 @@ func (i *UpdateClickHouseSlowLogSensitiveStatusInvoker) Invoke() (*model.UpdateC
 		return nil, err
 	} else {
 		return result.(*model.UpdateClickHouseSlowLogSensitiveStatusResponse), nil
+	}
+}
+
+type UpdateHtapQueryQueuesControlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateHtapQueryQueuesControlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateHtapQueryQueuesControlInvoker) Invoke() (*model.UpdateHtapQueryQueuesControlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateHtapQueryQueuesControlResponse), nil
 	}
 }
 

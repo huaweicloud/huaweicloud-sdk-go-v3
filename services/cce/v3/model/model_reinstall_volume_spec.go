@@ -9,10 +9,10 @@ import (
 // ReinstallVolumeSpec 服务器重装云硬盘配置
 type ReinstallVolumeSpec struct {
 
-	// 用户自定义镜像ID
+	// **参数解释**: 用户自定义镜像ID，从IMS控制台获取。 **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及
 	ImageID *string `json:"imageID,omitempty"`
 
-	// 用户主密钥ID。默认为空时，表示云硬盘不加密。
+	// **参数解释**: 用户主密钥ID，为空时，表示云硬盘不加密。 [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)。](tag:hws) [> 获取密钥ID的方法请参考：[查询密钥列表](https://support.huaweicloud.com/intl/zh-cn/api-dew/ListKeys.html)。](tag:hws_hk)  **约束限制**: 不涉及 **取值范围**: 不涉及 **默认取值**: 不涉及。
 	CmkID *string `json:"cmkID,omitempty"`
 }
 

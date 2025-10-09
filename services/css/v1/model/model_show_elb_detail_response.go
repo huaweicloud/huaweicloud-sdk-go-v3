@@ -27,12 +27,13 @@ type ShowElbDetailResponse struct {
 	// 认证方式。
 	AuthenticationType *string `json:"authentication_type,omitempty"`
 
-	LoadBalancer *EsLoadBalancerResource `json:"loadBalancer,omitempty"`
+	LoadBalancer *LoadBalancer `json:"loadBalancer,omitempty"`
 
 	Listener *Elbv3Listener `json:"listener,omitempty"`
 
-	Healthmonitors *Member `json:"healthmonitors,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	// 健康检查结果集合。
+	Healthmonitors *[]Member `json:"healthmonitors,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ShowElbDetailResponse) String() string {
