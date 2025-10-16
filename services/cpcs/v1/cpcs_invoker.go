@@ -5,6 +5,22 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cpcs/v1/model"
 )
 
+type AddClusterPortInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddClusterPortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddClusterPortInvoker) Invoke() (*model.AddClusterPortResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddClusterPortResponse), nil
+	}
+}
+
 type AssociateAppsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -82,6 +98,22 @@ func (i *CancelAuthorizeAccessKeysInvoker) Invoke() (*model.CancelAuthorizeAcces
 		return nil, err
 	} else {
 		return result.(*model.CancelAuthorizeAccessKeysResponse), nil
+	}
+}
+
+type CheckClusterPortInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckClusterPortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckClusterPortInvoker) Invoke() (*model.CheckClusterPortResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckClusterPortResponse), nil
 	}
 }
 
@@ -181,6 +213,22 @@ func (i *DeleteCcspClusterInvoker) Invoke() (*model.DeleteCcspClusterResponse, e
 	}
 }
 
+type DeleteClusterPortInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteClusterPortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteClusterPortInvoker) Invoke() (*model.DeleteClusterPortResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteClusterPortResponse), nil
+	}
+}
+
 type DisableCcspInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -245,6 +293,22 @@ func (i *ListCcspTenantImagesInvoker) Invoke() (*model.ListCcspTenantImagesRespo
 	}
 }
 
+type ListClusterPortInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListClusterPortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListClusterPortInvoker) Invoke() (*model.ListClusterPortResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListClusterPortResponse), nil
+	}
+}
+
 type ShowAccessKeyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -306,6 +370,22 @@ func (i *ShowAssociationListInvoker) Invoke() (*model.ShowAssociationListRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowAssociationListResponse), nil
+	}
+}
+
+type ShowAuditLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAuditLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAuditLogInvoker) Invoke() (*model.ShowAuditLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAuditLogResponse), nil
 	}
 }
 
@@ -405,6 +485,38 @@ func (i *ShowClusterUriInvoker) Invoke() (*model.ShowClusterUriResponse, error) 
 	}
 }
 
+type ShowResourceDetailAccessKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowResourceDetailAccessKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowResourceDetailAccessKeyInvoker) Invoke() (*model.ShowResourceDetailAccessKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowResourceDetailAccessKeyResponse), nil
+	}
+}
+
+type ShowResourceDetailCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowResourceDetailCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowResourceDetailCertificateInvoker) Invoke() (*model.ShowResourceDetailCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowResourceDetailCertificateResponse), nil
+	}
+}
+
 type ShowResourceInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -421,6 +533,134 @@ func (i *ShowResourceInfoInvoker) Invoke() (*model.ShowResourceInfoResponse, err
 	}
 }
 
+type ShowStatisticCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStatisticCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowStatisticCertificateInvoker) Invoke() (*model.ShowStatisticCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStatisticCertificateResponse), nil
+	}
+}
+
+type ShowStatisticInterfaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStatisticInterfaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowStatisticInterfaceInvoker) Invoke() (*model.ShowStatisticInterfaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStatisticInterfaceResponse), nil
+	}
+}
+
+type ShowStatisticResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStatisticResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowStatisticResourceInvoker) Invoke() (*model.ShowStatisticResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStatisticResourceResponse), nil
+	}
+}
+
+type ShowStatisticSecretKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStatisticSecretKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowStatisticSecretKeyInvoker) Invoke() (*model.ShowStatisticSecretKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStatisticSecretKeyResponse), nil
+	}
+}
+
+type ShowStatusAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStatusAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowStatusAppInvoker) Invoke() (*model.ShowStatusAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStatusAppResponse), nil
+	}
+}
+
+type ShowStatusClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStatusClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowStatusClusterInvoker) Invoke() (*model.ShowStatusClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStatusClusterResponse), nil
+	}
+}
+
+type ShowStatusInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStatusInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowStatusInstanceInvoker) Invoke() (*model.ShowStatusInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStatusInstanceResponse), nil
+	}
+}
+
+type ShowStatusServiceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStatusServiceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowStatusServiceInvoker) Invoke() (*model.ShowStatusServiceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStatusServiceResponse), nil
+	}
+}
+
 type ShowVmMonitorInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -434,5 +674,21 @@ func (i *ShowVmMonitorInvoker) Invoke() (*model.ShowVmMonitorResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowVmMonitorResponse), nil
+	}
+}
+
+type SwitchCpcsTokenInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchCpcsTokenInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SwitchCpcsTokenInvoker) Invoke() (*model.SwitchCpcsTokenResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchCpcsTokenResponse), nil
 	}
 }

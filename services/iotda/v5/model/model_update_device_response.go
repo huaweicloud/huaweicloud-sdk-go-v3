@@ -65,6 +65,9 @@ type UpdateDeviceResponse struct {
 	// 设备的标签列表。
 	Tags *[]TagV5Dto `json:"tags,omitempty"`
 
+	// 设备的OTA模块列表。
+	Modules *[]ModuleDto `json:"modules,omitempty"`
+
 	// 设备扩展信息。用户可以自定义任何想要的扩展信息，如果在创建设备时为子设备指定该字段，将会通过MQTT接口“平台通知网关子设备新增“将该信息通知给网关。
 	ExtensionInfo  *interface{} `json:"extension_info,omitempty"`
 	HttpStatusCode int          `json:"-"`

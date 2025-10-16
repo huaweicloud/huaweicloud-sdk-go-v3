@@ -1605,6 +1605,86 @@ func (i *ShowDeviceMessageInvoker) Invoke() (*model.ShowDeviceMessageResponse, e
 	}
 }
 
+type CreateOtaModuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateOtaModuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateOtaModuleInvoker) Invoke() (*model.CreateOtaModuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateOtaModuleResponse), nil
+	}
+}
+
+type DeleteOtaModuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteOtaModuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteOtaModuleInvoker) Invoke() (*model.DeleteOtaModuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteOtaModuleResponse), nil
+	}
+}
+
+type ListOtaModulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOtaModulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListOtaModulesInvoker) Invoke() (*model.ListOtaModulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOtaModulesResponse), nil
+	}
+}
+
+type ShowOtaModuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowOtaModuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowOtaModuleInvoker) Invoke() (*model.ShowOtaModuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowOtaModuleResponse), nil
+	}
+}
+
+type UpdateOtaModuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateOtaModuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateOtaModuleInvoker) Invoke() (*model.UpdateOtaModuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateOtaModuleResponse), nil
+	}
+}
+
 type CreateOtaPackageInvoker struct {
 	*invoker.BaseInvoker
 }

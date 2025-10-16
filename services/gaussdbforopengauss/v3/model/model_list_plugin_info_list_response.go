@@ -9,18 +9,12 @@ import (
 // ListPluginInfoListResponse Response Object
 type ListPluginInfoListResponse struct {
 
-	// 插件名称
-	PluginName *string `json:"plugin_name,omitempty"`
+	// **参数解释**: 插件数量。 **取值范围**: 不涉及。
+	TotalCount *int32 `json:"total_count,omitempty"`
 
-	// 端口
-	Port *string `json:"port,omitempty"`
-
-	// 插件版本
-	PluginVersion *string `json:"plugin_version,omitempty"`
-
-	// 是否已安装
-	Installed      *string `json:"installed,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	// **参数解释**: 插件详细信息。
+	Plugins        *[]CustomerPluginInfoResult `json:"plugins,omitempty"`
+	HttpStatusCode int                         `json:"-"`
 }
 
 func (o ListPluginInfoListResponse) String() string {

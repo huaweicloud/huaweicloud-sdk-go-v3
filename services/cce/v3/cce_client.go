@@ -741,27 +741,6 @@ func (c *CceClient) GetClusterQuotaInvoker(request *model.GetClusterQuotaRequest
 	return &GetClusterQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// GetClusterSupportConfiguration 获取集群支持的可配置参数列表
-//
-// 该API用于根据集群版本类型等查询集群支持的详细配置项，用于集群创建时指定。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CceClient) GetClusterSupportConfiguration(request *model.GetClusterSupportConfigurationRequest) (*model.GetClusterSupportConfigurationResponse, error) {
-	requestDef := GenReqDefForGetClusterSupportConfiguration()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.GetClusterSupportConfigurationResponse), nil
-	}
-}
-
-// GetClusterSupportConfigurationInvoker 获取集群支持的可配置参数列表
-func (c *CceClient) GetClusterSupportConfigurationInvoker(request *model.GetClusterSupportConfigurationRequest) *GetClusterSupportConfigurationInvoker {
-	requestDef := GenReqDefForGetClusterSupportConfiguration()
-	return &GetClusterSupportConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // GetCustomizeTags 查询自定义标签
 //
 // 该API用于查询自定义标签
@@ -1536,6 +1515,27 @@ func (c *CceClient) ShowClusterEndpoints(request *model.ShowClusterEndpointsRequ
 func (c *CceClient) ShowClusterEndpointsInvoker(request *model.ShowClusterEndpointsRequest) *ShowClusterEndpointsInvoker {
 	requestDef := GenReqDefForShowClusterEndpoints()
 	return &ShowClusterEndpointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowClusterSupportConfiguration 获取集群支持的可配置参数列表
+//
+// 该API用于根据集群版本类型等查询集群支持的详细配置项，用于集群创建时指定。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ShowClusterSupportConfiguration(request *model.ShowClusterSupportConfigurationRequest) (*model.ShowClusterSupportConfigurationResponse, error) {
+	requestDef := GenReqDefForShowClusterSupportConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowClusterSupportConfigurationResponse), nil
+	}
+}
+
+// ShowClusterSupportConfigurationInvoker 获取集群支持的可配置参数列表
+func (c *CceClient) ShowClusterSupportConfigurationInvoker(request *model.ShowClusterSupportConfigurationRequest) *ShowClusterSupportConfigurationInvoker {
+	requestDef := GenReqDefForShowClusterSupportConfiguration()
+	return &ShowClusterSupportConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowClusterUpgradeInfo 获取集群升级相关信息

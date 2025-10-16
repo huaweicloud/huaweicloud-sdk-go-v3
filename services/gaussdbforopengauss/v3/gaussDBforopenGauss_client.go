@@ -1365,7 +1365,7 @@ func (c *GaussDBforopenGaussClient) ListDatabaseVersionsInvoker(request *model.L
 
 // ListDatabaseVolume 查询数据库占用空间大小列表
 //
-// 查询限流任务详情
+// 查询数据库占用空间大小列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) ListDatabaseVolume(request *model.ListDatabaseVolumeRequest) (*model.ListDatabaseVolumeResponse, error) {
@@ -2267,6 +2267,27 @@ func (c *GaussDBforopenGaussClient) ListSchemaAndTableInvoker(request *model.Lis
 	return &ListSchemaAndTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSessionMemoryContext 查询会话内存上下文列表
+//
+// 查询数据库实例节点的会话内存上下文列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListSessionMemoryContext(request *model.ListSessionMemoryContextRequest) (*model.ListSessionMemoryContextResponse, error) {
+	requestDef := GenReqDefForListSessionMemoryContext()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSessionMemoryContextResponse), nil
+	}
+}
+
+// ListSessionMemoryContextInvoker 查询会话内存上下文列表
+func (c *GaussDBforopenGaussClient) ListSessionMemoryContextInvoker(request *model.ListSessionMemoryContextRequest) *ListSessionMemoryContextInvoker {
+	requestDef := GenReqDefForListSessionMemoryContext()
+	return &ListSessionMemoryContextInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSessionStatistics 查询实时会话统计
 //
 // 查询数据库实例节点的实时会话统计信息。
@@ -2286,6 +2307,48 @@ func (c *GaussDBforopenGaussClient) ListSessionStatistics(request *model.ListSes
 func (c *GaussDBforopenGaussClient) ListSessionStatisticsInvoker(request *model.ListSessionStatisticsRequest) *ListSessionStatisticsInvoker {
 	requestDef := GenReqDefForListSessionStatistics()
 	return &ListSessionStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSessionTopSqlStatistics 查询实时会话Top SQL统计
+//
+// 查询实时会话Top SQL统计。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListSessionTopSqlStatistics(request *model.ListSessionTopSqlStatisticsRequest) (*model.ListSessionTopSqlStatisticsResponse, error) {
+	requestDef := GenReqDefForListSessionTopSqlStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSessionTopSqlStatisticsResponse), nil
+	}
+}
+
+// ListSessionTopSqlStatisticsInvoker 查询实时会话Top SQL统计
+func (c *GaussDBforopenGaussClient) ListSessionTopSqlStatisticsInvoker(request *model.ListSessionTopSqlStatisticsRequest) *ListSessionTopSqlStatisticsInvoker {
+	requestDef := GenReqDefForListSessionTopSqlStatistics()
+	return &ListSessionTopSqlStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSessionWaitEventStatistics 查询实时会话Top等待事件统计
+//
+// 查询实时会话Top等待事件统计。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListSessionWaitEventStatistics(request *model.ListSessionWaitEventStatisticsRequest) (*model.ListSessionWaitEventStatisticsResponse, error) {
+	requestDef := GenReqDefForListSessionWaitEventStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSessionWaitEventStatisticsResponse), nil
+	}
+}
+
+// ListSessionWaitEventStatisticsInvoker 查询实时会话Top等待事件统计
+func (c *GaussDBforopenGaussClient) ListSessionWaitEventStatisticsInvoker(request *model.ListSessionWaitEventStatisticsRequest) *ListSessionWaitEventStatisticsInvoker {
+	requestDef := GenReqDefForListSessionWaitEventStatistics()
+	return &ListSessionWaitEventStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListStorageTypes 查询数据库磁盘类型

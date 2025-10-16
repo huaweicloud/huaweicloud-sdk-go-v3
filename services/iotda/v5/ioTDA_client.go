@@ -2292,6 +2292,111 @@ func (c *IoTDAClient) ShowDeviceMessageInvoker(request *model.ShowDeviceMessageR
 	return &ShowDeviceMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateOtaModule 创建OTA模块
+//
+// 用户可调用此接口创建产品的OTA模块,同一产品下最多自定义10个OTA模块。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) CreateOtaModule(request *model.CreateOtaModuleRequest) (*model.CreateOtaModuleResponse, error) {
+	requestDef := GenReqDefForCreateOtaModule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateOtaModuleResponse), nil
+	}
+}
+
+// CreateOtaModuleInvoker 创建OTA模块
+func (c *IoTDAClient) CreateOtaModuleInvoker(request *model.CreateOtaModuleRequest) *CreateOtaModuleInvoker {
+	requestDef := GenReqDefForCreateOtaModule()
+	return &CreateOtaModuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteOtaModule 删除OTA模块
+//
+// 用户可调用此接口删除产品对应的OTA模块
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) DeleteOtaModule(request *model.DeleteOtaModuleRequest) (*model.DeleteOtaModuleResponse, error) {
+	requestDef := GenReqDefForDeleteOtaModule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteOtaModuleResponse), nil
+	}
+}
+
+// DeleteOtaModuleInvoker 删除OTA模块
+func (c *IoTDAClient) DeleteOtaModuleInvoker(request *model.DeleteOtaModuleRequest) *DeleteOtaModuleInvoker {
+	requestDef := GenReqDefForDeleteOtaModule()
+	return &DeleteOtaModuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListOtaModules 查询OTA模块列表
+//
+// 用户可调用此接口查询指定产品的OTA模块列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ListOtaModules(request *model.ListOtaModulesRequest) (*model.ListOtaModulesResponse, error) {
+	requestDef := GenReqDefForListOtaModules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOtaModulesResponse), nil
+	}
+}
+
+// ListOtaModulesInvoker 查询OTA模块列表
+func (c *IoTDAClient) ListOtaModulesInvoker(request *model.ListOtaModulesRequest) *ListOtaModulesInvoker {
+	requestDef := GenReqDefForListOtaModules()
+	return &ListOtaModulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowOtaModule 查询OTA模块详情
+//
+// 用户可调用此接口查询OTA模块详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ShowOtaModule(request *model.ShowOtaModuleRequest) (*model.ShowOtaModuleResponse, error) {
+	requestDef := GenReqDefForShowOtaModule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowOtaModuleResponse), nil
+	}
+}
+
+// ShowOtaModuleInvoker 查询OTA模块详情
+func (c *IoTDAClient) ShowOtaModuleInvoker(request *model.ShowOtaModuleRequest) *ShowOtaModuleInvoker {
+	requestDef := GenReqDefForShowOtaModule()
+	return &ShowOtaModuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateOtaModule 修改OTA模块
+//
+// 用户可调用此接口修改对应的OTA模块的别名和描述。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) UpdateOtaModule(request *model.UpdateOtaModuleRequest) (*model.UpdateOtaModuleResponse, error) {
+	requestDef := GenReqDefForUpdateOtaModule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateOtaModuleResponse), nil
+	}
+}
+
+// UpdateOtaModuleInvoker 修改OTA模块
+func (c *IoTDAClient) UpdateOtaModuleInvoker(request *model.UpdateOtaModuleRequest) *UpdateOtaModuleInvoker {
+	requestDef := GenReqDefForUpdateOtaModule()
+	return &UpdateOtaModuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateOtaPackage 创建OTA升级包
 //
 // 用户可调用此接口创建升级包关联OBS对象

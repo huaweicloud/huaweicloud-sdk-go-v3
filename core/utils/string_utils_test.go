@@ -6,45 +6,36 @@ import (
 )
 
 func TestUnderscoreToCamel(t *testing.T) {
-	input := "hello_world"
-	expected := "HelloWorld"
-	result := UnderscoreToCamel(input)
-	assert.Equal(t, expected, result, "Expected camel case conversion to match")
+	cases := []struct {
+		Input, Expected string
+	}{
+		{"hello_world", "HelloWorld"},
+		{"HELLO_WORLD", "HELLOWORLD"},
+		{"hello__world", "HelloWorld"},
+		{"helloworld", "Helloworld"},
+	}
 
-	input = "HELLO_WORLD"
-	expected = "HELLOWORLD"
-	result = UnderscoreToCamel(input)
-	assert.Equal(t, expected, result, "Expected camel case conversion to match")
-
-	input = "hello__world"
-	expected = "HelloWorld"
-	result = UnderscoreToCamel(input)
-	assert.Equal(t, expected, result, "Expected camel case conversion to match")
-
-	input = "helloworld"
-	expected = "Helloworld"
-	result = UnderscoreToCamel(input)
-	assert.Equal(t, expected, result, "Expected camel case conversion to match")
+	for _, c := range cases {
+		t.Run(c.Input, func(t *testing.T) {
+			assert.Equal(t, c.Expected, UnderscoreToCamel(c.Input))
+		})
+	}
 }
 
 func TestReplaceNonASCII(t *testing.T) {
-	input := "hello_中文_world"
-	replacement := '_'
-	expected := "hello____world"
-	result := ReplaceNonASCII(input, replacement)
-	assert.Equal(t, expected, result, "Expected non-ASCII characters to be replaced")
+	cases := []struct {
+		Input, Expected string
+	}{
+		{"hello_中文_world", "hello____world"},
+		{"hello_world", "hello_world"},
+		{"héllo_wörld", "h_llo_w_rld"},
+	}
 
-	input = "hello_world"
-	replacement = '_'
-	expected = "hello_world"
-	result = ReplaceNonASCII(input, replacement)
-	assert.Equal(t, expected, result, "Expected no changes for ASCII-only input")
-
-	input = "héllo_wörld"
-	replacement = '_'
-	expected = "h_llo_w_rld"
-	result = ReplaceNonASCII(input, replacement)
-	assert.Equal(t, expected, result, "Expected non-ASCII characters to be replaced")
+	for _, c := range cases {
+		t.Run(c.Input, func(t *testing.T) {
+			assert.Equal(t, c.Expected, ReplaceNonASCII(c.Input, '_'))
+		})
+	}
 }
 
 func TestGenerateUUIDv4(t *testing.T) {

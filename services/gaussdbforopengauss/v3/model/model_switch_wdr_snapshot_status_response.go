@@ -8,8 +8,7 @@ import (
 
 // SwitchWdrSnapshotStatusResponse Response Object
 type SwitchWdrSnapshotStatusResponse struct {
-	Body           *interface{} `json:"body,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o SwitchWdrSnapshotStatusResponse) String() string {

@@ -9,7 +9,7 @@ import (
 // UpgradeDatabaseVersionResponse Response Object
 type UpgradeDatabaseVersionResponse struct {
 
-	// 任务ID。
+	// **参数解释：** 任务ID。 **取值范围：** 不涉及。
 	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -533,22 +533,6 @@ func (i *GetClusterQuotaInvoker) Invoke() (*model.GetClusterQuotaResponse, error
 	}
 }
 
-type GetClusterSupportConfigurationInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *GetClusterSupportConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *GetClusterSupportConfigurationInvoker) Invoke() (*model.GetClusterSupportConfigurationResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.GetClusterSupportConfigurationResponse), nil
-	}
-}
-
 type GetCustomizeTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1122,6 +1106,22 @@ func (i *ShowClusterEndpointsInvoker) Invoke() (*model.ShowClusterEndpointsRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowClusterEndpointsResponse), nil
+	}
+}
+
+type ShowClusterSupportConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterSupportConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowClusterSupportConfigurationInvoker) Invoke() (*model.ShowClusterSupportConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowClusterSupportConfigurationResponse), nil
 	}
 }
 

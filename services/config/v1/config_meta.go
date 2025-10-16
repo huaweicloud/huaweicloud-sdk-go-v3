@@ -1307,6 +1307,17 @@ func GenReqDefForListPolicyStatesByResourceId() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListPolicyStatesStatistics() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/resource-manager/domains/{domain_id}/policy-states/statistics").
+		WithResponse(new(model.ListPolicyStatesStatisticsResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListRemediationExceptions() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

@@ -23,7 +23,7 @@ type ExpansionParameterResult struct {
 	// **参数解释**: 参数类型。 **取值范围**: - integer：整数。 - boolean：布尔类型。 - string：字符串。
 	Type *string `json:"type,omitempty"`
 
-	// **参数解释**: 参数描述。 **取值范围**: 不涉及。
+	// **参数解释**: 参数解释。 **取值范围**: 不涉及。
 	Description *string `json:"description,omitempty"`
 }
 

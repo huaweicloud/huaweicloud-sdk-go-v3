@@ -1717,6 +1717,22 @@ func (i *ListSchemaAndTableInvoker) Invoke() (*model.ListSchemaAndTableResponse,
 	}
 }
 
+type ListSessionMemoryContextInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSessionMemoryContextInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSessionMemoryContextInvoker) Invoke() (*model.ListSessionMemoryContextResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSessionMemoryContextResponse), nil
+	}
+}
+
 type ListSessionStatisticsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1730,6 +1746,38 @@ func (i *ListSessionStatisticsInvoker) Invoke() (*model.ListSessionStatisticsRes
 		return nil, err
 	} else {
 		return result.(*model.ListSessionStatisticsResponse), nil
+	}
+}
+
+type ListSessionTopSqlStatisticsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSessionTopSqlStatisticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSessionTopSqlStatisticsInvoker) Invoke() (*model.ListSessionTopSqlStatisticsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSessionTopSqlStatisticsResponse), nil
+	}
+}
+
+type ListSessionWaitEventStatisticsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSessionWaitEventStatisticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSessionWaitEventStatisticsInvoker) Invoke() (*model.ListSessionWaitEventStatisticsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSessionWaitEventStatisticsResponse), nil
 	}
 }
 

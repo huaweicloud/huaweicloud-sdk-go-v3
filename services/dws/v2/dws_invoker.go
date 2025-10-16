@@ -2309,6 +2309,22 @@ func (i *ResizeClusterWithExistedNodesInvoker) Invoke() (*model.ResizeClusterWit
 	}
 }
 
+type ResizePreparationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResizePreparationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ResizePreparationInvoker) Invoke() (*model.ResizePreparationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResizePreparationResponse), nil
+	}
+}
+
 type RestartClusterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2658,6 +2674,22 @@ func (i *ShowQueryDetailInvoker) Invoke() (*model.ShowQueryDetailResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ShowQueryDetailResponse), nil
+	}
+}
+
+type ShowResizePreparationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowResizePreparationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowResizePreparationInvoker) Invoke() (*model.ShowResizePreparationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowResizePreparationResponse), nil
 	}
 }
 

@@ -13,7 +13,7 @@ type WebSocketSeek struct {
 	Status string `json:"status"`
 
 	// 请求建立连接后，会话的保持时间：范围：1-300，单位：秒。
-	Timeout int32 `json:"timeout"`
+	Timeout *int32 `json:"timeout,omitempty"`
 }
 
 func (o WebSocketSeek) String() string {

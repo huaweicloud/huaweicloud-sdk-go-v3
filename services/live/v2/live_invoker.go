@@ -165,6 +165,22 @@ func (i *ListSnapshotDataInvoker) Invoke() (*model.ListSnapshotDataResponse, err
 	}
 }
 
+type ListTranscodeConcurrencyNumInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTranscodeConcurrencyNumInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTranscodeConcurrencyNumInvoker) Invoke() (*model.ListTranscodeConcurrencyNumResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTranscodeConcurrencyNumResponse), nil
+	}
+}
+
 type ListTranscodeDataInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -181,6 +181,38 @@ func (i *BatchUpdateRecordSetWithLineInvoker) Invoke() (*model.BatchUpdateRecord
 	}
 }
 
+type CreateAuthorizeTxtRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAuthorizeTxtRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAuthorizeTxtRecordInvoker) Invoke() (*model.CreateAuthorizeTxtRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAuthorizeTxtRecordResponse), nil
+	}
+}
+
+type CreateAuthorizeTxtRecordVerificationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAuthorizeTxtRecordVerificationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAuthorizeTxtRecordVerificationInvoker) Invoke() (*model.CreateAuthorizeTxtRecordVerificationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAuthorizeTxtRecordVerificationResponse), nil
+	}
+}
+
 type CreateCustomLineInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -690,6 +722,22 @@ func (i *ShowApiInfoInvoker) Invoke() (*model.ShowApiInfoResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowApiInfoResponse), nil
+	}
+}
+
+type ShowAuthorizeTxtRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAuthorizeTxtRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAuthorizeTxtRecordInvoker) Invoke() (*model.ShowAuthorizeTxtRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAuthorizeTxtRecordResponse), nil
 	}
 }
 

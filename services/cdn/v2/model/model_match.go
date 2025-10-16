@@ -13,7 +13,7 @@ type Match struct {
 	Logic string `json:"logic"`
 
 	// **参数解释：** 匹配条件列表 **约束限制：** 不涉及
-	Criteria []Criteria `json:"criteria"`
+	Criteria []CriteriaItem `json:"criteria"`
 }
 
 func (o Match) String() string {

@@ -8,7 +8,7 @@ import (
 
 type PurchaseCertificateRequestBody struct {
 
-	// 证书品牌，取值如下： - GEOTRUST - GLOBALSIGN - SYMANTEC - CFCA - TRUSTASIA - VTRUS
+	// 证书品牌，取值如下： - GEOTRUST(购买RapidSSL请传该值) - GLOBALSIGN - SYMANTEC - CFCA - TRUSTASIA - VTRUS
 	CertBrand string `json:"cert_brand"`
 
 	// 证书类型，取值如下： - DV_SSL_CERT - DV_SSL_CERT_BASIC - EV_SSL_CERT - EV_SSL_CERT_PRO - OV_SSL_CERT - OV_SSL_CERT_PRO

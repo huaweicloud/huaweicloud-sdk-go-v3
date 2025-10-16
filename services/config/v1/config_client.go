@@ -1237,6 +1237,27 @@ func (c *ConfigClient) ListPolicyStatesByResourceIdInvoker(request *model.ListPo
 	return &ListPolicyStatesByResourceIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPolicyStatesStatistics 查询当前账号合规统计趋势
+//
+// 查询当前账号合规统计趋势
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ConfigClient) ListPolicyStatesStatistics(request *model.ListPolicyStatesStatisticsRequest) (*model.ListPolicyStatesStatisticsResponse, error) {
+	requestDef := GenReqDefForListPolicyStatesStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPolicyStatesStatisticsResponse), nil
+	}
+}
+
+// ListPolicyStatesStatisticsInvoker 查询当前账号合规统计趋势
+func (c *ConfigClient) ListPolicyStatesStatisticsInvoker(request *model.ListPolicyStatesStatisticsRequest) *ListPolicyStatesStatisticsInvoker {
+	requestDef := GenReqDefForListPolicyStatesStatistics()
+	return &ListPolicyStatesStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListRemediationExceptions 查询修正例外
 //
 // 查询合规规则修正例外。

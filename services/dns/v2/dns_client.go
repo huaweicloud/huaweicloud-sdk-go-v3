@@ -261,6 +261,56 @@ func (c *DnsClient) BatchUpdateRecordSetWithLineInvoker(request *model.BatchUpda
 	return &BatchUpdateRecordSetWithLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAuthorizeTxtRecord 创建公网子域名授权
+//
+// 当创建子域名时提示“域名与其他租户冲突，你需要添加TXT授权校验”，通过调用当前接口生成子域名授权的TXT记录验证信息。
+//
+// **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+// **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+//
+// &gt; TXT记录验证信息生成后，请前往主域名所属的DNS服务商处添加相应的TXT类型解析记录，主机记录和记录值与验证信息保持一致。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) CreateAuthorizeTxtRecord(request *model.CreateAuthorizeTxtRecordRequest) (*model.CreateAuthorizeTxtRecordResponse, error) {
+	requestDef := GenReqDefForCreateAuthorizeTxtRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAuthorizeTxtRecordResponse), nil
+	}
+}
+
+// CreateAuthorizeTxtRecordInvoker 创建公网子域名授权
+func (c *DnsClient) CreateAuthorizeTxtRecordInvoker(request *model.CreateAuthorizeTxtRecordRequest) *CreateAuthorizeTxtRecordInvoker {
+	requestDef := GenReqDefForCreateAuthorizeTxtRecord()
+	return &CreateAuthorizeTxtRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAuthorizeTxtRecordVerification 验证公网子域名授权
+//
+// 用户在主域名所属DNS服务商处添加TXT类型解析记录后，调用当前接口验证子域名授权状态。
+//
+// **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+// **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) CreateAuthorizeTxtRecordVerification(request *model.CreateAuthorizeTxtRecordVerificationRequest) (*model.CreateAuthorizeTxtRecordVerificationResponse, error) {
+	requestDef := GenReqDefForCreateAuthorizeTxtRecordVerification()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAuthorizeTxtRecordVerificationResponse), nil
+	}
+}
+
+// CreateAuthorizeTxtRecordVerificationInvoker 验证公网子域名授权
+func (c *DnsClient) CreateAuthorizeTxtRecordVerificationInvoker(request *model.CreateAuthorizeTxtRecordVerificationRequest) *CreateAuthorizeTxtRecordVerificationInvoker {
+	requestDef := GenReqDefForCreateAuthorizeTxtRecordVerification()
+	return &CreateAuthorizeTxtRecordVerificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCustomLine 创建自定义线路
 //
 // 创建自定义线路。
@@ -940,6 +990,30 @@ func (c *DnsClient) ShowApiInfo(request *model.ShowApiInfoRequest) (*model.ShowA
 func (c *DnsClient) ShowApiInfoInvoker(request *model.ShowApiInfoRequest) *ShowApiInfoInvoker {
 	requestDef := GenReqDefForShowApiInfo()
 	return &ShowApiInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAuthorizeTxtRecord 查询公网子域名授权
+//
+// 查询已生成的子域名授权TXT记录验证信息。
+//
+// **[公网域名为全局资源，请选择“华北-北京四（cn-north-4）”区域调用。](tag:hws)**
+// **[公网域名为全局资源，请选择“亚太-新加坡（ap-southeast-3）”区域调用。](tag:hws_hk)**
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) ShowAuthorizeTxtRecord(request *model.ShowAuthorizeTxtRecordRequest) (*model.ShowAuthorizeTxtRecordResponse, error) {
+	requestDef := GenReqDefForShowAuthorizeTxtRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAuthorizeTxtRecordResponse), nil
+	}
+}
+
+// ShowAuthorizeTxtRecordInvoker 查询公网子域名授权
+func (c *DnsClient) ShowAuthorizeTxtRecordInvoker(request *model.ShowAuthorizeTxtRecordRequest) *ShowAuthorizeTxtRecordInvoker {
+	requestDef := GenReqDefForShowAuthorizeTxtRecord()
+	return &ShowAuthorizeTxtRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDomainQuota 查询租户配额

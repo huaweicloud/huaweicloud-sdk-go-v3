@@ -3092,6 +3092,27 @@ func (c *DwsClient) ResizeClusterWithExistedNodesInvoker(request *model.ResizeCl
 	return &ResizeClusterWithExistedNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ResizePreparation 集群扩容前检查
+//
+// 下发扩容配置文件，完成扩容准备工作。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ResizePreparation(request *model.ResizePreparationRequest) (*model.ResizePreparationResponse, error) {
+	requestDef := GenReqDefForResizePreparation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResizePreparationResponse), nil
+	}
+}
+
+// ResizePreparationInvoker 集群扩容前检查
+func (c *DwsClient) ResizePreparationInvoker(request *model.ResizePreparationRequest) *ResizePreparationInvoker {
+	requestDef := GenReqDefForResizePreparation()
+	return &ResizePreparationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RestartCluster 重启集群
 //
 // 重启集群。
@@ -3562,6 +3583,27 @@ func (c *DwsClient) ShowQueryDetail(request *model.ShowQueryDetailRequest) (*mod
 func (c *DwsClient) ShowQueryDetailInvoker(request *model.ShowQueryDetailRequest) *ShowQueryDetailInvoker {
 	requestDef := GenReqDefForShowQueryDetail()
 	return &ShowQueryDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowResizePreparation 查询节点列表
+//
+// 获取扩容准备信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ShowResizePreparation(request *model.ShowResizePreparationRequest) (*model.ShowResizePreparationResponse, error) {
+	requestDef := GenReqDefForShowResizePreparation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowResizePreparationResponse), nil
+	}
+}
+
+// ShowResizePreparationInvoker 查询节点列表
+func (c *DwsClient) ShowResizePreparationInvoker(request *model.ShowResizePreparationRequest) *ShowResizePreparationInvoker {
+	requestDef := GenReqDefForShowResizePreparation()
+	return &ShowResizePreparationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowResourceStatistics 查询资源统计

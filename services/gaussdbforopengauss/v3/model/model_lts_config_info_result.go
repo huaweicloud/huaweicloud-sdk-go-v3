@@ -12,7 +12,7 @@ type LtsConfigInfoResult struct {
 	// **参数解释**: LTS日志组名称。 **取值范围**: 不涉及。
 	LogGroupName *string `json:"log_group_name,omitempty"`
 
-	// **参数解释**: LTS日志组ID。 **取值范围**: 不涉及。LTS日志组ID
+	// **参数解释**: LTS日志组ID。 **取值范围**: 不涉及。
 	LogGroupId *string `json:"log_group_id,omitempty"`
 
 	// **参数解释**: LTS日志组类别。 **取值范围**: 通常为asp_log，标识为智能运维专用日志组。

@@ -54,6 +54,9 @@ type SearchDevice struct {
 	// 设备的标签列表。
 	Tags *interface{} `json:"tags,omitempty"`
 
+	// 设备的OTA模块列表。
+	Modules *[]ModuleSearchDto `json:"modules,omitempty"`
+
 	// 搜索结果记录Id。
 	Marker *string `json:"marker,omitempty"`
 }

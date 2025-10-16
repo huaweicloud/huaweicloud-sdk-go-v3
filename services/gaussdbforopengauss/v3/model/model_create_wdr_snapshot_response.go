@@ -8,8 +8,7 @@ import (
 
 // CreateWdrSnapshotResponse Response Object
 type CreateWdrSnapshotResponse struct {
-	Body           *interface{} `json:"body,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o CreateWdrSnapshotResponse) String() string {

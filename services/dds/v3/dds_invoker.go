@@ -421,6 +421,22 @@ func (i *DeleteInstanceInvoker) Invoke() (*model.DeleteInstanceResponse, error) 
 	}
 }
 
+type DeleteIpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteIpInvoker) Invoke() (*model.DeleteIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteIpResponse), nil
+	}
+}
+
 type DeleteKillOpRuleListInvoker struct {
 	*invoker.BaseInvoker
 }

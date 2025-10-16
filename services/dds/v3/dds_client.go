@@ -565,6 +565,27 @@ func (c *DdsClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequest) 
 	return &DeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteIp 删除集群的Shard/Config IP
+//
+// 删除集群的Shard/Config IP
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) DeleteIp(request *model.DeleteIpRequest) (*model.DeleteIpResponse, error) {
+	requestDef := GenReqDefForDeleteIp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteIpResponse), nil
+	}
+}
+
+// DeleteIpInvoker 删除集群的Shard/Config IP
+func (c *DdsClient) DeleteIpInvoker(request *model.DeleteIpRequest) *DeleteIpInvoker {
+	requestDef := GenReqDefForDeleteIp()
+	return &DeleteIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteKillOpRuleList 删除killOp规则
 //
 // 删除killOp规则。

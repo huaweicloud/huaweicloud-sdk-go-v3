@@ -12,7 +12,7 @@ type IssueCertificateAuthorityCertificateRequestBody struct {
 	IssuerId string `json:"issuer_id"`
 
 	// 路径长度。
-	PathLength int32 `json:"path_length"`
+	PathLength *int32 `json:"path_length,omitempty"`
 
 	// 签名哈希算法，可选值如下：   - **SHA256**   - **SHA384**   - **SHA512**   - **SM3**（中国站）
 	SignatureAlgorithm string `json:"signature_algorithm"`

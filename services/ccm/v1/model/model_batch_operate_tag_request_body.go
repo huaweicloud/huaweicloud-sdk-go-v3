@@ -9,7 +9,7 @@ import (
 type BatchOperateTagRequestBody struct {
 
 	// 标签列表，key和value键值对的集合。
-	Tags *[]ResourceTag `json:"tags,omitempty"`
+	Tags []ResourceTag `json:"tags"`
 }
 
 func (o BatchOperateTagRequestBody) String() string {

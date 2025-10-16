@@ -28,6 +28,9 @@ type Config struct {
 
 	// 表示是否在识别结果中输出分词结果信息，取值为“yes”和“no”，默认为“no”。
 	NeedWordInfo *ConfigNeedWordInfo `json:"need_word_info,omitempty"`
+
+	// 表示是否开启普英方自动识别，取值为“yes”和“no”，默认为“no”。
+	AutoLanguageDetect *ConfigAutoLanguageDetect `json:"auto_language_detect,omitempty"`
 }
 
 func (o Config) String() string {
@@ -324,6 +327,53 @@ func (c ConfigNeedWordInfo) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ConfigNeedWordInfo) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ConfigAutoLanguageDetect struct {
+	value string
+}
+
+type ConfigAutoLanguageDetectEnum struct {
+	YES ConfigAutoLanguageDetect
+	NO  ConfigAutoLanguageDetect
+}
+
+func GetConfigAutoLanguageDetectEnum() ConfigAutoLanguageDetectEnum {
+	return ConfigAutoLanguageDetectEnum{
+		YES: ConfigAutoLanguageDetect{
+			value: "yes",
+		},
+		NO: ConfigAutoLanguageDetect{
+			value: "no",
+		},
+	}
+}
+
+func (c ConfigAutoLanguageDetect) Value() string {
+	return c.value
+}
+
+func (c ConfigAutoLanguageDetect) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ConfigAutoLanguageDetect) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

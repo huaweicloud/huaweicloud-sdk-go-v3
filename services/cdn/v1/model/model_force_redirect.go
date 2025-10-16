@@ -12,7 +12,7 @@ type ForceRedirect struct {
 	Switch int32 `json:"switch"`
 
 	// 强制跳转类型。http：强制跳转HTTP。https：强制跳转HTTPS。
-	RedirectType *string `json:"redirect_type,omitempty"`
+	RedirectType string `json:"redirect_type"`
 }
 
 func (o ForceRedirect) String() string {

@@ -18,6 +18,9 @@ type ObsLocation struct {
 	// **参数说明**：OBS对象名称(包含文件夹路径)。 **取值范围**：长度不超过1024。
 	ObjectKey string `json:"object_key"`
 
+	// **参数说明**： **取值范围**：只支持SHA256,不携带默认为SHA256。
+	SignMethod *string `json:"sign_method,omitempty"`
+
 	// **参数说明**：SHA256算法计算出的升级包签名值。添加该升级包完成，并创建升级任务后，物联网平台向设备下发升级通知时，会下发该签名给设备。 **取值范围**：长度为64，只允许大小写字母a到f、数字的组合。
 	Sign *string `json:"sign,omitempty"`
 }

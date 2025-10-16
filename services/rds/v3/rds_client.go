@@ -4864,6 +4864,27 @@ func (c *RdsClient) CreateSqlserverDbUserInvoker(request *model.CreateSqlserverD
 	return &CreateSqlserverDbUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateSubscription 创建订阅
+//
+// 创建订阅
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) CreateSubscription(request *model.CreateSubscriptionRequest) (*model.CreateSubscriptionResponse, error) {
+	requestDef := GenReqDefForCreateSubscription()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSubscriptionResponse), nil
+	}
+}
+
+// CreateSubscriptionInvoker 创建订阅
+func (c *RdsClient) CreateSubscriptionInvoker(request *model.CreateSubscriptionRequest) *CreateSubscriptionInvoker {
+	requestDef := GenReqDefForCreateSubscription()
+	return &CreateSubscriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteMsdtcLocalHost 删除MSDTC
 //
 // 删除MSDTC相关主机host地址
@@ -4883,6 +4904,27 @@ func (c *RdsClient) DeleteMsdtcLocalHost(request *model.DeleteMsdtcLocalHostRequ
 func (c *RdsClient) DeleteMsdtcLocalHostInvoker(request *model.DeleteMsdtcLocalHostRequest) *DeleteMsdtcLocalHostInvoker {
 	requestDef := GenReqDefForDeleteMsdtcLocalHost()
 	return &DeleteMsdtcLocalHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePublication 删除发布
+//
+// 删除发布
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) DeletePublication(request *model.DeletePublicationRequest) (*model.DeletePublicationResponse, error) {
+	requestDef := GenReqDefForDeletePublication()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePublicationResponse), nil
+	}
+}
+
+// DeletePublicationInvoker 删除发布
+func (c *RdsClient) DeletePublicationInvoker(request *model.DeletePublicationRequest) *DeletePublicationInvoker {
+	requestDef := GenReqDefForDeletePublication()
+	return &DeletePublicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteSqlserverDatabase 删除数据库
@@ -4990,6 +5032,48 @@ func (c *RdsClient) ListBusinessPartnersInvoker(request *model.ListBusinessPartn
 	return &ListBusinessPartnersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDistribution 查询当前实例配置的分发服务器
+//
+// 查询当前实例配置的分发服务器
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListDistribution(request *model.ListDistributionRequest) (*model.ListDistributionResponse, error) {
+	requestDef := GenReqDefForListDistribution()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDistributionResponse), nil
+	}
+}
+
+// ListDistributionInvoker 查询当前实例配置的分发服务器
+func (c *RdsClient) ListDistributionInvoker(request *model.ListDistributionRequest) *ListDistributionInvoker {
+	requestDef := GenReqDefForListDistribution()
+	return &ListDistributionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDistributorInstances 查询可配置为当前实例分发服务器的实例列表
+//
+// 查询可配置为当前实例分发服务器的实例列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListDistributorInstances(request *model.ListDistributorInstancesRequest) (*model.ListDistributorInstancesResponse, error) {
+	requestDef := GenReqDefForListDistributorInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDistributorInstancesResponse), nil
+	}
+}
+
+// ListDistributorInstancesInvoker 查询可配置为当前实例分发服务器的实例列表
+func (c *RdsClient) ListDistributorInstancesInvoker(request *model.ListDistributorInstancesRequest) *ListDistributorInstancesInvoker {
+	requestDef := GenReqDefForListDistributorInstances()
+	return &ListDistributorInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListMarketplaceEngineProducts 查询云市场引擎商品列表
 //
 // 查询云市场引擎商品列表。
@@ -5030,6 +5114,27 @@ func (c *RdsClient) ListMsdtcHosts(request *model.ListMsdtcHostsRequest) (*model
 func (c *RdsClient) ListMsdtcHostsInvoker(request *model.ListMsdtcHostsRequest) *ListMsdtcHostsInvoker {
 	requestDef := GenReqDefForListMsdtcHosts()
 	return &ListMsdtcHostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPublications 查询实例发布信息
+//
+// 查询实例发布信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListPublications(request *model.ListPublicationsRequest) (*model.ListPublicationsResponse, error) {
+	requestDef := GenReqDefForListPublications()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPublicationsResponse), nil
+	}
+}
+
+// ListPublicationsInvoker 查询实例发布信息
+func (c *RdsClient) ListPublicationsInvoker(request *model.ListPublicationsRequest) *ListPublicationsInvoker {
+	requestDef := GenReqDefForListPublications()
+	return &ListPublicationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSqlserverDatabases 查询数据库列表
@@ -5074,6 +5179,27 @@ func (c *RdsClient) ListSqlserverDbUsersInvoker(request *model.ListSqlserverDbUs
 	return &ListSqlserverDbUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSubscriberInstances 查询可配置为当前实例订阅服务器的实例列表
+//
+// 查询可配置为当前实例订阅服务器的实例列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListSubscriberInstances(request *model.ListSubscriberInstancesRequest) (*model.ListSubscriberInstancesResponse, error) {
+	requestDef := GenReqDefForListSubscriberInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSubscriberInstancesResponse), nil
+	}
+}
+
+// ListSubscriberInstancesInvoker 查询可配置为当前实例订阅服务器的实例列表
+func (c *RdsClient) ListSubscriberInstancesInvoker(request *model.ListSubscriberInstancesRequest) *ListSubscriberInstancesInvoker {
+	requestDef := GenReqDefForListSubscriberInstances()
+	return &ListSubscriberInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ModifyCollation 修改实例字符集
 //
 // 修改实例字符集。
@@ -5093,6 +5219,27 @@ func (c *RdsClient) ModifyCollation(request *model.ModifyCollationRequest) (*mod
 func (c *RdsClient) ModifyCollationInvoker(request *model.ModifyCollationRequest) *ModifyCollationInvoker {
 	requestDef := GenReqDefForModifyCollation()
 	return &ModifyCollationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyPublication 修改发布
+//
+// 修改发布
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ModifyPublication(request *model.ModifyPublicationRequest) (*model.ModifyPublicationResponse, error) {
+	requestDef := GenReqDefForModifyPublication()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyPublicationResponse), nil
+	}
+}
+
+// ModifyPublicationInvoker 修改发布
+func (c *RdsClient) ModifyPublicationInvoker(request *model.ModifyPublicationRequest) *ModifyPublicationInvoker {
+	requestDef := GenReqDefForModifyPublication()
+	return &ModifyPublicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RevokeSqlserverDbUserPrivilege 解除数据库帐号权限

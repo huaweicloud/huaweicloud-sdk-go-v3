@@ -933,6 +933,22 @@ func (i *ListPolicyStatesByResourceIdInvoker) Invoke() (*model.ListPolicyStatesB
 	}
 }
 
+type ListPolicyStatesStatisticsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPolicyStatesStatisticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPolicyStatesStatisticsInvoker) Invoke() (*model.ListPolicyStatesStatisticsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPolicyStatesStatisticsResponse), nil
+	}
+}
+
 type ListRemediationExceptionsInvoker struct {
 	*invoker.BaseInvoker
 }

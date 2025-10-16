@@ -3685,6 +3685,22 @@ func (i *CreateSqlserverDbUserInvoker) Invoke() (*model.CreateSqlserverDbUserRes
 	}
 }
 
+type CreateSubscriptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSubscriptionInvoker) Invoke() (*model.CreateSubscriptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSubscriptionResponse), nil
+	}
+}
+
 type DeleteMsdtcLocalHostInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3698,6 +3714,22 @@ func (i *DeleteMsdtcLocalHostInvoker) Invoke() (*model.DeleteMsdtcLocalHostRespo
 		return nil, err
 	} else {
 		return result.(*model.DeleteMsdtcLocalHostResponse), nil
+	}
+}
+
+type DeletePublicationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePublicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeletePublicationInvoker) Invoke() (*model.DeletePublicationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePublicationResponse), nil
 	}
 }
 
@@ -3781,6 +3813,38 @@ func (i *ListBusinessPartnersInvoker) Invoke() (*model.ListBusinessPartnersRespo
 	}
 }
 
+type ListDistributionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDistributionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDistributionInvoker) Invoke() (*model.ListDistributionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDistributionResponse), nil
+	}
+}
+
+type ListDistributorInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDistributorInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDistributorInstancesInvoker) Invoke() (*model.ListDistributorInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDistributorInstancesResponse), nil
+	}
+}
+
 type ListMarketplaceEngineProductsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3810,6 +3874,22 @@ func (i *ListMsdtcHostsInvoker) Invoke() (*model.ListMsdtcHostsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListMsdtcHostsResponse), nil
+	}
+}
+
+type ListPublicationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPublicationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPublicationsInvoker) Invoke() (*model.ListPublicationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPublicationsResponse), nil
 	}
 }
 
@@ -3845,6 +3925,22 @@ func (i *ListSqlserverDbUsersInvoker) Invoke() (*model.ListSqlserverDbUsersRespo
 	}
 }
 
+type ListSubscriberInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSubscriberInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSubscriberInstancesInvoker) Invoke() (*model.ListSubscriberInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSubscriberInstancesResponse), nil
+	}
+}
+
 type ModifyCollationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3858,6 +3954,22 @@ func (i *ModifyCollationInvoker) Invoke() (*model.ModifyCollationResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ModifyCollationResponse), nil
+	}
+}
+
+type ModifyPublicationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyPublicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyPublicationInvoker) Invoke() (*model.ModifyPublicationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyPublicationResponse), nil
 	}
 }
 

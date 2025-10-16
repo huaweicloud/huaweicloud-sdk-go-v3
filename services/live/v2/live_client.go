@@ -267,6 +267,28 @@ func (c *LiveClient) ListSnapshotDataInvoker(request *model.ListSnapshotDataRequ
 	return &ListSnapshotDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTranscodeConcurrencyNum 查询推流域名转码路数
+//
+// 查询推流域名下的转码路数，根据输入时间点和时间粒度，返回转码路数。
+// 最大查询跨度1天，最大查询周期90天，数据延迟5分钟。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ListTranscodeConcurrencyNum(request *model.ListTranscodeConcurrencyNumRequest) (*model.ListTranscodeConcurrencyNumResponse, error) {
+	requestDef := GenReqDefForListTranscodeConcurrencyNum()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTranscodeConcurrencyNumResponse), nil
+	}
+}
+
+// ListTranscodeConcurrencyNumInvoker 查询推流域名转码路数
+func (c *LiveClient) ListTranscodeConcurrencyNumInvoker(request *model.ListTranscodeConcurrencyNumRequest) *ListTranscodeConcurrencyNumInvoker {
+	requestDef := GenReqDefForListTranscodeConcurrencyNum()
+	return &ListTranscodeConcurrencyNumInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListTranscodeData 查询转码用量接口
 //
 // 查询直播域名每小时的转码时长数据。  最大查询跨度31天，最大查询周期90天。
