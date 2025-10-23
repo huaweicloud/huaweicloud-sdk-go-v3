@@ -16,6 +16,8 @@ type RestartConfiguration struct {
 
 	// 是否在可维护时间段内重启。
 	Delay *bool `json:"delay,omitempty"`
+
+	RestartPolicy *RestartPolicy `json:"restart_policy,omitempty"`
 }
 
 func (o RestartConfiguration) String() string {

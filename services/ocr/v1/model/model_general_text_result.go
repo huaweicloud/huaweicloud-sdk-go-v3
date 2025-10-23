@@ -17,6 +17,9 @@ type GeneralTextResult struct {
 
 	// 识别文字块列表，输出顺序从左到右，先上后下。
 	WordsBlockList []GeneralTextWordsBlockList `json:"words_block_list"`
+
+	// 所有文字块拼接的识别结果，同一行的文字块使用“\\t”拼接，不同行的文字块使用“\\n”拼接。 当return_markdown_result为true时，返回该字段值，否则，不返回该字段。
+	MarkdownResult *string `json:"markdown_result,omitempty"`
 }
 
 func (o GeneralTextResult) String() string {

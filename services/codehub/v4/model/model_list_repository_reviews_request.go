@@ -26,7 +26,7 @@ type ListRepositoryReviewsRequest struct {
 	// **参数解释：** 结束日期。
 	EndDate *sdktime.SdkTime `json:"end_date,omitempty"`
 
-	// **参数解释：** 是否仅返回todo。 **取值范围：** - true，仅返回带有提交计数和diffs计数的结果。 - false，按照compare_view参数返回结果信息。
+	// **参数解释：** 是否仅返回带有提交计数和diffs计数的结果。 **取值范围：** - true，仅返回带有提交计数和diffs计数的结果。 - false，按照compare_view参数返回结果信息。
 	OnlyCount *bool `json:"only_count,omitempty"`
 
 	// **参数解释：** 搜索的检视意见分类。 **取值范围：** 字符串长度不少于1，不超过200。

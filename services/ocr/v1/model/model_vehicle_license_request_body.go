@@ -26,6 +26,9 @@ type VehicleLicenseRequestBody struct {
 
 	// 是否支持识别电子行驶证，取值范围：  - true：支持识别电子行驶证  - false：不支持识别电子行驶证  默认不支持识别电子行驶证。如果输入参数不是Boolean类型，则会报非法参数错误。
 	RecognizeElectronicLicense *bool `json:"recognize_electronic_license,omitempty"`
+
+	// 是否返回纸质行驶证图像的告警信息，可选值包括： - true：返回纸质行驶证图像的告警信息 - false：不返回纸质行驶证图像的告警信息 如果无该参数，系统默认不返回告警信息。如果输入参数不是Boolean类型，则会报非法参数错误。
+	Alarm *bool `json:"alarm,omitempty"`
 }
 
 func (o VehicleLicenseRequestBody) String() string {

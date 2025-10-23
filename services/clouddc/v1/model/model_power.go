@@ -25,7 +25,7 @@ type Power struct {
 	PowerSupplyType *string `json:"power_supply_type,omitempty"`
 
 	// 额定功率
-	PowerCapacityWatts *string `json:"power_capacity_watts,omitempty"`
+	PowerCapacityWatts *int32 `json:"power_capacity_watts,omitempty"`
 
 	// 输入电压
 	LineInputVoltage *int32 `json:"line_input_voltage,omitempty"`

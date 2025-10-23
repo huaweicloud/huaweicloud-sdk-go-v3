@@ -84,7 +84,7 @@ type UpdateMergeRequestSettingDto struct {
 	// **参数解释：** 打分模式最低合入分数。
 	OnlyAllowMergeIfVoteBiggerThan *int32 `json:"only_allow_merge_if_vote_bigger_than,omitempty"`
 
-	// **参数解释：** 仅合并人和合并合并请求。
+	// **参数解释：** 仅合并人可合并合并请求。
 	OnlyAssigneeCanMerge *bool `json:"only_assignee_can_merge,omitempty"`
 }
 

@@ -9,7 +9,7 @@ import (
 type UpdateMfaDeviceForUserReqBody struct {
 
 	// MFA设备显示名称
-	DisplayName *string `json:"display_name,omitempty"`
+	DisplayName string `json:"display_name"`
 }
 
 func (o UpdateMfaDeviceForUserReqBody) String() string {

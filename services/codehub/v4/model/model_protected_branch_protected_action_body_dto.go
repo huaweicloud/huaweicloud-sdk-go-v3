@@ -25,6 +25,9 @@ type ProtectedBranchProtectedActionBodyDto struct {
 
 	// **参数解释：** 事件名称。 **约束限制：** action中必传此字段。 **取值范围：** - push，推送 。 - merge，合并 。 **默认取值：** 不涉及。
 	Action *ProtectedBranchProtectedActionBodyDtoAction `json:"action,omitempty"`
+
+	// **参数解释：** 附加开关。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+	AdditionSwitchers *[]ProtectedActionSwitcher `json:"addition_switchers,omitempty"`
 }
 
 func (o ProtectedBranchProtectedActionBodyDto) String() string {

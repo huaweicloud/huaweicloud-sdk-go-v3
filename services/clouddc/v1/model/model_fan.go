@@ -16,7 +16,7 @@ type Fan struct {
 	Model *string `json:"model,omitempty"`
 
 	// 转速
-	Reading *string `json:"reading,omitempty"`
+	Reading *int32 `json:"reading,omitempty"`
 
 	// 转速单位
 	ReadingUnits *string `json:"reading_units,omitempty"`
@@ -25,7 +25,7 @@ type Fan struct {
 	PartNumber *string `json:"part_number,omitempty"`
 
 	// 速率比
-	SpeedRatio *string `json:"speed_ratio,omitempty"`
+	SpeedRatio *int32 `json:"speed_ratio,omitempty"`
 
 	Status *Status `json:"status,omitempty"`
 }

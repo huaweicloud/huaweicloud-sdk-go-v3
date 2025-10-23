@@ -1029,22 +1029,6 @@ func (i *ListDatabaseVersionsInvoker) Invoke() (*model.ListDatabaseVersionsRespo
 	}
 }
 
-type ListDatabaseVolumeInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListDatabaseVolumeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListDatabaseVolumeInvoker) Invoke() (*model.ListDatabaseVolumeResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListDatabaseVolumeResponse), nil
-	}
-}
-
 type ListDatabaseVolumeSummaryInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2997,6 +2981,22 @@ func (i *UpdateFeaturesInvoker) Invoke() (*model.UpdateFeaturesResponse, error) 
 	}
 }
 
+type UpdateInstanceAliasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceAliasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInstanceAliasInvoker) Invoke() (*model.UpdateInstanceAliasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceAliasResponse), nil
+	}
+}
+
 type UpdateInstanceConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3461,6 +3461,22 @@ func (i *ListSqlLimitTaskInvoker) Invoke() (*model.ListSqlLimitTaskResponse, err
 	}
 }
 
+type ListSqlPlanActionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSqlPlanActionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSqlPlanActionInvoker) Invoke() (*model.ListSqlPlanActionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSqlPlanActionResponse), nil
+	}
+}
+
 type ListSqlTraceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3474,6 +3490,22 @@ func (i *ListSqlTraceInvoker) Invoke() (*model.ListSqlTraceResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListSqlTraceResponse), nil
+	}
+}
+
+type ShowFullSqlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFullSqlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowFullSqlInvoker) Invoke() (*model.ShowFullSqlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFullSqlResponse), nil
 	}
 }
 

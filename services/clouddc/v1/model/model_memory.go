@@ -37,16 +37,16 @@ type Memory struct {
 	State *string `json:"state,omitempty"`
 
 	// Rank数量
-	RankCount *string `json:"rank_count,omitempty"`
+	RankCount *int32 `json:"rank_count,omitempty"`
 
 	// 数据带宽
-	DataWidthBits *string `json:"data_width_bits,omitempty"`
+	DataWidthBits *int32 `json:"data_width_bits,omitempty"`
 
 	// 部件编号
 	PartNumber *string `json:"part_number,omitempty"`
 
 	// 最小电压
-	MinVoltageMillivolt *string `json:"min_voltage_millivolt,omitempty"`
+	MinVoltageMillivolt *int32 `json:"min_voltage_millivolt,omitempty"`
 
 	// Bom编码
 	BomNumber *string `json:"bom_number,omitempty"`

@@ -11,7 +11,7 @@ type UpdateRepoWebHookSubscriptionDto struct {
 	// **参数解释：** webhook的url (需要base64编码)。
 	Url *string `json:"url,omitempty"`
 
-	// **参数解释：** 秘钥。
+	// **参数解释：** 密钥。
 	Token *string `json:"token,omitempty"`
 
 	// **参数解释：** userid列表，提醒群中的指定成员（@某个成员），最长1000，每个最长100，“;”分隔符。

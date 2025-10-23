@@ -53,12 +53,6 @@ type CommitRuleDto struct {
 	// **参数解释：** 更新时间。
 	UpdatedAt *string `json:"updated_at,omitempty"`
 
-	// **参数解释：** 是否跳过规则检测。 **约束限制：** 不涉及。 **取值范围：** - true，跳过规则检测。 - false，不跳过规则检测。
-	SkipRuleCheck *bool `json:"skip_rule_check,omitempty"`
-
-	// **参数解释：** 失效时间。
-	SkipRuleEndDate *string `json:"skip_rule_end_date,omitempty"`
-
 	// **参数解释：** 规则名称。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	Name *string `json:"name,omitempty"`
 
@@ -67,6 +61,12 @@ type CommitRuleDto struct {
 
 	// **参数解释：** 创建时间。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	CreatedAt *string `json:"created_at,omitempty"`
+
+	// **参数解释：** 跳过规则检测。 **约束限制：** 仅CR仓库支持此参数。
+	SkipRuleCheck *bool `json:"skip_rule_check,omitempty"`
+
+	// **参数解释：** 跳过规则检测失效时间， 例如: 2025-8-19。 **约束限制：** 仅CR仓库支持此参数。
+	SkipRuleEndDate *string `json:"skip_rule_end_date,omitempty"`
 }
 
 func (o CommitRuleDto) String() string {

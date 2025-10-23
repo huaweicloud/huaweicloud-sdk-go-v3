@@ -92,7 +92,11 @@ type VehicleLicenseResult struct {
 
 	Front *VehicleLicenseFront `json:"front,omitempty"`
 
-	Back *VehicleLicenseback `json:"back,omitempty"`
+	Back *VehicleLicenseBack `json:"back,omitempty"`
+
+	AlarmResult *VehicleLicenseAlarmResult `json:"alarm_result,omitempty"`
+
+	AlarmConfidence *VehicleLicenseAlarmConfidence `json:"alarm_confidence,omitempty"`
 }
 
 func (o VehicleLicenseResult) String() string {

@@ -9,7 +9,7 @@ import (
 // ImpersonationToken This feature was introduced in  9.0
 type ImpersonationToken struct {
 
-	// **参数解释：** 唯一标示id。
+	// **参数解释：** 唯一标识id。
 	Id *int32 `json:"id,omitempty"`
 
 	// **参数解释：** 名称。 **取值范围：** 字符串长度不少于1，不超过1000。

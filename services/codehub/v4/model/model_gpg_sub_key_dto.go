@@ -17,7 +17,7 @@ type GpgSubKeyDto struct {
 	// **参数解释：** gpg_key的id。
 	GpgKeyId *int32 `json:"gpg_key_id,omitempty"`
 
-	// **参数解释：** 子秘钥的id。 **取值范围：** 字符串长度不少于1，不超过1000。
+	// **参数解释：** 子密钥的id。 **取值范围：** 字符串长度不少于1，不超过1000。
 	Keyid *string `json:"keyid,omitempty"`
 }
 

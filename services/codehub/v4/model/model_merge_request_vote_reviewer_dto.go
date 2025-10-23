@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -18,8 +21,8 @@ type MergeRequestVoteReviewerDto struct {
 	// **参数解释：** 用户名。
 	Username *string `json:"username,omitempty"`
 
-	// 用户状态
-	State *string `json:"state,omitempty"`
+	// **参数解释：** 用户状态。 **取值范围：** - active: 可用账户。 - blocked: 被锁定用户。 - error: 未查询到该用户。
+	State *MergeRequestVoteReviewerDtoState `json:"state,omitempty"`
 
 	// 服务级权限状态 0：停用 1：启用
 	ServiceLicenseStatus *int32 `json:"service_license_status,omitempty"`
@@ -59,4 +62,55 @@ func (o MergeRequestVoteReviewerDto) String() string {
 	}
 
 	return strings.Join([]string{"MergeRequestVoteReviewerDto", string(data)}, " ")
+}
+
+type MergeRequestVoteReviewerDtoState struct {
+	value string
+}
+
+type MergeRequestVoteReviewerDtoStateEnum struct {
+	ACTIVE  MergeRequestVoteReviewerDtoState
+	BLOCKED MergeRequestVoteReviewerDtoState
+	ERROR   MergeRequestVoteReviewerDtoState
+}
+
+func GetMergeRequestVoteReviewerDtoStateEnum() MergeRequestVoteReviewerDtoStateEnum {
+	return MergeRequestVoteReviewerDtoStateEnum{
+		ACTIVE: MergeRequestVoteReviewerDtoState{
+			value: "active",
+		},
+		BLOCKED: MergeRequestVoteReviewerDtoState{
+			value: "blocked",
+		},
+		ERROR: MergeRequestVoteReviewerDtoState{
+			value: "error",
+		},
+	}
+}
+
+func (c MergeRequestVoteReviewerDtoState) Value() string {
+	return c.value
+}
+
+func (c MergeRequestVoteReviewerDtoState) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *MergeRequestVoteReviewerDtoState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

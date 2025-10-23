@@ -8,6 +8,9 @@ import (
 
 type ExecuteActionParams struct {
 
+	// 用户ID
+	UserId *string `json:"user_id,omitempty"`
+
 	// 执行当前操作的工单单号。
 	TicketId *string `json:"ticket_id,omitempty"`
 

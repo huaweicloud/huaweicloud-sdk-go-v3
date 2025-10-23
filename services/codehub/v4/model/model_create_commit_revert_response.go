@@ -80,7 +80,10 @@ type CreateCommitRevertResponse struct {
 
 	// Revert临时分支名
 	RevertBranchName *string `json:"revert_branch_name,omitempty"`
-	HttpStatusCode   int     `json:"-"`
+
+	// 变更请求 iid,仅变更请求返回
+	Iid            *int32 `json:"iid,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o CreateCommitRevertResponse) String() string {

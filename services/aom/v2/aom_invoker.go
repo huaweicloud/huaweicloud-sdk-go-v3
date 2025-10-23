@@ -117,6 +117,22 @@ func (i *AddOrUpdateServiceDiscoveryRulesInvoker) Invoke() (*model.AddOrUpdateSe
 	}
 }
 
+type BatchUpdateAlarmRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateAlarmRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateAlarmRuleInvoker) Invoke() (*model.BatchUpdateAlarmRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateAlarmRuleResponse), nil
+	}
+}
+
 type CountEventsInvoker struct {
 	*invoker.BaseInvoker
 }

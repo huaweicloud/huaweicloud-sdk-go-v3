@@ -73,7 +73,7 @@ type ShowGroupSettingsInheritCfgResponse struct {
 	IssueTemplates *int32 `json:"issue_templates,omitempty"`
 
 	// **参数解释：** 排序id。
-	CrCommentEmplates *int32 `json:"cr_comment_emplates,omitempty"`
+	CrCommentTemplates *int32 `json:"cr_comment_templates,omitempty"`
 
 	// **参数解释：** 排序id。
 	MergeRequests *int32 `json:"merge_requests,omitempty"`
@@ -84,7 +84,7 @@ type ShowGroupSettingsInheritCfgResponse struct {
 	// **参数解释：** 仓库策略。
 	RepositorySettings *int32 `json:"repository_settings,omitempty"`
 
-	// **参数解释：** 部署秘钥策略。
+	// **参数解释：** 部署密钥策略。
 	DeployKeys *int32 `json:"deploy_keys,omitempty"`
 
 	// **参数解释：** 水印策略。

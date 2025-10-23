@@ -16,6 +16,9 @@ type SessionTopSqlStatisticInfo struct {
 
 	// **参数解释**: 查询语句。 **取值范围**: 不涉及。
 	Query *string `json:"query,omitempty"`
+
+	// **参数解释**: SQL执行数量。 **取值范围**: 大于等于0。
+	Count *int32 `json:"count,omitempty"`
 }
 
 func (o SessionTopSqlStatisticInfo) String() string {

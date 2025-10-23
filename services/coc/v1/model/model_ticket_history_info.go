@@ -8,33 +8,6 @@ import (
 
 type TicketHistoryInfo struct {
 
-	// 扩展字段
-	CurrentCloudServiceId *string `json:"current_cloud_service_id,omitempty"`
-
-	// 扩展字段
-	Description *string `json:"description,omitempty"`
-
-	// 扩展字段
-	LevelId *string `json:"level_id,omitempty"`
-
-	// 扩展字段
-	MtmRegion *string `json:"mtm_region,omitempty"`
-
-	// 扩展字段
-	MtmType *string `json:"mtm_type,omitempty"`
-
-	// 扩展字段
-	SourceId *string `json:"source_id,omitempty"`
-
-	// 扩展字段
-	Title *string `json:"title,omitempty"`
-
-	// 是否变更事件
-	IsChangeEvent *bool `json:"is_change_event,omitempty"`
-
-	// 是否变更事件
-	IsServiceInterrupt *bool `json:"is_service_interrupt,omitempty"`
-
 	// 操作标识
 	ActionId *string `json:"action_id,omitempty"`
 

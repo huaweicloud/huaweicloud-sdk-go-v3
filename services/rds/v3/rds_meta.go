@@ -303,6 +303,26 @@ func GenReqDefForCheckInstanceForUpgrade() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCheckWeakpwd() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/weakpwd").
+		WithResponse(new(model.CheckWeakpwdResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCopyConfiguration() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -1660,6 +1680,31 @@ func GenReqDefForListLogLtsConfigs() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListMajorVersionFeature() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/major-version-feature").
+		WithResponse(new(model.ListMajorVersionFeatureResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Version").
+		WithJsonTag("version").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Single").
+		WithJsonTag("single").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListOffSiteBackups() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -2422,6 +2467,44 @@ func GenReqDefForListTasks() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListTopSqls() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/instances/{instance_id}/top-sqls").
+		WithResponse(new(model.ListTopSqlsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortKey").
+		WithJsonTag("sort_key").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Statement").
+		WithJsonTag("statement").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortDir").
+		WithJsonTag("sort_dir").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListUpdateBackupEnhancePolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -2601,6 +2684,31 @@ func GenReqDefForModifyRdSforMySqlProxyRouteMode() *def.HttpRequestDef {
 		WithName("ContentType").
 		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForNotifyReplaceNode() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/instances/{instance_id}/replace-node").
+		WithResponse(new(model.NotifyReplaceNodeResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
@@ -3454,6 +3562,27 @@ func GenReqDefForShowReplicationStatus() *def.HttpRequestDef {
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/instances/{instance_id}/replication/status").
 		WithResponse(new(model.ShowReplicationStatusResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowRestartPolicy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/instances/{instance_id}/restart-policy").
+		WithResponse(new(model.ShowRestartPolicyResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

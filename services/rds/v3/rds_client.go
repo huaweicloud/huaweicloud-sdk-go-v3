@@ -292,6 +292,27 @@ func (c *RdsClient) CheckInstanceForUpgradeInvoker(request *model.CheckInstanceF
 	return &CheckInstanceForUpgradeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckWeakpwd 弱密码校验
+//
+// 弱密码校验。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) CheckWeakpwd(request *model.CheckWeakpwdRequest) (*model.CheckWeakpwdResponse, error) {
+	requestDef := GenReqDefForCheckWeakpwd()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckWeakpwdResponse), nil
+	}
+}
+
+// CheckWeakpwdInvoker 弱密码校验
+func (c *RdsClient) CheckWeakpwdInvoker(request *model.CheckWeakpwdRequest) *CheckWeakpwdInvoker {
+	requestDef := GenReqDefForCheckWeakpwd()
+	return &CheckWeakpwdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CopyConfiguration 复制参数模板
 //
 // 复制参数模板
@@ -1322,6 +1343,27 @@ func (c *RdsClient) ListLogLtsConfigsInvoker(request *model.ListLogLtsConfigsReq
 	return &ListLogLtsConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListMajorVersionFeature 查询版本支持特性
+//
+// 查询版本支持特性。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListMajorVersionFeature(request *model.ListMajorVersionFeatureRequest) (*model.ListMajorVersionFeatureResponse, error) {
+	requestDef := GenReqDefForListMajorVersionFeature()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMajorVersionFeatureResponse), nil
+	}
+}
+
+// ListMajorVersionFeatureInvoker 查询版本支持特性
+func (c *RdsClient) ListMajorVersionFeatureInvoker(request *model.ListMajorVersionFeatureRequest) *ListMajorVersionFeatureInvoker {
+	requestDef := GenReqDefForListMajorVersionFeature()
+	return &ListMajorVersionFeatureInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListOffSiteBackups 查询跨区域备份列表
 //
 // 查询跨区域备份列表。
@@ -1850,9 +1892,9 @@ func (c *RdsClient) ListStorageTypesInvoker(request *model.ListStorageTypesReque
 	return &ListStorageTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListTasks 查询及时任务列表
+// ListTasks 查询即时任务列表
 //
-// 查询及时任务列表。
+// 查询即时任务列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RdsClient) ListTasks(request *model.ListTasksRequest) (*model.ListTasksResponse, error) {
@@ -1865,10 +1907,31 @@ func (c *RdsClient) ListTasks(request *model.ListTasksRequest) (*model.ListTasks
 	}
 }
 
-// ListTasksInvoker 查询及时任务列表
+// ListTasksInvoker 查询即时任务列表
 func (c *RdsClient) ListTasksInvoker(request *model.ListTasksRequest) *ListTasksInvoker {
 	requestDef := GenReqDefForListTasks()
 	return &ListTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTopSqls 查询TOP SQL相关信息
+//
+// 查询TOP SQL相关信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListTopSqls(request *model.ListTopSqlsRequest) (*model.ListTopSqlsResponse, error) {
+	requestDef := GenReqDefForListTopSqls()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTopSqlsResponse), nil
+	}
+}
+
+// ListTopSqlsInvoker 查询TOP SQL相关信息
+func (c *RdsClient) ListTopSqlsInvoker(request *model.ListTopSqlsRequest) *ListTopSqlsInvoker {
+	requestDef := GenReqDefForListTopSqls()
+	return &ListTopSqlsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListUpdateBackupEnhancePolicy 查询高级备份策略
@@ -2017,6 +2080,27 @@ func (c *RdsClient) ModifyRdSforMySqlProxyRouteMode(request *model.ModifyRdSforM
 func (c *RdsClient) ModifyRdSforMySqlProxyRouteModeInvoker(request *model.ModifyRdSforMySqlProxyRouteModeRequest) *ModifyRdSforMySqlProxyRouteModeInvoker {
 	requestDef := GenReqDefForModifyRdSforMySqlProxyRouteMode()
 	return &ModifyRdSforMySqlProxyRouteModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// NotifyReplaceNode 备机顶替只读节点
+//
+// 备机顶替只读节点。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) NotifyReplaceNode(request *model.NotifyReplaceNodeRequest) (*model.NotifyReplaceNodeResponse, error) {
+	requestDef := GenReqDefForNotifyReplaceNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.NotifyReplaceNodeResponse), nil
+	}
+}
+
+// NotifyReplaceNodeInvoker 备机顶替只读节点
+func (c *RdsClient) NotifyReplaceNodeInvoker(request *model.NotifyReplaceNodeRequest) *NotifyReplaceNodeInvoker {
+	requestDef := GenReqDefForNotifyReplaceNode()
+	return &NotifyReplaceNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RestoreExistInstance 恢复到已有实例
@@ -2798,6 +2882,27 @@ func (c *RdsClient) ShowReplicationStatus(request *model.ShowReplicationStatusRe
 func (c *RdsClient) ShowReplicationStatusInvoker(request *model.ShowReplicationStatusRequest) *ShowReplicationStatusInvoker {
 	requestDef := GenReqDefForShowReplicationStatus()
 	return &ShowReplicationStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRestartPolicy 查询实例重启策略
+//
+// 查询实例重启策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowRestartPolicy(request *model.ShowRestartPolicyRequest) (*model.ShowRestartPolicyResponse, error) {
+	requestDef := GenReqDefForShowRestartPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRestartPolicyResponse), nil
+	}
+}
+
+// ShowRestartPolicyInvoker 查询实例重启策略
+func (c *RdsClient) ShowRestartPolicyInvoker(request *model.ShowRestartPolicyRequest) *ShowRestartPolicyInvoker {
+	requestDef := GenReqDefForShowRestartPolicy()
+	return &ShowRestartPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSecondLevelMonitoring 查询秒级监控策略

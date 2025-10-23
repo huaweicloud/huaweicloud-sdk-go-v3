@@ -734,6 +734,27 @@ func (c *GaussDBforNoSQLClient) ListAvailableFlavorInfosInvoker(request *model.L
 	return &ListAvailableFlavorInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListBackups 查询备份列表（推荐）
+//
+// 根据指定条件查询备份列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListBackups(request *model.ListBackupsRequest) (*model.ListBackupsResponse, error) {
+	requestDef := GenReqDefForListBackups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBackupsResponse), nil
+	}
+}
+
+// ListBackupsInvoker 查询备份列表（推荐）
+func (c *GaussDBforNoSQLClient) ListBackupsInvoker(request *model.ListBackupsRequest) *ListBackupsInvoker {
+	requestDef := GenReqDefForListBackups()
+	return &ListBackupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCassandraSlowLogs 查询GeminiDB(for Cassandra)数据库慢日志
 //
 // 查询GeminiDB(for Cassandra)数据库慢日志信息，支持日志关键字搜索。
@@ -1805,6 +1826,27 @@ func (c *GaussDBforNoSQLClient) RestoreExistingInstance(request *model.RestoreEx
 func (c *GaussDBforNoSQLClient) RestoreExistingInstanceInvoker(request *model.RestoreExistingInstanceRequest) *RestoreExistingInstanceInvoker {
 	requestDef := GenReqDefForRestoreExistingInstance()
 	return &RestoreExistingInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestoreRedisData 数据文件导入已有实例
+//
+// 数据导入已有实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) RestoreRedisData(request *model.RestoreRedisDataRequest) (*model.RestoreRedisDataResponse, error) {
+	requestDef := GenReqDefForRestoreRedisData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestoreRedisDataResponse), nil
+	}
+}
+
+// RestoreRedisDataInvoker 数据文件导入已有实例
+func (c *GaussDBforNoSQLClient) RestoreRedisDataInvoker(request *model.RestoreRedisDataRequest) *RestoreRedisDataInvoker {
+	requestDef := GenReqDefForRestoreRedisData()
+	return &RestoreRedisDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RestoreRedisPitr 恢复当前Redis实例到指定时间点

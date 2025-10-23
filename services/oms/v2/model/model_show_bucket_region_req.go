@@ -21,6 +21,9 @@ type ShowBucketRegionReq struct {
 	// 用于谷歌云Cloud Storage鉴权
 	JsonAuthFile *string `json:"json_auth_file,omitempty"`
 
+	// 连接字符串，用于微软云Blob鉴权
+	ConnectionString *string `json:"connection_string,omitempty"`
+
 	// 当源端为腾讯云时，会返回此参数。
 	AppId *string `json:"app_id,omitempty"`
 

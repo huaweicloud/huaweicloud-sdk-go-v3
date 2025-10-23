@@ -8,7 +8,7 @@ import (
 
 // ResizeClusterRequestBody **参数解释**： 扩容/添加空闲节点操作请求体。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 type ResizeClusterRequestBody struct {
-	ScaleOut *ScaleOut `json:"scale_out,omitempty"`
+	ScaleOut *ScaleOut `json:"scale_out"`
 
 	// **参数解释**： 当前是否仅添加空闲节点。 **约束限制**： 不涉及。 **取值范围**： true：仅添加节点，如需扩容则需要单独操作 false：添加节点并扩容集群 **默认取值**： false
 	CreateNodeOnly *bool `json:"create_node_only,omitempty"`

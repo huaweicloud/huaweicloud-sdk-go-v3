@@ -27,6 +27,18 @@ type IncidentTicketInfoResponseData struct {
 	// 业务是否中断，取值：true/false
 	IsServiceInterrupt *bool `json:"is_service_interrupt,omitempty"`
 
+	// 故障发生时间戳
+	StartTime *int64 `json:"start_time,omitempty"`
+
+	// 故障恢复时间戳
+	FaultRecoveryTime *int64 `json:"fault_recovery_time,omitempty"`
+
+	// 定界完成时间时间戳
+	FaultDelineationTime *int64 `json:"fault_delineation_time,omitempty"`
+
+	// 事件归属 参考：枚举 事件来源incident_ownership
+	IncidentOwnership *string `json:"incident_ownership,omitempty"`
+
 	// 事件类别 参考：枚举 事件类别incident_type
 	IncidentType *string `json:"incident_type,omitempty"`
 

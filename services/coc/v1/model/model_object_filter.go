@@ -8,14 +8,17 @@ import (
 
 type ObjectFilter struct {
 
+	// 条件名称
+	Name *string `json:"name,omitempty"`
+
 	// 操作符 in/like/startwith/endwith/=/!=/>/<等
-	Operator string `json:"operator"`
+	Operator *string `json:"operator,omitempty"`
 
 	// 字段名称
-	Field string `json:"field"`
+	Field *string `json:"field,omitempty"`
 
 	// 搜索值
-	Values []string `json:"values"`
+	Values *[]string `json:"values,omitempty"`
 }
 
 func (o ObjectFilter) String() string {

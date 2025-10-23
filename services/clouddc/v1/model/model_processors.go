@@ -22,13 +22,13 @@ type Processors struct {
 	TotalCores *int32 `json:"total_cores,omitempty"`
 
 	// 启用的核心数
-	TotalEnabledCores *string `json:"total_enabled_cores,omitempty"`
+	TotalEnabledCores *int32 `json:"total_enabled_cores,omitempty"`
 
 	// 处理器的总线程数
 	TotalThreads *int32 `json:"total_threads,omitempty"`
 
 	// 启用的总线程
-	TotalEnabledThreads *string `json:"total_enabled_threads,omitempty"`
+	TotalEnabledThreads *int32 `json:"total_enabled_threads,omitempty"`
 
 	// 处理器的插槽号
 	Socket *int32 `json:"socket,omitempty"`

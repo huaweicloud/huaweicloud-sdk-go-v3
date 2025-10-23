@@ -9,7 +9,7 @@ import (
 // ShowReadmeFileResponse Response Object
 type ShowReadmeFileResponse struct {
 
-	// **参数解释：** bolb文件ID。 **约束限制：** 不涉及。
+	// **参数解释：** blob文件ID。 **约束限制：** 不涉及。
 	BlobId *string `json:"blob_id,omitempty"`
 
 	// **参数解释：** 经过base64编码后的文件内容。 **约束限制：** 不涉及。

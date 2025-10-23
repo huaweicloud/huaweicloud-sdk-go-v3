@@ -1648,48 +1648,6 @@ func GenReqDefForListDatabaseVersions() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListDatabaseVolume() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v3/{project_id}/instances/{instance_id}/database-volume").
-		WithResponse(new(model.ListDatabaseVolumeResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("DatabaseName").
-		WithJsonTag("database_name").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("TableSpaceName").
-		WithJsonTag("table_space_name").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("UserName").
-		WithJsonTag("user_name").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XLanguage").
-		WithJsonTag("X-Language").
-		WithLocationType(def.Header))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForListDatabaseVolumeSummary() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -4959,6 +4917,31 @@ func GenReqDefForUpdateFeatures() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForUpdateInstanceAlias() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3/{project_id}/instances/{instance_id}/alias").
+		WithResponse(new(model.UpdateInstanceAliasResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateInstanceConfiguration() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -5729,6 +5712,35 @@ func GenReqDefForListSqlLimitTask() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListSqlPlanAction() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/instances/{instance_id}/sql/{node_id}/plans/query").
+		WithResponse(new(model.ListSqlPlanActionResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("NodeId").
+		WithJsonTag("node_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListSqlTrace() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -5766,6 +5778,40 @@ func GenReqDefForListSqlTrace() *def.HttpRequestDef {
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowFullSql() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/instances/{instance_id}/full-sqls/{sql_exec_id}").
+		WithResponse(new(model.ShowFullSqlResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SqlExecId").
+		WithJsonTag("sql_exec_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SqlId").
+		WithJsonTag("sql_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

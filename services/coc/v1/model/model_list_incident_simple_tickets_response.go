@@ -16,10 +16,10 @@ type ListIncidentSimpleTicketsResponse struct {
 	ErrorCode string `json:"error_code"`
 
 	// 请求响应描述
-	ErrorMsg string `json:"error_msg"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 
 	// 根据条件查到的事件单信息
-	Data           *interface{} `json:"data"`
+	Data           *interface{} `json:"data,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

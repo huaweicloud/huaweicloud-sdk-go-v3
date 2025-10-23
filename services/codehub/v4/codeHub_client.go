@@ -19,111 +19,6 @@ func CodeHubClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
-// CreateBranch 创建分支
-//
-// 创建分支
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) CreateBranch(request *model.CreateBranchRequest) (*model.CreateBranchResponse, error) {
-	requestDef := GenReqDefForCreateBranch()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateBranchResponse), nil
-	}
-}
-
-// CreateBranchInvoker 创建分支
-func (c *CodeHubClient) CreateBranchInvoker(request *model.CreateBranchRequest) *CreateBranchInvoker {
-	requestDef := GenReqDefForCreateBranch()
-	return &CreateBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteBranch 删除分支
-//
-// 删除分支
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) DeleteBranch(request *model.DeleteBranchRequest) (*model.DeleteBranchResponse, error) {
-	requestDef := GenReqDefForDeleteBranch()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteBranchResponse), nil
-	}
-}
-
-// DeleteBranchInvoker 删除分支
-func (c *CodeHubClient) DeleteBranchInvoker(request *model.DeleteBranchRequest) *DeleteBranchInvoker {
-	requestDef := GenReqDefForDeleteBranch()
-	return &DeleteBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListBranches 获取分支列表
-//
-// 获取分支列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) ListBranches(request *model.ListBranchesRequest) (*model.ListBranchesResponse, error) {
-	requestDef := GenReqDefForListBranches()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListBranchesResponse), nil
-	}
-}
-
-// ListBranchesInvoker 获取分支列表
-func (c *CodeHubClient) ListBranchesInvoker(request *model.ListBranchesRequest) *ListBranchesInvoker {
-	requestDef := GenReqDefForListBranches()
-	return &ListBranchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowBranch 获取分支详情
-//
-// 获取分支详情
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) ShowBranch(request *model.ShowBranchRequest) (*model.ShowBranchResponse, error) {
-	requestDef := GenReqDefForShowBranch()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowBranchResponse), nil
-	}
-}
-
-// ShowBranchInvoker 获取分支详情
-func (c *CodeHubClient) ShowBranchInvoker(request *model.ShowBranchRequest) *ShowBranchInvoker {
-	requestDef := GenReqDefForShowBranch()
-	return &ShowBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateBranchName 分支重命名
-//
-// 分支重命名。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) UpdateBranchName(request *model.UpdateBranchNameRequest) (*model.UpdateBranchNameResponse, error) {
-	requestDef := GenReqDefForUpdateBranchName()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateBranchNameResponse), nil
-	}
-}
-
-// UpdateBranchNameInvoker 分支重命名
-func (c *CodeHubClient) UpdateBranchNameInvoker(request *model.UpdateBranchNameRequest) *UpdateBranchNameInvoker {
-	requestDef := GenReqDefForUpdateBranchName()
-	return &UpdateBranchNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateCommit 创建提交信息
 //
 // 创建提交信息
@@ -185,6 +80,27 @@ func (c *CodeHubClient) ListCommitAssociatedRefs(request *model.ListCommitAssoci
 func (c *CodeHubClient) ListCommitAssociatedRefsInvoker(request *model.ListCommitAssociatedRefsRequest) *ListCommitAssociatedRefsInvoker {
 	requestDef := GenReqDefForListCommitAssociatedRefs()
 	return &ListCommitAssociatedRefsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCommits 查看提交列表
+//
+// 查看提交列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListCommits(request *model.ListCommitsRequest) (*model.ListCommitsResponse, error) {
+	requestDef := GenReqDefForListCommits()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCommitsResponse), nil
+	}
+}
+
+// ListCommitsInvoker 查看提交列表
+func (c *CodeHubClient) ListCommitsInvoker(request *model.ListCommitsRequest) *ListCommitsInvoker {
+	requestDef := GenReqDefForListCommits()
+	return &ListCommitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowCommit 获取特定提交信息
@@ -334,6 +250,48 @@ func (c *CodeHubClient) CreateReviewSettingInvoker(request *model.CreateReviewSe
 	return &CreateReviewSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteMergeRequestDiscussion 删除合并请求检视意见
+//
+// 删除合并请求检视意见
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) DeleteMergeRequestDiscussion(request *model.DeleteMergeRequestDiscussionRequest) (*model.DeleteMergeRequestDiscussionResponse, error) {
+	requestDef := GenReqDefForDeleteMergeRequestDiscussion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteMergeRequestDiscussionResponse), nil
+	}
+}
+
+// DeleteMergeRequestDiscussionInvoker 删除合并请求检视意见
+func (c *CodeHubClient) DeleteMergeRequestDiscussionInvoker(request *model.DeleteMergeRequestDiscussionRequest) *DeleteMergeRequestDiscussionInvoker {
+	requestDef := GenReqDefForDeleteMergeRequestDiscussion()
+	return &DeleteMergeRequestDiscussionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCommitDiscussions 获取代码页单个提交下检视意见列表
+//
+// 获取代码页单个提交下检视意见列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListCommitDiscussions(request *model.ListCommitDiscussionsRequest) (*model.ListCommitDiscussionsResponse, error) {
+	requestDef := GenReqDefForListCommitDiscussions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCommitDiscussionsResponse), nil
+	}
+}
+
+// ListCommitDiscussionsInvoker 获取代码页单个提交下检视意见列表
+func (c *CodeHubClient) ListCommitDiscussionsInvoker(request *model.ListCommitDiscussionsRequest) *ListCommitDiscussionsInvoker {
+	requestDef := GenReqDefForListCommitDiscussions()
+	return &ListCommitDiscussionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDefaultReviewCategories 获取默认的检视意见分类
 //
 // 获取默认的检视意见分类
@@ -374,6 +332,27 @@ func (c *CodeHubClient) ListMergeRequestDiscussions(request *model.ListMergeRequ
 func (c *CodeHubClient) ListMergeRequestDiscussionsInvoker(request *model.ListMergeRequestDiscussionsRequest) *ListMergeRequestDiscussionsInvoker {
 	requestDef := GenReqDefForListMergeRequestDiscussions()
 	return &ListMergeRequestDiscussionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMergeRequestSystemNotes 获取合并请求动态列表
+//
+// 获取合并请求动态列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListMergeRequestSystemNotes(request *model.ListMergeRequestSystemNotesRequest) (*model.ListMergeRequestSystemNotesResponse, error) {
+	requestDef := GenReqDefForListMergeRequestSystemNotes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMergeRequestSystemNotesResponse), nil
+	}
+}
+
+// ListMergeRequestSystemNotesInvoker 获取合并请求动态列表
+func (c *CodeHubClient) ListMergeRequestSystemNotesInvoker(request *model.ListMergeRequestSystemNotesRequest) *ListMergeRequestSystemNotesInvoker {
+	requestDef := GenReqDefForListMergeRequestSystemNotes()
+	return &ListMergeRequestSystemNotesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListProjectNoteRequiredAttributes 获取项目检视意见必填项
@@ -628,6 +607,27 @@ func (c *CodeHubClient) UpdateMergeRequestDiscussionInvoker(request *model.Updat
 	return &UpdateMergeRequestDiscussionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateMergeRequestDiscussionInfo 更新合并请求检视意见中除评论内容以外的信息
+//
+// 更新合并请求检视意见中除评论内容以外的信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) UpdateMergeRequestDiscussionInfo(request *model.UpdateMergeRequestDiscussionInfoRequest) (*model.UpdateMergeRequestDiscussionInfoResponse, error) {
+	requestDef := GenReqDefForUpdateMergeRequestDiscussionInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateMergeRequestDiscussionInfoResponse), nil
+	}
+}
+
+// UpdateMergeRequestDiscussionInfoInvoker 更新合并请求检视意见中除评论内容以外的信息
+func (c *CodeHubClient) UpdateMergeRequestDiscussionInfoInvoker(request *model.UpdateMergeRequestDiscussionInfoRequest) *UpdateMergeRequestDiscussionInfoInvoker {
+	requestDef := GenReqDefForUpdateMergeRequestDiscussionInfo()
+	return &UpdateMergeRequestDiscussionInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateNoteRequiredAttributes 创建/更新仓库检视意见必填项
 //
 // 创建/更新仓库检视意见必填项
@@ -817,6 +817,69 @@ func (c *CodeHubClient) ListFilesInvoker(request *model.ListFilesRequest) *ListF
 	return &ListFilesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListLogsTree 查看文件树
+//
+// 查看文件树
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListLogsTree(request *model.ListLogsTreeRequest) (*model.ListLogsTreeResponse, error) {
+	requestDef := GenReqDefForListLogsTree()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLogsTreeResponse), nil
+	}
+}
+
+// ListLogsTreeInvoker 查看文件树
+func (c *CodeHubClient) ListLogsTreeInvoker(request *model.ListLogsTreeRequest) *ListLogsTreeInvoker {
+	requestDef := GenReqDefForListLogsTree()
+	return &ListLogsTreeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTrees 查看分支文件列表
+//
+// 查看分支文件列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListTrees(request *model.ListTreesRequest) (*model.ListTreesResponse, error) {
+	requestDef := GenReqDefForListTrees()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTreesResponse), nil
+	}
+}
+
+// ListTreesInvoker 查看分支文件列表
+func (c *CodeHubClient) ListTreesInvoker(request *model.ListTreesRequest) *ListTreesInvoker {
+	requestDef := GenReqDefForListTrees()
+	return &ListTreesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RenameFile 文件重命名
+//
+// 文件重命名
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) RenameFile(request *model.RenameFileRequest) (*model.RenameFileResponse, error) {
+	requestDef := GenReqDefForRenameFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RenameFileResponse), nil
+	}
+}
+
+// RenameFileInvoker 文件重命名
+func (c *CodeHubClient) RenameFileInvoker(request *model.RenameFileRequest) *RenameFileInvoker {
+	requestDef := GenReqDefForRenameFile()
+	return &RenameFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowFile 查看文件属性与内容
 //
 // 查看文件属性与内容
@@ -859,6 +922,27 @@ func (c *CodeHubClient) ShowFileContentInvoker(request *model.ShowFileContentReq
 	return &ShowFileContentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowFileRaw 获取仓库单个文件内容
+//
+// 获取仓库单个文件内容
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ShowFileRaw(request *model.ShowFileRawRequest) (*model.ShowFileRawResponse, error) {
+	requestDef := GenReqDefForShowFileRaw()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFileRawResponse), nil
+	}
+}
+
+// ShowFileRawInvoker 获取仓库单个文件内容
+func (c *CodeHubClient) ShowFileRawInvoker(request *model.ShowFileRawRequest) *ShowFileRawInvoker {
+	requestDef := GenReqDefForShowFileRaw()
+	return &ShowFileRawInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowReadmeFile 获取仓库默认分支的Readme文件内容
 //
 // 获取仓库默认分支的Readme文件内容
@@ -899,90 +983,6 @@ func (c *CodeHubClient) UpdateFile(request *model.UpdateFileRequest) (*model.Upd
 func (c *CodeHubClient) UpdateFileInvoker(request *model.UpdateFileRequest) *UpdateFileInvoker {
 	requestDef := GenReqDefForUpdateFile()
 	return &UpdateFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// BatchDeleteRepositoryFilePushPermissions 批量删除仓库文件推送权限
-//
-// 批量删除仓库文件推送权限
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) BatchDeleteRepositoryFilePushPermissions(request *model.BatchDeleteRepositoryFilePushPermissionsRequest) (*model.BatchDeleteRepositoryFilePushPermissionsResponse, error) {
-	requestDef := GenReqDefForBatchDeleteRepositoryFilePushPermissions()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchDeleteRepositoryFilePushPermissionsResponse), nil
-	}
-}
-
-// BatchDeleteRepositoryFilePushPermissionsInvoker 批量删除仓库文件推送权限
-func (c *CodeHubClient) BatchDeleteRepositoryFilePushPermissionsInvoker(request *model.BatchDeleteRepositoryFilePushPermissionsRequest) *BatchDeleteRepositoryFilePushPermissionsInvoker {
-	requestDef := GenReqDefForBatchDeleteRepositoryFilePushPermissions()
-	return &BatchDeleteRepositoryFilePushPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// BatchUpdateRepositoryFilePushPermissions 批量更新仓库文件推送权限
-//
-// 批量更新仓库文件推送权限
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) BatchUpdateRepositoryFilePushPermissions(request *model.BatchUpdateRepositoryFilePushPermissionsRequest) (*model.BatchUpdateRepositoryFilePushPermissionsResponse, error) {
-	requestDef := GenReqDefForBatchUpdateRepositoryFilePushPermissions()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchUpdateRepositoryFilePushPermissionsResponse), nil
-	}
-}
-
-// BatchUpdateRepositoryFilePushPermissionsInvoker 批量更新仓库文件推送权限
-func (c *CodeHubClient) BatchUpdateRepositoryFilePushPermissionsInvoker(request *model.BatchUpdateRepositoryFilePushPermissionsRequest) *BatchUpdateRepositoryFilePushPermissionsInvoker {
-	requestDef := GenReqDefForBatchUpdateRepositoryFilePushPermissions()
-	return &BatchUpdateRepositoryFilePushPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateFilePushPermission 创建仓库文件推送权限
-//
-// 创建仓库文件推送权限
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) CreateFilePushPermission(request *model.CreateFilePushPermissionRequest) (*model.CreateFilePushPermissionResponse, error) {
-	requestDef := GenReqDefForCreateFilePushPermission()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateFilePushPermissionResponse), nil
-	}
-}
-
-// CreateFilePushPermissionInvoker 创建仓库文件推送权限
-func (c *CodeHubClient) CreateFilePushPermissionInvoker(request *model.CreateFilePushPermissionRequest) *CreateFilePushPermissionInvoker {
-	requestDef := GenReqDefForCreateFilePushPermission()
-	return &CreateFilePushPermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListRepositoryFilePushPermissions 获取仓库文件推送权限列表
-//
-// 获取仓库文件推送权限列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) ListRepositoryFilePushPermissions(request *model.ListRepositoryFilePushPermissionsRequest) (*model.ListRepositoryFilePushPermissionsResponse, error) {
-	requestDef := GenReqDefForListRepositoryFilePushPermissions()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListRepositoryFilePushPermissionsResponse), nil
-	}
-}
-
-// ListRepositoryFilePushPermissionsInvoker 获取仓库文件推送权限列表
-func (c *CodeHubClient) ListRepositoryFilePushPermissionsInvoker(request *model.ListRepositoryFilePushPermissionsRequest) *ListRepositoryFilePushPermissionsInvoker {
-	requestDef := GenReqDefForListRepositoryFilePushPermissions()
-	return &ListRepositoryFilePushPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AssociateGroupUserGroup 关联代码组与成员组
@@ -1153,6 +1153,27 @@ func (c *CodeHubClient) ListGroupSubgroupsAndRepositoriesInvoker(request *model.
 	return &ListGroupSubgroupsAndRepositoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListGroupUserGroups 组织下查询成员组列表
+//
+// 组织下查询成员组列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListGroupUserGroups(request *model.ListGroupUserGroupsRequest) (*model.ListGroupUserGroupsResponse, error) {
+	requestDef := GenReqDefForListGroupUserGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGroupUserGroupsResponse), nil
+	}
+}
+
+// ListGroupUserGroupsInvoker 组织下查询成员组列表
+func (c *CodeHubClient) ListGroupUserGroupsInvoker(request *model.ListGroupUserGroupsRequest) *ListGroupUserGroupsInvoker {
+	requestDef := GenReqDefForListGroupUserGroups()
+	return &ListGroupUserGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListGroups 获取代码组列表
 //
 // 获取代码组列表
@@ -1174,67 +1195,25 @@ func (c *CodeHubClient) ListGroupsInvoker(request *model.ListGroupsRequest) *Lis
 	return &ListGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListImpersonationTokens 获取用户的个人访问令牌
+// ListManageableGroups 获取项目下当前用户有管理权限的代码组列表
 //
-// 获取用户的个人访问令牌
+// 获取项目下当前用户有管理权限的代码组列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) ListImpersonationTokens(request *model.ListImpersonationTokensRequest) (*model.ListImpersonationTokensResponse, error) {
-	requestDef := GenReqDefForListImpersonationTokens()
+func (c *CodeHubClient) ListManageableGroups(request *model.ListManageableGroupsRequest) (*model.ListManageableGroupsResponse, error) {
+	requestDef := GenReqDefForListManageableGroups()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListImpersonationTokensResponse), nil
+		return resp.(*model.ListManageableGroupsResponse), nil
 	}
 }
 
-// ListImpersonationTokensInvoker 获取用户的个人访问令牌
-func (c *CodeHubClient) ListImpersonationTokensInvoker(request *model.ListImpersonationTokensRequest) *ListImpersonationTokensInvoker {
-	requestDef := GenReqDefForListImpersonationTokens()
-	return &ListImpersonationTokensInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListProductPermissionResourcesGrantedUsers 获取项目下成员列表
-//
-// 获取项目下成员列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) ListProductPermissionResourcesGrantedUsers(request *model.ListProductPermissionResourcesGrantedUsersRequest) (*model.ListProductPermissionResourcesGrantedUsersResponse, error) {
-	requestDef := GenReqDefForListProductPermissionResourcesGrantedUsers()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListProductPermissionResourcesGrantedUsersResponse), nil
-	}
-}
-
-// ListProductPermissionResourcesGrantedUsersInvoker 获取项目下成员列表
-func (c *CodeHubClient) ListProductPermissionResourcesGrantedUsersInvoker(request *model.ListProductPermissionResourcesGrantedUsersRequest) *ListProductPermissionResourcesGrantedUsersInvoker {
-	requestDef := GenReqDefForListProductPermissionResourcesGrantedUsers()
-	return &ListProductPermissionResourcesGrantedUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListProjectSubgroupsAndRepositories 获取项目下的代码组和仓库列表
-//
-// 获取项目下的代码组和仓库列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) ListProjectSubgroupsAndRepositories(request *model.ListProjectSubgroupsAndRepositoriesRequest) (*model.ListProjectSubgroupsAndRepositoriesResponse, error) {
-	requestDef := GenReqDefForListProjectSubgroupsAndRepositories()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListProjectSubgroupsAndRepositoriesResponse), nil
-	}
-}
-
-// ListProjectSubgroupsAndRepositoriesInvoker 获取项目下的代码组和仓库列表
-func (c *CodeHubClient) ListProjectSubgroupsAndRepositoriesInvoker(request *model.ListProjectSubgroupsAndRepositoriesRequest) *ListProjectSubgroupsAndRepositoriesInvoker {
-	requestDef := GenReqDefForListProjectSubgroupsAndRepositories()
-	return &ListProjectSubgroupsAndRepositoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListManageableGroupsInvoker 获取项目下当前用户有管理权限的代码组列表
+func (c *CodeHubClient) ListManageableGroupsInvoker(request *model.ListManageableGroupsRequest) *ListManageableGroupsInvoker {
+	requestDef := GenReqDefForListManageableGroups()
+	return &ListManageableGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowGroup 获取代码组信息
@@ -1277,6 +1256,27 @@ func (c *CodeHubClient) ShowGroupGeneralPolicy(request *model.ShowGroupGeneralPo
 func (c *CodeHubClient) ShowGroupGeneralPolicyInvoker(request *model.ShowGroupGeneralPolicyRequest) *ShowGroupGeneralPolicyInvoker {
 	requestDef := GenReqDefForShowGroupGeneralPolicy()
 	return &ShowGroupGeneralPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGroupInheritSetting 获取代码组继承设置项
+//
+// 获取代码组继承设置项
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ShowGroupInheritSetting(request *model.ShowGroupInheritSettingRequest) (*model.ShowGroupInheritSettingResponse, error) {
+	requestDef := GenReqDefForShowGroupInheritSetting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowGroupInheritSettingResponse), nil
+	}
+}
+
+// ShowGroupInheritSettingInvoker 获取代码组继承设置项
+func (c *CodeHubClient) ShowGroupInheritSettingInvoker(request *model.ShowGroupInheritSettingRequest) *ShowGroupInheritSettingInvoker {
+	requestDef := GenReqDefForShowGroupInheritSetting()
+	return &ShowGroupInheritSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowGroupPermissionInheritEnabled 获取代码组继承权限设置开关
@@ -1342,6 +1342,27 @@ func (c *CodeHubClient) ShowGroupWatermarkInvoker(request *model.ShowGroupWaterm
 	return &ShowGroupWatermarkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowGroupsGeneralPolicy 获取指定代码组的基本设置信息
+//
+// 获取指定代码组的基本设置信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ShowGroupsGeneralPolicy(request *model.ShowGroupsGeneralPolicyRequest) (*model.ShowGroupsGeneralPolicyResponse, error) {
+	requestDef := GenReqDefForShowGroupsGeneralPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowGroupsGeneralPolicyResponse), nil
+	}
+}
+
+// ShowGroupsGeneralPolicyInvoker 获取指定代码组的基本设置信息
+func (c *CodeHubClient) ShowGroupsGeneralPolicyInvoker(request *model.ShowGroupsGeneralPolicyRequest) *ShowGroupsGeneralPolicyInvoker {
+	requestDef := GenReqDefForShowGroupsGeneralPolicy()
+	return &ShowGroupsGeneralPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowGroupsInherit 获取代码组的继承设置
 //
 // 获取代码组的继承设置
@@ -1361,69 +1382,6 @@ func (c *CodeHubClient) ShowGroupsInherit(request *model.ShowGroupsInheritReques
 func (c *CodeHubClient) ShowGroupsInheritInvoker(request *model.ShowGroupsInheritRequest) *ShowGroupsInheritInvoker {
 	requestDef := GenReqDefForShowGroupsInherit()
 	return &ShowGroupsInheritInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowProjectGeneralPolicy 获取指定项目的基本设置信息
-//
-// 获取指定项目的基本设置信息
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) ShowProjectGeneralPolicy(request *model.ShowProjectGeneralPolicyRequest) (*model.ShowProjectGeneralPolicyResponse, error) {
-	requestDef := GenReqDefForShowProjectGeneralPolicy()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowProjectGeneralPolicyResponse), nil
-	}
-}
-
-// ShowProjectGeneralPolicyInvoker 获取指定项目的基本设置信息
-func (c *CodeHubClient) ShowProjectGeneralPolicyInvoker(request *model.ShowProjectGeneralPolicyRequest) *ShowProjectGeneralPolicyInvoker {
-	requestDef := GenReqDefForShowProjectGeneralPolicy()
-	return &ShowProjectGeneralPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowProjectMemberSetting 获取项目成员设置
-//
-// 获取项目成员设置
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) ShowProjectMemberSetting(request *model.ShowProjectMemberSettingRequest) (*model.ShowProjectMemberSettingResponse, error) {
-	requestDef := GenReqDefForShowProjectMemberSetting()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowProjectMemberSettingResponse), nil
-	}
-}
-
-// ShowProjectMemberSettingInvoker 获取项目成员设置
-func (c *CodeHubClient) ShowProjectMemberSettingInvoker(request *model.ShowProjectMemberSettingRequest) *ShowProjectMemberSettingInvoker {
-	requestDef := GenReqDefForShowProjectMemberSetting()
-	return &ShowProjectMemberSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowResourcePermissions 获取资源点对应的角色和权限
-//
-// 获取资源点对应的角色和权限
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) ShowResourcePermissions(request *model.ShowResourcePermissionsRequest) (*model.ShowResourcePermissionsResponse, error) {
-	requestDef := GenReqDefForShowResourcePermissions()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowResourcePermissionsResponse), nil
-	}
-}
-
-// ShowResourcePermissionsInvoker 获取资源点对应的角色和权限
-func (c *CodeHubClient) ShowResourcePermissionsInvoker(request *model.ShowResourcePermissionsRequest) *ShowResourcePermissionsInvoker {
-	requestDef := GenReqDefForShowResourcePermissions()
-	return &ShowResourcePermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // TransferGroup 移交代码组
@@ -1447,6 +1405,27 @@ func (c *CodeHubClient) TransferGroupInvoker(request *model.TransferGroupRequest
 	return &TransferGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateGroupGeneralPolicy 更新代码组的基本设置信息
+//
+// 更新代码组的基本设置信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) UpdateGroupGeneralPolicy(request *model.UpdateGroupGeneralPolicyRequest) (*model.UpdateGroupGeneralPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateGroupGeneralPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateGroupGeneralPolicyResponse), nil
+	}
+}
+
+// UpdateGroupGeneralPolicyInvoker 更新代码组的基本设置信息
+func (c *CodeHubClient) UpdateGroupGeneralPolicyInvoker(request *model.UpdateGroupGeneralPolicyRequest) *UpdateGroupGeneralPolicyInvoker {
+	requestDef := GenReqDefForUpdateGroupGeneralPolicy()
+	return &UpdateGroupGeneralPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateGroupWatermark 更新代码组水印设置
 //
 // 更新代码组水印设置
@@ -1466,111 +1445,6 @@ func (c *CodeHubClient) UpdateGroupWatermark(request *model.UpdateGroupWatermark
 func (c *CodeHubClient) UpdateGroupWatermarkInvoker(request *model.UpdateGroupWatermarkRequest) *UpdateGroupWatermarkInvoker {
 	requestDef := GenReqDefForUpdateGroupWatermark()
 	return &UpdateGroupWatermarkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateRepositoryLabel 创建仓库标签
-//
-// 创建仓库标签
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) CreateRepositoryLabel(request *model.CreateRepositoryLabelRequest) (*model.CreateRepositoryLabelResponse, error) {
-	requestDef := GenReqDefForCreateRepositoryLabel()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateRepositoryLabelResponse), nil
-	}
-}
-
-// CreateRepositoryLabelInvoker 创建仓库标签
-func (c *CodeHubClient) CreateRepositoryLabelInvoker(request *model.CreateRepositoryLabelRequest) *CreateRepositoryLabelInvoker {
-	requestDef := GenReqDefForCreateRepositoryLabel()
-	return &CreateRepositoryLabelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateRepositorySystemLabels 创建仓库系统标签
-//
-// 创建仓库系统标签
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) CreateRepositorySystemLabels(request *model.CreateRepositorySystemLabelsRequest) (*model.CreateRepositorySystemLabelsResponse, error) {
-	requestDef := GenReqDefForCreateRepositorySystemLabels()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateRepositorySystemLabelsResponse), nil
-	}
-}
-
-// CreateRepositorySystemLabelsInvoker 创建仓库系统标签
-func (c *CodeHubClient) CreateRepositorySystemLabelsInvoker(request *model.CreateRepositorySystemLabelsRequest) *CreateRepositorySystemLabelsInvoker {
-	requestDef := GenReqDefForCreateRepositorySystemLabels()
-	return &CreateRepositorySystemLabelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteRepositoryLabel 删除仓库标签
-//
-// 删除仓库标签
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) DeleteRepositoryLabel(request *model.DeleteRepositoryLabelRequest) (*model.DeleteRepositoryLabelResponse, error) {
-	requestDef := GenReqDefForDeleteRepositoryLabel()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteRepositoryLabelResponse), nil
-	}
-}
-
-// DeleteRepositoryLabelInvoker 删除仓库标签
-func (c *CodeHubClient) DeleteRepositoryLabelInvoker(request *model.DeleteRepositoryLabelRequest) *DeleteRepositoryLabelInvoker {
-	requestDef := GenReqDefForDeleteRepositoryLabel()
-	return &DeleteRepositoryLabelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListRepositoryLabels 获取仓库标签列表
-//
-// 获取仓库标签列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) ListRepositoryLabels(request *model.ListRepositoryLabelsRequest) (*model.ListRepositoryLabelsResponse, error) {
-	requestDef := GenReqDefForListRepositoryLabels()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListRepositoryLabelsResponse), nil
-	}
-}
-
-// ListRepositoryLabelsInvoker 获取仓库标签列表
-func (c *CodeHubClient) ListRepositoryLabelsInvoker(request *model.ListRepositoryLabelsRequest) *ListRepositoryLabelsInvoker {
-	requestDef := GenReqDefForListRepositoryLabels()
-	return &ListRepositoryLabelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateRepositoryLabel 修改仓库标签
-//
-// 修改仓库标签
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) UpdateRepositoryLabel(request *model.UpdateRepositoryLabelRequest) (*model.UpdateRepositoryLabelResponse, error) {
-	requestDef := GenReqDefForUpdateRepositoryLabel()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateRepositoryLabelResponse), nil
-	}
-}
-
-// UpdateRepositoryLabelInvoker 修改仓库标签
-func (c *CodeHubClient) UpdateRepositoryLabelInvoker(request *model.UpdateRepositoryLabelRequest) *UpdateRepositoryLabelInvoker {
-	requestDef := GenReqDefForUpdateRepositoryLabel()
-	return &UpdateRepositoryLabelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AddRepositoryMembers 批量添加仓库成员
@@ -1594,6 +1468,27 @@ func (c *CodeHubClient) AddRepositoryMembersInvoker(request *model.AddRepository
 	return &AddRepositoryMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListGroupProtectedRefsUserGroups 获取代码组下成员组列表
+//
+// 获取代码组下成员组列表(保护分支保护Tags设置中使用)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListGroupProtectedRefsUserGroups(request *model.ListGroupProtectedRefsUserGroupsRequest) (*model.ListGroupProtectedRefsUserGroupsResponse, error) {
+	requestDef := GenReqDefForListGroupProtectedRefsUserGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGroupProtectedRefsUserGroupsResponse), nil
+	}
+}
+
+// ListGroupProtectedRefsUserGroupsInvoker 获取代码组下成员组列表
+func (c *CodeHubClient) ListGroupProtectedRefsUserGroupsInvoker(request *model.ListGroupProtectedRefsUserGroupsRequest) *ListGroupProtectedRefsUserGroupsInvoker {
+	requestDef := GenReqDefForListGroupProtectedRefsUserGroups()
+	return &ListGroupProtectedRefsUserGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListMembers 获取仓库成员列表
 //
 // 获取仓库成员列表
@@ -1613,6 +1508,69 @@ func (c *CodeHubClient) ListMembers(request *model.ListMembersRequest) (*model.L
 func (c *CodeHubClient) ListMembersInvoker(request *model.ListMembersRequest) *ListMembersInvoker {
 	requestDef := GenReqDefForListMembers()
 	return &ListMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProductPermissionResourcesGrantedUsers 获取项目下成员列表
+//
+// 获取项目下成员列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListProductPermissionResourcesGrantedUsers(request *model.ListProductPermissionResourcesGrantedUsersRequest) (*model.ListProductPermissionResourcesGrantedUsersResponse, error) {
+	requestDef := GenReqDefForListProductPermissionResourcesGrantedUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProductPermissionResourcesGrantedUsersResponse), nil
+	}
+}
+
+// ListProductPermissionResourcesGrantedUsersInvoker 获取项目下成员列表
+func (c *CodeHubClient) ListProductPermissionResourcesGrantedUsersInvoker(request *model.ListProductPermissionResourcesGrantedUsersRequest) *ListProductPermissionResourcesGrantedUsersInvoker {
+	requestDef := GenReqDefForListProductPermissionResourcesGrantedUsers()
+	return &ListProductPermissionResourcesGrantedUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectProtectedRefsUserGroups 获取项目下成员组列表
+//
+// 获取项目下成员组列表(保护分支保护Tags设置中使用)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListProjectProtectedRefsUserGroups(request *model.ListProjectProtectedRefsUserGroupsRequest) (*model.ListProjectProtectedRefsUserGroupsResponse, error) {
+	requestDef := GenReqDefForListProjectProtectedRefsUserGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectProtectedRefsUserGroupsResponse), nil
+	}
+}
+
+// ListProjectProtectedRefsUserGroupsInvoker 获取项目下成员组列表
+func (c *CodeHubClient) ListProjectProtectedRefsUserGroupsInvoker(request *model.ListProjectProtectedRefsUserGroupsRequest) *ListProjectProtectedRefsUserGroupsInvoker {
+	requestDef := GenReqDefForListProjectProtectedRefsUserGroups()
+	return &ListProjectProtectedRefsUserGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRepositoryProtectedRefsUserGroups 获取仓库下成员组列表
+//
+// 获取仓库下成员组列表(保护分支保护Tags设置中使用)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListRepositoryProtectedRefsUserGroups(request *model.ListRepositoryProtectedRefsUserGroupsRequest) (*model.ListRepositoryProtectedRefsUserGroupsResponse, error) {
+	requestDef := GenReqDefForListRepositoryProtectedRefsUserGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRepositoryProtectedRefsUserGroupsResponse), nil
+	}
+}
+
+// ListRepositoryProtectedRefsUserGroupsInvoker 获取仓库下成员组列表
+func (c *CodeHubClient) ListRepositoryProtectedRefsUserGroupsInvoker(request *model.ListRepositoryProtectedRefsUserGroupsRequest) *ListRepositoryProtectedRefsUserGroupsInvoker {
+	requestDef := GenReqDefForListRepositoryProtectedRefsUserGroups()
+	return &ListRepositoryProtectedRefsUserGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListRepositoryUserGroups 获取成员组列表
@@ -1657,6 +1615,27 @@ func (c *CodeHubClient) ApprovalMergeRequestInvoker(request *model.ApprovalMerge
 	return &ApprovalMergeRequestInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateCherryPickMergeRequest Cherry pick合并请求
+//
+// Cherry pick合并请求
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) CreateCherryPickMergeRequest(request *model.CreateCherryPickMergeRequestRequest) (*model.CreateCherryPickMergeRequestResponse, error) {
+	requestDef := GenReqDefForCreateCherryPickMergeRequest()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCherryPickMergeRequestResponse), nil
+	}
+}
+
+// CreateCherryPickMergeRequestInvoker Cherry pick合并请求
+func (c *CodeHubClient) CreateCherryPickMergeRequestInvoker(request *model.CreateCherryPickMergeRequestRequest) *CreateCherryPickMergeRequestInvoker {
+	requestDef := GenReqDefForCreateCherryPickMergeRequest()
+	return &CreateCherryPickMergeRequestInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateGroupMergeRequestApproverSetting 创建代码组合并请求审核设置
 //
 // 创建代码组合并请求审核设置
@@ -1676,6 +1655,27 @@ func (c *CodeHubClient) CreateGroupMergeRequestApproverSetting(request *model.Cr
 func (c *CodeHubClient) CreateGroupMergeRequestApproverSettingInvoker(request *model.CreateGroupMergeRequestApproverSettingRequest) *CreateGroupMergeRequestApproverSettingInvoker {
 	requestDef := GenReqDefForCreateGroupMergeRequestApproverSetting()
 	return &CreateGroupMergeRequestApproverSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateGroupMergeRequestTemplate 创建代码组合并请求模板
+//
+// 创建代码组合并请求模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) CreateGroupMergeRequestTemplate(request *model.CreateGroupMergeRequestTemplateRequest) (*model.CreateGroupMergeRequestTemplateResponse, error) {
+	requestDef := GenReqDefForCreateGroupMergeRequestTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateGroupMergeRequestTemplateResponse), nil
+	}
+}
+
+// CreateGroupMergeRequestTemplateInvoker 创建代码组合并请求模板
+func (c *CodeHubClient) CreateGroupMergeRequestTemplateInvoker(request *model.CreateGroupMergeRequestTemplateRequest) *CreateGroupMergeRequestTemplateInvoker {
+	requestDef := GenReqDefForCreateGroupMergeRequestTemplate()
+	return &CreateGroupMergeRequestTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateMergeRequest 创建合并请求
@@ -1762,6 +1762,27 @@ func (c *CodeHubClient) CreateProjectMergeRequestApproverSettingInvoker(request 
 	return &CreateProjectMergeRequestApproverSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateProjectMergeRequestTemplate 创建项目合并请求模板
+//
+// 创建项目合并请求模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) CreateProjectMergeRequestTemplate(request *model.CreateProjectMergeRequestTemplateRequest) (*model.CreateProjectMergeRequestTemplateResponse, error) {
+	requestDef := GenReqDefForCreateProjectMergeRequestTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateProjectMergeRequestTemplateResponse), nil
+	}
+}
+
+// CreateProjectMergeRequestTemplateInvoker 创建项目合并请求模板
+func (c *CodeHubClient) CreateProjectMergeRequestTemplateInvoker(request *model.CreateProjectMergeRequestTemplateRequest) *CreateProjectMergeRequestTemplateInvoker {
+	requestDef := GenReqDefForCreateProjectMergeRequestTemplate()
+	return &CreateProjectMergeRequestTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteGroupMergeRequestApproverSetting 删除代码组合并请求审核配置
 //
 // 删除代码组合并请求审核配置
@@ -1781,6 +1802,27 @@ func (c *CodeHubClient) DeleteGroupMergeRequestApproverSetting(request *model.De
 func (c *CodeHubClient) DeleteGroupMergeRequestApproverSettingInvoker(request *model.DeleteGroupMergeRequestApproverSettingRequest) *DeleteGroupMergeRequestApproverSettingInvoker {
 	requestDef := GenReqDefForDeleteGroupMergeRequestApproverSetting()
 	return &DeleteGroupMergeRequestApproverSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteGroupMergeRequestTemplate 删除代码组合并请求模板
+//
+// 删除代码组合并请求模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) DeleteGroupMergeRequestTemplate(request *model.DeleteGroupMergeRequestTemplateRequest) (*model.DeleteGroupMergeRequestTemplateResponse, error) {
+	requestDef := GenReqDefForDeleteGroupMergeRequestTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteGroupMergeRequestTemplateResponse), nil
+	}
+}
+
+// DeleteGroupMergeRequestTemplateInvoker 删除代码组合并请求模板
+func (c *CodeHubClient) DeleteGroupMergeRequestTemplateInvoker(request *model.DeleteGroupMergeRequestTemplateRequest) *DeleteGroupMergeRequestTemplateInvoker {
+	requestDef := GenReqDefForDeleteGroupMergeRequestTemplate()
+	return &DeleteGroupMergeRequestTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteMergeRequestApproverSetting 删除合并请求审核配置
@@ -1867,6 +1909,27 @@ func (c *CodeHubClient) DeleteProjectMergeRequestApproverSettingInvoker(request 
 	return &DeleteProjectMergeRequestApproverSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteProjectMergeRequestTemplate 删除项目合并请求模板
+//
+// 删除项目合并请求模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) DeleteProjectMergeRequestTemplate(request *model.DeleteProjectMergeRequestTemplateRequest) (*model.DeleteProjectMergeRequestTemplateResponse, error) {
+	requestDef := GenReqDefForDeleteProjectMergeRequestTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteProjectMergeRequestTemplateResponse), nil
+	}
+}
+
+// DeleteProjectMergeRequestTemplateInvoker 删除项目合并请求模板
+func (c *CodeHubClient) DeleteProjectMergeRequestTemplateInvoker(request *model.DeleteProjectMergeRequestTemplateRequest) *DeleteProjectMergeRequestTemplateInvoker {
+	requestDef := GenReqDefForDeleteProjectMergeRequestTemplate()
+	return &DeleteProjectMergeRequestTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ImportMergeRequest 导入合并请求
 //
 // 导入合并请求
@@ -1886,6 +1949,27 @@ func (c *CodeHubClient) ImportMergeRequest(request *model.ImportMergeRequestRequ
 func (c *CodeHubClient) ImportMergeRequestInvoker(request *model.ImportMergeRequestRequest) *ImportMergeRequestInvoker {
 	requestDef := GenReqDefForImportMergeRequest()
 	return &ImportMergeRequestInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCommitAssociatedMergeRequests 获取提交关联的合并请求
+//
+// 获取提交关联的合并请求
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListCommitAssociatedMergeRequests(request *model.ListCommitAssociatedMergeRequestsRequest) (*model.ListCommitAssociatedMergeRequestsResponse, error) {
+	requestDef := GenReqDefForListCommitAssociatedMergeRequests()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCommitAssociatedMergeRequestsResponse), nil
+	}
+}
+
+// ListCommitAssociatedMergeRequestsInvoker 获取提交关联的合并请求
+func (c *CodeHubClient) ListCommitAssociatedMergeRequestsInvoker(request *model.ListCommitAssociatedMergeRequestsRequest) *ListCommitAssociatedMergeRequestsInvoker {
+	requestDef := GenReqDefForListCommitAssociatedMergeRequests()
+	return &ListCommitAssociatedMergeRequestsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDiscussionTemplates 获取检视意见模板列表
@@ -1949,6 +2033,27 @@ func (c *CodeHubClient) ListGroupMergeRequestCanBeAssignedReviewers(request *mod
 func (c *CodeHubClient) ListGroupMergeRequestCanBeAssignedReviewersInvoker(request *model.ListGroupMergeRequestCanBeAssignedReviewersRequest) *ListGroupMergeRequestCanBeAssignedReviewersInvoker {
 	requestDef := GenReqDefForListGroupMergeRequestCanBeAssignedReviewers()
 	return &ListGroupMergeRequestCanBeAssignedReviewersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGroupMergeRequestTemplates 获取代码组合并请求模板列表
+//
+// 获取代码组合并请求模板列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListGroupMergeRequestTemplates(request *model.ListGroupMergeRequestTemplatesRequest) (*model.ListGroupMergeRequestTemplatesResponse, error) {
+	requestDef := GenReqDefForListGroupMergeRequestTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGroupMergeRequestTemplatesResponse), nil
+	}
+}
+
+// ListGroupMergeRequestTemplatesInvoker 获取代码组合并请求模板列表
+func (c *CodeHubClient) ListGroupMergeRequestTemplatesInvoker(request *model.ListGroupMergeRequestTemplatesRequest) *ListGroupMergeRequestTemplatesInvoker {
+	requestDef := GenReqDefForListGroupMergeRequestTemplates()
+	return &ListGroupMergeRequestTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListGroupMergeRequestValidAssignedCandidates 获取代码组审核人或合并人
@@ -2098,6 +2203,48 @@ func (c *CodeHubClient) ListMergeRequestConflictFilesInvoker(request *model.List
 	return &ListMergeRequestConflictFilesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListMergeRequestEvaluations 获取合并请求评价列表
+//
+// 获取合并请求评价列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListMergeRequestEvaluations(request *model.ListMergeRequestEvaluationsRequest) (*model.ListMergeRequestEvaluationsResponse, error) {
+	requestDef := GenReqDefForListMergeRequestEvaluations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMergeRequestEvaluationsResponse), nil
+	}
+}
+
+// ListMergeRequestEvaluationsInvoker 获取合并请求评价列表
+func (c *CodeHubClient) ListMergeRequestEvaluationsInvoker(request *model.ListMergeRequestEvaluationsRequest) *ListMergeRequestEvaluationsInvoker {
+	requestDef := GenReqDefForListMergeRequestEvaluations()
+	return &ListMergeRequestEvaluationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListMergeRequestParticipants 获取合并请求参与者
+//
+// 获取合并请求参与者
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListMergeRequestParticipants(request *model.ListMergeRequestParticipantsRequest) (*model.ListMergeRequestParticipantsResponse, error) {
+	requestDef := GenReqDefForListMergeRequestParticipants()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMergeRequestParticipantsResponse), nil
+	}
+}
+
+// ListMergeRequestParticipantsInvoker 获取合并请求参与者
+func (c *CodeHubClient) ListMergeRequestParticipantsInvoker(request *model.ListMergeRequestParticipantsRequest) *ListMergeRequestParticipantsInvoker {
+	requestDef := GenReqDefForListMergeRequestParticipants()
+	return &ListMergeRequestParticipantsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListMergeRequestReviewers 获取合并请求检视人列表
 //
 // 获取合并请求检视人列表
@@ -2161,6 +2308,48 @@ func (c *CodeHubClient) ListMergeRequestValidAssignedCandidatesInvoker(request *
 	return &ListMergeRequestValidAssignedCandidatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListMergeRequestVersions 获取文件变更历史版本列表
+//
+// 获取文件变更历史版本列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListMergeRequestVersions(request *model.ListMergeRequestVersionsRequest) (*model.ListMergeRequestVersionsResponse, error) {
+	requestDef := GenReqDefForListMergeRequestVersions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListMergeRequestVersionsResponse), nil
+	}
+}
+
+// ListMergeRequestVersionsInvoker 获取文件变更历史版本列表
+func (c *CodeHubClient) ListMergeRequestVersionsInvoker(request *model.ListMergeRequestVersionsRequest) *ListMergeRequestVersionsInvoker {
+	requestDef := GenReqDefForListMergeRequestVersions()
+	return &ListMergeRequestVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPersonalMergeRequests 获取个人首页mr列表
+//
+// 获取个人首页mr列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListPersonalMergeRequests(request *model.ListPersonalMergeRequestsRequest) (*model.ListPersonalMergeRequestsResponse, error) {
+	requestDef := GenReqDefForListPersonalMergeRequests()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPersonalMergeRequestsResponse), nil
+	}
+}
+
+// ListPersonalMergeRequestsInvoker 获取个人首页mr列表
+func (c *CodeHubClient) ListPersonalMergeRequestsInvoker(request *model.ListPersonalMergeRequestsRequest) *ListPersonalMergeRequestsInvoker {
+	requestDef := GenReqDefForListPersonalMergeRequests()
+	return &ListPersonalMergeRequestsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProjectMergeRequestApproverSettings 获取项目合并请求审核设置列表
 //
 // 获取项目合并请求审核设置列表
@@ -2222,6 +2411,27 @@ func (c *CodeHubClient) ListProjectMergeRequestCanBeAssignedUsers(request *model
 func (c *CodeHubClient) ListProjectMergeRequestCanBeAssignedUsersInvoker(request *model.ListProjectMergeRequestCanBeAssignedUsersRequest) *ListProjectMergeRequestCanBeAssignedUsersInvoker {
 	requestDef := GenReqDefForListProjectMergeRequestCanBeAssignedUsers()
 	return &ListProjectMergeRequestCanBeAssignedUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectMergeRequestTemplates 获取项目合并请求模板列表
+//
+// 获取项目合并请求模板列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListProjectMergeRequestTemplates(request *model.ListProjectMergeRequestTemplatesRequest) (*model.ListProjectMergeRequestTemplatesResponse, error) {
+	requestDef := GenReqDefForListProjectMergeRequestTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectMergeRequestTemplatesResponse), nil
+	}
+}
+
+// ListProjectMergeRequestTemplatesInvoker 获取项目合并请求模板列表
+func (c *CodeHubClient) ListProjectMergeRequestTemplatesInvoker(request *model.ListProjectMergeRequestTemplatesRequest) *ListProjectMergeRequestTemplatesInvoker {
+	requestDef := GenReqDefForListProjectMergeRequestTemplates()
+	return &ListProjectMergeRequestTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListRepositoryMergeRequests 获取仓库MR列表
@@ -2392,6 +2602,27 @@ func (c *CodeHubClient) ShowBranchConflictInvoker(request *model.ShowBranchConfl
 	return &ShowBranchConflictInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowCommitCommentsByLine 获取代码页单个提交下文件的检视意见
+//
+// 获取代码页单个提交下文件的检视意见
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ShowCommitCommentsByLine(request *model.ShowCommitCommentsByLineRequest) (*model.ShowCommitCommentsByLineResponse, error) {
+	requestDef := GenReqDefForShowCommitCommentsByLine()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCommitCommentsByLineResponse), nil
+	}
+}
+
+// ShowCommitCommentsByLineInvoker 获取代码页单个提交下文件的检视意见
+func (c *CodeHubClient) ShowCommitCommentsByLineInvoker(request *model.ShowCommitCommentsByLineRequest) *ShowCommitCommentsByLineInvoker {
+	requestDef := GenReqDefForShowCommitCommentsByLine()
+	return &ShowCommitCommentsByLineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowGroupMergeRequestSetting 获取代码组合并请求设置
 //
 // 获取代码组合并请求设置
@@ -2560,6 +2791,27 @@ func (c *CodeHubClient) ShowProjectMergeRequestSettingInvoker(request *model.Sho
 	return &ShowProjectMergeRequestSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowRepositoryMergeRequestsStatistic 获取仓库合并请求统计数据
+//
+// 获取仓库合并请求统计数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ShowRepositoryMergeRequestsStatistic(request *model.ShowRepositoryMergeRequestsStatisticRequest) (*model.ShowRepositoryMergeRequestsStatisticResponse, error) {
+	requestDef := GenReqDefForShowRepositoryMergeRequestsStatistic()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRepositoryMergeRequestsStatisticResponse), nil
+	}
+}
+
+// ShowRepositoryMergeRequestsStatisticInvoker 获取仓库合并请求统计数据
+func (c *CodeHubClient) ShowRepositoryMergeRequestsStatisticInvoker(request *model.ShowRepositoryMergeRequestsStatisticRequest) *ShowRepositoryMergeRequestsStatisticInvoker {
+	requestDef := GenReqDefForShowRepositoryMergeRequestsStatistic()
+	return &ShowRepositoryMergeRequestsStatisticInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateGroupMergeRequestApproverSetting 更新代码组合并请求审核设置
 //
 // 更新代码组合并请求审核设置
@@ -2579,6 +2831,27 @@ func (c *CodeHubClient) UpdateGroupMergeRequestApproverSetting(request *model.Up
 func (c *CodeHubClient) UpdateGroupMergeRequestApproverSettingInvoker(request *model.UpdateGroupMergeRequestApproverSettingRequest) *UpdateGroupMergeRequestApproverSettingInvoker {
 	requestDef := GenReqDefForUpdateGroupMergeRequestApproverSetting()
 	return &UpdateGroupMergeRequestApproverSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGroupMergeRequestTemplate 更新代码组合并请求模板
+//
+// 更新代码组合并请求模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) UpdateGroupMergeRequestTemplate(request *model.UpdateGroupMergeRequestTemplateRequest) (*model.UpdateGroupMergeRequestTemplateResponse, error) {
+	requestDef := GenReqDefForUpdateGroupMergeRequestTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateGroupMergeRequestTemplateResponse), nil
+	}
+}
+
+// UpdateGroupMergeRequestTemplateInvoker 更新代码组合并请求模板
+func (c *CodeHubClient) UpdateGroupMergeRequestTemplateInvoker(request *model.UpdateGroupMergeRequestTemplateRequest) *UpdateGroupMergeRequestTemplateInvoker {
+	requestDef := GenReqDefForUpdateGroupMergeRequestTemplate()
+	return &UpdateGroupMergeRequestTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateMergeRequest 更新合并请求
@@ -2749,67 +3022,130 @@ func (c *CodeHubClient) UpdateProjectMergeRequestApproverSettingInvoker(request 
 	return &UpdateProjectMergeRequestApproverSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListCommitAssociatedMergeRequests 获取提交关联的合并请求
+// UpdateProjectMergeRequestTemplate 更新项目合并请求模板
 //
-// 获取提交关联的合并请求
+// 更新项目合并请求模板
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) ListCommitAssociatedMergeRequests(request *model.ListCommitAssociatedMergeRequestsRequest) (*model.ListCommitAssociatedMergeRequestsResponse, error) {
-	requestDef := GenReqDefForListCommitAssociatedMergeRequests()
+func (c *CodeHubClient) UpdateProjectMergeRequestTemplate(request *model.UpdateProjectMergeRequestTemplateRequest) (*model.UpdateProjectMergeRequestTemplateResponse, error) {
+	requestDef := GenReqDefForUpdateProjectMergeRequestTemplate()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListCommitAssociatedMergeRequestsResponse), nil
+		return resp.(*model.UpdateProjectMergeRequestTemplateResponse), nil
 	}
 }
 
-// ListCommitAssociatedMergeRequestsInvoker 获取提交关联的合并请求
-func (c *CodeHubClient) ListCommitAssociatedMergeRequestsInvoker(request *model.ListCommitAssociatedMergeRequestsRequest) *ListCommitAssociatedMergeRequestsInvoker {
-	requestDef := GenReqDefForListCommitAssociatedMergeRequests()
-	return &ListCommitAssociatedMergeRequestsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateProjectMergeRequestTemplateInvoker 更新项目合并请求模板
+func (c *CodeHubClient) UpdateProjectMergeRequestTemplateInvoker(request *model.UpdateProjectMergeRequestTemplateRequest) *UpdateProjectMergeRequestTemplateInvoker {
+	requestDef := GenReqDefForUpdateProjectMergeRequestTemplate()
+	return &UpdateProjectMergeRequestTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowRepositoryMergeRequestsStatistic 获取仓库合并请求统计数据
+// BatchDeleteRepositoryFilePushPermissions 批量删除仓库文件推送权限
 //
-// 获取仓库合并请求统计数据
+// 批量删除仓库文件推送权限
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) ShowRepositoryMergeRequestsStatistic(request *model.ShowRepositoryMergeRequestsStatisticRequest) (*model.ShowRepositoryMergeRequestsStatisticResponse, error) {
-	requestDef := GenReqDefForShowRepositoryMergeRequestsStatistic()
+func (c *CodeHubClient) BatchDeleteRepositoryFilePushPermissions(request *model.BatchDeleteRepositoryFilePushPermissionsRequest) (*model.BatchDeleteRepositoryFilePushPermissionsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteRepositoryFilePushPermissions()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowRepositoryMergeRequestsStatisticResponse), nil
+		return resp.(*model.BatchDeleteRepositoryFilePushPermissionsResponse), nil
 	}
 }
 
-// ShowRepositoryMergeRequestsStatisticInvoker 获取仓库合并请求统计数据
-func (c *CodeHubClient) ShowRepositoryMergeRequestsStatisticInvoker(request *model.ShowRepositoryMergeRequestsStatisticRequest) *ShowRepositoryMergeRequestsStatisticInvoker {
-	requestDef := GenReqDefForShowRepositoryMergeRequestsStatistic()
-	return &ShowRepositoryMergeRequestsStatisticInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// BatchDeleteRepositoryFilePushPermissionsInvoker 批量删除仓库文件推送权限
+func (c *CodeHubClient) BatchDeleteRepositoryFilePushPermissionsInvoker(request *model.BatchDeleteRepositoryFilePushPermissionsRequest) *BatchDeleteRepositoryFilePushPermissionsInvoker {
+	requestDef := GenReqDefForBatchDeleteRepositoryFilePushPermissions()
+	return &BatchDeleteRepositoryFilePushPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListMergeRequestParticipants 获取合并请求参与者
+// BatchUpdateRepositoryFilePushPermissions 批量更新仓库文件推送权限
 //
-// 获取合并请求参与者
+// 批量更新仓库文件推送权限
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) ListMergeRequestParticipants(request *model.ListMergeRequestParticipantsRequest) (*model.ListMergeRequestParticipantsResponse, error) {
-	requestDef := GenReqDefForListMergeRequestParticipants()
+func (c *CodeHubClient) BatchUpdateRepositoryFilePushPermissions(request *model.BatchUpdateRepositoryFilePushPermissionsRequest) (*model.BatchUpdateRepositoryFilePushPermissionsResponse, error) {
+	requestDef := GenReqDefForBatchUpdateRepositoryFilePushPermissions()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListMergeRequestParticipantsResponse), nil
+		return resp.(*model.BatchUpdateRepositoryFilePushPermissionsResponse), nil
 	}
 }
 
-// ListMergeRequestParticipantsInvoker 获取合并请求参与者
-func (c *CodeHubClient) ListMergeRequestParticipantsInvoker(request *model.ListMergeRequestParticipantsRequest) *ListMergeRequestParticipantsInvoker {
-	requestDef := GenReqDefForListMergeRequestParticipants()
-	return &ListMergeRequestParticipantsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// BatchUpdateRepositoryFilePushPermissionsInvoker 批量更新仓库文件推送权限
+func (c *CodeHubClient) BatchUpdateRepositoryFilePushPermissionsInvoker(request *model.BatchUpdateRepositoryFilePushPermissionsRequest) *BatchUpdateRepositoryFilePushPermissionsInvoker {
+	requestDef := GenReqDefForBatchUpdateRepositoryFilePushPermissions()
+	return &BatchUpdateRepositoryFilePushPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateFilePushPermission 创建仓库文件推送权限
+//
+// 创建仓库文件推送权限
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) CreateFilePushPermission(request *model.CreateFilePushPermissionRequest) (*model.CreateFilePushPermissionResponse, error) {
+	requestDef := GenReqDefForCreateFilePushPermission()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFilePushPermissionResponse), nil
+	}
+}
+
+// CreateFilePushPermissionInvoker 创建仓库文件推送权限
+func (c *CodeHubClient) CreateFilePushPermissionInvoker(request *model.CreateFilePushPermissionRequest) *CreateFilePushPermissionInvoker {
+	requestDef := GenReqDefForCreateFilePushPermission()
+	return &CreateFilePushPermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRepositoryFilePushPermissions 获取仓库文件推送权限列表
+//
+// 获取仓库文件推送权限列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListRepositoryFilePushPermissions(request *model.ListRepositoryFilePushPermissionsRequest) (*model.ListRepositoryFilePushPermissionsResponse, error) {
+	requestDef := GenReqDefForListRepositoryFilePushPermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRepositoryFilePushPermissionsResponse), nil
+	}
+}
+
+// ListRepositoryFilePushPermissionsInvoker 获取仓库文件推送权限列表
+func (c *CodeHubClient) ListRepositoryFilePushPermissionsInvoker(request *model.ListRepositoryFilePushPermissionsRequest) *ListRepositoryFilePushPermissionsInvoker {
+	requestDef := GenReqDefForListRepositoryFilePushPermissions()
+	return &ListRepositoryFilePushPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRepositoryResourcePermissions 查询仓库权限矩阵配置
+//
+// 查询仓库权限矩阵配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListRepositoryResourcePermissions(request *model.ListRepositoryResourcePermissionsRequest) (*model.ListRepositoryResourcePermissionsResponse, error) {
+	requestDef := GenReqDefForListRepositoryResourcePermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRepositoryResourcePermissionsResponse), nil
+	}
+}
+
+// ListRepositoryResourcePermissionsInvoker 查询仓库权限矩阵配置
+func (c *CodeHubClient) ListRepositoryResourcePermissionsInvoker(request *model.ListRepositoryResourcePermissionsRequest) *ListRepositoryResourcePermissionsInvoker {
+	requestDef := GenReqDefForListRepositoryResourcePermissions()
+	return &ListRepositoryResourcePermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowRepositoryPermissionInheritEnabled 查询仓库权限配置信息
@@ -2854,6 +3190,27 @@ func (c *CodeHubClient) UpdateRepositoryPermissionInheritEnabledInvoker(request 
 	return &UpdateRepositoryPermissionInheritEnabledInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateRepositoryResourcePermissions 更新仓库权限矩阵配置
+//
+// 更新仓库权限矩阵配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) UpdateRepositoryResourcePermissions(request *model.UpdateRepositoryResourcePermissionsRequest) (*model.UpdateRepositoryResourcePermissionsResponse, error) {
+	requestDef := GenReqDefForUpdateRepositoryResourcePermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRepositoryResourcePermissionsResponse), nil
+	}
+}
+
+// UpdateRepositoryResourcePermissionsInvoker 更新仓库权限矩阵配置
+func (c *CodeHubClient) UpdateRepositoryResourcePermissionsInvoker(request *model.UpdateRepositoryResourcePermissionsRequest) *UpdateRepositoryResourcePermissionsInvoker {
+	requestDef := GenReqDefForUpdateRepositoryResourcePermissions()
+	return &UpdateRepositoryResourcePermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListLatestPipelineJobs 获取流水线的关联的最新任务
 //
 // 获取流水线的关联的最新任务
@@ -2896,6 +3253,90 @@ func (c *CodeHubClient) ListPipelineJobsInvoker(request *model.ListPipelineJobsR
 	return &ListPipelineJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListItemCommits 工作项关联的提交信息
+//
+// 工作项关联的提交信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListItemCommits(request *model.ListItemCommitsRequest) (*model.ListItemCommitsResponse, error) {
+	requestDef := GenReqDefForListItemCommits()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListItemCommitsResponse), nil
+	}
+}
+
+// ListItemCommitsInvoker 工作项关联的提交信息
+func (c *CodeHubClient) ListItemCommitsInvoker(request *model.ListItemCommitsRequest) *ListItemCommitsInvoker {
+	requestDef := GenReqDefForListItemCommits()
+	return &ListItemCommitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectSubgroupsAndRepositories 获取项目下的代码组和仓库列表
+//
+// 获取项目下的代码组和仓库列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListProjectSubgroupsAndRepositories(request *model.ListProjectSubgroupsAndRepositoriesRequest) (*model.ListProjectSubgroupsAndRepositoriesResponse, error) {
+	requestDef := GenReqDefForListProjectSubgroupsAndRepositories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectSubgroupsAndRepositoriesResponse), nil
+	}
+}
+
+// ListProjectSubgroupsAndRepositoriesInvoker 获取项目下的代码组和仓库列表
+func (c *CodeHubClient) ListProjectSubgroupsAndRepositoriesInvoker(request *model.ListProjectSubgroupsAndRepositoriesRequest) *ListProjectSubgroupsAndRepositoriesInvoker {
+	requestDef := GenReqDefForListProjectSubgroupsAndRepositories()
+	return &ListProjectSubgroupsAndRepositoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProjectGeneralPolicy 获取指定项目的基本设置信息
+//
+// 获取指定项目的基本设置信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ShowProjectGeneralPolicy(request *model.ShowProjectGeneralPolicyRequest) (*model.ShowProjectGeneralPolicyResponse, error) {
+	requestDef := GenReqDefForShowProjectGeneralPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProjectGeneralPolicyResponse), nil
+	}
+}
+
+// ShowProjectGeneralPolicyInvoker 获取指定项目的基本设置信息
+func (c *CodeHubClient) ShowProjectGeneralPolicyInvoker(request *model.ShowProjectGeneralPolicyRequest) *ShowProjectGeneralPolicyInvoker {
+	requestDef := GenReqDefForShowProjectGeneralPolicy()
+	return &ShowProjectGeneralPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProjectMemberSetting 获取项目成员设置
+//
+// 获取项目成员设置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ShowProjectMemberSetting(request *model.ShowProjectMemberSettingRequest) (*model.ShowProjectMemberSettingResponse, error) {
+	requestDef := GenReqDefForShowProjectMemberSetting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProjectMemberSettingResponse), nil
+	}
+}
+
+// ShowProjectMemberSettingInvoker 获取项目成员设置
+func (c *CodeHubClient) ShowProjectMemberSettingInvoker(request *model.ShowProjectMemberSettingRequest) *ShowProjectMemberSettingInvoker {
+	requestDef := GenReqDefForShowProjectMemberSetting()
+	return &ShowProjectMemberSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowProjectSettingsInheritCfg 获取项目继承设置项
 //
 // 获取项目继承设置项
@@ -2936,6 +3377,69 @@ func (c *CodeHubClient) ShowProjectWatermark(request *model.ShowProjectWatermark
 func (c *CodeHubClient) ShowProjectWatermarkInvoker(request *model.ShowProjectWatermarkRequest) *ShowProjectWatermarkInvoker {
 	requestDef := GenReqDefForShowProjectWatermark()
 	return &ShowProjectWatermarkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProjectsGeneralPolicy 获取指定项目的基本设置信息
+//
+// 获取指定项目的基本设置信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ShowProjectsGeneralPolicy(request *model.ShowProjectsGeneralPolicyRequest) (*model.ShowProjectsGeneralPolicyResponse, error) {
+	requestDef := GenReqDefForShowProjectsGeneralPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProjectsGeneralPolicyResponse), nil
+	}
+}
+
+// ShowProjectsGeneralPolicyInvoker 获取指定项目的基本设置信息
+func (c *CodeHubClient) ShowProjectsGeneralPolicyInvoker(request *model.ShowProjectsGeneralPolicyRequest) *ShowProjectsGeneralPolicyInvoker {
+	requestDef := GenReqDefForShowProjectsGeneralPolicy()
+	return &ShowProjectsGeneralPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowResourcePermissions 获取资源点对应的角色和权限
+//
+// 获取资源点对应的角色和权限
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ShowResourcePermissions(request *model.ShowResourcePermissionsRequest) (*model.ShowResourcePermissionsResponse, error) {
+	requestDef := GenReqDefForShowResourcePermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowResourcePermissionsResponse), nil
+	}
+}
+
+// ShowResourcePermissionsInvoker 获取资源点对应的角色和权限
+func (c *CodeHubClient) ShowResourcePermissionsInvoker(request *model.ShowResourcePermissionsRequest) *ShowResourcePermissionsInvoker {
+	requestDef := GenReqDefForShowResourcePermissions()
+	return &ShowResourcePermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateProjectGeneralPolicy 更新项目的基本设置信息
+//
+// 更新项目的基本设置信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) UpdateProjectGeneralPolicy(request *model.UpdateProjectGeneralPolicyRequest) (*model.UpdateProjectGeneralPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateProjectGeneralPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateProjectGeneralPolicyResponse), nil
+	}
+}
+
+// UpdateProjectGeneralPolicyInvoker 更新项目的基本设置信息
+func (c *CodeHubClient) UpdateProjectGeneralPolicyInvoker(request *model.UpdateProjectGeneralPolicyRequest) *UpdateProjectGeneralPolicyInvoker {
+	requestDef := GenReqDefForUpdateProjectGeneralPolicy()
+	return &UpdateProjectGeneralPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateProjectSettingsInheritCfg 更新项目继承设置项
@@ -3001,174 +3505,6 @@ func (c *CodeHubClient) BatchCreateProtectedBranchInvoker(request *model.BatchCr
 	return &BatchCreateProtectedBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchDeleteProtectedBranches 批量删除仓库保护分支
-//
-// 批量删除仓库保护分支
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) BatchDeleteProtectedBranches(request *model.BatchDeleteProtectedBranchesRequest) (*model.BatchDeleteProtectedBranchesResponse, error) {
-	requestDef := GenReqDefForBatchDeleteProtectedBranches()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchDeleteProtectedBranchesResponse), nil
-	}
-}
-
-// BatchDeleteProtectedBranchesInvoker 批量删除仓库保护分支
-func (c *CodeHubClient) BatchDeleteProtectedBranchesInvoker(request *model.BatchDeleteProtectedBranchesRequest) *BatchDeleteProtectedBranchesInvoker {
-	requestDef := GenReqDefForBatchDeleteProtectedBranches()
-	return &BatchDeleteProtectedBranchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// BatchUpdateProtectedBranches 批量更新仓库保护分支
-//
-// 批量更新仓库保护分支
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) BatchUpdateProtectedBranches(request *model.BatchUpdateProtectedBranchesRequest) (*model.BatchUpdateProtectedBranchesResponse, error) {
-	requestDef := GenReqDefForBatchUpdateProtectedBranches()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchUpdateProtectedBranchesResponse), nil
-	}
-}
-
-// BatchUpdateProtectedBranchesInvoker 批量更新仓库保护分支
-func (c *CodeHubClient) BatchUpdateProtectedBranchesInvoker(request *model.BatchUpdateProtectedBranchesRequest) *BatchUpdateProtectedBranchesInvoker {
-	requestDef := GenReqDefForBatchUpdateProtectedBranches()
-	return &BatchUpdateProtectedBranchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateProjectProtectedBranches 创建项目下保护分支
-//
-// 创建项目下保护分支
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) CreateProjectProtectedBranches(request *model.CreateProjectProtectedBranchesRequest) (*model.CreateProjectProtectedBranchesResponse, error) {
-	requestDef := GenReqDefForCreateProjectProtectedBranches()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateProjectProtectedBranchesResponse), nil
-	}
-}
-
-// CreateProjectProtectedBranchesInvoker 创建项目下保护分支
-func (c *CodeHubClient) CreateProjectProtectedBranchesInvoker(request *model.CreateProjectProtectedBranchesRequest) *CreateProjectProtectedBranchesInvoker {
-	requestDef := GenReqDefForCreateProjectProtectedBranches()
-	return &CreateProjectProtectedBranchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteProtectedBranch 删除仓库保护分支
-//
-// 删除仓库保护分支
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) DeleteProtectedBranch(request *model.DeleteProtectedBranchRequest) (*model.DeleteProtectedBranchResponse, error) {
-	requestDef := GenReqDefForDeleteProtectedBranch()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteProtectedBranchResponse), nil
-	}
-}
-
-// DeleteProtectedBranchInvoker 删除仓库保护分支
-func (c *CodeHubClient) DeleteProtectedBranchInvoker(request *model.DeleteProtectedBranchRequest) *DeleteProtectedBranchInvoker {
-	requestDef := GenReqDefForDeleteProtectedBranch()
-	return &DeleteProtectedBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListProjectProtectedBranches 获取项目下保护分支列表
-//
-// 获取项目下保护分支列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) ListProjectProtectedBranches(request *model.ListProjectProtectedBranchesRequest) (*model.ListProjectProtectedBranchesResponse, error) {
-	requestDef := GenReqDefForListProjectProtectedBranches()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListProjectProtectedBranchesResponse), nil
-	}
-}
-
-// ListProjectProtectedBranchesInvoker 获取项目下保护分支列表
-func (c *CodeHubClient) ListProjectProtectedBranchesInvoker(request *model.ListProjectProtectedBranchesRequest) *ListProjectProtectedBranchesInvoker {
-	requestDef := GenReqDefForListProjectProtectedBranches()
-	return &ListProjectProtectedBranchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListProtectedBranches 获取仓库保护分支列表
-//
-// 获取仓库保护分支列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) ListProtectedBranches(request *model.ListProtectedBranchesRequest) (*model.ListProtectedBranchesResponse, error) {
-	requestDef := GenReqDefForListProtectedBranches()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListProtectedBranchesResponse), nil
-	}
-}
-
-// ListProtectedBranchesInvoker 获取仓库保护分支列表
-func (c *CodeHubClient) ListProtectedBranchesInvoker(request *model.ListProtectedBranchesRequest) *ListProtectedBranchesInvoker {
-	requestDef := GenReqDefForListProtectedBranches()
-	return &ListProtectedBranchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowProtectedBranch 获取仓库保护分支
-//
-// 获取仓库保护分支
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) ShowProtectedBranch(request *model.ShowProtectedBranchRequest) (*model.ShowProtectedBranchResponse, error) {
-	requestDef := GenReqDefForShowProtectedBranch()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowProtectedBranchResponse), nil
-	}
-}
-
-// ShowProtectedBranchInvoker 获取仓库保护分支
-func (c *CodeHubClient) ShowProtectedBranchInvoker(request *model.ShowProtectedBranchRequest) *ShowProtectedBranchInvoker {
-	requestDef := GenReqDefForShowProtectedBranch()
-	return &ShowProtectedBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateProtectedBranch 更新仓库保护分支
-//
-// 更新仓库保护分支
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) UpdateProtectedBranch(request *model.UpdateProtectedBranchRequest) (*model.UpdateProtectedBranchResponse, error) {
-	requestDef := GenReqDefForUpdateProtectedBranch()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateProtectedBranchResponse), nil
-	}
-}
-
-// UpdateProtectedBranchInvoker 更新仓库保护分支
-func (c *CodeHubClient) UpdateProtectedBranchInvoker(request *model.UpdateProtectedBranchRequest) *UpdateProtectedBranchInvoker {
-	requestDef := GenReqDefForUpdateProtectedBranch()
-	return &UpdateProtectedBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // BatchCreateProtectedTags 批量创建仓库保护Tag
 //
 // 批量创建仓库保护Tag
@@ -3188,6 +3524,27 @@ func (c *CodeHubClient) BatchCreateProtectedTags(request *model.BatchCreateProte
 func (c *CodeHubClient) BatchCreateProtectedTagsInvoker(request *model.BatchCreateProtectedTagsRequest) *BatchCreateProtectedTagsInvoker {
 	requestDef := GenReqDefForBatchCreateProtectedTags()
 	return &BatchCreateProtectedTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteProtectedBranches 批量删除仓库保护分支
+//
+// 批量删除仓库保护分支
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) BatchDeleteProtectedBranches(request *model.BatchDeleteProtectedBranchesRequest) (*model.BatchDeleteProtectedBranchesResponse, error) {
+	requestDef := GenReqDefForBatchDeleteProtectedBranches()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteProtectedBranchesResponse), nil
+	}
+}
+
+// BatchDeleteProtectedBranchesInvoker 批量删除仓库保护分支
+func (c *CodeHubClient) BatchDeleteProtectedBranchesInvoker(request *model.BatchDeleteProtectedBranchesRequest) *BatchDeleteProtectedBranchesInvoker {
+	requestDef := GenReqDefForBatchDeleteProtectedBranches()
+	return &BatchDeleteProtectedBranchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchDeleteProtectedTags 批量删除仓库保护Tag
@@ -3211,6 +3568,27 @@ func (c *CodeHubClient) BatchDeleteProtectedTagsInvoker(request *model.BatchDele
 	return &BatchDeleteProtectedTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchUpdateProtectedBranches 批量更新仓库保护分支
+//
+// 批量更新仓库保护分支
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) BatchUpdateProtectedBranches(request *model.BatchUpdateProtectedBranchesRequest) (*model.BatchUpdateProtectedBranchesResponse, error) {
+	requestDef := GenReqDefForBatchUpdateProtectedBranches()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateProtectedBranchesResponse), nil
+	}
+}
+
+// BatchUpdateProtectedBranchesInvoker 批量更新仓库保护分支
+func (c *CodeHubClient) BatchUpdateProtectedBranchesInvoker(request *model.BatchUpdateProtectedBranchesRequest) *BatchUpdateProtectedBranchesInvoker {
+	requestDef := GenReqDefForBatchUpdateProtectedBranches()
+	return &BatchUpdateProtectedBranchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchUpdateProtectedTags 批量更新仓库保护Tag
 //
 // 批量更新仓库保护Tag
@@ -3230,6 +3608,69 @@ func (c *CodeHubClient) BatchUpdateProtectedTags(request *model.BatchUpdateProte
 func (c *CodeHubClient) BatchUpdateProtectedTagsInvoker(request *model.BatchUpdateProtectedTagsRequest) *BatchUpdateProtectedTagsInvoker {
 	requestDef := GenReqDefForBatchUpdateProtectedTags()
 	return &BatchUpdateProtectedTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateProjectProtectedBranches 创建项目下保护分支
+//
+// 创建项目下保护分支
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) CreateProjectProtectedBranches(request *model.CreateProjectProtectedBranchesRequest) (*model.CreateProjectProtectedBranchesResponse, error) {
+	requestDef := GenReqDefForCreateProjectProtectedBranches()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateProjectProtectedBranchesResponse), nil
+	}
+}
+
+// CreateProjectProtectedBranchesInvoker 创建项目下保护分支
+func (c *CodeHubClient) CreateProjectProtectedBranchesInvoker(request *model.CreateProjectProtectedBranchesRequest) *CreateProjectProtectedBranchesInvoker {
+	requestDef := GenReqDefForCreateProjectProtectedBranches()
+	return &CreateProjectProtectedBranchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateProjectProtectedTags 创建项目下的保护tag
+//
+// 创建项目下的保护tag
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) CreateProjectProtectedTags(request *model.CreateProjectProtectedTagsRequest) (*model.CreateProjectProtectedTagsResponse, error) {
+	requestDef := GenReqDefForCreateProjectProtectedTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateProjectProtectedTagsResponse), nil
+	}
+}
+
+// CreateProjectProtectedTagsInvoker 创建项目下的保护tag
+func (c *CodeHubClient) CreateProjectProtectedTagsInvoker(request *model.CreateProjectProtectedTagsRequest) *CreateProjectProtectedTagsInvoker {
+	requestDef := GenReqDefForCreateProjectProtectedTags()
+	return &CreateProjectProtectedTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteProtectedBranch 删除仓库保护分支
+//
+// 删除仓库保护分支
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) DeleteProtectedBranch(request *model.DeleteProtectedBranchRequest) (*model.DeleteProtectedBranchResponse, error) {
+	requestDef := GenReqDefForDeleteProtectedBranch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteProtectedBranchResponse), nil
+	}
+}
+
+// DeleteProtectedBranchInvoker 删除仓库保护分支
+func (c *CodeHubClient) DeleteProtectedBranchInvoker(request *model.DeleteProtectedBranchRequest) *DeleteProtectedBranchInvoker {
+	requestDef := GenReqDefForDeleteProtectedBranch()
+	return &DeleteProtectedBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteProtectedTag 删除仓库保护Tag
@@ -3253,6 +3694,69 @@ func (c *CodeHubClient) DeleteProtectedTagInvoker(request *model.DeleteProtected
 	return &DeleteProtectedTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListProjectProtectedBranches 获取项目下保护分支列表
+//
+// 获取项目下保护分支列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListProjectProtectedBranches(request *model.ListProjectProtectedBranchesRequest) (*model.ListProjectProtectedBranchesResponse, error) {
+	requestDef := GenReqDefForListProjectProtectedBranches()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectProtectedBranchesResponse), nil
+	}
+}
+
+// ListProjectProtectedBranchesInvoker 获取项目下保护分支列表
+func (c *CodeHubClient) ListProjectProtectedBranchesInvoker(request *model.ListProjectProtectedBranchesRequest) *ListProjectProtectedBranchesInvoker {
+	requestDef := GenReqDefForListProjectProtectedBranches()
+	return &ListProjectProtectedBranchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectProtectedTags 获取指定项目的保护tag详情
+//
+// 获取指定项目的保护tag详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListProjectProtectedTags(request *model.ListProjectProtectedTagsRequest) (*model.ListProjectProtectedTagsResponse, error) {
+	requestDef := GenReqDefForListProjectProtectedTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectProtectedTagsResponse), nil
+	}
+}
+
+// ListProjectProtectedTagsInvoker 获取指定项目的保护tag详情
+func (c *CodeHubClient) ListProjectProtectedTagsInvoker(request *model.ListProjectProtectedTagsRequest) *ListProjectProtectedTagsInvoker {
+	requestDef := GenReqDefForListProjectProtectedTags()
+	return &ListProjectProtectedTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProtectedBranches 获取仓库保护分支列表
+//
+// 获取仓库保护分支列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListProtectedBranches(request *model.ListProtectedBranchesRequest) (*model.ListProtectedBranchesResponse, error) {
+	requestDef := GenReqDefForListProtectedBranches()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProtectedBranchesResponse), nil
+	}
+}
+
+// ListProtectedBranchesInvoker 获取仓库保护分支列表
+func (c *CodeHubClient) ListProtectedBranchesInvoker(request *model.ListProtectedBranchesRequest) *ListProtectedBranchesInvoker {
+	requestDef := GenReqDefForListProtectedBranches()
+	return &ListProtectedBranchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProtectedTags 获取仓库保护Tag列表
 //
 // 获取仓库保护Tag列表
@@ -3272,6 +3776,27 @@ func (c *CodeHubClient) ListProtectedTags(request *model.ListProtectedTagsReques
 func (c *CodeHubClient) ListProtectedTagsInvoker(request *model.ListProtectedTagsRequest) *ListProtectedTagsInvoker {
 	requestDef := GenReqDefForListProtectedTags()
 	return &ListProtectedTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProtectedBranch 获取仓库保护分支
+//
+// 获取仓库保护分支
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ShowProtectedBranch(request *model.ShowProtectedBranchRequest) (*model.ShowProtectedBranchResponse, error) {
+	requestDef := GenReqDefForShowProtectedBranch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProtectedBranchResponse), nil
+	}
+}
+
+// ShowProtectedBranchInvoker 获取仓库保护分支
+func (c *CodeHubClient) ShowProtectedBranchInvoker(request *model.ShowProtectedBranchRequest) *ShowProtectedBranchInvoker {
+	requestDef := GenReqDefForShowProtectedBranch()
+	return &ShowProtectedBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowProtectedTag 获取仓库保护Tag
@@ -3295,6 +3820,27 @@ func (c *CodeHubClient) ShowProtectedTagInvoker(request *model.ShowProtectedTagR
 	return &ShowProtectedTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateProtectedBranch 更新仓库保护分支
+//
+// 更新仓库保护分支
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) UpdateProtectedBranch(request *model.UpdateProtectedBranchRequest) (*model.UpdateProtectedBranchResponse, error) {
+	requestDef := GenReqDefForUpdateProtectedBranch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateProtectedBranchResponse), nil
+	}
+}
+
+// UpdateProtectedBranchInvoker 更新仓库保护分支
+func (c *CodeHubClient) UpdateProtectedBranchInvoker(request *model.UpdateProtectedBranchRequest) *UpdateProtectedBranchInvoker {
+	requestDef := GenReqDefForUpdateProtectedBranch()
+	return &UpdateProtectedBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateProtectedTag 更新仓库保护Tag
 //
 // 更新仓库保护Tag
@@ -3314,6 +3860,237 @@ func (c *CodeHubClient) UpdateProtectedTag(request *model.UpdateProtectedTagRequ
 func (c *CodeHubClient) UpdateProtectedTagInvoker(request *model.UpdateProtectedTagRequest) *UpdateProtectedTagInvoker {
 	requestDef := GenReqDefForUpdateProtectedTag()
 	return &UpdateProtectedTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteBranch 批量删除分支
+//
+// 批量删除分支
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) BatchDeleteBranch(request *model.BatchDeleteBranchRequest) (*model.BatchDeleteBranchResponse, error) {
+	requestDef := GenReqDefForBatchDeleteBranch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteBranchResponse), nil
+	}
+}
+
+// BatchDeleteBranchInvoker 批量删除分支
+func (c *CodeHubClient) BatchDeleteBranchInvoker(request *model.BatchDeleteBranchRequest) *BatchDeleteBranchInvoker {
+	requestDef := GenReqDefForBatchDeleteBranch()
+	return &BatchDeleteBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateBranch 创建分支
+//
+// 创建分支
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) CreateBranch(request *model.CreateBranchRequest) (*model.CreateBranchResponse, error) {
+	requestDef := GenReqDefForCreateBranch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateBranchResponse), nil
+	}
+}
+
+// CreateBranchInvoker 创建分支
+func (c *CodeHubClient) CreateBranchInvoker(request *model.CreateBranchRequest) *CreateBranchInvoker {
+	requestDef := GenReqDefForCreateBranch()
+	return &CreateBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTag 创建标签
+//
+// 创建标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) CreateTag(request *model.CreateTagRequest) (*model.CreateTagResponse, error) {
+	requestDef := GenReqDefForCreateTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTagResponse), nil
+	}
+}
+
+// CreateTagInvoker 创建标签
+func (c *CodeHubClient) CreateTagInvoker(request *model.CreateTagRequest) *CreateTagInvoker {
+	requestDef := GenReqDefForCreateTag()
+	return &CreateTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteBranch 删除分支
+//
+// 删除分支
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) DeleteBranch(request *model.DeleteBranchRequest) (*model.DeleteBranchResponse, error) {
+	requestDef := GenReqDefForDeleteBranch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteBranchResponse), nil
+	}
+}
+
+// DeleteBranchInvoker 删除分支
+func (c *CodeHubClient) DeleteBranchInvoker(request *model.DeleteBranchRequest) *DeleteBranchInvoker {
+	requestDef := GenReqDefForDeleteBranch()
+	return &DeleteBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTag 删除标签
+//
+// 删除标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) DeleteTag(request *model.DeleteTagRequest) (*model.DeleteTagResponse, error) {
+	requestDef := GenReqDefForDeleteTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTagResponse), nil
+	}
+}
+
+// DeleteTagInvoker 删除标签
+func (c *CodeHubClient) DeleteTagInvoker(request *model.DeleteTagRequest) *DeleteTagInvoker {
+	requestDef := GenReqDefForDeleteTag()
+	return &DeleteTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBranches 获取分支列表
+//
+// 获取分支列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListBranches(request *model.ListBranchesRequest) (*model.ListBranchesResponse, error) {
+	requestDef := GenReqDefForListBranches()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBranchesResponse), nil
+	}
+}
+
+// ListBranchesInvoker 获取分支列表
+func (c *CodeHubClient) ListBranchesInvoker(request *model.ListBranchesRequest) *ListBranchesInvoker {
+	requestDef := GenReqDefForListBranches()
+	return &ListBranchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRefsList 查看分支/tag列表
+//
+// 查看分支/tag列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListRefsList(request *model.ListRefsListRequest) (*model.ListRefsListResponse, error) {
+	requestDef := GenReqDefForListRefsList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRefsListResponse), nil
+	}
+}
+
+// ListRefsListInvoker 查看分支/tag列表
+func (c *CodeHubClient) ListRefsListInvoker(request *model.ListRefsListRequest) *ListRefsListInvoker {
+	requestDef := GenReqDefForListRefsList()
+	return &ListRefsListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTags 获取标签列表
+//
+// 获取标签列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListTags(request *model.ListTagsRequest) (*model.ListTagsResponse, error) {
+	requestDef := GenReqDefForListTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTagsResponse), nil
+	}
+}
+
+// ListTagsInvoker 获取标签列表
+func (c *CodeHubClient) ListTagsInvoker(request *model.ListTagsRequest) *ListTagsInvoker {
+	requestDef := GenReqDefForListTags()
+	return &ListTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBranch 获取分支详情
+//
+// 获取分支详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ShowBranch(request *model.ShowBranchRequest) (*model.ShowBranchResponse, error) {
+	requestDef := GenReqDefForShowBranch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBranchResponse), nil
+	}
+}
+
+// ShowBranchInvoker 获取分支详情
+func (c *CodeHubClient) ShowBranchInvoker(request *model.ShowBranchRequest) *ShowBranchInvoker {
+	requestDef := GenReqDefForShowBranch()
+	return &ShowBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTag 查看标签详情
+//
+// 查看标签详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ShowTag(request *model.ShowTagRequest) (*model.ShowTagResponse, error) {
+	requestDef := GenReqDefForShowTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTagResponse), nil
+	}
+}
+
+// ShowTagInvoker 查看标签详情
+func (c *CodeHubClient) ShowTagInvoker(request *model.ShowTagRequest) *ShowTagInvoker {
+	requestDef := GenReqDefForShowTag()
+	return &ShowTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateBranchName 分支重命名
+//
+// 分支重命名。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) UpdateBranchName(request *model.UpdateBranchNameRequest) (*model.UpdateBranchNameResponse, error) {
+	requestDef := GenReqDefForUpdateBranchName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateBranchNameResponse), nil
+	}
+}
+
+// UpdateBranchNameInvoker 分支重命名
+func (c *CodeHubClient) UpdateBranchNameInvoker(request *model.UpdateBranchNameRequest) *UpdateBranchNameInvoker {
+	requestDef := GenReqDefForUpdateBranchName()
+	return &UpdateBranchNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AddSubmodule 创建子模块
@@ -3400,6 +4177,27 @@ func (c *CodeHubClient) AssociateRepositoryUserGroupInvoker(request *model.Assoc
 	return &AssociateRepositoryUserGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchValidateRepoNames 批量检查仓库名
+//
+// 批量检查仓库名
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) BatchValidateRepoNames(request *model.BatchValidateRepoNamesRequest) (*model.BatchValidateRepoNamesResponse, error) {
+	requestDef := GenReqDefForBatchValidateRepoNames()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchValidateRepoNamesResponse), nil
+	}
+}
+
+// BatchValidateRepoNamesInvoker 批量检查仓库名
+func (c *CodeHubClient) BatchValidateRepoNamesInvoker(request *model.BatchValidateRepoNamesRequest) *BatchValidateRepoNamesInvoker {
+	requestDef := GenReqDefForBatchValidateRepoNames()
+	return &BatchValidateRepoNamesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDir 创建指定分支下的目录
 //
 // 创建指定分支下的目录
@@ -3419,6 +4217,90 @@ func (c *CodeHubClient) CreateDir(request *model.CreateDirRequest) (*model.Creat
 func (c *CodeHubClient) CreateDirInvoker(request *model.CreateDirRequest) *CreateDirInvoker {
 	requestDef := GenReqDefForCreateDir()
 	return &CreateDirInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRepositoryCommitRule 创建仓库提交规则
+//
+// 创建仓库提交规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) CreateRepositoryCommitRule(request *model.CreateRepositoryCommitRuleRequest) (*model.CreateRepositoryCommitRuleResponse, error) {
+	requestDef := GenReqDefForCreateRepositoryCommitRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRepositoryCommitRuleResponse), nil
+	}
+}
+
+// CreateRepositoryCommitRuleInvoker 创建仓库提交规则
+func (c *CodeHubClient) CreateRepositoryCommitRuleInvoker(request *model.CreateRepositoryCommitRuleRequest) *CreateRepositoryCommitRuleInvoker {
+	requestDef := GenReqDefForCreateRepositoryCommitRule()
+	return &CreateRepositoryCommitRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRepositoryLabel 创建仓库标签
+//
+// 创建仓库标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) CreateRepositoryLabel(request *model.CreateRepositoryLabelRequest) (*model.CreateRepositoryLabelResponse, error) {
+	requestDef := GenReqDefForCreateRepositoryLabel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRepositoryLabelResponse), nil
+	}
+}
+
+// CreateRepositoryLabelInvoker 创建仓库标签
+func (c *CodeHubClient) CreateRepositoryLabelInvoker(request *model.CreateRepositoryLabelRequest) *CreateRepositoryLabelInvoker {
+	requestDef := GenReqDefForCreateRepositoryLabel()
+	return &CreateRepositoryLabelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRepositorySystemLabels 创建仓库系统标签
+//
+// 创建仓库系统标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) CreateRepositorySystemLabels(request *model.CreateRepositorySystemLabelsRequest) (*model.CreateRepositorySystemLabelsResponse, error) {
+	requestDef := GenReqDefForCreateRepositorySystemLabels()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRepositorySystemLabelsResponse), nil
+	}
+}
+
+// CreateRepositorySystemLabelsInvoker 创建仓库系统标签
+func (c *CodeHubClient) CreateRepositorySystemLabelsInvoker(request *model.CreateRepositorySystemLabelsRequest) *CreateRepositorySystemLabelsInvoker {
+	requestDef := GenReqDefForCreateRepositorySystemLabels()
+	return &CreateRepositorySystemLabelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteRepositoryLabel 删除仓库标签
+//
+// 删除仓库标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) DeleteRepositoryLabel(request *model.DeleteRepositoryLabelRequest) (*model.DeleteRepositoryLabelResponse, error) {
+	requestDef := GenReqDefForDeleteRepositoryLabel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteRepositoryLabelResponse), nil
+	}
+}
+
+// DeleteRepositoryLabelInvoker 删除仓库标签
+func (c *CodeHubClient) DeleteRepositoryLabelInvoker(request *model.DeleteRepositoryLabelRequest) *DeleteRepositoryLabelInvoker {
+	requestDef := GenReqDefForDeleteRepositoryLabel()
+	return &DeleteRepositoryLabelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteTrustedIpAddress 删除仓库ip白名单
@@ -3463,6 +4345,27 @@ func (c *CodeHubClient) DownloadArchiveInvoker(request *model.DownloadArchiveReq
 	return &DownloadArchiveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExecuteRepositoryStatistics 触发仓库统计任务
+//
+// 触发仓库统计任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ExecuteRepositoryStatistics(request *model.ExecuteRepositoryStatisticsRequest) (*model.ExecuteRepositoryStatisticsResponse, error) {
+	requestDef := GenReqDefForExecuteRepositoryStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteRepositoryStatisticsResponse), nil
+	}
+}
+
+// ExecuteRepositoryStatisticsInvoker 触发仓库统计任务
+func (c *CodeHubClient) ExecuteRepositoryStatisticsInvoker(request *model.ExecuteRepositoryStatisticsRequest) *ExecuteRepositoryStatisticsInvoker {
+	requestDef := GenReqDefForExecuteRepositoryStatistics()
+	return &ExecuteRepositoryStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCurrentUserRepositories 获取当前登录用户仓库
 //
 // 获取当前登录用户仓库
@@ -3484,25 +4387,46 @@ func (c *CodeHubClient) ListCurrentUserRepositoriesInvoker(request *model.ListCu
 	return &ListCurrentUserRepositoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListManageableGroups 获取项目下当前用户有管理权限的代码组列表
+// ListGroupRepositories 获取代码组下仓库列表
 //
-// 获取项目下当前用户有管理权限的代码组列表
+// 获取代码组下仓库列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) ListManageableGroups(request *model.ListManageableGroupsRequest) (*model.ListManageableGroupsResponse, error) {
-	requestDef := GenReqDefForListManageableGroups()
+func (c *CodeHubClient) ListGroupRepositories(request *model.ListGroupRepositoriesRequest) (*model.ListGroupRepositoriesResponse, error) {
+	requestDef := GenReqDefForListGroupRepositories()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListManageableGroupsResponse), nil
+		return resp.(*model.ListGroupRepositoriesResponse), nil
 	}
 }
 
-// ListManageableGroupsInvoker 获取项目下当前用户有管理权限的代码组列表
-func (c *CodeHubClient) ListManageableGroupsInvoker(request *model.ListManageableGroupsRequest) *ListManageableGroupsInvoker {
-	requestDef := GenReqDefForListManageableGroups()
-	return &ListManageableGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListGroupRepositoriesInvoker 获取代码组下仓库列表
+func (c *CodeHubClient) ListGroupRepositoriesInvoker(request *model.ListGroupRepositoriesRequest) *ListGroupRepositoriesInvoker {
+	requestDef := GenReqDefForListGroupRepositories()
+	return &ListGroupRepositoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPersonalRecentPushEvents 获取当前用户最近提交动态列表
+//
+// 查询当前最近前N条提交动态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListPersonalRecentPushEvents(request *model.ListPersonalRecentPushEventsRequest) (*model.ListPersonalRecentPushEventsResponse, error) {
+	requestDef := GenReqDefForListPersonalRecentPushEvents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPersonalRecentPushEventsResponse), nil
+	}
+}
+
+// ListPersonalRecentPushEventsInvoker 获取当前用户最近提交动态列表
+func (c *CodeHubClient) ListPersonalRecentPushEventsInvoker(request *model.ListPersonalRecentPushEventsRequest) *ListPersonalRecentPushEventsInvoker {
+	requestDef := GenReqDefForListPersonalRecentPushEvents()
+	return &ListPersonalRecentPushEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPersonalRepositoryImportRecords 查看当前用户仓库导入任务列表
@@ -3524,6 +4448,27 @@ func (c *CodeHubClient) ListPersonalRepositoryImportRecords(request *model.ListP
 func (c *CodeHubClient) ListPersonalRepositoryImportRecordsInvoker(request *model.ListPersonalRepositoryImportRecordsRequest) *ListPersonalRepositoryImportRecordsInvoker {
 	requestDef := GenReqDefForListPersonalRepositoryImportRecords()
 	return &ListPersonalRepositoryImportRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectRepositories 获取项目下仓库列表
+//
+// 获取项目下仓库列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListProjectRepositories(request *model.ListProjectRepositoriesRequest) (*model.ListProjectRepositoriesResponse, error) {
+	requestDef := GenReqDefForListProjectRepositories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectRepositoriesResponse), nil
+	}
+}
+
+// ListProjectRepositoriesInvoker 获取项目下仓库列表
+func (c *CodeHubClient) ListProjectRepositoriesInvoker(request *model.ListProjectRepositoriesRequest) *ListProjectRepositoriesInvoker {
+	requestDef := GenReqDefForListProjectRepositories()
+	return &ListProjectRepositoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListRepositoryCommitRules 查看仓库提交规则
@@ -3610,6 +4555,27 @@ func (c *CodeHubClient) ListRepositoryForksInvoker(request *model.ListRepository
 	return &ListRepositoryForksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListRepositoryLabels 获取仓库标签列表
+//
+// 获取仓库标签列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListRepositoryLabels(request *model.ListRepositoryLabelsRequest) (*model.ListRepositoryLabelsResponse, error) {
+	requestDef := GenReqDefForListRepositoryLabels()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRepositoryLabelsResponse), nil
+	}
+}
+
+// ListRepositoryLabelsInvoker 获取仓库标签列表
+func (c *CodeHubClient) ListRepositoryLabelsInvoker(request *model.ListRepositoryLabelsRequest) *ListRepositoryLabelsInvoker {
+	requestDef := GenReqDefForListRepositoryLabels()
+	return &ListRepositoryLabelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListRepositoryLanguages 获取仓库默认分支语言统计
 //
 // 获取仓库默认分支语言统计
@@ -3673,27 +4639,6 @@ func (c *CodeHubClient) ListSubmodulesInvoker(request *model.ListSubmodulesReque
 	return &ListSubmodulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListTrees 查看分支文件列表
-//
-// 查看分支文件列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) ListTrees(request *model.ListTreesRequest) (*model.ListTreesResponse, error) {
-	requestDef := GenReqDefForListTrees()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListTreesResponse), nil
-	}
-}
-
-// ListTreesInvoker 查看分支文件列表
-func (c *CodeHubClient) ListTreesInvoker(request *model.ListTreesRequest) *ListTreesInvoker {
-	requestDef := GenReqDefForListTrees()
-	return &ListTreesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ListTrustedIpAddresses 获取仓库ip白名单
 //
 // 获取仓库ip白名单
@@ -3736,9 +4681,9 @@ func (c *CodeHubClient) LockRepositoryInvoker(request *model.LockRepositoryReque
 	return &LockRepositoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// RemoveDeployKey 删除仓库部署秘钥
+// RemoveDeployKey 删除仓库部署密钥
 //
-// 删除仓库部署秘钥
+// 删除仓库部署密钥
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) RemoveDeployKey(request *model.RemoveDeployKeyRequest) (*model.RemoveDeployKeyResponse, error) {
@@ -3751,10 +4696,31 @@ func (c *CodeHubClient) RemoveDeployKey(request *model.RemoveDeployKeyRequest) (
 	}
 }
 
-// RemoveDeployKeyInvoker 删除仓库部署秘钥
+// RemoveDeployKeyInvoker 删除仓库部署密钥
 func (c *CodeHubClient) RemoveDeployKeyInvoker(request *model.RemoveDeployKeyRequest) *RemoveDeployKeyInvoker {
 	requestDef := GenReqDefForRemoveDeployKey()
 	return &RemoveDeployKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RemoveDeployKeyFromSubmodules 删除子仓库部署密钥
+//
+// 将该该仓库的部署密钥从子模组中删除
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) RemoveDeployKeyFromSubmodules(request *model.RemoveDeployKeyFromSubmodulesRequest) (*model.RemoveDeployKeyFromSubmodulesResponse, error) {
+	requestDef := GenReqDefForRemoveDeployKeyFromSubmodules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoveDeployKeyFromSubmodulesResponse), nil
+	}
+}
+
+// RemoveDeployKeyFromSubmodulesInvoker 删除子仓库部署密钥
+func (c *CodeHubClient) RemoveDeployKeyFromSubmodulesInvoker(request *model.RemoveDeployKeyFromSubmodulesRequest) *RemoveDeployKeyFromSubmodulesInvoker {
+	requestDef := GenReqDefForRemoveDeployKeyFromSubmodules()
+	return &RemoveDeployKeyFromSubmodulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowBlobs 获取文件内容
@@ -4114,6 +5080,27 @@ func (c *CodeHubClient) ShowUserRefPermissionInvoker(request *model.ShowUserRefP
 	return &ShowUserRefPermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// StartHouseKeeping 启动仓库加速
+//
+// 启动仓库加速
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) StartHouseKeeping(request *model.StartHouseKeepingRequest) (*model.StartHouseKeepingResponse, error) {
+	requestDef := GenReqDefForStartHouseKeeping()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartHouseKeepingResponse), nil
+	}
+}
+
+// StartHouseKeepingInvoker 启动仓库加速
+func (c *CodeHubClient) StartHouseKeepingInvoker(request *model.StartHouseKeepingRequest) *StartHouseKeepingInvoker {
+	requestDef := GenReqDefForStartHouseKeeping()
+	return &StartHouseKeepingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // StartRemoteMirrorSynchronization 启动仓库镜像同步
 //
 // 启动仓库镜像同步
@@ -4133,6 +5120,27 @@ func (c *CodeHubClient) StartRemoteMirrorSynchronization(request *model.StartRem
 func (c *CodeHubClient) StartRemoteMirrorSynchronizationInvoker(request *model.StartRemoteMirrorSynchronizationRequest) *StartRemoteMirrorSynchronizationInvoker {
 	requestDef := GenReqDefForStartRemoteMirrorSynchronization()
 	return &StartRemoteMirrorSynchronizationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SyncDeployKeyToSubmodules 仓库部署密钥同步到子仓
+//
+// 将该仓库的部署密钥同步到所有的子模组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) SyncDeployKeyToSubmodules(request *model.SyncDeployKeyToSubmodulesRequest) (*model.SyncDeployKeyToSubmodulesResponse, error) {
+	requestDef := GenReqDefForSyncDeployKeyToSubmodules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SyncDeployKeyToSubmodulesResponse), nil
+	}
+}
+
+// SyncDeployKeyToSubmodulesInvoker 仓库部署密钥同步到子仓
+func (c *CodeHubClient) SyncDeployKeyToSubmodulesInvoker(request *model.SyncDeployKeyToSubmodulesRequest) *SyncDeployKeyToSubmodulesInvoker {
+	requestDef := GenReqDefForSyncDeployKeyToSubmodules()
+	return &SyncDeployKeyToSubmodulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UnlockRepository 解锁仓库
@@ -4177,6 +5185,48 @@ func (c *CodeHubClient) UpdateNotificationSubscriptionInvoker(request *model.Upd
 	return &UpdateNotificationSubscriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateRepositoryCommitRule 修改仓库提交规则
+//
+// 修改仓库提交规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) UpdateRepositoryCommitRule(request *model.UpdateRepositoryCommitRuleRequest) (*model.UpdateRepositoryCommitRuleResponse, error) {
+	requestDef := GenReqDefForUpdateRepositoryCommitRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRepositoryCommitRuleResponse), nil
+	}
+}
+
+// UpdateRepositoryCommitRuleInvoker 修改仓库提交规则
+func (c *CodeHubClient) UpdateRepositoryCommitRuleInvoker(request *model.UpdateRepositoryCommitRuleRequest) *UpdateRepositoryCommitRuleInvoker {
+	requestDef := GenReqDefForUpdateRepositoryCommitRule()
+	return &UpdateRepositoryCommitRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRepositoryGeneralCommitRule 修改仓库通用提交规则
+//
+// 修改仓库通用提交规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) UpdateRepositoryGeneralCommitRule(request *model.UpdateRepositoryGeneralCommitRuleRequest) (*model.UpdateRepositoryGeneralCommitRuleResponse, error) {
+	requestDef := GenReqDefForUpdateRepositoryGeneralCommitRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRepositoryGeneralCommitRuleResponse), nil
+	}
+}
+
+// UpdateRepositoryGeneralCommitRuleInvoker 修改仓库通用提交规则
+func (c *CodeHubClient) UpdateRepositoryGeneralCommitRuleInvoker(request *model.UpdateRepositoryGeneralCommitRuleRequest) *UpdateRepositoryGeneralCommitRuleInvoker {
+	requestDef := GenReqDefForUpdateRepositoryGeneralCommitRule()
+	return &UpdateRepositoryGeneralCommitRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateRepositoryGeneralPolicy 修改仓库通用策略
 //
 // 修改仓库通用策略
@@ -4217,6 +5267,48 @@ func (c *CodeHubClient) UpdateRepositoryInheritSetting(request *model.UpdateRepo
 func (c *CodeHubClient) UpdateRepositoryInheritSettingInvoker(request *model.UpdateRepositoryInheritSettingRequest) *UpdateRepositoryInheritSettingInvoker {
 	requestDef := GenReqDefForUpdateRepositoryInheritSetting()
 	return &UpdateRepositoryInheritSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRepositoryLabel 修改仓库标签
+//
+// 修改仓库标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) UpdateRepositoryLabel(request *model.UpdateRepositoryLabelRequest) (*model.UpdateRepositoryLabelResponse, error) {
+	requestDef := GenReqDefForUpdateRepositoryLabel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRepositoryLabelResponse), nil
+	}
+}
+
+// UpdateRepositoryLabelInvoker 修改仓库标签
+func (c *CodeHubClient) UpdateRepositoryLabelInvoker(request *model.UpdateRepositoryLabelRequest) *UpdateRepositoryLabelInvoker {
+	requestDef := GenReqDefForUpdateRepositoryLabel()
+	return &UpdateRepositoryLabelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRepositoryRemoteMirror 更新仓库镜像信息
+//
+// 更新仓库镜像信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) UpdateRepositoryRemoteMirror(request *model.UpdateRepositoryRemoteMirrorRequest) (*model.UpdateRepositoryRemoteMirrorResponse, error) {
+	requestDef := GenReqDefForUpdateRepositoryRemoteMirror()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRepositoryRemoteMirrorResponse), nil
+	}
+}
+
+// UpdateRepositoryRemoteMirrorInvoker 更新仓库镜像信息
+func (c *CodeHubClient) UpdateRepositoryRemoteMirrorInvoker(request *model.UpdateRepositoryRemoteMirrorRequest) *UpdateRepositoryRemoteMirrorInvoker {
+	requestDef := GenReqDefForUpdateRepositoryRemoteMirror()
+	return &UpdateRepositoryRemoteMirrorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateRepositoryWatermark 更新仓库水印设置
@@ -4261,90 +5353,6 @@ func (c *CodeHubClient) UpdateTrustedIpAddressInvoker(request *model.UpdateTrust
 	return &UpdateTrustedIpAddressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateTag 创建标签
-//
-// 创建标签
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) CreateTag(request *model.CreateTagRequest) (*model.CreateTagResponse, error) {
-	requestDef := GenReqDefForCreateTag()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateTagResponse), nil
-	}
-}
-
-// CreateTagInvoker 创建标签
-func (c *CodeHubClient) CreateTagInvoker(request *model.CreateTagRequest) *CreateTagInvoker {
-	requestDef := GenReqDefForCreateTag()
-	return &CreateTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteTag 删除标签
-//
-// 删除标签
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) DeleteTag(request *model.DeleteTagRequest) (*model.DeleteTagResponse, error) {
-	requestDef := GenReqDefForDeleteTag()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteTagResponse), nil
-	}
-}
-
-// DeleteTagInvoker 删除标签
-func (c *CodeHubClient) DeleteTagInvoker(request *model.DeleteTagRequest) *DeleteTagInvoker {
-	requestDef := GenReqDefForDeleteTag()
-	return &DeleteTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListTags 获取标签列表
-//
-// 获取标签列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) ListTags(request *model.ListTagsRequest) (*model.ListTagsResponse, error) {
-	requestDef := GenReqDefForListTags()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListTagsResponse), nil
-	}
-}
-
-// ListTagsInvoker 获取标签列表
-func (c *CodeHubClient) ListTagsInvoker(request *model.ListTagsRequest) *ListTagsInvoker {
-	requestDef := GenReqDefForListTags()
-	return &ListTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowTag 查看标签详情
-//
-// 查看标签详情
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeHubClient) ShowTag(request *model.ShowTagRequest) (*model.ShowTagResponse, error) {
-	requestDef := GenReqDefForShowTag()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowTagResponse), nil
-	}
-}
-
-// ShowTagInvoker 查看标签详情
-func (c *CodeHubClient) ShowTagInvoker(request *model.ShowTagRequest) *ShowTagInvoker {
-	requestDef := GenReqDefForShowTag()
-	return &ShowTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // AddTenantTrustedIpAddress 添加租户ip白名单
 //
 // 添加租户ip白名单
@@ -4385,6 +5393,48 @@ func (c *CodeHubClient) DeleteTenantTrustedIpAddress(request *model.DeleteTenant
 func (c *CodeHubClient) DeleteTenantTrustedIpAddressInvoker(request *model.DeleteTenantTrustedIpAddressRequest) *DeleteTenantTrustedIpAddressInvoker {
 	requestDef := GenReqDefForDeleteTenantTrustedIpAddress()
 	return &DeleteTenantTrustedIpAddressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportTenantRepositories 租户仓库列表
+//
+// 租户下所有占用资源的仓库列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ExportTenantRepositories(request *model.ExportTenantRepositoriesRequest) (*model.ExportTenantRepositoriesResponse, error) {
+	requestDef := GenReqDefForExportTenantRepositories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportTenantRepositoriesResponse), nil
+	}
+}
+
+// ExportTenantRepositoriesInvoker 租户仓库列表
+func (c *CodeHubClient) ExportTenantRepositoriesInvoker(request *model.ExportTenantRepositoriesRequest) *ExportTenantRepositoriesInvoker {
+	requestDef := GenReqDefForExportTenantRepositories()
+	return &ExportTenantRepositoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTenantRepositories 租户仓库列表
+//
+// 租户下所有占用资源的仓库列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListTenantRepositories(request *model.ListTenantRepositoriesRequest) (*model.ListTenantRepositoriesResponse, error) {
+	requestDef := GenReqDefForListTenantRepositories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTenantRepositoriesResponse), nil
+	}
+}
+
+// ListTenantRepositoriesInvoker 租户仓库列表
+func (c *CodeHubClient) ListTenantRepositoriesInvoker(request *model.ListTenantRepositoriesRequest) *ListTenantRepositoriesInvoker {
+	requestDef := GenReqDefForListTenantRepositories()
+	return &ListTenantRepositoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListTenantTrustedIpAddresses 获取租户ip白名单
@@ -4429,9 +5479,9 @@ func (c *CodeHubClient) UpdateTenantTrustedIpAddressInvoker(request *model.Updat
 	return &UpdateTenantTrustedIpAddressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CheckDeployKey 校验部署秘钥在上层代码组或项目是否配置
+// CheckDeployKey 校验部署密钥在上层代码组或项目是否配置
 //
-// 校验部署秘钥在上层代码组或项目是否配置
+// 校验部署密钥在上层代码组或项目是否配置
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) CheckDeployKey(request *model.CheckDeployKeyRequest) (*model.CheckDeployKeyResponse, error) {
@@ -4444,15 +5494,15 @@ func (c *CodeHubClient) CheckDeployKey(request *model.CheckDeployKeyRequest) (*m
 	}
 }
 
-// CheckDeployKeyInvoker 校验部署秘钥在上层代码组或项目是否配置
+// CheckDeployKeyInvoker 校验部署密钥在上层代码组或项目是否配置
 func (c *CodeHubClient) CheckDeployKeyInvoker(request *model.CheckDeployKeyRequest) *CheckDeployKeyInvoker {
 	requestDef := GenReqDefForCheckDeployKey()
 	return &CheckDeployKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CheckGroupDeployKey 校验代码组部署秘钥在上层代码组或项目是否配置
+// CheckGroupDeployKey 校验代码组部署密钥在上层代码组或项目是否配置
 //
-// 校验代码组部署秘钥在上层代码组或项目是否配置
+// 校验代码组部署密钥在上层代码组或项目是否配置
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) CheckGroupDeployKey(request *model.CheckGroupDeployKeyRequest) (*model.CheckGroupDeployKeyResponse, error) {
@@ -4465,7 +5515,7 @@ func (c *CodeHubClient) CheckGroupDeployKey(request *model.CheckGroupDeployKeyRe
 	}
 }
 
-// CheckGroupDeployKeyInvoker 校验代码组部署秘钥在上层代码组或项目是否配置
+// CheckGroupDeployKeyInvoker 校验代码组部署密钥在上层代码组或项目是否配置
 func (c *CodeHubClient) CheckGroupDeployKeyInvoker(request *model.CheckGroupDeployKeyRequest) *CheckGroupDeployKeyInvoker {
 	requestDef := GenReqDefForCheckGroupDeployKey()
 	return &CheckGroupDeployKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -4576,6 +5626,69 @@ func (c *CodeHubClient) ListRepositoryWorkItemsInvoker(request *model.ListReposi
 	return &ListRepositoryWorkItemsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowGroupE2eSetting 获取代码组下E2E设置信息
+//
+// 获取代码组下E2E设置信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ShowGroupE2eSetting(request *model.ShowGroupE2eSettingRequest) (*model.ShowGroupE2eSettingResponse, error) {
+	requestDef := GenReqDefForShowGroupE2eSetting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowGroupE2eSettingResponse), nil
+	}
+}
+
+// ShowGroupE2eSettingInvoker 获取代码组下E2E设置信息
+func (c *CodeHubClient) ShowGroupE2eSettingInvoker(request *model.ShowGroupE2eSettingRequest) *ShowGroupE2eSettingInvoker {
+	requestDef := GenReqDefForShowGroupE2eSetting()
+	return &ShowGroupE2eSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProjectE2eSetting 获取项目下E2E设置信息
+//
+// 获取项目下E2E设置信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ShowProjectE2eSetting(request *model.ShowProjectE2eSettingRequest) (*model.ShowProjectE2eSettingResponse, error) {
+	requestDef := GenReqDefForShowProjectE2eSetting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProjectE2eSettingResponse), nil
+	}
+}
+
+// ShowProjectE2eSettingInvoker 获取项目下E2E设置信息
+func (c *CodeHubClient) ShowProjectE2eSettingInvoker(request *model.ShowProjectE2eSettingRequest) *ShowProjectE2eSettingInvoker {
+	requestDef := GenReqDefForShowProjectE2eSetting()
+	return &ShowProjectE2eSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRepositoryE2eSetting 获取仓库下E2E设置信息
+//
+// 获取仓库下E2E设置信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ShowRepositoryE2eSetting(request *model.ShowRepositoryE2eSettingRequest) (*model.ShowRepositoryE2eSettingResponse, error) {
+	requestDef := GenReqDefForShowRepositoryE2eSetting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRepositoryE2eSettingResponse), nil
+	}
+}
+
+// ShowRepositoryE2eSettingInvoker 获取仓库下E2E设置信息
+func (c *CodeHubClient) ShowRepositoryE2eSettingInvoker(request *model.ShowRepositoryE2eSettingRequest) *ShowRepositoryE2eSettingInvoker {
+	requestDef := GenReqDefForShowRepositoryE2eSetting()
+	return &ShowRepositoryE2eSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddSshKey 添加ssh公钥
 //
 // 添加ssh公钥
@@ -4595,6 +5708,27 @@ func (c *CodeHubClient) AddSshKey(request *model.AddSshKeyRequest) (*model.AddSs
 func (c *CodeHubClient) AddSshKeyInvoker(request *model.AddSshKeyRequest) *AddSshKeyInvoker {
 	requestDef := GenReqDefForAddSshKey()
 	return &AddSshKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchValidateUserGroupPermissions 获取当前用户指定的代码组列表中的权限
+//
+// 获取当前用户指定的代码组列表中的权限
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) BatchValidateUserGroupPermissions(request *model.BatchValidateUserGroupPermissionsRequest) (*model.BatchValidateUserGroupPermissionsResponse, error) {
+	requestDef := GenReqDefForBatchValidateUserGroupPermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchValidateUserGroupPermissionsResponse), nil
+	}
+}
+
+// BatchValidateUserGroupPermissionsInvoker 获取当前用户指定的代码组列表中的权限
+func (c *CodeHubClient) BatchValidateUserGroupPermissionsInvoker(request *model.BatchValidateUserGroupPermissionsRequest) *BatchValidateUserGroupPermissionsInvoker {
+	requestDef := GenReqDefForBatchValidateUserGroupPermissions()
+	return &BatchValidateUserGroupPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteSshKey 删除ssh公钥
@@ -4618,6 +5752,27 @@ func (c *CodeHubClient) DeleteSshKeyInvoker(request *model.DeleteSshKeyRequest) 
 	return &DeleteSshKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListImpersonationTokens 获取用户的个人访问令牌
+//
+// 获取用户的个人访问令牌
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeHubClient) ListImpersonationTokens(request *model.ListImpersonationTokensRequest) (*model.ListImpersonationTokensResponse, error) {
+	requestDef := GenReqDefForListImpersonationTokens()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListImpersonationTokensResponse), nil
+	}
+}
+
+// ListImpersonationTokensInvoker 获取用户的个人访问令牌
+func (c *CodeHubClient) ListImpersonationTokensInvoker(request *model.ListImpersonationTokensRequest) *ListImpersonationTokensInvoker {
+	requestDef := GenReqDefForListImpersonationTokens()
+	return &ListImpersonationTokensInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListUserGpgKeys 获取当前用户的gpg_key列表
 //
 // 获取当前用户的gpg_key列表
@@ -4639,9 +5794,9 @@ func (c *CodeHubClient) ListUserGpgKeysInvoker(request *model.ListUserGpgKeysReq
 	return &ListUserGpgKeysInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListUserKeys 获取当前用户的秘钥列表
+// ListUserKeys 获取当前用户的密钥列表
 //
-// 获取当前用户的秘钥列表
+// 获取当前用户的密钥列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeHubClient) ListUserKeys(request *model.ListUserKeysRequest) (*model.ListUserKeysResponse, error) {
@@ -4654,7 +5809,7 @@ func (c *CodeHubClient) ListUserKeys(request *model.ListUserKeysRequest) (*model
 	}
 }
 
-// ListUserKeysInvoker 获取当前用户的秘钥列表
+// ListUserKeysInvoker 获取当前用户的密钥列表
 func (c *CodeHubClient) ListUserKeysInvoker(request *model.ListUserKeysRequest) *ListUserKeysInvoker {
 	requestDef := GenReqDefForListUserKeys()
 	return &ListUserKeysInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

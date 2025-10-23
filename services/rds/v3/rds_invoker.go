@@ -213,6 +213,22 @@ func (i *CheckInstanceForUpgradeInvoker) Invoke() (*model.CheckInstanceForUpgrad
 	}
 }
 
+type CheckWeakpwdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckWeakpwdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckWeakpwdInvoker) Invoke() (*model.CheckWeakpwdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckWeakpwdResponse), nil
+	}
+}
+
 type CopyConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -997,6 +1013,22 @@ func (i *ListLogLtsConfigsInvoker) Invoke() (*model.ListLogLtsConfigsResponse, e
 	}
 }
 
+type ListMajorVersionFeatureInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMajorVersionFeatureInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListMajorVersionFeatureInvoker) Invoke() (*model.ListMajorVersionFeatureResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMajorVersionFeatureResponse), nil
+	}
+}
+
 type ListOffSiteBackupsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1413,6 +1445,22 @@ func (i *ListTasksInvoker) Invoke() (*model.ListTasksResponse, error) {
 	}
 }
 
+type ListTopSqlsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTopSqlsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTopSqlsInvoker) Invoke() (*model.ListTopSqlsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTopSqlsResponse), nil
+	}
+}
+
 type ListUpdateBackupEnhancePolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1522,6 +1570,22 @@ func (i *ModifyRdSforMySqlProxyRouteModeInvoker) Invoke() (*model.ModifyRdSforMy
 		return nil, err
 	} else {
 		return result.(*model.ModifyRdSforMySqlProxyRouteModeResponse), nil
+	}
+}
+
+type NotifyReplaceNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *NotifyReplaceNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *NotifyReplaceNodeInvoker) Invoke() (*model.NotifyReplaceNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.NotifyReplaceNodeResponse), nil
 	}
 }
 
@@ -2114,6 +2178,22 @@ func (i *ShowReplicationStatusInvoker) Invoke() (*model.ShowReplicationStatusRes
 		return nil, err
 	} else {
 		return result.(*model.ShowReplicationStatusResponse), nil
+	}
+}
+
+type ShowRestartPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRestartPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRestartPolicyInvoker) Invoke() (*model.ShowRestartPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRestartPolicyResponse), nil
 	}
 }
 

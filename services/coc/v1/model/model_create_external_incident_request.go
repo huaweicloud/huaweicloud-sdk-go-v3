@@ -22,7 +22,7 @@ type CreateExternalIncidentRequest struct {
 	IncidentLevel string `json:"incident_level"`
 
 	// 业务是否中断，取值：true/false
-	IsServiceInterrupt bool `json:"is_service_interrupt"`
+	IsServiceInterrupt string `json:"is_service_interrupt"`
 
 	// 事件类别 参考：枚举 事件类别incident_type
 	IncidentType string `json:"incident_type"`

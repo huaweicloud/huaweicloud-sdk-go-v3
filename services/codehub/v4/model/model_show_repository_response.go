@@ -45,12 +45,6 @@ type ShowRepositoryResponse struct {
 	// **参数解释：** 仓库http地址。
 	HttpUrlToRepo *string `json:"http_url_to_repo,omitempty"`
 
-	// **参数解释：** 仓库页面链接。
-	WebUrl *string `json:"web_url,omitempty"`
-
-	// **参数解释：** 仓库readme文件链接。
-	ReadmeUrl *string `json:"readme_url,omitempty"`
-
 	// **参数解释：** 仓库所属项目ID。
 	ProjectId *string `json:"project_id,omitempty"`
 

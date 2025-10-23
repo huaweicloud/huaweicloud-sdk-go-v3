@@ -13,7 +13,7 @@ import (
 type NetworkPort struct {
 
 	// 网络端口的物理端口号
-	PhysicalPortNumber *int32 `json:"physical_port_number,omitempty"`
+	PhysicalPortNumber *string `json:"physical_port_number,omitempty"`
 
 	// 网络端口的物理连接状态
 	LinkStatus *NetworkPortLinkStatus `json:"link_status,omitempty"`

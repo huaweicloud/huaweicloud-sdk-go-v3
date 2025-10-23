@@ -166,6 +166,27 @@ func (c *AomClient) AddOrUpdateServiceDiscoveryRulesInvoker(request *model.AddOr
 	return &AddOrUpdateServiceDiscoveryRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchUpdateAlarmRule 批量更新Prometheus监控告警规则
+//
+// 该接口用于批量启停Prometheus监控告警规则、批量修改Prometheus监控告警规则的告警行动规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AomClient) BatchUpdateAlarmRule(request *model.BatchUpdateAlarmRuleRequest) (*model.BatchUpdateAlarmRuleResponse, error) {
+	requestDef := GenReqDefForBatchUpdateAlarmRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateAlarmRuleResponse), nil
+	}
+}
+
+// BatchUpdateAlarmRuleInvoker 批量更新Prometheus监控告警规则
+func (c *AomClient) BatchUpdateAlarmRuleInvoker(request *model.BatchUpdateAlarmRuleRequest) *BatchUpdateAlarmRuleInvoker {
+	requestDef := GenReqDefForBatchUpdateAlarmRule()
+	return &BatchUpdateAlarmRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CountEvents 统计事件告警信息
 //
 // 该接口用于分段统计指定条件下的事件、告警。

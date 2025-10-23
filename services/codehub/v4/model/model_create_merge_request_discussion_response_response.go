@@ -15,8 +15,8 @@ type CreateMergeRequestDiscussionResponseResponse struct {
 	// **参数解释：** 评论id(主评论和回复不共用)。
 	Id *int32 `json:"id,omitempty"`
 
-	// **参数解释：** 类型(普通评论、需要解决的普通评论、需要解决的关联代码行的评论)。
-	Type *CreateMergeRequestDiscussionResponseResponseType `json:"type,omitempty"`
+	// **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。
+	Type *string `json:"type,omitempty"`
 
 	// **参数解释：** 评论内容。
 	Body *string `json:"body,omitempty"`
@@ -38,7 +38,7 @@ type CreateMergeRequestDiscussionResponseResponse struct {
 	// **参数解释：** 合并请求id或issue id。
 	NoteableId *int32 `json:"noteable_id,omitempty"`
 
-	// **参数解释：** 意见类型。
+	// **参数解释：** 意见类型。 **取值范围：** - MergeRequest: 合并请求下提的检视意见。 - Commit: 代码页或提交记录下提的检视意见。
 	NoteableType *CreateMergeRequestDiscussionResponseResponseNoteableType `json:"noteable_type,omitempty"`
 
 	// **参数解释：** 提交记录id。
@@ -127,53 +127,6 @@ func (o CreateMergeRequestDiscussionResponseResponse) String() string {
 	}
 
 	return strings.Join([]string{"CreateMergeRequestDiscussionResponseResponse", string(data)}, " ")
-}
-
-type CreateMergeRequestDiscussionResponseResponseType struct {
-	value string
-}
-
-type CreateMergeRequestDiscussionResponseResponseTypeEnum struct {
-	DISCUSSION_NOTE CreateMergeRequestDiscussionResponseResponseType
-	DIFF_NOTE       CreateMergeRequestDiscussionResponseResponseType
-}
-
-func GetCreateMergeRequestDiscussionResponseResponseTypeEnum() CreateMergeRequestDiscussionResponseResponseTypeEnum {
-	return CreateMergeRequestDiscussionResponseResponseTypeEnum{
-		DISCUSSION_NOTE: CreateMergeRequestDiscussionResponseResponseType{
-			value: "DiscussionNote",
-		},
-		DIFF_NOTE: CreateMergeRequestDiscussionResponseResponseType{
-			value: "DiffNote",
-		},
-	}
-}
-
-func (c CreateMergeRequestDiscussionResponseResponseType) Value() string {
-	return c.value
-}
-
-func (c CreateMergeRequestDiscussionResponseResponseType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *CreateMergeRequestDiscussionResponseResponseType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }
 
 type CreateMergeRequestDiscussionResponseResponseNoteableType struct {

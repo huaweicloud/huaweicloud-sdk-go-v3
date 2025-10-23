@@ -10,7 +10,7 @@ import (
 type ListTicketParamsWithPage struct {
 
 	// 字符串搜索条件，可根据该条件搜索到具体的工单。
-	StringFilters []ObjectFilter `json:"string_filters"`
+	StringFilters *[]ObjectFilter `json:"string_filters,omitempty"`
 
 	SortFilter *ObjectFilter `json:"sort_filter,omitempty"`
 

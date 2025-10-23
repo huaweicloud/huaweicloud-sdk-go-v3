@@ -21,6 +21,9 @@ type SrcNodeReq struct {
 	// 源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
 	Sk *string `json:"sk,omitempty"`
 
+	// 连接字符串，用于微软云Blob鉴权
+	ConnectionString *string `json:"connection_string,omitempty"`
+
 	// 用于谷歌云Cloud Storage鉴权
 	JsonAuthFile *string `json:"json_auth_file,omitempty"`
 

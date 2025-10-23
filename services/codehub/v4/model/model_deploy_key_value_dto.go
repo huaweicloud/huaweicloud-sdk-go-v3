@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// DeployKeyValueDto 部署秘钥
+// DeployKeyValueDto 部署密钥
 type DeployKeyValueDto struct {
 
 	// **参数解释：** 待检查密钥值。 **取值范围：** 字符串长度不少于1，不超过5000。

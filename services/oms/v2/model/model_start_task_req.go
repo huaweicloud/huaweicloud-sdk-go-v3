@@ -15,6 +15,9 @@ type StartTaskReq struct {
 	// 源端节点SK（最大长度100个字符）。URL列表迁移任务不需要填写此参数。
 	SrcSk *string `json:"src_sk,omitempty"`
 
+	// 连接字符串，用于微软云Blob鉴权
+	ConnectionString *string `json:"connection_string,omitempty"`
+
 	// 用于谷歌云Cloud Storage鉴权
 	JsonAuthFile *string `json:"json_auth_file,omitempty"`
 

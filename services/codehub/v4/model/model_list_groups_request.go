@@ -18,7 +18,7 @@ type ListGroupsRequest struct {
 	// **参数解释：** 所有可用的代码组。
 	AllAvailable *bool `json:"all_available,omitempty"`
 
-	// **参数解释：** 排序字段，name 名称 path 路径 id 唯一标示 created_at 创建时间 updated_at 更新时间
+	// **参数解释：** 排序字段，name 名称 path 路径 id 唯一标识 created_at 创建时间 updated_at 更新时间
 	OrderBy *ListGroupsRequestOrderBy `json:"order_by,omitempty"`
 
 	// **参数解释：** 排序顺序 asc顺序 desc逆序

@@ -1,0 +1,23 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// ShowDomainRequest Request Object
+type ShowDomainRequest struct {
+
+	// 账号ID
+	DomainId string `json:"domain_id"`
+}
+
+func (o ShowDomainRequest) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "ShowDomainRequest struct{}"
+	}
+
+	return strings.Join([]string{"ShowDomainRequest", string(data)}, " ")
+}

@@ -549,6 +549,22 @@ func (i *ListAvailableFlavorInfosInvoker) Invoke() (*model.ListAvailableFlavorIn
 	}
 }
 
+type ListBackupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBackupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBackupsInvoker) Invoke() (*model.ListBackupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBackupsResponse), nil
+	}
+}
+
 type ListCassandraSlowLogsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1362,6 +1378,22 @@ func (i *RestoreExistingInstanceInvoker) Invoke() (*model.RestoreExistingInstanc
 		return nil, err
 	} else {
 		return result.(*model.RestoreExistingInstanceResponse), nil
+	}
+}
+
+type RestoreRedisDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestoreRedisDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RestoreRedisDataInvoker) Invoke() (*model.RestoreRedisDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestoreRedisDataResponse), nil
 	}
 }
 

@@ -1195,9 +1195,9 @@ func (c *IdentityCenterClient) AttachManagedPolicyToPermissionSetInvoker(request
 	return &AttachManagedPolicyToPermissionSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// AttachManagedRoleToPermissionSet 附加系统策略到权限集
+// AttachManagedRoleToPermissionSet 添加系统策略
 //
-// 将系统策略附加到权限集。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
+// 在指定的权限集中添加系统策略。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IdentityCenterClient) AttachManagedRoleToPermissionSet(request *model.AttachManagedRoleToPermissionSetRequest) (*model.AttachManagedRoleToPermissionSetResponse, error) {
@@ -1210,7 +1210,7 @@ func (c *IdentityCenterClient) AttachManagedRoleToPermissionSet(request *model.A
 	}
 }
 
-// AttachManagedRoleToPermissionSetInvoker 附加系统策略到权限集
+// AttachManagedRoleToPermissionSetInvoker 添加系统策略
 func (c *IdentityCenterClient) AttachManagedRoleToPermissionSetInvoker(request *model.AttachManagedRoleToPermissionSetRequest) *AttachManagedRoleToPermissionSetInvoker {
 	requestDef := GenReqDefForAttachManagedRoleToPermissionSet()
 	return &AttachManagedRoleToPermissionSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1237,7 +1237,7 @@ func (c *IdentityCenterClient) CreatePermissionSetInvoker(request *model.CreateP
 	return &CreatePermissionSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteCustomPolicyFromPermissionSet 删除指定权限集中的自定义身份策略
+// DeleteCustomPolicyFromPermissionSet 删除自定义身份策略
 //
 // 删除指定权限集中的自定义身份策略。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
 //
@@ -1252,13 +1252,13 @@ func (c *IdentityCenterClient) DeleteCustomPolicyFromPermissionSet(request *mode
 	}
 }
 
-// DeleteCustomPolicyFromPermissionSetInvoker 删除指定权限集中的自定义身份策略
+// DeleteCustomPolicyFromPermissionSetInvoker 删除自定义身份策略
 func (c *IdentityCenterClient) DeleteCustomPolicyFromPermissionSetInvoker(request *model.DeleteCustomPolicyFromPermissionSetRequest) *DeleteCustomPolicyFromPermissionSetInvoker {
 	requestDef := GenReqDefForDeleteCustomPolicyFromPermissionSet()
 	return &DeleteCustomPolicyFromPermissionSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteCustomRoleFromPermissionSet 删除指定权限集中的自定义策略
+// DeleteCustomRoleFromPermissionSet 删除自定义策略
 //
 // 删除指定权限集中的自定义策略。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
 //
@@ -1273,7 +1273,7 @@ func (c *IdentityCenterClient) DeleteCustomRoleFromPermissionSet(request *model.
 	}
 }
 
-// DeleteCustomRoleFromPermissionSetInvoker 删除指定权限集中的自定义策略
+// DeleteCustomRoleFromPermissionSetInvoker 删除自定义策略
 func (c *IdentityCenterClient) DeleteCustomRoleFromPermissionSetInvoker(request *model.DeleteCustomRoleFromPermissionSetRequest) *DeleteCustomRoleFromPermissionSetInvoker {
 	requestDef := GenReqDefForDeleteCustomRoleFromPermissionSet()
 	return &DeleteCustomRoleFromPermissionSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1342,9 +1342,9 @@ func (c *IdentityCenterClient) DescribePermissionSetProvisioningStatusInvoker(re
 	return &DescribePermissionSetProvisioningStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DetachManagedPolicyFromPermissionSet 从权限集分离系统身份策略
+// DetachManagedPolicyFromPermissionSet 删除系统身份策略
 //
-// 将附加的系统身份策略从指定的权限集中分离。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
+// 删除指定权限集中的系统身份策略。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IdentityCenterClient) DetachManagedPolicyFromPermissionSet(request *model.DetachManagedPolicyFromPermissionSetRequest) (*model.DetachManagedPolicyFromPermissionSetResponse, error) {
@@ -1357,15 +1357,15 @@ func (c *IdentityCenterClient) DetachManagedPolicyFromPermissionSet(request *mod
 	}
 }
 
-// DetachManagedPolicyFromPermissionSetInvoker 从权限集分离系统身份策略
+// DetachManagedPolicyFromPermissionSetInvoker 删除系统身份策略
 func (c *IdentityCenterClient) DetachManagedPolicyFromPermissionSetInvoker(request *model.DetachManagedPolicyFromPermissionSetRequest) *DetachManagedPolicyFromPermissionSetInvoker {
 	requestDef := GenReqDefForDetachManagedPolicyFromPermissionSet()
 	return &DetachManagedPolicyFromPermissionSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DetachManagedRoleFromPermissionSet 从权限集分离系统策略
+// DetachManagedRoleFromPermissionSet 删除系统策略
 //
-// 将附加的系统策略从指定的权限集中分离。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
+// 删除指定权限集中的系统策略。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IdentityCenterClient) DetachManagedRoleFromPermissionSet(request *model.DetachManagedRoleFromPermissionSetRequest) (*model.DetachManagedRoleFromPermissionSetResponse, error) {
@@ -1378,15 +1378,15 @@ func (c *IdentityCenterClient) DetachManagedRoleFromPermissionSet(request *model
 	}
 }
 
-// DetachManagedRoleFromPermissionSetInvoker 从权限集分离系统策略
+// DetachManagedRoleFromPermissionSetInvoker 删除系统策略
 func (c *IdentityCenterClient) DetachManagedRoleFromPermissionSetInvoker(request *model.DetachManagedRoleFromPermissionSetRequest) *DetachManagedRoleFromPermissionSetInvoker {
 	requestDef := GenReqDefForDetachManagedRoleFromPermissionSet()
 	return &DetachManagedRoleFromPermissionSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// GetCustomPolicyForPermissionSet 获取分配给权限集的自定义身份策略
+// GetCustomPolicyForPermissionSet 查询自定义身份策略详情
 //
-// 获取分配给权限集的自定义身份策略。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
+// 查询指定权限集中的自定义身份策略详情。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IdentityCenterClient) GetCustomPolicyForPermissionSet(request *model.GetCustomPolicyForPermissionSetRequest) (*model.GetCustomPolicyForPermissionSetResponse, error) {
@@ -1399,15 +1399,15 @@ func (c *IdentityCenterClient) GetCustomPolicyForPermissionSet(request *model.Ge
 	}
 }
 
-// GetCustomPolicyForPermissionSetInvoker 获取分配给权限集的自定义身份策略
+// GetCustomPolicyForPermissionSetInvoker 查询自定义身份策略详情
 func (c *IdentityCenterClient) GetCustomPolicyForPermissionSetInvoker(request *model.GetCustomPolicyForPermissionSetRequest) *GetCustomPolicyForPermissionSetInvoker {
 	requestDef := GenReqDefForGetCustomPolicyForPermissionSet()
 	return &GetCustomPolicyForPermissionSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// GetCustomRoleForPermissionSet 获取分配给权限集的自定义策略
+// GetCustomRoleForPermissionSet 查询自定义策略详情
 //
-// 获取分配给权限集的自定义策略。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
+// 查询指定权限集中的自定义策略详情。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IdentityCenterClient) GetCustomRoleForPermissionSet(request *model.GetCustomRoleForPermissionSetRequest) (*model.GetCustomRoleForPermissionSetResponse, error) {
@@ -1420,7 +1420,7 @@ func (c *IdentityCenterClient) GetCustomRoleForPermissionSet(request *model.GetC
 	}
 }
 
-// GetCustomRoleForPermissionSetInvoker 获取分配给权限集的自定义策略
+// GetCustomRoleForPermissionSetInvoker 查询自定义策略详情
 func (c *IdentityCenterClient) GetCustomRoleForPermissionSetInvoker(request *model.GetCustomRoleForPermissionSetRequest) *GetCustomRoleForPermissionSetInvoker {
 	requestDef := GenReqDefForGetCustomRoleForPermissionSet()
 	return &GetCustomRoleForPermissionSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1468,9 +1468,9 @@ func (c *IdentityCenterClient) ListAccountsForProvisionedPermissionSetInvoker(re
 	return &ListAccountsForProvisionedPermissionSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListManagedPoliciesInPermissionSet 列出权限集中附加的系统身份策略
+// ListManagedPoliciesInPermissionSet 列出系统身份策略
 //
-// 获取附加到指定权限集的系统身份策略列表。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
+// 获取添加到指定权限集中的系统身份策略列表。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IdentityCenterClient) ListManagedPoliciesInPermissionSet(request *model.ListManagedPoliciesInPermissionSetRequest) (*model.ListManagedPoliciesInPermissionSetResponse, error) {
@@ -1483,15 +1483,15 @@ func (c *IdentityCenterClient) ListManagedPoliciesInPermissionSet(request *model
 	}
 }
 
-// ListManagedPoliciesInPermissionSetInvoker 列出权限集中附加的系统身份策略
+// ListManagedPoliciesInPermissionSetInvoker 列出系统身份策略
 func (c *IdentityCenterClient) ListManagedPoliciesInPermissionSetInvoker(request *model.ListManagedPoliciesInPermissionSetRequest) *ListManagedPoliciesInPermissionSetInvoker {
 	requestDef := GenReqDefForListManagedPoliciesInPermissionSet()
 	return &ListManagedPoliciesInPermissionSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListManagedRolesInPermissionSet 列出权限集中附加的系统策略
+// ListManagedRolesInPermissionSet 列出系统策略
 //
-// 获取附加到指定权限集的系统策略列表。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
+// 获取添加到指定权限集中的系统策略列表。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IdentityCenterClient) ListManagedRolesInPermissionSet(request *model.ListManagedRolesInPermissionSetRequest) (*model.ListManagedRolesInPermissionSetResponse, error) {
@@ -1504,7 +1504,7 @@ func (c *IdentityCenterClient) ListManagedRolesInPermissionSet(request *model.Li
 	}
 }
 
-// ListManagedRolesInPermissionSetInvoker 列出权限集中附加的系统策略
+// ListManagedRolesInPermissionSetInvoker 列出系统策略
 func (c *IdentityCenterClient) ListManagedRolesInPermissionSetInvoker(request *model.ListManagedRolesInPermissionSetRequest) *ListManagedRolesInPermissionSetInvoker {
 	requestDef := GenReqDefForListManagedRolesInPermissionSet()
 	return &ListManagedRolesInPermissionSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1615,9 +1615,9 @@ func (c *IdentityCenterClient) PutCustomPolicyToPermissionSetInvoker(request *mo
 	return &PutCustomPolicyToPermissionSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// PutCustomRoleToPermissionSet 将自定义策略附加到权限集
+// PutCustomRoleToPermissionSet 添加自定义策略
 //
-// 将自定义策略附加到权限集。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
+// 在指定的权限集中添加自定义策略。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IdentityCenterClient) PutCustomRoleToPermissionSet(request *model.PutCustomRoleToPermissionSetRequest) (*model.PutCustomRoleToPermissionSetResponse, error) {
@@ -1630,7 +1630,7 @@ func (c *IdentityCenterClient) PutCustomRoleToPermissionSet(request *model.PutCu
 	}
 }
 
-// PutCustomRoleToPermissionSetInvoker 将自定义策略附加到权限集
+// PutCustomRoleToPermissionSetInvoker 添加自定义策略
 func (c *IdentityCenterClient) PutCustomRoleToPermissionSetInvoker(request *model.PutCustomRoleToPermissionSetRequest) *PutCustomRoleToPermissionSetInvoker {
 	requestDef := GenReqDefForPutCustomRoleToPermissionSet()
 	return &PutCustomRoleToPermissionSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

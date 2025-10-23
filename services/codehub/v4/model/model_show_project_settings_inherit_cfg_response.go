@@ -8,6 +8,8 @@ import (
 
 // ShowProjectSettingsInheritCfgResponse Response Object
 type ShowProjectSettingsInheritCfgResponse struct {
+
+	// 项目继承设置列表
 	Body           *[]ProjectSettingsInheritCfgDto `json:"body,omitempty"`
 	HttpStatusCode int                             `json:"-"`
 }

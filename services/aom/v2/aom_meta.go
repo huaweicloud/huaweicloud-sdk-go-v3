@@ -125,6 +125,31 @@ func GenReqDefForAddOrUpdateServiceDiscoveryRules() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchUpdateAlarmRule() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v4/{project_id}/alarm-rules/batch-update").
+		WithResponse(new(model.BatchUpdateAlarmRuleResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Action").
+		WithJsonTag("action").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("Enterprise-Project-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCountEvents() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

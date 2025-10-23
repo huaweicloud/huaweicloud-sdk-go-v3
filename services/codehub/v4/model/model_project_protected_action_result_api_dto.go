@@ -22,6 +22,9 @@ type ProjectProtectedActionResultApiDto struct {
 
 	// **参数解释：** 角色列表。
 	Roles *[]RoleBasicDto `json:"roles,omitempty"`
+
+	// **参数解释：** 操作选择列表。
+	AdditionSwitchers *[]ForceActionEnableDto `json:"addition_switchers,omitempty"`
 }
 
 func (o ProjectProtectedActionResultApiDto) String() string {

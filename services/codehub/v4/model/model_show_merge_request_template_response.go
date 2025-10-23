@@ -12,7 +12,7 @@ type ShowMergeRequestTemplateResponse struct {
 	// **参数解释：** 合并请求模板主键id
 	Id *int32 `json:"id,omitempty"`
 
-	// **参数解释：** 仓库id
+	// **参数解释：** 仓库id。
 	RepositoryId *int32 `json:"repository_id,omitempty"`
 
 	// **参数解释：** 描述

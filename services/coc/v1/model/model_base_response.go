@@ -16,10 +16,7 @@ type BaseResponse struct {
 	ErrorCode string `json:"error_code"`
 
 	// 请求响应描述
-	ErrorMsg string `json:"error_msg"`
-
-	// 响应数据
-	Data *interface{} `json:"data"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 
 func (o BaseResponse) String() string {

@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -86,8 +89,8 @@ type CreateCommitResponse struct {
 
 	Stats *CommitStatsDto `json:"stats,omitempty"`
 
-	// **参数解释：** 状态。 **取值范围：** 不涉及。
-	Status *string `json:"status,omitempty"`
+	// 流水线状态，pending为排队，running为运行中，success为成功，failed为失败，canceled为取消，skipped为跳过，timedout为超时
+	Status *CreateCommitResponseStatus `json:"status,omitempty"`
 
 	LastPipeline *PipelineBasicDto `json:"last_pipeline,omitempty"`
 
@@ -108,4 +111,71 @@ func (o CreateCommitResponse) String() string {
 	}
 
 	return strings.Join([]string{"CreateCommitResponse", string(data)}, " ")
+}
+
+type CreateCommitResponseStatus struct {
+	value string
+}
+
+type CreateCommitResponseStatusEnum struct {
+	PENDING  CreateCommitResponseStatus
+	RUNNING  CreateCommitResponseStatus
+	SUCCESS  CreateCommitResponseStatus
+	FAILED   CreateCommitResponseStatus
+	CANCELED CreateCommitResponseStatus
+	SKIPPED  CreateCommitResponseStatus
+	TIMEDOUT CreateCommitResponseStatus
+}
+
+func GetCreateCommitResponseStatusEnum() CreateCommitResponseStatusEnum {
+	return CreateCommitResponseStatusEnum{
+		PENDING: CreateCommitResponseStatus{
+			value: "pending",
+		},
+		RUNNING: CreateCommitResponseStatus{
+			value: "running",
+		},
+		SUCCESS: CreateCommitResponseStatus{
+			value: "success",
+		},
+		FAILED: CreateCommitResponseStatus{
+			value: "failed",
+		},
+		CANCELED: CreateCommitResponseStatus{
+			value: "canceled",
+		},
+		SKIPPED: CreateCommitResponseStatus{
+			value: "skipped",
+		},
+		TIMEDOUT: CreateCommitResponseStatus{
+			value: "timedout",
+		},
+	}
+}
+
+func (c CreateCommitResponseStatus) Value() string {
+	return c.value
+}
+
+func (c CreateCommitResponseStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateCommitResponseStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

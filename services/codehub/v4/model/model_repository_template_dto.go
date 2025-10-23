@@ -15,7 +15,7 @@ type RepositoryTemplateDto struct {
 	// **参数解释：** 模板仓标题。 **取值范围：** 字符串长度1-50。
 	Name *string `json:"name,omitempty"`
 
-	// **参数解释：** 是否是系统模版。 **取值范围：** - true，系统模版。 - false，个人模版。
+	// **参数解释：** 是否是系统模板。 **取值范围：** - true，系统模板。 - false，个人模板。
 	System *bool `json:"system,omitempty"`
 
 	// **参数解释：** 标签列表。 **取值范围：** 不涉及。

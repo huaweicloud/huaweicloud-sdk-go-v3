@@ -9,10 +9,10 @@ import (
 // AddSshKeyResponse Response Object
 type AddSshKeyResponse struct {
 
-	// **参数解释：** 秘钥id。
+	// **参数解释：** 密钥id。
 	Id *int32 `json:"id,omitempty"`
 
-	// **参数解释：** 秘钥名称。 **取值范围：** 字符串长度不少于1，不超过1000。
+	// **参数解释：** 密钥名称。 **取值范围：** 字符串长度不少于1，不超过1000。
 	Title *string `json:"title,omitempty"`
 
 	// **参数解释：** 公钥。 **取值范围：** 字符串长度不少于1，不超过1000。

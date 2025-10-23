@@ -8,8 +8,8 @@ import (
 
 // ListMergeRequestTemplatesResponse Response Object
 type ListMergeRequestTemplatesResponse struct {
-	Body           *[]MergeRequestTemplateDto `json:"body,omitempty"`
-	HttpStatusCode int                        `json:"-"`
+	Body           *[]RepositoryMergeRequestTemplateDto `json:"body,omitempty"`
+	HttpStatusCode int                                  `json:"-"`
 }
 
 func (o ListMergeRequestTemplatesResponse) String() string {

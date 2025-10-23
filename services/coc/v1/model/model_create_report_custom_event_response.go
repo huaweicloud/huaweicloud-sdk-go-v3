@@ -16,11 +16,8 @@ type CreateReportCustomEventResponse struct {
 	ErrorCode *string `json:"error_code,omitempty"`
 
 	// 请求响应描述
-	ErrorMsg *string `json:"error_msg,omitempty"`
-
-	// 响应数据
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	ErrorMsg       *string `json:"error_msg,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateReportCustomEventResponse) String() string {

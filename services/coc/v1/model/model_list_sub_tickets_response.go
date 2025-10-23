@@ -16,10 +16,10 @@ type ListSubTicketsResponse struct {
 	ErrorCode string `json:"error_code"`
 
 	// 请求响应描述
-	ErrorMsg string `json:"error_msg"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 
 	// 数据
-	Data           *interface{} `json:"data"`
+	Data           *interface{} `json:"data,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

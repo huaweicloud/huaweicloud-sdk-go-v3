@@ -11,7 +11,7 @@ import (
 
 type ProjectSettingsInheritCfgDto struct {
 
-	// **参数解释：** 设置源类型。 **约束限制：** 不涉及。 **取值范围：** - protected_branches，保护分支设置。 - protected_tags，保护Tag设置。 - repository_settings，仓库设置。 - push_rules，提交规则设置。 - merge_requests，合并请求设置。 - e2e_settings，E2E设置。 - watermark，水印设置。 **默认取值：** 不涉及。
+	// **参数解释：** 设置源类型。 **约束限制：** 不涉及。 **取值范围：** - protected_branches，保护分支设置。 - protected_tags，保护Tag设置。 - repository_settings，仓库设置。 - push_rules，提交规则设置。 - merge_requests，合并请求设置。 - e2e_settings，E2E设置。 - watermark，水印设置。 - webhook_settings，webhook设置。 - mr_branch_policies，合并分支策略设置。 - reviews，检视设置。 - deploy_keys，部署参数设置。 **默认取值：** 不涉及。
 	Name *ProjectSettingsInheritCfgDtoName `json:"name,omitempty"`
 
 	// **参数解释：** 继承设置。 **约束限制：** 不涉及。 **取值范围：** - force_inherit，强制继承配置。 - custom，使用当前配置。 **默认取值：** 不涉及。
@@ -39,6 +39,10 @@ type ProjectSettingsInheritCfgDtoNameEnum struct {
 	MERGE_REQUESTS      ProjectSettingsInheritCfgDtoName
 	E2E_SETTINGS        ProjectSettingsInheritCfgDtoName
 	WATERMARK           ProjectSettingsInheritCfgDtoName
+	WEBHOOK_SETTINGS    ProjectSettingsInheritCfgDtoName
+	MR_BRANCH_POLICIES  ProjectSettingsInheritCfgDtoName
+	REVIEWS             ProjectSettingsInheritCfgDtoName
+	DEPLOY_KEYS         ProjectSettingsInheritCfgDtoName
 }
 
 func GetProjectSettingsInheritCfgDtoNameEnum() ProjectSettingsInheritCfgDtoNameEnum {
@@ -63,6 +67,18 @@ func GetProjectSettingsInheritCfgDtoNameEnum() ProjectSettingsInheritCfgDtoNameE
 		},
 		WATERMARK: ProjectSettingsInheritCfgDtoName{
 			value: "watermark",
+		},
+		WEBHOOK_SETTINGS: ProjectSettingsInheritCfgDtoName{
+			value: "webhook_settings",
+		},
+		MR_BRANCH_POLICIES: ProjectSettingsInheritCfgDtoName{
+			value: "mr_branch_policies",
+		},
+		REVIEWS: ProjectSettingsInheritCfgDtoName{
+			value: "reviews",
+		},
+		DEPLOY_KEYS: ProjectSettingsInheritCfgDtoName{
+			value: "deploy_keys",
 		},
 	}
 }

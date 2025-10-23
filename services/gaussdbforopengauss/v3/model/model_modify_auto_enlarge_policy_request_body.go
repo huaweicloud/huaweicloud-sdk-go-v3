@@ -8,7 +8,7 @@ import (
 
 type ModifyAutoEnlargePolicyRequestBody struct {
 
-	// **参数解释**: 磁盘自动扩容开关。 **约束限制**: 不涉及。 **取值范围**: - true：开启磁盘自动扩容。 - false：开启磁盘自动扩容。  **默认取值**: 不涉及。
+	// **参数解释**: 磁盘自动扩容开关。 **约束限制**: 不涉及。 **取值范围**: - true：开启磁盘自动扩容。 - false：关闭磁盘自动扩容。  **默认取值**: 不涉及。
 	SwitchOption *bool `json:"switch_option,omitempty"`
 
 	// **参数解释**: 存储自动扩容上限。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。

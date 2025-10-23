@@ -16,9 +16,9 @@ type CreateCocIncidentResponse struct {
 	ErrorCode string `json:"error_code"`
 
 	// 请求响应描述
-	ErrorMsg string `json:"error_msg"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 
-	Data           *CreateExternalIncidentResponseData `json:"data"`
+	Data           *CreateExternalIncidentResponseData `json:"data,omitempty"`
 	HttpStatusCode int                                 `json:"-"`
 }
 

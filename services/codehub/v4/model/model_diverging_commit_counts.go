@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// DivergingCommitCounts 差异提交数量
 type DivergingCommitCounts struct {
 
 	// 落后默认分支提交数量

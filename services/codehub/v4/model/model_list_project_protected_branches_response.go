@@ -10,10 +10,8 @@ import (
 type ListProjectProtectedBranchesResponse struct {
 
 	// 项目下保护分支列表
-	Body *[]ProjectProtectedBranchApiDto `json:"body,omitempty"`
-
-	XTotal         *string `json:"X-Total,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Body           *[]ProjectProtectedBranchApiDto `json:"body,omitempty"`
+	HttpStatusCode int                             `json:"-"`
 }
 
 func (o ListProjectProtectedBranchesResponse) String() string {

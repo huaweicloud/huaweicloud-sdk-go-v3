@@ -16,11 +16,8 @@ type UpdateChangeResponse struct {
 	ErrorCode string `json:"error_code"`
 
 	// 请求响应描述
-	ErrorMsg string `json:"error_msg"`
-
-	// 响应数据
-	Data           *interface{} `json:"data"`
-	HttpStatusCode int          `json:"-"`
+	ErrorMsg       *string `json:"error_msg,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateChangeResponse) String() string {

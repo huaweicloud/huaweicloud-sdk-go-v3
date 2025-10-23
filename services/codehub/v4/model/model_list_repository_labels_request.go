@@ -24,7 +24,7 @@ type ListRepositoryLabelsRequest struct {
 	// **参数解释：** 查询关键字，可模糊匹配标签名。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	Search *string `json:"search,omitempty"`
 
-	// **参数解释：**  排序。 **约束限制：** 不涉及。 **取值范围：** - name_asc，按标签名升序。 - name_desc，按标签名降序。 - created_asc，按标创建时间升序。 - created_desc，按标创建时间降序。 - updated_asc，按标更新时间升序。 - updated_desc，按标更新时间降序。 **默认取值：** name_asc
+	// **参数解释：**  排序。 **约束限制：** 不涉及。 **取值范围：** - name_asc，按标签名升序。 - name_desc，按标签名降序。 - created_asc，按标签创建时间升序。 - created_desc，按标签创建时间降序。 - updated_asc，按标签更新时间升序。 - updated_desc，按标签更新时间降序。 **默认取值：** name_asc
 	Sort *ListRepositoryLabelsRequestSort `json:"sort,omitempty"`
 
 	// **参数解释：** 是否包含失效的标签。 **约束限制：** 不涉及。 **取值范围：** - true，包含。 - false，不包含。 **默认取值：** true

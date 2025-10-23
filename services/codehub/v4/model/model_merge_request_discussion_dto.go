@@ -24,7 +24,7 @@ type MergeRequestDiscussionDto struct {
 	// **参数解释：** 仓库id。
 	RepositoryId *int32 `json:"repository_id,omitempty"`
 
-	// **参数解释：** 意见类型。
+	// **参数解释：** 意见类型。 **取值范围：** - MergeRequest: 合并请求下提的检视意见。 - Commit: 代码页或提交记录下提的检视意见。
 	NoteableType *MergeRequestDiscussionDtoNoteableType `json:"noteable_type,omitempty"`
 
 	// **参数解释：** 提交记录id。
@@ -63,13 +63,13 @@ type MergeRequestDiscussionDto struct {
 	// **参数解释：** 意见模块。
 	ReviewModules *string `json:"review_modules,omitempty"`
 
-	// **参数解释：** 严重程度key。
+	// **参数解释：** 严重程度key。 **取值范围：** - suggestion: 建议。 - minor: 一般。 - major: 严重。 - fatal: 致命。
 	Severity *MergeRequestDiscussionDtoSeverity `json:"severity,omitempty"`
 
-	// **参数解释：** 严重程度中文。 **约束限制：** - 建议 - 一般 - 严重 - 致命
+	// **参数解释：** 严重程度中文。 **取值范围：** - 建议 - 一般 - 严重 - 致命
 	SeverityCn *string `json:"severity_cn,omitempty"`
 
-	// **参数解释：** 严重程度英文。
+	// **参数解释：** 严重程度英文。 **取值范围：** - Suggestion: 建议。 - Minor: 一般。 - major: 严重。 - fatal: 致命。
 	SeverityEn *MergeRequestDiscussionDtoSeverityEn `json:"severity_en,omitempty"`
 
 	Assignee *UserBasicDto `json:"assignee,omitempty"`

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// BucketSplitInfo **参数解释**： 桶分裂信息。 **取值范围**： 不涉及。
+// BucketSplitInfo **参数解释**： 桶分裂信息，仅在从集群外部扩容到已有的逻辑集群场景下才会返回。 **取值范围**： 不涉及。
 type BucketSplitInfo struct {
 
 	// **参数解释**： 当前DN数。 **取值范围**： 不涉及。

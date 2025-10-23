@@ -35,7 +35,7 @@ type SubmoduleDto struct {
 	// **参数解释：** 子模块仓库提交。
 	SubCommitId *string `json:"sub_commitId,omitempty"`
 
-	// **参数解释：** 部署秘钥同步状态。 **取值范围：** - 0，不同步。 - 1，同步。
+	// **参数解释：** 部署密钥同步状态。 **取值范围：** - 0，不同步。 - 1，同步。
 	DeployKeyStatus *int32 `json:"deployKey_status,omitempty"`
 
 	// **参数解释：** 子模块状态。 **取值范围：** - 0，异常。 - 1，正常。

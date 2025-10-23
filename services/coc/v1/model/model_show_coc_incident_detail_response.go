@@ -16,9 +16,9 @@ type ShowCocIncidentDetailResponse struct {
 	ErrorCode string `json:"error_code"`
 
 	// 请求响应描述
-	ErrorMsg string `json:"error_msg"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 
-	Data           *IncidentTicketInfoResponseData `json:"data"`
+	Data           *IncidentTicketInfoResponseData `json:"data,omitempty"`
 	HttpStatusCode int                             `json:"-"`
 }
 

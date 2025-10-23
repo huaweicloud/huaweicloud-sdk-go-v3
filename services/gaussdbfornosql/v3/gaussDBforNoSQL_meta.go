@@ -623,6 +623,54 @@ func GenReqDefForListAvailableFlavorInfos() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListBackups() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/{project_id}/backups").
+		WithResponse(new(model.ListBackupsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DatastoreType").
+		WithJsonTag("datastore_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BackupId").
+		WithJsonTag("backup_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BackupType").
+		WithJsonTag("backup_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Type").
+		WithJsonTag("type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BeginTime").
+		WithJsonTag("begin_time").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EndTime").
+		WithJsonTag("end_time").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListCassandraSlowLogs() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -1827,6 +1875,26 @@ func GenReqDefForRestoreExistingInstance() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v3/{project_id}/instances/{instance_id}/recovery").
 		WithResponse(new(model.RestoreExistingInstanceResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForRestoreRedisData() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/redis/instances/{instance_id}/recovery").
+		WithResponse(new(model.RestoreRedisDataResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

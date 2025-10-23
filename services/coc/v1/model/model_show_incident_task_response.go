@@ -16,11 +16,11 @@ type ShowIncidentTaskResponse struct {
 	ErrorCode string `json:"error_code"`
 
 	// 请求响应描述
-	ErrorMsg string `json:"error_msg"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 
 	// 任务列表
-	Data           []CocTaskDetailV2 `json:"data"`
-	HttpStatusCode int               `json:"-"`
+	Data           *[]CocTaskDetailV2 `json:"data,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o ShowIncidentTaskResponse) String() string {

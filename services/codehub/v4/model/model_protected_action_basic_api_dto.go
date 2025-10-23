@@ -25,6 +25,9 @@ type ProtectedActionBasicApiDto struct {
 
 	// **参数解释：** 关联角色ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	RelatedRoleIds *[]string `json:"related_role_ids,omitempty"`
+
+	// **参数解释：** 操作选择列表。
+	AdditionSwitchers *[]ForceActionEnableDto `json:"addition_switchers,omitempty"`
 }
 
 func (o ProtectedActionBasicApiDto) String() string {

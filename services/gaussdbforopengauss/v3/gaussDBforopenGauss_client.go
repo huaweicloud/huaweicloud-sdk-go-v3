@@ -1363,27 +1363,6 @@ func (c *GaussDBforopenGaussClient) ListDatabaseVersionsInvoker(request *model.L
 	return &ListDatabaseVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListDatabaseVolume 查询数据库占用空间大小列表
-//
-// 查询数据库占用空间大小列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *GaussDBforopenGaussClient) ListDatabaseVolume(request *model.ListDatabaseVolumeRequest) (*model.ListDatabaseVolumeResponse, error) {
-	requestDef := GenReqDefForListDatabaseVolume()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListDatabaseVolumeResponse), nil
-	}
-}
-
-// ListDatabaseVolumeInvoker 查询数据库占用空间大小列表
-func (c *GaussDBforopenGaussClient) ListDatabaseVolumeInvoker(request *model.ListDatabaseVolumeRequest) *ListDatabaseVolumeInvoker {
-	requestDef := GenReqDefForListDatabaseVolume()
-	return &ListDatabaseVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ListDatabaseVolumeSummary 查询数据盘空间概况
 //
 // 查询数据盘空间概况。
@@ -3946,6 +3925,27 @@ func (c *GaussDBforopenGaussClient) UpdateFeaturesInvoker(request *model.UpdateF
 	return &UpdateFeaturesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateInstanceAlias 修改实例别名
+//
+// 创建或修改实例备注。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) UpdateInstanceAlias(request *model.UpdateInstanceAliasRequest) (*model.UpdateInstanceAliasResponse, error) {
+	requestDef := GenReqDefForUpdateInstanceAlias()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstanceAliasResponse), nil
+	}
+}
+
+// UpdateInstanceAliasInvoker 修改实例别名
+func (c *GaussDBforopenGaussClient) UpdateInstanceAliasInvoker(request *model.UpdateInstanceAliasRequest) *UpdateInstanceAliasInvoker {
+	requestDef := GenReqDefForUpdateInstanceAlias()
+	return &UpdateInstanceAliasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateInstanceConfiguration 修改指定实例的参数
 //
 // 修改指定实例的参数。
@@ -4605,6 +4605,27 @@ func (c *GaussDBforopenGaussClient) ListSqlLimitTaskInvoker(request *model.ListS
 	return &ListSqlLimitTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSqlPlanAction 查询SQL执行计划绑定情况
+//
+// 查询SQL执行计划绑定情况。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListSqlPlanAction(request *model.ListSqlPlanActionRequest) (*model.ListSqlPlanActionResponse, error) {
+	requestDef := GenReqDefForListSqlPlanAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSqlPlanActionResponse), nil
+	}
+}
+
+// ListSqlPlanActionInvoker 查询SQL执行计划绑定情况
+func (c *GaussDBforopenGaussClient) ListSqlPlanActionInvoker(request *model.ListSqlPlanActionRequest) *ListSqlPlanActionInvoker {
+	requestDef := GenReqDefForListSqlPlanAction()
+	return &ListSqlPlanActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSqlTrace 查询GaussDB数据库实例SQL链路
 //
 // 查询GaussDB数据库实例SQL链路，包含实例上对应组件的链路列表，如dn_6001、dn_6002、cn_5001、cn_5002。
@@ -4624,6 +4645,27 @@ func (c *GaussDBforopenGaussClient) ListSqlTrace(request *model.ListSqlTraceRequ
 func (c *GaussDBforopenGaussClient) ListSqlTraceInvoker(request *model.ListSqlTraceRequest) *ListSqlTraceInvoker {
 	requestDef := GenReqDefForListSqlTrace()
 	return &ListSqlTraceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFullSql 查询单条SQL详情
+//
+// 查询单条SQL详情。对于分布式版实例，可查询对应SQL的完整执行记录，包含CN和DN上SQL语句执行历史。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ShowFullSql(request *model.ShowFullSqlRequest) (*model.ShowFullSqlResponse, error) {
+	requestDef := GenReqDefForShowFullSql()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFullSqlResponse), nil
+	}
+}
+
+// ShowFullSqlInvoker 查询单条SQL详情
+func (c *GaussDBforopenGaussClient) ShowFullSqlInvoker(request *model.ShowFullSqlRequest) *ShowFullSqlInvoker {
+	requestDef := GenReqDefForShowFullSql()
+	return &ShowFullSqlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowGlobalSlowSqlDetail 查询全局慢SQL详情

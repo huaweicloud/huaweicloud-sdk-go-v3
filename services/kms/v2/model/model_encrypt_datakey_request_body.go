@@ -32,7 +32,7 @@ type EncryptDatakeyRequestBody struct {
 	// pin码的类型，默认为“CipherText”，可选“PlainText”。仅四级密评场景支持该参数。
 	PinType *string `json:"pin_type,omitempty"`
 
-	// 指定生成的密钥算法。有效值： SM2、RSA。
+	// 指定待加密数据密钥的类型，仅四级密评场景生效。有效值： SM2、RSA。
 	KeySpec *EncryptDatakeyRequestBodyKeySpec `json:"key_spec,omitempty"`
 }
 

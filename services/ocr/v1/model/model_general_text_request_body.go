@@ -32,6 +32,9 @@ type GeneralTextRequestBody struct {
 
 	// 指定PDF页码识别。传入该参数时，则识别指定页码的内容。如果不传该参数，则默认识别第1页。
 	PdfPageNumber *int32 `json:"pdf_page_number,omitempty"`
+
+	// 返回文字块拼接结果开关。可选值包括： - true：打开返回文字块拼接结果开关。 - false：关闭返回文字块拼接结果开关。 未传入该参数时默认为false，即默认关闭返回文字块拼接结果开关。
+	ReturnMarkdownResult *bool `json:"return_markdown_result,omitempty"`
 }
 
 func (o GeneralTextRequestBody) String() string {

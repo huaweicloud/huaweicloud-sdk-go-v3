@@ -9,35 +9,35 @@ import (
 	"strings"
 )
 
-// ManageState **参数解释**： 服务器管理状态 **约束限制**： 不涉及 **取值范围** - onboard：上架中，用户下单，完成LLD设计。 - ready：交付完成，完成硬装、网调、服务器初始化、软调及转维验收。 - in-use：使用中，用户发放裸机。 - frozen：冻结，因欠费导致资源冻结。 - offboarding：下架中。  ```mermaid stateDiagram-v2    [*] --> onboard : 完成LLD设计   onboard --> ready : 完成网调、服务器初始化、软调及转维验收   ready --> in_use : 发放裸机实例   ready --> offboarding : 请求下架   ready --> frozen : 欠费      in_use --> ready : 删除裸机实例   in_use --> frozen : 欠费    frozen --> offboarding : 请求下架   in_use --> offboarding : 请求下架   offboarding --> [*] : 完成下架   state \"in-use\" as in_use ```
+// ManageState **参数解释**： 服务器管理状态 **约束限制**： 不涉及 **取值范围** - onboard：上架中，用户下单，完成LLD设计。 - ready：交付完成，完成硬装、网调、服务器初始化、软调及转维验收。 - in-use：使用中，用户发放裸机。 - frozen：冻结，因欠费导致资源冻结。 - offboarding：下架中。  ```mermaid stateDiagram-v2    [*] --> onboard : 完成LLD设计   onboard --> ready : 完成网调、服务器初始化、软调及转维验收   ready --> in_use : 发放裸机实例   ready --> offboarding : 请求下架   ready --> frozen : 欠费      in_use --> ready : 删除裸机实例   in_use --> frozen : 欠费    frozen --> offboarding : 请求下架   in_use --> offboarding : 请求下架   offboarding --> [*] : 完成下架   state \"in-use\" as in_use ``` **默认取值**： 不涉及
 type ManageState struct {
 	value string
 }
 
 type ManageStateEnum struct {
-	DELIVERING ManageState
-	RECEIVED   ManageState
-	ONBOARD    ManageState
-	READY      ManageState
-	FROZEN     ManageState
+	ONBOARD     ManageState
+	READY       ManageState
+	IN_USE      ManageState
+	FROZEN      ManageState
+	OFFBOARDING ManageState
 }
 
 func GetManageStateEnum() ManageStateEnum {
 	return ManageStateEnum{
-		DELIVERING: ManageState{
-			value: "delivering",
-		},
-		RECEIVED: ManageState{
-			value: "received",
-		},
 		ONBOARD: ManageState{
 			value: "onboard",
 		},
 		READY: ManageState{
 			value: "ready",
 		},
+		IN_USE: ManageState{
+			value: "in-use",
+		},
 		FROZEN: ManageState{
 			value: "frozen",
+		},
+		OFFBOARDING: ManageState{
+			value: "offboarding",
 		},
 	}
 }

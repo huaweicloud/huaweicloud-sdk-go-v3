@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// PipelineStageJobDto 流水线阶段带任务
+// PipelineStageJobDto 流水线阶段的任务
 type PipelineStageJobDto struct {
 
 	// 阶段ID
