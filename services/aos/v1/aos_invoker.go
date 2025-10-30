@@ -325,6 +325,22 @@ func (i *DeletePrivateHookVersionInvoker) Invoke() (*model.DeletePrivateHookVers
 	}
 }
 
+type ListPrivateHookVersionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPrivateHookVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPrivateHookVersionsInvoker) Invoke() (*model.ListPrivateHookVersionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPrivateHookVersionsResponse), nil
+	}
+}
+
 type ListPrivateHooksInvoker struct {
 	*invoker.BaseInvoker
 }

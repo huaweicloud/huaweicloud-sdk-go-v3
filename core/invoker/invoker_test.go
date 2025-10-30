@@ -80,7 +80,7 @@ func mockHcClient(url string, options ...interface{}) (*core.HcHttpClient, error
 func TestBaseInvoker_Exchange_Attributes(t *testing.T) {
 	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		_, err := fmt.Fprintln(w, "{}")
-		assert.Nil(t, err)
+		assert.NoError(t, err)
 	}))
 	defer ts.Close()
 
@@ -90,13 +90,13 @@ func TestBaseInvoker_Exchange_Attributes(t *testing.T) {
 	httpConfig := config.DefaultHttpConfig().WithHttpHandler(handler)
 
 	client, err := mockHcClient(ts.URL, httpConfig)
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	invoker := NewBaseInvoker(client, &mockModel{}, reqDef).WithRetry(10, func(resp interface{}, err error) bool {
 		return err != nil
 	}, retry.NewDecorRelatedJitter())
 	invoker.Exchange.Attributes = map[string]interface{}{"key": "value"}
 	resp, err := invoker.Invoke()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	assert.IsType(t, &mockModel{}, resp)
 	assert.Equal(t, 200, resp.(*mockModel).HttpStatusCode)
 }
@@ -109,12 +109,12 @@ func TestBaseInvoker_WithRetry(t *testing.T) {
 		w.WriteHeader(http.StatusBadGateway)
 		_, err := fmt.Fprintln(w, "{}")
 		count++
-		assert.Nil(t, err)
+		assert.NoError(t, err)
 	}))
 	defer ts.Close()
 
 	client, err := mockHcClient(ts.URL)
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	invoker := NewBaseInvoker(client, &mockModel{}, reqDef).WithRetry(3, func(resp interface{}, err error) bool {
 		return err != nil
 	}, &retry.None{})
@@ -135,17 +135,17 @@ func TestBaseInvoker_WithRetry2(t *testing.T) {
 		}
 		_, err := fmt.Fprintln(w, "{}")
 		count++
-		assert.Nil(t, err)
+		assert.NoError(t, err)
 	}))
 	defer ts.Close()
 
 	client, err := mockHcClient(ts.URL)
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	invoker := NewBaseInvoker(client, &mockModel{}, reqDef).WithRetry(10, func(resp interface{}, err error) bool {
 		return err != nil
 	}, retry.NewDecorRelatedJitter())
 	resp, err := invoker.Invoke()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	assert.IsType(t, &mockModel{}, resp)
 	assert.Equal(t, 200, resp.(*mockModel).HttpStatusCode)
 	assert.Equal(t, 2, count)
@@ -161,17 +161,17 @@ func TestBaseInvoker_WithRetry3(t *testing.T) {
 		}
 		_, err := fmt.Fprintln(w, "{}")
 		count++
-		assert.Nil(t, err)
+		assert.NoError(t, err)
 	}))
 	defer ts.Close()
 
 	client, err := mockHcClient(ts.URL)
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	invoker := NewBaseInvoker(client, &mockModel{}, reqDef).WithRetry(2, func(resp interface{}, err error) bool {
 		return err != nil
 	}, retry.NewEqualJitter())
 	resp, err := invoker.Invoke()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	assert.IsType(t, &mockModel{}, resp)
 	assert.Equal(t, 200, resp.(*mockModel).HttpStatusCode)
 	assert.Equal(t, 3, count)
@@ -184,12 +184,12 @@ func TestBaseInvoker_WithRetry4(t *testing.T) {
 		w.WriteHeader(http.StatusBadGateway)
 		_, err := fmt.Fprintln(w, "{}")
 		count++
-		assert.Nil(t, err)
+		assert.NoError(t, err)
 	}))
 	defer ts.Close()
 
 	client, err := mockHcClient(ts.URL)
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	invoker := NewBaseInvoker(client, &mockModel{}, reqDef).WithRetry(1, func(resp interface{}, err error) bool {
 		return err != nil
 	}, retry.NewRandomJitter())
@@ -207,12 +207,12 @@ func TestBaseInvoker_WithRetry5(t *testing.T) {
 		w.WriteHeader(http.StatusBadGateway)
 		_, err := fmt.Fprintln(w, "{}")
 		count++
-		assert.Nil(t, err)
+		assert.NoError(t, err)
 	}))
 	defer ts.Close()
 
 	client, err := mockHcClient(ts.URL)
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	invoker := NewBaseInvoker(client, &mockModel{}, reqDef).WithRetry(10, func(resp interface{}, err error) bool {
 		return false
 	}, retry.None{})

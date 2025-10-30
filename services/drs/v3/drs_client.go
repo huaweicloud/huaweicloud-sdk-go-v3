@@ -950,6 +950,69 @@ func (c *DrsClient) ListUsersInvoker(request *model.ListUsersRequest) *ListUsers
 	return &ListUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ModifyGroupAndStream 更新LTS配置
+//
+// 更新任务的LTS配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ModifyGroupAndStream(request *model.ModifyGroupAndStreamRequest) (*model.ModifyGroupAndStreamResponse, error) {
+	requestDef := GenReqDefForModifyGroupAndStream()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyGroupAndStreamResponse), nil
+	}
+}
+
+// ModifyGroupAndStreamInvoker 更新LTS配置
+func (c *DrsClient) ModifyGroupAndStreamInvoker(request *model.ModifyGroupAndStreamRequest) *ModifyGroupAndStreamInvoker {
+	requestDef := GenReqDefForModifyGroupAndStream()
+	return &ModifyGroupAndStreamInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// QueryTuningParams 查询高级设置参数
+//
+// 查询高级设置参数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) QueryTuningParams(request *model.QueryTuningParamsRequest) (*model.QueryTuningParamsResponse, error) {
+	requestDef := GenReqDefForQueryTuningParams()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.QueryTuningParamsResponse), nil
+	}
+}
+
+// QueryTuningParamsInvoker 查询高级设置参数
+func (c *DrsClient) QueryTuningParamsInvoker(request *model.QueryTuningParamsRequest) *QueryTuningParamsInvoker {
+	requestDef := GenReqDefForQueryTuningParams()
+	return &QueryTuningParamsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SelectGroupAndStream 查询LTS配置
+//
+// 查询任务的LTS配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) SelectGroupAndStream(request *model.SelectGroupAndStreamRequest) (*model.SelectGroupAndStreamResponse, error) {
+	requestDef := GenReqDefForSelectGroupAndStream()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SelectGroupAndStreamResponse), nil
+	}
+}
+
+// SelectGroupAndStreamInvoker 查询LTS配置
+func (c *DrsClient) SelectGroupAndStreamInvoker(request *model.SelectGroupAndStreamRequest) *SelectGroupAndStreamInvoker {
+	requestDef := GenReqDefForSelectGroupAndStream()
+	return &SelectGroupAndStreamInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowJobList 查询租户任务列表
 //
 // 查询租户任务列表，可以根据引擎类型，网络类型，任务状态，任务名称，任务ID进行查询。

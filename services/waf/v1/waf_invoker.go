@@ -21,182 +21,6 @@ func (i *ApplyCertificateToHostInvoker) Invoke() (*model.ApplyCertificateToHostR
 	}
 }
 
-type BatchCreateAntiTamperRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchCreateAntiTamperRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchCreateAntiTamperRuleInvoker) Invoke() (*model.BatchCreateAntiTamperRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchCreateAntiTamperRuleResponse), nil
-	}
-}
-
-type BatchCreateAntileakageRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchCreateAntileakageRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchCreateAntileakageRuleInvoker) Invoke() (*model.BatchCreateAntileakageRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchCreateAntileakageRuleResponse), nil
-	}
-}
-
-type BatchCreateCcRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchCreateCcRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchCreateCcRuleInvoker) Invoke() (*model.BatchCreateCcRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchCreateCcRuleResponse), nil
-	}
-}
-
-type BatchCreateCustomRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchCreateCustomRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchCreateCustomRuleInvoker) Invoke() (*model.BatchCreateCustomRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchCreateCustomRuleResponse), nil
-	}
-}
-
-type BatchCreateGeoIpRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchCreateGeoIpRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchCreateGeoIpRuleInvoker) Invoke() (*model.BatchCreateGeoIpRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchCreateGeoIpRuleResponse), nil
-	}
-}
-
-type BatchCreateIgnoreRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchCreateIgnoreRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchCreateIgnoreRuleInvoker) Invoke() (*model.BatchCreateIgnoreRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchCreateIgnoreRuleResponse), nil
-	}
-}
-
-type BatchCreateIpReputationRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchCreateIpReputationRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchCreateIpReputationRuleInvoker) Invoke() (*model.BatchCreateIpReputationRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchCreateIpReputationRuleResponse), nil
-	}
-}
-
-type BatchCreatePrivacyRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchCreatePrivacyRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchCreatePrivacyRuleInvoker) Invoke() (*model.BatchCreatePrivacyRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchCreatePrivacyRuleResponse), nil
-	}
-}
-
-type BatchCreateWhiteblackipRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchCreateWhiteblackipRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchCreateWhiteblackipRuleInvoker) Invoke() (*model.BatchCreateWhiteblackipRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchCreateWhiteblackipRuleResponse), nil
-	}
-}
-
-type BatchDeleteAlertNoticeConfigInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchDeleteAlertNoticeConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchDeleteAlertNoticeConfigInvoker) Invoke() (*model.BatchDeleteAlertNoticeConfigResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchDeleteAlertNoticeConfigResponse), nil
-	}
-}
-
-type BatchDeleteCompositeHostsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchDeleteCompositeHostsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchDeleteCompositeHostsInvoker) Invoke() (*model.BatchDeleteCompositeHostsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchDeleteCompositeHostsResponse), nil
-	}
-}
-
 type BatchDeletePoliciesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -213,214 +37,6 @@ func (i *BatchDeletePoliciesInvoker) Invoke() (*model.BatchDeletePoliciesRespons
 	}
 }
 
-type BatchDeleteRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchDeleteRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchDeleteRulesInvoker) Invoke() (*model.BatchDeleteRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchDeleteRulesResponse), nil
-	}
-}
-
-type BatchUpdateAntileakageRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchUpdateAntileakageRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchUpdateAntileakageRulesInvoker) Invoke() (*model.BatchUpdateAntileakageRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchUpdateAntileakageRulesResponse), nil
-	}
-}
-
-type BatchUpdateAntitamperRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchUpdateAntitamperRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchUpdateAntitamperRulesInvoker) Invoke() (*model.BatchUpdateAntitamperRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchUpdateAntitamperRulesResponse), nil
-	}
-}
-
-type BatchUpdateBotMRuleActionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchUpdateBotMRuleActionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchUpdateBotMRuleActionInvoker) Invoke() (*model.BatchUpdateBotMRuleActionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchUpdateBotMRuleActionResponse), nil
-	}
-}
-
-type BatchUpdateBotMRuleStatusInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchUpdateBotMRuleStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchUpdateBotMRuleStatusInvoker) Invoke() (*model.BatchUpdateBotMRuleStatusResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchUpdateBotMRuleStatusResponse), nil
-	}
-}
-
-type BatchUpdateCcRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchUpdateCcRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchUpdateCcRulesInvoker) Invoke() (*model.BatchUpdateCcRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchUpdateCcRulesResponse), nil
-	}
-}
-
-type BatchUpdateCustomRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchUpdateCustomRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchUpdateCustomRulesInvoker) Invoke() (*model.BatchUpdateCustomRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchUpdateCustomRulesResponse), nil
-	}
-}
-
-type BatchUpdateGeoipRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchUpdateGeoipRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchUpdateGeoipRulesInvoker) Invoke() (*model.BatchUpdateGeoipRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchUpdateGeoipRulesResponse), nil
-	}
-}
-
-type BatchUpdateIgnoreRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchUpdateIgnoreRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchUpdateIgnoreRulesInvoker) Invoke() (*model.BatchUpdateIgnoreRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchUpdateIgnoreRulesResponse), nil
-	}
-}
-
-type BatchUpdateIpReputationRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchUpdateIpReputationRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchUpdateIpReputationRulesInvoker) Invoke() (*model.BatchUpdateIpReputationRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchUpdateIpReputationRulesResponse), nil
-	}
-}
-
-type BatchUpdatePrivacyRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchUpdatePrivacyRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchUpdatePrivacyRulesInvoker) Invoke() (*model.BatchUpdatePrivacyRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchUpdatePrivacyRulesResponse), nil
-	}
-}
-
-type BatchUpdateProtectStatusInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchUpdateProtectStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchUpdateProtectStatusInvoker) Invoke() (*model.BatchUpdateProtectStatusResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchUpdateProtectStatusResponse), nil
-	}
-}
-
-type BatchUpdateWhiteblackipRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchUpdateWhiteblackipRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchUpdateWhiteblackipRulesInvoker) Invoke() (*model.BatchUpdateWhiteblackipRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchUpdateWhiteblackipRulesResponse), nil
-	}
-}
-
 type ChangePrepaidCloudWafInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -434,134 +50,6 @@ func (i *ChangePrepaidCloudWafInvoker) Invoke() (*model.ChangePrepaidCloudWafRes
 		return nil, err
 	} else {
 		return result.(*model.ChangePrepaidCloudWafResponse), nil
-	}
-}
-
-type CheckAgencyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CheckAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CheckAgencyInvoker) Invoke() (*model.CheckAgencyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CheckAgencyResponse), nil
-	}
-}
-
-type ConfirmApplicationTypesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ConfirmApplicationTypesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ConfirmApplicationTypesInvoker) Invoke() (*model.ConfirmApplicationTypesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ConfirmApplicationTypesResponse), nil
-	}
-}
-
-type ConfirmAsyncJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ConfirmAsyncJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ConfirmAsyncJobInvoker) Invoke() (*model.ConfirmAsyncJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ConfirmAsyncJobResponse), nil
-	}
-}
-
-type ConfirmIpReputationRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ConfirmIpReputationRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ConfirmIpReputationRuleInvoker) Invoke() (*model.ConfirmIpReputationRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ConfirmIpReputationRuleResponse), nil
-	}
-}
-
-type ConfirmPolicyAntileakageMapInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ConfirmPolicyAntileakageMapInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ConfirmPolicyAntileakageMapInvoker) Invoke() (*model.ConfirmPolicyAntileakageMapResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ConfirmPolicyAntileakageMapResponse), nil
-	}
-}
-
-type ConfirmPolicyIpReputationMapInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ConfirmPolicyIpReputationMapInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ConfirmPolicyIpReputationMapInvoker) Invoke() (*model.ConfirmPolicyIpReputationMapResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ConfirmPolicyIpReputationMapResponse), nil
-	}
-}
-
-type ConfirmProtectionTypesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ConfirmProtectionTypesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ConfirmProtectionTypesInvoker) Invoke() (*model.ConfirmProtectionTypesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ConfirmProtectionTypesResponse), nil
-	}
-}
-
-type ConfirmThreatMapInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ConfirmThreatMapInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ConfirmThreatMapInvoker) Invoke() (*model.ConfirmThreatMapResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ConfirmThreatMapResponse), nil
 	}
 }
 
@@ -594,54 +82,6 @@ func (i *ConfirmUserBundleInvoker) Invoke() (*model.ConfirmUserBundleResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ConfirmUserBundleResponse), nil
-	}
-}
-
-type CopyPolicyByIdInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CopyPolicyByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CopyPolicyByIdInvoker) Invoke() (*model.CopyPolicyByIdResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CopyPolicyByIdResponse), nil
-	}
-}
-
-type CreateAgencyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateAgencyInvoker) Invoke() (*model.CreateAgencyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateAgencyResponse), nil
-	}
-}
-
-type CreateAlertNoticeConfigInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateAlertNoticeConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateAlertNoticeConfigInvoker) Invoke() (*model.CreateAlertNoticeConfigResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateAlertNoticeConfigResponse), nil
 	}
 }
 
@@ -690,22 +130,6 @@ func (i *CreateAntileakageRuleInvoker) Invoke() (*model.CreateAntileakageRuleRes
 		return nil, err
 	} else {
 		return result.(*model.CreateAntileakageRuleResponse), nil
-	}
-}
-
-type CreateBotMTrafficDetectionConditionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateBotMTrafficDetectionConditionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateBotMTrafficDetectionConditionInvoker) Invoke() (*model.CreateBotMTrafficDetectionConditionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateBotMTrafficDetectionConditionResponse), nil
 	}
 }
 
@@ -770,22 +194,6 @@ func (i *CreateCustomRuleInvoker) Invoke() (*model.CreateCustomRuleResponse, err
 		return nil, err
 	} else {
 		return result.(*model.CreateCustomRuleResponse), nil
-	}
-}
-
-type CreateEventExportJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateEventExportJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateEventExportJobInvoker) Invoke() (*model.CreateEventExportJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateEventExportJobResponse), nil
 	}
 }
 
@@ -869,22 +277,6 @@ func (i *CreateIpGroupInvoker) Invoke() (*model.CreateIpGroupResponse, error) {
 	}
 }
 
-type CreateIpReputationRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateIpReputationRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateIpReputationRuleInvoker) Invoke() (*model.CreateIpReputationRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateIpReputationRuleResponse), nil
-	}
-}
-
 type CreatePolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -965,22 +357,6 @@ func (i *CreatePunishmentRuleInvoker) Invoke() (*model.CreatePunishmentRuleRespo
 	}
 }
 
-type CreateSecurityReportSubscriptionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateSecurityReportSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateSecurityReportSubscriptionInvoker) Invoke() (*model.CreateSecurityReportSubscriptionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateSecurityReportSubscriptionResponse), nil
-	}
-}
-
 type CreateValueListInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1010,38 +386,6 @@ func (i *CreateWhiteblackipRuleInvoker) Invoke() (*model.CreateWhiteblackipRuleR
 		return nil, err
 	} else {
 		return result.(*model.CreateWhiteblackipRuleResponse), nil
-	}
-}
-
-type DeleteAgencyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteAgencyInvoker) Invoke() (*model.DeleteAgencyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteAgencyResponse), nil
-	}
-}
-
-type DeleteAlertNoticeConfigInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteAlertNoticeConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteAlertNoticeConfigInvoker) Invoke() (*model.DeleteAlertNoticeConfigResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteAlertNoticeConfigResponse), nil
 	}
 }
 
@@ -1090,22 +434,6 @@ func (i *DeleteAntitamperRuleInvoker) Invoke() (*model.DeleteAntitamperRuleRespo
 		return nil, err
 	} else {
 		return result.(*model.DeleteAntitamperRuleResponse), nil
-	}
-}
-
-type DeleteBotMTrafficDetectionConditionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteBotMTrafficDetectionConditionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteBotMTrafficDetectionConditionInvoker) Invoke() (*model.DeleteBotMTrafficDetectionConditionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteBotMTrafficDetectionConditionResponse), nil
 	}
 }
 
@@ -1253,22 +581,6 @@ func (i *DeleteIpGroupInvoker) Invoke() (*model.DeleteIpGroupResponse, error) {
 	}
 }
 
-type DeleteIpReputationRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteIpReputationRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteIpReputationRuleInvoker) Invoke() (*model.DeleteIpReputationRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteIpReputationRuleResponse), nil
-	}
-}
-
 type DeletePolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1333,22 +645,6 @@ func (i *DeletePunishmentRuleInvoker) Invoke() (*model.DeletePunishmentRuleRespo
 	}
 }
 
-type DeleteSecurityReportSubscriptionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteSecurityReportSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteSecurityReportSubscriptionInvoker) Invoke() (*model.DeleteSecurityReportSubscriptionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteSecurityReportSubscriptionResponse), nil
-	}
-}
-
 type DeleteValueListInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1381,22 +677,6 @@ func (i *DeleteWhiteBlackIpRuleInvoker) Invoke() (*model.DeleteWhiteBlackIpRuleR
 	}
 }
 
-type ListAntiTamperPolicyRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListAntiTamperPolicyRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListAntiTamperPolicyRulesInvoker) Invoke() (*model.ListAntiTamperPolicyRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListAntiTamperPolicyRulesResponse), nil
-	}
-}
-
 type ListAnticrawlerRulesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1410,22 +690,6 @@ func (i *ListAnticrawlerRulesInvoker) Invoke() (*model.ListAnticrawlerRulesRespo
 		return nil, err
 	} else {
 		return result.(*model.ListAnticrawlerRulesResponse), nil
-	}
-}
-
-type ListAntileakagePolicyRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListAntileakagePolicyRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListAntileakagePolicyRulesInvoker) Invoke() (*model.ListAntileakagePolicyRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListAntileakagePolicyRulesResponse), nil
 	}
 }
 
@@ -1493,102 +757,6 @@ func (i *ListBandwidthTimelineInvoker) Invoke() (*model.ListBandwidthTimelineRes
 	}
 }
 
-type ListBotMRequestDistributionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListBotMRequestDistributionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListBotMRequestDistributionInvoker) Invoke() (*model.ListBotMRequestDistributionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListBotMRequestDistributionResponse), nil
-	}
-}
-
-type ListBotMRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListBotMRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListBotMRulesInvoker) Invoke() (*model.ListBotMRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListBotMRulesResponse), nil
-	}
-}
-
-type ListBotMScoreDistributionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListBotMScoreDistributionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListBotMScoreDistributionInvoker) Invoke() (*model.ListBotMScoreDistributionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListBotMScoreDistributionResponse), nil
-	}
-}
-
-type ListBotMTimelineInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListBotMTimelineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListBotMTimelineInvoker) Invoke() (*model.ListBotMTimelineResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListBotMTimelineResponse), nil
-	}
-}
-
-type ListBotMTopnRequestInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListBotMTopnRequestInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListBotMTopnRequestInvoker) Invoke() (*model.ListBotMTopnRequestResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListBotMTopnRequestResponse), nil
-	}
-}
-
-type ListCcPolicyRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListCcPolicyRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListCcPolicyRulesInvoker) Invoke() (*model.ListCcPolicyRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListCcPolicyRulesResponse), nil
-	}
-}
-
 type ListCcRulesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1634,22 +802,6 @@ func (i *ListCompositeHostsInvoker) Invoke() (*model.ListCompositeHostsResponse,
 		return nil, err
 	} else {
 		return result.(*model.ListCompositeHostsResponse), nil
-	}
-}
-
-type ListCustomPolicyRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListCustomPolicyRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListCustomPolicyRulesInvoker) Invoke() (*model.ListCustomPolicyRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListCustomPolicyRulesResponse), nil
 	}
 }
 
@@ -1701,22 +853,6 @@ func (i *ListEventLogInvoker) Invoke() (*model.ListEventLogResponse, error) {
 	}
 }
 
-type ListGeoIpPolicyRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListGeoIpPolicyRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListGeoIpPolicyRulesInvoker) Invoke() (*model.ListGeoIpPolicyRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListGeoIpPolicyRulesResponse), nil
-	}
-}
-
 type ListGeoipRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1765,22 +901,6 @@ func (i *ListHostRouteInvoker) Invoke() (*model.ListHostRouteResponse, error) {
 	}
 }
 
-type ListIgnorePolicyRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListIgnorePolicyRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListIgnorePolicyRulesInvoker) Invoke() (*model.ListIgnorePolicyRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListIgnorePolicyRulesResponse), nil
-	}
-}
-
 type ListIgnoreRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1813,22 +933,6 @@ func (i *ListInstanceInvoker) Invoke() (*model.ListInstanceResponse, error) {
 	}
 }
 
-type ListInstanceTagsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListInstanceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListInstanceTagsInvoker) Invoke() (*model.ListInstanceTagsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListInstanceTagsResponse), nil
-	}
-}
-
 type ListIpGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1842,54 +946,6 @@ func (i *ListIpGroupInvoker) Invoke() (*model.ListIpGroupResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListIpGroupResponse), nil
-	}
-}
-
-type ListIpReputationPolicyRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListIpReputationPolicyRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListIpReputationPolicyRulesInvoker) Invoke() (*model.ListIpReputationPolicyRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListIpReputationPolicyRulesResponse), nil
-	}
-}
-
-type ListIpReputationRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListIpReputationRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListIpReputationRulesInvoker) Invoke() (*model.ListIpReputationRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListIpReputationRulesResponse), nil
-	}
-}
-
-type ListLlmGuardPolicyRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListLlmGuardPolicyRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListLlmGuardPolicyRulesInvoker) Invoke() (*model.ListLlmGuardPolicyRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListLlmGuardPolicyRulesResponse), nil
 	}
 }
 
@@ -1957,22 +1013,6 @@ func (i *ListPremiumHostInvoker) Invoke() (*model.ListPremiumHostResponse, error
 	}
 }
 
-type ListPrivacyPolicyRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListPrivacyPolicyRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListPrivacyPolicyRulesInvoker) Invoke() (*model.ListPrivacyPolicyRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListPrivacyPolicyRulesResponse), nil
-	}
-}
-
 type ListPrivacyRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1986,22 +1026,6 @@ func (i *ListPrivacyRuleInvoker) Invoke() (*model.ListPrivacyRuleResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListPrivacyRuleResponse), nil
-	}
-}
-
-type ListProtectableResourcesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListProtectableResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListProtectableResourcesInvoker) Invoke() (*model.ListProtectableResourcesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListProtectableResourcesResponse), nil
 	}
 }
 
@@ -2050,54 +1074,6 @@ func (i *ListRequestTimelineInvoker) Invoke() (*model.ListRequestTimelineRespons
 		return nil, err
 	} else {
 		return result.(*model.ListRequestTimelineResponse), nil
-	}
-}
-
-type ListResponseCodeTimelineInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListResponseCodeTimelineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListResponseCodeTimelineInvoker) Invoke() (*model.ListResponseCodeTimelineResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListResponseCodeTimelineResponse), nil
-	}
-}
-
-type ListSecurityReportHistoryPeriodsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListSecurityReportHistoryPeriodsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListSecurityReportHistoryPeriodsInvoker) Invoke() (*model.ListSecurityReportHistoryPeriodsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListSecurityReportHistoryPeriodsResponse), nil
-	}
-}
-
-type ListSecurityReportSendingRecordsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListSecurityReportSendingRecordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListSecurityReportSendingRecordsInvoker) Invoke() (*model.ListSecurityReportSendingRecordsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListSecurityReportSendingRecordsResponse), nil
 	}
 }
 
@@ -2226,22 +1202,6 @@ func (i *ListWebBasicProtectionRulesInvoker) Invoke() (*model.ListWebBasicProtec
 		return nil, err
 	} else {
 		return result.(*model.ListWebBasicProtectionRulesResponse), nil
-	}
-}
-
-type ListWhiteblackipPolicyRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListWhiteblackipPolicyRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListWhiteblackipPolicyRulesInvoker) Invoke() (*model.ListWhiteblackipPolicyRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListWhiteblackipPolicyRulesResponse), nil
 	}
 }
 
@@ -2629,38 +1589,6 @@ func (i *ShowPunishmentRuleInvoker) Invoke() (*model.ShowPunishmentRuleResponse,
 	}
 }
 
-type ShowSecurityReportContentInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowSecurityReportContentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowSecurityReportContentInvoker) Invoke() (*model.ShowSecurityReportContentResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowSecurityReportContentResponse), nil
-	}
-}
-
-type ShowSecurityReportSubscriptionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowSecurityReportSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowSecurityReportSubscriptionInvoker) Invoke() (*model.ShowSecurityReportSubscriptionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowSecurityReportSubscriptionResponse), nil
-	}
-}
-
 type ShowSourceIpInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2818,54 +1746,6 @@ func (i *UpdateAntileakageRuleInvoker) Invoke() (*model.UpdateAntileakageRuleRes
 		return nil, err
 	} else {
 		return result.(*model.UpdateAntileakageRuleResponse), nil
-	}
-}
-
-type UpdateBotMCategoryStatusInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateBotMCategoryStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateBotMCategoryStatusInvoker) Invoke() (*model.UpdateBotMCategoryStatusResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateBotMCategoryStatusResponse), nil
-	}
-}
-
-type UpdateBotMRuleDefenseStrategyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateBotMRuleDefenseStrategyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateBotMRuleDefenseStrategyInvoker) Invoke() (*model.UpdateBotMRuleDefenseStrategyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateBotMRuleDefenseStrategyResponse), nil
-	}
-}
-
-type UpdateBotMTrafficDetectionConditionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateBotMTrafficDetectionConditionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateBotMTrafficDetectionConditionInvoker) Invoke() (*model.UpdateBotMTrafficDetectionConditionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateBotMTrafficDetectionConditionResponse), nil
 	}
 }
 
@@ -3029,22 +1909,6 @@ func (i *UpdateIpGroupInvoker) Invoke() (*model.UpdateIpGroupResponse, error) {
 	}
 }
 
-type UpdateIpReputationRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateIpReputationRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateIpReputationRuleInvoker) Invoke() (*model.UpdateIpReputationRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateIpReputationRuleResponse), nil
-	}
-}
-
 type UpdateLtsInfoConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3157,38 +2021,6 @@ func (i *UpdatePremiumHostProtectStatusInvoker) Invoke() (*model.UpdatePremiumHo
 	}
 }
 
-type UpdatePremiumInstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdatePremiumInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdatePremiumInstanceInvoker) Invoke() (*model.UpdatePremiumInstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdatePremiumInstanceResponse), nil
-	}
-}
-
-type UpdatePremiumInstanceProgressInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdatePremiumInstanceProgressInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdatePremiumInstanceProgressInvoker) Invoke() (*model.UpdatePremiumInstanceProgressResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdatePremiumInstanceProgressResponse), nil
-	}
-}
-
 type UpdatePrivacyRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3221,22 +2053,6 @@ func (i *UpdatePunishmentRuleInvoker) Invoke() (*model.UpdatePunishmentRuleRespo
 	}
 }
 
-type UpdateSecurityReportSubscriptionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateSecurityReportSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateSecurityReportSubscriptionInvoker) Invoke() (*model.UpdateSecurityReportSubscriptionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateSecurityReportSubscriptionResponse), nil
-	}
-}
-
 type UpdateValueListInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3266,53 +2082,5 @@ func (i *UpdateWhiteblackipRuleInvoker) Invoke() (*model.UpdateWhiteblackipRuleR
 		return nil, err
 	} else {
 		return result.(*model.UpdateWhiteblackipRuleResponse), nil
-	}
-}
-
-type ConfirmDnsDomainInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ConfirmDnsDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ConfirmDnsDomainInvoker) Invoke() (*model.ConfirmDnsDomainResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ConfirmDnsDomainResponse), nil
-	}
-}
-
-type CreateQuickAccessDomainInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateQuickAccessDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateQuickAccessDomainInvoker) Invoke() (*model.CreateQuickAccessDomainResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateQuickAccessDomainResponse), nil
-	}
-}
-
-type ShowWebProtectionRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowWebProtectionRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowWebProtectionRuleInvoker) Invoke() (*model.ShowWebProtectionRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowWebProtectionRuleResponse), nil
 	}
 }

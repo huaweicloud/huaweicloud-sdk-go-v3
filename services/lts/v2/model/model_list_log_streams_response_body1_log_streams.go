@@ -43,6 +43,9 @@ type ListLogStreamsResponseBody1LogStreams struct {
 
 	// 日志组ID
 	LogGroupId *string `json:"log_group_id,omitempty"`
+
+	// **参数解释：** 是否收藏日志流。 **取值范围：** - true：收藏日志流。 - false：不收藏日志流。
+	IsFavorite *bool `json:"is_favorite,omitempty"`
 }
 
 func (o ListLogStreamsResponseBody1LogStreams) String() string {

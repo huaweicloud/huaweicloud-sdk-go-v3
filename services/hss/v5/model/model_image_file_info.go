@@ -9,13 +9,13 @@ import (
 // ImageFileInfo 查询镜像无归属文件列表，文件信息
 type ImageFileInfo struct {
 
-	// 文件名称
+	// **参数解释**: 文件名称 **取值范围**: 字符长度1-256
 	FileName *string `json:"file_name,omitempty"`
 
-	// 文件路径
+	// **参数解释**: 文件路径 **取值范围**: 字符长度1-256
 	FilePath *string `json:"file_path,omitempty"`
 
-	// 文件大小
+	// **参数解释**: 文件大小 **取值范围**: 最小值0，最大值65535
 	Size *int32 `json:"size,omitempty"`
 }
 

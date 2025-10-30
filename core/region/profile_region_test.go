@@ -30,7 +30,7 @@ import (
 
 func TestNewProfileProvider(t *testing.T) {
 	err := setRegionsFileEnv()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 
 	p := NewProfileProvider("Service")
 	assert.Equal(t, "SERVICE", p.serviceName)
@@ -38,7 +38,7 @@ func TestNewProfileProvider(t *testing.T) {
 
 func TestProfileProvider_GetRegion(t *testing.T) {
 	err := setRegionsFileEnv()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 
 	p := NewProfileProvider("Service1")
 	region := p.GetRegion("region-id-1")
@@ -49,7 +49,7 @@ func TestProfileProvider_GetRegion(t *testing.T) {
 
 func TestProfileProvider_GetRegion2(t *testing.T) {
 	err := setRegionsFileEnv()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 
 	p := NewProfileProvider("Service2")
 	region := p.GetRegion("region-id-2")

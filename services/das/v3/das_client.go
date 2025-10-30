@@ -665,6 +665,27 @@ func (c *DasClient) ExportTopSqlTrendDetailsInvoker(request *model.ExportTopSqlT
 	return &ExportTopSqlTrendDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAutoIncrementUsage 查询自增配额
+//
+// 查询自增配额
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListAutoIncrementUsage(request *model.ListAutoIncrementUsageRequest) (*model.ListAutoIncrementUsageResponse, error) {
+	requestDef := GenReqDefForListAutoIncrementUsage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAutoIncrementUsageResponse), nil
+	}
+}
+
+// ListAutoIncrementUsageInvoker 查询自增配额
+func (c *DasClient) ListAutoIncrementUsageInvoker(request *model.ListAutoIncrementUsageRequest) *ListAutoIncrementUsageInvoker {
+	requestDef := GenReqDefForListAutoIncrementUsage()
+	return &ListAutoIncrementUsageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCloudDbaInstances 获取DAS云DBA实例列表
 //
 // 获取DAS云DBA实例列表。
@@ -1131,6 +1152,27 @@ func (c *DasClient) SetThresholdForMetric(request *model.SetThresholdForMetricRe
 func (c *DasClient) SetThresholdForMetricInvoker(request *model.SetThresholdForMetricRequest) *SetThresholdForMetricInvoker {
 	requestDef := GenReqDefForSetThresholdForMetric()
 	return &SetThresholdForMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDasRecommendSqlLimitRule 自动推荐SQL限流规则
+//
+// 根据条件（包括模板所代表的sql平均时长，条数，最大执行时长，前三者混合）自动推荐SQL限流规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowDasRecommendSqlLimitRule(request *model.ShowDasRecommendSqlLimitRuleRequest) (*model.ShowDasRecommendSqlLimitRuleResponse, error) {
+	requestDef := GenReqDefForShowDasRecommendSqlLimitRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDasRecommendSqlLimitRuleResponse), nil
+	}
+}
+
+// ShowDasRecommendSqlLimitRuleInvoker 自动推荐SQL限流规则
+func (c *DasClient) ShowDasRecommendSqlLimitRuleInvoker(request *model.ShowDasRecommendSqlLimitRuleRequest) *ShowDasRecommendSqlLimitRuleInvoker {
+	requestDef := GenReqDefForShowDasRecommendSqlLimitRule()
+	return &ShowDasRecommendSqlLimitRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDbUser 查询数据库用户信息

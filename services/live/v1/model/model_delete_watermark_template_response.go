@@ -1,0 +1,22 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// DeleteWatermarkTemplateResponse Response Object
+type DeleteWatermarkTemplateResponse struct {
+	XRequestId     *string `json:"X-request-id,omitempty"`
+	HttpStatusCode int     `json:"-"`
+}
+
+func (o DeleteWatermarkTemplateResponse) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "DeleteWatermarkTemplateResponse struct{}"
+	}
+
+	return strings.Join([]string{"DeleteWatermarkTemplateResponse", string(data)}, " ")
+}

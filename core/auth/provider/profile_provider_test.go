@@ -80,28 +80,28 @@ func TestGlobalCredentialProfileProvider(t *testing.T) {
 
 func TestProfileCredentialProvider_GetCredentials(t *testing.T) {
 	dir, err := os.UserHomeDir()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	filename := "test_credentials"
 	path := filepath.Join(dir, ".huaweicloud", filename)
 	err = os.Setenv("HUAWEICLOUD_SDK_CREDENTIALS_FILE", path)
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 
 	file, err := os.Create(path)
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	err = file.Chmod(0600)
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	_, err = file.WriteString(credentialStr)
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	err = file.Close()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	defer func(name string) {
 		err = os.Remove(name)
-		assert.Nil(t, err)
+		assert.NoError(t, err)
 	}(path)
 
 	basicProvider := BasicCredentialProfileProvider()
 	basicCred, err := basicProvider.GetCredentials()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	expectedBasicCred := basic.NewCredentialsBuilder().
 		WithAk(MockAk).
 		WithSk(MockSk).
@@ -113,7 +113,7 @@ func TestProfileCredentialProvider_GetCredentials(t *testing.T) {
 
 	globalProvider := GlobalCredentialProfileProvider()
 	globalCred, err := globalProvider.GetCredentials()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	expectedGlobalCred := global.NewCredentialsBuilder().
 		WithIdpId(MockIdpId).
 		WithIdTokenFile(MockIdTokenFile).

@@ -32,6 +32,12 @@ import (
 	"strings"
 )
 
+// BaseCredentials compatible
+var credentialsMap = map[string]string{
+	"auth.BasicCredentials":  "basic.Credentials",
+	"auth.GlobalCredentials": "global.Credentials",
+}
+
 type HcHttpClientBuilder struct {
 	CredentialsType        []string
 	derivedAuthServiceName string
@@ -115,6 +121,9 @@ func (builder *HcHttpClientBuilder) Build() *HcHttpClient {
 		t = t.Elem()
 	}
 	givenCredentialsType := t.String()
+	if val, ok := credentialsMap[givenCredentialsType]; ok {
+		givenCredentialsType = val
+	}
 	match := false
 	for _, credentialsType := range builder.CredentialsType {
 		if credentialsType == givenCredentialsType {
@@ -141,10 +150,8 @@ func (builder *HcHttpClientBuilder) Build() *HcHttpClient {
 		}
 	}
 
-	hcHttpClient := NewHcHttpClient(defaultHttpClient).
-		WithEndpoints(builder.endpoints).
-		WithCredential(builder.credentials).
-		WithErrorHandler(builder.errorHandler)
+	hcHttpClient := NewHcHttpClient(defaultHttpClient).WithEndpoints(builder.endpoints).
+		WithCredential(builder.credentials).WithErrorHandler(builder.errorHandler)
 	return hcHttpClient
 }
 

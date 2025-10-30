@@ -1829,6 +1829,27 @@ func (c *RdsClient) ListSlowlogStatisticsInvoker(request *model.ListSlowlogStati
 	return &ListSlowlogStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSmallVersion 查询小版本号
+//
+// 查询小版本号
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListSmallVersion(request *model.ListSmallVersionRequest) (*model.ListSmallVersionResponse, error) {
+	requestDef := GenReqDefForListSmallVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSmallVersionResponse), nil
+	}
+}
+
+// ListSmallVersionInvoker 查询小版本号
+func (c *RdsClient) ListSmallVersionInvoker(request *model.ListSmallVersionRequest) *ListSmallVersionInvoker {
+	requestDef := GenReqDefForListSmallVersion()
+	return &ListSmallVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSqlLimit 查询SQL限流列表
 //
 // 查询SQL限流列表
@@ -4843,25 +4864,25 @@ func (c *RdsClient) UpdateReadWeightInvoker(request *model.UpdateReadWeightReque
 	return &UpdateReadWeightInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListInstancesNoIndexTables 查询无索引表诊断数据
+// GetInstancesNoIndexTables 查询无索引表诊断数据
 //
 // 查询无索引表诊断数据
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *RdsClient) ListInstancesNoIndexTables(request *model.ListInstancesNoIndexTablesRequest) (*model.ListInstancesNoIndexTablesResponse, error) {
-	requestDef := GenReqDefForListInstancesNoIndexTables()
+func (c *RdsClient) GetInstancesNoIndexTables(request *model.GetInstancesNoIndexTablesRequest) (*model.GetInstancesNoIndexTablesResponse, error) {
+	requestDef := GenReqDefForGetInstancesNoIndexTables()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListInstancesNoIndexTablesResponse), nil
+		return resp.(*model.GetInstancesNoIndexTablesResponse), nil
 	}
 }
 
-// ListInstancesNoIndexTablesInvoker 查询无索引表诊断数据
-func (c *RdsClient) ListInstancesNoIndexTablesInvoker(request *model.ListInstancesNoIndexTablesRequest) *ListInstancesNoIndexTablesInvoker {
-	requestDef := GenReqDefForListInstancesNoIndexTables()
-	return &ListInstancesNoIndexTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// GetInstancesNoIndexTablesInvoker 查询无索引表诊断数据
+func (c *RdsClient) GetInstancesNoIndexTablesInvoker(request *model.GetInstancesNoIndexTablesRequest) *GetInstancesNoIndexTablesInvoker {
+	requestDef := GenReqDefForGetInstancesNoIndexTables()
+	return &GetInstancesNoIndexTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AllowSqlserverDbUserPrivilege 授权数据库帐号

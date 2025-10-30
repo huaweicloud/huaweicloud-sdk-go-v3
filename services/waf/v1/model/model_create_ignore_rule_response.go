@@ -33,6 +33,12 @@ type CreateIgnoreRuleResponse struct {
 	// 条件列表
 	Conditions *[]Condition `json:"conditions,omitempty"`
 
+	// 附加条件
+	MultiCondition *bool `json:"multiCondition,omitempty"`
+
+	// 引用表来源，1代表用户创建，其它值代表modulleX自动生成
+	Producer *int32 `json:"producer,omitempty"`
+
 	Advanced *IgnoreAdvanced `json:"advanced,omitempty"`
 
 	// 防护域名或防护网站

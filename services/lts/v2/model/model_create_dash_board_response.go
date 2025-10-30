@@ -32,7 +32,13 @@ type CreateDashBoardResponse struct {
 
 	// 是否使用模板
 	UseSystemTemplate *bool `json:"useSystemTemplate,omitempty"`
-	HttpStatusCode    int   `json:"-"`
+
+	// 纯净模式开关
+	ConciseModeEnable *bool `json:"concise_mode_enable,omitempty"`
+
+	// 仪表盘标签
+	Tags           *[]ResourceTag `json:"tags,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o CreateDashBoardResponse) String() string {

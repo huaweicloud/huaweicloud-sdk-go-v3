@@ -9,14 +9,17 @@ import (
 // TuningParameter 调优参数
 type TuningParameter struct {
 
-	// 参数名称
+	// 参数名称。
 	ParamName *string `json:"param_name,omitempty"`
 
-	// 参数取值
+	// 参数取值。
 	ParamValue *string `json:"param_value,omitempty"`
 
-	// 是否可用
+	// 是否可用。
 	Availability *string `json:"availability,omitempty"`
+
+	// 参数取值范围。
+	Range *string `json:"range,omitempty"`
 }
 
 func (o TuningParameter) String() string {

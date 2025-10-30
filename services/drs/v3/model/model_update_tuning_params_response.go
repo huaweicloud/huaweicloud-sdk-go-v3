@@ -21,7 +21,7 @@ type UpdateTuningParamsResponse struct {
 	// 增量日志拉取调优参数
 	IncreRelay *[]TuningParameter `json:"incre_relay,omitempty"`
 
-	// 参数修改是否成功
+	// 参数修改是否成功，查询参数时不返回该字段。
 	ModifyResult   *string `json:"modify_result,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

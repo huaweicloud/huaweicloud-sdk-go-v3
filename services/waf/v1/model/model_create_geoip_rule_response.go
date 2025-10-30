@@ -27,6 +27,12 @@ type CreateGeoipRuleResponse struct {
 	// 规则状态，0：关闭，1：开启
 	Status *int32 `json:"status,omitempty"`
 
+	// ip范围。若您的网站使用独享模式，请确认独享引擎是否全部升级到最新版本，避免造成异常。202412之后的版本支持配置IP范围
+	IpType *string `json:"ip_type,omitempty"`
+
+	// 规则描述
+	Description *string `json:"description,omitempty"`
+
 	// 创建规则时间戳
 	Timestamp      *int64 `json:"timestamp,omitempty"`
 	HttpStatusCode int    `json:"-"`

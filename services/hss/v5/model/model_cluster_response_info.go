@@ -18,13 +18,13 @@ type ClusterResponseInfo struct {
 	// 集群版本
 	ClusterVersion *string `json:"cluster_version,omitempty"`
 
-	// 防护状态 - unprotected - plugin error - protected with policy - deploy policy failed - protected without policy - uninstall failed - uninstall
+	// **参数解释**： 防护状态 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
 	ProtectStatus *string `json:"protect_status,omitempty"`
 
 	// 策略数量
 	PolicyNum *int32 `json:"policy_num,omitempty"`
 
-	// 集群运行状态 - Available - Unavailable
+	// **参数解释**： 集群运行状态 **取值范围**: - Available：可用。 - Unavailable：不可用。
 	ClusterStatus *string `json:"cluster_status,omitempty"`
 
 	// 集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群

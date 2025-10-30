@@ -74,6 +74,8 @@ var (
 		"https://dms.cn-north-12.myhuaweicloud.com")
 	CN_NORTH_11 = region.NewRegion("cn-north-11",
 		"https://dms.cn-north-11.myhuaweicloud.com")
+	CN_SOUTHWEST_3 = region.NewRegion("cn-southwest-3",
+		"https://dms.cn-southwest-3.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -110,6 +112,7 @@ var staticFields = map[string]*region.Region{
 	"cn-south-4":       CN_SOUTH_4,
 	"cn-north-12":      CN_NORTH_12,
 	"cn-north-11":      CN_NORTH_11,
+	"cn-southwest-3":   CN_SOUTHWEST_3,
 }
 
 var provider = region.DefaultProviderChain("KAFKA")

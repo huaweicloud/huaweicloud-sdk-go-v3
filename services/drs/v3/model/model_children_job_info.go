@@ -12,44 +12,44 @@ import (
 // ChildrenJobInfo 子任务信息体
 type ChildrenJobInfo struct {
 
-	// 计费字段
-	BillingTag bool `json:"billing_tag"`
+	// 是否计费字段。
+	BillingTag *bool `json:"billing_tag,omitempty"`
 
 	// 任务创建时间
-	CreateTime string `json:"create_time"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// 复制场景
-	DbUseType ChildrenJobInfoDbUseType `json:"db_use_type"`
+	DbUseType *ChildrenJobInfoDbUseType `json:"db_use_type,omitempty"`
 
 	// 任务描述
-	Description string `json:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 引擎类型
-	EngineType ChildrenJobInfoEngineType `json:"engine_type"`
+	EngineType *ChildrenJobInfoEngineType `json:"engine_type,omitempty"`
 
 	// 任务失败原因
-	ErrorMsg string `json:"error_msg"`
+	ErrorMsg *string `json:"error_msg,omitempty"`
 
 	// 任务id
-	Id string `json:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 迁移方向
-	JobDirection ChildrenJobInfoJobDirection `json:"job_direction"`
+	JobDirection *ChildrenJobInfoJobDirection `json:"job_direction,omitempty"`
 
 	// 任务名称
-	Name string `json:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 网络类型
-	NetType ChildrenJobInfoNetType `json:"net_type"`
+	NetType *ChildrenJobInfoNetType `json:"net_type,omitempty"`
 
 	// 新框架
-	NodeNewFramework bool `json:"node_newFramework"`
+	NodeNewFramework *bool `json:"node_newFramework,omitempty"`
 
 	// 任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
-	Status ChildrenJobInfoStatus `json:"status"`
+	Status *ChildrenJobInfoStatus `json:"status,omitempty"`
 
 	// 迁移模式
-	TaskType ChildrenJobInfoTaskType `json:"task_type"`
+	TaskType *ChildrenJobInfoTaskType `json:"task_type,omitempty"`
 
 	JobAction *JobActionResp `json:"job_action,omitempty"`
 }

@@ -20,6 +20,12 @@ type SubTemplate struct {
 
 	// 邮件主题,只有sub_type=email时生效
 	Topic *string `json:"topic,omitempty"`
+
+	// **参数解释：**  当消息模板类型为webhook时生效，决定该消息的渲染方式。 **取值范围：**  - HTML - JSON
+	SendType *string `json:"sendType,omitempty"`
+
+	// **参数解释：**  消息模板的适用版本。 **取值范围：**   v1：标识为LTS的消息模板。
+	Version *string `json:"version,omitempty"`
 }
 
 func (o SubTemplate) String() string {

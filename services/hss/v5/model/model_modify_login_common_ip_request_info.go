@@ -9,10 +9,10 @@ import (
 // ModifyLoginCommonIpRequestInfo 设置白名单列表
 type ModifyLoginCommonIpRequestInfo struct {
 
-	// 登录IP或登录网段,登录网段由IP地址和掩码组成,以'/'连接。
+	// **参数解释**： 登录IP或登录网段,登录网段由IP地址和掩码组成,以'/'连接。 **取值范围**： 字符长度1-128位
 	IpAddr string `json:"ip_addr"`
 
-	// 服务器ID列表,不可为NULL,删除常用登录IP时,需要将服务器ID列表置为空列表[]。
+	// **参数解释**： 服务器ID列表,不可为NULL,删除常用登录IP时,需要将服务器ID列表置为空列表[]。 **取值范围**： 最小值0，最大值200
 	HostIdList []string `json:"host_id_list"`
 }
 

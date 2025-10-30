@@ -70,29 +70,29 @@ func TestDefaultHttpClient_SyncInvokeHttp(t *testing.T) {
 		}
 
 		_, err = fmt.Fprintf(w, "{\"name\": \"%s\", \"age\": %d}", person.Name, person.Age)
-		assert.Nil(t, err)
+		assert.NoError(t, err)
 	}))
 	defer ts.Close()
 
 	handler := httphandler.NewHttpHandler().AddRequestHandler(func(req http.Request) {
 		defer req.Body.Close()
 		bytes, err := ioutil.ReadAll(req.Body)
-		assert.Nil(t, err)
+		assert.NoError(t, err)
 
 		var person Person
 		err = json.Unmarshal(bytes, &person)
-		assert.Nil(t, err)
+		assert.NoError(t, err)
 		assert.Equal(t, "Miles", person.Name)
 		assert.Equal(t, 18, person.Age)
 	}).AddResponseHandler(func(resp http.Response) {
 		assert.Equal(t, 200, resp.StatusCode)
 		defer resp.Body.Close()
 		bytes, err := ioutil.ReadAll(resp.Body)
-		assert.Nil(t, err)
+		assert.NoError(t, err)
 
 		var person Person
 		err = json.Unmarshal(bytes, &person)
-		assert.Nil(t, err)
+		assert.NoError(t, err)
 		assert.Equal(t, "Miles", person.Name)
 		assert.Equal(t, 18, person.Age)
 	}).AddMonitorHandler(func(metric *httphandler.MonitorMetric) {
@@ -114,10 +114,10 @@ func TestDefaultHttpClient_SyncInvokeHttp(t *testing.T) {
 			Age:  18,
 		}).Build()
 	httpResponse, err := client.SyncInvokeHttp(httpRequest)
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	assert.Equal(t, 200, httpResponse.GetStatusCode())
 	body, err := httpResponse.GetBodyAsString()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	assert.Equal(t, "{\"name\": \"Miles\", \"age\": 18}", body)
 }
 

@@ -41,7 +41,7 @@ func TestEnvProvider_GetRegion(t *testing.T) {
 func TestEnvProvider_GetRegion2(t *testing.T) {
 	p := NewEnvProvider("Service1")
 	err := os.Setenv("HUAWEICLOUD_SDK_REGION_SERVICE1_REGION_ID_1", "https://service1.region-id-1.com")
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	reg := p.GetRegion("region-id-1")
 	assert.NotNil(t, reg)
 	assert.Equal(t, "region-id-1", reg.Id)
@@ -51,7 +51,7 @@ func TestEnvProvider_GetRegion2(t *testing.T) {
 func TestEnvProvider_GetRegion3(t *testing.T) {
 	p := NewEnvProvider("Service2")
 	err := os.Setenv("HUAWEICLOUD_SDK_REGION_SERVICE2_REGION_ID_2", "https://service2.region-id-2.com,https://service2.region-id-2.cn")
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	reg := p.GetRegion("region-id-2")
 	assert.NotNil(t, reg)
 	assert.Equal(t, "region-id-2", reg.Id)

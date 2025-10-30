@@ -42,7 +42,7 @@ func TestSM3Signer_Sign(t *testing.T) {
 		t.Run(c.Name, func(t *testing.T) {
 			req := buildReqWithTestcase(c)
 			result, err := sm3SignerInst.Sign(req, ak, sk)
-			assert.Nil(t, err)
+			assert.NoError(t, err)
 			assert.Equal(t, c.Expected, result["Authorization"])
 		})
 	}

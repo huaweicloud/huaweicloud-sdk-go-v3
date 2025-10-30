@@ -25,6 +25,9 @@ type CheckpointReplicateParam struct {
 
 	// 存储库ID: uuid
 	VaultId string `json:"vault_id"`
+
+	// 跨账户复制所需的目标账户的跨账户复制存储库标识
+	CrossAccountUrn *string `json:"cross_account_urn,omitempty"`
 }
 
 func (o CheckpointReplicateParam) String() string {

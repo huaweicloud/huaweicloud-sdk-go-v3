@@ -9,35 +9,32 @@ import (
 // ListImageFilesRequest Request Object
 type ListImageFilesRequest struct {
 
-	// Region ID
-	Region string `json:"region"`
-
-	// 主机所属的企业项目ID。 开通企业项目功能后才需要配置企业项目。 企业项目ID默认取值为“0”，表示默认企业项目。如果需要查询所有企业项目下的主机，请传参“all_granted_eps”。如果您只有某个企业项目的权限，则需要传递该企业项目ID，查询该企业项目下的主机，否则会因权限不足而报错。
+	// **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - instance_image : 企业镜像   - cicd : cicd镜像   - harbor ：Harbor仓库镜像
-	ImageType string `json:"image_type"`
-
-	// 镜像id
-	ImageId string `json:"image_id"`
-
-	// 组织名称
-	Namespace *string `json:"namespace,omitempty"`
-
-	// 镜像名称
-	ImageName *string `json:"image_name,omitempty"`
-
-	// 镜像版本名称
-	TagName *string `json:"tag_name,omitempty"`
-
-	// 文件名称过滤查询(支持模糊匹配)
-	FileName *string `json:"file_name,omitempty"`
-
-	// 返回的条数，默认10
+	// **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 起始索引，默认是0
+	// **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
 	Offset *int32 `json:"offset,omitempty"`
+
+	// **参数解释**: 镜像类型 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 - instance_image : 企业镜像 - cicd : cicd镜像 - harbor ：Harbor仓库镜像 **默认取值**: 不涉及
+	ImageType string `json:"image_type"`
+
+	// **参数解释**: 镜像id **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+	ImageId string `json:"image_id"`
+
+	// **参数解释**: 组织名称 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+	Namespace *string `json:"namespace,omitempty"`
+
+	// **参数解释**: 镜像名称 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+	ImageName *string `json:"image_name,omitempty"`
+
+	// **参数解释**: 镜像版本名称 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+	TagName *string `json:"tag_name,omitempty"`
+
+	// **参数解释**: 文件名称过滤查询(支持模糊匹配) **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+	FileName *string `json:"file_name,omitempty"`
 }
 
 func (o ListImageFilesRequest) String() string {

@@ -1490,6 +1490,27 @@ func (c *GaussDBforNoSQLClient) ListSlowLogsInvoker(request *model.ListSlowLogsR
 	return &ListSlowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ModifyAutoNodeExpansionPolicy 设置节点自动扩容策略
+//
+// 设置节点自动扩容策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ModifyAutoNodeExpansionPolicy(request *model.ModifyAutoNodeExpansionPolicyRequest) (*model.ModifyAutoNodeExpansionPolicyResponse, error) {
+	requestDef := GenReqDefForModifyAutoNodeExpansionPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyAutoNodeExpansionPolicyResponse), nil
+	}
+}
+
+// ModifyAutoNodeExpansionPolicyInvoker 设置节点自动扩容策略
+func (c *GaussDBforNoSQLClient) ModifyAutoNodeExpansionPolicyInvoker(request *model.ModifyAutoNodeExpansionPolicyRequest) *ModifyAutoNodeExpansionPolicyInvoker {
+	requestDef := GenReqDefForModifyAutoNodeExpansionPolicy()
+	return &ModifyAutoNodeExpansionPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ModifyDbUserPrivilege 修改Redis数据库帐号权限
 //
 // 修改Redis数据库帐号权限。
@@ -2143,6 +2164,27 @@ func (c *GaussDBforNoSQLClient) ShowAutoEnlargePolicy(request *model.ShowAutoEnl
 func (c *GaussDBforNoSQLClient) ShowAutoEnlargePolicyInvoker(request *model.ShowAutoEnlargePolicyRequest) *ShowAutoEnlargePolicyInvoker {
 	requestDef := GenReqDefForShowAutoEnlargePolicy()
 	return &ShowAutoEnlargePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAutoNodeExpansionPolicy 查询节点自动扩容策略
+//
+// 查询节点自动扩容策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ShowAutoNodeExpansionPolicy(request *model.ShowAutoNodeExpansionPolicyRequest) (*model.ShowAutoNodeExpansionPolicyResponse, error) {
+	requestDef := GenReqDefForShowAutoNodeExpansionPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAutoNodeExpansionPolicyResponse), nil
+	}
+}
+
+// ShowAutoNodeExpansionPolicyInvoker 查询节点自动扩容策略
+func (c *GaussDBforNoSQLClient) ShowAutoNodeExpansionPolicyInvoker(request *model.ShowAutoNodeExpansionPolicyRequest) *ShowAutoNodeExpansionPolicyInvoker {
+	requestDef := GenReqDefForShowAutoNodeExpansionPolicy()
+	return &ShowAutoNodeExpansionPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowBackupPolicies 查询自动备份策略

@@ -9,10 +9,10 @@ import (
 // ListWebAppAndServiceStatisticsResponse Response Object
 type ListWebAppAndServiceStatisticsResponse struct {
 
-	// 不同的数据库资产指纹的数量
+	// **参数解释** web应用、web服务、数据库指纹的数量 **取值范围** 最小值0，最大值300000\"
 	TotalNum *int32 `json:"total_num,omitempty"`
 
-	// 数据库资产指纹统计信息列表
+	// **参数解释** web应用、web服务、数据库指纹统计信息列表 **取值范围** 最小值0，最大值10000
 	DataList       *[]WebAppAndServiceStatisticResponseInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                                      `json:"-"`
 }

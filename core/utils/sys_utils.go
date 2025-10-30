@@ -32,8 +32,8 @@ import (
 )
 
 const (
-	cloudDirName = ".huaweicloud"
-	appFileName  = "application_id"
+	defaultCloudDirName = ".huaweicloud"
+	defaultAppFileName  = "application_id"
 )
 
 var (
@@ -41,6 +41,8 @@ var (
 	envInfo       string
 	uuidPattern   = `^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$`
 	localePattern = `^[a-z]{2,3}(?:[-_][A-Z]{2,3})?$`
+	cloudDirName  = defaultCloudDirName
+	appFileName   = defaultAppFileName
 )
 
 type OsInfo struct {

@@ -67,6 +67,54 @@ type RealTimeSessionResult struct {
 
 	// **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
 	SqlNum *string `json:"sql_num,omitempty"`
+
+	// **参数解释**： 客户端用于与后台通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
+	ClientPort *string `json:"client_port,omitempty"`
+
+	// **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
+	QueryId *string `json:"query_id,omitempty"`
+
+	// **参数解释**： 当前用户上一次执行的事务持续时间。 **取值范围**： 不涉及。
+	TransactionTimeCost *string `json:"transaction_time_cost,omitempty"`
+
+	// **参数解释**： 驱动传入的trace id，用于标识应用的一次请求。 **取值范围**： 不涉及。
+	TraceId *string `json:"trace_id,omitempty"`
+
+	// **参数解释**： 当前用户上次执行的全局会话ID。 **取值范围**： 不涉及。
+	GlobalSessionId *string `json:"global_session_id,omitempty"`
+
+	// **参数解释**： 当前用户上次执行的顶层事务ID。 **取值范围**： 不涉及。
+	TopTransactionId *string `json:"top_transaction_id,omitempty"`
+
+	// **参数解释**： 当前用户上次执行的事务ID。 **取值范围**： 不涉及。
+	CurrentTransactionId *string `json:"current_transaction_id,omitempty"`
+
+	// **参数解释**： 当前用户上次执行的事务使用的XLOG量，易读格式。 **取值范围**： 不涉及。
+	XlogQuantityPretty *string `json:"xlog_quantity_pretty,omitempty"`
+
+	// **参数解释**： 实例线程等待状态。 **取值范围**： 不涉及。
+	WaitStatus *string `json:"wait_status,omitempty"`
+
+	// **参数解释**： 实例线程的轻量级线程号。 **取值范围**： 不涉及。
+	LwtId *string `json:"lwt_id,omitempty"`
+
+	// **参数解释**： 实例线程名。 **取值范围**： 不涉及。
+	ThreadName *string `json:"thread_name,omitempty"`
+
+	// **参数解释**： 实例等锁模式。 **取值范围**： 不涉及。
+	LockMode *string `json:"lock_mode,omitempty"`
+
+	// **参数解释**： 实例父会话ID。 **取值范围**： 不涉及。
+	ParentSessionId *string `json:"parent_session_id,omitempty"`
+
+	// **参数解释**： 实例并行线程的ID。 **取值范围**： 不涉及。
+	SmpId *string `json:"smp_id,omitempty"`
+
+	// **参数解释**： 实例线程正等待获取的锁的信息。 **取值范围**： 不涉及。
+	LockTag *string `json:"lock_tag,omitempty"`
+
+	// **参数解释**： 组件名称。 **取值范围**： 不涉及。
+	ComponentName *string `json:"component_name,omitempty"`
 }
 
 func (o RealTimeSessionResult) String() string {

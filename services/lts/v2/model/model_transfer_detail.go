@@ -27,9 +27,6 @@ type TransferDetail struct {
 	// OBS转储路径，指OBS日志桶中的路径
 	ObsTransferPath *string `json:"obs_transfer_path,omitempty"`
 
-	// OBS企业项目ID
-	ObsEpsId *string `json:"obs_eps_id,omitempty"`
-
 	// OBS日志桶名称
 	ObsBucketName string `json:"obs_bucket_name"`
 
@@ -59,18 +56,6 @@ type TransferDetail struct {
 
 	// 若开启tag投递，该字段必须包含主机信息：hostIP、hostId、hostName、pathFile、collectTime；  公共字段有：logStreamName、regionName、logGroupName、projectId，为可选填；  开启转储标签：streamTag，可选填
 	Tags *[]string `json:"tags,omitempty"`
-
-	// dms转储JSON格式选填，可以转储tag字段
-	LtsTags *[]string `json:"lts_tags,omitempty"`
-
-	// dms转储JSON格式选填，可以转储日志流标签字段
-	StreamTags *[]string `json:"stream_tags,omitempty"`
-
-	// dms转储JSON格式选填，可以转储结构化字段
-	StructFields *[]string `json:"struct_fields,omitempty"`
-
-	// dms转储JSON格式选填，无效字段填充
-	InvalidFieldValue *string `json:"invalid_field_value,omitempty"`
 }
 
 func (o TransferDetail) String() string {

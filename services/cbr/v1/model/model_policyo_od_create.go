@@ -40,6 +40,9 @@ type PolicyoOdCreate struct {
 
 	// 每间隔多少次执行一次全量备份，当取值为 -1 时，不执行全量备份。  最小值：-1  最大值：100
 	FullBackupInterval *int32 `json:"full_backup_interval,omitempty"`
+
+	// 跨账户复制策略所关联的跨账户复制存储库标识
+	CrossAccountUrn *string `json:"cross_account_urn,omitempty"`
 }
 
 func (o PolicyoOdCreate) String() string {

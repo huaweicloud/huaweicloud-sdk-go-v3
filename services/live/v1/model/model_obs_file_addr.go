@@ -15,7 +15,7 @@ type ObsFileAddr struct {
 	Location string `json:"location"`
 
 	// OBS对象路径，遵守OSS Object定义 - 当用于指示input时，需要指定到具体对象 - 当用于指示output时，只需指定到转码结果期望存放的路径
-	Object string `json:"object"`
+	Object *string `json:"object,omitempty"`
 }
 
 func (o ObsFileAddr) String() string {

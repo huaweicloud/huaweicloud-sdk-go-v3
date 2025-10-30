@@ -9,46 +9,46 @@ import (
 // GeneralImageVulsResponseInfo 所有镜像漏洞详情
 type GeneralImageVulsResponseInfo struct {
 
-	// 漏洞名称
+	// **参数解释**： 漏洞名称 **取值范围**： 字符长度0-128位
 	VulName *string `json:"vul_name,omitempty"`
 
-	// 漏洞ID
+	// **参数解释**： 漏洞ID **取值范围**： 字符长度0-128位
 	VulId *string `json:"vul_id,omitempty"`
 
-	// 漏洞类型，包含如下：   -linux_vul : linux漏洞   -app_vul : 应用漏洞
+	// **参数解释**： 漏洞类型 **约束限制**: 不涉及 **取值范围**： - linux_vul：linux漏洞 - app_vul：应用漏洞 **默认取值**: 不涉及
 	Type *string `json:"type,omitempty"`
 
-	// 镜像类型，包含如下：   -local : 本地镜像   -registry : 仓库镜像   -cicd : CI/CD镜像   -cluster : 集群镜像
+	// **参数解释**： 镜像类型 **约束限制**: 不涉及 **取值范围**： - local：本地镜像 - registry：仓库镜像 - cicd：CI/CD镜像 - cluster：集群镜像 **默认取值**: 不涉及
 	ImageType *string `json:"image_type,omitempty"`
 
-	// 漏洞标签列表
+	// **参数解释**： 漏洞标签列表 **取值范围**： 最小值0，最大值10
 	LabelList *[]string `json:"label_list,omitempty"`
 
-	// 漏洞的风险程度，取值如下：  -Critical : 严重  -High : 高危  -Medium : 中危  -Low : 低危
+	// **参数解释**： 漏洞的风险程度 **约束限制**: 不涉及 **取值范围**： - Critical：严重 - High：高危 - Medium：中危 - Low：低危 **默认取值**: 不涉及
 	SeverityLevel *string `json:"severity_level,omitempty"`
 
-	// 受影响镜像总数
+	// **参数解释**： 受影响镜像总数 **取值范围**： 字符长度0-2147483547位
 	ImageNum *int32 `json:"image_num,omitempty"`
 
-	// CVE列表
+	// **参数解释**： CVE列表 **取值范围**： 最小值0，最大值10000
 	CveList *[]GeneralImageVulsResponseInfoCveList `json:"cve_list,omitempty"`
 
-	// 镜像最大CVSS分值
+	// **参数解释**： 镜像最大CVSS分值 **取值范围**： 字符长度0-10位
 	MaxCvssScore *float32 `json:"max_cvss_score,omitempty"`
 
-	// 最近扫描时间，时间单位：毫秒（ms）
+	// **参数解释**： 最近扫描时间，时间单位：毫秒（ms） **取值范围**： 字符长度0-4070880000000位
 	ScanTime *int64 `json:"scan_time,omitempty"`
 
-	// 漏洞描述
+	// **参数解释**： 漏洞描述 **取值范围**： 字符长度0-128位
 	Description *string `json:"description,omitempty"`
 
-	// 漏洞修复参考链接
+	// **参数解释**： 漏洞修复参考链接 **取值范围**： 字符长度0-128位
 	Url *string `json:"url,omitempty"`
 
-	// 修复建议
+	// **参数解释**： 修复建议 **取值范围**： 字符长度0-128位
 	SolutionDetail *string `json:"solution_detail,omitempty"`
 
-	// 受影响集群总数
+	// **参数解释**： 受影响集群总数 **取值范围**： 字符长度0-2147483547位
 	ClusterNum *int32 `json:"cluster_num,omitempty"`
 }
 

@@ -10,8 +10,10 @@ import (
 type ListTemplatesResponse struct {
 
 	// 模板列表
-	Templates      *[]Template `json:"templates,omitempty"`
-	HttpStatusCode int         `json:"-"`
+	Templates *[]Template `json:"templates,omitempty"`
+
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListTemplatesResponse) String() string {

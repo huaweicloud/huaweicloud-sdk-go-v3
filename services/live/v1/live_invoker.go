@@ -229,6 +229,38 @@ func (i *CreateUrlAuthchainInvoker) Invoke() (*model.CreateUrlAuthchainResponse,
 	}
 }
 
+type CreateWatermarkRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateWatermarkRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateWatermarkRuleInvoker) Invoke() (*model.CreateWatermarkRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateWatermarkRuleResponse), nil
+	}
+}
+
+type CreateWatermarkTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateWatermarkTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateWatermarkTemplateInvoker) Invoke() (*model.CreateWatermarkTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateWatermarkTemplateResponse), nil
+	}
+}
+
 type DeleteDomainInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -434,6 +466,38 @@ func (i *DeleteTranscodingsTemplateInvoker) Invoke() (*model.DeleteTranscodingsT
 		return nil, err
 	} else {
 		return result.(*model.DeleteTranscodingsTemplateResponse), nil
+	}
+}
+
+type DeleteWatermarkRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteWatermarkRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteWatermarkRuleInvoker) Invoke() (*model.DeleteWatermarkRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteWatermarkRuleResponse), nil
+	}
+}
+
+type DeleteWatermarkTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteWatermarkTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteWatermarkTemplateInvoker) Invoke() (*model.DeleteWatermarkTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteWatermarkTemplateResponse), nil
 	}
 }
 
@@ -658,6 +722,38 @@ func (i *ListStreamForbiddenInvoker) Invoke() (*model.ListStreamForbiddenRespons
 		return nil, err
 	} else {
 		return result.(*model.ListStreamForbiddenResponse), nil
+	}
+}
+
+type ListWatermarkRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWatermarkRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListWatermarkRuleInvoker) Invoke() (*model.ListWatermarkRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWatermarkRuleResponse), nil
+	}
+}
+
+type ListWatermarkTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWatermarkTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListWatermarkTemplateInvoker) Invoke() (*model.ListWatermarkTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWatermarkTemplateResponse), nil
 	}
 }
 
@@ -901,6 +997,38 @@ func (i *ShowTranscodingsTemplateInvoker) Invoke() (*model.ShowTranscodingsTempl
 	}
 }
 
+type ShowWatermarkRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowWatermarkRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowWatermarkRuleInvoker) Invoke() (*model.ShowWatermarkRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowWatermarkRuleResponse), nil
+	}
+}
+
+type ShowWatermarkTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowWatermarkTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowWatermarkTemplateInvoker) Invoke() (*model.ShowWatermarkTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowWatermarkTemplateResponse), nil
+	}
+}
+
 type UpdateDelayConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1122,6 +1250,38 @@ func (i *UpdateTranscodingsTemplateInvoker) Invoke() (*model.UpdateTranscodingsT
 		return nil, err
 	} else {
 		return result.(*model.UpdateTranscodingsTemplateResponse), nil
+	}
+}
+
+type UpdateWatermarkRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateWatermarkRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateWatermarkRuleInvoker) Invoke() (*model.UpdateWatermarkRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateWatermarkRuleResponse), nil
+	}
+}
+
+type UpdateWatermarkTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateWatermarkTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateWatermarkTemplateInvoker) Invoke() (*model.UpdateWatermarkTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateWatermarkTemplateResponse), nil
 	}
 }
 

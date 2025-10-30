@@ -31,6 +31,15 @@ type ModifyDataSyncConfigRequestV3 struct {
 
 	// **参数解释**：  目标数据库名。  **约束限制**：  不涉及。  **取值范围**：  长度限制3~128位，仅支持英文大小写字母、数字以及下划线。  **默认值**：  不涉及。
 	TargetDatabaseName *string `json:"target_database_name,omitempty"`
+
+	// **参数解释**：  是否支持实例级同步。  **约束限制**：  不涉及。  **取值范围**：  - true：是。 - false：否。  **默认取值**：  false。
+	IsInstanceLevelSync *string `json:"is_instance_level_sync,omitempty"`
+
+	// **参数解释**：  库同步范围。  **约束限制**：  不涉及。  **取值范围**：  - all：同步全部库。 - part：同步部分库。  **默认取值**：  part。
+	DatabaseReplScope *string `json:"database_repl_scope,omitempty"`
+
+	// **参数解释**：  是否支持通配符。  **约束限制**：  不涉及。  **取值范围**：  - true：支持通配符。 - false：不支持通配符。  **默认取值**：  false。
+	IsSupportRegExp *string `json:"is_support_reg_exp,omitempty"`
 }
 
 func (o ModifyDataSyncConfigRequestV3) String() string {

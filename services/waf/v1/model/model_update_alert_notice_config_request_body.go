@@ -15,7 +15,7 @@ type UpdateAlertNoticeConfigRequestBody struct {
 	// 是否开启   - false: 不开启   - true: 开启
 	Enabled *bool `json:"enabled,omitempty"`
 
-	// 主题URN，通过消息通知服务获取
+	// 主题URN，通过消息通知服务获取，查询可使用的主题，通过 云日志服务的“查询SMN主题”接口，返回体中的\"topic_urn\"字段
 	TopicUrn string `json:"topic_urn"`
 
 	// 时间间隔，单位为分钟。当通知类型为防护事件时，该参数表示在该时间间隔内，攻击次数等于或者大于设定阈值时，将发送告警通知，支持的值：5、15、30、60、120、360、720、1440；当通知类型为证书到期时，该参数表示每隔多长时间发送一次告警通知，支持的值为1440、10080（单位为分钟）。

@@ -41,8 +41,16 @@ type ShowStructTemplateResponse struct {
 	TemplateName *string `json:"templateName,omitempty"`
 
 	// 为了兼容前台数据格式
-	Regex          *string `json:"regex,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Regex *string `json:"regex,omitempty"`
+
+	CustomTimeInfo *CustomTimeInfo `json:"custom_time_info,omitempty"`
+
+	// **参数解释：** 是否上传原始日志。 **取值范围：** - true - fasle
+	UploadOriginalLog *bool `json:"uploadOriginalLog,omitempty"`
+
+	// **参数解释：** 是否将解析失败的原始上传到指定系统字段日志。 **取值范围：** - true - fasle
+	UploadParseFailedLog *bool `json:"uploadParseFailedLog,omitempty"`
+	HttpStatusCode       int   `json:"-"`
 }
 
 func (o ShowStructTemplateResponse) String() string {

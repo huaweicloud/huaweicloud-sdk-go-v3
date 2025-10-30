@@ -9,10 +9,10 @@ import (
 // ModifyLoginCommonLocationRequestBody 国家列表
 type ModifyLoginCommonLocationRequestBody struct {
 
-	// 国家城市的编码
+	// **参数解释**： 国家城市的编码 **取值范围**： 字符长度1-32位
 	AreaCode *int32 `json:"area_code,omitempty"`
 
-	// 服务器列表
+	// **参数解释**: 服务器列表 **取值范围**: 最小值0，最大值100
 	HostIdList *[]string `json:"host_id_list,omitempty"`
 }
 

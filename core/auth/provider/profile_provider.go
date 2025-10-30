@@ -22,8 +22,6 @@ package provider
 import (
 	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/global"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdkerr"
 	"gopkg.in/ini.v1"
 	"os"
@@ -83,19 +81,19 @@ func (p *ProfileCredentialProvider) GetCredentials() (auth.ICredential, error) {
 	}
 
 	if strings.HasPrefix(p.credentialType, basicCredentialType) {
-		builder := basic.NewCredentialsBuilder().WithProjectId(section.Key(projectIdName).String())
+		builder := auth.NewBasicCredentialsBuilder().WithProjectId(section.Key(projectIdName).String())
 		err := fillCommonAttrs(builder, getCommonAttrsFromProfile(section))
 		if err != nil {
 			return nil, err
 		}
-		return builder.Build(), nil
+		return builder.SafeBuild()
 	} else if strings.HasPrefix(p.credentialType, globalCredentialType) {
-		builder := global.NewCredentialsBuilder().WithDomainId(section.Key(domainIdName).String())
+		builder := auth.NewGlobalCredentialsBuilder().WithDomainId(section.Key(domainIdName).String())
 		err := fillCommonAttrs(builder, getCommonAttrsFromProfile(section))
 		if err != nil {
 			return nil, err
 		}
-		return builder.Build(), nil
+		return builder.SafeBuild()
 	}
 	return nil, sdkerr.NewCredentialsTypeError("unsupported credential type: " + p.credentialType)
 }

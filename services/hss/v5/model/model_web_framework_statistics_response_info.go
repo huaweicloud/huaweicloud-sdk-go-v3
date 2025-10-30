@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// WebFrameworkStatisticsResponseInfo Web框架统计信息列表
+// WebFrameworkStatisticsResponseInfo **参数解释** Web框架统计信息列表
 type WebFrameworkStatisticsResponseInfo struct {
 
-	// Web框架文件名称
+	// **参数解释**: Web框架文件名称 **取值范围**: 字符长度0-256
 	FileName *string `json:"file_name,omitempty"`
 
-	// Web框架统计信息总数
+	// **参数解释** Web框架统计信息总数 **取值范围** 最小值0，最大值300000
 	Num *int32 `json:"num,omitempty"`
 }
 

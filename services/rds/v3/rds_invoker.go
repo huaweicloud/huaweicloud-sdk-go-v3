@@ -1381,6 +1381,22 @@ func (i *ListSlowlogStatisticsInvoker) Invoke() (*model.ListSlowlogStatisticsRes
 	}
 }
 
+type ListSmallVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSmallVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSmallVersionInvoker) Invoke() (*model.ListSmallVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSmallVersionResponse), nil
+	}
+}
+
 type ListSqlLimitInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3669,19 +3685,19 @@ func (i *UpdateReadWeightInvoker) Invoke() (*model.UpdateReadWeightResponse, err
 	}
 }
 
-type ListInstancesNoIndexTablesInvoker struct {
+type GetInstancesNoIndexTablesInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListInstancesNoIndexTablesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *GetInstancesNoIndexTablesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ListInstancesNoIndexTablesInvoker) Invoke() (*model.ListInstancesNoIndexTablesResponse, error) {
+func (i *GetInstancesNoIndexTablesInvoker) Invoke() (*model.GetInstancesNoIndexTablesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListInstancesNoIndexTablesResponse), nil
+		return result.(*model.GetInstancesNoIndexTablesResponse), nil
 	}
 }
 

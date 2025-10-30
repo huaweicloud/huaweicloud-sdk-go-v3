@@ -11,9 +11,6 @@ import (
 
 type SqlRequest struct {
 
-	// 是时间范围相对
-	IsTimeRangeRelative *bool `json:"is_time_range_relative,omitempty"`
-
 	// 日志流id
 	LogStreamId string `json:"log_stream_id"`
 

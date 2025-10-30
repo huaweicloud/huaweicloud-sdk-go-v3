@@ -8,10 +8,10 @@ import (
 
 type GeneralImageVulsResponseInfoCveList struct {
 
-	// CVE ID
+	// **参数解释**： CVE ID **取值范围**： 字符长度1-32位
 	CveId *string `json:"cve_id,omitempty"`
 
-	// CVSS分值
+	// **参数解释**： CVSS分值 **取值范围**： 字符长度1-10
 	Cvss *float32 `json:"cvss,omitempty"`
 }
 

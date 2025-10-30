@@ -40,7 +40,7 @@ func TestProviderChain_GetRegion2(t *testing.T) {
 
 func TestProviderChain_GetRegion3(t *testing.T) {
 	err := setRegionsFileEnv()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 
 	chain := DefaultProviderChain("Service1")
 	reg := chain.GetRegion("region-id-1")

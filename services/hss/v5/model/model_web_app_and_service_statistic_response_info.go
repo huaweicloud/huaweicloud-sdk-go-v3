@@ -8,10 +8,10 @@ import (
 
 type WebAppAndServiceStatisticResponseInfo struct {
 
-	// WebAppAndService资产名称
+	// **参数解释**: web应用、web服务、数据库资产名称 **取值范围**: 字符长度0-256
 	Name *string `json:"name,omitempty"`
 
-	// WebAppAndService资产--具备该资产的主机数量
+	// **参数解释** web应用、web服务、数据库资产--具备该资产的主机数量 **取值范围** 最小值0，最大值300000
 	Num *int32 `json:"num,omitempty"`
 }
 

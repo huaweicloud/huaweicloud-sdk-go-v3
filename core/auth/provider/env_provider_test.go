@@ -51,7 +51,7 @@ func TestEnvCredentialProvider_GetCredentials(t *testing.T) {
 	assert.EqualError(t, err, "{\"ErrorMessage\": \"AK&SK or IdpId&IdTokenFile does not exist\"}")
 	assert.Nil(t, credentials)
 	err = resetEnv()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 }
 
 func TestEnvCredentialProvider_GetCredentials2(t *testing.T) {
@@ -61,59 +61,58 @@ func TestEnvCredentialProvider_GetCredentials2(t *testing.T) {
 	assert.EqualError(t, err, "{\"ErrorMessage\": \"credential type is empty\"}")
 	assert.Nil(t, credentials)
 	err = resetEnv()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 }
 
 func TestEnvCredentialProvider_GetCredentials3(t *testing.T) {
 	// TestBasicCredentials
 	err := os.Setenv("HUAWEICLOUD_SDK_AK", MockAk)
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	err = os.Setenv("HUAWEICLOUD_SDK_SK", MockSk)
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	p := BasicCredentialEnvProvider()
 	credentials, err := p.GetCredentials()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	assert.Equal(t, basic.NewCredentialsBuilder().WithAk(MockAk).WithSk(MockSk).Build(), credentials)
 
 	p = BasicCredentialEnvProvider()
-	assert.Nil(t, err)
 	err = os.Setenv("HUAWEICLOUD_SDK_PROJECT_ID", MockProjectId)
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	credentials, err = p.GetCredentials()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	assert.Equal(t, basic.NewCredentialsBuilder().WithAk(MockAk).WithSk(MockSk).WithProjectId(MockProjectId).Build(), credentials)
 	err = resetEnv()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 }
 
 func TestEnvCredentialProvider_GetCredentials4(t *testing.T) {
 	// TestGlobalCredentials
 	err := setAkSkEnv()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	p := GlobalCredentialEnvProvider()
 	credentials, err := p.GetCredentials()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	assert.Equal(t, global.NewCredentialsBuilder().WithAk(MockAk).WithSk(MockSk).Build(), credentials)
 	err = resetEnv()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 }
 
 func TestEnvCredentialProvider_GetCredentials5(t *testing.T) {
 	err := setAkSkEnv()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	p := BasicCredentialEnvProvider()
 	err = os.Setenv("HUAWEICLOUD_SDK_IDP_ID", MockIdpId)
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	err = os.Setenv("HUAWEICLOUD_SDK_ID_TOKEN_FILE", MockIdTokenFile)
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	err = os.Setenv("HUAWEICLOUD_SDK_PROJECT_ID", MockProjectId)
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	credentials, err := p.GetCredentials()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	expected := basic.NewCredentialsBuilder().WithIdpId(MockIdpId).WithIdTokenFile(MockIdTokenFile).WithProjectId(MockProjectId).Build()
 	assert.Equal(t, expected, credentials)
 	err = resetEnv()
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 }
 
 func resetEnv() error {

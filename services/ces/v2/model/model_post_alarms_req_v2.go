@@ -27,7 +27,7 @@ type PostAlarmsReqV2 struct {
 	Resources [][]Dimension `json:"resources"`
 
 	// **参数解释**： 告警策略。 **约束限制**： 当alarm_template_id字段为空时必填，不为空时不填。最多包含50个策略。
-	Policies *[]Policy `json:"policies,omitempty"`
+	Policies *[]AlarmRulePolicy `json:"policies,omitempty"`
 
 	Type *AlarmType `json:"type"`
 

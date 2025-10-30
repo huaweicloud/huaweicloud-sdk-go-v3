@@ -16,11 +16,8 @@ type CreateLogStreamIndexResponse struct {
 	ErrorMessage *string `json:"errorMessage,omitempty"`
 
 	// 结果
-	Result *string `json:"result,omitempty"`
-
-	// 是否查询完成
-	IsQueryComplete *bool `json:"isQueryComplete,omitempty"`
-	HttpStatusCode  int   `json:"-"`
+	Result         *string `json:"result,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateLogStreamIndexResponse) String() string {

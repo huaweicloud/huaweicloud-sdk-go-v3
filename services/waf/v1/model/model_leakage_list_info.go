@@ -31,6 +31,8 @@ type LeakageListInfo struct {
 
 	// 规则描述
 	Description *string `json:"description,omitempty"`
+
+	Action *LeakageListInfoAction `json:"action,omitempty"`
 }
 
 func (o LeakageListInfo) String() string {

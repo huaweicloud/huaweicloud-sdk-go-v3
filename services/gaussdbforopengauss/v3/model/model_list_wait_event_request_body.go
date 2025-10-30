@@ -9,7 +9,7 @@ import (
 type ListWaitEventRequestBody struct {
 
 	// **参数解释**: 节点ID，仅支持包含有CN或DN（主、备）组件的节点。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
-	NodeId *string `json:"node_id,omitempty"`
+	NodeId string `json:"node_id"`
 
 	// **参数解释**: 是否查询系统用户。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
 	System *bool `json:"system,omitempty"`

@@ -709,6 +709,54 @@ func (i *ListUsersInvoker) Invoke() (*model.ListUsersResponse, error) {
 	}
 }
 
+type ModifyGroupAndStreamInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyGroupAndStreamInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyGroupAndStreamInvoker) Invoke() (*model.ModifyGroupAndStreamResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyGroupAndStreamResponse), nil
+	}
+}
+
+type QueryTuningParamsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *QueryTuningParamsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *QueryTuningParamsInvoker) Invoke() (*model.QueryTuningParamsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.QueryTuningParamsResponse), nil
+	}
+}
+
+type SelectGroupAndStreamInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SelectGroupAndStreamInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SelectGroupAndStreamInvoker) Invoke() (*model.SelectGroupAndStreamResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SelectGroupAndStreamResponse), nil
+	}
+}
+
 type ShowJobListInvoker struct {
 	*invoker.BaseInvoker
 }

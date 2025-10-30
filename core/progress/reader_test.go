@@ -62,13 +62,13 @@ func TestTeeReader_Read(t *testing.T) {
 	reader := NewTeeReader(bytes.NewReader(data), nil, size64, listener, defaultProgressInterval)
 	defer func() {
 		err := reader.Close()
-		assert.Nil(t, err)
+		assert.NoError(t, err)
 	}()
 
 	var out bytes.Buffer
 	written, err := io.Copy(&out, reader)
 
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	assert.Equal(t, size64, written)
 	assert.Equal(t, 1, listener.start)
 	assert.Equal(t, 1, listener.data)
@@ -87,13 +87,13 @@ func TestTeeReader_Read2(t *testing.T) {
 	reader := NewTeeReader(bytes.NewReader(data), nil, size64, listener, 1024)
 	defer func() {
 		err := reader.Close()
-		assert.Nil(t, err)
+		assert.NoError(t, err)
 	}()
 
 	var out bytes.Buffer
 	written, err := io.Copy(&out, reader)
 
-	assert.Nil(t, err)
+	assert.NoError(t, err)
 	assert.Equal(t, size64, written)
 	assert.Equal(t, 1, listener.start)
 	assert.Equal(t, true, listener.data > 1)

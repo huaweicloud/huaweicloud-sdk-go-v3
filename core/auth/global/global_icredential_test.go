@@ -21,55 +21,15 @@ package global
 
 import (
 	"errors"
-	"fmt"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdkerr"
 	"github.com/stretchr/testify/assert"
-	"net/http"
-	"net/http/httptest"
-	"strings"
 	"testing"
-	"time"
 )
-
-func TestCredentials_NeedUpdate(t *testing.T) {
-	credentials, err := NewCredentialsBuilder().SafeBuild()
-	assert.Nil(t, err)
-	// Manually specifying a security token
-	credentials, err = NewCredentialsBuilder().WithAk("ak").WithSk("sk").WithSecurityToken("token").SafeBuild()
-	assert.Nil(t, err)
-	assert.False(t, credentials.needUpdateSecurityTokenFromMetadata())
-	// Automatically update the expired security token
-	credentials.expiredAt = 1
-	assert.True(t, credentials.needUpdateSecurityTokenFromMetadata())
-	// The security token has not expired
-	credentials.expiredAt = time.Now().Unix() + 10000
-	assert.False(t, credentials.needUpdateSecurityTokenFromMetadata())
-}
-
-func TestCredentials_NeedUpdateAuthToken(t *testing.T) {
-	credentials, err := NewCredentialsBuilder().SafeBuild()
-	assert.Nil(t, err)
-	// Without idp_id or id_token
-	assert.False(t, credentials.needUpdateFederalAuthToken())
-	credentials.IdpId = "idp_id"
-	credentials.IdTokenFile = "file"
-	// Get the auth token for the first time
-	assert.True(t, credentials.needUpdateFederalAuthToken())
-	// Automatically update the expired auth token
-	credentials.authToken = "auth_token"
-	assert.True(t, credentials.needUpdateFederalAuthToken())
-	// The auth token has not expired
-	credentials.expiredAt = time.Now().Unix() + 10000
-	assert.False(t, credentials.needUpdateFederalAuthToken())
-}
 
 func TestCredentialsBuilder_SafeBuild(t *testing.T) {
 	cases := []struct {
 		Name, IdpId, IdTokenFile, DomainId, ExpectedErr string
 	}{
-		{"DomainId missed", "id", "file", "", "DomainId is required when using IdpId&IdTokenFile"},
 		{"IdTokenFile missed", "id", "", "domainId", "IdTokenFile is required when using IdpId&IdTokenFile"},
 		{"IdpId missed", "", "file", "domainId", "IdpId is required when using IdpId&IdTokenFile"},
 		{"valid params", "id", "file", "domainId", ""},
@@ -82,8 +42,10 @@ func TestCredentialsBuilder_SafeBuild(t *testing.T) {
 				WithIdTokenFile(c.IdTokenFile).
 				WithDomainId(c.DomainId).
 				SafeBuild()
-			var cte *sdkerr.CredentialsTypeError
-			if errors.As(err, &cte) {
+			if c.ExpectedErr != "" {
+				assert.Error(t, err)
+				var cte *sdkerr.CredentialsTypeError
+				assert.True(t, errors.As(err, &cte))
 				assert.Equal(t, c.ExpectedErr, cte.ErrorMessage)
 			} else {
 				assert.Equal(t, c.IdpId, cred.IdpId)
@@ -138,56 +100,35 @@ func TestCredentialsBuilder_SafeBuild2(t *testing.T) {
 	for _, c := range cases2 {
 		t.Run(c.Name, func(t *testing.T) {
 			credentials, err := c.Func()
-			assert.Nil(t, err)
+			assert.NoError(t, err)
 			assert.NotEmpty(t, credentials.AK)
 			assert.NotEmpty(t, credentials.SK)
 		})
 	}
 }
 
-func TestCredentials_ProcessAuthParams(t *testing.T) {
-	cases := []struct {
-		Name, RegionId, Data, AK, SK, ExpectedDomainId string
-		StatusCode                                     int
-		ExpectedError                                  string
-	}{
-		{"Bad Request", "region-id-1", "{\"error_code\":\"XXX.001\",\"error_msg\":\"Bad Request\"}", "ak", "sk", "", 400,
-			"failed to get domain id automatically, {\"status_code\":400,\"request_id\":\"\",\"error_code\":\"XXX.001\",\"error_message\":\"Bad Request, X-IAM-Trace-Id=trace-id\",\"encoded_authorization_message\":\"\"}"},
-		{"One Domain", "region-id-1", "{\"domains\":[{\"id\":\"domain_id\"}]}", "ak", "sk", "domain_id", 200, ""},
-		{"No Domain", "region-id-2", "{\"domains\":[]}", "ak2", "sk2", "", 200,
-			"failed to get domain id automatically," +
-				" X-IAM-Trace-Id=trace-id, please confirm that you have 'iam:users:getUser' permission," +
-				" or set domain id manually:" +
-				" global.NewCredentialsBuilder().WithAk(ak).WithSk(sk).WithDomainId(domainId).SafeBuild()"},
-	}
+func TestCredentialsBuilder_SafeBuild3(t *testing.T) {
+	credentials, err := NewCredentialsBuilder().
+		WithAk("ak").
+		WithSk("sk").
+		WithSecurityToken("token").
+		WithIdTokenFile("file").
+		WithIdpId("idp-id").
+		WithIamEndpointOverride("iam-endpoint").
+		WithDomainId("domain-id").
+		SafeBuild()
+	assert.NoError(t, err)
+	assert.IsType(t, &Credentials{}, credentials)
+	assert.Equal(t, "ak", credentials.AK)
+	assert.Equal(t, "sk", credentials.SK)
+	assert.Equal(t, "token", credentials.SecurityToken)
+	assert.Equal(t, "idp-id", credentials.IdpId)
+	assert.Equal(t, "domain-id", credentials.DomainId)
+	assert.Equal(t, "iam-endpoint", credentials.IamEndpoint)
+	assert.Equal(t, "file", credentials.IdTokenFile)
 
-	for _, c := range cases {
-		t.Run(c.Name, func(t *testing.T) {
-			ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-				w.Header().Set("Content-Type", "application/json")
-				w.Header().Set("X-IAM-Trace-Id", "trace-id")
-				w.WriteHeader(c.StatusCode)
-				_, err := fmt.Fprintln(w, c.Data)
-				assert.Nil(t, err)
-			}))
-			defer ts.Close()
-
-			credentials, err := NewCredentialsBuilder().
-				WithAk(c.AK).
-				WithSk(c.SK).
-				WithIamEndpointOverride(ts.URL).
-				SafeBuild()
-			assert.Nil(t, err)
-
-			defer func() {
-				if c.ExpectedError != "" {
-					assert.Equal(t, c.ExpectedError, strings.TrimSpace(fmt.Sprintf("%v", recover())))
-				} else {
-					assert.Equal(t, c.ExpectedDomainId, credentials.DomainId)
-				}
-			}()
-			client := impl.NewDefaultHttpClient(config.DefaultHttpConfig())
-			credentials.ProcessAuthParams(client, c.RegionId)
-		})
-	}
+	credentials.AK = "new_ak"
+	credentials.DomainId = "new-domain-id"
+	assert.Equal(t, "new_ak", credentials.AK)
+	assert.Equal(t, "new-domain-id", credentials.DomainId)
 }

@@ -15,6 +15,12 @@ type SecurityCheckInfoResponseInfo struct {
 	// **参数解释**: 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **取值范围**: 不涉及
 	CheckName *string `json:"check_name,omitempty"`
 
+	// **参数解释** 基线的名称，例如SSH 应用基线检查、CentOS 7 系统基线检查、Windows 系统基线检查 **取值范围**  字符长度0-256位
+	BaselineName *string `json:"baseline_name,omitempty"`
+
+	// **参数解释** 配置检查（基线）的唯一值，例如SSH、CentOS 7、Windows **取值范围**  字符长度0-256位
+	Key *string `json:"key,omitempty"`
+
 	// **参数解释**: 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **取值范围**: 不涉及
 	CheckType *string `json:"check_type,omitempty"`
 

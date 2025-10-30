@@ -2339,6 +2339,35 @@ func GenReqDefForListSlowlogStatistics() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListSmallVersion() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/datastores/{database_name}/small-version").
+		WithResponse(new(model.ListSmallVersionResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DatabaseName").
+		WithJsonTag("database_name").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Version").
+		WithJsonTag("version").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListSqlLimit() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -5822,11 +5851,11 @@ func GenReqDefForUpdateReadWeight() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListInstancesNoIndexTables() *def.HttpRequestDef {
+func GenReqDefForGetInstancesNoIndexTables() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/instances/{instance_id}/no-index-tables").
-		WithResponse(new(model.ListInstancesNoIndexTablesResponse)).
+		WithResponse(new(model.GetInstancesNoIndexTablesResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

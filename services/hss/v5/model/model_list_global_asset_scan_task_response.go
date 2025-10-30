@@ -9,7 +9,7 @@ import (
 // ListGlobalAssetScanTaskResponse Response Object
 type ListGlobalAssetScanTaskResponse struct {
 
-	// 是否存在全量扫描任务: - true ：是 - false : 否
+	// **参数解释** 是否存在全量扫描任务 **取值范围** - true：是 - false：否
 	Exist          *bool `json:"exist,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }

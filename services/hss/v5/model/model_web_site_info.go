@@ -42,14 +42,14 @@ type WebSiteInfo struct {
 	// **参数解释**: web站点进程路径 **取值范围**: 字符长度1-1024
 	ProcPath *string `json:"proc_path,omitempty"`
 
-	// **参数解释**: web站点是否为https **取值范围**: -true：是。 -false：否。
+	// **参数解释**: web站点是否为https **取值范围**: - true：是。 - false：否。
 	IsHttps *bool `json:"is_https,omitempty"`
 
 	// **参数解释**: web站点SSL证书颁发者 **取值范围**: 字符长度0-256
 	CertIssuer *string `json:"cert_issuer,omitempty"`
 
 	// **参数解释**: web站点SSL证书使用者 **取值范围**: 字符长度0-256
-	CertUser *int32 `json:"cert_user,omitempty"`
+	CertUser *string `json:"cert_user,omitempty"`
 
 	// **参数解释**: web站点SSL证书颁发时间 **取值范围**: 字符长度0-32
 	CertIssueTime *string `json:"cert_issue_time,omitempty"`

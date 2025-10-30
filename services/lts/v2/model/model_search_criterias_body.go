@@ -16,6 +16,9 @@ type SearchCriteriasBody struct {
 
 	// 日志流名称
 	LogStreamName *string `json:"log_stream_name,omitempty"`
+
+	// **参数解释：** 快速查询类型。 **取值范围：** - ORIGINALLOG：原始日志 - VISUALIZATION：可视化日志
+	SearchType *string `json:"search_type,omitempty"`
 }
 
 func (o SearchCriteriasBody) String() string {

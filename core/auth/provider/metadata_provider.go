@@ -21,8 +21,6 @@ package provider
 
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/global"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/internal"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdkerr"
 	"strings"
@@ -72,7 +70,7 @@ type MetadataGlobalCredentialProvider struct {
 }
 
 func (p *MetadataBasicCredentialProvider) GetCredentials() (auth.ICredential, error) {
-	builder := basic.NewCredentialsBuilder()
+	builder := auth.NewBasicCredentialsBuilder()
 	if p.ProjectId != "" {
 		builder.WithProjectId(p.ProjectId)
 	}
@@ -89,7 +87,7 @@ func (p *MetadataBasicCredentialProvider) GetCredentials() (auth.ICredential, er
 }
 
 func (p *MetadataGlobalCredentialProvider) GetCredentials() (auth.ICredential, error) {
-	builder := global.NewCredentialsBuilder()
+	builder := auth.NewGlobalCredentialsBuilder()
 	if p.DomainId != "" {
 		builder.WithDomainId(p.DomainId)
 	}

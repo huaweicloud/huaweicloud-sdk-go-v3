@@ -44,27 +44,33 @@ type UpdateKeywordsAlarmRuleResponse struct {
 	// 更新时间(毫秒时间戳)
 	UpdateTime *int64 `json:"update_time,omitempty"`
 
-	// 邮件附加信息语言
-	Language *UpdateKeywordsAlarmRuleResponseLanguage `json:"language,omitempty"`
-
 	// 项目id
 	ProjectId *string `json:"projectId,omitempty"`
 
-	// 通知主题
-	Topics *[]Topics `json:"topics,omitempty"`
-
 	// 情况表述
 	ConditionExpression *string `json:"condition_expression,omitempty"`
-
-	// 索引id
-	IndexId *string `json:"indexId,omitempty"`
 
 	// 通知频率,单位(分钟)
 	NotificationFrequency *UpdateKeywordsAlarmRuleResponseNotificationFrequency `json:"notification_frequency,omitempty"`
 
 	// 告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
 	AlarmActionRuleName *string `json:"alarm_action_rule_name,omitempty"`
-	HttpStatusCode      int     `json:"-"`
+
+	// **参数解释：** 告警恢复策略周期次数。 配置的最近统计周期次数内，如果不满足触发条件且开启恢复时通知开关，则会发送恢复告警通知。 **取值范围：** - 最小值为1 - 最大值为10
+	RecoveryPolicy *int32 `json:"recovery_policy,omitempty"`
+
+	// **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
+	Tags *[]TagsResBody `json:"tags,omitempty"`
+
+	// **参数解释：** 告警触发条件：满足条件次数。满足条件次数是指设置的关键词。 在统计周期次数内且满足条件次数时，可触发关键词告警。 **取值范围：** 不涉及。
+	TriggerConditionCount *int32 `json:"trigger_condition_count,omitempty"`
+
+	// **参数解释：** 告警触发条件：统计周期次数。统计周期次数指高级设置的统计周期。 当在统计周期次数内且满足条件次数时，可触发关键词告警。 **取值范围：** - 最小值为1 - 最大值为10
+	TriggerConditionFrequency *int32 `json:"trigger_condition_frequency,omitempty"`
+
+	// **参数解释：** 是否配置告警恢复策略。满足该策略时，会发送告警恢复通知。 **取值范围：** true：配置告警恢复策略。 false：不配置告警恢复策略。
+	WhetherRecoveryPolicy *bool `json:"whether_recovery_policy,omitempty"`
+	HttpStatusCode        int   `json:"-"`
 }
 
 func (o UpdateKeywordsAlarmRuleResponse) String() string {
@@ -113,53 +119,6 @@ func (c UpdateKeywordsAlarmRuleResponseKeywordsAlarmLevel) MarshalJSON() ([]byte
 }
 
 func (c *UpdateKeywordsAlarmRuleResponseKeywordsAlarmLevel) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type UpdateKeywordsAlarmRuleResponseLanguage struct {
-	value string
-}
-
-type UpdateKeywordsAlarmRuleResponseLanguageEnum struct {
-	ZH_CN UpdateKeywordsAlarmRuleResponseLanguage
-	EN_US UpdateKeywordsAlarmRuleResponseLanguage
-}
-
-func GetUpdateKeywordsAlarmRuleResponseLanguageEnum() UpdateKeywordsAlarmRuleResponseLanguageEnum {
-	return UpdateKeywordsAlarmRuleResponseLanguageEnum{
-		ZH_CN: UpdateKeywordsAlarmRuleResponseLanguage{
-			value: "zh-cn",
-		},
-		EN_US: UpdateKeywordsAlarmRuleResponseLanguage{
-			value: "en-us",
-		},
-	}
-}
-
-func (c UpdateKeywordsAlarmRuleResponseLanguage) Value() string {
-	return c.value
-}
-
-func (c UpdateKeywordsAlarmRuleResponseLanguage) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *UpdateKeywordsAlarmRuleResponseLanguage) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

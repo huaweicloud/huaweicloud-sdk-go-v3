@@ -91,29 +91,12 @@ func (builder *HttpRequestBuilder) AddFormParam(key string, value def.FormData) 
 }
 
 func (builder *HttpRequestBuilder) WithBody(kind string, body interface{}) *HttpRequestBuilder {
-	if kind == "multipart" {
-		v := reflect.ValueOf(body)
-		if v.Kind() == reflect.Ptr {
-			v = v.Elem()
-		}
+	if body == nil {
+		return builder
+	}
 
-		t := reflect.TypeOf(body)
-		if t.Kind() == reflect.Ptr {
-			t = t.Elem()
-		}
-
-		fieldNum := t.NumField()
-		for i := 0; i < fieldNum; i++ {
-			jsonTag := t.Field(i).Tag.Get("json")
-			if jsonTag != "" {
-				if v.FieldByName(t.Field(i).Name).IsNil() && strings.Contains(jsonTag, "omitempty") {
-					continue
-				}
-				builder.AddFormParam(strings.Split(jsonTag, ",")[0], v.FieldByName(t.Field(i).Name).Interface().(def.FormData))
-			} else {
-				builder.AddFormParam(t.Field(i).Name, v.FieldByName(t.Field(i).Name).Interface().(def.FormData))
-			}
-		}
+	if kind == typeMultipart {
+		builder.processMultipartBody(body)
 	} else {
 		builder.httpRequest.body = body
 	}
@@ -133,4 +116,37 @@ func (builder *HttpRequestBuilder) WithProgressInterval(progressInterval int64) 
 
 func (builder *HttpRequestBuilder) Build() *DefaultHttpRequest {
 	return builder.httpRequest.fillParamsInPath()
+}
+
+func (builder *HttpRequestBuilder) processMultipartBody(body interface{}) {
+	v := reflect.ValueOf(body)
+	if v.Kind() == reflect.Ptr {
+		v = v.Elem()
+	}
+
+	t := reflect.TypeOf(body)
+	if t.Kind() == reflect.Ptr {
+		t = t.Elem()
+	}
+
+	fieldNum := t.NumField()
+	for i := 0; i < fieldNum; i++ {
+		field := t.Field(i)
+		value := v.FieldByName(field.Name)
+		data, ok := value.Interface().(def.FormData)
+		if !ok {
+			continue
+		}
+		var name string
+		jsonTag := field.Tag.Get(keyJson)
+		if jsonTag != "" {
+			if value.IsNil() && strings.Contains(jsonTag, tagOmitempty) {
+				continue
+			}
+			name = strings.Split(jsonTag, ",")[0]
+		} else {
+			name = field.Name
+		}
+		builder.AddFormParam(name, data)
+	}
 }

@@ -27,9 +27,14 @@ type CreateAntileakageRuleResponse struct {
 	// 创建规则时间戳
 	Timestamp *int64 `json:"timestamp,omitempty"`
 
+	// 描述
+	Description *string `json:"description,omitempty"`
+
 	// 规则状态，0：关闭，1：开启
-	Status         *int32 `json:"status,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	Status *int32 `json:"status,omitempty"`
+
+	Action         *LeakageListInfoAction `json:"action,omitempty"`
+	HttpStatusCode int                    `json:"-"`
 }
 
 func (o CreateAntileakageRuleResponse) String() string {

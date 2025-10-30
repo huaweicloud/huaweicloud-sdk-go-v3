@@ -485,6 +485,22 @@ func (i *ExportTopSqlTrendDetailsInvoker) Invoke() (*model.ExportTopSqlTrendDeta
 	}
 }
 
+type ListAutoIncrementUsageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAutoIncrementUsageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAutoIncrementUsageInvoker) Invoke() (*model.ListAutoIncrementUsageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAutoIncrementUsageResponse), nil
+	}
+}
+
 type ListCloudDbaInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -834,6 +850,22 @@ func (i *SetThresholdForMetricInvoker) Invoke() (*model.SetThresholdForMetricRes
 		return nil, err
 	} else {
 		return result.(*model.SetThresholdForMetricResponse), nil
+	}
+}
+
+type ShowDasRecommendSqlLimitRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDasRecommendSqlLimitRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDasRecommendSqlLimitRuleInvoker) Invoke() (*model.ShowDasRecommendSqlLimitRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDasRecommendSqlLimitRuleResponse), nil
 	}
 }
 

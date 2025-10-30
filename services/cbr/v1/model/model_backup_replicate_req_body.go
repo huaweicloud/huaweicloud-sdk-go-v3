@@ -26,6 +26,9 @@ type BackupReplicateReqBody struct {
 
 	// 复制名称
 	Name *string `json:"name,omitempty"`
+
+	// 跨账户复制所需的目标账户的跨账户复制存储库标识
+	CrossAccountUrn *string `json:"cross_account_urn,omitempty"`
 }
 
 func (o BackupReplicateReqBody) String() string {

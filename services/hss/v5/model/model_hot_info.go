@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// HotInfo 热点咨询
 type HotInfo struct {
 
 	// **参数解释**: 标题 **取值范围**: 字符长度0-256位

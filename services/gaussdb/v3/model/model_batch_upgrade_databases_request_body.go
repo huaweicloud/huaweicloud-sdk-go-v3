@@ -13,9 +13,6 @@ type BatchUpgradeDatabasesRequestBody struct {
 
 	// 是否延迟升级。
 	Delay string `json:"delay"`
-
-	// 是否跳过校验。
-	IsSkipValidate *bool `json:"is_skip_validate,omitempty"`
 }
 
 func (o BatchUpgradeDatabasesRequestBody) String() string {

@@ -6,22 +6,22 @@ import (
 	"strings"
 )
 
-// CheckRuleFixParamInfo 配置检测检查项参数信息
+// CheckRuleFixParamInfo **参数解释** 配置检测检查项参数信息
 type CheckRuleFixParamInfo struct {
 
-	// **参数解释**: 检查项参数ID **取值范围**: 不涉及
+	// **参数解释** 检查项参数ID **取值范围** 取值0-10
 	RuleParamId *int32 `json:"rule_param_id,omitempty"`
 
-	// **参数解释**: 检查项参数描述 **取值范围**: 不涉及
+	// **参数解释** 检查项参数描述 **取值范围** 字符长度0-256位
 	RuleDesc *string `json:"rule_desc,omitempty"`
 
-	// **参数解释**: 检查项参数默认值 **取值范围**: 不涉及
+	// **参数解释** 检查项参数默认值 **取值范围** 取值0-2147483647
 	DefaultValue *int32 `json:"default_value,omitempty"`
 
-	// **参数解释**: 检查项参数可取最小值 **取值范围**: 不涉及
+	// **参数解释** 检查项参数可取最小值 **取值范围** 取值0-2147483647
 	RangeMin *int32 `json:"range_min,omitempty"`
 
-	// **参数解释**: 检查项参数可取最大值 **取值范围**: 不涉及
+	// **参数解释** 检查项参数可取最大值 **取值范围** 取值0-2147483647
 	RangeMax *int32 `json:"range_max,omitempty"`
 }
 

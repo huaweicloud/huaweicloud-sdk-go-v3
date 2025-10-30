@@ -117,22 +117,6 @@ func (i *CreateApplicationInvoker) Invoke() (*model.CreateApplicationResponse, e
 	}
 }
 
-type CreateCamInstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateCamInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateCamInstanceInvoker) Invoke() (*model.CreateCamInstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateCamInstanceResponse), nil
-	}
-}
-
 type CreateComponentInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -178,22 +162,6 @@ func (i *CreateInstanceInvoker) Invoke() (*model.CreateInstanceResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.CreateInstanceResponse), nil
-	}
-}
-
-type CreateTemplateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateTemplateInvoker) Invoke() (*model.CreateTemplateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateTemplateResponse), nil
 	}
 }
 
@@ -274,54 +242,6 @@ func (i *DeleteInstanceInvoker) Invoke() (*model.DeleteInstanceResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.DeleteInstanceResponse), nil
-	}
-}
-
-type DeleteInstanceByIdInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteInstanceByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteInstanceByIdInvoker) Invoke() (*model.DeleteInstanceByIdResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteInstanceByIdResponse), nil
-	}
-}
-
-type DeleteTemplateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteTemplateInvoker) Invoke() (*model.DeleteTemplateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteTemplateResponse), nil
-	}
-}
-
-type DeployInstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeployInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeployInstanceInvoker) Invoke() (*model.DeployInstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeployInstanceResponse), nil
 	}
 }
 
@@ -530,22 +450,6 @@ func (i *UpdateInstanceActionInvoker) Invoke() (*model.UpdateInstanceActionRespo
 		return nil, err
 	} else {
 		return result.(*model.UpdateInstanceActionResponse), nil
-	}
-}
-
-type UpdateTemplateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateTemplateInvoker) Invoke() (*model.UpdateTemplateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateTemplateResponse), nil
 	}
 }
 

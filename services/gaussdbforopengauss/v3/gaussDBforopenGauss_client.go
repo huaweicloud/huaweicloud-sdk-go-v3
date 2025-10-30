@@ -4458,9 +4458,9 @@ func (c *GaussDBforopenGaussClient) ListEnhanceFullSqlsInvoker(request *model.Li
 	return &ListEnhanceFullSqlsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListFullSqlSwitches 查询GaussDB数据库实例全量SQL开关记录列表
+// ListFullSqlSwitches 查询全量SQL开关记录
 //
-// 查询GaussDB数据库实例全量SQL开关记录列表。
+// 查询全量SQL开关记录列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) ListFullSqlSwitches(request *model.ListFullSqlSwitchesRequest) (*model.ListFullSqlSwitchesResponse, error) {
@@ -4473,7 +4473,7 @@ func (c *GaussDBforopenGaussClient) ListFullSqlSwitches(request *model.ListFullS
 	}
 }
 
-// ListFullSqlSwitchesInvoker 查询GaussDB数据库实例全量SQL开关记录列表
+// ListFullSqlSwitchesInvoker 查询全量SQL开关记录
 func (c *GaussDBforopenGaussClient) ListFullSqlSwitchesInvoker(request *model.ListFullSqlSwitchesRequest) *ListFullSqlSwitchesInvoker {
 	requestDef := GenReqDefForListFullSqlSwitches()
 	return &ListFullSqlSwitchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -4626,9 +4626,9 @@ func (c *GaussDBforopenGaussClient) ListSqlPlanActionInvoker(request *model.List
 	return &ListSqlPlanActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListSqlTrace 查询GaussDB数据库实例SQL链路
+// ListSqlTrace 查询SQL链路信息
 //
-// 查询GaussDB数据库实例SQL链路，包含实例上对应组件的链路列表，如dn_6001、dn_6002、cn_5001、cn_5002。
+// 要用于查询SQL某次执行（对应归一化SQL ID和唯一SQL ID传值）过程中的全部链路信息，包含各个阶段的多维度耗时统计。对于分布式版实例，可查询对应SQL的完整执行链路，包含CN和DN上SQL语句的耗时分析。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforopenGaussClient) ListSqlTrace(request *model.ListSqlTraceRequest) (*model.ListSqlTraceResponse, error) {
@@ -4641,7 +4641,7 @@ func (c *GaussDBforopenGaussClient) ListSqlTrace(request *model.ListSqlTraceRequ
 	}
 }
 
-// ListSqlTraceInvoker 查询GaussDB数据库实例SQL链路
+// ListSqlTraceInvoker 查询SQL链路信息
 func (c *GaussDBforopenGaussClient) ListSqlTraceInvoker(request *model.ListSqlTraceRequest) *ListSqlTraceInvoker {
 	requestDef := GenReqDefForListSqlTrace()
 	return &ListSqlTraceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -4731,7 +4731,7 @@ func (c *GaussDBforopenGaussClient) ShowSqlLimitTaskInvoker(request *model.ShowS
 	return &ShowSqlLimitTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// StartFullSql 开启GaussDB数据库实例全量SQL功能
+// StartFullSql 开启全量SQL或修改默认配置
 //
 // 开启全量SQL功能。使实例Agent侧开启内核侧全量SQL能力，持续化采集GaussDB数据库实例上的执行SQL语句，定时批量持久化存储于LTS云服务对应日志流中。
 //
@@ -4746,7 +4746,7 @@ func (c *GaussDBforopenGaussClient) StartFullSql(request *model.StartFullSqlRequ
 	}
 }
 
-// StartFullSqlInvoker 开启GaussDB数据库实例全量SQL功能
+// StartFullSqlInvoker 开启全量SQL或修改默认配置
 func (c *GaussDBforopenGaussClient) StartFullSqlInvoker(request *model.StartFullSqlRequest) *StartFullSqlInvoker {
 	requestDef := GenReqDefForStartFullSql()
 	return &StartFullSqlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

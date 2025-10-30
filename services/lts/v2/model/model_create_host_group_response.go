@@ -31,8 +31,14 @@ type CreateHostGroupResponse struct {
 	CreateTime *int64 `json:"create_time,omitempty"`
 
 	// 更新时间
-	UpdateTime     *int64 `json:"update_time,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	UpdateTime *int64 `json:"update_time,omitempty"`
+
+	// **参数解释：** 主机组类型。分别为IP、LABEL类型。 **取值范围：** - IP。 - LABEL。
+	AgentAccessType *string `json:"agent_access_type,omitempty"`
+
+	// **参数解释：** 主机组自定义标识。
+	Labels         *[]string `json:"labels,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o CreateHostGroupResponse) String() string {

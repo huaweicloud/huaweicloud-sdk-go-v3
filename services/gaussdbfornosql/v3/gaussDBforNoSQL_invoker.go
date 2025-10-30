@@ -1125,6 +1125,22 @@ func (i *ListSlowLogsInvoker) Invoke() (*model.ListSlowLogsResponse, error) {
 	}
 }
 
+type ModifyAutoNodeExpansionPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyAutoNodeExpansionPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyAutoNodeExpansionPolicyInvoker) Invoke() (*model.ModifyAutoNodeExpansionPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyAutoNodeExpansionPolicyResponse), nil
+	}
+}
+
 type ModifyDbUserPrivilegeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1618,6 +1634,22 @@ func (i *ShowAutoEnlargePolicyInvoker) Invoke() (*model.ShowAutoEnlargePolicyRes
 		return nil, err
 	} else {
 		return result.(*model.ShowAutoEnlargePolicyResponse), nil
+	}
+}
+
+type ShowAutoNodeExpansionPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAutoNodeExpansionPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAutoNodeExpansionPolicyInvoker) Invoke() (*model.ShowAutoNodeExpansionPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAutoNodeExpansionPolicyResponse), nil
 	}
 }
 

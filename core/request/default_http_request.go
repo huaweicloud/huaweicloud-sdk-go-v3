@@ -41,6 +41,21 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
 )
 
+const (
+	headerContentType   = "Content-Type"
+	headerContentLength = "Content-Length"
+
+	contentTypeXml        = "application/xml"
+	contentTypeBson       = "application/bson"
+	contentTypeUrlencoded = "application/x-www-form-urlencoded"
+
+	typeFile      = "File"
+	typeMultipart = "multipart"
+
+	keyJson      = "json"
+	tagOmitempty = "omitempty"
+)
+
 type DefaultHttpRequest struct {
 	endpoint string
 	path     string
@@ -97,11 +112,11 @@ func (httpRequest *DefaultHttpRequest) GetHeaderParams() map[string]string {
 	return httpRequest.headerParams
 }
 
-func (httpRequest *DefaultHttpRequest) GetPathPrams() map[string]string {
+func (httpRequest *DefaultHttpRequest) GetPathParams() map[string]string {
 	return httpRequest.pathParams
 }
 
-func (httpRequest *DefaultHttpRequest) GetFormPrams() map[string]def.FormData {
+func (httpRequest *DefaultHttpRequest) GetFormParams() map[string]def.FormData {
 	return httpRequest.formParams
 }
 
@@ -122,10 +137,10 @@ func (httpRequest *DefaultHttpRequest) GetBodyToBytes() (*bytes.Buffer, error) {
 			buf.WriteString(v.Interface().(string))
 		} else {
 			var err error
-			if httpRequest.headerParams["Content-Type"] == "application/xml" {
+			if httpRequest.headerParams[headerContentType] == contentTypeXml {
 				encoder := xml.NewEncoder(buf)
 				err = encoder.Encode(httpRequest.body)
-			} else if httpRequest.headerParams["Content-Type"] == "application/bson" {
+			} else if httpRequest.headerParams[headerContentType] == contentTypeBson {
 				// Check if body is already BSON encoded
 				if encodedBuf, ok := httpRequest.body.([]uint8); ok {
 					return bytes.NewBuffer(encodedBuf), nil
@@ -183,13 +198,13 @@ func (httpRequest *DefaultHttpRequest) ConvertRequest() (*http.Request, error) {
 
 	var req *http.Request
 	var err error
-	if httpRequest.body != nil && t != nil && t.Name() == "File" {
+	if httpRequest.body != nil && t != nil && t.Name() == typeFile {
 		req, err = httpRequest.convertStreamBody(err, req)
 		if err != nil {
 			return nil, err
 		}
-	} else if len(httpRequest.GetFormPrams()) != 0 {
-		if httpRequest.headerParams["Content-Type"] == "application/x-www-form-urlencoded" {
+	} else if len(httpRequest.GetFormParams()) != 0 {
+		if httpRequest.headerParams[headerContentType] == contentTypeUrlencoded {
 			req, err = httpRequest.covertFormUrlencodedBody()
 		} else {
 			req, err = httpRequest.covertFormDataBody()
@@ -220,7 +235,7 @@ func (httpRequest *DefaultHttpRequest) ConvertRequest() (*http.Request, error) {
 
 func (httpRequest *DefaultHttpRequest) covertFormUrlencodedBody() (*http.Request, error) {
 	form := url.Values{}
-	for k, v := range httpRequest.GetFormPrams() {
+	for k, v := range httpRequest.GetFormParams() {
 		if part, ok := v.(*def.MultiPart); ok {
 			form.Add(k, converter.ConvertInterfaceToString(part.Content))
 		} else {
@@ -235,8 +250,8 @@ func (httpRequest *DefaultHttpRequest) covertFormDataBody() (*http.Request, erro
 	bodyBuffer := &bytes.Buffer{}
 	bodyWriter := multipart.NewWriter(bodyBuffer)
 
-	sortedKeys := make([]string, 0, len(httpRequest.GetFormPrams()))
-	for k, v := range httpRequest.GetFormPrams() {
+	sortedKeys := make([]string, 0, len(httpRequest.GetFormParams()))
+	for k, v := range httpRequest.GetFormParams() {
 		if _, ok := v.(*def.FilePart); ok {
 			sortedKeys = append(sortedKeys, k)
 		} else {
@@ -245,7 +260,7 @@ func (httpRequest *DefaultHttpRequest) covertFormDataBody() (*http.Request, erro
 	}
 
 	for _, k := range sortedKeys {
-		if err := httpRequest.GetFormPrams()[k].Write(bodyWriter, k); err != nil {
+		if err := httpRequest.GetFormParams()[k].Write(bodyWriter, k); err != nil {
 			return nil, err
 		}
 	}
@@ -260,13 +275,13 @@ func (httpRequest *DefaultHttpRequest) covertFormDataBody() (*http.Request, erro
 		return nil, err
 	}
 
-	req.Header.Set("Content-type", contentType)
+	req.Header.Set(headerContentType, contentType)
 	return req, nil
 }
 
 func (httpRequest *DefaultHttpRequest) getContentLength() int64 {
 	contentLength := int64(-1)
-	if value, ok := httpRequest.GetHeaderParams()["Content-Length"]; ok {
+	if value, ok := httpRequest.GetHeaderParams()[headerContentLength]; ok {
 		parseInt, err := strconv.ParseInt(value, 10, 64)
 		if err == nil {
 			contentLength = parseInt
@@ -310,7 +325,7 @@ func (httpRequest *DefaultHttpRequest) fillHeaderParams(req *http.Request) {
 	}
 
 	for key, value := range httpRequest.GetHeaderParams() {
-		if strings.EqualFold(key, "Content-type") && req.Header.Get("Content-type") != "" {
+		if strings.EqualFold(key, headerContentType) && req.Header.Get(headerContentType) != "" {
 			continue
 		}
 		req.Header.Add(key, value)

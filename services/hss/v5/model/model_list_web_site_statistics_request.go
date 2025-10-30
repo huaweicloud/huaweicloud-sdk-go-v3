@@ -18,7 +18,10 @@ type ListWebSiteStatisticsRequest struct {
 	// **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 域名
+	// **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+	Category string `json:"category"`
+
+	// **参数解释**: 域名 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
 	Domain *string `json:"domain,omitempty"`
 }
 

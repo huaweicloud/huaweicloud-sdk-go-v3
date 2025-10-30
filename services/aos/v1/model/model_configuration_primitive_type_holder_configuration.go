@@ -12,10 +12,10 @@ import (
 // ConfigurationPrimitiveTypeHolderConfiguration 私有hook配置项，可以指定私有hook生效的目标资源栈以及私有hook校验失败后资源栈的行为。可通过UpdatePrivateHook API更新私有hook配置项。
 type ConfigurationPrimitiveTypeHolderConfiguration struct {
 
-	// 指定私有hook生效的目标资源栈，有效值为NONE或ALL。  NONE：指定此私有hook不会作用于任何资源栈 ALL：指定此私有hook将会应用于账号下的所有资源栈
+	// 指定私有hook生效的目标资源栈，有效值为NONE或ALL，默认值为NONE。  NONE：指定此私有hook不会作用于任何资源栈 ALL：指定此私有hook将会应用于账号下的所有资源栈
 	TargetStacks *ConfigurationPrimitiveTypeHolderConfigurationTargetStacks `json:"target_stacks,omitempty"`
 
-	// 指定私有hook校验失败后的行为，有效值为FAIL或WARN。  FAIL：指定此私有hook校验失败后资源栈将停止部署，资源栈状态将更新为DEPLOYMENT_FAILED。 WARN：指定此私有hook校验失败后仅通过资源栈事件展示警告消息，但不影响资源栈部署。
+	// 指定私有hook校验失败后的行为，有效值为FAIL或WARN，默认值为WARN。  FAIL：指定此私有hook校验失败后资源栈将停止部署，资源栈状态将更新为DEPLOYMENT_FAILED。 WARN：指定此私有hook校验失败后仅通过资源栈事件展示警告消息，但不影响资源栈部署。
 	FailureMode *ConfigurationPrimitiveTypeHolderConfigurationFailureMode `json:"failure_mode,omitempty"`
 }
 

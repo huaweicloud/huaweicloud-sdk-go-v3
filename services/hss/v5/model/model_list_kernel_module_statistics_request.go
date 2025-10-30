@@ -18,7 +18,7 @@ type ListKernelModuleStatisticsRequest struct {
 	// **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 内核模块名称
+	// **参数解释**: 内核模块名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
 	Name *string `json:"name,omitempty"`
 }
 

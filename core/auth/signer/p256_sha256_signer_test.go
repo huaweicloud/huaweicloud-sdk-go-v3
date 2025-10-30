@@ -41,7 +41,7 @@ func TestP256SHA256Signer_Sign(t *testing.T) {
 		t.Run(c.Name, func(t *testing.T) {
 			req := buildReqWithTestcase(c)
 			result, err := p256sha256SignerInst.Sign(req, ak, sk)
-			assert.Nil(t, err)
+			assert.NoError(t, err)
 			assert.Contains(t, result["Authorization"], c.Expected)
 		})
 	}

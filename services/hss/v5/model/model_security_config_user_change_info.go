@@ -12,7 +12,7 @@ type SecurityConfigUserChangeInfo struct {
 	// **参数解释**： 主机账户历史变动类型 **取值范围**： - add：添加 - delete：删除 - modify：修改
 	ChangeType *string `json:"change_type,omitempty"`
 
-	// **参数解释**： 是否有登陆权限 **取值范围**： - true：有登录权限 - false：无登录权限
+	// **参数解释**： 是否有登录权限 **取值范围**： - true：有登录权限 - false：无登录权限
 	LoginPermission *bool `json:"login_permission,omitempty"`
 
 	// **参数解释**： 是否有root权限 **取值范围**： - true：有root权限 - false：无root权限

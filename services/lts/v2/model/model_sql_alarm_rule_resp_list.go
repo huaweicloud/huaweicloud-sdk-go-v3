@@ -37,9 +37,6 @@ type SqlAlarmRuleRespList struct {
 	// 告警级别
 	SqlAlarmLevel SqlAlarmRuleRespListSqlAlarmLevel `json:"sql_alarm_level"`
 
-	// 是否发送
-	SqlAlarmSend bool `json:"sql_alarm_send"`
-
 	// domainId
 	DomainId string `json:"domain_id"`
 
@@ -72,6 +69,9 @@ type SqlAlarmRuleRespList struct {
 
 	// 告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
 	AlarmActionRuleName *string `json:"alarm_action_rule_name,omitempty"`
+
+	// **参数解释：** 告警标签信息。
+	Tags *[]TagsResBody `json:"tags,omitempty"`
 }
 
 func (o SqlAlarmRuleRespList) String() string {

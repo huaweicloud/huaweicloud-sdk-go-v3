@@ -313,6 +313,48 @@ func (c *LiveClient) CreateUrlAuthchainInvoker(request *model.CreateUrlAuthchain
 	return &CreateUrlAuthchainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateWatermarkRule 创建水印规则
+//
+// 创建水印规则接口，必须先创建水印模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) CreateWatermarkRule(request *model.CreateWatermarkRuleRequest) (*model.CreateWatermarkRuleResponse, error) {
+	requestDef := GenReqDefForCreateWatermarkRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateWatermarkRuleResponse), nil
+	}
+}
+
+// CreateWatermarkRuleInvoker 创建水印规则
+func (c *LiveClient) CreateWatermarkRuleInvoker(request *model.CreateWatermarkRuleRequest) *CreateWatermarkRuleInvoker {
+	requestDef := GenReqDefForCreateWatermarkRule()
+	return &CreateWatermarkRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateWatermarkTemplate 创建水印模板
+//
+// 创建水印模板接口，需要绑定水印规则才生效
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) CreateWatermarkTemplate(request *model.CreateWatermarkTemplateRequest) (*model.CreateWatermarkTemplateResponse, error) {
+	requestDef := GenReqDefForCreateWatermarkTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateWatermarkTemplateResponse), nil
+	}
+}
+
+// CreateWatermarkTemplateInvoker 创建水印模板
+func (c *LiveClient) CreateWatermarkTemplateInvoker(request *model.CreateWatermarkTemplateRequest) *CreateWatermarkTemplateInvoker {
+	requestDef := GenReqDefForCreateWatermarkTemplate()
+	return &CreateWatermarkTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteDomain 删除直播域名
 //
 // 删除域名。只有在域名停用（off）状态时才能删除。
@@ -584,6 +626,48 @@ func (c *LiveClient) DeleteTranscodingsTemplate(request *model.DeleteTranscoding
 func (c *LiveClient) DeleteTranscodingsTemplateInvoker(request *model.DeleteTranscodingsTemplateRequest) *DeleteTranscodingsTemplateInvoker {
 	requestDef := GenReqDefForDeleteTranscodingsTemplate()
 	return &DeleteTranscodingsTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteWatermarkRule 删除水印规则
+//
+// 删除水印规则接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) DeleteWatermarkRule(request *model.DeleteWatermarkRuleRequest) (*model.DeleteWatermarkRuleResponse, error) {
+	requestDef := GenReqDefForDeleteWatermarkRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteWatermarkRuleResponse), nil
+	}
+}
+
+// DeleteWatermarkRuleInvoker 删除水印规则
+func (c *LiveClient) DeleteWatermarkRuleInvoker(request *model.DeleteWatermarkRuleRequest) *DeleteWatermarkRuleInvoker {
+	requestDef := GenReqDefForDeleteWatermarkRule()
+	return &DeleteWatermarkRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteWatermarkTemplate 删除水印模板
+//
+// 删除水印模板接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) DeleteWatermarkTemplate(request *model.DeleteWatermarkTemplateRequest) (*model.DeleteWatermarkTemplateResponse, error) {
+	requestDef := GenReqDefForDeleteWatermarkTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteWatermarkTemplateResponse), nil
+	}
+}
+
+// DeleteWatermarkTemplateInvoker 删除水印模板
+func (c *LiveClient) DeleteWatermarkTemplateInvoker(request *model.DeleteWatermarkTemplateRequest) *DeleteWatermarkTemplateInvoker {
+	requestDef := GenReqDefForDeleteWatermarkTemplate()
+	return &DeleteWatermarkTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDelayConfig 查询播放域名延时配置
@@ -881,6 +965,48 @@ func (c *LiveClient) ListStreamForbidden(request *model.ListStreamForbiddenReque
 func (c *LiveClient) ListStreamForbiddenInvoker(request *model.ListStreamForbiddenRequest) *ListStreamForbiddenInvoker {
 	requestDef := GenReqDefForListStreamForbidden()
 	return &ListStreamForbiddenInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWatermarkRule 查询水印规则列表
+//
+// 查询水印规则列表接口，通过指定条件，查询满足条件的水印规则列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ListWatermarkRule(request *model.ListWatermarkRuleRequest) (*model.ListWatermarkRuleResponse, error) {
+	requestDef := GenReqDefForListWatermarkRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWatermarkRuleResponse), nil
+	}
+}
+
+// ListWatermarkRuleInvoker 查询水印规则列表
+func (c *LiveClient) ListWatermarkRuleInvoker(request *model.ListWatermarkRuleRequest) *ListWatermarkRuleInvoker {
+	requestDef := GenReqDefForListWatermarkRule()
+	return &ListWatermarkRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWatermarkTemplate 查询水印模板列表
+//
+// 查询水印模板列表接口，通过指定条件，查询满足条件的水印模板列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ListWatermarkTemplate(request *model.ListWatermarkTemplateRequest) (*model.ListWatermarkTemplateResponse, error) {
+	requestDef := GenReqDefForListWatermarkTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWatermarkTemplateResponse), nil
+	}
+}
+
+// ListWatermarkTemplateInvoker 查询水印模板列表
+func (c *LiveClient) ListWatermarkTemplateInvoker(request *model.ListWatermarkTemplateRequest) *ListWatermarkTemplateInvoker {
+	requestDef := GenReqDefForListWatermarkTemplate()
+	return &ListWatermarkTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ModifyFlowOutput 更新转推输出
@@ -1198,6 +1324,48 @@ func (c *LiveClient) ShowTranscodingsTemplateInvoker(request *model.ShowTranscod
 	return &ShowTranscodingsTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowWatermarkRule 查询水印规则配置
+//
+// 查询水印模板规则接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ShowWatermarkRule(request *model.ShowWatermarkRuleRequest) (*model.ShowWatermarkRuleResponse, error) {
+	requestDef := GenReqDefForShowWatermarkRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWatermarkRuleResponse), nil
+	}
+}
+
+// ShowWatermarkRuleInvoker 查询水印规则配置
+func (c *LiveClient) ShowWatermarkRuleInvoker(request *model.ShowWatermarkRuleRequest) *ShowWatermarkRuleInvoker {
+	requestDef := GenReqDefForShowWatermarkRule()
+	return &ShowWatermarkRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowWatermarkTemplate 查询水印模板配置
+//
+// 查询水印模板详情接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ShowWatermarkTemplate(request *model.ShowWatermarkTemplateRequest) (*model.ShowWatermarkTemplateResponse, error) {
+	requestDef := GenReqDefForShowWatermarkTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWatermarkTemplateResponse), nil
+	}
+}
+
+// ShowWatermarkTemplateInvoker 查询水印模板配置
+func (c *LiveClient) ShowWatermarkTemplateInvoker(request *model.ShowWatermarkTemplateRequest) *ShowWatermarkTemplateInvoker {
+	requestDef := GenReqDefForShowWatermarkTemplate()
+	return &ShowWatermarkTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateDelayConfig 修改播放域名延时配置
 //
 // 修改播放域名延时配置。
@@ -1493,6 +1661,48 @@ func (c *LiveClient) UpdateTranscodingsTemplate(request *model.UpdateTranscoding
 func (c *LiveClient) UpdateTranscodingsTemplateInvoker(request *model.UpdateTranscodingsTemplateRequest) *UpdateTranscodingsTemplateInvoker {
 	requestDef := GenReqDefForUpdateTranscodingsTemplate()
 	return &UpdateTranscodingsTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateWatermarkRule 修改水印规则
+//
+// 修改水印规则接口，修改后实时生效，只能修改Location
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) UpdateWatermarkRule(request *model.UpdateWatermarkRuleRequest) (*model.UpdateWatermarkRuleResponse, error) {
+	requestDef := GenReqDefForUpdateWatermarkRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateWatermarkRuleResponse), nil
+	}
+}
+
+// UpdateWatermarkRuleInvoker 修改水印规则
+func (c *LiveClient) UpdateWatermarkRuleInvoker(request *model.UpdateWatermarkRuleRequest) *UpdateWatermarkRuleInvoker {
+	requestDef := GenReqDefForUpdateWatermarkRule()
+	return &UpdateWatermarkRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateWatermarkTemplate 修改水印模板
+//
+// 修改水印模板接口，修改后实时生效
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) UpdateWatermarkTemplate(request *model.UpdateWatermarkTemplateRequest) (*model.UpdateWatermarkTemplateResponse, error) {
+	requestDef := GenReqDefForUpdateWatermarkTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateWatermarkTemplateResponse), nil
+	}
+}
+
+// UpdateWatermarkTemplateInvoker 修改水印模板
+func (c *LiveClient) UpdateWatermarkTemplateInvoker(request *model.UpdateWatermarkTemplateRequest) *UpdateWatermarkTemplateInvoker {
+	requestDef := GenReqDefForUpdateWatermarkTemplate()
+	return &UpdateWatermarkTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListCesDimsInfo 维度配置信息查询

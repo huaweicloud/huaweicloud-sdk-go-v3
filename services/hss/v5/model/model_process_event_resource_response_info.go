@@ -66,7 +66,7 @@ type ProcessEventResourceResponseInfo struct {
 	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
 	HostName *string `json:"host_name,omitempty"`
 
-	// **参数解释**: 主机IP **取值范围**: 字符长度1-128位
+	// **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
 	HostIp *string `json:"host_ip,omitempty"`
 
 	// **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位

@@ -1,6 +1,7 @@
 package v1
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/impl"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
@@ -40,7 +41,7 @@ func (builder *KvsCredentialsBuilder) WithEnableBodySignature(enableBodySignatur
 
 func NewKvsCredentialsBuilder() *KvsCredentialsBuilder {
 	return &KvsCredentialsBuilder{
-		Credentials: &KvsCredentials{Credentials: basic.Credentials{IamEndpoint: GetIamEndpoint()}},
+		Credentials: &KvsCredentials{Credentials: basic.Credentials{BaseCredentials: auth.BaseCredentials{IamEndpoint: GetIamEndpoint()}}},
 		errMap:      make(map[string]string),
 	}
 }
@@ -111,9 +112,6 @@ func (builder *KvsCredentialsBuilder) SafeBuild() (*KvsCredentials, error) {
 		}
 		if builder.Credentials.IdTokenFile == "" {
 			return nil, sdkerr.NewCredentialsTypeError("IdTokenFile is required when using IdpId&IdTokenFile")
-		}
-		if builder.Credentials.ProjectId == "" {
-			return nil, sdkerr.NewCredentialsTypeError("ProjectId is required when using IdpId&IdTokenFile")
 		}
 	}
 	return builder.Credentials, nil

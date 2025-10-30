@@ -60,6 +60,15 @@ type CreateAccessConfigResponse struct {
 	// IC结构化解析器
 	Processors *[]Processor `json:"processors,omitempty"`
 
+	// **参数解释：** 拆分日志大小。 **取值范围：** 不涉及。
+	LogSplitSize *int32 `json:"log_split_size,omitempty"`
+
+	// **参数解释：** 采集路径递归最大深度。 **取值范围：** 不涉及。
+	RecursiveDepth *int32 `json:"recursive_depth,omitempty"`
+
+	// **参数解释：** 日志接入自建软件来源。 **取值范围：** - ECS - CCE - BMS - K8S - ServiceStageHost - ServiceStage
+	AccessConfigTypeSource *string `json:"access_config_type_source,omitempty"`
+
 	// ServiceStage应用ID
 	ApplicationId *string `json:"application_id,omitempty"`
 

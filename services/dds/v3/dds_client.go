@@ -2350,9 +2350,9 @@ func (c *DdsClient) SwitchSslInvoker(request *model.SwitchSslRequest) *SwitchSsl
 	return &SwitchSslInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SwitchoverReplicaSet 切换副本集实例的主备节点
+// SwitchoverReplicaSet 切换实例的主备节点
 //
-// 切换副本集实例下的主备节点
+// 切换实例下的主备节点
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DdsClient) SwitchoverReplicaSet(request *model.SwitchoverReplicaSetRequest) (*model.SwitchoverReplicaSetResponse, error) {
@@ -2365,7 +2365,7 @@ func (c *DdsClient) SwitchoverReplicaSet(request *model.SwitchoverReplicaSetRequ
 	}
 }
 
-// SwitchoverReplicaSetInvoker 切换副本集实例的主备节点
+// SwitchoverReplicaSetInvoker 切换实例的主备节点
 func (c *DdsClient) SwitchoverReplicaSetInvoker(request *model.SwitchoverReplicaSetRequest) *SwitchoverReplicaSetInvoker {
 	requestDef := GenReqDefForSwitchoverReplicaSet()
 	return &SwitchoverReplicaSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

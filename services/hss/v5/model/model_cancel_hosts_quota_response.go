@@ -8,8 +8,7 @@ import (
 
 // CancelHostsQuotaResponse Response Object
 type CancelHostsQuotaResponse struct {
-	Body           *string `json:"body,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o CancelHostsQuotaResponse) String() string {

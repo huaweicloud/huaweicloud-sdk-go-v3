@@ -20,23 +20,13 @@
 package provider
 
 import (
-	"fmt"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdkerr"
-	"reflect"
 )
 
 const (
 	basicCredentialType  = "basic"
 	globalCredentialType = "global"
-
-	credentialsAttr   = "Credentials"
-	akAttr            = "AK"
-	skAttr            = "SK"
-	securityTokenAttr = "SecurityToken"
-	idpIdAttr         = "IdpId"
-	idTokenFileAttr   = "IdTokenFile"
-	iamEndpointAttr   = "IamEndpoint"
 )
 
 type ICredentialProvider interface {
@@ -52,29 +42,28 @@ type commonAttrs struct {
 	iamEndpoint   string
 }
 
-func fillCommonAttrs(builder interface{}, common commonAttrs) error {
-	v := reflect.ValueOf(builder)
-	if v.Kind() == reflect.Ptr {
-		v = v.Elem()
-	}
-	v = v.FieldByName(credentialsAttr)
-	if v.Kind() == reflect.Ptr {
-		v = v.Elem()
+func fillCommonAttrs(builder interface{}, attrs commonAttrs) error {
+	var baseBuilder *auth.BaseCredentialsBuilder
+	if b, ok := builder.(*auth.BasicCredentialsBuilder); ok {
+		baseBuilder = b.Builder
+	} else if b, ok := builder.(*auth.GlobalCredentialsBuilder); ok {
+		baseBuilder = b.Builder
 	}
 
-	if common.iamEndpoint != "" {
-		v.FieldByName(iamEndpointAttr).SetString(common.iamEndpoint)
+	if baseBuilder == nil {
+		return sdkerr.NewCredentialsTypeError("credential type error")
 	}
-	if common.idpId != "" && common.idTokenFile != "" {
-		v.FieldByName(idpIdAttr).SetString(common.idpId)
-		v.FieldByName(idTokenFileAttr).SetString(common.idTokenFile)
+
+	if attrs.iamEndpoint != "" {
+		baseBuilder.WithIamEndpointOverride(attrs.iamEndpoint)
+	}
+	if attrs.idpId != "" && attrs.idTokenFile != "" {
+		baseBuilder.WithIdpId(attrs.idpId).WithIdTokenFile(attrs.idTokenFile)
 		return nil
-	} else if common.ak != "" && common.sk != "" {
-		v.FieldByName(akAttr).SetString(common.ak)
-		v.FieldByName(skAttr).SetString(common.sk)
-		v.FieldByName(securityTokenAttr).SetString(common.securityToken)
+	} else if attrs.ak != "" && attrs.sk != "" {
+		baseBuilder.WithAk(attrs.ak).WithSk(attrs.sk).WithSecurityToken(attrs.securityToken)
 		return nil
 	}
-	return sdkerr.NewCredentialsTypeError(fmt.Sprintf("%s&%s or %s&%s does not exist",
-		akAttr, skAttr, idpIdAttr, idTokenFileAttr))
+
+	return sdkerr.NewCredentialsTypeError("AK&SK or IdpId&IdTokenFile does not exist")
 }

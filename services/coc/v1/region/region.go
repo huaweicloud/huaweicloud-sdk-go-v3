@@ -12,11 +12,14 @@ var (
 		"https://coc.myhuaweicloud.com")
 	AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3",
 		"https://coc-intl.myhuaweicloud.com")
+	EU_WEST_101 = region.NewRegion("eu-west-101",
+		"https://coc-eu-west-101-open-api.myhuaweicloud.eu")
 )
 
 var staticFields = map[string]*region.Region{
 	"cn-north-4":     CN_NORTH_4,
 	"ap-southeast-3": AP_SOUTHEAST_3,
+	"eu-west-101":    EU_WEST_101,
 }
 
 var provider = region.DefaultProviderChain("COC")

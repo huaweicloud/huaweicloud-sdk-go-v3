@@ -18,19 +18,19 @@ type ListWebSiteHostInfoRequest struct {
 	// **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 返回的资产类别 - 0: 主机 - 1: 容器
+	// **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
 	Category string `json:"category"`
 
-	// 域名
+	// **参数解释**: 域名 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及
 	Domain string `json:"domain"`
 
-	// 服务器名称
+	// **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
 	HostName *string `json:"host_name,omitempty"`
 
-	// 服务器IP
+	// **参数解释**: 服务器IP **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
 	HostIp *string `json:"host_ip,omitempty"`
 
-	// 是否模糊匹配，默认false表示精确匹配
+	// **参数解释**: 是否模糊匹配，默认false表示精确匹配 **约束限制**: 不涉及 **取值范围**: - true：模糊匹配 - false：精确匹配  **默认取值**: false
 	PartMatch *bool `json:"part_match,omitempty"`
 }
 

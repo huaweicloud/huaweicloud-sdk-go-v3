@@ -32,6 +32,12 @@ type GetHostGroupInfo struct {
 
 	// 更新时间
 	UpdateTime *int64 `json:"update_time,omitempty"`
+
+	// **参数解释：** 主机组类型。分别为IP、LABEL类型。 **取值范围：** - IP。 - LABEL。
+	AgentAccessType *string `json:"agent_access_type,omitempty"`
+
+	// **参数解释：** 主机组自定义标识。
+	Labels *[]string `json:"labels,omitempty"`
 }
 
 func (o GetHostGroupInfo) String() string {

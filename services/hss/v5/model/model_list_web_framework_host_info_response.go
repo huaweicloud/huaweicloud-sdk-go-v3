@@ -9,10 +9,10 @@ import (
 // ListWebFrameworkHostInfoResponse Response Object
 type ListWebFrameworkHostInfoResponse struct {
 
-	// 总数
+	// **参数解释** 总数 **取值范围** 最小值0，最大值10000
 	TotalNum *int32 `json:"total_num,omitempty"`
 
-	// 服务器列表
+	// **参数解释** 服务器列表 **取值范围** 最小值0，最大值10000
 	DataList       *[]WebFrameworkHostInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }

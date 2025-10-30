@@ -21,8 +21,8 @@ type ListUserStatisticsRequest struct {
 	// 偏移量：指定返回记录的开始位置
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 类别，默认为host，包含如下： - host：主机 - container：容器
-	Category *string `json:"category,omitempty"`
+	// **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+	Category string `json:"category"`
 }
 
 func (o ListUserStatisticsRequest) String() string {

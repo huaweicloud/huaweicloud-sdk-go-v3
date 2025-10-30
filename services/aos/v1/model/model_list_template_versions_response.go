@@ -10,8 +10,10 @@ import (
 type ListTemplateVersionsResponse struct {
 
 	// 模板版本列表
-	Versions       *[]TemplateVersion `json:"versions,omitempty"`
-	HttpStatusCode int                `json:"-"`
+	Versions *[]TemplateVersion `json:"versions,omitempty"`
+
+	PageInfo       *PageInfo `json:"page_info,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListTemplateVersionsResponse) String() string {

@@ -37,6 +37,9 @@ type Metadata struct {
 
 	// 日志流原始名称
 	LogStreamName *string `json:"log_stream_name,omitempty"`
+
+	// **参数解释：** 告警类型。 **取值范围：** - sql： sql告警 - keywords：关键词告警
+	EventSubtype *string `json:"event_subtype,omitempty"`
 }
 
 func (o Metadata) String() string {

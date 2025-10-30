@@ -171,17 +171,3 @@ func (m *MetadataAccessor) GetCredentials() (*Credential, error) {
 	return respModel.Credential, nil
 
 }
-
-type GetTemporaryCredentialFromMetadataResponse struct {
-	Credential *Credential `json:"credential,omitempty"`
-}
-
-type Credential struct {
-	ExpiresAt string `json:"expires_at"`
-
-	Access string `json:"access"`
-
-	Secret string `json:"secret"`
-
-	Securitytoken string `json:"securitytoken"`
-}

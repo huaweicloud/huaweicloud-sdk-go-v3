@@ -12,6 +12,9 @@ type StartInfo struct {
 	// 任务id。
 	JobId string `json:"job_id"`
 
+	// 是否支持只初始化任务。
+	IsOnlyInitTask *bool `json:"is_only_init_task,omitempty"`
+
 	// 任务启动时间，时间戳格式精确到毫秒，例如：1679966489593，取值为空代表立即启动。
 	StartTime *string `json:"start_time,omitempty"`
 }

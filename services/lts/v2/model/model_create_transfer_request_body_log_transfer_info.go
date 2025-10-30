@@ -26,7 +26,7 @@ type CreateTransferRequestBodyLogTransferInfo struct {
 
 	LogAgencyTransfer *CreateTransferRequestBodyLogTransferInfoLogAgencyTransfer `json:"log_agency_transfer,omitempty"`
 
-	LogTransferDetail *TransferDetail `json:"log_transfer_detail"`
+	LogTransferDetail *LogTransferDetail `json:"log_transfer_detail"`
 }
 
 func (o CreateTransferRequestBodyLogTransferInfo) String() string {

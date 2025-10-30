@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// WebSiteStatisticsResponseInfo Web站点统计信息列表
+// WebSiteStatisticsResponseInfo **参数解释** Web站点统计信息列表
 type WebSiteStatisticsResponseInfo struct {
 
-	// Web站点域名
+	// **参数解释**: Web站点域名 **取值范围**: 字符长度0-256
 	Domain *string `json:"domain,omitempty"`
 
-	// Web站点统计信息总数
+	// **参数解释** Web站点统计信息总数 **取值范围** 最小值0，最大值300000
 	Num *int32 `json:"num,omitempty"`
 }
 
