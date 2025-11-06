@@ -11,7 +11,7 @@ import (
 
 type ListAlarmRespBodyAlarms struct {
 
-	// **参数解释**： 告警规则id。     **取值范围**： 以al开头，后跟22个数字或字母。
+	// **参数解释**： 告警规则id。如 al123232232341232132 **取值范围**： 以al开头，后跟22个数字或字母。长度为24个字符。
 	AlarmId *string `json:"alarm_id,omitempty"`
 
 	// **参数解释**： 告警名称。     **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1，128]个字符。
@@ -37,10 +37,10 @@ type ListAlarmRespBodyAlarms struct {
 	// **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
 	NotificationEnabled *bool `json:"notification_enabled,omitempty"`
 
-	// **参数解释**： 触发告警时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+	// **参数解释**： 触发告警时，通知组/主题订阅的信息。
 	AlarmNotifications *[]NotificationResp `json:"alarm_notifications,omitempty"`
 
-	// **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+	// **参数解释**： 告警恢复时，通知组/主题订阅的信息。
 	OkNotifications *[]NotificationResp `json:"ok_notifications,omitempty"`
 
 	// **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。

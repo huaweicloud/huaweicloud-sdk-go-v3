@@ -27,10 +27,10 @@ type ListAlarmsRequest struct {
 	// 告警级别，1为紧急，2为重要，3为次要，4为提示
 	AlarmLevel *ListAlarmsRequestAlarmLevel `json:"alarm_level,omitempty"`
 
-	// 产生告警开始时间
+	// 产生告警开始时间，from 必须小于 to。
 	From *string `json:"from,omitempty"`
 
-	// 产生告警结束时间
+	// 产生告警结束时间，from 必须小于 to。
 	To *string `json:"to,omitempty"`
 
 	// 分页游标

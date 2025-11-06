@@ -26,15 +26,6 @@ type StructConfig struct {
 
 	// 所用模板类型，分为built_in及custom两种类型，对应系统模板和自定义模板，系统模板分为CTS，VPC和ELB三种。
 	TemplateType StructConfigTemplateType `json:"template_type"`
-
-	// 示例字段数组，只需要填写与模板中is_analysis状态不同的字段
-	DemoFields *[]FieldModel `json:"demo_fields,omitempty"`
-
-	// Tag字段数组，只需要填写与模板中is_analysis状态不同的字段
-	TagFields *[]FieldModel `json:"tag_fields,omitempty"`
-
-	// 是否开启demo_fields和tag_fields快速分析,为true时，所有的demo_fields和tag_fields全部字段均打开快速分析;不填或者为false，以模板中的demo_fields和tag_fields中的is_analysis决定是否开启快速分析。
-	QuickAnalysis *bool `json:"quick_analysis,omitempty"`
 }
 
 func (o StructConfig) String() string {

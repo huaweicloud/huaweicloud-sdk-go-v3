@@ -13,7 +13,7 @@ type OperateUsedJobSchedule struct {
 	Id *string `json:"id,omitempty"`
 
 	// 计划类型。默认值recurring。  automatically：SQL Server代理启动时自动启动。 cpu_idle：CPU空闲时启动。 recurring：重复执行。 one_time：执行一次。
-	JobScheduleType string `json:"job_schedule_type"`
+	JobScheduleType *string `json:"job_schedule_type,omitempty"`
 
 	OneTimeOccurrence *JobScheduleOneTimeOccurrenceInfo `json:"one_time_occurrence,omitempty"`
 

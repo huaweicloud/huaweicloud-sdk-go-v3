@@ -103,25 +103,25 @@ func (c *CocClient) ClearAlarmInvoker(request *model.ClearAlarmRequest) *ClearAl
 	return &ClearAlarmInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// HandleAlarm 自动处理告警
+// HandlerAlarm 自动处理告警
 //
 // 自动处理告警
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CocClient) HandleAlarm(request *model.HandleAlarmRequest) (*model.HandleAlarmResponse, error) {
-	requestDef := GenReqDefForHandleAlarm()
+func (c *CocClient) HandlerAlarm(request *model.HandlerAlarmRequest) (*model.HandlerAlarmResponse, error) {
+	requestDef := GenReqDefForHandlerAlarm()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.HandleAlarmResponse), nil
+		return resp.(*model.HandlerAlarmResponse), nil
 	}
 }
 
-// HandleAlarmInvoker 自动处理告警
-func (c *CocClient) HandleAlarmInvoker(request *model.HandleAlarmRequest) *HandleAlarmInvoker {
-	requestDef := GenReqDefForHandleAlarm()
-	return &HandleAlarmInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// HandlerAlarmInvoker 自动处理告警
+func (c *CocClient) HandlerAlarmInvoker(request *model.HandlerAlarmRequest) *HandlerAlarmInvoker {
+	requestDef := GenReqDefForHandlerAlarm()
+	return &HandlerAlarmInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAlarmHandleHistories 查询告警工单历史

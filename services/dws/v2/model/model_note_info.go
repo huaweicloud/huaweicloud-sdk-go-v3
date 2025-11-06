@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// NoteInfo **参数解释**： 重分布提示信息。 **取值范围**： 不涉及。
+// NoteInfo **参数解释**： 扩容前提示信息。 **取值范围** 不涉及。
 type NoteInfo struct {
 	BucketSplitInfo *BucketSplitInfo `json:"bucket_split_info,omitempty"`
 }

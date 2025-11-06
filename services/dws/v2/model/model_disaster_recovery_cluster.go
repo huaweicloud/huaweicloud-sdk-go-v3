@@ -35,6 +35,18 @@ type DisasterRecoveryCluster struct {
 
 	// **参数解释**： OBS桶名称。 **取值范围**： 不涉及。
 	ObsBucketName *string `json:"obs_bucket_name,omitempty"`
+
+	// **参数解释**： 数据库版本。 **取值范围**： 不涉及。
+	DatastoreVersion *string `json:"datastore_version,omitempty"`
+
+	// **参数解释**： 数据库类型。 **取值范围**： 不涉及。
+	DatastoreType *string `json:"datastore_type,omitempty"`
+
+	// **参数解释**： 磁盘容量。 **取值范围**： 不涉及。
+	DiskCapacity *string `json:"disk_capacity,omitempty"`
+
+	// **参数解释**： 磁盘使用率。 **取值范围**： 不涉及。
+	DiskUsed *string `json:"disk_used,omitempty"`
 }
 
 func (o DisasterRecoveryCluster) String() string {

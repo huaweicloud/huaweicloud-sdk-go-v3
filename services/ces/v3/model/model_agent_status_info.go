@@ -17,7 +17,7 @@ type AgentStatusInfo struct {
 	// **参数解释**: uniagent运行状态 **取值范围**: - none: 未安装 - running: 运行中 - silent: 静默状态，用于大规模插件异常时，紧急规避的一种措施，现象是kill掉telescope，只保留uniagent的心跳功能 - unknown: 心跳故障，不上报心跳数据，属于连接丢失故障
 	UniagentStatus *AgentStatusInfoUniagentStatus `json:"uniagent_status,omitempty"`
 
-	// **参数解释**: 插件信息列表 **取值范围**: 数组长度为[1,10]
+	// **参数解释**: 插件信息列表
 	Extensions *[]ExtensionInfo `json:"extensions,omitempty"`
 }
 

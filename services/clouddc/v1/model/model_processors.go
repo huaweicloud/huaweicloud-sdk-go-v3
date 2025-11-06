@@ -57,6 +57,9 @@ type Processors struct {
 	// 序列号
 	SerialNumber *string `json:"serial_number,omitempty"`
 
+	// 指定CPU资源的部件号
+	PartNumber *string `json:"part_number,omitempty"`
+
 	// 健康状态
 	Health *string `json:"health,omitempty"`
 

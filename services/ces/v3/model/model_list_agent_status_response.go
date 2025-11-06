@@ -9,7 +9,7 @@ import (
 // ListAgentStatusResponse Response Object
 type ListAgentStatusResponse struct {
 
-	// **参数解释**: agent插件状态列表 **取值范围**: 数组长度为[1,2000]
+	// **参数解释**: agent插件状态列表
 	AgentStatus    *[]AgentStatusInfo `json:"agent_status,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }

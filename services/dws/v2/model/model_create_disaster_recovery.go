@@ -28,6 +28,26 @@ type CreateDisasterRecovery struct {
 
 	// **参数解释**： 备集群obs桶。 **取值范围**： 不涉及。
 	StandbyObsBucket *string `json:"standby_obs_bucket,omitempty"`
+
+	// **参数解释**： 容灾ID。 **取值范围**： 不涉及。
+	DiscoveryRecoveryId *string `json:"discovery_recovery_id,omitempty"`
+
+	// **参数解释**： 容灾主Region。 **取值范围**： 不涉及。
+	PrimaryClusterRegion *string `json:"primary_cluster_region,omitempty"`
+
+	// **参数解释**： 容灾备Region。 **取值范围**： 不涉及。
+	StandbyClusterRegion *string `json:"standby_cluster_region,omitempty"`
+
+	// **参数解释**： 容灾主集群项目ID。 **取值范围**： 不涉及。
+	PrimaryClusterProjectId *string `json:"primary_cluster_project_id,omitempty"`
+
+	// **参数解释**： 容灾备集群项目ID。 **取值范围**： 不涉及。
+	StandbyClusterProjectId *string `json:"standby_cluster_project_id,omitempty"`
+
+	// **参数解释**： 集群角色。 **取值范围**： 不涉及。
+	ClusterRole *string `json:"cluster_role,omitempty"`
+
+	PrimaryClusterInfo *CreateDrClusterDto `json:"primary_cluster_info,omitempty"`
 }
 
 func (o CreateDisasterRecovery) String() string {

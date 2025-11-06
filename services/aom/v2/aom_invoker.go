@@ -149,6 +149,22 @@ func (i *CountEventsInvoker) Invoke() (*model.CountEventsResponse, error) {
 	}
 }
 
+type CreateNotificationTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateNotificationTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateNotificationTemplateInvoker) Invoke() (*model.CreateNotificationTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateNotificationTemplateResponse), nil
+	}
+}
+
 type DeleteActionRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -181,6 +197,22 @@ func (i *DeleteAlarmRuleInvoker) Invoke() (*model.DeleteAlarmRuleResponse, error
 	}
 }
 
+type DeleteAlarmRuleTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAlarmRuleTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAlarmRuleTemplateInvoker) Invoke() (*model.DeleteAlarmRuleTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAlarmRuleTemplateResponse), nil
+	}
+}
+
 type DeleteAlarmRulesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +226,38 @@ func (i *DeleteAlarmRulesInvoker) Invoke() (*model.DeleteAlarmRulesResponse, err
 		return nil, err
 	} else {
 		return result.(*model.DeleteAlarmRulesResponse), nil
+	}
+}
+
+type DeleteDashboardInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDashboardInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDashboardInvoker) Invoke() (*model.DeleteDashboardResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDashboardResponse), nil
+	}
+}
+
+type DeleteDashboardsFolderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDashboardsFolderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDashboardsFolderInvoker) Invoke() (*model.DeleteDashboardsFolderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDashboardsFolderResponse), nil
 	}
 }
 
@@ -242,6 +306,22 @@ func (i *DeleteMuteRulesInvoker) Invoke() (*model.DeleteMuteRulesResponse, error
 		return nil, err
 	} else {
 		return result.(*model.DeleteMuteRulesResponse), nil
+	}
+}
+
+type DeleteNotificationTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteNotificationTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteNotificationTemplateInvoker) Invoke() (*model.DeleteNotificationTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteNotificationTemplateResponse), nil
 	}
 }
 
@@ -306,6 +386,54 @@ func (i *ListAlarmRuleInvoker) Invoke() (*model.ListAlarmRuleResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListAlarmRuleResponse), nil
+	}
+}
+
+type ListAlarmRuleTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAlarmRuleTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAlarmRuleTemplateInvoker) Invoke() (*model.ListAlarmRuleTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAlarmRuleTemplateResponse), nil
+	}
+}
+
+type ListDashBoardsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDashBoardsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDashBoardsInvoker) Invoke() (*model.ListDashBoardsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDashBoardsResponse), nil
+	}
+}
+
+type ListDashboardsFolderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDashboardsFolderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDashboardsFolderInvoker) Invoke() (*model.ListDashboardsFolderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDashboardsFolderResponse), nil
 	}
 }
 
@@ -402,6 +530,38 @@ func (i *ListMuteRuleInvoker) Invoke() (*model.ListMuteRuleResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListMuteRuleResponse), nil
+	}
+}
+
+type ListNotificationTemplateByNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNotificationTemplateByNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListNotificationTemplateByNameInvoker) Invoke() (*model.ListNotificationTemplateByNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNotificationTemplateByNameResponse), nil
+	}
+}
+
+type ListNotificationTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNotificationTemplatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListNotificationTemplatesInvoker) Invoke() (*model.ListNotificationTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNotificationTemplatesResponse), nil
 	}
 }
 
@@ -533,6 +693,22 @@ func (i *ShowAlarmRuleInvoker) Invoke() (*model.ShowAlarmRuleResponse, error) {
 	}
 }
 
+type ShowDashBoardInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDashBoardInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDashBoardInvoker) Invoke() (*model.ShowDashBoardResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDashBoardResponse), nil
+	}
+}
+
 type ShowMetricsDataInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -610,6 +786,22 @@ func (i *UpdateMuteRuleInvoker) Invoke() (*model.UpdateMuteRuleResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdateMuteRuleResponse), nil
+	}
+}
+
+type UpdateNotificationTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateNotificationTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateNotificationTemplateInvoker) Invoke() (*model.UpdateNotificationTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateNotificationTemplateResponse), nil
 	}
 }
 
@@ -818,5 +1010,21 @@ func (i *ListRangeQueryAomPromPostInvoker) Invoke() (*model.ListRangeQueryAomPro
 		return nil, err
 	} else {
 		return result.(*model.ListRangeQueryAomPromPostResponse), nil
+	}
+}
+
+type UpdatePromInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePromInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePromInstanceInvoker) Invoke() (*model.UpdatePromInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePromInstanceResponse), nil
 	}
 }

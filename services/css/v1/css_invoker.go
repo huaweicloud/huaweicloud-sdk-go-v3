@@ -69,6 +69,22 @@ func (i *ChangeSecurityGroupInvoker) Invoke() (*model.ChangeSecurityGroupRespons
 	}
 }
 
+type CreateAgencyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAgencyInvoker) Invoke() (*model.CreateAgencyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAgencyResponse), nil
+	}
+}
+
 type CreateAiOpsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -453,6 +469,22 @@ func (i *ListLogsJobInvoker) Invoke() (*model.ListLogsJobResponse, error) {
 	}
 }
 
+type ListRoutesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRoutesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRoutesInvoker) Invoke() (*model.ListRoutesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRoutesResponse), nil
+	}
+}
+
 type ListSmnTopicsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -629,6 +661,38 @@ func (i *ShowClusterTagInvoker) Invoke() (*model.ShowClusterTagResponse, error) 
 	}
 }
 
+type ShowClusterVolumeUsageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterVolumeUsageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowClusterVolumeUsageInvoker) Invoke() (*model.ShowClusterVolumeUsageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowClusterVolumeUsageResponse), nil
+	}
+}
+
+type ShowDataStoreFlavorDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDataStoreFlavorDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDataStoreFlavorDetailInvoker) Invoke() (*model.ShowDataStoreFlavorDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDataStoreFlavorDetailResponse), nil
+	}
+}
+
 type ShowElbDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -642,6 +706,22 @@ func (i *ShowElbDetailInvoker) Invoke() (*model.ShowElbDetailResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowElbDetailResponse), nil
+	}
+}
+
+type ShowFlavorDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFlavorDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowFlavorDetailInvoker) Invoke() (*model.ShowFlavorDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFlavorDetailResponse), nil
 	}
 }
 
@@ -690,6 +770,22 @@ func (i *ShowLogBackupInvoker) Invoke() (*model.ShowLogBackupResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowLogBackupResponse), nil
+	}
+}
+
+type ShowResizeFlavorsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowResizeFlavorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowResizeFlavorsInvoker) Invoke() (*model.ShowResizeFlavorsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowResizeFlavorsResponse), nil
 	}
 }
 
@@ -1077,6 +1173,22 @@ func (i *UpdatePublicBandWidthInvoker) Invoke() (*model.UpdatePublicBandWidthRes
 	}
 }
 
+type UpdateRouteInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateRouteInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateRouteInvoker) Invoke() (*model.UpdateRouteResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateRouteResponse), nil
+	}
+}
+
 type UpdateShrinkClusterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1333,6 +1445,22 @@ func (i *CreateCnfInvoker) Invoke() (*model.CreateCnfResponse, error) {
 	}
 }
 
+type DeleteCertsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCertsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteCertsInvoker) Invoke() (*model.DeleteCertsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCertsResponse), nil
+	}
+}
+
 type DeleteConfInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1461,6 +1589,38 @@ func (i *ListTemplatesInvoker) Invoke() (*model.ListTemplatesResponse, error) {
 	}
 }
 
+type RebootClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RebootClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RebootClusterInvoker) Invoke() (*model.RebootClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RebootClusterResponse), nil
+	}
+}
+
+type ShowCertsDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCertsDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowCertsDetailInvoker) Invoke() (*model.ShowCertsDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCertsDetailResponse), nil
+	}
+}
+
 type ShowGetConfDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1490,6 +1650,22 @@ func (i *StartConnectivityTestInvoker) Invoke() (*model.StartConnectivityTestRes
 		return nil, err
 	} else {
 		return result.(*model.StartConnectivityTestResponse), nil
+	}
+}
+
+type StartHotPipelineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartHotPipelineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StartHotPipelineInvoker) Invoke() (*model.StartHotPipelineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartHotPipelineResponse), nil
 	}
 }
 
@@ -1554,5 +1730,21 @@ func (i *UpdateCnfInvoker) Invoke() (*model.UpdateCnfResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateCnfResponse), nil
+	}
+}
+
+type UploadCertsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadCertsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UploadCertsInvoker) Invoke() (*model.UploadCertsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadCertsResponse), nil
 	}
 }

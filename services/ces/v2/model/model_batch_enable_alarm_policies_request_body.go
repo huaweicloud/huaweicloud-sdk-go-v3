@@ -13,9 +13,6 @@ type BatchEnableAlarmPoliciesRequestBody struct {
 
 	// 是否启用告警策略。true:开启，false：关闭。
 	Enabled bool `json:"enabled"`
-
-	// 告警中的策略全部被停用时是否保留策略信息。true:保留；false:删除。
-	RetainWhenAllDisabled *bool `json:"retain_when_all_disabled,omitempty"`
 }
 
 func (o BatchEnableAlarmPoliciesRequestBody) String() string {

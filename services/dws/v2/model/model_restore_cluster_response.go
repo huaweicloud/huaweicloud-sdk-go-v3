@@ -8,8 +8,11 @@ import (
 
 // RestoreClusterResponse Response Object
 type RestoreClusterResponse struct {
-	Cluster        *Cluster `json:"cluster,omitempty"`
-	HttpStatusCode int      `json:"-"`
+	Cluster *Cluster `json:"cluster,omitempty"`
+
+	// **参数解释**： 异步任务ID。 **取值范围**： 不涉及。
+	JobId          *string `json:"job_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RestoreClusterResponse) String() string {

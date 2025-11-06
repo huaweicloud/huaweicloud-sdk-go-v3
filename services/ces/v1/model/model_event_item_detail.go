@@ -12,34 +12,34 @@ import (
 // EventItemDetail
 type EventItemDetail struct {
 
-	// 事件内容，最大长度4096。
+	// **参数解释**： 事件内容 **约束限制**： 不涉及。 **取值范围**： 长度为[0,4096]个字符。 **默认取值**： 不涉及。
 	Content *string `json:"content,omitempty"`
 
-	// 所属分组。  资源分组对应的ID，必须传存在的分组ID。
+	// **参数解释**： 所属分组。 资源分组对应的ID，必须是已存在的分组ID。 分组ID查询方法： 1.登录管理控制台。 2.单击“云监控服务”。 3.单击页面左侧的“资源分组”。 在名称/ID列获取具体资源分组ID。 **约束限制**： 不涉及。 **取值范围**： 长度只能为24个字符。 **默认取值**： 不涉及。
 	GroupId *string `json:"group_id,omitempty"`
 
-	// 资源ID，支持字母、数字_ -：，最大长度128。
+	// **参数解释**： 资源ID。 资源ID的查询方法： 1.登录管理控制台。 2.单击“计算 > 弹性云服务器”。 在资源概览页可获取具体资源ID。 **约束限制**： 不涉及。 **取值范围**： 支持字母、数字支持字母、数字、下划线（_）、中划线（-）和冒号（:），最大长度128个字符。例如，6a69bf28-ee62-49f3-9785-845dacd799ec。 **默认取值**： 不涉及。
 	ResourceId *string `json:"resource_id,omitempty"`
 
-	// 资源名称，支持字母 中文 数字_ -. ，最大长度128。
+	// **参数解释**： 资源名称。 **约束限制**： 不涉及。 **取值范围**： 支持字母 中文 数字_ -. ，最大长度128个字符。 **默认取值**： 不涉及。
 	ResourceName *string `json:"resource_name,omitempty"`
 
-	// 事件状态。  枚举类型：normal\\warning\\incident
+	// **参数解释**： 事件状态。 **约束限制**： 不涉及。 **取值范围**： 枚举类型。 - normal：正常发生 - warning：异常 - incident：严重 **默认取值**： 不涉及。
 	EventState *EventItemDetailEventState `json:"event_state,omitempty"`
 
-	// 事件级别。  枚举类型：Critical, Major, Minor, Info
+	// **参数解释**： 事件级别。 **约束限制**： 不涉及。 **取值范围**： 枚举类型：Critical, Major, Minor, Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示 **默认取值**： 不涉及。
 	EventLevel *EventItemDetailEventLevel `json:"event_level,omitempty"`
 
-	// 事件用户。  支持字母 数字_ -/空格 ，最大长度64。
+	// **参数解释**： 事件用户。 **约束限制**： 不涉及。 **取值范围**： 支持字母 数字_ -/空格 ，长度为[0,64]个字符。 **默认取值**： 不涉及。
 	EventUser *string `json:"event_user,omitempty"`
 
-	// 事件类型。 枚举类型，EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，用户自已不能上报，只能传EVENT.CUSTOM。
-	EventType *string `json:"event_type,omitempty"`
+	// **参数解释**： 事件类型。 **约束限制**： EVENT.SYS为系统事件，用户自己不能上报系统事件，只能传EVENT.CUSTOM。 **取值范围**： 枚举类型，EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS：系统事件 - EVENT.CUSTOM：自定义事件 **默认取值**： 不涉及。
+	EventType *EventItemDetailEventType `json:"event_type,omitempty"`
 
-	// 事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
+	// **参数解释**： 事件子类。 **约束限制**： 不涉及。 **取值范围**： 枚举类型 - SUB_EVENT.OPS: 运维事件 - SUB_EVENT.PLAN: 计划事件 - SUB_EVENT.CUSTOM: 自定义事件 **默认取值**： 不涉及。
 	SubEventType *EventItemDetailSubEventType `json:"sub_event_type,omitempty"`
 
-	// 一个或者多个资源维度。
+	// **参数解释**： 事件的维度，根据维度描述资源信息。 用于指定资源、资源分组的事件告警场景中，支持按维度配置告警规则。 **约束限制**： 目前最大支持4个维度。
 	Dimensions *[]MetricsDimension `json:"dimensions,omitempty"`
 }
 
@@ -140,6 +140,53 @@ func (c EventItemDetailEventLevel) MarshalJSON() ([]byte, error) {
 }
 
 func (c *EventItemDetailEventLevel) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type EventItemDetailEventType struct {
+	value string
+}
+
+type EventItemDetailEventTypeEnum struct {
+	EVENT_SYS    EventItemDetailEventType
+	EVENT_CUSTOM EventItemDetailEventType
+}
+
+func GetEventItemDetailEventTypeEnum() EventItemDetailEventTypeEnum {
+	return EventItemDetailEventTypeEnum{
+		EVENT_SYS: EventItemDetailEventType{
+			value: "EVENT.SYS",
+		},
+		EVENT_CUSTOM: EventItemDetailEventType{
+			value: "EVENT.CUSTOM",
+		},
+	}
+}
+
+func (c EventItemDetailEventType) Value() string {
+	return c.value
+}
+
+func (c EventItemDetailEventType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *EventItemDetailEventType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

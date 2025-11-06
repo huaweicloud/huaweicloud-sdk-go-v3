@@ -17,8 +17,8 @@ type PromInstanceEpsModel struct {
 	// Prometheus实例id。
 	PromId *string `json:"prom_id,omitempty"`
 
-	// Prometheus实例类型（暂时不支持VPC、KUBERNETES）。
-	PromType PromInstanceEpsModelPromType `json:"prom_type"`
+	// Prometheus实例类型。  - default：默认普罗实例 - ECS：Prometheus for ECS - CCE：Prometheus for CCE - REMOTE_WRITE：Prometheus 通用实例 - CLOUD_SERVICE：Prometheus for 云服务 - ACROSS_ACCOUNT：Prometheus for 多账号聚合实例 （暂不支持ACROSS_ACCOUNT类型）
+	PromType string `json:"prom_type"`
 
 	// Prometheus实例版本号。
 	PromVersion *string `json:"prom_version,omitempty"`
@@ -48,6 +48,13 @@ type PromInstanceEpsModel struct {
 
 	// Prometheus实例所属CCE特殊配置。
 	CceSpecConfig *string `json:"cce_spec_config,omitempty"`
+
+	PromLimits *PromLimits `json:"prom_limits,omitempty"`
+
+	// 指标存储周期修改时间。
+	LimitsUpdateTime *int64 `json:"limits_update_time,omitempty"`
+
+	Application *ApplicationModel `json:"application,omitempty"`
 }
 
 func (o PromInstanceEpsModel) String() string {
@@ -57,77 +64,6 @@ func (o PromInstanceEpsModel) String() string {
 	}
 
 	return strings.Join([]string{"PromInstanceEpsModel", string(data)}, " ")
-}
-
-type PromInstanceEpsModelPromType struct {
-	value string
-}
-
-type PromInstanceEpsModelPromTypeEnum struct {
-	DEFAULT        PromInstanceEpsModelPromType
-	ECS            PromInstanceEpsModelPromType
-	VPC            PromInstanceEpsModelPromType
-	CCE            PromInstanceEpsModelPromType
-	REMOTE_WRITE   PromInstanceEpsModelPromType
-	KUBERNETES     PromInstanceEpsModelPromType
-	CLOUD_SERVICE  PromInstanceEpsModelPromType
-	ACROSS_ACCOUNT PromInstanceEpsModelPromType
-}
-
-func GetPromInstanceEpsModelPromTypeEnum() PromInstanceEpsModelPromTypeEnum {
-	return PromInstanceEpsModelPromTypeEnum{
-		DEFAULT: PromInstanceEpsModelPromType{
-			value: "default",
-		},
-		ECS: PromInstanceEpsModelPromType{
-			value: "ECS",
-		},
-		VPC: PromInstanceEpsModelPromType{
-			value: "VPC",
-		},
-		CCE: PromInstanceEpsModelPromType{
-			value: "CCE",
-		},
-		REMOTE_WRITE: PromInstanceEpsModelPromType{
-			value: "REMOTE_WRITE",
-		},
-		KUBERNETES: PromInstanceEpsModelPromType{
-			value: "KUBERNETES",
-		},
-		CLOUD_SERVICE: PromInstanceEpsModelPromType{
-			value: "CLOUD_SERVICE",
-		},
-		ACROSS_ACCOUNT: PromInstanceEpsModelPromType{
-			value: "ACROSS_ACCOUNT",
-		},
-	}
-}
-
-func (c PromInstanceEpsModelPromType) Value() string {
-	return c.value
-}
-
-func (c PromInstanceEpsModelPromType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *PromInstanceEpsModelPromType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }
 
 type PromInstanceEpsModelPromStatus struct {

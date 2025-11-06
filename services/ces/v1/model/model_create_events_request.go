@@ -10,7 +10,7 @@ import (
 type CreateEventsRequest struct {
 
 	// 上报自定义事件。请求参数。
-	Body *[]EventItem `json:"body,omitempty"`
+	Body *[]CreateEventsRequestBody `json:"body,omitempty"`
 }
 
 func (o CreateEventsRequest) String() string {

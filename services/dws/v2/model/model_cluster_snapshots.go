@@ -21,6 +21,9 @@ type ClusterSnapshots struct {
 	// **参数解释**： 快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
 	Started *string `json:"started,omitempty"`
 
+	// **参数解释**： 快照创建的结束时间，格式为：ISO8601: YYYY-MM-DDThh:mm:ssZ。 **取值范围**： 不涉及。
+	Finished *string `json:"finished,omitempty"`
+
 	// **参数解释**： 快照大小，单位 GB。 **取值范围**： 不涉及。
 	Size *float64 `json:"size,omitempty"`
 
@@ -90,6 +93,9 @@ type ClusterSnapshots struct {
 
 	// **参数解释**： 集群状态。 **取值范围**： 不涉及。
 	ClusterStatus *string `json:"cluster_status,omitempty"`
+
+	// **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
+	ClusterTaskStatus *string `json:"cluster_task_status,omitempty"`
 }
 
 func (o ClusterSnapshots) String() string {

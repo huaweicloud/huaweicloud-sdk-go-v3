@@ -105,6 +105,28 @@ func (c *CssClient) ChangeSecurityGroupInvoker(request *model.ChangeSecurityGrou
 	return &ChangeSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAgency 自动创建委托
+//
+// 当CSS预置委托不存在时，自动创建委托并赋予CSS依赖的权限。
+// 当CSS预置委托存在时，去除依赖的高风险权限，设置为最小化权限。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CssClient) CreateAgency(request *model.CreateAgencyRequest) (*model.CreateAgencyResponse, error) {
+	requestDef := GenReqDefForCreateAgency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAgencyResponse), nil
+	}
+}
+
+// CreateAgencyInvoker 自动创建委托
+func (c *CssClient) CreateAgencyInvoker(request *model.CreateAgencyRequest) *CreateAgencyInvoker {
+	requestDef := GenReqDefForCreateAgency()
+	return &CreateAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAiOps 创建一次集群检测任务
 //
 // 该接口用于创建一个集群检测任务。
@@ -611,6 +633,27 @@ func (c *CssClient) ListLogsJobInvoker(request *model.ListLogsJobRequest) *ListL
 	return &ListLogsJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListRoutes 获取集群路由
+//
+// 该接口用于获取集群路由。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CssClient) ListRoutes(request *model.ListRoutesRequest) (*model.ListRoutesResponse, error) {
+	requestDef := GenReqDefForListRoutes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRoutesResponse), nil
+	}
+}
+
+// ListRoutesInvoker 获取集群路由
+func (c *CssClient) ListRoutesInvoker(request *model.ListRoutesRequest) *ListRoutesInvoker {
+	requestDef := GenReqDefForListRoutes()
+	return &ListRoutesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSmnTopics 获取智能运维告警可用的SMN主题
 //
 // 该接口用于获取智能运维告警可用的SMN主题。
@@ -842,6 +885,48 @@ func (c *CssClient) ShowClusterTagInvoker(request *model.ShowClusterTagRequest) 
 	return &ShowClusterTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowClusterVolumeUsage 查询集群磁盘使用情况
+//
+// 查询集群磁盘使用情况
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CssClient) ShowClusterVolumeUsage(request *model.ShowClusterVolumeUsageRequest) (*model.ShowClusterVolumeUsageResponse, error) {
+	requestDef := GenReqDefForShowClusterVolumeUsage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowClusterVolumeUsageResponse), nil
+	}
+}
+
+// ShowClusterVolumeUsageInvoker 查询集群磁盘使用情况
+func (c *CssClient) ShowClusterVolumeUsageInvoker(request *model.ShowClusterVolumeUsageRequest) *ShowClusterVolumeUsageInvoker {
+	requestDef := GenReqDefForShowClusterVolumeUsage()
+	return &ShowClusterVolumeUsageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDataStoreFlavorDetail 查询指定引擎支持的规格。
+//
+// 查询指定引擎支持的规格。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CssClient) ShowDataStoreFlavorDetail(request *model.ShowDataStoreFlavorDetailRequest) (*model.ShowDataStoreFlavorDetailResponse, error) {
+	requestDef := GenReqDefForShowDataStoreFlavorDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDataStoreFlavorDetailResponse), nil
+	}
+}
+
+// ShowDataStoreFlavorDetailInvoker 查询指定引擎支持的规格。
+func (c *CssClient) ShowDataStoreFlavorDetailInvoker(request *model.ShowDataStoreFlavorDetailRequest) *ShowDataStoreFlavorDetailInvoker {
+	requestDef := GenReqDefForShowDataStoreFlavorDetail()
+	return &ShowDataStoreFlavorDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowElbDetail 获取集群的负载均衡器信息
 //
 // 该接口用于获取集群的负载均衡器信息。
@@ -861,6 +946,27 @@ func (c *CssClient) ShowElbDetail(request *model.ShowElbDetailRequest) (*model.S
 func (c *CssClient) ShowElbDetailInvoker(request *model.ShowElbDetailRequest) *ShowElbDetailInvoker {
 	requestDef := GenReqDefForShowElbDetail()
 	return &ShowElbDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFlavorDetail 查询规格详情
+//
+// 查询规格详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CssClient) ShowFlavorDetail(request *model.ShowFlavorDetailRequest) (*model.ShowFlavorDetailResponse, error) {
+	requestDef := GenReqDefForShowFlavorDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFlavorDetailResponse), nil
+	}
+}
+
+// ShowFlavorDetailInvoker 查询规格详情
+func (c *CssClient) ShowFlavorDetailInvoker(request *model.ShowFlavorDetailRequest) *ShowFlavorDetailInvoker {
+	requestDef := GenReqDefForShowFlavorDetail()
+	return &ShowFlavorDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowGetLogSetting 查询日志基础配置
@@ -924,6 +1030,27 @@ func (c *CssClient) ShowLogBackup(request *model.ShowLogBackupRequest) (*model.S
 func (c *CssClient) ShowLogBackupInvoker(request *model.ShowLogBackupRequest) *ShowLogBackupInvoker {
 	requestDef := GenReqDefForShowLogBackup()
 	return &ShowLogBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowResizeFlavors 查询指定集群的可变更规格列表
+//
+// 查询指定集群可以变更到哪些规格
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CssClient) ShowResizeFlavors(request *model.ShowResizeFlavorsRequest) (*model.ShowResizeFlavorsResponse, error) {
+	requestDef := GenReqDefForShowResizeFlavors()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowResizeFlavorsResponse), nil
+	}
+}
+
+// ShowResizeFlavorsInvoker 查询指定集群的可变更规格列表
+func (c *CssClient) ShowResizeFlavorsInvoker(request *model.ShowResizeFlavorsRequest) *ShowResizeFlavorsInvoker {
+	requestDef := GenReqDefForShowResizeFlavors()
+	return &ShowResizeFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowVpcepConnection 获取终端节点连接
@@ -1445,6 +1572,27 @@ func (c *CssClient) UpdatePublicBandWidthInvoker(request *model.UpdatePublicBand
 	return &UpdatePublicBandWidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateRoute 更新集群路由
+//
+// 该接口用于更新集群路由。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CssClient) UpdateRoute(request *model.UpdateRouteRequest) (*model.UpdateRouteResponse, error) {
+	requestDef := GenReqDefForUpdateRoute()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRouteResponse), nil
+	}
+}
+
+// UpdateRouteInvoker 更新集群路由
+func (c *CssClient) UpdateRouteInvoker(request *model.UpdateRouteRequest) *UpdateRouteInvoker {
+	requestDef := GenReqDefForUpdateRoute()
+	return &UpdateRouteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateShrinkCluster 指定节点类型缩容
 //
 // 该接口用于集群对不同类型实例的个数以及存储容量进行缩容。包周期类型的集群不支持通过api进行指定节点类型缩容操作。
@@ -1783,6 +1931,27 @@ func (c *CssClient) CreateCnfInvoker(request *model.CreateCnfRequest) *CreateCnf
 	return &CreateCnfInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteCerts 删除证书文件
+//
+// 该接口用于删除证书文件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CssClient) DeleteCerts(request *model.DeleteCertsRequest) (*model.DeleteCertsResponse, error) {
+	requestDef := GenReqDefForDeleteCerts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCertsResponse), nil
+	}
+}
+
+// DeleteCertsInvoker 删除证书文件
+func (c *CssClient) DeleteCertsInvoker(request *model.DeleteCertsRequest) *DeleteCertsInvoker {
+	requestDef := GenReqDefForDeleteCerts()
+	return &DeleteCertsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteConf 删除配置文件
 //
 // 删除配置文件。
@@ -1951,6 +2120,48 @@ func (c *CssClient) ListTemplatesInvoker(request *model.ListTemplatesRequest) *L
 	return &ListTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RebootCluster 强制重启集群VMs
+//
+// 重启过程中集群不可用，请谨慎操作。 工作中状态的集群，重启过程会主动停止logstash进程，管道列表“是否保持常驻”值为否，会将所有运行中管道状态置为已停止。“是否保持常驻”值为是，会触发logstash进程恢复机制，将工作中的管道状态置为恢复中，若十分钟内重新拉起logstash进程，管道状态恢复为工作中，否则置为失败状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CssClient) RebootCluster(request *model.RebootClusterRequest) (*model.RebootClusterResponse, error) {
+	requestDef := GenReqDefForRebootCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RebootClusterResponse), nil
+	}
+}
+
+// RebootClusterInvoker 强制重启集群VMs
+func (c *CssClient) RebootClusterInvoker(request *model.RebootClusterRequest) *RebootClusterInvoker {
+	requestDef := GenReqDefForRebootCluster()
+	return &RebootClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCertsDetail 查询证书文件信息
+//
+// 该接口用于查询证书文件信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CssClient) ShowCertsDetail(request *model.ShowCertsDetailRequest) (*model.ShowCertsDetailResponse, error) {
+	requestDef := GenReqDefForShowCertsDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCertsDetailResponse), nil
+	}
+}
+
+// ShowCertsDetailInvoker 查询证书文件信息
+func (c *CssClient) ShowCertsDetailInvoker(request *model.ShowCertsDetailRequest) *ShowCertsDetailInvoker {
+	requestDef := GenReqDefForShowCertsDetail()
+	return &ShowCertsDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowGetConfDetail 查询配置文件内容
 //
 // 该接口用于查询配置文件内容。
@@ -1991,6 +2202,27 @@ func (c *CssClient) StartConnectivityTest(request *model.StartConnectivityTestRe
 func (c *CssClient) StartConnectivityTestInvoker(request *model.StartConnectivityTestRequest) *StartConnectivityTestInvoker {
 	requestDef := GenReqDefForStartConnectivityTest()
 	return &StartConnectivityTestInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartHotPipeline 热启动pipeline迁移数据。
+//
+// 该接口用于热启动pipeline迁移数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CssClient) StartHotPipeline(request *model.StartHotPipelineRequest) (*model.StartHotPipelineResponse, error) {
+	requestDef := GenReqDefForStartHotPipeline()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartHotPipelineResponse), nil
+	}
+}
+
+// StartHotPipelineInvoker 热启动pipeline迁移数据。
+func (c *CssClient) StartHotPipelineInvoker(request *model.StartHotPipelineRequest) *StartHotPipelineInvoker {
+	requestDef := GenReqDefForStartHotPipeline()
+	return &StartHotPipelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // StartPipeline 启动pipeline迁移数据
@@ -2075,4 +2307,25 @@ func (c *CssClient) UpdateCnf(request *model.UpdateCnfRequest) (*model.UpdateCnf
 func (c *CssClient) UpdateCnfInvoker(request *model.UpdateCnfRequest) *UpdateCnfInvoker {
 	requestDef := GenReqDefForUpdateCnf()
 	return &UpdateCnfInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadCerts 上传证书文件
+//
+// 该接口用于上传证书文件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CssClient) UploadCerts(request *model.UploadCertsRequest) (*model.UploadCertsResponse, error) {
+	requestDef := GenReqDefForUploadCerts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadCertsResponse), nil
+	}
+}
+
+// UploadCertsInvoker 上传证书文件
+func (c *CssClient) UploadCertsInvoker(request *model.UploadCertsRequest) *UploadCertsInvoker {
+	requestDef := GenReqDefForUploadCerts()
+	return &UploadCertsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

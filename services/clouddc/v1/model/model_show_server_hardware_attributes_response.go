@@ -27,7 +27,10 @@ type ShowServerHardwareAttributesResponse struct {
 
 	// 存储控制器列表
 	StorageControllers *[]StorageController `json:"storage_controllers,omitempty"`
-	HttpStatusCode     int                  `json:"-"`
+
+	// **参数解释**： 监控指标信息 **约束限制**： 不涉及
+	Metrics        *[]HardwareMetric `json:"metrics,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o ShowServerHardwareAttributesResponse) String() string {

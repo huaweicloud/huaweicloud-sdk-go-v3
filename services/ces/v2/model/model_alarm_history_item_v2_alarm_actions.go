@@ -11,7 +11,7 @@ import (
 
 type AlarmHistoryItemV2AlarmActions struct {
 
-	// **参数解释**： 通知类型。 **取值范围**： 枚举值。notification为SMN通知，contact为云账号联系人，contactGroup为通知组。autoscaling为AS通知，只在AS中使用，不推荐客户使用。groupwatch、ecsRecovery及iecAction，已废弃，不推荐使用。
+	// **参数解释**： 通知类型。 **取值范围**： 枚举值。notification为通知组或者主题订阅，contact为云账号联系人，contactGroup为（已废弃）通知组。autoscaling为AS通知，只在AS中使用，不推荐客户使用。groupwatch、ecsRecovery及iecAction，已废弃，不推荐使用。
 	Type *AlarmHistoryItemV2AlarmActionsType `json:"type,omitempty"`
 
 	// **参数解释**： 告警状态发生变化时，被通知对象的列表。topicUrn可从SMN获取，具体操作请参考查询Topic列表。

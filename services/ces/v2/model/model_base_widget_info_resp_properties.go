@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// BaseWidgetInfoRespProperties **参数解释** 额外信息 **取值范围** 不涉及
+// BaseWidgetInfoRespProperties **参数解释** 额外信息
 type BaseWidgetInfoRespProperties struct {
 
 	// **参数解释** 聚合类型 **取值范围** 目前只有TopN这一种类型，折线图不支持该参数

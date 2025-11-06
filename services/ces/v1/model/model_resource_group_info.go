@@ -12,7 +12,7 @@ type ResourceGroupInfo struct {
 	// 资源分组的名称，如：ResourceGroup-Test01。
 	GroupName *string `json:"group_name,omitempty"`
 
-	// 资源分组添加资源方式，EPS：同步企业项目，TAG：标签动态匹配，空值：手动添加；
+	// 资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual/空值（手动添加）
 	Type *string `json:"type,omitempty"`
 
 	// 企业项目ID列表
@@ -26,8 +26,7 @@ type ResourceGroupInfo struct {
 
 	InstanceStatistics *InstanceStatistics `json:"instance_statistics,omitempty"`
 
-	// 资源分组的当前状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未设置告警规则。
-	Status *string `json:"status,omitempty"`
+	Status *StatusSchema `json:"status,omitempty"`
 
 	// 创建资源分组时关联的企业项目，默认值为0，表示企业项目为default。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`

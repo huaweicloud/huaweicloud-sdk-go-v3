@@ -15,13 +15,13 @@ type AlarmNotification struct {
 	// 通知类型。 - “direct”：直接告警 - “alarm_policy”：告警降噪
 	NotificationType AlarmNotificationNotificationType `json:"notification_type"`
 
-	// 启用分组规则。 - 当通知类型为“alarm_policy”时：true - 当通知类型为“direct”时：false
+	// 启用告警分组规则。 - 当通知类型为“alarm_policy”时：true - 当通知类型为“direct”时：false 如果告警触发“notify_triggered”或告警恢复“notify_resolved”都设置为false（即都不进行告警通知），则route_group_enable需设置为false。
 	RouteGroupEnable bool `json:"route_group_enable"`
 
-	// 分组规则名称。 - 当route_group_enable 为true时，填分组规则名称 - 当route_group_enable 为false时，填“”
+	// 告警分组规则名称。 - 当route_group_enable 为true时，填告警分组规则名称 - 当route_group_enable 为false时，填“”
 	RouteGroupRule string `json:"route_group_rule"`
 
-	// 是否启用告警行动规则。 - 当通知类型为“direct”时，填true - 当通知类型为“alarm_policy”时，填false
+	// 是否启用告警通知规则。 - 当通知类型为“direct”时，填true - 当通知类型为“alarm_policy”时，填false 如果告警触发“notify_triggered”或告警恢复“notify_resolved”都设置为false（即都不进行告警通知），则notification_enable需设置为false。
 	NotificationEnable *bool `json:"notification_enable,omitempty"`
 
 	// 告警行动策略id。 - 当notification_enable为true时，填告警行动策略id - 当notification_enable为false时，填“”

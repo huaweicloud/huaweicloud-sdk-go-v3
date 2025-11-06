@@ -37,7 +37,7 @@ type Drive struct {
 	SasAddress *string `json:"sas_address,omitempty"`
 
 	// 容量（单位：byte）
-	CapacityBytes *int32 `json:"capacity_bytes,omitempty"`
+	CapacityBytes *int64 `json:"capacity_bytes,omitempty"`
 
 	// 驱动器接口的最大速率（单位：Gbps）
 	CapableSpeedGbs *int32 `json:"capable_speed_gbs,omitempty"`

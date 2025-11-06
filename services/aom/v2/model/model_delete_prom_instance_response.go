@@ -8,8 +8,8 @@ import (
 
 // DeletePromInstanceResponse Response Object
 type DeletePromInstanceResponse struct {
-	Body           *string `json:"body,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Body           map[string]bool `json:"body,omitempty"`
+	HttpStatusCode int             `json:"-"`
 }
 
 func (o DeletePromInstanceResponse) String() string {

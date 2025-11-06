@@ -15,8 +15,8 @@ type EventInfo struct {
 	// 事件名称。
 	EventName *string `json:"event_name,omitempty"`
 
-	// 事件类型。
-	EventType *string `json:"event_type,omitempty"`
+	// 枚举类型 EVENT.SYS或EVENT.CUSTOM，EVENT.SYS为系统事件，EVENT.CUSTOM为自定义事件
+	EventType *EventInfoEventType `json:"event_type,omitempty"`
 
 	// 事件子类。 枚举类型：SUB_EVENT.OPS为运维事件，SUB_EVENT.PLAN为计划事件，SUB_EVENT.CUSTOM为自定义事件。
 	SubEventType *EventInfoSubEventType `json:"sub_event_type,omitempty"`
@@ -27,7 +27,7 @@ type EventInfo struct {
 	// 此事件最近一次发生的时间。
 	LatestOccurTime *int64 `json:"latest_occur_time,omitempty"`
 
-	// 事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”；如果是自定义事件，则为用户自定义上报定义。
+	// 事件来源，如果是系统事件则值为各服务的命名空间，各服务的命名空间可查看：“[服务命名空间](ces_03_0059.xml)”；如果是自定义事件，则为用户自定义上报定义。
 	LatestEventSource *string `json:"latest_event_source,omitempty"`
 }
 
@@ -38,6 +38,53 @@ func (o EventInfo) String() string {
 	}
 
 	return strings.Join([]string{"EventInfo", string(data)}, " ")
+}
+
+type EventInfoEventType struct {
+	value string
+}
+
+type EventInfoEventTypeEnum struct {
+	EVENT_SYS    EventInfoEventType
+	EVENT_CUSTOM EventInfoEventType
+}
+
+func GetEventInfoEventTypeEnum() EventInfoEventTypeEnum {
+	return EventInfoEventTypeEnum{
+		EVENT_SYS: EventInfoEventType{
+			value: "EVENT.SYS",
+		},
+		EVENT_CUSTOM: EventInfoEventType{
+			value: "EVENT.CUSTOM",
+		},
+	}
+}
+
+func (c EventInfoEventType) Value() string {
+	return c.value
+}
+
+func (c EventInfoEventType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *EventInfoEventType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type EventInfoSubEventType struct {

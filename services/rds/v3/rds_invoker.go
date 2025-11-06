@@ -597,6 +597,22 @@ func (i *ListAuditlogsInvoker) Invoke() (*model.ListAuditlogsResponse, error) {
 	}
 }
 
+type ListAutoScalingPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAutoScalingPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAutoScalingPolicyInvoker) Invoke() (*model.ListAutoScalingPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAutoScalingPolicyResponse), nil
+	}
+}
+
 type ListBackupTransfersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3685,6 +3701,22 @@ func (i *UpdateReadWeightInvoker) Invoke() (*model.UpdateReadWeightResponse, err
 	}
 }
 
+type CreateIntelligentKillSessionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateIntelligentKillSessionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateIntelligentKillSessionInvoker) Invoke() (*model.CreateIntelligentKillSessionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateIntelligentKillSessionResponse), nil
+	}
+}
+
 type GetInstancesNoIndexTablesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3698,6 +3730,22 @@ func (i *GetInstancesNoIndexTablesInvoker) Invoke() (*model.GetInstancesNoIndexT
 		return nil, err
 	} else {
 		return result.(*model.GetInstancesNoIndexTablesResponse), nil
+	}
+}
+
+type ShowIntelligentKillSessionHistoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIntelligentKillSessionHistoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowIntelligentKillSessionHistoryInvoker) Invoke() (*model.ShowIntelligentKillSessionHistoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIntelligentKillSessionHistoryResponse), nil
 	}
 }
 

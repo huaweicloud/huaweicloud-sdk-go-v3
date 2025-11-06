@@ -20,6 +20,9 @@ type HardwareSummary struct {
 
 	// 主板厂商
 	MainBoardManufacturer *string `json:"main_board_manufacturer,omitempty"`
+
+	// 主板序列号
+	MainBoardSerialNumber *string `json:"main_board_serial_number,omitempty"`
 }
 
 func (o HardwareSummary) String() string {

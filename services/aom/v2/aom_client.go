@@ -126,7 +126,7 @@ func (c *AomClient) AddMuteRulesInvoker(request *model.AddMuteRulesRequest) *Add
 
 // AddOrUpdateMetricOrEventAlarmRule 添加或修改指标类或事件类告警规则
 //
-// 添加或修改AOM2.0指标类或事件类告警规则。(注：接口目前开放的region为：华东-上海一)
+// 添加或修改AOM2.0指标类或事件类告警规则。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) AddOrUpdateMetricOrEventAlarmRule(request *model.AddOrUpdateMetricOrEventAlarmRuleRequest) (*model.AddOrUpdateMetricOrEventAlarmRuleResponse, error) {
@@ -208,6 +208,27 @@ func (c *AomClient) CountEventsInvoker(request *model.CountEventsRequest) *Count
 	return &CountEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateNotificationTemplate 新增消息通知模板
+//
+// 该接口用于新增消息通知模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AomClient) CreateNotificationTemplate(request *model.CreateNotificationTemplateRequest) (*model.CreateNotificationTemplateResponse, error) {
+	requestDef := GenReqDefForCreateNotificationTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateNotificationTemplateResponse), nil
+	}
+}
+
+// CreateNotificationTemplateInvoker 新增消息通知模板
+func (c *AomClient) CreateNotificationTemplateInvoker(request *model.CreateNotificationTemplateRequest) *CreateNotificationTemplateInvoker {
+	requestDef := GenReqDefForCreateNotificationTemplate()
+	return &CreateNotificationTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteActionRule 删除告警行动规则
 //
 // 删除告警行动规则。
@@ -250,6 +271,27 @@ func (c *AomClient) DeleteAlarmRuleInvoker(request *model.DeleteAlarmRuleRequest
 	return &DeleteAlarmRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteAlarmRuleTemplate 删除告警模板
+//
+// 该接口用于删除告警模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AomClient) DeleteAlarmRuleTemplate(request *model.DeleteAlarmRuleTemplateRequest) (*model.DeleteAlarmRuleTemplateResponse, error) {
+	requestDef := GenReqDefForDeleteAlarmRuleTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAlarmRuleTemplateResponse), nil
+	}
+}
+
+// DeleteAlarmRuleTemplateInvoker 删除告警模板
+func (c *AomClient) DeleteAlarmRuleTemplateInvoker(request *model.DeleteAlarmRuleTemplateRequest) *DeleteAlarmRuleTemplateInvoker {
+	requestDef := GenReqDefForDeleteAlarmRuleTemplate()
+	return &DeleteAlarmRuleTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteAlarmRules 批量删除阈值规则
 //
 // 该接口用于批量删除阈值规则
@@ -269,6 +311,48 @@ func (c *AomClient) DeleteAlarmRules(request *model.DeleteAlarmRulesRequest) (*m
 func (c *AomClient) DeleteAlarmRulesInvoker(request *model.DeleteAlarmRulesRequest) *DeleteAlarmRulesInvoker {
 	requestDef := GenReqDefForDeleteAlarmRules()
 	return &DeleteAlarmRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDashboard 删除仪表盘
+//
+// 该接口用于删除仪表盘。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AomClient) DeleteDashboard(request *model.DeleteDashboardRequest) (*model.DeleteDashboardResponse, error) {
+	requestDef := GenReqDefForDeleteDashboard()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDashboardResponse), nil
+	}
+}
+
+// DeleteDashboardInvoker 删除仪表盘
+func (c *AomClient) DeleteDashboardInvoker(request *model.DeleteDashboardRequest) *DeleteDashboardInvoker {
+	requestDef := GenReqDefForDeleteDashboard()
+	return &DeleteDashboardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDashboardsFolder 删除仪表盘分组
+//
+// 该接口用于删除仪表盘分组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AomClient) DeleteDashboardsFolder(request *model.DeleteDashboardsFolderRequest) (*model.DeleteDashboardsFolderResponse, error) {
+	requestDef := GenReqDefForDeleteDashboardsFolder()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDashboardsFolderResponse), nil
+	}
+}
+
+// DeleteDashboardsFolderInvoker 删除仪表盘分组
+func (c *AomClient) DeleteDashboardsFolderInvoker(request *model.DeleteDashboardsFolderRequest) *DeleteDashboardsFolderInvoker {
+	requestDef := GenReqDefForDeleteDashboardsFolder()
+	return &DeleteDashboardsFolderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteEvent2alarmRule 删除事件类告警规则
@@ -294,7 +378,7 @@ func (c *AomClient) DeleteEvent2alarmRuleInvoker(request *model.DeleteEvent2alar
 
 // DeleteMetricOrEventAlarmRule 删除指标类或事件类告警规则
 //
-// 删除AOM2.0指标类或事件类告警规则。(注：接口目前开放的region为：华东-上海一)
+// 删除AOM2.0指标类或事件类告警规则。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) DeleteMetricOrEventAlarmRule(request *model.DeleteMetricOrEventAlarmRuleRequest) (*model.DeleteMetricOrEventAlarmRuleResponse, error) {
@@ -332,6 +416,27 @@ func (c *AomClient) DeleteMuteRules(request *model.DeleteMuteRulesRequest) (*mod
 func (c *AomClient) DeleteMuteRulesInvoker(request *model.DeleteMuteRulesRequest) *DeleteMuteRulesInvoker {
 	requestDef := GenReqDefForDeleteMuteRules()
 	return &DeleteMuteRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteNotificationTemplate 删除消息通知模板
+//
+// 该接口用于删除消息通知模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AomClient) DeleteNotificationTemplate(request *model.DeleteNotificationTemplateRequest) (*model.DeleteNotificationTemplateResponse, error) {
+	requestDef := GenReqDefForDeleteNotificationTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteNotificationTemplateResponse), nil
+	}
+}
+
+// DeleteNotificationTemplateInvoker 删除消息通知模板
+func (c *AomClient) DeleteNotificationTemplateInvoker(request *model.DeleteNotificationTemplateRequest) *DeleteNotificationTemplateInvoker {
+	requestDef := GenReqDefForDeleteNotificationTemplate()
+	return &DeleteNotificationTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteserviceDiscoveryRules 删除服务发现规则
@@ -416,6 +521,69 @@ func (c *AomClient) ListAlarmRule(request *model.ListAlarmRuleRequest) (*model.L
 func (c *AomClient) ListAlarmRuleInvoker(request *model.ListAlarmRuleRequest) *ListAlarmRuleInvoker {
 	requestDef := GenReqDefForListAlarmRule()
 	return &ListAlarmRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAlarmRuleTemplate 查询告警模板列表
+//
+// 该接口用于查询告警模板列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AomClient) ListAlarmRuleTemplate(request *model.ListAlarmRuleTemplateRequest) (*model.ListAlarmRuleTemplateResponse, error) {
+	requestDef := GenReqDefForListAlarmRuleTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAlarmRuleTemplateResponse), nil
+	}
+}
+
+// ListAlarmRuleTemplateInvoker 查询告警模板列表
+func (c *AomClient) ListAlarmRuleTemplateInvoker(request *model.ListAlarmRuleTemplateRequest) *ListAlarmRuleTemplateInvoker {
+	requestDef := GenReqDefForListAlarmRuleTemplate()
+	return &ListAlarmRuleTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDashBoards 查询仪表盘列表
+//
+// 该接口用于查询仪表盘列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AomClient) ListDashBoards(request *model.ListDashBoardsRequest) (*model.ListDashBoardsResponse, error) {
+	requestDef := GenReqDefForListDashBoards()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDashBoardsResponse), nil
+	}
+}
+
+// ListDashBoardsInvoker 查询仪表盘列表
+func (c *AomClient) ListDashBoardsInvoker(request *model.ListDashBoardsRequest) *ListDashBoardsInvoker {
+	requestDef := GenReqDefForListDashBoards()
+	return &ListDashBoardsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDashboardsFolder 查询仪表盘分组列表
+//
+// 该接口用于查询仪表盘分组列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AomClient) ListDashboardsFolder(request *model.ListDashboardsFolderRequest) (*model.ListDashboardsFolderResponse, error) {
+	requestDef := GenReqDefForListDashboardsFolder()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDashboardsFolderResponse), nil
+	}
+}
+
+// ListDashboardsFolderInvoker 查询仪表盘分组列表
+func (c *AomClient) ListDashboardsFolderInvoker(request *model.ListDashboardsFolderRequest) *ListDashboardsFolderInvoker {
+	requestDef := GenReqDefForListDashboardsFolder()
+	return &ListDashboardsFolderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListEvent2alarmRule 查询事件类告警规则列表
@@ -504,7 +672,7 @@ func (c *AomClient) ListMetricItemsInvoker(request *model.ListMetricItemsRequest
 
 // ListMetricOrEventAlarmRule 查询指标类或者事件类告警规则列表
 //
-// 查询AOM2.0指标类或者事件类告警规则列表。(注：接口目前开放的region为：华东-上海一)
+// 查询AOM2.0指标类或者事件类告警规则列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) ListMetricOrEventAlarmRule(request *model.ListMetricOrEventAlarmRuleRequest) (*model.ListMetricOrEventAlarmRuleResponse, error) {
@@ -542,6 +710,48 @@ func (c *AomClient) ListMuteRule(request *model.ListMuteRuleRequest) (*model.Lis
 func (c *AomClient) ListMuteRuleInvoker(request *model.ListMuteRuleRequest) *ListMuteRuleInvoker {
 	requestDef := GenReqDefForListMuteRule()
 	return &ListMuteRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNotificationTemplateByName 根据消息通知模板名称查询消息通知模板
+//
+// 该接口用于根据消息通知模板名称查询消息通知模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AomClient) ListNotificationTemplateByName(request *model.ListNotificationTemplateByNameRequest) (*model.ListNotificationTemplateByNameResponse, error) {
+	requestDef := GenReqDefForListNotificationTemplateByName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNotificationTemplateByNameResponse), nil
+	}
+}
+
+// ListNotificationTemplateByNameInvoker 根据消息通知模板名称查询消息通知模板
+func (c *AomClient) ListNotificationTemplateByNameInvoker(request *model.ListNotificationTemplateByNameRequest) *ListNotificationTemplateByNameInvoker {
+	requestDef := GenReqDefForListNotificationTemplateByName()
+	return &ListNotificationTemplateByNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNotificationTemplates 查询消息通知模板列表
+//
+// 该接口用于查询消息通知模板列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AomClient) ListNotificationTemplates(request *model.ListNotificationTemplatesRequest) (*model.ListNotificationTemplatesResponse, error) {
+	requestDef := GenReqDefForListNotificationTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNotificationTemplatesResponse), nil
+	}
+}
+
+// ListNotificationTemplatesInvoker 查询消息通知模板列表
+func (c *AomClient) ListNotificationTemplatesInvoker(request *model.ListNotificationTemplatesRequest) *ListNotificationTemplatesInvoker {
+	requestDef := GenReqDefForListNotificationTemplates()
+	return &ListNotificationTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListNotifiedHistories 获取告警发送结果
@@ -649,9 +859,9 @@ func (c *AomClient) ListServiceDiscoveryRulesInvoker(request *model.ListServiceD
 	return &ListServiceDiscoveryRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// PushEvents 上报事件告警信息
+// PushEvents 上报事件或告警信息
 //
-// 该接口用于上报对应用户的事件、告警。
+// 该接口用于上报事件或告警至AOM，同时支持清除告警信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AomClient) PushEvents(request *model.PushEventsRequest) (*model.PushEventsResponse, error) {
@@ -664,7 +874,7 @@ func (c *AomClient) PushEvents(request *model.PushEventsRequest) (*model.PushEve
 	}
 }
 
-// PushEventsInvoker 上报事件告警信息
+// PushEventsInvoker 上报事件或告警信息
 func (c *AomClient) PushEventsInvoker(request *model.PushEventsRequest) *PushEventsInvoker {
 	requestDef := GenReqDefForPushEvents()
 	return &PushEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -710,6 +920,27 @@ func (c *AomClient) ShowAlarmRule(request *model.ShowAlarmRuleRequest) (*model.S
 func (c *AomClient) ShowAlarmRuleInvoker(request *model.ShowAlarmRuleRequest) *ShowAlarmRuleInvoker {
 	requestDef := GenReqDefForShowAlarmRule()
 	return &ShowAlarmRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDashBoard 查询仪表盘详情
+//
+// 该接口用于查询仪表盘详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AomClient) ShowDashBoard(request *model.ShowDashBoardRequest) (*model.ShowDashBoardResponse, error) {
+	requestDef := GenReqDefForShowDashBoard()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDashBoardResponse), nil
+	}
+}
+
+// ShowDashBoardInvoker 查询仪表盘详情
+func (c *AomClient) ShowDashBoardInvoker(request *model.ShowDashBoardRequest) *ShowDashBoardInvoker {
+	requestDef := GenReqDefForShowDashBoard()
+	return &ShowDashBoardInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowMetricsData 查询监控数据
@@ -815,6 +1046,27 @@ func (c *AomClient) UpdateMuteRule(request *model.UpdateMuteRuleRequest) (*model
 func (c *AomClient) UpdateMuteRuleInvoker(request *model.UpdateMuteRuleRequest) *UpdateMuteRuleInvoker {
 	requestDef := GenReqDefForUpdateMuteRule()
 	return &UpdateMuteRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateNotificationTemplate 修改消息通知模板
+//
+// 该接口用于修改消息通知模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AomClient) UpdateNotificationTemplate(request *model.UpdateNotificationTemplateRequest) (*model.UpdateNotificationTemplateResponse, error) {
+	requestDef := GenReqDefForUpdateNotificationTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateNotificationTemplateResponse), nil
+	}
+}
+
+// UpdateNotificationTemplateInvoker 修改消息通知模板
+func (c *AomClient) UpdateNotificationTemplateInvoker(request *model.UpdateNotificationTemplateRequest) *UpdateNotificationTemplateInvoker {
+	requestDef := GenReqDefForUpdateNotificationTemplate()
+	return &UpdateNotificationTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreatePromInstance 新增Prometheus实例
@@ -1088,4 +1340,25 @@ func (c *AomClient) ListRangeQueryAomPromPost(request *model.ListRangeQueryAomPr
 func (c *AomClient) ListRangeQueryAomPromPostInvoker(request *model.ListRangeQueryAomPromPostRequest) *ListRangeQueryAomPromPostInvoker {
 	requestDef := GenReqDefForListRangeQueryAomPromPost()
 	return &ListRangeQueryAomPromPostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePromInstance 修改Prometheus实例
+//
+// 该接口用于修改Prometheus实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AomClient) UpdatePromInstance(request *model.UpdatePromInstanceRequest) (*model.UpdatePromInstanceResponse, error) {
+	requestDef := GenReqDefForUpdatePromInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePromInstanceResponse), nil
+	}
+}
+
+// UpdatePromInstanceInvoker 修改Prometheus实例
+func (c *AomClient) UpdatePromInstanceInvoker(request *model.UpdatePromInstanceRequest) *UpdatePromInstanceInvoker {
+	requestDef := GenReqDefForUpdatePromInstance()
+	return &UpdatePromInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

@@ -9,11 +9,11 @@ import (
 // ListAlarmHistoriesResponse Response Object
 type ListAlarmHistoriesResponse struct {
 
-	// 一条或者多条告警历史详细信息
-	AlarmHistories *[]AlarmHistoryInfo `json:"alarm_histories,omitempty"`
+	// **参数解释**： 一条或者多条告警历史详细信息
+	AlarmHistories *[]AlarmHistoryInfoResp `json:"alarm_histories,omitempty"`
 
-	MetaData       *MetaDataForAlarmHistory `json:"meta_data,omitempty"`
-	HttpStatusCode int                      `json:"-"`
+	MetaData       *MetaDataForAlarmHistoryResp `json:"meta_data,omitempty"`
+	HttpStatusCode int                          `json:"-"`
 }
 
 func (o ListAlarmHistoriesResponse) String() string {

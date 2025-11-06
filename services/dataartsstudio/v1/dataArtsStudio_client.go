@@ -3679,6 +3679,27 @@ func (c *DataArtsStudioClient) ListFactoryAlarmInfoInvoker(request *model.ListFa
 	return &ListFactoryAlarmInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListFactoryAlarmRules 查询通知规则列表
+//
+// 查询通知规则列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListFactoryAlarmRules(request *model.ListFactoryAlarmRulesRequest) (*model.ListFactoryAlarmRulesResponse, error) {
+	requestDef := GenReqDefForListFactoryAlarmRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFactoryAlarmRulesResponse), nil
+	}
+}
+
+// ListFactoryAlarmRulesInvoker 查询通知规则列表
+func (c *DataArtsStudioClient) ListFactoryAlarmRulesInvoker(request *model.ListFactoryAlarmRulesRequest) *ListFactoryAlarmRulesInvoker {
+	requestDef := GenReqDefForListFactoryAlarmRules()
+	return &ListFactoryAlarmRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListFactoryJobInstancesByName 查询指定作业的实例列表
 //
 // 查询指定作业的实例列表

@@ -34,6 +34,9 @@ type Restore struct {
 
 	// **参数解释**： 指定网络协议类型，表明是否支持IPv6，默认不使用IPv6。 **取值范围**： 不涉及。
 	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
+
+	// **参数解释**： CN部署量。取值范围为3~集群节点数，最大值为20，默认值为3。 **取值范围**： 不涉及。
+	NumberOfCn *int32 `json:"number_of_cn,omitempty"`
 }
 
 func (o Restore) String() string {

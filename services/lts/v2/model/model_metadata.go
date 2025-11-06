@@ -33,13 +33,13 @@ type Metadata struct {
 	LtsAlarmType string `json:"lts_alarm_type"`
 
 	// 日志组原始名称
-	LogGroupName *string `json:"log_group_name,omitempty"`
+	LogGroupName string `json:"log_group_name"`
 
 	// 日志流原始名称
-	LogStreamName *string `json:"log_stream_name,omitempty"`
+	LogStreamName string `json:"log_stream_name"`
 
 	// **参数解释：** 告警类型。 **取值范围：** - sql： sql告警 - keywords：关键词告警
-	EventSubtype *string `json:"event_subtype,omitempty"`
+	EventSubtype string `json:"event_subtype"`
 }
 
 func (o Metadata) String() string {

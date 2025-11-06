@@ -15,10 +15,10 @@ type AlarmTemplate struct {
 	// 自定义告警模板描述。
 	TemplateDescription *string `json:"template_description,omitempty"`
 
-	// 自定义告警模板选择的资源类型，即服务命名空间，如：选择弹性云服务器，则命名空间为SYS.ECS，各资源的监控指标名称可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+	// 自定义告警模板选择的资源类型，即服务命名空间，如：选择弹性云服务器，则命名空间为SYS.ECS，可查看各资源的“[服务命名空间](ces_03_0059.xml)”。
 	Namespace *string `json:"namespace,omitempty"`
 
-	// 自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各服务资源的指标维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+	// 自定义告警模板选择的资源维度，如：弹性云服务器，则维度为instance_id，各服务资源的指标维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。
 	DimensionName *string `json:"dimension_name,omitempty"`
 
 	// 自定义告警模板添加的一组或者多个告警策略。

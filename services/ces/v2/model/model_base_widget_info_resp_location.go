@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// BaseWidgetInfoRespLocation **参数解释** 监控视图图表坐标              **取值范围** 不涉及
+// BaseWidgetInfoRespLocation **参数解释** 监控视图图表坐标
 type BaseWidgetInfoRespLocation struct {
 
 	// **参数解释** 监控视图的上坐标              **取值范围** 最小值为0，最大值为2147483647

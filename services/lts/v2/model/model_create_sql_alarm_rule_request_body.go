@@ -31,13 +31,8 @@ type CreateSqlAlarmRuleRequestBody struct {
 	// 告警级别
 	SqlAlarmLevel CreateSqlAlarmRuleRequestBodySqlAlarmLevel `json:"sql_alarm_level"`
 
-	// 是否发送
-	SqlAlarmSend bool `json:"sql_alarm_send"`
-
 	// domainId
 	DomainId string `json:"domain_id"`
-
-	NotificationSaveRule *SqlNotificationSaveRule `json:"notification_save_rule,omitempty"`
 
 	// 触发条件：触发次数;默认为1
 	TriggerConditionCount *int32 `json:"trigger_condition_count,omitempty"`
@@ -56,6 +51,9 @@ type CreateSqlAlarmRuleRequestBody struct {
 
 	// 告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
 	AlarmActionRuleName *string `json:"alarm_action_rule_name,omitempty"`
+
+	// **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。 **约束限制：** 不涉及。
+	Tags *[]TagsRequestBody `json:"tags,omitempty"`
 }
 
 func (o CreateSqlAlarmRuleRequestBody) String() string {

@@ -11,13 +11,13 @@ import (
 
 type ExtensionInfo struct {
 
-	// **参数解释**: 插件名称 **取值范围**: 数组长度为[1,64]
+	// **参数解释**: 插件名称 **取值范围**: 长度为[1,64]个字符
 	Name *string `json:"name,omitempty"`
 
 	// **参数解释**:  插件状态 **取值范围**: - none: 未安装 - running: 运行中 - stopped: 已停止 - fault: 故障（进程异常） - unknown: 故障（连接异常）
 	Status *ExtensionInfoStatus `json:"status,omitempty"`
 
-	// **参数解释**: 插件版本 **取值范围**: 数组长度为[1,32]
+	// **参数解释**: 插件版本 **取值范围**: 长度为[1,32]个字符
 	Version *string `json:"version,omitempty"`
 }
 

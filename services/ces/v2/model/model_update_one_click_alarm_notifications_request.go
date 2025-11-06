@@ -9,7 +9,7 @@ import (
 // UpdateOneClickAlarmNotificationsRequest Request Object
 type UpdateOneClickAlarmNotificationsRequest struct {
 
-	// 一键告警ID
+	// **参数解释**： 一键告警ID **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。
 	OneClickAlarmId string `json:"one_click_alarm_id"`
 
 	Body *UpdateOneClickAlarmNotificationsRequestBody `json:"body,omitempty"`

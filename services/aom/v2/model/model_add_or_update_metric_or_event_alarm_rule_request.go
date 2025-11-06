@@ -12,7 +12,7 @@ type AddOrUpdateMetricOrEventAlarmRuleRequest struct {
 	// 告警规则id。 - 新增告警时，填写\"add-alarm-action\" - 更新告警时，填写“update-alarm-action”
 	ActionId string `json:"action_id"`
 
-	// 企业项目id。 - 查询单个企业项目下实例，填写企业项目id。  - 查询所有企业项目下实例，填写“all_granted_eps”。
+	// 企业项目id。获取方式请参见：[获取企业项目ID](aom_04_0024.xml) 。 - 查询单个企业项目下实例，填写企业项目id。  - 查询所有企业项目下实例，填写“all_granted_eps”。
 	EnterpriseProjectId *string `json:"Enterprise-Project-Id,omitempty"`
 
 	Body *AddOrUpdateAlarmRuleV4RequestBody `json:"body,omitempty"`

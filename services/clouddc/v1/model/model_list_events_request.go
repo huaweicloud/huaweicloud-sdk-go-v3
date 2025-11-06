@@ -24,11 +24,11 @@ type ListEventsRequest struct {
 	// 告警资源ID
 	ResourceId *string `json:"resource_id,omitempty"`
 
-	// 查询开始时间，格式为时间戳（毫秒），默认查询从当前时间起三十天内的数据
-	From *string `json:"from,omitempty"`
+	// 查询开始时间，格式为时间戳（毫秒），from 必须小于 to，且查询时间范围最大不超过30天。
+	From string `json:"from"`
 
-	// 查询截止时间，格式为时间戳（毫秒），默认查询从当前时间起三十天内的数据
-	To *string `json:"to,omitempty"`
+	// 查询截止时间，格式为时间戳（毫秒），from 必须小于 to，且查询时间范围最大不超过30天。
+	To string `json:"to"`
 }
 
 func (o ListEventsRequest) String() string {

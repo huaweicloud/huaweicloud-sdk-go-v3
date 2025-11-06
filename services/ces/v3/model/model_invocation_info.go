@@ -23,10 +23,10 @@ type InvocationInfo struct {
 	// **参数解释**: 主机类型，仅支持ECS弹性云服务器和BMS裸金属服务器 **取值范围**: - ECS: 弹性云服务器 - BMS：裸金属服务器
 	InstanceType *InvocationInfoInstanceType `json:"instance_type,omitempty"`
 
-	// **参数解释**: 内网ip列表 **取值范围**: 返回数组长度为[0,10]，数组内元素格式为：长度为1到15个字符的字符串，其中每个字符可以是数字（0-9）或任意其他单个字符
+	// **参数解释**: 内网ip列表
 	IntranetIps *[]string `json:"intranet_ips,omitempty"`
 
-	// **参数解释**: 弹性公网ip列表 **取值范围**: 返回数组长度为[0,10]，数组内元素格式为：长度为1到15个字符的字符串，其中每个字符可以是数字（0-9）或任意其他单个字符
+	// **参数解释**: 弹性公网ip列表
 	ElasticIps *[]string `json:"elastic_ips,omitempty"`
 
 	// **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试

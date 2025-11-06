@@ -10,7 +10,7 @@ import (
 type TagsBody struct {
 
 	// 标签键
-	Key *string `json:"key,omitempty"`
+	Key string `json:"key"`
 
 	// 标签值
 	Value *string `json:"value,omitempty"`

@@ -37,16 +37,8 @@ type UpdateSqlAlarmRuleRequestBody struct {
 	// 告警级别
 	SqlAlarmLevel UpdateSqlAlarmRuleRequestBodySqlAlarmLevel `json:"sql_alarm_level"`
 
-	// 是否发送
-	SqlAlarmSend bool `json:"sql_alarm_send"`
-
-	// 发送主题 0:不变 1:新增 2:修改 3:删除
-	SqlAlarmSendCode UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode `json:"sql_alarm_send_code"`
-
 	// domainId
 	DomainId string `json:"domain_id"`
-
-	NotificationSaveRule *SqlNotificationSaveRule `json:"notification_save_rule,omitempty"`
 
 	// 触发条件：触发次数;默认为1
 	TriggerConditionCount *int32 `json:"trigger_condition_count,omitempty"`
@@ -65,6 +57,9 @@ type UpdateSqlAlarmRuleRequestBody struct {
 
 	// 告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
 	AlarmActionRuleName *string `json:"alarm_action_rule_name,omitempty"`
+
+	// **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。 **约束限制：** 不涉及。
+	Tags *[]TagsRequestBody `json:"tags,omitempty"`
 }
 
 func (o UpdateSqlAlarmRuleRequestBody) String() string {
@@ -128,58 +123,6 @@ func (c *UpdateSqlAlarmRuleRequestBodySqlAlarmLevel) UnmarshalJSON(b []byte) err
 		return nil
 	} else {
 		return errors.New("convert enum data to string error")
-	}
-}
-
-type UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode struct {
-	value int32
-}
-
-type UpdateSqlAlarmRuleRequestBodySqlAlarmSendCodeEnum struct {
-	E_0 UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode
-	E_1 UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode
-	E_2 UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode
-	E_3 UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode
-}
-
-func GetUpdateSqlAlarmRuleRequestBodySqlAlarmSendCodeEnum() UpdateSqlAlarmRuleRequestBodySqlAlarmSendCodeEnum {
-	return UpdateSqlAlarmRuleRequestBodySqlAlarmSendCodeEnum{
-		E_0: UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode{
-			value: 0,
-		}, E_1: UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode{
-			value: 1,
-		}, E_2: UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode{
-			value: 2,
-		}, E_3: UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode{
-			value: 3,
-		},
-	}
-}
-
-func (c UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode) Value() int32 {
-	return c.value
-}
-
-func (c UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *UpdateSqlAlarmRuleRequestBodySqlAlarmSendCode) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: int32")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(int32); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to int32 error")
 	}
 }
 

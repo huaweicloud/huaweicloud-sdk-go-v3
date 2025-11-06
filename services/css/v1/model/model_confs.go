@@ -21,6 +21,9 @@ type Confs struct {
 
 	// 更新时间。
 	UpdateAt *string `json:"updateAt,omitempty"`
+
+	// **参数解释**： 配置文件描述。 **取值范围**： 长度不超过128个字符。
+	Desc *string `json:"desc,omitempty"`
 }
 
 func (o Confs) String() string {

@@ -27,10 +27,10 @@ type ListEventsRequest struct {
 	// 查询数据截止时间UNIX时间戳，单位毫秒。from必须小于to，例如：1606557500911。
 	To *int64 `json:"to,omitempty"`
 
-	// 分页起始值，类型为integer，默认值为0。
-	Start *int32 `json:"start,omitempty"`
+	// 分页起始值，默认值为0。
+	Start *string `json:"start,omitempty"`
 
-	// 单次查询的条数限制，取值范围(0,100]，默认值为100，用于限制结果数据条数。
+	// 单次查询的条数限制，取值范围[0,100]，默认值为100，用于限制结果数据条数。
 	Limit *int32 `json:"limit,omitempty"`
 }
 

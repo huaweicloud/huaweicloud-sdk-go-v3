@@ -43,7 +43,7 @@ type Policy struct {
 	// **参数解释**： 指标维度名称，各服务资源的指标维度名称可查看：“[服务维度名称](ces_03_0059.xml)”。产品层级规则需要增加namespace（服务命名空间）和dimension_name（服务维度名称），用于指明策略生效的资源归属。 **约束限制**： 不涉及。 **取值范围**： 目前最大支持4个维度。举例：单维度场景：instance_id；多维度场景：instance_id,disk           **默认取值**： 不涉及。
 	DimensionName *string `json:"dimension_name,omitempty"`
 
-	// **参数解释**: 告警策略是否生效。true：策略生效，false：策略无效。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+	// **参数解释**: 告警策略是否生效。 **约束限制**: 不涉及。 **取值范围**: 取值为true、false - true：策略生效 - false：策略无效 **默认取值**: 不涉及。
 	Enabled *bool `json:"enabled,omitempty"`
 }
 

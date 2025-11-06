@@ -2789,6 +2789,22 @@ func (i *ListFactoryAlarmInfoInvoker) Invoke() (*model.ListFactoryAlarmInfoRespo
 	}
 }
 
+type ListFactoryAlarmRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFactoryAlarmRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListFactoryAlarmRulesInvoker) Invoke() (*model.ListFactoryAlarmRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFactoryAlarmRulesResponse), nil
+	}
+}
+
 type ListFactoryJobInstancesByNameInvoker struct {
 	*invoker.BaseInvoker
 }

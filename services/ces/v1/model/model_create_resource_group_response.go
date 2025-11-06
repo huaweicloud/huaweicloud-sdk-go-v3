@@ -9,7 +9,7 @@ import (
 // CreateResourceGroupResponse Response Object
 type CreateResourceGroupResponse struct {
 
-	// 创建的资源分组ID，如：rg1606377637506DmVOENVyL。
+	// **参数解释** 资源分组ID，如：rg1606377637506DmVOENVyL **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
 	GroupId        *string `json:"group_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

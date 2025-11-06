@@ -17,16 +17,16 @@ type EventTriggerCondition struct {
 	// 触发方式： - “immediately”：立即触发 - “accumulative”：累计触发
 	TriggerType *EventTriggerConditionTriggerType `json:"trigger_type,omitempty"`
 
-	// 统计周期。单位为秒，例如 1小时 填“3600”，当trigger_type为“immediately”时 不填。
+	// 监控周期。单位为秒，例如 1小时 填“3600”，当trigger_type为“immediately”时 该参数为空，当trigger_type为“accumulative”时 该参数必填。 监控周期范围： 5分钟，20分钟，1小时，4小时，24小时。
 	AggregationWindow *int64 `json:"aggregation_window,omitempty"`
 
-	// 判断条件：“>”,“<”,“=”,“>=”,“<=”，当trigger_type为“immediately”时 不填。
+	// 判断条件：“>”,“<”,“=”,“>=”,“<=”，当trigger_type为“immediately”时 该参数为空。当trigger_type为“accumulative”时 该参数必填。
 	Operator *string `json:"operator,omitempty"`
 
-	// 键值对形式，键为告警级别，值为累计次数，当trigger_type为“immediately”时 值为空。
+	// 键值对形式，键为告警级别，值为累计次数，当trigger_type为“immediately”时 累计次数为1。当当trigger_type为“accumulative”时 累计次数范围为1~100 （如果trigger_conditions参数不为空，该参数必填）
 	Thresholds map[string]int32 `json:"thresholds,omitempty"`
 
-	// 事件类告警频率。当trigger_type为“immediately”时 不填。 - “0”：只告警一次 - “300”：每5分钟 - “600”：每10分钟： - “900”：每15分钟： - “1800”：每30分钟： - “3600”：每1小时： - “10800”：每3小时： - “21600”：每6小时： - “43200”：每12小时： - “86400”：每天：
+	// 事件类告警频率。当trigger_type为“immediately”时 值为-1。 - “-1”：N/A - “0”：只告警一次 - “300”：每5分钟 - “600”：每10分钟： - “900”：每15分钟： - “1800”：每30分钟： - “3600”：每1小时： - “10800”：每3小时： - “21600”：每6小时： - “43200”：每12小时： - “86400”：每天：
 	Frequency *string `json:"frequency,omitempty"`
 }
 

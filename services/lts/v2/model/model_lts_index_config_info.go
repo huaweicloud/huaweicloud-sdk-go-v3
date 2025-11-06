@@ -17,6 +17,9 @@ type LtsIndexConfigInfo struct {
 
 	// 日志流id
 	LogStreamId string `json:"logStreamId"`
+
+	// **参数解释：** 快速分析采样日志条数。 **约束限制：** 不涉及。 **取值范围：** 最小值：100000 最大值：10000000 **默认取值：** 100000
+	FastAnalysisSampleCount *int64 `json:"fastAnalysisSampleCount,omitempty"`
 }
 
 func (o LtsIndexConfigInfo) String() string {

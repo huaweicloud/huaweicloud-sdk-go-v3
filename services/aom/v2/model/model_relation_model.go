@@ -12,13 +12,13 @@ import (
 // RelationModel 查询条件。
 type RelationModel struct {
 
-	// 指定查询字段的key，对应metadata里面的key 。
-	Key *string `json:"key,omitempty"`
+	// 指定查询字段的key，对应metadata里面的key 。当metadata_relation参数不为空时 key参数必填。
+	Key string `json:"key"`
 
 	// 查询条件中指定key的值。
 	Value *[]string `json:"value,omitempty"`
 
-	// 该条件与其他条件的组合方式。 AND：必须满足所有条件； OR：可以满足其中一个条件； NOT：必须不满足所有条件。
+	// 该条件与其他条件的组合方式。  - AND：必须满足所有条件。 -  OR：可以满足其中一个条件。 -  NOT：必须不满足所有条件。
 	Relation *RelationModelRelation `json:"relation,omitempty"`
 }
 

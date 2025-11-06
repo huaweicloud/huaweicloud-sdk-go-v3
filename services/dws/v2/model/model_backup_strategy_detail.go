@@ -32,6 +32,15 @@ type BackupStrategyDetail struct {
 
 	// **参数解释**： 时区偏移量（相比UTC时间）。 **取值范围**： 0~23
 	TimeZoneOffset *int32 `json:"time_zone_offset,omitempty"`
+
+	// **参数解释**： 备份的数据库。 **取值范围**： 不涉及。
+	BackupDatabase *string `json:"backup_database,omitempty"`
+
+	// **参数解释**： 备份的数据库模式列表。 **取值范围**： 不涉及。
+	BackupSchemaList *string `json:"backup_schema_list,omitempty"`
+
+	// **参数解释**： 备份的数据库表列表。 **取值范围**： 不涉及。
+	BackupTableList *string `json:"backup_table_list,omitempty"`
 }
 
 func (o BackupStrategyDetail) String() string {

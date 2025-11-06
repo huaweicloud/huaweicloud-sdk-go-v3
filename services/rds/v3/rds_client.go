@@ -795,6 +795,27 @@ func (c *RdsClient) ListAuditlogsInvoker(request *model.ListAuditlogsRequest) *L
 	return &ListAuditlogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAutoScalingPolicy 查询自动变配策略
+//
+// 查询自动变配策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListAutoScalingPolicy(request *model.ListAutoScalingPolicyRequest) (*model.ListAutoScalingPolicyResponse, error) {
+	requestDef := GenReqDefForListAutoScalingPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAutoScalingPolicyResponse), nil
+	}
+}
+
+// ListAutoScalingPolicyInvoker 查询自动变配策略
+func (c *RdsClient) ListAutoScalingPolicyInvoker(request *model.ListAutoScalingPolicyRequest) *ListAutoScalingPolicyInvoker {
+	requestDef := GenReqDefForListAutoScalingPolicy()
+	return &ListAutoScalingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListBackupTransfers 查询转储任务列表
 //
 // 查询转储任务列表
@@ -4864,6 +4885,27 @@ func (c *RdsClient) UpdateReadWeightInvoker(request *model.UpdateReadWeightReque
 	return &UpdateReadWeightInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateIntelligentKillSession 一键kill会话
+//
+// 一键kill会话
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) CreateIntelligentKillSession(request *model.CreateIntelligentKillSessionRequest) (*model.CreateIntelligentKillSessionResponse, error) {
+	requestDef := GenReqDefForCreateIntelligentKillSession()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateIntelligentKillSessionResponse), nil
+	}
+}
+
+// CreateIntelligentKillSessionInvoker 一键kill会话
+func (c *RdsClient) CreateIntelligentKillSessionInvoker(request *model.CreateIntelligentKillSessionRequest) *CreateIntelligentKillSessionInvoker {
+	requestDef := GenReqDefForCreateIntelligentKillSession()
+	return &CreateIntelligentKillSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // GetInstancesNoIndexTables 查询无索引表诊断数据
 //
 // 查询无索引表诊断数据
@@ -4883,6 +4925,27 @@ func (c *RdsClient) GetInstancesNoIndexTables(request *model.GetInstancesNoIndex
 func (c *RdsClient) GetInstancesNoIndexTablesInvoker(request *model.GetInstancesNoIndexTablesRequest) *GetInstancesNoIndexTablesInvoker {
 	requestDef := GenReqDefForGetInstancesNoIndexTables()
 	return &GetInstancesNoIndexTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIntelligentKillSessionHistory 查询一键kill会话历史
+//
+// 查询一键kill会话历史
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowIntelligentKillSessionHistory(request *model.ShowIntelligentKillSessionHistoryRequest) (*model.ShowIntelligentKillSessionHistoryResponse, error) {
+	requestDef := GenReqDefForShowIntelligentKillSessionHistory()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIntelligentKillSessionHistoryResponse), nil
+	}
+}
+
+// ShowIntelligentKillSessionHistoryInvoker 查询一键kill会话历史
+func (c *RdsClient) ShowIntelligentKillSessionHistoryInvoker(request *model.ShowIntelligentKillSessionHistoryRequest) *ShowIntelligentKillSessionHistoryInvoker {
+	requestDef := GenReqDefForShowIntelligentKillSessionHistory()
+	return &ShowIntelligentKillSessionHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AllowSqlserverDbUserPrivilege 授权数据库帐号

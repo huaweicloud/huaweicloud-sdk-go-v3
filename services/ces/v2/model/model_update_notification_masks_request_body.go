@@ -20,16 +20,16 @@ type UpdateNotificationMasksRequestBody struct {
 
 	RelationType *RelationType `json:"relation_type,omitempty"`
 
-	// 关联指标名称，relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽
+	// **参数解释** 关联指标名称列表。 **约束限制**： relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽。包含的指标名称最多为50个，最少为0个。
 	MetricNames *[]string `json:"metric_names,omitempty"`
 
-	// 按云产品维度屏蔽时的指标信息
+	// **参数解释** 按云产品维度屏蔽时的指标信息。 **约束限制**：| 包含的指标信息最多为50个，最少为0个。
 	ProductMetrics *[]ProductMetric `json:"product_metrics,omitempty"`
 
-	// dimension: 子维度,product: 云产品
+	// **参数解释** 资源类型。 **约束限制**： **取值范围**： 枚举值，取值为dimension、product - dimension: 子维度 - product: 云产品 **默认取值**： 不涉及。
 	ResourceLevel *UpdateNotificationMasksRequestBodyResourceLevel `json:"resource_level,omitempty"`
 
-	// 资源为云产品时云产品名称
+	// **参数解释** 资源为云产品时的云产品名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
 	ProductName *string `json:"product_name,omitempty"`
 
 	// **参数解释**： 关联资源。           **约束限制**： 数组长度为[1,100]

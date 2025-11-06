@@ -9,7 +9,7 @@ import (
 // UpdateResourceGroupRequest Request Object
 type UpdateResourceGroupRequest struct {
 
-	// 资源分组ID。
+	// **参数解释**: 资源分组ID **约束限制**: 不涉及 **取值范围**: 以rg开头，后跟22位由字母或数字组成的字符串 **默认取值**: 不涉及
 	GroupId string `json:"group_id"`
 
 	Body *UpdateResourceGroupRequestBody `json:"body,omitempty"`

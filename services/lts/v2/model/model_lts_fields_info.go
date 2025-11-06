@@ -34,6 +34,9 @@ type LtsFieldsInfo struct {
 
 	// json字段信息
 	LtsSubFieldsInfoList *[]LtsSubFieldsInfo `json:"ltsSubFieldsInfoList,omitempty"`
+
+	// **参数解释：** 别名，设置别名后，只支持使用别名进行SQL搜索分析，不支持使用别名进行关键字搜索。 **约束限制：**  不涉及。 **取值范围：** 长度不能大于256。 **默认取值：** 不涉及。
+	FieldAnalysisAlias *string `json:"fieldAnalysisAlias,omitempty"`
 }
 
 func (o LtsFieldsInfo) String() string {

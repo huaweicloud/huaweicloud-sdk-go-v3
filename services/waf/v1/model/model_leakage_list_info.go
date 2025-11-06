@@ -14,6 +14,9 @@ type LeakageListInfo struct {
 	// 策略id
 	Policyid *string `json:"policyid,omitempty"`
 
+	// 策略名称
+	Policyname *string `json:"policyname,omitempty"`
+
 	// 规则应用的url
 	Url *string `json:"url,omitempty"`
 

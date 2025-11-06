@@ -59,7 +59,7 @@ type AlarmHistoryItemV2 struct {
 	// **参数解释**： 告警恢复触发的动作。  结构如下：  {  \"type\": \"notification\", \"notification_list\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"]  } type取值：  notification：通知。  notification_list：告警状态发生变化时，被通知对象的列表。
 	OkActions *[]AlarmHistoryItemV2AlarmActions `json:"ok_actions,omitempty"`
 
-	// 计算出该条告警记录的资源监控数据上报时间和监控数值。
+	// **参数解释**： 计算出该条告警记录的资源监控数据上报时间和监控数值。
 	DataPoints *[]DataPointInfo `json:"data_points,omitempty"`
 }
 

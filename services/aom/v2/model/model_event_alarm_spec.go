@@ -22,12 +22,12 @@ type EventAlarmSpec struct {
 	MonitorObjects *[]map[string]string `json:"monitor_objects,omitempty"`
 
 	// 触发条件。
-	TriggerConditions *[]EventTriggerCondition `json:"trigger_conditions,omitempty"`
+	TriggerConditions []EventTriggerCondition `json:"trigger_conditions"`
 
-	// 是否绑定告警规则模版（废弃）。
+	// 是否绑定告警模板（废弃）。
 	AlarmRuleTemplateBindEnable *bool `json:"alarm_rule_template_bind_enable,omitempty"`
 
-	// 告警规则模版id（废弃）。
+	// 告警模板id（废弃）。
 	AlarmRuleTemplateId *string `json:"alarm_rule_template_id,omitempty"`
 }
 

@@ -9,7 +9,7 @@ import (
 // CreateAlarmRulesResponse Response Object
 type CreateAlarmRulesResponse struct {
 
-	// **参数解释**： 告警规则id。     **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22个数字或字母。           **默认取值**： 不涉及。
+	// **参数解释**： 告警规则id。如 al123232232341232132 **取值范围**： 以al开头，后跟22个数字或字母。长度为24个字符。
 	AlarmId        *string `json:"alarm_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

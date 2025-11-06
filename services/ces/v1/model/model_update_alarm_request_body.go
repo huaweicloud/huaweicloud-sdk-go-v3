@@ -30,13 +30,13 @@ type UpdateAlarmRequestBody struct {
 	AlarmType *UpdateAlarmRequestBodyAlarmType `json:"alarm_type,omitempty"`
 
 	// 告警触发的动作。 结构样例如下： { \"type\": \"notification\",\"notificationList\": [\"urn:smn:southchina:68438a86d98e427e907e0097b7e35d47:sd\"] } type取值： notification：通知。 autoscaling：弹性伸缩。
-	AlarmActions *[]AlarmActions `json:"alarm_actions,omitempty"`
+	AlarmActions *[][]Notification `json:"alarm_actions,omitempty"`
 
 	// 数据不足触发的动作（该参数已废弃，建议无需配置）。
-	InsufficientdataActions *[]AlarmActions `json:"insufficientdata_actions,omitempty"`
+	InsufficientdataActions *[][]Notification `json:"insufficientdata_actions,omitempty"`
 
 	// 告警恢复触发的动作
-	OkActions *[]AlarmActions `json:"ok_actions,omitempty"`
+	OkActions *[][]Notification `json:"ok_actions,omitempty"`
 }
 
 func (o UpdateAlarmRequestBody) String() string {

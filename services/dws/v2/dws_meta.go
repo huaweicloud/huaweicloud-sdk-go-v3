@@ -797,6 +797,11 @@ func GenReqDefForDeleteDisasterRecovery() *def.HttpRequestDef {
 		WithJsonTag("disaster_recovery_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("NeedSendRequest").
+		WithJsonTag("need_send_request").
+		WithLocationType(def.Query))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1932,6 +1937,19 @@ func GenReqDefForListDisasterRecover() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/disaster-recoveries").
 		WithResponse(new(model.ListDisasterRecoverResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PrimaryClusterId").
+		WithJsonTag("primary_cluster_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("StandbyClusterId").
+		WithJsonTag("standby_cluster_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

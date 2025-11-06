@@ -42,7 +42,7 @@ type ExtendInfo struct {
 	// 是否开启图例
 	EnableLegend *bool `json:"enable_legend,omitempty"`
 
-	// 大屏展示视图数量, 可以取得值必须与console页面可选值保持一致
+	// 大屏展示视图数量, 可以取的值必须与console页面可选值保持一致
 	FullScreenWidgetNum *int32 `json:"full_screen_widget_num,omitempty"`
 }
 

@@ -18,6 +18,9 @@ type CreateCnfReq struct {
 
 	// 敏感字符替换 输入需要隐藏的敏感字串列表。配置隐藏字符串列表后，在返回的配置内容中，会将所有在列表中的字串隐藏为***（列表最大支持20条，单个字串最大长度512字节）
 	SensitiveWords *[]string `json:"sensitive_words,omitempty"`
+
+	// **参数解释**： 配置文件描述。 **约束限制**： 不涉及 **取值范围**： 不超过128个字符。 **默认取值**： 不涉及
+	Desc *string `json:"desc,omitempty"`
 }
 
 func (o CreateCnfReq) String() string {

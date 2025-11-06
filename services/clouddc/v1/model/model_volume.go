@@ -16,7 +16,7 @@ type Volume struct {
 	VolumeRaidLevel *string `json:"volume_raid_level,omitempty"`
 
 	// 容量（单位：byte）
-	CapacityBytes *int32 `json:"capacity_bytes,omitempty"`
+	CapacityBytes *int64 `json:"capacity_bytes,omitempty"`
 
 	// 逻辑盘的条带大小（单位：byte）
 	OptimumIoSizeBytes *int32 `json:"optimum_io_size_bytes,omitempty"`
@@ -45,7 +45,7 @@ type Volume struct {
 	// 存储物理盘详细信息
 	Drives *[]Drive `json:"drives,omitempty"`
 
-	Status *Status `json:"status,omitempty"`
+	Status *VolumeStatus `json:"status,omitempty"`
 }
 
 func (o Volume) String() string {

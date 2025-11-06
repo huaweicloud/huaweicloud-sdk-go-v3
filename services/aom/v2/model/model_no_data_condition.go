@@ -11,13 +11,13 @@ import (
 
 type NoDataCondition struct {
 
-	// 无数据周期的个数。
+	// 无数据处理连续周期。取值范围为1~5。（当\"notify_no_data\"为true时，该参数必填，当\"notify_no_data\"为false时，该参数为空）
 	NoDataTimeframe *int32 `json:"no_data_timeframe,omitempty"`
 
-	// 数据不足时，阈值规则的状态。 - “no_data”：数据不足并发送通知 - “alerting”：告警 - “ok”：正常 - “pre_state”：保持上一个状态
+	// 数据不足时，阈值规则的状态。（当\"notify_no_data\"为true时，该参数必填，当\"notify_no_data\"为false时，该参数为空） - “no_data”：数据不足并发送通知 - “alerting”：告警 - “ok”：正常 - “pre_state”：保持上一个状态
 	NoDataAlertState *NoDataConditionNoDataAlertState `json:"no_data_alert_state,omitempty"`
 
-	// 数据不足是否通知。
+	// 无数据处理开关。true表示启用无数据处理，false表示关闭无数据处理。
 	NotifyNoData *bool `json:"notify_no_data,omitempty"`
 }
 

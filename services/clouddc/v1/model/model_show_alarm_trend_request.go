@@ -12,7 +12,7 @@ type ShowAlarmTrendRequest struct {
 	// 查询开始时间戳，单位秒，from 必须小于 to
 	From string `json:"from"`
 
-	// 查询结束时间戳，单位秒，
+	// 查询结束时间戳，单位秒，from 必须小于 to
 	To string `json:"to"`
 }
 

@@ -21,7 +21,10 @@ type ShowGetConfDetailResponse struct {
 	Setting *Setting `json:"setting,omitempty"`
 
 	// 更新时间。
-	UpdateAt       *string `json:"updateAt,omitempty"`
+	UpdateAt *string `json:"updateAt,omitempty"`
+
+	// **参数解释**： 配置文件描述。 **取值范围**： 长度不超过128个字符。
+	Desc           *string `json:"desc,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

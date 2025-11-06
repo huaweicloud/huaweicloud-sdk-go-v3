@@ -41,6 +41,9 @@ type SnapshotDetail struct {
 	// **参数解释**： 快照对应的集群名称。 **取值范围**： 不涉及。
 	ClusterName *string `json:"cluster_name,omitempty"`
 
+	// **参数解释**： 快照更新时间。 **取值范围**： 不涉及。
+	Updated *string `json:"updated,omitempty"`
+
 	// **参数解释**： 快照预计开始时间。 **取值范围**： 不涉及。
 	BakExpectedStartTime *string `json:"bak_expected_start_time,omitempty"`
 
@@ -80,7 +83,7 @@ type SnapshotDetail struct {
 	// **参数解释**： 是否是细粒度备份。 **取值范围**： 不涉及。
 	FineGrainedBackup *bool `json:"fine_grained_backup,omitempty"`
 
-	// **参数解释**： 备份级别。 **取值范围**： 不涉及。
+	// **参数解释**： 备份级别。 **取值范围**： cluster：集群级快照； schema：schema级快照； table：表级快照；
 	BackupLevel *string `json:"backup_level,omitempty"`
 
 	FineGrainedBackupDetail *FineGrainedSnapshotDetail `json:"fine_grained_backup_detail,omitempty"`
@@ -90,6 +93,15 @@ type SnapshotDetail struct {
 
 	// **参数解释**： 集群状态。 **取值范围**： 不涉及。
 	ClusterStatus *string `json:"cluster_status,omitempty"`
+
+	// **参数解释**： 集群任务状态。 **取值范围**： 不涉及。
+	ClusterTaskStatus *string `json:"cluster_task_status,omitempty"`
+
+	// **参数解释**： 是否支持细粒度跨版本恢复。 **取值范围**： 不涉及。
+	SupportFineGrainedCrossVersionRestore *bool `json:"support_fine_grained_cross_version_restore,omitempty"`
+
+	// **参数解释**： 是否支持细粒度异构恢复。 **取值范围**： 不涉及。
+	SupportFineGrainedAsymmetricRestore *bool `json:"support_fine_grained_asymmetric_restore,omitempty"`
 }
 
 func (o SnapshotDetail) String() string {

@@ -47,6 +47,10 @@ type VehicleLicenseBack struct {
 
 	// 文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
 	TextLocation *interface{} `json:"text_location,omitempty"`
+
+	AlarmResult *VehicleLicenseAlarmResult `json:"alarm_result,omitempty"`
+
+	AlarmConfidence *VehicleLicenseAlarmConfidence `json:"alarm_confidence,omitempty"`
 }
 
 func (o VehicleLicenseBack) String() string {

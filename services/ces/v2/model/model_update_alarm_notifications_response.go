@@ -12,10 +12,10 @@ type UpdateAlarmNotificationsResponse struct {
 	// **参数解释**： 是否开启告警通知。     **取值范围**： 布尔值。 - true:开启。 - false:关闭。
 	NotificationEnabled *bool `json:"notification_enabled,omitempty"`
 
-	// **参数解释**： 触发告警时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+	// **参数解释**： 触发告警时，通知组/主题订阅的信息。
 	AlarmNotifications *[]NotificationResp `json:"alarm_notifications,omitempty"`
 
-	// **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **取值范围**： 包含的通知信息的数量最多为10个。
+	// **参数解释**： 告警恢复时，通知组/主题订阅的信息。
 	OkNotifications *[]NotificationResp `json:"ok_notifications,omitempty"`
 
 	// **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。

@@ -15,7 +15,10 @@ type IndependentBodyReq struct {
 	NodeSize int32 `json:"node_size"`
 
 	// 节点存储类型：取值为ULTRAHIGH，COMMON，HIGH。
-	VolumeType string `json:"volume_type"`
+	VolumeType *string `json:"volume_type,omitempty"`
+
+	// **参数解释**： 节点存储大小。 **约束限制**： - flavor_ref参数是本地盘规格时，不能设置此参数。 - 必须为大于0且为4和10的公倍数，单位：GB。 **取值范围**： 磁盘规格大小可以通过过[获取实例规格列表](ListFlavors.xml)中diskrange属性获得。 **默认取值**： flavor_ref参数不是本地盘规格时： - 新增独立冷数据节点：默认100G与节点规格支持的最小磁盘容量取较大者。 - 新增独立master或client节点：默认大小为40G，且不可更改。  >新增独立冷数据节点，推荐大于100G。
+	VolumeSize *int32 `json:"volume_size,omitempty"`
 }
 
 func (o IndependentBodyReq) String() string {

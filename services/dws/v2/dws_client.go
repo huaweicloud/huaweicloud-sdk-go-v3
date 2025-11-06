@@ -3092,7 +3092,7 @@ func (c *DwsClient) ResizeClusterWithExistedNodesInvoker(request *model.ResizeCl
 	return &ResizeClusterWithExistedNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ResizePreparation 集群扩容前检查
+// ResizePreparation 集群扩容前准备
 //
 // 下发扩容配置文件，完成扩容准备工作。
 //
@@ -3107,7 +3107,7 @@ func (c *DwsClient) ResizePreparation(request *model.ResizePreparationRequest) (
 	}
 }
 
-// ResizePreparationInvoker 集群扩容前检查
+// ResizePreparationInvoker 集群扩容前准备
 func (c *DwsClient) ResizePreparationInvoker(request *model.ResizePreparationRequest) *ResizePreparationInvoker {
 	requestDef := GenReqDefForResizePreparation()
 	return &ResizePreparationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3585,7 +3585,7 @@ func (c *DwsClient) ShowQueryDetailInvoker(request *model.ShowQueryDetailRequest
 	return &ShowQueryDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowResizePreparation 查询节点列表
+// ShowResizePreparation 获取扩容准备信息
 //
 // 获取扩容准备信息。
 //
@@ -3600,7 +3600,7 @@ func (c *DwsClient) ShowResizePreparation(request *model.ShowResizePreparationRe
 	}
 }
 
-// ShowResizePreparationInvoker 查询节点列表
+// ShowResizePreparationInvoker 获取扩容准备信息
 func (c *DwsClient) ShowResizePreparationInvoker(request *model.ShowResizePreparationRequest) *ShowResizePreparationInvoker {
 	requestDef := GenReqDefForShowResizePreparation()
 	return &ShowResizePreparationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

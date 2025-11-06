@@ -40,9 +40,9 @@ func (c *CesClient) BatchListMetricDataInvoker(request *model.BatchListMetricDat
 	return &BatchListMetricDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateAlarm 创建告警规则
+// CreateAlarm 创建告警规则（V1）
 //
-// 创建一条告警规则。
+// 创建一条告警规则。创建告警规则V1接口只支持配置单资源单策略规则，建议使用“[创建告警规则（推荐）](CreateAlarmRules.xml)”与前端功能配套使用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) CreateAlarm(request *model.CreateAlarmRequest) (*model.CreateAlarmResponse, error) {
@@ -55,7 +55,7 @@ func (c *CesClient) CreateAlarm(request *model.CreateAlarmRequest) (*model.Creat
 	}
 }
 
-// CreateAlarmInvoker 创建告警规则
+// CreateAlarmInvoker 创建告警规则（V1）
 func (c *CesClient) CreateAlarmInvoker(request *model.CreateAlarmRequest) *CreateAlarmInvoker {
 	requestDef := GenReqDefForCreateAlarm()
 	return &CreateAlarmInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -250,9 +250,9 @@ func (c *CesClient) ListAlarmTemplatesInvoker(request *model.ListAlarmTemplatesR
 	return &ListAlarmTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAlarms 查询告警规则列表
+// ListAlarms 查询告警规则列表（V1）
 //
-// 查询告警规则列表，可以指定分页条件限制结果数量，可以指定排序规则。
+// 查询告警规则列表，可以指定分页条件限制结果数量，可以指定排序规则。告警规则V1接口只支持配置单资源单策略规则，建议使用“[查询告警规则列表（推荐）](CreateAlarmRules.xml)”与前端功能配套使用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) ListAlarms(request *model.ListAlarmsRequest) (*model.ListAlarmsResponse, error) {
@@ -265,7 +265,7 @@ func (c *CesClient) ListAlarms(request *model.ListAlarmsRequest) (*model.ListAla
 	}
 }
 
-// ListAlarmsInvoker 查询告警规则列表
+// ListAlarmsInvoker 查询告警规则列表（V1）
 func (c *CesClient) ListAlarmsInvoker(request *model.ListAlarmsRequest) *ListAlarmsInvoker {
 	requestDef := GenReqDefForListAlarms()
 	return &ListAlarmsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -357,7 +357,7 @@ func (c *CesClient) ListResourceGroupInvoker(request *model.ListResourceGroupReq
 
 // ShowAlarm 查询单条告警规则信息
 //
-// 根据告警ID查询告警规则信息。
+// 根据告警ID查询告警规则信息。告警规则V1接口只支持配置单资源单策略规则，建议使用“[查询告警规则列表（推荐）](ListAlarmRules.xml)”、“[查询告警规则资源列表](ListAlarmRuleResources.xml)”与前端功能配套使用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) ShowAlarm(request *model.ShowAlarmRequest) (*model.ShowAlarmResponse, error) {
@@ -441,7 +441,7 @@ func (c *CesClient) ShowQuotasInvoker(request *model.ShowQuotasRequest) *ShowQuo
 
 // ShowResourceGroup 查询资源分组下的资源
 //
-// 根据资源分组ID查询资源分组下的资源。
+// 根据资源分组ID查询资源分组下的资源。此接口已过时，建议使用v2接口 “[查询资源分组下指定服务类别特定维度的资源列表](ListResourceGroupsServicesResources.xml)”
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) ShowResourceGroup(request *model.ShowResourceGroupRequest) (*model.ShowResourceGroupResponse, error) {

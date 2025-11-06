@@ -26,6 +26,9 @@ type CreateSnapshotPolicyRequestBody struct {
 
 	// **参数解释**： 备份介质服务IP。备份介质为NBU和NFS时该字段必填。备份介质为NBU时表示NBU服务器地址，备份介质为NFS时表示NFS服务器地址。 **取值范围**： 不涉及。
 	ServerIps *[]string `json:"server_ips,omitempty"`
+
+	// **参数解释**： 是否自动备份。 **取值范围**： 不涉及。
+	AutoBackup *bool `json:"auto_backup,omitempty"`
 }
 
 func (o CreateSnapshotPolicyRequestBody) String() string {

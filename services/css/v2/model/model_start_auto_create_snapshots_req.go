@@ -18,7 +18,7 @@ type StartAutoCreateSnapshotsReq struct {
 	Frequency *string `json:"frequency,omitempty"`
 
 	// 每天创建快照的时刻，只支持整点，后面需加上时区，格式为“HH:mm z”，“HH:mm”表示整点时间，“z”表示时区。比如“00:00 GMT+08:00”、“01:00 GMT+08:00”等。
-	Period string `json:"period"`
+	Period *string `json:"period,omitempty"`
 
 	// 自动创建的快照名称前缀，需要用户自己手动输入。只能包含1~32位小写字母、数字、中划线或者下划线，并且以小写字母开头。
 	Prefix string `json:"prefix"`

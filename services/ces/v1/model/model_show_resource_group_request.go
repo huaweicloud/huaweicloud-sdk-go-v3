@@ -3,28 +3,31 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
 // ShowResourceGroupRequest Request Object
 type ShowResourceGroupRequest struct {
 
-	// 资源分组ID。
+	// **参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字 **默认取值** 不涉及
 	GroupId string `json:"group_id"`
 
-	// 资源健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，
-	Status *string `json:"status,omitempty"`
+	// **参数解释** 资源分组健康状态 **约束限制** 不涉及 **取值范围** - health: 表示健康 - unhealth: 表示不健康 - no_alarm_rule: 表示未配置告警规则 **默认取值** 不涉及
+	Status *ShowResourceGroupRequestStatus `json:"status,omitempty"`
 
-	// 资源类型，即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+	// **参数解释** 资源类型，即命名空间，如弹性云服务器的资源命名空间为：SYS.ECS；各服务命名空间可查看：“[服务命名空间](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度在 [3,32]个字符之间 **默认取值** 不涉及
 	Namespace *string `json:"namespace,omitempty"`
 
-	// 资源维度，如：弹性云服务器，则维度为instance_id，各资源的监控维度名称可查看：“[服务指标维度](https://support.huaweicloud.com/usermanual-ces/zh-cn_topic_0202622212.html)”。
+	// **参数解释** 资源维度，如：弹性云服务器，则维度为instance_id，各资源的监控维度名称可查看：“[服务指标维度](ces_03_0059.xml)”。 **约束限制** 不涉及 **取值范围** 包含字母、数字、_、-、/、#、\\或括号，长度为[1,131]个字符 **默认取值** 不涉及
 	Dname *string `json:"dname,omitempty"`
 
-	// 分页起始值，类型为integer，默认值为0。
+	// **参数解释** 分页起始值 **约束限制** 不涉及 **取值范围** [0,9999999] **默认取值** 0
 	Start *string `json:"start,omitempty"`
 
-	// 单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+	// **参数解释** 单次查询的条数限制 **约束限制** 不涉及 **取值范围** [1,100] **默认取值** 100
 	Limit *string `json:"limit,omitempty"`
 }
 
@@ -35,4 +38,55 @@ func (o ShowResourceGroupRequest) String() string {
 	}
 
 	return strings.Join([]string{"ShowResourceGroupRequest", string(data)}, " ")
+}
+
+type ShowResourceGroupRequestStatus struct {
+	value string
+}
+
+type ShowResourceGroupRequestStatusEnum struct {
+	HEALTH        ShowResourceGroupRequestStatus
+	UNHEALTH      ShowResourceGroupRequestStatus
+	NO_ALARM_RULE ShowResourceGroupRequestStatus
+}
+
+func GetShowResourceGroupRequestStatusEnum() ShowResourceGroupRequestStatusEnum {
+	return ShowResourceGroupRequestStatusEnum{
+		HEALTH: ShowResourceGroupRequestStatus{
+			value: "health",
+		},
+		UNHEALTH: ShowResourceGroupRequestStatus{
+			value: "unhealth",
+		},
+		NO_ALARM_RULE: ShowResourceGroupRequestStatus{
+			value: "no_alarm_rule",
+		},
+	}
+}
+
+func (c ShowResourceGroupRequestStatus) Value() string {
+	return c.value
+}
+
+func (c ShowResourceGroupRequestStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowResourceGroupRequestStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
