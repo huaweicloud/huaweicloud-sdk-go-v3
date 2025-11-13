@@ -23,6 +23,9 @@ type DigitalAssetSummary struct {
 	// 资产类型。 公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板
 	AssetType *DigitalAssetSummaryAssetType `json:"asset_type,omitempty"`
 
+	// 冻结原因编号。
+	BlockReasonCode *string `json:"block_reason_code,omitempty"`
+
 	// 封面图片路径。
 	CoverUrl *string `json:"cover_url,omitempty"`
 

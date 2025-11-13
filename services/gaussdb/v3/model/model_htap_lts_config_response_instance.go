@@ -15,6 +15,9 @@ type HtapLtsConfigResponseInstance struct {
 	// **参数解释**： HTAP标准版实例名称。  **取值范围**：  不涉及。
 	Name string `json:"name"`
 
+	// **参数解释**：  HTAP标准版实例模式。  **取值范围**：  - Cluster：集群模式。 - Single：单机模式。
+	Mode string `json:"mode"`
+
 	// **参数解释**： 引擎类型。  **取值范围**：  不涉及。
 	EngineName string `json:"engine_name"`
 

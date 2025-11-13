@@ -3781,6 +3781,54 @@ func (i *BatchAddMsdtcsInvoker) Invoke() (*model.BatchAddMsdtcsResponse, error) 
 	}
 }
 
+type BatchModifySubscriptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchModifySubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchModifySubscriptionInvoker) Invoke() (*model.BatchModifySubscriptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchModifySubscriptionResponse), nil
+	}
+}
+
+type CollectPublicationMonitorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CollectPublicationMonitorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CollectPublicationMonitorInvoker) Invoke() (*model.CollectPublicationMonitorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CollectPublicationMonitorResponse), nil
+	}
+}
+
+type CollectSubscriptionMonitorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CollectSubscriptionMonitorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CollectSubscriptionMonitorInvoker) Invoke() (*model.CollectSubscriptionMonitorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CollectSubscriptionMonitorResponse), nil
+	}
+}
+
 type CopyDatabaseInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3842,6 +3890,22 @@ func (i *CreateSubscriptionInvoker) Invoke() (*model.CreateSubscriptionResponse,
 		return nil, err
 	} else {
 		return result.(*model.CreateSubscriptionResponse), nil
+	}
+}
+
+type DeleteDistributionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDistributionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDistributionInvoker) Invoke() (*model.DeleteDistributionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDistributionResponse), nil
 	}
 }
 
@@ -3925,6 +3989,22 @@ func (i *DeleteSqlserverDbUserInvoker) Invoke() (*model.DeleteSqlserverDbUserRes
 	}
 }
 
+type DeleteSubscriptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteSubscriptionInvoker) Invoke() (*model.DeleteSubscriptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSubscriptionResponse), nil
+	}
+}
+
 type ListAuthorizedSqlserverDbUsersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3954,6 +4034,22 @@ func (i *ListBusinessPartnersInvoker) Invoke() (*model.ListBusinessPartnersRespo
 		return nil, err
 	} else {
 		return result.(*model.ListBusinessPartnersResponse), nil
+	}
+}
+
+type ListDbAgentJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDbAgentJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDbAgentJobsInvoker) Invoke() (*model.ListDbAgentJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDbAgentJobsResponse), nil
 	}
 }
 
@@ -4037,6 +4133,38 @@ func (i *ListPublicationsInvoker) Invoke() (*model.ListPublicationsResponse, err
 	}
 }
 
+type ListPublications4SubscriptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPublications4SubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPublications4SubscriptionInvoker) Invoke() (*model.ListPublications4SubscriptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPublications4SubscriptionResponse), nil
+	}
+}
+
+type ListReplicationProfilesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListReplicationProfilesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListReplicationProfilesInvoker) Invoke() (*model.ListReplicationProfilesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListReplicationProfilesResponse), nil
+	}
+}
+
 type ListSqlserverDatabasesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4082,6 +4210,22 @@ func (i *ListSubscriberInstancesInvoker) Invoke() (*model.ListSubscriberInstance
 		return nil, err
 	} else {
 		return result.(*model.ListSubscriberInstancesResponse), nil
+	}
+}
+
+type ListSubscriptionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSubscriptionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSubscriptionsInvoker) Invoke() (*model.ListSubscriptionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSubscriptionsResponse), nil
 	}
 }
 
@@ -4162,6 +4306,22 @@ func (i *SetInstancesNewDbShrinkInvoker) Invoke() (*model.SetInstancesNewDbShrin
 		return nil, err
 	} else {
 		return result.(*model.SetInstancesNewDbShrinkResponse), nil
+	}
+}
+
+type ValidateInstanceConnectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ValidateInstanceConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ValidateInstanceConnectionInvoker) Invoke() (*model.ValidateInstanceConnectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ValidateInstanceConnectionResponse), nil
 	}
 }
 

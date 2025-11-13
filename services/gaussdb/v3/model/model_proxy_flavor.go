@@ -8,6 +8,9 @@ import (
 
 type ProxyFlavor struct {
 
+	// **参数解释**：  规格ID。  **取值范围**：  不涉及。
+	Id *string `json:"id,omitempty"`
+
 	// **参数解释**：  规格码。  **取值范围**：  不涉及。
 	SpecCode *string `json:"spec_code,omitempty"`
 

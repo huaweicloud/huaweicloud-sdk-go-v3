@@ -48,6 +48,9 @@ type CreateKeywordsAlarmRuleRequestBody struct {
 
 	// **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。 **约束限制：** 不涉及。
 	Tags *[]TagsRequestBody `json:"tags,omitempty"`
+
+	// **参数解释：** 企业项目id信息。 **约束限制：** 不涉及。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o CreateKeywordsAlarmRuleRequestBody) String() string {

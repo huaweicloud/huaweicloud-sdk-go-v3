@@ -86,6 +86,48 @@ func (c *DeHClient) CreateDedicatedHostInvoker(request *model.CreateDedicatedHos
 	return &CreateDedicatedHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteDedicatedHost 释放专属主机
+//
+// 释放专属主机。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DeHClient) DeleteDedicatedHost(request *model.DeleteDedicatedHostRequest) (*model.DeleteDedicatedHostResponse, error) {
+	requestDef := GenReqDefForDeleteDedicatedHost()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDedicatedHostResponse), nil
+	}
+}
+
+// DeleteDedicatedHostInvoker 释放专属主机
+func (c *DeHClient) DeleteDedicatedHostInvoker(request *model.DeleteDedicatedHostRequest) *DeleteDedicatedHostInvoker {
+	requestDef := GenReqDefForDeleteDedicatedHost()
+	return &DeleteDedicatedHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDedicatedHostAllTypes 查询专属主机类型列表
+//
+// 查询专属主机类型列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DeHClient) ListDedicatedHostAllTypes(request *model.ListDedicatedHostAllTypesRequest) (*model.ListDedicatedHostAllTypesResponse, error) {
+	requestDef := GenReqDefForListDedicatedHostAllTypes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDedicatedHostAllTypesResponse), nil
+	}
+}
+
+// ListDedicatedHostAllTypesInvoker 查询专属主机类型列表
+func (c *DeHClient) ListDedicatedHostAllTypesInvoker(request *model.ListDedicatedHostAllTypesRequest) *ListDedicatedHostAllTypesInvoker {
+	requestDef := GenReqDefForListDedicatedHostAllTypes()
+	return &ListDedicatedHostAllTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDedicatedHostTags 查询所有专属主机标签
 //
 // 查询所有专属主机的标签信息。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type SendMessageRep struct {
+type SendMessageReq struct {
 
 	// **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Topic *string `json:"topic,omitempty"`
@@ -18,11 +18,11 @@ type SendMessageRep struct {
 	PropertyList *[]SendMessageProperties `json:"property_list,omitempty"`
 }
 
-func (o SendMessageRep) String() string {
+func (o SendMessageReq) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "SendMessageRep struct{}"
+		return "SendMessageReq struct{}"
 	}
 
-	return strings.Join([]string{"SendMessageRep", string(data)}, " ")
+	return strings.Join([]string{"SendMessageReq", string(data)}, " ")
 }

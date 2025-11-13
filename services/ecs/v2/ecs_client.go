@@ -108,6 +108,27 @@ func (c *EcsClient) AttachServerVolumeInvoker(request *model.AttachServerVolumeR
 	return &AttachServerVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchAddServerGroupMember 云服务器组批量添加成员
+//
+// 将云服务器加入云服务器组。添加成功后，该云服务器与云服务器组中的其他成员尽量分散地创建在不同主机上。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) BatchAddServerGroupMember(request *model.BatchAddServerGroupMemberRequest) (*model.BatchAddServerGroupMemberResponse, error) {
+	requestDef := GenReqDefForBatchAddServerGroupMember()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchAddServerGroupMemberResponse), nil
+	}
+}
+
+// BatchAddServerGroupMemberInvoker 云服务器组批量添加成员
+func (c *EcsClient) BatchAddServerGroupMemberInvoker(request *model.BatchAddServerGroupMemberRequest) *BatchAddServerGroupMemberInvoker {
+	requestDef := GenReqDefForBatchAddServerGroupMember()
+	return &BatchAddServerGroupMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchAddServerNics 批量添加云服务器网卡
 //
 // 给云服务器添加一张或多张网卡。
@@ -171,6 +192,27 @@ func (c *EcsClient) BatchCreateServerTags(request *model.BatchCreateServerTagsRe
 func (c *EcsClient) BatchCreateServerTagsInvoker(request *model.BatchCreateServerTagsRequest) *BatchCreateServerTagsInvoker {
 	requestDef := GenReqDefForBatchCreateServerTags()
 	return &BatchCreateServerTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteServerGroupMember 云服务器组批量删除成员
+//
+// 将弹性云服务器移出云服务器组。移出后，该云服务器与云服务器组中的成员不再遵从反亲和策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) BatchDeleteServerGroupMember(request *model.BatchDeleteServerGroupMemberRequest) (*model.BatchDeleteServerGroupMemberResponse, error) {
+	requestDef := GenReqDefForBatchDeleteServerGroupMember()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteServerGroupMemberResponse), nil
+	}
+}
+
+// BatchDeleteServerGroupMemberInvoker 云服务器组批量删除成员
+func (c *EcsClient) BatchDeleteServerGroupMemberInvoker(request *model.BatchDeleteServerGroupMemberRequest) *BatchDeleteServerGroupMemberInvoker {
+	requestDef := GenReqDefForBatchDeleteServerGroupMember()
+	return &BatchDeleteServerGroupMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchDeleteServerNics 批量删除云服务器网卡

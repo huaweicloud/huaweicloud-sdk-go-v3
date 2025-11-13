@@ -45,7 +45,7 @@ type PolicyOption struct {
 	// 地理位置访问控制规则是否开启
 	Geoip *bool `json:"geoip,omitempty"`
 
-	// 误报屏蔽是否开启
+	// 全局白名单是否开启
 	Ignore *bool `json:"ignore,omitempty"`
 
 	// 隐私屏蔽是否开启

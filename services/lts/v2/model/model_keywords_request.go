@@ -37,6 +37,11 @@ type KeywordsRequest struct {
 
 	// 查询时间单位
 	SearchTimeRangeUnit KeywordsRequestSearchTimeRangeUnit `json:"search_time_range_unit"`
+
+	CustomDate *CustomDate `json:"custom_date,omitempty"`
+
+	// **参数解释：** 是否是相对时间。（暂不开放，后续aom上线该功能后一起开放） **约束限制：** 不涉及。 **取值范围：** - true - false **默认取值：** true
+	IsTimeRangeRelative *bool `json:"is_time_range_relative,omitempty"`
 }
 
 func (o KeywordsRequest) String() string {

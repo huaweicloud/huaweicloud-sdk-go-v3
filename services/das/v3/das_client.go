@@ -316,6 +316,27 @@ func (c *DasClient) CreateHealthReportTaskInvoker(request *model.CreateHealthRep
 	return &CreateHealthReportTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateHistoryTransactionExportTask 创建导出历史事务任务
+//
+// DAS收集历史事务开关打开后，支持创建一次性导出指定时间范围内的历史事务数据任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) CreateHistoryTransactionExportTask(request *model.CreateHistoryTransactionExportTaskRequest) (*model.CreateHistoryTransactionExportTaskResponse, error) {
+	requestDef := GenReqDefForCreateHistoryTransactionExportTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateHistoryTransactionExportTaskResponse), nil
+	}
+}
+
+// CreateHistoryTransactionExportTaskInvoker 创建导出历史事务任务
+func (c *DasClient) CreateHistoryTransactionExportTaskInvoker(request *model.CreateHistoryTransactionExportTaskRequest) *CreateHistoryTransactionExportTaskInvoker {
+	requestDef := GenReqDefForCreateHistoryTransactionExportTask()
+	return &CreateHistoryTransactionExportTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSnapshots 创建快照
 //
 // 创建快照
@@ -431,6 +452,27 @@ func (c *DasClient) DeleteDbUser(request *model.DeleteDbUserRequest) (*model.Del
 func (c *DasClient) DeleteDbUserInvoker(request *model.DeleteDbUserRequest) *DeleteDbUserInvoker {
 	requestDef := GenReqDefForDeleteDbUser()
 	return &DeleteDbUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteHistoryTransactionExportTask 删除导出历史事务任务
+//
+// DAS收集历史事务开关打开后，删除历史事务导出任务记录对应的OBS文件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) DeleteHistoryTransactionExportTask(request *model.DeleteHistoryTransactionExportTaskRequest) (*model.DeleteHistoryTransactionExportTaskResponse, error) {
+	requestDef := GenReqDefForDeleteHistoryTransactionExportTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteHistoryTransactionExportTaskResponse), nil
+	}
+}
+
+// DeleteHistoryTransactionExportTaskInvoker 删除导出历史事务任务
+func (c *DasClient) DeleteHistoryTransactionExportTaskInvoker(request *model.DeleteHistoryTransactionExportTaskRequest) *DeleteHistoryTransactionExportTaskInvoker {
+	requestDef := GenReqDefForDeleteHistoryTransactionExportTask()
+	return &DeleteHistoryTransactionExportTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteProcess 查杀会话
@@ -771,6 +813,27 @@ func (c *DasClient) ListHealthReportTaskInvoker(request *model.ListHealthReportT
 	return &ListHealthReportTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListHistoryTransactionExportTask 查询历史事务导出任务列表
+//
+// DAS收集历史事务开关打开后，查询历史事务导出任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListHistoryTransactionExportTask(request *model.ListHistoryTransactionExportTaskRequest) (*model.ListHistoryTransactionExportTaskResponse, error) {
+	requestDef := GenReqDefForListHistoryTransactionExportTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHistoryTransactionExportTaskResponse), nil
+	}
+}
+
+// ListHistoryTransactionExportTaskInvoker 查询历史事务导出任务列表
+func (c *DasClient) ListHistoryTransactionExportTaskInvoker(request *model.ListHistoryTransactionExportTaskRequest) *ListHistoryTransactionExportTaskInvoker {
+	requestDef := GenReqDefForListHistoryTransactionExportTask()
+	return &ListHistoryTransactionExportTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInnodbLocks 查询InnoDB锁等待列表
 //
 // 查询InnoDB锁等待列表。
@@ -1069,6 +1132,48 @@ func (c *DasClient) ListTransactionsInvoker(request *model.ListTransactionsReque
 	return &ListTransactionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// LoginBuiltInAccount 内置账号登录
+//
+// 内置账号登录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) LoginBuiltInAccount(request *model.LoginBuiltInAccountRequest) (*model.LoginBuiltInAccountResponse, error) {
+	requestDef := GenReqDefForLoginBuiltInAccount()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.LoginBuiltInAccountResponse), nil
+	}
+}
+
+// LoginBuiltInAccountInvoker 内置账号登录
+func (c *DasClient) LoginBuiltInAccountInvoker(request *model.LoginBuiltInAccountRequest) *LoginBuiltInAccountInvoker {
+	requestDef := GenReqDefForLoginBuiltInAccount()
+	return &LoginBuiltInAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// LogoffBuiltInAccount 内置账号登出
+//
+// 内置账号登出
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) LogoffBuiltInAccount(request *model.LogoffBuiltInAccountRequest) (*model.LogoffBuiltInAccountResponse, error) {
+	requestDef := GenReqDefForLogoffBuiltInAccount()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.LogoffBuiltInAccountResponse), nil
+	}
+}
+
+// LogoffBuiltInAccountInvoker 内置账号登出
+func (c *DasClient) LogoffBuiltInAccountInvoker(request *model.LogoffBuiltInAccountRequest) *LogoffBuiltInAccountInvoker {
+	requestDef := GenReqDefForLogoffBuiltInAccount()
+	return &LogoffBuiltInAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ParseSqlLimitRules 根据原始SQL生成SQL限流关键字
 //
 // 根据原始SQL生成SQL限流关键字，目前支持MySQL、MariaDB、GaussDB(for MySQL)三种引擎。
@@ -1258,6 +1363,27 @@ func (c *DasClient) ShowHealthReportSettings(request *model.ShowHealthReportSett
 func (c *DasClient) ShowHealthReportSettingsInvoker(request *model.ShowHealthReportSettingsRequest) *ShowHealthReportSettingsInvoker {
 	requestDef := GenReqDefForShowHealthReportSettings()
 	return &ShowHealthReportSettingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHistoryTransactionExportTaskInfo 查询历史事务导出任务详情
+//
+// DAS收集历史事务开关打开后，查询历史事务导出任务详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowHistoryTransactionExportTaskInfo(request *model.ShowHistoryTransactionExportTaskInfoRequest) (*model.ShowHistoryTransactionExportTaskInfoResponse, error) {
+	requestDef := GenReqDefForShowHistoryTransactionExportTaskInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHistoryTransactionExportTaskInfoResponse), nil
+	}
+}
+
+// ShowHistoryTransactionExportTaskInfoInvoker 查询历史事务导出任务详情
+func (c *DasClient) ShowHistoryTransactionExportTaskInfoInvoker(request *model.ShowHistoryTransactionExportTaskInfoRequest) *ShowHistoryTransactionExportTaskInfoInvoker {
+	requestDef := GenReqDefForShowHistoryTransactionExportTaskInfo()
+	return &ShowHistoryTransactionExportTaskInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowInstanceHealthReport 获取实例健康诊断报告内容

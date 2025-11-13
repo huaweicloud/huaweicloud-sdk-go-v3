@@ -27,15 +27,12 @@ type KeywordsAlarmRuleRespList struct {
 	ConditionExpression string `json:"condition_expression"`
 
 	// 关键词详细信息
-	KeywordsRequests []KeywordsRequest `json:"keywords_requests"`
+	KeywordsRequests []KeywordsRequestResponse `json:"keywords_requests"`
 
 	Frequency *Frequency `json:"frequency"`
 
 	// 告警级别
 	KeywordsAlarmLevel KeywordsAlarmRuleRespListKeywordsAlarmLevel `json:"keywords_alarm_level"`
-
-	// 是否发送
-	KeywordsAlarmSend bool `json:"keywords_alarm_send"`
 
 	// domainId
 	DomainId string `json:"domain_id"`
@@ -45,12 +42,6 @@ type KeywordsAlarmRuleRespList struct {
 
 	// 更新时间（毫秒时间戳）
 	UpdateTime int64 `json:"update_time"`
-
-	// 通知主题
-	Topics []Topics `json:"topics"`
-
-	// 消息模板名称
-	TemplateName *string `json:"template_name,omitempty"`
 
 	// 告警状态
 	Status *KeywordsAlarmRuleRespListStatus `json:"status,omitempty"`
@@ -72,6 +63,9 @@ type KeywordsAlarmRuleRespList struct {
 
 	// 告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
 	AlarmActionRuleName *string `json:"alarm_action_rule_name,omitempty"`
+
+	// **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
+	Tags *[]TagsResBody `json:"tags,omitempty"`
 }
 
 func (o KeywordsAlarmRuleRespList) String() string {

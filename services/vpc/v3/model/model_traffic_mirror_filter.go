@@ -33,6 +33,9 @@ type TrafficMirrorFilter struct {
 
 	// 更新时间戳
 	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
+
+	// 参数解释： 流量镜像筛选条件的镜像源类型。 取值范围： eni：弹性网卡
+	Type string `json:"type"`
 }
 
 func (o TrafficMirrorFilter) String() string {

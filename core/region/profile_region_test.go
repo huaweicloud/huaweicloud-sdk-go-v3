@@ -63,7 +63,7 @@ func setRegionsFileEnv() error {
 	if err != nil {
 		return err
 	}
-	file := path.Join(absPath, "regions.yaml")
+	file := path.Join(absPath, "test_regions.yaml")
 	err = os.Setenv("HUAWEICLOUD_SDK_REGIONS_FILE", file)
 	if err != nil {
 		return err

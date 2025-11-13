@@ -21,9 +21,6 @@ type UpdateSqlAlarmRuleResponse struct {
 	// 是否管道符sql查询
 	IsCssSql *bool `json:"is_css_sql,omitempty"`
 
-	// 索引id
-	IndexId *string `json:"indexId,omitempty"`
-
 	// 项目id
 	ProjectId *string `json:"projectId,omitempty"`
 
@@ -34,7 +31,7 @@ type UpdateSqlAlarmRuleResponse struct {
 	SqlAlarmRuleDescription *string `json:"sql_alarm_rule_description,omitempty"`
 
 	// SQL详细信息
-	SqlRequests *[]SqlRequest `json:"sql_requests,omitempty"`
+	SqlRequests *[]SqlRequestResponse `json:"sql_requests,omitempty"`
 
 	Frequency *FrequencyRespBody `json:"frequency,omitempty"`
 
@@ -50,27 +47,27 @@ type UpdateSqlAlarmRuleResponse struct {
 	// domainId
 	DomainId *string `json:"domain_id,omitempty"`
 
-	// 创建时间（毫秒时间戳）
-	CreateTime *int64 `json:"create_time,omitempty"`
-
-	// 更新时间（毫秒时间戳）
-	UpdateTime *int64 `json:"update_time,omitempty"`
-
-	// 主题
-	Topics *[]Topics `json:"topics,omitempty"`
-
-	// 邮件附加信息语言
-	Language *UpdateSqlAlarmRuleResponseLanguage `json:"language,omitempty"`
-
-	// 规则ID。
-	Id *string `json:"id,omitempty"`
-
 	// 通知频率,单位(分钟)
 	NotificationFrequency *UpdateSqlAlarmRuleResponseNotificationFrequency `json:"notification_frequency,omitempty"`
 
 	// 告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
 	AlarmActionRuleName *string `json:"alarm_action_rule_name,omitempty"`
-	HttpStatusCode      int     `json:"-"`
+
+	// **参数解释：** 告警触发条件：满足条件次数。满足条件次数是指设置的SQL语句。 **取值范围：** 不涉及。
+	TriggerConditionCount *int32 `json:"trigger_condition_count,omitempty"`
+
+	// **参数解释：** 触发条件：触发周期。 **取值范围：** 不涉及。
+	TriggerConditionFrequency *int32 `json:"trigger_condition_frequency,omitempty"`
+
+	// **参数解释：** 是否打开恢复通知。 **取值范围：** - true：配置告警恢复策略。 - false：不配置告警恢复策略。
+	WhetherRecoveryPolicy *bool `json:"whether_recovery_policy,omitempty"`
+
+	// **参数解释：** 恢复策略周期。 **取值范围：** 不涉及。
+	RecoveryPolicy *int32 `json:"recovery_policy,omitempty"`
+
+	// **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
+	Tags           *[]TagsResBody `json:"tags,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o UpdateSqlAlarmRuleResponse) String() string {
@@ -119,53 +116,6 @@ func (c UpdateSqlAlarmRuleResponseSqlAlarmLevel) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateSqlAlarmRuleResponseSqlAlarmLevel) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type UpdateSqlAlarmRuleResponseLanguage struct {
-	value string
-}
-
-type UpdateSqlAlarmRuleResponseLanguageEnum struct {
-	ZH_CN UpdateSqlAlarmRuleResponseLanguage
-	EN_US UpdateSqlAlarmRuleResponseLanguage
-}
-
-func GetUpdateSqlAlarmRuleResponseLanguageEnum() UpdateSqlAlarmRuleResponseLanguageEnum {
-	return UpdateSqlAlarmRuleResponseLanguageEnum{
-		ZH_CN: UpdateSqlAlarmRuleResponseLanguage{
-			value: "zh-cn",
-		},
-		EN_US: UpdateSqlAlarmRuleResponseLanguage{
-			value: "en-us",
-		},
-	}
-}
-
-func (c UpdateSqlAlarmRuleResponseLanguage) Value() string {
-	return c.value
-}
-
-func (c UpdateSqlAlarmRuleResponseLanguage) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *UpdateSqlAlarmRuleResponseLanguage) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

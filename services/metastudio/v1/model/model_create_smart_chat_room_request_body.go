@@ -59,6 +59,9 @@ type CreateSmartChatRoomRequestBody struct {
 
 	// **参数解释**： 静默退出时长。
 	ExitMuteThreshold *int32 `json:"exit_mute_threshold,omitempty"`
+
+	// 是否优先级加载模型资产
+	EnableSemanticAction *bool `json:"enable_semantic_action,omitempty"`
 }
 
 func (o CreateSmartChatRoomRequestBody) String() string {

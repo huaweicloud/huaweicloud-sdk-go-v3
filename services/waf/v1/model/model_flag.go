@@ -21,10 +21,10 @@ type Flag struct {
 	// old：代表域名使用的老的cname，new：代表域名使用新的cname
 	Cname *FlagCname `json:"cname,omitempty"`
 
-	// 域名是否开启ipv6   - true：支持   - false：不支持
+	// 域名是否开启ipv6   - true：开启   - false：不开启
 	IsDualAz *FlagIsDualAz `json:"is_dual_az,omitempty"`
 
-	// 域名是否开启ipv6   - true：支持   - false：不支持
+	// 域名是否开启ipv6   - true：开启   - false：不开启
 	Ipv6 *FlagIpv6 `json:"ipv6,omitempty"`
 }
 

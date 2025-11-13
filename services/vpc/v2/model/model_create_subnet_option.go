@@ -47,6 +47,9 @@ type CreateSubnetOption struct {
 
 	// 功能说明：子网资源标签。创建子网时，给子网添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
 	Tags *[]string `json:"tags,omitempty"`
+
+	// 功能说明：是否开启当前子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
+	EnableNetworkAddressUsageMetrics *bool `json:"enable_network_address_usage_metrics,omitempty"`
 }
 
 func (o CreateSubnetOption) String() string {

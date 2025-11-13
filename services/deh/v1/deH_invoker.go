@@ -53,6 +53,38 @@ func (i *CreateDedicatedHostInvoker) Invoke() (*model.CreateDedicatedHostRespons
 	}
 }
 
+type DeleteDedicatedHostInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDedicatedHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDedicatedHostInvoker) Invoke() (*model.DeleteDedicatedHostResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDedicatedHostResponse), nil
+	}
+}
+
+type ListDedicatedHostAllTypesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDedicatedHostAllTypesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDedicatedHostAllTypesInvoker) Invoke() (*model.ListDedicatedHostAllTypesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDedicatedHostAllTypesResponse), nil
+	}
+}
+
 type ListDedicatedHostTagsInvoker struct {
 	*invoker.BaseInvoker
 }

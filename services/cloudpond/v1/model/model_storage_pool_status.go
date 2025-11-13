@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// StoragePoolStatus 存储池状态。 - CREATING：创建中 - AVAILABLE：可用 - EXPANDING：扩容中 - PENDING_PAYMENT：待支付
+// StoragePoolStatus 存储池状态。 - CREATING：创建中 - AVAILABLE：可用 - EXPANDING：扩容中 - PENDING_PAYMENT：待支付 - FROZEN：已冻结
 type StoragePoolStatus struct {
 	value string
 }
@@ -19,6 +19,7 @@ type StoragePoolStatusEnum struct {
 	AVAILABLE       StoragePoolStatus
 	EXPANDING       StoragePoolStatus
 	PENDING_PAYMENT StoragePoolStatus
+	FROZEN          StoragePoolStatus
 }
 
 func GetStoragePoolStatusEnum() StoragePoolStatusEnum {
@@ -34,6 +35,9 @@ func GetStoragePoolStatusEnum() StoragePoolStatusEnum {
 		},
 		PENDING_PAYMENT: StoragePoolStatus{
 			value: "PENDING_PAYMENT",
+		},
+		FROZEN: StoragePoolStatus{
+			value: "FROZEN",
 		},
 	}
 }

@@ -145,6 +145,28 @@ func (c *CcmClient) CountCertResourceInstancesInvoker(request *model.CountCertRe
 	return &CountCertResourceInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAgency 创建服务委托
+//
+// 用户授权PCA创建服务委托，用于访问OBS桶，更新吊销列表。
+// &gt; 用户所使用账号token需要具备安全管理员（secu_admin）权限。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcmClient) CreateAgency(request *model.CreateAgencyRequest) (*model.CreateAgencyResponse, error) {
+	requestDef := GenReqDefForCreateAgency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAgencyResponse), nil
+	}
+}
+
+// CreateAgencyInvoker 创建服务委托
+func (c *CcmClient) CreateAgencyInvoker(request *model.CreateAgencyRequest) *CreateAgencyInvoker {
+	requestDef := GenReqDefForCreateAgency()
+	return &CreateAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCaTag 创建CA标签
 //
 // 创建CA标签。
@@ -662,6 +684,28 @@ func (c *CcmClient) RevokeCertificateInvoker(request *model.RevokeCertificateReq
 	return &RevokeCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAgency 查看是否有服务委托
+//
+// 查看是否有服务委托。
+// &gt; 用户所使用账号token需要具备安全管理员（secu_admin）权限。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcmClient) ShowAgency(request *model.ShowAgencyRequest) (*model.ShowAgencyResponse, error) {
+	requestDef := GenReqDefForShowAgency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAgencyResponse), nil
+	}
+}
+
+// ShowAgencyInvoker 查看是否有服务委托
+func (c *CcmClient) ShowAgencyInvoker(request *model.ShowAgencyRequest) *ShowAgencyInvoker {
+	requestDef := GenReqDefForShowAgency()
+	return &ShowAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowCertificate 查询证书详情
 //
 // 查询证书详情。
@@ -724,6 +768,27 @@ func (c *CcmClient) ShowCertificateQuota(request *model.ShowCertificateQuotaRequ
 func (c *CcmClient) ShowCertificateQuotaInvoker(request *model.ShowCertificateQuotaRequest) *ShowCertificateQuotaInvoker {
 	requestDef := GenReqDefForShowCertificateQuota()
 	return &ShowCertificateQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowConsoleConfig 查询局点支持特性
+//
+// 查询局点支持特性。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcmClient) ShowConsoleConfig(request *model.ShowConsoleConfigRequest) (*model.ShowConsoleConfigResponse, error) {
+	requestDef := GenReqDefForShowConsoleConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowConsoleConfigResponse), nil
+	}
+}
+
+// ShowConsoleConfigInvoker 查询局点支持特性
+func (c *CcmClient) ShowConsoleConfigInvoker(request *model.ShowConsoleConfigRequest) *ShowConsoleConfigInvoker {
+	requestDef := GenReqDefForShowConsoleConfig()
+	return &ShowConsoleConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateCertificateAuthority 创建CA
@@ -1013,4 +1078,25 @@ func (c *CcmClient) ShowCertificateAuthorityQuota(request *model.ShowCertificate
 func (c *CcmClient) ShowCertificateAuthorityQuotaInvoker(request *model.ShowCertificateAuthorityQuotaRequest) *ShowCertificateAuthorityQuotaInvoker {
 	requestDef := GenReqDefForShowCertificateAuthorityQuota()
 	return &ShowCertificateAuthorityQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateOcspSwitch 更新OCSP开关
+//
+// 启用或禁用当前CA的OCSP。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CcmClient) UpdateOcspSwitch(request *model.UpdateOcspSwitchRequest) (*model.UpdateOcspSwitchResponse, error) {
+	requestDef := GenReqDefForUpdateOcspSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateOcspSwitchResponse), nil
+	}
+}
+
+// UpdateOcspSwitchInvoker 更新OCSP开关
+func (c *CcmClient) UpdateOcspSwitchInvoker(request *model.UpdateOcspSwitchRequest) *UpdateOcspSwitchInvoker {
+	requestDef := GenReqDefForUpdateOcspSwitch()
+	return &UpdateOcspSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

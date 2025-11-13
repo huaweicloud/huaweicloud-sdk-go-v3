@@ -23,6 +23,9 @@ type CreateFirewallOption struct {
 
 	// 功能说明：ACL是否开启，默认值true 取值范围：true表示ACL开启；false表示ACL关闭
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
+
+	// 参数解释：   网络ACL支持关联的子网类型。 约束限制：   不涉及。 取值范围：   normal：表示网络ACL支持关联普通子网。   clouddcn：表示网络ACL支持关联CloudDCN子网。 默认取值：   normal
+	Type *string `json:"type,omitempty"`
 }
 
 func (o CreateFirewallOption) String() string {

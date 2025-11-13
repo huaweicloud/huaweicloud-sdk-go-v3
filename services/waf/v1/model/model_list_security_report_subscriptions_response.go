@@ -8,8 +8,11 @@ import (
 
 // ListSecurityReportSubscriptionsResponse Response Object
 type ListSecurityReportSubscriptionsResponse struct {
+
+	// 安全报告订阅数
 	Total *int32 `json:"total,omitempty"`
 
+	// 安全报告订阅列表
 	Items          *[]SecurityReportSubscriptionSummaryResponse `json:"items,omitempty"`
 	HttpStatusCode int                                          `json:"-"`
 }

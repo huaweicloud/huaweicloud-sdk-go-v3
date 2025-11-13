@@ -27,6 +27,12 @@ type CreateOttChannelInfoReq struct {
 	// 频道状态 - ON：频道下发成功后，自动启动拉流、转码、录制等功能 - OFF：仅保存频道信息，不启动频道
 	State CreateOttChannelInfoReqState `json:"state"`
 
+	// 频道模式 ADD_CDN：一站式服务，源站和CDN绑在一起（默认） ONLY_OS：独立源站服务，CDN和源站解耦
+	Mode *CreateOttChannelInfoReqMode `json:"mode,omitempty"`
+
+	// 当mode是ONLY_OS时，该字段生效，表示频道所在Region
+	Region *string `json:"region,omitempty"`
+
 	Input *InputStreamInfo `json:"input"`
 
 	// 转码模板配置
@@ -78,6 +84,53 @@ func (c CreateOttChannelInfoReqState) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateOttChannelInfoReqState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateOttChannelInfoReqMode struct {
+	value string
+}
+
+type CreateOttChannelInfoReqModeEnum struct {
+	ADD_CDN CreateOttChannelInfoReqMode
+	ONLY_OS CreateOttChannelInfoReqMode
+}
+
+func GetCreateOttChannelInfoReqModeEnum() CreateOttChannelInfoReqModeEnum {
+	return CreateOttChannelInfoReqModeEnum{
+		ADD_CDN: CreateOttChannelInfoReqMode{
+			value: "ADD_CDN",
+		},
+		ONLY_OS: CreateOttChannelInfoReqMode{
+			value: "ONLY_OS",
+		},
+	}
+}
+
+func (c CreateOttChannelInfoReqMode) Value() string {
+	return c.value
+}
+
+func (c CreateOttChannelInfoReqMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateOttChannelInfoReqMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

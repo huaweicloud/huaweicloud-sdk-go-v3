@@ -14,6 +14,12 @@ type ListMergeRequestVersionsRequest struct {
 
 	// **参数解释：**  合并请求 iid。
 	MergeRequestIid int32 `json:"merge_request_iid"`
+
+	// **参数解释：** 偏移量，从0开始。
+	Offset *int32 `json:"offset,omitempty"`
+
+	// **参数解释：** 返回数量。
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListMergeRequestVersionsRequest) String() string {

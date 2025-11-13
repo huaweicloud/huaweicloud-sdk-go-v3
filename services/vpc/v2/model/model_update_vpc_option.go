@@ -20,6 +20,9 @@ type UpdateVpcOption struct {
 
 	// 功能说明：路由信息列表，详情参见route对象
 	Routes *[]Route `json:"routes,omitempty"`
+
+	// 功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
+	EnableNetworkAddressUsageMetrics *bool `json:"enable_network_address_usage_metrics,omitempty"`
 }
 
 func (o UpdateVpcOption) String() string {

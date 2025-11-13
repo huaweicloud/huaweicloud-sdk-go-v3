@@ -8,7 +8,7 @@ import (
 
 type NetworkDeviceOffering struct {
 
-	// 销售策略ID
+	// 网络设备商品ID
 	Id *string `json:"id,omitempty"`
 
 	// 地区编码，表示允许在这个地区购买部署

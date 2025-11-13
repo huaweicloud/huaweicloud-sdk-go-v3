@@ -45,6 +45,9 @@ type ShowScriptResponse struct {
 	// 责任人名称
 	Owner *string `json:"owner,omitempty"`
 
+	// 脚本最新提交版本
+	Version *int32 `json:"version,omitempty"`
+
 	// 在开启审批开关后，需要填写该字段。表示创建脚本的目标状态，有三种状态：SAVED、SUBMITTED和PRODUCTION，分别表示脚本创建后是保存态，提交态，生产态: - 保存态表示脚本仅保存，无法调度运行，需要提交并审核通过后才能运行。 - 提交态表示脚本保存后会自动提交，需要审核通过才能运行。 - 生产态表示脚本跳过审批环节，创建后可以直接运行。注意：只有工作空间的管理员用户才能创建生产态的脚本。
 	TargetStatus *ShowScriptResponseTargetStatus `json:"targetStatus,omitempty"`
 

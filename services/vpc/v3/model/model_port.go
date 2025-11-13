@@ -19,8 +19,7 @@ type Port struct {
 	// 1、功能描述：提供用户设置自定义信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
 	Bindingprofile *interface{} `json:"binding:profile"`
 
-	// 1、功能描述：vif的详细信息， \"ovs_hybrid_plug\": 是否为ovs/bridge混合模式 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-	BindingvifDetails *interface{} `json:"binding:vif_details"`
+	BindingvifDetails *BindingVifDetails `json:"binding:vif_details"`
 
 	// 1、功能描述：端口的接口类型 (ovs/hw_veb等)(扩展属性) 2、取值范围：N/A 3、约束：管理员权限，普通租户不可见 4、默认值：N/A 5、权限：N/A
 	BindingvifType string `json:"binding:vif_type"`
@@ -112,8 +111,8 @@ type Port struct {
 	// 1、功能描述：端口绑定实例信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
 	InstanceInfo *interface{} `json:"instance_info"`
 
-	// 1、功能描述：端口标签 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-	Tags []string `json:"tags"`
+	// 参数解释： 端口的标签信息，包括标签键和标签值，可用来分类和标识资源。 取值范围： 不涉及。
+	Tags []ResourceTag `json:"tags"`
 
 	// 1、功能描述：IP/Mac对列表 2、取值范围：N/A 3、约束： - IP地址不允许为 “0.0.0.0/0” - 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 - 如果allowed_address_pairs的IP地址为“1.1.1.1/0”，表示关闭源目地址检查开关。 - 被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。 4、默认值：N/A 5、权限：N/A
 	AllowedAddressPairs []AllowedAddressPair `json:"allowed_address_pairs"`

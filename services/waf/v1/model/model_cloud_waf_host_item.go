@@ -47,7 +47,7 @@ type CloudWafHostItem struct {
 	// 域名接入状态，0表示未接入，1表示已接入
 	AccessStatus *int32 `json:"access_status,omitempty"`
 
-	// 是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
+	// 是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
 	ExclusiveIp *bool `json:"exclusive_ip,omitempty"`
 
 	// 套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。

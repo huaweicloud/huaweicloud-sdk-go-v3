@@ -15,7 +15,7 @@ type ExportJobRequest struct {
 	// 作业名称.
 	JobName string `json:"job_name"`
 
-	Body *ExportJobsReq `json:"body,omitempty"`
+	Body *ExportJobReq `json:"body,omitempty"`
 }
 
 func (o ExportJobRequest) String() string {

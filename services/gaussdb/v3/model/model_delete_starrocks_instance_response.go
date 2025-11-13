@@ -10,7 +10,7 @@ import (
 type DeleteStarrocksInstanceResponse struct {
 
 	// 工作流ID。
-	WorkflowId     *string `json:"workflow_id,omitempty"`
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -9,7 +9,7 @@ import (
 // ListAuthorizationsRequest Request Object
 type ListAuthorizationsRequest struct {
 
-	// 子用户名称
+	// 子账号名称
 	SubCustomerName *string `json:"sub_customer_name,omitempty"`
 
 	// 工单id

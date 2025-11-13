@@ -293,6 +293,22 @@ func (i *ListNodesInvoker) Invoke() (*model.ListNodesResponse, error) {
 	}
 }
 
+type ListSecurityRuleStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecurityRuleStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSecurityRuleStatusInvoker) Invoke() (*model.ListSecurityRuleStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecurityRuleStatusResponse), nil
+	}
+}
+
 type ShrinkClusterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -402,6 +418,38 @@ func (i *CancelSyncIamUserInvoker) Invoke() (*model.CancelSyncIamUserResponse, e
 		return nil, err
 	} else {
 		return result.(*model.CancelSyncIamUserResponse), nil
+	}
+}
+
+type ListSyncRequirementsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSyncRequirementsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSyncRequirementsInvoker) Invoke() (*model.ListSyncRequirementsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSyncRequirementsResponse), nil
+	}
+}
+
+type ListSyncStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSyncStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSyncStatusInvoker) Invoke() (*model.ListSyncStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSyncStatusResponse), nil
 	}
 }
 

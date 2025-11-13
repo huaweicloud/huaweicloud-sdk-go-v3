@@ -116,6 +116,17 @@ func GenReqDefForCountCertResourceInstances() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateAgency() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/private-certificate-authorities/agencies").
+		WithResponse(new(model.CreateAgencyResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateCaTag() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -450,6 +461,17 @@ func GenReqDefForRevokeCertificate() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowAgency() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/private-certificate-authorities/agency").
+		WithResponse(new(model.ShowAgencyResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowCertificate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -482,6 +504,17 @@ func GenReqDefForShowCertificateQuota() *def.HttpRequestDef {
 		WithMethod(http.MethodGet).
 		WithPath("/v1/private-certificates/quotas").
 		WithResponse(new(model.ShowCertificateQuotaResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowConsoleConfig() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/pca/config/console").
+		WithResponse(new(model.ShowConsoleConfigResponse)).
 		WithContentType("application/json")
 
 	requestDef := reqDefBuilder.Build()
@@ -726,6 +759,26 @@ func GenReqDefForShowCertificateAuthorityQuota() *def.HttpRequestDef {
 		WithPath("/v1/private-certificate-authorities/quotas").
 		WithResponse(new(model.ShowCertificateAuthorityQuotaResponse)).
 		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateOcspSwitch() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/private-certificate-authorities/{ca_id}/ocsp/switch").
+		WithResponse(new(model.UpdateOcspSwitchResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CaId").
+		WithJsonTag("ca_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

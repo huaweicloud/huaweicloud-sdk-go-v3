@@ -40,6 +40,12 @@ type Vpc struct {
 
 	// 功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
 	UpdatedAt *sdktime.SdkTime `json:"updated_at"`
+
+	// 功能说明：默认情况下，VPC中的资源可以通过内网访问服务终结点。开启该项后，VPC将无法通过内网访问服务终结点，请谨慎操作。 无法访问以下云服务：容器镜像服务SWR、云日志服务LTS、企业主机安全HSS、应用运维管理AOM、应用性能管理APM、对象存储服务OBS、API网关APIG。 取值范围： off：代表禁用。 on：代表开启。
+	BlockServiceEndpointStates string `json:"block_service_endpoint_states"`
+
+	// 功能说明：是否开启VPC内所有子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
+	EnableNetworkAddressUsageMetrics bool `json:"enable_network_address_usage_metrics"`
 }
 
 func (o Vpc) String() string {

@@ -8,8 +8,11 @@ import (
 
 // ConfirmTmsResourceInstancesResponse Response Object
 type ConfirmTmsResourceInstancesResponse struct {
+
+	// 资源总数
 	TotalCount *int32 `json:"total_count,omitempty"`
 
+	// 资源列表
 	Resources      *[]TmsResourceInstance `json:"resources,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

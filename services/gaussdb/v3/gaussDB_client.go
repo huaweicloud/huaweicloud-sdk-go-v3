@@ -4011,6 +4011,27 @@ func (c *GaussDBClient) DeleteStarrocksInstanceInvoker(request *model.DeleteStar
 	return &DeleteStarrocksInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DownloadImportExcelTemplate HTAP数据同步模板下载
+//
+// HTAP数据同步模板下载。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) DownloadImportExcelTemplate(request *model.DownloadImportExcelTemplateRequest) (*model.DownloadImportExcelTemplateResponse, error) {
+	requestDef := GenReqDefForDownloadImportExcelTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadImportExcelTemplateResponse), nil
+	}
+}
+
+// DownloadImportExcelTemplateInvoker HTAP数据同步模板下载
+func (c *GaussDBClient) DownloadImportExcelTemplateInvoker(request *model.DownloadImportExcelTemplateRequest) *DownloadImportExcelTemplateInvoker {
+	requestDef := GenReqDefForDownloadImportExcelTemplate()
+	return &DownloadImportExcelTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListClickHouseDataBase 查询数据库列表
 //
 // 查询数据库列表。
@@ -5059,4 +5080,25 @@ func (c *GaussDBClient) UpgradeSrKernelVersion(request *model.UpgradeSrKernelVer
 func (c *GaussDBClient) UpgradeSrKernelVersionInvoker(request *model.UpgradeSrKernelVersionRequest) *UpgradeSrKernelVersionInvoker {
 	requestDef := GenReqDefForUpgradeSrKernelVersion()
 	return &UpgradeSrKernelVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadImportExcelTemplate HTAP库表导入校验
+//
+// 创建数据同步时支持Excel导入并进行校验。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UploadImportExcelTemplate(request *model.UploadImportExcelTemplateRequest) (*model.UploadImportExcelTemplateResponse, error) {
+	requestDef := GenReqDefForUploadImportExcelTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadImportExcelTemplateResponse), nil
+	}
+}
+
+// UploadImportExcelTemplateInvoker HTAP库表导入校验
+func (c *GaussDBClient) UploadImportExcelTemplateInvoker(request *model.UploadImportExcelTemplateRequest) *UploadImportExcelTemplateInvoker {
+	requestDef := GenReqDefForUploadImportExcelTemplate()
+	return &UploadImportExcelTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

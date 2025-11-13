@@ -691,6 +691,27 @@ func (c *AadClient) ShowAlarmConfigInvoker(request *model.ShowAlarmConfigRequest
 	return &ShowAlarmConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowLtsConfig 查询日志配置
+//
+// 查询日志配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) ShowLtsConfig(request *model.ShowLtsConfigRequest) (*model.ShowLtsConfigResponse, error) {
+	requestDef := GenReqDefForShowLtsConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLtsConfigResponse), nil
+	}
+}
+
+// ShowLtsConfigInvoker 查询日志配置
+func (c *AadClient) ShowLtsConfigInvoker(request *model.ShowLtsConfigRequest) *ShowLtsConfigInvoker {
+	requestDef := GenReqDefForShowLtsConfig()
+	return &ShowLtsConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowPolicy 查询策略详情
 //
 // 查询策略详情
@@ -773,6 +794,27 @@ func (c *AadClient) UpdateInstanceIpRule(request *model.UpdateInstanceIpRuleRequ
 func (c *AadClient) UpdateInstanceIpRuleInvoker(request *model.UpdateInstanceIpRuleRequest) *UpdateInstanceIpRuleInvoker {
 	requestDef := GenReqDefForUpdateInstanceIpRule()
 	return &UpdateInstanceIpRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLtsConfig 设置日志配置
+//
+// 设置日志配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) UpdateLtsConfig(request *model.UpdateLtsConfigRequest) (*model.UpdateLtsConfigResponse, error) {
+	requestDef := GenReqDefForUpdateLtsConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateLtsConfigResponse), nil
+	}
+}
+
+// UpdateLtsConfigInvoker 设置日志配置
+func (c *AadClient) UpdateLtsConfigInvoker(request *model.UpdateLtsConfigRequest) *UpdateLtsConfigInvoker {
+	requestDef := GenReqDefForUpdateLtsConfig()
+	return &UpdateLtsConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdatePackageIp 更新实例绑定的全量防护对象

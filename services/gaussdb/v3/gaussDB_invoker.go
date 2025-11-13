@@ -3045,6 +3045,22 @@ func (i *DeleteStarrocksInstanceInvoker) Invoke() (*model.DeleteStarrocksInstanc
 	}
 }
 
+type DownloadImportExcelTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadImportExcelTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadImportExcelTemplateInvoker) Invoke() (*model.DownloadImportExcelTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadImportExcelTemplateResponse), nil
+	}
+}
+
 type ListClickHouseDataBaseInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3842,5 +3858,21 @@ func (i *UpgradeSrKernelVersionInvoker) Invoke() (*model.UpgradeSrKernelVersionR
 		return nil, err
 	} else {
 		return result.(*model.UpgradeSrKernelVersionResponse), nil
+	}
+}
+
+type UploadImportExcelTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadImportExcelTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UploadImportExcelTemplateInvoker) Invoke() (*model.UploadImportExcelTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadImportExcelTemplateResponse), nil
 	}
 }

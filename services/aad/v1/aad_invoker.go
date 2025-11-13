@@ -517,6 +517,22 @@ func (i *ShowAlarmConfigInvoker) Invoke() (*model.ShowAlarmConfigResponse, error
 	}
 }
 
+type ShowLtsConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLtsConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowLtsConfigInvoker) Invoke() (*model.ShowLtsConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLtsConfigResponse), nil
+	}
+}
+
 type ShowPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -578,6 +594,22 @@ func (i *UpdateInstanceIpRuleInvoker) Invoke() (*model.UpdateInstanceIpRuleRespo
 		return nil, err
 	} else {
 		return result.(*model.UpdateInstanceIpRuleResponse), nil
+	}
+}
+
+type UpdateLtsConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateLtsConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateLtsConfigInvoker) Invoke() (*model.UpdateLtsConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateLtsConfigResponse), nil
 	}
 }
 

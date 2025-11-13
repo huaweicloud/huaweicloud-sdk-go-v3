@@ -53,6 +53,22 @@ func (i *ChangePrepaidCloudWafInvoker) Invoke() (*model.ChangePrepaidCloudWafRes
 	}
 }
 
+type CheckAgencyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckAgencyInvoker) Invoke() (*model.CheckAgencyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckAgencyResponse), nil
+	}
+}
+
 type ConfirmApplicationTypesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -82,6 +98,70 @@ func (i *ConfirmAsyncJobInvoker) Invoke() (*model.ConfirmAsyncJobResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ConfirmAsyncJobResponse), nil
+	}
+}
+
+type ConfirmIpReputationRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ConfirmIpReputationRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ConfirmIpReputationRuleInvoker) Invoke() (*model.ConfirmIpReputationRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ConfirmIpReputationRuleResponse), nil
+	}
+}
+
+type ConfirmPolicyAntileakageMapInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ConfirmPolicyAntileakageMapInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ConfirmPolicyAntileakageMapInvoker) Invoke() (*model.ConfirmPolicyAntileakageMapResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ConfirmPolicyAntileakageMapResponse), nil
+	}
+}
+
+type ConfirmPolicyIpReputationMapInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ConfirmPolicyIpReputationMapInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ConfirmPolicyIpReputationMapInvoker) Invoke() (*model.ConfirmPolicyIpReputationMapResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ConfirmPolicyIpReputationMapResponse), nil
+	}
+}
+
+type ConfirmProtectionTypesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ConfirmProtectionTypesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ConfirmProtectionTypesInvoker) Invoke() (*model.ConfirmProtectionTypesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ConfirmProtectionTypesResponse), nil
 	}
 }
 
@@ -322,6 +402,22 @@ func (i *CreateIpGroupInvoker) Invoke() (*model.CreateIpGroupResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateIpGroupResponse), nil
+	}
+}
+
+type CreateIpReputationRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateIpReputationRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateIpReputationRuleInvoker) Invoke() (*model.CreateIpReputationRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateIpReputationRuleResponse), nil
 	}
 }
 
@@ -1317,6 +1413,22 @@ func (i *ListResponseCodeTimelineInvoker) Invoke() (*model.ListResponseCodeTimel
 	}
 }
 
+type ListSecurityReportHistoryPeriodsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecurityReportHistoryPeriodsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSecurityReportHistoryPeriodsInvoker) Invoke() (*model.ListSecurityReportHistoryPeriodsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecurityReportHistoryPeriodsResponse), nil
+	}
+}
+
 type ListSecurityReportSendingRecordsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1877,6 +1989,22 @@ func (i *ShowSecurityReportContentInvoker) Invoke() (*model.ShowSecurityReportCo
 	}
 }
 
+type ShowSecurityReportSubscriptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSecurityReportSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSecurityReportSubscriptionInvoker) Invoke() (*model.ShowSecurityReportSubscriptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSecurityReportSubscriptionResponse), nil
+	}
+}
+
 type ShowSourceIpInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2370,5 +2498,21 @@ func (i *UpdateWhiteblackipRuleInvoker) Invoke() (*model.UpdateWhiteblackipRuleR
 		return nil, err
 	} else {
 		return result.(*model.UpdateWhiteblackipRuleResponse), nil
+	}
+}
+
+type ShowWebProtectionRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowWebProtectionRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowWebProtectionRuleInvoker) Invoke() (*model.ShowWebProtectionRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowWebProtectionRuleResponse), nil
 	}
 }

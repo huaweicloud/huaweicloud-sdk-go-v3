@@ -69,6 +69,22 @@ func (i *AttachServerVolumeInvoker) Invoke() (*model.AttachServerVolumeResponse,
 	}
 }
 
+type BatchAddServerGroupMemberInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchAddServerGroupMemberInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchAddServerGroupMemberInvoker) Invoke() (*model.BatchAddServerGroupMemberResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchAddServerGroupMemberResponse), nil
+	}
+}
+
 type BatchAddServerNicsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -114,6 +130,22 @@ func (i *BatchCreateServerTagsInvoker) Invoke() (*model.BatchCreateServerTagsRes
 		return nil, err
 	} else {
 		return result.(*model.BatchCreateServerTagsResponse), nil
+	}
+}
+
+type BatchDeleteServerGroupMemberInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteServerGroupMemberInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteServerGroupMemberInvoker) Invoke() (*model.BatchDeleteServerGroupMemberResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteServerGroupMemberResponse), nil
 	}
 }
 

@@ -14,6 +14,9 @@ type NodeSqlFilterRulePattern struct {
 
 	// 最大并发数。取值范围：非负整数。
 	MaxConcurrency int32 `json:"max_concurrency"`
+
+	// **参数解释**：  SQL限流失效时间，标准秒级时间戳，永久生效SQL限流规则该字段为null。  **约束限制**：  不涉及。  **取值范围**：  0 - 9223372036854775807。  **默认取值**：  不涉及。
+	ExpireAt *int64 `json:"expire_at,omitempty"`
 }
 
 func (o NodeSqlFilterRulePattern) String() string {

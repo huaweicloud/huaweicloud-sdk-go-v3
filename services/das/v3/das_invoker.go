@@ -229,6 +229,22 @@ func (i *CreateHealthReportTaskInvoker) Invoke() (*model.CreateHealthReportTaskR
 	}
 }
 
+type CreateHistoryTransactionExportTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateHistoryTransactionExportTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateHistoryTransactionExportTaskInvoker) Invoke() (*model.CreateHistoryTransactionExportTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateHistoryTransactionExportTaskResponse), nil
+	}
+}
+
 type CreateSnapshotsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -306,6 +322,22 @@ func (i *DeleteDbUserInvoker) Invoke() (*model.DeleteDbUserResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteDbUserResponse), nil
+	}
+}
+
+type DeleteHistoryTransactionExportTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteHistoryTransactionExportTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteHistoryTransactionExportTaskInvoker) Invoke() (*model.DeleteHistoryTransactionExportTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteHistoryTransactionExportTaskResponse), nil
 	}
 }
 
@@ -565,6 +597,22 @@ func (i *ListHealthReportTaskInvoker) Invoke() (*model.ListHealthReportTaskRespo
 	}
 }
 
+type ListHistoryTransactionExportTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHistoryTransactionExportTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListHistoryTransactionExportTaskInvoker) Invoke() (*model.ListHistoryTransactionExportTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHistoryTransactionExportTaskResponse), nil
+	}
+}
+
 type ListInnodbLocksInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -789,6 +837,38 @@ func (i *ListTransactionsInvoker) Invoke() (*model.ListTransactionsResponse, err
 	}
 }
 
+type LoginBuiltInAccountInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *LoginBuiltInAccountInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *LoginBuiltInAccountInvoker) Invoke() (*model.LoginBuiltInAccountResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.LoginBuiltInAccountResponse), nil
+	}
+}
+
+type LogoffBuiltInAccountInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *LogoffBuiltInAccountInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *LogoffBuiltInAccountInvoker) Invoke() (*model.LogoffBuiltInAccountResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.LogoffBuiltInAccountResponse), nil
+	}
+}
+
 type ParseSqlLimitRulesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -930,6 +1010,22 @@ func (i *ShowHealthReportSettingsInvoker) Invoke() (*model.ShowHealthReportSetti
 		return nil, err
 	} else {
 		return result.(*model.ShowHealthReportSettingsResponse), nil
+	}
+}
+
+type ShowHistoryTransactionExportTaskInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHistoryTransactionExportTaskInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowHistoryTransactionExportTaskInfoInvoker) Invoke() (*model.ShowHistoryTransactionExportTaskInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHistoryTransactionExportTaskInfoResponse), nil
 	}
 }
 

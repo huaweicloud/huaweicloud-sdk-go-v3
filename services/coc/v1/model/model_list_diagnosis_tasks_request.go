@@ -34,10 +34,16 @@ type ListDiagnosisTasksRequest struct {
 	EndTime *int64 `json:"end_time,omitempty"`
 
 	// 分页查询页索引
-	PageIndex int32 `json:"page_index"`
+	PageIndex *int32 `json:"page_index,omitempty"`
 
 	// 分页查询页大小
-	PageSize int32 `json:"page_size"`
+	PageSize *int32 `json:"page_size,omitempty"`
+
+	// 分页查询页索引
+	Offset *int32 `json:"offset,omitempty"`
+
+	// 分页查询页大小
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListDiagnosisTasksRequest) String() string {

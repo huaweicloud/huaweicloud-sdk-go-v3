@@ -25,6 +25,8 @@ type SubtitleFileDetail struct {
 
 	// 字幕文件生成时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
 	GenerateTime *string `json:"generate_time,omitempty"`
+
+	ErrorInfo *ErrorResponse `json:"error_info,omitempty"`
 }
 
 func (o SubtitleFileDetail) String() string {

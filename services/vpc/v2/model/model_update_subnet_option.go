@@ -32,6 +32,9 @@ type UpdateSubnetOption struct {
 
 	// 子网配置的NTP地址或租约时间
 	ExtraDhcpOpts *[]ExtraDhcpOption `json:"extra_dhcp_opts,omitempty"`
+
+	// 功能说明：是否开启当前子网的IPv4地址使用量指标监控。 取值范围： true：开启 false：不开启
+	EnableNetworkAddressUsageMetrics *bool `json:"enable_network_address_usage_metrics,omitempty"`
 }
 
 func (o UpdateSubnetOption) String() string {

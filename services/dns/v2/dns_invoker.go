@@ -21,6 +21,22 @@ func (i *AssociateEndpointIpaddressInvoker) Invoke() (*model.AssociateEndpointIp
 	}
 }
 
+type AssociateResolverQueryLogConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssociateResolverQueryLogConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AssociateResolverQueryLogConfigInvoker) Invoke() (*model.AssociateResolverQueryLogConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssociateResolverQueryLogConfigResponse), nil
+	}
+}
+
 type AssociateResolverRuleRouterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,6 +66,54 @@ func (i *AssociateRouterInvoker) Invoke() (*model.AssociateRouterResponse, error
 		return nil, err
 	} else {
 		return result.(*model.AssociateRouterResponse), nil
+	}
+}
+
+type BatchCreateCombinedPublicRecordsetsTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateCombinedPublicRecordsetsTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateCombinedPublicRecordsetsTaskInvoker) Invoke() (*model.BatchCreateCombinedPublicRecordsetsTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateCombinedPublicRecordsetsTaskResponse), nil
+	}
+}
+
+type BatchCreatePublicRecordsetsTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreatePublicRecordsetsTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreatePublicRecordsetsTaskInvoker) Invoke() (*model.BatchCreatePublicRecordsetsTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreatePublicRecordsetsTaskResponse), nil
+	}
+}
+
+type BatchCreatePublicZonesTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreatePublicZonesTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreatePublicZonesTaskInvoker) Invoke() (*model.BatchCreatePublicZonesTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreatePublicZonesTaskResponse), nil
 	}
 }
 
@@ -85,19 +149,19 @@ func (i *BatchDeletePtrRecordsInvoker) Invoke() (*model.BatchDeletePtrRecordsRes
 	}
 }
 
-type BatchDeleteRecordSetWithLineInvoker struct {
+type BatchDeletePublicRecordsetsTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *BatchDeleteRecordSetWithLineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *BatchDeletePublicRecordsetsTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *BatchDeleteRecordSetWithLineInvoker) Invoke() (*model.BatchDeleteRecordSetWithLineResponse, error) {
+func (i *BatchDeletePublicRecordsetsTaskInvoker) Invoke() (*model.BatchDeletePublicRecordsetsTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.BatchDeleteRecordSetWithLineResponse), nil
+		return result.(*model.BatchDeletePublicRecordsetsTaskResponse), nil
 	}
 }
 
@@ -165,19 +229,35 @@ func (i *BatchSetZonesStatusInvoker) Invoke() (*model.BatchSetZonesStatusRespons
 	}
 }
 
-type BatchUpdateRecordSetWithLineInvoker struct {
+type BatchTransferPublicZonesTaskInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *BatchUpdateRecordSetWithLineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *BatchTransferPublicZonesTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *BatchUpdateRecordSetWithLineInvoker) Invoke() (*model.BatchUpdateRecordSetWithLineResponse, error) {
+func (i *BatchTransferPublicZonesTaskInvoker) Invoke() (*model.BatchTransferPublicZonesTaskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.BatchUpdateRecordSetWithLineResponse), nil
+		return result.(*model.BatchTransferPublicZonesTaskResponse), nil
+	}
+}
+
+type BatchUpdatePublicRecordsetsTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdatePublicRecordsetsTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdatePublicRecordsetsTaskInvoker) Invoke() (*model.BatchUpdatePublicRecordsetsTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdatePublicRecordsetsTaskResponse), nil
 	}
 }
 
@@ -293,19 +373,19 @@ func (i *CreatePublicZoneInvoker) Invoke() (*model.CreatePublicZoneResponse, err
 	}
 }
 
-type CreateRecordSetWithBatchLinesInvoker struct {
+type CreateResolverQueryLogConfigInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *CreateRecordSetWithBatchLinesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *CreateResolverQueryLogConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *CreateRecordSetWithBatchLinesInvoker) Invoke() (*model.CreateRecordSetWithBatchLinesResponse, error) {
+func (i *CreateResolverQueryLogConfigInvoker) Invoke() (*model.CreateResolverQueryLogConfigResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.CreateRecordSetWithBatchLinesResponse), nil
+		return result.(*model.CreateResolverQueryLogConfigResponse), nil
 	}
 }
 
@@ -322,6 +402,38 @@ func (i *CreateResolverRuleInvoker) Invoke() (*model.CreateResolverRuleResponse,
 		return nil, err
 	} else {
 		return result.(*model.CreateResolverRuleResponse), nil
+	}
+}
+
+type CreateRetrievalInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRetrievalInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateRetrievalInvoker) Invoke() (*model.CreateRetrievalResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRetrievalResponse), nil
+	}
+}
+
+type CreateRetrievalVerificationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRetrievalVerificationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateRetrievalVerificationInvoker) Invoke() (*model.CreateRetrievalVerificationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRetrievalVerificationResponse), nil
 	}
 }
 
@@ -421,6 +533,22 @@ func (i *DeletePublicZoneInvoker) Invoke() (*model.DeletePublicZoneResponse, err
 	}
 }
 
+type DeleteResolverQueryLogConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteResolverQueryLogConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteResolverQueryLogConfigInvoker) Invoke() (*model.DeleteResolverQueryLogConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteResolverQueryLogConfigResponse), nil
+	}
+}
+
 type DeleteResolverRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -469,6 +597,22 @@ func (i *DisassociateEndpointIpaddressInvoker) Invoke() (*model.DisassociateEndp
 	}
 }
 
+type DisassociateResolverQueryLogConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisassociateResolverQueryLogConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DisassociateResolverQueryLogConfigInvoker) Invoke() (*model.DisassociateResolverQueryLogConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisassociateResolverQueryLogConfigResponse), nil
+	}
+}
+
 type DisassociateResolverRuleRouterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -514,6 +658,22 @@ func (i *ListApiVersionsInvoker) Invoke() (*model.ListApiVersionsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListApiVersionsResponse), nil
+	}
+}
+
+type ListBatchOperationTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBatchOperationTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBatchOperationTasksInvoker) Invoke() (*model.ListBatchOperationTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBatchOperationTasksResponse), nil
 	}
 }
 
@@ -645,6 +805,22 @@ func (i *ListPublicZonesInvoker) Invoke() (*model.ListPublicZonesResponse, error
 	}
 }
 
+type ListResolverQueryLogConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResolverQueryLogConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListResolverQueryLogConfigsInvoker) Invoke() (*model.ListResolverQueryLogConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResolverQueryLogConfigsResponse), nil
+	}
+}
+
 type ListResolverRulesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -741,6 +917,38 @@ func (i *ShowAuthorizeTxtRecordInvoker) Invoke() (*model.ShowAuthorizeTxtRecordR
 	}
 }
 
+type ShowBatchOperationTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBatchOperationTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowBatchOperationTaskInvoker) Invoke() (*model.ShowBatchOperationTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBatchOperationTaskResponse), nil
+	}
+}
+
+type ShowDomainDetectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainDetectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDomainDetectionInvoker) Invoke() (*model.ShowDomainDetectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainDetectionResponse), nil
+	}
+}
+
 type ShowDomainQuotaInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -754,6 +962,22 @@ func (i *ShowDomainQuotaInvoker) Invoke() (*model.ShowDomainQuotaResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ShowDomainQuotaResponse), nil
+	}
+}
+
+type ShowEmailRecordSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowEmailRecordSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowEmailRecordSetInvoker) Invoke() (*model.ShowEmailRecordSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowEmailRecordSetResponse), nil
 	}
 }
 
@@ -853,6 +1077,22 @@ func (i *ShowPublicZoneNameServerInvoker) Invoke() (*model.ShowPublicZoneNameSer
 	}
 }
 
+type ShowResolverQueryLogConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowResolverQueryLogConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowResolverQueryLogConfigInvoker) Invoke() (*model.ShowResolverQueryLogConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowResolverQueryLogConfigResponse), nil
+	}
+}
+
 type ShowResolverRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -882,6 +1122,70 @@ func (i *ShowResourceTagInvoker) Invoke() (*model.ShowResourceTagResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ShowResourceTagResponse), nil
+	}
+}
+
+type ShowRetrievalInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRetrievalInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRetrievalInvoker) Invoke() (*model.ShowRetrievalResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRetrievalResponse), nil
+	}
+}
+
+type ShowRetrievalVerificationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRetrievalVerificationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRetrievalVerificationInvoker) Invoke() (*model.ShowRetrievalVerificationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRetrievalVerificationResponse), nil
+	}
+}
+
+type ShowWebsiteRecordSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowWebsiteRecordSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowWebsiteRecordSetInvoker) Invoke() (*model.ShowWebsiteRecordSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowWebsiteRecordSetResponse), nil
+	}
+}
+
+type ShowZoneNameServerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowZoneNameServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowZoneNameServerInvoker) Invoke() (*model.ShowZoneNameServerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowZoneNameServerResponse), nil
 	}
 }
 
@@ -1237,6 +1541,54 @@ func (i *UpdateRecordSetInvoker) Invoke() (*model.UpdateRecordSetResponse, error
 	}
 }
 
+type BatchCreateRecordSetsTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateRecordSetsTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateRecordSetsTaskInvoker) Invoke() (*model.BatchCreateRecordSetsTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateRecordSetsTaskResponse), nil
+	}
+}
+
+type BatchDeleteRecordSetWithLineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteRecordSetWithLineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteRecordSetWithLineInvoker) Invoke() (*model.BatchDeleteRecordSetWithLineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteRecordSetWithLineResponse), nil
+	}
+}
+
+type BatchUpdateRecordSetWithLineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateRecordSetWithLineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateRecordSetWithLineInvoker) Invoke() (*model.BatchUpdateRecordSetWithLineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateRecordSetWithLineResponse), nil
+	}
+}
+
 type CreatePtrInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1253,6 +1605,22 @@ func (i *CreatePtrInvoker) Invoke() (*model.CreatePtrResponse, error) {
 	}
 }
 
+type CreateRecordSetWithBatchLinesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRecordSetWithBatchLinesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateRecordSetWithBatchLinesInvoker) Invoke() (*model.CreateRecordSetWithBatchLinesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRecordSetWithBatchLinesResponse), nil
+	}
+}
+
 type CreateRecordSetWithLineInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1266,6 +1634,22 @@ func (i *CreateRecordSetWithLineInvoker) Invoke() (*model.CreateRecordSetWithLin
 		return nil, err
 	} else {
 		return result.(*model.CreateRecordSetWithLineResponse), nil
+	}
+}
+
+type DeleteBatchCreateRecordSetsTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteBatchCreateRecordSetsTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteBatchCreateRecordSetsTaskInvoker) Invoke() (*model.DeleteBatchCreateRecordSetsTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteBatchCreateRecordSetsTaskResponse), nil
 	}
 }
 
@@ -1349,6 +1733,22 @@ func (i *ListRecordSetsWithLineInvoker) Invoke() (*model.ListRecordSetsWithLineR
 	}
 }
 
+type ListSystemLinesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSystemLinesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSystemLinesInvoker) Invoke() (*model.ListSystemLinesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSystemLinesResponse), nil
+	}
+}
+
 type SetRecordSetsStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1362,6 +1762,22 @@ func (i *SetRecordSetsStatusInvoker) Invoke() (*model.SetRecordSetsStatusRespons
 		return nil, err
 	} else {
 		return result.(*model.SetRecordSetsStatusResponse), nil
+	}
+}
+
+type ShowBatchCreateRecordSetsTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBatchCreateRecordSetsTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowBatchCreateRecordSetsTaskInvoker) Invoke() (*model.ShowBatchCreateRecordSetsTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBatchCreateRecordSetsTaskResponse), nil
 	}
 }
 

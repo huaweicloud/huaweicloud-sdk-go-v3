@@ -21,7 +21,7 @@ type UpdatePrivateZoneStatusResponse struct {
 	// **参数解释：** 管理该域名的管理员邮箱，用于生成该域名的SOA记录。 **取值范围：** 不涉及。
 	Email *string `json:"email,omitempty"`
 
-	// **参数解释：** 域名类型。 **取值范围：** public：公网域名。
+	// **参数解释：** 域名类型。 **取值范围：** private：内网域名。
 	ZoneType *string `json:"zone_type,omitempty"`
 
 	// **参数解释：** 该域名下SOA记录中的有效缓存时间，以秒为单位。 **取值范围：** 1~2147483647。
@@ -30,7 +30,7 @@ type UpdatePrivateZoneStatusResponse struct {
 	// **参数解释：** 该域名下SOA记录中用于标识域名文件变更的序列值，用于主从节点同步。 **取值范围：** 不涉及。
 	Serial *int32 `json:"serial,omitempty"`
 
-	// **参数解释：** 公网域名状态。 **取值范围：** - ACTIVE：正常 - DISABLE：暂停
+	// **参数解释：** 内网域名状态。 **取值范围：** - ACTIVE：正常 - DISABLE：暂停
 	Status *string `json:"status,omitempty"`
 
 	// **参数解释：** 该域名下的记录集个数。 **取值范围：** 不涉及。

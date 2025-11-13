@@ -24,7 +24,7 @@ type SqlAlarmRuleRespList struct {
 	SqlAlarmRuleDescription string `json:"sql_alarm_rule_description"`
 
 	// SQL详细信息
-	SqlRequests []SqlRequest `json:"sql_requests"`
+	SqlRequests []SqlRequestResponse `json:"sql_requests"`
 
 	Frequency *FrequencyRespBody `json:"frequency"`
 

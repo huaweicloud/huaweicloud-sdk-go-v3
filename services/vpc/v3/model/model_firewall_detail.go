@@ -47,6 +47,9 @@ type FirewallDetail struct {
 
 	// 功能说明：ACL出方向规则列表
 	EgressRules []FirewallRuleDetail `json:"egress_rules"`
+
+	// 参数解释： 网络ACL支持绑定的子网类型。 取值范围： normal：默认值，表示网络ACL支持绑定普通子网。 CloudDCN：表示网络ACL支持绑定CloudDCN子网。
+	Type string `json:"type"`
 }
 
 func (o FirewallDetail) String() string {

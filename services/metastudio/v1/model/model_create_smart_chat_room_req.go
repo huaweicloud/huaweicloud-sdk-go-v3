@@ -61,6 +61,9 @@ type CreateSmartChatRoomReq struct {
 	// **参数解释**： 静默退出时长。
 	ExitMuteThreshold *int32 `json:"exit_mute_threshold,omitempty"`
 
+	// 是否优先级加载模型资产
+	EnableSemanticAction *bool `json:"enable_semantic_action,omitempty"`
+
 	// 资源配置。
 	ChatResourceConfig *[]ChatResourceConfig `json:"chat_resource_config,omitempty"`
 }

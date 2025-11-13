@@ -101,6 +101,22 @@ func (i *CountCertResourceInstancesInvoker) Invoke() (*model.CountCertResourceIn
 	}
 }
 
+type CreateAgencyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAgencyInvoker) Invoke() (*model.CreateAgencyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAgencyResponse), nil
+	}
+}
+
 type CreateCaTagInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -421,6 +437,22 @@ func (i *RevokeCertificateInvoker) Invoke() (*model.RevokeCertificateResponse, e
 	}
 }
 
+type ShowAgencyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAgencyInvoker) Invoke() (*model.ShowAgencyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAgencyResponse), nil
+	}
+}
+
 type ShowCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -466,6 +498,22 @@ func (i *ShowCertificateQuotaInvoker) Invoke() (*model.ShowCertificateQuotaRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowCertificateQuotaResponse), nil
+	}
+}
+
+type ShowConsoleConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowConsoleConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowConsoleConfigInvoker) Invoke() (*model.ShowConsoleConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowConsoleConfigResponse), nil
 	}
 }
 
@@ -674,5 +722,21 @@ func (i *ShowCertificateAuthorityQuotaInvoker) Invoke() (*model.ShowCertificateA
 		return nil, err
 	} else {
 		return result.(*model.ShowCertificateAuthorityQuotaResponse), nil
+	}
+}
+
+type UpdateOcspSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateOcspSwitchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateOcspSwitchInvoker) Invoke() (*model.UpdateOcspSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateOcspSwitchResponse), nil
 	}
 }

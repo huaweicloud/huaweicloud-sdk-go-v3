@@ -411,6 +411,27 @@ func (c *MrsClient) ListNodesInvoker(request *model.ListNodesRequest) *ListNodes
 	return &ListNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSecurityRuleStatus 获取当前集群通信安全授权状态
+//
+// 获取当前集群通信安全授权状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) ListSecurityRuleStatus(request *model.ListSecurityRuleStatusRequest) (*model.ListSecurityRuleStatusResponse, error) {
+	requestDef := GenReqDefForListSecurityRuleStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityRuleStatusResponse), nil
+	}
+}
+
+// ListSecurityRuleStatusInvoker 获取当前集群通信安全授权状态
+func (c *MrsClient) ListSecurityRuleStatusInvoker(request *model.ListSecurityRuleStatusRequest) *ListSecurityRuleStatusInvoker {
+	requestDef := GenReqDefForListSecurityRuleStatus()
+	return &ListSecurityRuleStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShrinkCluster 缩容集群
 //
 // 对MRS集群进行缩容。
@@ -556,6 +577,48 @@ func (c *MrsClient) CancelSyncIamUser(request *model.CancelSyncIamUserRequest) (
 func (c *MrsClient) CancelSyncIamUserInvoker(request *model.CancelSyncIamUserRequest) *CancelSyncIamUserInvoker {
 	requestDef := GenReqDefForCancelSyncIamUser()
 	return &CancelSyncIamUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSyncRequirements 查询指定集群的IAM同步情况
+//
+// 查询指定集群的IAM同步情况
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) ListSyncRequirements(request *model.ListSyncRequirementsRequest) (*model.ListSyncRequirementsResponse, error) {
+	requestDef := GenReqDefForListSyncRequirements()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSyncRequirementsResponse), nil
+	}
+}
+
+// ListSyncRequirementsInvoker 查询指定集群的IAM同步情况
+func (c *MrsClient) ListSyncRequirementsInvoker(request *model.ListSyncRequirementsRequest) *ListSyncRequirementsInvoker {
+	requestDef := GenReqDefForListSyncRequirements()
+	return &ListSyncRequirementsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSyncStatus 查询当前集群是否在IAM同步进行中
+//
+// 查询当前集群是否在IAM同步进行中
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) ListSyncStatus(request *model.ListSyncStatusRequest) (*model.ListSyncStatusResponse, error) {
+	requestDef := GenReqDefForListSyncStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSyncStatusResponse), nil
+	}
+}
+
+// ListSyncStatusInvoker 查询当前集群是否在IAM同步进行中
+func (c *MrsClient) ListSyncStatusInvoker(request *model.ListSyncStatusRequest) *ListSyncStatusInvoker {
+	requestDef := GenReqDefForListSyncStatus()
+	return &ListSyncStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSyncIamUser 获取已经同步的IAM用户和用户组
