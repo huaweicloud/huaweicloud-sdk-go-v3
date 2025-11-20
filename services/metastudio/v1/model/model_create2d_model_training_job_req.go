@@ -15,7 +15,7 @@ type Create2dModelTrainingJobReq struct {
 	// 分身数字人模型名称。该名称会作为资产库中分身数字人模型资产名称。
 	Name string `json:"name"`
 
-	// 分身数字人训练任务创建者的手机号。
+	// 分身数字人训练任务创建者的手机号
 	Contact *string `json:"contact,omitempty"`
 
 	// 命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO：上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
@@ -36,11 +36,20 @@ type Create2dModelTrainingJobReq struct {
 	// 分身数字人训练任务标签。
 	Tags *[]string `json:"tags,omitempty"`
 
-	// 分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
+	// 分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 * V3.3: 极速版flexus训练用的模型 > * V3和V2版本已废弃不用
 	ModelVersion *Create2dModelTrainingJobReqModelVersion `json:"model_version,omitempty"`
+
+	// 分身数字人训练任务类型 true 按需任务 false 普通任务
+	IsOndemandResource *bool `json:"is_ondemand_resource,omitempty"`
 
 	// 是否是基础版的形象训练
 	IsFlexus *bool `json:"is_flexus,omitempty"`
+
+	// 是否极速版flexus
+	IsFastFlexus *bool `json:"is_fast_flexus,omitempty"`
+
+	// 是否是直播间复刻任务
+	IsLiveCopy *bool `json:"is_live_copy,omitempty"`
 
 	// 是否只训练形象模型，不训练声音模型。仅Flexus版本时有效，默认false。
 	IsOnlyHumanModel *bool `json:"is_only_human_model,omitempty"`
@@ -126,6 +135,7 @@ type Create2dModelTrainingJobReqModelVersionEnum struct {
 	V2   Create2dModelTrainingJobReqModelVersion
 	V3   Create2dModelTrainingJobReqModelVersion
 	V3_2 Create2dModelTrainingJobReqModelVersion
+	V3_3 Create2dModelTrainingJobReqModelVersion
 }
 
 func GetCreate2dModelTrainingJobReqModelVersionEnum() Create2dModelTrainingJobReqModelVersionEnum {
@@ -138,6 +148,9 @@ func GetCreate2dModelTrainingJobReqModelVersionEnum() Create2dModelTrainingJobRe
 		},
 		V3_2: Create2dModelTrainingJobReqModelVersion{
 			value: "V3.2",
+		},
+		V3_3: Create2dModelTrainingJobReqModelVersion{
+			value: "V3.3",
 		},
 	}
 }

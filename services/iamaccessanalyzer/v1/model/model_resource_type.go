@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ResourceType 资源的类型。
+// ResourceType 资源的类型。 - iam:agency：IAM委托 - iam:user：IAM用户 - kms:cmk：DEW共享密钥 - obs:bucket：OBS桶 - swr:repo：SWR镜像仓库 - cbr:backup：CBR备份 - ims:image：IMS镜像
 type ResourceType struct {
 	value string
 }
@@ -19,6 +19,9 @@ type ResourceTypeEnum struct {
 	IAMUSER   ResourceType
 	KMSCMK    ResourceType
 	OBSBUCKET ResourceType
+	SWRREPO   ResourceType
+	CBRBACKUP ResourceType
+	IMSIMAGE  ResourceType
 }
 
 func GetResourceTypeEnum() ResourceTypeEnum {
@@ -34,6 +37,15 @@ func GetResourceTypeEnum() ResourceTypeEnum {
 		},
 		OBSBUCKET: ResourceType{
 			value: "obs:bucket",
+		},
+		SWRREPO: ResourceType{
+			value: "swr:repo",
+		},
+		CBRBACKUP: ResourceType{
+			value: "cbr:backup",
+		},
+		IMSIMAGE: ResourceType{
+			value: "ims:image",
 		},
 	}
 }

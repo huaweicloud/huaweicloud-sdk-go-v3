@@ -39,10 +39,10 @@ type UpdateHostRequestBody struct {
 	// 网站名称，对应WAF控制台域名详情中的网站名称
 	WebTag *string `json:"web_tag,omitempty"`
 
-	// 是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
+	// 是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
 	ExclusiveIp *bool `json:"exclusive_ip,omitempty"`
 
-	// 套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
+	// 套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
 	PaidType *string `json:"paid_type,omitempty"`
 
 	BlockPage *BlockPage `json:"block_page,omitempty"`

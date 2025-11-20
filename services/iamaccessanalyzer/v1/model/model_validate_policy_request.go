@@ -18,7 +18,7 @@ type ValidatePolicyRequest struct {
 	// 页面标记。
 	Marker *string `json:"marker,omitempty"`
 
-	// 返回消息的语言，默认值为'zh-cn'，表示中文。
+	// 返回消息的语言，默认值为'zh-cn'。 - zh-cn：中文 - en-us：英文
 	XLanguage *ValidatePolicyRequestXLanguage `json:"X-Language,omitempty"`
 
 	Body *ValidatePolicyReqBody `json:"body,omitempty"`

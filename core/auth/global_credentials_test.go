@@ -54,7 +54,7 @@ func TestGlobalCredentials_ProcessAuthParams(t *testing.T) {
 
 	for _, c := range cases {
 		t.Run(c.Name, func(t *testing.T) {
-			ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			ts := httptest.NewTLSServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 				w.Header().Set("Content-Type", "application/json")
 				w.Header().Set("X-IAM-Trace-Id", "trace-id")
 				w.WriteHeader(c.StatusCode)
@@ -70,15 +70,13 @@ func TestGlobalCredentials_ProcessAuthParams(t *testing.T) {
 				SafeBuild()
 			assert.NoError(t, err)
 
-			defer func() {
-				if c.ExpectedError != "" {
-					assert.Equal(t, c.ExpectedError, strings.TrimSpace(fmt.Sprintf("%v", recover())))
-				} else {
-					assert.Equal(t, c.ExpectedDomainId, credentials.DomainId)
-				}
-			}()
-			client := impl.NewDefaultHttpClient(config.DefaultHttpConfig())
-			credentials.ProcessAuthParams(client, c.RegionId)
+			client := impl.NewDefaultHttpClient(config.DefaultHttpConfig().WithIgnoreSSLVerification(true))
+			_, err = credentials.ProcessAuthParams(client, c.RegionId)
+			if c.ExpectedError != "" {
+				assert.ErrorContains(t, err, c.ExpectedError)
+			} else {
+				assert.Equal(t, c.ExpectedDomainId, credentials.DomainId)
+			}
 		})
 	}
 }
@@ -87,28 +85,81 @@ func TestGlobalCredentials_ProcessAuthParams2(t *testing.T) {
 	credentials, err := NewGlobalCredentialsBuilder().WithAk("ak1").WithSk("sk1").SafeBuild()
 	assert.NoError(t, err)
 	client := impl.NewDefaultHttpClient(config.DefaultHttpConfig().WithSigningAlgorithm("test"))
-	assert.Panics(t, func() {
-		credentials.ProcessAuthParams(client, "region")
-	})
+	_, err = credentials.ProcessAuthParams(client, "region")
+	assert.Error(t, err)
 
 	credentials, err = NewGlobalCredentialsBuilder().WithAk("ak").WithSk("sk").SafeBuild()
 	assert.NoError(t, err)
 	credentials.DomainId = "domain-id"
-	credentials, ok := credentials.ProcessAuthParams(nil, "").(*GlobalCredentials)
+	cred, err := credentials.ProcessAuthParams(nil, "")
+	assert.NoError(t, err)
+	credentials, ok := cred.(*GlobalCredentials)
 	assert.True(t, ok)
 	assert.Equal(t, "domain-id", credentials.DomainId)
 
 	credentials, err = NewGlobalCredentialsBuilder().WithAk("ak").WithSk("sk").SafeBuild()
 	assert.NoError(t, err)
 	getCache().put("ak", "id")
-	credentials, ok = credentials.ProcessAuthParams(nil, "region").(*GlobalCredentials)
+	cred, err = credentials.ProcessAuthParams(nil, "region")
+	assert.NoError(t, err)
+	credentials, ok = cred.(*GlobalCredentials)
 	assert.True(t, ok)
 	assert.Equal(t, "id", credentials.DomainId)
 }
 
+func TestGlobalCredentials_ProcessAuthParams3(t *testing.T) {
+	var status int
+	ts := httptest.NewTLSServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		w.Header().Set("X-IAM-Trace-Id", "trace-id")
+
+		if r.URL.Path == "/v3/auth/domains" {
+			_, err := fmt.Fprintln(w, "{\"domains\":[]}")
+			assert.NoError(t, err)
+		} else {
+			var err error
+			w.Header().Set("x-request-id", "request-id")
+			w.WriteHeader(status)
+			if status == 200 {
+				_, err = fmt.Fprintln(w, "{\"account_id\":\"AccountId\",\"principal_urn\":\"PrincipalUrn\",\"principal_id\":\"PrincipalId\"}")
+			} else {
+				_, err = fmt.Fprintln(w, "{\"error_code\":\"code\",\"error_msg\":\"Server error\"}")
+			}
+			assert.NoError(t, err)
+		}
+	}))
+	defer ts.Close()
+	err := os.Setenv("HUAWEICLOUD_SDK_STS_ENDPOINT", ts.URL)
+	assert.NoError(t, err)
+	err = os.Setenv("HUAWEICLOUD_SDK_IAM_ENDPOINT", ts.URL)
+	assert.NoError(t, err)
+
+	status = 200
+	credentials, err := NewGlobalCredentialsBuilder().WithAk("ak3").WithSk("sk3").SafeBuild()
+	assert.NoError(t, err)
+
+	client := impl.NewDefaultHttpClient(config.DefaultHttpConfig().WithIgnoreSSLVerification(true))
+	_, err = credentials.ProcessAuthParams(client, "region3")
+	assert.NoError(t, err)
+	assert.Equal(t, "AccountId", credentials.DomainId)
+
+	status = 404
+	credentials, err = NewGlobalCredentialsBuilder().WithAk("ak3_1").WithSk("sk3_1").SafeBuild()
+	assert.NoError(t, err)
+	_, err = credentials.ProcessAuthParams(client, "region3_1")
+	assert.Errorf(t, err, "failed to get domain id from %s: 404, requestId: request-id", ts.URL)
+
+	status = 500
+	credentials, err = NewGlobalCredentialsBuilder().WithAk("ak3_2").WithSk("sk3_2").SafeBuild()
+	assert.NoError(t, err)
+	_, err = credentials.ProcessAuthParams(client, "region3_2")
+	assert.ErrorContains(t, err, "failed to get domain id")
+	assert.ErrorContains(t, err, "Server error")
+}
+
 func TestGlobalCredentials_FederalAuth(t *testing.T) {
 	var count int32
-	mockServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+	mockServer := httptest.NewTLSServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		w.Header().Set("X-IAM-Trace-Id", "trace-id")
 		w.Header().Set("X-Request-Id", "request-id")

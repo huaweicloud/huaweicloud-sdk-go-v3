@@ -40,6 +40,216 @@ func (c *WafClient) ApplyCertificateToHostInvoker(request *model.ApplyCertificat
 	return &ApplyCertificateToHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreateAntiTamperRule 选中多个策略批量添加网页防篡改规则
+//
+// 选中多个策略为这些策略批量添加网页防篡改规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) BatchCreateAntiTamperRule(request *model.BatchCreateAntiTamperRuleRequest) (*model.BatchCreateAntiTamperRuleResponse, error) {
+	requestDef := GenReqDefForBatchCreateAntiTamperRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateAntiTamperRuleResponse), nil
+	}
+}
+
+// BatchCreateAntiTamperRuleInvoker 选中多个策略批量添加网页防篡改规则
+func (c *WafClient) BatchCreateAntiTamperRuleInvoker(request *model.BatchCreateAntiTamperRuleRequest) *BatchCreateAntiTamperRuleInvoker {
+	requestDef := GenReqDefForBatchCreateAntiTamperRule()
+	return &BatchCreateAntiTamperRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateAntileakageRule 选中多个策略批量添加防敏感信息泄漏规则
+//
+// 选中多个策略为这些策略批量添加防敏感信息泄漏规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) BatchCreateAntileakageRule(request *model.BatchCreateAntileakageRuleRequest) (*model.BatchCreateAntileakageRuleResponse, error) {
+	requestDef := GenReqDefForBatchCreateAntileakageRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateAntileakageRuleResponse), nil
+	}
+}
+
+// BatchCreateAntileakageRuleInvoker 选中多个策略批量添加防敏感信息泄漏规则
+func (c *WafClient) BatchCreateAntileakageRuleInvoker(request *model.BatchCreateAntileakageRuleRequest) *BatchCreateAntileakageRuleInvoker {
+	requestDef := GenReqDefForBatchCreateAntileakageRule()
+	return &BatchCreateAntileakageRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateCcRule 选中多个策略为批量添加cc规则
+//
+// 选中多个策略为这些策略批量添加cc规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) BatchCreateCcRule(request *model.BatchCreateCcRuleRequest) (*model.BatchCreateCcRuleResponse, error) {
+	requestDef := GenReqDefForBatchCreateCcRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateCcRuleResponse), nil
+	}
+}
+
+// BatchCreateCcRuleInvoker 选中多个策略为批量添加cc规则
+func (c *WafClient) BatchCreateCcRuleInvoker(request *model.BatchCreateCcRuleRequest) *BatchCreateCcRuleInvoker {
+	requestDef := GenReqDefForBatchCreateCcRule()
+	return &BatchCreateCcRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateCustomRule 选中多个策略批量添加精准防护规则
+//
+// 选中多个策略为这些策略批量添加精准防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) BatchCreateCustomRule(request *model.BatchCreateCustomRuleRequest) (*model.BatchCreateCustomRuleResponse, error) {
+	requestDef := GenReqDefForBatchCreateCustomRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateCustomRuleResponse), nil
+	}
+}
+
+// BatchCreateCustomRuleInvoker 选中多个策略批量添加精准防护规则
+func (c *WafClient) BatchCreateCustomRuleInvoker(request *model.BatchCreateCustomRuleRequest) *BatchCreateCustomRuleInvoker {
+	requestDef := GenReqDefForBatchCreateCustomRule()
+	return &BatchCreateCustomRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateGeoIpRule 选中多个策略批量添加地理位置访问控制规则
+//
+// 选中多个策略为这些策略批量添加地理位置访问控制规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) BatchCreateGeoIpRule(request *model.BatchCreateGeoIpRuleRequest) (*model.BatchCreateGeoIpRuleResponse, error) {
+	requestDef := GenReqDefForBatchCreateGeoIpRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateGeoIpRuleResponse), nil
+	}
+}
+
+// BatchCreateGeoIpRuleInvoker 选中多个策略批量添加地理位置访问控制规则
+func (c *WafClient) BatchCreateGeoIpRuleInvoker(request *model.BatchCreateGeoIpRuleRequest) *BatchCreateGeoIpRuleInvoker {
+	requestDef := GenReqDefForBatchCreateGeoIpRule()
+	return &BatchCreateGeoIpRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateIgnoreRule 选中多个策略批量添加全局白名单规则
+//
+// 选中多个策略为这些策略批量添加全局白名单规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) BatchCreateIgnoreRule(request *model.BatchCreateIgnoreRuleRequest) (*model.BatchCreateIgnoreRuleResponse, error) {
+	requestDef := GenReqDefForBatchCreateIgnoreRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateIgnoreRuleResponse), nil
+	}
+}
+
+// BatchCreateIgnoreRuleInvoker 选中多个策略批量添加全局白名单规则
+func (c *WafClient) BatchCreateIgnoreRuleInvoker(request *model.BatchCreateIgnoreRuleRequest) *BatchCreateIgnoreRuleInvoker {
+	requestDef := GenReqDefForBatchCreateIgnoreRule()
+	return &BatchCreateIgnoreRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateIpReputationRule 为多个策略批量添加威胁情报访问控制规则
+//
+// 选中多个策略为这些策略批量添加威胁情报访问控制规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) BatchCreateIpReputationRule(request *model.BatchCreateIpReputationRuleRequest) (*model.BatchCreateIpReputationRuleResponse, error) {
+	requestDef := GenReqDefForBatchCreateIpReputationRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateIpReputationRuleResponse), nil
+	}
+}
+
+// BatchCreateIpReputationRuleInvoker 为多个策略批量添加威胁情报访问控制规则
+func (c *WafClient) BatchCreateIpReputationRuleInvoker(request *model.BatchCreateIpReputationRuleRequest) *BatchCreateIpReputationRuleInvoker {
+	requestDef := GenReqDefForBatchCreateIpReputationRule()
+	return &BatchCreateIpReputationRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreatePrivacyRule 选中多个策略批量添加隐私屏蔽防护防护规则
+//
+// 选中多个策略为这些策略批量添加隐私屏蔽防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) BatchCreatePrivacyRule(request *model.BatchCreatePrivacyRuleRequest) (*model.BatchCreatePrivacyRuleResponse, error) {
+	requestDef := GenReqDefForBatchCreatePrivacyRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreatePrivacyRuleResponse), nil
+	}
+}
+
+// BatchCreatePrivacyRuleInvoker 选中多个策略批量添加隐私屏蔽防护防护规则
+func (c *WafClient) BatchCreatePrivacyRuleInvoker(request *model.BatchCreatePrivacyRuleRequest) *BatchCreatePrivacyRuleInvoker {
+	requestDef := GenReqDefForBatchCreatePrivacyRule()
+	return &BatchCreatePrivacyRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateWhiteblackipRule 选中多个策略批量添加黑白名单防护规则
+//
+// 选中多个策略为这些策略批量添加黑白名单防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) BatchCreateWhiteblackipRule(request *model.BatchCreateWhiteblackipRuleRequest) (*model.BatchCreateWhiteblackipRuleResponse, error) {
+	requestDef := GenReqDefForBatchCreateWhiteblackipRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateWhiteblackipRuleResponse), nil
+	}
+}
+
+// BatchCreateWhiteblackipRuleInvoker 选中多个策略批量添加黑白名单防护规则
+func (c *WafClient) BatchCreateWhiteblackipRuleInvoker(request *model.BatchCreateWhiteblackipRuleRequest) *BatchCreateWhiteblackipRuleInvoker {
+	requestDef := GenReqDefForBatchCreateWhiteblackipRule()
+	return &BatchCreateWhiteblackipRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteAlertNoticeConfig 批量删除告警通知
+//
+// 批量删除告警通知
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) BatchDeleteAlertNoticeConfig(request *model.BatchDeleteAlertNoticeConfigRequest) (*model.BatchDeleteAlertNoticeConfigResponse, error) {
+	requestDef := GenReqDefForBatchDeleteAlertNoticeConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteAlertNoticeConfigResponse), nil
+	}
+}
+
+// BatchDeleteAlertNoticeConfigInvoker 批量删除告警通知
+func (c *WafClient) BatchDeleteAlertNoticeConfigInvoker(request *model.BatchDeleteAlertNoticeConfigRequest) *BatchDeleteAlertNoticeConfigInvoker {
+	requestDef := GenReqDefForBatchDeleteAlertNoticeConfig()
+	return &BatchDeleteAlertNoticeConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeletePolicies 批量删除防护策略
 //
 // 批量删除防护策略
@@ -293,6 +503,48 @@ func (c *WafClient) ConfirmUserBundle(request *model.ConfirmUserBundleRequest) (
 func (c *WafClient) ConfirmUserBundleInvoker(request *model.ConfirmUserBundleRequest) *ConfirmUserBundleInvoker {
 	requestDef := GenReqDefForConfirmUserBundle()
 	return &ConfirmUserBundleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAgency 创建代理
+//
+// 创建独享引擎的代理
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) CreateAgency(request *model.CreateAgencyRequest) (*model.CreateAgencyResponse, error) {
+	requestDef := GenReqDefForCreateAgency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAgencyResponse), nil
+	}
+}
+
+// CreateAgencyInvoker 创建代理
+func (c *WafClient) CreateAgencyInvoker(request *model.CreateAgencyRequest) *CreateAgencyInvoker {
+	requestDef := GenReqDefForCreateAgency()
+	return &CreateAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAlertNoticeConfig 创建告警通知
+//
+// 创建告警通知
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) CreateAlertNoticeConfig(request *model.CreateAlertNoticeConfigRequest) (*model.CreateAlertNoticeConfigResponse, error) {
+	requestDef := GenReqDefForCreateAlertNoticeConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAlertNoticeConfigResponse), nil
+	}
+}
+
+// CreateAlertNoticeConfigInvoker 创建告警通知
+func (c *WafClient) CreateAlertNoticeConfigInvoker(request *model.CreateAlertNoticeConfigRequest) *CreateAlertNoticeConfigInvoker {
+	requestDef := GenReqDefForCreateAlertNoticeConfig()
+	return &CreateAlertNoticeConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateAntiTamperRule 创建防篡改规则
@@ -713,6 +965,27 @@ func (c *WafClient) CreateWhiteblackipRule(request *model.CreateWhiteblackipRule
 func (c *WafClient) CreateWhiteblackipRuleInvoker(request *model.CreateWhiteblackipRuleRequest) *CreateWhiteblackipRuleInvoker {
 	requestDef := GenReqDefForCreateWhiteblackipRule()
 	return &CreateWhiteblackipRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAgency 删除代理
+//
+// 删除独享引擎的代理
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) DeleteAgency(request *model.DeleteAgencyRequest) (*model.DeleteAgencyResponse, error) {
+	requestDef := GenReqDefForDeleteAgency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAgencyResponse), nil
+	}
+}
+
+// DeleteAgencyInvoker 删除代理
+func (c *WafClient) DeleteAgencyInvoker(request *model.DeleteAgencyRequest) *DeleteAgencyInvoker {
+	requestDef := GenReqDefForDeleteAgency()
+	return &DeleteAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteAnticrawlerRule 删除JS脚本反爬虫防护规则
@@ -3067,6 +3340,27 @@ func (c *WafClient) UpdateIpGroupInvoker(request *model.UpdateIpGroupRequest) *U
 	return &UpdateIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateIpReputationRule 更新机房IP情报防护规则
+//
+// 更新IP情报防护规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) UpdateIpReputationRule(request *model.UpdateIpReputationRuleRequest) (*model.UpdateIpReputationRuleResponse, error) {
+	requestDef := GenReqDefForUpdateIpReputationRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateIpReputationRuleResponse), nil
+	}
+}
+
+// UpdateIpReputationRuleInvoker 更新机房IP情报防护规则
+func (c *WafClient) UpdateIpReputationRuleInvoker(request *model.UpdateIpReputationRuleRequest) *UpdateIpReputationRuleInvoker {
+	requestDef := GenReqDefForUpdateIpReputationRule()
+	return &UpdateIpReputationRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateLtsInfoConfig 配置全量日志lts
 //
 // 配置全量日志lts，该接口可用来开启与关闭waf全量日志以及配置日志组和日志流。日志组id和日志流id可前往云日志服务获取。配置的日志流id要属于所配置的日志组。
@@ -3214,6 +3508,27 @@ func (c *WafClient) UpdatePremiumHostProtectStatusInvoker(request *model.UpdateP
 	return &UpdatePremiumHostProtectStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdatePremiumInstance 操作WAF独享引擎
+//
+// 操作WAF独享引擎
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) UpdatePremiumInstance(request *model.UpdatePremiumInstanceRequest) (*model.UpdatePremiumInstanceResponse, error) {
+	requestDef := GenReqDefForUpdatePremiumInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePremiumInstanceResponse), nil
+	}
+}
+
+// UpdatePremiumInstanceInvoker 操作WAF独享引擎
+func (c *WafClient) UpdatePremiumInstanceInvoker(request *model.UpdatePremiumInstanceRequest) *UpdatePremiumInstanceInvoker {
+	requestDef := GenReqDefForUpdatePremiumInstance()
+	return &UpdatePremiumInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdatePrivacyRule 更新隐私屏蔽防护规则
 //
 // 更新隐私屏蔽防护规则
@@ -3296,6 +3611,27 @@ func (c *WafClient) UpdateWhiteblackipRule(request *model.UpdateWhiteblackipRule
 func (c *WafClient) UpdateWhiteblackipRuleInvoker(request *model.UpdateWhiteblackipRuleRequest) *UpdateWhiteblackipRuleInvoker {
 	requestDef := GenReqDefForUpdateWhiteblackipRule()
 	return &UpdateWhiteblackipRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateQuickAccessDomain 域名快速接入WAF
+//
+// 快速接入，直接去修改用户的DNS记录，使域名快速接入WAF
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) CreateQuickAccessDomain(request *model.CreateQuickAccessDomainRequest) (*model.CreateQuickAccessDomainResponse, error) {
+	requestDef := GenReqDefForCreateQuickAccessDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateQuickAccessDomainResponse), nil
+	}
+}
+
+// CreateQuickAccessDomainInvoker 域名快速接入WAF
+func (c *WafClient) CreateQuickAccessDomainInvoker(request *model.CreateQuickAccessDomainRequest) *CreateQuickAccessDomainInvoker {
+	requestDef := GenReqDefForCreateQuickAccessDomain()
+	return &CreateQuickAccessDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowWebProtectionRule 根据Id查询Web防护规则

@@ -43,6 +43,9 @@ type CreateWarRoomRequestBody struct {
 
 	// 创建群组方式
 	NotificationType *string `json:"notification_type,omitempty"`
+
+	// 发送通知的方式，支持多个通知方式。
+	NotificationModes *[]NotificationMode `json:"notification_modes,omitempty"`
 }
 
 func (o CreateWarRoomRequestBody) String() string {

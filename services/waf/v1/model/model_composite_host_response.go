@@ -35,7 +35,7 @@ type CompositeHostResponse struct {
 	// 创建防护域名的时间
 	Timestamp *int64 `json:"timestamp,omitempty"`
 
-	// 套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
+	// 套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
 	PaidType *string `json:"paid_type,omitempty"`
 
 	Flag *Flag `json:"flag,omitempty"`
@@ -55,7 +55,7 @@ type CompositeHostResponse struct {
 	// 域名描述
 	Description *string `json:"description,omitempty"`
 
-	// 是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
+	// 是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
 	ExclusiveIp *bool `json:"exclusive_ip,omitempty"`
 
 	// 华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称

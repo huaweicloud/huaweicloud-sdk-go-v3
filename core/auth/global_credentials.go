@@ -36,10 +36,9 @@ type GlobalCredentials struct {
 	DomainId string
 }
 
-// ProcessAuthParams This function may panic under certain circumstances.
-func (s *GlobalCredentials) ProcessAuthParams(client *impl.DefaultHttpClient, region string) ICredential {
+func (s *GlobalCredentials) ProcessAuthParams(client *impl.DefaultHttpClient, region string) (ICredential, error) {
 	if s.DomainId != "" {
-		return s
+		return s, nil
 	}
 
 	cacheName := ""
@@ -50,7 +49,7 @@ func (s *GlobalCredentials) ProcessAuthParams(client *impl.DefaultHttpClient, re
 	}
 	if domainId, ok := getCache().get(cacheName); ok {
 		s.DomainId = domainId
-		return s
+		return s, nil
 	}
 
 	derivedPredicate := s.DerivedPredicate
@@ -58,27 +57,39 @@ func (s *GlobalCredentials) ProcessAuthParams(client *impl.DefaultHttpClient, re
 
 	req, err := s.ProcessAuthRequest(client, internal.GetKeystoneListAuthDomainsRequest(s.selectIamEndpoint(region), client.GetHttpConfig()))
 	if err != nil {
-		panic(fmt.Errorf("failed to get domain id automatically, %w", err))
+		return nil, fmt.Errorf("failed to get domain id automatically, %w", err)
 	}
 	resp, err := internal.KeystoneListAuthDomains(client, req)
 	if err != nil {
-		panic(fmt.Errorf("failed to get domain id automatically, %w", err))
+		return nil, fmt.Errorf("failed to get domain id automatically, %w", err)
 	}
+	var id string
 	domains := *resp.Domains
 	if len(domains) == 0 {
-		panic(fmt.Errorf("failed to get domain id automatically, X-IAM-Trace-Id=%s,"+
+		err = fmt.Errorf("failed to get domain id automatically, X-IAM-Trace-Id=%s,"+
 			" please confirm that you have 'iam:users:getUser' permission, or set domain id manually:"+
-			" global.NewCredentialsBuilder().WithAk(ak).WithSk(sk).WithDomainId(domainId).SafeBuild()", resp.TraceId))
+			" global.NewCredentialsBuilder().WithAk(ak).WithSk(sk).WithDomainId(domainId).SafeBuild()", resp.TraceId)
+		if stsEndpoint := internal.GetStsEndpointById(region); stsEndpoint != "" {
+			req, err = s.ProcessAuthRequest(client, internal.GetCallerIdentityRequest(stsEndpoint, client.GetHttpConfig()))
+			if err != nil {
+				return nil, err
+			}
+			id, err = internal.GetAccountIdFromCallerIdentity(client, req)
+		}
+		if err != nil {
+			return nil, err
+		}
+	} else {
+		id = domains[0].Id
 	}
 
-	id := domains[0].Id
 	s.DomainId = id
 	if cacheName != "" {
 		getCache().put(cacheName, id)
 	}
 
 	s.DerivedPredicate = derivedPredicate
-	return s
+	return s, nil
 }
 
 func (s *GlobalCredentials) ProcessAuthRequest(client *impl.DefaultHttpClient, req *request.DefaultHttpRequest) (*request.DefaultHttpRequest, error) {

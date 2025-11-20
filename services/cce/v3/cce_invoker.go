@@ -629,6 +629,22 @@ func (i *ListAddonInstancesInvoker) Invoke() (*model.ListAddonInstancesResponse,
 	}
 }
 
+type ListAddonPrecheckTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAddonPrecheckTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAddonPrecheckTasksInvoker) Invoke() (*model.ListAddonPrecheckTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAddonPrecheckTasksResponse), nil
+	}
+}
+
 type ListAddonTemplatesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -722,6 +738,22 @@ func (i *ListClustersInvoker) Invoke() (*model.ListClustersResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListClustersResponse), nil
+	}
+}
+
+type ListHyperNodesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHyperNodesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListHyperNodesInvoker) Invoke() (*model.ListHyperNodesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHyperNodesResponse), nil
 	}
 }
 

@@ -58,7 +58,7 @@ func TestBasicCredentials_ProcessAuthParams(t *testing.T) {
 
 	for _, c := range cases {
 		t.Run(c.Name, func(t *testing.T) {
-			ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			ts := httptest.NewTLSServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 				w.Header().Set("Content-Type", "application/json")
 				w.Header().Set("X-IAM-Trace-Id", "trace-id")
 				w.WriteHeader(c.StatusCode)
@@ -74,15 +74,13 @@ func TestBasicCredentials_ProcessAuthParams(t *testing.T) {
 				SafeBuild()
 			assert.NoError(t, err)
 
-			defer func() {
-				if c.ExpectedError != "" {
-					assert.Equal(t, c.ExpectedError, strings.TrimSpace(fmt.Sprintf("%v", recover())))
-				} else {
-					assert.Equal(t, c.ExpectedProjectId, credentials.ProjectId)
-				}
-			}()
-			client := impl.NewDefaultHttpClient(config.DefaultHttpConfig())
-			credentials.ProcessAuthParams(client, c.RegionId)
+			client := impl.NewDefaultHttpClient(config.DefaultHttpConfig().WithIgnoreSSLVerification(true))
+			_, err = credentials.ProcessAuthParams(client, c.RegionId)
+			if c.ExpectedError != "" {
+				assert.ErrorContains(t, err, c.ExpectedError)
+			} else {
+				assert.Equal(t, c.ExpectedProjectId, credentials.ProjectId)
+			}
 		})
 	}
 }
@@ -91,28 +89,31 @@ func TestBasicCredentials_ProcessAuthParams2(t *testing.T) {
 	credentials, err := NewBasicCredentialsBuilder().WithAk("ak").WithSk("sk").SafeBuild()
 	assert.NoError(t, err)
 	client := impl.NewDefaultHttpClient(config.DefaultHttpConfig().WithSigningAlgorithm("test"))
-	assert.Panics(t, func() {
-		credentials.ProcessAuthParams(client, "region")
-	})
+	_, err = credentials.ProcessAuthParams(client, "region")
+	assert.Error(t, err)
 
 	credentials, err = NewBasicCredentialsBuilder().WithAk("ak").WithSk("sk").SafeBuild()
 	assert.NoError(t, err)
 	credentials.ProjectId = "project-id"
-	credentials, ok := credentials.ProcessAuthParams(nil, "").(*BasicCredentials)
+	cred, err := credentials.ProcessAuthParams(nil, "")
+	assert.NoError(t, err)
+	credentials, ok := cred.(*BasicCredentials)
 	assert.True(t, ok)
 	assert.Equal(t, "project-id", credentials.ProjectId)
 
 	credentials, err = NewBasicCredentialsBuilder().WithAk("ak").WithSk("sk").SafeBuild()
 	assert.NoError(t, err)
 	getCache().put("akregion", "id")
-	credentials, ok = credentials.ProcessAuthParams(nil, "region").(*BasicCredentials)
+	cred, err = credentials.ProcessAuthParams(nil, "region")
+	assert.NoError(t, err)
+	credentials, ok = cred.(*BasicCredentials)
 	assert.True(t, ok)
 	assert.Equal(t, "id", credentials.ProjectId)
 }
 
 func TestBasicCredentials_FederalAuth(t *testing.T) {
 	var count int32
-	mockServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+	mockServer := httptest.NewTLSServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		w.Header().Set("X-IAM-Trace-Id", "trace-id")
 		w.Header().Set("X-Request-Id", "request-id")

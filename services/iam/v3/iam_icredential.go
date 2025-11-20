@@ -12,8 +12,8 @@ type IamCredentials struct {
 	AuthToken string
 }
 
-func (s *IamCredentials) ProcessAuthParams(httpClient *impl.DefaultHttpClient, region string) auth.ICredential {
-	return s
+func (s *IamCredentials) ProcessAuthParams(httpClient *impl.DefaultHttpClient, region string) (auth.ICredential, error) {
+	return s, nil
 }
 
 func (s *IamCredentials) ProcessAuthRequest(httpClient *impl.DefaultHttpClient, httpRequest *request.DefaultHttpRequest) (*request.DefaultHttpRequest, error) {

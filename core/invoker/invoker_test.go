@@ -52,7 +52,7 @@ func mockHcClient(url string, options ...interface{}) (*core.HcHttpClient, error
 	if err != nil {
 		return nil, err
 	}
-	conf := config.DefaultHttpConfig()
+	conf := config.DefaultHttpConfig().WithIgnoreSSLVerification(true)
 
 	for _, op := range options {
 		switch op.(type) {
@@ -78,7 +78,7 @@ func mockHcClient(url string, options ...interface{}) (*core.HcHttpClient, error
 }
 
 func TestBaseInvoker_Exchange_Attributes(t *testing.T) {
-	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+	ts := httptest.NewTLSServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		_, err := fmt.Fprintln(w, "{}")
 		assert.NoError(t, err)
 	}))
@@ -87,7 +87,7 @@ func TestBaseInvoker_Exchange_Attributes(t *testing.T) {
 	handler := httphandler.NewHttpHandler().AddMonitorHandler(func(metric *httphandler.MonitorMetric) {
 		assert.Equal(t, map[string]interface{}{"key": "value"}, metric.Attributes)
 	})
-	httpConfig := config.DefaultHttpConfig().WithHttpHandler(handler)
+	httpConfig := config.DefaultHttpConfig().WithHttpHandler(handler).WithIgnoreSSLVerification(true)
 
 	client, err := mockHcClient(ts.URL, httpConfig)
 	assert.NoError(t, err)
@@ -105,7 +105,7 @@ func TestBaseInvoker_Exchange_Attributes(t *testing.T) {
 // 预期状态码为502,调用次数为4(正常调用1次+请求重试3次)
 func TestBaseInvoker_WithRetry(t *testing.T) {
 	count := 0
-	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+	ts := httptest.NewTLSServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusBadGateway)
 		_, err := fmt.Fprintln(w, "{}")
 		count++
@@ -129,7 +129,7 @@ func TestBaseInvoker_WithRetry(t *testing.T) {
 // 预期状态码为200,调用次数为2(正常调用1次+请求重试1次)
 func TestBaseInvoker_WithRetry2(t *testing.T) {
 	count := 0
-	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+	ts := httptest.NewTLSServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if count == 0 {
 			w.WriteHeader(http.StatusBadGateway)
 		}
@@ -155,7 +155,7 @@ func TestBaseInvoker_WithRetry2(t *testing.T) {
 // 预期状态码为200,调用次数为3(正常调用1次+请求重试2次)
 func TestBaseInvoker_WithRetry3(t *testing.T) {
 	count := 0
-	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+	ts := httptest.NewTLSServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if count < 2 {
 			w.WriteHeader(http.StatusBadGateway)
 		}
@@ -180,7 +180,7 @@ func TestBaseInvoker_WithRetry3(t *testing.T) {
 // 重试一次,预期调用次数为2 (1次正常调用+1次重试)
 func TestBaseInvoker_WithRetry4(t *testing.T) {
 	count := 0
-	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+	ts := httptest.NewTLSServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusBadGateway)
 		_, err := fmt.Fprintln(w, "{}")
 		count++
@@ -203,7 +203,7 @@ func TestBaseInvoker_WithRetry4(t *testing.T) {
 // 不满足重试条件不重试,预期调用次数为1 (1次正常调用+0次重试)
 func TestBaseInvoker_WithRetry5(t *testing.T) {
 	count := 0
-	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+	ts := httptest.NewTLSServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusBadGateway)
 		_, err := fmt.Fprintln(w, "{}")
 		count++

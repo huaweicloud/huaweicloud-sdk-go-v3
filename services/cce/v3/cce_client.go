@@ -867,6 +867,27 @@ func (c *CceClient) ListAddonInstancesInvoker(request *model.ListAddonInstancesR
 	return &ListAddonInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAddonPrecheckTasks 获取插件检查任务结果列表
+//
+// 获取集群下插件检查任务结果列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ListAddonPrecheckTasks(request *model.ListAddonPrecheckTasksRequest) (*model.ListAddonPrecheckTasksResponse, error) {
+	requestDef := GenReqDefForListAddonPrecheckTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAddonPrecheckTasksResponse), nil
+	}
+}
+
+// ListAddonPrecheckTasksInvoker 获取插件检查任务结果列表
+func (c *CceClient) ListAddonPrecheckTasksInvoker(request *model.ListAddonPrecheckTasksRequest) *ListAddonPrecheckTasksInvoker {
+	requestDef := GenReqDefForListAddonPrecheckTasks()
+	return &ListAddonPrecheckTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAddonTemplates 查询AddonTemplates列表
 //
 // 插件模板查询接口，查询插件信息。
@@ -991,6 +1012,27 @@ func (c *CceClient) ListClusters(request *model.ListClustersRequest) (*model.Lis
 func (c *CceClient) ListClustersInvoker(request *model.ListClustersRequest) *ListClustersInvoker {
 	requestDef := GenReqDefForListClusters()
 	return &ListClustersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHyperNodes 查询集群中超节点列表
+//
+// 该API用于获取指定集群下所有超节点的详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ListHyperNodes(request *model.ListHyperNodesRequest) (*model.ListHyperNodesResponse, error) {
+	requestDef := GenReqDefForListHyperNodes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHyperNodesResponse), nil
+	}
+}
+
+// ListHyperNodesInvoker 查询集群中超节点列表
+func (c *CceClient) ListHyperNodesInvoker(request *model.ListHyperNodesRequest) *ListHyperNodesInvoker {
+	requestDef := GenReqDefForListHyperNodes()
+	return &ListHyperNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListNodePools 获取集群下所有节点池
@@ -2061,8 +2103,8 @@ func (c *CceClient) UpdateNodeInvoker(request *model.UpdateNodeRequest) *UpdateN
 //
 //
 // &gt; - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
-//
-// &gt; - 当前仅支持更新节点池名称，spec下的initialNodeCount，k8sTags，taints，login，userTags与节点池的扩缩容配置相关字段。若此次更新未设置相关值，默认更新为初始值。
+// &gt; - 当前仅支持更新节点池名称，spec下的initialNodeCount，k8sTags，taints，login，userTags与节点池的扩缩容配置相关字段。
+// &gt; - 若此次更新节点池未设置initialNodeCount的相关值，节点池期望节点个数将默认更新为初始值0，如果此时节点池节点个数大于0将导致节点池缩容。若用户期望不填该参数，请在此次更新设置spec下的ignoreInitialNodeCount为true，用于忽略spec.initialNodeCount参数。特殊场景说明：若节点池当前节点数等于0时，可忽略initialNodeCount和ignoreInitialNodeCount参数配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CceClient) UpdateNodePool(request *model.UpdateNodePoolRequest) (*model.UpdateNodePoolResponse, error) {

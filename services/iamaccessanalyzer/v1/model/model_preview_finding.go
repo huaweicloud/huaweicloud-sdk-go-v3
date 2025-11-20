@@ -14,7 +14,7 @@ type PreviewFinding struct {
 	// 允许外部主体使用的操作。
 	Action []string `json:"action"`
 
-	// 结果状态的变化。
+	// 结果状态的变化。 - unchanged：没有变化 - new：新增 - changed：有变化
 	ChangeType PreviewFindingChangeType `json:"change_type"`
 
 	// 分析的策略语句中导致访问预览分析结果的条件。
@@ -26,7 +26,7 @@ type PreviewFinding struct {
 	// 访问分析结果的唯一标识符。
 	ExistingFindingId *string `json:"existing_finding_id,omitempty"`
 
-	// 访问分析结果当前状态。
+	// 访问分析结果当前状态。 - active：活跃 - archived：已解决 - resolved：已存档
 	ExistingFindingStatus *PreviewFindingExistingFindingStatus `json:"existing_finding_status,omitempty"`
 
 	// 访问分析结果的唯一标识符。
@@ -48,7 +48,7 @@ type PreviewFinding struct {
 	// 访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
 	Sources *[]FindingSourceType `json:"sources,omitempty"`
 
-	// 变化后的状态。
+	// 变化后的状态。 - active：活跃 - archived：已解决 - resolved：已存档
 	Status PreviewFindingStatus `json:"status"`
 }
 

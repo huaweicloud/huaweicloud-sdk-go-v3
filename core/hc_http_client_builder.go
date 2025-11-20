@@ -97,6 +97,14 @@ func (builder *HcHttpClientBuilder) WithErrorHandler(errorHandler sdkerr.ErrorHa
 
 // Deprecated: This function may panic under certain circumstances. Use SafeBuild instead.
 func (builder *HcHttpClientBuilder) Build() *HcHttpClient {
+	client, err := builder.SafeBuild()
+	if err != nil {
+		panic(err)
+	}
+	return client
+}
+
+func (builder *HcHttpClientBuilder) SafeBuild() (client *HcHttpClient, err error) {
 	if builder.httpConfig == nil {
 		builder.httpConfig = config.DefaultHttpConfig()
 	}
@@ -111,33 +119,22 @@ func (builder *HcHttpClientBuilder) Build() *HcHttpClient {
 		p := provider.DefaultCredentialProviderChain(builder.CredentialsType[0])
 		credentials, err := p.GetCredentials()
 		if err != nil {
-			panic(err)
+			return nil, err
 		}
 		builder.credentials = credentials
 	}
 
-	t := reflect.TypeOf(builder.credentials)
-	if t.Kind() == reflect.Ptr {
-		t = t.Elem()
-	}
-	givenCredentialsType := t.String()
-	if val, ok := credentialsMap[givenCredentialsType]; ok {
-		givenCredentialsType = val
-	}
-	match := false
-	for _, credentialsType := range builder.CredentialsType {
-		if credentialsType == givenCredentialsType {
-			match = true
-			break
-		}
-	}
-	if !match {
-		panic(fmt.Errorf("need credential type is %s, actually is %s", builder.CredentialsType, givenCredentialsType))
+	err = builder.checkCredentialType()
+	if err != nil {
+		return nil, err
 	}
 
 	if builder.region != nil {
 		builder.endpoints = builder.region.Endpoints
-		builder.credentials.ProcessAuthParams(defaultHttpClient, builder.region.Id)
+		_, err := builder.credentials.ProcessAuthParams(defaultHttpClient, builder.region.Id)
+		if err != nil {
+			return nil, err
+		}
 
 		if credential, ok := builder.credentials.(auth.IDerivedCredential); ok {
 			credential.ProcessDerivedAuthParams(builder.derivedAuthServiceName, builder.region.Id)
@@ -152,15 +149,22 @@ func (builder *HcHttpClientBuilder) Build() *HcHttpClient {
 
 	hcHttpClient := NewHcHttpClient(defaultHttpClient).WithEndpoints(builder.endpoints).
 		WithCredential(builder.credentials).WithErrorHandler(builder.errorHandler)
-	return hcHttpClient
+	return hcHttpClient, nil
 }
 
-func (builder *HcHttpClientBuilder) SafeBuild() (client *HcHttpClient, err error) {
-	defer func() {
-		if r := recover(); r != nil {
-			err = fmt.Errorf("%v", r)
+func (builder *HcHttpClientBuilder) checkCredentialType() error {
+	t := reflect.TypeOf(builder.credentials)
+	if t.Kind() == reflect.Ptr {
+		t = t.Elem()
+	}
+	givenCredentialsType := t.String()
+	if val, ok := credentialsMap[givenCredentialsType]; ok {
+		givenCredentialsType = val
+	}
+	for _, credentialsType := range builder.CredentialsType {
+		if credentialsType == givenCredentialsType {
+			return nil
 		}
-	}()
-	client = builder.Build()
-	return
+	}
+	return fmt.Errorf("need credential type is %v, actually is %s", builder.CredentialsType, givenCredentialsType)
 }

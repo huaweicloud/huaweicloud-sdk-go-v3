@@ -19,6 +19,8 @@ type StartResourceScanReqBody struct {
 
 	// 资源的唯一资源标识符。
 	ResourceUrn string `json:"resource_urn"`
+
+	FindingType *FindingType `json:"finding_type,omitempty"`
 }
 
 func (o StartResourceScanReqBody) String() string {

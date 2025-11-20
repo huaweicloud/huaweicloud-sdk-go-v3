@@ -11,12 +11,12 @@ import (
 
 type MasterEipResponseSpec struct {
 
-	// 绑定动作
+	// **参数解释**： 绑定动作 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	Action *MasterEipResponseSpecAction `json:"action,omitempty"`
 
 	Spec *MasterEipResponseSpecSpec `json:"spec,omitempty"`
 
-	// 弹性公网IP
+	// **参数解释**： 弹性公网IP **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	ElasticIp *string `json:"elasticIp,omitempty"`
 }
 

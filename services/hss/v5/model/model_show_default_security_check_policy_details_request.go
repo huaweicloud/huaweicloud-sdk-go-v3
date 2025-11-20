@@ -24,7 +24,7 @@ type ShowDefaultSecurityCheckPolicyDetailsRequest struct {
 	// **参数解释** 配置检查（基线）的类型,例如SSH、CentOS 7、Windows Server 2019 R2、Windows Server 2016 R2、MySQL5-Windows、weakpwd、pwdcomplexity **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
 	CheckType *string `json:"check_type,omitempty"`
 
-	// **参数解释** 标准类型，包含如下: **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard: 通用安全标准  **默认取值** 不涉及
+	// **参数解释** 标准类型 **约束限制** 不涉及 **取值范围** - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准 - cis_standard: 通用安全标准  **默认取值** 不涉及
 	Standard string `json:"standard"`
 
 	// **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
@@ -36,7 +36,7 @@ type ShowDefaultSecurityCheckPolicyDetailsRequest struct {
 	// **参数解释** 配置检查（基线）检查项的风险程度 **约束限制** 不涉及 **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危  **默认取值** 不涉及
 	Severity *string `json:"severity,omitempty"`
 
-	// **参数解释** 配置检查（基线）检查项的等级 **约束限制** 不涉及 **取值范围** 字符长度0-32位 **默认取值** 不涉及
+	// **参数解释** 配置检查（基线）检查项的版本信息 **约束限制** 不涉及 **取值范围** 字符长度0-32位 **默认取值** 不涉及
 	Level *string `json:"level,omitempty"`
 
 	// **参数解释** 策略组ID **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及

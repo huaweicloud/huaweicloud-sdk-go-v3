@@ -123,7 +123,7 @@ func GenReqDefForQueryRequest() *def.HttpRequestDef {
 }
 
 func TestHcHttpClient_SyncInvokeWithQuery(t *testing.T) {
-	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+	ts := httptest.NewTLSServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		_, err := fmt.Fprintln(w, "{}")
 		assert.Nil(t, err)
 		fmt.Println(r.URL.RawQuery)
@@ -139,6 +139,7 @@ func TestHcHttpClient_SyncInvokeWithQuery(t *testing.T) {
 	client, err := NewHcHttpClientBuilder().
 		WithEndpoints([]string{ts.URL}).
 		WithCredential(credentials).
+		WithHttpConfig(config.DefaultHttpConfig().WithIgnoreSSLVerification(true)).
 		SafeBuild()
 	assert.Nil(t, err)
 
@@ -172,7 +173,7 @@ type testStruct struct {
 }
 
 func TestHcHttpClient_SyncInvokeWithExtraHeaders(t *testing.T) {
-	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+	ts := httptest.NewTLSServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		_, err := fmt.Fprintln(w, "{}")
 		assert.NoError(t, err)
 		// assert custom user-agent
@@ -195,6 +196,7 @@ func TestHcHttpClient_SyncInvokeWithExtraHeaders(t *testing.T) {
 	client, err := NewHcHttpClientBuilder().
 		WithEndpoints([]string{ts.URL}).
 		WithCredential(credentials).
+		WithHttpConfig(config.DefaultHttpConfig().WithIgnoreSSLVerification(true)).
 		SafeBuild()
 	assert.NoError(t, err)
 	client.extraHeaders = map[string]string{
@@ -220,7 +222,7 @@ func TestHcHttpClient_SyncInvokeWithExtraHeaders(t *testing.T) {
 }
 
 func TestHcHttpClient_Sync(t *testing.T) {
-	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+	ts := httptest.NewTLSServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		_, err := fmt.Fprintln(w, "{}")
 		assert.Nil(t, err)
 		// assert custom user-agent
@@ -232,7 +234,7 @@ func TestHcHttpClient_Sync(t *testing.T) {
 	credentials, err := basic.NewCredentialsBuilder().WithAk("test").WithSk("test").SafeBuild()
 	assert.NoError(t, err)
 	client, err := NewHcHttpClientBuilder().
-		WithHttpConfig(config.DefaultHttpConfig().WithUserAgent("custom-user-agent")).
+		WithHttpConfig(config.DefaultHttpConfig().WithUserAgent("custom-user-agent").WithIgnoreSSLVerification(true)).
 		WithEndpoints([]string{ts.URL}).
 		WithCredential(credentials).
 		SafeBuild()

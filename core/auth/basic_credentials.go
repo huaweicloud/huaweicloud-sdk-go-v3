@@ -34,10 +34,9 @@ type BasicCredentials struct {
 	ProjectId string
 }
 
-// ProcessAuthParams This function may panic under certain circumstances.
-func (s *BasicCredentials) ProcessAuthParams(client *impl.DefaultHttpClient, region string) ICredential {
+func (s *BasicCredentials) ProcessAuthParams(client *impl.DefaultHttpClient, region string) (ICredential, error) {
 	if s.ProjectId != "" {
-		return s
+		return s, nil
 	}
 
 	cacheName := ""
@@ -49,7 +48,7 @@ func (s *BasicCredentials) ProcessAuthParams(client *impl.DefaultHttpClient, reg
 
 	if projectId, ok := getCache().get(cacheName); ok {
 		s.ProjectId = projectId
-		return s
+		return s, nil
 	}
 
 	derivedPredicate := s.DerivedPredicate
@@ -58,25 +57,25 @@ func (s *BasicCredentials) ProcessAuthParams(client *impl.DefaultHttpClient, reg
 	r := internal.GetKeystoneListProjectsRequest(s.selectIamEndpoint(region), region, client.GetHttpConfig())
 	req, err := s.ProcessAuthRequest(client, r)
 	if err != nil {
-		panic(fmt.Errorf("failed to get project id of region '%s' automatically: %s", region, err.Error()))
+		return nil, fmt.Errorf("failed to get project id of region '%s' automatically: %s", region, err.Error())
 	}
 
 	resp, err := internal.KeystoneListProjects(client, req)
 	if err != nil {
-		panic(fmt.Errorf("failed to get project id of region '%s' automatically, %s", region, err.Error()))
+		return nil, fmt.Errorf("failed to get project id of region '%s' automatically, %s", region, err.Error())
 	}
 	projects := *resp.Projects
 	if len(projects) < 1 {
-		panic(fmt.Errorf("failed to get project id of region '%s' automatically, X-IAM-Trace-Id=%s,"+
+		return nil, fmt.Errorf("failed to get project id of region '%s' automatically, X-IAM-Trace-Id=%s,"+
 			" confirm that the project exists in your account, or set project id manually:"+
-			" basic.NewCredentialsBuilder().WithAk(ak).WithSk(sk).WithProjectId(projectId).SafeBuild()", region, resp.TraceId))
+			" basic.NewCredentialsBuilder().WithAk(ak).WithSk(sk).WithProjectId(projectId).SafeBuild()", region, resp.TraceId)
 	} else if len(projects) > 1 {
 		projectIds := make([]string, 0, len(projects))
 		for _, project := range projects {
 			projectIds = append(projectIds, project.Id)
 		}
-		panic(fmt.Errorf("multiple project ids found: [%s], X-IAM-Trace-Id=%s, please select one when initializing the credentials:"+
-			" basic.NewCredentialsBuilder().WithAk(ak).WithSk(sk).WithProjectId(projectId).SafeBuild()", strings.Join(projectIds, ","), resp.TraceId))
+		return nil, fmt.Errorf("multiple project ids found: [%s], X-IAM-Trace-Id=%s, please select one when initializing the credentials:"+
+			" basic.NewCredentialsBuilder().WithAk(ak).WithSk(sk).WithProjectId(projectId).SafeBuild()", strings.Join(projectIds, ","), resp.TraceId)
 	}
 
 	id := projects[0].Id
@@ -87,7 +86,7 @@ func (s *BasicCredentials) ProcessAuthParams(client *impl.DefaultHttpClient, reg
 
 	s.DerivedPredicate = derivedPredicate
 
-	return s
+	return s, nil
 }
 
 func (s *BasicCredentials) ProcessAuthRequest(client *impl.DefaultHttpClient, req *request.DefaultHttpRequest) (*request.DefaultHttpRequest, error) {

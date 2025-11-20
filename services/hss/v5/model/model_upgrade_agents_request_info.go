@@ -29,7 +29,7 @@ type UpgradeAgentsRequestInfo struct {
 	// **参数解释**： 防护状态 **约束限制**: 不涉及 **取值范围**： - closed ：未防护。 - opened ：防护中。  **默认取值**: 不涉及
 	ProtectStatus *string `json:"protect_status,omitempty"`
 
-	// **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+	// **参数解释**： 操作系统类型 **约束限制**: 不涉及 **取值范围**： - Linux：Linux系统。 - Windows：Windows系统。  **默认取值**: 不涉及
 	OsType *string `json:"os_type,omitempty"`
 
 	// **参数解释**： 策略组ID **取值范围**： 字符长度36-64位
@@ -38,7 +38,7 @@ type UpgradeAgentsRequestInfo struct {
 	// **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
 	GroupId *string `json:"group_id,omitempty"`
 
-	// 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+	// 资产重要性 **参数解释**： 资产重要性 **约束限制**: 不涉及 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。  **默认取值**: 不涉及
 	AssetValue *string `json:"asset_value,omitempty"`
 
 	// **参数解释**: 服务器ID列表 **取值范围**: 不涉及

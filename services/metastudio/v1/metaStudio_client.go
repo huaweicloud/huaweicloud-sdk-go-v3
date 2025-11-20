@@ -758,6 +758,27 @@ func (c *MetaStudioClient) DeleteAssetInvoker(request *model.DeleteAssetRequest)
 	return &DeleteAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExecuteTransferAssetAction 转移资产任务控制
+//
+// 转移资产任务控制
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ExecuteTransferAssetAction(request *model.ExecuteTransferAssetActionRequest) (*model.ExecuteTransferAssetActionResponse, error) {
+	requestDef := GenReqDefForExecuteTransferAssetAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteTransferAssetActionResponse), nil
+	}
+}
+
+// ExecuteTransferAssetActionInvoker 转移资产任务控制
+func (c *MetaStudioClient) ExecuteTransferAssetActionInvoker(request *model.ExecuteTransferAssetActionRequest) *ExecuteTransferAssetActionInvoker {
+	requestDef := GenReqDefForExecuteTransferAssetAction()
+	return &ExecuteTransferAssetActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAssetSummary 查询资产概要
 //
 // 该接口用于查询媒体资产库中指定的多个资产的概要信息。
@@ -798,6 +819,27 @@ func (c *MetaStudioClient) ListAssets(request *model.ListAssetsRequest) (*model.
 func (c *MetaStudioClient) ListAssetsInvoker(request *model.ListAssetsRequest) *ListAssetsInvoker {
 	requestDef := GenReqDefForListAssets()
 	return &ListAssetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTransferAssetJobs 资产转移任务列表
+//
+// 资产转移任务列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListTransferAssetJobs(request *model.ListTransferAssetJobsRequest) (*model.ListTransferAssetJobsResponse, error) {
+	requestDef := GenReqDefForListTransferAssetJobs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTransferAssetJobsResponse), nil
+	}
+}
+
+// ListTransferAssetJobsInvoker 资产转移任务列表
+func (c *MetaStudioClient) ListTransferAssetJobsInvoker(request *model.ListTransferAssetJobsRequest) *ListTransferAssetJobsInvoker {
+	requestDef := GenReqDefForListTransferAssetJobs()
+	return &ListTransferAssetJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RestoreAsset 恢复被删除的资产
@@ -861,6 +903,48 @@ func (c *MetaStudioClient) ShowAssetReplicationInfo(request *model.ShowAssetRepl
 func (c *MetaStudioClient) ShowAssetReplicationInfoInvoker(request *model.ShowAssetReplicationInfoRequest) *ShowAssetReplicationInfoInvoker {
 	requestDef := GenReqDefForShowAssetReplicationInfo()
 	return &ShowAssetReplicationInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTransferAssetJob 查询转移资产任务详情
+//
+// 查询转移资产任务详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowTransferAssetJob(request *model.ShowTransferAssetJobRequest) (*model.ShowTransferAssetJobResponse, error) {
+	requestDef := GenReqDefForShowTransferAssetJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTransferAssetJobResponse), nil
+	}
+}
+
+// ShowTransferAssetJobInvoker 查询转移资产任务详情
+func (c *MetaStudioClient) ShowTransferAssetJobInvoker(request *model.ShowTransferAssetJobRequest) *ShowTransferAssetJobInvoker {
+	requestDef := GenReqDefForShowTransferAssetJob()
+	return &ShowTransferAssetJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// TransferAsset 转移资产给其他用户
+//
+// 转移资产给其他用户
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) TransferAsset(request *model.TransferAssetRequest) (*model.TransferAssetResponse, error) {
+	requestDef := GenReqDefForTransferAsset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.TransferAssetResponse), nil
+	}
+}
+
+// TransferAssetInvoker 转移资产给其他用户
+func (c *MetaStudioClient) TransferAssetInvoker(request *model.TransferAssetRequest) *TransferAssetInvoker {
+	requestDef := GenReqDefForTransferAsset()
+	return &TransferAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDigitalAsset 更新资产
@@ -2164,27 +2248,6 @@ func (c *MetaStudioClient) CreateInteractiveChat(request *model.CreateInteractiv
 func (c *MetaStudioClient) CreateInteractiveChatInvoker(request *model.CreateInteractiveChatRequest) *CreateInteractiveChatInvoker {
 	requestDef := GenReqDefForCreateInteractiveChat()
 	return &CreateInteractiveChatInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowEncryptFile 下载加密文件
-//
-// 下载加密文件
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) ShowEncryptFile(request *model.ShowEncryptFileRequest) (*model.ShowEncryptFileResponse, error) {
-	requestDef := GenReqDefForShowEncryptFile()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowEncryptFileResponse), nil
-	}
-}
-
-// ShowEncryptFileInvoker 下载加密文件
-func (c *MetaStudioClient) ShowEncryptFileInvoker(request *model.ShowEncryptFileRequest) *ShowEncryptFileInvoker {
-	requestDef := GenReqDefForShowEncryptFile()
-	return &ShowEncryptFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateIntentAndQuestion 创建知识库意图和问法
@@ -4141,6 +4204,27 @@ func (c *MetaStudioClient) UpdateSmartChatRoomInvoker(request *model.UpdateSmart
 	return &UpdateSmartChatRoomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSmartLiveUserConfig 租户查询直播租户级配置
+//
+// 该接口用于租户设置直播租户级配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowSmartLiveUserConfig(request *model.ShowSmartLiveUserConfigRequest) (*model.ShowSmartLiveUserConfigResponse, error) {
+	requestDef := GenReqDefForShowSmartLiveUserConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSmartLiveUserConfigResponse), nil
+	}
+}
+
+// ShowSmartLiveUserConfigInvoker 租户查询直播租户级配置
+func (c *MetaStudioClient) ShowSmartLiveUserConfigInvoker(request *model.ShowSmartLiveUserConfigRequest) *ShowSmartLiveUserConfigInvoker {
+	requestDef := GenReqDefForShowSmartLiveUserConfig()
+	return &ShowSmartLiveUserConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateSmartLiveUserConfig 租户设置直播租户级配置
 //
 // 该接口用于租户设置直播租户级配置。
@@ -4603,6 +4687,27 @@ func (c *MetaStudioClient) ShowSubtitleFileInvoker(request *model.ShowSubtitleFi
 	return &ShowSubtitleFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BindUserAssetResource 资源绑定接口
+//
+// 资源绑定接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) BindUserAssetResource(request *model.BindUserAssetResourceRequest) (*model.BindUserAssetResourceResponse, error) {
+	requestDef := GenReqDefForBindUserAssetResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BindUserAssetResourceResponse), nil
+	}
+}
+
+// BindUserAssetResourceInvoker 资源绑定接口
+func (c *MetaStudioClient) BindUserAssetResourceInvoker(request *model.BindUserAssetResourceRequest) *BindUserAssetResourceInvoker {
+	requestDef := GenReqDefForBindUserAssetResource()
+	return &BindUserAssetResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CountTenantResources 统计时间段内过期的资源数量
 //
 // 统计指定时间段内即将过期的包周期与一次性资源数量。
@@ -4622,6 +4727,69 @@ func (c *MetaStudioClient) CountTenantResources(request *model.CountTenantResour
 func (c *MetaStudioClient) CountTenantResourcesInvoker(request *model.CountTenantResourcesRequest) *CountTenantResourcesInvoker {
 	requestDef := GenReqDefForCountTenantResources()
 	return &CountTenantResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateUserQuotas 创建子账户配额
+//
+// 创建子账户（IAM用户）配额，需要先开启子账户隔离后才能配置。只有根账户可创建。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateUserQuotas(request *model.CreateUserQuotasRequest) (*model.CreateUserQuotasResponse, error) {
+	requestDef := GenReqDefForCreateUserQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateUserQuotasResponse), nil
+	}
+}
+
+// CreateUserQuotasInvoker 创建子账户配额
+func (c *MetaStudioClient) CreateUserQuotasInvoker(request *model.CreateUserQuotasRequest) *CreateUserQuotasInvoker {
+	requestDef := GenReqDefForCreateUserQuotas()
+	return &CreateUserQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTenantUserConfiguration 删除租户个性化配置
+//
+// 删除租户个性化配置。由租户下用户操作设置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteTenantUserConfiguration(request *model.DeleteTenantUserConfigurationRequest) (*model.DeleteTenantUserConfigurationResponse, error) {
+	requestDef := GenReqDefForDeleteTenantUserConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTenantUserConfigurationResponse), nil
+	}
+}
+
+// DeleteTenantUserConfigurationInvoker 删除租户个性化配置
+func (c *MetaStudioClient) DeleteTenantUserConfigurationInvoker(request *model.DeleteTenantUserConfigurationRequest) *DeleteTenantUserConfigurationInvoker {
+	requestDef := GenReqDefForDeleteTenantUserConfiguration()
+	return &DeleteTenantUserConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteUserQuotas 删除子账户配额
+//
+// 删除子账户（IAM用户）配额，需要先开启子账户隔离后才能配置。只有根账户可删除。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) DeleteUserQuotas(request *model.DeleteUserQuotasRequest) (*model.DeleteUserQuotasResponse, error) {
+	requestDef := GenReqDefForDeleteUserQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteUserQuotasResponse), nil
+	}
+}
+
+// DeleteUserQuotasInvoker 删除子账户配额
+func (c *MetaStudioClient) DeleteUserQuotasInvoker(request *model.DeleteUserQuotasRequest) *DeleteUserQuotasInvoker {
+	requestDef := GenReqDefForDeleteUserQuotas()
+	return &DeleteUserQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListTenantResources 查看租户资源列表
@@ -4647,6 +4815,69 @@ func (c *MetaStudioClient) ListTenantResourcesInvoker(request *model.ListTenantR
 	return &ListTenantResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListUserQuotas 查询子账户配额
+//
+// 查询子账户（IAM用户）配额。只有根账户可查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ListUserQuotas(request *model.ListUserQuotasRequest) (*model.ListUserQuotasResponse, error) {
+	requestDef := GenReqDefForListUserQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUserQuotasResponse), nil
+	}
+}
+
+// ListUserQuotasInvoker 查询子账户配额
+func (c *MetaStudioClient) ListUserQuotasInvoker(request *model.ListUserQuotasRequest) *ListUserQuotasInvoker {
+	requestDef := GenReqDefForListUserQuotas()
+	return &ListUserQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetTenantNoticeConfiguration 设置租户个性化通知配置
+//
+// 设置租户个性化通知配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) SetTenantNoticeConfiguration(request *model.SetTenantNoticeConfigurationRequest) (*model.SetTenantNoticeConfigurationResponse, error) {
+	requestDef := GenReqDefForSetTenantNoticeConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetTenantNoticeConfigurationResponse), nil
+	}
+}
+
+// SetTenantNoticeConfigurationInvoker 设置租户个性化通知配置
+func (c *MetaStudioClient) SetTenantNoticeConfigurationInvoker(request *model.SetTenantNoticeConfigurationRequest) *SetTenantNoticeConfigurationInvoker {
+	requestDef := GenReqDefForSetTenantNoticeConfiguration()
+	return &SetTenantNoticeConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetTenantUserConfiguration 设置租户个性化配置
+//
+// 设置租户个性化配置。由租户下用户操作设置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) SetTenantUserConfiguration(request *model.SetTenantUserConfigurationRequest) (*model.SetTenantUserConfigurationResponse, error) {
+	requestDef := GenReqDefForSetTenantUserConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetTenantUserConfigurationResponse), nil
+	}
+}
+
+// SetTenantUserConfigurationInvoker 设置租户个性化配置
+func (c *MetaStudioClient) SetTenantUserConfigurationInvoker(request *model.SetTenantUserConfigurationRequest) *SetTenantUserConfigurationInvoker {
+	requestDef := GenReqDefForSetTenantUserConfiguration()
+	return &SetTenantUserConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowResourceUsage 查看租户资源用量信息
 //
 // 查询租户一次性和包周期（包年/包月）资源用量信息。
@@ -4668,6 +4899,90 @@ func (c *MetaStudioClient) ShowResourceUsage(request *model.ShowResourceUsageReq
 func (c *MetaStudioClient) ShowResourceUsageInvoker(request *model.ShowResourceUsageRequest) *ShowResourceUsageInvoker {
 	requestDef := GenReqDefForShowResourceUsage()
 	return &ShowResourceUsageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTenantAssginRecord 查询租户下分配的资源详情
+//
+// 该接口用于普通租户查询租户下的资源详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowTenantAssginRecord(request *model.ShowTenantAssginRecordRequest) (*model.ShowTenantAssginRecordResponse, error) {
+	requestDef := GenReqDefForShowTenantAssginRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTenantAssginRecordResponse), nil
+	}
+}
+
+// ShowTenantAssginRecordInvoker 查询租户下分配的资源详情
+func (c *MetaStudioClient) ShowTenantAssginRecordInvoker(request *model.ShowTenantAssginRecordRequest) *ShowTenantAssginRecordInvoker {
+	requestDef := GenReqDefForShowTenantAssginRecord()
+	return &ShowTenantAssginRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTenantNoticeConfiguration 查询租户个性化通知配置
+//
+// 查询租户个性化通知配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowTenantNoticeConfiguration(request *model.ShowTenantNoticeConfigurationRequest) (*model.ShowTenantNoticeConfigurationResponse, error) {
+	requestDef := GenReqDefForShowTenantNoticeConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTenantNoticeConfigurationResponse), nil
+	}
+}
+
+// ShowTenantNoticeConfigurationInvoker 查询租户个性化通知配置
+func (c *MetaStudioClient) ShowTenantNoticeConfigurationInvoker(request *model.ShowTenantNoticeConfigurationRequest) *ShowTenantNoticeConfigurationInvoker {
+	requestDef := GenReqDefForShowTenantNoticeConfiguration()
+	return &ShowTenantNoticeConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTenantServiceConfigs 查看租户服务业务配置
+//
+// 查看租户服务业务配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowTenantServiceConfigs(request *model.ShowTenantServiceConfigsRequest) (*model.ShowTenantServiceConfigsResponse, error) {
+	requestDef := GenReqDefForShowTenantServiceConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTenantServiceConfigsResponse), nil
+	}
+}
+
+// ShowTenantServiceConfigsInvoker 查看租户服务业务配置
+func (c *MetaStudioClient) ShowTenantServiceConfigsInvoker(request *model.ShowTenantServiceConfigsRequest) *ShowTenantServiceConfigsInvoker {
+	requestDef := GenReqDefForShowTenantServiceConfigs()
+	return &ShowTenantServiceConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTenantUserConfiguration 查询租户个性化配置
+//
+// 查询租户个性化配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowTenantUserConfiguration(request *model.ShowTenantUserConfigurationRequest) (*model.ShowTenantUserConfigurationResponse, error) {
+	requestDef := GenReqDefForShowTenantUserConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTenantUserConfigurationResponse), nil
+	}
+}
+
+// ShowTenantUserConfigurationInvoker 查询租户个性化配置
+func (c *MetaStudioClient) ShowTenantUserConfigurationInvoker(request *model.ShowTenantUserConfigurationRequest) *ShowTenantUserConfigurationInvoker {
+	requestDef := GenReqDefForShowTenantUserConfiguration()
+	return &ShowTenantUserConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SignAgreement 签署云服务声明
@@ -4710,6 +5025,48 @@ func (c *MetaStudioClient) SignSpecialAgreement(request *model.SignSpecialAgreem
 func (c *MetaStudioClient) SignSpecialAgreementInvoker(request *model.SignSpecialAgreementRequest) *SignSpecialAgreementInvoker {
 	requestDef := GenReqDefForSignSpecialAgreement()
 	return &SignSpecialAgreementInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTenantServiceConfigs 设置租户服务配置
+//
+// 设置租户服务业务配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateTenantServiceConfigs(request *model.UpdateTenantServiceConfigsRequest) (*model.UpdateTenantServiceConfigsResponse, error) {
+	requestDef := GenReqDefForUpdateTenantServiceConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTenantServiceConfigsResponse), nil
+	}
+}
+
+// UpdateTenantServiceConfigsInvoker 设置租户服务配置
+func (c *MetaStudioClient) UpdateTenantServiceConfigsInvoker(request *model.UpdateTenantServiceConfigsRequest) *UpdateTenantServiceConfigsInvoker {
+	requestDef := GenReqDefForUpdateTenantServiceConfigs()
+	return &UpdateTenantServiceConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateUserQuotas 设置子账户配额
+//
+// 设置子账户（IAM用户）配额，需要先开启子账户隔离后才能配置。只有根账户可修改。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) UpdateUserQuotas(request *model.UpdateUserQuotasRequest) (*model.UpdateUserQuotasResponse, error) {
+	requestDef := GenReqDefForUpdateUserQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateUserQuotasResponse), nil
+	}
+}
+
+// UpdateUserQuotasInvoker 设置子账户配额
+func (c *MetaStudioClient) UpdateUserQuotasInvoker(request *model.UpdateUserQuotasRequest) *UpdateUserQuotasInvoker {
+	requestDef := GenReqDefForUpdateUserQuotas()
+	return &UpdateUserQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CommitShortJob 提交短任务
@@ -4986,6 +5343,27 @@ func (c *MetaStudioClient) SetJobBatchNameInvoker(request *model.SetJobBatchName
 	return &SetJobBatchNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowEncryptFile 下载加密文件
+//
+// 下载加密文件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) ShowEncryptFile(request *model.ShowEncryptFileRequest) (*model.ShowEncryptFileResponse, error) {
+	requestDef := GenReqDefForShowEncryptFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowEncryptFileResponse), nil
+	}
+}
+
+// ShowEncryptFileInvoker 下载加密文件
+func (c *MetaStudioClient) ShowEncryptFileInvoker(request *model.ShowEncryptFileRequest) *ShowEncryptFileInvoker {
+	requestDef := GenReqDefForShowEncryptFile()
+	return &ShowEncryptFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowJobAuditResult 获取语音训练任务审核结果
 //
 // 获取语音训练任务审核结果。
@@ -5176,6 +5554,27 @@ func (c *MetaStudioClient) Delete2dModelTrainingJobInvoker(request *model.Delete
 	return &Delete2dModelTrainingJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Download2dModelTraningEncryptFile 下载加密文件
+//
+// 下载加密文件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) Download2dModelTraningEncryptFile(request *model.Download2dModelTraningEncryptFileRequest) (*model.Download2dModelTraningEncryptFileResponse, error) {
+	requestDef := GenReqDefForDownload2dModelTraningEncryptFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.Download2dModelTraningEncryptFileResponse), nil
+	}
+}
+
+// Download2dModelTraningEncryptFileInvoker 下载加密文件
+func (c *MetaStudioClient) Download2dModelTraningEncryptFileInvoker(request *model.Download2dModelTraningEncryptFileRequest) *Download2dModelTraningEncryptFileInvoker {
+	requestDef := GenReqDefForDownload2dModelTraningEncryptFile()
+	return &Download2dModelTraningEncryptFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // Execute2dModelTrainingCommandByUser 租户执行分身数字人模型训练任务命令
 //
 // 该接口用于租户执行分身数字人模型训练任务命令，如提交训练审核等。
@@ -5259,111 +5658,6 @@ func (c *MetaStudioClient) Update2dModelTrainingJob(request *model.Update2dModel
 func (c *MetaStudioClient) Update2dModelTrainingJobInvoker(request *model.Update2dModelTrainingJobRequest) *Update2dModelTrainingJobInvoker {
 	requestDef := GenReqDefForUpdate2dModelTrainingJob()
 	return &Update2dModelTrainingJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateFacialAnimations 创建语音驱动表情动画任务
-//
-// 该接口用于创建驱动数字人表情的任务。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) CreateFacialAnimations(request *model.CreateFacialAnimationsRequest) (*model.CreateFacialAnimationsResponse, error) {
-	requestDef := GenReqDefForCreateFacialAnimations()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateFacialAnimationsResponse), nil
-	}
-}
-
-// CreateFacialAnimationsInvoker 创建语音驱动表情动画任务
-func (c *MetaStudioClient) CreateFacialAnimationsInvoker(request *model.CreateFacialAnimationsRequest) *CreateFacialAnimationsInvoker {
-	requestDef := GenReqDefForCreateFacialAnimations()
-	return &CreateFacialAnimationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateTtsa 创建语音驱动任务
-//
-// 该接口用于创建驱动数字人表情、动作及语音的任务。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) CreateTtsa(request *model.CreateTtsaRequest) (*model.CreateTtsaResponse, error) {
-	requestDef := GenReqDefForCreateTtsa()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateTtsaResponse), nil
-	}
-}
-
-// CreateTtsaInvoker 创建语音驱动任务
-func (c *MetaStudioClient) CreateTtsaInvoker(request *model.CreateTtsaRequest) *CreateTtsaInvoker {
-	requestDef := GenReqDefForCreateTtsa()
-	return &CreateTtsaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListFacialAnimationsData 获取语音驱动表情数据
-//
-// 该接口用于获取生成的数字人表情驱动数据
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) ListFacialAnimationsData(request *model.ListFacialAnimationsDataRequest) (*model.ListFacialAnimationsDataResponse, error) {
-	requestDef := GenReqDefForListFacialAnimationsData()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListFacialAnimationsDataResponse), nil
-	}
-}
-
-// ListFacialAnimationsDataInvoker 获取语音驱动表情数据
-func (c *MetaStudioClient) ListFacialAnimationsDataInvoker(request *model.ListFacialAnimationsDataRequest) *ListFacialAnimationsDataInvoker {
-	requestDef := GenReqDefForListFacialAnimationsData()
-	return &ListFacialAnimationsDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListTtsaData 获取语音驱动数据
-//
-// 该接口用于获取生成的数字人驱动数据，包括语音、表情、动作等。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) ListTtsaData(request *model.ListTtsaDataRequest) (*model.ListTtsaDataResponse, error) {
-	requestDef := GenReqDefForListTtsaData()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListTtsaDataResponse), nil
-	}
-}
-
-// ListTtsaDataInvoker 获取语音驱动数据
-func (c *MetaStudioClient) ListTtsaDataInvoker(request *model.ListTtsaDataRequest) *ListTtsaDataInvoker {
-	requestDef := GenReqDefForListTtsaData()
-	return &ListTtsaDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListTtsaJobs 获取语音驱动任务列表
-//
-// 该接口用于查询驱动数字人表情、动作及语音的任务列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *MetaStudioClient) ListTtsaJobs(request *model.ListTtsaJobsRequest) (*model.ListTtsaJobsResponse, error) {
-	requestDef := GenReqDefForListTtsaJobs()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListTtsaJobsResponse), nil
-	}
-}
-
-// ListTtsaJobsInvoker 获取语音驱动任务列表
-func (c *MetaStudioClient) ListTtsaJobsInvoker(request *model.ListTtsaJobsRequest) *ListTtsaJobsInvoker {
-	requestDef := GenReqDefForListTtsaJobs()
-	return &ListTtsaJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CheckVoiceAsset 校验音色模型是否可用（自研和第三方音色）
@@ -5519,6 +5813,27 @@ func (c *MetaStudioClient) ShowTtsAuditionFile(request *model.ShowTtsAuditionFil
 func (c *MetaStudioClient) ShowTtsAuditionFileInvoker(request *model.ShowTtsAuditionFileRequest) *ShowTtsAuditionFileInvoker {
 	requestDef := GenReqDefForShowTtsAuditionFile()
 	return &ShowTtsAuditionFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTtsOnceCode 外部接口-获取TTS一次性token
+//
+// 该接口用于获取TTS租户级一次性token。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MetaStudioClient) CreateTtsOnceCode(request *model.CreateTtsOnceCodeRequest) (*model.CreateTtsOnceCodeResponse, error) {
+	requestDef := GenReqDefForCreateTtsOnceCode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTtsOnceCodeResponse), nil
+	}
+}
+
+// CreateTtsOnceCodeInvoker 外部接口-获取TTS一次性token
+func (c *MetaStudioClient) CreateTtsOnceCodeInvoker(request *model.CreateTtsOnceCodeRequest) *CreateTtsOnceCodeInvoker {
+	requestDef := GenReqDefForCreateTtsOnceCode()
+	return &CreateTtsOnceCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateTtscVocabularyConfigs 设置TTS租户级自定义读法配置

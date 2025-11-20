@@ -53,7 +53,7 @@ type Finding struct {
 	// 访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
 	Sources *[]FindingSourceType `json:"sources,omitempty"`
 
-	// 访问分析结果当前状态。
+	// 访问分析结果当前状态。 - active：活跃 - archived：已归档 - resolved：已解决
 	Status FindingStatus `json:"status"`
 
 	// 更新访问分析结果的时间。

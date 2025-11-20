@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// AccessPreviewStatus 访问预览的状态。
+// AccessPreviewStatus 访问预览的状态。 - creating：创建中 - completed：创建成功 - failed：创建失败
 type AccessPreviewStatus struct {
 	value string
 }

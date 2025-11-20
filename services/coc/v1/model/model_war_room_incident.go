@@ -15,8 +15,14 @@ type WarRoomIncident struct {
 	// 事件id
 	IncidentId *string `json:"incident_id,omitempty"`
 
+	// 告警id
+	AlarmId *string `json:"alarm_id,omitempty"`
+
 	// 是否变更事件
 	IsChangeEvent *bool `json:"is_change_event,omitempty"`
+
+	// 源id
+	SourceId *int64 `json:"source_id,omitempty"`
 
 	// 事件级别
 	FailureLevel *string `json:"failure_level,omitempty"`

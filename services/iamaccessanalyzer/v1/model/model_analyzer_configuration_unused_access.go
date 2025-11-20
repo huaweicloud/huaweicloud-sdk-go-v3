@@ -11,6 +11,8 @@ type AnalyzerConfigurationUnusedAccess struct {
 
 	// 生成分析结果的预设天数。
 	UnusedAccessAge *int32 `json:"unused_access_age,omitempty"`
+
+	UnusedAnalysisRule *UnusedAnalysisRule `json:"unused_analysis_rule,omitempty"`
 }
 
 func (o AnalyzerConfigurationUnusedAccess) String() string {

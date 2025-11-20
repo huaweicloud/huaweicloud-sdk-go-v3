@@ -85,6 +85,22 @@ func (i *StartResourceScanInvoker) Invoke() (*model.StartResourceScanResponse, e
 	}
 }
 
+type UpdateAnalyzerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAnalyzerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAnalyzerInvoker) Invoke() (*model.UpdateAnalyzerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAnalyzerResponse), nil
+	}
+}
+
 type ApplyArchiveRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -181,6 +197,54 @@ func (i *UpdateArchiveRuleInvoker) Invoke() (*model.UpdateArchiveRuleResponse, e
 	}
 }
 
+type CreateResourceConfigurationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateResourceConfigurationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateResourceConfigurationsInvoker) Invoke() (*model.CreateResourceConfigurationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateResourceConfigurationsResponse), nil
+	}
+}
+
+type DeleteResourceConfigurationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteResourceConfigurationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteResourceConfigurationsInvoker) Invoke() (*model.DeleteResourceConfigurationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteResourceConfigurationsResponse), nil
+	}
+}
+
+type ListResourceConfigurationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResourceConfigurationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListResourceConfigurationsInvoker) Invoke() (*model.ListResourceConfigurationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResourceConfigurationsResponse), nil
+	}
+}
+
 type ListFindingsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -226,6 +290,86 @@ func (i *UpdateFindingsInvoker) Invoke() (*model.UpdateFindingsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdateFindingsResponse), nil
+	}
+}
+
+type CreateNotificationSettingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateNotificationSettingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateNotificationSettingInvoker) Invoke() (*model.CreateNotificationSettingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateNotificationSettingResponse), nil
+	}
+}
+
+type DeleteNotificationSettingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteNotificationSettingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteNotificationSettingInvoker) Invoke() (*model.DeleteNotificationSettingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteNotificationSettingResponse), nil
+	}
+}
+
+type ListNotificationSettingsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNotificationSettingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListNotificationSettingsInvoker) Invoke() (*model.ListNotificationSettingsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNotificationSettingsResponse), nil
+	}
+}
+
+type ShowNotificationSettingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowNotificationSettingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowNotificationSettingInvoker) Invoke() (*model.ShowNotificationSettingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowNotificationSettingResponse), nil
+	}
+}
+
+type UpdateNotificationSettingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateNotificationSettingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateNotificationSettingInvoker) Invoke() (*model.UpdateNotificationSettingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateNotificationSettingResponse), nil
 	}
 }
 

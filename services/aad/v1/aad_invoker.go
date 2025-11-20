@@ -181,19 +181,19 @@ func (i *BatchDeleteInstanceIpRuleInvoker) Invoke() (*model.BatchDeleteInstanceI
 	}
 }
 
-type CreateAadDomainInvoker struct {
+type CreateDomainInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *CreateAadDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *CreateDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *CreateAadDomainInvoker) Invoke() (*model.CreateAadDomainResponse, error) {
+func (i *CreateDomainInvoker) Invoke() (*model.CreateDomainResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.CreateAadDomainResponse), nil
+		return result.(*model.CreateDomainResponse), nil
 	}
 }
 

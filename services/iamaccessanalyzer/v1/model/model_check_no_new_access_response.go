@@ -15,7 +15,7 @@ type CheckNoNewAccessResponse struct {
 	// 更新后的策略是否允许新访问权限的消息。
 	Message *string `json:"message,omitempty"`
 
-	// 检查新访问权限的结果。
+	// 检查新访问权限的结果。 - pass：无新增访问权限 - fail：有新增访问权限
 	CheckResult *CheckNoNewAccessResponseCheckResult `json:"check_result,omitempty"`
 
 	// 新增action的statement描述。

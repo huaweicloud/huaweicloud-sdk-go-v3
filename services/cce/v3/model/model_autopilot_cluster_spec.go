@@ -72,6 +72,15 @@ type AutopilotClusterSpec struct {
 
 	ExtendParam *AutopilotClusterExtendParam `json:"extendParam,omitempty"`
 
+	// **参数解释：** 集群控制节点系统盘、数据盘加密。默认使用AES_256加密算法。CCE、Turbo集群1.25及以上版本开始支持。 **约束限制：** 集群创建后不支持修改。开启后存在一定的磁盘读写性能损耗。 **取值范围：** - true: 开启控制节点磁盘加密 - false: 关闭控制节点磁盘加密  **默认取值：** 默认false
+	EnableMasterVolumeEncryption *bool `json:"enableMasterVolumeEncryption,omitempty"`
+
+	// **参数解释：** 集群开启对分布式云支持。 **约束限制：** 目前只有Turbo集群支持。 **取值范围：** - true: 开启对分布式云支持 - false: 关闭对分布式云支持  **默认取值：** 默认false
+	EnableDistMgt *bool `json:"enableDistMgt,omitempty"`
+
+	// **参数解释：** 集群删除保护，如果开启后用户将无法删除该集群。 **约束限制：** 不涉及。 **取值范围：** - true: 开启集群删除保护 - false: 关闭集群删除保护  **默认取值：** 默认false
+	DeletionProtection *bool `json:"deletionProtection,omitempty"`
+
 	// 覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
 	ConfigurationsOverride *[]AutopilotPackageConfiguration `json:"configurationsOverride,omitempty"`
 }

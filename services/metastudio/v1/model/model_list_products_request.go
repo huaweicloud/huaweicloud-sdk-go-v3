@@ -45,7 +45,7 @@ type ListProductsRequest struct {
 	// 按标签模糊查询。
 	Tag *string `json:"tag,omitempty"`
 
-	// 按状态查询，多状态使用英文逗号分隔。
+	// 根据状态查询。多个状态用英文逗号分隔。 文件状态枚举:   * ACTIVED：已激活   * UNACTIVED：未激活   * BLOCK：已冻结   * DELETED：已删除
 	State *string `json:"state,omitempty"`
 }
 

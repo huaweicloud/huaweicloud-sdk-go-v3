@@ -15,6 +15,9 @@ type ClusterSpec struct {
 	// 集群类别： - CCE：CCE集群   CCE集群支持虚拟机与裸金属服务器混合、GPU、NPU等异构节点的混合部署，基于高性能网络模型提供全方位、多场景、安全稳定的容器运行环境。 [- Turbo: CCE Turbo集群。   全面基于云原生基础设施构建的云原生2.0的容器引擎服务，具备软硬协同、网络无损、安全可靠、调度智能的优势，为用户提供一站式、高性价比的全新容器服务体验。](tag:hws,hws_hk,dt,hcs,g42,sbc)
 	Category *ClusterSpecCategory `json:"category,omitempty"`
 
+	// **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。当不传或为空时，集群将自动选择使用CCE的系统委托cce_admin_trust或cce_cluster_agency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅1.27及以上版本集群支持该参数  **取值范围：** 不涉及 **默认取值：** 空
+	AgencyName *string `json:"agencyName,omitempty"`
+
 	// **参数解释：** 集群Master节点架构 **约束限制：** 不涉及 **取值范围：** - VirtualMachine：Master节点为x86架构服务器 - [ARM64: Master节点为鲲鹏（ARM架构）服务器](tag:hws,hws_hk,hcs)  **默认取值：** VirtualMachine[，如若VirtualMachine资源不足，取值为ARM64](tag:hws,hws_hk,hcs)
 	Type *ClusterSpecType `json:"type,omitempty"`
 
@@ -91,6 +94,9 @@ type ClusterSpec struct {
 
 	// **参数解释：** 是否为Autopilot集群。 **约束限制：** 不涉及 **取值范围：** - true: 创建Autopilot类型集群 - false: 创建CCE/Turbo类型集群  **默认取值：** 默认false
 	EnableAutopilot *bool `json:"enableAutopilot,omitempty"`
+
+	// **参数解释：** 是否启用CCE Standard/Turbo集群自动升配功能。 **约束限制：** 当前集群自动升配功能受限开放。 集群支持范围： - 版本范围：v1.27及以上 - 规格范围：cce.s2.*规格的集群支持启用自动升配  **取值范围：** - true: 启用自动升配能力 - false: 禁用自动升配能力  **默认取值：** 默认false
+	EnableAutoResizing *bool `json:"enableAutoResizing,omitempty"`
 
 	EncryptionConfig *EncryptionConfig `json:"encryptionConfig,omitempty"`
 }

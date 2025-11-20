@@ -16,10 +16,10 @@ type ListLogContextRequestBody struct {
 	Time *string `json:"__time__,omitempty"`
 
 	// 指定起始日志往前（上文）的日志条数，取值范围 [0, 500] ，默认值100
-	BackwardsSize *int32 `json:"backwardsSize,omitempty"`
+	BackwardsSize *int32 `json:"backwards_size,omitempty"`
 
 	// 指定起始日志往后（下文）的日志条数，取值范围 [0, 500] ，默认值100
-	ForwardsSize *int32 `json:"forwardsSize,omitempty"`
+	ForwardsSize *int32 `json:"forwards_size,omitempty"`
 }
 
 func (o ListLogContextRequestBody) String() string {

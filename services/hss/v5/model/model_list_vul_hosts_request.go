@@ -42,14 +42,32 @@ type ListVulHostsRequest struct {
 	// **参数解释**: 漏洞当前的处置状态 **约束限制**: 不涉及 **取值范围**: - unhandled : 未处理 - handled   : 已处理  **默认取值**: 不涉及
 	HandleStatus *string `json:"handle_status,omitempty"`
 
-	// **参数解释**: 危险程度 **约束限制**: 不涉及 **取值范围**: - Critical : 漏洞cvss评分大于等于9；对应控制台页面的高危 - High     : 漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium   : 漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low      : 漏洞cvss评分小于4；对应控制台页面的低危  可用逗号连接作为多选 **默认取值**: 不涉及
+	// **参数解释**: 危险程度（风险等级） **约束限制**: 不涉及 **取值范围**: - Critical：漏洞cvss评分大于等于9；对应控制台页面的高危 - High：漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium：漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low：漏洞cvss评分小于4；对应控制台页面的低危  可用逗号连接作为多选 **默认取值**: 不涉及
 	SeverityLevel *string `json:"severity_level,omitempty"`
 
-	// **参数解释**: 是否影响业务 **约束限制**: 不涉及 **取值范围**: - true  : 影响业务 - false : 不影响业务  **默认取值**: 不涉及
+	// **参数解释**: 是否影响业务 **约束限制**: 不涉及 **取值范围**: - true：影响业务 - false：不影响业务  **默认取值**: 不涉及
 	IsAffectBusiness *bool `json:"is_affect_business,omitempty"`
 
-	// **参数解释**: 修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical : 紧急 - High     : 高危 - Medium   : 中危 - Low      : 低危  可用逗号连接作为多选 **默认取值**:   不涉及
+	// **参数解释**: 修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高危 - Medium：中危 - Low：低危  可用逗号连接作为多选 **默认取值**:   不涉及
 	RepairPriority *string `json:"repair_priority,omitempty"`
+
+	// **参数解释**: 集群名称。 **约束限制**: 不涉及 **取值范围**: 字符长度1-64。 **默认取值**: 不涉及
+	ClusterName *string `json:"cluster_name,omitempty"`
+
+	// **参数解释**:  集群id **约束限制**: 不涉及 **取值范围**: 长度范围1-64位 **默认取值**: 不涉及
+	ClusterId *string `json:"cluster_id,omitempty"`
+
+	// **参数解释**: 是否是容器场景 **约束限制**: 不涉及 **取值范围**: - true：是容器场景 - false：不是容器场景  **默认取值**: false
+	IsContainer *bool `json:"is_container,omitempty"`
+
+	// **参数解释**: 容器名称（容器场景生效） **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
+	ContainerName *string `json:"container_name,omitempty"`
+
+	// **参数解释**： 扫描任务开始时间的最小值（容器场景生效） **约束限制**: 不涉及 **取值范围**： 最小值0，最大值2^63-1 **默认取值**: 不涉及
+	MinScanTime *int64 `json:"min_scan_time,omitempty"`
+
+	// **参数解释**： 扫描任务开始时间的最大值（容器场景生效） **约束限制**: 不涉及 **取值范围**： 最小值0，最大值2^63-1 **默认取值**: 不涉及
+	MaxScanTime *int64 `json:"max_scan_time,omitempty"`
 }
 
 func (o ListVulHostsRequest) String() string {

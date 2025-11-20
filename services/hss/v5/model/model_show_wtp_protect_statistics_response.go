@@ -9,7 +9,7 @@ import (
 // ShowWtpProtectStatisticsResponse Response Object
 type ShowWtpProtectStatisticsResponse struct {
 
-	// **参数解释**: 防护服务器总数，包含防护状态是防护中、部分防护、防护暂停、防护失败、防护中断和开启中共6中状态的服务器总数 **取值范围**: 最小值0，最大值1000000
+	// **参数解释**: 防护服务器总数，包含防护状态是防护中、部分防护、防护暂停、防护失败、防护中断和开启中共6种状态的服务器总数 **取值范围**: 最小值0，最大值1000000
 	ProtectHostNum *int32 `json:"protect_host_num,omitempty"`
 
 	// **参数解释**: 防护状态为防护中的服务器总数 **取值范围**: 最小值0，最大值1000000

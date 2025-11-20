@@ -36,7 +36,7 @@ type ExportVulHandleHistoryRequestBody struct {
 	ExportSize *int32 `json:"export_size,omitempty"`
 
 	// 导出漏洞数据的表头信息列表
-	ExportHeaderList *[][]string `json:"export_header_list,omitempty"`
+	ExportHeaderList [][]string `json:"export_header_list"`
 }
 
 func (o ExportVulHandleHistoryRequestBody) String() string {

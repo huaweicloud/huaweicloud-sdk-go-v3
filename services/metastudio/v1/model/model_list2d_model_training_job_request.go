@@ -27,6 +27,9 @@ type List2dModelTrainingJobRequest struct {
 	// 每页显示的条目数量。
 	Limit *int32 `json:"limit,omitempty"`
 
+	// 任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
+	State *string `json:"state,omitempty"`
+
 	// 排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
 	SortKey *string `json:"sort_key,omitempty"`
 
@@ -39,11 +42,14 @@ type List2dModelTrainingJobRequest struct {
 	// 过滤创建时间>=输入时间的记录。
 	CreateSince *string `json:"create_since,omitempty"`
 
-	// 任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
-	State *string `json:"state,omitempty"`
-
 	// 查询租户id。
 	QueryProjectId *string `json:"query_project_id,omitempty"`
+
+	// 过滤更新时间>=输入时间的记录。
+	UpdateSince *string `json:"update_since,omitempty"`
+
+	// 过滤更新时间>=输入时间的记录。
+	UpdateUntil *string `json:"update_until,omitempty"`
 
 	// 任务批次名称。
 	BatchName *string `json:"batch_name,omitempty"`
@@ -62,6 +68,15 @@ type List2dModelTrainingJobRequest struct {
 
 	// 是否是flexus任务
 	IsFlexus *bool `json:"is_flexus,omitempty"`
+
+	// 是否是直播间复刻任务
+	IsLiveCopy *bool `json:"is_live_copy,omitempty"`
+
+	// 训练region
+	TrainLocation *string `json:"train_location,omitempty"`
+
+	// 是否测试版
+	IsOndemandResource *bool `json:"is_ondemand_resource,omitempty"`
 }
 
 func (o List2dModelTrainingJobRequest) String() string {

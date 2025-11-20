@@ -8,10 +8,10 @@ import (
 
 type NodeLabelInfoResponse struct {
 
-	// **参数解释**: 节点标签名称。 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
+	// **参数解释**: 节点标签名称。 **取值范围**: 字符长度1-512位
 	Label *string `json:"label,omitempty"`
 
-	// **参数解释**: 节点名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+	// **参数解释**: 节点名称 **取值范围**: 字符长度0-256位
 	Children *[]string `json:"children,omitempty"`
 }
 

@@ -87,6 +87,8 @@ type InstanceRequest struct {
 
 	// 是否开启自动小版本升级，默认为false，仅支持PostgreSQL。 - true：开启自动小版本升级。 - false：不开启自动小版本升级。
 	IsAutoUpgrade *bool `json:"is_auto_upgrade,omitempty"`
+
+	AutoEnlargeStrategy *AutoEnlargeStrategyForConsoleApi `json:"auto_enlarge_strategy,omitempty"`
 }
 
 func (o InstanceRequest) String() string {

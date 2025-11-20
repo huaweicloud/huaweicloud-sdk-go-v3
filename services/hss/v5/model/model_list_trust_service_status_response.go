@@ -9,7 +9,7 @@ import (
 // ListTrustServiceStatusResponse Response Object
 type ListTrustServiceStatusResponse struct {
 
-	// xxx
+	// **参数解释**: 可信服务状态 **取值范围**: - true：是。 - false：否。
 	TrustedServicesEnabled *bool `json:"trusted_services_enabled,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

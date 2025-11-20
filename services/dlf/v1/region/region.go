@@ -21,7 +21,7 @@ var (
 	AP_SOUTHEAST_3 = region.NewRegion("ap-southeast-3",
 		"https://dayu-dlf.ap-southeast-3.myhuaweicloud.com")
 	AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1",
-		"https://dayu-dlf.ap-southeast-3.myhuaweicloud.com")
+		"https://dayu-dlf.ap-southeast-1.myhuaweicloud.com")
 	RU_NORTHWEST_2 = region.NewRegion("ru-northwest-2",
 		"https://dayu-dlf.ru-northwest-2.myhuaweicloud.com")
 	CN_NORTH_11 = region.NewRegion("cn-north-11",

@@ -250,25 +250,25 @@ func (c *AadClient) BatchDeleteInstanceIpRuleInvoker(request *model.BatchDeleteI
 	return &BatchDeleteInstanceIpRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateAadDomain 创建防护域名
+// CreateDomain 创建防护域名
 //
 // 创建防护域名
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *AadClient) CreateAadDomain(request *model.CreateAadDomainRequest) (*model.CreateAadDomainResponse, error) {
-	requestDef := GenReqDefForCreateAadDomain()
+func (c *AadClient) CreateDomain(request *model.CreateDomainRequest) (*model.CreateDomainResponse, error) {
+	requestDef := GenReqDefForCreateDomain()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreateAadDomainResponse), nil
+		return resp.(*model.CreateDomainResponse), nil
 	}
 }
 
-// CreateAadDomainInvoker 创建防护域名
-func (c *AadClient) CreateAadDomainInvoker(request *model.CreateAadDomainRequest) *CreateAadDomainInvoker {
-	requestDef := GenReqDefForCreateAadDomain()
-	return &CreateAadDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CreateDomainInvoker 创建防护域名
+func (c *AadClient) CreateDomainInvoker(request *model.CreateDomainRequest) *CreateDomainInvoker {
+	requestDef := GenReqDefForCreateDomain()
+	return &CreateDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreatePolicy 创建策略

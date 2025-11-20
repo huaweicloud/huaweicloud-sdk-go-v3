@@ -51,7 +51,7 @@ type CreateHostResponse struct {
 	// 创建防护域名的时间
 	Timestamp *int64 `json:"timestamp,omitempty"`
 
-	// 是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
+	// 是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
 	ExclusiveIp *bool `json:"exclusive_ip,omitempty"`
 
 	// 网站名称，对应WAF控制台域名详情中的网站名称

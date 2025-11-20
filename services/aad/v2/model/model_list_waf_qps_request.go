@@ -26,6 +26,12 @@ type ListWafQpsRequest struct {
 
 	// 实例类型，0-大陆，1-海外
 	OverseasType *int32 `json:"overseas_type,omitempty"`
+
+	// 限制条数
+	Limit *int32 `json:"limit,omitempty"`
+
+	// 偏移量
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListWafQpsRequest) String() string {

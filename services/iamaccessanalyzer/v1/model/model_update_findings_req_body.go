@@ -17,7 +17,7 @@ type UpdateFindingsReqBody struct {
 	// 资源的唯一资源标识符。
 	ResourceUrn *string `json:"resource_urn,omitempty"`
 
-	// 要更新的访问分析结果状态。
+	// 要更新的访问分析结果状态。 - active：活跃 - archived：已存档
 	Status UpdateFindingsReqBodyStatus `json:"status"`
 }
 

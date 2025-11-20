@@ -91,7 +91,7 @@ type ShowHostResponse struct {
 	// 是否支持http2   - true：表示支持http2   - false：表示不支持http2
 	Http2Enable *bool `json:"http2_enable,omitempty"`
 
-	// 是否使用独享ip   - true：使用独享ip   - false：不适用独享ip
+	// 是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
 	ExclusiveIp *bool `json:"exclusive_ip,omitempty"`
 
 	// 接入进度，仅用于新版console(前端)使用

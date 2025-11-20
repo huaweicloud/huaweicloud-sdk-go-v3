@@ -4037,6 +4037,38 @@ func (i *ListBusinessPartnersInvoker) Invoke() (*model.ListBusinessPartnersRespo
 	}
 }
 
+type ListDbAgentJobHistoryStepsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDbAgentJobHistoryStepsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDbAgentJobHistoryStepsInvoker) Invoke() (*model.ListDbAgentJobHistoryStepsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDbAgentJobHistoryStepsResponse), nil
+	}
+}
+
+type ListDbAgentJobHistorysInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDbAgentJobHistorysInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDbAgentJobHistorysInvoker) Invoke() (*model.ListDbAgentJobHistorysResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDbAgentJobHistorysResponse), nil
+	}
+}
+
 type ListDbAgentJobsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4261,6 +4293,38 @@ func (i *ModifyPublicationInvoker) Invoke() (*model.ModifyPublicationResponse, e
 	}
 }
 
+type RefreshPublicationSnapshotInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RefreshPublicationSnapshotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RefreshPublicationSnapshotInvoker) Invoke() (*model.RefreshPublicationSnapshotResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RefreshPublicationSnapshotResponse), nil
+	}
+}
+
+type RefreshSubscriptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RefreshSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RefreshSubscriptionInvoker) Invoke() (*model.RefreshSubscriptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RefreshSubscriptionResponse), nil
+	}
+}
+
 type RevokeSqlserverDbUserPrivilegeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4306,6 +4370,22 @@ func (i *SetInstancesNewDbShrinkInvoker) Invoke() (*model.SetInstancesNewDbShrin
 		return nil, err
 	} else {
 		return result.(*model.SetInstancesNewDbShrinkResponse), nil
+	}
+}
+
+type SyncReplicationMetadataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SyncReplicationMetadataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SyncReplicationMetadataInvoker) Invoke() (*model.SyncReplicationMetadataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SyncReplicationMetadataResponse), nil
 	}
 }
 

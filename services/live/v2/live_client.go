@@ -310,6 +310,28 @@ func (c *LiveClient) ListTranscodeDataInvoker(request *model.ListTranscodeDataRe
 	return &ListTranscodeDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTranscodeTaskDetail 查询转码明细
+//
+// 查询流粒度转码明细，包含流名、模版、格式、时长。
+// 最大查询跨度1天，最大查询周期14天。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ListTranscodeTaskDetail(request *model.ListTranscodeTaskDetailRequest) (*model.ListTranscodeTaskDetailResponse, error) {
+	requestDef := GenReqDefForListTranscodeTaskDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTranscodeTaskDetailResponse), nil
+	}
+}
+
+// ListTranscodeTaskDetailInvoker 查询转码明细
+func (c *LiveClient) ListTranscodeTaskDetailInvoker(request *model.ListTranscodeTaskDetailRequest) *ListTranscodeTaskDetailInvoker {
+	requestDef := GenReqDefForListTranscodeTaskDetail()
+	return &ListTranscodeTaskDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListUsersOfStream 查询观众趋势接口
 //
 // 查询观众趋势。  最大查询跨度31天，最大查询周期一年。

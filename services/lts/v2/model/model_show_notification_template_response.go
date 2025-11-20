@@ -3,32 +3,29 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
 // ShowNotificationTemplateResponse Response Object
 type ShowNotificationTemplateResponse struct {
 
-	// 通知规则名称，必填，只含有汉字、数字、字母、下划线、中划线，不能以下划线等特殊符号开头和结尾，长度为 1 - 100，创建后不可修改
+	// **参数解释：**  消息模板名称。 **取值范围：**  不涉及。
 	Name string `json:"name"`
 
-	// 保留字段，非必填，只支持sms（短信），dingding（钉钉），wechat（企业微信），email（邮件）和webhook（网络钩子）
+	// **参数解释：**  消息通知方式。 **取值范围：**  - sms - dingding - wechat - webhook - email - voice - feishu - welink
 	Type *[]string `json:"type,omitempty"`
 
-	// 模板描述，必填，只含有汉字、数字、字母、下划线不能以下划线开头和结尾，长度为0--1024
+	// **参数解释：**  消息模板描述。 **取值范围：**  不涉及。
 	Desc *string `json:"desc,omitempty"`
 
-	// 模板来源，目前必填为LTS，否则会筛选不出来
+	// **参数解释：**  消息模板来源。 **取值范围：**  不涉及。
 	Source string `json:"source"`
 
-	// 语言，必填，目前可填zh-cn和en-us
-	Locale ShowNotificationTemplateResponseLocale `json:"locale"`
+	// **参数解释：**  不同通知渠道下消息模板的详细信息。
+	Templates []SubTemplateResBody `json:"templates"`
 
-	// 模板正文，为一个数组
-	Templates []SubTemplate `json:"templates"`
+	// **参数解释：**  消息头语言，系统在发送消息时会默认添加消息头，中文如：“尊敬的用户...”；英文如：“Dear User...”。 **取值范围：**  - zh-cn - en-us
+	Locale *string `json:"locale,omitempty"`
 
 	// 创建时间，为毫秒时间戳
 	CreateTime int64 `json:"create_time"`
@@ -48,51 +45,4 @@ func (o ShowNotificationTemplateResponse) String() string {
 	}
 
 	return strings.Join([]string{"ShowNotificationTemplateResponse", string(data)}, " ")
-}
-
-type ShowNotificationTemplateResponseLocale struct {
-	value string
-}
-
-type ShowNotificationTemplateResponseLocaleEnum struct {
-	ZH_CN ShowNotificationTemplateResponseLocale
-	EN_US ShowNotificationTemplateResponseLocale
-}
-
-func GetShowNotificationTemplateResponseLocaleEnum() ShowNotificationTemplateResponseLocaleEnum {
-	return ShowNotificationTemplateResponseLocaleEnum{
-		ZH_CN: ShowNotificationTemplateResponseLocale{
-			value: "zh-cn",
-		},
-		EN_US: ShowNotificationTemplateResponseLocale{
-			value: "en-us",
-		},
-	}
-}
-
-func (c ShowNotificationTemplateResponseLocale) Value() string {
-	return c.value
-}
-
-func (c ShowNotificationTemplateResponseLocale) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ShowNotificationTemplateResponseLocale) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

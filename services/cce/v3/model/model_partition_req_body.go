@@ -9,15 +9,15 @@ import (
 // PartitionReqBody 集群分区信息
 type PartitionReqBody struct {
 
-	// 资源类型
+	// **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： Partition
 	Kind *string `json:"kind,omitempty"`
 
-	// API版本
+	// **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
 	ApiVersion *string `json:"apiVersion,omitempty"`
 
 	Metadata *PartitionReqBodyMetadata `json:"metadata,omitempty"`
 
-	Spec *PartitionSpec `json:"spec,omitempty"`
+	Spec *PartitionReqBodySpec `json:"spec,omitempty"`
 }
 
 func (o PartitionReqBody) String() string {

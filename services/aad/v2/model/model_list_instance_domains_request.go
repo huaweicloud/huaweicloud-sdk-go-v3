@@ -11,6 +11,12 @@ type ListInstanceDomainsRequest struct {
 
 	// 实例id
 	InstanceId string `json:"instance_id"`
+
+	// 限制条数
+	Limit *int32 `json:"limit,omitempty"`
+
+	// 偏移量
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListInstanceDomainsRequest) String() string {

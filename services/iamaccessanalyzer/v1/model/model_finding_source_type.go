@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// FindingSourceType 访问分析结果的来源。
+// FindingSourceType 访问分析结果的来源。 - bucket_acl：桶ACL - bucket_policy：桶策略
 type FindingSourceType struct {
 	value string
 }

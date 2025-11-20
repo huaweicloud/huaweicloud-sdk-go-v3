@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// Partition 集群分区信息
+// Partition **参数解释**： 集群分区信息 **约束限制**： 不涉及
 type Partition struct {
 
-	// 资源类型
+	// **参数解释**：  API类型  **约束限制**：  不允许修改 **取值范围**：  不涉及  **默认取值**：  Partition
 	Kind *string `json:"kind,omitempty"`
 
-	// API版本
+	// **参数解释**： API版本 **约束限制**： 不允许修改 **取值范围**： 不涉及 **默认取值**： v3
 	ApiVersion *string `json:"apiVersion,omitempty"`
 
 	Metadata *PartitionMetadata `json:"metadata,omitempty"`

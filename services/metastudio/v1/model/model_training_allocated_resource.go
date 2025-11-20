@@ -14,7 +14,7 @@ type TrainingAllocatedResource struct {
 	// 资源ID。
 	ResourceId *string `json:"resource_id,omitempty"`
 
-	// 资源计费类型。 * PERIODIC: 包周期 * ONE_TIME：一次性计费 > * 一次性计费包括：租户订购的一次性资源，SP管理员分配给租户的一次性资源。
+	// 资源计费类型。 * PERIODIC: 包周期 * ONE_TIME：一次性计费 > * 一次性计费包括：租户订购的一次性资源，SP管理员分配给租户的一次性资源。 * ON_DEMAND: 按需
 	ChargeMode *TrainingAllocatedResourceChargeMode `json:"charge_mode,omitempty"`
 
 	// 资源过期时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
@@ -35,8 +35,9 @@ type TrainingAllocatedResourceChargeMode struct {
 }
 
 type TrainingAllocatedResourceChargeModeEnum struct {
-	PERIODIC TrainingAllocatedResourceChargeMode
-	ONE_TIME TrainingAllocatedResourceChargeMode
+	PERIODIC  TrainingAllocatedResourceChargeMode
+	ONE_TIME  TrainingAllocatedResourceChargeMode
+	ON_DEMAND TrainingAllocatedResourceChargeMode
 }
 
 func GetTrainingAllocatedResourceChargeModeEnum() TrainingAllocatedResourceChargeModeEnum {
@@ -46,6 +47,9 @@ func GetTrainingAllocatedResourceChargeModeEnum() TrainingAllocatedResourceCharg
 		},
 		ONE_TIME: TrainingAllocatedResourceChargeMode{
 			value: "ONE_TIME",
+		},
+		ON_DEMAND: TrainingAllocatedResourceChargeMode{
+			value: "ON_DEMAND",
 		},
 	}
 }

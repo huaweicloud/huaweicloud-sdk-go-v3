@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// MasterEipResponseStatus 状态信息
+// MasterEipResponseStatus **参数解释**： 状态信息 **约束限制**： 不涉及
 type MasterEipResponseStatus struct {
 
-	// 集群访问的PrivateIP(HA集群返回VIP)
+	// **参数解释**： 集群访问的PrivateIP(HA集群返回VIP) **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	PrivateEndpoint *string `json:"privateEndpoint,omitempty"`
 
-	// 集群访问的PublicIP
+	// **参数解释**： 集群访问的PublicIP **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	PublicEndpoint *string `json:"publicEndpoint,omitempty"`
 }
 

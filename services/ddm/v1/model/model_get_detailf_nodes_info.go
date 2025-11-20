@@ -17,6 +17,12 @@ type GetDetailfNodesInfo struct {
 
 	// DDM实例节点IP。
 	Ip string `json:"ip"`
+
+	// 节点所在组ID。
+	GroupId string `json:"group_id"`
+
+	// 节点ID。
+	NodeId string `json:"node_id"`
 }
 
 func (o GetDetailfNodesInfo) String() string {

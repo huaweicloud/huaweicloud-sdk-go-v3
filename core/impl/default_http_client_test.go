@@ -49,7 +49,7 @@ func (r *MockRoundTripper) RoundTrip(req *http.Request) (*http.Response, error) 
 }
 
 func TestDefaultHttpClient_SyncInvokeHttp(t *testing.T) {
-	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+	ts := httptest.NewTLSServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		if r.Method != "POST" {
 			http.Error(w, fmt.Sprintf("{\"code\": 400, \"message\": \"Invalid request method: %s\"}", r.Method), http.StatusBadRequest)

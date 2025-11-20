@@ -14,7 +14,7 @@ type DeleteWafWhiteIpRuleV2RequestBody struct {
 	// 域名+端口组合，标准端口80/443无须加端口。
 	DomainName string `json:"domain_name"`
 
-	// 防护区域
+	// 防护区域,0-大陆,1-海外
 	OverseasType int32 `json:"overseas_type"`
 }
 

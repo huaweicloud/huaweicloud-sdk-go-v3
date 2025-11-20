@@ -9,19 +9,19 @@ import (
 // SecurityCheckTaskCondition 基线检测周期扫描配置
 type SecurityCheckTaskCondition struct {
 
-	// 定时任务，包含如下:   - fixed_weekday : 固定工作日
+	// **参数解释**： 定时任务类型 **取值范围**： - fixed_weekday : 固定工作日
 	Type *string `json:"type,omitempty"`
 
 	// 周几触发，可选0或多个
 	DayOfWeek *[]string `json:"day_of_week,omitempty"`
 
-	// 在此参数表示的小时触发定时任务
+	// **参数解释**： 在此参数表示的小时触发定时任务 **取值范围**： 最小值0，最大值23
 	Hour *int32 `json:"hour,omitempty"`
 
-	// 在此参数表示的分钟触发定时任务
+	// **参数解释**： 在此参数表示的分钟触发定时任务 **取值范围**： 最小值0，最大值59
 	Minute *int32 `json:"minute,omitempty"`
 
-	// 随机偏移时间
+	// **参数解释**： 随机偏移时间 **取值范围**： 最小值0，最大值7200
 	RandomOffset *int32 `json:"random_offset,omitempty"`
 }
 

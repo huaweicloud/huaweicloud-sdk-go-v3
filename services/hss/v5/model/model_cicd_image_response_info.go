@@ -68,6 +68,9 @@ type CicdImageResponseInfo struct {
 
 	// **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **取值范围**: - Security：安全。 - Low：低危。 - Medium：中危。 - High：高危。
 	SeverityLevel *string `json:"severity_level,omitempty"`
+
+	// **参数解释**: 流水线类型 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。 minLength: 1 maxLength: 32 x-example: \"jenkins\"
+	PipelineType *string `json:"pipeline_type,omitempty"`
 }
 
 func (o CicdImageResponseInfo) String() string {

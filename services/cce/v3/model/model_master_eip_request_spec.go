@@ -11,15 +11,15 @@ import (
 
 type MasterEipRequestSpec struct {
 
-	// 绑定或解绑动作，必选参数。 - 绑定：固定值为{\"action\":\"bind\"} - 解绑：固定值为{\"action\":\"unbind\"}
+	// **参数解释**： 绑定或解绑动作 **约束限制**： 不涉及 **取值范围**： - bind：绑定 - unbind：解绑 **默认取值**： 不涉及
 	Action *MasterEipRequestSpecAction `json:"action,omitempty"`
 
 	Spec *MasterEipRequestSpecSpec `json:"spec,omitempty"`
 
-	// 带宽(字段已失效，暂不推荐使用)
+	// **参数解释**： 带宽(字段已失效，暂不推荐使用) **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	Bandwidth *string `json:"bandwidth,omitempty"`
 
-	// 弹性网卡IP(字段已失效，暂不推荐使用)
+	// **参数解释**： 弹性网卡IP(字段已失效，暂不推荐使用) **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	ElasticIp *string `json:"elasticIp,omitempty"`
 }
 

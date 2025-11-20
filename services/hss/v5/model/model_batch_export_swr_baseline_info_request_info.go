@@ -66,7 +66,7 @@ type BatchExportSwrBaselineInfoRequestInfo struct {
 	// **参数解释**： 是否有安全风险 **约束限制**: 不涉及 **取值范围**： - true：是。 - false：否。  **默认取值**: 不涉及
 	Risky *bool `json:"risky,omitempty"`
 
-	// **参数解释**: 镜像风险程度，在镜像扫描完成后展示，包含如下: **约束限制**: 不涉及 **取值范围**: - Security : 安全。 - Low : 低危。 - Medium : 中危。 - High : 高危。  **默认取值**: 不涉及
+	// **参数解释**: 镜像风险程度，在镜像扫描完成后展示 **约束限制**: 不涉及 **取值范围**: - Security : 安全。 - Low : 低危。 - Medium : 中危。 - High : 高危。  **默认取值**: 不涉及
 	SeverityLevel *string `json:"severity_level,omitempty"`
 
 	// **参数解释**: 企业镜像实例名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及

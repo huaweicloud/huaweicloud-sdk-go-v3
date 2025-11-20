@@ -12,7 +12,7 @@ type NicSpec struct {
 	// 网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。
 	SubnetId *string `json:"subnetId,omitempty"`
 
-	// **参数解释**： 主网卡的IP将通过fixedIps指定，数量不得大于创建的节点数。 **约束限制**： - fixedIps或ipBlock同时只能指定一个 - 扩展网卡不支持指定fiexdIps - 创建节点池场景不支持该配置参数
+	// **参数解释**： 主网卡的IP将通过fixedIps指定，数量不得大于创建的节点数。 **约束限制**： - fixedIps或ipBlock同时只能指定一个 - 扩展网卡不支持指定fixedIps - 创建节点池场景不支持该配置参数
 	FixedIps *[]string `json:"fixedIps,omitempty"`
 
 	// **参数解释**： 主网卡的IP段的CIDR格式，创建的节点IP将属于该IP段内。 **约束限制**： - fixedIps或ipBlock同时只能指定一个。 - 创建节点池场景不支持该配置参数  **取值范围**： 不涉及 **默认取值**： 不涉及

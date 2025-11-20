@@ -124,6 +124,27 @@ func (c *AadClient) ListDDoSAttackEventInvoker(request *model.ListDDoSAttackEven
 	return &ListDDoSAttackEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDDoSBlackHoleEvent 黑洞事件列表
+//
+// 黑洞事件列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) ListDDoSBlackHoleEvent(request *model.ListDDoSBlackHoleEventRequest) (*model.ListDDoSBlackHoleEventResponse, error) {
+	requestDef := GenReqDefForListDDoSBlackHoleEvent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDDoSBlackHoleEventResponse), nil
+	}
+}
+
+// ListDDoSBlackHoleEventInvoker 黑洞事件列表
+func (c *AadClient) ListDDoSBlackHoleEventInvoker(request *model.ListDDoSBlackHoleEventRequest) *ListDDoSBlackHoleEventInvoker {
+	requestDef := GenReqDefForListDDoSBlackHoleEvent()
+	return &ListDDoSBlackHoleEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDDoSConnectionNumber 查询新建连接数和并发连接数
 //
 // 查询新建连接数和并发连接数
@@ -187,6 +208,27 @@ func (c *AadClient) ListFrequencyControlRuleInvoker(request *model.ListFrequency
 	return &ListFrequencyControlRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListGlobalConfig 查询控制台WAF全局配置
+//
+// 查询控制台WAF全局配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) ListGlobalConfig(request *model.ListGlobalConfigRequest) (*model.ListGlobalConfigResponse, error) {
+	requestDef := GenReqDefForListGlobalConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGlobalConfigResponse), nil
+	}
+}
+
+// ListGlobalConfigInvoker 查询控制台WAF全局配置
+func (c *AadClient) ListGlobalConfigInvoker(request *model.ListGlobalConfigRequest) *ListGlobalConfigInvoker {
+	requestDef := GenReqDefForListGlobalConfig()
+	return &ListGlobalConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInstanceDomains 查询实例关联的域名信息
 //
 // 查询实例关联的域名信息
@@ -206,6 +248,27 @@ func (c *AadClient) ListInstanceDomains(request *model.ListInstanceDomainsReques
 func (c *AadClient) ListInstanceDomainsInvoker(request *model.ListInstanceDomainsRequest) *ListInstanceDomainsInvoker {
 	requestDef := GenReqDefForListInstanceDomains()
 	return &ListInstanceDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSourceIp 查询回源ip列表
+//
+// 查询回源ip列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) ListSourceIp(request *model.ListSourceIpRequest) (*model.ListSourceIpResponse, error) {
+	requestDef := GenReqDefForListSourceIp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSourceIpResponse), nil
+	}
+}
+
+// ListSourceIpInvoker 查询回源ip列表
+func (c *AadClient) ListSourceIpInvoker(request *model.ListSourceIpRequest) *ListSourceIpInvoker {
+	requestDef := GenReqDefForListSourceIp()
+	return &ListSourceIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListWafAttackEvent 查询攻击事件列表
@@ -355,6 +418,48 @@ func (c *AadClient) ListWhiteBlackIpRuleInvoker(request *model.ListWhiteBlackIpR
 	return &ListWhiteBlackIpRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAlarmConfig 查询告警设置
+//
+// 查询告警设置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) ShowAlarmConfig(request *model.ShowAlarmConfigRequest) (*model.ShowAlarmConfigResponse, error) {
+	requestDef := GenReqDefForShowAlarmConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAlarmConfigResponse), nil
+	}
+}
+
+// ShowAlarmConfigInvoker 查询告警设置
+func (c *AadClient) ShowAlarmConfigInvoker(request *model.ShowAlarmConfigRequest) *ShowAlarmConfigInvoker {
+	requestDef := GenReqDefForShowAlarmConfig()
+	return &ShowAlarmConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDDoSPeak 查询高防入流量峰值、攻击流量峰值、DDoS攻击次数
+//
+// 查询高防入流量峰值、攻击流量峰值、DDoS攻击次数
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) ShowDDoSPeak(request *model.ShowDDoSPeakRequest) (*model.ShowDDoSPeakResponse, error) {
+	requestDef := GenReqDefForShowDDoSPeak()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDDoSPeakResponse), nil
+	}
+}
+
+// ShowDDoSPeakInvoker 查询高防入流量峰值、攻击流量峰值、DDoS攻击次数
+func (c *AadClient) ShowDDoSPeakInvoker(request *model.ShowDDoSPeakRequest) *ShowDDoSPeakInvoker {
+	requestDef := GenReqDefForShowDDoSPeak()
+	return &ShowDDoSPeakInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDomainCertificate 查询域名关联的证书信息
 //
 // 查询域名关联的证书信息
@@ -376,6 +481,48 @@ func (c *AadClient) ShowDomainCertificateInvoker(request *model.ShowDomainCertif
 	return &ShowDomainCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDomainDetail 查询域名详情
+//
+// 查询域名详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) ShowDomainDetail(request *model.ShowDomainDetailRequest) (*model.ShowDomainDetailResponse, error) {
+	requestDef := GenReqDefForShowDomainDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainDetailResponse), nil
+	}
+}
+
+// ShowDomainDetailInvoker 查询域名详情
+func (c *AadClient) ShowDomainDetailInvoker(request *model.ShowDomainDetailRequest) *ShowDomainDetailInvoker {
+	requestDef := GenReqDefForShowDomainDetail()
+	return &ShowDomainDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDomainNameConfig 查看域名配置
+//
+// 查看域名配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) ShowDomainNameConfig(request *model.ShowDomainNameConfigRequest) (*model.ShowDomainNameConfigResponse, error) {
+	requestDef := GenReqDefForShowDomainNameConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainNameConfigResponse), nil
+	}
+}
+
+// ShowDomainNameConfigInvoker 查看域名配置
+func (c *AadClient) ShowDomainNameConfigInvoker(request *model.ShowDomainNameConfigRequest) *ShowDomainNameConfigInvoker {
+	requestDef := GenReqDefForShowDomainNameConfig()
+	return &ShowDomainNameConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowFlowBlock 查询流量封禁信息
 //
 // 查询流量封禁信息
@@ -395,6 +542,27 @@ func (c *AadClient) ShowFlowBlock(request *model.ShowFlowBlockRequest) (*model.S
 func (c *AadClient) ShowFlowBlockInvoker(request *model.ShowFlowBlockRequest) *ShowFlowBlockInvoker {
 	requestDef := GenReqDefForShowFlowBlock()
 	return &ShowFlowBlockInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceByInstanceId 查询实例详情
+//
+// 查询实例详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) ShowInstanceByInstanceId(request *model.ShowInstanceByInstanceIdRequest) (*model.ShowInstanceByInstanceIdResponse, error) {
+	requestDef := GenReqDefForShowInstanceByInstanceId()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceByInstanceIdResponse), nil
+	}
+}
+
+// ShowInstanceByInstanceIdInvoker 查询实例详情
+func (c *AadClient) ShowInstanceByInstanceIdInvoker(request *model.ShowInstanceByInstanceIdRequest) *ShowInstanceByInstanceIdInvoker {
+	requestDef := GenReqDefForShowInstanceByInstanceId()
+	return &ShowInstanceByInstanceIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowWafPolicy 查询WEB防护策略配置
@@ -437,6 +605,48 @@ func (c *AadClient) ShowWafQps(request *model.ShowWafQpsRequest) (*model.ShowWaf
 func (c *AadClient) ShowWafQpsInvoker(request *model.ShowWafQpsRequest) *ShowWafQpsInvoker {
 	requestDef := GenReqDefForShowWafQps()
 	return &ShowWafQpsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDomainConfig 修改域名配置
+//
+// 修改域名配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) UpdateDomainConfig(request *model.UpdateDomainConfigRequest) (*model.UpdateDomainConfigResponse, error) {
+	requestDef := GenReqDefForUpdateDomainConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDomainConfigResponse), nil
+	}
+}
+
+// UpdateDomainConfigInvoker 修改域名配置
+func (c *AadClient) UpdateDomainConfigInvoker(request *model.UpdateDomainConfigRequest) *UpdateDomainConfigInvoker {
+	requestDef := GenReqDefForUpdateDomainConfig()
+	return &UpdateDomainConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateForwardRule 修改转发规则中的源站IP
+//
+// 修改转发规则中的源站IP
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AadClient) UpdateForwardRule(request *model.UpdateForwardRuleRequest) (*model.UpdateForwardRuleResponse, error) {
+	requestDef := GenReqDefForUpdateForwardRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateForwardRuleResponse), nil
+	}
+}
+
+// UpdateForwardRuleInvoker 修改转发规则中的源站IP
+func (c *AadClient) UpdateForwardRuleInvoker(request *model.UpdateForwardRuleRequest) *UpdateForwardRuleInvoker {
+	requestDef := GenReqDefForUpdateForwardRule()
+	return &UpdateForwardRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpgradeInstanceSpec 修改实例规格

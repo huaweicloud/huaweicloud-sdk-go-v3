@@ -59,8 +59,8 @@ func GetResponseBody(resp *response.DefaultHttpResponse) ([]byte, error) {
 	return resp.GetBodyAsBytes()
 }
 
-func (s *MeetingCredentials) ProcessAuthParams(client *impl.DefaultHttpClient, region string) auth.ICredential {
-	return s
+func (s *MeetingCredentials) ProcessAuthParams(client *impl.DefaultHttpClient, region string) (auth.ICredential, error) {
+	return s, nil
 }
 
 func (s *MeetingCredentials) ProcessAuthRequest(client *impl.DefaultHttpClient, req *request.DefaultHttpRequest) (*request.DefaultHttpRequest, error) {

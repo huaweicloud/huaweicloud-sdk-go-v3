@@ -34,12 +34,12 @@ type SecurityCheckPolicyGroupInfoResponseInfo struct {
 
 	WeakPwdPolicyInfo *SecurityCheckPolicyInfoResponseInfo `json:"weak_pwd_policy_info,omitempty"`
 
-	// **参数解释** 应用的主机的agentID列表
+	// **参数解释** 应用的主机的agentID列表 **取值范围** 字符串大小范围20-64
 	AgentIdList *[]string `json:"agent_id_list,omitempty"`
 
 	TaskCondition *SecurityCheckTaskCondition `json:"task_condition,omitempty"`
 
-	// **参数解释** 检测周期
+	// **参数解释** 检测周期 **取值范围** 字符串大小范围1-128
 	DetectionPeriod *string `json:"detection_period,omitempty"`
 }
 

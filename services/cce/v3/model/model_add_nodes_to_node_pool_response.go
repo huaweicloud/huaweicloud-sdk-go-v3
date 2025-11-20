@@ -9,7 +9,7 @@ import (
 // AddNodesToNodePoolResponse Response Object
 type AddNodesToNodePoolResponse struct {
 
-	// **参数解释**： 提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。 **取值范围**： 不涉及
+	// **参数解释**： 提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	Jobid          *string `json:"jobid,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

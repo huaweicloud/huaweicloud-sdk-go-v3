@@ -15,7 +15,7 @@ type VulRepoImagesTagInfo struct {
 	// **参数解释**: 版本名称 **取值范围**: 字符长度0-65535位
 	TagName *string `json:"tag_name,omitempty"`
 
-	// **参数解释**: \"版本大小\" **取值范围**: 最小值0，最大值2147483547
+	// **参数解释**: 版本大小 **取值范围**: 最小值0，最大值2147483547
 	Size *int32 `json:"size,omitempty"`
 
 	// **参数解释**: 版本app名称 **取值范围**: 字符长度0-65535位

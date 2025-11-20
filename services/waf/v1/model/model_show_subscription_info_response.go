@@ -9,13 +9,13 @@ import (
 // ShowSubscriptionInfoResponse Response Object
 type ShowSubscriptionInfoResponse struct {
 
-	// 云模式版本   - -2：已冻结   - -1：未订购   - 2：标准版   - 3：专业版   - 4：企业版   - 7:入门版   - 22：按需版本
+	// **参数解释：** 云模式版本 **取值范围：**  - -2：已冻结   - -1：未订购   - 2：标准版   - 3：专业版   - 4：企业版   - 7: 入门版   - 22：按需版本
 	Type *int32 `json:"type,omitempty"`
 
 	// 资源列表
 	Resources *[]ResourceResponse `json:"resources,omitempty"`
 
-	// 是否为新用户
+	// **参数解释：** 是否为新用户 **取值范围：** 不涉及
 	IsNewUser *bool `json:"isNewUser,omitempty"`
 
 	Premium        *Premium `json:"premium,omitempty"`

@@ -8,10 +8,10 @@ import (
 
 type Context struct {
 
-	// 上下文cluster信息。
+	// **参数解释**： 上下文cluster信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	Cluster *string `json:"cluster,omitempty"`
 
-	// 上下文user信息。
+	// **参数解释**： 上下文user信息 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	User *string `json:"user,omitempty"`
 }
 

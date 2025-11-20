@@ -9,17 +9,9 @@ import (
 // ShowDefaultSecurityCheckPolicyResponse Response Object
 type ShowDefaultSecurityCheckPolicyResponse struct {
 
-	// **参数解释**： 策略名称 **取值范围**： 字符长度1-256位
-	PolicyName *string `json:"policy_name,omitempty"`
-
-	// **参数解释**： 策略ID **取值范围**： 字符长度0-64位
-	PolicyId *string `json:"policy_id,omitempty"`
-
-	// 策略详情
-	Content *string `json:"content,omitempty"`
-
-	PwdPolicyContent *PwdCheckTagInfo `json:"pwd_policy_content,omitempty"`
-	HttpStatusCode   int              `json:"-"`
+	// **参数解释**: 策略详情 **取值范围**: 最小值0，最大值10241
+	Content        *string `json:"content,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowDefaultSecurityCheckPolicyResponse) String() string {

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ValidatePolicyResourceType 要附加到资源策略的资源类型。
+// ValidatePolicyResourceType 要附加到资源策略的资源类型。 - iam:agency： IAM委托
 type ValidatePolicyResourceType struct {
 	value string
 }

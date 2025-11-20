@@ -9,8 +9,8 @@ import (
 type IdentityCenterPortalAPICredentials struct {
 }
 
-func (s *IdentityCenterPortalAPICredentials) ProcessAuthParams(httpClient *impl.DefaultHttpClient, region string) auth.ICredential {
-	return s
+func (s *IdentityCenterPortalAPICredentials) ProcessAuthParams(httpClient *impl.DefaultHttpClient, region string) (auth.ICredential, error) {
+	return s, nil
 }
 
 func (s *IdentityCenterPortalAPICredentials) ProcessAuthRequest(httpClient *impl.DefaultHttpClient, httpRequest *request.DefaultHttpRequest) (*request.DefaultHttpRequest, error) {

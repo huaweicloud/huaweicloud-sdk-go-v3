@@ -27,7 +27,7 @@ type ShowSecurityReportContentResponse struct {
 	// **参数解释：** 主题urn，关联报告发送的SMN主题唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	TopicUrn *string `json:"topic_urn,omitempty"`
 
-	// **参数解释：** 订阅类型，接收安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - slient ： 静默 - message_center ： 消息中心  **默认取值：** 不涉及
+	// **参数解释：** 订阅类型，接收安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心  **默认取值：** 不涉及
 	SubscriptionType *string `json:"subscription_type,omitempty"`
 
 	ReportContentInfo *SecurityReportContentResponseReportContentInfo `json:"report_content_info,omitempty"`

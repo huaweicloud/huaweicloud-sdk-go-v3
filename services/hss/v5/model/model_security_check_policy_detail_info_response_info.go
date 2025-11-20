@@ -24,10 +24,10 @@ type SecurityCheckPolicyDetailInfoResponseInfo struct {
 	// **参数解释** 配置检查（基线）的类型，例如SSH、CentOS 7、Windows **取值范围** 字符长度0-256位
 	CheckType *string `json:"check_type,omitempty"`
 
-	// **参数解释** 检查项的风险程度，包含如下: **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危
+	// **参数解释** 检查项的风险程度 **取值范围** - Low    : 低危 - Medium : 中危 - High   : 高危
 	Severity *string `json:"severity,omitempty"`
 
-	// **参数解释** 检查项的等级 **取值范围** 字符长度0-32位
+	// **参数解释** 配置检查（基线）检查项的版本信息 **取值范围** 字符长度0-32位
 	Level *string `json:"level,omitempty"`
 
 	// **参数解释** 检查项是否被选中 **取值范围** - true  : 被选中 - false : 未被选中

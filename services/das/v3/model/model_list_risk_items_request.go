@@ -18,11 +18,14 @@ type ListRiskItemsRequest struct {
 	// 数据库类型
 	DatastoreType string `json:"datastore_type"`
 
-	// 页码，默认1
+	// 页码，默认1；待废弃，不建议使用，page和offset同时存在使用offset
 	Page *int32 `json:"page,omitempty"`
 
 	// 每页记录数，默认20。
 	Limit *int32 `json:"limit,omitempty"`
+
+	// 开始查询的偏移量，默认0
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListRiskItemsRequest) String() string {

@@ -12,8 +12,14 @@ type NodeMetadataOwnerReference struct {
 	// **参数解释**： 节点池名称 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
 	NodepoolName *string `json:"nodepoolName,omitempty"`
 
-	// **参数解释**： 节点池UID **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
+	// **参数解释**： 节点池ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
 	NodepoolID *string `json:"nodepoolID,omitempty"`
+
+	// **参数解释**： 超节点名称。如果节点不属于超节点，此字段不展示。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	HyperNodeName *string `json:"hyperNodeName,omitempty"`
+
+	// **参数解释**： 超节点ID。如果节点不属于超节点，此字段不展示。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	HyperNodeID *string `json:"hyperNodeID,omitempty"`
 }
 
 func (o NodeMetadataOwnerReference) String() string {

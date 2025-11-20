@@ -74,6 +74,9 @@ type ListCicdImagesRequest struct {
 
 	// **参数解释**: 有安全风险 **约束限制**: 不涉及 **取值范围**: - true：是。 - false：否。  **默认取值**: 不涉及
 	Risky *bool `json:"risky,omitempty"`
+
+	// **参数解释**: 流水线类型 **约束限制**: 不涉及 **取值范围**: - jenkins：Jenkins流水线。 - codearts：CodeArts流水线。  **默认取值**: 不涉及
+	PipelineType *string `json:"pipeline_type,omitempty"`
 }
 
 func (o ListCicdImagesRequest) String() string {

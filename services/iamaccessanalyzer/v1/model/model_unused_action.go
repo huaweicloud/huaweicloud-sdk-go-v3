@@ -8,8 +8,11 @@ import (
 
 type UnusedAction struct {
 
-	// Action 名称。
+	// 授权项名称。
 	Action string `json:"action"`
+
+	// 用户使用授权项的最后访问时间。
+	LastAccessed *interface{} `json:"last_accessed,omitempty"`
 }
 
 func (o UnusedAction) String() string {

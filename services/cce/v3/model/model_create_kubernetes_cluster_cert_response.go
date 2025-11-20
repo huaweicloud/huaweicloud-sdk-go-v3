@@ -9,25 +9,25 @@ import (
 // CreateKubernetesClusterCertResponse Response Object
 type CreateKubernetesClusterCertResponse struct {
 
-	// API类型，固定值“Config”，该值不可修改。
+	// **参数解释**： API类型 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： Config
 	Kind *string `json:"kind,omitempty"`
 
-	// API版本，固定值“v1”。
+	// **参数解释**： API版本 **约束限制**： 该值不可修改 **取值范围**： 不涉及 **默认取值**： v1
 	ApiVersion *string `json:"apiVersion,omitempty"`
 
-	// 当前未使用该字段，当前默认为空。
+	// **参数解释**： 当前未使用该字段 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 默认为空
 	Preferences *interface{} `json:"preferences,omitempty"`
 
-	// 集群列表。
+	// **参数解释**： 集群列表。 **约束限制**： 不涉及
 	Clusters *[]Clusters `json:"clusters,omitempty"`
 
-	// 存放了指定用户的一些证书信息和ClientKey信息。
+	// **参数解释**： 存放了指定用户的一些证书信息和ClientKey信息。 **约束限制**： 不涉及
 	Users *[]Users `json:"users,omitempty"`
 
-	// 上下文列表。
+	// **参数解释**： 上下文列表。 **约束限制**： 不涉及
 	Contexts *[]Contexts `json:"contexts,omitempty"`
 
-	// 当前上下文，若存在publicIp（虚拟机弹性IP）时为 external; 若不存在publicIp为 internal。
+	// **参数解释**： 当前上下文 **约束限制**： 不涉及 **取值范围**： - external：公网访问  - internal：私网访问  **默认取值**： - 若存在publicIp（虚拟机弹性IP）时为 external。 - 若不存在publicIp为 internal。
 	CurrentContext *string `json:"current-context,omitempty"`
 
 	PortID         *string `json:"Port-ID,omitempty"`

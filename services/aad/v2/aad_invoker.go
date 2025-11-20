@@ -85,6 +85,22 @@ func (i *ListDDoSAttackEventInvoker) Invoke() (*model.ListDDoSAttackEventRespons
 	}
 }
 
+type ListDDoSBlackHoleEventInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDDoSBlackHoleEventInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDDoSBlackHoleEventInvoker) Invoke() (*model.ListDDoSBlackHoleEventResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDDoSBlackHoleEventResponse), nil
+	}
+}
+
 type ListDDoSConnectionNumberInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -133,6 +149,22 @@ func (i *ListFrequencyControlRuleInvoker) Invoke() (*model.ListFrequencyControlR
 	}
 }
 
+type ListGlobalConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGlobalConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListGlobalConfigInvoker) Invoke() (*model.ListGlobalConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGlobalConfigResponse), nil
+	}
+}
+
 type ListInstanceDomainsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -146,6 +178,22 @@ func (i *ListInstanceDomainsInvoker) Invoke() (*model.ListInstanceDomainsRespons
 		return nil, err
 	} else {
 		return result.(*model.ListInstanceDomainsResponse), nil
+	}
+}
+
+type ListSourceIpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSourceIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSourceIpInvoker) Invoke() (*model.ListSourceIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSourceIpResponse), nil
 	}
 }
 
@@ -261,6 +309,38 @@ func (i *ListWhiteBlackIpRuleInvoker) Invoke() (*model.ListWhiteBlackIpRuleRespo
 	}
 }
 
+type ShowAlarmConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAlarmConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAlarmConfigInvoker) Invoke() (*model.ShowAlarmConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAlarmConfigResponse), nil
+	}
+}
+
+type ShowDDoSPeakInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDDoSPeakInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDDoSPeakInvoker) Invoke() (*model.ShowDDoSPeakResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDDoSPeakResponse), nil
+	}
+}
+
 type ShowDomainCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -277,6 +357,38 @@ func (i *ShowDomainCertificateInvoker) Invoke() (*model.ShowDomainCertificateRes
 	}
 }
 
+type ShowDomainDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDomainDetailInvoker) Invoke() (*model.ShowDomainDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainDetailResponse), nil
+	}
+}
+
+type ShowDomainNameConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainNameConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDomainNameConfigInvoker) Invoke() (*model.ShowDomainNameConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainNameConfigResponse), nil
+	}
+}
+
 type ShowFlowBlockInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -290,6 +402,22 @@ func (i *ShowFlowBlockInvoker) Invoke() (*model.ShowFlowBlockResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowFlowBlockResponse), nil
+	}
+}
+
+type ShowInstanceByInstanceIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceByInstanceIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceByInstanceIdInvoker) Invoke() (*model.ShowInstanceByInstanceIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceByInstanceIdResponse), nil
 	}
 }
 
@@ -322,6 +450,38 @@ func (i *ShowWafQpsInvoker) Invoke() (*model.ShowWafQpsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowWafQpsResponse), nil
+	}
+}
+
+type UpdateDomainConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDomainConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDomainConfigInvoker) Invoke() (*model.UpdateDomainConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDomainConfigResponse), nil
+	}
+}
+
+type UpdateForwardRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateForwardRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateForwardRuleInvoker) Invoke() (*model.UpdateForwardRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateForwardRuleResponse), nil
 	}
 }
 

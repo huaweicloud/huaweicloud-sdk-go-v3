@@ -24,6 +24,8 @@ type Execute2dModelTrainingCommandByUserResponse struct {
 	// 命令执行失败原因描述
 	ExcuteFailedMsg *string `json:"excute_failed_msg,omitempty"`
 
+	ErrorInfo *ErrorResponse `json:"error_info,omitempty"`
+
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

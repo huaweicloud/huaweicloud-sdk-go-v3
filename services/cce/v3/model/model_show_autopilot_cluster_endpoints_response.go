@@ -12,8 +12,8 @@ type ShowAutopilotClusterEndpointsResponse struct {
 
 	Spec *OpenApiSpec `json:"spec,omitempty"`
 
-	Status         *MasterEipResponseStatus `json:"status,omitempty"`
-	HttpStatusCode int                      `json:"-"`
+	Status         *OpenApiResponseStatus `json:"status,omitempty"`
+	HttpStatusCode int                    `json:"-"`
 }
 
 func (o ShowAutopilotClusterEndpointsResponse) String() string {

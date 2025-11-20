@@ -19,6 +19,9 @@ type NodeList struct {
 
 	// ip
 	Ip *string `json:"ip,omitempty"`
+
+	// 节点所在组ID。
+	GroupId *string `json:"group_id,omitempty"`
 }
 
 func (o NodeList) String() string {

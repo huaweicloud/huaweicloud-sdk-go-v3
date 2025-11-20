@@ -20,6 +20,12 @@ type ListDDoSConnectionNumberRequest struct {
 
 	// 高防ip
 	Ip string `json:"ip"`
+
+	// 限制条数
+	Limit *int32 `json:"limit,omitempty"`
+
+	// 偏移量
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListDDoSConnectionNumberRequest) String() string {

@@ -565,6 +565,22 @@ func (i *DeleteAssetInvoker) Invoke() (*model.DeleteAssetResponse, error) {
 	}
 }
 
+type ExecuteTransferAssetActionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteTransferAssetActionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteTransferAssetActionInvoker) Invoke() (*model.ExecuteTransferAssetActionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteTransferAssetActionResponse), nil
+	}
+}
+
 type ListAssetSummaryInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -594,6 +610,22 @@ func (i *ListAssetsInvoker) Invoke() (*model.ListAssetsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListAssetsResponse), nil
+	}
+}
+
+type ListTransferAssetJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTransferAssetJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTransferAssetJobsInvoker) Invoke() (*model.ListTransferAssetJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTransferAssetJobsResponse), nil
 	}
 }
 
@@ -642,6 +674,38 @@ func (i *ShowAssetReplicationInfoInvoker) Invoke() (*model.ShowAssetReplicationI
 		return nil, err
 	} else {
 		return result.(*model.ShowAssetReplicationInfoResponse), nil
+	}
+}
+
+type ShowTransferAssetJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTransferAssetJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTransferAssetJobInvoker) Invoke() (*model.ShowTransferAssetJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTransferAssetJobResponse), nil
+	}
+}
+
+type TransferAssetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *TransferAssetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *TransferAssetInvoker) Invoke() (*model.TransferAssetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.TransferAssetResponse), nil
 	}
 }
 
@@ -1634,22 +1698,6 @@ func (i *CreateInteractiveChatInvoker) Invoke() (*model.CreateInteractiveChatRes
 		return nil, err
 	} else {
 		return result.(*model.CreateInteractiveChatResponse), nil
-	}
-}
-
-type ShowEncryptFileInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowEncryptFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowEncryptFileInvoker) Invoke() (*model.ShowEncryptFileResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowEncryptFileResponse), nil
 	}
 }
 
@@ -3141,6 +3189,22 @@ func (i *UpdateSmartChatRoomInvoker) Invoke() (*model.UpdateSmartChatRoomRespons
 	}
 }
 
+type ShowSmartLiveUserConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSmartLiveUserConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSmartLiveUserConfigInvoker) Invoke() (*model.ShowSmartLiveUserConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSmartLiveUserConfigResponse), nil
+	}
+}
+
 type UpdateSmartLiveUserConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3493,6 +3557,22 @@ func (i *ShowSubtitleFileInvoker) Invoke() (*model.ShowSubtitleFileResponse, err
 	}
 }
 
+type BindUserAssetResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BindUserAssetResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BindUserAssetResourceInvoker) Invoke() (*model.BindUserAssetResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BindUserAssetResourceResponse), nil
+	}
+}
+
 type CountTenantResourcesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3506,6 +3586,54 @@ func (i *CountTenantResourcesInvoker) Invoke() (*model.CountTenantResourcesRespo
 		return nil, err
 	} else {
 		return result.(*model.CountTenantResourcesResponse), nil
+	}
+}
+
+type CreateUserQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateUserQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateUserQuotasInvoker) Invoke() (*model.CreateUserQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateUserQuotasResponse), nil
+	}
+}
+
+type DeleteTenantUserConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTenantUserConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteTenantUserConfigurationInvoker) Invoke() (*model.DeleteTenantUserConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTenantUserConfigurationResponse), nil
+	}
+}
+
+type DeleteUserQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteUserQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteUserQuotasInvoker) Invoke() (*model.DeleteUserQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteUserQuotasResponse), nil
 	}
 }
 
@@ -3525,6 +3653,54 @@ func (i *ListTenantResourcesInvoker) Invoke() (*model.ListTenantResourcesRespons
 	}
 }
 
+type ListUserQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUserQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListUserQuotasInvoker) Invoke() (*model.ListUserQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUserQuotasResponse), nil
+	}
+}
+
+type SetTenantNoticeConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetTenantNoticeConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetTenantNoticeConfigurationInvoker) Invoke() (*model.SetTenantNoticeConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetTenantNoticeConfigurationResponse), nil
+	}
+}
+
+type SetTenantUserConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetTenantUserConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetTenantUserConfigurationInvoker) Invoke() (*model.SetTenantUserConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetTenantUserConfigurationResponse), nil
+	}
+}
+
 type ShowResourceUsageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3538,6 +3714,70 @@ func (i *ShowResourceUsageInvoker) Invoke() (*model.ShowResourceUsageResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowResourceUsageResponse), nil
+	}
+}
+
+type ShowTenantAssginRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTenantAssginRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTenantAssginRecordInvoker) Invoke() (*model.ShowTenantAssginRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTenantAssginRecordResponse), nil
+	}
+}
+
+type ShowTenantNoticeConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTenantNoticeConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTenantNoticeConfigurationInvoker) Invoke() (*model.ShowTenantNoticeConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTenantNoticeConfigurationResponse), nil
+	}
+}
+
+type ShowTenantServiceConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTenantServiceConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTenantServiceConfigsInvoker) Invoke() (*model.ShowTenantServiceConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTenantServiceConfigsResponse), nil
+	}
+}
+
+type ShowTenantUserConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTenantUserConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTenantUserConfigurationInvoker) Invoke() (*model.ShowTenantUserConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTenantUserConfigurationResponse), nil
 	}
 }
 
@@ -3570,6 +3810,38 @@ func (i *SignSpecialAgreementInvoker) Invoke() (*model.SignSpecialAgreementRespo
 		return nil, err
 	} else {
 		return result.(*model.SignSpecialAgreementResponse), nil
+	}
+}
+
+type UpdateTenantServiceConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTenantServiceConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateTenantServiceConfigsInvoker) Invoke() (*model.UpdateTenantServiceConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTenantServiceConfigsResponse), nil
+	}
+}
+
+type UpdateUserQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateUserQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateUserQuotasInvoker) Invoke() (*model.UpdateUserQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateUserQuotasResponse), nil
 	}
 }
 
@@ -3765,6 +4037,22 @@ func (i *SetJobBatchNameInvoker) Invoke() (*model.SetJobBatchNameResponse, error
 	}
 }
 
+type ShowEncryptFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowEncryptFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowEncryptFileInvoker) Invoke() (*model.ShowEncryptFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowEncryptFileResponse), nil
+	}
+}
+
 type ShowJobAuditResultInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3909,6 +4197,22 @@ func (i *Delete2dModelTrainingJobInvoker) Invoke() (*model.Delete2dModelTraining
 	}
 }
 
+type Download2dModelTraningEncryptFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *Download2dModelTraningEncryptFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *Download2dModelTraningEncryptFileInvoker) Invoke() (*model.Download2dModelTraningEncryptFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.Download2dModelTraningEncryptFileResponse), nil
+	}
+}
+
 type Execute2dModelTrainingCommandByUserInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3970,86 +4274,6 @@ func (i *Update2dModelTrainingJobInvoker) Invoke() (*model.Update2dModelTraining
 		return nil, err
 	} else {
 		return result.(*model.Update2dModelTrainingJobResponse), nil
-	}
-}
-
-type CreateFacialAnimationsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateFacialAnimationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateFacialAnimationsInvoker) Invoke() (*model.CreateFacialAnimationsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateFacialAnimationsResponse), nil
-	}
-}
-
-type CreateTtsaInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateTtsaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateTtsaInvoker) Invoke() (*model.CreateTtsaResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateTtsaResponse), nil
-	}
-}
-
-type ListFacialAnimationsDataInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListFacialAnimationsDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListFacialAnimationsDataInvoker) Invoke() (*model.ListFacialAnimationsDataResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListFacialAnimationsDataResponse), nil
-	}
-}
-
-type ListTtsaDataInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListTtsaDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListTtsaDataInvoker) Invoke() (*model.ListTtsaDataResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListTtsaDataResponse), nil
-	}
-}
-
-type ListTtsaJobsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListTtsaJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListTtsaJobsInvoker) Invoke() (*model.ListTtsaJobsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListTtsaJobsResponse), nil
 	}
 }
 
@@ -4162,6 +4386,22 @@ func (i *ShowTtsAuditionFileInvoker) Invoke() (*model.ShowTtsAuditionFileRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowTtsAuditionFileResponse), nil
+	}
+}
+
+type CreateTtsOnceCodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTtsOnceCodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateTtsOnceCodeInvoker) Invoke() (*model.CreateTtsOnceCodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTtsOnceCodeResponse), nil
 	}
 }
 

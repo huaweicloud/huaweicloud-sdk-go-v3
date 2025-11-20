@@ -25,6 +25,6 @@ import (
 )
 
 type ICredential interface {
-	ProcessAuthParams(httpClient *impl.DefaultHttpClient, region string) ICredential
+	ProcessAuthParams(httpClient *impl.DefaultHttpClient, region string) (ICredential, error)
 	ProcessAuthRequest(httpClient *impl.DefaultHttpClient, httpRequest *request.DefaultHttpRequest) (*request.DefaultHttpRequest, error)
 }

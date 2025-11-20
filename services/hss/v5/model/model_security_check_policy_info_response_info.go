@@ -9,16 +9,8 @@ import (
 // SecurityCheckPolicyInfoResponseInfo 配置检测策略信息
 type SecurityCheckPolicyInfoResponseInfo struct {
 
-	// **参数解释**： 策略名称 **取值范围**： 字符长度1-256位
-	PolicyName *string `json:"policy_name,omitempty"`
-
-	// **参数解释**： 策略ID **取值范围**： 字符长度0-64位
-	PolicyId *string `json:"policy_id,omitempty"`
-
-	// 策略详情
+	// **参数解释**: 策略详情 **取值范围**: 最小值0，最大值10241
 	Content *string `json:"content,omitempty"`
-
-	PwdPolicyContent *PwdCheckTagInfo `json:"pwd_policy_content,omitempty"`
 }
 
 func (o SecurityCheckPolicyInfoResponseInfo) String() string {

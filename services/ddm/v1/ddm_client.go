@@ -40,6 +40,48 @@ func (c *DdmClient) ChangeDatabaseVersionInvoker(request *model.ChangeDatabaseVe
 	return &ChangeDatabaseVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDdmConfigurations 创建参数组
+//
+// 创建参数组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) CreateDdmConfigurations(request *model.CreateDdmConfigurationsRequest) (*model.CreateDdmConfigurationsResponse, error) {
+	requestDef := GenReqDefForCreateDdmConfigurations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDdmConfigurationsResponse), nil
+	}
+}
+
+// CreateDdmConfigurationsInvoker 创建参数组
+func (c *DdmClient) CreateDdmConfigurationsInvoker(request *model.CreateDdmConfigurationsRequest) *CreateDdmConfigurationsInvoker {
+	requestDef := GenReqDefForCreateDdmConfigurations()
+	return &CreateDdmConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteConfiguration 删除参数组
+//
+// 删除参数组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) DeleteConfiguration(request *model.DeleteConfigurationRequest) (*model.DeleteConfigurationResponse, error) {
+	requestDef := GenReqDefForDeleteConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteConfigurationResponse), nil
+	}
+}
+
+// DeleteConfigurationInvoker 删除参数组
+func (c *DdmClient) DeleteConfigurationInvoker(request *model.DeleteConfigurationRequest) *DeleteConfigurationInvoker {
+	requestDef := GenReqDefForDeleteConfiguration()
+	return &DeleteConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDatabaseAvailableVersions 查询可变更内核版本
 //
 // 查询可变更内核版本
@@ -80,6 +122,27 @@ func (c *DdmClient) ListDdmConfigurations(request *model.ListDdmConfigurationsRe
 func (c *DdmClient) ListDdmConfigurationsInvoker(request *model.ListDdmConfigurationsRequest) *ListDdmConfigurationsInvoker {
 	requestDef := GenReqDefForListDdmConfigurations()
 	return &ListDdmConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyConfiguration 修改实例参数
+//
+// 修改实例参数
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ModifyConfiguration(request *model.ModifyConfigurationRequest) (*model.ModifyConfigurationResponse, error) {
+	requestDef := GenReqDefForModifyConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyConfigurationResponse), nil
+	}
+}
+
+// ModifyConfigurationInvoker 修改实例参数
+func (c *DdmClient) ModifyConfigurationInvoker(request *model.ModifyConfigurationRequest) *ModifyConfigurationInvoker {
+	requestDef := GenReqDefForModifyConfiguration()
+	return &ModifyConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RollBackDatabaseVersion 回滚内核版本
@@ -164,6 +227,111 @@ func (c *DdmClient) ListApiVersion(request *model.ListApiVersionRequest) (*model
 func (c *DdmClient) ListApiVersionInvoker(request *model.ListApiVersionRequest) *ListApiVersionInvoker {
 	requestDef := GenReqDefForListApiVersion()
 	return &ListApiVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CancelMigration 取消分片变更
+//
+// 取消分片变更
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) CancelMigration(request *model.CancelMigrationRequest) (*model.CancelMigrationResponse, error) {
+	requestDef := GenReqDefForCancelMigration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelMigrationResponse), nil
+	}
+}
+
+// CancelMigrationInvoker 取消分片变更
+func (c *DdmClient) CancelMigrationInvoker(request *model.CancelMigrationRequest) *CancelMigrationInvoker {
+	requestDef := GenReqDefForCancelMigration()
+	return &CancelMigrationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeStrategy 修改切换路由策略
+//
+// 修改切换路由策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ChangeStrategy(request *model.ChangeStrategyRequest) (*model.ChangeStrategyResponse, error) {
+	requestDef := GenReqDefForChangeStrategy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeStrategyResponse), nil
+	}
+}
+
+// ChangeStrategyInvoker 修改切换路由策略
+func (c *DdmClient) ChangeStrategyInvoker(request *model.ChangeStrategyRequest) *ChangeStrategyInvoker {
+	requestDef := GenReqDefForChangeStrategy()
+	return &ChangeStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckMigrateLogicDb 分片变更预校验
+//
+// 分片变更预校验
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) CheckMigrateLogicDb(request *model.CheckMigrateLogicDbRequest) (*model.CheckMigrateLogicDbResponse, error) {
+	requestDef := GenReqDefForCheckMigrateLogicDb()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckMigrateLogicDbResponse), nil
+	}
+}
+
+// CheckMigrateLogicDbInvoker 分片变更预校验
+func (c *DdmClient) CheckMigrateLogicDbInvoker(request *model.CheckMigrateLogicDbRequest) *CheckMigrateLogicDbInvoker {
+	requestDef := GenReqDefForCheckMigrateLogicDb()
+	return &CheckMigrateLogicDbInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckPreliminaryResults 查询分片变更预校验异步结果
+//
+// 查询分片变更预校验异步结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) CheckPreliminaryResults(request *model.CheckPreliminaryResultsRequest) (*model.CheckPreliminaryResultsResponse, error) {
+	requestDef := GenReqDefForCheckPreliminaryResults()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckPreliminaryResultsResponse), nil
+	}
+}
+
+// CheckPreliminaryResultsInvoker 查询分片变更预校验异步结果
+func (c *DdmClient) CheckPreliminaryResultsInvoker(request *model.CheckPreliminaryResultsRequest) *CheckPreliminaryResultsInvoker {
+	requestDef := GenReqDefForCheckPreliminaryResults()
+	return &CheckPreliminaryResultsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CleanMigration 清理分片变更
+//
+// 清理分片变更
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) CleanMigration(request *model.CleanMigrationRequest) (*model.CleanMigrationResponse, error) {
+	requestDef := GenReqDefForCleanMigration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CleanMigrationResponse), nil
+	}
+}
+
+// CleanMigrationInvoker 清理分片变更
+func (c *DdmClient) CleanMigrationInvoker(request *model.CleanMigrationRequest) *CleanMigrationInvoker {
+	requestDef := GenReqDefForCleanMigration()
+	return &CleanMigrationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateDatabase 创建DDM逻辑库
@@ -273,6 +441,27 @@ func (c *DdmClient) CreateUsersInvoker(request *model.CreateUsersRequest) *Creat
 	return &CreateUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteBackup 删除备份
+//
+// 删除备份
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) DeleteBackup(request *model.DeleteBackupRequest) (*model.DeleteBackupResponse, error) {
+	requestDef := GenReqDefForDeleteBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteBackupResponse), nil
+	}
+}
+
+// DeleteBackupInvoker 删除备份
+func (c *DdmClient) DeleteBackupInvoker(request *model.DeleteBackupRequest) *DeleteBackupInvoker {
+	requestDef := GenReqDefForDeleteBackup()
+	return &DeleteBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteDatabase 删除DDM逻辑库
 //
 // 删除指定的逻辑库，释放该逻辑库的所有资源。
@@ -378,6 +567,27 @@ func (c *DdmClient) DeleteUserInvoker(request *model.DeleteUserRequest) *DeleteU
 	return &DeleteUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DownloadSchemaMetadata 导出逻辑库元数据
+//
+// 导出所有逻辑库物理分片在数据节点上的分布关系
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) DownloadSchemaMetadata(request *model.DownloadSchemaMetadataRequest) (*model.DownloadSchemaMetadataResponse, error) {
+	requestDef := GenReqDefForDownloadSchemaMetadata()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadSchemaMetadataResponse), nil
+	}
+}
+
+// DownloadSchemaMetadataInvoker 导出逻辑库元数据
+func (c *DdmClient) DownloadSchemaMetadataInvoker(request *model.DownloadSchemaMetadataRequest) *DownloadSchemaMetadataInvoker {
+	requestDef := GenReqDefForDownloadSchemaMetadata()
+	return &DownloadSchemaMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExecuteKillLogicalProcesses kill逻辑会话
 //
 // kill逻辑会话
@@ -462,6 +672,48 @@ func (c *DdmClient) ExpandInstanceNodesInvoker(request *model.ExpandInstanceNode
 	return &ExpandInstanceNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAvailableRds 查询创建逻辑库可选取的数据节点实例列表
+//
+// 查询创建逻辑库可选取的数据节点实例列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ListAvailableRds(request *model.ListAvailableRdsRequest) (*model.ListAvailableRdsResponse, error) {
+	requestDef := GenReqDefForListAvailableRds()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAvailableRdsResponse), nil
+	}
+}
+
+// ListAvailableRdsInvoker 查询创建逻辑库可选取的数据节点实例列表
+func (c *DdmClient) ListAvailableRdsInvoker(request *model.ListAvailableRdsRequest) *ListAvailableRdsInvoker {
+	requestDef := GenReqDefForListAvailableRds()
+	return &ListAvailableRdsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAvailableRdsForMigrate 查询分片变更可选取的数据节点实例列表
+//
+// 查询分片变更可选取的数据节点实例列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ListAvailableRdsForMigrate(request *model.ListAvailableRdsForMigrateRequest) (*model.ListAvailableRdsForMigrateResponse, error) {
+	requestDef := GenReqDefForListAvailableRdsForMigrate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAvailableRdsForMigrateResponse), nil
+	}
+}
+
+// ListAvailableRdsForMigrateInvoker 查询分片变更可选取的数据节点实例列表
+func (c *DdmClient) ListAvailableRdsForMigrateInvoker(request *model.ListAvailableRdsForMigrateRequest) *ListAvailableRdsForMigrateInvoker {
+	requestDef := GenReqDefForListAvailableRdsForMigrate()
+	return &ListAvailableRdsForMigrateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAvailableRdsList 查询创建逻辑库可选取的数据库实例列表
 //
 // 查询创建逻辑库可选取的数据库实例列表。
@@ -481,6 +733,27 @@ func (c *DdmClient) ListAvailableRdsList(request *model.ListAvailableRdsListRequ
 func (c *DdmClient) ListAvailableRdsListInvoker(request *model.ListAvailableRdsListRequest) *ListAvailableRdsListInvoker {
 	requestDef := GenReqDefForListAvailableRdsList()
 	return &ListAvailableRdsListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBackups 获取备份列表
+//
+// 获取备份列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ListBackups(request *model.ListBackupsRequest) (*model.ListBackupsResponse, error) {
+	requestDef := GenReqDefForListBackups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBackupsResponse), nil
+	}
+}
+
+// ListBackupsInvoker 获取备份列表
+func (c *DdmClient) ListBackupsInvoker(request *model.ListBackupsRequest) *ListBackupsInvoker {
+	requestDef := GenReqDefForListBackups()
+	return &ListBackupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDatabases 查询DDM逻辑库列表
@@ -735,6 +1008,48 @@ func (c *DdmClient) ListUsersInvoker(request *model.ListUsersRequest) *ListUsers
 	return &ListUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// MigrateLogicDb 分片变更
+//
+// 分片变更
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) MigrateLogicDb(request *model.MigrateLogicDbRequest) (*model.MigrateLogicDbResponse, error) {
+	requestDef := GenReqDefForMigrateLogicDb()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.MigrateLogicDbResponse), nil
+	}
+}
+
+// MigrateLogicDbInvoker 分片变更
+func (c *DdmClient) MigrateLogicDbInvoker(request *model.MigrateLogicDbRequest) *MigrateLogicDbInvoker {
+	requestDef := GenReqDefForMigrateLogicDb()
+	return &MigrateLogicDbInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// MigrateResults 查询分片变更任务详情
+//
+// 查询分片变更任务详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) MigrateResults(request *model.MigrateResultsRequest) (*model.MigrateResultsResponse, error) {
+	requestDef := GenReqDefForMigrateResults()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.MigrateResultsResponse), nil
+	}
+}
+
+// MigrateResultsInvoker 查询分片变更任务详情
+func (c *DdmClient) MigrateResultsInvoker(request *model.MigrateResultsRequest) *MigrateResultsInvoker {
+	requestDef := GenReqDefForMigrateResults()
+	return &MigrateResultsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RebuildConfig DDM表数据重载
 //
 // DDM实例跨region容灾场景下，针对目标DDM实例实现表数据reload，使数据同步。
@@ -840,6 +1155,174 @@ func (c *DdmClient) RestartInstanceInvoker(request *model.RestartInstanceRequest
 	return &RestartInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Restore2Exist 恢复到新实例
+//
+// 恢复到新实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) Restore2Exist(request *model.Restore2ExistRequest) (*model.Restore2ExistResponse, error) {
+	requestDef := GenReqDefForRestore2Exist()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.Restore2ExistResponse), nil
+	}
+}
+
+// Restore2ExistInvoker 恢复到新实例
+func (c *DdmClient) Restore2ExistInvoker(request *model.Restore2ExistRequest) *Restore2ExistInvoker {
+	requestDef := GenReqDefForRestore2Exist()
+	return &Restore2ExistInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestoreMetadata 元数据恢复
+//
+// 元数据恢复
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) RestoreMetadata(request *model.RestoreMetadataRequest) (*model.RestoreMetadataResponse, error) {
+	requestDef := GenReqDefForRestoreMetadata()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestoreMetadataResponse), nil
+	}
+}
+
+// RestoreMetadataInvoker 元数据恢复
+func (c *DdmClient) RestoreMetadataInvoker(request *model.RestoreMetadataRequest) *RestoreMetadataInvoker {
+	requestDef := GenReqDefForRestoreMetadata()
+	return &RestoreMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RetryMigration 重试分片变更
+//
+// 重试分片变更
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) RetryMigration(request *model.RetryMigrationRequest) (*model.RetryMigrationResponse, error) {
+	requestDef := GenReqDefForRetryMigration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RetryMigrationResponse), nil
+	}
+}
+
+// RetryMigrationInvoker 重试分片变更
+func (c *DdmClient) RetryMigrationInvoker(request *model.RetryMigrationRequest) *RetryMigrationInvoker {
+	requestDef := GenReqDefForRetryMigration()
+	return &RetryMigrationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RollbackMigration 回滚分片变更
+//
+// 回滚分片变更
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) RollbackMigration(request *model.RollbackMigrationRequest) (*model.RollbackMigrationResponse, error) {
+	requestDef := GenReqDefForRollbackMigration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RollbackMigrationResponse), nil
+	}
+}
+
+// RollbackMigrationInvoker 回滚分片变更
+func (c *DdmClient) RollbackMigrationInvoker(request *model.RollbackMigrationRequest) *RollbackMigrationInvoker {
+	requestDef := GenReqDefForRollbackMigration()
+	return &RollbackMigrationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAvalibleDdms 查询可用于恢复的实例列表
+//
+// 查询可用于恢复的实例列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ShowAvalibleDdms(request *model.ShowAvalibleDdmsRequest) (*model.ShowAvalibleDdmsResponse, error) {
+	requestDef := GenReqDefForShowAvalibleDdms()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAvalibleDdmsResponse), nil
+	}
+}
+
+// ShowAvalibleDdmsInvoker 查询可用于恢复的实例列表
+func (c *DdmClient) ShowAvalibleDdmsInvoker(request *model.ShowAvalibleDdmsRequest) *ShowAvalibleDdmsInvoker {
+	requestDef := GenReqDefForShowAvalibleDdms()
+	return &ShowAvalibleDdmsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAvalibleRds 查询可用于时间点恢复的数据节点列表
+//
+// 查询可用于时间点恢复的数据节点列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ShowAvalibleRds(request *model.ShowAvalibleRdsRequest) (*model.ShowAvalibleRdsResponse, error) {
+	requestDef := GenReqDefForShowAvalibleRds()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAvalibleRdsResponse), nil
+	}
+}
+
+// ShowAvalibleRdsInvoker 查询可用于时间点恢复的数据节点列表
+func (c *DdmClient) ShowAvalibleRdsInvoker(request *model.ShowAvalibleRdsRequest) *ShowAvalibleRdsInvoker {
+	requestDef := GenReqDefForShowAvalibleRds()
+	return &ShowAvalibleRdsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAvalibleTime 查询可恢复时间段
+//
+// 查询可恢复时间段
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ShowAvalibleTime(request *model.ShowAvalibleTimeRequest) (*model.ShowAvalibleTimeResponse, error) {
+	requestDef := GenReqDefForShowAvalibleTime()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAvalibleTimeResponse), nil
+	}
+}
+
+// ShowAvalibleTimeInvoker 查询可恢复时间段
+func (c *DdmClient) ShowAvalibleTimeInvoker(request *model.ShowAvalibleTimeRequest) *ShowAvalibleTimeInvoker {
+	requestDef := GenReqDefForShowAvalibleTime()
+	return &ShowAvalibleTimeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBackup 查询备份详情
+//
+// 查询备份详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ShowBackup(request *model.ShowBackupRequest) (*model.ShowBackupResponse, error) {
+	requestDef := GenReqDefForShowBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBackupResponse), nil
+	}
+}
+
+// ShowBackupInvoker 查询备份详情
+func (c *DdmClient) ShowBackupInvoker(request *model.ShowBackupRequest) *ShowBackupInvoker {
+	requestDef := GenReqDefForShowBackup()
+	return &ShowBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDatabase 查询DDM逻辑库详细信息
 //
 // 查询指定逻辑库的详细信息。
@@ -901,6 +1384,27 @@ func (c *DdmClient) ShowInstance(request *model.ShowInstanceRequest) (*model.Sho
 func (c *DdmClient) ShowInstanceInvoker(request *model.ShowInstanceRequest) *ShowInstanceInvoker {
 	requestDef := GenReqDefForShowInstance()
 	return &ShowInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceDatabase 查询逻辑库详情
+//
+// 查询逻辑库详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ShowInstanceDatabase(request *model.ShowInstanceDatabaseRequest) (*model.ShowInstanceDatabaseResponse, error) {
+	requestDef := GenReqDefForShowInstanceDatabase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceDatabaseResponse), nil
+	}
+}
+
+// ShowInstanceDatabaseInvoker 查询逻辑库详情
+func (c *DdmClient) ShowInstanceDatabaseInvoker(request *model.ShowInstanceDatabaseRequest) *ShowInstanceDatabaseInvoker {
+	requestDef := GenReqDefForShowInstanceDatabase()
+	return &ShowInstanceDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowInstanceParam 查询DDM指定实例的参数详情
@@ -1008,6 +1512,27 @@ func (c *DdmClient) ShowProcessesAuditLogInvoker(request *model.ShowProcessesAud
 	return &ShowProcessesAuditLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowRelatedDns 查询实例在恢复时间点关联的数据节点
+//
+// 查询实例在恢复时间点关联的数据节点
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ShowRelatedDns(request *model.ShowRelatedDnsRequest) (*model.ShowRelatedDnsResponse, error) {
+	requestDef := GenReqDefForShowRelatedDns()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRelatedDnsResponse), nil
+	}
+}
+
+// ShowRelatedDnsInvoker 查询实例在恢复时间点关联的数据节点
+func (c *DdmClient) ShowRelatedDnsInvoker(request *model.ShowRelatedDnsRequest) *ShowRelatedDnsInvoker {
+	requestDef := GenReqDefForShowRelatedDns()
+	return &ShowRelatedDnsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShrinkInstanceNodes DDM实例节点缩容
 //
 // 对指定的DDM实例的节点个数进行缩容。
@@ -1027,6 +1552,27 @@ func (c *DdmClient) ShrinkInstanceNodes(request *model.ShrinkInstanceNodesReques
 func (c *DdmClient) ShrinkInstanceNodesInvoker(request *model.ShrinkInstanceNodesRequest) *ShrinkInstanceNodesInvoker {
 	requestDef := GenReqDefForShrinkInstanceNodes()
 	return &ShrinkInstanceNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchRoute 切换路由
+//
+// 切换路由
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) SwitchRoute(request *model.SwitchRouteRequest) (*model.SwitchRouteResponse, error) {
+	requestDef := GenReqDefForSwitchRoute()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchRouteResponse), nil
+	}
+}
+
+// SwitchRouteInvoker 切换路由
+func (c *DdmClient) SwitchRouteInvoker(request *model.SwitchRouteRequest) *SwitchRouteInvoker {
+	requestDef := GenReqDefForSwitchRoute()
+	return &SwitchRouteInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SwitchSsl 为实例设置SSL数据加密
@@ -1195,6 +1741,27 @@ func (c *DdmClient) UpdateUser(request *model.UpdateUserRequest) (*model.UpdateU
 func (c *DdmClient) UpdateUserInvoker(request *model.UpdateUserRequest) *UpdateUserInvoker {
 	requestDef := GenReqDefForUpdateUser()
 	return &UpdateUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadSchemaMetadata 导入逻辑库元数据
+//
+// 导入所有逻辑库物理分片分布关系，以此创建相同物理分片分布关系的逻辑库。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) UploadSchemaMetadata(request *model.UploadSchemaMetadataRequest) (*model.UploadSchemaMetadataResponse, error) {
+	requestDef := GenReqDefForUploadSchemaMetadata()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadSchemaMetadataResponse), nil
+	}
+}
+
+// UploadSchemaMetadataInvoker 导入逻辑库元数据
+func (c *DdmClient) UploadSchemaMetadataInvoker(request *model.UploadSchemaMetadataRequest) *UploadSchemaMetadataInvoker {
+	requestDef := GenReqDefForUploadSchemaMetadata()
+	return &UploadSchemaMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ValidateWeakPassword 弱密码校验

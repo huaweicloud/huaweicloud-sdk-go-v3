@@ -38,6 +38,12 @@ type ShowNodeResponse struct {
 
 	// 系统盘id。
 	SystemvolumeId *string `json:"systemvolume_id,omitempty"`
+
+	// 节点所在组ID。
+	GroupId *string `json:"group_id,omitempty"`
+
+	// 子网ID。
+	SubnetId       *string `json:"subnet_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

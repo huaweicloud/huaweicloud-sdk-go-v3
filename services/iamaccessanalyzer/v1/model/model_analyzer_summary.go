@@ -24,13 +24,16 @@ type AnalyzerSummary struct {
 	// 最近一次分析资源的时间。
 	LastResourceAnalyzedAt *sdktime.SdkTime `json:"last_resource_analyzed_at,omitempty"`
 
+	// 最近一次分析全量资源的时间。
+	LastAllAnalyzedAt *sdktime.SdkTime `json:"last_all_analyzed_at,omitempty"`
+
 	// 分析器的名称。
 	Name string `json:"name"`
 
 	// 组织ID。
 	OrganizationId *string `json:"organization_id,omitempty"`
 
-	// 分析器的状态。
+	// 分析器的状态。 - active：激活 - creating：创建中 - disabled：禁用 - failed：创建失败
 	Status AnalyzerSummaryStatus `json:"status"`
 
 	StatusReason *StatusReason `json:"status_reason,omitempty"`

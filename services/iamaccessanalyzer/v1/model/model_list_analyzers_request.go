@@ -18,7 +18,7 @@ type ListAnalyzersRequest struct {
 	// 页面标记。
 	Marker *string `json:"marker,omitempty"`
 
-	// 分析器的类型。
+	// 分析器的类型。 - account：账号级外部访问分析器 - organization：组织级外部访问分析器 - account_unused_access：账号级未使用访问分析器 - organization_unused_access：组织级未使用访问分析器 - account_privilege_escalation：账号级提权访问分析器 - account_iam_best_practice：账号级IAM最佳实践分析器
 	Type *ListAnalyzersRequestType `json:"type,omitempty"`
 }
 
@@ -36,10 +36,12 @@ type ListAnalyzersRequestType struct {
 }
 
 type ListAnalyzersRequestTypeEnum struct {
-	ACCOUNT                    ListAnalyzersRequestType
-	ORGANIZATION               ListAnalyzersRequestType
-	ACCOUNT_UNUSED_ACCESS      ListAnalyzersRequestType
-	ORGANIZATION_UNUSED_ACCESS ListAnalyzersRequestType
+	ACCOUNT                      ListAnalyzersRequestType
+	ORGANIZATION                 ListAnalyzersRequestType
+	ACCOUNT_UNUSED_ACCESS        ListAnalyzersRequestType
+	ORGANIZATION_UNUSED_ACCESS   ListAnalyzersRequestType
+	ACCOUNT_PRIVILEGE_ESCALATION ListAnalyzersRequestType
+	ACCOUNT_IAM_BEST_PRACTICE    ListAnalyzersRequestType
 }
 
 func GetListAnalyzersRequestTypeEnum() ListAnalyzersRequestTypeEnum {
@@ -55,6 +57,12 @@ func GetListAnalyzersRequestTypeEnum() ListAnalyzersRequestTypeEnum {
 		},
 		ORGANIZATION_UNUSED_ACCESS: ListAnalyzersRequestType{
 			value: "organization_unused_access",
+		},
+		ACCOUNT_PRIVILEGE_ESCALATION: ListAnalyzersRequestType{
+			value: "account_privilege_escalation",
+		},
+		ACCOUNT_IAM_BEST_PRACTICE: ListAnalyzersRequestType{
+			value: "account_iam_best_practice",
 		},
 	}
 }

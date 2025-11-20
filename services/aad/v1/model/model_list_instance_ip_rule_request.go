@@ -14,6 +14,12 @@ type ListInstanceIpRuleRequest struct {
 
 	// 单个 IP
 	Ip string `json:"ip"`
+
+	// 限制条数
+	Limit *int32 `json:"limit,omitempty"`
+
+	// 偏移量
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListInstanceIpRuleRequest) String() string {

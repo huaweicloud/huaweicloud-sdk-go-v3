@@ -27,11 +27,9 @@ type ShowVulAffectedStaticsResponse struct {
 	// **参数解释**: 影响的总漏洞条数(主机+漏洞 以此维度计算) **取值范围**: 最小值0，最大值2147483647
 	TotalVulNum *int32 `json:"total_vul_num,omitempty"`
 
-	// **参数解释**: 漏洞修复提示 **取值范围**: - cce_kernel_vul_tips：cce内核修复提示信息 - ubuntu_pro_tips：ubuntu pro的修复提示
-	ExtendTips *string `json:"extend_tips,omitempty"`
+	ExtendTips *[]string `json:"extend_tips,omitempty"`
 
-	// **参数解释**: 漏洞修复提示文本 **取值范围**: 字符长度0-4096位
-	ExtendTextTips *string `json:"extend_text_tips,omitempty"`
+	ExtendTextTips *[]string `json:"extend_text_tips,omitempty"`
 
 	DisabledOperateTypes *VulAffectedStatisticsResponseInfoDisabledOperateTypes `json:"disabled_operate_types,omitempty"`
 

@@ -9,13 +9,13 @@ import (
 	"strings"
 )
 
-// EipSpecBandwidth 带宽信息
+// EipSpecBandwidth **参数解释**： 带宽信息 **约束限制**： 不涉及
 type EipSpecBandwidth struct {
 
-	// 带宽大小
+	// **参数解释**： 带宽大小 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	Size *int32 `json:"size,omitempty"`
 
-	// 带宽类型
+	// **参数解释**： 带宽大小 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	Sharetype *EipSpecBandwidthSharetype `json:"sharetype,omitempty"`
 }
 

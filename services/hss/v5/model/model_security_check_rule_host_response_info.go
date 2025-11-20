@@ -42,7 +42,7 @@ type SecurityCheckRuleHostResponseInfo struct {
 	// **参数解释** 忽略或加白的备注 **取值范围** 字符长度0-1024位
 	Description *string `json:"description,omitempty"`
 
-	// **参数解释** 主机类型 **取值范围** - cce
+	// **参数解释** 主机类型，当主机为cce类型时，返回cce **取值范围** - cce
 	HostType *string `json:"host_type,omitempty"`
 
 	// **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持

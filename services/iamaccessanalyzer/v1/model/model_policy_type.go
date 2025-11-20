@@ -9,15 +9,17 @@ import (
 	"strings"
 )
 
-// PolicyType 要校验的策略类型。
+// PolicyType 要校验的策略类型。 - identity_policy：身份策略 - resource_policy：资源策略 - service_control_policy：服务控制策略 - resource_control_policy：资源控制策略 - network_control_policy：网络控制策略
 type PolicyType struct {
 	value string
 }
 
 type PolicyTypeEnum struct {
-	IDENTITY_POLICY        PolicyType
-	RESOURCE_POLICY        PolicyType
-	SERVICE_CONTROL_POLICY PolicyType
+	IDENTITY_POLICY         PolicyType
+	RESOURCE_POLICY         PolicyType
+	SERVICE_CONTROL_POLICY  PolicyType
+	RESOURCE_CONTROL_POLICY PolicyType
+	NETWORK_CONTROL_POLICY  PolicyType
 }
 
 func GetPolicyTypeEnum() PolicyTypeEnum {
@@ -30,6 +32,12 @@ func GetPolicyTypeEnum() PolicyTypeEnum {
 		},
 		SERVICE_CONTROL_POLICY: PolicyType{
 			value: "service_control_policy",
+		},
+		RESOURCE_CONTROL_POLICY: PolicyType{
+			value: "resource_control_policy",
+		},
+		NETWORK_CONTROL_POLICY: PolicyType{
+			value: "network_control_policy",
 		},
 	}
 }

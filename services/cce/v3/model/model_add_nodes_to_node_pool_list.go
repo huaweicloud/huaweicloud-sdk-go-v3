@@ -9,13 +9,13 @@ import (
 // AddNodesToNodePoolList 自定义节点池纳管节点参数，纳管过程将清理节点上系统盘、数据盘数据，并作为新节点接入Kuberntes集群，请提前备份迁移关键数据。
 type AddNodesToNodePoolList struct {
 
-	// API版本，固定值“v3”。
+	// **参数解释**： API版本 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： v3
 	ApiVersion string `json:"apiVersion"`
 
-	// API类型，固定值“List”。
+	// **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
 	Kind string `json:"kind"`
 
-	// 纳管节点列表，当前最多支持同时纳管200个节点。
+	// **参数解释**： 纳管节点列表，当前最多支持同时纳管200个节点。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	NodeList []AddNodesToNodePool `json:"nodeList"`
 }
 

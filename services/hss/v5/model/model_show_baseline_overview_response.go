@@ -24,7 +24,7 @@ type ShowBaselineOverviewResponse struct {
 	// **参数解释**: 基线检测项（检测规则）数量。例如SSH基线检测了17条规则，CentOS 7基线检测了60条规则，值就是17+60=77。 **取值范围**: 取值0-2147483647
 	CheckRuleNum *int32 `json:"check_rule_num,omitempty"`
 
-	// **参数解释**: 基线检查项通过率\"。 **取值范围**: 取值0-2147483647
+	// **参数解释**: 基线检查项通过率。 **取值范围**: 取值0-2147483647
 	CheckRulePassRate *int32 `json:"check_rule_pass_rate,omitempty"`
 
 	// **参数解释**: 云安全实践基线检查项通过率。 **取值范围**: 取值0-2147483647

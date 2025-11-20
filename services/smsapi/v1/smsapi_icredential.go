@@ -13,8 +13,8 @@ type SMSApiCredentials struct {
 	SK string
 }
 
-func (s *SMSApiCredentials) ProcessAuthParams(client *impl.DefaultHttpClient, region string) auth.ICredential {
-	return s
+func (s *SMSApiCredentials) ProcessAuthParams(client *impl.DefaultHttpClient, region string) (auth.ICredential, error) {
+	return s, nil
 }
 
 func (s *SMSApiCredentials) ProcessAuthRequest(client *impl.DefaultHttpClient, req *request.DefaultHttpRequest) (*request.DefaultHttpRequest, error) {

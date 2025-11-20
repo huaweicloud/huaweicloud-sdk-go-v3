@@ -6,11 +6,11 @@ import (
 	"strings"
 )
 
-// OpenApiSpecSpec 集群访问的地址
+// OpenApiSpecSpec **参数解释**： 集群访问的地址 **约束限制**： 不涉及
 type OpenApiSpecSpec struct {
 	Eip *EipSpec `json:"eip,omitempty"`
 
-	// 是否动态创建
+	// **参数解释**： 是否动态创建 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	IsDynamic *bool `json:"IsDynamic,omitempty"`
 }
 

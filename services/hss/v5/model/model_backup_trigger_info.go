@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// BackupTriggerInfo **参数解释**: 备份:策略时间调度规则 **取值范围**: 不涉及
+// BackupTriggerInfo **参数解释**: 备份策略时间调度规则 **取值范围**: 不涉及
 type BackupTriggerInfo struct {
 
 	// **参数解释**: 调度器id **取值范围**: 字符长度0-256

@@ -36,8 +36,13 @@ type Update2dModelTrainingJobReq struct {
 	// 分身数字人训练任务标签。
 	Tags *[]string `json:"tags,omitempty"`
 
+	// 是否极速版flexus
+	IsFastFlexus *bool `json:"is_fast_flexus,omitempty"`
+
 	// 动作视频样例可修改信息。
 	SamplesBasicInfo *[]ActionBasicSampleInfo `json:"samples_basic_info,omitempty"`
+
+	VoiceProperties *VoiceProperties `json:"voice_properties,omitempty"`
 
 	// 该任务所生成的模型支持的业务类型，可多选。  Flexus版数字人仅支持选择“VIDEO_2D”。
 	SupportedService *[]SupportedServiceEnum `json:"supported_service,omitempty"`

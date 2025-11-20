@@ -9,7 +9,7 @@ import (
 // GetAvaliableZoneResponse Response Object
 type GetAvaliableZoneResponse struct {
 
-	// **参数解释**: 可用区列表信息
+	// **参数解释**: 可用区列表信息 **约束限制**： 不涉及
 	Body           *[]GetAvailableZoneResponseBody `json:"body,omitempty"`
 	HttpStatusCode int                             `json:"-"`
 }

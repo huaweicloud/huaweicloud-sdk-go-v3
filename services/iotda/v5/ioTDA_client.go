@@ -1911,6 +1911,111 @@ func (c *IoTDAClient) UpdateDeviceShadowDesiredDataInvoker(request *model.Update
 	return &UpdateDeviceShadowDesiredDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDomainConfiguration 添加域配置
+//
+// 应用服务器可调用此接口在物联网平台上添加域配置，域配置配额上限为：1个。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) CreateDomainConfiguration(request *model.CreateDomainConfigurationRequest) (*model.CreateDomainConfigurationResponse, error) {
+	requestDef := GenReqDefForCreateDomainConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDomainConfigurationResponse), nil
+	}
+}
+
+// CreateDomainConfigurationInvoker 添加域配置
+func (c *IoTDAClient) CreateDomainConfigurationInvoker(request *model.CreateDomainConfigurationRequest) *CreateDomainConfigurationInvoker {
+	requestDef := GenReqDefForCreateDomainConfiguration()
+	return &CreateDomainConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDomainConfiguration 删除域配置
+//
+// 应用服务器可调用此接口在物联网平台删除域配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) DeleteDomainConfiguration(request *model.DeleteDomainConfigurationRequest) (*model.DeleteDomainConfigurationResponse, error) {
+	requestDef := GenReqDefForDeleteDomainConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDomainConfigurationResponse), nil
+	}
+}
+
+// DeleteDomainConfigurationInvoker 删除域配置
+func (c *IoTDAClient) DeleteDomainConfigurationInvoker(request *model.DeleteDomainConfigurationRequest) *DeleteDomainConfigurationInvoker {
+	requestDef := GenReqDefForDeleteDomainConfiguration()
+	return &DeleteDomainConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDomainConfigurations 获取域配置列表
+//
+// 应用服务器可调用此接口在物联网平台获取域配置列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ListDomainConfigurations(request *model.ListDomainConfigurationsRequest) (*model.ListDomainConfigurationsResponse, error) {
+	requestDef := GenReqDefForListDomainConfigurations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDomainConfigurationsResponse), nil
+	}
+}
+
+// ListDomainConfigurationsInvoker 获取域配置列表
+func (c *IoTDAClient) ListDomainConfigurationsInvoker(request *model.ListDomainConfigurationsRequest) *ListDomainConfigurationsInvoker {
+	requestDef := GenReqDefForListDomainConfigurations()
+	return &ListDomainConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDomainConfiguration 查询域配置
+//
+// 应用服务器可调用此接口在物联网平台查询域配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ShowDomainConfiguration(request *model.ShowDomainConfigurationRequest) (*model.ShowDomainConfigurationResponse, error) {
+	requestDef := GenReqDefForShowDomainConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainConfigurationResponse), nil
+	}
+}
+
+// ShowDomainConfigurationInvoker 查询域配置
+func (c *IoTDAClient) ShowDomainConfigurationInvoker(request *model.ShowDomainConfigurationRequest) *ShowDomainConfigurationInvoker {
+	requestDef := GenReqDefForShowDomainConfiguration()
+	return &ShowDomainConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDomainConfiguration 更新域配置
+//
+// 应用服务器可调用此接口在物联网平台上更新域配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) UpdateDomainConfiguration(request *model.UpdateDomainConfigurationRequest) (*model.UpdateDomainConfigurationResponse, error) {
+	requestDef := GenReqDefForUpdateDomainConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDomainConfigurationResponse), nil
+	}
+}
+
+// UpdateDomainConfigurationInvoker 更新域配置
+func (c *IoTDAClient) UpdateDomainConfigurationInvoker(request *model.UpdateDomainConfigurationRequest) *UpdateDomainConfigurationInvoker {
+	requestDef := GenReqDefForUpdateDomainConfiguration()
+	return &UpdateDomainConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateRoutingFlowControlPolicy 新建数据流转流控策略
 //
 // 应用服务器可调用此接口在物联网平台创建数据流转流控策略。
@@ -3373,6 +3478,90 @@ func (c *IoTDAClient) UpdateSecurityProfile(request *model.UpdateSecurityProfile
 func (c *IoTDAClient) UpdateSecurityProfileInvoker(request *model.UpdateSecurityProfileRequest) *UpdateSecurityProfileInvoker {
 	requestDef := GenReqDefForUpdateSecurityProfile()
 	return &UpdateSecurityProfileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateServerCertificate 添加服务器证书
+//
+// 应用服务器可调用此接口在物联网平台上添加服务器证书，服务器证书配额限制为：2个。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) CreateServerCertificate(request *model.CreateServerCertificateRequest) (*model.CreateServerCertificateResponse, error) {
+	requestDef := GenReqDefForCreateServerCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateServerCertificateResponse), nil
+	}
+}
+
+// CreateServerCertificateInvoker 添加服务器证书
+func (c *IoTDAClient) CreateServerCertificateInvoker(request *model.CreateServerCertificateRequest) *CreateServerCertificateInvoker {
+	requestDef := GenReqDefForCreateServerCertificate()
+	return &CreateServerCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteServerCertificate 删除服务端证书
+//
+// 应用服务器可调用此接口在物联网平台删除服务器证书
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) DeleteServerCertificate(request *model.DeleteServerCertificateRequest) (*model.DeleteServerCertificateResponse, error) {
+	requestDef := GenReqDefForDeleteServerCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteServerCertificateResponse), nil
+	}
+}
+
+// DeleteServerCertificateInvoker 删除服务端证书
+func (c *IoTDAClient) DeleteServerCertificateInvoker(request *model.DeleteServerCertificateRequest) *DeleteServerCertificateInvoker {
+	requestDef := GenReqDefForDeleteServerCertificate()
+	return &DeleteServerCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListServerCertificate 获取服务器证书列表
+//
+// 应用服务器可调用此接口在物联网平台上获取服务器证书列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ListServerCertificate(request *model.ListServerCertificateRequest) (*model.ListServerCertificateResponse, error) {
+	requestDef := GenReqDefForListServerCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListServerCertificateResponse), nil
+	}
+}
+
+// ListServerCertificateInvoker 获取服务器证书列表
+func (c *IoTDAClient) ListServerCertificateInvoker(request *model.ListServerCertificateRequest) *ListServerCertificateInvoker {
+	requestDef := GenReqDefForListServerCertificate()
+	return &ListServerCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowServerCertificate 查询服务器证书
+//
+// 应用服务器可调用此接口在物联网平台查询服务器证书
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ShowServerCertificate(request *model.ShowServerCertificateRequest) (*model.ShowServerCertificateResponse, error) {
+	requestDef := GenReqDefForShowServerCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowServerCertificateResponse), nil
+	}
+}
+
+// ShowServerCertificateInvoker 查询服务器证书
+func (c *IoTDAClient) ShowServerCertificateInvoker(request *model.ShowServerCertificateRequest) *ShowServerCertificateInvoker {
+	requestDef := GenReqDefForShowServerCertificate()
+	return &ShowServerCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListResourcesByTags 按标签查询资源

@@ -33,20 +33,20 @@ type ListCheckRuleHostRequest struct {
 	// **参数解释** 检测结果类型 **约束限制** 不涉及 **取值范围** - safe             : 已通过 - unhandled        : 未处理 - ignored          : 已忽略 - fixing           : 修复中 - fix-failed       : 修复失败 - verifying        : 验证中 - add_to_whitelist : 已加白  **默认取值** 不涉及
 	ResultType *string `json:"result_type,omitempty"`
 
-	// **参数解释** 检测结果类型 **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
-	HostType *string `json:"host_type,omitempty"`
-
-	// **参数解释** 是否校验cce **约束限制** 不涉及 **取值范围** - true  : 校验cce - false : 不校验cce  **默认取值** false
-	CheckCce *bool `json:"check_cce,omitempty"`
-
 	// **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
 	ClusterId *string `json:"cluster_id,omitempty"`
 
-	// **参数解释** 策略组ID，不赋值时，查此检查项租户所有主机，host_id存在时，此值无效 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
-	PolicyGroupId *string `json:"policy_group_id,omitempty"`
-
 	// **参数解释** 主机名称或ip **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
 	HostName *string `json:"host_name,omitempty"`
+
+	// **参数解释** 主机类型，已废弃 **约束限制** 不涉及 **取值范围** - cce **默认取值** 不涉及
+	HostType *string `json:"host_type,omitempty"`
+
+	// **参数解释**: 是否只筛选cce主机，已废弃 **约束限制**: 不涉及 **取值范围**: -true：是。 -false：否。 **默认取值**: false
+	CheckCce *bool `json:"check_cce,omitempty"`
+
+	// **参数解释** 策略组ID，已废弃 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
+	PolicyGroupId *string `json:"policy_group_id,omitempty"`
 }
 
 func (o ListCheckRuleHostRequest) String() string {

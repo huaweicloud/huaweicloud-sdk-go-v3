@@ -35,7 +35,7 @@ type ImageSensitiveInfo struct {
 	// **参数解释**: 是否已处理 **取值范围**: - unhandled：未处理。 - handled：已处理。
 	HandleStatus *string `json:"handle_status,omitempty"`
 
-	// **参数解释**: 操作 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
+	// **参数解释**: 操作类型 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
 	OperateAccept *string `json:"operate_accept,omitempty"`
 }
 

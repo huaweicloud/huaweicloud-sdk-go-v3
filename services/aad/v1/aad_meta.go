@@ -222,11 +222,11 @@ func GenReqDefForBatchDeleteInstanceIpRule() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForCreateAadDomain() *def.HttpRequestDef {
+func GenReqDefForCreateDomain() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/aad/external/domains").
-		WithResponse(new(model.CreateAadDomainResponse)).
+		WithResponse(new(model.CreateDomainResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -361,6 +361,15 @@ func GenReqDefForListDomain() *def.HttpRequestDef {
 		WithResponse(new(model.ListDomainResponse)).
 		WithContentType("application/json")
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -407,6 +416,15 @@ func GenReqDefForListInstanceIpRule() *def.HttpRequestDef {
 		WithName("Ip").
 		WithJsonTag("ip").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

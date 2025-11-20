@@ -9,8 +9,8 @@ import (
 type IdentityCenterOIDCCredentials struct {
 }
 
-func (s *IdentityCenterOIDCCredentials) ProcessAuthParams(httpClient *impl.DefaultHttpClient, region string) auth.ICredential {
-	return s
+func (s *IdentityCenterOIDCCredentials) ProcessAuthParams(httpClient *impl.DefaultHttpClient, region string) (auth.ICredential, error) {
+	return s, nil
 }
 
 func (s *IdentityCenterOIDCCredentials) ProcessAuthRequest(httpClient *impl.DefaultHttpClient, httpRequest *request.DefaultHttpRequest) (*request.DefaultHttpRequest, error) {

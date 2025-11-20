@@ -9,13 +9,12 @@ import (
 	"strings"
 )
 
-// FindingPrincipal 访问信任区域内资源的外部主体。
 type FindingPrincipal struct {
 
-	// 外部主体身份的标识符。
+	// 主体身份的标识符。
 	Identifier string `json:"identifier"`
 
-	// 外部主体身份的类型。
+	// 主体身份的类型。 - all_principal：所有主体 - account：账号 - all_user_in_account： 账号下所有用户 - all_agency_in_account： 账号下所有委托 - all_identity_provider_in_account：账号下所有身份提供商 - specific_user：特定用户 - specific_agency：特定委托 - specific_group：特定用户组 - specific_identity_provider：特定身份提供商
 	Type FindingPrincipalType `json:"type"`
 }
 

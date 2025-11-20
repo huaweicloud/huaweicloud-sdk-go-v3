@@ -90,7 +90,7 @@ func TestBaseCredentialsBuilder_SafeBuild(t *testing.T) {
 
 func TestBaseCredentials_updateAuthTokenByIdToken(t *testing.T) {
 	var count int32
-	mockServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+	mockServer := httptest.NewTLSServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		w.Header().Set("X-IAM-Trace-Id", "trace-id")
 		w.Header().Set("X-Request-Id", "request-id")

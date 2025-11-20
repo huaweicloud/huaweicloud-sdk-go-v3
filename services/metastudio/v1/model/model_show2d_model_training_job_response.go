@@ -18,7 +18,7 @@ type Show2dModelTrainingJobResponse struct {
 	// 分身数字人模型名称。该名称会作为资产库中分身数字人模型资产名称。
 	Name string `json:"name"`
 
-	// 任务的状态。  与MetaStudio Console上用户看到的状态映射关系如下：  - 待提交   * WAIT_FILE_UPLOAD: 待上传文件  - 系统审核中   * AUTO_VERIFYING: 自动审核中   * MANUAL_VERIFYING: 人工审核中  - 系统审核未通过   * AUTO_VERIFY_FAILED: 自动审核失败   * MANUAL_VERIFY_FAILED: 人工审核失败  - 算法训练中   > 算法训练中的状态仅管理员需要处理，普通用户仅需要显示“算法训练中”即可。   * MANUAL_VERIFY_SUCCESS: 审核通过，等待预处理资源   * WAIT_TRAINING_DATA_PREPROCESS: 等待训练数据预处理   * TRAINING_DATA_PREPROCESSING: 训练数据预处理中   * TRAINING_DATA_PREPROCESS_FAILED: 训练数据预处理失败   * TRAINING_DATA_PREPROCESS_SUCCESS: 训练数据预处理完成，等待训练资源中   * TRAINING: 训练中   * TRAIN_FAILED: 训练失败   * TRAIN_SUCCESS: 训练完成，等待预处理资源   * INFERENCE_DATA_PREPROCESSING: 推理数据预处理中   * INFERENCE_DATA_PREPROCESS_FAILED: 推理数据预处理失败   * WAIT_MAIN_FILE_UPLOAD: 等待主文件上传   * MANUAL_STOP_INFERENCE_DATA_PREPROCESS: 人工中止推理预处理   * MANUAL_STOP_TRAIN: 人工中止训练   * MANUAL_STOP_TRAINING_DATA_PREPROCESS: 人工中止训练预处理   * WAIT_ADMIN_CONFIRM: 等待管理员审核   * WAIT_COMPILE: 等待转编译   * COMPILING: 转编译中   * COMPILE_FAILED: 转编译失败   * WAIT_GENERATE_ACTION: 等待原子动作生成   * WAIT_ARRANGE: 等待编排   * ACTION_GENERATE_DATA_PROCESSING: 原子动作生成中   * MANUAL_STOP_ACTION_GENERATE_DATA_PROCESSING: 人工中止动作生成   * MANUAL_STOP_ACTION_GENERATE_ORI_PROCESSING: 人工中止动作编排   * ACTION_GENERATE_ORI_PROCESSING: 动作编排中   * ACTION_GENERATE_DATA_FAILED: 动作生成失败   * ACTION_GENERATE_ORI_FAILED: 生成动作编排资产失败   * ACTION_GENERATE_ORI_SUCCESS: 动作编排成功   * GENERATE_ACTION_PREPROCESS_FAILED: 生成动作编排原子动作失败   * WAIT_ADMIN_CALIBRATION: 等待管理员确认动作信息   * WAIT_ASSET_SYNC: 等待资产同步  - 待用户审核，仅NA白名单用户有该状态   * WAIT_USER_CONFIRM: 等待用户确认训练效果  - 用户驳回，仅NA白名单用户有该状态   * JOB_REJECT: 驳回任务  - 已完成   * JOB_SUCCESS: 训练任务完成（普通用户任务的完成状态，此时用户已经可以使用模型）   * JOB_FINISH: 任务结束，是最终状态，不支持修改此状态(NA用户任务的完成状态，并且此状态表明模型效果已通过用户的验收)  - 挂起，仅NA白名单用户有该状态   * JOB_PENDING: 挂起任务
+	// 任务的状态。  与MetaStudio Console上用户看到的状态映射关系如下：  - 待提交   * WAIT_FILE_UPLOAD: 待上传文件  - 系统审核中   * AUTO_VERIFYING: 自动审核中   * MANUAL_VERIFYING: 人工审核中  - 系统审核未通过   * AUTO_VERIFY_FAILED: 自动审核失败   * MANUAL_VERIFY_FAILED: 人工审核失败  - 算法训练中   > 算法训练中的状态仅管理员需要处理，普通用户仅需要显示“算法训练中”即可。   * MANUAL_VERIFY_SUCCESS: 审核通过，等待预处理资源   * WAIT_TRAINING_DATA_PREPROCESS: 等待训练数据预处理   * TRAINING_DATA_PREPROCESSING: 训练数据预处理中   * TRAINING_DATA_PREPROCESS_FAILED: 训练数据预处理失败   * TRAINING_DATA_PREPROCESS_SUCCESS: 训练数据预处理完成，等待训练资源中   * TRAINING: 训练中   * TRAIN_FAILED: 训练失败   * TRAIN_SUCCESS: 训练完成，等待预处理资源   * INFERENCE_DATA_PREPROCESSING: 推理数据预处理中   * INFERENCE_DATA_PREPROCESS_FAILED: 推理数据预处理失败   * WAIT_MAIN_FILE_UPLOAD: 等待主文件上传   * MANUAL_STOP_INFERENCE_DATA_PREPROCESS: 人工中止推理预处理   * MANUAL_STOP_TRAIN: 人工中止训练   * MANUAL_STOP_TRAINING_DATA_PREPROCESS: 人工中止训练预处理   * WAIT_ADMIN_CONFIRM: 等待管理员审核   * WAIT_COMPILE: 等待转编译   * COMPILING: 转编译中   * COMPILE_FAILED: 转编译失败   * WAIT_GENERATE_ACTION: 等待原子动作生成   * WAIT_ARRANGE: 等待编排   * ACTION_GENERATE_DATA_PROCESSING: 原子动作生成中   * MANUAL_STOP_ACTION_GENERATE_DATA_PROCESSING: 人工中止动作生成   * MANUAL_STOP_ACTION_GENERATE_ORI_PROCESSING: 人工中止动作编排   * ACTION_GENERATE_ORI_PROCESSING: 动作编排中   * ACTION_GENERATE_DATA_FAILED: 动作生成失败   * ACTION_GENERATE_ORI_FAILED: 生成动作编排资产失败   * ACTION_GENERATE_ORI_SUCCESS: 动作编排成功   * GENERATE_ACTION_PREPROCESS_FAILED: 生成动作编排原子动作失败   * WAIT_ADMIN_CALIBRATION: 等待管理员确认动作信息   * WAIT_ASSET_SYNC: 等待资产同步   * WAIT_GENERATE_ACTION_MARK 等待动作标定   * ACTION_MARKING: 动作标定生成 - 待用户审核，仅NA白名单用户有该状态   * WAIT_USER_CONFIRM: 等待用户确认训练效果  - 用户驳回，仅NA白名单用户有该状态   * JOB_REJECT: 驳回任务  - 已完成   * JOB_SUCCESS: 训练任务完成（普通用户任务的完成状态，此时用户已经可以使用模型）   * JOB_FINISH: 任务结束，是最终状态，不支持修改此状态(NA用户任务的完成状态，并且此状态表明模型效果已通过用户的验收)  - 挂起，仅NA白名单用户有该状态   * JOB_PENDING: 挂起任务   * WAIT_TEST_VIDEO_CHECK: 等待进行测试视频推理任务  * TEST_VIDEO_CHECK_PROCESSING：测试视频推理质量检测中  * TEST_VIDEO_CHECK_SUCCESS：测试视频推理质量检测通过  * TEST_VIDEO_CHECK_FAILED：测试视频推理质量检测未通过  * VIDEO_ANALYZE_PROCESSING：视频检测中  * VIDEO_ANALYZE_SUCCESS：视频检测通过  * VIDEO_ANALYZE_FAILED：视频检测未通过  * ACTION_MARKING：动作标定中  * ACTION_MARK_SUCCESS：动作标定成功  * ACTION_MARK_FAILED：动作标定失败  * ACTION_MARK_UPLOADED：动作标定文件上传成功  * MANUL_STOP_ACTION_MARK：中止动作标定
 	State Show2dModelTrainingJobResponseState `json:"state"`
 
 	// 模型资产ID。
@@ -45,7 +45,7 @@ type Show2dModelTrainingJobResponse struct {
 	// 分身数字人训练任务标签。
 	Tags *[]string `json:"tags,omitempty"`
 
-	// 分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
+	// 分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 * V3.3: 极速版flexus用的训练模型 > * V3和V2版本已废弃不用
 	ModelVersion *Show2dModelTrainingJobResponseModelVersion `json:"model_version,omitempty"`
 
 	// 抠图类型。默认是AI。 * AI：AI抠图 * MANUAL：人工抠图
@@ -60,8 +60,23 @@ type Show2dModelTrainingJobResponse struct {
 	// 是否是基础版的形象训练
 	IsFlexus *bool `json:"is_flexus,omitempty"`
 
+	// 是否是直播间复刻任务
+	IsLiveCopy *bool `json:"is_live_copy,omitempty"`
+
+	// 是否极速版flexus
+	IsFastFlexus *bool `json:"is_fast_flexus,omitempty"`
+
 	// 是否只训练形象模型，不训练声音模型。仅Flexus版本时有效，默认false。
 	IsOnlyHumanModel *bool `json:"is_only_human_model,omitempty"`
+
+	// 可选训练region
+	OptionalTrainingLocation *[]string `json:"optional_training_location,omitempty"`
+
+	// 分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
+	IsBackgroundReplacement *bool `json:"is_background_replacement,omitempty"`
+
+	// 是否按需任务
+	IsOndemandResource *bool `json:"is_ondemand_resource,omitempty"`
 
 	// 分身数字人训练视频下载URL。24小时内有效。
 	TrainingVideoDownloadUrl *string `json:"training_video_download_url,omitempty"`
@@ -78,6 +93,9 @@ type Show2dModelTrainingJobResponse struct {
 	// 美白前图片下载url。
 	PreBeautyImageDownloadUrl *string `json:"pre_beauty_image_download_url,omitempty"`
 
+	// 授权书下载URL。24小时内有效。
+	ExternalActionJsonDataDownloadUrl *string `json:"external_action_json_data_download_url,omitempty"`
+
 	// 动作视频
 	ActionVideoDownloadUrl *string `json:"action_video_download_url,omitempty"`
 
@@ -86,6 +104,12 @@ type Show2dModelTrainingJobResponse struct {
 
 	// 音频文件下载url。
 	AudioFileDownloadUrl *string `json:"audio_file_download_url,omitempty"`
+
+	// 动作标定文件下载url。
+	ActionMarkFileDownloadUrl *string `json:"action_mark_file_download_url,omitempty"`
+
+	// 动作标定文件上传url。
+	ActionMarkFileUploadUrl *string `json:"action_mark_file_upload_url,omitempty"`
 
 	// 操作日志列表。
 	OperationLogs *[]OperationLogInfo `json:"operation_logs,omitempty"`
@@ -111,18 +135,20 @@ type Show2dModelTrainingJobResponse struct {
 	// 标注视频url下载链接。24小时内有效。
 	MarkableVideoDownloadUrl *string `json:"markable_video_download_url,omitempty"`
 
+	// 动作标注视频url下载链接。24小时内有效。
+	MarkableActionVideoDownloadUrl *string `json:"markable_action_video_download_url,omitempty"`
+
 	TraningVideoMarkInfo *TrainingVideoMarkInfo `json:"traning_video_mark_info,omitempty"`
 
 	InferenceDataProcessVideoMarkInfo *InferenceVideoMarkInfo `json:"inference_data_process_video_mark_info,omitempty"`
+
+	VoiceProperties *VoiceProperties `json:"voice_properties,omitempty"`
 
 	InferenceDataProcessActionMarkInfo *InferenceActionMarkInfo `json:"inference_data_process_action_mark_info,omitempty"`
 
 	InferenceDataProcessChatActionMarkInfo *InferenceActionMarkInfo `json:"inference_data_process_chat_action_mark_info,omitempty"`
 
 	InferenceDataProcessEyeCorrectionMarkInfo *InferenceEyeCorrectionMarkInfo `json:"inference_data_process_eye_correction_mark_info,omitempty"`
-
-	// 分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
-	IsBackgroundReplacement *bool `json:"is_background_replacement,omitempty"`
 
 	// 转编译任务机型
 	WorkerType *[]string `json:"worker_type,omitempty"`
@@ -140,6 +166,15 @@ type Show2dModelTrainingJobResponse struct {
 	SupportedService *[]SupportedServiceEnum `json:"supported_service,omitempty"`
 
 	AllocatedResource *TrainingAllocatedResource `json:"allocated_resource,omitempty"`
+
+	// 训练视频旋转任务状态。 * WAITING：等待中 * PROCESSING：转编译中 * SUCCESS：转编译成功 * FAILED：转编译失败
+	TrainVideoRotationState *Show2dModelTrainingJobResponseTrainVideoRotationState `json:"train_video_rotation_state,omitempty"`
+
+	// 训练视频旋转任务状态。 * WAITING：等待中 * PROCESSING：转编译中 * SUCCESS：转编译成功 * FAILED：转编译失败
+	ActionVideoRotationState *Show2dModelTrainingJobResponseActionVideoRotationState `json:"action_video_rotation_state,omitempty"`
+
+	// 子任务信息
+	SubTrainingJobInfo *[]SubTrainingJobInfoDto `json:"sub_training_job_info,omitempty"`
 
 	XRequestId     *string `json:"X-Request-Id,omitempty"`
 	HttpStatusCode int     `json:"-"`
@@ -207,6 +242,19 @@ type Show2dModelTrainingJobResponseStateEnum struct {
 	BEAUTYFACE_FAILED                           Show2dModelTrainingJobResponseState
 	WAIT_BEAUTY_VIDEO_FILE_UPLOAD               Show2dModelTrainingJobResponseState
 	BEAUTYFACE_ROCESSING                        Show2dModelTrainingJobResponseState
+	WAIT_TEST_VIDEO_CHECK                       Show2dModelTrainingJobResponseState
+	TEST_VIDEO_CHECK_PROCESSING                 Show2dModelTrainingJobResponseState
+	TEST_VIDEO_CHECK_SUCCESS                    Show2dModelTrainingJobResponseState
+	TEST_VIDEO_CHECK_FAILED                     Show2dModelTrainingJobResponseState
+	VIDEO_ANALYZE_PROCESSING                    Show2dModelTrainingJobResponseState
+	VIDEO_ANALYZE_SUCCESS                       Show2dModelTrainingJobResponseState
+	VIDEO_ANALYZE_FAILED                        Show2dModelTrainingJobResponseState
+	ACTION_MARKING                              Show2dModelTrainingJobResponseState
+	ACTION_MARK_SUCCESS                         Show2dModelTrainingJobResponseState
+	ACTION_MARK_FAILED                          Show2dModelTrainingJobResponseState
+	ACTION_MARK_UPLOADED                        Show2dModelTrainingJobResponseState
+	WAIT_GENERATE_ACTION_MARK                   Show2dModelTrainingJobResponseState
+	MANUL_STOP_ACTION_MARK                      Show2dModelTrainingJobResponseState
 }
 
 func GetShow2dModelTrainingJobResponseStateEnum() Show2dModelTrainingJobResponseStateEnum {
@@ -355,6 +403,45 @@ func GetShow2dModelTrainingJobResponseStateEnum() Show2dModelTrainingJobResponse
 		BEAUTYFACE_ROCESSING: Show2dModelTrainingJobResponseState{
 			value: "BEAUTYFACE_ROCESSING",
 		},
+		WAIT_TEST_VIDEO_CHECK: Show2dModelTrainingJobResponseState{
+			value: "WAIT_TEST_VIDEO_CHECK",
+		},
+		TEST_VIDEO_CHECK_PROCESSING: Show2dModelTrainingJobResponseState{
+			value: "TEST_VIDEO_CHECK_PROCESSING",
+		},
+		TEST_VIDEO_CHECK_SUCCESS: Show2dModelTrainingJobResponseState{
+			value: "TEST_VIDEO_CHECK_SUCCESS",
+		},
+		TEST_VIDEO_CHECK_FAILED: Show2dModelTrainingJobResponseState{
+			value: "TEST_VIDEO_CHECK_FAILED",
+		},
+		VIDEO_ANALYZE_PROCESSING: Show2dModelTrainingJobResponseState{
+			value: "VIDEO_ANALYZE_PROCESSING",
+		},
+		VIDEO_ANALYZE_SUCCESS: Show2dModelTrainingJobResponseState{
+			value: "VIDEO_ANALYZE_SUCCESS",
+		},
+		VIDEO_ANALYZE_FAILED: Show2dModelTrainingJobResponseState{
+			value: "VIDEO_ANALYZE_FAILED",
+		},
+		ACTION_MARKING: Show2dModelTrainingJobResponseState{
+			value: "ACTION_MARKING",
+		},
+		ACTION_MARK_SUCCESS: Show2dModelTrainingJobResponseState{
+			value: "ACTION_MARK_SUCCESS",
+		},
+		ACTION_MARK_FAILED: Show2dModelTrainingJobResponseState{
+			value: "ACTION_MARK_FAILED",
+		},
+		ACTION_MARK_UPLOADED: Show2dModelTrainingJobResponseState{
+			value: "ACTION_MARK_UPLOADED",
+		},
+		WAIT_GENERATE_ACTION_MARK: Show2dModelTrainingJobResponseState{
+			value: "WAIT_GENERATE_ACTION_MARK",
+		},
+		MANUL_STOP_ACTION_MARK: Show2dModelTrainingJobResponseState{
+			value: "MANUL_STOP_ACTION_MARK",
+		},
 	}
 }
 
@@ -393,6 +480,7 @@ type Show2dModelTrainingJobResponseModelVersionEnum struct {
 	V2   Show2dModelTrainingJobResponseModelVersion
 	V3   Show2dModelTrainingJobResponseModelVersion
 	V3_2 Show2dModelTrainingJobResponseModelVersion
+	V3_3 Show2dModelTrainingJobResponseModelVersion
 }
 
 func GetShow2dModelTrainingJobResponseModelVersionEnum() Show2dModelTrainingJobResponseModelVersionEnum {
@@ -405,6 +493,9 @@ func GetShow2dModelTrainingJobResponseModelVersionEnum() Show2dModelTrainingJobR
 		},
 		V3_2: Show2dModelTrainingJobResponseModelVersion{
 			value: "V3.2",
+		},
+		V3_3: Show2dModelTrainingJobResponseModelVersion{
+			value: "V3.3",
 		},
 	}
 }
@@ -512,6 +603,116 @@ func (c Show2dModelTrainingJobResponseAudioSourceType) MarshalJSON() ([]byte, er
 }
 
 func (c *Show2dModelTrainingJobResponseAudioSourceType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type Show2dModelTrainingJobResponseTrainVideoRotationState struct {
+	value string
+}
+
+type Show2dModelTrainingJobResponseTrainVideoRotationStateEnum struct {
+	WAITING    Show2dModelTrainingJobResponseTrainVideoRotationState
+	PROCESSING Show2dModelTrainingJobResponseTrainVideoRotationState
+	SUCCESS    Show2dModelTrainingJobResponseTrainVideoRotationState
+	FAILED     Show2dModelTrainingJobResponseTrainVideoRotationState
+}
+
+func GetShow2dModelTrainingJobResponseTrainVideoRotationStateEnum() Show2dModelTrainingJobResponseTrainVideoRotationStateEnum {
+	return Show2dModelTrainingJobResponseTrainVideoRotationStateEnum{
+		WAITING: Show2dModelTrainingJobResponseTrainVideoRotationState{
+			value: "WAITING",
+		},
+		PROCESSING: Show2dModelTrainingJobResponseTrainVideoRotationState{
+			value: "PROCESSING",
+		},
+		SUCCESS: Show2dModelTrainingJobResponseTrainVideoRotationState{
+			value: "SUCCESS",
+		},
+		FAILED: Show2dModelTrainingJobResponseTrainVideoRotationState{
+			value: "FAILED",
+		},
+	}
+}
+
+func (c Show2dModelTrainingJobResponseTrainVideoRotationState) Value() string {
+	return c.value
+}
+
+func (c Show2dModelTrainingJobResponseTrainVideoRotationState) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *Show2dModelTrainingJobResponseTrainVideoRotationState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type Show2dModelTrainingJobResponseActionVideoRotationState struct {
+	value string
+}
+
+type Show2dModelTrainingJobResponseActionVideoRotationStateEnum struct {
+	WAITING    Show2dModelTrainingJobResponseActionVideoRotationState
+	PROCESSING Show2dModelTrainingJobResponseActionVideoRotationState
+	SUCCESS    Show2dModelTrainingJobResponseActionVideoRotationState
+	FAILED     Show2dModelTrainingJobResponseActionVideoRotationState
+}
+
+func GetShow2dModelTrainingJobResponseActionVideoRotationStateEnum() Show2dModelTrainingJobResponseActionVideoRotationStateEnum {
+	return Show2dModelTrainingJobResponseActionVideoRotationStateEnum{
+		WAITING: Show2dModelTrainingJobResponseActionVideoRotationState{
+			value: "WAITING",
+		},
+		PROCESSING: Show2dModelTrainingJobResponseActionVideoRotationState{
+			value: "PROCESSING",
+		},
+		SUCCESS: Show2dModelTrainingJobResponseActionVideoRotationState{
+			value: "SUCCESS",
+		},
+		FAILED: Show2dModelTrainingJobResponseActionVideoRotationState{
+			value: "FAILED",
+		},
+	}
+}
+
+func (c Show2dModelTrainingJobResponseActionVideoRotationState) Value() string {
+	return c.value
+}
+
+func (c Show2dModelTrainingJobResponseActionVideoRotationState) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *Show2dModelTrainingJobResponseActionVideoRotationState) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

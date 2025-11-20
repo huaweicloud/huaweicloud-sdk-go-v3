@@ -1317,6 +1317,86 @@ func (i *UpdateDeviceShadowDesiredDataInvoker) Invoke() (*model.UpdateDeviceShad
 	}
 }
 
+type CreateDomainConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDomainConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDomainConfigurationInvoker) Invoke() (*model.CreateDomainConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDomainConfigurationResponse), nil
+	}
+}
+
+type DeleteDomainConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDomainConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDomainConfigurationInvoker) Invoke() (*model.DeleteDomainConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDomainConfigurationResponse), nil
+	}
+}
+
+type ListDomainConfigurationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDomainConfigurationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDomainConfigurationsInvoker) Invoke() (*model.ListDomainConfigurationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDomainConfigurationsResponse), nil
+	}
+}
+
+type ShowDomainConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDomainConfigurationInvoker) Invoke() (*model.ShowDomainConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainConfigurationResponse), nil
+	}
+}
+
+type UpdateDomainConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDomainConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDomainConfigurationInvoker) Invoke() (*model.UpdateDomainConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDomainConfigurationResponse), nil
+	}
+}
+
 type CreateRoutingFlowControlPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2402,6 +2482,70 @@ func (i *UpdateSecurityProfileInvoker) Invoke() (*model.UpdateSecurityProfileRes
 		return nil, err
 	} else {
 		return result.(*model.UpdateSecurityProfileResponse), nil
+	}
+}
+
+type CreateServerCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateServerCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateServerCertificateInvoker) Invoke() (*model.CreateServerCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateServerCertificateResponse), nil
+	}
+}
+
+type DeleteServerCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteServerCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteServerCertificateInvoker) Invoke() (*model.DeleteServerCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteServerCertificateResponse), nil
+	}
+}
+
+type ListServerCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListServerCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListServerCertificateInvoker) Invoke() (*model.ListServerCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListServerCertificateResponse), nil
+	}
+}
+
+type ShowServerCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowServerCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowServerCertificateInvoker) Invoke() (*model.ShowServerCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowServerCertificateResponse), nil
 	}
 }
 

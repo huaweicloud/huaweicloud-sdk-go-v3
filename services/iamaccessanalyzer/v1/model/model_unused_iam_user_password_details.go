@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// UnusedIamUserPasswordDetails 未使用的用户密码详情。
+// UnusedIamUserPasswordDetails 未使用用户密码分析详细结果。
 type UnusedIamUserPasswordDetails struct {
 
 	// 用户密码的最后访问时间。

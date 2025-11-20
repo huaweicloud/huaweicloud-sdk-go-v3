@@ -12,7 +12,7 @@ import (
 // UntagResourceRequest Request Object
 type UntagResourceRequest struct {
 
-	// 资源类型。
+	// 资源类型。 - analyzers：分析器
 	ResourceType UntagResourceRequestResourceType `json:"resource_type"`
 
 	// 资源的唯一标识符。

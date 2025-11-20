@@ -197,6 +197,22 @@ func (i *ListTranscodeDataInvoker) Invoke() (*model.ListTranscodeDataResponse, e
 	}
 }
 
+type ListTranscodeTaskDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTranscodeTaskDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTranscodeTaskDetailInvoker) Invoke() (*model.ListTranscodeTaskDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTranscodeTaskDetailResponse), nil
+	}
+}
+
 type ListUsersOfStreamInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -27,7 +27,7 @@ type ShowBackupInfoByBackupIdResponse struct {
 	// **参数解释** 备份状态 **取值范围** 字符长度0-65535位
 	Status *string `json:"status,omitempty"`
 
-	// **参数解释** 创建时间 **取值范围** 取值0-2147483647
+	// **参数解释** 资源大小 **取值范围** 取值0-2147483647
 	ResourceSize *int32 `json:"resource_size,omitempty"`
 
 	// **参数解释** 资源ID 对应host主机ID **取值范围** 字符长度0-65535位

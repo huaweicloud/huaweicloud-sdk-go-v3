@@ -124,6 +124,27 @@ func (c *IAMAccessAnalyzerClient) StartResourceScanInvoker(request *model.StartR
 	return &StartResourceScanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateAnalyzer 更新指定分析器的配置
+//
+// 更新指定分析器的配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IAMAccessAnalyzerClient) UpdateAnalyzer(request *model.UpdateAnalyzerRequest) (*model.UpdateAnalyzerResponse, error) {
+	requestDef := GenReqDefForUpdateAnalyzer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAnalyzerResponse), nil
+	}
+}
+
+// UpdateAnalyzerInvoker 更新指定分析器的配置
+func (c *IAMAccessAnalyzerClient) UpdateAnalyzerInvoker(request *model.UpdateAnalyzerRequest) *UpdateAnalyzerInvoker {
+	requestDef := GenReqDefForUpdateAnalyzer()
+	return &UpdateAnalyzerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ApplyArchiveRule 应用存档规则
 //
 // 以追溯方式将存档规则应用于符合存档规则条件的现有结果。
@@ -250,6 +271,69 @@ func (c *IAMAccessAnalyzerClient) UpdateArchiveRuleInvoker(request *model.Update
 	return &UpdateArchiveRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateResourceConfigurations 创建资源分析配置
+//
+// 创建指定分析器的资源分析配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IAMAccessAnalyzerClient) CreateResourceConfigurations(request *model.CreateResourceConfigurationsRequest) (*model.CreateResourceConfigurationsResponse, error) {
+	requestDef := GenReqDefForCreateResourceConfigurations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateResourceConfigurationsResponse), nil
+	}
+}
+
+// CreateResourceConfigurationsInvoker 创建资源分析配置
+func (c *IAMAccessAnalyzerClient) CreateResourceConfigurationsInvoker(request *model.CreateResourceConfigurationsRequest) *CreateResourceConfigurationsInvoker {
+	requestDef := GenReqDefForCreateResourceConfigurations()
+	return &CreateResourceConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteResourceConfigurations 删除资源分析配置
+//
+// 删除指定分析器的资源分析配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IAMAccessAnalyzerClient) DeleteResourceConfigurations(request *model.DeleteResourceConfigurationsRequest) (*model.DeleteResourceConfigurationsResponse, error) {
+	requestDef := GenReqDefForDeleteResourceConfigurations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteResourceConfigurationsResponse), nil
+	}
+}
+
+// DeleteResourceConfigurationsInvoker 删除资源分析配置
+func (c *IAMAccessAnalyzerClient) DeleteResourceConfigurationsInvoker(request *model.DeleteResourceConfigurationsRequest) *DeleteResourceConfigurationsInvoker {
+	requestDef := GenReqDefForDeleteResourceConfigurations()
+	return &DeleteResourceConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResourceConfigurations 列举资源分析配置
+//
+// 列举指定分析器的资源分析配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IAMAccessAnalyzerClient) ListResourceConfigurations(request *model.ListResourceConfigurationsRequest) (*model.ListResourceConfigurationsResponse, error) {
+	requestDef := GenReqDefForListResourceConfigurations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourceConfigurationsResponse), nil
+	}
+}
+
+// ListResourceConfigurationsInvoker 列举资源分析配置
+func (c *IAMAccessAnalyzerClient) ListResourceConfigurationsInvoker(request *model.ListResourceConfigurationsRequest) *ListResourceConfigurationsInvoker {
+	requestDef := GenReqDefForListResourceConfigurations()
+	return &ListResourceConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListFindings 检索指定分析器生成的访问分析结果列表
 //
 // 检索指定分析器生成的访问分析结果列表。
@@ -311,6 +395,111 @@ func (c *IAMAccessAnalyzerClient) UpdateFindings(request *model.UpdateFindingsRe
 func (c *IAMAccessAnalyzerClient) UpdateFindingsInvoker(request *model.UpdateFindingsRequest) *UpdateFindingsInvoker {
 	requestDef := GenReqDefForUpdateFindings()
 	return &UpdateFindingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateNotificationSetting 创建消息通知配置
+//
+// 创建消息通知配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IAMAccessAnalyzerClient) CreateNotificationSetting(request *model.CreateNotificationSettingRequest) (*model.CreateNotificationSettingResponse, error) {
+	requestDef := GenReqDefForCreateNotificationSetting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateNotificationSettingResponse), nil
+	}
+}
+
+// CreateNotificationSettingInvoker 创建消息通知配置
+func (c *IAMAccessAnalyzerClient) CreateNotificationSettingInvoker(request *model.CreateNotificationSettingRequest) *CreateNotificationSettingInvoker {
+	requestDef := GenReqDefForCreateNotificationSetting()
+	return &CreateNotificationSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteNotificationSetting 删除消息通知配置
+//
+// 删除消息通知配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IAMAccessAnalyzerClient) DeleteNotificationSetting(request *model.DeleteNotificationSettingRequest) (*model.DeleteNotificationSettingResponse, error) {
+	requestDef := GenReqDefForDeleteNotificationSetting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteNotificationSettingResponse), nil
+	}
+}
+
+// DeleteNotificationSettingInvoker 删除消息通知配置
+func (c *IAMAccessAnalyzerClient) DeleteNotificationSettingInvoker(request *model.DeleteNotificationSettingRequest) *DeleteNotificationSettingInvoker {
+	requestDef := GenReqDefForDeleteNotificationSetting()
+	return &DeleteNotificationSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListNotificationSettings 获取消息通知配置列表
+//
+// 获取消息通知配置列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IAMAccessAnalyzerClient) ListNotificationSettings(request *model.ListNotificationSettingsRequest) (*model.ListNotificationSettingsResponse, error) {
+	requestDef := GenReqDefForListNotificationSettings()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNotificationSettingsResponse), nil
+	}
+}
+
+// ListNotificationSettingsInvoker 获取消息通知配置列表
+func (c *IAMAccessAnalyzerClient) ListNotificationSettingsInvoker(request *model.ListNotificationSettingsRequest) *ListNotificationSettingsInvoker {
+	requestDef := GenReqDefForListNotificationSettings()
+	return &ListNotificationSettingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowNotificationSetting 获取消息通知配置
+//
+// 获取消息通知配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IAMAccessAnalyzerClient) ShowNotificationSetting(request *model.ShowNotificationSettingRequest) (*model.ShowNotificationSettingResponse, error) {
+	requestDef := GenReqDefForShowNotificationSetting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowNotificationSettingResponse), nil
+	}
+}
+
+// ShowNotificationSettingInvoker 获取消息通知配置
+func (c *IAMAccessAnalyzerClient) ShowNotificationSettingInvoker(request *model.ShowNotificationSettingRequest) *ShowNotificationSettingInvoker {
+	requestDef := GenReqDefForShowNotificationSetting()
+	return &ShowNotificationSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateNotificationSetting 更新消息通知配置
+//
+// 更新消息通知配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IAMAccessAnalyzerClient) UpdateNotificationSetting(request *model.UpdateNotificationSettingRequest) (*model.UpdateNotificationSettingResponse, error) {
+	requestDef := GenReqDefForUpdateNotificationSetting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateNotificationSettingResponse), nil
+	}
+}
+
+// UpdateNotificationSettingInvoker 更新消息通知配置
+func (c *IAMAccessAnalyzerClient) UpdateNotificationSettingInvoker(request *model.UpdateNotificationSettingRequest) *UpdateNotificationSettingInvoker {
+	requestDef := GenReqDefForUpdateNotificationSetting()
+	return &UpdateNotificationSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateAccessPreview 创建访问预览
