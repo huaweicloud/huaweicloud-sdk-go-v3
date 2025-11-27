@@ -27,7 +27,7 @@ type WtpProtectHostResponseInfo struct {
 	// **参数解释**: 服务器组名称 **取值范围**: 字符长度0-256位
 	GroupName *string `json:"group_name,omitempty"`
 
-	// 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+	// **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
 	AssetValue *string `json:"asset_value,omitempty"`
 
 	// **参数解释**： 操作系统位数 **取值范围**： 字符长度1-64位

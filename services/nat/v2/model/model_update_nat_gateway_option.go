@@ -9,7 +9,6 @@ import (
 	"strings"
 )
 
-// UpdateNatGatewayOption 更新公网NAT网关实例的请求体。
 type UpdateNatGatewayOption struct {
 
 	// 公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文。
@@ -18,10 +17,12 @@ type UpdateNatGatewayOption struct {
 	// 公网NAT网关的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
 	Description *string `json:"description,omitempty"`
 
-	// 公网NAT网关的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000
+	// 公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
 	Spec *UpdateNatGatewayOptionSpec `json:"spec,omitempty"`
 
 	SessionConf *SessionConfiguration `json:"session_conf,omitempty"`
+
+	PrepaidOptions *UpdateNatGatewayOptionPrepaidOptions `json:"prepaid_options,omitempty"`
 }
 
 func (o UpdateNatGatewayOption) String() string {
@@ -42,6 +43,7 @@ type UpdateNatGatewayOptionSpecEnum struct {
 	E_2 UpdateNatGatewayOptionSpec
 	E_3 UpdateNatGatewayOptionSpec
 	E_4 UpdateNatGatewayOptionSpec
+	E_5 UpdateNatGatewayOptionSpec
 }
 
 func GetUpdateNatGatewayOptionSpecEnum() UpdateNatGatewayOptionSpecEnum {
@@ -57,6 +59,9 @@ func GetUpdateNatGatewayOptionSpecEnum() UpdateNatGatewayOptionSpecEnum {
 		},
 		E_4: UpdateNatGatewayOptionSpec{
 			value: "4",
+		},
+		E_5: UpdateNatGatewayOptionSpec{
+			value: "5",
 		},
 	}
 }

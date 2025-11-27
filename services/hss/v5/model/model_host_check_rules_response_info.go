@@ -45,6 +45,9 @@ type HostCheckRulesResponseInfo struct {
 	// **参数解释** 该检查项的修复 & 验证 按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
 	EnableClick *bool `json:"enable_click,omitempty"`
 
+	// **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
+	EnableVerify *bool `json:"enable_verify,omitempty"`
+
 	// **参数解释** 已忽略检查项是否可点击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
 	CancelIgnoreEnableClick *bool `json:"cancel_ignore_enable_click,omitempty"`
 

@@ -1,9 +1,10 @@
 package model
 
 import (
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
-
 	"strings"
 )
 
@@ -39,6 +40,9 @@ type PrivateSnat struct {
 
 	// 企业项目id
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 私网NAT的SNAT规则状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+	Status *PrivateSnatStatus `json:"status,omitempty"`
 }
 
 func (o PrivateSnat) String() string {
@@ -48,4 +52,55 @@ func (o PrivateSnat) String() string {
 	}
 
 	return strings.Join([]string{"PrivateSnat", string(data)}, " ")
+}
+
+type PrivateSnatStatus struct {
+	value string
+}
+
+type PrivateSnatStatusEnum struct {
+	ACTIVE   PrivateSnatStatus
+	FROZEN   PrivateSnatStatus
+	INACTIVE PrivateSnatStatus
+}
+
+func GetPrivateSnatStatusEnum() PrivateSnatStatusEnum {
+	return PrivateSnatStatusEnum{
+		ACTIVE: PrivateSnatStatus{
+			value: "ACTIVE",
+		},
+		FROZEN: PrivateSnatStatus{
+			value: "FROZEN",
+		},
+		INACTIVE: PrivateSnatStatus{
+			value: "INACTIVE",
+		},
+	}
+}
+
+func (c PrivateSnatStatus) Value() string {
+	return c.value
+}
+
+func (c PrivateSnatStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *PrivateSnatStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

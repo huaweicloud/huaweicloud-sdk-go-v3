@@ -9,10 +9,10 @@ import (
 type SecurityProfile struct {
 
 	// 安全态势感知项配置值名称
-	Key *string `json:"key,omitempty"`
+	Key string `json:"key"`
 
 	// 安全态势感知项配置值，数据格式参考创建安全态势感知接口说明
-	Value *interface{} `json:"value,omitempty"`
+	Value *interface{} `json:"value"`
 }
 
 func (o SecurityProfile) String() string {

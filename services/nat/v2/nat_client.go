@@ -19,6 +19,246 @@ func NatClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// BatchCreateDeleteTransitSubnetTags 批量添加删除中转子网标签
+//
+// - 为指定中转子网实例批量添加或删除标签
+// - 标签管理服务需要使用该接口批量管理中转子网实例的标签。
+// - 一个中转子网上最多有20个标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *NatClient) BatchCreateDeleteTransitSubnetTags(request *model.BatchCreateDeleteTransitSubnetTagsRequest) (*model.BatchCreateDeleteTransitSubnetTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateDeleteTransitSubnetTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateDeleteTransitSubnetTagsResponse), nil
+	}
+}
+
+// BatchCreateDeleteTransitSubnetTagsInvoker 批量添加删除中转子网标签
+func (c *NatClient) BatchCreateDeleteTransitSubnetTagsInvoker(request *model.BatchCreateDeleteTransitSubnetTagsRequest) *BatchCreateDeleteTransitSubnetTagsInvoker {
+	requestDef := GenReqDefForBatchCreateDeleteTransitSubnetTags()
+	return &BatchCreateDeleteTransitSubnetTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTransitSubnet 创建中转子网
+//
+// 创建中转子网。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *NatClient) CreateTransitSubnet(request *model.CreateTransitSubnetRequest) (*model.CreateTransitSubnetResponse, error) {
+	requestDef := GenReqDefForCreateTransitSubnet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTransitSubnetResponse), nil
+	}
+}
+
+// CreateTransitSubnetInvoker 创建中转子网
+func (c *NatClient) CreateTransitSubnetInvoker(request *model.CreateTransitSubnetRequest) *CreateTransitSubnetInvoker {
+	requestDef := GenReqDefForCreateTransitSubnet()
+	return &CreateTransitSubnetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTransitSubnetTag 添加中转子网标签
+//
+// - 为指定中转子网添加标签
+// - 一个中转子网上最多有20个标签。
+// - 此接口为幂等接口：
+// - 创建时，如果创建的标签已经存在（key相同），则覆盖。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *NatClient) CreateTransitSubnetTag(request *model.CreateTransitSubnetTagRequest) (*model.CreateTransitSubnetTagResponse, error) {
+	requestDef := GenReqDefForCreateTransitSubnetTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTransitSubnetTagResponse), nil
+	}
+}
+
+// CreateTransitSubnetTagInvoker 添加中转子网标签
+func (c *NatClient) CreateTransitSubnetTagInvoker(request *model.CreateTransitSubnetTagRequest) *CreateTransitSubnetTagInvoker {
+	requestDef := GenReqDefForCreateTransitSubnetTag()
+	return &CreateTransitSubnetTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTransitSubnet 删除中转子网
+//
+// 删除中转子网。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *NatClient) DeleteTransitSubnet(request *model.DeleteTransitSubnetRequest) (*model.DeleteTransitSubnetResponse, error) {
+	requestDef := GenReqDefForDeleteTransitSubnet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTransitSubnetResponse), nil
+	}
+}
+
+// DeleteTransitSubnetInvoker 删除中转子网
+func (c *NatClient) DeleteTransitSubnetInvoker(request *model.DeleteTransitSubnetRequest) *DeleteTransitSubnetInvoker {
+	requestDef := GenReqDefForDeleteTransitSubnet()
+	return &DeleteTransitSubnetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTransitSubnetTag 删除中转子网标签
+//
+// - 幂等接口：
+// - 删除时，不对标签字符集做校验，调用接口前必须要做encodeURI，服务端需要对接口uri做decodeURI。删除的key不存在报404，key不能为空或者空字符串。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *NatClient) DeleteTransitSubnetTag(request *model.DeleteTransitSubnetTagRequest) (*model.DeleteTransitSubnetTagResponse, error) {
+	requestDef := GenReqDefForDeleteTransitSubnetTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTransitSubnetTagResponse), nil
+	}
+}
+
+// DeleteTransitSubnetTagInvoker 删除中转子网标签
+func (c *NatClient) DeleteTransitSubnetTagInvoker(request *model.DeleteTransitSubnetTagRequest) *DeleteTransitSubnetTagInvoker {
+	requestDef := GenReqDefForDeleteTransitSubnetTag()
+	return &DeleteTransitSubnetTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTransitSubnet 查询中转子网列表
+//
+// 查询中转子网列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *NatClient) ListTransitSubnet(request *model.ListTransitSubnetRequest) (*model.ListTransitSubnetResponse, error) {
+	requestDef := GenReqDefForListTransitSubnet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTransitSubnetResponse), nil
+	}
+}
+
+// ListTransitSubnetInvoker 查询中转子网列表
+func (c *NatClient) ListTransitSubnetInvoker(request *model.ListTransitSubnetRequest) *ListTransitSubnetInvoker {
+	requestDef := GenReqDefForListTransitSubnet()
+	return &ListTransitSubnetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTransitSubnetTags 查询中转子网项目标签
+//
+// - 查询租户在指定Project的所有中转子网标签集合。
+// - 标签管理服务需要能够列出当前租户全部已使用的中转子网标签集合，为打中转子网标签和过滤中转子网实例时提供标签联想功能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *NatClient) ListTransitSubnetTags(request *model.ListTransitSubnetTagsRequest) (*model.ListTransitSubnetTagsResponse, error) {
+	requestDef := GenReqDefForListTransitSubnetTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTransitSubnetTagsResponse), nil
+	}
+}
+
+// ListTransitSubnetTagsInvoker 查询中转子网项目标签
+func (c *NatClient) ListTransitSubnetTagsInvoker(request *model.ListTransitSubnetTagsRequest) *ListTransitSubnetTagsInvoker {
+	requestDef := GenReqDefForListTransitSubnetTags()
+	return &ListTransitSubnetTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTransitSubnetsByTags 查询中转子网实例
+//
+// - 使用标签过滤中转子网实例。
+// - 标签管理服务需要提供按标签过滤中转子网服务实例并汇总显示在列表中，需要中转子网服务提供查询能力。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *NatClient) ListTransitSubnetsByTags(request *model.ListTransitSubnetsByTagsRequest) (*model.ListTransitSubnetsByTagsResponse, error) {
+	requestDef := GenReqDefForListTransitSubnetsByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTransitSubnetsByTagsResponse), nil
+	}
+}
+
+// ListTransitSubnetsByTagsInvoker 查询中转子网实例
+func (c *NatClient) ListTransitSubnetsByTagsInvoker(request *model.ListTransitSubnetsByTagsRequest) *ListTransitSubnetsByTagsInvoker {
+	requestDef := GenReqDefForListTransitSubnetsByTags()
+	return &ListTransitSubnetsByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTransitSubnet 查询指定的中转子网详情
+//
+// 查询指定的中转子网详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *NatClient) ShowTransitSubnet(request *model.ShowTransitSubnetRequest) (*model.ShowTransitSubnetResponse, error) {
+	requestDef := GenReqDefForShowTransitSubnet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTransitSubnetResponse), nil
+	}
+}
+
+// ShowTransitSubnetInvoker 查询指定的中转子网详情
+func (c *NatClient) ShowTransitSubnetInvoker(request *model.ShowTransitSubnetRequest) *ShowTransitSubnetInvoker {
+	requestDef := GenReqDefForShowTransitSubnet()
+	return &ShowTransitSubnetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTransitSubnetTags 查询中转子网标签
+//
+// - 查询指定中转子网实例的标签信息。
+// - 标签管理服务需要使用该接口查询指定中转子网实例的全部标签数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *NatClient) ShowTransitSubnetTags(request *model.ShowTransitSubnetTagsRequest) (*model.ShowTransitSubnetTagsResponse, error) {
+	requestDef := GenReqDefForShowTransitSubnetTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTransitSubnetTagsResponse), nil
+	}
+}
+
+// ShowTransitSubnetTagsInvoker 查询中转子网标签
+func (c *NatClient) ShowTransitSubnetTagsInvoker(request *model.ShowTransitSubnetTagsRequest) *ShowTransitSubnetTagsInvoker {
+	requestDef := GenReqDefForShowTransitSubnetTags()
+	return &ShowTransitSubnetTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTransitSubnet 更新中转子网
+//
+// 更新指定的中转子网。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *NatClient) UpdateTransitSubnet(request *model.UpdateTransitSubnetRequest) (*model.UpdateTransitSubnetResponse, error) {
+	requestDef := GenReqDefForUpdateTransitSubnet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTransitSubnetResponse), nil
+	}
+}
+
+// UpdateTransitSubnetInvoker 更新中转子网
+func (c *NatClient) UpdateTransitSubnetInvoker(request *model.UpdateTransitSubnetRequest) *UpdateTransitSubnetInvoker {
+	requestDef := GenReqDefForUpdateTransitSubnet()
+	return &UpdateTransitSubnetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchCreateNatGatewayDnatRules 批量创建DNAT规则
 //
 // 批量创建DNAT规则。
@@ -624,6 +864,27 @@ func (c *NatClient) ListNatGatewayByTagInvoker(request *model.ListNatGatewayByTa
 	return &ListNatGatewayByTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListNatGatewaySpecs 支持创建的NAT网关规格列表
+//
+// 支持创建的NAT网关规格列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *NatClient) ListNatGatewaySpecs(request *model.ListNatGatewaySpecsRequest) (*model.ListNatGatewaySpecsResponse, error) {
+	requestDef := GenReqDefForListNatGatewaySpecs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNatGatewaySpecsResponse), nil
+	}
+}
+
+// ListNatGatewaySpecsInvoker 支持创建的NAT网关规格列表
+func (c *NatClient) ListNatGatewaySpecsInvoker(request *model.ListNatGatewaySpecsRequest) *ListNatGatewaySpecsInvoker {
+	requestDef := GenReqDefForListNatGatewaySpecs()
+	return &ListNatGatewaySpecsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListNatGatewayTag 查询公网NAT网关项目标签
 //
 // - 查询租户在指定项目和公网NAT网关实例类型的所有标签集合。
@@ -730,6 +991,27 @@ func (c *NatClient) ListPrivateNatsByTags(request *model.ListPrivateNatsByTagsRe
 func (c *NatClient) ListPrivateNatsByTagsInvoker(request *model.ListPrivateNatsByTagsRequest) *ListPrivateNatsByTagsInvoker {
 	requestDef := GenReqDefForListPrivateNatsByTags()
 	return &ListPrivateNatsByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSpecs 查询项目支持的网关规格列表
+//
+// 查询项目支持的网关规格列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *NatClient) ListSpecs(request *model.ListSpecsRequest) (*model.ListSpecsResponse, error) {
+	requestDef := GenReqDefForListSpecs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSpecsResponse), nil
+	}
+}
+
+// ListSpecsInvoker 查询项目支持的网关规格列表
+func (c *NatClient) ListSpecsInvoker(request *model.ListSpecsRequest) *ListSpecsInvoker {
+	requestDef := GenReqDefForListSpecs()
+	return &ListSpecsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowNatGateway 查询指定的公网NAT网关详情

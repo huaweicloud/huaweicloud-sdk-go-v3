@@ -12,7 +12,7 @@ import (
 // ListServersRequest Request Object
 type ListServersRequest struct {
 
-	// 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready: 迁移演练已就绪 premiging: 迁移演练中 premiged: 迁移演练已完成 premigfailed: 迁移演练失败
+	// 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready：迁移演练就绪 premiged：迁移演练完成 premigfailed：迁移演练失败 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 error：错误
 	State *ListServersRequestState `json:"state,omitempty"`
 
 	// 源端服务器名称
@@ -69,17 +69,16 @@ type ListServersRequestStateEnum struct {
 	STOPPED      ListServersRequestState
 	SKIPPING     ListServersRequestState
 	DELETING     ListServersRequestState
-	ERROR        ListServersRequestState
-	CLONING      ListServersRequestState
-	CUTOVERING   ListServersRequestState
-	FINISHED     ListServersRequestState
 	CLEARING     ListServersRequestState
 	CLEARED      ListServersRequestState
 	CLEARFAILED  ListServersRequestState
 	PREMIGREADY  ListServersRequestState
-	PREMIGING    ListServersRequestState
 	PREMIGED     ListServersRequestState
 	PREMIGFAILED ListServersRequestState
+	CLONING      ListServersRequestState
+	CUTOVERING   ListServersRequestState
+	FINISHED     ListServersRequestState
+	ERROR        ListServersRequestState
 }
 
 func GetListServersRequestStateEnum() ListServersRequestStateEnum {
@@ -111,18 +110,6 @@ func GetListServersRequestStateEnum() ListServersRequestStateEnum {
 		DELETING: ListServersRequestState{
 			value: "deleting",
 		},
-		ERROR: ListServersRequestState{
-			value: "error",
-		},
-		CLONING: ListServersRequestState{
-			value: "cloning",
-		},
-		CUTOVERING: ListServersRequestState{
-			value: "cutovering",
-		},
-		FINISHED: ListServersRequestState{
-			value: "finished",
-		},
 		CLEARING: ListServersRequestState{
 			value: "clearing",
 		},
@@ -135,14 +122,23 @@ func GetListServersRequestStateEnum() ListServersRequestStateEnum {
 		PREMIGREADY: ListServersRequestState{
 			value: "premigready",
 		},
-		PREMIGING: ListServersRequestState{
-			value: "premiging",
-		},
 		PREMIGED: ListServersRequestState{
 			value: "premiged",
 		},
 		PREMIGFAILED: ListServersRequestState{
 			value: "premigfailed",
+		},
+		CLONING: ListServersRequestState{
+			value: "cloning",
+		},
+		CUTOVERING: ListServersRequestState{
+			value: "cutovering",
+		},
+		FINISHED: ListServersRequestState{
+			value: "finished",
+		},
+		ERROR: ListServersRequestState{
+			value: "error",
 		},
 	}
 }

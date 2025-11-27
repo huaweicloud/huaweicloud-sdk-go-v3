@@ -18,7 +18,7 @@ type UpdatePrivateNatOption struct {
 	// 私网NAT网关的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
 	Description *string `json:"description,omitempty"`
 
-	// 私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
+	// 私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
 	Spec *UpdatePrivateNatOptionSpec `json:"spec,omitempty"`
 }
 
@@ -36,10 +36,11 @@ type UpdatePrivateNatOptionSpec struct {
 }
 
 type UpdatePrivateNatOptionSpecEnum struct {
-	SMALL       UpdatePrivateNatOptionSpec
-	MEDIUM      UpdatePrivateNatOptionSpec
-	LARGE       UpdatePrivateNatOptionSpec
-	EXTRA_LARGE UpdatePrivateNatOptionSpec
+	SMALL        UpdatePrivateNatOptionSpec
+	MEDIUM       UpdatePrivateNatOptionSpec
+	LARGE        UpdatePrivateNatOptionSpec
+	EXTRA_LARGE  UpdatePrivateNatOptionSpec
+	EXTRA_XLARGE UpdatePrivateNatOptionSpec
 }
 
 func GetUpdatePrivateNatOptionSpecEnum() UpdatePrivateNatOptionSpecEnum {
@@ -55,6 +56,9 @@ func GetUpdatePrivateNatOptionSpecEnum() UpdatePrivateNatOptionSpecEnum {
 		},
 		EXTRA_LARGE: UpdatePrivateNatOptionSpec{
 			value: "Extra-large",
+		},
+		EXTRA_XLARGE: UpdatePrivateNatOptionSpec{
+			value: "Extra-xlarge",
 		},
 	}
 }

@@ -44,7 +44,7 @@ type BatchListResourceResponseData struct {
 	EpName *string `json:"ep_name,omitempty"`
 
 	// **参数解释：** 资源标签。 **取值范围：** 不涉及。
-	Tags *interface{} `json:"tags,omitempty"`
+	Tags *[]TagResponse `json:"tags,omitempty"`
 
 	// **参数解释：** uniagent的id值。 **取值范围：** 不涉及。
 	AgentId *string `json:"agent_id,omitempty"`

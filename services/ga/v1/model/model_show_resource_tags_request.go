@@ -9,7 +9,7 @@ import (
 // ShowResourceTagsRequest Request Object
 type ShowResourceTagsRequest struct {
 
-	// 资源类型。
+	// 资源类型，取值范围： - ga-accelerators：加速实例 - ga-listeners：监听器
 	ResourceType *ResourceType `json:"resource_type"`
 
 	// 资源ID。

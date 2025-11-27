@@ -8,7 +8,7 @@ import (
 
 type BatchScanPrivateImageRequestInfo struct {
 
-	// 仓库类型，现阶段接入了swr镜像仓库，包含如下:   - SWR : SWR镜像仓库
+	// 仓库类型。（该字段已废弃）
 	RepoType *string `json:"repo_type,omitempty"`
 
 	// 要扫描的镜像信息列表，operate_all参数为false时为必填

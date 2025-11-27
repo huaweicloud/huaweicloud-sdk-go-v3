@@ -29,6 +29,8 @@ type ChannelDetail struct {
 	MrsKafkaForwarding *MrsKafkaForwarding `json:"mrs_kafka_forwarding,omitempty"`
 
 	DmsRocketmqForwarding *DmsRocketMqForwarding `json:"dms_rocketmq_forwarding,omitempty"`
+
+	MqttDeviceForwarding *MqttDeviceForwarding `json:"mqtt_device_forwarding,omitempty"`
 }
 
 func (o ChannelDetail) String() string {

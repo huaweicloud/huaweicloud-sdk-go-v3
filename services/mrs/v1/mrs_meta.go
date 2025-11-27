@@ -183,6 +183,22 @@ func GenReqDefForListAllTags() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListAsyncTaskStatus() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/clusters/{cluster_id}/async_task_status/update_ecs_agency").
+		WithResponse(new(model.ListAsyncTaskStatusResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ClusterId").
+		WithJsonTag("cluster_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListClusterTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

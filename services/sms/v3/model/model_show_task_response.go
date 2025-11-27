@@ -58,8 +58,8 @@ type ShowTaskResponse struct {
 
 	TargetServer *TaskTargetServer `json:"target_server,omitempty"`
 
-	// 任务状态
-	State *string `json:"state,omitempty"`
+	// 迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
+	State *ShowTaskResponseState `json:"state,omitempty"`
 
 	// 预估完成时间
 	EstimateCompleteTime *int64 `json:"estimate_complete_time,omitempty"`
@@ -76,7 +76,7 @@ type ShowTaskResponse struct {
 	// 任务结束时间
 	FinishDate *int64 `json:"finish_date,omitempty"`
 
-	// 迁移速率，单位：MB/S
+	// 迁移速率，单位：Mbit/s
 	MigrateSpeed *float64 `json:"migrate_speed,omitempty"`
 
 	// 压缩率
@@ -116,10 +116,10 @@ type ShowTaskResponse struct {
 	// Agent的内存使用值，单位是MB
 	AgentMemUsage *float64 `json:"agent_mem_usage,omitempty"`
 
-	// 主机的磁盘I/O值，单位是MB/s
+	// 主机的磁盘I/O值，单位是Mbit/s
 	TotalDiskIo *float64 `json:"total_disk_io,omitempty"`
 
-	// Agent的磁盘I/O值，单位是MB/s
+	// Agent的磁盘I/O值，单位是Mbit/s
 	AgentDiskIo *float64 `json:"agent_disk_io,omitempty"`
 
 	// 是否开启迁移演练
@@ -279,5 +279,92 @@ func (c *ShowTaskResponsePriority) UnmarshalJSON(b []byte) error {
 		return nil
 	} else {
 		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type ShowTaskResponseState struct {
+	value string
+}
+
+type ShowTaskResponseStateEnum struct {
+	READY           ShowTaskResponseState
+	RUNNING         ShowTaskResponseState
+	SYNCING         ShowTaskResponseState
+	MIGRATE_SUCCESS ShowTaskResponseState
+	SYNC_SUCCESS    ShowTaskResponseState
+	MIGRATE_FAIL    ShowTaskResponseState
+	SYNC_FAIL       ShowTaskResponseState
+	ABORTING        ShowTaskResponseState
+	ABORT           ShowTaskResponseState
+	SKIPPING        ShowTaskResponseState
+	DELETING        ShowTaskResponseState
+	RESETING        ShowTaskResponseState
+}
+
+func GetShowTaskResponseStateEnum() ShowTaskResponseStateEnum {
+	return ShowTaskResponseStateEnum{
+		READY: ShowTaskResponseState{
+			value: "READY",
+		},
+		RUNNING: ShowTaskResponseState{
+			value: "RUNNING",
+		},
+		SYNCING: ShowTaskResponseState{
+			value: "SYNCING",
+		},
+		MIGRATE_SUCCESS: ShowTaskResponseState{
+			value: "MIGRATE_SUCCESS",
+		},
+		SYNC_SUCCESS: ShowTaskResponseState{
+			value: "SYNC_SUCCESS",
+		},
+		MIGRATE_FAIL: ShowTaskResponseState{
+			value: "MIGRATE_FAIL",
+		},
+		SYNC_FAIL: ShowTaskResponseState{
+			value: "SYNC_FAIL",
+		},
+		ABORTING: ShowTaskResponseState{
+			value: "ABORTING",
+		},
+		ABORT: ShowTaskResponseState{
+			value: "ABORT",
+		},
+		SKIPPING: ShowTaskResponseState{
+			value: "SKIPPING",
+		},
+		DELETING: ShowTaskResponseState{
+			value: "DELETING",
+		},
+		RESETING: ShowTaskResponseState{
+			value: "RESETING",
+		},
+	}
+}
+
+func (c ShowTaskResponseState) Value() string {
+	return c.value
+}
+
+func (c ShowTaskResponseState) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowTaskResponseState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
 	}
 }

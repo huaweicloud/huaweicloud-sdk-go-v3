@@ -1090,6 +1090,14 @@ func GenReqDefForShowRefundOrderDetails() *def.HttpRequestDef {
 		WithName("OrderId").
 		WithJsonTag("order_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CustomerId").
+		WithJsonTag("customer_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IndirectPartnerId").
+		WithJsonTag("indirect_partner_id").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

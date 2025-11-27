@@ -24,8 +24,8 @@ type PostTask struct {
 	// 是否自动启动
 	AutoStart *bool `json:"auto_start,omitempty"`
 
-	// 操作系统类型
-	OsType string `json:"os_type"`
+	// 操作系统类型 WINDOWS:Windows系统类型 LINUX:Linux系统类型
+	OsType PostTaskOsType `json:"os_type"`
 
 	SourceServer *SourceServerByTask `json:"source_server"`
 
@@ -118,6 +118,53 @@ func (c PostTaskType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *PostTaskType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type PostTaskOsType struct {
+	value string
+}
+
+type PostTaskOsTypeEnum struct {
+	WINDOWS PostTaskOsType
+	LINUX   PostTaskOsType
+}
+
+func GetPostTaskOsTypeEnum() PostTaskOsTypeEnum {
+	return PostTaskOsTypeEnum{
+		WINDOWS: PostTaskOsType{
+			value: "WINDOWS",
+		},
+		LINUX: PostTaskOsType{
+			value: "LINUX",
+		},
+	}
+}
+
+func (c PostTaskOsType) Value() string {
+	return c.value
+}
+
+func (c PostTaskOsType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *PostTaskOsType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

@@ -8,7 +8,10 @@ import (
 
 // CreateAppWhitelistPolicyResponse Response Object
 type CreateAppWhitelistPolicyResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 策略ID
+	PolicyId       *string `json:"policy_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateAppWhitelistPolicyResponse) String() string {

@@ -18,7 +18,7 @@ type Version struct {
 	// 版本状态。 SUPPORTED表示支持的版本
 	Status *string `json:"status,omitempty"`
 
-	// 版本更新时间。 格式为“yyyy-mm-dd Thh:mm:ssZ”。 其中，T指某个时间的开始；Z指UTC时间。例如：2018-09-30T00:00:00Z
+	// 版本更新时间。 格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指UTC时间。例如：2018-09-30T00:00:00Z
 	Updated *string `json:"updated,omitempty"`
 }
 

@@ -27,7 +27,7 @@ type UpdateTaskSpeedReq struct {
 	// 迁移或同步时，具体的迁移详情
 	ProcessTrace string `json:"process_trace"`
 
-	// 实施迁移速率，单位Mb/s
+	// 实施迁移速率，单位Mbit/s
 	MigrateSpeed *float64 `json:"migrate_speed,omitempty"`
 
 	// 实施文件压缩率
@@ -48,10 +48,10 @@ type UpdateTaskSpeedReq struct {
 	// Agent的内存使用值，单位是MB
 	AgentMemUsage *float64 `json:"agent_mem_usage,omitempty"`
 
-	// 主机的磁盘I/O值，单位是MB/s
+	// 主机的磁盘I/O值，单位是Mbit/s
 	TotalDiskIo *float64 `json:"total_disk_io,omitempty"`
 
-	// Agent的磁盘I/O值，单位是MB/s
+	// Agent的磁盘I/O值，单位是Mbit/s
 	AgentDiskIo *float64 `json:"agent_disk_io,omitempty"`
 
 	// 是否开启迁移演练

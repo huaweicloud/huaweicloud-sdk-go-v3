@@ -8,28 +8,28 @@ import (
 
 type PolicyTemplateInfo struct {
 
-	// 模板ID
+	// **参数解释**: 模板ID **取值范围**: 字符长度0-128
 	Id string `json:"id"`
 
-	// 模板名称
+	// **参数解释**: 模板名称 **取值范围**: 字符长度1-255
 	TemplateName string `json:"template_name"`
 
-	// 模板类型
+	// **参数解释**: 模板类型 **取值范围**: 字符长度1-16
 	TemplateType string `json:"template_type"`
 
-	// 描述
+	// **参数解释**: 描述 **取值范围**: 字符长度0-2048
 	Description *string `json:"description,omitempty"`
 
-	// 策略模板应用资源类型，多个资源类型通过分号份隔连接
+	// **参数解释**: 策略模板应用资源类型，多个资源类型通过分号份隔连接 **取值范围**: 字符长度1-255
 	TargetKind string `json:"target_kind"`
 
-	// 标签
+	// **参数解释**: 标签 **取值范围**: 字符长度0-2048
 	Tag *string `json:"tag,omitempty"`
 
-	// 推荐级别
+	// **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
 	Level *string `json:"level,omitempty"`
 
-	// 策略模板内容
+	// **参数解释**: 策略模板内容 **取值范围**: 字符长度1-65535
 	ConstraintTemplate string `json:"constraint_template"`
 }
 

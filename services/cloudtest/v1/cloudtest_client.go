@@ -208,6 +208,27 @@ func (c *CloudtestClient) BatchRemoveTestCasesFromIteratorInvoker(request *model
 	return &BatchRemoveTestCasesFromIteratorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchUpdateTestCasesInDiffVersion 在不同分支或者迭代下批量修改用例
+//
+// 在不同分支或者迭代下批量修改用例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) BatchUpdateTestCasesInDiffVersion(request *model.BatchUpdateTestCasesInDiffVersionRequest) (*model.BatchUpdateTestCasesInDiffVersionResponse, error) {
+	requestDef := GenReqDefForBatchUpdateTestCasesInDiffVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateTestCasesInDiffVersionResponse), nil
+	}
+}
+
+// BatchUpdateTestCasesInDiffVersionInvoker 在不同分支或者迭代下批量修改用例
+func (c *CloudtestClient) BatchUpdateTestCasesInDiffVersionInvoker(request *model.BatchUpdateTestCasesInDiffVersionRequest) *BatchUpdateTestCasesInDiffVersionInvoker {
+	requestDef := GenReqDefForBatchUpdateTestCasesInDiffVersion()
+	return &BatchUpdateTestCasesInDiffVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchUpdateVersionTestCases 批量更新用例属性
 //
 // 批量更新用例属性

@@ -211,6 +211,9 @@ type Cluster struct {
 
 	// 集群弹性公网ip的IPV6地址，IPv4时无此字段。
 	Eipv6Address *string `json:"eipv6Address,omitempty"`
+
+	// 表示当前可用区的类型。 - 0：大云主可用区 - 21：本地可用区 - 41：边缘可用区
+	AzCategory *int32 `json:"azCategory,omitempty"`
 }
 
 func (o Cluster) String() string {

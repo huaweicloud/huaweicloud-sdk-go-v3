@@ -8,6 +8,9 @@ import (
 
 type ListExecutionResponseData struct {
 
+	// id
+	Id *string `json:"id,omitempty"`
+
 	// 工单唯一id
 	ExecutionId *string `json:"execution_id,omitempty"`
 

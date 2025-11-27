@@ -169,6 +169,22 @@ func (i *ListAllTagsInvoker) Invoke() (*model.ListAllTagsResponse, error) {
 	}
 }
 
+type ListAsyncTaskStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAsyncTaskStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAsyncTaskStatusInvoker) Invoke() (*model.ListAsyncTaskStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAsyncTaskStatusResponse), nil
+	}
+}
+
 type ListClusterTagsInvoker struct {
 	*invoker.BaseInvoker
 }

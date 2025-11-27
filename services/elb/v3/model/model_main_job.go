@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// MainJob **参数解释**：实例复制等异步任务查询的响应体定义。
+// MainJob **参数解释**：实例复制等异步任务信息。
 type MainJob struct {
 
 	// 任务状态

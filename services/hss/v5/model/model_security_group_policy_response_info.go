@@ -27,7 +27,7 @@ type SecurityGroupPolicyResponseInfo struct {
 	// 工作负载名称
 	WorkloadName string `json:"workload_name"`
 
-	// 工作负载类型
+	// **参数解释**: 工作负载类型 **取值范围**: - deployments：无状态负载 - statefulsets：有状态负载 - daemonsets：守护进程表
 	WorkloadType string `json:"workload_type"`
 
 	// 命名空间id

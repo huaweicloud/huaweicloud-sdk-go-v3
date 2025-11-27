@@ -3841,6 +3841,27 @@ func (c *GaussDBforopenGaussClient) SwitchKmsTdeInvoker(request *model.SwitchKms
 	return &SwitchKmsTdeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SwitchLogCollectionStatus 修改错误日志采集开关状态
+//
+// 打开或者关闭数据库错误日志采集的开关。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) SwitchLogCollectionStatus(request *model.SwitchLogCollectionStatusRequest) (*model.SwitchLogCollectionStatusResponse, error) {
+	requestDef := GenReqDefForSwitchLogCollectionStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchLogCollectionStatusResponse), nil
+	}
+}
+
+// SwitchLogCollectionStatusInvoker 修改错误日志采集开关状态
+func (c *GaussDBforopenGaussClient) SwitchLogCollectionStatusInvoker(request *model.SwitchLogCollectionStatusRequest) *SwitchLogCollectionStatusInvoker {
+	requestDef := GenReqDefForSwitchLogCollectionStatus()
+	return &SwitchLogCollectionStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SwitchReplica 分布式实例一主一备一日志形态切换到一主两备形态
 //
 // 当前只支持分布式独立部署一主一备一日志切换至一主两备形态。

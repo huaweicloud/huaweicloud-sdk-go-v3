@@ -24,7 +24,7 @@ type ListProtectionServersRequest struct {
 	// 云主机名称
 	HostName *string `json:"host_name,omitempty"`
 
-	// 操作系统类型，包含如下2种。  - linux ：linux类型应用防护。  - windows ：windows类型应用防护。
+	// 操作系统类型，包含如下2种。 - Linux - Windows
 	OsType *string `json:"os_type,omitempty"`
 
 	// 云主机私有IP

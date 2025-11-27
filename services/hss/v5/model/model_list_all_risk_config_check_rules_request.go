@@ -41,6 +41,9 @@ type ListAllRiskConfigCheckRulesRequest struct {
 
 	// **参数解释** 策略组ID，不赋值时，查租户所有主机，host_id存在时，此值无效 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及
 	PolicyGroupId *string `json:"policy_group_id,omitempty"`
+
+	// **参数解释** 是否从统计维度展示数据 **约束限制** 不涉及 **取值范围** - false : 不从统计维度展示 - true  : 从统计维度展示  **默认取值** false
+	StatisticsFlag *string `json:"statistics_flag,omitempty"`
 }
 
 func (o ListAllRiskConfigCheckRulesRequest) String() string {

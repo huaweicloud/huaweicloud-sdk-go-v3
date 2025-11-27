@@ -8,11 +8,8 @@ import (
 
 // ListScriptResourceTagsResponse Response Object
 type ListScriptResourceTagsResponse struct {
-	Tags *[]ScriptTag `json:"tags,omitempty"`
-
-	// 总条数。
-	Total          *int64 `json:"total,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	Data           *ListTagsResponse `json:"data,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o ListScriptResourceTagsResponse) String() string {

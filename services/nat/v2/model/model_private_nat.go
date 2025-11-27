@@ -23,10 +23,10 @@ type PrivateNat struct {
 	// 私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
 	Description string `json:"description"`
 
-	// 私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
+	// 私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
 	Spec PrivateNatSpec `json:"spec"`
 
-	// 私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结
+	// 私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
 	Status PrivateNatStatus `json:"status"`
 
 	// 私网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
@@ -39,10 +39,16 @@ type PrivateNat struct {
 	DownlinkVpcs []DownlinkVpc `json:"downlink_vpcs"`
 
 	// 标签列表。
-	Tags *[]PrivateTag `json:"tags,omitempty"`
+	Tags *[]Tag `json:"tags,omitempty"`
 
 	// 企业项目ID。 创建私网NAT网关实例时，关联的企业项目ID。
 	EnterpriseProjectId string `json:"enterprise_project_id"`
+
+	// 最大规则数。
+	RuleMax *int32 `json:"rule_max,omitempty"`
+
+	// 中转ip池大小
+	TransitIpPoolSizeMax *int32 `json:"transit_ip_pool_size_max,omitempty"`
 }
 
 func (o PrivateNat) String() string {
@@ -59,10 +65,11 @@ type PrivateNatSpec struct {
 }
 
 type PrivateNatSpecEnum struct {
-	SMALL       PrivateNatSpec
-	MEDIUM      PrivateNatSpec
-	LARGE       PrivateNatSpec
-	EXTRA_LARGE PrivateNatSpec
+	SMALL        PrivateNatSpec
+	MEDIUM       PrivateNatSpec
+	LARGE        PrivateNatSpec
+	EXTRA_LARGE  PrivateNatSpec
+	EXTRA_XLARGE PrivateNatSpec
 }
 
 func GetPrivateNatSpecEnum() PrivateNatSpecEnum {
@@ -78,6 +85,9 @@ func GetPrivateNatSpecEnum() PrivateNatSpecEnum {
 		},
 		EXTRA_LARGE: PrivateNatSpec{
 			value: "Extra-large",
+		},
+		EXTRA_XLARGE: PrivateNatSpec{
+			value: "Extra-xlarge",
 		},
 	}
 }
@@ -114,8 +124,9 @@ type PrivateNatStatus struct {
 }
 
 type PrivateNatStatusEnum struct {
-	ACTIVE PrivateNatStatus
-	FROZEN PrivateNatStatus
+	ACTIVE   PrivateNatStatus
+	FROZEN   PrivateNatStatus
+	INACTIVE PrivateNatStatus
 }
 
 func GetPrivateNatStatusEnum() PrivateNatStatusEnum {
@@ -125,6 +136,9 @@ func GetPrivateNatStatusEnum() PrivateNatStatusEnum {
 		},
 		FROZEN: PrivateNatStatus{
 			value: "FROZEN",
+		},
+		INACTIVE: PrivateNatStatus{
+			value: "INACTIVE",
 		},
 	}
 }

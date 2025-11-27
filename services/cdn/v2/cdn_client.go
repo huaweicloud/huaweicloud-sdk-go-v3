@@ -104,6 +104,28 @@ func (c *CdnClient) BatchUpdateRuleStatusInvoker(request *model.BatchUpdateRuleS
 	return &BatchUpdateRuleStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAccessControlTask 创建封禁/解禁URL任务
+//
+// 创建封禁/解禁URL任务，如需使用本接口，请提交工单申请。
+// - 单租户调用频率：10次/s。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) CreateAccessControlTask(request *model.CreateAccessControlTaskRequest) (*model.CreateAccessControlTaskResponse, error) {
+	requestDef := GenReqDefForCreateAccessControlTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAccessControlTaskResponse), nil
+	}
+}
+
+// CreateAccessControlTaskInvoker 创建封禁/解禁URL任务
+func (c *CdnClient) CreateAccessControlTaskInvoker(request *model.CreateAccessControlTaskRequest) *CreateAccessControlTaskInvoker {
+	requestDef := GenReqDefForCreateAccessControlTask()
+	return &CreateAccessControlTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDomain 创建加速域名
 //
 // 创建加速域名。
@@ -125,6 +147,30 @@ func (c *CdnClient) CreateDomainInvoker(request *model.CreateDomainRequest) *Cre
 	return &CreateDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDomainByDuplicate 复制配置到新添加域名
+//
+// 将存量加速域名的配置复制给新添加的域名。
+// - 已开通CDN服务。
+// - 如果加速域名的服务范围包含中国大陆，加速域名需要已完成备案。
+// - 单租户调用频率：20次/min。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) CreateDomainByDuplicate(request *model.CreateDomainByDuplicateRequest) (*model.CreateDomainByDuplicateResponse, error) {
+	requestDef := GenReqDefForCreateDomainByDuplicate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDomainByDuplicateResponse), nil
+	}
+}
+
+// CreateDomainByDuplicateInvoker 复制配置到新添加域名
+func (c *CdnClient) CreateDomainByDuplicateInvoker(request *model.CreateDomainByDuplicateRequest) *CreateDomainByDuplicateInvoker {
+	requestDef := GenReqDefForCreateDomainByDuplicate()
+	return &CreateDomainByDuplicateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDomainTemplate 创建域名模板。
 //
 // 创建域名模板。
@@ -144,6 +190,27 @@ func (c *CdnClient) CreateDomainTemplate(request *model.CreateDomainTemplateRequ
 func (c *CdnClient) CreateDomainTemplateInvoker(request *model.CreateDomainTemplateRequest) *CreateDomainTemplateInvoker {
 	requestDef := GenReqDefForCreateDomainTemplate()
 	return &CreateDomainTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateExportTask 创建统计数据异步导出任务
+//
+// 创建统计数据异步导出任务，目前支持话单数据导出、top url导出
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) CreateExportTask(request *model.CreateExportTaskRequest) (*model.CreateExportTaskResponse, error) {
+	requestDef := GenReqDefForCreateExportTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateExportTaskResponse), nil
+	}
+}
+
+// CreateExportTaskInvoker 创建统计数据异步导出任务
+func (c *CdnClient) CreateExportTaskInvoker(request *model.CreateExportTaskRequest) *CreateExportTaskInvoker {
+	requestDef := GenReqDefForCreateExportTask()
+	return &CreateExportTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreatePreheatingTasks 创建预热缓存任务
@@ -491,6 +558,71 @@ func (c *CdnClient) EnableDomainInvoker(request *model.EnableDomainRequest) *Ena
 	return &EnableDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExportStatsOpen CDN数据导出
+//
+// CDN数据导出
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ExportStatsOpen(request *model.ExportStatsOpenRequest) (*model.ExportStatsOpenResponse, error) {
+	requestDef := GenReqDefForExportStatsOpen()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportStatsOpenResponse), nil
+	}
+}
+
+// ExportStatsOpenInvoker CDN数据导出
+func (c *CdnClient) ExportStatsOpenInvoker(request *model.ExportStatsOpenRequest) *ExportStatsOpenInvoker {
+	requestDef := GenReqDefForExportStatsOpen()
+	return &ExportStatsOpenInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAccessControlTask 查询封禁/解禁URL任务
+//
+// 查询封禁/解禁URL任务，如需使用本接口，请提交工单申请。
+// - 单租户调用频率：30次/s。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ListAccessControlTask(request *model.ListAccessControlTaskRequest) (*model.ListAccessControlTaskResponse, error) {
+	requestDef := GenReqDefForListAccessControlTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAccessControlTaskResponse), nil
+	}
+}
+
+// ListAccessControlTaskInvoker 查询封禁/解禁URL任务
+func (c *CdnClient) ListAccessControlTaskInvoker(request *model.ListAccessControlTaskRequest) *ListAccessControlTaskInvoker {
+	requestDef := GenReqDefForListAccessControlTask()
+	return &ListAccessControlTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBanUrl 查询已封禁的URL
+//
+// 查询已封禁的URL，如需使用本接口，请提交工单申请。
+// - 单租户调用频率：30次/s。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ListBanUrl(request *model.ListBanUrlRequest) (*model.ListBanUrlResponse, error) {
+	requestDef := GenReqDefForListBanUrl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBanUrlResponse), nil
+	}
+}
+
+// ListBanUrlInvoker 查询已封禁的URL
+func (c *CdnClient) ListBanUrlInvoker(request *model.ListBanUrlRequest) *ListBanUrlInvoker {
+	requestDef := GenReqDefForListBanUrl()
+	return &ListBanUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCdnDomainTopIps 查询域名top ip统计分析数据
 //
 // - 查询域名top ip统计分析数据
@@ -531,6 +663,27 @@ func (c *CdnClient) ListCdnDomainTopOriginUrl(request *model.ListCdnDomainTopOri
 func (c *CdnClient) ListCdnDomainTopOriginUrlInvoker(request *model.ListCdnDomainTopOriginUrlRequest) *ListCdnDomainTopOriginUrlInvoker {
 	requestDef := GenReqDefForListCdnDomainTopOriginUrl()
 	return &ListCdnDomainTopOriginUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCdnDomainTopPath 查询 TOP Path明细
+//
+// 查询 TOP Path明细
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ListCdnDomainTopPath(request *model.ListCdnDomainTopPathRequest) (*model.ListCdnDomainTopPathResponse, error) {
+	requestDef := GenReqDefForListCdnDomainTopPath()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCdnDomainTopPathResponse), nil
+	}
+}
+
+// ListCdnDomainTopPathInvoker 查询 TOP Path明细
+func (c *CdnClient) ListCdnDomainTopPathInvoker(request *model.ListCdnDomainTopPathRequest) *ListCdnDomainTopPathInvoker {
+	requestDef := GenReqDefForListCdnDomainTopPath()
+	return &ListCdnDomainTopPathInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListCdnDomainTopRefers 查询统计TOP100 referer数据明细
@@ -607,6 +760,28 @@ func (c *CdnClient) ListDomainClientStatsInvoker(request *model.ListDomainClient
 	return &ListDomainClientStatsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDomainConfigs 查询加速域名基础信息
+//
+// 查询加速域名的基础信息，包含cname状态、加速域名是否支持复制配置。
+// - 单租户调用频率：5次/s。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ListDomainConfigs(request *model.ListDomainConfigsRequest) (*model.ListDomainConfigsResponse, error) {
+	requestDef := GenReqDefForListDomainConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDomainConfigsResponse), nil
+	}
+}
+
+// ListDomainConfigsInvoker 查询加速域名基础信息
+func (c *CdnClient) ListDomainConfigsInvoker(request *model.ListDomainConfigsRequest) *ListDomainConfigsInvoker {
+	requestDef := GenReqDefForListDomainConfigs()
+	return &ListDomainConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDomains 查询加速域名
 //
 // 查询加速域名。
@@ -626,6 +801,27 @@ func (c *CdnClient) ListDomains(request *model.ListDomainsRequest) (*model.ListD
 func (c *CdnClient) ListDomainsInvoker(request *model.ListDomainsRequest) *ListDomainsInvoker {
 	requestDef := GenReqDefForListDomains()
 	return &ListDomainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListExportTasks 分页查询统计数据异步导出
+//
+// 分页查询统计数据异步导出任务，按修改时间降序排列，当任务状态为success时，返回参数中会包含download_link
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ListExportTasks(request *model.ListExportTasksRequest) (*model.ListExportTasksResponse, error) {
+	requestDef := GenReqDefForListExportTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListExportTasksResponse), nil
+	}
+}
+
+// ListExportTasksInvoker 分页查询统计数据异步导出
+func (c *CdnClient) ListExportTasksInvoker(request *model.ListExportTasksRequest) *ListExportTasksInvoker {
+	requestDef := GenReqDefForListExportTasks()
+	return &ListExportTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListRuleDetails 查询规则引擎列表
@@ -669,6 +865,28 @@ func (c *CdnClient) ListShareCacheGroups(request *model.ListShareCacheGroupsRequ
 func (c *CdnClient) ListShareCacheGroupsInvoker(request *model.ListShareCacheGroupsRequest) *ListShareCacheGroupsInvoker {
 	requestDef := GenReqDefForListShareCacheGroups()
 	return &ListShareCacheGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSpecialConfiguration 查询加速域名的特殊配置
+//
+// 查询加速域名的特殊配置，当前支持查询备忘录信息。
+// - 单租户调用频率：15次/s。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ListSpecialConfiguration(request *model.ListSpecialConfigurationRequest) (*model.ListSpecialConfigurationResponse, error) {
+	requestDef := GenReqDefForListSpecialConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSpecialConfigurationResponse), nil
+	}
+}
+
+// ListSpecialConfigurationInvoker 查询加速域名的特殊配置
+func (c *CdnClient) ListSpecialConfigurationInvoker(request *model.ListSpecialConfigurationRequest) *ListSpecialConfigurationInvoker {
+	requestDef := GenReqDefForListSpecialConfiguration()
+	return &ListSpecialConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSubscriptionTasks 分页查询运营报表订阅任务
@@ -867,6 +1085,27 @@ func (c *CdnClient) ShowChargeModes(request *model.ShowChargeModesRequest) (*mod
 func (c *CdnClient) ShowChargeModesInvoker(request *model.ShowChargeModesRequest) *ShowChargeModesInvoker {
 	requestDef := GenReqDefForShowChargeModes()
 	return &ShowChargeModesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDomainCountryStat CDN查询域名的国家统计数据
+//
+// CDN查询域名的国家统计数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ShowDomainCountryStat(request *model.ShowDomainCountryStatRequest) (*model.ShowDomainCountryStatResponse, error) {
+	requestDef := GenReqDefForShowDomainCountryStat()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainCountryStatResponse), nil
+	}
+}
+
+// ShowDomainCountryStatInvoker CDN查询域名的国家统计数据
+func (c *CdnClient) ShowDomainCountryStatInvoker(request *model.ShowDomainCountryStatRequest) *ShowDomainCountryStatInvoker {
+	requestDef := GenReqDefForShowDomainCountryStat()
+	return &ShowDomainCountryStatInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDomainDetailByName 查询加速域名详情
@@ -1101,6 +1340,27 @@ func (c *CdnClient) ShowQuota(request *model.ShowQuotaRequest) (*model.ShowQuota
 func (c *CdnClient) ShowQuotaInvoker(request *model.ShowQuotaRequest) *ShowQuotaInvoker {
 	requestDef := GenReqDefForShowQuota()
 	return &ShowQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSpecialUser 查询CDN特殊用户接口
+//
+// 查询CDN特殊用户接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CdnClient) ShowSpecialUser(request *model.ShowSpecialUserRequest) (*model.ShowSpecialUserResponse, error) {
+	requestDef := GenReqDefForShowSpecialUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSpecialUserResponse), nil
+	}
+}
+
+// ShowSpecialUserInvoker 查询CDN特殊用户接口
+func (c *CdnClient) ShowSpecialUserInvoker(request *model.ShowSpecialUserRequest) *ShowSpecialUserInvoker {
+	requestDef := GenReqDefForShowSpecialUser()
+	return &ShowSpecialUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowStatsConfigs 查询统计配置

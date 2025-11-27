@@ -90,13 +90,13 @@ type RecycleLoadBalancer struct {
 	// **参数解释**：资源账单信息。  **取值范围**： - 空：按需计费。 [- 非空：包周期计费，  包周期计费billing_info字段的格式为：order_id:product_id:region_id:project_id，如： CS2107161019CDJZZ:OFFI569702121789763584:az:057ef081eb00d2732fd1c01a9be75e6f  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,hcso_dt,hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
 	BillingInfo *string `json:"billing_info,omitempty"`
 
-	// **参数解释**：网络型规格ID。 对于弹性扩缩容实例，表示上限规格。  **取值范围**：不涉及 [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+	// **参数解释**：网络型规格ID。 对于弹性扩缩容实例，表示上限规格。  **取值范围**：不涉及 [HCSO场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
 	L4FlavorId *string `json:"l4_flavor_id,omitempty"`
 
 	// **参数解释**：四层弹性Flavor ID。  **取值范围**：不涉及  不支持该字段，请勿使用。
 	L4ScaleFlavorId *string `json:"l4_scale_flavor_id,omitempty"`
 
-	// **参数解释**：应用型ID。 对于弹性扩缩容实例，表示上限规格ID。  **取值范围**：不涉及  [hsco场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+	// **参数解释**：应用型ID。 对于弹性扩缩容实例，表示上限规格ID。  **取值范围**：不涉及  [HCSO场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
 	L7FlavorId *string `json:"l7_flavor_id,omitempty"`
 
 	// **参数解释**：七层弹性Flavor ID。  **取值范围**：不涉及  不支持该字段，请勿使用。
@@ -117,7 +117,7 @@ type RecycleLoadBalancer struct {
 	// **参数解释**：是否启用IP类型后端转发。 [开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、云下数据中心的服务器。](tag:fcs)  **取值范围**： - true：开启。 - false：不开启。  [荷兰region不支持该字段，请勿使用。](tag:dt)
 	IpTargetEnable *bool `json:"ip_target_enable,omitempty"`
 
-	// **参数解释**：负载均衡器的冻结场景。 [若负载均衡器有多个冻结场景，用逗号分隔。  **取值范围**： - POLICE：公安冻结场景。 - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。](tag:hws,hws_hk)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
+	// **参数解释**：负载均衡器的冻结场景。 [若负载均衡器有多个冻结场景，用逗号分隔。  **取值范围**： [- POLICE：公安冻结场景。](tag:hws) - ILLEGAL：违规冻结场景。 - VERIFY：客户未实名认证冻结场景。 - PARTNER：合作伙伴冻结（合作伙伴冻结子客户资源）。 - AREAR：欠费冻结场景。](tag:hws,hws_hk)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,hcso_dt,ocb,hws_ocb)
 	FrozenScene *string `json:"frozen_scene,omitempty"`
 
 	Ipv6Bandwidth *BandwidthRef `json:"ipv6_bandwidth,omitempty"`

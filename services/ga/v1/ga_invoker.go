@@ -85,6 +85,22 @@ func (i *UpdateAcceleratorInvoker) Invoke() (*model.UpdateAcceleratorResponse, e
 	}
 }
 
+type ListByoipPoolsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListByoipPoolsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListByoipPoolsInvoker) Invoke() (*model.ListByoipPoolsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListByoipPoolsResponse), nil
+	}
+}
+
 type CreateEndpointInvoker struct {
 	*invoker.BaseInvoker
 }

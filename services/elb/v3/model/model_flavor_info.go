@@ -15,6 +15,12 @@ type FlavorInfo struct {
 	// **参数解释**：每秒新建连接数。单位：个。  **取值范围**：不涉及
 	Cps int32 `json:"cps"`
 
+	// **参数解释**：tls最大并发连接数。单位：个。  **取值范围**：不涉及
+	TlsConnection *int32 `json:"tls_connection,omitempty"`
+
+	// **参数解释**：tls每秒新建连接数。单位：个。  **取值范围**：不涉及
+	TlsCps *int32 `json:"tls_cps,omitempty"`
+
 	// **参数解释**：每秒查询速率。单位：个。仅7层LB有该指标。  **取值范围**：不涉及
 	Qps *int32 `json:"qps,omitempty"`
 

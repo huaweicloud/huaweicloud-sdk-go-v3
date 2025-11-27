@@ -23,7 +23,7 @@ type GetNetworkPolicy struct {
 	// 创建时间
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
-	// 下发策略到cce成功与否
+	// **参数解释**: 下发策略到cce成功与否 **取值范围**: - true: 成功 - false: 失败
 	DeployStatus *bool `json:"deploy_status,omitempty"`
 }
 

@@ -8,7 +8,9 @@ import (
 
 // CreateDocumentResponse Response Object
 type CreateDocumentResponse struct {
-	Body *string `json:"body,omitempty"`
+
+	// **参数解释：** 创建作业，系统返回的作业id。 **取值范围：** 不涉及。
+	Data *string `json:"data,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`
 	HttpStatusCode int     `json:"-"`

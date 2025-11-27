@@ -9,7 +9,7 @@ import (
 // ListTagsRequest Request Object
 type ListTagsRequest struct {
 
-	// 资源类型。
+	// 资源类型，取值范围： - ga-accelerators：加速实例 - ga-listeners：监听器
 	ResourceType *ResourceType `json:"resource_type"`
 
 	// 每页返回的个数。

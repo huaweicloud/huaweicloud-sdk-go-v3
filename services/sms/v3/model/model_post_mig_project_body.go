@@ -31,10 +31,10 @@ type PostMigProjectBody struct {
 	SpeedLimit *int32 `json:"speed_limit,omitempty"`
 
 	// 是否使用公网IP迁移
-	UsePublicIp bool `json:"use_public_ip"`
+	UsePublicIp *bool `json:"use_public_ip,omitempty"`
 
 	// 是否是已经存在的服务器
-	ExistServer bool `json:"exist_server"`
+	ExistServer *bool `json:"exist_server,omitempty"`
 
 	// 迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
 	Type PostMigProjectBodyType `json:"type"`
@@ -43,7 +43,7 @@ type PostMigProjectBody struct {
 	EnterpriseProject *string `json:"enterprise_project,omitempty"`
 
 	// 首次复制或者同步后 是否继续持续同步
-	Syncing bool `json:"syncing"`
+	Syncing *bool `json:"syncing,omitempty"`
 
 	// 是否启动网络质量检测
 	StartNetworkCheck *bool `json:"start_network_check,omitempty"`

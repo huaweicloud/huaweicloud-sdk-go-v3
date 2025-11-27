@@ -834,6 +834,27 @@ func (c *IoTDAClient) ListCertificatesInvoker(request *model.ListCertificatesReq
 	return &ListCertificatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowCertificate 查询CA证书
+//
+// 应用服务器可调用此接口在物联网平台查询CA证书
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ShowCertificate(request *model.ShowCertificateRequest) (*model.ShowCertificateResponse, error) {
+	requestDef := GenReqDefForShowCertificate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCertificateResponse), nil
+	}
+}
+
+// ShowCertificateInvoker 查询CA证书
+func (c *IoTDAClient) ShowCertificateInvoker(request *model.ShowCertificateRequest) *ShowCertificateInvoker {
+	requestDef := GenReqDefForShowCertificate()
+	return &ShowCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateCertificate 更新CA证书
 //
 // 应用服务器可调用此接口在物联网平台上更新CA证书。仅标准版实例、企业版实例支持该接口调用，基础版不支持。
@@ -2014,6 +2035,90 @@ func (c *IoTDAClient) UpdateDomainConfiguration(request *model.UpdateDomainConfi
 func (c *IoTDAClient) UpdateDomainConfigurationInvoker(request *model.UpdateDomainConfigurationRequest) *UpdateDomainConfigurationInvoker {
 	requestDef := GenReqDefForUpdateDomainConfiguration()
 	return &UpdateDomainConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateExportTask 创建导出任务
+//
+// 应用服务器可调用此接口创建资源导出任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) CreateExportTask(request *model.CreateExportTaskRequest) (*model.CreateExportTaskResponse, error) {
+	requestDef := GenReqDefForCreateExportTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateExportTaskResponse), nil
+	}
+}
+
+// CreateExportTaskInvoker 创建导出任务
+func (c *IoTDAClient) CreateExportTaskInvoker(request *model.CreateExportTaskRequest) *CreateExportTaskInvoker {
+	requestDef := GenReqDefForCreateExportTask()
+	return &CreateExportTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteExportTask 删除导出任务
+//
+// 应用服务器可调用此接口删除在平台创建的导出任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) DeleteExportTask(request *model.DeleteExportTaskRequest) (*model.DeleteExportTaskResponse, error) {
+	requestDef := GenReqDefForDeleteExportTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteExportTaskResponse), nil
+	}
+}
+
+// DeleteExportTaskInvoker 删除导出任务
+func (c *IoTDAClient) DeleteExportTaskInvoker(request *model.DeleteExportTaskRequest) *DeleteExportTaskInvoker {
+	requestDef := GenReqDefForDeleteExportTask()
+	return &DeleteExportTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListExportTasks 查询导出任务列表
+//
+// 应用服务器可调用此接口查询已创建的导出任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ListExportTasks(request *model.ListExportTasksRequest) (*model.ListExportTasksResponse, error) {
+	requestDef := GenReqDefForListExportTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListExportTasksResponse), nil
+	}
+}
+
+// ListExportTasksInvoker 查询导出任务列表
+func (c *IoTDAClient) ListExportTasksInvoker(request *model.ListExportTasksRequest) *ListExportTasksInvoker {
+	requestDef := GenReqDefForListExportTasks()
+	return &ListExportTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowExportTask 下载导出文件
+//
+// 应用服务器可调用此接口下载已经完成的导出任务生成的文件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ShowExportTask(request *model.ShowExportTaskRequest) (*model.ShowExportTaskResponse, error) {
+	requestDef := GenReqDefForShowExportTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowExportTaskResponse), nil
+	}
+}
+
+// ShowExportTaskInvoker 下载导出文件
+func (c *IoTDAClient) ShowExportTaskInvoker(request *model.ShowExportTaskRequest) *ShowExportTaskInvoker {
+	requestDef := GenReqDefForShowExportTask()
+	return &ShowExportTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateRoutingFlowControlPolicy 新建数据流转流控策略

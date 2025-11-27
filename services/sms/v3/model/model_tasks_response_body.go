@@ -24,8 +24,8 @@ type TasksResponseBody struct {
 	// 操作系统类型，分为WINDOWS和LINUX，创建时必选，更新时可选
 	OsType *TasksResponseBodyOsType `json:"os_type,omitempty"`
 
-	// 任务状态
-	State *string `json:"state,omitempty"`
+	// 迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
+	State *TasksResponseBodyState `json:"state,omitempty"`
 
 	// 预估完成时间
 	EstimateCompleteTime *int64 `json:"estimate_complete_time,omitempty"`
@@ -39,7 +39,7 @@ type TasksResponseBody struct {
 	// 迁移限速
 	SpeedLimit *int32 `json:"speed_limit,omitempty"`
 
-	// 迁移速率，单位：MB/S
+	// 迁移速率，单位：Mbit/s
 	MigrateSpeed *float64 `json:"migrate_speed,omitempty"`
 
 	// 压缩率
@@ -67,7 +67,7 @@ type TasksResponseBody struct {
 
 	TargetServer *TargetServerAssociatedWithTask `json:"target_server,omitempty"`
 
-	// 日志收集状态 INIT TELL_AGENT_TO_COLLECT WAIT_AGENT_COLLECT_ACK AGENT_COLLECT_FAIL AGENT_COLLECT_SUCCESS WAIT_SERVER_COLLECT SERVER_COLLECT_FAIL SERVER_COLLECT_SUCCESS TELL_AGENT_RESET_ACL WAIT_AGENT_RESET_ACL_ACK
+	// 日志收集状态 INIT:就绪 UPLOADING:上传中 UPLOAD_FAIL:上传失败 UPLOADED:已上传
 	LogCollectStatus *TasksResponseBodyLogCollectStatus `json:"log_collect_status,omitempty"`
 
 	CloneServer *CloneServerBrief `json:"clone_server,omitempty"`
@@ -92,10 +92,10 @@ type TasksResponseBody struct {
 	// Agent的内存使用值，单位是MB
 	AgentMemUsage *float64 `json:"agent_mem_usage,omitempty"`
 
-	// 主机的磁盘I/O值，单位是MB/s
+	// 主机的磁盘I/O值，单位是Mbit/s
 	TotalDiskIo *float64 `json:"total_disk_io,omitempty"`
 
-	// Agent的磁盘I/O值，单位是MB/s
+	// Agent的磁盘I/O值，单位是Mbit/s
 	AgentDiskIo *float64 `json:"agent_disk_io,omitempty"`
 
 	// 是否开启迁移演练
@@ -208,6 +208,93 @@ func (c *TasksResponseBodyOsType) UnmarshalJSON(b []byte) error {
 	}
 }
 
+type TasksResponseBodyState struct {
+	value string
+}
+
+type TasksResponseBodyStateEnum struct {
+	READY           TasksResponseBodyState
+	RUNNING         TasksResponseBodyState
+	SYNCING         TasksResponseBodyState
+	MIGRATE_SUCCESS TasksResponseBodyState
+	SYNC_SUCCESS    TasksResponseBodyState
+	MIGRATE_FAIL    TasksResponseBodyState
+	SYNC_FAIL       TasksResponseBodyState
+	ABORTING        TasksResponseBodyState
+	ABORT           TasksResponseBodyState
+	SKIPPING        TasksResponseBodyState
+	DELETING        TasksResponseBodyState
+	RESETING        TasksResponseBodyState
+}
+
+func GetTasksResponseBodyStateEnum() TasksResponseBodyStateEnum {
+	return TasksResponseBodyStateEnum{
+		READY: TasksResponseBodyState{
+			value: "READY",
+		},
+		RUNNING: TasksResponseBodyState{
+			value: "RUNNING",
+		},
+		SYNCING: TasksResponseBodyState{
+			value: "SYNCING",
+		},
+		MIGRATE_SUCCESS: TasksResponseBodyState{
+			value: "MIGRATE_SUCCESS",
+		},
+		SYNC_SUCCESS: TasksResponseBodyState{
+			value: "SYNC_SUCCESS",
+		},
+		MIGRATE_FAIL: TasksResponseBodyState{
+			value: "MIGRATE_FAIL",
+		},
+		SYNC_FAIL: TasksResponseBodyState{
+			value: "SYNC_FAIL",
+		},
+		ABORTING: TasksResponseBodyState{
+			value: "ABORTING",
+		},
+		ABORT: TasksResponseBodyState{
+			value: "ABORT",
+		},
+		SKIPPING: TasksResponseBodyState{
+			value: "SKIPPING",
+		},
+		DELETING: TasksResponseBodyState{
+			value: "DELETING",
+		},
+		RESETING: TasksResponseBodyState{
+			value: "RESETING",
+		},
+	}
+}
+
+func (c TasksResponseBodyState) Value() string {
+	return c.value
+}
+
+func (c TasksResponseBodyState) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *TasksResponseBodyState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
 type TasksResponseBodyPriority struct {
 	value int32
 }
@@ -262,16 +349,10 @@ type TasksResponseBodyLogCollectStatus struct {
 }
 
 type TasksResponseBodyLogCollectStatusEnum struct {
-	INIT                     TasksResponseBodyLogCollectStatus
-	TELL_AGENT_TO_COLLECT    TasksResponseBodyLogCollectStatus
-	WAIT_AGENT_COLLECT_ACK   TasksResponseBodyLogCollectStatus
-	AGENT_COLLECT_FAIL       TasksResponseBodyLogCollectStatus
-	AGENT_COLLECT_SUCCESS    TasksResponseBodyLogCollectStatus
-	WAIT_SERVER_COLLECT      TasksResponseBodyLogCollectStatus
-	SERVER_COLLECT_FAIL      TasksResponseBodyLogCollectStatus
-	SERVER_COLLECT_SUCCESS   TasksResponseBodyLogCollectStatus
-	TELL_AGENT_RESET_ACL     TasksResponseBodyLogCollectStatus
-	WAIT_AGENT_RESET_ACL_ACK TasksResponseBodyLogCollectStatus
+	INIT        TasksResponseBodyLogCollectStatus
+	UPLOADING   TasksResponseBodyLogCollectStatus
+	UPLOAD_FAIL TasksResponseBodyLogCollectStatus
+	UPLOADED    TasksResponseBodyLogCollectStatus
 }
 
 func GetTasksResponseBodyLogCollectStatusEnum() TasksResponseBodyLogCollectStatusEnum {
@@ -279,32 +360,14 @@ func GetTasksResponseBodyLogCollectStatusEnum() TasksResponseBodyLogCollectStatu
 		INIT: TasksResponseBodyLogCollectStatus{
 			value: "INIT",
 		},
-		TELL_AGENT_TO_COLLECT: TasksResponseBodyLogCollectStatus{
-			value: "TELL_AGENT_TO_COLLECT",
+		UPLOADING: TasksResponseBodyLogCollectStatus{
+			value: "UPLOADING",
 		},
-		WAIT_AGENT_COLLECT_ACK: TasksResponseBodyLogCollectStatus{
-			value: "WAIT_AGENT_COLLECT_ACK",
+		UPLOAD_FAIL: TasksResponseBodyLogCollectStatus{
+			value: "UPLOAD_FAIL",
 		},
-		AGENT_COLLECT_FAIL: TasksResponseBodyLogCollectStatus{
-			value: "AGENT_COLLECT_FAIL",
-		},
-		AGENT_COLLECT_SUCCESS: TasksResponseBodyLogCollectStatus{
-			value: "AGENT_COLLECT_SUCCESS",
-		},
-		WAIT_SERVER_COLLECT: TasksResponseBodyLogCollectStatus{
-			value: "WAIT_SERVER_COLLECT",
-		},
-		SERVER_COLLECT_FAIL: TasksResponseBodyLogCollectStatus{
-			value: "SERVER_COLLECT_FAIL",
-		},
-		SERVER_COLLECT_SUCCESS: TasksResponseBodyLogCollectStatus{
-			value: "SERVER_COLLECT_SUCCESS",
-		},
-		TELL_AGENT_RESET_ACL: TasksResponseBodyLogCollectStatus{
-			value: "TELL_AGENT_RESET_ACL",
-		},
-		WAIT_AGENT_RESET_ACL_ACK: TasksResponseBodyLogCollectStatus{
-			value: "WAIT_AGENT_RESET_ACL_ACK",
+		UPLOADED: TasksResponseBodyLogCollectStatus{
+			value: "UPLOADED",
 		},
 	}
 }

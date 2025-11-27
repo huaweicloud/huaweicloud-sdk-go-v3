@@ -555,6 +555,27 @@ func (c *BssClient) ListCustomerBillsMonthlyBreakDownInvoker(request *model.List
 	return &ListCustomerBillsMonthlyBreakDownInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCustomerCouponChangeRecords 查询优惠券收支明细
+//
+// 功能描述：客户可以查询自身优惠券的收支明细情况(此接口不适用于伙伴的转售类客户。)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssClient) ListCustomerCouponChangeRecords(request *model.ListCustomerCouponChangeRecordsRequest) (*model.ListCustomerCouponChangeRecordsResponse, error) {
+	requestDef := GenReqDefForListCustomerCouponChangeRecords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCustomerCouponChangeRecordsResponse), nil
+	}
+}
+
+// ListCustomerCouponChangeRecordsInvoker 查询优惠券收支明细
+func (c *BssClient) ListCustomerCouponChangeRecordsInvoker(request *model.ListCustomerCouponChangeRecordsRequest) *ListCustomerCouponChangeRecordsInvoker {
+	requestDef := GenReqDefForListCustomerCouponChangeRecords()
+	return &ListCustomerCouponChangeRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCustomerOnDemandResources 查询客户按需资源列表
 //
 // 合作伙伴可以查询关联的代售类客户已开通的按需资源。
@@ -1133,10 +1154,7 @@ func (c *BssClient) ListPartnerCouponsRecordInvoker(request *model.ListPartnerCo
 
 // ListPayPerUseCustomerResources 查询客户包年/包月资源列表
 //
-// 客户在伙伴销售平台查询某个或所有的包年/包月资源。
-//
-// &gt;![](public_sys-resources/icon-note.gif) **说明：**
-// &gt;成功调用本接口后，如果您需要对已生效状态的资源进行续订，您可以调用“[查询包年/包月产品价格](https://support.huaweicloud.com/api-bpconsole/bcloud_01002.html)”接口对查询到的包年/包月资源进行续订询价，然后再调用“[续订包年/包月资源](https://support.huaweicloud.com/api-bpconsole/api_order_00018.html)”接口进行续订。
+// 功能描述：伙伴/客户在伙伴/客户自建平台查询某个或所有的包年/包月资源
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ListPayPerUseCustomerResources(request *model.ListPayPerUseCustomerResourcesRequest) (*model.ListPayPerUseCustomerResourcesResponse, error) {
@@ -1318,7 +1336,7 @@ func (c *BssClient) ListResourceUsageSummaryInvoker(request *model.ListResourceU
 	return &ListResourceUsageSummaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListServiceResources 根据云服务类型查询资源列表
+// ListServiceResources 根据云服务类型查询资源类型列表
 //
 // 伙伴在伙伴销售平台根据云服务类型查询关联的资源类型编码和名称，用于查询按需产品的价格或包年/包月产品的价格。
 //
@@ -1333,7 +1351,7 @@ func (c *BssClient) ListServiceResources(request *model.ListServiceResourcesRequ
 	}
 }
 
-// ListServiceResourcesInvoker 根据云服务类型查询资源列表
+// ListServiceResourcesInvoker 根据云服务类型查询资源类型列表
 func (c *BssClient) ListServiceResourcesInvoker(request *model.ListServiceResourcesRequest) *ListServiceResourcesInvoker {
 	requestDef := GenReqDefForListServiceResources()
 	return &ListServiceResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1907,11 +1925,7 @@ func (c *BssClient) ShowRealnameAuthenticationReviewResultInvoker(request *model
 
 // ShowRefundOrderDetails 查询退款订单的金额详情
 //
-// 客户在伙伴销售平台查询某次退订订单或者降配订单的退款金额来自哪些资源和对应订单。
-//
-// &gt;![](public_sys-resources/icon-note.gif) **说明：**
-// &gt;-   可以在调用完“[退订包年/包月资源](https://support.huaweicloud.com/api-oce/api_order_00019.html)”接口生成退订订单ID后，调用该接口查询退订订单对应的金额所属资源和订单。例如，调用“[退订包年/包月资源](https://support.huaweicloud.com/api-oce/api_order_00019.html)”接口退订资源及其已续费周期后，您可以调用本小节的接口查询到退订金额归属的原开通订单ID和原续费订单ID。
-// &gt;-   2018年5月份之后退订的订单才能查询到归属的原订单ID。
+// 功能描述：伙伴/客户在伙伴/客户销售平台查询某次退订订单或者降配订单的退款金额来自哪些资源和对应订单
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *BssClient) ShowRefundOrderDetails(request *model.ShowRefundOrderDetailsRequest) (*model.ShowRefundOrderDetailsResponse, error) {

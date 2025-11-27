@@ -39,7 +39,7 @@ type ListHostStatusRequest struct {
 	// **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
 	PrivateIp *string `json:"private_ip,omitempty"`
 
-	// 服务器公网IP
+	// **参数解释**: 服务器弹性IP地址。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 无
 	PublicIp *string `json:"public_ip,omitempty"`
 
 	// **参数解释**: 公网或私网IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及

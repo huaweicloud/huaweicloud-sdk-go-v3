@@ -12,7 +12,7 @@ import (
 // UpdateListenerIpGroupOption **参数解释**：listener对象中的ipgroup信息。  **约束限制**：不涉及
 type UpdateListenerIpGroupOption struct {
 
-	// **参数解释**：监听器关联的访问控制组的id。创建时必选，更新时非必选。  **约束限制**：指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。  **取值范围**：不涉及  **默认取值**：不涉及
+	// **参数解释**：监听器关联的访问控制组的id。关联多个IP地址组时ID使用逗号分隔。  **约束限制**：指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。  **取值范围**：不涉及  **默认取值**：不涉及
 	IpgroupId *string `json:"ipgroup_id,omitempty"`
 
 	// **参数解释**：访问控制组的状态。开启访问控制的监听器，允许直接删除。  **约束限制**：不涉及  **取值范围**： - true:开启访问控制。 - false：关闭访问控制。  **默认取值**：不涉及

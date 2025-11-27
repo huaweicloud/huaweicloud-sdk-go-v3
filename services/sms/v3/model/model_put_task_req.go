@@ -61,8 +61,8 @@ type PutTaskReq struct {
 
 	TargetServer *TargetServer `json:"target_server,omitempty"`
 
-	// 任务状态
-	State *string `json:"state,omitempty"`
+	// 迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
+	State *PutTaskReqState `json:"state,omitempty"`
 
 	// 预估完成时间
 	EstimateCompleteTime *int64 `json:"estimate_complete_time,omitempty"`
@@ -79,7 +79,7 @@ type PutTaskReq struct {
 	// 任务结束时间
 	FinishDate *int64 `json:"finish_date,omitempty"`
 
-	// 迁移速率，单位：MB/S
+	// 迁移速率，单位：Mbit/s
 	MigrateSpeed *float64 `json:"migrate_speed,omitempty"`
 
 	// 错误信息
@@ -252,5 +252,92 @@ func (c *PutTaskReqPriority) UnmarshalJSON(b []byte) error {
 		return nil
 	} else {
 		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type PutTaskReqState struct {
+	value string
+}
+
+type PutTaskReqStateEnum struct {
+	READY           PutTaskReqState
+	RUNNING         PutTaskReqState
+	SYNCING         PutTaskReqState
+	MIGRATE_SUCCESS PutTaskReqState
+	SYNC_SUCCESS    PutTaskReqState
+	MIGRATE_FAIL    PutTaskReqState
+	SYNC_FAIL       PutTaskReqState
+	ABORTING        PutTaskReqState
+	ABORT           PutTaskReqState
+	SKIPPING        PutTaskReqState
+	DELETING        PutTaskReqState
+	RESETING        PutTaskReqState
+}
+
+func GetPutTaskReqStateEnum() PutTaskReqStateEnum {
+	return PutTaskReqStateEnum{
+		READY: PutTaskReqState{
+			value: "READY",
+		},
+		RUNNING: PutTaskReqState{
+			value: "RUNNING",
+		},
+		SYNCING: PutTaskReqState{
+			value: "SYNCING",
+		},
+		MIGRATE_SUCCESS: PutTaskReqState{
+			value: "MIGRATE_SUCCESS",
+		},
+		SYNC_SUCCESS: PutTaskReqState{
+			value: "SYNC_SUCCESS",
+		},
+		MIGRATE_FAIL: PutTaskReqState{
+			value: "MIGRATE_FAIL",
+		},
+		SYNC_FAIL: PutTaskReqState{
+			value: "SYNC_FAIL",
+		},
+		ABORTING: PutTaskReqState{
+			value: "ABORTING",
+		},
+		ABORT: PutTaskReqState{
+			value: "ABORT",
+		},
+		SKIPPING: PutTaskReqState{
+			value: "SKIPPING",
+		},
+		DELETING: PutTaskReqState{
+			value: "DELETING",
+		},
+		RESETING: PutTaskReqState{
+			value: "RESETING",
+		},
+	}
+}
+
+func (c PutTaskReqState) Value() string {
+	return c.value
+}
+
+func (c PutTaskReqState) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *PutTaskReqState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
 	}
 }

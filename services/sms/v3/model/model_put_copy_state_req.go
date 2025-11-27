@@ -12,7 +12,7 @@ import (
 // PutCopyStateReq 源端复制状态
 type PutCopyStateReq struct {
 
-	// 源端服务器状态 UNAVAILABLE：环境校验不通过 WAITING：等待 INIT：初始化 REPLICATE：复制 SYNCING：持续同步 STOPPING：暂停中 STOPPED：已暂停 SKIPPING：跳过中 DELETING：删除中 ERROR：错误 CLONING：等待克隆完成 CUTOVERING：启动目的端中 FINISHED：启动目的端完成 CLEARING: 清理快照资源中 CLEARED：清理快照资源完成 CLEARFAILED：清理快照资源失败 premigready: 迁移演练已就绪 premiging: 迁移演练中 premiged: 迁移演练已完成 premigfailed: 迁移演练失败
+	// 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready：迁移演练就绪 premiged：迁移演练完成 premigfailed：迁移演练失败 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 error：错误
 	Copystate *PutCopyStateReqCopystate `json:"copystate,omitempty"`
 
 	// 迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
@@ -35,66 +35,53 @@ type PutCopyStateReqCopystate struct {
 type PutCopyStateReqCopystateEnum struct {
 	UNAVAILABLE  PutCopyStateReqCopystate
 	WAITING      PutCopyStateReqCopystate
-	INIT         PutCopyStateReqCopystate
+	INITIALIZE   PutCopyStateReqCopystate
 	REPLICATE    PutCopyStateReqCopystate
 	SYNCING      PutCopyStateReqCopystate
 	STOPPING     PutCopyStateReqCopystate
 	STOPPED      PutCopyStateReqCopystate
 	SKIPPING     PutCopyStateReqCopystate
 	DELETING     PutCopyStateReqCopystate
-	ERROR        PutCopyStateReqCopystate
-	CLONING      PutCopyStateReqCopystate
-	CUTOVERING   PutCopyStateReqCopystate
-	FINISHED     PutCopyStateReqCopystate
 	CLEARING     PutCopyStateReqCopystate
 	CLEARED      PutCopyStateReqCopystate
 	CLEARFAILED  PutCopyStateReqCopystate
 	PREMIGREADY  PutCopyStateReqCopystate
-	PREMIGING    PutCopyStateReqCopystate
 	PREMIGED     PutCopyStateReqCopystate
 	PREMIGFAILED PutCopyStateReqCopystate
+	CLONING      PutCopyStateReqCopystate
+	CUTOVERING   PutCopyStateReqCopystate
+	FINISHED     PutCopyStateReqCopystate
+	ERROR        PutCopyStateReqCopystate
 }
 
 func GetPutCopyStateReqCopystateEnum() PutCopyStateReqCopystateEnum {
 	return PutCopyStateReqCopystateEnum{
 		UNAVAILABLE: PutCopyStateReqCopystate{
-			value: "UNAVAILABLE",
+			value: "unavailable",
 		},
 		WAITING: PutCopyStateReqCopystate{
-			value: "WAITING",
+			value: "waiting",
 		},
-		INIT: PutCopyStateReqCopystate{
-			value: "INIT",
+		INITIALIZE: PutCopyStateReqCopystate{
+			value: "initialize",
 		},
 		REPLICATE: PutCopyStateReqCopystate{
-			value: "REPLICATE",
+			value: "replicate",
 		},
 		SYNCING: PutCopyStateReqCopystate{
-			value: "SYNCING",
+			value: "syncing",
 		},
 		STOPPING: PutCopyStateReqCopystate{
-			value: "STOPPING",
+			value: "stopping",
 		},
 		STOPPED: PutCopyStateReqCopystate{
-			value: "STOPPED",
+			value: "stopped",
 		},
 		SKIPPING: PutCopyStateReqCopystate{
-			value: "SKIPPING",
+			value: "skipping",
 		},
 		DELETING: PutCopyStateReqCopystate{
-			value: "DELETING",
-		},
-		ERROR: PutCopyStateReqCopystate{
-			value: "ERROR",
-		},
-		CLONING: PutCopyStateReqCopystate{
-			value: "CLONING",
-		},
-		CUTOVERING: PutCopyStateReqCopystate{
-			value: "CUTOVERING",
-		},
-		FINISHED: PutCopyStateReqCopystate{
-			value: "FINISHED",
+			value: "deleting",
 		},
 		CLEARING: PutCopyStateReqCopystate{
 			value: "clearing",
@@ -108,14 +95,23 @@ func GetPutCopyStateReqCopystateEnum() PutCopyStateReqCopystateEnum {
 		PREMIGREADY: PutCopyStateReqCopystate{
 			value: "premigready",
 		},
-		PREMIGING: PutCopyStateReqCopystate{
-			value: "premiging",
-		},
 		PREMIGED: PutCopyStateReqCopystate{
 			value: "premiged",
 		},
 		PREMIGFAILED: PutCopyStateReqCopystate{
 			value: "premigfailed",
+		},
+		CLONING: PutCopyStateReqCopystate{
+			value: "cloning",
+		},
+		CUTOVERING: PutCopyStateReqCopystate{
+			value: "cutovering",
+		},
+		FINISHED: PutCopyStateReqCopystate{
+			value: "finished",
+		},
+		ERROR: PutCopyStateReqCopystate{
+			value: "error",
 		},
 	}
 }

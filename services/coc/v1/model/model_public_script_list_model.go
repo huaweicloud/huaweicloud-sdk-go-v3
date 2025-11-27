@@ -24,6 +24,9 @@ type PublicScriptListModel struct {
 	// 脚本类型 SHELL:shell脚本 PYTHON:python脚本 BAT:bat脚本
 	Type PublicScriptListModelType `json:"type"`
 
+	// 脚本状态
+	Status *PublicScriptListModelStatus `json:"status,omitempty"`
+
 	// 创建时间
 	GmtCreated int64 `json:"gmt_created"`
 
@@ -75,6 +78,57 @@ func (c PublicScriptListModelType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *PublicScriptListModelType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type PublicScriptListModelStatus struct {
+	value string
+}
+
+type PublicScriptListModelStatusEnum struct {
+	PENDING_APPROVE PublicScriptListModelStatus
+	APPROVED        PublicScriptListModelStatus
+	REJECTED        PublicScriptListModelStatus
+}
+
+func GetPublicScriptListModelStatusEnum() PublicScriptListModelStatusEnum {
+	return PublicScriptListModelStatusEnum{
+		PENDING_APPROVE: PublicScriptListModelStatus{
+			value: "PENDING_APPROVE",
+		},
+		APPROVED: PublicScriptListModelStatus{
+			value: "APPROVED",
+		},
+		REJECTED: PublicScriptListModelStatus{
+			value: "REJECTED",
+		},
+	}
+}
+
+func (c PublicScriptListModelStatus) Value() string {
+	return c.value
+}
+
+func (c PublicScriptListModelStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *PublicScriptListModelStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

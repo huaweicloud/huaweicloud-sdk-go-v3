@@ -58,6 +58,8 @@ var (
 		"https://gaussdb-nosql.cn-north-9.myhuaweicloud.com")
 	EU_WEST_101 = region.NewRegion("eu-west-101",
 		"https://gaussdb-nosql.eu-west-101.myhuaweicloud.eu")
+	CN_NORTH_11 = region.NewRegion("cn-north-11",
+		"https://gaussdb-nosql.cn-north-11.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -86,6 +88,7 @@ var staticFields = map[string]*region.Region{
 	"la-south-2":     LA_SOUTH_2,
 	"cn-north-9":     CN_NORTH_9,
 	"eu-west-101":    EU_WEST_101,
+	"cn-north-11":    CN_NORTH_11,
 }
 
 var provider = region.DefaultProviderChain("GAUSSDBFORNOSQL")

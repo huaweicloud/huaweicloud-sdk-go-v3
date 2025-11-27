@@ -27,7 +27,7 @@ type ListImageLocalRequest struct {
 	// 扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
 	ScanStatus *string `json:"scan_status,omitempty"`
 
-	// 镜像类型，包含如下:  - other_image : 非SWR镜像  - swr_image : SWR镜像
+	// **参数解释** : 镜像类型 **约束限制** : 不涉及 **取值范围** : 包含如下两种:  - other_image : 非SWR镜像  - swr_image : SWR镜像 **默认取值** : 不涉及
 	LocalImageType *string `json:"local_image_type,omitempty"`
 
 	// 镜像大小，单位字节

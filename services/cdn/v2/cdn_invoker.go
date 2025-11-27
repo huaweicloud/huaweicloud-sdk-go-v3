@@ -69,6 +69,22 @@ func (i *BatchUpdateRuleStatusInvoker) Invoke() (*model.BatchUpdateRuleStatusRes
 	}
 }
 
+type CreateAccessControlTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAccessControlTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAccessControlTaskInvoker) Invoke() (*model.CreateAccessControlTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAccessControlTaskResponse), nil
+	}
+}
+
 type CreateDomainInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -85,6 +101,22 @@ func (i *CreateDomainInvoker) Invoke() (*model.CreateDomainResponse, error) {
 	}
 }
 
+type CreateDomainByDuplicateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDomainByDuplicateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDomainByDuplicateInvoker) Invoke() (*model.CreateDomainByDuplicateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDomainByDuplicateResponse), nil
+	}
+}
+
 type CreateDomainTemplateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -98,6 +130,22 @@ func (i *CreateDomainTemplateInvoker) Invoke() (*model.CreateDomainTemplateRespo
 		return nil, err
 	} else {
 		return result.(*model.CreateDomainTemplateResponse), nil
+	}
+}
+
+type CreateExportTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateExportTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateExportTaskInvoker) Invoke() (*model.CreateExportTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateExportTaskResponse), nil
 	}
 }
 
@@ -345,6 +393,54 @@ func (i *EnableDomainInvoker) Invoke() (*model.EnableDomainResponse, error) {
 	}
 }
 
+type ExportStatsOpenInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportStatsOpenInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExportStatsOpenInvoker) Invoke() (*model.ExportStatsOpenResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportStatsOpenResponse), nil
+	}
+}
+
+type ListAccessControlTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAccessControlTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAccessControlTaskInvoker) Invoke() (*model.ListAccessControlTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAccessControlTaskResponse), nil
+	}
+}
+
+type ListBanUrlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBanUrlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBanUrlInvoker) Invoke() (*model.ListBanUrlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBanUrlResponse), nil
+	}
+}
+
 type ListCdnDomainTopIpsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -374,6 +470,22 @@ func (i *ListCdnDomainTopOriginUrlInvoker) Invoke() (*model.ListCdnDomainTopOrig
 		return nil, err
 	} else {
 		return result.(*model.ListCdnDomainTopOriginUrlResponse), nil
+	}
+}
+
+type ListCdnDomainTopPathInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCdnDomainTopPathInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCdnDomainTopPathInvoker) Invoke() (*model.ListCdnDomainTopPathResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCdnDomainTopPathResponse), nil
 	}
 }
 
@@ -425,6 +537,22 @@ func (i *ListDomainClientStatsInvoker) Invoke() (*model.ListDomainClientStatsRes
 	}
 }
 
+type ListDomainConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDomainConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDomainConfigsInvoker) Invoke() (*model.ListDomainConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDomainConfigsResponse), nil
+	}
+}
+
 type ListDomainsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -438,6 +566,22 @@ func (i *ListDomainsInvoker) Invoke() (*model.ListDomainsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListDomainsResponse), nil
+	}
+}
+
+type ListExportTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListExportTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListExportTasksInvoker) Invoke() (*model.ListExportTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListExportTasksResponse), nil
 	}
 }
 
@@ -470,6 +614,22 @@ func (i *ListShareCacheGroupsInvoker) Invoke() (*model.ListShareCacheGroupsRespo
 		return nil, err
 	} else {
 		return result.(*model.ListShareCacheGroupsResponse), nil
+	}
+}
+
+type ListSpecialConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSpecialConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSpecialConfigurationInvoker) Invoke() (*model.ListSpecialConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSpecialConfigurationResponse), nil
 	}
 }
 
@@ -600,6 +760,22 @@ func (i *ShowChargeModesInvoker) Invoke() (*model.ShowChargeModesResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ShowChargeModesResponse), nil
+	}
+}
+
+type ShowDomainCountryStatInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainCountryStatInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDomainCountryStatInvoker) Invoke() (*model.ShowDomainCountryStatResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainCountryStatResponse), nil
 	}
 }
 
@@ -760,6 +936,22 @@ func (i *ShowQuotaInvoker) Invoke() (*model.ShowQuotaResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowQuotaResponse), nil
+	}
+}
+
+type ShowSpecialUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSpecialUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSpecialUserInvoker) Invoke() (*model.ShowSpecialUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSpecialUserResponse), nil
 	}
 }
 

@@ -9,7 +9,7 @@ import (
 // ListPrivateDnatsRequest Request Object
 type ListPrivateDnatsRequest struct {
 
-	// 功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+	// 功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
@@ -33,17 +33,26 @@ type ListPrivateDnatsRequest struct {
 	// 中转IP的ID。
 	TransitIpId *[]string `json:"transit_ip_id,omitempty"`
 
-	// 中转IP的地址。
-	ExternalIpAddress *[]string `json:"external_ip_address,omitempty"`
-
-	// 网络接口ID，支持计算、ELB、VIP等实例的网络接口。
+	// 计算实例、ELBV2、ELBV3、VIP等资源的端口ID。
 	NetworkInterfaceId *[]string `json:"network_interface_id,omitempty"`
 
-	// DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELB的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
+	// DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELBv2的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
 	Type *[]string `json:"type,omitempty"`
 
-	// 后端实例的IP私网地址。
+	// 后端资源（计算实例、ELBV2、ELBV3、VIP等）的私网IP地址。
 	PrivateIpAddress *[]string `json:"private_ip_address,omitempty"`
+
+	// DNAT规则协议类型， 目前支持TCP/tcp/Tcp/tCp/tcP/TCp/tCP/TcP、 UDP/udp/Udp/uDp/udP/UDp/uDP/UdP、 ANY/any/Any/aNy/anY/ANy/aNY/AnY。 分别对应协议号6、17、0。
+	Protocol *[]string `json:"protocol,omitempty"`
+
+	// 后端实例的端口号（计算实例、ELBV2、ELBV3、VIP等)。
+	InternalServicePort *[]string `json:"internal_service_port,omitempty"`
+
+	// 中转IP的端口号。
+	TransitServicePort *[]string `json:"transit_service_port,omitempty"`
+
+	// 中转IP的地址。
+	TransitIpAddress *[]string `json:"transit_ip_address,omitempty"`
 }
 
 func (o ListPrivateDnatsRequest) String() string {

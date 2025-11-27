@@ -101,6 +101,22 @@ func (i *ShowApiVersionInvoker) Invoke() (*model.ShowApiVersionResponse, error) 
 	}
 }
 
+type AddEmailTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddEmailTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddEmailTemplateInvoker) Invoke() (*model.AddEmailTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddEmailTemplateResponse), nil
+	}
+}
+
 type AddFullSqlTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -114,6 +130,70 @@ func (i *AddFullSqlTaskInvoker) Invoke() (*model.AddFullSqlTaskResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.AddFullSqlTaskResponse), nil
+	}
+}
+
+type AddInstanceGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddInstanceGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddInstanceGroupInvoker) Invoke() (*model.AddInstanceGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddInstanceGroupResponse), nil
+	}
+}
+
+type AddInstanceToGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddInstanceToGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddInstanceToGroupInvoker) Invoke() (*model.AddInstanceToGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddInstanceToGroupResponse), nil
+	}
+}
+
+type BatchSendEmailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchSendEmailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchSendEmailInvoker) Invoke() (*model.BatchSendEmailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchSendEmailResponse), nil
+	}
+}
+
+type BatchSubscribeReportInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchSubscribeReportInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchSubscribeReportInvoker) Invoke() (*model.BatchSubscribeReportResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchSubscribeReportResponse), nil
 	}
 }
 
@@ -210,6 +290,22 @@ func (i *CheckCredentialInvoker) Invoke() (*model.CheckCredentialResponse, error
 		return nil, err
 	} else {
 		return result.(*model.CheckCredentialResponse), nil
+	}
+}
+
+type CheckCredentialForBatchInspectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckCredentialForBatchInspectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckCredentialForBatchInspectionInvoker) Invoke() (*model.CheckCredentialForBatchInspectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckCredentialForBatchInspectionResponse), nil
 	}
 }
 
@@ -325,6 +421,22 @@ func (i *DeleteDbUserInvoker) Invoke() (*model.DeleteDbUserResponse, error) {
 	}
 }
 
+type DeleteEmailTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteEmailTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteEmailTemplateInvoker) Invoke() (*model.DeleteEmailTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteEmailTemplateResponse), nil
+	}
+}
+
 type DeleteHistoryTransactionExportTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -338,6 +450,22 @@ func (i *DeleteHistoryTransactionExportTaskInvoker) Invoke() (*model.DeleteHisto
 		return nil, err
 	} else {
 		return result.(*model.DeleteHistoryTransactionExportTaskResponse), nil
+	}
+}
+
+type DeleteInstanceGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteInstanceGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteInstanceGroupInvoker) Invoke() (*model.DeleteInstanceGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteInstanceGroupResponse), nil
 	}
 }
 
@@ -565,6 +693,38 @@ func (i *ListDbUsersInvoker) Invoke() (*model.ListDbUsersResponse, error) {
 	}
 }
 
+type ListEmailRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEmailRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListEmailRecordInvoker) Invoke() (*model.ListEmailRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEmailRecordResponse), nil
+	}
+}
+
+type ListEmailTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEmailTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListEmailTemplateInvoker) Invoke() (*model.ListEmailTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEmailTemplateResponse), nil
+	}
+}
+
 type ListFullSqlTasksInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -629,6 +789,22 @@ func (i *ListInnodbLocksInvoker) Invoke() (*model.ListInnodbLocksResponse, error
 	}
 }
 
+type ListInspectionReportInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInspectionReportInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInspectionReportInvoker) Invoke() (*model.ListInspectionReportResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInspectionReportResponse), nil
+	}
+}
+
 type ListInstanceDistributionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -642,6 +818,22 @@ func (i *ListInstanceDistributionInvoker) Invoke() (*model.ListInstanceDistribut
 		return nil, err
 	} else {
 		return result.(*model.ListInstanceDistributionResponse), nil
+	}
+}
+
+type ListInstanceGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceGroupInvoker) Invoke() (*model.ListInstanceGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceGroupResponse), nil
 	}
 }
 
@@ -917,6 +1109,22 @@ func (i *SaveCredentialInvoker) Invoke() (*model.SaveCredentialResponse, error) 
 	}
 }
 
+type SaveCredentialForBatchInspectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SaveCredentialForBatchInspectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SaveCredentialForBatchInspectionInvoker) Invoke() (*model.SaveCredentialForBatchInspectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SaveCredentialForBatchInspectionResponse), nil
+	}
+}
+
 type SetThresholdForMetricInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -930,6 +1138,22 @@ func (i *SetThresholdForMetricInvoker) Invoke() (*model.SetThresholdForMetricRes
 		return nil, err
 	} else {
 		return result.(*model.SetThresholdForMetricResponse), nil
+	}
+}
+
+type ShowCredentialInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCredentialInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowCredentialInvoker) Invoke() (*model.ShowCredentialResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCredentialResponse), nil
 	}
 }
 
@@ -1237,6 +1461,22 @@ func (i *UpdateDbUserInvoker) Invoke() (*model.UpdateDbUserResponse, error) {
 	}
 }
 
+type UpdateEmailTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateEmailTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateEmailTemplateInvoker) Invoke() (*model.UpdateEmailTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateEmailTemplateResponse), nil
+	}
+}
+
 type UpdateHealthReportSettingsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1250,6 +1490,22 @@ func (i *UpdateHealthReportSettingsInvoker) Invoke() (*model.UpdateHealthReportS
 		return nil, err
 	} else {
 		return result.(*model.UpdateHealthReportSettingsResponse), nil
+	}
+}
+
+type UpdateInstanceGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInstanceGroupInvoker) Invoke() (*model.UpdateInstanceGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceGroupResponse), nil
 	}
 }
 

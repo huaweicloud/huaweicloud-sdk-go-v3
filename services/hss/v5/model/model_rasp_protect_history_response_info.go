@@ -15,7 +15,7 @@ type RaspProtectHistoryResponseInfo struct {
 	PrivateIp *string `json:"private_ip,omitempty"`
 
 	// 告警时间(ms)
-	AlarmTime *interface{} `json:"alarm_time,omitempty"`
+	AlarmTime *int64 `json:"alarm_time,omitempty"`
 
 	// 告警名称
 	EventName *string `json:"event_name,omitempty"`

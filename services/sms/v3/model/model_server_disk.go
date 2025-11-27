@@ -36,7 +36,7 @@ type ServerDisk struct {
 	// Linux系统 目的端ECS中与源端关联的磁盘名称
 	RelationName *string `json:"relation_name,omitempty"`
 
-	// inode数量
+	// inode大小
 	InodeSize *int32 `json:"inode_size,omitempty"`
 }
 

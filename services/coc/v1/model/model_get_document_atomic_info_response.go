@@ -9,23 +9,15 @@ import (
 // GetDocumentAtomicInfoResponse Response Object
 type GetDocumentAtomicInfoResponse struct {
 
-	// 原子能力唯一标识：只允许字母+下划线，字母开头
-	AtomicUniqueKey *string `json:"atomic_unique_key,omitempty"`
+	// 错误码
+	ErrorCode *string `json:"error_code,omitempty"`
 
-	// 中文名
-	AtomicNameZh *string `json:"atomic_name_zh,omitempty"`
+	// 错误信息
+	ErrorMsg *string `json:"error_msg,omitempty"`
 
-	// 英文名
-	AtomicNameEn *string `json:"atomic_name_en,omitempty"`
-
-	// 标签信息
-	Tags *[]string `json:"tags,omitempty"`
-
-	// 原子能力入参
-	Inputs *[]AtomicInputModel `json:"inputs,omitempty"`
-
-	Outputs        *AtomicOutputModel `json:"outputs,omitempty"`
-	HttpStatusCode int                `json:"-"`
+	// 返回数据。
+	Data           *interface{} `json:"data,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o GetDocumentAtomicInfoResponse) String() string {

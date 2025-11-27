@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ResourceType 资源类型，取值： - ga-accelerators：加速实例 - ga-listeners：监听器
+// ResourceType 资源类型，取值范围： - ga-accelerators：加速实例 - ga-listeners：监听器
 type ResourceType struct {
 	value string
 }

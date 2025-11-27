@@ -266,6 +266,27 @@ func (c *MrsClient) ListAllTagsInvoker(request *model.ListAllTagsRequest) *ListA
 	return &ListAllTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAsyncTaskStatus 查询指定集群切换委托任务状态
+//
+// 查询指定集群切换委托任务状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) ListAsyncTaskStatus(request *model.ListAsyncTaskStatusRequest) (*model.ListAsyncTaskStatusResponse, error) {
+	requestDef := GenReqDefForListAsyncTaskStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAsyncTaskStatusResponse), nil
+	}
+}
+
+// ListAsyncTaskStatusInvoker 查询指定集群切换委托任务状态
+func (c *MrsClient) ListAsyncTaskStatusInvoker(request *model.ListAsyncTaskStatusRequest) *ListAsyncTaskStatusInvoker {
+	requestDef := GenReqDefForListAsyncTaskStatus()
+	return &ListAsyncTaskStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListClusterTags 查询指定集群的标签
 //
 // 查询指定集群的标签信息。

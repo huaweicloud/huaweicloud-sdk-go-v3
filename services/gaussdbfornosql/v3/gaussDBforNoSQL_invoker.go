@@ -1125,6 +1125,22 @@ func (i *ListSlowLogsInvoker) Invoke() (*model.ListSlowLogsResponse, error) {
 	}
 }
 
+type ListSslCertDownloadAddressesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSslCertDownloadAddressesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSslCertDownloadAddressesInvoker) Invoke() (*model.ListSslCertDownloadAddressesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSslCertDownloadAddressesResponse), nil
+	}
+}
+
 type ModifyAutoNodeExpansionPolicyInvoker struct {
 	*invoker.BaseInvoker
 }

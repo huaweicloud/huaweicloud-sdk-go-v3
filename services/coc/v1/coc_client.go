@@ -187,6 +187,69 @@ func (c *CocClient) TransferAlarmToIncidentInvoker(request *model.TransferAlarmT
 	return &TransferAlarmToIncidentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateApplication 创建应用
+//
+// 创建应用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CreateApplication(request *model.CreateApplicationRequest) (*model.CreateApplicationResponse, error) {
+	requestDef := GenReqDefForCreateApplication()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateApplicationResponse), nil
+	}
+}
+
+// CreateApplicationInvoker 创建应用
+func (c *CocClient) CreateApplicationInvoker(request *model.CreateApplicationRequest) *CreateApplicationInvoker {
+	requestDef := GenReqDefForCreateApplication()
+	return &CreateApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteApplication 删除应用
+//
+// 删除应用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) DeleteApplication(request *model.DeleteApplicationRequest) (*model.DeleteApplicationResponse, error) {
+	requestDef := GenReqDefForDeleteApplication()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteApplicationResponse), nil
+	}
+}
+
+// DeleteApplicationInvoker 删除应用
+func (c *CocClient) DeleteApplicationInvoker(request *model.DeleteApplicationRequest) *DeleteApplicationInvoker {
+	requestDef := GenReqDefForDeleteApplication()
+	return &DeleteApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateApplication 修改应用
+//
+// 修改应用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) UpdateApplication(request *model.UpdateApplicationRequest) (*model.UpdateApplicationResponse, error) {
+	requestDef := GenReqDefForUpdateApplication()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateApplicationResponse), nil
+	}
+}
+
+// UpdateApplicationInvoker 修改应用
+func (c *CocClient) UpdateApplicationInvoker(request *model.UpdateApplicationRequest) *UpdateApplicationInvoker {
+	requestDef := GenReqDefForUpdateApplication()
+	return &UpdateApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchCreateApplicationView 批量创建应用，分组，组件
 //
 // 批量创建应用，分组，组件。
@@ -206,6 +269,27 @@ func (c *CocClient) BatchCreateApplicationView(request *model.BatchCreateApplica
 func (c *CocClient) BatchCreateApplicationViewInvoker(request *model.BatchCreateApplicationViewRequest) *BatchCreateApplicationViewInvoker {
 	requestDef := GenReqDefForBatchCreateApplicationView()
 	return &BatchCreateApplicationViewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApplicationView 查询应用、组件、分组名称列表
+//
+// 查询应用、组件、分组名称列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListApplicationView(request *model.ListApplicationViewRequest) (*model.ListApplicationViewResponse, error) {
+	requestDef := GenReqDefForListApplicationView()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApplicationViewResponse), nil
+	}
+}
+
+// ListApplicationViewInvoker 查询应用、组件、分组名称列表
+func (c *CocClient) ListApplicationViewInvoker(request *model.ListApplicationViewRequest) *ListApplicationViewInvoker {
+	requestDef := GenReqDefForListApplicationView()
+	return &ListApplicationViewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateAssessTask 创建应用评估任务
@@ -397,6 +481,90 @@ func (c *CocClient) ShowInstancePatchItemsInvoker(request *model.ShowInstancePat
 	return &ShowInstancePatchItemsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateApplicationComponents 创建组件
+//
+// 创建组件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CreateApplicationComponents(request *model.CreateApplicationComponentsRequest) (*model.CreateApplicationComponentsResponse, error) {
+	requestDef := GenReqDefForCreateApplicationComponents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateApplicationComponentsResponse), nil
+	}
+}
+
+// CreateApplicationComponentsInvoker 创建组件
+func (c *CocClient) CreateApplicationComponentsInvoker(request *model.CreateApplicationComponentsRequest) *CreateApplicationComponentsInvoker {
+	requestDef := GenReqDefForCreateApplicationComponents()
+	return &CreateApplicationComponentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteApplicationComponent 删除组件
+//
+// 删除组件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) DeleteApplicationComponent(request *model.DeleteApplicationComponentRequest) (*model.DeleteApplicationComponentResponse, error) {
+	requestDef := GenReqDefForDeleteApplicationComponent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteApplicationComponentResponse), nil
+	}
+}
+
+// DeleteApplicationComponentInvoker 删除组件
+func (c *CocClient) DeleteApplicationComponentInvoker(request *model.DeleteApplicationComponentRequest) *DeleteApplicationComponentInvoker {
+	requestDef := GenReqDefForDeleteApplicationComponent()
+	return &DeleteApplicationComponentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApplicationComponents 查询组件
+//
+// 查询组件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListApplicationComponents(request *model.ListApplicationComponentsRequest) (*model.ListApplicationComponentsResponse, error) {
+	requestDef := GenReqDefForListApplicationComponents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApplicationComponentsResponse), nil
+	}
+}
+
+// ListApplicationComponentsInvoker 查询组件
+func (c *CocClient) ListApplicationComponentsInvoker(request *model.ListApplicationComponentsRequest) *ListApplicationComponentsInvoker {
+	requestDef := GenReqDefForListApplicationComponents()
+	return &ListApplicationComponentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateApplicationComponent 修改组件
+//
+// 修改组件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) UpdateApplicationComponent(request *model.UpdateApplicationComponentRequest) (*model.UpdateApplicationComponentResponse, error) {
+	requestDef := GenReqDefForUpdateApplicationComponent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateApplicationComponentResponse), nil
+	}
+}
+
+// UpdateApplicationComponentInvoker 修改组件
+func (c *CocClient) UpdateApplicationComponentInvoker(request *model.UpdateApplicationComponentRequest) *UpdateApplicationComponentInvoker {
+	requestDef := GenReqDefForUpdateApplicationComponent()
+	return &UpdateApplicationComponentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateReportCustomEvent 支持用户自主接入告警数据
 //
 // 支持租户将自开发的监控系统按照标准化集成至COC，集成后告警会按照标准格式上报至COC告警中心
@@ -416,6 +584,48 @@ func (c *CocClient) CreateReportCustomEvent(request *model.CreateReportCustomEve
 func (c *CocClient) CreateReportCustomEventInvoker(request *model.CreateReportCustomEventRequest) *CreateReportCustomEventInvoker {
 	requestDef := GenReqDefForCreateReportCustomEvent()
 	return &CreateReportCustomEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountOtherResource 查询线下IDC资源数量
+//
+// 查询IDC离线资源的数量。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CountOtherResource(request *model.CountOtherResourceRequest) (*model.CountOtherResourceResponse, error) {
+	requestDef := GenReqDefForCountOtherResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountOtherResourceResponse), nil
+	}
+}
+
+// CountOtherResourceInvoker 查询线下IDC资源数量
+func (c *CocClient) CountOtherResourceInvoker(request *model.CountOtherResourceRequest) *CountOtherResourceInvoker {
+	requestDef := GenReqDefForCountOtherResource()
+	return &CountOtherResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ImportOtherResource 导入IDC离线资源
+//
+// 管理线下设备提供IDC离线资源纳管功能-导入IDC离线资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ImportOtherResource(request *model.ImportOtherResourceRequest) (*model.ImportOtherResourceResponse, error) {
+	requestDef := GenReqDefForImportOtherResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ImportOtherResourceResponse), nil
+	}
+}
+
+// ImportOtherResourceInvoker 导入IDC离线资源
+func (c *CocClient) ImportOtherResourceInvoker(request *model.ImportOtherResourceRequest) *ImportOtherResourceInvoker {
+	requestDef := GenReqDefForImportOtherResource()
+	return &ImportOtherResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CancelDiagnosisTask 取消诊断任务
@@ -731,6 +941,48 @@ func (c *CocClient) UpdateDocument(request *model.UpdateDocumentRequest) (*model
 func (c *CocClient) UpdateDocumentInvoker(request *model.UpdateDocumentRequest) *UpdateDocumentInvoker {
 	requestDef := GenReqDefForUpdateDocument()
 	return &UpdateDocumentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEnterpriseProjectCollect 查询企业项目收藏
+//
+// 查询企业项目收藏。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListEnterpriseProjectCollect(request *model.ListEnterpriseProjectCollectRequest) (*model.ListEnterpriseProjectCollectResponse, error) {
+	requestDef := GenReqDefForListEnterpriseProjectCollect()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEnterpriseProjectCollectResponse), nil
+	}
+}
+
+// ListEnterpriseProjectCollectInvoker 查询企业项目收藏
+func (c *CocClient) ListEnterpriseProjectCollectInvoker(request *model.ListEnterpriseProjectCollectRequest) *ListEnterpriseProjectCollectInvoker {
+	requestDef := GenReqDefForListEnterpriseProjectCollect()
+	return &ListEnterpriseProjectCollectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateEnterpriseProjectCollect 更新企业项目收藏
+//
+// 更新企业项目收藏。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) UpdateEnterpriseProjectCollect(request *model.UpdateEnterpriseProjectCollectRequest) (*model.UpdateEnterpriseProjectCollectResponse, error) {
+	requestDef := GenReqDefForUpdateEnterpriseProjectCollect()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEnterpriseProjectCollectResponse), nil
+	}
+}
+
+// UpdateEnterpriseProjectCollectInvoker 更新企业项目收藏
+func (c *CocClient) UpdateEnterpriseProjectCollectInvoker(request *model.UpdateEnterpriseProjectCollectRequest) *UpdateEnterpriseProjectCollectInvoker {
+	requestDef := GenReqDefForUpdateEnterpriseProjectCollect()
+	return &UpdateEnterpriseProjectCollectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateReportPrometheusEvent Prometheus事件接入
@@ -1237,6 +1489,300 @@ func (c *CocClient) DownloadAttachmentInvoker(request *model.DownloadAttachmentR
 	return &DownloadAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateApplicationGroup 创建分组
+//
+// 创建分组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CreateApplicationGroup(request *model.CreateApplicationGroupRequest) (*model.CreateApplicationGroupResponse, error) {
+	requestDef := GenReqDefForCreateApplicationGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateApplicationGroupResponse), nil
+	}
+}
+
+// CreateApplicationGroupInvoker 创建分组
+func (c *CocClient) CreateApplicationGroupInvoker(request *model.CreateApplicationGroupRequest) *CreateApplicationGroupInvoker {
+	requestDef := GenReqDefForCreateApplicationGroup()
+	return &CreateApplicationGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteApplicationGroup 删除分组
+//
+// 删除分组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) DeleteApplicationGroup(request *model.DeleteApplicationGroupRequest) (*model.DeleteApplicationGroupResponse, error) {
+	requestDef := GenReqDefForDeleteApplicationGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteApplicationGroupResponse), nil
+	}
+}
+
+// DeleteApplicationGroupInvoker 删除分组
+func (c *CocClient) DeleteApplicationGroupInvoker(request *model.DeleteApplicationGroupRequest) *DeleteApplicationGroupInvoker {
+	requestDef := GenReqDefForDeleteApplicationGroup()
+	return &DeleteApplicationGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApplicationGroups 查询分组
+//
+// 查询应用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListApplicationGroups(request *model.ListApplicationGroupsRequest) (*model.ListApplicationGroupsResponse, error) {
+	requestDef := GenReqDefForListApplicationGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApplicationGroupsResponse), nil
+	}
+}
+
+// ListApplicationGroupsInvoker 查询分组
+func (c *CocClient) ListApplicationGroupsInvoker(request *model.ListApplicationGroupsRequest) *ListApplicationGroupsInvoker {
+	requestDef := GenReqDefForListApplicationGroups()
+	return &ListApplicationGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SyncGroupResource 分组智能同步资源
+//
+// 分组智能同步资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) SyncGroupResource(request *model.SyncGroupResourceRequest) (*model.SyncGroupResourceResponse, error) {
+	requestDef := GenReqDefForSyncGroupResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SyncGroupResourceResponse), nil
+	}
+}
+
+// SyncGroupResourceInvoker 分组智能同步资源
+func (c *CocClient) SyncGroupResourceInvoker(request *model.SyncGroupResourceRequest) *SyncGroupResourceInvoker {
+	requestDef := GenReqDefForSyncGroupResource()
+	return &SyncGroupResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateApplicationGroup 修改分组
+//
+// 修改分组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) UpdateApplicationGroup(request *model.UpdateApplicationGroupRequest) (*model.UpdateApplicationGroupResponse, error) {
+	requestDef := GenReqDefForUpdateApplicationGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateApplicationGroupResponse), nil
+	}
+}
+
+// UpdateApplicationGroupInvoker 修改分组
+func (c *CocClient) UpdateApplicationGroupInvoker(request *model.UpdateApplicationGroupRequest) *UpdateApplicationGroupInvoker {
+	requestDef := GenReqDefForUpdateApplicationGroup()
+	return &UpdateApplicationGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGroupAliResourceRelations 查询分组关联的阿里云资源
+//
+// 查询分组关联的阿里云资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListGroupAliResourceRelations(request *model.ListGroupAliResourceRelationsRequest) (*model.ListGroupAliResourceRelationsResponse, error) {
+	requestDef := GenReqDefForListGroupAliResourceRelations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGroupAliResourceRelationsResponse), nil
+	}
+}
+
+// ListGroupAliResourceRelationsInvoker 查询分组关联的阿里云资源
+func (c *CocClient) ListGroupAliResourceRelationsInvoker(request *model.ListGroupAliResourceRelationsRequest) *ListGroupAliResourceRelationsInvoker {
+	requestDef := GenReqDefForListGroupAliResourceRelations()
+	return &ListGroupAliResourceRelationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGroupOtherResourceRelations 查询分组关联的离线资源
+//
+// 查询分组关联的离线资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListGroupOtherResourceRelations(request *model.ListGroupOtherResourceRelationsRequest) (*model.ListGroupOtherResourceRelationsResponse, error) {
+	requestDef := GenReqDefForListGroupOtherResourceRelations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGroupOtherResourceRelationsResponse), nil
+	}
+}
+
+// ListGroupOtherResourceRelationsInvoker 查询分组关联的离线资源
+func (c *CocClient) ListGroupOtherResourceRelationsInvoker(request *model.ListGroupOtherResourceRelationsRequest) *ListGroupOtherResourceRelationsInvoker {
+	requestDef := GenReqDefForListGroupOtherResourceRelations()
+	return &ListGroupOtherResourceRelationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountGroupRmsResourceRelations 查询分组关联的资源总数
+//
+// 分组管理多个资源后，可查询分组关联的资源总数， 应用id和分组id不能共存，且必填其中一个。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CountGroupRmsResourceRelations(request *model.CountGroupRmsResourceRelationsRequest) (*model.CountGroupRmsResourceRelationsResponse, error) {
+	requestDef := GenReqDefForCountGroupRmsResourceRelations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountGroupRmsResourceRelationsResponse), nil
+	}
+}
+
+// CountGroupRmsResourceRelationsInvoker 查询分组关联的资源总数
+func (c *CocClient) CountGroupRmsResourceRelationsInvoker(request *model.CountGroupRmsResourceRelationsRequest) *CountGroupRmsResourceRelationsInvoker {
+	requestDef := GenReqDefForCountGroupRmsResourceRelations()
+	return &CountGroupRmsResourceRelationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateGroupRmsResourceRelation 创建分组资源关联
+//
+// 创建分组资源关联。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CreateGroupRmsResourceRelation(request *model.CreateGroupRmsResourceRelationRequest) (*model.CreateGroupRmsResourceRelationResponse, error) {
+	requestDef := GenReqDefForCreateGroupRmsResourceRelation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateGroupRmsResourceRelationResponse), nil
+	}
+}
+
+// CreateGroupRmsResourceRelationInvoker 创建分组资源关联
+func (c *CocClient) CreateGroupRmsResourceRelationInvoker(request *model.CreateGroupRmsResourceRelationRequest) *CreateGroupRmsResourceRelationInvoker {
+	requestDef := GenReqDefForCreateGroupRmsResourceRelation()
+	return &CreateGroupRmsResourceRelationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteGroupRmsResourceRelation 解绑分组资源关联
+//
+// 解绑分组资源关联。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) DeleteGroupRmsResourceRelation(request *model.DeleteGroupRmsResourceRelationRequest) (*model.DeleteGroupRmsResourceRelationResponse, error) {
+	requestDef := GenReqDefForDeleteGroupRmsResourceRelation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteGroupRmsResourceRelationResponse), nil
+	}
+}
+
+// DeleteGroupRmsResourceRelationInvoker 解绑分组资源关联
+func (c *CocClient) DeleteGroupRmsResourceRelationInvoker(request *model.DeleteGroupRmsResourceRelationRequest) *DeleteGroupRmsResourceRelationInvoker {
+	requestDef := GenReqDefForDeleteGroupRmsResourceRelation()
+	return &DeleteGroupRmsResourceRelationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCapacityOrder 查询应用、组件、分组容量数据的排名
+//
+// 查询应用、组件、分组容量数据的排名，其中应用、组件和分组ID，有且仅有1个有值。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListCapacityOrder(request *model.ListCapacityOrderRequest) (*model.ListCapacityOrderResponse, error) {
+	requestDef := GenReqDefForListCapacityOrder()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCapacityOrderResponse), nil
+	}
+}
+
+// ListCapacityOrderInvoker 查询应用、组件、分组容量数据的排名
+func (c *CocClient) ListCapacityOrderInvoker(request *model.ListCapacityOrderRequest) *ListCapacityOrderInvoker {
+	requestDef := GenReqDefForListCapacityOrder()
+	return &ListCapacityOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCapacityView 查询应用的容量数据
+//
+// 云运维中心支持查看应用、子应用、组件或分组下已关联的资源容量详情，按照资源类型展示资源核心数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListCapacityView(request *model.ListCapacityViewRequest) (*model.ListCapacityViewResponse, error) {
+	requestDef := GenReqDefForListCapacityView()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCapacityViewResponse), nil
+	}
+}
+
+// ListCapacityViewInvoker 查询应用的容量数据
+func (c *CocClient) ListCapacityViewInvoker(request *model.ListCapacityViewRequest) *ListCapacityViewInvoker {
+	requestDef := GenReqDefForListCapacityView()
+	return &ListCapacityViewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGroupRmsResourceRelations 查询分组关联的华为云资源
+//
+// 查询分组关联的华为云资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListGroupRmsResourceRelations(request *model.ListGroupRmsResourceRelationsRequest) (*model.ListGroupRmsResourceRelationsResponse, error) {
+	requestDef := GenReqDefForListGroupRmsResourceRelations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGroupRmsResourceRelationsResponse), nil
+	}
+}
+
+// ListGroupRmsResourceRelationsInvoker 查询分组关联的华为云资源
+func (c *CocClient) ListGroupRmsResourceRelationsInvoker(request *model.ListGroupRmsResourceRelationsRequest) *ListGroupRmsResourceRelationsInvoker {
+	requestDef := GenReqDefForListGroupRmsResourceRelations()
+	return &ListGroupRmsResourceRelationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateGroupRmsResourceRelation 转移资源
+//
+// 转移资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) UpdateGroupRmsResourceRelation(request *model.UpdateGroupRmsResourceRelationRequest) (*model.UpdateGroupRmsResourceRelationResponse, error) {
+	requestDef := GenReqDefForUpdateGroupRmsResourceRelation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateGroupRmsResourceRelationResponse), nil
+	}
+}
+
+// UpdateGroupRmsResourceRelationInvoker 转移资源
+func (c *CocClient) UpdateGroupRmsResourceRelationInvoker(request *model.UpdateGroupRmsResourceRelationRequest) *UpdateGroupRmsResourceRelationInvoker {
+	requestDef := GenReqDefForUpdateGroupRmsResourceRelation()
+	return &UpdateGroupRmsResourceRelationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAuthorizableTicketsExternal 查询COC可授权单列表
 //
 // 查询COC可授权单列表（变更单号、事件单号、warroom和告警）
@@ -1321,6 +1867,27 @@ func (c *CocClient) CountMultiResourcesInvoker(request *model.CountMultiResource
 	return &CountMultiResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CountResources 查询用户资源总数
+//
+// 查询用户资源总数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CountResources(request *model.CountResourcesRequest) (*model.CountResourcesResponse, error) {
+	requestDef := GenReqDefForCountResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountResourcesResponse), nil
+	}
+}
+
+// CountResourcesInvoker 查询用户资源总数
+func (c *CocClient) CountResourcesInvoker(request *model.CountResourcesRequest) *CountResourcesInvoker {
+	requestDef := GenReqDefForCountResources()
+	return &CountResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListResources 查询用户所有资源
 //
 // 查询租户所有资源：
@@ -1366,6 +1933,27 @@ func (c *CocClient) SyncResourceInvoker(request *model.SyncResourceRequest) *Syn
 	return &SyncResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SyncResourceAgent 同步华为云资源Agent信息
+//
+// 同步华为云资源Agent信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) SyncResourceAgent(request *model.SyncResourceAgentRequest) (*model.SyncResourceAgentResponse, error) {
+	requestDef := GenReqDefForSyncResourceAgent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SyncResourceAgentResponse), nil
+	}
+}
+
+// SyncResourceAgentInvoker 同步华为云资源Agent信息
+func (c *CocClient) SyncResourceAgentInvoker(request *model.SyncResourceAgentRequest) *SyncResourceAgentInvoker {
+	requestDef := GenReqDefForSyncResourceAgent()
+	return &SyncResourceAgentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListScriptResourceTags 查询资源标签列表
 //
 // 查询资源标签列表
@@ -1406,6 +1994,195 @@ func (c *CocClient) UpdateResourceTags(request *model.UpdateResourceTagsRequest)
 func (c *CocClient) UpdateResourceTagsInvoker(request *model.UpdateResourceTagsRequest) *UpdateResourceTagsInvoker {
 	requestDef := GenReqDefForUpdateResourceTags()
 	return &UpdateResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateResourceTags 添加资源标签
+//
+// 添加资源标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CreateResourceTags(request *model.CreateResourceTagsRequest) (*model.CreateResourceTagsResponse, error) {
+	requestDef := GenReqDefForCreateResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateResourceTagsResponse), nil
+	}
+}
+
+// CreateResourceTagsInvoker 添加资源标签
+func (c *CocClient) CreateResourceTagsInvoker(request *model.CreateResourceTagsRequest) *CreateResourceTagsInvoker {
+	requestDef := GenReqDefForCreateResourceTags()
+	return &CreateResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResourceTags 查询资源标签
+//
+// 查询资源标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListResourceTags(request *model.ListResourceTagsRequest) (*model.ListResourceTagsResponse, error) {
+	requestDef := GenReqDefForListResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourceTagsResponse), nil
+	}
+}
+
+// ListResourceTagsInvoker 查询资源标签
+func (c *CocClient) ListResourceTagsInvoker(request *model.ListResourceTagsRequest) *ListResourceTagsInvoker {
+	requestDef := GenReqDefForListResourceTags()
+	return &ListResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountResourcesOfResourceView 查询CMDB跨账号资源视图聚合的资源总数
+//
+// 查询CMDB跨账号资源视图聚合的资源总数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CountResourcesOfResourceView(request *model.CountResourcesOfResourceViewRequest) (*model.CountResourcesOfResourceViewResponse, error) {
+	requestDef := GenReqDefForCountResourcesOfResourceView()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountResourcesOfResourceViewResponse), nil
+	}
+}
+
+// CountResourcesOfResourceViewInvoker 查询CMDB跨账号资源视图聚合的资源总数
+func (c *CocClient) CountResourcesOfResourceViewInvoker(request *model.CountResourcesOfResourceViewRequest) *CountResourcesOfResourceViewInvoker {
+	requestDef := GenReqDefForCountResourcesOfResourceView()
+	return &CountResourcesOfResourceViewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateResourceViews 创建CMDB跨账号资源视图
+//
+// 创建CMDB跨账号资源视图。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CreateResourceViews(request *model.CreateResourceViewsRequest) (*model.CreateResourceViewsResponse, error) {
+	requestDef := GenReqDefForCreateResourceViews()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateResourceViewsResponse), nil
+	}
+}
+
+// CreateResourceViewsInvoker 创建CMDB跨账号资源视图
+func (c *CocClient) CreateResourceViewsInvoker(request *model.CreateResourceViewsRequest) *CreateResourceViewsInvoker {
+	requestDef := GenReqDefForCreateResourceViews()
+	return &CreateResourceViewsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteResourceViews 删除CMDB的跨账号资源管理视图
+//
+// 删除CMDB的跨账号资源管理视图。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) DeleteResourceViews(request *model.DeleteResourceViewsRequest) (*model.DeleteResourceViewsResponse, error) {
+	requestDef := GenReqDefForDeleteResourceViews()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteResourceViewsResponse), nil
+	}
+}
+
+// DeleteResourceViewsInvoker 删除CMDB的跨账号资源管理视图
+func (c *CocClient) DeleteResourceViewsInvoker(request *model.DeleteResourceViewsRequest) *DeleteResourceViewsInvoker {
+	requestDef := GenReqDefForDeleteResourceViews()
+	return &DeleteResourceViewsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResourceViews 查询CMDB跨账号资源视图
+//
+// 查询CMDB跨账号资源视图。视图是一组筛选器，用户可以自由配置筛选范围，用于在跨账号场景下访问华为云中的资源信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListResourceViews(request *model.ListResourceViewsRequest) (*model.ListResourceViewsResponse, error) {
+	requestDef := GenReqDefForListResourceViews()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourceViewsResponse), nil
+	}
+}
+
+// ListResourceViewsInvoker 查询CMDB跨账号资源视图
+func (c *CocClient) ListResourceViewsInvoker(request *model.ListResourceViewsRequest) *ListResourceViewsInvoker {
+	requestDef := GenReqDefForListResourceViews()
+	return &ListResourceViewsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResourcesOfResourceView 查询CMDB跨账号资源视图聚合的资源
+//
+// 查询CMDB跨账号资源视图聚合的资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListResourcesOfResourceView(request *model.ListResourcesOfResourceViewRequest) (*model.ListResourcesOfResourceViewResponse, error) {
+	requestDef := GenReqDefForListResourcesOfResourceView()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourcesOfResourceViewResponse), nil
+	}
+}
+
+// ListResourcesOfResourceViewInvoker 查询CMDB跨账号资源视图聚合的资源
+func (c *CocClient) ListResourcesOfResourceViewInvoker(request *model.ListResourcesOfResourceViewRequest) *ListResourcesOfResourceViewInvoker {
+	requestDef := GenReqDefForListResourcesOfResourceView()
+	return &ListResourcesOfResourceViewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SyncResourcesOfResourceView 同步CMDB跨账号资源视图
+//
+// 同步CMDB跨账号资源视图。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) SyncResourcesOfResourceView(request *model.SyncResourcesOfResourceViewRequest) (*model.SyncResourcesOfResourceViewResponse, error) {
+	requestDef := GenReqDefForSyncResourcesOfResourceView()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SyncResourcesOfResourceViewResponse), nil
+	}
+}
+
+// SyncResourcesOfResourceViewInvoker 同步CMDB跨账号资源视图
+func (c *CocClient) SyncResourcesOfResourceViewInvoker(request *model.SyncResourcesOfResourceViewRequest) *SyncResourcesOfResourceViewInvoker {
+	requestDef := GenReqDefForSyncResourcesOfResourceView()
+	return &SyncResourcesOfResourceViewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateResourceViews 更新CMDB跨账号资源视图
+//
+// 更新CMDB跨账号资源视图。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) UpdateResourceViews(request *model.UpdateResourceViewsRequest) (*model.UpdateResourceViewsResponse, error) {
+	requestDef := GenReqDefForUpdateResourceViews()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateResourceViewsResponse), nil
+	}
+}
+
+// UpdateResourceViewsInvoker 更新CMDB跨账号资源视图
+func (c *CocClient) UpdateResourceViewsInvoker(request *model.UpdateResourceViewsRequest) *UpdateResourceViewsInvoker {
+	requestDef := GenReqDefForUpdateResourceViews()
+	return &UpdateResourceViewsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateScheduledTask 新建定时运维
@@ -2005,6 +2782,90 @@ func (c *CocClient) ListPublicScripts(request *model.ListPublicScriptsRequest) (
 func (c *CocClient) ListPublicScriptsInvoker(request *model.ListPublicScriptsRequest) *ListPublicScriptsInvoker {
 	requestDef := GenReqDefForListPublicScripts()
 	return &ListPublicScriptsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateVendorAccount 创建云厂商账号
+//
+// 创建云厂商（阿里云、AWS、Azure和HCS等）账号。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) CreateVendorAccount(request *model.CreateVendorAccountRequest) (*model.CreateVendorAccountResponse, error) {
+	requestDef := GenReqDefForCreateVendorAccount()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateVendorAccountResponse), nil
+	}
+}
+
+// CreateVendorAccountInvoker 创建云厂商账号
+func (c *CocClient) CreateVendorAccountInvoker(request *model.CreateVendorAccountRequest) *CreateVendorAccountInvoker {
+	requestDef := GenReqDefForCreateVendorAccount()
+	return &CreateVendorAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteVendorAccount 删除云厂商账号
+//
+// 增加云广商账号，不需要后，可删除云厂商账号。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) DeleteVendorAccount(request *model.DeleteVendorAccountRequest) (*model.DeleteVendorAccountResponse, error) {
+	requestDef := GenReqDefForDeleteVendorAccount()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteVendorAccountResponse), nil
+	}
+}
+
+// DeleteVendorAccountInvoker 删除云厂商账号
+func (c *CocClient) DeleteVendorAccountInvoker(request *model.DeleteVendorAccountRequest) *DeleteVendorAccountInvoker {
+	requestDef := GenReqDefForDeleteVendorAccount()
+	return &DeleteVendorAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVendorAccount 查询云厂商账号
+//
+// 查询所有云厂商（阿里云、AWS、Azure和HCS等）账号信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListVendorAccount(request *model.ListVendorAccountRequest) (*model.ListVendorAccountResponse, error) {
+	requestDef := GenReqDefForListVendorAccount()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVendorAccountResponse), nil
+	}
+}
+
+// ListVendorAccountInvoker 查询云厂商账号
+func (c *CocClient) ListVendorAccountInvoker(request *model.ListVendorAccountRequest) *ListVendorAccountInvoker {
+	requestDef := GenReqDefForListVendorAccount()
+	return &ListVendorAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateVendorAccount 修改云厂商账号
+//
+// 修改所有云厂商（阿里云、AWS、Azure和HCS等）账号信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) UpdateVendorAccount(request *model.UpdateVendorAccountRequest) (*model.UpdateVendorAccountResponse, error) {
+	requestDef := GenReqDefForUpdateVendorAccount()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateVendorAccountResponse), nil
+	}
+}
+
+// UpdateVendorAccountInvoker 修改云厂商账号
+func (c *CocClient) UpdateVendorAccountInvoker(request *model.UpdateVendorAccountRequest) *UpdateVendorAccountInvoker {
+	requestDef := GenReqDefForUpdateVendorAccount()
+	return &UpdateVendorAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateWarRoom 创建租户区WarRoom

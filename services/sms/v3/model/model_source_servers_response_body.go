@@ -36,7 +36,7 @@ type SourceServersResponseBody struct {
 	// 是否是OEM操作系统(Windows)
 	OemSystem *bool `json:"oem_system,omitempty"`
 
-	// 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready: 迁移演练已就绪 premiging: 迁移演练中 premiged: 迁移演练已完成 premigfailed: 迁移演练失败
+	// 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready：迁移演练就绪 premiged：迁移演练完成 premigfailed：迁移演练失败 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 error：错误
 	State *SourceServersResponseBodyState `json:"state,omitempty"`
 
 	// 源端服务器与主机迁移服务端是否连接
@@ -148,18 +148,18 @@ type SourceServersResponseBodyStateEnum struct {
 	SYNCING      SourceServersResponseBodyState
 	STOPPING     SourceServersResponseBodyState
 	STOPPED      SourceServersResponseBodyState
+	SKIPPING     SourceServersResponseBodyState
 	DELETING     SourceServersResponseBodyState
-	ERROR        SourceServersResponseBodyState
-	CLONING      SourceServersResponseBodyState
-	CUTOVERING   SourceServersResponseBodyState
-	FINISHED     SourceServersResponseBodyState
 	CLEARING     SourceServersResponseBodyState
 	CLEARED      SourceServersResponseBodyState
 	CLEARFAILED  SourceServersResponseBodyState
 	PREMIGREADY  SourceServersResponseBodyState
-	PREMIGING    SourceServersResponseBodyState
 	PREMIGED     SourceServersResponseBodyState
 	PREMIGFAILED SourceServersResponseBodyState
+	CLONING      SourceServersResponseBodyState
+	CUTOVERING   SourceServersResponseBodyState
+	FINISHED     SourceServersResponseBodyState
+	ERROR        SourceServersResponseBodyState
 }
 
 func GetSourceServersResponseBodyStateEnum() SourceServersResponseBodyStateEnum {
@@ -185,20 +185,11 @@ func GetSourceServersResponseBodyStateEnum() SourceServersResponseBodyStateEnum 
 		STOPPED: SourceServersResponseBodyState{
 			value: "stopped",
 		},
+		SKIPPING: SourceServersResponseBodyState{
+			value: "skipping",
+		},
 		DELETING: SourceServersResponseBodyState{
 			value: "deleting",
-		},
-		ERROR: SourceServersResponseBodyState{
-			value: "error",
-		},
-		CLONING: SourceServersResponseBodyState{
-			value: "cloning",
-		},
-		CUTOVERING: SourceServersResponseBodyState{
-			value: "cutovering",
-		},
-		FINISHED: SourceServersResponseBodyState{
-			value: "finished",
 		},
 		CLEARING: SourceServersResponseBodyState{
 			value: "clearing",
@@ -212,14 +203,23 @@ func GetSourceServersResponseBodyStateEnum() SourceServersResponseBodyStateEnum 
 		PREMIGREADY: SourceServersResponseBodyState{
 			value: "premigready",
 		},
-		PREMIGING: SourceServersResponseBodyState{
-			value: "premiging",
-		},
 		PREMIGED: SourceServersResponseBodyState{
 			value: "premiged",
 		},
 		PREMIGFAILED: SourceServersResponseBodyState{
 			value: "premigfailed",
+		},
+		CLONING: SourceServersResponseBodyState{
+			value: "cloning",
+		},
+		CUTOVERING: SourceServersResponseBodyState{
+			value: "cutovering",
+		},
+		FINISHED: SourceServersResponseBodyState{
+			value: "finished",
+		},
+		ERROR: SourceServersResponseBodyState{
+			value: "error",
 		},
 	}
 }

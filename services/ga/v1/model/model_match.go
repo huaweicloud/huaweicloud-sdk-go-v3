@@ -12,10 +12,10 @@ import (
 // Match 匹配项。
 type Match struct {
 
-	// 匹配的KEY。
+	// 匹配资源实例的属性类型。 取值范围： resource_name：通过资源名称匹配
 	Key MatchKey `json:"key"`
 
-	// 匹配的VALUE。
+	// 匹配资源实例的属性值。
 	Value string `json:"value"`
 }
 

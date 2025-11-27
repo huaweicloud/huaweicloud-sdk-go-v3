@@ -1,11 +1,10 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
-
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -21,16 +20,22 @@ type ListNatGatewayDnatRulesRequest struct {
 	// 弹性公网的IP地址。
 	FloatingIpAddress *string `json:"floating_ip_address,omitempty"`
 
-	// DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
+	// 全域弹性公网的IP地址。
+	GlobalEipAddress *string `json:"global_eip_address,omitempty"`
+
+	// DNAT规则的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 EIP_FREEZED: EIP冻结 INACTIVE: 不可用
 	Status *[]ListNatGatewayDnatRulesRequestStatus `json:"status,omitempty"`
 
 	// 弹性公网IP的id。
 	FloatingIpId *string `json:"floating_ip_id,omitempty"`
 
+	// 全域弹性公网IP的id。
+	GlobalEipId *string `json:"global_eip_id,omitempty"`
+
 	// 虚拟机或者裸机对外提供服务的协议端口号。 取值范围：0~65535。
 	InternalServicePort *int32 `json:"internal_service_port,omitempty"`
 
-	// 功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+	// 功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// DNAT规则的ID。
@@ -40,7 +45,7 @@ type ListNatGatewayDnatRulesRequest struct {
 	Description *string `json:"description,omitempty"`
 
 	// DNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
-	CreatedAt *string `json:"created_at,omitempty"`
+	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
 
 	// 公网NAT网关实例的ID。
 	NatGatewayId *[]string `json:"nat_gateway_id,omitempty"`

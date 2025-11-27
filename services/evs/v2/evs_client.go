@@ -347,6 +347,27 @@ func (c *EvsClient) DeleteVolumeInvoker(request *model.DeleteVolumeRequest) *Del
 	return &DeleteVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteVolumeInRecycle 删除回收站中单个云硬盘
+//
+// 删除回收站中单个云硬盘。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) DeleteVolumeInRecycle(request *model.DeleteVolumeInRecycleRequest) (*model.DeleteVolumeInRecycleResponse, error) {
+	requestDef := GenReqDefForDeleteVolumeInRecycle()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteVolumeInRecycleResponse), nil
+	}
+}
+
+// DeleteVolumeInRecycleInvoker 删除回收站中单个云硬盘
+func (c *EvsClient) DeleteVolumeInRecycleInvoker(request *model.DeleteVolumeInRecycleRequest) *DeleteVolumeInRecycleInvoker {
+	requestDef := GenReqDefForDeleteVolumeInRecycle()
+	return &DeleteVolumeInRecycleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSnapshots 查询云硬盘快照详情列表
 //
 // 查询云硬盘快照详细列表信息。
@@ -431,6 +452,27 @@ func (c *EvsClient) ListVolumesByTagsInvoker(request *model.ListVolumesByTagsReq
 	return &ListVolumesByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListVolumesInRecycle 查询回收站中所有云硬盘详情
+//
+// 查询回收站中所有云硬盘的详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) ListVolumesInRecycle(request *model.ListVolumesInRecycleRequest) (*model.ListVolumesInRecycleResponse, error) {
+	requestDef := GenReqDefForListVolumesInRecycle()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVolumesInRecycleResponse), nil
+	}
+}
+
+// ListVolumesInRecycleInvoker 查询回收站中所有云硬盘详情
+func (c *EvsClient) ListVolumesInRecycleInvoker(request *model.ListVolumesInRecycleRequest) *ListVolumesInRecycleInvoker {
+	requestDef := GenReqDefForListVolumesInRecycle()
+	return &ListVolumesInRecycleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ModifyVolumeQoS 修改云硬盘QoS
 //
 // 调整云硬盘的iops或者吞吐量。
@@ -504,6 +546,27 @@ func (c *EvsClient) RetypeVolumeInvoker(request *model.RetypeVolumeRequest) *Ret
 	return &RetypeVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RevertVolumeInRecycle 还原回收站中单个云硬盘
+//
+// 还原回收站中单个云硬盘。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) RevertVolumeInRecycle(request *model.RevertVolumeInRecycleRequest) (*model.RevertVolumeInRecycleResponse, error) {
+	requestDef := GenReqDefForRevertVolumeInRecycle()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RevertVolumeInRecycleResponse), nil
+	}
+}
+
+// RevertVolumeInRecycleInvoker 还原回收站中单个云硬盘
+func (c *EvsClient) RevertVolumeInRecycleInvoker(request *model.RevertVolumeInRecycleRequest) *RevertVolumeInRecycleInvoker {
+	requestDef := GenReqDefForRevertVolumeInRecycle()
+	return &RevertVolumeInRecycleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RollbackSnapshot 回滚快照到云硬盘
 //
 // 将快照数据回滚到云硬盘。支持企业项目授权功能。
@@ -545,6 +608,27 @@ func (c *EvsClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobRespon
 func (c *EvsClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoker {
 	requestDef := GenReqDefForShowJob()
 	return &ShowJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRecyclePolicy 查询回收站策略
+//
+// 查询回收站策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) ShowRecyclePolicy(request *model.ShowRecyclePolicyRequest) (*model.ShowRecyclePolicyResponse, error) {
+	requestDef := GenReqDefForShowRecyclePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRecyclePolicyResponse), nil
+	}
+}
+
+// ShowRecyclePolicyInvoker 查询回收站策略
+func (c *EvsClient) ShowRecyclePolicyInvoker(request *model.ShowRecyclePolicyRequest) *ShowRecyclePolicyInvoker {
+	requestDef := GenReqDefForShowRecyclePolicy()
+	return &ShowRecyclePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSnapshot 查询单个云硬盘快照详情
@@ -589,6 +673,27 @@ func (c *EvsClient) ShowVolumeInvoker(request *model.ShowVolumeRequest) *ShowVol
 	return &ShowVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowVolumeInRecycle 查询回收站中单个云硬盘详情
+//
+// 查询回收站中单个云硬盘的详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) ShowVolumeInRecycle(request *model.ShowVolumeInRecycleRequest) (*model.ShowVolumeInRecycleResponse, error) {
+	requestDef := GenReqDefForShowVolumeInRecycle()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVolumeInRecycleResponse), nil
+	}
+}
+
+// ShowVolumeInRecycleInvoker 查询回收站中单个云硬盘详情
+func (c *EvsClient) ShowVolumeInRecycleInvoker(request *model.ShowVolumeInRecycleRequest) *ShowVolumeInRecycleInvoker {
+	requestDef := GenReqDefForShowVolumeInRecycle()
+	return &ShowVolumeInRecycleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowVolumeTags 查询云硬盘标签
 //
 // 查询指定云硬盘的标签信息。
@@ -631,6 +736,27 @@ func (c *EvsClient) UnsubscribePostpaidVolume(request *model.UnsubscribePostpaid
 func (c *EvsClient) UnsubscribePostpaidVolumeInvoker(request *model.UnsubscribePostpaidVolumeRequest) *UnsubscribePostpaidVolumeInvoker {
 	requestDef := GenReqDefForUnsubscribePostpaidVolume()
 	return &UnsubscribePostpaidVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRecyclePolicy 更新回收站策略
+//
+// 更新回收站策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) UpdateRecyclePolicy(request *model.UpdateRecyclePolicyRequest) (*model.UpdateRecyclePolicyResponse, error) {
+	requestDef := GenReqDefForUpdateRecyclePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRecyclePolicyResponse), nil
+	}
+}
+
+// UpdateRecyclePolicyInvoker 更新回收站策略
+func (c *EvsClient) UpdateRecyclePolicyInvoker(request *model.UpdateRecyclePolicyRequest) *UpdateRecyclePolicyInvoker {
+	requestDef := GenReqDefForUpdateRecyclePolicy()
+	return &UpdateRecyclePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSnapshot 更新云硬盘快照

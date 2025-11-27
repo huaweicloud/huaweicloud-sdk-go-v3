@@ -34,6 +34,9 @@ type QueryResourcesReq struct {
 
 	// 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带、携带值为null，不作为筛选条件。此参数不允许为空串，有参数校验。
 	ServiceTypeCode *string `json:"service_type_code,omitempty"`
+
+	// 客户账号ID，非必填，范围限制:0-64，伙伴查询子客户包年/包月资源列表时必须携带该字段。除此之外，此参数不做处理。
+	CustomerId *string `json:"customer_id,omitempty"`
 }
 
 func (o QueryResourcesReq) String() string {

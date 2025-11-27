@@ -1575,6 +1575,22 @@ func GenReqDefForListSlowLogs() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListSslCertDownloadAddresses() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/instances/{instance_id}/ssl-cert/download-link").
+		WithResponse(new(model.ListSslCertDownloadAddressesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForModifyAutoNodeExpansionPolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).

@@ -9,28 +9,28 @@ import (
 // ClusterEventResourceResponseInfo 事件资源信息
 type ClusterEventResourceResponseInfo struct {
 
-	// 执行动作
+	// **参数解释**: 执行动作 **取值范围**: 字符长度1-256位
 	EnforcementAction *string `json:"enforcement_action,omitempty"`
 
-	// Group
+	// **参数解释**: 组 **取值范围**: 字符长度1-256位
 	Group *string `json:"group,omitempty"`
 
-	// 信息
+	// **参数解释**: 信息 **取值范围**: 字符长度1-256位
 	Message *string `json:"message,omitempty"`
 
-	// 名称
+	// **参数解释**: 名称 **取值范围**: 字符长度1-256位
 	Name *string `json:"name,omitempty"`
 
-	// 命名空间
+	// **参数解释**: 命名空间 **取值范围**: 字符长度0-256位
 	Namespace *string `json:"namespace,omitempty"`
 
-	// 版本
+	// **参数解释**: 版本 **取值范围**: 字符长度0-128位
 	Version *string `json:"version,omitempty"`
 
-	// 资源类型
+	// **参数解释**: 资源类型 **取值范围**: 字符长度1-64位
 	Kind *string `json:"kind,omitempty"`
 
-	// 资源名称
+	// **参数解释**: 资源名称 **取值范围**: 字符长度1-256位
 	ResourceName *string `json:"resource_name,omitempty"`
 }
 

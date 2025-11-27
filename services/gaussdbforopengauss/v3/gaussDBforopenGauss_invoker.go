@@ -2917,6 +2917,22 @@ func (i *SwitchKmsTdeInvoker) Invoke() (*model.SwitchKmsTdeResponse, error) {
 	}
 }
 
+type SwitchLogCollectionStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchLogCollectionStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SwitchLogCollectionStatusInvoker) Invoke() (*model.SwitchLogCollectionStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchLogCollectionStatusResponse), nil
+	}
+}
+
 type SwitchReplicaInvoker struct {
 	*invoker.BaseInvoker
 }

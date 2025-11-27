@@ -29,7 +29,7 @@ type ClustersResponseInfo struct {
 	// 策略数量
 	PolicyNum *int32 `json:"policy_num,omitempty"`
 
-	// 防护状态：true、false
+	// **参数解释**: 防护状态 **取值范围**: - true: 防护中 - false: 未防护
 	ProtectionStatus *bool `json:"protection_status,omitempty"`
 }
 

@@ -8,7 +8,9 @@ import (
 
 // UpdateResourceTagsResponse Response Object
 type UpdateResourceTagsResponse struct {
-	Body           *string `json:"body,omitempty"`
+
+	// 更新脚本指定的资源标签，系统返回的脚本ID。
+	Data           *string `json:"data,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

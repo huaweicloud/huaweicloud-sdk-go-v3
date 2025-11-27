@@ -277,22 +277,6 @@ func (i *CreateDatabaseUserInvoker) Invoke() (*model.CreateDatabaseUserResponse,
 	}
 }
 
-type CreateInstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateInstanceInvoker) Invoke() (*model.CreateInstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateInstanceResponse), nil
-	}
-}
-
 type CreateIpInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -818,22 +802,6 @@ func (i *ListInstanceTagsInvoker) Invoke() (*model.ListInstanceTagsResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListInstanceTagsResponse), nil
-	}
-}
-
-type ListInstancesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListInstancesInvoker) Invoke() (*model.ListInstancesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListInstancesResponse), nil
 	}
 }
 

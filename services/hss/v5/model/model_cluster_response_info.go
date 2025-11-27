@@ -9,25 +9,25 @@ import (
 // ClusterResponseInfo 集群防护信息
 type ClusterResponseInfo struct {
 
-	// 集群名称
+	// **参数解释**： 集群名称 **取值范围**： 不涉及
 	ClusterName *string `json:"cluster_name,omitempty"`
 
-	// 集群ID
+	// **参数解释**： 集群ID **取值范围**： 不涉及
 	ClusterId *string `json:"cluster_id,omitempty"`
 
-	// 集群版本
+	// **参数解释**： 集群版本 **取值范围**： 不涉及
 	ClusterVersion *string `json:"cluster_version,omitempty"`
 
-	// **参数解释**： 防护状态 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
+	// **参数解释**： 白名单规则类型 **取值范围**: - unprotected：未保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。
 	ProtectStatus *string `json:"protect_status,omitempty"`
 
-	// 策略数量
+	// **参数解释**： 策略数量 **取值范围**： 不涉及
 	PolicyNum *int32 `json:"policy_num,omitempty"`
 
 	// **参数解释**： 集群运行状态 **取值范围**: - Available：可用。 - Unavailable：不可用。
 	ClusterStatus *string `json:"cluster_status,omitempty"`
 
-	// 集群类型，包含以下几种： - k8s：原生集群 - cce：CCE集群 - ali：阿里云集群 - tencent：腾讯云集群 - azure：微软云集群 - aws：亚马逊集群 - self_built_hw：华为云自建集群 - self_built_idc：IDC自建集群
+	// **参数解释**： 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
 	ClusterType *string `json:"cluster_type,omitempty"`
 }
 

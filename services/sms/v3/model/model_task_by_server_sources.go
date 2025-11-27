@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -15,8 +18,8 @@ type TaskByServerSources struct {
 	// 任务名称
 	Name *string `json:"name,omitempty"`
 
-	// 任务类型
-	Type *string `json:"type,omitempty"`
+	// 迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
+	Type *TaskByServerSourcesType `json:"type,omitempty"`
 
 	// 任务状态
 	State *string `json:"state,omitempty"`
@@ -53,8 +56,8 @@ type TaskByServerSources struct {
 
 	TargetServer *TargetServerById `json:"target_server,omitempty"`
 
-	// 日志收集状态
-	LogCollectStatus *string `json:"log_collect_status,omitempty"`
+	// 日志收集状态 INIT:就绪 UPLOADING:上传中 UPLOAD_FAIL:上传失败 UPLOADED:已上传
+	LogCollectStatus *TaskByServerSourcesLogCollectStatus `json:"log_collect_status,omitempty"`
 
 	// 是否使用已有虚拟机
 	ExistServer *bool `json:"exist_server,omitempty"`
@@ -64,7 +67,7 @@ type TaskByServerSources struct {
 
 	CloneServer *CloneServer `json:"clone_server,omitempty"`
 
-	// 已迁移时长
+	// 迁移剩余时间（秒）
 	RemainSeconds *int64 `json:"remain_seconds,omitempty"`
 
 	// 上传日志指定桶名称
@@ -90,4 +93,106 @@ func (o TaskByServerSources) String() string {
 	}
 
 	return strings.Join([]string{"TaskByServerSources", string(data)}, " ")
+}
+
+type TaskByServerSourcesType struct {
+	value string
+}
+
+type TaskByServerSourcesTypeEnum struct {
+	MIGRATE_BLOCK TaskByServerSourcesType
+	MIGRATE_FILE  TaskByServerSourcesType
+}
+
+func GetTaskByServerSourcesTypeEnum() TaskByServerSourcesTypeEnum {
+	return TaskByServerSourcesTypeEnum{
+		MIGRATE_BLOCK: TaskByServerSourcesType{
+			value: "MIGRATE_BLOCK",
+		},
+		MIGRATE_FILE: TaskByServerSourcesType{
+			value: "MIGRATE_FILE",
+		},
+	}
+}
+
+func (c TaskByServerSourcesType) Value() string {
+	return c.value
+}
+
+func (c TaskByServerSourcesType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *TaskByServerSourcesType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type TaskByServerSourcesLogCollectStatus struct {
+	value string
+}
+
+type TaskByServerSourcesLogCollectStatusEnum struct {
+	INIT        TaskByServerSourcesLogCollectStatus
+	UPLOADING   TaskByServerSourcesLogCollectStatus
+	UPLOAD_FAIL TaskByServerSourcesLogCollectStatus
+	UPLOADED    TaskByServerSourcesLogCollectStatus
+}
+
+func GetTaskByServerSourcesLogCollectStatusEnum() TaskByServerSourcesLogCollectStatusEnum {
+	return TaskByServerSourcesLogCollectStatusEnum{
+		INIT: TaskByServerSourcesLogCollectStatus{
+			value: "INIT",
+		},
+		UPLOADING: TaskByServerSourcesLogCollectStatus{
+			value: "UPLOADING",
+		},
+		UPLOAD_FAIL: TaskByServerSourcesLogCollectStatus{
+			value: "UPLOAD_FAIL",
+		},
+		UPLOADED: TaskByServerSourcesLogCollectStatus{
+			value: "UPLOADED",
+		},
+	}
+}
+
+func (c TaskByServerSourcesLogCollectStatus) Value() string {
+	return c.value
+}
+
+func (c TaskByServerSourcesLogCollectStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *TaskByServerSourcesLogCollectStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

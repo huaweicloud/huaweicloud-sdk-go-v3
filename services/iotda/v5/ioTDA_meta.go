@@ -1051,6 +1051,35 @@ func GenReqDefForListCertificates() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowCertificate() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v5/iot/{project_id}/certificates/{certificate_id}").
+		WithResponse(new(model.ShowCertificateResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CertificateId").
+		WithJsonTag("certificate_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SpAuthToken").
+		WithJsonTag("Sp-Auth-Token").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("StageAuthToken").
+		WithJsonTag("Stage-Auth-Token").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("Instance-Id").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateCertificate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -2199,7 +2228,7 @@ func GenReqDefForUpdateDeviceShadowDesiredData() *def.HttpRequestDef {
 func GenReqDefForCreateDomainConfiguration() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/{project_id}/domain-configurations").
+		WithPath("/v5/iot/{project_id}/domain-configurations").
 		WithResponse(new(model.CreateDomainConfigurationResponse)).
 		WithContentType("application/json")
 
@@ -2219,7 +2248,7 @@ func GenReqDefForCreateDomainConfiguration() *def.HttpRequestDef {
 func GenReqDefForDeleteDomainConfiguration() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/{project_id}/domain-configurations/{configuration_id}").
+		WithPath("/v5/iot/{project_id}/domain-configurations/{configuration_id}").
 		WithResponse(new(model.DeleteDomainConfigurationResponse)).
 		WithContentType("application/json")
 
@@ -2240,7 +2269,7 @@ func GenReqDefForDeleteDomainConfiguration() *def.HttpRequestDef {
 func GenReqDefForListDomainConfigurations() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/{project_id}/domain-configurations").
+		WithPath("/v5/iot/{project_id}/domain-configurations").
 		WithResponse(new(model.ListDomainConfigurationsResponse)).
 		WithContentType("application/json")
 
@@ -2269,7 +2298,7 @@ func GenReqDefForListDomainConfigurations() *def.HttpRequestDef {
 func GenReqDefForShowDomainConfiguration() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/{project_id}/domain-configurations/{configuration_id}").
+		WithPath("/v5/iot/{project_id}/domain-configurations/{configuration_id}").
 		WithResponse(new(model.ShowDomainConfigurationResponse)).
 		WithContentType("application/json")
 
@@ -2290,7 +2319,7 @@ func GenReqDefForShowDomainConfiguration() *def.HttpRequestDef {
 func GenReqDefForUpdateDomainConfiguration() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
-		WithPath("/{project_id}/domain-configurations/{configuration_id}").
+		WithPath("/v5/iot/{project_id}/domain-configurations/{configuration_id}").
 		WithResponse(new(model.UpdateDomainConfigurationResponse)).
 		WithContentType("application/json")
 
@@ -2305,6 +2334,117 @@ func GenReqDefForUpdateDomainConfiguration() *def.HttpRequestDef {
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateExportTask() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v5/iot/{project_id}/export-tasks").
+		WithResponse(new(model.CreateExportTaskResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("Instance-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteExportTask() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v5/iot/{project_id}/export-tasks/{export_task_id}").
+		WithResponse(new(model.DeleteExportTaskResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ExportTaskId").
+		WithJsonTag("export_task_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("Instance-Id").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListExportTasks() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v5/iot/{project_id}/export-tasks").
+		WithResponse(new(model.ListExportTasksResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceType").
+		WithJsonTag("resource_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceCondition").
+		WithJsonTag("resource_condition").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppType").
+		WithJsonTag("app_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppId").
+		WithJsonTag("app_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("Instance-Id").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowExportTask() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v5/iot/{project_id}/export-tasks/{export_task_id}/file").
+		WithResponse(new(model.ShowExportTaskResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ExportTaskId").
+		WithJsonTag("export_task_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("Instance-Id").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -4074,7 +4214,7 @@ func GenReqDefForUpdateSecurityProfile() *def.HttpRequestDef {
 func GenReqDefForCreateServerCertificate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/{project_id}/server-certificates").
+		WithPath("/v5/iot/{project_id}/server-certificates").
 		WithResponse(new(model.CreateServerCertificateResponse)).
 		WithContentType("application/json")
 
@@ -4094,7 +4234,7 @@ func GenReqDefForCreateServerCertificate() *def.HttpRequestDef {
 func GenReqDefForDeleteServerCertificate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/{project_id}/server-certificates/{server_certificate_id}").
+		WithPath("/v5/iot/{project_id}/server-certificates/{server_certificate_id}").
 		WithResponse(new(model.DeleteServerCertificateResponse)).
 		WithContentType("application/json")
 
@@ -4115,7 +4255,7 @@ func GenReqDefForDeleteServerCertificate() *def.HttpRequestDef {
 func GenReqDefForListServerCertificate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/{project_id}/server-certificates").
+		WithPath("/v5/iot/{project_id}/server-certificates").
 		WithResponse(new(model.ListServerCertificateResponse)).
 		WithContentType("application/json")
 
@@ -4144,7 +4284,7 @@ func GenReqDefForListServerCertificate() *def.HttpRequestDef {
 func GenReqDefForShowServerCertificate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/{project_id}/server-certificates/{server_certificate_id}").
+		WithPath("/v5/iot/{project_id}/server-certificates/{server_certificate_id}").
 		WithResponse(new(model.ShowServerCertificateResponse)).
 		WithContentType("application/json")
 

@@ -357,6 +357,22 @@ func (i *ListCustomerBillsMonthlyBreakDownInvoker) Invoke() (*model.ListCustomer
 	}
 }
 
+type ListCustomerCouponChangeRecordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCustomerCouponChangeRecordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCustomerCouponChangeRecordsInvoker) Invoke() (*model.ListCustomerCouponChangeRecordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCustomerCouponChangeRecordsResponse), nil
+	}
+}
+
 type ListCustomerOnDemandResourcesInvoker struct {
 	*invoker.BaseInvoker
 }

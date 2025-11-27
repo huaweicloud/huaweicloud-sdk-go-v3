@@ -17,7 +17,7 @@ type FeatureRuleInfo struct {
 	// 检测特性规则描述
 	ChkFeatureDesc *string `json:"chk_feature_desc,omitempty"`
 
-	// 操作系统类型
+	// **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
 	OsType *string `json:"os_type,omitempty"`
 
 	// 检测特性规则配置信息

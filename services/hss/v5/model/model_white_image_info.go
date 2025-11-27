@@ -9,13 +9,13 @@ import (
 // WhiteImageInfo 白名单镜像
 type WhiteImageInfo struct {
 
-	// 集群ID
+	// **参数解释**： 集群ID **取值范围**： 不涉及
 	ClusterId string `json:"cluster_id"`
 
-	// 镜像名称
+	// **参数解释**： 镜像名称 **取值范围**： 不涉及
 	ImageName string `json:"image_name"`
 
-	// 镜像版本
+	// **参数解释**： 镜像版本 **取值范围**： 不涉及
 	ImageVersion string `json:"image_version"`
 }
 

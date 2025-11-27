@@ -147,6 +147,27 @@ func (c *DasClient) ShowApiVersionInvoker(request *model.ShowApiVersionRequest) 
 	return &ShowApiVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddEmailTemplate 新增邮件模板
+//
+// 新增邮件模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) AddEmailTemplate(request *model.AddEmailTemplateRequest) (*model.AddEmailTemplateResponse, error) {
+	requestDef := GenReqDefForAddEmailTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddEmailTemplateResponse), nil
+	}
+}
+
+// AddEmailTemplateInvoker 新增邮件模板
+func (c *DasClient) AddEmailTemplateInvoker(request *model.AddEmailTemplateRequest) *AddEmailTemplateInvoker {
+	requestDef := GenReqDefForAddEmailTemplate()
+	return &AddEmailTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddFullSqlTask 创建全量SQL明细解析任务
 //
 // 创建全量SQL明细解析任务
@@ -166,6 +187,90 @@ func (c *DasClient) AddFullSqlTask(request *model.AddFullSqlTaskRequest) (*model
 func (c *DasClient) AddFullSqlTaskInvoker(request *model.AddFullSqlTaskRequest) *AddFullSqlTaskInvoker {
 	requestDef := GenReqDefForAddFullSqlTask()
 	return &AddFullSqlTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddInstanceGroup 新增实例组
+//
+// 新增实例组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) AddInstanceGroup(request *model.AddInstanceGroupRequest) (*model.AddInstanceGroupResponse, error) {
+	requestDef := GenReqDefForAddInstanceGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddInstanceGroupResponse), nil
+	}
+}
+
+// AddInstanceGroupInvoker 新增实例组
+func (c *DasClient) AddInstanceGroupInvoker(request *model.AddInstanceGroupRequest) *AddInstanceGroupInvoker {
+	requestDef := GenReqDefForAddInstanceGroup()
+	return &AddInstanceGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddInstanceToGroup 将实例添加到实例组
+//
+// 将实例添加到实例组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) AddInstanceToGroup(request *model.AddInstanceToGroupRequest) (*model.AddInstanceToGroupResponse, error) {
+	requestDef := GenReqDefForAddInstanceToGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddInstanceToGroupResponse), nil
+	}
+}
+
+// AddInstanceToGroupInvoker 将实例添加到实例组
+func (c *DasClient) AddInstanceToGroupInvoker(request *model.AddInstanceToGroupRequest) *AddInstanceToGroupInvoker {
+	requestDef := GenReqDefForAddInstanceToGroup()
+	return &AddInstanceToGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchSendEmail 批量发送邮件
+//
+// 批量发送邮件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) BatchSendEmail(request *model.BatchSendEmailRequest) (*model.BatchSendEmailResponse, error) {
+	requestDef := GenReqDefForBatchSendEmail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchSendEmailResponse), nil
+	}
+}
+
+// BatchSendEmailInvoker 批量发送邮件
+func (c *DasClient) BatchSendEmailInvoker(request *model.BatchSendEmailRequest) *BatchSendEmailInvoker {
+	requestDef := GenReqDefForBatchSendEmail()
+	return &BatchSendEmailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchSubscribeReport 批量订阅/取消订阅
+//
+// 批量订阅/取消订阅
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) BatchSubscribeReport(request *model.BatchSubscribeReportRequest) (*model.BatchSubscribeReportResponse, error) {
+	requestDef := GenReqDefForBatchSubscribeReport()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchSubscribeReportResponse), nil
+	}
+}
+
+// BatchSubscribeReportInvoker 批量订阅/取消订阅
+func (c *DasClient) BatchSubscribeReportInvoker(request *model.BatchSubscribeReportRequest) *BatchSubscribeReportInvoker {
+	requestDef := GenReqDefForBatchSubscribeReport()
+	return &BatchSubscribeReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ChangeChargeMode 设置付费模式
@@ -293,6 +398,27 @@ func (c *DasClient) CheckCredential(request *model.CheckCredentialRequest) (*mod
 func (c *DasClient) CheckCredentialInvoker(request *model.CheckCredentialRequest) *CheckCredentialInvoker {
 	requestDef := GenReqDefForCheckCredential()
 	return &CheckCredentialInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckCredentialForBatchInspection 测试AK/SK
+//
+// 测试AK/SK，测试用户AK/SK能否正常访问OBS桶。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) CheckCredentialForBatchInspection(request *model.CheckCredentialForBatchInspectionRequest) (*model.CheckCredentialForBatchInspectionResponse, error) {
+	requestDef := GenReqDefForCheckCredentialForBatchInspection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckCredentialForBatchInspectionResponse), nil
+	}
+}
+
+// CheckCredentialForBatchInspectionInvoker 测试AK/SK
+func (c *DasClient) CheckCredentialForBatchInspectionInvoker(request *model.CheckCredentialForBatchInspectionRequest) *CheckCredentialForBatchInspectionInvoker {
+	requestDef := GenReqDefForCheckCredentialForBatchInspection()
+	return &CheckCredentialForBatchInspectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateHealthReportTask 创建实例健康诊断任务
@@ -454,6 +580,27 @@ func (c *DasClient) DeleteDbUserInvoker(request *model.DeleteDbUserRequest) *Del
 	return &DeleteDbUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteEmailTemplate 删除邮件模板
+//
+// 删除邮件模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) DeleteEmailTemplate(request *model.DeleteEmailTemplateRequest) (*model.DeleteEmailTemplateResponse, error) {
+	requestDef := GenReqDefForDeleteEmailTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteEmailTemplateResponse), nil
+	}
+}
+
+// DeleteEmailTemplateInvoker 删除邮件模板
+func (c *DasClient) DeleteEmailTemplateInvoker(request *model.DeleteEmailTemplateRequest) *DeleteEmailTemplateInvoker {
+	requestDef := GenReqDefForDeleteEmailTemplate()
+	return &DeleteEmailTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteHistoryTransactionExportTask 删除导出历史事务任务
 //
 // DAS收集历史事务开关打开后，删除历史事务导出任务记录对应的OBS文件。
@@ -473,6 +620,27 @@ func (c *DasClient) DeleteHistoryTransactionExportTask(request *model.DeleteHist
 func (c *DasClient) DeleteHistoryTransactionExportTaskInvoker(request *model.DeleteHistoryTransactionExportTaskRequest) *DeleteHistoryTransactionExportTaskInvoker {
 	requestDef := GenReqDefForDeleteHistoryTransactionExportTask()
 	return &DeleteHistoryTransactionExportTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteInstanceGroup 删除实例组
+//
+// 删除实例组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) DeleteInstanceGroup(request *model.DeleteInstanceGroupRequest) (*model.DeleteInstanceGroupResponse, error) {
+	requestDef := GenReqDefForDeleteInstanceGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteInstanceGroupResponse), nil
+	}
+}
+
+// DeleteInstanceGroupInvoker 删除实例组
+func (c *DasClient) DeleteInstanceGroupInvoker(request *model.DeleteInstanceGroupRequest) *DeleteInstanceGroupInvoker {
+	requestDef := GenReqDefForDeleteInstanceGroup()
+	return &DeleteInstanceGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteProcess 查杀会话
@@ -771,6 +939,48 @@ func (c *DasClient) ListDbUsersInvoker(request *model.ListDbUsersRequest) *ListD
 	return &ListDbUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListEmailRecord 查询邮件推送记录
+//
+// 查询邮件推送记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListEmailRecord(request *model.ListEmailRecordRequest) (*model.ListEmailRecordResponse, error) {
+	requestDef := GenReqDefForListEmailRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEmailRecordResponse), nil
+	}
+}
+
+// ListEmailRecordInvoker 查询邮件推送记录
+func (c *DasClient) ListEmailRecordInvoker(request *model.ListEmailRecordRequest) *ListEmailRecordInvoker {
+	requestDef := GenReqDefForListEmailRecord()
+	return &ListEmailRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEmailTemplate 查询邮件模板列表
+//
+// 查询邮件模板列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListEmailTemplate(request *model.ListEmailTemplateRequest) (*model.ListEmailTemplateResponse, error) {
+	requestDef := GenReqDefForListEmailTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEmailTemplateResponse), nil
+	}
+}
+
+// ListEmailTemplateInvoker 查询邮件模板列表
+func (c *DasClient) ListEmailTemplateInvoker(request *model.ListEmailTemplateRequest) *ListEmailTemplateInvoker {
+	requestDef := GenReqDefForListEmailTemplate()
+	return &ListEmailTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListFullSqlTasks 查询SQL洞察任务列表
 //
 // 全量SQL开关打开后，查询SQL洞察任务列表。该功能仅支持付费实例。
@@ -856,6 +1066,27 @@ func (c *DasClient) ListInnodbLocksInvoker(request *model.ListInnodbLocksRequest
 	return &ListInnodbLocksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInspectionReport 查询巡检报告列表
+//
+// 查询巡检报告列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListInspectionReport(request *model.ListInspectionReportRequest) (*model.ListInspectionReportResponse, error) {
+	requestDef := GenReqDefForListInspectionReport()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInspectionReportResponse), nil
+	}
+}
+
+// ListInspectionReportInvoker 查询巡检报告列表
+func (c *DasClient) ListInspectionReportInvoker(request *model.ListInspectionReportRequest) *ListInspectionReportInvoker {
+	requestDef := GenReqDefForListInspectionReport()
+	return &ListInspectionReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInstanceDistribution 查询实例分布情况
 //
 // 查询实例分布情况
@@ -875,6 +1106,27 @@ func (c *DasClient) ListInstanceDistribution(request *model.ListInstanceDistribu
 func (c *DasClient) ListInstanceDistributionInvoker(request *model.ListInstanceDistributionRequest) *ListInstanceDistributionInvoker {
 	requestDef := GenReqDefForListInstanceDistribution()
 	return &ListInstanceDistributionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstanceGroup 查询实例组列表
+//
+// 查询实例组列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListInstanceGroup(request *model.ListInstanceGroupRequest) (*model.ListInstanceGroupResponse, error) {
+	requestDef := GenReqDefForListInstanceGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceGroupResponse), nil
+	}
+}
+
+// ListInstanceGroupInvoker 查询实例组列表
+func (c *DasClient) ListInstanceGroupInvoker(request *model.ListInstanceGroupRequest) *ListInstanceGroupInvoker {
+	requestDef := GenReqDefForListInstanceGroup()
+	return &ListInstanceGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListInstanceMultiNodesSingleMetric 获取多节点单指标数据
@@ -1238,6 +1490,27 @@ func (c *DasClient) SaveCredentialInvoker(request *model.SaveCredentialRequest) 
 	return &SaveCredentialInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SaveCredentialForBatchInspection 保存AK/SK
+//
+// 保存AK/SK，用于后台任务访问OBS上传实例诊断报告
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) SaveCredentialForBatchInspection(request *model.SaveCredentialForBatchInspectionRequest) (*model.SaveCredentialForBatchInspectionResponse, error) {
+	requestDef := GenReqDefForSaveCredentialForBatchInspection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SaveCredentialForBatchInspectionResponse), nil
+	}
+}
+
+// SaveCredentialForBatchInspectionInvoker 保存AK/SK
+func (c *DasClient) SaveCredentialForBatchInspectionInvoker(request *model.SaveCredentialForBatchInspectionRequest) *SaveCredentialForBatchInspectionInvoker {
+	requestDef := GenReqDefForSaveCredentialForBatchInspection()
+	return &SaveCredentialForBatchInspectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetThresholdForMetric 设置指标阈值
 //
 // 设置指标阈值
@@ -1257,6 +1530,27 @@ func (c *DasClient) SetThresholdForMetric(request *model.SetThresholdForMetricRe
 func (c *DasClient) SetThresholdForMetricInvoker(request *model.SetThresholdForMetricRequest) *SetThresholdForMetricInvoker {
 	requestDef := GenReqDefForSetThresholdForMetric()
 	return &SetThresholdForMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCredential 查询AK/SK
+//
+// 查询AK/SK。用于判断是否已保存AK/SK
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowCredential(request *model.ShowCredentialRequest) (*model.ShowCredentialResponse, error) {
+	requestDef := GenReqDefForShowCredential()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCredentialResponse), nil
+	}
+}
+
+// ShowCredentialInvoker 查询AK/SK
+func (c *DasClient) ShowCredentialInvoker(request *model.ShowCredentialRequest) *ShowCredentialInvoker {
+	requestDef := GenReqDefForShowCredential()
+	return &ShowCredentialInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDasRecommendSqlLimitRule 自动推荐SQL限流规则
@@ -1664,6 +1958,27 @@ func (c *DasClient) UpdateDbUserInvoker(request *model.UpdateDbUserRequest) *Upd
 	return &UpdateDbUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateEmailTemplate 修改邮件模板
+//
+// 修改邮件模板
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) UpdateEmailTemplate(request *model.UpdateEmailTemplateRequest) (*model.UpdateEmailTemplateResponse, error) {
+	requestDef := GenReqDefForUpdateEmailTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateEmailTemplateResponse), nil
+	}
+}
+
+// UpdateEmailTemplateInvoker 修改邮件模板
+func (c *DasClient) UpdateEmailTemplateInvoker(request *model.UpdateEmailTemplateRequest) *UpdateEmailTemplateInvoker {
+	requestDef := GenReqDefForUpdateEmailTemplate()
+	return &UpdateEmailTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateHealthReportSettings 更新实例诊断报告设置
 //
 // 更新实例诊断报告设置
@@ -1683,6 +1998,27 @@ func (c *DasClient) UpdateHealthReportSettings(request *model.UpdateHealthReport
 func (c *DasClient) UpdateHealthReportSettingsInvoker(request *model.UpdateHealthReportSettingsRequest) *UpdateHealthReportSettingsInvoker {
 	requestDef := GenReqDefForUpdateHealthReportSettings()
 	return &UpdateHealthReportSettingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstanceGroup 修改实例组
+//
+// 修改实例组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) UpdateInstanceGroup(request *model.UpdateInstanceGroupRequest) (*model.UpdateInstanceGroupResponse, error) {
+	requestDef := GenReqDefForUpdateInstanceGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstanceGroupResponse), nil
+	}
+}
+
+// UpdateInstanceGroupInvoker 修改实例组
+func (c *DasClient) UpdateInstanceGroupInvoker(request *model.UpdateInstanceGroupRequest) *UpdateInstanceGroupInvoker {
+	requestDef := GenReqDefForUpdateInstanceGroup()
+	return &UpdateInstanceGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSqlLimitRules 修改SQL限流规则

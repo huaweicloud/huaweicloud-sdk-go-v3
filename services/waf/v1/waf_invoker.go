@@ -181,6 +181,22 @@ func (i *BatchDeleteAlertNoticeConfigInvoker) Invoke() (*model.BatchDeleteAlertN
 	}
 }
 
+type BatchDeleteCompositeHostsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteCompositeHostsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteCompositeHostsInvoker) Invoke() (*model.BatchDeleteCompositeHostsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteCompositeHostsResponse), nil
+	}
+}
+
 type BatchDeletePoliciesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -194,6 +210,166 @@ func (i *BatchDeletePoliciesInvoker) Invoke() (*model.BatchDeletePoliciesRespons
 		return nil, err
 	} else {
 		return result.(*model.BatchDeletePoliciesResponse), nil
+	}
+}
+
+type BatchDeleteRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteRulesInvoker) Invoke() (*model.BatchDeleteRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteRulesResponse), nil
+	}
+}
+
+type BatchUpdateAntileakageRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateAntileakageRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateAntileakageRulesInvoker) Invoke() (*model.BatchUpdateAntileakageRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateAntileakageRulesResponse), nil
+	}
+}
+
+type BatchUpdateAntitamperRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateAntitamperRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateAntitamperRulesInvoker) Invoke() (*model.BatchUpdateAntitamperRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateAntitamperRulesResponse), nil
+	}
+}
+
+type BatchUpdateCcRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateCcRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateCcRulesInvoker) Invoke() (*model.BatchUpdateCcRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateCcRulesResponse), nil
+	}
+}
+
+type BatchUpdateCustomRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateCustomRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateCustomRulesInvoker) Invoke() (*model.BatchUpdateCustomRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateCustomRulesResponse), nil
+	}
+}
+
+type BatchUpdateGeoipRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateGeoipRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateGeoipRulesInvoker) Invoke() (*model.BatchUpdateGeoipRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateGeoipRulesResponse), nil
+	}
+}
+
+type BatchUpdateIgnoreRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateIgnoreRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateIgnoreRulesInvoker) Invoke() (*model.BatchUpdateIgnoreRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateIgnoreRulesResponse), nil
+	}
+}
+
+type BatchUpdateIpReputationRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateIpReputationRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateIpReputationRulesInvoker) Invoke() (*model.BatchUpdateIpReputationRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateIpReputationRulesResponse), nil
+	}
+}
+
+type BatchUpdatePrivacyRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdatePrivacyRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdatePrivacyRulesInvoker) Invoke() (*model.BatchUpdatePrivacyRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdatePrivacyRulesResponse), nil
+	}
+}
+
+type BatchUpdateWhiteblackipRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateWhiteblackipRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateWhiteblackipRulesInvoker) Invoke() (*model.BatchUpdateWhiteblackipRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateWhiteblackipRulesResponse), nil
 	}
 }
 
@@ -373,6 +549,22 @@ func (i *ConfirmUserBundleInvoker) Invoke() (*model.ConfirmUserBundleResponse, e
 	}
 }
 
+type CopyPolicyByIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CopyPolicyByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CopyPolicyByIdInvoker) Invoke() (*model.CopyPolicyByIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CopyPolicyByIdResponse), nil
+	}
+}
+
 type CreateAgencyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -514,6 +706,22 @@ func (i *CreateCustomRuleInvoker) Invoke() (*model.CreateCustomRuleResponse, err
 		return nil, err
 	} else {
 		return result.(*model.CreateCustomRuleResponse), nil
+	}
+}
+
+type CreateEventExportJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateEventExportJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateEventExportJobInvoker) Invoke() (*model.CreateEventExportJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateEventExportJobResponse), nil
 	}
 }
 
@@ -690,6 +898,22 @@ func (i *CreatePunishmentRuleInvoker) Invoke() (*model.CreatePunishmentRuleRespo
 		return nil, err
 	} else {
 		return result.(*model.CreatePunishmentRuleResponse), nil
+	}
+}
+
+type CreateSecurityReportSubscriptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSecurityReportSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSecurityReportSubscriptionInvoker) Invoke() (*model.CreateSecurityReportSubscriptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSecurityReportSubscriptionResponse), nil
 	}
 }
 
@@ -933,6 +1157,22 @@ func (i *DeleteIpGroupInvoker) Invoke() (*model.DeleteIpGroupResponse, error) {
 	}
 }
 
+type DeleteIpReputationRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteIpReputationRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteIpReputationRuleInvoker) Invoke() (*model.DeleteIpReputationRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteIpReputationRuleResponse), nil
+	}
+}
+
 type DeletePolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -994,6 +1234,22 @@ func (i *DeletePunishmentRuleInvoker) Invoke() (*model.DeletePunishmentRuleRespo
 		return nil, err
 	} else {
 		return result.(*model.DeletePunishmentRuleResponse), nil
+	}
+}
+
+type DeleteSecurityReportSubscriptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSecurityReportSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteSecurityReportSubscriptionInvoker) Invoke() (*model.DeleteSecurityReportSubscriptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSecurityReportSubscriptionResponse), nil
 	}
 }
 
@@ -2677,6 +2933,22 @@ func (i *UpdatePremiumInstanceInvoker) Invoke() (*model.UpdatePremiumInstanceRes
 	}
 }
 
+type UpdatePremiumInstanceProgressInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePremiumInstanceProgressInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePremiumInstanceProgressInvoker) Invoke() (*model.UpdatePremiumInstanceProgressResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePremiumInstanceProgressResponse), nil
+	}
+}
+
 type UpdatePrivacyRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2709,6 +2981,22 @@ func (i *UpdatePunishmentRuleInvoker) Invoke() (*model.UpdatePunishmentRuleRespo
 	}
 }
 
+type UpdateSecurityReportSubscriptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSecurityReportSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSecurityReportSubscriptionInvoker) Invoke() (*model.UpdateSecurityReportSubscriptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSecurityReportSubscriptionResponse), nil
+	}
+}
+
 type UpdateValueListInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2738,6 +3026,22 @@ func (i *UpdateWhiteblackipRuleInvoker) Invoke() (*model.UpdateWhiteblackipRuleR
 		return nil, err
 	} else {
 		return result.(*model.UpdateWhiteblackipRuleResponse), nil
+	}
+}
+
+type ConfirmDnsDomainInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ConfirmDnsDomainInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ConfirmDnsDomainInvoker) Invoke() (*model.ConfirmDnsDomainResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ConfirmDnsDomainResponse), nil
 	}
 }
 

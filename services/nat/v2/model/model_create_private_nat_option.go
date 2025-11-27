@@ -18,14 +18,14 @@ type CreatePrivateNatOption struct {
 	// 私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
 	Description *string `json:"description,omitempty"`
 
-	// 私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
+	// 私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
 	Spec *CreatePrivateNatOptionSpec `json:"spec,omitempty"`
 
 	// 私网NAT网关实例所属的VPC实例。
 	DownlinkVpcs []DownlinkVpcOption `json:"downlink_vpcs"`
 
 	// 标签列表
-	Tags *[]PrivateTag `json:"tags,omitempty"`
+	Tags *[]Tag `json:"tags,omitempty"`
 
 	// 企业项目ID 创建私网NAT网关实例时，关联的企业项目ID。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
@@ -45,10 +45,11 @@ type CreatePrivateNatOptionSpec struct {
 }
 
 type CreatePrivateNatOptionSpecEnum struct {
-	SMALL       CreatePrivateNatOptionSpec
-	MEDIUM      CreatePrivateNatOptionSpec
-	LARGE       CreatePrivateNatOptionSpec
-	EXTRA_LARGE CreatePrivateNatOptionSpec
+	SMALL        CreatePrivateNatOptionSpec
+	MEDIUM       CreatePrivateNatOptionSpec
+	LARGE        CreatePrivateNatOptionSpec
+	EXTRA_LARGE  CreatePrivateNatOptionSpec
+	EXTRA_XLARGE CreatePrivateNatOptionSpec
 }
 
 func GetCreatePrivateNatOptionSpecEnum() CreatePrivateNatOptionSpecEnum {
@@ -64,6 +65,9 @@ func GetCreatePrivateNatOptionSpecEnum() CreatePrivateNatOptionSpecEnum {
 		},
 		EXTRA_LARGE: CreatePrivateNatOptionSpec{
 			value: "Extra-large",
+		},
+		EXTRA_XLARGE: CreatePrivateNatOptionSpec{
+			value: "Extra-xlarge",
 		},
 	}
 }

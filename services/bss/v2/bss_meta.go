@@ -572,6 +572,54 @@ func GenReqDefForListCustomerBillsMonthlyBreakDown() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListCustomerCouponChangeRecords() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/promotions/benefits/account-change-records").
+		WithResponse(new(model.ListCustomerCouponChangeRecordsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BalanceType").
+		WithJsonTag("balance_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RevenueExpenseType").
+		WithJsonTag("revenue_expense_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TradeType").
+		WithJsonTag("trade_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TradeId").
+		WithJsonTag("trade_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TradeTimeBegin").
+		WithJsonTag("trade_time_begin").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TradeTimeEnd").
+		WithJsonTag("trade_time_end").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CouponId").
+		WithJsonTag("coupon_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListCustomerOnDemandResources() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -2164,6 +2212,14 @@ func GenReqDefForShowRefundOrderDetails() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("OrderId").
 		WithJsonTag("order_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CustomerId").
+		WithJsonTag("customer_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IndirectPartnerId").
+		WithJsonTag("indirect_partner_id").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

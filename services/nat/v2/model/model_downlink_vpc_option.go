@@ -11,6 +11,9 @@ type DownlinkVpcOption struct {
 
 	// 私网NAT网关实例所属的子网的ID。
 	VirsubnetId string `json:"virsubnet_id"`
+
+	// 私网NAT网关的ngport_ip_addrss。
+	NgportIpAddress *string `json:"ngport_ip_address,omitempty"`
 }
 
 func (o DownlinkVpcOption) String() string {

@@ -8,7 +8,10 @@ import (
 
 // GetInstancesNoIndexTablesResponse Response Object
 type GetInstancesNoIndexTablesResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 特殊表格列表。
+	Tables         *[]Table `json:"tables,omitempty"`
+	HttpStatusCode int      `json:"-"`
 }
 
 func (o GetInstancesNoIndexTablesResponse) String() string {

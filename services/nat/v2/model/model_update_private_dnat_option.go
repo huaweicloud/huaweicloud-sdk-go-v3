@@ -18,6 +18,9 @@ type UpdatePrivateDnatOption struct {
 	// 中转IP的ID。
 	TransitIpId *string `json:"transit_ip_id,omitempty"`
 
+	// 中转IP的地址。
+	TransitIpAddress *string `json:"transit_ip_address,omitempty"`
+
 	// 网络接口ID，支持计算、ELB、VIP等实例的网络接口。
 	NetworkInterfaceId *string `json:"network_interface_id,omitempty"`
 

@@ -27,7 +27,7 @@ type ListAppWhitelistPolicyHostRequest struct {
 	// **策略学习状态**： 策略应用状态 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
 	ApplyStatus *bool `json:"apply_status,omitempty"`
 
-	// 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+	// **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产。 - common：一般资产。 - test：测试资产。  **默认取值**： 无
 	AssetValue *string `json:"asset_value,omitempty"`
 
 	// **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
@@ -36,13 +36,13 @@ type ListAppWhitelistPolicyHostRequest struct {
 	// **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
 	PrivateIp *string `json:"private_ip,omitempty"`
 
-	// 操作系统类型，包含如下2种。   - Linux：Linux。   - Windows：Windows。
+	// **参数解释**: 操作系统类型。 **约束限制**: 不涉及 **取值范围**: - Linux：Linux操作系统。 - Windows：Windows操作系统。  **默认取值**: 无
 	OsType *string `json:"os_type,omitempty"`
 
 	// 策略ID
 	PolicyId *string `json:"policy_id,omitempty"`
 
-	// 服务器公网IP
+	// **参数解释**: 服务器弹性IP地址。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 无
 	PublicIp *string `json:"public_ip,omitempty"`
 }
 

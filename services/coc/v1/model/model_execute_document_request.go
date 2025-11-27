@@ -10,7 +10,7 @@ import (
 type ExecuteDocumentRequest struct {
 	DocumentId string `json:"document_id"`
 
-	Body *ExecuteDocumentRequsetBody `json:"body,omitempty"`
+	Body *ExecuteDocumentRequestBody `json:"body,omitempty"`
 }
 
 func (o ExecuteDocumentRequest) String() string {

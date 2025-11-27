@@ -1,6 +1,7 @@
 package model
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
@@ -12,7 +13,7 @@ type UnusedAction struct {
 	Action string `json:"action"`
 
 	// 用户使用授权项的最后访问时间。
-	LastAccessed *interface{} `json:"last_accessed,omitempty"`
+	LastAccessed *sdktime.SdkTime `json:"last_accessed,omitempty"`
 }
 
 func (o UnusedAction) String() string {

@@ -9,10 +9,10 @@ import (
 // Tag 标签。
 type Tag struct {
 
-	// 标签的KEY。
+	// 匹配的标签键。
 	Key string `json:"key"`
 
-	// 标签的VALUES。
+	// 匹配的标签值列表。
 	Values []string `json:"values"`
 }
 

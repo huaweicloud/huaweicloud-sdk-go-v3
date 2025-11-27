@@ -19,7 +19,7 @@ type Resource struct {
 	ResourceName string `json:"resource_name"`
 
 	// 标签列表，没有标签默认为空数组。
-	ResourceTag []ResourceTag `json:"resource_tag"`
+	Tags []ResourceTag `json:"tags"`
 }
 
 func (o Resource) String() string {

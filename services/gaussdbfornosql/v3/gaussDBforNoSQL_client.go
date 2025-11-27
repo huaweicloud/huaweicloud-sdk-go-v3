@@ -1490,6 +1490,27 @@ func (c *GaussDBforNoSQLClient) ListSlowLogsInvoker(request *model.ListSlowLogsR
 	return &ListSlowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSslCertDownloadAddresses 获取SSL证书下载地址
+//
+// 获取SSL证书下载地址。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListSslCertDownloadAddresses(request *model.ListSslCertDownloadAddressesRequest) (*model.ListSslCertDownloadAddressesResponse, error) {
+	requestDef := GenReqDefForListSslCertDownloadAddresses()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSslCertDownloadAddressesResponse), nil
+	}
+}
+
+// ListSslCertDownloadAddressesInvoker 获取SSL证书下载地址
+func (c *GaussDBforNoSQLClient) ListSslCertDownloadAddressesInvoker(request *model.ListSslCertDownloadAddressesRequest) *ListSslCertDownloadAddressesInvoker {
+	requestDef := GenReqDefForListSslCertDownloadAddresses()
+	return &ListSslCertDownloadAddressesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ModifyAutoNodeExpansionPolicy 设置节点自动扩容策略
 //
 // 设置节点自动扩容策略。

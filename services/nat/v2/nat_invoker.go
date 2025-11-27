@@ -5,6 +5,182 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/nat/v2/model"
 )
 
+type BatchCreateDeleteTransitSubnetTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateDeleteTransitSubnetTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateDeleteTransitSubnetTagsInvoker) Invoke() (*model.BatchCreateDeleteTransitSubnetTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateDeleteTransitSubnetTagsResponse), nil
+	}
+}
+
+type CreateTransitSubnetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTransitSubnetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateTransitSubnetInvoker) Invoke() (*model.CreateTransitSubnetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTransitSubnetResponse), nil
+	}
+}
+
+type CreateTransitSubnetTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTransitSubnetTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateTransitSubnetTagInvoker) Invoke() (*model.CreateTransitSubnetTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTransitSubnetTagResponse), nil
+	}
+}
+
+type DeleteTransitSubnetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTransitSubnetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteTransitSubnetInvoker) Invoke() (*model.DeleteTransitSubnetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTransitSubnetResponse), nil
+	}
+}
+
+type DeleteTransitSubnetTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTransitSubnetTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteTransitSubnetTagInvoker) Invoke() (*model.DeleteTransitSubnetTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTransitSubnetTagResponse), nil
+	}
+}
+
+type ListTransitSubnetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTransitSubnetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTransitSubnetInvoker) Invoke() (*model.ListTransitSubnetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTransitSubnetResponse), nil
+	}
+}
+
+type ListTransitSubnetTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTransitSubnetTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTransitSubnetTagsInvoker) Invoke() (*model.ListTransitSubnetTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTransitSubnetTagsResponse), nil
+	}
+}
+
+type ListTransitSubnetsByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTransitSubnetsByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTransitSubnetsByTagsInvoker) Invoke() (*model.ListTransitSubnetsByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTransitSubnetsByTagsResponse), nil
+	}
+}
+
+type ShowTransitSubnetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTransitSubnetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTransitSubnetInvoker) Invoke() (*model.ShowTransitSubnetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTransitSubnetResponse), nil
+	}
+}
+
+type ShowTransitSubnetTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTransitSubnetTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTransitSubnetTagsInvoker) Invoke() (*model.ShowTransitSubnetTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTransitSubnetTagsResponse), nil
+	}
+}
+
+type UpdateTransitSubnetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTransitSubnetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateTransitSubnetInvoker) Invoke() (*model.UpdateTransitSubnetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTransitSubnetResponse), nil
+	}
+}
+
 type BatchCreateNatGatewayDnatRulesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -453,6 +629,22 @@ func (i *ListNatGatewayByTagInvoker) Invoke() (*model.ListNatGatewayByTagRespons
 	}
 }
 
+type ListNatGatewaySpecsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNatGatewaySpecsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListNatGatewaySpecsInvoker) Invoke() (*model.ListNatGatewaySpecsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNatGatewaySpecsResponse), nil
+	}
+}
+
 type ListNatGatewayTagInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -530,6 +722,22 @@ func (i *ListPrivateNatsByTagsInvoker) Invoke() (*model.ListPrivateNatsByTagsRes
 		return nil, err
 	} else {
 		return result.(*model.ListPrivateNatsByTagsResponse), nil
+	}
+}
+
+type ListSpecsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSpecsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSpecsInvoker) Invoke() (*model.ListSpecsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSpecsResponse), nil
 	}
 }
 

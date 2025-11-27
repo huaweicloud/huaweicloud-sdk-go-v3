@@ -376,27 +376,6 @@ func (c *DdsClient) CreateDatabaseUserInvoker(request *model.CreateDatabaseUserR
 	return &CreateDatabaseUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateInstance 创建实例
-//
-// 创建文档数据库实例，包括集群实例、副本集实例、以及单节点实例。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DdsClient) CreateInstance(request *model.CreateInstanceRequest) (*model.CreateInstanceResponse, error) {
-	requestDef := GenReqDefForCreateInstance()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateInstanceResponse), nil
-	}
-}
-
-// CreateInstanceInvoker 创建实例
-func (c *DdsClient) CreateInstanceInvoker(request *model.CreateInstanceRequest) *CreateInstanceInvoker {
-	requestDef := GenReqDefForCreateInstance()
-	return &CreateInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateIp 创建集群的Shard/Config IP
 //
 // 创建集群的Shard/Config IP
@@ -1088,27 +1067,6 @@ func (c *DdsClient) ListInstanceTags(request *model.ListInstanceTagsRequest) (*m
 func (c *DdsClient) ListInstanceTagsInvoker(request *model.ListInstanceTagsRequest) *ListInstanceTagsInvoker {
 	requestDef := GenReqDefForListInstanceTags()
 	return &ListInstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListInstances 查询实例列表和详情
-//
-// 根据指定条件查询实例列表和详情。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DdsClient) ListInstances(request *model.ListInstancesRequest) (*model.ListInstancesResponse, error) {
-	requestDef := GenReqDefForListInstances()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListInstancesResponse), nil
-	}
-}
-
-// ListInstancesInvoker 查询实例列表和详情
-func (c *DdsClient) ListInstancesInvoker(request *model.ListInstancesRequest) *ListInstancesInvoker {
-	requestDef := GenReqDefForListInstances()
-	return &ListInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListInstancesByTags 查询资源实例

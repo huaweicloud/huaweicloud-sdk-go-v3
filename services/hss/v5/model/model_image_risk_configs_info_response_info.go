@@ -15,7 +15,7 @@ type ImageRiskConfigsInfoResponseInfo struct {
 	// 基线名称
 	CheckName *string `json:"check_name,omitempty"`
 
-	// 基线类型
+	// **参数解释** : 配置检查（基线）的类型,Linux系统支持的基线一般check_type和check_name相同,例如SSH、CentOS 7。 Windows系统支持的基线一般check_type和check_name不相同，例如check_name为Windows的配置检查（基线），它的check_type包含Windows Server 2019 R2、Windows Server 2016 R2等。 **约束限制** : 不涉及 **取值范围** : 不涉及 **默认取值** : 不涉及
 	CheckType *string `json:"check_type,omitempty"`
 
 	// 标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准

@@ -39,18 +39,6 @@ type QuotaList struct {
 
 	VolumesSSD *QuotaDetailVolumesSsd `json:"volumes_SSD,omitempty"`
 
-	GigabytesESSD *QuotaDetailGigabytesEssd `json:"gigabytes_ESSD,omitempty"`
-
-	SnapshotsESSD *QuotaDetailSnapshotsEssd `json:"snapshots_ESSD,omitempty"`
-
-	VolumesESSD *QuotaDetailVolumesEssd `json:"volumes_ESSD,omitempty"`
-
-	GigabytesGPSSD *QuotaDetailGigabytesGpssd `json:"gigabytes_GPSSD,omitempty"`
-
-	SnapshotsGPSSD *QuotaDetailSnapshotsGpssd `json:"snapshots_GPSSD,omitempty"`
-
-	VolumesGPSSD *QuotaDetailVolumesGpssd `json:"volumes_GPSSD,omitempty"`
-
 	PerVolumeGigabytes *QuotaDetailPerVolumeGigabytes `json:"per_volume_gigabytes,omitempty"`
 }
 

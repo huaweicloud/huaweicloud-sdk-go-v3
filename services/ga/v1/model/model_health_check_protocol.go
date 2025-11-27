@@ -9,19 +9,23 @@ import (
 	"strings"
 )
 
-// HealthCheckProtocol 健康检查的协议。
+// HealthCheckProtocol 监听的网络传输协议类型。 取值范围：TCP、UDP
 type HealthCheckProtocol struct {
 	value string
 }
 
 type HealthCheckProtocolEnum struct {
 	TCP HealthCheckProtocol
+	UDP HealthCheckProtocol
 }
 
 func GetHealthCheckProtocolEnum() HealthCheckProtocolEnum {
 	return HealthCheckProtocolEnum{
 		TCP: HealthCheckProtocol{
 			value: "TCP",
+		},
+		UDP: HealthCheckProtocol{
+			value: "UDP",
 		},
 	}
 }

@@ -4990,6 +4990,27 @@ func (c *RdsClient) BatchAddMsdtcsInvoker(request *model.BatchAddMsdtcsRequest) 
 	return &BatchAddMsdtcsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchModifyPublication 批量修改发布
+//
+// 批量修改发布。只支持批量修改快照策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) BatchModifyPublication(request *model.BatchModifyPublicationRequest) (*model.BatchModifyPublicationResponse, error) {
+	requestDef := GenReqDefForBatchModifyPublication()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchModifyPublicationResponse), nil
+	}
+}
+
+// BatchModifyPublicationInvoker 批量修改发布
+func (c *RdsClient) BatchModifyPublicationInvoker(request *model.BatchModifyPublicationRequest) *BatchModifyPublicationInvoker {
+	requestDef := GenReqDefForBatchModifyPublication()
+	return &BatchModifyPublicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchModifySubscription 批量修改订阅
 //
 // 批量修改订阅
@@ -5072,6 +5093,48 @@ func (c *RdsClient) CopyDatabase(request *model.CopyDatabaseRequest) (*model.Cop
 func (c *RdsClient) CopyDatabaseInvoker(request *model.CopyDatabaseRequest) *CopyDatabaseInvoker {
 	requestDef := GenReqDefForCopyDatabase()
 	return &CopyDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDistribution 给当前实例配置分发服务器
+//
+// 给当前实例配置分发服务器
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) CreateDistribution(request *model.CreateDistributionRequest) (*model.CreateDistributionResponse, error) {
+	requestDef := GenReqDefForCreateDistribution()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDistributionResponse), nil
+	}
+}
+
+// CreateDistributionInvoker 给当前实例配置分发服务器
+func (c *RdsClient) CreateDistributionInvoker(request *model.CreateDistributionRequest) *CreateDistributionInvoker {
+	requestDef := GenReqDefForCreateDistribution()
+	return &CreateDistributionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePublication 创建发布
+//
+// 创建发布
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) CreatePublication(request *model.CreatePublicationRequest) (*model.CreatePublicationResponse, error) {
+	requestDef := GenReqDefForCreatePublication()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePublicationResponse), nil
+	}
+}
+
+// CreatePublicationInvoker 创建发布
+func (c *RdsClient) CreatePublicationInvoker(request *model.CreatePublicationRequest) *CreatePublicationInvoker {
+	requestDef := GenReqDefForCreatePublication()
+	return &CreatePublicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateSqlserverDatabase 创建数据库
@@ -5515,6 +5578,48 @@ func (c *RdsClient) ListPublications4SubscriptionInvoker(request *model.ListPubl
 	return &ListPublications4SubscriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListRemoteDb 查询远程SQL Server数据库列表
+//
+// 查询远程SQL Server数据库列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListRemoteDb(request *model.ListRemoteDbRequest) (*model.ListRemoteDbResponse, error) {
+	requestDef := GenReqDefForListRemoteDb()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRemoteDbResponse), nil
+	}
+}
+
+// ListRemoteDbInvoker 查询远程SQL Server数据库列表
+func (c *RdsClient) ListRemoteDbInvoker(request *model.ListRemoteDbRequest) *ListRemoteDbInvoker {
+	requestDef := GenReqDefForListRemoteDb()
+	return &ListRemoteDbInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListReplicationErrors 查询发布订阅报错列表
+//
+// 查询发布订阅报错列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListReplicationErrors(request *model.ListReplicationErrorsRequest) (*model.ListReplicationErrorsResponse, error) {
+	requestDef := GenReqDefForListReplicationErrors()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListReplicationErrorsResponse), nil
+	}
+}
+
+// ListReplicationErrorsInvoker 查询发布订阅报错列表
+func (c *RdsClient) ListReplicationErrorsInvoker(request *model.ListReplicationErrorsRequest) *ListReplicationErrorsInvoker {
+	requestDef := GenReqDefForListReplicationErrors()
+	return &ListReplicationErrorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListReplicationProfiles 查询发布订阅配置文件列表
 //
 // 查询发布订阅配置文件列表。
@@ -5641,6 +5746,27 @@ func (c *RdsClient) ModifyCollationInvoker(request *model.ModifyCollationRequest
 	return &ModifyCollationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ModifyDbAgentJob 修改数据库代理作业
+//
+// 修改数据库代理作业。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ModifyDbAgentJob(request *model.ModifyDbAgentJobRequest) (*model.ModifyDbAgentJobResponse, error) {
+	requestDef := GenReqDefForModifyDbAgentJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyDbAgentJobResponse), nil
+	}
+}
+
+// ModifyDbAgentJobInvoker 修改数据库代理作业
+func (c *RdsClient) ModifyDbAgentJobInvoker(request *model.ModifyDbAgentJobRequest) *ModifyDbAgentJobInvoker {
+	requestDef := GenReqDefForModifyDbAgentJob()
+	return &ModifyDbAgentJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ModifyPublication 修改发布
 //
 // 修改发布
@@ -5702,6 +5828,27 @@ func (c *RdsClient) RefreshSubscription(request *model.RefreshSubscriptionReques
 func (c *RdsClient) RefreshSubscriptionInvoker(request *model.RefreshSubscriptionRequest) *RefreshSubscriptionInvoker {
 	requestDef := GenReqDefForRefreshSubscription()
 	return &RefreshSubscriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestartDbAgentJob 重启数据库代理作业
+//
+// 重启数据库代理作业。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) RestartDbAgentJob(request *model.RestartDbAgentJobRequest) (*model.RestartDbAgentJobResponse, error) {
+	requestDef := GenReqDefForRestartDbAgentJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestartDbAgentJobResponse), nil
+	}
+}
+
+// RestartDbAgentJobInvoker 重启数据库代理作业
+func (c *RdsClient) RestartDbAgentJobInvoker(request *model.RestartDbAgentJobRequest) *RestartDbAgentJobInvoker {
+	requestDef := GenReqDefForRestartDbAgentJob()
+	return &RestartDbAgentJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RevokeSqlserverDbUserPrivilege 解除数据库帐号权限
@@ -5767,6 +5914,27 @@ func (c *RdsClient) SetInstancesNewDbShrinkInvoker(request *model.SetInstancesNe
 	return &SetInstancesNewDbShrinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SwitchDbAgentJob 禁用启动切换数据库代理作业
+//
+// 禁用启动切换数据库代理作业。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) SwitchDbAgentJob(request *model.SwitchDbAgentJobRequest) (*model.SwitchDbAgentJobResponse, error) {
+	requestDef := GenReqDefForSwitchDbAgentJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchDbAgentJobResponse), nil
+	}
+}
+
+// SwitchDbAgentJobInvoker 禁用启动切换数据库代理作业
+func (c *RdsClient) SwitchDbAgentJobInvoker(request *model.SwitchDbAgentJobRequest) *SwitchDbAgentJobInvoker {
+	requestDef := GenReqDefForSwitchDbAgentJob()
+	return &SwitchDbAgentJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SyncReplicationMetadata 同步发布订阅元数据
 //
 // 同步发布订阅元数据。
@@ -5786,6 +5954,27 @@ func (c *RdsClient) SyncReplicationMetadata(request *model.SyncReplicationMetada
 func (c *RdsClient) SyncReplicationMetadataInvoker(request *model.SyncReplicationMetadataRequest) *SyncReplicationMetadataInvoker {
 	requestDef := GenReqDefForSyncReplicationMetadata()
 	return &SyncReplicationMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateStatistics 更新统计信息
+//
+// 更新统计信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) UpdateStatistics(request *model.UpdateStatisticsRequest) (*model.UpdateStatisticsResponse, error) {
+	requestDef := GenReqDefForUpdateStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateStatisticsResponse), nil
+	}
+}
+
+// UpdateStatisticsInvoker 更新统计信息
+func (c *RdsClient) UpdateStatisticsInvoker(request *model.UpdateStatisticsRequest) *UpdateStatisticsInvoker {
+	requestDef := GenReqDefForUpdateStatistics()
+	return &UpdateStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ValidateInstanceConnection 登录测试

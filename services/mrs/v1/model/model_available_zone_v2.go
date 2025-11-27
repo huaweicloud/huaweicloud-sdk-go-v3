@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -34,6 +37,12 @@ type AvailableZoneV2 struct {
 	AzType *string `json:"az_type,omitempty"`
 
 	AzTags *AvailableTag `json:"az_tags,omitempty"`
+
+	// 当前可用区的类型，包括： - 0: 大云主可用区 - 21: 本地可用区 - 41: 边缘可用区
+	AzCategory *int32 `json:"az_category,omitempty"`
+
+	// 当前可用区的销售策略，包括： - charge: 计费 - notCharge: 非计费
+	ChargePolicy *AvailableZoneV2ChargePolicy `json:"charge_policy,omitempty"`
 }
 
 func (o AvailableZoneV2) String() string {
@@ -43,4 +52,51 @@ func (o AvailableZoneV2) String() string {
 	}
 
 	return strings.Join([]string{"AvailableZoneV2", string(data)}, " ")
+}
+
+type AvailableZoneV2ChargePolicy struct {
+	value string
+}
+
+type AvailableZoneV2ChargePolicyEnum struct {
+	CHARGE     AvailableZoneV2ChargePolicy
+	NOT_CHARGE AvailableZoneV2ChargePolicy
+}
+
+func GetAvailableZoneV2ChargePolicyEnum() AvailableZoneV2ChargePolicyEnum {
+	return AvailableZoneV2ChargePolicyEnum{
+		CHARGE: AvailableZoneV2ChargePolicy{
+			value: "charge",
+		},
+		NOT_CHARGE: AvailableZoneV2ChargePolicy{
+			value: "notCharge",
+		},
+	}
+}
+
+func (c AvailableZoneV2ChargePolicy) Value() string {
+	return c.value
+}
+
+func (c AvailableZoneV2ChargePolicy) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *AvailableZoneV2ChargePolicy) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

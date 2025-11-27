@@ -124,6 +124,27 @@ func (c *GaClient) UpdateAcceleratorInvoker(request *model.UpdateAcceleratorRequ
 	return &UpdateAcceleratorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListByoipPools 查询自带IP地址池列表
+//
+// 查询自带IP地址池列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaClient) ListByoipPools(request *model.ListByoipPoolsRequest) (*model.ListByoipPoolsResponse, error) {
+	requestDef := GenReqDefForListByoipPools()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListByoipPoolsResponse), nil
+	}
+}
+
+// ListByoipPoolsInvoker 查询自带IP地址池列表
+func (c *GaClient) ListByoipPoolsInvoker(request *model.ListByoipPoolsRequest) *ListByoipPoolsInvoker {
+	requestDef := GenReqDefForListByoipPools()
+	return &ListByoipPoolsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateEndpoint 创建终端节点
 //
 // 创建终端节点。

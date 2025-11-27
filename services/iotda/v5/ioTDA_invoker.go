@@ -613,6 +613,22 @@ func (i *ListCertificatesInvoker) Invoke() (*model.ListCertificatesResponse, err
 	}
 }
 
+type ShowCertificateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCertificateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowCertificateInvoker) Invoke() (*model.ShowCertificateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCertificateResponse), nil
+	}
+}
+
 type UpdateCertificateInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1394,6 +1410,70 @@ func (i *UpdateDomainConfigurationInvoker) Invoke() (*model.UpdateDomainConfigur
 		return nil, err
 	} else {
 		return result.(*model.UpdateDomainConfigurationResponse), nil
+	}
+}
+
+type CreateExportTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateExportTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateExportTaskInvoker) Invoke() (*model.CreateExportTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateExportTaskResponse), nil
+	}
+}
+
+type DeleteExportTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteExportTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteExportTaskInvoker) Invoke() (*model.DeleteExportTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteExportTaskResponse), nil
+	}
+}
+
+type ListExportTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListExportTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListExportTasksInvoker) Invoke() (*model.ListExportTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListExportTasksResponse), nil
+	}
+}
+
+type ShowExportTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowExportTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowExportTaskInvoker) Invoke() (*model.ShowExportTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowExportTaskResponse), nil
 	}
 }
 

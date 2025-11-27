@@ -39,7 +39,7 @@ type ListAppWhitelistPolicyProcessRequest struct {
 	// **参数解释**： 确认状态 **约束限制**: 不涉及 **取值范围**: - confirmed：已确认 - unconfirmed：未确认  **默认取值**: 不涉及
 	HandleStatus *string `json:"handle_status,omitempty"`
 
-	// 操作系统类型，包含如下2种。   - Linux：Linux。   - Windows：Windows。
+	// **参数解释**: 操作系统类型。 **约束限制**: 不涉及 **取值范围**: - Linux：Linux操作系统。 - Windows：Windows操作系统。  **默认取值**: 无
 	OsType *string `json:"os_type,omitempty"`
 
 	// **参数解释**： 文件签名 **约束限制**： 不涉及 **取值范围**： 字符长度1-128位 **默认取值**： 不涉及

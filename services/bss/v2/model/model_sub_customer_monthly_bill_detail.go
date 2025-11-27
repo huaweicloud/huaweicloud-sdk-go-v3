@@ -149,6 +149,9 @@ type SubCustomerMonthlyBillDetail struct {
 
 	// 整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
 	SubResourceName *string `json:"sub_resource_name,omitempty"`
+
+	// 周期数量，该参数非必填
+	PeriodNum *decimal.Decimal `json:"period_num,omitempty"`
 }
 
 func (o SubCustomerMonthlyBillDetail) String() string {

@@ -9,7 +9,7 @@ import (
 // ShowErrorLogSwitchStatusResponse Response Object
 type ShowErrorLogSwitchStatusResponse struct {
 
-	// 采集状态
+	// **参数解释**: 采集状态。 **取值范围**: - ON：开启采集 - OFF：关闭采集
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

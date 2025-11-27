@@ -9,7 +9,7 @@ import (
 // CountResourcesByTagRequest Request Object
 type CountResourcesByTagRequest struct {
 
-	// 资源类型。
+	// 资源类型，取值范围： - ga-accelerators：加速实例 - ga-listeners：监听器
 	ResourceType *ResourceType `json:"resource_type"`
 
 	Body *ListResourcesByTagRequestBody `json:"body,omitempty"`

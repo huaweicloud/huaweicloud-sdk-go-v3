@@ -14,7 +14,7 @@ type MasterSlavePool struct {
 	// **参数解释**：后端服务器组的ID。  **取值范围**：不涉及
 	Id string `json:"id"`
 
-	// **参数解释**：后端服务器组的负载均衡算法。  **取值范围**：不涉及 - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
+	// **参数解释**：后端服务器组的负载均衡算法。  **取值范围**： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
 	LbAlgorithm string `json:"lb_algorithm"`
 
 	// **参数解释**：后端服务器组关联的监听器ID列表。

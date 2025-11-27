@@ -18,7 +18,7 @@ type ListCheckRuleHostRequest struct {
 	// **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
 	Limit *int32 `json:"limit,omitempty"`
 
-	// **参数解释** 具体基线检查项id **约束限制** 不涉及 **取值范围** - 值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules **默认取值** 不涉及
+	// **参数解释** 具体基线检查项id **约束限制** 不涉及 **取值范围** - 值可以通过这个接口的返回数据获得：/v5/{project_id}/baseline/risk-config/{check_name}/check-rules  **默认取值** 不涉及
 	CheckRuleId string `json:"check_rule_id"`
 
 	// **参数解释** 配置检查（基线）的名称，如SSH、CentOS 7、Windows，与check_type相比，会多-PID之类的进程信息，通过具体基线维度查询时，传check_name **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
@@ -39,10 +39,10 @@ type ListCheckRuleHostRequest struct {
 	// **参数解释** 主机名称或ip **约束限制** 不涉及 **取值范围** 不涉及 **默认取值** 不涉及
 	HostName *string `json:"host_name,omitempty"`
 
-	// **参数解释** 主机类型，已废弃 **约束限制** 不涉及 **取值范围** - cce **默认取值** 不涉及
+	// **参数解释** 主机类型，已废弃 **约束限制** 不涉及 **取值范围** - cce  **默认取值** 不涉及
 	HostType *string `json:"host_type,omitempty"`
 
-	// **参数解释**: 是否只筛选cce主机，已废弃 **约束限制**: 不涉及 **取值范围**: -true：是。 -false：否。 **默认取值**: false
+	// **参数解释**: 是否只筛选cce主机，已废弃 **约束限制**: 不涉及 **取值范围**: -true：是。 -false：否。  **默认取值**: false
 	CheckCce *bool `json:"check_cce,omitempty"`
 
 	// **参数解释** 策略组ID，已废弃 **约束限制** 不涉及 **取值范围** 字符长度0-128位 **默认取值** 不涉及

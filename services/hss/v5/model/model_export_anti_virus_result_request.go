@@ -24,7 +24,7 @@ type ExportAntiVirusResultRequest struct {
 	// **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
 	PrivateIp *string `json:"private_ip,omitempty"`
 
-	// 服务器公网IP
+	// **参数解释**: 服务器弹性IP地址。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 无
 	PublicIp *string `json:"public_ip,omitempty"`
 
 	// 处置状态，包含如下:   - unhandled：未处理   - handled：已处理
@@ -33,7 +33,7 @@ type ExportAntiVirusResultRequest struct {
 	// 威胁等级，包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
 	SeverityList *[]string `json:"severity_list,omitempty"`
 
-	// 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+	// **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产。 - common：一般资产。 - test：测试资产。  **默认取值**： 无
 	AssetValue *string `json:"asset_value,omitempty"`
 
 	// 病毒名称

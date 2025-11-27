@@ -21,10 +21,16 @@ type CreateNatGatewayOption struct {
 	// 公网NAT网关下行口（DVR的下一跳）所属的network id。
 	InternalNetworkId string `json:"internal_network_id"`
 
+	// 公网NAT网关ng口占用的ip。
+	NgportIpAddress *string `json:"ngport_ip_address,omitempty"`
+
 	// 公网NAT网关实例的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
 	Description *string `json:"description,omitempty"`
 
-	// 公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000
+	// 标签列表, 用以标识资源类型
+	Tags *[]string `json:"tags,omitempty"`
+
+	// 公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
 	Spec CreateNatGatewayOptionSpec `json:"spec"`
 
 	// 企业项目ID 创建公网NAT网关实例时，关联的企业项目ID。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
@@ -32,8 +38,7 @@ type CreateNatGatewayOption struct {
 
 	SessionConf *SessionConfiguration `json:"session_conf,omitempty"`
 
-	// 公网NAT网关私有IP地址，由VPC中子网分配。
-	NgportIpAddress *string `json:"ngport_ip_address,omitempty"`
+	PrepaidOptions *PrepaidOptions `json:"prepaid_options,omitempty"`
 }
 
 func (o CreateNatGatewayOption) String() string {
@@ -54,6 +59,7 @@ type CreateNatGatewayOptionSpecEnum struct {
 	E_2 CreateNatGatewayOptionSpec
 	E_3 CreateNatGatewayOptionSpec
 	E_4 CreateNatGatewayOptionSpec
+	E_5 CreateNatGatewayOptionSpec
 }
 
 func GetCreateNatGatewayOptionSpecEnum() CreateNatGatewayOptionSpecEnum {
@@ -69,6 +75,9 @@ func GetCreateNatGatewayOptionSpecEnum() CreateNatGatewayOptionSpecEnum {
 		},
 		E_4: CreateNatGatewayOptionSpec{
 			value: "4",
+		},
+		E_5: CreateNatGatewayOptionSpec{
+			value: "5",
 		},
 	}
 }

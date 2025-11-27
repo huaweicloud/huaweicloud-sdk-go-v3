@@ -40,6 +40,21 @@ type ExportBaselineRequestBody struct {
 
 	// 导出配置检测数据的表头信息列表
 	ExportHeaders [][]string `json:"export_headers"`
+
+	// **参数解释** 基线检查项的类型 **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+	Tag *string `json:"tag,omitempty"`
+
+	// **参数解释** 配置检查（基线）的名称，例如SSH、CentOS 7、Windows **约束限制** 不涉及 **取值范围** 字符长度0-256位 **默认取值** 不涉及
+	CheckType *string `json:"check_type,omitempty"`
+
+	// **参数解释** 统计结果类型，包含如下： **约束限制** 不涉及 **取值范围** - pass      : 已通过，表示查看主机全部通过的检查项 - failed    : 未通过，表示查看主机全部未通过 & 全部未处理的检查项 - processed : 已处理，表示查看主机存在未通过 & 未通过主机已全部处理(忽略、加白)的检查项  **默认取值** 不涉及
+	StatisticsScanResult *string `json:"statistics_scan_result,omitempty"`
+
+	// **参数解释** 检查项（检查规则）名称，支持模糊匹配 **约束限制** 不涉及 **取值范围** 字符长度0-2048位 **默认取值** 不涉及
+	CheckRuleName *string `json:"check_rule_name,omitempty"`
+
+	// **参数解释** 集群ID **约束限制** 不涉及 **取值范围** 字符长度0-64位 **默认取值** 不涉及
+	ClusterId *string `json:"cluster_id,omitempty"`
 }
 
 func (o ExportBaselineRequestBody) String() string {

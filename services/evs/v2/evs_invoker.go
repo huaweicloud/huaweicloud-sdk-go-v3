@@ -245,6 +245,22 @@ func (i *DeleteVolumeInvoker) Invoke() (*model.DeleteVolumeResponse, error) {
 	}
 }
 
+type DeleteVolumeInRecycleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteVolumeInRecycleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteVolumeInRecycleInvoker) Invoke() (*model.DeleteVolumeInRecycleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteVolumeInRecycleResponse), nil
+	}
+}
+
 type ListSnapshotsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -309,6 +325,22 @@ func (i *ListVolumesByTagsInvoker) Invoke() (*model.ListVolumesByTagsResponse, e
 	}
 }
 
+type ListVolumesInRecycleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVolumesInRecycleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListVolumesInRecycleInvoker) Invoke() (*model.ListVolumesInRecycleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVolumesInRecycleResponse), nil
+	}
+}
+
 type ModifyVolumeQoSInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -357,6 +389,22 @@ func (i *RetypeVolumeInvoker) Invoke() (*model.RetypeVolumeResponse, error) {
 	}
 }
 
+type RevertVolumeInRecycleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RevertVolumeInRecycleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RevertVolumeInRecycleInvoker) Invoke() (*model.RevertVolumeInRecycleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RevertVolumeInRecycleResponse), nil
+	}
+}
+
 type RollbackSnapshotInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -386,6 +434,22 @@ func (i *ShowJobInvoker) Invoke() (*model.ShowJobResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowJobResponse), nil
+	}
+}
+
+type ShowRecyclePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRecyclePolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRecyclePolicyInvoker) Invoke() (*model.ShowRecyclePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRecyclePolicyResponse), nil
 	}
 }
 
@@ -421,6 +485,22 @@ func (i *ShowVolumeInvoker) Invoke() (*model.ShowVolumeResponse, error) {
 	}
 }
 
+type ShowVolumeInRecycleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVolumeInRecycleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowVolumeInRecycleInvoker) Invoke() (*model.ShowVolumeInRecycleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVolumeInRecycleResponse), nil
+	}
+}
+
 type ShowVolumeTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -450,6 +530,22 @@ func (i *UnsubscribePostpaidVolumeInvoker) Invoke() (*model.UnsubscribePostpaidV
 		return nil, err
 	} else {
 		return result.(*model.UnsubscribePostpaidVolumeResponse), nil
+	}
+}
+
+type UpdateRecyclePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateRecyclePolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateRecyclePolicyInvoker) Invoke() (*model.UpdateRecyclePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateRecyclePolicyResponse), nil
 	}
 }
 

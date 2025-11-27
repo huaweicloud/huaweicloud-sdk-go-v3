@@ -12,7 +12,7 @@ import (
 // AccelerateIp accelerate Ip
 type AccelerateIp struct {
 
-	// IP地址类型。
+	// IP地址类型。 取值范围：IPV4、IPV6
 	IpType AccelerateIpIpType `json:"ip_type"`
 
 	// IP地址。
@@ -36,12 +36,16 @@ type AccelerateIpIpType struct {
 
 type AccelerateIpIpTypeEnum struct {
 	IPV4 AccelerateIpIpType
+	IPV6 AccelerateIpIpType
 }
 
 func GetAccelerateIpIpTypeEnum() AccelerateIpIpTypeEnum {
 	return AccelerateIpIpTypeEnum{
 		IPV4: AccelerateIpIpType{
 			value: "IPV4",
+		},
+		IPV6: AccelerateIpIpType{
+			value: "IPV6",
 		},
 	}
 }

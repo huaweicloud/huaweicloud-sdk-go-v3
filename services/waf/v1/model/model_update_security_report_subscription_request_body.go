@@ -1,0 +1,47 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+type UpdateSecurityReportSubscriptionRequestBody struct {
+
+	// **参数解释：** 控制台URL前缀，用于拼接生成报告中相关资源的控制台访问链接 **格式要求：** 必须以http://或https://开头的有效URL格式 **约束限制：** 仅支持华为云控制台域名及路径 **默认取值：** https://console.huaweicloud.com/console/
+	ConsoleUrlPrefix *string `json:"console_url_prefix,omitempty"`
+
+	// **参数解释：** 发送时间段，设置报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00  **默认取值：** 不涉及
+	SendingPeriod string `json:"sending_period"`
+
+	// **参数解释：** 报告名称，设置订阅报告的名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	ReportName string `json:"report_name"`
+
+	// **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report ： 周报 - monthly_report ： 月报 - custom_report ： 自定义  **默认取值：** 不涉及
+	ReportCategory string `json:"report_category"`
+
+	// **参数解释：** 主题urn，设置报告发送的SMN主题唯一标识。报告接收方式使用消息主题类型时需要填该参数。 查询可使用的主题，通过 云日志服务的“查询SMN主题”接口，返回体中的\"topic_urn\"字段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	TopicUrn *string `json:"topic_urn,omitempty"`
+
+	// **参数解释：** 主题的显示名 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	DisplayName *string `json:"display_name,omitempty"`
+
+	// **参数解释：** 订阅类型，接收安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心  **默认取值：** 不涉及
+	SubscriptionType string `json:"subscription_type"`
+
+	ReportContentSubscription *CreateSecurityReportSubscriptionRequestBodyReportContentSubscription `json:"report_content_subscription"`
+
+	StatPeriod *CreateSecurityReportSubscriptionRequestBodyStatPeriod `json:"stat_period,omitempty"`
+
+	// **参数解释：** 报告开启状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	ReportStatus *string `json:"report_status,omitempty"`
+}
+
+func (o UpdateSecurityReportSubscriptionRequestBody) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "UpdateSecurityReportSubscriptionRequestBody struct{}"
+	}
+
+	return strings.Join([]string{"UpdateSecurityReportSubscriptionRequestBody", string(data)}, " ")
+}

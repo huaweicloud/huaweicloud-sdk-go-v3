@@ -8,8 +8,11 @@ import (
 
 // UpdateNatGatewayResponse Response Object
 type UpdateNatGatewayResponse struct {
-	NatGateway     *NatGatewayResponseBody `json:"nat_gateway,omitempty"`
-	HttpStatusCode int                     `json:"-"`
+	NatGateway *NatGatewayResponseBody `json:"nat_gateway,omitempty"`
+
+	// 订单ID。
+	OrderId        *string `json:"order_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateNatGatewayResponse) String() string {

@@ -9,7 +9,7 @@ import (
 // ListTransitIpsRequest Request Object
 type ListTransitIpsRequest struct {
 
-	// 功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+	// 功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
@@ -35,6 +35,9 @@ type ListTransitIpsRequest struct {
 
 	// 当前租户子网的ID。
 	VirsubnetId *[]string `json:"virsubnet_id,omitempty"`
+
+	// 中转子网的ID。
+	TransitSubnetId *[]string `json:"transit_subnet_id,omitempty"`
 }
 
 func (o ListTransitIpsRequest) String() string {

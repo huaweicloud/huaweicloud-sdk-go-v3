@@ -149,6 +149,22 @@ func (i *BatchRemoveTestCasesFromIteratorInvoker) Invoke() (*model.BatchRemoveTe
 	}
 }
 
+type BatchUpdateTestCasesInDiffVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateTestCasesInDiffVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateTestCasesInDiffVersionInvoker) Invoke() (*model.BatchUpdateTestCasesInDiffVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateTestCasesInDiffVersionResponse), nil
+	}
+}
+
 type BatchUpdateVersionTestCasesInvoker struct {
 	*invoker.BaseInvoker
 }

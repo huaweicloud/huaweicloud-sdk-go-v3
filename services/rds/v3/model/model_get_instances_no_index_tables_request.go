@@ -17,6 +17,12 @@ type GetInstancesNoIndexTablesRequest struct {
 
 	// 表格类型。
 	TableType string `json:"table_type"`
+
+	// 索引位置，偏移量。
+	Offset *string `json:"offset,omitempty"`
+
+	// 查询记录数。
+	Limit *string `json:"limit,omitempty"`
 }
 
 func (o GetInstancesNoIndexTablesRequest) String() string {

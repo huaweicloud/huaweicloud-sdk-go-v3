@@ -12,7 +12,7 @@ import (
 // ListPrivateNatsRequest Request Object
 type ListPrivateNatsRequest struct {
 
-	// 功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+	// 功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 功能说明：分页查询起始的资源ID，为空时查询第一页。 值从上一次查询的PageInfo中的next_marker或者previous_marker中获取。
@@ -30,10 +30,10 @@ type ListPrivateNatsRequest struct {
 	// 私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
 	Description *[]string `json:"description,omitempty"`
 
-	// 私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型
+	// 私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
 	Spec *[]ListPrivateNatsRequestSpec `json:"spec,omitempty"`
 
-	// 私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结
+	// 私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
 	Status *[]ListPrivateNatsRequestStatus `json:"status,omitempty"`
 
 	// 私网NAT网关实例所属VPC的ID。
@@ -60,10 +60,11 @@ type ListPrivateNatsRequestSpec struct {
 }
 
 type ListPrivateNatsRequestSpecEnum struct {
-	SMALL       ListPrivateNatsRequestSpec
-	MEDIUM      ListPrivateNatsRequestSpec
-	LARGE       ListPrivateNatsRequestSpec
-	EXTRA_LARGE ListPrivateNatsRequestSpec
+	SMALL        ListPrivateNatsRequestSpec
+	MEDIUM       ListPrivateNatsRequestSpec
+	LARGE        ListPrivateNatsRequestSpec
+	EXTRA_LARGE  ListPrivateNatsRequestSpec
+	EXTRA_XLARGE ListPrivateNatsRequestSpec
 }
 
 func GetListPrivateNatsRequestSpecEnum() ListPrivateNatsRequestSpecEnum {
@@ -79,6 +80,9 @@ func GetListPrivateNatsRequestSpecEnum() ListPrivateNatsRequestSpecEnum {
 		},
 		EXTRA_LARGE: ListPrivateNatsRequestSpec{
 			value: "Extra-large",
+		},
+		EXTRA_XLARGE: ListPrivateNatsRequestSpec{
+			value: "Extra-xlarge",
 		},
 	}
 }
@@ -115,8 +119,9 @@ type ListPrivateNatsRequestStatus struct {
 }
 
 type ListPrivateNatsRequestStatusEnum struct {
-	ACTIVE ListPrivateNatsRequestStatus
-	FROZEN ListPrivateNatsRequestStatus
+	ACTIVE   ListPrivateNatsRequestStatus
+	FROZEN   ListPrivateNatsRequestStatus
+	INACTIVE ListPrivateNatsRequestStatus
 }
 
 func GetListPrivateNatsRequestStatusEnum() ListPrivateNatsRequestStatusEnum {
@@ -126,6 +131,9 @@ func GetListPrivateNatsRequestStatusEnum() ListPrivateNatsRequestStatusEnum {
 		},
 		FROZEN: ListPrivateNatsRequestStatus{
 			value: "FROZEN",
+		},
+		INACTIVE: ListPrivateNatsRequestStatus{
+			value: "INACTIVE",
 		},
 	}
 }

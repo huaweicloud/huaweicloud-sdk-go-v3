@@ -10,8 +10,11 @@ import (
 type ShowInstanceConfigurationModifyHistoryResponse struct {
 
 	// 实例参数的修改历史列表。
-	Histories      *[]ConfigurationModifyHistoryInfo `json:"histories,omitempty"`
-	HttpStatusCode int                               `json:"-"`
+	Histories *[]ConfigurationModifyHistoryInfo `json:"histories,omitempty"`
+
+	// 总数。
+	TotalCount     *int32 `json:"total_count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowInstanceConfigurationModifyHistoryResponse) String() string {

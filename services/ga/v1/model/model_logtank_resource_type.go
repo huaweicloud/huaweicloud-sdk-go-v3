@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// LogtankResourceType 云日志的资源类型。
+// LogtankResourceType 云日志的资源类型。 取值范围： LISTENER：监听器
 type LogtankResourceType struct {
 	value string
 }

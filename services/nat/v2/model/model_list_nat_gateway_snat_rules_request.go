@@ -1,11 +1,10 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
-
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -18,14 +17,20 @@ type ListNatGatewaySnatRulesRequest struct {
 	// 可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
 	Cidr *string `json:"cidr,omitempty"`
 
-	// 功能说明：每页返回的个数。 取值范围：0~2000。 默认值：2000。
+	// 功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 功能说明：弹性公网IP。
-	FloatingIpAddress *[]string `json:"floating_ip_address,omitempty"`
+	// 功能说明：弹性公网IP，多个弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+	FloatingIpAddress *string `json:"floating_ip_address,omitempty"`
 
-	// 功能说明：弹性公网IP的id。
-	FloatingIpId *[]string `json:"floating_ip_id,omitempty"`
+	// 功能说明：全域弹性公网IP，多个全域弹性公网IP使用逗号分隔。 取值范围：最大长度1024字节。
+	GlobalEipAddress *string `json:"global_eip_address,omitempty"`
+
+	// 功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
+	FloatingIpId *string `json:"floating_ip_id,omitempty"`
+
+	// 功能说明：全域弹性公网IP的id，多个全域弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。
+	GlobalEipId *string `json:"global_eip_id,omitempty"`
 
 	// SNAT规则的ID。
 	Id *string `json:"id,omitempty"`
@@ -34,7 +39,7 @@ type ListNatGatewaySnatRulesRequest struct {
 	Description *string `json:"description,omitempty"`
 
 	// SNAT规则的创建时间，格式是yyyy-mm-dd hh:mm:ss.SSSSSS。
-	CreatedAt *string `json:"created_at,omitempty"`
+	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
 
 	// 公网NAT网关实例的ID。
 	NatGatewayId *[]string `json:"nat_gateway_id,omitempty"`
@@ -45,7 +50,7 @@ type ListNatGatewaySnatRulesRequest struct {
 	// 0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
 	SourceType *int32 `json:"source_type,omitempty"`
 
-	// SNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
+	// SNAT规则的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 EIP_FREEZED: EIP冻结 INACTIVE: 不可用
 	Status *ListNatGatewaySnatRulesRequestStatus `json:"status,omitempty"`
 
 	// 分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。

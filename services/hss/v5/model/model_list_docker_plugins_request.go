@@ -21,13 +21,13 @@ type ListDockerPluginsRequest struct {
 	// **参数解释**: 服务器私有IP **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
 	PrivateIp *string `json:"private_ip,omitempty"`
 
-	// 服务器公网IP
+	// **参数解释**: 服务器弹性IP地址。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 无
 	PublicIp *string `json:"public_ip,omitempty"`
 
 	// **参数解释**: 服务器组ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
 	GroupId *string `json:"group_id,omitempty"`
 
-	// 资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
+	// **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产。 - common：一般资产。 - test：测试资产。  **默认取值**： 无
 	AssetValue *string `json:"asset_value,omitempty"`
 
 	// **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10

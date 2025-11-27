@@ -54,7 +54,7 @@ type CertificateInfo struct {
 	// **参数解释**：服务器SM双证书的私钥。  **取值范围**：PEM编码格式，最大长度8192个字符。
 	EncPrivateKey *string `json:"enc_private_key,omitempty"`
 
-	// **参数解释**：云证书管理服务（CCM）中的证书ID。  **取值范围**：不涉及
+	// **参数解释**：云证书与管理服务（CCM）中的证书ID。  **取值范围**：不涉及
 	ScmCertificateId *string `json:"scm_certificate_id,omitempty"`
 
 	// **参数解释**：证书绑定的主域名。  **取值范围**：不涉及
@@ -66,7 +66,7 @@ type CertificateInfo struct {
 	// **参数解释**：证书绑定的域名列表。  **取值范围**：不涉及
 	SubjectAlternativeNames *[]string `json:"subject_alternative_names,omitempty"`
 
-	// **参数解释**：标记当前证书来源。  **取值范围**： - scm：表示关联云证书管理服务（CCM）中的证书。 - 空值：表示自有证书。
+	// **参数解释**：标记当前证书来源。  **取值范围**： - scm：表示关联云证书与管理服务（CCM）中的证书。 - 空值：表示自有证书。
 	Source *string `json:"source,omitempty"`
 
 	// **参数解释**：修改保护状态。  **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护，即禁止通过控制台修改。

@@ -12,7 +12,7 @@ type ShowRaspPolicyDetailResponse struct {
 	// 防护策略名称
 	PolicyName *string `json:"policy_name,omitempty"`
 
-	// 操作系统类型
+	// **参数解释** 操作系统类型 **取值范围** 包含以下两种: - Linux : linux系统 - Windows: windows系统
 	OsType *string `json:"os_type,omitempty"`
 
 	// list

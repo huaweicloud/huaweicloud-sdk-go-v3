@@ -27,7 +27,7 @@ type ListLogtanksRequest struct {
 	// 资源ID列表。
 	ResourceIds *[]string `json:"resource_ids,omitempty"`
 
-	// 关联云日志的资源类型。
+	// 云日志的资源类型。 取值范围： LISTENER：监听器
 	ResourceType *ListLogtanksRequestResourceType `json:"resource_type,omitempty"`
 }
 

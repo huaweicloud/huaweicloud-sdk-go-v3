@@ -8,6 +8,8 @@ import (
 
 // CloneLoadbalancerResponse Response Object
 type CloneLoadbalancerResponse struct {
+
+	// **参数解释**：新实例信息。
 	LoadbalancerList *[]CloneLoadbalancerResponseBodyLoadbalancerList `json:"loadbalancer_list,omitempty"`
 
 	// **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。

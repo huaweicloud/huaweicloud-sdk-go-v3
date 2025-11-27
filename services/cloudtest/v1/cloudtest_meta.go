@@ -206,6 +206,21 @@ func GenReqDefForBatchRemoveTestCasesFromIterator() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchUpdateTestCasesInDiffVersion() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v4/batch/update/testcases").
+		WithResponse(new(model.BatchUpdateTestCasesInDiffVersionResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchUpdateVersionTestCases() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
