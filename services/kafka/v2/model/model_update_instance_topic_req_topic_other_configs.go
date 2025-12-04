@@ -8,10 +8,10 @@ import (
 
 type UpdateInstanceTopicReqTopicOtherConfigs struct {
 
-	// 配置名称
+	// **参数解释**： 配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 配置值
+	// **参数解释**： 配置值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Value *string `json:"value,omitempty"`
 }
 

@@ -1121,6 +1121,27 @@ func (c *NatClient) UpdateNatGatewayInvoker(request *model.UpdateNatGatewayReque
 	return &UpdateNatGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateNatGatewayToPeriod 公网NAT网关按需转包
+//
+// 公网NAT网关按需转包。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *NatClient) UpdateNatGatewayToPeriod(request *model.UpdateNatGatewayToPeriodRequest) (*model.UpdateNatGatewayToPeriodResponse, error) {
+	requestDef := GenReqDefForUpdateNatGatewayToPeriod()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateNatGatewayToPeriodResponse), nil
+	}
+}
+
+// UpdateNatGatewayToPeriodInvoker 公网NAT网关按需转包
+func (c *NatClient) UpdateNatGatewayToPeriodInvoker(request *model.UpdateNatGatewayToPeriodRequest) *UpdateNatGatewayToPeriodInvoker {
+	requestDef := GenReqDefForUpdateNatGatewayToPeriod()
+	return &UpdateNatGatewayToPeriodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdatePrivateNat 更新私网NAT网关
 //
 // 更新私网NAT网关实例。

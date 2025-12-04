@@ -33,7 +33,7 @@ type StartTaskReq struct {
 	// 目标端节点临时Token
 	DstSecurityToken *string `json:"dst_security_token,omitempty"`
 
-	// CDN鉴权秘钥。
+	// CDN鉴权密钥。
 	SourceCdnAuthenticationKey *string `json:"source_cdn_authentication_key,omitempty"`
 
 	// 迁移类型，标识是否为全量迁移，默认false（全量迁移）。 值为true时表示只重传失败对象。 值为空或者为false时表示全量迁移。

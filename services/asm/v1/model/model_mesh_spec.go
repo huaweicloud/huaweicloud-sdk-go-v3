@@ -12,16 +12,21 @@ import (
 // MeshSpec 网格参数定义
 type MeshSpec struct {
 
-	// 网格类型： InCluster: 集群内控制平面形态，基础版网格取值为InCluster
+	// 网格类型。 取值范围： - InCluster: 集群内控制平面形态，基础版网格取值为InCluster。目前仅支持该类型。
 	Type MeshSpecType `json:"type"`
 
-	// 网格版本
+	// 网格版本。
 	Version string `json:"version"`
 
-	ExtendParams *MeshExtendParams `json:"extendParams,omitempty"`
+	ExtendParams *MeshExtendParams `json:"extendParams"`
 
-	// 网格资源标签
+	// 网格是否支持IPV6
+	Ipv6Enable *bool `json:"ipv6Enable,omitempty"`
+
+	// 网格资源标签。如果需要配置资源标签，请确认当前region的TMS服务已上线。
 	Tags *[]MeshTags `json:"tags,omitempty"`
+
+	Config *MeshConfig `json:"config,omitempty"`
 }
 
 func (o MeshSpec) String() string {

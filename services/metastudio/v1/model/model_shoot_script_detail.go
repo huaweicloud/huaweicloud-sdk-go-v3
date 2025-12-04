@@ -28,7 +28,7 @@ type ShootScriptDetail struct {
 	// 背景配置。
 	BackgroundConfig *[]BackgroundConfigInfo `json:"background_config,omitempty"`
 
-	// 图层配置。
+	// 图层配置。 > * 视频编码格式采用VP8且数字人模型和输出视频的分辨率不一致时，该参数必须携带
 	LayerConfig *[]LayerConfig `json:"layer_config,omitempty"`
 
 	AudioConfig *AudioInfo `json:"audio_config,omitempty"`

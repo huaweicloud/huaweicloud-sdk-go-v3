@@ -8,6 +8,15 @@ import (
 
 // ListDedicatedHostAllTypesRequest Request Object
 type ListDedicatedHostAllTypesRequest struct {
+	Flavor *string `json:"flavor,omitempty"`
+
+	AvailabilityZone *string `json:"availability_zone,omitempty"`
+
+	Limit *string `json:"limit,omitempty"`
+
+	Marker *string `json:"marker,omitempty"`
+
+	HostType *string `json:"host_type,omitempty"`
 }
 
 func (o ListDedicatedHostAllTypesRequest) String() string {

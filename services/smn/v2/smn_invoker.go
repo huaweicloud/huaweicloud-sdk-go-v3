@@ -165,6 +165,22 @@ func (i *ConfirmSubscriptionInvoker) Invoke() (*model.ConfirmSubscriptionRespons
 	}
 }
 
+type CreateKmsKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateKmsKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateKmsKeyInvoker) Invoke() (*model.CreateKmsKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateKmsKeyResponse), nil
+	}
+}
+
 type CreateLogtankInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -242,6 +258,22 @@ func (i *CreateTopicInvoker) Invoke() (*model.CreateTopicResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateTopicResponse), nil
+	}
+}
+
+type DeleteKmsKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteKmsKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteKmsKeyInvoker) Invoke() (*model.DeleteKmsKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteKmsKeyResponse), nil
 	}
 }
 
@@ -389,6 +421,22 @@ func (i *DownloadHttpCertInvoker) Invoke() (*model.DownloadHttpCertResponse, err
 	}
 }
 
+type DownloadHttpSignCertInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadHttpSignCertInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadHttpSignCertInvoker) Invoke() (*model.DownloadHttpSignCertResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadHttpSignCertResponse), nil
+	}
+}
+
 type ListCloudServiceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -402,6 +450,22 @@ func (i *ListCloudServiceInvoker) Invoke() (*model.ListCloudServiceResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListCloudServiceResponse), nil
+	}
+}
+
+type ListCloudServicesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCloudServicesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCloudServicesInvoker) Invoke() (*model.ListCloudServicesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCloudServicesResponse), nil
 	}
 }
 
@@ -613,6 +677,22 @@ func (i *ListTopicsInvoker) Invoke() (*model.ListTopicsResponse, error) {
 	}
 }
 
+type ListTopicsWithAssociatedResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTopicsWithAssociatedResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTopicsWithAssociatedResourcesInvoker) Invoke() (*model.ListTopicsWithAssociatedResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTopicsWithAssociatedResourcesResponse), nil
+	}
+}
+
 type ListVersionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -693,6 +773,22 @@ func (i *ShowHttpDetectResultInvoker) Invoke() (*model.ShowHttpDetectResultRespo
 	}
 }
 
+type ShowKmsKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowKmsKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowKmsKeyInvoker) Invoke() (*model.ShowKmsKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowKmsKeyResponse), nil
+	}
+}
+
 type ShowNotifyPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -709,6 +805,22 @@ func (i *ShowNotifyPolicyInvoker) Invoke() (*model.ShowNotifyPolicyResponse, err
 	}
 }
 
+type SubscribeTopicInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SubscribeTopicInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SubscribeTopicInvoker) Invoke() (*model.SubscribeTopicResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SubscribeTopicResponse), nil
+	}
+}
+
 type UnsubscribeSubscriptionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -722,6 +834,38 @@ func (i *UnsubscribeSubscriptionInvoker) Invoke() (*model.UnsubscribeSubscriptio
 		return nil, err
 	} else {
 		return result.(*model.UnsubscribeSubscriptionResponse), nil
+	}
+}
+
+type UnsubscribeTopicInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UnsubscribeTopicInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UnsubscribeTopicInvoker) Invoke() (*model.UnsubscribeTopicResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UnsubscribeTopicResponse), nil
+	}
+}
+
+type UpdateKmsKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateKmsKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateKmsKeyInvoker) Invoke() (*model.UpdateKmsKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateKmsKeyResponse), nil
 	}
 }
 

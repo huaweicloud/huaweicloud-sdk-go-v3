@@ -6,19 +6,19 @@ import (
 	"strings"
 )
 
-// ListEngineSupportFeaturesPropertiesEntity 实例支持的功能属性描述。
+// ListEngineSupportFeaturesPropertiesEntity **参数解释**： 实例支持的功能属性描述。
 type ListEngineSupportFeaturesPropertiesEntity struct {
 
-	// 转储功能的最大任务数。
+	// **参数解释**： Smart Connect的最大任务数。 **取值范围**： 不涉及。
 	MaxTask *string `json:"max_task,omitempty"`
 
-	// 转储功能的最小任务数。
+	// **参数解释**： Smart Connect的最小任务数。 **取值范围**： 不涉及。
 	MinTask *string `json:"min_task,omitempty"`
 
-	// 转储功能的最大节点数。
+	// **参数解释**： Smart Connect的最大节点数。 **取值范围**： 不涉及。
 	MaxNode *string `json:"max_node,omitempty"`
 
-	// 转储功能的最小节点数。
+	// **参数解释**： Smart Connect的最小节点数。 **取值范围**： 不涉及。
 	MinNode *string `json:"min_node,omitempty"`
 }
 

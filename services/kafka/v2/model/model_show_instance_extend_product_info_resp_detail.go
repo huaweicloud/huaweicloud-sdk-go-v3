@@ -24,7 +24,7 @@ type ShowInstanceExtendProductInfoRespDetail struct {
 	SpecCode *string `json:"spec_code,omitempty"`
 
 	// IO信息。
-	Io *[]ListProductsRespIo `json:"io,omitempty"`
+	Io *[]ShowInstanceExtendProductInfoRespIo `json:"io,omitempty"`
 
 	// Kafka实例的基准带宽。
 	Bandwidth *string `json:"bandwidth,omitempty"`

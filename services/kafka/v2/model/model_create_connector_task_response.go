@@ -31,7 +31,7 @@ type CreateConnectorTaskResponse struct {
 	// **参数解释**： Smart Connect任务的id。 **取值范围**： 不涉及。
 	Id *string `json:"id,omitempty"`
 
-	// **参数解释**： Smart Connect任务的状态。 **取值范围**： 不涉及。
+	// **参数解释**： Smart Connect任务的状态。 **取值范围**： - PAUSED：暂停。 - RUNNING：运行中。 - WAITING：等待中。 - RESTARTING：重启中。
 	Status *string `json:"status,omitempty"`
 
 	// **参数解释**： Smart Connect任务的创建时间。 **取值范围**： 不涉及。

@@ -9,10 +9,10 @@ import (
 // ListInstancesResponse Response Object
 type ListInstancesResponse struct {
 
-	// 实例列表
+	// **参数解释**： 实例列表。
 	Instances *[]ShowInstanceResp `json:"instances,omitempty"`
 
-	// 实例数量。
+	// **参数解释**： 实例数量。 **取值范围**： 不涉及。
 	InstanceNum    *int32 `json:"instance_num,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

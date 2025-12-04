@@ -8,10 +8,6 @@ import (
 
 // CreateMeshRequest Request Object
 type CreateMeshRequest struct {
-
-	// 网格所属ProjectID
-	XApplyProjectID *string `json:"X-Apply-ProjectID,omitempty"`
-
 	Body *Mesh `json:"body,omitempty"`
 }
 

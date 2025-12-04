@@ -821,6 +821,22 @@ func (i *UpdateNatGatewayInvoker) Invoke() (*model.UpdateNatGatewayResponse, err
 	}
 }
 
+type UpdateNatGatewayToPeriodInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateNatGatewayToPeriodInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateNatGatewayToPeriodInvoker) Invoke() (*model.UpdateNatGatewayToPeriodResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateNatGatewayToPeriodResponse), nil
+	}
+}
+
 type UpdatePrivateNatInvoker struct {
 	*invoker.BaseInvoker
 }

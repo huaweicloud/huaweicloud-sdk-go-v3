@@ -1557,6 +1557,22 @@ func (i *ListInstanceAllArtifactsInvoker) Invoke() (*model.ListInstanceAllArtifa
 	}
 }
 
+type ListInstanceArtifactVulnerabilitiesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceArtifactVulnerabilitiesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceArtifactVulnerabilitiesInvoker) Invoke() (*model.ListInstanceArtifactVulnerabilitiesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceArtifactVulnerabilitiesResponse), nil
+	}
+}
+
 type ListInstanceArtifactsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2290,6 +2306,22 @@ func (i *ShowSubResourceInstancesCountInvoker) Invoke() (*model.ShowSubResourceI
 		return nil, err
 	} else {
 		return result.(*model.ShowSubResourceInstancesCountResponse), nil
+	}
+}
+
+type StartManualScanningInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartManualScanningInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StartManualScanningInvoker) Invoke() (*model.StartManualScanningResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartManualScanningResponse), nil
 	}
 }
 

@@ -43,8 +43,11 @@ type ShowInstanceArtifactResponse struct {
 	Size *int32 `json:"size,omitempty"`
 
 	// 制品版本的Tag列表
-	Tags           *[]ArtifactTag `json:"tags,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	Tags *[]ArtifactTag `json:"tags,omitempty"`
+
+	// 制品扫描摘要,支持制品扫描报告类型为application/vnd.security.vulnerability.report; version=1.1的制品扫描摘要
+	ScanOverview   map[string]NativeReportSummary `json:"scan_overview,omitempty"`
+	HttpStatusCode int                            `json:"-"`
 }
 
 func (o ShowInstanceArtifactResponse) String() string {

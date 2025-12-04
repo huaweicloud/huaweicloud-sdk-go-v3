@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -39,14 +42,14 @@ type RenameInstanceResponse struct {
 	// 独享引擎绑定的安全组
 	SecurityGroupIds *[]string `json:"security_group_ids,omitempty"`
 
-	// 独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
-	Status *int32 `json:"status,omitempty"`
+	// **参数解释：** 独享引擎计费状态标识，用于指示独享引擎当前的计费使用状态 **约束限制：** 不涉及 **取值范围：**  - 0：正常计费  - 1：冻结，资源和数据会保留，但租户无法再正常使用云服务  - 2：终止，资源和数据将清除 **默认取值：** 不涉及
+	Status *RenameInstanceResponseStatus `json:"status,omitempty"`
 
-	// 独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
-	RunStatus *int32 `json:"run_status,omitempty"`
+	// **参数解释：** 独享引擎运行状态标识，用于反映独享引擎当前的运行生命周期状态 **约束限制：** 不涉及 **取值范围：**  - 0：创建中  - 1：运行中  - 2：删除中  - 3：已删除  - 4：创建失败  - 5：已冻结  - 6：异常  - 7：更新中  - 8：更新失败 **默认取值：** 不涉及
+	RunStatus *RenameInstanceResponseRunStatus `json:"run_status,omitempty"`
 
-	// 独享引擎接入状态（0：未接入，1：已接入）
-	AccessStatus *int32 `json:"access_status,omitempty"`
+	// **参数解释：** 独享引擎接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
+	AccessStatus *RenameInstanceResponseAccessStatus `json:"access_status,omitempty"`
 
 	// 独享引擎是否可升级（0：不可升级，1：可升级）
 	Upgradable *int32 `json:"upgradable,omitempty"`
@@ -78,4 +81,166 @@ func (o RenameInstanceResponse) String() string {
 	}
 
 	return strings.Join([]string{"RenameInstanceResponse", string(data)}, " ")
+}
+
+type RenameInstanceResponseStatus struct {
+	value int32
+}
+
+type RenameInstanceResponseStatusEnum struct {
+	E_0 RenameInstanceResponseStatus
+	E_1 RenameInstanceResponseStatus
+	E_2 RenameInstanceResponseStatus
+}
+
+func GetRenameInstanceResponseStatusEnum() RenameInstanceResponseStatusEnum {
+	return RenameInstanceResponseStatusEnum{
+		E_0: RenameInstanceResponseStatus{
+			value: 0,
+		}, E_1: RenameInstanceResponseStatus{
+			value: 1,
+		}, E_2: RenameInstanceResponseStatus{
+			value: 2,
+		},
+	}
+}
+
+func (c RenameInstanceResponseStatus) Value() int32 {
+	return c.value
+}
+
+func (c RenameInstanceResponseStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *RenameInstanceResponseStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type RenameInstanceResponseRunStatus struct {
+	value int32
+}
+
+type RenameInstanceResponseRunStatusEnum struct {
+	E_0 RenameInstanceResponseRunStatus
+	E_1 RenameInstanceResponseRunStatus
+	E_2 RenameInstanceResponseRunStatus
+	E_3 RenameInstanceResponseRunStatus
+	E_4 RenameInstanceResponseRunStatus
+	E_5 RenameInstanceResponseRunStatus
+	E_6 RenameInstanceResponseRunStatus
+	E_7 RenameInstanceResponseRunStatus
+	E_8 RenameInstanceResponseRunStatus
+}
+
+func GetRenameInstanceResponseRunStatusEnum() RenameInstanceResponseRunStatusEnum {
+	return RenameInstanceResponseRunStatusEnum{
+		E_0: RenameInstanceResponseRunStatus{
+			value: 0,
+		}, E_1: RenameInstanceResponseRunStatus{
+			value: 1,
+		}, E_2: RenameInstanceResponseRunStatus{
+			value: 2,
+		}, E_3: RenameInstanceResponseRunStatus{
+			value: 3,
+		}, E_4: RenameInstanceResponseRunStatus{
+			value: 4,
+		}, E_5: RenameInstanceResponseRunStatus{
+			value: 5,
+		}, E_6: RenameInstanceResponseRunStatus{
+			value: 6,
+		}, E_7: RenameInstanceResponseRunStatus{
+			value: 7,
+		}, E_8: RenameInstanceResponseRunStatus{
+			value: 8,
+		},
+	}
+}
+
+func (c RenameInstanceResponseRunStatus) Value() int32 {
+	return c.value
+}
+
+func (c RenameInstanceResponseRunStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *RenameInstanceResponseRunStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type RenameInstanceResponseAccessStatus struct {
+	value int32
+}
+
+type RenameInstanceResponseAccessStatusEnum struct {
+	E_0 RenameInstanceResponseAccessStatus
+	E_1 RenameInstanceResponseAccessStatus
+}
+
+func GetRenameInstanceResponseAccessStatusEnum() RenameInstanceResponseAccessStatusEnum {
+	return RenameInstanceResponseAccessStatusEnum{
+		E_0: RenameInstanceResponseAccessStatus{
+			value: 0,
+		}, E_1: RenameInstanceResponseAccessStatus{
+			value: 1,
+		},
+	}
+}
+
+func (c RenameInstanceResponseAccessStatus) Value() int32 {
+	return c.value
+}
+
+func (c RenameInstanceResponseAccessStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *RenameInstanceResponseAccessStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

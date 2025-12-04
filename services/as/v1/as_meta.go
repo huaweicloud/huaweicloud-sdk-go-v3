@@ -222,6 +222,22 @@ func GenReqDefForCloseWarmPool() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCloseWarmPoolNew() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2/{project_id}/scaling-groups/{scaling_group_id}/warm-pool").
+		WithResponse(new(model.CloseWarmPoolNewResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ScalingGroupId").
+		WithJsonTag("scaling_group_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateGroupScheduledTask() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -953,6 +969,31 @@ func GenReqDefForListWarmPoolInstances() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListWarmPoolInstancesNew() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/scaling-groups/{scaling_group_id}/warm-pool-instances").
+		WithResponse(new(model.ListWarmPoolInstancesNewResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ScalingGroupId").
+		WithJsonTag("scaling_group_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForPauseScalingGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -998,6 +1039,26 @@ func GenReqDefForPutWarmPool() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/autoscaling-api/{project_id}/scaling-groups/{scaling_group_id}/warm-pool").
 		WithResponse(new(model.PutWarmPoolResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ScalingGroupId").
+		WithJsonTag("scaling_group_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForPutWarmPoolNew() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/{project_id}/scaling-groups/{scaling_group_id}/warm-pool").
+		WithResponse(new(model.PutWarmPoolNewResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1153,6 +1214,22 @@ func GenReqDefForShowWarmPool() *def.HttpRequestDef {
 		WithMethod(http.MethodGet).
 		WithPath("/autoscaling-api/{project_id}/scaling-groups/{scaling_group_id}/warm-pool").
 		WithResponse(new(model.ShowWarmPoolResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ScalingGroupId").
+		WithJsonTag("scaling_group_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowWarmPoolNew() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/scaling-groups/{scaling_group_id}/warm-pool").
+		WithResponse(new(model.ShowWarmPoolNewResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

@@ -8,8 +8,11 @@ import (
 
 // ConfirmDnsDomainResponse Response Object
 type ConfirmDnsDomainResponse struct {
+
+	// dns标识
 	NextMarker *string `json:"next_marker,omitempty"`
 
+	// dns域名列表
 	Items          *[]DnsDomain `json:"items,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

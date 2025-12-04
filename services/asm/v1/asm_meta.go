@@ -9,14 +9,9 @@ import (
 func GenReqDefForCreateMesh() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v1/meshes").
+		WithPath("/v1/{project_id}/meshes").
 		WithResponse(new(model.CreateMeshResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XApplyProjectID").
-		WithJsonTag("X-Apply-ProjectID").
-		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -29,7 +24,7 @@ func GenReqDefForCreateMesh() *def.HttpRequestDef {
 func GenReqDefForDeleteMesh() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
-		WithPath("/v1/meshes/{mesh_id}").
+		WithPath("/v1/{project_id}/meshes/{mesh_id}").
 		WithResponse(new(model.DeleteMeshResponse)).
 		WithContentType("application/json")
 
@@ -38,11 +33,6 @@ func GenReqDefForDeleteMesh() *def.HttpRequestDef {
 		WithJsonTag("mesh_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XApplyProjectID").
-		WithJsonTag("X-Apply-ProjectID").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -50,14 +40,9 @@ func GenReqDefForDeleteMesh() *def.HttpRequestDef {
 func GenReqDefForListMeshes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/meshes").
+		WithPath("/v1/{project_id}/meshes").
 		WithResponse(new(model.ListMeshesResponse)).
 		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XApplyProjectID").
-		WithJsonTag("X-Apply-ProjectID").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -66,7 +51,7 @@ func GenReqDefForListMeshes() *def.HttpRequestDef {
 func GenReqDefForShowMesh() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v1/meshes/{mesh_id}").
+		WithPath("/v1/{project_id}/meshes/{mesh_id}").
 		WithResponse(new(model.ShowMeshResponse)).
 		WithContentType("application/json")
 
@@ -74,11 +59,6 @@ func GenReqDefForShowMesh() *def.HttpRequestDef {
 		WithName("MeshId").
 		WithJsonTag("mesh_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("XApplyProjectID").
-		WithJsonTag("X-Apply-ProjectID").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

@@ -10,7 +10,7 @@ import (
 type UpdateBandwidthPolicyRequest struct {
 
 	// 任务ID。
-	TaskId string `json:"task_id"`
+	TaskId int64 `json:"task_id"`
 
 	Body *UpdateBandwidthPolicyReq `json:"body,omitempty"`
 }

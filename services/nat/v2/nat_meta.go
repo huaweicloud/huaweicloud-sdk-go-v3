@@ -1114,6 +1114,26 @@ func GenReqDefForUpdateNatGateway() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForUpdateNatGatewayToPeriod() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/nat_gateways/{nat_gateway_id}/change_to_period").
+		WithResponse(new(model.UpdateNatGatewayToPeriodResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("NatGatewayId").
+		WithJsonTag("nat_gateway_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdatePrivateNat() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).

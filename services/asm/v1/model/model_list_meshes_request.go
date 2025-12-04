@@ -8,9 +8,6 @@ import (
 
 // ListMeshesRequest Request Object
 type ListMeshesRequest struct {
-
-	// 网格所属ProjectID
-	XApplyProjectID *string `json:"X-Apply-ProjectID,omitempty"`
 }
 
 func (o ListMeshesRequest) String() string {

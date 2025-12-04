@@ -18,7 +18,7 @@ type ListInstanceConsumerGroupTopicsRequest struct {
 	// 消费组ID。
 	Group string `json:"group"`
 
-	// 偏移量，表示从此偏移量开始查询， offset大于等于0。
+	// 偏移量，表示从此偏移量开始查询，offset大于等于0。
 	Offset *int32 `json:"offset,omitempty"`
 
 	// 当次查询返回的最大Topic个数，默认值为10，取值范围为1~50。

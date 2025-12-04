@@ -197,6 +197,22 @@ func (i *CloseWarmPoolInvoker) Invoke() (*model.CloseWarmPoolResponse, error) {
 	}
 }
 
+type CloseWarmPoolNewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CloseWarmPoolNewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CloseWarmPoolNewInvoker) Invoke() (*model.CloseWarmPoolNewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CloseWarmPoolNewResponse), nil
+	}
+}
+
 type CreateGroupScheduledTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -693,6 +709,22 @@ func (i *ListWarmPoolInstancesInvoker) Invoke() (*model.ListWarmPoolInstancesRes
 	}
 }
 
+type ListWarmPoolInstancesNewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWarmPoolInstancesNewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListWarmPoolInstancesNewInvoker) Invoke() (*model.ListWarmPoolInstancesNewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWarmPoolInstancesNewResponse), nil
+	}
+}
+
 type PauseScalingGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -738,6 +770,22 @@ func (i *PutWarmPoolInvoker) Invoke() (*model.PutWarmPoolResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.PutWarmPoolResponse), nil
+	}
+}
+
+type PutWarmPoolNewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PutWarmPoolNewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *PutWarmPoolNewInvoker) Invoke() (*model.PutWarmPoolNewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PutWarmPoolNewResponse), nil
 	}
 }
 
@@ -882,6 +930,22 @@ func (i *ShowWarmPoolInvoker) Invoke() (*model.ShowWarmPoolResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowWarmPoolResponse), nil
+	}
+}
+
+type ShowWarmPoolNewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowWarmPoolNewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowWarmPoolNewInvoker) Invoke() (*model.ShowWarmPoolNewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowWarmPoolNewResponse), nil
 	}
 }
 

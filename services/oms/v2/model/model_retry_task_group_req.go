@@ -27,7 +27,7 @@ type RetryTaskGroupReq struct {
 	// 目的端sk（最大长度100个字符）
 	DstSk *string `json:"dst_sk,omitempty"`
 
-	// cdn鉴权秘钥
+	// cdn鉴权密钥
 	SourceCdnAuthenticationKey *string `json:"source_cdn_authentication_key,omitempty"`
 
 	// 失败任务重试方式，标识是否为全量重新迁移，默认false（全量重新迁移）。 值为true时表示只重传失败对象。 值为空或者为false时表示全量重新迁移（默认跳过目的端已迁移对象）。

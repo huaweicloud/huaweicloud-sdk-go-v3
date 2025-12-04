@@ -8,7 +8,7 @@ import (
 
 type ExtendProductInfoEntity struct {
 
-	// 实例类型。
+	// **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
 	Type *string `json:"type,omitempty"`
 
 	// 产品ID。

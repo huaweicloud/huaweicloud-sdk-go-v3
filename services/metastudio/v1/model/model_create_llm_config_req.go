@@ -17,6 +17,9 @@ type CreateLlmConfigReq struct {
 
 	// 密钥。
 	ApiKey string `json:"api_key"`
+
+	// model参数
+	Model *string `json:"model,omitempty"`
 }
 
 func (o CreateLlmConfigReq) String() string {

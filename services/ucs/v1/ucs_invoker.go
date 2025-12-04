@@ -261,19 +261,19 @@ func (i *DeleteRuleInvoker) Invoke() (*model.DeleteRuleResponse, error) {
 	}
 }
 
-type DisableClustergroupPolicyInvoker struct {
+type DisableClusterGroupPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *DisableClustergroupPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *DisableClusterGroupPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *DisableClustergroupPolicyInvoker) Invoke() (*model.DisableClustergroupPolicyResponse, error) {
+func (i *DisableClusterGroupPolicyInvoker) Invoke() (*model.DisableClusterGroupPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.DisableClustergroupPolicyResponse), nil
+		return result.(*model.DisableClusterGroupPolicyResponse), nil
 	}
 }
 
@@ -309,19 +309,19 @@ func (i *DownloadFederationKubeconfigInvoker) Invoke() (*model.DownloadFederatio
 	}
 }
 
-type EnableClustergroupPolicyInvoker struct {
+type EnableClusterGroupPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *EnableClustergroupPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *EnableClusterGroupPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *EnableClustergroupPolicyInvoker) Invoke() (*model.EnableClustergroupPolicyResponse, error) {
+func (i *EnableClusterGroupPolicyInvoker) Invoke() (*model.EnableClusterGroupPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.EnableClustergroupPolicyResponse), nil
+		return result.(*model.EnableClusterGroupPolicyResponse), nil
 	}
 }
 

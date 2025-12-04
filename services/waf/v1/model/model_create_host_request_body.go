@@ -33,13 +33,13 @@ type CreateHostRequestBody struct {
 	// 是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
 	ExclusiveIp *bool `json:"exclusive_ip,omitempty"`
 
-	// 套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
-	PaidType *string `json:"paid_type,omitempty"`
+	// **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
+	PaidType *CreateHostRequestBodyPaidType `json:"paid_type,omitempty"`
 
 	// 防护域名是否使用代理   - false：不使用代理   - true：使用代理
 	Proxy bool `json:"proxy"`
 
-	// LB负载均衡，仅专业版和企业版支持配置负载均衡算法   - 源IP Hash：将某个IP的请求定向到同一个服务器   - 加权轮询：所有请求将按权重轮流分配给源站服务器   - Session Hash：将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效
+	// **参数解释：** LB负载均衡，仅专业版和企业版支持配置负载均衡算法 **约束限制：** 不涉及 **取值范围：**  - ip_hash: 源IP Hash,将某个IP的请求定向到同一个服务器  - round_robin: 加权轮询,所有请求将按权重轮流分配给源站服务器  - session_hash: 将某个Session标识的请求定向到同一个源站服务器，请确保在域名添加完毕后配置攻击惩罚的流量标识，否则Session Hash配置不生效  **默认取值：** 不涉及
 	LbAlgorithm *CreateHostRequestBodyLbAlgorithm `json:"lb_algorithm,omitempty"`
 
 	// 域名描述
@@ -56,6 +56,53 @@ func (o CreateHostRequestBody) String() string {
 	}
 
 	return strings.Join([]string{"CreateHostRequestBody", string(data)}, " ")
+}
+
+type CreateHostRequestBodyPaidType struct {
+	value string
+}
+
+type CreateHostRequestBodyPaidTypeEnum struct {
+	PRE_PAID  CreateHostRequestBodyPaidType
+	POST_PAID CreateHostRequestBodyPaidType
+}
+
+func GetCreateHostRequestBodyPaidTypeEnum() CreateHostRequestBodyPaidTypeEnum {
+	return CreateHostRequestBodyPaidTypeEnum{
+		PRE_PAID: CreateHostRequestBodyPaidType{
+			value: "prePaid",
+		},
+		POST_PAID: CreateHostRequestBodyPaidType{
+			value: "postPaid",
+		},
+	}
+}
+
+func (c CreateHostRequestBodyPaidType) Value() string {
+	return c.value
+}
+
+func (c CreateHostRequestBodyPaidType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateHostRequestBodyPaidType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type CreateHostRequestBodyLbAlgorithm struct {

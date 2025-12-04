@@ -12,10 +12,10 @@ import (
 // WafServer 防护域名的源站服务器配置信息
 type WafServer struct {
 
-	// 客户端请求访问防护域名源站服务器的协议
+	// **参数解释：** 客户端请求访问防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
 	FrontProtocol *WafServerFrontProtocol `json:"front_protocol,omitempty"`
 
-	// WAF转发客户端请求到防护域名源站服务器的协议
+	// **参数解释：** WAF转发客户端请求到防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
 	BackProtocol *WafServerBackProtocol `json:"back_protocol,omitempty"`
 
 	// 源站权重，负载均衡算法将按该权重将请求分配给源站，默认值是1，云模式的冗余字段
@@ -27,7 +27,7 @@ type WafServer struct {
 	// WAF转发客户端请求到源站服务的业务端口
 	Port *int32 `json:"port,omitempty"`
 
-	// 源站地址为ipv4或ipv6
+	// **参数解释：** 源站地址类型，为ipv4或ipv6 **约束限制：** 不涉及 **取值范围：** - ipv4  - ipv6  **默认取值：** 不涉及
 	Type *WafServerType `json:"type,omitempty"`
 
 	// VPC id,通过以下步骤获取VPC id：   - 1.找到独享引擎所在的虚拟私有云名称，VPC\\子网这一列就是VPC的名称：登录WAF的控制台->单击系统管理->独享引擎->VPC\\子网   - 2.登录虚拟私有云 VPC控制台->虚拟私有云->单击虚拟私有云的名称->基本信息的ID

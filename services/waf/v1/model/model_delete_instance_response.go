@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -39,14 +42,14 @@ type DeleteInstanceResponse struct {
 	// 独享引擎绑定的安全组
 	SecurityGroupIds *[]string `json:"security_group_ids,omitempty"`
 
-	// 独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
-	Status *int32 `json:"status,omitempty"`
+	// **参数解释：** 独享引擎计费状态标识，用于指示独享引擎当前的计费使用状态 **约束限制：** 不涉及 **取值范围：**  - 0：正常计费  - 1：冻结，资源和数据会保留，但租户无法再正常使用云服务  - 2：终止，资源和数据将清除 **默认取值：** 不涉及
+	Status *DeleteInstanceResponseStatus `json:"status,omitempty"`
 
-	// 独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
-	RunStatus *int32 `json:"run_status,omitempty"`
+	// **参数解释：** 独享引擎运行状态标识，用于反映独享引擎当前的运行生命周期状态 **约束限制：** 不涉及 **取值范围：**  - 0：创建中  - 1：运行中  - 2：删除中  - 3：已删除  - 4：创建失败  - 5：已冻结  - 6：异常  - 7：更新中  - 8：更新失败 **默认取值：** 不涉及
+	RunStatus *DeleteInstanceResponseRunStatus `json:"run_status,omitempty"`
 
-	// 独享引擎接入状态（0：未接入，1：已接入）
-	AccessStatus *int32 `json:"access_status,omitempty"`
+	// **参数解释：** 独享引擎接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
+	AccessStatus *DeleteInstanceResponseAccessStatus `json:"access_status,omitempty"`
 
 	// 独享引擎是否可升级（0：不可升级，1：可升级）
 	Upgradable *int32 `json:"upgradable,omitempty"`
@@ -78,4 +81,166 @@ func (o DeleteInstanceResponse) String() string {
 	}
 
 	return strings.Join([]string{"DeleteInstanceResponse", string(data)}, " ")
+}
+
+type DeleteInstanceResponseStatus struct {
+	value int32
+}
+
+type DeleteInstanceResponseStatusEnum struct {
+	E_0 DeleteInstanceResponseStatus
+	E_1 DeleteInstanceResponseStatus
+	E_2 DeleteInstanceResponseStatus
+}
+
+func GetDeleteInstanceResponseStatusEnum() DeleteInstanceResponseStatusEnum {
+	return DeleteInstanceResponseStatusEnum{
+		E_0: DeleteInstanceResponseStatus{
+			value: 0,
+		}, E_1: DeleteInstanceResponseStatus{
+			value: 1,
+		}, E_2: DeleteInstanceResponseStatus{
+			value: 2,
+		},
+	}
+}
+
+func (c DeleteInstanceResponseStatus) Value() int32 {
+	return c.value
+}
+
+func (c DeleteInstanceResponseStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *DeleteInstanceResponseStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type DeleteInstanceResponseRunStatus struct {
+	value int32
+}
+
+type DeleteInstanceResponseRunStatusEnum struct {
+	E_0 DeleteInstanceResponseRunStatus
+	E_1 DeleteInstanceResponseRunStatus
+	E_2 DeleteInstanceResponseRunStatus
+	E_3 DeleteInstanceResponseRunStatus
+	E_4 DeleteInstanceResponseRunStatus
+	E_5 DeleteInstanceResponseRunStatus
+	E_6 DeleteInstanceResponseRunStatus
+	E_7 DeleteInstanceResponseRunStatus
+	E_8 DeleteInstanceResponseRunStatus
+}
+
+func GetDeleteInstanceResponseRunStatusEnum() DeleteInstanceResponseRunStatusEnum {
+	return DeleteInstanceResponseRunStatusEnum{
+		E_0: DeleteInstanceResponseRunStatus{
+			value: 0,
+		}, E_1: DeleteInstanceResponseRunStatus{
+			value: 1,
+		}, E_2: DeleteInstanceResponseRunStatus{
+			value: 2,
+		}, E_3: DeleteInstanceResponseRunStatus{
+			value: 3,
+		}, E_4: DeleteInstanceResponseRunStatus{
+			value: 4,
+		}, E_5: DeleteInstanceResponseRunStatus{
+			value: 5,
+		}, E_6: DeleteInstanceResponseRunStatus{
+			value: 6,
+		}, E_7: DeleteInstanceResponseRunStatus{
+			value: 7,
+		}, E_8: DeleteInstanceResponseRunStatus{
+			value: 8,
+		},
+	}
+}
+
+func (c DeleteInstanceResponseRunStatus) Value() int32 {
+	return c.value
+}
+
+func (c DeleteInstanceResponseRunStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *DeleteInstanceResponseRunStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type DeleteInstanceResponseAccessStatus struct {
+	value int32
+}
+
+type DeleteInstanceResponseAccessStatusEnum struct {
+	E_0 DeleteInstanceResponseAccessStatus
+	E_1 DeleteInstanceResponseAccessStatus
+}
+
+func GetDeleteInstanceResponseAccessStatusEnum() DeleteInstanceResponseAccessStatusEnum {
+	return DeleteInstanceResponseAccessStatusEnum{
+		E_0: DeleteInstanceResponseAccessStatus{
+			value: 0,
+		}, E_1: DeleteInstanceResponseAccessStatus{
+			value: 1,
+		},
+	}
+}
+
+func (c DeleteInstanceResponseAccessStatus) Value() int32 {
+	return c.value
+}
+
+func (c DeleteInstanceResponseAccessStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *DeleteInstanceResponseAccessStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

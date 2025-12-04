@@ -421,9 +421,9 @@ func (c *OmsClient) ShowCloudTypeInvoker(request *model.ShowCloudTypeRequest) *S
 	return &ShowCloudTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowRegionInfo 查询云厂商支持的reigon
+// ShowRegionInfo 查询云厂商支持的region
 //
-// 查询云厂商支持的reigon
+// 查询云厂商支持的region
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *OmsClient) ShowRegionInfo(request *model.ShowRegionInfoRequest) (*model.ShowRegionInfoResponse, error) {
@@ -436,7 +436,7 @@ func (c *OmsClient) ShowRegionInfo(request *model.ShowRegionInfoRequest) (*model
 	}
 }
 
-// ShowRegionInfoInvoker 查询云厂商支持的reigon
+// ShowRegionInfoInvoker 查询云厂商支持的region
 func (c *OmsClient) ShowRegionInfoInvoker(request *model.ShowRegionInfoRequest) *ShowRegionInfoInvoker {
 	requestDef := GenReqDefForShowRegionInfo()
 	return &ShowRegionInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -650,6 +650,27 @@ func (c *OmsClient) UpdateBandwidthPolicy(request *model.UpdateBandwidthPolicyRe
 func (c *OmsClient) UpdateBandwidthPolicyInvoker(request *model.UpdateBandwidthPolicyRequest) *UpdateBandwidthPolicyInvoker {
 	requestDef := GenReqDefForUpdateBandwidthPolicy()
 	return &UpdateBandwidthPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePrivacyAgreementRecord 同意隐私协议
+//
+// 创建迁移任务、任务组、评估任务时，记录用户同意隐私协议。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OmsClient) UpdatePrivacyAgreementRecord(request *model.UpdatePrivacyAgreementRecordRequest) (*model.UpdatePrivacyAgreementRecordResponse, error) {
+	requestDef := GenReqDefForUpdatePrivacyAgreementRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePrivacyAgreementRecordResponse), nil
+	}
+}
+
+// UpdatePrivacyAgreementRecordInvoker 同意隐私协议
+func (c *OmsClient) UpdatePrivacyAgreementRecordInvoker(request *model.UpdatePrivacyAgreementRecordRequest) *UpdatePrivacyAgreementRecordInvoker {
+	requestDef := GenReqDefForUpdatePrivacyAgreementRecord()
+	return &UpdatePrivacyAgreementRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateTaskGroup 更新指定id的迁移任务组的流控策略

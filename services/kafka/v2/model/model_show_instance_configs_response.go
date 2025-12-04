@@ -9,7 +9,7 @@ import (
 // ShowInstanceConfigsResponse Response Object
 type ShowInstanceConfigsResponse struct {
 
-	// kafka配置列表。
+	// Kafka配置列表。
 	KafkaConfigs   *[]InstanceConfig `json:"kafka_configs,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

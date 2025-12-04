@@ -9,9 +9,6 @@ import (
 // VerifyOrderRequestBody 验收信息
 type VerifyOrderRequestBody struct {
 
-	// 是否符合预期
-	MeetExpectation *bool `json:"meet_expectation,omitempty"`
-
 	// 客户验收意见说明
 	Comments *string `json:"comments,omitempty"`
 }

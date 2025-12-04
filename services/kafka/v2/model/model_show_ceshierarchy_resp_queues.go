@@ -8,10 +8,10 @@ import (
 
 type ShowCeshierarchyRespQueues struct {
 
-	// Topic名称。
+	// **参数解释**： Topic名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 分区列表。
+	// **参数解释**： 分区列表。
 	Partitions *[]ShowCeshierarchyRespPartitions `json:"partitions,omitempty"`
 }
 

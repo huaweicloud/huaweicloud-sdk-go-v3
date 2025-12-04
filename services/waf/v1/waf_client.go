@@ -505,9 +505,9 @@ func (c *WafClient) BatchUpdateWhiteblackipRulesInvoker(request *model.BatchUpda
 // ChangePrepaidCloudWaf 变更包周期云模式waf规格
 //
 // 变更包周期云模式waf规格。注：
-//  - 1.变更某产品规格的前提是必须已购买该产品
-//  - 2.waf版本只支持升配，不支持降配；扩展包数量可以增加或者减少，但不支持数量减少为0
-//  - 3.不支持同时升降配，如增加域名扩展包数量，同时减少规则扩展包数量
+//  - 变更某产品规格的前提是必须已购买该产品
+//  - 云模式支持版本降配，扩展包支持减少数量，最少可以到0
+//  - 不支持同时升降配，如增加域名扩展包数量，同时减少规则扩展包数量
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ChangePrepaidCloudWaf(request *model.ChangePrepaidCloudWafRequest) (*model.ChangePrepaidCloudWafResponse, error) {
@@ -1280,6 +1280,27 @@ func (c *WafClient) DeleteAgency(request *model.DeleteAgencyRequest) (*model.Del
 func (c *WafClient) DeleteAgencyInvoker(request *model.DeleteAgencyRequest) *DeleteAgencyInvoker {
 	requestDef := GenReqDefForDeleteAgency()
 	return &DeleteAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAlertNoticeConfig 删除告警通知配置
+//
+// 删除告警通知配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) DeleteAlertNoticeConfig(request *model.DeleteAlertNoticeConfigRequest) (*model.DeleteAlertNoticeConfigResponse, error) {
+	requestDef := GenReqDefForDeleteAlertNoticeConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAlertNoticeConfigResponse), nil
+	}
+}
+
+// DeleteAlertNoticeConfigInvoker 删除告警通知配置
+func (c *WafClient) DeleteAlertNoticeConfigInvoker(request *model.DeleteAlertNoticeConfigRequest) *DeleteAlertNoticeConfigInvoker {
+	requestDef := GenReqDefForDeleteAlertNoticeConfig()
+	return &DeleteAlertNoticeConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteAnticrawlerRule 删除JS脚本反爬虫防护规则
@@ -2542,6 +2563,27 @@ func (c *WafClient) ListSecurityReportSubscriptionsInvoker(request *model.ListSe
 	return &ListSecurityReportSubscriptionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSourceIpTop5 查询攻击源ip
+//
+// 查询攻击源ip
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ListSourceIpTop5(request *model.ListSourceIpTop5Request) (*model.ListSourceIpTop5Response, error) {
+	requestDef := GenReqDefForListSourceIpTop5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSourceIpTop5Response), nil
+	}
+}
+
+// ListSourceIpTop5Invoker 查询攻击源ip
+func (c *WafClient) ListSourceIpTop5Invoker(request *model.ListSourceIpTop5Request) *ListSourceIpTop5Invoker {
+	requestDef := GenReqDefForListSourceIpTop5()
+	return &ListSourceIpTop5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListStatistics 查询安全总览请求与攻击数量
 //
 // 查询安全总览请求与攻击数量。
@@ -2561,6 +2603,27 @@ func (c *WafClient) ListStatistics(request *model.ListStatisticsRequest) (*model
 func (c *WafClient) ListStatisticsInvoker(request *model.ListStatisticsRequest) *ListStatisticsInvoker {
 	requestDef := GenReqDefForListStatistics()
 	return &ListStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListThreats 查询攻击事件分布类型
+//
+// 查询攻击事件分布类型。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ListThreats(request *model.ListThreatsRequest) (*model.ListThreatsResponse, error) {
+	requestDef := GenReqDefForListThreats()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListThreatsResponse), nil
+	}
+}
+
+// ListThreatsInvoker 查询攻击事件分布类型
+func (c *WafClient) ListThreatsInvoker(request *model.ListThreatsRequest) *ListThreatsInvoker {
+	requestDef := GenReqDefForListThreats()
+	return &ListThreatsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListTopAbnormal 查询业务异常数量
@@ -2645,6 +2708,27 @@ func (c *WafClient) ListTopUrl(request *model.ListTopUrlRequest) (*model.ListTop
 func (c *WafClient) ListTopUrlInvoker(request *model.ListTopUrlRequest) *ListTopUrlInvoker {
 	requestDef := GenReqDefForListTopUrl()
 	return &ListTopUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUrl 查询事件日志中的url
+//
+// 查询QPS。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ListUrl(request *model.ListUrlRequest) (*model.ListUrlResponse, error) {
+	requestDef := GenReqDefForListUrl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUrlResponse), nil
+	}
+}
+
+// ListUrlInvoker 查询事件日志中的url
+func (c *WafClient) ListUrlInvoker(request *model.ListUrlRequest) *ListUrlInvoker {
+	requestDef := GenReqDefForListUrl()
+	return &ListUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListValueList 查询引用表列表

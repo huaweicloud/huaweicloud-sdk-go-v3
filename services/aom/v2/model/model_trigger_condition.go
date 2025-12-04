@@ -30,7 +30,7 @@ type TriggerCondition struct {
 	Promql string `json:"promql"`
 
 	// Prometheus语句模板。
-	PromqlExpr *[]string `json:"promql_expr,omitempty"`
+	PromqlExpr *string `json:"promql_expr,omitempty"`
 
 	// 连续周期个数。
 	TriggerTimes *int32 `json:"trigger_times,omitempty"`

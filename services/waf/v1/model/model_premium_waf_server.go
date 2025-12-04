@@ -12,10 +12,10 @@ import (
 // PremiumWafServer 防护域名的源站服务器配置信息
 type PremiumWafServer struct {
 
-	// 客户端请求访问防护域名源站服务器的协议
+	// **参数解释：** 客户端请求访问防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
 	FrontProtocol PremiumWafServerFrontProtocol `json:"front_protocol"`
 
-	// WAF转发客户端请求到防护域名源站服务器的协议
+	// **参数解释：** WAF转发客户端请求到防护域名源站服务器的协议 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  **默认取值：** 不涉及
 	BackProtocol PremiumWafServerBackProtocol `json:"back_protocol"`
 
 	// 源站权重，负载均衡算法将按该权重将请求分配给源站，默认值是1，云模式的冗余字段

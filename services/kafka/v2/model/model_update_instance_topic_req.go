@@ -6,10 +6,9 @@ import (
 	"strings"
 )
 
-// UpdateInstanceTopicReq 修改的Topic列表。
 type UpdateInstanceTopicReq struct {
 
-	// 修改的Topic列表。
+	// **参数解释**： 待修改的Topic列表。 **约束限制**： 不涉及。
 	Topics *[]UpdateInstanceTopicReqTopics `json:"topics,omitempty"`
 }
 

@@ -8,6 +8,8 @@ import (
 
 type UpdateNamespaceRequestBody struct {
 	Metadata *NamespaceMetadata `json:"metadata"`
+
+	CveAllowlist *UpdateCveAllowlistRequest `json:"cve_allowlist,omitempty"`
 }
 
 func (o UpdateNamespaceRequestBody) String() string {

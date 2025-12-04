@@ -7,7 +7,7 @@ import (
 )
 
 type InstallationConfig struct {
-	Nodes *Selector `json:"nodes,omitempty"`
+	Nodes *Selector `json:"nodes"`
 }
 
 func (o InstallationConfig) String() string {

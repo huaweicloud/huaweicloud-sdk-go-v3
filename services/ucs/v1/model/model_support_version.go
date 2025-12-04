@@ -9,7 +9,7 @@ import (
 // SupportVersion 支持的集群类型（BareMetal，VirtualMachine，windows等）和支持的集群版本（支持正则表达式，如\".*\"匹配所有集群版本 ）信息等
 type SupportVersion struct {
 
-	// 支持的集群类型（CCE，thirdParty等）
+	// 支持的集群类型
 	Category *string `json:"category,omitempty"`
 
 	// 支持的集群类型（BareMetal，VirtualMachine，windows等）

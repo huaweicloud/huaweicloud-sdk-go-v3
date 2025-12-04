@@ -324,11 +324,11 @@ func GenReqDefForDeleteRule() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForDisableClustergroupPolicy() *def.HttpRequestDef {
+func GenReqDefForDisableClusterGroupPolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
 		WithPath("/v1/clustergroups/{clustergroupid}/policy").
-		WithResponse(new(model.DisableClustergroupPolicyResponse)).
+		WithResponse(new(model.DisableClusterGroupPolicyResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -380,11 +380,11 @@ func GenReqDefForDownloadFederationKubeconfig() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForEnableClustergroupPolicy() *def.HttpRequestDef {
+func GenReqDefForEnableClusterGroupPolicy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/clustergroups/{clustergroupid}/policy").
-		WithResponse(new(model.EnableClustergroupPolicyResponse)).
+		WithResponse(new(model.EnableClusterGroupPolicyResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

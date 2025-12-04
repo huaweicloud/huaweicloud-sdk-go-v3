@@ -18,7 +18,7 @@ type CreatePremiumHostResponse struct {
 	// 防护域名
 	Hostname *string `json:"hostname,omitempty"`
 
-	// 对外协议，客户端（例如浏览器）请求访问网站的协议类型
+	// **参数解释：** 对外协议，客户端（例如浏览器）请求访问网站的协议类型 **约束限制：** 不涉及 **取值范围：**  - HTTP: HTTP协议  - HTTPS: HTTPS协议  - HTTP&HTTPS: 同事  **默认取值：** 不涉及
 	Protocol *CreatePremiumHostResponseProtocol `json:"protocol,omitempty"`
 
 	// 防护域名的源站服务器配置信息
@@ -71,10 +71,10 @@ type CreatePremiumHostResponse struct {
 	// 企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+	// **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
 	ProtectStatus *int32 `json:"protect_status,omitempty"`
 
-	// 域名接入状态，0表示未接入，1表示已接入
+	// **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
 	AccessStatus *int32 `json:"access_status,omitempty"`
 
 	BlockPage *BlockPage `json:"block_page,omitempty"`

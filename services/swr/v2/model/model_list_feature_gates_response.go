@@ -14,7 +14,10 @@ type ListFeatureGatesResponse struct {
 
 	// 老化策略是否支持多条规则
 	EnableCombinationRetention *bool `json:"enableCombinationRetention,omitempty"`
-	HttpStatusCode             int   `json:"-"`
+
+	// 是否支持制品扫描
+	EnableArtifactScanning *bool `json:"enableArtifactScanning,omitempty"`
+	HttpStatusCode         int   `json:"-"`
 }
 
 func (o ListFeatureGatesResponse) String() string {

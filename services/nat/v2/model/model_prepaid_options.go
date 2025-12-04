@@ -11,16 +11,16 @@ import (
 
 type PrepaidOptions struct {
 
-	// month: 包月 year: 包年
-	PeriodType *PrepaidOptionsPeriodType `json:"period_type,omitempty"`
+	// 订购周期类型，当前支持包月和包年: month: 包月 year: 包年
+	PeriodType PrepaidOptionsPeriodType `json:"period_type"`
 
-	// 周期大小
-	PeriodNum *int32 `json:"period_num,omitempty"`
+	// 订购周期数，取值会随运营策略变化。 period_type为month时，为[1,9]， period_type为year时，为[1,3]
+	PeriodNum int32 `json:"period_num"`
 
-	// 是否自动续费
+	// 是否自动续订； true：自动续订 false：不自动续订
 	IsAutoRenew *bool `json:"is_auto_renew,omitempty"`
 
-	// 是否自动支付
+	// 下单订购后，是否自动从客户的账户中支付; true：自动支付 false：不自动支付。
 	IsAutoPay *bool `json:"is_auto_pay,omitempty"`
 }
 

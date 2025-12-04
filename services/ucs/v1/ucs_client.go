@@ -355,25 +355,25 @@ func (c *UcsClient) DeleteRuleInvoker(request *model.DeleteRuleRequest) *DeleteR
 	return &DeleteRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DisableClustergroupPolicy 舰队关闭策略中心
+// DisableClusterGroupPolicy 舰队关闭策略中心
 //
 // 舰队关闭策略中心
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *UcsClient) DisableClustergroupPolicy(request *model.DisableClustergroupPolicyRequest) (*model.DisableClustergroupPolicyResponse, error) {
-	requestDef := GenReqDefForDisableClustergroupPolicy()
+func (c *UcsClient) DisableClusterGroupPolicy(request *model.DisableClusterGroupPolicyRequest) (*model.DisableClusterGroupPolicyResponse, error) {
+	requestDef := GenReqDefForDisableClusterGroupPolicy()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.DisableClustergroupPolicyResponse), nil
+		return resp.(*model.DisableClusterGroupPolicyResponse), nil
 	}
 }
 
-// DisableClustergroupPolicyInvoker 舰队关闭策略中心
-func (c *UcsClient) DisableClustergroupPolicyInvoker(request *model.DisableClustergroupPolicyRequest) *DisableClustergroupPolicyInvoker {
-	requestDef := GenReqDefForDisableClustergroupPolicy()
-	return &DisableClustergroupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// DisableClusterGroupPolicyInvoker 舰队关闭策略中心
+func (c *UcsClient) DisableClusterGroupPolicyInvoker(request *model.DisableClusterGroupPolicyRequest) *DisableClusterGroupPolicyInvoker {
+	requestDef := GenReqDefForDisableClusterGroupPolicy()
+	return &DisableClusterGroupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DisableFederation 关闭容器集群联邦
@@ -418,25 +418,25 @@ func (c *UcsClient) DownloadFederationKubeconfigInvoker(request *model.DownloadF
 	return &DownloadFederationKubeconfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// EnableClustergroupPolicy 舰队启用策略中心
+// EnableClusterGroupPolicy 舰队启用策略中心
 //
 // 舰队启用策略中心
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *UcsClient) EnableClustergroupPolicy(request *model.EnableClustergroupPolicyRequest) (*model.EnableClustergroupPolicyResponse, error) {
-	requestDef := GenReqDefForEnableClustergroupPolicy()
+func (c *UcsClient) EnableClusterGroupPolicy(request *model.EnableClusterGroupPolicyRequest) (*model.EnableClusterGroupPolicyResponse, error) {
+	requestDef := GenReqDefForEnableClusterGroupPolicy()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.EnableClustergroupPolicyResponse), nil
+		return resp.(*model.EnableClusterGroupPolicyResponse), nil
 	}
 }
 
-// EnableClustergroupPolicyInvoker 舰队启用策略中心
-func (c *UcsClient) EnableClustergroupPolicyInvoker(request *model.EnableClustergroupPolicyRequest) *EnableClustergroupPolicyInvoker {
-	requestDef := GenReqDefForEnableClustergroupPolicy()
-	return &EnableClustergroupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// EnableClusterGroupPolicyInvoker 舰队启用策略中心
+func (c *UcsClient) EnableClusterGroupPolicyInvoker(request *model.EnableClusterGroupPolicyRequest) *EnableClusterGroupPolicyInvoker {
+	requestDef := GenReqDefForEnableClusterGroupPolicy()
+	return &EnableClusterGroupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // EnableFederation 启用容器舰队联邦
@@ -1258,9 +1258,9 @@ func (c *UcsClient) CreateClusterKubeconfigInvoker(request *model.CreateClusterK
 	return &CreateClusterKubeconfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateClusterPolicyInstance 创建集群建策略实例
+// CreateClusterPolicyInstance 创建集群策略实例
 //
-// 创建集群建策略实例
+// 创建集群策略实例
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *UcsClient) CreateClusterPolicyInstance(request *model.CreateClusterPolicyInstanceRequest) (*model.CreateClusterPolicyInstanceResponse, error) {
@@ -1273,7 +1273,7 @@ func (c *UcsClient) CreateClusterPolicyInstance(request *model.CreateClusterPoli
 	}
 }
 
-// CreateClusterPolicyInstanceInvoker 创建集群建策略实例
+// CreateClusterPolicyInstanceInvoker 创建集群策略实例
 func (c *UcsClient) CreateClusterPolicyInstanceInvoker(request *model.CreateClusterPolicyInstanceRequest) *CreateClusterPolicyInstanceInvoker {
 	requestDef := GenReqDefForCreateClusterPolicyInstance()
 	return &CreateClusterPolicyInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

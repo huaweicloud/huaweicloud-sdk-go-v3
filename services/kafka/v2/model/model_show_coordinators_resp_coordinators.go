@@ -6,19 +6,19 @@ import (
 	"strings"
 )
 
-// ShowCoordinatorsRespCoordinators 协调器信息。
+// ShowCoordinatorsRespCoordinators **参数解释**： 协调器信息。
 type ShowCoordinatorsRespCoordinators struct {
 
-	// 消费组ID。
+	// **参数解释**： 消费组ID。 **取值范围**： 不涉及。
 	GroupId *string `json:"group_id,omitempty"`
 
-	// 对应协调器的broker id。
+	// **参数解释**： 对应协调器的broker id。 **取值范围**： 不涉及。
 	Id *int32 `json:"id,omitempty"`
 
-	// 对应协调器的地址。
+	// **参数解释**： 对应协调器的地址。 **取值范围**： 不涉及。
 	Host *string `json:"host,omitempty"`
 
-	// 端口号。
+	// **参数解释**： 端口号。 **取值范围**： 不涉及。
 	Port *int32 `json:"port,omitempty"`
 }
 

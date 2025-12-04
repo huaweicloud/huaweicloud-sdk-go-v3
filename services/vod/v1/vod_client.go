@@ -733,6 +733,27 @@ func (c *VodClient) ListAssetListInvoker(request *model.ListAssetListRequest) *L
 	return &ListAssetListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCdnStatistics 查询CDN统计信息
+//
+// 查询CDN的统计数据，包括流量、峰值带宽、请求总数、请求命中率、流量命中率。查询存在1小时误差。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) ListCdnStatistics(request *model.ListCdnStatisticsRequest) (*model.ListCdnStatisticsResponse, error) {
+	requestDef := GenReqDefForListCdnStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCdnStatisticsResponse), nil
+	}
+}
+
+// ListCdnStatisticsInvoker 查询CDN统计信息
+func (c *VodClient) ListCdnStatisticsInvoker(request *model.ListCdnStatisticsRequest) *ListCdnStatisticsInvoker {
+	requestDef := GenReqDefForListCdnStatistics()
+	return &ListCdnStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDomainLogs 查询域名播放日志
 //
 // 查询指定点播域名某段时间内在CDN的相关日志。

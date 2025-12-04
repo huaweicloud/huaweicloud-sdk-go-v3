@@ -21,8 +21,8 @@ type ListFoldersAndFilesRequest struct {
 	// 指定一个标识符，从该标识符以后按文件名的字典顺序返回文件列表。
 	Marker *string `json:"marker,omitempty"`
 
-	// 列举文件系统的最大数目，返回的文件系统列表将是按照字典顺序的最多前 maxKeys 个，默认取值为1000。
-	MaxKeys *int32 `json:"max_keys,omitempty"`
+	// 列举文件系统的最大数目，返回的文件系统列表将是按照字典顺序的最多前 limit 个，默认取值为1000。
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListFoldersAndFilesRequest) String() string {

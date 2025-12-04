@@ -7,8 +7,11 @@ import (
 )
 
 type Server struct {
+
+	// 类型
 	Type *string `json:"type,omitempty"`
 
+	// 地址
 	Address *string `json:"address,omitempty"`
 }
 

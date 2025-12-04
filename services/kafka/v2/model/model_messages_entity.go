@@ -8,37 +8,37 @@ import (
 
 type MessagesEntity struct {
 
-	// Topic名称。
+	// **参数解释**： Topic名称。 **取值范围**： 不涉及。
 	Topic *string `json:"topic,omitempty"`
 
-	// 消息所在的分区。
+	// **参数解释**： 消息所在的分区。 **取值范围**： 不涉及。
 	Partition *int32 `json:"partition,omitempty"`
 
-	// 消息key。
+	// **参数解释**： 消息key。 **取值范围**： 不涉及。
 	Key *string `json:"key,omitempty"`
 
-	// 消息内容。
+	// **参数解释**： 消息内容。 **取值范围**： 不涉及。
 	Value *string `json:"value,omitempty"`
 
-	// 消息大小。
+	// **参数解释**： 消息大小。 **取值范围**： 不涉及。
 	Size *int32 `json:"size,omitempty"`
 
-	// 生产消息的时间。 格式为Unix时间戳。单位为毫秒。
+	// **参数解释**： 生产消息的时间。 格式为Unix时间戳。单位为毫秒。 **取值范围**： 不涉及。
 	Timestamp *int64 `json:"timestamp,omitempty"`
 
-	// 大数据标识。
+	// **参数解释**： 大数据标识。 **取值范围**： 不涉及。
 	HugeMessage *bool `json:"huge_message,omitempty"`
 
-	// 消息偏移量。
+	// **参数解释**： 消息偏移量。 **取值范围**： 不涉及。
 	MessageOffset *int64 `json:"message_offset,omitempty"`
 
-	// 消息ID。
+	// **参数解释**： 消息ID。 **取值范围**： 不涉及。
 	MessageId *string `json:"message_id,omitempty"`
 
-	// 应用ID。
+	// **参数解释**： 应用ID。 **取值范围**： 不涉及。
 	AppId *string `json:"app_id,omitempty"`
 
-	// 消息标签。
+	// **参数解释**： 消息标签。 **取值范围**： 不涉及。
 	Tag *string `json:"tag,omitempty"`
 }
 

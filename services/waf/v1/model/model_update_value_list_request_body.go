@@ -15,7 +15,7 @@ type UpdateValueListRequestBody struct {
 	// 引用表名称，2-32位字符串组成
 	Name string `json:"name"`
 
-	// 引用表类型，参见枚举列表
+	// **参数解释：** 引用表类型 **约束限制：** 不涉及 **取值范围：**  - url  - params  - ip  - cookie  - referer  - user-agent  - header  - response_code  - response_header  - response_body  **默认取值：** 不涉及
 	Type UpdateValueListRequestBodyType `json:"type"`
 
 	// 引用表的值

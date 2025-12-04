@@ -14,6 +14,12 @@ type ListProjectTagsRequest struct {
 
 	// 资源类型。  - cph-server，云手机服务器
 	ResourceType ListProjectTagsRequestResourceType `json:"resource_type"`
+
+	// 每页返回的资源个数。取值范围：1~100（默认值为100），一般设置为10、20、50。
+	Limit *int32 `json:"limit,omitempty"`
+
+	// 索引位置，从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListProjectTagsRequest) String() string {

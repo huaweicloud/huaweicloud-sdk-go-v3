@@ -10,7 +10,7 @@ import (
 type StartTaskRequest struct {
 
 	// 迁移任务ID。
-	TaskId string `json:"task_id"`
+	TaskId int64 `json:"task_id"`
 
 	Body *StartTaskReq `json:"body,omitempty"`
 }

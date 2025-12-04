@@ -7,12 +7,17 @@ import (
 )
 
 type DnsDomain struct {
+
+	// dns-id
 	Id *string `json:"id,omitempty"`
 
+	// 域名
 	Domain *string `json:"domain,omitempty"`
 
+	// dns服务信息
 	Servers *[]Server `json:"servers,omitempty"`
 
+	// 防护端口
 	ProtectPort *string `json:"protect_port,omitempty"`
 }
 

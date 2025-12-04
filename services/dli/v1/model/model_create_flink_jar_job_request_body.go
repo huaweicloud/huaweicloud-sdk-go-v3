@@ -27,6 +27,15 @@ type CreateFlinkJarJobRequestBody struct {
 	// 用户为作业选择的并发量，默认值为1.
 	ParallelNumber *int32 `json:"parallel_number,omitempty"`
 
+	// 是否开启作业自动快照功能。 开启：true； 关闭：false； 默认：false
+	CheckpointEnabled *bool `json:"checkpoint_enabled,omitempty"`
+
+	// 快照模式。 1：exactly_once（精确一次） 2：at_least_once（至少一次） 默认：1
+	CheckpointMode *int32 `json:"checkpoint_mode,omitempty"`
+
+	// 快照间隔，单位为秒。 默认：10 取值范围：1-3600
+	CheckpointInterval *int32 `json:"checkpoint_interval,omitempty"`
+
 	// 是否开启作业日志。 开启：true 关闭：false 默认：false
 	LogEnabled *bool `json:"log_enabled,omitempty"`
 
@@ -89,7 +98,7 @@ type CreateFlinkJarJobRequestBody struct {
 
 	ResourceConfig *ResourceConfig `json:"resource_config,omitempty"`
 
-	// 资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
+	// 资源配置版本。可选值 \"v1\" ,\"v2\".默认为\"v1\"。
 	ResourceConfigVersion *string `json:"resource_config_version,omitempty"`
 }
 

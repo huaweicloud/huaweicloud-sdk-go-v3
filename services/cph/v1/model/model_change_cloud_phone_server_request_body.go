@@ -17,6 +17,9 @@ type ChangeCloudPhoneServerRequestBody struct {
 	// 密钥对名称，不超过64个字节，用于云手机ADB登录。
 	KeypairName *string `json:"keypair_name,omitempty"`
 
+	// 云手机服务器所在的可用区，不填则维持原可用区不变。[如上海一可用区1为cn-east-3a。](tag:hws,hws_hk,cmcc,ctc)
+	AvailabilityZone *string `json:"availability_zone,omitempty"`
+
 	// 云手机启用的应用端口，云手机服务会做端口转发。
 	Ports *[]Port `json:"ports,omitempty"`
 

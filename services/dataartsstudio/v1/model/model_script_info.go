@@ -41,6 +41,12 @@ type ScriptInfo struct {
 
 	// 描述，长度不能超过255个字符。
 	Description *string `json:"description,omitempty"`
+
+	// 责任人名称。
+	Owner *string `json:"owner,omitempty"`
+
+	// 脚本最新提交版本。
+	Version *int32 `json:"version,omitempty"`
 }
 
 func (o ScriptInfo) String() string {

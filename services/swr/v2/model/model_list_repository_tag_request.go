@@ -30,6 +30,12 @@ type ListRepositoryTagRequest struct {
 	// 镜像版本名。
 	Tag *string `json:"tag,omitempty"`
 
+	// 按列排序，可设置为updated_at（按更新时间排序）或者tag（按照镜像版本排序）。注意：order_column和order_type参数需要配套使用。
+	OrderColumn *string `json:"order_column,omitempty"`
+
+	// 排序类型，可设置为desc（降序）、asc（升序）。注意：order_column和order_type参数需要配套使用。
+	OrderType *string `json:"order_type,omitempty"`
+
 	// 是否返回镜像的manifest信息
 	WithManifest *bool `json:"with_manifest,omitempty"`
 }

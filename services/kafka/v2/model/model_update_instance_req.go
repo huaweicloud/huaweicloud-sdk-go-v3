@@ -23,7 +23,7 @@ type UpdateInstanceReq struct {
 	// 维护时间窗结束时间，格式为HH:mm:ss。
 	MaintainEnd *string `json:"maintain_end,omitempty"`
 
-	// 安全组ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在安全组的详情页面查找安全组ID。
+	// 安全组ID。  获取方法如下：参考《虚拟私有云 API参考》，调用“查询安全组列表”接口，从响应体中获取安全组ID。
 	SecurityGroupId *string `json:"security_group_id,omitempty"`
 
 	// 容量阈值策略。  支持两种策略模式： - produce_reject: 生产受限 - time_base: 自动删除

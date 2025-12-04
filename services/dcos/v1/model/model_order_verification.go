@@ -17,9 +17,6 @@ type OrderVerification struct {
 	// 附件
 	Attachments *[]UploadFileInfo `json:"attachments,omitempty"`
 
-	// 是否符合预期
-	MeetExpectation *bool `json:"meet_expectation,omitempty"`
-
 	// 客户验收意见说明
 	Comments *string `json:"comments,omitempty"`
 }

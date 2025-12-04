@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// ListEngineSupportFeaturesEntity 实例支持的功能特性。
+// ListEngineSupportFeaturesEntity **参数解释**： 实例支持的功能特性。 **取值范围**： 不涉及。
 type ListEngineSupportFeaturesEntity struct {
 
-	// 功能名称。
+	// **参数解释**： 功能名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
 	Properties *ListEngineSupportFeaturesPropertiesEntity `json:"properties,omitempty"`

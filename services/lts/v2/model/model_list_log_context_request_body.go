@@ -20,6 +20,9 @@ type ListLogContextRequestBody struct {
 
 	// 指定起始日志往后（下文）的日志条数，取值范围 [0, 500] ，默认值100
 	ForwardsSize *int32 `json:"forwards_size,omitempty"`
+
+	// 分页查询时，若上次查询的返回结果中包含该字段，需要增加该字段参与分页查询。
+	ScrollId *string `json:"scroll_id,omitempty"`
 }
 
 func (o ListLogContextRequestBody) String() string {

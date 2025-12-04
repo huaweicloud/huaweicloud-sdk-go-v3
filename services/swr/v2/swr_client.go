@@ -2056,6 +2056,27 @@ func (c *SwrClient) ListInstanceAllArtifactsInvoker(request *model.ListInstanceA
 	return &ListInstanceAllArtifactsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInstanceArtifactVulnerabilities 获取制品扫描的漏洞信息
+//
+// 获取制品扫描的漏洞信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) ListInstanceArtifactVulnerabilities(request *model.ListInstanceArtifactVulnerabilitiesRequest) (*model.ListInstanceArtifactVulnerabilitiesResponse, error) {
+	requestDef := GenReqDefForListInstanceArtifactVulnerabilities()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceArtifactVulnerabilitiesResponse), nil
+	}
+}
+
+// ListInstanceArtifactVulnerabilitiesInvoker 获取制品扫描的漏洞信息
+func (c *SwrClient) ListInstanceArtifactVulnerabilitiesInvoker(request *model.ListInstanceArtifactVulnerabilitiesRequest) *ListInstanceArtifactVulnerabilitiesInvoker {
+	requestDef := GenReqDefForListInstanceArtifactVulnerabilities()
+	return &ListInstanceArtifactVulnerabilitiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInstanceArtifacts 获取制品版本列表
 //
 // 获取制品版本列表
@@ -3020,6 +3041,27 @@ func (c *SwrClient) ShowSubResourceInstancesCount(request *model.ShowSubResource
 func (c *SwrClient) ShowSubResourceInstancesCountInvoker(request *model.ShowSubResourceInstancesCountRequest) *ShowSubResourceInstancesCountInvoker {
 	requestDef := GenReqDefForShowSubResourceInstancesCount()
 	return &ShowSubResourceInstancesCountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartManualScanning 手动启动制品扫描
+//
+// 手动启动制品扫描
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) StartManualScanning(request *model.StartManualScanningRequest) (*model.StartManualScanningResponse, error) {
+	requestDef := GenReqDefForStartManualScanning()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartManualScanningResponse), nil
+	}
+}
+
+// StartManualScanningInvoker 手动启动制品扫描
+func (c *SwrClient) StartManualScanningInvoker(request *model.StartManualScanningRequest) *StartManualScanningInvoker {
+	requestDef := GenReqDefForStartManualScanning()
+	return &StartManualScanningInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // StopInstanceReplicationPolicyExecution 停止镜像同步任务

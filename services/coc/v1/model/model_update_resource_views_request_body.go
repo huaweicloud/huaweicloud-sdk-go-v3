@@ -22,6 +22,9 @@ type UpdateResourceViewsRequestBody struct {
 
 	// **参数解释：** 视图名称。 **约束限制：** 不涉及。 **取值范围：** 用户自定义编辑。 **默认取值：** 不涉及。
 	Name string `json:"name"`
+
+	// **参数解释：** 视图包含的租户账号id值组成列表。 **取值范围：** 不涉及。 example:   - id1   - id2
+	DomainIds *[]string `json:"domain_ids,omitempty"`
 }
 
 func (o UpdateResourceViewsRequestBody) String() string {

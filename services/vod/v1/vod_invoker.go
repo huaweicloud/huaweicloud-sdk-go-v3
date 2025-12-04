@@ -533,6 +533,22 @@ func (i *ListAssetListInvoker) Invoke() (*model.ListAssetListResponse, error) {
 	}
 }
 
+type ListCdnStatisticsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCdnStatisticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCdnStatisticsInvoker) Invoke() (*model.ListCdnStatisticsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCdnStatisticsResponse), nil
+	}
+}
+
 type ListDomainLogsInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -21,7 +21,7 @@ func AsmClientBuilder() *httpclient.HcHttpClientBuilder {
 
 // CreateMesh 创建网格
 //
-// 该API用于创建一个网格
+// 该API用于创建一个网格。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AsmClient) CreateMesh(request *model.CreateMeshRequest) (*model.CreateMeshResponse, error) {

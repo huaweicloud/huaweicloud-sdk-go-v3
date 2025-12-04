@@ -165,6 +165,38 @@ func (i *ListApiVersionInvoker) Invoke() (*model.ListApiVersionResponse, error) 
 	}
 }
 
+type BatchDeleteNodesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteNodesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteNodesInvoker) Invoke() (*model.BatchDeleteNodesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteNodesResponse), nil
+	}
+}
+
+type BindEipInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BindEipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BindEipInvoker) Invoke() (*model.BindEipResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BindEipResponse), nil
+	}
+}
+
 type CancelMigrationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -274,6 +306,22 @@ func (i *CreateDdmDatabaseInvoker) Invoke() (*model.CreateDdmDatabaseResponse, e
 		return nil, err
 	} else {
 		return result.(*model.CreateDdmDatabaseResponse), nil
+	}
+}
+
+type CreateDdmInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDdmInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDdmInstanceInvoker) Invoke() (*model.CreateDdmInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDdmInstanceResponse), nil
 	}
 }
 
@@ -389,6 +437,22 @@ func (i *DeleteDdmInstanceInvoker) Invoke() (*model.DeleteDdmInstanceResponse, e
 	}
 }
 
+type DeleteGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteGroupInvoker) Invoke() (*model.DeleteGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteGroupResponse), nil
+	}
+}
+
 type DeleteInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -402,6 +466,22 @@ func (i *DeleteInstanceInvoker) Invoke() (*model.DeleteInstanceResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.DeleteInstanceResponse), nil
+	}
+}
+
+type DeleteNodesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteNodesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteNodesInvoker) Invoke() (*model.DeleteNodesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteNodesResponse), nil
 	}
 }
 
@@ -741,6 +821,22 @@ func (i *ListSlowLogsInvoker) Invoke() (*model.ListSlowLogsResponse, error) {
 	}
 }
 
+type ListTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTasksInvoker) Invoke() (*model.ListTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTasksResponse), nil
+	}
+}
+
 type ListUsersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -786,6 +882,22 @@ func (i *MigrateResultsInvoker) Invoke() (*model.MigrateResultsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.MigrateResultsResponse), nil
+	}
+}
+
+type ModifyEipInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyEipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyEipInvoker) Invoke() (*model.ModifyEipResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyEipResponse), nil
 	}
 }
 
@@ -853,6 +965,22 @@ func (i *ResizeFlavorInvoker) Invoke() (*model.ResizeFlavorResponse, error) {
 	}
 }
 
+type RestartDdmInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestartDdmInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RestartDdmInstanceInvoker) Invoke() (*model.RestartDdmInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestartDdmInstanceResponse), nil
+	}
+}
+
 type RestartInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -866,6 +994,22 @@ func (i *RestartInstanceInvoker) Invoke() (*model.RestartInstanceResponse, error
 		return nil, err
 	} else {
 		return result.(*model.RestartInstanceResponse), nil
+	}
+}
+
+type RestartNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestartNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RestartNodeInvoker) Invoke() (*model.RestartNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestartNodeResponse), nil
 	}
 }
 
@@ -1029,6 +1173,22 @@ func (i *ShowDdmJobResultInvoker) Invoke() (*model.ShowDdmJobResultResponse, err
 	}
 }
 
+type ShowDdmNodeDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDdmNodeDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDdmNodeDetailInvoker) Invoke() (*model.ShowDdmNodeDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDdmNodeDetailResponse), nil
+	}
+}
+
 type ShowInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1141,6 +1301,22 @@ func (i *ShowProcessesAuditLogInvoker) Invoke() (*model.ShowProcessesAuditLogRes
 	}
 }
 
+type ShowPublicIpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPublicIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPublicIpInvoker) Invoke() (*model.ShowPublicIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPublicIpResponse), nil
+	}
+}
+
 type ShowRelatedDnsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1202,6 +1378,38 @@ func (i *SwitchSslInvoker) Invoke() (*model.SwitchSslResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.SwitchSslResponse), nil
+	}
+}
+
+type SyncDnInformationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SyncDnInformationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SyncDnInformationInvoker) Invoke() (*model.SyncDnInformationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SyncDnInformationResponse), nil
+	}
+}
+
+type UnbindEipInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UnbindEipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UnbindEipInvoker) Invoke() (*model.UnbindEipResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UnbindEipResponse), nil
 	}
 }
 

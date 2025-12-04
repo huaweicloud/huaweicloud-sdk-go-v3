@@ -967,8 +967,8 @@ func GenReqDefForListFoldersAndFiles() *def.HttpRequestDef {
 		WithJsonTag("marker").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("MaxKeys").
-		WithJsonTag("max_keys").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

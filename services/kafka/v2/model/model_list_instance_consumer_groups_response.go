@@ -9,10 +9,10 @@ import (
 // ListInstanceConsumerGroupsResponse Response Object
 type ListInstanceConsumerGroupsResponse struct {
 
-	// 所有的消费组。
+	// **参数解释**： 所有消费组的信息。
 	Groups *[]GroupInfoSimple `json:"groups,omitempty"`
 
-	// 所有的消费组总数。
+	// **参数解释**： 消费组总数。 **取值范围**： 不涉及。
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

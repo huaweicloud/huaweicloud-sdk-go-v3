@@ -15,7 +15,7 @@ type UpdateInstanceGroupRequest struct {
 	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
-	Body *BatchModifyGroupDescriptionReq `json:"body,omitempty"`
+	Body *BatchModiftGroupDescriptionReq `json:"body,omitempty"`
 }
 
 func (o UpdateInstanceGroupRequest) String() string {

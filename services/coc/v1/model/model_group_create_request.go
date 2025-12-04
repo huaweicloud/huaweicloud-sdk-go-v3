@@ -31,6 +31,9 @@ type GroupCreateRequest struct {
 
 	// 分组配置信息。
 	RelationConfigurations *[]GroupRelationConfiguration `json:"relation_configurations,omitempty"`
+
+	// 关联帐号id。
+	RelatedDomainId *string `json:"related_domain_id,omitempty"`
 }
 
 func (o GroupCreateRequest) String() string {

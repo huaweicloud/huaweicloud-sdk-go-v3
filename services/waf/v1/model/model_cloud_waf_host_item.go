@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -41,17 +44,17 @@ type CloudWafHostItem struct {
 	// 创建防护域名的时间
 	Timestamp *int64 `json:"timestamp,omitempty"`
 
-	// 域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+	// **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
 	ProtectStatus *int32 `json:"protect_status,omitempty"`
 
-	// 域名接入状态，0表示未接入，1表示已接入
+	// **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
 	AccessStatus *int32 `json:"access_status,omitempty"`
 
 	// 是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
 	ExclusiveIp *bool `json:"exclusive_ip,omitempty"`
 
-	// 套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
-	PaidType *string `json:"paid_type,omitempty"`
+	// **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
+	PaidType *CloudWafHostItemPaidType `json:"paid_type,omitempty"`
 
 	// 网站名称，对应WAF控制台域名详情中的网站名称
 	WebTag *string `json:"web_tag,omitempty"`
@@ -69,4 +72,51 @@ func (o CloudWafHostItem) String() string {
 	}
 
 	return strings.Join([]string{"CloudWafHostItem", string(data)}, " ")
+}
+
+type CloudWafHostItemPaidType struct {
+	value string
+}
+
+type CloudWafHostItemPaidTypeEnum struct {
+	PRE_PAID  CloudWafHostItemPaidType
+	POST_PAID CloudWafHostItemPaidType
+}
+
+func GetCloudWafHostItemPaidTypeEnum() CloudWafHostItemPaidTypeEnum {
+	return CloudWafHostItemPaidTypeEnum{
+		PRE_PAID: CloudWafHostItemPaidType{
+			value: "prePaid",
+		},
+		POST_PAID: CloudWafHostItemPaidType{
+			value: "postPaid",
+		},
+	}
+}
+
+func (c CloudWafHostItemPaidType) Value() string {
+	return c.value
+}
+
+func (c CloudWafHostItemPaidType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CloudWafHostItemPaidType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

@@ -20,13 +20,13 @@ type InstanceConfig struct {
 	// 默认值。
 	DefaultValue *string `json:"default_value,omitempty"`
 
-	// 配置类型：static/dynamic。
+	// **参数解释**： 配置类型。 **取值范围**： - dynamic：动态。 - static：静态。
 	ConfigType *InstanceConfigConfigType `json:"config_type,omitempty"`
 
 	// 配置当前值。
 	Value *string `json:"value,omitempty"`
 
-	// 值类型。
+	// **参数解释**： 值类型。 **取值范围**： - string：字符串类型。 - integer：整数类型。 - enum：枚举值类型。
 	ValueType *string `json:"value_type,omitempty"`
 }
 

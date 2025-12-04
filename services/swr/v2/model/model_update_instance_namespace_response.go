@@ -12,8 +12,10 @@ type UpdateInstanceNamespaceResponse struct {
 	// 命名空间名称
 	NamespaceName *string `json:"namespace_name,omitempty"`
 
-	Metadata       *NamespaceMetadata `json:"metadata,omitempty"`
-	HttpStatusCode int                `json:"-"`
+	Metadata *NamespaceMetadata `json:"metadata,omitempty"`
+
+	CveAllowlist   *UpdateCveAllowlistRequest `json:"cve_allowlist,omitempty"`
+	HttpStatusCode int                        `json:"-"`
 }
 
 func (o UpdateInstanceNamespaceResponse) String() string {

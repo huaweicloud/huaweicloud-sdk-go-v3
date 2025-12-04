@@ -36,6 +36,9 @@ type QueryLtsLogParams struct {
 	// 顺序或者倒序查询, 默认为false(顺序查询)
 	IsDesc *bool `json:"is_desc,omitempty"`
 
+	// **参数解释：** 分页查询时，若上次查询的返回结果中包含该字段，需要增加该字段参与分页查询。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+	ScrollId *string `json:"scroll_id,omitempty"`
+
 	// 首次查询为 “init”, 分页查询时为 “forwards”或者“backwards”, 默认为首次查询“init”, 与 is_desc 参数配合进行分页查询。
 	SearchType *QueryLtsLogParamsSearchType `json:"search_type,omitempty"`
 

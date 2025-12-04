@@ -32,7 +32,7 @@ type UpdatePolicyRequestBody struct {
 	// 与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
 	BindHost *[]BindHost `json:"bind_host,omitempty"`
 
-	// 扩展字段，用于存放Web基础防护中一些开关配置等信息
+	// 扩展字段，用于存放Web基础防护中一些开关配置等信息，当修改字段为 shiro_rememberMe_enable,deep_decode,check_all_headers 时，需要额外增加一层extend字段嵌套.示例 key为 extend，value为 {\"shiro_rememberMe_enable\":true}
 	Extend map[string]string `json:"extend,omitempty"`
 }
 

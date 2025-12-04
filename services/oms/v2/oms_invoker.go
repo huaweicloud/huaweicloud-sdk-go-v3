@@ -485,6 +485,22 @@ func (i *UpdateBandwidthPolicyInvoker) Invoke() (*model.UpdateBandwidthPolicyRes
 	}
 }
 
+type UpdatePrivacyAgreementRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePrivacyAgreementRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePrivacyAgreementRecordInvoker) Invoke() (*model.UpdatePrivacyAgreementRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePrivacyAgreementRecordResponse), nil
+	}
+}
+
 type UpdateTaskGroupInvoker struct {
 	*invoker.BaseInvoker
 }

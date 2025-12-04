@@ -8,8 +8,6 @@ import (
 
 // DownloadHttpCertResponse Response Object
 type DownloadHttpCertResponse struct {
-	Body *string `json:"body,omitempty"`
-
 	ContentType    *string `json:"content-type,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

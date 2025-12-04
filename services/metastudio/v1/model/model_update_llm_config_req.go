@@ -17,6 +17,9 @@ type UpdateLlmConfigReq struct {
 
 	// 密钥。
 	ApiKey *string `json:"api_key,omitempty"`
+
+	// model参数
+	Model *string `json:"model,omitempty"`
 }
 
 func (o UpdateLlmConfigReq) String() string {

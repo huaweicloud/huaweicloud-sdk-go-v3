@@ -9,7 +9,7 @@ import (
 type MeshExtendParams struct {
 
 	// 网格内集群信息
-	Clusters *[]MeshCluster `json:"clusters,omitempty"`
+	Clusters []MeshCluster `json:"clusters"`
 }
 
 func (o MeshExtendParams) String() string {

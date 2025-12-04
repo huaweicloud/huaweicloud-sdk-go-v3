@@ -10,7 +10,7 @@ import (
 type UpdateLtsConfigRequest struct {
 
 	// 企业项目id
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	EnterpriseProjectId string `json:"enterprise_project_id"`
 
 	Body *UpdateLtsConfigRequestBody `json:"body,omitempty"`
 }

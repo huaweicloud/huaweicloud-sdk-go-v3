@@ -9,7 +9,7 @@ import (
 // ShowAddonInstanceRequest Request Object
 type ShowAddonInstanceRequest struct {
 
-	// 插件示例id
+	// 插件实例id
 	Id string `json:"id"`
 
 	// 是否使用数据库存储的插件状态

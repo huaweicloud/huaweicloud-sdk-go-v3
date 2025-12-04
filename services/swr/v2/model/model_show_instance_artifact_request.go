@@ -20,6 +20,9 @@ type ShowInstanceArtifactRequest struct {
 
 	// 制品摘要
 	Reference string `json:"reference"`
+
+	// 是否返回制品扫描摘要
+	WithScanOverview *bool `json:"with_scan_overview,omitempty"`
 }
 
 func (o ShowInstanceArtifactRequest) String() string {

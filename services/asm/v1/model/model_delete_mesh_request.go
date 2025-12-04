@@ -9,11 +9,8 @@ import (
 // DeleteMeshRequest Request Object
 type DeleteMeshRequest struct {
 
-	// 网格ID
+	// 网格ID。
 	MeshId string `json:"mesh_id"`
-
-	// 网格所属ProjectID
-	XApplyProjectID *string `json:"X-Apply-ProjectID,omitempty"`
 }
 
 func (o DeleteMeshRequest) String() string {

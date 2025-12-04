@@ -53,6 +53,22 @@ func (i *AttachEipInvoker) Invoke() (*model.AttachEipResponse, error) {
 	}
 }
 
+type BatchDeleteInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteInstanceInvoker) Invoke() (*model.BatchDeleteInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteInstanceResponse), nil
+	}
+}
+
 type BatchDeleteManualBackupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -66,6 +82,22 @@ func (i *BatchDeleteManualBackupInvoker) Invoke() (*model.BatchDeleteManualBacku
 		return nil, err
 	} else {
 		return result.(*model.BatchDeleteManualBackupResponse), nil
+	}
+}
+
+type BatchExecuteEventsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchExecuteEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchExecuteEventsInvoker) Invoke() (*model.BatchExecuteEventsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchExecuteEventsResponse), nil
 	}
 }
 
@@ -229,6 +261,22 @@ func (i *CheckWeakpwdInvoker) Invoke() (*model.CheckWeakpwdResponse, error) {
 	}
 }
 
+type CompareConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CompareConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CompareConfigurationInvoker) Invoke() (*model.CompareConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CompareConfigurationResponse), nil
+	}
+}
+
 type CopyConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -338,6 +386,22 @@ func (i *CreateRdSforMySqlProxyInvoker) Invoke() (*model.CreateRdSforMySqlProxyR
 		return nil, err
 	} else {
 		return result.(*model.CreateRdSforMySqlProxyResponse), nil
+	}
+}
+
+type CreateRebuildSlaveInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRebuildSlaveInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateRebuildSlaveInvoker) Invoke() (*model.CreateRebuildSlaveResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRebuildSlaveResponse), nil
 	}
 }
 
@@ -1093,6 +1157,22 @@ func (i *ListOffSiteRestoreTimesInvoker) Invoke() (*model.ListOffSiteRestoreTime
 	}
 }
 
+type ListPackLogInfosInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPackLogInfosInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPackLogInfosInvoker) Invoke() (*model.ListPackLogInfosResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPackLogInfosResponse), nil
+	}
+}
+
 type ListPostgresqlHbaInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1250,6 +1330,22 @@ func (i *ListRestoreTimesInvoker) Invoke() (*model.ListRestoreTimesResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListRestoreTimesResponse), nil
+	}
+}
+
+type ListScheduleEventsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListScheduleEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListScheduleEventsInvoker) Invoke() (*model.ListScheduleEventsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListScheduleEventsResponse), nil
 	}
 }
 
@@ -1618,6 +1714,22 @@ func (i *NotifyReplaceNodeInvoker) Invoke() (*model.NotifyReplaceNodeResponse, e
 		return nil, err
 	} else {
 		return result.(*model.NotifyReplaceNodeResponse), nil
+	}
+}
+
+type ResetConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ResetConfigurationInvoker) Invoke() (*model.ResetConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetConfigurationResponse), nil
 	}
 }
 
@@ -2178,6 +2290,22 @@ func (i *ShowQuotasInvoker) Invoke() (*model.ShowQuotasResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowQuotasResponse), nil
+	}
+}
+
+type ShowRebuildSlaveStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRebuildSlaveStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRebuildSlaveStatusInvoker) Invoke() (*model.ShowRebuildSlaveStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRebuildSlaveStatusResponse), nil
 	}
 }
 
@@ -3733,6 +3861,22 @@ func (i *GetInstancesNoIndexTablesInvoker) Invoke() (*model.GetInstancesNoIndexT
 	}
 }
 
+type ShowAutoCesAlarmInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAutoCesAlarmInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAutoCesAlarmInvoker) Invoke() (*model.ShowAutoCesAlarmResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAutoCesAlarmResponse), nil
+	}
+}
+
 type ShowIntelligentKillSessionHistoryInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3746,6 +3890,22 @@ func (i *ShowIntelligentKillSessionHistoryInvoker) Invoke() (*model.ShowIntellig
 		return nil, err
 	} else {
 		return result.(*model.ShowIntelligentKillSessionHistoryResponse), nil
+	}
+}
+
+type ShowIntelligentKillSessionStatisticInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIntelligentKillSessionStatisticInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowIntelligentKillSessionStatisticInvoker) Invoke() (*model.ShowIntelligentKillSessionStatisticResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIntelligentKillSessionStatisticResponse), nil
 	}
 }
 

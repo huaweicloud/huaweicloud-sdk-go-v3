@@ -21,7 +21,7 @@ type UpdateCustomRuleResponse struct {
 	// 规则描述
 	Description *string `json:"description,omitempty"`
 
-	// 规则状态，0：关闭，1：开启
+	// **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
 	Status *int32 `json:"status,omitempty"`
 
 	// 匹配条件列表，匹配条件必须同时满足。

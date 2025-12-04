@@ -15,13 +15,13 @@ type ListSyncTaskStatisticRequest struct {
 	// 同步任务ID。
 	SyncTaskId string `json:"sync_task_id"`
 
-	// 统计数据类型： 多类型查询用‘,’分割； REQUEST：接收同步请求对象数 SUCCESS：同步成功对象数 FAILURE：同步失败对象数 SKIP：同步跳过对象数 SIZE：同步成功对象容量(Byte)
+	// 统计数据类型： 多类型查询用‘,’分隔； REQUEST：接收同步请求对象数 SUCCESS：同步成功对象数 FAILURE：同步失败对象数 SKIP：同步跳过对象数 SIZE：同步成功对象容量(Byte)
 	DataType ListSyncTaskStatisticRequestDataType `json:"data_type"`
 
 	// 查询开始时间
 	StartTime string `json:"start_time"`
 
-	// 查询开始时间
+	// 查询结束时间
 	EndTime string `json:"end_time"`
 }
 

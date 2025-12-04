@@ -8,7 +8,10 @@ import (
 
 // UpdateTopicAccessPolicyResponse Response Object
 type UpdateTopicAccessPolicyResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// **参数解释**： 后台任务ID。 **取值范围**： 不涉及。
+	JobId          *string `json:"job_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateTopicAccessPolicyResponse) String() string {

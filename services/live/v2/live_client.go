@@ -417,6 +417,31 @@ func (c *LiveClient) ShowUpBandwidthInvoker(request *model.ShowUpBandwidthReques
 	return &ShowUpBandwidthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCarouselTaskDetail 查询轮播任务监控数据接口
+//
+// 查询轮播任务监控数据接口，包括轮播任务帧率码率情况。
+//
+// 最大查询跨度3小时，最大查询周期7天。
+//
+// 返回的帧率码率数据列表粒度为1秒钟。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ListCarouselTaskDetail(request *model.ListCarouselTaskDetailRequest) (*model.ListCarouselTaskDetailResponse, error) {
+	requestDef := GenReqDefForListCarouselTaskDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCarouselTaskDetailResponse), nil
+	}
+}
+
+// ListCarouselTaskDetailInvoker 查询轮播任务监控数据接口
+func (c *LiveClient) ListCarouselTaskDetailInvoker(request *model.ListCarouselTaskDetailRequest) *ListCarouselTaskDetailInvoker {
+	requestDef := GenReqDefForListCarouselTaskDetail()
+	return &ListCarouselTaskDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSingleStreamBitrate 查询推流码率数据接口
 //
 // 查询推流监控码率数据接口。

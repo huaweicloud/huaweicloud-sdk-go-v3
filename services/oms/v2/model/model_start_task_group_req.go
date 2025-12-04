@@ -27,7 +27,7 @@ type StartTaskGroupReq struct {
 	// 目的端节点SK（最大长度100个字符）。
 	DstSk string `json:"dst_sk"`
 
-	// CDN鉴权秘钥。
+	// CDN鉴权密钥。
 	SourceCdnAuthenticationKey *string `json:"source_cdn_authentication_key,omitempty"`
 }
 

@@ -12,7 +12,7 @@ import (
 // CcrulesListInfoActionDetailResponse 阻断页面
 type CcrulesListInfoActionDetailResponse struct {
 
-	// 内容类型，值可为“application/json”、“text/html”、“text/xml”。
+	// **参数解释：** 内容类型 **约束限制：** 不涉及 **取值范围：**  - text/html  - text/xml  - application/json  **默认取值：** 不涉及
 	ContentType *CcrulesListInfoActionDetailResponseContentType `json:"content_type,omitempty"`
 
 	// 阻断页面内容

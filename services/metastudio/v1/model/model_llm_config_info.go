@@ -18,6 +18,9 @@ type LlmConfigInfo struct {
 	// 大语言模型地址。
 	LlmUrl *string `json:"llm_url,omitempty"`
 
+	// model参数
+	Model *string `json:"model,omitempty"`
+
 	// 创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
 	CreateTime *string `json:"create_time,omitempty"`
 

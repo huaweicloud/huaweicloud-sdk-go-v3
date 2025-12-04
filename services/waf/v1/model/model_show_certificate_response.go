@@ -24,7 +24,7 @@ type ShowCertificateResponse struct {
 	// 证书过期时间戳
 	ExpireTime *int64 `json:"expire_time,omitempty"`
 
-	// 证书过期状态，0-未过期，1-已过期，2-即将过期
+	// **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
 	ExpStatus *int32 `json:"exp_status,omitempty"`
 
 	// 证书上传时间戳

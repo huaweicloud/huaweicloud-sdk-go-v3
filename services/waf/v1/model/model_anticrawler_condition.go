@@ -11,7 +11,7 @@ import (
 
 type AnticrawlerCondition struct {
 
-	// 字段类型
+	// **参数解释：** 字段类型 **约束限制：** 不涉及 **取值范围：**  - url  - user-agent  **默认取值：** 不涉及
 	Category *AnticrawlerConditionCategory `json:"category,omitempty"`
 
 	// 条件列表匹配逻辑, 包括：contain、not_contain、equal、not_equal、prefix、not_prefix、suffix、not_suffix、contain_any、not_contain_all、equal_any、not_equal_all、prefix_any、not_prefix_all、suffix_any、not_suffix_all

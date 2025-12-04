@@ -15,7 +15,7 @@ type ResetUserPasswrodRequest struct {
 	// 用户名称。
 	UserName string `json:"user_name"`
 
-	Body *ResetUserPasswrodReq `json:"body,omitempty"`
+	Body *ResetUserPasswordReq `json:"body,omitempty"`
 }
 
 func (o ResetUserPasswrodRequest) String() string {

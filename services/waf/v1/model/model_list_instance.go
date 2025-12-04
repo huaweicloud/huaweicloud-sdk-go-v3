@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -39,14 +42,14 @@ type ListInstance struct {
 	// 独享引擎绑定的安全组
 	SecurityGroupIds *[]string `json:"security_group_ids,omitempty"`
 
-	// 独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
-	Status *int32 `json:"status,omitempty"`
+	// **参数解释：** 独享引擎计费状态标识，用于指示独享引擎当前的计费使用状态 **约束限制：** 不涉及 **取值范围：**  - 0：正常计费  - 1：冻结，资源和数据会保留，但租户无法再正常使用云服务  - 2：终止，资源和数据将清除 **默认取值：** 不涉及
+	Status *ListInstanceStatus `json:"status,omitempty"`
 
-	// 独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
-	RunStatus *int32 `json:"run_status,omitempty"`
+	// **参数解释：** 独享引擎运行状态标识，用于反映独享引擎当前的运行生命周期状态 **约束限制：** 不涉及 **取值范围：**  - 0：创建中  - 1：运行中  - 2：删除中  - 3：已删除  - 4：创建失败  - 5：已冻结  - 6：异常  - 7：更新中  - 8：更新失败 **默认取值：** 不涉及
+	RunStatus *ListInstanceRunStatus `json:"run_status,omitempty"`
 
-	// 独享引擎接入状态（0：未接入，1：已接入）
-	AccessStatus *int32 `json:"access_status,omitempty"`
+	// **参数解释：** 独享引擎接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
+	AccessStatus *ListInstanceAccessStatus `json:"access_status,omitempty"`
 
 	// 独享引擎是否可升级（0：不可升级，1：可升级）
 	Upgradable *int32 `json:"upgradable,omitempty"`
@@ -83,4 +86,166 @@ func (o ListInstance) String() string {
 	}
 
 	return strings.Join([]string{"ListInstance", string(data)}, " ")
+}
+
+type ListInstanceStatus struct {
+	value int32
+}
+
+type ListInstanceStatusEnum struct {
+	E_0 ListInstanceStatus
+	E_1 ListInstanceStatus
+	E_2 ListInstanceStatus
+}
+
+func GetListInstanceStatusEnum() ListInstanceStatusEnum {
+	return ListInstanceStatusEnum{
+		E_0: ListInstanceStatus{
+			value: 0,
+		}, E_1: ListInstanceStatus{
+			value: 1,
+		}, E_2: ListInstanceStatus{
+			value: 2,
+		},
+	}
+}
+
+func (c ListInstanceStatus) Value() int32 {
+	return c.value
+}
+
+func (c ListInstanceStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListInstanceStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type ListInstanceRunStatus struct {
+	value int32
+}
+
+type ListInstanceRunStatusEnum struct {
+	E_0 ListInstanceRunStatus
+	E_1 ListInstanceRunStatus
+	E_2 ListInstanceRunStatus
+	E_3 ListInstanceRunStatus
+	E_4 ListInstanceRunStatus
+	E_5 ListInstanceRunStatus
+	E_6 ListInstanceRunStatus
+	E_7 ListInstanceRunStatus
+	E_8 ListInstanceRunStatus
+}
+
+func GetListInstanceRunStatusEnum() ListInstanceRunStatusEnum {
+	return ListInstanceRunStatusEnum{
+		E_0: ListInstanceRunStatus{
+			value: 0,
+		}, E_1: ListInstanceRunStatus{
+			value: 1,
+		}, E_2: ListInstanceRunStatus{
+			value: 2,
+		}, E_3: ListInstanceRunStatus{
+			value: 3,
+		}, E_4: ListInstanceRunStatus{
+			value: 4,
+		}, E_5: ListInstanceRunStatus{
+			value: 5,
+		}, E_6: ListInstanceRunStatus{
+			value: 6,
+		}, E_7: ListInstanceRunStatus{
+			value: 7,
+		}, E_8: ListInstanceRunStatus{
+			value: 8,
+		},
+	}
+}
+
+func (c ListInstanceRunStatus) Value() int32 {
+	return c.value
+}
+
+func (c ListInstanceRunStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListInstanceRunStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type ListInstanceAccessStatus struct {
+	value int32
+}
+
+type ListInstanceAccessStatusEnum struct {
+	E_0 ListInstanceAccessStatus
+	E_1 ListInstanceAccessStatus
+}
+
+func GetListInstanceAccessStatusEnum() ListInstanceAccessStatusEnum {
+	return ListInstanceAccessStatusEnum{
+		E_0: ListInstanceAccessStatus{
+			value: 0,
+		}, E_1: ListInstanceAccessStatus{
+			value: 1,
+		},
+	}
+}
+
+func (c ListInstanceAccessStatus) Value() int32 {
+	return c.value
+}
+
+func (c ListInstanceAccessStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListInstanceAccessStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

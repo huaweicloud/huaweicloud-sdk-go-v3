@@ -277,6 +277,22 @@ func (i *ShowUpBandwidthInvoker) Invoke() (*model.ShowUpBandwidthResponse, error
 	}
 }
 
+type ListCarouselTaskDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCarouselTaskDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCarouselTaskDetailInvoker) Invoke() (*model.ListCarouselTaskDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCarouselTaskDetailResponse), nil
+	}
+}
+
 type ListSingleStreamBitrateInvoker struct {
 	*invoker.BaseInvoker
 }

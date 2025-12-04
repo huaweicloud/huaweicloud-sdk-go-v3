@@ -25,6 +25,12 @@ type ListTopicsItem struct {
 
 	// 主题ID。
 	TopicId string `json:"topic_id"`
+
+	// 创建时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+	CreateTime string `json:"create_time"`
+
+	// 更新时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
+	UpdateTime string `json:"update_time"`
 }
 
 func (o ListTopicsItem) String() string {

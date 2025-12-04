@@ -8,7 +8,7 @@ import (
 
 type ModifyInstanceConfigsReq struct {
 
-	// kafka待修改配置列表。
+	// Kafka待修改配置列表。
 	KafkaConfigs *[]ModifyInstanceConfig `json:"kafka_configs,omitempty"`
 }
 

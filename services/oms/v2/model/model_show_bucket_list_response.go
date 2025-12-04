@@ -8,6 +8,8 @@ import (
 
 // ShowBucketListResponse Response Object
 type ShowBucketListResponse struct {
+
+	// 桶名列表
 	Body           *[]string `json:"body,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

@@ -8,19 +8,19 @@ import (
 
 type ShowGroupsRespGroupGroupMessageOffsets struct {
 
-	// 分区编号。
+	// **参数解释**： 分区编号。 **取值范围**： 不涉及。
 	Partition *int32 `json:"partition,omitempty"`
 
-	// 剩余可消费消息数，即消息堆积数。
+	// **参数解释**： 剩余可消费消息数，即消息堆积数。 **取值范围**： 不涉及。
 	Lag *int64 `json:"lag,omitempty"`
 
-	// Topic名称。
+	// **参数解释**： Topic名称。 **取值范围**： 不涉及。
 	Topic *string `json:"topic,omitempty"`
 
-	// 当前消费进度。
+	// **参数解释**： 当前消费进度。 **取值范围**： 不涉及。
 	MessageCurrentOffset *int64 `json:"message_current_offset,omitempty"`
 
-	// 最大消息位置（LEO）。
+	// **参数解释**： 最大消息位置（LEO）。 **取值范围**： 不涉及。
 	MessageLogEndOffset *int64 `json:"message_log_end_offset,omitempty"`
 }
 

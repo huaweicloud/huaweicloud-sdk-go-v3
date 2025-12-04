@@ -11,7 +11,7 @@ type SmartConnectTaskRespSinkConfig struct {
 	// **参数解释**： 转储启动偏移量。（仅目标端类型为OBS时会显示） **取值范围**： - latest：获取最新的数据。 - earliest：获取最早的数据。
 	ConsumerStrategy *string `json:"consumer_strategy,omitempty"`
 
-	// **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。
+	// **参数解释**： 转储文件格式。当前只支持TEXT。（仅目标端类型为OBS时会显示） **取值范围**： TEXT。
 	DestinationFileType *string `json:"destination_file_type,omitempty"`
 
 	// **参数解释**： 数据转储周期（秒）。（仅目标端类型为OBS时会显示） **取值范围**： 不涉及。

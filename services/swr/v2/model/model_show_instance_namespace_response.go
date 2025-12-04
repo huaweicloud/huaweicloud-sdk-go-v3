@@ -24,8 +24,10 @@ type ShowInstanceNamespaceResponse struct {
 	UpdatedAt *string `json:"updated_at,omitempty"`
 
 	// 镜像数量
-	RepoCount      *int32 `json:"repo_count,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	RepoCount *int32 `json:"repo_count,omitempty"`
+
+	CveAllowlist   *CveAllowlist `json:"cve_allowlist,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o ShowInstanceNamespaceResponse) String() string {

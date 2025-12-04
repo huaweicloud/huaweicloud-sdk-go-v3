@@ -10,7 +10,7 @@ import (
 type ShowTaskRequest struct {
 
 	// 任务ID
-	TaskId string `json:"task_id"`
+	TaskId int64 `json:"task_id"`
 }
 
 func (o ShowTaskRequest) String() string {

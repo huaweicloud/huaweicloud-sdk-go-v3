@@ -554,6 +554,17 @@ func GenReqDefForUpdateBandwidthPolicy() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForUpdatePrivacyAgreementRecord() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/privacy-agreements").
+		WithResponse(new(model.UpdatePrivacyAgreementRecordResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateTaskGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).

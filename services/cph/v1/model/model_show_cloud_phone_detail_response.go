@@ -58,7 +58,7 @@ type ShowCloudPhoneDetailResponse struct {
 	// 手机物理磁盘是否独立。 - 0：不独立 - 1：独立
 	VolumeMode *int32 `json:"volume_mode,omitempty"`
 
-	// 云手机服务器所在的可用区。[如上海一可用区1为cn-east-3a。](tag:hws,hws_hk,cmcc)
+	// 云手机服务器所在的可用区。[如上海一可用区1为cn-east-3a。](tag:hws,hws_hk,cmcc,ctc)
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
 	// 当前手机是否开启文件级加密。

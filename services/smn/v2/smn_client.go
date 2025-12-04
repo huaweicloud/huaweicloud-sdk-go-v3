@@ -232,6 +232,27 @@ func (c *SmnClient) ConfirmSubscriptionInvoker(request *model.ConfirmSubscriptio
 	return &ConfirmSubscriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateKmsKey 主题绑定KMS密钥
+//
+// 为主题绑定KMS密钥。KMS密钥于绑定后五分钟生效，生效后该主题下发布的消息（确认订阅消息、取消订阅消息、主题消息）均使用指定密钥的数据密钥进行加解密，并将消息内容在SMN服务内部加密传输。执行绑定KMS密钥时，用户需要先在IAM处创建名为smn_kms_agency的委托，并将资源操作权限授权给SMN服务。SMN会使用该委托进行创建数据密钥操作。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) CreateKmsKey(request *model.CreateKmsKeyRequest) (*model.CreateKmsKeyResponse, error) {
+	requestDef := GenReqDefForCreateKmsKey()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateKmsKeyResponse), nil
+	}
+}
+
+// CreateKmsKeyInvoker 主题绑定KMS密钥
+func (c *SmnClient) CreateKmsKeyInvoker(request *model.CreateKmsKeyRequest) *CreateKmsKeyInvoker {
+	requestDef := GenReqDefForCreateKmsKey()
+	return &CreateKmsKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateLogtank 绑定云日志
 //
 // 为指定Topic绑定一个云日志，用于记录主题消息发送状态等信息。
@@ -337,6 +358,27 @@ func (c *SmnClient) CreateTopic(request *model.CreateTopicRequest) (*model.Creat
 func (c *SmnClient) CreateTopicInvoker(request *model.CreateTopicRequest) *CreateTopicInvoker {
 	requestDef := GenReqDefForCreateTopic()
 	return &CreateTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteKmsKey 删除主题下KMS密钥
+//
+// 删除主题绑定的密钥。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) DeleteKmsKey(request *model.DeleteKmsKeyRequest) (*model.DeleteKmsKeyResponse, error) {
+	requestDef := GenReqDefForDeleteKmsKey()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteKmsKeyResponse), nil
+	}
+}
+
+// DeleteKmsKeyInvoker 删除主题下KMS密钥
+func (c *SmnClient) DeleteKmsKeyInvoker(request *model.DeleteKmsKeyRequest) *DeleteKmsKeyInvoker {
+	requestDef := GenReqDefForDeleteKmsKey()
+	return &DeleteKmsKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteLogtank 解绑云日志
@@ -528,6 +570,27 @@ func (c *SmnClient) DownloadHttpCertInvoker(request *model.DownloadHttpCertReque
 	return &DownloadHttpCertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DownloadHttpSignCert 下载HTTP签名证书
+//
+// 下载HTTP签名证书
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) DownloadHttpSignCert(request *model.DownloadHttpSignCertRequest) (*model.DownloadHttpSignCertResponse, error) {
+	requestDef := GenReqDefForDownloadHttpSignCert()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadHttpSignCertResponse), nil
+	}
+}
+
+// DownloadHttpSignCertInvoker 下载HTTP签名证书
+func (c *SmnClient) DownloadHttpSignCertInvoker(request *model.DownloadHttpSignCertRequest) *DownloadHttpSignCertInvoker {
+	requestDef := GenReqDefForDownloadHttpSignCert()
+	return &DownloadHttpSignCertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCloudService 查询授权云服务列表
 //
 // 查询授权云服务列表。
@@ -547,6 +610,27 @@ func (c *SmnClient) ListCloudService(request *model.ListCloudServiceRequest) (*m
 func (c *SmnClient) ListCloudServiceInvoker(request *model.ListCloudServiceRequest) *ListCloudServiceInvoker {
 	requestDef := GenReqDefForListCloudService()
 	return &ListCloudServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCloudServices 查询授权服务列表
+//
+// 查询授权服务列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) ListCloudServices(request *model.ListCloudServicesRequest) (*model.ListCloudServicesResponse, error) {
+	requestDef := GenReqDefForListCloudServices()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCloudServicesResponse), nil
+	}
+}
+
+// ListCloudServicesInvoker 查询授权服务列表
+func (c *SmnClient) ListCloudServicesInvoker(request *model.ListCloudServicesRequest) *ListCloudServicesInvoker {
+	requestDef := GenReqDefForListCloudServices()
+	return &ListCloudServicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListLogtank 查询云日志
@@ -822,6 +906,27 @@ func (c *SmnClient) ListTopicsInvoker(request *model.ListTopicsRequest) *ListTop
 	return &ListTopicsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTopicsWithAssociatedResources 查询主题列表及主题关联资源信息
+//
+// 查询Topic及Topic关联资源信息列表，关联资源信息随业务演进会持续扩展。Topic列表默认按照创建时间进行降序排列。分页查询可以指定offset以及limit。如果不存在Topic，则返回空列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) ListTopicsWithAssociatedResources(request *model.ListTopicsWithAssociatedResourcesRequest) (*model.ListTopicsWithAssociatedResourcesResponse, error) {
+	requestDef := GenReqDefForListTopicsWithAssociatedResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTopicsWithAssociatedResourcesResponse), nil
+	}
+}
+
+// ListTopicsWithAssociatedResourcesInvoker 查询主题列表及主题关联资源信息
+func (c *SmnClient) ListTopicsWithAssociatedResourcesInvoker(request *model.ListTopicsWithAssociatedResourcesRequest) *ListTopicsWithAssociatedResourcesInvoker {
+	requestDef := GenReqDefForListTopicsWithAssociatedResources()
+	return &ListTopicsWithAssociatedResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListVersion 查询SMN API V2版本信息
 //
 // 查询SMN API V2版本信息。
@@ -898,6 +1003,7 @@ func (c *SmnClient) PublishHttpDetectInvoker(request *model.PublishHttpDetectReq
 //
 // 只需要设置其中一个，如果同时设置，生效的优先级为
 // message_structure &gt; message_template_name &gt; message。
+// 若发布消息的主题下绑定了KMS密钥，请确保发布消息前，用户需要先在IAM处创建名为smn_kms_agency的委托，并将资源操作权限授权给SMN服务。当发布消息时，SMN会使用该委托进行创建数据密钥和解密数据密钥操作。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmnClient) PublishMessage(request *model.PublishMessageRequest) (*model.PublishMessageResponse, error) {
@@ -937,6 +1043,27 @@ func (c *SmnClient) ShowHttpDetectResultInvoker(request *model.ShowHttpDetectRes
 	return &ShowHttpDetectResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowKmsKey 查询主题下KMS密钥
+//
+// 查询主题下密钥ID。执行绑定KMS密钥时，用户需要先在IAM处创建名为smn_kms_agency的委托，并将资源操作权限授权给SMN服务。SMN会使用该委托进行查询密钥信息操作。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) ShowKmsKey(request *model.ShowKmsKeyRequest) (*model.ShowKmsKeyResponse, error) {
+	requestDef := GenReqDefForShowKmsKey()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKmsKeyResponse), nil
+	}
+}
+
+// ShowKmsKeyInvoker 查询主题下KMS密钥
+func (c *SmnClient) ShowKmsKeyInvoker(request *model.ShowKmsKeyRequest) *ShowKmsKeyInvoker {
+	requestDef := GenReqDefForShowKmsKey()
+	return &ShowKmsKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowNotifyPolicy 查询通知策略
 //
 // 查询通知策略
@@ -958,6 +1085,27 @@ func (c *SmnClient) ShowNotifyPolicyInvoker(request *model.ShowNotifyPolicyReque
 	return &ShowNotifyPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SubscribeTopic 订阅主题
+//
+// 订阅终端确认订阅主题消息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) SubscribeTopic(request *model.SubscribeTopicRequest) (*model.SubscribeTopicResponse, error) {
+	requestDef := GenReqDefForSubscribeTopic()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SubscribeTopicResponse), nil
+	}
+}
+
+// SubscribeTopicInvoker 订阅主题
+func (c *SmnClient) SubscribeTopicInvoker(request *model.SubscribeTopicRequest) *SubscribeTopicInvoker {
+	requestDef := GenReqDefForSubscribeTopic()
+	return &SubscribeTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UnsubscribeSubscription 取消订阅
 //
 // 取消订阅主题
@@ -977,6 +1125,48 @@ func (c *SmnClient) UnsubscribeSubscription(request *model.UnsubscribeSubscripti
 func (c *SmnClient) UnsubscribeSubscriptionInvoker(request *model.UnsubscribeSubscriptionRequest) *UnsubscribeSubscriptionInvoker {
 	requestDef := GenReqDefForUnsubscribeSubscription()
 	return &UnsubscribeSubscriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UnsubscribeTopic 取消订阅主题
+//
+// 订阅终端取消订阅主题消息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) UnsubscribeTopic(request *model.UnsubscribeTopicRequest) (*model.UnsubscribeTopicResponse, error) {
+	requestDef := GenReqDefForUnsubscribeTopic()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UnsubscribeTopicResponse), nil
+	}
+}
+
+// UnsubscribeTopicInvoker 取消订阅主题
+func (c *SmnClient) UnsubscribeTopicInvoker(request *model.UnsubscribeTopicRequest) *UnsubscribeTopicInvoker {
+	requestDef := GenReqDefForUnsubscribeTopic()
+	return &UnsubscribeTopicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateKmsKey 更新主题下KMS密钥
+//
+// 更新密钥ID。执行更新KMS密钥时，用户需要先在IAM处创建名为smn_kms_agency的委托，并将对应的资源操作权限授权给SMN服务。SMN会使用该委托进行查询密钥状态和创建数据密钥操作。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SmnClient) UpdateKmsKey(request *model.UpdateKmsKeyRequest) (*model.UpdateKmsKeyResponse, error) {
+	requestDef := GenReqDefForUpdateKmsKey()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateKmsKeyResponse), nil
+	}
+}
+
+// UpdateKmsKeyInvoker 更新主题下KMS密钥
+func (c *SmnClient) UpdateKmsKeyInvoker(request *model.UpdateKmsKeyRequest) *UpdateKmsKeyInvoker {
+	requestDef := GenReqDefForUpdateKmsKey()
+	return &UpdateKmsKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateLogtank 更新云日志

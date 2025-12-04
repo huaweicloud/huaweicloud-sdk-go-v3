@@ -10,7 +10,7 @@ import (
 type ModifyVmNicRequest struct {
 	NicId string `json:"nic_id"`
 
-	Body *BareMetalModifyPortRequest `json:"body,omitempty"`
+	Body *BareMetalModifyPortRequestBody `json:"body,omitempty"`
 }
 
 func (o ModifyVmNicRequest) String() string {

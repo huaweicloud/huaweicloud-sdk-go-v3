@@ -8,7 +8,7 @@ import (
 
 // Selector 选择器
 type Selector struct {
-	FieldSelector *FieldSelector `json:"fieldSelector,omitempty"`
+	FieldSelector *FieldSelector `json:"fieldSelector"`
 }
 
 func (o Selector) String() string {

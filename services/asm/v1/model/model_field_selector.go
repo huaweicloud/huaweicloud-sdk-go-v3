@@ -10,13 +10,13 @@ import (
 type FieldSelector struct {
 
 	// Key值
-	Key *string `json:"key,omitempty"`
+	Key string `json:"key"`
 
 	// 操作符，仅支持取值\"In\"
-	Operator *string `json:"operator,omitempty"`
+	Operator string `json:"operator"`
 
 	// Value值
-	Values *[]string `json:"values,omitempty"`
+	Values []string `json:"values"`
 }
 
 func (o FieldSelector) String() string {

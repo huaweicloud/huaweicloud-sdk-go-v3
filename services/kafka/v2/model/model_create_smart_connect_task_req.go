@@ -23,12 +23,12 @@ type CreateSmartConnectTaskReq struct {
 	// SmartConnect任务配置的Topic正则表达式。
 	TopicsRegex *string `json:"topics_regex,omitempty"`
 
-	// SmartConnect任务的源端类型。
+	// **参数解释**： SmartConnect任务的源端类型。 **约束限制**： 不涉及。 **取值范围**： - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。 - NONE：不配置。 **默认取值**： 不涉及。
 	SourceType *CreateSmartConnectTaskReqSourceType `json:"source_type,omitempty"`
 
 	SourceTask *SmartConnectTaskReqSourceConfig `json:"source_task,omitempty"`
 
-	// SmartConnect任务的目标端类型。
+	// **参数解释**： SmartConnect任务的目标端类型。 **约束限制**： 不涉及。 **取值范围**： - OBS_SINK：转储。 - NONE：不配置。 **默认取值**： 不涉及。
 	SinkType *CreateSmartConnectTaskReqSinkType `json:"sink_type,omitempty"`
 
 	SinkTask *SmartConnectTaskReqSinkConfig `json:"sink_task,omitempty"`

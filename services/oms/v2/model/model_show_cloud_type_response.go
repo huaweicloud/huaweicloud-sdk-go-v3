@@ -8,6 +8,8 @@ import (
 
 // ShowCloudTypeResponse Response Object
 type ShowCloudTypeResponse struct {
+
+	// 支持的云服务类型
 	Body           *[]string `json:"body,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

@@ -965,6 +965,22 @@ func (i *DeleteAgencyInvoker) Invoke() (*model.DeleteAgencyResponse, error) {
 	}
 }
 
+type DeleteAlertNoticeConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAlertNoticeConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAlertNoticeConfigInvoker) Invoke() (*model.DeleteAlertNoticeConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAlertNoticeConfigResponse), nil
+	}
+}
+
 type DeleteAnticrawlerRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1925,6 +1941,22 @@ func (i *ListSecurityReportSubscriptionsInvoker) Invoke() (*model.ListSecurityRe
 	}
 }
 
+type ListSourceIpTop5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSourceIpTop5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSourceIpTop5Invoker) Invoke() (*model.ListSourceIpTop5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSourceIpTop5Response), nil
+	}
+}
+
 type ListStatisticsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1938,6 +1970,22 @@ func (i *ListStatisticsInvoker) Invoke() (*model.ListStatisticsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListStatisticsResponse), nil
+	}
+}
+
+type ListThreatsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListThreatsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListThreatsInvoker) Invoke() (*model.ListThreatsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListThreatsResponse), nil
 	}
 }
 
@@ -2002,6 +2050,22 @@ func (i *ListTopUrlInvoker) Invoke() (*model.ListTopUrlResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListTopUrlResponse), nil
+	}
+}
+
+type ListUrlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUrlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListUrlInvoker) Invoke() (*model.ListUrlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUrlResponse), nil
 	}
 }
 

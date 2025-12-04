@@ -229,6 +229,48 @@ func (c *DdmClient) ListApiVersionInvoker(request *model.ListApiVersionRequest) 
 	return &ListApiVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteNodes 批量删除实例的节点
+//
+// 批量删除实例的节点
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) BatchDeleteNodes(request *model.BatchDeleteNodesRequest) (*model.BatchDeleteNodesResponse, error) {
+	requestDef := GenReqDefForBatchDeleteNodes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteNodesResponse), nil
+	}
+}
+
+// BatchDeleteNodesInvoker 批量删除实例的节点
+func (c *DdmClient) BatchDeleteNodesInvoker(request *model.BatchDeleteNodesRequest) *BatchDeleteNodesInvoker {
+	requestDef := GenReqDefForBatchDeleteNodes()
+	return &BatchDeleteNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BindEip 绑定弹性公网IP
+//
+// 绑定弹性公网IP
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) BindEip(request *model.BindEipRequest) (*model.BindEipResponse, error) {
+	requestDef := GenReqDefForBindEip()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BindEipResponse), nil
+	}
+}
+
+// BindEipInvoker 绑定弹性公网IP
+func (c *DdmClient) BindEipInvoker(request *model.BindEipRequest) *BindEipInvoker {
+	requestDef := GenReqDefForBindEip()
+	return &BindEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CancelMigration 取消分片变更
 //
 // 取消分片变更
@@ -374,6 +416,27 @@ func (c *DdmClient) CreateDdmDatabase(request *model.CreateDdmDatabaseRequest) (
 func (c *DdmClient) CreateDdmDatabaseInvoker(request *model.CreateDdmDatabaseRequest) *CreateDdmDatabaseInvoker {
 	requestDef := GenReqDefForCreateDdmDatabase()
 	return &CreateDdmDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDdmInstance 购买创建DDM实例
+//
+// 购买创建DDM实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) CreateDdmInstance(request *model.CreateDdmInstanceRequest) (*model.CreateDdmInstanceResponse, error) {
+	requestDef := GenReqDefForCreateDdmInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDdmInstanceResponse), nil
+	}
+}
+
+// CreateDdmInstanceInvoker 购买创建DDM实例
+func (c *DdmClient) CreateDdmInstanceInvoker(request *model.CreateDdmInstanceRequest) *CreateDdmInstanceInvoker {
+	requestDef := GenReqDefForCreateDdmInstance()
+	return &CreateDdmInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateGroup 创建组
@@ -525,6 +588,27 @@ func (c *DdmClient) DeleteDdmInstanceInvoker(request *model.DeleteDdmInstanceReq
 	return &DeleteDdmInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteGroup 删除实例组
+//
+// 删除实例组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) DeleteGroup(request *model.DeleteGroupRequest) (*model.DeleteGroupResponse, error) {
+	requestDef := GenReqDefForDeleteGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteGroupResponse), nil
+	}
+}
+
+// DeleteGroupInvoker 删除实例组
+func (c *DdmClient) DeleteGroupInvoker(request *model.DeleteGroupRequest) *DeleteGroupInvoker {
+	requestDef := GenReqDefForDeleteGroup()
+	return &DeleteGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteInstance 删除DDM实例
 //
 // 删除指定的DDM实例，释放该实例的所有资源。
@@ -544,6 +628,27 @@ func (c *DdmClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model
 func (c *DdmClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequest) *DeleteInstanceInvoker {
 	requestDef := GenReqDefForDeleteInstance()
 	return &DeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteNodes 删除实例的节点
+//
+// 删除实例的节点。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) DeleteNodes(request *model.DeleteNodesRequest) (*model.DeleteNodesResponse, error) {
+	requestDef := GenReqDefForDeleteNodes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteNodesResponse), nil
+	}
+}
+
+// DeleteNodesInvoker 删除实例的节点
+func (c *DdmClient) DeleteNodesInvoker(request *model.DeleteNodesRequest) *DeleteNodesInvoker {
+	requestDef := GenReqDefForDeleteNodes()
+	return &DeleteNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteUser 删除DDM帐号
@@ -987,6 +1092,27 @@ func (c *DdmClient) ListSlowLogsInvoker(request *model.ListSlowLogsRequest) *Lis
 	return &ListSlowLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTasks 查询任务列表
+//
+// 查询任务列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ListTasks(request *model.ListTasksRequest) (*model.ListTasksResponse, error) {
+	requestDef := GenReqDefForListTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTasksResponse), nil
+	}
+}
+
+// ListTasksInvoker 查询任务列表
+func (c *DdmClient) ListTasksInvoker(request *model.ListTasksRequest) *ListTasksInvoker {
+	requestDef := GenReqDefForListTasks()
+	return &ListTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListUsers 查询DDM帐号列表
 //
 // 查询DDM帐号列表。
@@ -1048,6 +1174,27 @@ func (c *DdmClient) MigrateResults(request *model.MigrateResultsRequest) (*model
 func (c *DdmClient) MigrateResultsInvoker(request *model.MigrateResultsRequest) *MigrateResultsInvoker {
 	requestDef := GenReqDefForMigrateResults()
 	return &MigrateResultsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyEip 修改实例的ELB IP
+//
+// 修改实例的ELB IP
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ModifyEip(request *model.ModifyEipRequest) (*model.ModifyEipResponse, error) {
+	requestDef := GenReqDefForModifyEip()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyEipResponse), nil
+	}
+}
+
+// ModifyEipInvoker 修改实例的ELB IP
+func (c *DdmClient) ModifyEipInvoker(request *model.ModifyEipRequest) *ModifyEipInvoker {
+	requestDef := GenReqDefForModifyEip()
+	return &ModifyEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RebuildConfig DDM表数据重载
@@ -1134,6 +1281,27 @@ func (c *DdmClient) ResizeFlavorInvoker(request *model.ResizeFlavorRequest) *Res
 	return &ResizeFlavorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RestartDdmInstance 重启DDM实例
+//
+// 重启DDM实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) RestartDdmInstance(request *model.RestartDdmInstanceRequest) (*model.RestartDdmInstanceResponse, error) {
+	requestDef := GenReqDefForRestartDdmInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestartDdmInstanceResponse), nil
+	}
+}
+
+// RestartDdmInstanceInvoker 重启DDM实例
+func (c *DdmClient) RestartDdmInstanceInvoker(request *model.RestartDdmInstanceRequest) *RestartDdmInstanceInvoker {
+	requestDef := GenReqDefForRestartDdmInstance()
+	return &RestartDdmInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RestartInstance 重启DDM实例
 //
 // 重启指定的DDM实例。
@@ -1153,6 +1321,27 @@ func (c *DdmClient) RestartInstance(request *model.RestartInstanceRequest) (*mod
 func (c *DdmClient) RestartInstanceInvoker(request *model.RestartInstanceRequest) *RestartInstanceInvoker {
 	requestDef := GenReqDefForRestartInstance()
 	return &RestartInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestartNode 重启DDM节点
+//
+// 重启DDM节点
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) RestartNode(request *model.RestartNodeRequest) (*model.RestartNodeResponse, error) {
+	requestDef := GenReqDefForRestartNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestartNodeResponse), nil
+	}
+}
+
+// RestartNodeInvoker 重启DDM节点
+func (c *DdmClient) RestartNodeInvoker(request *model.RestartNodeRequest) *RestartNodeInvoker {
+	requestDef := GenReqDefForRestartNode()
+	return &RestartNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // Restore2Exist 恢复到新实例
@@ -1365,6 +1554,27 @@ func (c *DdmClient) ShowDdmJobResultInvoker(request *model.ShowDdmJobResultReque
 	return &ShowDdmJobResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDdmNodeDetail 查询DDM实例节点详情
+//
+// 查询DDM实例节点详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ShowDdmNodeDetail(request *model.ShowDdmNodeDetailRequest) (*model.ShowDdmNodeDetailResponse, error) {
+	requestDef := GenReqDefForShowDdmNodeDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDdmNodeDetailResponse), nil
+	}
+}
+
+// ShowDdmNodeDetailInvoker 查询DDM实例节点详情
+func (c *DdmClient) ShowDdmNodeDetailInvoker(request *model.ShowDdmNodeDetailRequest) *ShowDdmNodeDetailInvoker {
+	requestDef := GenReqDefForShowDdmNodeDetail()
+	return &ShowDdmNodeDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowInstance 查询DDM实例详情
 //
 // 查询指定DDM实例的详细信息。
@@ -1512,6 +1722,27 @@ func (c *DdmClient) ShowProcessesAuditLogInvoker(request *model.ShowProcessesAud
 	return &ShowProcessesAuditLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowPublicIp 获取DDM实例绑定的弹性公网IP信息
+//
+// 获取DDM实例绑定的弹性公网IP信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ShowPublicIp(request *model.ShowPublicIpRequest) (*model.ShowPublicIpResponse, error) {
+	requestDef := GenReqDefForShowPublicIp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPublicIpResponse), nil
+	}
+}
+
+// ShowPublicIpInvoker 获取DDM实例绑定的弹性公网IP信息
+func (c *DdmClient) ShowPublicIpInvoker(request *model.ShowPublicIpRequest) *ShowPublicIpInvoker {
+	requestDef := GenReqDefForShowPublicIp()
+	return &ShowPublicIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowRelatedDns 查询实例在恢复时间点关联的数据节点
 //
 // 查询实例在恢复时间点关联的数据节点
@@ -1594,6 +1825,48 @@ func (c *DdmClient) SwitchSsl(request *model.SwitchSslRequest) (*model.SwitchSsl
 func (c *DdmClient) SwitchSslInvoker(request *model.SwitchSslRequest) *SwitchSslInvoker {
 	requestDef := GenReqDefForSwitchSsl()
 	return &SwitchSslInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SyncDnInformation 同步数据节点
+//
+// 同步数据节点
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) SyncDnInformation(request *model.SyncDnInformationRequest) (*model.SyncDnInformationResponse, error) {
+	requestDef := GenReqDefForSyncDnInformation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SyncDnInformationResponse), nil
+	}
+}
+
+// SyncDnInformationInvoker 同步数据节点
+func (c *DdmClient) SyncDnInformationInvoker(request *model.SyncDnInformationRequest) *SyncDnInformationInvoker {
+	requestDef := GenReqDefForSyncDnInformation()
+	return &SyncDnInformationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UnbindEip 解绑弹性公网IP
+//
+// 解绑弹性公网IP
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) UnbindEip(request *model.UnbindEipRequest) (*model.UnbindEipResponse, error) {
+	requestDef := GenReqDefForUnbindEip()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UnbindEipResponse), nil
+	}
+}
+
+// UnbindEipInvoker 解绑弹性公网IP
+func (c *DdmClient) UnbindEipInvoker(request *model.UnbindEipRequest) *UnbindEipInvoker {
+	requestDef := GenReqDefForUnbindEip()
+	return &UnbindEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDatabaseInfo 同步DN信息

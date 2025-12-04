@@ -36,11 +36,11 @@ type UpdatePremiumHostRequestBody struct {
 	// 预留参数，用于后期设计冻结域名，解锁域名功能，目前暂不支持
 	Locked *int32 `json:"locked,omitempty"`
 
-	// 域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-	ProtectStatus *int32 `json:"protect_status,omitempty"`
+	// **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+	ProtectStatus *UpdatePremiumHostRequestBodyProtectStatus `json:"protect_status,omitempty"`
 
-	// 域名接入状态，0表示未接入，1表示已接入
-	AccessStatus *int32 `json:"access_status,omitempty"`
+	// **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
+	AccessStatus *UpdatePremiumHostRequestBodyAccessStatus `json:"access_status,omitempty"`
 
 	// 时间戳
 	Timestamp *int32 `json:"timestamp,omitempty"`
@@ -186,5 +186,100 @@ func (c *UpdatePremiumHostRequestBodyCipher) UnmarshalJSON(b []byte) error {
 		return nil
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type UpdatePremiumHostRequestBodyProtectStatus struct {
+	value int32
+}
+
+type UpdatePremiumHostRequestBodyProtectStatusEnum struct {
+	E_MINUS_1 UpdatePremiumHostRequestBodyProtectStatus
+	E_0       UpdatePremiumHostRequestBodyProtectStatus
+	E_1       UpdatePremiumHostRequestBodyProtectStatus
+}
+
+func GetUpdatePremiumHostRequestBodyProtectStatusEnum() UpdatePremiumHostRequestBodyProtectStatusEnum {
+	return UpdatePremiumHostRequestBodyProtectStatusEnum{
+		E_MINUS_1: UpdatePremiumHostRequestBodyProtectStatus{
+			value: -1,
+		}, E_0: UpdatePremiumHostRequestBodyProtectStatus{
+			value: 0,
+		}, E_1: UpdatePremiumHostRequestBodyProtectStatus{
+			value: 1,
+		},
+	}
+}
+
+func (c UpdatePremiumHostRequestBodyProtectStatus) Value() int32 {
+	return c.value
+}
+
+func (c UpdatePremiumHostRequestBodyProtectStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdatePremiumHostRequestBodyProtectStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type UpdatePremiumHostRequestBodyAccessStatus struct {
+	value int32
+}
+
+type UpdatePremiumHostRequestBodyAccessStatusEnum struct {
+	E_0 UpdatePremiumHostRequestBodyAccessStatus
+	E_1 UpdatePremiumHostRequestBodyAccessStatus
+}
+
+func GetUpdatePremiumHostRequestBodyAccessStatusEnum() UpdatePremiumHostRequestBodyAccessStatusEnum {
+	return UpdatePremiumHostRequestBodyAccessStatusEnum{
+		E_0: UpdatePremiumHostRequestBodyAccessStatus{
+			value: 0,
+		}, E_1: UpdatePremiumHostRequestBodyAccessStatus{
+			value: 1,
+		},
+	}
+}
+
+func (c UpdatePremiumHostRequestBodyAccessStatus) Value() int32 {
+	return c.value
+}
+
+func (c UpdatePremiumHostRequestBodyAccessStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdatePremiumHostRequestBodyAccessStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }

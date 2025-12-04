@@ -13,7 +13,9 @@ type CreateSecretResponse struct {
 	Auths map[string]AuthInfo `json:"auths,omitempty"`
 
 	XSwrDockerlogin *string `json:"X-Swr-Dockerlogin,omitempty"`
-	HttpStatusCode  int     `json:"-"`
+
+	XSwrExpireat   *string `json:"X-Swr-Expireat,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateSecretResponse) String() string {

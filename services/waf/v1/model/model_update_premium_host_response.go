@@ -77,11 +77,11 @@ type UpdatePremiumHostResponse struct {
 	// 证书名称
 	Certificatename *string `json:"certificatename,omitempty"`
 
-	// 域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-	ProtectStatus *int32 `json:"protect_status,omitempty"`
+	// **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测  **默认取值：** 不涉及
+	ProtectStatus *UpdatePremiumHostResponseProtectStatus `json:"protect_status,omitempty"`
 
-	// 域名接入状态，0表示未接入，1表示已接入
-	AccessStatus *int32 `json:"access_status,omitempty"`
+	// **参数解释：** 域名接入状态 **约束限制：** 不涉及 **取值范围：**  - 0: 未接入  - 1: 已接入  **默认取值：** 不涉及
+	AccessStatus *UpdatePremiumHostResponseAccessStatus `json:"access_status,omitempty"`
 
 	// 网站名称，对应WAF控制台域名详情中的网站名称
 	WebTag *string `json:"web_tag,omitempty"`
@@ -227,5 +227,100 @@ func (c *UpdatePremiumHostResponseCipher) UnmarshalJSON(b []byte) error {
 		return nil
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type UpdatePremiumHostResponseProtectStatus struct {
+	value int32
+}
+
+type UpdatePremiumHostResponseProtectStatusEnum struct {
+	E_MINUS_1 UpdatePremiumHostResponseProtectStatus
+	E_0       UpdatePremiumHostResponseProtectStatus
+	E_1       UpdatePremiumHostResponseProtectStatus
+}
+
+func GetUpdatePremiumHostResponseProtectStatusEnum() UpdatePremiumHostResponseProtectStatusEnum {
+	return UpdatePremiumHostResponseProtectStatusEnum{
+		E_MINUS_1: UpdatePremiumHostResponseProtectStatus{
+			value: -1,
+		}, E_0: UpdatePremiumHostResponseProtectStatus{
+			value: 0,
+		}, E_1: UpdatePremiumHostResponseProtectStatus{
+			value: 1,
+		},
+	}
+}
+
+func (c UpdatePremiumHostResponseProtectStatus) Value() int32 {
+	return c.value
+}
+
+func (c UpdatePremiumHostResponseProtectStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdatePremiumHostResponseProtectStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type UpdatePremiumHostResponseAccessStatus struct {
+	value int32
+}
+
+type UpdatePremiumHostResponseAccessStatusEnum struct {
+	E_0 UpdatePremiumHostResponseAccessStatus
+	E_1 UpdatePremiumHostResponseAccessStatus
+}
+
+func GetUpdatePremiumHostResponseAccessStatusEnum() UpdatePremiumHostResponseAccessStatusEnum {
+	return UpdatePremiumHostResponseAccessStatusEnum{
+		E_0: UpdatePremiumHostResponseAccessStatus{
+			value: 0,
+		}, E_1: UpdatePremiumHostResponseAccessStatus{
+			value: 1,
+		},
+	}
+}
+
+func (c UpdatePremiumHostResponseAccessStatus) Value() int32 {
+	return c.value
+}
+
+func (c UpdatePremiumHostResponseAccessStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdatePremiumHostResponseAccessStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }

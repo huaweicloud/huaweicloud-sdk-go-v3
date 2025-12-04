@@ -8,10 +8,7 @@ import (
 
 // UpdateInstanceGroupResponse Response Object
 type UpdateInstanceGroupResponse struct {
-
-	// 后台任务ID
-	JobId          *string `json:"job_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o UpdateInstanceGroupResponse) String() string {

@@ -42,8 +42,8 @@ type UpdateHostRequestBody struct {
 	// 是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
 	ExclusiveIp *bool `json:"exclusive_ip,omitempty"`
 
-	// 套餐付费模式，默认值为prePaid。prePaid：包周期模式；postPaid：按需模式。
-	PaidType *string `json:"paid_type,omitempty"`
+	// **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
+	PaidType *UpdateHostRequestBodyPaidType `json:"paid_type,omitempty"`
 
 	BlockPage *BlockPage `json:"block_page,omitempty"`
 
@@ -171,6 +171,53 @@ func (c UpdateHostRequestBodyCipher) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateHostRequestBodyCipher) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type UpdateHostRequestBodyPaidType struct {
+	value string
+}
+
+type UpdateHostRequestBodyPaidTypeEnum struct {
+	PRE_PAID  UpdateHostRequestBodyPaidType
+	POST_PAID UpdateHostRequestBodyPaidType
+}
+
+func GetUpdateHostRequestBodyPaidTypeEnum() UpdateHostRequestBodyPaidTypeEnum {
+	return UpdateHostRequestBodyPaidTypeEnum{
+		PRE_PAID: UpdateHostRequestBodyPaidType{
+			value: "prePaid",
+		},
+		POST_PAID: UpdateHostRequestBodyPaidType{
+			value: "postPaid",
+		},
+	}
+}
+
+func (c UpdateHostRequestBodyPaidType) Value() string {
+	return c.value
+}
+
+func (c UpdateHostRequestBodyPaidType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateHostRequestBodyPaidType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

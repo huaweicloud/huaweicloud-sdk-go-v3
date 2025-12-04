@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -24,8 +27,8 @@ type ListCompositeHostsRequest struct {
 	// 防护策略名称
 	Policyname *string `json:"policyname,omitempty"`
 
-	// 域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
-	ProtectStatus *int32 `json:"protect_status,omitempty"`
+	// **参数解释：** 域名防护状态标识，用于指定域名在WAF中的防护运行状态 **约束限制：** 不涉及 **取值范围：**  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测 **默认取值：** 不涉及
+	ProtectStatus *ListCompositeHostsRequestProtectStatus `json:"protect_status,omitempty"`
 
 	// 域名所属WAF模式
 	WafType *string `json:"waf_type,omitempty"`
@@ -41,4 +44,53 @@ func (o ListCompositeHostsRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListCompositeHostsRequest", string(data)}, " ")
+}
+
+type ListCompositeHostsRequestProtectStatus struct {
+	value int32
+}
+
+type ListCompositeHostsRequestProtectStatusEnum struct {
+	E_MINUS_1 ListCompositeHostsRequestProtectStatus
+	E_0       ListCompositeHostsRequestProtectStatus
+	E_1       ListCompositeHostsRequestProtectStatus
+}
+
+func GetListCompositeHostsRequestProtectStatusEnum() ListCompositeHostsRequestProtectStatusEnum {
+	return ListCompositeHostsRequestProtectStatusEnum{
+		E_MINUS_1: ListCompositeHostsRequestProtectStatus{
+			value: -1,
+		}, E_0: ListCompositeHostsRequestProtectStatus{
+			value: 0,
+		}, E_1: ListCompositeHostsRequestProtectStatus{
+			value: 1,
+		},
+	}
+}
+
+func (c ListCompositeHostsRequestProtectStatus) Value() int32 {
+	return c.value
+}
+
+func (c ListCompositeHostsRequestProtectStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListCompositeHostsRequestProtectStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }
