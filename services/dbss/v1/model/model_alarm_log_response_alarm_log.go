@@ -11,7 +11,7 @@ type AlarmLogResponseAlarmLog struct {
 	// 告警ID
 	Id *string `json:"id,omitempty"`
 
-	// 告警状态 - ON - OFF
+	// 告警状态 - ON：持续中 - OFF：已关闭
 	AlarmLife *string `json:"alarmLife,omitempty"`
 
 	// 是否发送邮件

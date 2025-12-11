@@ -15,7 +15,7 @@ type ShowCommonPortResponse struct {
 	// **参数解释** 端口类型 **取值范围** - TCP：TCP协议 - UDP：UDP协议 - TCP6：TCP6协议 - UDP6：UDP6协议
 	Type *string `json:"type,omitempty"`
 
-	// **参数解释** 状态 **取值范围** - normal：正常 - danger：危险 - unknow：未知
+	// **参数解释** 状态 **取值范围** - normal：正常 - danger：危险 - unknown：未知
 	Status *string `json:"status,omitempty"`
 
 	// **参数解释** 中文描述 **取值范围** 字符长度1-256

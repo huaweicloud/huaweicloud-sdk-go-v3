@@ -14,7 +14,7 @@ type RestoreDuplicationRequestInfo struct {
 	// **参数解释**： 恢复后是否开机, 默认开机。 **约束限制**: 不涉及 **取值范围**: - true：开机 - false: 不开机 **默认取值**: true
 	PowerOn *bool `json:"power_on,omitempty"`
 
-	// **参数解释**： 恢复的映射关系(整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
+	// **参数解释**： 恢复的映射关系（整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
 	Mappings *[]BackupRestoreServerMappingInfo `json:"mappings,omitempty"`
 }
 

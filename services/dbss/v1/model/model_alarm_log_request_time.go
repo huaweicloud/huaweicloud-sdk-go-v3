@@ -12,7 +12,7 @@ import (
 // AlarmLogRequestTime 时间
 type AlarmLogRequestTime struct {
 
-	// 时间范围。和start_time，end_time不能同时使用，同时传该参数优先级更高。枚举值 HALF_HOUR, HOUR, THREE_HOUR, TWELVE_HOUR, DAY, WEEK, MONTH;
+	// 时间范围。和start_time，end_time不能同时使用，同时传该参数优先级更高。枚举值 - HALF_HOUR：半小时 - HOUR：1小时 - THREE_HOUR：3小时 - TWELVE_HOUR：12小时 - DAY：1天 - WEEK：1周 - MONTH：1个月;
 	TimeRange *AlarmLogRequestTimeTimeRange `json:"time_range,omitempty"`
 
 	// 开始时间，必须和end_time成对出现。格式必须为yyyy-MM-dd HH:mm:ss。UTC时间

@@ -10,8 +10,11 @@ import (
 type ListIRacksResponse struct {
 	Iracks *[]IRack `json:"iracks,omitempty"`
 
-	PageInfo       *PageInfo `json:"page_info,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	PageInfo *PageInfo `json:"page_info,omitempty"`
+
+	// 机柜总数
+	Count          *int32 `json:"count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListIRacksResponse) String() string {

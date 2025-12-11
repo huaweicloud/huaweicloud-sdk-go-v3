@@ -9,7 +9,7 @@ import (
 // CreateQuotasOrderResponse Response Object
 type CreateQuotasOrderResponse struct {
 
-	// 订单ID
+	// **参数解释**： 订单ID **约束限制**: 不涉及 **取值范围**： 字符长度1-256 **默认取值**: 不涉及
 	OrderId        *string `json:"order_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

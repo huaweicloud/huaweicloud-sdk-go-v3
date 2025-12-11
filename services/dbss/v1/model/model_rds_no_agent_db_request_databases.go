@@ -14,7 +14,7 @@ type RdsNoAgentDbRequestDatabases struct {
 	// 数据库名称
 	DbName string `json:"db_name"`
 
-	// 数据库状态
+	// 数据库状态 - ON：启用 - OFF：关闭
 	Status string `json:"status"`
 
 	// 数据库端口
@@ -29,7 +29,7 @@ type RdsNoAgentDbRequestDatabases struct {
 	// 数据库版本
 	Version string `json:"version"`
 
-	// 数据库类型
+	// 数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - TAURUS: Taurus DB - DWS: GaussDB(DWS) - GAUSSDBOPENGAUSS：GaussDB/openGauss - DDS： DDS(MongoDB)
 	Type string `json:"type"`
 
 	// 企业项目ID

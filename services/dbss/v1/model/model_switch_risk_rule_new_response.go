@@ -9,7 +9,7 @@ import (
 // SwitchRiskRuleNewResponse Response Object
 type SwitchRiskRuleNewResponse struct {
 
-	// 响应状态
+	// 响应状态 - SUCCESS: 成功  - FAILED: 失败
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

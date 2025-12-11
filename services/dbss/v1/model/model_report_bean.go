@@ -35,7 +35,7 @@ type ReportBean struct {
 	// 开始时间
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 报表类型 - PDF - ZIP
+	// 报表类型 - PDF: pdf - ZIP: zip
 	TemplateType *string `json:"template_type,omitempty"`
 
 	// 周期 - AUDIT_REPORT_DAY: 按天 - AUDIT_REPORT_WEEK： 按周 - AUDIT_REPORT_MONTH： 按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即

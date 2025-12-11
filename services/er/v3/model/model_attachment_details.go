@@ -39,7 +39,7 @@ type AttachmentDetails struct {
 	// 内部连接关联的资源ID
 	ResourceId string `json:"resource_id"`
 
-	// 内部连接关联的资源类型: - vgw：云专线的虚拟网关 - vpn：vpn网关 -  - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 -  -  - vpc：虚拟私有云 -
+	// 内部连接关联的资源类型: - vgw：云专线的虚拟网关 - vpn：vpn网关 -  - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 - vpc：虚拟私有云 -
 	ResourceType string `json:"resource_type"`
 
 	// 资源所属项目ID

@@ -2629,22 +2629,6 @@ func (i *ShowPageNoticesInvoker) Invoke() (*model.ShowPageNoticesResponse, error
 	}
 }
 
-type ShowPorcessTopInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowPorcessTopInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowPorcessTopInvoker) Invoke() (*model.ShowPorcessTopResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowPorcessTopResponse), nil
-	}
-}
-
 type ShowPortTopInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2658,6 +2642,22 @@ func (i *ShowPortTopInvoker) Invoke() (*model.ShowPortTopResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowPortTopResponse), nil
+	}
+}
+
+type ShowProcessTopInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProcessTopInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowProcessTopInvoker) Invoke() (*model.ShowProcessTopResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProcessTopResponse), nil
 	}
 }
 
@@ -5381,6 +5381,22 @@ func (i *ChangeFilePathWhiteDetailInvoker) Invoke() (*model.ChangeFilePathWhiteD
 	}
 }
 
+type ChangeFilePathWhiteListsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeFilePathWhiteListsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeFilePathWhiteListsInvoker) Invoke() (*model.ChangeFilePathWhiteListsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeFilePathWhiteListsResponse), nil
+	}
+}
+
 type ChangeImageWhiteListInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -6034,6 +6050,22 @@ func (i *ShowFilePathWhiteDetailInvoker) Invoke() (*model.ShowFilePathWhiteDetai
 		return nil, err
 	} else {
 		return result.(*model.ShowFilePathWhiteDetailResponse), nil
+	}
+}
+
+type ShowFilePathWhiteListsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFilePathWhiteListsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowFilePathWhiteListsInvoker) Invoke() (*model.ShowFilePathWhiteListsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFilePathWhiteListsResponse), nil
 	}
 }
 

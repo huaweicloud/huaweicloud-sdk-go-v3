@@ -11,7 +11,7 @@ type AuditAgentRespoonseAgents struct {
 	// agent ID
 	AgentId string `json:"agent_id"`
 
-	// agent 类型
+	// agent 类型 - DB: 数据库端 - APP: 应用端
 	AgentType string `json:"agent_type"`
 
 	// agent OS
@@ -26,7 +26,7 @@ type AuditAgentRespoonseAgents struct {
 	// cpu阈值
 	CpuThreshold *int32 `json:"cpu_threshold,omitempty"`
 
-	// agent状态
+	// agent状态 - 1：开启 - 0：关闭
 	Status *int32 `json:"status,omitempty"`
 
 	// agent网卡
@@ -35,7 +35,7 @@ type AuditAgentRespoonseAgents struct {
 	// 数据库名称
 	DbName *string `json:"db_name,omitempty"`
 
-	// 数据流量抓取状态
+	// 数据流量抓取状态 - 1：运行中 - 2：休眠中 - 3：已停止 - 4：异常
 	DatacapStatus *int32 `json:"datacap_status,omitempty"`
 
 	// agent安装地址

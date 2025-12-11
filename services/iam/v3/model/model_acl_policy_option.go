@@ -15,7 +15,7 @@ type AclPolicyOption struct {
 	AllowIpRanges *[]AllowIpRangesOption `json:"allow_ip_ranges,omitempty"`
 
 	// 允许访问的VPC端点。
-	AllowVpcEndpoints *[]AllowVpcEndpointsResult `json:"allow_vpc_endpoints,omitempty"`
+	AllowVpcEndpoints *[]AllowVpcEndpointsOption `json:"allow_vpc_endpoints,omitempty"`
 }
 
 func (o AclPolicyOption) String() string {

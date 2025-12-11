@@ -14,6 +14,12 @@ type ListAvailableRdsForMigrateRequest struct {
 
 	// 逻辑库名称
 	DbName string `json:"db_name"`
+
+	// 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0。取值必须为数字，且不能为负数。
+	Offset *int32 `json:"offset,omitempty"`
+
+	// 分页参数：每页多少条。
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListAvailableRdsForMigrateRequest) String() string {

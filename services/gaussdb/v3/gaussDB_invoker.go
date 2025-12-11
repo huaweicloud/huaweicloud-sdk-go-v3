@@ -21,6 +21,22 @@ func (i *AddDatabasePermissionInvoker) Invoke() (*model.AddDatabasePermissionRes
 	}
 }
 
+type BatchDeleteBackupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteBackupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteBackupInvoker) Invoke() (*model.BatchDeleteBackupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteBackupResponse), nil
+	}
+}
+
 type BatchTagActionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1269,6 +1285,22 @@ func (i *SetAuditLogPolicyInvoker) Invoke() (*model.SetAuditLogPolicyResponse, e
 	}
 }
 
+type SetAutoSqlLimitingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetAutoSqlLimitingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetAutoSqlLimitingInvoker) Invoke() (*model.SetAutoSqlLimitingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetAutoSqlLimitingResponse), nil
+	}
+}
+
 type SetGaussMySqlProxyWeightInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1426,6 +1458,22 @@ func (i *ShowAutoScalingPolicyInvoker) Invoke() (*model.ShowAutoScalingPolicyRes
 		return nil, err
 	} else {
 		return result.(*model.ShowAutoScalingPolicyResponse), nil
+	}
+}
+
+type ShowAutoSqlLimitingLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAutoSqlLimitingLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAutoSqlLimitingLogInvoker) Invoke() (*model.ShowAutoSqlLimitingLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAutoSqlLimitingLogResponse), nil
 	}
 }
 
@@ -1682,6 +1730,22 @@ func (i *ShowGaussMySqlQuotasInvoker) Invoke() (*model.ShowGaussMySqlQuotasRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowGaussMySqlQuotasResponse), nil
+	}
+}
+
+type ShowHistoricalSqlFilterRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHistoricalSqlFilterRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowHistoricalSqlFilterRuleInvoker) Invoke() (*model.ShowHistoricalSqlFilterRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHistoricalSqlFilterRuleResponse), nil
 	}
 }
 
@@ -1986,6 +2050,22 @@ func (i *ShowSlowlogSensitiveStatusInvoker) Invoke() (*model.ShowSlowlogSensitiv
 		return nil, err
 	} else {
 		return result.(*model.ShowSlowlogSensitiveStatusResponse), nil
+	}
+}
+
+type ShowSqlAutoSqlLimitingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSqlAutoSqlLimitingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSqlAutoSqlLimitingInvoker) Invoke() (*model.ShowSqlAutoSqlLimitingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSqlAutoSqlLimitingResponse), nil
 	}
 }
 

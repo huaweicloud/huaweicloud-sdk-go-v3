@@ -32,6 +32,9 @@ type ListScheduleJobsRequest struct {
 
 	// 任务调度类型。
 	JobName *string `json:"job_name,omitempty"`
+
+	// 实例ID，此参数是实例的唯一标识。
+	InstanceId *string `json:"instance_id,omitempty"`
 }
 
 func (o ListScheduleJobsRequest) String() string {

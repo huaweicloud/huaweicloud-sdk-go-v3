@@ -41,6 +41,9 @@ type ListFirewallDetail struct {
 
 	// 功能说明：ACL绑定的子网列表
 	Associations []FirewallAssociation `json:"associations"`
+
+	// 参数解释： 网络ACL支持绑定的子网类型。 取值范围： normal：默认值，表示网络ACL支持绑定普通子网。 CloudDCN：表示网络ACL支持绑定CloudDCN子网。
+	Type string `json:"type"`
 }
 
 func (o ListFirewallDetail) String() string {

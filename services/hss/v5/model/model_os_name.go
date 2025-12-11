@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// OsName 操作系统名称
+// OsName **参数解释**: 操作系统名称 **取值范围**: 字符长度0-128位
 type OsName struct {
 }
 

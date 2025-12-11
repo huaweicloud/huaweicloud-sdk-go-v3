@@ -12,7 +12,7 @@ type AutoLauchResponseInfo struct {
 	// **参数解释**: Agent ID **取值范围**: 字符长度1-64位
 	AgentId *string `json:"agent_id,omitempty"`
 
-	// **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+	// **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
 	HostId *string `json:"host_id,omitempty"`
 
 	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位

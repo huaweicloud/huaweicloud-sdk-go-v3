@@ -21,6 +21,22 @@ func (i *AssociateRouteTableInvoker) Invoke() (*model.AssociateRouteTableRespons
 	}
 }
 
+type ChangeAssociationRoutePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeAssociationRoutePolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeAssociationRoutePolicyInvoker) Invoke() (*model.ChangeAssociationRoutePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeAssociationRoutePolicyResponse), nil
+	}
+}
+
 type DisassociateRouteTableInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -402,6 +418,22 @@ func (i *ListPropagationsInvoker) Invoke() (*model.ListPropagationsResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListPropagationsResponse), nil
+	}
+}
+
+type UpdatePropagationRoutePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePropagationRoutePolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePropagationRoutePolicyInvoker) Invoke() (*model.UpdatePropagationRoutePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePropagationRoutePolicyResponse), nil
 	}
 }
 

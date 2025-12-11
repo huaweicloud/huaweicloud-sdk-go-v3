@@ -9,13 +9,13 @@ import (
 // CreateAntiVirusPaidTaskRequestInfo 创建付费扫描任务
 type CreateAntiVirusPaidTaskRequestInfo struct {
 
-	// 任务名称
+	// **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
 	TaskName string `json:"task_name"`
 
-	// 任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+	// **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
 	ScanType string `json:"scan_type"`
 
-	// 处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+	// **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
 	Action string `json:"action"`
 
 	// 病毒查杀主机列表

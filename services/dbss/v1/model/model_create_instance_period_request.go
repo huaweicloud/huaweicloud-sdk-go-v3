@@ -35,7 +35,7 @@ type CreateInstancePeriodRequest struct {
 	// 云服务器所在区域ID
 	Region string `json:"region"`
 
-	// 服务类型： - hws.service.type.dbss
+	// 服务类型： - hws.service.type.dbss: 数据库审计
 	CloudServiceType string `json:"cloud_service_type"`
 
 	// 计费模式： - 0: 包周期计费 - 1: 按需计费

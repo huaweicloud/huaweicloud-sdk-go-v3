@@ -10,7 +10,7 @@ import (
 type ListRecycleInstancesResponse struct {
 
 	// 数据总数
-	TotalCount *string `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 回收站实例信息
 	Instances      *[]RecycleInstanceV3 `json:"instances,omitempty"`

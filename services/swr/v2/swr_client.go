@@ -19,6 +19,48 @@ func SwrClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// CheckAgency 查询委托是否存在
+//
+// 检查租户是否已委托SWR服务通过触发器功能调用CCE、CCI服务，一般由前端控制台自动调用，用户无需手动调用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) CheckAgency(request *model.CheckAgencyRequest) (*model.CheckAgencyResponse, error) {
+	requestDef := GenReqDefForCheckAgency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckAgencyResponse), nil
+	}
+}
+
+// CheckAgencyInvoker 查询委托是否存在
+func (c *SwrClient) CheckAgencyInvoker(request *model.CheckAgencyRequest) *CheckAgencyInvoker {
+	requestDef := GenReqDefForCheckAgency()
+	return &CheckAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAgency 创建委托
+//
+// 租户首次使用SWR服务时创建SWR服务内部委托，一般由前端控制台自动调用，用户无需手动调用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) CreateAgency(request *model.CreateAgencyRequest) (*model.CreateAgencyResponse, error) {
+	requestDef := GenReqDefForCreateAgency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAgencyResponse), nil
+	}
+}
+
+// CreateAgencyInvoker 创建委托
+func (c *SwrClient) CreateAgencyInvoker(request *model.CreateAgencyRequest) *CreateAgencyInvoker {
+	requestDef := GenReqDefForCreateAgency()
+	return &CreateAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAuthorizationToken 生成增强型登录指令(新)
 //
 // 调用该接口，通过获取响应消息头的X-Swr-Dockerlogin的值及响应消息体的host值，可生成增强型登录指令,注：此接口只支持IAM新平面的调用方式。
@@ -710,6 +752,27 @@ func (c *SwrClient) ListSharedReposDetails(request *model.ListSharedReposDetails
 func (c *SwrClient) ListSharedReposDetailsInvoker(request *model.ListSharedReposDetailsRequest) *ListSharedReposDetailsInvoker {
 	requestDef := GenReqDefForListSharedReposDetails()
 	return &ListSharedReposDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSyncRegions 获取可进行镜像同步的区域列表
+//
+// 获取可进行镜像同步的区域列表，用户可以将镜像手动或自动同步到此接口返回的区域。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) ListSyncRegions(request *model.ListSyncRegionsRequest) (*model.ListSyncRegionsResponse, error) {
+	requestDef := GenReqDefForListSyncRegions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSyncRegionsResponse), nil
+	}
+}
+
+// ListSyncRegionsInvoker 获取可进行镜像同步的区域列表
+func (c *SwrClient) ListSyncRegionsInvoker(request *model.ListSyncRegionsRequest) *ListSyncRegionsInvoker {
+	requestDef := GenReqDefForListSyncRegions()
+	return &ListSyncRegionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListTriggersDetails 获取镜像仓库下的触发器列表

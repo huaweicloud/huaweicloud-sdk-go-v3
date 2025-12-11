@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ExportTaskInfoRequestBodyOperationalReportData **参数解释**: 导出的报告参数数据
+// ExportTaskInfoRequestBodyOperationalReportData **参数解释**: 导出的报告参数数据 **约束限制**: 不涉及
 type ExportTaskInfoRequestBodyOperationalReportData struct {
 
 	// **参数解释**: 导出的报告的id **约束限制**: 不涉及 **取值范围**: 字符长度1-32位 **默认取值**: 不涉及

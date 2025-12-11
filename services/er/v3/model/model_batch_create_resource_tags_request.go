@@ -15,7 +15,7 @@ type BatchCreateResourceTagsRequest struct {
 	// 资源ID
 	ResourceId string `json:"resource_id"`
 
-	// 标签资源类型: - instance: 企业路由器实例 - route-table: 路由表 - vpc-attachment: VPC连接 - vgw-attachment: 虚拟网关连接 - peering-attachment: 对等连接（Peering）连接 - vpn-attachment: VPN网关连接 -  -  -  -  - attachments: 所有连接类型
+	// 标签资源类型: - instance: 企业路由器实例 - route-table: 路由表 - vpc-attachment: VPC连接 - vgw-attachment: 虚拟网关连接 - peering-attachment: 对等连接（Peering）连接 - vpn-attachment: VPN网关连接 - attachments: 所有连接类型
 	ResourceType BatchCreateResourceTagsRequestResourceType `json:"resource_type"`
 
 	Body *BatchOperateResourceTagsRequestBody `json:"body,omitempty"`

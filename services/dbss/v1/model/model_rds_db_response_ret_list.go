@@ -11,7 +11,7 @@ type RdsDbResponseRetList struct {
 	// rds数据库id
 	Id string `json:"id"`
 
-	// 状态 - SUCCESS - FAILED
+	// 状态 - SUCCESS: 成功 - FAILED： 失败
 	RetStatus string `json:"ret_status"`
 
 	// 描述

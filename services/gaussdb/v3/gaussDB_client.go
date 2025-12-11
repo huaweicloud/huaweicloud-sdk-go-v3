@@ -40,6 +40,27 @@ func (c *GaussDBClient) AddDatabasePermissionInvoker(request *model.AddDatabaseP
 	return &AddDatabasePermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteBackup 批量删除手动备份
+//
+// 批量删除手动备份。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) BatchDeleteBackup(request *model.BatchDeleteBackupRequest) (*model.BatchDeleteBackupResponse, error) {
+	requestDef := GenReqDefForBatchDeleteBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteBackupResponse), nil
+	}
+}
+
+// BatchDeleteBackupInvoker 批量删除手动备份
+func (c *GaussDBClient) BatchDeleteBackupInvoker(request *model.BatchDeleteBackupRequest) *BatchDeleteBackupInvoker {
+	requestDef := GenReqDefForBatchDeleteBackup()
+	return &BatchDeleteBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchTagAction 批量添加或删除标签
 //
 // 批量添加或删除指定实例的标签。
@@ -1679,6 +1700,27 @@ func (c *GaussDBClient) SetAuditLogPolicyInvoker(request *model.SetAuditLogPolic
 	return &SetAuditLogPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetAutoSqlLimiting 开启自治限流
+//
+// 开启自治限流。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) SetAutoSqlLimiting(request *model.SetAutoSqlLimitingRequest) (*model.SetAutoSqlLimitingResponse, error) {
+	requestDef := GenReqDefForSetAutoSqlLimiting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetAutoSqlLimitingResponse), nil
+	}
+}
+
+// SetAutoSqlLimitingInvoker 开启自治限流
+func (c *GaussDBClient) SetAutoSqlLimitingInvoker(request *model.SetAutoSqlLimitingRequest) *SetAutoSqlLimitingInvoker {
+	requestDef := GenReqDefForSetAutoSqlLimiting()
+	return &SetAutoSqlLimitingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetGaussMySqlProxyWeight 设置读写分离权重
 //
 // 设置读写分离权重。
@@ -1887,6 +1929,27 @@ func (c *GaussDBClient) ShowAutoScalingPolicy(request *model.ShowAutoScalingPoli
 func (c *GaussDBClient) ShowAutoScalingPolicyInvoker(request *model.ShowAutoScalingPolicyRequest) *ShowAutoScalingPolicyInvoker {
 	requestDef := GenReqDefForShowAutoScalingPolicy()
 	return &ShowAutoScalingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAutoSqlLimitingLog 查询自治限流执行记录
+//
+// 查询自治限流执行记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowAutoSqlLimitingLog(request *model.ShowAutoSqlLimitingLogRequest) (*model.ShowAutoSqlLimitingLogResponse, error) {
+	requestDef := GenReqDefForShowAutoSqlLimitingLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAutoSqlLimitingLogResponse), nil
+	}
+}
+
+// ShowAutoSqlLimitingLogInvoker 查询自治限流执行记录
+func (c *GaussDBClient) ShowAutoSqlLimitingLogInvoker(request *model.ShowAutoSqlLimitingLogRequest) *ShowAutoSqlLimitingLogInvoker {
+	requestDef := GenReqDefForShowAutoSqlLimitingLog()
+	return &ShowAutoSqlLimitingLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowBackupRestoreTime 查询可恢复时间段
@@ -2223,6 +2286,27 @@ func (c *GaussDBClient) ShowGaussMySqlQuotas(request *model.ShowGaussMySqlQuotas
 func (c *GaussDBClient) ShowGaussMySqlQuotasInvoker(request *model.ShowGaussMySqlQuotasRequest) *ShowGaussMySqlQuotasInvoker {
 	requestDef := GenReqDefForShowGaussMySqlQuotas()
 	return &ShowGaussMySqlQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHistoricalSqlFilterRule 查询历史SQL限流规则
+//
+// 查询历史SQL限流规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowHistoricalSqlFilterRule(request *model.ShowHistoricalSqlFilterRuleRequest) (*model.ShowHistoricalSqlFilterRuleResponse, error) {
+	requestDef := GenReqDefForShowHistoricalSqlFilterRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHistoricalSqlFilterRuleResponse), nil
+	}
+}
+
+// ShowHistoricalSqlFilterRuleInvoker 查询历史SQL限流规则
+func (c *GaussDBClient) ShowHistoricalSqlFilterRuleInvoker(request *model.ShowHistoricalSqlFilterRuleRequest) *ShowHistoricalSqlFilterRuleInvoker {
+	requestDef := GenReqDefForShowHistoricalSqlFilterRule()
+	return &ShowHistoricalSqlFilterRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowInstanceDatabaseVersion 查询内核版本信息
@@ -2622,6 +2706,27 @@ func (c *GaussDBClient) ShowSlowlogSensitiveStatus(request *model.ShowSlowlogSen
 func (c *GaussDBClient) ShowSlowlogSensitiveStatusInvoker(request *model.ShowSlowlogSensitiveStatusRequest) *ShowSlowlogSensitiveStatusInvoker {
 	requestDef := GenReqDefForShowSlowlogSensitiveStatus()
 	return &ShowSlowlogSensitiveStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSqlAutoSqlLimiting 查询自治限流规则
+//
+// 查询自治限流规则。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowSqlAutoSqlLimiting(request *model.ShowSqlAutoSqlLimitingRequest) (*model.ShowSqlAutoSqlLimitingResponse, error) {
+	requestDef := GenReqDefForShowSqlAutoSqlLimiting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSqlAutoSqlLimitingResponse), nil
+	}
+}
+
+// ShowSqlAutoSqlLimitingInvoker 查询自治限流规则
+func (c *GaussDBClient) ShowSqlAutoSqlLimitingInvoker(request *model.ShowSqlAutoSqlLimitingRequest) *ShowSqlAutoSqlLimitingInvoker {
+	requestDef := GenReqDefForShowSqlAutoSqlLimiting()
+	return &ShowSqlAutoSqlLimitingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSqlFilterControl 查询SQL限流开关状态

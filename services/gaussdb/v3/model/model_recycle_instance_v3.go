@@ -27,10 +27,10 @@ type RecycleInstanceV3 struct {
 	PayModel *string `json:"pay_model,omitempty"`
 
 	// 创建时间。
-	CreateAt *int32 `json:"create_at,omitempty"`
+	CreateAt *int64 `json:"create_at,omitempty"`
 
 	// 删除时间。
-	DeletedAt *int32 `json:"deleted_at,omitempty"`
+	DeletedAt *int64 `json:"deleted_at,omitempty"`
 
 	// 磁盘类型。
 	VolumeType *string `json:"volume_type,omitempty"`
@@ -58,6 +58,9 @@ type RecycleInstanceV3 struct {
 
 	// 回收状态。
 	RecycleStatus *string `json:"recycle_status,omitempty"`
+
+	// **参数解释**：  实例所有的回收站备份列表。
+	RecycleBakcups *[]RecycleBackupV3 `json:"recycle_bakcups,omitempty"`
 }
 
 func (o RecycleInstanceV3) String() string {

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// PublicIp **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+// PublicIp **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
 type PublicIp struct {
 }
 

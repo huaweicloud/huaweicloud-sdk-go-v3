@@ -15,7 +15,7 @@ type AppChangeResponseInfo struct {
 	// **参数解释**: 变更类型 **取值范围**: - add：新建 - delete：删除 - modify：修改
 	VariationType *string `json:"variation_type,omitempty"`
 
-	// **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+	// **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
 	HostId *string `json:"host_id,omitempty"`
 
 	// **参数解释**: 软件名称 **取值范围**: 字符长度1-256位

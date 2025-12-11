@@ -1,0 +1,22 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+type BatchDeleteInstanceTagRequestBody struct {
+
+	// 需要删除的标签列表
+	Keys *[]string `json:"keys,omitempty"`
+}
+
+func (o BatchDeleteInstanceTagRequestBody) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "BatchDeleteInstanceTagRequestBody struct{}"
+	}
+
+	return strings.Join([]string{"BatchDeleteInstanceTagRequestBody", string(data)}, " ")
+}

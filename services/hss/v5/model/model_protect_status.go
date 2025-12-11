@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ProtectStatus 防护状态，包含如下2种。   - closed ：关闭。   - opened ：开启。
+// ProtectStatus **参数解释**: 防护状态 **取值范围**:  - closed ：关闭  - opened ：开启
 type ProtectStatus struct {
 }
 

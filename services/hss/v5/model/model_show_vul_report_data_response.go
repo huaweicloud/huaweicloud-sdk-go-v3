@@ -10,6 +10,8 @@ import (
 type ShowVulReportDataResponse struct {
 	Sumary *ShowVulReportDataResponseInfoSumary `json:"sumary,omitempty"`
 
+	Summary *ShowVulReportDataResponseInfoSummary `json:"summary,omitempty"`
+
 	// 主机列表
 	Hosts *[]ShowVulReportDataResponseInfoHosts `json:"hosts,omitempty"`
 

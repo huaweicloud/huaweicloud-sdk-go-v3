@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// FileOwner 文件属性
+// FileOwner **参数解释**： 文件属性 **取值范围**： 字符长度0-64位
 type FileOwner struct {
 }
 

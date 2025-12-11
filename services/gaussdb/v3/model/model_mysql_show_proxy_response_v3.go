@@ -13,6 +13,9 @@ type MysqlShowProxyResponseV3 struct {
 
 	// 只读节点信息。
 	ReadonlyNodes *[]MysqlProxyNodeV3 `json:"readonly_nodes,omitempty"`
+
+	// **参数解释**：  HTAP节点信息。
+	HtapNodes *[]MysqlProxyNodeV3 `json:"htap_nodes,omitempty"`
 }
 
 func (o MysqlShowProxyResponseV3) String() string {

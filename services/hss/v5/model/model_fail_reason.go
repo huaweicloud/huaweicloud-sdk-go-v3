@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// FailReason 失败原因
+// FailReason **参数解释**: 失败原因 **取值范围**: 字符长度0-512位
 type FailReason struct {
 }
 

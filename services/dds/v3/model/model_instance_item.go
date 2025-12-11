@@ -8,13 +8,13 @@ import (
 
 type InstanceItem struct {
 
-	// 实例ID。
+	// **参数解释：** 实例ID。 **取值范围：** 不涉及。
 	InstanceId string `json:"instance_id"`
 
-	// 实例名称
+	// **参数解释：** 实例名称 **取值范围：** 不涉及。
 	InstanceName string `json:"instance_name"`
 
-	// 标签列表。如果没有标签，默认为空数组。
+	// **参数解释：** 标签列表。如果没有标签，默认为空数组。 **取值范围：** 不涉及。
 	Tags []InstanceItemTagItem `json:"tags"`
 }
 

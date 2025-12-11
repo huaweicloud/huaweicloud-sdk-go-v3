@@ -38,6 +38,9 @@ type SmartDocumentRecognizerRequestBody struct {
 	// 是否进行公式识别，识别结果为latex序列。若是，结果会以“formula_result”这一关键字返回。  - 开启公式识别后会降低响应速度。 - 当前仅支持3行以内公式识别，不支持3行以上的多行公式。
 	Formula *bool `json:"formula,omitempty"`
 
+	// 是否对文档中的图片进行二次版面分析。若是，结果会在“layout_result”中返回，并带有“image_layout”的关键字。
+	ImageLayout *bool `json:"image_layout,omitempty"`
+
 	// 需要传入字典的json序列化后字符串，用于对kv_result中的特定key值进行归一化映射。例如，kv_result中包含{\"名称\"：\"小明\"}的键值对，若传入{\"名称\"：\"姓名\"}的kv_map，则返回结果为{“姓名”：“小明”}。  > 参数传入示例： - \"kv_map\":\"{\\\"名称\\\":\\\"姓名\\\"}\"
 	KvMap *string `json:"kv_map,omitempty"`
 
@@ -46,6 +49,9 @@ type SmartDocumentRecognizerRequestBody struct {
 
 	// 指定PDF页码识别。传入该参数时，则识别指定页码的内容。如果不传该参数，则默认识别第1页。
 	PdfPageNumber *int32 `json:"pdf_page_number,omitempty"`
+
+	// 是否返回单字符信息。开启后，单字符识别结果将会在“ocr_result”中的“char_list”返回单字符信息。如果不传入该参数，则默认不返回单字符信息。
+	CharacterMode *bool `json:"character_mode,omitempty"`
 }
 
 func (o SmartDocumentRecognizerRequestBody) String() string {

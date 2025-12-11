@@ -9,7 +9,7 @@ import (
 // HoneypotPortPolicyContent 端口蜜罐策略配置
 type HoneypotPortPolicyContent struct {
 
-	// **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+	// **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
 	OsType string `json:"os_type"`
 
 	// 策略名称

@@ -24,7 +24,7 @@ type BackupInfo struct {
 	// 文件大小
 	FileSize *int64 `json:"file_size,omitempty"`
 
-	// 文件大小单位 - Byte - KB - MB - GB
+	// 文件大小单位 - Byte：Byte - KB：kb - MB: mb - GB: gb
 	FileSizeUnit *string `json:"file_size_unit,omitempty"`
 
 	// 备份ID

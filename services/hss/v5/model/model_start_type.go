@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// StartType 启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
+// StartType **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
 type StartType struct {
 }
 

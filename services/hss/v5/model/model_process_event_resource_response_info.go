@@ -57,10 +57,10 @@ type ProcessEventResourceResponseInfo struct {
 	// **参数解释**： 操作系统位数 **取值范围**： 字符长度1-64位
 	OsBit *string `json:"os_bit,omitempty"`
 
-	// **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+	// **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
 	OsType *string `json:"os_type,omitempty"`
 
-	// 操作系统名称
+	// **参数解释**: 操作系统名称 **取值范围**: 字符长度0-128位
 	OsName *string `json:"os_name,omitempty"`
 
 	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
@@ -69,10 +69,10 @@ type ProcessEventResourceResponseInfo struct {
 	// **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
 	HostIp *string `json:"host_ip,omitempty"`
 
-	// **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+	// **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
 	PublicIp *string `json:"public_ip,omitempty"`
 
-	// **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+	// **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
 	HostId *string `json:"host_id,omitempty"`
 
 	// **参数解释**： pod uid **取值范围**： 字符长度1-64位
@@ -96,7 +96,7 @@ type ProcessEventResourceResponseInfo struct {
 	// 容器状态
 	ContainerStatus *string `json:"container_status,omitempty"`
 
-	// 系统版本
+	// **参数解释**： 系统版本号 **取值范围**： 字符长度0-64位
 	OsVersion *string `json:"os_version,omitempty"`
 
 	// agent版本

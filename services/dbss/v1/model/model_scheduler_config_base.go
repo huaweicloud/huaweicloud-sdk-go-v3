@@ -33,7 +33,7 @@ type SchedulerConfigBase struct {
 	// 开始时间
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 模板状态
+	// 模板状态 - ON: 开启 - OFF：关闭
 	Status *SchedulerConfigBaseStatus `json:"status,omitempty"`
 
 	// 主题URN

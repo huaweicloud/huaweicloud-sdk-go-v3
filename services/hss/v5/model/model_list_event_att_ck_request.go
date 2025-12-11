@@ -51,7 +51,7 @@ type ListEventAttCkRequest struct {
 	// **参数解释**: 攻击标识 **约束限制**: 不涉及 **取值范围**: - attack_success：攻击成功 - attack_attempt：攻击尝试 - attack_blocked：攻击被阻断 - abnormal_behavior：异常行为 - collapsible_host：主机失陷 - system_vulnerability：系统脆弱性  **默认取值**: 不涉及
 	AttackTag *string `json:"attack_tag,omitempty"`
 
-	// **参数解释**: 资产重要性 **约束限制**: 不涉及 **取值范围**: - important：重要资产 - common：般资产 - test：测试资产  **默认取值**: 不涉及
+	// **参数解释**: 资产重要性 **约束限制**: 不涉及 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**: 不涉及
 	AssetValue *string `json:"asset_value,omitempty"`
 
 	// 事件标签列表，例如:[\"热点事件\"]

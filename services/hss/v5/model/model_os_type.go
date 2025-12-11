@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// OsType **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux。 - Windows：Windows。
+// OsType **参数解释**： 操作系统类型 **取值范围**： - Linux：Linux - Windows：Windows
 type OsType struct {
 }
 

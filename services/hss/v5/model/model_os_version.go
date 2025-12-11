@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// OsVersion 系统版本
+// OsVersion **参数解释**： 系统版本号 **取值范围**： 字符长度0-64位
 type OsVersion struct {
 }
 

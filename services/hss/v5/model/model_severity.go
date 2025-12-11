@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Severity **参数解释**： 威胁等级 **取值范围**： - Security：安全 - Low：低危 - Medium：中危 - High：高危 - Critical：危急
+// Severity **参数解释**： 威胁等级 **取值范围**： Security（安全）、Low（低危）、Medium（中危）、High（高危）、Critical（致命）
 type Severity struct {
 }
 

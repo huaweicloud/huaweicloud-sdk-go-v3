@@ -15,13 +15,13 @@ type ListK8sDaemonSetsRequest struct {
 	// **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
 	Offset *int32 `json:"offset,omitempty"`
 
-	// daemonset名称
+	// **参数解释**: daemonset名称，用作查询参数。 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 无
 	DaemonsetName *string `json:"daemonset_name,omitempty"`
 
-	// 命名空间名称
+	// **参数解释**: 命名空间名称，用作查询参数。 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 无
 	NamespaceName *string `json:"namespace_name,omitempty"`
 
-	// 所属集群名称
+	// **参数解释**: 所属集群名称，用作查询参数。 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 无
 	ClusterName *string `json:"cluster_name,omitempty"`
 
 	// **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10

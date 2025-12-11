@@ -15,10 +15,10 @@ type OperateLogGetRequest struct {
 	// 操作日志用户名
 	UserName *string `json:"user_name,omitempty"`
 
-	// 动作名称 - CREATE - DELETE - DOWNLOAD - UPDATE
+	// 动作名称 - CREATE：创建 - DELETE：删除 - DOWNLOAD：下载 - UPDATE：更新
 	Action *string `json:"action,omitempty"`
 
-	// 执行结果 - success - fail
+	// 执行结果 - success：成功 - fail：失败
 	Result *OperateLogGetRequestResult `json:"result,omitempty"`
 
 	// 页数

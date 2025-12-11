@@ -176,11 +176,6 @@ func GenReqDefForBatchCreateTags() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ContentType").
-		WithJsonTag("Content-Type").
-		WithLocationType(def.Header))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -3369,12 +3364,12 @@ func GenReqDefForListOrganizationTree() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("IsRefresh").
-		WithJsonTag("is_refresh").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnterpriseProjectId").
 		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IsRefresh").
+		WithJsonTag("is_refresh").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -3448,14 +3443,6 @@ func GenReqDefForListPortHost() *def.HttpRequestDef {
 		WithJsonTag("host_ip").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Port").
-		WithJsonTag("port").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Type").
-		WithJsonTag("type").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Category").
 		WithJsonTag("category").
 		WithLocationType(def.Query))
@@ -3466,6 +3453,14 @@ func GenReqDefForListPortHost() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
 		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Port").
+		WithJsonTag("port").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Type").
+		WithJsonTag("type").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -4201,10 +4196,6 @@ func GenReqDefForListUserStatistics() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("UserName").
-		WithJsonTag("user_name").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnterpriseProjectId").
 		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
@@ -4215,6 +4206,10 @@ func GenReqDefForListUserStatistics() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
 		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("UserName").
+		WithJsonTag("user_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Category").
@@ -5495,11 +5490,11 @@ func GenReqDefForShowPageNotices() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowPorcessTop() *def.HttpRequestDef {
+func GenReqDefForShowPortTop() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v5/{project_id}/asset/overview/statistics/top/process").
-		WithResponse(new(model.ShowPorcessTopResponse)).
+		WithPath("/v5/{project_id}/asset/overview/statistics/top/port").
+		WithResponse(new(model.ShowPortTopResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -5511,11 +5506,11 @@ func GenReqDefForShowPorcessTop() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowPortTop() *def.HttpRequestDef {
+func GenReqDefForShowProcessTop() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v5/{project_id}/asset/overview/statistics/top/port").
-		WithResponse(new(model.ShowPortTopResponse)).
+		WithPath("/v5/{project_id}/asset/overview/statistics/top/process").
+		WithResponse(new(model.ShowProcessTopResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -10523,6 +10518,31 @@ func GenReqDefForChangeFilePathWhiteDetail() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForChangeFilePathWhiteLists() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v5/{project_id}/image/sensitive/filepath-whitelist").
+		WithResponse(new(model.ChangeFilePathWhiteListsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Region").
+		WithJsonTag("region").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForChangeImageWhiteList() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -12407,6 +12427,31 @@ func GenReqDefForShowFilePathWhiteDetail() *def.HttpRequestDef {
 		WithMethod(http.MethodGet).
 		WithPath("/v5/{project_id}/image/sensitive/filepath_whitelist").
 		WithResponse(new(model.ShowFilePathWhiteDetailResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FilePath").
+		WithJsonTag("file_path").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Region").
+		WithJsonTag("region").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowFilePathWhiteLists() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v5/{project_id}/image/sensitive/filepath-whitelist").
+		WithResponse(new(model.ShowFilePathWhiteListsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -14406,12 +14451,12 @@ func GenReqDefForListAntivirusHandleHistory() *def.HttpRequestDef {
 		WithJsonTag("user_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("EventType").
-		WithJsonTag("event_type").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SortDir").
 		WithJsonTag("sort_dir").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EventType").
+		WithJsonTag("event_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SortKey").

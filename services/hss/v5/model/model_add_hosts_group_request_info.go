@@ -8,10 +8,10 @@ import (
 
 type AddHostsGroupRequestInfo struct {
 
-	// 服务器组名称
+	// **参数解释**: 服务器组名称 **取值范围**: 字符长度1-128位
 	GroupName string `json:"group_name"`
 
-	// 服务器ID列表
+	// **参数解释**： 服务器ID列表 **取值范围**: 不涉及
 	HostIdList []string `json:"host_id_list"`
 }
 

@@ -14,6 +14,12 @@ type ListTasksRequest struct {
 
 	// 开始时间。
 	EndTime float32 `json:"end_time"`
+
+	// offset
+	Offset *int32 `json:"offset,omitempty"`
+
+	// query
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ListTasksRequest) String() string {

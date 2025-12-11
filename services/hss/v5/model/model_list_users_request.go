@@ -9,7 +9,7 @@ import (
 // ListUsersRequest Request Object
 type ListUsersRequest struct {
 
-	// **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+	// **参数解释**: 服务器的唯一标识ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
 	HostId *string `json:"host_id,omitempty"`
 
 	// **参数解释**: 账号名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-32位 **默认取值**: 不涉及

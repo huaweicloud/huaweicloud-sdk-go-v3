@@ -145,6 +145,27 @@ func (c *GaussDBforopenGaussClient) AuthorizeBackupDownloadInvoker(request *mode
 	return &AuthorizeBackupDownloadInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteInstanceTag 批量删除实例标签
+//
+// 批量删除实例标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) BatchDeleteInstanceTag(request *model.BatchDeleteInstanceTagRequest) (*model.BatchDeleteInstanceTagResponse, error) {
+	requestDef := GenReqDefForBatchDeleteInstanceTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteInstanceTagResponse), nil
+	}
+}
+
+// BatchDeleteInstanceTagInvoker 批量删除实例标签
+func (c *GaussDBforopenGaussClient) BatchDeleteInstanceTagInvoker(request *model.BatchDeleteInstanceTagRequest) *BatchDeleteInstanceTagInvoker {
+	requestDef := GenReqDefForBatchDeleteInstanceTag()
+	return &BatchDeleteInstanceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchSetBackupPolicy 批量设置自动备份策略
 //
 // 批量设置自动备份策略。

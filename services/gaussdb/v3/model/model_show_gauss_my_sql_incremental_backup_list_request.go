@@ -26,6 +26,9 @@ type ShowGaussMySqlIncrementalBackupListRequest struct {
 
 	// 查询结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”，且大于查询开始时间。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  “end_time”有值时，“begin_time”必选。
 	EndTime *string `json:"end_time,omitempty"`
+
+	// **参数解释**：  是否展示跨区域增量备份。  **约束限制**：  不涉及。  **取值范围**：  - true：展示同区域和跨区域增量备份。 - false：仅展示同区域增量备份。  **默认取值**：  false。
+	DisplayOffsiteBackup *bool `json:"display_offsite_backup,omitempty"`
 }
 
 func (o ShowGaussMySqlIncrementalBackupListRequest) String() string {

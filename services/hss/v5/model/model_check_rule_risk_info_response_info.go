@@ -42,7 +42,7 @@ type CheckRuleRiskInfoResponseInfo struct {
 	// **参数解释**: 该检查项的修复&忽略&验证按钮是否可单击 **取值范围**: - true：按钮可单击 - false：按钮不可单击
 	EnableClick *bool `json:"enable_click,omitempty"`
 
-	// **参数解释** 不可点击的原因 **取值范围**  字符长度0-512位
+	// **参数解释** 不可点击的原因 **取值范围** 字符长度0-512位
 	NotEnableClickDescription *string `json:"not_enable_click_description,omitempty"`
 
 	// **参数解释**: 支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据 **取值范围**: 不涉及

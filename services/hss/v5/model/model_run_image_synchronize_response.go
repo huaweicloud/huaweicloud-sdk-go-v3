@@ -9,10 +9,10 @@ import (
 // RunImageSynchronizeResponse Response Object
 type RunImageSynchronizeResponse struct {
 
-	// 错误编码
+	// **参数解释**: 错误编码 **取值范围**: 0（成功）、非0（失败）
 	ErrorCode *int32 `json:"error_code,omitempty"`
 
-	// 错误描述
+	// **参数解释**: 错误描述 **取值范围**: 字符长度0-512位
 	ErrorDescription *string `json:"error_description,omitempty"`
 	HttpStatusCode   int     `json:"-"`
 }

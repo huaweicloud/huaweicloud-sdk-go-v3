@@ -23,6 +23,9 @@ type IncrementalBackups struct {
 	// 备份大小，(单位：KB)。
 	Size float32 `json:"size,omitempty"`
 
+	// **参数解释**：  增量备份类型。  **取值范围**：  - Log: 同区域增量备份。 - OffSiteLog：跨区域增量备份。
+	BackupType *string `json:"backup_type,omitempty"`
+
 	// 实例ID。
 	InstanceId *string `json:"instance_id,omitempty"`
 }

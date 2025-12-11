@@ -14,7 +14,7 @@ type RuleRiskResponseRules struct {
 	// 风险规则名称
 	Name string `json:"name"`
 
-	// 风险规则类型
+	// 风险规则类型 - LOGIN：登录  - OPERATE：操作
 	Type string `json:"type"`
 
 	// 风险规则特征
@@ -26,10 +26,10 @@ type RuleRiskResponseRules struct {
 	// 风险规则优先级。数字越小优先级越高。
 	Rank *int32 `json:"rank,omitempty"`
 
-	// 风险级别 - LOW - MEDIUM - HIGH - NO_RISK
+	// 风险级别 - LOW：低 - MEDIUM：中 - HIGH：高 - NO_RISK：无风险
 	RiskLevel *string `json:"risk_level,omitempty"`
 
-	// 规则类型
+	// 规则类型 - SYSTEM: 系统  - CUSTOMIZE: 自定义
 	RuleType *string `json:"rule_type,omitempty"`
 }
 

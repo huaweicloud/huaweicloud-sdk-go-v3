@@ -3463,27 +3463,6 @@ func (c *HssClient) ShowPageNoticesInvoker(request *model.ShowPageNoticesRequest
 	return &ShowPageNoticesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPorcessTop 资产管理-概览-进程Top
-//
-// 资产管理-概览-进程Top
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ShowPorcessTop(request *model.ShowPorcessTopRequest) (*model.ShowPorcessTopResponse, error) {
-	requestDef := GenReqDefForShowPorcessTop()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowPorcessTopResponse), nil
-	}
-}
-
-// ShowPorcessTopInvoker 资产管理-概览-进程Top
-func (c *HssClient) ShowPorcessTopInvoker(request *model.ShowPorcessTopRequest) *ShowPorcessTopInvoker {
-	requestDef := GenReqDefForShowPorcessTop()
-	return &ShowPorcessTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowPortTop 资产管理-概览-端口Top
 //
 // 资产管理-概览-端口Top
@@ -3503,6 +3482,27 @@ func (c *HssClient) ShowPortTop(request *model.ShowPortTopRequest) (*model.ShowP
 func (c *HssClient) ShowPortTopInvoker(request *model.ShowPortTopRequest) *ShowPortTopInvoker {
 	requestDef := GenReqDefForShowPortTop()
 	return &ShowPortTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProcessTop 资产管理-概览-进程Top
+//
+// 资产管理-概览-进程Top
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowProcessTop(request *model.ShowProcessTopRequest) (*model.ShowProcessTopResponse, error) {
+	requestDef := GenReqDefForShowProcessTop()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProcessTopResponse), nil
+	}
+}
+
+// ShowProcessTopInvoker 资产管理-概览-进程Top
+func (c *HssClient) ShowProcessTopInvoker(request *model.ShowProcessTopRequest) *ShowProcessTopInvoker {
+	requestDef := GenReqDefForShowProcessTop()
+	return &ShowProcessTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowQuotaStatisticsInfo 资产管理-概览-资产状态-防护配额统计信息
@@ -7054,9 +7054,9 @@ func (c *HssClient) ChangeExtendedWeakPasswordInvoker(request *model.ChangeExten
 	return &ChangeExtendedWeakPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ChangeFilePathWhiteDetail 修改镜像的敏感信息文件路径白名单
+// ChangeFilePathWhiteDetail 修改镜像的敏感信息文件路径白名单--接口已废弃
 //
-// 修改镜像的敏感信息文件路径白名单
+// 修改镜像的敏感信息文件路径白名单--接口已废弃
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeFilePathWhiteDetail(request *model.ChangeFilePathWhiteDetailRequest) (*model.ChangeFilePathWhiteDetailResponse, error) {
@@ -7069,10 +7069,31 @@ func (c *HssClient) ChangeFilePathWhiteDetail(request *model.ChangeFilePathWhite
 	}
 }
 
-// ChangeFilePathWhiteDetailInvoker 修改镜像的敏感信息文件路径白名单
+// ChangeFilePathWhiteDetailInvoker 修改镜像的敏感信息文件路径白名单--接口已废弃
 func (c *HssClient) ChangeFilePathWhiteDetailInvoker(request *model.ChangeFilePathWhiteDetailRequest) *ChangeFilePathWhiteDetailInvoker {
 	requestDef := GenReqDefForChangeFilePathWhiteDetail()
 	return &ChangeFilePathWhiteDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeFilePathWhiteLists 修改镜像的敏感信息文件路径白名单
+//
+// 修改镜像的敏感信息文件路径白名单
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ChangeFilePathWhiteLists(request *model.ChangeFilePathWhiteListsRequest) (*model.ChangeFilePathWhiteListsResponse, error) {
+	requestDef := GenReqDefForChangeFilePathWhiteLists()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeFilePathWhiteListsResponse), nil
+	}
+}
+
+// ChangeFilePathWhiteListsInvoker 修改镜像的敏感信息文件路径白名单
+func (c *HssClient) ChangeFilePathWhiteListsInvoker(request *model.ChangeFilePathWhiteListsRequest) *ChangeFilePathWhiteListsInvoker {
+	requestDef := GenReqDefForChangeFilePathWhiteLists()
+	return &ChangeFilePathWhiteListsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ChangeImageWhiteList 修改镜像白名单配置信息
@@ -7873,9 +7894,9 @@ func (c *HssClient) ListVulnerabilityCveInvoker(request *model.ListVulnerability
 	return &ListVulnerabilityCveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// RunImageSynchronize 从SWR服务同步镜像列表
+// RunImageSynchronize 从SWR服务同步镜像列表--接口已废弃
 //
-// 从SWR服务同步镜像列表
+// 从SWR服务同步镜像列表--接口已废弃
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) RunImageSynchronize(request *model.RunImageSynchronizeRequest) (*model.RunImageSynchronizeResponse, error) {
@@ -7888,7 +7909,7 @@ func (c *HssClient) RunImageSynchronize(request *model.RunImageSynchronizeReques
 	}
 }
 
-// RunImageSynchronizeInvoker 从SWR服务同步镜像列表
+// RunImageSynchronizeInvoker 从SWR服务同步镜像列表--接口已废弃
 func (c *HssClient) RunImageSynchronizeInvoker(request *model.RunImageSynchronizeRequest) *RunImageSynchronizeInvoker {
 	requestDef := GenReqDefForRunImageSynchronize()
 	return &RunImageSynchronizeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -7915,9 +7936,9 @@ func (c *HssClient) ShowExtendedWeakPasswordInvoker(request *model.ShowExtendedW
 	return &ShowExtendedWeakPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowFilePathWhiteDetail 查询镜像的敏感信息文件路径白名单
+// ShowFilePathWhiteDetail 查询镜像的敏感信息文件路径白名单--接口已废弃
 //
-// 查询镜像的敏感信息文件路径白名单
+// 查询镜像的敏感信息文件路径白名单--接口已废弃
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowFilePathWhiteDetail(request *model.ShowFilePathWhiteDetailRequest) (*model.ShowFilePathWhiteDetailResponse, error) {
@@ -7930,10 +7951,31 @@ func (c *HssClient) ShowFilePathWhiteDetail(request *model.ShowFilePathWhiteDeta
 	}
 }
 
-// ShowFilePathWhiteDetailInvoker 查询镜像的敏感信息文件路径白名单
+// ShowFilePathWhiteDetailInvoker 查询镜像的敏感信息文件路径白名单--接口已废弃
 func (c *HssClient) ShowFilePathWhiteDetailInvoker(request *model.ShowFilePathWhiteDetailRequest) *ShowFilePathWhiteDetailInvoker {
 	requestDef := GenReqDefForShowFilePathWhiteDetail()
 	return &ShowFilePathWhiteDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFilePathWhiteLists 查询镜像的敏感信息文件路径白名单
+//
+// 查询镜像的敏感信息文件路径白名单
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowFilePathWhiteLists(request *model.ShowFilePathWhiteListsRequest) (*model.ShowFilePathWhiteListsResponse, error) {
+	requestDef := GenReqDefForShowFilePathWhiteLists()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFilePathWhiteListsResponse), nil
+	}
+}
+
+// ShowFilePathWhiteListsInvoker 查询镜像的敏感信息文件路径白名单
+func (c *HssClient) ShowFilePathWhiteListsInvoker(request *model.ShowFilePathWhiteListsRequest) *ShowFilePathWhiteListsInvoker {
+	requestDef := GenReqDefForShowFilePathWhiteLists()
+	return &ShowFilePathWhiteListsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowImageAssetStatistics 容器资产-镜像统计

@@ -16,8 +16,10 @@ type ShowProxyVersionResponse struct {
 	LatestVersion *string `json:"latest_version,omitempty"`
 
 	// 是否能升级
-	CanUpgrade     *bool `json:"can_upgrade,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	CanUpgrade *bool `json:"can_upgrade,omitempty"`
+
+	Risk           *ProxyEngineRisk `json:"risk,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o ShowProxyVersionResponse) String() string {

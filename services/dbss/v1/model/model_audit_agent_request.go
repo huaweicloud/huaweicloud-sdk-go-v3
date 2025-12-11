@@ -23,7 +23,7 @@ type AuditAgentRequest struct {
 	// agent类型 - APP：应用端 - DB：数据库端
 	AgentType string `json:"agent_type"`
 
-	// agent OS类型: - LINUX64_X86 - LINUX64_ARM - WINDOWS64
+	// agent OS类型: - LINUX64_X86：LINUX64_X86 - LINUX64_ARM：LINUX64_ARM - WINDOWS64：WINDOWS64
 	AgentOs AuditAgentRequestAgentOs `json:"agent_os"`
 
 	// agent IP，安装节点类型为应用端时必输。

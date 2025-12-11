@@ -29,7 +29,7 @@ type ProductInfoBeanNew struct {
 	// 资源规格
 	ResourceSpecCode *string `json:"resource_spec_code,omitempty"`
 
-	// 资源类型
+	// 资源类型: - hws.resource.type.dbss：数据库审计
 	ResourceType *string `json:"resource_type,omitempty"`
 }
 

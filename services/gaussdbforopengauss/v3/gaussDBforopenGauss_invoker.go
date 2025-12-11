@@ -101,6 +101,22 @@ func (i *AuthorizeBackupDownloadInvoker) Invoke() (*model.AuthorizeBackupDownloa
 	}
 }
 
+type BatchDeleteInstanceTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteInstanceTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteInstanceTagInvoker) Invoke() (*model.BatchDeleteInstanceTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteInstanceTagResponse), nil
+	}
+}
+
 type BatchSetBackupPolicyInvoker struct {
 	*invoker.BaseInvoker
 }

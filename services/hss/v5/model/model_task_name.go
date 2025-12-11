@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// TaskName 任务名称
+// TaskName **参数解释**: 任务名称 **取值范围**: 最大长度255个unicode字符。
 type TaskName struct {
 }
 

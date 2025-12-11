@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// TaskId 任务ID
+// TaskId **参数解释**： 任务ID **取值范围**: 字符长度1-64位
 type TaskId struct {
 }
 

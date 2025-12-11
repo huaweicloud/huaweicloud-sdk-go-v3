@@ -10,7 +10,7 @@ import (
 type UpdateCloudPhonePropertyRequestBody struct {
 
 	// 手机列表。
-	Phones []Property `json:"phones"`
+	Phones []PropertyToUpdate `json:"phones"`
 }
 
 func (o UpdateCloudPhonePropertyRequestBody) String() string {

@@ -9,10 +9,10 @@ import (
 // AssociateImagesInfo 多架构关联镜像信息
 type AssociateImagesInfo struct {
 
-	// **参数解释**: id **取值范围**: 最小值0，最大值9223372036854775807
+	// **参数解释**: 多架构关联镜像的记录唯一标识ID **取值范围**: 最小值0，最大值9223372036854775807
 	Id *int64 `json:"id,omitempty"`
 
-	// **参数解释**: 镜像id **取值范围**: 字符长度0-64位
+	// **参数解释**: 多架构关联镜像的唯一标识ID **取值范围**: 字符长度0-64位
 	ImageId *string `json:"image_id,omitempty"`
 
 	// **参数解释**: 镜像名称 **取值范围**: 字符长度0-128位

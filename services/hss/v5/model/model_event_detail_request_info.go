@@ -9,7 +9,7 @@ import (
 // EventDetailRequestInfo 操作详情信息
 type EventDetailRequestInfo struct {
 
-	// **参数解释**: Agent ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+	// **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
 	AgentId *string `json:"agent_id,omitempty"`
 
 	// **参数解释**： 进程ID **取值范围**： 最小值0，最大值2147483647
@@ -21,7 +21,7 @@ type EventDetailRequestInfo struct {
 	// **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
 	FilePath *string `json:"file_path,omitempty"`
 
-	// **参数解释**： 文件属性 **取值范围**： 字符长度1-256位
+	// **参数解释**： 文件的系统属性（如读写权限、隐藏属性、执行权限等） **取值范围**： 字符长度1-256位
 	FileAttr *string `json:"file_attr,omitempty"`
 
 	// **参数解释**： 告警事件关键字，仅用于告警白名单 **取值范围**： 字符长度1-256位

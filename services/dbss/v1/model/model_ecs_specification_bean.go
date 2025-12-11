@@ -29,7 +29,7 @@ type EcsSpecificationBean struct {
 	// CPU
 	Vcpus int32 `json:"vcpus"`
 
-	// 可用区类型 - DEDICATED - DEC - EDGE
+	// 可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
 	AzType *string `json:"az_type,omitempty"`
 }
 

@@ -21,6 +21,9 @@ type EnvironmentDetail struct {
 	// 操作系统
 	Os *string `json:"os,omitempty"`
 
+	// 项目ID
+	ProjectId *string `json:"project_id,omitempty"`
+
 	// 用户昵称
 	NickName *string `json:"nick_name,omitempty"`
 

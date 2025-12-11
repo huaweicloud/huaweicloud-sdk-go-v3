@@ -40,6 +40,27 @@ func (c *ErClient) AssociateRouteTableInvoker(request *model.AssociateRouteTable
 	return &AssociateRouteTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeAssociationRoutePolicy 修改关联的路由策略
+//
+// 修改关联的路由策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ErClient) ChangeAssociationRoutePolicy(request *model.ChangeAssociationRoutePolicyRequest) (*model.ChangeAssociationRoutePolicyResponse, error) {
+	requestDef := GenReqDefForChangeAssociationRoutePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeAssociationRoutePolicyResponse), nil
+	}
+}
+
+// ChangeAssociationRoutePolicyInvoker 修改关联的路由策略
+func (c *ErClient) ChangeAssociationRoutePolicyInvoker(request *model.ChangeAssociationRoutePolicyRequest) *ChangeAssociationRoutePolicyInvoker {
+	requestDef := GenReqDefForChangeAssociationRoutePolicy()
+	return &ChangeAssociationRoutePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DisassociateRouteTable 删除路由关联
 //
 // 解绑连接和路由表的关联关系。
@@ -542,6 +563,27 @@ func (c *ErClient) ListPropagations(request *model.ListPropagationsRequest) (*mo
 func (c *ErClient) ListPropagationsInvoker(request *model.ListPropagationsRequest) *ListPropagationsInvoker {
 	requestDef := GenReqDefForListPropagations()
 	return &ListPropagationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePropagationRoutePolicy 修改路由策略
+//
+// 修改路由策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ErClient) UpdatePropagationRoutePolicy(request *model.UpdatePropagationRoutePolicyRequest) (*model.UpdatePropagationRoutePolicyResponse, error) {
+	requestDef := GenReqDefForUpdatePropagationRoutePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePropagationRoutePolicyResponse), nil
+	}
+}
+
+// UpdatePropagationRoutePolicyInvoker 修改路由策略
+func (c *ErClient) UpdatePropagationRoutePolicyInvoker(request *model.UpdatePropagationRoutePolicyRequest) *UpdatePropagationRoutePolicyInvoker {
+	requestDef := GenReqDefForUpdatePropagationRoutePolicy()
+	return &UpdatePropagationRoutePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowQuotas 查询配额

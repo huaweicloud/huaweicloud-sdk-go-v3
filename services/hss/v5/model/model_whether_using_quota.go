@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// WhetherUsingQuota 是否使用病毒查杀按次计费配额
+// WhetherUsingQuota **参数解释**： 是否使用病毒查杀按次计费配额 **取值范围**： 0（未使用）、1（已使用）
 type WhetherUsingQuota struct {
 }
 

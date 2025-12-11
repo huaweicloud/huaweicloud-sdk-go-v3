@@ -40,8 +40,11 @@ type ShowShareFeatureGatesResponse struct {
 	EnableResource *bool `json:"enable_resource,omitempty"`
 
 	// 是否支持list v3接口
-	EnableListV3   *bool `json:"enable_list_v3,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	EnableListV3 *bool `json:"enable_list_v3,omitempty"`
+
+	// 是否启用镜像配额
+	EnableImageQuota *bool `json:"enable_image_quota,omitempty"`
+	HttpStatusCode   int   `json:"-"`
 }
 
 func (o ShowShareFeatureGatesResponse) String() string {

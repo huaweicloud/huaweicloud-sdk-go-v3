@@ -15,10 +15,10 @@ type ListCicdImagesRequest struct {
 	// **参数解释**: 组织名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位。  **默认取值**: 不涉及
 	Namespace *string `json:"namespace,omitempty"`
 
-	// **参数解释**: 镜像名称 **取值范围**: 字符长度1-128位
+	// **参数解释**: 镜像名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
 	ImageName *string `json:"image_name,omitempty"`
 
-	// **参数解释**: 镜像版本 **取值范围**: 字符长度1-64位
+	// **参数解释**: 镜像版本 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
 	ImageVersion *string `json:"image_version,omitempty"`
 
 	// **参数解释**: 可排序字段 **约束限制**: 不涉及 **取值范围**: - latest_scan_time：最近扫描时间。  **默认取值**: 不涉及

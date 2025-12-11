@@ -5,6 +5,38 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/swr/v2/model"
 )
 
+type CheckAgencyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckAgencyInvoker) Invoke() (*model.CheckAgencyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckAgencyResponse), nil
+	}
+}
+
+type CreateAgencyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAgencyInvoker) Invoke() (*model.CreateAgencyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAgencyResponse), nil
+	}
+}
+
 type CreateAuthorizationTokenInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -530,6 +562,22 @@ func (i *ListSharedReposDetailsInvoker) Invoke() (*model.ListSharedReposDetailsR
 		return nil, err
 	} else {
 		return result.(*model.ListSharedReposDetailsResponse), nil
+	}
+}
+
+type ListSyncRegionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSyncRegionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSyncRegionsInvoker) Invoke() (*model.ListSyncRegionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSyncRegionsResponse), nil
 	}
 }
 

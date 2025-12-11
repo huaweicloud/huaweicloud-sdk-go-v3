@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -40,6 +43,18 @@ type MysqlProxyV3 struct {
 
 	// Proxy节点个数。
 	NodeNum *int32 `json:"node_num,omitempty"`
+
+	// **参数解释**：  数据库代理读写模式。  **取值范围**：  - readwrite：读写模式 - readonly：只读模式
+	Type *MysqlProxyV3Type `json:"type,omitempty"`
+
+	// 数据库代理创建时间。
+	CreatedAt *string `json:"created_at,omitempty"`
+
+	// 数据库代更新时间。
+	UpdatedAt *string `json:"updated_at,omitempty"`
+
+	// 是否支持HTAP节点。
+	SupportApNode *bool `json:"support_ap_node,omitempty"`
 
 	// Proxy主备模式，取值范围：Cluster。
 	Mode *string `json:"mode,omitempty"`
@@ -91,4 +106,51 @@ func (o MysqlProxyV3) String() string {
 	}
 
 	return strings.Join([]string{"MysqlProxyV3", string(data)}, " ")
+}
+
+type MysqlProxyV3Type struct {
+	value string
+}
+
+type MysqlProxyV3TypeEnum struct {
+	READWRITE MysqlProxyV3Type
+	READONLY  MysqlProxyV3Type
+}
+
+func GetMysqlProxyV3TypeEnum() MysqlProxyV3TypeEnum {
+	return MysqlProxyV3TypeEnum{
+		READWRITE: MysqlProxyV3Type{
+			value: "readwrite",
+		},
+		READONLY: MysqlProxyV3Type{
+			value: "readonly",
+		},
+	}
+}
+
+func (c MysqlProxyV3Type) Value() string {
+	return c.value
+}
+
+func (c MysqlProxyV3Type) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *MysqlProxyV3Type) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

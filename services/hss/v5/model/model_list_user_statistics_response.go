@@ -9,10 +9,10 @@ import (
 // ListUserStatisticsResponse Response Object
 type ListUserStatisticsResponse struct {
 
-	// 账号总数
+	// **参数解释**: 账号总数 **取值范围**: 最小值0，最大值10000000
 	TotalNum *int32 `json:"total_num,omitempty"`
 
-	// 账户统计信息列表
+	// **参数解释**: 账号历史变账户统计信息列表动记录列表 **取值范围**: 最小值0，最大值10000
 	DataList       *[]UserStatisticInfoResponseInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                              `json:"-"`
 }

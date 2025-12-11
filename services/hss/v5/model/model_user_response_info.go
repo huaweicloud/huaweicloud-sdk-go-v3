@@ -12,7 +12,7 @@ type UserResponseInfo struct {
 	// **参数解释**: Agent ID **取值范围**: 字符长度1-64位
 	AgentId *string `json:"agent_id,omitempty"`
 
-	// **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+	// **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
 	HostId *string `json:"host_id,omitempty"`
 
 	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
@@ -21,7 +21,7 @@ type UserResponseInfo struct {
 	// **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
 	HostIp *string `json:"host_ip,omitempty"`
 
-	// 用户名
+	// **参数解释**: 用户名 **取值范围**: 字符长度1-64位
 	UserName *string `json:"user_name,omitempty"`
 
 	// **参数解释**: 是否允许登录 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及

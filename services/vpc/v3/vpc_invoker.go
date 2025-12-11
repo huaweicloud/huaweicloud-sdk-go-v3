@@ -229,6 +229,22 @@ func (i *CreateTrafficMirrorSessionInvoker) Invoke() (*model.CreateTrafficMirror
 	}
 }
 
+type CreateVirsubnetCidrReservationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateVirsubnetCidrReservationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateVirsubnetCidrReservationInvoker) Invoke() (*model.CreateVirsubnetCidrReservationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateVirsubnetCidrReservationResponse), nil
+	}
+}
+
 type DeletePortTagInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -338,6 +354,22 @@ func (i *DeleteTrafficMirrorSessionInvoker) Invoke() (*model.DeleteTrafficMirror
 		return nil, err
 	} else {
 		return result.(*model.DeleteTrafficMirrorSessionResponse), nil
+	}
+}
+
+type DeleteVirsubnetCidrReservationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteVirsubnetCidrReservationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteVirsubnetCidrReservationInvoker) Invoke() (*model.DeleteVirsubnetCidrReservationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteVirsubnetCidrReservationResponse), nil
 	}
 }
 
@@ -466,6 +498,22 @@ func (i *ListTrafficMirrorSessionsInvoker) Invoke() (*model.ListTrafficMirrorSes
 		return nil, err
 	} else {
 		return result.(*model.ListTrafficMirrorSessionsResponse), nil
+	}
+}
+
+type ListVirsubnetCidrReservationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVirsubnetCidrReservationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListVirsubnetCidrReservationsInvoker) Invoke() (*model.ListVirsubnetCidrReservationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVirsubnetCidrReservationsResponse), nil
 	}
 }
 
@@ -645,6 +693,22 @@ func (i *ShowTrafficMirrorSessionInvoker) Invoke() (*model.ShowTrafficMirrorSess
 	}
 }
 
+type ShowVirsubnetCidrReservationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVirsubnetCidrReservationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowVirsubnetCidrReservationInvoker) Invoke() (*model.ShowVirsubnetCidrReservationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVirsubnetCidrReservationResponse), nil
+	}
+}
+
 type UpdateSecurityGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -722,6 +786,22 @@ func (i *UpdateTrafficMirrorSessionInvoker) Invoke() (*model.UpdateTrafficMirror
 		return nil, err
 	} else {
 		return result.(*model.UpdateTrafficMirrorSessionResponse), nil
+	}
+}
+
+type UpdateVirsubnetCidrReservationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateVirsubnetCidrReservationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateVirsubnetCidrReservationInvoker) Invoke() (*model.UpdateVirsubnetCidrReservationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateVirsubnetCidrReservationResponse), nil
 	}
 }
 

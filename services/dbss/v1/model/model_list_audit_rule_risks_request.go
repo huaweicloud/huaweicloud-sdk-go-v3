@@ -18,7 +18,7 @@ type ListAuditRuleRisksRequest struct {
 	// 风险名称
 	Name *string `json:"name,omitempty"`
 
-	// 风险级别 - LOW - MEDIUM - HIGH - NO_RISK
+	// 风险级别 - LOW：低 - MEDIUM：中 - HIGH：高 - NO_RISK：无风险
 	RiskLevels *ListAuditRuleRisksRequestRiskLevels `json:"risk_levels,omitempty"`
 }
 

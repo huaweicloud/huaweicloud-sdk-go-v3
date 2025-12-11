@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// TaskStatus 任务状态，包含如下2种   - scanning ：扫描中   - finish ：扫描完成
+// TaskStatus **参数解释**: 任务状态 **取值范围**: 包含如下2种   - scanning：扫描中   - finish：扫描完成
 type TaskStatus struct {
 }
 

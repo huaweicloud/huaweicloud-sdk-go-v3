@@ -15,7 +15,7 @@ type Statistic struct {
 	Database *string `json:"database,omitempty"`
 
 	// 由SQL的语法解析树计算出的内部哈希码。
-	QueryId *int64 `json:"query_id,omitempty"`
+	QueryId *string `json:"query_id,omitempty"`
 
 	// 调用次数
 	Calls *int64 `json:"calls,omitempty"`
@@ -27,7 +27,7 @@ type Statistic struct {
 	Rows *int64 `json:"rows,omitempty"`
 
 	// 是否可以执行sql限流
-	CanUse *float64 `json:"can_use,omitempty"`
+	CanUse *float64 `json:"canUse,omitempty"`
 }
 
 func (o Statistic) String() string {

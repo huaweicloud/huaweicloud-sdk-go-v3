@@ -9,7 +9,7 @@ import (
 // ValidateConfigurationNameResponse Response Object
 type ValidateConfigurationNameResponse struct {
 
-	// 参数组名称是否存在。 - true：参数组名称存在 - false：参数组名称不存在
+	// **参数解释：** 参数组名称是否存在。 **取值范围：** - true：参数组名称存在。 - false：参数组名称不存在。
 	IsExisted      *bool `json:"is_existed,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }

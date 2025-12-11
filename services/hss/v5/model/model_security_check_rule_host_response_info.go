@@ -9,7 +9,7 @@ import (
 // SecurityCheckRuleHostResponseInfo 受单个基线检查项影响的单个服务器信息
 type SecurityCheckRuleHostResponseInfo struct {
 
-	// **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+	// **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
 	HostId *string `json:"host_id,omitempty"`
 
 	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
@@ -48,7 +48,7 @@ type SecurityCheckRuleHostResponseInfo struct {
 	// **参数解释** 是否支持一键修复 **取值范围** - 1 : 支持一键修复 - 0 : 不支持
 	EnableFix *int32 `json:"enable_fix,omitempty"`
 
-	// **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围**  - true  : 可验证 - false : 不可验证
+	// **参数解释** 该检查项是否可验证，要求为Linux且agent版本>=3.2.24 **取值范围** - true  : 可验证 - false : 不可验证
 	EnableVerify *bool `json:"enable_verify,omitempty"`
 
 	// **参数解释** 该检查项的修复&忽略&验证按钮是否可单击 **取值范围** - true  : 按钮可单击 - false : 按钮不可单击
@@ -63,7 +63,7 @@ type SecurityCheckRuleHostResponseInfo struct {
 	// **参数解释** 修复失败原因 **取值范围** 字符长度0-256位
 	FixFailedReason *string `json:"fix_failed_reason,omitempty"`
 
-	// **参数解释** 集群ID **取值范围**  字符长度0-64位
+	// **参数解释** 集群ID **取值范围** 字符长度0-64位
 	ClusterId *string `json:"cluster_id,omitempty"`
 }
 

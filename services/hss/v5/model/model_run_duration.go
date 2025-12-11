@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// RunDuration 运行时长，秒
+// RunDuration **参数解释**: 运行时长 **取值范围**: 非负整数，最小值0；单位：s（秒）
 type RunDuration struct {
 }
 

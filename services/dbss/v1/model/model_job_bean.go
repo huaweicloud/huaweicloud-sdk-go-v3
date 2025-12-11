@@ -11,10 +11,10 @@ type JobBean struct {
 	// 任务ID。
 	JobId string `json:"job_id"`
 
-	// 任务状态 - SUCCESS - RUNNING - FAIL - INIT - READY
+	// 任务状态 - SUCCESS: 成功 - RUNNING：运行中 - FAIL：失败 - INIT：初始化 - READY：就绪
 	Status string `json:"status"`
 
-	// 类型
+	// 类型[废弃，未使用]
 	JobType string `json:"job_type"`
 
 	// 虚拟机ID
@@ -32,7 +32,7 @@ type JobBean struct {
 	// 结束时间
 	EndTime int64 `json:"end_time"`
 
-	// 计费模式 - Period:包周期计费 - Demand:按需计费
+	// 计费模式 - Period: 包周期计费 - Demand: 按需计费
 	ChargeMode string `json:"charge_mode"`
 
 	// 错误码

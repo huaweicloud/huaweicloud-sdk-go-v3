@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// Property 云手机属性信息。
-type Property struct {
+// PropertyToUpdate 云手机属性信息。
+type PropertyToUpdate struct {
 
 	// 云手机id，不超过32个字节。
 	PhoneId string `json:"phone_id"`
@@ -16,11 +16,11 @@ type Property struct {
 	Property string `json:"property"`
 }
 
-func (o Property) String() string {
+func (o PropertyToUpdate) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "Property struct{}"
+		return "PropertyToUpdate struct{}"
 	}
 
-	return strings.Join([]string{"Property", string(data)}, " ")
+	return strings.Join([]string{"PropertyToUpdate", string(data)}, " ")
 }

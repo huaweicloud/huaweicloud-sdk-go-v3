@@ -14,13 +14,13 @@ type UpgradeAgentsRequestInfo struct {
 	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
 	HostName *string `json:"host_name,omitempty"`
 
-	// **参数解释**： 主机ID **取值范围**： 字符长度1-64位
+	// **参数解释**： 服务器（主机）的唯一标识ID **取值范围**： 字符长度1-64位
 	HostId *string `json:"host_id,omitempty"`
 
 	// **参数解释**： 服务器私有IP **取值范围**： 字符长度1-128位
 	PrivateIp *string `json:"private_ip,omitempty"`
 
-	// **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位
+	// **参数解释**： 弹性公网IP地址 **取值范围**： 字符长度1-256位，支持IPv4或IPv6格式（IPv4长度7-15位，IPv6长度15-39位）
 	PublicIp *string `json:"public_ip,omitempty"`
 
 	// **参数解释**： 防护版本 **约束限制**: 不涉及 **取值范围**： - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。  **默认取值**: 不涉及
@@ -35,7 +35,7 @@ type UpgradeAgentsRequestInfo struct {
 	// **参数解释**： 策略组ID **取值范围**： 字符长度36-64位
 	PolicyGroupId *string `json:"policy_group_id,omitempty"`
 
-	// **参数解释**: 服务器组ID **取值范围**: 字符长度0-64位
+	// **参数解释**: 主机所属服务器组的唯一标识ID **取值范围**: 字符长度0-64位
 	GroupId *string `json:"group_id,omitempty"`
 
 	// 资产重要性 **参数解释**： 资产重要性 **约束限制**: 不涉及 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。  **默认取值**: 不涉及

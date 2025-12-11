@@ -320,6 +320,27 @@ func (c *VpcClient) CreateTrafficMirrorSessionInvoker(request *model.CreateTraff
 	return &CreateTrafficMirrorSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateVirsubnetCidrReservation 创建子网预留网段
+//
+// 子网预留网段是子网网段范围的IP网段，此IP网段内的IP不会被子网内的实例占用。用户可以通过创建子网预留网段来预留某个IP网段，用于后续的特殊场景使用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) CreateVirsubnetCidrReservation(request *model.CreateVirsubnetCidrReservationRequest) (*model.CreateVirsubnetCidrReservationResponse, error) {
+	requestDef := GenReqDefForCreateVirsubnetCidrReservation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateVirsubnetCidrReservationResponse), nil
+	}
+}
+
+// CreateVirsubnetCidrReservationInvoker 创建子网预留网段
+func (c *VpcClient) CreateVirsubnetCidrReservationInvoker(request *model.CreateVirsubnetCidrReservationRequest) *CreateVirsubnetCidrReservationInvoker {
+	requestDef := GenReqDefForCreateVirsubnetCidrReservation()
+	return &CreateVirsubnetCidrReservationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeletePortTag 删除端口资源标签
 //
 // 删除指定端口的标签信息
@@ -467,6 +488,27 @@ func (c *VpcClient) DeleteTrafficMirrorSession(request *model.DeleteTrafficMirro
 func (c *VpcClient) DeleteTrafficMirrorSessionInvoker(request *model.DeleteTrafficMirrorSessionRequest) *DeleteTrafficMirrorSessionInvoker {
 	requestDef := GenReqDefForDeleteTrafficMirrorSession()
 	return &DeleteTrafficMirrorSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteVirsubnetCidrReservation 删除子网预留网段
+//
+// 当您已创建的子网预留网段不再使用时，您可以通过调用该接口删除子网预留网段资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) DeleteVirsubnetCidrReservation(request *model.DeleteVirsubnetCidrReservationRequest) (*model.DeleteVirsubnetCidrReservationResponse, error) {
+	requestDef := GenReqDefForDeleteVirsubnetCidrReservation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteVirsubnetCidrReservationResponse), nil
+	}
+}
+
+// DeleteVirsubnetCidrReservationInvoker 删除子网预留网段
+func (c *VpcClient) DeleteVirsubnetCidrReservationInvoker(request *model.DeleteVirsubnetCidrReservationRequest) *DeleteVirsubnetCidrReservationInvoker {
+	requestDef := GenReqDefForDeleteVirsubnetCidrReservation()
+	return &DeleteVirsubnetCidrReservationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPortTags 查询端口项目标签
@@ -637,6 +679,27 @@ func (c *VpcClient) ListTrafficMirrorSessions(request *model.ListTrafficMirrorSe
 func (c *VpcClient) ListTrafficMirrorSessionsInvoker(request *model.ListTrafficMirrorSessionsRequest) *ListTrafficMirrorSessionsInvoker {
 	requestDef := GenReqDefForListTrafficMirrorSessions()
 	return &ListTrafficMirrorSessionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVirsubnetCidrReservations 查询子网预留网段列表
+//
+// 当您的子网预留网段创建成功后，您可以通过调用该接口查询所有子网预留网段信息，包括子网预留网段名称、IP网段等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ListVirsubnetCidrReservations(request *model.ListVirsubnetCidrReservationsRequest) (*model.ListVirsubnetCidrReservationsResponse, error) {
+	requestDef := GenReqDefForListVirsubnetCidrReservations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVirsubnetCidrReservationsResponse), nil
+	}
+}
+
+// ListVirsubnetCidrReservationsInvoker 查询子网预留网段列表
+func (c *VpcClient) ListVirsubnetCidrReservationsInvoker(request *model.ListVirsubnetCidrReservationsRequest) *ListVirsubnetCidrReservationsInvoker {
+	requestDef := GenReqDefForListVirsubnetCidrReservations()
+	return &ListVirsubnetCidrReservationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // MigrateSubNetworkInterface 迁移辅助弹性网卡
@@ -871,6 +934,27 @@ func (c *VpcClient) ShowTrafficMirrorSessionInvoker(request *model.ShowTrafficMi
 	return &ShowTrafficMirrorSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowVirsubnetCidrReservation 查询子网预留网段
+//
+// 当您的子网预留网段创建成功后，您可以通过调用该接口查询单个子网预留网段的详细信息，包括子网预留网段的名称、IP网段等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ShowVirsubnetCidrReservation(request *model.ShowVirsubnetCidrReservationRequest) (*model.ShowVirsubnetCidrReservationResponse, error) {
+	requestDef := GenReqDefForShowVirsubnetCidrReservation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVirsubnetCidrReservationResponse), nil
+	}
+}
+
+// ShowVirsubnetCidrReservationInvoker 查询子网预留网段
+func (c *VpcClient) ShowVirsubnetCidrReservationInvoker(request *model.ShowVirsubnetCidrReservationRequest) *ShowVirsubnetCidrReservationInvoker {
+	requestDef := GenReqDefForShowVirsubnetCidrReservation()
+	return &ShowVirsubnetCidrReservationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateSecurityGroup 更新安全组
 //
 // 更新安全组
@@ -974,6 +1058,27 @@ func (c *VpcClient) UpdateTrafficMirrorSession(request *model.UpdateTrafficMirro
 func (c *VpcClient) UpdateTrafficMirrorSessionInvoker(request *model.UpdateTrafficMirrorSessionRequest) *UpdateTrafficMirrorSessionInvoker {
 	requestDef := GenReqDefForUpdateTrafficMirrorSession()
 	return &UpdateTrafficMirrorSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateVirsubnetCidrReservation 更新子网预留网段
+//
+// 当您的子网预留网段创建成功后，您可以通过调用该接口更新子网预留网段的基本信息，包括子网预留网段的名称、描述信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) UpdateVirsubnetCidrReservation(request *model.UpdateVirsubnetCidrReservationRequest) (*model.UpdateVirsubnetCidrReservationResponse, error) {
+	requestDef := GenReqDefForUpdateVirsubnetCidrReservation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateVirsubnetCidrReservationResponse), nil
+	}
+}
+
+// UpdateVirsubnetCidrReservationInvoker 更新子网预留网段
+func (c *VpcClient) UpdateVirsubnetCidrReservationInvoker(request *model.UpdateVirsubnetCidrReservationRequest) *UpdateVirsubnetCidrReservationInvoker {
+	requestDef := GenReqDefForUpdateVirsubnetCidrReservation()
+	return &UpdateVirsubnetCidrReservationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AddFirewallRules 网络ACL插入规则

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ScanFileNum 已扫描的文件数量
+// ScanFileNum **参数解释**: 已扫描的文件数量 **取值范围**: 非负整数，最小值0；单位：个
 type ScanFileNum struct {
 }
 

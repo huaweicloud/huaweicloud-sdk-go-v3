@@ -13,6 +13,9 @@ type SmartDocumentRecognizerFormulaBlock struct {
 
 	// 数学公式位置信息，列表形式，分别表示4个顶点的x, y坐标；坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
 	Location *[][]int32 `json:"location,omitempty"`
+
+	// 公式类别，取值包含formula、embedded_formula。 formula: 独立公式 embedded_formula: 行内公式
+	Type *string `json:"type,omitempty"`
 }
 
 func (o SmartDocumentRecognizerFormulaBlock) String() string {

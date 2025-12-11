@@ -16,6 +16,9 @@ type SmartDocumentRecognizerWordsBlockList struct {
 
 	// 文字块识别结果的置信度。
 	Confidence *float32 `json:"confidence,omitempty"`
+
+	// 当入参character_mode为True时返回该字段，表示当前文字块对应的单字符识别列表，输出顺序从左到右，先上后下。
+	CharList *[]SmartDocumentRecognizerCharList `json:"char_list,omitempty"`
 }
 
 func (o SmartDocumentRecognizerWordsBlockList) String() string {

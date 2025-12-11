@@ -14,7 +14,7 @@ type SqlRuleRequest struct {
 	// 每页大小
 	Size *int32 `json:"size,omitempty"`
 
-	// 风险级别 - HIGH - MEDIUM - LOW - NO_RISK
+	// 风险级别 - HIGH：高 - MEDIUM：中 - LOW：低 - NO_RISK：无风险
 	RiskLevels *string `json:"risk_levels,omitempty"`
 }
 

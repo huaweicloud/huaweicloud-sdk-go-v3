@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Memo 备注信息
+// Memo **参数解释** 备注信息 **取值范围** 字符长度0-512位
 type Memo struct {
 }
 

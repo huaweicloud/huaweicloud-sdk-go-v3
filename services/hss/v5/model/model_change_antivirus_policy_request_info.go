@@ -15,10 +15,10 @@ type ChangeAntivirusPolicyRequestInfo struct {
 	// 策略名称
 	PolicyName string `json:"policy_name"`
 
-	// 启动类型，包含如下:   - now : 立即启动   - later : 稍后启动   - period : 周期启动
+	// **参数解释**： 启动类型 **取值范围**： 包含如下   - now：立即启动   - later：稍后启动   - period：周期启动
 	StartType string `json:"start_type"`
 
-	// 任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
+	// **参数解释**： 任务类型 **取值范围**： 包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
 	ScanType *string `json:"scan_type,omitempty"`
 
 	// 启动类型，包含如下:   - day ：每天   - week : 每周   - month : 每月
@@ -48,7 +48,7 @@ type ChangeAntivirusPolicyRequestInfo struct {
 	// 排除目录，多个用;分隔
 	IgnoreDir *string `json:"ignore_dir,omitempty"`
 
-	// 处置动作，包含如下:   - auto：自动处置   - manual：人工处置
+	// **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
 	Action string `json:"action"`
 
 	// 此次扫描任务是否消耗按次计费配额

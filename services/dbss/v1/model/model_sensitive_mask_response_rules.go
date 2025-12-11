@@ -14,7 +14,7 @@ type SensitiveMaskResponseRules struct {
 	// 规则名称
 	Name *string `json:"name,omitempty"`
 
-	// 规则类型
+	// 规则类型 - BUILD_IN：系统内置 - USER_DEFINE：自定义
 	Type *string `json:"type,omitempty"`
 
 	// 规则正则表达式
@@ -23,7 +23,7 @@ type SensitiveMaskResponseRules struct {
 	// 替换值
 	MaskValue *string `json:"mask_value,omitempty"`
 
-	// 规则状态
+	// 规则状态 - ON：启用 - OFF：禁用
 	Status *string `json:"status,omitempty"`
 
 	// 操作时间

@@ -12,7 +12,7 @@ type ListAntivirusHandleHistoryResponse struct {
 	// **参数解释**: 总数 **取值范围**: 最小值0，最大值2147483647
 	TotalNum *int32 `json:"total_num,omitempty"`
 
-	// 病毒查杀历史处置记录
+	// **参数解释**: 病毒查杀历史处置记录 **取值范围**: 最小值0，最大值100
 	DataList       *[]AntiVirusHandleHistory `json:"data_list,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }

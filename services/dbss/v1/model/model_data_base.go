@@ -15,13 +15,13 @@ type DataBase struct {
 	// 数据库名称
 	Name string `json:"name"`
 
-	// 添加的数据库类型： - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - GAUSSDBOPENGAUSS - GREENPLUM - HIGHGO - SHENTONG - GBASE8A - GBASE8S - GBASEXDM - MONGODB - DDS
+	// 添加的数据库类型： - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SqlServer - DAMENG: Dameng - TAURUS: Taurus - DWS: Dws - KINGBASE: Kingbase - GAUSSDBOPENGAUSS：GaussDB(for openGauss) - GREENPLUM：Greenplum - HIGHGO：HighGo - SHENTONG：ShenTong - GBASE8A：GBase 8a - GBASE8S：GBase 8s - GBASEXDM：GBase XDM - MONGODB：MongoDB - DDS：DDS（Document Database Service）
 	Type string `json:"type"`
 
 	// 数据库版本
 	Version string `json:"version"`
 
-	// 数据库字符集 - GBK - UTF8
+	// 数据库字符集 - GBK：GBK - UTF8：UTF8
 	Charset string `json:"charset"`
 
 	// 数据库IP
@@ -39,13 +39,13 @@ type DataBase struct {
 	// 数据库实例名
 	InstanceName string `json:"instance_name"`
 
-	// 数据库的运行状态 - ACTIVE - SHUTOFF - ERROR
+	// 数据库的运行状态 - ACTIVE：运行中 - SHUTOFF：已关闭 - ERROR：故障
 	AuditStatus *string `json:"audit_status,omitempty"`
 
 	// agent的唯一ID
 	AgentUrl *[]string `json:"agent_url,omitempty"`
 
-	// 数据库分类 - RDS: 表示RDS数据库 - ECS:自建数据库
+	// 数据库分类 - RDS: 表示RDS数据库 - ECS: 自建数据库
 	DbClassification string `json:"db_classification"`
 
 	// rds实例审计开关状态不匹配。当数据库审计开启且rds侧日志上传开关关闭时该字段为true。
