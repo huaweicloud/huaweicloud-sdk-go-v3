@@ -55,6 +55,8 @@ type ClusterSpec struct {
 
 	Authentication *Authentication `json:"authentication,omitempty"`
 
+	PublicAccess *PublicAccess `json:"publicAccess,omitempty"`
+
 	// 集群的计费方式。 - 0: 按需计费 [- 1: 包周期](tag:hws,hws_hk)  默认为“按需计费”。
 	BillingMode *int32 `json:"billingMode,omitempty"`
 

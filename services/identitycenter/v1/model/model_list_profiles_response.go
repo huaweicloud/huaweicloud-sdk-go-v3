@@ -10,7 +10,7 @@ import (
 type ListProfilesResponse struct {
 
 	// 应用程序Profile
-	ApplicationProfiles *[]ApplicationProfileDto `json:"applicationProfiles,omitempty"`
+	ApplicationProfiles *[]ApplicationProfileDto `json:"application_profiles,omitempty"`
 	HttpStatusCode      int                      `json:"-"`
 }
 

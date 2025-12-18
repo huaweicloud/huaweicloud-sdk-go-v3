@@ -8,7 +8,10 @@ import (
 
 // SetAutoEnlargePolicyResponse Response Object
 type SetAutoEnlargePolicyResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// **参数解释：** 设置磁盘自动扩容策略失败的实例信息列表。 **取值范围：** 不涉及
+	ErrorResults   *[]SetAutoPolicyErrorResults `json:"error_results,omitempty"`
+	HttpStatusCode int                          `json:"-"`
 }
 
 func (o SetAutoEnlargePolicyResponse) String() string {

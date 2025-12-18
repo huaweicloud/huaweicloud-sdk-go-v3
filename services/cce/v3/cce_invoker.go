@@ -53,6 +53,22 @@ func (i *AwakeClusterInvoker) Invoke() (*model.AwakeClusterResponse, error) {
 	}
 }
 
+type BatchCreateAddonPrecheckInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateAddonPrecheckInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateAddonPrecheckInvoker) Invoke() (*model.BatchCreateAddonPrecheckResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateAddonPrecheckResponse), nil
+	}
+}
+
 type BatchCreateClusterTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -517,6 +533,22 @@ func (i *GetClusterFlavorSpecsInvoker) Invoke() (*model.GetClusterFlavorSpecsRes
 	}
 }
 
+type GetClusterLongAkskConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetClusterLongAkskConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetClusterLongAkskConfigInvoker) Invoke() (*model.GetClusterLongAkskConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetClusterLongAkskConfigResponse), nil
+	}
+}
+
 type GetClusterQuotaInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -562,6 +594,22 @@ func (i *GetLabelsInvoker) Invoke() (*model.GetLabelsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.GetLabelsResponse), nil
+	}
+}
+
+type GetLongAkskConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetLongAkskConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetLongAkskConfigInvoker) Invoke() (*model.GetLongAkskConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetLongAkskConfigResponse), nil
 	}
 }
 
@@ -898,6 +946,22 @@ func (i *MigrateNodeInvoker) Invoke() (*model.MigrateNodeResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.MigrateNodeResponse), nil
+	}
+}
+
+type MigrateToNodePoolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *MigrateToNodePoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *MigrateToNodePoolInvoker) Invoke() (*model.MigrateToNodePoolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.MigrateToNodePoolResponse), nil
 	}
 }
 
@@ -1522,6 +1586,38 @@ func (i *UpdateClusterLogConfigInvoker) Invoke() (*model.UpdateClusterLogConfigR
 		return nil, err
 	} else {
 		return result.(*model.UpdateClusterLogConfigResponse), nil
+	}
+}
+
+type UpdateClusterLongAkskConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateClusterLongAkskConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateClusterLongAkskConfigInvoker) Invoke() (*model.UpdateClusterLongAkskConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateClusterLongAkskConfigResponse), nil
+	}
+}
+
+type UpdateLongAkskConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateLongAkskConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateLongAkskConfigInvoker) Invoke() (*model.UpdateLongAkskConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateLongAkskConfigResponse), nil
 	}
 }
 
@@ -2245,6 +2341,22 @@ func (i *ShowAutopilotClusterInvoker) Invoke() (*model.ShowAutopilotClusterRespo
 	}
 }
 
+type ShowAutopilotClusterConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAutopilotClusterConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAutopilotClusterConfigInvoker) Invoke() (*model.ShowAutopilotClusterConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAutopilotClusterConfigResponse), nil
+	}
+}
+
 type ShowAutopilotClusterEndpointsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2274,6 +2386,22 @@ func (i *ShowAutopilotClusterUpgradeInfoInvoker) Invoke() (*model.ShowAutopilotC
 		return nil, err
 	} else {
 		return result.(*model.ShowAutopilotClusterUpgradeInfoResponse), nil
+	}
+}
+
+type ShowAutopilotFeatureGatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAutopilotFeatureGatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAutopilotFeatureGatesInvoker) Invoke() (*model.ShowAutopilotFeatureGatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAutopilotFeatureGatesResponse), nil
 	}
 }
 
@@ -2578,5 +2706,53 @@ func (i *UploadAutopilotChartInvoker) Invoke() (*model.UploadAutopilotChartRespo
 		return nil, err
 	} else {
 		return result.(*model.UploadAutopilotChartResponse), nil
+	}
+}
+
+type DeleteAutopilotJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAutopilotJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAutopilotJobInvoker) Invoke() (*model.DeleteAutopilotJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAutopilotJobResponse), nil
+	}
+}
+
+type GetAutopilotOneJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetAutopilotOneJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetAutopilotOneJobInvoker) Invoke() (*model.GetAutopilotOneJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetAutopilotOneJobResponse), nil
+	}
+}
+
+type ListAutopilotJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAutopilotJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAutopilotJobsInvoker) Invoke() (*model.ListAutopilotJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAutopilotJobsResponse), nil
 	}
 }

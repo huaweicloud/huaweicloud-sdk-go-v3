@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// NodeMetadataOwnerReference **参数解释**： 属主对象。 **约束限制**： - 创建成功后自动生成，填写无效。 - 创建节点接口返回内容中无该参数  **取值范围**： 不涉及 **默认取值**： 不涉及
-type NodeMetadataOwnerReference struct {
+// NodeMetadataOwnerReferences **参数解释**： 属主对象。 **约束限制**： - 创建成功后自动生成，填写无效。 - 创建节点接口返回内容中无该参数  **取值范围**： 不涉及 **默认取值**： 不涉及
+type NodeMetadataOwnerReferences struct {
 
 	// **参数解释**： 节点池名称 **约束限制**： 创建成功后自动生成，填写无效。 **取值范围**： 不涉及 **默认取值**： 不涉及
 	NodepoolName *string `json:"nodepoolName,omitempty"`
@@ -22,11 +22,11 @@ type NodeMetadataOwnerReference struct {
 	HyperNodeID *string `json:"hyperNodeID,omitempty"`
 }
 
-func (o NodeMetadataOwnerReference) String() string {
+func (o NodeMetadataOwnerReferences) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "NodeMetadataOwnerReference struct{}"
+		return "NodeMetadataOwnerReferences struct{}"
 	}
 
-	return strings.Join([]string{"NodeMetadataOwnerReference", string(data)}, " ")
+	return strings.Join([]string{"NodeMetadataOwnerReferences", string(data)}, " ")
 }

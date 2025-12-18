@@ -21,6 +21,22 @@ func (i *AcceptOrRejectEndpointInvoker) Invoke() (*model.AcceptOrRejectEndpointR
 	}
 }
 
+type AddEndpointServiceServerResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddEndpointServiceServerResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddEndpointServiceServerResourceInvoker) Invoke() (*model.AddEndpointServiceServerResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddEndpointServiceServerResourceResponse), nil
+	}
+}
+
 type AddOrRemoveServicePermissionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -450,6 +466,22 @@ func (i *UpgradeEndpointServiceInvoker) Invoke() (*model.UpgradeEndpointServiceR
 		return nil, err
 	} else {
 		return result.(*model.UpgradeEndpointServiceResponse), nil
+	}
+}
+
+type UpgradeEndpointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeEndpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpgradeEndpointInvoker) Invoke() (*model.UpgradeEndpointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeEndpointResponse), nil
 	}
 }
 

@@ -1,0 +1,29 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// ListParameterGroupApplyHistoryV0V3Request Request Object
+type ListParameterGroupApplyHistoryV0V3Request struct {
+
+	// **参数解释**：  参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+	ConfigId string `json:"config_id"`
+
+	// **参数解释**：  分页参数: 起始值。  **约束限制**：  不涉及。  **取值范围**：  大于等于0。  **默认取值**：  默认值是0。
+	Offset *int32 `json:"offset,omitempty"`
+
+	// **参数解释**：  分页参数: 每页记录数。  **约束限制**：  不涉及。  **取值范围**：  大于0且小于等于128。  **默认取值**：  默认值是10。
+	Limit *int32 `json:"limit,omitempty"`
+}
+
+func (o ListParameterGroupApplyHistoryV0V3Request) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "ListParameterGroupApplyHistoryV0V3Request struct{}"
+	}
+
+	return strings.Join([]string{"ListParameterGroupApplyHistoryV0V3Request", string(data)}, " ")
+}

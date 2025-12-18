@@ -8,10 +8,8 @@ import (
 
 // ShowAvailableResourceResponse Response Object
 type ShowAvailableResourceResponse struct {
-	AvailabilityZone *string `json:"availability_zone,omitempty"`
-
-	Flavors        *[]FlavorResource `json:"flavors,omitempty"`
-	HttpStatusCode int               `json:"-"`
+	AvailableResource *[]AvailableResourceResp `json:"available_resource,omitempty"`
+	HttpStatusCode    int                      `json:"-"`
 }
 
 func (o ShowAvailableResourceResponse) String() string {

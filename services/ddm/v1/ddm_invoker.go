@@ -1556,3 +1556,115 @@ func (i *ValidateWeakPasswordInvoker) Invoke() (*model.ValidateWeakPasswordRespo
 		return result.(*model.ValidateWeakPasswordResponse), nil
 	}
 }
+
+type CheckDataNodeConnectionV0V3Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckDataNodeConnectionV0V3Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckDataNodeConnectionV0V3Invoker) Invoke() (*model.CheckDataNodeConnectionV0V3Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckDataNodeConnectionV0V3Response), nil
+	}
+}
+
+type CompareParameterGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CompareParameterGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CompareParameterGroupsInvoker) Invoke() (*model.CompareParameterGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CompareParameterGroupsResponse), nil
+	}
+}
+
+type CopyParameterGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CopyParameterGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CopyParameterGroupInvoker) Invoke() (*model.CopyParameterGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CopyParameterGroupResponse), nil
+	}
+}
+
+type ListInstancesAppliedParameterGroupV0V3Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstancesAppliedParameterGroupV0V3Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstancesAppliedParameterGroupV0V3Invoker) Invoke() (*model.ListInstancesAppliedParameterGroupV0V3Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstancesAppliedParameterGroupV0V3Response), nil
+	}
+}
+
+type ListParameterGroupApplyHistoryV0V3Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListParameterGroupApplyHistoryV0V3Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListParameterGroupApplyHistoryV0V3Invoker) Invoke() (*model.ListParameterGroupApplyHistoryV0V3Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListParameterGroupApplyHistoryV0V3Response), nil
+	}
+}
+
+type ResetParameterGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetParameterGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ResetParameterGroupInvoker) Invoke() (*model.ResetParameterGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetParameterGroupResponse), nil
+	}
+}
+
+type ShowDdmDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDdmDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDdmDetailInvoker) Invoke() (*model.ShowDdmDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDdmDetailResponse), nil
+	}
+}

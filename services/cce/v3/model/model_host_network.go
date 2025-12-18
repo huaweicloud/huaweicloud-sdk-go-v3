@@ -17,6 +17,9 @@ type HostNetwork struct {
 
 	// 集群默认的Node节点安全组ID，不指定该字段系统将自动为用户创建默认Node节点安全组，指定该字段时集群将绑定指定的安全组。Node节点安全组需要放通部分端口来保证正常通信。[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/cce_faq/cce_faq_00265.html)。](tag:hws)[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00265.html)。](tag:hws_hk)
 	SecurityGroup *string `json:"SecurityGroup,omitempty"`
+
+	// **参数解释：** 集群控制面节点安全组ID。 **约束限制：** 创建成功后自动生成，填写无效。 **取值范围：** 不涉及 **默认取值：** 不涉及
+	ControlPlaneSecurityGroup *string `json:"controlPlaneSecurityGroup,omitempty"`
 }
 
 func (o HostNetwork) String() string {

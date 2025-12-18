@@ -2057,3 +2057,150 @@ func (c *DdmClient) ValidateWeakPasswordInvoker(request *model.ValidateWeakPassw
 	requestDef := GenReqDefForValidateWeakPassword()
 	return &ValidateWeakPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// CheckDataNodeConnectionV0V3 rds连通性检查V3
+//
+// rds连通性检查V3
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) CheckDataNodeConnectionV0V3(request *model.CheckDataNodeConnectionV0V3Request) (*model.CheckDataNodeConnectionV0V3Response, error) {
+	requestDef := GenReqDefForCheckDataNodeConnectionV0V3()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckDataNodeConnectionV0V3Response), nil
+	}
+}
+
+// CheckDataNodeConnectionV0V3Invoker rds连通性检查V3
+func (c *DdmClient) CheckDataNodeConnectionV0V3Invoker(request *model.CheckDataNodeConnectionV0V3Request) *CheckDataNodeConnectionV0V3Invoker {
+	requestDef := GenReqDefForCheckDataNodeConnectionV0V3()
+	return &CheckDataNodeConnectionV0V3Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CompareParameterGroups 比较参数组V3
+//
+// 比较参数组V3
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) CompareParameterGroups(request *model.CompareParameterGroupsRequest) (*model.CompareParameterGroupsResponse, error) {
+	requestDef := GenReqDefForCompareParameterGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CompareParameterGroupsResponse), nil
+	}
+}
+
+// CompareParameterGroupsInvoker 比较参数组V3
+func (c *DdmClient) CompareParameterGroupsInvoker(request *model.CompareParameterGroupsRequest) *CompareParameterGroupsInvoker {
+	requestDef := GenReqDefForCompareParameterGroups()
+	return &CompareParameterGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CopyParameterGroup 复制参数组V3
+//
+// 复制参数组V3
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) CopyParameterGroup(request *model.CopyParameterGroupRequest) (*model.CopyParameterGroupResponse, error) {
+	requestDef := GenReqDefForCopyParameterGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CopyParameterGroupResponse), nil
+	}
+}
+
+// CopyParameterGroupInvoker 复制参数组V3
+func (c *DdmClient) CopyParameterGroupInvoker(request *model.CopyParameterGroupRequest) *CopyParameterGroupInvoker {
+	requestDef := GenReqDefForCopyParameterGroup()
+	return &CopyParameterGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstancesAppliedParameterGroupV0V3 查询可应用的实例列表V3
+//
+// 查询可应用的实例列表V3
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ListInstancesAppliedParameterGroupV0V3(request *model.ListInstancesAppliedParameterGroupV0V3Request) (*model.ListInstancesAppliedParameterGroupV0V3Response, error) {
+	requestDef := GenReqDefForListInstancesAppliedParameterGroupV0V3()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstancesAppliedParameterGroupV0V3Response), nil
+	}
+}
+
+// ListInstancesAppliedParameterGroupV0V3Invoker 查询可应用的实例列表V3
+func (c *DdmClient) ListInstancesAppliedParameterGroupV0V3Invoker(request *model.ListInstancesAppliedParameterGroupV0V3Request) *ListInstancesAppliedParameterGroupV0V3Invoker {
+	requestDef := GenReqDefForListInstancesAppliedParameterGroupV0V3()
+	return &ListInstancesAppliedParameterGroupV0V3Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListParameterGroupApplyHistoryV0V3 参数组应用记录V3
+//
+// 参数组应用记录V3
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ListParameterGroupApplyHistoryV0V3(request *model.ListParameterGroupApplyHistoryV0V3Request) (*model.ListParameterGroupApplyHistoryV0V3Response, error) {
+	requestDef := GenReqDefForListParameterGroupApplyHistoryV0V3()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListParameterGroupApplyHistoryV0V3Response), nil
+	}
+}
+
+// ListParameterGroupApplyHistoryV0V3Invoker 参数组应用记录V3
+func (c *DdmClient) ListParameterGroupApplyHistoryV0V3Invoker(request *model.ListParameterGroupApplyHistoryV0V3Request) *ListParameterGroupApplyHistoryV0V3Invoker {
+	requestDef := GenReqDefForListParameterGroupApplyHistoryV0V3()
+	return &ListParameterGroupApplyHistoryV0V3Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetParameterGroup 更新参数组V3
+//
+// 更新参数组V3
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ResetParameterGroup(request *model.ResetParameterGroupRequest) (*model.ResetParameterGroupResponse, error) {
+	requestDef := GenReqDefForResetParameterGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetParameterGroupResponse), nil
+	}
+}
+
+// ResetParameterGroupInvoker 更新参数组V3
+func (c *DdmClient) ResetParameterGroupInvoker(request *model.ResetParameterGroupRequest) *ResetParameterGroupInvoker {
+	requestDef := GenReqDefForResetParameterGroup()
+	return &ResetParameterGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDdmDetail 查询实例详情V3
+//
+// 查询实例详情V3
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ShowDdmDetail(request *model.ShowDdmDetailRequest) (*model.ShowDdmDetailResponse, error) {
+	requestDef := GenReqDefForShowDdmDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDdmDetailResponse), nil
+	}
+}
+
+// ShowDdmDetailInvoker 查询实例详情V3
+func (c *DdmClient) ShowDdmDetailInvoker(request *model.ShowDdmDetailRequest) *ShowDdmDetailInvoker {
+	requestDef := GenReqDefForShowDdmDetail()
+	return &ShowDdmDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

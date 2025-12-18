@@ -18,9 +18,6 @@ type ListEnginePropertiesEntity struct {
 	// 每个Broker的最大连接数。
 	MaxConnectionPerBroker *string `json:"max_connection_per_broker,omitempty"`
 
-	// 每个Broker的最大分区数。
-	MaxPartitionPerBroker *string `json:"max_partition_per_broker,omitempty"`
-
 	// Broker的最大个数。
 	MaxBroker *string `json:"max_broker,omitempty"`
 

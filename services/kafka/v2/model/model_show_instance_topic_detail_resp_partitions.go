@@ -15,13 +15,13 @@ type ShowInstanceTopicDetailRespPartitions struct {
 	Leader *int32 `json:"leader,omitempty"`
 
 	// **参数解释**： 分区leader副本的LEO（Log End Offset）。 **取值范围**： 不涉及
-	Leo *int32 `json:"leo,omitempty"`
+	Leo *int64 `json:"leo,omitempty"`
 
 	// **参数解释**： 分区高水位（HW，High Watermark）。 **取值范围**： 不涉及
-	Hw *int32 `json:"hw,omitempty"`
+	Hw *int64 `json:"hw,omitempty"`
 
 	// **参数解释**： 分区leader副本的LSO（Log Start Offset）。 **取值范围**： 不涉及
-	Lso *int32 `json:"lso,omitempty"`
+	Lso *int64 `json:"lso,omitempty"`
 
 	// **参数解释**： 分区上次写入消息的时间。  格式为Unix时间戳。  单位：毫秒。 **取值范围**： 不涉及
 	LastUpdateTimestamp *int64 `json:"last_update_timestamp,omitempty"`

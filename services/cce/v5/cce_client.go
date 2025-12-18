@@ -82,6 +82,27 @@ func (c *CceClient) ListImageCachesInvoker(request *model.ListImageCachesRequest
 	return &ListImageCachesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPackageProducts 查询套餐包列表
+//
+// 查询套餐包列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ListPackageProducts(request *model.ListPackageProductsRequest) (*model.ListPackageProductsResponse, error) {
+	requestDef := GenReqDefForListPackageProducts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPackageProductsResponse), nil
+	}
+}
+
+// ListPackageProductsInvoker 查询套餐包列表
+func (c *CceClient) ListPackageProductsInvoker(request *model.ListPackageProductsRequest) *ListPackageProductsInvoker {
+	requestDef := GenReqDefForListPackageProducts()
+	return &ListPackageProductsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowImageCache 查询镜像缓存详情
 //
 // 查询镜像缓存详情
@@ -101,4 +122,25 @@ func (c *CceClient) ShowImageCache(request *model.ShowImageCacheRequest) (*model
 func (c *CceClient) ShowImageCacheInvoker(request *model.ShowImageCacheRequest) *ShowImageCacheInvoker {
 	requestDef := GenReqDefForShowImageCache()
 	return &ShowImageCacheInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SubscribePackageProducts 订购套餐包
+//
+// 订购套餐包
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) SubscribePackageProducts(request *model.SubscribePackageProductsRequest) (*model.SubscribePackageProductsResponse, error) {
+	requestDef := GenReqDefForSubscribePackageProducts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SubscribePackageProductsResponse), nil
+	}
+}
+
+// SubscribePackageProductsInvoker 订购套餐包
+func (c *CceClient) SubscribePackageProductsInvoker(request *model.SubscribePackageProductsRequest) *SubscribePackageProductsInvoker {
+	requestDef := GenReqDefForSubscribePackageProducts()
+	return &SubscribePackageProductsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

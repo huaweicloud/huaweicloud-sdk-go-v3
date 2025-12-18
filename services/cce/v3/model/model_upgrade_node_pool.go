@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// UpgradeNodePool
+// UpgradeNodePool 同步节点池的请求体
 type UpgradeNodePool struct {
 
 	// API类型，固定值“NodePool”。

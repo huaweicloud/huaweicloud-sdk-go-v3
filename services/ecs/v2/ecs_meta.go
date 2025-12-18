@@ -1856,6 +1856,15 @@ func GenReqDefForShowFlavorCapacity() *def.HttpRequestDef {
 		WithJsonTag("flavor_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Count").
+		WithJsonTag("count").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RegionIds").
+		WithJsonTag("region_ids").
+		WithLocationType(def.Query))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }

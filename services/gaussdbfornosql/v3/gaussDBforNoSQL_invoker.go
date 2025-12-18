@@ -2309,6 +2309,22 @@ func (i *UpdateInstanceConfigurationsInvoker) Invoke() (*model.UpdateInstanceCon
 	}
 }
 
+type UpdateInstanceLbInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceLbInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInstanceLbInvoker) Invoke() (*model.UpdateInstanceLbResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceLbResponse), nil
+	}
+}
+
 type UpdateInstanceNameInvoker struct {
 	*invoker.BaseInvoker
 }

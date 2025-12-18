@@ -18,6 +18,12 @@ type CreateInstanceReq struct {
 	// 实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
 	Description *string `json:"description,omitempty"`
 
+	// **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+	DiskEncryptedEnable *bool `json:"disk_encrypted_enable,omitempty"`
+
+	// **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	DiskEncryptedKey *string `json:"disk_encrypted_key,omitempty"`
+
 	// 消息引擎：rabbitmq。
 	Engine CreateInstanceReqEngine `json:"engine"`
 

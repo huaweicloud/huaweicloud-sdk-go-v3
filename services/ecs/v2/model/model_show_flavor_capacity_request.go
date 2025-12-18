@@ -9,6 +9,10 @@ import (
 // ShowFlavorCapacityRequest Request Object
 type ShowFlavorCapacityRequest struct {
 	FlavorId string `json:"flavor_id"`
+
+	Count *string `json:"count,omitempty"`
+
+	RegionIds *string `json:"region_ids,omitempty"`
 }
 
 func (o ShowFlavorCapacityRequest) String() string {

@@ -2439,9 +2439,9 @@ func (c *GaussDBforNoSQLClient) ShowIpNumRequirementInvoker(request *model.ShowI
 	return &ShowIpNumRequirementInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowModifyHistory 查询实例参数的修改历史
+// ShowModifyHistory 查询参数组修改历史。
 //
-// 查询实例参数的修改历史
+// 查询指定实例的参数组修改历史记录，支持分页查询，支持参数搜索。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *GaussDBforNoSQLClient) ShowModifyHistory(request *model.ShowModifyHistoryRequest) (*model.ShowModifyHistoryResponse, error) {
@@ -2454,7 +2454,7 @@ func (c *GaussDBforNoSQLClient) ShowModifyHistory(request *model.ShowModifyHisto
 	}
 }
 
-// ShowModifyHistoryInvoker 查询实例参数的修改历史
+// ShowModifyHistoryInvoker 查询参数组修改历史。
 func (c *GaussDBforNoSQLClient) ShowModifyHistoryInvoker(request *model.ShowModifyHistoryRequest) *ShowModifyHistoryInvoker {
 	requestDef := GenReqDefForShowModifyHistory()
 	return &ShowModifyHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3046,6 +3046,27 @@ func (c *GaussDBforNoSQLClient) UpdateInstanceConfigurations(request *model.Upda
 func (c *GaussDBforNoSQLClient) UpdateInstanceConfigurationsInvoker(request *model.UpdateInstanceConfigurationsRequest) *UpdateInstanceConfigurationsInvoker {
 	requestDef := GenReqDefForUpdateInstanceConfigurations()
 	return &UpdateInstanceConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstanceLb 修改负载均衡地址
+//
+// 修改负载均衡地址。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) UpdateInstanceLb(request *model.UpdateInstanceLbRequest) (*model.UpdateInstanceLbResponse, error) {
+	requestDef := GenReqDefForUpdateInstanceLb()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstanceLbResponse), nil
+	}
+}
+
+// UpdateInstanceLbInvoker 修改负载均衡地址
+func (c *GaussDBforNoSQLClient) UpdateInstanceLbInvoker(request *model.UpdateInstanceLbRequest) *UpdateInstanceLbInvoker {
+	requestDef := GenReqDefForUpdateInstanceLb()
+	return &UpdateInstanceLbInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateInstanceName 修改实例名称

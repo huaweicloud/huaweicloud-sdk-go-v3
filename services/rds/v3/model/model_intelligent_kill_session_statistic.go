@@ -13,7 +13,7 @@ type IntelligentKillSessionStatistic struct {
 	Keyword *string `json:"keyword,omitempty"`
 
 	// **参数解释**：  随机选取符合sql限流关键字的用户某条sql样例。  **约束限制**：  不涉及。
-	RawSql *string `json:"raw_sql,omitempty"`
+	RawSqlText *string `json:"raw_sql_text,omitempty"`
 
 	// **参数解释**：  符合该统计维度的线程id。  **约束限制**：  不涉及。
 	Ids *[]int64 `json:"ids,omitempty"`

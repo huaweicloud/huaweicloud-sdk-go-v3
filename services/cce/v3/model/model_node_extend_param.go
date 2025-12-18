@@ -66,6 +66,12 @@ type NodeExtendParam struct {
 	// 节点的计费模式。已废弃，请使用NodeSpec中的billingMode字段。
 	ChargingMode *int32 `json:"chargingMode,omitempty"`
 
+	// **参数解释**： 创建竞价实例时，需指定该参数的值为“spot”。 **约束限制**： 仅当billingMode=0时此参数生效 **取值范围**： 不涉及 **默认取值**： 不涉及
+	MarketType *NodeExtendParamMarketType `json:"marketType,omitempty"`
+
+	// **参数解释**： 用户愿意为竞价实例每小时支付的最高价格。 **约束限制**： - 仅当billingMode=0且marketType=spot时，该参数设置后生效。 - 当billingMode=0且marketType=spot时，如果不传递spotPrice，默认使用按需购买的价格作为竞价。 - spotPrice需要小于等于按需价格并大于等于云服务器市场价格。  **取值范围**： 不涉及 **默认取值**： 不涉及
+	SpotPrice *string `json:"spotPrice,omitempty"`
+
 	// 委托的名称。  委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为CCE节点提供访问云服务器的临时凭证。 作为响应参数仅在创建节点传入时返回该字段。
 	AgencyName *string `json:"agency_name,omitempty"`
 
@@ -89,6 +95,49 @@ func (o NodeExtendParam) String() string {
 	}
 
 	return strings.Join([]string{"NodeExtendParam", string(data)}, " ")
+}
+
+type NodeExtendParamMarketType struct {
+	value string
+}
+
+type NodeExtendParamMarketTypeEnum struct {
+	SPOT NodeExtendParamMarketType
+}
+
+func GetNodeExtendParamMarketTypeEnum() NodeExtendParamMarketTypeEnum {
+	return NodeExtendParamMarketTypeEnum{
+		SPOT: NodeExtendParamMarketType{
+			value: "spot",
+		},
+	}
+}
+
+func (c NodeExtendParamMarketType) Value() string {
+	return c.value
+}
+
+func (c NodeExtendParamMarketType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *NodeExtendParamMarketType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type NodeExtendParamSecurityReinforcementType struct {

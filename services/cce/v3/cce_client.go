@@ -84,6 +84,27 @@ func (c *CceClient) AwakeClusterInvoker(request *model.AwakeClusterRequest) *Awa
 	return &AwakeClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreateAddonPrecheck 批量创建插件检查任务
+//
+// 该API用于在指定集群下批量创建插件检查任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) BatchCreateAddonPrecheck(request *model.BatchCreateAddonPrecheckRequest) (*model.BatchCreateAddonPrecheckResponse, error) {
+	requestDef := GenReqDefForBatchCreateAddonPrecheck()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateAddonPrecheckResponse), nil
+	}
+}
+
+// BatchCreateAddonPrecheckInvoker 批量创建插件检查任务
+func (c *CceClient) BatchCreateAddonPrecheckInvoker(request *model.BatchCreateAddonPrecheckRequest) *BatchCreateAddonPrecheckInvoker {
+	requestDef := GenReqDefForBatchCreateAddonPrecheck()
+	return &BatchCreateAddonPrecheckInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchCreateClusterTags 批量添加指定集群的资源标签
 //
 // 该API用于批量添加指定集群的资源标签。
@@ -720,6 +741,27 @@ func (c *CceClient) GetClusterFlavorSpecsInvoker(request *model.GetClusterFlavor
 	return &GetClusterFlavorSpecsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// GetClusterLongAkskConfig 获取集群LongAKSK配置
+//
+// 该API用于获取集群longaksk的配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) GetClusterLongAkskConfig(request *model.GetClusterLongAkskConfigRequest) (*model.GetClusterLongAkskConfigResponse, error) {
+	requestDef := GenReqDefForGetClusterLongAkskConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetClusterLongAkskConfigResponse), nil
+	}
+}
+
+// GetClusterLongAkskConfigInvoker 获取集群LongAKSK配置
+func (c *CceClient) GetClusterLongAkskConfigInvoker(request *model.GetClusterLongAkskConfigRequest) *GetClusterLongAkskConfigInvoker {
+	requestDef := GenReqDefForGetClusterLongAkskConfig()
+	return &GetClusterLongAkskConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // GetClusterQuota 获取集群配额
 //
 // 该API用于获取集群配额
@@ -781,6 +823,27 @@ func (c *CceClient) GetLabels(request *model.GetLabelsRequest) (*model.GetLabels
 func (c *CceClient) GetLabelsInvoker(request *model.GetLabelsRequest) *GetLabelsInvoker {
 	requestDef := GenReqDefForGetLabels()
 	return &GetLabelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetLongAkskConfig 获取项目LongAKSK配置
+//
+// 该API用于获取项目LongAKSK的配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) GetLongAkskConfig(request *model.GetLongAkskConfigRequest) (*model.GetLongAkskConfigResponse, error) {
+	requestDef := GenReqDefForGetLongAkskConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetLongAkskConfigResponse), nil
+	}
+}
+
+// GetLongAkskConfigInvoker 获取项目LongAKSK配置
+func (c *CceClient) GetLongAkskConfigInvoker(request *model.GetLongAkskConfigRequest) *GetLongAkskConfigInvoker {
+	requestDef := GenReqDefForGetLongAkskConfig()
+	return &GetLongAkskConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // GetResourceTags 查询资源标签
@@ -1227,6 +1290,28 @@ func (c *CceClient) MigrateNode(request *model.MigrateNodeRequest) (*model.Migra
 func (c *CceClient) MigrateNodeInvoker(request *model.MigrateNodeRequest) *MigrateNodeInvoker {
 	requestDef := GenReqDefForMigrateNode()
 	return &MigrateNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// MigrateToNodePool 节点迁移到自定义节点池。
+//
+// 该API用于将节点迁移到自定义节点池，仅default节点池下节点支持迁移。迁移过程节点无重置无重启，原节点密码将保留。
+// &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) MigrateToNodePool(request *model.MigrateToNodePoolRequest) (*model.MigrateToNodePoolResponse, error) {
+	requestDef := GenReqDefForMigrateToNodePool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.MigrateToNodePoolResponse), nil
+	}
+}
+
+// MigrateToNodePoolInvoker 节点迁移到自定义节点池。
+func (c *CceClient) MigrateToNodePoolInvoker(request *model.MigrateToNodePoolRequest) *MigrateToNodePoolInvoker {
+	requestDef := GenReqDefForMigrateToNodePool()
+	return &MigrateToNodePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // PauseUpgradeClusterTask 暂停集群升级任务
@@ -2074,6 +2159,48 @@ func (c *CceClient) UpdateClusterLogConfigInvoker(request *model.UpdateClusterLo
 	return &UpdateClusterLogConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateClusterLongAkskConfig 更新集群LongAKSK配置
+//
+// 该API用于更新集群LongAKSK的配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) UpdateClusterLongAkskConfig(request *model.UpdateClusterLongAkskConfigRequest) (*model.UpdateClusterLongAkskConfigResponse, error) {
+	requestDef := GenReqDefForUpdateClusterLongAkskConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateClusterLongAkskConfigResponse), nil
+	}
+}
+
+// UpdateClusterLongAkskConfigInvoker 更新集群LongAKSK配置
+func (c *CceClient) UpdateClusterLongAkskConfigInvoker(request *model.UpdateClusterLongAkskConfigRequest) *UpdateClusterLongAkskConfigInvoker {
+	requestDef := GenReqDefForUpdateClusterLongAkskConfig()
+	return &UpdateClusterLongAkskConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLongAkskConfig 更新项目LongAKSK配置
+//
+// 该API用于更新项目longaksk的配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) UpdateLongAkskConfig(request *model.UpdateLongAkskConfigRequest) (*model.UpdateLongAkskConfigResponse, error) {
+	requestDef := GenReqDefForUpdateLongAkskConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateLongAkskConfigResponse), nil
+	}
+}
+
+// UpdateLongAkskConfigInvoker 更新项目LongAKSK配置
+func (c *CceClient) UpdateLongAkskConfigInvoker(request *model.UpdateLongAkskConfigRequest) *UpdateLongAkskConfigInvoker {
+	requestDef := GenReqDefForUpdateLongAkskConfig()
+	return &UpdateLongAkskConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateNode 更新指定的节点
 //
 // 该API用于更新指定的节点。
@@ -2212,6 +2339,7 @@ func (c *CceClient) UpgradeClusterInvoker(request *model.UpgradeClusterRequest) 
 // UpgradeNodePool 同步节点池
 //
 // 该API用于同步节点池中已有节点的配置
+// &gt; 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CceClient) UpgradeNodePool(request *model.UpgradeNodePoolRequest) (*model.UpgradeNodePoolResponse, error) {
@@ -3041,6 +3169,27 @@ func (c *CceClient) ShowAutopilotClusterInvoker(request *model.ShowAutopilotClus
 	return &ShowAutopilotClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAutopilotClusterConfig 查询集群日志配置信息
+//
+// 获取集群组件上报的LTS的配置信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ShowAutopilotClusterConfig(request *model.ShowAutopilotClusterConfigRequest) (*model.ShowAutopilotClusterConfigResponse, error) {
+	requestDef := GenReqDefForShowAutopilotClusterConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAutopilotClusterConfigResponse), nil
+	}
+}
+
+// ShowAutopilotClusterConfigInvoker 查询集群日志配置信息
+func (c *CceClient) ShowAutopilotClusterConfigInvoker(request *model.ShowAutopilotClusterConfigRequest) *ShowAutopilotClusterConfigInvoker {
+	requestDef := GenReqDefForShowAutopilotClusterConfig()
+	return &ShowAutopilotClusterConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowAutopilotClusterEndpoints 获取集群访问的地址
 //
 // 该API用于通过集群ID获取集群访问的地址，包括PrivateIP(HA集群返回VIP)与PublicIP
@@ -3082,6 +3231,28 @@ func (c *CceClient) ShowAutopilotClusterUpgradeInfo(request *model.ShowAutopilot
 func (c *CceClient) ShowAutopilotClusterUpgradeInfoInvoker(request *model.ShowAutopilotClusterUpgradeInfoRequest) *ShowAutopilotClusterUpgradeInfoInvoker {
 	requestDef := GenReqDefForShowAutopilotClusterUpgradeInfo()
 	return &ShowAutopilotClusterUpgradeInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAutopilotFeatureGates 查询特性开关状态
+//
+// 该API用于查询特性开关状态
+// &gt; 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ShowAutopilotFeatureGates(request *model.ShowAutopilotFeatureGatesRequest) (*model.ShowAutopilotFeatureGatesResponse, error) {
+	requestDef := GenReqDefForShowAutopilotFeatureGates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAutopilotFeatureGatesResponse), nil
+	}
+}
+
+// ShowAutopilotFeatureGatesInvoker 查询特性开关状态
+func (c *CceClient) ShowAutopilotFeatureGatesInvoker(request *model.ShowAutopilotFeatureGatesRequest) *ShowAutopilotFeatureGatesInvoker {
+	requestDef := GenReqDefForShowAutopilotFeatureGates()
+	return &ShowAutopilotFeatureGatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAutopilotJob 获取任务信息
@@ -3492,4 +3663,67 @@ func (c *CceClient) UploadAutopilotChart(request *model.UploadAutopilotChartRequ
 func (c *CceClient) UploadAutopilotChartInvoker(request *model.UploadAutopilotChartRequest) *UploadAutopilotChartInvoker {
 	requestDef := GenReqDefForUploadAutopilotChart()
 	return &UploadAutopilotChartInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAutopilotJob 删除Job
+//
+// 该API用于删除指定项目下的Job。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) DeleteAutopilotJob(request *model.DeleteAutopilotJobRequest) (*model.DeleteAutopilotJobResponse, error) {
+	requestDef := GenReqDefForDeleteAutopilotJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAutopilotJobResponse), nil
+	}
+}
+
+// DeleteAutopilotJobInvoker 删除Job
+func (c *CceClient) DeleteAutopilotJobInvoker(request *model.DeleteAutopilotJobRequest) *DeleteAutopilotJobInvoker {
+	requestDef := GenReqDefForDeleteAutopilotJob()
+	return &DeleteAutopilotJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetAutopilotOneJob 获取Job详情
+//
+// 该API用于获取指定项目下的Job详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) GetAutopilotOneJob(request *model.GetAutopilotOneJobRequest) (*model.GetAutopilotOneJobResponse, error) {
+	requestDef := GenReqDefForGetAutopilotOneJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetAutopilotOneJobResponse), nil
+	}
+}
+
+// GetAutopilotOneJobInvoker 获取Job详情
+func (c *CceClient) GetAutopilotOneJobInvoker(request *model.GetAutopilotOneJobRequest) *GetAutopilotOneJobInvoker {
+	requestDef := GenReqDefForGetAutopilotOneJob()
+	return &GetAutopilotOneJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAutopilotJobs 获取Job列表
+//
+// 该API用于获取指定项目下的所有jobs。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ListAutopilotJobs(request *model.ListAutopilotJobsRequest) (*model.ListAutopilotJobsResponse, error) {
+	requestDef := GenReqDefForListAutopilotJobs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAutopilotJobsResponse), nil
+	}
+}
+
+// ListAutopilotJobsInvoker 获取Job列表
+func (c *CceClient) ListAutopilotJobsInvoker(request *model.ListAutopilotJobsRequest) *ListAutopilotJobsInvoker {
+	requestDef := GenReqDefForListAutopilotJobs()
+	return &ListAutopilotJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

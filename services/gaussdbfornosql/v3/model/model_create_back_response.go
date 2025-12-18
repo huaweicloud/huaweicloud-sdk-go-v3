@@ -9,10 +9,10 @@ import (
 // CreateBackResponse Response Object
 type CreateBackResponse struct {
 
-	// 任务ID。
+	// **参数解释：** 任务ID。 **取值范围：** 不涉及。
 	JobId *string `json:"job_id,omitempty"`
 
-	// 备份ID。
+	// **参数解释：** 备份ID。 **取值范围：** 不涉及。
 	BackupId       *string `json:"backup_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

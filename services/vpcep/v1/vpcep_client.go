@@ -40,6 +40,27 @@ func (c *VpcepClient) AcceptOrRejectEndpointInvoker(request *model.AcceptOrRejec
 	return &AcceptOrRejectEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddEndpointServiceServerResource 添加终端节点服务后端服务资源
+//
+// 添加终端节点服务后端服务资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcepClient) AddEndpointServiceServerResource(request *model.AddEndpointServiceServerResourceRequest) (*model.AddEndpointServiceServerResourceResponse, error) {
+	requestDef := GenReqDefForAddEndpointServiceServerResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddEndpointServiceServerResourceResponse), nil
+	}
+}
+
+// AddEndpointServiceServerResourceInvoker 添加终端节点服务后端服务资源
+func (c *VpcepClient) AddEndpointServiceServerResourceInvoker(request *model.AddEndpointServiceServerResourceRequest) *AddEndpointServiceServerResourceInvoker {
+	requestDef := GenReqDefForAddEndpointServiceServerResource()
+	return &AddEndpointServiceServerResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddOrRemoveServicePermissions 批量添加或移除终端节点服务的白名单
 //
 // 批量添加或移除当前用户下终端节点服务的白名单。
@@ -625,6 +646,27 @@ func (c *VpcepClient) UpgradeEndpointService(request *model.UpgradeEndpointServi
 func (c *VpcepClient) UpgradeEndpointServiceInvoker(request *model.UpgradeEndpointServiceRequest) *UpgradeEndpointServiceInvoker {
 	requestDef := GenReqDefForUpgradeEndpointService()
 	return &UpgradeEndpointServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpgradeEndpoint 升级终端节点
+//
+// 升级终端节点，由基础型升级为专业型。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcepClient) UpgradeEndpoint(request *model.UpgradeEndpointRequest) (*model.UpgradeEndpointResponse, error) {
+	requestDef := GenReqDefForUpgradeEndpoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeEndpointResponse), nil
+	}
+}
+
+// UpgradeEndpointInvoker 升级终端节点
+func (c *VpcepClient) UpgradeEndpointInvoker(request *model.UpgradeEndpointRequest) *UpgradeEndpointInvoker {
+	requestDef := GenReqDefForUpgradeEndpoint()
+	return &UpgradeEndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchAddOrRemoveResourceInstance 批量添加或删除资源标签接口

@@ -10,6 +10,8 @@ import (
 type ShowInstanceStatusResponse struct {
 	State *InstanceState `json:"state,omitempty"`
 
+	OperationState *InstanceOperationStatus `json:"operation_state,omitempty"`
+
 	Error          *ErrorStatus `json:"error,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

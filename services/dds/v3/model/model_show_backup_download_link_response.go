@@ -13,13 +13,7 @@ type ShowBackupDownloadLinkResponse struct {
 	Files *[]GetBackupDownloadLinkResponseBodyFiles `json:"files,omitempty"`
 
 	// OBS桶名。
-	Bucket *string `json:"bucket,omitempty"`
-
-	// 组ID。
-	GroupId *string `json:"group_id,omitempty"`
-
-	// 组名。
-	GroupName      *string `json:"group_name,omitempty"`
+	Bucket         *string `json:"bucket,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

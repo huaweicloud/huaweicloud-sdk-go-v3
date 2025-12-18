@@ -23,6 +23,9 @@ type ListEpsQuotasRequest struct {
 
 	// 企业项目ID。 - 对于未开通企业多项目服务的用户，不传该参数。 - 对于已开通企业多项目服务的用户，不传该参数时，表示为default企业项目。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 企业项目名称。
+	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
 }
 
 func (o ListEpsQuotasRequest) String() string {
