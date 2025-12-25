@@ -9,14 +9,13 @@ import (
 // DisableAlertRuleResponse Response Object
 type DisableAlertRuleResponse struct {
 
-	// Alert rule ID.
-	FailList *[]AlertRule `json:"fail_list,omitempty"`
+	// UUID
+	AlertRuleId *string `json:"alert_rule_id,omitempty"`
 
-	// Alert rule ID.
-	SuccessList *[]AlertRule `json:"success_list,omitempty"`
+	Status *JobStatus `json:"status,omitempty"`
 
-	XRequestId     *string `json:"X-request-id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	ProcessStatus  *JobProcessStatus `json:"process_status,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o DisableAlertRuleResponse) String() string {

@@ -18,7 +18,7 @@ type BackupStrategyDetail struct {
 	// **参数解释**： 执行策略，一般为crontab表达式。 **取值范围**： 不涉及。
 	BackupStrategy *string `json:"backup_strategy,omitempty"`
 
-	// **参数解释**： 备份类型。 **取值范围**： 不涉及。
+	// **参数解释**： 备份类型。 **取值范围**： - full: 全量。 - increment: 增量。
 	BackupType *string `json:"backup_type,omitempty"`
 
 	// **参数解释**： 备份级别。 **取值范围**： 不涉及。

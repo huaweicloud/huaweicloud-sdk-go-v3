@@ -51,7 +51,7 @@ type ShowDatabaseUserResponse struct {
 	// **参数解释**： 描述。 **取值范围**： 不涉及。
 	Desc *string `json:"desc,omitempty"`
 
-	// **参数解释**： 用户类型。 **取值范围**： 不涉及。
+	// **参数解释**： 用户类型。 **取值范围**： - COMMON：公共。
 	UserType *string `json:"user_type,omitempty"`
 
 	// **参数解释**： description: 所属逻辑集群。 **取值范围**： 不涉及。

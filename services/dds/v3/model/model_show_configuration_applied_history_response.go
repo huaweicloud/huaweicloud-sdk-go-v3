@@ -9,9 +9,12 @@ import (
 // ShowConfigurationAppliedHistoryResponse Response Object
 type ShowConfigurationAppliedHistoryResponse struct {
 
-	// 参数模板应用历史列表
-	Histories      *[]ApplyHistoryInfo `json:"histories,omitempty"`
-	HttpStatusCode int                 `json:"-"`
+	// 参数模板应用历史列表。
+	Histories *[]ApplyHistoryInfo `json:"histories,omitempty"`
+
+	// 总记录数。
+	TotalCount     *int32 `json:"total_count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowConfigurationAppliedHistoryResponse) String() string {

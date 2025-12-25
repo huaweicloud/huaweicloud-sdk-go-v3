@@ -45,7 +45,7 @@ type RedisProgress struct {
 	// **参数解释**： cm_ctl查询的重分布结果。 **取值范围**： 不涉及。
 	Redistributing *bool `json:"redistributing,omitempty"`
 
-	// **参数解释**： 状态。 **取值范围**： 不涉及。
+	// **参数解释**： 状态。 **取值范围**： - PREPARE：准备。 - RUNNING：运行中。 - WAITING：等待中。 - PAUSE：已暂停。 - PAUSING：暂停中。 - SUCCESS：成功。 - FAIL：失败。
 	Status *string `json:"status,omitempty"`
 
 	// **参数解释**： 是否用户暂停。 **取值范围**： 不涉及。

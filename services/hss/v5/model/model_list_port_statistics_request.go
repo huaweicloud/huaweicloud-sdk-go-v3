@@ -33,7 +33,7 @@ type ListPortStatisticsRequest struct {
 	// **参数解释**: 端口类型 **约束限制**: 不涉及 **取值范围**: - UDP - UDP6 - TCP - TCP6  **默认取值**: 不涉及
 	Type *string `json:"type,omitempty"`
 
-	// **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口  **默认取值**: 不涉及
+	// **参数解释**: 端口状态 **约束限制**: 不涉及 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknown: 无已知危险的端口  **默认取值**: 不涉及
 	Status *string `json:"status,omitempty"`
 
 	// **参数解释**: 排序的key值，目前支持按照端口号port排序 **约束限制**: 不涉及 **取值范围**: - port: 端口号  **默认取值**: 不涉及

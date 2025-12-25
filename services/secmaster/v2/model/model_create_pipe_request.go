@@ -9,7 +9,7 @@ import (
 // CreatePipeRequest Request Object
 type CreatePipeRequest struct {
 
-	// 工作空间id
+	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
 
 	Body *CreatePipeRequestBody `json:"body,omitempty"`

@@ -36,7 +36,7 @@ type ShowTtsJobRequest struct {
 	// 任务ID。
 	JobId *string `json:"job_id,omitempty"`
 
-	// 任务类型。 * AUDITION:试听任务 * ASYNC_JOB：异步任务 * WEBSOCKET：websocket接口合成任务
+	// 任务类型。 * AUDITION：试听任务 * ASYNC_JOB：异步任务 * WEBSOCKET：websocket接口合成任务
 	JobType *string `json:"job_type,omitempty"`
 
 	// tts版本。 * TTS_LLM: 530大模型（V7版本） * TTS_LLM_VC：530大模型VC版本（V7版本） * TTS_LAB：lab小模型（V5版本） * TTS_LAB_GPU：lab小模型GPU版本（V5版本） * GPU_CLONE：V4模型 * TTS_LLM_VQ：VQ模型（V10版本）

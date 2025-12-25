@@ -20,7 +20,7 @@ type DiskResp struct {
 	// **参数解释**： 磁盘名称。 **取值范围**： 不涉及。
 	DiskName *string `json:"disk_name,omitempty"`
 
-	// **参数解释**： 磁盘类型(系统盘、数据盘、日志盘)。 **取值范围**： 不涉及。
+	// **参数解释**： 磁盘类型。 **取值范围**： - system:：系统盘。 - data：数据盘。 - log：日志盘。
 	DiskType *string `json:"disk_type,omitempty"`
 
 	// **参数解释**： 磁盘总容量(GB)。 **取值范围**： 不涉及。

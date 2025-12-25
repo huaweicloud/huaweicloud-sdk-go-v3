@@ -12,6 +12,9 @@ type ShowTtsAuditionFileResponse struct {
 	// 试听文件是否已生成完成。该标记为false时，应该每隔5秒再次调用本接口获取试听文件。当存在该参数时，将会返回以下message和files两个字段信息
 	IsFileComplete *bool `json:"is_file_complete,omitempty"`
 
+	// 返回码。
+	Code *string `json:"code,omitempty"`
+
 	// 异常信息。
 	Message *string `json:"message,omitempty"`
 

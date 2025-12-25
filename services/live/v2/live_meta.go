@@ -798,6 +798,10 @@ func GenReqDefForListSingleStreamBitrate() *def.HttpRequestDef {
 		WithJsonTag("stream").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Type").
+		WithJsonTag("type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StartTime").
 		WithJsonTag("start_time").
 		WithLocationType(def.Query))

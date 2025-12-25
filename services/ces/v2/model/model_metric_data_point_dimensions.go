@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// MetricDataPointDimensions **参数解释**： 指标维度
+// MetricDataPointDimensions **参数解释**： 资源维度
 type MetricDataPointDimensions struct {
 
-	// **参数解释**： 指标维度值 **取值范围**： 最小长度1，最大长度32
+	// **参数解释**： 资源维度名称 **取值范围**： 最小长度1，最大长度32
 	Name string `json:"name"`
 
-	// **参数解释**： 指标维度值 **取值范围**： 最小长度1，最大长度256
+	// **参数解释**： 资源维度值 **取值范围**： 最小长度1，最大长度256
 	Value string `json:"value"`
 }
 

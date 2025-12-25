@@ -9,10 +9,10 @@ import (
 // ListVulScanTaskHostResponse Response Object
 type ListVulScanTaskHostResponse struct {
 
-	// 总数
+	// **参数解释**: 总数 **取值范围**: 取值0-2147483647
 	TotalNum *int64 `json:"total_num,omitempty"`
 
-	// 漏洞扫描任务对应的主机列表
+	// **参数解释**: 漏洞扫描任务对应的主机列表 **取值范围**: 最小值0，最大值2147483647
 	DataList       *[]VulScanTaskHostInfo `json:"data_list,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

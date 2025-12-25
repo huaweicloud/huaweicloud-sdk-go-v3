@@ -19,135 +19,30 @@ func SecMasterClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
-// BatchSearchMetricHits 批量查询指标结果
+// CreateAdhocQuery 创建adhoc查询
 //
-// 批量查询指标结果
+// 创建adhoc查询
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) BatchSearchMetricHits(request *model.BatchSearchMetricHitsRequest) (*model.BatchSearchMetricHitsResponse, error) {
-	requestDef := GenReqDefForBatchSearchMetricHits()
+func (c *SecMasterClient) CreateAdhocQuery(request *model.CreateAdhocQueryRequest) (*model.CreateAdhocQueryResponse, error) {
+	requestDef := GenReqDefForCreateAdhocQuery()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.BatchSearchMetricHitsResponse), nil
+		return resp.(*model.CreateAdhocQueryResponse), nil
 	}
 }
 
-// BatchSearchMetricHitsInvoker 批量查询指标结果
-func (c *SecMasterClient) BatchSearchMetricHitsInvoker(request *model.BatchSearchMetricHitsRequest) *BatchSearchMetricHitsInvoker {
-	requestDef := GenReqDefForBatchSearchMetricHits()
-	return &BatchSearchMetricHitsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ChangeAlert 更新告警
-//
-// 编辑告警，根据实际修改的属性更新，未修改的列不更新
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ChangeAlert(request *model.ChangeAlertRequest) (*model.ChangeAlertResponse, error) {
-	requestDef := GenReqDefForChangeAlert()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ChangeAlertResponse), nil
-	}
-}
-
-// ChangeAlertInvoker 更新告警
-func (c *SecMasterClient) ChangeAlertInvoker(request *model.ChangeAlertRequest) *ChangeAlertInvoker {
-	requestDef := GenReqDefForChangeAlert()
-	return &ChangeAlertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ChangeIncident 更新事件
-//
-// 编辑事件，根据实际修改的属性更新，未修改的列不更新
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ChangeIncident(request *model.ChangeIncidentRequest) (*model.ChangeIncidentResponse, error) {
-	requestDef := GenReqDefForChangeIncident()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ChangeIncidentResponse), nil
-	}
-}
-
-// ChangeIncidentInvoker 更新事件
-func (c *SecMasterClient) ChangeIncidentInvoker(request *model.ChangeIncidentRequest) *ChangeIncidentInvoker {
-	requestDef := GenReqDefForChangeIncident()
-	return &ChangeIncidentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ChangePlaybookInstance 操作剧本实例
-//
-// 操作剧本实例
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ChangePlaybookInstance(request *model.ChangePlaybookInstanceRequest) (*model.ChangePlaybookInstanceResponse, error) {
-	requestDef := GenReqDefForChangePlaybookInstance()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ChangePlaybookInstanceResponse), nil
-	}
-}
-
-// ChangePlaybookInstanceInvoker 操作剧本实例
-func (c *SecMasterClient) ChangePlaybookInstanceInvoker(request *model.ChangePlaybookInstanceRequest) *ChangePlaybookInstanceInvoker {
-	requestDef := GenReqDefForChangePlaybookInstance()
-	return &ChangePlaybookInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CopyPlaybookVersion 克隆剧本及版本
-//
-// 克隆剧本及版本
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) CopyPlaybookVersion(request *model.CopyPlaybookVersionRequest) (*model.CopyPlaybookVersionResponse, error) {
-	requestDef := GenReqDefForCopyPlaybookVersion()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CopyPlaybookVersionResponse), nil
-	}
-}
-
-// CopyPlaybookVersionInvoker 克隆剧本及版本
-func (c *SecMasterClient) CopyPlaybookVersionInvoker(request *model.CopyPlaybookVersionRequest) *CopyPlaybookVersionInvoker {
-	requestDef := GenReqDefForCopyPlaybookVersion()
-	return &CopyPlaybookVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateAlert 创建告警
-//
-// 创建告警
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) CreateAlert(request *model.CreateAlertRequest) (*model.CreateAlertResponse, error) {
-	requestDef := GenReqDefForCreateAlert()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateAlertResponse), nil
-	}
-}
-
-// CreateAlertInvoker 创建告警
-func (c *SecMasterClient) CreateAlertInvoker(request *model.CreateAlertRequest) *CreateAlertInvoker {
-	requestDef := GenReqDefForCreateAlert()
-	return &CreateAlertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CreateAdhocQueryInvoker 创建adhoc查询
+func (c *SecMasterClient) CreateAdhocQueryInvoker(request *model.CreateAdhocQueryRequest) *CreateAdhocQueryInvoker {
+	requestDef := GenReqDefForCreateAdhocQuery()
+	return &CreateAdhocQueryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateAlertRule 创建告警规则
 //
-// Create alert rule
+// 创建告警规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) CreateAlertRule(request *model.CreateAlertRuleRequest) (*model.CreateAlertRuleResponse, error) {
@@ -166,135 +61,135 @@ func (c *SecMasterClient) CreateAlertRuleInvoker(request *model.CreateAlertRuleR
 	return &CreateAlertRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateAlertRuleSimulation 模拟告警规则
+// CreateAnalysisScript 创建分析脚本
 //
-// Simulate alert rule
+// 创建分析脚本
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) CreateAlertRuleSimulation(request *model.CreateAlertRuleSimulationRequest) (*model.CreateAlertRuleSimulationResponse, error) {
-	requestDef := GenReqDefForCreateAlertRuleSimulation()
+func (c *SecMasterClient) CreateAnalysisScript(request *model.CreateAnalysisScriptRequest) (*model.CreateAnalysisScriptResponse, error) {
+	requestDef := GenReqDefForCreateAnalysisScript()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreateAlertRuleSimulationResponse), nil
+		return resp.(*model.CreateAnalysisScriptResponse), nil
 	}
 }
 
-// CreateAlertRuleSimulationInvoker 模拟告警规则
-func (c *SecMasterClient) CreateAlertRuleSimulationInvoker(request *model.CreateAlertRuleSimulationRequest) *CreateAlertRuleSimulationInvoker {
-	requestDef := GenReqDefForCreateAlertRuleSimulation()
-	return &CreateAlertRuleSimulationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CreateAnalysisScriptInvoker 创建分析脚本
+func (c *SecMasterClient) CreateAnalysisScriptInvoker(request *model.CreateAnalysisScriptRequest) *CreateAnalysisScriptInvoker {
+	requestDef := GenReqDefForCreateAnalysisScript()
+	return &CreateAnalysisScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateBatchOrderAlerts 告警转事件
+// CreateCodeSegment 创建代码片段
 //
-// 告警转事件
+// 创建代码片段
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) CreateBatchOrderAlerts(request *model.CreateBatchOrderAlertsRequest) (*model.CreateBatchOrderAlertsResponse, error) {
-	requestDef := GenReqDefForCreateBatchOrderAlerts()
+func (c *SecMasterClient) CreateCodeSegment(request *model.CreateCodeSegmentRequest) (*model.CreateCodeSegmentResponse, error) {
+	requestDef := GenReqDefForCreateCodeSegment()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreateBatchOrderAlertsResponse), nil
+		return resp.(*model.CreateCodeSegmentResponse), nil
 	}
 }
 
-// CreateBatchOrderAlertsInvoker 告警转事件
-func (c *SecMasterClient) CreateBatchOrderAlertsInvoker(request *model.CreateBatchOrderAlertsRequest) *CreateBatchOrderAlertsInvoker {
-	requestDef := GenReqDefForCreateBatchOrderAlerts()
-	return &CreateBatchOrderAlertsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CreateCodeSegmentInvoker 创建代码片段
+func (c *SecMasterClient) CreateCodeSegmentInvoker(request *model.CreateCodeSegmentRequest) *CreateCodeSegmentInvoker {
+	requestDef := GenReqDefForCreateCodeSegment()
+	return &CreateCodeSegmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateDataobjectRelations 关联Dataobject
+// CreateCustomizedCheckitem 新增自定义检查项
 //
-// 关联Dataobject
+// 新增自定义检查项
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) CreateDataobjectRelations(request *model.CreateDataobjectRelationsRequest) (*model.CreateDataobjectRelationsResponse, error) {
-	requestDef := GenReqDefForCreateDataobjectRelations()
+func (c *SecMasterClient) CreateCustomizedCheckitem(request *model.CreateCustomizedCheckitemRequest) (*model.CreateCustomizedCheckitemResponse, error) {
+	requestDef := GenReqDefForCreateCustomizedCheckitem()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreateDataobjectRelationsResponse), nil
+		return resp.(*model.CreateCustomizedCheckitemResponse), nil
 	}
 }
 
-// CreateDataobjectRelationsInvoker 关联Dataobject
-func (c *SecMasterClient) CreateDataobjectRelationsInvoker(request *model.CreateDataobjectRelationsRequest) *CreateDataobjectRelationsInvoker {
-	requestDef := GenReqDefForCreateDataobjectRelations()
-	return &CreateDataobjectRelationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CreateCustomizedCheckitemInvoker 新增自定义检查项
+func (c *SecMasterClient) CreateCustomizedCheckitemInvoker(request *model.CreateCustomizedCheckitemRequest) *CreateCustomizedCheckitemInvoker {
+	requestDef := GenReqDefForCreateCustomizedCheckitem()
+	return &CreateCustomizedCheckitemInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateDataspace 创建数据空间
+// CreateCustomizedCompliancePackage 新增自定义遵从包
 //
-// 创建数据空间
+// 新增自定义遵从包
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) CreateDataspace(request *model.CreateDataspaceRequest) (*model.CreateDataspaceResponse, error) {
-	requestDef := GenReqDefForCreateDataspace()
+func (c *SecMasterClient) CreateCustomizedCompliancePackage(request *model.CreateCustomizedCompliancePackageRequest) (*model.CreateCustomizedCompliancePackageResponse, error) {
+	requestDef := GenReqDefForCreateCustomizedCompliancePackage()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreateDataspaceResponse), nil
+		return resp.(*model.CreateCustomizedCompliancePackageResponse), nil
 	}
 }
 
-// CreateDataspaceInvoker 创建数据空间
-func (c *SecMasterClient) CreateDataspaceInvoker(request *model.CreateDataspaceRequest) *CreateDataspaceInvoker {
-	requestDef := GenReqDefForCreateDataspace()
-	return &CreateDataspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CreateCustomizedCompliancePackageInvoker 新增自定义遵从包
+func (c *SecMasterClient) CreateCustomizedCompliancePackageInvoker(request *model.CreateCustomizedCompliancePackageRequest) *CreateCustomizedCompliancePackageInvoker {
+	requestDef := GenReqDefForCreateCustomizedCompliancePackage()
+	return &CreateCustomizedCompliancePackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateIncident 创建事件
+// CreateDataTransformation 创建数据加工
 //
-// 创建事件
+// 创建数据加工
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) CreateIncident(request *model.CreateIncidentRequest) (*model.CreateIncidentResponse, error) {
-	requestDef := GenReqDefForCreateIncident()
+func (c *SecMasterClient) CreateDataTransformation(request *model.CreateDataTransformationRequest) (*model.CreateDataTransformationResponse, error) {
+	requestDef := GenReqDefForCreateDataTransformation()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreateIncidentResponse), nil
+		return resp.(*model.CreateDataTransformationResponse), nil
 	}
 }
 
-// CreateIncidentInvoker 创建事件
-func (c *SecMasterClient) CreateIncidentInvoker(request *model.CreateIncidentRequest) *CreateIncidentInvoker {
-	requestDef := GenReqDefForCreateIncident()
-	return &CreateIncidentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CreateDataTransformationInvoker 创建数据加工
+func (c *SecMasterClient) CreateDataTransformationInvoker(request *model.CreateDataTransformationRequest) *CreateDataTransformationInvoker {
+	requestDef := GenReqDefForCreateDataTransformation()
+	return &CreateDataTransformationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateIndicator 创建威胁情报
+// CreateLayoutField 创建布局字段
 //
-// 创建威胁情报
+// 创建布局字段
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) CreateIndicator(request *model.CreateIndicatorRequest) (*model.CreateIndicatorResponse, error) {
-	requestDef := GenReqDefForCreateIndicator()
+func (c *SecMasterClient) CreateLayoutField(request *model.CreateLayoutFieldRequest) (*model.CreateLayoutFieldResponse, error) {
+	requestDef := GenReqDefForCreateLayoutField()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreateIndicatorResponse), nil
+		return resp.(*model.CreateLayoutFieldResponse), nil
 	}
 }
 
-// CreateIndicatorInvoker 创建威胁情报
-func (c *SecMasterClient) CreateIndicatorInvoker(request *model.CreateIndicatorRequest) *CreateIndicatorInvoker {
-	requestDef := GenReqDefForCreateIndicator()
-	return &CreateIndicatorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CreateLayoutFieldInvoker 创建布局字段
+func (c *SecMasterClient) CreateLayoutFieldInvoker(request *model.CreateLayoutFieldRequest) *CreateLayoutFieldInvoker {
+	requestDef := GenReqDefForCreateLayoutField()
+	return &CreateLayoutFieldInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePipe 创建数据管道
+// CreatePipe 创建管道
 //
-// 创建数据管道
+// 创建管道
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) CreatePipe(request *model.CreatePipeRequest) (*model.CreatePipeResponse, error) {
@@ -307,183 +202,99 @@ func (c *SecMasterClient) CreatePipe(request *model.CreatePipeRequest) (*model.C
 	}
 }
 
-// CreatePipeInvoker 创建数据管道
+// CreatePipeInvoker 创建管道
 func (c *SecMasterClient) CreatePipeInvoker(request *model.CreatePipeRequest) *CreatePipeInvoker {
 	requestDef := GenReqDefForCreatePipe()
 	return &CreatePipeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePlaybook 创建剧本
+// CreateRetrieveScript 创建检索脚本
 //
-// 创建剧本
+// 创建检索脚本
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) CreatePlaybook(request *model.CreatePlaybookRequest) (*model.CreatePlaybookResponse, error) {
-	requestDef := GenReqDefForCreatePlaybook()
+func (c *SecMasterClient) CreateRetrieveScript(request *model.CreateRetrieveScriptRequest) (*model.CreateRetrieveScriptResponse, error) {
+	requestDef := GenReqDefForCreateRetrieveScript()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreatePlaybookResponse), nil
+		return resp.(*model.CreateRetrieveScriptResponse), nil
 	}
 }
 
-// CreatePlaybookInvoker 创建剧本
-func (c *SecMasterClient) CreatePlaybookInvoker(request *model.CreatePlaybookRequest) *CreatePlaybookInvoker {
-	requestDef := GenReqDefForCreatePlaybook()
-	return &CreatePlaybookInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CreateRetrieveScriptInvoker 创建检索脚本
+func (c *SecMasterClient) CreateRetrieveScriptInvoker(request *model.CreateRetrieveScriptRequest) *CreateRetrieveScriptInvoker {
+	requestDef := GenReqDefForCreateRetrieveScript()
+	return &CreateRetrieveScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePlaybookAction 创建剧本动作
+// CreateTable 创建表
 //
-// 创建剧本动作
+// 创建表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) CreatePlaybookAction(request *model.CreatePlaybookActionRequest) (*model.CreatePlaybookActionResponse, error) {
-	requestDef := GenReqDefForCreatePlaybookAction()
+func (c *SecMasterClient) CreateTable(request *model.CreateTableRequest) (*model.CreateTableResponse, error) {
+	requestDef := GenReqDefForCreateTable()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreatePlaybookActionResponse), nil
+		return resp.(*model.CreateTableResponse), nil
 	}
 }
 
-// CreatePlaybookActionInvoker 创建剧本动作
-func (c *SecMasterClient) CreatePlaybookActionInvoker(request *model.CreatePlaybookActionRequest) *CreatePlaybookActionInvoker {
-	requestDef := GenReqDefForCreatePlaybookAction()
-	return &CreatePlaybookActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CreateTableInvoker 创建表
+func (c *SecMasterClient) CreateTableInvoker(request *model.CreateTableRequest) *CreateTableInvoker {
+	requestDef := GenReqDefForCreateTable()
+	return &CreateTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePlaybookApprove 审核剧本
+// CreateTableAnalysis 创建安全分析查询
 //
-// 审核剧本
+// 创建安全分析查询
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) CreatePlaybookApprove(request *model.CreatePlaybookApproveRequest) (*model.CreatePlaybookApproveResponse, error) {
-	requestDef := GenReqDefForCreatePlaybookApprove()
+func (c *SecMasterClient) CreateTableAnalysis(request *model.CreateTableAnalysisRequest) (*model.CreateTableAnalysisResponse, error) {
+	requestDef := GenReqDefForCreateTableAnalysis()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreatePlaybookApproveResponse), nil
+		return resp.(*model.CreateTableAnalysisResponse), nil
 	}
 }
 
-// CreatePlaybookApproveInvoker 审核剧本
-func (c *SecMasterClient) CreatePlaybookApproveInvoker(request *model.CreatePlaybookApproveRequest) *CreatePlaybookApproveInvoker {
-	requestDef := GenReqDefForCreatePlaybookApprove()
-	return &CreatePlaybookApproveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CreateTableAnalysisInvoker 创建安全分析查询
+func (c *SecMasterClient) CreateTableAnalysisInvoker(request *model.CreateTableAnalysisRequest) *CreateTableAnalysisInvoker {
+	requestDef := GenReqDefForCreateTableAnalysis()
+	return &CreateTableAnalysisInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePlaybookRule 创建剧本规则
+// DeleteAdhocQuery 关闭查询操作
 //
-// 创建剧本规则
+// 关闭查询操作
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) CreatePlaybookRule(request *model.CreatePlaybookRuleRequest) (*model.CreatePlaybookRuleResponse, error) {
-	requestDef := GenReqDefForCreatePlaybookRule()
+func (c *SecMasterClient) DeleteAdhocQuery(request *model.DeleteAdhocQueryRequest) (*model.DeleteAdhocQueryResponse, error) {
+	requestDef := GenReqDefForDeleteAdhocQuery()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreatePlaybookRuleResponse), nil
+		return resp.(*model.DeleteAdhocQueryResponse), nil
 	}
 }
 
-// CreatePlaybookRuleInvoker 创建剧本规则
-func (c *SecMasterClient) CreatePlaybookRuleInvoker(request *model.CreatePlaybookRuleRequest) *CreatePlaybookRuleInvoker {
-	requestDef := GenReqDefForCreatePlaybookRule()
-	return &CreatePlaybookRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreatePlaybookVersion 创建剧本版本
-//
-// 创建剧本版本
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) CreatePlaybookVersion(request *model.CreatePlaybookVersionRequest) (*model.CreatePlaybookVersionResponse, error) {
-	requestDef := GenReqDefForCreatePlaybookVersion()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreatePlaybookVersionResponse), nil
-	}
-}
-
-// CreatePlaybookVersionInvoker 创建剧本版本
-func (c *SecMasterClient) CreatePlaybookVersionInvoker(request *model.CreatePlaybookVersionRequest) *CreatePlaybookVersionInvoker {
-	requestDef := GenReqDefForCreatePlaybookVersion()
-	return &CreatePlaybookVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreatePostPaidOrder 安全云脑按需订购
-//
-// 开通安全云脑按需服务
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) CreatePostPaidOrder(request *model.CreatePostPaidOrderRequest) (*model.CreatePostPaidOrderResponse, error) {
-	requestDef := GenReqDefForCreatePostPaidOrder()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreatePostPaidOrderResponse), nil
-	}
-}
-
-// CreatePostPaidOrderInvoker 安全云脑按需订购
-func (c *SecMasterClient) CreatePostPaidOrderInvoker(request *model.CreatePostPaidOrderRequest) *CreatePostPaidOrderInvoker {
-	requestDef := GenReqDefForCreatePostPaidOrder()
-	return &CreatePostPaidOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateWorkspace 新建工作空间
-//
-// 在使用安全云脑的基线检查、告警管理、安全分析、安全编排等功能前，需要创建工作空间，它可以将资源划分为各个不同的工作场景，避免资源冗余查找不便，影响日常使用。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) CreateWorkspace(request *model.CreateWorkspaceRequest) (*model.CreateWorkspaceResponse, error) {
-	requestDef := GenReqDefForCreateWorkspace()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateWorkspaceResponse), nil
-	}
-}
-
-// CreateWorkspaceInvoker 新建工作空间
-func (c *SecMasterClient) CreateWorkspaceInvoker(request *model.CreateWorkspaceRequest) *CreateWorkspaceInvoker {
-	requestDef := GenReqDefForCreateWorkspace()
-	return &CreateWorkspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteAlert 删除告警
-//
-// 删除告警
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) DeleteAlert(request *model.DeleteAlertRequest) (*model.DeleteAlertResponse, error) {
-	requestDef := GenReqDefForDeleteAlert()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteAlertResponse), nil
-	}
-}
-
-// DeleteAlertInvoker 删除告警
-func (c *SecMasterClient) DeleteAlertInvoker(request *model.DeleteAlertRequest) *DeleteAlertInvoker {
-	requestDef := GenReqDefForDeleteAlert()
-	return &DeleteAlertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// DeleteAdhocQueryInvoker 关闭查询操作
+func (c *SecMasterClient) DeleteAdhocQueryInvoker(request *model.DeleteAdhocQueryRequest) *DeleteAdhocQueryInvoker {
+	requestDef := GenReqDefForDeleteAdhocQuery()
+	return &DeleteAdhocQueryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteAlertRule 删除告警规则
 //
-// Delete alert rule
+// 删除告警规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) DeleteAlertRule(request *model.DeleteAlertRuleRequest) (*model.DeleteAlertRuleResponse, error) {
@@ -502,177 +313,198 @@ func (c *SecMasterClient) DeleteAlertRuleInvoker(request *model.DeleteAlertRuleR
 	return &DeleteAlertRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteDataobjectRelations 取消关联Dataobject
+// DeleteAnalysisScript 删除分析脚本
 //
-// 取消关联Dataobject
+// 删除分析脚本
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) DeleteDataobjectRelations(request *model.DeleteDataobjectRelationsRequest) (*model.DeleteDataobjectRelationsResponse, error) {
-	requestDef := GenReqDefForDeleteDataobjectRelations()
+func (c *SecMasterClient) DeleteAnalysisScript(request *model.DeleteAnalysisScriptRequest) (*model.DeleteAnalysisScriptResponse, error) {
+	requestDef := GenReqDefForDeleteAnalysisScript()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.DeleteDataobjectRelationsResponse), nil
+		return resp.(*model.DeleteAnalysisScriptResponse), nil
 	}
 }
 
-// DeleteDataobjectRelationsInvoker 取消关联Dataobject
-func (c *SecMasterClient) DeleteDataobjectRelationsInvoker(request *model.DeleteDataobjectRelationsRequest) *DeleteDataobjectRelationsInvoker {
-	requestDef := GenReqDefForDeleteDataobjectRelations()
-	return &DeleteDataobjectRelationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// DeleteAnalysisScriptInvoker 删除分析脚本
+func (c *SecMasterClient) DeleteAnalysisScriptInvoker(request *model.DeleteAnalysisScriptRequest) *DeleteAnalysisScriptInvoker {
+	requestDef := GenReqDefForDeleteAnalysisScript()
+	return &DeleteAnalysisScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteIncident 删除事件
+// DeleteCodeSegment 删除代码片段
 //
-// 删除事件
+// 删除代码片段
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) DeleteIncident(request *model.DeleteIncidentRequest) (*model.DeleteIncidentResponse, error) {
-	requestDef := GenReqDefForDeleteIncident()
+func (c *SecMasterClient) DeleteCodeSegment(request *model.DeleteCodeSegmentRequest) (*model.DeleteCodeSegmentResponse, error) {
+	requestDef := GenReqDefForDeleteCodeSegment()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.DeleteIncidentResponse), nil
+		return resp.(*model.DeleteCodeSegmentResponse), nil
 	}
 }
 
-// DeleteIncidentInvoker 删除事件
-func (c *SecMasterClient) DeleteIncidentInvoker(request *model.DeleteIncidentRequest) *DeleteIncidentInvoker {
-	requestDef := GenReqDefForDeleteIncident()
-	return &DeleteIncidentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// DeleteCodeSegmentInvoker 删除代码片段
+func (c *SecMasterClient) DeleteCodeSegmentInvoker(request *model.DeleteCodeSegmentRequest) *DeleteCodeSegmentInvoker {
+	requestDef := GenReqDefForDeleteCodeSegment()
+	return &DeleteCodeSegmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteIndicator 删除威胁情报
+// DeleteCustomizedCheckitems 删除自定义检查项
 //
-// 删除威胁情报
+// 删除自定义检查项
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) DeleteIndicator(request *model.DeleteIndicatorRequest) (*model.DeleteIndicatorResponse, error) {
-	requestDef := GenReqDefForDeleteIndicator()
+func (c *SecMasterClient) DeleteCustomizedCheckitems(request *model.DeleteCustomizedCheckitemsRequest) (*model.DeleteCustomizedCheckitemsResponse, error) {
+	requestDef := GenReqDefForDeleteCustomizedCheckitems()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.DeleteIndicatorResponse), nil
+		return resp.(*model.DeleteCustomizedCheckitemsResponse), nil
 	}
 }
 
-// DeleteIndicatorInvoker 删除威胁情报
-func (c *SecMasterClient) DeleteIndicatorInvoker(request *model.DeleteIndicatorRequest) *DeleteIndicatorInvoker {
-	requestDef := GenReqDefForDeleteIndicator()
-	return &DeleteIndicatorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// DeleteCustomizedCheckitemsInvoker 删除自定义检查项
+func (c *SecMasterClient) DeleteCustomizedCheckitemsInvoker(request *model.DeleteCustomizedCheckitemsRequest) *DeleteCustomizedCheckitemsInvoker {
+	requestDef := GenReqDefForDeleteCustomizedCheckitems()
+	return &DeleteCustomizedCheckitemsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeletePlaybook 删除剧本
+// DeleteCustomizedCompliancePackages 删除自定义遵从包
 //
-// 删除剧本
+// 删除自定义遵从包
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) DeletePlaybook(request *model.DeletePlaybookRequest) (*model.DeletePlaybookResponse, error) {
-	requestDef := GenReqDefForDeletePlaybook()
+func (c *SecMasterClient) DeleteCustomizedCompliancePackages(request *model.DeleteCustomizedCompliancePackagesRequest) (*model.DeleteCustomizedCompliancePackagesResponse, error) {
+	requestDef := GenReqDefForDeleteCustomizedCompliancePackages()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.DeletePlaybookResponse), nil
+		return resp.(*model.DeleteCustomizedCompliancePackagesResponse), nil
 	}
 }
 
-// DeletePlaybookInvoker 删除剧本
-func (c *SecMasterClient) DeletePlaybookInvoker(request *model.DeletePlaybookRequest) *DeletePlaybookInvoker {
-	requestDef := GenReqDefForDeletePlaybook()
-	return &DeletePlaybookInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// DeleteCustomizedCompliancePackagesInvoker 删除自定义遵从包
+func (c *SecMasterClient) DeleteCustomizedCompliancePackagesInvoker(request *model.DeleteCustomizedCompliancePackagesRequest) *DeleteCustomizedCompliancePackagesInvoker {
+	requestDef := GenReqDefForDeleteCustomizedCompliancePackages()
+	return &DeleteCustomizedCompliancePackagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeletePlaybookAction 删除剧本动作
+// DeleteDataTransformation 删除数据加工
 //
-// 删除剧本动作
+// 删除数据加工
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) DeletePlaybookAction(request *model.DeletePlaybookActionRequest) (*model.DeletePlaybookActionResponse, error) {
-	requestDef := GenReqDefForDeletePlaybookAction()
+func (c *SecMasterClient) DeleteDataTransformation(request *model.DeleteDataTransformationRequest) (*model.DeleteDataTransformationResponse, error) {
+	requestDef := GenReqDefForDeleteDataTransformation()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.DeletePlaybookActionResponse), nil
+		return resp.(*model.DeleteDataTransformationResponse), nil
 	}
 }
 
-// DeletePlaybookActionInvoker 删除剧本动作
-func (c *SecMasterClient) DeletePlaybookActionInvoker(request *model.DeletePlaybookActionRequest) *DeletePlaybookActionInvoker {
-	requestDef := GenReqDefForDeletePlaybookAction()
-	return &DeletePlaybookActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// DeleteDataTransformationInvoker 删除数据加工
+func (c *SecMasterClient) DeleteDataTransformationInvoker(request *model.DeleteDataTransformationRequest) *DeleteDataTransformationInvoker {
+	requestDef := GenReqDefForDeleteDataTransformation()
+	return &DeleteDataTransformationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeletePlaybookRule 删除剧本规则
+// DeleteLayoutField 批量删除布局字段
 //
-// 删除剧本规则
+// 删除布局字段
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) DeletePlaybookRule(request *model.DeletePlaybookRuleRequest) (*model.DeletePlaybookRuleResponse, error) {
-	requestDef := GenReqDefForDeletePlaybookRule()
+func (c *SecMasterClient) DeleteLayoutField(request *model.DeleteLayoutFieldRequest) (*model.DeleteLayoutFieldResponse, error) {
+	requestDef := GenReqDefForDeleteLayoutField()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.DeletePlaybookRuleResponse), nil
+		return resp.(*model.DeleteLayoutFieldResponse), nil
 	}
 }
 
-// DeletePlaybookRuleInvoker 删除剧本规则
-func (c *SecMasterClient) DeletePlaybookRuleInvoker(request *model.DeletePlaybookRuleRequest) *DeletePlaybookRuleInvoker {
-	requestDef := GenReqDefForDeletePlaybookRule()
-	return &DeletePlaybookRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// DeleteLayoutFieldInvoker 批量删除布局字段
+func (c *SecMasterClient) DeleteLayoutFieldInvoker(request *model.DeleteLayoutFieldRequest) *DeleteLayoutFieldInvoker {
+	requestDef := GenReqDefForDeleteLayoutField()
+	return &DeleteLayoutFieldInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeletePlaybookVersion 删除剧本版本
+// DeletePipe 删除管道
 //
-// 删除剧本版本
+// 删除管道
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) DeletePlaybookVersion(request *model.DeletePlaybookVersionRequest) (*model.DeletePlaybookVersionResponse, error) {
-	requestDef := GenReqDefForDeletePlaybookVersion()
+func (c *SecMasterClient) DeletePipe(request *model.DeletePipeRequest) (*model.DeletePipeResponse, error) {
+	requestDef := GenReqDefForDeletePipe()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.DeletePlaybookVersionResponse), nil
+		return resp.(*model.DeletePipeResponse), nil
 	}
 }
 
-// DeletePlaybookVersionInvoker 删除剧本版本
-func (c *SecMasterClient) DeletePlaybookVersionInvoker(request *model.DeletePlaybookVersionRequest) *DeletePlaybookVersionInvoker {
-	requestDef := GenReqDefForDeletePlaybookVersion()
-	return &DeletePlaybookVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// DeletePipeInvoker 删除管道
+func (c *SecMasterClient) DeletePipeInvoker(request *model.DeletePipeRequest) *DeletePipeInvoker {
+	requestDef := GenReqDefForDeletePipe()
+	return &DeletePipeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteWorkspace 删除工作空间
+// DeleteRetrieveScript 删除检索脚本
 //
-// 删除工作空间
+// 删除检索脚本
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) DeleteWorkspace(request *model.DeleteWorkspaceRequest) (*model.DeleteWorkspaceResponse, error) {
-	requestDef := GenReqDefForDeleteWorkspace()
+func (c *SecMasterClient) DeleteRetrieveScript(request *model.DeleteRetrieveScriptRequest) (*model.DeleteRetrieveScriptResponse, error) {
+	requestDef := GenReqDefForDeleteRetrieveScript()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.DeleteWorkspaceResponse), nil
+		return resp.(*model.DeleteRetrieveScriptResponse), nil
 	}
 }
 
-// DeleteWorkspaceInvoker 删除工作空间
-func (c *SecMasterClient) DeleteWorkspaceInvoker(request *model.DeleteWorkspaceRequest) *DeleteWorkspaceInvoker {
-	requestDef := GenReqDefForDeleteWorkspace()
-	return &DeleteWorkspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// DeleteRetrieveScriptInvoker 删除检索脚本
+func (c *SecMasterClient) DeleteRetrieveScriptInvoker(request *model.DeleteRetrieveScriptRequest) *DeleteRetrieveScriptInvoker {
+	requestDef := GenReqDefForDeleteRetrieveScript()
+	return &DeleteRetrieveScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTable 删除表
+//
+// 删除表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) DeleteTable(request *model.DeleteTableRequest) (*model.DeleteTableResponse, error) {
+	requestDef := GenReqDefForDeleteTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTableResponse), nil
+	}
+}
+
+// DeleteTableInvoker 删除表
+func (c *SecMasterClient) DeleteTableInvoker(request *model.DeleteTableRequest) *DeleteTableInvoker {
+	requestDef := GenReqDefForDeleteTable()
+	return &DeleteTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DisableAlertRule 停用告警规则
 //
-// Disable alert rule
+// 停用告警规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) DisableAlertRule(request *model.DisableAlertRuleRequest) (*model.DisableAlertRuleResponse, error) {
@@ -691,9 +523,51 @@ func (c *SecMasterClient) DisableAlertRuleInvoker(request *model.DisableAlertRul
 	return &DisableAlertRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DisableDataConsumption 关闭实时消费
+//
+// 关闭实时消费
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) DisableDataConsumption(request *model.DisableDataConsumptionRequest) (*model.DisableDataConsumptionResponse, error) {
+	requestDef := GenReqDefForDisableDataConsumption()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisableDataConsumptionResponse), nil
+	}
+}
+
+// DisableDataConsumptionInvoker 关闭实时消费
+func (c *SecMasterClient) DisableDataConsumptionInvoker(request *model.DisableDataConsumptionRequest) *DisableDataConsumptionInvoker {
+	requestDef := GenReqDefForDisableDataConsumption()
+	return &DisableDataConsumptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DisableDataTransformation 停用数据加工
+//
+// 停用数据加工
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) DisableDataTransformation(request *model.DisableDataTransformationRequest) (*model.DisableDataTransformationResponse, error) {
+	requestDef := GenReqDefForDisableDataTransformation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisableDataTransformationResponse), nil
+	}
+}
+
+// DisableDataTransformationInvoker 停用数据加工
+func (c *SecMasterClient) DisableDataTransformationInvoker(request *model.DisableDataTransformationRequest) *DisableDataTransformationInvoker {
+	requestDef := GenReqDefForDisableDataTransformation()
+	return &DisableDataTransformationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // EnableAlertRule 启用告警规则
 //
-// Enable alert rule
+// 启用告警规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) EnableAlertRule(request *model.EnableAlertRuleRequest) (*model.EnableAlertRuleResponse, error) {
@@ -712,9 +586,51 @@ func (c *SecMasterClient) EnableAlertRuleInvoker(request *model.EnableAlertRuleR
 	return &EnableAlertRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// EnableDataConsumption 开启实时消费
+//
+// 开启实时消费
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) EnableDataConsumption(request *model.EnableDataConsumptionRequest) (*model.EnableDataConsumptionResponse, error) {
+	requestDef := GenReqDefForEnableDataConsumption()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.EnableDataConsumptionResponse), nil
+	}
+}
+
+// EnableDataConsumptionInvoker 开启实时消费
+func (c *SecMasterClient) EnableDataConsumptionInvoker(request *model.EnableDataConsumptionRequest) *EnableDataConsumptionInvoker {
+	requestDef := GenReqDefForEnableDataConsumption()
+	return &EnableDataConsumptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// EnableDataTransformation 启用数据加工
+//
+// 启用数据加工
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) EnableDataTransformation(request *model.EnableDataTransformationRequest) (*model.EnableDataTransformationResponse, error) {
+	requestDef := GenReqDefForEnableDataTransformation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.EnableDataTransformationResponse), nil
+	}
+}
+
+// EnableDataTransformationInvoker 启用数据加工
+func (c *SecMasterClient) EnableDataTransformationInvoker(request *model.EnableDataTransformationRequest) *EnableDataTransformationInvoker {
+	requestDef := GenReqDefForEnableDataTransformation()
+	return &EnableDataTransformationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAlertRuleMetrics 告警规则总览
 //
-// List alert rule metrics
+// 告警规则总览
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ListAlertRuleMetrics(request *model.ListAlertRuleMetricsRequest) (*model.ListAlertRuleMetricsResponse, error) {
@@ -733,9 +649,30 @@ func (c *SecMasterClient) ListAlertRuleMetricsInvoker(request *model.ListAlertRu
 	return &ListAlertRuleMetricsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAlertRuleTemplateMetrics 列出告警规则模板总览
+//
+// 列出告警规则模板总览
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) ListAlertRuleTemplateMetrics(request *model.ListAlertRuleTemplateMetricsRequest) (*model.ListAlertRuleTemplateMetricsResponse, error) {
+	requestDef := GenReqDefForListAlertRuleTemplateMetrics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAlertRuleTemplateMetricsResponse), nil
+	}
+}
+
+// ListAlertRuleTemplateMetricsInvoker 列出告警规则模板总览
+func (c *SecMasterClient) ListAlertRuleTemplateMetricsInvoker(request *model.ListAlertRuleTemplateMetricsRequest) *ListAlertRuleTemplateMetricsInvoker {
+	requestDef := GenReqDefForListAlertRuleTemplateMetrics()
+	return &ListAlertRuleTemplateMetricsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAlertRuleTemplates 列出告警规则模板
 //
-// List alert rule templates
+// 列出告警规则模板
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ListAlertRuleTemplates(request *model.ListAlertRuleTemplatesRequest) (*model.ListAlertRuleTemplatesResponse, error) {
@@ -756,7 +693,7 @@ func (c *SecMasterClient) ListAlertRuleTemplatesInvoker(request *model.ListAlert
 
 // ListAlertRules 列出告警规则
 //
-// List alert rules
+// 列出告警规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ListAlertRules(request *model.ListAlertRulesRequest) (*model.ListAlertRulesResponse, error) {
@@ -775,298 +712,235 @@ func (c *SecMasterClient) ListAlertRulesInvoker(request *model.ListAlertRulesReq
 	return &ListAlertRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAlerts 搜索告警列表
+// ListAnalysisScripts 列出分析脚本
 //
-// 搜索告警列表
+// 列出分析脚本
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ListAlerts(request *model.ListAlertsRequest) (*model.ListAlertsResponse, error) {
-	requestDef := GenReqDefForListAlerts()
+func (c *SecMasterClient) ListAnalysisScripts(request *model.ListAnalysisScriptsRequest) (*model.ListAnalysisScriptsResponse, error) {
+	requestDef := GenReqDefForListAnalysisScripts()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListAlertsResponse), nil
+		return resp.(*model.ListAnalysisScriptsResponse), nil
 	}
 }
 
-// ListAlertsInvoker 搜索告警列表
-func (c *SecMasterClient) ListAlertsInvoker(request *model.ListAlertsRequest) *ListAlertsInvoker {
-	requestDef := GenReqDefForListAlerts()
-	return &ListAlertsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListAnalysisScriptsInvoker 列出分析脚本
+func (c *SecMasterClient) ListAnalysisScriptsInvoker(request *model.ListAnalysisScriptsRequest) *ListAnalysisScriptsInvoker {
+	requestDef := GenReqDefForListAnalysisScripts()
+	return &ListAnalysisScriptsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListDataclass 查询数据类列表
+// ListCodeSegments 列出代码片段
 //
-// 查询数据类列表
+// 列出代码片段
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ListDataclass(request *model.ListDataclassRequest) (*model.ListDataclassResponse, error) {
-	requestDef := GenReqDefForListDataclass()
+func (c *SecMasterClient) ListCodeSegments(request *model.ListCodeSegmentsRequest) (*model.ListCodeSegmentsResponse, error) {
+	requestDef := GenReqDefForListCodeSegments()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListDataclassResponse), nil
+		return resp.(*model.ListCodeSegmentsResponse), nil
 	}
 }
 
-// ListDataclassInvoker 查询数据类列表
-func (c *SecMasterClient) ListDataclassInvoker(request *model.ListDataclassRequest) *ListDataclassInvoker {
-	requestDef := GenReqDefForListDataclass()
-	return &ListDataclassInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListCodeSegmentsInvoker 列出代码片段
+func (c *SecMasterClient) ListCodeSegmentsInvoker(request *model.ListCodeSegmentsRequest) *ListCodeSegmentsInvoker {
+	requestDef := GenReqDefForListCodeSegments()
+	return &ListCodeSegmentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListDataclassFields 查询字段列表
+// ListDataTransformationMetrics 数据加工总览
 //
-// 查询字段列表
+// 数据加工总览
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ListDataclassFields(request *model.ListDataclassFieldsRequest) (*model.ListDataclassFieldsResponse, error) {
-	requestDef := GenReqDefForListDataclassFields()
+func (c *SecMasterClient) ListDataTransformationMetrics(request *model.ListDataTransformationMetricsRequest) (*model.ListDataTransformationMetricsResponse, error) {
+	requestDef := GenReqDefForListDataTransformationMetrics()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListDataclassFieldsResponse), nil
+		return resp.(*model.ListDataTransformationMetricsResponse), nil
 	}
 }
 
-// ListDataclassFieldsInvoker 查询字段列表
-func (c *SecMasterClient) ListDataclassFieldsInvoker(request *model.ListDataclassFieldsRequest) *ListDataclassFieldsInvoker {
-	requestDef := GenReqDefForListDataclassFields()
-	return &ListDataclassFieldsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListDataTransformationMetricsInvoker 数据加工总览
+func (c *SecMasterClient) ListDataTransformationMetricsInvoker(request *model.ListDataTransformationMetricsRequest) *ListDataTransformationMetricsInvoker {
+	requestDef := GenReqDefForListDataTransformationMetrics()
+	return &ListDataTransformationMetricsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListDataobjectRelations 查询关联Dataobject列表
+// ListDataTransformations 列出数据加工
 //
-// 查询关联Dataobject列表
+// 列出数据加工
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ListDataobjectRelations(request *model.ListDataobjectRelationsRequest) (*model.ListDataobjectRelationsResponse, error) {
-	requestDef := GenReqDefForListDataobjectRelations()
+func (c *SecMasterClient) ListDataTransformations(request *model.ListDataTransformationsRequest) (*model.ListDataTransformationsResponse, error) {
+	requestDef := GenReqDefForListDataTransformations()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListDataobjectRelationsResponse), nil
+		return resp.(*model.ListDataTransformationsResponse), nil
 	}
 }
 
-// ListDataobjectRelationsInvoker 查询关联Dataobject列表
-func (c *SecMasterClient) ListDataobjectRelationsInvoker(request *model.ListDataobjectRelationsRequest) *ListDataobjectRelationsInvoker {
-	requestDef := GenReqDefForListDataobjectRelations()
-	return &ListDataobjectRelationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListDataTransformationsInvoker 列出数据加工
+func (c *SecMasterClient) ListDataTransformationsInvoker(request *model.ListDataTransformationsRequest) *ListDataTransformationsInvoker {
+	requestDef := GenReqDefForListDataTransformations()
+	return &ListDataTransformationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListIncidents 搜索事件列表
+// ListDirectories 列出目录分组
 //
-// 搜索事件列表
+// 列出目录分组
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ListIncidents(request *model.ListIncidentsRequest) (*model.ListIncidentsResponse, error) {
-	requestDef := GenReqDefForListIncidents()
+func (c *SecMasterClient) ListDirectories(request *model.ListDirectoriesRequest) (*model.ListDirectoriesResponse, error) {
+	requestDef := GenReqDefForListDirectories()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListIncidentsResponse), nil
+		return resp.(*model.ListDirectoriesResponse), nil
 	}
 }
 
-// ListIncidentsInvoker 搜索事件列表
-func (c *SecMasterClient) ListIncidentsInvoker(request *model.ListIncidentsRequest) *ListIncidentsInvoker {
-	requestDef := GenReqDefForListIncidents()
-	return &ListIncidentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListDirectoriesInvoker 列出目录分组
+func (c *SecMasterClient) ListDirectoriesInvoker(request *model.ListDirectoriesRequest) *ListDirectoriesInvoker {
+	requestDef := GenReqDefForListDirectories()
+	return &ListDirectoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListIndicators 查询威胁情报列表
+// ListLayoutFieldAll 全部布局字段
 //
-// 查询威胁情报列表
+// 查询布局字段列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ListIndicators(request *model.ListIndicatorsRequest) (*model.ListIndicatorsResponse, error) {
-	requestDef := GenReqDefForListIndicators()
+func (c *SecMasterClient) ListLayoutFieldAll(request *model.ListLayoutFieldAllRequest) (*model.ListLayoutFieldAllResponse, error) {
+	requestDef := GenReqDefForListLayoutFieldAll()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListIndicatorsResponse), nil
+		return resp.(*model.ListLayoutFieldAllResponse), nil
 	}
 }
 
-// ListIndicatorsInvoker 查询威胁情报列表
-func (c *SecMasterClient) ListIndicatorsInvoker(request *model.ListIndicatorsRequest) *ListIndicatorsInvoker {
-	requestDef := GenReqDefForListIndicators()
-	return &ListIndicatorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListLayoutFieldAllInvoker 全部布局字段
+func (c *SecMasterClient) ListLayoutFieldAllInvoker(request *model.ListLayoutFieldAllRequest) *ListLayoutFieldAllInvoker {
+	requestDef := GenReqDefForListLayoutFieldAll()
+	return &ListLayoutFieldAllInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPlaybookActions 查询剧本动作
+// ListPipes 获取管道列表
 //
-// 查询剧本动作列表
+// 获取管道列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ListPlaybookActions(request *model.ListPlaybookActionsRequest) (*model.ListPlaybookActionsResponse, error) {
-	requestDef := GenReqDefForListPlaybookActions()
+func (c *SecMasterClient) ListPipes(request *model.ListPipesRequest) (*model.ListPipesResponse, error) {
+	requestDef := GenReqDefForListPipes()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListPlaybookActionsResponse), nil
+		return resp.(*model.ListPipesResponse), nil
 	}
 }
 
-// ListPlaybookActionsInvoker 查询剧本动作
-func (c *SecMasterClient) ListPlaybookActionsInvoker(request *model.ListPlaybookActionsRequest) *ListPlaybookActionsInvoker {
-	requestDef := GenReqDefForListPlaybookActions()
-	return &ListPlaybookActionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListPipesInvoker 获取管道列表
+func (c *SecMasterClient) ListPipesInvoker(request *model.ListPipesRequest) *ListPipesInvoker {
+	requestDef := GenReqDefForListPipes()
+	return &ListPipesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPlaybookApproves 查询剧本审核结果
+// ListRetrieveScripts 列出检索脚本
 //
-// 查询剧本审核结果
+// 列出检索脚本
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ListPlaybookApproves(request *model.ListPlaybookApprovesRequest) (*model.ListPlaybookApprovesResponse, error) {
-	requestDef := GenReqDefForListPlaybookApproves()
+func (c *SecMasterClient) ListRetrieveScripts(request *model.ListRetrieveScriptsRequest) (*model.ListRetrieveScriptsResponse, error) {
+	requestDef := GenReqDefForListRetrieveScripts()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListPlaybookApprovesResponse), nil
+		return resp.(*model.ListRetrieveScriptsResponse), nil
 	}
 }
 
-// ListPlaybookApprovesInvoker 查询剧本审核结果
-func (c *SecMasterClient) ListPlaybookApprovesInvoker(request *model.ListPlaybookApprovesRequest) *ListPlaybookApprovesInvoker {
-	requestDef := GenReqDefForListPlaybookApproves()
-	return &ListPlaybookApprovesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListRetrieveScriptsInvoker 列出检索脚本
+func (c *SecMasterClient) ListRetrieveScriptsInvoker(request *model.ListRetrieveScriptsRequest) *ListRetrieveScriptsInvoker {
+	requestDef := GenReqDefForListRetrieveScripts()
+	return &ListRetrieveScriptsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPlaybookAuditLogs 查询剧本实例审计日志
+// ListTableHistograms 检索表直方图
 //
-// 查询剧本实例审计日志
+// 检索表直方图
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ListPlaybookAuditLogs(request *model.ListPlaybookAuditLogsRequest) (*model.ListPlaybookAuditLogsResponse, error) {
-	requestDef := GenReqDefForListPlaybookAuditLogs()
+func (c *SecMasterClient) ListTableHistograms(request *model.ListTableHistogramsRequest) (*model.ListTableHistogramsResponse, error) {
+	requestDef := GenReqDefForListTableHistograms()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListPlaybookAuditLogsResponse), nil
+		return resp.(*model.ListTableHistogramsResponse), nil
 	}
 }
 
-// ListPlaybookAuditLogsInvoker 查询剧本实例审计日志
-func (c *SecMasterClient) ListPlaybookAuditLogsInvoker(request *model.ListPlaybookAuditLogsRequest) *ListPlaybookAuditLogsInvoker {
-	requestDef := GenReqDefForListPlaybookAuditLogs()
-	return &ListPlaybookAuditLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListTableHistogramsInvoker 检索表直方图
+func (c *SecMasterClient) ListTableHistogramsInvoker(request *model.ListTableHistogramsRequest) *ListTableHistogramsInvoker {
+	requestDef := GenReqDefForListTableHistograms()
+	return &ListTableHistogramsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPlaybookInstances 查询剧本实例列表
+// ListTableLogs 检索表日志
 //
-// 查询剧本实例列表
+// 检索表日志
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ListPlaybookInstances(request *model.ListPlaybookInstancesRequest) (*model.ListPlaybookInstancesResponse, error) {
-	requestDef := GenReqDefForListPlaybookInstances()
+func (c *SecMasterClient) ListTableLogs(request *model.ListTableLogsRequest) (*model.ListTableLogsResponse, error) {
+	requestDef := GenReqDefForListTableLogs()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListPlaybookInstancesResponse), nil
+		return resp.(*model.ListTableLogsResponse), nil
 	}
 }
 
-// ListPlaybookInstancesInvoker 查询剧本实例列表
-func (c *SecMasterClient) ListPlaybookInstancesInvoker(request *model.ListPlaybookInstancesRequest) *ListPlaybookInstancesInvoker {
-	requestDef := GenReqDefForListPlaybookInstances()
-	return &ListPlaybookInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListTableLogsInvoker 检索表日志
+func (c *SecMasterClient) ListTableLogsInvoker(request *model.ListTableLogsRequest) *ListTableLogsInvoker {
+	requestDef := GenReqDefForListTableLogs()
+	return &ListTableLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPlaybookVersions 查询剧本版本列表
+// ListTables 获取表列表
 //
-// 查询剧本版本列表
+// 获取表列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ListPlaybookVersions(request *model.ListPlaybookVersionsRequest) (*model.ListPlaybookVersionsResponse, error) {
-	requestDef := GenReqDefForListPlaybookVersions()
+func (c *SecMasterClient) ListTables(request *model.ListTablesRequest) (*model.ListTablesResponse, error) {
+	requestDef := GenReqDefForListTables()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListPlaybookVersionsResponse), nil
+		return resp.(*model.ListTablesResponse), nil
 	}
 }
 
-// ListPlaybookVersionsInvoker 查询剧本版本列表
-func (c *SecMasterClient) ListPlaybookVersionsInvoker(request *model.ListPlaybookVersionsRequest) *ListPlaybookVersionsInvoker {
-	requestDef := GenReqDefForListPlaybookVersions()
-	return &ListPlaybookVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListPlaybooks 查询剧本列表
-//
-// 查询剧本列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ListPlaybooks(request *model.ListPlaybooksRequest) (*model.ListPlaybooksResponse, error) {
-	requestDef := GenReqDefForListPlaybooks()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListPlaybooksResponse), nil
-	}
-}
-
-// ListPlaybooksInvoker 查询剧本列表
-func (c *SecMasterClient) ListPlaybooksInvoker(request *model.ListPlaybooksRequest) *ListPlaybooksInvoker {
-	requestDef := GenReqDefForListPlaybooks()
-	return &ListPlaybooksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListWorkflows 查询流程列表
-//
-// 查询流程列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ListWorkflows(request *model.ListWorkflowsRequest) (*model.ListWorkflowsResponse, error) {
-	requestDef := GenReqDefForListWorkflows()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListWorkflowsResponse), nil
-	}
-}
-
-// ListWorkflowsInvoker 查询流程列表
-func (c *SecMasterClient) ListWorkflowsInvoker(request *model.ListWorkflowsRequest) *ListWorkflowsInvoker {
-	requestDef := GenReqDefForListWorkflows()
-	return &ListWorkflowsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListWorkspaces 查询工作空间列表
-//
-// 可通过工作空间名称、工作空间描述、创建时间等条件对租户的工作空间进行筛选。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ListWorkspaces(request *model.ListWorkspacesRequest) (*model.ListWorkspacesResponse, error) {
-	requestDef := GenReqDefForListWorkspaces()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListWorkspacesResponse), nil
-	}
-}
-
-// ListWorkspacesInvoker 查询工作空间列表
-func (c *SecMasterClient) ListWorkspacesInvoker(request *model.ListWorkspacesRequest) *ListWorkspacesInvoker {
-	requestDef := GenReqDefForListWorkspaces()
-	return &ListWorkspacesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListTablesInvoker 获取表列表
+func (c *SecMasterClient) ListTablesInvoker(request *model.ListTablesRequest) *ListTablesInvoker {
+	requestDef := GenReqDefForListTables()
+	return &ListTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SearchBaseline 搜索基线检查结果列表
@@ -1090,30 +964,72 @@ func (c *SecMasterClient) SearchBaselineInvoker(request *model.SearchBaselineReq
 	return &SearchBaselineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowAlert 获取告警详情
+// SearchCheckitems 查询检查项列表
 //
-// 获取告警详情
+// 查询检查项列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ShowAlert(request *model.ShowAlertRequest) (*model.ShowAlertResponse, error) {
-	requestDef := GenReqDefForShowAlert()
+func (c *SecMasterClient) SearchCheckitems(request *model.SearchCheckitemsRequest) (*model.SearchCheckitemsResponse, error) {
+	requestDef := GenReqDefForSearchCheckitems()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowAlertResponse), nil
+		return resp.(*model.SearchCheckitemsResponse), nil
 	}
 }
 
-// ShowAlertInvoker 获取告警详情
-func (c *SecMasterClient) ShowAlertInvoker(request *model.ShowAlertRequest) *ShowAlertInvoker {
-	requestDef := GenReqDefForShowAlert()
-	return &ShowAlertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// SearchCheckitemsInvoker 查询检查项列表
+func (c *SecMasterClient) SearchCheckitemsInvoker(request *model.SearchCheckitemsRequest) *SearchCheckitemsInvoker {
+	requestDef := GenReqDefForSearchCheckitems()
+	return &SearchCheckitemsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SearchCompliancePackages 查询遵从包列表
+//
+// 查询遵从包列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) SearchCompliancePackages(request *model.SearchCompliancePackagesRequest) (*model.SearchCompliancePackagesResponse, error) {
+	requestDef := GenReqDefForSearchCompliancePackages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SearchCompliancePackagesResponse), nil
+	}
+}
+
+// SearchCompliancePackagesInvoker 查询遵从包列表
+func (c *SecMasterClient) SearchCompliancePackagesInvoker(request *model.SearchCompliancePackagesRequest) *SearchCompliancePackagesInvoker {
+	requestDef := GenReqDefForSearchCompliancePackages()
+	return &SearchCompliancePackagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAdhocResult 获取adhoc查询结果
+//
+// 获取adhoc查询结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) ShowAdhocResult(request *model.ShowAdhocResultRequest) (*model.ShowAdhocResultResponse, error) {
+	requestDef := GenReqDefForShowAdhocResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAdhocResultResponse), nil
+	}
+}
+
+// ShowAdhocResultInvoker 获取adhoc查询结果
+func (c *SecMasterClient) ShowAdhocResultInvoker(request *model.ShowAdhocResultRequest) *ShowAdhocResultInvoker {
+	requestDef := GenReqDefForShowAdhocResult()
+	return &ShowAdhocResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAlertRule 查看告警规则
 //
-// 查看告警规则 Get alert rule
+// 查看告警规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ShowAlertRule(request *model.ShowAlertRuleRequest) (*model.ShowAlertRuleResponse, error) {
@@ -1134,7 +1050,7 @@ func (c *SecMasterClient) ShowAlertRuleInvoker(request *model.ShowAlertRuleReque
 
 // ShowAlertRuleTemplate 查看告警规则模板
 //
-// List alert rule templates
+// 查看告警规则模板
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ShowAlertRuleTemplate(request *model.ShowAlertRuleTemplateRequest) (*model.ShowAlertRuleTemplateResponse, error) {
@@ -1153,219 +1069,282 @@ func (c *SecMasterClient) ShowAlertRuleTemplateInvoker(request *model.ShowAlertR
 	return &ShowAlertRuleTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowIncident 获取事件详情
+// ShowAnalysisScript 查看分析脚本
 //
-// 获取事件详情
+// 查看分析脚本
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ShowIncident(request *model.ShowIncidentRequest) (*model.ShowIncidentResponse, error) {
-	requestDef := GenReqDefForShowIncident()
+func (c *SecMasterClient) ShowAnalysisScript(request *model.ShowAnalysisScriptRequest) (*model.ShowAnalysisScriptResponse, error) {
+	requestDef := GenReqDefForShowAnalysisScript()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowIncidentResponse), nil
+		return resp.(*model.ShowAnalysisScriptResponse), nil
 	}
 }
 
-// ShowIncidentInvoker 获取事件详情
-func (c *SecMasterClient) ShowIncidentInvoker(request *model.ShowIncidentRequest) *ShowIncidentInvoker {
-	requestDef := GenReqDefForShowIncident()
-	return &ShowIncidentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ShowAnalysisScriptInvoker 查看分析脚本
+func (c *SecMasterClient) ShowAnalysisScriptInvoker(request *model.ShowAnalysisScriptRequest) *ShowAnalysisScriptInvoker {
+	requestDef := GenReqDefForShowAnalysisScript()
+	return &ShowAnalysisScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowIndicatorDetail 查询威胁情报详情
+// ShowCheckitemDetail 查询检查项详情
 //
-// 查询威胁情报详情
+// 查询检查项详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ShowIndicatorDetail(request *model.ShowIndicatorDetailRequest) (*model.ShowIndicatorDetailResponse, error) {
-	requestDef := GenReqDefForShowIndicatorDetail()
+func (c *SecMasterClient) ShowCheckitemDetail(request *model.ShowCheckitemDetailRequest) (*model.ShowCheckitemDetailResponse, error) {
+	requestDef := GenReqDefForShowCheckitemDetail()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowIndicatorDetailResponse), nil
+		return resp.(*model.ShowCheckitemDetailResponse), nil
 	}
 }
 
-// ShowIndicatorDetailInvoker 查询威胁情报详情
-func (c *SecMasterClient) ShowIndicatorDetailInvoker(request *model.ShowIndicatorDetailRequest) *ShowIndicatorDetailInvoker {
-	requestDef := GenReqDefForShowIndicatorDetail()
-	return &ShowIndicatorDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ShowCheckitemDetailInvoker 查询检查项详情
+func (c *SecMasterClient) ShowCheckitemDetailInvoker(request *model.ShowCheckitemDetailRequest) *ShowCheckitemDetailInvoker {
+	requestDef := GenReqDefForShowCheckitemDetail()
+	return &ShowCheckitemDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPlaybook 查询剧本详情
+// ShowCodeSegment 查看代码片段
 //
-// 查询剧本详情
+// 查看代码片段
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ShowPlaybook(request *model.ShowPlaybookRequest) (*model.ShowPlaybookResponse, error) {
-	requestDef := GenReqDefForShowPlaybook()
+func (c *SecMasterClient) ShowCodeSegment(request *model.ShowCodeSegmentRequest) (*model.ShowCodeSegmentResponse, error) {
+	requestDef := GenReqDefForShowCodeSegment()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowPlaybookResponse), nil
+		return resp.(*model.ShowCodeSegmentResponse), nil
 	}
 }
 
-// ShowPlaybookInvoker 查询剧本详情
-func (c *SecMasterClient) ShowPlaybookInvoker(request *model.ShowPlaybookRequest) *ShowPlaybookInvoker {
-	requestDef := GenReqDefForShowPlaybook()
-	return &ShowPlaybookInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ShowCodeSegmentInvoker 查看代码片段
+func (c *SecMasterClient) ShowCodeSegmentInvoker(request *model.ShowCodeSegmentRequest) *ShowCodeSegmentInvoker {
+	requestDef := GenReqDefForShowCodeSegment()
+	return &ShowCodeSegmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPlaybookInstance 查询剧本实例详情
+// ShowCompliancePackageDetail 查询遵从包详情
 //
-// Show playbook instance
+// 查询遵从包详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ShowPlaybookInstance(request *model.ShowPlaybookInstanceRequest) (*model.ShowPlaybookInstanceResponse, error) {
-	requestDef := GenReqDefForShowPlaybookInstance()
+func (c *SecMasterClient) ShowCompliancePackageDetail(request *model.ShowCompliancePackageDetailRequest) (*model.ShowCompliancePackageDetailResponse, error) {
+	requestDef := GenReqDefForShowCompliancePackageDetail()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowPlaybookInstanceResponse), nil
+		return resp.(*model.ShowCompliancePackageDetailResponse), nil
 	}
 }
 
-// ShowPlaybookInstanceInvoker 查询剧本实例详情
-func (c *SecMasterClient) ShowPlaybookInstanceInvoker(request *model.ShowPlaybookInstanceRequest) *ShowPlaybookInstanceInvoker {
-	requestDef := GenReqDefForShowPlaybookInstance()
-	return &ShowPlaybookInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ShowCompliancePackageDetailInvoker 查询遵从包详情
+func (c *SecMasterClient) ShowCompliancePackageDetailInvoker(request *model.ShowCompliancePackageDetailRequest) *ShowCompliancePackageDetailInvoker {
+	requestDef := GenReqDefForShowCompliancePackageDetail()
+	return &ShowCompliancePackageDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPlaybookMonitors 剧本运行监控
+// ShowDataConsumption 获取实时消费配置
 //
-// 剧本运行监控
+// 获取实时消费配置
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ShowPlaybookMonitors(request *model.ShowPlaybookMonitorsRequest) (*model.ShowPlaybookMonitorsResponse, error) {
-	requestDef := GenReqDefForShowPlaybookMonitors()
+func (c *SecMasterClient) ShowDataConsumption(request *model.ShowDataConsumptionRequest) (*model.ShowDataConsumptionResponse, error) {
+	requestDef := GenReqDefForShowDataConsumption()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowPlaybookMonitorsResponse), nil
+		return resp.(*model.ShowDataConsumptionResponse), nil
 	}
 }
 
-// ShowPlaybookMonitorsInvoker 剧本运行监控
-func (c *SecMasterClient) ShowPlaybookMonitorsInvoker(request *model.ShowPlaybookMonitorsRequest) *ShowPlaybookMonitorsInvoker {
-	requestDef := GenReqDefForShowPlaybookMonitors()
-	return &ShowPlaybookMonitorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ShowDataConsumptionInvoker 获取实时消费配置
+func (c *SecMasterClient) ShowDataConsumptionInvoker(request *model.ShowDataConsumptionRequest) *ShowDataConsumptionInvoker {
+	requestDef := GenReqDefForShowDataConsumption()
+	return &ShowDataConsumptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPlaybookRule 查询剧本规则详情
+// ShowDataTransformation 查看数据加工
 //
-// 查询剧本规则详情
+// 查看数据加工
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ShowPlaybookRule(request *model.ShowPlaybookRuleRequest) (*model.ShowPlaybookRuleResponse, error) {
-	requestDef := GenReqDefForShowPlaybookRule()
+func (c *SecMasterClient) ShowDataTransformation(request *model.ShowDataTransformationRequest) (*model.ShowDataTransformationResponse, error) {
+	requestDef := GenReqDefForShowDataTransformation()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowPlaybookRuleResponse), nil
+		return resp.(*model.ShowDataTransformationResponse), nil
 	}
 }
 
-// ShowPlaybookRuleInvoker 查询剧本规则详情
-func (c *SecMasterClient) ShowPlaybookRuleInvoker(request *model.ShowPlaybookRuleRequest) *ShowPlaybookRuleInvoker {
-	requestDef := GenReqDefForShowPlaybookRule()
-	return &ShowPlaybookRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ShowDataTransformationInvoker 查看数据加工
+func (c *SecMasterClient) ShowDataTransformationInvoker(request *model.ShowDataTransformationRequest) *ShowDataTransformationInvoker {
+	requestDef := GenReqDefForShowDataTransformation()
+	return &ShowDataTransformationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPlaybookStatistics 剧本数据统计
+// ShowLayoutFieldInfo 展示字段详情
 //
-// 剧本统计数据
+// 查询布局字段详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ShowPlaybookStatistics(request *model.ShowPlaybookStatisticsRequest) (*model.ShowPlaybookStatisticsResponse, error) {
-	requestDef := GenReqDefForShowPlaybookStatistics()
+func (c *SecMasterClient) ShowLayoutFieldInfo(request *model.ShowLayoutFieldInfoRequest) (*model.ShowLayoutFieldInfoResponse, error) {
+	requestDef := GenReqDefForShowLayoutFieldInfo()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowPlaybookStatisticsResponse), nil
+		return resp.(*model.ShowLayoutFieldInfoResponse), nil
 	}
 }
 
-// ShowPlaybookStatisticsInvoker 剧本数据统计
-func (c *SecMasterClient) ShowPlaybookStatisticsInvoker(request *model.ShowPlaybookStatisticsRequest) *ShowPlaybookStatisticsInvoker {
-	requestDef := GenReqDefForShowPlaybookStatistics()
-	return &ShowPlaybookStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ShowLayoutFieldInfoInvoker 展示字段详情
+func (c *SecMasterClient) ShowLayoutFieldInfoInvoker(request *model.ShowLayoutFieldInfoRequest) *ShowLayoutFieldInfoInvoker {
+	requestDef := GenReqDefForShowLayoutFieldInfo()
+	return &ShowLayoutFieldInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPlaybookTopology 查询剧本拓扑关系
+// ShowMonitorStats 获取监控统计信息
 //
-// 查询剧本拓扑关系
+// 获取监控统计信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ShowPlaybookTopology(request *model.ShowPlaybookTopologyRequest) (*model.ShowPlaybookTopologyResponse, error) {
-	requestDef := GenReqDefForShowPlaybookTopology()
+func (c *SecMasterClient) ShowMonitorStats(request *model.ShowMonitorStatsRequest) (*model.ShowMonitorStatsResponse, error) {
+	requestDef := GenReqDefForShowMonitorStats()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowPlaybookTopologyResponse), nil
+		return resp.(*model.ShowMonitorStatsResponse), nil
 	}
 }
 
-// ShowPlaybookTopologyInvoker 查询剧本拓扑关系
-func (c *SecMasterClient) ShowPlaybookTopologyInvoker(request *model.ShowPlaybookTopologyRequest) *ShowPlaybookTopologyInvoker {
-	requestDef := GenReqDefForShowPlaybookTopology()
-	return &ShowPlaybookTopologyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ShowMonitorStatsInvoker 获取监控统计信息
+func (c *SecMasterClient) ShowMonitorStatsInvoker(request *model.ShowMonitorStatsRequest) *ShowMonitorStatsInvoker {
+	requestDef := GenReqDefForShowMonitorStats()
+	return &ShowMonitorStatsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPlaybookVersion 查询剧本版本详情
+// ShowPipe 获取管道详情
 //
-// Show playbook version version
+// 获取管道详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ShowPlaybookVersion(request *model.ShowPlaybookVersionRequest) (*model.ShowPlaybookVersionResponse, error) {
-	requestDef := GenReqDefForShowPlaybookVersion()
+func (c *SecMasterClient) ShowPipe(request *model.ShowPipeRequest) (*model.ShowPipeResponse, error) {
+	requestDef := GenReqDefForShowPipe()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowPlaybookVersionResponse), nil
+		return resp.(*model.ShowPipeResponse), nil
 	}
 }
 
-// ShowPlaybookVersionInvoker 查询剧本版本详情
-func (c *SecMasterClient) ShowPlaybookVersionInvoker(request *model.ShowPlaybookVersionRequest) *ShowPlaybookVersionInvoker {
-	requestDef := GenReqDefForShowPlaybookVersion()
-	return &ShowPlaybookVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ShowPipeInvoker 获取管道详情
+func (c *SecMasterClient) ShowPipeInvoker(request *model.ShowPipeRequest) *ShowPipeInvoker {
+	requestDef := GenReqDefForShowPipe()
+	return &ShowPipeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowWorkspace 查询工作空间详情
+// ShowRetrieveScript 查看检索脚本
 //
-// 查询工作空间名称、描述等详情信息
+// 查看检索脚本
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) ShowWorkspace(request *model.ShowWorkspaceRequest) (*model.ShowWorkspaceResponse, error) {
-	requestDef := GenReqDefForShowWorkspace()
+func (c *SecMasterClient) ShowRetrieveScript(request *model.ShowRetrieveScriptRequest) (*model.ShowRetrieveScriptResponse, error) {
+	requestDef := GenReqDefForShowRetrieveScript()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowWorkspaceResponse), nil
+		return resp.(*model.ShowRetrieveScriptResponse), nil
 	}
 }
 
-// ShowWorkspaceInvoker 查询工作空间详情
-func (c *SecMasterClient) ShowWorkspaceInvoker(request *model.ShowWorkspaceRequest) *ShowWorkspaceInvoker {
-	requestDef := GenReqDefForShowWorkspace()
-	return &ShowWorkspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ShowRetrieveScriptInvoker 查看检索脚本
+func (c *SecMasterClient) ShowRetrieveScriptInvoker(request *model.ShowRetrieveScriptRequest) *ShowRetrieveScriptInvoker {
+	requestDef := GenReqDefForShowRetrieveScript()
+	return &ShowRetrieveScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSubscriptionResources 获取订阅资源信息
+//
+// 获取订阅资源信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) ShowSubscriptionResources(request *model.ShowSubscriptionResourcesRequest) (*model.ShowSubscriptionResourcesResponse, error) {
+	requestDef := GenReqDefForShowSubscriptionResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSubscriptionResourcesResponse), nil
+	}
+}
+
+// ShowSubscriptionResourcesInvoker 获取订阅资源信息
+func (c *SecMasterClient) ShowSubscriptionResourcesInvoker(request *model.ShowSubscriptionResourcesRequest) *ShowSubscriptionResourcesInvoker {
+	requestDef := GenReqDefForShowSubscriptionResources()
+	return &ShowSubscriptionResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTable 获取表详情
+//
+// 获取表详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) ShowTable(request *model.ShowTableRequest) (*model.ShowTableResponse, error) {
+	requestDef := GenReqDefForShowTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTableResponse), nil
+	}
+}
+
+// ShowTableInvoker 获取表详情
+func (c *SecMasterClient) ShowTableInvoker(request *model.ShowTableRequest) *ShowTableInvoker {
+	requestDef := GenReqDefForShowTable()
+	return &ShowTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVersion 获取当前可用版本
+//
+// 获取当前可用版本
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) ShowVersion(request *model.ShowVersionRequest) (*model.ShowVersionResponse, error) {
+	requestDef := GenReqDefForShowVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVersionResponse), nil
+	}
+}
+
+// ShowVersionInvoker 获取当前可用版本
+func (c *SecMasterClient) ShowVersionInvoker(request *model.ShowVersionRequest) *ShowVersionInvoker {
+	requestDef := GenReqDefForShowVersion()
+	return &ShowVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateAlertRule 更新告警规则
 //
-// Update alert rule
+// 更新告警规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) UpdateAlertRule(request *model.UpdateAlertRuleRequest) (*model.UpdateAlertRuleResponse, error) {
@@ -1384,128 +1363,254 @@ func (c *SecMasterClient) UpdateAlertRuleInvoker(request *model.UpdateAlertRuleR
 	return &UpdateAlertRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateIndicator 更新威胁情报
+// UpdateAnalysisScript 更新分析脚本
 //
-// 更新威胁情报
+// 更新分析脚本
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) UpdateIndicator(request *model.UpdateIndicatorRequest) (*model.UpdateIndicatorResponse, error) {
-	requestDef := GenReqDefForUpdateIndicator()
+func (c *SecMasterClient) UpdateAnalysisScript(request *model.UpdateAnalysisScriptRequest) (*model.UpdateAnalysisScriptResponse, error) {
+	requestDef := GenReqDefForUpdateAnalysisScript()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdateIndicatorResponse), nil
+		return resp.(*model.UpdateAnalysisScriptResponse), nil
 	}
 }
 
-// UpdateIndicatorInvoker 更新威胁情报
-func (c *SecMasterClient) UpdateIndicatorInvoker(request *model.UpdateIndicatorRequest) *UpdateIndicatorInvoker {
-	requestDef := GenReqDefForUpdateIndicator()
-	return &UpdateIndicatorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateAnalysisScriptInvoker 更新分析脚本
+func (c *SecMasterClient) UpdateAnalysisScriptInvoker(request *model.UpdateAnalysisScriptRequest) *UpdateAnalysisScriptInvoker {
+	requestDef := GenReqDefForUpdateAnalysisScript()
+	return &UpdateAnalysisScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdatePlaybook 修改剧本
+// UpdateCheckitem 更新检查项
 //
-// 修改剧本
+// 更新检查项
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) UpdatePlaybook(request *model.UpdatePlaybookRequest) (*model.UpdatePlaybookResponse, error) {
-	requestDef := GenReqDefForUpdatePlaybook()
+func (c *SecMasterClient) UpdateCheckitem(request *model.UpdateCheckitemRequest) (*model.UpdateCheckitemResponse, error) {
+	requestDef := GenReqDefForUpdateCheckitem()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdatePlaybookResponse), nil
+		return resp.(*model.UpdateCheckitemResponse), nil
 	}
 }
 
-// UpdatePlaybookInvoker 修改剧本
-func (c *SecMasterClient) UpdatePlaybookInvoker(request *model.UpdatePlaybookRequest) *UpdatePlaybookInvoker {
-	requestDef := GenReqDefForUpdatePlaybook()
-	return &UpdatePlaybookInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateCheckitemInvoker 更新检查项
+func (c *SecMasterClient) UpdateCheckitemInvoker(request *model.UpdateCheckitemRequest) *UpdateCheckitemInvoker {
+	requestDef := GenReqDefForUpdateCheckitem()
+	return &UpdateCheckitemInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdatePlaybookAction 更新剧本动作
+// UpdateCodeSegment 更新代码片段
 //
-// 更新剧本动作
+// 更新代码片段
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) UpdatePlaybookAction(request *model.UpdatePlaybookActionRequest) (*model.UpdatePlaybookActionResponse, error) {
-	requestDef := GenReqDefForUpdatePlaybookAction()
+func (c *SecMasterClient) UpdateCodeSegment(request *model.UpdateCodeSegmentRequest) (*model.UpdateCodeSegmentResponse, error) {
+	requestDef := GenReqDefForUpdateCodeSegment()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdatePlaybookActionResponse), nil
+		return resp.(*model.UpdateCodeSegmentResponse), nil
 	}
 }
 
-// UpdatePlaybookActionInvoker 更新剧本动作
-func (c *SecMasterClient) UpdatePlaybookActionInvoker(request *model.UpdatePlaybookActionRequest) *UpdatePlaybookActionInvoker {
-	requestDef := GenReqDefForUpdatePlaybookAction()
-	return &UpdatePlaybookActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateCodeSegmentInvoker 更新代码片段
+func (c *SecMasterClient) UpdateCodeSegmentInvoker(request *model.UpdateCodeSegmentRequest) *UpdateCodeSegmentInvoker {
+	requestDef := GenReqDefForUpdateCodeSegment()
+	return &UpdateCodeSegmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdatePlaybookRule 更新剧本规则
+// UpdateCompliancePackage 更新遵从包
 //
-// 更新剧本规则
+// 更新遵从包
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) UpdatePlaybookRule(request *model.UpdatePlaybookRuleRequest) (*model.UpdatePlaybookRuleResponse, error) {
-	requestDef := GenReqDefForUpdatePlaybookRule()
+func (c *SecMasterClient) UpdateCompliancePackage(request *model.UpdateCompliancePackageRequest) (*model.UpdateCompliancePackageResponse, error) {
+	requestDef := GenReqDefForUpdateCompliancePackage()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdatePlaybookRuleResponse), nil
+		return resp.(*model.UpdateCompliancePackageResponse), nil
 	}
 }
 
-// UpdatePlaybookRuleInvoker 更新剧本规则
-func (c *SecMasterClient) UpdatePlaybookRuleInvoker(request *model.UpdatePlaybookRuleRequest) *UpdatePlaybookRuleInvoker {
-	requestDef := GenReqDefForUpdatePlaybookRule()
-	return &UpdatePlaybookRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateCompliancePackageInvoker 更新遵从包
+func (c *SecMasterClient) UpdateCompliancePackageInvoker(request *model.UpdateCompliancePackageRequest) *UpdateCompliancePackageInvoker {
+	requestDef := GenReqDefForUpdateCompliancePackage()
+	return &UpdateCompliancePackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdatePlaybookVersion 更新剧本版本
+// UpdateDataTransformation 更新数据加工
 //
-// 更新剧本版本
+// 更新数据加工
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) UpdatePlaybookVersion(request *model.UpdatePlaybookVersionRequest) (*model.UpdatePlaybookVersionResponse, error) {
-	requestDef := GenReqDefForUpdatePlaybookVersion()
+func (c *SecMasterClient) UpdateDataTransformation(request *model.UpdateDataTransformationRequest) (*model.UpdateDataTransformationResponse, error) {
+	requestDef := GenReqDefForUpdateDataTransformation()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdatePlaybookVersionResponse), nil
+		return resp.(*model.UpdateDataTransformationResponse), nil
 	}
 }
 
-// UpdatePlaybookVersionInvoker 更新剧本版本
-func (c *SecMasterClient) UpdatePlaybookVersionInvoker(request *model.UpdatePlaybookVersionRequest) *UpdatePlaybookVersionInvoker {
-	requestDef := GenReqDefForUpdatePlaybookVersion()
-	return &UpdatePlaybookVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateDataTransformationInvoker 更新数据加工
+func (c *SecMasterClient) UpdateDataTransformationInvoker(request *model.UpdateDataTransformationRequest) *UpdateDataTransformationInvoker {
+	requestDef := GenReqDefForUpdateDataTransformation()
+	return &UpdateDataTransformationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateWorkspace 更新工作空间
+// UpdateLayoutField 更新字段
 //
-// 更新工作空间名称、描述等信息
+// 更新布局字段
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) UpdateWorkspace(request *model.UpdateWorkspaceRequest) (*model.UpdateWorkspaceResponse, error) {
-	requestDef := GenReqDefForUpdateWorkspace()
+func (c *SecMasterClient) UpdateLayoutField(request *model.UpdateLayoutFieldRequest) (*model.UpdateLayoutFieldResponse, error) {
+	requestDef := GenReqDefForUpdateLayoutField()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdateWorkspaceResponse), nil
+		return resp.(*model.UpdateLayoutFieldResponse), nil
 	}
 }
 
-// UpdateWorkspaceInvoker 更新工作空间
-func (c *SecMasterClient) UpdateWorkspaceInvoker(request *model.UpdateWorkspaceRequest) *UpdateWorkspaceInvoker {
-	requestDef := GenReqDefForUpdateWorkspace()
-	return &UpdateWorkspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateLayoutFieldInvoker 更新字段
+func (c *SecMasterClient) UpdateLayoutFieldInvoker(request *model.UpdateLayoutFieldRequest) *UpdateLayoutFieldInvoker {
+	requestDef := GenReqDefForUpdateLayoutField()
+	return &UpdateLayoutFieldInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePipe 更新管道
+//
+// 更新管道
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) UpdatePipe(request *model.UpdatePipeRequest) (*model.UpdatePipeResponse, error) {
+	requestDef := GenReqDefForUpdatePipe()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePipeResponse), nil
+	}
+}
+
+// UpdatePipeInvoker 更新管道
+func (c *SecMasterClient) UpdatePipeInvoker(request *model.UpdatePipeRequest) *UpdatePipeInvoker {
+	requestDef := GenReqDefForUpdatePipe()
+	return &UpdatePipeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePipeSchema 更新管道结构
+//
+// 更新管道结构
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) UpdatePipeSchema(request *model.UpdatePipeSchemaRequest) (*model.UpdatePipeSchemaResponse, error) {
+	requestDef := GenReqDefForUpdatePipeSchema()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePipeSchemaResponse), nil
+	}
+}
+
+// UpdatePipeSchemaInvoker 更新管道结构
+func (c *SecMasterClient) UpdatePipeSchemaInvoker(request *model.UpdatePipeSchemaRequest) *UpdatePipeSchemaInvoker {
+	requestDef := GenReqDefForUpdatePipeSchema()
+	return &UpdatePipeSchemaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRetrieveScript 更新检索脚本
+//
+// 更新检索脚本
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) UpdateRetrieveScript(request *model.UpdateRetrieveScriptRequest) (*model.UpdateRetrieveScriptResponse, error) {
+	requestDef := GenReqDefForUpdateRetrieveScript()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRetrieveScriptResponse), nil
+	}
+}
+
+// UpdateRetrieveScriptInvoker 更新检索脚本
+func (c *SecMasterClient) UpdateRetrieveScriptInvoker(request *model.UpdateRetrieveScriptRequest) *UpdateRetrieveScriptInvoker {
+	requestDef := GenReqDefForUpdateRetrieveScript()
+	return &UpdateRetrieveScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTable 更改表详情
+//
+// 更改表详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) UpdateTable(request *model.UpdateTableRequest) (*model.UpdateTableResponse, error) {
+	requestDef := GenReqDefForUpdateTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTableResponse), nil
+	}
+}
+
+// UpdateTableInvoker 更改表详情
+func (c *SecMasterClient) UpdateTableInvoker(request *model.UpdateTableRequest) *UpdateTableInvoker {
+	requestDef := GenReqDefForUpdateTable()
+	return &UpdateTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTableSchema 更改表结构
+//
+// 更改表结构
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) UpdateTableSchema(request *model.UpdateTableSchemaRequest) (*model.UpdateTableSchemaResponse, error) {
+	requestDef := GenReqDefForUpdateTableSchema()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTableSchemaResponse), nil
+	}
+}
+
+// UpdateTableSchemaInvoker 更改表结构
+func (c *SecMasterClient) UpdateTableSchemaInvoker(request *model.UpdateTableSchemaRequest) *UpdateTableSchemaInvoker {
+	requestDef := GenReqDefForUpdateTableSchema()
+	return &UpdateTableSchemaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSqlValidation 创建SQL校验
+//
+// 创建SQL校验
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) CreateSqlValidation(request *model.CreateSqlValidationRequest) (*model.CreateSqlValidationResponse, error) {
+	requestDef := GenReqDefForCreateSqlValidation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSqlValidationResponse), nil
+	}
+}
+
+// CreateSqlValidationInvoker 创建SQL校验
+func (c *SecMasterClient) CreateSqlValidationInvoker(request *model.CreateSqlValidationRequest) *CreateSqlValidationInvoker {
+	requestDef := GenReqDefForCreateSqlValidation()
+	return &CreateSqlValidationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

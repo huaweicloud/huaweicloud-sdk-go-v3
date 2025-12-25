@@ -39,7 +39,7 @@ type Artifact struct {
 	PushTime *string `json:"push_time,omitempty"`
 
 	// 制品大小，单位：Byte
-	Size *int32 `json:"size,omitempty"`
+	Size *int64 `json:"size,omitempty"`
 
 	// 制品版本的Tag列表
 	Tags *[]ArtifactTag `json:"tags,omitempty"`

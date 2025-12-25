@@ -14,7 +14,7 @@ type ListAlarmRespBodyAlarms struct {
 	// **参数解释**： 告警规则id。如 al123232232341232132 **取值范围**： 以al开头，后跟22个数字或字母。长度为24个字符。
 	AlarmId *string `json:"alarm_id,omitempty"`
 
-	// **参数解释**： 告警名称。     **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1，128]个字符。
+	// **参数解释**： 告警规则名称。     **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1，128]个字符。
 	Name *string `json:"name,omitempty"`
 
 	// **参数解释**： 告警描述。     **取值范围**： 长度为[0,256]个字符。
@@ -24,9 +24,9 @@ type ListAlarmRespBodyAlarms struct {
 	Namespace *string `json:"namespace,omitempty"`
 
 	// **参数解释**： 告警策略 **取值范围**： 最多包含100个策略。
-	Policies *[]Policy `json:"policies,omitempty"`
+	Policies *[]PolicyResp `json:"policies,omitempty"`
 
-	// **参数解释**： 资源列表，关联资源需要使用查询告警规则资源接口获取。 **取值范围**： 最多支持3000个资源。
+	// **参数解释**： 资源列表，关联资源需要使用查询“[告警规则资源接口](.xml)”获取。 **取值范围**： 最多支持3000个资源。
 	Resources *[]ResourcesInListResp `json:"resources,omitempty"`
 
 	Type *AlarmTypeResp `json:"type,omitempty"`
@@ -43,29 +43,29 @@ type ListAlarmRespBodyAlarms struct {
 	// **参数解释**： 告警恢复时，通知组/主题订阅的信息。
 	OkNotifications *[]NotificationResp `json:"ok_notifications,omitempty"`
 
-	// **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+	// **参数解释**： 告警通知开启时间。如 00:00    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
 	NotificationBeginTime *string `json:"notification_begin_time,omitempty"`
 
-	// **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+	// **参数解释**： 告警通知关闭时间。如 08:00   **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
 	NotificationEndTime *string `json:"notification_end_time,omitempty"`
 
 	// **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **取值范围**： 长度为[1,16]个字符。
 	EffectiveTimezone *string `json:"effective_timezone,omitempty"`
 
-	// **参数解释**： 企业项目ID。     **取值范围**： 只能包含小写字母、数字、“-”。
+	// **参数解释**： 企业项目ID。     **取值范围**： 只能包含小写字母、数字、“-”。0 代表默认企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// **参数解释**： 告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化。     **取值范围**： 以at开头，只包含字母、数字，长度为[2,64]个字符。
+	// **参数解释**： 告警规则关联告警模板ID     **取值范围**： 以at开头，只包含字母、数字，长度为[2,64]个字符。
 	AlarmTemplateId *string `json:"alarm_template_id,omitempty"`
 
-	// **参数解释**： 产品层级跨维规则需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **取值范围**: 长度为[0,128]个字符。
+	// **参数解释**： 当资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **取值范围**: 长度为[0,128]个字符。
 	ProductName *string `json:"product_name,omitempty"`
 
-	// **参数解释**： 产品层级跨维规则需要指明为产品层级规则，resource_level取值为product即为云产品类型，不填或者取值为dimension则为子维度类型。 **取值范围**: 枚举值。 - product：云产品。 - dimension：子维度。
+	// **参数解释**： 资源层级。 **取值范围**: 枚举值。 - product：云产品。 - dimension：子维度。
 	ResourceLevel *ListAlarmRespBodyAlarmsResourceLevel `json:"resource_level,omitempty"`
 
 	// **参数解释**： 租户标签列表 **取值范围**: 最多支持20个标签。
-	Tags *[]ResourceTag `json:"tags,omitempty"`
+	Tags *[]ResourceTagResp `json:"tags,omitempty"`
 }
 
 func (o ListAlarmRespBodyAlarms) String() string {

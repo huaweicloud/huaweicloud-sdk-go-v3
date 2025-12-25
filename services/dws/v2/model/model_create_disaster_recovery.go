@@ -11,7 +11,7 @@ type CreateDisasterRecovery struct {
 	// **参数解释**： 名称。 **取值范围**： 不涉及。
 	Name string `json:"name"`
 
-	// **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+	// **参数解释**： 容灾类型。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。
 	DrType string `json:"dr_type"`
 
 	// **参数解释**： 主集群ID。 **取值范围**： 不涉及。

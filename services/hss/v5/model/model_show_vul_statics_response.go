@@ -9,25 +9,25 @@ import (
 // ShowVulStaticsResponse Response Object
 type ShowVulStaticsResponse struct {
 
-	// 需紧急修复的漏洞数
+	// **参数解释**: 需紧急修复的漏洞数 **取值范围**: 取值0-2147483647
 	NeedUrgentRepair *int32 `json:"need_urgent_repair,omitempty"`
 
-	// 未完成修复的漏洞数
+	// **参数解释**: 未完成修复的漏洞数 **取值范围**: 取值0-2147483647
 	Unrepair *int32 `json:"unrepair,omitempty"`
 
-	// 存在漏洞的服务器数
+	// **参数解释**: 存在漏洞的服务器数 **取值范围**: 取值0-2147483647
 	ExistedVulHosts *int32 `json:"existed_vul_hosts,omitempty"`
 
-	// 今日处理漏洞数
+	// **参数解释**: 今日处理漏洞数 **取值范围**: 取值0-2147483647
 	TodayHandle *int32 `json:"today_handle,omitempty"`
 
-	// 累计处理漏洞数
+	// **参数解释**: 累计处理漏洞数 **取值范围**: 取值0-2147483647
 	AllHandle *int32 `json:"all_handle,omitempty"`
 
-	// 已支持漏洞数
+	// **参数解释**: 已支持漏洞数 **取值范围**: 取值0-2147483647
 	Supported *int32 `json:"supported,omitempty"`
 
-	// 漏洞库更新时间
+	// **参数解释**: 漏洞库更新时间（时间戳，单位为毫秒） **取值范围**: 取值0-9223372036854775807
 	VulLibraryUpdateTime *int64 `json:"vul_library_update_time,omitempty"`
 	HttpStatusCode       int    `json:"-"`
 }

@@ -12,7 +12,7 @@ type ClusterRecoveryProgress struct {
 	// **参数解释**： 本次备份恢复ID。 **取值范围**： 不涉及。
 	Key *string `json:"key,omitempty"`
 
-	// **参数解释**： 动作类型。 **取值范围**： 不涉及。
+	// **参数解释**： - Backup，备份。 - Restore，恢复。 **取值范围**： 不涉及。
 	ActionType *string `json:"action_type,omitempty"`
 
 	// **参数解释**： 待恢复的备份集ID。 **取值范围**： 不涉及。

@@ -9,10 +9,10 @@ import (
 // ListNotificationMasksResponse Response Object
 type ListNotificationMasksResponse struct {
 
-	// 通知屏蔽列表
+	// **参数解释**： 通知屏蔽列表
 	NotificationMasks *[]ListNotificationMaskRespNotificationMasks `json:"notification_masks,omitempty"`
 
-	// 通知屏蔽列表总数
+	// **参数解释**： 通知屏蔽列表总数 **取值范围**： [0,99999]
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

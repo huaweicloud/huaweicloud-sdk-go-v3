@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// MetricDimensionResp **参数解释**： 指标维度。
+// MetricDimensionResp **参数解释**： 资源维度。
 type MetricDimensionResp struct {
 
-	// **参数解释**： 指标维度名称。 **取值范围**： 以字母开头，长度为[1,32]个字符。
+	// **参数解释**： 资源维度名称。 **取值范围**： 以字母开头，长度为[1,32]个字符。
 	Name *string `json:"name,omitempty"`
 
-	// **参数解释**： 指标维度值。 **取值范围**： 长度为[0,256]个字符。
+	// **参数解释**： 资源维度值。 **取值范围**： 长度为[0,256]个字符。
 	Value *string `json:"value,omitempty"`
 }
 

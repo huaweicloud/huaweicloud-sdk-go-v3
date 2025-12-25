@@ -30,7 +30,7 @@ type EventResponse struct {
 	// **参数解释**： 事件级别。 **取值范围**： 不涉及。
 	Severity *string `json:"severity,omitempty"`
 
-	// **参数解释**： 事件源类别。 **取值范围**： 不涉及。
+	// **参数解释**： 事件源类别。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
 	SourceType *string `json:"source_type,omitempty"`
 
 	// **参数解释**： 时间。 **取值范围**： 不涉及。
@@ -45,7 +45,7 @@ type EventResponse struct {
 	// **参数解释**： 事件源名称。 **取值范围**： 不涉及。
 	SourceName *string `json:"source_name,omitempty"`
 
-	// **参数解释**： 状态。 **取值范围**： 不涉及。
+	// **参数解释**： 状态。 **取值范围**： - 1：已保存。 - 2：已处理。
 	Status *int32 `json:"status,omitempty"`
 
 	// **参数解释**： 事件主题。 **取值范围**： 不涉及。

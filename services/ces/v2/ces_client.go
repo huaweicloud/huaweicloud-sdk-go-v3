@@ -1008,7 +1008,8 @@ func (c *CesClient) UpdateDashboardInvoker(request *model.UpdateDashboardRequest
 
 // UpdateNotificationMask 修改告警通知屏蔽规则
 //
-// 修改告警通知屏蔽规则
+// 修改告警通知屏蔽规则。
+// 不能修改通过告警规则屏蔽的告警通知，只能修改通过资源屏蔽、策略屏蔽、事件屏蔽创建的告警屏蔽。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) UpdateNotificationMask(request *model.UpdateNotificationMaskRequest) (*model.UpdateNotificationMaskResponse, error) {

@@ -9,7 +9,7 @@ import (
 // GrantAuthority **参数解释**： 权限详情。 **取值范围**： 不涉及。
 type GrantAuthority struct {
 
-	// **参数解释**： 权限类型。 **取值范围**： 不涉及。
+	// **参数解释**： 权限类型。 **取值范围**： - DATABASE：数据库。 - SCHEMA：模式。 - TABLE：表。 - VIEW：视图。 - COLUMN：列。 - FUNCTION：函数。 - SEQUENCE：序列。 - NODEGROUP：节点组。
 	Type *string `json:"type,omitempty"`
 
 	// **参数解释**： 数据库名称。 **取值范围**： 不涉及。

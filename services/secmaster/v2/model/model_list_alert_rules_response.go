@@ -9,14 +9,12 @@ import (
 // ListAlertRulesResponse Response Object
 type ListAlertRulesResponse struct {
 
-	// 总数量。Total count.
+	// 数量
 	Count *int64 `json:"count,omitempty"`
 
-	// 告警模型。Alert rules.
-	Records *[]AlertRule `json:"records,omitempty"`
-
-	XRequestId     *string `json:"X-request-id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	// 模型记录
+	Records        *[]AlertRuleItem `json:"records,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o ListAlertRulesResponse) String() string {

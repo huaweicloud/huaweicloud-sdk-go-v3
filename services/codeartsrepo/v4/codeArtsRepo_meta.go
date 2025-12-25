@@ -6,169 +6,6 @@ import (
 	"net/http"
 )
 
-func GenReqDefForBatchDeleteBranch() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v4/repositories/{repository_id}/branches/batch-delete").
-		WithResponse(new(model.BatchDeleteBranchResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForCreateBranch() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v4/repositories/{repository_id}/repository/branches").
-		WithResponse(new(model.CreateBranchResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForDeleteBranch() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodDelete).
-		WithPath("/v4/repositories/{repository_id}/repository/branch").
-		WithResponse(new(model.DeleteBranchResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("BranchName").
-		WithJsonTag("branch_name").
-		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListBranches() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/repositories/{repository_id}/repository/branches").
-		WithResponse(new(model.ListBranchesResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("BranchType").
-		WithJsonTag("branch_type").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Creator").
-		WithJsonTag("creator").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Sort").
-		WithJsonTag("sort").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("QueryView").
-		WithJsonTag("query_view").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("View").
-		WithJsonTag("view").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("XTotal").
-		WithJsonTag("X-Total").
-		WithKindName("string").
-		WithLocationType(def.Header))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForShowBranch() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/repositories/{repository_id}/repository/branch").
-		WithResponse(new(model.ShowBranchResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("BranchName").
-		WithJsonTag("branch_name").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("XTotal").
-		WithJsonTag("X-Total").
-		WithKindName("string").
-		WithLocationType(def.Header))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForUpdateBranchName() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPut).
-		WithPath("/v4/repositories/{repository_id}/repository/branch").
-		WithResponse(new(model.UpdateBranchNameResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForCreateCommit() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -1255,6 +1092,106 @@ func GenReqDefForListFiles() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListLogsTree() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/repositories/{repository_id}/repository/logs-tree").
+		WithResponse(new(model.ListLogsTreeResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Ref").
+		WithJsonTag("ref").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListTrees() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/repositories/{repository_id}/repository/trees").
+		WithResponse(new(model.ListTreesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Ref").
+		WithJsonTag("ref").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Path").
+		WithJsonTag("path").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Recursive").
+		WithJsonTag("recursive").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XTotal").
+		WithJsonTag("X-Total").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForRenameFile() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v4/repositories/{repository_id}/repository/rename-file").
+		WithResponse(new(model.RenameFileResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowFile() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -1311,6 +1248,31 @@ func GenReqDefForShowFileContent() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowFileRaw() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/repositories/{repository_id}/repository/files/raw").
+		WithResponse(new(model.ShowFileRawResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FilePath").
+		WithJsonTag("file_path").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Ref").
+		WithJsonTag("ref").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowReadmeFile() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -1351,103 +1313,6 @@ func GenReqDefForUpdateFile() *def.HttpRequestDef {
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForBatchDeleteRepositoryFilePushPermissions() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v4/repositories/{repository_id}/file-push-permissions/batch-delete").
-		WithResponse(new(model.BatchDeleteRepositoryFilePushPermissionsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForBatchUpdateRepositoryFilePushPermissions() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPut).
-		WithPath("/v4/repositories/{repository_id}/file-push-permissions").
-		WithResponse(new(model.BatchUpdateRepositoryFilePushPermissionsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForCreateFilePushPermission() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v4/repositories/{repository_id}/file-push-permissions").
-		WithResponse(new(model.CreateFilePushPermissionResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListRepositoryFilePushPermissions() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/repositories/{repository_id}/file-push-permissions").
-		WithResponse(new(model.ListRepositoryFilePushPermissionsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Search").
-		WithJsonTag("search").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -1780,48 +1645,11 @@ func GenReqDefForListGroups() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListImpersonationTokens() *def.HttpRequestDef {
+func GenReqDefForListManageableGroups() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v4/users/impersonation-tokens").
-		WithResponse(new(model.ListImpersonationTokensResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("GroupId").
-		WithJsonTag("group_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("State").
-		WithJsonTag("state").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Search").
-		WithJsonTag("search").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListProductPermissionResourcesGrantedUsers() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/projects/{project_id}/members").
-		WithResponse(new(model.ListProductPermissionResourcesGrantedUsersResponse)).
+		WithPath("/v4/{project_id}/manageable-groups").
+		WithResponse(new(model.ListManageableGroupsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1830,53 +1658,8 @@ func GenReqDefForListProductPermissionResourcesGrantedUsers() *def.HttpRequestDe
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Query").
-		WithJsonTag("query").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListProjectSubgroupsAndRepositories() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/projects/{project_id}/subgroups-and-repositories").
-		WithResponse(new(model.ListProjectSubgroupsAndRepositoriesResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Filter").
-		WithJsonTag("filter").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("OrderBy").
-		WithJsonTag("order_by").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Sort").
-		WithJsonTag("sort").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Archived").
-		WithJsonTag("archived").
+		WithName("Scope").
+		WithJsonTag("scope").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
@@ -2036,67 +1819,6 @@ func GenReqDefForShowGroupsInherit() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowProjectGeneralPolicy() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/projects/{project_id}/policies/general").
-		WithResponse(new(model.ShowProjectGeneralPolicyResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForShowProjectMemberSetting() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/projects/{project_id}/member-setting").
-		WithResponse(new(model.ShowProjectMemberSettingResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForShowProjectSettingsInheritCfg() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/projects/{project_id}/settings-inherit-cfg").
-		WithResponse(new(model.ShowProjectSettingsInheritCfgResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForTransferGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -2147,156 +1869,6 @@ func GenReqDefForUpdateGroupWatermark() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("GroupId").
 		WithJsonTag("group_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForUpdateProjectSettingsInheritCfg() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPut).
-		WithPath("/v4/projects/{project_id}/settings-inherit-cfg").
-		WithResponse(new(model.UpdateProjectSettingsInheritCfgResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForCreateRepositoryLabel() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v4/repositories/{repository_id}/labels").
-		WithResponse(new(model.CreateRepositoryLabelResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForCreateRepositorySystemLabels() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v4/repositories/{repository_id}/system-labels").
-		WithResponse(new(model.CreateRepositorySystemLabelsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForDeleteRepositoryLabel() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodDelete).
-		WithPath("/v4/repositories/{repository_id}/label").
-		WithResponse(new(model.DeleteRepositoryLabelResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Name").
-		WithJsonTag("name").
-		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListRepositoryLabels() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/repositories/{repository_id}/labels").
-		WithResponse(new(model.ListRepositoryLabelsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Search").
-		WithJsonTag("search").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Sort").
-		WithJsonTag("sort").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("IncludeExpired").
-		WithJsonTag("include_expired").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("View").
-		WithJsonTag("view").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForUpdateRepositoryLabel() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPut).
-		WithPath("/v4/repositories/{repository_id}/label").
-		WithResponse(new(model.UpdateRepositoryLabelResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -2412,6 +1984,39 @@ func GenReqDefForListMembers() *def.HttpRequestDef {
 		WithJsonTag("X-Total").
 		WithKindName("string").
 		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListProductPermissionResourcesGrantedUsers() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/projects/{project_id}/members").
+		WithResponse(new(model.ListProductPermissionResourcesGrantedUsersResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Query").
+		WithJsonTag("query").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -2886,6 +2491,39 @@ func GenReqDefForImportMergeRequest() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListCommitAssociatedMergeRequests() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/repositories/{repository_id}/commits/{sha}/merge-requests").
+		WithResponse(new(model.ListCommitAssociatedMergeRequestsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Sha").
+		WithJsonTag("sha").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListDiscussionTemplates() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -3324,6 +2962,39 @@ func GenReqDefForListMergeRequestEvaluations() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListMergeRequestParticipants() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/repositories/{repository_id}/merge-requests/{merge_request_iid}/participants").
+		WithResponse(new(model.ListMergeRequestParticipantsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("MergeRequestIid").
+		WithJsonTag("merge_request_iid").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListMergeRequestReviewers() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -3497,6 +3168,106 @@ func GenReqDefForListMergeRequestVersions() *def.HttpRequestDef {
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListPersonalMergeRequests() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/merge-requests").
+		WithResponse(new(model.ListPersonalMergeRequestsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("State").
+		WithJsonTag("state").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OrderBy").
+		WithJsonTag("order_by").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Sort").
+		WithJsonTag("sort").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Labels").
+		WithJsonTag("labels").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CreatedBefore").
+		WithJsonTag("created_before").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CreatedAfter").
+		WithJsonTag("created_after").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("UpdatedAfter").
+		WithJsonTag("updated_after").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("UpdatedBefore").
+		WithJsonTag("updated_before").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("View").
+		WithJsonTag("view").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AuthorId").
+		WithJsonTag("author_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Scope").
+		WithJsonTag("scope").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SourceBranch").
+		WithJsonTag("source_branch").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TargetBranch").
+		WithJsonTag("target_branch").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Search").
+		WithJsonTag("search").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Wip").
+		WithJsonTag("wip").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("MergedBy").
+		WithJsonTag("merged_by").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("MergedAfter").
+		WithJsonTag("merged_after").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("MergedBefore").
+		WithJsonTag("merged_before").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OnlyCount").
+		WithJsonTag("only_count").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -4069,6 +3840,35 @@ func GenReqDefForShowProjectMergeRequestSetting() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowRepositoryMergeRequestsStatistic() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/repositories/{repository_id}/merge-requests/statistic").
+		WithResponse(new(model.ShowRepositoryMergeRequestsStatisticResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Iids").
+		WithJsonTag("iids").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Fields").
+		WithJsonTag("fields").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateGroupMergeRequestApproverSetting() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -4337,30 +4137,41 @@ func GenReqDefForUpdateProjectMergeRequestTemplate() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListCommitAssociatedMergeRequests() *def.HttpRequestDef {
+func GenReqDefForBatchDeleteRepositoryFilePushPermissions() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/repositories/{repository_id}/commits/{sha}/merge-requests").
-		WithResponse(new(model.ListCommitAssociatedMergeRequestsResponse)).
+		WithMethod(http.MethodPost).
+		WithPath("/v4/repositories/{repository_id}/file-push-permissions/batch-delete").
+		WithResponse(new(model.BatchDeleteRepositoryFilePushPermissionsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("RepositoryId").
 		WithJsonTag("repository_id").
 		WithLocationType(def.Path))
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Sha").
-		WithJsonTag("sha").
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBatchUpdateRepositoryFilePushPermissions() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v4/repositories/{repository_id}/file-push-permissions").
+		WithResponse(new(model.BatchUpdateRepositoryFilePushPermissionsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
@@ -4370,151 +4181,42 @@ func GenReqDefForListCommitAssociatedMergeRequests() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForListPersonalMergeRequests() *def.HttpRequestDef {
+func GenReqDefForCreateFilePushPermission() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/merge-requests").
-		WithResponse(new(model.ListPersonalMergeRequestsResponse)).
+		WithMethod(http.MethodPost).
+		WithPath("/v4/repositories/{repository_id}/file-push-permissions").
+		WithResponse(new(model.CreateFilePushPermissionResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("State").
-		WithJsonTag("state").
-		WithLocationType(def.Query))
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("OrderBy").
-		WithJsonTag("order_by").
-		WithLocationType(def.Query))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListRepositoryFilePushPermissions() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/repositories/{repository_id}/file-push-permissions").
+		WithResponse(new(model.ListRepositoryFilePushPermissionsResponse)).
+		WithContentType("application/json")
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Sort").
-		WithJsonTag("sort").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Labels").
-		WithJsonTag("labels").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("CreatedBefore").
-		WithJsonTag("created_before").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("CreatedAfter").
-		WithJsonTag("created_after").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("UpdatedAfter").
-		WithJsonTag("updated_after").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("UpdatedBefore").
-		WithJsonTag("updated_before").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("View").
-		WithJsonTag("view").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("AuthorId").
-		WithJsonTag("author_id").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Scope").
-		WithJsonTag("scope").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("SourceBranch").
-		WithJsonTag("source_branch").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("TargetBranch").
-		WithJsonTag("target_branch").
-		WithLocationType(def.Query))
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Search").
 		WithJsonTag("search").
 		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Wip").
-		WithJsonTag("wip").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("MergedBy").
-		WithJsonTag("merged_by").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("MergedAfter").
-		WithJsonTag("merged_after").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("MergedBefore").
-		WithJsonTag("merged_before").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("OnlyCount").
-		WithJsonTag("only_count").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForShowRepositoryMergeRequestsStatistic() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/repositories/{repository_id}/merge-requests/statistic").
-		WithResponse(new(model.ShowRepositoryMergeRequestsStatisticResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Iids").
-		WithJsonTag("iids").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Fields").
-		WithJsonTag("fields").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListMergeRequestParticipants() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/repositories/{repository_id}/merge-requests/{merge_request_iid}/participants").
-		WithResponse(new(model.ListMergeRequestParticipantsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("MergeRequestIid").
-		WithJsonTag("merge_request_iid").
-		WithLocationType(def.Path))
-
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
 		WithJsonTag("offset").
@@ -4727,6 +4429,112 @@ func GenReqDefForListItemCommits() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListProjectSubgroupsAndRepositories() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/projects/{project_id}/subgroups-and-repositories").
+		WithResponse(new(model.ListProjectSubgroupsAndRepositoriesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Filter").
+		WithJsonTag("filter").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OrderBy").
+		WithJsonTag("order_by").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Sort").
+		WithJsonTag("sort").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Archived").
+		WithJsonTag("archived").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowProjectGeneralPolicy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/projects/{project_id}/policies/general").
+		WithResponse(new(model.ShowProjectGeneralPolicyResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowProjectMemberSetting() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/projects/{project_id}/member-setting").
+		WithResponse(new(model.ShowProjectMemberSettingResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowProjectSettingsInheritCfg() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/projects/{project_id}/settings-inherit-cfg").
+		WithResponse(new(model.ShowProjectSettingsInheritCfgResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowProjectWatermark() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -4812,6 +4620,30 @@ func GenReqDefForUpdateProjectGeneralPolicy() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForUpdateProjectSettingsInheritCfg() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v4/projects/{project_id}/settings-inherit-cfg").
+		WithResponse(new(model.UpdateProjectSettingsInheritCfgResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateProjectWatermark() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -4856,11 +4688,55 @@ func GenReqDefForBatchCreateProtectedBranch() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchCreateProtectedTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v4/repositories/{repository_id}/protected-tags").
+		WithResponse(new(model.BatchCreateProtectedTagsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchDeleteProtectedBranches() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v4/repositories/{repository_id}/protected-branches/bulk-deletion").
 		WithResponse(new(model.BatchDeleteProtectedBranchesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBatchDeleteProtectedTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v4/repositories/{repository_id}/protected-tags/bulk-deletion").
+		WithResponse(new(model.BatchDeleteProtectedTagsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -4900,11 +4776,55 @@ func GenReqDefForBatchUpdateProtectedBranches() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchUpdateProtectedTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v4/repositories/{repository_id}/protected-tags").
+		WithResponse(new(model.BatchUpdateProtectedTagsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateProjectProtectedBranches() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v4/projects/{project_id}/protected-branches").
 		WithResponse(new(model.CreateProjectProtectedBranchesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateProjectProtectedTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v4/projects/{project_id}/protected-tags").
+		WithResponse(new(model.CreateProjectProtectedTagsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -4935,6 +4855,27 @@ func GenReqDefForDeleteProtectedBranch() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("BranchName").
 		WithJsonTag("branch_name").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteProtectedTag() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v4/repositories/{repository_id}/protected-tag").
+		WithResponse(new(model.DeleteProtectedTagResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TagName").
+		WithJsonTag("tag_name").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -4982,11 +4923,64 @@ func GenReqDefForListProjectProtectedBranches() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListProjectProtectedTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/projects/{project_id}/protected-tags").
+		WithResponse(new(model.ListProjectProtectedTagsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListProtectedBranches() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
 		WithPath("/v4/repositories/{repository_id}/protected-branches").
 		WithResponse(new(model.ListProtectedBranchesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Search").
+		WithJsonTag("search").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListProtectedTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/repositories/{repository_id}/protected-tags").
+		WithResponse(new(model.ListProtectedTagsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -5036,6 +5030,27 @@ func GenReqDefForShowProtectedBranch() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowProtectedTag() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/repositories/{repository_id}/protected-tag").
+		WithResponse(new(model.ShowProtectedTagResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TagName").
+		WithJsonTag("tag_name").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateProtectedBranch() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -5061,189 +5076,6 @@ func GenReqDefForUpdateProtectedBranch() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForBatchCreateProtectedTags() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v4/repositories/{repository_id}/protected-tags").
-		WithResponse(new(model.BatchCreateProtectedTagsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForBatchDeleteProtectedTags() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v4/repositories/{repository_id}/protected-tags/bulk-deletion").
-		WithResponse(new(model.BatchDeleteProtectedTagsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForBatchUpdateProtectedTags() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPut).
-		WithPath("/v4/repositories/{repository_id}/protected-tags").
-		WithResponse(new(model.BatchUpdateProtectedTagsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForCreateProjectProtectedTags() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v4/projects/{project_id}/protected-tags").
-		WithResponse(new(model.CreateProjectProtectedTagsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForDeleteProtectedTag() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodDelete).
-		WithPath("/v4/repositories/{repository_id}/protected-tag").
-		WithResponse(new(model.DeleteProtectedTagResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("TagName").
-		WithJsonTag("tag_name").
-		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListProjectProtectedTags() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/projects/{project_id}/protected-tags").
-		WithResponse(new(model.ListProjectProtectedTagsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListProtectedTags() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/repositories/{repository_id}/protected-tags").
-		WithResponse(new(model.ListProtectedTagsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Search").
-		WithJsonTag("search").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForShowProtectedTag() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/repositories/{repository_id}/protected-tag").
-		WithResponse(new(model.ShowProtectedTagResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("TagName").
-		WithJsonTag("tag_name").
-		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForUpdateProtectedTag() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -5262,39 +5094,6 @@ func GenReqDefForUpdateProtectedTag() *def.HttpRequestDef {
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListLogsTree() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/repositories/{repository_id}/repository/logs-tree").
-		WithResponse(new(model.ListLogsTreeResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Ref").
-		WithJsonTag("ref").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -5339,11 +5138,11 @@ func GenReqDefForListRefsList() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForRenameFile() *def.HttpRequestDef {
+func GenReqDefForBatchDeleteBranch() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPut).
-		WithPath("/v4/repositories/{repository_id}/repository/rename-file").
-		WithResponse(new(model.RenameFileResponse)).
+		WithMethod(http.MethodPost).
+		WithPath("/v4/repositories/{repository_id}/branches/batch-delete").
+		WithResponse(new(model.BatchDeleteBranchResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -5359,11 +5158,11 @@ func GenReqDefForRenameFile() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowFileRaw() *def.HttpRequestDef {
+func GenReqDefForCreateBranch() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/repositories/{repository_id}/repository/files/raw").
-		WithResponse(new(model.ShowFileRawResponse)).
+		WithMethod(http.MethodPost).
+		WithPath("/v4/repositories/{repository_id}/repository/branches").
+		WithResponse(new(model.CreateBranchResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -5372,23 +5171,244 @@ func GenReqDefForShowFileRaw() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("FilePath").
-		WithJsonTag("file_path").
-		WithLocationType(def.Query))
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateTag() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v4/repositories/{repository_id}/repository/tags").
+		WithResponse(new(model.CreateTagResponse)).
+		WithContentType("application/json")
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Ref").
-		WithJsonTag("ref").
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteBranch() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v4/repositories/{repository_id}/repository/branch").
+		WithResponse(new(model.DeleteBranchResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BranchName").
+		WithJsonTag("branch_name").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
 
-func GenReqDefForExecuteRepositoryStatistics() *def.HttpRequestDef {
+func GenReqDefForDeleteTag() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v4/repositories/{repository_id}/repository/statistics").
-		WithResponse(new(model.ExecuteRepositoryStatisticsResponse)).
+		WithMethod(http.MethodDelete).
+		WithPath("/v4/repositories/{repository_id}/repository/tag").
+		WithResponse(new(model.DeleteTagResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TagName").
+		WithJsonTag("tag_name").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListBranches() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/repositories/{repository_id}/repository/branches").
+		WithResponse(new(model.ListBranchesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BranchType").
+		WithJsonTag("branch_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Creator").
+		WithJsonTag("creator").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Sort").
+		WithJsonTag("sort").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("QueryView").
+		WithJsonTag("query_view").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("View").
+		WithJsonTag("view").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XTotal").
+		WithJsonTag("X-Total").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/repositories/{repository_id}/repository/tags").
+		WithResponse(new(model.ListTagsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Creator").
+		WithJsonTag("creator").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Sort").
+		WithJsonTag("sort").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Search").
+		WithJsonTag("search").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OrderBy").
+		WithJsonTag("order_by").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("View").
+		WithJsonTag("view").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XTotal").
+		WithJsonTag("X-Total").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowBranch() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/repositories/{repository_id}/repository/branch").
+		WithResponse(new(model.ShowBranchResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BranchName").
+		WithJsonTag("branch_name").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XTotal").
+		WithJsonTag("X-Total").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowTag() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/repositories/{repository_id}/repository/tag").
+		WithResponse(new(model.ShowTagResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TagName").
+		WithJsonTag("tag_name").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XTotal").
+		WithJsonTag("X-Total").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateBranchName() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v4/repositories/{repository_id}/repository/branch").
+		WithResponse(new(model.UpdateBranchNameResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -5551,6 +5571,67 @@ func GenReqDefForCreateRepositoryCommitRule() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateRepositoryLabel() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v4/repositories/{repository_id}/labels").
+		WithResponse(new(model.CreateRepositoryLabelResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateRepositorySystemLabels() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v4/repositories/{repository_id}/system-labels").
+		WithResponse(new(model.CreateRepositorySystemLabelsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteRepositoryLabel() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v4/repositories/{repository_id}/label").
+		WithResponse(new(model.DeleteRepositoryLabelResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Name").
+		WithJsonTag("name").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForDeleteTrustedIpAddress() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
@@ -5595,6 +5676,26 @@ func GenReqDefForDownloadArchive() *def.HttpRequestDef {
 		WithName("ArchiveFormat").
 		WithJsonTag("archive_format").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForExecuteRepositoryStatistics() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v4/repositories/{repository_id}/repository/statistics").
+		WithResponse(new(model.ExecuteRepositoryStatisticsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -5687,39 +5788,6 @@ func GenReqDefForListGroupRepositories() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Sort").
 		WithJsonTag("sort").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListManageableGroups() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/{project_id}/manageable-groups").
-		WithResponse(new(model.ListManageableGroupsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ProjectId").
-		WithJsonTag("project_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Scope").
-		WithJsonTag("scope").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
@@ -6043,6 +6111,51 @@ func GenReqDefForListRepositoryForks() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListRepositoryLabels() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/repositories/{repository_id}/labels").
+		WithResponse(new(model.ListRepositoryLabelsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Search").
+		WithJsonTag("search").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Sort").
+		WithJsonTag("sort").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IncludeExpired").
+		WithJsonTag("include_expired").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("View").
+		WithJsonTag("view").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListRepositoryLanguages() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -6142,53 +6255,6 @@ func GenReqDefForListSubmodules() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Sha").
 		WithJsonTag("sha").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("XTotal").
-		WithJsonTag("X-Total").
-		WithKindName("string").
-		WithLocationType(def.Header))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListTrees() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/repositories/{repository_id}/repository/trees").
-		WithResponse(new(model.ListTreesResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Ref").
-		WithJsonTag("ref").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Path").
-		WithJsonTag("path").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Recursive").
-		WithJsonTag("recursive").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
@@ -6896,6 +6962,26 @@ func GenReqDefForUpdateRepositoryInheritSetting() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForUpdateRepositoryLabel() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v4/repositories/{repository_id}/label").
+		WithResponse(new(model.UpdateRepositoryLabelResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RepositoryId").
+		WithJsonTag("repository_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateRepositoryRemoteMirror() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -6955,129 +7041,6 @@ func GenReqDefForUpdateTrustedIpAddress() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForCreateTag() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v4/repositories/{repository_id}/repository/tags").
-		WithResponse(new(model.CreateTagResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForDeleteTag() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodDelete).
-		WithPath("/v4/repositories/{repository_id}/repository/tag").
-		WithResponse(new(model.DeleteTagResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("TagName").
-		WithJsonTag("tag_name").
-		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListTags() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/repositories/{repository_id}/repository/tags").
-		WithResponse(new(model.ListTagsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Creator").
-		WithJsonTag("creator").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Sort").
-		WithJsonTag("sort").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Search").
-		WithJsonTag("search").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("OrderBy").
-		WithJsonTag("order_by").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("View").
-		WithJsonTag("view").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("XTotal").
-		WithJsonTag("X-Total").
-		WithKindName("string").
-		WithLocationType(def.Header))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForShowTag() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v4/repositories/{repository_id}/repository/tag").
-		WithResponse(new(model.ShowTagResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("RepositoryId").
-		WithJsonTag("repository_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("TagName").
-		WithJsonTag("tag_name").
-		WithLocationType(def.Query))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("XTotal").
-		WithJsonTag("X-Total").
-		WithKindName("string").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -7560,6 +7523,43 @@ func GenReqDefForDeleteSshKey() *def.HttpRequestDef {
 		WithName("KeyId").
 		WithJsonTag("key_id").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListImpersonationTokens() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/users/impersonation-tokens").
+		WithResponse(new(model.ListImpersonationTokensResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("GroupId").
+		WithJsonTag("group_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("State").
+		WithJsonTag("state").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Search").
+		WithJsonTag("search").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

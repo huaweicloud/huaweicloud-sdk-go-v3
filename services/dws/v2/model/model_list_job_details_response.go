@@ -21,7 +21,7 @@ type ListJobDetailsResponse struct {
 	// **参数解释**： 任务结束时间。 **取值范围**： 不涉及。
 	EndTime *string `json:"end_time,omitempty"`
 
-	// **参数解释**： 任务当前状态。 **取值范围**： 不涉及。
+	// **参数解释**： 任务当前状态。 **取值范围**： - INIT：初始化。 - WAITING：等待中。 - RUNNING：运行中。 - DELAY_SCHEDULED：延迟调度。 - FAIL：失败。 - SUCCESS：成功。 - STOP：停止。
 	Status *string `json:"status,omitempty"`
 
 	// **参数解释**： 任务失败错误码。 **取值范围**： 不涉及。

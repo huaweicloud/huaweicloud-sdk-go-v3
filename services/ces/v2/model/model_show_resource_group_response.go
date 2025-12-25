@@ -11,19 +11,22 @@ import (
 // ShowResourceGroupResponse Response Object
 type ShowResourceGroupResponse struct {
 
-	// 资源分组的名称
+	// **参数解释** 资源分组的名称。 **取值范围** 只能为字母、数字、汉字、-或_，长度为[1,128]个字符。
 	GroupName *string `json:"group_name,omitempty"`
 
-	// 资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
+	// **参数解释**： 资源分组ID。 **取值范围**： 以rg开头，后跟22位由字母或数字组成的字符串。长度为[2,24]个字符。
 	GroupId *string `json:"group_id,omitempty"`
 
-	// 资源分组的创建时间
+	// **参数解释**： 资源分组的创建时间 **取值范围**： 不涉及。
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
-	// 资源分组归属企业项目ID
+	// **参数解释**： 资源分组的修改时间 **取值范围**： 不涉及。
+	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
+
+	// **参数解释** 资源分组归属企业项目ID。 **取值范围** 由数字、字母和-组成，或者为0（默认企业项目ID）。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 资源添加/匹配方式，取值只能为EPS（匹配企业项目）,TAG（匹配标签）,NAME（匹配实例名称）, COMB（组合匹配）,Manual（手动添加）
+	// **参数解释** 资源添加/匹配方式。 **取值范围** 枚举值。 - EPS: 匹配企业项目 - TAG: 匹配标签 - NAME: 匹配实例名称 - COMB: 组合匹配 - Manual: 手动添加
 	Type *ShowResourceGroupResponseType `json:"type,omitempty"`
 
 	// 该资源分组内包含的资源来源的企业项目ID，type为EPS时必传
@@ -43,23 +46,26 @@ type ShowResourceGroupResponse struct {
 	// 匹配企业项目或匹配标签参数
 	EnterpriseProjectIdAndTags *[]EnterpriseProjectIdAndTags `json:"enterprise_project_id_and_tags,omitempty"`
 
-	// 指标告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+	// **参数解释** 指标告警状态。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
 	Status *ShowResourceGroupResponseStatus `json:"status,omitempty"`
 
-	// 事件告警状态，取值为health（告警中）、unhealthy（已触发）、no_alarm_rule（未设置告警规则）
+	// **参数解释** 事件告警状态。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
 	EventStatus *ShowResourceGroupResponseEventStatus `json:"event_status,omitempty"`
 
-	ResourceStatistics *OneResourceGroupRespResourceStatistics `json:"resource_statistics,omitempty"`
+	ResourceStatistics *GetResourceGroupRespResourceStatistics `json:"resource_statistics,omitempty"`
 
-	// dimension: 子维度,product: 云产品
+	// **参数解释** 资源等级。 **取值范围** 枚举值。 - product: 云产品 - dimension: 子维度
 	ResourceLevel *ShowResourceGroupResponseResourceLevel `json:"resource_level,omitempty"`
 
-	// 创建资源层级为云产品时的云产品的取值，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。
+	// **参数解释** 创建资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。 **取值范围** 长度[0,10240]个字符
 	ProductNames *string `json:"product_names,omitempty"`
 
 	// 每个企业项目关联的资源状态
 	EpResourceStatistics *[]EpResourceStatistics `json:"ep_resource_statistics,omitempty"`
-	HttpStatusCode       int                     `json:"-"`
+
+	// 关联的告警模板列表
+	AssociationAlarmTemplates *[]AssociationAlarmTemplate `json:"association_alarm_templates,omitempty"`
+	HttpStatusCode            int                         `json:"-"`
 }
 
 func (o ShowResourceGroupResponse) String() string {

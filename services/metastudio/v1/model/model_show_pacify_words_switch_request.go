@@ -27,7 +27,7 @@ type ShowPacifyWordsSwitchRequest struct {
 	// 应用ID。
 	RobotId string `json:"robot_id"`
 
-	// 智能交互语言 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+	// 智能交互语言 * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
 	Language ShowPacifyWordsSwitchRequestLanguage `json:"language"`
 }
 
@@ -51,6 +51,7 @@ type ShowPacifyWordsSwitchRequestLanguageEnum struct {
 	POR    ShowPacifyWordsSwitchRequestLanguage
 	ARABIC ShowPacifyWordsSwitchRequestLanguage
 	THAI   ShowPacifyWordsSwitchRequestLanguage
+	FR     ShowPacifyWordsSwitchRequestLanguage
 }
 
 func GetShowPacifyWordsSwitchRequestLanguageEnum() ShowPacifyWordsSwitchRequestLanguageEnum {
@@ -72,6 +73,9 @@ func GetShowPacifyWordsSwitchRequestLanguageEnum() ShowPacifyWordsSwitchRequestL
 		},
 		THAI: ShowPacifyWordsSwitchRequestLanguage{
 			value: "Thai",
+		},
+		FR: ShowPacifyWordsSwitchRequestLanguage{
+			value: "fr",
 		},
 	}
 }

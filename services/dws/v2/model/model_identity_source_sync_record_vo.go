@@ -15,7 +15,7 @@ type IdentitySourceSyncRecordVo struct {
 	// **参数解释**： 身份源ID。 **取值范围**： 不涉及。
 	IdentitySourceId *string `json:"identity_source_id,omitempty"`
 
-	// **参数解释**： 身份源类型。 **取值范围**： 不涉及。
+	// **参数解释**： 身份源类型。 **取值范围**： - ldap：目录服务数据源。 - oneaccess：聚合型数据源
 	IdentitySourceType *string `json:"identity_source_type,omitempty"`
 
 	// **参数解释**： 任务开始时间。 **取值范围**： 不涉及。
@@ -36,7 +36,7 @@ type IdentitySourceSyncRecordVo struct {
 	// **参数解释**： 失败记录数。 **取值范围**： 大于等于0。
 	FailedCount *int32 `json:"failed_count,omitempty"`
 
-	// **参数解释**： 状态。 **取值范围**： 不涉及。
+	// **参数解释**： 状态。 **取值范围**： - RUNNING：运行中。 - FINISHED：已完成。 - FAILED：失败。
 	Status *string `json:"status,omitempty"`
 
 	// **参数解释**： 失败原因。 **取值范围**： 不涉及。

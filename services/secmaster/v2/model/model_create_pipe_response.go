@@ -9,47 +9,48 @@ import (
 // CreatePipeResponse Response Object
 type CreatePipeResponse struct {
 
-	// 用户domainId
-	DomainId *string `json:"domain_id,omitempty"`
-
-	// 项目id
+	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 数据空间id
-	DataspaceId *string `json:"dataspace_id,omitempty"`
+	// UUID
+	WorkspaceId *string `json:"workspace_id,omitempty"`
 
-	// 数据空间名称
-	DataspaceName *string `json:"dataspace_name,omitempty"`
-
-	// 管道id
+	// UUID
 	PipeId *string `json:"pipe_id,omitempty"`
 
 	// 管道名称
 	PipeName *string `json:"pipe_name,omitempty"`
 
-	// 管道类型（system-defined，系统预定义)、1（user-defined，用户自定义)
-	PipeType *string `json:"pipe_type,omitempty"`
+	// 管道别名
+	PipeAlias *string `json:"pipe_alias,omitempty"`
 
-	// 描述信息
+	Category *PipeCategory `json:"category,omitempty"`
+
+	// directory 目录分组
+	Directory *string `json:"directory,omitempty"`
+
+	// 管道描述
 	Description *string `json:"description,omitempty"`
 
-	// 索引存储天数
-	StoragePeriod *int32 `json:"storage_period,omitempty"`
+	ProcessStatus *PipeProcessStatus `json:"process_status,omitempty"`
 
-	// 索引分片数量
-	Shards *int32 `json:"shards,omitempty"`
+	ProcessError *PipeProcessError `json:"process_error,omitempty"`
 
-	// 创建者
-	CreateBy *string `json:"create_by,omitempty"`
+	OwnerType *PipeOwnerType `json:"owner_type,omitempty"`
 
-	// 创建时间
-	CreateTime *int32 `json:"create_time,omitempty"`
+	// 管道资源
+	Resources *[]PipeResource `json:"resources,omitempty"`
 
-	// 更新者
-	UpdateBy *string `json:"update_by,omitempty"`
+	Schema *PipeSchema `json:"schema,omitempty"`
 
-	// 更新时间
-	UpdateTime     *int32 `json:"update_time,omitempty"`
+	// 毫秒时间戳
+	CreateTime *int64 `json:"create_time,omitempty"`
+
+	// 毫秒时间戳
+	UpdateTime *int64 `json:"update_time,omitempty"`
+
+	// 毫秒时间戳
+	DeleteTime     *int64 `json:"delete_time,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

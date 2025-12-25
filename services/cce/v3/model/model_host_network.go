@@ -20,6 +20,8 @@ type HostNetwork struct {
 
 	// **参数解释：** 集群控制面节点安全组ID。 **约束限制：** 创建成功后自动生成，填写无效。 **取值范围：** 不涉及 **默认取值：** 不涉及
 	ControlPlaneSecurityGroup *string `json:"controlPlaneSecurityGroup,omitempty"`
+
+	AutoGenerateSecurityGroupHardeningConfig *AutoGenerateSecurityGroupHardeningConfigSpec `json:"autoGenerateSecurityGroupHardeningConfig,omitempty"`
 }
 
 func (o HostNetwork) String() string {

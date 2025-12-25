@@ -3,48 +3,82 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
 type AlertRuleTemplate struct {
 
-	// 告警规则模板 ID。Alert rule template ID.
-	TemplateId string `json:"template_id"`
+	// 累计次数
+	AccumulatedTimes *int32 `json:"accumulated_times,omitempty"`
 
-	// 更新时间。Update time.
-	UpdateTime int64 `json:"update_time"`
+	// 告警描述
+	AlertDescription *string `json:"alert_description,omitempty"`
 
-	// 告警规则模板名称。Alert rule template name.
-	TemplateName string `json:"template_name"`
+	// 告警名称
+	AlertName *string `json:"alert_name,omitempty"`
 
-	// 数据源。Data source.
-	DataSource string `json:"data_source"`
+	// 告警修复
+	AlertRemediation *string `json:"alert_remediation,omitempty"`
 
-	// 版本。Version
-	Version string `json:"version"`
+	// Map<String,String>
+	AlertType map[string]string `json:"alert_type,omitempty"`
 
-	// 查询语句。Query.
-	Query *string `json:"query,omitempty"`
+	// Iam用户ID
+	CreateBy *string `json:"create_by,omitempty"`
 
-	// 查询语法，SQL。Query type. SQL.
-	QueryType *AlertRuleTemplateQueryType `json:"query_type,omitempty"`
+	// 毫秒时间戳
+	CreateTime *int64 `json:"create_time,omitempty"`
 
-	// 严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-	Severity AlertRuleTemplateSeverity `json:"severity"`
-
-	// 自定义扩展信息。Custom properties.
+	// Map<String,String>
 	CustomProperties map[string]string `json:"custom_properties,omitempty"`
 
-	// 告警分组。Event grouping.
+	// 告警规则模板描述
+	Description *string `json:"description,omitempty"`
+
+	// 告警组
 	EventGrouping *bool `json:"event_grouping,omitempty"`
 
-	Schedule *Schedule `json:"schedule,omitempty"`
+	JobMode *JobMode `json:"job_mode,omitempty"`
 
-	// 告警触发规则。Alert triggers.
-	Triggers *[]AlertRuleTrigger `json:"triggers,omitempty"`
+	ProcessStatus *ProcessStatus `json:"process_status,omitempty"`
+
+	// 查询语句
+	Query *string `json:"query,omitempty"`
+
+	QueryType *QueryType `json:"query_type,omitempty"`
+
+	Schedule *AlertRuleSchedule `json:"schedule,omitempty"`
+
+	Severity *Serverity `json:"severity,omitempty"`
+
+	// 是否仿真
+	Simulation *bool `json:"simulation,omitempty"`
+
+	Status *Status `json:"status,omitempty"`
+
+	// 告警抑制
+	Suppresion *bool `json:"suppresion,omitempty"`
+
+	// 表名称
+	TableName *string `json:"table_name,omitempty"`
+
+	// UUID
+	TemplateId *string `json:"template_id,omitempty"`
+
+	// 模板名称
+	TemplateName *string `json:"template_name,omitempty"`
+
+	// 触发器数组
+	Triggers *[]Trigger `json:"triggers,omitempty"`
+
+	// Iam用户ID
+	UpdateBy *string `json:"update_by,omitempty"`
+
+	// 毫秒时间戳
+	UpdateTime *int64 `json:"update_time,omitempty"`
+
+	// 毫秒时间戳
+	UpdateTimeByUser *int64 `json:"update_time_by_user,omitempty"`
 }
 
 func (o AlertRuleTemplate) String() string {
@@ -54,106 +88,4 @@ func (o AlertRuleTemplate) String() string {
 	}
 
 	return strings.Join([]string{"AlertRuleTemplate", string(data)}, " ")
-}
-
-type AlertRuleTemplateQueryType struct {
-	value string
-}
-
-type AlertRuleTemplateQueryTypeEnum struct {
-	SQL AlertRuleTemplateQueryType
-}
-
-func GetAlertRuleTemplateQueryTypeEnum() AlertRuleTemplateQueryTypeEnum {
-	return AlertRuleTemplateQueryTypeEnum{
-		SQL: AlertRuleTemplateQueryType{
-			value: "SQL",
-		},
-	}
-}
-
-func (c AlertRuleTemplateQueryType) Value() string {
-	return c.value
-}
-
-func (c AlertRuleTemplateQueryType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *AlertRuleTemplateQueryType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type AlertRuleTemplateSeverity struct {
-	value string
-}
-
-type AlertRuleTemplateSeverityEnum struct {
-	TIPS   AlertRuleTemplateSeverity
-	LOW    AlertRuleTemplateSeverity
-	MEDIUM AlertRuleTemplateSeverity
-	HIGH   AlertRuleTemplateSeverity
-	FATAL  AlertRuleTemplateSeverity
-}
-
-func GetAlertRuleTemplateSeverityEnum() AlertRuleTemplateSeverityEnum {
-	return AlertRuleTemplateSeverityEnum{
-		TIPS: AlertRuleTemplateSeverity{
-			value: "TIPS",
-		},
-		LOW: AlertRuleTemplateSeverity{
-			value: "LOW",
-		},
-		MEDIUM: AlertRuleTemplateSeverity{
-			value: "MEDIUM",
-		},
-		HIGH: AlertRuleTemplateSeverity{
-			value: "HIGH",
-		},
-		FATAL: AlertRuleTemplateSeverity{
-			value: "FATAL",
-		},
-	}
-}
-
-func (c AlertRuleTemplateSeverity) Value() string {
-	return c.value
-}
-
-func (c AlertRuleTemplateSeverity) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *AlertRuleTemplateSeverity) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

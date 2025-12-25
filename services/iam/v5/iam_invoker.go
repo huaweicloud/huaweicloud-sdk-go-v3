@@ -341,6 +341,22 @@ func (i *RemoveUserFromGroupV5Invoker) Invoke() (*model.RemoveUserFromGroupV5Res
 	}
 }
 
+type ShowGroupSummaryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowGroupSummaryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowGroupSummaryInvoker) Invoke() (*model.ShowGroupSummaryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowGroupSummaryResponse), nil
+	}
+}
+
 type ShowGroupV5Invoker struct {
 	*invoker.BaseInvoker
 }

@@ -133,6 +133,22 @@ func (i *DeleteArtifactFileInvoker) Invoke() (*model.DeleteArtifactFileResponse,
 	}
 }
 
+type DeleteCompletelyUpdateFileStateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCompletelyUpdateFileStateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteCompletelyUpdateFileStateInvoker) Invoke() (*model.DeleteCompletelyUpdateFileStateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCompletelyUpdateFileStateResponse), nil
+	}
+}
+
 type DeleteRepositoryInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -210,6 +226,198 @@ func (i *ListAttentionsInvoker) Invoke() (*model.ListAttentionsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListAttentionsResponse), nil
+	}
+}
+
+type ListCapacityMessageSettingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCapacityMessageSettingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCapacityMessageSettingInvoker) Invoke() (*model.ListCapacityMessageSettingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCapacityMessageSettingResponse), nil
+	}
+}
+
+type ListChildProxyRepositoriesListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListChildProxyRepositoriesListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListChildProxyRepositoriesListInvoker) Invoke() (*model.ListChildProxyRepositoriesListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListChildProxyRepositoriesListResponse), nil
+	}
+}
+
+type ListDomainIpConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDomainIpConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDomainIpConfigInvoker) Invoke() (*model.ListDomainIpConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDomainIpConfigResponse), nil
+	}
+}
+
+type ListFileBuildArchivesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFileBuildArchivesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListFileBuildArchivesInvoker) Invoke() (*model.ListFileBuildArchivesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFileBuildArchivesResponse), nil
+	}
+}
+
+type ListFilesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFilesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListFilesInvoker) Invoke() (*model.ListFilesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFilesResponse), nil
+	}
+}
+
+type ListLatestVersionFilesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLatestVersionFilesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListLatestVersionFilesInvoker) Invoke() (*model.ListLatestVersionFilesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLatestVersionFilesResponse), nil
+	}
+}
+
+type ListMavenListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMavenListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListMavenListInvoker) Invoke() (*model.ListMavenListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMavenListResponse), nil
+	}
+}
+
+type ListMavenUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListMavenUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListMavenUserInvoker) Invoke() (*model.ListMavenUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListMavenUserResponse), nil
+	}
+}
+
+type ListNetProxyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNetProxyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListNetProxyInvoker) Invoke() (*model.ListNetProxyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNetProxyResponse), nil
+	}
+}
+
+type ListProjectRolePermissionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectRolePermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListProjectRolePermissionsInvoker) Invoke() (*model.ListProjectRolePermissionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectRolePermissionsResponse), nil
+	}
+}
+
+type ListProjectUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectUsersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListProjectUsersInvoker) Invoke() (*model.ListProjectUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectUsersResponse), nil
+	}
+}
+
+type ListSecGuardListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecGuardListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSecGuardListInvoker) Invoke() (*model.ListSecGuardListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecGuardListResponse), nil
 	}
 }
 
@@ -293,6 +501,70 @@ func (i *ShowAuditInvoker) Invoke() (*model.ShowAuditResponse, error) {
 	}
 }
 
+type ShowAutoDeleteJobSettingsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAutoDeleteJobSettingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAutoDeleteJobSettingsInvoker) Invoke() (*model.ShowAutoDeleteJobSettingsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAutoDeleteJobSettingsResponse), nil
+	}
+}
+
+type ShowDomainReleaseRepoStorageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainReleaseRepoStorageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDomainReleaseRepoStorageInvoker) Invoke() (*model.ShowDomainReleaseRepoStorageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainReleaseRepoStorageResponse), nil
+	}
+}
+
+type ShowFileDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFileDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowFileDetailInvoker) Invoke() (*model.ShowFileDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFileDetailResponse), nil
+	}
+}
+
+type ShowFileDetailByFullNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFileDetailByFullNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowFileDetailByFullNameInvoker) Invoke() (*model.ShowFileDetailByFullNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFileDetailByFullNameResponse), nil
+	}
+}
+
 type ShowFileTreeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -309,6 +581,22 @@ func (i *ShowFileTreeInvoker) Invoke() (*model.ShowFileTreeResponse, error) {
 	}
 }
 
+type ShowLatestVersionFilesCountInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLatestVersionFilesCountInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowLatestVersionFilesCountInvoker) Invoke() (*model.ShowLatestVersionFilesCountResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLatestVersionFilesCountResponse), nil
+	}
+}
+
 type ShowMavenInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -322,6 +610,70 @@ func (i *ShowMavenInfoInvoker) Invoke() (*model.ShowMavenInfoResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowMavenInfoResponse), nil
+	}
+}
+
+type ShowMultiRolesUserPermissionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMultiRolesUserPermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowMultiRolesUserPermissionsInvoker) Invoke() (*model.ShowMultiRolesUserPermissionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMultiRolesUserPermissionsResponse), nil
+	}
+}
+
+type ShowOpenSourceEnabledInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowOpenSourceEnabledInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowOpenSourceEnabledInvoker) Invoke() (*model.ShowOpenSourceEnabledResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowOpenSourceEnabledResponse), nil
+	}
+}
+
+type ShowPackageDataDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPackageDataDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPackageDataDetailInvoker) Invoke() (*model.ShowPackageDataDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPackageDataDetailResponse), nil
+	}
+}
+
+type ShowPackageInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPackageInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPackageInfoInvoker) Invoke() (*model.ShowPackageInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPackageInfoResponse), nil
 	}
 }
 
@@ -357,6 +709,22 @@ func (i *ShowProjectReleaseFilesInvoker) Invoke() (*model.ShowProjectReleaseFile
 	}
 }
 
+type ShowProjectStorageInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProjectStorageInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowProjectStorageInfoInvoker) Invoke() (*model.ShowProjectStorageInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProjectStorageInfoResponse), nil
+	}
+}
+
 type ShowReleaseProjectFilesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -372,6 +740,22 @@ func (i *ShowReleaseProjectFilesInvoker) Invoke() (*model.ShowReleaseProjectFile
 		return nil, err
 	} else {
 		return result.(*model.ShowReleaseProjectFilesResponse), nil
+	}
+}
+
+type ShowRepoUserInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRepoUserInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRepoUserInfoInvoker) Invoke() (*model.ShowRepoUserInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRepoUserInfoResponse), nil
 	}
 }
 
@@ -436,6 +820,22 @@ func (i *ShowUserPrivilegesInvoker) Invoke() (*model.ShowUserPrivilegesResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowUserPrivilegesResponse), nil
+	}
+}
+
+type ShowUserTicketInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowUserTicketInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowUserTicketInvoker) Invoke() (*model.ShowUserTicketResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowUserTicketResponse), nil
 	}
 }
 

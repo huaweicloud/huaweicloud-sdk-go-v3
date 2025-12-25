@@ -589,9 +589,9 @@ func (c *WafClient) ConfirmAsyncJobInvoker(request *model.ConfirmAsyncJobRequest
 	return &ConfirmAsyncJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ConfirmIpReputationRule 根据Id查询机房IP情报防护规则
+// ConfirmIpReputationRule 根据Id查询威胁情报访问控制规则
 //
-// 根据Id查询机房IP情报防护规则
+// 根据Id查询威胁情报访问控制规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) ConfirmIpReputationRule(request *model.ConfirmIpReputationRuleRequest) (*model.ConfirmIpReputationRuleResponse, error) {
@@ -604,7 +604,7 @@ func (c *WafClient) ConfirmIpReputationRule(request *model.ConfirmIpReputationRu
 	}
 }
 
-// ConfirmIpReputationRuleInvoker 根据Id查询机房IP情报防护规则
+// ConfirmIpReputationRuleInvoker 根据Id查询威胁情报访问控制规则
 func (c *WafClient) ConfirmIpReputationRuleInvoker(request *model.ConfirmIpReputationRuleRequest) *ConfirmIpReputationRuleInvoker {
 	requestDef := GenReqDefForConfirmIpReputationRule()
 	return &ConfirmIpReputationRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1072,9 +1072,9 @@ func (c *WafClient) CreateIpGroupInvoker(request *model.CreateIpGroupRequest) *C
 	return &CreateIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateIpReputationRule 创建机房IP情报规则
+// CreateIpReputationRule 创建威胁情报访问控制规则
 //
-// 创建IP情报规则
+// 创建威胁情报访问控制规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) CreateIpReputationRule(request *model.CreateIpReputationRuleRequest) (*model.CreateIpReputationRuleResponse, error) {
@@ -1087,7 +1087,7 @@ func (c *WafClient) CreateIpReputationRule(request *model.CreateIpReputationRule
 	}
 }
 
-// CreateIpReputationRuleInvoker 创建机房IP情报规则
+// CreateIpReputationRuleInvoker 创建威胁情报访问控制规则
 func (c *WafClient) CreateIpReputationRuleInvoker(request *model.CreateIpReputationRuleRequest) *CreateIpReputationRuleInvoker {
 	requestDef := GenReqDefForCreateIpReputationRule()
 	return &CreateIpReputationRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1555,9 +1555,9 @@ func (c *WafClient) DeleteIpGroupInvoker(request *model.DeleteIpGroupRequest) *D
 	return &DeleteIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteIpReputationRule 删除机房IP情报防护规则
+// DeleteIpReputationRule 删除威胁情报访问控制规则
 //
-// 删除IP情报防护规则
+// 删除威胁情报访问控制规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) DeleteIpReputationRule(request *model.DeleteIpReputationRuleRequest) (*model.DeleteIpReputationRuleResponse, error) {
@@ -1570,7 +1570,7 @@ func (c *WafClient) DeleteIpReputationRule(request *model.DeleteIpReputationRule
 	}
 }
 
-// DeleteIpReputationRuleInvoker 删除机房IP情报防护规则
+// DeleteIpReputationRuleInvoker 删除威胁情报访问控制规则
 func (c *WafClient) DeleteIpReputationRuleInvoker(request *model.DeleteIpReputationRuleRequest) *DeleteIpReputationRuleInvoker {
 	requestDef := GenReqDefForDeleteIpReputationRule()
 	return &DeleteIpReputationRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3760,9 +3760,9 @@ func (c *WafClient) UpdateIpGroupInvoker(request *model.UpdateIpGroupRequest) *U
 	return &UpdateIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateIpReputationRule 更新机房IP情报防护规则
+// UpdateIpReputationRule 更新威胁情报访问控制规则
 //
-// 更新IP情报防护规则
+// 更新威胁情报访问控制规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) UpdateIpReputationRule(request *model.UpdateIpReputationRuleRequest) (*model.UpdateIpReputationRuleResponse, error) {
@@ -3775,7 +3775,7 @@ func (c *WafClient) UpdateIpReputationRule(request *model.UpdateIpReputationRule
 	}
 }
 
-// UpdateIpReputationRuleInvoker 更新机房IP情报防护规则
+// UpdateIpReputationRuleInvoker 更新威胁情报访问控制规则
 func (c *WafClient) UpdateIpReputationRuleInvoker(request *model.UpdateIpReputationRuleRequest) *UpdateIpReputationRuleInvoker {
 	requestDef := GenReqDefForUpdateIpReputationRule()
 	return &UpdateIpReputationRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

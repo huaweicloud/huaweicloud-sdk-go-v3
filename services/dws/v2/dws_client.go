@@ -40,27 +40,6 @@ func (c *DwsClient) AddQueueUserListInvoker(request *model.AddQueueUserListReque
 	return &AddQueueUserListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// AddSnapshotCrossRegionPolicy 设置跨区域备份配置
-//
-// 该接口用于设置跨区域备份配置。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DwsClient) AddSnapshotCrossRegionPolicy(request *model.AddSnapshotCrossRegionPolicyRequest) (*model.AddSnapshotCrossRegionPolicyResponse, error) {
-	requestDef := GenReqDefForAddSnapshotCrossRegionPolicy()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.AddSnapshotCrossRegionPolicyResponse), nil
-	}
-}
-
-// AddSnapshotCrossRegionPolicyInvoker 设置跨区域备份配置
-func (c *DwsClient) AddSnapshotCrossRegionPolicyInvoker(request *model.AddSnapshotCrossRegionPolicyRequest) *AddSnapshotCrossRegionPolicyInvoker {
-	requestDef := GenReqDefForAddSnapshotCrossRegionPolicy()
-	return &AddSnapshotCrossRegionPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // AddWorkloadPlanStage 添加资源管理计划阶段
 //
 // 添加资源管理计划阶段。
@@ -1021,27 +1000,6 @@ func (c *DwsClient) DeleteSnapshot(request *model.DeleteSnapshotRequest) (*model
 func (c *DwsClient) DeleteSnapshotInvoker(request *model.DeleteSnapshotRequest) *DeleteSnapshotInvoker {
 	requestDef := GenReqDefForDeleteSnapshot()
 	return &DeleteSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteSnapshotCrossRegionPolicy 删除跨区域备份配置
-//
-// 该接口用于删除跨区域备份配置。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DwsClient) DeleteSnapshotCrossRegionPolicy(request *model.DeleteSnapshotCrossRegionPolicyRequest) (*model.DeleteSnapshotCrossRegionPolicyResponse, error) {
-	requestDef := GenReqDefForDeleteSnapshotCrossRegionPolicy()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteSnapshotCrossRegionPolicyResponse), nil
-	}
-}
-
-// DeleteSnapshotCrossRegionPolicyInvoker 删除跨区域备份配置
-func (c *DwsClient) DeleteSnapshotCrossRegionPolicyInvoker(request *model.DeleteSnapshotCrossRegionPolicyRequest) *DeleteSnapshotCrossRegionPolicyInvoker {
-	requestDef := GenReqDefForDeleteSnapshotCrossRegionPolicy()
-	return &DeleteSnapshotCrossRegionPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteSnapshotPolicy 删除快照策略
@@ -2529,48 +2487,6 @@ func (c *DwsClient) ListSchemas(request *model.ListSchemasRequest) (*model.ListS
 func (c *DwsClient) ListSchemasInvoker(request *model.ListSchemasRequest) *ListSchemasInvoker {
 	requestDef := GenReqDefForListSchemas()
 	return &ListSchemasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListSnapshotCrossRegion 获取跨区域快照可用region
-//
-// 该接口用于获取跨区域快照可用局点。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DwsClient) ListSnapshotCrossRegion(request *model.ListSnapshotCrossRegionRequest) (*model.ListSnapshotCrossRegionResponse, error) {
-	requestDef := GenReqDefForListSnapshotCrossRegion()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListSnapshotCrossRegionResponse), nil
-	}
-}
-
-// ListSnapshotCrossRegionInvoker 获取跨区域快照可用region
-func (c *DwsClient) ListSnapshotCrossRegionInvoker(request *model.ListSnapshotCrossRegionRequest) *ListSnapshotCrossRegionInvoker {
-	requestDef := GenReqDefForListSnapshotCrossRegion()
-	return &ListSnapshotCrossRegionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListSnapshotCrossRegionPolicy 查询所有跨区域快照配置
-//
-// 该接口用于查询所有跨区域快照配置。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DwsClient) ListSnapshotCrossRegionPolicy(request *model.ListSnapshotCrossRegionPolicyRequest) (*model.ListSnapshotCrossRegionPolicyResponse, error) {
-	requestDef := GenReqDefForListSnapshotCrossRegionPolicy()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListSnapshotCrossRegionPolicyResponse), nil
-	}
-}
-
-// ListSnapshotCrossRegionPolicyInvoker 查询所有跨区域快照配置
-func (c *DwsClient) ListSnapshotCrossRegionPolicyInvoker(request *model.ListSnapshotCrossRegionPolicyRequest) *ListSnapshotCrossRegionPolicyInvoker {
-	requestDef := GenReqDefForListSnapshotCrossRegionPolicy()
-	return &ListSnapshotCrossRegionPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSnapshotDetails 查询快照详情

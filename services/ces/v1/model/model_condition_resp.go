@@ -9,10 +9,10 @@ import (
 // ConditionResp **参数解释**： 告警规则设置的告警策略。
 type ConditionResp struct {
 
-	// **参数解释**： 告警阈值的比较条件。 **取值范围**： 只能是>、=、<、>=、<=、!=。
+	// **参数解释**： 阈值符号。     **取值范围**： 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动。
 	ComparisonOperator *string `json:"comparison_operator,omitempty"`
 
-	// **参数解释**： 触发告警的连续发生次数。 **取值范围**： 取值范围[1, 5]。告警类型为事件告警时，取值范围为[1, 100]。
+	// **参数解释**： 触发告警的连续发生次数。 **取值范围**： 整数，取值范围[1, 5]。
 	Count *int32 `json:"count,omitempty"`
 
 	Filter *FilterResp `json:"filter,omitempty"`

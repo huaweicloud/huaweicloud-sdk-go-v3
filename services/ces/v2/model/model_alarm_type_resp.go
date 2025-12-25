@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// AlarmTypeResp **参数解释**： 告警规则类型 **取值范围**： 枚举值。 - ALL_INSTANCE：全部资源指标告警。 - RESOURCE_GROUP：资源分组指标告警。 - MULTI_INSTANCE：指定资源指标告警。 - EVENT.SYS：系统事件告警。 - EVENT.CUSTOM：自定义事件告警。 - DNSHealthCheck：健康检查告警。
+// AlarmTypeResp **参数解释**： 告警规则类型 **取值范围**： 枚举值。 - ALL_INSTANCE：针对全部资源的告警规则。 - RESOURCE_GROUP：针对资源分组的告警规则。 - MULTI_INSTANCE：针对指定资源的告警规则。 - EVENT.SYS：系统事件告警规则。 - EVENT.CUSTOM：自定义事件告警规则。 - DNSHealthCheck：健康检查告警规则。
 type AlarmTypeResp struct {
 	value string
 }

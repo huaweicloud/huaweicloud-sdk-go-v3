@@ -65,6 +65,26 @@ func GenReqDefForBatchDeleteInstances() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchDeleteRocketMqMigrationTask() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/instances/{instance_id}/metadata/batch-delete").
+		WithResponse(new(model.BatchDeleteRocketMqMigrationTaskResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchUpdateConsumerGroup() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -273,26 +293,6 @@ func GenReqDefForDeleteInstance() *def.HttpRequestDef {
 		WithName("InstanceId").
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForDeleteRocketMqMigrationTask() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodDelete).
-		WithPath("/v2/{project_id}/instances/{instance_id}/metadata").
-		WithResponse(new(model.DeleteRocketMqMigrationTaskResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("InstanceId").
-		WithJsonTag("instance_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

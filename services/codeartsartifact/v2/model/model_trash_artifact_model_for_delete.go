@@ -12,7 +12,7 @@ type TrashArtifactModelForDelete struct {
 	Id string `json:"id"`
 
 	// 仓库类型
-	Fomat string `json:"fomat"`
+	Format string `json:"format"`
 
 	// URI
 	Uri string `json:"uri"`

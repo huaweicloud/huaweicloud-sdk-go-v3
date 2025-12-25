@@ -838,6 +838,30 @@ func GenReqDefForListBackups() *def.HttpRequestDef {
 		WithName("Mode").
 		WithJsonTag("mode").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OrderField").
+		WithJsonTag("order_field").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("OrderRule").
+		WithJsonTag("order_rule").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BackupStatus").
+		WithJsonTag("backup_status").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BackupName").
+		WithJsonTag("backup_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BackupDescription").
+		WithJsonTag("backup_description").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceName").
+		WithJsonTag("instance_name").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

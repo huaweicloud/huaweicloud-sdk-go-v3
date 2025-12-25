@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// BatchUpdateNotificationMaskTimeRequestBody 修改通知屏蔽时间请求体
+// BatchUpdateNotificationMaskTimeRequestBody **参数解释**： 修改通知屏蔽时间请求体。 **约束限制**： 不涉及。
 type BatchUpdateNotificationMaskTimeRequestBody struct {
 
-	// 关联编号
+	// **参数解释**： 告警屏蔽ID列表 **约束限制**： 包含的告警屏蔽ID数量为[1,100]个。
 	NotificationMaskIds []string `json:"notification_mask_ids"`
 
 	MaskType *MaskType `json:"mask_type"`

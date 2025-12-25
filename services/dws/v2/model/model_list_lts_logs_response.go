@@ -9,7 +9,7 @@ import (
 // ListLtsLogsResponse Response Object
 type ListLtsLogsResponse struct {
 
-	// **参数解释**： 日志开启状态。 **取值范围**： 不涉及。
+	// **参数解释**： 日志开启状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。 - DELETE：集群已删除。
 	AccessStatus *string `json:"access_status,omitempty"`
 
 	// **参数解释**： LTS日志列表。 **取值范围**： 不涉及。

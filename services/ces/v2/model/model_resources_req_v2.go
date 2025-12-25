@@ -8,7 +8,7 @@ import (
 
 type ResourcesReqV2 struct {
 
-	// 资源信息
+	// **参数解释**： 资源信息列表。 **约束限制**： 包含的资源信息最多为1000个，最少为0个。
 	Resources [][]Dimension `json:"resources"`
 }
 

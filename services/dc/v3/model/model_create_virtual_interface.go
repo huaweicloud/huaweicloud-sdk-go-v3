@@ -52,7 +52,7 @@ type CreateVirtualInterface struct {
 	RemoteGatewayV6Ip *string `json:"remote_gateway_v6_ip,omitempty"`
 
 	// 虚拟接口连接的虚拟网关的ID
-	VgwId string `json:"vgw_id"`
+	VgwId *string `json:"vgw_id,omitempty"`
 
 	// 虚拟接口关联的网关的ID。 当虚拟接口接入网关类型为全域接入网关时该参数必填，gateway_id值为全域接入网关的id
 	GatewayId *string `json:"gateway_id,omitempty"`
@@ -67,7 +67,7 @@ type CreateVirtualInterface struct {
 	BgpMd5 *string `json:"bgp_md5,omitempty"`
 
 	// 远端子网列表，记录租户侧的cidrs
-	RemoteEpGroup []string `json:"remote_ep_group"`
+	RemoteEpGroup *[]string `json:"remote_ep_group,omitempty"`
 
 	// 访问公网服务的子网列表
 	ServiceEpGroup *[]string `json:"service_ep_group,omitempty"`

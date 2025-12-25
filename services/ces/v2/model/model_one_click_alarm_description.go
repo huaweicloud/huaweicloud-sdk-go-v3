@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// OneClickAlarmDescription 一键告警描述，长度范围[0,256]，该字段默认值为空字符串
+// OneClickAlarmDescription **参数解释** 一键告警描述 **约束限制** 不涉及 **取值范围** 字符长度在0到256之间 **默认取值** 空字符串
 type OneClickAlarmDescription struct {
 }
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// NotificationBeginTimeResp **参数解释**： 告警通知开启时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+// NotificationBeginTimeResp **参数解释**： 告警通知开启时间。如 00:00    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
 type NotificationBeginTimeResp struct {
 }
 

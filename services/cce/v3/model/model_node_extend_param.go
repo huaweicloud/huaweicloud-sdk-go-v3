@@ -42,6 +42,9 @@ type NodeExtendParam struct {
 	// **参数解释**： 节点上单容器的可用磁盘空间大小（已废弃，请优先使用containerBaseSize参数），单位G。 CCE节点容器运行时空间配置请参考[数据盘空间分配说明](cce_01_0341.xml)。 **约束限制**： - Devicemapper模式下建议dockerBaseSize配置不超过80G，设置过大时可能会导致容器运行时初始化时间过长而启动失败，若对容器磁盘大小有特殊要求，可考虑使用挂载外部或本地存储方式代替。 - dockerBaseSize设置仅在v1.19.16-r0、v1.21.3-r0、v1.23.3-r0及以上的集群版本中的EulerOS[/HCEOS2.0](tag:hws,hws_hk,ctc,cmcc)节点上生效。  **取值范围**： 10-500。 **默认取值**： 不配置该值或值为0时将使用默认值： - Devicemapper模式下默认值为10； - OverlayFS模式默认不限制单容器可用空间大小。
 	DockerBaseSize *int32 `json:"dockerBaseSize,omitempty"`
 
+	// **参数解释**： 节点上单容器的可用磁盘空间大小，单位G。 CCE节点容器运行时空间配置请参考[数据盘空间分配说明](cce_01_0341.xml)。 **约束限制**： - Devicemapper模式下建议containerBaseSize配置不超过80G，设置过大时可能会导致容器运行时初始化时间过长而启动失败，若对容器磁盘大小有特殊要求，可考虑使用挂载外部或本地存储方式代替；Devicemapper模式在新版中仅有共池裸机使用，已逐步废弃。 - containerBaseSize设置仅在新版本集群（v1.23.14-r0/v1.25.9-r0/v1.27.6-r0/v1.28.4-r0及以上）的EulerOS[/HCEOS2.0](tag:hws,hws_hk,ctc,cmcc)节点上生效。 - 更新节点池时，不支持更新此参数。  **取值范围**： 10-500。 **默认取值**： 不配置该值或值为0时将使用默认值： - Devicemapper模式下默认值为10； - OverlayFS模式默认不限制单容器可用空间大小。
+	ContainerBaseSize *int32 `json:"containerBaseSize,omitempty"`
+
 	// 是否为CCE Turbo集群节点。
 	OffloadNode *string `json:"offloadNode,omitempty"`
 
@@ -80,6 +83,24 @@ type NodeExtendParam struct {
 
 	// 节点内存预留，系统组件预留值。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws)
 	SystemReservedMem *int32 `json:"systemReservedMem,omitempty"`
+
+	// **参数解释**： 节点CPU预留，Kubernetes相关组件预留值。单位为mcore。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws) **约束限制**： kubeReservedCpu，systemReservedCpu之和小于节点池中节点最小CPU规格的50%。 **取值范围**： 不涉及 **默认取值**： 不涉及
+	KubeReservedCpu *int32 `json:"kubeReservedCpu,omitempty"`
+
+	// **参数解释**： 节点CPU预留，系统组件预留值。单位为mcore。[随节点规格变动，具体请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)。](tag:hws) **约束限制**： kubeReservedCpu，systemReservedCpu之和小于节点池中节点最小CPU规格的50%。 **取值范围**： 不涉及 **默认取值**： 不涉及
+	SystemReservedCpu *int32 `json:"systemReservedCpu,omitempty"`
+
+	// **参数解释**： 节点PID预留，Kubernetes相关组件预留值。目的是为Kubernetes系统守护进程（如kubelet、container runtime等）预留指定数量的进程ID。 **约束限制**： kubeReservedPid，systemReservedPid之和小于linux PID数量上限的50%。[不同OS的kernel.pid_max可能并不相同，具体请参见[修改节点进程 ID数量上限kernel.pid_max](https://support.huaweicloud.com/usermanual-cce/cce_10_0401.html#section1)](tag:hws) **取值范围**： [0,2097152] 注：CCE仅校验kernel.pid_max为4194304的场景，2022年1月30日及之前创建的节点和部分OS的kernel.pid_max会有所不同，若您更新过kernel.pid_max也需要保证kubeReservedPid，systemReservedPid之和小于linux PID数量上限。 **默认取值**： 不涉及
+	KubeReservedPid *int32 `json:"kubeReservedPid,omitempty"`
+
+	// **参数解释**： 节点PID预留，系统组件预留值。目的是为OS系统守护进程（如 sshd、udev 等）预留指定数量的进程ID。 **约束限制**： kubeReservedPid，systemReservedPid之和小于linux PID数量上限的50%。[不同OS的kernel.pid_max可能并不相同，具体请参见[修改节点进程 ID数量上限kernel.pid_max](https://support.huaweicloud.com/usermanual-cce/cce_10_0401.html#section1)](tag:hws) **取值范围**： [0,2097152] 注：CCE仅校验kernel.pid_max为4194304的场景，2022年1月30日及之前创建的节点和部分OS的kernel.pid_max会有所不同，若您更新过kernel.pid_max也需要保证kubeReservedPid，systemReservedPid之和小于linux PID数量上限。 **默认取值**： 不涉及
+	SystemReservedPid *int32 `json:"systemReservedPid,omitempty"`
+
+	// **参数解释**： 节点临时存储空间预留，Kubernetes组件预留值。目的是为Kubernetes系统守护进程（如kubelet、container runtime等）预留临时存储。单位为Gi。 **约束限制**： kubeReservedStorage，systemReservedStorage之和小于容器组件所使用硬盘空间的50%。 **取值范围**： 不涉及 **默认取值**： 不涉及
+	KubeReservedStorage *int32 `json:"kubeReservedStorage,omitempty"`
+
+	// **参数解释**： 节点临时存储空间预留，系统组件预留值。目的是为OS系统守护进程（如 sshd、udev 等）预留临时存储。单位为Gi。 **约束限制**： kubeReservedStorage，systemReservedStorage之和小于容器组件所使用硬盘空间的50%。 **取值范围**： 不涉及 **默认取值**： 不涉及
+	SystemReservedStorage *int32 `json:"systemReservedStorage,omitempty"`
 
 	// **参数解释**： 节点密码，仅作为响应参数时，固定展示星号，节点池场景响应返回中无该参数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	InitNodePassword *string `json:"init-node-password,omitempty"`

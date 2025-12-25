@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// EnterpriseProjectIdResp **参数解释**： 企业项目ID。     **取值范围**： 只能包含小写字母、数字、“-”。
+// EnterpriseProjectIdResp **参数解释**： 企业项目ID。     **取值范围**： 只能包含小写字母、数字、“-”。0 代表默认企业项目ID
 type EnterpriseProjectIdResp struct {
 }
 

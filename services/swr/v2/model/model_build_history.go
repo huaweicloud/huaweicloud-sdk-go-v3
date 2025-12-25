@@ -21,7 +21,7 @@ type BuildHistory struct {
 	MediaType string `json:"mediaType"`
 
 	// 镜像层大小
-	Size int32 `json:"size"`
+	Size int64 `json:"size"`
 
 	// 镜像层sha256信息
 	Digest string `json:"digest"`

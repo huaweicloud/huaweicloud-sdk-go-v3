@@ -81,6 +81,9 @@ type NodeTemplate struct {
 	// **参数解释**： 表示节点所属分区。分区可以选择中心云[或者[边缘小站](https://support.huaweicloud.com/usermanual-cloudpond/ies_02_0401.html)。](tag:hws)[或者[边缘小站](https://support.huaweicloud.com/intl/zh-cn/usermanual-cloudpond/ies_02_0401.html)。](tag:hws_hk) **约束限制**： 仅开启了对分布式云支持的Turbo集群支持指定该字段。 **取值范围**： - center: 中心云 - 边缘小站的可用区ID  **默认取值**： 不涉及
 	Partition *string `json:"partition,omitempty"`
 
+	// **参数解释：** 覆盖节点默认组件配置。  [当前支持的可配置组件及其参数详见[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0652.htmll)。](tag:hws) [当前支持的可配置组件及其参数详见[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0652.html)。](tag:hws_hk) **约束限制：** 若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。
+	ConfigurationsOverride *[]PackageConfiguration `json:"configurationsOverride,omitempty"`
+
 	NodeNameTemplate *NodeSpecNodeNameTemplate `json:"nodeNameTemplate,omitempty"`
 }
 

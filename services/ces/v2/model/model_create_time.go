@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CreateTime 告警模板的创建时间
+// CreateTime **参数解释**： 告警模板的创建时间 **取值范围**： 不涉及。
 type CreateTime struct {
 }
 

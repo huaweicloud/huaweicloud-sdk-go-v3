@@ -9,10 +9,10 @@ import (
 // ListBackupsResponse Response Object
 type ListBackupsResponse struct {
 
-	// 备份列表。
+	// **参数解释：** 备份列表。 **取值范围：** 不涉及。
 	Backups *[]BackupForList `json:"backups,omitempty"`
 
-	// 总记录数。
+	// **参数解释：** 总记录数。 **取值范围：** 不涉及。
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

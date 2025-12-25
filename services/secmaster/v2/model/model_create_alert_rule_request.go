@@ -9,7 +9,7 @@ import (
 // CreateAlertRuleRequest Request Object
 type CreateAlertRuleRequest struct {
 
-	// 工作空间 ID。Workspace ID.
+	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
 
 	Body *CreateAlertRuleRequestBody `json:"body,omitempty"`

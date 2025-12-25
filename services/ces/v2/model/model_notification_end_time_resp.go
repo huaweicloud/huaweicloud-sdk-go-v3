@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// NotificationEndTimeResp **参数解释**： 告警通知关闭时间。    **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
+// NotificationEndTimeResp **参数解释**： 告警通知关闭时间。如 08:00   **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。
 type NotificationEndTimeResp struct {
 }
 

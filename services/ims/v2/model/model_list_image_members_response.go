@@ -13,8 +13,10 @@ type ListImageMembersResponse struct {
 	Members *[]ImageMember `json:"members,omitempty"`
 
 	// 视图信息
-	Schema         *string `json:"schema,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Schema *string `json:"schema,omitempty"`
+
+	PageInfo       *GlancePageInfo `json:"page_info,omitempty"`
+	HttpStatusCode int             `json:"-"`
 }
 
 func (o ListImageMembersResponse) String() string {

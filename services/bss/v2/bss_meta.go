@@ -1634,6 +1634,10 @@ func GenReqDefForListServiceTypes() *def.HttpRequestDef {
 		WithName("Offset").
 		WithJsonTag("offset").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ServiceTypeName").
+		WithJsonTag("service_type_name").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").

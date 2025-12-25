@@ -18,7 +18,7 @@ type ListDataSourceResponse struct {
 	// **参数解释**： 集群ID。 **取值范围**： 36位UUID。
 	ClusterId *string `json:"cluster_id,omitempty"`
 
-	// **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+	// **参数解释**： 数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
 	Type *string `json:"type,omitempty"`
 
 	// **参数解释**： 总数。 **取值范围**： 不涉及。

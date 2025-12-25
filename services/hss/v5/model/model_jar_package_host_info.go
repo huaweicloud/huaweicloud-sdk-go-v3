@@ -21,7 +21,7 @@ type JarPackageHostInfo struct {
 	// **参数解释** 服务器ip **取值范围**: 字符长度0-128位
 	HostIp *string `json:"host_ip,omitempty"`
 
-	// **参数解释** 中间件包名称 **取值范围**: 字符长度0-256位
+	// **参数解释** 文件名称 **取值范围**: 字符长度0-256位
 	FileName *string `json:"file_name,omitempty"`
 
 	// **参数解释** 中间件包名称(不带后缀) **取值范围**: 字符长度0-256位\"
@@ -30,7 +30,7 @@ type JarPackageHostInfo struct {
 	// **参数解释** 中间件包类型 **取值范围**: 字符长度0-32位
 	Catalogue *string `json:"catalogue,omitempty"`
 
-	// **参数解释** 中间件包后缀 **取值范围**: 字符长度0-32位
+	// **参数解释** 文件类型 **取值范围**: 字符长度0-32位
 	FileType *string `json:"file_type,omitempty"`
 
 	// **参数解释** 中间件包版本 **取值范围**: 字符长度0-64位

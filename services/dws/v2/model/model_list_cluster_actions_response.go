@@ -15,7 +15,7 @@ type ListClusterActionsResponse struct {
 	// **参数解释**： 任务名称，同入参字段。 **取值范围**： 不涉及。
 	ActionName *string `json:"action_name,omitempty"`
 
-	// **参数解释**： 任务状态。 **取值范围**： 不涉及。
+	// **参数解释**： 任务状态。 **取值范围**： - SUCCESS：成功。 - RUNNING：运行中。 - WAITING：等待中。 - FAILED：失败。 - ROLLBACK_RUNNING：回滚运行中。 - ROLLBACK_SUCCESS：回滚成功。 - ROLLBACK_FAIL：回滚失败。
 	Status *string `json:"status,omitempty"`
 
 	// **参数解释**： 集群名称。 **取值范围**： 不涉及。

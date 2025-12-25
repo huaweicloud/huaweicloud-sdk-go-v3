@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// RelationType **参数解释**： 屏蔽告警通知的实现方式。 **约束限制**： 不涉及。 **取值范围**： - ALARM_RULE：通过告警规则屏蔽告警通知(不支持通过该接口修改，请通过接口“[批量设置告警通知屏蔽规则](BatchUpdateNotificationMasks.xml)”设置)。 - RESOURCE：通过资源屏蔽告警通知。 - RESOURCE_POLICY_NOTIFICATION：通过告警策略屏蔽告警通知。 - EVENT.SYS: 通过事件来蔽告警通知。 - RESOURCE_POLICY_ALARM：（已废弃）通过屏蔽告警计算来屏蔽告警通知。 **默认取值**： 不涉及。
+// RelationType **参数解释**： 屏蔽告警通知的实现方式。 **约束限制**： 不涉及。 **取值范围**： 枚举值，只能为 RESOURCE、RESOURCE_POLICY_NOTIFICATION、EVENT.SYS 长度为[1,32]个字符。 - ALARM_RULE：通过告警规则屏蔽告警通知。 - RESOURCE：通过资源屏蔽告警通知。 - RESOURCE_POLICY_NOTIFICATION：通过告警策略屏蔽告警通知。 - RESOURCE_POLICY_ALARM：（已废弃，不推荐使用）通过屏蔽告警计算来屏蔽告警通知。 - EVENT.SYS 通过事件来屏蔽告警 **默认取值**： 不涉及。
 type RelationType struct {
 	value string
 }
@@ -19,7 +19,6 @@ type RelationTypeEnum struct {
 	RESOURCE                     RelationType
 	RESOURCE_POLICY_NOTIFICATION RelationType
 	RESOURCE_POLICY_ALARM        RelationType
-	EVENT_SYS                    RelationType
 }
 
 func GetRelationTypeEnum() RelationTypeEnum {
@@ -35,9 +34,6 @@ func GetRelationTypeEnum() RelationTypeEnum {
 		},
 		RESOURCE_POLICY_ALARM: RelationType{
 			value: "RESOURCE_POLICY_ALARM",
-		},
-		EVENT_SYS: RelationType{
-			value: "EVENT.SYS",
 		},
 	}
 }

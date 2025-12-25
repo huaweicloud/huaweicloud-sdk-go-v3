@@ -76,7 +76,7 @@ type ClusterDetail struct {
 
 	ParameterGroup *ParameterGroup `json:"parameter_group,omitempty"`
 
-	// **参数解释**： 集群规格。 **取值范围**： 不涉及。
+	// **参数解释**： 集群规格名称。 **取值范围**： 集群规格详情请参见[数据仓库规格](dws_01_00018.html)。
 	NodeType string `json:"node_type"`
 
 	// **参数解释**： 集群规格ID。 **取值范围**： 不涉及。

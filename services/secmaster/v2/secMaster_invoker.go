@@ -5,99 +5,19 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/secmaster/v2/model"
 )
 
-type BatchSearchMetricHitsInvoker struct {
+type CreateAdhocQueryInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *BatchSearchMetricHitsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *CreateAdhocQueryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *BatchSearchMetricHitsInvoker) Invoke() (*model.BatchSearchMetricHitsResponse, error) {
+func (i *CreateAdhocQueryInvoker) Invoke() (*model.CreateAdhocQueryResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.BatchSearchMetricHitsResponse), nil
-	}
-}
-
-type ChangeAlertInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ChangeAlertInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ChangeAlertInvoker) Invoke() (*model.ChangeAlertResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ChangeAlertResponse), nil
-	}
-}
-
-type ChangeIncidentInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ChangeIncidentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ChangeIncidentInvoker) Invoke() (*model.ChangeIncidentResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ChangeIncidentResponse), nil
-	}
-}
-
-type ChangePlaybookInstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ChangePlaybookInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ChangePlaybookInstanceInvoker) Invoke() (*model.ChangePlaybookInstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ChangePlaybookInstanceResponse), nil
-	}
-}
-
-type CopyPlaybookVersionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CopyPlaybookVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CopyPlaybookVersionInvoker) Invoke() (*model.CopyPlaybookVersionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CopyPlaybookVersionResponse), nil
-	}
-}
-
-type CreateAlertInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateAlertInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateAlertInvoker) Invoke() (*model.CreateAlertResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateAlertResponse), nil
+		return result.(*model.CreateAdhocQueryResponse), nil
 	}
 }
 
@@ -117,99 +37,99 @@ func (i *CreateAlertRuleInvoker) Invoke() (*model.CreateAlertRuleResponse, error
 	}
 }
 
-type CreateAlertRuleSimulationInvoker struct {
+type CreateAnalysisScriptInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *CreateAlertRuleSimulationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *CreateAnalysisScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *CreateAlertRuleSimulationInvoker) Invoke() (*model.CreateAlertRuleSimulationResponse, error) {
+func (i *CreateAnalysisScriptInvoker) Invoke() (*model.CreateAnalysisScriptResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.CreateAlertRuleSimulationResponse), nil
+		return result.(*model.CreateAnalysisScriptResponse), nil
 	}
 }
 
-type CreateBatchOrderAlertsInvoker struct {
+type CreateCodeSegmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *CreateBatchOrderAlertsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *CreateCodeSegmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *CreateBatchOrderAlertsInvoker) Invoke() (*model.CreateBatchOrderAlertsResponse, error) {
+func (i *CreateCodeSegmentInvoker) Invoke() (*model.CreateCodeSegmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.CreateBatchOrderAlertsResponse), nil
+		return result.(*model.CreateCodeSegmentResponse), nil
 	}
 }
 
-type CreateDataobjectRelationsInvoker struct {
+type CreateCustomizedCheckitemInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *CreateDataobjectRelationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *CreateCustomizedCheckitemInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *CreateDataobjectRelationsInvoker) Invoke() (*model.CreateDataobjectRelationsResponse, error) {
+func (i *CreateCustomizedCheckitemInvoker) Invoke() (*model.CreateCustomizedCheckitemResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.CreateDataobjectRelationsResponse), nil
+		return result.(*model.CreateCustomizedCheckitemResponse), nil
 	}
 }
 
-type CreateDataspaceInvoker struct {
+type CreateCustomizedCompliancePackageInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *CreateDataspaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *CreateCustomizedCompliancePackageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *CreateDataspaceInvoker) Invoke() (*model.CreateDataspaceResponse, error) {
+func (i *CreateCustomizedCompliancePackageInvoker) Invoke() (*model.CreateCustomizedCompliancePackageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.CreateDataspaceResponse), nil
+		return result.(*model.CreateCustomizedCompliancePackageResponse), nil
 	}
 }
 
-type CreateIncidentInvoker struct {
+type CreateDataTransformationInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *CreateIncidentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *CreateDataTransformationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *CreateIncidentInvoker) Invoke() (*model.CreateIncidentResponse, error) {
+func (i *CreateDataTransformationInvoker) Invoke() (*model.CreateDataTransformationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.CreateIncidentResponse), nil
+		return result.(*model.CreateDataTransformationResponse), nil
 	}
 }
 
-type CreateIndicatorInvoker struct {
+type CreateLayoutFieldInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *CreateIndicatorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *CreateLayoutFieldInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *CreateIndicatorInvoker) Invoke() (*model.CreateIndicatorResponse, error) {
+func (i *CreateLayoutFieldInvoker) Invoke() (*model.CreateLayoutFieldResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.CreateIndicatorResponse), nil
+		return result.(*model.CreateLayoutFieldResponse), nil
 	}
 }
 
@@ -229,131 +149,67 @@ func (i *CreatePipeInvoker) Invoke() (*model.CreatePipeResponse, error) {
 	}
 }
 
-type CreatePlaybookInvoker struct {
+type CreateRetrieveScriptInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *CreatePlaybookInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *CreateRetrieveScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *CreatePlaybookInvoker) Invoke() (*model.CreatePlaybookResponse, error) {
+func (i *CreateRetrieveScriptInvoker) Invoke() (*model.CreateRetrieveScriptResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.CreatePlaybookResponse), nil
+		return result.(*model.CreateRetrieveScriptResponse), nil
 	}
 }
 
-type CreatePlaybookActionInvoker struct {
+type CreateTableInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *CreatePlaybookActionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *CreateTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *CreatePlaybookActionInvoker) Invoke() (*model.CreatePlaybookActionResponse, error) {
+func (i *CreateTableInvoker) Invoke() (*model.CreateTableResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.CreatePlaybookActionResponse), nil
+		return result.(*model.CreateTableResponse), nil
 	}
 }
 
-type CreatePlaybookApproveInvoker struct {
+type CreateTableAnalysisInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *CreatePlaybookApproveInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *CreateTableAnalysisInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *CreatePlaybookApproveInvoker) Invoke() (*model.CreatePlaybookApproveResponse, error) {
+func (i *CreateTableAnalysisInvoker) Invoke() (*model.CreateTableAnalysisResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.CreatePlaybookApproveResponse), nil
+		return result.(*model.CreateTableAnalysisResponse), nil
 	}
 }
 
-type CreatePlaybookRuleInvoker struct {
+type DeleteAdhocQueryInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *CreatePlaybookRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *DeleteAdhocQueryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *CreatePlaybookRuleInvoker) Invoke() (*model.CreatePlaybookRuleResponse, error) {
+func (i *DeleteAdhocQueryInvoker) Invoke() (*model.DeleteAdhocQueryResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.CreatePlaybookRuleResponse), nil
-	}
-}
-
-type CreatePlaybookVersionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreatePlaybookVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreatePlaybookVersionInvoker) Invoke() (*model.CreatePlaybookVersionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreatePlaybookVersionResponse), nil
-	}
-}
-
-type CreatePostPaidOrderInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreatePostPaidOrderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreatePostPaidOrderInvoker) Invoke() (*model.CreatePostPaidOrderResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreatePostPaidOrderResponse), nil
-	}
-}
-
-type CreateWorkspaceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateWorkspaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateWorkspaceInvoker) Invoke() (*model.CreateWorkspaceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateWorkspaceResponse), nil
-	}
-}
-
-type DeleteAlertInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteAlertInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteAlertInvoker) Invoke() (*model.DeleteAlertResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteAlertResponse), nil
+		return result.(*model.DeleteAdhocQueryResponse), nil
 	}
 }
 
@@ -373,131 +229,147 @@ func (i *DeleteAlertRuleInvoker) Invoke() (*model.DeleteAlertRuleResponse, error
 	}
 }
 
-type DeleteDataobjectRelationsInvoker struct {
+type DeleteAnalysisScriptInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *DeleteDataobjectRelationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *DeleteAnalysisScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *DeleteDataobjectRelationsInvoker) Invoke() (*model.DeleteDataobjectRelationsResponse, error) {
+func (i *DeleteAnalysisScriptInvoker) Invoke() (*model.DeleteAnalysisScriptResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.DeleteDataobjectRelationsResponse), nil
+		return result.(*model.DeleteAnalysisScriptResponse), nil
 	}
 }
 
-type DeleteIncidentInvoker struct {
+type DeleteCodeSegmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *DeleteIncidentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *DeleteCodeSegmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *DeleteIncidentInvoker) Invoke() (*model.DeleteIncidentResponse, error) {
+func (i *DeleteCodeSegmentInvoker) Invoke() (*model.DeleteCodeSegmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.DeleteIncidentResponse), nil
+		return result.(*model.DeleteCodeSegmentResponse), nil
 	}
 }
 
-type DeleteIndicatorInvoker struct {
+type DeleteCustomizedCheckitemsInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *DeleteIndicatorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *DeleteCustomizedCheckitemsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *DeleteIndicatorInvoker) Invoke() (*model.DeleteIndicatorResponse, error) {
+func (i *DeleteCustomizedCheckitemsInvoker) Invoke() (*model.DeleteCustomizedCheckitemsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.DeleteIndicatorResponse), nil
+		return result.(*model.DeleteCustomizedCheckitemsResponse), nil
 	}
 }
 
-type DeletePlaybookInvoker struct {
+type DeleteCustomizedCompliancePackagesInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *DeletePlaybookInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *DeleteCustomizedCompliancePackagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *DeletePlaybookInvoker) Invoke() (*model.DeletePlaybookResponse, error) {
+func (i *DeleteCustomizedCompliancePackagesInvoker) Invoke() (*model.DeleteCustomizedCompliancePackagesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.DeletePlaybookResponse), nil
+		return result.(*model.DeleteCustomizedCompliancePackagesResponse), nil
 	}
 }
 
-type DeletePlaybookActionInvoker struct {
+type DeleteDataTransformationInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *DeletePlaybookActionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *DeleteDataTransformationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *DeletePlaybookActionInvoker) Invoke() (*model.DeletePlaybookActionResponse, error) {
+func (i *DeleteDataTransformationInvoker) Invoke() (*model.DeleteDataTransformationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.DeletePlaybookActionResponse), nil
+		return result.(*model.DeleteDataTransformationResponse), nil
 	}
 }
 
-type DeletePlaybookRuleInvoker struct {
+type DeleteLayoutFieldInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *DeletePlaybookRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *DeleteLayoutFieldInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *DeletePlaybookRuleInvoker) Invoke() (*model.DeletePlaybookRuleResponse, error) {
+func (i *DeleteLayoutFieldInvoker) Invoke() (*model.DeleteLayoutFieldResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.DeletePlaybookRuleResponse), nil
+		return result.(*model.DeleteLayoutFieldResponse), nil
 	}
 }
 
-type DeletePlaybookVersionInvoker struct {
+type DeletePipeInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *DeletePlaybookVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *DeletePipeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *DeletePlaybookVersionInvoker) Invoke() (*model.DeletePlaybookVersionResponse, error) {
+func (i *DeletePipeInvoker) Invoke() (*model.DeletePipeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.DeletePlaybookVersionResponse), nil
+		return result.(*model.DeletePipeResponse), nil
 	}
 }
 
-type DeleteWorkspaceInvoker struct {
+type DeleteRetrieveScriptInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *DeleteWorkspaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *DeleteRetrieveScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *DeleteWorkspaceInvoker) Invoke() (*model.DeleteWorkspaceResponse, error) {
+func (i *DeleteRetrieveScriptInvoker) Invoke() (*model.DeleteRetrieveScriptResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.DeleteWorkspaceResponse), nil
+		return result.(*model.DeleteRetrieveScriptResponse), nil
+	}
+}
+
+type DeleteTableInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteTableInvoker) Invoke() (*model.DeleteTableResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTableResponse), nil
 	}
 }
 
@@ -517,6 +389,38 @@ func (i *DisableAlertRuleInvoker) Invoke() (*model.DisableAlertRuleResponse, err
 	}
 }
 
+type DisableDataConsumptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisableDataConsumptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DisableDataConsumptionInvoker) Invoke() (*model.DisableDataConsumptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisableDataConsumptionResponse), nil
+	}
+}
+
+type DisableDataTransformationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisableDataTransformationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DisableDataTransformationInvoker) Invoke() (*model.DisableDataTransformationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisableDataTransformationResponse), nil
+	}
+}
+
 type EnableAlertRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -533,6 +437,38 @@ func (i *EnableAlertRuleInvoker) Invoke() (*model.EnableAlertRuleResponse, error
 	}
 }
 
+type EnableDataConsumptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *EnableDataConsumptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *EnableDataConsumptionInvoker) Invoke() (*model.EnableDataConsumptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.EnableDataConsumptionResponse), nil
+	}
+}
+
+type EnableDataTransformationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *EnableDataTransformationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *EnableDataTransformationInvoker) Invoke() (*model.EnableDataTransformationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.EnableDataTransformationResponse), nil
+	}
+}
+
 type ListAlertRuleMetricsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -546,6 +482,22 @@ func (i *ListAlertRuleMetricsInvoker) Invoke() (*model.ListAlertRuleMetricsRespo
 		return nil, err
 	} else {
 		return result.(*model.ListAlertRuleMetricsResponse), nil
+	}
+}
+
+type ListAlertRuleTemplateMetricsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAlertRuleTemplateMetricsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAlertRuleTemplateMetricsInvoker) Invoke() (*model.ListAlertRuleTemplateMetricsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAlertRuleTemplateMetricsResponse), nil
 	}
 }
 
@@ -581,227 +533,179 @@ func (i *ListAlertRulesInvoker) Invoke() (*model.ListAlertRulesResponse, error) 
 	}
 }
 
-type ListAlertsInvoker struct {
+type ListAnalysisScriptsInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListAlertsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ListAnalysisScriptsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ListAlertsInvoker) Invoke() (*model.ListAlertsResponse, error) {
+func (i *ListAnalysisScriptsInvoker) Invoke() (*model.ListAnalysisScriptsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListAlertsResponse), nil
+		return result.(*model.ListAnalysisScriptsResponse), nil
 	}
 }
 
-type ListDataclassInvoker struct {
+type ListCodeSegmentsInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListDataclassInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ListCodeSegmentsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ListDataclassInvoker) Invoke() (*model.ListDataclassResponse, error) {
+func (i *ListCodeSegmentsInvoker) Invoke() (*model.ListCodeSegmentsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListDataclassResponse), nil
+		return result.(*model.ListCodeSegmentsResponse), nil
 	}
 }
 
-type ListDataclassFieldsInvoker struct {
+type ListDataTransformationMetricsInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListDataclassFieldsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ListDataTransformationMetricsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ListDataclassFieldsInvoker) Invoke() (*model.ListDataclassFieldsResponse, error) {
+func (i *ListDataTransformationMetricsInvoker) Invoke() (*model.ListDataTransformationMetricsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListDataclassFieldsResponse), nil
+		return result.(*model.ListDataTransformationMetricsResponse), nil
 	}
 }
 
-type ListDataobjectRelationsInvoker struct {
+type ListDataTransformationsInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListDataobjectRelationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ListDataTransformationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ListDataobjectRelationsInvoker) Invoke() (*model.ListDataobjectRelationsResponse, error) {
+func (i *ListDataTransformationsInvoker) Invoke() (*model.ListDataTransformationsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListDataobjectRelationsResponse), nil
+		return result.(*model.ListDataTransformationsResponse), nil
 	}
 }
 
-type ListIncidentsInvoker struct {
+type ListDirectoriesInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListIncidentsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ListDirectoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ListIncidentsInvoker) Invoke() (*model.ListIncidentsResponse, error) {
+func (i *ListDirectoriesInvoker) Invoke() (*model.ListDirectoriesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListIncidentsResponse), nil
+		return result.(*model.ListDirectoriesResponse), nil
 	}
 }
 
-type ListIndicatorsInvoker struct {
+type ListLayoutFieldAllInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListIndicatorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ListLayoutFieldAllInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ListIndicatorsInvoker) Invoke() (*model.ListIndicatorsResponse, error) {
+func (i *ListLayoutFieldAllInvoker) Invoke() (*model.ListLayoutFieldAllResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListIndicatorsResponse), nil
+		return result.(*model.ListLayoutFieldAllResponse), nil
 	}
 }
 
-type ListPlaybookActionsInvoker struct {
+type ListPipesInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListPlaybookActionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ListPipesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ListPlaybookActionsInvoker) Invoke() (*model.ListPlaybookActionsResponse, error) {
+func (i *ListPipesInvoker) Invoke() (*model.ListPipesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListPlaybookActionsResponse), nil
+		return result.(*model.ListPipesResponse), nil
 	}
 }
 
-type ListPlaybookApprovesInvoker struct {
+type ListRetrieveScriptsInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListPlaybookApprovesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ListRetrieveScriptsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ListPlaybookApprovesInvoker) Invoke() (*model.ListPlaybookApprovesResponse, error) {
+func (i *ListRetrieveScriptsInvoker) Invoke() (*model.ListRetrieveScriptsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListPlaybookApprovesResponse), nil
+		return result.(*model.ListRetrieveScriptsResponse), nil
 	}
 }
 
-type ListPlaybookAuditLogsInvoker struct {
+type ListTableHistogramsInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListPlaybookAuditLogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ListTableHistogramsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ListPlaybookAuditLogsInvoker) Invoke() (*model.ListPlaybookAuditLogsResponse, error) {
+func (i *ListTableHistogramsInvoker) Invoke() (*model.ListTableHistogramsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListPlaybookAuditLogsResponse), nil
+		return result.(*model.ListTableHistogramsResponse), nil
 	}
 }
 
-type ListPlaybookInstancesInvoker struct {
+type ListTableLogsInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListPlaybookInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ListTableLogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ListPlaybookInstancesInvoker) Invoke() (*model.ListPlaybookInstancesResponse, error) {
+func (i *ListTableLogsInvoker) Invoke() (*model.ListTableLogsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListPlaybookInstancesResponse), nil
+		return result.(*model.ListTableLogsResponse), nil
 	}
 }
 
-type ListPlaybookVersionsInvoker struct {
+type ListTablesInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListPlaybookVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ListTablesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ListPlaybookVersionsInvoker) Invoke() (*model.ListPlaybookVersionsResponse, error) {
+func (i *ListTablesInvoker) Invoke() (*model.ListTablesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListPlaybookVersionsResponse), nil
-	}
-}
-
-type ListPlaybooksInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListPlaybooksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListPlaybooksInvoker) Invoke() (*model.ListPlaybooksResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListPlaybooksResponse), nil
-	}
-}
-
-type ListWorkflowsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListWorkflowsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListWorkflowsInvoker) Invoke() (*model.ListWorkflowsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListWorkflowsResponse), nil
-	}
-}
-
-type ListWorkspacesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListWorkspacesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListWorkspacesInvoker) Invoke() (*model.ListWorkspacesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListWorkspacesResponse), nil
+		return result.(*model.ListTablesResponse), nil
 	}
 }
 
@@ -821,19 +725,51 @@ func (i *SearchBaselineInvoker) Invoke() (*model.SearchBaselineResponse, error) 
 	}
 }
 
-type ShowAlertInvoker struct {
+type SearchCheckitemsInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ShowAlertInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *SearchCheckitemsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ShowAlertInvoker) Invoke() (*model.ShowAlertResponse, error) {
+func (i *SearchCheckitemsInvoker) Invoke() (*model.SearchCheckitemsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ShowAlertResponse), nil
+		return result.(*model.SearchCheckitemsResponse), nil
+	}
+}
+
+type SearchCompliancePackagesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchCompliancePackagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SearchCompliancePackagesInvoker) Invoke() (*model.SearchCompliancePackagesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchCompliancePackagesResponse), nil
+	}
+}
+
+type ShowAdhocResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAdhocResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAdhocResultInvoker) Invoke() (*model.ShowAdhocResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAdhocResultResponse), nil
 	}
 }
 
@@ -869,163 +805,211 @@ func (i *ShowAlertRuleTemplateInvoker) Invoke() (*model.ShowAlertRuleTemplateRes
 	}
 }
 
-type ShowIncidentInvoker struct {
+type ShowAnalysisScriptInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ShowIncidentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ShowAnalysisScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ShowIncidentInvoker) Invoke() (*model.ShowIncidentResponse, error) {
+func (i *ShowAnalysisScriptInvoker) Invoke() (*model.ShowAnalysisScriptResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ShowIncidentResponse), nil
+		return result.(*model.ShowAnalysisScriptResponse), nil
 	}
 }
 
-type ShowIndicatorDetailInvoker struct {
+type ShowCheckitemDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ShowIndicatorDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ShowCheckitemDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ShowIndicatorDetailInvoker) Invoke() (*model.ShowIndicatorDetailResponse, error) {
+func (i *ShowCheckitemDetailInvoker) Invoke() (*model.ShowCheckitemDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ShowIndicatorDetailResponse), nil
+		return result.(*model.ShowCheckitemDetailResponse), nil
 	}
 }
 
-type ShowPlaybookInvoker struct {
+type ShowCodeSegmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ShowPlaybookInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ShowCodeSegmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ShowPlaybookInvoker) Invoke() (*model.ShowPlaybookResponse, error) {
+func (i *ShowCodeSegmentInvoker) Invoke() (*model.ShowCodeSegmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ShowPlaybookResponse), nil
+		return result.(*model.ShowCodeSegmentResponse), nil
 	}
 }
 
-type ShowPlaybookInstanceInvoker struct {
+type ShowCompliancePackageDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ShowPlaybookInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ShowCompliancePackageDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ShowPlaybookInstanceInvoker) Invoke() (*model.ShowPlaybookInstanceResponse, error) {
+func (i *ShowCompliancePackageDetailInvoker) Invoke() (*model.ShowCompliancePackageDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ShowPlaybookInstanceResponse), nil
+		return result.(*model.ShowCompliancePackageDetailResponse), nil
 	}
 }
 
-type ShowPlaybookMonitorsInvoker struct {
+type ShowDataConsumptionInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ShowPlaybookMonitorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ShowDataConsumptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ShowPlaybookMonitorsInvoker) Invoke() (*model.ShowPlaybookMonitorsResponse, error) {
+func (i *ShowDataConsumptionInvoker) Invoke() (*model.ShowDataConsumptionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ShowPlaybookMonitorsResponse), nil
+		return result.(*model.ShowDataConsumptionResponse), nil
 	}
 }
 
-type ShowPlaybookRuleInvoker struct {
+type ShowDataTransformationInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ShowPlaybookRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ShowDataTransformationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ShowPlaybookRuleInvoker) Invoke() (*model.ShowPlaybookRuleResponse, error) {
+func (i *ShowDataTransformationInvoker) Invoke() (*model.ShowDataTransformationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ShowPlaybookRuleResponse), nil
+		return result.(*model.ShowDataTransformationResponse), nil
 	}
 }
 
-type ShowPlaybookStatisticsInvoker struct {
+type ShowLayoutFieldInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ShowPlaybookStatisticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ShowLayoutFieldInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ShowPlaybookStatisticsInvoker) Invoke() (*model.ShowPlaybookStatisticsResponse, error) {
+func (i *ShowLayoutFieldInfoInvoker) Invoke() (*model.ShowLayoutFieldInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ShowPlaybookStatisticsResponse), nil
+		return result.(*model.ShowLayoutFieldInfoResponse), nil
 	}
 }
 
-type ShowPlaybookTopologyInvoker struct {
+type ShowMonitorStatsInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ShowPlaybookTopologyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ShowMonitorStatsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ShowPlaybookTopologyInvoker) Invoke() (*model.ShowPlaybookTopologyResponse, error) {
+func (i *ShowMonitorStatsInvoker) Invoke() (*model.ShowMonitorStatsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ShowPlaybookTopologyResponse), nil
+		return result.(*model.ShowMonitorStatsResponse), nil
 	}
 }
 
-type ShowPlaybookVersionInvoker struct {
+type ShowPipeInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ShowPlaybookVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ShowPipeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ShowPlaybookVersionInvoker) Invoke() (*model.ShowPlaybookVersionResponse, error) {
+func (i *ShowPipeInvoker) Invoke() (*model.ShowPipeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ShowPlaybookVersionResponse), nil
+		return result.(*model.ShowPipeResponse), nil
 	}
 }
 
-type ShowWorkspaceInvoker struct {
+type ShowRetrieveScriptInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ShowWorkspaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ShowRetrieveScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ShowWorkspaceInvoker) Invoke() (*model.ShowWorkspaceResponse, error) {
+func (i *ShowRetrieveScriptInvoker) Invoke() (*model.ShowRetrieveScriptResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ShowWorkspaceResponse), nil
+		return result.(*model.ShowRetrieveScriptResponse), nil
+	}
+}
+
+type ShowSubscriptionResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSubscriptionResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSubscriptionResourcesInvoker) Invoke() (*model.ShowSubscriptionResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSubscriptionResourcesResponse), nil
+	}
+}
+
+type ShowTableInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTableInvoker) Invoke() (*model.ShowTableResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTableResponse), nil
+	}
+}
+
+type ShowVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowVersionInvoker) Invoke() (*model.ShowVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVersionResponse), nil
 	}
 }
 
@@ -1045,98 +1029,194 @@ func (i *UpdateAlertRuleInvoker) Invoke() (*model.UpdateAlertRuleResponse, error
 	}
 }
 
-type UpdateIndicatorInvoker struct {
+type UpdateAnalysisScriptInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *UpdateIndicatorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *UpdateAnalysisScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *UpdateIndicatorInvoker) Invoke() (*model.UpdateIndicatorResponse, error) {
+func (i *UpdateAnalysisScriptInvoker) Invoke() (*model.UpdateAnalysisScriptResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.UpdateIndicatorResponse), nil
+		return result.(*model.UpdateAnalysisScriptResponse), nil
 	}
 }
 
-type UpdatePlaybookInvoker struct {
+type UpdateCheckitemInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *UpdatePlaybookInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *UpdateCheckitemInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *UpdatePlaybookInvoker) Invoke() (*model.UpdatePlaybookResponse, error) {
+func (i *UpdateCheckitemInvoker) Invoke() (*model.UpdateCheckitemResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.UpdatePlaybookResponse), nil
+		return result.(*model.UpdateCheckitemResponse), nil
 	}
 }
 
-type UpdatePlaybookActionInvoker struct {
+type UpdateCodeSegmentInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *UpdatePlaybookActionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *UpdateCodeSegmentInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *UpdatePlaybookActionInvoker) Invoke() (*model.UpdatePlaybookActionResponse, error) {
+func (i *UpdateCodeSegmentInvoker) Invoke() (*model.UpdateCodeSegmentResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.UpdatePlaybookActionResponse), nil
+		return result.(*model.UpdateCodeSegmentResponse), nil
 	}
 }
 
-type UpdatePlaybookRuleInvoker struct {
+type UpdateCompliancePackageInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *UpdatePlaybookRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *UpdateCompliancePackageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *UpdatePlaybookRuleInvoker) Invoke() (*model.UpdatePlaybookRuleResponse, error) {
+func (i *UpdateCompliancePackageInvoker) Invoke() (*model.UpdateCompliancePackageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.UpdatePlaybookRuleResponse), nil
+		return result.(*model.UpdateCompliancePackageResponse), nil
 	}
 }
 
-type UpdatePlaybookVersionInvoker struct {
+type UpdateDataTransformationInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *UpdatePlaybookVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *UpdateDataTransformationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *UpdatePlaybookVersionInvoker) Invoke() (*model.UpdatePlaybookVersionResponse, error) {
+func (i *UpdateDataTransformationInvoker) Invoke() (*model.UpdateDataTransformationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.UpdatePlaybookVersionResponse), nil
+		return result.(*model.UpdateDataTransformationResponse), nil
 	}
 }
 
-type UpdateWorkspaceInvoker struct {
+type UpdateLayoutFieldInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *UpdateWorkspaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *UpdateLayoutFieldInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *UpdateWorkspaceInvoker) Invoke() (*model.UpdateWorkspaceResponse, error) {
+func (i *UpdateLayoutFieldInvoker) Invoke() (*model.UpdateLayoutFieldResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.UpdateWorkspaceResponse), nil
+		return result.(*model.UpdateLayoutFieldResponse), nil
+	}
+}
+
+type UpdatePipeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePipeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePipeInvoker) Invoke() (*model.UpdatePipeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePipeResponse), nil
+	}
+}
+
+type UpdatePipeSchemaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePipeSchemaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePipeSchemaInvoker) Invoke() (*model.UpdatePipeSchemaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePipeSchemaResponse), nil
+	}
+}
+
+type UpdateRetrieveScriptInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateRetrieveScriptInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateRetrieveScriptInvoker) Invoke() (*model.UpdateRetrieveScriptResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateRetrieveScriptResponse), nil
+	}
+}
+
+type UpdateTableInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateTableInvoker) Invoke() (*model.UpdateTableResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTableResponse), nil
+	}
+}
+
+type UpdateTableSchemaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTableSchemaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateTableSchemaInvoker) Invoke() (*model.UpdateTableSchemaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTableSchemaResponse), nil
+	}
+}
+
+type CreateSqlValidationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSqlValidationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSqlValidationInvoker) Invoke() (*model.CreateSqlValidationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSqlValidationResponse), nil
 	}
 }

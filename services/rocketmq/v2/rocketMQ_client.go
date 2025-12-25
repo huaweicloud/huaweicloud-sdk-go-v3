@@ -82,6 +82,27 @@ func (c *RocketMQClient) BatchDeleteInstancesInvoker(request *model.BatchDeleteI
 	return &BatchDeleteInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteRocketMqMigrationTask 批量删除元数据迁移任务
+//
+// 批量删除元数据迁移任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RocketMQClient) BatchDeleteRocketMqMigrationTask(request *model.BatchDeleteRocketMqMigrationTaskRequest) (*model.BatchDeleteRocketMqMigrationTaskResponse, error) {
+	requestDef := GenReqDefForBatchDeleteRocketMqMigrationTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteRocketMqMigrationTaskResponse), nil
+	}
+}
+
+// BatchDeleteRocketMqMigrationTaskInvoker 批量删除元数据迁移任务
+func (c *RocketMQClient) BatchDeleteRocketMqMigrationTaskInvoker(request *model.BatchDeleteRocketMqMigrationTaskRequest) *BatchDeleteRocketMqMigrationTaskInvoker {
+	requestDef := GenReqDefForBatchDeleteRocketMqMigrationTask()
+	return &BatchDeleteRocketMqMigrationTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchUpdateConsumerGroup 批量修改消费组
 //
 // 批量修改消费组。
@@ -290,27 +311,6 @@ func (c *RocketMQClient) DeleteInstance(request *model.DeleteInstanceRequest) (*
 func (c *RocketMQClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequest) *DeleteInstanceInvoker {
 	requestDef := GenReqDefForDeleteInstance()
 	return &DeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteRocketMqMigrationTask 删除元数据迁移任务
-//
-// 删除元数据迁移任务。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *RocketMQClient) DeleteRocketMqMigrationTask(request *model.DeleteRocketMqMigrationTaskRequest) (*model.DeleteRocketMqMigrationTaskResponse, error) {
-	requestDef := GenReqDefForDeleteRocketMqMigrationTask()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteRocketMqMigrationTaskResponse), nil
-	}
-}
-
-// DeleteRocketMqMigrationTaskInvoker 删除元数据迁移任务
-func (c *RocketMQClient) DeleteRocketMqMigrationTaskInvoker(request *model.DeleteRocketMqMigrationTaskRequest) *DeleteRocketMqMigrationTaskInvoker {
-	requestDef := GenReqDefForDeleteRocketMqMigrationTask()
-	return &DeleteRocketMqMigrationTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteUser 删除用户

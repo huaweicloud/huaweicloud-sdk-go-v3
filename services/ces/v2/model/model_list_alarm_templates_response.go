@@ -12,7 +12,7 @@ type ListAlarmTemplatesResponse struct {
 	// 告警模板列表
 	AlarmTemplates *[]AlarmTemplates `json:"alarm_templates,omitempty"`
 
-	// 告警模板记录总数
+	// **参数解释**： 告警模板记录总数。 **取值范围**： 字符串长度在 10 到 9999999 之间。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

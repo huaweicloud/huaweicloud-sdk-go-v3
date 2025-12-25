@@ -14,6 +14,9 @@ type CreateResourceGroup struct {
 
 	// **参数解释** 资源的维度信息 **约束限制** 不超过4个维度
 	Dimensions []MetricsDimension `json:"dimensions"`
+
+	// **参数解释** 关联id **约束限制** 不涉及 **取值范围** 由数字、字母,_和-组成长度[1,128] **默认取值** 不涉及
+	RelationId *string `json:"relation_id,omitempty"`
 }
 
 func (o CreateResourceGroup) String() string {

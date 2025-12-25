@@ -12,7 +12,7 @@ type EventSubUpdateRequest struct {
 	// **参数解释**： 事件订阅名称。 **取值范围**： 不涉及。
 	Name string `json:"name"`
 
-	// **参数解释**： 事件源类型。 **取值范围**： 支持cluster，backup，disaster-recovery。
+	// **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
 	SourceType *string `json:"source_type,omitempty"`
 
 	// **参数解释**： 事件源ID。 **取值范围**： 不涉及。
@@ -36,7 +36,7 @@ type EventSubUpdateRequest struct {
 	// **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
 	NotificationTargetName string `json:"notification_target_name"`
 
-	// **参数解释**： 消息通知类型。只支持SMN。 **取值范围**： SMN。
+	// **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
 	NotificationTargetType string `json:"notification_target_type"`
 }
 

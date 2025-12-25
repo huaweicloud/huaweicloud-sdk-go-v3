@@ -12,25 +12,25 @@ import (
 // ListAlarmTemplatesRequest Request Object
 type ListAlarmTemplatesRequest struct {
 
-	// 分页查询时查询的起始位置，表示从第几条数据开始，默认为0
+	// **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 查询结果条数的限制值，取值范围为[1,100]，默认值为100
+	// **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”
+	// **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值**： 不涉及。
 	Namespace *string `json:"namespace,omitempty"`
 
-	// 资源维度，必须以字母开头，多维度用\",\"分隔，只能包含0-9/a-z/A-Z/_/-，每个维度的最大长度为32
+	// **参数解释**： 资源维度名称。 **约束限制**： 不涉及。 **取值范围**： 多维度用\",\"分割，只能包含0-9、a-z、A-Z、_、-、#、/、(、），每个维度的最大长度为32。字符串总长度最小为1，最大为131。 **默认取值**： 不涉及。
 	DimName *string `json:"dim_name,omitempty"`
 
-	// 模板类型(system代表默认指标模板，custom代表自定义指标模板，system_event代表默认事件模板，custom_event代表自定义事件模板，system_custom_event代表全部事件模板),不传返回全部指标模板
+	// **参数解释**： 模板类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - system：默认指标模板。 - custom： 自定义指标模板。    - system_event： 默认事件模板。 - custom_event： 自定义事件模板。    - system_custom_event： 全部事件模板。     **默认取值**： 不传返回全部指标模板。
 	TemplateType *ListAlarmTemplatesRequestTemplateType `json:"template_type,omitempty"`
 
 	// 告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]，支持模糊匹配
 	TemplateName *string `json:"template_name,omitempty"`
 
-	// （已废弃）支持按照产品名称粒度进行查询告警模板，产品名称一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"
+	// **参数解释**： 产品层级跨维规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。          **默认取值**： 不涉及。
 	ProductName *string `json:"product_name,omitempty"`
 }
 

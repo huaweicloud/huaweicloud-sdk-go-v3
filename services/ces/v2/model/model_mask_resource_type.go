@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// MaskResourceType 屏蔽资源类型。ALL_INSTANCE：全部资源，MULTI_INSTANCE：多实例资源
+// MaskResourceType **参数解释**： 屏蔽资源类型。 **约束限制**： 不涉及。 **取值范围**: - ALL_INSTANCE：全部资源 - MULTI_INSTANCE：多实例资源 **默认取值**： 不涉及。
 type MaskResourceType struct {
 	value string
 }

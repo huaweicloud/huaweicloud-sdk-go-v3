@@ -23,10 +23,10 @@ type WebCmsVulDetailInfo struct {
 	// **参数解释**: 披露时间 **取值范围**: 最小值0，最大值2^63-1
 	PublicTime *int64 `json:"public_time,omitempty"`
 
-	// **参数解释**: 漏洞标签中文名称 **取值范围**: 字符长度0-64
+	// **参数解释**: 漏洞标签中文名称（已废弃，后续删除） **取值范围**: 字符长度0-64
 	VulLabelZh *string `json:"vulLabel_zh,omitempty"`
 
-	// **参数解释**: 漏洞标签英文名称 **取值范围**: 字符长度0-64
+	// **参数解释**: 漏洞标签英文名称（已废弃，后续删除） **取值范围**: 字符长度0-64
 	VulLabelEn *string `json:"vulLabel_en,omitempty"`
 
 	// **参数解释**: 修复必要性 **取值范围**: - 1：高 - 2：中 - 3：低

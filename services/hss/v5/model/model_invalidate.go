@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Invalidate 失效，包含如下:   - true ：是   - fasle ：否
+// Invalidate 失效，包含如下:   - true ：是   - false ：否
 type Invalidate struct {
 }
 

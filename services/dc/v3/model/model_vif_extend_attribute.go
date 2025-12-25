@@ -9,22 +9,22 @@ import (
 	"strings"
 )
 
-// VifExtendAttribute 接口BFD/NQA等可靠性检测信息,只有配置BFD和NQA的扩展参数才会显示扩展参数信息，扩展参数信息[（预留字段，暂不支持）](tag:dt)
+// VifExtendAttribute 虚拟接口BFD/NQA等可靠性检测的扩展信息
 type VifExtendAttribute struct {
 
-	// 虚拟接口的可用性检测类型
+	// 虚拟接口的可用性检测类型。取值范围： - nqa：网络质量分析 - bfd：双向转发检测
 	HaType *VifExtendAttributeHaType `json:"ha_type,omitempty"`
 
-	// 检测的具体的配置模式
+	// 虚拟接口可用性检测的配置模式。取值范围： - auto_single：自动单跳bfd - auto_multi：自动多跳bfd - static_single：静态单跳bfd - static_multi：静态多跳bfd - enhance_nqa：增强型nqa
 	HaMode *VifExtendAttributeHaMode `json:"ha_mode,omitempty"`
 
 	// 检测的重试次数
 	DetectMultiplier *int32 `json:"detect_multiplier,omitempty"`
 
-	// 检测的接收时长间隔
+	// 检测的接收时长间隔，单位为毫秒。   - 当ha_type为nqa时，实际生效的时间间隔为按秒为单位将输入的数值向上取整，例如输入1500毫秒，实际时间间隔为2秒；   - 当ha_type为bfd时，实际生效的时间间隔为按毫秒为单位的输入数值。最小值为200毫秒，最大值为1000毫秒。
 	MinRxInterval *int32 `json:"min_rx_interval,omitempty"`
 
-	// 检测的发送时长间隔
+	// 检测的发送时长间隔，单位为毫秒。   - 当ha_type为nqa时，实际生效的时间间隔为按秒为单位将输入的数值向上取整，例如输入1500毫秒，实际时间间隔为2秒；   - 当ha_type为bfd时，实际生效的时间间隔为按毫秒为单位的输入数值。最小值为200毫秒，最大值为1000毫秒。
 	MinTxInterval *int32 `json:"min_tx_interval,omitempty"`
 
 	// 检测的远端的标识，用于静态BFD
@@ -32,6 +32,12 @@ type VifExtendAttribute struct {
 
 	// 检测的本端的标识，用于静态BFD
 	LocalDisclaim *int32 `json:"local_disclaim,omitempty"`
+
+	// 检测的远端的标识，用于静态ipv6 BFD
+	Ipv6RemoteDisclaim *int32 `json:"ipv6_remote_disclaim,omitempty"`
+
+	// 检测的本端的标识，用于静态ipv6 BFD
+	Ipv6LocalDisclaim *int32 `json:"ipv6_local_disclaim,omitempty"`
 }
 
 func (o VifExtendAttribute) String() string {

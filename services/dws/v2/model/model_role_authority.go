@@ -12,7 +12,7 @@ type RoleAuthority struct {
 	// **参数解释**： 角色名称。 **取值范围**： 不涉及。
 	Role *string `json:"role,omitempty"`
 
-	// **参数解释**： 权限列表。 **取值范围**： 不涉及。
+	// **参数解释**： 权限列表。 **取值范围**： - SELECT：查找 - UPDATE：更新。 - DELETE：删除。
 	RightList *[]string `json:"right_list,omitempty"`
 }
 

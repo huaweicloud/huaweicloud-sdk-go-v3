@@ -53,6 +53,22 @@ func (i *BatchDeleteInstancesInvoker) Invoke() (*model.BatchDeleteInstancesRespo
 	}
 }
 
+type BatchDeleteRocketMqMigrationTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteRocketMqMigrationTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteRocketMqMigrationTaskInvoker) Invoke() (*model.BatchDeleteRocketMqMigrationTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteRocketMqMigrationTaskResponse), nil
+	}
+}
+
 type BatchUpdateConsumerGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -210,22 +226,6 @@ func (i *DeleteInstanceInvoker) Invoke() (*model.DeleteInstanceResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.DeleteInstanceResponse), nil
-	}
-}
-
-type DeleteRocketMqMigrationTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteRocketMqMigrationTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteRocketMqMigrationTaskInvoker) Invoke() (*model.DeleteRocketMqMigrationTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteRocketMqMigrationTaskResponse), nil
 	}
 }
 

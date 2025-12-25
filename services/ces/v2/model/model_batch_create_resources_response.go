@@ -9,7 +9,7 @@ import (
 // BatchCreateResourcesResponse Response Object
 type BatchCreateResourcesResponse struct {
 
-	// 成功添加的资源数目
+	// **参数解释**： 成功添加的资源数目。     **取值范围**： 取值范围为0-1000。
 	SucceedCount   *int32 `json:"succeed_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

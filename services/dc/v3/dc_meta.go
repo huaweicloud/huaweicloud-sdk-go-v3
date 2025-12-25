@@ -1030,6 +1030,94 @@ func GenReqDefForShowResourceTag() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateVifPeerDetection() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/dcaas/vif-peer-detections").
+		WithResponse(new(model.CreateVifPeerDetectionResponse)).
+		WithContentType("application/json; charset=utf-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteVifPeerDetection() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v3/{project_id}/dcaas/vif-peer-detections/{vif_peer_id}").
+		WithResponse(new(model.DeleteVifPeerDetectionResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("VifPeerId").
+		WithJsonTag("vif_peer_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListVifPeerDetections() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/dcaas/vif-peer-detections").
+		WithResponse(new(model.ListVifPeerDetectionsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("VifPeerId").
+		WithJsonTag("vif_peer_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortKey").
+		WithJsonTag("sort_key").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortDir").
+		WithJsonTag("sort_dir").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PageReverse").
+		WithJsonTag("page_reverse").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowVifPeerDetection() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/dcaas/vif-peer-detections/{vif_peer_id}").
+		WithResponse(new(model.ShowVifPeerDetectionResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("VifPeerId").
+		WithJsonTag("vif_peer_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateVirtualGateway() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -1323,6 +1411,26 @@ func GenReqDefForSwitchoverTest() *def.HttpRequestDef {
 		WithPath("/v3/{project_id}/dcaas/switchover-test").
 		WithResponse(new(model.SwitchoverTestResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateExtendAttribute() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3/{project_id}/dcaas/virtual-interfaces/{virtual_interface_id}/extend-attributes").
+		WithResponse(new(model.UpdateExtendAttributeResponse)).
+		WithContentType("application/json; charset=utf-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("VirtualInterfaceId").
+		WithJsonTag("virtual_interface_id").
+		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

@@ -9,10 +9,10 @@ import (
 // ListResourceGroupsResponse Response Object
 type ListResourceGroupsResponse struct {
 
-	// 资源分组总数
+	// **参数解释** 资源分组总数。 **取值范围** 在[0,1000]区间内。
 	Count *int32 `json:"count,omitempty"`
 
-	// 资源分组列表
+	// **参数解释** 资源分组列表。
 	ResourceGroups *[]OneResourceGroupResp `json:"resource_groups,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }

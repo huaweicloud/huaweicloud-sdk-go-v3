@@ -25,7 +25,7 @@ type NodeSpec struct {
 	RootVolume *Volume `json:"rootVolume"`
 
 	// 节点的数据盘参数（目前已支持通过控制台为CCE节点添加第二块数据盘）。 如果数据盘正供容器运行时和Kubelet组件使用，则不可被卸载，否则将导致节点不可用。 针对专属云节点，参数解释与rootVolume一致
-	DataVolumes []Volume `json:"dataVolumes"`
+	DataVolumes *[]Volume `json:"dataVolumes,omitempty"`
 
 	Storage *Storage `json:"storage,omitempty"`
 

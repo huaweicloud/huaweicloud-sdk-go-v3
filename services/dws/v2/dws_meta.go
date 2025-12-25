@@ -30,21 +30,6 @@ func GenReqDefForAddQueueUserList() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForAddSnapshotCrossRegionPolicy() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
-		WithPath("/v1/{project_id}/snapshots/cross-region-policies").
-		WithResponse(new(model.AddSnapshotCrossRegionPolicyResponse)).
-		WithContentType("application/json;charset=UTF-8")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForAddWorkloadPlanStage() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -922,22 +907,6 @@ func GenReqDefForDeleteSnapshot() *def.HttpRequestDef {
 		WithName("SnapshotId").
 		WithJsonTag("snapshot_id").
 		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForDeleteSnapshotCrossRegionPolicy() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodDelete).
-		WithPath("/v1/{project_id}/snapshots/cross-region-policies").
-		WithResponse(new(model.DeleteSnapshotCrossRegionPolicyResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ClusterId").
-		WithJsonTag("cluster_id").
-		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -2611,50 +2580,6 @@ func GenReqDefForListSchemas() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
 		WithJsonTag("offset").
-		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListSnapshotCrossRegion() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/snapshots/cross-regions").
-		WithResponse(new(model.ListSnapshotCrossRegionResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
-		WithLocationType(def.Query))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForListSnapshotCrossRegionPolicy() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v1/{project_id}/snapshots/cross-region-policies").
-		WithResponse(new(model.ListSnapshotCrossRegionPolicyResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ClusterId").
-		WithJsonTag("cluster_id").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Limit").
-		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

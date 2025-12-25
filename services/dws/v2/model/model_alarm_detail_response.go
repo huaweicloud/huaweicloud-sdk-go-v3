@@ -36,7 +36,7 @@ type AlarmDetailResponse struct {
 	// **参数解释**： 告警日期。 **取值范围**： 不涉及。
 	AlarmGenerateDate *string `json:"alarm_generate_date,omitempty"`
 
-	// **参数解释**： 告警状态。 **取值范围**： 不涉及。
+	// **参数解释**： 告警状态。 **取值范围**： - 0：未恢复。 - 1：已恢复。
 	AlarmStatus *string `json:"alarm_status,omitempty"`
 }
 

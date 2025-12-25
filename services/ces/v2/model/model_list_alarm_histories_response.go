@@ -9,10 +9,10 @@ import (
 // ListAlarmHistoriesResponse Response Object
 type ListAlarmHistoriesResponse struct {
 
-	// **参数解释**： alarmHistories列表。
+	// **参数解释**： 告警记录列表。
 	AlarmHistories *[]AlarmHistoryItemV2 `json:"alarm_histories,omitempty"`
 
-	// **参数解释**： 告警记录列表总数。 **取值范围**： 不涉及。
+	// **参数解释**： 告警记录总数。 **取值范围**： [0,2147483647]
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

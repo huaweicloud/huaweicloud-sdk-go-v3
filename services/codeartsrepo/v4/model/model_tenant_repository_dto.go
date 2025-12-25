@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -16,7 +19,7 @@ type TenantRepositoryDto struct {
 	Capacity *float64 `json:"capacity,omitempty"`
 
 	// **参数解释：** 仓库状态。 **取值范围：** - 0，正常。 - 3，冻结。 - 4，关闭。 - 5，清理中。 - 7，删除中。
-	Status *int32 `json:"status,omitempty"`
+	Status *TenantRepositoryDtoStatus `json:"status,omitempty"`
 
 	// **参数解释：** 内容审核结果。 **取值范围：** true，审核通过。 false，审核未通过。
 	ModerationResult *bool `json:"moderation_result,omitempty"`
@@ -47,4 +50,59 @@ func (o TenantRepositoryDto) String() string {
 	}
 
 	return strings.Join([]string{"TenantRepositoryDto", string(data)}, " ")
+}
+
+type TenantRepositoryDtoStatus struct {
+	value int32
+}
+
+type TenantRepositoryDtoStatusEnum struct {
+	E_0 TenantRepositoryDtoStatus
+	E_3 TenantRepositoryDtoStatus
+	E_4 TenantRepositoryDtoStatus
+	E_5 TenantRepositoryDtoStatus
+	E_7 TenantRepositoryDtoStatus
+}
+
+func GetTenantRepositoryDtoStatusEnum() TenantRepositoryDtoStatusEnum {
+	return TenantRepositoryDtoStatusEnum{
+		E_0: TenantRepositoryDtoStatus{
+			value: 0,
+		}, E_3: TenantRepositoryDtoStatus{
+			value: 3,
+		}, E_4: TenantRepositoryDtoStatus{
+			value: 4,
+		}, E_5: TenantRepositoryDtoStatus{
+			value: 5,
+		}, E_7: TenantRepositoryDtoStatus{
+			value: 7,
+		},
+	}
+}
+
+func (c TenantRepositoryDtoStatus) Value() int32 {
+	return c.value
+}
+
+func (c TenantRepositoryDtoStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *TenantRepositoryDtoStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

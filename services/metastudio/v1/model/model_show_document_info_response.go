@@ -30,7 +30,7 @@ type ShowDocumentInfoResponse struct {
 	// 分段长度。
 	ChunkSize *int32 `json:"chunk_size,omitempty"`
 
-	// 分段策略，多个策略之间用逗号分割。 > title:标题分割；separator:分隔符分割
+	// 分段策略，如果添加多个策略用逗号隔开。 取值示例： - title：用标题把一段话分割为多个段落。 - separator：用分隔符把一段话分割为多个段落。
 	ChunkType *string `json:"chunk_type,omitempty"`
 
 	// 分隔符

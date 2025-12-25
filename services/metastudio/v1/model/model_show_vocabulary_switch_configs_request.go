@@ -30,7 +30,7 @@ type ShowVocabularySwitchConfigsRequest struct {
 	// 查询数量
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 类型 租户级自定义读法全局开关:vocabulary
+	// 类型。 * 租户级自定义读法全局开关，示例vocabulary。
 	Key *string `json:"key,omitempty"`
 }
 

@@ -9,13 +9,13 @@ import (
 // ShowInstanceResponse Response Object
 type ShowInstanceResponse struct {
 
-	// **参数解释**： 配置状态。 **取值范围**： 不涉及。
+	// **参数解释**： 配置状态。 **取值范围**： - In-Sync：应用完成。 - Applying：应用中。 - Pending-Reboot：待重启生效。 - Sync-Failure：修改失败。
 	ConfigurationStatus *string `json:"configuration_status,omitempty"`
 
 	// **参数解释**： 参数组ID。 **取值范围**： 不涉及。
 	ParamsGroupId *string `json:"params_group_id,omitempty"`
 
-	// **参数解释**： 类型。 **取值范围**： 不涉及。
+	// **参数解释**： 类型。 **取值范围**： - dws-cn：cn节点。 - dws：dn节点。 - cms：cms节点。 - gtm：gtm节点。 - vw：vw节点。
 	Type *string `json:"type,omitempty"`
 
 	// **参数解释**： 子网ID。 **取值范围**： 不涉及。
@@ -51,7 +51,7 @@ type ShowInstanceResponse struct {
 	// **参数解释**： 更新时间。 **取值范围**： 不涉及。
 	Updated *string `json:"updated,omitempty"`
 
-	// **参数解释**： 状态。 **取值范围**： 不涉及。
+	// **参数解释**： 状态。 **取值范围**： - BUILD：创建中 - ACTIVE：可用 - FAILED：不可用 - DELETED：已删除 - REBOOTING：重启中 - ERROR：创建失败 - SHUTDOWN：关机
 	Status *string `json:"status,omitempty"`
 
 	// **参数解释**： 节点名称。 **取值范围**： 不涉及。

@@ -45,7 +45,7 @@ type AntiVirusPolicyResponseInfo struct {
 	// **参数解释**: 处置动作 **取值范围**: - auto：自动处置 - manual：人工处置
 	Action *string `json:"action,omitempty"`
 
-	// 失效，包含如下:   - true ：是   - fasle ：否
+	// 失效，包含如下:   - true ：是   - false ：否
 	Invalidate *bool `json:"invalidate,omitempty"`
 
 	// **参数解释**: 影响主机数量 **取值范围**: 最小值0，最大值2147483647

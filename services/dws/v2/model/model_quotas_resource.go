@@ -9,7 +9,7 @@ import (
 // QuotasResource **参数解释**： 资源配额详情。 **取值范围**： 不涉及。
 type QuotasResource struct {
 
-	// **参数解释**： 项目资源类型。 **取值范围**： 不涉及。
+	// **参数解释**： 项目资源类型。 **取值范围**： - rds：节点类型 - cpu：cpu类型 - mem：内存类型 - diskNum：磁盘数量类型 - diskGB：磁盘大小类型
 	Type string `json:"type"`
 
 	// **参数解释**： 已使用的资源数量。 **取值范围**： 不涉及。

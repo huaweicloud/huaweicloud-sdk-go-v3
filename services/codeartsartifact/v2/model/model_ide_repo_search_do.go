@@ -24,7 +24,7 @@ type IdeRepoSearchDo struct {
 	ProjectId *string `json:"project_id,omitempty"`
 
 	// 是否在项目中
-	InProject *string `json:"in_project,omitempty"`
+	InProject *bool `json:"in_project,omitempty"`
 }
 
 func (o IdeRepoSearchDo) String() string {

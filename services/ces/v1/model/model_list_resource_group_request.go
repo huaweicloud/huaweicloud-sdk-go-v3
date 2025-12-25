@@ -12,19 +12,19 @@ import (
 // ListResourceGroupRequest Request Object
 type ListResourceGroupRequest struct {
 
-	// 资源分组的名称；长度为1-128，只能包含0-9/a-z/A-Z/_/-或汉字；如：ResourceGroup-Test01。
+	// **参数解释** 资源分组名称。 **约束限制** 不涉及。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。 **默认取值** 不涉及。
 	GroupName *string `json:"group_name,omitempty"`
 
-	// 资源分组的ID，长度为1-128，只能包含0-9/a-z/A-Z；如：rg16063743652226ew93e64p。
+	// **参数解释** 资源分组ID。 **约束限制** 不涉及。 **取值范围** 以\"rg\"开头，后面跟着22个字母或数字。 **默认取值** 不涉及。
 	GroupId *string `json:"group_id,omitempty"`
 
-	// 资源分组健康状态，值可为health、unhealth、no_alarm_rule；health表示健康，unhealth表示不健康，no_alarm_rule表示未配置告警规则
+	// **参数解释** 资源分组健康状态。 **约束限制** 不涉及。 **取值范围** - health: 表示健康 - unhealth: 表示不健康 - no_alarm_rule: 表示未配置告警规则 **默认取值** 不涉及。
 	Status *ListResourceGroupRequestStatus `json:"status,omitempty"`
 
-	// 分页起始值，类型为integer，默认值为0。
+	// **参数解释** 分页起始值。 **约束限制** 不涉及。 **取值范围** 在[0,9999999]区间内。 **默认取值** 0
 	Start *int32 `json:"start,omitempty"`
 
-	// 单次查询的条数限制，取值范围(0,100]，默认值为100， 用于限制结果数据条数。
+	// **参数解释** 单次查询的条数限制。 **约束限制** 不涉及。 **取值范围** 在[1,100]区间内。 **默认取值** 100
 	Limit *int32 `json:"limit,omitempty"`
 }
 

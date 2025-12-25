@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// FilterResp **参数解释**： 聚合方式。         **取值范围**： average： 平均值，variance：方差，min：最小值，max：最大值，sum：求和。
+// FilterResp **参数解释**： 聚合方式。         **取值范围**： - average：平均值 - variance：方差 - min：最小值 - max：最大值 - sum：求和
 type FilterResp struct {
 }
 

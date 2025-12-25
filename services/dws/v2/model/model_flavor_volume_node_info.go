@@ -9,7 +9,7 @@ import (
 // FlavorVolumeNodeInfo **参数解释**： 规格磁盘信息。 **取值范围**： 不涉及。
 type FlavorVolumeNodeInfo struct {
 
-	// **参数解释**： 节点使用存储类型。 **取值范围**： 不涉及。
+	// **参数解释**： 节点使用存储类型。 **取值范围**： - SATA：普通IO。 - SAS：高IO。 - SSD：超高IO。 - ESSD：极速型SSD。 - GPSSD：通用型SSD。
 	VolumeType string `json:"volume_type"`
 
 	// **参数解释**： 节点使用的磁盘数量。 **取值范围**： 不涉及。

@@ -823,6 +823,90 @@ func (c *DcClient) ShowResourceTagInvoker(request *model.ShowResourceTagRequest)
 	return &ShowResourceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateVifPeerDetection 创建虚拟接口对等体连通性探测实例
+//
+// 当您想对虚拟接口对等体的远端网关的连通性进行探测时，可以通过调用此接口创建一个虚拟接口对等体连通性探测实例来实现。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) CreateVifPeerDetection(request *model.CreateVifPeerDetectionRequest) (*model.CreateVifPeerDetectionResponse, error) {
+	requestDef := GenReqDefForCreateVifPeerDetection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateVifPeerDetectionResponse), nil
+	}
+}
+
+// CreateVifPeerDetectionInvoker 创建虚拟接口对等体连通性探测实例
+func (c *DcClient) CreateVifPeerDetectionInvoker(request *model.CreateVifPeerDetectionRequest) *CreateVifPeerDetectionInvoker {
+	requestDef := GenReqDefForCreateVifPeerDetection()
+	return &CreateVifPeerDetectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteVifPeerDetection 删除虚拟接口对等体连通性探测实例
+//
+// 当您想不再保留虚拟接口对等体连通性探测实例时，您可以通过调用此接口将其删除。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) DeleteVifPeerDetection(request *model.DeleteVifPeerDetectionRequest) (*model.DeleteVifPeerDetectionResponse, error) {
+	requestDef := GenReqDefForDeleteVifPeerDetection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteVifPeerDetectionResponse), nil
+	}
+}
+
+// DeleteVifPeerDetectionInvoker 删除虚拟接口对等体连通性探测实例
+func (c *DcClient) DeleteVifPeerDetectionInvoker(request *model.DeleteVifPeerDetectionRequest) *DeleteVifPeerDetectionInvoker {
+	requestDef := GenReqDefForDeleteVifPeerDetection()
+	return &DeleteVifPeerDetectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVifPeerDetections 查询虚拟接口对等体连通性探测实例列表
+//
+// 当您的对虚拟接口对等体发起连通性探测后，您可以通过此接口查询多次探测的信息，包括ID、探测开始时间、探测结束时间、探测状态、丢包率等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) ListVifPeerDetections(request *model.ListVifPeerDetectionsRequest) (*model.ListVifPeerDetectionsResponse, error) {
+	requestDef := GenReqDefForListVifPeerDetections()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVifPeerDetectionsResponse), nil
+	}
+}
+
+// ListVifPeerDetectionsInvoker 查询虚拟接口对等体连通性探测实例列表
+func (c *DcClient) ListVifPeerDetectionsInvoker(request *model.ListVifPeerDetectionsRequest) *ListVifPeerDetectionsInvoker {
+	requestDef := GenReqDefForListVifPeerDetections()
+	return &ListVifPeerDetectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVifPeerDetection 查询虚拟接口对等体连通性探测实例
+//
+// 当您的对虚拟接口对等体发起连通性探测后，您可以通过此接口查询单次探测的信息，包括ID、探测开始时间、探测结束时间、探测状态、丢包率等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) ShowVifPeerDetection(request *model.ShowVifPeerDetectionRequest) (*model.ShowVifPeerDetectionResponse, error) {
+	requestDef := GenReqDefForShowVifPeerDetection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVifPeerDetectionResponse), nil
+	}
+}
+
+// ShowVifPeerDetectionInvoker 查询虚拟接口对等体连通性探测实例
+func (c *DcClient) ShowVifPeerDetectionInvoker(request *model.ShowVifPeerDetectionRequest) *ShowVifPeerDetectionInvoker {
+	requestDef := GenReqDefForShowVifPeerDetection()
+	return &ShowVifPeerDetectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateVirtualGateway 创建虚拟网关
 //
 // 创建虚拟网关
@@ -1094,6 +1178,27 @@ func (c *DcClient) SwitchoverTest(request *model.SwitchoverTestRequest) (*model.
 func (c *DcClient) SwitchoverTestInvoker(request *model.SwitchoverTestRequest) *SwitchoverTestInvoker {
 	requestDef := GenReqDefForSwitchoverTest()
 	return &SwitchoverTestInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateExtendAttribute 修改虚拟接口可靠性检测的扩展参数
+//
+// 虚拟接口有bfd与nqa两种可靠性检测方式，您可以通过调用此接口修改可靠性检测的参数，例如检测报文最小发送间隔、检测报文最大发送间隔、检测周期等信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DcClient) UpdateExtendAttribute(request *model.UpdateExtendAttributeRequest) (*model.UpdateExtendAttributeResponse, error) {
+	requestDef := GenReqDefForUpdateExtendAttribute()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateExtendAttributeResponse), nil
+	}
+}
+
+// UpdateExtendAttributeInvoker 修改虚拟接口可靠性检测的扩展参数
+func (c *DcClient) UpdateExtendAttributeInvoker(request *model.UpdateExtendAttributeRequest) *UpdateExtendAttributeInvoker {
+	requestDef := GenReqDefForUpdateExtendAttribute()
+	return &UpdateExtendAttributeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateVifPeer 更新虚拟接口对等体

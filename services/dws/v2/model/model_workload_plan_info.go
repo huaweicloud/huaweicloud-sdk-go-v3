@@ -9,7 +9,7 @@ import (
 // WorkloadPlanInfo **参数解释**： 资源管理计划。 **取值范围**： 不涉及。
 type WorkloadPlanInfo struct {
 
-	// **参数解释**： 计划状态。 **取值范围**： 不涉及。
+	// **参数解释**： 计划状态。 **取值范围**： - 0：表示计划未执行 - 1：表示计划执行中
 	Status *int32 `json:"status,omitempty"`
 
 	// **参数解释**： 项目ID。 **取值范围**： 不涉及。

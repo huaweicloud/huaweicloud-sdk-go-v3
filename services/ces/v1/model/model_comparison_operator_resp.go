@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ComparisonOperatorResp **参数解释**： 告警阈值的比较条件。 **取值范围**： 只能是>、=、<、>=、<=、!=。
+// ComparisonOperatorResp **参数解释**： 阈值符号。     **取值范围**： 支持的值为(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave);cycle_decrease为环比下降,cycle_increase为环比上升,cycle_wave为环比波动。
 type ComparisonOperatorResp struct {
 }
 

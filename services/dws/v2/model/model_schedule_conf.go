@@ -15,7 +15,7 @@ type ScheduleConf struct {
 	// **参数解释**： 调度结束时间。 **取值范围**： 不涉及。
 	ScheduleEnd *string `json:"schedule_end,omitempty"`
 
-	// **参数解释**： 调度类型。 **取值范围**： 不涉及。
+	// **参数解释**： 调度类型。 **取值范围**： - timeRange：时间范围。
 	ScheduleType *string `json:"schedule_type,omitempty"`
 
 	// **参数解释**： 调度日期。 **取值范围**： 不涉及。

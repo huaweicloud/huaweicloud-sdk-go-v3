@@ -12,16 +12,16 @@ import (
 // ListNotificationMasksRequest Request Object
 type ListNotificationMasksRequest struct {
 
-	// 分页偏移量
+	// **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 分页大小
+	// **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 排序关键字，与sort_dir同时使用。 目前只支持create_time与update_time create_time表示按创建时间排序，update_time表示按修改时间排序
+	// **参数解释**： 排序关键字，与sort_dir同时使用。 **约束限制**： 目前只支持create_time与update_time **取值范围**： - create_time：按创建时间排序 - update_time：按修改时间排序 **默认取值**： 不涉及。
 	SortKey *ListNotificationMasksRequestSortKey `json:"sort_key,omitempty"`
 
-	// 排序顺序，与sort_key同时使用。DESC表示降序排序；ASC表示升序排序；
+	// **参数解释**： 排序顺序，与sort_key同时使用。 **约束限制**： 不涉及。 **取值范围**： - DESC：降序排序。 - ASC：升序排序。 **默认取值**： 不涉及。
 	SortDir *ListNotificationMasksRequestSortDir `json:"sort_dir,omitempty"`
 
 	Body *ListNotificationMaskRequestBody `json:"body,omitempty"`

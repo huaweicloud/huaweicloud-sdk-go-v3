@@ -26,45 +26,45 @@ type PostAlarmsReqV2 struct {
 	// **参数解释**： 资源列表。 **约束限制**： 告警规则类型为全部资源、资源分组时，资源维度值传空；告警规则类型为指定资源时，资源维度值必填，可以同时指定监控多个资源。 最多可以指定1000个资源维度。
 	Resources [][]Dimension `json:"resources"`
 
-	// **参数解释**： 告警策略。 **约束限制**： 当alarm_template_id字段为空时必填，不为空时不填。最多包含50个策略。
+	// **参数解释**： 告警策略。 **约束限制**： 当alarm_template_id字段为空时必填，不为空时不填。最多包含50个策略，最少为0个。
 	Policies *[]AlarmRulePolicy `json:"policies,omitempty"`
 
 	Type *AlarmType `json:"type"`
 
-	// **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 包含的通知信息的数量最多为10个，最少为0个。
+	// **参数解释**： 触发告警时，通知组/主题订阅的信息。 **约束限制**： 包含的通知对象信息的数量最多为10个，最少为0个。
 	AlarmNotifications *[]Notification `json:"alarm_notifications,omitempty"`
 
-	// **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 包含的通知信息的数量最多为10个，最少为0个。
+	// **参数解释**： 告警恢复时，通知组/主题订阅的信息。 **约束限制**： 包含的通知对象信息的数量最多为10个，最少为0个。
 	OkNotifications *[]Notification `json:"ok_notifications,omitempty"`
 
-	// **参数解释**： 告警通知开启时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+	// **参数解释**： 告警通知开启时间。如 00:00    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
 	NotificationBeginTime *string `json:"notification_begin_time,omitempty"`
 
-	// **参数解释**： 告警通知关闭时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+	// **参数解释**： 告警通知关闭时间。如 08:00  **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
 	NotificationEndTime *string `json:"notification_end_time,omitempty"`
 
 	// **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
 	EffectiveTimezone *string `json:"effective_timezone,omitempty"`
 
-	// **参数解释**： 企业项目ID。     **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”。           **默认取值**： 不涉及。
+	// **参数解释**： 企业项目ID。     **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”。0 代表默认企业项目ID         **默认取值**： 不涉及。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// **参数解释**： 是否开启告警规则。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
 	Enabled bool `json:"enabled"`
 
-	// **参数解释**： 是否开启告警通知。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
+	// **参数解释**： 是否开启告警通知。说明：若notification_enabled为true，对应的alarm_notifications、ok_notifications至少有一个不能为空。    **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
 	NotificationEnabled bool `json:"notification_enabled"`
 
-	// **参数解释**： 告警规则关联告警模板ID，如果传了，告警规则关联的策略会和告警模板策略联动变化。     **约束限制**： 不涉及。 **取值范围**： 以at开头，只包含字母、数字，长度为[2,64]个字符。          **默认取值**： 不涉及。
+	// **参数解释**： 告警规则关联告警模板ID     **约束限制**： 如果传了，告警规则关联的策略会和告警模板策略联动变化。 **取值范围**： 以at开头，只包含字母、数字，长度为[2,64]个字符。          **默认取值**： 不涉及。
 	AlarmTemplateId *string `json:"alarm_template_id,omitempty"`
 
-	// **参数解释**： 租户标签列表。 **约束限制**： 最多包含20个标签。
+	// **参数解释**： 租户标签列表。 **约束限制**： 最多包含20个标签，最少可以不填。
 	Tags *[]ResourceTag `json:"tags,omitempty"`
 
-	// **参数解释**： 产品层级跨维规则创建时需要指明的规则产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。          **默认取值**： 不涉及。
+	// **参数解释**： 创建告警规则，资源层级为云产品时，需要指明规则的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。          **默认取值**： 不涉及。
 	ProductName *string `json:"product_name,omitempty"`
 
-	// **参数解释**： 产品层级跨维规则创建时需要指明为产品层级规则，resource_level取值为product即为云产品类型，不填或者取值为dimension则为子维度类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：云产品。 - dimension：子维度。 **默认取值**： 子维度。
+	// **参数解释**： 创建告警规则，需要指定的资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：云产品类型。 - dimension：子维度类型。 **默认取值**： 子维度。
 	ResourceLevel *PostAlarmsReqV2ResourceLevel `json:"resource_level,omitempty"`
 }
 

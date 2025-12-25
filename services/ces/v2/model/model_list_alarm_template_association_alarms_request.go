@@ -9,14 +9,14 @@ import (
 // ListAlarmTemplateAssociationAlarmsRequest Request Object
 type ListAlarmTemplateAssociationAlarmsRequest struct {
 
-	// 告警模板的ID，以at开头，后跟字母、数字，长度最长为64
-	TemplateId string `json:"template_id"`
-
-	// 分页查询时查询的起始位置，表示从第几条数据开始，默认为0
+	// **参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 查询结果条数的限制值，取值范围为[1,100]，默认值为100
+	// **参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100
 	Limit *int32 `json:"limit,omitempty"`
+
+	// **参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。
+	TemplateId string `json:"template_id"`
 }
 
 func (o ListAlarmTemplateAssociationAlarmsRequest) String() string {

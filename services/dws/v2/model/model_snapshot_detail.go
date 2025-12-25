@@ -27,10 +27,10 @@ type SnapshotDetail struct {
 	// **参数解释**： 快照大小，单位GB。 **取值范围**： 不涉及。
 	Size float64 `json:"size"`
 
-	// **参数解释**： 快照状态： **取值范围**： CREATING：创建中。 AVAILABLE：可用。 UNAVAILABLE：不可用。 FROZEN：普通冻结。 POLICE_FROZEN：公安冻结。
+	// **参数解释**： 快照状态： **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN：普通冻结。 - POLICE_FROZEN：公安冻结。
 	Status string `json:"status"`
 
-	// **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+	// **参数解释**： 快照创建类型。 **取值范围**： - AUTO: 自动。 - MANUAL: 手动。
 	Type string `json:"type"`
 
 	// **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。
@@ -91,7 +91,7 @@ type SnapshotDetail struct {
 	// **参数解释**： guestAgent版本。 **取值范围**： 不涉及。
 	GuestAgentVersion *string `json:"guest_agent_version,omitempty"`
 
-	// **参数解释**： 集群状态。 **取值范围**： 不涉及。
+	// **参数解释**： 集群状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - RESTORING：恢复中。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
 	ClusterStatus *string `json:"cluster_status,omitempty"`
 
 	// **参数解释**： 集群任务状态。 **取值范围**： 不涉及。

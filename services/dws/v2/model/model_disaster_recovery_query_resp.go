@@ -15,10 +15,10 @@ type DisasterRecoveryQueryResp struct {
 	// **参数解释**： 容灾名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// **参数解释**： 容灾类型。 **取值范围**： 不涉及。
+	// **参数解释**： 容灾类型。 **取值范围**： - az，跨az容灾。 - region，跨region容灾。
 	DrType *string `json:"dr_type,omitempty"`
 
-	// **参数解释**： 容灾状态。 **取值范围**： 不涉及。
+	// **参数解释**： 容灾状态。 **取值范围**： - creating，容灾创建中。 - create_failed，容灾创建失败。 - unstart，容灾未启动。 - starting，容灾启动中。 - start_failed，容灾启动失败。 - running，容灾运行中。 - stopping，容灾停止中。 - stop_failed，容灾停止失败。 - switchovering，灾备切换中。 - abnormal，容灾异常。 - deleting，容灾删除中。 - deleted，容灾已删除。
 	Status *string `json:"status,omitempty"`
 
 	PrimaryCluster *DisasterRecoveryCluster `json:"primary_cluster,omitempty"`

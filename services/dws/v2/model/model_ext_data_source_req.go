@@ -12,7 +12,7 @@ type ExtDataSourceReq struct {
 	// **参数解释**： 外部数据源ID。当数据源为MRS时为必选字段。 **取值范围**： 不涉及。
 	DataSourceId *string `json:"data_source_id,omitempty"`
 
-	// **参数解释**： 数据源类型。 **取值范围**： 不涉及。
+	// **参数解释**： 数据源类型。 **取值范围**： - OBS: obs数据源。 - LAKE_FORMATION: lake_formation数据源。 - MRS: mrs数据源。
 	Type string `json:"type"`
 
 	// **参数解释**： 外部数据源名称。 **取值范围**： 仅可包含大小写字母、数字、下划线，1到64个字符。

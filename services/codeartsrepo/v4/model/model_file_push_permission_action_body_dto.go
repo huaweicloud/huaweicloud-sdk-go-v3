@@ -15,7 +15,7 @@ type FilePushPermissionActionBodyDto struct {
 	Enable *bool `json:"enable,omitempty"`
 
 	// **参数解释：** 用户ID列表。 **约束限制：** 不涉及。 **取值范围：** Integer **默认取值：** 不涉及。
-	UserIds *[]interface{} `json:"user_ids,omitempty"`
+	UserIds *[]int32 `json:"user_ids,omitempty"`
 
 	// **参数解释：** 成员组ID列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	UserTeamIds *[]int32 `json:"user_team_ids,omitempty"`

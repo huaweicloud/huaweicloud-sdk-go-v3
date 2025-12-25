@@ -21,7 +21,7 @@ func HssClientBuilder() *httpclient.HcHttpClientBuilder {
 
 // AddCceIntegrationProtection 新建cce集成防护配置
 //
-// 新建cce集成防护配置
+// 新建cce集成防护配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) AddCceIntegrationProtection(request *model.AddCceIntegrationProtectionRequest) (*model.AddCceIntegrationProtectionResponse, error) {
@@ -42,7 +42,7 @@ func (c *HssClient) AddCceIntegrationProtectionInvoker(request *model.AddCceInte
 
 // AddLoginWhiteList 添加登录白名单
 //
-// 添加登录白名单
+// 添加登录白名单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) AddLoginWhiteList(request *model.AddLoginWhiteListRequest) (*model.AddLoginWhiteListResponse, error) {
@@ -63,7 +63,7 @@ func (c *HssClient) AddLoginWhiteListInvoker(request *model.AddLoginWhiteListReq
 
 // AddPolicy 添加防护策略
 //
-// 添加防护策略：创建防护策略，包含策略名称、相关规则开启状态、防护动作以及检测规则配置
+// 添加防护策略：创建防护策略，包含策略名称、相关规则开启状态、防护动作以及检测规则配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) AddPolicy(request *model.AddPolicyRequest) (*model.AddPolicyResponse, error) {
@@ -84,7 +84,7 @@ func (c *HssClient) AddPolicyInvoker(request *model.AddPolicyRequest) *AddPolicy
 
 // AddSystemUserWhiteList 添加系统用户白名单
 //
-// 添加系统用户白名单
+// 添加系统用户白名单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) AddSystemUserWhiteList(request *model.AddSystemUserWhiteListRequest) (*model.AddSystemUserWhiteListResponse, error) {
@@ -105,7 +105,7 @@ func (c *HssClient) AddSystemUserWhiteListInvoker(request *model.AddSystemUserWh
 
 // BatchAddAccounts 批量添加账号
 //
-// 批量添加账号
+// 批量添加账号。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) BatchAddAccounts(request *model.BatchAddAccountsRequest) (*model.BatchAddAccountsResponse, error) {
@@ -126,7 +126,7 @@ func (c *HssClient) BatchAddAccountsInvoker(request *model.BatchAddAccountsReque
 
 // BatchChangeEvent 全量处理告警事件
 //
-// 全量处理告警事件
+// 全量处理告警事件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) BatchChangeEvent(request *model.BatchChangeEventRequest) (*model.BatchChangeEventResponse, error) {
@@ -147,7 +147,7 @@ func (c *HssClient) BatchChangeEventInvoker(request *model.BatchChangeEventReque
 
 // BatchCreateTags 批量创建标签
 //
-// 批量创建标签
+// 批量创建标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) BatchCreateTags(request *model.BatchCreateTagsRequest) (*model.BatchCreateTagsResponse, error) {
@@ -168,7 +168,7 @@ func (c *HssClient) BatchCreateTagsInvoker(request *model.BatchCreateTagsRequest
 
 // BatchDeleteTags 批量删除标签
 //
-// 批量删除标签
+// 批量删除标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) BatchDeleteTags(request *model.BatchDeleteTagsRequest) (*model.BatchDeleteTagsResponse, error) {
@@ -189,7 +189,7 @@ func (c *HssClient) BatchDeleteTagsInvoker(request *model.BatchDeleteTagsRequest
 
 // BatchModifyPortStatus 修改开放端口状态
 //
-// 修改开放端口状态
+// 修改开放端口状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) BatchModifyPortStatus(request *model.BatchModifyPortStatusRequest) (*model.BatchModifyPortStatusResponse, error) {
@@ -210,7 +210,7 @@ func (c *HssClient) BatchModifyPortStatusInvoker(request *model.BatchModifyPortS
 
 // ChangeBlockedIp 解除已拦截IP
 //
-// 解除已拦截IP
+// 解除已拦截IP。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeBlockedIp(request *model.ChangeBlockedIpRequest) (*model.ChangeBlockedIpResponse, error) {
@@ -231,7 +231,7 @@ func (c *HssClient) ChangeBlockedIpInvoker(request *model.ChangeBlockedIpRequest
 
 // ChangeClusterEvents 修改告警状态
 //
-// 修改告警状态
+// 修改告警状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeClusterEvents(request *model.ChangeClusterEventsRequest) (*model.ChangeClusterEventsResponse, error) {
@@ -252,7 +252,7 @@ func (c *HssClient) ChangeClusterEventsInvoker(request *model.ChangeClusterEvent
 
 // ChangeClusterProtectionPolicy 修改集群防护策略
 //
-// 修改集群防护策略
+// 修改集群防护策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeClusterProtectionPolicy(request *model.ChangeClusterProtectionPolicyRequest) (*model.ChangeClusterProtectionPolicyResponse, error) {
@@ -273,7 +273,7 @@ func (c *HssClient) ChangeClusterProtectionPolicyInvoker(request *model.ChangeCl
 
 // ChangeContainerStatus 管理容器生命周期
 //
-// 管理容器生命周期
+// 管理容器生命周期。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeContainerStatus(request *model.ChangeContainerStatusRequest) (*model.ChangeContainerStatusResponse, error) {
@@ -294,7 +294,7 @@ func (c *HssClient) ChangeContainerStatusInvoker(request *model.ChangeContainerS
 
 // ChangeEvent 处理告警事件
 //
-// 处理告警事件
+// 处理告警事件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeEvent(request *model.ChangeEventRequest) (*model.ChangeEventResponse, error) {
@@ -315,7 +315,7 @@ func (c *HssClient) ChangeEventInvoker(request *model.ChangeEventRequest) *Chang
 
 // ChangeIsolatedFile 恢复已隔离文件
 //
-// 恢复已隔离文件
+// 恢复已隔离文件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeIsolatedFile(request *model.ChangeIsolatedFileRequest) (*model.ChangeIsolatedFileResponse, error) {
@@ -336,7 +336,7 @@ func (c *HssClient) ChangeIsolatedFileInvoker(request *model.ChangeIsolatedFileR
 
 // ChangeMalwareCollectStatus 开启或关闭恶意软件云查样本收集配置
 //
-// 开启或关闭恶意软件云查样本收集配置
+// 开启或关闭恶意软件云查样本收集配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeMalwareCollectStatus(request *model.ChangeMalwareCollectStatusRequest) (*model.ChangeMalwareCollectStatusResponse, error) {
@@ -357,7 +357,7 @@ func (c *HssClient) ChangeMalwareCollectStatusInvoker(request *model.ChangeMalwa
 
 // CreateClusterProtectionPolicy 新建集群防护策略
 //
-// 新建集群防护策略
+// 新建集群防护策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateClusterProtectionPolicy(request *model.CreateClusterProtectionPolicyRequest) (*model.CreateClusterProtectionPolicyResponse, error) {
@@ -378,7 +378,7 @@ func (c *HssClient) CreateClusterProtectionPolicyInvoker(request *model.CreateCl
 
 // CreateClustersInfo 同步集群信息
 //
-// 同步集群信息
+// 同步集群信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateClustersInfo(request *model.CreateClustersInfoRequest) (*model.CreateClustersInfoResponse, error) {
@@ -399,7 +399,7 @@ func (c *HssClient) CreateClustersInfoInvoker(request *model.CreateClustersInfoR
 
 // CreateContainerNetworkPolicy 容器集群网络添加配置策略
 //
-// 容器集群网络添加配置策略
+// 容器集群网络添加配置策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateContainerNetworkPolicy(request *model.CreateContainerNetworkPolicyRequest) (*model.CreateContainerNetworkPolicyResponse, error) {
@@ -420,7 +420,7 @@ func (c *HssClient) CreateContainerNetworkPolicyInvoker(request *model.CreateCon
 
 // CreateDecoyPortPolicy 新增动态端口蜜罐策略
 //
-// 新增动态端口蜜罐策略
+// 新增动态端口蜜罐策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateDecoyPortPolicy(request *model.CreateDecoyPortPolicyRequest) (*model.CreateDecoyPortPolicyResponse, error) {
@@ -441,7 +441,7 @@ func (c *HssClient) CreateDecoyPortPolicyInvoker(request *model.CreateDecoyPortP
 
 // CreateGlobalAssetScanTask 创建全局资产扫描任务
 //
-// 创建全局资产扫描任务
+// 创建全局资产扫描任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateGlobalAssetScanTask(request *model.CreateGlobalAssetScanTaskRequest) (*model.CreateGlobalAssetScanTaskResponse, error) {
@@ -462,7 +462,7 @@ func (c *HssClient) CreateGlobalAssetScanTaskInvoker(request *model.CreateGlobal
 
 // CreateSecurityGroupPolicy 创建安全组策略
 //
-// 创建安全组策略(云原生网络模型)
+// 创建安全组策略(云原生网络模型)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateSecurityGroupPolicy(request *model.CreateSecurityGroupPolicyRequest) (*model.CreateSecurityGroupPolicyResponse, error) {
@@ -483,7 +483,7 @@ func (c *HssClient) CreateSecurityGroupPolicyInvoker(request *model.CreateSecuri
 
 // DeleteAccount 删除账号
 //
-// 删除账号
+// 删除账号。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteAccount(request *model.DeleteAccountRequest) (*model.DeleteAccountResponse, error) {
@@ -504,7 +504,7 @@ func (c *HssClient) DeleteAccountInvoker(request *model.DeleteAccountRequest) *D
 
 // DeleteClusterProtectionPolicy 删除集群防护策略
 //
-// 删除集群防护策略
+// 删除集群防护策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteClusterProtectionPolicy(request *model.DeleteClusterProtectionPolicyRequest) (*model.DeleteClusterProtectionPolicyResponse, error) {
@@ -525,7 +525,7 @@ func (c *HssClient) DeleteClusterProtectionPolicyInvoker(request *model.DeleteCl
 
 // DeleteContainerNetworkPolicy 容器集群网络删除配置策略
 //
-// 容器集群网络删除配置策略
+// 容器集群网络删除配置策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteContainerNetworkPolicy(request *model.DeleteContainerNetworkPolicyRequest) (*model.DeleteContainerNetworkPolicyResponse, error) {
@@ -546,7 +546,7 @@ func (c *HssClient) DeleteContainerNetworkPolicyInvoker(request *model.DeleteCon
 
 // DeleteDecoyPortHostPolicy 关闭主机动态端口蜜罐策略
 //
-// 关闭主机动态端口蜜罐策略
+// 关闭主机动态端口蜜罐策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteDecoyPortHostPolicy(request *model.DeleteDecoyPortHostPolicyRequest) (*model.DeleteDecoyPortHostPolicyResponse, error) {
@@ -567,7 +567,7 @@ func (c *HssClient) DeleteDecoyPortHostPolicyInvoker(request *model.DeleteDecoyP
 
 // DeleteDecoyPortPolicy 删除动态端口蜜罐策略
 //
-// 删除动态端口蜜罐策略
+// 删除动态端口蜜罐策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteDecoyPortPolicy(request *model.DeleteDecoyPortPolicyRequest) (*model.DeleteDecoyPortPolicyResponse, error) {
@@ -588,7 +588,7 @@ func (c *HssClient) DeleteDecoyPortPolicyInvoker(request *model.DeleteDecoyPortP
 
 // DeleteIsolatedFile 删除已隔离文件
 //
-// 删除已隔离文件
+// 删除已隔离文件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteIsolatedFile(request *model.DeleteIsolatedFileRequest) (*model.DeleteIsolatedFileResponse, error) {
@@ -609,7 +609,7 @@ func (c *HssClient) DeleteIsolatedFileInvoker(request *model.DeleteIsolatedFileR
 
 // DeletePolicy 删除防护策略
 //
-// 删除防护策略：删除策略，已经在使用的防护策略不能删除
+// 删除防护策略：删除策略，已经在使用的防护策略不能删除。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeletePolicy(request *model.DeletePolicyRequest) (*model.DeletePolicyResponse, error) {
@@ -630,7 +630,7 @@ func (c *HssClient) DeletePolicyInvoker(request *model.DeletePolicyRequest) *Del
 
 // DeleteResourceInstanceTag 删除资源标签
 //
-// 删除单个资源下的标签
+// 删除单个资源下的标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteResourceInstanceTag(request *model.DeleteResourceInstanceTagRequest) (*model.DeleteResourceInstanceTagResponse, error) {
@@ -651,7 +651,7 @@ func (c *HssClient) DeleteResourceInstanceTagInvoker(request *model.DeleteResour
 
 // DeleteSecurityGroupPolicy 删除安全组策略
 //
-// 删除安全组策略(云原生网络模型)
+// 删除安全组策略(云原生网络模型)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteSecurityGroupPolicy(request *model.DeleteSecurityGroupPolicyRequest) (*model.DeleteSecurityGroupPolicyResponse, error) {
@@ -672,7 +672,7 @@ func (c *HssClient) DeleteSecurityGroupPolicyInvoker(request *model.DeleteSecuri
 
 // DownloadAssetFile 导出资产指纹信息
 //
-// 导出资产指纹信息
+// 导出资产指纹信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DownloadAssetFile(request *model.DownloadAssetFileRequest) (*model.DownloadAssetFileResponse, error) {
@@ -693,7 +693,7 @@ func (c *HssClient) DownloadAssetFileInvoker(request *model.DownloadAssetFileReq
 
 // DownloadEventSourceFile 下载告警源文件
 //
-// 下载告警源文件
+// 下载告警源文件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DownloadEventSourceFile(request *model.DownloadEventSourceFileRequest) (*model.DownloadEventSourceFileResponse, error) {
@@ -714,7 +714,7 @@ func (c *HssClient) DownloadEventSourceFileInvoker(request *model.DownloadEventS
 
 // EnableTrustService 开启可信服务
 //
-// 开启可信服务
+// 开启可信服务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) EnableTrustService(request *model.EnableTrustServiceRequest) (*model.EnableTrustServiceResponse, error) {
@@ -735,7 +735,7 @@ func (c *HssClient) EnableTrustServiceInvoker(request *model.EnableTrustServiceR
 
 // ExportContainerList 创建容器导出任务
 //
-// 创建容器导出任务
+// 创建容器导出任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ExportContainerList(request *model.ExportContainerListRequest) (*model.ExportContainerListResponse, error) {
@@ -756,7 +756,7 @@ func (c *HssClient) ExportContainerListInvoker(request *model.ExportContainerLis
 
 // ExportEventRequest 导出漏洞请求
 //
-// 导出入侵事件请求
+// 导出入侵事件请求。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ExportEventRequest(request *model.ExportEventRequestRequest) (*model.ExportEventRequestResponse, error) {
@@ -777,7 +777,7 @@ func (c *HssClient) ExportEventRequestInvoker(request *model.ExportEventRequestR
 
 // ListAccounts 查询多账号列表
 //
-// 查询多账号列表
+// 查询多账号列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAccounts(request *model.ListAccountsRequest) (*model.ListAccountsResponse, error) {
@@ -798,7 +798,7 @@ func (c *HssClient) ListAccountsInvoker(request *model.ListAccountsRequest) *Lis
 
 // ListAgentInstallScript 查询agent安装脚本
 //
-// 查询agent安装脚本
+// 查询agent安装脚本。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAgentInstallScript(request *model.ListAgentInstallScriptRequest) (*model.ListAgentInstallScriptResponse, error) {
@@ -819,7 +819,7 @@ func (c *HssClient) ListAgentInstallScriptInvoker(request *model.ListAgentInstal
 
 // ListAlarmWhiteList 查询告警白名单列表
 //
-// 查询告警白名单列表
+// 查询告警白名单列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAlarmWhiteList(request *model.ListAlarmWhiteListRequest) (*model.ListAlarmWhiteListResponse, error) {
@@ -840,7 +840,7 @@ func (c *HssClient) ListAlarmWhiteListInvoker(request *model.ListAlarmWhiteListR
 
 // ListAppChangeHistories 获取软件信息的历史变动记录
 //
-// 获取软件信息的历史变动记录
+// 获取软件信息的历史变动记录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAppChangeHistories(request *model.ListAppChangeHistoriesRequest) (*model.ListAppChangeHistoriesResponse, error) {
@@ -861,7 +861,7 @@ func (c *HssClient) ListAppChangeHistoriesInvoker(request *model.ListAppChangeHi
 
 // ListAppStatistics 查询软件列表
 //
-// 查询软件列表，支持通过软件名称查询对应的服务器数
+// 查询软件列表，支持通过软件名称查询对应的服务器数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAppStatistics(request *model.ListAppStatisticsRequest) (*model.ListAppStatisticsResponse, error) {
@@ -882,7 +882,7 @@ func (c *HssClient) ListAppStatisticsInvoker(request *model.ListAppStatisticsReq
 
 // ListApps 查询软件的服务器列表
 //
-// 查询软件的服务器列表
+// 查询软件的服务器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListApps(request *model.ListAppsRequest) (*model.ListAppsResponse, error) {
@@ -903,7 +903,7 @@ func (c *HssClient) ListAppsInvoker(request *model.ListAppsRequest) *ListAppsInv
 
 // ListAutoLaunchChangeHistories 获取自启动项的历史变动记录
 //
-// 获取自启动项的历史变动记录
+// 获取自启动项的历史变动记录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAutoLaunchChangeHistories(request *model.ListAutoLaunchChangeHistoriesRequest) (*model.ListAutoLaunchChangeHistoriesResponse, error) {
@@ -924,7 +924,7 @@ func (c *HssClient) ListAutoLaunchChangeHistoriesInvoker(request *model.ListAuto
 
 // ListAutoLaunchStatistics 查询自启动项信息
 //
-// 查询自启动信息，支持通过传入自启动名称查询启动类型和服务器数
+// 查询自启动信息，支持通过传入自启动名称查询启动类型和服务器数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAutoLaunchStatistics(request *model.ListAutoLaunchStatisticsRequest) (*model.ListAutoLaunchStatisticsResponse, error) {
@@ -945,7 +945,7 @@ func (c *HssClient) ListAutoLaunchStatisticsInvoker(request *model.ListAutoLaunc
 
 // ListAutoLaunchs 查询自启动项的服务列表
 //
-// 查询自启动项的服务列表
+// 查询自启动项的服务列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAutoLaunchs(request *model.ListAutoLaunchsRequest) (*model.ListAutoLaunchsResponse, error) {
@@ -966,7 +966,7 @@ func (c *HssClient) ListAutoLaunchsInvoker(request *model.ListAutoLaunchsRequest
 
 // ListBlockedIp 查询已拦截IP列表
 //
-// 查询已拦截IP列表
+// 查询已拦截IP列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListBlockedIp(request *model.ListBlockedIpRequest) (*model.ListBlockedIpResponse, error) {
@@ -987,7 +987,7 @@ func (c *HssClient) ListBlockedIpInvoker(request *model.ListBlockedIpRequest) *L
 
 // ListCceClusterConfig 获取集群配置
 //
-// 获取集群配置
+// 获取集群配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListCceClusterConfig(request *model.ListCceClusterConfigRequest) (*model.ListCceClusterConfigResponse, error) {
@@ -1008,7 +1008,7 @@ func (c *HssClient) ListCceClusterConfigInvoker(request *model.ListCceClusterCon
 
 // ListCceClusterDetectRisk 批量获取容器集群风险信息
 //
-// 批量获取容器集群风险信息
+// 批量获取容器集群风险信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListCceClusterDetectRisk(request *model.ListCceClusterDetectRiskRequest) (*model.ListCceClusterDetectRiskResponse, error) {
@@ -1029,7 +1029,7 @@ func (c *HssClient) ListCceClusterDetectRiskInvoker(request *model.ListCceCluste
 
 // ListCheckFeatureRule 查询检测规则列表
 //
-// 查询检测规则列表：查询默认检测规则信息，包含14种检测规则，默认都不开启
+// 查询检测规则列表：查询默认检测规则信息，包含14种检测规则，默认都不开启。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListCheckFeatureRule(request *model.ListCheckFeatureRuleRequest) (*model.ListCheckFeatureRuleResponse, error) {
@@ -1050,7 +1050,7 @@ func (c *HssClient) ListCheckFeatureRuleInvoker(request *model.ListCheckFeatureR
 
 // ListClusterAuditLogs 查询k8s集群审计日志列表
 //
-// 查询k8s集群审计日志列表
+// 查询k8s集群审计日志列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListClusterAuditLogs(request *model.ListClusterAuditLogsRequest) (*model.ListClusterAuditLogsResponse, error) {
@@ -1071,7 +1071,7 @@ func (c *HssClient) ListClusterAuditLogsInvoker(request *model.ListClusterAuditL
 
 // ListClusterEventLogs 查询k8s集群事件列表
 //
-// 查询k8s集群事件列表
+// 查询k8s集群事件列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListClusterEventLogs(request *model.ListClusterEventLogsRequest) (*model.ListClusterEventLogsResponse, error) {
@@ -1092,7 +1092,7 @@ func (c *HssClient) ListClusterEventLogsInvoker(request *model.ListClusterEventL
 
 // ListClusterEvents 获取所有集群中告警事件
 //
-// 获取所有集群中告警事件
+// 获取所有集群中告警事件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListClusterEvents(request *model.ListClusterEventsRequest) (*model.ListClusterEventsResponse, error) {
@@ -1113,7 +1113,7 @@ func (c *HssClient) ListClusterEventsInvoker(request *model.ListClusterEventsReq
 
 // ListClusterProtectOverview 集群防护概览
 //
-// 集群防护概览
+// 集群防护概览。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListClusterProtectOverview(request *model.ListClusterProtectOverviewRequest) (*model.ListClusterProtectOverviewResponse, error) {
@@ -1134,7 +1134,7 @@ func (c *HssClient) ListClusterProtectOverviewInvoker(request *model.ListCluster
 
 // ListClusterProtectPolicyTemplates 查询集群组件防护策略模板列表
 //
-// 查询集群防护策略模板列表
+// 查询集群防护策略模板列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListClusterProtectPolicyTemplates(request *model.ListClusterProtectPolicyTemplatesRequest) (*model.ListClusterProtectPolicyTemplatesResponse, error) {
@@ -1155,7 +1155,7 @@ func (c *HssClient) ListClusterProtectPolicyTemplatesInvoker(request *model.List
 
 // ListClusterProtectionDefaultPolicy 获取集群防护默认策略列表
 //
-// 获取集群防护默认策略列表
+// 获取集群防护默认策略列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListClusterProtectionDefaultPolicy(request *model.ListClusterProtectionDefaultPolicyRequest) (*model.ListClusterProtectionDefaultPolicyResponse, error) {
@@ -1176,7 +1176,7 @@ func (c *HssClient) ListClusterProtectionDefaultPolicyInvoker(request *model.Lis
 
 // ListClusterProtectionInfo 查询集群防护信息
 //
-// 查询集群防护信息
+// 查询集群防护信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListClusterProtectionInfo(request *model.ListClusterProtectionInfoRequest) (*model.ListClusterProtectionInfoResponse, error) {
@@ -1197,7 +1197,7 @@ func (c *HssClient) ListClusterProtectionInfoInvoker(request *model.ListClusterP
 
 // ListClusterProtectionItem 获取集群所有防护项
 //
-// 获取集群所有防护项
+// 获取集群所有防护项。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListClusterProtectionItem(request *model.ListClusterProtectionItemRequest) (*model.ListClusterProtectionItemResponse, error) {
@@ -1218,7 +1218,7 @@ func (c *HssClient) ListClusterProtectionItemInvoker(request *model.ListClusterP
 
 // ListClusterProtectionPolicy 获取集群防护策略列表
 //
-// 获取集群防护策略列表
+// 获取集群防护策略列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListClusterProtectionPolicy(request *model.ListClusterProtectionPolicyRequest) (*model.ListClusterProtectionPolicyResponse, error) {
@@ -1239,7 +1239,7 @@ func (c *HssClient) ListClusterProtectionPolicyInvoker(request *model.ListCluste
 
 // ListClusterProtectionPolicyDetail 查看指定策略的详情
 //
-// 查看指定策略的详情
+// 查看指定策略的详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListClusterProtectionPolicyDetail(request *model.ListClusterProtectionPolicyDetailRequest) (*model.ListClusterProtectionPolicyDetailResponse, error) {
@@ -1260,7 +1260,7 @@ func (c *HssClient) ListClusterProtectionPolicyDetailInvoker(request *model.List
 
 // ListCommonTips 获取部分提示信息
 //
-// 获取部分提示信息
+// 获取部分提示信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListCommonTips(request *model.ListCommonTipsRequest) (*model.ListCommonTipsResponse, error) {
@@ -1281,7 +1281,7 @@ func (c *HssClient) ListCommonTipsInvoker(request *model.ListCommonTipsRequest) 
 
 // ListContainerCmdLogs 查询容器内运行的命令列表
 //
-// 查询容器内运行的命令列表
+// 查询容器内运行的命令列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListContainerCmdLogs(request *model.ListContainerCmdLogsRequest) (*model.ListContainerCmdLogsResponse, error) {
@@ -1302,7 +1302,7 @@ func (c *HssClient) ListContainerCmdLogsInvoker(request *model.ListContainerCmdL
 
 // ListContainerLogs 查询容器日志列表
 //
-// 查询容器日志列表
+// 查询容器日志列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListContainerLogs(request *model.ListContainerLogsRequest) (*model.ListContainerLogsResponse, error) {
@@ -1323,7 +1323,7 @@ func (c *HssClient) ListContainerLogsInvoker(request *model.ListContainerLogsReq
 
 // ListContainerNetworkClusters 查询容器防护的集群信息
 //
-// 查询容器防护的集群信息
+// 查询容器防护的集群信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListContainerNetworkClusters(request *model.ListContainerNetworkClustersRequest) (*model.ListContainerNetworkClustersResponse, error) {
@@ -1344,7 +1344,7 @@ func (c *HssClient) ListContainerNetworkClustersInvoker(request *model.ListConta
 
 // ListContainerNetworkNodeList 查询容器集群VPC网络的节点列表
 //
-// 查询容器集群网络的节点列表
+// 查询容器集群网络的节点列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListContainerNetworkNodeList(request *model.ListContainerNetworkNodeListRequest) (*model.ListContainerNetworkNodeListResponse, error) {
@@ -1365,7 +1365,7 @@ func (c *HssClient) ListContainerNetworkNodeListInvoker(request *model.ListConta
 
 // ListContainerNetworkPolicy 查询容器集群网络的策略列表
 //
-// 查询容器集群网络的策略列表
+// 查询容器集群网络的策略列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListContainerNetworkPolicy(request *model.ListContainerNetworkPolicyRequest) (*model.ListContainerNetworkPolicyResponse, error) {
@@ -1386,7 +1386,7 @@ func (c *HssClient) ListContainerNetworkPolicyInvoker(request *model.ListContain
 
 // ListContainerNodes 查询容器节点列表
 //
-// 查询容器节点列表
+// 查询容器节点列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListContainerNodes(request *model.ListContainerNodesRequest) (*model.ListContainerNodesResponse, error) {
@@ -1407,7 +1407,7 @@ func (c *HssClient) ListContainerNodesInvoker(request *model.ListContainerNodesR
 
 // ListContainers 查询容器基本信息列表
 //
-// 查询容器基本信息列表
+// 查询容器基本信息列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListContainers(request *model.ListContainersRequest) (*model.ListContainersResponse, error) {
@@ -1428,7 +1428,7 @@ func (c *HssClient) ListContainersInvoker(request *model.ListContainersRequest) 
 
 // ListDecoyPortAvailableHost 查看支持配置动态端口蜜罐的主机列表
 //
-// 查看支持配置动态端口蜜罐的主机列表
+// 查看支持配置动态端口蜜罐的主机列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListDecoyPortAvailableHost(request *model.ListDecoyPortAvailableHostRequest) (*model.ListDecoyPortAvailableHostResponse, error) {
@@ -1449,7 +1449,7 @@ func (c *HssClient) ListDecoyPortAvailableHostInvoker(request *model.ListDecoyPo
 
 // ListDecoyPortPolicy 查看动态端口蜜罐策略
 //
-// 查看动态端口蜜罐策略
+// 查看动态端口蜜罐策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListDecoyPortPolicy(request *model.ListDecoyPortPolicyRequest) (*model.ListDecoyPortPolicyResponse, error) {
@@ -1470,7 +1470,7 @@ func (c *HssClient) ListDecoyPortPolicyInvoker(request *model.ListDecoyPortPolic
 
 // ListDockerPlugins 查询插件列表
 //
-// 查询插件列表
+// 查询插件列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListDockerPlugins(request *model.ListDockerPluginsRequest) (*model.ListDockerPluginsResponse, error) {
@@ -1491,7 +1491,7 @@ func (c *HssClient) ListDockerPluginsInvoker(request *model.ListDockerPluginsReq
 
 // ListDownloadExportedFile 下载导出文件
 //
-// 下载导出文件
+// 下载导出文件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListDownloadExportedFile(request *model.ListDownloadExportedFileRequest) (*model.ListDownloadExportedFileResponse, error) {
@@ -1512,7 +1512,7 @@ func (c *HssClient) ListDownloadExportedFileInvoker(request *model.ListDownloadE
 
 // ListEventAttCk 查询ATT&amp;CK攻击阶段统计列表
 //
-// 查询ATT&amp;CK攻击阶段统计列表
+// 查询ATT&amp;CK攻击阶段统计列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListEventAttCk(request *model.ListEventAttCkRequest) (*model.ListEventAttCkResponse, error) {
@@ -1533,7 +1533,7 @@ func (c *HssClient) ListEventAttCkInvoker(request *model.ListEventAttCkRequest) 
 
 // ListEventForensic 查询具体事件的调查取证信息
 //
-// 查询具体事件的调查取证信息
+// 查询具体事件的调查取证信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListEventForensic(request *model.ListEventForensicRequest) (*model.ListEventForensicResponse, error) {
@@ -1554,7 +1554,7 @@ func (c *HssClient) ListEventForensicInvoker(request *model.ListEventForensicReq
 
 // ListEventOperates 查询事件支持的处理类型
 //
-// 查询事件支持的处理类型
+// 查询事件支持的处理类型。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListEventOperates(request *model.ListEventOperatesRequest) (*model.ListEventOperatesResponse, error) {
@@ -1575,7 +1575,7 @@ func (c *HssClient) ListEventOperatesInvoker(request *model.ListEventOperatesReq
 
 // ListEventTopRisk 查询TOP5事件类型统计列表--接口已废弃
 //
-// 查询TOP5事件类型统计列表--接口已废弃
+// 查询TOP5事件类型统计列表--接口已废弃。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListEventTopRisk(request *model.ListEventTopRiskRequest) (*model.ListEventTopRiskResponse, error) {
@@ -1596,7 +1596,7 @@ func (c *HssClient) ListEventTopRiskInvoker(request *model.ListEventTopRiskReque
 
 // ListEventType 查询事件类型统计列表
 //
-// 查询事件类型统计列表
+// 查询事件类型统计列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListEventType(request *model.ListEventTypeRequest) (*model.ListEventTypeResponse, error) {
@@ -1617,7 +1617,7 @@ func (c *HssClient) ListEventTypeInvoker(request *model.ListEventTypeRequest) *L
 
 // ListGlobalAssetScanTask 查询资产全局扫描任务状态
 //
-// 查询资产全局扫描任务状态
+// 查询资产全局扫描任务状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListGlobalAssetScanTask(request *model.ListGlobalAssetScanTaskRequest) (*model.ListGlobalAssetScanTaskResponse, error) {
@@ -1638,7 +1638,7 @@ func (c *HssClient) ListGlobalAssetScanTaskInvoker(request *model.ListGlobalAsse
 
 // ListIsolatedFile 查询已隔离文件列表
 //
-// 查询已隔离文件列表
+// 查询已隔离文件列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListIsolatedFile(request *model.ListIsolatedFileRequest) (*model.ListIsolatedFileResponse, error) {
@@ -1659,7 +1659,7 @@ func (c *HssClient) ListIsolatedFileInvoker(request *model.ListIsolatedFileReque
 
 // ListJarPackageHostInfo 查询指定中间件的服务器列表
 //
-// 查询指定中间件的服务器列表，通过传入中间件名称参数，返回对应的中间件服务器列表
+// 查询指定中间件的服务器列表，通过传入中间件名称参数，返回对应的中间件服务器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListJarPackageHostInfo(request *model.ListJarPackageHostInfoRequest) (*model.ListJarPackageHostInfoResponse, error) {
@@ -1680,7 +1680,7 @@ func (c *HssClient) ListJarPackageHostInfoInvoker(request *model.ListJarPackageH
 
 // ListJarPackageInfo 查询指定主机的中间件信息
 //
-// 查询指定主机的中间件信息
+// 查询指定主机的中间件信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListJarPackageInfo(request *model.ListJarPackageInfoRequest) (*model.ListJarPackageInfoResponse, error) {
@@ -1701,7 +1701,7 @@ func (c *HssClient) ListJarPackageInfoInvoker(request *model.ListJarPackageInfoR
 
 // ListJarPackageStatistics 查询中间件列表
 //
-// 查询中间件列表，支持通过中间件名称查询对应的服务器数
+// 查询中间件列表，支持通过中间件名称查询对应的服务器数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListJarPackageStatistics(request *model.ListJarPackageStatisticsRequest) (*model.ListJarPackageStatisticsResponse, error) {
@@ -1722,7 +1722,7 @@ func (c *HssClient) ListJarPackageStatisticsInvoker(request *model.ListJarPackag
 
 // ListK8sCronJobs 查询cronjobs基本信息列表
 //
-// 查询cronjobs基本信息列表
+// 查询cronjobs基本信息列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListK8sCronJobs(request *model.ListK8sCronJobsRequest) (*model.ListK8sCronJobsResponse, error) {
@@ -1743,7 +1743,7 @@ func (c *HssClient) ListK8sCronJobsInvoker(request *model.ListK8sCronJobsRequest
 
 // ListK8sDaemonSets 查询daemonsets基本信息列表
 //
-// 查询daemonsets基本信息列表
+// 查询daemonsets基本信息列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListK8sDaemonSets(request *model.ListK8sDaemonSetsRequest) (*model.ListK8sDaemonSetsResponse, error) {
@@ -1764,7 +1764,7 @@ func (c *HssClient) ListK8sDaemonSetsInvoker(request *model.ListK8sDaemonSetsReq
 
 // ListK8sDeployments 查询deployment基本信息列表
 //
-// 查询deployment基本信息列表
+// 查询deployment基本信息列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListK8sDeployments(request *model.ListK8sDeploymentsRequest) (*model.ListK8sDeploymentsResponse, error) {
@@ -1785,7 +1785,7 @@ func (c *HssClient) ListK8sDeploymentsInvoker(request *model.ListK8sDeploymentsR
 
 // ListK8sJobs 查询jobs基本信息列表
 //
-// 查询jobs基本信息列表
+// 查询jobs基本信息列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListK8sJobs(request *model.ListK8sJobsRequest) (*model.ListK8sJobsResponse, error) {
@@ -1806,7 +1806,7 @@ func (c *HssClient) ListK8sJobsInvoker(request *model.ListK8sJobsRequest) *ListK
 
 // ListK8sPods 查询pod基本信息列表
 //
-// 查询pod基本信息列表
+// 查询pod基本信息列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListK8sPods(request *model.ListK8sPodsRequest) (*model.ListK8sPodsResponse, error) {
@@ -1827,7 +1827,7 @@ func (c *HssClient) ListK8sPodsInvoker(request *model.ListK8sPodsRequest) *ListK
 
 // ListK8sStatefulSets 查询statefulset基本信息列表
 //
-// 查询statefulset基本信息列表
+// 查询statefulset基本信息列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListK8sStatefulSets(request *model.ListK8sStatefulSetsRequest) (*model.ListK8sStatefulSetsResponse, error) {
@@ -1848,7 +1848,7 @@ func (c *HssClient) ListK8sStatefulSetsInvoker(request *model.ListK8sStatefulSet
 
 // ListKernelModuleHostInfo 查询指定内核模块的服务器列表
 //
-// 查询指定内核模块的服务器列表
+// 查询指定内核模块的服务器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListKernelModuleHostInfo(request *model.ListKernelModuleHostInfoRequest) (*model.ListKernelModuleHostInfoResponse, error) {
@@ -1869,7 +1869,7 @@ func (c *HssClient) ListKernelModuleHostInfoInvoker(request *model.ListKernelMod
 
 // ListKernelModuleInfo 查询指定主机的内核模块信息
 //
-// 查询指定主机的内核模块信息
+// 查询指定主机的内核模块信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListKernelModuleInfo(request *model.ListKernelModuleInfoRequest) (*model.ListKernelModuleInfoResponse, error) {
@@ -1890,7 +1890,7 @@ func (c *HssClient) ListKernelModuleInfoInvoker(request *model.ListKernelModuleI
 
 // ListKernelModuleStatistics 查询内核模块的统计信息
 //
-// 查询内核模块的服务器数
+// 查询内核模块的服务器数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListKernelModuleStatistics(request *model.ListKernelModuleStatisticsRequest) (*model.ListKernelModuleStatisticsResponse, error) {
@@ -1911,7 +1911,7 @@ func (c *HssClient) ListKernelModuleStatisticsInvoker(request *model.ListKernelM
 
 // ListKubernetesClusterDetails 查询容器Kubernetes集群列表
 //
-// 查询容器Kubernetes集群列表
+// 查询容器Kubernetes集群列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListKubernetesClusterDetails(request *model.ListKubernetesClusterDetailsRequest) (*model.ListKubernetesClusterDetailsResponse, error) {
@@ -1932,7 +1932,7 @@ func (c *HssClient) ListKubernetesClusterDetailsInvoker(request *model.ListKuber
 
 // ListKubernetesEndpointDetails 查询容器Kubernetes端点列表
 //
-// 查询容器Kubernetes端点列表
+// 查询容器Kubernetes端点列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListKubernetesEndpointDetails(request *model.ListKubernetesEndpointDetailsRequest) (*model.ListKubernetesEndpointDetailsResponse, error) {
@@ -1953,7 +1953,7 @@ func (c *HssClient) ListKubernetesEndpointDetailsInvoker(request *model.ListKube
 
 // ListKubernetesServiceDetails 查询容器Kubernetes服务列表
 //
-// 查询容器Kubernetes服务列表
+// 查询容器Kubernetes服务列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListKubernetesServiceDetails(request *model.ListKubernetesServiceDetailsRequest) (*model.ListKubernetesServiceDetailsResponse, error) {
@@ -1974,7 +1974,7 @@ func (c *HssClient) ListKubernetesServiceDetailsInvoker(request *model.ListKuber
 
 // ListLoginWhiteList 查询登录白名单列表
 //
-// 查询登录白名单列表
+// 查询登录白名单列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListLoginWhiteList(request *model.ListLoginWhiteListRequest) (*model.ListLoginWhiteListResponse, error) {
@@ -1995,7 +1995,7 @@ func (c *HssClient) ListLoginWhiteListInvoker(request *model.ListLoginWhiteListR
 
 // ListMalwareCollectStatus 查询恶意软件云查样本收集配置开关状态
 //
-// 查询恶意软件云查样本收集配置开关状态
+// 查询恶意软件云查样本收集配置开关状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListMalwareCollectStatus(request *model.ListMalwareCollectStatusRequest) (*model.ListMalwareCollectStatusResponse, error) {
@@ -2016,7 +2016,7 @@ func (c *HssClient) ListMalwareCollectStatusInvoker(request *model.ListMalwareCo
 
 // ListNamespaces 获取集群下的namespace
 //
-// 获取集群下的namespace
+// 获取集群下的namespace。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListNamespaces(request *model.ListNamespacesRequest) (*model.ListNamespacesResponse, error) {
@@ -2037,7 +2037,7 @@ func (c *HssClient) ListNamespacesInvoker(request *model.ListNamespacesRequest) 
 
 // ListOrganizationTree 查询账号组织
 //
-// 查询账号组织
+// 查询账号组织。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListOrganizationTree(request *model.ListOrganizationTreeRequest) (*model.ListOrganizationTreeResponse, error) {
@@ -2058,7 +2058,7 @@ func (c *HssClient) ListOrganizationTreeInvoker(request *model.ListOrganizationT
 
 // ListPluginInstallScript 获取docker插件安装脚本
 //
-// 获取docker插件安装脚本
+// 获取docker插件安装脚本。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListPluginInstallScript(request *model.ListPluginInstallScriptRequest) (*model.ListPluginInstallScriptResponse, error) {
@@ -2079,7 +2079,7 @@ func (c *HssClient) ListPluginInstallScriptInvoker(request *model.ListPluginInst
 
 // ListPortHost 查询指定开放端口的服务器列表
 //
-// 查询具备该端口的主机/容器的服务器列表
+// 查询具备该端口的主机/容器的服务器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListPortHost(request *model.ListPortHostRequest) (*model.ListPortHostResponse, error) {
@@ -2100,7 +2100,7 @@ func (c *HssClient) ListPortHostInvoker(request *model.ListPortHostRequest) *Lis
 
 // ListPortStatistics 查询开放端口统计信息
 //
-// 查询开放端口列表，支持通过传入端口或协议类型查询服务器数
+// 查询开放端口列表，支持通过传入端口或协议类型查询服务器数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListPortStatistics(request *model.ListPortStatisticsRequest) (*model.ListPortStatisticsResponse, error) {
@@ -2121,7 +2121,7 @@ func (c *HssClient) ListPortStatisticsInvoker(request *model.ListPortStatisticsR
 
 // ListPorts 查询单服务器的开放端口列表
 //
-// 查询单服务器的开放端口列表
+// 查询单服务器的开放端口列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListPorts(request *model.ListPortsRequest) (*model.ListPortsResponse, error) {
@@ -2142,7 +2142,7 @@ func (c *HssClient) ListPortsInvoker(request *model.ListPortsRequest) *ListPorts
 
 // ListProcessStatistics 查询进程统计信息
 //
-// 查询进程列表，通过传入进程路径参数查询对应的服务器数
+// 查询进程列表，通过传入进程路径参数查询对应的服务器数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListProcessStatistics(request *model.ListProcessStatisticsRequest) (*model.ListProcessStatisticsResponse, error) {
@@ -2163,7 +2163,7 @@ func (c *HssClient) ListProcessStatisticsInvoker(request *model.ListProcessStati
 
 // ListProcessesHost 查询指定进程的服务器列表
 //
-// 具备该进程的主机/容器的服务器列表
+// 具备该进程的主机/容器的服务器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListProcessesHost(request *model.ListProcessesHostRequest) (*model.ListProcessesHostResponse, error) {
@@ -2184,7 +2184,7 @@ func (c *HssClient) ListProcessesHostInvoker(request *model.ListProcessesHostReq
 
 // ListProjectTags 查询租户当前项目下所有用过的标签
 //
-// 查询租户当前项目下所有用过的标签
+// 查询租户当前项目下所有用过的标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListProjectTags(request *model.ListProjectTagsRequest) (*model.ListProjectTagsResponse, error) {
@@ -2205,7 +2205,7 @@ func (c *HssClient) ListProjectTagsInvoker(request *model.ListProjectTagsRequest
 
 // ListProtectionServers 查询防护服务器列表
 //
-// 查询防护服务器列表：查询防护服务器相关数据，包含服务器名称、ip地址、操作系统、服务器组名称、防护策略、防护状态、微服务防护状态、RASP防护状态、RASP攻击数量信息
+// 查询防护服务器列表：查询防护服务器相关数据，包含服务器名称、ip地址、操作系统、服务器组名称、防护策略、防护状态、微服务防护状态、RASP防护状态、RASP攻击数量信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListProtectionServers(request *model.ListProtectionServersRequest) (*model.ListProtectionServersResponse, error) {
@@ -2226,7 +2226,7 @@ func (c *HssClient) ListProtectionServersInvoker(request *model.ListProtectionSe
 
 // ListQueryExportTask 查询导出任务信息
 //
-// 查询导出任务信息
+// 查询导出任务信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListQueryExportTask(request *model.ListQueryExportTaskRequest) (*model.ListQueryExportTaskResponse, error) {
@@ -2247,7 +2247,7 @@ func (c *HssClient) ListQueryExportTaskInvoker(request *model.ListQueryExportTas
 
 // ListRaspEvents 查询应用防护事件列表
 //
-// 查询应用防护事件列表：展示防护事件相关信息，包含告警级别、服务器名称、告警名称、告警时间、攻击源ip、攻击源url数据
+// 查询应用防护事件列表：展示防护事件相关信息，包含告警级别、服务器名称、告警名称、告警时间、攻击源ip、攻击源url数据。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListRaspEvents(request *model.ListRaspEventsRequest) (*model.ListRaspEventsResponse, error) {
@@ -2268,7 +2268,7 @@ func (c *HssClient) ListRaspEventsInvoker(request *model.ListRaspEventsRequest) 
 
 // ListRaspPolicies 查询防护策略列表
 //
-// 查询防护策略列表：查询创建的防护策略信息，包含防护策略名称、检测规则、关联服务器数量
+// 查询防护策略列表：查询创建的防护策略信息，包含防护策略名称、检测规则、关联服务器数量。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListRaspPolicies(request *model.ListRaspPoliciesRequest) (*model.ListRaspPoliciesResponse, error) {
@@ -2289,7 +2289,7 @@ func (c *HssClient) ListRaspPoliciesInvoker(request *model.ListRaspPoliciesReque
 
 // ListResourceInstanceTag 查询单个资源的资源标签
 //
-// 查询单个资源的资源标签
+// 查询单个资源的资源标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListResourceInstanceTag(request *model.ListResourceInstanceTagRequest) (*model.ListResourceInstanceTagResponse, error) {
@@ -2310,7 +2310,7 @@ func (c *HssClient) ListResourceInstanceTagInvoker(request *model.ListResourceIn
 
 // ListSameEvents 查询某告警事件的相同告警列表
 //
-// 查询某告警事件的相同告警列表
+// 查询某告警事件的相同告警列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListSameEvents(request *model.ListSameEventsRequest) (*model.ListSameEventsResponse, error) {
@@ -2331,7 +2331,7 @@ func (c *HssClient) ListSameEventsInvoker(request *model.ListSameEventsRequest) 
 
 // ListSecurityEvents 查入侵事件列表
 //
-// 查入侵事件列表
+// 查入侵事件列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListSecurityEvents(request *model.ListSecurityEventsRequest) (*model.ListSecurityEventsResponse, error) {
@@ -2352,7 +2352,7 @@ func (c *HssClient) ListSecurityEventsInvoker(request *model.ListSecurityEventsR
 
 // ListSecurityGroupPolicies 查询云原生网络模式2.0的集群已配置的安全组策略
 //
-// 查询云原生网络模式2.0的集群已配置的安全组策略
+// 查询云原生网络模式2.0的集群已配置的安全组策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListSecurityGroupPolicies(request *model.ListSecurityGroupPoliciesRequest) (*model.ListSecurityGroupPoliciesResponse, error) {
@@ -2373,7 +2373,7 @@ func (c *HssClient) ListSecurityGroupPoliciesInvoker(request *model.ListSecurity
 
 // ListSecurityGroups 查询企业项目下所有的安全组列表
 //
-// 查询企业项目下所有的安全组列表
+// 查询企业项目下所有的安全组列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListSecurityGroups(request *model.ListSecurityGroupsRequest) (*model.ListSecurityGroupsResponse, error) {
@@ -2394,7 +2394,7 @@ func (c *HssClient) ListSecurityGroupsInvoker(request *model.ListSecurityGroupsR
 
 // ListSimilarHandledEvents 查询某告警事件关联的已处理的相似告警
 //
-// 查询某告警事件关联的已处理的相似告警
+// 查询某告警事件关联的已处理的相似告警。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListSimilarHandledEvents(request *model.ListSimilarHandledEventsRequest) (*model.ListSimilarHandledEventsResponse, error) {
@@ -2415,7 +2415,7 @@ func (c *HssClient) ListSimilarHandledEventsInvoker(request *model.ListSimilarHa
 
 // ListSystemUserWhiteList 查询系统用户白名单列表
 //
-// 查询系统用户白名单列表
+// 查询系统用户白名单列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListSystemUserWhiteList(request *model.ListSystemUserWhiteListRequest) (*model.ListSystemUserWhiteListResponse, error) {
@@ -2436,7 +2436,7 @@ func (c *HssClient) ListSystemUserWhiteListInvoker(request *model.ListSystemUser
 
 // ListTrustServiceStatus 获取可信服务状态
 //
-// 获取可信服务状态
+// 获取可信服务状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListTrustServiceStatus(request *model.ListTrustServiceStatusRequest) (*model.ListTrustServiceStatusResponse, error) {
@@ -2457,7 +2457,7 @@ func (c *HssClient) ListTrustServiceStatusInvoker(request *model.ListTrustServic
 
 // ListUserChangeHistories 获取账户变动历史信息
 //
-// 获取账户变动历史记录信息
+// 获取账户变动历史记录信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListUserChangeHistories(request *model.ListUserChangeHistoriesRequest) (*model.ListUserChangeHistoriesResponse, error) {
@@ -2478,7 +2478,7 @@ func (c *HssClient) ListUserChangeHistoriesInvoker(request *model.ListUserChange
 
 // ListUserStatistics 查询账号信息列表
 //
-// 查询账号信息列表，支持通过传入账号名称参数查询对应的服务器数
+// 查询账号信息列表，支持通过传入账号名称参数查询对应的服务器数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListUserStatistics(request *model.ListUserStatisticsRequest) (*model.ListUserStatisticsResponse, error) {
@@ -2499,7 +2499,7 @@ func (c *HssClient) ListUserStatisticsInvoker(request *model.ListUserStatisticsR
 
 // ListUsers 查询账号的服务器列表
 //
-// 查询账号的服务器列表
+// 查询账号的服务器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListUsers(request *model.ListUsersRequest) (*model.ListUsersResponse, error) {
@@ -2520,7 +2520,7 @@ func (c *HssClient) ListUsersInvoker(request *model.ListUsersRequest) *ListUsers
 
 // ListWebAppAndServiceStatistics 查询Web服务、Web应用、数据库的统计信息
 //
-// 查询Web服务、Web应用、数据库的服务器数
+// 查询Web服务、Web应用、数据库的服务器数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListWebAppAndServiceStatistics(request *model.ListWebAppAndServiceStatisticsRequest) (*model.ListWebAppAndServiceStatisticsResponse, error) {
@@ -2541,7 +2541,7 @@ func (c *HssClient) ListWebAppAndServiceStatisticsInvoker(request *model.ListWeb
 
 // ListWebAppAndServices 查询指定Web服务、Web应用、数据库的服务器列表
 //
-// 查询指定Web服务、Web应用、数据库的服务器列表
+// 查询指定Web服务、Web应用、数据库的服务器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListWebAppAndServices(request *model.ListWebAppAndServicesRequest) (*model.ListWebAppAndServicesResponse, error) {
@@ -2562,7 +2562,7 @@ func (c *HssClient) ListWebAppAndServicesInvoker(request *model.ListWebAppAndSer
 
 // ListWebFrameworkHostInfo 查询指定Web框架的服务器列表
 //
-// 查询指定Web框架的服务器列表
+// 查询指定Web框架的服务器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListWebFrameworkHostInfo(request *model.ListWebFrameworkHostInfoRequest) (*model.ListWebFrameworkHostInfoResponse, error) {
@@ -2583,7 +2583,7 @@ func (c *HssClient) ListWebFrameworkHostInfoInvoker(request *model.ListWebFramew
 
 // ListWebFrameworkInfo 查询指定主机的Web框架信息
 //
-// 查询指定主机的Web框架信息
+// 查询指定主机的Web框架信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListWebFrameworkInfo(request *model.ListWebFrameworkInfoRequest) (*model.ListWebFrameworkInfoResponse, error) {
@@ -2604,7 +2604,7 @@ func (c *HssClient) ListWebFrameworkInfoInvoker(request *model.ListWebFrameworkI
 
 // ListWebFrameworkStatistics 查询Web框架的统计信息
 //
-// 查询Web框架的服务器数
+// 查询Web框架的服务器数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListWebFrameworkStatistics(request *model.ListWebFrameworkStatisticsRequest) (*model.ListWebFrameworkStatisticsResponse, error) {
@@ -2625,7 +2625,7 @@ func (c *HssClient) ListWebFrameworkStatisticsInvoker(request *model.ListWebFram
 
 // ListWebSiteHostInfo 查询指定Web站点的服务器列表
 //
-// 查询指定Web站点的服务器列表
+// 查询指定Web站点的服务器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListWebSiteHostInfo(request *model.ListWebSiteHostInfoRequest) (*model.ListWebSiteHostInfoResponse, error) {
@@ -2646,7 +2646,7 @@ func (c *HssClient) ListWebSiteHostInfoInvoker(request *model.ListWebSiteHostInf
 
 // ListWebSiteInfo 查询指定主机的Web站点信息
 //
-// 查询指定主机的Web站点信息
+// 查询指定主机的Web站点信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListWebSiteInfo(request *model.ListWebSiteInfoRequest) (*model.ListWebSiteInfoResponse, error) {
@@ -2667,7 +2667,7 @@ func (c *HssClient) ListWebSiteInfoInvoker(request *model.ListWebSiteInfoRequest
 
 // ListWebSiteStatistics 查询Web站点的统计信息
 //
-// 查询Web站点的服务器数
+// 查询Web站点的服务器数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListWebSiteStatistics(request *model.ListWebSiteStatisticsRequest) (*model.ListWebSiteStatisticsResponse, error) {
@@ -2688,7 +2688,7 @@ func (c *HssClient) ListWebSiteStatisticsInvoker(request *model.ListWebSiteStati
 
 // ListWorkLoads 查询集群下某一命名空间下的工作负载
 //
-// 查询集群下某一命名空间下的工作负载
+// 查询集群下某一命名空间下的工作负载。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListWorkLoads(request *model.ListWorkLoadsRequest) (*model.ListWorkLoadsResponse, error) {
@@ -2709,7 +2709,7 @@ func (c *HssClient) ListWorkLoadsInvoker(request *model.ListWorkLoadsRequest) *L
 
 // ModifyDecoyPortPolicy 编辑动态端口蜜罐策略
 //
-// 编辑动态端口蜜罐策略
+// 编辑动态端口蜜罐策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ModifyDecoyPortPolicy(request *model.ModifyDecoyPortPolicyRequest) (*model.ModifyDecoyPortPolicyResponse, error) {
@@ -2730,7 +2730,7 @@ func (c *HssClient) ModifyDecoyPortPolicyInvoker(request *model.ModifyDecoyPortP
 
 // RemoveAlarmWhiteList 删除告警白名单
 //
-// 删除告警白名单
+// 删除告警白名单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) RemoveAlarmWhiteList(request *model.RemoveAlarmWhiteListRequest) (*model.RemoveAlarmWhiteListResponse, error) {
@@ -2751,7 +2751,7 @@ func (c *HssClient) RemoveAlarmWhiteListInvoker(request *model.RemoveAlarmWhiteL
 
 // RemoveLoginWhiteList 删除登录白名单
 //
-// 删除登录白名单
+// 删除登录白名单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) RemoveLoginWhiteList(request *model.RemoveLoginWhiteListRequest) (*model.RemoveLoginWhiteListResponse, error) {
@@ -2772,7 +2772,7 @@ func (c *HssClient) RemoveLoginWhiteListInvoker(request *model.RemoveLoginWhiteL
 
 // RemoveSystemUserWhiteList 删除系统用户白名单
 //
-// 删除系统用户白名单
+// 删除系统用户白名单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) RemoveSystemUserWhiteList(request *model.RemoveSystemUserWhiteListRequest) (*model.RemoveSystemUserWhiteListResponse, error) {
@@ -2793,7 +2793,7 @@ func (c *HssClient) RemoveSystemUserWhiteListInvoker(request *model.RemoveSystem
 
 // RunHostAssetManualCollect 采集单主机资产指纹
 //
-// 采集单主机资产指纹
+// 采集单主机资产指纹。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) RunHostAssetManualCollect(request *model.RunHostAssetManualCollectRequest) (*model.RunHostAssetManualCollectResponse, error) {
@@ -2814,7 +2814,7 @@ func (c *HssClient) RunHostAssetManualCollectInvoker(request *model.RunHostAsset
 
 // SetMalwareReminders 设置提示信息配置
 //
-// 设置提示信息配置
+// 设置提示信息配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SetMalwareReminders(request *model.SetMalwareRemindersRequest) (*model.SetMalwareRemindersResponse, error) {
@@ -2835,7 +2835,7 @@ func (c *HssClient) SetMalwareRemindersInvoker(request *model.SetMalwareReminder
 
 // ShowAccountTop 资产管理-概览-账户Top
 //
-// 资产管理-概览-账户Top
+// 资产管理-概览-账户Top。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowAccountTop(request *model.ShowAccountTopRequest) (*model.ShowAccountTopResponse, error) {
@@ -2856,7 +2856,7 @@ func (c *HssClient) ShowAccountTopInvoker(request *model.ShowAccountTopRequest) 
 
 // ShowAgentStatisticsStatus 资产管理-概览-资产状态-主机Agent状态
 //
-// 资产管理-概览-资产状态-主机Agent状态
+// 资产管理-概览-资产状态-主机Agent状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowAgentStatisticsStatus(request *model.ShowAgentStatisticsStatusRequest) (*model.ShowAgentStatisticsStatusResponse, error) {
@@ -2877,7 +2877,7 @@ func (c *HssClient) ShowAgentStatisticsStatusInvoker(request *model.ShowAgentSta
 
 // ShowAppRaspSwitchStatus 查询应用防护开启状态
 //
-// 查询应用防护开启状态：查询单台服务器的应用防护功能开启状态
+// 查询应用防护开启状态：查询单台服务器的应用防护功能开启状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowAppRaspSwitchStatus(request *model.ShowAppRaspSwitchStatusRequest) (*model.ShowAppRaspSwitchStatusResponse, error) {
@@ -2898,7 +2898,7 @@ func (c *HssClient) ShowAppRaspSwitchStatusInvoker(request *model.ShowAppRaspSwi
 
 // ShowAssetStatistic 统计资产信息数量
 //
-// 资产统计信息，账号、端口、进程等
+// 资产统计信息，账号、端口、进程等。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowAssetStatistic(request *model.ShowAssetStatisticRequest) (*model.ShowAssetStatisticResponse, error) {
@@ -2919,7 +2919,7 @@ func (c *HssClient) ShowAssetStatisticInvoker(request *model.ShowAssetStatisticR
 
 // ShowAutoLaunchTop 资产管理-概览-自启动项Top
 //
-// 资产管理-概览-自启动项Top
+// 资产管理-概览-自启动项Top。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowAutoLaunchTop(request *model.ShowAutoLaunchTopRequest) (*model.ShowAutoLaunchTopResponse, error) {
@@ -2940,7 +2940,7 @@ func (c *HssClient) ShowAutoLaunchTopInvoker(request *model.ShowAutoLaunchTopReq
 
 // ShowClusterAssetStatistics 查询集群资产统计数量
 //
-// 查询集群资产统计数量
+// 查询集群资产统计数量。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowClusterAssetStatistics(request *model.ShowClusterAssetStatisticsRequest) (*model.ShowClusterAssetStatisticsResponse, error) {
@@ -2961,7 +2961,7 @@ func (c *HssClient) ShowClusterAssetStatisticsInvoker(request *model.ShowCluster
 
 // ShowClusterProtectPolicyTemplate 查询集群组件防护策略模板
 //
-// 查询集群防护策略模板
+// 查询集群防护策略模板。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowClusterProtectPolicyTemplate(request *model.ShowClusterProtectPolicyTemplateRequest) (*model.ShowClusterProtectPolicyTemplateResponse, error) {
@@ -3003,7 +3003,7 @@ func (c *HssClient) ShowCommonPortInvoker(request *model.ShowCommonPortRequest) 
 
 // ShowContainerNetworkInfo 查询容器集群网络的网络信息
 //
-// 查询容器集群网络的网络信息
+// 查询容器集群网络的网络信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowContainerNetworkInfo(request *model.ShowContainerNetworkInfoRequest) (*model.ShowContainerNetworkInfoResponse, error) {
@@ -3024,7 +3024,7 @@ func (c *HssClient) ShowContainerNetworkInfoInvoker(request *model.ShowContainer
 
 // ShowContainerNodeStatistics 查询容器节点防护总览数据
 //
-// 查询容器节点防护总览数据
+// 查询容器节点防护总览数据。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowContainerNodeStatistics(request *model.ShowContainerNodeStatisticsRequest) (*model.ShowContainerNodeStatisticsResponse, error) {
@@ -3045,7 +3045,7 @@ func (c *HssClient) ShowContainerNodeStatisticsInvoker(request *model.ShowContai
 
 // ShowContainerProtectionStatus 资产管理-概览-资产状态-容器节点防护状态
 //
-// 资产管理-概览-资产状态-容器节点防护状态
+// 资产管理-概览-资产状态-容器节点防护状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowContainerProtectionStatus(request *model.ShowContainerProtectionStatusRequest) (*model.ShowContainerProtectionStatusResponse, error) {
@@ -3066,7 +3066,7 @@ func (c *HssClient) ShowContainerProtectionStatusInvoker(request *model.ShowCont
 
 // ShowDecoyPortAutoBind 查看默认为新增主机开启防护开关
 //
-// 查看默认为新增主机开启防护开关
+// 查看默认为新增主机开启防护开关。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowDecoyPortAutoBind(request *model.ShowDecoyPortAutoBindRequest) (*model.ShowDecoyPortAutoBindResponse, error) {
@@ -3087,7 +3087,7 @@ func (c *HssClient) ShowDecoyPortAutoBindInvoker(request *model.ShowDecoyPortAut
 
 // ShowDecoyPortHostList 查看开启防护主机列表
 //
-// 查看开启防护主机列表
+// 查看开启防护主机列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowDecoyPortHostList(request *model.ShowDecoyPortHostListRequest) (*model.ShowDecoyPortHostListResponse, error) {
@@ -3108,7 +3108,7 @@ func (c *HssClient) ShowDecoyPortHostListInvoker(request *model.ShowDecoyPortHos
 
 // ShowDecoyPortPolicyDetails 查看动态端口蜜罐策略详情
 //
-// 查看动态端口蜜罐策略详情
+// 查看动态端口蜜罐策略详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowDecoyPortPolicyDetails(request *model.ShowDecoyPortPolicyDetailsRequest) (*model.ShowDecoyPortPolicyDetailsResponse, error) {
@@ -3129,7 +3129,7 @@ func (c *HssClient) ShowDecoyPortPolicyDetailsInvoker(request *model.ShowDecoyPo
 
 // ShowEventAttackTag 查询攻击标识分布统计列表
 //
-// 查询攻击标识分布统计列表
+// 查询攻击标识分布统计列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowEventAttackTag(request *model.ShowEventAttackTagRequest) (*model.ShowEventAttackTagResponse, error) {
@@ -3150,7 +3150,7 @@ func (c *HssClient) ShowEventAttackTagInvoker(request *model.ShowEventAttackTagR
 
 // ShowEventSeverity 查询威胁等级统计列表
 //
-// 查询威胁等级统计列表
+// 查询威胁等级统计列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowEventSeverity(request *model.ShowEventSeverityRequest) (*model.ShowEventSeverityResponse, error) {
@@ -3171,7 +3171,7 @@ func (c *HssClient) ShowEventSeverityInvoker(request *model.ShowEventSeverityReq
 
 // ShowExportTask 查询导出任务信息
 //
-// 查询导出任务信息
+// 查询导出任务信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowExportTask(request *model.ShowExportTaskRequest) (*model.ShowExportTaskResponse, error) {
@@ -3192,7 +3192,7 @@ func (c *HssClient) ShowExportTaskInvoker(request *model.ShowExportTaskRequest) 
 
 // ShowHostAssetManualCollectStatus 查询单主机资产指纹采集状态
 //
-// 查询单主机资产指纹采集状态
+// 查询单主机资产指纹采集状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowHostAssetManualCollectStatus(request *model.ShowHostAssetManualCollectStatusRequest) (*model.ShowHostAssetManualCollectStatusResponse, error) {
@@ -3213,7 +3213,7 @@ func (c *HssClient) ShowHostAssetManualCollectStatusInvoker(request *model.ShowH
 
 // ShowHostProtectionStatus 资产管理-概览-资产状态-Agent状态
 //
-// 资产管理-概览-资产状态-Agent状态
+// 资产管理-概览-资产状态-Agent状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowHostProtectionStatus(request *model.ShowHostProtectionStatusRequest) (*model.ShowHostProtectionStatusResponse, error) {
@@ -3234,7 +3234,7 @@ func (c *HssClient) ShowHostProtectionStatusInvoker(request *model.ShowHostProte
 
 // ShowJarPackageTop 资产管理-概览-jar包Top
 //
-// 资产管理-概览-jar包Top
+// 资产管理-概览-jar包Top。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowJarPackageTop(request *model.ShowJarPackageTopRequest) (*model.ShowJarPackageTopResponse, error) {
@@ -3255,7 +3255,7 @@ func (c *HssClient) ShowJarPackageTopInvoker(request *model.ShowJarPackageTopReq
 
 // ShowK8sContainerDetail 查询容器详细信息
 //
-// 查询容器详细信息
+// 查询容器详细信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowK8sContainerDetail(request *model.ShowK8sContainerDetailRequest) (*model.ShowK8sContainerDetailResponse, error) {
@@ -3276,7 +3276,7 @@ func (c *HssClient) ShowK8sContainerDetailInvoker(request *model.ShowK8sContaine
 
 // ShowK8sPodDetail 查询pod详细信息
 //
-// 查询pod详细信息
+// 查询pod详细信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowK8sPodDetail(request *model.ShowK8sPodDetailRequest) (*model.ShowK8sPodDetailResponse, error) {
@@ -3297,7 +3297,7 @@ func (c *HssClient) ShowK8sPodDetailInvoker(request *model.ShowK8sPodDetailReque
 
 // ShowKernelModuleTop 资产管理-概览-内核模块Top
 //
-// 资产管理-概览-内核模块Top
+// 资产管理-概览-内核模块Top。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowKernelModuleTop(request *model.ShowKernelModuleTopRequest) (*model.ShowKernelModuleTopResponse, error) {
@@ -3318,7 +3318,7 @@ func (c *HssClient) ShowKernelModuleTopInvoker(request *model.ShowKernelModuleTo
 
 // ShowKubernetesEndpointInfo 查询容器Kubernetes端点详情
 //
-// 查询容器Kubernetes端点详情
+// 查询容器Kubernetes端点详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowKubernetesEndpointInfo(request *model.ShowKubernetesEndpointInfoRequest) (*model.ShowKubernetesEndpointInfoResponse, error) {
@@ -3339,7 +3339,7 @@ func (c *HssClient) ShowKubernetesEndpointInfoInvoker(request *model.ShowKuberne
 
 // ShowKubernetesServiceInfo 查询容器Kubernetes服务详情
 //
-// 查询容器Kubernetes服务详情
+// 查询容器Kubernetes服务详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowKubernetesServiceInfo(request *model.ShowKubernetesServiceInfoRequest) (*model.ShowKubernetesServiceInfoResponse, error) {
@@ -3360,7 +3360,7 @@ func (c *HssClient) ShowKubernetesServiceInfoInvoker(request *model.ShowKubernet
 
 // ShowLatestExportTaskByType 查询导出任务信息
 //
-// 查询导出任务信息
+// 查询导出任务信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowLatestExportTaskByType(request *model.ShowLatestExportTaskByTypeRequest) (*model.ShowLatestExportTaskByTypeResponse, error) {
@@ -3381,7 +3381,7 @@ func (c *HssClient) ShowLatestExportTaskByTypeInvoker(request *model.ShowLatestE
 
 // ShowMalwareReminders 获取提示信息配置
 //
-// 获取提示信息配置
+// 获取提示信息配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowMalwareReminders(request *model.ShowMalwareRemindersRequest) (*model.ShowMalwareRemindersResponse, error) {
@@ -3402,7 +3402,7 @@ func (c *HssClient) ShowMalwareRemindersInvoker(request *model.ShowMalwareRemind
 
 // ShowNetworkStatistics 集群网络策略总览
 //
-// 集群网络策略总览
+// 集群网络策略总览。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowNetworkStatistics(request *model.ShowNetworkStatisticsRequest) (*model.ShowNetworkStatisticsResponse, error) {
@@ -3423,7 +3423,7 @@ func (c *HssClient) ShowNetworkStatisticsInvoker(request *model.ShowNetworkStati
 
 // ShowOsStatisticsInfo 资产管理-概览-资产状态-操作系统统计信息
 //
-// 资产管理-概览-资产状态-操作系统统计信息
+// 资产管理-概览-资产状态-操作系统统计信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowOsStatisticsInfo(request *model.ShowOsStatisticsInfoRequest) (*model.ShowOsStatisticsInfoResponse, error) {
@@ -3444,7 +3444,7 @@ func (c *HssClient) ShowOsStatisticsInfoInvoker(request *model.ShowOsStatisticsI
 
 // ShowPageNotices 获取页面通知信息
 //
-// 获取页面通知信息
+// 获取页面通知信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowPageNotices(request *model.ShowPageNoticesRequest) (*model.ShowPageNoticesResponse, error) {
@@ -3465,7 +3465,7 @@ func (c *HssClient) ShowPageNoticesInvoker(request *model.ShowPageNoticesRequest
 
 // ShowPortTop 资产管理-概览-端口Top
 //
-// 资产管理-概览-端口Top
+// 资产管理-概览-端口Top。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowPortTop(request *model.ShowPortTopRequest) (*model.ShowPortTopResponse, error) {
@@ -3486,7 +3486,7 @@ func (c *HssClient) ShowPortTopInvoker(request *model.ShowPortTopRequest) *ShowP
 
 // ShowProcessTop 资产管理-概览-进程Top
 //
-// 资产管理-概览-进程Top
+// 资产管理-概览-进程Top。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowProcessTop(request *model.ShowProcessTopRequest) (*model.ShowProcessTopResponse, error) {
@@ -3507,7 +3507,7 @@ func (c *HssClient) ShowProcessTopInvoker(request *model.ShowProcessTopRequest) 
 
 // ShowQuotaStatisticsInfo 资产管理-概览-资产状态-防护配额统计信息
 //
-// 资产管理-概览-资产状态-防护配额统计信息
+// 资产管理-概览-资产状态-防护配额统计信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowQuotaStatisticsInfo(request *model.ShowQuotaStatisticsInfoRequest) (*model.ShowQuotaStatisticsInfoResponse, error) {
@@ -3528,7 +3528,7 @@ func (c *HssClient) ShowQuotaStatisticsInfoInvoker(request *model.ShowQuotaStati
 
 // ShowRaspPolicyDetail 查询防护策略详情
 //
-// 查询防护策略详情：查询防护策略配置的相关检测规则信息，包含14种检测规则
+// 查询防护策略详情：查询防护策略配置的相关检测规则信息，包含14种检测规则。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowRaspPolicyDetail(request *model.ShowRaspPolicyDetailRequest) (*model.ShowRaspPolicyDetailResponse, error) {
@@ -3549,7 +3549,7 @@ func (c *HssClient) ShowRaspPolicyDetailInvoker(request *model.ShowRaspPolicyDet
 
 // ShowRaspProtectStatistics 防护数据统计
 //
-// 防护数据统计：统计已添加防护服务器的数量以及近七天微服务RASP攻击数量
+// 防护数据统计：统计已添加防护服务器的数量以及近七天微服务RASP攻击数量。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowRaspProtectStatistics(request *model.ShowRaspProtectStatisticsRequest) (*model.ShowRaspProtectStatisticsResponse, error) {
@@ -3570,7 +3570,7 @@ func (c *HssClient) ShowRaspProtectStatisticsInvoker(request *model.ShowRaspProt
 
 // ShowRaspServerDetail 查询防护服务器java应用详情
 //
-// 查询防护服务器java应用详情：查询防护服务器的java应用状态列表
+// 查询防护服务器java应用详情：查询防护服务器的java应用状态列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowRaspServerDetail(request *model.ShowRaspServerDetailRequest) (*model.ShowRaspServerDetailResponse, error) {
@@ -3591,7 +3591,7 @@ func (c *HssClient) ShowRaspServerDetailInvoker(request *model.ShowRaspServerDet
 
 // ShowSoftwareTop 资产管理-概览-软件Top
 //
-// 资产管理-概览-软件Top
+// 资产管理-概览-软件Top。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowSoftwareTop(request *model.ShowSoftwareTopRequest) (*model.ShowSoftwareTopResponse, error) {
@@ -3612,7 +3612,7 @@ func (c *HssClient) ShowSoftwareTopInvoker(request *model.ShowSoftwareTopRequest
 
 // ShowWebAppAndServiceTop 资产管理-概览-WebAppAndServiceTop
 //
-// 资产管理-概览-Web应用TOP5/Web服务TOP5
+// 资产管理-概览-Web应用TOP5/Web服务TOP5。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowWebAppAndServiceTop(request *model.ShowWebAppAndServiceTopRequest) (*model.ShowWebAppAndServiceTopResponse, error) {
@@ -3633,7 +3633,7 @@ func (c *HssClient) ShowWebAppAndServiceTopInvoker(request *model.ShowWebAppAndS
 
 // ShowWebFrameworkTop 资产管理-概览-Web框架Top
 //
-// 资产管理-概览-Web框架Top
+// 资产管理-概览-Web框架Top。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowWebFrameworkTop(request *model.ShowWebFrameworkTopRequest) (*model.ShowWebFrameworkTopResponse, error) {
@@ -3654,7 +3654,7 @@ func (c *HssClient) ShowWebFrameworkTopInvoker(request *model.ShowWebFrameworkTo
 
 // ShowWebSiteTop 资产管理-概览-Web站点Top
 //
-// 资产管理-概览-Web站点Top
+// 资产管理-概览-Web站点Top。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowWebSiteTop(request *model.ShowWebSiteTopRequest) (*model.ShowWebSiteTopResponse, error) {
@@ -3675,7 +3675,7 @@ func (c *HssClient) ShowWebSiteTopInvoker(request *model.ShowWebSiteTopRequest) 
 
 // SwitchClusterProtectionMode 操作集群防护模式
 //
-// 操作集群防护模式
+// 操作集群防护模式。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SwitchClusterProtectionMode(request *model.SwitchClusterProtectionModeRequest) (*model.SwitchClusterProtectionModeResponse, error) {
@@ -3696,7 +3696,7 @@ func (c *HssClient) SwitchClusterProtectionModeInvoker(request *model.SwitchClus
 
 // SwitchContainerProtectStatus 切换防护状态
 //
-// 切换防护状态
+// 切换防护状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SwitchContainerProtectStatus(request *model.SwitchContainerProtectStatusRequest) (*model.SwitchContainerProtectStatusResponse, error) {
@@ -3717,7 +3717,7 @@ func (c *HssClient) SwitchContainerProtectStatusInvoker(request *model.SwitchCon
 
 // SwitchDecoyPortAutoBind 修改默认为新增主机开启防护开关
 //
-// 修改默认为新增主机开启防护开关
+// 修改默认为新增主机开启防护开关。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SwitchDecoyPortAutoBind(request *model.SwitchDecoyPortAutoBindRequest) (*model.SwitchDecoyPortAutoBindResponse, error) {
@@ -3738,7 +3738,7 @@ func (c *HssClient) SwitchDecoyPortAutoBindInvoker(request *model.SwitchDecoyPor
 
 // SwitchDecoyPortHostPolicy 切换主机动态端口蜜罐策略
 //
-// 切换主机动态端口蜜罐策略
+// 切换主机动态端口蜜罐策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SwitchDecoyPortHostPolicy(request *model.SwitchDecoyPortHostPolicyRequest) (*model.SwitchDecoyPortHostPolicyResponse, error) {
@@ -3759,7 +3759,7 @@ func (c *HssClient) SwitchDecoyPortHostPolicyInvoker(request *model.SwitchDecoyP
 
 // SwitchDecoyPortPolicy 启用动态端口蜜罐策略
 //
-// 启用动态端口蜜罐策略
+// 启用动态端口蜜罐策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SwitchDecoyPortPolicy(request *model.SwitchDecoyPortPolicyRequest) (*model.SwitchDecoyPortPolicyResponse, error) {
@@ -3780,7 +3780,7 @@ func (c *HssClient) SwitchDecoyPortPolicyInvoker(request *model.SwitchDecoyPortP
 
 // SwitchRasp 开启/关闭应用防护，更新防护端口
 //
-// 开启/关闭应用防护，选择开启的防护策略，选择需要防护的服务器，下发防护策略，可传入端口号更新防护端口，关闭防护则清空策略
+// 开启/关闭应用防护，选择开启的防护策略，选择需要防护的服务器，下发防护策略，可传入端口号更新防护端口，关闭防护则清空策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SwitchRasp(request *model.SwitchRaspRequest) (*model.SwitchRaspResponse, error) {
@@ -3801,7 +3801,7 @@ func (c *HssClient) SwitchRaspInvoker(request *model.SwitchRaspRequest) *SwitchR
 
 // SyncClusterList 同步容器集群最新数据
 //
-// 同步容器集群最新数据
+// 同步容器集群最新数据。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SyncClusterList(request *model.SyncClusterListRequest) (*model.SyncClusterListResponse, error) {
@@ -3822,7 +3822,7 @@ func (c *HssClient) SyncClusterListInvoker(request *model.SyncClusterListRequest
 
 // SyncClusterProtectionEvent 同步集群防护事件
 //
-// 同步集群防护事件
+// 同步集群防护事件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SyncClusterProtectionEvent(request *model.SyncClusterProtectionEventRequest) (*model.SyncClusterProtectionEventResponse, error) {
@@ -3843,7 +3843,7 @@ func (c *HssClient) SyncClusterProtectionEventInvoker(request *model.SyncCluster
 
 // SyncContainerNetworkNode 同步集群下网络节点最新数据
 //
-// 同步集群下容器网络策略最新数据
+// 同步集群下容器网络策略最新数据。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SyncContainerNetworkNode(request *model.SyncContainerNetworkNodeRequest) (*model.SyncContainerNetworkNodeResponse, error) {
@@ -3864,7 +3864,7 @@ func (c *HssClient) SyncContainerNetworkNodeInvoker(request *model.SyncContainer
 
 // SyncContainerNetworkPolicyList 同步集群下容器网络策略最新数据
 //
-// 同步集群下容器网络策略最新数据
+// 同步集群下容器网络策略最新数据。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SyncContainerNetworkPolicyList(request *model.SyncContainerNetworkPolicyListRequest) (*model.SyncContainerNetworkPolicyListResponse, error) {
@@ -3885,7 +3885,7 @@ func (c *HssClient) SyncContainerNetworkPolicyListInvoker(request *model.SyncCon
 
 // SyncSecurityGroupPolicies 同步集群下安全组策略最新数据
 //
-// 同步集群下安全组策略最新数据
+// 同步集群下安全组策略最新数据。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SyncSecurityGroupPolicies(request *model.SyncSecurityGroupPoliciesRequest) (*model.SyncSecurityGroupPoliciesResponse, error) {
@@ -3906,7 +3906,7 @@ func (c *HssClient) SyncSecurityGroupPoliciesInvoker(request *model.SyncSecurity
 
 // UpdateContainerNetworkPolicy 容器集群网络更新配置策略
 //
-// 容器集群网络更新配置策略
+// 容器集群网络更新配置策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) UpdateContainerNetworkPolicy(request *model.UpdateContainerNetworkPolicyRequest) (*model.UpdateContainerNetworkPolicyResponse, error) {
@@ -3927,7 +3927,7 @@ func (c *HssClient) UpdateContainerNetworkPolicyInvoker(request *model.UpdateCon
 
 // UpdatePolicy 修改防护策略
 //
-// 修改防护策略：修改防护策略内容，包含策略名称、相关规则开启状态、防护动作以及检测规则配置，同时给使用该策略的服务器下发新的策略
+// 修改防护策略：修改防护策略内容，包含策略名称、相关规则开启状态、防护动作以及检测规则配置，同时给使用该策略的服务器下发新的策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) UpdatePolicy(request *model.UpdatePolicyRequest) (*model.UpdatePolicyResponse, error) {
@@ -3948,7 +3948,7 @@ func (c *HssClient) UpdatePolicyInvoker(request *model.UpdatePolicyRequest) *Upd
 
 // UpdateSecurityGroupPolicy 更新安全组策略
 //
-// 更新安全组策略(云原生网络模型)
+// 更新安全组策略(云原生网络模型)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) UpdateSecurityGroupPolicy(request *model.UpdateSecurityGroupPolicyRequest) (*model.UpdateSecurityGroupPolicyResponse, error) {
@@ -3969,7 +3969,7 @@ func (c *HssClient) UpdateSecurityGroupPolicyInvoker(request *model.UpdateSecuri
 
 // UpdateSystemUserWhiteList 修改系统用户白名单
 //
-// 修改系统用户白名单
+// 修改系统用户白名单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) UpdateSystemUserWhiteList(request *model.UpdateSystemUserWhiteListRequest) (*model.UpdateSystemUserWhiteListResponse, error) {
@@ -3990,7 +3990,7 @@ func (c *HssClient) UpdateSystemUserWhiteListInvoker(request *model.UpdateSystem
 
 // ValidateAdmin 校验当前账号是否是管理员账号（包含组织管理员和委托管理员）
 //
-// 校验当前账号是否是管理员账号（包含组织管理员和委托管理员）
+// 校验当前账号是否是管理员账号（包含组织管理员和委托管理员）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ValidateAdmin(request *model.ValidateAdminRequest) (*model.ValidateAdminResponse, error) {
@@ -4011,7 +4011,7 @@ func (c *HssClient) ValidateAdminInvoker(request *model.ValidateAdminRequest) *V
 
 // ChangeAntivirusPayPerScanStatus 修改“病毒查杀按次计费”开关状态
 //
-// 修改“病毒查杀按次计费”开关状态
+// 修改“病毒查杀按次计费”开关状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeAntivirusPayPerScanStatus(request *model.ChangeAntivirusPayPerScanStatusRequest) (*model.ChangeAntivirusPayPerScanStatusResponse, error) {
@@ -4032,7 +4032,7 @@ func (c *HssClient) ChangeAntivirusPayPerScanStatusInvoker(request *model.Change
 
 // ChangeAntivirusPolicy 编辑自定义查杀策略
 //
-// 编辑自定义查杀策略
+// 编辑自定义查杀策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeAntivirusPolicy(request *model.ChangeAntivirusPolicyRequest) (*model.ChangeAntivirusPolicyResponse, error) {
@@ -4053,7 +4053,7 @@ func (c *HssClient) ChangeAntivirusPolicyInvoker(request *model.ChangeAntivirusP
 
 // CreateAntiVirusPaidTask 创建付费病毒扫描任务
 //
-// 创建付费病毒扫描任务
+// 创建付费病毒扫描任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateAntiVirusPaidTask(request *model.CreateAntiVirusPaidTaskRequest) (*model.CreateAntiVirusPaidTaskResponse, error) {
@@ -4074,7 +4074,7 @@ func (c *HssClient) CreateAntiVirusPaidTaskInvoker(request *model.CreateAntiViru
 
 // CreateAntiVirusPolicy 创建自定义查杀策略
 //
-// 创建自定义查杀策略
+// 创建自定义查杀策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateAntiVirusPolicy(request *model.CreateAntiVirusPolicyRequest) (*model.CreateAntiVirusPolicyResponse, error) {
@@ -4095,7 +4095,7 @@ func (c *HssClient) CreateAntiVirusPolicyInvoker(request *model.CreateAntiVirusP
 
 // CreateAntiVirusTask 创建病毒扫描任务
 //
-// 创建病毒扫描任务
+// 创建病毒扫描任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateAntiVirusTask(request *model.CreateAntiVirusTaskRequest) (*model.CreateAntiVirusTaskResponse, error) {
@@ -4116,7 +4116,7 @@ func (c *HssClient) CreateAntiVirusTaskInvoker(request *model.CreateAntiVirusTas
 
 // DeleteAntivirusPolicy 删除自定义查杀策略
 //
-// 删除自定义查杀策略
+// 删除自定义查杀策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteAntivirusPolicy(request *model.DeleteAntivirusPolicyRequest) (*model.DeleteAntivirusPolicyResponse, error) {
@@ -4137,7 +4137,7 @@ func (c *HssClient) DeleteAntivirusPolicyInvoker(request *model.DeleteAntivirusP
 
 // ExportAntiVirusResult 导出病毒扫描结果列表
 //
-// 导出病毒扫描结果列表
+// 导出病毒扫描结果列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ExportAntiVirusResult(request *model.ExportAntiVirusResultRequest) (*model.ExportAntiVirusResultResponse, error) {
@@ -4158,7 +4158,7 @@ func (c *HssClient) ExportAntiVirusResultInvoker(request *model.ExportAntiVirusR
 
 // HandleAntiVirusResult 处置病毒扫描结果
 //
-// 处置病毒扫描结果
+// 处置病毒扫描结果。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) HandleAntiVirusResult(request *model.HandleAntiVirusResultRequest) (*model.HandleAntiVirusResultResponse, error) {
@@ -4179,7 +4179,7 @@ func (c *HssClient) HandleAntiVirusResultInvoker(request *model.HandleAntiVirusR
 
 // ListAntiVirusHost 查询病毒查杀可选服务器列表
 //
-// 查询病毒查杀可选服务器列表
+// 查询病毒查杀可选服务器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAntiVirusHost(request *model.ListAntiVirusHostRequest) (*model.ListAntiVirusHostResponse, error) {
@@ -4200,7 +4200,7 @@ func (c *HssClient) ListAntiVirusHostInvoker(request *model.ListAntiVirusHostReq
 
 // ListAntiVirusPaidHosts 查询付费病毒查杀服务器列表
 //
-// 查询付费病毒查杀服务器列表
+// 查询付费病毒查杀服务器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAntiVirusPaidHosts(request *model.ListAntiVirusPaidHostsRequest) (*model.ListAntiVirusPaidHostsResponse, error) {
@@ -4221,7 +4221,7 @@ func (c *HssClient) ListAntiVirusPaidHostsInvoker(request *model.ListAntiVirusPa
 
 // ListAntiVirusPolicy 查询自定义查杀策略列表
 //
-// 查询自定义查杀策略列表
+// 查询自定义查杀策略列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAntiVirusPolicy(request *model.ListAntiVirusPolicyRequest) (*model.ListAntiVirusPolicyResponse, error) {
@@ -4242,7 +4242,7 @@ func (c *HssClient) ListAntiVirusPolicyInvoker(request *model.ListAntiVirusPolic
 
 // ListAntiVirusResult 查询病毒扫描结果列表
 //
-// 查询病毒扫描结果列表
+// 查询病毒扫描结果列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAntiVirusResult(request *model.ListAntiVirusResultRequest) (*model.ListAntiVirusResultResponse, error) {
@@ -4263,7 +4263,7 @@ func (c *HssClient) ListAntiVirusResultInvoker(request *model.ListAntiVirusResul
 
 // ListAntiVirusTask 查看病毒扫描任务列表
 //
-// 查看病毒扫描任务列表
+// 查看病毒扫描任务列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAntiVirusTask(request *model.ListAntiVirusTaskRequest) (*model.ListAntiVirusTaskResponse, error) {
@@ -4284,7 +4284,7 @@ func (c *HssClient) ListAntiVirusTaskInvoker(request *model.ListAntiVirusTaskReq
 
 // ShowAntivirusFreeQuota 查询病毒查杀免费扫描次数
 //
-// 查询病毒查杀免费扫描次数
+// 查询病毒查杀免费扫描次数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowAntivirusFreeQuota(request *model.ShowAntivirusFreeQuotaRequest) (*model.ShowAntivirusFreeQuotaResponse, error) {
@@ -4305,7 +4305,7 @@ func (c *HssClient) ShowAntivirusFreeQuotaInvoker(request *model.ShowAntivirusFr
 
 // ShowAntivirusPayPerScanStatus 查询“病毒查杀按次计费”开关状态
 //
-// 查询“病毒查杀按次计费”开关状态
+// 查询“病毒查杀按次计费”开关状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowAntivirusPayPerScanStatus(request *model.ShowAntivirusPayPerScanStatusRequest) (*model.ShowAntivirusPayPerScanStatusResponse, error) {
@@ -4326,7 +4326,7 @@ func (c *HssClient) ShowAntivirusPayPerScanStatusInvoker(request *model.ShowAnti
 
 // ShowAntivirusStatistic 查询病毒查杀统计信息
 //
-// 查询病毒查杀统计信息
+// 查询病毒查杀统计信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowAntivirusStatistic(request *model.ShowAntivirusStatisticRequest) (*model.ShowAntivirusStatisticResponse, error) {
@@ -4347,7 +4347,7 @@ func (c *HssClient) ShowAntivirusStatisticInvoker(request *model.ShowAntivirusSt
 
 // SwitchAntivirusTask 取消扫描任务
 //
-// 取消扫描任务
+// 取消扫描任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SwitchAntivirusTask(request *model.SwitchAntivirusTaskRequest) (*model.SwitchAntivirusTaskResponse, error) {
@@ -4368,7 +4368,7 @@ func (c *HssClient) SwitchAntivirusTaskInvoker(request *model.SwitchAntivirusTas
 
 // AddAppWhitelistPolicyHost 白名单策略添加主机
 //
-// 白名单策略添加主机
+// 白名单策略添加主机。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) AddAppWhitelistPolicyHost(request *model.AddAppWhitelistPolicyHostRequest) (*model.AddAppWhitelistPolicyHostResponse, error) {
@@ -4389,7 +4389,7 @@ func (c *HssClient) AddAppWhitelistPolicyHostInvoker(request *model.AddAppWhitel
 
 // AddAppWhitelistPolicyProcess 新增进程白名单策略进程
 //
-// 新增进程白名单策略进程
+// 新增进程白名单策略进程。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) AddAppWhitelistPolicyProcess(request *model.AddAppWhitelistPolicyProcessRequest) (*model.AddAppWhitelistPolicyProcessResponse, error) {
@@ -4410,7 +4410,7 @@ func (c *HssClient) AddAppWhitelistPolicyProcessInvoker(request *model.AddAppWhi
 
 // ChangeAppWhitelistPolicy 修改白名单策略
 //
-// 修改白名单策略
+// 修改白名单策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeAppWhitelistPolicy(request *model.ChangeAppWhitelistPolicyRequest) (*model.ChangeAppWhitelistPolicyResponse, error) {
@@ -4431,7 +4431,7 @@ func (c *HssClient) ChangeAppWhitelistPolicyInvoker(request *model.ChangeAppWhit
 
 // ChangeAppWhitelistPolicyProcessStatus 标记进程白名单策略识别进程
 //
-// 标记进程白名单策略识别进程
+// 标记进程白名单策略识别进程。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeAppWhitelistPolicyProcessStatus(request *model.ChangeAppWhitelistPolicyProcessStatusRequest) (*model.ChangeAppWhitelistPolicyProcessStatusResponse, error) {
@@ -4452,7 +4452,7 @@ func (c *HssClient) ChangeAppWhitelistPolicyProcessStatusInvoker(request *model.
 
 // CreateAppWhitelistPolicy 创建白名单策略
 //
-// 创建白名单策略
+// 创建白名单策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateAppWhitelistPolicy(request *model.CreateAppWhitelistPolicyRequest) (*model.CreateAppWhitelistPolicyResponse, error) {
@@ -4473,7 +4473,7 @@ func (c *HssClient) CreateAppWhitelistPolicyInvoker(request *model.CreateAppWhit
 
 // DeleteAppWhitelistPolicy 删除白名单策略
 //
-// 删除白名单策略
+// 删除白名单策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteAppWhitelistPolicy(request *model.DeleteAppWhitelistPolicyRequest) (*model.DeleteAppWhitelistPolicyResponse, error) {
@@ -4494,7 +4494,7 @@ func (c *HssClient) DeleteAppWhitelistPolicyInvoker(request *model.DeleteAppWhit
 
 // DeleteAppWhitelistPolicyHost 白名单策略删除主机
 //
-// 白名单策略删除主机
+// 白名单策略删除主机。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteAppWhitelistPolicyHost(request *model.DeleteAppWhitelistPolicyHostRequest) (*model.DeleteAppWhitelistPolicyHostResponse, error) {
@@ -4515,7 +4515,7 @@ func (c *HssClient) DeleteAppWhitelistPolicyHostInvoker(request *model.DeleteApp
 
 // ListAppWhitelistEvent 查询进程白名单可疑进程
 //
-// 查询进程白名单可疑进程
+// 查询进程白名单可疑进程。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAppWhitelistEvent(request *model.ListAppWhitelistEventRequest) (*model.ListAppWhitelistEventResponse, error) {
@@ -4536,7 +4536,7 @@ func (c *HssClient) ListAppWhitelistEventInvoker(request *model.ListAppWhitelist
 
 // ListAppWhitelistHostStatus 查询进程白名单可选服务器列表
 //
-// 查询进程白名单可选服务器列表
+// 查询进程白名单可选服务器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAppWhitelistHostStatus(request *model.ListAppWhitelistHostStatusRequest) (*model.ListAppWhitelistHostStatusResponse, error) {
@@ -4557,7 +4557,7 @@ func (c *HssClient) ListAppWhitelistHostStatusInvoker(request *model.ListAppWhit
 
 // ListAppWhitelistPolicy 查询进程白名单策略列表
 //
-// 查询进程白名单策略列表
+// 查询进程白名单策略列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAppWhitelistPolicy(request *model.ListAppWhitelistPolicyRequest) (*model.ListAppWhitelistPolicyResponse, error) {
@@ -4578,7 +4578,7 @@ func (c *HssClient) ListAppWhitelistPolicyInvoker(request *model.ListAppWhitelis
 
 // ListAppWhitelistPolicyHost 查询进程白名单策略关联主机列表
 //
-// 查询进程白名单策略关联主机列表
+// 查询进程白名单策略关联主机列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAppWhitelistPolicyHost(request *model.ListAppWhitelistPolicyHostRequest) (*model.ListAppWhitelistPolicyHostResponse, error) {
@@ -4599,7 +4599,7 @@ func (c *HssClient) ListAppWhitelistPolicyHostInvoker(request *model.ListAppWhit
 
 // ListAppWhitelistPolicyProcess 查询进程白名单策略识别进程
 //
-// 查询进程白名单策略识别进程
+// 查询进程白名单策略识别进程。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAppWhitelistPolicyProcess(request *model.ListAppWhitelistPolicyProcessRequest) (*model.ListAppWhitelistPolicyProcessResponse, error) {
@@ -4620,7 +4620,7 @@ func (c *HssClient) ListAppWhitelistPolicyProcessInvoker(request *model.ListAppW
 
 // ListAppWhitelistPolicyProcessExtend 查询进程白名单策略进程扩展列表
 //
-// 查询进程白名单策略进程扩展列表
+// 查询进程白名单策略进程扩展列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAppWhitelistPolicyProcessExtend(request *model.ListAppWhitelistPolicyProcessExtendRequest) (*model.ListAppWhitelistPolicyProcessExtendResponse, error) {
@@ -4641,7 +4641,7 @@ func (c *HssClient) ListAppWhitelistPolicyProcessExtendInvoker(request *model.Li
 
 // ShowAppWhitelistAgentStatics 统计agent版本不匹配主机数量
 //
-// 统计agent版本不匹配主机数量
+// 统计agent版本不匹配主机数量。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowAppWhitelistAgentStatics(request *model.ShowAppWhitelistAgentStaticsRequest) (*model.ShowAppWhitelistAgentStaticsResponse, error) {
@@ -4662,7 +4662,7 @@ func (c *HssClient) ShowAppWhitelistAgentStaticsInvoker(request *model.ShowAppWh
 
 // ShowAppWhitelistPolicy 查询进程白名单策略详情
 //
-// 查询进程白名单策略详情
+// 查询进程白名单策略详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowAppWhitelistPolicy(request *model.ShowAppWhitelistPolicyRequest) (*model.ShowAppWhitelistPolicyResponse, error) {
@@ -4683,7 +4683,7 @@ func (c *HssClient) ShowAppWhitelistPolicyInvoker(request *model.ShowAppWhitelis
 
 // SwitchAppWhitelistPolicyHost 应用白名单策略
 //
-// 应用白名单策略
+// 应用白名单策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SwitchAppWhitelistPolicyHost(request *model.SwitchAppWhitelistPolicyHostRequest) (*model.SwitchAppWhitelistPolicyHostResponse, error) {
@@ -4704,7 +4704,7 @@ func (c *HssClient) SwitchAppWhitelistPolicyHostInvoker(request *model.SwitchApp
 
 // SwitchAppWhitelistPolicyLearnStatus 操作白名单策略学习状态
 //
-// 操作白名单策略学习状态
+// 操作白名单策略学习状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SwitchAppWhitelistPolicyLearnStatus(request *model.SwitchAppWhitelistPolicyLearnStatusRequest) (*model.SwitchAppWhitelistPolicyLearnStatusResponse, error) {
@@ -4725,7 +4725,7 @@ func (c *HssClient) SwitchAppWhitelistPolicyLearnStatusInvoker(request *model.Sw
 
 // AddBaselineWhiteList 新增基线白名单
 //
-// 新增基线白名单
+// 新增基线白名单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) AddBaselineWhiteList(request *model.AddBaselineWhiteListRequest) (*model.AddBaselineWhiteListResponse, error) {
@@ -4746,7 +4746,7 @@ func (c *HssClient) AddBaselineWhiteListInvoker(request *model.AddBaselineWhiteL
 
 // AddSecurityCheckPolicyGroup 新建配置检测策略信息
 //
-// 新建配置检测策略信息
+// 新建配置检测策略信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) AddSecurityCheckPolicyGroup(request *model.AddSecurityCheckPolicyGroupRequest) (*model.AddSecurityCheckPolicyGroupResponse, error) {
@@ -4767,7 +4767,7 @@ func (c *HssClient) AddSecurityCheckPolicyGroupInvoker(request *model.AddSecurit
 
 // ChangeBaselineWhiteList 修改基线白名单
 //
-// 修改基线白名单
+// 修改基线白名单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeBaselineWhiteList(request *model.ChangeBaselineWhiteListRequest) (*model.ChangeBaselineWhiteListResponse, error) {
@@ -4788,7 +4788,7 @@ func (c *HssClient) ChangeBaselineWhiteListInvoker(request *model.ChangeBaseline
 
 // ChangeCheckRuleAction 对未通过的配置检查项进行忽略/取消忽略/修复/验证操作
 //
-// 对未通过的配置检查项进行忽略/取消忽略/修复/验证操作
+// 对未通过的配置检查项进行忽略/取消忽略/修复/验证操作。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeCheckRuleAction(request *model.ChangeCheckRuleActionRequest) (*model.ChangeCheckRuleActionResponse, error) {
@@ -4809,7 +4809,7 @@ func (c *HssClient) ChangeCheckRuleActionInvoker(request *model.ChangeCheckRuleA
 
 // ChangePasswordComplexityStatus 对口令复杂度检测未通过的主机进行忽略/取消忽略
 //
-// 对口令复杂度检测未通过的主机进行忽略/取消忽略
+// 对口令复杂度检测未通过的主机进行忽略/取消忽略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangePasswordComplexityStatus(request *model.ChangePasswordComplexityStatusRequest) (*model.ChangePasswordComplexityStatusResponse, error) {
@@ -4830,7 +4830,7 @@ func (c *HssClient) ChangePasswordComplexityStatusInvoker(request *model.ChangeP
 
 // CopyBaselinePolicyGroup 复制配置检测策略信息
 //
-// 复制配置检测策略信息
+// 复制配置检测策略信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CopyBaselinePolicyGroup(request *model.CopyBaselinePolicyGroupRequest) (*model.CopyBaselinePolicyGroupResponse, error) {
@@ -4851,7 +4851,7 @@ func (c *HssClient) CopyBaselinePolicyGroupInvoker(request *model.CopyBaselinePo
 
 // DeleteBaselineWhiteList 删除基线白名单
 //
-// 删除基线白名单
+// 删除基线白名单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteBaselineWhiteList(request *model.DeleteBaselineWhiteListRequest) (*model.DeleteBaselineWhiteListResponse, error) {
@@ -4872,7 +4872,7 @@ func (c *HssClient) DeleteBaselineWhiteListInvoker(request *model.DeleteBaseline
 
 // DeleteSecurityCheckPolicyGroup 删除指定配置检测策略信息
 //
-// 删除指定配置检测策略信息
+// 删除指定配置检测策略信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteSecurityCheckPolicyGroup(request *model.DeleteSecurityCheckPolicyGroupRequest) (*model.DeleteSecurityCheckPolicyGroupResponse, error) {
@@ -4893,7 +4893,7 @@ func (c *HssClient) DeleteSecurityCheckPolicyGroupInvoker(request *model.DeleteS
 
 // ExportBaselineSecurityCheckReport 从后端导出基线检测报告，生成Excel文件
 //
-// 从后端导出基线检测报告，生成Excel文件
+// 从后端导出基线检测报告，生成Excel文件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ExportBaselineSecurityCheckReport(request *model.ExportBaselineSecurityCheckReportRequest) (*model.ExportBaselineSecurityCheckReportResponse, error) {
@@ -4914,7 +4914,7 @@ func (c *HssClient) ExportBaselineSecurityCheckReportInvoker(request *model.Expo
 
 // ExportSecurityCheckReport 按查询结果导出配置检测报告
 //
-// 按查询结果导出配置检测报告，生成Excel文件
+// 按查询结果导出配置检测报告，生成Excel文件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ExportSecurityCheckReport(request *model.ExportSecurityCheckReportRequest) (*model.ExportSecurityCheckReportResponse, error) {
@@ -4935,7 +4935,7 @@ func (c *HssClient) ExportSecurityCheckReportInvoker(request *model.ExportSecuri
 
 // ListAllRiskConfigCheckRules 查询指定策略组的检查项列表
 //
-// 查询指定策略组的检查项列表
+// 查询指定策略组的检查项列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAllRiskConfigCheckRules(request *model.ListAllRiskConfigCheckRulesRequest) (*model.ListAllRiskConfigCheckRulesResponse, error) {
@@ -4956,7 +4956,7 @@ func (c *HssClient) ListAllRiskConfigCheckRulesInvoker(request *model.ListAllRis
 
 // ListBaselineWhiteLists 查询基线白名单列表
 //
-// 查询基线白名单列表
+// 查询基线白名单列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListBaselineWhiteLists(request *model.ListBaselineWhiteListsRequest) (*model.ListBaselineWhiteListsResponse, error) {
@@ -4977,7 +4977,7 @@ func (c *HssClient) ListBaselineWhiteListsInvoker(request *model.ListBaselineWhi
 
 // ListCheckRuleHost 查询配置检查项影响到的服务器列表
 //
-// 查询配置检查项影响到的服务器列表
+// 查询配置检查项影响到的服务器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListCheckRuleHost(request *model.ListCheckRuleHostRequest) (*model.ListCheckRuleHostResponse, error) {
@@ -4998,7 +4998,7 @@ func (c *HssClient) ListCheckRuleHostInvoker(request *model.ListCheckRuleHostReq
 
 // ListHandleAffectBaseline 查询基线检查执行操作时影响的范围
 //
-// 查询基线检查执行操作时影响的范围
+// 查询基线检查执行操作时影响的范围。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListHandleAffectBaseline(request *model.ListHandleAffectBaselineRequest) (*model.ListHandleAffectBaselineResponse, error) {
@@ -5019,7 +5019,7 @@ func (c *HssClient) ListHandleAffectBaselineInvoker(request *model.ListHandleAff
 
 // ListHostCheckRules 查看主机对应的检查项
 //
-// 查询配置检查项影响到的服务器列表
+// 查询配置检查项影响到的服务器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListHostCheckRules(request *model.ListHostCheckRulesRequest) (*model.ListHostCheckRulesResponse, error) {
@@ -5040,7 +5040,7 @@ func (c *HssClient) ListHostCheckRulesInvoker(request *model.ListHostCheckRulesR
 
 // ListPasswordComplexity 查询口令复杂度策略检测报告
 //
-// 查询口令复杂度策略检测报告
+// 查询口令复杂度策略检测报告。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListPasswordComplexity(request *model.ListPasswordComplexityRequest) (*model.ListPasswordComplexityResponse, error) {
@@ -5061,7 +5061,7 @@ func (c *HssClient) ListPasswordComplexityInvoker(request *model.ListPasswordCom
 
 // ListRiskConfigCheckRules 查询指定安全配置项的检查项列表
 //
-// 查询指定安全配置项的检查项列表
+// 查询指定安全配置项的检查项列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListRiskConfigCheckRules(request *model.ListRiskConfigCheckRulesRequest) (*model.ListRiskConfigCheckRulesResponse, error) {
@@ -5082,7 +5082,7 @@ func (c *HssClient) ListRiskConfigCheckRulesInvoker(request *model.ListRiskConfi
 
 // ListRiskConfigHosts 查询指定安全配置项的受影响服务器列表
 //
-// 查询指定安全配置项的受影响服务器列表
+// 查询指定安全配置项的受影响服务器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListRiskConfigHosts(request *model.ListRiskConfigHostsRequest) (*model.ListRiskConfigHostsResponse, error) {
@@ -5103,7 +5103,7 @@ func (c *HssClient) ListRiskConfigHostsInvoker(request *model.ListRiskConfigHost
 
 // ListRiskConfigs 查询租户的服务器安全配置检测结果列表
 //
-// 查询租户的服务器安全配置检测结果列表
+// 查询租户的服务器安全配置检测结果列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListRiskConfigs(request *model.ListRiskConfigsRequest) (*model.ListRiskConfigsResponse, error) {
@@ -5122,9 +5122,9 @@ func (c *HssClient) ListRiskConfigsInvoker(request *model.ListRiskConfigsRequest
 	return &ListRiskConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListSecurityCheckPolicyGroup 查询配置检测策略组列表
+// ListSecurityCheckPolicyGroup 查询配置检测策略组列表10
 //
-// 查询配置检测策略组列表
+// 查询配置检测策略组列表10。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListSecurityCheckPolicyGroup(request *model.ListSecurityCheckPolicyGroupRequest) (*model.ListSecurityCheckPolicyGroupResponse, error) {
@@ -5137,7 +5137,7 @@ func (c *HssClient) ListSecurityCheckPolicyGroup(request *model.ListSecurityChec
 	}
 }
 
-// ListSecurityCheckPolicyGroupInvoker 查询配置检测策略组列表
+// ListSecurityCheckPolicyGroupInvoker 查询配置检测策略组列表10
 func (c *HssClient) ListSecurityCheckPolicyGroupInvoker(request *model.ListSecurityCheckPolicyGroupRequest) *ListSecurityCheckPolicyGroupInvoker {
 	requestDef := GenReqDefForListSecurityCheckPolicyGroup()
 	return &ListSecurityCheckPolicyGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -5145,7 +5145,7 @@ func (c *HssClient) ListSecurityCheckPolicyGroupInvoker(request *model.ListSecur
 
 // ListWeakPasswordUsers 查询弱口令检测结果列表
 //
-// 查询弱口令检测结果列表
+// 查询弱口令检测结果列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListWeakPasswordUsers(request *model.ListWeakPasswordUsersRequest) (*model.ListWeakPasswordUsersResponse, error) {
@@ -5166,7 +5166,7 @@ func (c *HssClient) ListWeakPasswordUsersInvoker(request *model.ListWeakPassword
 
 // RunBaselineDetect 手动检测：对策略中选择的主机，进行配置检测和弱口令检测
 //
-// 手动检测：对策略中选择的主机，进行配置检测和弱口令检测
+// 手动检测：对策略中选择的主机，进行配置检测和弱口令检测。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) RunBaselineDetect(request *model.RunBaselineDetectRequest) (*model.RunBaselineDetectResponse, error) {
@@ -5187,7 +5187,7 @@ func (c *HssClient) RunBaselineDetectInvoker(request *model.RunBaselineDetectReq
 
 // ShowBaselineDirectory 查询基线检测策略的基线目录信息
 //
-// 查询基线检测策略的基线目录信息
+// 查询基线检测策略的基线目录信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowBaselineDirectory(request *model.ShowBaselineDirectoryRequest) (*model.ShowBaselineDirectoryResponse, error) {
@@ -5208,7 +5208,7 @@ func (c *HssClient) ShowBaselineDirectoryInvoker(request *model.ShowBaselineDire
 
 // ShowBaselineOverview 查询基线检查的统计数据信息
 //
-// 查询基线检查的统计数据信息，用来展示基线检查页面的统计数据和图表数据，包括最近检测时间、检测主机数、检测基线数、主机配置检查项数、主机配置基线通过率、主机配置风险top5、主机弱口令检测统计、主机弱口令风险top5等
+// 查询基线检查的统计数据信息，用来展示基线检查页面的统计数据和图表数据，包括最近检测时间、检测主机数、检测基线数、主机配置检查项数、主机配置基线通过率、主机配置风险top5、主机弱口令检测统计、主机弱口令风险top5等。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowBaselineOverview(request *model.ShowBaselineOverviewRequest) (*model.ShowBaselineOverviewResponse, error) {
@@ -5229,7 +5229,7 @@ func (c *HssClient) ShowBaselineOverviewInvoker(request *model.ShowBaselineOverv
 
 // ShowBaselineScanStatus 查询基线扫描手动检测结果
 //
-// 查询基线扫描手动检测结果
+// 查询基线扫描手动检测结果。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowBaselineScanStatus(request *model.ShowBaselineScanStatusRequest) (*model.ShowBaselineScanStatusResponse, error) {
@@ -5250,7 +5250,7 @@ func (c *HssClient) ShowBaselineScanStatusInvoker(request *model.ShowBaselineSca
 
 // ShowBaselineStatistic 查询基线检查的统计数据信息，包括弱口令，口令复杂度，配置检测
 //
-// 查询基线检查的风险数统计信息，包括弱口令，口令复杂度，配置检测
+// 查询基线检查的风险数统计信息，包括弱口令，口令复杂度，配置检测。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowBaselineStatistic(request *model.ShowBaselineStatisticRequest) (*model.ShowBaselineStatisticResponse, error) {
@@ -5271,7 +5271,7 @@ func (c *HssClient) ShowBaselineStatisticInvoker(request *model.ShowBaselineStat
 
 // ShowBaselineWhiteList 查询单个基线白名单
 //
-// 查询单个基线白名单
+// 查询单个基线白名单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowBaselineWhiteList(request *model.ShowBaselineWhiteListRequest) (*model.ShowBaselineWhiteListResponse, error) {
@@ -5292,7 +5292,7 @@ func (c *HssClient) ShowBaselineWhiteListInvoker(request *model.ShowBaselineWhit
 
 // ShowCheckRuleDetail 查询配置检查项检测报告
 //
-// 查询配置检查项检测报告
+// 查询配置检查项检测报告。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowCheckRuleDetail(request *model.ShowCheckRuleDetailRequest) (*model.ShowCheckRuleDetailResponse, error) {
@@ -5313,7 +5313,7 @@ func (c *HssClient) ShowCheckRuleDetailInvoker(request *model.ShowCheckRuleDetai
 
 // ShowCheckRuleFixFailDetail 查询检查项修复失败原因
 //
-// 查询检查项修复失败原因
+// 查询检查项修复失败原因。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowCheckRuleFixFailDetail(request *model.ShowCheckRuleFixFailDetailRequest) (*model.ShowCheckRuleFixFailDetailResponse, error) {
@@ -5334,7 +5334,7 @@ func (c *HssClient) ShowCheckRuleFixFailDetailInvoker(request *model.ShowCheckRu
 
 // ShowDefaultSecurityCheckPolicy 查询配置检测策略的默认基线信息
 //
-// 查询配置检测策略的默认基线信息
+// 查询配置检测策略的默认基线信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowDefaultSecurityCheckPolicy(request *model.ShowDefaultSecurityCheckPolicyRequest) (*model.ShowDefaultSecurityCheckPolicyResponse, error) {
@@ -5355,7 +5355,7 @@ func (c *HssClient) ShowDefaultSecurityCheckPolicyInvoker(request *model.ShowDef
 
 // ShowDefaultSecurityCheckPolicyDetails 查询基线的详细检查项
 //
-// 查询基线的详细检查项
+// 查询基线的详细检查项。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowDefaultSecurityCheckPolicyDetails(request *model.ShowDefaultSecurityCheckPolicyDetailsRequest) (*model.ShowDefaultSecurityCheckPolicyDetailsResponse, error) {
@@ -5376,7 +5376,7 @@ func (c *HssClient) ShowDefaultSecurityCheckPolicyDetailsInvoker(request *model.
 
 // ShowRiskConfigDetail 查询指定安全配置项的检查结果
 //
-// 查询指定安全配置项的检查结果
+// 查询指定安全配置项的检查结果。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowRiskConfigDetail(request *model.ShowRiskConfigDetailRequest) (*model.ShowRiskConfigDetailResponse, error) {
@@ -5397,7 +5397,7 @@ func (c *HssClient) ShowRiskConfigDetailInvoker(request *model.ShowRiskConfigDet
 
 // UpdateSecurityCheckPolicyGroup 修改指定配置检测策略信息
 //
-// 修改指定配置检测策略信息
+// 修改指定配置检测策略信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) UpdateSecurityCheckPolicyGroup(request *model.UpdateSecurityCheckPolicyGroupRequest) (*model.UpdateSecurityCheckPolicyGroupResponse, error) {
@@ -5418,7 +5418,7 @@ func (c *HssClient) UpdateSecurityCheckPolicyGroupInvoker(request *model.UpdateS
 
 // ExportRisks 导出集群环境安全相关信息
 //
-// 导出集群环境安全相关信息
+// 导出集群环境安全相关信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ExportRisks(request *model.ExportRisksRequest) (*model.ExportRisksResponse, error) {
@@ -5439,7 +5439,7 @@ func (c *HssClient) ExportRisksInvoker(request *model.ExportRisksRequest) *Expor
 
 // ListClusterRiskAffectResources 查询集群风险影响的集群资源列表
 //
-// 查询集群风险影响的集群资源列表
+// 查询集群风险影响的集群资源列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListClusterRiskAffectResources(request *model.ListClusterRiskAffectResourcesRequest) (*model.ListClusterRiskAffectResourcesResponse, error) {
@@ -5460,7 +5460,7 @@ func (c *HssClient) ListClusterRiskAffectResourcesInvoker(request *model.ListClu
 
 // ListClusterRisks 查询集群风险列表
 //
-// 查询集群风险列表
+// 查询集群风险列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListClusterRisks(request *model.ListClusterRisksRequest) (*model.ListClusterRisksResponse, error) {
@@ -5481,7 +5481,7 @@ func (c *HssClient) ListClusterRisksInvoker(request *model.ListClusterRisksReque
 
 // ShowClusterScanStatistics 查询集群扫描统计数据
 //
-// 查询集群扫描统计数据
+// 查询集群扫描统计数据。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowClusterScanStatistics(request *model.ShowClusterScanStatisticsRequest) (*model.ShowClusterScanStatisticsResponse, error) {
@@ -5502,7 +5502,7 @@ func (c *HssClient) ShowClusterScanStatisticsInvoker(request *model.ShowClusterS
 
 // ListProjectConfigs 查询项目配置
 //
-// 查询项目配置
+// 查询项目配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListProjectConfigs(request *model.ListProjectConfigsRequest) (*model.ListProjectConfigsResponse, error) {
@@ -5523,7 +5523,7 @@ func (c *HssClient) ListProjectConfigsInvoker(request *model.ListProjectConfigsR
 
 // ModifyProjectConfigs 修改项目配置
 //
-// 修改项目配置
+// 修改项目配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ModifyProjectConfigs(request *model.ModifyProjectConfigsRequest) (*model.ModifyProjectConfigsResponse, error) {
@@ -5544,7 +5544,7 @@ func (c *HssClient) ModifyProjectConfigsInvoker(request *model.ModifyProjectConf
 
 // SaveBrowsingHistory 保存用户访问记录
 //
-// 保存用户访问记录
+// 保存用户访问记录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SaveBrowsingHistory(request *model.SaveBrowsingHistoryRequest) (*model.SaveBrowsingHistoryResponse, error) {
@@ -5565,7 +5565,7 @@ func (c *HssClient) SaveBrowsingHistoryInvoker(request *model.SaveBrowsingHistor
 
 // UploadReportLogo 上传安全报告logo
 //
-// 上传安全报告logo
+// 上传安全报告logo。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) UploadReportLogo(request *model.UploadReportLogoRequest) (*model.UploadReportLogoResponse, error) {
@@ -5586,7 +5586,7 @@ func (c *HssClient) UploadReportLogoInvoker(request *model.UploadReportLogoReque
 
 // AddCicdConfiguration 新增cicd配置
 //
-// 新增cicd配置
+// 新增cicd配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) AddCicdConfiguration(request *model.AddCicdConfigurationRequest) (*model.AddCicdConfigurationResponse, error) {
@@ -5607,7 +5607,7 @@ func (c *HssClient) AddCicdConfigurationInvoker(request *model.AddCicdConfigurat
 
 // AddRegistry 新增镜像仓库
 //
-// 新增镜像仓库
+// 新增镜像仓库。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) AddRegistry(request *model.AddRegistryRequest) (*model.AddRegistryResponse, error) {
@@ -5628,7 +5628,7 @@ func (c *HssClient) AddRegistryInvoker(request *model.AddRegistryRequest) *AddRe
 
 // BatchDeleteAgentDaemonset 批量卸载集群daemonset
 //
-// 批量卸载集群daemonset
+// 批量卸载集群daemonset。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) BatchDeleteAgentDaemonset(request *model.BatchDeleteAgentDaemonsetRequest) (*model.BatchDeleteAgentDaemonsetResponse, error) {
@@ -5649,7 +5649,7 @@ func (c *HssClient) BatchDeleteAgentDaemonsetInvoker(request *model.BatchDeleteA
 
 // BatchDeleteRegistry 批量删除镜像仓接入信息
 //
-// 批量删除镜像仓接入信息
+// 批量删除镜像仓接入信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) BatchDeleteRegistry(request *model.BatchDeleteRegistryRequest) (*model.BatchDeleteRegistryResponse, error) {
@@ -5670,7 +5670,7 @@ func (c *HssClient) BatchDeleteRegistryInvoker(request *model.BatchDeleteRegistr
 
 // BatchUpgradeAgentDaemonset 批量升级集群daemonset
 //
-// 批量升级集群daemonset
+// 批量升级集群daemonset。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) BatchUpgradeAgentDaemonset(request *model.BatchUpgradeAgentDaemonsetRequest) (*model.BatchUpgradeAgentDaemonsetResponse, error) {
@@ -5691,7 +5691,7 @@ func (c *HssClient) BatchUpgradeAgentDaemonsetInvoker(request *model.BatchUpgrad
 
 // CreateAgentDaemonset 创建集群daemonset
 //
-// 创建集群daemonset
+// 创建集群daemonset。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateAgentDaemonset(request *model.CreateAgentDaemonsetRequest) (*model.CreateAgentDaemonsetResponse, error) {
@@ -5712,7 +5712,7 @@ func (c *HssClient) CreateAgentDaemonsetInvoker(request *model.CreateAgentDaemon
 
 // CreateCicdConfigurationCommand 生成cicd接入配置命令
 //
-// 生成cicd接入配置命令
+// 生成cicd接入配置命令。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateCicdConfigurationCommand(request *model.CreateCicdConfigurationCommandRequest) (*model.CreateCicdConfigurationCommandResponse, error) {
@@ -5733,7 +5733,7 @@ func (c *HssClient) CreateCicdConfigurationCommandInvoker(request *model.CreateC
 
 // CreateMultiCloudClusters 创建多云集群
 //
-// 创建多云集群
+// 创建多云集群。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateMultiCloudClusters(request *model.CreateMultiCloudClustersRequest) (*model.CreateMultiCloudClustersResponse, error) {
@@ -5754,7 +5754,7 @@ func (c *HssClient) CreateMultiCloudClustersInvoker(request *model.CreateMultiCl
 
 // DeleteAgentDaemonset 删除集群daemonset
 //
-// 删除集群daemonset
+// 删除集群daemonset。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteAgentDaemonset(request *model.DeleteAgentDaemonsetRequest) (*model.DeleteAgentDaemonsetResponse, error) {
@@ -5775,7 +5775,7 @@ func (c *HssClient) DeleteAgentDaemonsetInvoker(request *model.DeleteAgentDaemon
 
 // DeleteCicdConfigurations 删除CI/CD配置
 //
-// 删除CI/CD配置
+// 删除CI/CD配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteCicdConfigurations(request *model.DeleteCicdConfigurationsRequest) (*model.DeleteCicdConfigurationsResponse, error) {
@@ -5796,7 +5796,7 @@ func (c *HssClient) DeleteCicdConfigurationsInvoker(request *model.DeleteCicdCon
 
 // DeleteRegistry 删除镜像仓接入信息
 //
-// 删除镜像仓接入信息
+// 删除镜像仓接入信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteRegistry(request *model.DeleteRegistryRequest) (*model.DeleteRegistryResponse, error) {
@@ -5838,7 +5838,7 @@ func (c *HssClient) ExportImageSecurityReportTaskInvoker(request *model.ExportIm
 
 // ListAgentDaemonsetClusterNodesLabel 获取集群节点标签
 //
-// 获取集群节点标签
+// 获取集群节点标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAgentDaemonsetClusterNodesLabel(request *model.ListAgentDaemonsetClusterNodesLabelRequest) (*model.ListAgentDaemonsetClusterNodesLabelResponse, error) {
@@ -5859,7 +5859,7 @@ func (c *HssClient) ListAgentDaemonsetClusterNodesLabelInvoker(request *model.Li
 
 // ListAgentDaemonsetInfo 获取集群daemonset列表
 //
-// 获取集群daemonset列表
+// 获取集群daemonset列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAgentDaemonsetInfo(request *model.ListAgentDaemonsetInfoRequest) (*model.ListAgentDaemonsetInfoResponse, error) {
@@ -5880,7 +5880,7 @@ func (c *HssClient) ListAgentDaemonsetInfoInvoker(request *model.ListAgentDaemon
 
 // ListAssociateRegistries 获取镜像同步任务关联的镜像仓的信息
 //
-// 获取镜像同步任务关联的镜像仓的信息
+// 获取镜像同步任务关联的镜像仓的信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAssociateRegistries(request *model.ListAssociateRegistriesRequest) (*model.ListAssociateRegistriesResponse, error) {
@@ -5901,7 +5901,7 @@ func (c *HssClient) ListAssociateRegistriesInvoker(request *model.ListAssociateR
 
 // ListCceNodesLabel 获取集群节点标签
 //
-// 获取集群节点标签
+// 获取集群节点标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListCceNodesLabel(request *model.ListCceNodesLabelRequest) (*model.ListCceNodesLabelResponse, error) {
@@ -5922,7 +5922,7 @@ func (c *HssClient) ListCceNodesLabelInvoker(request *model.ListCceNodesLabelReq
 
 // ListCicdConfigurations 查询cicd配置列表
 //
-// 查询cicd配置列表
+// 查询cicd配置列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListCicdConfigurations(request *model.ListCicdConfigurationsRequest) (*model.ListCicdConfigurationsResponse, error) {
@@ -5943,7 +5943,7 @@ func (c *HssClient) ListCicdConfigurationsInvoker(request *model.ListCicdConfigu
 
 // ListCicdImages 查询cicd镜像列表
 //
-// 查询cicd镜像列表
+// 查询cicd镜像列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListCicdImages(request *model.ListCicdImagesRequest) (*model.ListCicdImagesResponse, error) {
@@ -5964,7 +5964,7 @@ func (c *HssClient) ListCicdImagesInvoker(request *model.ListCicdImagesRequest) 
 
 // ListMultiCloudClusters 查询多云集群
 //
-// 查询多云集群
+// 查询多云集群。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListMultiCloudClusters(request *model.ListMultiCloudClustersRequest) (*model.ListMultiCloudClustersResponse, error) {
@@ -5985,7 +5985,7 @@ func (c *HssClient) ListMultiCloudClustersInvoker(request *model.ListMultiCloudC
 
 // ListRegistry 获取镜像仓列表
 //
-// 获取镜像仓列表
+// 获取镜像仓列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListRegistry(request *model.ListRegistryRequest) (*model.ListRegistryResponse, error) {
@@ -6006,7 +6006,7 @@ func (c *HssClient) ListRegistryInvoker(request *model.ListRegistryRequest) *Lis
 
 // ListRegistryStatistics 查询镜像仓统计数据
 //
-// 查询镜像仓统计数据
+// 查询镜像仓统计数据。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListRegistryStatistics(request *model.ListRegistryStatisticsRequest) (*model.ListRegistryStatisticsResponse, error) {
@@ -6027,7 +6027,7 @@ func (c *HssClient) ListRegistryStatisticsInvoker(request *model.ListRegistrySta
 
 // ModifyCicdConfiguration 修改CI/CD配置
 //
-// 修改CI/CD配置
+// 修改CI/CD配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ModifyCicdConfiguration(request *model.ModifyCicdConfigurationRequest) (*model.ModifyCicdConfigurationResponse, error) {
@@ -6048,7 +6048,7 @@ func (c *HssClient) ModifyCicdConfigurationInvoker(request *model.ModifyCicdConf
 
 // ParseMultiCloudClusterConfig 解析多云集群的配置文件
 //
-// 解析多云集群的配置文件
+// 解析多云集群的配置文件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ParseMultiCloudClusterConfig(request *model.ParseMultiCloudClusterConfigRequest) (*model.ParseMultiCloudClusterConfigResponse, error) {
@@ -6069,7 +6069,7 @@ func (c *HssClient) ParseMultiCloudClusterConfigInvoker(request *model.ParseMult
 
 // RemoveMultiCloudClusters 删除多云集群
 //
-// 删除多云集群
+// 删除多云集群。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) RemoveMultiCloudClusters(request *model.RemoveMultiCloudClustersRequest) (*model.RemoveMultiCloudClustersResponse, error) {
@@ -6090,7 +6090,7 @@ func (c *HssClient) RemoveMultiCloudClustersInvoker(request *model.RemoveMultiCl
 
 // ShowAgentAddress 集群公网接入方式网络配置信息
 //
-// 集群公网接入方式网络配置信息
+// 集群公网接入方式网络配置信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowAgentAddress(request *model.ShowAgentAddressRequest) (*model.ShowAgentAddressResponse, error) {
@@ -6111,7 +6111,7 @@ func (c *HssClient) ShowAgentAddressInvoker(request *model.ShowAgentAddressReque
 
 // ShowAgentDaemonsetDeployTemplate 获取部署模板
 //
-// 获取部署模板，在安装Daemonset的时候提供选择
+// 获取部署模板，在安装Daemonset的时候提供选择。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowAgentDaemonsetDeployTemplate(request *model.ShowAgentDaemonsetDeployTemplateRequest) (*model.ShowAgentDaemonsetDeployTemplateResponse, error) {
@@ -6132,7 +6132,7 @@ func (c *HssClient) ShowAgentDaemonsetDeployTemplateInvoker(request *model.ShowA
 
 // ShowAgentDaemonsetDetailInfo 获取集群daemonset信息
 //
-// 获取集群daemonset信息
+// 获取集群daemonset信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowAgentDaemonsetDetailInfo(request *model.ShowAgentDaemonsetDetailInfoRequest) (*model.ShowAgentDaemonsetDetailInfoResponse, error) {
@@ -6153,7 +6153,7 @@ func (c *HssClient) ShowAgentDaemonsetDetailInfoInvoker(request *model.ShowAgent
 
 // ShowCicdConfiguration 查询CI/CD配置信息
 //
-// 查询CI/CD配置信息
+// 查询CI/CD配置信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowCicdConfiguration(request *model.ShowCicdConfigurationRequest) (*model.ShowCicdConfigurationResponse, error) {
@@ -6174,7 +6174,7 @@ func (c *HssClient) ShowCicdConfigurationInvoker(request *model.ShowCicdConfigur
 
 // ShowImageUploadCommand 获取扫描组件镜像上传指令
 //
-// 获取镜像上传指令，上传的镜像是“镜像仓接入功能”和“镜像仓扫描功能”需要的组件
+// 获取镜像上传指令，上传的镜像是“镜像仓接入功能”和“镜像仓扫描功能”需要的组件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowImageUploadCommand(request *model.ShowImageUploadCommandRequest) (*model.ShowImageUploadCommandResponse, error) {
@@ -6195,7 +6195,7 @@ func (c *HssClient) ShowImageUploadCommandInvoker(request *model.ShowImageUpload
 
 // ShowMultiCloudClusterAuth 获取多云集群的账号权限
 //
-// 获取多云集群的账号权限
+// 获取多云集群的账号权限。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowMultiCloudClusterAuth(request *model.ShowMultiCloudClusterAuthRequest) (*model.ShowMultiCloudClusterAuthResponse, error) {
@@ -6216,7 +6216,7 @@ func (c *HssClient) ShowMultiCloudClusterAuthInvoker(request *model.ShowMultiClo
 
 // ShowMultiCloudClusterImageCommand 获取多云集群的上传镜像指令
 //
-// 获取多云集群的上传镜像指令
+// 获取多云集群的上传镜像指令。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowMultiCloudClusterImageCommand(request *model.ShowMultiCloudClusterImageCommandRequest) (*model.ShowMultiCloudClusterImageCommandResponse, error) {
@@ -6237,7 +6237,7 @@ func (c *HssClient) ShowMultiCloudClusterImageCommandInvoker(request *model.Show
 
 // ShowMultiCloudClusterProxyScript 获取多云集群的代理安装脚本
 //
-// 获取多云集群的代理安装脚本
+// 获取多云集群的代理安装脚本。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowMultiCloudClusterProxyScript(request *model.ShowMultiCloudClusterProxyScriptRequest) (*model.ShowMultiCloudClusterProxyScriptResponse, error) {
@@ -6258,7 +6258,7 @@ func (c *HssClient) ShowMultiCloudClusterProxyScriptInvoker(request *model.ShowM
 
 // SyncMultiCloudClusterStatus 同步多云集群的接入状态
 //
-// 同步多云集群的接入状态
+// 同步多云集群的接入状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SyncMultiCloudClusterStatus(request *model.SyncMultiCloudClusterStatusRequest) (*model.SyncMultiCloudClusterStatusResponse, error) {
@@ -6279,7 +6279,7 @@ func (c *HssClient) SyncMultiCloudClusterStatusInvoker(request *model.SyncMultiC
 
 // UpdateAgentDaemonset 更新集群daemonset
 //
-// 更新集群daemonset
+// 更新集群daemonset。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) UpdateAgentDaemonset(request *model.UpdateAgentDaemonsetRequest) (*model.UpdateAgentDaemonsetResponse, error) {
@@ -6300,7 +6300,7 @@ func (c *HssClient) UpdateAgentDaemonsetInvoker(request *model.UpdateAgentDaemon
 
 // UpdateMultiCloudClusters 更新多云集群
 //
-// 更新多云集群
+// 更新多云集群。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) UpdateMultiCloudClusters(request *model.UpdateMultiCloudClustersRequest) (*model.UpdateMultiCloudClustersResponse, error) {
@@ -6321,7 +6321,7 @@ func (c *HssClient) UpdateMultiCloudClustersInvoker(request *model.UpdateMultiCl
 
 // UpdateRegistry 编辑镜像仓接入信息
 //
-// 编辑镜像仓接入信息
+// 编辑镜像仓接入信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) UpdateRegistry(request *model.UpdateRegistryRequest) (*model.UpdateRegistryResponse, error) {
@@ -6342,7 +6342,7 @@ func (c *HssClient) UpdateRegistryInvoker(request *model.UpdateRegistryRequest) 
 
 // ListFileEvents 变更文件列表
 //
-// 变更文件列表
+// 变更文件列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListFileEvents(request *model.ListFileEventsRequest) (*model.ListFileEventsResponse, error) {
@@ -6363,7 +6363,7 @@ func (c *HssClient) ListFileEventsInvoker(request *model.ListFileEventsRequest) 
 
 // ListFileHostEventDetails 某个服务器变更文件信息
 //
-// 某个服务器变更文件信息
+// 某个服务器变更文件信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListFileHostEventDetails(request *model.ListFileHostEventDetailsRequest) (*model.ListFileHostEventDetailsResponse, error) {
@@ -6384,7 +6384,7 @@ func (c *HssClient) ListFileHostEventDetailsInvoker(request *model.ListFileHostE
 
 // ListFileHosts 云服务器变更列表
 //
-// 云服务器变更列表
+// 云服务器变更列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListFileHosts(request *model.ListFileHostsRequest) (*model.ListFileHostsResponse, error) {
@@ -6405,7 +6405,7 @@ func (c *HssClient) ListFileHostsInvoker(request *model.ListFileHostsRequest) *L
 
 // ShowFileStatistic 获取服务器文件统计信息
 //
-// 获取服务器文件统计信息
+// 获取服务器文件统计信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowFileStatistic(request *model.ShowFileStatisticRequest) (*model.ShowFileStatisticResponse, error) {
@@ -6426,7 +6426,7 @@ func (c *HssClient) ShowFileStatisticInvoker(request *model.ShowFileStatisticReq
 
 // AddHostsGroup 创建服务器组
 //
-// 创建服务器组
+// 创建服务器组。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) AddHostsGroup(request *model.AddHostsGroupRequest) (*model.AddHostsGroupResponse, error) {
@@ -6447,7 +6447,7 @@ func (c *HssClient) AddHostsGroupInvoker(request *model.AddHostsGroupRequest) *A
 
 // AssociateHostAssetValue 关联资产重要性
 //
-// 关联资产重要性
+// 关联资产重要性。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) AssociateHostAssetValue(request *model.AssociateHostAssetValueRequest) (*model.AssociateHostAssetValueResponse, error) {
@@ -6468,7 +6468,7 @@ func (c *HssClient) AssociateHostAssetValueInvoker(request *model.AssociateHostA
 
 // AssociateHostsGroup 分配到组
 //
-// 分配到组
+// 分配到组。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) AssociateHostsGroup(request *model.AssociateHostsGroupRequest) (*model.AssociateHostsGroupResponse, error) {
@@ -6489,7 +6489,7 @@ func (c *HssClient) AssociateHostsGroupInvoker(request *model.AssociateHostsGrou
 
 // ChangeAutoOpenQuotaStatus 开启或关闭“自动绑定配额”配置开关
 //
-// 开启或关闭“自动绑定配额”配置开关
+// 开启或关闭“自动绑定配额”配置开关。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeAutoOpenQuotaStatus(request *model.ChangeAutoOpenQuotaStatusRequest) (*model.ChangeAutoOpenQuotaStatusResponse, error) {
@@ -6510,7 +6510,7 @@ func (c *HssClient) ChangeAutoOpenQuotaStatusInvoker(request *model.ChangeAutoOp
 
 // ChangeHostIgnoreStatus 忽略/取消忽略主机
 //
-// 忽略/取消忽略主机
+// 忽略/取消忽略主机。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeHostIgnoreStatus(request *model.ChangeHostIgnoreStatusRequest) (*model.ChangeHostIgnoreStatusResponse, error) {
@@ -6531,7 +6531,7 @@ func (c *HssClient) ChangeHostIgnoreStatusInvoker(request *model.ChangeHostIgnor
 
 // ChangeHostsGroup 编辑服务器组
 //
-// 编辑服务器组
+// 编辑服务器组。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeHostsGroup(request *model.ChangeHostsGroupRequest) (*model.ChangeHostsGroupResponse, error) {
@@ -6552,7 +6552,7 @@ func (c *HssClient) ChangeHostsGroupInvoker(request *model.ChangeHostsGroupReque
 
 // CreateVpcEndpoint 创建VPC终端节点的创建
 //
-// 创建VPC终端节点的创建
+// 创建VPC终端节点的创建。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateVpcEndpoint(request *model.CreateVpcEndpointRequest) (*model.CreateVpcEndpointResponse, error) {
@@ -6573,7 +6573,7 @@ func (c *HssClient) CreateVpcEndpointInvoker(request *model.CreateVpcEndpointReq
 
 // DeleteHostsGroup 删除服务器组
 //
-// 删除服务器组
+// 删除服务器组。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteHostsGroup(request *model.DeleteHostsGroupRequest) (*model.DeleteHostsGroupResponse, error) {
@@ -6594,7 +6594,7 @@ func (c *HssClient) DeleteHostsGroupInvoker(request *model.DeleteHostsGroupReque
 
 // ListAutoOpenQuotaStatus 查询“自动绑定配额”配置开关状态
 //
-// 查询“自动绑定配额”配置开关状态
+// 查询“自动绑定配额”配置开关状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAutoOpenQuotaStatus(request *model.ListAutoOpenQuotaStatusRequest) (*model.ListAutoOpenQuotaStatusResponse, error) {
@@ -6615,7 +6615,7 @@ func (c *HssClient) ListAutoOpenQuotaStatusInvoker(request *model.ListAutoOpenQu
 
 // ListHostGroups 查询服务器组列表
 //
-// 查询服务器组列表
+// 查询服务器组列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListHostGroups(request *model.ListHostGroupsRequest) (*model.ListHostGroupsResponse, error) {
@@ -6636,7 +6636,7 @@ func (c *HssClient) ListHostGroupsInvoker(request *model.ListHostGroupsRequest) 
 
 // ListHostStatus 查询云服务器列表
 //
-// 查询云服务器列表
+// 查询云服务器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListHostStatus(request *model.ListHostStatusRequest) (*model.ListHostStatusResponse, error) {
@@ -6657,7 +6657,7 @@ func (c *HssClient) ListHostStatusInvoker(request *model.ListHostStatusRequest) 
 
 // ListHostsRisk ECS风险状况
 //
-// ECS风险状况
+// ECS风险状况。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListHostsRisk(request *model.ListHostsRiskRequest) (*model.ListHostsRiskResponse, error) {
@@ -6678,7 +6678,7 @@ func (c *HssClient) ListHostsRiskInvoker(request *model.ListHostsRiskRequest) *L
 
 // ListPolicies 查询主机策略列表
 //
-// 查询主机策略列表
+// 查询主机策略列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListPolicies(request *model.ListPoliciesRequest) (*model.ListPoliciesResponse, error) {
@@ -6699,7 +6699,7 @@ func (c *HssClient) ListPoliciesInvoker(request *model.ListPoliciesRequest) *Lis
 
 // SetManualDetect 下发手动检测
 //
-// 下发手动检测
+// 下发手动检测。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SetManualDetect(request *model.SetManualDetectRequest) (*model.SetManualDetectResponse, error) {
@@ -6720,7 +6720,7 @@ func (c *HssClient) SetManualDetectInvoker(request *model.SetManualDetectRequest
 
 // ShowEndpointStatus 查询每个主机的终端节点的创建状态
 //
-// 查询每个主机的终端节点的创建状态
+// 查询每个主机的终端节点的创建状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowEndpointStatus(request *model.ShowEndpointStatusRequest) (*model.ShowEndpointStatusResponse, error) {
@@ -6741,7 +6741,7 @@ func (c *HssClient) ShowEndpointStatusInvoker(request *model.ShowEndpointStatusR
 
 // ShowHostsStatistics 统计服务器数据
 //
-// 统计服务器数据
+// 统计服务器数据。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowHostsStatistics(request *model.ShowHostsStatisticsRequest) (*model.ShowHostsStatisticsResponse, error) {
@@ -6762,7 +6762,7 @@ func (c *HssClient) ShowHostsStatisticsInvoker(request *model.ShowHostsStatistic
 
 // ShowScanStatus 查询手动检测状态
 //
-// 查询手动检测状态
+// 查询手动检测状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowScanStatus(request *model.ShowScanStatusRequest) (*model.ShowScanStatusResponse, error) {
@@ -6783,7 +6783,7 @@ func (c *HssClient) ShowScanStatusInvoker(request *model.ShowScanStatusRequest) 
 
 // SwitchFirewallStatus 修改防火墙授权状态
 //
-// 修改防火墙授权状态
+// 修改防火墙授权状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SwitchFirewallStatus(request *model.SwitchFirewallStatusRequest) (*model.SwitchFirewallStatusResponse, error) {
@@ -6804,7 +6804,7 @@ func (c *HssClient) SwitchFirewallStatusInvoker(request *model.SwitchFirewallSta
 
 // SwitchHostsProtectStatus 切换防护状态
 //
-// 切换防护状态
+// 切换防护状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SwitchHostsProtectStatus(request *model.SwitchHostsProtectStatusRequest) (*model.SwitchHostsProtectStatusResponse, error) {
@@ -6825,7 +6825,7 @@ func (c *HssClient) SwitchHostsProtectStatusInvoker(request *model.SwitchHostsPr
 
 // UninstallAgents 卸载Agent
 //
-// 卸载Agent
+// 卸载Agent。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) UninstallAgents(request *model.UninstallAgentsRequest) (*model.UninstallAgentsResponse, error) {
@@ -6846,7 +6846,7 @@ func (c *HssClient) UninstallAgentsInvoker(request *model.UninstallAgentsRequest
 
 // UpgradeAgents 升级Agent
 //
-// 升级Agent
+// 升级Agent。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) UpgradeAgents(request *model.UpgradeAgentsRequest) (*model.UpgradeAgentsResponse, error) {
@@ -6867,7 +6867,7 @@ func (c *HssClient) UpgradeAgentsInvoker(request *model.UpgradeAgentsRequest) *U
 
 // ListIacFileRiskPaths 获取iac文件风险路径列表
 //
-// 获取iac文件风险路径列表
+// 获取iac文件风险路径列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListIacFileRiskPaths(request *model.ListIacFileRiskPathsRequest) (*model.ListIacFileRiskPathsResponse, error) {
@@ -6888,7 +6888,7 @@ func (c *HssClient) ListIacFileRiskPathsInvoker(request *model.ListIacFileRiskPa
 
 // ListIacFileRisks 获取iac文件风险列表
 //
-// 获取iac文件风险列表
+// 获取iac文件风险列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListIacFileRisks(request *model.ListIacFileRisksRequest) (*model.ListIacFileRisksResponse, error) {
@@ -6909,7 +6909,7 @@ func (c *HssClient) ListIacFileRisksInvoker(request *model.ListIacFileRisksReque
 
 // ListIacFiles 获取iac文件列表
 //
-// 获取iac文件列表
+// 获取iac文件列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListIacFiles(request *model.ListIacFilesRequest) (*model.ListIacFilesResponse, error) {
@@ -6930,7 +6930,7 @@ func (c *HssClient) ListIacFilesInvoker(request *model.ListIacFilesRequest) *Lis
 
 // AddImageWhiteLists 新增镜像白名单
 //
-// 新增镜像白名单，目前仅支持漏洞白名单
+// 新增镜像白名单，目前仅支持漏洞白名单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) AddImageWhiteLists(request *model.AddImageWhiteListsRequest) (*model.AddImageWhiteListsResponse, error) {
@@ -6951,7 +6951,7 @@ func (c *HssClient) AddImageWhiteListsInvoker(request *model.AddImageWhiteListsR
 
 // BatchExportBaselineTask 镜像仓库基线检查批量导出（支持全量导出）
 //
-// 镜像仓库基线检查批量导出（支持全量导出）,若导出镜像类型为cicd类型的数据，需要传参image_type为cicd
+// 镜像仓库基线检查批量导出（支持全量导出）,若导出镜像类型为cicd类型的数据，需要传参image_type为cicd。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) BatchExportBaselineTask(request *model.BatchExportBaselineTaskRequest) (*model.BatchExportBaselineTaskResponse, error) {
@@ -6972,7 +6972,7 @@ func (c *HssClient) BatchExportBaselineTaskInvoker(request *model.BatchExportBas
 
 // BatchExportLocalVulTask 本地镜像漏洞批量导出（支持全量导出）
 //
-// 本地镜像漏洞批量导出（支持全量导出）
+// 本地镜像漏洞批量导出（支持全量导出）。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) BatchExportLocalVulTask(request *model.BatchExportLocalVulTaskRequest) (*model.BatchExportLocalVulTaskResponse, error) {
@@ -6993,7 +6993,7 @@ func (c *HssClient) BatchExportLocalVulTaskInvoker(request *model.BatchExportLoc
 
 // BatchScanLocalImage 本地镜像扫描
 //
-// 本地镜像扫描
+// 本地镜像扫描。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) BatchScanLocalImage(request *model.BatchScanLocalImageRequest) (*model.BatchScanLocalImageResponse, error) {
@@ -7014,7 +7014,7 @@ func (c *HssClient) BatchScanLocalImageInvoker(request *model.BatchScanLocalImag
 
 // BatchScanSwrImage 镜像仓库镜像批量扫描--接口已废弃
 //
-// 镜像仓库镜像批量扫描--接口已废弃
+// 镜像仓库镜像批量扫描--接口已废弃。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) BatchScanSwrImage(request *model.BatchScanSwrImageRequest) (*model.BatchScanSwrImageResponse, error) {
@@ -7035,7 +7035,7 @@ func (c *HssClient) BatchScanSwrImageInvoker(request *model.BatchScanSwrImageReq
 
 // ChangeExtendedWeakPassword 修改镜像的自定义弱口令
 //
-// 修改镜像的自定义弱口令
+// 修改镜像的自定义弱口令。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeExtendedWeakPassword(request *model.ChangeExtendedWeakPasswordRequest) (*model.ChangeExtendedWeakPasswordResponse, error) {
@@ -7056,7 +7056,7 @@ func (c *HssClient) ChangeExtendedWeakPasswordInvoker(request *model.ChangeExten
 
 // ChangeFilePathWhiteDetail 修改镜像的敏感信息文件路径白名单--接口已废弃
 //
-// 修改镜像的敏感信息文件路径白名单--接口已废弃
+// 修改镜像的敏感信息文件路径白名单--接口已废弃。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeFilePathWhiteDetail(request *model.ChangeFilePathWhiteDetailRequest) (*model.ChangeFilePathWhiteDetailResponse, error) {
@@ -7077,7 +7077,7 @@ func (c *HssClient) ChangeFilePathWhiteDetailInvoker(request *model.ChangeFilePa
 
 // ChangeFilePathWhiteLists 修改镜像的敏感信息文件路径白名单
 //
-// 修改镜像的敏感信息文件路径白名单
+// 修改镜像的敏感信息文件路径白名单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeFilePathWhiteLists(request *model.ChangeFilePathWhiteListsRequest) (*model.ChangeFilePathWhiteListsResponse, error) {
@@ -7098,7 +7098,7 @@ func (c *HssClient) ChangeFilePathWhiteListsInvoker(request *model.ChangeFilePat
 
 // ChangeImageWhiteList 修改镜像白名单配置信息
 //
-// 修改镜像白名单配置信息
+// 修改镜像白名单配置信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeImageWhiteList(request *model.ChangeImageWhiteListRequest) (*model.ChangeImageWhiteListResponse, error) {
@@ -7119,7 +7119,7 @@ func (c *HssClient) ChangeImageWhiteListInvoker(request *model.ChangeImageWhiteL
 
 // ChangeSensitiveInfo 敏感信息操作处理
 //
-// 敏感信息操作处理
+// 敏感信息操作处理。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeSensitiveInfo(request *model.ChangeSensitiveInfoRequest) (*model.ChangeSensitiveInfoResponse, error) {
@@ -7140,7 +7140,7 @@ func (c *HssClient) ChangeSensitiveInfoInvoker(request *model.ChangeSensitiveInf
 
 // DeleteImageWhiteLists 删除镜像白名单
 //
-// 删除镜像白名单
+// 删除镜像白名单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteImageWhiteLists(request *model.DeleteImageWhiteListsRequest) (*model.DeleteImageWhiteListsResponse, error) {
@@ -7161,7 +7161,7 @@ func (c *HssClient) DeleteImageWhiteListsInvoker(request *model.DeleteImageWhite
 
 // HandleImageVulnerability 处置镜像漏洞
 //
-// 处置镜像漏洞
+// 处置镜像漏洞。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) HandleImageVulnerability(request *model.HandleImageVulnerabilityRequest) (*model.HandleImageVulnerabilityResponse, error) {
@@ -7182,7 +7182,7 @@ func (c *HssClient) HandleImageVulnerabilityInvoker(request *model.HandleImageVu
 
 // ListCheckRuleResources 查询配置检查项影响到的资源列表
 //
-// 查询配置检查项影响到的资源列表
+// 查询配置检查项影响到的资源列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListCheckRuleResources(request *model.ListCheckRuleResourcesRequest) (*model.ListCheckRuleResourcesResponse, error) {
@@ -7203,7 +7203,7 @@ func (c *HssClient) ListCheckRuleResourcesInvoker(request *model.ListCheckRuleRe
 
 // ListCheckRulesInfo 查询基线检查的配置检查信息
 //
-// 查询基线检查的配置检查信息
+// 查询基线检查的配置检查信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListCheckRulesInfo(request *model.ListCheckRulesInfoRequest) (*model.ListCheckRulesInfoResponse, error) {
@@ -7224,7 +7224,7 @@ func (c *HssClient) ListCheckRulesInfoInvoker(request *model.ListCheckRulesInfoR
 
 // ListContainerImageLogs 查询容器镜像操作日志
 //
-// 查询容器镜像操作日志
+// 查询容器镜像操作日志。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListContainerImageLogs(request *model.ListContainerImageLogsRequest) (*model.ListContainerImageLogsResponse, error) {
@@ -7245,7 +7245,7 @@ func (c *HssClient) ListContainerImageLogsInvoker(request *model.ListContainerIm
 
 // ListContainerImages 查询容器镜像列表
 //
-// 查询容器镜像列表
+// 查询容器镜像列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListContainerImages(request *model.ListContainerImagesRequest) (*model.ListContainerImagesResponse, error) {
@@ -7266,7 +7266,7 @@ func (c *HssClient) ListContainerImagesInvoker(request *model.ListContainerImage
 
 // ListGlobalImageApps 获取镜像软件信息
 //
-// 获取镜像软件信息
+// 获取镜像软件信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListGlobalImageApps(request *model.ListGlobalImageAppsRequest) (*model.ListGlobalImageAppsResponse, error) {
@@ -7287,7 +7287,7 @@ func (c *HssClient) ListGlobalImageAppsInvoker(request *model.ListGlobalImageApp
 
 // ListGlobalImageFiles 获取镜像文件信息
 //
-// 获取镜像文件信息
+// 获取镜像文件信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListGlobalImageFiles(request *model.ListGlobalImageFilesRequest) (*model.ListGlobalImageFilesResponse, error) {
@@ -7308,7 +7308,7 @@ func (c *HssClient) ListGlobalImageFilesInvoker(request *model.ListGlobalImageFi
 
 // ListGlobalMalware 查询租户恶意文件列表
 //
-// 查询租户恶意文件列表
+// 查询租户恶意文件列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListGlobalMalware(request *model.ListGlobalMalwareRequest) (*model.ListGlobalMalwareResponse, error) {
@@ -7329,7 +7329,7 @@ func (c *HssClient) ListGlobalMalwareInvoker(request *model.ListGlobalMalwareReq
 
 // ListGlobalVulnerabilities 租户的漏洞信息
 //
-// 租户的漏洞信息
+// 租户的漏洞信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListGlobalVulnerabilities(request *model.ListGlobalVulnerabilitiesRequest) (*model.ListGlobalVulnerabilitiesResponse, error) {
@@ -7350,7 +7350,7 @@ func (c *HssClient) ListGlobalVulnerabilitiesInvoker(request *model.ListGlobalVu
 
 // ListImageApps 查询镜像软件列表
 //
-// 查询镜像软件列表，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填
+// 查询镜像软件列表，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListImageApps(request *model.ListImageAppsRequest) (*model.ListImageAppsResponse, error) {
@@ -7392,7 +7392,7 @@ func (c *HssClient) ListImageBasicImageInvoker(request *model.ListImageBasicImag
 
 // ListImageBuildCommandRisks 获取镜像构建指令风险信息
 //
-// 获取镜像构建指令风险信息
+// 获取镜像构建指令风险信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListImageBuildCommandRisks(request *model.ListImageBuildCommandRisksRequest) (*model.ListImageBuildCommandRisksResponse, error) {
@@ -7413,7 +7413,7 @@ func (c *HssClient) ListImageBuildCommandRisksInvoker(request *model.ListImageBu
 
 // ListImageBuildCommandRisksImages 查询镜像构建指令影响到的镜像列表
 //
-// 查询镜像构建指令影响到的镜像列表
+// 查询镜像构建指令影响到的镜像列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListImageBuildCommandRisksImages(request *model.ListImageBuildCommandRisksImagesRequest) (*model.ListImageBuildCommandRisksImagesResponse, error) {
@@ -7434,7 +7434,7 @@ func (c *HssClient) ListImageBuildCommandRisksImagesInvoker(request *model.ListI
 
 // ListImageFiles 查询镜像文件列表
 //
-// 查询镜像文件列表，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填
+// 查询镜像文件列表，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListImageFiles(request *model.ListImageFilesRequest) (*model.ListImageFilesResponse, error) {
@@ -7455,7 +7455,7 @@ func (c *HssClient) ListImageFilesInvoker(request *model.ListImageFilesRequest) 
 
 // ListImageHandleAffectVulnerabilities 查询镜像漏洞处置操作影响的漏洞列表
 //
-// 查询镜像漏洞处置操作影响的漏洞列表
+// 查询镜像漏洞处置操作影响的漏洞列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListImageHandleAffectVulnerabilities(request *model.ListImageHandleAffectVulnerabilitiesRequest) (*model.ListImageHandleAffectVulnerabilitiesResponse, error) {
@@ -7476,7 +7476,7 @@ func (c *HssClient) ListImageHandleAffectVulnerabilitiesInvoker(request *model.L
 
 // ListImageLocal 本地镜像列表查询
 //
-// 本地镜像列表查询
+// 本地镜像列表查询。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListImageLocal(request *model.ListImageLocalRequest) (*model.ListImageLocalResponse, error) {
@@ -7497,7 +7497,7 @@ func (c *HssClient) ListImageLocalInvoker(request *model.ListImageLocalRequest) 
 
 // ListImageMalware 查询镜像恶意文件列表
 //
-// 查询镜像恶意文件列表，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填
+// 查询镜像恶意文件列表，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListImageMalware(request *model.ListImageMalwareRequest) (*model.ListImageMalwareResponse, error) {
@@ -7539,7 +7539,7 @@ func (c *HssClient) ListImageNonCompliantAppInvoker(request *model.ListImageNonC
 
 // ListImagePwdComplexity 查询镜像口令复杂度策略检测报告
 //
-// 查询镜像口令复杂度策略检测报告，若镜像类型为cicd镜像，则需传参镜像类型和镜像id唯一确定一条cicd镜像信息；若镜像类型为其他镜像仓类型，需要传参镜像类型、组织名称、镜像名称、镜像版本名称唯一确定一条其他镜像信息
+// 查询镜像口令复杂度策略检测报告，若镜像类型为cicd镜像，则需传参镜像类型和镜像id唯一确定一条cicd镜像信息；若镜像类型为其他镜像仓类型，需要传参镜像类型、组织名称、镜像名称、镜像版本名称唯一确定一条其他镜像信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListImagePwdComplexity(request *model.ListImagePwdComplexityRequest) (*model.ListImagePwdComplexityResponse, error) {
@@ -7560,7 +7560,7 @@ func (c *HssClient) ListImagePwdComplexityInvoker(request *model.ListImagePwdCom
 
 // ListImageRiskConfigRules 查询镜像指定安全配置项的检查项列表
 //
-// 查询镜像指定安全配置项的检查项列表
+// 查询镜像指定安全配置项的检查项列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListImageRiskConfigRules(request *model.ListImageRiskConfigRulesRequest) (*model.ListImageRiskConfigRulesResponse, error) {
@@ -7623,7 +7623,7 @@ func (c *HssClient) ListImageSensitiveInvoker(request *model.ListImageSensitiveR
 
 // ListImageSensitiveInfo 查询镜像的敏感信息
 //
-// 查询镜像的敏感信息
+// 查询镜像的敏感信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListImageSensitiveInfo(request *model.ListImageSensitiveInfoRequest) (*model.ListImageSensitiveInfoResponse, error) {
@@ -7644,7 +7644,7 @@ func (c *HssClient) ListImageSensitiveInfoInvoker(request *model.ListImageSensit
 
 // ListImageVulnerabilities 查询镜像的漏洞信息
 //
-// 查询镜像的漏洞信息
+// 查询镜像的漏洞信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListImageVulnerabilities(request *model.ListImageVulnerabilitiesRequest) (*model.ListImageVulnerabilitiesResponse, error) {
@@ -7665,7 +7665,7 @@ func (c *HssClient) ListImageVulnerabilitiesInvoker(request *model.ListImageVuln
 
 // ListImageWeakPwdUsers 查镜像询弱口令检测结果列表
 //
-// 查询镜像弱口令检测结果列表，若镜像类型为cicd镜像，则需传参镜像类型和镜像id唯一确定一条cicd镜像信息；若镜像类型为其他镜像仓类型，需要传参镜像类型、组织名称、镜像名称、镜像版本名称唯一确定一条其他镜像信息
+// 查询镜像弱口令检测结果列表，若镜像类型为cicd镜像，则需传参镜像类型和镜像id唯一确定一条cicd镜像信息；若镜像类型为其他镜像仓类型，需要传参镜像类型、组织名称、镜像名称、镜像版本名称唯一确定一条其他镜像信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListImageWeakPwdUsers(request *model.ListImageWeakPwdUsersRequest) (*model.ListImageWeakPwdUsersResponse, error) {
@@ -7686,7 +7686,7 @@ func (c *HssClient) ListImageWeakPwdUsersInvoker(request *model.ListImageWeakPwd
 
 // ListImageWhiteLists 查询镜像白名单列表
 //
-// 查询镜像白名单列表，目前仅支持漏洞白名单
+// 查询镜像白名单列表，目前仅支持漏洞白名单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListImageWhiteLists(request *model.ListImageWhiteListsRequest) (*model.ListImageWhiteListsResponse, error) {
@@ -7707,7 +7707,7 @@ func (c *HssClient) ListImageWhiteListsInvoker(request *model.ListImageWhiteList
 
 // ListLocalImageAppInfo 查询本地镜像的软件信息
 //
-// 查询本地镜像的软件信息
+// 查询本地镜像的软件信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListLocalImageAppInfo(request *model.ListLocalImageAppInfoRequest) (*model.ListLocalImageAppInfoResponse, error) {
@@ -7728,7 +7728,7 @@ func (c *HssClient) ListLocalImageAppInfoInvoker(request *model.ListLocalImageAp
 
 // ListLocalImageContainers 查询本地镜像的容器信息
 //
-// 查询本地镜像的容器信息
+// 查询本地镜像的容器信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListLocalImageContainers(request *model.ListLocalImageContainersRequest) (*model.ListLocalImageContainersResponse, error) {
@@ -7749,7 +7749,7 @@ func (c *HssClient) ListLocalImageContainersInvoker(request *model.ListLocalImag
 
 // ListLocalImageHosts 查询本地镜像的主机信息
 //
-// 查询本地镜像的主机信息
+// 查询本地镜像的主机信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListLocalImageHosts(request *model.ListLocalImageHostsRequest) (*model.ListLocalImageHostsResponse, error) {
@@ -7770,7 +7770,7 @@ func (c *HssClient) ListLocalImageHostsInvoker(request *model.ListLocalImageHost
 
 // ListSwrImageRepository 查询swr镜像仓库镜像列表-接口已废弃，不再推荐使用
 //
-// 查询swr镜像仓库镜像列表,如果需要从swr同步最新镜像，需要先调用“从swr同步镜像”接口
+// 查询swr镜像仓库镜像列表,如果需要从swr同步最新镜像，需要先调用“从swr同步镜像”接口。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListSwrImageRepository(request *model.ListSwrImageRepositoryRequest) (*model.ListSwrImageRepositoryResponse, error) {
@@ -7791,7 +7791,7 @@ func (c *HssClient) ListSwrImageRepositoryInvoker(request *model.ListSwrImageRep
 
 // ListVulAffectImageApps 查看受漏洞影响镜像的软件信息
 //
-// 查看受漏洞影响镜像的软件信息
+// 查看受漏洞影响镜像的软件信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulAffectImageApps(request *model.ListVulAffectImageAppsRequest) (*model.ListVulAffectImageAppsResponse, error) {
@@ -7812,7 +7812,7 @@ func (c *HssClient) ListVulAffectImageAppsInvoker(request *model.ListVulAffectIm
 
 // ListVulAffectImageContainers 查看受漏洞影响镜像的关联容器信息
 //
-// 查看受漏洞影响镜像的关联容器信息
+// 查看受漏洞影响镜像的关联容器信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulAffectImageContainers(request *model.ListVulAffectImageContainersRequest) (*model.ListVulAffectImageContainersResponse, error) {
@@ -7833,7 +7833,7 @@ func (c *HssClient) ListVulAffectImageContainersInvoker(request *model.ListVulAf
 
 // ListVulAffectImages 查看受漏洞影响的镜像列表
 //
-// 查看受漏洞影响的镜像列表
+// 查看受漏洞影响的镜像列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulAffectImages(request *model.ListVulAffectImagesRequest) (*model.ListVulAffectImagesResponse, error) {
@@ -7854,7 +7854,7 @@ func (c *HssClient) ListVulAffectImagesInvoker(request *model.ListVulAffectImage
 
 // ListVulRepoImage 漏洞影响的镜像信息
 //
-// 查询单个漏洞影响的镜像仓库中的镜像信息
+// 查询单个漏洞影响的镜像仓库中的镜像信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulRepoImage(request *model.ListVulRepoImageRequest) (*model.ListVulRepoImageResponse, error) {
@@ -7875,7 +7875,7 @@ func (c *HssClient) ListVulRepoImageInvoker(request *model.ListVulRepoImageReque
 
 // ListVulnerabilityCve 漏洞对应cve信息
 //
-// 漏洞对应cve信息
+// 漏洞对应cve信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulnerabilityCve(request *model.ListVulnerabilityCveRequest) (*model.ListVulnerabilityCveResponse, error) {
@@ -7896,7 +7896,7 @@ func (c *HssClient) ListVulnerabilityCveInvoker(request *model.ListVulnerability
 
 // RunImageSynchronize 从SWR服务同步镜像列表--接口已废弃
 //
-// 从SWR服务同步镜像列表--接口已废弃
+// 从SWR服务同步镜像列表--接口已废弃。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) RunImageSynchronize(request *model.RunImageSynchronizeRequest) (*model.RunImageSynchronizeResponse, error) {
@@ -7917,7 +7917,7 @@ func (c *HssClient) RunImageSynchronizeInvoker(request *model.RunImageSynchroniz
 
 // ShowExtendedWeakPassword 查询镜像的自定义弱口令
 //
-// 查询镜像的自定义弱口令
+// 查询镜像的自定义弱口令。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowExtendedWeakPassword(request *model.ShowExtendedWeakPasswordRequest) (*model.ShowExtendedWeakPasswordResponse, error) {
@@ -7938,7 +7938,7 @@ func (c *HssClient) ShowExtendedWeakPasswordInvoker(request *model.ShowExtendedW
 
 // ShowFilePathWhiteDetail 查询镜像的敏感信息文件路径白名单--接口已废弃
 //
-// 查询镜像的敏感信息文件路径白名单--接口已废弃
+// 查询镜像的敏感信息文件路径白名单--接口已废弃。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowFilePathWhiteDetail(request *model.ShowFilePathWhiteDetailRequest) (*model.ShowFilePathWhiteDetailResponse, error) {
@@ -7959,7 +7959,7 @@ func (c *HssClient) ShowFilePathWhiteDetailInvoker(request *model.ShowFilePathWh
 
 // ShowFilePathWhiteLists 查询镜像的敏感信息文件路径白名单
 //
-// 查询镜像的敏感信息文件路径白名单
+// 查询镜像的敏感信息文件路径白名单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowFilePathWhiteLists(request *model.ShowFilePathWhiteListsRequest) (*model.ShowFilePathWhiteListsResponse, error) {
@@ -7980,7 +7980,7 @@ func (c *HssClient) ShowFilePathWhiteListsInvoker(request *model.ShowFilePathWhi
 
 // ShowImageAssetStatistics 容器资产-镜像统计
 //
-// 容器资产-镜像统计
+// 容器资产-镜像统计。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowImageAssetStatistics(request *model.ShowImageAssetStatisticsRequest) (*model.ShowImageAssetStatisticsResponse, error) {
@@ -8001,7 +8001,7 @@ func (c *HssClient) ShowImageAssetStatisticsInvoker(request *model.ShowImageAsse
 
 // ShowImageBaselineStatistic 查询基线检查的统计数据信息
 //
-// 查询基线检查的统计数据信息，包括弱口令，口令复杂度，配置检测，若查询单个cicd镜像的统计数据，需要传参image_type和image_id；若要查询单个仓库镜像的统计数据，需要传参image_type、组织名称、镜像名称和镜像版本名称
+// 查询基线检查的统计数据信息，包括弱口令，口令复杂度，配置检测，若查询单个cicd镜像的统计数据，需要传参image_type和image_id；若要查询单个仓库镜像的统计数据，需要传参image_type、组织名称、镜像名称和镜像版本名称。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowImageBaselineStatistic(request *model.ShowImageBaselineStatisticRequest) (*model.ShowImageBaselineStatisticResponse, error) {
@@ -8022,7 +8022,7 @@ func (c *HssClient) ShowImageBaselineStatisticInvoker(request *model.ShowImageBa
 
 // ShowImageCheckRuleDetail 查询镜像配置检查项检测报告
 //
-// 查询镜像配置检查项检测报告
+// 查询镜像配置检查项检测报告。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowImageCheckRuleDetail(request *model.ShowImageCheckRuleDetailRequest) (*model.ShowImageCheckRuleDetailResponse, error) {
@@ -8043,7 +8043,7 @@ func (c *HssClient) ShowImageCheckRuleDetailInvoker(request *model.ShowImageChec
 
 // ShowImageFilesStat 查询镜像文件统计信息
 //
-// 查询镜像文件统计信息，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填
+// 查询镜像文件统计信息，若镜像为cicd镜像，只需传参image_id,无需关注组织名称，镜像名称和镜像版本名称；若镜像类型为其他镜像类型，组织名称，镜像名称和镜像版本名称必填。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowImageFilesStat(request *model.ShowImageFilesStatRequest) (*model.ShowImageFilesStatResponse, error) {
@@ -8064,7 +8064,7 @@ func (c *HssClient) ShowImageFilesStatInvoker(request *model.ShowImageFilesStatR
 
 // ShowImageSecurityReportStatistic 镜像安全报告导出统计
 //
-// 镜像安全报告导出统计
+// 镜像安全报告导出统计。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowImageSecurityReportStatistic(request *model.ShowImageSecurityReportStatisticRequest) (*model.ShowImageSecurityReportStatisticResponse, error) {
@@ -8085,7 +8085,7 @@ func (c *HssClient) ShowImageSecurityReportStatisticInvoker(request *model.ShowI
 
 // ShowImageWhiteListDetail 查询镜像白名单详情
 //
-// 查询镜像白名单详情，需要分页查询白名单关联的镜像列表
+// 查询镜像白名单详情，需要分页查询白名单关联的镜像列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowImageWhiteListDetail(request *model.ShowImageWhiteListDetailRequest) (*model.ShowImageWhiteListDetailResponse, error) {
@@ -8106,7 +8106,7 @@ func (c *HssClient) ShowImageWhiteListDetailInvoker(request *model.ShowImageWhit
 
 // CreateManualImageScanTask 创建扫描任务
 //
-// 创建扫描任务
+// 创建扫描任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateManualImageScanTask(request *model.CreateManualImageScanTaskRequest) (*model.CreateManualImageScanTaskResponse, error) {
@@ -8127,7 +8127,7 @@ func (c *HssClient) CreateManualImageScanTaskInvoker(request *model.CreateManual
 
 // ListImageScanPolicy 获取扫描策略
 //
-// 获取扫描策略
+// 获取扫描策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListImageScanPolicy(request *model.ListImageScanPolicyRequest) (*model.ListImageScanPolicyResponse, error) {
@@ -8148,7 +8148,7 @@ func (c *HssClient) ListImageScanPolicyInvoker(request *model.ListImageScanPolic
 
 // ListImageScanTask 获取扫描任务列表
 //
-// 获取扫描任务列表
+// 获取扫描任务列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListImageScanTask(request *model.ListImageScanTaskRequest) (*model.ListImageScanTaskResponse, error) {
@@ -8169,7 +8169,7 @@ func (c *HssClient) ListImageScanTaskInvoker(request *model.ListImageScanTaskReq
 
 // ModifyImageScanPolicy 修改周期扫描策略
 //
-// 修改周期扫描策略
+// 修改周期扫描策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ModifyImageScanPolicy(request *model.ModifyImageScanPolicyRequest) (*model.ModifyImageScanPolicyResponse, error) {
@@ -8190,7 +8190,7 @@ func (c *HssClient) ModifyImageScanPolicyInvoker(request *model.ModifyImageScanP
 
 // ShowImagePayPerScanStatistics 查询镜像按次扫描统计数据
 //
-// 查询镜像按次扫描统计数据
+// 查询镜像按次扫描统计数据。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowImagePayPerScanStatistics(request *model.ShowImagePayPerScanStatisticsRequest) (*model.ShowImagePayPerScanStatisticsResponse, error) {
@@ -8211,7 +8211,7 @@ func (c *HssClient) ShowImagePayPerScanStatisticsInvoker(request *model.ShowImag
 
 // StopImageScanTask 终止仓库镜像扫描任务
 //
-// 终止仓库镜像扫描任务
+// 终止仓库镜像扫描任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) StopImageScanTask(request *model.StopImageScanTaskRequest) (*model.StopImageScanTaskResponse, error) {
@@ -8232,7 +8232,7 @@ func (c *HssClient) StopImageScanTaskInvoker(request *model.StopImageScanTaskReq
 
 // ChangeMonthlyOperationReportTipStatus 修改用户的月度运营弹框状态
 //
-// 修改用户的月度运营弹框状态
+// 修改用户的月度运营弹框状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeMonthlyOperationReportTipStatus(request *model.ChangeMonthlyOperationReportTipStatusRequest) (*model.ChangeMonthlyOperationReportTipStatusResponse, error) {
@@ -8253,7 +8253,7 @@ func (c *HssClient) ChangeMonthlyOperationReportTipStatusInvoker(request *model.
 
 // ExportTaskInfo 月度运营总结报告导出
 //
-// 月度运营总结报告导出
+// 月度运营总结报告导出。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ExportTaskInfo(request *model.ExportTaskInfoRequest) (*model.ExportTaskInfoResponse, error) {
@@ -8274,7 +8274,7 @@ func (c *HssClient) ExportTaskInfoInvoker(request *model.ExportTaskInfoRequest) 
 
 // ListMonthlyOperationReports 查询月度运营报告列表
 //
-// 查询月度运营报告列表
+// 查询月度运营报告列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListMonthlyOperationReports(request *model.ListMonthlyOperationReportsRequest) (*model.ListMonthlyOperationReportsResponse, error) {
@@ -8295,7 +8295,7 @@ func (c *HssClient) ListMonthlyOperationReportsInvoker(request *model.ListMonthl
 
 // ListSecurityRisk 查询安全风险列表
 //
-// 查询安全风险列表
+// 查询安全风险列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListSecurityRisk(request *model.ListSecurityRiskRequest) (*model.ListSecurityRiskResponse, error) {
@@ -8316,7 +8316,7 @@ func (c *HssClient) ListSecurityRiskInvoker(request *model.ListSecurityRiskReque
 
 // ShowAgentStatistics 查询agent统计数量
 //
-// 查询待升级agent数，在线/离线agent数量
+// 查询待升级agent数，在线/离线agent数量。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowAgentStatistics(request *model.ShowAgentStatisticsRequest) (*model.ShowAgentStatisticsResponse, error) {
@@ -8337,7 +8337,7 @@ func (c *HssClient) ShowAgentStatisticsInvoker(request *model.ShowAgentStatistic
 
 // ShowHotInformation 热点资讯
 //
-// 返回标题，更新时间，资讯级别
+// 返回标题，更新时间，资讯级别。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowHotInformation(request *model.ShowHotInformationRequest) (*model.ShowHotInformationResponse, error) {
@@ -8358,7 +8358,7 @@ func (c *HssClient) ShowHotInformationInvoker(request *model.ShowHotInformationR
 
 // ShowMonthlyOperaReportNotifyInfo 查询用户的月度运营弹框状态
 //
-// 查询用户的月度运营弹框状态
+// 查询用户的月度运营弹框状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowMonthlyOperaReportNotifyInfo(request *model.ShowMonthlyOperaReportNotifyInfoRequest) (*model.ShowMonthlyOperaReportNotifyInfoResponse, error) {
@@ -8379,7 +8379,7 @@ func (c *HssClient) ShowMonthlyOperaReportNotifyInfoInvoker(request *model.ShowM
 
 // ShowMonthlyOperationReportDetail 查询某月月度运营报告的详细信息
 //
-// 查询某月月度运营报告的详细信息
+// 查询某月月度运营报告的详细信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowMonthlyOperationReportDetail(request *model.ShowMonthlyOperationReportDetailRequest) (*model.ShowMonthlyOperationReportDetailResponse, error) {
@@ -8400,7 +8400,7 @@ func (c *HssClient) ShowMonthlyOperationReportDetailInvoker(request *model.ShowM
 
 // ShowProtectStatistics 查询守护天数，病毒库更新时间，漏洞库更新时间，各模块累计次数
 //
-// 查询守护天数，病毒库更新时间，漏洞库更新时间，各模块累计次数
+// 查询守护天数，病毒库更新时间，漏洞库更新时间，各模块累计次数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowProtectStatistics(request *model.ShowProtectStatisticsRequest) (*model.ShowProtectStatisticsResponse, error) {
@@ -8421,7 +8421,7 @@ func (c *HssClient) ShowProtectStatisticsInvoker(request *model.ShowProtectStati
 
 // ShowRiskScore 查询风险评分结果
 //
-// 查询风险评分结果
+// 查询风险评分结果。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowRiskScore(request *model.ShowRiskScoreRequest) (*model.ShowRiskScoreResponse, error) {
@@ -8442,7 +8442,7 @@ func (c *HssClient) ShowRiskScoreInvoker(request *model.ShowRiskScoreRequest) *S
 
 // ShowWelfareAreaInfo 查询月度运营报告福利区公共信息
 //
-// 查询月度运营报告福利区公共信息
+// 查询月度运营报告福利区公共信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowWelfareAreaInfo(request *model.ShowWelfareAreaInfoRequest) (*model.ShowWelfareAreaInfoResponse, error) {
@@ -8463,7 +8463,7 @@ func (c *HssClient) ShowWelfareAreaInfoInvoker(request *model.ShowWelfareAreaInf
 
 // ListPluginInfo 查询插件详情
 //
-// 查询插件详情
+// 查询插件详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListPluginInfo(request *model.ListPluginInfoRequest) (*model.ListPluginInfoResponse, error) {
@@ -8484,7 +8484,7 @@ func (c *HssClient) ListPluginInfoInvoker(request *model.ListPluginInfoRequest) 
 
 // ListPluginStatus 查询插件应用列表
 //
-// 查询插件应用列表
+// 查询插件应用列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListPluginStatus(request *model.ListPluginStatusRequest) (*model.ListPluginStatusResponse, error) {
@@ -8505,7 +8505,7 @@ func (c *HssClient) ListPluginStatusInvoker(request *model.ListPluginStatusReque
 
 // ListPlugins 查询插件列表
 //
-// 查询插件列表
+// 查询插件列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListPlugins(request *model.ListPluginsRequest) (*model.ListPluginsResponse, error) {
@@ -8526,7 +8526,7 @@ func (c *HssClient) ListPluginsInvoker(request *model.ListPluginsRequest) *ListP
 
 // StartPlugin 启动插件
 //
-// 启动插件
+// 启动插件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) StartPlugin(request *model.StartPluginRequest) (*model.StartPluginResponse, error) {
@@ -8547,7 +8547,7 @@ func (c *HssClient) StartPluginInvoker(request *model.StartPluginRequest) *Start
 
 // StopPlugin 停止插件
 //
-// 停止插件
+// 停止插件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) StopPlugin(request *model.StopPluginRequest) (*model.StopPluginResponse, error) {
@@ -8568,7 +8568,7 @@ func (c *HssClient) StopPluginInvoker(request *model.StopPluginRequest) *StopPlu
 
 // AddPolicyGroup 复制策略组
 //
-// 复制策略组，选择已有的旗舰版或容器版策略组，复制生成新的策略组
+// 复制策略组，选择已有的旗舰版或容器版策略组，复制生成新的策略组。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) AddPolicyGroup(request *model.AddPolicyGroupRequest) (*model.AddPolicyGroupResponse, error) {
@@ -8589,7 +8589,7 @@ func (c *HssClient) AddPolicyGroupInvoker(request *model.AddPolicyGroupRequest) 
 
 // AssociatePolicyGroup 部署策略组
 //
-// 为已经开启旗舰版或容器版防护的服务器部署策略组
+// 为已经开启旗舰版或容器版防护的服务器部署策略组。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) AssociatePolicyGroup(request *model.AssociatePolicyGroupRequest) (*model.AssociatePolicyGroupResponse, error) {
@@ -8610,7 +8610,7 @@ func (c *HssClient) AssociatePolicyGroupInvoker(request *model.AssociatePolicyGr
 
 // ChangePolicyGroup 修改策略组相关内容
 //
-// 修改策略组相关内容，如防护模式
+// 修改策略组相关内容，如防护模式。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangePolicyGroup(request *model.ChangePolicyGroupRequest) (*model.ChangePolicyGroupResponse, error) {
@@ -8631,7 +8631,7 @@ func (c *HssClient) ChangePolicyGroupInvoker(request *model.ChangePolicyGroupReq
 
 // DeletePolicyGroup 删除策略组
 //
-// 删除策略组，支持删除非默认并且未关联服务器的策略组
+// 删除策略组，支持删除非默认并且未关联服务器的策略组。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeletePolicyGroup(request *model.DeletePolicyGroupRequest) (*model.DeletePolicyGroupResponse, error) {
@@ -8652,7 +8652,7 @@ func (c *HssClient) DeletePolicyGroupInvoker(request *model.DeletePolicyGroupReq
 
 // ListPolicyGroup 查询策略组列表
 //
-// 查询策略组列表
+// 查询策略组列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListPolicyGroup(request *model.ListPolicyGroupRequest) (*model.ListPolicyGroupResponse, error) {
@@ -8673,7 +8673,7 @@ func (c *HssClient) ListPolicyGroupInvoker(request *model.ListPolicyGroupRequest
 
 // CancelHostsQuota 解绑配额
 //
-// 解绑配额
+// 解绑配额。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CancelHostsQuota(request *model.CancelHostsQuotaRequest) (*model.CancelHostsQuotaResponse, error) {
@@ -8694,7 +8694,7 @@ func (c *HssClient) CancelHostsQuotaInvoker(request *model.CancelHostsQuotaReque
 
 // CreateQuotasOrder HSS服务创建订单订购配额
 //
-// HSS服务创建订单订购配额，只支持包周期计费模式
+// HSS服务创建订单订购配额，只支持包周期计费模式。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateQuotasOrder(request *model.CreateQuotasOrderRequest) (*model.CreateQuotasOrderResponse, error) {
@@ -8736,7 +8736,7 @@ func (c *HssClient) ListLockedStatusInvoker(request *model.ListLockedStatusReque
 
 // ListQuotasDetail 查询配额详情
 //
-// 查询配额详情
+// 查询配额详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListQuotasDetail(request *model.ListQuotasDetailRequest) (*model.ListQuotasDetailResponse, error) {
@@ -8757,7 +8757,7 @@ func (c *HssClient) ListQuotasDetailInvoker(request *model.ListQuotasDetailReque
 
 // ListResourceIds 批量查询配额ID信息
 //
-// 批量查询配额ID信息
+// 批量查询配额ID信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListResourceIds(request *model.ListResourceIdsRequest) (*model.ListResourceIdsResponse, error) {
@@ -8778,7 +8778,7 @@ func (c *HssClient) ListResourceIdsInvoker(request *model.ListResourceIdsRequest
 
 // ShowProductdataOfferingInfos 查询产商品信息
 //
-// 查询产商品信息
+// 查询产商品信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowProductdataOfferingInfos(request *model.ShowProductdataOfferingInfosRequest) (*model.ShowProductdataOfferingInfosResponse, error) {
@@ -8799,7 +8799,7 @@ func (c *HssClient) ShowProductdataOfferingInfosInvoker(request *model.ShowProdu
 
 // ShowResourceQuotas 查询配额信息
 //
-// 查询配额信息
+// 查询配额信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowResourceQuotas(request *model.ShowResourceQuotasRequest) (*model.ShowResourceQuotasResponse, error) {
@@ -8820,7 +8820,7 @@ func (c *HssClient) ShowResourceQuotasInvoker(request *model.ShowResourceQuotasR
 
 // ShowVersion 查询客户使用的最高版本
 //
-// 查询客户使用的最高版本
+// 查询客户使用的最高版本。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowVersion(request *model.ShowVersionRequest) (*model.ShowVersionResponse, error) {
@@ -8841,7 +8841,7 @@ func (c *HssClient) ShowVersionInvoker(request *model.ShowVersionRequest) *ShowV
 
 // AddProtectionPolicy 添加防护策略
 //
-// 添加防护策略
+// 添加防护策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) AddProtectionPolicy(request *model.AddProtectionPolicyRequest) (*model.AddProtectionPolicyResponse, error) {
@@ -8862,7 +8862,7 @@ func (c *HssClient) AddProtectionPolicyInvoker(request *model.AddProtectionPolic
 
 // AssociateBackupPolicy 存储库绑定备份策略
 //
-// 存储库绑定备份策略
+// 存储库绑定备份策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) AssociateBackupPolicy(request *model.AssociateBackupPolicyRequest) (*model.AssociateBackupPolicyResponse, error) {
@@ -8883,7 +8883,7 @@ func (c *HssClient) AssociateBackupPolicyInvoker(request *model.AssociateBackupP
 
 // AssociateProtectionPolicy 切换勒索防护策略
 //
-// 切换勒索防护策略
+// 切换勒索防护策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) AssociateProtectionPolicy(request *model.AssociateProtectionPolicyRequest) (*model.AssociateProtectionPolicyResponse, error) {
@@ -8904,7 +8904,7 @@ func (c *HssClient) AssociateProtectionPolicyInvoker(request *model.AssociatePro
 
 // BatchStartProtection 批量开启勒索病毒防护2.0
 //
-// 批量开启勒索病毒防护，若开启备份防护，请保证该region有cbr云备份服务
+// 批量开启勒索病毒防护，若开启备份防护，请保证该region有cbr云备份服务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) BatchStartProtection(request *model.BatchStartProtectionRequest) (*model.BatchStartProtectionResponse, error) {
@@ -8925,7 +8925,7 @@ func (c *HssClient) BatchStartProtectionInvoker(request *model.BatchStartProtect
 
 // DeleteDuplicationInfo 删除备份副本
 //
-// 删除备份副本
+// 删除备份副本。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteDuplicationInfo(request *model.DeleteDuplicationInfoRequest) (*model.DeleteDuplicationInfoResponse, error) {
@@ -8946,7 +8946,7 @@ func (c *HssClient) DeleteDuplicationInfoInvoker(request *model.DeleteDuplicatio
 
 // DeleteProtectionPolicy 删除防护策略
 //
-// 删除防护策略
+// 删除防护策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteProtectionPolicy(request *model.DeleteProtectionPolicyRequest) (*model.DeleteProtectionPolicyResponse, error) {
@@ -8967,7 +8967,7 @@ func (c *HssClient) DeleteProtectionPolicyInvoker(request *model.DeleteProtectio
 
 // ListBackedupByHostId 查询备份列表
 //
-// 查询备份列表
+// 查询备份列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListBackedupByHostId(request *model.ListBackedupByHostIdRequest) (*model.ListBackedupByHostIdResponse, error) {
@@ -8988,7 +8988,7 @@ func (c *HssClient) ListBackedupByHostIdInvoker(request *model.ListBackedupByHos
 
 // ListBackupPolicy 查询备份策略列表
 //
-// 查询备份策略列表
+// 查询备份策略列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListBackupPolicy(request *model.ListBackupPolicyRequest) (*model.ListBackupPolicyResponse, error) {
@@ -9030,7 +9030,7 @@ func (c *HssClient) ListBackupVaultsInvoker(request *model.ListBackupVaultsReque
 
 // ListOperationLogsByVaultName 查询备份恢复任务列表
 //
-// 查询备份恢复任务列表
+// 查询备份恢复任务列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListOperationLogsByVaultName(request *model.ListOperationLogsByVaultNameRequest) (*model.ListOperationLogsByVaultNameResponse, error) {
@@ -9051,7 +9051,7 @@ func (c *HssClient) ListOperationLogsByVaultNameInvoker(request *model.ListOpera
 
 // ListProtectionPolicy 查询勒索病毒的防护策略列表
 //
-// 查询勒索病毒的防护策略列表
+// 查询勒索病毒的防护策略列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListProtectionPolicy(request *model.ListProtectionPolicyRequest) (*model.ListProtectionPolicyResponse, error) {
@@ -9072,7 +9072,7 @@ func (c *HssClient) ListProtectionPolicyInvoker(request *model.ListProtectionPol
 
 // ListProtectionServer 查询勒索防护服务器列表
 //
-// 查询勒索防护服务器列表，与云备份服务配合使用。因此使用勒索相关接口之前确保该局点有云备份服务
+// 查询勒索防护服务器列表，与云备份服务配合使用。因此使用勒索相关接口之前确保该局点有云备份服务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListProtectionServer(request *model.ListProtectionServerRequest) (*model.ListProtectionServerResponse, error) {
@@ -9093,7 +9093,7 @@ func (c *HssClient) ListProtectionServerInvoker(request *model.ListProtectionSer
 
 // ListRansomwareProtectionNodes 查询勒索防护服务器列表2.0
 //
-// 查询勒索防护服务器列表，与云备份服务配合使用。因此使用勒索相关接口之前确保该局点有云备份服务
+// 查询勒索防护服务器列表，与云备份服务配合使用。因此使用勒索相关接口之前确保该局点有云备份服务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListRansomwareProtectionNodes(request *model.ListRansomwareProtectionNodesRequest) (*model.ListRansomwareProtectionNodesResponse, error) {
@@ -9114,7 +9114,7 @@ func (c *HssClient) ListRansomwareProtectionNodesInvoker(request *model.ListRans
 
 // RestoreDuplicationInfo 备份恢复
 //
-// 备份恢复
+// 备份恢复。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) RestoreDuplicationInfo(request *model.RestoreDuplicationInfoRequest) (*model.RestoreDuplicationInfoResponse, error) {
@@ -9135,7 +9135,7 @@ func (c *HssClient) RestoreDuplicationInfoInvoker(request *model.RestoreDuplicat
 
 // ShowBackupInfoByBackupId 查询指定备份信息
 //
-// 查询指定备份信息
+// 查询指定备份信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowBackupInfoByBackupId(request *model.ShowBackupInfoByBackupIdRequest) (*model.ShowBackupInfoByBackupIdResponse, error) {
@@ -9156,7 +9156,7 @@ func (c *HssClient) ShowBackupInfoByBackupIdInvoker(request *model.ShowBackupInf
 
 // ShowBackupPolicyInfo 查询HSS存储库绑定的备份策略信息
 //
-// 查询HSS存储库绑定的备份策略信息，确保已经购买了勒索防护存储库，可以从cbr云备份服务进行验证，确保已经存在HSS_projectid命名的存储库已经购买
+// 查询HSS存储库绑定的备份策略信息，确保已经购买了勒索防护存储库，可以从cbr云备份服务进行验证，确保已经存在HSS_projectid命名的存储库已经购买。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowBackupPolicyInfo(request *model.ShowBackupPolicyInfoRequest) (*model.ShowBackupPolicyInfoResponse, error) {
@@ -9177,7 +9177,7 @@ func (c *HssClient) ShowBackupPolicyInfoInvoker(request *model.ShowBackupPolicyI
 
 // ShowSingleBackupPolicyInfo 查询单个备份策略信息
 //
-// 查询单个备份策略信息
+// 查询单个备份策略信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowSingleBackupPolicyInfo(request *model.ShowSingleBackupPolicyInfoRequest) (*model.ShowSingleBackupPolicyInfoResponse, error) {
@@ -9198,7 +9198,7 @@ func (c *HssClient) ShowSingleBackupPolicyInfoInvoker(request *model.ShowSingleB
 
 // StartProtection 开启勒索病毒防护
 //
-// 开启勒索病毒防护，请保证该region有cbr云备份服务，勒索服务与云备份服务有关联关系
+// 开启勒索病毒防护，请保证该region有cbr云备份服务，勒索服务与云备份服务有关联关系。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) StartProtection(request *model.StartProtectionRequest) (*model.StartProtectionResponse, error) {
@@ -9219,7 +9219,7 @@ func (c *HssClient) StartProtectionInvoker(request *model.StartProtectionRequest
 
 // StopProtection 关闭勒索病毒防护
 //
-// 关闭勒索病毒防护
+// 关闭勒索病毒防护。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) StopProtection(request *model.StopProtectionRequest) (*model.StopProtectionResponse, error) {
@@ -9240,7 +9240,7 @@ func (c *HssClient) StopProtectionInvoker(request *model.StopProtectionRequest) 
 
 // UpdateBackupPolicyInfo 修改存储库绑定的备份策略
 //
-// 修改存储库绑定的备份策略
+// 修改存储库绑定的备份策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) UpdateBackupPolicyInfo(request *model.UpdateBackupPolicyInfoRequest) (*model.UpdateBackupPolicyInfoResponse, error) {
@@ -9261,7 +9261,7 @@ func (c *HssClient) UpdateBackupPolicyInfoInvoker(request *model.UpdateBackupPol
 
 // UpdateProtectionPolicy 修改勒索防护策略
 //
-// 修改勒索防护策略
+// 修改勒索防护策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) UpdateProtectionPolicy(request *model.UpdateProtectionPolicyRequest) (*model.UpdateProtectionPolicyResponse, error) {
@@ -9282,7 +9282,7 @@ func (c *HssClient) UpdateProtectionPolicyInvoker(request *model.UpdateProtectio
 
 // CreateImageSynchronizeTask 创建同步镜像任务
 //
-// 创建同步镜像任务
+// 创建同步镜像任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateImageSynchronizeTask(request *model.CreateImageSynchronizeTaskRequest) (*model.CreateImageSynchronizeTaskResponse, error) {
@@ -9303,7 +9303,7 @@ func (c *HssClient) CreateImageSynchronizeTaskInvoker(request *model.CreateImage
 
 // ListRegistryImages 查询仓库镜像列表
 //
-// 查询仓库镜像列表
+// 查询仓库镜像列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListRegistryImages(request *model.ListRegistryImagesRequest) (*model.ListRegistryImagesResponse, error) {
@@ -9324,7 +9324,7 @@ func (c *HssClient) ListRegistryImagesInvoker(request *model.ListRegistryImagesR
 
 // SendSecurityReport 发送安全报告
 //
-// 发送安全报告
+// 发送安全报告。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SendSecurityReport(request *model.SendSecurityReportRequest) (*model.SendSecurityReportResponse, error) {
@@ -9345,7 +9345,7 @@ func (c *HssClient) SendSecurityReportInvoker(request *model.SendSecurityReportR
 
 // ListAntivirusHandleHistory 查询病毒扫描历史处置记录列表
 //
-// 查询病毒扫描历史处置记录列表
+// 查询病毒扫描历史处置记录列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAntivirusHandleHistory(request *model.ListAntivirusHandleHistoryRequest) (*model.ListAntivirusHandleHistoryResponse, error) {
@@ -9366,7 +9366,7 @@ func (c *HssClient) ListAntivirusHandleHistoryInvoker(request *model.ListAntivir
 
 // ListEventHandleHistory 查询告警事件历史处置记录列表
 //
-// 查询告警事件历史处置记录列表
+// 查询告警事件历史处置记录列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListEventHandleHistory(request *model.ListEventHandleHistoryRequest) (*model.ListEventHandleHistoryResponse, error) {
@@ -9387,7 +9387,7 @@ func (c *HssClient) ListEventHandleHistoryInvoker(request *model.ListEventHandle
 
 // ListSecurityCheckClusterReports 查询集群的安全体检报告列表
 //
-// 查询集群的安全体检报告列表
+// 查询集群的安全体检报告列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListSecurityCheckClusterReports(request *model.ListSecurityCheckClusterReportsRequest) (*model.ListSecurityCheckClusterReportsResponse, error) {
@@ -9408,7 +9408,7 @@ func (c *HssClient) ListSecurityCheckClusterReportsInvoker(request *model.ListSe
 
 // ListVulHandleHistory 查询漏洞历史处置记录列表
 //
-// 查询漏洞历史处置记录列表
+// 查询漏洞历史处置记录列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulHandleHistory(request *model.ListVulHandleHistoryRequest) (*model.ListVulHandleHistoryResponse, error) {
@@ -9429,7 +9429,7 @@ func (c *HssClient) ListVulHandleHistoryInvoker(request *model.ListVulHandleHist
 
 // ShowManualSecurityCheckStatus 查询手动体检状态和进度
 //
-// 查询手动体检状态和进度
+// 查询手动体检状态和进度。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowManualSecurityCheckStatus(request *model.ShowManualSecurityCheckStatusRequest) (*model.ShowManualSecurityCheckStatusResponse, error) {
@@ -9450,7 +9450,7 @@ func (c *HssClient) ShowManualSecurityCheckStatusInvoker(request *model.ShowManu
 
 // ShowSecurityCheckClusterReport 查询集群的安全体检报告信息
 //
-// 查询集群的安全体检报告信息
+// 查询集群的安全体检报告信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowSecurityCheckClusterReport(request *model.ShowSecurityCheckClusterReportRequest) (*model.ShowSecurityCheckClusterReportResponse, error) {
@@ -9471,7 +9471,7 @@ func (c *HssClient) ShowSecurityCheckClusterReportInvoker(request *model.ShowSec
 
 // ShowSecurityCheckConfig 查询安全体检定时配置信息
 //
-// 查询安全体检定时配置信息
+// 查询安全体检定时配置信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowSecurityCheckConfig(request *model.ShowSecurityCheckConfigRequest) (*model.ShowSecurityCheckConfigResponse, error) {
@@ -9492,7 +9492,7 @@ func (c *HssClient) ShowSecurityCheckConfigInvoker(request *model.ShowSecurityCh
 
 // ShowSecurityCheckHostReport 查询指定服务器的安全体检报告
 //
-// 查询指定服务器的安全体检报告
+// 查询指定服务器的安全体检报告。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowSecurityCheckHostReport(request *model.ShowSecurityCheckHostReportRequest) (*model.ShowSecurityCheckHostReportResponse, error) {
@@ -9513,7 +9513,7 @@ func (c *HssClient) ShowSecurityCheckHostReportInvoker(request *model.ShowSecuri
 
 // StartManualSecurityCheck 启动手动体检
 //
-// 启动手动体检
+// 启动手动体检。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) StartManualSecurityCheck(request *model.StartManualSecurityCheckRequest) (*model.StartManualSecurityCheckResponse, error) {
@@ -9534,7 +9534,7 @@ func (c *HssClient) StartManualSecurityCheckInvoker(request *model.StartManualSe
 
 // StopManualSecurityCheck 取消手动体检
 //
-// 取消手动体检
+// 取消手动体检。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) StopManualSecurityCheck(request *model.StopManualSecurityCheckRequest) (*model.StopManualSecurityCheckResponse, error) {
@@ -9555,7 +9555,7 @@ func (c *HssClient) StopManualSecurityCheckInvoker(request *model.StopManualSecu
 
 // UpdateSecurityCheckConfig 修改安全体检定时配置信息
 //
-// 修改安全体检定时配置信息
+// 修改安全体检定时配置信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) UpdateSecurityCheckConfig(request *model.UpdateSecurityCheckConfigRequest) (*model.UpdateSecurityCheckConfigResponse, error) {
@@ -9576,7 +9576,7 @@ func (c *HssClient) UpdateSecurityCheckConfigInvoker(request *model.UpdateSecuri
 
 // ListServerlessAsset 查询Serverless资产列表
 //
-// 查询Serverless资产列表
+// 查询Serverless资产列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListServerlessAsset(request *model.ListServerlessAssetRequest) (*model.ListServerlessAssetResponse, error) {
@@ -9597,7 +9597,7 @@ func (c *HssClient) ListServerlessAssetInvoker(request *model.ListServerlessAsse
 
 // ListServerlessAssetDetail 查询Serverless资产详细信息
 //
-// 查询Serverless资产详细信息
+// 查询Serverless资产详细信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListServerlessAssetDetail(request *model.ListServerlessAssetDetailRequest) (*model.ListServerlessAssetDetailResponse, error) {
@@ -9618,7 +9618,7 @@ func (c *HssClient) ListServerlessAssetDetailInvoker(request *model.ListServerle
 
 // ChangeAgentAutoUpgradeStatus 开启或关闭“Agent自动升级”配置开关
 //
-// 开启或关闭“Agent自动升级”配置开关
+// 开启或关闭“Agent自动升级”配置开关。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeAgentAutoUpgradeStatus(request *model.ChangeAgentAutoUpgradeStatusRequest) (*model.ChangeAgentAutoUpgradeStatusResponse, error) {
@@ -9639,7 +9639,7 @@ func (c *HssClient) ChangeAgentAutoUpgradeStatusInvoker(request *model.ChangeAge
 
 // ChangePolicySwitchStatus 修改指定策略的总开关，将该策略的所有主机都打开或者关闭此策略
 //
-// 修改指定策略的总开关，将该策略的所有主机都打开或者关闭此策略
+// 修改指定策略的总开关，将该策略的所有主机都打开或者关闭此策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangePolicySwitchStatus(request *model.ChangePolicySwitchStatusRequest) (*model.ChangePolicySwitchStatusResponse, error) {
@@ -9660,7 +9660,7 @@ func (c *HssClient) ChangePolicySwitchStatusInvoker(request *model.ChangePolicyS
 
 // ChangeSwitchesStatus 修改配置开关状态
 //
-// 修改配置开关状态
+// 修改配置开关状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeSwitchesStatus(request *model.ChangeSwitchesStatusRequest) (*model.ChangeSwitchesStatusResponse, error) {
@@ -9681,7 +9681,7 @@ func (c *HssClient) ChangeSwitchesStatusInvoker(request *model.ChangeSwitchesSta
 
 // ListAgentAutoUpgradeStatus 查询“Agent自动升级”配置开关状态
 //
-// 查询“Agent自动升级”配置开关状态
+// 查询“Agent自动升级”配置开关状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAgentAutoUpgradeStatus(request *model.ListAgentAutoUpgradeStatusRequest) (*model.ListAgentAutoUpgradeStatusResponse, error) {
@@ -9702,7 +9702,7 @@ func (c *HssClient) ListAgentAutoUpgradeStatusInvoker(request *model.ListAgentAu
 
 // ListAgentVersion 查询agent版本信息列表
 //
-// 查询agent版本信息列表
+// 查询agent版本信息列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAgentVersion(request *model.ListAgentVersionRequest) (*model.ListAgentVersionResponse, error) {
@@ -9723,7 +9723,7 @@ func (c *HssClient) ListAgentVersionInvoker(request *model.ListAgentVersionReque
 
 // ListAlarmConfig 查询告警配置
 //
-// 查询告警配置
+// 查询告警配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAlarmConfig(request *model.ListAlarmConfigRequest) (*model.ListAlarmConfigResponse, error) {
@@ -9744,7 +9744,7 @@ func (c *HssClient) ListAlarmConfigInvoker(request *model.ListAlarmConfigRequest
 
 // ListAutoKillVirusStatus 查询程序自动隔离查杀状态
 //
-// 查询程序自动隔离查杀状态
+// 查询程序自动隔离查杀状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListAutoKillVirusStatus(request *model.ListAutoKillVirusStatusRequest) (*model.ListAutoKillVirusStatusResponse, error) {
@@ -9765,7 +9765,7 @@ func (c *HssClient) ListAutoKillVirusStatusInvoker(request *model.ListAutoKillVi
 
 // ListDictionaries 获取字典列表
 //
-// 获取字典列表
+// 获取字典列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListDictionaries(request *model.ListDictionariesRequest) (*model.ListDictionariesResponse, error) {
@@ -9786,7 +9786,7 @@ func (c *HssClient) ListDictionariesInvoker(request *model.ListDictionariesReque
 
 // ListLoginCommonIp 查询常用登录IP信息
 //
-// 查询常用登录IP信息
+// 查询常用登录IP信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListLoginCommonIp(request *model.ListLoginCommonIpRequest) (*model.ListLoginCommonIpResponse, error) {
@@ -9807,7 +9807,7 @@ func (c *HssClient) ListLoginCommonIpInvoker(request *model.ListLoginCommonIpReq
 
 // ListLoginCommonLocation 查询常用登录地信息
 //
-// 查询常用登录地信息
+// 查询常用登录地信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListLoginCommonLocation(request *model.ListLoginCommonLocationRequest) (*model.ListLoginCommonLocationResponse, error) {
@@ -9828,7 +9828,7 @@ func (c *HssClient) ListLoginCommonLocationInvoker(request *model.ListLoginCommo
 
 // ListLoginWhiteIp 查询SSH登录IP白名单列表
 //
-// 查询SSH登录IP白名单列表
+// 查询SSH登录IP白名单列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListLoginWhiteIp(request *model.ListLoginWhiteIpRequest) (*model.ListLoginWhiteIpResponse, error) {
@@ -9849,7 +9849,7 @@ func (c *HssClient) ListLoginWhiteIpInvoker(request *model.ListLoginWhiteIpReque
 
 // ListSystemConfigs 查询系统配置内容列表
 //
-// 查询系统配置内容列表
+// 查询系统配置内容列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListSystemConfigs(request *model.ListSystemConfigsRequest) (*model.ListSystemConfigsResponse, error) {
@@ -9870,7 +9870,7 @@ func (c *HssClient) ListSystemConfigsInvoker(request *model.ListSystemConfigsReq
 
 // ListTwoFactorLoginHost 查询双因子主机列表
 //
-// 查询双因子主机列表
+// 查询双因子主机列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListTwoFactorLoginHost(request *model.ListTwoFactorLoginHostRequest) (*model.ListTwoFactorLoginHostResponse, error) {
@@ -9891,7 +9891,7 @@ func (c *HssClient) ListTwoFactorLoginHostInvoker(request *model.ListTwoFactorLo
 
 // ModifyLoginCommonIp 添加、编辑或删除常用登录IP地址
 //
-// 添加、编辑或删除常用登录IP地址
+// 添加、编辑或删除常用登录IP地址。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ModifyLoginCommonIp(request *model.ModifyLoginCommonIpRequest) (*model.ModifyLoginCommonIpResponse, error) {
@@ -9912,7 +9912,7 @@ func (c *HssClient) ModifyLoginCommonIpInvoker(request *model.ModifyLoginCommonI
 
 // ModifyLoginCommonLocation 添加、编辑或删除常用登录地
 //
-// 添加、编辑或删除常用登录地
+// 添加、编辑或删除常用登录地。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ModifyLoginCommonLocation(request *model.ModifyLoginCommonLocationRequest) (*model.ModifyLoginCommonLocationResponse, error) {
@@ -9933,7 +9933,7 @@ func (c *HssClient) ModifyLoginCommonLocationInvoker(request *model.ModifyLoginC
 
 // ModifyLoginWhiteIp 添加、删除、编辑、启用或禁用登录IP白名单
 //
-// 添加、删除、编辑、启用或禁用登录IP白名单
+// 添加、删除、编辑、启用或禁用登录IP白名单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ModifyLoginWhiteIp(request *model.ModifyLoginWhiteIpRequest) (*model.ModifyLoginWhiteIpResponse, error) {
@@ -9954,7 +9954,7 @@ func (c *HssClient) ModifyLoginWhiteIpInvoker(request *model.ModifyLoginWhiteIpR
 
 // SetTwoFactorLoginConfig 设置双因子登录配置
 //
-// 设置双因子登录配置
+// 设置双因子登录配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SetTwoFactorLoginConfig(request *model.SetTwoFactorLoginConfigRequest) (*model.SetTwoFactorLoginConfigResponse, error) {
@@ -9975,7 +9975,7 @@ func (c *HssClient) SetTwoFactorLoginConfigInvoker(request *model.SetTwoFactorLo
 
 // ShowPolicySwitchStatus 查询指定策略的总开关
 //
-// 查询指定策略的总开关
+// 查询指定策略的总开关。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowPolicySwitchStatus(request *model.ShowPolicySwitchStatusRequest) (*model.ShowPolicySwitchStatusResponse, error) {
@@ -9996,7 +9996,7 @@ func (c *HssClient) ShowPolicySwitchStatusInvoker(request *model.ShowPolicySwitc
 
 // ShowScriptFile 下载脚本文件
 //
-// 下载脚本文件
+// 下载脚本文件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowScriptFile(request *model.ShowScriptFileRequest) (*model.ShowScriptFileResponse, error) {
@@ -10017,7 +10017,7 @@ func (c *HssClient) ShowScriptFileInvoker(request *model.ShowScriptFileRequest) 
 
 // ShowSwitchesStatus 获取配置开关状态
 //
-// 获取配置开关状态
+// 获取配置开关状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowSwitchesStatus(request *model.ShowSwitchesStatusRequest) (*model.ShowSwitchesStatusResponse, error) {
@@ -10038,7 +10038,7 @@ func (c *HssClient) ShowSwitchesStatusInvoker(request *model.ShowSwitchesStatusR
 
 // StartAutoKillVirusStatus 开启或关闭程序自动隔离查杀
 //
-// 开启或关闭程序自动隔离查杀
+// 开启或关闭程序自动隔离查杀。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) StartAutoKillVirusStatus(request *model.StartAutoKillVirusStatusRequest) (*model.StartAutoKillVirusStatusResponse, error) {
@@ -10059,7 +10059,7 @@ func (c *HssClient) StartAutoKillVirusStatusInvoker(request *model.StartAutoKill
 
 // UpdateAlarmConfig 设置告警配置
 //
-// 设置告警配置
+// 设置告警配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) UpdateAlarmConfig(request *model.UpdateAlarmConfigRequest) (*model.UpdateAlarmConfigResponse, error) {
@@ -10080,7 +10080,7 @@ func (c *HssClient) UpdateAlarmConfigInvoker(request *model.UpdateAlarmConfigReq
 
 // CreateTask 创建任务
 //
-// 创建任务
+// 创建任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateTask(request *model.CreateTaskRequest) (*model.CreateTaskResponse, error) {
@@ -10101,7 +10101,7 @@ func (c *HssClient) CreateTaskInvoker(request *model.CreateTaskRequest) *CreateT
 
 // ListTaskResources 查询当前任务关联的资源列表
 //
-// 查询当前任务关联的资源列表
+// 查询当前任务关联的资源列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListTaskResources(request *model.ListTaskResourcesRequest) (*model.ListTaskResourcesResponse, error) {
@@ -10122,7 +10122,7 @@ func (c *HssClient) ListTaskResourcesInvoker(request *model.ListTaskResourcesReq
 
 // ListTasks 查询任务列表
 //
-// 查询任务列表
+// 查询任务列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListTasks(request *model.ListTasksRequest) (*model.ListTasksResponse, error) {
@@ -10143,7 +10143,7 @@ func (c *HssClient) ListTasksInvoker(request *model.ListTasksRequest) *ListTasks
 
 // RetryTask 重新运行任务
 //
-// 重新运行任务
+// 重新运行任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) RetryTask(request *model.RetryTaskRequest) (*model.RetryTaskResponse, error) {
@@ -10164,7 +10164,7 @@ func (c *HssClient) RetryTaskInvoker(request *model.RetryTaskRequest) *RetryTask
 
 // ShowTaskStatistics 查询任务统计数据
 //
-// 查询任务统计数据
+// 查询任务统计数据。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowTaskStatistics(request *model.ShowTaskStatisticsRequest) (*model.ShowTaskStatisticsResponse, error) {
@@ -10185,7 +10185,7 @@ func (c *HssClient) ShowTaskStatisticsInvoker(request *model.ShowTaskStatisticsR
 
 // AddVulWhiteList 添加漏洞白名单
 //
-// 添加漏洞白名单
+// 添加漏洞白名单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) AddVulWhiteList(request *model.AddVulWhiteListRequest) (*model.AddVulWhiteListResponse, error) {
@@ -10206,7 +10206,7 @@ func (c *HssClient) AddVulWhiteListInvoker(request *model.AddVulWhiteListRequest
 
 // ChangeVulScanPolicy 修改漏洞扫描策略
 //
-// 修改漏洞扫描策略
+// 修改漏洞扫描策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeVulScanPolicy(request *model.ChangeVulScanPolicyRequest) (*model.ChangeVulScanPolicyResponse, error) {
@@ -10227,7 +10227,7 @@ func (c *HssClient) ChangeVulScanPolicyInvoker(request *model.ChangeVulScanPolic
 
 // ChangeVulStatus 修改漏洞的状态
 //
-// 修改漏洞的状态
+// 修改漏洞的状态。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeVulStatus(request *model.ChangeVulStatusRequest) (*model.ChangeVulStatusResponse, error) {
@@ -10248,7 +10248,7 @@ func (c *HssClient) ChangeVulStatusInvoker(request *model.ChangeVulStatusRequest
 
 // ChangeVulWhiteList 修改漏洞白名单
 //
-// 修改漏洞白名单
+// 修改漏洞白名单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ChangeVulWhiteList(request *model.ChangeVulWhiteListRequest) (*model.ChangeVulWhiteListResponse, error) {
@@ -10269,7 +10269,7 @@ func (c *HssClient) ChangeVulWhiteListInvoker(request *model.ChangeVulWhiteListR
 
 // CreateVulnerabilityScanTask 创建漏洞扫描任务
 //
-// 创建漏洞扫描任务
+// 创建漏洞扫描任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateVulnerabilityScanTask(request *model.CreateVulnerabilityScanTaskRequest) (*model.CreateVulnerabilityScanTaskResponse, error) {
@@ -10290,7 +10290,7 @@ func (c *HssClient) CreateVulnerabilityScanTaskInvoker(request *model.CreateVuln
 
 // DeleteVulWhiteList 删除漏洞白名单
 //
-// 删除漏洞白名单
+// 删除漏洞白名单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteVulWhiteList(request *model.DeleteVulWhiteListRequest) (*model.DeleteVulWhiteListResponse, error) {
@@ -10311,7 +10311,7 @@ func (c *HssClient) DeleteVulWhiteListInvoker(request *model.DeleteVulWhiteListR
 
 // ExportHandledVulnerabilities 创建历史处理的漏洞导出任务
 //
-// 创建历史处理的漏洞导出任务
+// 创建历史处理的漏洞导出任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ExportHandledVulnerabilities(request *model.ExportHandledVulnerabilitiesRequest) (*model.ExportHandledVulnerabilitiesResponse, error) {
@@ -10332,7 +10332,7 @@ func (c *HssClient) ExportHandledVulnerabilitiesInvoker(request *model.ExportHan
 
 // ExportVulHandleHistory 创建漏洞处置历史记录的导出任务
 //
-// 创建漏洞处置历史记录的导出任务
+// 创建漏洞处置历史记录的导出任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ExportVulHandleHistory(request *model.ExportVulHandleHistoryRequest) (*model.ExportVulHandleHistoryResponse, error) {
@@ -10353,7 +10353,7 @@ func (c *HssClient) ExportVulHandleHistoryInvoker(request *model.ExportVulHandle
 
 // ExportVuls 导出漏洞及漏洞影响的主机的相关信息
 //
-// 导出漏洞及漏洞影响的主机的相关信息
+// 导出漏洞及漏洞影响的主机的相关信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ExportVuls(request *model.ExportVulsRequest) (*model.ExportVulsResponse, error) {
@@ -10374,7 +10374,7 @@ func (c *HssClient) ExportVulsInvoker(request *model.ExportVulsRequest) *ExportV
 
 // ListGeneralImageVulOperations 查看镜像漏洞的历史处置记录
 //
-// 查看镜像漏洞的历史处置记录
+// 查看镜像漏洞的历史处置记录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListGeneralImageVulOperations(request *model.ListGeneralImageVulOperationsRequest) (*model.ListGeneralImageVulOperationsResponse, error) {
@@ -10395,7 +10395,7 @@ func (c *HssClient) ListGeneralImageVulOperationsInvoker(request *model.ListGene
 
 // ListGeneralImageVuls 查看所有类型镜像的漏洞
 //
-// 查看所有类型镜像的漏洞
+// 查看所有类型镜像的漏洞。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListGeneralImageVuls(request *model.ListGeneralImageVulsRequest) (*model.ListGeneralImageVulsResponse, error) {
@@ -10416,7 +10416,7 @@ func (c *HssClient) ListGeneralImageVulsInvoker(request *model.ListGeneralImageV
 
 // ListHandleVuls 处理的漏洞
 //
-// 查询今日处理漏洞/累计处理漏洞
+// 查询今日处理漏洞/累计处理漏洞。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListHandleVuls(request *model.ListHandleVulsRequest) (*model.ListHandleVulsResponse, error) {
@@ -10437,7 +10437,7 @@ func (c *HssClient) ListHandleVulsInvoker(request *model.ListHandleVulsRequest) 
 
 // ListHostVuls 查询单台服务器漏洞信息
 //
-// 查询单台服务器漏洞信息
+// 查询单台服务器漏洞信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListHostVuls(request *model.ListHostVulsRequest) (*model.ListHostVulsResponse, error) {
@@ -10458,7 +10458,7 @@ func (c *HssClient) ListHostVulsInvoker(request *model.ListHostVulsRequest) *Lis
 
 // ListUrgentVulnerabilities 查询应急漏洞列表
 //
-// 查询应急漏洞列表
+// 查询应急漏洞列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListUrgentVulnerabilities(request *model.ListUrgentVulnerabilitiesRequest) (*model.ListUrgentVulnerabilitiesResponse, error) {
@@ -10479,7 +10479,7 @@ func (c *HssClient) ListUrgentVulnerabilitiesInvoker(request *model.ListUrgentVu
 
 // ListVulContainerApps 查询单个漏洞影响的容器app信息
 //
-// 查询单个漏洞影响的容器app信息
+// 查询单个漏洞影响的容器app信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulContainerApps(request *model.ListVulContainerAppsRequest) (*model.ListVulContainerAppsResponse, error) {
@@ -10500,7 +10500,7 @@ func (c *HssClient) ListVulContainerAppsInvoker(request *model.ListVulContainerA
 
 // ListVulContainers 查询单个漏洞影响的容器信息
 //
-// 查询单个漏洞影响的容器信息
+// 查询单个漏洞影响的容器信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulContainers(request *model.ListVulContainersRequest) (*model.ListVulContainersResponse, error) {
@@ -10521,7 +10521,7 @@ func (c *HssClient) ListVulContainersInvoker(request *model.ListVulContainersReq
 
 // ListVulHostApps 查询受影响服务器详情-软件列表
 //
-// 查询受影响服务器详情-软件列表
+// 查询受影响服务器详情-软件列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulHostApps(request *model.ListVulHostAppsRequest) (*model.ListVulHostAppsResponse, error) {
@@ -10542,7 +10542,7 @@ func (c *HssClient) ListVulHostAppsInvoker(request *model.ListVulHostAppsRequest
 
 // ListVulHostBackups 查询可回滚的备份列表
 //
-// 查询可回滚的备份列表
+// 查询可回滚的备份列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulHostBackups(request *model.ListVulHostBackupsRequest) (*model.ListVulHostBackupsResponse, error) {
@@ -10563,7 +10563,7 @@ func (c *HssClient) ListVulHostBackupsInvoker(request *model.ListVulHostBackupsR
 
 // ListVulHostHosts 查询主机视图下的主机漏洞信息
 //
-// 查询主机视图下的主机漏洞信息
+// 查询主机视图下的主机漏洞信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulHostHosts(request *model.ListVulHostHostsRequest) (*model.ListVulHostHostsResponse, error) {
@@ -10584,7 +10584,7 @@ func (c *HssClient) ListVulHostHostsInvoker(request *model.ListVulHostHostsReque
 
 // ListVulHostProcess 查询受影响服务器详情-进程列表
 //
-// 查询受影响服务器详情-进程列表
+// 查询受影响服务器详情-进程列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulHostProcess(request *model.ListVulHostProcessRequest) (*model.ListVulHostProcessResponse, error) {
@@ -10605,7 +10605,7 @@ func (c *HssClient) ListVulHostProcessInvoker(request *model.ListVulHostProcessR
 
 // ListVulHostVaults 查询处理对应的主机存储库的列表
 //
-// 查询处理对应的主机存储库的列表
+// 查询处理对应的主机存储库的列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulHostVaults(request *model.ListVulHostVaultsRequest) (*model.ListVulHostVaultsResponse, error) {
@@ -10626,7 +10626,7 @@ func (c *HssClient) ListVulHostVaultsInvoker(request *model.ListVulHostVaultsReq
 
 // ListVulHostVuls 主机-漏洞平铺漏洞列表
 //
-// 查询紧急修复/未完成修复漏洞列表
+// 查询紧急修复/未完成修复漏洞列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulHostVuls(request *model.ListVulHostVulsRequest) (*model.ListVulHostVulsResponse, error) {
@@ -10647,7 +10647,7 @@ func (c *HssClient) ListVulHostVulsInvoker(request *model.ListVulHostVulsRequest
 
 // ListVulHosts 查询单个漏洞影响的云服务器信息
 //
-// 查询单个漏洞影响的云服务器信息
+// 查询单个漏洞影响的云服务器信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulHosts(request *model.ListVulHostsRequest) (*model.ListVulHostsResponse, error) {
@@ -10668,7 +10668,7 @@ func (c *HssClient) ListVulHostsInvoker(request *model.ListVulHostsRequest) *Lis
 
 // ListVulRepairCmds 查询漏洞修复命令列表
 //
-// 查询漏洞修复命令列表
+// 查询漏洞修复命令列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulRepairCmds(request *model.ListVulRepairCmdsRequest) (*model.ListVulRepairCmdsResponse, error) {
@@ -10689,7 +10689,7 @@ func (c *HssClient) ListVulRepairCmdsInvoker(request *model.ListVulRepairCmdsReq
 
 // ListVulRepairFailedDetail 查询漏洞修复失败信息
 //
-// 查询漏洞修复失败信息
+// 查询漏洞修复失败信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulRepairFailedDetail(request *model.ListVulRepairFailedDetailRequest) (*model.ListVulRepairFailedDetailResponse, error) {
@@ -10710,7 +10710,7 @@ func (c *HssClient) ListVulRepairFailedDetailInvoker(request *model.ListVulRepai
 
 // ListVulScanTask 查询漏洞扫描任务列表
 //
-// 查询漏洞扫描任务列表
+// 查询漏洞扫描任务列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulScanTask(request *model.ListVulScanTaskRequest) (*model.ListVulScanTaskResponse, error) {
@@ -10731,7 +10731,7 @@ func (c *HssClient) ListVulScanTaskInvoker(request *model.ListVulScanTaskRequest
 
 // ListVulScanTaskHost 查询漏洞扫描任务对应的主机列表
 //
-// 查询漏洞扫描任务对应的主机列表
+// 查询漏洞扫描任务对应的主机列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulScanTaskHost(request *model.ListVulScanTaskHostRequest) (*model.ListVulScanTaskHostResponse, error) {
@@ -10752,7 +10752,7 @@ func (c *HssClient) ListVulScanTaskHostInvoker(request *model.ListVulScanTaskHos
 
 // ListVulWhiteList 查询漏洞白名单列表
 //
-// 查询漏洞白名单列表
+// 查询漏洞白名单列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulWhiteList(request *model.ListVulWhiteListRequest) (*model.ListVulWhiteListResponse, error) {
@@ -10773,7 +10773,7 @@ func (c *HssClient) ListVulWhiteListInvoker(request *model.ListVulWhiteListReque
 
 // ListVulWhiteListVulOptions 查询添加白名单时的漏洞选项
 //
-// 查询添加白名单时的漏洞选项
+// 查询添加白名单时的漏洞选项。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulWhiteListVulOptions(request *model.ListVulWhiteListVulOptionsRequest) (*model.ListVulWhiteListVulOptionsResponse, error) {
@@ -10794,7 +10794,7 @@ func (c *HssClient) ListVulWhiteListVulOptionsInvoker(request *model.ListVulWhit
 
 // ListVulnerabilities 查询漏洞列表
 //
-// 查询漏洞列表
+// 查询漏洞列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListVulnerabilities(request *model.ListVulnerabilitiesRequest) (*model.ListVulnerabilitiesResponse, error) {
@@ -10815,7 +10815,7 @@ func (c *HssClient) ListVulnerabilitiesInvoker(request *model.ListVulnerabilitie
 
 // RecordUserViewVulTask 记录用户查看漏洞任务管理页面的最后时间
 //
-// 记录用户查看漏洞任务管理页面的最后时间
+// 记录用户查看漏洞任务管理页面的最后时间。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) RecordUserViewVulTask(request *model.RecordUserViewVulTaskRequest) (*model.RecordUserViewVulTaskResponse, error) {
@@ -10836,7 +10836,7 @@ func (c *HssClient) RecordUserViewVulTaskInvoker(request *model.RecordUserViewVu
 
 // RecreateVulScanTask 重新扫描之前漏洞扫描任务中的主机
 //
-// 重新扫描之前漏洞扫描任务中的主机
+// 重新扫描之前漏洞扫描任务中的主机。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) RecreateVulScanTask(request *model.RecreateVulScanTaskRequest) (*model.RecreateVulScanTaskResponse, error) {
@@ -10857,7 +10857,7 @@ func (c *HssClient) RecreateVulScanTaskInvoker(request *model.RecreateVulScanTas
 
 // RestoreVulHostBackup 用备份进行回滚
 //
-// 用备份进行回滚
+// 用备份进行回滚。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) RestoreVulHostBackup(request *model.RestoreVulHostBackupRequest) (*model.RestoreVulHostBackupResponse, error) {
@@ -10878,7 +10878,7 @@ func (c *HssClient) RestoreVulHostBackupInvoker(request *model.RestoreVulHostBac
 
 // ShowCmsVulDetail 查询webcms漏洞基本信息
 //
-// 查询webcms漏洞基本信息
+// 查询webcms漏洞基本信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowCmsVulDetail(request *model.ShowCmsVulDetailRequest) (*model.ShowCmsVulDetailResponse, error) {
@@ -10899,7 +10899,7 @@ func (c *HssClient) ShowCmsVulDetailInvoker(request *model.ShowCmsVulDetailReque
 
 // ShowLinuxVulDetail 查询linux漏洞基本信息
 //
-// 查询linux漏洞基本信息
+// 查询linux漏洞基本信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowLinuxVulDetail(request *model.ShowLinuxVulDetailRequest) (*model.ShowLinuxVulDetailResponse, error) {
@@ -10920,7 +10920,7 @@ func (c *HssClient) ShowLinuxVulDetailInvoker(request *model.ShowLinuxVulDetailR
 
 // ShowVulAffectedStatics 统计受影响服务器和漏洞数量
 //
-// 统计受影响服务器和漏洞数量
+// 统计受影响服务器和漏洞数量。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowVulAffectedStatics(request *model.ShowVulAffectedStaticsRequest) (*model.ShowVulAffectedStaticsResponse, error) {
@@ -10941,7 +10941,7 @@ func (c *HssClient) ShowVulAffectedStaticsInvoker(request *model.ShowVulAffected
 
 // ShowVulBackupStatistics 查询漏洞处理对应主机的备份相关统计信息
 //
-// 查询漏洞处理对应主机的备份相关统计信息
+// 查询漏洞处理对应主机的备份相关统计信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowVulBackupStatistics(request *model.ShowVulBackupStatisticsRequest) (*model.ShowVulBackupStatisticsResponse, error) {
@@ -10962,7 +10962,7 @@ func (c *HssClient) ShowVulBackupStatisticsInvoker(request *model.ShowVulBackupS
 
 // ShowVulReportData 漏洞管理-主机视图-主机列表-导出报告
 //
-// 在主机视图中导出漏洞报告详细报告pdf格式
+// 在主机视图中导出漏洞报告详细报告pdf格式。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowVulReportData(request *model.ShowVulReportDataRequest) (*model.ShowVulReportDataResponse, error) {
@@ -10983,7 +10983,7 @@ func (c *HssClient) ShowVulReportDataInvoker(request *model.ShowVulReportDataReq
 
 // ShowVulScanPolicy 查询漏洞扫描策略
 //
-// 查询漏洞扫描策略
+// 查询漏洞扫描策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowVulScanPolicy(request *model.ShowVulScanPolicyRequest) (*model.ShowVulScanPolicyResponse, error) {
@@ -11004,7 +11004,7 @@ func (c *HssClient) ShowVulScanPolicyInvoker(request *model.ShowVulScanPolicyReq
 
 // ShowVulScanTaskEstimatedTime 查询漏洞扫描的预估时间
 //
-// 查询漏洞扫描的预估时间
+// 查询漏洞扫描的预估时间。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowVulScanTaskEstimatedTime(request *model.ShowVulScanTaskEstimatedTimeRequest) (*model.ShowVulScanTaskEstimatedTimeResponse, error) {
@@ -11025,7 +11025,7 @@ func (c *HssClient) ShowVulScanTaskEstimatedTimeInvoker(request *model.ShowVulSc
 
 // ShowVulStatics 查询漏洞管理统计数据
 //
-// 查询漏洞管理统计数据
+// 查询漏洞管理统计数据。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowVulStatics(request *model.ShowVulStaticsRequest) (*model.ShowVulStaticsResponse, error) {
@@ -11046,7 +11046,7 @@ func (c *HssClient) ShowVulStaticsInvoker(request *model.ShowVulStaticsRequest) 
 
 // ShowVulTaskStatistics 获取漏洞任务的未读数量
 //
-// 获取漏洞任务的未读数量
+// 获取漏洞任务的未读数量。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowVulTaskStatistics(request *model.ShowVulTaskStatisticsRequest) (*model.ShowVulTaskStatisticsResponse, error) {
@@ -11067,7 +11067,7 @@ func (c *HssClient) ShowVulTaskStatisticsInvoker(request *model.ShowVulTaskStati
 
 // ShowVulWhiteListDetail 查询漏洞白名单详情
 //
-// 查询漏洞白名单详情
+// 查询漏洞白名单详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowVulWhiteListDetail(request *model.ShowVulWhiteListDetailRequest) (*model.ShowVulWhiteListDetailResponse, error) {
@@ -11088,7 +11088,7 @@ func (c *HssClient) ShowVulWhiteListDetailInvoker(request *model.ShowVulWhiteLis
 
 // ShowWindosVulDetail 查询windows漏洞基本信息
 //
-// 查询windows漏洞基本信息
+// 查询windows漏洞基本信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowWindosVulDetail(request *model.ShowWindosVulDetailRequest) (*model.ShowWindosVulDetailResponse, error) {
@@ -11109,7 +11109,7 @@ func (c *HssClient) ShowWindosVulDetailInvoker(request *model.ShowWindosVulDetai
 
 // BatchStartWebTamperProtection 批量开启网页防篡改防护
 //
-// 批量开启网页防篡改防护
+// 批量开启网页防篡改防护。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) BatchStartWebTamperProtection(request *model.BatchStartWebTamperProtectionRequest) (*model.BatchStartWebTamperProtectionResponse, error) {
@@ -11130,7 +11130,7 @@ func (c *HssClient) BatchStartWebTamperProtectionInvoker(request *model.BatchSta
 
 // CreateWebTamperProtectionConfig 创建网页防篡改防护配置
 //
-// 创建网页防篡改防护配置
+// 创建网页防篡改防护配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) CreateWebTamperProtectionConfig(request *model.CreateWebTamperProtectionConfigRequest) (*model.CreateWebTamperProtectionConfigResponse, error) {
@@ -11151,7 +11151,7 @@ func (c *HssClient) CreateWebTamperProtectionConfigInvoker(request *model.Create
 
 // DeleteBackupHostInfo 删除远端备份服务器
 //
-// 删除远端备份服务器
+// 删除远端备份服务器。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteBackupHostInfo(request *model.DeleteBackupHostInfoRequest) (*model.DeleteBackupHostInfoResponse, error) {
@@ -11172,7 +11172,7 @@ func (c *HssClient) DeleteBackupHostInfoInvoker(request *model.DeleteBackupHostI
 
 // DeleteWebTamperProtectionConfig 删除网页防篡改防护配置
 //
-// 删除网页防篡改防护配置
+// 删除网页防篡改防护配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) DeleteWebTamperProtectionConfig(request *model.DeleteWebTamperProtectionConfigRequest) (*model.DeleteWebTamperProtectionConfigResponse, error) {
@@ -11193,7 +11193,7 @@ func (c *HssClient) DeleteWebTamperProtectionConfigInvoker(request *model.Delete
 
 // ExportWebTamperHost 导出网页防篡改防护目录列表
 //
-// 导出网页防篡改防护目录列表
+// 导出网页防篡改防护目录列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ExportWebTamperHost(request *model.ExportWebTamperHostRequest) (*model.ExportWebTamperHostResponse, error) {
@@ -11214,7 +11214,7 @@ func (c *HssClient) ExportWebTamperHostInvoker(request *model.ExportWebTamperHos
 
 // ListBackupHostsInfo 查询远端备份服务器列表
 //
-// 查询远端备份服务器列表
+// 查询远端备份服务器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListBackupHostsInfo(request *model.ListBackupHostsInfoRequest) (*model.ListBackupHostsInfoResponse, error) {
@@ -11235,7 +11235,7 @@ func (c *HssClient) ListBackupHostsInfoInvoker(request *model.ListBackupHostsInf
 
 // ListHostProtectHistoryInfo 查询静态网页防篡改防护事件
 //
-// 查询静态网页防篡改防护事件
+// 查询静态网页防篡改防护事件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListHostProtectHistoryInfo(request *model.ListHostProtectHistoryInfoRequest) (*model.ListHostProtectHistoryInfoResponse, error) {
@@ -11256,7 +11256,7 @@ func (c *HssClient) ListHostProtectHistoryInfoInvoker(request *model.ListHostPro
 
 // ListHostRaspProtectHistoryInfo 查询动态网页防篡改防护事件
 //
-// 查询动态网页防篡改防护事件
+// 查询动态网页防篡改防护事件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListHostRaspProtectHistoryInfo(request *model.ListHostRaspProtectHistoryInfoRequest) (*model.ListHostRaspProtectHistoryInfoResponse, error) {
@@ -11277,7 +11277,7 @@ func (c *HssClient) ListHostRaspProtectHistoryInfoInvoker(request *model.ListHos
 
 // ListWebTamperEvent 查询网页防篡改事件列表
 //
-// 查询网页防篡改事件列表
+// 查询网页防篡改事件列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListWebTamperEvent(request *model.ListWebTamperEventRequest) (*model.ListWebTamperEventResponse, error) {
@@ -11298,7 +11298,7 @@ func (c *HssClient) ListWebTamperEventInvoker(request *model.ListWebTamperEventR
 
 // ListWebTamperHost 查询可开启网页防篡改的服务器列表
 //
-// 查询可开启网页防篡改的服务器列表
+// 查询可开启网页防篡改的服务器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListWebTamperHost(request *model.ListWebTamperHostRequest) (*model.ListWebTamperHostResponse, error) {
@@ -11319,7 +11319,7 @@ func (c *HssClient) ListWebTamperHostInvoker(request *model.ListWebTamperHostReq
 
 // ListWebTamperImageOptions 查询容器网页版防篡改镜像选项列表
 //
-// 查询容器网页版防篡改镜像选项列表
+// 查询容器网页版防篡改镜像选项列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListWebTamperImageOptions(request *model.ListWebTamperImageOptionsRequest) (*model.ListWebTamperImageOptionsResponse, error) {
@@ -11340,7 +11340,7 @@ func (c *HssClient) ListWebTamperImageOptionsInvoker(request *model.ListWebTampe
 
 // ListWebTamperProtectStatistics 查询容器网页防篡改防护统计数据
 //
-// 查询容器网页防篡改防护统计数据
+// 查询容器网页防篡改防护统计数据。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListWebTamperProtectStatistics(request *model.ListWebTamperProtectStatisticsRequest) (*model.ListWebTamperProtectStatisticsResponse, error) {
@@ -11361,7 +11361,7 @@ func (c *HssClient) ListWebTamperProtectStatisticsInvoker(request *model.ListWeb
 
 // ListWebTamperProtectionConfigs 查询网页防篡改防护配置列表
 //
-// 查询网页防篡改防护配置列表
+// 查询网页防篡改防护配置列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListWebTamperProtectionConfigs(request *model.ListWebTamperProtectionConfigsRequest) (*model.ListWebTamperProtectionConfigsResponse, error) {
@@ -11382,7 +11382,7 @@ func (c *HssClient) ListWebTamperProtectionConfigsInvoker(request *model.ListWeb
 
 // ListWebTamperProtectionContainer 查询防护配置关联的容器信息列表
 //
-// 查询防护配置关联的容器信息列表
+// 查询防护配置关联的容器信息列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListWebTamperProtectionContainer(request *model.ListWebTamperProtectionContainerRequest) (*model.ListWebTamperProtectionContainerResponse, error) {
@@ -11403,7 +11403,7 @@ func (c *HssClient) ListWebTamperProtectionContainerInvoker(request *model.ListW
 
 // ListWebTamperProtectionDirectory 查询防护配置关联的容器的防护目录列表
 //
-// 查询防护配置关联的容器的防护目录列表
+// 查询防护配置关联的容器的防护目录列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListWebTamperProtectionDirectory(request *model.ListWebTamperProtectionDirectoryRequest) (*model.ListWebTamperProtectionDirectoryResponse, error) {
@@ -11424,7 +11424,7 @@ func (c *HssClient) ListWebTamperProtectionDirectoryInvoker(request *model.ListW
 
 // ListWtpProtectHost 查询网页防篡改防护列表
 //
-// 查询网页防篡改防护列表
+// 查询网页防篡改防护列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListWtpProtectHost(request *model.ListWtpProtectHostRequest) (*model.ListWtpProtectHostResponse, error) {
@@ -11445,7 +11445,7 @@ func (c *HssClient) ListWtpProtectHostInvoker(request *model.ListWtpProtectHostR
 
 // SetProtectDirSwitchInfo 暂停或恢复网页防篡改的防护目录
 //
-// 暂停或恢复网页防篡改的防护目录
+// 暂停或恢复网页防篡改的防护目录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SetProtectDirSwitchInfo(request *model.SetProtectDirSwitchInfoRequest) (*model.SetProtectDirSwitchInfoResponse, error) {
@@ -11466,7 +11466,7 @@ func (c *HssClient) SetProtectDirSwitchInfoInvoker(request *model.SetProtectDirS
 
 // SetRaspSwitch 开启关闭动态网页防篡改防护
 //
-// 开启关闭动态网页防篡改防护
+// 开启关闭动态网页防篡改防护。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SetRaspSwitch(request *model.SetRaspSwitchRequest) (*model.SetRaspSwitchResponse, error) {
@@ -11487,7 +11487,7 @@ func (c *HssClient) SetRaspSwitchInvoker(request *model.SetRaspSwitchRequest) *S
 
 // SetRemoteBackupInfo 开启或关闭远端备份
 //
-// 为已开启网页防篡改的服务器，开启或关闭远端备份功能，仅限Linux服务器
+// 为已开启网页防篡改的服务器，开启或关闭远端备份功能，仅限Linux服务器。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SetRemoteBackupInfo(request *model.SetRemoteBackupInfoRequest) (*model.SetRemoteBackupInfoResponse, error) {
@@ -11508,7 +11508,7 @@ func (c *HssClient) SetRemoteBackupInfoInvoker(request *model.SetRemoteBackupInf
 
 // SetWtpProtectionStatusInfo 开启关闭网页防篡改防护
 //
-// 开启关闭网页防篡改防护
+// 开启关闭网页防篡改防护。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SetWtpProtectionStatusInfo(request *model.SetWtpProtectionStatusInfoRequest) (*model.SetWtpProtectionStatusInfoResponse, error) {
@@ -11529,7 +11529,7 @@ func (c *HssClient) SetWtpProtectionStatusInfoInvoker(request *model.SetWtpProte
 
 // ShowRemoteBackupHostInfo 查询远端备份服务器信息
 //
-// 查询远端备份服务器信息：查询远端备份服务器的相关信息，包含服务器名称、地址、端口号、备份路径、运行状态信息
+// 查询远端备份服务器信息：查询远端备份服务器的相关信息，包含服务器名称、地址、端口号、备份路径、运行状态信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowRemoteBackupHostInfo(request *model.ShowRemoteBackupHostInfoRequest) (*model.ShowRemoteBackupHostInfoResponse, error) {
@@ -11550,7 +11550,7 @@ func (c *HssClient) ShowRemoteBackupHostInfoInvoker(request *model.ShowRemoteBac
 
 // ShowWebTamperHostPolicy 查看网页防篡改策略信息
 //
-// 查看网页防篡改策略信息
+// 查看网页防篡改策略信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowWebTamperHostPolicy(request *model.ShowWebTamperHostPolicyRequest) (*model.ShowWebTamperHostPolicyResponse, error) {
@@ -11571,7 +11571,7 @@ func (c *HssClient) ShowWebTamperHostPolicyInvoker(request *model.ShowWebTamperH
 
 // ShowWebTamperRaspPath 查询动态网页防篡改的Tomcat bin目录
 //
-// 查询动态网页防篡改的Tomcat bin目录
+// 查询动态网页防篡改的Tomcat bin目录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowWebTamperRaspPath(request *model.ShowWebTamperRaspPathRequest) (*model.ShowWebTamperRaspPathResponse, error) {
@@ -11592,7 +11592,7 @@ func (c *HssClient) ShowWebTamperRaspPathInvoker(request *model.ShowWebTamperRas
 
 // ShowWtpProtectStatistics 防护数据统计
 //
-// 防护数据统计：统计防护服务器数、防护目录数、近七天的已防御篡改攻击数
+// 防护数据统计：统计防护服务器数、防护目录数、近七天的已防御篡改攻击数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowWtpProtectStatistics(request *model.ShowWtpProtectStatisticsRequest) (*model.ShowWtpProtectStatisticsResponse, error) {
@@ -11613,7 +11613,7 @@ func (c *HssClient) ShowWtpProtectStatisticsInvoker(request *model.ShowWtpProtec
 
 // SwitchWebTamperProtectStatus 开启/关闭容器网页防篡改防护配置
 //
-// 开启/关闭容器网页防篡改防护配置
+// 开启/关闭容器网页防篡改防护配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) SwitchWebTamperProtectStatus(request *model.SwitchWebTamperProtectStatusRequest) (*model.SwitchWebTamperProtectStatusResponse, error) {
@@ -11634,7 +11634,7 @@ func (c *HssClient) SwitchWebTamperProtectStatusInvoker(request *model.SwitchWeb
 
 // UpdateBackupHostInfo 添加或修改远端备份服务器
 //
-// 添加或修改远端备份服务器
+// 添加或修改远端备份服务器。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) UpdateBackupHostInfo(request *model.UpdateBackupHostInfoRequest) (*model.UpdateBackupHostInfoResponse, error) {
@@ -11655,7 +11655,7 @@ func (c *HssClient) UpdateBackupHostInfoInvoker(request *model.UpdateBackupHostI
 
 // UpdateWebTamperHostPolicy 编辑网页防篡改策略信息
 //
-// 编辑网页防篡改策略信息
+// 编辑网页防篡改策略信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) UpdateWebTamperHostPolicy(request *model.UpdateWebTamperHostPolicyRequest) (*model.UpdateWebTamperHostPolicyResponse, error) {
@@ -11676,7 +11676,7 @@ func (c *HssClient) UpdateWebTamperHostPolicyInvoker(request *model.UpdateWebTam
 
 // UpdateWebTamperProtectionConfig 修改网页防篡改防护配置
 //
-// 修改网页防篡改防护配置
+// 修改网页防篡改防护配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) UpdateWebTamperProtectionConfig(request *model.UpdateWebTamperProtectionConfigRequest) (*model.UpdateWebTamperProtectionConfigResponse, error) {
@@ -11697,7 +11697,7 @@ func (c *HssClient) UpdateWebTamperProtectionConfigInvoker(request *model.Update
 
 // UpdateWebTamperRaspPath 修改动态网页防篡改的Tomcat bin目录
 //
-// 修改动态网页防篡改的Tomcat bin目录
+// 修改动态网页防篡改的Tomcat bin目录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) UpdateWebTamperRaspPath(request *model.UpdateWebTamperRaspPathRequest) (*model.UpdateWebTamperRaspPathResponse, error) {

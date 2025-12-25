@@ -9,17 +9,14 @@ import (
 // DeleteAlertRuleResponse Response Object
 type DeleteAlertRuleResponse struct {
 
-	// 是否删除.
-	Deleted *bool `json:"deleted,omitempty"`
+	// UUID
+	AlertRuleId *string `json:"alert_rule_id,omitempty"`
 
-	// Alert rule ID.
-	FailList *[]AlertRule `json:"fail_list,omitempty"`
+	// 毫秒时间戳
+	DeleteTime *int64 `json:"delete_time,omitempty"`
 
-	// Alert rule ID.
-	SuccessList *[]AlertRule `json:"success_list,omitempty"`
-
-	XRequestId     *string `json:"X-request-id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	ProcessStatus  *JobProcessStatus `json:"process_status,omitempty"`
+	HttpStatusCode int               `json:"-"`
 }
 
 func (o DeleteAlertRuleResponse) String() string {

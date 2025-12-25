@@ -38,6 +38,9 @@ type NetworkPort struct {
 
 	// 协议
 	AutoNeg *string `json:"auto_neg,omitempty"`
+
+	// 永久物理地址
+	PermanentMacAddress *string `json:"permanent_mac_address,omitempty"`
 }
 
 func (o NetworkPort) String() string {

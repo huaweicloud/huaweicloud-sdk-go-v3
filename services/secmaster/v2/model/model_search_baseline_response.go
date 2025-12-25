@@ -25,8 +25,8 @@ type SearchBaselineResponse struct {
 	Success *bool `json:"success,omitempty"`
 
 	// 查询结果列表
-	Data           *[]string `json:"data,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	Data           *[]interface{} `json:"data,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o SearchBaselineResponse) String() string {

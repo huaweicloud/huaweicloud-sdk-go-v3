@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// AlarmNameResp **参数解释**： 告警名称。     **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1，128]个字符。
+// AlarmNameResp **参数解释**： 告警规则名称。     **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度[1，128]个字符。
 type AlarmNameResp struct {
 }
 

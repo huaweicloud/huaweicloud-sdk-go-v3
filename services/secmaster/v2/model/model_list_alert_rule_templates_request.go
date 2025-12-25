@@ -12,23 +12,29 @@ import (
 // ListAlertRuleTemplatesRequest Request Object
 type ListAlertRuleTemplatesRequest struct {
 
-	// 工作空间 ID。Workspace ID.
+	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
 
-	// 偏移量。Offset.
-	Offset int64 `json:"offset"`
+	// 模板名称
+	TemplateName *string `json:"template_name,omitempty"`
 
-	// 条数。Limit.
-	Limit int64 `json:"limit"`
+	// **参数解释**: 状态 - ENABLED 启用 - DISABLED 禁用  **约束限制** 不涉及 **取值范围**: - ENABLED - DISABLED  **默认值** 不涉及
+	Status *ListAlertRuleTemplatesRequestStatus `json:"status,omitempty"`
 
-	// 排序字段。Sort key
+	// **参数解释**: 告警等级 - TIPS 提示 - LOW 低危 - MEDIUM 中危 - HIGH 高危 - FATAL 致命  **约束限制** 不涉及 **取值范围**: - TIPS - LOW - MEDIUM - HIGH - FATAL  **默认值** 不涉及
+	Severity *ListAlertRuleTemplatesRequestSeverity `json:"severity,omitempty"`
+
+	// **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	Offset *int64 `json:"offset,omitempty"`
+
+	// **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
+	Limit *int64 `json:"limit,omitempty"`
+
+	// 按照属性排序。
 	SortKey *string `json:"sort_key,omitempty"`
 
-	// 排序顺序，顺序、逆序。Sort direction, asc, desc。
-	SortDir *ListAlertRuleTemplatesRequestSortDir `json:"sort_dir,omitempty"`
-
-	// 严重程度，提示、低危、中危、高危、致命。Severity. TIPS, LOW, MEDIUM, HIGH, FATAL
-	Severity *[]ListAlertRuleTemplatesRequestSeverity `json:"severity,omitempty"`
+	// 排序顺序，支持 `ASC` 或 `DESC`。
+	SortDir *string `json:"sort_dir,omitempty"`
 }
 
 func (o ListAlertRuleTemplatesRequest) String() string {
@@ -40,35 +46,35 @@ func (o ListAlertRuleTemplatesRequest) String() string {
 	return strings.Join([]string{"ListAlertRuleTemplatesRequest", string(data)}, " ")
 }
 
-type ListAlertRuleTemplatesRequestSortDir struct {
+type ListAlertRuleTemplatesRequestStatus struct {
 	value string
 }
 
-type ListAlertRuleTemplatesRequestSortDirEnum struct {
-	ASC  ListAlertRuleTemplatesRequestSortDir
-	DESC ListAlertRuleTemplatesRequestSortDir
+type ListAlertRuleTemplatesRequestStatusEnum struct {
+	ENABLED  ListAlertRuleTemplatesRequestStatus
+	DISABLED ListAlertRuleTemplatesRequestStatus
 }
 
-func GetListAlertRuleTemplatesRequestSortDirEnum() ListAlertRuleTemplatesRequestSortDirEnum {
-	return ListAlertRuleTemplatesRequestSortDirEnum{
-		ASC: ListAlertRuleTemplatesRequestSortDir{
-			value: "asc",
+func GetListAlertRuleTemplatesRequestStatusEnum() ListAlertRuleTemplatesRequestStatusEnum {
+	return ListAlertRuleTemplatesRequestStatusEnum{
+		ENABLED: ListAlertRuleTemplatesRequestStatus{
+			value: "ENABLED",
 		},
-		DESC: ListAlertRuleTemplatesRequestSortDir{
-			value: "desc",
+		DISABLED: ListAlertRuleTemplatesRequestStatus{
+			value: "DISABLED",
 		},
 	}
 }
 
-func (c ListAlertRuleTemplatesRequestSortDir) Value() string {
+func (c ListAlertRuleTemplatesRequestStatus) Value() string {
 	return c.value
 }
 
-func (c ListAlertRuleTemplatesRequestSortDir) MarshalJSON() ([]byte, error) {
+func (c ListAlertRuleTemplatesRequestStatus) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *ListAlertRuleTemplatesRequestSortDir) UnmarshalJSON(b []byte) error {
+func (c *ListAlertRuleTemplatesRequestStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

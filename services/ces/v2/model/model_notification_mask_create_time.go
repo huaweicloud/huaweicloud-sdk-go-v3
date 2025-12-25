@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// NotificationMaskCreateTime 告警屏蔽的创建时间，UNIX时间戳，单位毫秒。
+// NotificationMaskCreateTime **参数解释**： 告警屏蔽的创建时间，UNIX时间戳，单位毫秒。 **约束限制**： 不涉及。 **取值范围**: 不涉及。 **默认取值**： 不涉及。
 type NotificationMaskCreateTime struct {
 }
 

@@ -14,7 +14,7 @@ type AsyncAssociateRgAndTemplatesReq struct {
 	// 告警模板编号列表，当ID列表为空时，将删除该资源分组已关联的告警模板所创建的告警规则
 	TemplateIds []string `json:"template_ids"`
 
-	// **参数解释**： 是否开启告警通知。     **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
+	// **参数解释**： 是否开启告警通知。说明：若notification_enabled为true，对应的alarm_notifications、ok_notifications至少有一个不能为空。    **约束限制**： 不涉及。 **取值范围**： 布尔值。 - true:开启。 - false:关闭。 **默认取值**： true
 	NotificationEnabled bool `json:"notification_enabled"`
 
 	// 告警触发通知列表
@@ -23,23 +23,26 @@ type AsyncAssociateRgAndTemplatesReq struct {
 	// 告警恢复通知列表
 	OkNotifications *[]Notification `json:"ok_notifications,omitempty"`
 
-	// **参数解释**： 告警通知开启时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+	// **参数解释**： 告警通知开启时间。如 00:00    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
 	NotificationBeginTime *string `json:"notification_begin_time,omitempty"`
 
-	// **参数解释**： 告警通知关闭时间。    **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
+	// **参数解释**： 告警通知关闭时间。如 08:00  **约束限制**： 不涉及。 **取值范围**： 只能包含数字、“:”，长度为[1,64]个字符。           **默认取值**： 不涉及。
 	NotificationEndTime *string `json:"notification_end_time,omitempty"`
 
 	// **参数解释**： 时区，形如：\"GMT-08:00\"、\"GMT+08:00\"、\"GMT+0:00\"。    **约束限制**： 不涉及。 **取值范围**： 长度为[1,16]个字符。           **默认取值**： 不涉及。
 	EffectiveTimezone *string `json:"effective_timezone,omitempty"`
 
-	// **参数解释**： 企业项目ID。     **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”。           **默认取值**： 不涉及。
+	// **参数解释**： 企业项目ID。     **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”。0 代表默认企业项目ID         **默认取值**： 不涉及。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// NOTIFICATION_GROUP(通知组)/TOPIC_SUBSCRIPTION(主题订阅)/NOTIFICATION_POLICY(通知策略)
+	// **参数解释**： 通知方式。 **约束限制**： 不涉及。 **取值范围**： 枚举值。取值为NOTIFICATION_GROUP、TOPIC_SUBSCRIPTION、NOTIFICATION_POLICY - NOTIFICATION_GROUP: 通知组 - TOPIC_SUBSCRIPTION: 主题订阅 - NOTIFICATION_POLICY: 通知策略 **默认取值**： 不涉及。
 	NotificationManner *AsyncAssociateRgAndTemplatesReqNotificationManner `json:"notification_manner,omitempty"`
 
 	// 关联的通知策略ID列表
 	NotificationPolicyIds *[]string `json:"notification_policy_ids,omitempty"`
+
+	// 告警通知模板列表
+	NoticeTypeNotificationTemplateList *[]NoticeTypeNotificationTemplateList `json:"notice_type_notification_template_list,omitempty"`
 }
 
 func (o AsyncAssociateRgAndTemplatesReq) String() string {

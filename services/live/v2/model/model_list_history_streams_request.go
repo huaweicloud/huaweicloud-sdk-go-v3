@@ -9,8 +9,8 @@ import (
 // ListHistoryStreamsRequest Request Object
 type ListHistoryStreamsRequest struct {
 
-	// 推流域名。
-	Domain string `json:"domain"`
+	// 推流域名列表，最多支持查询100个域名，多个域名以逗号分隔。  若查询多个域名，则返回的是多个域名合并数据。
+	Domain []string `json:"domain"`
 
 	// 应用名称。
 	App *string `json:"app,omitempty"`

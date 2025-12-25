@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// TotalMetaData 查询结果元数据统计个数。
+// TotalMetaData **参数解释**： 查询结果元数据统计个数。
 type TotalMetaData struct {
 
-	// 总条数。
+	// **参数解释**： 总条数。 **取值范围**： 在[0,2147483647]区间内。
 	Total *int32 `json:"total,omitempty"`
 }
 

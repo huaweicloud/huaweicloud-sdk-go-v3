@@ -33,7 +33,7 @@ type Snapshots struct {
 	// **参数解释**： 快照状态。 **取值范围**： - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
 	Status string `json:"status"`
 
-	// **参数解释**： 快照创建类型。 **取值范围**： 不涉及。
+	// **参数解释**： 快照创建类型。 **取值范围**： - AUTO: 自动。 - MANUAL: 手动。
 	Type string `json:"type"`
 
 	// **参数解释**： 快照对应的集群ID。 **取值范围**： 不涉及。

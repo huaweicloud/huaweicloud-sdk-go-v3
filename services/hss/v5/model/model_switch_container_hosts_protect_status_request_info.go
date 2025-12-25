@@ -18,7 +18,7 @@ type SwitchContainerHostsProtectStatusRequestInfo struct {
 	ChargingMode string `json:"charging_mode"`
 
 	// 资源实例ID
-	ResourceId string `json:"resource_id"`
+	ResourceId *string `json:"resource_id,omitempty"`
 
 	// 服务器列表
 	HostIdList []string `json:"host_id_list"`

@@ -12,13 +12,13 @@ type ListEventSpecsRequest struct {
 	// **参数解释**： 事件配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	SpecName *string `json:"spec_name,omitempty"`
 
-	// **参数解释**： 事件类别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	// **参数解释**： 事件类别。 **约束限制**： 不涉及。 **取值范围**： - management：管理。 - monitor：监控。 - security：安全。 **默认取值**： 不涉及。
 	Category *string `json:"category,omitempty"`
 
 	// **参数解释**： 事件级别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Severity *string `json:"severity,omitempty"`
 
-	// **参数解释**： 事件源类别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	// **参数解释**： 事件源类别。 **约束限制**： 不涉及。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。 **默认取值**： 不涉及。
 	SourceType *string `json:"source_type,omitempty"`
 
 	// **参数解释**： 事件标签。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。

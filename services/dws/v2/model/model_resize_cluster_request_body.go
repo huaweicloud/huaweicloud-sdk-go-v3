@@ -19,7 +19,7 @@ type ResizeClusterRequestBody struct {
 	// **参数解释**： 自动查杀作业等待时间。 **约束限制**： guestAgent插件版本8.2.1及以上才支持。 **取值范围**： 30~1200 **默认取值**： 0，即不限制。
 	WaitingForKilling *int32 `json:"waiting_for_killing,omitempty"`
 
-	// **参数解释**： 扩容完成后是否自动启动重分布，默认是。如果设置为false，扩容后不进行重分布，此时集群任务信息处于“待重分布”状态，无法进行其他操作。 **约束限制**： 不涉及。 **取值范围**： true：扩容后立即重分布。 false：扩容后不进行重分布，此时集群任务信息处于“待重分布”状态。 **默认取值**： true
+	// **参数解释**： 扩容完成后是否自动启动重分布，默认是。如果设置为false，扩容后不进行重分布，此时集群任务信息处于“待重分布”状态，无法进行其他操作。 **约束限制**： 不涉及。 **取值范围**： - true：扩容后立即重分布。 - false：扩容后不进行重分布，此时集群任务信息处于“待重分布”状态。  **默认取值**： true
 	AutoRedistribute *bool `json:"auto_redistribute,omitempty"`
 }
 

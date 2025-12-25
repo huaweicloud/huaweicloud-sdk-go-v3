@@ -18,7 +18,7 @@ type LogicalClusterInfo struct {
 	// **参数解释**： 逻辑集群主机信息。 **取值范围**： 不涉及。
 	ClusterRings *[]ClusterRing `json:"cluster_rings,omitempty"`
 
-	// **参数解释**： 逻辑集群状态。 **取值范围**： 不涉及。
+	// **参数解释**： 逻辑集群状态。 **取值范围**： - Failed：失败。 - Normal: 正常。 - Unavailable：不可用。 - Redistributing：重分布中。 - Redistribute_failed：重分布失败。 - Deleted：已删除。
 	Status *string `json:"status,omitempty"`
 
 	// **参数解释**： 是否为第一个逻辑集群。历史版本中第1个创建或者转换的逻辑集群不能删除，因为其中包含了一些系统视图。 **取值范围**： 不涉及。
@@ -44,7 +44,7 @@ type LogicalClusterInfo struct {
 	// **参数解释**： 作业等待时间。 **取值范围**： 不涉及。
 	WaitingForKilling *int32 `json:"waiting_for_killing,omitempty"`
 
-	// **参数解释**： 集群类型。 **取值范围**： 不涉及。
+	// **参数解释**： 逻辑集群类型。 **取值范围**： - createFromPlan：计划弹性。 - createFromElastic：自动弹性。
 	ClusterType *string `json:"cluster_type,omitempty"`
 }
 

@@ -25,6 +25,8 @@ type PhysicalServer struct {
 
 	PowerState *PowerState `json:"power_state,omitempty"`
 
+	OperationState *PhysicalServerOperationStatus `json:"operation_state,omitempty"`
+
 	HealthState *Health `json:"health_state,omitempty"`
 
 	// 上架时间

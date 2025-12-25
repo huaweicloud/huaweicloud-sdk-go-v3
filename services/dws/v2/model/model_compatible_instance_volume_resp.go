@@ -9,7 +9,7 @@ import (
 // CompatibleInstanceVolumeResp **参数解释**： 容量相关信息。 **取值范围**： 不涉及。
 type CompatibleInstanceVolumeResp struct {
 
-	// **参数解释**： 类型。 **取值范围**： 不涉及。
+	// **参数解释**： 磁盘类型。 **取值范围**： - SATA：普通IO - SAS：高IO - SSD：超高IO - ESSD：极速型SSD - GPSSD：通用型SSD
 	Type *string `json:"type,omitempty"`
 
 	// **参数解释**： 已使用空间。 **取值范围**： 不涉及。

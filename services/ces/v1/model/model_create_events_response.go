@@ -10,8 +10,8 @@ import (
 type CreateEventsResponse struct {
 
 	// 事件响应体
-	Body           *[]CreateEventsResponseBody `json:"body,omitempty"`
-	HttpStatusCode int                         `json:"-"`
+	Body           *[]Event `json:"body,omitempty"`
+	HttpStatusCode int      `json:"-"`
 }
 
 func (o CreateEventsResponse) String() string {

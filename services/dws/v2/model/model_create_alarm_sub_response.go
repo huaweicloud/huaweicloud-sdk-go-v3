@@ -33,7 +33,7 @@ type CreateAlarmSubResponse struct {
 	// **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
 	NotificationTargetName *string `json:"notification_target_name,omitempty"`
 
-	// **参数解释**： 消息主题类型。 **取值范围**： 不涉及。
+	// **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
 	NotificationTargetType *string `json:"notification_target_type,omitempty"`
 
 	// **参数解释**： 语言。 **取值范围**： 不涉及。

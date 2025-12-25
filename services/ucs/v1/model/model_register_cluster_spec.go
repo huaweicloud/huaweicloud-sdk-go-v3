@@ -35,8 +35,6 @@ type RegisterClusterSpec struct {
 
 	// 集群管理类型信息。 取值如下： - grouped：在舰队中纳管的集群 - discrete：未加入舰队的集群
 	ManageType string `json:"manageType"`
-
-	Network *NetworkConfig `json:"network,omitempty"`
 }
 
 func (o RegisterClusterSpec) String() string {

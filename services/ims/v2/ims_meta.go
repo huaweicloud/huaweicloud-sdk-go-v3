@@ -378,6 +378,15 @@ func GenReqDefForListImageMembers() *def.HttpRequestDef {
 		WithJsonTag("image_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -929,6 +938,15 @@ func GenReqDefForGlanceListImageMembers() *def.HttpRequestDef {
 		WithName("ImageId").
 		WithJsonTag("image_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

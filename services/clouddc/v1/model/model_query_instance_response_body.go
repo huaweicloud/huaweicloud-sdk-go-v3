@@ -31,6 +31,8 @@ type QueryInstanceResponseBody struct {
 
 	State *InstanceState `json:"state"`
 
+	OperationState *InstanceOperationStatus `json:"operation_state,omitempty"`
+
 	// 创建裸机实例的元数据。  可以通过元数据自定义键值对。   说明： 如果元数据中包含了敏感数据，您应当采取适当的措施来保护敏感数据，比如限制访问范围、加密等。 最多可注入10对键值（Key/Value）。 主键（Key）只能由大写字母（A-Z）、小写字母（a-z）、数字（0-9）、中划线（-）、下划线（_）、冒号（:）、空格（ ）和小数点（.）组成，长度为[1-255]个字符。     值（value）最大长度为255个字符。
 	Metadata map[string]string `json:"metadata,omitempty"`
 

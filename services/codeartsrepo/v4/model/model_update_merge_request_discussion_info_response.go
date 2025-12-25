@@ -15,7 +15,7 @@ type UpdateMergeRequestDiscussionInfoResponse struct {
 	// **参数解释：** 评论id(主评论和回复不共用)。
 	Id *int32 `json:"id,omitempty"`
 
-	// **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。 - null: 普通评论。
+	// **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。
 	Type *string `json:"type,omitempty"`
 
 	// **参数解释：** 评论内容。

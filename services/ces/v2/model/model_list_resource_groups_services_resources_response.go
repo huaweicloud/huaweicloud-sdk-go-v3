@@ -9,7 +9,7 @@ import (
 // ListResourceGroupsServicesResourcesResponse Response Object
 type ListResourceGroupsServicesResourcesResponse struct {
 
-	// 资源总数
+	// **参数解释** 资源总数。 **取值范围** 0-10000
 	Count *int32 `json:"count,omitempty"`
 
 	// 资源分组资源列表

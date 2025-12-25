@@ -9,7 +9,7 @@ import (
 // ListResourceGroupResponse Response Object
 type ListResourceGroupResponse struct {
 
-	// 一个或者多个资源分组信息。
+	// **参数解释**： 一个或者多个资源分组信息。
 	ResourceGroups *[]ResourceGroupInfo `json:"resource_groups,omitempty"`
 
 	MetaData       *TotalMetaData `json:"meta_data,omitempty"`

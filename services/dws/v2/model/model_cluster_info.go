@@ -54,7 +54,7 @@ type ClusterInfo struct {
 	// **参数解释**： 企业项目ID，对集群指定企业项目。如果未指定，则使用默认企业项目“default”的ID，即0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0
 	EnterpriseProjectId string `json:"enterprise_project_id"`
 
-	// **参数解释**： 集群规格ID。 **取值范围**： 不涉及。
+	// **参数解释**： 集群规格名称。 **取值范围**： 集群规格详情请参见[数据仓库规格](dws_01_00018.html)。
 	NodeType string `json:"node_type"`
 
 	// **参数解释**： 虚拟私有云ID。 **取值范围**： 不涉及。

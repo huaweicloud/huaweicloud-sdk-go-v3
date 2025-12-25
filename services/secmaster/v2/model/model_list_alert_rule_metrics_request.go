@@ -9,7 +9,7 @@ import (
 // ListAlertRuleMetricsRequest Request Object
 type ListAlertRuleMetricsRequest struct {
 
-	// 工作空间 ID。Workspace ID.
+	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
 }
 

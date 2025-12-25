@@ -8,32 +8,32 @@ import (
 
 type IdeRepositoryDo struct {
 
-	// 仓库名称
-	RepositoryName *string `json:"repository_name,omitempty"`
+	// **参数解释**: 仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
+	RepositoryName string `json:"repository_name"`
 
-	// 仓库类型
-	Format *string `json:"format,omitempty"`
+	// **参数解释**: 制品类型。 **约束限制**: 不涉及。 **取值范围**: maven2。 **默认取值**: 无。
+	Format string `json:"format"`
 
-	// 仓库描述
+	// **参数解释**: 仓库描述。 **约束限制**: 最大长度200。 **取值范围**: 不涉及。 **默认取值**: 无。
 	Description *string `json:"description,omitempty"`
 
-	// release仓库名称
+	// **参数解释**: release仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
 	Release *string `json:"release,omitempty"`
 
-	// snapshot仓库名称
+	// **参数解释**: snapshot仓库名称。 **约束限制**: 长度1-50。 **取值范围**: 不涉及。 **默认取值**: 无。
 	Snapshot *string `json:"snapshot,omitempty"`
 
-	// 路径
+	// **参数解释**: 路径包含规则。 **约束限制**: 最大长度512。 **取值范围**: 不涉及。 **默认取值**: 无。
 	IncludesPattern *string `json:"includes_pattern,omitempty"`
 
-	// 共享权限级别
+	// **参数解释**: 共享权限级别。 **约束限制**: 不涉及。 **取值范围**: PROJECT。 **默认取值**: 无。
 	ShareRight *string `json:"share_right,omitempty"`
 
-	// 项目ID
+	// **参数解释**: 项目ID，可以从调用API处获取，也可以从控制台获取。获取方式请参考[获取项目ID](CloudArtifact_api_0015.xml)。 **约束限制**: 只能由英文字母、数字组成，且长度为32个字符。 **取值范围**: 不涉及。 **默认取值**: 无。
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 仓库类别，本地仓或聚合仓
-	Type *string `json:"type,omitempty"`
+	// **参数解释**: 仓库类型。 **约束限制**: 不涉及。 **取值范围**: hosted：本地仓库。 **默认取值**: 无。
+	Type string `json:"type"`
 }
 
 func (o IdeRepositoryDo) String() string {

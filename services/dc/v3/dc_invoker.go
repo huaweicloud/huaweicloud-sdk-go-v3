@@ -613,6 +613,70 @@ func (i *ShowResourceTagInvoker) Invoke() (*model.ShowResourceTagResponse, error
 	}
 }
 
+type CreateVifPeerDetectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateVifPeerDetectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateVifPeerDetectionInvoker) Invoke() (*model.CreateVifPeerDetectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateVifPeerDetectionResponse), nil
+	}
+}
+
+type DeleteVifPeerDetectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteVifPeerDetectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteVifPeerDetectionInvoker) Invoke() (*model.DeleteVifPeerDetectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteVifPeerDetectionResponse), nil
+	}
+}
+
+type ListVifPeerDetectionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVifPeerDetectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListVifPeerDetectionsInvoker) Invoke() (*model.ListVifPeerDetectionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVifPeerDetectionsResponse), nil
+	}
+}
+
+type ShowVifPeerDetectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVifPeerDetectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowVifPeerDetectionInvoker) Invoke() (*model.ShowVifPeerDetectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVifPeerDetectionResponse), nil
+	}
+}
+
 type CreateVirtualGatewayInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -818,6 +882,22 @@ func (i *SwitchoverTestInvoker) Invoke() (*model.SwitchoverTestResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.SwitchoverTestResponse), nil
+	}
+}
+
+type UpdateExtendAttributeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateExtendAttributeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateExtendAttributeInvoker) Invoke() (*model.UpdateExtendAttributeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateExtendAttributeResponse), nil
 	}
 }
 

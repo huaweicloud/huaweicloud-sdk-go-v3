@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// IpWhiteList IP白名单 约束：只有企业版实例的APP_HTTPS协议支持配置IP白名单。
+// IpWhiteList IP白名单 约束：只有企业版实例的APP_HTTPS/APP_AMQP/APP_MQTT协议支持配置IP白名单。
 type IpWhiteList struct {
 
 	// **参数说明**：启用Ip白名单访问控制。

@@ -9,10 +9,11 @@ import (
 // DisableAlertRuleRequest Request Object
 type DisableAlertRuleRequest struct {
 
-	// 工作空间 ID。Workspace ID.
+	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
 
-	Body *[]string `json:"body,omitempty"`
+	// 告警规则 ID
+	AlertRuleId string `json:"alert_rule_id"`
 }
 
 func (o DisableAlertRuleRequest) String() string {

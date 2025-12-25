@@ -61,27 +61,6 @@ func (c *ModerationClient) CheckImageModerationInvoker(request *model.CheckImage
 	return &CheckImageModerationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// RunCloseAudioStreamModerationJob 关闭音频流内容审核作业
-//
-// 关闭音频流内容审核作业
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModerationClient) RunCloseAudioStreamModerationJob(request *model.RunCloseAudioStreamModerationJobRequest) (*model.RunCloseAudioStreamModerationJobResponse, error) {
-	requestDef := GenReqDefForRunCloseAudioStreamModerationJob()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.RunCloseAudioStreamModerationJobResponse), nil
-	}
-}
-
-// RunCloseAudioStreamModerationJobInvoker 关闭音频流内容审核作业
-func (c *ModerationClient) RunCloseAudioStreamModerationJobInvoker(request *model.RunCloseAudioStreamModerationJobRequest) *RunCloseAudioStreamModerationJobInvoker {
-	requestDef := GenReqDefForRunCloseAudioStreamModerationJob()
-	return &RunCloseAudioStreamModerationJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // RunCreateAudioModerationJob 创建音频内容审核作业
 //
 // 分析并识别用户上传的音频内容是否有敏感内容（如色情、政治等），并将识别结果返回给用户
@@ -101,27 +80,6 @@ func (c *ModerationClient) RunCreateAudioModerationJob(request *model.RunCreateA
 func (c *ModerationClient) RunCreateAudioModerationJobInvoker(request *model.RunCreateAudioModerationJobRequest) *RunCreateAudioModerationJobInvoker {
 	requestDef := GenReqDefForRunCreateAudioModerationJob()
 	return &RunCreateAudioModerationJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// RunCreateAudioStreamModerationJob 创建音频流内容审核作业
-//
-// 创建音频流内容审核作业，创建成功会将作业ID返回给用户
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModerationClient) RunCreateAudioStreamModerationJob(request *model.RunCreateAudioStreamModerationJobRequest) (*model.RunCreateAudioStreamModerationJobResponse, error) {
-	requestDef := GenReqDefForRunCreateAudioStreamModerationJob()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.RunCreateAudioStreamModerationJobResponse), nil
-	}
-}
-
-// RunCreateAudioStreamModerationJobInvoker 创建音频流内容审核作业
-func (c *ModerationClient) RunCreateAudioStreamModerationJobInvoker(request *model.RunCreateAudioStreamModerationJobRequest) *RunCreateAudioStreamModerationJobInvoker {
-	requestDef := GenReqDefForRunCreateAudioStreamModerationJob()
-	return &RunCreateAudioStreamModerationJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RunCreateVideoModerationJob 创建视频内容审核作业

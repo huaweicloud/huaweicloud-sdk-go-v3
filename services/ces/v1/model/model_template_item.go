@@ -9,12 +9,12 @@ import (
 // TemplateItem 创建自定义告警模板添加的告警规则。
 type TemplateItem struct {
 
-	// 告警模板添加的监控指标，如弹性云服务器可添加的监控指标为cpu_util等；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。
+	// **参数解释** 告警模板添加的监控指标，如弹性云服务器可添加的监控指标为cpu_util等；各服务的指标名称可查看：“[服务指标名称](ces_03_0059.xml)”。 **约束限制**： 不涉及 **取值范围**： 字符串长度在 1 到 64 之间。 **默认取值**： 不涉及
 	MetricName string `json:"metric_name"`
 
 	Condition *AlarmTemplateCondition `json:"condition"`
 
-	// 设置告警级别，值为1,2,3,4；1为紧急，2为重要，3为次要，4为提示。
+	// **参数解释**： 告警级别。     **约束限制**： 不涉及。 **取值范围**： 只能为1、2、3、4。 - 1为紧急 - 2为重要 - 3为次要 - 4为提示           **默认取值**： 不涉及。
 	AlarmLevel *int32 `json:"alarm_level,omitempty"`
 }
 

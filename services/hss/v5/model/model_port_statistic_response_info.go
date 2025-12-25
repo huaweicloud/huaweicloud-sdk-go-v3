@@ -18,7 +18,7 @@ type PortStatisticResponseInfo struct {
 	// **参数解释**: 端口数量 **取值范围**: 最小值0，最大值65535
 	Num *int32 `json:"num,omitempty"`
 
-	// **参数解释**: 危险类型 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknow: 无已知危险的端口
+	// **参数解释**: 危险类型 **取值范围**: - danger: 危险端口 - normal: 正常端口 - unknown: 无已知危险的端口
 	Status *string `json:"status,omitempty"`
 }
 

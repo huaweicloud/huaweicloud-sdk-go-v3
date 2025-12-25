@@ -16,7 +16,7 @@ type CreateAlarmMetric struct {
 	MetricName string `json:"metric_name"`
 
 	// **参数解释**： 指标维度。 **约束限制**： 目前最大可添加4个维度。如果不使用resource_group_id，则dimensions值必填。
-	Dimensions *[]Dimension `json:"dimensions,omitempty"`
+	Dimensions *[]CreateMetricDimension `json:"dimensions,omitempty"`
 
 	// **参数解释**： 创建告警规则时选择的资源分组ID。 **约束限制**： 如果根据资源分组创建告警规则，则resource_group_id不能为空，dimensions中至少指定一个维度信息，name不能为空，且alarm_type值为RESOURCE_GROUP；如：rg1603786526428bWbVmk4rP。 **取值范围**： 只能包含字母、数字、“_”，“-”，长度为[0,64]个字符。 **默认取值**： 不涉及。
 	ResourceGroupId *string `json:"resource_group_id,omitempty"`

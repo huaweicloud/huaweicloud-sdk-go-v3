@@ -36,7 +36,7 @@ type ListHotWordsRequest struct {
 	// sis服务所在区域
 	Region *int32 `json:"region,omitempty"`
 
-	// 智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持）
+	// 智能交互语言 * zh_CN：简体中文（已下线，请使用CN） * en_US：英语（已下线，请使用EN） * CN：中文。 * EN：英文。 * ESP：西班牙语（仅海外站点支持） * por：葡萄牙语（仅海外站点支持） * Arabic：阿拉伯语（仅海外站点支持） * Thai：泰语（仅海外站点支持） * fr：法语（仅海外站点支持）
 	Language *ListHotWordsRequestLanguage `json:"language,omitempty"`
 
 	// * SIS:SIS热词 * MOBVOI:奇妙问ASR热词
@@ -65,6 +65,7 @@ type ListHotWordsRequestLanguageEnum struct {
 	POR    ListHotWordsRequestLanguage
 	ARABIC ListHotWordsRequestLanguage
 	THAI   ListHotWordsRequestLanguage
+	FR     ListHotWordsRequestLanguage
 }
 
 func GetListHotWordsRequestLanguageEnum() ListHotWordsRequestLanguageEnum {
@@ -92,6 +93,9 @@ func GetListHotWordsRequestLanguageEnum() ListHotWordsRequestLanguageEnum {
 		},
 		THAI: ListHotWordsRequestLanguage{
 			value: "Thai",
+		},
+		FR: ListHotWordsRequestLanguage{
+			value: "fr",
 		},
 	}
 }

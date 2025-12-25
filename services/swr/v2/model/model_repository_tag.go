@@ -42,7 +42,7 @@ type RepositoryTag struct {
 	PushTime *string `json:"push_time,omitempty"`
 
 	// 制品大小，单位：Byte
-	Size *int32 `json:"size,omitempty"`
+	Size *int64 `json:"size,omitempty"`
 }
 
 func (o RepositoryTag) String() string {

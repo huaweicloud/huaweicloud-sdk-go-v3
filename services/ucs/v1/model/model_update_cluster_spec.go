@@ -13,8 +13,6 @@ type UpdateClusterSpec struct {
 
 	// 集群所在城市信息
 	City *string `json:"city,omitempty"`
-
-	WorkerConfig *WorkerConfig `json:"workerConfig,omitempty"`
 }
 
 func (o UpdateClusterSpec) String() string {

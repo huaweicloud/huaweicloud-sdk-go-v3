@@ -16,7 +16,7 @@ import (
 type ClusterJoinGroupRequestBody struct {
 
 	// 集群加入目标容器舰队的id
-	ClusterGroupID *def.MultiPart `json:"clusterGroupID,omitempty"`
+	ClusterGroupID *def.MultiPart `json:"clusterGroupID"`
 }
 
 func (o ClusterJoinGroupRequestBody) String() string {

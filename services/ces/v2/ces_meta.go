@@ -858,6 +858,10 @@ func GenReqDefForListResourceGroups() *def.HttpRequestDef {
 		WithName("Type").
 		WithJsonTag("type").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Status").
+		WithJsonTag("status").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -880,16 +884,16 @@ func GenReqDefForListResourceGroupsServicesResources() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("DimName").
-		WithJsonTag("dim_name").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
+		WithName("DimName").
+		WithJsonTag("dim_name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Status").

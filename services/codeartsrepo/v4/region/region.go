@@ -38,6 +38,8 @@ var (
 		"https://repo.af-south-1.myhuaweicloud.com")
 	AF_NORTH_1 = region.NewRegion("af-north-1",
 		"https://repo.af-north-1.myhuaweicloud.com")
+	EU_WEST_101 = region.NewRegion("eu-west-101",
+		"https://codeartsrepo-ext.eu-west-101.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -56,6 +58,7 @@ var staticFields = map[string]*region.Region{
 	"tr-west-1":      TR_WEST_1,
 	"af-south-1":     AF_SOUTH_1,
 	"af-north-1":     AF_NORTH_1,
+	"eu-west-101":    EU_WEST_101,
 }
 
 var provider = region.DefaultProviderChain("CODEARTSREPO")

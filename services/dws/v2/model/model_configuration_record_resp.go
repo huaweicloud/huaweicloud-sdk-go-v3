@@ -20,7 +20,7 @@ type ConfigurationRecordResp struct {
 	// **参数解释**： 结束时间。 **取值范围**： 不涉及。
 	EndTime *string `json:"end_time,omitempty"`
 
-	// **参数解释**： 状态。 **取值范围**： 不涉及。
+	// **参数解释**： 状态。 **取值范围**： - Applying：应用中； - In-Sync：已同步； - Pending-Reboot：待重启；
 	Status *string `json:"status,omitempty"`
 
 	// **参数解释**： 失败原因。 **取值范围**： 不涉及。

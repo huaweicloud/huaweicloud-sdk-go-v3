@@ -21,22 +21,6 @@ func (i *AddQueueUserListInvoker) Invoke() (*model.AddQueueUserListResponse, err
 	}
 }
 
-type AddSnapshotCrossRegionPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *AddSnapshotCrossRegionPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *AddSnapshotCrossRegionPolicyInvoker) Invoke() (*model.AddSnapshotCrossRegionPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.AddSnapshotCrossRegionPolicyResponse), nil
-	}
-}
-
 type AddWorkloadPlanStageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -754,22 +738,6 @@ func (i *DeleteSnapshotInvoker) Invoke() (*model.DeleteSnapshotResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.DeleteSnapshotResponse), nil
-	}
-}
-
-type DeleteSnapshotCrossRegionPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteSnapshotCrossRegionPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteSnapshotCrossRegionPolicyInvoker) Invoke() (*model.DeleteSnapshotCrossRegionPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteSnapshotCrossRegionPolicyResponse), nil
 	}
 }
 
@@ -1890,38 +1858,6 @@ func (i *ListSchemasInvoker) Invoke() (*model.ListSchemasResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListSchemasResponse), nil
-	}
-}
-
-type ListSnapshotCrossRegionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListSnapshotCrossRegionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListSnapshotCrossRegionInvoker) Invoke() (*model.ListSnapshotCrossRegionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListSnapshotCrossRegionResponse), nil
-	}
-}
-
-type ListSnapshotCrossRegionPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListSnapshotCrossRegionPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListSnapshotCrossRegionPolicyInvoker) Invoke() (*model.ListSnapshotCrossRegionPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListSnapshotCrossRegionPolicyResponse), nil
 	}
 }
 

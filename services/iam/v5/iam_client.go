@@ -462,6 +462,27 @@ func (c *IamClient) RemoveUserFromGroupV5Invoker(request *model.RemoveUserFromGr
 	return &RemoveUserFromGroupV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowGroupSummary 查询用户组相关属性
+//
+// 该接口可以用于查询用户组相关属性。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) ShowGroupSummary(request *model.ShowGroupSummaryRequest) (*model.ShowGroupSummaryResponse, error) {
+	requestDef := GenReqDefForShowGroupSummary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowGroupSummaryResponse), nil
+	}
+}
+
+// ShowGroupSummaryInvoker 查询用户组相关属性
+func (c *IamClient) ShowGroupSummaryInvoker(request *model.ShowGroupSummaryRequest) *ShowGroupSummaryInvoker {
+	requestDef := GenReqDefForShowGroupSummary()
+	return &ShowGroupSummaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowGroupV5 查询用户组详情
 //
 // 该接口可以用于查询用户组详情。

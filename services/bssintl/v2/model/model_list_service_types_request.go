@@ -17,6 +17,9 @@ type ListServiceTypesRequest struct {
 
 	// 每次查询的数量，默认值为10。
 	Limit *int32 `json:"limit,omitempty"`
+
+	// |参数名称：云服务类型的名称| |参数的约束及描述：该参数非必填，范围限制：1-128，支持模糊查询。仅支持前缀匹配、后缀匹配、中间匹配。|
+	ServiceTypeName *string `json:"service_type_name,omitempty"`
 }
 
 func (o ListServiceTypesRequest) String() string {
