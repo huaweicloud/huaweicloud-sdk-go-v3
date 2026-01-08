@@ -14,6 +14,9 @@ type CreateTranscodingReq struct {
 	// 转码模板ID，没带av_parameter参数时，必须带该参数，数组，每一路转码输出对应一个转码配置模板ID，最多支持9个模板ID。  多个转码模板中如下参数可变，其他都必须一致：  视频bitrate，height，width。
 	TransTemplateId *[]int32 `json:"trans_template_id,omitempty"`
 
+	// 转码模板数组
+	TransTemplateList *[]TransIdTemplate `json:"trans_template_list,omitempty"`
+
 	// 转码参数。  若同时设置“trans_template_id”和此参数，则优先使用此参数进行转码，不带trans_template_id时，该参数必选。
 	AvParameters *[]AvParameters `json:"av_parameters,omitempty"`
 
@@ -30,6 +33,15 @@ type CreateTranscodingReq struct {
 	Watermarks *[]WatermarkRequest `json:"watermarks,omitempty"`
 
 	Thumbnail *Thumbnail `json:"thumbnail,omitempty"`
+
+	// 多截图任务，数组，最多支持20个成员。
+	Thumbnails *[]Thumbnail `json:"thumbnails,omitempty"`
+
+	// 雪碧图参数，数组，最多支持20个成员。
+	ImageSprites *[]ImageSprite `json:"image_sprites,omitempty"`
+
+	//
+	PipelineId *string `json:"pipeline_id,omitempty"`
 
 	// 任务优先级，取值如下： - 9代表高优先级。 - 6代表中优先级，默认为6。  暂时只支持6和9。
 	Priority *int32 `json:"priority,omitempty"`

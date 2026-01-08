@@ -20,7 +20,7 @@ type ListTransactionRequestBody struct {
 	// **参数解释**: 查询结果的事务起始页码。 **约束限制**: 不涉及。 **取值范围**: [0，2^31-1]。 **默认取值**: 默认为0（偏移0条数据，表示从第一条数据开始查询）。
 	Offset *int32 `json:"offset,omitempty"`
 
-	TransactionQueryOption *ListTransactionRequestBodyTransactionQueryOption `json:"transaction_query_option,omitempty"`
+	TransactionQueryInfo *ListTransactionRequestBodyTransactionQueryInfo `json:"transaction_query_info,omitempty"`
 }
 
 func (o ListTransactionRequestBody) String() string {

@@ -27,7 +27,7 @@ type ListTransitSubnetRequest struct {
 	// 中转子网的子网ID
 	VirsubnetId *[]string `json:"virsubnet_id,omitempty"`
 
-	// 中转子网状态。 取值范围： ACTIVE： 当前资源状态正常。 INACTIVE： 不可用。
+	// 中转子网状态。 取值范围： - ACTIVE： 当前资源状态正常。 - INACTIVE： 不可用。
 	Status *[]string `json:"status,omitempty"`
 
 	// 功能说明：每页返回的个数。 取值范围：1~2000。 默认值：2000

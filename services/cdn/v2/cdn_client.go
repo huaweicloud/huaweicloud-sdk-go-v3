@@ -665,9 +665,9 @@ func (c *CdnClient) ListCdnDomainTopOriginUrlInvoker(request *model.ListCdnDomai
 	return &ListCdnDomainTopOriginUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListCdnDomainTopPath 查询 TOP Path明细
+// ListCdnDomainTopPath 查询TOP100 Path访问明细
 //
-// 查询 TOP Path明细
+// 查询TOP100 Path访问明细
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CdnClient) ListCdnDomainTopPath(request *model.ListCdnDomainTopPathRequest) (*model.ListCdnDomainTopPathResponse, error) {
@@ -680,7 +680,7 @@ func (c *CdnClient) ListCdnDomainTopPath(request *model.ListCdnDomainTopPathRequ
 	}
 }
 
-// ListCdnDomainTopPathInvoker 查询 TOP Path明细
+// ListCdnDomainTopPathInvoker 查询TOP100 Path访问明细
 func (c *CdnClient) ListCdnDomainTopPathInvoker(request *model.ListCdnDomainTopPathRequest) *ListCdnDomainTopPathInvoker {
 	requestDef := GenReqDefForListCdnDomainTopPath()
 	return &ListCdnDomainTopPathInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1087,9 +1087,9 @@ func (c *CdnClient) ShowChargeModesInvoker(request *model.ShowChargeModesRequest
 	return &ShowChargeModesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDomainCountryStat CDN查询域名的国家统计数据
+// ShowDomainCountryStat CDN查询域名国家统计数据明细
 //
-// CDN查询域名的国家统计数据
+// CDN查询域名国家统计数据明细
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CdnClient) ShowDomainCountryStat(request *model.ShowDomainCountryStatRequest) (*model.ShowDomainCountryStatResponse, error) {
@@ -1102,7 +1102,7 @@ func (c *CdnClient) ShowDomainCountryStat(request *model.ShowDomainCountryStatRe
 	}
 }
 
-// ShowDomainCountryStatInvoker CDN查询域名的国家统计数据
+// ShowDomainCountryStatInvoker CDN查询域名国家统计数据明细
 func (c *CdnClient) ShowDomainCountryStatInvoker(request *model.ShowDomainCountryStatRequest) *ShowDomainCountryStatInvoker {
 	requestDef := GenReqDefForShowDomainCountryStat()
 	return &ShowDomainCountryStatInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

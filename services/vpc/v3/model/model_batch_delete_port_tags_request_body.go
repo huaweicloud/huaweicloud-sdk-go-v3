@@ -9,7 +9,7 @@ import (
 // BatchDeletePortTagsRequestBody This is a auto create Body Object
 type BatchDeletePortTagsRequestBody struct {
 
-	// 标签列表
+	// 标签列表 约束：最大支持20组标签键值对
 	Tags []DeleteResourceTagRequestBody `json:"tags"`
 }
 

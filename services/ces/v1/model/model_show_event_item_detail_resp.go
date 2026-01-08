@@ -36,6 +36,9 @@ type ShowEventItemDetailResp struct {
 	// **参数解释**： 事件类型。 **取值范围**： 枚举类型：EVENT.SYS，EVENT.CUSTOM - EVENT.SYS: 系统事件。 - EVENT.CUSTOM: 自定义事件。
 	EventType *string `json:"event_type,omitempty"`
 
+	// **参数解释**： 事件子类。 **取值范围**： 枚举类型。 当事件类型为系统事件时，参数值为SUB_EVENT.OPS或SUB_EVENT.PLAN。 当事件类型为自定义事件时，参数值为SUB_EVENT.CUSTOM。 - SUB_EVENT.OPS：运维事件。 - SUB_EVENT.PLAN：计划事件。 - SUB_EVENT.CUSTOM：自定义事件。
+	SubEventType *ShowEventItemDetailRespSubEventType `json:"sub_event_type,omitempty"`
+
 	// **参数解释**： 事件的维度，根据维度描述资源信息。 用于指定资源、资源分组的事件告警场景中，支持按维度配置告警规则。 **取值范围**： 目前最大支持4个维度
 	Dimensions *[]MetricsDimensionResp `json:"dimensions,omitempty"`
 }
@@ -137,6 +140,57 @@ func (c ShowEventItemDetailRespEventLevel) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ShowEventItemDetailRespEventLevel) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ShowEventItemDetailRespSubEventType struct {
+	value string
+}
+
+type ShowEventItemDetailRespSubEventTypeEnum struct {
+	SUB_EVENT_OPS    ShowEventItemDetailRespSubEventType
+	SUB_EVENT_PLAN   ShowEventItemDetailRespSubEventType
+	SUB_EVENT_CUSTOM ShowEventItemDetailRespSubEventType
+}
+
+func GetShowEventItemDetailRespSubEventTypeEnum() ShowEventItemDetailRespSubEventTypeEnum {
+	return ShowEventItemDetailRespSubEventTypeEnum{
+		SUB_EVENT_OPS: ShowEventItemDetailRespSubEventType{
+			value: "SUB_EVENT.OPS",
+		},
+		SUB_EVENT_PLAN: ShowEventItemDetailRespSubEventType{
+			value: "SUB_EVENT.PLAN",
+		},
+		SUB_EVENT_CUSTOM: ShowEventItemDetailRespSubEventType{
+			value: "SUB_EVENT.CUSTOM",
+		},
+	}
+}
+
+func (c ShowEventItemDetailRespSubEventType) Value() string {
+	return c.value
+}
+
+func (c ShowEventItemDetailRespSubEventType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowEventItemDetailRespSubEventType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

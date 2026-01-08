@@ -33,7 +33,7 @@ type ListSqlLimitTaskResponseResult struct {
 	Status *string `json:"status,omitempty"`
 
 	// **参数解释**: 实例ID。 **取值范围**: 不涉及。
-	InstanceId *interface{} `json:"instance_id,omitempty"`
+	InstanceId *string `json:"instance_id,omitempty"`
 
 	// **参数解释**: 规则名。 **取值范围**: 不涉及。
 	RuleName *string `json:"rule_name,omitempty"`

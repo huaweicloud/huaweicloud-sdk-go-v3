@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -23,6 +26,12 @@ type Metadata struct {
 
 	// 文件系统的带宽规格。  创建20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统时，该参数必填。  20MB/s/TiB，填写\"20M\"。 40MB/s/TiB，填写\"40M\"。 125MB/s/TiB，填写\"125M\"。 250MB/s/TiB，填写\"250M\"。 500MB/s/TiB，填写\"500M\"。 1000MB/s/TiB，填写\"1000M\"。 HPC缓存型，填写\"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"或\"48G\"。
 	HpcBw *string `json:"hpc_bw,omitempty"`
+
+	// 是否自动创建安全组规则。\"true\"表示自动创建安全组规则，\"false\"表示不自动创建安全组规则。默认值是\"true\"。
+	AutoCreateSecurityGroupRules *MetadataAutoCreateSecurityGroupRules `json:"auto_create_security_group_rules,omitempty"`
+
+	// 存储库ID。
+	VaultId *string `json:"vault_id,omitempty"`
 }
 
 func (o Metadata) String() string {
@@ -32,4 +41,51 @@ func (o Metadata) String() string {
 	}
 
 	return strings.Join([]string{"Metadata", string(data)}, " ")
+}
+
+type MetadataAutoCreateSecurityGroupRules struct {
+	value string
+}
+
+type MetadataAutoCreateSecurityGroupRulesEnum struct {
+	TRUE  MetadataAutoCreateSecurityGroupRules
+	FALSE MetadataAutoCreateSecurityGroupRules
+}
+
+func GetMetadataAutoCreateSecurityGroupRulesEnum() MetadataAutoCreateSecurityGroupRulesEnum {
+	return MetadataAutoCreateSecurityGroupRulesEnum{
+		TRUE: MetadataAutoCreateSecurityGroupRules{
+			value: "true",
+		},
+		FALSE: MetadataAutoCreateSecurityGroupRules{
+			value: "false",
+		},
+	}
+}
+
+func (c MetadataAutoCreateSecurityGroupRules) Value() string {
+	return c.value
+}
+
+func (c MetadataAutoCreateSecurityGroupRules) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *MetadataAutoCreateSecurityGroupRules) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

@@ -12,7 +12,7 @@ type ResizeDesktopPoolResponse struct {
 	// 创建云桌面总任务id。
 	JobId *string `json:"job_id,omitempty"`
 
-	// 按需桌面变更规格返回的任务信息。
+	// 桌面变更规格返回的任务信息
 	Jobs           *[]ResizeDesktopPoolJobResponse `json:"jobs,omitempty"`
 	HttpStatusCode int                             `json:"-"`
 }

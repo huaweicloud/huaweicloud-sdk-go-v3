@@ -8,7 +8,10 @@ import (
 
 // UpgradeNodePoolResponse Response Object
 type UpgradeNodePoolResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
+	Jobid          *string `json:"jobid,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpgradeNodePoolResponse) String() string {

@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// MasterSlaveHealthMonitor 健康检查对象
 type MasterSlaveHealthMonitor struct {
 
 	// **参数解释**：健康检查的管理状态。  **取值范围**： - true：表示开启健康检查。 - false表示关闭健康检查。

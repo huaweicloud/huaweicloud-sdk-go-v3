@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// AgentsCondition 桌面agent安装情况。
+// AgentsCondition 桌面监控插件安装情况。
 type AgentsCondition struct {
 
 	// 桌面的desktopId。
@@ -33,7 +33,7 @@ type AgentsCondition struct {
 	// 桌面任务进度， 取值范围0-100以及null，null表示该桌面无任务，0-100表明该任务进度的百分比。
 	Process *int32 `json:"process,omitempty"`
 
-	// 单个桌面内的agent安装情况。
+	// 单个桌面内的监控插件安装情况。
 	AgentInfo *[]AgentInfo `json:"agent_info,omitempty"`
 }
 

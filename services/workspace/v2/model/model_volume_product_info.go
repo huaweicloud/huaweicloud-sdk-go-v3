@@ -32,6 +32,10 @@ type VolumeProductInfo struct {
 
 	// 产品状态，normal：正常、sellout：售空。
 	Status *string `json:"status,omitempty"`
+
+	Iops *Iops `json:"iops,omitempty"`
+
+	Throughput *Throughput `json:"throughput,omitempty"`
 }
 
 func (o VolumeProductInfo) String() string {

@@ -21,6 +21,9 @@ type ListPolicyGroupInfoRequest struct {
 	// 根据策略组名字过滤结果。
 	PolicyGroupName *string `json:"policy_group_name,omitempty"`
 
+	// 根据批量策略组名字过滤结果。
+	PolicyGroupNames *[]string `json:"policy_group_names,omitempty"`
+
 	// 根据优先级过滤结果。所带的值需要满足现有策略组已有最大优先级值。
 	Priority *int32 `json:"priority,omitempty"`
 

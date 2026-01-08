@@ -30,6 +30,9 @@ type SecurityPolicy struct {
 	// **参数解释**：自定义安全策略的加密套件列表。  **取值范围**：不涉及
 	Ciphers []string `json:"ciphers"`
 
+	// **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
 	// **参数解释**：创建时间。  **取值范围**：格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。
 	CreatedAt string `json:"created_at"`
 

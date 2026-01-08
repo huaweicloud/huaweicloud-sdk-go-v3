@@ -670,6 +670,27 @@ func (c *CloudtestClient) DeleteTestReportCustomDetailByUriInvoker(request *mode
 	return &DeleteTestReportCustomDetailByUriInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DownloadStepImageNew 下载图片
+//
+// 下载图片
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) DownloadStepImageNew(request *model.DownloadStepImageNewRequest) (*model.DownloadStepImageNewResponse, error) {
+	requestDef := GenReqDefForDownloadStepImageNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadStepImageNewResponse), nil
+	}
+}
+
+// DownloadStepImageNewInvoker 下载图片
+func (c *CloudtestClient) DownloadStepImageNewInvoker(request *model.DownloadStepImageNewRequest) *DownloadStepImageNewInvoker {
+	requestDef := GenReqDefForDownloadStepImageNew()
+	return &DownloadStepImageNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAlarmStatisticsUsing 查询告警统计数据
 //
 // 查询告警统计数据

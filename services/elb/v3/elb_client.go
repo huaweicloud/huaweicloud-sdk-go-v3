@@ -95,6 +95,69 @@ func (c *ElbClient) BatchCreateMembersInvoker(request *model.BatchCreateMembersR
 	return &BatchCreateMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteCertificates 批量删除证书
+//
+// 批量删除证书。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) BatchDeleteCertificates(request *model.BatchDeleteCertificatesRequest) (*model.BatchDeleteCertificatesResponse, error) {
+	requestDef := GenReqDefForBatchDeleteCertificates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteCertificatesResponse), nil
+	}
+}
+
+// BatchDeleteCertificatesInvoker 批量删除证书
+func (c *ElbClient) BatchDeleteCertificatesInvoker(request *model.BatchDeleteCertificatesRequest) *BatchDeleteCertificatesInvoker {
+	requestDef := GenReqDefForBatchDeleteCertificates()
+	return &BatchDeleteCertificatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteListeners 批量删监听器
+//
+// 批量删除监听器。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) BatchDeleteListeners(request *model.BatchDeleteListenersRequest) (*model.BatchDeleteListenersResponse, error) {
+	requestDef := GenReqDefForBatchDeleteListeners()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteListenersResponse), nil
+	}
+}
+
+// BatchDeleteListenersInvoker 批量删监听器
+func (c *ElbClient) BatchDeleteListenersInvoker(request *model.BatchDeleteListenersRequest) *BatchDeleteListenersInvoker {
+	requestDef := GenReqDefForBatchDeleteListeners()
+	return &BatchDeleteListenersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteLoadbalancers 批量删除负载均衡器
+//
+// 批量删除负载均衡器。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) BatchDeleteLoadbalancers(request *model.BatchDeleteLoadbalancersRequest) (*model.BatchDeleteLoadbalancersResponse, error) {
+	requestDef := GenReqDefForBatchDeleteLoadbalancers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteLoadbalancersResponse), nil
+	}
+}
+
+// BatchDeleteLoadbalancersInvoker 批量删除负载均衡器
+func (c *ElbClient) BatchDeleteLoadbalancersInvoker(request *model.BatchDeleteLoadbalancersRequest) *BatchDeleteLoadbalancersInvoker {
+	requestDef := GenReqDefForBatchDeleteLoadbalancers()
+	return &BatchDeleteLoadbalancersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeleteMembers 批量删除后端服务器
 //
 // 在指定pool下批量删除后端服务器。一次最多添加200个。
@@ -114,6 +177,69 @@ func (c *ElbClient) BatchDeleteMembers(request *model.BatchDeleteMembersRequest)
 func (c *ElbClient) BatchDeleteMembersInvoker(request *model.BatchDeleteMembersRequest) *BatchDeleteMembersInvoker {
 	requestDef := GenReqDefForBatchDeleteMembers()
 	return &BatchDeleteMembersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeletePools 批量删除后端服务器组
+//
+// 批量删除后端服务器组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) BatchDeletePools(request *model.BatchDeletePoolsRequest) (*model.BatchDeletePoolsResponse, error) {
+	requestDef := GenReqDefForBatchDeletePools()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeletePoolsResponse), nil
+	}
+}
+
+// BatchDeletePoolsInvoker 批量删除后端服务器组
+func (c *ElbClient) BatchDeletePoolsInvoker(request *model.BatchDeletePoolsRequest) *BatchDeletePoolsInvoker {
+	requestDef := GenReqDefForBatchDeletePools()
+	return &BatchDeletePoolsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDisableDomainIPs 批量将IP地址从LB实例域名解析中移除
+//
+// 批量将IP地址从LB实例域名解析中移除。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) BatchDisableDomainIPs(request *model.BatchDisableDomainIPsRequest) (*model.BatchDisableDomainIPsResponse, error) {
+	requestDef := GenReqDefForBatchDisableDomainIPs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDisableDomainIPsResponse), nil
+	}
+}
+
+// BatchDisableDomainIPsInvoker 批量将IP地址从LB实例域名解析中移除
+func (c *ElbClient) BatchDisableDomainIPsInvoker(request *model.BatchDisableDomainIPsRequest) *BatchDisableDomainIPsInvoker {
+	requestDef := GenReqDefForBatchDisableDomainIPs()
+	return &BatchDisableDomainIPsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchEnableDomainIPs 批量将IP地址加入LB实例域名解析中
+//
+// 批量将IP地址加入LB实例域名解析中。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) BatchEnableDomainIPs(request *model.BatchEnableDomainIPsRequest) (*model.BatchEnableDomainIPsResponse, error) {
+	requestDef := GenReqDefForBatchEnableDomainIPs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchEnableDomainIPsResponse), nil
+	}
+}
+
+// BatchEnableDomainIPsInvoker 批量将IP地址加入LB实例域名解析中
+func (c *ElbClient) BatchEnableDomainIPsInvoker(request *model.BatchEnableDomainIPsRequest) *BatchEnableDomainIPsInvoker {
+	requestDef := GenReqDefForBatchEnableDomainIPs()
+	return &BatchEnableDomainIPsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchRemoveAvailableZones 移除负载均衡器可用区
@@ -180,6 +306,27 @@ func (c *ElbClient) BatchUpdatePoliciesPriorityInvoker(request *model.BatchUpdat
 	return &BatchUpdatePoliciesPriorityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeListenerTags 变更监听器标签列表
+//
+// 批量添加或删除指定监听器器标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) ChangeListenerTags(request *model.ChangeListenerTagsRequest) (*model.ChangeListenerTagsResponse, error) {
+	requestDef := GenReqDefForChangeListenerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeListenerTagsResponse), nil
+	}
+}
+
+// ChangeListenerTagsInvoker 变更监听器标签列表
+func (c *ElbClient) ChangeListenerTagsInvoker(request *model.ChangeListenerTagsRequest) *ChangeListenerTagsInvoker {
+	requestDef := GenReqDefForChangeListenerTags()
+	return &ChangeListenerTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ChangeLoadbalancerChargeMode 变更负载均衡器计费模式
 //
 // 负载均衡器计费模式变更，当前支持的计费模式变更为：
@@ -202,6 +349,55 @@ func (c *ElbClient) ChangeLoadbalancerChargeMode(request *model.ChangeLoadbalanc
 func (c *ElbClient) ChangeLoadbalancerChargeModeInvoker(request *model.ChangeLoadbalancerChargeModeRequest) *ChangeLoadbalancerChargeModeInvoker {
 	requestDef := GenReqDefForChangeLoadbalancerChargeMode()
 	return &ChangeLoadbalancerChargeModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeLoadbalancerTags 变更负载均衡器标签列表
+//
+// 批量添加或删除指定负载均衡器标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) ChangeLoadbalancerTags(request *model.ChangeLoadbalancerTagsRequest) (*model.ChangeLoadbalancerTagsResponse, error) {
+	requestDef := GenReqDefForChangeLoadbalancerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeLoadbalancerTagsResponse), nil
+	}
+}
+
+// ChangeLoadbalancerTagsInvoker 变更负载均衡器标签列表
+func (c *ElbClient) ChangeLoadbalancerTagsInvoker(request *model.ChangeLoadbalancerTagsRequest) *ChangeLoadbalancerTagsInvoker {
+	requestDef := GenReqDefForChangeLoadbalancerTags()
+	return &ChangeLoadbalancerTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CloneListener 复制已有监听器
+//
+// 复制已有的监听器到同VPC内的负载均衡器。
+// - 仅支持同VPC实例间使用监听器复制功能。
+// - 不支持网关型LB下监听器进行复制，也不支持复制到网关型LB下。
+// - 仅同类型实例之间可以使用监听器复制功能。
+// - 对复制的源监听器有如下限制：后端服务器总数不能超过1000；转发策略总数不能超过100。
+// - 源监听器所在负载均衡器和目的监听器所在负载均衡器不能处于冻结、迁移状态。
+// - 源监听器中若配置quic_config，复制后为null。
+// - 七层转发策略配置为重定向到监听器，该转发策略不会进行复制。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) CloneListener(request *model.CloneListenerRequest) (*model.CloneListenerResponse, error) {
+	requestDef := GenReqDefForCloneListener()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CloneListenerResponse), nil
+	}
+}
+
+// CloneListenerInvoker 复制已有监听器
+func (c *ElbClient) CloneListenerInvoker(request *model.CloneListenerRequest) *CloneListenerInvoker {
+	requestDef := GenReqDefForCloneListener()
+	return &CloneListenerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CloneLoadbalancer 复制已有负载均衡器
@@ -365,11 +561,12 @@ func (c *ElbClient) CreateListenerInvoker(request *model.CreateListenerRequest) 
 // - 若要创建网络型负载均衡器，则需要传入l4_flavor_id（网络型规格ID）；若要创建应用型负载均衡器，则需要传入l7_flavor_id（应用型规格ID）；若要创建网络型+应用型负载均衡器，则需要传入l4_flavor_id和l7_flavor_id。
 // [- 若要创建包周期负载均衡器，则需要传入prepaid_options，否则创建按需计费负载均衡器。](tag:hws)
 // - 按需计费分为固定规格计费和弹性规格计费，根据创建时所选规格的类型决定计费方式。具体规格说明见创建LB请求参数l4_flavor_id和l7_flavor_id。
-// [- 若要创建gateway类型的负载均衡器，则需要：
+// - 若要创建gateway类型的负载均衡器，则需要：
 //    - 指定loadbalancer_type&#x3D;\&quot;gateway\&quot;，且不支持指定vip_address，ipv6_vip_address。
 //    - vip_subnet_cidr_id和ipv6_subnet_cidr_id两者不能都为空，如果两者都传入，则必须属于同一子网。
 //    - 不支持创建公网gateway类型LB。
-//    - 如果要指定规格，则从请求参数gw_flavor_id传入。](tag:hws_eu)
+//    - 不支持传入autoscaling字段，不支持l4_flavor_id和l7_flavor_id。
+//    - 必须要指定网关型规格，通过参数gw_flavor_id传入。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) CreateLoadBalancer(request *model.CreateLoadBalancerRequest) (*model.CreateLoadBalancerResponse, error) {
@@ -688,8 +885,11 @@ func (c *ElbClient) DeleteLoadBalancerCascadeInvoker(request *model.DeleteLoadBa
 //
 // 删除负载均衡器且级联删除其下子资源（删除负载均衡器及其绑定的监听器、后端服务器组、后端服务器等一系列资源）。
 // - 若LB关联了EIP，则只解绑EIP，不会删除EIP。
+// - 若LB已开启了误删保护开关，则级联删除失败。
+// - 若LB下任意一个后端服务器组开启了误删保护开关，则级联删除失败。
+// - 修改保护开关开启不影响级联删除，仍能正常删除。
 // [- 若已开启多挂特性，且关联了多个LB，则只做解绑；否则删除。
-// - 若是共享型LB下的后端服务器组，无论是否多挂都只删除，不解绑。](tag:hc,hk)
+// - 若是共享型LB下的后端服务器组，无论是否多挂都只删除，不解绑。](tag:hws,hws_hk)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) DeleteLoadBalancerForce(request *model.DeleteLoadBalancerForceRequest) (*model.DeleteLoadBalancerForceResponse, error) {
@@ -855,6 +1055,27 @@ func (c *ElbClient) DeleteSecurityPolicyInvoker(request *model.DeleteSecurityPol
 	return &DeleteSecurityPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAllL7Rules 查询转发规则列表
+//
+// 查询当前项目下的转发规则列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) ListAllL7Rules(request *model.ListAllL7RulesRequest) (*model.ListAllL7RulesResponse, error) {
+	requestDef := GenReqDefForListAllL7Rules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAllL7RulesResponse), nil
+	}
+}
+
+// ListAllL7RulesInvoker 查询转发规则列表
+func (c *ElbClient) ListAllL7RulesInvoker(request *model.ListAllL7RulesRequest) *ListAllL7RulesInvoker {
+	requestDef := GenReqDefForListAllL7Rules()
+	return &ListAllL7RulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAllMembers 后端服务器全局列表
 //
 // 查询当前项目下的后端服务器列表。
@@ -926,6 +1147,28 @@ func (c *ElbClient) ListCertificates(request *model.ListCertificatesRequest) (*m
 func (c *ElbClient) ListCertificatesInvoker(request *model.ListCertificatesRequest) *ListCertificatesInvoker {
 	requestDef := GenReqDefForListCertificates()
 	return &ListCertificatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDomainIPs 查询负载均衡器ip的域名配置信息
+//
+// 查询负载均衡器ip的域名配置信息，即负载均衡器的ip是否加入了域名解析。
+// 注意：当负载均衡器的公网域名和私网域名都没有打开时，该接口返回空列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) ListDomainIPs(request *model.ListDomainIPsRequest) (*model.ListDomainIPsResponse, error) {
+	requestDef := GenReqDefForListDomainIPs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDomainIPsResponse), nil
+	}
+}
+
+// ListDomainIPsInvoker 查询负载均衡器ip的域名配置信息
+func (c *ElbClient) ListDomainIPsInvoker(request *model.ListDomainIPsRequest) *ListDomainIPsInvoker {
+	requestDef := GenReqDefForListDomainIPs()
+	return &ListDomainIPsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListFeatureConfigs 查询当前租户ELB服务的特性配置
@@ -1054,6 +1297,27 @@ func (c *ElbClient) ListL7RulesInvoker(request *model.ListL7RulesRequest) *ListL
 	return &ListL7RulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListListenerTags 查询所有监听器的标签列表
+//
+// 查询指定项目下所有监听器的标签列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) ListListenerTags(request *model.ListListenerTagsRequest) (*model.ListListenerTagsResponse, error) {
+	requestDef := GenReqDefForListListenerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListListenerTagsResponse), nil
+	}
+}
+
+// ListListenerTagsInvoker 查询所有监听器的标签列表
+func (c *ElbClient) ListListenerTagsInvoker(request *model.ListListenerTagsRequest) *ListListenerTagsInvoker {
+	requestDef := GenReqDefForListListenerTags()
+	return &ListListenerTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListListeners 查询监听器列表
 //
 // 查询监听器列表。
@@ -1115,6 +1379,27 @@ func (c *ElbClient) ListLoadbalancerFeature(request *model.ListLoadbalancerFeatu
 func (c *ElbClient) ListLoadbalancerFeatureInvoker(request *model.ListLoadbalancerFeatureRequest) *ListLoadbalancerFeatureInvoker {
 	requestDef := GenReqDefForListLoadbalancerFeature()
 	return &ListLoadbalancerFeatureInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLoadbalancerTags 查询所有负载均衡器的标签列表
+//
+// 查询指定项目下所有负载均衡器的标签列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) ListLoadbalancerTags(request *model.ListLoadbalancerTagsRequest) (*model.ListLoadbalancerTagsResponse, error) {
+	requestDef := GenReqDefForListLoadbalancerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLoadbalancerTagsResponse), nil
+	}
+}
+
+// ListLoadbalancerTagsInvoker 查询所有负载均衡器的标签列表
+func (c *ElbClient) ListLoadbalancerTagsInvoker(request *model.ListLoadbalancerTagsRequest) *ListLoadbalancerTagsInvoker {
+	requestDef := GenReqDefForListLoadbalancerTags()
+	return &ListLoadbalancerTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListLogtanks 查询云日志列表
@@ -1476,6 +1761,27 @@ func (c *ElbClient) ShowListenerInvoker(request *model.ShowListenerRequest) *Sho
 	return &ShowListenerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowListenerTags 查询监听器的标签
+//
+// 查询指定监听器的所有标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) ShowListenerTags(request *model.ShowListenerTagsRequest) (*model.ShowListenerTagsResponse, error) {
+	requestDef := GenReqDefForShowListenerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowListenerTagsResponse), nil
+	}
+}
+
+// ShowListenerTagsInvoker 查询监听器的标签
+func (c *ElbClient) ShowListenerTagsInvoker(request *model.ShowListenerTagsRequest) *ShowListenerTagsInvoker {
+	requestDef := GenReqDefForShowListenerTags()
+	return &ShowListenerTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowLoadBalancer 查询负载均衡器详情
 //
 // 查询负载均衡器详情。
@@ -1497,9 +1803,9 @@ func (c *ElbClient) ShowLoadBalancerInvoker(request *model.ShowLoadBalancerReque
 	return &ShowLoadBalancerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowLoadBalancerPorts 查询负载均衡器占用的下联面子网端口列表
+// ShowLoadBalancerPorts 查询负载均衡内部转发用的IP
 //
-// 查询负载均衡器占用的下联面子网端口和IP地址信息。
+// 查询负载均衡内部转发用的IP。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) ShowLoadBalancerPorts(request *model.ShowLoadBalancerPortsRequest) (*model.ShowLoadBalancerPortsResponse, error) {
@@ -1512,7 +1818,7 @@ func (c *ElbClient) ShowLoadBalancerPorts(request *model.ShowLoadBalancerPortsRe
 	}
 }
 
-// ShowLoadBalancerPortsInvoker 查询负载均衡器占用的下联面子网端口列表
+// ShowLoadBalancerPortsInvoker 查询负载均衡内部转发用的IP
 func (c *ElbClient) ShowLoadBalancerPortsInvoker(request *model.ShowLoadBalancerPortsRequest) *ShowLoadBalancerPortsInvoker {
 	requestDef := GenReqDefForShowLoadBalancerPorts()
 	return &ShowLoadBalancerPortsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1540,6 +1846,48 @@ func (c *ElbClient) ShowLoadBalancerStatus(request *model.ShowLoadBalancerStatus
 func (c *ElbClient) ShowLoadBalancerStatusInvoker(request *model.ShowLoadBalancerStatusRequest) *ShowLoadBalancerStatusInvoker {
 	requestDef := GenReqDefForShowLoadBalancerStatus()
 	return &ShowLoadBalancerStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLoadBalancerTopology 查询负载均衡器拓扑
+//
+// 查询负载均衡拓扑，将负载均衡器及其包含的监听器、后端服务器组以拓扑的形式展示。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) ShowLoadBalancerTopology(request *model.ShowLoadBalancerTopologyRequest) (*model.ShowLoadBalancerTopologyResponse, error) {
+	requestDef := GenReqDefForShowLoadBalancerTopology()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLoadBalancerTopologyResponse), nil
+	}
+}
+
+// ShowLoadBalancerTopologyInvoker 查询负载均衡器拓扑
+func (c *ElbClient) ShowLoadBalancerTopologyInvoker(request *model.ShowLoadBalancerTopologyRequest) *ShowLoadBalancerTopologyInvoker {
+	requestDef := GenReqDefForShowLoadBalancerTopology()
+	return &ShowLoadBalancerTopologyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLoadbalancerTags 查询负载均衡器的标签
+//
+// 查询指定负载均衡器的所有标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) ShowLoadbalancerTags(request *model.ShowLoadbalancerTagsRequest) (*model.ShowLoadbalancerTagsResponse, error) {
+	requestDef := GenReqDefForShowLoadbalancerTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLoadbalancerTagsResponse), nil
+	}
+}
+
+// ShowLoadbalancerTagsInvoker 查询负载均衡器的标签
+func (c *ElbClient) ShowLoadbalancerTagsInvoker(request *model.ShowLoadbalancerTagsRequest) *ShowLoadbalancerTagsInvoker {
+	requestDef := GenReqDefForShowLoadbalancerTags()
+	return &ShowLoadbalancerTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowLogtank 查询云日志详情
@@ -1961,6 +2309,48 @@ func (c *ElbClient) UpdateSecurityPolicy(request *model.UpdateSecurityPolicyRequ
 func (c *ElbClient) UpdateSecurityPolicyInvoker(request *model.UpdateSecurityPolicyRequest) *UpdateSecurityPolicyInvoker {
 	requestDef := GenReqDefForUpdateSecurityPolicy()
 	return &UpdateSecurityPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSystemDefaultDomainConfig 配置负载均衡器系统默认域名化
+//
+// 配置负载均衡器系统默认域名化。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) UpdateSystemDefaultDomainConfig(request *model.UpdateSystemDefaultDomainConfigRequest) (*model.UpdateSystemDefaultDomainConfigResponse, error) {
+	requestDef := GenReqDefForUpdateSystemDefaultDomainConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSystemDefaultDomainConfigResponse), nil
+	}
+}
+
+// UpdateSystemDefaultDomainConfigInvoker 配置负载均衡器系统默认域名化
+func (c *ElbClient) UpdateSystemDefaultDomainConfigInvoker(request *model.UpdateSystemDefaultDomainConfigRequest) *UpdateSystemDefaultDomainConfigInvoker {
+	requestDef := GenReqDefForUpdateSystemDefaultDomainConfig()
+	return &UpdateSystemDefaultDomainConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateUserDefinedDomainConfig 配置负载均衡器用户自定义域名化
+//
+// 配置负载均衡器用户自定义域名化。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ElbClient) UpdateUserDefinedDomainConfig(request *model.UpdateUserDefinedDomainConfigRequest) (*model.UpdateUserDefinedDomainConfigResponse, error) {
+	requestDef := GenReqDefForUpdateUserDefinedDomainConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateUserDefinedDomainConfigResponse), nil
+	}
+}
+
+// UpdateUserDefinedDomainConfigInvoker 配置负载均衡器用户自定义域名化
+func (c *ElbClient) UpdateUserDefinedDomainConfigInvoker(request *model.UpdateUserDefinedDomainConfigRequest) *UpdateUserDefinedDomainConfigInvoker {
+	requestDef := GenReqDefForUpdateUserDefinedDomainConfig()
+	return &UpdateUserDefinedDomainConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpgradeLoadbalancer 升级负载均衡器类型

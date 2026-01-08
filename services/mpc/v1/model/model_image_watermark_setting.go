@@ -26,6 +26,12 @@ type ImageWatermarkSetting struct {
 	// 水印持续时间，与“timeline_start”配合使用。  取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值：ToEND。
 	TimelineDuration *string `json:"timeline_duration,omitempty"`
 
+	// 轮转间隔时间最小值，单位：秒
+	RandomTimeMin *string `json:"random_time_min,omitempty"`
+
+	// 轮转间隔时间最大值，单位：秒
+	RandomTimeMax *string `json:"random_time_max,omitempty"`
+
 	// 对应拼接列表中第几个片段打水印，从0开始，\"0表示第1个，“1”表示第二个，不带或填\"ALL\"表示所有拼接片源打水印。
 	OverlayInput *string `json:"overlay_input,omitempty"`
 

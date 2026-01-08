@@ -971,6 +971,27 @@ func (c *SFSTurboClient) ShowPermRuleInvoker(request *model.ShowPermRuleRequest)
 	return &ShowPermRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowQuota 查询租户配额
+//
+// 查询租户配额
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SFSTurboClient) ShowQuota(request *model.ShowQuotaRequest) (*model.ShowQuotaResponse, error) {
+	requestDef := GenReqDefForShowQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowQuotaResponse), nil
+	}
+}
+
+// ShowQuotaInvoker 查询租户配额
+func (c *SFSTurboClient) ShowQuotaInvoker(request *model.ShowQuotaRequest) *ShowQuotaInvoker {
+	requestDef := GenReqDefForShowQuota()
+	return &ShowQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowShare 查询文件系统详细信息
 //
 // 查询SFS Turbo文件系统详细信息。

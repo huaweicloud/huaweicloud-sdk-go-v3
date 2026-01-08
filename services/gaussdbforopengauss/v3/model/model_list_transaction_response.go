@@ -13,8 +13,8 @@ type ListTransactionResponse struct {
 	Total *int32 `json:"total,omitempty"`
 
 	// **参数解释**: 事务信息列表。
-	RowsInfo       *[]ListTransactionResponseBodyRowsInfo `json:"rows_info,omitempty"`
-	HttpStatusCode int                                    `json:"-"`
+	Rows           *[]ListTransactionResponseBodyRows `json:"rows,omitempty"`
+	HttpStatusCode int                                `json:"-"`
 }
 
 func (o ListTransactionResponse) String() string {

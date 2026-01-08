@@ -12,13 +12,13 @@ type CreateRuleOption struct {
 	// **参数解释**：转发规则的管理状态。  **约束限制**：只支持设置为true。  **取值范围**：不涉及  **默认取值**：不涉及
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 
-	// **参数解释**：转发匹配方式。  **约束限制**： - type为HOST_NAME时仅支持EQUAL_TO，支持通配符*。 - type为PATH时可以为REGEX，STARTS_WITH，EQUAL_TO。 - type为METHOD、SOURCE_IP时，仅支持EQUAL_TO。 - type为HEADER、QUERY_STRING，仅支持EQUAL_TO，支持通配符*、？。  **取值范围**： - EQUAL_TO 表示精确匹配。 - REGEX 表示正则匹配。 - STARTS_WITH 表示前缀匹配。  **默认取值**：不涉及
+	// **参数解释**：转发匹配方式。  **约束限制**： - type为HOST_NAME时仅支持EQUAL_TO，支持通配符*。 - type为PATH时可以为REGEX，STARTS_WITH，EQUAL_TO。 - type为METHOD、SOURCE_IP，仅支持EQUAL_TO。 - type为HEADER、QUERY_STRING，仅支持EQUAL_TO，支持通配符*、？。  **取值范围**： - EQUAL_TO 表示精确匹配。 - REGEX 表示正则匹配。 - STARTS_WITH 表示前缀匹配。  **默认取值**：不涉及
 	CompareType string `json:"compare_type"`
 
 	// **参数解释**：匹配项的名称，比如转发规则匹配类型是请求头匹配，则key表示请求头参数的名称。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  不支持该字段，请勿使用。
 	Key *string `json:"key,omitempty"`
 
-	// **参数解释**：匹配项的值。比如转发规则匹配类型是域名匹配，则value表示域名的值。  **约束限制**：仅当conditions空时该字段生效。  **取值范围**： - 当转发规则类别type为HOST_NAME时，字符串只能包含英文字母、数字、-、.或*，必须以字母、数字或*开头。若域名中包含\\*，则\\*只能出现在开头且必须以\\*.开始。当\\*开头时表示通配0~任一个字符。 - 当转发规则类别type为PATH时，当转发规则的compare_type为STARTS_WITH、EQUAL_TO时，字符串只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以/开头。 - 当转发规则类别type为METHOD、SOURCE_IP、HEADER,QUERY_STRING时，该字段无意义，使用conditions来指定key/value。  **默认取值**：不涉及
+	// **参数解释**：匹配项的值。比如转发规则匹配类型是域名匹配，则value表示域名的值。  **约束限制**：仅当conditions空时该字段生效。  **取值范围**： - 当转发规则类别type为HOST_NAME时，字符串只能包含英文字母、数字、-、.或*，必须以字母、数字或*开头。若域名中包含\\*，则\\*只能出现在开头且必须以\\*.开始。当\\*开头时表示通配0~任一个字符。 - 当转发规则类别type为PATH时，当转发规则的compare_type为STARTS_WITH、EQUAL_TO时，字符串只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以/开头。 - 当转发规则类别type为METHOD、SOURCE_IP、HEADER、QUERY_STRING时，该字段无意义，使用conditions来指定key/value。  **默认取值**：不涉及
 	Value string `json:"value"`
 
 	// **参数解释**：转发规则所在的项目ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及

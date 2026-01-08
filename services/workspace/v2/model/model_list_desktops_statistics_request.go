@@ -17,6 +17,9 @@ type ListDesktopsStatisticsRequest struct {
 
 	// 统计类型，为空时仅统计桌面总数 |- - attach-state 按照分配状态统计 - login-state 按照登录状态统计 - run-state 按照运行状态统计。
 	StatisticsType *[]ListDesktopsStatisticsRequestStatisticsType `json:"statistics_type,omitempty"`
+
+	// 待查询的桌面池ID列表
+	DesktopPoolIds *[]string `json:"desktop_pool_ids,omitempty"`
 }
 
 func (o ListDesktopsStatisticsRequest) String() string {

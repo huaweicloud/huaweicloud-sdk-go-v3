@@ -21,7 +21,7 @@ type ListDesktopNamePolicyRequest struct {
 	// 用于分页查询，查询的起始记录序号，从0开始。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 用于分页查询，取值范围0-50，默认值50。
+	// 用于分页查询，取值范围0-100，默认值100。
 	Limit *int32 `json:"limit,omitempty"`
 }
 

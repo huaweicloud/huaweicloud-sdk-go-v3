@@ -42,7 +42,7 @@ type ListLoadBalancersRequest struct {
 	// **参数解释**：是否独享型LB。  **约束限制**：不涉及  **取值范围**： - false：共享型 - true：独享型  **默认取值**：不涉及
 	Guaranteed *bool `json:"guaranteed,omitempty"`
 
-	// **参数解释**：负载均衡器所在的VPC ID。 支持多值查询，查询条件格式： *vpc_id=xxx&vpc_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+	// **参数解释**：负载均衡器所在的VPC ID。 支持多值查询，查询条件格式：*vpc_id=xxx&vpc_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
 	VpcId *[]string `json:"vpc_id,omitempty"`
 
 	// **参数解释**：负载均衡器的IPv4对应的port ID。 支持多值查询，查询条件格式： *vip_port_id=xxx&vip_port_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及

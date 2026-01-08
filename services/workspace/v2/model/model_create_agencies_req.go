@@ -14,6 +14,9 @@ type CreateAgenciesReq struct {
 
 	// 委托场景。   - WORKSPACE：云桌面。   - CLOUD_GAME：云游戏。   - CLOUD_STORAGE：云存储。   - SCREEN_RECORD：录屏审计。
 	Scene *CreateAgenciesReqScene `json:"scene,omitempty"`
+
+	// 操作类型。 - CREATE 创建 - FIX 修复
+	Action *CreateAgenciesReqAction `json:"action,omitempty"`
 }
 
 func (o CreateAgenciesReq) String() string {
@@ -62,6 +65,53 @@ func (c CreateAgenciesReqScene) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateAgenciesReqScene) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateAgenciesReqAction struct {
+	value string
+}
+
+type CreateAgenciesReqActionEnum struct {
+	CREATE CreateAgenciesReqAction
+	FIX    CreateAgenciesReqAction
+}
+
+func GetCreateAgenciesReqActionEnum() CreateAgenciesReqActionEnum {
+	return CreateAgenciesReqActionEnum{
+		CREATE: CreateAgenciesReqAction{
+			value: "CREATE",
+		},
+		FIX: CreateAgenciesReqAction{
+			value: "FIX",
+		},
+	}
+}
+
+func (c CreateAgenciesReqAction) Value() string {
+	return c.value
+}
+
+func (c CreateAgenciesReqAction) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateAgenciesReqAction) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

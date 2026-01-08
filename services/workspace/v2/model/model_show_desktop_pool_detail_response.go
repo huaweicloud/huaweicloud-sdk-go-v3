@@ -36,8 +36,11 @@ type ShowDesktopPoolDetailResponse struct {
 	// 可用区。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
-	// 子网ID。
+	// 子网ID（已废弃，多个仅取第一个）。
 	SubnetId *string `json:"subnet_id,omitempty"`
+
+	// 桌面池子网ID列表。
+	SubnetIds *[]string `json:"subnet_ids,omitempty"`
 
 	Product *ProductInfo `json:"product,omitempty"`
 
@@ -86,7 +89,16 @@ type ShowDesktopPoolDetailResponse struct {
 
 	// 策略id，用于指定生成桌面名称策略。
 	DesktopNamePolicyId *string `json:"desktop_name_policy_id,omitempty"`
-	HttpStatusCode      int     `json:"-"`
+
+	// 标签列表
+	Tags *[]Tag `json:"tags,omitempty"`
+
+	// OU名称
+	OuName *string `json:"ou_name,omitempty"`
+
+	// VPC ID。
+	VpcId          *string `json:"vpc_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowDesktopPoolDetailResponse) String() string {

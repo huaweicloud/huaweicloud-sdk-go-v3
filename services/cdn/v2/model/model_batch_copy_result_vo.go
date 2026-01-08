@@ -15,7 +15,7 @@ type BatchCopyResultVo struct {
 	// 失败原因,成功时没有该字段
 	Reason *string `json:"reason,omitempty"`
 
-	// 批量操作结果。
+	// 批量操作结果。取值意义： - success：成功 - fail：失败
 	Status BatchCopyResultVoStatus `json:"status"`
 
 	// 域名。

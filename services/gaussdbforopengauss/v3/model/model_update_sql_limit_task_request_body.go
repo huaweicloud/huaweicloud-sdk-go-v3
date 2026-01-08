@@ -18,7 +18,7 @@ type UpdateSqlLimitTaskRequestBody struct {
 	KeyWords *string `json:"key_words,omitempty"`
 
 	// **参数解释**: 并发数。 **约束限制**: 不涉及。 **取值范围**: 大于等于零的整数。 **默认取值**: 不涉及。
-	ParallelSize int32 `json:"parallel_size"`
+	ParallelSize *int32 `json:"parallel_size,omitempty"`
 
 	// **参数解释**: 限流任务名。 **约束限制**: 不涉及。 **取值范围**: 只能为英文字母大小写，下划线，数字和$符。 **默认取值**: 不涉及。
 	TaskName string `json:"task_name"`

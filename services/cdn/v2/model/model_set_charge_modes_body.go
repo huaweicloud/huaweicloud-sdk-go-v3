@@ -12,7 +12,7 @@ type SetChargeModesBody struct {
 	// 计费模式，支持flux（流量），v2及以上客户支持bw（带宽）
 	ChargeMode string `json:"charge_mode"`
 
-	// 产品模式，仅支持base（基础加速）
+	// 产品模式。取值意义： - base：基础加速
 	ProductType string `json:"product_type"`
 
 	// 服务区域，仅支持mainland_china（国内）

@@ -9,7 +9,7 @@ import (
 // CreateInsertHeadersConfig **参数解释**：要添加的请求头参数列表。      **约束限制**：不涉及
 type CreateInsertHeadersConfig struct {
 
-	// **参数解释**：要添加请求头参数列表。  **约束限制**：不涉及
+	// **参数解释**：要添加请求头、响应头参数列表。  **约束限制**：不涉及
 	Configs []CreateInsertHeaderConfig `json:"configs"`
 }
 

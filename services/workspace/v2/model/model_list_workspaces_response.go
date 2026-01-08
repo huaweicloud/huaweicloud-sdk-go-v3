@@ -15,7 +15,7 @@ type ListWorkspacesResponse struct {
 	// 唯一标识ID。
 	Id *string `json:"id,omitempty"`
 
-	// 开通服务是否是全局服务
+	// 开通服务是否是全局服务。
 	IsGlobal *bool `json:"is_global,omitempty"`
 
 	AdDomains *AdInfo `json:"ad_domains,omitempty"`

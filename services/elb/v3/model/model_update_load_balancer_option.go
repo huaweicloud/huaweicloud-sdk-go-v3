@@ -30,21 +30,21 @@ type UpdateLoadBalancerOption struct {
 	// **参数解释**：负载均衡器的IPv4私网IP。  **约束限制**：该地址必须包含在所在子网的IPv4网段内，且未被占用。  **取值范围**：满足IPv4的地址格式，[0-255].[0-255].[0-255].[0-255]. 如192.168.1.1。  **默认取值**：不涉及  注：仅当guaranteed是true的场合，才支持更新。
 	VipAddress *string `json:"vip_address,omitempty"`
 
-	// **参数解释**：网络型规格ID。 可以通过GET https://{ELB_Endpoint}/v3/{project_id}/elb/flavors?type=L4 响应参数中的id得到。  **约束限制**： - 仅当guaranteed是true的场合，才支持更新。 - 可以支持规格改大改小，注意改小过程中可能会造成部分长连接中断，影响部分连接的新建。 - autoscaling.enable=true时，修改无意义，不生效。 - 当传入的规格类型为L4，表示该实例为固定规格实例，按规格计费。 - 当传入的规格类型为L4_elastic_max，表示该实例为弹性实例，按LCU计费。  **取值范围**：不涉及  **默认取值**：不涉及  [网关型LB不支持指定l4_flavor_id。](tag:hws_eu) [只支持设置为l4_flavor.elb.shared。](tag:hcso_dt) [当前场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
+	// **参数解释**：网络型规格ID。 可以通过GET https://{ELB_Endpoint}/v3/{project_id}/elb/flavors?type=L4 响应参数中的id得到。  **约束限制**： - 仅当guaranteed是true的场合，才支持更新。 - 可以支持规格改大改小，注意改小过程中可能会造成部分长连接中断，影响部分连接的新建。 - autoscaling.enable=true时，修改无意义，不生效。 - 当传入的规格类型为L4，表示该实例为固定规格实例，按规格计费。 - 当传入的规格类型为L4_elastic_max，表示该实例为弹性实例，按LCU计费。 - 网关型LB不支持指定l4_flavor_id。 [- 只支持设置为l4_flavor.elb.shared。](tag:hcso_dt)  **取值范围**：不涉及  **默认取值**：不涉及  [当前场景下所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
 	L4FlavorId *string `json:"l4_flavor_id,omitempty"`
 
-	// **参数解释**：应用型ID。 可以通过GET https://{ELB_Endpoint}/v3/{project_id}/elb/flavors?type=L7 响应参数中的id得到。  **约束限制**： - 仅当guaranteed是true的场合，才支持更新。 - 可以支持规格改大改小，注意改小过程中可能会造成部分长连接中断，影响部分连接的新建， - autoscaling.enable=true时，修改无意义，不生效。 - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费。 - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费。  **取值范围**：不涉及  **默认取值**：不涉及  [网关型LB不支持指定l7_flavor_id。](tag:hws_eu) [只支持设置为l7_flavor.elb.shared。](tag:hcso_dt) [所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
+	// **参数解释**：应用型ID。 可以通过GET https://{ELB_Endpoint}/v3/{project_id}/elb/flavors?type=L7 响应参数中的id得到。  **约束限制**： - 仅当guaranteed是true的场合，才支持更新。 - 可以支持规格改大改小，注意改小过程中可能会造成部分长连接中断，影响部分连接的新建， - autoscaling.enable=true时，修改无意义，不生效。 - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费。 - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费。 - 网关型LB不支持指定l7_flavor_id。 [- 只支持设置为l7_flavor.elb.shared。](tag:hcso_dt)  **取值范围**：不涉及  **默认取值**：不涉及  [所有LB实例共享带宽，该字段无效，请勿使用。](tag:hk_vdf,srg,fcs)
 	L7FlavorId *string `json:"l7_flavor_id,omitempty"`
 
 	Ipv6Bandwidth *BandwidthRef `json:"ipv6_bandwidth,omitempty"`
 
-	// **参数解释**：是否启用IP类型后端转发。 [开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、云下数据中心的服务器。](tag:srg,fcs)  **约束限制**： - 开启后不能关闭。 - 使用共享VPC的实例使用此特性时，需确保共享资源所有者已开通VPC对等连接，否则通信异常。 [- 仅独享型负载均衡器支持该特性。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt) [- 网关型LB不支持该特性。](tag:hws_eu)  **取值范围**： - true：开启。 - false：不开启。  **默认取值**：不涉及  [荷兰region不支持该字段，请勿使用。](tag:dt)
+	// **参数解释**：是否启用IP类型后端转发。 [开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,dt,hcso_dt,hws_eu) [开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、云下数据中心的服务器。](tag:srg,fcs)  **约束限制**： - 开启IP类型后端，ELB需要占用后端子网中的IP地址与后端服务器进行通信，请确保预留足够的IP地址。 - 使用共享VPC的实例使用此特性时，需确保共享资源所有者已开通VPC对等连接，否则通信异常。 [- 仅独享型负载均衡器支持该特性。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt) - 网关型LB不支持该特性。  **取值范围**： - true：开启。 - false：不开启。 **默认取值**：不涉及  [荷兰region不支持该字段，请勿使用。](tag:dt)
 	IpTargetEnable *bool `json:"ip_target_enable,omitempty"`
 
 	// **参数解释**：下联面子网的网络ID列表。 可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_network_id得到。  **约束限制**： - 已绑定的下联面子网也在传参elb_virsubnet_ids列表中，则绑定关系保留。 - 已绑定的下联面子网若不在传参elb_virsubnet_ids列表中，则将移除LB与该下联面子网的关联关系。但不允许移除已被ELB使用的子网，否则将报错，不做任何修改。 - 在传参elb_virsubnet_ids列表中但不在已绑定的下联面子网列表中，则将新增LB与下联面的绑定关系。 - 所有elb_virsubnet_ids中的ID同属于该LB所在的VPC。 - 不支持边缘云子网。  **取值范围**：不涉及  **默认取值**：不涉及
 	ElbVirsubnetIds *[]string `json:"elb_virsubnet_ids,omitempty"`
 
-	// **参数解释**：是否开启删除保护。  **约束限制**：退场时需要先关闭所有资源的删除保护开关。  **取值范围**：false 不开启，true 开启。  **默认取值**：不涉及  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42) [荷兰region不支持该字段，请勿使用。](tag:dt)
+	// **参数解释**：是否开启删除保护。  **约束限制**：退场时需要先关闭所有资源的删除保护开关。  **取值范围**：false不开启，true开启。  **默认取值**：不涉及  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42) [荷兰region不支持该字段，请勿使用。](tag:dt)
 	DeletionProtectionEnable *bool `json:"deletion_protection_enable,omitempty"`
 
 	PrepaidOptions *PrepaidUpdateOption `json:"prepaid_options,omitempty"`
@@ -63,7 +63,7 @@ type UpdateLoadBalancerOption struct {
 	// **参数解释**：设置保护的原因。作为protection_status的转态设置的原因。  **约束限制**：仅当protection_status为consoleProtection时有效。  **取值范围**：除'<'和'>'外通用Unicode字符集字符，最大255个字符。  **默认取值**：不涉及
 	ProtectionReason *string `json:"protection_reason,omitempty"`
 
-	// **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  [不支持IPv6，请勿使用。](tag:dt)
+	// **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及 [不支持IPv6，请勿使用。](tag:dt)
 	Ipv6VipAddress *string `json:"ipv6_vip_address,omitempty"`
 }
 

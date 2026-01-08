@@ -15,6 +15,9 @@ type ChangeUserPrivilegeGroupUserInfo struct {
 	// 桌面分配对象的名称，当type类型USER时填写用户名字；当type类型GROUP时填写用户组名称。
 	UserName string `json:"user_name"`
 
+	// 用户所属域。
+	Domain *string `json:"domain,omitempty"`
+
 	// 桌面用户所属的用户组。 - sudo：Linux管理员组。 - default：Linux默认用户组。 - administrators：Windows管理员组。管理员拥有对该桌面的完全访问权，可以做任何需要的更改（禁用操作除外）。 - users：Windows标准用户组。标准用户可以使用大多数软件，并可以更改不影响其他用户的系统设置。
 	UserPrivilegeGroup *string `json:"user_privilege_group,omitempty"`
 

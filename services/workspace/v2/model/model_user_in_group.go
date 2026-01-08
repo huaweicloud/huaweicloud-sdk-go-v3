@@ -15,6 +15,9 @@ type UserInGroup struct {
 	// 桌面用户名。
 	UserName *string `json:"user_name,omitempty"`
 
+	// 用户所属域名。
+	Domain *string `json:"domain,omitempty"`
+
 	// 用户邮箱。
 	UserEmail *string `json:"user_email,omitempty"`
 

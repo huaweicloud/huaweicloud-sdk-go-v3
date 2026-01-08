@@ -43,7 +43,7 @@ func TestGlobalCredentials_ProcessAuthParams(t *testing.T) {
 		ExpectedError                                  string
 	}{
 		{"Bad Request", "region-id-1", "{\"error_code\":\"XXX.001\",\"error_msg\":\"Bad Request\"}", "ak", "sk", "", 400,
-			"failed to get domain id automatically, {\"status_code\":400,\"request_id\":\"\",\"error_code\":\"XXX.001\",\"error_message\":\"Bad Request, X-IAM-Trace-Id=trace-id\",\"encoded_authorization_message\":\"\"}"},
+			"failed to get domain id automatically, {\"status_code\":400,\"request_id\":\"\",\"error_code\":\"XXX.001\",\"error_message\":\"Bad Request, X-IAM-Trace-Id=trace-id\",\"encoded_authorization_message\":\"\",\"details\":null}"},
 		{"One Domain", "region-id-1", "{\"domains\":[{\"id\":\"domain_id\"}]}", "ak", "sk", "domain_id", 200, ""},
 		{"No Domain", "region-id-2", "{\"domains\":[]}", "ak2", "sk2", "", 200,
 			"failed to get domain id automatically," +

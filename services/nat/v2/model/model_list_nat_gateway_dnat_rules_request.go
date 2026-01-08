@@ -11,7 +11,7 @@ import (
 // ListNatGatewayDnatRulesRequest Request Object
 type ListNatGatewayDnatRulesRequest struct {
 
-	// 解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
+	// 解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 
 	// Floatingip对外提供服务的端口号。 取值范围：0~65535。
@@ -23,7 +23,7 @@ type ListNatGatewayDnatRulesRequest struct {
 	// 全域弹性公网的IP地址。
 	GlobalEipAddress *string `json:"global_eip_address,omitempty"`
 
-	// DNAT规则的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 EIP_FREEZED: EIP冻结 INACTIVE: 不可用
+	// DNAT规则的状态。 取值为:  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
 	Status *[]ListNatGatewayDnatRulesRequestStatus `json:"status,omitempty"`
 
 	// 弹性公网IP的id。

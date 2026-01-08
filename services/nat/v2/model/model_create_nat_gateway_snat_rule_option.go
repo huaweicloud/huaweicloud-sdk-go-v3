@@ -21,7 +21,7 @@ type CreateNatGatewaySnatRuleOption struct {
 	// SNAT规则的描述，长度范围小于等于255个字符，不能包含“<”和“>”。
 	Description *string `json:"description,omitempty"`
 
-	// 0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+	// 资源类型。 取值范围： - 0：VPC侧，可以指定network_id 或者cidr - 1：专线侧，只能指定cidr 不输入默认为0（VPC）
 	SourceType *int32 `json:"source_type,omitempty"`
 
 	// 功能说明：弹性公网IP的id，多个弹性公网IP使用逗号分隔。 取值范围：最大长度4096字节。 约束：弹性公网IP的id个数不能超过20个。

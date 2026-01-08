@@ -6,7 +6,6 @@ import (
 	"strings"
 )
 
-// UpdateRecycleBinEnableRequestBody **参数解释**：更新回收站启用开关的请求体。
 type UpdateRecycleBinEnableRequestBody struct {
 	RecycleBin *RecycleBinRequestBody `json:"recycle_bin,omitempty"`
 }

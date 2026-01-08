@@ -13,7 +13,7 @@ type ListFullSqlSwitchesResponse struct {
 	TotalCount *int64 `json:"total_count,omitempty"`
 
 	// **参数解释**: 开关记录列表。
-	FullSqlSwitchs *[]FullSqlSwitchResult `json:"full_sql_switchs,omitempty"`
+	FullSqlSwitches *[]FullSqlSwitchResult `json:"full_sql_switches,omitempty"`
 
 	// **参数解释**: 可选择的SQL采集类别清单列表。供开启全量SQL时做配置下发参考。
 	AllowedSqlTypes *[]SqlTypeRangeConfigResult `json:"allowed_sql_types,omitempty"`

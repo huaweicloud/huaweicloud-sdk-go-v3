@@ -66,7 +66,7 @@ type MemberInfo struct {
 	// **参数解释**：更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  **取值范围**：不涉及  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt,hk_tm)
 	UpdatedAt *string `json:"updated_at,omitempty"`
 
-	// **参数解释**：后端服务器的类型。  **取值范围**：不涉及 - ip：跨VPC的member。 - instance：关联到ECS的member。
+	// **参数解释**：后端服务器的类型。  **取值范围**：不涉及 - ip：IP类型的member。 - instance：关联到ECS的member。
 	MemberType *string `json:"member_type,omitempty"`
 
 	// **参数解释**：member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）。  **取值范围**：不涉及

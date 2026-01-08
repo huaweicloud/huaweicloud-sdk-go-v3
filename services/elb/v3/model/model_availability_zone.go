@@ -24,7 +24,7 @@ type AvailabilityZone struct {
 	// **参数解释**：可用区子类型编码。该字段主要用于区分在边缘场景下，边缘AZ的类型。  **取值范围**：0表示center，21表示homezone，41表示IES。
 	Category int32 `json:"category"`
 
-	// **参数解释**：可用区的产品编码，用于控制台购买ELB前查询定价，仅边缘场景有效。  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+	// **参数解释**：可用区的产品编码，用于控制台购买ELB前查询定价，仅边缘场景有效。  **取值范围**：不涉及 [不支持该字段，请勿使用。](tag:dt,hcso_dt)
 	SpecCode *string `json:"spec_code,omitempty"`
 }
 

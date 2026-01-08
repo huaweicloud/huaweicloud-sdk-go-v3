@@ -51,7 +51,7 @@ type StartJobSubmission struct {
 	LastUpdateDate *int64 `json:"last-update-date,omitempty"`
 
 	// 最后更新作业状态的用户
-	LastUdpateUser *string `json:"last-udpate-user,omitempty"`
+	LastUpdateUser *string `json:"last-update-user,omitempty"`
 
 	// 作业执行完成后是否删除
 	IsDeleteJob *bool `json:"isDeleteJob,omitempty"`

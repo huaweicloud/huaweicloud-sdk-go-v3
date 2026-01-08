@@ -36,7 +36,7 @@ type ListPrivateDnatsRequest struct {
 	// 计算实例、ELBV2、ELBV3、VIP等资源的端口ID。
 	NetworkInterfaceId *[]string `json:"network_interface_id,omitempty"`
 
-	// DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELBv2的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
+	// DNAT规则后端的类型。 取值： - COMPUTE：后端为计算实例。 - VIP：后端为VIP的实例。 - ELB：后端为ELBv2的实例。 - ELBv3：后端为ELBv3的实例。 - CUSTOMIZE：后端为自定义IP。
 	Type *[]string `json:"type,omitempty"`
 
 	// 后端资源（计算实例、ELBV2、ELBV3、VIP等）的私网IP地址。
@@ -50,9 +50,6 @@ type ListPrivateDnatsRequest struct {
 
 	// 中转IP的端口号。
 	TransitServicePort *[]string `json:"transit_service_port,omitempty"`
-
-	// 中转IP的地址。
-	TransitIpAddress *[]string `json:"transit_ip_address,omitempty"`
 }
 
 func (o ListPrivateDnatsRequest) String() string {

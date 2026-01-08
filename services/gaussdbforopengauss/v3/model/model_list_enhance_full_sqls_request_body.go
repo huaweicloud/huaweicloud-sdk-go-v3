@@ -12,6 +12,9 @@ import (
 // ListEnhanceFullSqlsRequestBody 查询全量SQL列表请求体
 type ListEnhanceFullSqlsRequestBody struct {
 
+	// **参数解释**: 节点ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+	NodeId *string `json:"node_id,omitempty"`
+
 	// **参数解释**: 最大查询记录数。例如该参数设定为10，则查询结果最多只显示10条记录。 **约束限制**: 对于公有云25.5.0.1及以上版本，此参数弃用，请勿传值。通过系统系统参数控制最大返回记录数量，默认为200。 **取值范围**: [1, 1000] **默认取值**: 默认为10。
 	Limit *int32 `json:"limit,omitempty"`
 

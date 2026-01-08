@@ -35,6 +35,9 @@ type ListLoginRecordsNewRequest struct {
 
 	// 查询端到端时延的最大值。
 	MaxNetworkRtt *int32 `json:"max_network_rtt,omitempty"`
+
+	// 企业项目ID。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o ListLoginRecordsNewRequest) String() string {

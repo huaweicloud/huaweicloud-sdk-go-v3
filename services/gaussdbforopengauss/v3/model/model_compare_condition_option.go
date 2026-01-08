@@ -10,7 +10,7 @@ import (
 type CompareConditionOption struct {
 
 	// **参数解释**: 查询字段名称，当前仅支持特定的数值字段。 **约束限制**: 不涉及。 **取值范围**: - total_sql_time: 总SQL耗时。 - sql_time：SQL执行次数。  **默认取值**: 不涉及。
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// **参数解释**: 是否使能包含等于，如果为true，则表示包含边界条件（min或max）的取值。 **约束限制**: 不涉及。 **取值范围**: - true - false  **默认取值**: 不涉及。
 	EnableEqual *bool `json:"enable_equal,omitempty"`

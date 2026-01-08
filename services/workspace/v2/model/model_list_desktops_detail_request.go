@@ -30,6 +30,9 @@ type ListDesktopsDetailRequest struct {
 	// 桌面名。
 	ComputerName *string `json:"computer_name,omitempty"`
 
+	// 桌面名列表
+	ComputerNames *[]string `json:"computer_names,omitempty"`
+
 	// 桌面IP地址。
 	DesktopIp *string `json:"desktop_ip,omitempty"`
 

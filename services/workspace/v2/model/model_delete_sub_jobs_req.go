@@ -8,7 +8,7 @@ import (
 
 type DeleteSubJobsReq struct {
 
-	// 任务ID列表，只能删除SUCCESS、FAILED两种状态。job_ids和delete_by_status必传一个。
+	// 子任务ID列表，非任务ID，只能删除SUCCESS、FAILED两种状态。job_ids和delete_by_status必传一个。
 	JobIds *[]string `json:"job_ids,omitempty"`
 
 	// 通过任务状态删除，只能删除以下的两种状态 SUCCESS：成功。 FAILED：失败。job_ids和delete_by_status必传一个。

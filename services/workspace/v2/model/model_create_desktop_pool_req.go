@@ -24,13 +24,13 @@ type CreateDesktopPoolReq struct {
 	// 桌面池描述。
 	Description *string `json:"description,omitempty"`
 
-	// 可用分区。将桌面创建到指定的可用分区。如果不指定则使用系统随机的可用分区。
+	// 可用分区。将桌面创建到指定的可用分区。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
 	// 套餐ID。
 	ProductId string `json:"product_id"`
 
-	// 产品规格ID。可用区是边缘可用区时，必填此参数。
+	// 产品规格ID。
 	FlavorId *string `json:"flavor_id,omitempty"`
 
 	// 镜像类型。默认值为private。  - private：私有镜像。 - gold：公共镜像。

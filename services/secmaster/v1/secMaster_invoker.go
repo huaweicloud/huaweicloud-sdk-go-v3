@@ -629,22 +629,6 @@ func (i *CreateDataspaceInvoker) Invoke() (*model.CreateDataspaceResponse, error
 	}
 }
 
-type CreateGenericActionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateGenericActionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateGenericActionInvoker) Invoke() (*model.CreateGenericActionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateGenericActionResponse), nil
-	}
-}
-
 type CreateIncidentInvoker struct {
 	*invoker.BaseInvoker
 }

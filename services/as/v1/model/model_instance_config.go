@@ -54,6 +54,8 @@ type InstanceConfig struct {
 
 	// 云服务器的计费模式，可以选择竞价计费或按需计费，取值如下：按需计费：不指定该字段。竞价计费：spot
 	MarketType *InstanceConfigMarketType `json:"market_type,omitempty"`
+
+	CpuOptions *CpuOptions `json:"cpu_options,omitempty"`
 }
 
 func (o InstanceConfig) String() string {

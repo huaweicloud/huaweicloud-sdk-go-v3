@@ -140,7 +140,7 @@ type LoadBalancer struct {
 	// **参数解释**：标识实例归属哪个内部服务。  **取值范围**：不涉及  不支持该字段，请勿使用。
 	InstanceType *string `json:"instance_type,omitempty"`
 
-	// **参数解释**：标识实例绑定内部服务的实例ID。  **取值范围**：不涉及  不支持该字段，请勿使用。
+	// **参数解释**：标识实例绑定内部服务的实例id。  **取值范围**：不涉及  不支持该字段，请勿使用。
 	InstanceId *string `json:"instance_id,omitempty"`
 
 	// **参数解释**：pp扩展。  不支持该字段，请勿使用。

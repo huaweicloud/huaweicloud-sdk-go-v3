@@ -24,6 +24,9 @@ type ListUserUsageMetricRequest struct {
 	// 使用时长最大值 usage_min_hours和usage_max_hours同时存在时,usage_max_hours必须大于等于usage_min_hours
 	UsageMaxHours *int32 `json:"usage_max_hours,omitempty"`
 
+	// 企业项目ID。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
 	// 按照指标进行排序 * `user_usage` -  按照用户使用时长排序
 	SortField *string `json:"sort_field,omitempty"`
 

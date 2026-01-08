@@ -15,11 +15,20 @@ type ListDesktopSnapshotRequest struct {
 	// 桌面id。
 	DesktopId *string `json:"desktop_id,omitempty"`
 
+	// 桌面id列表
+	DesktopIds *[]string `json:"desktop_ids,omitempty"`
+
 	// 桌面名称。
 	DesktopName *string `json:"desktop_name,omitempty"`
 
+	// 桌面名称列表
+	DesktopNames *[]string `json:"desktop_names,omitempty"`
+
 	// 快照名称。
 	SnapshotName *string `json:"snapshot_name,omitempty"`
+
+	// 快照名称列表
+	SnapshotNames *[]string `json:"snapshot_names,omitempty"`
 
 	// 快照类型。 - SYSTEM_DISK 系统盘。 - DATA_DISKS 数据盘。 - ALL 系统盘和数据盘。
 	DiskType *ListDesktopSnapshotRequestDiskType `json:"disk_type,omitempty"`

@@ -26,6 +26,12 @@ type WatermarkTemplate struct {
 	// 水印持续时间，与“timeline_start”配合使用。  取值范围：[数字，ToEND]。“ToEND”表示持续到视频结束。  默认值：ToEND。
 	TimelineDuration *string `json:"timeline_duration,omitempty"`
 
+	// 轮转间隔时间最小值，单位：秒
+	RandomTimeMin *string `json:"random_time_min,omitempty"`
+
+	// 轮转间隔时间最大值，单位：秒
+	RandomTimeMax *string `json:"random_time_max,omitempty"`
+
 	// 图片水印处理方式，type设置为Image时有效。  取值如下：  - Original：只做简单缩放，不做其他处理。 - Grayed：彩色图片变灰。 - Transparent：透明化。
 	ImageProcess *string `json:"image_process,omitempty"`
 

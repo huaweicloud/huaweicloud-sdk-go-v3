@@ -25,6 +25,15 @@ type VideoInfo struct {
 
 	// 视频编码格式
 	Codec *string `json:"codec,omitempty"`
+
+	// 视频流时长，单位：秒
+	Duration *string `json:"duration,omitempty"`
+
+	// 视频流时长，单位：毫秒
+	DurationMs *string `json:"duration_ms,omitempty"`
+
+	// 视频拍摄时的选择角度，单位：度。
+	Rotate *float32 `json:"rotate,omitempty"`
 }
 
 func (o VideoInfo) String() string {

@@ -38,7 +38,7 @@ type TransitSubnet struct {
 	// 中转子网类型。取值范围：VPC
 	Type TransitSubnetType `json:"type"`
 
-	// 中转子网状态。 取值范围： ACTIVE： 当前资源状态正常。 INACTIVE： 不可用。
+	// 中转子网状态。 取值范围： - ACTIVE： 当前资源状态正常。 - INACTIVE： 不可用。
 	Status TransitSubnetStatus `json:"status"`
 
 	// 当前中转子网下已分配的中转子网IP数量。

@@ -12,8 +12,14 @@ type ListTerminalsBindingDesktopsRequest struct {
 	// 桌面名。
 	ComputerName *string `json:"computer_name,omitempty"`
 
+	// 桌面名列表。
+	ComputerNames *[]string `json:"computer_names,omitempty"`
+
 	// mac地址。
 	Mac *string `json:"mac,omitempty"`
+
+	// mac地址列表。
+	MacList *[]string `json:"mac_list,omitempty"`
 
 	// 起始数。
 	Offset int32 `json:"offset"`

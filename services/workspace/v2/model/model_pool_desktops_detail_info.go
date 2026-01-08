@@ -39,13 +39,10 @@ type PoolDesktopsDetailInfo struct {
 	// 用户组列表。
 	UserGroupList *[]string `json:"user_group_list,omitempty"`
 
-	// 桌面类型。  - DEDICATED：专属桌面。
+	// 桌面类型。  - DEDICATED：专属桌面。 - SHARED: 多用户桌面 - POOLED: 池桌面
 	DesktopType *string `json:"desktop_type,omitempty"`
 
-	// resource_type字段，分别表示：专属桌面（DEDICATED_DESKTOP）、池桌面（POOLED_DESKTOP）、渲染桌面（RENDER_DESKTOP）、专享主机（EXCLUSIVE_HOST）、多用户桌面(SHARED_DESKTOP)。
-	ResourceType *string `json:"resource_type,omitempty"`
-
-	// 桌面元数据。  - charging_mode 周期套餐标识，1表示包周期，0表示按需。 - image_name 创建桌面的镜像名称。 - bill_resource_id 镜像计费资源ID。 - metering.image_id 镜像ID。 - metering.resourcespeccode 桌面资源编码。 - metering.resourcetype 桌面资源类型。 - os_bit 操作系统位数：32或64。 - os_type 操作系统类型：Linux、Windows或Others。 - desktop_os_version 操作系统版本。
+	// 桌面元数据。   - image_name 创建桌面的镜像名称。 - bill_resource_id 镜像计费资源ID。 - metering.image_id 镜像ID。 - metering.resourcespeccode 桌面资源编码。 - metering.resourcetype 桌面资源类型。 - os_bit 操作系统位数：32或64。 - os_type 操作系统类型：Linux、Windows或Others。 - desktop_os_version 操作系统版本。
 	Metadata map[string]string `json:"metadata,omitempty"`
 
 	Flavor *FlavorInfo `json:"flavor,omitempty"`
@@ -62,7 +59,7 @@ type PoolDesktopsDetailInfo struct {
 	// 桌面创建时间。
 	Created *string `json:"created,omitempty"`
 
-	// 桌面安全组。
+	// 桌面安全组。 仅适用于查询单个桌面详情接口。
 	SecurityGroups *[]SecurityGroupInfo `json:"security_groups,omitempty"`
 
 	// 桌面的登录状态。  - UNREGISTER：表示桌面未注册时的状态（桌面启动后，会自动注册）。关机后也会出现未注册的状态。 - REGISTERED：表示桌面注册以后，等待用户连接的状态。 - CONNECTED：表示用户已经成功登录，正在使用桌面。 - DISCONNECTED：表示桌面与客户端断开会话后显示的状态，可能为关闭客户端窗口，或客户端与桌面网络断开引起。
@@ -120,7 +117,7 @@ type PoolDesktopsDetailInfo struct {
 	// 上网方式。 - NAT：表示NAT上网方式。 - EIP：表示EIP上网方式。 - BOTH：表示两种上网方式都支持。
 	InternetMode *PoolDesktopsDetailInfoInternetMode `json:"internet_mode,omitempty"`
 
-	// 桌面使用的上网方式列表。
+	// 桌面使用的上网方式列表。 - NAT：表示NAT上网方式。 - EIP：表示EIP上网方式。
 	InternetModeList *[]string `json:"internet_mode_list,omitempty"`
 
 	// 桌面是否正在绑定EIP。

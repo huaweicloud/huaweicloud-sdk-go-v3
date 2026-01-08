@@ -841,27 +841,6 @@ func (c *SecMasterClient) CreateDataspaceInvoker(request *model.CreateDataspaceR
 	return &CreateDataspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateGenericAction agent-action接口
-//
-// 根据type字段执行不同的agent-action，例如回答质量人工反馈。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *SecMasterClient) CreateGenericAction(request *model.CreateGenericActionRequest) (*model.CreateGenericActionResponse, error) {
-	requestDef := GenReqDefForCreateGenericAction()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateGenericActionResponse), nil
-	}
-}
-
-// CreateGenericActionInvoker agent-action接口
-func (c *SecMasterClient) CreateGenericActionInvoker(request *model.CreateGenericActionRequest) *CreateGenericActionInvoker {
-	requestDef := GenReqDefForCreateGenericAction()
-	return &CreateGenericActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateIncident 创建事件
 //
 // 创建事件

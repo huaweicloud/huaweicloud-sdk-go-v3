@@ -12,6 +12,12 @@ type AgenciesInfo struct {
 	// 名称。
 	Name *string `json:"name,omitempty"`
 
+	// 委托ID。
+	Id *string `json:"id,omitempty"`
+
+	// 委托场景。
+	Scene *string `json:"scene,omitempty"`
+
 	// 委托权限信息。
 	Permissions *[]AgenciesPermissionInfo `json:"permissions,omitempty"`
 }

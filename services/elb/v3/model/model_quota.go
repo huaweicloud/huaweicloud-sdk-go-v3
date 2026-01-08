@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// Quota 负载均衡相关各类资源的配额信息。仅返回资源的总配额，不包括剩余可用配额。
 type Quota struct {
 
 	// **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
@@ -50,14 +51,14 @@ type Quota struct {
 	// **参数解释**：单个监听器下关联的所有IP地址组的ip列表中的IP总数不能超过ipgroup_max_length。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
 	IpgroupMaxLength int32 `json:"ipgroup_max_length"`
 
+	// **参数解释**：单个监听器下的IP地址组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
+	IpgroupsPerListener int32 `json:"ipgroups_per_listener"`
+
 	// **参数解释**：自定义安全策略配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  [不支持该字段，请勿使用。](tag:hcso_dt)
 	SecurityPolicy int32 `json:"security_policy"`
 
 	// **参数解释**：单个LB实例下的监听器配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。  > 当前单个LB下监听器配额实际未限制，但建议不要超过默认配额。
 	ListenersPerLoadbalancer int32 `json:"listeners_per_loadbalancer"`
-
-	// **参数解释**：单个监听器下的IP地址组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
-	IpgroupsPerListener int32 `json:"ipgroups_per_listener"`
 
 	// **参数解释**：单个转发策略下的后端服务器组配额。  **取值范围**： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
 	PoolsPerL7policy int32 `json:"pools_per_l7policy"`

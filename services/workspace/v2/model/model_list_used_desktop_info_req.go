@@ -27,6 +27,9 @@ type ListUsedDesktopInfoReq struct {
 	// 若传桌面的用户名，则查询使用时间只有该用户的使用时间。
 	DesktopUsername *string `json:"desktop_username,omitempty"`
 
+	// 桌面的用户所属域。默认为主域。
+	DesktopUserDomain *string `json:"desktop_user_domain,omitempty"`
+
 	// 从查询结果中的第几条数据开始返回,用于分页查询，取值范围0-2147483647，默认从0开始。
 	Offset *int32 `json:"offset,omitempty"`
 

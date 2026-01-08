@@ -119,6 +119,11 @@ type FlinkJobConfig struct {
 
 	// 参数解释: 实际使用的CU数 示例: 0 约束限制:  无 取值范围: 大于等于0的整数 默认取值: 0
 	RealCuNumber *int32 `json:"real_cu_number,omitempty"`
+
+	ResourceConfig *ResourceConfig `json:"resource_config,omitempty"`
+
+	// 资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
+	ResourceConfigVersion *string `json:"resource_config_version,omitempty"`
 }
 
 func (o FlinkJobConfig) String() string {

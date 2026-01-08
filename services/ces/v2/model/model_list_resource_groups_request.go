@@ -30,7 +30,7 @@ type ListResourceGroupsRequest struct {
 	// **参数解释** 资源分组添加资源方式，不传代表查询所有资源分组类型。 **约束限制** 不涉及。 **取值范围** - EPS: 表示匹配企业项目 - TAG: 表示匹配标签 - Manual: 表示手动添加 - COMB: 表示组合匹配 - NAME: 表示匹配实例名称 **默认取值** 不涉及。
 	Type *ListResourceGroupsRequestType `json:"type,omitempty"`
 
-	// **参数解释** 资源分组健康状态。 **约束限制** 不涉及。 **取值范围** - health: 表示健康 - unhealthy: 表示不健康 - no_alarm_rule: 表示未配置告警规则 **默认取值** 不涉及。
+	// **参数解释** 资源分组健康状态。 **约束限制** 不涉及。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则 **默认取值** 不涉及。
 	Status *ListResourceGroupsRequestStatus `json:"status,omitempty"`
 }
 

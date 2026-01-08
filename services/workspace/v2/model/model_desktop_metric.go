@@ -17,6 +17,9 @@ type DesktopMetric struct {
 	// 桌面名称。
 	ResourceName *string `json:"resource_name,omitempty"`
 
+	// 企业项目ID。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
 	// 统计信息 * `desktop_usage` -  桌面使用时长(单位:秒) * `desktop_idle_duration` -  桌面空闲时长(单位:秒)
 	Metric *[]Metric `json:"metric,omitempty"`
 }

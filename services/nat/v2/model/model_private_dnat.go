@@ -23,16 +23,13 @@ type PrivateDnat struct {
 	// 中转IP的ID。
 	TransitIpId *string `json:"transit_ip_id,omitempty"`
 
-	// 中转IP的地址。
-	TransitIpAddress *string `json:"transit_ip_address,omitempty"`
-
 	// 私网NAT网关实例的ID。
 	GatewayId *string `json:"gateway_id,omitempty"`
 
 	// 网络接口ID，支持计算、ELBV2、ELBV3、VIP等实例的端口。
 	NetworkInterfaceId *string `json:"network_interface_id,omitempty"`
 
-	// DNAT规则后端的类型。 取值：     COMPUTE：后端为计算实例。     VIP：后端为VIP的实例。     ELB：后端为ELBv2的实例。     ELBv3：后端为ELBv3的实例。     CUSTOMIZE：后端为自定义IP。
+	// DNAT规则后端的类型。 取值： - COMPUTE：后端为计算实例。 - VIP：后端为VIP的实例。 - ELB：后端为ELBv2的实例。 - ELBv3：后端为ELBv3的实例。 - CUSTOMIZE：后端为自定义IP。
 	Type *string `json:"type,omitempty"`
 
 	// 协议类型。 目前支持TCP/tcp、UDP/udp、ANY/any。 对应协议号6、17、0。
@@ -56,7 +53,7 @@ type PrivateDnat struct {
 	// DNAT规则的更新时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。
 	UpdatedAt *sdktime.SdkTime `json:"updated_at,omitempty"`
 
-	// 私网NAT的DNAT规则状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+	// 私网NAT的DNAT规则状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
 	Status *PrivateDnatStatus `json:"status,omitempty"`
 }
 

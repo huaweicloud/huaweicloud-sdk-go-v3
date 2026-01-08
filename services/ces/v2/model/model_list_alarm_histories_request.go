@@ -15,19 +15,19 @@ type ListAlarmHistoriesRequest struct {
 	// **参数解释**： 告警ID列表。告警ID：以al开头，后跟22位由字母或数字组成的字符串。 **约束限制**： 列表最大长度为50。
 	AlarmId *[]string `json:"alarm_id,omitempty"`
 
-	// **参数解释**： 告警记录ID。 **约束限制**： 不涉及。 **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。 **默认取值**： 不涉及。
+	// **参数解释**： 告警流水号。优化告警流水号生成规则，由之前的 ah1655717086704DEnBrJ999 更改为 ah251222T092004SAD2yARym **约束限制**： 不涉及。 **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。 **默认取值**： 不涉及。
 	RecordId *string `json:"record_id,omitempty"`
 
 	// **参数解释**： 告警规则名称。 **约束限制**： 不涉及。 **取值范围**： 最大128字符长度。 **默认取值**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// **参数解释**： 告警规则状态列表。告警规则状态：枚举值，ok为正常，alarm为告警，invalid为已失效。 **约束限制**： 列表长度最大为3。
+	// **参数解释**： 告警规则状态列表。 **取值范围**： 告警规则状态：枚举值。 - ok：已解决 - alarm：告警中 - invalid：已失效 - insufficient_data: 数据不足 - ok_manual: 已解决（手动） **约束限制**： 包含的告警规则状态对象数量为[0,3]
 	Status *[]ListAlarmHistoriesRequestStatus `json:"status,omitempty"`
 
 	// **参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - 1：紧急 - 2：重要 - 3：次要 - 4：提示 **默认取值**： 不涉及。
 	Level *int32 `json:"level,omitempty"`
 
-	// **参数解释**： 查询服务的命名空间，各服务命名空间请参考“[服务命名空间](ces_03_0059.xml)”。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值**： 不涉及。
+	// **参数解释**： 查询服务的命名空间，各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/en-us/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值**： 不涉及。
 	Namespace *string `json:"namespace,omitempty"`
 
 	// **参数解释**： 告警资源ID。 **约束限制**： 不涉及。 **取值范围**： 多维度情况按字母升序排列并使用逗号分隔。长度为[0,2048]个字符。 **默认取值**： 不涉及。
@@ -56,6 +56,9 @@ type ListAlarmHistoriesRequest struct {
 
 	// **参数解释**： 按关键字排序。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - first_alarm_time: 告警产生时间 - update_time: 更新时间 - alarm_level: 告警级别 - record_id: 表记录主键 **默认取值**： update_time
 	OrderBy *ListAlarmHistoriesRequestOrderBy `json:"order_by,omitempty"`
+
+	// **参数解释**： 告警规则屏蔽状态 **约束限制**： 不涉及。 **取值范围**： - UN_MASKED 活跃告警 - MASKED 屏蔽告警 **默认取值**： 不涉及
+	MaskStatus *string `json:"mask_status,omitempty"`
 }
 
 func (o ListAlarmHistoriesRequest) String() string {
@@ -72,9 +75,11 @@ type ListAlarmHistoriesRequestStatus struct {
 }
 
 type ListAlarmHistoriesRequestStatusEnum struct {
-	OK      ListAlarmHistoriesRequestStatus
-	ALARM   ListAlarmHistoriesRequestStatus
-	INVALID ListAlarmHistoriesRequestStatus
+	OK                ListAlarmHistoriesRequestStatus
+	ALARM             ListAlarmHistoriesRequestStatus
+	INVALID           ListAlarmHistoriesRequestStatus
+	INSUFFICIENT_DATA ListAlarmHistoriesRequestStatus
+	OK_MANUAL         ListAlarmHistoriesRequestStatus
 }
 
 func GetListAlarmHistoriesRequestStatusEnum() ListAlarmHistoriesRequestStatusEnum {
@@ -87,6 +92,12 @@ func GetListAlarmHistoriesRequestStatusEnum() ListAlarmHistoriesRequestStatusEnu
 		},
 		INVALID: ListAlarmHistoriesRequestStatus{
 			value: "invalid",
+		},
+		INSUFFICIENT_DATA: ListAlarmHistoriesRequestStatus{
+			value: "insufficient_data",
+		},
+		OK_MANUAL: ListAlarmHistoriesRequestStatus{
+			value: "ok_manual",
 		},
 	}
 }

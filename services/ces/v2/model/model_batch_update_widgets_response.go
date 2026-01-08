@@ -9,7 +9,7 @@ import (
 // BatchUpdateWidgetsResponse Response Object
 type BatchUpdateWidgetsResponse struct {
 
-	// 更新结果列表
+	// **参数解释** 更新结果列表
 	Widgets        *[]BatchUpdateWidgetInfo `json:"widgets,omitempty"`
 	HttpStatusCode int                      `json:"-"`
 }

@@ -10,7 +10,7 @@ import (
 type ShowEpsRemainingQuotaResponse struct {
 
 	// **参数解释**: 剩余企业项目配额组。
-	EpsQuotaRemaining *[]EpsRemainingQuotaResult `json:"eps_quota_remaining,omitempty"`
+	EpsRemainingQuotas *[]EpsRemainingQuotaResult `json:"eps_remaining_quotas,omitempty"`
 
 	// **参数解释**: 任务ID。 **取值范围**: 不涉及。
 	JobId *string `json:"job_id,omitempty"`

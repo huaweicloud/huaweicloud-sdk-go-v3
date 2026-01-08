@@ -4479,7 +4479,7 @@ func (c *GaussDBforopenGaussClient) CollectAspInvoker(request *model.CollectAspR
 	return &CollectAspInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAspInfos 查询asp采集结果
+// ListAspInfos 查询ASP采集结果
 //
 // 查询ASP采集结果。
 //
@@ -4494,7 +4494,7 @@ func (c *GaussDBforopenGaussClient) ListAspInfos(request *model.ListAspInfosRequ
 	}
 }
 
-// ListAspInfosInvoker 查询asp采集结果
+// ListAspInfosInvoker 查询ASP采集结果
 func (c *GaussDBforopenGaussClient) ListAspInfosInvoker(request *model.ListAspInfosRequest) *ListAspInfosInvoker {
 	requestDef := GenReqDefForListAspInfos()
 	return &ListAspInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

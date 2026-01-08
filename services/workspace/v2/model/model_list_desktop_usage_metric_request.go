@@ -30,6 +30,9 @@ type ListDesktopUsageMetricRequest struct {
 	// 使用时长(hour)最大值(必须大于等于usage_min_hours)。
 	UsageMaxHours *int32 `json:"usage_max_hours,omitempty"`
 
+	// 企业项目ID。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
 	// 按照指标进行排序 * `desktop_usage` -  按照桌面使用时长排序 * `desktop_idle_duration` -  按照桌面空闲周期排序
 	SortField *string `json:"sort_field,omitempty"`
 

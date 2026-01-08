@@ -43,7 +43,7 @@ func TestBasicCredentials_ProcessAuthParams(t *testing.T) {
 		ExpectedError                           string
 	}{
 		{"Bad Request", "region-id-1", "{\"error_code\":\"XXX.001\",\"error_msg\":\"Bad Request\"}", "", 400,
-			"failed to get project id of region 'region-id-1' automatically, {\"status_code\":400,\"request_id\":\"\",\"error_code\":\"XXX.001\",\"error_message\":\"Bad Request, X-IAM-Trace-Id=trace-id\",\"encoded_authorization_message\":\"\"}"},
+			"failed to get project id of region 'region-id-1' automatically, {\"status_code\":400,\"request_id\":\"\",\"error_code\":\"XXX.001\",\"error_message\":\"Bad Request, X-IAM-Trace-Id=trace-id\",\"encoded_authorization_message\":\"\",\"details\":null}"},
 		{"One Project", "region-id-1", "{\"projects\":[{\"id\":\"project_id\"}]}", "project_id", 200, ""},
 		{"No Project", "region-id-2", "{\"projects\":[]}", "", 200,
 			"failed to get project id of region 'region-id-2' automatically," +

@@ -32,6 +32,9 @@ type RebuildDesktopsReq struct {
 
 	// 企业项目ID，默认\"0。\"
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 处理类型 - ONLY_FOR_EXPAND：仅对新扩容桌面生效 - FOR_EXPAND_AND_IDLE：对新扩容桌面与空闲桌面生效 - FOR_EXPAND_AND_ALL：对新扩容桌面与已有全部桌面生效
+	HandleType *string `json:"handle_type,omitempty"`
 }
 
 func (o RebuildDesktopsReq) String() string {

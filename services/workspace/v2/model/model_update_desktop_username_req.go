@@ -12,8 +12,14 @@ type UpdateDesktopUsernameReq struct {
 	// 桌面关联原用户名，只传用户名，不带域信息。
 	OldUsername string `json:"old_username"`
 
+	// 桌面关联原用户名的域。
+	OldUserDomain *string `json:"old_user_domain,omitempty"`
+
 	// 桌面关联新用户名，只传用户名，不带域信息。
 	NewUsername string `json:"new_username"`
+
+	// 桌面关联新用户名的域。
+	NewUserDomain *string `json:"new_user_domain,omitempty"`
 
 	// 桌面关联新用户名后是否重启虚拟机，默认不重启。
 	IsReboot *bool `json:"is_reboot,omitempty"`

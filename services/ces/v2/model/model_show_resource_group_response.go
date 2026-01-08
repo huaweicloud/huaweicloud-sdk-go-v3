@@ -46,10 +46,10 @@ type ShowResourceGroupResponse struct {
 	// 匹配企业项目或匹配标签参数
 	EnterpriseProjectIdAndTags *[]EnterpriseProjectIdAndTags `json:"enterprise_project_id_and_tags,omitempty"`
 
-	// **参数解释** 指标告警状态。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
+	// **参数解释** 指标告警状态。 **取值范围** 枚举值。 - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
 	Status *ShowResourceGroupResponseStatus `json:"status,omitempty"`
 
-	// **参数解释** 事件告警状态。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
+	// **参数解释** 事件告警状态。 **取值范围** 枚举值。 - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
 	EventStatus *ShowResourceGroupResponseEventStatus `json:"event_status,omitempty"`
 
 	ResourceStatistics *GetResourceGroupRespResourceStatistics `json:"resource_statistics,omitempty"`

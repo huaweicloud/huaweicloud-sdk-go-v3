@@ -29,13 +29,13 @@ type ListNatGatewaysRequest struct {
 	// 公网NAT网关实例的名字，长度限制为64。 公网NAT网关实例的名字仅支持数字、字母、_（下划线）、-（中划线）、中文
 	Name *string `json:"name,omitempty"`
 
-	// 公网NAT网关实例的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 INACTIVE: 不可用
+	// 公网NAT网关实例的状态。 取值为:  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - INACTIVE: 不可用
 	Status *[]ListNatGatewaysRequestStatus `json:"status,omitempty"`
 
-	// 公网NAT网关实例的规格。 取值为： \"1\"：小型，SNAT最大连接数10000 \"2\"：中型，SNAT最大连接数50000 \"3\"：大型，SNAT最大连接数200000 \"4\"：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
+	// 公网NAT网关实例的规格。 取值为： - 1：小型，SNAT最大连接数10000 - 2：中型，SNAT最大连接数50000 - 3：大型，SNAT最大连接数200000 - 4：超大型，SNAT最大连接数1000000 - 5：企业型，SNAT最大连接数10000000
 	Spec *[]ListNatGatewaysRequestSpec `json:"spec,omitempty"`
 
-	// 解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
+	// 解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 
 	// 公网NAT网关下行口（DVR的下一跳）所属的network id。

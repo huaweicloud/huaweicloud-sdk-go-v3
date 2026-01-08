@@ -20,7 +20,7 @@ type PoliciesRecordAudit struct {
 	// OBS桶来源。取值为： AUTO_CREATE：自动创建。 CREATED：已创建的。
 	ObsBucketSource *string `json:"obs_bucket_source,omitempty"`
 
-	// obs 桶名
+	// obs 桶名。
 	ObsBucketName *string `json:"obs_bucket_name,omitempty"`
 
 	// 录屏文件保留时长（天）。取值为1~180天，0 表示永久保留。

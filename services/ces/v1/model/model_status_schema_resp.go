@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// StatusSchemaResp **参数解释** 资源分组健康状态 **取值范围** - health: 表示健康 - unhealth: 表示不健康 - no_alarm_rule: 表示未配置告警规则
+// StatusSchemaResp **参数解释** 资源分组健康状态 **取值范围** - health: 表示无告警 - unhealth: 表示告警中 - no_alarm_rule: 表示未设置告警规则
 type StatusSchemaResp struct {
 	value string
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// BatchInstallAgentReq 批量为桌面安装agent。
+// BatchInstallAgentReq 批量为桌面安装监控插件。
 type BatchInstallAgentReq struct {
 
 	// 操作的桌面ID列表。

@@ -35,7 +35,7 @@ type CreateDomainResponseBodyContent struct {
 
 	DomainOriginHost *DomainOriginHost `json:"domain_origin_host,omitempty"`
 
-	// 是否开启HTTPS加速。
+	// 是否开启HTTPS加速。取值意义： - 0：未开启 - 1：开启
 	HttpsStatus *int32 `json:"https_status,omitempty"`
 
 	// 域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
@@ -50,13 +50,13 @@ type CreateDomainResponseBodyContent struct {
 	// 锁定状态（0代表未锁定；1代表锁定）。
 	Locked *int32 `json:"locked,omitempty"`
 
-	// range状态，off：关闭，on：开启。
+	// range状态。取值意义： - on：开启 - off：关闭
 	RangeStatus *string `json:"range_status,omitempty"`
 
-	// follow302状态，off：关闭，on：开启。
+	// follow302状态。取值意义： - on：开启 - off：关闭
 	FollowStatus *string `json:"follow_status,omitempty"`
 
-	// 是否暂停源站回源（off代表关闭 on代表开启）。
+	// 是否暂停源站回。取值意义： - on：开启 - off：关闭
 	OriginStatus *string `json:"origin_status,omitempty"`
 
 	// 自动刷新预热（0代表关闭；1代表打开）。

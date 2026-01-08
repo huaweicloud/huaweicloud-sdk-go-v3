@@ -501,6 +501,22 @@ func (i *DeleteTestReportCustomDetailByUriInvoker) Invoke() (*model.DeleteTestRe
 	}
 }
 
+type DownloadStepImageNewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadStepImageNewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadStepImageNewInvoker) Invoke() (*model.DownloadStepImageNewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadStepImageNewResponse), nil
+	}
+}
+
 type ListAlarmStatisticsUsingInvoker struct {
 	*invoker.BaseInvoker
 }

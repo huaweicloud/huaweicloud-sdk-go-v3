@@ -8,6 +8,12 @@ import (
 
 type SlowSqlInfoResult struct {
 
+	// **参数解释**: 数据库名称。 **取值范围**: 不涉及。
+	DbName *string `json:"db_name,omitempty"`
+
+	// **参数解释**: SCHEMA名称。 **取值范围**: 不涉及。
+	SchemaName *string `json:"schema_name,omitempty"`
+
 	// **参数解释**: 变量替换后的完整SQL。当sql_text不返回变量值时，sql返回空字符串。 **取值范围**: 不涉及。
 	Sql *string `json:"sql,omitempty"`
 

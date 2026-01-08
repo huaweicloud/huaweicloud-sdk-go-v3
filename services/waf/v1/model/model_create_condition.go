@@ -23,6 +23,9 @@ type CreateCondition struct {
 
 	// 字段类型为ip且子字段为客户端ip时，不需要传index参数；子字段类型为X-Forwarded-For时，值为x-forwarded-for；字段类型为params、header、cookie并且子字段为自定义时，index的值为自定义子字段
 	Index *string `json:"index,omitempty"`
+
+	// 引用表id。当logic_operation参数以any或者all结尾时，需要传该参数。此外，引用表类型要与category类型保持一致。
+	ValueListId *string `json:"value_list_id,omitempty"`
 }
 
 func (o CreateCondition) String() string {

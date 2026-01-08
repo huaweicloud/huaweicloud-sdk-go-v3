@@ -59,6 +59,9 @@ type SimpleDesktopInfo struct {
 	// 桌面类型。
 	DesktopType *string `json:"desktop_type,omitempty"`
 
+	// 桌面详细类型
+	DesktopDetailType *string `json:"desktop_detail_type,omitempty"`
+
 	// 桌面的子网ID。
 	SubnetId *string `json:"subnet_id,omitempty"`
 
@@ -70,6 +73,12 @@ type SimpleDesktopInfo struct {
 
 	// 桌面的任务状态。
 	TaskStatus *string `json:"task_status,omitempty"`
+
+	// 所属的可用区。
+	AvailabilityZone *string `json:"availability_zone,omitempty"`
+
+	// 桌面的连接状态
+	ConnectStatus *string `json:"connect_status,omitempty"`
 }
 
 func (o SimpleDesktopInfo) String() string {

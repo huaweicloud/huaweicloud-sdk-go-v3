@@ -50,6 +50,27 @@ type CreateScheduledTasksReq struct {
 
 	// 时区。
 	TimeZone *string `json:"time_zone,omitempty"`
+
+	// 任务类型，可选值为： - START：开机。 - STOP：关机。 - REBOOT：重启。 - HIBERNATE：休眠。 - REBUILD：重建系统盘。 - EXECUTE_SCRIPT：执行脚本。 - CREATE_SNAPSHOT：创建快照。
+	TaskType CreateScheduledTasksReqTaskType `json:"task_type"`
+
+	// 任务名称。
+	TaskName string `json:"task_name"`
+
+	// 是否强制执行，true表示强制执行，false表示不强制执行。
+	ForceExecute *bool `json:"force_execute,omitempty"`
+
+	// 描述。
+	Description *string `json:"description,omitempty"`
+
+	// 扩展参数，json格式。
+	ExtraParams *string `json:"extra_params,omitempty"`
+
+	// 定时任务应用的对象列表。
+	ApplyObjects *[]ApplyObject `json:"apply_objects,omitempty"`
+
+	// 触发式任务触发后，等待时长。
+	WaitTime *int32 `json:"wait_time,omitempty"`
 }
 
 func (o CreateScheduledTasksReq) String() string {
@@ -102,6 +123,73 @@ func (c CreateScheduledTasksReqScheduledType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateScheduledTasksReqScheduledType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateScheduledTasksReqTaskType struct {
+	value string
+}
+
+type CreateScheduledTasksReqTaskTypeEnum struct {
+	START           CreateScheduledTasksReqTaskType
+	STOP            CreateScheduledTasksReqTaskType
+	REBOOT          CreateScheduledTasksReqTaskType
+	HIBERNATE       CreateScheduledTasksReqTaskType
+	REBUILD         CreateScheduledTasksReqTaskType
+	EXECUTE_SCRIPT  CreateScheduledTasksReqTaskType
+	CREATE_SNAPSHOT CreateScheduledTasksReqTaskType
+}
+
+func GetCreateScheduledTasksReqTaskTypeEnum() CreateScheduledTasksReqTaskTypeEnum {
+	return CreateScheduledTasksReqTaskTypeEnum{
+		START: CreateScheduledTasksReqTaskType{
+			value: "START",
+		},
+		STOP: CreateScheduledTasksReqTaskType{
+			value: "STOP",
+		},
+		REBOOT: CreateScheduledTasksReqTaskType{
+			value: "REBOOT",
+		},
+		HIBERNATE: CreateScheduledTasksReqTaskType{
+			value: "HIBERNATE",
+		},
+		REBUILD: CreateScheduledTasksReqTaskType{
+			value: "REBUILD",
+		},
+		EXECUTE_SCRIPT: CreateScheduledTasksReqTaskType{
+			value: "EXECUTE_SCRIPT",
+		},
+		CREATE_SNAPSHOT: CreateScheduledTasksReqTaskType{
+			value: "CREATE_SNAPSHOT",
+		},
+	}
+}
+
+func (c CreateScheduledTasksReqTaskType) Value() string {
+	return c.value
+}
+
+func (c CreateScheduledTasksReqTaskType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateScheduledTasksReqTaskType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

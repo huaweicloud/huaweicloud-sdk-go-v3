@@ -12,7 +12,7 @@ import (
 // ShowWidgetResponse Response Object
 type ShowWidgetResponse struct {
 
-	// **参数解释** 视图id **取值范围** 字符串必须以wg开头，包含22个字母和数字，长度为24个字符。
+	// **参数解释** 视图id **取值范围** 字符串必须以wg开头，后跟22个字母和数字，总长度为24个字符
 	WidgetId *string `json:"widget_id,omitempty"`
 
 	// **参数解释** 视图分组id **取值范围** 字符串必须以dg开头，包含22个字母和数字，长度为24个字符或者为default，default代表不分组

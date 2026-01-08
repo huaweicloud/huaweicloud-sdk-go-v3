@@ -21,10 +21,13 @@ type AuthorizedObjects struct {
 	// 用户/用户组名称。
 	ObjectName string `json:"object_name"`
 
+	// 用户/用户组所属域名。
+	Domain *string `json:"domain,omitempty"`
+
 	// 桌面用户所属的用户权限组。  - sudo：Linux管理员组。 - default：Linux默认用户组。 - administrators：Windows管理员组。管理员拥有对该桌面的完全访问权，可以做任何需要的更改（禁用操作除外）。 - users：Windows标准用户组。标准用户可以使用大多数软件，并可以更改不影响其他用户的系统设置。
 	UserGroup string `json:"user_group"`
 
-	// 创建时间。格式为：UTC格式，例如“2022-05-11T11:45:42.000Z”。
+	// 创建时间。
 	CreatedAt *string `json:"created_at,omitempty"`
 }
 

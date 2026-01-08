@@ -12,6 +12,9 @@ type ListUsersRequest struct {
 	// 桌面用户名，长度范围为1-20，不能包含特殊字符，不能以数字开头。
 	UserName *string `json:"user_name,omitempty"`
 
+	// 桌面用户名列表。
+	UserNames *[]string `json:"user_names,omitempty"`
+
 	// 用于分页查询，返回用户数量限制。如果不指定，则返回所有符合条件的用户。
 	Limit *string `json:"limit,omitempty"`
 
@@ -36,8 +39,11 @@ type ListUsersRequest struct {
 	// 是否查询用户绑定的桌面数,true/false,默认true。
 	IsQueryTotalDesktops *bool `json:"is_query_total_desktops,omitempty"`
 
-	// 企业项目ID
+	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 域。
+	Domain *string `json:"domain,omitempty"`
 }
 
 func (o ListUsersRequest) String() string {

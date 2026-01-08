@@ -10,8 +10,8 @@ import (
 type ShowRedistributionParametersResponse struct {
 
 	// **参数解释**: 参数列表信息。
-	RedistributionParameters *[]RedistributionParameterResult `json:"redistribution_parameters,omitempty"`
-	HttpStatusCode           int                              `json:"-"`
+	ExpansionParameters *[]RedistributionParameterResult `json:"expansion_parameters,omitempty"`
+	HttpStatusCode      int                              `json:"-"`
 }
 
 func (o ShowRedistributionParametersResponse) String() string {

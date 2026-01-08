@@ -9,7 +9,7 @@ import (
 type BatchDeleteInstanceTagRequestBody struct {
 
 	// **参数解释**: 需要删除的标签列表。
-	Keys *[]string `json:"keys,omitempty"`
+	Keys []string `json:"keys"`
 }
 
 func (o BatchDeleteInstanceTagRequestBody) String() string {

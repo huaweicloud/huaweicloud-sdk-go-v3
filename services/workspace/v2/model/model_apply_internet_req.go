@@ -17,7 +17,7 @@ type ApplyInternetReq struct {
 	// 带宽大小。
 	BandwidthSize int32 `json:"bandwidth_size"`
 
-	// EIP的类型，5_bgp（全动态BGP），5_sbgp（静态BGP），默认值：5_bgp。
+	// EIP的类型。
 	EipType *string `json:"eip_type,omitempty"`
 
 	// vpc的id。

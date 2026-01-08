@@ -9,7 +9,7 @@ import (
 // ListDesktopsRequest Request Object
 type ListDesktopsRequest struct {
 
-	// 桌面所属用户。
+	// 桌面所属用户，支持根据用户名模糊查询。
 	UserName *[]string `json:"user_name,omitempty"`
 
 	// 桌面名。

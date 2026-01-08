@@ -11,7 +11,7 @@ import (
 
 type PrepaidOptions struct {
 
-	// 订购周期类型，当前支持包月和包年: month: 包月 year: 包年
+	// 订购周期类型，当前支持包月和包年: - month: 包月 - year: 包年
 	PeriodType PrepaidOptionsPeriodType `json:"period_type"`
 
 	// 订购周期数，取值会随运营策略变化。 period_type为month时，为[1,9]， period_type为year时，为[1,3]

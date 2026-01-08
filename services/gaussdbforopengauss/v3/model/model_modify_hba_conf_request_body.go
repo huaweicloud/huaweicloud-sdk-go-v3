@@ -7,12 +7,9 @@ import (
 )
 
 type ModifyHbaConfRequestBody struct {
+	BeforeConf *BeforeHbaConfOption `json:"before_conf"`
 
-	// **参数解释**: 需要修改的hba配置信息。 **约束限制**: 不涉及。
-	BeforeConf *interface{} `json:"before_conf"`
-
-	// **参数解释**: 修改后的hba配置信息。 **约束限制**: 不涉及。
-	AfterConf *interface{} `json:"after_conf"`
+	AfterConf *AfterHbaConfOption `json:"after_conf"`
 }
 
 func (o ModifyHbaConfRequestBody) String() string {

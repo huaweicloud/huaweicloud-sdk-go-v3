@@ -41,7 +41,7 @@ type PrivateSnat struct {
 	// 企业项目id
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 私网NAT的SNAT规则状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+	// 私网NAT的SNAT规则状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
 	Status *PrivateSnatStatus `json:"status,omitempty"`
 }
 

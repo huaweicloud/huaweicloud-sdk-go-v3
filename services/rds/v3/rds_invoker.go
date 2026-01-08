@@ -2853,6 +2853,22 @@ func (i *UpdateTdeStatusInvoker) Invoke() (*model.UpdateTdeStatusResponse, error
 	}
 }
 
+type UpdateTimeZoneInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTimeZoneInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateTimeZoneInvoker) Invoke() (*model.UpdateTimeZoneResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTimeZoneResponse), nil
+	}
+}
+
 type UpdateToPeriodInvoker struct {
 	*invoker.BaseInvoker
 }

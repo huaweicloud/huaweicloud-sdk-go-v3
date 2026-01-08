@@ -58,6 +58,12 @@ type QueryTranscodingsTaskResponse struct {
 	// 截图文件信息。
 	PicInfo *[]PicInfo `json:"pic_info,omitempty"`
 
+	// 截图文件信息。
+	ThumbnailsInfo *[]ThumbnailsInfo `json:"thumbnails_info,omitempty"`
+
+	// 雪碧图信息，数组，最多支持20个成员。
+	ImageSpriteInfo *[]ImageSpriteInfo `json:"image_sprite_info,omitempty"`
+
 	// 转码参数。  若同时设置“trans_template_id”和此参数，则优先使用此参数进行转码。
 	AvParameters *[]AvParameters `json:"av_parameters,omitempty"`
 

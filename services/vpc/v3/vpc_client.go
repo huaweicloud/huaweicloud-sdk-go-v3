@@ -65,7 +65,6 @@ func (c *VpcClient) AddSourcesToTrafficMirrorSessionInvoker(request *model.AddSo
 //
 // 为指定的端口批量添加标签。
 // 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
-// 该接口在华南-深圳上线。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) BatchCreatePortTags(request *model.BatchCreatePortTagsRequest) (*model.BatchCreatePortTagsResponse, error) {
@@ -130,7 +129,6 @@ func (c *VpcClient) BatchCreateSubNetworkInterfaceInvoker(request *model.BatchCr
 //
 // 为指定的端口资源实例批量删除标签。
 // 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
-// 该接口在华南-深圳上线。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) BatchDeletePortTags(request *model.BatchDeletePortTagsRequest) (*model.BatchDeletePortTagsResponse, error) {
@@ -152,7 +150,6 @@ func (c *VpcClient) BatchDeletePortTagsInvoker(request *model.BatchDeletePortTag
 // CountPortsByTags 查询端口资源实例数量
 //
 // 使用标签过滤查询端口实例数量。
-// 该接口在华南-深圳上线。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) CountPortsByTags(request *model.CountPortsByTagsRequest) (*model.CountPortsByTagsResponse, error) {
@@ -173,9 +170,8 @@ func (c *VpcClient) CountPortsByTagsInvoker(request *model.CountPortsByTagsReque
 
 // CreatePortTag 添加端口资源标签
 //
-// 给指定端口资源实例增加标签信息
+// 给指定端口资源实例增加标签信息。
 // 此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
-// 该接口在华南-深圳上线。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) CreatePortTag(request *model.CreatePortTagRequest) (*model.CreatePortTagResponse, error) {
@@ -343,9 +339,8 @@ func (c *VpcClient) CreateVirsubnetCidrReservationInvoker(request *model.CreateV
 
 // DeletePortTag 删除端口资源标签
 //
-// 删除指定端口的标签信息
+// 删除指定端口的标签信息。
 // 该接口为幂等接口：删除的key不存在报404，key不能为空或者空字符串。
-// 该接口在华南-深圳上线。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) DeletePortTag(request *model.DeletePortTagRequest) (*model.DeletePortTagResponse, error) {
@@ -514,7 +509,6 @@ func (c *VpcClient) DeleteVirsubnetCidrReservationInvoker(request *model.DeleteV
 // ListPortTags 查询端口项目标签
 //
 // 查询租户在指定Project中实例类型的所有资源标签集合。
-// 该接口在华南-深圳上线。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ListPortTags(request *model.ListPortTagsRequest) (*model.ListPortTagsResponse, error) {
@@ -533,10 +527,30 @@ func (c *VpcClient) ListPortTagsInvoker(request *model.ListPortTagsRequest) *Lis
 	return &ListPortTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPorts 查询端口列表
+//
+// 当您的端口创建成功后，您可以通过调用该接口查询所有端口信息，包括端口ID、IP地址、所属云服务实例等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ListPorts(request *model.ListPortsRequest) (*model.ListPortsResponse, error) {
+	requestDef := GenReqDefForListPorts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPortsResponse), nil
+	}
+}
+
+// ListPortsInvoker 查询端口列表
+func (c *VpcClient) ListPortsInvoker(request *model.ListPortsRequest) *ListPortsInvoker {
+	requestDef := GenReqDefForListPorts()
+	return &ListPortsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListPortsByTags 查询端口资源实例列表
 //
 // 使用标签过滤查询端口。
-// 该接口在华南-深圳上线。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ListPortsByTags(request *model.ListPortsByTagsRequest) (*model.ListPortsByTagsResponse, error) {
@@ -702,6 +716,27 @@ func (c *VpcClient) ListVirsubnetCidrReservationsInvoker(request *model.ListVirs
 	return &ListVirsubnetCidrReservationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListVirsubnets 查询虚拟子网列表
+//
+// 当您的子网创建成功后，您可以通过调用该接口查询所有子网信息，包括子网的名称、ID等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ListVirsubnets(request *model.ListVirsubnetsRequest) (*model.ListVirsubnetsResponse, error) {
+	requestDef := GenReqDefForListVirsubnets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVirsubnetsResponse), nil
+	}
+}
+
+// ListVirsubnetsInvoker 查询虚拟子网列表
+func (c *VpcClient) ListVirsubnetsInvoker(request *model.ListVirsubnetsRequest) *ListVirsubnetsInvoker {
+	requestDef := GenReqDefForListVirsubnets()
+	return &ListVirsubnetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // MigrateSubNetworkInterface 迁移辅助弹性网卡
 //
 // 批量迁移辅助弹性网卡
@@ -765,10 +800,30 @@ func (c *VpcClient) RemoveSourcesFromTrafficMirrorSessionInvoker(request *model.
 	return &RemoveSourcesFromTrafficMirrorSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowPort 查询端口详情
+//
+// 当您的端口创建成功后，您可以通过调用该接口查询单个端口的详细信息，包括端口ID、IP地址、所属云服务实例等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ShowPort(request *model.ShowPortRequest) (*model.ShowPortResponse, error) {
+	requestDef := GenReqDefForShowPort()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPortResponse), nil
+	}
+}
+
+// ShowPortInvoker 查询端口详情
+func (c *VpcClient) ShowPortInvoker(request *model.ShowPortRequest) *ShowPortInvoker {
+	requestDef := GenReqDefForShowPort()
+	return &ShowPortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowPortTags 查询端口资源标签
 //
 // 查询指定端口的标签信息。
-// 该接口在华南-深圳上线。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *VpcClient) ShowPortTags(request *model.ShowPortTagsRequest) (*model.ShowPortTagsResponse, error) {
@@ -785,6 +840,27 @@ func (c *VpcClient) ShowPortTags(request *model.ShowPortTagsRequest) (*model.Sho
 func (c *VpcClient) ShowPortTagsInvoker(request *model.ShowPortTagsRequest) *ShowPortTagsInvoker {
 	requestDef := GenReqDefForShowPortTags()
 	return &ShowPortTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowQuota 查询配额
+//
+// 您可以通过此接口查询VPC服务相关资源的配额，包括安全组配额、安全组规则配额等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ShowQuota(request *model.ShowQuotaRequest) (*model.ShowQuotaResponse, error) {
+	requestDef := GenReqDefForShowQuota()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowQuotaResponse), nil
+	}
+}
+
+// ShowQuotaInvoker 查询配额
+func (c *VpcClient) ShowQuotaInvoker(request *model.ShowQuotaRequest) *ShowQuotaInvoker {
+	requestDef := GenReqDefForShowQuota()
+	return &ShowQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSecurityGroup 查询安全组
@@ -932,6 +1008,27 @@ func (c *VpcClient) ShowTrafficMirrorSession(request *model.ShowTrafficMirrorSes
 func (c *VpcClient) ShowTrafficMirrorSessionInvoker(request *model.ShowTrafficMirrorSessionRequest) *ShowTrafficMirrorSessionInvoker {
 	requestDef := GenReqDefForShowTrafficMirrorSession()
 	return &ShowTrafficMirrorSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVirsubnet 查询虚拟子网详情
+//
+// 当您的子网创建成功后，您可以通过调用该接口查询单个子网的详细信息，包括子网的名称、ID、状态等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ShowVirsubnet(request *model.ShowVirsubnetRequest) (*model.ShowVirsubnetResponse, error) {
+	requestDef := GenReqDefForShowVirsubnet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVirsubnetResponse), nil
+	}
+}
+
+// ShowVirsubnetInvoker 查询虚拟子网详情
+func (c *VpcClient) ShowVirsubnetInvoker(request *model.ShowVirsubnetRequest) *ShowVirsubnetInvoker {
+	requestDef := GenReqDefForShowVirsubnet()
+	return &ShowVirsubnetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowVirsubnetCidrReservation 查询子网预留网段
@@ -1818,6 +1915,27 @@ func (c *VpcClient) ListAddressGroup(request *model.ListAddressGroupRequest) (*m
 func (c *VpcClient) ListAddressGroupInvoker(request *model.ListAddressGroupRequest) *ListAddressGroupInvoker {
 	requestDef := GenReqDefForListAddressGroup()
 	return &ListAddressGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAddressGroupsDependency 查询IP地址组的关联资源
+//
+// 当您的IP地址组被网络ACL和安全组资源关联时，您可以通过调用该接口查询IP地址组关联的网络ACL或安全组的资源ID和名称。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ListAddressGroupsDependency(request *model.ListAddressGroupsDependencyRequest) (*model.ListAddressGroupsDependencyResponse, error) {
+	requestDef := GenReqDefForListAddressGroupsDependency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAddressGroupsDependencyResponse), nil
+	}
+}
+
+// ListAddressGroupsDependencyInvoker 查询IP地址组的关联资源
+func (c *VpcClient) ListAddressGroupsDependencyInvoker(request *model.ListAddressGroupsDependencyRequest) *ListAddressGroupsDependencyInvoker {
+	requestDef := GenReqDefForListAddressGroupsDependency()
+	return &ListAddressGroupsDependencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAddressGroup 查询地址组

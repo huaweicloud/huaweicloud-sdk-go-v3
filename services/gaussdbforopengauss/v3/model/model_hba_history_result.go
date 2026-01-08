@@ -9,6 +9,9 @@ import (
 
 type HbaHistoryResult struct {
 
+	// **参数解释**: 客户端接入认证修改记录的ID。 **取值范围**: 不涉及。
+	Id *string `json:"id,omitempty"`
+
 	// **参数解释**: 修改结果。 **取值范围**:  - success：已生效。  - failed：未生效。  - etting：设置中。
 	Status *string `json:"status,omitempty"`
 

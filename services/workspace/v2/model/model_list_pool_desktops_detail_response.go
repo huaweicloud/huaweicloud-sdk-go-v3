@@ -20,7 +20,9 @@ type ListPoolDesktopsDetailResponse struct {
 
 	// 包周期桌面总数。
 	PeriodDesktopsNum *int32 `json:"period_desktops_num,omitempty"`
-	HttpStatusCode    int    `json:"-"`
+
+	InconsistentType *InconsistentTypeEnum `json:"inconsistent_type,omitempty"`
+	HttpStatusCode   int                   `json:"-"`
 }
 
 func (o ListPoolDesktopsDetailResponse) String() string {

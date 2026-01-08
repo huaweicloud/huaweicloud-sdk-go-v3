@@ -14,6 +14,12 @@ type ThumbnailPara struct {
 	// 采样类型。  取值如下： - \"TIME\"：根据时间间隔采样截图。 - \"DOTS\"：指定时间点截图。选择同步截图时，需指定此类型。 - \"DOTS_MS\"：同步截图指定时间点毫秒值。  默认值：\"TIME\"
 	Type *ThumbnailParaType `json:"type,omitempty"`
 
+	// 黑点比例大于等于此值认为是黑帧。
+	Amount *int32 `json:"amount,omitempty"`
+
+	// 像素值小于此值认为是黑点。
+	Threshold *int32 `json:"threshold,omitempty"`
+
 	// 采样截图的时间间隔值。  默认值：12。  单位：秒
 	Time *int32 `json:"time,omitempty"`
 

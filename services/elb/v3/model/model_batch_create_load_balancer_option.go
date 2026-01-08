@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// BatchCreateLoadBalancerOption 创建负载均衡器参数。
 type BatchCreateLoadBalancerOption struct {
 
 	// **参数解释**：负载均衡器ID（UUID）。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  不支持该字段，请勿使用。
@@ -41,10 +42,10 @@ type BatchCreateLoadBalancerOption struct {
 	// **参数解释**：负载均衡器的生产者名称。固定为vlb。  **约束限制**：批量创建共享型实例时，该字段不允许指定。  **取值范围**：不涉及  **默认取值**：不涉及
 	Provider *string `json:"provider,omitempty"`
 
-	// **参数解释**：网络型规格ID。 可以通过GET https://{ELB_Endpoint}/v3/{project_id}/elb/flavors?type=L4 响应参数中的id得到。  **约束限制**： - 当l4_flavor_id和l7_flavor_id都不传的时，会使用默认flavor （默认flavor根据不同局点有所不同，具体以实际值为准）。 - 当传入的规格类型为L4，表示该实例为固定规格实例，按规格计费。 - 当传入的规格类型为L4_elastic_max，表示该实例为弹性实例，按LCU计费。 - 批量创建共享型实例时，该字段不允许指定。  **取值范围**：不涉及  **默认取值**：不涉及  [网关型LB不支持指定l4_flavor_id。](tag:hws_eu) [只支持设置为l4_flavor.elb.shared。](tag:hcso_dt) [所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+	// **参数解释**：网络型规格ID。 可以通过GET https://{ELB_Endpoint}/v3/{project_id}/elb/flavors?type=L4 响应参数中的id得到。  **约束限制**： - 当l4_flavor_id和l7_flavor_id都不传的时，会使用默认flavor （默认flavor根据不同局点有所不同，具体以实际值为准）。 - 当传入的规格类型为L4，表示该实例为固定规格实例，按规格计费。 - 当传入的规格类型为L4_elastic_max，表示该实例为弹性实例，按LCU计费。 - 批量创建共享型实例时，该字段不允许指定。 - 网关型LB不支持指定l4_flavor_id。  **取值范围**：不涉及  **默认取值**：不涉及  [只支持设置为l4_flavor.elb.shared。](tag:hcso_dt) [所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
 	L4FlavorId *string `json:"l4_flavor_id,omitempty"`
 
-	// **参数解释**：应用型规格ID。 可以通过GET https://{ELB_Endpoint}/v3/{project_id}/elb/flavors?type=L7 响应参数中的id得到。  **约束限制**： - 当l4_flavor_id和l7_flavor_id都不传的时，会使用默认flavor （默认flavor根据不同局点有所不同，具体以实际值为准）。 - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费。 - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费。 - 批量创建共享型实例时，该字段不允许指定。  **取值范围**：不涉及  **默认取值**：不涉及  [网关型LB不支持指定l7_flavor_id。](tag:hws_eu) [只支持设置为l7_flavor.elb.shared。](tag:hcso_dt) [所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+	// **参数解释**：应用型规格ID。 可以通过GET https://{ELB_Endpoint}/v3/{project_id}/elb/flavors?type=L7 响应参数中的id得到。  **约束限制**： - 当l4_flavor_id和l7_flavor_id都不传的时，会使用默认flavor （默认flavor根据不同局点有所不同，具体以实际值为准）。 - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费。 - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费。 - 批量创建共享型实例时，该字段不允许指定。 - 网关型LB不支持指定l7_flavor_id。  **取值范围**：不涉及  **默认取值**：不涉及  [只支持设置为l7_flavor.elb.shared。](tag:hcso_dt) [所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,srg,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
 	L7FlavorId *string `json:"l7_flavor_id,omitempty"`
 
 	// **参数解释**：批量创建的是否是独享型负载均衡器。  **约束限制**：不涉及  **取值范围**： - true：独享型。 - false：共享型。  **默认取值**：true
@@ -80,7 +81,7 @@ type BatchCreateLoadBalancerOption struct {
 	// **参数解释**：下联面子网的网络ID列表。 可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_network_id得到。 若不指定该字段，则按如下规则选择下联面网络： 1. 如果ELB实例开启ipv6，则选择ipv6_vip_virsubnet_id子网对应的网络ID。 2. 如果ELB实例没有开启ipv6，开启ipv4，则选择vip_subnet_cidr_id子网对应的网络ID。 3. 如果ELB实例没有选择私网，只开启公网，则会在当前负载均衡器所在的VPC中任意选一个子网，优选可用IP多的网络。 4. 批量创建共享型实例的场景，该字段不允许指定。 若指定多个下联面子网，则按顺序优先使用第一个子网来为负载均衡器下联面端口分配ip地址。  **约束限制**：下联面子网必须属于该LB所在的VPC。  **取值范围**：不涉及  **默认取值**：不涉及
 	ElbVirsubnetIds *[]string `json:"elb_virsubnet_ids,omitempty"`
 
-	// **参数解释**：是否启用IP类型后端转发。 开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。  **约束限制**： - 开启后不能关闭。 - 使用共享VPC的实例使用此特性时，需确保共享资源所有者已开通VPC对等连接，否则通信异常。 [- 仅独享型负载均衡器支持该特性。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt) [- 网关型LB不支持该特性。](tag:hws_eu)  **取值范围**： - true：开启。 - false：不开启。  **默认取值**：false  [荷兰region不支持该字段，请勿使用。](tag:dt)
+	// **参数解释**：是否启用IP类型后端转发。 开启IP类型后端转发后，后端服务器组不仅支持添加云上VPC内的服务器，还支持添加其他VPC、其他公有云、云下数据中心的服务器。  **约束限制**： - 开启后不能关闭。 - 使用共享VPC的实例使用此特性时，需确保共享资源所有者已开通VPC对等连接，否则通信异常。 [- 仅独享型负载均衡器支持该特性。](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,srg,fcs,dt) - 网关型LB不支持该特性。  **取值范围**： - true：开启。 - false：不开启。  **默认取值**：false  [荷兰region不支持该字段，请勿使用。](tag:dt)
 	IpTargetEnable *bool `json:"ip_target_enable,omitempty"`
 
 	// **参数解释**：是否开启删除保护。  **约束限制**：批量创建共享型实例的场景，该字段不允许指定。  **取值范围**：false 不开启，true 开启。  **默认取值**：false  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42) [荷兰region不支持该字段，请勿使用。](tag:dt)  > 退场时需要先关闭所有资源的删除保护开关。

@@ -3766,6 +3766,27 @@ func (c *RdsClient) UpdateTdeStatusInvoker(request *model.UpdateTdeStatusRequest
 	return &UpdateTdeStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateTimeZone 修改时区
+//
+// 修改时区
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) UpdateTimeZone(request *model.UpdateTimeZoneRequest) (*model.UpdateTimeZoneResponse, error) {
+	requestDef := GenReqDefForUpdateTimeZone()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTimeZoneResponse), nil
+	}
+}
+
+// UpdateTimeZoneInvoker 修改时区
+func (c *RdsClient) UpdateTimeZoneInvoker(request *model.UpdateTimeZoneRequest) *UpdateTimeZoneInvoker {
+	requestDef := GenReqDefForUpdateTimeZone()
+	return &UpdateTimeZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateToPeriod RDS实例按需转包周期
 //
 // RDS实例按需转包周期

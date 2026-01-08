@@ -40,6 +40,9 @@ type ImageInfo struct {
 
 	// 创建时间。格式为UTC时间。
 	CreatedAt *string `json:"created_at,omitempty"`
+
+	// 镜像kmsId。
+	KmsId *string `json:"kms_id,omitempty"`
 }
 
 func (o ImageInfo) String() string {

@@ -9,6 +9,9 @@ import (
 // ListAdOusRequest Request Object
 type ListAdOusRequest struct {
 
+	// 域。
+	Domain *string `json:"domain,omitempty"`
+
 	// 用于分页查询，返回桌面数量限制。如果不指定，则返回所有符合条件的桌面。
 	Limit *int32 `json:"limit,omitempty"`
 

@@ -107,6 +107,9 @@ type NodeExtendParam struct {
 
 	// **参数解释**： 指定节点安全加固类型，当前仅支持HCE2.0镜像等保2.0三级安全加固。 等保加固会对身份鉴别、访问控制、安全审计、入侵防范、恶意代码防范进行检查并加固。[详情请参见[Huawei Cloud EulerOS 2.0等保2.0三级版镜像概述](https://support.huaweicloud.com/productdesc-hce/hce_sec_0001.html)。](tag:hws) 若未指定此参数，则尝试用原有的值补全。如：原先HCE2.0镜像已配置安全加固，更新节点池时未指定此参数，则仍旧保持安全加固配置，若要取消，需显式指定参数值为\"null\"。 **约束限制**： 不涉及 **取值范围**： - 空值：表示不开启等保加固 - cybersecurity：表示开启等保加固  **默认取值**： 不涉及
 	SecurityReinforcementType *NodeExtendParamSecurityReinforcementType `json:"securityReinforcementType,omitempty"`
+
+	// **参数解释**： 是否要求携带token，默认optional。 **约束限制**： 不涉及 **取值范围**： - optional：不要求携带token。 - required：要求必须携带token，即IMDS服务禁用v1版本，启用v2版本。  **默认取值**： optional
+	ServerMetadataHttpTokens *string `json:"serverMetadataHttpTokens,omitempty"`
 }
 
 func (o NodeExtendParam) String() string {

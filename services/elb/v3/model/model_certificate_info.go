@@ -69,11 +69,14 @@ type CertificateInfo struct {
 	// **参数解释**：标记当前证书来源。  **取值范围**： - scm：表示关联云证书与管理服务（CCM）中的证书。 - 空值：表示自有证书。
 	Source *string `json:"source,omitempty"`
 
-	// **参数解释**：修改保护状态。  **取值范围**：  - nonProtection: 不保护  - consoleProtection: 控制台修改保护，即禁止通过控制台修改。
+	// **参数解释**：修改保护状态。  **取值范围**：  - nonProtection: 不保护 - consoleProtection: 控制台修改保护，即禁止通过控制台修改。
 	ProtectionStatus *CertificateInfoProtectionStatus `json:"protection_status,omitempty"`
 
 	// **参数解释**：修改保护的原因。  **取值范围**：不涉及
 	ProtectionReason *string `json:"protection_reason,omitempty"`
+
+	// **参数解释**：资源所属的企业项目ID。  **取值范围**： - \"0\"：表示资源属于default企业项目。 - UUID格式的字符串，表示非默认企业项目。  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o CertificateInfo) String() string {

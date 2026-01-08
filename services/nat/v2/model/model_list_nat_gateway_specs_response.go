@@ -12,7 +12,7 @@ import (
 // ListNatGatewaySpecsResponse Response Object
 type ListNatGatewaySpecsResponse struct {
 
-	// 可创建的NAT网关实例列表  取值范围：  “1”：小型，SNAT最大连接数10000  “2”：中型，SNAT最大连接数50000  “3”：大型，SNAT最大连接数200000  “4”：超大型，SNAT最大连接数1000000  “5”：企业型，SNAT最大连接数10000000
+	// 可创建的NAT网关实例列表 取值范围： - 1：小型，SNAT最大连接数10000 - 2：中型，SNAT最大连接数50000 - 3：大型，SNAT最大连接数200000 - 4：超大型，SNAT最大连接数1000000 - 5：企业型，SNAT最大连接数10000000
 	Specs          *[]ListNatGatewaySpecsResponseSpecs `json:"specs,omitempty"`
 	HttpStatusCode int                                 `json:"-"`
 }

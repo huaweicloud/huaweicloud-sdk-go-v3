@@ -20,6 +20,9 @@ type MetaData struct {
 	// 文件封装格式。
 	Format *string `json:"format,omitempty"`
 
+	// 视频的 md5 值。
+	Md5 *string `json:"md5,omitempty"`
+
 	// 总码率。单位：bit/秒
 	Bitrate *int64 `json:"bitrate,omitempty"`
 

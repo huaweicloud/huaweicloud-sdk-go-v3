@@ -9,7 +9,7 @@ import (
 // ListDashboardWidgetsResponse Response Object
 type ListDashboardWidgetsResponse struct {
 
-	// 监控视图列表
+	// **参数解释** 监控视图列表
 	Widgets        *[]WidgetInfoWithId `json:"widgets,omitempty"`
 	HttpStatusCode int                 `json:"-"`
 }

@@ -70,6 +70,9 @@ type Record struct {
 
 	// 客户端出网IP
 	PublicIp *string `json:"public_ip,omitempty"`
+
+	// 企业项目ID。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o Record) String() string {

@@ -11,7 +11,7 @@ import (
 
 type GetResourceGroupResources struct {
 
-	// **参数解释** 按事件告警状态信息进行过滤。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
+	// **参数解释** 按事件告警状态信息进行过滤。 **取值范围** 枚举值。 - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
 	Status GetResourceGroupResourcesStatus `json:"status"`
 
 	// 资源的维度信息
@@ -23,7 +23,7 @@ type GetResourceGroupResources struct {
 	// **参数解释** 企业项目ID。 **取值范围** 由数字、字母和-组成，字符串长度范围[1,128]
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// **参数解释** 按事件告警状态信息进行过滤。 **取值范围** 枚举值。 - health: 告警中 - unhealthy: 已触发 - no_alarm_rule: 未设置告警规则
+	// **参数解释** 按事件告警状态信息进行过滤。 **取值范围** 枚举值。 - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则
 	EventStatus *GetResourceGroupResourcesEventStatus `json:"event_status,omitempty"`
 
 	// **参数解释** 资源名称 **取值范围** 长度[0,128]个字符

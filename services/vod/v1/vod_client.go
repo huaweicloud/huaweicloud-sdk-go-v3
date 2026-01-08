@@ -733,6 +733,50 @@ func (c *VodClient) ListAssetListInvoker(request *model.ListAssetListRequest) *L
 	return &ListAssetListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAssetTaskInfo 查询媒资任务信息
+//
+// ## 典型场景 ##
+//   查询媒资任务信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) ListAssetTaskInfo(request *model.ListAssetTaskInfoRequest) (*model.ListAssetTaskInfoResponse, error) {
+	requestDef := GenReqDefForListAssetTaskInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAssetTaskInfoResponse), nil
+	}
+}
+
+// ListAssetTaskInfoInvoker 查询媒资任务信息
+func (c *VodClient) ListAssetTaskInfoInvoker(request *model.ListAssetTaskInfoRequest) *ListAssetTaskInfoInvoker {
+	requestDef := GenReqDefForListAssetTaskInfo()
+	return &ListAssetTaskInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCategoryInfo 查询指定分类信息
+//
+// ## 典型场景 ##
+//   查询指定分类信息，及其子分类（即下一级分类）的列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) ListCategoryInfo(request *model.ListCategoryInfoRequest) (*model.ListCategoryInfoResponse, error) {
+	requestDef := GenReqDefForListCategoryInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCategoryInfoResponse), nil
+	}
+}
+
+// ListCategoryInfoInvoker 查询指定分类信息
+func (c *VodClient) ListCategoryInfoInvoker(request *model.ListCategoryInfoRequest) *ListCategoryInfoInvoker {
+	requestDef := GenReqDefForListCategoryInfo()
+	return &ListCategoryInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCdnStatistics 查询CDN统计信息
 //
 // 查询CDN的统计数据，包括流量、峰值带宽、请求总数、请求命中率、流量命中率。查询存在1小时误差。

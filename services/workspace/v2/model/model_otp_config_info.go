@@ -9,6 +9,9 @@ import (
 // OtpConfigInfo OTP辅助认证方式配置。
 type OtpConfigInfo struct {
 
+	// 认证id。
+	Id *string `json:"id,omitempty"`
+
 	// 是否启用。
 	Enable *bool `json:"enable,omitempty"`
 
@@ -29,6 +32,9 @@ type OtpConfigInfo struct {
 	CertContent *string `json:"cert_content,omitempty"`
 
 	ApplyRule *ApplyRuleInfo `json:"apply_rule,omitempty"`
+
+	// 要应用的用户/用户组列表。
+	ApplyObjects *[]ApplyObjects `json:"apply_objects,omitempty"`
 }
 
 func (o OtpConfigInfo) String() string {

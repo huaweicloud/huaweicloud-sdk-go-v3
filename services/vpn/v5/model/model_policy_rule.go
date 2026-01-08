@@ -8,6 +8,9 @@ import (
 
 type PolicyRule struct {
 
+	// 规则ID
+	RuleIndex *int32 `json:"rule_index,omitempty"`
+
 	// 源地址网段
 	Source *string `json:"source,omitempty"`
 

@@ -15,7 +15,7 @@ type CreateDesktopReq struct {
 	// 云桌面类型。 - DEDICATED：专属桌面，单用户。 - SHARED: 多用户共享桌面。
 	DesktopType CreateDesktopReqDesktopType `json:"desktop_type"`
 
-	// 可用分区。将桌面创建到指定的可用分区。如果不指定则使用系统随机的可用分区。
+	// 可用分区。将桌面创建到指定的可用分区。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
 	// 套餐ID。
@@ -38,7 +38,7 @@ type CreateDesktopReq struct {
 	// 桌面使用的安全组，如果不指定则默认使用桌面代理中指定的安全组。
 	SecurityGroups *[]SecurityGroup `json:"security_groups,omitempty"`
 
-	// 创建桌面使用的参数列表。长度为1-100。  当前不支持一批桌面不同配置，所有桌面的配置和第一台的一致，如果第一台未设置参数，则取外层的同名参数。
+	// 创建桌面使用的参数列表。长度为1-100。
 	Desktops *[]Desktop `json:"desktops,omitempty"`
 
 	// 搭配size使用，当size为1时代表桌面名，位数1-15，当size大于1时代表桌面名前缀，位数：1-13。
@@ -71,6 +71,9 @@ type CreateDesktopReq struct {
 
 	// 桌面小时包offeringID。
 	HourPackageOfferingId *string `json:"hour_package_offering_id,omitempty"`
+
+	// 是否在发放新桌面时，挂载旧桌面磁盘为数据盘
+	IfMountOldDesktopDisk *bool `json:"if_mount_old_desktop_disk,omitempty"`
 }
 
 func (o CreateDesktopReq) String() string {

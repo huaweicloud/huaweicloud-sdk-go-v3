@@ -24,10 +24,10 @@ type ListSqlLimitTaskRequestBody struct {
 	RuleName *string `json:"rule_name,omitempty"`
 
 	// **参数解释**: 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。 **约束限制**: 不涉及。 **取值范围**: 0 - 10000 **默认取值**: 0（偏移0条数据，表示从第一条数据开始查询）。
-	Offset *int32 `json:"offset,omitempty"`
+	Offset int32 `json:"offset"`
 
 	// **参数解释**: 查询记录数。 **约束限制**: 不涉及。 **取值范围**: 不能为负数，最小值为1，最大值为100。 **默认取值**: 10
-	Limit *int32 `json:"limit,omitempty"`
+	Limit int32 `json:"limit"`
 
 	// **参数解释**: 限流任务SQL_ID。 **约束限制**: 不涉及。 **取值范围**: 1 到 19 位的正整数（首位不为 0）。 **默认取值**: 不涉及。
 	SqlId *string `json:"sql_id,omitempty"`

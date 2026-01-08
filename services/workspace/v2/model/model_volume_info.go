@@ -18,6 +18,12 @@ type VolumeInfo struct {
 	// 磁盘容量，单位GB。
 	Size int32 `json:"size"`
 
+	// iops，云硬盘每秒进行读写的操作次数。
+	Iops *int32 `json:"iops,omitempty"`
+
+	// 吞吐量，云硬盘每秒成功传送的数据量，即读取和写入的数据量。
+	Throughput *int32 `json:"throughput,omitempty"`
+
 	// 规格。
 	ResourceSpecCode *string `json:"resource_spec_code,omitempty"`
 }

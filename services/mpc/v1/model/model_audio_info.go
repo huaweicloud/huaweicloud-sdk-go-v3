@@ -22,6 +22,12 @@ type AudioInfo struct {
 
 	// 音频码率，单位: bit/s
 	BitrateBps *int64 `json:"bitrate_bps,omitempty"`
+
+	// 音频流时长，单位：秒
+	Duration *string `json:"duration,omitempty"`
+
+	// 音频流时长，单位：毫秒
+	DurationMs *string `json:"duration_ms,omitempty"`
 }
 
 func (o AudioInfo) String() string {

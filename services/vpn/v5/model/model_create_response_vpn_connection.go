@@ -44,9 +44,6 @@ type CreateResponseVpnConnection struct {
 	// 开启分支互联
 	EnableHub *bool `json:"enable_hub,omitempty"`
 
-	// 开启健康检查
-	EnableHealthCheck *bool `json:"enable_health_check,omitempty"`
-
 	// 策略模式的策略规则组
 	PolicyRules *[]PolicyRule `json:"policy_rules,omitempty"`
 

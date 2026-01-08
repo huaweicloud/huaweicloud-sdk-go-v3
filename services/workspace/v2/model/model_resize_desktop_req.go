@@ -9,7 +9,7 @@ import (
 // ResizeDesktopReq 变更规格请求。
 type ResizeDesktopReq struct {
 
-	// 桌面数据。支持批量按需类型桌面变更为同一规格。
+	// 桌面数据。支持批量将桌面变更为同一规格。
 	Desktops []ResizeDesktopData `json:"desktops"`
 
 	// 套餐id。批量变更时，则变更为同一规格的虚拟机。
@@ -20,6 +20,9 @@ type ResizeDesktopReq struct {
 
 	// 是否自动放置，专属主机桌面变更规格时使用，默认是off关闭自动放置，on表示开启自动放置。
 	AutoPlacement *string `json:"auto_placement,omitempty"`
+
+	// 桌面池id。
+	DesktopPoolId *string `json:"desktop_pool_id,omitempty"`
 }
 
 func (o ResizeDesktopReq) String() string {

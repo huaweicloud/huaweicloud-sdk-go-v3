@@ -35,8 +35,25 @@ type UpdateDesktopPoolAttributesReq struct {
 	// 策略id，用于指定生成桌面名称策略。
 	DesktopNamePolicyId *string `json:"desktop_name_policy_id,omitempty"`
 
-	// 桌面池的可用区。桌面池的可用区是边缘可用区时，不支持修改。
+	// 桌面池的可用区。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
+
+	RootVolume *DesktopPoolVolumeInfo `json:"root_volume,omitempty"`
+
+	// 数据盘列表。
+	DataVolumes *[]DesktopPoolVolumeInfo `json:"data_volumes,omitempty"`
+
+	// VPC ID
+	VpcId *string `json:"vpc_id,omitempty"`
+
+	// 桌面池子网ID列表
+	SubnetIds *[]string `json:"subnet_ids,omitempty"`
+
+	// 桌面使用的安全组，如果不指定则默认使用桌面代理中指定的安全组
+	SecurityGroups *[]SecurityGroup `json:"security_groups,omitempty"`
+
+	// 企业项目ID
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o UpdateDesktopPoolAttributesReq) String() string {

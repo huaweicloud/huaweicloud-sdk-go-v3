@@ -30,7 +30,7 @@ type CreateNatGatewayOption struct {
 	// 标签列表, 用以标识资源类型
 	Tags *[]string `json:"tags,omitempty"`
 
-	// 公网NAT网关的规格。 取值为： “1”：小型，SNAT最大连接数10000 “2”：中型，SNAT最大连接数50000 “3”：大型，SNAT最大连接数200000 “4”：超大型，SNAT最大连接数1000000 “5”：企业型，SNAT最大连接数10000000
+	// 公网NAT网关的规格。 取值为： - 1：小型，SNAT最大连接数10000 - 2：中型，SNAT最大连接数50000 - 3：大型，SNAT最大连接数200000 - 4：超大型，SNAT最大连接数1000000 - 5：企业型，SNAT最大连接数10000000
 	Spec CreateNatGatewayOptionSpec `json:"spec"`
 
 	// 企业项目ID 创建公网NAT网关实例时，关联的企业项目ID。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。

@@ -35,6 +35,7 @@ const (
 	errorCode                   = "error_code"
 	errorMsg                    = "error_msg"
 	encodedAuthorizationMessage = "encoded_authorization_message"
+	details                     = "details"
 )
 
 type CredentialsTypeError struct {
@@ -100,11 +101,12 @@ func (m errMap) getStringValue(key string) string {
 }
 
 type ServiceResponseError struct {
-	StatusCode                  int    `json:"status_code"`
-	RequestId                   string `json:"request_id"`
-	ErrorCode                   string `json:"error_code" bson:"errorCode"`
-	ErrorMessage                string `json:"error_message" bson:"errorMsg"`
-	EncodedAuthorizationMessage string `json:"encoded_authorization_message"`
+	StatusCode                  int                    `json:"status_code"`
+	RequestId                   string                 `json:"request_id"`
+	ErrorCode                   string                 `json:"error_code" bson:"errorCode"`
+	ErrorMessage                string                 `json:"error_message" bson:"errorMsg"`
+	EncodedAuthorizationMessage string                 `json:"encoded_authorization_message"`
+	Details                     []ServiceResponseError `json:"details"`
 }
 
 func NewServiceResponseError(resp *http.Response) *ServiceResponseError {
@@ -137,9 +139,28 @@ func NewServiceResponseError(resp *http.Response) *ServiceResponseError {
 	return sr
 }
 
+func extractDetails(input interface{}) []ServiceResponseError {
+	var errs []ServiceResponseError
+
+	if details, ok := input.([]interface{}); ok {
+		for _, detail := range details {
+			if val, ok := detail.(map[string]interface{}); ok {
+				err := new(ServiceResponseError)
+				processServiceResponseError(val, err)
+				errs = append(errs, *err)
+			}
+		}
+	}
+	return errs
+}
+
 func processServiceResponseError(m errMap, sr *ServiceResponseError) {
 	if value := m.getStringValue(encodedAuthorizationMessage); value != "" {
 		sr.EncodedAuthorizationMessage = value
+	}
+
+	if details, ok := m[details]; ok {
+		sr.Details = extractDetails(details)
 	}
 
 	_code := m.getStringValue(errorCode)
@@ -171,5 +192,5 @@ func (sr ServiceResponseError) Error() string {
 		return fmt.Sprintf("{\"ErrorMessage\": \"%s\",\"ErrorCode\": \"%s\",\"EncodedAuthorizationMessage\": \"%s\"}",
 			sr.ErrorMessage, sr.ErrorCode, sr.EncodedAuthorizationMessage)
 	}
-	return fmt.Sprintf(string(data))
+	return string(data)
 }

@@ -32,7 +32,7 @@ type Domains struct {
 
 	DomainOriginHost *DomainOriginHost `json:"domain_origin_host,omitempty"`
 
-	// 是否开启HTTPS加速。
+	// 是否开启HTTPS加速。取值意义： - 0：未开启 - 1：开启
 	HttpsStatus *int32 `json:"https_status,omitempty"`
 
 	// 域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
@@ -53,13 +53,13 @@ type Domains struct {
 	// 华为云CDN提供的加速服务范围，包含：mainland_china中国大陆、outside_mainland_china中国大陆境外、global全球。
 	ServiceArea *DomainsServiceArea `json:"service_area,omitempty"`
 
-	// Range回源状态。
+	// Range回源状态。取值意义： - on：开启 - off：关闭
 	RangeStatus *string `json:"range_status,omitempty"`
 
-	// 回源跟随状态。
+	// 回源跟随状态。取值意义： - on：开启 - off：关闭
 	FollowStatus *string `json:"follow_status,omitempty"`
 
-	// 是否暂停源站回源（off代表关闭 on代表开启）。
+	// 是否暂停源站回源。取值意义： - on：开启 - off：关闭
 	OriginStatus *string `json:"origin_status,omitempty"`
 
 	// 域名禁用原因。

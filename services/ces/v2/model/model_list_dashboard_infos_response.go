@@ -9,7 +9,7 @@ import (
 // ListDashboardInfosResponse Response Object
 type ListDashboardInfosResponse struct {
 
-	// **参数描述**： 监控看板列表
+	// **参数解释**： 监控看板列表
 	Dashboards     *[]DashBoardInfo `json:"dashboards,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

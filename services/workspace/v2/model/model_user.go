@@ -68,11 +68,17 @@ type User struct {
 	// 加入的组列表。
 	GroupNames *[]string `json:"group_names,omitempty"`
 
-	// 企业项目ID
+	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 用户信息映射，包含用户的服务等级、操作模式和类型。
 	UserInfoMap *string `json:"user_info_map,omitempty"`
+
+	// 域。
+	Domain *string `json:"domain,omitempty"`
+
+	// 当前用户是否存在用户证书。
+	CertificateStatus *bool `json:"certificate_status,omitempty"`
 }
 
 func (o User) String() string {

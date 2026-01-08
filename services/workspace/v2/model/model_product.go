@@ -32,6 +32,9 @@ type Product struct {
 	// 是否是GPU类型的规格。
 	IsGpu *bool `json:"is_gpu,omitempty"`
 
+	// 显存大小，单位GB。
+	Vram *string `json:"vram,omitempty"`
+
 	// 系统盘类型。
 	SystemDiskType *string `json:"system_disk_type,omitempty"`
 

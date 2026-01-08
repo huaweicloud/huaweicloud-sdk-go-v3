@@ -30,7 +30,7 @@ type UpdateUserOption struct {
 	// 是否启用IAM用户。true为启用，false为停用，默认为true。
 	Enabled *bool `json:"enabled,omitempty"`
 
-	// IAM用户密码状态。true：需要修改密码，false：正常。
+	// IAM用户密码状态。true：需要修改密码，false：不需要修改密码。
 	PwdStatus *bool `json:"pwd_status,omitempty"`
 
 	// IAM用户在外部系统中的类型。长度小于等于64字符。xuser_type如果存在，则需要与同一租户中的xaccount_type、xdomain_type校验，须与xuser_id同时存在。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。

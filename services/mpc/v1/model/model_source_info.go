@@ -23,6 +23,9 @@ type SourceInfo struct {
 	// 独立mpd索引文件名
 	ManifestName *string `json:"manifest_name,omitempty"`
 
+	// 视频的 md5 值。
+	Md5 *string `json:"md5,omitempty"`
+
 	VideoInfo *VideoInfo `json:"video_info,omitempty"`
 
 	// 音频信息

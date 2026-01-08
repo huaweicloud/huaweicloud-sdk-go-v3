@@ -451,10 +451,6 @@ func GenReqDefForListPrivateDnats() *def.HttpRequestDef {
 		WithName("TransitServicePort").
 		WithJsonTag("transit_service_port").
 		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("TransitIpAddress").
-		WithJsonTag("transit_ip_address").
-		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

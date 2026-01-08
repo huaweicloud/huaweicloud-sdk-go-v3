@@ -11,6 +11,9 @@ type Desktop struct {
 	// 桌面所属的用户，当桌面创建成功后此用户可以登录该桌面。只允许输入大写字母、小写字母、数字、中划线（-）和下划线（_）。域类型为LITE_AD时，使用小写字母或者大写字母开头，长度范围为[1-20]。当域类型为LOCAL_AD时，用户名可以使用小写字母或者大写字母或者数字开头，长度范围为[1-32]。Windows桌面用户最长支持20个字符，Linux桌面用户最长支持32个字符。
 	UserName string `json:"user_name"`
 
+	// 用户所属域。
+	Domain *string `json:"domain,omitempty"`
+
 	// 合法用户邮箱，桌面创建成功后系统会通过发送邮件的方式通知用户。
 	UserEmail *string `json:"user_email,omitempty"`
 
@@ -28,6 +31,15 @@ type Desktop struct {
 
 	// 桌面名称前缀，不指定\"computer_name\"时生效。
 	DesktopNamePrefix *string `json:"desktop_name_prefix,omitempty"`
+
+	// 需要拷贝数据盘的桌面ID，如果指定了该参数，那么copy_volume_ids不能为空。
+	CopyVolumeDesktopId *string `json:"copy_volume_desktop_id,omitempty"`
+
+	// 需要拷贝数据盘桌面的磁盘ID列表，如果指定了该参数，copy_volume_desktop_id不能为空，且磁盘必须属于该桌面。
+	CopyVolumeIds *[]string `json:"copy_volume_ids,omitempty"`
+
+	// 是否删除按需旧桌面，值为true时，新发放桌面配置并拷贝磁盘后删除旧桌面
+	IfDeleteOldDesktop *bool `json:"if_delete_old_desktop,omitempty"`
 }
 
 func (o Desktop) String() string {

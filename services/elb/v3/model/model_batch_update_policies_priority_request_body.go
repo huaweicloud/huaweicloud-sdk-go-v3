@@ -8,6 +8,8 @@ import (
 
 // BatchUpdatePoliciesPriorityRequestBody This is a auto create Body Object
 type BatchUpdatePoliciesPriorityRequestBody struct {
+
+	// **参数解释**：批量更新转发策略优先级的请求参数。  **约束限制**：不涉及
 	L7policies *[]BatchUpdatePriorityRequestBody `json:"l7policies,omitempty"`
 }
 

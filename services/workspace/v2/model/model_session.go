@@ -15,10 +15,10 @@ type Session struct {
 	// 是否锁屏后断开。
 	DisconnectOnLockFlag *bool `json:"disconnect_on_lock_flag,omitempty"`
 
-	// 锁定生效开始时间，格式 hh:mm:ss
+	// 锁定生效开始时间，格式 hh:mm:ss。
 	AutoLockStartTime *string `json:"auto_lock_start_time,omitempty"`
 
-	// 锁定生效开始时间，格式 hh:mm:ss
+	// 锁定生效时间，格式 hh:mm:ss。
 	AutoLockEndTime *string `json:"auto_lock_end_time,omitempty"`
 }
 

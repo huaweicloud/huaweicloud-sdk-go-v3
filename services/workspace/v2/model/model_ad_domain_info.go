@@ -20,6 +20,12 @@ type AdDomainInfo struct {
 
 	// 域管理员账号密码。
 	DomainPassword string `json:"domain_password"`
+
+	// 是否开启智能卡认证。
+	CbaEnabled bool `json:"cba_enabled"`
+
+	// 智能卡证书id。
+	CertificateId *string `json:"certificate_id,omitempty"`
 }
 
 func (o AdDomainInfo) String() string {

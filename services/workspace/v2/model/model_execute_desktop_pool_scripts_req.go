@@ -21,6 +21,9 @@ type ExecuteDesktopPoolScriptsReq struct {
 	// 首批执行的桌面id列表，优先级低于gray_count。
 	GrayDesktopIds *[]string `json:"gray_desktop_ids,omitempty"`
 
+	// 桌面id列表，支持桌面池部分桌面执行脚本。
+	DesktopIds *[]string `json:"desktop_ids,omitempty"`
+
 	// 灰度失败阈值，灰度执行失败次数达到该值时，不执行下一批任务。
 	GrayFailThreshold *int32 `json:"gray_fail_threshold,omitempty"`
 

@@ -12,6 +12,9 @@ import (
 // AdDomain 域信息。
 type AdDomain struct {
 
+	// 域id。
+	Id *string `json:"id,omitempty"`
+
 	// 域类型。 - LITE_AS：本地认证。 - LOCAL_AD：本地AD。 说明：域类型为“LOCAL_AD”时，请确保所选VPC网络与AD所属网络可连通。
 	DomainType AdDomainDomainType `json:"domain_type"`
 
@@ -49,6 +52,12 @@ type AdDomain struct {
 	UseLdaps *bool `json:"use_ldaps,omitempty"`
 
 	TlsConfig *TlsConfig `json:"tls_config,omitempty"`
+
+	// 是否开启智能卡认证。
+	CbaEnabled *bool `json:"cba_enabled,omitempty"`
+
+	// 智能卡证书id。
+	CertificateId *string `json:"certificate_id,omitempty"`
 }
 
 func (o AdDomain) String() string {

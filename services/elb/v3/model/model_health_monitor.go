@@ -47,7 +47,7 @@ type HealthMonitor struct {
 	// **参数解释**：一次健康检查请求的超时时间。  **取值范围**：不涉及
 	Timeout int32 `json:"timeout"`
 
-	// **参数解释**： 健康检查请求协议。  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS和GRPC。
+	// **参数解释**： 健康检查请求协议。  **取值范围**：TCP、UDP_CONNECT、HTTP、HTTPS、TLS、GRPC[和GRPCS](tag:not_open)。
 	Type string `json:"type"`
 
 	// **参数解释**：健康检查请求的请求路径。以\"/\"开头，默认为\"/\"。  **取值范围**：支持使用字母、数字和短划线（-）、正斜线（/）、半角句号（.）、百分号（%）、半角问号（?）、井号（#）和and（&）以及扩展字符集_;~!()*[]@$^:',+

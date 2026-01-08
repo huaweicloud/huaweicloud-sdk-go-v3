@@ -9,7 +9,7 @@ import (
 // ShowVerifyDomainOwnerInfoResponse Response Object
 type ShowVerifyDomainOwnerInfoResponse struct {
 
-	// DNS解析类型。
+	// DNS解析类型。取值意义： - TXT：TXT记录
 	DnsVerifyType *string `json:"dns_verify_type,omitempty"`
 
 	// DNS解析主机记录名称。

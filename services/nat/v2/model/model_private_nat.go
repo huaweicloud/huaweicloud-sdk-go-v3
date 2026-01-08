@@ -23,10 +23,10 @@ type PrivateNat struct {
 	// 私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
 	Description string `json:"description"`
 
-	// 私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
+	// 私网NAT网关实例的规格。 取值为： - Small：小型 - Medium：中型 - Large：大型 - Extra-large：超大型 - Extra-xlarge：企业型
 	Spec PrivateNatSpec `json:"spec"`
 
-	// 私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+	// 私网NAT网关实例的状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
 	Status PrivateNatStatus `json:"status"`
 
 	// 私网NAT网关实例的创建时间，遵循UTC时间，格式是yyyy-mm-ddThh:mm:ssZ。

@@ -12,7 +12,7 @@ import (
 type UpgradeRequestBody struct {
 
 	// 升级操作，可选值start、finish、rollback
-	Action *UpgradeRequestBodyAction `json:"action,omitempty"`
+	Action UpgradeRequestBodyAction `json:"action"`
 }
 
 func (o UpgradeRequestBody) String() string {

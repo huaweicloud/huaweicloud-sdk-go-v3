@@ -11,7 +11,7 @@ import (
 // ListNatGatewaySnatRulesRequest Request Object
 type ListNatGatewaySnatRulesRequest struct {
 
-	// 解冻/冻结状态。 取值范围： \"true\"：解冻 \"false\"：冻结
+	// 解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
 
 	// 可以是网段或者主机格式，与network_id参数二选一。 Source_type=0时，cidr必须是vpc子网网段的子集(不能相等）; Source_type=1时，cidr必须指定专线侧网段。
@@ -47,10 +47,10 @@ type ListNatGatewaySnatRulesRequest struct {
 	// 规则使用的网络id。与cidr参数二选一。
 	NetworkId *string `json:"network_id,omitempty"`
 
-	// 0：VPC侧，可以指定network_id 或者cidr 1：专线侧，只能指定cidr 不输入默认为0（VPC）
+	// 资源类型。 取值范围： - 0：VPC侧，可以指定network_id 或者cidr - 1：专线侧，只能指定cidr 不输入默认为0（VPC）
 	SourceType *int32 `json:"source_type,omitempty"`
 
-	// SNAT规则的状态。 取值为:  ACTIVE: 可用 PENDING_CREATE: 创建中 PENDING_UPDATE: 更新中 PENDING_DELETE: 删除中 EIP_FREEZED: EIP冻结 INACTIVE: 不可用
+	// SNAT规则的状态。 取值为:  - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
 	Status *ListNatGatewaySnatRulesRequestStatus `json:"status,omitempty"`
 
 	// 分页查询的起始资源ID，表示从指定资源的下一条记录开始查询。 - 若不传入marker和limit参数，查询结果返回第一页全部资源记录（默认2000条）。 - 若不传入marker参数，limit为10，查询结果返回第1~10条资源记录。 - 若marker为第10条记录的资源ID，limit为10，查询结果返回第11~20条资源记录。 - 若marker为第10条记录的资源ID，不传入limit参数，查询结果返回第11条及之后的资源记录（默认2000条）。

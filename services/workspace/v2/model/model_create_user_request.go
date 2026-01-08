@@ -29,10 +29,10 @@ type CreateUserRequest struct {
 	// 用户初始密码。管理员激活模式需要输入。
 	Password *string `json:"password,omitempty"`
 
-	// 是否允许用户更改密码，缺省值为true，后续此字段无效，创建时都为true。
+	// 是否允许用户更改密码，缺省值为true。
 	EnableChangePassword *bool `json:"enable_change_password,omitempty"`
 
-	// 下次登录是否必须更改密码，缺省值为true。后续此字段无效，创建时都为true。
+	// 下次登录是否必须更改密码，缺省值为true。该字段只在active_type为ADMIN_ACTIVATE时生效。
 	NextLoginChangePassword *bool `json:"next_login_change_password,omitempty"`
 
 	// 用户组的专有ID列表。
@@ -44,11 +44,14 @@ type CreateUserRequest struct {
 	// 别名。
 	AliasName *string `json:"alias_name,omitempty"`
 
-	// 企业项目ID
+	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 用户信息映射，包含用户的服务等级、操作模式和类型。
 	UserInfoMap *string `json:"user_info_map,omitempty"`
+
+	// 用户所属域，domain为空时，默认主域。
+	Domain *string `json:"domain,omitempty"`
 }
 
 func (o CreateUserRequest) String() string {

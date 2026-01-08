@@ -389,6 +389,22 @@ func (i *ListPortTagsInvoker) Invoke() (*model.ListPortTagsResponse, error) {
 	}
 }
 
+type ListPortsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPortsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPortsInvoker) Invoke() (*model.ListPortsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPortsResponse), nil
+	}
+}
+
 type ListPortsByTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -517,6 +533,22 @@ func (i *ListVirsubnetCidrReservationsInvoker) Invoke() (*model.ListVirsubnetCid
 	}
 }
 
+type ListVirsubnetsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVirsubnetsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListVirsubnetsInvoker) Invoke() (*model.ListVirsubnetsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVirsubnetsResponse), nil
+	}
+}
+
 type MigrateSubNetworkInterfaceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -565,6 +597,22 @@ func (i *RemoveSourcesFromTrafficMirrorSessionInvoker) Invoke() (*model.RemoveSo
 	}
 }
 
+type ShowPortInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPortInvoker) Invoke() (*model.ShowPortResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPortResponse), nil
+	}
+}
+
 type ShowPortTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -578,6 +626,22 @@ func (i *ShowPortTagsInvoker) Invoke() (*model.ShowPortTagsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowPortTagsResponse), nil
+	}
+}
+
+type ShowQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowQuotaInvoker) Invoke() (*model.ShowQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowQuotaResponse), nil
 	}
 }
 
@@ -690,6 +754,22 @@ func (i *ShowTrafficMirrorSessionInvoker) Invoke() (*model.ShowTrafficMirrorSess
 		return nil, err
 	} else {
 		return result.(*model.ShowTrafficMirrorSessionResponse), nil
+	}
+}
+
+type ShowVirsubnetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVirsubnetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowVirsubnetInvoker) Invoke() (*model.ShowVirsubnetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVirsubnetResponse), nil
 	}
 }
 
@@ -1362,6 +1442,22 @@ func (i *ListAddressGroupInvoker) Invoke() (*model.ListAddressGroupResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListAddressGroupResponse), nil
+	}
+}
+
+type ListAddressGroupsDependencyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAddressGroupsDependencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAddressGroupsDependencyInvoker) Invoke() (*model.ListAddressGroupsDependencyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAddressGroupsDependencyResponse), nil
 	}
 }
 

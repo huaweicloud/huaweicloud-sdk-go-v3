@@ -725,6 +725,22 @@ func (i *ShowPermRuleInvoker) Invoke() (*model.ShowPermRuleResponse, error) {
 	}
 }
 
+type ShowQuotaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowQuotaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowQuotaInvoker) Invoke() (*model.ShowQuotaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowQuotaResponse), nil
+	}
+}
+
 type ShowShareInvoker struct {
 	*invoker.BaseInvoker
 }

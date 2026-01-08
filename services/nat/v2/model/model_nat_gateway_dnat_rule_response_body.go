@@ -42,10 +42,10 @@ type NatGatewayDnatRuleResponseBody struct {
 	// Floatingip对外提供服务的端口号。 取值范围：0~65535。
 	ExternalServicePort int32 `json:"external_service_port"`
 
-	// DNAT规则的状态。 取值为： \"ACTIVE\": 可用 \"PENDING_CREATE\"：创建中 \"PENDING_UPDATE\"：更新中 \"PENDING_DELETE\"：删除中 \"EIP_FREEZED\"：EIP冻结 \"INACTIVE\"：不可用
+	// DNAT规则的状态。 取值为： - ACTIVE: 可用 - PENDING_CREATE: 创建中 - PENDING_UPDATE: 更新中 - PENDING_DELETE: 删除中 - EIP_FREEZED: EIP冻结 - INACTIVE: 不可用
 	Status NatGatewayDnatRuleResponseBodyStatus `json:"status"`
 
-	// 解冻/冻结状态。 取值范围： − “true”： 解冻 − “false”： 冻结
+	// 解冻/冻结状态。 取值范围：  - true: 解冻 - false: 冻结
 	AdminStateUp bool `json:"admin_state_up"`
 
 	// 虚拟机或者裸机对外提供服务的协议端口号范围。 功能说明：该端口范围与external _service_port_range按顺序实现1:1映射。 取值范围：1~65535。 约束：只能以’-’字符连接端口范围。

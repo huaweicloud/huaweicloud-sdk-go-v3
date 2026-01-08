@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// UpdatePoolOption 更新后端服务器组请求参数。
 type UpdatePoolOption struct {
 
 	// **参数解释**：后端服务器组的管理状态。  **约束限制**：只支持更新为true。  **取值范围**：true 启用。  **默认取值**：不涉及  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
@@ -17,7 +18,7 @@ type UpdatePoolOption struct {
 	// **参数解释**：后端服务器组的描述信息。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
 	Description *string `json:"description,omitempty"`
 
-	// **参数解释**：后端服务器组的负载均衡算法。  **约束限制**： - 当该字段的取值为SOURCE_IP或QUIC_CID时，后端服务器组绑定的后端服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  **取值范围**： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。 [- 2_TUPLE_HASH：二元组hash算法，仅IP类型的pool支持。 - 3_TUPLE_HASH：三元组hash算法，仅IP类型的pool支持。 - 5_TUPLE_HASH：五元组hash算法，仅IP类型的pool支持。 - IP型pool不指定该字段时，默认设置为5_TUPLE_HASH。](tag:hws_eu)  **默认取值**：不涉及  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
+	// **参数解释**：后端服务器组的负载均衡算法。  **约束限制**： - 当该字段的取值为SOURCE_IP或QUIC_CID时，后端服务器组绑定的后端服务器的weight字段无效。 - 只有pool的protocol为QUIC时，才支持QUIC_CID算法。  **取值范围**： - ROUND_ROBIN：加权轮询算法。 - LEAST_CONNECTIONS：加权最少连接算法。 - SOURCE_IP：源IP算法。 - QUIC_CID：连接ID算法。 - 2_TUPLE_HASH：二元组hash算法，仅IP类型的pool支持。 - 3_TUPLE_HASH：三元组hash算法，仅IP类型的pool支持。 - 5_TUPLE_HASH：五元组hash算法，仅IP类型的pool支持。 - IP型pool不指定该字段时，默认设置为5_TUPLE_HASH。  **默认取值**：不涉及  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt)
 	LbAlgorithm *string `json:"lb_algorithm,omitempty"`
 
 	// **参数解释**：后端服务器组的名称。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
@@ -33,7 +34,7 @@ type UpdatePoolOption struct {
 	// **参数解释**：后端服务器组关联的虚拟私有云的ID。  **约束限制**：只有vpc_id为空时允许更新。  **取值范围**：不涉及  **默认取值**：不涉及
 	VpcId *string `json:"vpc_id,omitempty"`
 
-	// **参数解释**：后端服务器组的类型。  **约束限制**： - 只有type为空时允许更新，不允许从非空更新为空。 - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加IP类型后端，type指定为该类型时，vpc_id不允许指定。[pool的protocol为IP时，type不允许设置为ip。](tag:hws_eu)] - 空字符串（\"\"）：允许任意类型的后端  **取值范围**：不涉及  **默认取值**：不涉及
+	// **参数解释**：后端服务器组的类型。  **约束限制**： - 只有type为空时允许更新，不允许从非空更新为空。 - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加IP类型后端，type指定为该类型时，vpc_id不允许指定。pool的protocol为IP时，type不允许设置为ip。 - 空字符串（\"\"）：允许任意类型的后端  **取值范围**：不涉及  **默认取值**：不涉及
 	Type *string `json:"type,omitempty"`
 
 	// **参数解释**：修改保护状态。  **约束限制**：不涉及  **取值范围**： - nonProtection: 不保护 - consoleProtection: 控制台修改保护  **默认取值**：不涉及

@@ -41,9 +41,6 @@ type CreateVpnConnectionRequestBodyContent struct {
 	// 开启分支互联
 	EnableHub *bool `json:"enable_hub,omitempty"`
 
-	// 开启健康检查
-	EnableHealthCheck *bool `json:"enable_health_check,omitempty"`
-
 	// 预共享密钥，只能包含大写字母、小写字母、数字和特殊字符(~!@#$%^()-_+={ },./:;)且至少包含四种字符的三种
 	Psk *string `json:"psk,omitempty"`
 

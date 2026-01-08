@@ -12,6 +12,11 @@ type AvParameters struct {
 	Audio *Audio `json:"audio,omitempty"`
 
 	Common *Common `json:"common"`
+
+	Output *ObsObjInfo `json:"output,omitempty"`
+
+	// 输出文件名
+	OutputFilename *string `json:"output_filename,omitempty"`
 }
 
 func (o AvParameters) String() string {

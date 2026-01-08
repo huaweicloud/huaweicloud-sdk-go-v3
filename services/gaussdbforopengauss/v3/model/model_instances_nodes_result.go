@@ -14,6 +14,9 @@ type InstancesNodesResult struct {
 	// **参数解释**： 节点名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
+	// **参数解释**： 节点角色。 **取值范围**： - master：主节点。 - slave：备节点。 - secondary：日志节点。 - readreplica：只读节点。
+	Role *string `json:"role,omitempty"`
+
 	// **参数解释**： 组件ID列表。
 	ComponentIds *[]string `json:"component_ids,omitempty"`
 }

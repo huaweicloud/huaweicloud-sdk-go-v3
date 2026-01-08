@@ -11,13 +11,13 @@ import (
 
 type BatchDeleteDashboardRespInfo struct {
 
-	// **参数描述**： 监控看板id **约束限制** 不涉及 **取值范围** 以db开头，包含22个字母和数字，长度为24个字符 **默认取值** 不涉及
+	// **参数解释**： 监控看板id **约束限制** 不涉及 **取值范围** 以db开头，包含22个字母和数字，长度为24个字符 **默认取值** 不涉及
 	DashboardId *string `json:"dashboard_id,omitempty"`
 
-	// 处理结果, successful: 成功, error: 失败
+	// **参数解释** 处理结果 **取值范围** 枚举值： - successful 成功 - error 失败
 	RetStatus *BatchDeleteDashboardRespInfoRetStatus `json:"ret_status,omitempty"`
 
-	// 错误信息
+	// **参数解释** 错误信息 **取值范围** 信息长度为[0,128]个字符
 	ErrorMsg *string `json:"error_msg,omitempty"`
 }
 

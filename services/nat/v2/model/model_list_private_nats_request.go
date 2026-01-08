@@ -30,10 +30,10 @@ type ListPrivateNatsRequest struct {
 	// 私网NAT网关实例的描述。长度范围小于等于255个字符，不能包含“<”和“>”。
 	Description *[]string `json:"description,omitempty"`
 
-	// 私网NAT网关实例的规格。 取值为： \"Small\"：小型 \"Medium\"：中型 \"Large\"：大型 \"Extra-large\"：超大型 \"Extra-xlarge\"：企业型
+	// 私网NAT网关实例的规格。 取值为： - Small：小型 - Medium：中型 - Large：大型 - Extra-large：超大型 - Extra-xlarge：企业型
 	Spec *[]ListPrivateNatsRequestSpec `json:"spec,omitempty"`
 
-	// 私网NAT网关实例的状态。 取值为： \"ACTIVE\"：正常运行 \"FROZEN\"：冻结 \"INACTIVE\"：不可用
+	// 私网NAT网关实例的状态。 取值为： - ACTIVE：正常运行 - FROZEN：冻结 - INACTIVE：不可用
 	Status *[]ListPrivateNatsRequestStatus `json:"status,omitempty"`
 
 	// 私网NAT网关实例所属VPC的ID。

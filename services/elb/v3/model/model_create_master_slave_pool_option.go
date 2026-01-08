@@ -32,7 +32,7 @@ type CreateMasterSlavePoolOption struct {
 
 	SessionPersistence *CreatePoolSessionPersistenceOption `json:"session_persistence,omitempty"`
 
-	// **参数解释**：后端服务器组关联的虚拟私有云的ID。  **约束限制**： - 只能挂载到该虚拟私有云下。 - 只能添加该虚拟私有云下的后端服务器或跨VPC的后端服务器。 - type必须指定为instance。 [- pool的protocol为IP时，必须指定vpc_id，且与LB的vpc_id相同。](tag:hws_eu) - 若未指定vpc_id，则后续添加后端服务器时，vpc_id由后端服务器所在的虚拟私有云确定。  **取值范围**：不涉及  **默认取值**：不涉及
+	// **参数解释**：后端服务器组关联的虚拟私有云的ID。  **约束限制**： - 只能挂载到该虚拟私有云下。 - 只能添加该虚拟私有云下的后端服务器或跨VPC的后端服务器。 - type必须指定为instance。 - pool的protocol为IP时，必须指定vpc_id，且与LB的vpc_id相同。 - 若未指定vpc_id，则后续添加后端服务器时，vpc_id由后端服务器所在的虚拟私有云确定。  **取值范围**：不涉及  **默认取值**：不涉及
 	VpcId *string `json:"vpc_id,omitempty"`
 
 	// **参数解释**：后端服务器组的类型。  **约束限制**：不涉及  **取值范围**： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加IP类型后端，type指定为该类型时，vpc_id不允许指定。  **默认取值**：不涉及
@@ -52,6 +52,9 @@ type CreateMasterSlavePoolOption struct {
 	ConnectionDrain *ConnectionDrain `json:"connection_drain,omitempty"`
 
 	QuicCidHashStrategy *QuicCidHashStrategy `json:"quic_cid_hash_strategy,omitempty"`
+
+	// **参数解释**：资源所属的企业项目ID。创建时不传则资源属于default企业项目，返回enterprise_project_id=\"0\"。  **约束限制**：不能传入空字符串\"\"、\"0\"或不存在的企业项目ID。  **取值范围**：不涉及  **默认取值**：\"0\"  [不支持该字段，请勿使用。](tag:dt,hcso_dt)
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o CreateMasterSlavePoolOption) String() string {

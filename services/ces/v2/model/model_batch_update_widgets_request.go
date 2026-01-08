@@ -9,7 +9,7 @@ import (
 // BatchUpdateWidgetsRequest Request Object
 type BatchUpdateWidgetsRequest struct {
 
-	// 待修改的监控视图列表
+	// **参数解释** 待修改的监控视图列表 **约束限制** 包含的监控视图对象个数为[1,50]
 	Body *[]UpdateWidgetInfo `json:"body,omitempty"`
 }
 

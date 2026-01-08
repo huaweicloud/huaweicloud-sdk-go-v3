@@ -533,6 +533,38 @@ func (i *ListAssetListInvoker) Invoke() (*model.ListAssetListResponse, error) {
 	}
 }
 
+type ListAssetTaskInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAssetTaskInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAssetTaskInfoInvoker) Invoke() (*model.ListAssetTaskInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAssetTaskInfoResponse), nil
+	}
+}
+
+type ListCategoryInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCategoryInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCategoryInfoInvoker) Invoke() (*model.ListCategoryInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCategoryInfoResponse), nil
+	}
+}
+
 type ListCdnStatisticsInvoker struct {
 	*invoker.BaseInvoker
 }

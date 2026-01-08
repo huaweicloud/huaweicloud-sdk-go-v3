@@ -18,7 +18,7 @@ type ListTagResourceInstancesRequestBody struct {
 	// 查询记录数（action为count时无此参数）如果action为filter默认为1000，limit最多为1000,不能为负数，最小值为1。
 	Limit *string `json:"limit,omitempty"`
 
-	// 操作标识（仅限于filter，count）：filter（过滤），count(查询总条数) 如果是filter就是分页查询，如果是count只需按照条件将总条数返回即可。
+	// 操作标识： - filter：过滤。 - count：查询总条数。
 	Action ListTagResourceInstancesRequestBodyAction `json:"action"`
 
 	// 搜索字段,key为要匹配的字段，如resource_name等。value为匹配的值。此字段为固定字典值。 根据不同的字段确认是否需要模糊匹配，如resource_name默认为模糊搜索（不区分大小写），如果value为空字符串精确匹配。resource_id为精确匹配。第一期只做resource_name，后续再扩展。

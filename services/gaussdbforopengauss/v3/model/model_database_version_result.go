@@ -9,10 +9,10 @@ import (
 type DatabaseVersionResult struct {
 
 	// **参数解释**： 数据库三位引擎版本。 **取值范围**： 不涉及。
-	SoftwareVersion string `json:"software_version"`
+	SoftwareVersion *string `json:"software_version,omitempty"`
 
 	// **参数解释**： 数据库三位引擎版本对应的热补丁信息。 **取值范围**： 不涉及。
-	Hotfixes []DbHotfixInfoResult `json:"hotfixes"`
+	Hotfixes *[]DbHotfixInfoResult `json:"hotfixes,omitempty"`
 }
 
 func (o DatabaseVersionResult) String() string {

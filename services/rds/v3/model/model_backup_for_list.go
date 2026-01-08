@@ -43,6 +43,9 @@ type BackupForList struct {
 
 	// 是否已被DDM实例关联。
 	AssociatedWithDdm *bool `json:"associated_with_ddm,omitempty"`
+
+	// 该备份源文件大小，用于该备份文件恢复到新实例时需要的最小磁盘空间大小。
+	MinDataVolumeCapacityForRestore *int32 `json:"min_data_volume_capacity_for_restore,omitempty"`
 }
 
 func (o BackupForList) String() string {

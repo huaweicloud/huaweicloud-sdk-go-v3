@@ -32,7 +32,7 @@ type UpdateDomainMultiCertificatesResponseBodyContent struct {
 	// 证书内容。
 	Certificate *string `json:"certificate,omitempty"`
 
-	// 证书类型（0为自有证书 ， 1为托管证书）。
+	// 证书类型。取值意义： - 0：自有证书 - 2：SCM证书
 	CertificateType *int32 `json:"certificate_type,omitempty"`
 
 	// 证书过期时间。

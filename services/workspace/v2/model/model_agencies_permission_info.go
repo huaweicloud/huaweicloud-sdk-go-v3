@@ -14,6 +14,9 @@ type AgenciesPermissionInfo struct {
 
 	// 需要委托的权限项。
 	WantedSystemPermissionDisplayNames *[]string `json:"wanted_system_permission_display_names,omitempty"`
+
+	// 目标委托的权限项。
+	ShouldHaveSystemPermissionDisplayNames *[]string `json:"should_have_system_permission_display_names,omitempty"`
 }
 
 func (o AgenciesPermissionInfo) String() string {

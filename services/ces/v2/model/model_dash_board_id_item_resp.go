@@ -8,7 +8,7 @@ import (
 
 type DashBoardIdItemResp struct {
 
-	// **参数描述**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
+	// **参数解释**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
 	DashboardId *string `json:"dashboard_id,omitempty"`
 }
 

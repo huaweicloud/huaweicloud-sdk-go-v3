@@ -14,7 +14,7 @@ type CreateDesktopPoolAuthorizedObjectsRequestBody struct {
 	// 要授权的用户/用户组。
 	Objects *[]AuthorizedObjects `json:"objects,omitempty"`
 
-	// 执行动作，ADD：增加授权用户/用户组，REMOVE：移除已授权用户/用户组。
+	// 执行动作，ADD：增加授权用户/用户组，REMOVE：移除已授权用户/用户组，CHANGE_PRIVILEGE：修改授权用户/用户组的权限组。
 	Action CreateDesktopPoolAuthorizedObjectsRequestBodyAction `json:"action"`
 }
 
@@ -32,8 +32,9 @@ type CreateDesktopPoolAuthorizedObjectsRequestBodyAction struct {
 }
 
 type CreateDesktopPoolAuthorizedObjectsRequestBodyActionEnum struct {
-	ADD    CreateDesktopPoolAuthorizedObjectsRequestBodyAction
-	REMOVE CreateDesktopPoolAuthorizedObjectsRequestBodyAction
+	ADD              CreateDesktopPoolAuthorizedObjectsRequestBodyAction
+	REMOVE           CreateDesktopPoolAuthorizedObjectsRequestBodyAction
+	CHANGE_PRIVILEGE CreateDesktopPoolAuthorizedObjectsRequestBodyAction
 }
 
 func GetCreateDesktopPoolAuthorizedObjectsRequestBodyActionEnum() CreateDesktopPoolAuthorizedObjectsRequestBodyActionEnum {
@@ -43,6 +44,9 @@ func GetCreateDesktopPoolAuthorizedObjectsRequestBodyActionEnum() CreateDesktopP
 		},
 		REMOVE: CreateDesktopPoolAuthorizedObjectsRequestBodyAction{
 			value: "REMOVE",
+		},
+		CHANGE_PRIVILEGE: CreateDesktopPoolAuthorizedObjectsRequestBodyAction{
+			value: "CHANGE_PRIVILEGE",
 		},
 	}
 }

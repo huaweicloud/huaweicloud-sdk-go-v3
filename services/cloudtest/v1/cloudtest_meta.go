@@ -665,6 +665,38 @@ func GenReqDefForDeleteTestReportCustomDetailByUri() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForDownloadStepImageNew() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/{project_id}/image/{parent}/{sub}/{file_name}/{file_type}").
+		WithResponse(new(model.DownloadStepImageNewResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Parent").
+		WithJsonTag("parent").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Sub").
+		WithJsonTag("sub").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FileName").
+		WithJsonTag("file_name").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FileType").
+		WithJsonTag("file_type").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListAlarmStatisticsUsing() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

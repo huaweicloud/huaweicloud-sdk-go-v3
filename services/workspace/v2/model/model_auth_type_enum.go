@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// AuthTypeEnum 认证类型。 RADIUS_GATEWAY：短信辅助认证 OAUTH2:OAUTH2认证 CLIENT_TOKEN:本地token认证 USER_PASSWORD:密码认证类型
+// AuthTypeEnum 认证类型。 RADIUS_GATEWAY：短信辅助认证 OAUTH2:OAUTH2认证 CLIENT_TOKEN:本地token认证 USER_PASSWORD:密码认证类型 SAML2:SAML 2.0 联邦认证
 type AuthTypeEnum struct {
 	value string
 }
@@ -21,6 +21,7 @@ type AuthTypeEnumEnum struct {
 	CLIENT_TOKEN   AuthTypeEnum
 	USER_PASSWORD  AuthTypeEnum
 	FINGER         AuthTypeEnum
+	SAML2          AuthTypeEnum
 }
 
 func GetAuthTypeEnumEnum() AuthTypeEnumEnum {
@@ -42,6 +43,9 @@ func GetAuthTypeEnumEnum() AuthTypeEnumEnum {
 		},
 		FINGER: AuthTypeEnum{
 			value: "FINGER",
+		},
+		SAML2: AuthTypeEnum{
+			value: "SAML2",
 		},
 	}
 }
