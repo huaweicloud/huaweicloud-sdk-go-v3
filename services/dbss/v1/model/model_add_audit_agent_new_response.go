@@ -9,7 +9,7 @@ import (
 // AddAuditAgentNewResponse Response Object
 type AddAuditAgentNewResponse struct {
 
-	// 操作结果  - SUCCESS: 成功
+	// 操作结果  - SUCCESS：成功
 	Result         *string `json:"result,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

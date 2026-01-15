@@ -9,7 +9,7 @@ import (
 // QueryCompareJobProgressRespFullInfo 行对比与内容对比会返回该字段，全量对比信息。
 type QueryCompareJobProgressRespFullInfo struct {
 
-	// 全量数据对比进度，单位为%。
+	// 增量数据对比进度，单位为%。
 	Progress *float32 `json:"progress,omitempty"`
 
 	// 全量数据对比速率。

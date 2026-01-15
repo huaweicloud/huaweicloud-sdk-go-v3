@@ -8,6 +8,8 @@ import (
 
 // CountDbClientSessionResponse Response Object
 type CountDbClientSessionResponse struct {
+
+	// 客户端会话统计
 	Body           *[]ReportClientSessionNew `json:"body,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }

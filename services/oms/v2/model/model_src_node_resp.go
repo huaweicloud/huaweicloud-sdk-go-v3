@@ -21,7 +21,7 @@ type SrcNodeResp struct {
 	// 源端桶所处的区域。
 	Region *string `json:"region,omitempty"`
 
-	// 当源端为腾讯云时，会返回此参数。
+	// 腾讯云APPID，当源端为腾讯云时，会返回此参数。
 	AppId *string `json:"app_id,omitempty"`
 
 	// 任务类型为对象迁移任务时，表示待迁移对象名称； 任务类型为前缀迁移任务时，表示待迁移前缀。

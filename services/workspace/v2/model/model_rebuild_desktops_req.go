@@ -12,11 +12,16 @@ type RebuildDesktopsReq struct {
 	// 计算机id列表。
 	DesktopIds []string `json:"desktop_ids"`
 
-	// 镜像类型。
+	// 镜像类型 - 公共镜像：gold - 私有镜像：private - 市场镜像：market
 	ImageType string `json:"image_type"`
 
 	// 模板ID。
 	ImageId string `json:"image_id"`
+
+	EncryptType *EncryptType `json:"encrypt_type,omitempty"`
+
+	// 密钥ID，encrypt_type为ENCRYPTED时必传。
+	KmsId *string `json:"kms_id,omitempty"`
 
 	// os类型。
 	OsType *string `json:"os_type,omitempty"`

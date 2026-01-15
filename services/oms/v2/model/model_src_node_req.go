@@ -30,7 +30,7 @@ type SrcNodeReq struct {
 	// 源端桶的临时Token（最大长度16384个字符）
 	SecurityToken *string `json:"security_token,omitempty"`
 
-	// 当源端为腾讯云时，需要填写此参数。
+	// 腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
 	AppId *string `json:"app_id,omitempty"`
 
 	// 源端桶的名称，task_type为非url_list时，本参数为必选。

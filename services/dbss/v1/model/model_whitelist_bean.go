@@ -17,7 +17,7 @@ type WhitelistBean struct {
 	// 描述
 	Desc *string `json:"desc,omitempty"`
 
-	// 状态 - true:启用 - false: 禁用
+	// 状态 - true：启用 - false：禁用
 	Enabled *bool `json:"enabled,omitempty"`
 
 	// 记录ID

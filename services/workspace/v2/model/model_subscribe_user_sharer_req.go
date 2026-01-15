@@ -13,7 +13,7 @@ type SubscribeUserSharerReq struct {
 	UserSharerSku string `json:"user_sharer_sku"`
 
 	// 开通协同的的用户列表。
-	Users []User `json:"users"`
+	Users []SubscribeUserInfo `json:"users"`
 }
 
 func (o SubscribeUserSharerReq) String() string {

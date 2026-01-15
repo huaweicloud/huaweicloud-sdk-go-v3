@@ -13,7 +13,7 @@ type CreateResourcePackageOrderReq struct {
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
 	// 资源包。
-	ResourcePackages []ResourcePackage `json:"resource_packages"`
+	ResourcePackages []DesktopResourcePackage `json:"resource_packages"`
 
 	// 购买资源包数量。
 	ResourceSize *int32 `json:"resource_size,omitempty"`

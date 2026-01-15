@@ -20,7 +20,7 @@ type Actions struct {
 
 	AccessControl *AccessControl `json:"access_control,omitempty"`
 
-	RequestLimitRules *RequestLimitRulesEngine `json:"request_limit_rules,omitempty"`
+	RequestLimitRule *RequestLimitRulesEngine `json:"request_limit_rule,omitempty"`
 
 	OriginRequestUrlRewrite *OriginRequestUrlRewriteEngine `json:"origin_request_url_rewrite,omitempty"`
 
@@ -30,7 +30,7 @@ type Actions struct {
 
 	BrowserCacheRule *BrowserCacheRulesEngine `json:"browser_cache_rule,omitempty"`
 
-	ErrorCodeCache *ErrorCodeCacheEngine `json:"error_code_cache,omitempty"`
+	ErrorCodeCache *[]ErrorCodeCacheEngine `json:"error_code_cache,omitempty"`
 }
 
 func (o Actions) String() string {

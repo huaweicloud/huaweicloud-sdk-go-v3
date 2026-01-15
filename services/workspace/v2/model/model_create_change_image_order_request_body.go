@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -19,7 +22,7 @@ type CreateChangeImageOrderRequestBody struct {
 	PromotionPlanId *string `json:"promotion_plan_id,omitempty"`
 
 	// 处理类型 - ONLY_FOR_EXPAND：仅对新扩容桌面生效 - FOR_EXPAND_AND_IDLE：对新扩容桌面与空闲桌面生效 - FOR_EXPAND_AND_ALL：对新扩容桌面与已有全部桌面生效
-	HandleType *string `json:"handle_type,omitempty"`
+	HandleType *CreateChangeImageOrderRequestBodyHandleType `json:"handle_type,omitempty"`
 
 	// 云市场镜像的specCode，即将停用。image_spec_code与image_id同时存在时取image_id的值，两者不可同时为空。
 	ImageSpecCode *string `json:"image_spec_code,omitempty"`
@@ -35,6 +38,11 @@ type CreateChangeImageOrderRequestBody struct {
 
 	// 下发重建系统盘任务时，给用户发送的提示信息。
 	Message *string `json:"message,omitempty"`
+
+	EncryptType *EncryptType `json:"encrypt_type,omitempty"`
+
+	// 密钥ID，encrypt_type为ENCRYPTED时必传。
+	KmsId *string `json:"kms_id,omitempty"`
 }
 
 func (o CreateChangeImageOrderRequestBody) String() string {
@@ -44,4 +52,55 @@ func (o CreateChangeImageOrderRequestBody) String() string {
 	}
 
 	return strings.Join([]string{"CreateChangeImageOrderRequestBody", string(data)}, " ")
+}
+
+type CreateChangeImageOrderRequestBodyHandleType struct {
+	value string
+}
+
+type CreateChangeImageOrderRequestBodyHandleTypeEnum struct {
+	ONLY_FOR_EXPAND     CreateChangeImageOrderRequestBodyHandleType
+	FOR_EXPAND_AND_IDLE CreateChangeImageOrderRequestBodyHandleType
+	FOR_EXPAND_AND_ALL  CreateChangeImageOrderRequestBodyHandleType
+}
+
+func GetCreateChangeImageOrderRequestBodyHandleTypeEnum() CreateChangeImageOrderRequestBodyHandleTypeEnum {
+	return CreateChangeImageOrderRequestBodyHandleTypeEnum{
+		ONLY_FOR_EXPAND: CreateChangeImageOrderRequestBodyHandleType{
+			value: "ONLY_FOR_EXPAND",
+		},
+		FOR_EXPAND_AND_IDLE: CreateChangeImageOrderRequestBodyHandleType{
+			value: "FOR_EXPAND_AND_IDLE",
+		},
+		FOR_EXPAND_AND_ALL: CreateChangeImageOrderRequestBodyHandleType{
+			value: "FOR_EXPAND_AND_ALL",
+		},
+	}
+}
+
+func (c CreateChangeImageOrderRequestBodyHandleType) Value() string {
+	return c.value
+}
+
+func (c CreateChangeImageOrderRequestBodyHandleType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateChangeImageOrderRequestBodyHandleType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

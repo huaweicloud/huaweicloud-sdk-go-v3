@@ -17,7 +17,7 @@ type EndpointResp struct {
 	// 终端节点方向。 取值： inbound，表示入站终端节点。 outbound，表示出站终端节点。
 	Direction *string `json:"direction,omitempty"`
 
-	// 资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
+	// **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
 	Status *string `json:"status,omitempty"`
 
 	// 终端节点所属的VPC ID。

@@ -14,10 +14,10 @@ type SwitchAuditDbRequest struct {
 	// 数据库ID,可在查询数据库列表接口的ID字段获取。
 	Id string `json:"id"`
 
-	// 开关状态 - ON:开启 - OFF:关闭
+	// 开关状态 - ON：开启 - OFF：关闭
 	Status SwitchAuditDbRequestStatus `json:"status"`
 
-	// 是否关闭LTS审计,DWS数据库场景使用。若用户未选择关闭LTS审计,则不做操作。 - 1 : 是 - 0 或 其它: 保持原状
+	// 是否关闭LTS审计,DWS数据库场景使用。若用户未选择关闭LTS审计,则不做操作。 - 1：是 - 0 或 其它：保持原状
 	LtsAuditSwitch *int32 `json:"lts_audit_switch,omitempty"`
 }
 

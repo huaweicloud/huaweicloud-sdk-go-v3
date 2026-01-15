@@ -12,7 +12,7 @@ type TimelineInfo struct {
 	// 时间轴名称。
 	Name *string `json:"name,omitempty"`
 
-	// 状态。
+	// 状态。 取值：success, failed
 	Status *string `json:"status,omitempty"`
 
 	// 操作时间。

@@ -12,10 +12,10 @@ type ProductInfo struct {
 	// ID标识，同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
 	Id *string `json:"id,omitempty"`
 
-	// 用户购买云服务产品的云服务类型，例如EC2，云服务类型为hws.service.type.ec2。
+	// 用户购买云服务产品的云服务类型，例如EC2，云服务类型为hws.service.type.ec2。 取值：hws.service.type.drs
 	CloudServiceType *string `json:"cloud_service_type,omitempty"`
 
-	// 用户购买云服务产品的资源类型，例如EC2中的VM，资源类型为hws.resource.type.vm。
+	// 用户购买云服务产品的资源类型，例如EC2中的VM，资源类型为hws.resource.type.vm。 hws.resource.type.drs.instance：instance（实例） hws.resource.type.drs.vm：vm（虚机） hws.resource.type.drs.volume：volume（磁盘） dbs.instanceName：instanceName（实例名称--适配DT） hws.resource.type.drs.flow：flow（DRS流量费） dbs.tag：tag（用户标签） dbs.enterpriseProjectId：enterpriseProjectId（企业项目）
 	ResourceType *string `json:"resource_type,omitempty"`
 
 	// 用户购买云服务产品的资源规格，例如VM的小型规格，资源规格为m1.tiny。

@@ -9,10 +9,10 @@ import (
 // ResourceTagInfo 标签信息体
 type ResourceTagInfo struct {
 
-	// 标签键。
+	// 标签键。例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
 	Key *string `json:"key,omitempty"`
 
-	// 标签值。
+	// 标签值。例如键值对{“aaa”:\"bbb\"}的value为\"bbb\"
 	Value *string `json:"value,omitempty"`
 }
 

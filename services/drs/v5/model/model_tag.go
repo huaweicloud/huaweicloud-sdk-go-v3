@@ -9,10 +9,10 @@ import (
 // Tag 标签信息体
 type Tag struct {
 
-	// 标签键。
+	// 标签键。例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
 	Key string `json:"key"`
 
-	// 标签值。
+	// 标签值。例如键值对{“aaa”:[\"bbb\"]}的values为[\"bbb\"]
 	Values []string `json:"values"`
 }
 

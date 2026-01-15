@@ -9,7 +9,7 @@ import (
 // DisableDnssecConfigResponse Response Object
 type DisableDnssecConfigResponse struct {
 
-	// 状态。  取值范围：  DISABLE：关闭
+	// **参数解释：** 状态。 **取值范围：** DISABLE：关闭
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

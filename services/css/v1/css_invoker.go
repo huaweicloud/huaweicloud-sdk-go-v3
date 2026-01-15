@@ -69,6 +69,22 @@ func (i *ChangeSecurityGroupInvoker) Invoke() (*model.ChangeSecurityGroupRespons
 	}
 }
 
+type CloseAiOpsSettingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CloseAiOpsSettingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CloseAiOpsSettingInvoker) Invoke() (*model.CloseAiOpsSettingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CloseAiOpsSettingResponse), nil
+	}
+}
+
 type CreateAgencyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -613,6 +629,38 @@ func (i *RetryUpgradeTaskInvoker) Invoke() (*model.RetryUpgradeTaskResponse, err
 	}
 }
 
+type ShowAiOpsDetectorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAiOpsDetectorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAiOpsDetectorInvoker) Invoke() (*model.ShowAiOpsDetectorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAiOpsDetectorResponse), nil
+	}
+}
+
+type ShowAiOpsSettingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAiOpsSettingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAiOpsSettingInvoker) Invoke() (*model.ShowAiOpsSettingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAiOpsSettingResponse), nil
+	}
+}
+
 type ShowAutoCreatePolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -978,6 +1026,22 @@ func (i *StopVpecpInvoker) Invoke() (*model.StopVpecpResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.StopVpecpResponse), nil
+	}
+}
+
+type UpdateAiOpsSettingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAiOpsSettingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAiOpsSettingInvoker) Invoke() (*model.UpdateAiOpsSettingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAiOpsSettingResponse), nil
 	}
 }
 

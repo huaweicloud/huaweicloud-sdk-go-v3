@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type AvailabilityZoneInfo struct {
+type AvailabilityZone struct {
 
 	// 可用分区编码。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
@@ -29,11 +29,11 @@ type AvailabilityZoneInfo struct {
 	DefaultAvailabilityZone *bool `json:"default_availability_zone,omitempty"`
 }
 
-func (o AvailabilityZoneInfo) String() string {
+func (o AvailabilityZone) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "AvailabilityZoneInfo struct{}"
+		return "AvailabilityZone struct{}"
 	}
 
-	return strings.Join([]string{"AvailabilityZoneInfo", string(data)}, " ")
+	return strings.Join([]string{"AvailabilityZone", string(data)}, " ")
 }

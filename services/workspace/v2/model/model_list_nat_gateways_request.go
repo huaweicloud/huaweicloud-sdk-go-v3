@@ -38,6 +38,9 @@ type ListNatGatewaysRequest struct {
 
 	// 功能说明：每页返回的个数。取值范围：1~2000。默认值：2000。
 	Limit *int32 `json:"limit,omitempty"`
+
+	// 偏移量，默认0。
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListNatGatewaysRequest) String() string {

@@ -21,6 +21,9 @@ type CreateDesktopReq struct {
 	// 套餐ID。
 	ProductId string `json:"product_id"`
 
+	// console页面购买方式。默认值为custom。  - speed：快速购买。 - custom：自定义购买。
+	BuyType *string `json:"buy_type,omitempty"`
+
 	// 镜像类型。默认值为private。  - private：私有镜像。 - gold：公共镜像。
 	ImageType string `json:"image_type"`
 
@@ -36,7 +39,7 @@ type CreateDesktopReq struct {
 	Nics *[]Nic `json:"nics,omitempty"`
 
 	// 桌面使用的安全组，如果不指定则默认使用桌面代理中指定的安全组。
-	SecurityGroups *[]SecurityGroup `json:"security_groups,omitempty"`
+	SecurityGroups *[]SecurityGroupIdInfo `json:"security_groups,omitempty"`
 
 	// 创建桌面使用的参数列表。长度为1-100。
 	Desktops *[]Desktop `json:"desktops,omitempty"`

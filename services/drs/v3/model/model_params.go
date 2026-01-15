@@ -15,13 +15,13 @@ type Params struct {
 	// 参数对比结果
 	CompareResult *ParamsCompareResult `json:"compare_result,omitempty"`
 
-	// 参数类型
+	// 参数类型 figure，string
 	DataType *string `json:"data_type,omitempty"`
 
 	// 分组。 - common-常规参数 - performance-性能参数
 	Group *ParamsGroup `json:"group,omitempty"`
 
-	// 参数名
+	// 参数名 binlog_cache_size，binlog_stmt_cache_size，bulk_insert_buffer_size，character_set_server，collation_server...
 	Key *string `json:"key,omitempty"`
 
 	// 是否需要重启

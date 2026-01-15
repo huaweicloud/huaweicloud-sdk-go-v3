@@ -18,7 +18,7 @@ type ConnectionResp struct {
 	// 连接创建时间，格式为时间戳。
 	CreateTime int64 `json:"create_time"`
 
-	// 连接类型。
+	// 连接类型。 取值：mysql - postgresql - mongodb - oracle
 	DbType string `json:"db_type"`
 
 	Config *ConnectionConfig `json:"config,omitempty"`

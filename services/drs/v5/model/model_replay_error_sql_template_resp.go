@@ -21,10 +21,10 @@ type ReplayErrorSqlTemplateResp struct {
 	// schema名称
 	SchemaName *string `json:"schema_name,omitempty"`
 
-	// SQL类型
+	// SQL类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
 	QueryType *string `json:"query_type,omitempty"`
 
-	// 目标库类型
+	// 目标库类型 取值：mysql,taurusha,sqlserver,postgresql,ddm,mongodb,awsdocumentdb,hwmongodb,hwpostgresql,oracle,taurus,gaussdb,kafka,mrsKafka,cassandra,dynamo,dws,gaussdbv5,gaussdbv5ha,gaussmongodb,multigaussdbv5,dmq,gaussdbt,gaussdbtha,gaussdb300,elasticsearch,db2,tidb,redis,gaussredis,rediscluster,mariadb,oceanbase,informix,gaussdbv1,gausscassandra,geminidynamo,dds,tauruslite
 	TargetType *string `json:"target_type,omitempty"`
 
 	// 归类的SQL数量

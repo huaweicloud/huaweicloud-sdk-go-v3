@@ -15,7 +15,7 @@ type InstInfo struct {
 	// 引擎类型
 	EngineType *InstInfoEngineType `json:"engine_type,omitempty"`
 
-	// 实例类型
+	// 实例类型 取值：common，high，ultrahigh
 	InstType *InstInfoInstType `json:"inst_type,omitempty"`
 
 	// 迁移实例所在的私有IP

@@ -51,7 +51,7 @@ type CreateScheduledTasksReq struct {
 	// 时区。
 	TimeZone *string `json:"time_zone,omitempty"`
 
-	// 任务类型，可选值为： - START：开机。 - STOP：关机。 - REBOOT：重启。 - HIBERNATE：休眠。 - REBUILD：重建系统盘。 - EXECUTE_SCRIPT：执行脚本。 - CREATE_SNAPSHOT：创建快照。
+	// 任务类型，可选值为： - START：开机。 - STOP：关机。 - REBOOT：重启。 - HIBERNATE：休眠。 - REBUILD：重建系统盘。 - EXECUTE_SCRIPT：执行脚本。 - CREATE_SNAPSHOT：创建快照。 - DELETE_BLACK_ECS: 删除黑产ecs
 	TaskType CreateScheduledTasksReqTaskType `json:"task_type"`
 
 	// 任务名称。
@@ -146,13 +146,14 @@ type CreateScheduledTasksReqTaskType struct {
 }
 
 type CreateScheduledTasksReqTaskTypeEnum struct {
-	START           CreateScheduledTasksReqTaskType
-	STOP            CreateScheduledTasksReqTaskType
-	REBOOT          CreateScheduledTasksReqTaskType
-	HIBERNATE       CreateScheduledTasksReqTaskType
-	REBUILD         CreateScheduledTasksReqTaskType
-	EXECUTE_SCRIPT  CreateScheduledTasksReqTaskType
-	CREATE_SNAPSHOT CreateScheduledTasksReqTaskType
+	START            CreateScheduledTasksReqTaskType
+	STOP             CreateScheduledTasksReqTaskType
+	REBOOT           CreateScheduledTasksReqTaskType
+	HIBERNATE        CreateScheduledTasksReqTaskType
+	REBUILD          CreateScheduledTasksReqTaskType
+	EXECUTE_SCRIPT   CreateScheduledTasksReqTaskType
+	CREATE_SNAPSHOT  CreateScheduledTasksReqTaskType
+	DELETE_BLACK_ECS CreateScheduledTasksReqTaskType
 }
 
 func GetCreateScheduledTasksReqTaskTypeEnum() CreateScheduledTasksReqTaskTypeEnum {
@@ -177,6 +178,9 @@ func GetCreateScheduledTasksReqTaskTypeEnum() CreateScheduledTasksReqTaskTypeEnu
 		},
 		CREATE_SNAPSHOT: CreateScheduledTasksReqTaskType{
 			value: "CREATE_SNAPSHOT",
+		},
+		DELETE_BLACK_ECS: CreateScheduledTasksReqTaskType{
+			value: "DELETE_BLACK_ECS",
 		},
 	}
 }

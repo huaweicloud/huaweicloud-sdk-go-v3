@@ -11,9 +11,6 @@ type Product struct {
 	// 产品id。
 	ProductId *string `json:"product_id,omitempty"`
 
-	// 规格ID。
-	FlavorId *string `json:"flavor_id,omitempty"`
-
 	// 产品类型。取值为： BASE：表示产品基础套餐，套餐镜像中不包括除操作系统之外的其他商业软件，私有镜像场景只能使用此类套餐。
 	Type *string `json:"type,omitempty"`
 

@@ -8,6 +8,8 @@ import (
 
 // ListAuditTrendHistoryResponse Response Object
 type ListAuditTrendHistoryResponse struct {
+
+	// 趋势统计数据列表
 	Body           *[]TrendStatusResponse `json:"body,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

@@ -58,6 +58,9 @@ type AdDomain struct {
 
 	// 智能卡证书id。
 	CertificateId *string `json:"certificate_id,omitempty"`
+
+	// 域控制器信息列表。有值时，active_domain_name、active_domain_ip、standby_domain_name、standby_domain_ip无效。
+	DomainControllers *[]DomainController `json:"domain_controllers,omitempty"`
 }
 
 func (o AdDomain) String() string {

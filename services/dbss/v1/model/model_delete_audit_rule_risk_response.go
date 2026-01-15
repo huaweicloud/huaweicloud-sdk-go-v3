@@ -9,7 +9,7 @@ import (
 // DeleteAuditRuleRiskResponse Response Object
 type DeleteAuditRuleRiskResponse struct {
 
-	// 状态  - SUCCESS: 成功  - FAILED: 失败
+	// 状态  - SUCCESS：成功  - FAILED：失败
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -32,6 +32,9 @@ type ListEnterpriseProjectRequest struct {
 
 	// 企业项目状态。 1--启用，2--停用
 	Status *int32 `json:"status,omitempty"`
+
+	// 查询项目类型。 - prod-商用项目 - poc-测试项目
+	Type *ListEnterpriseProjectRequestType `json:"type,omitempty"`
 }
 
 func (o ListEnterpriseProjectRequest) String() string {
@@ -119,6 +122,53 @@ func (c ListEnterpriseProjectRequestSortKey) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ListEnterpriseProjectRequestSortKey) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListEnterpriseProjectRequestType struct {
+	value string
+}
+
+type ListEnterpriseProjectRequestTypeEnum struct {
+	PROD ListEnterpriseProjectRequestType
+	POC  ListEnterpriseProjectRequestType
+}
+
+func GetListEnterpriseProjectRequestTypeEnum() ListEnterpriseProjectRequestTypeEnum {
+	return ListEnterpriseProjectRequestTypeEnum{
+		PROD: ListEnterpriseProjectRequestType{
+			value: "prod",
+		},
+		POC: ListEnterpriseProjectRequestType{
+			value: "poc",
+		},
+	}
+}
+
+func (c ListEnterpriseProjectRequestType) Value() string {
+	return c.value
+}
+
+func (c ListEnterpriseProjectRequestType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListEnterpriseProjectRequestType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

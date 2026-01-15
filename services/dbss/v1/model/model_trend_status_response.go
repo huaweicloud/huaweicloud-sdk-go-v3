@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// TrendStatusResponse 数据库趋势统计
 type TrendStatusResponse struct {
 
 	// 数据库ID
@@ -17,7 +18,7 @@ type TrendStatusResponse struct {
 	// 生成时间
 	GenerateTime *string `json:"generate_time,omitempty"`
 
-	// 统计类型  - RISK: 风险  - SESSION：SESSION  - SQL: SQL  - COUNT: 数量  - INJECTION：注入 - OPERATION: 操作
+	// 统计类型  - RISK：风险  - SESSION：SESSION  - SQL：SQL  - COUNT：数量  - INJECTION：注入 - OPERATION：操作
 	StatisticsType *string `json:"statistics_type,omitempty"`
 }
 

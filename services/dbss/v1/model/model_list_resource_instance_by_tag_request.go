@@ -12,7 +12,7 @@ import (
 // ListResourceInstanceByTagRequest Request Object
 type ListResourceInstanceByTagRequest struct {
 
-	// **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance: 审计  **默认取值**： 不涉及
+	// **参数解释**：  资源类型。 **约束限制**： 不涉及 **取值范围**：  - auditInstance：审计  **默认取值**： 不涉及
 	ResourceType ListResourceInstanceByTagRequestResourceType `json:"resource_type"`
 
 	// **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于10000 **默认取值**： 默认值为1000

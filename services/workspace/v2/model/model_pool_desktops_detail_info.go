@@ -143,6 +143,9 @@ type PoolDesktopsDetailInfo struct {
 
 	HourPackageInfo *HourPackageInfo `json:"hour_package_info,omitempty"`
 
+	// 是否冻结
+	IsFreeze *bool `json:"is_freeze,omitempty"`
+
 	// 桌面与桌面池不一致的规格类型: - PRODUCT: 产品ID不一致 - IMAGE: 镜像ID不一致
 	InconsistentTypes *[]string `json:"inconsistent_types,omitempty"`
 }

@@ -15,13 +15,13 @@ type QueryAvailableNodeTypeReq struct {
 	// 引擎类型
 	EngineType string `json:"engine_type"`
 
-	// 迁移场景，migration-实时迁移,sync-实时同步,cloudDataGuard-实时灾备
+	// 迁移场景 migration实时迁移，sync实时同步，dataGuard实时灾备，subscription实时订阅，replay流量回放
 	DbUseType QueryAvailableNodeTypeReqDbUseType `json:"db_use_type"`
 
 	// 迁移方向，up ：入云 ，灾备场景时对应本云为备，down：出云，灾备场景时对应本云为主，non-dbs：自建
 	JobDirection QueryAvailableNodeTypeReqJobDirection `json:"job_direction"`
 
-	// 规格类型。
+	// 规格类型。 micro：极小，small：小，medium：中，high：高，xlarge：超高，2xlarge：极高
 	NodeType string `json:"node_type"`
 
 	// 是否是双主灾备，不填默认为false

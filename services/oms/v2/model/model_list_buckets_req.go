@@ -24,7 +24,7 @@ type ListBucketsReq struct {
 	// 连接字符串，用于微软云Blob鉴权
 	ConnectionString *string `json:"connection_string,omitempty"`
 
-	// 当源端为腾讯云时，会返回此参数。
+	// 腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
 	AppId *string `json:"app_id,omitempty"`
 }
 

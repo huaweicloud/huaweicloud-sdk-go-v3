@@ -9,14 +9,23 @@ import (
 // BindingVifDetails
 type BindingVifDetails struct {
 
-	// 功能说明：取值为true，表示是虚拟机的主网卡。
+	// 是否为虚拟机的主网卡。
 	PrimaryInterface *bool `json:"primary_interface,omitempty"`
 
-	// 功能说明：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。
+	// 是否提供端口过滤特性, 如安全组和反MAC/IP欺骗。
 	PortFilter *bool `json:"port_filter,omitempty"`
 
-	// 用于通知像nova这样的API消费者，应该使用OVS的混合插入策略。
+	// 是否为ovs/bridge混合模式。
 	OvsHybridPlug *bool `json:"ovs_hybrid_plug,omitempty"`
+
+	// 辅助弹性网卡的vlan ID。
+	VlanId *string `json:"vlan_id,omitempty"`
+
+	// 辅助弹性网卡的宿主网卡ID。
+	ParentId *string `json:"parent_id,omitempty"`
+
+	// 辅助弹性网卡的宿主网卡所属的设备ID。
+	ParentDeviceId *string `json:"parent_device_id,omitempty"`
 }
 
 func (o BindingVifDetails) String() string {

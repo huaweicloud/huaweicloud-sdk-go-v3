@@ -11,7 +11,7 @@ type RdsDbRequestDatabases struct {
 	// rds数据库id，可在查询rds数据库列表接口的ID字段获取。
 	Id string `json:"id"`
 
-	// 数据库类型 - MYSQL: MySQL - ORACLE: Oracle - POSTGRESQL: PostgreSQL - SQLSERVER: SQL Server - DAMENG:  DAMENG - TAURUS: Taurus DB - DWS: GaussDB(DWS) - KINGBASE: Kingbase - MARIADB: MariaDB - GAUSSDBOPENGAUSS: GaussDB/openGauss
+	// 数据库类型 - MYSQL：MySQL - ORACLE：Oracle - POSTGRESQL：PostgreSQL - SQLSERVER：SQL Server - DAMENG：DAMENG - TAURUS：Taurus DB - DWS：GaussDB(DWS) - KINGBASE：Kingbase - MARIADB：MariaDB - GAUSSDBOPENGAUSS：GaussDB/openGauss
 	Type string `json:"type"`
 }
 

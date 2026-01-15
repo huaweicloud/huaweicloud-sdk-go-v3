@@ -44,6 +44,12 @@ type ScheduledTasksRecords struct {
 
 	// 执行定时任务的对象类型，只有定时执行脚本返回。
 	ExecuteObjectType *string `json:"execute_object_type,omitempty"`
+
+	// 到期时间，格式为yyyy-MM-dd HH:mm:ss。
+	ExpireTime *string `json:"expire_time,omitempty"`
+
+	// 扩展参数，json格式。
+	ExtraParams *string `json:"extra_params,omitempty"`
 }
 
 func (o ScheduledTasksRecords) String() string {

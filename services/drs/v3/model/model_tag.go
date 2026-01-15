@@ -9,7 +9,7 @@ import (
 // Tag DRS标签
 type Tag struct {
 
-	// 标签key
+	// 标签key \"key1\" : \"value1\", \"key2\" : \"value2\"
 	Key *string `json:"key,omitempty"`
 
 	// 标签value

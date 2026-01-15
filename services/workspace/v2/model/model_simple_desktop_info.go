@@ -79,6 +79,9 @@ type SimpleDesktopInfo struct {
 
 	// 桌面的连接状态
 	ConnectStatus *string `json:"connect_status,omitempty"`
+
+	// 桌面池id。
+	PoolId *string `json:"pool_id,omitempty"`
 }
 
 func (o SimpleDesktopInfo) String() string {

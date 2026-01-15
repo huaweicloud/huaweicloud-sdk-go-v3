@@ -8,10 +8,10 @@ import (
 
 type AuditSummaryStatusRequest struct {
 
-	// 操作码，operType为switch时必输入  - on: 开启  - off: 关闭
+	// 操作码，operType为switch时必输入  - on：开启  - off：关闭
 	Code *string `json:"code,omitempty"`
 
-	// 操作类型  - switch: 任务开关  - execute: 立即刷新
+	// 操作类型  - switch：任务开关  - execute：立即刷新
 	OperType string `json:"oper_type"`
 
 	// 查询条件：开始时间

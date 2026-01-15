@@ -15,7 +15,7 @@ type DatabaseObjectInfo struct {
 	// type为table或view时需要填写，为库名
 	ParentId *string `json:"parent_id,omitempty"`
 
-	// 类型。
+	// 类型。 table：表名，function：函数，database：SCHEMA，procedure：存储过程
 	Type *string `json:"type,omitempty"`
 
 	// 数据库对象名称，库名、表名、视图名

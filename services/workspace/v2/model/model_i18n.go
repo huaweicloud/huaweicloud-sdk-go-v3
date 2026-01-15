@@ -13,6 +13,12 @@ type I18n struct {
 
 	// 可用分区英语名称。
 	EnUs *string `json:"en_us,omitempty"`
+
+	// 可用分区西班牙语名称。
+	EsUs *string `json:"es_us,omitempty"`
+
+	// 可用分区葡萄牙语名称。
+	PtBr *string `json:"pt_br,omitempty"`
 }
 
 func (o I18n) String() string {

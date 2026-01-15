@@ -12,7 +12,7 @@ import (
 type Cluster struct {
 	ActivateInfo *InstanceActivateInfo `json:"activate_info,omitempty"`
 
-	// 计费模式  - Period: 包周期  - Demand: 按需
+	// 计费模式  - Period：包周期  - Demand：按需
 	ChargeModel *ClusterChargeModel `json:"charge_model,omitempty"`
 
 	// 备注信息
@@ -21,7 +21,7 @@ type Cluster struct {
 	// 创建时间
 	Created *int64 `json:"created,omitempty"`
 
-	// 部署方式  - CLOUD: 云上  - OUTSIDE：云外
+	// 部署方式  - CLOUD：云上  - OUTSIDE：云外
 	DeployMode *ClusterDeployMode `json:"deploy_mode,omitempty"`
 
 	Detail *ServerList `json:"detail,omitempty"`

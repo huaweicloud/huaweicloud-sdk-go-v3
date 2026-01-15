@@ -23,6 +23,9 @@ type ListAppAuthorizationsRequest struct {
 
 	// 类型： * `SIMPLE` - 普通用户 * `USER_GROUP` - 用户组
 	TargetType *string `json:"target_type,omitempty"`
+
+	// 类型： * `ALL_USER` - 所有用户 * `ASSIGN_USER` - 部分用户
+	AssignType *string `json:"assign_type,omitempty"`
 }
 
 func (o ListAppAuthorizationsRequest) String() string {

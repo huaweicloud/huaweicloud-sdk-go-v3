@@ -27,6 +27,9 @@ type DesktopToImageReq struct {
 	// 表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目。取值为UUID，表示属于该UUID对应的企业项目。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
+	// 当不封装镜像时,用此字段来区分是否删除用户信息，默认为false。不删除用户信息：false，删除用户信息：true。
+	IsClearData *bool `json:"is_clear_data,omitempty"`
+
 	// 表示镜像支持的最大内存，单位为MB。
 	MaxRam *string `json:"max_ram,omitempty"`
 

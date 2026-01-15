@@ -24,7 +24,7 @@ type ShowAuditBackRiskTemplateResponse struct {
 	// 配置ID
 	Id *string `json:"id,omitempty"`
 
-	// 状态 - 0: 关闭 - 1：开启
+	// 状态 - 0：关闭 - 1：开启
 	Status         *int32 `json:"status,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

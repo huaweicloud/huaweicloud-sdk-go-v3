@@ -8,6 +8,8 @@ import (
 
 // BatchDeleteResourceTagResponse Response Object
 type BatchDeleteResourceTagResponse struct {
+
+	// 无返回内容
 	Body           *string `json:"body,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

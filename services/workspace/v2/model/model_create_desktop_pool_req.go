@@ -51,7 +51,7 @@ type CreateDesktopPoolReq struct {
 	SubnetIds []string `json:"subnet_ids"`
 
 	// 桌面使用的安全组，如果不指定则默认使用桌面代理中指定的安全组。
-	SecurityGroups *[]SecurityGroup `json:"security_groups,omitempty"`
+	SecurityGroups *[]SecurityGroupIdInfo `json:"security_groups,omitempty"`
 
 	// 要授权的用户/用户组列表。
 	AuthorizedObjects *[]AuthorizedObjects `json:"authorized_objects,omitempty"`

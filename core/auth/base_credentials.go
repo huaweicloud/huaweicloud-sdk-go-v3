@@ -36,7 +36,7 @@ const (
 	securityTokenInHeader             = "X-Security-Token"
 	emptyAk                           = "EMPTY_AK"
 	emptySK                           = "EMPTY_SK"
-	defaultExpirationThresholdSeconds = 2 * 60 * 60 // 2h
+	defaultExpirationThresholdSeconds = 40 * 60     // 40min
 	defaultDurationSeconds            = 6 * 60 * 60 // 6h
 )
 

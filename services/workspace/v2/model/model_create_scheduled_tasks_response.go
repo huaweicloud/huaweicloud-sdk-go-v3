@@ -8,7 +8,10 @@ import (
 
 // CreateScheduledTasksResponse Response Object
 type CreateScheduledTasksResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 任务id。
+	TaskId         *string `json:"task_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o CreateScheduledTasksResponse) String() string {

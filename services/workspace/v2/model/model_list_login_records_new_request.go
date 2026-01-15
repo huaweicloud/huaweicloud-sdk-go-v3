@@ -24,6 +24,12 @@ type ListLoginRecordsNewRequest struct {
 	// 登录桌面的终端系统类型，当前支持：WI（云桌面客户端）。
 	TerminalType *string `json:"terminal_type,omitempty"`
 
+	// 企业项目ID。
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 终端出口IP。
+	PublicIp *string `json:"public_ip,omitempty"`
+
 	// 用于分页查询，查询的起始记录序号，从0开始。
 	Offset *int32 `json:"offset,omitempty"`
 
@@ -35,9 +41,6 @@ type ListLoginRecordsNewRequest struct {
 
 	// 查询端到端时延的最大值。
 	MaxNetworkRtt *int32 `json:"max_network_rtt,omitempty"`
-
-	// 企业项目ID。
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
 func (o ListLoginRecordsNewRequest) String() string {

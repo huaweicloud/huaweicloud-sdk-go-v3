@@ -26,6 +26,9 @@ type VolumeInfo struct {
 
 	// 规格。
 	ResourceSpecCode *string `json:"resource_spec_code,omitempty"`
+
+	// kms密钥Id
+	KmsId *string `json:"kms_id,omitempty"`
 }
 
 func (o VolumeInfo) String() string {

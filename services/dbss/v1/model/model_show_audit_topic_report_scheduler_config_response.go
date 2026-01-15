@@ -10,7 +10,7 @@ import (
 type ShowAuditTopicReportSchedulerConfigResponse struct {
 	Scheduler *SchedulerConfigBase `json:"scheduler,omitempty"`
 
-	// 是否支持订阅  - true: 支持  - false: 不支持\"
+	// 是否支持订阅  - true：支持  - false：不支持
 	SmnEffective   *bool `json:"smn_effective,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }

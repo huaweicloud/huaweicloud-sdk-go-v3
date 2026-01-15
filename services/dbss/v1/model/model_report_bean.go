@@ -20,7 +20,7 @@ type ReportBean struct {
 	// 完成时间
 	FinishTime *string `json:"finish_time,omitempty"`
 
-	// 格式  - pdf: PDF文件  - zip: zip文件
+	// 格式  - pdf：PDF文件  - zip：zip文件
 	Format *string `json:"format,omitempty"`
 
 	// 报表ID
@@ -35,10 +35,10 @@ type ReportBean struct {
 	// 开始时间
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 报表类型 - PDF: pdf - ZIP: zip
+	// 报表类型 - PDF：pdf - ZIP：zip
 	TemplateType *string `json:"template_type,omitempty"`
 
-	// 周期 - AUDIT_REPORT_DAY: 按天 - AUDIT_REPORT_WEEK： 按周 - AUDIT_REPORT_MONTH： 按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
+	// 周期 - AUDIT_REPORT_DAY：按天 - AUDIT_REPORT_WEEK：按周 - AUDIT_REPORT_MONTH：按月 - AUDIT_REPORT_YEAR：按年 - AUDIT_REPORT_REAL_TIME：立即
 	Type *string `json:"type,omitempty"`
 
 	// 地址URL

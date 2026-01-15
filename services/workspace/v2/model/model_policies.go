@@ -33,6 +33,10 @@ type Policies struct {
 	Custom *PoliciesCustom `json:"custom,omitempty"`
 
 	RecordAudit *PoliciesRecordAudit `json:"record_audit,omitempty"`
+
+	CloudStorage *PoliciesCloudStorage `json:"cloud_storage,omitempty"`
+
+	UserProfile *PoliciesUserProfile `json:"user_profile,omitempty"`
 }
 
 func (o Policies) String() string {

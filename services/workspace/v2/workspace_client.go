@@ -2835,7 +2835,7 @@ func (c *WorkspaceClient) BatchAddDesktopsTagsInvoker(request *model.BatchAddDes
 	return &BatchAddDesktopsTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchChangeTags 批量添加删除标签
+// BatchChangeTags 批量添加或删除标签
 //
 // 为指定桌面批量添加或删除标签。创建时，如果创建的标签已经存在（key相同），则覆盖。删除时，如果删除的标签不存在，默认处理成功。
 //
@@ -2850,7 +2850,7 @@ func (c *WorkspaceClient) BatchChangeTags(request *model.BatchChangeTagsRequest)
 	}
 }
 
-// BatchChangeTagsInvoker 批量添加删除标签
+// BatchChangeTagsInvoker 批量添加或删除标签
 func (c *WorkspaceClient) BatchChangeTagsInvoker(request *model.BatchChangeTagsRequest) *BatchChangeTagsInvoker {
 	requestDef := GenReqDefForBatchChangeTags()
 	return &BatchChangeTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2919,9 +2919,9 @@ func (c *WorkspaceClient) DeleteTagInvoker(request *model.DeleteTagRequest) *Del
 	return &DeleteTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListDesktopByTags 使用标签过滤桌面
+// ListDesktopByTags 使用标签过滤桌面（已废弃）
 //
-// 使用标签过滤桌面。
+// 使用标签过滤桌面。该接口已废弃，请使用post /v2/{project_id}/desktops/resource-instances/action
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ListDesktopByTags(request *model.ListDesktopByTagsRequest) (*model.ListDesktopByTagsResponse, error) {
@@ -2934,10 +2934,31 @@ func (c *WorkspaceClient) ListDesktopByTags(request *model.ListDesktopByTagsRequ
 	}
 }
 
-// ListDesktopByTagsInvoker 使用标签过滤桌面
+// ListDesktopByTagsInvoker 使用标签过滤桌面（已废弃）
 func (c *WorkspaceClient) ListDesktopByTagsInvoker(request *model.ListDesktopByTagsRequest) *ListDesktopByTagsInvoker {
 	requestDef := GenReqDefForListDesktopByTags()
 	return &ListDesktopByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDesktopsByTags 使用标签过滤桌面
+//
+// 使用标签过滤桌面。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListDesktopsByTags(request *model.ListDesktopsByTagsRequest) (*model.ListDesktopsByTagsResponse, error) {
+	requestDef := GenReqDefForListDesktopsByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDesktopsByTagsResponse), nil
+	}
+}
+
+// ListDesktopsByTagsInvoker 使用标签过滤桌面
+func (c *WorkspaceClient) ListDesktopsByTagsInvoker(request *model.ListDesktopsByTagsRequest) *ListDesktopsByTagsInvoker {
+	requestDef := GenReqDefForListDesktopsByTags()
+	return &ListDesktopsByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListProjectTags 查询项目标签
@@ -3736,6 +3757,27 @@ func (c *WorkspaceClient) BatchDisassociateDesktopsEip(request *model.BatchDisas
 func (c *WorkspaceClient) BatchDisassociateDesktopsEipInvoker(request *model.BatchDisassociateDesktopsEipRequest) *BatchDisassociateDesktopsEipInvoker {
 	requestDef := GenReqDefForBatchDisassociateDesktopsEip()
 	return &BatchDisassociateDesktopsEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckCidr 校验租户冲突网段
+//
+// 该接口用于校验租户网段是否冲突,返回冲突网段列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CheckCidr(request *model.CheckCidrRequest) (*model.CheckCidrResponse, error) {
+	requestDef := GenReqDefForCheckCidr()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckCidrResponse), nil
+	}
+}
+
+// CheckCidrInvoker 校验租户冲突网段
+func (c *WorkspaceClient) CheckCidrInvoker(request *model.CheckCidrRequest) *CheckCidrInvoker {
+	requestDef := GenReqDefForCheckCidr()
+	return &CheckCidrInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteSubnetBandwidth 删除云办公带宽
@@ -6507,6 +6549,27 @@ func (c *WorkspaceClient) ImportUserListInvoker(request *model.ImportUserListReq
 	return &ImportUserListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListNotificationRecords 查询通知拦截记录
+//
+// 查询通知拦截记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListNotificationRecords(request *model.ListNotificationRecordsRequest) (*model.ListNotificationRecordsResponse, error) {
+	requestDef := GenReqDefForListNotificationRecords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListNotificationRecordsResponse), nil
+	}
+}
+
+// ListNotificationRecordsInvoker 查询通知拦截记录
+func (c *WorkspaceClient) ListNotificationRecordsInvoker(request *model.ListNotificationRecordsRequest) *ListNotificationRecordsInvoker {
+	requestDef := GenReqDefForListNotificationRecords()
+	return &ListNotificationRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListOtpDevicesByUserId 查询OTP设备
 //
 // 该接口用于查询相应用户下面的OTP设备。
@@ -7032,4 +7095,25 @@ func (c *WorkspaceClient) UpdateWorkspace(request *model.UpdateWorkspaceRequest)
 func (c *WorkspaceClient) UpdateWorkspaceInvoker(request *model.UpdateWorkspaceRequest) *UpdateWorkspaceInvoker {
 	requestDef := GenReqDefForUpdateWorkspace()
 	return &UpdateWorkspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ValidateDomainController 校验域控有效性
+//
+// 校验域控有效性。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ValidateDomainController(request *model.ValidateDomainControllerRequest) (*model.ValidateDomainControllerResponse, error) {
+	requestDef := GenReqDefForValidateDomainController()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ValidateDomainControllerResponse), nil
+	}
+}
+
+// ValidateDomainControllerInvoker 校验域控有效性
+func (c *WorkspaceClient) ValidateDomainControllerInvoker(request *model.ValidateDomainControllerRequest) *ValidateDomainControllerInvoker {
+	requestDef := GenReqDefForValidateDomainController()
+	return &ValidateDomainControllerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

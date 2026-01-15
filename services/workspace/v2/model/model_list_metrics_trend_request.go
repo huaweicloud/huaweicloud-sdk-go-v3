@@ -12,14 +12,14 @@ import (
 // ListMetricsTrendRequest Request Object
 type ListMetricsTrendRequest struct {
 
+	// 指标维度 | 目前最大支持3个维度，必须从0开始；维度格式为dim.{i}=key,value，key的最大长度32，value的最大长度为256。 单维度：dim.0=instance_id,6f3c6f91-4b24-4e1b-b7d1-a94ac1cb011d 多维度：dim.0=key,value&dim.1=key,value。
+	Dim *string `json:"dim,omitempty"`
+
 	// 开始时间。
 	StartTime string `json:"start_time"`
 
 	// 结束时间。
 	EndTime string `json:"end_time"`
-
-	// 指标维度 | 目前最大支持3个维度，必须从0开始；维度格式为dim.{i}=key,value，key的最大长度32，value的最大长度为256。 单维度：dim.0=instance_id,6f3c6f91-4b24-4e1b-b7d1-a94ac1cb011d 多维度：dim.0=key,value&dim.1=key,value。
-	Dim *string `json:"dim,omitempty"`
 
 	// 指标名称列表。
 	MetricNames []string `json:"metric_names"`

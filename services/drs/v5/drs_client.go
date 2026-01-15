@@ -453,6 +453,27 @@ func (c *DrsClient) CreateReplicationJobInvoker(request *model.CreateReplication
 	return &CreateReplicationJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteColumnInfos 删除对象的列信息（列映射、列过滤）
+//
+// 删除对象的列信息（列映射、列过滤）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) DeleteColumnInfos(request *model.DeleteColumnInfosRequest) (*model.DeleteColumnInfosResponse, error) {
+	requestDef := GenReqDefForDeleteColumnInfos()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteColumnInfosResponse), nil
+	}
+}
+
+// DeleteColumnInfosInvoker 删除对象的列信息（列映射、列过滤）
+func (c *DrsClient) DeleteColumnInfosInvoker(request *model.DeleteColumnInfosRequest) *DeleteColumnInfosInvoker {
+	requestDef := GenReqDefForDeleteColumnInfos()
+	return &DeleteColumnInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteConnection 删除连接
 //
 // 删除租户指定的连接。
@@ -1089,6 +1110,27 @@ func (c *DrsClient) ListsAgencyPermissionsInvoker(request *model.ListsAgencyPerm
 	return &ListsAgencyPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ModifyColumnInfos 修改对象的列信息（列映射、列过滤）
+//
+// 修改对象的列信息（列映射、列过滤）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ModifyColumnInfos(request *model.ModifyColumnInfosRequest) (*model.ModifyColumnInfosResponse, error) {
+	requestDef := GenReqDefForModifyColumnInfos()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyColumnInfosResponse), nil
+	}
+}
+
+// ModifyColumnInfosInvoker 修改对象的列信息（列映射、列过滤）
+func (c *DrsClient) ModifyColumnInfosInvoker(request *model.ModifyColumnInfosRequest) *ModifyColumnInfosInvoker {
+	requestDef := GenReqDefForModifyColumnInfos()
+	return &ModifyColumnInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ModifyConnection 修改连接
 //
 // 修改创建的连接信息。
@@ -1171,6 +1213,27 @@ func (c *DrsClient) ShowColumnInfoResult(request *model.ShowColumnInfoResultRequ
 func (c *DrsClient) ShowColumnInfoResultInvoker(request *model.ShowColumnInfoResultRequest) *ShowColumnInfoResultInvoker {
 	requestDef := GenReqDefForShowColumnInfoResult()
 	return &ShowColumnInfoResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowColumnInfos 查询对象的列信息（列映射、列过滤）
+//
+// 查询对象的列信息（列映射、列过滤）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowColumnInfos(request *model.ShowColumnInfosRequest) (*model.ShowColumnInfosResponse, error) {
+	requestDef := GenReqDefForShowColumnInfos()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowColumnInfosResponse), nil
+	}
+}
+
+// ShowColumnInfosInvoker 查询对象的列信息（列映射、列过滤）
+func (c *DrsClient) ShowColumnInfosInvoker(request *model.ShowColumnInfosRequest) *ShowColumnInfosInvoker {
+	requestDef := GenReqDefForShowColumnInfos()
+	return &ShowColumnInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowComparePolicy 查询对比策略
@@ -1667,6 +1730,27 @@ func (c *DrsClient) ShowProgressDataInvoker(request *model.ShowProgressDataReque
 	return &ShowProgressDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowReplayProgress 查询录制回放任务进度
+//
+// 查询录制回放任务进度
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowReplayProgress(request *model.ShowReplayProgressRequest) (*model.ShowReplayProgressResponse, error) {
+	requestDef := GenReqDefForShowReplayProgress()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowReplayProgressResponse), nil
+	}
+}
+
+// ShowReplayProgressInvoker 查询录制回放任务进度
+func (c *DrsClient) ShowReplayProgressInvoker(request *model.ShowReplayProgressRequest) *ShowReplayProgressInvoker {
+	requestDef := GenReqDefForShowReplayProgress()
+	return &ShowReplayProgressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowReplayResults 查询录制回放结果
 //
 // 获取录制回放结果数据，包括：回放基于时间维度统计信息，异常SQL及统计结果、慢SQL及统计结果
@@ -1707,6 +1791,27 @@ func (c *DrsClient) ShowReplicationJob(request *model.ShowReplicationJobRequest)
 func (c *DrsClient) ShowReplicationJobInvoker(request *model.ShowReplicationJobRequest) *ShowReplicationJobInvoker {
 	requestDef := GenReqDefForShowReplicationJob()
 	return &ShowReplicationJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSubscriptionLists 查询订阅任务列表
+//
+// 查询订阅任务列表，可以根据企业项目，引擎类型，网络类型，任务状态，任务名称，任务ID进行查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DrsClient) ShowSubscriptionLists(request *model.ShowSubscriptionListsRequest) (*model.ShowSubscriptionListsResponse, error) {
+	requestDef := GenReqDefForShowSubscriptionLists()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSubscriptionListsResponse), nil
+	}
+}
+
+// ShowSubscriptionListsInvoker 查询订阅任务列表
+func (c *DrsClient) ShowSubscriptionListsInvoker(request *model.ShowSubscriptionListsRequest) *ShowSubscriptionListsInvoker {
+	requestDef := GenReqDefForShowSubscriptionLists()
+	return &ShowSubscriptionListsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSupportObjectType 查询是否支持对象选择和列映射

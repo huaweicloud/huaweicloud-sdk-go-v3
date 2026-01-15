@@ -52,6 +52,9 @@ type AdInfo struct {
 
 	// 智能卡证书id。
 	CertificateId *string `json:"certificate_id,omitempty"`
+
+	// 域控制器信息列表。
+	DomainControllers *[]DomainController `json:"domain_controllers,omitempty"`
 }
 
 func (o AdInfo) String() string {

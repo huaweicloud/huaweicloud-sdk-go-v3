@@ -51,7 +51,7 @@ type QueryMetricResult struct {
 	// 事务平均提交时间。
 	ApplyAverageCommitTime *string `json:"apply_average_commit_time,omitempty"`
 
-	// 同步状态。
+	// 同步状态。 succeed：同步成功，failed：同步失败，processing：同步中，waiting：等待中
 	ApplyCurrentState *string `json:"apply_current_state,omitempty"`
 }
 

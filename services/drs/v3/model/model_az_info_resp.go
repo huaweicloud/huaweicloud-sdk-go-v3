@@ -15,7 +15,7 @@ type AzInfoResp struct {
 	// 可用区名称
 	Name *string `json:"name,omitempty"`
 
-	// 可用区状态
+	// 可用区状态，ENABLED：可用，DISABLED：不可用
 	Status *string `json:"status,omitempty"`
 }
 

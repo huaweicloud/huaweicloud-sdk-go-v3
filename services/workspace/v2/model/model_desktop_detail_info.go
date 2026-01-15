@@ -142,6 +142,9 @@ type DesktopDetailInfo struct {
 	RootResourceId *string `json:"root_resource_id,omitempty"`
 
 	HourPackageInfo *HourPackageInfo `json:"hour_package_info,omitempty"`
+
+	// 是否冻结
+	IsFreeze *bool `json:"is_freeze,omitempty"`
 }
 
 func (o DesktopDetailInfo) String() string {

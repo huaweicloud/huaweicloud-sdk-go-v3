@@ -2229,6 +2229,22 @@ func (i *ListDesktopByTagsInvoker) Invoke() (*model.ListDesktopByTagsResponse, e
 	}
 }
 
+type ListDesktopsByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDesktopsByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDesktopsByTagsInvoker) Invoke() (*model.ListDesktopsByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDesktopsByTagsResponse), nil
+	}
+}
+
 type ListProjectTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2834,6 +2850,22 @@ func (i *BatchDisassociateDesktopsEipInvoker) Invoke() (*model.BatchDisassociate
 		return nil, err
 	} else {
 		return result.(*model.BatchDisassociateDesktopsEipResponse), nil
+	}
+}
+
+type CheckCidrInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckCidrInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckCidrInvoker) Invoke() (*model.CheckCidrResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckCidrResponse), nil
 	}
 }
 
@@ -4933,6 +4965,22 @@ func (i *ImportUserListInvoker) Invoke() (*model.ImportUserListResponse, error) 
 	}
 }
 
+type ListNotificationRecordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNotificationRecordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListNotificationRecordsInvoker) Invoke() (*model.ListNotificationRecordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNotificationRecordsResponse), nil
+	}
+}
+
 type ListOtpDevicesByUserIdInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -5330,5 +5378,21 @@ func (i *UpdateWorkspaceInvoker) Invoke() (*model.UpdateWorkspaceResponse, error
 		return nil, err
 	} else {
 		return result.(*model.UpdateWorkspaceResponse), nil
+	}
+}
+
+type ValidateDomainControllerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ValidateDomainControllerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ValidateDomainControllerInvoker) Invoke() (*model.ValidateDomainControllerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ValidateDomainControllerResponse), nil
 	}
 }

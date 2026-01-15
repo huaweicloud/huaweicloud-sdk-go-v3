@@ -21,7 +21,7 @@ type StopJobActionResponse struct {
 	// 任务名称。
 	Name string `json:"name"`
 
-	// 操作结果。
+	// 操作结果。 success，failed
 	Status         string `json:"status"`
 	HttpStatusCode int    `json:"-"`
 }

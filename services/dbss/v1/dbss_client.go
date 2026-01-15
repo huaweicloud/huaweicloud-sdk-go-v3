@@ -195,9 +195,9 @@ func (c *DbssClient) BatchSetAuditAlarmLogStatusInvoker(request *model.BatchSetA
 	return &BatchSetAuditAlarmLogStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BindDbEncryptEip 绑定数据库加密实例的eip
+// BindDbEncryptEip 绑定数据库加密实例的EIP
 //
-// 绑定数据库加密实例的eip
+// 绑定数据库加密实例的EIP
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DbssClient) BindDbEncryptEip(request *model.BindDbEncryptEipRequest) (*model.BindDbEncryptEipResponse, error) {
@@ -210,15 +210,15 @@ func (c *DbssClient) BindDbEncryptEip(request *model.BindDbEncryptEipRequest) (*
 	}
 }
 
-// BindDbEncryptEipInvoker 绑定数据库加密实例的eip
+// BindDbEncryptEipInvoker 绑定数据库加密实例的EIP
 func (c *DbssClient) BindDbEncryptEipInvoker(request *model.BindDbEncryptEipRequest) *BindDbEncryptEipInvoker {
 	requestDef := GenReqDefForBindDbEncryptEip()
 	return &BindDbEncryptEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BindDbOmEip 绑定数据库运维实例的eip
+// BindDbOmEip 绑定数据库运维实例的EIP
 //
-// 绑定数据库运维实例的eip
+// 绑定数据库运维实例的EIP
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DbssClient) BindDbOmEip(request *model.BindDbOmEipRequest) (*model.BindDbOmEipResponse, error) {
@@ -231,7 +231,7 @@ func (c *DbssClient) BindDbOmEip(request *model.BindDbOmEipRequest) (*model.Bind
 	}
 }
 
-// BindDbOmEipInvoker 绑定数据库运维实例的eip
+// BindDbOmEipInvoker 绑定数据库运维实例的EIP
 func (c *DbssClient) BindDbOmEipInvoker(request *model.BindDbOmEipRequest) *BindDbOmEipInvoker {
 	requestDef := GenReqDefForBindDbOmEip()
 	return &BindDbOmEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -512,7 +512,7 @@ func (c *DbssClient) CreateAuditScopeRuleInvoker(request *model.CreateAuditScope
 
 // CreateDbEncryptInstancePeriod 按包周期方式购买数据库加密实例
 //
-// 按需方式购买数据库加密实例
+// 按包周期方式购买数据库加密实例
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DbssClient) CreateDbEncryptInstancePeriod(request *model.CreateDbEncryptInstancePeriodRequest) (*model.CreateDbEncryptInstancePeriodResponse, error) {
@@ -2834,9 +2834,9 @@ func (c *DbssClient) SwitchRiskRuleNewInvoker(request *model.SwitchRiskRuleNewRe
 	return &SwitchRiskRuleNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UnbindDbEncryptEip 解绑数据库加密实例的eip
+// UnbindDbEncryptEip 解绑数据库加密实例的EIP
 //
-// 解绑数据库加密实例的eip
+// 解绑数据库加密实例的EIP
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DbssClient) UnbindDbEncryptEip(request *model.UnbindDbEncryptEipRequest) (*model.UnbindDbEncryptEipResponse, error) {
@@ -2849,15 +2849,15 @@ func (c *DbssClient) UnbindDbEncryptEip(request *model.UnbindDbEncryptEipRequest
 	}
 }
 
-// UnbindDbEncryptEipInvoker 解绑数据库加密实例的eip
+// UnbindDbEncryptEipInvoker 解绑数据库加密实例的EIP
 func (c *DbssClient) UnbindDbEncryptEipInvoker(request *model.UnbindDbEncryptEipRequest) *UnbindDbEncryptEipInvoker {
 	requestDef := GenReqDefForUnbindDbEncryptEip()
 	return &UnbindDbEncryptEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UnbindDbOmEip 解绑数据库运维实例的eip
+// UnbindDbOmEip 解绑数据库运维实例的EIP
 //
-// 解绑数据库运维实例的eip
+// 解绑数据库运维实例的EIP
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DbssClient) UnbindDbOmEip(request *model.UnbindDbOmEipRequest) (*model.UnbindDbOmEipResponse, error) {
@@ -2870,7 +2870,7 @@ func (c *DbssClient) UnbindDbOmEip(request *model.UnbindDbOmEipRequest) (*model.
 	}
 }
 
-// UnbindDbOmEipInvoker 解绑数据库运维实例的eip
+// UnbindDbOmEipInvoker 解绑数据库运维实例的EIP
 func (c *DbssClient) UnbindDbOmEipInvoker(request *model.UnbindDbOmEipRequest) *UnbindDbOmEipInvoker {
 	requestDef := GenReqDefForUnbindDbOmEip()
 	return &UnbindDbOmEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

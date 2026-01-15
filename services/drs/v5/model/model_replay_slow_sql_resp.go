@@ -9,7 +9,7 @@ import (
 // ReplaySlowSqlResp 回放慢SQL数据结果对象
 type ReplaySlowSqlResp struct {
 
-	// SQL语句类型
+	// SQL语句类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
 	ObjectType *string `json:"object_type,omitempty"`
 
 	// SQL语句

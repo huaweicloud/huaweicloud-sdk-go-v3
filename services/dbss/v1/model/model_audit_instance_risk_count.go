@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type AuditInsanceRiskCount struct {
+type AuditInstanceRiskCount struct {
 
 	// 风险数量
 	Count *int64 `json:"count,omitempty"`
@@ -27,11 +27,11 @@ type AuditInsanceRiskCount struct {
 	InstanceName *string `json:"instance_name,omitempty"`
 }
 
-func (o AuditInsanceRiskCount) String() string {
+func (o AuditInstanceRiskCount) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "AuditInsanceRiskCount struct{}"
+		return "AuditInstanceRiskCount struct{}"
 	}
 
-	return strings.Join([]string{"AuditInsanceRiskCount", string(data)}, " ")
+	return strings.Join([]string{"AuditInstanceRiskCount", string(data)}, " ")
 }

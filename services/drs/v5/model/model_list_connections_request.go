@@ -48,7 +48,7 @@ type ListConnectionsRequest struct {
 	// 值为“true”时会使得offset和limit参数失效并返回所有记录。
 	FetchAll *bool `json:"fetch_all,omitempty"`
 
-	// 返回结果按该关键字排序，默认为“created_at”。
+	// 返回结果按该关键字排序，默认为“created_at”。 取值：name，db_type，inst_id，ip，created_at，description，tag_value
 	SortKey *string `json:"sort_key,omitempty"`
 
 	// 降序或升序（分别对应desc和asc，默认为“desc”）。

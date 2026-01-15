@@ -20,7 +20,7 @@ type ResolverRuleParam struct {
 	// 当前规则所属的终端节点ID。
 	EndpointId *string `json:"endpoint_id,omitempty"`
 
-	// 资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
+	// **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_DELETE：删除中 - ERROR：失败
 	Status *string `json:"status,omitempty"`
 
 	// 规则类型。 预留字段，当前默认为FORWARD。

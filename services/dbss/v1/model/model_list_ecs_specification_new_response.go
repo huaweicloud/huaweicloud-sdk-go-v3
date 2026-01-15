@@ -10,7 +10,7 @@ import (
 type ListEcsSpecificationNewResponse struct {
 
 	// ecs规格集合
-	Specification  *[]EcsSpecificationBean `json:"specification,omitempty"`
+	Specifications *[]EcsSpecificationBean `json:"specifications,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }
 

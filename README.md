@@ -225,8 +225,8 @@ the [CHANGELOG.md](https://github.com/huaweicloud/huaweicloud-sdk-go-v3/blob/mas
     * [1.5 Custom Network Connection](#15-custom-network-connection-top)
     * [1.6 Custom HTTP Transport](#16-custom-http-transport-top)
 * [2. Credentials Configuration](#2-credentials-configuration-top)
-  * [2.1 Use Permanent AK&SK](#21-use-permanent-aksk-top)
-  * [2.2 Use Temporary AK&SK](#22-use-temporary-aksk-top)
+  * [2.1 Use Temporary AK&SK](#22-use-temporary-aksk-top)
+  * [2.2 Use Permanent AK&SK](#21-use-permanent-aksk-top)
   * [2.3 Use IdpId&IdTokenFile](#23-use-idpididtokenfile-top)
   * [2.4 Authentication Management](#24-authentication-management-top)
     * [2.4.1 Environment Variables](#241-environment-variables-top)
@@ -379,52 +379,11 @@ For `global` services' authentication, domainId is required to initialize global
 
 The following authentications are supported:
 
-- permanent AK&SK
 - temporary AK&SK + SecurityToken
+- permanent AK&SK
 - IdpId&IdTokenFile
 
-#### 2.1 Use Permanent AK&SK [:top:](#user-manual-top)
-
-**Parameter description**:
-
-- `ak` is the access key ID for your account.
-- `sk` is the secret access key for your account.
-- `projectId` is the ID of your project depending on your region which you want to operate.
-- `domainId` is the account ID of Huawei Cloud.
-
-``` go
-// Regional Services
-ak := os.Getenv("HUAWEICLOUD_SDK_AK")
-sk := os.Getenv("HUAWEICLOUD_SDK_SK")
-projectId := "{your projectId string}"
-
-basicAuth, err := basic.NewCredentialsBuilder().
-    WithAk(ak).
-    WithSk(sk).
-    WithProjectId(projectId).
-    SafeBuild()
-
-// Global Services
-ak := os.Getenv("HUAWEICLOUD_SDK_AK")
-sk := os.Getenv("HUAWEICLOUD_SDK_SK")
-domainId := "{your domainId string}"
-
-globalAuth, err := global.NewCredentialsBuilder().
-    WithAk(ak).
-    WithSk(sk).
-    WithDomainId(domainId).
-    SafeBuild()
-```
-
-**Notice**:
-
-- projectId/domainId supports **automatic acquisition** in version `0.0.26-beta` or later, if you want to use this
-  feature, you need to provide the ak and sk of your account and the id of the region, and then build your client
-  instance with method `WithRegion()`, detailed example could refer
-  to [3.2  Initialize client with specified Region](#32-initialize-the-serviceclient-with-specified-region-recommended-top)
-  .
-
-#### 2.2 Use Temporary AK&SK [:top:](#user-manual-top)
+#### 2.1 Use Temporary AK&SK [:top:](#user-manual-top)
 
 It's required to obtain temporary AK&SK and security token first, which could be obtained through
 permanent AK&SK or through an agency.A temporary access key and securityToken are issued by the system to IAM users, and can be valid for 15 minutes to 24 hours.
@@ -473,20 +432,48 @@ globalAuth, err := global.NewCredentialsBuilder().
     SafeBuild()
 ```
 
-In the following two cases, the temporary AK/SK and securitytoken will be obtained from the **metadata of the instance**:
+#### 2.2 Use Permanent AK&SK [:top:](#user-manual-top)
 
-1. basic.Credentials or global.Credentials were not explicitly specified when creating the client.
-2. AK/SK was not explicitly specified when creating basic.Credentials or global.Credentials.
+> ⚠️The Huawei Cloud main account is for administrators and has full access to resources and cloud services. If the AK and SK are leaked, it will pose a significant information security risk to the system; therefore, their use is not recommended. 
+> It is recommended to use the AK and SK of a minimally authorized IAM user. For details about how to use IAM securely, please refer to the [Best Practices for Using IAM](https://support.huaweicloud.com/intl/en-us/bestpractice-iam/iam_0426.html).
 
-Refer to the [Obtaining Metadata](https://support.huaweicloud.com/intl/en-us/usermanual-ecs/ecs_03_0166.html) for more information.
+**Parameter description**:
 
-```go
+- `ak` is the access key ID for your account.
+- `sk` is the secret access key for your account.
+- `projectId` is the ID of your project depending on your region which you want to operate.
+- `domainId` is the account ID of Huawei Cloud.
+
+``` go
 // Regional Services
-basicAuth, err := basic.NewCredentialsBuilder().WithProjectId(projectId).SafeBuild()
+ak := os.Getenv("HUAWEICLOUD_SDK_AK")
+sk := os.Getenv("HUAWEICLOUD_SDK_SK")
+projectId := "{your projectId string}"
+
+basicAuth, err := basic.NewCredentialsBuilder().
+    WithAk(ak).
+    WithSk(sk).
+    WithProjectId(projectId).
+    SafeBuild()
 
 // Global Services
-globalAuth, err := global.NewCredentialsBuilder().WithDomainId(domainId).SafeBuild()
+ak := os.Getenv("HUAWEICLOUD_SDK_AK")
+sk := os.Getenv("HUAWEICLOUD_SDK_SK")
+domainId := "{your domainId string}"
+
+globalAuth, err := global.NewCredentialsBuilder().
+    WithAk(ak).
+    WithSk(sk).
+    WithDomainId(domainId).
+    SafeBuild()
 ```
+
+**Notice**:
+
+- projectId/domainId supports **automatic acquisition** in version `0.0.26-beta` or later, if you want to use this
+  feature, you need to provide the ak and sk of your account and the id of the region, and then build your client
+  instance with method `WithRegion()`, detailed example could refer
+  to [3.2  Initialize client with specified Region](#32-initialize-the-serviceclient-with-specified-region-recommended-top).
 
 #### 2.3 Use IdpId&IdTokenFile [:top:](#user-manual-top)
 

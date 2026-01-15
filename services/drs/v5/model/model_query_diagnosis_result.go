@@ -12,7 +12,7 @@ type QueryDiagnosisResult struct {
 	// 得分。
 	Score *int32 `json:"score,omitempty"`
 
-	// 状态。
+	// 状态。 INIT：初始化，RUNNING：诊断中，SUCCESS：诊断完成，FAILED：诊断失败
 	Status *string `json:"status,omitempty"`
 
 	// 进度。

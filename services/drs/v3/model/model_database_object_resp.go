@@ -12,7 +12,7 @@ type DatabaseObjectResp struct {
 	// 任务ID
 	JobId *string `json:"job_id,omitempty"`
 
-	// 选择对象任务成功标志
+	// 选择对象任务成功标志：true，false
 	Status *bool `json:"status,omitempty"`
 
 	// 错误码

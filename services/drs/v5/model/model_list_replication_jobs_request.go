@@ -45,7 +45,7 @@ type ListReplicationJobsRequest struct {
 	// 偏移量，默认值为0，表示查询该偏移量后面的记录。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 排序字段。
+	// 排序字段。 取值：name，db_type，inst_id，ip，created_at，description，tag_value
 	SortKey *string `json:"sort_key,omitempty"`
 
 	// 排序方法。

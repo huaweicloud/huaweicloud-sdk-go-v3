@@ -9,7 +9,7 @@ import (
 // SetAuditAlarmLogStatusResponse Response Object
 type SetAuditAlarmLogStatusResponse struct {
 
-	// 请求结果  - request_success: 成功
+	// 请求结果  - request_success：成功
 	Result         *string `json:"result,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

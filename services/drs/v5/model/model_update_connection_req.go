@@ -12,7 +12,7 @@ type UpdateConnectionReq struct {
 	// 连接名称。
 	Name *string `json:"name,omitempty"`
 
-	// 数据库类型。
+	// 数据库类型。 取值：mysql - postgresql - mongodb - oracle
 	DbType *string `json:"db_type,omitempty"`
 
 	Config *ConnectionConfig `json:"config,omitempty"`

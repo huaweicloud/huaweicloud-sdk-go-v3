@@ -29,7 +29,7 @@ type ChargeOrderDbssNew struct {
 	// 组合套餐
 	CompositeProductId *string `json:"composite_product_id,omitempty"`
 
-	// 实例部署方式，默认为云上 - CLOUD： 云上 - OUTSIDE：云外
+	// 实例部署方式，默认为云上 - CLOUD：云上 - OUTSIDE：云外
 	DeployMode string `json:"deploy_mode"`
 
 	// 折扣ID

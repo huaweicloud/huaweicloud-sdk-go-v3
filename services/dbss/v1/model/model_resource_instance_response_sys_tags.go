@@ -8,10 +8,10 @@ import (
 
 type ResourceInstanceResponseSysTags struct {
 
-	// 键
+	// 键。最大长度128个字符。
 	Key *string `json:"key,omitempty"`
 
-	// 值
+	// 值。每个值最大长度255个字符。
 	Value *string `json:"value,omitempty"`
 }
 

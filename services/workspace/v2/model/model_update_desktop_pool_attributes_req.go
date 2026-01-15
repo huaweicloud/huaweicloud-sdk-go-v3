@@ -50,7 +50,7 @@ type UpdateDesktopPoolAttributesReq struct {
 	SubnetIds *[]string `json:"subnet_ids,omitempty"`
 
 	// 桌面使用的安全组，如果不指定则默认使用桌面代理中指定的安全组
-	SecurityGroups *[]SecurityGroup `json:"security_groups,omitempty"`
+	SecurityGroups *[]SecurityGroupIdInfo `json:"security_groups,omitempty"`
 
 	// 企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`

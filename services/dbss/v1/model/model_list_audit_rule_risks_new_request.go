@@ -20,6 +20,12 @@ type ListAuditRuleRisksNewRequest struct {
 
 	// **参数解释**： 实例前端是否支持按数据库类型展示风险规则 **约束限制**： 以取值范围为准 **取值范围**： - true: 支持 - false: 不支持 **默认取值**： false: 不支持
 	SupportDbClassifyRule *bool `json:"support_db_classify_rule,omitempty"`
+
+	// **参数解释**： 分页偏移量，从第一条数据偏移offset条数据后开始查询 **约束限制**： 仅支持大于等于0的整数 **取值范围**： 大于等于0 **默认取值**： 默认值为0
+	Offset *string `json:"offset,omitempty"`
+
+	// **参数解释**： 每页查询记录数。 **约束限制**： 仅支持大于0的整数 **取值范围**： 大于0小于等于1000 **默认取值**： 默认值为100
+	Limit *string `json:"limit,omitempty"`
 }
 
 func (o ListAuditRuleRisksNewRequest) String() string {

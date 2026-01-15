@@ -18,7 +18,7 @@ type TuningParameter struct {
 	// 是否可用。
 	Availability *string `json:"availability,omitempty"`
 
-	// 参数取值范围。
+	// 参数范围。
 	Range *string `json:"range,omitempty"`
 }
 

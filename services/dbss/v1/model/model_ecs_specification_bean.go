@@ -14,7 +14,7 @@ type EcsSpecificationBean struct {
 	// 规格ID
 	Id string `json:"id"`
 
-	// 规格等级，支持的等级以局点配置为准。 - entry:入门版 - low:基础版 - medium:专业版 - high:高级版
+	// 规格等级，支持的等级以局点配置为准。 - entry：入门版 - low：基础版 - medium：专业版 - high：高级版
 	Level string `json:"level"`
 
 	// 规格名称
@@ -29,7 +29,7 @@ type EcsSpecificationBean struct {
 	// CPU
 	Vcpus int32 `json:"vcpus"`
 
-	// 可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
+	// 可用区类型 - DEDICATED：大网 - DEC：边缘小站 - EDGE：专属
 	AzType *string `json:"az_type,omitempty"`
 }
 

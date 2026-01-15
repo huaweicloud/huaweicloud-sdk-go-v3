@@ -9,7 +9,7 @@ import (
 // ChangeDbEncryptSecurityGroupResponse Response Object
 type ChangeDbEncryptSecurityGroupResponse struct {
 
-	// - 0: 正常 - 非0: 异常
+	// - 0：正常 - 非0：异常
 	Code *int32 `json:"code,omitempty"`
 
 	// 备注

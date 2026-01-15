@@ -13,7 +13,7 @@ type ShowSyncTaskRequest struct {
 	SyncTaskId string `json:"sync_task_id"`
 
 	// 查询同步任务详情的时间（毫秒），依据该值返回所在月份的统计数据。
-	QueryTime string `json:"query_time"`
+	QueryTime int64 `json:"query_time"`
 }
 
 func (o ShowSyncTaskRequest) String() string {

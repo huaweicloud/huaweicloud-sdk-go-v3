@@ -12,7 +12,7 @@ type ShowDbObjectTemplateProgressResponse struct {
 	// 是否上传完成。
 	SendSuccess *bool `json:"send_success,omitempty"`
 
-	// 文件解析状态。
+	// 文件解析状态。 取值：success，failed
 	ProcessStatus *string `json:"process_status,omitempty"`
 
 	// 解析成功的行数。

@@ -24,7 +24,7 @@ type ListCustomLineRequest struct {
 	// 是否查询详细信息。  取值范围：  true：是，查询详细信息。 false：否，不查询详细信息。 默认为true。
 	ShowDetail *bool `json:"show_detail,omitempty"`
 
-	// 资源状态。
+	// **参数解释：** 资源状态。 **约束限制：** 不涉及。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ERROR：失败  **默认取值：** 不涉及。
 	Status *string `json:"status,omitempty"`
 
 	// IP地址范围。

@@ -13,9 +13,6 @@ type ImportCertificatePemReq struct {
 	// 密钥对生成算法 RSA-2048 RSA-3072。
 	KeyAlgorithm string `json:"key_algorithm"`
 
-	// 签名哈希算法 SHA-256 SHA-512。
-	SignatureAlgorithm string `json:"signature_algorithm"`
-
 	// 事务id。
 	TransactionId *string `json:"transaction_id,omitempty"`
 

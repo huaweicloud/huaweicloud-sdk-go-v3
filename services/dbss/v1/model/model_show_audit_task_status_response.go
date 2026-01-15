@@ -12,7 +12,7 @@ type ShowAuditTaskStatusResponse struct {
 	// 开始时间
 	BeginTime *int64 `json:"begin_time,omitempty"`
 
-	// 业务类型  - audit: 审计  - risk: 风险
+	// 业务类型  - audit：审计  - risk：风险
 	BusiType *string `json:"busi_type,omitempty"`
 
 	// 已统计实例数

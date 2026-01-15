@@ -20,6 +20,11 @@ type AttachInstancesReq struct {
 
 	// 策略id，用于指定生成桌面名称策略，如果指定了桌面名称则优先使用指定的桌面名称。
 	DesktopNamePolicyId *string `json:"desktop_name_policy_id,omitempty"`
+
+	EncryptType *EncryptType `json:"encrypt_type,omitempty"`
+
+	// 密钥ID，encrypt_type为ENCRYPTED时必传。
+	KmsId *string `json:"kms_id,omitempty"`
 }
 
 func (o AttachInstancesReq) String() string {

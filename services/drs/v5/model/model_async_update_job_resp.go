@@ -15,7 +15,7 @@ type AsyncUpdateJobResp struct {
 	// 任务名称。
 	Name string `json:"name"`
 
-	// 操作结果。
+	// 操作结果。 取值：success，failed
 	Status string `json:"status"`
 
 	// 错误码。

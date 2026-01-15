@@ -18,8 +18,8 @@ type CheckEdgeSiteResourcesReq struct {
 	// 需要的资源数量。
 	ResourceCounts *int32 `json:"resource_counts,omitempty"`
 
-	// 磁盘列表。
-	Volumes *[]Volume `json:"volumes,omitempty"`
+	// 磁盘列表。包含系统盘。
+	Volumes *[]CheckEdgeSiteResourcesVolume `json:"volumes,omitempty"`
 }
 
 func (o CheckEdgeSiteResourcesReq) String() string {

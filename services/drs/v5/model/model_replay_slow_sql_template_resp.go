@@ -21,7 +21,7 @@ type ReplaySlowSqlTemplateResp struct {
 	// schema名称
 	SchemaName *string `json:"schema_name,omitempty"`
 
-	// SQL类型
+	// SQL类型 取值：SELECT, INSERT, DELETE, UPDATE, DDL
 	QueryType *string `json:"query_type,omitempty"`
 
 	// SQL执行最小耗时

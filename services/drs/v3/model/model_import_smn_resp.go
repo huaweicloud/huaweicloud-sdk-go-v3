@@ -12,7 +12,7 @@ type ImportSmnResp struct {
 	// 任务ID
 	Id *string `json:"id,omitempty"`
 
-	// 状态
+	// 状态 取值：success，failed
 	Status *string `json:"status,omitempty"`
 
 	// 错误码

@@ -1034,6 +1034,27 @@ func (c *DnsClient) ListEndpointsInvoker(request *model.ListEndpointsRequest) *L
 	return &ListEndpointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInstances 批量查询DNS解析量统计相关的资源
+//
+// 批量查询DNS解析量统计相关的资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DnsClient) ListInstances(request *model.ListInstancesRequest) (*model.ListInstancesResponse, error) {
+	requestDef := GenReqDefForListInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstancesResponse), nil
+	}
+}
+
+// ListInstancesInvoker 批量查询DNS解析量统计相关的资源
+func (c *DnsClient) ListInstancesInvoker(request *model.ListInstancesRequest) *ListInstancesInvoker {
+	requestDef := GenReqDefForListInstances()
+	return &ListInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListLineGroups 查询线路分组列表
 //
 // 查询线路分组列表。该接口部分区域未上线，如需使用请提交工单申请开通。

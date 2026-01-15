@@ -20,13 +20,13 @@ type AlarmLogResponseNewAlarmLog struct {
 	// 告警发生时间
 	AlarmTime *string `json:"alarm_time,omitempty"`
 
-	// 告警类型 - RISK_RULE: 风险规则 - RISK_CPU: CPU超限 - RISK_MEMORY: 内存超限 - RISK_DISK: 磁盘超限 - RISK_DISK_CAPACITY: 磁盘容量不足六个月 - RISK_BACKUP: 备份失败 - AUDIT_QPS_OVERFLOW: 流量超限入库延迟告警 - RISK_AGENT: Agent异常 - AUDIT_BACKUP_FAILED: 实例备份失败(运维侧)
+	// 告警类型 - RISK_RULE：风险规则 - RISK_CPU：CPU超限 - RISK_MEMORY：内存超限 - RISK_DISK：磁盘超限 - RISK_DISK_CAPACITY：磁盘容量不足六个月 - RISK_BACKUP：备份失败 - AUDIT_QPS_OVERFLOW：流量超限入库延迟告警 - RISK_AGENT：Agent异常 - AUDIT_BACKUP_FAILED：实例备份失败(运维侧)
 	AlarmType *string `json:"alarm_type,omitempty"`
 
 	// 告警恢复时间
 	AlarmFixTime *string `json:"alarm_fix_time,omitempty"`
 
-	// 告警确认状态 - DONE: 已确认 - UNDO: 未确认
+	// 告警确认状态 - DONE：已确认 - UNDO：未确认
 	AlarmStatus *string `json:"alarm_status,omitempty"`
 
 	// 告警风险等级 - LOW：低 - MEDIUM：中 - HIGH：高

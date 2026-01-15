@@ -17,7 +17,7 @@ type RuleScopeInfo struct {
 	// 审计范围动作
 	Action *string `json:"action,omitempty"`
 
-	// 审计范围规则状态 - OFF：禁用  - ON: 启用
+	// 审计范围规则状态 - OFF：禁用  - ON：启用
 	Status *string `json:"status,omitempty"`
 
 	// 审计范围例外IP

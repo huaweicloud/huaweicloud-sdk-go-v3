@@ -741,6 +741,22 @@ func (i *ListEndpointsInvoker) Invoke() (*model.ListEndpointsResponse, error) {
 	}
 }
 
+type ListInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstancesInvoker) Invoke() (*model.ListInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstancesResponse), nil
+	}
+}
+
 type ListLineGroupsInvoker struct {
 	*invoker.BaseInvoker
 }

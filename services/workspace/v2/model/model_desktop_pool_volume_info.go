@@ -19,6 +19,9 @@ type DesktopPoolVolumeInfo struct {
 
 	// 吞吐量，磁盘每秒成功传送的数据量，即读取和写入的数据量。
 	Throughput *int32 `json:"throughput,omitempty"`
+
+	// kms密钥id。变更密钥是传入密钥id；如需删除密钥则传入空字符串；默认null，不变更密钥。
+	KmsId *string `json:"kms_id,omitempty"`
 }
 
 func (o DesktopPoolVolumeInfo) String() string {

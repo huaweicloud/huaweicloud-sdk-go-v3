@@ -12,7 +12,7 @@ type RetryTaskResp struct {
 	// 任务id
 	Id string `json:"id"`
 
-	// 状态
+	// 状态：success，failed
 	Status string `json:"status"`
 
 	// 错误码

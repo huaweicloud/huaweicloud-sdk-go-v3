@@ -24,7 +24,7 @@ type UpdateCustomLineResponse struct {
 	// 更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS。
 	UpdatedAt *string `json:"updated_at,omitempty"`
 
-	// 资源状态。
+	// **参数解释：** 资源状态。 **取值范围：** - ACTIVE：正常 - PENDING_CREATE：创建中 - PENDING_UPDATE：更新中 - PENDING_DELETE：删除中 - PENDING_FREEZE：冻结中 - FREEZE：冻结 - ERROR：失败
 	Status *string `json:"status,omitempty"`
 
 	// 自定义线路的描述信息。

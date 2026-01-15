@@ -8,7 +8,7 @@ import (
 
 // ExportUsersNewRequest Request Object
 type ExportUsersNewRequest struct {
-	Body *ExportUsersV3Req `json:"body,omitempty"`
+	Body *ExportUsersNewReq `json:"body,omitempty"`
 }
 
 func (o ExportUsersNewRequest) String() string {

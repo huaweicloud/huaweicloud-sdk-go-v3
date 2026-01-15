@@ -21,7 +21,7 @@ type ReplayingSqlResp struct {
 	// 回放执行耗时
 	ExecuteLatency *int32 `json:"execute_latency,omitempty"`
 
-	// 执行状态
+	// 执行状态 取值：INIT，RUNNING，FAILED，PAUSE，SUCCESS，FINISHED
 	Status *string `json:"status,omitempty"`
 
 	// 客户端IP

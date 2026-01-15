@@ -12,7 +12,7 @@ type ShowReplicationJobResponse struct {
 	// 任务ID。
 	Id *string `json:"id,omitempty"`
 
-	// 任务状态。
+	// 任务状态。取值：success，failed
 	Status *string `json:"status,omitempty"`
 
 	// 任务创建时间。

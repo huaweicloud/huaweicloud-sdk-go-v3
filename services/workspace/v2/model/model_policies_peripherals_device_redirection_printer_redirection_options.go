@@ -20,6 +20,9 @@ type PoliciesPeripheralsDeviceRedirectionPrinterRedirectionOptions struct {
 
 	// 通用打印机驱动。取值为：Default：linux客户端选择Universal Printing PS，windows客户端选择HDP XPSDrv Driver。HDP XPSDrv Driver。Universal Printing PCL 5。Universal Printing PCL 6。Universal Printing PS。
 	UniversalPrinterDriver *string `json:"universal_printer_driver,omitempty"`
+
+	// 是否开启使用端侧网络连接网络打印机开关。取值为： false：表示关闭。 true：表示开启。
+	NetworkRedirectPrinterEnable *bool `json:"network_redirect_printer_enable,omitempty"`
 }
 
 func (o PoliciesPeripheralsDeviceRedirectionPrinterRedirectionOptions) String() string {

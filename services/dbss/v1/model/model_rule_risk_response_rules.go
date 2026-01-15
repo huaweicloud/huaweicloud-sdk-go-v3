@@ -20,7 +20,7 @@ type RuleRiskResponseRules struct {
 	// 风险规则特征
 	Feature *string `json:"feature,omitempty"`
 
-	// 风险规则状态。 - ON: 开启 - OFF: 关闭
+	// 风险规则状态。 - ON：开启 - OFF：关闭
 	Status string `json:"status"`
 
 	// 风险规则优先级。数字越小优先级越高。
@@ -29,7 +29,7 @@ type RuleRiskResponseRules struct {
 	// 风险级别 - LOW：低 - MEDIUM：中 - HIGH：高 - NO_RISK：无风险
 	RiskLevel *string `json:"risk_level,omitempty"`
 
-	// 规则类型 - SYSTEM: 系统  - CUSTOMIZE: 自定义
+	// 规则类型 - SYSTEM：系统  - CUSTOMIZE：自定义
 	RuleType *string `json:"rule_type,omitempty"`
 }
 

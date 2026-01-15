@@ -16,7 +16,7 @@ type DetachInstancesDesktopInfo struct {
 	IsDetachAllUsers *bool `json:"is_detach_all_users,omitempty"`
 
 	// 解分配的用户信息列表。
-	DetachUserInfos *[]AttachInstancesUserInfo `json:"detach_user_infos,omitempty"`
+	DetachUserInfos *[]DetachInstancesUserInfo `json:"detach_user_infos,omitempty"`
 }
 
 func (o DetachInstancesDesktopInfo) String() string {

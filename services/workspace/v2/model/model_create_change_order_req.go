@@ -9,14 +9,17 @@ import (
 // CreateChangeOrderReq 创建变更订单请求体。
 type CreateChangeOrderReq struct {
 
-	// 类型 resizeDesktops(变更规格)、expandVolumes(扩容磁盘)。
+	// 类型 resizeDesktops(变更规格)、expandVolumes(扩容磁盘)、meteredToPeriod(按需转包周期)。
 	Type string `json:"type"`
 
-	// 周期类型，2：包月；3：包年。
+	// 周期类型，2：包月；3：包年； type为 meteredToPeriod 并且 is_subscribe == true 时不能为空。
 	PeriodType *int32 `json:"period_type,omitempty"`
 
-	// 周期数。
+	// 周期数；type为 meteredToPeriod 并且 is_subscribe == true 时不能为空。
 	PeriodNum *int32 `json:"period_num,omitempty"`
+
+	// 是否自动续费 *  按需转包周期场景支持自动续费； *  0：不自动续费，1：自动续费； *  默认值为0，表示不自动续费；
+	IsAutoRenew *int32 `json:"is_auto_renew,omitempty"`
 
 	// 变更后规格产品ID，当是resizeDesktops，必传。
 	ResizeProductId *string `json:"resize_product_id,omitempty"`

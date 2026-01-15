@@ -10,7 +10,7 @@ import (
 type ListSubnetsResponse struct {
 
 	// 子网列表。
-	Subnets *[]SubnetInfo `json:"subnets,omitempty"`
+	Subnets *[]SingleSubnetInfo `json:"subnets,omitempty"`
 
 	// 子网数量。
 	SubnetSize     *int32 `json:"subnet_size,omitempty"`

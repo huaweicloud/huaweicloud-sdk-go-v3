@@ -29,6 +29,12 @@ type ShowDirtyDataRequest struct {
 
 	// 每页显示的条目数量。默认为10，取值范围【1-1000】
 	Limit *int32 `json:"limit,omitempty"`
+
+	// 是否脱敏。
+	AnonymizeMode *bool `json:"anonymize_mode,omitempty"`
+
+	// 查询任务阶段信息，不传默认查增量阶段信息。 - FULL_TRANSFER，全量阶段
+	TaskMode *string `json:"task_mode,omitempty"`
 }
 
 func (o ShowDirtyDataRequest) String() string {

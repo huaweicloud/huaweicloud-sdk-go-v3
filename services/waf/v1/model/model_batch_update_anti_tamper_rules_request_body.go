@@ -8,6 +8,9 @@ import (
 
 type BatchUpdateAntiTamperRulesRequestBody struct {
 
+	// **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	Name *string `json:"name,omitempty"`
+
 	// 防护网站，查询云模式防护域名列表（ListHost）接口获取防护域名，响应体中的的hostname字段
 	Hostname string `json:"hostname"`
 

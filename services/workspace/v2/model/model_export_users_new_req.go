@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type ExportUsersV3Req struct {
+type ExportUsersNewReq struct {
 
 	// 桌面用户名，长度范围为1-20，不能包含特殊字符，不能以数字开头。支持模糊查询导出。
 	UserName *string `json:"user_name,omitempty"`
@@ -24,11 +24,11 @@ type ExportUsersV3Req struct {
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }
 
-func (o ExportUsersV3Req) String() string {
+func (o ExportUsersNewReq) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "ExportUsersV3Req struct{}"
+		return "ExportUsersNewReq struct{}"
 	}
 
-	return strings.Join([]string{"ExportUsersV3Req", string(data)}, " ")
+	return strings.Join([]string{"ExportUsersNewReq", string(data)}, " ")
 }

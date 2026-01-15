@@ -15,7 +15,7 @@ type CompareJobInfo struct {
 	// 对比任务ID。
 	Id *string `json:"id,omitempty"`
 
-	// 对比类型。
+	// 对比类型。 object：对象对比，lines：行对比，contents：内容对比
 	Type *string `json:"type,omitempty"`
 
 	// 开始时间。
@@ -27,10 +27,10 @@ type CompareJobInfo struct {
 	// 对比任务的状态。取值： - RUNNING：运行中。 - WAITING_FOR_RUNNING：等待启动中。 - SUCCESSFUL：完成。 - FAILED：失败。 - CANCELLED：已取消。 - TIMEOUT_INTERRUPT：超时中断。 - FULL_DOING：全量校验中。 - INCRE_DOING：增量校验中。
 	Status *CompareJobInfoStatus `json:"status,omitempty"`
 
-	// 对比计算资源。
+	// 对比计算资源。 取值：db，drs
 	ComputeType *string `json:"compute_type,omitempty"`
 
-	// 导出比对结果状态。
+	// 导出比对结果状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
 	ExportStatus *string `json:"export_status,omitempty"`
 
 	// 导出比对结果有效期剩余时间。

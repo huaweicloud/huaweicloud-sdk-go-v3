@@ -14,6 +14,12 @@ type ListHourPackagesTypeRequest struct {
 
 	// 小时包的资源规格编码。
 	ResourceSpecCode *string `json:"resource_spec_code,omitempty"`
+
+	// 每页数量，范围0-1000，默认1000。
+	Limit *int32 `json:"limit,omitempty"`
+
+	// 偏移量，默认0。
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListHourPackagesTypeRequest) String() string {

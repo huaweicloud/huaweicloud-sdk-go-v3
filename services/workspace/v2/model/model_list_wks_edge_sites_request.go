@@ -17,6 +17,12 @@ type ListWksEdgeSitesRequest struct {
 
 	// 根据边缘小站部署状态查询。
 	Status *string `json:"status,omitempty"`
+
+	// 每页数量，范围0-1000，默认1000。
+	Limit *int32 `json:"limit,omitempty"`
+
+	// 偏移量，默认0。
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListWksEdgeSitesRequest) String() string {

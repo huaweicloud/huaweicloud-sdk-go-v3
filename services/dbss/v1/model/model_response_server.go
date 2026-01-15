@@ -26,7 +26,7 @@ type ResponseServer struct {
 	// 实例ID
 	InstanceId *string `json:"instance_id,omitempty"`
 
-	// 双机实例HA中用来标注实例为主机还是备机, -0: 主机 -1:备机
+	// 双机实例HA中用来标注实例为主机还是备机, - 0：主机  - 1：备机
 	IsActive *int32 `json:"is_active,omitempty"`
 
 	// 实例名称
@@ -41,7 +41,7 @@ type ResponseServer struct {
 	// 实例所属规格编码
 	ResourceSpecCode *string `json:"resource_spec_code,omitempty"`
 
-	// 冻结场景  - POLICE: 公安冻结  - ILLEGAL: 违规冻结  - VERIFY: 未实名认证冻结  - PARTNER: 合作伙伴冻结 - ARREAR: 普通冻结（普通）
+	// 冻结场景  - POLICE：公安冻结  - ILLEGAL：违规冻结  - VERIFY：未实名认证冻结  - PARTNER：合作伙伴冻结 - ARREAR：普通冻结（普通）
 	Scene *string `json:"scene,omitempty"`
 
 	// 安全组ID

@@ -9,10 +9,10 @@ import (
 // TagMatch 标签匹配信息体.
 type TagMatch struct {
 
-	// 键。
+	// 键，例如键值对{“aaa”:\"bbb\"}的key为\"aaa\"
 	Key string `json:"key"`
 
-	// 值。
+	// 值，例如键值对{“aaa”:\"bbb\"}的value为\"bbb\"
 	Value string `json:"value"`
 }
 

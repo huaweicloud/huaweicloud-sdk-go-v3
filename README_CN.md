@@ -239,8 +239,8 @@ func main() {
     * [1.5 自定义网络连接创建](#15-自定义网络连接创建-top)
     * [1.6 自定义HTTP传输](#16-自定义http传输-top)
 * [2. 认证信息配置](#2-认证信息配置-top)
-  * [2.1 使用永久 AK 和 SK](#21-使用永久-ak-和-sk-top)
-  * [2.2 使用临时 AK 和 SK](#22-使用临时-ak-和-sk-top)
+  * [2.1 使用临时 AK 和 SK](#21-使用临时-ak-和-sk-top)
+  * [2.2 使用永久 AK 和 SK](#22-使用永久-ak-和-sk-top)
   * [2.3 使用 IdpId 和 IdTokenFile](#23-使用-idpid-和-idtokenfile-top)
   * [2.4 认证信息管理](#24-认证信息管理-top)
     * [2.4.1 环境变量](#241-环境变量-top)
@@ -393,55 +393,11 @@ Global 级服务使用 global.NewCredentialsBuilder() 初始化，需要提供 d
 
 客户端认证方式支持以下几种：
 
-- 永久 AK&SK 认证
 - 临时 AK&SK&SecurityToken 认证
+- 永久 AK&SK 认证
 - IdpId&IdTokenFile 认证
 
-#### 2.1 使用永久 AK 和 SK [:top:](#用户手册-top)
-
-**认证参数说明**：
-
-- `ak` 华为云账号 Access Key
-- `sk` 华为云账号 Secret Access Key
-- `projectId` 云服务所在项目 ID ，根据你想操作的项目所属区域选择对应的项目 ID
-- `domainId` 华为云账号 ID
-
-``` go
-import (
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
-    "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/global"
-    "os"
-)
-
-// Region 级服务
-ak := os.Getenv("HUAWEICLOUD_SDK_AK")
-sk := os.Getenv("HUAWEICLOUD_SDK_SK")
-projectId := "{your projectId string}"
-
-basicAuth, err := basic.NewCredentialsBuilder().
-    WithAk(ak).
-    WithSk(sk).
-    WithProjectId(projectId).
-    SafeBuild()
-
-// Global 级服务
-ak := os.Getenv("HUAWEICLOUD_SDK_AK")
-sk := os.Getenv("HUAWEICLOUD_SDK_SK")
-domainId := "{your domainId string}"
-
-globalAuth, err := global.NewCredentialsBuilder().
-    WithAk(ak).
-    WithSk(sk).
-    WithDomainId(domainId).
-    SafeBuild()
-```
-
-**说明**：
-
-- `0.0.26-beta` 及以上版本支持自动获取 projectId/domainId ，用户需要指定当前华为云账号的永久 AK&SK 和 对应的 region_id，同时在初始化客户端时配合 `WithRegion()`
-  方法使用。 代码示例详见 [3.2 指定Region方式（推荐）](#32-指定-region-方式-推荐-top) 。
-
-#### 2.2 使用临时 AK 和 SK [:top:](#用户手册-top)
+#### 2.1 使用临时 AK 和 SK [:top:](#用户手册-top)
 
 临时AK/SK和securitytoken是系统颁发给IAM用户的临时访问令牌，有效期可在15分钟至24小时范围内设置，过期后需要重新获取。首先需要获得临时 AK、SK 和 SecurityToken ，可以从永久 AK&SK 获得，或者通过委托授权获得。
 
@@ -495,25 +451,52 @@ globalAuth, err := global.NewCredentialsBuilder().
     SafeBuild()
 ```
 
-以下两种情况，会尝试从**实例元数据**中读取获取临时AK/SK和securitytoken：
+#### 2.2 使用永久 AK 和 SK [:top:](#用户手册-top)
 
-1. 创建客户端时未显式指定 basic.Credentials 或 global.Credentials
-2. 创建 basic.Credentials 或 global.Credentials 时未显式指定 AK/SK
+> ⚠️华为云主账号为管理员，对资源及云服务具有完全的访问权限，AK和SK一旦泄露，会给系统带来信息安全风险，不建议使用。
+> 推荐使用最小化授权的IAM用户的AK和SK，关于IAM的安全使用最佳实践，请参考[IAM的安全使用最佳实践](https://support.huaweicloud.com/bestpractice-iam/iam_0426.html)。
 
-关于元数据获取请参阅：[元数据获取](https://support.huaweicloud.com/usermanual-ecs/ecs_03_0166.html)
+**认证参数说明**：
 
-```go
+- `ak` 华为云账号 Access Key
+- `sk` 华为云账号 Secret Access Key
+- `projectId` 云服务所在项目 ID ，根据你想操作的项目所属区域选择对应的项目 ID
+- `domainId` 华为云账号 ID
+
+``` go
 import (
     "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/basic"
     "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/global"
+    "os"
 )
 
-// Region级服务
-basicAuth, err := basic.NewCredentialsBuilder().WithProjectId(projectId).SafeBuild()
+// Region 级服务
+ak := os.Getenv("HUAWEICLOUD_SDK_AK")
+sk := os.Getenv("HUAWEICLOUD_SDK_SK")
+projectId := "{your projectId string}"
 
-// Global级服务
-globalAuth, err := global.NewCredentialsBuilder().WithDomainId(domainId).SafeBuild()
+basicAuth, err := basic.NewCredentialsBuilder().
+    WithAk(ak).
+    WithSk(sk).
+    WithProjectId(projectId).
+    SafeBuild()
+
+// Global 级服务
+ak := os.Getenv("HUAWEICLOUD_SDK_AK")
+sk := os.Getenv("HUAWEICLOUD_SDK_SK")
+domainId := "{your domainId string}"
+
+globalAuth, err := global.NewCredentialsBuilder().
+    WithAk(ak).
+    WithSk(sk).
+    WithDomainId(domainId).
+    SafeBuild()
 ```
+
+**说明**：
+
+- `0.0.26-beta` 及以上版本支持自动获取 projectId/domainId ，用户需要指定当前华为云账号的永久 AK&SK 和 对应的 region_id，同时在初始化客户端时配合 `WithRegion()`
+  方法使用。 代码示例详见 [3.2 指定Region方式（推荐）](#32-指定-region-方式-推荐-top) 。
 
 #### 2.3 使用 IdpId 和 IdTokenFile [:top:](#用户手册-top)
 

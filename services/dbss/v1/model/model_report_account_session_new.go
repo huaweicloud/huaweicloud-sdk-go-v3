@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// ReportAccountSessionNew 数据库用户会话量
 type ReportAccountSessionNew struct {
 
 	// 数据库ID

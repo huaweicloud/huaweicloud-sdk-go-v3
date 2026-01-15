@@ -36,6 +36,9 @@ type VolumeDetail struct {
 	// 磁盘计费资源ID。
 	BillResourceId *string `json:"bill_resource_id,omitempty"`
 
+	// 桌面池磁盘ID。
+	DesktopPoolDiskId *string `json:"desktop_pool_disk_id,omitempty"`
+
 	// 磁盘的创建时间。
 	CreateTime *string `json:"create_time,omitempty"`
 

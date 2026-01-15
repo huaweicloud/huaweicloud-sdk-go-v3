@@ -35,6 +35,9 @@ type ExportUserConnectionNewRequest struct {
 
 	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 客户端出口IP。
+	PublicIp *string `json:"public_ip,omitempty"`
 }
 
 func (o ExportUserConnectionNewRequest) String() string {

@@ -30,7 +30,7 @@ type ListAlarmTopicConfigInfoResponse struct {
 	// 通知消息主题URN,调用SMN服务接口获取
 	AlarmTopicUrn *string `json:"alarm_topic_urn,omitempty"`
 
-	// 是否支持SMN订阅  - true: 支持  - false: 不支持
+	// 是否支持SMN订阅  - true：支持  - false：不支持
 	SmnEffective   *bool `json:"smn_effective,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }

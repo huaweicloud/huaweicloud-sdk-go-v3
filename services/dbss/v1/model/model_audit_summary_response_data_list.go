@@ -11,7 +11,7 @@ type AuditSummaryResponseDataList struct {
 	// ID
 	Id *int64 `json:"id,omitempty"`
 
-	// 状态 - 1: success - 2: failure
+	// 状态 - 1：success - 2：failure
 	Status *string `json:"status,omitempty"`
 
 	// 项目ID

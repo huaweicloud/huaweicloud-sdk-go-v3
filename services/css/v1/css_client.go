@@ -105,6 +105,27 @@ func (c *CssClient) ChangeSecurityGroupInvoker(request *model.ChangeSecurityGrou
 	return &ChangeSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CloseAiOpsSetting 关闭智能运维定时检测
+//
+// CSS服务提供智能运维功能的定时检测，支持每日定时检测集群的潜在风险。此接口用于关闭智能运维定时检测。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CssClient) CloseAiOpsSetting(request *model.CloseAiOpsSettingRequest) (*model.CloseAiOpsSettingResponse, error) {
+	requestDef := GenReqDefForCloseAiOpsSetting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CloseAiOpsSettingResponse), nil
+	}
+}
+
+// CloseAiOpsSettingInvoker 关闭智能运维定时检测
+func (c *CssClient) CloseAiOpsSettingInvoker(request *model.CloseAiOpsSettingRequest) *CloseAiOpsSettingInvoker {
+	requestDef := GenReqDefForCloseAiOpsSetting()
+	return &CloseAiOpsSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAgency 自动创建委托
 //
 // 当CSS预置委托不存在时，自动创建委托并赋予CSS依赖的权限。
@@ -467,7 +488,7 @@ func (c *CssClient) EnableOrDisableElbInvoker(request *model.EnableOrDisableElbR
 
 // ListAiOps 获取智能运维任务列表及详情
 //
-// 该接口用于获取智能运维任务列表及详情。
+// CSS服务提供智能运维功能，支持检测集群潜在风险。检测任务完成后，可以查看集群存在的风险项详情，根据风险建议及时处理集群存在的风险。此接口用于获取智能运维任务列表及详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CssClient) ListAiOps(request *model.ListAiOpsRequest) (*model.ListAiOpsResponse, error) {
@@ -820,6 +841,48 @@ func (c *CssClient) RetryUpgradeTask(request *model.RetryUpgradeTaskRequest) (*m
 func (c *CssClient) RetryUpgradeTaskInvoker(request *model.RetryUpgradeTaskRequest) *RetryUpgradeTaskInvoker {
 	requestDef := GenReqDefForRetryUpgradeTask()
 	return &RetryUpgradeTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAiOpsDetector 查看智能运维检测项
+//
+// CSS服务提供智能运维功能，支持检测集群潜在风险。此接口用于获取智能运维的检测项。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CssClient) ShowAiOpsDetector(request *model.ShowAiOpsDetectorRequest) (*model.ShowAiOpsDetectorResponse, error) {
+	requestDef := GenReqDefForShowAiOpsDetector()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAiOpsDetectorResponse), nil
+	}
+}
+
+// ShowAiOpsDetectorInvoker 查看智能运维检测项
+func (c *CssClient) ShowAiOpsDetectorInvoker(request *model.ShowAiOpsDetectorRequest) *ShowAiOpsDetectorInvoker {
+	requestDef := GenReqDefForShowAiOpsDetector()
+	return &ShowAiOpsDetectorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAiOpsSetting 查看智能运维定时检测设置
+//
+// CSS服务提供智能运维功能的定时检测，支持每日定时检测集群的潜在风险。此接口用于获取智能运维定时检测设置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CssClient) ShowAiOpsSetting(request *model.ShowAiOpsSettingRequest) (*model.ShowAiOpsSettingResponse, error) {
+	requestDef := GenReqDefForShowAiOpsSetting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAiOpsSettingResponse), nil
+	}
+}
+
+// ShowAiOpsSettingInvoker 查看智能运维定时检测设置
+func (c *CssClient) ShowAiOpsSettingInvoker(request *model.ShowAiOpsSettingRequest) *ShowAiOpsSettingInvoker {
+	requestDef := GenReqDefForShowAiOpsSetting()
+	return &ShowAiOpsSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAutoCreatePolicy 查询自动创建快照的策略
@@ -1312,6 +1375,27 @@ func (c *CssClient) StopVpecp(request *model.StopVpecpRequest) (*model.StopVpecp
 func (c *CssClient) StopVpecpInvoker(request *model.StopVpecpRequest) *StopVpecpInvoker {
 	requestDef := GenReqDefForStopVpecp()
 	return &StopVpecpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAiOpsSetting 更新智能运维定时检测设置
+//
+// CSS服务提供智能运维功能的定时检测，支持每日定时检测集群的潜在风险。此接口用于设置智能运维定时检测。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CssClient) UpdateAiOpsSetting(request *model.UpdateAiOpsSettingRequest) (*model.UpdateAiOpsSettingResponse, error) {
+	requestDef := GenReqDefForUpdateAiOpsSetting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAiOpsSettingResponse), nil
+	}
+}
+
+// UpdateAiOpsSettingInvoker 更新智能运维定时检测设置
+func (c *CssClient) UpdateAiOpsSettingInvoker(request *model.UpdateAiOpsSettingRequest) *UpdateAiOpsSettingInvoker {
+	requestDef := GenReqDefForUpdateAiOpsSetting()
+	return &UpdateAiOpsSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateAzByInstanceType 切换集群实例可用区

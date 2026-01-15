@@ -19,10 +19,10 @@ type ListSyncTaskStatisticRequest struct {
 	DataType ListSyncTaskStatisticRequestDataType `json:"data_type"`
 
 	// 查询开始时间
-	StartTime string `json:"start_time"`
+	StartTime int64 `json:"start_time"`
 
 	// 查询结束时间
-	EndTime string `json:"end_time"`
+	EndTime int64 `json:"end_time"`
 }
 
 func (o ListSyncTaskStatisticRequest) String() string {

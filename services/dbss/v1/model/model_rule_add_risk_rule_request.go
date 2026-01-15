@@ -14,7 +14,7 @@ type RuleAddRiskRuleRequest struct {
 	// 影响行数
 	AffectRows int32 `json:"affect_rows"`
 
-	// 影响行数操作符 - GREATER: 大于 - EQUAL: 等于 - LESS: 小于 - GREATER_EQUAL: 大于等于 - LESS_EQUAL: 小于等于 - NO_MATCH: 不等于
+	// 影响行数操作符 - GREATER：大于 - EQUAL：等于 - LESS：小于 - GREATER_EQUAL：大于等于 - LESS_EQUAL：小于等于 - NO_MATCH：不等于
 	AffectSymbol string `json:"affect_symbol"`
 
 	// 客户端IP，多个用英文','分隔
@@ -26,7 +26,7 @@ type RuleAddRiskRuleRequest struct {
 	// 例外IP，IP内不做匹配，多个用英文','分隔
 	ExceptionIps *string `json:"exception_ips,omitempty"`
 
-	// 执行时长操作符 - GREATER: 大于 - EQUAL: 等于 - LESS: 小于 - GREATER_EQUAL: 大于等于 - LESS_EQUAL: 小于等于 - NO_MATCH: 不等于
+	// 执行时长操作符 - GREATER：大于 - EQUAL：等于 - LESS：小于 - GREATER_EQUAL：大于等于 - LESS_EQUAL：小于等于 - NO_MATCH：不等于
 	ExecutionSymbol string `json:"execution_symbol"`
 
 	// 执行时长

@@ -9,7 +9,7 @@ import (
 // SetAuditInstanceTimeZoneResponse Response Object
 type SetAuditInstanceTimeZoneResponse struct {
 
-	// 状态  - success: 成功  - fail：失败
+	// 状态  - success：成功  - fail：失败
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

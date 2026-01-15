@@ -34,7 +34,7 @@ type BatchUpdateWhiteBlackIpRuleRequestBody struct {
 	Terminal *int32 `json:"terminal,omitempty"`
 
 	// **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-	PolicyRuleIds *[]PolicyRuleIdRequestBodyPolicyRuleIds `json:"policy_rule_ids,omitempty"`
+	PolicyRuleIds []PolicyRuleIdRequestBodyPolicyRuleIds `json:"policy_rule_ids"`
 }
 
 func (o BatchUpdateWhiteBlackIpRuleRequestBody) String() string {

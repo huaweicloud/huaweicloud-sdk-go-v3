@@ -9,7 +9,7 @@ import (
 // ListProductsRequest Request Object
 type ListProductsRequest struct {
 
-	// 产品ID。
+	// 产品ID。指定该参数会返回支持变更规格的套餐信息。
 	ProductId *string `json:"product_id,omitempty"`
 
 	// 可用分区。

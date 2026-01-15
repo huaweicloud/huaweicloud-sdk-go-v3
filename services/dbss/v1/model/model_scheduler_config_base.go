@@ -18,7 +18,7 @@ type SchedulerConfigBase struct {
 	// 文件类型
 	Format *SchedulerConfigBaseFormat `json:"format,omitempty"`
 
-	// 周期 - AUDIT_REPORT_DAY: 天 - AUDIT_REPORT_WEEK：周 - AUDIT_REPORT_MONTH：月 - AUDIT_REPORT_YEAR：年 - AUDIT_REPORT_REAL_TIME：实时
+	// 周期 - AUDIT_REPORT_DAY：天 - AUDIT_REPORT_WEEK：周 - AUDIT_REPORT_MONTH：月 - AUDIT_REPORT_YEAR：年 - AUDIT_REPORT_REAL_TIME：实时
 	Frequency *SchedulerConfigBaseFrequency `json:"frequency,omitempty"`
 
 	// 报表模板ID
@@ -33,7 +33,7 @@ type SchedulerConfigBase struct {
 	// 开始时间
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 模板状态 - ON: 开启 - OFF：关闭
+	// 模板状态 - ON：开启 - OFF：关闭
 	Status *SchedulerConfigBaseStatus `json:"status,omitempty"`
 
 	// 主题URN

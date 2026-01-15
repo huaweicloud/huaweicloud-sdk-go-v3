@@ -9,7 +9,7 @@ import (
 // PeriodOrderResp 详情返回包周期信息体。
 type PeriodOrderResp struct {
 
-	// 订单状态
+	// 订单状态 INITIALIZATION：初始化，AWAITING_AUDIT：待审核，AWAITING_REFUND：待退款，PROCESSING：处理中，CANCELED：已取消，COMPLETED：已完成，AWAITING_PAID：待付款，AWAITING_APPROVE：待审批，UNORDERED：未下单，FROZEN_CAN_RENEW：冻结可续费，FROZEN_CAN_UNSUBSCRIBE：冻结可退订，FROZEN_POLICE：公安冻结，FROZEN_CAN_RENEW_FREE：冻结可续费 可结束，FROZEN_CAN_FREE：冻结可结束，LOCK_RESOURCE：限制资源锁定
 	Status *string `json:"status,omitempty"`
 
 	// 订单ID

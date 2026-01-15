@@ -14,7 +14,7 @@ type AzInfo struct {
 	// 可用区编号
 	ZoneNumber int32 `json:"zone_number"`
 
-	// 可用区类型 - DEDICATED: 大网 - DEC: 边缘小站 - EDGE: 专属
+	// 可用区类型 - DEDICATED：大网 - DEC：边缘小站 - EDGE：专属
 	AzType string `json:"az_type"`
 
 	// 可用区中文别名

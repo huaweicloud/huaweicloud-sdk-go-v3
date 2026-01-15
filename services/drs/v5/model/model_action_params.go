@@ -31,6 +31,9 @@ type ActionParams struct {
 	// 是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
 	IsOnlyInitTask *bool `json:"is_only_init_task,omitempty"`
 
+	// 是否在任务结束时自动创建对比任务，不填默认设置为true。
+	IsAutoCreateCompare *bool `json:"is_auto_create_compare,omitempty"`
+
 	// 强制结束时取值为true。
 	ForceDelete *bool `json:"force_delete,omitempty"`
 

@@ -9,7 +9,7 @@ import (
 // DeleteInstancesResponse Response Object
 type DeleteInstancesResponse struct {
 
-	// 操作结果  - success: 成功  - failed: 失败
+	// 操作结果  - success：成功  - failed：失败
 	Result         *string `json:"result,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

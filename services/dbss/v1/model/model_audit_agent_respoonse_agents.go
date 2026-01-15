@@ -11,7 +11,7 @@ type AuditAgentRespoonseAgents struct {
 	// agent ID
 	AgentId string `json:"agent_id"`
 
-	// agent 类型 - DB: 数据库端 - APP: 应用端
+	// agent 类型 - DB：数据库端 - APP：应用端
 	AgentType string `json:"agent_type"`
 
 	// agent OS

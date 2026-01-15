@@ -14,7 +14,7 @@ type BatchSwitchesRequestNew struct {
 	// 规则ID列表
 	Ids []string `json:"ids"`
 
-	// 开关状态 - OFF: 关闭 - ON: 开启
+	// 开关状态 - OFF：关闭 - ON：开启
 	Status BatchSwitchesRequestNewStatus `json:"status"`
 }
 

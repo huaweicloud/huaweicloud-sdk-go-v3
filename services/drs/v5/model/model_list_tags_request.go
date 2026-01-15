@@ -12,7 +12,7 @@ import (
 // ListTagsRequest Request Object
 type ListTagsRequest struct {
 
-	// 资源类型。 - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备 - subscription：数据订阅 - backupMigration：备份迁移 - replay：录制回放
+	// 资源类型。 - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备 - subscription：数据订阅 - backupMigration：备份迁移 - replay：录制回放 - verify：校验任务
 	ResourceType ListTagsRequestResourceType `json:"resource_type"`
 
 	// 请求语言类型。
@@ -39,6 +39,7 @@ type ListTagsRequestResourceTypeEnum struct {
 	SUBSCRIPTION     ListTagsRequestResourceType
 	BACKUP_MIGRATION ListTagsRequestResourceType
 	REPLAY           ListTagsRequestResourceType
+	VERIFY           ListTagsRequestResourceType
 }
 
 func GetListTagsRequestResourceTypeEnum() ListTagsRequestResourceTypeEnum {
@@ -60,6 +61,9 @@ func GetListTagsRequestResourceTypeEnum() ListTagsRequestResourceTypeEnum {
 		},
 		REPLAY: ListTagsRequestResourceType{
 			value: "replay",
+		},
+		VERIFY: ListTagsRequestResourceType{
+			value: "verify",
 		},
 	}
 }

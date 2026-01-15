@@ -14,7 +14,7 @@ type AuditScopeSwitchRequestNew struct {
 	// 审计范围ID列表
 	Ids []string `json:"ids"`
 
-	// 状态  - OFF： 关闭  - ON： 启用
+	// 状态  - OFF：关闭  - ON：启用
 	Status AuditScopeSwitchRequestNewStatus `json:"status"`
 }
 

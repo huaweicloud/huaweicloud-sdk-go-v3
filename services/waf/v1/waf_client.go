@@ -315,7 +315,7 @@ func (c *WafClient) BatchDeleteRulesInvoker(request *model.BatchDeleteRulesReque
 
 // BatchUpdateAntileakageRules 批量更新防敏感信息泄露规则
 //
-// 批量修改防敏感信息泄露规则
+// 批量更新防敏感信息泄露规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) BatchUpdateAntileakageRules(request *model.BatchUpdateAntileakageRulesRequest) (*model.BatchUpdateAntileakageRulesResponse, error) {
@@ -336,7 +336,7 @@ func (c *WafClient) BatchUpdateAntileakageRulesInvoker(request *model.BatchUpdat
 
 // BatchUpdateAntitamperRules 批量更新网页防篡改规则
 //
-// 批量修改地理位置访问控制规则
+// 批量更新网页防篡改规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) BatchUpdateAntitamperRules(request *model.BatchUpdateAntitamperRulesRequest) (*model.BatchUpdateAntitamperRulesResponse, error) {
@@ -357,7 +357,7 @@ func (c *WafClient) BatchUpdateAntitamperRulesInvoker(request *model.BatchUpdate
 
 // BatchUpdateCcRules 批量修改CC防护规则
 //
-// 批量修改地理位置访问控制规则
+// 批量修改CC防护规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) BatchUpdateCcRules(request *model.BatchUpdateCcRulesRequest) (*model.BatchUpdateCcRulesResponse, error) {
@@ -378,7 +378,7 @@ func (c *WafClient) BatchUpdateCcRulesInvoker(request *model.BatchUpdateCcRulesR
 
 // BatchUpdateCustomRules 批量更新精准防护规则
 //
-// 批量修改地理位置访问控制规则
+// 批量更新精准防护规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) BatchUpdateCustomRules(request *model.BatchUpdateCustomRulesRequest) (*model.BatchUpdateCustomRulesResponse, error) {
@@ -420,7 +420,7 @@ func (c *WafClient) BatchUpdateGeoipRulesInvoker(request *model.BatchUpdateGeoip
 
 // BatchUpdateIgnoreRules 批量更新全局白名单规则
 //
-// 批量修改全局白名单规则
+// 批量更新全局白名单规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) BatchUpdateIgnoreRules(request *model.BatchUpdateIgnoreRulesRequest) (*model.BatchUpdateIgnoreRulesResponse, error) {
@@ -441,7 +441,7 @@ func (c *WafClient) BatchUpdateIgnoreRulesInvoker(request *model.BatchUpdateIgno
 
 // BatchUpdateIpReputationRules 批量更新威胁情报规则
 //
-// 批量修改地理位置访问控制规则
+// 批量更新威胁情报规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) BatchUpdateIpReputationRules(request *model.BatchUpdateIpReputationRulesRequest) (*model.BatchUpdateIpReputationRulesResponse, error) {
@@ -462,7 +462,7 @@ func (c *WafClient) BatchUpdateIpReputationRulesInvoker(request *model.BatchUpda
 
 // BatchUpdatePrivacyRules 批量更新隐私屏蔽规则
 //
-// 批量修改全局白名单规则
+// 批量更新隐私屏蔽规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) BatchUpdatePrivacyRules(request *model.BatchUpdatePrivacyRulesRequest) (*model.BatchUpdatePrivacyRulesResponse, error) {
@@ -483,7 +483,7 @@ func (c *WafClient) BatchUpdatePrivacyRulesInvoker(request *model.BatchUpdatePri
 
 // BatchUpdateWhiteblackipRules 批量更新黑白名单设置规则
 //
-// 批量修改地理位置访问控制规则
+// 批量更新黑白名单设置规则
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WafClient) BatchUpdateWhiteblackipRules(request *model.BatchUpdateWhiteblackipRulesRequest) (*model.BatchUpdateWhiteblackipRulesResponse, error) {

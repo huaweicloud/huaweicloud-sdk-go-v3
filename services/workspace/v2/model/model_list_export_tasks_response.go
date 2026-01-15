@@ -12,7 +12,7 @@ type ListExportTasksResponse struct {
 	// 导出任务列表。
 	ExportTasks *[]ExportTaskItem `json:"export_tasks,omitempty"`
 
-	// 导出任务列表总数。
+	// 导出任务总数。
 	Count          *int32 `json:"count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

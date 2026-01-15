@@ -6,14 +6,14 @@ import (
 	"strings"
 )
 
-// CreateAiOpsRequestBodyAlarm 检测任务完成后发送SMN告警消息。
+// CreateAiOpsRequestBodyAlarm **参数解释**： 检测报告发送，当前功能已废弃。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 type CreateAiOpsRequestBodyAlarm struct {
 
-	// SMN告警消息敏感度。 - high：高风险。 - medium：中风险。 - suggestion：建议。 - norisk：无风险。
-	Level string `json:"level"`
+	// **参数解释**： 报告发送风险类别，当前功能已废弃。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	Level *string `json:"level,omitempty"`
 
-	// SMN主题名称。
-	SmnTopic string `json:"smn_topic"`
+	// **参数解释**： 报告发送主题，当前功能已废弃。 **约束限制**： 不涉及 **默认取值**： 不涉及
+	SmnTopic *string `json:"smn_topic,omitempty"`
 }
 
 func (o CreateAiOpsRequestBodyAlarm) String() string {

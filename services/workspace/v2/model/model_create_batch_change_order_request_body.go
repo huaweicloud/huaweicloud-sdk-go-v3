@@ -14,6 +14,9 @@ type CreateBatchChangeOrderRequestBody struct {
 	// 下单类型。  - ADD_VOLUME：增加磁盘  - EXTEND_VOLUME：扩容磁盘  - RESIZE：变更规格  - CHANGE_IMAGE：切换镜像  - ADD_SUB_RESOURCES：购买桌面协同资源  - DELETE_SUB_RESOURCES：退订桌面协同资源
 	Type *CreateBatchChangeOrderRequestBodyType `json:"type,omitempty"`
 
+	// 授权给Billing服务的委托URN。使用RAM共享密钥创建包周期云桌面或添加包周期磁盘、重建系统时，需要传入该字段。
+	AgencyUrn *string `json:"agency_urn,omitempty"`
+
 	AddVolumeParam *EstimateAddVolumeRequestBody `json:"add_volume_param,omitempty"`
 
 	ExtendVolumeParam *EstimateExtendVolumeRequestBody `json:"extend_volume_param,omitempty"`

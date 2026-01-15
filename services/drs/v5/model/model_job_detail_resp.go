@@ -81,7 +81,7 @@ type JobDetailResp struct {
 	// 指定公网IP的信息
 	PublicIpList *[]PublicIpConfig `json:"public_ip_list,omitempty"`
 
-	// 是否成功绑定公网IP
+	// 是否成功绑定公网IP 取值：SUCCESS，FAILED
 	BindPublicIpState *string `json:"bind_public_ip_state,omitempty"`
 
 	// 多任务时，存在子任务绑定失败时，返回子任务的信息
@@ -97,8 +97,11 @@ type JobDetailResp struct {
 
 	RepairDetailInfo *QueryRepairDetailResp `json:"repair_detail_info,omitempty"`
 
-	// 修复SQL导出状态。
+	// 修复SQL导出状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
 	RepairExportStatus *string `json:"repair_export_status,omitempty"`
+
+	// 灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
+	JobKernelDirection *JobDetailRespJobKernelDirection `json:"job_kernel_direction,omitempty"`
 }
 
 func (o JobDetailResp) String() string {
@@ -294,6 +297,53 @@ func (c JobDetailRespIsWritable) MarshalJSON() ([]byte, error) {
 }
 
 func (c *JobDetailRespIsWritable) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type JobDetailRespJobKernelDirection struct {
+	value string
+}
+
+type JobDetailRespJobKernelDirectionEnum struct {
+	UP   JobDetailRespJobKernelDirection
+	DOWN JobDetailRespJobKernelDirection
+}
+
+func GetJobDetailRespJobKernelDirectionEnum() JobDetailRespJobKernelDirectionEnum {
+	return JobDetailRespJobKernelDirectionEnum{
+		UP: JobDetailRespJobKernelDirection{
+			value: "up",
+		},
+		DOWN: JobDetailRespJobKernelDirection{
+			value: "down",
+		},
+	}
+}
+
+func (c JobDetailRespJobKernelDirection) Value() string {
+	return c.value
+}
+
+func (c JobDetailRespJobKernelDirection) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *JobDetailRespJobKernelDirection) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

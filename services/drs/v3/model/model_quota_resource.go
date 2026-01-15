@@ -9,7 +9,7 @@ import (
 // QuotaResource 配额信息
 type QuotaResource struct {
 
-	// 配额类型信息
+	// 配额类型信息 instances：实例的数量配额，cpu：CPU的配额，cores：CPU核心数的配额，server_groups服务器组的配额，mem内存配额，ram主存配额
 	Type *string `json:"type,omitempty"`
 
 	// 配额最小取值

@@ -14,7 +14,7 @@ type UpdateWhitelistRequest struct {
 	// 备注
 	Desc *string `json:"desc,omitempty"`
 
-	// 是否启用  - true: 启用  - false: 禁用
+	// 是否启用  - true：启用  - false：禁用
 	Enabled bool `json:"enabled"`
 }
 

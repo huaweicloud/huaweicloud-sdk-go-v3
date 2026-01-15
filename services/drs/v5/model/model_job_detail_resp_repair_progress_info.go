@@ -9,7 +9,7 @@ import (
 // JobDetailRespRepairProgressInfo 修复进度明细。
 type JobDetailRespRepairProgressInfo struct {
 
-	// 修复状态。
+	// 修复状态。 取值：\"FAILED\", \"SUCCEEDED\", \"FINISHED\", \"SUCCESS\"
 	Status *string `json:"status,omitempty"`
 
 	// 修复进度，百分比。

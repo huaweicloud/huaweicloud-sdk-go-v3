@@ -12,7 +12,7 @@ type RuleRiskStatisticsDto struct {
 	Count *int64 `json:"count,omitempty"`
 
 	// 实例数据库风险汇总
-	InstanceRiskCount *[]AuditInsanceRiskCount `json:"instance_risk_count,omitempty"`
+	InstanceRiskCount *[]AuditInstanceRiskCount `json:"instance_risk_count,omitempty"`
 
 	// 规则名称
 	RuleName *string `json:"rule_name,omitempty"`

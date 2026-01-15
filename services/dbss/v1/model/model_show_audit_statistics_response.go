@@ -27,7 +27,7 @@ type ShowAuditStatisticsResponse struct {
 	// 风险规则统计
 	RuleRiskStatistics *[]RuleRiskStatisticsDto `json:"rule_risk_statistics,omitempty"`
 
-	UnsupportedAuditInfos *UnSupportAuditInfoResponse `json:"unsupported_audit_infos,omitempty"`
+	UnsupportedAuditInfos *UnsupportedAuditInfoResponse `json:"unsupported_audit_infos,omitempty"`
 
 	// 更新时间
 	UpdateTime     *int64 `json:"update_time,omitempty"`

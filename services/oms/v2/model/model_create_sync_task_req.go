@@ -54,7 +54,7 @@ type CreateSyncTaskReq struct {
 	// 目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
 	DstStoragePolicy *CreateSyncTaskReqDstStoragePolicy `json:"dst_storage_policy,omitempty"`
 
-	// 当源端为腾讯云时，需要填写此参数。
+	// 腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
 	AppId *string `json:"app_id,omitempty"`
 
 	SourceCdn *SourceCdnReq `json:"source_cdn,omitempty"`

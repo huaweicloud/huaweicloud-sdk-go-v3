@@ -107,18 +107,19 @@ func (m *MetadataAccessor) tryUpdateToken(returnErr bool) error {
 		}
 	}
 
-	if resp.Status == 200 {
+	switch resp.Status {
+	case 200:
 		m.token = &resp.Body
 		return nil
-	} else if resp.Status == 404 || resp.Status == 405 {
+	case 404, 405, 503:
 		if returnErr {
 			return errFunc()
 		}
 		m.token = nil
 		return nil
-
+	default:
+		return errFunc()
 	}
-	return errFunc()
 }
 
 func (m *MetadataAccessor) GetCredentials() (*Credential, error) {

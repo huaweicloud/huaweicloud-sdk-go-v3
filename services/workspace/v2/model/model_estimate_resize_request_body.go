@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -18,7 +21,7 @@ type EstimateResizeRequestBody struct {
 	PromotionPlanId *string `json:"promotion_plan_id,omitempty"`
 
 	// 处理类型 - ONLY_FOR_EXPAND：仅对新扩容桌面生效 - FOR_EXPAND_AND_IDLE：对新扩容桌面与空闲桌面生效 - FOR_EXPAND_AND_ALL：对新扩容桌面与已有全部桌面生效
-	HandleType *string `json:"handle_type,omitempty"`
+	HandleType *EstimateResizeRequestBodyHandleType `json:"handle_type,omitempty"`
 }
 
 func (o EstimateResizeRequestBody) String() string {
@@ -28,4 +31,55 @@ func (o EstimateResizeRequestBody) String() string {
 	}
 
 	return strings.Join([]string{"EstimateResizeRequestBody", string(data)}, " ")
+}
+
+type EstimateResizeRequestBodyHandleType struct {
+	value string
+}
+
+type EstimateResizeRequestBodyHandleTypeEnum struct {
+	ONLY_FOR_EXPAND     EstimateResizeRequestBodyHandleType
+	FOR_EXPAND_AND_IDLE EstimateResizeRequestBodyHandleType
+	FOR_EXPAND_AND_ALL  EstimateResizeRequestBodyHandleType
+}
+
+func GetEstimateResizeRequestBodyHandleTypeEnum() EstimateResizeRequestBodyHandleTypeEnum {
+	return EstimateResizeRequestBodyHandleTypeEnum{
+		ONLY_FOR_EXPAND: EstimateResizeRequestBodyHandleType{
+			value: "ONLY_FOR_EXPAND",
+		},
+		FOR_EXPAND_AND_IDLE: EstimateResizeRequestBodyHandleType{
+			value: "FOR_EXPAND_AND_IDLE",
+		},
+		FOR_EXPAND_AND_ALL: EstimateResizeRequestBodyHandleType{
+			value: "FOR_EXPAND_AND_ALL",
+		},
+	}
+}
+
+func (c EstimateResizeRequestBodyHandleType) Value() string {
+	return c.value
+}
+
+func (c EstimateResizeRequestBodyHandleType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *EstimateResizeRequestBodyHandleType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

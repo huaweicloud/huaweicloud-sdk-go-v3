@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type UnSupportAuditInfo struct {
+type UnsupportedAuditInfo struct {
 
 	// 实例版本
 	AuditVersion *string `json:"audit_version,omitempty"`
@@ -15,11 +15,11 @@ type UnSupportAuditInfo struct {
 	ServerName *string `json:"server_name,omitempty"`
 }
 
-func (o UnSupportAuditInfo) String() string {
+func (o UnsupportedAuditInfo) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "UnSupportAuditInfo struct{}"
+		return "UnsupportedAuditInfo struct{}"
 	}
 
-	return strings.Join([]string{"UnSupportAuditInfo", string(data)}, " ")
+	return strings.Join([]string{"UnsupportedAuditInfo", string(data)}, " ")
 }

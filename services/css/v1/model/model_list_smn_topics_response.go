@@ -9,7 +9,7 @@ import (
 // ListSmnTopicsResponse Response Object
 type ListSmnTopicsResponse struct {
 
-	// SMN主题名称列表。
+	// 主题名称
 	TopicsName     *[]string `json:"topicsName,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

@@ -50,6 +50,9 @@ type ShowJobDetailRequest struct {
 
 	// 对比结果类型。取值： - compare：对比完成。 - uncompare：无法对比。
 	CompareDetailType *ShowJobDetailRequestCompareDetailType `json:"compare_detail_type,omitempty"`
+
+	// 查询日志的级别。取值： - Info：提示级别。 - Warn：警告级别。 - Error：错误级别。
+	LogLevel *string `json:"log_level,omitempty"`
 }
 
 func (o ShowJobDetailRequest) String() string {

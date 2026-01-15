@@ -185,6 +185,9 @@ type QueryJobResp struct {
 
 	// 是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
 	IsOpenFastClean *bool `json:"is_open_fast_clean,omitempty"`
+
+	// 灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
+	JobKernelDirection *QueryJobRespJobKernelDirection `json:"job_kernel_direction,omitempty"`
 }
 
 func (o QueryJobResp) String() string {
@@ -690,6 +693,53 @@ func (c QueryJobRespOriginalJobDirection) MarshalJSON() ([]byte, error) {
 }
 
 func (c *QueryJobRespOriginalJobDirection) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type QueryJobRespJobKernelDirection struct {
+	value string
+}
+
+type QueryJobRespJobKernelDirectionEnum struct {
+	UP   QueryJobRespJobKernelDirection
+	DOWN QueryJobRespJobKernelDirection
+}
+
+func GetQueryJobRespJobKernelDirectionEnum() QueryJobRespJobKernelDirectionEnum {
+	return QueryJobRespJobKernelDirectionEnum{
+		UP: QueryJobRespJobKernelDirection{
+			value: "up",
+		},
+		DOWN: QueryJobRespJobKernelDirection{
+			value: "down",
+		},
+	}
+}
+
+func (c QueryJobRespJobKernelDirection) Value() string {
+	return c.value
+}
+
+func (c QueryJobRespJobKernelDirection) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *QueryJobRespJobKernelDirection) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

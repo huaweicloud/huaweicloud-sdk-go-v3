@@ -8,14 +8,8 @@ import (
 
 type BatchUpdateCustomRuleRequestBody struct {
 
-	// 规则id
-	Id *string `json:"id,omitempty"`
-
 	// 规则名称
 	Name *string `json:"name,omitempty"`
-
-	// 策略id
-	Policyid *string `json:"policyid,omitempty"`
 
 	// 规则描述
 	Description *string `json:"description,omitempty"`
@@ -47,7 +41,7 @@ type BatchUpdateCustomRuleRequestBody struct {
 	Producer *int32 `json:"producer,omitempty"`
 
 	// **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-	PolicyRuleIds *[]PolicyRuleIdRequestBodyPolicyRuleIds `json:"policy_rule_ids,omitempty"`
+	PolicyRuleIds []PolicyRuleIdRequestBodyPolicyRuleIds `json:"policy_rule_ids"`
 }
 
 func (o BatchUpdateCustomRuleRequestBody) String() string {

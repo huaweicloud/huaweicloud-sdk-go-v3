@@ -26,6 +26,9 @@ type ShowProgressDataRequest struct {
 
 	// 迁移对象类型。 - table - event - table_structure - procedure - view - function - database - trigger - table_indexs
 	Type string `json:"type"`
+
+	// 需要过滤的源库对象名称
+	SearchName *string `json:"search_name,omitempty"`
 }
 
 func (o ShowProgressDataRequest) String() string {

@@ -9,7 +9,7 @@ import (
 // UpdateAuditRiskBucketPathResponse Response Object
 type UpdateAuditRiskBucketPathResponse struct {
 
-	// 操作结果  - SUCCESS: 成功
+	// 操作结果  - SUCCESS：成功
 	Result         *string `json:"result,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

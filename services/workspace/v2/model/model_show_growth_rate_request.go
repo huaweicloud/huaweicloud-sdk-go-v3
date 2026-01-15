@@ -12,14 +12,14 @@ import (
 // ShowGrowthRateRequest Request Object
 type ShowGrowthRateRequest struct {
 
-	// 环比周期 | DAY - 天 MONTH - 月。
-	GrowPeriod *ShowGrowthRateRequestGrowPeriod `json:"grow_period,omitempty"`
+	// 指标维度 | 目前最大支持3个维度，必须从0开始；维度格式为dim.{i}=key,value，key的最大长度32，value的最大长度为256。 单维度：dim.0=instance_id,6f3c6f91-4b24-4e1b-b7d1-a94ac1cb011d 多维度：dim.0=key,value&dim.1=key,value。
+	Dim *string `json:"dim,omitempty"`
 
 	// 指标名称。
 	MetricName string `json:"metric_name"`
 
-	// 指标维度 | 目前最大支持3个维度，必须从0开始；维度格式为dim.{i}=key,value，key的最大长度32，value的最大长度为256。 单维度：dim.0=instance_id,6f3c6f91-4b24-4e1b-b7d1-a94ac1cb011d 多维度：dim.0=key,value&dim.1=key,value。
-	Dim *string `json:"dim,omitempty"`
+	// 环比周期 | DAY - 天 MONTH - 月。
+	GrowPeriod *ShowGrowthRateRequestGrowPeriod `json:"grow_period,omitempty"`
 }
 
 func (o ShowGrowthRateRequest) String() string {

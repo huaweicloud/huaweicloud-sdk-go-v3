@@ -17,7 +17,7 @@ type CreateInstancePeriodRequest struct {
 	// 虚拟私有云的ID
 	VpcId string `json:"vpc_id"`
 
-	// 云服务器对应可用分区信息。(两个主备分区，中间用“,”分割，例如az1.dc1,az2.dc2)。
+	// 云服务器对应可用分区信息。(两个主备分区，中间用“,”分隔，例如az1.dc1,az2.dc2)。
 	AvailabilityZone string `json:"availability_zone"`
 
 	// 企业项目ID。对接EPS必输。
@@ -38,10 +38,10 @@ type CreateInstancePeriodRequest struct {
 	// 服务类型： - hws.service.type.dbss: 数据库审计
 	CloudServiceType string `json:"cloud_service_type"`
 
-	// 计费模式： - 0: 包周期计费 - 1: 按需计费
+	// 计费模式： - 0：包周期计费 - 1：按需计费
 	ChargingMode int32 `json:"charging_mode"`
 
-	// -订购周期类型 - 0: 天 - 1：周 - 2：月 - 3：年 - 4: 小时 - 5: 绝对时间
+	// -订购周期类型 - 0：天 - 1：周 - 2：月 - 3：年 - 4：小时 - 5：绝对时间
 	PeriodType int32 `json:"period_type"`
 
 	// 订购周期数
@@ -59,7 +59,7 @@ type CreateInstancePeriodRequest struct {
 	// 折扣信息
 	PromotionInfo *string `json:"promotion_info,omitempty"`
 
-	// 自动续费 - 1: 自动续费 - 0: 不自动续费
+	// 自动续费 - 1：自动续费 - 0：不自动续费
 	IsAutoRenew int32 `json:"is_auto_renew"`
 }
 

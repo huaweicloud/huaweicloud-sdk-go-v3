@@ -27,10 +27,10 @@ type ExportTaskItem struct {
 	// 任务失败错误码。
 	ErrorCode *string `json:"error_code,omitempty"`
 
-	// 创建文件的时间, utc时间：yyyy-MM-dd'T'HH:mm:ss.SSSZ。
+	// 导出任务的开始时间, utc时间：yyyy-MM-dd'T'HH:mm:ss.SSSZ。
 	CreateTime *string `json:"create_time,omitempty"`
 
-	// 创建文件的时间, utc时间：yyyy-MM-dd'T'HH:mm:ss.SSSZ。
+	// 导出任务的结束时间, utc时间：yyyy-MM-dd'T'HH:mm:ss.SSSZ。
 	EndTime *string `json:"end_time,omitempty"`
 
 	// 是否已下载。

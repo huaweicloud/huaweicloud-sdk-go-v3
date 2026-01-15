@@ -51,7 +51,7 @@ type SyncTaskInfo struct {
 	// 是否自动解冻归档数据，默认否。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
 	EnableRestore *bool `json:"enable_restore,omitempty"`
 
-	// 当源端为腾讯云时，需要填写此参数。
+	// 腾讯云APPID，当源端为腾讯云时，会返回此参数。
 	AppId *string `json:"app_id,omitempty"`
 
 	SourceCdn *SourceCdnResp `json:"source_cdn,omitempty"`

@@ -21,6 +21,18 @@ type ListPoolDesktopsDetailResponse struct {
 	// 包周期桌面总数。
 	PeriodDesktopsNum *int32 `json:"period_desktops_num,omitempty"`
 
+	// 按需免费桌面总数。
+	OnDemandFreeImageDesktopsNum *int32 `json:"on_demand_free_image_desktops_num,omitempty"`
+
+	// 按需收费桌面总数。
+	OnDemandChargeImageDesktopsNum *int32 `json:"on_demand_charge_image_desktops_num,omitempty"`
+
+	// 包周期免费桌面总数。
+	PeriodFreeImageDesktopsNum *int32 `json:"period_free_image_desktops_num,omitempty"`
+
+	// 包周期收费桌面总数。
+	PeriodChargeImageDesktopsNum *int32 `json:"period_charge_image_desktops_num,omitempty"`
+
 	InconsistentType *InconsistentTypeEnum `json:"inconsistent_type,omitempty"`
 	HttpStatusCode   int                   `json:"-"`
 }

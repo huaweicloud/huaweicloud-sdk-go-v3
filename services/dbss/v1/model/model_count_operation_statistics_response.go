@@ -15,7 +15,7 @@ type CountOperationStatisticsResponse struct {
 	// 风险操作统计
 	OperationStatistics *[]OperationStatisticsBean `json:"operation_statistics,omitempty"`
 
-	// 状态  - FINISHED：已完成  - RUNNING：运行中
+	// 状态  - FINISHED：已完成 - RUNNING：运行中
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
