@@ -8,37 +8,37 @@ import (
 
 type UpdateAttackLogAlarmConfigDto struct {
 
-	// 账号名称
+	// 账户名称
 	AccountName *string `json:"account_name,omitempty"`
 
-	// 告警id
+	// 账户名称ID.
 	AlarmId *string `json:"alarm_id,omitempty"`
 
-	// 告警周期，0：全天，1：8时到22时
+	// 告警周期，0：全天，1：8时到22时，为必传参数
 	AlarmTimePeriod *int32 `json:"alarm_time_period,omitempty"`
 
-	// 告警类型 0:攻击告警; 1:流量超额预警; 2:EIP未防护告警; 3:威胁情报告警
+	// 告警类型 0：攻击告警; 1：流量超额预警; 2：EIP未防护告警; 3：异常外联告警，为必传参数
 	AlarmType *int32 `json:"alarm_type,omitempty"`
 
-	// 告警状态 0:失效; 1:生效
+	// 告警状态 0：失效; 1：生效，为必传参数
 	EnableStatus *int32 `json:"enable_status,omitempty"`
 
-	// 告警触发频次
+	// 告警触发频次，为必传参数
 	FrequencyCount *int32 `json:"frequency_count,omitempty"`
 
-	// 告警频次时间范围
+	// 告警频次时间范围，以分钟为单位，为必传参数
 	FrequencyTime *int32 `json:"frequency_time,omitempty"`
 
-	// 告警语言
+	// 告警语言，zh-cn为中文，en-us为英文
 	Language *string `json:"language,omitempty"`
 
-	// 告警等级
+	// 告警等级，当type为0和4时，severity为CRITICAL,HIGH,MEDIUM,LOW四种等级的组合字符串，当type为1时，severity为2；当type为2时，severity固定为3，为必传参数
 	Severity *string `json:"severity,omitempty"`
 
-	// 告警urn
+	// 告警urn，为必传参数
 	TopicUrn *string `json:"topic_urn,omitempty"`
 
-	// 用户名称
+	// 用户名称，为cfw，为必传参数
 	Username *string `json:"username,omitempty"`
 }
 

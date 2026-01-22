@@ -9,10 +9,10 @@ import (
 // CreateConsumerGroupOrBatchDeleteConsumerGroupResponse Response Object
 type CreateConsumerGroupOrBatchDeleteConsumerGroupResponse struct {
 
-	// 删除消费组的任务ID
+	// **参数解释**： 删除消费组的任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	JobId *string `json:"job_id,omitempty"`
 
-	// 创建成功的消费组名称。
+	// **参数解释**： 创建成功的消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Name           *string `json:"name,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

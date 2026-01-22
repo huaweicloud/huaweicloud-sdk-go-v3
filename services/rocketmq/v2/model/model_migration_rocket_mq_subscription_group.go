@@ -6,32 +6,32 @@ import (
 	"strings"
 )
 
-// MigrationRocketMqSubscriptionGroup RocketMQ元数据迁移，RocketMQ消费组元数据。
+// MigrationRocketMqSubscriptionGroup **参数解释**： RocketMQ元数据迁移，RocketMQ消费组元数据。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 type MigrationRocketMqSubscriptionGroup struct {
 
-	// 消费组名。
-	GroupName *string `json:"groupName,omitempty"`
+	// **参数解释**： 消费组名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	GroupName *string `json:"group_name,omitempty"`
 
-	// 是否允许以广播模式消费。
-	ConsumeBroadcastEnable *bool `json:"consumeBroadcastEnable,omitempty"`
+	// **参数解释**： 是否允许以广播模式消费。 **约束限制**： 不涉及。 **取值范围**： - true：允许以广播模式消费。 - false：不允许以广播模式消费。 **默认取值**： 不涉及。
+	ConsumeBroadcastEnable *bool `json:"consume_broadcast_enable,omitempty"`
 
-	// 是否允许消费。
-	ConsumeEnable *bool `json:"consumeEnable,omitempty"`
+	// **参数解释**： 是否允许消费。 **约束限制**： 不涉及。 **取值范围**： - true：允许消费。 - false：不允许消费。 **默认取值**： true。
+	ConsumeEnable *bool `json:"consume_enable,omitempty"`
 
-	// 是否从最小偏移量开始消费。
-	ConsumeFromMinEnable *bool `json:"consumeFromMinEnable,omitempty"`
+	// **参数解释**： 是否从最小偏移量开始消费。 **约束限制**： 不涉及。 **取值范围**： - true：是。 - false：不是。 **默认取值**： true。
+	ConsumeFromMinEnable *bool `json:"consume_from_min_enable,omitempty"`
 
-	// 消费者ID变化时是否通知。
-	NotifyConsumerIdsChangedEnable *bool `json:"notifyConsumerIdsChangedEnable,omitempty"`
+	// **参数解释**： 消费者ID变化时是否通知。 **约束限制**： 不涉及。 **取值范围**： - true：是。 - false：不是。 **默认取值**： true。
+	NotifyConsumerIdsChangedEnable *bool `json:"notify_consumer_ids_changed_enable,omitempty"`
 
-	// 消费最大重试次数。
-	RetryMaxTimes *int32 `json:"retryMaxTimes,omitempty"`
+	// **参数解释**： 消费最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 16。
+	RetryMaxTimes *int32 `json:"retry_max_times,omitempty"`
 
-	// 重试队列个数。
-	RetryQueueNums *int32 `json:"retryQueueNums,omitempty"`
+	// **参数解释**： 消费最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 1。
+	RetryQueueNums *int32 `json:"retry_queue_nums,omitempty"`
 
-	// 慢消费时选择的broker节点ID。
-	WhichBrokerWhenConsumeSlow *int64 `json:"whichBrokerWhenConsumeSlow,omitempty"`
+	// **参数解释**： 慢消费时选择的broker节点ID **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 1。
+	WhichBrokerWhenConsumeSlow *int64 `json:"which_broker_when_consume_slow,omitempty"`
 }
 
 func (o MigrationRocketMqSubscriptionGroup) String() string {

@@ -11,7 +11,7 @@ import (
 
 type BatchDeleteInstanceRespResults struct {
 
-	// 操作结果。
+	// **参数解释**： 操作结果。 **约束限制**： 不涉及。 **取值范围**： - success - failed **默认取值**： 不涉及。
 	Result *BatchDeleteInstanceRespResultsResult `json:"result,omitempty"`
 
 	// 实例ID。

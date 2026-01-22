@@ -48,7 +48,7 @@ type LogVo struct {
 	StartTime *int64 `json:"start_time,omitempty"`
 
 	// **参数解释**： 目的地区ID **取值范围**： 不涉及
-	DstRegionId *interface{} `json:"dst_region_id,omitempty"`
+	DstRegionId *string `json:"dst_region_id,omitempty"`
 
 	// **参数解释**： 目的地区名称 **取值范围**： 不涉及
 	DstRegionName *string `json:"dst_region_name,omitempty"`

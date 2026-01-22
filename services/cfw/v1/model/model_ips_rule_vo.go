@@ -10,24 +10,35 @@ import (
 )
 
 type IpsRuleVo struct {
+
+	// 受影响对象，可包含如下：Others、Sun、Apache、IBM、VMware、WordPress、Adobe、Oracle、Google Chrome等
 	AffectedApplication *string `json:"affected_application,omitempty"`
 
+	// ips规则创建的年份
 	CreateTime *string `json:"create_time,omitempty"`
 
+	// 默认状态
 	DefaultStatus *IpsRuleVoDefaultStatus `json:"default_status,omitempty"`
 
+	// cve id
 	IpsCve *string `json:"ips_cve,omitempty"`
 
+	// ips组，使用ips规则拦截模式区分，包含，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
 	IpsGroup *IpsRuleVoIpsGroup `json:"ips_group,omitempty"`
 
+	// ips规则id
 	IpsId *string `json:"ips_id,omitempty"`
 
+	// ips严重等级，  ips严重等级，包含CRITICAL、HIGH、MEDIUM、LOW
 	IpsLevel *IpsRuleVoIpsLevel `json:"ips_level,omitempty"`
 
+	// ips规则名称
 	IpsName *string `json:"ips_name,omitempty"`
 
+	// ips规则类型，包括漏洞扫描、黑客工具、特洛伊木马等
 	IpsRulesType *string `json:"ips_rules_type,omitempty"`
 
+	// ips规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
 	IpsStatus *IpsRuleVoIpsStatus `json:"ips_status,omitempty"`
 }
 

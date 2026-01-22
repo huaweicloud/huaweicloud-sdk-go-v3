@@ -405,6 +405,22 @@ func (i *ListClustersTagsInvoker) Invoke() (*model.ListClustersTagsResponse, err
 	}
 }
 
+type ListDiskTypeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDiskTypeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDiskTypeInvoker) Invoke() (*model.ListDiskTypeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDiskTypeResponse), nil
+	}
+}
+
 type ListElbCertsInvoker struct {
 	*invoker.BaseInvoker
 }

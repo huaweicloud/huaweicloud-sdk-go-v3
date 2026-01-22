@@ -12,7 +12,7 @@ type CreateBindingResponse struct {
 	// 绑定对象
 	Source *string `json:"source,omitempty"`
 
-	// 绑定Exchange或者Queue
+	// **参数解释**： 绑定目标端类型。 **取值范围**： - exchange：交换机。 - queue：队列。[AMQP版本只支持绑定queue。](tag:hws,hws_hk,hws_eu)
 	DestinationType *string `json:"destination_type,omitempty"`
 
 	// 要投递的Exchange或Queue名称

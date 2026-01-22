@@ -9,13 +9,13 @@ import (
 // ListQueuesResponse Response Object
 type ListQueuesResponse struct {
 
-	// 当前显示数量
+	// **参数解释**： 当前显示数量。 **取值范围**： 不涉及。
 	Size *int32 `json:"size,omitempty"`
 
-	// 查询结果总数
+	// **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
 	Total *int32 `json:"total,omitempty"`
 
-	// 查询详情
+	// **参数解释**： 查询详情。
 	Items          *[]QueueDetails `json:"items,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

@@ -12,7 +12,7 @@ import (
 // ListProductsRequest Request Object
 type ListProductsRequest struct {
 
-	// 消息引擎的类型。当前只支持rabbitmq。
+	// **参数解释**： 消息引擎的类型。 **约束限制**： 不涉及。 **取值范围**： rabbitmq：RabbitMQ引擎。 **默认取值**： 不涉及。
 	Engine *ListProductsRequestEngine `json:"engine,omitempty"`
 }
 

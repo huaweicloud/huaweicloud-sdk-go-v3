@@ -40,9 +40,6 @@ type CreateTranscodingReq struct {
 	// 雪碧图参数，数组，最多支持20个成员。
 	ImageSprites *[]ImageSprite `json:"image_sprites,omitempty"`
 
-	//
-	PipelineId *string `json:"pipeline_id,omitempty"`
-
 	// 任务优先级，取值如下： - 9代表高优先级。 - 6代表中优先级，默认为6。  暂时只支持6和9。
 	Priority *int32 `json:"priority,omitempty"`
 

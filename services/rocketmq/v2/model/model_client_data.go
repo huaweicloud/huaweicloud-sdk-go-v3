@@ -8,19 +8,19 @@ import (
 
 type ClientData struct {
 
-	// 客户端语言。
+	// **参数解释**： 客户端语言。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Language *string `json:"language,omitempty"`
 
-	// 客户端版本。
+	// **参数解释**： 客户端版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Version *string `json:"version,omitempty"`
 
-	// 客户端ID。
+	// **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	ClientId *string `json:"client_id,omitempty"`
 
-	// 客户端地址。
+	// **参数解释**： 客户端地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	ClientAddr *string `json:"client_addr,omitempty"`
 
-	// 订阅关系列表。
+	// **参数解释**： 订阅关系列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Subscriptions *[]Subscription `json:"subscriptions,omitempty"`
 }
 

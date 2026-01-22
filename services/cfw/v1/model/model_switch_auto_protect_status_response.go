@@ -8,8 +8,8 @@ import (
 
 // SwitchAutoProtectStatusResponse Response Object
 type SwitchAutoProtectStatusResponse struct {
-	Data           *string `json:"data,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Body           *interface{} `json:"body,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o SwitchAutoProtectStatusResponse) String() string {

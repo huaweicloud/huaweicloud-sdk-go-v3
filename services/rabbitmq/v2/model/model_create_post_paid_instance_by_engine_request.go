@@ -12,7 +12,7 @@ import (
 // CreatePostPaidInstanceByEngineRequest Request Object
 type CreatePostPaidInstanceByEngineRequest struct {
 
-	// 消息引擎。
+	// **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： rabbitmq：RabbitMQ引擎。 **默认取值**： 不涉及。
 	Engine CreatePostPaidInstanceByEngineRequestEngine `json:"engine"`
 
 	Body *CreateInstanceReq `json:"body,omitempty"`

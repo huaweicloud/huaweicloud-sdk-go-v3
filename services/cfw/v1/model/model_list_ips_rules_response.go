@@ -8,8 +8,8 @@ import (
 
 // ListIpsRulesResponse Response Object
 type ListIpsRulesResponse struct {
-	Data           *AdvancedIpsRuleListVo `json:"data,omitempty"`
-	HttpStatusCode int                    `json:"-"`
+	Data           *IpsRuleListVo `json:"data,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ListIpsRulesResponse) String() string {

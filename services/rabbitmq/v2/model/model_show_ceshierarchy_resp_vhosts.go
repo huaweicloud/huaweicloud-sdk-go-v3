@@ -8,7 +8,7 @@ import (
 
 type ShowCeshierarchyRespVhosts struct {
 
-	// Vhost名称。
+	// **参数解释**： Vhost名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 }
 

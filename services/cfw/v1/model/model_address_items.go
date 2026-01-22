@@ -11,7 +11,7 @@ type AddressItems struct {
 	// 地址组成员id列表
 	Items *[]AddressItemIdWithoutName `json:"items,omitempty"`
 
-	// 覆盖ip列表
+	// 覆盖IP列表
 	CoveredIp *[]CoveredIpvo `json:"covered_ip,omitempty"`
 }
 

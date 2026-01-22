@@ -8,28 +8,28 @@ import (
 
 type ListProductsRespDetail struct {
 
-	// 消息存储空间。
+	// **参数解释**： 消息存储空间。 **取值范围**： 不涉及。
 	Storage *string `json:"storage,omitempty"`
 
-	// 产品ID。
+	// **参数解释**： 产品ID。 **取值范围**： 不涉及。
 	ProductId *string `json:"product_id,omitempty"`
 
-	// 规格ID。
+	// **参数解释**： 规格ID。 **取值范围**： 不涉及。
 	SpecCode *string `json:"spec_code,omitempty"`
 
-	// IO信息。
+	// **参数解释**： IO信息。
 	Io *[]ListProductsRespIo `json:"io,omitempty"`
 
-	// 资源售罄的可用区列表。
+	// **参数解释**： 资源售罄的可用区列表。 **取值范围**： 不涉及。
 	UnavailableZones *[]string `json:"unavailable_zones,omitempty"`
 
-	// 有可用资源的可用区列表。
+	// **参数解释**： 有可用资源的可用区列表。 **取值范围**： 不涉及。
 	AvailableZones *[]string `json:"available_zones,omitempty"`
 
-	// 该产品规格对应的虚拟机规格。
+	// **参数解释**： 该产品规格对应的虚拟机规格。 **取值范围**： 不涉及。
 	EcsFlavorId *string `json:"ecs_flavor_id,omitempty"`
 
-	// 实例规格架构类型。当前仅支持X86。
+	// **参数解释**： 实例规格架构类型。当前仅支持X86。 **取值范围**： 不涉及。
 	ArchType *string `json:"arch_type,omitempty"`
 }
 

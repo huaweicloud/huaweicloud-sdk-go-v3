@@ -12,46 +12,46 @@ import (
 // RuleAclListResponseDtoDataRecords items
 type RuleAclListResponseDtoDataRecords struct {
 
-	// 规则id
+	// **参数解释**： 规则ID **取值范围**： 不涉及
 	RuleId *string `json:"rule_id,omitempty"`
 
-	// 应用列表
-	Applications *[]string `json:"applications,omitempty"`
-
-	// 地址类型0 ipv4，1 ipv6
-	AddressType *int32 `json:"address_type,omitempty"`
-
-	// 规则名称
-	Name *string `json:"name,omitempty"`
-
-	// 排序id
+	// **参数解释**： 排序id **取值范围**： 不涉及
 	OrderId *int32 `json:"order_id,omitempty"`
 
-	// 规则方向0：外到内1：内到外
+	// **参数解释**： 应用列表 **取值范围**： 不涉及
+	Applications *[]string `json:"applications,omitempty"`
+
+	// 参数解释： IP地址的互联网协议类型，用于指定IP地址的互联网协议，由客户指定 约束限制： 不涉及 取值范围： 0：IPv4 1：IPv6 默认取值： 不涉及
+	AddressType *int32 `json:"address_type,omitempty"`
+
+	// **参数解释**： 规则名称 **取值范围**： 不涉及
+	Name *string `json:"name,omitempty"`
+
+	// **参数解释**： 规则方向 **取值范围**： 0：外到内1：内到外
 	Direction *RuleAclListResponseDtoDataRecordsDirection `json:"direction,omitempty"`
 
-	// 动作0：permit，1：deny
+	// **参数解释**： 规则动作类型，用于区分规则对流量的动作 **取值范围**： 0表示允许通行（permit），1表示拒绝通行（deny）
 	ActionType *int32 `json:"action_type,omitempty"`
 
-	// 规则下发状态 0：禁用，1：启用
+	// **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示启用，1表示禁用
 	Status *int32 `json:"status,omitempty"`
 
-	// 描述
+	// **参数解释**： 规则描述，用于描述规则的用途。 **取值范围**： 不涉及
 	Description *string `json:"description,omitempty"`
 
-	// 长连接时长
+	// **参数解释**： 长连接时长（s）。 **取值范围**： 1-86400000。
 	LongConnectTime *int64 `json:"long_connect_time,omitempty"`
 
-	// 长连接支持
+	// **参数解释**： 用于表示是否支持长连接。 **取值范围**： 0表示不支持，1表示支持
 	LongConnectEnable *int32 `json:"long_connect_enable,omitempty"`
 
-	// 长连接时长对应小时
+	// **参数解释**： 长连接时长对应小时数（h）。 **取值范围**： 0-24000。
 	LongConnectTimeHour *int64 `json:"long_connect_time_hour,omitempty"`
 
-	// 长连接时长对应分钟
+	// **参数解释**： 长连接时长对应分钟数（min）。 **取值范围**： 0-60。
 	LongConnectTimeMinute *int64 `json:"long_connect_time_minute,omitempty"`
 
-	// 长连接时长秒
+	// **参数解释**： 长连接时长对应秒数（s）。 **取值范围**： 0-60。
 	LongConnectTimeSecond *int64 `json:"long_connect_time_second,omitempty"`
 
 	Source *RuleAddressDtoForResponse `json:"source,omitempty"`
@@ -60,13 +60,16 @@ type RuleAclListResponseDtoDataRecords struct {
 
 	Service *RuleServiceDtoForResponse `json:"service,omitempty"`
 
-	// 规则类型，0：互联网规则，1：vpc规则，2：nat规则
+	// **参数解释**： 规则类型，用于区分不同防护对象设置规则类型。 **取值范围**：  0：互联网边界规则，源（source）和目的（destination）地址需要为公网IP或域名； 1：VPC间规则，源（source）和目的（destination）地址需要为私有ip； 2：NAT规则，源（source）地址需要为私网IP，目的地址为公网IP或域名。
 	Type *RuleAclListResponseDtoDataRecordsType `json:"type,omitempty"`
 
-	// 规则创建时间，例如：\"2024-08-12 08:40:00\"
+	// **参数解释**： 规则创建时间。 **取值范围**： 不涉及
 	CreatedDate *string `json:"created_date,omitempty"`
 
-	// 规则最后开启时间，例如：\"2024-08-12 08:40:00\"
+	// **参数解释**： 规则修改时间。 **取值范围**： 不涉及
+	ModifiedDate *string `json:"modified_date,omitempty"`
+
+	// **参数解释**： 规则最后开启时间。 **取值范围**： 不涉及
 	LastOpenTime *string `json:"last_open_time,omitempty"`
 
 	Tag *TagsVo `json:"tag,omitempty"`

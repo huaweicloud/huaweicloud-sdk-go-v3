@@ -9,12 +9,12 @@ import (
 type SendMessageReq struct {
 
 	// **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-	Topic *string `json:"topic,omitempty"`
+	Topic string `json:"topic"`
 
 	// **参数解释**： 消息内容。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-	Body *string `json:"body,omitempty"`
+	Body string `json:"body"`
 
-	// **参数解释**： 特性列表。
+	// **参数解释**： 特性列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
 	PropertyList *[]SendMessageProperties `json:"property_list,omitempty"`
 }
 

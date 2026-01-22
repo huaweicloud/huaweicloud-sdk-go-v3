@@ -9,10 +9,10 @@ import (
 // ListDnsServersResponse Response Object
 type ListDnsServersResponse struct {
 
-	// dns服务器列表
+	// **参数解释**： dns服务器列表 **取值范围**： 不涉及
 	Data *[]DnsServersResponseDto `json:"data,omitempty"`
 
-	// dns服务器总数
+	// **参数解释**： dns服务器总数 **取值范围**： 不涉及
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

@@ -11,19 +11,6 @@ import (
 
 // CountGlobalEipSegmentRequest Request Object
 type CountGlobalEipSegmentRequest struct {
-
-	// 每页条数
-	Limit *int32 `json:"limit,omitempty"`
-
-	// 分页起始点
-	Offset *int32 `json:"offset,omitempty"`
-
-	// 分页起始点
-	Marker *string `json:"marker,omitempty"`
-
-	// 翻页方向
-	PageReverse *bool `json:"page_reverse,omitempty"`
-
 	Fields *[]CountGlobalEipSegmentRequestFields `json:"fields,omitempty"`
 
 	Id *[]string `json:"id,omitempty"`

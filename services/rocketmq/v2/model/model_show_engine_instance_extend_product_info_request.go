@@ -12,19 +12,19 @@ import (
 // ShowEngineInstanceExtendProductInfoRequest Request Object
 type ShowEngineInstanceExtendProductInfoRequest struct {
 
-	// 消息引擎的类型。支持的类型为rocketmq。
+	// **参数解释**： 消息引擎的类型。支持的类型为rocketmq。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Engine string `json:"engine"`
 
-	// 实例ID。
+	// **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	InstanceId string `json:"instance_id"`
 
-	// 产品的类型。 advanced：专享版。
+	// **参数解释**： 产品的类型。 advanced：专享版。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Type *ShowEngineInstanceExtendProductInfoRequestType `json:"type,omitempty"`
 
-	// 查询数量。
+	// **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 偏移量，表示从此偏移量开始查询，offset大于等于0。
+	// **参数解释**： 偏移量，表示从此偏移量开始查询，offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
 	Offset *int32 `json:"offset,omitempty"`
 }
 

@@ -8,10 +8,10 @@ import (
 
 type EntityInfo struct {
 
-	// 组ID或节点ID。
+	// **参数解释：** 组ID或节点ID。 **取值范围：** 不涉及。
 	EntityId string `json:"entity_id"`
 
-	// 组名称或节点名称。
+	// **参数解释：** 组名称或节点名称。 **取值范围：** 不涉及。
 	EntityName string `json:"entity_name"`
 }
 

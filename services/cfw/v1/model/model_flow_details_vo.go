@@ -23,6 +23,12 @@ type FlowDetailsVo struct {
 	// **参数解释**： 最近访问时间 **取值范围**： 不涉及
 	LastTime *int64 `json:"last_time,omitempty"`
 
+	// **参数解释**： 聚合开始时间 **取值范围**： 不涉及
+	AggStartTime *int64 `json:"agg_start_time,omitempty"`
+
+	// **参数解释**： 聚合结束时间 **取值范围**： 不涉及
+	AggEndTime *int64 `json:"agg_end_time,omitempty"`
+
 	// **参数解释**： 端口统计 **取值范围**： 不涉及
 	Ports *[]ItemVo `json:"ports,omitempty"`
 

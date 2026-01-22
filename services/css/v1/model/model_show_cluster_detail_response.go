@@ -26,6 +26,9 @@ type ShowClusterDetailResponse struct {
 	// 公网IP信息。
 	PublicIp *string `json:"publicIp,omitempty"`
 
+	// **参数解释**： 集群自动快照策略相关信息。 **取值范围**： 不涉及
+	SnapshotPolicy *interface{} `json:"snapshotPolicy,omitempty"`
+
 	// 集群创建时间，格式为ISO8601： CCYY-MM-DDThh:mm:ss。
 	Created *string `json:"created,omitempty"`
 

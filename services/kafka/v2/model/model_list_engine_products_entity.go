@@ -9,7 +9,7 @@ import (
 // ListEngineProductsEntity **参数解释**： 产品规格的详细信息。
 type ListEngineProductsEntity struct {
 
-	// **参数解释**： 产品类型。 **取值范围**： - single    - cluster
+	// **参数解释**： 产品类型。 **取值范围**： - single：单机。 - cluster：集群。
 	Type *string `json:"type,omitempty"`
 
 	// **参数解释**： 产品ID。 **取值范围**： 不涉及。

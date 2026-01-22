@@ -21,6 +21,22 @@ func (i *BatchShowIpBelongsInvoker) Invoke() (*model.BatchShowIpBelongsResponse,
 	}
 }
 
+type CheckDomainVerificationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckDomainVerificationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckDomainVerificationInvoker) Invoke() (*model.CheckDomainVerificationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckDomainVerificationResponse), nil
+	}
+}
+
 type CreateDomainInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -82,6 +98,22 @@ func (i *CreateFlowsInvoker) Invoke() (*model.CreateFlowsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateFlowsResponse), nil
+	}
+}
+
+type CreatePullTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePullTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreatePullTaskInvoker) Invoke() (*model.CreatePullTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePullTaskResponse), nil
 	}
 }
 
@@ -357,6 +389,22 @@ func (i *DeletePublishTemplateInvoker) Invoke() (*model.DeletePublishTemplateRes
 	}
 }
 
+type DeletePullTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePullTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeletePullTaskInvoker) Invoke() (*model.DeletePullTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePullTaskResponse), nil
+	}
+}
+
 type DeleteRecordCallbackConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -629,6 +677,22 @@ func (i *ListPublishTemplateInvoker) Invoke() (*model.ListPublishTemplateRespons
 	}
 }
 
+type ListPullTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPullTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPullTasksInvoker) Invoke() (*model.ListPullTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPullTasksResponse), nil
+	}
+}
+
 type ListRecordCallbackConfigsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -821,6 +885,22 @@ func (i *ModifyFlowStopInvoker) Invoke() (*model.ModifyFlowStopResponse, error) 
 	}
 }
 
+type ModifyPullTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyPullTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyPullTaskInvoker) Invoke() (*model.ModifyPullTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyPullTaskResponse), nil
+	}
+}
+
 type RunRecordInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -882,6 +962,22 @@ func (i *ShowDomainKeyChainInvoker) Invoke() (*model.ShowDomainKeyChainResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowDomainKeyChainResponse), nil
+	}
+}
+
+type ShowDomainVerificationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainVerificationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDomainVerificationInvoker) Invoke() (*model.ShowDomainVerificationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainVerificationResponse), nil
 	}
 }
 
@@ -1330,6 +1426,22 @@ func (i *DeleteDomainHttpsCertInvoker) Invoke() (*model.DeleteDomainHttpsCertRes
 		return nil, err
 	} else {
 		return result.(*model.DeleteDomainHttpsCertResponse), nil
+	}
+}
+
+type ShowCertificateInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCertificateInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowCertificateInfoInvoker) Invoke() (*model.ShowCertificateInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCertificateInfoResponse), nil
 	}
 }
 

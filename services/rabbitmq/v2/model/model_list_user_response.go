@@ -9,10 +9,10 @@ import (
 // ListUserResponse Response Object
 type ListUserResponse struct {
 
-	// 用户列表。
+	// **参数解释**： 用户列表。
 	Users *[]AmqpUser `json:"users,omitempty"`
 
-	// 总用户个数。
+	// **参数解释**： 总用户个数。 **取值范围**： 不涉及。
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

@@ -15,7 +15,7 @@ type UpdateBlackWhiteListDto struct {
 	// 地址类型0：ipv4，1:ipv6
 	AddressType *int32 `json:"address_type,omitempty"`
 
-	// ip地址
+	// IP地址
 	Address string `json:"address"`
 
 	// 协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1

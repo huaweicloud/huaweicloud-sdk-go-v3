@@ -421,6 +421,38 @@ func (i *ListQuotasInvoker) Invoke() (*model.ListQuotasResponse, error) {
 	}
 }
 
+type ListReferencesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListReferencesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListReferencesInvoker) Invoke() (*model.ListReferencesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListReferencesResponse), nil
+	}
+}
+
+type ListRepoAccessoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRepoAccessoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRepoAccessoriesInvoker) Invoke() (*model.ListRepoAccessoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRepoAccessoriesResponse), nil
+	}
+}
+
 type ListRepoDetailsInvoker struct {
 	*invoker.BaseInvoker
 }

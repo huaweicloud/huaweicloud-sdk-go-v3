@@ -13,7 +13,7 @@ type DescribeGroupsRespGroup struct {
 	State *string `json:"state,omitempty"`
 
 	// **参数解释**： 创建时间。 **取值范围**： 不涉及。
-	CreatedAt *interface{} `json:"createdAt,omitempty"`
+	CreatedAt *int64 `json:"createdAt,omitempty"`
 
 	// **参数解释**： 消费组名称。 **取值范围**： 不涉及。
 	GroupId *string `json:"group_id,omitempty"`

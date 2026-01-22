@@ -8,9 +8,11 @@ import (
 
 // ExportIpBlacklistResponse Response Object
 type ExportIpBlacklistResponse struct {
-	Body *string `json:"body,omitempty"`
+	Body *interface{} `json:"body,omitempty"`
 
 	ContentDisposition *string `json:"Content-Disposition,omitempty"`
+
+	ContentLength *int32 `json:"Content-Length,omitempty"`
 
 	ContentType    *string `json:"Content-Type,omitempty"`
 	HttpStatusCode int     `json:"-"`

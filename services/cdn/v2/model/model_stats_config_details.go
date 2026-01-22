@@ -19,9 +19,6 @@ type StatsConfigDetails struct {
 	ResourceName *string `json:"resource_name,omitempty"`
 
 	ConfigInfo *ConfigInfo `json:"config_info,omitempty"`
-
-	// 统计配置失效时间，秒时间戳
-	ExpiredTime *int64 `json:"expired_time,omitempty"`
 }
 
 func (o StatsConfigDetails) String() string {

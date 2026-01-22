@@ -8,10 +8,10 @@ import (
 
 type CoveredIpvo struct {
 
-	// ip地址
+	// IP地址
 	Ip *string `json:"ip,omitempty"`
 
-	// 覆盖ip地址。
+	// 覆盖IP地址。
 	CoveredIp *string `json:"covered_Ip,omitempty"`
 }
 

@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// MemberCheckJobInfo **参数解释**：后端服务器检测任务结果。
+// MemberCheckJobInfo **参数解释**：后端服务器检查任务结果。
 type MemberCheckJobInfo struct {
 
-	// **参数解释**：processed检查完成，processing检查中，failed检查失败。  **取值范围**：不涉及
+	// **参数解释**：检查任务状态。  **取值范围**： - processed：检查任务执行完成。 - processing：检查任务执行中。 - failed：检查任务执行失败。
 	Status *string `json:"status,omitempty"`
 
 	Result *MemberCheckJobResult `json:"result,omitempty"`

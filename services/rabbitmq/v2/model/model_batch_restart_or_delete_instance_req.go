@@ -19,6 +19,9 @@ type BatchRestartOrDeleteInstanceReq struct {
 
 	// 是否批量删除创建失败的实例。  当参数值为“rabbitmq”时，删除租户所有创建失败的实例，此时请求参数instances可为空。
 	AllFailure *BatchRestartOrDeleteInstanceReqAllFailure `json:"all_failure,omitempty"`
+
+	// **参数解释**： 是否强删除。 **约束限制**： 不涉及。 **取值范围**： - true：强删除，强删除实例不进入回收站。 - false：弱删除，实例进入回收站。 **默认取值**： 不涉及。
+	ForceDelete *bool `json:"force_delete,omitempty"`
 }
 
 func (o BatchRestartOrDeleteInstanceReq) String() string {

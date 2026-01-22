@@ -8,7 +8,7 @@ import (
 
 type UseRuleVo struct {
 
-	// 规则id
+	// 规则ID
 	Id *string `json:"id,omitempty"`
 
 	// 规则名称

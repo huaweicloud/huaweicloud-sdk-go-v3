@@ -38,7 +38,7 @@ type HttpQueryCfwFlowLogsResponseDtoDataRecords struct {
 	// 目的IP
 	DstIp *string `json:"dst_ip,omitempty"`
 
-	// 规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+	// 规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
 	App *string `json:"app,omitempty"`
 
 	// 目的端口

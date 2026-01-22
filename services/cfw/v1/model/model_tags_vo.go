@@ -8,13 +8,13 @@ import (
 
 type TagsVo struct {
 
-	// 规则id
+	// **参数解释**： 规则标签ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	TagId *string `json:"tag_id,omitempty"`
 
-	// 规则标签键
+	// **参数解释**： 规则标签键 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	TagKey *string `json:"tag_key,omitempty"`
 
-	// 规则标签值
+	// **参数解释**： 规则标签值 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	TagValue *string `json:"tag_value,omitempty"`
 }
 

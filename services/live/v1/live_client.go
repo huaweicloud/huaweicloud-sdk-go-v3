@@ -40,6 +40,27 @@ func (c *LiveClient) BatchShowIpBelongsInvoker(request *model.BatchShowIpBelongs
 	return &BatchShowIpBelongsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckDomainVerification 域名归属权认证
+//
+// 域名归属权认证，确保创建的域名对应的主域名有归属权。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) CheckDomainVerification(request *model.CheckDomainVerificationRequest) (*model.CheckDomainVerificationResponse, error) {
+	requestDef := GenReqDefForCheckDomainVerification()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckDomainVerificationResponse), nil
+	}
+}
+
+// CheckDomainVerificationInvoker 域名归属权认证
+func (c *LiveClient) CheckDomainVerificationInvoker(request *model.CheckDomainVerificationRequest) *CheckDomainVerificationInvoker {
+	requestDef := GenReqDefForCheckDomainVerification()
+	return &CheckDomainVerificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateDomain 创建直播域名
 //
 // 可单独创建直播播放域名或推流域名，每个租户最多可配置64条域名记录。
@@ -122,6 +143,27 @@ func (c *LiveClient) CreateFlows(request *model.CreateFlowsRequest) (*model.Crea
 func (c *LiveClient) CreateFlowsInvoker(request *model.CreateFlowsRequest) *CreateFlowsInvoker {
 	requestDef := GenReqDefForCreateFlows()
 	return &CreateFlowsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePullTask 创建直播拉流转推任务
+//
+// 根据租户指定的拉流源以及拉流任务信息创建直播拉流转推任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) CreatePullTask(request *model.CreatePullTaskRequest) (*model.CreatePullTaskResponse, error) {
+	requestDef := GenReqDefForCreatePullTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePullTaskResponse), nil
+	}
+}
+
+// CreatePullTaskInvoker 创建直播拉流转推任务
+func (c *LiveClient) CreatePullTaskInvoker(request *model.CreatePullTaskRequest) *CreatePullTaskInvoker {
+	requestDef := GenReqDefForCreatePullTask()
+	return &CreatePullTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateRecordCallbackConfig 创建录制回调配置
@@ -479,6 +521,27 @@ func (c *LiveClient) DeletePublishTemplate(request *model.DeletePublishTemplateR
 func (c *LiveClient) DeletePublishTemplateInvoker(request *model.DeletePublishTemplateRequest) *DeletePublishTemplateInvoker {
 	requestDef := GenReqDefForDeletePublishTemplate()
 	return &DeletePublishTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePullTask 删除直播拉流转推任务
+//
+// 停止并删除直播拉流转推任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) DeletePullTask(request *model.DeletePullTaskRequest) (*model.DeletePullTaskResponse, error) {
+	requestDef := GenReqDefForDeletePullTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePullTaskResponse), nil
+	}
+}
+
+// DeletePullTaskInvoker 删除直播拉流转推任务
+func (c *LiveClient) DeletePullTaskInvoker(request *model.DeletePullTaskRequest) *DeletePullTaskInvoker {
+	requestDef := GenReqDefForDeletePullTask()
+	return &DeletePullTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteRecordCallbackConfig 删除录制回调配置
@@ -841,6 +904,27 @@ func (c *LiveClient) ListPublishTemplateInvoker(request *model.ListPublishTempla
 	return &ListPublishTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPullTasks 查询直播拉流转推任务
+//
+// 查询直播拉流转推任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ListPullTasks(request *model.ListPullTasksRequest) (*model.ListPullTasksResponse, error) {
+	requestDef := GenReqDefForListPullTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPullTasksResponse), nil
+	}
+}
+
+// ListPullTasksInvoker 查询直播拉流转推任务
+func (c *LiveClient) ListPullTasksInvoker(request *model.ListPullTasksRequest) *ListPullTasksInvoker {
+	requestDef := GenReqDefForListPullTasks()
+	return &ListPullTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListRecordCallbackConfigs 查询录制回调配置列表
 //
 // 查询录制回调配置列表接口。通过指定条件，查询满足条件的配置列表。
@@ -1093,6 +1177,27 @@ func (c *LiveClient) ModifyFlowStopInvoker(request *model.ModifyFlowStopRequest)
 	return &ModifyFlowStopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ModifyPullTask 修改直播拉流转推任务
+//
+// 修改直播拉流转推任务，仅当source_type为PullVodPushLive的任务生效
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ModifyPullTask(request *model.ModifyPullTaskRequest) (*model.ModifyPullTaskResponse, error) {
+	requestDef := GenReqDefForModifyPullTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyPullTaskResponse), nil
+	}
+}
+
+// ModifyPullTaskInvoker 修改直播拉流转推任务
+func (c *LiveClient) ModifyPullTaskInvoker(request *model.ModifyPullTaskRequest) *ModifyPullTaskInvoker {
+	requestDef := GenReqDefForModifyPullTask()
+	return &ModifyPullTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RunRecord 提交录制控制命令
 //
 // 对单条流的实时录制控制接口。
@@ -1175,6 +1280,27 @@ func (c *LiveClient) ShowDomainKeyChain(request *model.ShowDomainKeyChainRequest
 func (c *LiveClient) ShowDomainKeyChainInvoker(request *model.ShowDomainKeyChainRequest) *ShowDomainKeyChainInvoker {
 	requestDef := GenReqDefForShowDomainKeyChain()
 	return &ShowDomainKeyChainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDomainVerification 查询域名归属权验证信息
+//
+// 查询域名归属权验证信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ShowDomainVerification(request *model.ShowDomainVerificationRequest) (*model.ShowDomainVerificationResponse, error) {
+	requestDef := GenReqDefForShowDomainVerification()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainVerificationResponse), nil
+	}
+}
+
+// ShowDomainVerificationInvoker 查询域名归属权验证信息
+func (c *LiveClient) ShowDomainVerificationInvoker(request *model.ShowDomainVerificationRequest) *ShowDomainVerificationInvoker {
+	requestDef := GenReqDefForShowDomainVerification()
+	return &ShowDomainVerificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowFlowDetail 获取流详情
@@ -1766,6 +1892,27 @@ func (c *LiveClient) DeleteDomainHttpsCert(request *model.DeleteDomainHttpsCertR
 func (c *LiveClient) DeleteDomainHttpsCertInvoker(request *model.DeleteDomainHttpsCertRequest) *DeleteDomainHttpsCertInvoker {
 	requestDef := GenReqDefForDeleteDomainHttpsCert()
 	return &DeleteDomainHttpsCertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCertificateInfo 查询HTTPS证书信息
+//
+// 根据项目ID、域名等信息查询HTTPS证书信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ShowCertificateInfo(request *model.ShowCertificateInfoRequest) (*model.ShowCertificateInfoResponse, error) {
+	requestDef := GenReqDefForShowCertificateInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCertificateInfoResponse), nil
+	}
+}
+
+// ShowCertificateInfoInvoker 查询HTTPS证书信息
+func (c *LiveClient) ShowCertificateInfoInvoker(request *model.ShowCertificateInfoRequest) *ShowCertificateInfoInvoker {
+	requestDef := GenReqDefForShowCertificateInfo()
+	return &ShowCertificateInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDomainHttpsCert 查询指定域名的https证书配置

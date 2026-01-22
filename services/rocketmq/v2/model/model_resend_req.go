@@ -8,16 +8,16 @@ import (
 
 type ResendReq struct {
 
-	// Group ID。
+	// **参数解释**： Group ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
 	Group string `json:"group"`
 
-	// 消息所属Topic。
+	// **参数解释**： 消息所属Topic。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
 	Topic *string `json:"topic,omitempty"`
 
-	// 客户端ID。
+	// **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
 	ClientId string `json:"client_id"`
 
-	// 消息列表。
+	// **参数解释**： 消息列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
 	MsgIdList *[]string `json:"msg_id_list,omitempty"`
 }
 

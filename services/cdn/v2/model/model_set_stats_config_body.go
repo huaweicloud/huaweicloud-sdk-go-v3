@@ -20,9 +20,6 @@ type SetStatsConfigBody struct {
 
 	// 配置信息.top指标仅支持ua、refer、url、origin url
 	ConfigInfo *interface{} `json:"config_info"`
-
-	// 统计配置失效时间，秒时间戳。不能超过当前时间点往后一年
-	ExpiredTime *int64 `json:"expired_time,omitempty"`
 }
 
 func (o SetStatsConfigBody) String() string {

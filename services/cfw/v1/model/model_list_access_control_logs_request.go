@@ -12,10 +12,10 @@ import (
 // ListAccessControlLogsRequest Request Object
 type ListAccessControlLogsRequest struct {
 
-	// 防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+	// 防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
 	FwInstanceId string `json:"fw_instance_id"`
 
-	// 规则id，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
+	// 规则ID，可通过[查询防护规则接口](ListAclRules.xml)查询获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
 	RuleId *string `json:"rule_id,omitempty"`
 
 	// 开始时间，以毫秒为单位的时间戳，如1718936272648
@@ -36,10 +36,10 @@ type ListAccessControlLogsRequest struct {
 	// 目的端口
 	DstPort *int32 `json:"dst_port,omitempty"`
 
-	// 协议类型，包含TCP, UDP,ICMP,ICMPV6等。
+	// 协议类型，包含TCP, UDP，ICMP，ICMPV6等。
 	Protocol *string `json:"protocol,omitempty"`
 
-	// 规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+	// 规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
 	App *string `json:"app,omitempty"`
 
 	// 文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
@@ -54,7 +54,7 @@ type ListAccessControlLogsRequest struct {
 	// 每页显示个数，范围为1-1024
 	Limit int32 `json:"limit"`
 
-	// 日志类型包括：internet，vpc，nat
+	// **参数解释**： 日志类型 **约束限制**： 不涉及 **取值范围**： internet为南北向日志、nat为nat场景日志，vpc为东西向日志，vgw为vgw场景日志 **默认取值**： 不涉及
 	LogType *ListAccessControlLogsRequestLogType `json:"log_type,omitempty"`
 
 	// 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0

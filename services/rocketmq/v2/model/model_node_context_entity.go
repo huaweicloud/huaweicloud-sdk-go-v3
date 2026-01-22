@@ -8,19 +8,19 @@ import (
 
 type NodeContextEntity struct {
 
-	// ID
+	// **参数解释**： ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Id *string `json:"id,omitempty"`
 
-	// broker名称
+	// **参数解释**： broker名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	BrokerName *string `json:"broker_name,omitempty"`
 
-	// broker的ID
+	// **参数解释**： broker的ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	BrokerId *int32 `json:"broker_id,omitempty"`
 
-	// 地址
+	// **参数解释**： 地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Address *string `json:"address,omitempty"`
 
-	// 公网地址
+	// **参数解释**： 公网地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	PublicAddress *string `json:"public_address,omitempty"`
 }
 

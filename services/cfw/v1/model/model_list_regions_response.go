@@ -9,9 +9,9 @@ import (
 // ListRegionsResponse Response Object
 type ListRegionsResponse struct {
 
-	// region列表
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	// **参数解释**： 地域列表 **取值范围**： 不涉及
+	Data           *[]IpRegionResponseBodyData `json:"data,omitempty"`
+	HttpStatusCode int                         `json:"-"`
 }
 
 func (o ListRegionsResponse) String() string {

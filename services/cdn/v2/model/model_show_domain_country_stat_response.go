@@ -19,8 +19,11 @@ type ShowDomainCountryStatResponse struct {
 	EndTime *int64 `json:"end_time,omitempty"`
 
 	// 参数类型支持：flux(流量)，req_num(请求总数)。
-	StatType       *string `json:"stat_type,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	StatType *string `json:"stat_type,omitempty"`
+
+	// 按指定的分组方式组织的数据
+	Result         map[string]interface{} `json:"result,omitempty"`
+	HttpStatusCode int                    `json:"-"`
 }
 
 func (o ShowDomainCountryStatResponse) String() string {

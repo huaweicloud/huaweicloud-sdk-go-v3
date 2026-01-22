@@ -8,8 +8,8 @@ import (
 
 // ImportIpBlacklistResponse Response Object
 type ImportIpBlacklistResponse struct {
-	Body           *string `json:"body,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Body           *interface{} `json:"body,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ImportIpBlacklistResponse) String() string {

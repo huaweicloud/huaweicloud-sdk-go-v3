@@ -8,7 +8,7 @@ import (
 
 type LogConfigDto struct {
 
-	// 防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+	// 防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
 	FwInstanceId string `json:"fw_instance_id"`
 
 	// 是否开启LTS，1表示是，0表示不是

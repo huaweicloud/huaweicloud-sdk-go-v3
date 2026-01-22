@@ -8,7 +8,7 @@ import (
 
 type CaptureTaskId struct {
 
-	// 防火墙id
+	// 防火墙ID
 	Id *string `json:"id,omitempty"`
 
 	// 防火墙名称

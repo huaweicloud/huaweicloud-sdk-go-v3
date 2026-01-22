@@ -3,23 +3,20 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
 // ResetConsumeOffsetRequest Request Object
 type ResetConsumeOffsetRequest struct {
 
-	// 引擎类型：reliability。
-	Engine ResetConsumeOffsetRequestEngine `json:"engine"`
+	// **参数解释**： 引擎。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+	Engine string `json:"engine"`
 
-	// 实例ID。
+	// **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	InstanceId string `json:"instance_id"`
 
-	// 消费组名称。
-	GroupId string `json:"group_id"`
+	// **参数解释**： 消费组名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	Group string `json:"group"`
 
 	Body *ResetConsumeOffsetReq `json:"body,omitempty"`
 }
@@ -31,47 +28,4 @@ func (o ResetConsumeOffsetRequest) String() string {
 	}
 
 	return strings.Join([]string{"ResetConsumeOffsetRequest", string(data)}, " ")
-}
-
-type ResetConsumeOffsetRequestEngine struct {
-	value string
-}
-
-type ResetConsumeOffsetRequestEngineEnum struct {
-	RELIABILITY ResetConsumeOffsetRequestEngine
-}
-
-func GetResetConsumeOffsetRequestEngineEnum() ResetConsumeOffsetRequestEngineEnum {
-	return ResetConsumeOffsetRequestEngineEnum{
-		RELIABILITY: ResetConsumeOffsetRequestEngine{
-			value: "reliability",
-		},
-	}
-}
-
-func (c ResetConsumeOffsetRequestEngine) Value() string {
-	return c.value
-}
-
-func (c ResetConsumeOffsetRequestEngine) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ResetConsumeOffsetRequestEngine) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

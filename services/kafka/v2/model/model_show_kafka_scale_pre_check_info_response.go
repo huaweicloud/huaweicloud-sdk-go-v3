@@ -8,8 +8,19 @@ import (
 
 // ShowKafkaScalePreCheckInfoResponse Response Object
 type ShowKafkaScalePreCheckInfoResponse struct {
-	Body           *[]ShowKafkaScalePreCheckInfoResponseBody `json:"body,omitempty"`
-	HttpStatusCode int                                       `json:"-"`
+
+	// **参数解释**： 检查项名称。  **取值范围**： 不涉及。
+	Name *string `json:"name,omitempty"`
+
+	// **参数解释**： 检查项状态。 **取值范围**： - true：正常。 - false：异常。
+	Success *bool `json:"success,omitempty"`
+
+	// **参数解释**： 失败原因。    **取值范围**： 不涉及。
+	Reason *string `json:"reason,omitempty"`
+
+	// **参数解释**： 风险等级。   **取值范围**： - low：低风险。 - medium：中风险。 - high：高风险。
+	Risk           *string `json:"risk,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowKafkaScalePreCheckInfoResponse) String() string {

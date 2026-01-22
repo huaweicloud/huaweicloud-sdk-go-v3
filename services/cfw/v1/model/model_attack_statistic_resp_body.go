@@ -14,13 +14,13 @@ type AttackStatisticRespBody struct {
 	// **参数解释**： 绑定资源名称 **取值范围**： 不涉及
 	AssociatedName *string `json:"associated_name,omitempty"`
 
-	// **参数解释**： 绑定资源类型 **取值范围**： 不涉及
+	// **参数解释**： 绑定资源类型 **取值范围**： PORT：IPV4云服务器 IPV6_PORT：IPV6云服务器
 	AssociatedType *string `json:"associated_type,omitempty"`
 
 	// **参数解释**： 攻击次数 **取值范围**： 不涉及
 	AttackCount *int64 `json:"attack_count,omitempty"`
 
-	// **参数解释**： 攻击类型 **取值范围**： 不涉及
+	// **参数解释**： 攻击类型 **取值范围**： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马
 	AttackType *string `json:"attack_type,omitempty"`
 
 	// **参数解释**： 拦截次数 **取值范围**： 不涉及

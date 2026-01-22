@@ -1055,9 +1055,9 @@ func (c *ElbClient) DeleteSecurityPolicyInvoker(request *model.DeleteSecurityPol
 	return &DeleteSecurityPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAllL7Rules 查询转发规则列表
+// ListAllL7Rules 查询转发规则全局列表
 //
-// 查询当前项目下的转发规则列表。
+// 查询当前项目下所有转发规则列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) ListAllL7Rules(request *model.ListAllL7RulesRequest) (*model.ListAllL7RulesResponse, error) {
@@ -1070,7 +1070,7 @@ func (c *ElbClient) ListAllL7Rules(request *model.ListAllL7RulesRequest) (*model
 	}
 }
 
-// ListAllL7RulesInvoker 查询转发规则列表
+// ListAllL7RulesInvoker 查询转发规则全局列表
 func (c *ElbClient) ListAllL7RulesInvoker(request *model.ListAllL7RulesRequest) *ListAllL7RulesInvoker {
 	requestDef := GenReqDefForListAllL7Rules()
 	return &ListAllL7RulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

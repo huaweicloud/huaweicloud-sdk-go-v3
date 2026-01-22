@@ -8,10 +8,10 @@ import (
 
 type AntiVirusRuleDto struct {
 
-	// 防护对象ID
+	// 防护对象ID，为必传参数
 	ObjectId *string `json:"object_id,omitempty"`
 
-	// 扫描协议配置
+	// 扫描协议配置列表
 	ScanProtocolConfigs *[]ScanProtocolConfig `json:"scan_protocol_configs,omitempty"`
 }
 

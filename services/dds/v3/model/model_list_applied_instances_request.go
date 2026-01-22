@@ -9,13 +9,13 @@ import (
 // ListAppliedInstancesRequest Request Object
 type ListAppliedInstancesRequest struct {
 
-	// 参数模板ID。
+	// **参数解释：** 参数模板ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	ConfigId string `json:"config_id"`
 
-	// 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
+	// **参数解释：** 索引位置，偏移量。 **约束限制：** 必须为整数数字。 **取值范围：** >=0。 **默认取值：** 0。偏移0条数据，表示从第一条数据开始查询。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+	// **参数解释：** 查询记录数。 **约束限制：** 正整数。 **取值范围：** 1~100。 **默认取值：** 100。
 	Limit *int32 `json:"limit,omitempty"`
 }
 

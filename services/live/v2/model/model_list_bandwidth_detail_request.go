@@ -44,6 +44,9 @@ type ListBandwidthDetailRequest struct {
 
 	// 服务类型： - Live：直播 - LLL：超低时延直播 - ALL：默认所有直播
 	ServiceType *ListBandwidthDetailRequestServiceType `json:"service_type,omitempty"`
+
+	// ip类型，取值如下：  - v4 ：ipv4协议  - v6 ：ipv6协议   不填写默认查询所有ip类型的数据   该参数只对2026-01-30后的数据生效。
+	IpType *ListBandwidthDetailRequestIpType `json:"ip_type,omitempty"`
 }
 
 func (o ListBandwidthDetailRequest) String() string {
@@ -184,6 +187,53 @@ func (c ListBandwidthDetailRequestServiceType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ListBandwidthDetailRequestServiceType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListBandwidthDetailRequestIpType struct {
+	value string
+}
+
+type ListBandwidthDetailRequestIpTypeEnum struct {
+	V4 ListBandwidthDetailRequestIpType
+	V6 ListBandwidthDetailRequestIpType
+}
+
+func GetListBandwidthDetailRequestIpTypeEnum() ListBandwidthDetailRequestIpTypeEnum {
+	return ListBandwidthDetailRequestIpTypeEnum{
+		V4: ListBandwidthDetailRequestIpType{
+			value: "v4",
+		},
+		V6: ListBandwidthDetailRequestIpType{
+			value: "v6",
+		},
+	}
+}
+
+func (c ListBandwidthDetailRequestIpType) Value() string {
+	return c.value
+}
+
+func (c ListBandwidthDetailRequestIpType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListBandwidthDetailRequestIpType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

@@ -8,19 +8,19 @@ import (
 
 type ListProductsRespIo struct {
 
-	// IO类型。
+	// **参数解释**： IO类型。 **取值范围**： 不涉及。
 	IoType *string `json:"io_type,omitempty"`
 
-	// IO规格。
+	// **参数解释**： IO规格。 **取值范围**： 不涉及。
 	StorageSpecCode *string `json:"storage_spec_code,omitempty"`
 
-	// IO未售罄的可用区列表。
+	// **参数解释**： IO未售罄的可用区列表。 **取值范围**： 不涉及。
 	AvailableZones *[]string `json:"available_zones,omitempty"`
 
-	// IO已售罄的不可用区列表。
+	// **参数解释**： IO已售罄的不可用区列表。 **取值范围**： 不涉及。
 	UnavailableZones *[]string `json:"unavailable_zones,omitempty"`
 
-	// 磁盘类型。
+	// **参数解释**： 磁盘类型。 **取值范围**： 不涉及。
 	VolumeType *string `json:"volume_type,omitempty"`
 }
 

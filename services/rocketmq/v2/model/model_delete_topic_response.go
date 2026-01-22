@@ -8,10 +8,7 @@ import (
 
 // DeleteTopicResponse Response Object
 type DeleteTopicResponse struct {
-
-	// 规格变更任务ID。
-	JobId          *string `json:"job_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteTopicResponse) String() string {

@@ -8,13 +8,13 @@ import (
 
 type ExportDlqMessageReq struct {
 
-	// 主题名称。
-	Topic *string `json:"topic,omitempty"`
+	// **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+	Topic string `json:"topic"`
 
-	// 消息ID列表。
-	MsgIdList *[]string `json:"msg_id_list,omitempty"`
+	// **参数解释**： 消息ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
+	MsgIdList []string `json:"msg_id_list"`
 
-	// 唯一Key列表。
+	// **参数解释**： 唯一Key列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
 	UniqKeyList *[]string `json:"uniq_key_list,omitempty"`
 }
 

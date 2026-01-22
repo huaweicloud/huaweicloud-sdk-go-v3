@@ -12,7 +12,7 @@ type ListTasksResponse struct {
 	// 任务列表。
 	Jobs *[]JobInfo `json:"jobs,omitempty"`
 
-	// 任务列表总数
+	// 任务列表总数。
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

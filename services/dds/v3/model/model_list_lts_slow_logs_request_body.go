@@ -11,10 +11,10 @@ import (
 
 type ListLtsSlowLogsRequestBody struct {
 
-	// 开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。注：开始时间不得早于当前时间30天。
+	// 开始时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **注意：** 开始时间不得早于当前时间30天。
 	StartTime string `json:"start_time"`
 
-	// 结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。注：结束时间不能晚于当前时间。
+	// 结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。 **说明：** 结束时间不能晚于当前时间。
 	EndTime string `json:"end_time"`
 
 	// 表示每次查询的日志条数，最大限制100条。
@@ -26,22 +26,22 @@ type ListLtsSlowLogsRequestBody struct {
 	// 语句类型，取空值，表示查询所有语句类型。
 	OperateType *ListLtsSlowLogsRequestBodyOperateType `json:"operate_type,omitempty"`
 
-	// 节点ID，取空值，表示查询实例下所有允许查询的节点。 使用请参考《DDS API参考》的“查询实例列表和详情”响应消息表“nodes 数据结构说明”的“id”。允许查询的节点如下： - 集群实例下面的 shard节点 - 副本集、单节点实例下面的所有节点
+	// 节点ID，取空值，表示查询实例下所有允许查询的节点。 使用请参考《DDS API参考》的“查询实例列表和详情”响应消息表“nodes 数据结构说明”的“id”。 允许查询的节点如下： - 集群实例下面的 shard节点 - 副本集、单节点实例下面的所有节点
 	NodeId *string `json:"node_id,omitempty"`
 
-	// 根据多个关键字搜索日志全文，表示同时匹配所有关键字。 - 最多支持10个关键字。 - 每个关键字最大长度不超过512个字符。
+	// 根据多个关键字搜索日志全文，表示同时匹配所有关键字。 - 只支持关键字前缀模糊搜索，最多支持10个关键字。 - 每个关键字最大长度不超过512个字符。
 	Keywords *[]string `json:"keywords,omitempty"`
 
-	// 根据多个数据库表名关键字模糊搜索日志，表示匹配至少一个关键字。 - 最多支持10个关键字。 - 每个关键字最大长度不超过64个字符。
+	// 根据多个数据库表名关键字模糊搜索日志，表示匹配至少一个关键字。 - 只支持关键字前缀模糊搜索，最多支持10个关键字。 - 每个关键字最大长度不超过64个字符。
 	DatabaseKeywords *[]string `json:"database_keywords,omitempty"`
 
-	// 根据多个数据库表名关键字模糊搜索日志，表示匹配至少一个关键字。 - 最多支持10个关键字。 - 每个关键字最大长度不超过128个字符。
+	// 根据多个数据库表名关键字模糊搜索日志，表示匹配至少一个关键字。 - 只支持关键字前缀模糊搜索，最多支持10个关键字。 - 每个关键字最大长度不超过128个字符。
 	CollectionKeywords *[]string `json:"collection_keywords,omitempty"`
 
-	// 支持根据最大执行时间范围查找日志。单位：ms
+	// 支持根据最大执行时间范围查找日志。 单位：ms
 	MaxCostTime *int32 `json:"max_cost_time,omitempty"`
 
-	// 支持根据最小执行时间范围查找日志。单位：ms
+	// 支持根据最小执行时间范围查找日志。 单位：ms
 	MinCostTime *int32 `json:"min_cost_time,omitempty"`
 }
 

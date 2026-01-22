@@ -187,6 +187,27 @@ func (c *EipClient) ShowPublicipPoolInvoker(request *model.ShowPublicipPoolReque
 	return &ShowPublicipPoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowPublicipPoolTypes 查询公网IP池类型
+//
+// 查询公网IP池类型。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EipClient) ShowPublicipPoolTypes(request *model.ShowPublicipPoolTypesRequest) (*model.ShowPublicipPoolTypesResponse, error) {
+	requestDef := GenReqDefForShowPublicipPoolTypes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPublicipPoolTypesResponse), nil
+	}
+}
+
+// ShowPublicipPoolTypesInvoker 查询公网IP池类型
+func (c *EipClient) ShowPublicipPoolTypesInvoker(request *model.ShowPublicipPoolTypesRequest) *ShowPublicipPoolTypesInvoker {
+	requestDef := GenReqDefForShowPublicipPoolTypes()
+	return &ShowPublicipPoolTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListProjectGeipBindings 查询GEIP与实例绑定关系的租户列表
 //
 // 查询GEIP与实例绑定关系的租户列表

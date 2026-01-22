@@ -8,25 +8,25 @@ import (
 
 type ConfigurationParametersResult struct {
 
-	// 参数名称。
+	// **参数解释：** 参数名称。 **取值范围：** 不涉及。
 	Name string `json:"name"`
 
-	// 参数值。
+	// **参数解释：** 参数值。 **取值范围：** 不涉及。
 	Value string `json:"value"`
 
-	// 参数描述。
+	// **参数解释：** 参数描述。 **取值范围：** 不涉及。
 	Description string `json:"description"`
 
-	// 参数类型，取值为“integer”，“string”，“boolean”，“float”或“list”。
+	// **参数解释：** 参数类型。 **取值范围：** - integer - string - boolean - float - list
 	Type string `json:"type"`
 
-	// 参数值范围，如integer取值0-1、boolean取值true|false等。
+	// **参数解释：** 参数值范围。 **取值范围：** - integer取值0-1。 - boolean取值true/false等。
 	ValueRange string `json:"value_range"`
 
-	// 参数是否需要重启。 - 取值为“true”，需要重启。 - 取值为“false”，不需要重启。
+	// **参数解释：** 参数是否需要重启。 **取值范围：** - 取值为“true”，需要重启。 - 取值为“false”，不需要重启。
 	RestartRequired bool `json:"restart_required"`
 
-	// 是否只读。 - 取值为“false”，非只读参数。 - 取值为“true”，只读参数。
+	// **参数解释：** 是否只读 **取值范围：** - 取值为“true”，只读参数。 - 取值为“false”，非只读参数。
 	Readonly bool `json:"readonly"`
 }
 

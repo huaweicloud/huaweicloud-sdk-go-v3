@@ -8,7 +8,7 @@ import (
 
 // UpdateObjectConfigDescRequest Request Object
 type UpdateObjectConfigDescRequest struct {
-	Body *ObjectInfoDto `json:"body,omitempty"`
+	Body *UpdateObjectConfigDesc `json:"body,omitempty"`
 }
 
 func (o UpdateObjectConfigDescRequest) String() string {

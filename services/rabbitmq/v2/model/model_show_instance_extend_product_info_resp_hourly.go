@@ -11,11 +11,11 @@ type ShowInstanceExtendProductInfoRespHourly struct {
 	// 消息引擎的名称，该字段显示为rabbitmq。
 	Name *string `json:"name,omitempty"`
 
-	// 消息引擎的版本，当前支持3.8.35[和3.7.17](tag:hk_sbc,sbc)。
+	// 消息引擎的版本，当前支持3.8.35。
 	Version *string `json:"version,omitempty"`
 
 	// 产品规格列表。
-	Values *[]ListProductsRespValues `json:"values,omitempty"`
+	Values *[]ShowInstanceExtendProductInfoRespValues `json:"values,omitempty"`
 }
 
 func (o ShowInstanceExtendProductInfoRespHourly) String() string {

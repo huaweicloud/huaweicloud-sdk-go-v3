@@ -46,6 +46,9 @@ type CreateInstanceRequestBody struct {
 
 	// 指定obs桶的名称，当指定自定义obs桶之后，则无需对obs_encrypt、encrypt_type进行传值。
 	ObsBucketName *string `json:"obs_bucket_name,omitempty"`
+
+	// KMS的密钥ID，用于对自动创建的OBS桶进行加密。密钥的加密算法支持AES-256和SM4。指定该字段时必须开启OBS桶加密开关，且不能指定自定义OBS桶。
+	ObsEncKmsKeyId *string `json:"obs_enc_kms_key_id,omitempty"`
 }
 
 func (o CreateInstanceRequestBody) String() string {

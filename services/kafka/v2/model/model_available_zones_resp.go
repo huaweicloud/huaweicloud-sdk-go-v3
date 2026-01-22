@@ -32,7 +32,7 @@ type AvailableZonesResp struct {
 	// **参数解释**： 剩余时间，以Unix时间戳显示。 **取值范围**： 不涉及
 	RemainTime *int64 `json:"remain_time,omitempty"`
 
-	// **参数解释**： 是否支持IPv6。 **取值范围**： - true：支持 - false：不支持
+	// **参数解释**： 是否支持IPv6。[华为云Stack不支持此参数。](tag:hcs)  **取值范围**： - true：支持 - false：不支持
 	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
 }
 

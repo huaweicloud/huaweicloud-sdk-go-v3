@@ -8,10 +8,10 @@ import (
 
 type ShowCeshierarchyRespNodes struct {
 
-	// 节点名称。
+	// **参数解释**： 节点名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 可用区。
+	// **参数解释**： 可用区。 **取值范围**： 不涉及。
 	AvailableZone *string `json:"available_zone,omitempty"`
 }
 

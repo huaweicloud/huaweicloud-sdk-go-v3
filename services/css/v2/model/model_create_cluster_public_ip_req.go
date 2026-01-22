@@ -10,7 +10,7 @@ import (
 type CreateClusterPublicIpReq struct {
 	Eip *CreateClusterPublicEip `json:"eip"`
 
-	ElbWhiteListReq *CreateClusterElbWhiteList `json:"elbWhiteListReq"`
+	ElbWhiteListReq *CreateClusterElbWhiteList `json:"elbWhiteListReq,omitempty"`
 
 	// 是否自动绑定弹性公网IP。当前仅支持auto_assign为自动分配参数。
 	PublicBindType string `json:"publicBindType"`

@@ -133,6 +133,22 @@ func (i *ShowPublicipPoolInvoker) Invoke() (*model.ShowPublicipPoolResponse, err
 	}
 }
 
+type ShowPublicipPoolTypesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPublicipPoolTypesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPublicipPoolTypesInvoker) Invoke() (*model.ShowPublicipPoolTypesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPublicipPoolTypesResponse), nil
+	}
+}
+
 type ListProjectGeipBindingsInvoker struct {
 	*invoker.BaseInvoker
 }

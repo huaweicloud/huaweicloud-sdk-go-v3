@@ -12,13 +12,13 @@ type DeleteBindingRequest struct {
 	// 实例ID
 	InstanceId string `json:"instance_id"`
 
-	// Vhost名称
+	// vhost名称，名称中包含/时，需要将/替换为__F_SLASH__，否则会调用失败。例如：Vhost名称为/test，入参值为__F_SLASH__test。
 	Vhost string `json:"vhost"`
 
 	// Exchange名称
 	Exchange string `json:"exchange"`
 
-	// 绑定目标端类型，Exchange或Queue。[（AMQP版本只支持Queue绑定类型）](tag:hws,hws_hk)
+	// **参数解释**： 绑定目标端类型。 **约束限制**： [不涉及。](tag:sbc,cmcc,tm,hk_tm,ax,hk_sbc)[AMQP版本只支持绑定Queue。](tag:hws,hws_hk,hws_eu) **取值范围**： - Exchange：交换机。 - Queue：队列。 **默认取值**： 不涉及。
 	DestinationType string `json:"destination_type"`
 
 	// 绑定的目标端名称

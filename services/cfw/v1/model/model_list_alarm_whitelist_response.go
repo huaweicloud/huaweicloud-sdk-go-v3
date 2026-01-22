@@ -8,8 +8,8 @@ import (
 
 // ListAlarmWhitelistResponse Response Object
 type ListAlarmWhitelistResponse struct {
-	Data           *PageInfo `json:"data,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	Data           *HttpListAlarmWhiteListResponseData `json:"data,omitempty"`
+	HttpStatusCode int                                 `json:"-"`
 }
 
 func (o ListAlarmWhitelistResponse) String() string {

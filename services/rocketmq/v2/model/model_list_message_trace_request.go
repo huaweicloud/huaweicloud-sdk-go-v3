@@ -3,28 +3,25 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
 // ListMessageTraceRequest Request Object
 type ListMessageTraceRequest struct {
 
-	// 消息引擎。
-	Engine ListMessageTraceRequestEngine `json:"engine"`
+	// **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： reliability。
+	Engine string `json:"engine"`
 
-	// 实例ID。
+	// **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	InstanceId string `json:"instance_id"`
 
-	// 消息ID。
+	// **参数解释**：  消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	MsgId string `json:"msg_id"`
 
-	// 查询数量。
+	// **参数解释**：  查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 10。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 偏移量，表示从此偏移量开始查询，offset大于等于0。
+	// **参数解释**：  偏移量，表示从此偏移量开始查询，offset大于等于0。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0。
 	Offset *int32 `json:"offset,omitempty"`
 }
 
@@ -35,47 +32,4 @@ func (o ListMessageTraceRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListMessageTraceRequest", string(data)}, " ")
-}
-
-type ListMessageTraceRequestEngine struct {
-	value string
-}
-
-type ListMessageTraceRequestEngineEnum struct {
-	RELIABILITY ListMessageTraceRequestEngine
-}
-
-func GetListMessageTraceRequestEngineEnum() ListMessageTraceRequestEngineEnum {
-	return ListMessageTraceRequestEngineEnum{
-		RELIABILITY: ListMessageTraceRequestEngine{
-			value: "reliability",
-		},
-	}
-}
-
-func (c ListMessageTraceRequestEngine) Value() string {
-	return c.value
-}
-
-func (c ListMessageTraceRequestEngine) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ListMessageTraceRequestEngine) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

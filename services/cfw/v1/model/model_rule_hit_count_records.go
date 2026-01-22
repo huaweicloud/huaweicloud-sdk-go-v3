@@ -6,19 +6,19 @@ import (
 	"strings"
 )
 
-// RuleHitCountRecords 规则击中次数记录
+// RuleHitCountRecords **参数解释**： 规则击中次数记录
 type RuleHitCountRecords struct {
 
-	// 每页显示个数，范围为1-1024
+	// **参数解释**： 每页显示个数 **取值范围**： 1-1024
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+	// **参数解释**： 偏移量：指定返回记录的开始位置，必须为数字 **取值范围**： 大于或等于0，默认0
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 获取规则击中次数总条数
+	// **参数解释**： 获取规则击中次数总条数 **取值范围**： 不涉及
 	Total *int32 `json:"total,omitempty"`
 
-	// 规则击中次数信息列表
+	// **参数解释**： 规则击中次数信息列表 **约束限制**： 不涉及
 	Records *[]RuleHitCountObject `json:"records,omitempty"`
 }
 

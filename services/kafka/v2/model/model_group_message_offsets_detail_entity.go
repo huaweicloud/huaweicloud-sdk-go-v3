@@ -15,8 +15,14 @@ type GroupMessageOffsetsDetailEntity struct {
 	// 消息当前位点
 	MessageCurrentOffset *string `json:"message_current_offset,omitempty"`
 
+	// topic名称
+	Topic *string `json:"topic,omitempty"`
+
 	// 消息开始位点
 	MessageLogStartOffset *int32 `json:"message_log_start_offset,omitempty"`
+
+	// 剩余可消费消息数，即消息堆积数
+	Lag *int32 `json:"lag,omitempty"`
 
 	// 消息结束位点
 	MessageLogEndOffset *int32 `json:"message_log_end_offset,omitempty"`

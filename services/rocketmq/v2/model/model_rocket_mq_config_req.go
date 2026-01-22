@@ -11,11 +11,11 @@ import (
 
 type RocketMqConfigReq struct {
 
-	// RocketMQ配置名称。
-	Name *RocketMqConfigReqName `json:"name,omitempty"`
+	// **参数解释**： RocketMQ配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	Name RocketMqConfigReqName `json:"name"`
 
-	// RocketMQ配置目标值。
-	Value *string `json:"value,omitempty"`
+	// **参数解释**： RocketMQ配置目标值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	Value string `json:"value"`
 }
 
 func (o RocketMqConfigReq) String() string {

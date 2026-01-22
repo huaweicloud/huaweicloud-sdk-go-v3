@@ -8,13 +8,13 @@ import (
 
 type DeadletterResendRespResendResults struct {
 
-	// 消息ID。
+	// **参数解释**： 消息ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
 	MsgId *string `json:"msg_id,omitempty"`
 
-	// 错误码。
+	// **参数解释**： 错误码。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
 	ErrorCode *string `json:"error_code,omitempty"`
 
-	// 错误信息。
+	// **参数解释**： 错误信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值** 不涉及。
 	ErrorMessage *string `json:"error_message,omitempty"`
 }
 

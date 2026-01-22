@@ -26,6 +26,9 @@ type AiOps struct {
 	// **参数解释**： 任务执行状态。 **取值范围**： - 150：未开启。 - 200：已开启。 - 300：已发送。
 	Status *int32 `json:"status,omitempty"`
 
+	// **参数解释**： 集群风险检测任务创建时间。 **取值范围**： 格式：Unix时间戳格式。
+	CreateTime *string `json:"create_time,omitempty"`
+
 	Summary *SummaryInfo `json:"summary,omitempty"`
 
 	// **参数解释**： 集群风险项详情。 **取值范围**： 不涉及

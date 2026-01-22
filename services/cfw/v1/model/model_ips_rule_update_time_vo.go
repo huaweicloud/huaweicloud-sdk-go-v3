@@ -7,10 +7,14 @@ import (
 )
 
 type IpsRuleUpdateTimeVo struct {
+
+	// ips类型，0表示基础防御，1表示虚拟补丁
 	IpsType *int32 `json:"ips_type,omitempty"`
 
+	// ips规则版本
 	IpsVersion *string `json:"ips_version,omitempty"`
 
+	// ips更新时间戳
 	UpdateTime *int64 `json:"update_time,omitempty"`
 }
 

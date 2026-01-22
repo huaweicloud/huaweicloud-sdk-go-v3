@@ -8,10 +8,7 @@ import (
 
 // UpdateVolumeExpansionConfigResponse Response Object
 type UpdateVolumeExpansionConfigResponse struct {
-
-	// **参数解释**： 修改结果。 **取值范围**： success：修改成功。
-	Body           *string `json:"body,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o UpdateVolumeExpansionConfigResponse) String() string {

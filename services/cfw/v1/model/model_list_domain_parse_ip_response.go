@@ -9,7 +9,7 @@ import (
 // ListDomainParseIpResponse Response Object
 type ListDomainParseIpResponse struct {
 
-	// 域名解析数据
+	// **参数解释**： 域名解析数据，包括域名IP列表 **取值范围**： 不涉及
 	Data           *[]string `json:"data,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

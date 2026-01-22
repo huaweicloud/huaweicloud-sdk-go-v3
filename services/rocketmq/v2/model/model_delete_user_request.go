@@ -9,10 +9,10 @@ import (
 // DeleteUserRequest Request Object
 type DeleteUserRequest struct {
 
-	// 实例ID。
+	// **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	InstanceId string `json:"instance_id"`
 
-	// 用户名。
+	// **参数解释**： 用户名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	UserName string `json:"user_name"`
 }
 

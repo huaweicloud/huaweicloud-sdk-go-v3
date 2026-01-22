@@ -12,7 +12,7 @@ type StepDetail struct {
 	Name *string `json:"name,omitempty"`
 
 	// **参数解释**： 任务状态。 **取值范围**： - COMPLETED：任务已完成。 - IN_PROGRESS：任务正在进行。 - FAILED：任务失败。 - WAITING：等待开始。
-	Status *string `json:"status,omitempty"`
+	Statue *string `json:"statue,omitempty"`
 
 	// **参数解释**： 开始时间。     **取值范围**： 不涉及。
 	StartTime *string `json:"start_time,omitempty"`

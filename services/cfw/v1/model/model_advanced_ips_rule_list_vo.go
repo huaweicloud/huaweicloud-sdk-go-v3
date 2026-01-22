@@ -7,8 +7,11 @@ import (
 )
 
 type AdvancedIpsRuleListVo struct {
+
+	// 频率ips规则列表
 	AdvancedIpsRules *[]AdvancedIpsRuleVo `json:"advanced_ips_rules,omitempty"`
 
+	// 频率ips规则总数
 	Total *int32 `json:"total,omitempty"`
 }
 

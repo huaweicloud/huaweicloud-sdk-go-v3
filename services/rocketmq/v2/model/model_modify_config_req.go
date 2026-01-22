@@ -8,8 +8,8 @@ import (
 
 type ModifyConfigReq struct {
 
-	// RocketMQ配置。
-	RocketmqConfigs *[]RocketMqConfigReq `json:"rocketmq_configs,omitempty"`
+	// **参数解释**： RocketMQ配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	RocketmqConfigs []RocketMqConfigReq `json:"rocketmq_configs"`
 }
 
 func (o ModifyConfigReq) String() string {

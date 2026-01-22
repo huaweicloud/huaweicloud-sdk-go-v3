@@ -21,10 +21,10 @@ type ShowInstanceResponse struct {
 	// **参数解释**： 实例名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// **参数解释**： 消息引擎。 **取值范围**： 不涉及。
+	// **参数解释**： 消息引擎类型。 **取值范围**： rabbitmq：RabbitMQ引擎。
 	Engine *string `json:"engine,omitempty"`
 
-	// **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
+	// **参数解释**： 消息引擎版本。 **取值范围**： - 3.8.35 [- 3.12.13](tag:srg) [- AMQP-0-9-1](tag:hws,hws_hk,hws_eu)
 	EngineVersion *string `json:"engine_version,omitempty"`
 
 	// **参数解释**： 实例规格。 **取值范围**： - 单机实例：返回vm规格。 - 集群实例：返回vm规格和节点数。
@@ -54,7 +54,7 @@ type ShowInstanceResponse struct {
 	// **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
 	Port *int32 `json:"port,omitempty"`
 
-	// **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
+	// **参数解释**： 实例状态。 **取值范围**： [详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,ax)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
 	Status *string `json:"status,omitempty"`
 
 	// **参数解释**： 实例描述。 **取值范围**： 不涉及。
@@ -63,7 +63,7 @@ type ShowInstanceResponse struct {
 	// **参数解释**： 实例ID。 **取值范围**： 不涉及。
 	InstanceId *string `json:"instance_id,omitempty"`
 
-	// **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,sbc)
+	// **参数解释**： 资源规格标识。 **取值范围**： -[ dms.instance.rabbitmq.single.c3.2u4g：RabbitMQ单机，vm规格2u4g - dms.instance.rabbitmq.single.c3.4u8g：RabbitMQ单机，vm规格4u8g - dms.instance.rabbitmq.single.c3.8u16g：RabbitMQ单机，vm规格8u16g - dms.instance.rabbitmq.single.c3.16u32g：RabbitMQ单机，vm规格16u32g - dms.instance.rabbitmq.cluster.c3.4u8g.3：RabbitMQ集群，vm规格4u8g，3个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.5：RabbitMQ集群，vm规格4u8g，5个节点 - dms.instance.rabbitmq.cluster.c3.4u8g.7：RabbitMQ集群，vm规格4u8g，7个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.3：RabbitMQ集群，vm规格8u16g，3个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.5：RabbitMQ集群，vm规格8u16g，5个节点 - dms.instance.rabbitmq.cluster.c3.8u16g.7：RabbitMQ集群，vm规格8u16g，7个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.3：RabbitMQ集群，vm规格16u32g，3个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.5：RabbitMQ集群，vm规格16u32g，5个节点 - dms.instance.rabbitmq.cluster.c3.16u32g.7：RabbitMQ集群，vm规格16u32g，7个节点](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,hk_tm,sbc,ax,hk_sbc)
 	ResourceSpecCode *string `json:"resource_spec_code,omitempty"`
 
 	// **参数解释**： 付费模式。 **取值范围**： - 1：按需计费。 - 0：包年/包月计费。
@@ -123,7 +123,7 @@ type ShowInstanceResponse struct {
 	// **参数解释**： 实例扩容时用于区分老实例与新实例。 **取值范围**： - true：新创建的实例，允许磁盘动态扩容不需要重启。 - false：特别老的实例不支持磁盘扩容。
 	IsLogicalVolume *bool `json:"is_logical_volume,omitempty"`
 
-	// **参数解释**： 实例扩容磁盘次数，如果超过20次则无法扩容磁盘。 **取值范围**： 不涉及。
+	// **参数解释**： 实例扩容磁盘次数。 **取值范围**： 不涉及。
 	ExtendTimes *int32 `json:"extend_times,omitempty"`
 
 	// **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
@@ -163,8 +163,14 @@ type ShowInstanceResponse struct {
 	Ipv6ConnectAddresses *[]string `json:"ipv6_connect_addresses,omitempty"`
 
 	// **参数解释**： 标签列表。
-	Tags           *[]TagEntity `json:"tags,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Tags *[]TagEntity `json:"tags,omitempty"`
+
+	// **参数解释**： 服务类型。 **取值范围**： advanced：服务类型。
+	ServiceType *string `json:"service_type,omitempty"`
+
+	// **参数解释**： 存储类型。 **取值范围**： hec：存储类型。
+	StorageType    *string `json:"storage_type,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowInstanceResponse) String() string {

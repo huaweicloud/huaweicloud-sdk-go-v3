@@ -9,33 +9,33 @@ import (
 // ShowQueueDetailsResponse Response Object
 type ShowQueueDetailsResponse struct {
 
-	// Queue所属Vhost名称
+	// **参数解释**： Queue所属Vhost名称。 **取值范围**： 不涉及。
 	Vhost *string `json:"vhost,omitempty"`
 
-	// Queue名称
+	// **参数解释**： Queue名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 是否持久化
+	// **参数解释**： Queue是否开启持久化。 **取值范围**： - true：开启持久化。 - false：未开启持久化。
 	Durable *bool `json:"durable,omitempty"`
 
-	// 是否自动删除
+	// **参数解释**： Queue是否开启自动删除。 **取值范围**： - true：开启自动删除。 - false：未开启自动删除。
 	AutoDelete *bool `json:"auto_delete,omitempty"`
 
-	// 待消费消息数
+	// **参数解释**： 待消费消息数。 **取值范围**： 不涉及。
 	Messages *int32 `json:"messages,omitempty"`
 
-	// 连接的消费者数
+	// **参数解释**： 连接的消费者数。 **取值范围**： 不涉及。
 	Consumers *int32 `json:"consumers,omitempty"`
 
-	// 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
+	// **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,hws_eu)。 **取值范围**： 不涉及。
 	Policy *string `json:"policy,omitempty"`
 
 	Arguments *QueueArguments `json:"arguments,omitempty"`
 
-	// 订阅该Queue的消费者信息。
+	// **参数解释**： 订阅该Queue的消费者信息。
 	ConsumerDetails *[]ConsumerDetails `json:"consumer_details,omitempty"`
 
-	// 以此Queue为目标的绑定信息列表。
+	// **参数解释**： 以此Queue为目标的绑定信息列表。
 	QueueBindings  *[]BindingsDetails `json:"queue_bindings,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }

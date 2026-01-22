@@ -12,13 +12,13 @@ import (
 // ListFlowLogsRequest Request Object
 type ListFlowLogsRequest struct {
 
-	// 防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+	// 防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
 	FwInstanceId string `json:"fw_instance_id"`
 
 	// 方向，包含in2out，out2in
 	Direction *string `json:"direction,omitempty"`
 
-	// 日志类型包括：internet，vpc，nat
+	// **参数解释**： 日志类型 **约束限制**： 不涉及 **取值范围**： internet为南北向日志、nat为nat场景日志，vpc为东西向日志，vgw为vgw场景日志 **默认取值**： 不涉及
 	LogType *ListFlowLogsRequestLogType `json:"log_type,omitempty"`
 
 	// 开始时间，以毫秒为单位的时间戳，如1718936272648
@@ -39,10 +39,10 @@ type ListFlowLogsRequest struct {
 	// 目的端口
 	DstPort *int32 `json:"dst_port,omitempty"`
 
-	// 协议类型，包含TCP, UDP,ICMP,ICMPV6等。
+	// 协议类型，包含TCP, UDP，ICMP，ICMPV6等。
 	Protocol *string `json:"protocol,omitempty"`
 
-	// 规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+	// 规则应用类型包括：“HTTP”，“HTTPS“，“TLS1“，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
 	App *string `json:"app,omitempty"`
 
 	// 文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id

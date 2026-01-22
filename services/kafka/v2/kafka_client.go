@@ -361,6 +361,27 @@ func (c *KafkaClient) CreateMessageDiagnosisTaskInvoker(request *model.CreateMes
 	return &CreateMessageDiagnosisTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePartition 新增Kafka实例指定Topic分区
+//
+// 新增Kafka实例指定Topic分区。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) CreatePartition(request *model.CreatePartitionRequest) (*model.CreatePartitionResponse, error) {
+	requestDef := GenReqDefForCreatePartition()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePartitionResponse), nil
+	}
+}
+
+// CreatePartitionInvoker 新增Kafka实例指定Topic分区
+func (c *KafkaClient) CreatePartitionInvoker(request *model.CreatePartitionRequest) *CreatePartitionInvoker {
+	requestDef := GenReqDefForCreatePartition()
+	return &CreatePartitionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePostPaidInstance 创建实例
 //
 // 创建按需计费类型的Kafka实例。
@@ -468,9 +489,32 @@ func (c *KafkaClient) DeleteConsumerGroupOffsetsInvoker(request *model.DeleteCon
 	return &DeleteConsumerGroupOffsetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteGroup kafka实例删除指定消费组
+//
+// kafka实例删除指定消费组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) DeleteGroup(request *model.DeleteGroupRequest) (*model.DeleteGroupResponse, error) {
+	requestDef := GenReqDefForDeleteGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteGroupResponse), nil
+	}
+}
+
+// DeleteGroupInvoker kafka实例删除指定消费组
+func (c *KafkaClient) DeleteGroupInvoker(request *model.DeleteGroupRequest) *DeleteGroupInvoker {
+	requestDef := GenReqDefForDeleteGroup()
+	return &DeleteGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteInstance 删除指定的实例
 //
 // 删除指定的实例，释放该实例的所有资源。
+//
+// [注意：调用本接口删除的实例将被彻底删除，不会进入回收站，且删除后不可恢复。若您需要删除的实例进入回收站，请使用[批量重启或删除实例](BatchRestartOrDeleteInstances.xml)。](tag:hws,hws_hk,cmcc,ctc,sbc,hk_sbc,tm,hk_tm,srg)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) DeleteInstance(request *model.DeleteInstanceRequest) (*model.DeleteInstanceResponse, error) {
@@ -529,6 +573,27 @@ func (c *KafkaClient) DeleteKafkaMessage(request *model.DeleteKafkaMessageReques
 func (c *KafkaClient) DeleteKafkaMessageInvoker(request *model.DeleteKafkaMessageRequest) *DeleteKafkaMessageInvoker {
 	requestDef := GenReqDefForDeleteKafkaMessage()
 	return &DeleteKafkaMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteKafkaTopicMessages 删除Kafka消息
+//
+// 删除Kafka消息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) DeleteKafkaTopicMessages(request *model.DeleteKafkaTopicMessagesRequest) (*model.DeleteKafkaTopicMessagesResponse, error) {
+	requestDef := GenReqDefForDeleteKafkaTopicMessages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteKafkaTopicMessagesResponse), nil
+	}
+}
+
+// DeleteKafkaTopicMessagesInvoker 删除Kafka消息
+func (c *KafkaClient) DeleteKafkaTopicMessagesInvoker(request *model.DeleteKafkaTopicMessagesRequest) *DeleteKafkaTopicMessagesInvoker {
+	requestDef := GenReqDefForDeleteKafkaTopicMessages()
+	return &DeleteKafkaTopicMessagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteKafkaTopicQuota 删除Topic流控配置
@@ -594,25 +659,25 @@ func (c *KafkaClient) DeleteScheduledTaskInvoker(request *model.DeleteScheduledT
 	return &DeleteScheduledTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteUser 删除指定用户
+// EnableDns 开启Kafka实例域名访问能力
 //
-// 删除指定用户。
+// 开启Kafka实例域名访问后，客户端可以通过域名连接Kafka实例。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) DeleteUser(request *model.DeleteUserRequest) (*model.DeleteUserResponse, error) {
-	requestDef := GenReqDefForDeleteUser()
+func (c *KafkaClient) EnableDns(request *model.EnableDnsRequest) (*model.EnableDnsResponse, error) {
+	requestDef := GenReqDefForEnableDns()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.DeleteUserResponse), nil
+		return resp.(*model.EnableDnsResponse), nil
 	}
 }
 
-// DeleteUserInvoker 删除指定用户
-func (c *KafkaClient) DeleteUserInvoker(request *model.DeleteUserRequest) *DeleteUserInvoker {
-	requestDef := GenReqDefForDeleteUser()
-	return &DeleteUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// EnableDnsInvoker 开启Kafka实例域名访问能力
+func (c *KafkaClient) EnableDnsInvoker(request *model.EnableDnsRequest) *EnableDnsInvoker {
+	requestDef := GenReqDefForEnableDns()
+	return &EnableDnsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAvailableZones 查询可用区信息
@@ -1469,6 +1534,27 @@ func (c *KafkaClient) ShowEngineInstanceExtendProductInfoInvoker(request *model.
 	return &ShowEngineInstanceExtendProductInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowGroup 查询指定消费组信息
+//
+// 查询指定消费组信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) ShowGroup(request *model.ShowGroupRequest) (*model.ShowGroupResponse, error) {
+	requestDef := GenReqDefForShowGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowGroupResponse), nil
+	}
+}
+
+// ShowGroupInvoker 查询指定消费组信息
+func (c *KafkaClient) ShowGroupInvoker(request *model.ShowGroupRequest) *ShowGroupInvoker {
+	requestDef := GenReqDefForShowGroup()
+	return &ShowGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowGroups 查询消费组信息
 //
 // 查询消费组信息。
@@ -1555,8 +1641,9 @@ func (c *KafkaClient) ShowInstanceExtendProductInfoInvoker(request *model.ShowIn
 
 // ShowInstanceMessages 查询消息
 //
-// 查询消息的偏移量和消息内容。
-// 先根据时间戳查询消息的偏移量，再根据偏移量查询消息内容。
+// Kafka实例支持两种消息查询方式，具体查询范围及结果如下：
+// - 按创建时间查询：若已知消息的创建时间段，可通过该方式查询，将返回消息列表及对应偏移量，但不包含消息具体内容。
+// - 按偏移量查询：若已知目标消息所属Topic的分区及具体偏移量，可通过该方式查询，将返回消息列表及完整的消息内容。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) ShowInstanceMessages(request *model.ShowInstanceMessagesRequest) (*model.ShowInstanceMessagesResponse, error) {
@@ -2358,27 +2445,6 @@ func (c *KafkaClient) UpdateTopicAccessPolicyInvoker(request *model.UpdateTopicA
 	return &UpdateTopicAccessPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateTopicReplica 修改Kafka实例Topic分区的副本
-//
-// 修改Kafka实例Topic分区的副本。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) UpdateTopicReplica(request *model.UpdateTopicReplicaRequest) (*model.UpdateTopicReplicaResponse, error) {
-	requestDef := GenReqDefForUpdateTopicReplica()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateTopicReplicaResponse), nil
-	}
-}
-
-// UpdateTopicReplicaInvoker 修改Kafka实例Topic分区的副本
-func (c *KafkaClient) UpdateTopicReplicaInvoker(request *model.UpdateTopicReplicaRequest) *UpdateTopicReplicaInvoker {
-	requestDef := GenReqDefForUpdateTopicReplica()
-	return &UpdateTopicReplicaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // UpdateVolumeExpansionConfig 修改磁盘自动扩容配置
 //
 // 该接口用于修改磁盘自动扩容配置，包含磁盘自动扩容是否开启、扩容阈值、扩容步长，以及扩容上限的配置。
@@ -2654,9 +2720,9 @@ func (c *KafkaClient) ResumeConnectorTaskInvoker(request *model.ResumeConnectorT
 	return &ResumeConnectorTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowConnectorResourceInfo 查询开启Smart Connector功能所需资源信息
+// ShowConnectorResourceInfo 查询开启Smart Connect功能所需资源信息
 //
-// 查询开启Smart Connector功能所需要使用的资源的情况
+// 查询开启Smart Connect功能所需要使用的资源的情况
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *KafkaClient) ShowConnectorResourceInfo(request *model.ShowConnectorResourceInfoRequest) (*model.ShowConnectorResourceInfoResponse, error) {
@@ -2669,7 +2735,7 @@ func (c *KafkaClient) ShowConnectorResourceInfo(request *model.ShowConnectorReso
 	}
 }
 
-// ShowConnectorResourceInfoInvoker 查询开启Smart Connector功能所需资源信息
+// ShowConnectorResourceInfoInvoker 查询开启Smart Connect功能所需资源信息
 func (c *KafkaClient) ShowConnectorResourceInfoInvoker(request *model.ShowConnectorResourceInfoRequest) *ShowConnectorResourceInfoInvoker {
 	requestDef := GenReqDefForShowConnectorResourceInfo()
 	return &ShowConnectorResourceInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

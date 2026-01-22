@@ -18,8 +18,8 @@ type ShowEngineInstanceExtendProductInfoRequest struct {
 	// 实例ID。
 	InstanceId string `json:"instance_id"`
 
-	// 产品的类型。   - advanced：专享版   - platinum：铂金版   - dec：专属云版   - exp：体验版
-	Type *ShowEngineInstanceExtendProductInfoRequestType `json:"type,omitempty"`
+	// **参数解释**： 产品的类型。 **约束限制**： 不涉及。 **取值范围**： advanced：专享版 **默认取值**： 不涉及。
+	Type *string `json:"type,omitempty"`
 }
 
 func (o ShowEngineInstanceExtendProductInfoRequest) String() string {
@@ -56,61 +56,6 @@ func (c ShowEngineInstanceExtendProductInfoRequestEngine) MarshalJSON() ([]byte,
 }
 
 func (c *ShowEngineInstanceExtendProductInfoRequestEngine) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type ShowEngineInstanceExtendProductInfoRequestType struct {
-	value string
-}
-
-type ShowEngineInstanceExtendProductInfoRequestTypeEnum struct {
-	ADVANCED ShowEngineInstanceExtendProductInfoRequestType
-	PLATINUM ShowEngineInstanceExtendProductInfoRequestType
-	DEC      ShowEngineInstanceExtendProductInfoRequestType
-	EXP      ShowEngineInstanceExtendProductInfoRequestType
-}
-
-func GetShowEngineInstanceExtendProductInfoRequestTypeEnum() ShowEngineInstanceExtendProductInfoRequestTypeEnum {
-	return ShowEngineInstanceExtendProductInfoRequestTypeEnum{
-		ADVANCED: ShowEngineInstanceExtendProductInfoRequestType{
-			value: "advanced",
-		},
-		PLATINUM: ShowEngineInstanceExtendProductInfoRequestType{
-			value: "platinum",
-		},
-		DEC: ShowEngineInstanceExtendProductInfoRequestType{
-			value: "dec",
-		},
-		EXP: ShowEngineInstanceExtendProductInfoRequestType{
-			value: "exp",
-		},
-	}
-}
-
-func (c ShowEngineInstanceExtendProductInfoRequestType) Value() string {
-	return c.value
-}
-
-func (c ShowEngineInstanceExtendProductInfoRequestType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ShowEngineInstanceExtendProductInfoRequestType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

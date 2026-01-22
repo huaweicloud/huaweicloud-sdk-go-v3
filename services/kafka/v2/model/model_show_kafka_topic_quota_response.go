@@ -10,7 +10,7 @@ import (
 type ShowKafkaTopicQuotaResponse struct {
 
 	// Topic流控配置
-	Quotas *[]KafkaTopicQuotaResp `json:"quotas,omitempty"`
+	Quotas *[]KafkaTopicQuota `json:"quotas,omitempty"`
 
 	// Topic流控数量
 	Count          *int32 `json:"count,omitempty"`

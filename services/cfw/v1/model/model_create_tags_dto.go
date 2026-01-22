@@ -8,7 +8,7 @@ import (
 
 type CreateTagsDto struct {
 
-	// 创建防火墙标签列表
+	// **参数解释**： 创建防火墙标签列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	Tags *[]CreateTag `json:"tags,omitempty"`
 }
 

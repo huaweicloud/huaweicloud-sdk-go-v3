@@ -8,10 +8,10 @@ import (
 
 type DomainSetInfoDto struct {
 
-	// 域名，如www.test.com
+	// **参数解释**： 域名 **约束限制**： 不涉及 **取值范围**： 域名格式，如www.example.com **默认取值**： 不涉及
 	DomainName string `json:"domain_name"`
 
-	// 域名描述
+	// **参数解释**： 域名描述 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	Description *string `json:"description,omitempty"`
 }
 

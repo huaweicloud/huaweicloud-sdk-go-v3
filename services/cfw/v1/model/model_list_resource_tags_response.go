@@ -10,9 +10,10 @@ import (
 type ListResourceTagsResponse struct {
 	Data *string `json:"data,omitempty"`
 
-	SysTags *[]ResourceTag `json:"sys_tags,omitempty"`
+	// 资源标签列表
+	Tags *[]ResourceTag `json:"tags,omitempty"`
 
-	Tags           *[]ResourceTag `json:"tags,omitempty"`
+	SysTags        *[]ResourceTag `json:"sys_tags,omitempty"`
 	HttpStatusCode int            `json:"-"`
 }
 

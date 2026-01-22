@@ -9,28 +9,28 @@ import (
 // ShowConfigurationParameterResponse Response Object
 type ShowConfigurationParameterResponse struct {
 
-	// 参数模板ID。
+	// **参数解释：** 参数模板ID。 **取值范围：** 不涉及。
 	Id *string `json:"id,omitempty"`
 
-	// 参数模板名称。
+	// **参数解释：** 参数模板名称。 **取值范围：** 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 数据库版本。
+	// **参数解释：** 数据库版本。 **取值范围：** 不涉及。
 	DatastoreVersion *string `json:"datastore_version,omitempty"`
 
-	// 数据库类型。
+	// **参数解释：** 数据库类型。 **取值范围：** 不涉及。
 	DatastoreName *string `json:"datastore_name,omitempty"`
 
-	// 参数模板描述。
+	// **参数解释：** 参数模板描述。 **取值范围：** 不涉及。
 	Description *string `json:"description,omitempty"`
 
-	// 创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+	// **参数解释：** 创建时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
 	Created *string `json:"created,omitempty"`
 
-	// 更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+	// **参数解释：** 更新时间，格式为“yyyy-MM-ddTHH:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量。 **取值范围：** 不涉及。
 	Updated *string `json:"updated,omitempty"`
 
-	// 参数对象，用户基于默认参数模板自定义的参数配置。
+	// **参数解释：** 参数对象，用户基于默认参数模板自定义的参数配置。 **取值范围：** 不涉及。
 	Parameters     *[]ConfigurationParametersResult `json:"parameters,omitempty"`
 	HttpStatusCode int                              `json:"-"`
 }

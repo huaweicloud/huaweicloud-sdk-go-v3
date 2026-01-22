@@ -8,13 +8,13 @@ import (
 
 type DomainInfo struct {
 
-	// 域名地址id
+	// **参数解释**： 域名地址id **取值范围**： 不涉及
 	DomainAddressId *string `json:"domain_address_id,omitempty"`
 
-	// 域名，如www.test.com
+	// **参数解释**： 域名 **取值范围**： 不涉及
 	DomainName *string `json:"domain_name,omitempty"`
 
-	// 域名描述
+	// **参数解释**： 域名描述 **取值范围**： 不涉及
 	Description *string `json:"description,omitempty"`
 }
 

@@ -565,6 +565,48 @@ func (c *SwrClient) ListQuotasInvoker(request *model.ListQuotasRequest) *ListQuo
 	return &ListQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListReferences 获取签名镜像关联的被签名镜像版本列表
+//
+// 获取签名镜像关联的被签名镜像版本列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) ListReferences(request *model.ListReferencesRequest) (*model.ListReferencesResponse, error) {
+	requestDef := GenReqDefForListReferences()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListReferencesResponse), nil
+	}
+}
+
+// ListReferencesInvoker 获取签名镜像关联的被签名镜像版本列表
+func (c *SwrClient) ListReferencesInvoker(request *model.ListReferencesRequest) *ListReferencesInvoker {
+	requestDef := GenReqDefForListReferences()
+	return &ListReferencesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRepoAccessories 查询镜像的附件列表
+//
+// 获取共享仓的镜像的附件列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) ListRepoAccessories(request *model.ListRepoAccessoriesRequest) (*model.ListRepoAccessoriesResponse, error) {
+	requestDef := GenReqDefForListRepoAccessories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRepoAccessoriesResponse), nil
+	}
+}
+
+// ListRepoAccessoriesInvoker 查询镜像的附件列表
+func (c *SwrClient) ListRepoAccessoriesInvoker(request *model.ListRepoAccessoriesRequest) *ListRepoAccessoriesInvoker {
+	requestDef := GenReqDefForListRepoAccessories()
+	return &ListRepoAccessoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListRepoDetails 查询镜像仓库列表详情
 //
 // 查询镜像仓库列表详情

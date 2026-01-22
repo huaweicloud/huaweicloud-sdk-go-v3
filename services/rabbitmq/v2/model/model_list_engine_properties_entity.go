@@ -6,40 +6,40 @@ import (
 	"strings"
 )
 
-// ListEnginePropertiesEntity 当前规格实例的属性。
+// ListEnginePropertiesEntity **参数解释**： 当前规格实例的属性。
 type ListEnginePropertiesEntity struct {
 
-	// 节点增长步长。
+	// **参数解释**： 节点增长步长。 **取值范围**： 不涉及。
 	StepLength *string `json:"step_length,omitempty"`
 
-	// 每个Broker的最大队列。
+	// **参数解释**： 每个Broker的最大队列。 **取值范围**： 不涉及。
 	MaxQueuePerBroker *string `json:"max_queue_per_broker,omitempty"`
 
-	// 每个Broker的最大连接数。
+	// **参数解释**： 每个Broker的最大连接数。 **取值范围**： 不涉及。
 	MaxConnectionPerBroker *string `json:"max_connection_per_broker,omitempty"`
 
-	// Broker的最大个数。
+	// **参数解释**： Broker的最大个数。 **取值范围**： 不涉及。
 	MaxBroker *string `json:"max_broker,omitempty"`
 
-	// 每个节点的最大存储。单位为GB。
+	// **参数解释**： 每个节点的最大存储。单位为GB。 **取值范围**： 不涉及。
 	MaxStoragePerNode *string `json:"max_storage_per_node,omitempty"`
 
-	// 每个Broker的最大消费者数。
+	// **参数解释**： 每个Broker的最大消费者数。 **取值范围**： 不涉及。
 	MaxConsumerPerBroker *string `json:"max_consumer_per_broker,omitempty"`
 
-	// Broker的最小个数。
+	// **参数解释**： Broker的最小个数。 **取值范围**： 不涉及。
 	MinBroker *string `json:"min_broker,omitempty"`
 
-	// 每个Broker的最大带宽。
+	// **参数解释**： 每个Broker的最大带宽。 **取值范围**： 不涉及。
 	MaxBandwidthPerBroker *string `json:"max_bandwidth_per_broker,omitempty"`
 
-	// 每个节点的最小存储。单位为GB。
+	// **参数解释**： 每个节点的最小存储。单位为GB。 **取值范围**： 不涉及。
 	MinStoragePerNode *string `json:"min_storage_per_node,omitempty"`
 
-	// 每个Broker的最大TPS。
+	// **参数解释**： 每个Broker的最大TPS。 **取值范围**： 不涉及。
 	MaxTpsPerBroker *string `json:"max_tps_per_broker,omitempty"`
 
-	// product_id的别名。
+	// **参数解释**： product_id的别名。 **取值范围**： 不涉及。
 	ProductAlias *string `json:"product_alias,omitempty"`
 }
 

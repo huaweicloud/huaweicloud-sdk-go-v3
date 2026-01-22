@@ -549,6 +549,27 @@ func (c *CssClient) ListClustersTagsInvoker(request *model.ListClustersTagsReque
 	return &ListClustersTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDiskType 列举磁盘类型
+//
+// 获取各可用区支持的磁盘类型。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CssClient) ListDiskType(request *model.ListDiskTypeRequest) (*model.ListDiskTypeResponse, error) {
+	requestDef := GenReqDefForListDiskType()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDiskTypeResponse), nil
+	}
+}
+
+// ListDiskTypeInvoker 列举磁盘类型
+func (c *CssClient) ListDiskTypeInvoker(request *model.ListDiskTypeRequest) *ListDiskTypeInvoker {
+	requestDef := GenReqDefForListDiskType()
+	return &ListDiskTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListElbCerts 查询证书列表
 //
 // 该接口用于查询证书列表。

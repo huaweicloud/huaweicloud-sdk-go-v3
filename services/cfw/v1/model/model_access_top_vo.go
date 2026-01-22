@@ -11,10 +11,10 @@ type AccessTopVo struct {
 	// **参数解释**： 阻断次数 **取值范围**： 不涉及
 	DenyCount *int64 `json:"deny_count,omitempty"`
 
-	// **参数解释**： 高频命中的阻断策略ID **取值范围**： 不涉及
+	// **参数解释**： Top命中的阻断策略ID **取值范围**： 不涉及
 	DenyTopOneAclId *string `json:"deny_top_one_acl_id,omitempty"`
 
-	// **参数解释**： 高频命中的阻断策略ID **取值范围**： 不涉及
+	// **参数解释**： Top命中的阻断策略名称 **取值范围**： 不涉及
 	DenyTopOneAclName *string `json:"deny_top_one_acl_name,omitempty"`
 
 	// **参数解释**： 命中次数 **取值范围**： 不涉及

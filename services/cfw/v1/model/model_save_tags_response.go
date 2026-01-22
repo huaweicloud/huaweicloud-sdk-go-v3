@@ -8,8 +8,8 @@ import (
 
 // SaveTagsResponse Response Object
 type SaveTagsResponse struct {
-	Data           *string `json:"data,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Body           *interface{} `json:"body,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o SaveTagsResponse) String() string {

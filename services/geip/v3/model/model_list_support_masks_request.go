@@ -36,7 +36,7 @@ type ListSupportMasksRequest struct {
 
 	IpVersion *[]ListSupportMasksRequestIpVersion `json:"ip_version,omitempty"`
 
-	Mask *[]int32 `json:"mask,omitempty"`
+	Mask *int32 `json:"mask,omitempty"`
 }
 
 func (o ListSupportMasksRequest) String() string {

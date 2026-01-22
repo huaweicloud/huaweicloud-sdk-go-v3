@@ -8,6 +8,8 @@ import (
 
 // UpdateObjectConfigDescResponse Response Object
 type UpdateObjectConfigDescResponse struct {
+
+	// 成员id
 	Data           *interface{} `json:"data,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

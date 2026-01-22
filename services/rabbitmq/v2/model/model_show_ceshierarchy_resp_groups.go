@@ -8,7 +8,7 @@ import (
 
 type ShowCeshierarchyRespGroups struct {
 
-	// 消费组名称。
+	// **参数解释**： 消费组名称。 **取值范围**： 不涉及。
 	Name *string `json:"name,omitempty"`
 }
 

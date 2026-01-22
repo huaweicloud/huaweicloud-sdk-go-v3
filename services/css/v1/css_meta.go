@@ -496,6 +496,17 @@ func GenReqDefForListClustersTags() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListDiskType() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1.0/{project_id}/disktypes").
+		WithResponse(new(model.ListDiskTypeResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListElbCerts() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

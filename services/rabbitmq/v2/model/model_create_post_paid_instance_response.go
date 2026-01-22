@@ -9,7 +9,7 @@ import (
 // CreatePostPaidInstanceResponse Response Object
 type CreatePostPaidInstanceResponse struct {
 
-	// 实例ID。
+	// **参数解释**： 实例ID。 **取值范围**： 不涉及。
 	InstanceId     *string `json:"instance_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

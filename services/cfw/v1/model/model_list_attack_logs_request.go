@@ -30,10 +30,10 @@ type ListAttackLogsRequest struct {
 	// 目的端口号
 	DstPort *int32 `json:"dst_port,omitempty"`
 
-	// 协议类型，包含TCP, UDP,ICMP,ICMPV6等。
+	// 协议类型，包含TCP, UDP，ICMP，ICMPV6等。
 	Protocol *string `json:"protocol,omitempty"`
 
-	// 规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+	// 规则应用类型包括：“HTTP”，“HTTPS”，“TLS1”，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
 	App *string `json:"app,omitempty"`
 
 	// 文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
@@ -48,7 +48,7 @@ type ListAttackLogsRequest struct {
 	// 每页显示个数，范围为1-1024
 	Limit int32 `json:"limit"`
 
-	// 防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+	// 防火墙ID，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
 	FwInstanceId string `json:"fw_instance_id"`
 
 	// 动作包含permit，deny
@@ -57,7 +57,7 @@ type ListAttackLogsRequest struct {
 	// 方向，包含in2out，out2in
 	Direction *string `json:"direction,omitempty"`
 
-	// 入侵事件类型
+	// 参数解释： 入侵事件类型 约束限制： 不涉及 取值范围： Access Control：访问控制 Vulnerability scanning：漏洞扫描 Email attack：邮件攻击 Vulnerability Attack：漏洞攻击 Web attack：Web攻击 password attack：密码攻击 Hijacking attack：劫持攻击 Protocol exception：协议异常 Trojan horse：特洛伊木马 worms：蠕虫 Buffer Overflow：缓冲区溢出 Hacking tools：黑客工具 Spyware：间谍软件 DDoS flooding：DDoS泛洪 Application-layer DDoS attacks：应用层DDoS攻击 Other suspicious behavior：其他可疑行为 Suspicious DNS activity：可疑DNS活动 Phishing：网络钓鱼 Spam：垃圾邮件 Others：其他攻击 默认取值： 不涉及
 	AttackType *string `json:"attack_type,omitempty"`
 
 	// 入侵事件规则
@@ -72,7 +72,7 @@ type ListAttackLogsRequest struct {
 	// 目标主机
 	DstHost *string `json:"dst_host,omitempty"`
 
-	// 日志类型包括：internet，vpc，nat
+	// **参数解释**： 日志类型 **约束限制**： 不涉及 **取值范围**： internet为南北向日志、nat为nat场景日志，vpc为东西向日志，vgw为vgw场景日志 **默认取值**： 不涉及
 	LogType *ListAttackLogsRequestLogType `json:"log_type,omitempty"`
 
 	// 入侵事件id

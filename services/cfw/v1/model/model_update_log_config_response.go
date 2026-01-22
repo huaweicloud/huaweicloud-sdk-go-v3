@@ -9,7 +9,7 @@ import (
 // UpdateLogConfigResponse Response Object
 type UpdateLogConfigResponse struct {
 
-	// 更新日志配置返回值，为防火墙id
+	// 更新日志配置返回值，为防火墙ID
 	Data           *string `json:"data,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

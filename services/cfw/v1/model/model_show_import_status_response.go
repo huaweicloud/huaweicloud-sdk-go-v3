@@ -8,8 +8,8 @@ import (
 
 // ShowImportStatusResponse Response Object
 type ShowImportStatusResponse struct {
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *ShowImportStatusId `json:"data,omitempty"`
+	HttpStatusCode int                 `json:"-"`
 }
 
 func (o ShowImportStatusResponse) String() string {

@@ -11,25 +11,25 @@ import (
 
 type CreateTopicOrBatchDeleteTopicReq struct {
 
-	// 主题名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
+	// **参数解释**： 主题名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 当创建主题时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 关联的代理（仅RocketMQ实例4.8.0版本需要填写此参数）。
+	// **参数解释**： 关联的代理。 **约束限制**： 仅RocketMQ实例4.8.0版本需要填写此参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Brokers *[]string `json:"brokers,omitempty"`
 
-	// 总队列数，范围1~50。
+	// **参数解释**： 总队列数。 **约束限制**： 不涉及。 **取值范围**： 1~50。 **默认取值**： 不涉及。
 	QueueNum float32 `json:"queue_num,omitempty"`
 
-	// 队列（仅RocketMQ实例4.8.0版本需要填写此参数）。
+	// **参数解释**： 队列。 **约束限制**： 仅RocketMQ实例4.8.0版本需要填写此参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Queues *[]CreateTopicReqQueues `json:"queues,omitempty"`
 
-	// 权限（仅RocketMQ实例4.8.0版本需要填写此参数）。 取值范围：   - pub（发布）   - sub（订阅）   - all（发布+订阅）
+	// **参数解释**： 权限。 **约束限制**： 仅RocketMQ实例4.8.0版本需要填写此参数。 **取值范围**： - pub：发布。 - sub：订阅。 - all：发布+订阅。 **默认取值**： 不涉及。
 	Permission *CreateTopicOrBatchDeleteTopicReqPermission `json:"permission,omitempty"`
 
-	// 消息类型（仅RocketMQ实例5.x版本需要填写此参数）。 取值范围：   - NORMAL（普通消息）   - FIFO（顺序消息）   - DELAY（定时消息）   - TRANSACTION（事务消息）
+	// **参数解释**： 消息类型。 **约束限制**： 仅RocketMQ实例5.x版本需要填写此参数。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。 **默认取值**： 不涉及。
 	MessageType *CreateTopicOrBatchDeleteTopicReqMessageType `json:"message_type,omitempty"`
 
-	// 主题列表，当批量删除主题时使用。
+	// **参数解释**： 主题列表，当批量删除主题时使用。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Topics *[]string `json:"topics,omitempty"`
 }
 

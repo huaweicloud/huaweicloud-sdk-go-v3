@@ -10,7 +10,7 @@ import (
 type UpdateYmlsReqEditModify struct {
 
 	// 参数配置列表。值为需要修改的json数据。
-	ElasticsearchYml *interface{} `json:"elasticsearch.yml"`
+	ElasticsearchYml *interface{} `json:"elasticsearch.yml,omitempty"`
 }
 
 func (o UpdateYmlsReqEditModify) String() string {

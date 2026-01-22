@@ -8,7 +8,7 @@ import (
 
 // DeleteIpBlacklistResponse Response Object
 type DeleteIpBlacklistResponse struct {
-	Data           *interface{} `json:"data,omitempty"`
+	Body           *interface{} `json:"body,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

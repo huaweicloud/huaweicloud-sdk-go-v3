@@ -115,6 +115,10 @@ func GenReqDefForListBandwidthDetail() *def.HttpRequestDef {
 		WithName("ServiceType").
 		WithJsonTag("service_type").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IpType").
+		WithJsonTag("ip_type").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("XRequestId").

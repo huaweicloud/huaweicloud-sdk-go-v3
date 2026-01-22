@@ -44,7 +44,10 @@ type ShowShareFeatureGatesResponse struct {
 
 	// 是否启用镜像配额
 	EnableImageQuota *bool `json:"enable_image_quota,omitempty"`
-	HttpStatusCode   int   `json:"-"`
+
+	// 是否支持自定义临时登录指令有效期
+	EnableCustomizeValidityPeriod *bool `json:"enable_customize_validity_period,omitempty"`
+	HttpStatusCode                int   `json:"-"`
 }
 
 func (o ShowShareFeatureGatesResponse) String() string {

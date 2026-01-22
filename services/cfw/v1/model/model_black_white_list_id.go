@@ -11,7 +11,7 @@ type BlackWhiteListId struct {
 	// 黑白名单id
 	Id *string `json:"id,omitempty"`
 
-	// 黑白名单名称，为黑白名单的地址
+	// 黑白名单的地址
 	Name *string `json:"name,omitempty"`
 }
 

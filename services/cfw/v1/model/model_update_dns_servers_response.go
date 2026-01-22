@@ -9,7 +9,7 @@ import (
 // UpdateDnsServersResponse Response Object
 type UpdateDnsServersResponse struct {
 
-	// 域名服务器列表
+	// **参数解释**： 域名服务器列表 **取值范围**： 不涉及
 	Data           *[]string `json:"data,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

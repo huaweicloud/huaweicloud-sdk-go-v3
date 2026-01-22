@@ -12,7 +12,7 @@ import (
 // CreateInstanceByEngineRequest Request Object
 type CreateInstanceByEngineRequest struct {
 
-	// 消息引擎。
+	// **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
 	Engine CreateInstanceByEngineRequestEngine `json:"engine"`
 
 	Body *CreateInstanceByEngineReq `json:"body,omitempty"`
@@ -32,11 +32,15 @@ type CreateInstanceByEngineRequestEngine struct {
 }
 
 type CreateInstanceByEngineRequestEngineEnum struct {
+	ROCKETMQ    CreateInstanceByEngineRequestEngine
 	RELIABILITY CreateInstanceByEngineRequestEngine
 }
 
 func GetCreateInstanceByEngineRequestEngineEnum() CreateInstanceByEngineRequestEngineEnum {
 	return CreateInstanceByEngineRequestEngineEnum{
+		ROCKETMQ: CreateInstanceByEngineRequestEngine{
+			value: "rocketmq",
+		},
 		RELIABILITY: CreateInstanceByEngineRequestEngine{
 			value: "reliability",
 		},

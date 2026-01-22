@@ -16,8 +16,11 @@ type ListGlobalFeatureGatesResponse struct {
 	EnableEnterprise *bool `json:"enableEnterprise,omitempty"`
 
 	// 是否支持SWR企业版功能
-	CerAvailable   *bool `json:"cerAvailable,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	CerAvailable *bool `json:"cerAvailable,omitempty"`
+
+	// 是否支持使用已有KSM密钥ID创建OBS桶
+	EnableOBSEncryptUserKmsKey *bool `json:"enableOBSEncryptUserKmsKey,omitempty"`
+	HttpStatusCode             int   `json:"-"`
 }
 
 func (o ListGlobalFeatureGatesResponse) String() string {

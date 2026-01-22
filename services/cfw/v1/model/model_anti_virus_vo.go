@@ -14,6 +14,7 @@ type AntiVirusVo struct {
 	// 防护对象id
 	Id *string `json:"id,omitempty"`
 
+	// 防护对象名称
 	Name *string `json:"name,omitempty"`
 }
 

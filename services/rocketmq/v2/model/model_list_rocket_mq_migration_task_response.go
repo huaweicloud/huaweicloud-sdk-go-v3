@@ -9,10 +9,10 @@ import (
 // ListRocketMqMigrationTaskResponse Response Object
 type ListRocketMqMigrationTaskResponse struct {
 
-	// 元数据迁移任务总数。
+	// **参数解释**： 元数据迁移任务总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Total *int32 `json:"total,omitempty"`
 
-	// 元数据迁移任务列表。
+	// **参数解释**： 元数据迁移任务列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Task           *[]MetadataTask `json:"task,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

@@ -6,31 +6,31 @@ import (
 	"strings"
 )
 
-// EwProtectResourceInfo 东西向防护的资源信息，例如VPC、VGW等
+// EwProtectResourceInfo **参数解释**： 东西向防护的资源信息，例如VPC、VGW等 **取值范围**： 不涉及
 type EwProtectResourceInfo struct {
 
-	// 防护资源类型：0 VPC，1 VGW，2 VPN，3 PEERING
+	// **参数解释**： 防护资源类 **取值范围**： - 0：VPC - 1：VGW - 2：VPN - 3：PEERING
 	ProtectedResourceType int32 `json:"protected_resource_type"`
 
-	// 防护资源名称
+	// **参数解释**： 防护资源名称 **取值范围**： 不涉及
 	ProtectedResourceName string `json:"protected_resource_name"`
 
-	// 防护资源id
+	// **参数解释**： 防护资源id **取值范围**： 不涉及
 	ProtectedResourceId string `json:"protected_resource_id"`
 
-	// 防护资源nat网关名称，专业版防火墙支持NAT规则，此字段表示防护连接的NAT的名称。
+	// **参数解释**： 防护资源nat网关名称，专业版防火墙支持NAT规则，此字段表示防护连接的NAT的名称。 **取值范围**： 不涉及
 	ProtectedResourceNatName *string `json:"protected_resource_nat_name,omitempty"`
 
-	// 防护资源nat网关id，专业版防火墙支持NAT规则，此字段表示防护连接的NAT的id。
+	// **参数解释**： 防护资源nat网关id，专业版防火墙支持NAT规则，此字段表示防护连接的NAT的id。 **取值范围**： 不涉及
 	ProtectedResourceNatId *string `json:"protected_resource_nat_id,omitempty"`
 
-	// 防火墙支持跨账户防护，此处为防护资源租户id
+	// **参数解释**： 防火墙支持跨账户防护，此处为防护资源租户id **取值范围**： 不涉及
 	ProtectedResourceProjectId *string `json:"protected_resource_project_id,omitempty"`
 
-	// 防护资源模式，为er
+	// **参数解释**： 防护资源模式，为er **取值范围**： 不涉及
 	ProtectedResourceMode *string `json:"protected_resource_mode,omitempty"`
 
-	// 防护资源的防护状态，0表示已关联，1表示未关联。
+	// **参数解释**： 防护资源的防护状态 **取值范围**： - 0：已关联 - 1：未关联
 	Status *int32 `json:"status,omitempty"`
 }
 

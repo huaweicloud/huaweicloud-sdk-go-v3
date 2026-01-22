@@ -8,10 +8,10 @@ import (
 
 type RuleId struct {
 
-	// 规则id
+	// **参数解释**： 规则ID **取值范围**： 不涉及
 	Id *string `json:"id,omitempty"`
 
-	// 规则名称
+	// **参数解释**： 规则名称 **取值范围**： 不涉及
 	Name *string `json:"name,omitempty"`
 }
 

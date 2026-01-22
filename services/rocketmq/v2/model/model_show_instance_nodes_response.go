@@ -9,16 +9,10 @@ import (
 // ShowInstanceNodesResponse Response Object
 type ShowInstanceNodesResponse struct {
 
-	// 下个分页的offset。
-	NextOffset *int32 `json:"next_offset,omitempty"`
-
-	// 上个分页的offset。
-	PreviousOffset *int32 `json:"previous_offset,omitempty"`
-
-	// 后台任务ID
+	// **参数解释**： 后台任务ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Nodes *[]NodeContextEntity `json:"nodes,omitempty"`
 
-	// 总个数
+	// **参数解释**： 总个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

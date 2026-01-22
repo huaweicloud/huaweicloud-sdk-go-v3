@@ -11,11 +11,11 @@ import (
 
 type BatchCreateOrDeleteTagReq struct {
 
-	// 操作标识（仅支持小写）： - create（创建） - delete（删除）
-	Action *BatchCreateOrDeleteTagReqAction `json:"action,omitempty"`
+	// **参数解释**： 操作标识。 **约束限制**： 不涉及。 **取值范围**： - create：创建。 - delete：删除。 **默认取值**： 不涉及。
+	Action BatchCreateOrDeleteTagReqAction `json:"action"`
 
-	// 标签列表。
-	Tags *[]TagEntity `json:"tags,omitempty"`
+	// **参数解释**： 标签列表。 **约束限制**： 一个RocketMQ实例最多添加20个标签。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	Tags []TagEntity `json:"tags"`
 }
 
 func (o BatchCreateOrDeleteTagReq) String() string {

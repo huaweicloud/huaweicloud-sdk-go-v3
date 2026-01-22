@@ -3,43 +3,40 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
 // ListMessagesRequest Request Object
 type ListMessagesRequest struct {
 
-	// 消息引擎。
-	Engine ListMessagesRequestEngine `json:"engine"`
+	// **参数解释**： 消息引擎。 **约束限制**： 不涉及。 **取值范围**： - rocketmq：RocketMQ消息引擎。 - reliability：RocketMQ消息引擎别称。 **默认取值**： 不涉及。
+	Engine string `json:"engine"`
 
-	// 实例ID。
+	// **参数解释**： 实例ID。获取方法如下：调用“查询所有实例列表”接口，从响应体中获取实例ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	InstanceId string `json:"instance_id"`
 
-	// 主题名称。
+	// **参数解释**： 主题名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Topic string `json:"topic"`
 
-	// 队列。
+	// **参数解释**： 队列。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Queue *string `json:"queue,omitempty"`
 
-	// 查询数量。
-	Limit *string `json:"limit,omitempty"`
+	// **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	Limit *int32 `json:"limit,omitempty"`
 
-	// 偏移量，表示从此偏移量开始查询， offset大于等于0。
-	Offset *string `json:"offset,omitempty"`
+	// **参数解释**： 偏移量。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 不涉及。
+	Offset *int32 `json:"offset,omitempty"`
 
-	// 消息的key。
+	// **参数解释**： 消息的key。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Key *string `json:"key,omitempty"`
 
-	// 开始时间（不通过msg_id精确查询消息时，此参数必填）。
+	// **参数解释**： 开始时间。 **约束限制**： 不通过msg_id精确查询消息时，此参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	StartTime *string `json:"start_time,omitempty"`
 
-	// 结束时间（不通过msg_id精确查询消息时，此参数必填）。
+	// **参数解释**： 结束时间。 **约束限制**： 不通过msg_id精确查询消息时，此参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	EndTime *string `json:"end_time,omitempty"`
 
-	// 消息ID。
+	// **参数解释**： 消息ID。 **约束限制**： 不通过时间范围查询消息时，此参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	MsgId *string `json:"msg_id,omitempty"`
 }
 
@@ -50,47 +47,4 @@ func (o ListMessagesRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListMessagesRequest", string(data)}, " ")
-}
-
-type ListMessagesRequestEngine struct {
-	value string
-}
-
-type ListMessagesRequestEngineEnum struct {
-	RELIABILITY ListMessagesRequestEngine
-}
-
-func GetListMessagesRequestEngineEnum() ListMessagesRequestEngineEnum {
-	return ListMessagesRequestEngineEnum{
-		RELIABILITY: ListMessagesRequestEngine{
-			value: "reliability",
-		},
-	}
-}
-
-func (c ListMessagesRequestEngine) Value() string {
-	return c.value
-}
-
-func (c ListMessagesRequestEngine) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ListMessagesRequestEngine) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

@@ -18,8 +18,8 @@ type ListInstanceConsumerGroupMessageOffsetRequest struct {
 	// 消费组名称。
 	Group string `json:"group"`
 
-	// topic名称。
-	Topic *string `json:"topic,omitempty"`
+	// topic名称。查询消费组消息位点时必填项。
+	Topic string `json:"topic"`
 
 	// 分区名称。
 	Partition *string `json:"partition,omitempty"`

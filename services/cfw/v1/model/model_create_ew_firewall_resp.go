@@ -8,7 +8,7 @@ import (
 
 type CreateEwFirewallResp struct {
 
-	// 东西向防护id，对应object_id字段
+	// **参数解释**： 东西向防护id，对应object_id字段 **取值范围**： 不涉及
 	Id *string `json:"id,omitempty"`
 
 	Er *Er `json:"er,omitempty"`

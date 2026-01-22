@@ -15,10 +15,10 @@ type BlackWhiteListResponseDataRecords struct {
 	// 黑白地址方向0：源地址1：目的地址
 	Direction *int32 `json:"direction,omitempty"`
 
-	// ip地址类型0：ipv4，1:ipv6
+	// IP地址类型0：ipv4，1:ipv6
 	AddressType *int32 `json:"address_type,omitempty"`
 
-	// ip地址
+	// IP地址
 	Address *string `json:"address,omitempty"`
 
 	// 协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
@@ -29,6 +29,12 @@ type BlackWhiteListResponseDataRecords struct {
 
 	// 描述
 	Description *string `json:"description,omitempty"`
+
+	// |- **参数解释**： 黑白名单创建时间。 **取值范围**： 不涉及
+	CreatedDate *string `json:"created_date,omitempty"`
+
+	// |- **参数解释**： 黑白名单修改时间。 **取值范围**： 不涉及
+	ModifiedDate *string `json:"modified_date,omitempty"`
 }
 
 func (o BlackWhiteListResponseDataRecords) String() string {

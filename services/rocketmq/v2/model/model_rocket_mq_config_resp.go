@@ -8,22 +8,22 @@ import (
 
 type RocketMqConfigResp struct {
 
-	// RocketMQ配置名称。
+	// **参数解释**： RocketMQ配置名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// RocketMQ配置当前值。
+	// **参数解释**： RocketMQ配置当前值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Value *string `json:"value,omitempty"`
 
-	// RocketMQ配置的类型。
+	// **参数解释**： RocketMQ配置的类型。 **约束限制**： 不涉及。 **取值范围**： - dynamic：动态。 - static：静态。    **默认取值**： 不涉及。
 	ConfigType *string `json:"config_type,omitempty"`
 
-	// RocketMQ配置的默认值。
+	// **参数解释**： RocketMQ配置的默认值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	DefaultValue *string `json:"default_value,omitempty"`
 
-	// RocketMQ配置取值的范围。
+	// **参数解释**： RocketMQ配置取值的范围。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	ValidValues *string `json:"valid_values,omitempty"`
 
-	// RocketMQ配置值的类型。
+	// **参数解释**： RocketMQ配置值的类型。 **约束限制**： 不涉及。 **取值范围**： - integer：整数类型。 - boolean：布尔类型。 **默认取值**： 不涉及。
 	ValueType *string `json:"value_type,omitempty"`
 }
 

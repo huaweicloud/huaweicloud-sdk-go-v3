@@ -9,7 +9,7 @@ import (
 // ListAppliedInstancesResponse Response Object
 type ListAppliedInstancesResponse struct {
 
-	// 可以应用的实例列表。
+	// **参数解释：** 可以应用的实例列表。 **取值范围：** 不涉及。
 	Instances      *[]ApplicableInstancesInfo `json:"instances,omitempty"`
 	HttpStatusCode int                        `json:"-"`
 }

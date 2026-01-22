@@ -86,7 +86,7 @@ func (c *RabbitMQClient) CreatePostPaidInstanceInvoker(request *model.CreatePost
 
 // CreatePostPaidInstanceByEngine 创建实例
 //
-// 创建实例[，该接口支持创建按需[和包周期](tag:hws,hws_eu,hws_hk,ctc,cmcc)计费方式的实例](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,cmcc,sbc)。
+// 创建实例[，该接口支持创建按需[和包周期](tag:hws,hws_eu,hws_hk,ctc,cmcc,ax)计费方式的实例](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,hk_tm,cmcc,sbc,ax,hk_sbc)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RabbitMQClient) CreatePostPaidInstanceByEngine(request *model.CreatePostPaidInstanceByEngineRequest) (*model.CreatePostPaidInstanceByEngineResponse, error) {
@@ -168,6 +168,27 @@ func (c *RabbitMQClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequ
 	return &DeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteScheduledTask 删除定时任务管理中的指定记录
+//
+// 删除定时任务管理中的指定记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RabbitMQClient) DeleteScheduledTask(request *model.DeleteScheduledTaskRequest) (*model.DeleteScheduledTaskResponse, error) {
+	requestDef := GenReqDefForDeleteScheduledTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteScheduledTaskResponse), nil
+	}
+}
+
+// DeleteScheduledTaskInvoker 删除定时任务管理中的指定记录
+func (c *RabbitMQClient) DeleteScheduledTaskInvoker(request *model.DeleteScheduledTaskRequest) *DeleteScheduledTaskInvoker {
+	requestDef := GenReqDefForDeleteScheduledTask()
+	return &DeleteScheduledTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteUser 删除用户
 //
 // 删除用户（仅AMQP版本支持）。
@@ -187,6 +208,27 @@ func (c *RabbitMQClient) DeleteUser(request *model.DeleteUserRequest) (*model.De
 func (c *RabbitMQClient) DeleteUserInvoker(request *model.DeleteUserRequest) *DeleteUserInvoker {
 	requestDef := GenReqDefForDeleteUser()
 	return &DeleteUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// EnableDns 开启RabbitMQ实例域名访问能力
+//
+// 开启RabbitMQ实例域名访问功能后，客户端可以通过域名连接RabbitMQ实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RabbitMQClient) EnableDns(request *model.EnableDnsRequest) (*model.EnableDnsResponse, error) {
+	requestDef := GenReqDefForEnableDns()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.EnableDnsResponse), nil
+	}
+}
+
+// EnableDnsInvoker 开启RabbitMQ实例域名访问能力
+func (c *RabbitMQClient) EnableDnsInvoker(request *model.EnableDnsRequest) *EnableDnsInvoker {
+	requestDef := GenReqDefForEnableDns()
+	return &EnableDnsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAvailableZones 查询可用区信息
@@ -229,6 +271,27 @@ func (c *RabbitMQClient) ListBackgroundTasks(request *model.ListBackgroundTasksR
 func (c *RabbitMQClient) ListBackgroundTasksInvoker(request *model.ListBackgroundTasksRequest) *ListBackgroundTasksInvoker {
 	requestDef := GenReqDefForListBackgroundTasks()
 	return &ListBackgroundTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListConfigFeatures 查询特性开关列表
+//
+// 查询特性开关列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RabbitMQClient) ListConfigFeatures(request *model.ListConfigFeaturesRequest) (*model.ListConfigFeaturesResponse, error) {
+	requestDef := GenReqDefForListConfigFeatures()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConfigFeaturesResponse), nil
+	}
+}
+
+// ListConfigFeaturesInvoker 查询特性开关列表
+func (c *RabbitMQClient) ListConfigFeaturesInvoker(request *model.ListConfigFeaturesRequest) *ListConfigFeaturesInvoker {
+	requestDef := GenReqDefForListConfigFeatures()
+	return &ListConfigFeaturesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListEngineProducts 查询产品规格列表
@@ -315,6 +378,27 @@ func (c *RabbitMQClient) ListProductsInvoker(request *model.ListProductsRequest)
 	return &ListProductsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListScheduledTasks 查询实例的定时任务列表
+//
+// 查询实例的定时任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RabbitMQClient) ListScheduledTasks(request *model.ListScheduledTasksRequest) (*model.ListScheduledTasksResponse, error) {
+	requestDef := GenReqDefForListScheduledTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListScheduledTasksResponse), nil
+	}
+}
+
+// ListScheduledTasksInvoker 查询实例的定时任务列表
+func (c *RabbitMQClient) ListScheduledTasksInvoker(request *model.ListScheduledTasksRequest) *ListScheduledTasksInvoker {
+	requestDef := GenReqDefForListScheduledTasks()
+	return &ListScheduledTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListUser 查询用户列表
 //
 // 查询用户列表（仅AMQP版本支持）。
@@ -334,6 +418,27 @@ func (c *RabbitMQClient) ListUser(request *model.ListUserRequest) (*model.ListUs
 func (c *RabbitMQClient) ListUserInvoker(request *model.ListUserRequest) *ListUserInvoker {
 	requestDef := GenReqDefForListUser()
 	return &ListUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyRecyclePolicy 更新回收站策略
+//
+// 更新回收站策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RabbitMQClient) ModifyRecyclePolicy(request *model.ModifyRecyclePolicyRequest) (*model.ModifyRecyclePolicyResponse, error) {
+	requestDef := GenReqDefForModifyRecyclePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyRecyclePolicyResponse), nil
+	}
+}
+
+// ModifyRecyclePolicyInvoker 更新回收站策略
+func (c *RabbitMQClient) ModifyRecyclePolicyInvoker(request *model.ModifyRecyclePolicyRequest) *ModifyRecyclePolicyInvoker {
+	requestDef := GenReqDefForModifyRecyclePolicy()
+	return &ModifyRecyclePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ResetPassword 重置密码
@@ -361,7 +466,7 @@ func (c *RabbitMQClient) ResetPasswordInvoker(request *model.ResetPasswordReques
 //
 // 实例规格变更。
 //
-// [**当前通过调用API，只支持按需实例进行实例规格变更。**](tag:hws,hws_hk,ctc,cmcc,hws_eu)
+// [**当前通过调用API，只支持按需实例进行实例规格变更。**](tag:hws,hws_hk,ctc,cmcc,hws_eu,ax)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RabbitMQClient) ResizeEngineInstance(request *model.ResizeEngineInstanceRequest) (*model.ResizeEngineInstanceResponse, error) {
@@ -401,6 +506,27 @@ func (c *RabbitMQClient) ResizeInstance(request *model.ResizeInstanceRequest) (*
 func (c *RabbitMQClient) ResizeInstanceInvoker(request *model.ResizeInstanceRequest) *ResizeInstanceInvoker {
 	requestDef := GenReqDefForResizeInstance()
 	return &ResizeInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestoreRecycleInstance 恢复回收站实例
+//
+// 恢复回收站实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RabbitMQClient) RestoreRecycleInstance(request *model.RestoreRecycleInstanceRequest) (*model.RestoreRecycleInstanceResponse, error) {
+	requestDef := GenReqDefForRestoreRecycleInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestoreRecycleInstanceResponse), nil
+	}
+}
+
+// RestoreRecycleInstanceInvoker 恢复回收站实例
+func (c *RabbitMQClient) RestoreRecycleInstanceInvoker(request *model.RestoreRecycleInstanceRequest) *RestoreRecycleInstanceInvoker {
+	requestDef := GenReqDefForRestoreRecycleInstance()
+	return &RestoreRecycleInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowBackgroundTask 查询后台任务管理中的指定记录
@@ -615,6 +741,48 @@ func (c *RabbitMQClient) ShowRabbitMqTagsInvoker(request *model.ShowRabbitMqTags
 	return &ShowRabbitMqTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowRecycleInstances 查询回收站实例列表
+//
+// 查询回收站实例列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RabbitMQClient) ShowRecycleInstances(request *model.ShowRecycleInstancesRequest) (*model.ShowRecycleInstancesResponse, error) {
+	requestDef := GenReqDefForShowRecycleInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRecycleInstancesResponse), nil
+	}
+}
+
+// ShowRecycleInstancesInvoker 查询回收站实例列表
+func (c *RabbitMQClient) ShowRecycleInstancesInvoker(request *model.ShowRecycleInstancesRequest) *ShowRecycleInstancesInvoker {
+	requestDef := GenReqDefForShowRecycleInstances()
+	return &ShowRecycleInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVolumeExpandConfig 查询磁盘自动扩容配置
+//
+// 查询磁盘自动扩容配置，包括磁盘自动扩容是否开启，以及开启后的扩容阈值、扩容步长、扩容上限信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RabbitMQClient) ShowVolumeExpandConfig(request *model.ShowVolumeExpandConfigRequest) (*model.ShowVolumeExpandConfigResponse, error) {
+	requestDef := GenReqDefForShowVolumeExpandConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVolumeExpandConfigResponse), nil
+	}
+}
+
+// ShowVolumeExpandConfigInvoker 查询磁盘自动扩容配置
+func (c *RabbitMQClient) ShowVolumeExpandConfigInvoker(request *model.ShowVolumeExpandConfigRequest) *ShowVolumeExpandConfigInvoker {
+	requestDef := GenReqDefForShowVolumeExpandConfig()
+	return &ShowVolumeExpandConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateInstance 修改实例信息
 //
 // 修改实例的名称和描述信息。
@@ -657,6 +825,27 @@ func (c *RabbitMQClient) UpdatePluginsInvoker(request *model.UpdatePluginsReques
 	return &UpdatePluginsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateScheduledTask 修改定时任务管理中的指定记录
+//
+// 修改定时任务管理中的指定记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RabbitMQClient) UpdateScheduledTask(request *model.UpdateScheduledTaskRequest) (*model.UpdateScheduledTaskResponse, error) {
+	requestDef := GenReqDefForUpdateScheduledTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateScheduledTaskResponse), nil
+	}
+}
+
+// UpdateScheduledTaskInvoker 修改定时任务管理中的指定记录
+func (c *RabbitMQClient) UpdateScheduledTaskInvoker(request *model.UpdateScheduledTaskRequest) *UpdateScheduledTaskInvoker {
+	requestDef := GenReqDefForUpdateScheduledTask()
+	return &UpdateScheduledTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateUser 修改用户参数
 //
 // 修改用户参数（仅AMQP版本支持）。
@@ -676,6 +865,27 @@ func (c *RabbitMQClient) UpdateUser(request *model.UpdateUserRequest) (*model.Up
 func (c *RabbitMQClient) UpdateUserInvoker(request *model.UpdateUserRequest) *UpdateUserInvoker {
 	requestDef := GenReqDefForUpdateUser()
 	return &UpdateUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateVolumeExpansionConfig 修改磁盘自动扩容配置
+//
+// 该接口用于修改磁盘自动扩容配置，包含磁盘自动扩容是否开启、扩容阈值、扩容步长，以及扩容上限的配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RabbitMQClient) UpdateVolumeExpansionConfig(request *model.UpdateVolumeExpansionConfigRequest) (*model.UpdateVolumeExpansionConfigResponse, error) {
+	requestDef := GenReqDefForUpdateVolumeExpansionConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateVolumeExpansionConfigResponse), nil
+	}
+}
+
+// UpdateVolumeExpansionConfigInvoker 修改磁盘自动扩容配置
+func (c *RabbitMQClient) UpdateVolumeExpansionConfigInvoker(request *model.UpdateVolumeExpansionConfigRequest) *UpdateVolumeExpansionConfigInvoker {
+	requestDef := GenReqDefForUpdateVolumeExpansionConfig()
+	return &UpdateVolumeExpansionConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateBinding 添加绑定

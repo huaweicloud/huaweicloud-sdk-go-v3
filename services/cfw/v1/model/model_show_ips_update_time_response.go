@@ -8,6 +8,8 @@ import (
 
 // ShowIpsUpdateTimeResponse Response Object
 type ShowIpsUpdateTimeResponse struct {
+
+	// 查询ips规则细节时间数据
 	Data           *[]IpsRuleUpdateTimeVo `json:"data,omitempty"`
 	HttpStatusCode int                    `json:"-"`
 }

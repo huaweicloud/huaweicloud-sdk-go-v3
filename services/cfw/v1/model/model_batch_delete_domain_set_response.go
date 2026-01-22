@@ -8,6 +8,8 @@ import (
 
 // BatchDeleteDomainSetResponse Response Object
 type BatchDeleteDomainSetResponse struct {
+
+	// **参数解释**： 批量删除域名组响应信息 **取值范围**： 不涉及
 	Data           map[string][]Mapstringstring `json:"data,omitempty"`
 	HttpStatusCode int                          `json:"-"`
 }

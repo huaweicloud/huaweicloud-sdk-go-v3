@@ -22,10 +22,10 @@ type CreateClusterBackupStrategyBody struct {
 	Frequency *string `json:"frequency,omitempty"`
 
 	// 备份使用的OBS桶名称。
-	Bucket *string `json:"bucket,omitempty"`
+	Bucket string `json:"bucket"`
 
 	// 快照在OBS桶中的存放路径。
-	BasePath *string `json:"basePath,omitempty"`
+	BasePath string `json:"basePath"`
 
 	// 委托名称，委托给CSS，允许CSS调用您的其他云服务。   >如果bucket、basePath和agency三个参数同时为空，则系统会自动创建OBS桶和IAM代理（若创建失败，则需要手工配置正确的参数）。
 	Agency *string `json:"agency,omitempty"`

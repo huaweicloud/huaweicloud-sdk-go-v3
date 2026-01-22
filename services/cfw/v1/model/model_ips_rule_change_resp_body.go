@@ -17,7 +17,7 @@ type IpsRuleChangeRespBody struct {
 	// 分组id
 	GroupId *string `json:"group_id,omitempty"`
 
-	// 防火墙id
+	// 防火墙ID
 	Id *string `json:"id,omitempty"`
 
 	// ips的id列表

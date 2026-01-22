@@ -12,7 +12,7 @@ type AddAddressItemsInfoDtoAddressItems struct {
 	// 地址类型0 ipv4，1 ipv6
 	AddressType *int32 `json:"address_type,omitempty"`
 
-	// ip
+	// ip地址
 	Address string `json:"address"`
 
 	// 地址组成员描述

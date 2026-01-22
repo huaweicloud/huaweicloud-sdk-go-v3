@@ -12,7 +12,7 @@ type JobEntities struct {
 	// **参数解释**：子任务关联的资源ID。  **取值范围**：不涉及
 	ResourceId *string `json:"resource_id,omitempty"`
 
-	// **参数解释**：子任务关联的资源类型。  **取值范围**：不涉及
+	// **参数解释**：子任务关联的资源类型。  **取值范围**： - loadbalancer：弹性负载均衡器。 - listener：监听器。
 	ResourceType *string `json:"resource_type,omitempty"`
 }
 

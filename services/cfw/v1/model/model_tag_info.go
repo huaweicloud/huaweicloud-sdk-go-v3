@@ -8,10 +8,10 @@ import (
 
 type TagInfo struct {
 
-	// 标签键
+	// **参数解释**： 标签键 **约束限制**： 不涉及
 	Key *string `json:"key,omitempty"`
 
-	// 标签值列表
+	// **参数解释**： 标签值列表 **约束限制**： 不涉及
 	Values *[]string `json:"values,omitempty"`
 }
 

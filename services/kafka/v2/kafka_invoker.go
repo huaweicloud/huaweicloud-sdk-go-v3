@@ -261,6 +261,22 @@ func (i *CreateMessageDiagnosisTaskInvoker) Invoke() (*model.CreateMessageDiagno
 	}
 }
 
+type CreatePartitionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePartitionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreatePartitionInvoker) Invoke() (*model.CreatePartitionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePartitionResponse), nil
+	}
+}
+
 type CreatePostPaidInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -341,6 +357,22 @@ func (i *DeleteConsumerGroupOffsetsInvoker) Invoke() (*model.DeleteConsumerGroup
 	}
 }
 
+type DeleteGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteGroupInvoker) Invoke() (*model.DeleteGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteGroupResponse), nil
+	}
+}
+
 type DeleteInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -386,6 +418,22 @@ func (i *DeleteKafkaMessageInvoker) Invoke() (*model.DeleteKafkaMessageResponse,
 		return nil, err
 	} else {
 		return result.(*model.DeleteKafkaMessageResponse), nil
+	}
+}
+
+type DeleteKafkaTopicMessagesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteKafkaTopicMessagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteKafkaTopicMessagesInvoker) Invoke() (*model.DeleteKafkaTopicMessagesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteKafkaTopicMessagesResponse), nil
 	}
 }
 
@@ -437,19 +485,19 @@ func (i *DeleteScheduledTaskInvoker) Invoke() (*model.DeleteScheduledTaskRespons
 	}
 }
 
-type DeleteUserInvoker struct {
+type EnableDnsInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *DeleteUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *EnableDnsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *DeleteUserInvoker) Invoke() (*model.DeleteUserResponse, error) {
+func (i *EnableDnsInvoker) Invoke() (*model.EnableDnsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.DeleteUserResponse), nil
+		return result.(*model.EnableDnsResponse), nil
 	}
 }
 
@@ -1090,6 +1138,22 @@ func (i *ShowEngineInstanceExtendProductInfoInvoker) Invoke() (*model.ShowEngine
 		return nil, err
 	} else {
 		return result.(*model.ShowEngineInstanceExtendProductInfoResponse), nil
+	}
+}
+
+type ShowGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowGroupInvoker) Invoke() (*model.ShowGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowGroupResponse), nil
 	}
 }
 
@@ -1762,22 +1826,6 @@ func (i *UpdateTopicAccessPolicyInvoker) Invoke() (*model.UpdateTopicAccessPolic
 		return nil, err
 	} else {
 		return result.(*model.UpdateTopicAccessPolicyResponse), nil
-	}
-}
-
-type UpdateTopicReplicaInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateTopicReplicaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateTopicReplicaInvoker) Invoke() (*model.UpdateTopicReplicaResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateTopicReplicaResponse), nil
 	}
 }
 

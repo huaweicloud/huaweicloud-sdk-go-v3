@@ -9,22 +9,22 @@ import (
 	"strings"
 )
 
-// BssParam 表示包周期计费模式的相关参数。  如果为空，则默认计费模式为按需计费；否则是包周期方式。
+// BssParam **参数解释**： 表示包周期计费模式的相关参数。如果为空，则默认计费模式为按需计费；否则是包周期方式。 **约束限制**： 不涉及。 **取值范围**： 不涉及 **默认取值**： 不涉及。
 type BssParam struct {
 
-	// 是否自动续订。  取值范围：   - true: 自动续订。   - false: 不自动续订。  默认不自动续订。
+	// **参数解释**： 是否自动续订。 **约束限制**： 不涉及。 **取值范围**： - true：自动续订。 - false：不自动续订。 **默认取值**： false。
 	IsAutoRenew *bool `json:"is_auto_renew,omitempty"`
 
-	// 计费模式。  功能说明：付费方式。  取值范围：   - prePaid：预付费，即包年包月；   - postPaid：后付费，即按需付费；  默认为postPaid。
+	// **参数解释**： 计费模式。功能说明：付费方式。 **约束限制**： 不涉及。 **取值范围**： - prePaid：预付费，即包年包月； - postPaid：后付费，即按需付费； **默认取值**： postPaid。
 	ChargingMode *BssParamChargingMode `json:"charging_mode,omitempty"`
 
-	// 下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。  取值范围：   - true：是（自动支付）   - false：否（需要客户手动支付）  默认为手动支付。
+	// **参数解释**： 下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。 **约束限制**： 不涉及。 **取值范围**： - true：是（自动支付） - false：否（需要客户手动支付） **默认取值**： 不涉及。
 	IsAutoPay *bool `json:"is_auto_pay,omitempty"`
 
-	// 订购周期类型。  取值范围：   - month：月   - year：年  **chargingMode为prePaid时生效且为必选值。**
+	// **参数解释**： 订购周期类型。 **约束限制**： chargingMode为prePaid时生效且为必选值。 **取值范围**： - month：月 - year：年 **默认取值**： 不涉及。
 	PeriodType *BssParamPeriodType `json:"period_type,omitempty"`
 
-	// 订购周期数。  取值范围：   - periodType=month（周期类型为月）时，取值为[1，9]；  - periodType=year（周期类型为年）时，取值为[1，3]；  **chargingMode为prePaid时生效且为必选值。**
+	// **参数解释**： 订购周期数。 **约束限制**： chargingMode为prePaid时生效且为必选值。 **取值范围**： - periodType=month（周期类型为月）时，取值为[1，9]； - periodType=year（周期类型为年）时，取值为[1，3]； **默认取值**： 不涉及。
 	PeriodNum *int32 `json:"period_num,omitempty"`
 }
 

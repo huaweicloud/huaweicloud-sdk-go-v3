@@ -8,19 +8,19 @@ import (
 
 type BindingsDetails struct {
 
-	// Exchange名称
+	// **参数解释**： Exchange名称。 **取值范围**： 不涉及。
 	Source *string `json:"source,omitempty"`
 
-	// 绑定目标类型
+	// **参数解释**： 绑定目标的类型。 **取值范围**： - exchange：交换机。 - queue：队列。
 	DestinationType *string `json:"destination_type,omitempty"`
 
-	// 绑定目标的名称
+	// **参数解释**： 绑定目标。 **取值范围**： 不涉及。
 	Destination *string `json:"destination,omitempty"`
 
-	// 绑定键值
+	// **参数解释**： 绑定键值。 **取值范围**： 不涉及。
 	RoutingKey *string `json:"routing_key,omitempty"`
 
-	// 经过URL转译后routing_key
+	// **参数解释**： 经过URL转译后routing_key。 **取值范围**： 不涉及。
 	PropertiesKey *string `json:"properties_key,omitempty"`
 }
 
