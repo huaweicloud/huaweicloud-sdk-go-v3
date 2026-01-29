@@ -13,10 +13,10 @@ type PutDisk struct {
 	NeedMigration *bool `json:"need_migration,omitempty"`
 
 	// 磁盘ID
-	Id string `json:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 调整大小
-	AdjustSize int64 `json:"adjust_size"`
+	AdjustSize *int64 `json:"adjust_size,omitempty"`
 
 	// 修改的卷信息
 	PhysicalVolumes *[]PutVolume `json:"physical_volumes,omitempty"`

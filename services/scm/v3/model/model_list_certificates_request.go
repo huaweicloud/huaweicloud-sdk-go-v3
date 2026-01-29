@@ -35,6 +35,9 @@ type ListCertificatesRequest struct {
 
 	// 证书在有效期内及最多过期xx天。
 	ExpiredDaysSince *int32 `json:"expired_days_since,omitempty"`
+
+	// 证书名称、域名搜索关键词
+	Content *string `json:"content,omitempty"`
 }
 
 func (o ListCertificatesRequest) String() string {

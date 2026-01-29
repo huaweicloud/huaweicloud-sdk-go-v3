@@ -12,8 +12,7 @@ type ListIpdProjectIssuesResponse struct {
 	// 返回信息
 	Message *string `json:"message,omitempty"`
 
-	// 返回对象
-	Result *interface{} `json:"result,omitempty"`
+	Result *IssueListResult `json:"result,omitempty"`
 
 	// 返回状态
 	Status         *string `json:"status,omitempty"`

@@ -20,6 +20,12 @@ type IndicatorDataObjectDetailDataSource struct {
 
 	// 区域ID
 	RegionId *string `json:"region_id,omitempty"`
+
+	// 数据源产品名称
+	ProductName *string `json:"product_name,omitempty"`
+
+	// 数据源产品特性
+	ProductFeature *string `json:"product_feature,omitempty"`
 }
 
 func (o IndicatorDataObjectDetailDataSource) String() string {

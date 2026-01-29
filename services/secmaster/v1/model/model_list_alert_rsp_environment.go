@@ -1,0 +1,35 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// ListAlertRspEnvironment 告警产生的环境坐标信息
+type ListAlertRspEnvironment struct {
+
+	// 环境供应商
+	VendorType *string `json:"vendor_type,omitempty"`
+
+	// 租户id
+	DomainId *string `json:"domain_id,omitempty"`
+
+	// 区域id，全局服务global
+	RegionId *string `json:"region_id,omitempty"`
+
+	// 数据投递前的源工作空间id，在源空间下值为null，投递后为被委托用户的id
+	CrossWorkspaceId *string `json:"cross_workspace_id,omitempty"`
+
+	// 项目id， 全局服务默认null
+	ProjectId *string `json:"project_id,omitempty"`
+}
+
+func (o ListAlertRspEnvironment) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "ListAlertRspEnvironment struct{}"
+	}
+
+	return strings.Join([]string{"ListAlertRspEnvironment", string(data)}, " ")
+}

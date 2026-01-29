@@ -10,7 +10,7 @@ import (
 type ShowConsistencyResultResponse struct {
 
 	// 一致性校验结果列表
-	ResultList *[]ConsistencyResultRequestBodyResultList `json:"result_list,omitempty"`
+	ResultList *[]string `json:"result_list,omitempty"`
 
 	// 任务id
 	TaskId         *string `json:"task_id,omitempty"`

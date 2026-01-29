@@ -267,10 +267,6 @@ func GenReqDefForListErrorServers() *def.HttpRequestDef {
 		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Migproject").
-		WithJsonTag("migproject").
-		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnterpriseProjectId").
 		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
@@ -323,6 +319,10 @@ func GenReqDefForListServers() *def.HttpRequestDef {
 		WithJsonTag("ip").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Ipv6").
+		WithJsonTag("ipv6").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Migproject").
 		WithJsonTag("migproject").
 		WithLocationType(def.Query))
@@ -349,6 +349,10 @@ func GenReqDefForListServers() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("IsConsistencyResultExist").
 		WithJsonTag("is_consistency_result_exist").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("VmId").
+		WithJsonTag("vm_id").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -421,6 +425,10 @@ func GenReqDefForListTemplates() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
 		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

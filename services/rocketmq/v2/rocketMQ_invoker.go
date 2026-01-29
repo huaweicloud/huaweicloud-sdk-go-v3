@@ -53,22 +53,6 @@ func (i *BatchDeleteDiagnosisRecordsForRocketMqInvoker) Invoke() (*model.BatchDe
 	}
 }
 
-type BatchDeleteDiagnosisReportInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchDeleteDiagnosisReportInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchDeleteDiagnosisReportInvoker) Invoke() (*model.BatchDeleteDiagnosisReportResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchDeleteDiagnosisReportResponse), nil
-	}
-}
-
 type BatchDeleteInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -98,22 +82,6 @@ func (i *BatchDeleteRocketMqMigrationTaskInvoker) Invoke() (*model.BatchDeleteRo
 		return nil, err
 	} else {
 		return result.(*model.BatchDeleteRocketMqMigrationTaskResponse), nil
-	}
-}
-
-type BatchResetRocketMqMessageOffsetsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchResetRocketMqMessageOffsetsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchResetRocketMqMessageOffsetsInvoker) Invoke() (*model.BatchResetRocketMqMessageOffsetsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchResetRocketMqMessageOffsetsResponse), nil
 	}
 }
 
@@ -309,22 +277,6 @@ func (i *DeleteInstanceInvoker) Invoke() (*model.DeleteInstanceResponse, error) 
 	}
 }
 
-type DeleteRocketMqMigrationTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteRocketMqMigrationTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteRocketMqMigrationTaskInvoker) Invoke() (*model.DeleteRocketMqMigrationTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteRocketMqMigrationTaskResponse), nil
-	}
-}
-
 type DeleteScheduledTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -370,22 +322,6 @@ func (i *EnableDnsInvoker) Invoke() (*model.EnableDnsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.EnableDnsResponse), nil
-	}
-}
-
-type ExportDlqMessageInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ExportDlqMessageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ExportDlqMessageInvoker) Invoke() (*model.ExportDlqMessageResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ExportDlqMessageResponse), nil
 	}
 }
 
@@ -1218,22 +1154,6 @@ func (i *ShowRocketmqTagsInvoker) Invoke() (*model.ShowRocketmqTagsResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowRocketmqTagsResponse), nil
-	}
-}
-
-type ShowUpgradeInstanceVersionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowUpgradeInstanceVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowUpgradeInstanceVersionInvoker) Invoke() (*model.ShowUpgradeInstanceVersionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowUpgradeInstanceVersionResponse), nil
 	}
 }
 

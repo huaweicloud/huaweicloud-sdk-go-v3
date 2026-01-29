@@ -82,27 +82,6 @@ func (c *RocketMQClient) BatchDeleteDiagnosisRecordsForRocketMqInvoker(request *
 	return &BatchDeleteDiagnosisRecordsForRocketMqInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchDeleteDiagnosisReport 批量删除实例诊断记录
-//
-// 批量删除实例诊断记录。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *RocketMQClient) BatchDeleteDiagnosisReport(request *model.BatchDeleteDiagnosisReportRequest) (*model.BatchDeleteDiagnosisReportResponse, error) {
-	requestDef := GenReqDefForBatchDeleteDiagnosisReport()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchDeleteDiagnosisReportResponse), nil
-	}
-}
-
-// BatchDeleteDiagnosisReportInvoker 批量删除实例诊断记录
-func (c *RocketMQClient) BatchDeleteDiagnosisReportInvoker(request *model.BatchDeleteDiagnosisReportRequest) *BatchDeleteDiagnosisReportInvoker {
-	requestDef := GenReqDefForBatchDeleteDiagnosisReport()
-	return &BatchDeleteDiagnosisReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // BatchDeleteInstances 批量删除实例
 //
 // 批量删除实例。**实例删除后，实例中原有的数据将被删除，且没有备份，请谨慎操作。**
@@ -143,27 +122,6 @@ func (c *RocketMQClient) BatchDeleteRocketMqMigrationTask(request *model.BatchDe
 func (c *RocketMQClient) BatchDeleteRocketMqMigrationTaskInvoker(request *model.BatchDeleteRocketMqMigrationTaskRequest) *BatchDeleteRocketMqMigrationTaskInvoker {
 	requestDef := GenReqDefForBatchDeleteRocketMqMigrationTask()
 	return &BatchDeleteRocketMqMigrationTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// BatchResetRocketMqMessageOffsets 批量重置消费进度
-//
-// 批量重置消费进度。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *RocketMQClient) BatchResetRocketMqMessageOffsets(request *model.BatchResetRocketMqMessageOffsetsRequest) (*model.BatchResetRocketMqMessageOffsetsResponse, error) {
-	requestDef := GenReqDefForBatchResetRocketMqMessageOffsets()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchResetRocketMqMessageOffsetsResponse), nil
-	}
-}
-
-// BatchResetRocketMqMessageOffsetsInvoker 批量重置消费进度
-func (c *RocketMQClient) BatchResetRocketMqMessageOffsetsInvoker(request *model.BatchResetRocketMqMessageOffsetsRequest) *BatchResetRocketMqMessageOffsetsInvoker {
-	requestDef := GenReqDefForBatchResetRocketMqMessageOffsets()
-	return &BatchResetRocketMqMessageOffsetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchUpdateConsumerGroup 批量修改消费组
@@ -418,27 +376,6 @@ func (c *RocketMQClient) DeleteInstanceInvoker(request *model.DeleteInstanceRequ
 	return &DeleteInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteRocketMqMigrationTask 删除元数据迁移任务
-//
-// 删除元数据迁移任务。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *RocketMQClient) DeleteRocketMqMigrationTask(request *model.DeleteRocketMqMigrationTaskRequest) (*model.DeleteRocketMqMigrationTaskResponse, error) {
-	requestDef := GenReqDefForDeleteRocketMqMigrationTask()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteRocketMqMigrationTaskResponse), nil
-	}
-}
-
-// DeleteRocketMqMigrationTaskInvoker 删除元数据迁移任务
-func (c *RocketMQClient) DeleteRocketMqMigrationTaskInvoker(request *model.DeleteRocketMqMigrationTaskRequest) *DeleteRocketMqMigrationTaskInvoker {
-	requestDef := GenReqDefForDeleteRocketMqMigrationTask()
-	return &DeleteRocketMqMigrationTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // DeleteScheduledTask 删除定时任务管理中的指定记录
 //
 // 删除定时任务管理中的指定记录。
@@ -500,27 +437,6 @@ func (c *RocketMQClient) EnableDns(request *model.EnableDnsRequest) (*model.Enab
 func (c *RocketMQClient) EnableDnsInvoker(request *model.EnableDnsRequest) *EnableDnsInvoker {
 	requestDef := GenReqDefForEnableDns()
 	return &EnableDnsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ExportDlqMessage 导出死信消息
-//
-// 导出死信消息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *RocketMQClient) ExportDlqMessage(request *model.ExportDlqMessageRequest) (*model.ExportDlqMessageResponse, error) {
-	requestDef := GenReqDefForExportDlqMessage()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ExportDlqMessageResponse), nil
-	}
-}
-
-// ExportDlqMessageInvoker 导出死信消息
-func (c *RocketMQClient) ExportDlqMessageInvoker(request *model.ExportDlqMessageRequest) *ExportDlqMessageInvoker {
-	requestDef := GenReqDefForExportDlqMessage()
-	return &ExportDlqMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAvailableZones 查询可用区信息
@@ -1223,7 +1139,7 @@ func (c *RocketMQClient) ShowCesHierarchyInvoker(request *model.ShowCesHierarchy
 
 // ShowConsumerConnections 查询消费者列表
 //
-// 查询消费组内消费者列表
+// 查询消费组内消费者列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *RocketMQClient) ShowConsumerConnections(request *model.ShowConsumerConnectionsRequest) (*model.ShowConsumerConnectionsResponse, error) {
@@ -1618,27 +1534,6 @@ func (c *RocketMQClient) ShowRocketmqTags(request *model.ShowRocketmqTagsRequest
 func (c *RocketMQClient) ShowRocketmqTagsInvoker(request *model.ShowRocketmqTagsRequest) *ShowRocketmqTagsInvoker {
 	requestDef := GenReqDefForShowRocketmqTags()
 	return &ShowRocketmqTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowUpgradeInstanceVersion 查询RocketMQ实例版本信息
-//
-// 查询RocketMQ实例版本信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *RocketMQClient) ShowUpgradeInstanceVersion(request *model.ShowUpgradeInstanceVersionRequest) (*model.ShowUpgradeInstanceVersionResponse, error) {
-	requestDef := GenReqDefForShowUpgradeInstanceVersion()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowUpgradeInstanceVersionResponse), nil
-	}
-}
-
-// ShowUpgradeInstanceVersionInvoker 查询RocketMQ实例版本信息
-func (c *RocketMQClient) ShowUpgradeInstanceVersionInvoker(request *model.ShowUpgradeInstanceVersionRequest) *ShowUpgradeInstanceVersionInvoker {
-	requestDef := GenReqDefForShowUpgradeInstanceVersion()
-	return &ShowUpgradeInstanceVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowUser 查询用户详情

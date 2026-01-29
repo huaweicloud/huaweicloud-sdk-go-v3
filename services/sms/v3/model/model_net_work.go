@@ -10,24 +10,24 @@ import (
 type NetWork struct {
 
 	// 网卡的名称
-	Name string `json:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 该网卡绑定的IP
-	Ip string `json:"ip"`
+	Ip *string `json:"ip,omitempty"`
 
 	// IPv6地址
 	Ipv6 *string `json:"ipv6,omitempty"`
 
 	// 掩码
-	Netmask string `json:"netmask"`
+	Netmask *string `json:"netmask,omitempty"`
 
 	// 网关
-	Gateway string `json:"gateway"`
+	Gateway *string `json:"gateway,omitempty"`
 
 	// Linux必选，网卡的MTU
 	Mtu *int32 `json:"mtu,omitempty"`
 
-	// Mac地址
+	// 列表中第一个Mac地址必须非空
 	Mac string `json:"mac"`
 
 	// 数据库ID

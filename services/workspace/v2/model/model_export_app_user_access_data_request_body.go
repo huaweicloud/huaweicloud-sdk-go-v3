@@ -12,7 +12,7 @@ type ExportAppUserAccessDataRequestBody struct {
 	// 查询起始时间，格式为：UTC格式，例如\"2022-05-11T11:45:42Z\"。
 	StartTime string `json:"start_time"`
 
-	// 查询截至时间，格式为：UTC格式，例如\"2022-05-11T11:45:42Z\"。
+	// 查询截止时间，格式为：UTC格式，例如\"2022-05-11T11:45:42Z\"。
 	EndTime string `json:"end_time"`
 
 	// 用户名(模糊匹配)。

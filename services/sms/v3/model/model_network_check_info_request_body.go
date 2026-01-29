@@ -14,22 +14,22 @@ type NetworkCheckInfoRequestBody struct {
 	// 目的端连通性
 	DestinationConnectivity *bool `json:"destination_connectivity,omitempty"`
 
-	// 网络时延
+	// 网络时延（ms）
 	NetworkDelay float64 `json:"network_delay"`
 
-	// 网络抖动
+	// 网络抖动（ms）
 	NetworkJitter float64 `json:"network_jitter"`
 
-	// 带宽
+	// 带宽速率（Mbit/s）
 	MigrationSpeed float64 `json:"migration_speed"`
 
-	// 丢包
+	// 丢包率（%）
 	LossPercentage float64 `json:"loss_percentage"`
 
-	// CPU占用
+	// CPU占用率（%）
 	CpuUsage float64 `json:"cpu_usage"`
 
-	// 内存占用
+	// 内存占用率（%）
 	MemUsage float64 `json:"mem_usage"`
 
 	// 评估结果

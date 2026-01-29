@@ -9,7 +9,7 @@ import (
 // ExportConsistencyResultsRequest Request Object
 type ExportConsistencyResultsRequest struct {
 
-	// 中英文选择
+	// 中英文选择。当前仅支持英文。
 	XLanguage *string `json:"X-Language,omitempty"`
 
 	Body *BatchGetConsistencyResultReq `json:"body,omitempty"`

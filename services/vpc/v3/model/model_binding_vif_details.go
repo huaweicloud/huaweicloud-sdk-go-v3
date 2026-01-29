@@ -18,7 +18,7 @@ type BindingVifDetails struct {
 	OvsHybridPlug *bool `json:"ovs_hybrid_plug,omitempty"`
 
 	// **参数解释**： 辅助弹性网卡的vlan ID。 **取值范围**： 不涉及。
-	VlanId *string `json:"vlan_id,omitempty"`
+	VlanId *int32 `json:"vlan_id,omitempty"`
 
 	// **参数解释**： 辅助弹性网卡的宿主网卡ID。 **取值范围**： 不涉及。
 	ParentId *string `json:"parent_id,omitempty"`

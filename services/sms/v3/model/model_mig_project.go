@@ -12,11 +12,8 @@ import (
 // MigProject SMS迁移项目信息
 type MigProject struct {
 
-	// 迁移项目ID
-	Id *string `json:"id,omitempty"`
-
-	// 迁移项目名称
-	Name string `json:"name"`
+	// 迁移项目名称，只能由中文字符、英文字母、数字、下划线、短横线组成
+	Name *string `json:"name,omitempty"`
 
 	// 迁移项目描述
 	Description *string `json:"description,omitempty"`
@@ -25,7 +22,7 @@ type MigProject struct {
 	Isdefault *bool `json:"isdefault,omitempty"`
 
 	// 区域名称
-	Region string `json:"region"`
+	Region *string `json:"region,omitempty"`
 
 	// 迁移后是否启动目的端虚拟机
 	StartTargetServer *bool `json:"start_target_server,omitempty"`
@@ -34,19 +31,19 @@ type MigProject struct {
 	SpeedLimit *int32 `json:"speed_limit,omitempty"`
 
 	// 是否使用公网IP迁移
-	UsePublicIp bool `json:"use_public_ip"`
+	UsePublicIp *bool `json:"use_public_ip,omitempty"`
 
 	// 是否是已经存在的服务器
-	ExistServer bool `json:"exist_server"`
+	ExistServer *bool `json:"exist_server,omitempty"`
 
 	// 迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
-	Type MigProjectType `json:"type"`
+	Type *MigProjectType `json:"type,omitempty"`
 
 	// 企业项目名称
 	EnterpriseProject *string `json:"enterprise_project,omitempty"`
 
 	// 首次复制或者同步后 是否继续持续同步
-	Syncing bool `json:"syncing"`
+	Syncing *bool `json:"syncing,omitempty"`
 
 	// 是否启动网络质量检测
 	StartNetworkCheck *bool `json:"start_network_check,omitempty"`

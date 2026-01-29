@@ -12,10 +12,10 @@ type CreateWorkspaceRequestBody struct {
 	// 区域id
 	RegionId string `json:"region_id"`
 
-	// 企业项目id
+	// enterprise project id
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 企业项目名称
+	// enterprise project name
 	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
 
 	// 视图绑定的空间id

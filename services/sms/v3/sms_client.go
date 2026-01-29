@@ -736,6 +736,7 @@ func (c *SmsClient) UpdateConsistencyResultInvoker(request *model.UpdateConsiste
 // UpdateCopyState 更新任务对应源端复制状态
 //
 // 更新任务对应源端复制状态。
+// 在以下情况下不校验请求参数且更新不会生效：“迁移服务器”列表中“实时状态”一栏为“校验失败”、“暂停中”、“已暂停”、“删除中”、“迁移已完成”、“资源清理中”、“资源清理失败”时。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmsClient) UpdateCopyState(request *model.UpdateCopyStateRequest) (*model.UpdateCopyStateResponse, error) {
@@ -778,6 +779,7 @@ func (c *SmsClient) UpdateDefaultMigprojectInvoker(request *model.UpdateDefaultM
 // UpdateDiskInfo 更新磁盘信息
 //
 // 更新服务器的磁盘信息，此接口会把服务器原有磁盘信息清空，然后更新成新磁盘信息。
+// 接口仅在“待设置目的端”才能生效，开始迁移后更改磁盘信息不生效。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmsClient) UpdateDiskInfo(request *model.UpdateDiskInfoRequest) (*model.UpdateDiskInfoResponse, error) {
@@ -925,7 +927,7 @@ func (c *SmsClient) UpdateTaskSpeedInvoker(request *model.UpdateTaskSpeedRequest
 
 // UpdateTaskStatus 管理迁移任务
 //
-// 管理迁移任务，包括启动任务，暂停任务，同步任务，日志上传，回滚失败迁移任务，删除快照资源。
+// 管理迁移任务，包括启动任务，暂停任务，同步任务，日志上传，删除快照资源等。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmsClient) UpdateTaskStatus(request *model.UpdateTaskStatusRequest) (*model.UpdateTaskStatusResponse, error) {
@@ -1032,7 +1034,7 @@ func (c *SmsClient) CheckNetAclInvoker(request *model.CheckNetAclRequest) *Check
 
 // ListApiVersion 查询主机迁移服务的API版本信息
 //
-// 查询主机迁移服务的API版本信息。
+// 查询主机迁移服务的API版本信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SmsClient) ListApiVersion(request *model.ListApiVersionRequest) (*model.ListApiVersionResponse, error) {

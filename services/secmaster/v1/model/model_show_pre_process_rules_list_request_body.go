@@ -14,10 +14,10 @@ type ShowPreProcessRulesListRequestBody struct {
 	MapperIds *[]string `json:"mapper_ids,omitempty"`
 
 	// 名称
-	Name string `json:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 映射id
-	MappingId *string `json:"mapping_id,omitempty"`
+	MappingId string `json:"mapping_id"`
 
 	// 创建开始时间
 	StartTime *sdktime.SdkTime `json:"start_time,omitempty"`

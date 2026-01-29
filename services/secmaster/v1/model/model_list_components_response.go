@@ -28,8 +28,11 @@ type ListComponentsResponse struct {
 	Success *bool `json:"success,omitempty"`
 
 	// **参数解释**: 请求id **约束限制**: 不涉及
-	RequestId      *string `json:"request_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	RequestId *string `json:"request_id,omitempty"`
+
+	// 列表
+	Data           *[]ComponentInfo `json:"data,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o ListComponentsResponse) String() string {

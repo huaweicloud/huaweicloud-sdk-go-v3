@@ -39,6 +39,12 @@ type DpeInfo struct {
 	// 关联实例数
 	InstanceNum *string `json:"instance_num,omitempty"`
 
+	// 是否内置数据
+	BuiltIn *string `json:"built_in,omitempty"`
+
+	// 数据源
+	DataSource *string `json:"data_source,omitempty"`
+
 	// 描述信息
 	Description *string `json:"description,omitempty"`
 

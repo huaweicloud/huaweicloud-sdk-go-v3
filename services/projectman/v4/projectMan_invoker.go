@@ -485,6 +485,38 @@ func (i *CreateIpdProjectIssueAttachmentInvoker) Invoke() (*model.CreateIpdProje
 	}
 }
 
+type DeleteIpdImageInIssueInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteIpdImageInIssueInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteIpdImageInIssueInvoker) Invoke() (*model.DeleteIpdImageInIssueResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteIpdImageInIssueResponse), nil
+	}
+}
+
+type DownloadIpdImageInIssueInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadIpdImageInIssueInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadIpdImageInIssueInvoker) Invoke() (*model.DownloadIpdImageInIssueResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadIpdImageInIssueResponse), nil
+	}
+}
+
 type ListIpdProjectIssuesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -594,6 +626,22 @@ func (i *TransferWorkItemFlowInvoker) Invoke() (*model.TransferWorkItemFlowRespo
 		return nil, err
 	} else {
 		return result.(*model.TransferWorkItemFlowResponse), nil
+	}
+}
+
+type UploadIpdImageInIssueInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadIpdImageInIssueInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UploadIpdImageInIssueInvoker) Invoke() (*model.UploadIpdImageInIssueResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadIpdImageInIssueResponse), nil
 	}
 }
 

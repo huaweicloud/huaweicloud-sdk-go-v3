@@ -20,7 +20,7 @@ type UploadAttachmentRequestBody struct {
 	// 固定枚举，当前仅支持user_task/用户任务
 	FileType *def.MultiPart `json:"fileType,omitempty"`
 
-	// 导入的流程文件
+	// 上传的附件
 	UploadFile *def.FilePart `json:"uploadFile"`
 }
 

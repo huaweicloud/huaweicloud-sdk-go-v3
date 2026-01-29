@@ -69,6 +69,22 @@ func (i *CreateCodeSegmentInvoker) Invoke() (*model.CreateCodeSegmentResponse, e
 	}
 }
 
+type CreateCollectConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCollectConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateCollectConfigInvoker) Invoke() (*model.CreateCollectConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCollectConfigResponse), nil
+	}
+}
+
 type CreateCustomizedCheckitemInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -162,6 +178,22 @@ func (i *CreateRetrieveScriptInvoker) Invoke() (*model.CreateRetrieveScriptRespo
 		return nil, err
 	} else {
 		return result.(*model.CreateRetrieveScriptResponse), nil
+	}
+}
+
+type CreateSqlRenderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSqlRenderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSqlRenderInvoker) Invoke() (*model.CreateSqlRenderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSqlRenderResponse), nil
 	}
 }
 
@@ -562,6 +594,22 @@ func (i *ListCodeSegmentsInvoker) Invoke() (*model.ListCodeSegmentsResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListCodeSegmentsResponse), nil
+	}
+}
+
+type ListCollectConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCollectConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCollectConfigInvoker) Invoke() (*model.ListCollectConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCollectConfigResponse), nil
 	}
 }
 

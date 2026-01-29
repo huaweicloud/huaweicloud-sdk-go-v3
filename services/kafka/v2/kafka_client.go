@@ -382,27 +382,6 @@ func (c *KafkaClient) CreatePartitionInvoker(request *model.CreatePartitionReque
 	return &CreatePartitionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePostPaidInstance 创建实例
-//
-// 创建按需计费类型的Kafka实例。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) CreatePostPaidInstance(request *model.CreatePostPaidInstanceRequest) (*model.CreatePostPaidInstanceResponse, error) {
-	requestDef := GenReqDefForCreatePostPaidInstance()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreatePostPaidInstanceResponse), nil
-	}
-}
-
-// CreatePostPaidInstanceInvoker 创建实例
-func (c *KafkaClient) CreatePostPaidInstanceInvoker(request *model.CreatePostPaidInstanceRequest) *CreatePostPaidInstanceInvoker {
-	requestDef := GenReqDefForCreatePostPaidInstance()
-	return &CreatePostPaidInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreatePostPaidKafkaInstance 创建Kafka实例
 //
 // 创建实例。
@@ -424,27 +403,6 @@ func (c *KafkaClient) CreatePostPaidKafkaInstance(request *model.CreatePostPaidK
 func (c *KafkaClient) CreatePostPaidKafkaInstanceInvoker(request *model.CreatePostPaidKafkaInstanceRequest) *CreatePostPaidKafkaInstanceInvoker {
 	requestDef := GenReqDefForCreatePostPaidKafkaInstance()
 	return &CreatePostPaidKafkaInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateReassignmentTask Kafka实例开始分区平衡任务
-//
-// 该接口用于向Kafka实例提交分区平衡任务或计算分区平衡预估时间。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) CreateReassignmentTask(request *model.CreateReassignmentTaskRequest) (*model.CreateReassignmentTaskResponse, error) {
-	requestDef := GenReqDefForCreateReassignmentTask()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateReassignmentTaskResponse), nil
-	}
-}
-
-// CreateReassignmentTaskInvoker Kafka实例开始分区平衡任务
-func (c *KafkaClient) CreateReassignmentTaskInvoker(request *model.CreateReassignmentTaskRequest) *CreateReassignmentTaskInvoker {
-	requestDef := GenReqDefForCreateReassignmentTask()
-	return &CreateReassignmentTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteBackgroundTask 删除后台任务管理中的指定记录
@@ -552,27 +510,6 @@ func (c *KafkaClient) DeleteInstanceConsumerGroup(request *model.DeleteInstanceC
 func (c *KafkaClient) DeleteInstanceConsumerGroupInvoker(request *model.DeleteInstanceConsumerGroupRequest) *DeleteInstanceConsumerGroupInvoker {
 	requestDef := GenReqDefForDeleteInstanceConsumerGroup()
 	return &DeleteInstanceConsumerGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteKafkaMessage Kafka删除消息
-//
-// Kafka删除消息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) DeleteKafkaMessage(request *model.DeleteKafkaMessageRequest) (*model.DeleteKafkaMessageResponse, error) {
-	requestDef := GenReqDefForDeleteKafkaMessage()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteKafkaMessageResponse), nil
-	}
-}
-
-// DeleteKafkaMessageInvoker Kafka删除消息
-func (c *KafkaClient) DeleteKafkaMessageInvoker(request *model.DeleteKafkaMessageRequest) *DeleteKafkaMessageInvoker {
-	requestDef := GenReqDefForDeleteKafkaMessage()
-	return &DeleteKafkaMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteKafkaTopicMessages 删除Kafka消息
@@ -932,33 +869,6 @@ func (c *KafkaClient) ListMessageDiagnosisReportsInvoker(request *model.ListMess
 	return &ListMessageDiagnosisReportsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListProducts 查询产品规格列表
-//
-// 在创建kafka实例时，需要配置订购的产品ID（即product_id），可通过该接口查询产品规格。
-//
-// 例如，要订购按需计费、基准带宽为100MB的kafka实例，可从接口响应消息中，查找Hourly的消息体，然后找到bandwidth为100MB的记录对应的product_id，该product_id的值即是创建上述kafka实例时需要配置的产品ID。
-//
-// 同时，unavailable_zones字段表示资源不足的可用区列表，如果为空，则表示所有可用区都有资源，如果不为空，则表示字段值的可用区没有资源。所以必须确保您购买的资源所在的可用区有资源，不在该字段列表内。
-//
-// [例如，响应消息中bandwidth字段为1200MB的记录，unavailable_zones字段包含cn-east-2b、cn-east-2a和cn-east-2d，表示在华东-上海2的可用区1、可用区2、可用区3都没有该资源。](tag:hws)
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) ListProducts(request *model.ListProductsRequest) (*model.ListProductsResponse, error) {
-	requestDef := GenReqDefForListProducts()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListProductsResponse), nil
-	}
-}
-
-// ListProductsInvoker 查询产品规格列表
-func (c *KafkaClient) ListProductsInvoker(request *model.ListProductsRequest) *ListProductsInvoker {
-	requestDef := GenReqDefForListProducts()
-	return &ListProductsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ListScheduledTasks 查询实例的定时任务列表
 //
 // 查询实例的定时任务列表。
@@ -1020,29 +930,6 @@ func (c *KafkaClient) ListTopicProducers(request *model.ListTopicProducersReques
 func (c *KafkaClient) ListTopicProducersInvoker(request *model.ListTopicProducersRequest) *ListTopicProducersInvoker {
 	requestDef := GenReqDefForListTopicProducers()
 	return &ListTopicProducersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListUserPolicies 查询用户策略
-//
-// 查询用户策略。
-//
-// Kafka实例开启SASL功能后，才支持查询用户策略功能。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) ListUserPolicies(request *model.ListUserPoliciesRequest) (*model.ListUserPoliciesResponse, error) {
-	requestDef := GenReqDefForListUserPolicies()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListUserPoliciesResponse), nil
-	}
-}
-
-// ListUserPoliciesInvoker 查询用户策略
-func (c *KafkaClient) ListUserPoliciesInvoker(request *model.ListUserPoliciesRequest) *ListUserPoliciesInvoker {
-	requestDef := GenReqDefForListUserPolicies()
-	return &ListUserPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ModifyInstanceConfigs 修改实例配置
@@ -1238,48 +1125,6 @@ func (c *KafkaClient) ResetUserPasswrodInvoker(request *model.ResetUserPasswrodR
 	return &ResetUserPasswrodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ResizeEngineInstance 实例扩容
-//
-// 实例规格变更。[当前通过调用API，只支持按需实例进行实例扩容。](tag:hws,hws_hk,ctc,cmcc,hws_eu)
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) ResizeEngineInstance(request *model.ResizeEngineInstanceRequest) (*model.ResizeEngineInstanceResponse, error) {
-	requestDef := GenReqDefForResizeEngineInstance()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ResizeEngineInstanceResponse), nil
-	}
-}
-
-// ResizeEngineInstanceInvoker 实例扩容
-func (c *KafkaClient) ResizeEngineInstanceInvoker(request *model.ResizeEngineInstanceRequest) *ResizeEngineInstanceInvoker {
-	requestDef := GenReqDefForResizeEngineInstance()
-	return &ResizeEngineInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ResizeInstance 实例扩容
-//
-// 实例扩容。[当前通过调用API，只支持按需实例进行实例扩容。](tag:hws,hws_hk,ctc,cmcc,hws_eu)
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) ResizeInstance(request *model.ResizeInstanceRequest) (*model.ResizeInstanceResponse, error) {
-	requestDef := GenReqDefForResizeInstance()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ResizeInstanceResponse), nil
-	}
-}
-
-// ResizeInstanceInvoker 实例扩容
-func (c *KafkaClient) ResizeInstanceInvoker(request *model.ResizeInstanceRequest) *ResizeInstanceInvoker {
-	requestDef := GenReqDefForResizeInstance()
-	return &ResizeInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ResizeKafkaInstance 实例扩容
 //
 // 实例规格变更。[当前通过调用API，只支持按需实例进行实例扩容。](tag:hws,hws_hk,ctc,cmcc,hws_eu,ax)
@@ -1362,29 +1207,6 @@ func (c *KafkaClient) SendKafkaMessage(request *model.SendKafkaMessageRequest) (
 func (c *KafkaClient) SendKafkaMessageInvoker(request *model.SendKafkaMessageRequest) *SendKafkaMessageInvoker {
 	requestDef := GenReqDefForSendKafkaMessage()
 	return &SendKafkaMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// SetUserPolicies 创建/删除用户策略
-//
-// 创建/删除用户策略。
-//
-// Kafka实例开启SASL功能后，才支持创建/删除用户策略。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) SetUserPolicies(request *model.SetUserPoliciesRequest) (*model.SetUserPoliciesResponse, error) {
-	requestDef := GenReqDefForSetUserPolicies()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.SetUserPoliciesResponse), nil
-	}
-}
-
-// SetUserPoliciesInvoker 创建/删除用户策略
-func (c *KafkaClient) SetUserPoliciesInvoker(request *model.SetUserPoliciesRequest) *SetUserPoliciesInvoker {
-	requestDef := GenReqDefForSetUserPolicies()
-	return &SetUserPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowBackgroundTask 查询后台任务管理中的指定记录
@@ -1513,27 +1335,6 @@ func (c *KafkaClient) ShowDiagnosisPreCheckInvoker(request *model.ShowDiagnosisP
 	return &ShowDiagnosisPreCheckInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowEngineInstanceExtendProductInfo 查询实例的扩容规格列表
-//
-// 查询实例的扩容规格列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) ShowEngineInstanceExtendProductInfo(request *model.ShowEngineInstanceExtendProductInfoRequest) (*model.ShowEngineInstanceExtendProductInfoResponse, error) {
-	requestDef := GenReqDefForShowEngineInstanceExtendProductInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowEngineInstanceExtendProductInfoResponse), nil
-	}
-}
-
-// ShowEngineInstanceExtendProductInfoInvoker 查询实例的扩容规格列表
-func (c *KafkaClient) ShowEngineInstanceExtendProductInfoInvoker(request *model.ShowEngineInstanceExtendProductInfoRequest) *ShowEngineInstanceExtendProductInfoInvoker {
-	requestDef := GenReqDefForShowEngineInstanceExtendProductInfo()
-	return &ShowEngineInstanceExtendProductInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowGroup 查询指定消费组信息
 //
 // 查询指定消费组信息
@@ -1616,27 +1417,6 @@ func (c *KafkaClient) ShowInstanceConfigs(request *model.ShowInstanceConfigsRequ
 func (c *KafkaClient) ShowInstanceConfigsInvoker(request *model.ShowInstanceConfigsRequest) *ShowInstanceConfigsInvoker {
 	requestDef := GenReqDefForShowInstanceConfigs()
 	return &ShowInstanceConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowInstanceExtendProductInfo 查询实例的扩容规格列表
-//
-// 查询实例的扩容规格列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) ShowInstanceExtendProductInfo(request *model.ShowInstanceExtendProductInfoRequest) (*model.ShowInstanceExtendProductInfoResponse, error) {
-	requestDef := GenReqDefForShowInstanceExtendProductInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowInstanceExtendProductInfoResponse), nil
-	}
-}
-
-// ShowInstanceExtendProductInfoInvoker 查询实例的扩容规格列表
-func (c *KafkaClient) ShowInstanceExtendProductInfoInvoker(request *model.ShowInstanceExtendProductInfoRequest) *ShowInstanceExtendProductInfoInvoker {
-	requestDef := GenReqDefForShowInstanceExtendProductInfo()
-	return &ShowInstanceExtendProductInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowInstanceMessages 查询消息
@@ -2103,27 +1883,6 @@ func (c *KafkaClient) ShowRecycleInstances(request *model.ShowRecycleInstancesRe
 func (c *KafkaClient) ShowRecycleInstancesInvoker(request *model.ShowRecycleInstancesRequest) *ShowRecycleInstancesInvoker {
 	requestDef := GenReqDefForShowRecycleInstances()
 	return &ShowRecycleInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowSpecConvertProduct 查询旧规格升级新规格映射
-//
-// 查询旧规格实例可升级的新规格信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *KafkaClient) ShowSpecConvertProduct(request *model.ShowSpecConvertProductRequest) (*model.ShowSpecConvertProductResponse, error) {
-	requestDef := GenReqDefForShowSpecConvertProduct()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowSpecConvertProductResponse), nil
-	}
-}
-
-// ShowSpecConvertProductInvoker 查询旧规格升级新规格映射
-func (c *KafkaClient) ShowSpecConvertProductInvoker(request *model.ShowSpecConvertProductRequest) *ShowSpecConvertProductInvoker {
-	requestDef := GenReqDefForShowSpecConvertProduct()
-	return &ShowSpecConvertProductInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowTopicAccessPolicy 查询用户权限

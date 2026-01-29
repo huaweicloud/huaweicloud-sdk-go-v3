@@ -16,16 +16,16 @@ type TargetServer struct {
 	Id *string `json:"id,omitempty"`
 
 	// 服务器IP，注册源端时必选，更新非必选
-	Ip string `json:"ip"`
+	Ip *string `json:"ip,omitempty"`
 
 	// 用来区分不同服务器的名称
-	Name string `json:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 主机名，注册源端必选，更新非必选
 	Hostname *string `json:"hostname,omitempty"`
 
 	// 服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
-	OsType TargetServerOsType `json:"os_type"`
+	OsType *TargetServerOsType `json:"os_type,omitempty"`
 
 	// 操作系统版本，注册必选，更新非必选
 	OsVersion *string `json:"os_version,omitempty"`
@@ -82,7 +82,7 @@ type TargetServer struct {
 	Flavor *string `json:"flavor,omitempty"`
 
 	// 目的端磁盘信息，一般和源端保持一致
-	Disks []TargetDisk `json:"disks"`
+	Disks *[]TargetDisk `json:"disks,omitempty"`
 
 	// 目的端代理镜像磁盘ID
 	ImageDiskId *string `json:"image_disk_id,omitempty"`

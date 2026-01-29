@@ -32,6 +32,12 @@ type Scte35InfoItem struct {
 
 	// 广告信号全量信息。
 	RawSplice string `json:"raw_splice"`
+
+	// **参数解释**： 该广告信号对应的region类型，是主region，还是备region **取值范围**：  - master: 主region  - slave: 备region
+	RegionType *Scte35InfoItemRegionType `json:"region_type,omitempty"`
+
+	// **参数解释**： 该广告信号对应的region区域 **取值范围**： 华为云的region
+	Region *string `json:"region,omitempty"`
 }
 
 func (o Scte35InfoItem) String() string {
@@ -147,6 +153,53 @@ func (c Scte35InfoItemSegmentationType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *Scte35InfoItemSegmentationType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type Scte35InfoItemRegionType struct {
+	value string
+}
+
+type Scte35InfoItemRegionTypeEnum struct {
+	MASTER Scte35InfoItemRegionType
+	SLAVE  Scte35InfoItemRegionType
+}
+
+func GetScte35InfoItemRegionTypeEnum() Scte35InfoItemRegionTypeEnum {
+	return Scte35InfoItemRegionTypeEnum{
+		MASTER: Scte35InfoItemRegionType{
+			value: "master",
+		},
+		SLAVE: Scte35InfoItemRegionType{
+			value: "slave",
+		},
+	}
+}
+
+func (c Scte35InfoItemRegionType) Value() string {
+	return c.value
+}
+
+func (c Scte35InfoItemRegionType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *Scte35InfoItemRegionType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

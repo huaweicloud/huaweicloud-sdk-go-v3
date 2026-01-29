@@ -13,7 +13,7 @@ type DataObjectDetail struct {
 	CreateTime *string `json:"create_time,omitempty"`
 
 	// 数据对象
-	Dataobject *interface{} `json:"dataobject,omitempty"`
+	DataObject *interface{} `json:"data_object,omitempty"`
 
 	DataclassRef *AlertDetailDataclassRef `json:"dataclass_ref,omitempty"`
 

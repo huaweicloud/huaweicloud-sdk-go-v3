@@ -1240,6 +1240,27 @@ func (c *SecMasterClient) CreateRetryPolicyInvoker(request *model.CreateRetryPol
 	return &CreateRetryPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateSearchAnalysis 执行分析
+//
+// 执行分析
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) CreateSearchAnalysis(request *model.CreateSearchAnalysisRequest) (*model.CreateSearchAnalysisResponse, error) {
+	requestDef := GenReqDefForCreateSearchAnalysis()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSearchAnalysisResponse), nil
+	}
+}
+
+// CreateSearchAnalysisInvoker 执行分析
+func (c *SecMasterClient) CreateSearchAnalysisInvoker(request *model.CreateSearchAnalysisRequest) *CreateSearchAnalysisInvoker {
+	requestDef := GenReqDefForCreateSearchAnalysis()
+	return &CreateSearchAnalysisInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSearchCondition 创建检索条件
 //
 // 创建检索条件
@@ -1322,6 +1343,27 @@ func (c *SecMasterClient) CreateShipperDelegateAuth(request *model.CreateShipper
 func (c *SecMasterClient) CreateShipperDelegateAuthInvoker(request *model.CreateShipperDelegateAuthRequest) *CreateShipperDelegateAuthInvoker {
 	requestDef := GenReqDefForCreateShipperDelegateAuth()
 	return &CreateShipperDelegateAuthInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSubscriptionOrder 开通或配置安全云脑订阅
+//
+// 安全云脑开通与配置接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) CreateSubscriptionOrder(request *model.CreateSubscriptionOrderRequest) (*model.CreateSubscriptionOrderResponse, error) {
+	requestDef := GenReqDefForCreateSubscriptionOrder()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSubscriptionOrderResponse), nil
+	}
+}
+
+// CreateSubscriptionOrderInvoker 开通或配置安全云脑订阅
+func (c *SecMasterClient) CreateSubscriptionOrderInvoker(request *model.CreateSubscriptionOrderRequest) *CreateSubscriptionOrderInvoker {
+	requestDef := GenReqDefForCreateSubscriptionOrder()
+	return &CreateSubscriptionOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateWorkflowInstance 创建流程实例
@@ -1490,6 +1532,27 @@ func (c *SecMasterClient) DeleteCatalogue(request *model.DeleteCatalogueRequest)
 func (c *SecMasterClient) DeleteCatalogueInvoker(request *model.DeleteCatalogueRequest) *DeleteCatalogueInvoker {
 	requestDef := GenReqDefForDeleteCatalogue()
 	return &DeleteCatalogueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteClassifier 删除分类
+//
+// 删除分类
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) DeleteClassifier(request *model.DeleteClassifierRequest) (*model.DeleteClassifierResponse, error) {
+	requestDef := GenReqDefForDeleteClassifier()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteClassifierResponse), nil
+	}
+}
+
+// DeleteClassifierInvoker 删除分类
+func (c *SecMasterClient) DeleteClassifierInvoker(request *model.DeleteClassifierRequest) *DeleteClassifierInvoker {
+	requestDef := GenReqDefForDeleteClassifier()
+	return &DeleteClassifierInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteCollectorChannel 删除采集通道
@@ -2206,6 +2269,27 @@ func (c *SecMasterClient) DeleteSingleMapperInvoker(request *model.DeleteSingleM
 	return &DeleteSingleMapperInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteSubscriptionOrder 取消订阅资源
+//
+// 安全云脑退订服务接口，目前仅支持按需场景
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) DeleteSubscriptionOrder(request *model.DeleteSubscriptionOrderRequest) (*model.DeleteSubscriptionOrderResponse, error) {
+	requestDef := GenReqDefForDeleteSubscriptionOrder()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSubscriptionOrderResponse), nil
+	}
+}
+
+// DeleteSubscriptionOrderInvoker 取消订阅资源
+func (c *SecMasterClient) DeleteSubscriptionOrderInvoker(request *model.DeleteSubscriptionOrderRequest) *DeleteSubscriptionOrderInvoker {
+	requestDef := GenReqDefForDeleteSubscriptionOrder()
+	return &DeleteSubscriptionOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteTags 删除资源标签
 //
 // 为指定实例批量删除标签
@@ -2436,6 +2520,27 @@ func (c *SecMasterClient) EnableDataclassType(request *model.EnableDataclassType
 func (c *SecMasterClient) EnableDataclassTypeInvoker(request *model.EnableDataclassTypeRequest) *EnableDataclassTypeInvoker {
 	requestDef := GenReqDefForEnableDataclassType()
 	return &EnableDataclassTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteLayout 操作布局
+//
+// 操作布局
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) ExecuteLayout(request *model.ExecuteLayoutRequest) (*model.ExecuteLayoutResponse, error) {
+	requestDef := GenReqDefForExecuteLayout()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteLayoutResponse), nil
+	}
+}
+
+// ExecuteLayoutInvoker 操作布局
+func (c *SecMasterClient) ExecuteLayoutInvoker(request *model.ExecuteLayoutRequest) *ExecuteLayoutInvoker {
+	requestDef := GenReqDefForExecuteLayout()
+	return &ExecuteLayoutInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ExecuteReportAction 操作安全报告
@@ -3553,7 +3658,7 @@ func (c *SecMasterClient) ListDataobjectRelationsInvoker(request *model.ListData
 
 // ListDataobjects 列出所有数据对象
 //
-// 列出所有与数据对象
+// 列出所有数据对象
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) ListDataobjects(request *model.ListDataobjectsRequest) (*model.ListDataobjectsResponse, error) {
@@ -4288,6 +4393,48 @@ func (c *SecMasterClient) ListShippersInvoker(request *model.ListShippersRequest
 	return &ListShippersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSubscriptionGlobalOrder 查询已购资源清单
+//
+// 查询已购资源清单
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) ListSubscriptionGlobalOrder(request *model.ListSubscriptionGlobalOrderRequest) (*model.ListSubscriptionGlobalOrderResponse, error) {
+	requestDef := GenReqDefForListSubscriptionGlobalOrder()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSubscriptionGlobalOrderResponse), nil
+	}
+}
+
+// ListSubscriptionGlobalOrderInvoker 查询已购资源清单
+func (c *SecMasterClient) ListSubscriptionGlobalOrderInvoker(request *model.ListSubscriptionGlobalOrderRequest) *ListSubscriptionGlobalOrderInvoker {
+	requestDef := GenReqDefForListSubscriptionGlobalOrder()
+	return &ListSubscriptionGlobalOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSubscriptionOrder 查询租户订阅资源
+//
+// 查询租户版本信息，注意：目前其中参数purchase、usage、smn互斥，同时只能有一个请求参数被命中，优先级为：smn &gt; usage &gt; purchase
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) ListSubscriptionOrder(request *model.ListSubscriptionOrderRequest) (*model.ListSubscriptionOrderResponse, error) {
+	requestDef := GenReqDefForListSubscriptionOrder()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSubscriptionOrderResponse), nil
+	}
+}
+
+// ListSubscriptionOrderInvoker 查询租户订阅资源
+func (c *SecMasterClient) ListSubscriptionOrderInvoker(request *model.ListSubscriptionOrderRequest) *ListSubscriptionOrderInvoker {
+	requestDef := GenReqDefForListSubscriptionOrder()
+	return &ListSubscriptionOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSubscriptionProduct 查询当前站点支持的商品清单
 //
 // 查询当前站点SecMaster支持的商品清单
@@ -4307,6 +4454,27 @@ func (c *SecMasterClient) ListSubscriptionProduct(request *model.ListSubscriptio
 func (c *SecMasterClient) ListSubscriptionProductInvoker(request *model.ListSubscriptionProductRequest) *ListSubscriptionProductInvoker {
 	requestDef := GenReqDefForListSubscriptionProduct()
 	return &ListSubscriptionProductInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTasks 查询待办列表
+//
+// 查询待办列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) ListTasks(request *model.ListTasksRequest) (*model.ListTasksResponse, error) {
+	requestDef := GenReqDefForListTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTasksResponse), nil
+	}
+}
+
+// ListTasksInvoker 查询待办列表
+func (c *SecMasterClient) ListTasksInvoker(request *model.ListTasksRequest) *ListTasksInvoker {
+	requestDef := GenReqDefForListTasks()
+	return &ListTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListVpcEndpointService 列出VPC终端节点服务
@@ -5632,6 +5800,27 @@ func (c *SecMasterClient) ShowShipperParamInvoker(request *model.ShowShipperPara
 	return &ShowShipperParamInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowTask 查询待办的详情
+//
+// 查询待办的详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) ShowTask(request *model.ShowTaskRequest) (*model.ShowTaskResponse, error) {
+	requestDef := GenReqDefForShowTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTaskResponse), nil
+	}
+}
+
+// ShowTaskInvoker 查询待办的详情
+func (c *SecMasterClient) ShowTaskInvoker(request *model.ShowTaskRequest) *ShowTaskInvoker {
+	requestDef := GenReqDefForShowTask()
+	return &ShowTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowVulnerability 获取漏洞详情
 //
 // 获取漏洞详情
@@ -6031,6 +6220,27 @@ func (c *SecMasterClient) UpdateLayoutWizardsInvoker(request *model.UpdateLayout
 	return &UpdateLayoutWizardsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateMapper 修改单个映射
+//
+// 修改单个映射
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) UpdateMapper(request *model.UpdateMapperRequest) (*model.UpdateMapperResponse, error) {
+	requestDef := GenReqDefForUpdateMapper()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateMapperResponse), nil
+	}
+}
+
+// UpdateMapperInvoker 修改单个映射
+func (c *SecMasterClient) UpdateMapperInvoker(request *model.UpdateMapperRequest) *UpdateMapperInvoker {
+	requestDef := GenReqDefForUpdateMapper()
+	return &UpdateMapperInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateMappingInfoStatus 修分类映射启用禁用状态
 //
 // 修分类映射启用禁用状态
@@ -6304,6 +6514,27 @@ func (c *SecMasterClient) UpdateSearchConditionInvoker(request *model.UpdateSear
 	return &UpdateSearchConditionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateSubscriptionOrder 更新订购资源
+//
+// 更新订购资源
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) UpdateSubscriptionOrder(request *model.UpdateSubscriptionOrderRequest) (*model.UpdateSubscriptionOrderResponse, error) {
+	requestDef := GenReqDefForUpdateSubscriptionOrder()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSubscriptionOrderResponse), nil
+	}
+}
+
+// UpdateSubscriptionOrderInvoker 更新订购资源
+func (c *SecMasterClient) UpdateSubscriptionOrderInvoker(request *model.UpdateSubscriptionOrderRequest) *UpdateSubscriptionOrderInvoker {
+	requestDef := GenReqDefForUpdateSubscriptionOrder()
+	return &UpdateSubscriptionOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateTagValue 更新标签值
 //
 // 更新标签值
@@ -6325,6 +6556,27 @@ func (c *SecMasterClient) UpdateTagValueInvoker(request *model.UpdateTagValueReq
 	return &UpdateTagValueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateTask 更新待办的信息
+//
+// 更新待办的信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) UpdateTask(request *model.UpdateTaskRequest) (*model.UpdateTaskResponse, error) {
+	requestDef := GenReqDefForUpdateTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTaskResponse), nil
+	}
+}
+
+// UpdateTaskInvoker 更新待办的信息
+func (c *SecMasterClient) UpdateTaskInvoker(request *model.UpdateTaskRequest) *UpdateTaskInvoker {
+	requestDef := GenReqDefForUpdateTask()
+	return &UpdateTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateVpcEndpointService 更新VPC终端节点服务
 //
 // 更新VPC终端节点服务
@@ -6344,6 +6596,27 @@ func (c *SecMasterClient) UpdateVpcEndpointService(request *model.UpdateVpcEndpo
 func (c *SecMasterClient) UpdateVpcEndpointServiceInvoker(request *model.UpdateVpcEndpointServiceRequest) *UpdateVpcEndpointServiceInvoker {
 	requestDef := GenReqDefForUpdateVpcEndpointService()
 	return &UpdateVpcEndpointServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateWorkflowInstance 更新流程实例
+//
+// 更新流程实例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) UpdateWorkflowInstance(request *model.UpdateWorkflowInstanceRequest) (*model.UpdateWorkflowInstanceResponse, error) {
+	requestDef := GenReqDefForUpdateWorkflowInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateWorkflowInstanceResponse), nil
+	}
+}
+
+// UpdateWorkflowInstanceInvoker 更新流程实例
+func (c *SecMasterClient) UpdateWorkflowInstanceInvoker(request *model.UpdateWorkflowInstanceRequest) *UpdateWorkflowInstanceInvoker {
+	requestDef := GenReqDefForUpdateWorkflowInstance()
+	return &UpdateWorkflowInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateWorkspace 更新工作空间

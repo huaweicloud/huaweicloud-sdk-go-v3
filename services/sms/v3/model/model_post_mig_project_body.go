@@ -27,7 +27,7 @@ type PostMigProjectBody struct {
 	// 迁移后是否启动目的端虚拟机
 	StartTargetServer *bool `json:"start_target_server,omitempty"`
 
-	// 限制迁移速率，单位：Mbps
+	// 限制迁移速率，单位：Mbps。0表示不限速
 	SpeedLimit *int32 `json:"speed_limit,omitempty"`
 
 	// 是否使用公网IP迁移

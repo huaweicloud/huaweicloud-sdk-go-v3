@@ -9,7 +9,7 @@ import (
 // UpdateLogGroupParams 修改日志组的参数。
 type UpdateLogGroupParams struct {
 
-	// 日志存储时间 天。 取值范围为 [1, 30]
+	// 日志存储时间 天。 取值范围为 [1, 365]
 	TtlInDays int32 `json:"ttl_in_days"`
 
 	// 标签字段信息

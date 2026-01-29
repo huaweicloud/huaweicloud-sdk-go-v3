@@ -17,6 +17,12 @@ type ShowApplicableInstancesRequest struct {
 
 	// 查询个数上限值。   - 取值范围: 1~100。   - 不传该参数时，默认查询前100条信息。
 	Limit *int32 `json:"limit,omitempty"`
+
+	// **参数解释：** 实例名称，支持模糊搜索。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
+	InstanceName *string `json:"instance_name,omitempty"`
+
+	// **参数解释：** 实例ID，支持模糊搜索。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
+	InstanceId *string `json:"instance_id,omitempty"`
 }
 
 func (o ShowApplicableInstancesRequest) String() string {

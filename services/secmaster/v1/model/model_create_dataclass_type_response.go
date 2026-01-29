@@ -80,7 +80,10 @@ type CreateDataclassTypeResponse struct {
 
 	// 所属数据类业务编码
 	DataclassBusinessCode *string `json:"dataclass_business_code,omitempty"`
-	HttpStatusCode        int     `json:"-"`
+
+	// 类型分类下子类型数目
+	SubCount       *int32 `json:"sub_count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o CreateDataclassTypeResponse) String() string {

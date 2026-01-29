@@ -15,7 +15,7 @@ type ShowMetricResultResponseBodyResult struct {
 	// 指标查询结果内容表格
 	Datarows [][]interface{} `json:"datarows"`
 
-	// 生效的列, 当有该参数时，使用指定列作为指标数据结果
+	// 生效的列，当有该参数时，使用指定列作为指标数据结果
 	EffectiveColumn *string `json:"effective_column,omitempty"`
 }
 

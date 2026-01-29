@@ -12,7 +12,7 @@ type ExportUserUsageMetricNewRequest struct {
 	// 查询起始时间(0时区)。
 	StartTime string `json:"start_time"`
 
-	// 查询截至时间(0时区)。
+	// 查询截止时间(0时区)。
 	EndTime string `json:"end_time"`
 
 	// 用户名(模糊匹配)。

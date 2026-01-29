@@ -103,6 +103,27 @@ func (c *SecMasterClient) CreateCodeSegmentInvoker(request *model.CreateCodeSegm
 	return &CreateCodeSegmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateCollectConfig 保存云服务采集配置
+//
+// 保存云服务采集配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) CreateCollectConfig(request *model.CreateCollectConfigRequest) (*model.CreateCollectConfigResponse, error) {
+	requestDef := GenReqDefForCreateCollectConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCollectConfigResponse), nil
+	}
+}
+
+// CreateCollectConfigInvoker 保存云服务采集配置
+func (c *SecMasterClient) CreateCollectConfigInvoker(request *model.CreateCollectConfigRequest) *CreateCollectConfigInvoker {
+	requestDef := GenReqDefForCreateCollectConfig()
+	return &CreateCollectConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCustomizedCheckitem 新增自定义检查项
 //
 // 新增自定义检查项
@@ -227,6 +248,27 @@ func (c *SecMasterClient) CreateRetrieveScript(request *model.CreateRetrieveScri
 func (c *SecMasterClient) CreateRetrieveScriptInvoker(request *model.CreateRetrieveScriptRequest) *CreateRetrieveScriptInvoker {
 	requestDef := GenReqDefForCreateRetrieveScript()
 	return &CreateRetrieveScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSqlRender Adhoc sql参数渲染
+//
+// Adhoc sql参数渲染
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) CreateSqlRender(request *model.CreateSqlRenderRequest) (*model.CreateSqlRenderResponse, error) {
+	requestDef := GenReqDefForCreateSqlRender()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSqlRenderResponse), nil
+	}
+}
+
+// CreateSqlRenderInvoker Adhoc sql参数渲染
+func (c *SecMasterClient) CreateSqlRenderInvoker(request *model.CreateSqlRenderRequest) *CreateSqlRenderInvoker {
+	requestDef := GenReqDefForCreateSqlRender()
+	return &CreateSqlRenderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateTable 创建表
@@ -752,6 +794,27 @@ func (c *SecMasterClient) ListCodeSegments(request *model.ListCodeSegmentsReques
 func (c *SecMasterClient) ListCodeSegmentsInvoker(request *model.ListCodeSegmentsRequest) *ListCodeSegmentsInvoker {
 	requestDef := GenReqDefForListCodeSegments()
 	return &ListCodeSegmentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCollectConfig 获取云服务采集配置
+//
+// 获取云服务采集配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SecMasterClient) ListCollectConfig(request *model.ListCollectConfigRequest) (*model.ListCollectConfigResponse, error) {
+	requestDef := GenReqDefForListCollectConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCollectConfigResponse), nil
+	}
+}
+
+// ListCollectConfigInvoker 获取云服务采集配置
+func (c *SecMasterClient) ListCollectConfigInvoker(request *model.ListCollectConfigRequest) *ListCollectConfigInvoker {
+	requestDef := GenReqDefForListCollectConfig()
+	return &ListCollectConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDataTransformationMetrics 数据加工总览

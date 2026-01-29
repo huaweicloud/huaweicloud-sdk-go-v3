@@ -15,11 +15,11 @@ type ListRetrieveScriptsRequest struct {
 	// 表ID
 	TableId *string `json:"table_id,omitempty"`
 
-	// 脚本名称
-	ScriptName *string `json:"script_name,omitempty"`
-
 	// **参数解释：** 偏移量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Offset *int64 `json:"offset,omitempty"`
+
+	// 脚本名称
+	ScriptName *string `json:"script_name,omitempty"`
 
 	// **参数解释：** 查询数据限制 **取值范围：** 0-1000 **默认取值：** 不涉及
 	Limit *int64 `json:"limit,omitempty"`

@@ -12,7 +12,7 @@ type BatchDeleteIssuesV4Request struct {
 	// devcloud项目的32位id
 	ProjectId string `json:"project_id"`
 
-	Body *BatchDelelteIssuesRequestV4 `json:"body,omitempty"`
+	Body *BatchDeleteIssuesRequestV4 `json:"body,omitempty"`
 }
 
 func (o BatchDeleteIssuesV4Request) String() string {

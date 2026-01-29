@@ -21,6 +21,8 @@ type CesQueryRespQuery struct {
 	MedialiveConnect *CesDimsItem `json:"medialive_connect"`
 
 	MedialiveTailor *CesDimsItem `json:"medialive_tailor"`
+
+	Region *CesDimsItem `json:"region"`
 }
 
 func (o CesQueryRespQuery) String() string {

@@ -19,8 +19,10 @@ type ShowComponentResponse struct {
 	Success *bool `json:"success,omitempty"`
 
 	// **参数解释**: 请求id **约束限制**: 不涉及
-	RequestId      *string `json:"request_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	RequestId *string `json:"request_id,omitempty"`
+
+	Data           *ComponentInfo `json:"data,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ShowComponentResponse) String() string {

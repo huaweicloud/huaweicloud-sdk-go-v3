@@ -30,7 +30,10 @@ type DpeMappingDetail struct {
 	// 映射id
 	MapperTypeId *string `json:"mapper_type_id,omitempty"`
 
-	DpeInfo *DpeInfo `json:"dpe_info,omitempty"`
+	// 映射id
+	MappingId *string `json:"mapping_id,omitempty"`
+
+	MappingInfo *DpeInfo `json:"mapping_info,omitempty"`
 
 	// 创建时间
 	CreateTime *string `json:"create_time,omitempty"`

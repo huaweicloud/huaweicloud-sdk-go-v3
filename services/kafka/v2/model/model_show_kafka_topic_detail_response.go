@@ -9,9 +9,9 @@ import (
 // ShowKafkaTopicDetailResponse Response Object
 type ShowKafkaTopicDetailResponse struct {
 
-	// Topic详情。
-	Body           *[]ShowKafkaTopicDetailResponseBody `json:"body,omitempty"`
-	HttpStatusCode int                                 `json:"-"`
+	// 查询Kafka主题详情
+	Body           *[]KafkaTopicDetailEntity `json:"body,omitempty"`
+	HttpStatusCode int                       `json:"-"`
 }
 
 func (o ShowKafkaTopicDetailResponse) String() string {

@@ -58,6 +58,12 @@ type IndicatorDataObjectDetail struct {
 
 	// 置信度，取值范围是80-100
 	Confidence *int32 `json:"confidence,omitempty"`
+
+	// 标签
+	Labels *string `json:"labels,omitempty"`
+
+	// 是否失效
+	Defanged *bool `json:"defanged,omitempty"`
 }
 
 func (o IndicatorDataObjectDetail) String() string {

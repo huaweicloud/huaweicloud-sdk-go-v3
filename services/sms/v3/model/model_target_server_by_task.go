@@ -13,7 +13,7 @@ type TargetServerByTask struct {
 	BtrfsList *[]BtrfsFileSystem `json:"btrfs_list,omitempty"`
 
 	// 磁盘信息
-	Disks []TargetDisks `json:"disks"`
+	Disks *[]TargetDisks `json:"disks,omitempty"`
 
 	// 名称
 	Name string `json:"name"`

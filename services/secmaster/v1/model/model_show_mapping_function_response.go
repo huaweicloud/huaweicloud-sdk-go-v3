@@ -9,12 +9,15 @@ import (
 // ShowMappingFunctionResponse Response Object
 type ShowMappingFunctionResponse struct {
 
-	// 比较函数信息
-	CompareList *[]DpeCompareFunctionDetail `json:"compare_list,omitempty"`
+	// **参数解释**: 错误码 **取值范围**: 不涉及
+	Code *string `json:"code,omitempty"`
 
-	// 操作函数信息
-	OperationList  *[]DpeOperateFunctionDetail `json:"operation_list,omitempty"`
-	HttpStatusCode int                         `json:"-"`
+	// **参数解释**: 错误描述 **取值范围**: 不涉及
+	Message *string `json:"message,omitempty"`
+
+	// 分类映射函数数据
+	Data           *interface{} `json:"data,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ShowMappingFunctionResponse) String() string {

@@ -9,14 +9,14 @@ import (
 	"strings"
 )
 
-// PutCopyStateReq 源端复制状态
+// PutCopyStateReq 源端复制状态 copystate与migrationcycle忽略大小写，但必须满足一些搭配，否则更新失败，接口报错： migrationcycle状态为 checking时，copystate只能为unavailable/waiting setting时， waiting/premigready/premiging/premiged/premigfailed replicating时，init/replicate/deleting/stopping/error/stopped syncing时，syncing/cloning/deleting/stopping/error/stopped cutovering时，cutovering/deleting/stopping/error/stopped cutovered时，finished/deleting/stopping/error/stopped
 type PutCopyStateReq struct {
 
-	// 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready：迁移演练就绪 premiged：迁移演练完成 premigfailed：迁移演练失败 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 error：错误
-	Copystate *PutCopyStateReqCopystate `json:"copystate,omitempty"`
+	// 源端服务器状态 unavailable: 环境校验不通过 waiting: 等待 init: 初始化 replicate: 复制 syncing: 持续同步 stopping: 暂停中 stopped: 已暂停 skipping: 跳过中 deleting: 删除中 clearing: 清理快照资源中 cleared: 清理快照资源完成 clearfailed: 清理快照资源失败 premigready: 迁移演练就绪 premiging: 迁移演练中 premiged: 迁移演练完成 premigfailed: 迁移演练失败 cloning: 等待克隆完成 cutovering: 启动目的端中 finished: 启动目的端完成 error: 错误
+	Copystate PutCopyStateReqCopystate `json:"copystate"`
 
-	// 迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
-	Migrationcycle *PutCopyStateReqMigrationcycle `json:"migrationcycle,omitempty"`
+	// 迁移周期 no_ready:未就绪 ready_for_test:已就绪 testing:测试中 tested:测试完成 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
+	Migrationcycle PutCopyStateReqMigrationcycle `json:"migrationcycle"`
 }
 
 func (o PutCopyStateReq) String() string {
@@ -35,7 +35,7 @@ type PutCopyStateReqCopystate struct {
 type PutCopyStateReqCopystateEnum struct {
 	UNAVAILABLE  PutCopyStateReqCopystate
 	WAITING      PutCopyStateReqCopystate
-	INITIALIZE   PutCopyStateReqCopystate
+	INIT         PutCopyStateReqCopystate
 	REPLICATE    PutCopyStateReqCopystate
 	SYNCING      PutCopyStateReqCopystate
 	STOPPING     PutCopyStateReqCopystate
@@ -46,6 +46,7 @@ type PutCopyStateReqCopystateEnum struct {
 	CLEARED      PutCopyStateReqCopystate
 	CLEARFAILED  PutCopyStateReqCopystate
 	PREMIGREADY  PutCopyStateReqCopystate
+	PREMIGING    PutCopyStateReqCopystate
 	PREMIGED     PutCopyStateReqCopystate
 	PREMIGFAILED PutCopyStateReqCopystate
 	CLONING      PutCopyStateReqCopystate
@@ -62,8 +63,8 @@ func GetPutCopyStateReqCopystateEnum() PutCopyStateReqCopystateEnum {
 		WAITING: PutCopyStateReqCopystate{
 			value: "waiting",
 		},
-		INITIALIZE: PutCopyStateReqCopystate{
-			value: "initialize",
+		INIT: PutCopyStateReqCopystate{
+			value: "init",
 		},
 		REPLICATE: PutCopyStateReqCopystate{
 			value: "replicate",
@@ -94,6 +95,9 @@ func GetPutCopyStateReqCopystateEnum() PutCopyStateReqCopystateEnum {
 		},
 		PREMIGREADY: PutCopyStateReqCopystate{
 			value: "premigready",
+		},
+		PREMIGING: PutCopyStateReqCopystate{
+			value: "premiging",
 		},
 		PREMIGED: PutCopyStateReqCopystate{
 			value: "premiged",
@@ -148,16 +152,32 @@ type PutCopyStateReqMigrationcycle struct {
 }
 
 type PutCopyStateReqMigrationcycleEnum struct {
-	CUTOVERING  PutCopyStateReqMigrationcycle
-	CUTOVERED   PutCopyStateReqMigrationcycle
-	CHECKING    PutCopyStateReqMigrationcycle
-	SETTING     PutCopyStateReqMigrationcycle
-	REPLICATING PutCopyStateReqMigrationcycle
-	SYNCING     PutCopyStateReqMigrationcycle
+	NO_READY       PutCopyStateReqMigrationcycle
+	READY_FOR_TEST PutCopyStateReqMigrationcycle
+	TESTING        PutCopyStateReqMigrationcycle
+	TESTED         PutCopyStateReqMigrationcycle
+	CUTOVERING     PutCopyStateReqMigrationcycle
+	CUTOVERED      PutCopyStateReqMigrationcycle
+	CHECKING       PutCopyStateReqMigrationcycle
+	SETTING        PutCopyStateReqMigrationcycle
+	REPLICATING    PutCopyStateReqMigrationcycle
+	SYNCING        PutCopyStateReqMigrationcycle
 }
 
 func GetPutCopyStateReqMigrationcycleEnum() PutCopyStateReqMigrationcycleEnum {
 	return PutCopyStateReqMigrationcycleEnum{
+		NO_READY: PutCopyStateReqMigrationcycle{
+			value: "no_ready",
+		},
+		READY_FOR_TEST: PutCopyStateReqMigrationcycle{
+			value: "ready_for_test",
+		},
+		TESTING: PutCopyStateReqMigrationcycle{
+			value: "testing",
+		},
+		TESTED: PutCopyStateReqMigrationcycle{
+			value: "tested",
+		},
 		CUTOVERING: PutCopyStateReqMigrationcycle{
 			value: "cutovering",
 		},

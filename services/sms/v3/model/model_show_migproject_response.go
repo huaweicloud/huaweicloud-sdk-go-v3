@@ -12,10 +12,7 @@ import (
 // ShowMigprojectResponse Response Object
 type ShowMigprojectResponse struct {
 
-	// 迁移项目ID
-	Id *string `json:"id,omitempty"`
-
-	// 迁移项目名称
+	// 迁移项目名称，只能由中文字符、英文字母、数字、下划线、短横线组成
 	Name *string `json:"name,omitempty"`
 
 	// 迁移项目描述

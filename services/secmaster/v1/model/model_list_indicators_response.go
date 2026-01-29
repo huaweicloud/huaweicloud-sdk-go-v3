@@ -18,6 +18,12 @@ type ListIndicatorsResponse struct {
 	// 总数
 	Total *int32 `json:"total,omitempty"`
 
+	// 分页大小
+	Size *int32 `json:"size,omitempty"`
+
+	// 分页的页码
+	Page *int32 `json:"page,omitempty"`
+
 	// 情报列表数据
 	Data *[]IndicatorDetail `json:"data,omitempty"`
 

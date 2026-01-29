@@ -73,7 +73,7 @@ type Incident struct {
 	NetworkList *[]AlertNetworkList `json:"network_list,omitempty"`
 
 	// 受影响资产
-	ResourceList *[]AlertResourceList `json:"resource_list,omitempty"`
+	ResourceList *[]IncidentResourceList `json:"resource_list,omitempty"`
 
 	Remediation *AlertRemediation `json:"remediation,omitempty"`
 
@@ -83,8 +83,8 @@ type Incident struct {
 	// 事件处理状态，可选类型如下： Open – 打开，默认 Block – 阻塞 Closed – 关闭 默认填写Open
 	HandleStatus *IncidentHandleStatus `json:"handle_status,omitempty"`
 
-	// 约束闭环时间：设置风险接受持续时间。单位：小时
-	Sla *int32 `json:"sla,omitempty"`
+	// 约束闭环时间：设置风险接受持续时间。格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+	Sla *string `json:"sla,omitempty"`
 
 	// 更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
 	UpdateTime *string `json:"update_time,omitempty"`

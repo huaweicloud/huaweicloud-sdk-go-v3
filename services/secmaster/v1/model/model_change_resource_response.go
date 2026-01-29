@@ -8,8 +8,15 @@ import (
 
 // ChangeResourceResponse Response Object
 type ChangeResourceResponse struct {
-	DataObject     *ResourceDetail `json:"data_object,omitempty"`
-	HttpStatusCode int             `json:"-"`
+
+	// 错误码
+	Code *string `json:"code,omitempty"`
+
+	// 错误信息
+	Message *string `json:"message,omitempty"`
+
+	Data           *ChangeResourceRequestBody `json:"data,omitempty"`
+	HttpStatusCode int                        `json:"-"`
 }
 
 func (o ChangeResourceResponse) String() string {

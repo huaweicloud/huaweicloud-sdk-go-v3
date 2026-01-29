@@ -393,7 +393,7 @@ func GenReqDefForCopyMapping() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/workspaces/{workspace_id}/soc/mappings/{mapping_id}/clone").
 		WithResponse(new(model.CopyMappingResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=utf-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("MappingId").
@@ -406,7 +406,7 @@ func GenReqDefForCopyMapping() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -584,7 +584,7 @@ func GenReqDefForCreateAopWorkflow() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -613,7 +613,7 @@ func GenReqDefForCreateAopWorkflowVersion() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -642,7 +642,7 @@ func GenReqDefForCreateAopWorkflowVersionApprovel() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -720,7 +720,7 @@ func GenReqDefForCreateClassifier() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/workspaces/{workspace_id}/soc/mappings/classifiers").
 		WithResponse(new(model.CreateClassifierResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=utf-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("WorkspaceId").
@@ -729,7 +729,7 @@ func GenReqDefForCreateClassifier() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1236,7 +1236,7 @@ func GenReqDefForCreateMapper() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/workspaces/{workspace_id}/soc/mappings/mappers").
 		WithResponse(new(model.CreateMapperResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=utf-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("WorkspaceId").
@@ -1245,7 +1245,7 @@ func GenReqDefForCreateMapper() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1583,7 +1583,7 @@ func GenReqDefForCreatePreProcessRules() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/workspaces/{workspace_id}/soc/mappings/preprocess-rules").
 		WithResponse(new(model.CreatePreProcessRulesResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=utf-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("WorkspaceId").
@@ -1592,7 +1592,7 @@ func GenReqDefForCreatePreProcessRules() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1696,6 +1696,26 @@ func GenReqDefForCreateRetryPolicy() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateSearchAnalysis() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/workspaces/{workspace_id}/siem/search/analysis").
+		WithResponse(new(model.CreateSearchAnalysisResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("WorkspaceId").
+		WithJsonTag("workspace_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateSearchCondition() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -1780,6 +1800,26 @@ func GenReqDefForCreateShipperDelegateAuth() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateSubscriptionOrder() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/subscriptions/orders").
+		WithResponse(new(model.CreateSubscriptionOrderResponse)).
+		WithContentType("application/json;charset=utf-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateWorkflowInstance() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -1798,7 +1838,7 @@ func GenReqDefForCreateWorkflowInstance() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1929,7 +1969,7 @@ func GenReqDefForDeleteAopWorkflow() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -1954,7 +1994,7 @@ func GenReqDefForDeleteAopWorkflowVersion() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -1986,6 +2026,31 @@ func GenReqDefForDeleteCatalogue() *def.HttpRequestDef {
 		WithName("XRequestId").
 		WithJsonTag("X-request-id").
 		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteClassifier() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/{project_id}/workspaces/{workspace_id}/soc/mappings/classifiers/{classifier_id}").
+		WithResponse(new(model.DeleteClassifierResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("WorkspaceId").
+		WithJsonTag("workspace_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ClassifierId").
+		WithJsonTag("classifier_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -2449,7 +2514,7 @@ func GenReqDefForDeleteMappingInfo() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -2906,8 +2971,28 @@ func GenReqDefForDeleteSingleMapper() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteSubscriptionOrder() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/{project_id}/subscriptions/orders").
+		WithResponse(new(model.DeleteSubscriptionOrderResponse)).
+		WithContentType("application/json;charset=utf-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -3178,6 +3263,37 @@ func GenReqDefForEnableDataclassType() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForExecuteLayout() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/workspaces/{workspace_id}/soc/layouts/action").
+		WithResponse(new(model.ExecuteLayoutResponse)).
+		WithContentType("multipart/form-data")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("WorkspaceId").
+		WithJsonTag("workspace_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("content-type").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-request-id").
+		WithKindName("string").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForExecuteReportAction() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -3241,7 +3357,7 @@ func GenReqDefForExportAopworkflow() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -3962,7 +4078,7 @@ func GenReqDefForListAopWorkflowInstance() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -3992,7 +4108,7 @@ func GenReqDefForListAopWorkflowVersions() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -6195,6 +6311,51 @@ func GenReqDefForListShippers() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListSubscriptionGlobalOrder() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/subscriptions/orders").
+		WithResponse(new(model.ListSubscriptionGlobalOrderResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListSubscriptionOrder() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/subscriptions/orders").
+		WithResponse(new(model.ListSubscriptionOrderResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Page").
+		WithJsonTag("page").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListSubscriptionProduct() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -6205,6 +6366,72 @@ func GenReqDefForListSubscriptionProduct() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListTasks() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/workspaces/{workspace_id}/soc/tasks").
+		WithResponse(new(model.ListTasksResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("WorkspaceId").
+		WithJsonTag("workspace_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortKey").
+		WithJsonTag("sort_key").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortDir").
+		WithJsonTag("sort_dir").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Note").
+		WithJsonTag("note").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Name").
+		WithJsonTag("name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("BusinessType").
+		WithJsonTag("business_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CreatorName").
+		WithJsonTag("creator_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("QueryType").
+		WithJsonTag("query_type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FromDate").
+		WithJsonTag("from_date").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ToDate").
+		WithJsonTag("to_date").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -6302,7 +6529,7 @@ func GenReqDefForListWorkflows() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
@@ -6679,7 +6906,7 @@ func GenReqDefForShowAopWorkflow() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -6709,7 +6936,7 @@ func GenReqDefForShowAopWorkflowInstance() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -6734,7 +6961,7 @@ func GenReqDefForShowAopWorkflowVersion() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -6779,7 +7006,7 @@ func GenReqDefForShowClassifierInfo() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -7295,7 +7522,7 @@ func GenReqDefForShowMapperDetail() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -7307,7 +7534,7 @@ func GenReqDefForShowMapperList() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/workspaces/{workspace_id}/soc/mappings/mappers/search").
 		WithResponse(new(model.ShowMapperListResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=utf-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("WorkspaceId").
@@ -7316,7 +7543,7 @@ func GenReqDefForShowMapperList() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -7341,7 +7568,7 @@ func GenReqDefForShowMappingFunction() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
@@ -7353,7 +7580,7 @@ func GenReqDefForShowMappingInfoList() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/workspaces/{workspace_id}/soc/mappings/search").
 		WithResponse(new(model.ShowMappingInfoListResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=utf-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("WorkspaceId").
@@ -7362,7 +7589,7 @@ func GenReqDefForShowMappingInfoList() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -7820,7 +8047,7 @@ func GenReqDefForShowPreProcessRulesList() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v1/{project_id}/workspaces/{workspace_id}/soc/mappings/preprocess-rules/search").
 		WithResponse(new(model.ShowPreProcessRulesListResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=utf-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("WorkspaceId").
@@ -7829,7 +8056,7 @@ func GenReqDefForShowPreProcessRulesList() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -7990,6 +8217,31 @@ func GenReqDefForShowShipperParam() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowTask() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/workspaces/{workspace_id}/soc/tasks/{task_id}").
+		WithResponse(new(model.ShowTaskResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("WorkspaceId").
+		WithJsonTag("workspace_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TaskId").
+		WithJsonTag("task_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowVulnerability() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -8079,7 +8331,7 @@ func GenReqDefForUpdateAopWorkflow() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -8108,7 +8360,7 @@ func GenReqDefForUpdateAopWorkflowVersion() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -8159,7 +8411,7 @@ func GenReqDefForUpdateClassifier() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v1/{project_id}/workspaces/{workspace_id}/soc/mappings/classifiers/{classifier_id}").
 		WithResponse(new(model.UpdateClassifierResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=utf-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("WorkspaceId").
@@ -8172,7 +8424,7 @@ func GenReqDefForUpdateClassifier() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -8510,12 +8762,41 @@ func GenReqDefForUpdateLayoutWizards() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForUpdateMapper() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/workspaces/{workspace_id}/soc/mappings/mappers/{mapper_id}").
+		WithResponse(new(model.UpdateMapperResponse)).
+		WithContentType("application/json;charset=utf-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("WorkspaceId").
+		WithJsonTag("workspace_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("MapperId").
+		WithJsonTag("mapper_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateMappingInfoStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1/{project_id}/workspaces/{workspace_id}/soc/mappings/{mapping_id}/status").
 		WithResponse(new(model.UpdateMappingInfoStatusResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=utf-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("WorkspaceId").
@@ -8528,7 +8809,7 @@ func GenReqDefForUpdateMappingInfoStatus() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -8942,6 +9223,26 @@ func GenReqDefForUpdateSearchCondition() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForUpdateSubscriptionOrder() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/subscriptions/orders").
+		WithResponse(new(model.UpdateSubscriptionOrderResponse)).
+		WithContentType("application/json;charset=utf-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateTagValue() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -8975,6 +9276,35 @@ func GenReqDefForUpdateTagValue() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForUpdateTask() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/workspaces/{workspace_id}/soc/tasks/{task_id}").
+		WithResponse(new(model.UpdateTaskResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("WorkspaceId").
+		WithJsonTag("workspace_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TaskId").
+		WithJsonTag("task_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateVpcEndpointService() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -8995,6 +9325,35 @@ func GenReqDefForUpdateVpcEndpointService() *def.HttpRequestDef {
 		WithName("SubnetId").
 		WithJsonTag("subnet_id").
 		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateWorkflowInstance() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/workspaces/{workspace_id}/soc/workflows/instances/{instance_id}").
+		WithResponse(new(model.UpdateWorkflowInstanceResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("WorkspaceId").
+		WithJsonTag("workspace_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -9063,7 +9422,7 @@ func GenReqDefForValidateAopWorkflowVersion() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").
-		WithJsonTag("content-type").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

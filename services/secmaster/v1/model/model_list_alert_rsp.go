@@ -30,7 +30,7 @@ type ListAlertRsp struct {
 	// 标签，仅展示
 	Labels *string `json:"labels,omitempty"`
 
-	Environment *AlertEnvironment `json:"environment,omitempty"`
+	Environment *ListAlertRspEnvironment `json:"environment,omitempty"`
 
 	DataSource *AlertDataSource `json:"data_source,omitempty"`
 

@@ -15,14 +15,14 @@ type ShowMappingInfoListResponse struct {
 	// **参数解释**: 错误描述 **取值范围**: 不涉及
 	Message *string `json:"message,omitempty"`
 
+	// 分页查询数据大小
+	Size *int32 `json:"size,omitempty"`
+
+	// 当前页码
+	Page *int32 `json:"page,omitempty"`
+
 	// 总数
 	Total *int32 `json:"total,omitempty"`
-
-	// **参数解释：** 偏移量 **约束限制：** 0-10000 **取值范围：** 不涉及 **默认取值：** 0
-	Offset *int32 `json:"offset,omitempty"`
-
-	// **参数解释**: 当前页码 **约束限制**: 不涉及
-	Limit *int32 `json:"limit,omitempty"`
 
 	// 分类映射信息集合
 	Data           *[]DpeInfo `json:"data,omitempty"`

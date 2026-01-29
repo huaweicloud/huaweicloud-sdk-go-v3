@@ -12,23 +12,23 @@ import (
 // TargetDisks 目的端磁盘信息
 type TargetDisks struct {
 
-	// 磁盘类型，普通磁盘，OS所在磁盘，BOOT所在磁盘 BOOT：BOOT设备 OS：系统设备 NORMAL:平常
+	// 磁盘类型，仅起提示作用，不作校验 BOOT：BOOT所在磁盘 OS：OS所在磁盘 NORMAL：普通磁盘
 	DeviceUse *TargetDisksDeviceUse `json:"device_use,omitempty"`
 
 	// 磁盘ID,自动创建虚拟机不用设置
 	DiskId *string `json:"disk_id,omitempty"`
 
 	// 名称，根据磁盘顺序设置为disk X
-	Name string `json:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 物理卷信息
-	PhysicalVolumes []PhysicalVolumes `json:"physical_volumes"`
+	PhysicalVolumes *[]PhysicalVolumes `json:"physical_volumes,omitempty"`
 
 	// 大小
-	Size int64 `json:"size"`
+	Size *int64 `json:"size,omitempty"`
 
 	// 使用大小
-	UsedSize int64 `json:"used_size"`
+	UsedSize *int64 `json:"used_size,omitempty"`
 }
 
 func (o TargetDisks) String() string {

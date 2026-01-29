@@ -3,26 +3,23 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
 // TemplateRequest 自动创建虚拟机模板
 type TemplateRequest struct {
 
-	// 模板名称
+	// 模板名称 仅由中文字符、下划线、短横线、数字、英文大小写字母组成
 	Name string `json:"name"`
 
 	// 是否是通用模板，如果模板关联一个任务，则不算通用模板
-	IsTemplate bool `json:"is_template"`
+	IsTemplate *bool `json:"is_template,omitempty"`
 
 	// Region信息
-	Region string `json:"region"`
+	Region *string `json:"region,omitempty"`
 
 	// 项目ID
-	Projectid string `json:"projectid"`
+	Projectid *string `json:"projectid,omitempty"`
 
 	// 目标端服务器名称
 	TargetServerName *string `json:"target_server_name,omitempty"`
@@ -30,8 +27,8 @@ type TemplateRequest struct {
 	// 可用区
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
-	// 磁盘类型 SAS:串行连接SCSI SSD:固态硬盘 SATA:串口硬盘
-	Volumetype *TemplateRequestVolumetype `json:"volumetype,omitempty"`
+	// 磁盘类型 （非枚举数据，来源于EVS服务） 常见类型如：SAS:串行连接SCSI，SSD:固态硬盘，SATA:串口硬盘等。 详细类型请参考EIP服务API文档中“查询单个云硬盘详情”部分，查看响应参数的中volume_type字段描述
+	Volumetype *string `json:"volumetype,omitempty"`
 
 	// 虚拟机规格
 	Flavor *string `json:"flavor,omitempty"`
@@ -49,8 +46,8 @@ type TemplateRequest struct {
 	// 磁盘信息
 	Disk *[]TemplateDisk `json:"disk,omitempty"`
 
-	// 数据盘磁盘类型 SAS:串行连接SCSI SSD:固态硬盘 SATA:串口硬盘
-	DataVolumeType *TemplateRequestDataVolumeType `json:"data_volume_type,omitempty"`
+	// 数据盘磁盘类型 （非枚举数据，来源于EVS服务） 常见类型如：SAS:串行连接SCSI，SSD:固态硬盘，SATA:串口硬盘等。 详细类型请参考EIP服务API文档中“查询单个云硬盘详情”部分，查看响应参数的中volume_type字段描述
+	DataVolumeType *string `json:"data_volume_type,omitempty"`
 
 	// 目的端密码
 	TargetPassword *string `json:"target_password,omitempty"`
@@ -66,106 +63,4 @@ func (o TemplateRequest) String() string {
 	}
 
 	return strings.Join([]string{"TemplateRequest", string(data)}, " ")
-}
-
-type TemplateRequestVolumetype struct {
-	value string
-}
-
-type TemplateRequestVolumetypeEnum struct {
-	SAS  TemplateRequestVolumetype
-	SSD  TemplateRequestVolumetype
-	SATA TemplateRequestVolumetype
-}
-
-func GetTemplateRequestVolumetypeEnum() TemplateRequestVolumetypeEnum {
-	return TemplateRequestVolumetypeEnum{
-		SAS: TemplateRequestVolumetype{
-			value: "SAS",
-		},
-		SSD: TemplateRequestVolumetype{
-			value: "SSD",
-		},
-		SATA: TemplateRequestVolumetype{
-			value: "SATA",
-		},
-	}
-}
-
-func (c TemplateRequestVolumetype) Value() string {
-	return c.value
-}
-
-func (c TemplateRequestVolumetype) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *TemplateRequestVolumetype) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type TemplateRequestDataVolumeType struct {
-	value string
-}
-
-type TemplateRequestDataVolumeTypeEnum struct {
-	SAS  TemplateRequestDataVolumeType
-	SSD  TemplateRequestDataVolumeType
-	SATA TemplateRequestDataVolumeType
-}
-
-func GetTemplateRequestDataVolumeTypeEnum() TemplateRequestDataVolumeTypeEnum {
-	return TemplateRequestDataVolumeTypeEnum{
-		SAS: TemplateRequestDataVolumeType{
-			value: "SAS",
-		},
-		SSD: TemplateRequestDataVolumeType{
-			value: "SSD",
-		},
-		SATA: TemplateRequestDataVolumeType{
-			value: "SATA",
-		},
-	}
-}
-
-func (c TemplateRequestDataVolumeType) Value() string {
-	return c.value
-}
-
-func (c TemplateRequestDataVolumeType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *TemplateRequestDataVolumeType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

@@ -24,6 +24,9 @@ type ListServersRequest struct {
 	// 源端服务器IP地址
 	Ip *string `json:"ip,omitempty"`
 
+	// 源端服务器IPV6地址，优先使用IP进行查询
+	Ipv6 *string `json:"ipv6,omitempty"`
+
 	// 迁移项目ID，填写该参数将查询迁移项目下的所有虚拟机
 	Migproject *string `json:"migproject,omitempty"`
 
@@ -44,6 +47,9 @@ type ListServersRequest struct {
 
 	// 是否存在一致性校验结果
 	IsConsistencyResultExist *bool `json:"is_consistency_result_exist,omitempty"`
+
+	// 平台的克隆服务器id
+	VmId *string `json:"vm_id,omitempty"`
 }
 
 func (o ListServersRequest) String() string {

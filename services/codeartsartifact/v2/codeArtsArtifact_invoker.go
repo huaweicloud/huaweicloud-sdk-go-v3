@@ -421,6 +421,22 @@ func (i *ListSecGuardListInvoker) Invoke() (*model.ListSecGuardListResponse, err
 	}
 }
 
+type ListUserPrivilegesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUserPrivilegesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListUserPrivilegesInvoker) Invoke() (*model.ListUserPrivilegesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUserPrivilegesResponse), nil
+	}
+}
+
 type ModifyRepositoryInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -693,6 +709,22 @@ func (i *ShowProjectListInvoker) Invoke() (*model.ShowProjectListResponse, error
 	}
 }
 
+type ShowProjectRelatedRepositoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProjectRelatedRepositoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowProjectRelatedRepositoryInvoker) Invoke() (*model.ShowProjectRelatedRepositoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProjectRelatedRepositoryResponse), nil
+	}
+}
+
 type ShowProjectReleaseFilesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -722,6 +754,22 @@ func (i *ShowProjectStorageInfoInvoker) Invoke() (*model.ShowProjectStorageInfoR
 		return nil, err
 	} else {
 		return result.(*model.ShowProjectStorageInfoResponse), nil
+	}
+}
+
+type ShowProjectVersionsCountInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProjectVersionsCountInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowProjectVersionsCountInvoker) Invoke() (*model.ShowProjectVersionsCountResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProjectVersionsCountResponse), nil
 	}
 }
 
@@ -791,6 +839,22 @@ func (i *ShowRepositoryInfoInvoker) Invoke() (*model.ShowRepositoryInfoResponse,
 	}
 }
 
+type ShowRepositoryRolesPrivilegeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRepositoryRolesPrivilegeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRepositoryRolesPrivilegeInvoker) Invoke() (*model.ShowRepositoryRolesPrivilegeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRepositoryRolesPrivilegeResponse), nil
+	}
+}
+
 type ShowStorageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -839,6 +903,22 @@ func (i *ShowUserTicketInvoker) Invoke() (*model.ShowUserTicketResponse, error) 
 	}
 }
 
+type ShowVersionListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVersionListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowVersionListInvoker) Invoke() (*model.ShowVersionListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVersionListResponse), nil
+	}
+}
+
 type UpdateArtifactoryInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -852,5 +932,21 @@ func (i *UpdateArtifactoryInvoker) Invoke() (*model.UpdateArtifactoryResponse, e
 		return nil, err
 	} else {
 		return result.(*model.UpdateArtifactoryResponse), nil
+	}
+}
+
+type UpdateRepoRolesPrivilegeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateRepoRolesPrivilegeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateRepoRolesPrivilegeInvoker) Invoke() (*model.UpdateRepoRolesPrivilegeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateRepoRolesPrivilegeResponse), nil
 	}
 }

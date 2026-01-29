@@ -15,7 +15,7 @@ type BatchSearchMetricHitsRequest struct {
 	// 查询指标的时间范围，ISO8601格式，例如：2007-03-01T13:00:00Z/2008-05-11T15:30:00Z或2007-03-01T13:00:00Z/P1Y2M10DT2H30M或P1Y2M10DT2H30M/2008-05-11T15:30:00Z
 	Timespan *string `json:"timespan,omitempty"`
 
-	// 是否启用缓存，默认true, 禁用缓存 false
+	// 是否启用缓存，默认true，禁用缓存 false
 	Cache *bool `json:"cache,omitempty"`
 
 	Body *BatchSearchMetricHitsRequestBody `json:"body,omitempty"`

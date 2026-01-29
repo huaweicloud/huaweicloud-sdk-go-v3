@@ -9,7 +9,7 @@ import (
 // ProductRspLogRetention 日志保留商品编码对象
 type ProductRspLogRetention struct {
 
-	// 云服务产品的主服务类型，云脑默认为：hws.service.type.sa
+	// 云服务产品的主服务类型，云脑默认为：xxx.service.type.sa
 	CloudServiceType *string `json:"cloud_service_type,omitempty"`
 
 	// 资源类型编码

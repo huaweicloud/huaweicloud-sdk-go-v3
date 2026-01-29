@@ -16,31 +16,31 @@ type LogicalVolumes struct {
 	BlockSize *int64 `json:"block_size,omitempty"`
 
 	// 文件系统
-	FileSystem string `json:"file_system"`
+	FileSystem *string `json:"file_system,omitempty"`
 
 	// inode数量
-	InodeSize int32 `json:"inode_size"`
+	InodeSize *int32 `json:"inode_size,omitempty"`
 
 	// inode节点数量
 	InodeNums *int64 `json:"inode_nums,omitempty"`
 
-	// 分区类型，普通分区，启动分区，系统分区
+	// 分区类型 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
 	DeviceUse *string `json:"device_use,omitempty"`
 
 	// 挂载点
-	MountPoint string `json:"mount_point"`
+	MountPoint *string `json:"mount_point,omitempty"`
 
 	// 名称
-	Name string `json:"name"`
+	Name *string `json:"name,omitempty"`
 
 	// 大小
-	Size int64 `json:"size"`
+	Size *int64 `json:"size,omitempty"`
 
 	// 使用大小
-	UsedSize int64 `json:"used_size"`
+	UsedSize *int64 `json:"used_size,omitempty"`
 
 	// 剩余空间
-	FreeSize int64 `json:"free_size"`
+	FreeSize *int64 `json:"free_size,omitempty"`
 }
 
 func (o LogicalVolumes) String() string {

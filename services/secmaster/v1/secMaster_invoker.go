@@ -933,6 +933,22 @@ func (i *CreateRetryPolicyInvoker) Invoke() (*model.CreateRetryPolicyResponse, e
 	}
 }
 
+type CreateSearchAnalysisInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSearchAnalysisInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSearchAnalysisInvoker) Invoke() (*model.CreateSearchAnalysisResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSearchAnalysisResponse), nil
+	}
+}
+
 type CreateSearchConditionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -994,6 +1010,22 @@ func (i *CreateShipperDelegateAuthInvoker) Invoke() (*model.CreateShipperDelegat
 		return nil, err
 	} else {
 		return result.(*model.CreateShipperDelegateAuthResponse), nil
+	}
+}
+
+type CreateSubscriptionOrderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSubscriptionOrderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSubscriptionOrderInvoker) Invoke() (*model.CreateSubscriptionOrderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSubscriptionOrderResponse), nil
 	}
 }
 
@@ -1122,6 +1154,22 @@ func (i *DeleteCatalogueInvoker) Invoke() (*model.DeleteCatalogueResponse, error
 		return nil, err
 	} else {
 		return result.(*model.DeleteCatalogueResponse), nil
+	}
+}
+
+type DeleteClassifierInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteClassifierInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteClassifierInvoker) Invoke() (*model.DeleteClassifierResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteClassifierResponse), nil
 	}
 }
 
@@ -1669,6 +1717,22 @@ func (i *DeleteSingleMapperInvoker) Invoke() (*model.DeleteSingleMapperResponse,
 	}
 }
 
+type DeleteSubscriptionOrderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSubscriptionOrderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteSubscriptionOrderInvoker) Invoke() (*model.DeleteSubscriptionOrderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSubscriptionOrderResponse), nil
+	}
+}
+
 type DeleteTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1842,6 +1906,22 @@ func (i *EnableDataclassTypeInvoker) Invoke() (*model.EnableDataclassTypeRespons
 		return nil, err
 	} else {
 		return result.(*model.EnableDataclassTypeResponse), nil
+	}
+}
+
+type ExecuteLayoutInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteLayoutInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteLayoutInvoker) Invoke() (*model.ExecuteLayoutResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteLayoutResponse), nil
 	}
 }
 
@@ -3253,6 +3333,38 @@ func (i *ListShippersInvoker) Invoke() (*model.ListShippersResponse, error) {
 	}
 }
 
+type ListSubscriptionGlobalOrderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSubscriptionGlobalOrderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSubscriptionGlobalOrderInvoker) Invoke() (*model.ListSubscriptionGlobalOrderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSubscriptionGlobalOrderResponse), nil
+	}
+}
+
+type ListSubscriptionOrderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSubscriptionOrderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSubscriptionOrderInvoker) Invoke() (*model.ListSubscriptionOrderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSubscriptionOrderResponse), nil
+	}
+}
+
 type ListSubscriptionProductInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3266,6 +3378,22 @@ func (i *ListSubscriptionProductInvoker) Invoke() (*model.ListSubscriptionProduc
 		return nil, err
 	} else {
 		return result.(*model.ListSubscriptionProductResponse), nil
+	}
+}
+
+type ListTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTasksInvoker) Invoke() (*model.ListTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTasksResponse), nil
 	}
 }
 
@@ -4277,6 +4405,22 @@ func (i *ShowShipperParamInvoker) Invoke() (*model.ShowShipperParamResponse, err
 	}
 }
 
+type ShowTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTaskInvoker) Invoke() (*model.ShowTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTaskResponse), nil
+	}
+}
+
 type ShowVulnerabilityInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4581,6 +4725,22 @@ func (i *UpdateLayoutWizardsInvoker) Invoke() (*model.UpdateLayoutWizardsRespons
 	}
 }
 
+type UpdateMapperInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateMapperInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateMapperInvoker) Invoke() (*model.UpdateMapperResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateMapperResponse), nil
+	}
+}
+
 type UpdateMappingInfoStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4789,6 +4949,22 @@ func (i *UpdateSearchConditionInvoker) Invoke() (*model.UpdateSearchConditionRes
 	}
 }
 
+type UpdateSubscriptionOrderInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSubscriptionOrderInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSubscriptionOrderInvoker) Invoke() (*model.UpdateSubscriptionOrderResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSubscriptionOrderResponse), nil
+	}
+}
+
 type UpdateTagValueInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4805,6 +4981,22 @@ func (i *UpdateTagValueInvoker) Invoke() (*model.UpdateTagValueResponse, error) 
 	}
 }
 
+type UpdateTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateTaskInvoker) Invoke() (*model.UpdateTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTaskResponse), nil
+	}
+}
+
 type UpdateVpcEndpointServiceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4818,6 +5010,22 @@ func (i *UpdateVpcEndpointServiceInvoker) Invoke() (*model.UpdateVpcEndpointServ
 		return nil, err
 	} else {
 		return result.(*model.UpdateVpcEndpointServiceResponse), nil
+	}
+}
+
+type UpdateWorkflowInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateWorkflowInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateWorkflowInstanceInvoker) Invoke() (*model.UpdateWorkflowInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateWorkflowInstanceResponse), nil
 	}
 }
 

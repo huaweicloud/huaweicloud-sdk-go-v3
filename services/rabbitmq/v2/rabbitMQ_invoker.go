@@ -37,22 +37,6 @@ func (i *BatchRestartOrDeleteInstancesInvoker) Invoke() (*model.BatchRestartOrDe
 	}
 }
 
-type CreatePostPaidInstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreatePostPaidInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreatePostPaidInstanceInvoker) Invoke() (*model.CreatePostPaidInstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreatePostPaidInstanceResponse), nil
-	}
-}
-
 type CreatePostPaidInstanceByEngineInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -357,22 +341,6 @@ func (i *ResizeEngineInstanceInvoker) Invoke() (*model.ResizeEngineInstanceRespo
 	}
 }
 
-type ResizeInstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ResizeInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ResizeInstanceInvoker) Invoke() (*model.ResizeInstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ResizeInstanceResponse), nil
-	}
-}
-
 type RestoreRecycleInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -450,22 +418,6 @@ func (i *ShowInstanceInvoker) Invoke() (*model.ShowInstanceResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceResponse), nil
-	}
-}
-
-type ShowInstanceExtendProductInfoInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowInstanceExtendProductInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowInstanceExtendProductInfoInvoker) Invoke() (*model.ShowInstanceExtendProductInfoResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowInstanceExtendProductInfoResponse), nil
 	}
 }
 

@@ -9,10 +9,10 @@ import (
 // BatchSearchMetricHitsRequestBody 查询指标Hit结果请求体。
 type BatchSearchMetricHitsRequestBody struct {
 
-	// 待查询的指标Id列表, 可参照附录中指标信息说明获取已有指标信息。
+	// 待查询的指标Id列表，可参照附录中指标信息说明获取已有指标信息。
 	MetricIds []string `json:"metric_ids"`
 
-	// 工作空间列表, 当指标支持获取多工作空间数据时填写。
+	// 工作空间列表，当指标支持获取多工作空间数据时填写。
 	WorkspaceIds *[]string `json:"workspace_ids,omitempty"`
 
 	// 待查询指标的参数列表，列表内每个元素为<String, String>的K-V形式，元素数量必须与metric_ids列表相同，具体填写方式请参照附录。

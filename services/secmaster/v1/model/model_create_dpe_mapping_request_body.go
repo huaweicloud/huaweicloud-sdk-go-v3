@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// CreateDpeMappingRequestBody 创建分类映射请求体
 type CreateDpeMappingRequestBody struct {
 
 	// 映射id

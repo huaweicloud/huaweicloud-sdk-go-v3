@@ -12,7 +12,7 @@ type ListConfigurationDictionariesRequest struct {
 	// 用户当前语言环境
 	XLanguage string `json:"X-Language"`
 
-	// 字典使用场景, 告警为ALERT, 等级云为QUAD_CLOUD
+	// 字典使用场景，告警为ALERT，等级云为QUAD_CLOUD
 	Scene *string `json:"scene,omitempty"`
 
 	// 仅QUAD_CLOUD场景使用[S1, S2, S3, S4]

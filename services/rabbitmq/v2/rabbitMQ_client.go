@@ -63,27 +63,6 @@ func (c *RabbitMQClient) BatchRestartOrDeleteInstancesInvoker(request *model.Bat
 	return &BatchRestartOrDeleteInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreatePostPaidInstance 创建实例(按需)
-//
-// 创建实例，该接口创建的实例为按需计费的方式。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *RabbitMQClient) CreatePostPaidInstance(request *model.CreatePostPaidInstanceRequest) (*model.CreatePostPaidInstanceResponse, error) {
-	requestDef := GenReqDefForCreatePostPaidInstance()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreatePostPaidInstanceResponse), nil
-	}
-}
-
-// CreatePostPaidInstanceInvoker 创建实例(按需)
-func (c *RabbitMQClient) CreatePostPaidInstanceInvoker(request *model.CreatePostPaidInstanceRequest) *CreatePostPaidInstanceInvoker {
-	requestDef := GenReqDefForCreatePostPaidInstance()
-	return &CreatePostPaidInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreatePostPaidInstanceByEngine 创建实例
 //
 // 创建实例[，该接口支持创建按需[和包周期](tag:hws,hws_eu,hws_hk,ctc,cmcc,ax)计费方式的实例](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,hk_tm,cmcc,sbc,ax,hk_sbc)。
@@ -485,29 +464,6 @@ func (c *RabbitMQClient) ResizeEngineInstanceInvoker(request *model.ResizeEngine
 	return &ResizeEngineInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ResizeInstance 实例规格变更
-//
-// 实例规格变更。
-//
-// [**当前通过调用API，只支持按需实例进行实例规格变更。**](tag:hws,hws_hk,ctc,cmcc,hws_eu)
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *RabbitMQClient) ResizeInstance(request *model.ResizeInstanceRequest) (*model.ResizeInstanceResponse, error) {
-	requestDef := GenReqDefForResizeInstance()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ResizeInstanceResponse), nil
-	}
-}
-
-// ResizeInstanceInvoker 实例规格变更
-func (c *RabbitMQClient) ResizeInstanceInvoker(request *model.ResizeInstanceRequest) *ResizeInstanceInvoker {
-	requestDef := GenReqDefForResizeInstance()
-	return &ResizeInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // RestoreRecycleInstance 恢复回收站实例
 //
 // 恢复回收站实例。
@@ -611,29 +567,6 @@ func (c *RabbitMQClient) ShowInstance(request *model.ShowInstanceRequest) (*mode
 func (c *RabbitMQClient) ShowInstanceInvoker(request *model.ShowInstanceRequest) *ShowInstanceInvoker {
 	requestDef := GenReqDefForShowInstance()
 	return &ShowInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowInstanceExtendProductInfo 查询可扩容规格列表
-//
-// 查询可扩容规格列表。
-//
-// RabbtiMQ只支持只增加节点数的扩容方式。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *RabbitMQClient) ShowInstanceExtendProductInfo(request *model.ShowInstanceExtendProductInfoRequest) (*model.ShowInstanceExtendProductInfoResponse, error) {
-	requestDef := GenReqDefForShowInstanceExtendProductInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowInstanceExtendProductInfoResponse), nil
-	}
-}
-
-// ShowInstanceExtendProductInfoInvoker 查询可扩容规格列表
-func (c *RabbitMQClient) ShowInstanceExtendProductInfoInvoker(request *model.ShowInstanceExtendProductInfoRequest) *ShowInstanceExtendProductInfoInvoker {
-	requestDef := GenReqDefForShowInstanceExtendProductInfo()
-	return &ShowInstanceExtendProductInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowMaintainWindows 查询维护时间窗时间段

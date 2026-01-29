@@ -18,15 +18,6 @@ type CreateDataobjectRelationResponse struct {
 	// 请求ID
 	RequestId *string `json:"request_id,omitempty"`
 
-	// 总数
-	Total *int32 `json:"total,omitempty"`
-
-	// 分页大小
-	Limit *int32 `json:"limit,omitempty"`
-
-	// 偏移量
-	Offset *int32 `json:"offset,omitempty"`
-
 	// 是否成功
 	Success *bool `json:"success,omitempty"`
 

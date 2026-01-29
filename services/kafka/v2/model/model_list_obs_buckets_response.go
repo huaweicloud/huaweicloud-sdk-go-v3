@@ -8,8 +8,10 @@ import (
 
 // ListObsBucketsResponse Response Object
 type ListObsBucketsResponse struct {
-	Body           *[]ListObsBucketsResponseBody `json:"body,omitempty"`
-	HttpStatusCode int                           `json:"-"`
+
+	// Obs桶查询列表
+	Body           *[]ObsBucketEntity `json:"body,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o ListObsBucketsResponse) String() string {

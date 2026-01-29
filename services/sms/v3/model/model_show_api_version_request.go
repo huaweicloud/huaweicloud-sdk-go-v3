@@ -9,7 +9,7 @@ import (
 // ShowApiVersionRequest Request Object
 type ShowApiVersionRequest struct {
 
-	// 版本信息
+	// 版本信息，如v3
 	Version string `json:"version"`
 }
 

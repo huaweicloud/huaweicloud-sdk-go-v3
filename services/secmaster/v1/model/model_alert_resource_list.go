@@ -36,7 +36,7 @@ type AlertResourceList struct {
 	EpName *string `json:"ep_name,omitempty"`
 
 	// 资产标签 1、最多50个key/values对 2、values：最大255字符，取值范围：字母数字,空格,+, -, =, ., _, :, /,@
-	Tags *string `json:"tags,omitempty"`
+	Tags *interface{} `json:"tags,omitempty"`
 }
 
 func (o AlertResourceList) String() string {

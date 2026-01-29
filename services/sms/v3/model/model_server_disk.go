@@ -3,9 +3,6 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
@@ -13,22 +10,22 @@ import (
 type ServerDisk struct {
 
 	// 磁盘名称
-	Name string `json:"name"`
+	Name *string `json:"name,omitempty"`
 
-	// 磁盘的分区类型，添加源端时源端磁盘必选 MBR：mbr格式 GPT：gpt格式
-	PartitionStyle *ServerDiskPartitionStyle `json:"partition_style,omitempty"`
+	// 磁盘的分区类型，添加源端时源端磁盘必选，否则无法通过后续环境检查 （非枚举数据，来源于EVS服务） 常见类型如：MBR：主启动记录分区，GPT：Guid Partition Table，全局分区表。 详细类型请参考EVS服务API文档中“MBR和GPT分区形式有何区别”部分描述
+	PartitionStyle *string `json:"partition_style,omitempty"`
 
-	// 磁盘类型 BOOT：BOOT设备 OS：系统设备
-	DeviceUse ServerDiskDeviceUse `json:"device_use"`
+	// 磁盘类型。 无强约束，可为空值，常见取值如下 NORMAL：平常 OS：系统设备 BOOT：BOOT设备 VOLUME_GROUP：VolumeGroup组成设备 BTRFS：BTRFS组成设备
+	DeviceUse *string `json:"device_use,omitempty"`
 
 	// 磁盘总大小，以字节为单位
-	Size int64 `json:"size"`
+	Size *int64 `json:"size,omitempty"`
 
 	// 磁盘已使用大小，以字节为单位
-	UsedSize int64 `json:"used_size"`
+	UsedSize *int64 `json:"used_size,omitempty"`
 
 	// 磁盘上的物理分区信息
-	PhysicalVolumes []PhysicalVolume `json:"physical_volumes"`
+	PhysicalVolumes *[]PhysicalVolume `json:"physical_volumes,omitempty"`
 
 	// 是否为系统盘
 	OsDisk *bool `json:"os_disk,omitempty"`
@@ -47,98 +44,4 @@ func (o ServerDisk) String() string {
 	}
 
 	return strings.Join([]string{"ServerDisk", string(data)}, " ")
-}
-
-type ServerDiskPartitionStyle struct {
-	value string
-}
-
-type ServerDiskPartitionStyleEnum struct {
-	MBR ServerDiskPartitionStyle
-	GPT ServerDiskPartitionStyle
-}
-
-func GetServerDiskPartitionStyleEnum() ServerDiskPartitionStyleEnum {
-	return ServerDiskPartitionStyleEnum{
-		MBR: ServerDiskPartitionStyle{
-			value: "MBR",
-		},
-		GPT: ServerDiskPartitionStyle{
-			value: "GPT",
-		},
-	}
-}
-
-func (c ServerDiskPartitionStyle) Value() string {
-	return c.value
-}
-
-func (c ServerDiskPartitionStyle) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ServerDiskPartitionStyle) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type ServerDiskDeviceUse struct {
-	value string
-}
-
-type ServerDiskDeviceUseEnum struct {
-	BOOT ServerDiskDeviceUse
-	OS   ServerDiskDeviceUse
-}
-
-func GetServerDiskDeviceUseEnum() ServerDiskDeviceUseEnum {
-	return ServerDiskDeviceUseEnum{
-		BOOT: ServerDiskDeviceUse{
-			value: "BOOT",
-		},
-		OS: ServerDiskDeviceUse{
-			value: "OS",
-		},
-	}
-}
-
-func (c ServerDiskDeviceUse) Value() string {
-	return c.value
-}
-
-func (c ServerDiskDeviceUse) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *ServerDiskDeviceUse) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

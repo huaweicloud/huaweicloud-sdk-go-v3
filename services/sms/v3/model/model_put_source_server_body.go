@@ -15,10 +15,10 @@ type PutSourceServerBody struct {
 	// 源端服务器修改后所属的迁移项目ID
 	Migprojectid *string `json:"migprojectid,omitempty"`
 
-	// 磁盘
+	// 磁盘，仅在“待配置目的端”状态下，此修改才生效
 	Disks *[]PutDisk `json:"disks,omitempty"`
 
-	// 卷组
+	// 卷组，仅在“待配置目的端”状态下，此修改才生效
 	VolumeGroups *[]PutVolumeGroups `json:"volume_groups,omitempty"`
 }
 

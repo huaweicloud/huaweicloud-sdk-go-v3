@@ -12,38 +12,29 @@ import (
 // PutTaskReq 更新指定迁移任务
 type PutTaskReq struct {
 
-	// 任务名称（用户自定义）
+	// 任务名称（用户自定义） 仅由中文字符、下划线、短横线、数字、英文大小写字母组成
 	Name *string `json:"name,omitempty"`
 
 	// 任务类型，创建时必选，更新时可选 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
 	Type *PutTaskReqType `json:"type,omitempty"`
 
-	// 操作系统类型，分为WINDOWS和LINUX，创建时必选，更新时可选
-	OsType *PutTaskReqOsType `json:"os_type,omitempty"`
-
-	// 迁移任务ID
-	Id *string `json:"id,omitempty"`
-
-	// 进程优先级  0：低  1：标准（默认）  2：高
-	Priority *PutTaskReqPriority `json:"priority,omitempty"`
-
 	// 目的端服务器的区域ID
 	RegionId *string `json:"region_id,omitempty"`
 
-	// 迁移完成后是否启动目的端服务器  true：启动  false：停止
-	StartTargetServer *bool `json:"start_target_server,omitempty"`
-
-	// 企业项目ID
-	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+	// 目的端服务器的区域名称
+	RegionName *string `json:"region_name,omitempty"`
 
 	// 目的端服务器是否存在。true代表已有目的端服务器，false代表需要新建目的端服务器
 	ExistServer *bool `json:"exist_server,omitempty"`
 
-	// 目的端服务器的IP地址。  公网迁移时请填写弹性IP地址  专线迁移时请填写私有IP地址
+	// 目的端服务器的IP地址。 公网迁移时请填写弹性IP地址 专线迁移时请填写私有IP地址 如果use_ipv6是true，则需要满足ipv6的格式，如果use_ipv6是false，则需要满足ipv4的格式
 	MigrationIp *string `json:"migration_ip,omitempty"`
 
-	// 目的端服务器的区域名称
-	RegionName *string `json:"region_name,omitempty"`
+	// 目的端服务器的IP地址是否使用ipv6
+	UseIpv6 *bool `json:"use_ipv6,omitempty"`
+
+	// 是否为公网
+	UsePublicIp *bool `json:"use_public_ip,omitempty"`
 
 	// 限制迁移速率，单位：Mbps
 	SpeedLimit *int32 `json:"speed_limit,omitempty"`
@@ -54,53 +45,27 @@ type PutTaskReq struct {
 	// 目的端服务器所在项目ID
 	ProjectId *string `json:"project_id,omitempty"`
 
+	// 企业项目ID
+	EnterpriseProject *string `json:"enterprise_project,omitempty"`
+
+	// 目的端服务器镜像代理磁盘ID
+	ImageDiskId *string `json:"image_disk_id,omitempty"`
+
 	// 模板ID
 	VmTemplateId *string `json:"vm_template_id,omitempty"`
 
-	SourceServer *PostSourceServerBody `json:"source_server,omitempty"`
+	// 目的端服务器磁盘ID数组，用空格分隔，单个id长度不超过255
+	TargetDiskIds *string `json:"target_disk_ids,omitempty"`
+
+	// 目的端的快照ID，id之间\";\"分隔
+	SnapshotIds *string `json:"snapshot_ids,omitempty"`
+
+	// 割接的快照ID
+	CutoveredSnapshotIds *string `json:"cutovered_snapshot_ids,omitempty"`
 
 	TargetServer *TargetServer `json:"target_server,omitempty"`
 
-	// 迁移任务状态 READY: 准备就绪 RUNNING: 迁移中 SYNCING: 同步中 MIGRATE_SUCCESS: 迁移成功 SYNC_SUCCESS: 同步成功 MIGRATE_FAIL: 失败 SYNC_FAIL: 同步失败 ABORTING: 中止中 ABORT: 中止 SKIPPING: 跳过中 DELETING: 删除中 RESETING: 回滚中
-	State *PutTaskReqState `json:"state,omitempty"`
-
-	// 预估完成时间
-	EstimateCompleteTime *int64 `json:"estimate_complete_time,omitempty"`
-
-	// 连接状态
-	Connected *bool `json:"connected,omitempty"`
-
-	// 任务创建时间
-	CreateDate *int64 `json:"create_date,omitempty"`
-
-	// 任务开始时间
-	StartDate *int64 `json:"start_date,omitempty"`
-
-	// 任务结束时间
-	FinishDate *int64 `json:"finish_date,omitempty"`
-
-	// 迁移速率，单位：Mbit/s
-	MigrateSpeed *float64 `json:"migrate_speed,omitempty"`
-
-	// 错误信息
-	ErrorJson *string `json:"error_json,omitempty"`
-
-	// 任务总耗时
-	TotalTime *int64 `json:"total_time,omitempty"`
-
-	// 暂时保留float,兼容现网老版本的SMS-Agent
-	FloatIp *string `json:"float_ip,omitempty"`
-
-	// 迁移剩余时间（秒）
-	RemainSeconds *int64 `json:"remain_seconds,omitempty"`
-
-	// 目的端的快照ID
-	TargetSnapshotId *string `json:"target_snapshot_id,omitempty"`
-
 	CloneServer *CloneServer `json:"clone_server,omitempty"`
-
-	// 任务包含的子任务列表
-	SubTasks *[]SubTask `json:"sub_tasks,omitempty"`
 }
 
 func (o PutTaskReq) String() string {
@@ -141,189 +106,6 @@ func (c PutTaskReqType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *PutTaskReqType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type PutTaskReqOsType struct {
-	value string
-}
-
-type PutTaskReqOsTypeEnum struct {
-	WINDOWS PutTaskReqOsType
-	LINUX   PutTaskReqOsType
-}
-
-func GetPutTaskReqOsTypeEnum() PutTaskReqOsTypeEnum {
-	return PutTaskReqOsTypeEnum{
-		WINDOWS: PutTaskReqOsType{
-			value: "WINDOWS",
-		},
-		LINUX: PutTaskReqOsType{
-			value: "LINUX",
-		},
-	}
-}
-
-func (c PutTaskReqOsType) Value() string {
-	return c.value
-}
-
-func (c PutTaskReqOsType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *PutTaskReqOsType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type PutTaskReqPriority struct {
-	value int32
-}
-
-type PutTaskReqPriorityEnum struct {
-	E_0 PutTaskReqPriority
-	E_1 PutTaskReqPriority
-	E_2 PutTaskReqPriority
-}
-
-func GetPutTaskReqPriorityEnum() PutTaskReqPriorityEnum {
-	return PutTaskReqPriorityEnum{
-		E_0: PutTaskReqPriority{
-			value: 0,
-		}, E_1: PutTaskReqPriority{
-			value: 1,
-		}, E_2: PutTaskReqPriority{
-			value: 2,
-		},
-	}
-}
-
-func (c PutTaskReqPriority) Value() int32 {
-	return c.value
-}
-
-func (c PutTaskReqPriority) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *PutTaskReqPriority) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("int32")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: int32")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(int32); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to int32 error")
-	}
-}
-
-type PutTaskReqState struct {
-	value string
-}
-
-type PutTaskReqStateEnum struct {
-	READY           PutTaskReqState
-	RUNNING         PutTaskReqState
-	SYNCING         PutTaskReqState
-	MIGRATE_SUCCESS PutTaskReqState
-	SYNC_SUCCESS    PutTaskReqState
-	MIGRATE_FAIL    PutTaskReqState
-	SYNC_FAIL       PutTaskReqState
-	ABORTING        PutTaskReqState
-	ABORT           PutTaskReqState
-	SKIPPING        PutTaskReqState
-	DELETING        PutTaskReqState
-	RESETING        PutTaskReqState
-}
-
-func GetPutTaskReqStateEnum() PutTaskReqStateEnum {
-	return PutTaskReqStateEnum{
-		READY: PutTaskReqState{
-			value: "READY",
-		},
-		RUNNING: PutTaskReqState{
-			value: "RUNNING",
-		},
-		SYNCING: PutTaskReqState{
-			value: "SYNCING",
-		},
-		MIGRATE_SUCCESS: PutTaskReqState{
-			value: "MIGRATE_SUCCESS",
-		},
-		SYNC_SUCCESS: PutTaskReqState{
-			value: "SYNC_SUCCESS",
-		},
-		MIGRATE_FAIL: PutTaskReqState{
-			value: "MIGRATE_FAIL",
-		},
-		SYNC_FAIL: PutTaskReqState{
-			value: "SYNC_FAIL",
-		},
-		ABORTING: PutTaskReqState{
-			value: "ABORTING",
-		},
-		ABORT: PutTaskReqState{
-			value: "ABORT",
-		},
-		SKIPPING: PutTaskReqState{
-			value: "SKIPPING",
-		},
-		DELETING: PutTaskReqState{
-			value: "DELETING",
-		},
-		RESETING: PutTaskReqState{
-			value: "RESETING",
-		},
-	}
-}
-
-func (c PutTaskReqState) Value() string {
-	return c.value
-}
-
-func (c PutTaskReqState) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *PutTaskReqState) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

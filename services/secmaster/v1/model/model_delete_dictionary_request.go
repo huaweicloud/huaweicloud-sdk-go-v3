@@ -12,7 +12,7 @@ type DeleteDictionaryRequest struct {
 	// 字典列表
 	DictList *[]DictionaryDelete `json:"dict_list,omitempty"`
 
-	// 是否删除内置字典,默认不对外开放删除内置字典工具
+	// 是否删除内置字典，默认不对外开放删除内置字典工具
 	IsBuiltIn *bool `json:"is_built_in,omitempty"`
 }
 

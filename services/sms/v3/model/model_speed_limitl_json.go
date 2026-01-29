@@ -16,7 +16,7 @@ type SpeedLimitlJson struct {
 	End string `json:"end"`
 
 	// 时间段的速率，0-1000的整数，单位：Mbit/s。
-	Speed int32 `json:"speed"`
+	Speed *int32 `json:"speed,omitempty"`
 
 	// 停止迁移的超速阈值。 是一个迁移速率的保护机制，超出该阈值会停止任务。它主要用于控制迁移过程中资源（特别是网络带宽）的消耗，确保系统的整体性能不受单一迁移任务影响 单位是百分比
 	OverSpeedThreshold *float64 `json:"over_speed_threshold,omitempty"`

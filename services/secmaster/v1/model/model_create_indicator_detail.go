@@ -47,16 +47,11 @@ type CreateIndicatorDetail struct {
 	// 威胁情报名称
 	Name string `json:"name"`
 
-	// 数据类ID
-	DataclassId *string `json:"dataclass_id,omitempty"`
-
 	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
 
 	// 项目ID
 	ProjectId *string `json:"project_id,omitempty"`
-
-	Dataclass *DataClassRefPojo `json:"dataclass,omitempty"`
 
 	// 创建时间
 	CreateTime *string `json:"create_time,omitempty"`

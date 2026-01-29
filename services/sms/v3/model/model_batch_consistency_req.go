@@ -10,13 +10,13 @@ import (
 type BatchConsistencyReq struct {
 
 	// 任务ID
-	TaskId string `json:"task_id"`
+	TaskId *string `json:"task_id,omitempty"`
 
 	// 源端ID
-	SourceId string `json:"source_id"`
+	SourceId *string `json:"source_id,omitempty"`
 
 	// 源端名称
-	SourceName string `json:"source_name"`
+	SourceName *string `json:"source_name,omitempty"`
 }
 
 func (o BatchConsistencyReq) String() string {

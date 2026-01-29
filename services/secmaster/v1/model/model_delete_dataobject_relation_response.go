@@ -15,6 +15,12 @@ type DeleteDataobjectRelationResponse struct {
 	// 错误信息
 	Message *string `json:"message,omitempty"`
 
+	// 请求ID
+	RequestId *string `json:"request_id,omitempty"`
+
+	// 是否成功
+	Success *bool `json:"success,omitempty"`
+
 	Data *BatchOperateDataobjectResult `json:"data,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`

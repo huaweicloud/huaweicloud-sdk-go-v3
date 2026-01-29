@@ -17,7 +17,7 @@ type CreatePipeRequestBody struct {
 	// 索引字段映射；每个key对象承载一个字段的信息；存在多个key对象，key可变，表示字段名称；可嵌套
 	Mapping map[string]KeyIndex `json:"mapping,omitempty"`
 
-	// 数据管道名称
+	// 数据管道名称；必须以英文字母开头，且只能包含小写英文字母、数字和'_'，且'_'不能在结尾，也不能连续出现。 不能以系统预留的前缀isap_、csb_、secmaster_、sec_、s_sec_、i_sec_、l_sec_、security_开头
 	PipeName string `json:"pipe_name"`
 
 	// 数据管道分区个数；默认创建1个，最大支持创建64个分区

@@ -13,7 +13,7 @@ type PutVolumeGroups struct {
 	LogicalVolumes *[]PutLogicalVolume `json:"logical_volumes,omitempty"`
 
 	// 卷组ID
-	Id string `json:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 是否迁移
 	NeedMigration *bool `json:"need_migration,omitempty"`

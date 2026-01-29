@@ -28,6 +28,12 @@ type AccountChangeRecord struct {
 
 	// 收支类型。 1：收入2：支出
 	Type *string `json:"type,omitempty"`
+
+	// |参数名称：客户账号ID| |参数约束及描述：客户账号ID。说明：交易详细类型取值为如下值时，该字段不为空 SOURCE_OPERATION_BEADJUST：伙伴拨款 SOURCE_OPERATION_BEUNBIND：交易模式变更(切换/解除关联回收) SOURCE_OPERATION_BERETRIEVE：伙伴回收|
+	CustomerId *string `json:"customer_id,omitempty"`
+
+	// |参数名称：客户登录名称| |参数约束及描述：客户登录名称。说明：客户账号ID不为空时，该字段不为空|
+	AccountName *string `json:"account_name,omitempty"`
 }
 
 func (o AccountChangeRecord) String() string {

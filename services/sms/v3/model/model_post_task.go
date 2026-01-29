@@ -12,7 +12,7 @@ import (
 // PostTask 创建任务的参数
 type PostTask struct {
 
-	// 任务名称
+	// 任务名称，只能由中文字符、英文字母、数字、下划线、短横线组成
 	Name string `json:"name"`
 
 	// 任务类型 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
@@ -25,13 +25,13 @@ type PostTask struct {
 	AutoStart *bool `json:"auto_start,omitempty"`
 
 	// 操作系统类型 WINDOWS:Windows系统类型 LINUX:Linux系统类型
-	OsType PostTaskOsType `json:"os_type"`
+	OsType *PostTaskOsType `json:"os_type,omitempty"`
 
 	SourceServer *SourceServerByTask `json:"source_server"`
 
 	TargetServer *TargetServerByTask `json:"target_server"`
 
-	// 迁移IP，如果是自动创建虚拟机，不需要此参数
+	// 迁移IP，如果是自动创建虚拟机，不需要此参数。 use_ipv6是false时，migration_ip应满足ipv4的格式标准；use_ipv6是true时，migration_ip应满足ipv6的格式标准。
 	MigrationIp *string `json:"migration_ip,omitempty"`
 
 	// region的名称
@@ -51,6 +51,9 @@ type PostTask struct {
 
 	// 自动创建虚拟机使用模板
 	VmTemplateId *string `json:"vm_template_id,omitempty"`
+
+	// 克隆服务器模板ID
+	ClonevmTemplateId *string `json:"clonevm_template_id,omitempty"`
 
 	// 是否使用公网ip
 	UsePublicIp *bool `json:"use_public_ip,omitempty"`

@@ -10,7 +10,7 @@ import (
 type ShowAdhocResultResponse struct {
 
 	// 获取数据的批次，为0则为第一次查询
-	Batch *interface{} `json:"batch,omitempty"`
+	Batch *int32 `json:"batch,omitempty"`
 
 	// 统计分析结果字段类型
 	Schema *[]AdhocQueryAnalysisField `json:"schema,omitempty"`

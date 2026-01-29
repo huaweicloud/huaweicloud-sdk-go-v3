@@ -1,11 +1,10 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
-
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+	"github.com/shopspring/decimal"
 	"strings"
 )
 
@@ -15,7 +14,7 @@ type ModSubCustomerBudgetReq struct {
 	CustomerId string `json:"customer_id"`
 
 	// 调整的目标金额。 单位：元。精确至小数点后2位。
-	BudgetAmount float64 `json:"budget_amount"`
+	BudgetAmount *decimal.Decimal `json:"budget_amount"`
 
 	// 是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
 	CancelPartnerFrozen *string `json:"cancel_partner_frozen,omitempty"`

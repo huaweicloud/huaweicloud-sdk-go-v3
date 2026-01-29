@@ -223,6 +223,10 @@ func GenReqDefForListCertificates() *def.HttpRequestDef {
 		WithName("ExpiredDaysSince").
 		WithJsonTag("expired_days_since").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Content").
+		WithJsonTag("content").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

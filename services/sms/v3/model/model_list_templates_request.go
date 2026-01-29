@@ -23,6 +23,9 @@ type ListTemplatesRequest struct {
 
 	// 偏移量，不传值默认为0
 	Offset *int32 `json:"offset,omitempty"`
+
+	// 模板id
+	Id *string `json:"id,omitempty"`
 }
 
 func (o ListTemplatesRequest) String() string {

@@ -9,6 +9,9 @@ import (
 // HlsPackageItem HLS频道出流信息
 type HlsPackageItem struct {
 
+	// package唯一标识id，由服务创建并在查询时返回，修改endpoints时需要携带。
+	Id *string `json:"id,omitempty"`
+
 	// 客户自定义的拉流地址，包括方法、域名、路径
 	Url *string `json:"url,omitempty"`
 
@@ -59,6 +62,8 @@ type HlsPackageItem struct {
 
 	// 客户自定义的拉流地址，包括方法、域名、路径
 	SlaveUrl *string `json:"slave_url,omitempty"`
+
+	ManifestSelection *ManifestSelection `json:"manifest_selection,omitempty"`
 }
 
 func (o HlsPackageItem) String() string {

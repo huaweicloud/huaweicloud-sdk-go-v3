@@ -25,6 +25,9 @@ type ShowChannelStatisticReq struct {
 	Type ShowChannelStatisticReqType `json:"type"`
 
 	Scte35 *Scte35StatisticReq `json:"scte35,omitempty"`
+
+	// **参数解释**： 频道对应的region类型，是主region，还是备region **约束限制**： 如果region_type不填，或是没有该字段，则按照主region处理 **取值范围**： - master: 主region - slave: 备region - all: 所有region
+	RegionType *ShowChannelStatisticReqRegionType `json:"region_type,omitempty"`
 }
 
 func (o ShowChannelStatisticReq) String() string {
@@ -61,6 +64,57 @@ func (c ShowChannelStatisticReqType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ShowChannelStatisticReqType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ShowChannelStatisticReqRegionType struct {
+	value string
+}
+
+type ShowChannelStatisticReqRegionTypeEnum struct {
+	MASTER ShowChannelStatisticReqRegionType
+	SLAVE  ShowChannelStatisticReqRegionType
+	ALL    ShowChannelStatisticReqRegionType
+}
+
+func GetShowChannelStatisticReqRegionTypeEnum() ShowChannelStatisticReqRegionTypeEnum {
+	return ShowChannelStatisticReqRegionTypeEnum{
+		MASTER: ShowChannelStatisticReqRegionType{
+			value: "master",
+		},
+		SLAVE: ShowChannelStatisticReqRegionType{
+			value: "slave",
+		},
+		ALL: ShowChannelStatisticReqRegionType{
+			value: "all",
+		},
+	}
+}
+
+func (c ShowChannelStatisticReqRegionType) Value() string {
+	return c.value
+}
+
+func (c ShowChannelStatisticReqRegionType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowChannelStatisticReqRegionType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

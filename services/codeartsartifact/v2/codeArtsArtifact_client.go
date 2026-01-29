@@ -565,6 +565,27 @@ func (c *CodeArtsArtifactClient) ListSecGuardListInvoker(request *model.ListSecG
 	return &ListSecGuardListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListUserPrivileges 查询用户权限
+//
+// 查询用户在项目下的角色及权限，如创建仓库、编辑仓库、上传、下载、导入和导出等权限。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsArtifactClient) ListUserPrivileges(request *model.ListUserPrivilegesRequest) (*model.ListUserPrivilegesResponse, error) {
+	requestDef := GenReqDefForListUserPrivileges()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUserPrivilegesResponse), nil
+	}
+}
+
+// ListUserPrivilegesInvoker 查询用户权限
+func (c *CodeArtsArtifactClient) ListUserPrivilegesInvoker(request *model.ListUserPrivilegesRequest) *ListUserPrivilegesInvoker {
+	requestDef := GenReqDefForListUserPrivileges()
+	return &ListUserPrivilegesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ModifyRepository 编辑仓库
 //
 // 编辑仓库
@@ -922,6 +943,27 @@ func (c *CodeArtsArtifactClient) ShowProjectListInvoker(request *model.ShowProje
 	return &ShowProjectListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowProjectRelatedRepository 查询项目列表
+//
+// 调用该接口可以快速查询项目列表信息，包含仓库和项目的关联关系，以便于仓库的管理和协作。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsArtifactClient) ShowProjectRelatedRepository(request *model.ShowProjectRelatedRepositoryRequest) (*model.ShowProjectRelatedRepositoryResponse, error) {
+	requestDef := GenReqDefForShowProjectRelatedRepository()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProjectRelatedRepositoryResponse), nil
+	}
+}
+
+// ShowProjectRelatedRepositoryInvoker 查询项目列表
+func (c *CodeArtsArtifactClient) ShowProjectRelatedRepositoryInvoker(request *model.ShowProjectRelatedRepositoryRequest) *ShowProjectRelatedRepositoryInvoker {
+	requestDef := GenReqDefForShowProjectRelatedRepository()
+	return &ShowProjectRelatedRepositoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowProjectReleaseFiles 获取项目下文件版本信息列表
 //
 // 获取项目下文件版本信息列表
@@ -962,6 +1004,27 @@ func (c *CodeArtsArtifactClient) ShowProjectStorageInfo(request *model.ShowProje
 func (c *CodeArtsArtifactClient) ShowProjectStorageInfoInvoker(request *model.ShowProjectStorageInfoRequest) *ShowProjectStorageInfoInvoker {
 	requestDef := GenReqDefForShowProjectStorageInfo()
 	return &ShowProjectStorageInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProjectVersionsCount 查询项目下的版本数量
+//
+// 当发布库版本众多时，用户可根据项目ID查询对应发布库的版本数量，以便于管理和跟踪不同版本的发布情况。该接口支持通过版本名称过滤。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsArtifactClient) ShowProjectVersionsCount(request *model.ShowProjectVersionsCountRequest) (*model.ShowProjectVersionsCountResponse, error) {
+	requestDef := GenReqDefForShowProjectVersionsCount()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProjectVersionsCountResponse), nil
+	}
+}
+
+// ShowProjectVersionsCountInvoker 查询项目下的版本数量
+func (c *CodeArtsArtifactClient) ShowProjectVersionsCountInvoker(request *model.ShowProjectVersionsCountRequest) *ShowProjectVersionsCountInvoker {
+	requestDef := GenReqDefForShowProjectVersionsCount()
+	return &ShowProjectVersionsCountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -1050,6 +1113,27 @@ func (c *CodeArtsArtifactClient) ShowRepositoryInfoInvoker(request *model.ShowRe
 	return &ShowRepositoryInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowRepositoryRolesPrivilege 查询仓库权限
+//
+// 根据仓库ID查询指定仓库的权限，包含各角色对该仓库的权限信息。当用户需要指定仓库的指定权限时，可调用该接口查看需要授权的角色。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsArtifactClient) ShowRepositoryRolesPrivilege(request *model.ShowRepositoryRolesPrivilegeRequest) (*model.ShowRepositoryRolesPrivilegeResponse, error) {
+	requestDef := GenReqDefForShowRepositoryRolesPrivilege()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRepositoryRolesPrivilegeResponse), nil
+	}
+}
+
+// ShowRepositoryRolesPrivilegeInvoker 查询仓库权限
+func (c *CodeArtsArtifactClient) ShowRepositoryRolesPrivilegeInvoker(request *model.ShowRepositoryRolesPrivilegeRequest) *ShowRepositoryRolesPrivilegeInvoker {
+	requestDef := GenReqDefForShowRepositoryRolesPrivilege()
+	return &ShowRepositoryRolesPrivilegeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowStorage 仓库用量查询
 //
 // 仓库用量查询
@@ -1113,6 +1197,27 @@ func (c *CodeArtsArtifactClient) ShowUserTicketInvoker(request *model.ShowUserTi
 	return &ShowUserTicketInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowVersionList 查询发布库版本列表
+//
+// 当发布库版本众多时，用户可根据项目ID分页查询对应发布库下的版本列表。该接口支持版本名称的模糊搜索。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsArtifactClient) ShowVersionList(request *model.ShowVersionListRequest) (*model.ShowVersionListResponse, error) {
+	requestDef := GenReqDefForShowVersionList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVersionListResponse), nil
+	}
+}
+
+// ShowVersionListInvoker 查询发布库版本列表
+func (c *CodeArtsArtifactClient) ShowVersionListInvoker(request *model.ShowVersionListRequest) *ShowVersionListInvoker {
+	requestDef := GenReqDefForShowVersionList()
+	return &ShowVersionListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateArtifactory 编辑非maven仓库信息
 //
 // 编辑非maven仓库信息
@@ -1132,4 +1237,25 @@ func (c *CodeArtsArtifactClient) UpdateArtifactory(request *model.UpdateArtifact
 func (c *CodeArtsArtifactClient) UpdateArtifactoryInvoker(request *model.UpdateArtifactoryRequest) *UpdateArtifactoryInvoker {
 	requestDef := GenReqDefForUpdateArtifactory()
 	return &UpdateArtifactoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateRepoRolesPrivilege 更新角色权限
+//
+// 根据角色ID更新指定角色的权限，如创建仓库、编辑仓库、上传、下载、导入和导出等权限，实现权限的集中管理和自动化分配。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsArtifactClient) UpdateRepoRolesPrivilege(request *model.UpdateRepoRolesPrivilegeRequest) (*model.UpdateRepoRolesPrivilegeResponse, error) {
+	requestDef := GenReqDefForUpdateRepoRolesPrivilege()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateRepoRolesPrivilegeResponse), nil
+	}
+}
+
+// UpdateRepoRolesPrivilegeInvoker 更新角色权限
+func (c *CodeArtsArtifactClient) UpdateRepoRolesPrivilegeInvoker(request *model.UpdateRepoRolesPrivilegeRequest) *UpdateRepoRolesPrivilegeInvoker {
+	requestDef := GenReqDefForUpdateRepoRolesPrivilege()
+	return &UpdateRepoRolesPrivilegeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

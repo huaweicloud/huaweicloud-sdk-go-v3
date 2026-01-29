@@ -37,6 +37,9 @@ type FlowSource struct {
 	Name string `json:"name"`
 
 	Decryption *FlowSourceDecryption `json:"decryption,omitempty"`
+
+	// **参数解释**： 转推流状态 **约束限制**： 不涉及 **取值范围**： - CONNECTED：转推中 - DISCONNECTED：转推中断
+	HealthStatus *FlowSourceHealthStatus `json:"health_status,omitempty"`
 }
 
 func (o FlowSource) String() string {
@@ -77,6 +80,53 @@ func (c FlowSourceProtocol) MarshalJSON() ([]byte, error) {
 }
 
 func (c *FlowSourceProtocol) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type FlowSourceHealthStatus struct {
+	value string
+}
+
+type FlowSourceHealthStatusEnum struct {
+	CONNECTED    FlowSourceHealthStatus
+	DISCONNECTED FlowSourceHealthStatus
+}
+
+func GetFlowSourceHealthStatusEnum() FlowSourceHealthStatusEnum {
+	return FlowSourceHealthStatusEnum{
+		CONNECTED: FlowSourceHealthStatus{
+			value: "CONNECTED",
+		},
+		DISCONNECTED: FlowSourceHealthStatus{
+			value: "DISCONNECTED",
+		},
+	}
+}
+
+func (c FlowSourceHealthStatus) Value() string {
+	return c.value
+}
+
+func (c FlowSourceHealthStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *FlowSourceHealthStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

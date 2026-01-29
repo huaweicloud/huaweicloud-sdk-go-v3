@@ -26,7 +26,7 @@ type QueueDetails struct {
 	// **参数解释**： 连接的消费者数。 **取值范围**： 不涉及。
 	Consumers *int32 `json:"consumers,omitempty"`
 
-	// **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,,hws_eu)。 **取值范围**： 不涉及。
+	// **参数解释**： 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk,,hws_eu,srg)。 **取值范围**： 不涉及。
 	Policy *string `json:"policy,omitempty"`
 
 	Arguments *QueueArguments `json:"arguments,omitempty"`

@@ -649,6 +649,48 @@ func (c *ProjectManClient) CreateIpdProjectIssueAttachmentInvoker(request *model
 	return &CreateIpdProjectIssueAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteIpdImageInIssue 删除工作项描述中的图片
+//
+// 删除工作项描述中的图片
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) DeleteIpdImageInIssue(request *model.DeleteIpdImageInIssueRequest) (*model.DeleteIpdImageInIssueResponse, error) {
+	requestDef := GenReqDefForDeleteIpdImageInIssue()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteIpdImageInIssueResponse), nil
+	}
+}
+
+// DeleteIpdImageInIssueInvoker 删除工作项描述中的图片
+func (c *ProjectManClient) DeleteIpdImageInIssueInvoker(request *model.DeleteIpdImageInIssueRequest) *DeleteIpdImageInIssueInvoker {
+	requestDef := GenReqDefForDeleteIpdImageInIssue()
+	return &DeleteIpdImageInIssueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadIpdImageInIssue 下载工作项描述中的图片
+//
+// 下载工作项描述中的图片
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) DownloadIpdImageInIssue(request *model.DownloadIpdImageInIssueRequest) (*model.DownloadIpdImageInIssueResponse, error) {
+	requestDef := GenReqDefForDownloadIpdImageInIssue()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadIpdImageInIssueResponse), nil
+	}
+}
+
+// DownloadIpdImageInIssueInvoker 下载工作项描述中的图片
+func (c *ProjectManClient) DownloadIpdImageInIssueInvoker(request *model.DownloadIpdImageInIssueRequest) *DownloadIpdImageInIssueInvoker {
+	requestDef := GenReqDefForDownloadIpdImageInIssue()
+	return &DownloadIpdImageInIssueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListIpdProjectIssues 查询项目工作项列表
 //
 // 查询Ipd项目的工作项列表
@@ -794,6 +836,27 @@ func (c *ProjectManClient) TransferWorkItemFlow(request *model.TransferWorkItemF
 func (c *ProjectManClient) TransferWorkItemFlowInvoker(request *model.TransferWorkItemFlowRequest) *TransferWorkItemFlowInvoker {
 	requestDef := GenReqDefForTransferWorkItemFlow()
 	return &TransferWorkItemFlowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadIpdImageInIssue 上传图片到工作项描述中
+//
+// 上传图片并更新到工作项描述中
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) UploadIpdImageInIssue(request *model.UploadIpdImageInIssueRequest) (*model.UploadIpdImageInIssueResponse, error) {
+	requestDef := GenReqDefForUploadIpdImageInIssue()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadIpdImageInIssueResponse), nil
+	}
+}
+
+// UploadIpdImageInIssueInvoker 上传图片到工作项描述中
+func (c *ProjectManClient) UploadIpdImageInIssueInvoker(request *model.UploadIpdImageInIssueRequest) *UploadIpdImageInIssueInvoker {
+	requestDef := GenReqDefForUploadIpdImageInIssue()
+	return &UploadIpdImageInIssueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DownloadIpdIssueAttachment 根据ID下载工作项附件

@@ -35,6 +35,9 @@ type ShowGroupResponse struct {
 
 	// **参数解释**： 是否顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：开启顺序消费。 - false：不开启顺序消费。 **默认取值**： 不涉及。
 	ConsumeOrderly *bool `json:"consume_orderly,omitempty"`
+
+	// **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
+	GroupOnline    *bool `json:"group_online,omitempty"`
 	HttpStatusCode int   `json:"-"`
 }
 

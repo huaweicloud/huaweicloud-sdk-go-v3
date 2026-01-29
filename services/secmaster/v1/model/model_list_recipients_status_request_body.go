@@ -9,7 +9,7 @@ import (
 // ListRecipientsStatusRequestBody 查询收件人状态请求体
 type ListRecipientsStatusRequestBody struct {
 
-	// 收件人邮箱,可以为多个，多个时由英文分号(\";\")分割
+	// 收件人邮箱,可以为多个，多个时由英文分号(\";\")分隔
 	EmailAddress string `json:"email_address"`
 }
 

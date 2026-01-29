@@ -67,7 +67,7 @@ type ShowWorkspaceResponseBodyWorkspace struct {
 	ViewBindName *string `json:"view_bind_name,omitempty"`
 
 	// 纳管空间列表
-	WorkspaceAgencyList *[]CreateWorkspaceResponseBodyWorkspaceAgencyList `json:"workspace_agency_list,omitempty"`
+	WorkspaceAgencyList *[]UpdateWorkspaceResponseBodyWorkspaceAgencyList `json:"workspace_agency_list,omitempty"`
 }
 
 func (o ShowWorkspaceResponseBodyWorkspace) String() string {

@@ -35,6 +35,12 @@ type ShowPreProcessRulesListResponseBodyData struct {
 	// 预处理选项: drop-丢弃
 	Action *ShowPreProcessRulesListResponseBodyDataAction `json:"action,omitempty"`
 
+	// 创建者id
+	CreatorId *string `json:"creator_id,omitempty"`
+
+	// 创建者名称
+	CreatorName *string `json:"creator_name,omitempty"`
+
 	// 表达式
 	Expression *string `json:"expression,omitempty"`
 
@@ -43,6 +49,12 @@ type ShowPreProcessRulesListResponseBodyData struct {
 
 	// 更新时间
 	UpdateTime *string `json:"update_time,omitempty"`
+
+	// 修改者id
+	ModifierId *string `json:"modifier_id,omitempty"`
+
+	// 修改者名称
+	ModifierName *string `json:"modifier_name,omitempty"`
 }
 
 func (o ShowPreProcessRulesListResponseBodyData) String() string {

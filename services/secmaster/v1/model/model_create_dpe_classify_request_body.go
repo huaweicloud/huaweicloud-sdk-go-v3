@@ -15,6 +15,10 @@ type CreateDpeClassifyRequestBody struct {
 	// 名称
 	Name string `json:"name"`
 
+	ProjectId *interface{} `json:"project_id,omitempty"`
+
+	WorkspaceId *interface{} `json:"workspace_id,omitempty"`
+
 	// 映射id
 	DataclassId string `json:"dataclass_id"`
 

@@ -18,7 +18,7 @@ type TemplateDisk struct {
 	// 磁盘名称
 	Name string `json:"name"`
 
-	// 磁盘类型，同volumetype字段（长文本信息，非枚举数据，来源于EVS服务） 详细类型请参考EIP服务API文档中“查询单个云硬盘详情”部分，查看响应参数的中volume_type字段描述
+	// 磁盘类型，同volumetype字段（非枚举数据，来源于EVS服务） 详细类型请参考EIP服务API文档中“查询单个云硬盘详情”部分，查看响应参数的中volume_type字段描述
 	Disktype string `json:"disktype"`
 
 	// 磁盘大小，单位：GB

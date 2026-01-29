@@ -10,7 +10,7 @@ import (
 type PutLogicalVolume struct {
 
 	// 逻辑卷ID
-	Id string `json:"id"`
+	Id *string `json:"id,omitempty"`
 
 	// 是否迁移
 	NeedMigration *bool `json:"need_migration,omitempty"`

@@ -10,7 +10,7 @@ import (
 type ShowKafkaUserClientQuotaResponse struct {
 
 	// 客户端流控配置列表。
-	Quotas *[]Quota `json:"quotas,omitempty"`
+	Quotas *[]QuotaResp `json:"quotas,omitempty"`
 
 	// 用户/客户端流控配置数目。
 	Count          *int32 `json:"count,omitempty"`

@@ -9,7 +9,7 @@ import (
 // ProductRspLargeScreen 安全大屏商品编码对象
 type ProductRspLargeScreen struct {
 
-	// 云服务产品的主服务类型，云脑默认为：hws.service.type.sa
+	// 云服务产品的主服务类型，云脑默认为：xxx.service.type.sa
 	CloudServiceType *string `json:"cloud_service_type,omitempty"`
 
 	// 资源类型编码

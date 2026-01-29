@@ -12,7 +12,7 @@ type CreateLogGroupParams struct {
 	// 需要创建的日志组名称。
 	LogGroupName string `json:"log_group_name"`
 
-	// 日志存储时间（天），取值范围：1-30。
+	// 日志存储时间（天），取值范围：1-365。
 	TtlInDays int32 `json:"ttl_in_days"`
 
 	// 标签字段信息

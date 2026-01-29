@@ -15,9 +15,6 @@ type ListErrorServersRequest struct {
 	// 偏移量
 	Offset int32 `json:"offset"`
 
-	// 需要查询的迁移项目ID，添加此字段将只查询对应ID下的迁移任务报错信息
-	Migproject *string `json:"migproject,omitempty"`
-
 	// 需要查询的企业项目ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 }

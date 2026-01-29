@@ -15,20 +15,23 @@ type PostSourceServerBody struct {
 	// 源端在SMS数据库中的ID
 	Id *string `json:"id,omitempty"`
 
-	// 源端服务器ip，注册源端时必选，更新非必选
+	// 源端服务器ip，格式需满足ip标准格式。ip与ipv6必填一个。
 	Ip *string `json:"ip,omitempty"`
 
-	// 用来区分不同源端服务器的名称
-	Name *string `json:"name,omitempty"`
+	// 源端服务器ip，格式需满足ipv6标准格式。ip与ipv6必填一个。
+	Ipv6 *string `json:"ipv6,omitempty"`
 
-	// 源端主机名，注册源端必选，更新非必选
+	// 用来区分不同源端服务器的名称
+	Name string `json:"name"`
+
+	// 源端主机名
 	Hostname *string `json:"hostname,omitempty"`
 
 	// 源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
-	OsType *PostSourceServerBodyOsType `json:"os_type,omitempty"`
+	OsType PostSourceServerBodyOsType `json:"os_type"`
 
 	// 操作系统版本，注册必选，更新非必选
-	OsVersion *string `json:"os_version,omitempty"`
+	OsVersion string `json:"os_version"`
 
 	// Linux操作系统块检查
 	LinuxBlockCheck *string `json:"linux_block_check,omitempty"`
@@ -45,44 +48,44 @@ type PostSourceServerBody struct {
 	// 源端服务器的磁盘信息
 	Disks *[]ServerDisk `json:"disks,omitempty"`
 
-	// Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
+	// 源端的Btrfs信息。如果源端不存在Btrfs，则为[] Linux场景必选，否则无法通过后续环境检查
 	BtrfsList *[]BtrfsFileSystem `json:"btrfs_list,omitempty"`
 
 	// 源端服务器的网卡信息
-	Networks *[]NetWork `json:"networks,omitempty"`
+	Networks []NetWork `json:"networks"`
 
 	// 租户的domainId
 	DomainId *string `json:"domain_id,omitempty"`
 
-	// 是否安装rsync组件，Linux系统此参数为必选
+	// 是否安装rsync组件，Linux系统此参数为必选，否则无法通过后续环境检查
 	HasRsync *bool `json:"has_rsync,omitempty"`
 
-	// Linux场景必选，源端是否是半虚拟化
+	// 源端是否是半虚拟化 Linux场景必选，否则无法通过后续环境检查
 	Paravirtualization *bool `json:"paravirtualization,omitempty"`
 
-	// Linux必选，裸设备列表
+	// 裸设备列表 Linux场景必选，否则无法通过后续环境检查
 	RawDevices *string `json:"raw_devices,omitempty"`
 
-	// Windows 必选，是否缺少驱动文件
+	// 是否缺少驱动文件 Windows场景必选，否则无法通过后续环境检查
 	DriverFiles *bool `json:"driver_files,omitempty"`
 
-	// Windows必选，是否存在不正常服务
+	// 是否存在不正常服务 Windows场景必选，否则无法通过后续环境检查
 	SystemServices *bool `json:"system_services,omitempty"`
 
-	// Windows必选，权限是否满足要求
+	// 权限是否满足要求 Windows场景必选，否则无法通过后续环境检查
 	AccountRights *bool `json:"account_rights,omitempty"`
 
-	// Linux必选，系统引导类型，BOOT_LOADER(GRUB/LILO)
-	BootLoader *PostSourceServerBodyBootLoader `json:"boot_loader,omitempty"`
+	// 系统引导类型 仅允许“GRUB”取值，Linux场景必选，否则无法通过后续环境检查
+	BootLoader *string `json:"boot_loader,omitempty"`
 
-	// Windows必选，系统目录
+	// 系统目录 Windows场景必选，否则无法通过后续环境检查
 	SystemDir *string `json:"system_dir,omitempty"`
 
-	// Linux必选，如果没有卷组，输入[]
+	// 卷组 如果没有卷组，输入[] Linux场景必选，否则无法通过后续环境检查
 	VolumeGroups *[]VolumeGroups `json:"volume_groups,omitempty"`
 
 	// Agent版本
-	AgentVersion *string `json:"agent_version,omitempty"`
+	AgentVersion string `json:"agent_version"`
 
 	// 内核版本信息
 	KernelVersion *string `json:"kernel_version,omitempty"`
@@ -90,22 +93,22 @@ type PostSourceServerBody struct {
 	// 迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
 	MigrationCycle *PostSourceServerBodyMigrationCycle `json:"migration_cycle,omitempty"`
 
-	// 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready：迁移演练就绪 premiged：迁移演练完成 premigfailed：迁移演练失败 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 error：错误
+	// 源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready：迁移演练就绪 premiging：迁移演练中 premiged：迁移演练完成 premigfailed：迁移演练失败 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 error：错误
 	State *PostSourceServerBodyState `json:"state,omitempty"`
 
 	// 是否是OEM操作系统(Windows)
 	OemSystem *bool `json:"oem_system,omitempty"`
 
-	// 启动方式，可以取值MANUAL、MGC或者空。
-	StartType *PostSourceServerBodyStartType `json:"start_type,omitempty"`
+	// 启动方式 可以取值MANUAL、MGC或者空，不进行校验
+	StartType *string `json:"start_type,omitempty"`
 
 	// 磁盘IO读时延，单位为ms
 	IoReadWait *float64 `json:"io_read_wait,omitempty"`
 
-	// 是否安装tc组件，Linux系统此参数为必选
+	// 是否安装tc组件，Linux系统此参数为必选，否则无法通过后续环境检查
 	HasTc *bool `json:"has_tc,omitempty"`
 
-	// 平台信息: hw：华为  ali：阿里 aws：亚马逊 azure：微软云 gcp：谷歌云 tencent：腾讯云 vmware hyperv other：其他
+	// 平台信息: hw：华为  ali：阿里 aws：亚马逊 azure：微软云 gcp：谷歌云 tencent：腾讯云 vmware：VMware hyperv：HyperV other：其他 default：默认
 	Platform *PostSourceServerBodyPlatform `json:"platform,omitempty"`
 }
 
@@ -194,53 +197,6 @@ func (c PostSourceServerBodyFirmware) MarshalJSON() ([]byte, error) {
 }
 
 func (c *PostSourceServerBodyFirmware) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type PostSourceServerBodyBootLoader struct {
-	value string
-}
-
-type PostSourceServerBodyBootLoaderEnum struct {
-	GRUB PostSourceServerBodyBootLoader
-	LILO PostSourceServerBodyBootLoader
-}
-
-func GetPostSourceServerBodyBootLoaderEnum() PostSourceServerBodyBootLoaderEnum {
-	return PostSourceServerBodyBootLoaderEnum{
-		GRUB: PostSourceServerBodyBootLoader{
-			value: "GRUB",
-		},
-		LILO: PostSourceServerBodyBootLoader{
-			value: "LILO",
-		},
-	}
-}
-
-func (c PostSourceServerBodyBootLoader) Value() string {
-	return c.value
-}
-
-func (c PostSourceServerBodyBootLoader) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *PostSourceServerBodyBootLoader) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")
@@ -437,57 +393,6 @@ func (c *PostSourceServerBodyState) UnmarshalJSON(b []byte) error {
 	}
 }
 
-type PostSourceServerBodyStartType struct {
-	value string
-}
-
-type PostSourceServerBodyStartTypeEnum struct {
-	MANUAL PostSourceServerBodyStartType
-	MGC    PostSourceServerBodyStartType
-	EMPTY  PostSourceServerBodyStartType
-}
-
-func GetPostSourceServerBodyStartTypeEnum() PostSourceServerBodyStartTypeEnum {
-	return PostSourceServerBodyStartTypeEnum{
-		MANUAL: PostSourceServerBodyStartType{
-			value: "MANUAL",
-		},
-		MGC: PostSourceServerBodyStartType{
-			value: "MGC",
-		},
-		EMPTY: PostSourceServerBodyStartType{
-			value: "",
-		},
-	}
-}
-
-func (c PostSourceServerBodyStartType) Value() string {
-	return c.value
-}
-
-func (c PostSourceServerBodyStartType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *PostSourceServerBodyStartType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
 type PostSourceServerBodyPlatform struct {
 	value string
 }
@@ -502,6 +407,7 @@ type PostSourceServerBodyPlatformEnum struct {
 	VMWARE  PostSourceServerBodyPlatform
 	HYPERV  PostSourceServerBodyPlatform
 	OTHER   PostSourceServerBodyPlatform
+	DEFAULT PostSourceServerBodyPlatform
 }
 
 func GetPostSourceServerBodyPlatformEnum() PostSourceServerBodyPlatformEnum {
@@ -532,6 +438,9 @@ func GetPostSourceServerBodyPlatformEnum() PostSourceServerBodyPlatformEnum {
 		},
 		OTHER: PostSourceServerBodyPlatform{
 			value: "other",
+		},
+		DEFAULT: PostSourceServerBodyPlatform{
+			value: "default",
 		},
 	}
 }

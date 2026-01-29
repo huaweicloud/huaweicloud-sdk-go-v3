@@ -277,22 +277,6 @@ func (i *CreatePartitionInvoker) Invoke() (*model.CreatePartitionResponse, error
 	}
 }
 
-type CreatePostPaidInstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreatePostPaidInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreatePostPaidInstanceInvoker) Invoke() (*model.CreatePostPaidInstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreatePostPaidInstanceResponse), nil
-	}
-}
-
 type CreatePostPaidKafkaInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -306,22 +290,6 @@ func (i *CreatePostPaidKafkaInstanceInvoker) Invoke() (*model.CreatePostPaidKafk
 		return nil, err
 	} else {
 		return result.(*model.CreatePostPaidKafkaInstanceResponse), nil
-	}
-}
-
-type CreateReassignmentTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateReassignmentTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateReassignmentTaskInvoker) Invoke() (*model.CreateReassignmentTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateReassignmentTaskResponse), nil
 	}
 }
 
@@ -402,22 +370,6 @@ func (i *DeleteInstanceConsumerGroupInvoker) Invoke() (*model.DeleteInstanceCons
 		return nil, err
 	} else {
 		return result.(*model.DeleteInstanceConsumerGroupResponse), nil
-	}
-}
-
-type DeleteKafkaMessageInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteKafkaMessageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteKafkaMessageInvoker) Invoke() (*model.DeleteKafkaMessageResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteKafkaMessageResponse), nil
 	}
 }
 
@@ -693,22 +645,6 @@ func (i *ListMessageDiagnosisReportsInvoker) Invoke() (*model.ListMessageDiagnos
 	}
 }
 
-type ListProductsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListProductsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListProductsInvoker) Invoke() (*model.ListProductsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListProductsResponse), nil
-	}
-}
-
 type ListScheduledTasksInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -754,22 +690,6 @@ func (i *ListTopicProducersInvoker) Invoke() (*model.ListTopicProducersResponse,
 		return nil, err
 	} else {
 		return result.(*model.ListTopicProducersResponse), nil
-	}
-}
-
-type ListUserPoliciesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListUserPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListUserPoliciesInvoker) Invoke() (*model.ListUserPoliciesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListUserPoliciesResponse), nil
 	}
 }
 
@@ -917,38 +837,6 @@ func (i *ResetUserPasswrodInvoker) Invoke() (*model.ResetUserPasswrodResponse, e
 	}
 }
 
-type ResizeEngineInstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ResizeEngineInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ResizeEngineInstanceInvoker) Invoke() (*model.ResizeEngineInstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ResizeEngineInstanceResponse), nil
-	}
-}
-
-type ResizeInstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ResizeInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ResizeInstanceInvoker) Invoke() (*model.ResizeInstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ResizeInstanceResponse), nil
-	}
-}
-
 type ResizeKafkaInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1010,22 +898,6 @@ func (i *SendKafkaMessageInvoker) Invoke() (*model.SendKafkaMessageResponse, err
 		return nil, err
 	} else {
 		return result.(*model.SendKafkaMessageResponse), nil
-	}
-}
-
-type SetUserPoliciesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SetUserPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *SetUserPoliciesInvoker) Invoke() (*model.SetUserPoliciesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SetUserPoliciesResponse), nil
 	}
 }
 
@@ -1125,22 +997,6 @@ func (i *ShowDiagnosisPreCheckInvoker) Invoke() (*model.ShowDiagnosisPreCheckRes
 	}
 }
 
-type ShowEngineInstanceExtendProductInfoInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowEngineInstanceExtendProductInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowEngineInstanceExtendProductInfoInvoker) Invoke() (*model.ShowEngineInstanceExtendProductInfoResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowEngineInstanceExtendProductInfoResponse), nil
-	}
-}
-
 type ShowGroupInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1202,22 +1058,6 @@ func (i *ShowInstanceConfigsInvoker) Invoke() (*model.ShowInstanceConfigsRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceConfigsResponse), nil
-	}
-}
-
-type ShowInstanceExtendProductInfoInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowInstanceExtendProductInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowInstanceExtendProductInfoInvoker) Invoke() (*model.ShowInstanceExtendProductInfoResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowInstanceExtendProductInfoResponse), nil
 	}
 }
 
@@ -1570,22 +1410,6 @@ func (i *ShowRecycleInstancesInvoker) Invoke() (*model.ShowRecycleInstancesRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowRecycleInstancesResponse), nil
-	}
-}
-
-type ShowSpecConvertProductInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowSpecConvertProductInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowSpecConvertProductInvoker) Invoke() (*model.ShowSpecConvertProductResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowSpecConvertProductResponse), nil
 	}
 }
 
