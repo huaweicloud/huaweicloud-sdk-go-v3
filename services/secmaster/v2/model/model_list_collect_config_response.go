@@ -12,7 +12,7 @@ type ListCollectConfigResponse struct {
 	// 所有的云厂商、云产品和日志
 	AllVendors *[]ListCollectConfigResponseBodyAllVendors `json:"all_vendors,omitempty"`
 
-	CofingStatistics *ListCollectConfigResponseBodyCofingStatistics `json:"cofing_statistics,omitempty"`
+	ConfigStatistics *ListCollectConfigResponseBodyConfigStatistics `json:"config_statistics,omitempty"`
 
 	// 数据
 	DataList *[]ListCollectConfigResponseBodyDataList `json:"data_list,omitempty"`

@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -36,14 +39,14 @@ type ListApisV2Request struct {
 	// 请求路径
 	ReqUri *string `json:"req_uri,omitempty"`
 
-	// 授权类型
-	AuthType *string `json:"auth_type,omitempty"`
+	// 授权类型。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
+	AuthType *ListApisV2RequestAuthType `json:"auth_type,omitempty"`
 
 	// 发布的环境编号
 	EnvId *string `json:"env_id,omitempty"`
 
-	// API类型
-	Type *int32 `json:"type,omitempty"`
+	// API类型。 - 1：公有API - 2：私有API
+	Type *ListApisV2RequestType `json:"type,omitempty"`
 
 	// 指定需要精确匹配查找的参数名称，目前仅支持name、req_uri
 	PreciseSearch *string `json:"precise_search,omitempty"`
@@ -65,4 +68,105 @@ func (o ListApisV2Request) String() string {
 	}
 
 	return strings.Join([]string{"ListApisV2Request", string(data)}, " ")
+}
+
+type ListApisV2RequestAuthType struct {
+	value string
+}
+
+type ListApisV2RequestAuthTypeEnum struct {
+	NONE       ListApisV2RequestAuthType
+	APP        ListApisV2RequestAuthType
+	IAM        ListApisV2RequestAuthType
+	AUTHORIZER ListApisV2RequestAuthType
+}
+
+func GetListApisV2RequestAuthTypeEnum() ListApisV2RequestAuthTypeEnum {
+	return ListApisV2RequestAuthTypeEnum{
+		NONE: ListApisV2RequestAuthType{
+			value: "NONE",
+		},
+		APP: ListApisV2RequestAuthType{
+			value: "APP",
+		},
+		IAM: ListApisV2RequestAuthType{
+			value: "IAM",
+		},
+		AUTHORIZER: ListApisV2RequestAuthType{
+			value: "AUTHORIZER",
+		},
+	}
+}
+
+func (c ListApisV2RequestAuthType) Value() string {
+	return c.value
+}
+
+func (c ListApisV2RequestAuthType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListApisV2RequestAuthType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListApisV2RequestType struct {
+	value int32
+}
+
+type ListApisV2RequestTypeEnum struct {
+	E_1 ListApisV2RequestType
+	E_2 ListApisV2RequestType
+}
+
+func GetListApisV2RequestTypeEnum() ListApisV2RequestTypeEnum {
+	return ListApisV2RequestTypeEnum{
+		E_1: ListApisV2RequestType{
+			value: 1,
+		}, E_2: ListApisV2RequestType{
+			value: 2,
+		},
+	}
+}
+
+func (c ListApisV2RequestType) Value() int32 {
+	return c.value
+}
+
+func (c ListApisV2RequestType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListApisV2RequestType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

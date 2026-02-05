@@ -23,8 +23,8 @@ type UnbindApiForAcl struct {
 	// API所属分组的名称
 	GroupName *string `json:"group_name,omitempty"`
 
-	// API开放状态
-	Type *int32 `json:"type,omitempty"`
+	// API开放状态。 - 1：公有API - 2：私有API
+	Type *UnbindApiForAclType `json:"type,omitempty"`
 
 	// API描述
 	Remark *string `json:"remark,omitempty"`
@@ -44,8 +44,8 @@ type UnbindApiForAcl struct {
 	// API的请求地址
 	ReqUri *string `json:"req_uri,omitempty"`
 
-	// API的认证方式
-	AuthType *string `json:"auth_type,omitempty"`
+	// API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
+	AuthType *UnbindApiForAclAuthType `json:"auth_type,omitempty"`
 
 	// API请求方法
 	ReqMethod *UnbindApiForAclReqMethod `json:"req_method,omitempty"`
@@ -61,6 +61,107 @@ func (o UnbindApiForAcl) String() string {
 	}
 
 	return strings.Join([]string{"UnbindApiForAcl", string(data)}, " ")
+}
+
+type UnbindApiForAclType struct {
+	value int32
+}
+
+type UnbindApiForAclTypeEnum struct {
+	E_1 UnbindApiForAclType
+	E_2 UnbindApiForAclType
+}
+
+func GetUnbindApiForAclTypeEnum() UnbindApiForAclTypeEnum {
+	return UnbindApiForAclTypeEnum{
+		E_1: UnbindApiForAclType{
+			value: 1,
+		}, E_2: UnbindApiForAclType{
+			value: 2,
+		},
+	}
+}
+
+func (c UnbindApiForAclType) Value() int32 {
+	return c.value
+}
+
+func (c UnbindApiForAclType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UnbindApiForAclType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
+}
+
+type UnbindApiForAclAuthType struct {
+	value string
+}
+
+type UnbindApiForAclAuthTypeEnum struct {
+	NONE       UnbindApiForAclAuthType
+	APP        UnbindApiForAclAuthType
+	IAM        UnbindApiForAclAuthType
+	AUTHORIZER UnbindApiForAclAuthType
+}
+
+func GetUnbindApiForAclAuthTypeEnum() UnbindApiForAclAuthTypeEnum {
+	return UnbindApiForAclAuthTypeEnum{
+		NONE: UnbindApiForAclAuthType{
+			value: "NONE",
+		},
+		APP: UnbindApiForAclAuthType{
+			value: "APP",
+		},
+		IAM: UnbindApiForAclAuthType{
+			value: "IAM",
+		},
+		AUTHORIZER: UnbindApiForAclAuthType{
+			value: "AUTHORIZER",
+		},
+	}
+}
+
+func (c UnbindApiForAclAuthType) Value() string {
+	return c.value
+}
+
+func (c UnbindApiForAclAuthType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UnbindApiForAclAuthType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type UnbindApiForAclReqMethod struct {

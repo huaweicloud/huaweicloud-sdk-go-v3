@@ -12,7 +12,7 @@ type ListCollectConfigResponseBodySourceList struct {
 	CsvcDisplay *string `json:"csvc_display,omitempty"`
 
 	// 云产品描述
-	CsvcHzzelp *string `json:"csvc_hzzelp,omitempty"`
+	CsvcHelp *string `json:"csvc_help,omitempty"`
 
 	// 链接
 	Link *string `json:"link,omitempty"`

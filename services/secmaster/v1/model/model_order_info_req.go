@@ -29,10 +29,10 @@ type OrderInfoReq struct {
 
 	Config *OrderConfig `json:"config,omitempty"`
 
-	// 当scene=PREPAID时需要填写，订购周期类型： 2：月； 3：年；
+	// 当scene=PREPAID时需要填写，订阅周期类型： 2：月； 3：年；
 	PeriodType *OrderInfoReqPeriodType `json:"period_type,omitempty"`
 
-	// 订购周期数，当scene=PREPAID时需要填写该值 取值大于0；小于等于0会报错。 当period_type=2时，其可选范围为[1, 9]，当period_type=3，其可选范围为[1, 3]
+	// 订阅周期数，当scene=PREPAID时需要填写该值 取值大于0；小于等于0会报错。 当period_type=2时，其可选范围为[1, 9]，当period_type=3，其可选范围为[1, 3]
 	PeriodNum *OrderInfoReqPeriodNum `json:"period_num,omitempty"`
 
 	// 当scene=PREPAID时，当前字段必填，是否自动续订，为空时表示不自动续订； 1：自动续订 0：不自动续订（默认）

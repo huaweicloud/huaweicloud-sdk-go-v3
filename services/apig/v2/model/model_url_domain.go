@@ -20,10 +20,10 @@ type UrlDomain struct {
 	// 域名cname状态： - 1：未解析 - 2：解析中 - 3：解析成功 - 4：解析失败
 	CnameStatus *int32 `json:"cname_status,omitempty"`
 
-	// SSL证书编号
+	// SSL证书编号。当绑定的证书有RSA类型时，该字段有值，且展示对应RSA证书的编号。
 	SslId *string `json:"ssl_id,omitempty"`
 
-	// SSL证书名称
+	// SSL证书名称。当绑定的证书有RSA类型时，该字段有值，且展示对应RSA证书的名称。
 	SslName *string `json:"ssl_name,omitempty"`
 
 	// 最小ssl协议版本号。支持TLSv1.1或TLSv1.2
@@ -32,7 +32,7 @@ type UrlDomain struct {
 	// 是否开启客户端证书校验。只有绑定证书时，该参数才生效。当绑定证书存在trusted_root_ca时，默认开启；当绑定证书不存在trusted_root_ca时，默认关闭。
 	VerifiedClientCertificateEnabled *bool `json:"verified_client_certificate_enabled,omitempty"`
 
-	// 是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+	// 是否存在信任的根证书CA。只有当域名绑定的所有证书都存在信任的根证书CA时为true。
 	IsHasTrustedRootCa *bool `json:"is_has_trusted_root_ca,omitempty"`
 
 	// 访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；如果填写该参数，则必须同时填写https_port；如果要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。

@@ -30,7 +30,7 @@ type ServerHdaUpgradeRecord struct {
 	// 目标的accessAgent版本。
 	TargetVersion *string `json:"target_version,omitempty"`
 
-	// HDA升级状态。
+	// HDA升级状态： - fail：升级失败 - upgrade success：升级成功
 	UpgradeStatus *string `json:"upgrade_status,omitempty"`
 
 	// 更新时间。

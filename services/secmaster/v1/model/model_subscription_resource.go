@@ -30,11 +30,17 @@ type SubscriptionResource struct {
 	// 资源规格编码
 	ResourceSpecCode *string `json:"resource_spec_code,omitempty"`
 
-	// 创建时间戳
-	CreateTime *string `json:"create_time,omitempty"`
+	// 当前资源是否能进行按需转包周期操作
+	ToPeriod *bool `json:"to_period,omitempty"`
 
-	// 到期时间戳，只有按需资源有该字段
-	ExpireTime *string `json:"expire_time,omitempty"`
+	// 创建时间戳
+	CreateTime *int64 `json:"create_time,omitempty"`
+
+	// 更新时间戳
+	UpdateTime *int64 `json:"update_time,omitempty"`
+
+	// 到期时间戳，只有包年包月资源才有该字段
+	ExpireTime *int64 `json:"expire_time,omitempty"`
 
 	// 资源状态，目前返回正常运行的资源，其状态值为0
 	ResourceStatus *int32 `json:"resource_status,omitempty"`

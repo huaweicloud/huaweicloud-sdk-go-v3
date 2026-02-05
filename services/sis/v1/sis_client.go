@@ -61,6 +61,27 @@ func (c *SisClient) CreateVocabularyInvoker(request *model.CreateVocabularyReque
 	return &CreateVocabularyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateVoice 注册接口
+//
+// 客户上传一段录音，并指定voice_name，在系统中注册声音。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SisClient) CreateVoice(request *model.CreateVoiceRequest) (*model.CreateVoiceResponse, error) {
+	requestDef := GenReqDefForCreateVoice()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateVoiceResponse), nil
+	}
+}
+
+// CreateVoiceInvoker 注册接口
+func (c *SisClient) CreateVoiceInvoker(request *model.CreateVoiceRequest) *CreateVoiceInvoker {
+	requestDef := GenReqDefForCreateVoice()
+	return &CreateVoiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteVocabulary 删除热词表
 //
 // 通过热词表id删除热词表。
@@ -80,6 +101,48 @@ func (c *SisClient) DeleteVocabulary(request *model.DeleteVocabularyRequest) (*m
 func (c *SisClient) DeleteVocabularyInvoker(request *model.DeleteVocabularyRequest) *DeleteVocabularyInvoker {
 	requestDef := GenReqDefForDeleteVocabulary()
 	return &DeleteVocabularyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GenerateSpeech 合成接口
+//
+// 用户指定一个声色名称，并指定对应的文本，合成对应的复刻的声音
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SisClient) GenerateSpeech(request *model.GenerateSpeechRequest) (*model.GenerateSpeechResponse, error) {
+	requestDef := GenReqDefForGenerateSpeech()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GenerateSpeechResponse), nil
+	}
+}
+
+// GenerateSpeechInvoker 合成接口
+func (c *SisClient) GenerateSpeechInvoker(request *model.GenerateSpeechRequest) *GenerateSpeechInvoker {
+	requestDef := GenReqDefForGenerateSpeech()
+	return &GenerateSpeechInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVoices 查询接口
+//
+// 查询已注册的声音列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SisClient) ListVoices(request *model.ListVoicesRequest) (*model.ListVoicesResponse, error) {
+	requestDef := GenReqDefForListVoices()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVoicesResponse), nil
+	}
+}
+
+// ListVoicesInvoker 查询接口
+func (c *SisClient) ListVoicesInvoker(request *model.ListVoicesRequest) *ListVoicesInvoker {
+	requestDef := GenReqDefForListVoices()
+	return &ListVoicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // PushTranscriberJobs 提交录音文件识别任务

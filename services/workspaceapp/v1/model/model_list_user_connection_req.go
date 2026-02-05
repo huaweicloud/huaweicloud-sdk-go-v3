@@ -13,7 +13,7 @@ type ListUserConnectionReq struct {
 	// 登录记录唯一标识ID。
 	Id *string `json:"id,omitempty"`
 
-	// 用户连接类别。
+	// 用户连接类别,1代表共享桌面，2代表普通应用。
 	ConnectType *string `json:"connect_type,omitempty"`
 
 	// 登录用户名称。
@@ -37,7 +37,7 @@ type ListUserConnectionReq struct {
 	// 客户端版本。
 	ClientVersion *string `json:"client_version,omitempty"`
 
-	// 客户端操作系统类型。
+	// 客户端操作系统类型： - Mac - Windows
 	ClientType *string `json:"client_type,omitempty"`
 
 	// aps hda版本。
@@ -55,16 +55,16 @@ type ListUserConnectionReq struct {
 	// 客户端出口ip。
 	PublicIp *string `json:"public_ip,omitempty"`
 
-	// 登录应用开始时间，格式 2022-10-31T08:07:39Z。
+	// 登录应用开始时间，只支持导出30天内数据，格式 2022-10-31T08:07:39Z。
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
 	// 租户id。
 	TenantId *string `json:"tenant_id,omitempty"`
 
-	// 登录应用开始时间，格式 2022-10-31T08:07:39Z。
+	// 登录应用开始时间，只支持导出30天内数据，格式 2022-10-31T08:07:39Z，参数中login_start_time与login_end_time必须同时存在或都不存在，都不存在时导出近一个月的数据。
 	LoginStartTime *sdktime.SdkTime `json:"login_start_time,omitempty"`
 
-	// 登录应用结束时间，格式 2022-10-31T08:07:39Z。
+	// 登录应用结束时间，只支持导出30天内数据，格式 2022-10-31T08:07:39Z，参数中login_start_time与login_end_time必须同时存在或都不存在，都不存在时导出近一个月的数据。
 	LoginEndTime *sdktime.SdkTime `json:"login_end_time,omitempty"`
 
 	// 会话虚拟ip。

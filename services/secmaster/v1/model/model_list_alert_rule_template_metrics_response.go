@@ -8,10 +8,10 @@ import (
 
 // ListAlertRuleTemplateMetricsResponse Response Object
 type ListAlertRuleTemplateMetricsResponse struct {
+	Severity *AlertRuleTemplateMetric `json:"severity,omitempty"`
 
-	// 响应结果
-	Body           map[string]AlertRuleTemplateMetric `json:"body,omitempty"`
-	HttpStatusCode int                                `json:"-"`
+	Status         *AlertRuleTemplateMetric `json:"status,omitempty"`
+	HttpStatusCode int                      `json:"-"`
 }
 
 func (o ListAlertRuleTemplateMetricsResponse) String() string {

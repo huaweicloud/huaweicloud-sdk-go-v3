@@ -24,7 +24,7 @@ type CompliancePackageModel struct {
 	SpecCatalogVoList *[]BaselineCatalogModel `json:"spec_catalog_vo_list,omitempty"`
 
 	// 对遵从包的描述
-	Description string `json:"description"`
+	Description *string `json:"description,omitempty"`
 
 	// 遵从包的分类
 	Classify *string `json:"classify,omitempty"`

@@ -8,8 +8,14 @@ import (
 
 type ConfigurationUpdateReqV3 struct {
 
-	// **参数解释**：  修改参数组相关信息。  **参数范围**：  不涉及。
-	UpdatePara *interface{} `json:"update_para,omitempty"`
+	// **参数解释**：  描述。  **约束限制**：  不涉及  **取值范围**：  0-256的不是!、<、>、=、&、\" 或 ' 的字符。  **默认取值**：  不涉及。
+	Description *string `json:"description,omitempty"`
+
+	// **参数解释**：  修改的值。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
+	Values map[string]string `json:"values"`
+
+	// **参数解释**：  参数的名称。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
+	Name *string `json:"name,omitempty"`
 }
 
 func (o ConfigurationUpdateReqV3) String() string {

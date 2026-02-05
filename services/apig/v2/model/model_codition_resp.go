@@ -14,7 +14,7 @@ type CoditionResp struct {
 	// 关联的请求参数对象名称。策略类型为param时必选
 	ReqParamName *string `json:"req_param_name,omitempty"`
 
-	// 系统参数-网关内置参数名称。策略类型为system时必选。支持以下参数 - req_path：请求路径。如 /a/b - req_method：请求方法。如 GET
+	// 系统参数-网关内置参数名称。策略类型为system时必选。支持以下参数 - req_path：请求路径。如 /a/b - req_method：请求方法。如 GET - reqPath：请求路径，废弃。如 /a/b - reqMethod：请求方法，废弃。如 GET
 	SysParamName *CoditionRespSysParamName `json:"sys_param_name,omitempty"`
 
 	// COOKIE参数名称。策略类型为cookie时必选

@@ -8,7 +8,15 @@ import (
 
 // ImportIndicatorsResponse Response Object
 type ImportIndicatorsResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 错误码
+	Code *string `json:"code,omitempty"`
+
+	// 错误信息
+	Message *string `json:"message,omitempty"`
+
+	Data           *ImportIndicatorsResponseBodyData `json:"data,omitempty"`
+	HttpStatusCode int                               `json:"-"`
 }
 
 func (o ImportIndicatorsResponse) String() string {

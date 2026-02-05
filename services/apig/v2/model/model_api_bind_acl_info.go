@@ -16,10 +16,10 @@ type ApiBindAclInfo struct {
 	// ACL策略名称
 	AclName *string `json:"acl_name,omitempty"`
 
-	// ACL策略作用的对象类型
+	// ACL策略作用的对象类型。 - IP：IP地址 - DOMAIN：账号名 - DOMAIN_ID：账号ID
 	EntityType *ApiBindAclInfoEntityType `json:"entity_type,omitempty"`
 
-	// ACL策略类型 - PERMIT：白名单类型 - DENY：黑名单类型
+	// ACL策略类型。 - PERMIT：白名单类型 - DENY：黑名单类型
 	AclType *ApiBindAclInfoAclType `json:"acl_type,omitempty"`
 
 	// ACL策略值

@@ -290,10 +290,6 @@ func GenReqDefForCreateSecret() *def.HttpRequestDef {
 		WithName("Projectname").
 		WithJsonTag("projectname").
 		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("DurationSeconds").
-		WithJsonTag("duration_seconds").
-		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ContentType").

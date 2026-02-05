@@ -25,8 +25,14 @@ type AppInfoWithBindNum struct {
 	// 更新时间
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
-	// APP的key
+	// APP凭据的key。
 	AppKey *string `json:"app_key,omitempty"`
+
+	// 凭据关联的账号ID。
+	RelatedDomainId *string `json:"related_domain_id,omitempty"`
+
+	// 凭据关联的项目ID。
+	RelatedProjectId *string `json:"related_project_id,omitempty"`
 
 	// 密钥
 	AppSecret *string `json:"app_secret,omitempty"`
@@ -37,7 +43,7 @@ type AppInfoWithBindNum struct {
 	// 状态   - 1： 有效
 	Status *AppInfoWithBindNumStatus `json:"status,omitempty"`
 
-	// APP的类型： - apig：存量apig应用，不推荐使用 - roma：roma集成应用  默认apig，暂不支持其他类型
+	// APP的类型。 - apig：APIG凭据应用  默认apig，暂不支持其他类型
 	AppType *AppInfoWithBindNumAppType `json:"app_type,omitempty"`
 
 	// ROMA_APP的类型： - subscription：订阅应用 - integration：集成应用  暂不支持
@@ -152,16 +158,12 @@ type AppInfoWithBindNumAppType struct {
 
 type AppInfoWithBindNumAppTypeEnum struct {
 	APIG AppInfoWithBindNumAppType
-	ROMA AppInfoWithBindNumAppType
 }
 
 func GetAppInfoWithBindNumAppTypeEnum() AppInfoWithBindNumAppTypeEnum {
 	return AppInfoWithBindNumAppTypeEnum{
 		APIG: AppInfoWithBindNumAppType{
 			value: "apig",
-		},
-		ROMA: AppInfoWithBindNumAppType{
-			value: "roma",
 		},
 	}
 }

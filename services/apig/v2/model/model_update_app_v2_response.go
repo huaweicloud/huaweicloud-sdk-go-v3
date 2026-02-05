@@ -26,8 +26,14 @@ type UpdateAppV2Response struct {
 	// 更新时间
 	UpdateTime *sdktime.SdkTime `json:"update_time,omitempty"`
 
-	// APP的key
+	// APP凭据的key。
 	AppKey *string `json:"app_key,omitempty"`
+
+	// 凭据关联的账号ID。
+	RelatedDomainId *string `json:"related_domain_id,omitempty"`
+
+	// 凭据关联的项目ID。
+	RelatedProjectId *string `json:"related_project_id,omitempty"`
 
 	// 密钥
 	AppSecret *string `json:"app_secret,omitempty"`
@@ -38,7 +44,7 @@ type UpdateAppV2Response struct {
 	// 状态   - 1： 有效
 	Status *UpdateAppV2ResponseStatus `json:"status,omitempty"`
 
-	// APP的类型： - apig：存量apig应用，不推荐使用 - roma：roma集成应用  默认apig，暂不支持其他类型
+	// APP的类型。 - apig：APIG凭据应用  默认apig，暂不支持其他类型
 	AppType *UpdateAppV2ResponseAppType `json:"app_type,omitempty"`
 
 	// ROMA_APP的类型： - subscription：订阅应用 - integration：集成应用  暂不支持
@@ -151,16 +157,12 @@ type UpdateAppV2ResponseAppType struct {
 
 type UpdateAppV2ResponseAppTypeEnum struct {
 	APIG UpdateAppV2ResponseAppType
-	ROMA UpdateAppV2ResponseAppType
 }
 
 func GetUpdateAppV2ResponseAppTypeEnum() UpdateAppV2ResponseAppTypeEnum {
 	return UpdateAppV2ResponseAppTypeEnum{
 		APIG: UpdateAppV2ResponseAppType{
 			value: "apig",
-		},
-		ROMA: UpdateAppV2ResponseAppType{
-			value: "roma",
 		},
 	}
 }

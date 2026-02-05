@@ -9,7 +9,7 @@ import (
 // ShowHdaUpgradeFlagResponse Response Object
 type ShowHdaUpgradeFlagResponse struct {
 
-	// hda是否需要升级标识。
+	// hda是否需要升级标识。0为无需提示升级, 1为需提示升级
 	UpgradeFlag    *int32 `json:"upgrade_flag,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

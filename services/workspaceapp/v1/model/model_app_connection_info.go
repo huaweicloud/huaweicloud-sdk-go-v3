@@ -16,6 +16,9 @@ type AppConnectionInfo struct {
 	// 应用服务器sid。
 	Sid *string `json:"sid,omitempty"`
 
+	// 应用id。
+	AppId *string `json:"app_id,omitempty"`
+
 	// 应用服务器名称。
 	MachineName *string `json:"machine_name,omitempty"`
 

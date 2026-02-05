@@ -10,8 +10,8 @@ import (
 
 type ApiForThrottle struct {
 
-	// API的认证方式
-	AuthType *string `json:"auth_type,omitempty"`
+	// API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
+	AuthType *ApiForThrottleAuthType `json:"auth_type,omitempty"`
 
 	// API所属分组的名称
 	GroupName *string `json:"group_name,omitempty"`
@@ -31,8 +31,8 @@ type ApiForThrottle struct {
 	// 发布的环境id
 	RunEnvId *string `json:"run_env_id,omitempty"`
 
-	// API类型
-	Type *int32 `json:"type,omitempty"`
+	// API类型。 - 1：公有API - 2：私有API
+	Type *ApiForThrottleType `json:"type,omitempty"`
 
 	// 绑定的流控策略名称
 	ThrottleName *string `json:"throttle_name,omitempty"`
@@ -66,6 +66,107 @@ func (o ApiForThrottle) String() string {
 	}
 
 	return strings.Join([]string{"ApiForThrottle", string(data)}, " ")
+}
+
+type ApiForThrottleAuthType struct {
+	value string
+}
+
+type ApiForThrottleAuthTypeEnum struct {
+	NONE       ApiForThrottleAuthType
+	APP        ApiForThrottleAuthType
+	IAM        ApiForThrottleAuthType
+	AUTHORIZER ApiForThrottleAuthType
+}
+
+func GetApiForThrottleAuthTypeEnum() ApiForThrottleAuthTypeEnum {
+	return ApiForThrottleAuthTypeEnum{
+		NONE: ApiForThrottleAuthType{
+			value: "NONE",
+		},
+		APP: ApiForThrottleAuthType{
+			value: "APP",
+		},
+		IAM: ApiForThrottleAuthType{
+			value: "IAM",
+		},
+		AUTHORIZER: ApiForThrottleAuthType{
+			value: "AUTHORIZER",
+		},
+	}
+}
+
+func (c ApiForThrottleAuthType) Value() string {
+	return c.value
+}
+
+func (c ApiForThrottleAuthType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiForThrottleAuthType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ApiForThrottleType struct {
+	value int32
+}
+
+type ApiForThrottleTypeEnum struct {
+	E_1 ApiForThrottleType
+	E_2 ApiForThrottleType
+}
+
+func GetApiForThrottleTypeEnum() ApiForThrottleTypeEnum {
+	return ApiForThrottleTypeEnum{
+		E_1: ApiForThrottleType{
+			value: 1,
+		}, E_2: ApiForThrottleType{
+			value: 2,
+		},
+	}
+}
+
+func (c ApiForThrottleType) Value() int32 {
+	return c.value
+}
+
+func (c ApiForThrottleType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiForThrottleType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }
 
 type ApiForThrottleReqMethod struct {

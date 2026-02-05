@@ -8,6 +8,8 @@ import (
 
 // UpdateGatewayResponseTypeV2Response Response Object
 type UpdateGatewayResponseTypeV2Response struct {
+
+	// 自定义响应列表。
 	Body           map[string]ResponseInfoResp `json:"body,omitempty"`
 	HttpStatusCode int                         `json:"-"`
 }

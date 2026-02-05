@@ -70,8 +70,8 @@ type StatisticsApi struct {
 	// 记录时间
 	RegisterTime *sdktime.SdkTime `json:"register_time,omitempty"`
 
-	// 状态
-	Status *int32 `json:"status,omitempty"`
+	// 状态。 - 1：有效
+	Status *StatisticsApiStatus `json:"status,omitempty"`
 }
 
 func (o StatisticsApi) String() string {
@@ -131,5 +131,48 @@ func (c *StatisticsApiCycle) UnmarshalJSON(b []byte) error {
 		return nil
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type StatisticsApiStatus struct {
+	value int32
+}
+
+type StatisticsApiStatusEnum struct {
+	E_1 StatisticsApiStatus
+}
+
+func GetStatisticsApiStatusEnum() StatisticsApiStatusEnum {
+	return StatisticsApiStatusEnum{
+		E_1: StatisticsApiStatus{
+			value: 1,
+		},
+	}
+}
+
+func (c StatisticsApiStatus) Value() int32 {
+	return c.value
+}
+
+func (c StatisticsApiStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *StatisticsApiStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }

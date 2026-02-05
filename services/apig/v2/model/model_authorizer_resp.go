@@ -16,7 +16,7 @@ type AuthorizerResp struct {
 	// 自定义认证类型  - FRONTEND：前端 - BACKEND：后端  不支持修改
 	Type AuthorizerRespType `json:"type"`
 
-	// 只能为：FUNC
+	// 自定义认证的类型。当前只支持函数类型：FUNC。
 	AuthorizerType AuthorizerRespAuthorizerType `json:"authorizer_type"`
 
 	// 函数地址。

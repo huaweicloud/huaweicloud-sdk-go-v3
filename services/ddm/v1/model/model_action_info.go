@@ -8,7 +8,7 @@ import (
 
 type ActionInfo struct {
 
-	// 锁。
+	// **参数解释**：  锁。  **参数范围**：  不涉及。
 	Action *string `json:"action,omitempty"`
 }
 

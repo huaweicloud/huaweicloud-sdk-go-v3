@@ -9,19 +9,19 @@ import (
 type BaselineCatalogModel struct {
 
 	// 目录ID唯一标识，UUID
-	Uuid string `json:"uuid"`
+	Uuid *string `json:"uuid,omitempty"`
 
 	// 目录的位置顺序
-	SerialNumber int32 `json:"serial_number"`
+	SerialNumber *int32 `json:"serial_number,omitempty"`
 
 	// 目录的层级关系
-	LevelNumber int32 `json:"level_number"`
+	LevelNumber *int32 `json:"level_number,omitempty"`
 
 	// 该目录所在遵从包UUID
-	Root string `json:"root"`
+	Root *string `json:"root,omitempty"`
 
 	// 该目录的父目录UUID，如果等于为第一层目录，则为遵从包UUID
-	Parent string `json:"parent"`
+	Parent *string `json:"parent,omitempty"`
 
 	// 该目录是否是叶子节点 0：不是 1：是
 	IsLeaf *bool `json:"is_leaf,omitempty"`

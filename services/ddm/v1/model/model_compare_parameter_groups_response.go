@@ -9,13 +9,13 @@ import (
 // CompareParameterGroupsResponse Response Object
 type CompareParameterGroupsResponse struct {
 
-	// **参数解释**：  源参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+	// **参数解释**：  源参数组ID。  **参数范围**：  只能由英文字母、数字组成，长度为36个字符。
 	SourceId *string `json:"source_id,omitempty"`
 
 	// **参数解释**：  源参数组名称。  **参数范围**：  不涉及。
 	SourceName *string `json:"source_name,omitempty"`
 
-	// **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
+	// **参数解释**：  目标参数组ID。  **参数范围**：  只能由英文字母、数字组成，长度为36个字符。
 	TargetId *string `json:"target_id,omitempty"`
 
 	// **参数解释**：  目标参数组名称。  **参数范围**：  不涉及。

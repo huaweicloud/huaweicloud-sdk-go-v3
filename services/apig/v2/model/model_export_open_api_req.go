@@ -20,7 +20,7 @@ type ExportOpenApiReq struct {
 	// 导出API的定义范围： - spec：基础定义，只包括api前端定义 - proxy：全量定义，包括api前后端定义 - all：扩展定义，包括api前后端定义以及流控、访问控制、自定义认证等扩展定义 - dev：开发定义，包括未发布的api的前后端定义
 	Define *ExportOpenApiReqDefine `json:"define,omitempty"`
 
-	// 导出的API定义的格式
+	// 导出的API定义的格式。 - json - yaml - yml
 	Type *ExportOpenApiReqType `json:"type,omitempty"`
 
 	// 导出的API定义版本，默认为当前时间

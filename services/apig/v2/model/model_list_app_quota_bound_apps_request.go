@@ -21,7 +21,7 @@ type ListAppQuotaBoundAppsRequest struct {
 	// 每页显示的条目数量，条目数量小于等于0时，自动转换为20，条目数量大于500时，自动转换为500
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 凭据名称
+	// APP凭据名称。
 	AppName *string `json:"app_name,omitempty"`
 }
 

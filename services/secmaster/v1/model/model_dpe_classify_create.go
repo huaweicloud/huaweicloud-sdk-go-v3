@@ -27,8 +27,8 @@ type DpeClassifyCreate struct {
 	// 映射id
 	MappingId *string `json:"mapping_id,omitempty"`
 
-	// 分类方式
-	DirectClassifier *interface{} `json:"direct_classifier,omitempty"`
+	// 是否直接分类
+	DirectClassifier *string `json:"direct_classifier,omitempty"`
 
 	// 映射id
 	DirectClassifierTypeId *string `json:"direct_classifier_type_id,omitempty"`

@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// ListAppConnectionReq 请求应用使用记录响应体。
+// ListAppConnectionReq 请求应用使用记录请求体。
 type ListAppConnectionReq struct {
 
 	// 主键。
@@ -43,7 +43,7 @@ type ListAppConnectionReq struct {
 	// 客户端版本。
 	ClientVersion *string `json:"client_version,omitempty"`
 
-	// 客户端操作系统类型。
+	// 客户端操作系统类型： - Windows - Mac
 	ClientType *string `json:"client_type,omitempty"`
 
 	// aps hda版本。
@@ -61,10 +61,10 @@ type ListAppConnectionReq struct {
 	// 租户id。
 	TenantId *string `json:"tenant_id,omitempty"`
 
-	// 登录应用开始时间，格式 2022-10-31T08:07:39Z。
+	// 登录应用开始时间，只支持导出30天内数据，格式 2022-10-31T08:07:39Z，参数中brokering_start_time与brokering_end_time必须同时存在或都不存在，都不存在时导出近一个月的数据。
 	BrokeringStartTime *sdktime.SdkTime `json:"brokering_start_time,omitempty"`
 
-	// 登录应用结束时间，格式 2022-10-31T08:07:39Z。
+	// 登录应用结束时间，只支持导出30天内数据，格式 2022-10-31T08:07:39Z，参数中brokering_start_time与brokering_end_time必须同时存在或都不存在，都不存在时导出近一个月的数据。
 	BrokeringEndTime *sdktime.SdkTime `json:"brokering_end_time,omitempty"`
 
 	// 会话虚拟ip。

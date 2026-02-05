@@ -13,10 +13,10 @@ type ExportSessionsReq struct {
 	// 用户名。
 	UserName *string `json:"user_name,omitempty"`
 
-	// 搜索开始时间，以会话开始时间为条件查询，只支持导出30天内数据，格式2024-02-27T03:47:51.182Z。
+	// 搜索开始时间，以会话开始时间为条件查询，只支持导出30天内数据，格式2024-02-27T03:47:51.182Z，参数中query_begin_time与query_end_time必须同时存在或都不存在，都不存在时导出近一个月的数据。
 	QueryBeginTime *sdktime.SdkTime `json:"query_begin_time,omitempty"`
 
-	// 搜索结束时间，以会话开始时间为条件查询，只支持导出30天内数据，格式2024-02-27T03:47:51.182Z。
+	// 搜索结束时间，以会话开始时间为条件查询，只支持导出30天内数据，格式2024-02-27T03:47:51.182Z，参数中query_begin_time与query_end_time必须同时存在或都不存在，都不存在时导出近一个月的数据。
 	QueryEndTime *sdktime.SdkTime `json:"query_end_time,omitempty"`
 
 	// AppServer组ID。

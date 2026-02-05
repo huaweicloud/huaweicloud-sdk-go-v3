@@ -29,7 +29,7 @@ type ShowDetailsOfApiGroupV2Response struct {
 	// 最近修改时间
 	UpdateTime *sdktime.SdkTime `json:"update_time"`
 
-	// 是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
+	// 是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk,srg,ax)
 	OnSellStatus int32 `json:"on_sell_status"`
 
 	// 分组上绑定的独立域名列表
@@ -56,7 +56,7 @@ type ShowDetailsOfApiGroupV2Response struct {
 	// 是否为默认分组
 	IsDefault *int32 `json:"is_default,omitempty"`
 
-	// 分组版本  - V1：全局分组 - V2：应用级分组  暂不支持，默认为V1
+	// 分组版本。 - V1：全局分组。 - V2：应用级分组。 暂不支持。
 	Version *string `json:"version,omitempty"`
 
 	// 分组归属的集成应用编号。  分组版本V2时必填。  暂不支持

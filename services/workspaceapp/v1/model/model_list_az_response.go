@@ -12,10 +12,10 @@ type ListAzResponse struct {
 	// 云应用支持的可用分区表格，按站点分类。
 	Azs map[string][]AvailabilityZoneInfo `json:"azs,omitempty"`
 
-	// 默认站点类型。
+	// 默认站点类型： - CENTER - IES
 	DefaultType *string `json:"default_type,omitempty"`
 
-	// 云应用支持的站点类型。
+	// 云应用支持的站点类型： - CENTER - IES
 	SupportType    *[]string `json:"support_type,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

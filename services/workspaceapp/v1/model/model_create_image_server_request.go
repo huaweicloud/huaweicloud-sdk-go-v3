@@ -12,6 +12,9 @@ type CreateImageServerRequest struct {
 	// CBC接口回调时，请求头里带上的业务ID。
 	ServiceTransactionId *string `json:"Service-Transaction-Id,omitempty"`
 
+	// 交易组件调用时下发的关联ID。
+	XLinkedId *string `json:"X-Linked-Id,omitempty"`
+
 	Body *CreateImageServerReq `json:"body,omitempty"`
 }
 

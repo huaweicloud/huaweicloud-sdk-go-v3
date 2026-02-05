@@ -8,10 +8,12 @@ import (
 
 // ConfigurationCopyReqV3 请求体
 type ConfigurationCopyReqV3 struct {
-	CopyPara *ParaGroupCopy `json:"copy_para,omitempty"`
 
-	// **参数解释**：  目标参数组ID。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，长度为36个字符。  **默认取值**：  不涉及。
-	SourceId *string `json:"source_id,omitempty"`
+	// **参数解释**：  新参数组的名称。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+	NewName string `json:"new_name"`
+
+	// **参数解释**：  描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+	Description *string `json:"description,omitempty"`
 }
 
 func (o ConfigurationCopyReqV3) String() string {

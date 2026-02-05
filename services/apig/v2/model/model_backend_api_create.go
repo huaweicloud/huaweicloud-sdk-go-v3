@@ -15,23 +15,23 @@ type BackendApiCreate struct {
 	// 后端自定义认证对象的ID
 	AuthorizerId *string `json:"authorizer_id,omitempty"`
 
-	// 后端服务的地址。   由主机（IP或域名）和端口号组成，总长度不超过255。格式为主机:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443，HTTP默认端口号为80。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、下划线、中划线组成，且只能以英文开头
+	// 后端服务的地址。后端服务不使用VPC通道时，参数必选   由主机（IP或域名）和端口号组成，总长度不超过255。格式为主机:端口（如：apig.example.com:7443）。如果不写端口，则HTTPS默认端口号为443，HTTP默认端口号为80。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、下划线、中划线组成，且只能以英文开头
 	UrlDomain *string `json:"url_domain,omitempty"`
 
-	// 请求协议，后端类型为GRPC时请求协议可选GRPC、GRPCS
-	ReqProtocol BackendApiCreateReqProtocol `json:"req_protocol"`
+	// 请求协议，后端类型为GRPC&GRPCS时请求协议可选GRPC、GRPCS，当vpc_channel_status取值为1或者2时，该字段必填。
+	ReqProtocol *BackendApiCreateReqProtocol `json:"req_protocol,omitempty"`
 
 	// 描述。字符长度不超过255 > 中文字符必须为UTF-8或者unicode编码。
 	Remark *string `json:"remark,omitempty"`
 
-	// 请求方式，后端类型为GRPC时请求方式固定为POST
-	ReqMethod BackendApiCreateReqMethod `json:"req_method"`
+	// 请求方式，后端类型为GRPC&GRPCS时请求方式固定为POST，当vpc_channel_status取值为1或者2时，该字段必填。
+	ReqMethod *BackendApiCreateReqMethod `json:"req_method,omitempty"`
 
 	// web后端版本，字符长度不超过16
 	Version *string `json:"version,omitempty"`
 
-	// 请求地址。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3 ~ 32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
-	ReqUri string `json:"req_uri"`
+	// 请求地址，当vpc_channel_status取值为1或者2时，该字段必填。可以包含请求参数，用{}标识，比如/getUserInfo/{userId}，支持 * % - _ . 等特殊字符，总长度不超过512字符，且满足URI规范。   支持环境变量，使用环境变量时，每个变量名的长度为3~32位的字符串，字符串由英文字母、数字、中划线、下划线组成，且只能以英文开头。  > 需要服从URI规范。  后端类型为GRPC时请求地址固定为/
+	ReqUri *string `json:"req_uri,omitempty"`
 
 	// API网关请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
 	Timeout int32 `json:"timeout"`
@@ -45,9 +45,12 @@ type BackendApiCreate struct {
 	// 是否启用SM商密通道。  仅实例支持SM系列商密算法的实例时支持开启。
 	EnableSmChannel *bool `json:"enable_sm_channel,omitempty"`
 
+	// 后端服务器分组详细信息，当vpc_channel_status取值为4时，该字段必填。
+	MemberGroupUrlInfos *[]MemberGroupUrlInfo `json:"member_group_url_infos,omitempty"`
+
 	VpcChannelInfo *ApiBackendVpcReq `json:"vpc_channel_info,omitempty"`
 
-	// 是否使用VPC通道 - 1：使用VPC通道 - 2：不使用VPC通道
+	// 负载类型。 - 1：使用VPC通道，单模后端 - 2：不使用VPC通道 - 3：livedata（暂不支持） - 4：使用VPC通道，多模后端
 	VpcChannelStatus *BackendApiCreateVpcChannelStatus `json:"vpc_channel_status,omitempty"`
 }
 
@@ -193,6 +196,8 @@ type BackendApiCreateVpcChannelStatus struct {
 type BackendApiCreateVpcChannelStatusEnum struct {
 	E_1 BackendApiCreateVpcChannelStatus
 	E_2 BackendApiCreateVpcChannelStatus
+	E_3 BackendApiCreateVpcChannelStatus
+	E_4 BackendApiCreateVpcChannelStatus
 }
 
 func GetBackendApiCreateVpcChannelStatusEnum() BackendApiCreateVpcChannelStatusEnum {
@@ -201,6 +206,10 @@ func GetBackendApiCreateVpcChannelStatusEnum() BackendApiCreateVpcChannelStatusE
 			value: 1,
 		}, E_2: BackendApiCreateVpcChannelStatus{
 			value: 2,
+		}, E_3: BackendApiCreateVpcChannelStatus{
+			value: 3,
+		}, E_4: BackendApiCreateVpcChannelStatus{
+			value: 4,
 		},
 	}
 }

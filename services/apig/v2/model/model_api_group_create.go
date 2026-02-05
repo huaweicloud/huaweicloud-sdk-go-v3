@@ -17,7 +17,7 @@ type ApiGroupCreate struct {
 	// 分组归属的集成应用编号。  分组版本V2时必填。  暂不支持
 	RomaAppId *string `json:"roma_app_id,omitempty"`
 
-	// 分组版本  - V1：全局分组 - V2：应用级分组  暂不支持，默认V1
+	// 分组版本。 - V1：全局分组。 - V2：应用级分组。 暂不支持。
 	Version *string `json:"version,omitempty"`
 }
 

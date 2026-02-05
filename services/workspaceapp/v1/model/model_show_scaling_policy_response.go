@@ -19,7 +19,9 @@ type ShowScalingPolicyResponse struct {
 	SingleExpansionCount *int32 `json:"single_expansion_count,omitempty"`
 
 	ScalingPolicyBySession *ScalingPolicyBySession `json:"scaling_policy_by_session,omitempty"`
-	HttpStatusCode         int                     `json:"-"`
+
+	ScalingPolicyByResource *ScalingPolicyByResource `json:"scaling_policy_by_resource,omitempty"`
+	HttpStatusCode          int                      `json:"-"`
 }
 
 func (o ShowScalingPolicyResponse) String() string {

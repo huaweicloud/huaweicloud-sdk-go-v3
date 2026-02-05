@@ -41,7 +41,7 @@ type UpdateWorkspaceResponseBodyWorkspaceAgencyList struct {
 	// iam委托名称
 	IamAgencyName *string `json:"iam_agency_name,omitempty"`
 
-	// 委托空间购买版本
+	// 资源规格编码
 	ResourceSpecCode *[]string `json:"resource_spec_code,omitempty"`
 
 	// 是否被视图选中

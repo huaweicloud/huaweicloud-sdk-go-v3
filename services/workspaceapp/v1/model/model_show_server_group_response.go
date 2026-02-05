@@ -110,7 +110,7 @@ type ShowServerGroupResponse struct {
 	// 镜像的产品id。
 	ImageProductId *string `json:"image_product_id,omitempty"`
 
-	// 镜像类型。
+	// 镜像类型： - gold：云市场镜像 - private：私有镜像
 	ImageType *string `json:"image_type,omitempty"`
 
 	IpVirtual      *IpVirtual `json:"ip_virtual,omitempty"`

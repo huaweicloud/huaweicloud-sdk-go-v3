@@ -20,8 +20,11 @@ type SslInfo struct {
 	// 证书算法类型： - RSA - ECC - SM2
 	AlgorithmType *SslInfoAlgorithmType `json:"algorithm_type,omitempty"`
 
-	// 证书可见范围： - instance：当前实例 - global：全局
-	Type *SslInfoType `json:"type,omitempty"`
+	// 证书可见范围： - 1: 当前实例 - 2: 全局
+	Type *int32 `json:"type,omitempty"`
+
+	// 是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+	IsHasTrustedRootCa *bool `json:"is_has_trusted_root_ca,omitempty"`
 }
 
 func (o SslInfo) String() string {
@@ -66,53 +69,6 @@ func (c SslInfoAlgorithmType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *SslInfoAlgorithmType) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
-}
-
-type SslInfoType struct {
-	value string
-}
-
-type SslInfoTypeEnum struct {
-	INSTANCE SslInfoType
-	GLOBAL   SslInfoType
-}
-
-func GetSslInfoTypeEnum() SslInfoTypeEnum {
-	return SslInfoTypeEnum{
-		INSTANCE: SslInfoType{
-			value: "instance",
-		},
-		GLOBAL: SslInfoType{
-			value: "global",
-		},
-	}
-}
-
-func (c SslInfoType) Value() string {
-	return c.value
-}
-
-func (c SslInfoType) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *SslInfoType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

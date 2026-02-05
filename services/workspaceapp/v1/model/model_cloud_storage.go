@@ -19,6 +19,9 @@ type CloudStorage struct {
 	// 云存储id。
 	ProjectConfigId *string `json:"project_config_id,omitempty"`
 
+	// sfs集群ID。
+	ClusterGroupId *string `json:"cluster_group_id,omitempty"`
+
 	// 创建时间。
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 

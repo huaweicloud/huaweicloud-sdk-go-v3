@@ -12,7 +12,7 @@ import (
 // MicroServiceCreate 微服务详情。
 type MicroServiceCreate struct {
 
-	// 微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填
+	// 微服务类型。 - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE：CCE云容器引擎（Service）（暂不支持） - NACOS：nacos注册中心，nacos_info必填
 	ServiceType *MicroServiceCreateServiceType `json:"service_type,omitempty"`
 
 	CseInfo *MicroServiceInfoCseBase `json:"cse_info,omitempty"`

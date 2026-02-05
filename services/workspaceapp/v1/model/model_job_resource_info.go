@@ -16,10 +16,10 @@ type JobResourceInfo struct {
 	// 资源名称；创建、有最新资源名称场景，必填。
 	ResourceName *string `json:"resource_name,omitempty"`
 
-	// 云服务类型编码；新购、规格变更场景，必填。
+	// 云服务类型编码；新购、规格变更场景，必填： - hws.service.type.vdi - hws.service.type.marketplace
 	CloudServiceType *string `json:"cloud_service_type,omitempty"`
 
-	// 资源类型编码；新购、规格变更场景，必填。
+	// 资源类型编码；新购、规格变更场景，必填: -hws.resource.type.workspace.volume： 云办公桌面磁盘 -hws.resource.type.workspace.desktop： 云办公桌面 -hws.resource.type.workspace.appstream： 云应用 -hws.resource.type.workspace.appstreamsession： 云应用多会话
 	ResourceType *string `json:"resource_type,omitempty"`
 
 	// 资源规格编码；新购、规格变更场景，必填。

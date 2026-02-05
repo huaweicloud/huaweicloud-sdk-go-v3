@@ -8,7 +8,7 @@ import (
 
 type AppAclCreate struct {
 
-	// 类型 -  PERMIT (白名单类型) -  DENY (黑名单类型)
+	// 类型 - PERMIT：白名单类型 - DENY：黑名单类型
 	AppAclType string `json:"app_acl_type"`
 
 	// ACL策略值，支持IP、IP范围和CIDR方式。IP范围以英文中划线分隔。

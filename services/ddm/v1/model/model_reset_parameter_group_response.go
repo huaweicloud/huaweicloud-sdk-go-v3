@@ -8,7 +8,10 @@ import (
 
 // ResetParameterGroupResponse Response Object
 type ResetParameterGroupResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// **参数解释**：  是否需要重启。  **参数范围**：  false、true。
+	NeedRestart    *bool `json:"need_restart,omitempty"`
+	HttpStatusCode int   `json:"-"`
 }
 
 func (o ResetParameterGroupResponse) String() string {

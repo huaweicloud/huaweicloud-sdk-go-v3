@@ -8,34 +8,34 @@ import (
 
 type DdmGroupInfo struct {
 
-	// 组ID。
+	// **参数解释**：  组ID。  **参数范围**：  不涉及。
 	Id *string `json:"id,omitempty"`
 
-	// 名称。
+	// **参数解释**：  名称。  **参数范围**：  不涉及。
 	Name *string `json:"name,omitempty"`
 
-	// 角色。
+	// **参数解释**：  角色。  **参数范围**：  不涉及。
 	Role *string `json:"role,omitempty"`
 
-	// 组ip。
+	// **参数解释**：  组ip。  **参数范围**：  不涉及。
 	Endpoint *string `json:"endpoint,omitempty"`
 
-	// ipv6。
+	// **参数解释**：  ipv6。  **参数范围**：  不涉及。
 	Ipv6Endpoint *string `json:"ipv6_endpoint,omitempty"`
 
-	// 节点数量。
+	// **参数解释**：  节点数量。  **参数范围**：  不涉及。
 	NodeCount *int32 `json:"node_count,omitempty"`
 
-	// 负载均衡。
+	// **参数解释**：  负载均衡。  **参数范围**：  不涉及。
 	LoadBalance *bool `json:"load_balance,omitempty"`
 
-	// 是否默认组。
+	// **参数解释**：  是否默认组。  **参数范围**：  不涉及。
 	IsDefaultGroup *bool `json:"is_default_group,omitempty"`
 
-	// 其他信息。
+	// **参数解释**：  其他信息。  **参数范围**：  不涉及。
 	ExtendMap map[string]string `json:"extend_map,omitempty"`
 
-	// 节点信息。
+	// **参数解释**：  节点信息。  **参数范围**：  不涉及。
 	Nodes *[]DdmNodeInfo `json:"nodes,omitempty"`
 }
 

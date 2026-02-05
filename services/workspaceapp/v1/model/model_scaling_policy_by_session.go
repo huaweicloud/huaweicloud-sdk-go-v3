@@ -10,7 +10,7 @@ import (
 type ScalingPolicyBySession struct {
 
 	// 分组的总会话使用率(达到该阈值后扩容)。
-	SessionUsageThreshold int32 `json:"session_usage_threshold"`
+	SessionUsageThreshold *int32 `json:"session_usage_threshold,omitempty"`
 
 	// 给定时间内无会话连接的的实例进行释放。
 	ShrinkAfterSessionIdleMinutes int32 `json:"shrink_after_session_idle_minutes"`

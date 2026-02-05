@@ -17,7 +17,7 @@ type ThrottleSpecialCreate struct {
 	// 特殊APP的编号或特殊租户的账号ID
 	ObjectId string `json:"object_id"`
 
-	// 特殊对象类型
+	// 特殊对象类型。 - APP：特殊APP - USER：特殊租户
 	ObjectType ThrottleSpecialCreateObjectType `json:"object_type"`
 }
 

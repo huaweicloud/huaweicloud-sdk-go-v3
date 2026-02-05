@@ -607,6 +607,27 @@ func (c *RdsClient) CreateXelLogDownloadInvoker(request *model.CreateXelLogDownl
 	return &CreateXelLogDownloadInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteBackupSelection 删除实例选择是否保留自动备份
+//
+// 删除实例时选择是否删除或保留自动备份。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) DeleteBackupSelection(request *model.DeleteBackupSelectionRequest) (*model.DeleteBackupSelectionResponse, error) {
+	requestDef := GenReqDefForDeleteBackupSelection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteBackupSelectionResponse), nil
+	}
+}
+
+// DeleteBackupSelectionInvoker 删除实例选择是否保留自动备份
+func (c *RdsClient) DeleteBackupSelectionInvoker(request *model.DeleteBackupSelectionRequest) *DeleteBackupSelectionInvoker {
+	requestDef := GenReqDefForDeleteBackupSelection()
+	return &DeleteBackupSelectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteConfiguration 删除参数模板
 //
 // 删除参数模板。

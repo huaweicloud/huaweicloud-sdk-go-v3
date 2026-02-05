@@ -22,7 +22,7 @@ type PluginInfo struct {
 	// 插件可见范围。global：全局可见；
 	PluginScope PluginInfoPluginScope `json:"plugin_scope"`
 
-	// 插件定义内容，支持json。参考提供的具体模型定义  [CorsPluginContent](apig-api-CorsPluginContent.xml)：跨域资源共享 定义内容 [SetRespHeadersContent](apig-api-SetRespHeadersContent.xml)：HTTP响应头管理 定义内容 [KafkaLogContent](apig-api-KafkaLogContent.xml)：Kafka日志推送 定义内容 [BreakerContent](apig-api-BreakerContent.xml)：断路器 定义内容 [RateLimitContent](apig-api-RateLimitContent.xml)：流量控制 定义内容 [ThirdAuthContent](apig-api-ThirdAuthContent.xml)：第三方认证 定义内容 [ProxyCacheContent](apig-api-ProxyCacheContent.xml)：响应缓存 定义内容 [ProxyMirrorContent](apig-api-ProxyMirrorContent.xml)：请求镜像 定义内容 [OIDCAuthContent](apig-api-OIDCAuthContent.xml)：OIDC认证 定义内容 [JWTAuthContent](apig-api-JWTAuthContent.xml)：JWT认证 定义内容
+	// 插件定义内容，支持json。参考提供的具体模型定义  [CorsPluginContent](apig-api-CorsPluginContent.xml)：跨域资源共享 定义内容 [SetRespHeadersContent](apig-api-SetRespHeadersContent.xml)：HTTP响应头管理 定义内容 [KafkaLogContent](apig-api-KafkaLogContent.xml)：Kafka日志推送 定义内容 [BreakerContent](apig-api-BreakerContent.xml)：断路器 定义内容 [RateLimitContent](apig-api-RateLimitContent.xml)：流量控制 定义内容 [ThirdAuthContent](apig-api-ThirdAuthContent.xml)：第三方认证 定义内容 [ProxyCacheContent](apig-api-ProxyCacheContent.xml)：响应缓存 定义内容 [ProxyMirrorContent](apig-api-ProxyMirrorContent.xml)：请求镜像 定义内容 [OIDCAuthResp](apig-api-OIDCAuthContent.xml)：OIDC认证 定义内容 [JWTAuthContent](apig-api-JWTAuthContent.xml)：JWT认证 定义内容
 	PluginContent string `json:"plugin_content"`
 
 	// 插件描述，255字符。 > 中文字符必须为UTF-8或者unicode编码。

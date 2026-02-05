@@ -13,7 +13,7 @@ import (
 type MicroserviceImportReq struct {
 	GroupInfo *MicroserviceGroup `json:"group_info"`
 
-	// 微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填。
+	// 微服务中心类型。 - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE：CCE云容器引擎（Service）（暂不支持） - NACOS：nacos注册中心，nacos_info必填
 	ServiceType MicroserviceImportReqServiceType `json:"service_type"`
 
 	// API网关访问微服务的请求协议 - HTTP - HTTPS

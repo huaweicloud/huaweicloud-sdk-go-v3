@@ -21,7 +21,7 @@ type CertificateForm struct {
 	// 证书私钥
 	PrivateKey string `json:"private_key"`
 
-	// 证书可见范围
+	// 证书类型。 - instance：实例证书 - global：全局证书
 	Type *CertificateFormType `json:"type,omitempty"`
 
 	// 所属实例ID，当type=instance时必填

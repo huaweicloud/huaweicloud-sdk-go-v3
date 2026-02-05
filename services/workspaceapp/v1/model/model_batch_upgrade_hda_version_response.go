@@ -8,7 +8,10 @@ import (
 
 // BatchUpgradeHdaVersionResponse Response Object
 type BatchUpgradeHdaVersionResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 任务ID。
+	JobId          *string `json:"job_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o BatchUpgradeHdaVersionResponse) String() string {

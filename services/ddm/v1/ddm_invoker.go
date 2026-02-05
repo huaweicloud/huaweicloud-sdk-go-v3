@@ -693,6 +693,22 @@ func (i *ListDdmFlavorsInvoker) Invoke() (*model.ListDdmFlavorsResponse, error) 
 	}
 }
 
+type ListDdmsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDdmsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDdmsInvoker) Invoke() (*model.ListDdmsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDdmsResponse), nil
+	}
+}
+
 type ListEnginesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -802,6 +818,22 @@ func (i *ListSlowLogInvoker) Invoke() (*model.ListSlowLogResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListSlowLogResponse), nil
+	}
+}
+
+type ListSlowLogAnalysisInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSlowLogAnalysisInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSlowLogAnalysisInvoker) Invoke() (*model.ListSlowLogAnalysisResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSlowLogAnalysisResponse), nil
 	}
 }
 
@@ -1237,6 +1269,22 @@ func (i *ShowInstanceParamInvoker) Invoke() (*model.ShowInstanceParamResponse, e
 	}
 }
 
+type ShowIpGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIpGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowIpGroupInvoker) Invoke() (*model.ShowIpGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIpGroupResponse), nil
+	}
+}
+
 type ShowLogicalProcessesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1250,6 +1298,22 @@ func (i *ShowLogicalProcessesInvoker) Invoke() (*model.ShowLogicalProcessesRespo
 		return nil, err
 	} else {
 		return result.(*model.ShowLogicalProcessesResponse), nil
+	}
+}
+
+type ShowMigrationLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMigrationLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowMigrationLogInvoker) Invoke() (*model.ShowMigrationLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMigrationLogResponse), nil
 	}
 }
 
@@ -1346,6 +1410,22 @@ func (i *ShrinkInstanceNodesInvoker) Invoke() (*model.ShrinkInstanceNodesRespons
 		return nil, err
 	} else {
 		return result.(*model.ShrinkInstanceNodesResponse), nil
+	}
+}
+
+type SwitchIpGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchIpGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SwitchIpGroupInvoker) Invoke() (*model.SwitchIpGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchIpGroupResponse), nil
 	}
 }
 
@@ -1557,19 +1637,19 @@ func (i *ValidateWeakPasswordInvoker) Invoke() (*model.ValidateWeakPasswordRespo
 	}
 }
 
-type CheckDataNodeConnectionV0V3Invoker struct {
+type CheckDataNodeConnectionInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *CheckDataNodeConnectionV0V3Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *CheckDataNodeConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *CheckDataNodeConnectionV0V3Invoker) Invoke() (*model.CheckDataNodeConnectionV0V3Response, error) {
+func (i *CheckDataNodeConnectionInvoker) Invoke() (*model.CheckDataNodeConnectionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.CheckDataNodeConnectionV0V3Response), nil
+		return result.(*model.CheckDataNodeConnectionResponse), nil
 	}
 }
 
@@ -1589,51 +1669,51 @@ func (i *CompareParameterGroupsInvoker) Invoke() (*model.CompareParameterGroupsR
 	}
 }
 
-type CopyParameterGroupInvoker struct {
+type CopyConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *CopyParameterGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *CopyConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *CopyParameterGroupInvoker) Invoke() (*model.CopyParameterGroupResponse, error) {
+func (i *CopyConfigurationInvoker) Invoke() (*model.CopyConfigurationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.CopyParameterGroupResponse), nil
+		return result.(*model.CopyConfigurationResponse), nil
 	}
 }
 
-type ListInstancesAppliedParameterGroupV0V3Invoker struct {
+type ListConfigurationApplyHistoriesInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListInstancesAppliedParameterGroupV0V3Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ListConfigurationApplyHistoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ListInstancesAppliedParameterGroupV0V3Invoker) Invoke() (*model.ListInstancesAppliedParameterGroupV0V3Response, error) {
+func (i *ListConfigurationApplyHistoriesInvoker) Invoke() (*model.ListConfigurationApplyHistoriesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListInstancesAppliedParameterGroupV0V3Response), nil
+		return result.(*model.ListConfigurationApplyHistoriesResponse), nil
 	}
 }
 
-type ListParameterGroupApplyHistoryV0V3Invoker struct {
+type ListInstancesConfigurationsInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListParameterGroupApplyHistoryV0V3Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ListInstancesConfigurationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ListParameterGroupApplyHistoryV0V3Invoker) Invoke() (*model.ListParameterGroupApplyHistoryV0V3Response, error) {
+func (i *ListInstancesConfigurationsInvoker) Invoke() (*model.ListInstancesConfigurationsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListParameterGroupApplyHistoryV0V3Response), nil
+		return result.(*model.ListInstancesConfigurationsResponse), nil
 	}
 }
 
@@ -1666,5 +1746,53 @@ func (i *ShowDdmDetailInvoker) Invoke() (*model.ShowDdmDetailResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowDdmDetailResponse), nil
+	}
+}
+
+type BatchModifyReadWriteStrategyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchModifyReadWriteStrategyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchModifyReadWriteStrategyInvoker) Invoke() (*model.BatchModifyReadWriteStrategyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchModifyReadWriteStrategyResponse), nil
+	}
+}
+
+type ModifySqlBlackListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifySqlBlackListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifySqlBlackListInvoker) Invoke() (*model.ModifySqlBlackListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifySqlBlackListResponse), nil
+	}
+}
+
+type ListSqlBlackInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSqlBlackInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSqlBlackInvoker) Invoke() (*model.ListSqlBlackResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSqlBlackResponse), nil
 	}
 }

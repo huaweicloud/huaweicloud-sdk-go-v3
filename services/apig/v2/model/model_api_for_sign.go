@@ -11,8 +11,8 @@ import (
 
 type ApiForSign struct {
 
-	// API的认证方式
-	AuthType *string `json:"auth_type,omitempty"`
+	// API的认证方式。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证 - AUTHORIZER：自定义认证
+	AuthType *ApiForSignAuthType `json:"auth_type,omitempty"`
 
 	// 发布的环境名
 	RunEnvName *string `json:"run_env_name,omitempty"`
@@ -44,8 +44,8 @@ type ApiForSign struct {
 	// API绑定的标签，标签配额默认10条，可以联系技术调整。
 	Tags *[]string `json:"tags,omitempty"`
 
-	// API类型
-	Type *int32 `json:"type,omitempty"`
+	// API类型。 - 1：公有API - 2：私有API
+	Type *ApiForSignType `json:"type,omitempty"`
 
 	// 已绑定的签名密钥名称
 	SignatureName *string `json:"signature_name,omitempty"`
@@ -61,6 +61,107 @@ func (o ApiForSign) String() string {
 	}
 
 	return strings.Join([]string{"ApiForSign", string(data)}, " ")
+}
+
+type ApiForSignAuthType struct {
+	value string
+}
+
+type ApiForSignAuthTypeEnum struct {
+	NONE       ApiForSignAuthType
+	APP        ApiForSignAuthType
+	IAM        ApiForSignAuthType
+	AUTHORIZER ApiForSignAuthType
+}
+
+func GetApiForSignAuthTypeEnum() ApiForSignAuthTypeEnum {
+	return ApiForSignAuthTypeEnum{
+		NONE: ApiForSignAuthType{
+			value: "NONE",
+		},
+		APP: ApiForSignAuthType{
+			value: "APP",
+		},
+		IAM: ApiForSignAuthType{
+			value: "IAM",
+		},
+		AUTHORIZER: ApiForSignAuthType{
+			value: "AUTHORIZER",
+		},
+	}
+}
+
+func (c ApiForSignAuthType) Value() string {
+	return c.value
+}
+
+func (c ApiForSignAuthType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiForSignAuthType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ApiForSignType struct {
+	value int32
+}
+
+type ApiForSignTypeEnum struct {
+	E_1 ApiForSignType
+	E_2 ApiForSignType
+}
+
+func GetApiForSignTypeEnum() ApiForSignTypeEnum {
+	return ApiForSignTypeEnum{
+		E_1: ApiForSignType{
+			value: 1,
+		}, E_2: ApiForSignType{
+			value: 2,
+		},
+	}
+}
+
+func (c ApiForSignType) Value() int32 {
+	return c.value
+}
+
+func (c ApiForSignType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiForSignType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }
 
 type ApiForSignReqMethod struct {

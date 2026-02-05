@@ -9,8 +9,8 @@ import (
 // CreateCloudStorageReq 创建项目配置关联。
 type CreateCloudStorageReq struct {
 
-	// project_config_id,数量区间 [1, 50]。
-	ProjectConfigIds []string `json:"project_config_ids"`
+	// 创建项目配置关联ID列表。
+	ProjectConfigClusterGroupIdList []ProjectConfigClusterGroupIdEntity `json:"project_config_cluster_group_id_list"`
 }
 
 func (o CreateCloudStorageReq) String() string {

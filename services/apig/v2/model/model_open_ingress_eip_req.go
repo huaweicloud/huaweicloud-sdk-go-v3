@@ -14,7 +14,7 @@ type OpenIngressEipReq struct {
 	// 入公网带宽  单位：Mbit/s
 	BandwidthSize *int32 `json:"bandwidth_size,omitempty"`
 
-	// 入公网带宽计费类型： - bandwidth：按带宽计费 - traffic：按流量计费
+	// 入公网带宽计费类型： - bandwidth：按带宽计费 - [traffic：按流量计费](tag:hws_test)
 	BandwidthChargingMode *OpenIngressEipReqBandwidthChargingMode `json:"bandwidth_charging_mode,omitempty"`
 }
 

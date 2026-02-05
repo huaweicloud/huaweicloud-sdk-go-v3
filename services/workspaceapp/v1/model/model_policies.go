@@ -35,6 +35,8 @@ type Policies struct {
 	UrlRedirection *PoliciesUrlRedirection `json:"url_redirection,omitempty"`
 
 	FolderRedirection *PoliciesFolderRedirection `json:"folder_redirection,omitempty"`
+
+	UserProfileManagement *PoliciesUserProfileManagement `json:"user_profile_management,omitempty"`
 }
 
 func (o Policies) String() string {

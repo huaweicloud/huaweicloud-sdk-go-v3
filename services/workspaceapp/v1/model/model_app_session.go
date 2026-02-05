@@ -18,7 +18,7 @@ type AppSession struct {
 	// 会话在hda的os中会话id。
 	OsSessionId *string `json:"os_session_id,omitempty"`
 
-	// 协议类型。
+	// 协议类型： - HDP
 	ProtocolType *string `json:"protocol_type,omitempty"`
 
 	// 当前会话的登录用户。
@@ -51,7 +51,7 @@ type AppSession struct {
 	// 服务器名称。
 	MachineName *string `json:"machine_name,omitempty"`
 
-	// 会话状态。
+	// 会话状态： - Active：运行中  - Disconnecte：断开连接 - AppcInit：初始化 - SignedOut：已注销 - InitFail：初始化失败
 	SessionState *string `json:"session_state,omitempty"`
 
 	// 会话中的应用名称。

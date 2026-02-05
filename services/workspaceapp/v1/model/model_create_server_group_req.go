@@ -74,7 +74,7 @@ type CreateServerGroupReq struct {
 	// 主服务器组id,绑定主服务器组，则创建的是备服务器。
 	PrimaryServerGroupId *string `json:"primary_server_group_id,omitempty"`
 
-	// 是否启用服务器组。
+	// 是否启用服务器组： - true： 启用 - false： 禁用
 	ServerGroupStatus *bool `json:"server_group_status,omitempty"`
 }
 

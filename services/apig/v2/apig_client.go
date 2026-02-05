@@ -332,6 +332,27 @@ func (c *ApigClient) CheckAppV2Invoker(request *model.CheckAppV2Request) *CheckA
 	return &CheckAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAiApiKey 创建AIAPIKey
+//
+// 创建AIAPIKey，适用于AI场景下的API Key认证。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) CreateAiApiKey(request *model.CreateAiApiKeyRequest) (*model.CreateAiApiKeyResponse, error) {
+	requestDef := GenReqDefForCreateAiApiKey()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAiApiKeyResponse), nil
+	}
+}
+
+// CreateAiApiKeyInvoker 创建AIAPIKey
+func (c *ApigClient) CreateAiApiKeyInvoker(request *model.CreateAiApiKeyRequest) *CreateAiApiKeyInvoker {
+	requestDef := GenReqDefForCreateAiApiKey()
+	return &CreateAiApiKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAnAppV2 创建APP
 //
 // APP即应用，是一个可以访问API的身份标识。将API授权给APP后，APP即可调用API。
@@ -741,6 +762,27 @@ func (c *ApigClient) CreateSpecialThrottlingConfigurationV2(request *model.Creat
 func (c *ApigClient) CreateSpecialThrottlingConfigurationV2Invoker(request *model.CreateSpecialThrottlingConfigurationV2Request) *CreateSpecialThrottlingConfigurationV2Invoker {
 	requestDef := GenReqDefForCreateSpecialThrottlingConfigurationV2()
 	return &CreateSpecialThrottlingConfigurationV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAiApiKey 删除AIAPIKey
+//
+// 删除AIAPIKey。删除后，将无法使用该AIAPIKey进行认证。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) DeleteAiApiKey(request *model.DeleteAiApiKeyRequest) (*model.DeleteAiApiKeyResponse, error) {
+	requestDef := GenReqDefForDeleteAiApiKey()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAiApiKeyResponse), nil
+	}
+}
+
+// DeleteAiApiKeyInvoker 删除AIAPIKey
+func (c *ApigClient) DeleteAiApiKeyInvoker(request *model.DeleteAiApiKeyRequest) *DeleteAiApiKeyInvoker {
+	requestDef := GenReqDefForDeleteAiApiKey()
+	return &DeleteAiApiKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteAppAcl 删除APP的访问控制
@@ -1297,6 +1339,27 @@ func (c *ApigClient) ImportMicroserviceInvoker(request *model.ImportMicroservice
 	return &ImportMicroserviceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAiApiKeys 查询AIAPIKey列表
+//
+// 查询AIAPIKey列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ListAiApiKeys(request *model.ListAiApiKeysRequest) (*model.ListAiApiKeysResponse, error) {
+	requestDef := GenReqDefForListAiApiKeys()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAiApiKeysResponse), nil
+	}
+}
+
+// ListAiApiKeysInvoker 查询AIAPIKey列表
+func (c *ApigClient) ListAiApiKeysInvoker(request *model.ListAiApiKeysRequest) *ListAiApiKeysInvoker {
+	requestDef := GenReqDefForListAiApiKeys()
+	return &ListAiApiKeysInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListApiAttachablePlugins 查询可绑定当前API的插件
 //
 // 查询可绑定当前API的插件信息。
@@ -1386,7 +1449,7 @@ func (c *ApigClient) ListApiQuantitiesV2Invoker(request *model.ListApiQuantities
 	return &ListApiQuantitiesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListApisBindedToSignatureKeyV2 查看签名密钥绑定的API列表
+// ListApisBindedToSignatureKeyV2 查询签名密钥绑定的API列表
 //
 // 查询某个签名密钥上已经绑定的API列表。
 //
@@ -1401,13 +1464,13 @@ func (c *ApigClient) ListApisBindedToSignatureKeyV2(request *model.ListApisBinde
 	}
 }
 
-// ListApisBindedToSignatureKeyV2Invoker 查看签名密钥绑定的API列表
+// ListApisBindedToSignatureKeyV2Invoker 查询签名密钥绑定的API列表
 func (c *ApigClient) ListApisBindedToSignatureKeyV2Invoker(request *model.ListApisBindedToSignatureKeyV2Request) *ListApisBindedToSignatureKeyV2Invoker {
 	requestDef := GenReqDefForListApisBindedToSignatureKeyV2()
 	return &ListApisBindedToSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListApisNotBoundWithSignatureKeyV2 查看签名密钥未绑定的API列表
+// ListApisNotBoundWithSignatureKeyV2 查询签名密钥未绑定的API列表
 //
 // 查询所有未绑定到该签名密钥上的API列表。需要API已经发布，未发布的API不予展示。
 //
@@ -1422,7 +1485,7 @@ func (c *ApigClient) ListApisNotBoundWithSignatureKeyV2(request *model.ListApisN
 	}
 }
 
-// ListApisNotBoundWithSignatureKeyV2Invoker 查看签名密钥未绑定的API列表
+// ListApisNotBoundWithSignatureKeyV2Invoker 查询签名密钥未绑定的API列表
 func (c *ApigClient) ListApisNotBoundWithSignatureKeyV2Invoker(request *model.ListApisNotBoundWithSignatureKeyV2Request) *ListApisNotBoundWithSignatureKeyV2Invoker {
 	requestDef := GenReqDefForListApisNotBoundWithSignatureKeyV2()
 	return &ListApisNotBoundWithSignatureKeyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1554,9 +1617,9 @@ func (c *ApigClient) ListAppsV2Invoker(request *model.ListAppsV2Request) *ListAp
 	return &ListAppsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAvailableZonesV2 查看可用区信息
+// ListAvailableZonesV2 查询可用区信息
 //
-// 查看可用区信息
+// 查询可用区信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListAvailableZonesV2(request *model.ListAvailableZonesV2Request) (*model.ListAvailableZonesV2Response, error) {
@@ -1569,7 +1632,7 @@ func (c *ApigClient) ListAvailableZonesV2(request *model.ListAvailableZonesV2Req
 	}
 }
 
-// ListAvailableZonesV2Invoker 查看可用区信息
+// ListAvailableZonesV2Invoker 查询可用区信息
 func (c *ApigClient) ListAvailableZonesV2Invoker(request *model.ListAvailableZonesV2Request) *ListAvailableZonesV2Invoker {
 	requestDef := GenReqDefForListAvailableZonesV2()
 	return &ListAvailableZonesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1722,9 +1785,9 @@ func (c *ApigClient) ListEnvironmentsV2Invoker(request *model.ListEnvironmentsV2
 	return &ListEnvironmentsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListFeaturesV2 查看实例特性列表
+// ListFeaturesV2 查询实例特性列表
 //
-// 查看实例特性列表。注意：实例不支持以下特性的需要联系技术支持升级实例版本。
+// 查询实例特性列表。注意：实例不支持以下特性的需要联系技术支持升级实例版本。
 //
 // 支持配置的特性列表及特性配置示例请参考本手册中的“附录 &gt; 实例支持的APIG特性”章节。
 //
@@ -1739,7 +1802,7 @@ func (c *ApigClient) ListFeaturesV2(request *model.ListFeaturesV2Request) (*mode
 	}
 }
 
-// ListFeaturesV2Invoker 查看实例特性列表
+// ListFeaturesV2Invoker 查询实例特性列表
 func (c *ApigClient) ListFeaturesV2Invoker(request *model.ListFeaturesV2Request) *ListFeaturesV2Invoker {
 	requestDef := GenReqDefForListFeaturesV2()
 	return &ListFeaturesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1960,9 +2023,9 @@ func (c *ApigClient) ListOrchestrationAttachedApisInvoker(request *model.ListOrc
 	return &ListOrchestrationAttachedApisInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListOrchestrations 查看编排规则列表
+// ListOrchestrations 查询编排规则列表
 //
-// 查看编排规则列表
+// 查询编排规则列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListOrchestrations(request *model.ListOrchestrationsRequest) (*model.ListOrchestrationsResponse, error) {
@@ -1975,7 +2038,7 @@ func (c *ApigClient) ListOrchestrations(request *model.ListOrchestrationsRequest
 	}
 }
 
-// ListOrchestrationsInvoker 查看编排规则列表
+// ListOrchestrationsInvoker 查询编排规则列表
 func (c *ApigClient) ListOrchestrationsInvoker(request *model.ListOrchestrationsRequest) *ListOrchestrationsInvoker {
 	requestDef := GenReqDefForListOrchestrations()
 	return &ListOrchestrationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2058,7 +2121,7 @@ func (c *ApigClient) ListPluginsInvoker(request *model.ListPluginsRequest) *List
 
 // ListProjectCofigsV2 查询某个实例的租户配置列表
 //
-// 查询某个实例的租户配置列表，用户可以通过此接口查看各类型资源配置及使用情况。
+// 查询某个实例的租户配置列表，用户可以通过此接口查询各类型资源配置及使用情况。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListProjectCofigsV2(request *model.ListProjectCofigsV2Request) (*model.ListProjectCofigsV2Response, error) {
@@ -2119,7 +2182,7 @@ func (c *ApigClient) ListRequestThrottlingPolicyV2Invoker(request *model.ListReq
 	return &ListRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListSignatureKeysBindedToApiV2 查看API绑定的签名密钥列表
+// ListSignatureKeysBindedToApiV2 查询API绑定的签名密钥列表
 //
 // 查询某个API绑定的签名密钥列表。每个API在每个环境上应该最多只会绑定一个签名密钥。
 //
@@ -2134,7 +2197,7 @@ func (c *ApigClient) ListSignatureKeysBindedToApiV2(request *model.ListSignature
 	}
 }
 
-// ListSignatureKeysBindedToApiV2Invoker 查看API绑定的签名密钥列表
+// ListSignatureKeysBindedToApiV2Invoker 查询API绑定的签名密钥列表
 func (c *ApigClient) ListSignatureKeysBindedToApiV2Invoker(request *model.ListSignatureKeysBindedToApiV2Request) *ListSignatureKeysBindedToApiV2Invoker {
 	requestDef := GenReqDefForListSignatureKeysBindedToApiV2()
 	return &ListSignatureKeysBindedToApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2161,9 +2224,9 @@ func (c *ApigClient) ListSignatureKeysV2Invoker(request *model.ListSignatureKeys
 	return &ListSignatureKeysV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListSpecialThrottlingConfigurationsV2 查看特殊设置列表
+// ListSpecialThrottlingConfigurationsV2 查询特殊设置列表
 //
-// 查看给流控策略设置的特殊配置。
+// 查询给流控策略设置的特殊配置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListSpecialThrottlingConfigurationsV2(request *model.ListSpecialThrottlingConfigurationsV2Request) (*model.ListSpecialThrottlingConfigurationsV2Response, error) {
@@ -2176,15 +2239,15 @@ func (c *ApigClient) ListSpecialThrottlingConfigurationsV2(request *model.ListSp
 	}
 }
 
-// ListSpecialThrottlingConfigurationsV2Invoker 查看特殊设置列表
+// ListSpecialThrottlingConfigurationsV2Invoker 查询特殊设置列表
 func (c *ApigClient) ListSpecialThrottlingConfigurationsV2Invoker(request *model.ListSpecialThrottlingConfigurationsV2Request) *ListSpecialThrottlingConfigurationsV2Invoker {
 	requestDef := GenReqDefForListSpecialThrottlingConfigurationsV2()
 	return &ListSpecialThrottlingConfigurationsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListTagsV2 查询标签列表
+// ListTagsV2 查询API的标签列表
 //
-// 查询标签列表
+// 查询API的标签列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListTagsV2(request *model.ListTagsV2Request) (*model.ListTagsV2Response, error) {
@@ -2197,7 +2260,7 @@ func (c *ApigClient) ListTagsV2(request *model.ListTagsV2Request) (*model.ListTa
 	}
 }
 
-// ListTagsV2Invoker 查询标签列表
+// ListTagsV2Invoker 查询API的标签列表
 func (c *ApigClient) ListTagsV2Invoker(request *model.ListTagsV2Request) *ListTagsV2Invoker {
 	requestDef := GenReqDefForListTagsV2()
 	return &ListTagsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2289,7 +2352,7 @@ func (c *ApigClient) ResettingAppSecretV2Invoker(request *model.ResettingAppSecr
 
 // ShowAppBoundAppQuota 查询凭据关联的凭据配额
 //
-// 查看指定凭据关联的凭据配额。
+// 查询指定凭据关联的凭据配额。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowAppBoundAppQuota(request *model.ShowAppBoundAppQuotaRequest) (*model.ShowAppBoundAppQuotaResponse, error) {
@@ -2350,9 +2413,30 @@ func (c *ApigClient) ShowAsyncTaskResultInvoker(request *model.ShowAsyncTaskResu
 	return &ShowAsyncTaskResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDetailsOfAppAcl 查看APP的访问控制详情
+// ShowDetailsOfAiApiKey 查看AIAPIKey详情
 //
-// 查看APP的访问控制详情。
+// 查看AIAPIKey详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ApigClient) ShowDetailsOfAiApiKey(request *model.ShowDetailsOfAiApiKeyRequest) (*model.ShowDetailsOfAiApiKeyResponse, error) {
+	requestDef := GenReqDefForShowDetailsOfAiApiKey()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDetailsOfAiApiKeyResponse), nil
+	}
+}
+
+// ShowDetailsOfAiApiKeyInvoker 查看AIAPIKey详情
+func (c *ApigClient) ShowDetailsOfAiApiKeyInvoker(request *model.ShowDetailsOfAiApiKeyRequest) *ShowDetailsOfAiApiKeyInvoker {
+	requestDef := GenReqDefForShowDetailsOfAiApiKey()
+	return &ShowDetailsOfAiApiKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDetailsOfAppAcl 查询APP的访问控制详情
+//
+// 查询APP的访问控制详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfAppAcl(request *model.ShowDetailsOfAppAclRequest) (*model.ShowDetailsOfAppAclResponse, error) {
@@ -2365,13 +2449,13 @@ func (c *ApigClient) ShowDetailsOfAppAcl(request *model.ShowDetailsOfAppAclReque
 	}
 }
 
-// ShowDetailsOfAppAclInvoker 查看APP的访问控制详情
+// ShowDetailsOfAppAclInvoker 查询APP的访问控制详情
 func (c *ApigClient) ShowDetailsOfAppAclInvoker(request *model.ShowDetailsOfAppAclRequest) *ShowDetailsOfAppAclInvoker {
 	requestDef := GenReqDefForShowDetailsOfAppAcl()
 	return &ShowDetailsOfAppAclInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDetailsOfAppCodeV2 查看APP Code详情
+// ShowDetailsOfAppCodeV2 查询APP Code详情
 //
 // App Code为APP应用下的子模块，创建App Code之后，可以实现简易的APP认证。
 //
@@ -2386,15 +2470,15 @@ func (c *ApigClient) ShowDetailsOfAppCodeV2(request *model.ShowDetailsOfAppCodeV
 	}
 }
 
-// ShowDetailsOfAppCodeV2Invoker 查看APP Code详情
+// ShowDetailsOfAppCodeV2Invoker 查询APP Code详情
 func (c *ApigClient) ShowDetailsOfAppCodeV2Invoker(request *model.ShowDetailsOfAppCodeV2Request) *ShowDetailsOfAppCodeV2Invoker {
 	requestDef := GenReqDefForShowDetailsOfAppCodeV2()
 	return &ShowDetailsOfAppCodeV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDetailsOfAppV2 查看APP详情
+// ShowDetailsOfAppV2 查询APP详情
 //
-// 查看指定APP的详细信息。
+// 查询指定APP的详细信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfAppV2(request *model.ShowDetailsOfAppV2Request) (*model.ShowDetailsOfAppV2Response, error) {
@@ -2407,15 +2491,15 @@ func (c *ApigClient) ShowDetailsOfAppV2(request *model.ShowDetailsOfAppV2Request
 	}
 }
 
-// ShowDetailsOfAppV2Invoker 查看APP详情
+// ShowDetailsOfAppV2Invoker 查询APP详情
 func (c *ApigClient) ShowDetailsOfAppV2Invoker(request *model.ShowDetailsOfAppV2Request) *ShowDetailsOfAppV2Invoker {
 	requestDef := GenReqDefForShowDetailsOfAppV2()
 	return &ShowDetailsOfAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDetailsOfCustomAuthorizersV2 查看自定义认证详情
+// ShowDetailsOfCustomAuthorizersV2 查询自定义认证详情
 //
-// 查看自定义认证详情
+// 查询自定义认证详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfCustomAuthorizersV2(request *model.ShowDetailsOfCustomAuthorizersV2Request) (*model.ShowDetailsOfCustomAuthorizersV2Response, error) {
@@ -2428,15 +2512,15 @@ func (c *ApigClient) ShowDetailsOfCustomAuthorizersV2(request *model.ShowDetails
 	}
 }
 
-// ShowDetailsOfCustomAuthorizersV2Invoker 查看自定义认证详情
+// ShowDetailsOfCustomAuthorizersV2Invoker 查询自定义认证详情
 func (c *ApigClient) ShowDetailsOfCustomAuthorizersV2Invoker(request *model.ShowDetailsOfCustomAuthorizersV2Request) *ShowDetailsOfCustomAuthorizersV2Invoker {
 	requestDef := GenReqDefForShowDetailsOfCustomAuthorizersV2()
 	return &ShowDetailsOfCustomAuthorizersV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDetailsOfDomainNameCertificateV2 查看域名证书
+// ShowDetailsOfDomainNameCertificateV2 查询域名证书
 //
-// 查看域名下绑定的证书详情。
+// 查询域名下绑定的证书详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfDomainNameCertificateV2(request *model.ShowDetailsOfDomainNameCertificateV2Request) (*model.ShowDetailsOfDomainNameCertificateV2Response, error) {
@@ -2449,15 +2533,15 @@ func (c *ApigClient) ShowDetailsOfDomainNameCertificateV2(request *model.ShowDet
 	}
 }
 
-// ShowDetailsOfDomainNameCertificateV2Invoker 查看域名证书
+// ShowDetailsOfDomainNameCertificateV2Invoker 查询域名证书
 func (c *ApigClient) ShowDetailsOfDomainNameCertificateV2Invoker(request *model.ShowDetailsOfDomainNameCertificateV2Request) *ShowDetailsOfDomainNameCertificateV2Invoker {
 	requestDef := GenReqDefForShowDetailsOfDomainNameCertificateV2()
 	return &ShowDetailsOfDomainNameCertificateV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDetailsOfEnvironmentVariableV2 查看变量详情
+// ShowDetailsOfEnvironmentVariableV2 查询变量详情
 //
-// 查看指定的环境变量的详情。
+// 查询指定的环境变量的详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfEnvironmentVariableV2(request *model.ShowDetailsOfEnvironmentVariableV2Request) (*model.ShowDetailsOfEnvironmentVariableV2Response, error) {
@@ -2470,15 +2554,15 @@ func (c *ApigClient) ShowDetailsOfEnvironmentVariableV2(request *model.ShowDetai
 	}
 }
 
-// ShowDetailsOfEnvironmentVariableV2Invoker 查看变量详情
+// ShowDetailsOfEnvironmentVariableV2Invoker 查询变量详情
 func (c *ApigClient) ShowDetailsOfEnvironmentVariableV2Invoker(request *model.ShowDetailsOfEnvironmentVariableV2Request) *ShowDetailsOfEnvironmentVariableV2Invoker {
 	requestDef := GenReqDefForShowDetailsOfEnvironmentVariableV2()
 	return &ShowDetailsOfEnvironmentVariableV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDetailsOfGatewayResponseTypeV2 查看分组下指定错误类型的自定义响应
+// ShowDetailsOfGatewayResponseTypeV2 查询分组下指定错误类型的自定义响应
 //
-// 查看分组下指定错误类型的自定义响应
+// 查询分组下指定错误类型的自定义响应
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfGatewayResponseTypeV2(request *model.ShowDetailsOfGatewayResponseTypeV2Request) (*model.ShowDetailsOfGatewayResponseTypeV2Response, error) {
@@ -2491,7 +2575,7 @@ func (c *ApigClient) ShowDetailsOfGatewayResponseTypeV2(request *model.ShowDetai
 	}
 }
 
-// ShowDetailsOfGatewayResponseTypeV2Invoker 查看分组下指定错误类型的自定义响应
+// ShowDetailsOfGatewayResponseTypeV2Invoker 查询分组下指定错误类型的自定义响应
 func (c *ApigClient) ShowDetailsOfGatewayResponseTypeV2Invoker(request *model.ShowDetailsOfGatewayResponseTypeV2Request) *ShowDetailsOfGatewayResponseTypeV2Invoker {
 	requestDef := GenReqDefForShowDetailsOfGatewayResponseTypeV2()
 	return &ShowDetailsOfGatewayResponseTypeV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2518,9 +2602,9 @@ func (c *ApigClient) ShowDetailsOfGatewayResponseV2Invoker(request *model.ShowDe
 	return &ShowDetailsOfGatewayResponseV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDetailsOfInstanceProgressV2 查看专享版实例创建进度
+// ShowDetailsOfInstanceProgressV2 查询专享版实例创建进度
 //
-// 查看专享版实例创建进度
+// 查询专享版实例创建进度
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfInstanceProgressV2(request *model.ShowDetailsOfInstanceProgressV2Request) (*model.ShowDetailsOfInstanceProgressV2Response, error) {
@@ -2533,15 +2617,15 @@ func (c *ApigClient) ShowDetailsOfInstanceProgressV2(request *model.ShowDetailsO
 	}
 }
 
-// ShowDetailsOfInstanceProgressV2Invoker 查看专享版实例创建进度
+// ShowDetailsOfInstanceProgressV2Invoker 查询专享版实例创建进度
 func (c *ApigClient) ShowDetailsOfInstanceProgressV2Invoker(request *model.ShowDetailsOfInstanceProgressV2Request) *ShowDetailsOfInstanceProgressV2Invoker {
 	requestDef := GenReqDefForShowDetailsOfInstanceProgressV2()
 	return &ShowDetailsOfInstanceProgressV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDetailsOfInstanceV2 查看专享版实例详情
+// ShowDetailsOfInstanceV2 查询专享版实例详情
 //
-// 查看专享版实例详情
+// 查询专享版实例详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfInstanceV2(request *model.ShowDetailsOfInstanceV2Request) (*model.ShowDetailsOfInstanceV2Response, error) {
@@ -2554,7 +2638,7 @@ func (c *ApigClient) ShowDetailsOfInstanceV2(request *model.ShowDetailsOfInstanc
 	}
 }
 
-// ShowDetailsOfInstanceV2Invoker 查看专享版实例详情
+// ShowDetailsOfInstanceV2Invoker 查询专享版实例详情
 func (c *ApigClient) ShowDetailsOfInstanceV2Invoker(request *model.ShowDetailsOfInstanceV2Request) *ShowDetailsOfInstanceV2Invoker {
 	requestDef := GenReqDefForShowDetailsOfInstanceV2()
 	return &ShowDetailsOfInstanceV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2581,9 +2665,9 @@ func (c *ApigClient) ShowDetailsOfOrchestrationInvoker(request *model.ShowDetail
 	return &ShowDetailsOfOrchestrationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDetailsOfRequestThrottlingPolicyV2 查看流控策略详情
+// ShowDetailsOfRequestThrottlingPolicyV2 查询流控策略详情
 //
-// 查看指定流控策略的详细信息。
+// 查询指定流控策略的详细信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfRequestThrottlingPolicyV2(request *model.ShowDetailsOfRequestThrottlingPolicyV2Request) (*model.ShowDetailsOfRequestThrottlingPolicyV2Response, error) {
@@ -2596,7 +2680,7 @@ func (c *ApigClient) ShowDetailsOfRequestThrottlingPolicyV2(request *model.ShowD
 	}
 }
 
-// ShowDetailsOfRequestThrottlingPolicyV2Invoker 查看流控策略详情
+// ShowDetailsOfRequestThrottlingPolicyV2Invoker 查询流控策略详情
 func (c *ApigClient) ShowDetailsOfRequestThrottlingPolicyV2Invoker(request *model.ShowDetailsOfRequestThrottlingPolicyV2Request) *ShowDetailsOfRequestThrottlingPolicyV2Invoker {
 	requestDef := GenReqDefForShowDetailsOfRequestThrottlingPolicyV2()
 	return &ShowDetailsOfRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2644,9 +2728,9 @@ func (c *ApigClient) ShowPluginInvoker(request *model.ShowPluginRequest) *ShowPl
 	return &ShowPluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowRestrictionOfInstanceV2 查看实例约束信息
+// ShowRestrictionOfInstanceV2 查询实例约束信息
 //
-// 查看实例约束信息
+// 查询实例约束信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowRestrictionOfInstanceV2(request *model.ShowRestrictionOfInstanceV2Request) (*model.ShowRestrictionOfInstanceV2Response, error) {
@@ -2659,7 +2743,7 @@ func (c *ApigClient) ShowRestrictionOfInstanceV2(request *model.ShowRestrictionO
 	}
 }
 
-// ShowRestrictionOfInstanceV2Invoker 查看实例约束信息
+// ShowRestrictionOfInstanceV2Invoker 查询实例约束信息
 func (c *ApigClient) ShowRestrictionOfInstanceV2Invoker(request *model.ShowRestrictionOfInstanceV2Request) *ShowRestrictionOfInstanceV2Invoker {
 	requestDef := GenReqDefForShowRestrictionOfInstanceV2()
 	return &ShowRestrictionOfInstanceV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2709,7 +2793,7 @@ func (c *ApigClient) UpdateAppQuotaInvoker(request *model.UpdateAppQuotaRequest)
 
 // UpdateAppV2 修改APP
 //
-// 修改指定APP的信息。其中可修改的属性为：name、remark，当支持用户自定义key和secret的开关开启时，app_key和app_secret也支持修改，其它属性不可修改。
+// 修改指定APP的信息。其中可修改的属性为：name、remark、related_domain_id、related_project_id，当支持用户自定义key和secret的开关开启时，app_key和app_secret也支持修改，其它属性不可修改。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) UpdateAppV2(request *model.UpdateAppV2Request) (*model.UpdateAppV2Response, error) {
@@ -3110,7 +3194,7 @@ func (c *ApigClient) DeleteAclV2Invoker(request *model.DeleteAclV2Request) *Dele
 	return &DeleteAclV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAclStrategiesV2 查看ACL策略列表
+// ListAclStrategiesV2 查询ACL策略列表
 //
 // 查询所有的ACL策略列表。
 //
@@ -3125,13 +3209,13 @@ func (c *ApigClient) ListAclStrategiesV2(request *model.ListAclStrategiesV2Reque
 	}
 }
 
-// ListAclStrategiesV2Invoker 查看ACL策略列表
+// ListAclStrategiesV2Invoker 查询ACL策略列表
 func (c *ApigClient) ListAclStrategiesV2Invoker(request *model.ListAclStrategiesV2Request) *ListAclStrategiesV2Invoker {
 	requestDef := GenReqDefForListAclStrategiesV2()
 	return &ListAclStrategiesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDetailsOfAclPolicyV2 查看ACL策略详情
+// ShowDetailsOfAclPolicyV2 查询ACL策略详情
 //
 // 查询指定ACL策略的详情。
 //
@@ -3146,7 +3230,7 @@ func (c *ApigClient) ShowDetailsOfAclPolicyV2(request *model.ShowDetailsOfAclPol
 	}
 }
 
-// ShowDetailsOfAclPolicyV2Invoker 查看ACL策略详情
+// ShowDetailsOfAclPolicyV2Invoker 查询ACL策略详情
 func (c *ApigClient) ShowDetailsOfAclPolicyV2Invoker(request *model.ShowDetailsOfAclPolicyV2Request) *ShowDetailsOfAclPolicyV2Invoker {
 	requestDef := GenReqDefForShowDetailsOfAclPolicyV2()
 	return &ShowDetailsOfAclPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3513,7 +3597,7 @@ func (c *ApigClient) ListApiGroupsV2Invoker(request *model.ListApiGroupsV2Reques
 
 // ListApiRuntimeDefinitionV2 查询API运行时定义
 //
-// 查看指定的API在指定的环境上的运行时定义，默认查询RELEASE环境上的运行时定义。
+// 查询指定的API在指定的环境上的运行时定义，默认查询RELEASE环境上的运行时定义。
 //
 // API的定义分为临时定义和运行时定义，分别代表如下含义：
 // - 临时定义：API在编辑中的定义，表示用户最后一次编辑后的API的状态
@@ -3538,7 +3622,7 @@ func (c *ApigClient) ListApiRuntimeDefinitionV2Invoker(request *model.ListApiRun
 	return &ListApiRuntimeDefinitionV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListApiVersionDetailV2 查看版本详情
+// ListApiVersionDetailV2 查询版本详情
 //
 // 查询某个指定的版本详情。
 //
@@ -3553,7 +3637,7 @@ func (c *ApigClient) ListApiVersionDetailV2(request *model.ListApiVersionDetailV
 	}
 }
 
-// ListApiVersionDetailV2Invoker 查看版本详情
+// ListApiVersionDetailV2Invoker 查询版本详情
 func (c *ApigClient) ListApiVersionDetailV2Invoker(request *model.ListApiVersionDetailV2Request) *ListApiVersionDetailV2Invoker {
 	requestDef := GenReqDefForListApiVersionDetailV2()
 	return &ListApiVersionDetailV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3580,7 +3664,7 @@ func (c *ApigClient) ListApiVersionsV2Invoker(request *model.ListApiVersionsV2Re
 	return &ListApiVersionsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListApisBindedToRequestThrottlingPolicyV2 查看流控策略绑定的API列表
+// ListApisBindedToRequestThrottlingPolicyV2 查询流控策略绑定的API列表
 //
 // 查询某个流控策略上已经绑定的API列表。
 //
@@ -3595,13 +3679,13 @@ func (c *ApigClient) ListApisBindedToRequestThrottlingPolicyV2(request *model.Li
 	}
 }
 
-// ListApisBindedToRequestThrottlingPolicyV2Invoker 查看流控策略绑定的API列表
+// ListApisBindedToRequestThrottlingPolicyV2Invoker 查询流控策略绑定的API列表
 func (c *ApigClient) ListApisBindedToRequestThrottlingPolicyV2Invoker(request *model.ListApisBindedToRequestThrottlingPolicyV2Request) *ListApisBindedToRequestThrottlingPolicyV2Invoker {
 	requestDef := GenReqDefForListApisBindedToRequestThrottlingPolicyV2()
 	return &ListApisBindedToRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListApisUnbindedToRequestThrottlingPolicyV2 查看流控策略未绑定的API列表
+// ListApisUnbindedToRequestThrottlingPolicyV2 查询流控策略未绑定的API列表
 //
 // 查询所有未绑定到该流控策略上的自有API列表。需要API已经发布，未发布的API不予展示。
 //
@@ -3616,7 +3700,7 @@ func (c *ApigClient) ListApisUnbindedToRequestThrottlingPolicyV2(request *model.
 	}
 }
 
-// ListApisUnbindedToRequestThrottlingPolicyV2Invoker 查看流控策略未绑定的API列表
+// ListApisUnbindedToRequestThrottlingPolicyV2Invoker 查询流控策略未绑定的API列表
 func (c *ApigClient) ListApisUnbindedToRequestThrottlingPolicyV2Invoker(request *model.ListApisUnbindedToRequestThrottlingPolicyV2Request) *ListApisUnbindedToRequestThrottlingPolicyV2Invoker {
 	requestDef := GenReqDefForListApisUnbindedToRequestThrottlingPolicyV2()
 	return &ListApisUnbindedToRequestThrottlingPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3624,7 +3708,7 @@ func (c *ApigClient) ListApisUnbindedToRequestThrottlingPolicyV2Invoker(request 
 
 // ListApisV2 查询API列表
 //
-// 查看API列表，返回API详细信息、发布信息等，但不能查看到后端服务信息和API请求参数信息
+// 查询API列表，返回API详细信息、发布信息等，但不能查询到后端服务信息和API请求参数信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApisV2(request *model.ListApisV2Request) (*model.ListApisV2Response, error) {
@@ -3643,7 +3727,7 @@ func (c *ApigClient) ListApisV2Invoker(request *model.ListApisV2Request) *ListAp
 	return &ListApisV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListRequestThrottlingPoliciesBindedToApiV2 查看API绑定的流控策略列表
+// ListRequestThrottlingPoliciesBindedToApiV2 查询API绑定的流控策略列表
 //
 // 查询某个API绑定的流控策略列表。每个环境上应该最多只有一个流控策略。
 //
@@ -3658,7 +3742,7 @@ func (c *ApigClient) ListRequestThrottlingPoliciesBindedToApiV2(request *model.L
 	}
 }
 
-// ListRequestThrottlingPoliciesBindedToApiV2Invoker 查看API绑定的流控策略列表
+// ListRequestThrottlingPoliciesBindedToApiV2Invoker 查询API绑定的流控策略列表
 func (c *ApigClient) ListRequestThrottlingPoliciesBindedToApiV2Invoker(request *model.ListRequestThrottlingPoliciesBindedToApiV2Request) *ListRequestThrottlingPoliciesBindedToApiV2Invoker {
 	requestDef := GenReqDefForListRequestThrottlingPoliciesBindedToApiV2()
 	return &ListRequestThrottlingPoliciesBindedToApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3687,7 +3771,7 @@ func (c *ApigClient) ShowDetailsOfApiGroupV2Invoker(request *model.ShowDetailsOf
 
 // ShowDetailsOfApiV2 查询API详情
 //
-// 查看指定的API的详细信息。
+// 查询指定的API的详细信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfApiV2(request *model.ShowDetailsOfApiV2Request) (*model.ShowDetailsOfApiV2Response, error) {
@@ -3813,9 +3897,9 @@ func (c *ApigClient) DeleteApiAclBindingV2Invoker(request *model.DeleteApiAclBin
 	return &DeleteApiAclBindingV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAclPolicyBindedToApiV2 查看API绑定的ACL策略列表
+// ListAclPolicyBindedToApiV2 查询API绑定的ACL策略列表
 //
-// 查看API绑定的ACL策略列表
+// 查询API绑定的ACL策略列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListAclPolicyBindedToApiV2(request *model.ListAclPolicyBindedToApiV2Request) (*model.ListAclPolicyBindedToApiV2Response, error) {
@@ -3828,15 +3912,15 @@ func (c *ApigClient) ListAclPolicyBindedToApiV2(request *model.ListAclPolicyBind
 	}
 }
 
-// ListAclPolicyBindedToApiV2Invoker 查看API绑定的ACL策略列表
+// ListAclPolicyBindedToApiV2Invoker 查询API绑定的ACL策略列表
 func (c *ApigClient) ListAclPolicyBindedToApiV2Invoker(request *model.ListAclPolicyBindedToApiV2Request) *ListAclPolicyBindedToApiV2Invoker {
 	requestDef := GenReqDefForListAclPolicyBindedToApiV2()
 	return &ListAclPolicyBindedToApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListApisBindedToAclPolicyV2 查看ACL策略绑定的API列表
+// ListApisBindedToAclPolicyV2 查询ACL策略绑定的API列表
 //
-// 查看ACL策略绑定的API列表
+// 查询ACL策略绑定的API列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApisBindedToAclPolicyV2(request *model.ListApisBindedToAclPolicyV2Request) (*model.ListApisBindedToAclPolicyV2Response, error) {
@@ -3849,15 +3933,15 @@ func (c *ApigClient) ListApisBindedToAclPolicyV2(request *model.ListApisBindedTo
 	}
 }
 
-// ListApisBindedToAclPolicyV2Invoker 查看ACL策略绑定的API列表
+// ListApisBindedToAclPolicyV2Invoker 查询ACL策略绑定的API列表
 func (c *ApigClient) ListApisBindedToAclPolicyV2Invoker(request *model.ListApisBindedToAclPolicyV2Request) *ListApisBindedToAclPolicyV2Invoker {
 	requestDef := GenReqDefForListApisBindedToAclPolicyV2()
 	return &ListApisBindedToAclPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListApisUnbindedToAclPolicyV2 查看ACL策略未绑定的API列表
+// ListApisUnbindedToAclPolicyV2 查询ACL策略未绑定的API列表
 //
-// 查看ACL策略未绑定的API列表，需要API已发布
+// 查询ACL策略未绑定的API列表，需要API已发布
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListApisUnbindedToAclPolicyV2(request *model.ListApisUnbindedToAclPolicyV2Request) (*model.ListApisUnbindedToAclPolicyV2Response, error) {
@@ -3870,7 +3954,7 @@ func (c *ApigClient) ListApisUnbindedToAclPolicyV2(request *model.ListApisUnbind
 	}
 }
 
-// ListApisUnbindedToAclPolicyV2Invoker 查看ACL策略未绑定的API列表
+// ListApisUnbindedToAclPolicyV2Invoker 查询ACL策略未绑定的API列表
 func (c *ApigClient) ListApisUnbindedToAclPolicyV2Invoker(request *model.ListApisUnbindedToAclPolicyV2Request) *ListApisUnbindedToAclPolicyV2Invoker {
 	requestDef := GenReqDefForListApisUnbindedToAclPolicyV2()
 	return &ListApisUnbindedToAclPolicyV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3918,7 +4002,7 @@ func (c *ApigClient) CreateAuthorizingAppsV2Invoker(request *model.CreateAuthori
 	return &CreateAuthorizingAppsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListApisBindedToAppV2 查看APP已绑定的API列表
+// ListApisBindedToAppV2 查询APP已绑定的API列表
 //
 // 查询APP已经绑定的API列表。
 //
@@ -3933,13 +4017,13 @@ func (c *ApigClient) ListApisBindedToAppV2(request *model.ListApisBindedToAppV2R
 	}
 }
 
-// ListApisBindedToAppV2Invoker 查看APP已绑定的API列表
+// ListApisBindedToAppV2Invoker 查询APP已绑定的API列表
 func (c *ApigClient) ListApisBindedToAppV2Invoker(request *model.ListApisBindedToAppV2Request) *ListApisBindedToAppV2Invoker {
 	requestDef := GenReqDefForListApisBindedToAppV2()
 	return &ListApisBindedToAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListApisUnbindedToAppV2 查看APP未绑定的API列表
+// ListApisUnbindedToAppV2 查询APP未绑定的API列表
 //
 // 查询指定环境上某个APP未绑定的API列表[，包括自有API和从云商店购买的API](tag:hws)。
 //
@@ -3954,13 +4038,13 @@ func (c *ApigClient) ListApisUnbindedToAppV2(request *model.ListApisUnbindedToAp
 	}
 }
 
-// ListApisUnbindedToAppV2Invoker 查看APP未绑定的API列表
+// ListApisUnbindedToAppV2Invoker 查询APP未绑定的API列表
 func (c *ApigClient) ListApisUnbindedToAppV2Invoker(request *model.ListApisUnbindedToAppV2Request) *ListApisUnbindedToAppV2Invoker {
 	requestDef := GenReqDefForListApisUnbindedToAppV2()
 	return &ListApisUnbindedToAppV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAppsBindedToApiV2 查看API已绑定的APP列表
+// ListAppsBindedToApiV2 查询API已绑定的APP列表
 //
 // 查询API绑定的APP列表。
 //
@@ -3975,7 +4059,7 @@ func (c *ApigClient) ListAppsBindedToApiV2(request *model.ListAppsBindedToApiV2R
 	}
 }
 
-// ListAppsBindedToApiV2Invoker 查看API已绑定的APP列表
+// ListAppsBindedToApiV2Invoker 查询API已绑定的APP列表
 func (c *ApigClient) ListAppsBindedToApiV2Invoker(request *model.ListAppsBindedToApiV2Request) *ListAppsBindedToApiV2Invoker {
 	requestDef := GenReqDefForListAppsBindedToApiV2()
 	return &ListAppsBindedToApiV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -4191,9 +4275,9 @@ func (c *ApigClient) ListCertificatesV2Invoker(request *model.ListCertificatesV2
 	return &ListCertificatesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDetailsOfCertificateV2 查看证书详情
+// ShowDetailsOfCertificateV2 查询证书详情
 //
-// 查看证书详情。
+// 查询证书详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfCertificateV2(request *model.ShowDetailsOfCertificateV2Request) (*model.ShowDetailsOfCertificateV2Response, error) {
@@ -4206,7 +4290,7 @@ func (c *ApigClient) ShowDetailsOfCertificateV2(request *model.ShowDetailsOfCert
 	}
 }
 
-// ShowDetailsOfCertificateV2Invoker 查看证书详情
+// ShowDetailsOfCertificateV2Invoker 查询证书详情
 func (c *ApigClient) ShowDetailsOfCertificateV2Invoker(request *model.ShowDetailsOfCertificateV2Request) *ShowDetailsOfCertificateV2Invoker {
 	requestDef := GenReqDefForShowDetailsOfCertificateV2()
 	return &ShowDetailsOfCertificateV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -4414,9 +4498,9 @@ func (c *ApigClient) DeleteVpcChannelV2Invoker(request *model.DeleteVpcChannelV2
 	return &DeleteVpcChannelV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListBackendInstancesV2 查看后端实例列表
+// ListBackendInstancesV2 查询后端实例列表
 //
-// 查看指定VPC通道的后端实例列表。
+// 查询指定VPC通道的后端实例列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListBackendInstancesV2(request *model.ListBackendInstancesV2Request) (*model.ListBackendInstancesV2Response, error) {
@@ -4429,7 +4513,7 @@ func (c *ApigClient) ListBackendInstancesV2(request *model.ListBackendInstancesV
 	}
 }
 
-// ListBackendInstancesV2Invoker 查看后端实例列表
+// ListBackendInstancesV2Invoker 查询后端实例列表
 func (c *ApigClient) ListBackendInstancesV2Invoker(request *model.ListBackendInstancesV2Request) *ListBackendInstancesV2Invoker {
 	requestDef := GenReqDefForListBackendInstancesV2()
 	return &ListBackendInstancesV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -4458,7 +4542,7 @@ func (c *ApigClient) ListMemberGroupsInvoker(request *model.ListMemberGroupsRequ
 
 // ListVpcChannelsV2 查询VPC通道列表
 //
-// 查看VPC通道列表
+// 查询VPC通道列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ListVpcChannelsV2(request *model.ListVpcChannelsV2Request) (*model.ListVpcChannelsV2Response, error) {
@@ -4477,9 +4561,9 @@ func (c *ApigClient) ListVpcChannelsV2Invoker(request *model.ListVpcChannelsV2Re
 	return &ListVpcChannelsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDetailsOfMemberGroup 查看VPC通道后端服务器组详情
+// ShowDetailsOfMemberGroup 查询VPC通道后端服务器组详情
 //
-// 查看指定的VPC通道后端服务器组详情
+// 查询指定的VPC通道后端服务器组详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfMemberGroup(request *model.ShowDetailsOfMemberGroupRequest) (*model.ShowDetailsOfMemberGroupResponse, error) {
@@ -4492,15 +4576,15 @@ func (c *ApigClient) ShowDetailsOfMemberGroup(request *model.ShowDetailsOfMember
 	}
 }
 
-// ShowDetailsOfMemberGroupInvoker 查看VPC通道后端服务器组详情
+// ShowDetailsOfMemberGroupInvoker 查询VPC通道后端服务器组详情
 func (c *ApigClient) ShowDetailsOfMemberGroupInvoker(request *model.ShowDetailsOfMemberGroupRequest) *ShowDetailsOfMemberGroupInvoker {
 	requestDef := GenReqDefForShowDetailsOfMemberGroup()
 	return &ShowDetailsOfMemberGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowDetailsOfVpcChannelV2 查看VPC通道详情
+// ShowDetailsOfVpcChannelV2 查询VPC通道详情
 //
-// 查看指定的VPC通道详情
+// 查询指定的VPC通道详情
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ApigClient) ShowDetailsOfVpcChannelV2(request *model.ShowDetailsOfVpcChannelV2Request) (*model.ShowDetailsOfVpcChannelV2Response, error) {
@@ -4513,7 +4597,7 @@ func (c *ApigClient) ShowDetailsOfVpcChannelV2(request *model.ShowDetailsOfVpcCh
 	}
 }
 
-// ShowDetailsOfVpcChannelV2Invoker 查看VPC通道详情
+// ShowDetailsOfVpcChannelV2Invoker 查询VPC通道详情
 func (c *ApigClient) ShowDetailsOfVpcChannelV2Invoker(request *model.ShowDetailsOfVpcChannelV2Request) *ShowDetailsOfVpcChannelV2Invoker {
 	requestDef := GenReqDefForShowDetailsOfVpcChannelV2()
 	return &ShowDetailsOfVpcChannelV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

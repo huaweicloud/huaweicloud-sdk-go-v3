@@ -37,6 +37,22 @@ func (i *CreateVocabularyInvoker) Invoke() (*model.CreateVocabularyResponse, err
 	}
 }
 
+type CreateVoiceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateVoiceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateVoiceInvoker) Invoke() (*model.CreateVoiceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateVoiceResponse), nil
+	}
+}
+
 type DeleteVocabularyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,6 +66,38 @@ func (i *DeleteVocabularyInvoker) Invoke() (*model.DeleteVocabularyResponse, err
 		return nil, err
 	} else {
 		return result.(*model.DeleteVocabularyResponse), nil
+	}
+}
+
+type GenerateSpeechInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GenerateSpeechInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GenerateSpeechInvoker) Invoke() (*model.GenerateSpeechResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GenerateSpeechResponse), nil
+	}
+}
+
+type ListVoicesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVoicesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListVoicesInvoker) Invoke() (*model.ListVoicesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVoicesResponse), nil
 	}
 }
 

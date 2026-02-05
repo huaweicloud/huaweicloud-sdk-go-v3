@@ -20,6 +20,8 @@ type CreateOrUpdateScalingPolicyReq struct {
 
 	ScalingPolicyBySession *ScalingPolicyBySession `json:"scaling_policy_by_session"`
 
+	ScalingPolicyByResource *ScalingPolicyByResource `json:"scaling_policy_by_resource,omitempty"`
+
 	// 服务器组唯一标识(仅按需服务器组支持该操作)。
 	ServerGroupId string `json:"server_group_id"`
 }

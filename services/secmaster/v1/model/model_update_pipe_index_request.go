@@ -15,7 +15,7 @@ type UpdatePipeIndexRequest struct {
 	// 管道ID
 	PipeId string `json:"pipe_id"`
 
-	Body *Index `json:"body,omitempty"`
+	Body *UpdateIndexRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdatePipeIndexRequest) String() string {

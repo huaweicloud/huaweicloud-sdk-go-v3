@@ -14,7 +14,7 @@ type Product struct {
 	// 资源规格编码
 	ResourceSpecCode string `json:"resource_spec_code"`
 
-	// 订购数量
+	// 订阅数量
 	ResourceSize int32 `json:"resource_size"`
 }
 

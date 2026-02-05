@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// NacosServerConfig Nacos服务端配置信息。
+// NacosServerConfig nacos服务端配置信息。
 type NacosServerConfig struct {
 
 	// nacos服务端IP地址。不包含中文字符。

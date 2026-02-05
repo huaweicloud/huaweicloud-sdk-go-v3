@@ -3826,10 +3826,6 @@ func GenReqDefForListAlertRuleTemplateMetrics() *def.HttpRequestDef {
 		WithJsonTag("workspace_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }

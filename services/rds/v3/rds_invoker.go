@@ -453,6 +453,22 @@ func (i *CreateXelLogDownloadInvoker) Invoke() (*model.CreateXelLogDownloadRespo
 	}
 }
 
+type DeleteBackupSelectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteBackupSelectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteBackupSelectionInvoker) Invoke() (*model.DeleteBackupSelectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteBackupSelectionResponse), nil
+	}
+}
+
 type DeleteConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }

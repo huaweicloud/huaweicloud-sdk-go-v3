@@ -22,6 +22,9 @@ type ProjectConfig struct {
 	// 是否已经关联
 	IsRelevance *bool `json:"is_relevance,omitempty"`
 
+	// sfs集群ID。
+	ClusterGroupId *string `json:"cluster_group_id,omitempty"`
+
 	// 创建时间。
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 }

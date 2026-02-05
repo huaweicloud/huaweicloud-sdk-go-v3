@@ -22,7 +22,7 @@ type ResourceUsage struct {
 	SourceResourceSpecCode *string `json:"source_resource_spec_code,omitempty"`
 
 	// 源资源规格编码
-	ResourceSpecCode *interface{} `json:"resource_spec_code,omitempty"`
+	ResourceSpecCode *string `json:"resource_spec_code,omitempty"`
 
 	// 源资源类型编码
 	SourceType *string `json:"source_type,omitempty"`

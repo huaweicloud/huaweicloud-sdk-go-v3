@@ -52,6 +52,8 @@ type CreateDpeMappingRequestBody struct {
 	ModifierName *string `json:"modifier_name,omitempty"`
 
 	Mapper *DpeMappingDetail `json:"mapper"`
+
+	Classifier *DpeClassifyCreate `json:"classifier,omitempty"`
 }
 
 func (o CreateDpeMappingRequestBody) String() string {

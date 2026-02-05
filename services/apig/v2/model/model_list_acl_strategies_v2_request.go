@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -24,8 +27,8 @@ type ListAclStrategiesV2Request struct {
 	// ACL策略名称。
 	Name *string `json:"name,omitempty"`
 
-	// 类型 - PERMIT (白名单类型) - DENY (黑名单类型)
-	AclType *string `json:"acl_type,omitempty"`
+	// 类型。 - PERMIT：白名单类型 - DENY：黑名单类型
+	AclType *ListAclStrategiesV2RequestAclType `json:"acl_type,omitempty"`
 
 	// 作用的对象类型： - IP - DOMAIN
 	EntityType *string `json:"entity_type,omitempty"`
@@ -41,4 +44,51 @@ func (o ListAclStrategiesV2Request) String() string {
 	}
 
 	return strings.Join([]string{"ListAclStrategiesV2Request", string(data)}, " ")
+}
+
+type ListAclStrategiesV2RequestAclType struct {
+	value string
+}
+
+type ListAclStrategiesV2RequestAclTypeEnum struct {
+	PERMIT ListAclStrategiesV2RequestAclType
+	DENY   ListAclStrategiesV2RequestAclType
+}
+
+func GetListAclStrategiesV2RequestAclTypeEnum() ListAclStrategiesV2RequestAclTypeEnum {
+	return ListAclStrategiesV2RequestAclTypeEnum{
+		PERMIT: ListAclStrategiesV2RequestAclType{
+			value: "PERMIT",
+		},
+		DENY: ListAclStrategiesV2RequestAclType{
+			value: "DENY",
+		},
+	}
+}
+
+func (c ListAclStrategiesV2RequestAclType) Value() string {
+	return c.value
+}
+
+func (c ListAclStrategiesV2RequestAclType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListAclStrategiesV2RequestAclType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

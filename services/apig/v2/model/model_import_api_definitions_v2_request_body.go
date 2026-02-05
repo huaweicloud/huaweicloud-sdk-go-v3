@@ -17,25 +17,25 @@ import (
 
 type ImportApiDefinitionsV2RequestBody struct {
 
-	// 是否创建新分组
+	// 是否创建新分组。
 	IsCreateGroup *def.MultiPart `json:"is_create_group,omitempty"`
 
-	// API分组编号，当is_create_group=false时为必填
+	// API分组编号，当is_create_group=false时为必填。
 	GroupId *def.MultiPart `json:"group_id,omitempty"`
 
 	// 扩展信息导入模式 - merge：当扩展信息定义冲突时，merge保留原有扩展信息 - override：当扩展信息定义冲突时，override会覆盖原有扩展信息
 	ExtendMode *def.MultiPart `json:"extend_mode,omitempty"`
 
-	// 是否开启简易导入模式
+	// 是否开启简易导入模式。
 	SimpleMode *def.MultiPart `json:"simple_mode,omitempty"`
 
-	// 是否开启Mock后端
+	// 是否开启Mock后端。
 	MockMode *def.MultiPart `json:"mock_mode,omitempty"`
 
 	// 导入模式 - merge：当API信息定义冲突时，merge保留原有API信息 - override：当API信息定义冲突时，override会覆盖原有API信息
 	ApiMode *def.MultiPart `json:"api_mode,omitempty"`
 
-	// 导入Api的请求体，json或yaml格式的文件
+	// 导入Api的请求体，json或yaml或yml格式的文件。
 	FileName *def.FilePart `json:"file_name"`
 }
 

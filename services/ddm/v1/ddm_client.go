@@ -924,6 +924,27 @@ func (c *DdmClient) ListDdmFlavorsInvoker(request *model.ListDdmFlavorsRequest) 
 	return &ListDdmFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDdms 查询实例列表
+//
+// 查询实例列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ListDdms(request *model.ListDdmsRequest) (*model.ListDdmsResponse, error) {
+	requestDef := GenReqDefForListDdms()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDdmsResponse), nil
+	}
+}
+
+// ListDdmsInvoker 查询实例列表
+func (c *DdmClient) ListDdmsInvoker(request *model.ListDdmsRequest) *ListDdmsInvoker {
+	requestDef := GenReqDefForListDdms()
+	return &ListDdmsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListEngines 查询DDM引擎信息
 //
 // 查询DDM引擎信息详情。
@@ -1069,6 +1090,27 @@ func (c *DdmClient) ListSlowLog(request *model.ListSlowLogRequest) (*model.ListS
 func (c *DdmClient) ListSlowLogInvoker(request *model.ListSlowLogRequest) *ListSlowLogInvoker {
 	requestDef := GenReqDefForListSlowLog()
 	return &ListSlowLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSlowLogAnalysis 查询慢日志
+//
+// 查询慢日志V3
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ListSlowLogAnalysis(request *model.ListSlowLogAnalysisRequest) (*model.ListSlowLogAnalysisResponse, error) {
+	requestDef := GenReqDefForListSlowLogAnalysis()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSlowLogAnalysisResponse), nil
+	}
+}
+
+// ListSlowLogAnalysisInvoker 查询慢日志
+func (c *DdmClient) ListSlowLogAnalysisInvoker(request *model.ListSlowLogAnalysisRequest) *ListSlowLogAnalysisInvoker {
+	requestDef := GenReqDefForListSlowLogAnalysis()
+	return &ListSlowLogAnalysisInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSlowLogs 慢日志监控
@@ -1638,6 +1680,27 @@ func (c *DdmClient) ShowInstanceParamInvoker(request *model.ShowInstanceParamReq
 	return &ShowInstanceParamInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowIpGroup 查询访问控制组
+//
+// 查询访问控制组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ShowIpGroup(request *model.ShowIpGroupRequest) (*model.ShowIpGroupResponse, error) {
+	requestDef := GenReqDefForShowIpGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIpGroupResponse), nil
+	}
+}
+
+// ShowIpGroupInvoker 查询访问控制组
+func (c *DdmClient) ShowIpGroupInvoker(request *model.ShowIpGroupRequest) *ShowIpGroupInvoker {
+	requestDef := GenReqDefForShowIpGroup()
+	return &ShowIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowLogicalProcesses 查询逻辑会话列表
 //
 // 查询逻辑会话列表
@@ -1657,6 +1720,27 @@ func (c *DdmClient) ShowLogicalProcesses(request *model.ShowLogicalProcessesRequ
 func (c *DdmClient) ShowLogicalProcessesInvoker(request *model.ShowLogicalProcessesRequest) *ShowLogicalProcessesInvoker {
 	requestDef := GenReqDefForShowLogicalProcesses()
 	return &ShowLogicalProcessesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMigrationLog 查询分片变更的日志
+//
+// 查询分片变更的日志
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ShowMigrationLog(request *model.ShowMigrationLogRequest) (*model.ShowMigrationLogResponse, error) {
+	requestDef := GenReqDefForShowMigrationLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMigrationLogResponse), nil
+	}
+}
+
+// ShowMigrationLogInvoker 查询分片变更的日志
+func (c *DdmClient) ShowMigrationLogInvoker(request *model.ShowMigrationLogRequest) *ShowMigrationLogInvoker {
+	requestDef := GenReqDefForShowMigrationLog()
+	return &ShowMigrationLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowNode 查询DDM实例节点详情
@@ -1783,6 +1867,27 @@ func (c *DdmClient) ShrinkInstanceNodes(request *model.ShrinkInstanceNodesReques
 func (c *DdmClient) ShrinkInstanceNodesInvoker(request *model.ShrinkInstanceNodesRequest) *ShrinkInstanceNodesInvoker {
 	requestDef := GenReqDefForShrinkInstanceNodes()
 	return &ShrinkInstanceNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchIpGroup 创建访问控制组
+//
+// 创建访问控制组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) SwitchIpGroup(request *model.SwitchIpGroupRequest) (*model.SwitchIpGroupResponse, error) {
+	requestDef := GenReqDefForSwitchIpGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchIpGroupResponse), nil
+	}
+}
+
+// SwitchIpGroupInvoker 创建访问控制组
+func (c *DdmClient) SwitchIpGroupInvoker(request *model.SwitchIpGroupRequest) *SwitchIpGroupInvoker {
+	requestDef := GenReqDefForSwitchIpGroup()
+	return &SwitchIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SwitchRoute 切换路由
@@ -2058,25 +2163,25 @@ func (c *DdmClient) ValidateWeakPasswordInvoker(request *model.ValidateWeakPassw
 	return &ValidateWeakPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CheckDataNodeConnectionV0V3 rds连通性检查V3
+// CheckDataNodeConnection rds连通性检查V3
 //
 // rds连通性检查V3
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DdmClient) CheckDataNodeConnectionV0V3(request *model.CheckDataNodeConnectionV0V3Request) (*model.CheckDataNodeConnectionV0V3Response, error) {
-	requestDef := GenReqDefForCheckDataNodeConnectionV0V3()
+func (c *DdmClient) CheckDataNodeConnection(request *model.CheckDataNodeConnectionRequest) (*model.CheckDataNodeConnectionResponse, error) {
+	requestDef := GenReqDefForCheckDataNodeConnection()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CheckDataNodeConnectionV0V3Response), nil
+		return resp.(*model.CheckDataNodeConnectionResponse), nil
 	}
 }
 
-// CheckDataNodeConnectionV0V3Invoker rds连通性检查V3
-func (c *DdmClient) CheckDataNodeConnectionV0V3Invoker(request *model.CheckDataNodeConnectionV0V3Request) *CheckDataNodeConnectionV0V3Invoker {
-	requestDef := GenReqDefForCheckDataNodeConnectionV0V3()
-	return &CheckDataNodeConnectionV0V3Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CheckDataNodeConnectionInvoker rds连通性检查V3
+func (c *DdmClient) CheckDataNodeConnectionInvoker(request *model.CheckDataNodeConnectionRequest) *CheckDataNodeConnectionInvoker {
+	requestDef := GenReqDefForCheckDataNodeConnection()
+	return &CheckDataNodeConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CompareParameterGroups 比较参数组V3
@@ -2100,67 +2205,67 @@ func (c *DdmClient) CompareParameterGroupsInvoker(request *model.CompareParamete
 	return &CompareParameterGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CopyParameterGroup 复制参数组V3
+// CopyConfiguration 复制参数组V3
 //
 // 复制参数组V3
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DdmClient) CopyParameterGroup(request *model.CopyParameterGroupRequest) (*model.CopyParameterGroupResponse, error) {
-	requestDef := GenReqDefForCopyParameterGroup()
+func (c *DdmClient) CopyConfiguration(request *model.CopyConfigurationRequest) (*model.CopyConfigurationResponse, error) {
+	requestDef := GenReqDefForCopyConfiguration()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CopyParameterGroupResponse), nil
+		return resp.(*model.CopyConfigurationResponse), nil
 	}
 }
 
-// CopyParameterGroupInvoker 复制参数组V3
-func (c *DdmClient) CopyParameterGroupInvoker(request *model.CopyParameterGroupRequest) *CopyParameterGroupInvoker {
-	requestDef := GenReqDefForCopyParameterGroup()
-	return &CopyParameterGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CopyConfigurationInvoker 复制参数组V3
+func (c *DdmClient) CopyConfigurationInvoker(request *model.CopyConfigurationRequest) *CopyConfigurationInvoker {
+	requestDef := GenReqDefForCopyConfiguration()
+	return &CopyConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListInstancesAppliedParameterGroupV0V3 查询可应用的实例列表V3
-//
-// 查询可应用的实例列表V3
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DdmClient) ListInstancesAppliedParameterGroupV0V3(request *model.ListInstancesAppliedParameterGroupV0V3Request) (*model.ListInstancesAppliedParameterGroupV0V3Response, error) {
-	requestDef := GenReqDefForListInstancesAppliedParameterGroupV0V3()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListInstancesAppliedParameterGroupV0V3Response), nil
-	}
-}
-
-// ListInstancesAppliedParameterGroupV0V3Invoker 查询可应用的实例列表V3
-func (c *DdmClient) ListInstancesAppliedParameterGroupV0V3Invoker(request *model.ListInstancesAppliedParameterGroupV0V3Request) *ListInstancesAppliedParameterGroupV0V3Invoker {
-	requestDef := GenReqDefForListInstancesAppliedParameterGroupV0V3()
-	return &ListInstancesAppliedParameterGroupV0V3Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListParameterGroupApplyHistoryV0V3 参数组应用记录V3
+// ListConfigurationApplyHistories 参数组应用记录V3
 //
 // 参数组应用记录V3
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *DdmClient) ListParameterGroupApplyHistoryV0V3(request *model.ListParameterGroupApplyHistoryV0V3Request) (*model.ListParameterGroupApplyHistoryV0V3Response, error) {
-	requestDef := GenReqDefForListParameterGroupApplyHistoryV0V3()
+func (c *DdmClient) ListConfigurationApplyHistories(request *model.ListConfigurationApplyHistoriesRequest) (*model.ListConfigurationApplyHistoriesResponse, error) {
+	requestDef := GenReqDefForListConfigurationApplyHistories()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListParameterGroupApplyHistoryV0V3Response), nil
+		return resp.(*model.ListConfigurationApplyHistoriesResponse), nil
 	}
 }
 
-// ListParameterGroupApplyHistoryV0V3Invoker 参数组应用记录V3
-func (c *DdmClient) ListParameterGroupApplyHistoryV0V3Invoker(request *model.ListParameterGroupApplyHistoryV0V3Request) *ListParameterGroupApplyHistoryV0V3Invoker {
-	requestDef := GenReqDefForListParameterGroupApplyHistoryV0V3()
-	return &ListParameterGroupApplyHistoryV0V3Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListConfigurationApplyHistoriesInvoker 参数组应用记录V3
+func (c *DdmClient) ListConfigurationApplyHistoriesInvoker(request *model.ListConfigurationApplyHistoriesRequest) *ListConfigurationApplyHistoriesInvoker {
+	requestDef := GenReqDefForListConfigurationApplyHistories()
+	return &ListConfigurationApplyHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstancesConfigurations 查询可应用的实例列表V3
+//
+// 查询可应用的实例列表V3
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ListInstancesConfigurations(request *model.ListInstancesConfigurationsRequest) (*model.ListInstancesConfigurationsResponse, error) {
+	requestDef := GenReqDefForListInstancesConfigurations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstancesConfigurationsResponse), nil
+	}
+}
+
+// ListInstancesConfigurationsInvoker 查询可应用的实例列表V3
+func (c *DdmClient) ListInstancesConfigurationsInvoker(request *model.ListInstancesConfigurationsRequest) *ListInstancesConfigurationsInvoker {
+	requestDef := GenReqDefForListInstancesConfigurations()
+	return &ListInstancesConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ResetParameterGroup 更新参数组V3
@@ -2203,4 +2308,67 @@ func (c *DdmClient) ShowDdmDetail(request *model.ShowDdmDetailRequest) (*model.S
 func (c *DdmClient) ShowDdmDetailInvoker(request *model.ShowDdmDetailRequest) *ShowDdmDetailInvoker {
 	requestDef := GenReqDefForShowDdmDetail()
 	return &ShowDdmDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchModifyReadWriteStrategy 批量设置读策略V3
+//
+// 批量设置读策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) BatchModifyReadWriteStrategy(request *model.BatchModifyReadWriteStrategyRequest) (*model.BatchModifyReadWriteStrategyResponse, error) {
+	requestDef := GenReqDefForBatchModifyReadWriteStrategy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchModifyReadWriteStrategyResponse), nil
+	}
+}
+
+// BatchModifyReadWriteStrategyInvoker 批量设置读策略V3
+func (c *DdmClient) BatchModifyReadWriteStrategyInvoker(request *model.BatchModifyReadWriteStrategyRequest) *BatchModifyReadWriteStrategyInvoker {
+	requestDef := GenReqDefForBatchModifyReadWriteStrategy()
+	return &BatchModifyReadWriteStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifySqlBlackList 修改sql黑名单
+//
+// 修改sql黑名单V3
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ModifySqlBlackList(request *model.ModifySqlBlackListRequest) (*model.ModifySqlBlackListResponse, error) {
+	requestDef := GenReqDefForModifySqlBlackList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifySqlBlackListResponse), nil
+	}
+}
+
+// ModifySqlBlackListInvoker 修改sql黑名单
+func (c *DdmClient) ModifySqlBlackListInvoker(request *model.ModifySqlBlackListRequest) *ModifySqlBlackListInvoker {
+	requestDef := GenReqDefForModifySqlBlackList()
+	return &ModifySqlBlackListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSqlBlack 查询sql黑名单V3
+//
+// 查询sql黑名单
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) ListSqlBlack(request *model.ListSqlBlackRequest) (*model.ListSqlBlackResponse, error) {
+	requestDef := GenReqDefForListSqlBlack()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSqlBlackResponse), nil
+	}
+}
+
+// ListSqlBlackInvoker 查询sql黑名单V3
+func (c *DdmClient) ListSqlBlackInvoker(request *model.ListSqlBlackRequest) *ListSqlBlackInvoker {
+	requestDef := GenReqDefForListSqlBlack()
+	return &ListSqlBlackInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

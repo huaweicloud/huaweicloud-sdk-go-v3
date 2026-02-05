@@ -9,7 +9,7 @@ import (
 // ShowDdmDetailResponse Response Object
 type ShowDdmDetailResponse struct {
 
-	// 实例详情。
+	// **参数解释**：  查询实例详情相关信息的返回集合。  **参数范围**：  不涉及。
 	Instances      *[]InstanceDetail `json:"instances,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

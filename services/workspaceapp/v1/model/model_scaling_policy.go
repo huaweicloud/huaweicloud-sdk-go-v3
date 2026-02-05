@@ -19,6 +19,8 @@ type ScalingPolicy struct {
 	SingleExpansionCount int32 `json:"single_expansion_count"`
 
 	ScalingPolicyBySession *ScalingPolicyBySession `json:"scaling_policy_by_session"`
+
+	ScalingPolicyByResource *ScalingPolicyByResource `json:"scaling_policy_by_resource,omitempty"`
 }
 
 func (o ScalingPolicy) String() string {

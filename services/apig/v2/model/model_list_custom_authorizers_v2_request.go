@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -24,8 +27,8 @@ type ListCustomAuthorizersV2Request struct {
 	// 名称
 	Name *string `json:"name,omitempty"`
 
-	// 类型
-	Type *string `json:"type,omitempty"`
+	// 自定义认证类型。 - FRONTEND：前端 - BACKEND：后端
+	Type *ListCustomAuthorizersV2RequestType `json:"type,omitempty"`
 }
 
 func (o ListCustomAuthorizersV2Request) String() string {
@@ -35,4 +38,51 @@ func (o ListCustomAuthorizersV2Request) String() string {
 	}
 
 	return strings.Join([]string{"ListCustomAuthorizersV2Request", string(data)}, " ")
+}
+
+type ListCustomAuthorizersV2RequestType struct {
+	value string
+}
+
+type ListCustomAuthorizersV2RequestTypeEnum struct {
+	FRONTEND ListCustomAuthorizersV2RequestType
+	BACKEND  ListCustomAuthorizersV2RequestType
+}
+
+func GetListCustomAuthorizersV2RequestTypeEnum() ListCustomAuthorizersV2RequestTypeEnum {
+	return ListCustomAuthorizersV2RequestTypeEnum{
+		FRONTEND: ListCustomAuthorizersV2RequestType{
+			value: "FRONTEND",
+		},
+		BACKEND: ListCustomAuthorizersV2RequestType{
+			value: "BACKEND",
+		},
+	}
+}
+
+func (c ListCustomAuthorizersV2RequestType) Value() string {
+	return c.value
+}
+
+func (c ListCustomAuthorizersV2RequestType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListCustomAuthorizersV2RequestType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// MicroServiceInfoNacosBase Nacos微服务详细信息。
+// MicroServiceInfoNacosBase nacos微服务详细信息。
 type MicroServiceInfoNacosBase struct {
 
 	// 命名空间ID，当选择默认命名空间public时，此项为空。由字母、数字、连接符('-')、下划线('_')组成且64个字符之内。

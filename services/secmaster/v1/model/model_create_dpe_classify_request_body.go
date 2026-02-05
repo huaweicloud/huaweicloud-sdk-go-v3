@@ -29,6 +29,8 @@ type CreateDpeClassifyRequestBody struct {
 	Description string `json:"description"`
 
 	Classifier *DpeClassifyCreate `json:"classifier"`
+
+	Mapper *CreateDpeMappingRequestBody `json:"mapper,omitempty"`
 }
 
 func (o CreateDpeClassifyRequestBody) String() string {

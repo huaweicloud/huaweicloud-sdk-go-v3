@@ -57,7 +57,7 @@ type ProductInfo struct {
 	// 云服务类型。
 	CloudServiceType *string `json:"cloud_service_type,omitempty"`
 
-	// 磁盘产品类型。
+	// 磁盘产品类型： - workspace
 	VolumeProductType *string `json:"volume_product_type,omitempty"`
 
 	// 套餐默认支持的最大会话数。
@@ -78,7 +78,7 @@ type ProductInfo struct {
 	// 套餐类型： - general：表示产品通用套餐。 - dedicated：表示产品专属主机套餐。
 	PackageType *string `json:"package_type,omitempty"`
 
-	// 系列类型。
+	// 系列类型： - d7 - c7
 	SeriesType *string `json:"series_type,omitempty"`
 
 	// 产品套餐过期时间,产品将在该时间点后逐步下架。

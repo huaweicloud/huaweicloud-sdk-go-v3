@@ -229,6 +229,22 @@ func (i *CheckAppV2Invoker) Invoke() (*model.CheckAppV2Response, error) {
 	}
 }
 
+type CreateAiApiKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAiApiKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAiApiKeyInvoker) Invoke() (*model.CreateAiApiKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAiApiKeyResponse), nil
+	}
+}
+
 type CreateAnAppV2Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -514,6 +530,22 @@ func (i *CreateSpecialThrottlingConfigurationV2Invoker) Invoke() (*model.CreateS
 		return nil, err
 	} else {
 		return result.(*model.CreateSpecialThrottlingConfigurationV2Response), nil
+	}
+}
+
+type DeleteAiApiKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAiApiKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAiApiKeyInvoker) Invoke() (*model.DeleteAiApiKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAiApiKeyResponse), nil
 	}
 }
 
@@ -930,6 +962,22 @@ func (i *ImportMicroserviceInvoker) Invoke() (*model.ImportMicroserviceResponse,
 		return nil, err
 	} else {
 		return result.(*model.ImportMicroserviceResponse), nil
+	}
+}
+
+type ListAiApiKeysInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAiApiKeysInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAiApiKeysInvoker) Invoke() (*model.ListAiApiKeysResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAiApiKeysResponse), nil
 	}
 }
 
@@ -1714,6 +1762,22 @@ func (i *ShowAsyncTaskResultInvoker) Invoke() (*model.ShowAsyncTaskResultRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowAsyncTaskResultResponse), nil
+	}
+}
+
+type ShowDetailsOfAiApiKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDetailsOfAiApiKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDetailsOfAiApiKeyInvoker) Invoke() (*model.ShowDetailsOfAiApiKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDetailsOfAiApiKeyResponse), nil
 	}
 }
 

@@ -16,8 +16,8 @@ type AclBindApiInfo struct {
 	// API名称
 	ApiName *string `json:"api_name,omitempty"`
 
-	// API类型
-	ApiType *int64 `json:"api_type,omitempty"`
+	// API类型。 - 1：公有API - 2：私有API
+	ApiType *AclBindApiInfoApiType `json:"api_type,omitempty"`
 
 	// API的描述信息
 	ApiRemark *string `json:"api_remark,omitempty"`
@@ -54,6 +54,52 @@ func (o AclBindApiInfo) String() string {
 	}
 
 	return strings.Join([]string{"AclBindApiInfo", string(data)}, " ")
+}
+
+type AclBindApiInfoApiType struct {
+	value int32
+}
+
+type AclBindApiInfoApiTypeEnum struct {
+	E_1 AclBindApiInfoApiType
+	E_2 AclBindApiInfoApiType
+}
+
+func GetAclBindApiInfoApiTypeEnum() AclBindApiInfoApiTypeEnum {
+	return AclBindApiInfoApiTypeEnum{
+		E_1: AclBindApiInfoApiType{
+			value: 1,
+		}, E_2: AclBindApiInfoApiType{
+			value: 2,
+		},
+	}
+}
+
+func (c AclBindApiInfoApiType) Value() int32 {
+	return c.value
+}
+
+func (c AclBindApiInfoApiType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *AclBindApiInfoApiType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }
 
 type AclBindApiInfoReqMethod struct {

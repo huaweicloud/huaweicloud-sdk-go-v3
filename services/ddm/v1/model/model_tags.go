@@ -8,10 +8,10 @@ import (
 
 type Tags struct {
 
-	// 标签名称。
+	// **参数解释**：  标签名称。  **参数范围**：  不涉及。
 	Key *string `json:"key,omitempty"`
 
-	// 标签值。
+	// **参数解释**：  标签值。  **参数范围**：  不涉及。
 	Value *string `json:"value,omitempty"`
 }
 

@@ -17,9 +17,6 @@ type CreateSecretRequest struct {
 
 	// 项目名称，缺省值默认为区域名称，例如：cn-north-1。
 	Projectname *string `json:"projectname,omitempty"`
-
-	// 自定义临时凭证有效期，单位秒，取值范围15min-24h
-	DurationSeconds *int32 `json:"duration_seconds,omitempty"`
 }
 
 func (o CreateSecretRequest) String() string {

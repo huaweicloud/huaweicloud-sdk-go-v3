@@ -197,6 +197,22 @@ func (i *BatchEnableAppInvoker) Invoke() (*model.BatchEnableAppResponse, error) 
 	}
 }
 
+type CheckPublishAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckPublishAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckPublishAppInvoker) Invoke() (*model.CheckPublishAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckPublishAppResponse), nil
+	}
+}
+
 type DeleteAppIconInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -677,6 +693,22 @@ func (i *BatchDeleteCloudStorageInvoker) Invoke() (*model.BatchDeleteCloudStorag
 	}
 }
 
+type ChangeClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeClusterInvoker) Invoke() (*model.ChangeClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeClusterResponse), nil
+	}
+}
+
 type CreateCloudStorageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -882,6 +914,86 @@ func (i *UpdateCloudUserFolderAssignmentInvoker) Invoke() (*model.UpdateCloudUse
 		return nil, err
 	} else {
 		return result.(*model.UpdateCloudUserFolderAssignmentResponse), nil
+	}
+}
+
+type CreateHotspotSessionConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateHotspotSessionConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateHotspotSessionConfigInvoker) Invoke() (*model.CreateHotspotSessionConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateHotspotSessionConfigResponse), nil
+	}
+}
+
+type ListHotspotSessionConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHotspotSessionConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListHotspotSessionConfigInvoker) Invoke() (*model.ListHotspotSessionConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHotspotSessionConfigResponse), nil
+	}
+}
+
+type ListNonMigrationUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListNonMigrationUsersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListNonMigrationUsersInvoker) Invoke() (*model.ListNonMigrationUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListNonMigrationUsersResponse), nil
+	}
+}
+
+type UpdateHotspotSessionConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateHotspotSessionConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateHotspotSessionConfigInvoker) Invoke() (*model.UpdateHotspotSessionConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateHotspotSessionConfigResponse), nil
+	}
+}
+
+type UpdateNonMigrationUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateNonMigrationUsersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateNonMigrationUsersInvoker) Invoke() (*model.UpdateNonMigrationUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateNonMigrationUsersResponse), nil
 	}
 }
 
@@ -1650,38 +1762,6 @@ func (i *UpdatePolicyTemplateInvoker) Invoke() (*model.UpdatePolicyTemplateRespo
 		return nil, err
 	} else {
 		return result.(*model.UpdatePolicyTemplateResponse), nil
-	}
-}
-
-type ShowPrivacyStatementInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowPrivacyStatementInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowPrivacyStatementInvoker) Invoke() (*model.ShowPrivacyStatementResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowPrivacyStatementResponse), nil
-	}
-}
-
-type SignPrivacyStatementInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SignPrivacyStatementInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *SignPrivacyStatementInvoker) Invoke() (*model.SignPrivacyStatementResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SignPrivacyStatementResponse), nil
 	}
 }
 

@@ -15,7 +15,7 @@ type ListWarehouseAppsRequest struct {
 	// 查询的偏移量，默认值0。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 审核状态。
+	// 审核状态： - VERIFYING：审核中 - VERIFY_PASS：审核通过 - Verify_FAIL：审核不通过
 	VerifyStatus *string `json:"verify_status,omitempty"`
 
 	// 应用仓库中的应用记录ID。

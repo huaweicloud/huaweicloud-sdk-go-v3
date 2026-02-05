@@ -6514,9 +6514,9 @@ func (c *SecMasterClient) UpdateSearchConditionInvoker(request *model.UpdateSear
 	return &UpdateSearchConditionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateSubscriptionOrder 更新订购资源
+// UpdateSubscriptionOrder 更新订阅资源
 //
-// 更新订购资源
+// 更新订阅资源
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *SecMasterClient) UpdateSubscriptionOrder(request *model.UpdateSubscriptionOrderRequest) (*model.UpdateSubscriptionOrderResponse, error) {
@@ -6529,7 +6529,7 @@ func (c *SecMasterClient) UpdateSubscriptionOrder(request *model.UpdateSubscript
 	}
 }
 
-// UpdateSubscriptionOrderInvoker 更新订购资源
+// UpdateSubscriptionOrderInvoker 更新订阅资源
 func (c *SecMasterClient) UpdateSubscriptionOrderInvoker(request *model.UpdateSubscriptionOrderRequest) *UpdateSubscriptionOrderInvoker {
 	requestDef := GenReqDefForUpdateSubscriptionOrder()
 	return &UpdateSubscriptionOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

@@ -39,6 +39,9 @@ type SubscriptionResourceInfo struct {
 	// 计费模式，目前有包周期（包年包月）PREPAID、按需POSTPAID，大小写不敏感
 	ChargingMode *SubscriptionResourceInfoChargingMode `json:"charging_mode,omitempty"`
 
+	// 当前资源是否能进行按需转包周期操作
+	ToPeriod *bool `json:"to_period,omitempty"`
+
 	// 资源列表
 	TagList *[]TagInfo `json:"tag_list,omitempty"`
 }

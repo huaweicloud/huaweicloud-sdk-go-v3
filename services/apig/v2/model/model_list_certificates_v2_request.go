@@ -27,13 +27,13 @@ type ListCertificatesV2Request struct {
 	// 证书签名算法
 	SignatureAlgorithm *string `json:"signature_algorithm,omitempty"`
 
-	// 证书可见范围
+	// 证书类型。 - instance：实例证书 - global：全局证书
 	Type *ListCertificatesV2RequestType `json:"type,omitempty"`
 
 	// 证书所属实例ID
 	InstanceId string `json:"instance_id"`
 
-	// 证书算法类型： - RSA。 - ECC。 - SM2。
+	// 证书算法类型。 - RSA - ECC - SM2
 	AlgorithmType *ListCertificatesV2RequestAlgorithmType `json:"algorithm_type,omitempty"`
 }
 

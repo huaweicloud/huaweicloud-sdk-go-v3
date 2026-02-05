@@ -29,13 +29,13 @@ type CheckitemModel struct {
 	// 表示该检查项的严重程度 informational：提示 low: 低危 medium：中危 high: 高危 fatal：致命
 	Level string `json:"level"`
 
-	// 表示该检查项的检查方式 0：自动项 3: 剧本流程/logic app
+	// 表示该检查项的检查方式 0：手动 1：自动 3: 自动-剧本流程 4: 自动-企业主机安全 5：自动-配置审计服务
 	Method int32 `json:"method"`
 
 	// 检查项的名称
 	Name string `json:"name"`
 
-	// 表示该检查项的来源 0：默认/default 2: 剧本流程/playbook
+	// 表示该检查项的来源 0：自动 2: 自动-剧本流程 3: 手动 4: 自动-企业主机安全 5：自动-配置审计服务
 	Source *int32 `json:"source,omitempty"`
 
 	// **参数解释**: 流程ID **约束限制**: 不涉及

@@ -22,8 +22,8 @@ type ApiAuthInfo struct {
 	// API绑定的分组名称
 	GroupName *string `json:"group_name,omitempty"`
 
-	// API类型
-	ApiType *int32 `json:"api_type,omitempty"`
+	// API类型。 - 1：公有API - 2：私有API
+	ApiType *ApiAuthInfoApiType `json:"api_type,omitempty"`
 
 	// API的描述信息
 	ApiRemark *string `json:"api_remark,omitempty"`
@@ -87,6 +87,52 @@ func (o ApiAuthInfo) String() string {
 	}
 
 	return strings.Join([]string{"ApiAuthInfo", string(data)}, " ")
+}
+
+type ApiAuthInfoApiType struct {
+	value int32
+}
+
+type ApiAuthInfoApiTypeEnum struct {
+	E_1 ApiAuthInfoApiType
+	E_2 ApiAuthInfoApiType
+}
+
+func GetApiAuthInfoApiTypeEnum() ApiAuthInfoApiTypeEnum {
+	return ApiAuthInfoApiTypeEnum{
+		E_1: ApiAuthInfoApiType{
+			value: 1,
+		}, E_2: ApiAuthInfoApiType{
+			value: 2,
+		},
+	}
+}
+
+func (c ApiAuthInfoApiType) Value() int32 {
+	return c.value
+}
+
+func (c ApiAuthInfoApiType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ApiAuthInfoApiType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }
 
 type ApiAuthInfoAppType struct {

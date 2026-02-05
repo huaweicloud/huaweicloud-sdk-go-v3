@@ -42,9 +42,15 @@ type AssociateCertificateV2Response struct {
 	// 证书的编号
 	SslId string `json:"ssl_id"`
 
-	// SSL证书列表。
-	SslInfos       *[]SslInfo `json:"ssl_infos,omitempty"`
-	HttpStatusCode int        `json:"-"`
+	// 实例ID。
+	InstanceId *string `json:"instance_id,omitempty"`
+
+	// API分组的ID。
+	ApiGroupId *string `json:"api_group_id,omitempty"`
+
+	// API分组的名称。
+	ApiGroupName   *string `json:"api_group_name,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o AssociateCertificateV2Response) String() string {

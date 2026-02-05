@@ -28,8 +28,8 @@ type SignApiBindingInfo struct {
 	// API所属环境的名称
 	EnvName *string `json:"env_name,omitempty"`
 
-	// API类型
-	ApiType *int32 `json:"api_type,omitempty"`
+	// API类型。 - 1：公有API - 2：私有API
+	ApiType *SignApiBindingInfoApiType `json:"api_type,omitempty"`
 
 	// API名称
 	ApiName *string `json:"api_name,omitempty"`
@@ -69,6 +69,52 @@ func (o SignApiBindingInfo) String() string {
 	}
 
 	return strings.Join([]string{"SignApiBindingInfo", string(data)}, " ")
+}
+
+type SignApiBindingInfoApiType struct {
+	value int32
+}
+
+type SignApiBindingInfoApiTypeEnum struct {
+	E_1 SignApiBindingInfoApiType
+	E_2 SignApiBindingInfoApiType
+}
+
+func GetSignApiBindingInfoApiTypeEnum() SignApiBindingInfoApiTypeEnum {
+	return SignApiBindingInfoApiTypeEnum{
+		E_1: SignApiBindingInfoApiType{
+			value: 1,
+		}, E_2: SignApiBindingInfoApiType{
+			value: 2,
+		},
+	}
+}
+
+func (c SignApiBindingInfoApiType) Value() int32 {
+	return c.value
+}
+
+func (c SignApiBindingInfoApiType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SignApiBindingInfoApiType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }
 
 type SignApiBindingInfoReqMethod struct {

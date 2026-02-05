@@ -15,7 +15,7 @@ type DisassociateAppQuotaWithAppRequest struct {
 	// 凭据配额编号
 	AppQuotaId string `json:"app_quota_id"`
 
-	// 应用编号
+	// 凭据编号
 	AppId string `json:"app_id"`
 }
 
