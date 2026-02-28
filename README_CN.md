@@ -970,23 +970,6 @@ region1, err := region.SafeValueOf("cn-north-1")
 region2, err := region.SafeValueOf("cn-north-9")
 ```
 
-### 4. 发送请求并查看响应 [:top:](#用户手册-top)
-
-``` go
-// 初始化请求,，以调用接口 ListVpcs 为例
-limit := int32(1)
-request := &model.ListVpcsRequest{
-    Limit: &limit,
-}
-
-response, err := client.ListVpcs(request)
-if err == nil {
-    fmt.Printf("%+v\n", response.Vpcs)
-} else {
-    fmt.Println(err)
-}
-```
-
 #### 3.4 用户代理 [:top:](#用户手册-top)
 
 从**0.1.169**版本起，默认会在请求头User-Agent中附加额外信息，用于识别客户端调用服务时所使用的SDK语言、客户端库版本以及平台信息等。 User-Agent包含Go版本、操作系统和时区语言信息，同时会生成一个随机标识符追加到User-Agent信息中。随机标识符会存储在用户主目录下，linux为 `~/.huaweicloud/application_id`，windows为`C:\Users\USER_NAME\.huaweicloud\application_id`。
@@ -1011,6 +994,23 @@ if err != nil {
     // 处理错误
 }
 client := vpc.NewVpcClient(hcClient)
+```
+
+### 4. 发送请求并查看响应 [:top:](#用户手册-top)
+
+``` go
+// 初始化请求,，以调用接口 ListVpcs 为例
+limit := int32(1)
+request := &model.ListVpcsRequest{
+    Limit: &limit,
+}
+
+response, err := client.ListVpcs(request)
+if err == nil {
+    fmt.Printf("%+v\n", response.Vpcs)
+} else {
+    fmt.Println(err)
+}
 ```
 
 #### 4.1 异常处理 [:top:](#用户手册-top)

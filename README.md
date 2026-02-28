@@ -951,23 +951,6 @@ region1, err := region.SafeValueOf("cn-north-1")
 region2, err := region.SafeValueOf("cn-north-9")
 ```
 
-### 4. Send Requests and Handle Responses [:top:](#user-manual-top)
-
-``` go
-// send a request and print response, take interface of ListVpcs for example
-limit := int32(1)
-request := &model.ListVpcsRequest{
-    Limit: &limit,
-}
-
-response, err := client.ListVpcs(request)
-if err == nil {
-    fmt.Printf("%+v\n\n", response.Vpcs)
-} else {
-    fmt.Println(err)
-}
-```
-
 #### 3.4 User Agent [:top:](#user-manual-top)
 
 Additional information will be appended to the User-Agent in the request header by default since **v0.1.169**. It is used by service to identify what SDK language, go version, and platform info a client is using to call into their service, and a random identifier will be generated and appended to the User-Agent. The identifier will be stored in the user's home directory, as `~/.huaweicloud/application_id` on Linux and `C:\Users\USER_NAME\.huaweicloud\application_id` on Windows.
@@ -992,6 +975,23 @@ if err != nil {
     // handle error
 }
 client := vpc.NewVpcClient(hcClient)
+```
+
+### 4. Send Requests and Handle Responses [:top:](#user-manual-top)
+
+``` go
+// send a request and print response, take interface of ListVpcs for example
+limit := int32(1)
+request := &model.ListVpcsRequest{
+    Limit: &limit,
+}
+
+response, err := client.ListVpcs(request)
+if err == nil {
+    fmt.Printf("%+v\n\n", response.Vpcs)
+} else {
+    fmt.Println(err)
+}
 ```
 
 #### 4.1 Exceptions [:top:](#user-manual-top)
