@@ -1,0 +1,43 @@
+name: Tag Logic and Go Download
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 步骤 1: 获取 Tag 名称
+      - name: Determine Tag Name
+        id: tag_logic
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [[ "${{ github.event_name }}" == "push" ]]; then
+            CURRENT_TAG="${{ github.ref_name }}"
+          else
+            CURRENT_TAG=$(gh api repos/${{ github.repository }}/tags --jq '.[0].name')
+          fi
+          echo "FINAL_TAG=$CURRENT_TAG" >> $GITHUB_ENV
+          echo "确定使用的版本为: $CURRENT_TAG"
+
+      # 步骤 2: 安装 Go 环境
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+
+      # 步骤 3: 下载指定版本的库
+      - name: Download the specific tag version
+        run: |
+          # 强制从 GitHub 直接下载（避开代理延迟）
+          # 使用 @${{ env.FINAL_TAG }} 指定版本
+          export GOPROXY=direct
+          go mod download github.com/huaweicloud/huaweicloud-sdk-go-v3@${{ env.FINAL_TAG }}
+          echo "成功下载版本: ${{ env.FINAL_TAG }}"
