@@ -22,7 +22,7 @@ jobs:
           if [[ "${{ github.event_name }}" == "push" ]]; then
             CURRENT_TAG="${{ github.ref_name }}"
           else
-            CURRENT_TAG=$(gh api repos/${{ github.repository }}/tags --jq '.[0].name')
+            CURRENT_TAG=$(gh api repos/huaweicloud/huaweicloud-sdk-go-v3/releases --jq '.[0].tag_name')
           fi
           echo "FINAL_TAG=$CURRENT_TAG" >> $GITHUB_ENV
           echo "确定使用的版本为: $CURRENT_TAG"
