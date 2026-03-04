@@ -1,10 +1,9 @@
-name: Tag Logic and Go Download
+name: Release Triggered Go Download
 
 on:
-  push:
-    tags:
-      - 'v*'
-  workflow_dispatch:
+  release:
+    types: [published] # 当 Release 被正式发布（包括从预发布转为正式发布）时触发
+  workflow_dispatch:   # 保留手动触发，方便调试
 
 jobs:
   build:
@@ -19,11 +18,21 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if [[ "${{ github.event_name }}" == "push" ]]; then
-            CURRENT_TAG="${{ github.ref_name }}"
+          if [[ "${{ github.event_name }}" == "release" ]]; then
+            # 1. 如果是 Release 触发，直接从 github context 获取
+            CURRENT_TAG="${{ github.event.release.tag_name }}"
+            echo "触发方式: Release 发布"
           else
-            CURRENT_TAG=$(gh api repos/huaweicloud/huaweicloud-sdk-go-v3/releases --jq '.[0].tag_name')
+            # 2. 如果是手动触发，获取最新发布的 Release Tag
+            echo "触发方式: 手动触发，正在获取最新 Release..."
+            CURRENT_TAG=$(gh release view --json tagName --jq .tagName)
           fi
+          
+          if [ -z "$CURRENT_TAG" ]; then
+            echo "错误：未找到有效的 Tag！"
+            exit 1
+          fi
+          
           echo "FINAL_TAG=$CURRENT_TAG" >> $GITHUB_ENV
           echo "确定使用的版本为: $CURRENT_TAG"
 
@@ -37,7 +46,6 @@ jobs:
       - name: Download the specific tag version
         run: |
           # 强制从 GitHub 直接下载（避开代理延迟）
-          # 使用 @${{ env.FINAL_TAG }} 指定版本
           export GOPROXY=direct
           go mod download github.com/huaweicloud/huaweicloud-sdk-go-v3@${{ env.FINAL_TAG }}
           echo "成功下载版本: ${{ env.FINAL_TAG }}"
