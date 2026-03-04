@@ -2,7 +2,7 @@ name: Release Triggered Go Download
 
 on:
   release:
-    types: [published] # 当 Release 被正式发布（包括从预发布转为正式发布）时触发
+    types: [created] # 当 Release 被正式发布（包括从预发布转为正式发布）时触发
   workflow_dispatch:   # 保留手动触发，方便调试
 
 jobs:
