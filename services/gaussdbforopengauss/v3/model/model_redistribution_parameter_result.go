@@ -21,7 +21,7 @@ type RedistributionParameterResult struct {
 	ValueRange *string `json:"value_range,omitempty"`
 
 	// **参数解释**: 参数类型。 **取值范围**: - integer：整数。 - boolean：布尔类型。 - string：字符串类型。
-	Type *interface{} `json:"type,omitempty"`
+	Type *string `json:"type,omitempty"`
 
 	// **参数解释**: 参数解释。 **取值范围**: 不涉及。
 	Description *string `json:"description,omitempty"`

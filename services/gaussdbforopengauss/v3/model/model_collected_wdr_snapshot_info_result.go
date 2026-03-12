@@ -31,6 +31,23 @@ type CollectedWdrSnapshotInfoResult struct {
 
 	// **参数解释**： 备注。采集类型为组件级时，内容包括采集的组件ID。 **取值范围**： 不涉及。
 	Notes *string `json:"notes,omitempty"`
+
+	// **参数解释**： WDR报告生成任务的创建时间。格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始，Z指时区偏移量，当前时间固定为+0时区。例如，\"2025-07-08T10:57:59+0000\"。 **取值范围**： 不涉及。
+	JobCreateTime *string `json:"job_create_time,omitempty"`
+
+	// **参数解释**： 用于生成WDR报告的第一个对比快照ID。例如：\"20024\"。只针对使用报告生成模式为对比快照ID（mode=snapshot_id）的采集任务生效；如果该任务使用的是时间区间查询方式（mode=time_range），则该字段为空。 **取值范围**： 不涉及。
+	StartSnapshotId *string `json:"start_snapshot_id,omitempty"`
+
+	// **参数解释**： 用于生成WDR报告的第二个对比快照ID。例如：\"20025\"。只针对使用报告生成模式为对比快照ID（mode=snapshot_id）的采集任务生效；如果该任务使用的是时间区间查询方式（mode=time_range）来生成的，则该字段为空。 **取值范围**： 不涉及。
+	EndSnapshotId *string `json:"end_snapshot_id,omitempty"`
+
+	// **参数解释**： WDR报告临时文件名称。 **取值范围**： 不涉及。
+	FileName *string `json:"file_name,omitempty"`
+
+	// **参数解释**： WDR报告临时文件保存路径。 **取值范围**： 不涉及。
+	FilePath *string `json:"file_path,omitempty"`
+
+	ObsBucket *CollectedWdrSnapshotInfoResultObsBucket `json:"obs_bucket,omitempty"`
 }
 
 func (o CollectedWdrSnapshotInfoResult) String() string {

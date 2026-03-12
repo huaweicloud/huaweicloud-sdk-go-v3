@@ -28,7 +28,7 @@ type ShowPartitionMetricsRequest struct {
 	StartTime int64 `json:"start_time"`
 
 	// 监控结束时间点，10位时间戳。
-	EndTime string `json:"end_time"`
+	EndTime int64 `json:"end_time"`
 }
 
 func (o ShowPartitionMetricsRequest) String() string {

@@ -9,18 +9,18 @@ import (
 // ShowConsumerStateResponse Response Object
 type ShowConsumerStateResponse struct {
 
-	// App的名称。
+	// 是否还有更多满足条件的App。  - true：是。 - false：否。
+	HasMore *bool `json:"has_more,omitempty"`
+
+	// 要查询的通道名称。
+	StreamName *string `json:"stream_name,omitempty"`
+
+	// 要查询的APP的名称，用户数据消费程序的唯一标识符。
 	AppName *string `json:"app_name,omitempty"`
 
-	// App的唯一标识符。
-	AppId *string `json:"app_id,omitempty"`
-
-	// App创建的时间，单位毫秒。
-	CreateTime *int64 `json:"create_time,omitempty"`
-
-	// 关联通道列表。
-	CommitCheckpointStreamNames *[]string `json:"commit_checkpoint_stream_names,omitempty"`
-	HttpStatusCode              int       `json:"-"`
+	// 当前分区消费状态.
+	PartitionConsumingStates *[]PartitionConsumingStates `json:"partition_consuming_states,omitempty"`
+	HttpStatusCode           int                         `json:"-"`
 }
 
 func (o ShowConsumerStateResponse) String() string {

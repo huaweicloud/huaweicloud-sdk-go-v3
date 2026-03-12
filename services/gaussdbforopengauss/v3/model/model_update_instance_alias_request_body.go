@@ -9,7 +9,7 @@ import (
 type UpdateInstanceAliasRequestBody struct {
 
 	// **参数解释**: 实例别名/备注。 **约束限制**: 不涉及。 **取值范围**: 允许中文，英文，数字及“-“、“_“、“.“，且长度为[1-64]个字符。 **默认取值**: 不涉及。
-	Alias *string `json:"alias,omitempty"`
+	Alias string `json:"alias"`
 }
 
 func (o UpdateInstanceAliasRequestBody) String() string {

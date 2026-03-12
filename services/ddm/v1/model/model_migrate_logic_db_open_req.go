@@ -9,7 +9,7 @@ import (
 type MigrateLogicDbOpenReq struct {
 
 	// 关联的后端DN信息。
-	DataNodes *[]DataNode `json:"data_nodes,omitempty"`
+	DataNodes []DataNode `json:"data_nodes"`
 
 	// 路由切换开始时间。
 	SwitchRouteBeginTime *string `json:"switch_route_begin_time,omitempty"`
@@ -21,7 +21,7 @@ type MigrateLogicDbOpenReq struct {
 	NewShardNumber *string `json:"new_shard_number,omitempty"`
 
 	// 是否独占。
-	IsExclusive *bool `json:"is_exclusive,omitempty"`
+	IsExclusive bool `json:"is_exclusive"`
 }
 
 func (o MigrateLogicDbOpenReq) String() string {

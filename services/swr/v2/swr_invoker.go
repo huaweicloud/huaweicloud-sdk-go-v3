@@ -1509,6 +1509,22 @@ func (i *ExecuteInstanceSignPolicyInvoker) Invoke() (*model.ExecuteInstanceSignP
 	}
 }
 
+type ListAllInstanceRepositoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAllInstanceRepositoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAllInstanceRepositoriesInvoker) Invoke() (*model.ListAllInstanceRepositoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAllInstanceRepositoriesResponse), nil
+	}
+}
+
 type ListAuditLogsInvoker struct {
 	*invoker.BaseInvoker
 }

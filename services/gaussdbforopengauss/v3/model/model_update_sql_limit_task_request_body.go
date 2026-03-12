@@ -21,7 +21,7 @@ type UpdateSqlLimitTaskRequestBody struct {
 	ParallelSize *int32 `json:"parallel_size,omitempty"`
 
 	// **参数解释**: 限流任务名。 **约束限制**: 不涉及。 **取值范围**: 只能为英文字母大小写，下划线，数字和$符。 **默认取值**: 不涉及。
-	TaskName string `json:"task_name"`
+	TaskName *string `json:"task_name,omitempty"`
 
 	// **参数解释**: CPU利用率阈值。 **约束限制**: 如果“limit_type”为SESSION_ACTIVE_MAX_COUNT，与内存利用率两者至少传一个。 **取值范围**: 整数，取值范围[0,100）。 **默认取值**: 不涉及。
 	CpuUtilization *int32 `json:"cpu_utilization,omitempty"`

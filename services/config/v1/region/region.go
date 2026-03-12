@@ -11,10 +11,14 @@ var (
 	CN_NORTH_4 = region.NewRegion("cn-north-4",
 		"https://rms.myhuaweicloud.com",
 		"https://rms.myhuaweicloud.cn")
+	EU_WEST_101 = region.NewRegion("eu-west-101",
+		"https://rms.eu-west-101.myhuaweicloud.com",
+		"https://rms.eu-west-101.myhuaweicloud.cn")
 )
 
 var staticFields = map[string]*region.Region{
-	"cn-north-4": CN_NORTH_4,
+	"cn-north-4":  CN_NORTH_4,
+	"eu-west-101": EU_WEST_101,
 }
 
 var provider = region.DefaultProviderChain("CONFIG")

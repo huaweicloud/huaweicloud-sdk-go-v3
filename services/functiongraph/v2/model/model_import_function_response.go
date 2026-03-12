@@ -29,7 +29,7 @@ type ImportFunctionResponse struct {
 	// 函数所属的分组Package，用于用户针对函数的自定义分组。
 	Package *string `json:"package,omitempty"`
 
-	// FunctionGraph函数的执行环境 Java8: Java语言8版本。 Java11: Java语言11版本。 Java17: Java语言17版本（当前仅支持华北-乌兰察布二零二） Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Python3.10: Python语言3.10版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 Node.js16.17: Nodejs语言16.17版本。 Node.js18.15: Nodejs语言18.15版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 C#(.NET Core 6.0): C#语言6.0版本（当前仅支持华北-乌兰察布二零二）。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 Cangjie1.0：仓颉语言1.0版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
+	// FunctionGraph函数的执行环境 Java8: Java语言8版本。 Java11: Java语言11版本。 Java17: Java语言17版本（当前仅支持华北-乌兰察布二零二） Python2.7: Python语言2.7版本。 Python3.6: Pyton语言3.6版本。 Python3.9: Python语言3.9版本。 Python3.10: Python语言3.10版本。 Go1.8: Go语言1.8版本。 Go1.x: Go语言1.x版本。 Node.js6.10: Nodejs语言6.10版本。 Node.js8.10: Nodejs语言8.10版本。 Node.js10.16: Nodejs语言10.16版本。 Node.js12.13: Nodejs语言12.13版本。 Node.js14.18: Nodejs语言14.18版本。 Node.js16.17: Nodejs语言16.17版本。 Node.js18.15: Nodejs语言18.15版本。 C#(.NET Core 2.0): C#语言2.0版本。 C#(.NET Core 2.1): C#语言2.1版本。 C#(.NET Core 3.1): C#语言3.1版本。 C#(.NET Core 6.0): C#语言6.0版本（当前仅支持华北-乌兰察布二零二）。 Custom: 自定义运行时。 PHP7.3: Php语言7.3版本。 PHP8.3: Php语言8.3版本。 Cangjie1.0：仓颉语言1.0版本。 http: HTTP函数。 Custom Image: 自定义镜像函数。
 	Runtime *ImportFunctionResponseRuntime `json:"runtime,omitempty"`
 
 	// 函数执行超时时间，超时函数将被强行停止，范围3～259200秒。
@@ -152,6 +152,7 @@ type ImportFunctionResponseRuntimeEnum struct {
 	C__NET_CORE_6_0 ImportFunctionResponseRuntime
 	CUSTOM          ImportFunctionResponseRuntime
 	PHP7_3          ImportFunctionResponseRuntime
+	PHP8_3          ImportFunctionResponseRuntime
 	CANGJIE1_0      ImportFunctionResponseRuntime
 	HTTP            ImportFunctionResponseRuntime
 	CUSTOM_IMAGE    ImportFunctionResponseRuntime
@@ -224,6 +225,9 @@ func GetImportFunctionResponseRuntimeEnum() ImportFunctionResponseRuntimeEnum {
 		},
 		PHP7_3: ImportFunctionResponseRuntime{
 			value: "PHP7.3",
+		},
+		PHP8_3: ImportFunctionResponseRuntime{
+			value: "PHP8.3",
 		},
 		CANGJIE1_0: ImportFunctionResponseRuntime{
 			value: "Cangjie1.0",

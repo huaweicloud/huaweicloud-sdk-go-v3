@@ -48,6 +48,9 @@ type StageRun struct {
 	// **参数解释**： 阶段结束时间。 **取值范围**： 不涉及。
 	EndTime *int64 `json:"end_time,omitempty"`
 
+	// **参数解释**： 阶段中断时间，单位毫秒。 **取值范围**： 大于等于 0。
+	PauseTime *int64 `json:"pause_time,omitempty"`
+
 	// **参数解释**： 阶段准入。 **取值范围**： 不涉及。
 	Pre *[]StepRun `json:"pre,omitempty"`
 

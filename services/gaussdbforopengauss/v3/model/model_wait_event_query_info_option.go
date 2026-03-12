@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-type WaitEventQueryInfo struct {
+type WaitEventQueryInfoOption struct {
 
 	// **参数解释**: 数据库名称。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
 	DatabaseName *string `json:"database_name,omitempty"`
@@ -24,7 +24,7 @@ type WaitEventQueryInfo struct {
 	BlockSessionId *string `json:"block_session_id,omitempty"`
 
 	// **参数解释**: 阻塞当前会话的会话数。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
-	BlockCount *string `json:"block_count,omitempty"`
+	BlockCount *int32 `json:"block_count,omitempty"`
 
 	// **参数解释**: 唯一的SQL ID。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
 	UniqueSqlId *string `json:"unique_sql_id,omitempty"`
@@ -42,11 +42,11 @@ type WaitEventQueryInfo struct {
 	WaitStatus *string `json:"wait_status,omitempty"`
 }
 
-func (o WaitEventQueryInfo) String() string {
+func (o WaitEventQueryInfoOption) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "WaitEventQueryInfo struct{}"
+		return "WaitEventQueryInfoOption struct{}"
 	}
 
-	return strings.Join([]string{"WaitEventQueryInfo", string(data)}, " ")
+	return strings.Join([]string{"WaitEventQueryInfoOption", string(data)}, " ")
 }

@@ -32,9 +32,7 @@ type ShowConfigurationResponse struct {
 
 	// **参数解释**: 备份并行参数。 **取值范围**: 1, 2, 4, 8
 	BackupParallelDegree *int32 `json:"backup_parallel_degree,omitempty"`
-
-	BackupNodeInfo *BackupNodeInfoResult `json:"backup_node_info,omitempty"`
-	HttpStatusCode int                   `json:"-"`
+	HttpStatusCode       int    `json:"-"`
 }
 
 func (o ShowConfigurationResponse) String() string {

@@ -37,6 +37,8 @@ type CreateCertificateAuthorityRequestBody struct {
 
 	// CA证书ID。如果为空，则创建按需CA；如果不为空，则保存包周期CA信息。
 	CaId *string `json:"ca_id,omitempty"`
+
+	HsmClusterInfo *HsmClusterInfo `json:"hsm_cluster_info,omitempty"`
 }
 
 func (o CreateCertificateAuthorityRequestBody) String() string {

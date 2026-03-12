@@ -185,6 +185,22 @@ func (i *ListAsyncTaskStatusInvoker) Invoke() (*model.ListAsyncTaskStatusRespons
 	}
 }
 
+type ListClusterSshStateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListClusterSshStateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListClusterSshStateInvoker) Invoke() (*model.ListClusterSshStateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListClusterSshStateResponse), nil
+	}
+}
+
 type ListClusterTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -314,6 +330,22 @@ func (i *UpdateClusterScalingInvoker) Invoke() (*model.UpdateClusterScalingRespo
 		return nil, err
 	} else {
 		return result.(*model.UpdateClusterScalingResponse), nil
+	}
+}
+
+type UpdateClusterSshInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateClusterSshInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateClusterSshInvoker) Invoke() (*model.UpdateClusterSshResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateClusterSshResponse), nil
 	}
 }
 

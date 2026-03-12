@@ -22,8 +22,8 @@ type ShowInstanceConfigurationResponse struct {
 	Updated *string `json:"updated,omitempty"`
 
 	// 参数对象，用户基于默认参数模板自定义的参数配置。
-	ConfigurationParameters *[]ConfigurationParameter `json:"configuration_parameters,omitempty"`
-	HttpStatusCode          int                       `json:"-"`
+	ConfigurationParameters *[]ConfigurationParameterResult `json:"configuration_parameters,omitempty"`
+	HttpStatusCode          int                             `json:"-"`
 }
 
 func (o ShowInstanceConfigurationResponse) String() string {

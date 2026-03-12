@@ -287,6 +287,27 @@ func (c *MrsClient) ListAsyncTaskStatusInvoker(request *model.ListAsyncTaskStatu
 	return &ListAsyncTaskStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListClusterSshState 查询集群节点授权状态
+//
+// 查询集群节点授权状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) ListClusterSshState(request *model.ListClusterSshStateRequest) (*model.ListClusterSshStateResponse, error) {
+	requestDef := GenReqDefForListClusterSshState()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListClusterSshStateResponse), nil
+	}
+}
+
+// ListClusterSshStateInvoker 查询集群节点授权状态
+func (c *MrsClient) ListClusterSshStateInvoker(request *model.ListClusterSshStateRequest) *ListClusterSshStateInvoker {
+	requestDef := GenReqDefForListClusterSshState()
+	return &ListClusterSshStateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListClusterTags 查询指定集群的标签
 //
 // 查询指定集群的标签信息。
@@ -462,6 +483,27 @@ func (c *MrsClient) UpdateClusterScaling(request *model.UpdateClusterScalingRequ
 func (c *MrsClient) UpdateClusterScalingInvoker(request *model.UpdateClusterScalingRequest) *UpdateClusterScalingInvoker {
 	requestDef := GenReqDefForUpdateClusterScaling()
 	return &UpdateClusterScalingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateClusterSsh 开启/关闭集群节点授权
+//
+// 开启/关闭集群节点授权
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) UpdateClusterSsh(request *model.UpdateClusterSshRequest) (*model.UpdateClusterSshResponse, error) {
+	requestDef := GenReqDefForUpdateClusterSsh()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateClusterSshResponse), nil
+	}
+}
+
+// UpdateClusterSshInvoker 开启/关闭集群节点授权
+func (c *MrsClient) UpdateClusterSshInvoker(request *model.UpdateClusterSshRequest) *UpdateClusterSshInvoker {
+	requestDef := GenReqDefForUpdateClusterSsh()
+	return &UpdateClusterSshInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAvailableZones 查询可用区信息

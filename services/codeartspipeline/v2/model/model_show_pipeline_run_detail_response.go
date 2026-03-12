@@ -42,6 +42,9 @@ type ShowPipelineRunDetailResponse struct {
 	// **参数解释**： 流水线运行序号。 **取值范围**： 大于等于 1。
 	RunNumber *int32 `json:"run_number,omitempty"`
 
+	// **参数解释**： 流水线中断时间，单位毫秒。 **取值范围**： 大于等于 0。
+	PauseTime *int64 `json:"pause_time,omitempty"`
+
 	// **参数解释**： 流水线开始时间。 **取值范围**： 不涉及。
 	StartTime *int64 `json:"start_time,omitempty"`
 

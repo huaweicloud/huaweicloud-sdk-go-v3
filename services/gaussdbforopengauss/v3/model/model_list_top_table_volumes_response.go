@@ -19,8 +19,14 @@ type ListTopTableVolumesResponse struct {
 	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// **参数解释**: 任务状态。 **取值范围**: - RUNNING：运行中。 - ERROR：运行异常。 - FINISHED： 运行结束。
-	State          *ListTopTableVolumesResponseState `json:"state,omitempty"`
-	HttpStatusCode int                               `json:"-"`
+	State *ListTopTableVolumesResponseState `json:"state,omitempty"`
+
+	// **参数解释**: 任务ID，当无请求参数时返回。 **取值范围**: 不涉及。
+	JobId *string `json:"job_id,omitempty"`
+
+	// **参数解释**: 工作流执行节点ID，当无请求参数时返回。 **取值范围**: 不涉及。
+	NodeId         *string `json:"node_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListTopTableVolumesResponse) String() string {

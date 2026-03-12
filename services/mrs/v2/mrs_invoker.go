@@ -277,6 +277,22 @@ func (i *ExpandClusterInvoker) Invoke() (*model.ExpandClusterResponse, error) {
 	}
 }
 
+type ListClusterManagerAuthStateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListClusterManagerAuthStateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListClusterManagerAuthStateInvoker) Invoke() (*model.ListClusterManagerAuthStateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListClusterManagerAuthStateResponse), nil
+	}
+}
+
 type ListNodesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -322,6 +338,22 @@ func (i *ShrinkClusterInvoker) Invoke() (*model.ShrinkClusterResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShrinkClusterResponse), nil
+	}
+}
+
+type UpdateClusterAuthTrosInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateClusterAuthTrosInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateClusterAuthTrosInvoker) Invoke() (*model.UpdateClusterAuthTrosResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateClusterAuthTrosResponse), nil
 	}
 }
 

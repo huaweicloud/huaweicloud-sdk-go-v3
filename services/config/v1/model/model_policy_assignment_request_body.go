@@ -26,6 +26,8 @@ type PolicyAssignmentRequestBody struct {
 
 	PolicyFilter *PolicyFilterDefinition `json:"policy_filter,omitempty"`
 
+	PolicyFilterV2 *PolicyFilterDefinitionV2 `json:"policy_filter_v2,omitempty"`
+
 	CustomPolicy *CustomPolicy `json:"custom_policy,omitempty"`
 
 	// 策略定义ID

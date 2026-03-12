@@ -437,6 +437,22 @@ func (i *DeleteTemplateGroupCollectionInvoker) Invoke() (*model.DeleteTemplateGr
 	}
 }
 
+type DeleteThumbnailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteThumbnailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteThumbnailsInvoker) Invoke() (*model.DeleteThumbnailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteThumbnailsResponse), nil
+	}
+}
+
 type DeleteTranscodeProductInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -626,6 +642,38 @@ func (i *ListTemplateGroupCollectionInvoker) Invoke() (*model.ListTemplateGroupC
 		return nil, err
 	} else {
 		return result.(*model.ListTemplateGroupCollectionResponse), nil
+	}
+}
+
+type ListThumbnailDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListThumbnailDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListThumbnailDetailsInvoker) Invoke() (*model.ListThumbnailDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListThumbnailDetailsResponse), nil
+	}
+}
+
+type ListThumbnailInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListThumbnailInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListThumbnailInfoInvoker) Invoke() (*model.ListThumbnailInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListThumbnailInfoResponse), nil
 	}
 }
 

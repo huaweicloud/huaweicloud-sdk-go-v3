@@ -603,6 +603,27 @@ func (c *VodClient) DeleteTemplateGroupCollectionInvoker(request *model.DeleteTe
 	return &DeleteTemplateGroupCollectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteThumbnails 删除媒资下的多个截图
+//
+// 删除媒资对应的截图，支持批量删除单个媒资下的多个截图结果，一次最多能删除十个。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) DeleteThumbnails(request *model.DeleteThumbnailsRequest) (*model.DeleteThumbnailsResponse, error) {
+	requestDef := GenReqDefForDeleteThumbnails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteThumbnailsResponse), nil
+	}
+}
+
+// DeleteThumbnailsInvoker 删除媒资下的多个截图
+func (c *VodClient) DeleteThumbnailsInvoker(request *model.DeleteThumbnailsRequest) *DeleteThumbnailsInvoker {
+	requestDef := GenReqDefForDeleteThumbnails()
+	return &DeleteThumbnailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteTranscodeProduct 删除转码产物
 //
 // 删除转码产物。
@@ -859,6 +880,48 @@ func (c *VodClient) ListTemplateGroupCollection(request *model.ListTemplateGroup
 func (c *VodClient) ListTemplateGroupCollectionInvoker(request *model.ListTemplateGroupCollectionRequest) *ListTemplateGroupCollectionInvoker {
 	requestDef := GenReqDefForListTemplateGroupCollection()
 	return &ListTemplateGroupCollectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListThumbnailDetails 查询截图详情
+//
+// 查询截图结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) ListThumbnailDetails(request *model.ListThumbnailDetailsRequest) (*model.ListThumbnailDetailsResponse, error) {
+	requestDef := GenReqDefForListThumbnailDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListThumbnailDetailsResponse), nil
+	}
+}
+
+// ListThumbnailDetailsInvoker 查询截图详情
+func (c *VodClient) ListThumbnailDetailsInvoker(request *model.ListThumbnailDetailsRequest) *ListThumbnailDetailsInvoker {
+	requestDef := GenReqDefForListThumbnailDetails()
+	return &ListThumbnailDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListThumbnailInfo 查询截图任务结果列表
+//
+// 查询截图任务结果列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) ListThumbnailInfo(request *model.ListThumbnailInfoRequest) (*model.ListThumbnailInfoResponse, error) {
+	requestDef := GenReqDefForListThumbnailInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListThumbnailInfoResponse), nil
+	}
+}
+
+// ListThumbnailInfoInvoker 查询截图任务结果列表
+func (c *VodClient) ListThumbnailInfoInvoker(request *model.ListThumbnailInfoRequest) *ListThumbnailInfoInvoker {
+	requestDef := GenReqDefForListThumbnailInfo()
+	return &ListThumbnailInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListTopStatistics 查询TopN媒资信息

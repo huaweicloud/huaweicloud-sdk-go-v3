@@ -12,7 +12,7 @@ import (
 // DeleteJobReq 删除在线迁移任务请求体
 type DeleteJobReq struct {
 
-	// terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务
+	// terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务,roll_back_upgrade_active_standby:转主备任务回滚
 	DeleteType DeleteJobReqDeleteType `json:"delete_type"`
 
 	// 任务ID
@@ -36,9 +36,10 @@ type DeleteJobReqDeleteType struct {
 }
 
 type DeleteJobReqDeleteTypeEnum struct {
-	TERMINATE       DeleteJobReqDeleteType
-	FORCE_TERMINATE DeleteJobReqDeleteType
-	DELETE          DeleteJobReqDeleteType
+	TERMINATE                        DeleteJobReqDeleteType
+	FORCE_TERMINATE                  DeleteJobReqDeleteType
+	DELETE                           DeleteJobReqDeleteType
+	ROLL_BACK_UPGRADE_ACTIVE_STANDBY DeleteJobReqDeleteType
 }
 
 func GetDeleteJobReqDeleteTypeEnum() DeleteJobReqDeleteTypeEnum {
@@ -51,6 +52,9 @@ func GetDeleteJobReqDeleteTypeEnum() DeleteJobReqDeleteTypeEnum {
 		},
 		DELETE: DeleteJobReqDeleteType{
 			value: "delete",
+		},
+		ROLL_BACK_UPGRADE_ACTIVE_STANDBY: DeleteJobReqDeleteType{
+			value: "roll_back_upgrade_active_standby",
 		},
 	}
 }

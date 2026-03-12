@@ -23,7 +23,7 @@ type ListWaitEventRequestBody struct {
 	// **参数解释**: 排序字段列表，内部List<String>。 **约束限制**: 不涉及。
 	OrderFields *[][]string `json:"order_fields,omitempty"`
 
-	WaitEventQueryInfo *WaitEventQueryInfo `json:"wait_event_query_info,omitempty"`
+	WaitEventQueryInfo *WaitEventQueryInfoOption `json:"wait_event_query_info,omitempty"`
 }
 
 func (o ListWaitEventRequestBody) String() string {

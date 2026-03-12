@@ -9,7 +9,7 @@ import (
 type ModifyParameterConfigTemplateRequestBody struct {
 
 	// 参数值对象Map<String,String>，用户基于默认参数模板自定义的参数值。
-	Values map[string]string `json:"values,omitempty"`
+	Values map[string]string `json:"values"`
 
 	// 参数组模板描述。
 	Description *string `json:"description,omitempty"`

@@ -2779,6 +2779,10 @@ func GenReqDefForUploadDbObjectTemplate() *def.HttpRequestDef {
 		WithName("FileImportDbLevel").
 		WithJsonTag("file_import_db_level").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FileImportMappingType").
+		WithJsonTag("file_import_mapping_type").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").

@@ -9,7 +9,7 @@ import (
 type SaveAsParameterConfigTemplateRequestBody struct {
 
 	// 保存参数组模板的名称。
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 保存参数组模板的描述。
 	Description *string `json:"description,omitempty"`

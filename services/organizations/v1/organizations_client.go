@@ -355,6 +355,216 @@ func (c *OrganizationsClient) RegisterDelegatedAdministratorInvoker(request *mod
 	return &RegisterDelegatedAdministratorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDryRunConfig 查询组织策略试运行的配置
+//
+// 查询组织策略试运行的配置。此操作只能由组织的管理或云服务委托管理员账号调用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OrganizationsClient) ShowDryRunConfig(request *model.ShowDryRunConfigRequest) (*model.ShowDryRunConfigResponse, error) {
+	requestDef := GenReqDefForShowDryRunConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDryRunConfigResponse), nil
+	}
+}
+
+// ShowDryRunConfigInvoker 查询组织策略试运行的配置
+func (c *OrganizationsClient) ShowDryRunConfigInvoker(request *model.ShowDryRunConfigRequest) *ShowDryRunConfigInvoker {
+	requestDef := GenReqDefForShowDryRunConfig()
+	return &ShowDryRunConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDryRunConfig 更新组织策略试运行的配置
+//
+// 更新组织策略试运行的配置。此操作只能由组织的管理账号调用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OrganizationsClient) UpdateDryRunConfig(request *model.UpdateDryRunConfigRequest) (*model.UpdateDryRunConfigResponse, error) {
+	requestDef := GenReqDefForUpdateDryRunConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDryRunConfigResponse), nil
+	}
+}
+
+// UpdateDryRunConfigInvoker 更新组织策略试运行的配置
+func (c *OrganizationsClient) UpdateDryRunConfigInvoker(request *model.UpdateDryRunConfigRequest) *UpdateDryRunConfigInvoker {
+	requestDef := GenReqDefForUpdateDryRunConfig()
+	return &UpdateDryRunConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AttachDryRunPolicy 将试运行策略跟实体绑定
+//
+// 绑定试运行策略到根、组织单元或个人账户。此操作只能由组织的管理账号调用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OrganizationsClient) AttachDryRunPolicy(request *model.AttachDryRunPolicyRequest) (*model.AttachDryRunPolicyResponse, error) {
+	requestDef := GenReqDefForAttachDryRunPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AttachDryRunPolicyResponse), nil
+	}
+}
+
+// AttachDryRunPolicyInvoker 将试运行策略跟实体绑定
+func (c *OrganizationsClient) AttachDryRunPolicyInvoker(request *model.AttachDryRunPolicyRequest) *AttachDryRunPolicyInvoker {
+	requestDef := GenReqDefForAttachDryRunPolicy()
+	return &AttachDryRunPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDryRunPolicy 创建试运行策略
+//
+// 创建指定类型的试运行策略。此操作只能由组织的管理账号调用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OrganizationsClient) CreateDryRunPolicy(request *model.CreateDryRunPolicyRequest) (*model.CreateDryRunPolicyResponse, error) {
+	requestDef := GenReqDefForCreateDryRunPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDryRunPolicyResponse), nil
+	}
+}
+
+// CreateDryRunPolicyInvoker 创建试运行策略
+func (c *OrganizationsClient) CreateDryRunPolicyInvoker(request *model.CreateDryRunPolicyRequest) *CreateDryRunPolicyInvoker {
+	requestDef := GenReqDefForCreateDryRunPolicy()
+	return &CreateDryRunPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDryRunPolicy 删除试运行策略
+//
+// 从组织中删除指定的试运行策略。在执行此操作之前，必须首先将策略跟所有组织单元、根和账号解绑。此操作只能由组织的管理账号调用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OrganizationsClient) DeleteDryRunPolicy(request *model.DeleteDryRunPolicyRequest) (*model.DeleteDryRunPolicyResponse, error) {
+	requestDef := GenReqDefForDeleteDryRunPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDryRunPolicyResponse), nil
+	}
+}
+
+// DeleteDryRunPolicyInvoker 删除试运行策略
+func (c *OrganizationsClient) DeleteDryRunPolicyInvoker(request *model.DeleteDryRunPolicyRequest) *DeleteDryRunPolicyInvoker {
+	requestDef := GenReqDefForDeleteDryRunPolicy()
+	return &DeleteDryRunPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DetachDryRunPolicy 将试运行策略跟实体解绑
+//
+// 从根、组织单元或账号解绑试运行策略。此操作只能由组织的管理账号调用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OrganizationsClient) DetachDryRunPolicy(request *model.DetachDryRunPolicyRequest) (*model.DetachDryRunPolicyResponse, error) {
+	requestDef := GenReqDefForDetachDryRunPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetachDryRunPolicyResponse), nil
+	}
+}
+
+// DetachDryRunPolicyInvoker 将试运行策略跟实体解绑
+func (c *OrganizationsClient) DetachDryRunPolicyInvoker(request *model.DetachDryRunPolicyRequest) *DetachDryRunPolicyInvoker {
+	requestDef := GenReqDefForDetachDryRunPolicy()
+	return &DetachDryRunPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDryRunPolicies 列出试运行策略
+//
+// 列出组织中的所有试运行策略。如果指定了资源ID，例如组织单元ID或账号ID，则将获得该资源已绑定的策略列表。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OrganizationsClient) ListDryRunPolicies(request *model.ListDryRunPoliciesRequest) (*model.ListDryRunPoliciesResponse, error) {
+	requestDef := GenReqDefForListDryRunPolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDryRunPoliciesResponse), nil
+	}
+}
+
+// ListDryRunPoliciesInvoker 列出试运行策略
+func (c *OrganizationsClient) ListDryRunPoliciesInvoker(request *model.ListDryRunPoliciesRequest) *ListDryRunPoliciesInvoker {
+	requestDef := GenReqDefForListDryRunPolicies()
+	return &ListDryRunPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEntitiesForDryRunPolicy 列出跟指定试运行策略绑定的所有实体
+//
+// 列出跟指定试运行策略绑定的所有根、组织单元和账号。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OrganizationsClient) ListEntitiesForDryRunPolicy(request *model.ListEntitiesForDryRunPolicyRequest) (*model.ListEntitiesForDryRunPolicyResponse, error) {
+	requestDef := GenReqDefForListEntitiesForDryRunPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEntitiesForDryRunPolicyResponse), nil
+	}
+}
+
+// ListEntitiesForDryRunPolicyInvoker 列出跟指定试运行策略绑定的所有实体
+func (c *OrganizationsClient) ListEntitiesForDryRunPolicyInvoker(request *model.ListEntitiesForDryRunPolicyRequest) *ListEntitiesForDryRunPolicyInvoker {
+	requestDef := GenReqDefForListEntitiesForDryRunPolicy()
+	return &ListEntitiesForDryRunPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDryRunPolicy 查询试运行策略相关信息
+//
+// 检索试运行策略的相关信息。此操作只能由组织的管理账号或作为服务委托管理员的成员账号调用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OrganizationsClient) ShowDryRunPolicy(request *model.ShowDryRunPolicyRequest) (*model.ShowDryRunPolicyResponse, error) {
+	requestDef := GenReqDefForShowDryRunPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDryRunPolicyResponse), nil
+	}
+}
+
+// ShowDryRunPolicyInvoker 查询试运行策略相关信息
+func (c *OrganizationsClient) ShowDryRunPolicyInvoker(request *model.ShowDryRunPolicyRequest) *ShowDryRunPolicyInvoker {
+	requestDef := GenReqDefForShowDryRunPolicy()
+	return &ShowDryRunPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDryRunPolicy 更新试运行策略
+//
+// 更新试运行策略，可以更新试运行策略的名称、描述或内容。如果不提供任何参数，则策略将保持不变。您不能更改策略的类型。此操作只能由组织的管理账号调用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OrganizationsClient) UpdateDryRunPolicy(request *model.UpdateDryRunPolicyRequest) (*model.UpdateDryRunPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateDryRunPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDryRunPolicyResponse), nil
+	}
+}
+
+// UpdateDryRunPolicyInvoker 更新试运行策略
+func (c *OrganizationsClient) UpdateDryRunPolicyInvoker(request *model.UpdateDryRunPolicyRequest) *UpdateDryRunPolicyInvoker {
+	requestDef := GenReqDefForUpdateDryRunPolicy()
+	return &UpdateDryRunPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AcceptHandshake 接受邀请
 //
 // 向邀请的发起方发送应答，接受加入组织邀请。在您接受邀请后，此邀请信息将继续保留并出现在相关API的返回结果中，保留期限为30天。

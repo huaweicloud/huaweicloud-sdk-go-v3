@@ -1993,6 +1993,27 @@ func (c *SwrClient) ExecuteInstanceSignPolicyInvoker(request *model.ExecuteInsta
 	return &ExecuteInstanceSignPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAllInstanceRepositories 获取当前项目下所有企业仓库实例的仓库列表
+//
+// 获取当前项目下所有企业仓库实例的仓库列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) ListAllInstanceRepositories(request *model.ListAllInstanceRepositoriesRequest) (*model.ListAllInstanceRepositoriesResponse, error) {
+	requestDef := GenReqDefForListAllInstanceRepositories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAllInstanceRepositoriesResponse), nil
+	}
+}
+
+// ListAllInstanceRepositoriesInvoker 获取当前项目下所有企业仓库实例的仓库列表
+func (c *SwrClient) ListAllInstanceRepositoriesInvoker(request *model.ListAllInstanceRepositoriesRequest) *ListAllInstanceRepositoriesInvoker {
+	requestDef := GenReqDefForListAllInstanceRepositories()
+	return &ListAllInstanceRepositoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAuditLogs 获取上传下载的相关审计日志列表
 //
 // 获取上传下载的相关审计日志列表

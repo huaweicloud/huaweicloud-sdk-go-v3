@@ -22,6 +22,9 @@ type ExtendedKeyUsage struct {
 
 	// 时间戳，OID为：1.3.6.1.5.5.7.3.8。 - **true** - **false** > 将一个对象的哈希绑定到一个时间，默认为false。
 	TimeStamping *bool `json:"time_stamping,omitempty"`
+
+	// 智能卡登录，OID为：1.3.6.1.4.1.311.20.2.2。 - **true** - **false** > Active Directory登录，默认为false。
+	SmartCardLogon *bool `json:"smart_card_logon,omitempty"`
 }
 
 func (o ExtendedKeyUsage) String() string {

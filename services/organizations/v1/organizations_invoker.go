@@ -261,6 +261,166 @@ func (i *RegisterDelegatedAdministratorInvoker) Invoke() (*model.RegisterDelegat
 	}
 }
 
+type ShowDryRunConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDryRunConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDryRunConfigInvoker) Invoke() (*model.ShowDryRunConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDryRunConfigResponse), nil
+	}
+}
+
+type UpdateDryRunConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDryRunConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDryRunConfigInvoker) Invoke() (*model.UpdateDryRunConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDryRunConfigResponse), nil
+	}
+}
+
+type AttachDryRunPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AttachDryRunPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AttachDryRunPolicyInvoker) Invoke() (*model.AttachDryRunPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AttachDryRunPolicyResponse), nil
+	}
+}
+
+type CreateDryRunPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDryRunPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDryRunPolicyInvoker) Invoke() (*model.CreateDryRunPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDryRunPolicyResponse), nil
+	}
+}
+
+type DeleteDryRunPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDryRunPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDryRunPolicyInvoker) Invoke() (*model.DeleteDryRunPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDryRunPolicyResponse), nil
+	}
+}
+
+type DetachDryRunPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DetachDryRunPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DetachDryRunPolicyInvoker) Invoke() (*model.DetachDryRunPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DetachDryRunPolicyResponse), nil
+	}
+}
+
+type ListDryRunPoliciesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDryRunPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDryRunPoliciesInvoker) Invoke() (*model.ListDryRunPoliciesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDryRunPoliciesResponse), nil
+	}
+}
+
+type ListEntitiesForDryRunPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEntitiesForDryRunPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListEntitiesForDryRunPolicyInvoker) Invoke() (*model.ListEntitiesForDryRunPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEntitiesForDryRunPolicyResponse), nil
+	}
+}
+
+type ShowDryRunPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDryRunPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDryRunPolicyInvoker) Invoke() (*model.ShowDryRunPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDryRunPolicyResponse), nil
+	}
+}
+
+type UpdateDryRunPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDryRunPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDryRunPolicyInvoker) Invoke() (*model.UpdateDryRunPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDryRunPolicyResponse), nil
+	}
+}
+
 type AcceptHandshakeInvoker struct {
 	*invoker.BaseInvoker
 }

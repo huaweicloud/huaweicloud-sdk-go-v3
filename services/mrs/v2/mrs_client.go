@@ -390,6 +390,27 @@ func (c *MrsClient) ExpandClusterInvoker(request *model.ExpandClusterRequest) *E
 	return &ExpandClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListClusterManagerAuthState 查询集群界面授权状态
+//
+// 查询集群界面授权状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) ListClusterManagerAuthState(request *model.ListClusterManagerAuthStateRequest) (*model.ListClusterManagerAuthStateResponse, error) {
+	requestDef := GenReqDefForListClusterManagerAuthState()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListClusterManagerAuthStateResponse), nil
+	}
+}
+
+// ListClusterManagerAuthStateInvoker 查询集群界面授权状态
+func (c *MrsClient) ListClusterManagerAuthStateInvoker(request *model.ListClusterManagerAuthStateRequest) *ListClusterManagerAuthStateInvoker {
+	requestDef := GenReqDefForListClusterManagerAuthState()
+	return &ListClusterManagerAuthStateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListNodes 查询集群节点列表
 //
 // 查询集群节点列表。
@@ -451,6 +472,27 @@ func (c *MrsClient) ShrinkCluster(request *model.ShrinkClusterRequest) (*model.S
 func (c *MrsClient) ShrinkClusterInvoker(request *model.ShrinkClusterRequest) *ShrinkClusterInvoker {
 	requestDef := GenReqDefForShrinkCluster()
 	return &ShrinkClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateClusterAuthTros 开启/关闭集群界面授权
+//
+// 开启/关闭集群界面授权
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *MrsClient) UpdateClusterAuthTros(request *model.UpdateClusterAuthTrosRequest) (*model.UpdateClusterAuthTrosResponse, error) {
+	requestDef := GenReqDefForUpdateClusterAuthTros()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateClusterAuthTrosResponse), nil
+	}
+}
+
+// UpdateClusterAuthTrosInvoker 开启/关闭集群界面授权
+func (c *MrsClient) UpdateClusterAuthTrosInvoker(request *model.UpdateClusterAuthTrosRequest) *UpdateClusterAuthTrosInvoker {
+	requestDef := GenReqDefForUpdateClusterAuthTros()
+	return &UpdateClusterAuthTrosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateDataConnector 创建数据连接

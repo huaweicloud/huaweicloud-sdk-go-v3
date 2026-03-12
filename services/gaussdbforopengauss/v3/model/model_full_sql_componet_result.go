@@ -58,10 +58,10 @@ type FullSqlComponetResult struct {
 	SessionId *string `json:"session_id,omitempty"`
 
 	// **参数解释**: 开始时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
-	BeginTime *string `json:"begin_time,omitempty"`
+	StartTime *string `json:"start_time,omitempty"`
 
 	// **参数解释**: 结束时间，格式为“yyyy-mm-ddThh:mm:ss.SSSSSZ”。 **取值范围**: 不涉及。
-	EndTime *string `json:"end_time,omitempty"`
+	FinishTime *string `json:"finish_time,omitempty"`
 
 	// **参数解释**: 慢SQL阈值。 **取值范围**: 不涉及。
 	SlowQueryThreshold *int64 `json:"slow_query_threshold,omitempty"`
@@ -76,7 +76,7 @@ type FullSqlComponetResult struct {
 	QueryPlan *string `json:"query_plan,omitempty"`
 
 	// **参数解释**: SELECT语句的返回结果集行数。 **取值范围**: 不涉及。
-	NReturnRows *int64 `json:"n_return_rows,omitempty"`
+	NReturnedRows *int64 `json:"n_returned_rows,omitempty"`
 
 	// **参数解释**: 随机扫描行。 **取值范围**: 不涉及。
 	NTuplesFetched *int64 `json:"n_tuples_fetched,omitempty"`

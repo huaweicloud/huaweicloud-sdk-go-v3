@@ -65,8 +65,14 @@ type ShowCertificateAuthorityResponse struct {
 	FreeQuota *int32 `json:"free_quota,omitempty"`
 
 	// 计费模式:   - **0** : 包周期；   - **1** : 按需。
-	ChargingMode   *int32 `json:"charging_mode,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	ChargingMode *int32 `json:"charging_mode,omitempty"`
+
+	// dhsm集群id。
+	ClusterId *string `json:"cluster_id,omitempty"`
+
+	// 账号ID。
+	DomainId       *string `json:"domain_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowCertificateAuthorityResponse) String() string {

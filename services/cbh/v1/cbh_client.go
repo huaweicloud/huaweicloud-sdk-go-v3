@@ -19,6 +19,7 @@ func CbhClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ChangeInstanceNetwork 修改实例网络
 //
 // 修改云堡垒机实例网络。
@@ -34,12 +35,14 @@ func (c *CbhClient) ChangeInstanceNetwork(request *model.ChangeInstanceNetworkRe
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ChangeInstanceNetworkInvoker 修改实例网络
 func (c *CbhClient) ChangeInstanceNetworkInvoker(request *model.ChangeInstanceNetworkRequest) *ChangeInstanceNetworkInvoker {
 	requestDef := GenReqDefForChangeInstanceNetwork()
 	return &ChangeInstanceNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ChangeInstanceOrder 创建变更云堡垒机实例订单
 //
 // 创建变更云堡垒机实例订单。（调用此接口前先调用创建变更云堡垒机实例任务接口，当前接口未开放）
@@ -55,12 +58,14 @@ func (c *CbhClient) ChangeInstanceOrder(request *model.ChangeInstanceOrderReques
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ChangeInstanceOrderInvoker 创建变更云堡垒机实例订单
 func (c *CbhClient) ChangeInstanceOrderInvoker(request *model.ChangeInstanceOrderRequest) *ChangeInstanceOrderInvoker {
 	requestDef := GenReqDefForChangeInstanceOrder()
 	return &ChangeInstanceOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateCbh 创建云堡垒机实例
 //
 // 创建云堡垒机实例。（创建云堡垒机实例订单前，先调用此接口）
@@ -76,12 +81,14 @@ func (c *CbhClient) CreateCbh(request *model.CreateCbhRequest) (*model.CreateCbh
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateCbhInvoker 创建云堡垒机实例
 func (c *CbhClient) CreateCbhInvoker(request *model.CreateCbhRequest) *CreateCbhInvoker {
 	requestDef := GenReqDefForCreateCbh()
 	return &CreateCbhInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateInstanceOrder 创建云堡垒机实例订单
 //
 // 创建云堡垒机实例订单。(调用此接口前先调用创建云堡垒机实例接口)
@@ -97,12 +104,14 @@ func (c *CbhClient) CreateInstanceOrder(request *model.CreateInstanceOrderReques
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateInstanceOrderInvoker 创建云堡垒机实例订单
 func (c *CbhClient) CreateInstanceOrderInvoker(request *model.CreateInstanceOrderRequest) *CreateInstanceOrderInvoker {
 	requestDef := GenReqDefForCreateInstanceOrder()
 	return &CreateInstanceOrderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // InstallCbhEip 绑定弹性公网IP
 //
 // 云堡垒机实例绑定弹性公网IP
@@ -118,6 +127,7 @@ func (c *CbhClient) InstallCbhEip(request *model.InstallCbhEipRequest) (*model.I
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // InstallCbhEipInvoker 绑定弹性公网IP
 func (c *CbhClient) InstallCbhEipInvoker(request *model.InstallCbhEipRequest) *InstallCbhEipInvoker {
 	requestDef := GenReqDefForInstallCbhEip()
@@ -145,6 +155,7 @@ func (c *CbhClient) ListCbhInstanceInvoker(request *model.ListCbhInstanceRequest
 	return &ListCbhInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListQuotaStatus 获取弹性云服务器配额
 //
 // 获取当前租户所选择的可用分区、性能规格所对应的弹性云服务器是否可用。
@@ -160,12 +171,14 @@ func (c *CbhClient) ListQuotaStatus(request *model.ListQuotaStatusRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListQuotaStatusInvoker 获取弹性云服务器配额
 func (c *CbhClient) ListQuotaStatusInvoker(request *model.ListQuotaStatusRequest) *ListQuotaStatusInvoker {
 	requestDef := GenReqDefForListQuotaStatus()
 	return &ListQuotaStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ResetLoginMethod 重置admin用户多因子认证方式
 //
 // 重置admin用户多因子认证方式。
@@ -181,12 +194,14 @@ func (c *CbhClient) ResetLoginMethod(request *model.ResetLoginMethodRequest) (*m
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ResetLoginMethodInvoker 重置admin用户多因子认证方式
 func (c *CbhClient) ResetLoginMethodInvoker(request *model.ResetLoginMethodRequest) *ResetLoginMethodInvoker {
 	requestDef := GenReqDefForResetLoginMethod()
 	return &ResetLoginMethodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ResetPassword 修改admin用户密码
 //
 // 修改云堡垒机实例web登录admin用户密码。
@@ -202,12 +217,14 @@ func (c *CbhClient) ResetPassword(request *model.ResetPasswordRequest) (*model.R
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ResetPasswordInvoker 修改admin用户密码
 func (c *CbhClient) ResetPasswordInvoker(request *model.ResetPasswordRequest) *ResetPasswordInvoker {
 	requestDef := GenReqDefForResetPassword()
 	return &ResetPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // RestartCbhInstance 重启云堡垒机实例
 //
 // 重启云堡垒机实例。
@@ -223,12 +240,14 @@ func (c *CbhClient) RestartCbhInstance(request *model.RestartCbhInstanceRequest)
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // RestartCbhInstanceInvoker 重启云堡垒机实例
 func (c *CbhClient) RestartCbhInstanceInvoker(request *model.RestartCbhInstanceRequest) *RestartCbhInstanceInvoker {
 	requestDef := GenReqDefForRestartCbhInstance()
 	return &RestartCbhInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // SearchQuota 查询堡垒机配额
 //
 // 查询云堡垒机配额信息。
@@ -244,12 +263,14 @@ func (c *CbhClient) SearchQuota(request *model.SearchQuotaRequest) (*model.Searc
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // SearchQuotaInvoker 查询堡垒机配额
 func (c *CbhClient) SearchQuotaInvoker(request *model.SearchQuotaRequest) *SearchQuotaInvoker {
 	requestDef := GenReqDefForSearchQuota()
 	return &SearchQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowAvailableZoneInfo 获取可用用分区信息
 //
 // 获取云堡垒机服务可用分区信息。
@@ -265,12 +286,14 @@ func (c *CbhClient) ShowAvailableZoneInfo(request *model.ShowAvailableZoneInfoRe
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowAvailableZoneInfoInvoker 获取可用用分区信息
 func (c *CbhClient) ShowAvailableZoneInfoInvoker(request *model.ShowAvailableZoneInfoRequest) *ShowAvailableZoneInfoInvoker {
 	requestDef := GenReqDefForShowAvailableZoneInfo()
 	return &ShowAvailableZoneInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowNetworkConfiguration 检查云堡垒机网络
 //
 // 检查云堡垒机实例网络信息。
@@ -286,12 +309,14 @@ func (c *CbhClient) ShowNetworkConfiguration(request *model.ShowNetworkConfigura
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowNetworkConfigurationInvoker 检查云堡垒机网络
 func (c *CbhClient) ShowNetworkConfigurationInvoker(request *model.ShowNetworkConfigurationRequest) *ShowNetworkConfigurationInvoker {
 	requestDef := GenReqDefForShowNetworkConfiguration()
 	return &ShowNetworkConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // StartCbhInstance 启动云堡垒机实例
 //
 // 启动云堡垒机实例。
@@ -307,12 +332,14 @@ func (c *CbhClient) StartCbhInstance(request *model.StartCbhInstanceRequest) (*m
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // StartCbhInstanceInvoker 启动云堡垒机实例
 func (c *CbhClient) StartCbhInstanceInvoker(request *model.StartCbhInstanceRequest) *StartCbhInstanceInvoker {
 	requestDef := GenReqDefForStartCbhInstance()
 	return &StartCbhInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // StopCbhInstance 关闭云堡垒机实例
 //
 // 关闭云堡垒机实例。
@@ -328,12 +355,14 @@ func (c *CbhClient) StopCbhInstance(request *model.StopCbhInstanceRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // StopCbhInstanceInvoker 关闭云堡垒机实例
 func (c *CbhClient) StopCbhInstanceInvoker(request *model.StopCbhInstanceRequest) *StopCbhInstanceInvoker {
 	requestDef := GenReqDefForStopCbhInstance()
 	return &StopCbhInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UninstallCbhEip 解绑弹性公网IP
 //
 // 云堡垒机实例解绑弹性公网IP。
@@ -349,12 +378,14 @@ func (c *CbhClient) UninstallCbhEip(request *model.UninstallCbhEipRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UninstallCbhEipInvoker 解绑弹性公网IP
 func (c *CbhClient) UninstallCbhEipInvoker(request *model.UninstallCbhEipRequest) *UninstallCbhEipInvoker {
 	requestDef := GenReqDefForUninstallCbhEip()
 	return &UninstallCbhEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpgradeCbhInstance 升级云堡垒机实例
 //
 // 升级云堡垒机实例
@@ -370,12 +401,14 @@ func (c *CbhClient) UpgradeCbhInstance(request *model.UpgradeCbhInstanceRequest)
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpgradeCbhInstanceInvoker 升级云堡垒机实例
 func (c *CbhClient) UpgradeCbhInstanceInvoker(request *model.UpgradeCbhInstanceRequest) *UpgradeCbhInstanceInvoker {
 	requestDef := GenReqDefForUpgradeCbhInstance()
 	return &UpgradeCbhInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // LoginCbh 获取IAM登录实例链接
 //
 // 获取当前IAM用户登录堡垒机的免登录链接
@@ -391,6 +424,7 @@ func (c *CbhClient) LoginCbh(request *model.LoginCbhRequest) (*model.LoginCbhRes
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // LoginCbhInvoker 获取IAM登录实例链接
 func (c *CbhClient) LoginCbhInvoker(request *model.LoginCbhRequest) *LoginCbhInvoker {
 	requestDef := GenReqDefForLoginCbh()
