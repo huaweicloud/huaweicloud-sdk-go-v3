@@ -1,0 +1,17 @@
+name: Verify Download
+
+on:
+  workflow_dispatch:
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Download the specific version
+        run: |
+          export GOPROXY=direct
+          version=v$(cat VERSION)
+          go mod download github.com/huaweicloud/huaweicloud-sdk-go-v3@"$version"
+          echo "download successfully,  ${version}"
