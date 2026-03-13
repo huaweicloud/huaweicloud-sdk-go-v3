@@ -1,4 +1,4 @@
-name: Go Download
+name: Verify Download
 
 on:
   workflow_dispatch:
