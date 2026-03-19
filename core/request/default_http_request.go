@@ -25,10 +25,6 @@ import (
 	"encoding/xml"
 	"errors"
 	"fmt"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/signer/algorithm"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/progress"
-	"go.mongodb.org/mongo-driver/bson"
 	"io"
 	"mime/multipart"
 	"net/http"
@@ -37,6 +33,11 @@ import (
 	"reflect"
 	"strconv"
 	"strings"
+
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/signer/algorithm"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/progress"
+	"go.mongodb.org/mongo-driver/bson"
 
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/def"
 )
@@ -300,6 +301,9 @@ func (httpRequest *DefaultHttpRequest) getContentLength() int64 {
 }
 
 func (httpRequest *DefaultHttpRequest) convertStreamBody(err error, req *http.Request) (*http.Request, error) {
+	if err != nil {
+		return nil, err
+	}
 	if f, ok := httpRequest.body.(os.File); !ok {
 		return nil, errors.New("failed to get stream request body")
 	} else {
