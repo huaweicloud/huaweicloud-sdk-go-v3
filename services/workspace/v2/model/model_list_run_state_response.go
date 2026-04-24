@@ -9,7 +9,7 @@ import (
 // ListRunStateResponse Response Object
 type ListRunStateResponse struct {
 
-	// 停止个数。
+	// 已关机个数。
 	StopNum *int32 `json:"stop_num,omitempty"`
 
 	// 运行中个数。
@@ -18,7 +18,7 @@ type ListRunStateResponse struct {
 	// 故障个数。
 	ErrorNum *int32 `json:"error_num,omitempty"`
 
-	// 休眠个数。
+	// 已休眠个数。
 	HibernatedNum  *int32 `json:"hibernated_num,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

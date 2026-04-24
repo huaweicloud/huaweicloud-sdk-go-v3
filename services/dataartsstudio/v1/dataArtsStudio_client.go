@@ -1179,6 +1179,27 @@ func (c *DataArtsStudioClient) CreateDirectoryInvoker(request *model.CreateDirec
 	return &CreateDirectoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateFactoryBaseline 创建基线任务
+//
+// 创建基线任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateFactoryBaseline(request *model.CreateFactoryBaselineRequest) (*model.CreateFactoryBaselineResponse, error) {
+	requestDef := GenReqDefForCreateFactoryBaseline()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateFactoryBaselineResponse), nil
+	}
+}
+
+// CreateFactoryBaselineInvoker 创建基线任务
+func (c *DataArtsStudioClient) CreateFactoryBaselineInvoker(request *model.CreateFactoryBaselineRequest) *CreateFactoryBaselineInvoker {
+	requestDef := GenReqDefForCreateFactoryBaseline()
+	return &CreateFactoryBaselineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateFactoryEnv 创建环境变量
 //
 // 创建环境变量
@@ -3805,6 +3826,27 @@ func (c *DataArtsStudioClient) ListFactoryScriptsInvoker(request *model.ListFact
 	return &ListFactoryScriptsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListFactorySearchBaselineInstances 查询基线实例列表
+//
+// 查询基线实例列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListFactorySearchBaselineInstances(request *model.ListFactorySearchBaselineInstancesRequest) (*model.ListFactorySearchBaselineInstancesResponse, error) {
+	requestDef := GenReqDefForListFactorySearchBaselineInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFactorySearchBaselineInstancesResponse), nil
+	}
+}
+
+// ListFactorySearchBaselineInstancesInvoker 查询基线实例列表
+func (c *DataArtsStudioClient) ListFactorySearchBaselineInstancesInvoker(request *model.ListFactorySearchBaselineInstancesRequest) *ListFactorySearchBaselineInstancesInvoker {
+	requestDef := GenReqDefForListFactorySearchBaselineInstances()
+	return &ListFactorySearchBaselineInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListFactoryTaskCompletion 查询任务完成情况
 //
 // 查询任务完成情况
@@ -3845,6 +3887,27 @@ func (c *DataArtsStudioClient) ListFactoryTaskOverview(request *model.ListFactor
 func (c *DataArtsStudioClient) ListFactoryTaskOverviewInvoker(request *model.ListFactoryTaskOverviewRequest) *ListFactoryTaskOverviewInvoker {
 	requestDef := GenReqDefForListFactoryTaskOverview()
 	return &ListFactoryTaskOverviewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListFactoryWorkspacesApproval 查询审批中心列表
+//
+// 查询审批中心列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListFactoryWorkspacesApproval(request *model.ListFactoryWorkspacesApprovalRequest) (*model.ListFactoryWorkspacesApprovalResponse, error) {
+	requestDef := GenReqDefForListFactoryWorkspacesApproval()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFactoryWorkspacesApprovalResponse), nil
+	}
+}
+
+// ListFactoryWorkspacesApprovalInvoker 查询审批中心列表
+func (c *DataArtsStudioClient) ListFactoryWorkspacesApprovalInvoker(request *model.ListFactoryWorkspacesApprovalRequest) *ListFactoryWorkspacesApprovalInvoker {
+	requestDef := GenReqDefForListFactoryWorkspacesApproval()
+	return &ListFactoryWorkspacesApprovalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListInstances 获取任务执行结果列表
@@ -4054,6 +4117,48 @@ func (c *DataArtsStudioClient) ListSchemas(request *model.ListSchemasRequest) (*
 func (c *DataArtsStudioClient) ListSchemasInvoker(request *model.ListSchemasRequest) *ListSchemasInvoker {
 	requestDef := GenReqDefForListSchemas()
 	return &ListSchemasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSearchFactoryBaselines 查询基线任务列表
+//
+// 查询基线任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListSearchFactoryBaselines(request *model.ListSearchFactoryBaselinesRequest) (*model.ListSearchFactoryBaselinesResponse, error) {
+	requestDef := GenReqDefForListSearchFactoryBaselines()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSearchFactoryBaselinesResponse), nil
+	}
+}
+
+// ListSearchFactoryBaselinesInvoker 查询基线任务列表
+func (c *DataArtsStudioClient) ListSearchFactoryBaselinesInvoker(request *model.ListSearchFactoryBaselinesRequest) *ListSearchFactoryBaselinesInvoker {
+	requestDef := GenReqDefForListSearchFactoryBaselines()
+	return &ListSearchFactoryBaselinesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSearchFactoryEvents 查询事件列表
+//
+// 查询事件列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListSearchFactoryEvents(request *model.ListSearchFactoryEventsRequest) (*model.ListSearchFactoryEventsResponse, error) {
+	requestDef := GenReqDefForListSearchFactoryEvents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSearchFactoryEventsResponse), nil
+	}
+}
+
+// ListSearchFactoryEventsInvoker 查询事件列表
+func (c *DataArtsStudioClient) ListSearchFactoryEventsInvoker(request *model.ListSearchFactoryEventsRequest) *ListSearchFactoryEventsInvoker {
+	requestDef := GenReqDefForListSearchFactoryEvents()
+	return &ListSearchFactoryEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSecurityApprovals 获取工单列表

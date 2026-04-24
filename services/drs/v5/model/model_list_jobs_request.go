@@ -39,8 +39,8 @@ type ListJobsRequest struct {
 	// 查询返回记录的数量限制。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 返回结果按该关键字排序，默认为“create_time”。
-	SortKey *string `json:"sort_key,omitempty"`
+	// 返回结果按该关键字排序，默认为“create_time”。 当前支持排序的关键字： - name - status - create_time - net_type - job_direction - pay_mode
+	SortKey *ListJobsRequestSortKey `json:"sort_key,omitempty"`
 
 	// 降序或升序（分别对应desc和asc，默认为“desc”）。
 	SortDir *string `json:"sort_dir,omitempty"`
@@ -370,6 +370,69 @@ func (c ListJobsRequestNetType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ListJobsRequestNetType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListJobsRequestSortKey struct {
+	value string
+}
+
+type ListJobsRequestSortKeyEnum struct {
+	NAME          ListJobsRequestSortKey
+	STATUS        ListJobsRequestSortKey
+	CREATE_TIME   ListJobsRequestSortKey
+	NET_TYPE      ListJobsRequestSortKey
+	JOB_DIRECTION ListJobsRequestSortKey
+	PAY_MODE      ListJobsRequestSortKey
+}
+
+func GetListJobsRequestSortKeyEnum() ListJobsRequestSortKeyEnum {
+	return ListJobsRequestSortKeyEnum{
+		NAME: ListJobsRequestSortKey{
+			value: "name",
+		},
+		STATUS: ListJobsRequestSortKey{
+			value: "status",
+		},
+		CREATE_TIME: ListJobsRequestSortKey{
+			value: "create_time",
+		},
+		NET_TYPE: ListJobsRequestSortKey{
+			value: "net_type",
+		},
+		JOB_DIRECTION: ListJobsRequestSortKey{
+			value: "job_direction",
+		},
+		PAY_MODE: ListJobsRequestSortKey{
+			value: "pay_mode",
+		},
+	}
+}
+
+func (c ListJobsRequestSortKey) Value() string {
+	return c.value
+}
+
+func (c ListJobsRequestSortKey) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListJobsRequestSortKey) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

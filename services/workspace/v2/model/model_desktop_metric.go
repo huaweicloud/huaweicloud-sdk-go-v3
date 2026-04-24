@@ -14,11 +14,20 @@ type DesktopMetric struct {
 	// 桌面池ID(仅桌面池中的桌面存在该字段)。
 	ResourcePoolId *string `json:"resource_pool_id,omitempty"`
 
+	// 桌面池名称(仅桌面池中的桌面存在该字段)。
+	ResourcePoolName *string `json:"resource_pool_name,omitempty"`
+
 	// 桌面名称。
 	ResourceName *string `json:"resource_name,omitempty"`
 
 	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 虚机sid
+	MachineSid *string `json:"machine_sid,omitempty"`
+
+	// 最近一个登录的用户
+	LatestConnectUsername *string `json:"latest_connect_username,omitempty"`
 
 	// 统计信息 * `desktop_usage` -  桌面使用时长(单位:秒) * `desktop_idle_duration` -  桌面空闲时长(单位:秒)
 	Metric *[]Metric `json:"metric,omitempty"`

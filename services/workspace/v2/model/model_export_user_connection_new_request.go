@@ -38,6 +38,9 @@ type ExportUserConnectionNewRequest struct {
 
 	// 客户端出口IP。
 	PublicIp *string `json:"public_ip,omitempty"`
+
+	// 域名
+	Domain *string `json:"domain,omitempty"`
 }
 
 func (o ExportUserConnectionNewRequest) String() string {

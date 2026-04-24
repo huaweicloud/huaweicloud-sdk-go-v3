@@ -149,6 +149,22 @@ func (i *BatchShowUpgradeCandidateVersionsInvoker) Invoke() (*model.BatchShowUpg
 	}
 }
 
+type BindDNatInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BindDNatInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BindDNatInvoker) Invoke() (*model.BindDNatResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BindDNatResponse), nil
+	}
+}
+
 type CancelScheduleTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -978,6 +994,22 @@ func (i *ListConfigurationsDiffInvoker) Invoke() (*model.ListConfigurationsDiffR
 		return nil, err
 	} else {
 		return result.(*model.ListConfigurationsDiffResponse), nil
+	}
+}
+
+type ListDNatInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDNatInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDNatInfoInvoker) Invoke() (*model.ListDNatInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDNatInfoResponse), nil
 	}
 }
 

@@ -36,6 +36,9 @@ type NatMappingConfig struct {
 	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
+	// 地址映射的辅助认证的开关
+	AssistAuthEnabled *bool `json:"assist_auth_enabled,omitempty"`
+
 	// 标签对象。
 	Tags *[]Tag `json:"tags,omitempty"`
 }

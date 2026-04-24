@@ -20,6 +20,9 @@ type Session struct {
 
 	// 锁定生效时间，格式 hh:mm:ss。
 	AutoLockEndTime *string `json:"auto_lock_end_time,omitempty"`
+
+	// 是否断连锁屏。
+	IsLockScreenOnDisconnect *bool `json:"is_lock_screen_on_disconnect,omitempty"`
 }
 
 func (o Session) String() string {

@@ -15,8 +15,8 @@ type ListUpgradeWorkFlowsResponse struct {
 	// API版本，固定值“v3”，该值不可修改。
 	ApiVersion *string `json:"apiVersion,omitempty"`
 
-	Items          *UpgradeWorkFlow `json:"items,omitempty"`
-	HttpStatusCode int              `json:"-"`
+	Items          *[]UpgradeWorkFlow `json:"items,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o ListUpgradeWorkFlowsResponse) String() string {

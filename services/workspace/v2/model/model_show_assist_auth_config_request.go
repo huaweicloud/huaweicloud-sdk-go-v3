@@ -8,6 +8,9 @@ import (
 
 // ShowAssistAuthConfigRequest Request Object
 type ShowAssistAuthConfigRequest struct {
+
+	// 主认证配置id
+	MainAuthConfigId *string `json:"main_auth_config_id,omitempty"`
 }
 
 func (o ShowAssistAuthConfigRequest) String() string {

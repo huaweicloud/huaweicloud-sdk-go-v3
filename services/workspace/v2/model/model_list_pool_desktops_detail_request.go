@@ -83,6 +83,9 @@ type ListPoolDesktopsDetailRequest struct {
 
 	// 查询可用区。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
+
+	// 动态池桌面隔离状态：false表示未隔离，true表示已隔离。
+	Isolated *bool `json:"isolated,omitempty"`
 }
 
 func (o ListPoolDesktopsDetailRequest) String() string {
@@ -99,10 +102,11 @@ type ListPoolDesktopsDetailRequestInconsistentType struct {
 }
 
 type ListPoolDesktopsDetailRequestInconsistentTypeEnum struct {
-	PRODUCT_ID ListPoolDesktopsDetailRequestInconsistentType
-	IMAGE_ID   ListPoolDesktopsDetailRequestInconsistentType
-	DISK_NUM   ListPoolDesktopsDetailRequestInconsistentType
-	DISK_SIZE  ListPoolDesktopsDetailRequestInconsistentType
+	PRODUCT_ID     ListPoolDesktopsDetailRequestInconsistentType
+	IMAGE_ID       ListPoolDesktopsDetailRequestInconsistentType
+	DISK_NUM       ListPoolDesktopsDetailRequestInconsistentType
+	DISK_SIZE      ListPoolDesktopsDetailRequestInconsistentType
+	AUTO_ISOLATION ListPoolDesktopsDetailRequestInconsistentType
 }
 
 func GetListPoolDesktopsDetailRequestInconsistentTypeEnum() ListPoolDesktopsDetailRequestInconsistentTypeEnum {
@@ -118,6 +122,9 @@ func GetListPoolDesktopsDetailRequestInconsistentTypeEnum() ListPoolDesktopsDeta
 		},
 		DISK_SIZE: ListPoolDesktopsDetailRequestInconsistentType{
 			value: "DISK_SIZE",
+		},
+		AUTO_ISOLATION: ListPoolDesktopsDetailRequestInconsistentType{
+			value: "AUTO_ISOLATION",
 		},
 	}
 }

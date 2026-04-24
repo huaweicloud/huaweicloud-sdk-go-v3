@@ -29,9 +29,6 @@ type ListVifPeerDetectionsRequest struct {
 
 	// 分页参数
 	PageReverse *bool `json:"page_reverse,omitempty"`
-
-	// 虚拟接口对等体ID
-	VifPeerId string `json:"vif_peer_id"`
 }
 
 func (o ListVifPeerDetectionsRequest) String() string {

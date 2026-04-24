@@ -42,8 +42,14 @@ type ListUsersRequest struct {
 	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
+	// 用户是否被禁用
+	Disabled *bool `json:"disabled,omitempty"`
+
 	// 域。
 	Domain *string `json:"domain,omitempty"`
+
+	// 用户类型。 * AD： AD域用户 * LOCAL： 本地liteAs用户 * UOS： UOS域用户
+	PlatformType *string `json:"platform_type,omitempty"`
 }
 
 func (o ListUsersRequest) String() string {

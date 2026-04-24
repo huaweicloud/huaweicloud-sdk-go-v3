@@ -8,8 +8,11 @@ import (
 
 // ShowAssistAuthConfigResponse Response Object
 type ShowAssistAuthConfigResponse struct {
-	OtpConfigInfo  *OtpConfigInfo `json:"otp_config_info,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	OtpConfigInfo *OtpConfigInfo `json:"otp_config_info,omitempty"`
+
+	// 主认证配置id
+	MainAuthConfigId *string `json:"main_auth_config_id,omitempty"`
+	HttpStatusCode   int     `json:"-"`
 }
 
 func (o ShowAssistAuthConfigResponse) String() string {

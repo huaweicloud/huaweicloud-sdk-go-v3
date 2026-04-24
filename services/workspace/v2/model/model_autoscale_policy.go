@@ -29,6 +29,12 @@ type AutoscalePolicy struct {
 
 	// 空闲桌面保留时长（分钟）。
 	IdleRetentionDuration *int32 `json:"idle_retention_duration,omitempty"`
+
+	// 自动故障隔离开关。
+	AutoIsolationEnable *bool `json:"auto_isolation_enable,omitempty"`
+
+	// 自动隔离桌面数量上限，默认上限1000。
+	AutoIsolationMaxNum *int32 `json:"auto_isolation_max_num,omitempty"`
 }
 
 func (o AutoscalePolicy) String() string {

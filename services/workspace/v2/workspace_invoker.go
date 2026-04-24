@@ -197,6 +197,54 @@ func (i *ListAgenciesInvoker) Invoke() (*model.ListAgenciesResponse, error) {
 	}
 }
 
+type ListSubscribeAiAssistantUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSubscribeAiAssistantUsersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSubscribeAiAssistantUsersInvoker) Invoke() (*model.ListSubscribeAiAssistantUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSubscribeAiAssistantUsersResponse), nil
+	}
+}
+
+type ShowAiAssistantUsageFrequencyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAiAssistantUsageFrequencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAiAssistantUsageFrequencyInvoker) Invoke() (*model.ShowAiAssistantUsageFrequencyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAiAssistantUsageFrequencyResponse), nil
+	}
+}
+
+type SubscribeAiAssistantInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SubscribeAiAssistantInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SubscribeAiAssistantInvoker) Invoke() (*model.SubscribeAiAssistantResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SubscribeAiAssistantResponse), nil
+	}
+}
+
 type ListAlarmStatisticsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -722,6 +770,22 @@ func (i *DownloadMetadataInvoker) Invoke() (*model.DownloadMetadataResponse, err
 		return nil, err
 	} else {
 		return result.(*model.DownloadMetadataResponse), nil
+	}
+}
+
+type DownloadSpMetadataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadSpMetadataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadSpMetadataInvoker) Invoke() (*model.DownloadSpMetadataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadSpMetadataResponse), nil
 	}
 }
 
@@ -3717,6 +3781,22 @@ func (i *ListFutureExecutionsInvoker) Invoke() (*model.ListFutureExecutionsRespo
 	}
 }
 
+type ListLifeCycleTypeConfigurationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLifeCycleTypeConfigurationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListLifeCycleTypeConfigurationsInvoker) Invoke() (*model.ListLifeCycleTypeConfigurationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLifeCycleTypeConfigurationsResponse), nil
+	}
+}
+
 type ListScheduledTasksInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3877,6 +3957,22 @@ func (i *ListScreenRecordsInvoker) Invoke() (*model.ListScreenRecordsResponse, e
 	}
 }
 
+type ListScreenRecordsTrafficLimitConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListScreenRecordsTrafficLimitConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListScreenRecordsTrafficLimitConfigInvoker) Invoke() (*model.ListScreenRecordsTrafficLimitConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListScreenRecordsTrafficLimitConfigResponse), nil
+	}
+}
+
 type ShowScreenRecordInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3890,6 +3986,38 @@ func (i *ShowScreenRecordInvoker) Invoke() (*model.ShowScreenRecordResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowScreenRecordResponse), nil
+	}
+}
+
+type UpdateFullSpeedRecordConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateFullSpeedRecordConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateFullSpeedRecordConfigInvoker) Invoke() (*model.UpdateFullSpeedRecordConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateFullSpeedRecordConfigResponse), nil
+	}
+}
+
+type UpdateScreenRecordsTrafficLimitConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateScreenRecordsTrafficLimitConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateScreenRecordsTrafficLimitConfigInvoker) Invoke() (*model.UpdateScreenRecordsTrafficLimitConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateScreenRecordsTrafficLimitConfigResponse), nil
 	}
 }
 
@@ -4242,6 +4370,22 @@ func (i *UpdateAccessModeInvoker) Invoke() (*model.UpdateAccessModeResponse, err
 		return nil, err
 	} else {
 		return result.(*model.UpdateAccessModeResponse), nil
+	}
+}
+
+type UpdateDcVncInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDcVncInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDcVncInvoker) Invoke() (*model.UpdateDcVncResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDcVncResponse), nil
 	}
 }
 
@@ -5394,5 +5538,85 @@ func (i *ValidateDomainControllerInvoker) Invoke() (*model.ValidateDomainControl
 		return nil, err
 	} else {
 		return result.(*model.ValidateDomainControllerResponse), nil
+	}
+}
+
+type CloseDomainNewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CloseDomainNewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CloseDomainNewInvoker) Invoke() (*model.CloseDomainNewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CloseDomainNewResponse), nil
+	}
+}
+
+type CreateDomainNewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDomainNewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDomainNewInvoker) Invoke() (*model.CreateDomainNewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDomainNewResponse), nil
+	}
+}
+
+type ShowDomainsNewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainsNewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDomainsNewInvoker) Invoke() (*model.ShowDomainsNewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainsNewResponse), nil
+	}
+}
+
+type SyncExternalUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SyncExternalUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SyncExternalUserInvoker) Invoke() (*model.SyncExternalUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SyncExternalUserResponse), nil
+	}
+}
+
+type UpdateDomainNewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDomainNewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDomainNewInvoker) Invoke() (*model.UpdateDomainNewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDomainNewResponse), nil
 	}
 }

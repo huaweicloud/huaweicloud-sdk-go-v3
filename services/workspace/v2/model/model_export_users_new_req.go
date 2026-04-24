@@ -11,6 +11,9 @@ type ExportUsersNewReq struct {
 	// 桌面用户名，长度范围为1-20，不能包含特殊字符，不能以数字开头。支持模糊查询导出。
 	UserName *string `json:"user_name,omitempty"`
 
+	// 桌面用户名列表
+	UserNames *[]string `json:"user_names,omitempty"`
+
 	// 描述，支持模糊查询导出。
 	Description *string `json:"description,omitempty"`
 

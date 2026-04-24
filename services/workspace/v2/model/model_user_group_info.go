@@ -31,7 +31,7 @@ type UserGroupInfo struct {
 	// 用户组域Id。
 	RealmId *string `json:"realm_id,omitempty"`
 
-	// 用户组类型。 * AD： AD域用户组 * LOCAL： 本地liteAs用户组
+	// 用户组类型。 * AD： AD域用户组 * LOCAL： 本地liteAs用户组 * UOS： UOS域用户组
 	PlatformType *UserGroupInfoPlatformType `json:"platform_type,omitempty"`
 
 	// 用户组专有名。
@@ -63,6 +63,7 @@ type UserGroupInfoPlatformType struct {
 type UserGroupInfoPlatformTypeEnum struct {
 	AD    UserGroupInfoPlatformType
 	LOCAL UserGroupInfoPlatformType
+	UOS   UserGroupInfoPlatformType
 }
 
 func GetUserGroupInfoPlatformTypeEnum() UserGroupInfoPlatformTypeEnum {
@@ -72,6 +73,9 @@ func GetUserGroupInfoPlatformTypeEnum() UserGroupInfoPlatformTypeEnum {
 		},
 		LOCAL: UserGroupInfoPlatformType{
 			value: "LOCAL",
+		},
+		UOS: UserGroupInfoPlatformType{
+			value: "UOS",
 		},
 	}
 }

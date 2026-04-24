@@ -33,6 +33,9 @@ type ListUserUsageMetricRequest struct {
 	// 按照指标进行排序的方向;需配合sort_field一起使用 * `DESC` - 降序返回数据 * `ASC` -  升序返回数据
 	SortType *string `json:"sort_type,omitempty"`
 
+	// 域名
+	Domain *string `json:"domain,omitempty"`
+
 	// 查询的偏移量,默认值0。
 	Offset *int32 `json:"offset,omitempty"`
 

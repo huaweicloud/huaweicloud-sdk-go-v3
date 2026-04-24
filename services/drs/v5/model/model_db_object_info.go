@@ -9,6 +9,9 @@ import (
 // DbObjectInfo 对象信息。
 type DbObjectInfo struct {
 
+	// 对象名
+	ObjectName *string `json:"object_name,omitempty"`
+
 	// 源数据库库名。
 	SourceDbName *string `json:"source_db_name,omitempty"`
 

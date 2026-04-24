@@ -18,10 +18,10 @@ type MigrateLogicDbOpenReq struct {
 	SwitchRouteEndTime *string `json:"switch_route_end_time,omitempty"`
 
 	// 新分片数。
-	NewShardNumber *string `json:"new_shard_number,omitempty"`
+	NewShardNumber string `json:"new_shard_number"`
 
 	// 是否独占。
-	IsExclusive bool `json:"is_exclusive"`
+	IsExclusive *bool `json:"is_exclusive,omitempty"`
 }
 
 func (o MigrateLogicDbOpenReq) String() string {

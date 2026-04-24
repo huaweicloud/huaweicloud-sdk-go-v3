@@ -14,6 +14,12 @@ type ShowInstanceResultRequest struct {
 
 	// DataArts Studio工作空间ID
 	Workspace string `json:"workspace"`
+
+	// 每页的记录数，取值范围为0~100。
+	Limit *int64 `json:"limit,omitempty"`
+
+	// 分页偏移量，最小值为0。
+	Offset *int64 `json:"offset,omitempty"`
 }
 
 func (o ShowInstanceResultRequest) String() string {

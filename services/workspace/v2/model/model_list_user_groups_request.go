@@ -17,6 +17,12 @@ type ListUserGroupsRequest struct {
 
 	// 用来匹配用户组的搜索关键字。例如根据组名模糊查询。
 	Keyword *string `json:"keyword,omitempty"`
+
+	// 根据用户组的域名进行过滤。
+	Domain *string `json:"domain,omitempty"`
+
+	// 用户类型。 * AD： AD域用户 * LOCAL： 本地liteAs用户 * UOS： UOS域用户
+	PlatformType *[]string `json:"platform_type,omitempty"`
 }
 
 func (o ListUserGroupsRequest) String() string {

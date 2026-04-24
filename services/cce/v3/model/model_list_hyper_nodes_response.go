@@ -8,7 +8,7 @@ import (
 
 // ListHyperNodesResponse Response Object
 type ListHyperNodesResponse struct {
-	HyperNodeList  *[]HyperNode `json:"hyperNodeList,omitempty"`
+	Body           *[]HyperNode `json:"body,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

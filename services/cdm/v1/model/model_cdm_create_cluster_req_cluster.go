@@ -26,10 +26,10 @@ type CdmCreateClusterReqCluster struct {
 	ScheduleOffTime *string `json:"scheduleOffTime,omitempty"`
 
 	// 指定虚拟私有云ID，用于集群网络配置
-	VpcId *string `json:"vpcId,omitempty"`
+	VpcId string `json:"vpcId"`
 
 	// 集群名称
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 企业项目信息，请参见•sys_tags参数说明
 	SysTags *[]SysTags `json:"sys_tags,omitempty"`

@@ -64,6 +64,12 @@ type ScreenRecordDetail struct {
 
 	// 视频时长（秒）。
 	Duration *int32 `json:"duration,omitempty"`
+
+	// 上传类型。
+	UploadType *string `json:"upload_type,omitempty"`
+
+	// 站点类型。
+	SiteType *string `json:"site_type,omitempty"`
 }
 
 func (o ScreenRecordDetail) String() string {

@@ -1323,6 +1323,27 @@ func (c *DdmClient) RebuildConfigInvoker(request *model.RebuildConfigRequest) *R
 	return &RebuildConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RebuildDdmConfig 表数据重载
+//
+// 表数据重载。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) RebuildDdmConfig(request *model.RebuildDdmConfigRequest) (*model.RebuildDdmConfigResponse, error) {
+	requestDef := GenReqDefForRebuildDdmConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RebuildDdmConfigResponse), nil
+	}
+}
+
+// RebuildDdmConfigInvoker 表数据重载
+func (c *DdmClient) RebuildDdmConfigInvoker(request *model.RebuildDdmConfigRequest) *RebuildDdmConfigInvoker {
+	requestDef := GenReqDefForRebuildDdmConfig()
+	return &RebuildDdmConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ResetAdministrator DDM管理员账号密码管理
 //
 // 首次调用时新建DDM管理员帐号并设置密码。后续调用时仅更新管理员密码。
@@ -2077,6 +2098,48 @@ func (c *DdmClient) UpdateDatabaseInfo(request *model.UpdateDatabaseInfoRequest)
 func (c *DdmClient) UpdateDatabaseInfoInvoker(request *model.UpdateDatabaseInfoRequest) *UpdateDatabaseInfoInvoker {
 	requestDef := GenReqDefForUpdateDatabaseInfo()
 	return &UpdateDatabaseInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDdmInstanceName 修改实例名称
+//
+// 修改实例名称。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) UpdateDdmInstanceName(request *model.UpdateDdmInstanceNameRequest) (*model.UpdateDdmInstanceNameResponse, error) {
+	requestDef := GenReqDefForUpdateDdmInstanceName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDdmInstanceNameResponse), nil
+	}
+}
+
+// UpdateDdmInstanceNameInvoker 修改实例名称
+func (c *DdmClient) UpdateDdmInstanceNameInvoker(request *model.UpdateDdmInstanceNameRequest) *UpdateDdmInstanceNameInvoker {
+	requestDef := GenReqDefForUpdateDdmInstanceName()
+	return &UpdateDdmInstanceNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDdmInstanceSecurityGroup 修改实例安全组
+//
+// 修改实例安全组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) UpdateDdmInstanceSecurityGroup(request *model.UpdateDdmInstanceSecurityGroupRequest) (*model.UpdateDdmInstanceSecurityGroupResponse, error) {
+	requestDef := GenReqDefForUpdateDdmInstanceSecurityGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDdmInstanceSecurityGroupResponse), nil
+	}
+}
+
+// UpdateDdmInstanceSecurityGroupInvoker 修改实例安全组
+func (c *DdmClient) UpdateDdmInstanceSecurityGroupInvoker(request *model.UpdateDdmInstanceSecurityGroupRequest) *UpdateDdmInstanceSecurityGroupInvoker {
+	requestDef := GenReqDefForUpdateDdmInstanceSecurityGroup()
+	return &UpdateDdmInstanceSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDdmUser 修改账号

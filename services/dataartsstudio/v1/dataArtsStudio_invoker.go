@@ -885,6 +885,22 @@ func (i *CreateDirectoryInvoker) Invoke() (*model.CreateDirectoryResponse, error
 	}
 }
 
+type CreateFactoryBaselineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateFactoryBaselineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateFactoryBaselineInvoker) Invoke() (*model.CreateFactoryBaselineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateFactoryBaselineResponse), nil
+	}
+}
+
 type CreateFactoryEnvInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2885,6 +2901,22 @@ func (i *ListFactoryScriptsInvoker) Invoke() (*model.ListFactoryScriptsResponse,
 	}
 }
 
+type ListFactorySearchBaselineInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFactorySearchBaselineInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListFactorySearchBaselineInstancesInvoker) Invoke() (*model.ListFactorySearchBaselineInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFactorySearchBaselineInstancesResponse), nil
+	}
+}
+
 type ListFactoryTaskCompletionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2914,6 +2946,22 @@ func (i *ListFactoryTaskOverviewInvoker) Invoke() (*model.ListFactoryTaskOvervie
 		return nil, err
 	} else {
 		return result.(*model.ListFactoryTaskOverviewResponse), nil
+	}
+}
+
+type ListFactoryWorkspacesApprovalInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFactoryWorkspacesApprovalInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListFactoryWorkspacesApprovalInvoker) Invoke() (*model.ListFactoryWorkspacesApprovalResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFactoryWorkspacesApprovalResponse), nil
 	}
 }
 
@@ -3074,6 +3122,38 @@ func (i *ListSchemasInvoker) Invoke() (*model.ListSchemasResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListSchemasResponse), nil
+	}
+}
+
+type ListSearchFactoryBaselinesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSearchFactoryBaselinesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSearchFactoryBaselinesInvoker) Invoke() (*model.ListSearchFactoryBaselinesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSearchFactoryBaselinesResponse), nil
+	}
+}
+
+type ListSearchFactoryEventsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSearchFactoryEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSearchFactoryEventsInvoker) Invoke() (*model.ListSearchFactoryEventsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSearchFactoryEventsResponse), nil
 	}
 }
 

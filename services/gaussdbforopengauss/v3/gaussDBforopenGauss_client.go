@@ -208,6 +208,27 @@ func (c *GaussDBforopenGaussClient) BatchShowUpgradeCandidateVersionsInvoker(req
 	return &BatchShowUpgradeCandidateVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BindDNat 绑定/解绑NAT网关
+//
+// 绑定/解绑NAT网关。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) BindDNat(request *model.BindDNatRequest) (*model.BindDNatResponse, error) {
+	requestDef := GenReqDefForBindDNat()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BindDNatResponse), nil
+	}
+}
+
+// BindDNatInvoker 绑定/解绑NAT网关
+func (c *GaussDBforopenGaussClient) BindDNatInvoker(request *model.BindDNatRequest) *BindDNatInvoker {
+	requestDef := GenReqDefForBindDNat()
+	return &BindDNatInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CancelScheduleTask 取消定时任务
 //
 // 取消定时任务
@@ -1298,6 +1319,27 @@ func (c *GaussDBforopenGaussClient) ListConfigurationsDiff(request *model.ListCo
 func (c *GaussDBforopenGaussClient) ListConfigurationsDiffInvoker(request *model.ListConfigurationsDiffRequest) *ListConfigurationsDiffInvoker {
 	requestDef := GenReqDefForListConfigurationsDiff()
 	return &ListConfigurationsDiffInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDNatInfo 查询已绑定的NAT网关列表
+//
+// 查询已绑定的NAT网关列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListDNatInfo(request *model.ListDNatInfoRequest) (*model.ListDNatInfoResponse, error) {
+	requestDef := GenReqDefForListDNatInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDNatInfoResponse), nil
+	}
+}
+
+// ListDNatInfoInvoker 查询已绑定的NAT网关列表
+func (c *GaussDBforopenGaussClient) ListDNatInfoInvoker(request *model.ListDNatInfoRequest) *ListDNatInfoInvoker {
+	requestDef := GenReqDefForListDNatInfo()
+	return &ListDNatInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDatabaseInstances 查询数据库实例列表/查询实例详情

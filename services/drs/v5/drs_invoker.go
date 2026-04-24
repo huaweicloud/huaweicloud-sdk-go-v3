@@ -329,6 +329,22 @@ func (i *CreateReplicationJobInvoker) Invoke() (*model.CreateReplicationJobRespo
 	}
 }
 
+type CreateSubscriptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSubscriptionInvoker) Invoke() (*model.CreateSubscriptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSubscriptionResponse), nil
+	}
+}
+
 type DeleteColumnInfosInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -406,6 +422,22 @@ func (i *DeleteReplicationJobInvoker) Invoke() (*model.DeleteReplicationJobRespo
 		return nil, err
 	} else {
 		return result.(*model.DeleteReplicationJobResponse), nil
+	}
+}
+
+type DeleteSubscriptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteSubscriptionInvoker) Invoke() (*model.DeleteSubscriptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSubscriptionResponse), nil
 	}
 }
 
@@ -521,6 +553,22 @@ func (i *ExportOperationInfoInvoker) Invoke() (*model.ExportOperationInfoRespons
 	}
 }
 
+type ExportReplayReportInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportReplayReportInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExportReplayReportInvoker) Invoke() (*model.ExportReplayReportResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportReplayReportResponse), nil
+	}
+}
+
 type ImportBatchCreateJobsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -600,6 +648,22 @@ func (i *ListDbObjectsInvoker) Invoke() (*model.ListDbObjectsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListDbObjectsResponse), nil
+	}
+}
+
+type ListExtraColumnsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListExtraColumnsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListExtraColumnsInvoker) Invoke() (*model.ListExtraColumnsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListExtraColumnsResponse), nil
 	}
 }
 
@@ -765,6 +829,22 @@ func (i *ListReplicationJobsInvoker) Invoke() (*model.ListReplicationJobsRespons
 	}
 }
 
+type ListSupportLinksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSupportLinksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSupportLinksInvoker) Invoke() (*model.ListSupportLinksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSupportLinksResponse), nil
+	}
+}
+
 type ListTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -861,6 +941,38 @@ func (i *ModifyConnectionInvoker) Invoke() (*model.ModifyConnectionResponse, err
 	}
 }
 
+type PauseCompareJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PauseCompareJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *PauseCompareJobsInvoker) Invoke() (*model.PauseCompareJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PauseCompareJobsResponse), nil
+	}
+}
+
+type RestartCompareJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestartCompareJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RestartCompareJobsInvoker) Invoke() (*model.RestartCompareJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestartCompareJobsResponse), nil
+	}
+}
+
 type ShowActionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -890,6 +1002,22 @@ func (i *ShowAgencyInfoInvoker) Invoke() (*model.ShowAgencyInfoResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ShowAgencyInfoResponse), nil
+	}
+}
+
+type ShowChildNumInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowChildNumInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowChildNumInvoker) Invoke() (*model.ShowChildNumResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowChildNumResponse), nil
 	}
 }
 
@@ -954,6 +1082,22 @@ func (i *ShowCompareProgressInvoker) Invoke() (*model.ShowCompareProgressRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowCompareProgressResponse), nil
+	}
+}
+
+type ShowCompareUsersDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCompareUsersDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowCompareUsersDetailInvoker) Invoke() (*model.ShowCompareUsersDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCompareUsersDetailResponse), nil
 	}
 }
 
@@ -1311,6 +1455,22 @@ func (i *ShowReplayProgressInvoker) Invoke() (*model.ShowReplayProgressResponse,
 	}
 }
 
+type ShowReplayReportExportStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowReplayReportExportStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowReplayReportExportStatusInvoker) Invoke() (*model.ShowReplayReportExportStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowReplayReportExportStatusResponse), nil
+	}
+}
+
 type ShowReplayResultsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1340,6 +1500,38 @@ func (i *ShowReplicationJobInvoker) Invoke() (*model.ShowReplicationJobResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowReplicationJobResponse), nil
+	}
+}
+
+type ShowSmnTopicInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSmnTopicInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSmnTopicInfoInvoker) Invoke() (*model.ShowSmnTopicInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSmnTopicInfoResponse), nil
+	}
+}
+
+type ShowSubscriptionDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSubscriptionDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSubscriptionDetailInvoker) Invoke() (*model.ShowSubscriptionDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSubscriptionDetailResponse), nil
 	}
 }
 
@@ -1580,6 +1772,22 @@ func (i *UpdateStartPositionInvoker) Invoke() (*model.UpdateStartPositionRespons
 		return nil, err
 	} else {
 		return result.(*model.UpdateStartPositionResponse), nil
+	}
+}
+
+type UpdateSubscriptionInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSubscriptionInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSubscriptionInfoInvoker) Invoke() (*model.UpdateSubscriptionInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSubscriptionInfoResponse), nil
 	}
 }
 

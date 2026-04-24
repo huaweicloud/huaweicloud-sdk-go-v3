@@ -1069,11 +1069,6 @@ func GenReqDefForListVifPeerDetections() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("VifPeerId").
-		WithJsonTag("vif_peer_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Marker").
 		WithJsonTag("marker").
 		WithLocationType(def.Query))

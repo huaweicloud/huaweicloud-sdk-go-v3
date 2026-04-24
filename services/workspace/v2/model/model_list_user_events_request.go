@@ -27,6 +27,9 @@ type ListUserEventsRequest struct {
 	// 操作资源名称。
 	ResourceName *string `json:"resource_name,omitempty"`
 
+	// 域名
+	Domain *string `json:"domain,omitempty"`
+
 	// 用于分页查询，查询的起始记录序号，从0开始。
 	Offset *int32 `json:"offset,omitempty"`
 

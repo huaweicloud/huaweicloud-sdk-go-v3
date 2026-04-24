@@ -10,7 +10,10 @@ import (
 type CreateSubnetBandwidthChangeOrderResponse struct {
 
 	// 订单号，下单成功时返回订单ID。
-	OrderId        *string `json:"order_id,omitempty"`
+	OrderId *string `json:"order_id,omitempty"`
+
+	// jobId。
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

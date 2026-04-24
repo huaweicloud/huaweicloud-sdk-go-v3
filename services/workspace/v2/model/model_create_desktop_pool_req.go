@@ -12,7 +12,7 @@ import (
 // CreateDesktopPoolReq 创建桌面请求。
 type CreateDesktopPoolReq struct {
 
-	// 桌面池名称，桌面池名称必须保证唯一。桌面名称只允许输入中文、大写字母、小写字母、数字、中划线，长度范围为1~255。
+	// 桌面池名称，桌面池名称必须保证唯一。桌面名称只允许输入中文、大写字母、小写字母、数字、中划线，长度范围为1~64。
 	Name string `json:"name"`
 
 	// 桌面池类型，DYNAMIC：动态池，STATIC：静态池。
@@ -73,8 +73,13 @@ type CreateDesktopPoolReq struct {
 
 	AutoscalePolicy *AutoscalePolicy `json:"autoscale_policy,omitempty"`
 
+	UserResetPolicy *UserResetPolicy `json:"user_reset_policy,omitempty"`
+
 	// 策略id，用于指定生成桌面名称策略。
 	DesktopNamePolicyId *string `json:"desktop_name_policy_id,omitempty"`
+
+	// 桌面分配的域。
+	Domain *string `json:"domain,omitempty"`
 }
 
 func (o CreateDesktopPoolReq) String() string {

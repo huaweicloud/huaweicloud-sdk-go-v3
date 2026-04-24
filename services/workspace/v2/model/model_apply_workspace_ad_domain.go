@@ -48,6 +48,12 @@ type ApplyWorkspaceAdDomain struct {
 	// 是否开启LDAPS。
 	UseLdaps *bool `json:"use_ldaps,omitempty"`
 
+	// 是否开启智能卡认证
+	CbaEnabled *bool `json:"cba_enabled,omitempty"`
+
+	// 智能卡证书id
+	CertificateId *string `json:"certificate_id,omitempty"`
+
 	TlsConfig *TlsConfig `json:"tls_config,omitempty"`
 }
 

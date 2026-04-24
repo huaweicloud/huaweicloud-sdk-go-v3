@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -25,7 +28,7 @@ type ModifyComparePolicyReq struct {
 	CompareType *[]string `json:"compare_type,omitempty"`
 
 	// 对比策略： - normal：普通对比。 - manyToOne：多对一对比。
-	ComparePolicy *string `json:"compare_policy,omitempty"`
+	ComparePolicy *ModifyComparePolicyReqComparePolicy `json:"compare_policy,omitempty"`
 
 	// 间隔时间，按小时对比时填写，表示每隔多久执行一次对比，单位是小时。
 	IntervalHour *int32 `json:"interval_hour,omitempty"`
@@ -38,4 +41,51 @@ func (o ModifyComparePolicyReq) String() string {
 	}
 
 	return strings.Join([]string{"ModifyComparePolicyReq", string(data)}, " ")
+}
+
+type ModifyComparePolicyReqComparePolicy struct {
+	value string
+}
+
+type ModifyComparePolicyReqComparePolicyEnum struct {
+	NORMAL      ModifyComparePolicyReqComparePolicy
+	MANY_TO_ONE ModifyComparePolicyReqComparePolicy
+}
+
+func GetModifyComparePolicyReqComparePolicyEnum() ModifyComparePolicyReqComparePolicyEnum {
+	return ModifyComparePolicyReqComparePolicyEnum{
+		NORMAL: ModifyComparePolicyReqComparePolicy{
+			value: "normal",
+		},
+		MANY_TO_ONE: ModifyComparePolicyReqComparePolicy{
+			value: "manyToOne",
+		},
+	}
+}
+
+func (c ModifyComparePolicyReqComparePolicy) Value() string {
+	return c.value
+}
+
+func (c ModifyComparePolicyReqComparePolicy) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ModifyComparePolicyReqComparePolicy) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

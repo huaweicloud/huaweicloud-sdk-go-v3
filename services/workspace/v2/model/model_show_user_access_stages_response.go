@@ -15,7 +15,7 @@ type ShowUserAccessStagesResponse struct {
 	// 用户名。
 	Username *string `json:"username,omitempty"`
 
-	// 接入阶段 | APP - 应用 DESKTOP - 桌面。
+	// 接入阶段 | APP、SHARE_APP - 应用 DESKTOP、VDI - 桌面。
 	BizType *ShowUserAccessStagesResponseBizType `json:"biz_type,omitempty"`
 
 	// 接入各阶段详情。
@@ -37,8 +37,10 @@ type ShowUserAccessStagesResponseBizType struct {
 }
 
 type ShowUserAccessStagesResponseBizTypeEnum struct {
-	APP     ShowUserAccessStagesResponseBizType
-	DESKTOP ShowUserAccessStagesResponseBizType
+	APP       ShowUserAccessStagesResponseBizType
+	DESKTOP   ShowUserAccessStagesResponseBizType
+	SHARE_APP ShowUserAccessStagesResponseBizType
+	VDI       ShowUserAccessStagesResponseBizType
 }
 
 func GetShowUserAccessStagesResponseBizTypeEnum() ShowUserAccessStagesResponseBizTypeEnum {
@@ -48,6 +50,12 @@ func GetShowUserAccessStagesResponseBizTypeEnum() ShowUserAccessStagesResponseBi
 		},
 		DESKTOP: ShowUserAccessStagesResponseBizType{
 			value: "DESKTOP",
+		},
+		SHARE_APP: ShowUserAccessStagesResponseBizType{
+			value: "SHARE_APP",
+		},
+		VDI: ShowUserAccessStagesResponseBizType{
+			value: "VDI",
 		},
 	}
 }

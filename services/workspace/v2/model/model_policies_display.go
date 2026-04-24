@@ -12,7 +12,7 @@ import (
 // PoliciesDisplay 显示。
 type PoliciesDisplay struct {
 
-	// 显示级别。取值为： LEVEL1：表示等级1。 LEVEL2：表示等级2。 LEVEL3：表示等级3。 LEVEL4：表示等级4（默认/推荐）。 LEVEL5：表示等级5。
+	// 显示级别。取值为： LEVEL1：表示等级1。 LEVEL2：表示等级2。 LEVEL3：表示等级3。 LEVEL4：表示等级4（默认/推荐）。 LEVEL5：表示等级5。 LEVEL6：表示画质优先。 LEVEL7：表示流畅优先。 LEVEL8：表示自定义。
 	DisplayLevel *PoliciesDisplayDisplayLevel `json:"display_level,omitempty"`
 
 	Options *PoliciesDisplayOptions `json:"options,omitempty"`
@@ -77,6 +77,9 @@ type PoliciesDisplayDisplayLevelEnum struct {
 	LEVEL3 PoliciesDisplayDisplayLevel
 	LEVEL4 PoliciesDisplayDisplayLevel
 	LEVEL5 PoliciesDisplayDisplayLevel
+	LEVEL6 PoliciesDisplayDisplayLevel
+	LEVEL7 PoliciesDisplayDisplayLevel
+	LEVEL8 PoliciesDisplayDisplayLevel
 }
 
 func GetPoliciesDisplayDisplayLevelEnum() PoliciesDisplayDisplayLevelEnum {
@@ -95,6 +98,15 @@ func GetPoliciesDisplayDisplayLevelEnum() PoliciesDisplayDisplayLevelEnum {
 		},
 		LEVEL5: PoliciesDisplayDisplayLevel{
 			value: "LEVEL5",
+		},
+		LEVEL6: PoliciesDisplayDisplayLevel{
+			value: "LEVEL6",
+		},
+		LEVEL7: PoliciesDisplayDisplayLevel{
+			value: "LEVEL7",
+		},
+		LEVEL8: PoliciesDisplayDisplayLevel{
+			value: "LEVEL8",
 		},
 	}
 }

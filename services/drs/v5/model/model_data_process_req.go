@@ -10,7 +10,7 @@ import (
 type DataProcessReq struct {
 
 	// 指定任务数据加工规则请求体
-	DataProcessInfo *[]DataProcessInfo `json:"data_process_info,omitempty"`
+	DataProcessInfo []DataProcessInfo `json:"data_process_info"`
 }
 
 func (o DataProcessReq) String() string {

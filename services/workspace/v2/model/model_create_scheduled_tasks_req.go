@@ -51,7 +51,7 @@ type CreateScheduledTasksReq struct {
 	// 时区。
 	TimeZone *string `json:"time_zone,omitempty"`
 
-	// 任务类型，可选值为： - START：开机。 - STOP：关机。 - REBOOT：重启。 - HIBERNATE：休眠。 - REBUILD：重建系统盘。 - EXECUTE_SCRIPT：执行脚本。 - CREATE_SNAPSHOT：创建快照。 - DELETE_BLACK_ECS: 删除黑产ecs
+	// 任务类型，可选值为： - START：开机。 - STOP：关机。 - REBOOT：重启。 - HIBERNATE：休眠。 - REBUILD：重建系统盘。 - EXECUTE_SCRIPT：执行脚本。 - CREATE_SNAPSHOT：创建快照
 	TaskType CreateScheduledTasksReqTaskType `json:"task_type"`
 
 	// 任务名称。
@@ -71,6 +71,9 @@ type CreateScheduledTasksReq struct {
 
 	// 触发式任务触发后，等待时长。
 	WaitTime *int32 `json:"wait_time,omitempty"`
+
+	// 触发式任务执行周期，单位分钟。最小1分钟，最大10080分钟（7天），默认1440分钟（1天）。
+	LifeCycleExecPeriod *int32 `json:"life_cycle_exec_period,omitempty"`
 }
 
 func (o CreateScheduledTasksReq) String() string {
@@ -146,14 +149,13 @@ type CreateScheduledTasksReqTaskType struct {
 }
 
 type CreateScheduledTasksReqTaskTypeEnum struct {
-	START            CreateScheduledTasksReqTaskType
-	STOP             CreateScheduledTasksReqTaskType
-	REBOOT           CreateScheduledTasksReqTaskType
-	HIBERNATE        CreateScheduledTasksReqTaskType
-	REBUILD          CreateScheduledTasksReqTaskType
-	EXECUTE_SCRIPT   CreateScheduledTasksReqTaskType
-	CREATE_SNAPSHOT  CreateScheduledTasksReqTaskType
-	DELETE_BLACK_ECS CreateScheduledTasksReqTaskType
+	START           CreateScheduledTasksReqTaskType
+	STOP            CreateScheduledTasksReqTaskType
+	REBOOT          CreateScheduledTasksReqTaskType
+	HIBERNATE       CreateScheduledTasksReqTaskType
+	REBUILD         CreateScheduledTasksReqTaskType
+	EXECUTE_SCRIPT  CreateScheduledTasksReqTaskType
+	CREATE_SNAPSHOT CreateScheduledTasksReqTaskType
 }
 
 func GetCreateScheduledTasksReqTaskTypeEnum() CreateScheduledTasksReqTaskTypeEnum {
@@ -178,9 +180,6 @@ func GetCreateScheduledTasksReqTaskTypeEnum() CreateScheduledTasksReqTaskTypeEnu
 		},
 		CREATE_SNAPSHOT: CreateScheduledTasksReqTaskType{
 			value: "CREATE_SNAPSHOT",
-		},
-		DELETE_BLACK_ECS: CreateScheduledTasksReqTaskType{
-			value: "DELETE_BLACK_ECS",
 		},
 	}
 }

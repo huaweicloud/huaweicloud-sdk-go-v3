@@ -11,7 +11,7 @@ import (
 
 type UserAccessStage struct {
 
-	// 接入阶段 | LOGIN - 登录 PRECONNECT - 预连接 CONNECT - 正式连接。
+	// 接入阶段 | LOGIN - 登录 PRECONNECT - 预连接 CONNECT - 正式连接 MAIN_AUTH - 主认证 MFA_AUTH - 辅助认证 CLICK_ICON - 点击应用/桌面。
 	Stage *UserAccessStageStage `json:"stage,omitempty"`
 
 	// 花费时长，单位：ms。
@@ -50,6 +50,9 @@ type UserAccessStageStageEnum struct {
 	LOGIN      UserAccessStageStage
 	PRECONNECT UserAccessStageStage
 	CONNECT    UserAccessStageStage
+	MAIN_AUTH  UserAccessStageStage
+	MFA_AUTH   UserAccessStageStage
+	CLICK_ICON UserAccessStageStage
 }
 
 func GetUserAccessStageStageEnum() UserAccessStageStageEnum {
@@ -62,6 +65,15 @@ func GetUserAccessStageStageEnum() UserAccessStageStageEnum {
 		},
 		CONNECT: UserAccessStageStage{
 			value: "CONNECT",
+		},
+		MAIN_AUTH: UserAccessStageStage{
+			value: "MAIN_AUTH",
+		},
+		MFA_AUTH: UserAccessStageStage{
+			value: "MFA_AUTH",
+		},
+		CLICK_ICON: UserAccessStageStage{
+			value: "CLICK_ICON",
 		},
 	}
 }

@@ -27,6 +27,9 @@ type Vdi struct {
 	NoOperationHibernateEnable *bool `json:"no_operation_hibernate_enable,omitempty"`
 
 	NoOperationHibernateOptions *VdiNoOperationHibernateOptions `json:"no_operation_hibernate_options,omitempty"`
+
+	// 强制电源管理。
+	IgnorePowerStatus *bool `json:"ignore_power_status,omitempty"`
 }
 
 func (o Vdi) String() string {

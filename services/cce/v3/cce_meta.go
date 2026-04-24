@@ -1031,6 +1031,10 @@ func GenReqDefForListHyperNodes() *def.HttpRequestDef {
 		WithJsonTag("offset").
 		WithLocationType(def.Query))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }

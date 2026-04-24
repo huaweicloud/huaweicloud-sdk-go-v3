@@ -29,6 +29,8 @@ type SiteInfo struct {
 
 	// 创建时间。
 	CreateTime *string `json:"create_time,omitempty"`
+
+	NetworkConfig *NetworkConfig `json:"network_config,omitempty"`
 }
 
 func (o SiteInfo) String() string {

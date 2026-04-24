@@ -66,6 +66,9 @@ type UpdateScheduledTasksReq struct {
 	// 扩展参数，json格式。
 	ExtraParams *string `json:"extra_params,omitempty"`
 
+	// 应用对象更新类型，FULL_COVERAGE：全量覆盖；CLEAR_ALL：清空所有。
+	ApplyObjectUpdateType *UpdateScheduledTasksReqApplyObjectUpdateType `json:"apply_object_update_type,omitempty"`
+
 	// 定时任务应用的对象列表。
 	ApplyObjects *[]ApplyObject `json:"apply_objects,omitempty"`
 
@@ -77,6 +80,9 @@ type UpdateScheduledTasksReq struct {
 
 	// 触发式任务触发后，等待时长。
 	WaitTime *int32 `json:"wait_time,omitempty"`
+
+	// 触发式任务执行周期，单位分钟。最小1分钟，最大10080分钟（7天）。
+	LifeCycleExecPeriod *int32 `json:"life_cycle_exec_period,omitempty"`
 }
 
 func (o UpdateScheduledTasksReq) String() string {
@@ -129,6 +135,53 @@ func (c UpdateScheduledTasksReqScheduledType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *UpdateScheduledTasksReqScheduledType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type UpdateScheduledTasksReqApplyObjectUpdateType struct {
+	value string
+}
+
+type UpdateScheduledTasksReqApplyObjectUpdateTypeEnum struct {
+	CLEAR_ALL     UpdateScheduledTasksReqApplyObjectUpdateType
+	FULL_COVERAGE UpdateScheduledTasksReqApplyObjectUpdateType
+}
+
+func GetUpdateScheduledTasksReqApplyObjectUpdateTypeEnum() UpdateScheduledTasksReqApplyObjectUpdateTypeEnum {
+	return UpdateScheduledTasksReqApplyObjectUpdateTypeEnum{
+		CLEAR_ALL: UpdateScheduledTasksReqApplyObjectUpdateType{
+			value: "CLEAR_ALL",
+		},
+		FULL_COVERAGE: UpdateScheduledTasksReqApplyObjectUpdateType{
+			value: "FULL_COVERAGE",
+		},
+	}
+}
+
+func (c UpdateScheduledTasksReqApplyObjectUpdateType) Value() string {
+	return c.value
+}
+
+func (c UpdateScheduledTasksReqApplyObjectUpdateType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *UpdateScheduledTasksReqApplyObjectUpdateType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

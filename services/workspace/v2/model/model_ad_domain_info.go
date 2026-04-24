@@ -22,7 +22,7 @@ type AdDomainInfo struct {
 	DomainPassword string `json:"domain_password"`
 
 	// 是否开启智能卡认证。
-	CbaEnabled bool `json:"cba_enabled"`
+	CbaEnabled *bool `json:"cba_enabled,omitempty"`
 
 	// 智能卡证书id。
 	CertificateId *string `json:"certificate_id,omitempty"`

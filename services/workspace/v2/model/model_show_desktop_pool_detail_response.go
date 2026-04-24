@@ -62,6 +62,12 @@ type ShowDesktopPoolDetailResponse struct {
 	// 镜像的productCode（specCode）。
 	ImageProductCode *string `json:"image_product_code,omitempty"`
 
+	// 镜像的cloudServiceType
+	ImageCloudServiceType *string `json:"image_cloud_service_type,omitempty"`
+
+	// 镜像的resourceType。
+	ImageResourceType *string `json:"image_resource_type,omitempty"`
+
 	RootVolume *VolumeInfo `json:"root_volume,omitempty"`
 
 	// 数据盘列表。
@@ -77,6 +83,8 @@ type ShowDesktopPoolDetailResponse struct {
 	EnableAutoscale *bool `json:"enable_autoscale,omitempty"`
 
 	AutoscalePolicy *AutoscalePolicy `json:"autoscale_policy,omitempty"`
+
+	UserResetPolicy *UserResetPolicy `json:"user_reset_policy,omitempty"`
 
 	// 桌面池状态。 - STEADY：稳态 - TEMPORARY：临时态 - EXIST_FROZEN：存在冻结桌面 - UNKNOWN：未知态
 	Status *string `json:"status,omitempty"`
@@ -97,7 +105,13 @@ type ShowDesktopPoolDetailResponse struct {
 	OuName *string `json:"ou_name,omitempty"`
 
 	// VPC ID。
-	VpcId          *string `json:"vpc_id,omitempty"`
+	VpcId *string `json:"vpc_id,omitempty"`
+
+	// 统计无法连接桌面数量。适用于桌面池详情查询。
+	IsolationNum *int32 `json:"isolation_num,omitempty"`
+
+	// 桌面池分配的域。
+	Domain         *string `json:"domain,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

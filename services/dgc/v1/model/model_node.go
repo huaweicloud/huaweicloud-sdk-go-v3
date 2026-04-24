@@ -88,6 +88,7 @@ type NodeTypeEnum struct {
 	DATA_MIGRATION     NodeType
 	ONECLICK_CDC       NodeType
 	DUMMY              NodeType
+	MRS_SPARK_PYTHON   NodeType
 }
 
 func GetNodeTypeEnum() NodeTypeEnum {
@@ -160,6 +161,9 @@ func GetNodeTypeEnum() NodeTypeEnum {
 		},
 		DUMMY: NodeType{
 			value: "Dummy",
+		},
+		MRS_SPARK_PYTHON: NodeType{
+			value: "MRSSparkPython",
 		},
 	}
 }

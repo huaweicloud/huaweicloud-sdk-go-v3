@@ -271,6 +271,69 @@ func (c *WorkspaceClient) ListAgenciesInvoker(request *model.ListAgenciesRequest
 	return &ListAgenciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSubscribeAiAssistantUsers 查询订阅AI助手的项目，用户组，用户列表
+//
+// 查询订阅AI助手的项目，用户组，用户列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListSubscribeAiAssistantUsers(request *model.ListSubscribeAiAssistantUsersRequest) (*model.ListSubscribeAiAssistantUsersResponse, error) {
+	requestDef := GenReqDefForListSubscribeAiAssistantUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSubscribeAiAssistantUsersResponse), nil
+	}
+}
+
+// ListSubscribeAiAssistantUsersInvoker 查询订阅AI助手的项目，用户组，用户列表
+func (c *WorkspaceClient) ListSubscribeAiAssistantUsersInvoker(request *model.ListSubscribeAiAssistantUsersRequest) *ListSubscribeAiAssistantUsersInvoker {
+	requestDef := GenReqDefForListSubscribeAiAssistantUsers()
+	return &ListSubscribeAiAssistantUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAiAssistantUsageFrequency 查询用户使用频次统计
+//
+// 查询用户使用频次统计。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowAiAssistantUsageFrequency(request *model.ShowAiAssistantUsageFrequencyRequest) (*model.ShowAiAssistantUsageFrequencyResponse, error) {
+	requestDef := GenReqDefForShowAiAssistantUsageFrequency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAiAssistantUsageFrequencyResponse), nil
+	}
+}
+
+// ShowAiAssistantUsageFrequencyInvoker 查询用户使用频次统计
+func (c *WorkspaceClient) ShowAiAssistantUsageFrequencyInvoker(request *model.ShowAiAssistantUsageFrequencyRequest) *ShowAiAssistantUsageFrequencyInvoker {
+	requestDef := GenReqDefForShowAiAssistantUsageFrequency()
+	return &ShowAiAssistantUsageFrequencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SubscribeAiAssistant 订阅和取消AI助手
+//
+// 订阅用户可以使用ai提供的能力。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) SubscribeAiAssistant(request *model.SubscribeAiAssistantRequest) (*model.SubscribeAiAssistantResponse, error) {
+	requestDef := GenReqDefForSubscribeAiAssistant()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SubscribeAiAssistantResponse), nil
+	}
+}
+
+// SubscribeAiAssistantInvoker 订阅和取消AI助手
+func (c *WorkspaceClient) SubscribeAiAssistantInvoker(request *model.SubscribeAiAssistantRequest) *SubscribeAiAssistantInvoker {
+	requestDef := GenReqDefForSubscribeAiAssistant()
+	return &SubscribeAiAssistantInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAlarmStatistics 查询告警统计
 //
 // 返回各级别告警数。
@@ -903,7 +966,7 @@ func (c *WorkspaceClient) SetRuleRestrictionInvoker(request *model.SetRuleRestri
 
 // ShowRuleRestriction 查询管控规则
 //
-// 查询管控规则。
+// 查询对应管控规则。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) ShowRuleRestriction(request *model.ShowRuleRestrictionRequest) (*model.ShowRuleRestrictionResponse, error) {
@@ -962,6 +1025,27 @@ func (c *WorkspaceClient) DownloadMetadata(request *model.DownloadMetadataReques
 func (c *WorkspaceClient) DownloadMetadataInvoker(request *model.DownloadMetadataRequest) *DownloadMetadataInvoker {
 	requestDef := GenReqDefForDownloadMetadata()
 	return &DownloadMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadSpMetadata 下载SAML 2.0 SP元数据信息
+//
+// 下载SAML 2.0 SP元数据信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) DownloadSpMetadata(request *model.DownloadSpMetadataRequest) (*model.DownloadSpMetadataResponse, error) {
+	requestDef := GenReqDefForDownloadSpMetadata()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadSpMetadataResponse), nil
+	}
+}
+
+// DownloadSpMetadataInvoker 下载SAML 2.0 SP元数据信息
+func (c *WorkspaceClient) DownloadSpMetadataInvoker(request *model.DownloadSpMetadataRequest) *DownloadSpMetadataInvoker {
+	requestDef := GenReqDefForDownloadSpMetadata()
+	return &DownloadSpMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAssistAuthConfig 查询辅助认证配置
@@ -4894,6 +4978,27 @@ func (c *WorkspaceClient) ListFutureExecutionsInvoker(request *model.ListFutureE
 	return &ListFutureExecutionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListLifeCycleTypeConfigurations 查询生命周期类型配置
+//
+// 根据type查询Apollo配置项life.cycle.type.action，获取对应的配置信息。不传type时返回所有配置项。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListLifeCycleTypeConfigurations(request *model.ListLifeCycleTypeConfigurationsRequest) (*model.ListLifeCycleTypeConfigurationsResponse, error) {
+	requestDef := GenReqDefForListLifeCycleTypeConfigurations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLifeCycleTypeConfigurationsResponse), nil
+	}
+}
+
+// ListLifeCycleTypeConfigurationsInvoker 查询生命周期类型配置
+func (c *WorkspaceClient) ListLifeCycleTypeConfigurationsInvoker(request *model.ListLifeCycleTypeConfigurationsRequest) *ListLifeCycleTypeConfigurationsInvoker {
+	requestDef := GenReqDefForListLifeCycleTypeConfigurations()
+	return &ListLifeCycleTypeConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListScheduledTasks 查询定时任务列表
 //
 // 查询定时任务列表。
@@ -5104,6 +5209,27 @@ func (c *WorkspaceClient) ListScreenRecordsInvoker(request *model.ListScreenReco
 	return &ListScreenRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListScreenRecordsTrafficLimitConfig 查询站点录屏限速配置
+//
+// 查询站点录屏限速配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListScreenRecordsTrafficLimitConfig(request *model.ListScreenRecordsTrafficLimitConfigRequest) (*model.ListScreenRecordsTrafficLimitConfigResponse, error) {
+	requestDef := GenReqDefForListScreenRecordsTrafficLimitConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListScreenRecordsTrafficLimitConfigResponse), nil
+	}
+}
+
+// ListScreenRecordsTrafficLimitConfigInvoker 查询站点录屏限速配置
+func (c *WorkspaceClient) ListScreenRecordsTrafficLimitConfigInvoker(request *model.ListScreenRecordsTrafficLimitConfigRequest) *ListScreenRecordsTrafficLimitConfigInvoker {
+	requestDef := GenReqDefForListScreenRecordsTrafficLimitConfig()
+	return &ListScreenRecordsTrafficLimitConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowScreenRecord 查询录屏详情
 //
 // 查询录屏详情。
@@ -5123,6 +5249,48 @@ func (c *WorkspaceClient) ShowScreenRecord(request *model.ShowScreenRecordReques
 func (c *WorkspaceClient) ShowScreenRecordInvoker(request *model.ShowScreenRecordRequest) *ShowScreenRecordInvoker {
 	requestDef := GenReqDefForShowScreenRecord()
 	return &ShowScreenRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateFullSpeedRecordConfig 更新录屏全速上传详情
+//
+// 更新录屏全速上传详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateFullSpeedRecordConfig(request *model.UpdateFullSpeedRecordConfigRequest) (*model.UpdateFullSpeedRecordConfigResponse, error) {
+	requestDef := GenReqDefForUpdateFullSpeedRecordConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateFullSpeedRecordConfigResponse), nil
+	}
+}
+
+// UpdateFullSpeedRecordConfigInvoker 更新录屏全速上传详情
+func (c *WorkspaceClient) UpdateFullSpeedRecordConfigInvoker(request *model.UpdateFullSpeedRecordConfigRequest) *UpdateFullSpeedRecordConfigInvoker {
+	requestDef := GenReqDefForUpdateFullSpeedRecordConfig()
+	return &UpdateFullSpeedRecordConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateScreenRecordsTrafficLimitConfig 更新站点录屏限速配置
+//
+// 更新站点录屏限速配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateScreenRecordsTrafficLimitConfig(request *model.UpdateScreenRecordsTrafficLimitConfigRequest) (*model.UpdateScreenRecordsTrafficLimitConfigResponse, error) {
+	requestDef := GenReqDefForUpdateScreenRecordsTrafficLimitConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateScreenRecordsTrafficLimitConfigResponse), nil
+	}
+}
+
+// UpdateScreenRecordsTrafficLimitConfigInvoker 更新站点录屏限速配置
+func (c *WorkspaceClient) UpdateScreenRecordsTrafficLimitConfigInvoker(request *model.UpdateScreenRecordsTrafficLimitConfigRequest) *UpdateScreenRecordsTrafficLimitConfigInvoker {
+	requestDef := GenReqDefForUpdateScreenRecordsTrafficLimitConfig()
+	return &UpdateScreenRecordsTrafficLimitConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateScript 新增脚本
@@ -5463,7 +5631,7 @@ func (c *WorkspaceClient) UpdateShareSpaceConfigInvoker(request *model.UpdateSha
 
 // AddSite 新增站点
 //
-// 用于查询站点信息的接口。
+// 新增站点信息的接口。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceClient) AddSite(request *model.AddSiteRequest) (*model.AddSiteResponse, error) {
@@ -5585,6 +5753,27 @@ func (c *WorkspaceClient) UpdateAccessMode(request *model.UpdateAccessModeReques
 func (c *WorkspaceClient) UpdateAccessModeInvoker(request *model.UpdateAccessModeRequest) *UpdateAccessModeInvoker {
 	requestDef := GenReqDefForUpdateAccessMode()
 	return &UpdateAccessModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDcVnc 修改站点专线自助维护通道
+//
+// 用于更新站点属性的接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateDcVnc(request *model.UpdateDcVncRequest) (*model.UpdateDcVncResponse, error) {
+	requestDef := GenReqDefForUpdateDcVnc()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDcVncResponse), nil
+	}
+}
+
+// UpdateDcVncInvoker 修改站点专线自助维护通道
+func (c *WorkspaceClient) UpdateDcVncInvoker(request *model.UpdateDcVncRequest) *UpdateDcVncInvoker {
+	requestDef := GenReqDefForUpdateDcVnc()
+	return &UpdateDcVncInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSubnetIds 修改站点业务子网
@@ -7116,4 +7305,109 @@ func (c *WorkspaceClient) ValidateDomainController(request *model.ValidateDomain
 func (c *WorkspaceClient) ValidateDomainControllerInvoker(request *model.ValidateDomainControllerRequest) *ValidateDomainControllerInvoker {
 	requestDef := GenReqDefForValidateDomainController()
 	return &ValidateDomainControllerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CloseDomainNew 关闭域控的配置信息
+//
+// 关闭域控的配置信息。暂不支持关闭AD域控。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CloseDomainNew(request *model.CloseDomainNewRequest) (*model.CloseDomainNewResponse, error) {
+	requestDef := GenReqDefForCloseDomainNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CloseDomainNewResponse), nil
+	}
+}
+
+// CloseDomainNewInvoker 关闭域控的配置信息
+func (c *WorkspaceClient) CloseDomainNewInvoker(request *model.CloseDomainNewRequest) *CloseDomainNewInvoker {
+	requestDef := GenReqDefForCloseDomainNew()
+	return &CloseDomainNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDomainNew 配置域控
+//
+// 配置域控。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CreateDomainNew(request *model.CreateDomainNewRequest) (*model.CreateDomainNewResponse, error) {
+	requestDef := GenReqDefForCreateDomainNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDomainNewResponse), nil
+	}
+}
+
+// CreateDomainNewInvoker 配置域控
+func (c *WorkspaceClient) CreateDomainNewInvoker(request *model.CreateDomainNewRequest) *CreateDomainNewInvoker {
+	requestDef := GenReqDefForCreateDomainNew()
+	return &CreateDomainNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDomainsNew 查询域控的配置信息
+//
+// 查询域控的配置信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowDomainsNew(request *model.ShowDomainsNewRequest) (*model.ShowDomainsNewResponse, error) {
+	requestDef := GenReqDefForShowDomainsNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainsNewResponse), nil
+	}
+}
+
+// ShowDomainsNewInvoker 查询域控的配置信息
+func (c *WorkspaceClient) ShowDomainsNewInvoker(request *model.ShowDomainsNewRequest) *ShowDomainsNewInvoker {
+	requestDef := GenReqDefForShowDomainsNew()
+	return &ShowDomainsNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SyncExternalUser 同步域控用户（组）
+//
+// 同步域控用户（组）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) SyncExternalUser(request *model.SyncExternalUserRequest) (*model.SyncExternalUserResponse, error) {
+	requestDef := GenReqDefForSyncExternalUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SyncExternalUserResponse), nil
+	}
+}
+
+// SyncExternalUserInvoker 同步域控用户（组）
+func (c *WorkspaceClient) SyncExternalUserInvoker(request *model.SyncExternalUserRequest) *SyncExternalUserInvoker {
+	requestDef := GenReqDefForSyncExternalUser()
+	return &SyncExternalUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDomainNew 修改域控
+//
+// 修改域控。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateDomainNew(request *model.UpdateDomainNewRequest) (*model.UpdateDomainNewResponse, error) {
+	requestDef := GenReqDefForUpdateDomainNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDomainNewResponse), nil
+	}
+}
+
+// UpdateDomainNewInvoker 修改域控
+func (c *WorkspaceClient) UpdateDomainNewInvoker(request *model.UpdateDomainNewRequest) *UpdateDomainNewInvoker {
+	requestDef := GenReqDefForUpdateDomainNew()
+	return &UpdateDomainNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

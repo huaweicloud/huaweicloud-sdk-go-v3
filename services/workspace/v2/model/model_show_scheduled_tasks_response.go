@@ -27,6 +27,9 @@ type ShowScheduledTasksResponse struct {
 	// 触发场景类型。仅当scheduled_type为LIFE_CYCLE时，生效。POST_CREATE_DESKTOP_SUCCESS：创建桌面成功后，POST_REBUILD_DESKTOP_SUCCESS：重建桌面成功后，POST_REATTACH_DESKTOP_SUCCESS：触发重建的分配用户任务成功后。
 	LifeCycleType *string `json:"life_cycle_type,omitempty"`
 
+	// 触发式任务执行周期，单位分钟。最小1分钟，最大10080分钟（7天），默认1440分钟（1天）。
+	LifeCycleExecPeriod *int32 `json:"life_cycle_exec_period,omitempty"`
+
 	// 周期按天时：按x天间隔执行。
 	DayInterval *int32 `json:"day_interval,omitempty"`
 

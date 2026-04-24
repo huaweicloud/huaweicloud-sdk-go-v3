@@ -37,6 +37,8 @@ type Policies struct {
 	CloudStorage *PoliciesCloudStorage `json:"cloud_storage,omitempty"`
 
 	UserProfile *PoliciesUserProfile `json:"user_profile,omitempty"`
+
+	DomainControl *PoliciesDomainControl `json:"domain_control,omitempty"`
 }
 
 func (o Policies) String() string {

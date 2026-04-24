@@ -24,6 +24,9 @@ type ScheduledTask struct {
 	// 触发场景类型。
 	LifeCycleType *string `json:"life_cycle_type,omitempty"`
 
+	// 触发式任务执行周期，单位分钟。最小1分钟，最大10080分钟（7天），默认1440分钟（1天）。
+	LifeCycleExecPeriod *int32 `json:"life_cycle_exec_period,omitempty"`
+
 	// 最近一次执行状态。SUCCESS：成功，SKIP：跳过，FAIL：失败。
 	LastStatus *string `json:"last_status,omitempty"`
 

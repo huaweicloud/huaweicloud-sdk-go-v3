@@ -27,11 +27,11 @@ type ListUsersOfGroupRequest struct {
 	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
-	// 用于分页查询，返回桌面数量限制。如果不指定或为0，默认2000，最大2000。
-	Limit *string `json:"limit,omitempty"`
+	// 用于分页查询，返回桌面数量限制。如果不指定或为0，默认2000，最大10000。
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 用于分页查询，查询的起始记录序号，从0开始。
-	Offset *string `json:"offset,omitempty"`
+	Offset *int32 `json:"offset,omitempty"`
 }
 
 func (o ListUsersOfGroupRequest) String() string {

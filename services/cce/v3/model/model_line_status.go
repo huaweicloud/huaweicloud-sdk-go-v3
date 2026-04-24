@@ -12,7 +12,7 @@ type LineStatus struct {
 	EndPoint *Point `json:"endPoint,omitempty"`
 
 	// 表示是否为关键线路（关键线路未执行无法取消升级流程）
-	Critical *string `json:"critical,omitempty"`
+	Critical *bool `json:"critical,omitempty"`
 }
 
 func (o LineStatus) String() string {

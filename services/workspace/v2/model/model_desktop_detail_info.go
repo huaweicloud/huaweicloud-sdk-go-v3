@@ -42,7 +42,7 @@ type DesktopDetailInfo struct {
 	// 桌面类型。  - DEDICATED：专属桌面。 - SHARED: 多用户桌面 - POOLED: 池桌面
 	DesktopType *string `json:"desktop_type,omitempty"`
 
-	// 桌面元数据。   - image_name 创建桌面的镜像名称。 - bill_resource_id 镜像计费资源ID。 - metering.image_id 镜像ID。 - metering.resourcespeccode 桌面资源编码。 - metering.resourcetype 桌面资源类型。 - os_bit 操作系统位数：32或64。 - os_type 操作系统类型：Linux、Windows或Others。 - desktop_os_version 操作系统版本。
+	// 桌面元数据。   - image_name 创建桌面的镜像名称。 - image_cloud_service_type 镜像云服务类型。 - image_resource_type 镜像资源类型。 - image_spec_code 镜像规格编码。 - image_bill_resource_id 镜像计费资源ID。 - metering.image_id 镜像ID。 - metering.resourcespeccode 桌面资源编码。 - metering.resourcetype 桌面资源类型。 - os_bit 操作系统位数：32或64。 - os_type 操作系统类型：Linux、Windows或Others。 - desktop_os_version 操作系统版本。
 	Metadata map[string]string `json:"metadata,omitempty"`
 
 	Flavor *FlavorInfo `json:"flavor,omitempty"`
@@ -145,6 +145,12 @@ type DesktopDetailInfo struct {
 
 	// 是否冻结
 	IsFreeze *bool `json:"is_freeze,omitempty"`
+
+	// 动态池桌面隔离状态，false表示未隔离，true表示已隔离。
+	Isolated *bool `json:"isolated,omitempty"`
+
+	// 桌面分配的域。
+	Domain *string `json:"domain,omitempty"`
 }
 
 func (o DesktopDetailInfo) String() string {

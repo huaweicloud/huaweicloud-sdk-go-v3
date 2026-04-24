@@ -26,6 +26,9 @@ type NetworkConfig struct {
 
 	// VPC配置信息列表。
 	VpcConfigInfos *[]VpcConfigInfo `json:"vpc_config_infos,omitempty"`
+
+	// 自定义的专线VNC地址。
+	DcVncIp *string `json:"dc_vnc_ip,omitempty"`
 }
 
 func (o NetworkConfig) String() string {

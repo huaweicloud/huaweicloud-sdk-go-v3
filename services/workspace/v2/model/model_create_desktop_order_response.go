@@ -10,7 +10,10 @@ import (
 type CreateDesktopOrderResponse struct {
 
 	// 订单号，下单成功时返回订单ID。
-	OrderId        *string `json:"order_id,omitempty"`
+	OrderId *string `json:"order_id,omitempty"`
+
+	// 任务id，下单成功时返回的任务ID。
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

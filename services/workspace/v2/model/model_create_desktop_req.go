@@ -77,6 +77,9 @@ type CreateDesktopReq struct {
 
 	// 是否在发放新桌面时，挂载旧桌面磁盘为数据盘
 	IfMountOldDesktopDisk *bool `json:"if_mount_old_desktop_disk,omitempty"`
+
+	// 桌面分配的域。
+	Domain *string `json:"domain,omitempty"`
 }
 
 func (o CreateDesktopReq) String() string {

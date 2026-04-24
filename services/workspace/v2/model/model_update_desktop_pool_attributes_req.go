@@ -9,7 +9,7 @@ import (
 // UpdateDesktopPoolAttributesReq 修改桌面池属性请求。
 type UpdateDesktopPoolAttributesReq struct {
 
-	// 桌面池名称，桌面池名称必须保证唯一。桌面名称只允许输入中文、大写字母、小写字母、数字、中划线，长度范围为1~255。
+	// 桌面池名称，桌面池名称必须保证唯一。桌面名称只允许输入中文、大写字母、小写字母、数字、中划线，长度范围为1~64。
 	Name *string `json:"name,omitempty"`
 
 	// 桌面池描述。
@@ -28,6 +28,8 @@ type UpdateDesktopPoolAttributesReq struct {
 	EnableAutoscale *bool `json:"enable_autoscale,omitempty"`
 
 	AutoscalePolicy *AutoscalePolicy `json:"autoscale_policy,omitempty"`
+
+	UserResetPolicy *UserResetPolicy `json:"user_reset_policy,omitempty"`
 
 	// 是否处于管理员维护模式。
 	InMaintenanceMode *bool `json:"in_maintenance_mode,omitempty"`

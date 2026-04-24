@@ -26,6 +26,9 @@ type CreateDesktopNamePolicyReq struct {
 
 	// 是否为默认策略，true默认策略。
 	IsDefaultPolicy *bool `json:"is_default_policy,omitempty"`
+
+	// 当名称前缀加数字长度生成的桌面名称长度超15位时，是否截断名称前缀部分。
+	PrefixTruncationEnabled *bool `json:"prefix_truncation_enabled,omitempty"`
 }
 
 func (o CreateDesktopNamePolicyReq) String() string {

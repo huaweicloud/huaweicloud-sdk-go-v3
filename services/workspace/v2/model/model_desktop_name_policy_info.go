@@ -32,6 +32,9 @@ type DesktopNamePolicyInfo struct {
 
 	// 是否包含用户名的桌面名称策略，true包含。
 	IsContainUser *bool `json:"is_contain_user,omitempty"`
+
+	// 当名称前缀加数字长度生成的桌面名称长度超15位时，是否截断名称前缀部分。
+	PrefixTruncationEnabled *bool `json:"prefix_truncation_enabled,omitempty"`
 }
 
 func (o DesktopNamePolicyInfo) String() string {
