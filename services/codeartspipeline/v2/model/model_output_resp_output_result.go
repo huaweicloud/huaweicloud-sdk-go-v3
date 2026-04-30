@@ -12,7 +12,7 @@ type OutputRespOutputResult struct {
 	Key *string `json:"key,omitempty"`
 
 	// **参数解释**： 步骤输出value值。 **取值范围**： 不涉及。
-	Value *string `json:"value,omitempty"`
+	Value *interface{} `json:"value,omitempty"`
 }
 
 func (o OutputRespOutputResult) String() string {

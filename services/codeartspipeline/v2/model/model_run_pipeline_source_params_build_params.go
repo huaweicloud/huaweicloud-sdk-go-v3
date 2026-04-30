@@ -47,6 +47,12 @@ type RunPipelineSourceParamsBuildParams struct {
 
 	// **参数解释**： 源Repo代码仓http地址。 **取值范围**： 不涉及。
 	SourceCodehubHttpUrl *string `json:"source_codehub_http_url,omitempty"`
+
+	// **参数解释**： 预合并分支。 **取值范围**： 不涉及。
+	VirtualMergeBranch *string `json:"virtual_merge_branch,omitempty"`
+
+	// **参数解释**： 预合并提交ID。 **取值范围**： 不涉及。
+	VirtualMergeCommitId *string `json:"virtual_merge_commitId,omitempty"`
 }
 
 func (o RunPipelineSourceParamsBuildParams) String() string {

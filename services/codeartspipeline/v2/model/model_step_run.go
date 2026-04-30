@@ -53,6 +53,9 @@ type StepRun struct {
 
 	// **参数解释**： 步骤结束时间。 **取值范围**： 不涉及。
 	EndTime *int64 `json:"end_time,omitempty"`
+
+	// **参数解释**： 构建编号。 **取值范围**： 不涉及。
+	DailyBuildNumber *string `json:"daily_build_number,omitempty"`
 }
 
 func (o StepRun) String() string {

@@ -96,7 +96,7 @@ func GetShowChildNumRequestDbTypeEnum() ShowChildNumRequestDbTypeEnum {
 			value: "gaussdbv5",
 		},
 		DDM: ShowChildNumRequestDbType{
-			value: " ddm",
+			value: "ddm",
 		},
 	}
 }

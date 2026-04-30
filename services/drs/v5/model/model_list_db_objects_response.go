@@ -55,10 +55,10 @@ func GetListDbObjectsResponseStatusEnum() ListDbObjectsResponseStatusEnum {
 			value: "success",
 		},
 		FAILED: ListDbObjectsResponseStatus{
-			value: " failed",
+			value: "failed",
 		},
 		PENDING: ListDbObjectsResponseStatus{
-			value: " pending",
+			value: "pending",
 		},
 	}
 }

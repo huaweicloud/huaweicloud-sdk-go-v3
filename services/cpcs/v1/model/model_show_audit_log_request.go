@@ -10,10 +10,10 @@ import (
 type ShowAuditLogRequest struct {
 
 	// 指定查询返回记录条数，默认值10
-	PageSize *int32 `json:"page_size,omitempty"`
+	Limit *int32 `json:"limit,omitempty"`
 
-	// 索引位置，从page_num指定的下一条数据开始查询默认值为0
-	PageNum *int32 `json:"page_num,omitempty"`
+	// 索引位置，从offset指定的下一条数据开始查询默认值为0
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 开始时间
 	StartTime *int64 `json:"start_time,omitempty"`

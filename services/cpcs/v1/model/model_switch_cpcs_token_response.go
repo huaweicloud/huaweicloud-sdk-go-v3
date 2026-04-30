@@ -8,19 +8,7 @@ import (
 
 // SwitchCpcsTokenResponse Response Object
 type SwitchCpcsTokenResponse struct {
-
-	// 角色列表
-	Roles *[]string `json:"roles,omitempty"`
-
-	Ak *SwitchTokenResponseAk `json:"ak,omitempty"`
-
-	// 过期时间
-	ExpiredAt *string `json:"expired_at,omitempty"`
-
-	// 签发时间
-	IssuedAt *string `json:"issued_at,omitempty"`
-
-	User *SwitchTokenResponseUser `json:"user,omitempty"`
+	Token *SwitchTokenResponseToken `json:"token,omitempty"`
 
 	XCPCSToken     *string `json:"X-CPCS-Token,omitempty"`
 	HttpStatusCode int     `json:"-"`

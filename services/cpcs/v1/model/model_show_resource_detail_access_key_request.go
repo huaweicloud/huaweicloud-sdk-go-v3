@@ -25,10 +25,10 @@ type ShowResourceDetailAccessKeyRequest struct {
 	CertificateType *string `json:"certificate_type,omitempty"`
 
 	// 页面大小，不超过1500
-	PageSize *int32 `json:"page_size,omitempty"`
+	Limit *int32 `json:"limit,omitempty"`
 
 	// 页数，默认1
-	PageNum *int32 `json:"page_num,omitempty"`
+	Offset *int32 `json:"offset,omitempty"`
 
 	// 查询起始时间戳，毫秒级时间戳，默认为0，默认从三天前查询
 	From *int64 `json:"from,omitempty"`

@@ -12,7 +12,10 @@ import (
 // ShowAggregatePolicyAssignmentDetailResponse Response Object
 type ShowAggregatePolicyAssignmentDetailResponse struct {
 
-	// 规则类型，包括预定义合规规则(builtin)和用户自定义合规规则(custom)
+	// 聚合器规则的聚合器名称
+	AggregatorName *string `json:"aggregator_name,omitempty"`
+
+	// 规则所有方
 	PolicyAssignmentType *ShowAggregatePolicyAssignmentDetailResponsePolicyAssignmentType `json:"policy_assignment_type,omitempty"`
 
 	// 规则ID
@@ -28,7 +31,7 @@ type ShowAggregatePolicyAssignmentDetailResponse struct {
 
 	PolicyFilterV2 *PolicyFilterDefinitionV2 `json:"policy_filter_v2,omitempty"`
 
-	// 触发周期值，可选值：One_Hour, Three_Hours, Six_Hours, Twelve_Hours, TwentyFour_Hours
+	// 触发周期
 	Period *string `json:"period,omitempty"`
 
 	// 规则状态
@@ -48,6 +51,7 @@ type ShowAggregatePolicyAssignmentDetailResponse struct {
 	// 规则参数
 	Parameters map[string]PolicyParameterValue `json:"parameters,omitempty"`
 
+	// 标签列表
 	Tags *[]ResourceTag `json:"tags,omitempty"`
 
 	// 规则的创建者
@@ -56,7 +60,7 @@ type ShowAggregatePolicyAssignmentDetailResponse struct {
 	// 合规规则修正方式。
 	TargetType *string `json:"target_type,omitempty"`
 
-	// 修正执行的目标id。
+	// 修正执行的目标urn。
 	TargetId       *string `json:"target_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

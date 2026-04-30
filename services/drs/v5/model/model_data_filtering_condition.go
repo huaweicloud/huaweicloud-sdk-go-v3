@@ -43,7 +43,7 @@ func GetDataFilteringConditionFilteringTypeEnum() DataFilteringConditionFilterin
 			value: "contentConditionalFilter",
 		},
 		CONFIG_CONDITIONAL_FILTER: DataFilteringConditionFilteringType{
-			value: " configConditionalFilter",
+			value: "configConditionalFilter",
 		},
 	}
 }

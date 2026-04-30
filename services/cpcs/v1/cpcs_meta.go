@@ -327,12 +327,12 @@ func GenReqDefForListCcspTenantImages() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageSize").
-		WithJsonTag("page_size").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageNum").
-		WithJsonTag("page_num").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ImageName").
@@ -404,12 +404,12 @@ func GenReqDefForShowAppAccessKeyList() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageSize").
-		WithJsonTag("page_size").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageNum").
-		WithJsonTag("page_num").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("KeyName").
@@ -436,12 +436,12 @@ func GenReqDefForShowAppList() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageSize").
-		WithJsonTag("page_size").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageNum").
-		WithJsonTag("page_num").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AppName").
@@ -480,12 +480,12 @@ func GenReqDefForShowAssociationList() *def.HttpRequestDef {
 		WithJsonTag("app_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageSize").
-		WithJsonTag("page_size").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageNum").
-		WithJsonTag("page_num").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SortKey").
@@ -508,12 +508,12 @@ func GenReqDefForShowAuditLog() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageSize").
-		WithJsonTag("page_size").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageNum").
-		WithJsonTag("page_num").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("StartTime").
@@ -563,12 +563,12 @@ func GenReqDefForShowCcspClusterList() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageSize").
-		WithJsonTag("page_size").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageNum").
-		WithJsonTag("page_num").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Name").
@@ -599,16 +599,16 @@ func GenReqDefForShowCcspInstanceInfo() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageSize").
-		WithJsonTag("page_size").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Name").
 		WithJsonTag("name").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageNum").
-		WithJsonTag("page_num").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SortKey").
@@ -648,12 +648,12 @@ func GenReqDefForShowClusterAccessKeyList() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageSize").
-		WithJsonTag("page_size").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageNum").
-		WithJsonTag("page_num").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AppName").
@@ -716,12 +716,12 @@ func GenReqDefForShowResourceDetailAccessKey() *def.HttpRequestDef {
 		WithJsonTag("certificate_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageSize").
-		WithJsonTag("page_size").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageNum").
-		WithJsonTag("page_num").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("From").
@@ -764,12 +764,12 @@ func GenReqDefForShowResourceDetailCertificate() *def.HttpRequestDef {
 		WithJsonTag("certificate_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageSize").
-		WithJsonTag("page_size").
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("PageNum").
-		WithJsonTag("page_num").
+		WithName("Offset").
+		WithJsonTag("offset").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("From").

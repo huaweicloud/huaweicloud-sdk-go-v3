@@ -5209,7 +5209,7 @@ func GenReqDefForSwitchLogCollectionStatus() *def.HttpRequestDef {
 func GenReqDefForSwitchLoggerReplica() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v3/{project_id}/instance/{instance_id}/switch-logger-replica").
+		WithPath("/v3/{project_id}/instances/{instance_id}/switch-logger-replica").
 		WithResponse(new(model.SwitchLoggerReplicaResponse)).
 		WithContentType("application/json;charset=UTF-8")
 

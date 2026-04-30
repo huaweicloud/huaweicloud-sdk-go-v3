@@ -13,10 +13,10 @@ import (
 type PeriodChargeInfoOption struct {
 
 	// **参数解释**: 周期单位类型。 **约束限制**: 不涉及。 **取值范围**: - year：包年。 - month：包月。  **默认取值**: 不涉及。
-	PeriodType *PeriodChargeInfoOptionPeriodType `json:"period_type,omitempty"`
+	PeriodType PeriodChargeInfoOptionPeriodType `json:"period_type"`
 
 	// **参数解释**: 周期单位数量。 **约束限制**: 不涉及。 **取值范围**: - 当“period_type”为“month”时，取值为1~9。 - 当“period_type”为“year”时，取值为1~3。  当传入浮点型时，会自动截取为整型。 **默认取值**: 不涉及。
-	PeriodNum *int32 `json:"period_num,omitempty"`
+	PeriodNum int32 `json:"period_num"`
 
 	// **参数解释**: 是否自动续费。 **约束限制**: 不涉及。 **取值范围**: - true：自动续订。 - false：不自动续订。  **默认取值**: false
 	IsAutoRenew *bool `json:"is_auto_renew,omitempty"`

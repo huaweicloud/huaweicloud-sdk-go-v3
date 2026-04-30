@@ -767,7 +767,7 @@ func (c *CpcsClient) ShowStatisticInterfaceInvoker(request *model.ShowStatisticI
 
 // ShowStatisticResource 获取资源总量统计信息
 //
-// 获取CPCS中\\资源总量统计信息
+// 获取CPCS中资源总量统计信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CpcsClient) ShowStatisticResource(request *model.ShowStatisticResourceRequest) (*model.ShowStatisticResourceResponse, error) {

@@ -18,13 +18,16 @@ type ListPipelineRunsQuery struct {
 	// **参数解释**： 流水线结束时间。 **约束限制**： 不涉及。 **取值范围**： 时间戳或者yyyy-MM-dd HH:mm:ss格式均可。 **默认取值**： 不涉及。
 	EndTime *string `json:"end_time,omitempty"`
 
+	// **参数解释**： 流水线状态更新时间。 **约束限制**： 不涉及。 **取值范围**： 时间戳或者yyyy-MM-dd HH:mm:ss格式均可。 **默认取值**： 不涉及。
+	UpdateTime *string `json:"update_time,omitempty"`
+
 	// **参数解释**： 起始偏移。 **约束限制**： 不涉及。 **取值范围**： 大于等于零。 **默认取值**： 不涉及。
 	Offset *int64 `json:"offset,omitempty"`
 
 	// **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 大于等于零。 **默认取值**： 不涉及。
 	Limit *int64 `json:"limit,omitempty"`
 
-	// **参数解释**： 排序字段名称。 **约束限制**： 不涉及。 **取值范围**： \"start_time\" - 流水线开始时间。 **默认取值**： 不涉及。
+	// **参数解释**： 排序字段名称。 **约束限制**： 不涉及。 **取值范围**： \"start_time\" - 流水线开始时间。 \"update_time\" - 流水线更新时间。 **默认取值**： 不涉及。
 	SortKey *string `json:"sort_key,omitempty"`
 
 	// **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序。 **默认取值**： 不涉及。

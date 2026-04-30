@@ -27,13 +27,13 @@ type ShowAuditLogResponseBodyAuditRecords struct {
 	Time *int64 `json:"time,omitempty"`
 
 	// 操作状态
-	OperateStatus *int32 `json:"operate_status,omitempty"`
+	Status *string `json:"status,omitempty"`
 
-	// 操作结果消息
-	OperateMessage *string `json:"operate_message,omitempty"`
+	// 操作失败消息
+	FailureMessage *string `json:"failure_message,omitempty"`
 
-	// 审计状态
-	AuditStatus *int32 `json:"audit_status,omitempty"`
+	// 操作验证信息
+	Verification *string `json:"verification,omitempty"`
 }
 
 func (o ShowAuditLogResponseBodyAuditRecords) String() string {

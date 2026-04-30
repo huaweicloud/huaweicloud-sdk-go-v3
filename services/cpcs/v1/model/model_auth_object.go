@@ -8,9 +8,7 @@ import (
 
 // AuthObject 鉴权对象
 type AuthObject struct {
-	Auth *AuthObjectAuth `json:"auth,omitempty"`
-
-	Scope *AuthObjectScope `json:"scope,omitempty"`
+	AppId *string `json:"app_id,omitempty"`
 }
 
 func (o AuthObject) String() string {
