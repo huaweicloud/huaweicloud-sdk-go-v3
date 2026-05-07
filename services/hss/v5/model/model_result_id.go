@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ResultId **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+// ResultId 病毒查杀结果ID
 type ResultId struct {
 }
 

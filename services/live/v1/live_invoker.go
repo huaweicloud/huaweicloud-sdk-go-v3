@@ -821,6 +821,22 @@ func (i *ListWatermarkTemplateInvoker) Invoke() (*model.ListWatermarkTemplateRes
 	}
 }
 
+type ModifyDomainStreamBackupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyDomainStreamBackupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyDomainStreamBackupInvoker) Invoke() (*model.ModifyDomainStreamBackupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyDomainStreamBackupResponse), nil
+	}
+}
+
 type ModifyFlowOutputInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -962,6 +978,22 @@ func (i *ShowDomainKeyChainInvoker) Invoke() (*model.ShowDomainKeyChainResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowDomainKeyChainResponse), nil
+	}
+}
+
+type ShowDomainStreamBackupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainStreamBackupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDomainStreamBackupInvoker) Invoke() (*model.ShowDomainStreamBackupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainStreamBackupResponse), nil
 	}
 }
 

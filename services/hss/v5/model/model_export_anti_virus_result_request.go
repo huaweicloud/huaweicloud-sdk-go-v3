@@ -15,7 +15,7 @@ type ExportAntiVirusResultRequest struct {
 	// **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
 	Offset int32 `json:"offset"`
 
-	// **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+	// **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
 	Limit int32 `json:"limit"`
 
 	// **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
@@ -36,13 +36,13 @@ type ExportAntiVirusResultRequest struct {
 	// 威胁等级，包含如下:   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
 	Severities *string `json:"severities,omitempty"`
 
-	// **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 无
+	// **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产 **默认取值**： 无
 	AssetValue *string `json:"asset_value,omitempty"`
 
-	// **参数解释**: 病毒名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
+	// 病毒名称
 	MalwareName *string `json:"malware_name,omitempty"`
 
-	// **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
+	// 文件路径
 	FilePath *string `json:"file_path,omitempty"`
 
 	// 导出条数

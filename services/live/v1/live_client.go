@@ -1093,6 +1093,27 @@ func (c *LiveClient) ListWatermarkTemplateInvoker(request *model.ListWatermarkTe
 	return &ListWatermarkTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ModifyDomainStreamBackup 设置域名主备流功能开关
+//
+// 设置域名主备流功能开关，可支持同一路流推多个，按照先后顺序定优先级，客户可进行流优先级切换
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ModifyDomainStreamBackup(request *model.ModifyDomainStreamBackupRequest) (*model.ModifyDomainStreamBackupResponse, error) {
+	requestDef := GenReqDefForModifyDomainStreamBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyDomainStreamBackupResponse), nil
+	}
+}
+
+// ModifyDomainStreamBackupInvoker 设置域名主备流功能开关
+func (c *LiveClient) ModifyDomainStreamBackupInvoker(request *model.ModifyDomainStreamBackupRequest) *ModifyDomainStreamBackupInvoker {
+	requestDef := GenReqDefForModifyDomainStreamBackup()
+	return &ModifyDomainStreamBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ModifyFlowOutput 更新转推输出
 //
 // 更新转推输出
@@ -1280,6 +1301,27 @@ func (c *LiveClient) ShowDomainKeyChain(request *model.ShowDomainKeyChainRequest
 func (c *LiveClient) ShowDomainKeyChainInvoker(request *model.ShowDomainKeyChainRequest) *ShowDomainKeyChainInvoker {
 	requestDef := GenReqDefForShowDomainKeyChain()
 	return &ShowDomainKeyChainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDomainStreamBackup 查询域名主备流功能开关
+//
+// 查询域名主备流功能开关，可支持同一路流推多个，按照先后顺序定优先级，客户可进行流优先级切换
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LiveClient) ShowDomainStreamBackup(request *model.ShowDomainStreamBackupRequest) (*model.ShowDomainStreamBackupResponse, error) {
+	requestDef := GenReqDefForShowDomainStreamBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainStreamBackupResponse), nil
+	}
+}
+
+// ShowDomainStreamBackupInvoker 查询域名主备流功能开关
+func (c *LiveClient) ShowDomainStreamBackupInvoker(request *model.ShowDomainStreamBackupRequest) *ShowDomainStreamBackupInvoker {
+	requestDef := GenReqDefForShowDomainStreamBackup()
+	return &ShowDomainStreamBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDomainVerification 查询域名归属权验证信息

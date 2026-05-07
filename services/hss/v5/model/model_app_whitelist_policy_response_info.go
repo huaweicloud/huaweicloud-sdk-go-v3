@@ -18,7 +18,7 @@ type AppWhitelistPolicyResponseInfo struct {
 	// **参数解释**： 进程白名单策略类型 **取值范围**: - block：日常运营模式
 	PolicyType *string `json:"policy_type,omitempty"`
 
-	// **参数解释**： 学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常  **默认取值**: 不涉及
+	// **参数解释**： 学习状态 **约束限制**: 不涉及 **取值范围**: - effecting：学习完成，策略生效 - learned：学习完成，待确认 - learning：学习中 - pause：暂停 - abnormal：学习异常 **默认取值**: 不涉及
 	LearningStatus *string `json:"learning_status,omitempty"`
 
 	// **参数解释**: 策略学习天数 **取值范围**: 最小值3，最大值30

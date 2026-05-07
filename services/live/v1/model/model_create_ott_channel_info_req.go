@@ -41,7 +41,7 @@ type CreateOttChannelInfoReq struct {
 	RecordSettings *CreateOttChannelInfoReqRecordSettings `json:"record_settings"`
 
 	// 频道出流信息
-	Endpoints []EndpointItem `json:"endpoints"`
+	Endpoints *[]EndpointItem `json:"endpoints,omitempty"`
 
 	EncoderSettingsExpand *EncoderSettingsExpand `json:"encoder_settings_expand,omitempty"`
 }

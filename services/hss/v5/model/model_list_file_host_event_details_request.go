@@ -24,7 +24,7 @@ type ListFileHostEventDetailsRequest struct {
 	// 文件名称
 	FileName *string `json:"file_name,omitempty"`
 
-	// **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
+	// 文件路径
 	FilePath *string `json:"file_path,omitempty"`
 
 	// 变更类型，包含如下:   - \"all\" : 全部   - \"registry\" : 注册表   - \"file\" : 文件
@@ -39,7 +39,7 @@ type ListFileHostEventDetailsRequest struct {
 	// **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
 	Offset int32 `json:"offset"`
 
-	// **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+	// **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
 	Limit int32 `json:"limit"`
 }
 

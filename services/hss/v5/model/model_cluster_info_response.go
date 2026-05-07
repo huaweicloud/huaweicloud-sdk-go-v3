@@ -53,6 +53,8 @@ type ClusterInfoResponse struct {
 	InvokedService *string `json:"invoked_service,omitempty"`
 
 	RegistryInfo *ClusterInfoResponseRegistryInfo `json:"registry_info,omitempty"`
+
+	ResourceInfo *ClusterInfoResponseResourceInfo `json:"resource_info,omitempty"`
 }
 
 func (o ClusterInfoResponse) String() string {

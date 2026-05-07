@@ -14,7 +14,7 @@ type UpdateWebTamperProtectionConfigRequestInfo struct {
 	// **参数解释**: 防护配置id **约束限制**: 不涉及。 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
 	ProtectionConfigId string `json:"protection_config_id"`
 
-	// **参数解释**: 防护模式 **约束限制**: 不涉及 **取值范围**: - alarm：告警模式 - block：拦截模式  **默认取值**: alarm
+	// **参数解释**: 防护模式 **约束限制**: 不涉及 **取值范围**: - alarm：告警模式 - block：拦截模式 **默认取值**: alarm
 	ProtectMode *string `json:"protect_mode,omitempty"`
 
 	// **参数解释**: 是否对篡改行为进行进程监控 **约束限制**: 不涉及 **取值范围**: - true：监控篡改进程 - false：不监控篡改进程 **默认取值**: true

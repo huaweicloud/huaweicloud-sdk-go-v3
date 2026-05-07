@@ -24,7 +24,7 @@ type ListK8sJobsRequest struct {
 	// 所属集群名称
 	ClusterName *string `json:"cluster_name,omitempty"`
 
-	// **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+	// **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
 	Limit int32 `json:"limit"`
 }
 

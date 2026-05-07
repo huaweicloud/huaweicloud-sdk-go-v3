@@ -9,7 +9,7 @@ import (
 // AntiVirusHandleHistory 病毒查杀历史处置记录
 type AntiVirusHandleHistory struct {
 
-	// **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+	// 病毒查杀结果ID
 	ResultId *string `json:"result_id,omitempty"`
 
 	// **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等
@@ -18,7 +18,7 @@ type AntiVirusHandleHistory struct {
 	// **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
 	MalwareName *string `json:"malware_name,omitempty"`
 
-	// **参数解释**： 威胁等级 **取值范围**： Security（安全）、Low（低危）、Medium（中危）、High（高危）、Critical（致命）
+	// 威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
 	Severity *string `json:"severity,omitempty"`
 
 	// **参数解释**： 文件路径 **取值范围**： 字符长度1-256位

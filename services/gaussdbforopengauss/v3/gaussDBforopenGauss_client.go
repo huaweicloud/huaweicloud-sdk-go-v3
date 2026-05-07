@@ -2624,6 +2624,27 @@ func (c *GaussDBforopenGaussClient) ListTransactionInvoker(request *model.ListTr
 	return &ListTransactionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListUpgradePaths 查询引擎的升级路径
+//
+// 查询引擎的升级路径
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListUpgradePaths(request *model.ListUpgradePathsRequest) (*model.ListUpgradePathsResponse, error) {
+	requestDef := GenReqDefForListUpgradePaths()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUpgradePathsResponse), nil
+	}
+}
+
+// ListUpgradePathsInvoker 查询引擎的升级路径
+func (c *GaussDBforopenGaussClient) ListUpgradePathsInvoker(request *model.ListUpgradePathsRequest) *ListUpgradePathsInvoker {
+	requestDef := GenReqDefForListUpgradePaths()
+	return &ListUpgradePathsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListWaitEvent 查询等待事件列表
 //
 // 查询数据库实例节点的等待事件列表。

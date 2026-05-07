@@ -9,7 +9,7 @@ import (
 // AntiVirusResultResponseInfo 病毒查杀结果列表响应详情
 type AntiVirusResultResponseInfo struct {
 
-	// **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+	// 病毒查杀结果ID
 	ResultId *string `json:"result_id,omitempty"`
 
 	// **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等

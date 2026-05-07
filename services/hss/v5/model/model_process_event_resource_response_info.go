@@ -87,7 +87,7 @@ type ProcessEventResourceResponseInfo struct {
 	// 集群ID
 	ClusterId *string `json:"cluster_id,omitempty"`
 
-	// 集群名称
+	// **参数解释**: 集群名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
 	ClusterName *string `json:"cluster_name,omitempty"`
 
 	// **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。

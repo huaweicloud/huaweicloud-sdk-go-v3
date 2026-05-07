@@ -24,7 +24,7 @@ type ResultFileResponseInfo struct {
 	// **参数解释**： 文件的系统属性（如读写权限、隐藏属性、执行权限等） **取值范围**： 字符长度1-256位
 	FileAttr *string `json:"file_attr,omitempty"`
 
-	// **参数解释**： 文件创建时间 **取值范围**： 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
+	// 文件创建时间
 	FileCtime *int64 `json:"file_ctime,omitempty"`
 
 	// **参数解释**： 文件更新时间 **取值范围**： 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms

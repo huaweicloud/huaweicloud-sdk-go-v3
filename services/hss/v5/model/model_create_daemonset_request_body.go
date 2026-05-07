@@ -18,6 +18,8 @@ type CreateDaemonsetRequestBody struct {
 	RuntimeInfo *[]RuntimeRequestBody `json:"runtime_info,omitempty"`
 
 	ScheduleInfo *CreateDaemonsetRequestBodyScheduleInfo `json:"schedule_info,omitempty"`
+
+	ResourceInfo *CreateDaemonsetRequestBodyResourceInfo `json:"resource_info,omitempty"`
 }
 
 func (o CreateDaemonsetRequestBody) String() string {

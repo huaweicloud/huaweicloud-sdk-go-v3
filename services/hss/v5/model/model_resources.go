@@ -18,8 +18,8 @@ type Resources struct {
 	// **参数解释**： 镜像 **取值范围**： 不涉及
 	Images *string `json:"images,omitempty"`
 
-	// **参数解释**： 标签 **取值范围**： 不涉及
-	Labels *string `json:"labels,omitempty"`
+	// **参数解释**： 标签列表 **取值范围**： 不涉及
+	Labels *[]string `json:"labels,omitempty"`
 
 	// **参数解释**： 命名空间 **取值范围**： 不涉及
 	Namespace *string `json:"namespace,omitempty"`

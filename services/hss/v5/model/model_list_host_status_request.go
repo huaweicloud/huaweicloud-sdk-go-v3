@@ -48,7 +48,7 @@ type ListHostStatusRequest struct {
 	// **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种： - closed ：关闭。 - opened ：开启。 - protection_exception ：防护异常。 **默认取值**: 不涉及
 	ProtectStatus *string `json:"protect_status,omitempty"`
 
-	// **参数解释**: 服务器组的唯一标识ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+	// 服务器组的唯一标识ID
 	GroupId *string `json:"group_id,omitempty"`
 
 	// **参数解释**: 服务器组名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及

@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// ShowWindosVulDetailRequest Request Object
-type ShowWindosVulDetailRequest struct {
+// ListAgentStatusRequest Request Object
+type ListAgentStatusRequest struct {
 
 	// **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
@@ -18,21 +18,21 @@ type ShowWindosVulDetailRequest struct {
 	// **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
 	Offset *int32 `json:"offset,omitempty"`
 
-	// **参数解释**: 漏洞ID **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
-	VulId string `json:"vul_id"`
+	// **参数解释**: Agent的唯一标识ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
+	AgentId string `json:"agent_id"`
 
-	// **参数解释**: 漏洞cve编号 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-	CveId *string `json:"cve_id,omitempty"`
+	// **参数解释**： agent状态 **约束限制**: 不涉及 **取值范围**: -not_installed：未安装 -online：在线 -offline：离线 -install_failed：安装失败 -installing：安装中  **默认取值**: 不涉及
+	AgentStatus *string `json:"agent_status,omitempty"`
 
-	// **参数解释**: 漏洞处置状态 **约束限制**: 不涉及 **取值范围**: - handled : 已处理 - unhandled : 未处理  **默认取值**: 不涉及
-	HandleStatus *string `json:"handle_status,omitempty"`
+	// **参数解释**: 异常原因 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
+	AbnormalReason *string `json:"abnormal_reason,omitempty"`
 }
 
-func (o ShowWindosVulDetailRequest) String() string {
+func (o ListAgentStatusRequest) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "ShowWindosVulDetailRequest struct{}"
+		return "ListAgentStatusRequest struct{}"
 	}
 
-	return strings.Join([]string{"ShowWindosVulDetailRequest", string(data)}, " ")
+	return strings.Join([]string{"ListAgentStatusRequest", string(data)}, " ")
 }

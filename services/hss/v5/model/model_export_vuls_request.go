@@ -57,6 +57,9 @@ type ExportVulsRequest struct {
 	// 服务器组名称
 	GroupName *string `json:"group_name,omitempty"`
 
+	// **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
+	NodeType *string `json:"node_type,omitempty"`
+
 	Body *ExportVulRequestBody `json:"body,omitempty"`
 }
 

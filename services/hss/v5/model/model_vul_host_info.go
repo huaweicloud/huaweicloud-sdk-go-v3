@@ -101,6 +101,9 @@ type VulHostInfo struct {
 
 	// **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
 	RepairPriority *string `json:"repair_priority,omitempty"`
+
+	// **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
+	NodeType *string `json:"node_type,omitempty"`
 }
 
 func (o VulHostInfo) String() string {

@@ -1989,6 +1989,22 @@ func (i *ListTransactionInvoker) Invoke() (*model.ListTransactionResponse, error
 	}
 }
 
+type ListUpgradePathsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUpgradePathsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListUpgradePathsInvoker) Invoke() (*model.ListUpgradePathsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUpgradePathsResponse), nil
+	}
+}
+
 type ListWaitEventInvoker struct {
 	*invoker.BaseInvoker
 }

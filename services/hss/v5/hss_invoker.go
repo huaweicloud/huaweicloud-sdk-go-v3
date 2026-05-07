@@ -1733,6 +1733,22 @@ func (i *ListRaspPoliciesInvoker) Invoke() (*model.ListRaspPoliciesResponse, err
 	}
 }
 
+type ListRelatedEventsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRelatedEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRelatedEventsInvoker) Invoke() (*model.ListRelatedEventsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRelatedEventsResponse), nil
+	}
+}
+
 type ListResourceInstanceTagInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3045,6 +3061,22 @@ func (i *ValidateAdminInvoker) Invoke() (*model.ValidateAdminResponse, error) {
 	}
 }
 
+type ListAgentStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAgentStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAgentStatusInvoker) Invoke() (*model.ListAgentStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAgentStatusResponse), nil
+	}
+}
+
 type ChangeAntivirusPayPerScanStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3586,6 +3618,38 @@ func (i *SwitchAppWhitelistPolicyLearnStatusInvoker) Invoke() (*model.SwitchAppW
 		return nil, err
 	} else {
 		return result.(*model.SwitchAppWhitelistPolicyLearnStatusResponse), nil
+	}
+}
+
+type ListAiComponentDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAiComponentDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAiComponentDetailInvoker) Invoke() (*model.ListAiComponentDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAiComponentDetailResponse), nil
+	}
+}
+
+type ListAiComponentStatisticsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAiComponentStatisticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAiComponentStatisticsInvoker) Invoke() (*model.ListAiComponentStatisticsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAiComponentStatisticsResponse), nil
 	}
 }
 
@@ -4309,6 +4373,22 @@ func (i *BatchDeleteRegistryInvoker) Invoke() (*model.BatchDeleteRegistryRespons
 	}
 }
 
+type BatchUpdateClusterResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateClusterResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateClusterResourceInvoker) Invoke() (*model.BatchUpdateClusterResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateClusterResourceResponse), nil
+	}
+}
+
 type BatchUpgradeAgentDaemonsetInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4821,6 +4901,102 @@ func (i *UpdateRegistryInvoker) Invoke() (*model.UpdateRegistryResponse, error) 
 	}
 }
 
+type CreateCustomRuleConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCustomRuleConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateCustomRuleConfigInvoker) Invoke() (*model.CreateCustomRuleConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCustomRuleConfigResponse), nil
+	}
+}
+
+type DeleteCustomRuleConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCustomRuleConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteCustomRuleConfigInvoker) Invoke() (*model.DeleteCustomRuleConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCustomRuleConfigResponse), nil
+	}
+}
+
+type ListCustomRuleConfigDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCustomRuleConfigDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCustomRuleConfigDetailInvoker) Invoke() (*model.ListCustomRuleConfigDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCustomRuleConfigDetailResponse), nil
+	}
+}
+
+type ListCustomRuleConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCustomRuleConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCustomRuleConfigsInvoker) Invoke() (*model.ListCustomRuleConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCustomRuleConfigsResponse), nil
+	}
+}
+
+type ResumePauseCustomRuleConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResumePauseCustomRuleConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ResumePauseCustomRuleConfigInvoker) Invoke() (*model.ResumePauseCustomRuleConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResumePauseCustomRuleConfigResponse), nil
+	}
+}
+
+type UpdateCustomRuleConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateCustomRuleConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateCustomRuleConfigInvoker) Invoke() (*model.UpdateCustomRuleConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateCustomRuleConfigResponse), nil
+	}
+}
+
 type ListFileEventsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4933,6 +5109,22 @@ func (i *AssociateHostsGroupInvoker) Invoke() (*model.AssociateHostsGroupRespons
 	}
 }
 
+type BatchUpdateHostResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateHostResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateHostResourceInvoker) Invoke() (*model.BatchUpdateHostResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateHostResourceResponse), nil
+	}
+}
+
 type ChangeAutoOpenQuotaStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -5026,6 +5218,22 @@ func (i *ListAutoOpenQuotaStatusInvoker) Invoke() (*model.ListAutoOpenQuotaStatu
 		return nil, err
 	} else {
 		return result.(*model.ListAutoOpenQuotaStatusResponse), nil
+	}
+}
+
+type ListCommonHostInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCommonHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCommonHostInvoker) Invoke() (*model.ListCommonHostResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCommonHostResponse), nil
 	}
 }
 
@@ -7093,6 +7301,22 @@ func (i *ListRegistryImagesInvoker) Invoke() (*model.ListRegistryImagesResponse,
 	}
 }
 
+type ListSecurityReportInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecurityReportInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSecurityReportInvoker) Invoke() (*model.ListSecurityReportResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecurityReportResponse), nil
+	}
+}
+
 type SendSecurityReportInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -8437,19 +8661,19 @@ func (i *ShowVulWhiteListDetailInvoker) Invoke() (*model.ShowVulWhiteListDetailR
 	}
 }
 
-type ShowWindosVulDetailInvoker struct {
+type ShowWindowsVulDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ShowWindosVulDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ShowWindowsVulDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ShowWindosVulDetailInvoker) Invoke() (*model.ShowWindosVulDetailResponse, error) {
+func (i *ShowWindowsVulDetailInvoker) Invoke() (*model.ShowWindowsVulDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ShowWindosVulDetailResponse), nil
+		return result.(*model.ShowWindowsVulDetailResponse), nil
 	}
 }
 

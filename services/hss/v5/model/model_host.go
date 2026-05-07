@@ -166,6 +166,36 @@ type Host struct {
 
 	// **参数解释**： 集群id **取值范围**： 字符长度1-128位
 	ClusterId *string `json:"cluster_id,omitempty"`
+
+	// 是否存在容器环境。   -0: 否   -1: 是
+	ContainerType *int32 `json:"container_type,omitempty"`
+
+	// **参数解释**：  勒索病毒防护状态  **取值范围**：    - closed ：未开启。    - opened ：防护中。    - opening ：开启中。    - closing ：关闭中。    - protect_failed：防护失败。    - protect_degraded：防护降级。
+	RansomProtectionStatus *string `json:"ransom_protection_status,omitempty"`
+
+	// **参数解释**： 网页防篡改防护状态 **取值范围**：   - closed：未开启   - opened：防护中   - opening：开启中   - closing：关闭中   - open_failed：防护失败   - partial_protection：部分防护   - protection_pause：防护暂停
+	WtpProtectStatus *string `json:"wtp_protect_status,omitempty"`
+
+	// **参数解释**： 双因子认证是否开启 **取值范围**：   - true：是。   - false：否。
+	TwoFactorAuth *bool `json:"two_factor_auth,omitempty"`
+
+	// **参数解释** 数据中心标识 **取值范围**   字符长度0-128
+	DataCenterTag *string `json:"data_center_tag,omitempty"`
+
+	// **参数解释** 服务商名称 **取值范围**   字符长度0-128
+	ServiceProviderName *string `json:"service_provider_name,omitempty"`
+
+	// 节点运行时信息，incluster请求参数不为空时返回该字段
+	NodeRuntimeInfo *[]RuntimeServiceInfo `json:"node_runtime_info,omitempty"`
+
+	// **参数解释** 资源限制类型：默认规则or自定义or自适应 **取值范围** 取值0-32
+	Mode *string `json:"mode,omitempty"`
+
+	// **参数解释** cpu最大值 **取值范围** 字符长度0-32位
+	CpuLimit *string `json:"cpu_limit,omitempty"`
+
+	// **参数解释** 内存最大值 **取值范围** 字符长度0-32位
+	MemLimit *string `json:"mem_limit,omitempty"`
 }
 
 func (o Host) String() string {

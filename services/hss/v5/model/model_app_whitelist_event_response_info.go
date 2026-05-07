@@ -21,7 +21,7 @@ type AppWhitelistEventResponseInfo struct {
 	// 事件名称   - \"white list alert malicious process\"   - \"white list alert suspicious process\"
 	EventName *string `json:"event_name,omitempty"`
 
-	// **参数解释**： 威胁等级 **取值范围**： Security（安全）、Low（低危）、Medium（中危）、High（高危）、Critical（致命）
+	// 威胁等级，包含如下:   - Security：安全   - Low: 低危   - Medium: 中危   - High: 高危   - Critical: 危急
 	Severity *string `json:"severity,omitempty"`
 
 	// **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位

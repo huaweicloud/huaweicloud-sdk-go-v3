@@ -52,7 +52,7 @@ type RunPipelineSourceParamsBuildParams struct {
 	VirtualMergeBranch *string `json:"virtual_merge_branch,omitempty"`
 
 	// **参数解释**： 预合并提交ID。 **取值范围**： 不涉及。
-	VirtualMergeCommitId *string `json:"virtual_merge_commitId,omitempty"`
+	VirtualMergeCommitId *string `json:"virtual_merge_commit_id,omitempty"`
 }
 
 func (o RunPipelineSourceParamsBuildParams) String() string {

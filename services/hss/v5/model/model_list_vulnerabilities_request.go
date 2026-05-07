@@ -47,6 +47,9 @@ type ListVulnerabilitiesRequest struct {
 
 	// **参数解释**: 存在漏洞主机的所属服务器组 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
 	GroupName *string `json:"group_name,omitempty"`
+
+	// **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
+	NodeType *string `json:"node_type,omitempty"`
 }
 
 func (o ListVulnerabilitiesRequest) String() string {

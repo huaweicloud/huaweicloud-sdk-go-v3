@@ -26,6 +26,9 @@ type LiveSnapshotConfig struct {
 	// 在OBS桶存储截图的方式：  - 0：实时截图，以时间戳命名截图文件，保存所有截图文件到OBS桶。例：snapshot/{domain}/{app_name}/{stream_name}/{UnixTimestamp}.jpg  - 1：覆盖截图，只保存最新的截图文件，新的截图会覆盖原来的截图文件。例：snapshot/{domain}/{app_name}/{stream_name}.jpg
 	ObjectWriteMode int32 `json:"object_write_mode"`
 
+	// **参数解释**： 截图模式 **约束限制**： 不涉及 **取值范围**：   - keyframe：I帧截图只选取、保存符合要求的I帧。   - nokeyframe：非I帧截图只选取、保存符合要求的非I帧。   - random：随机截图交替选取、保存符合要求的I帧及非I帧。 **默认取值**： keyframe
+	SnapshotMode *LiveSnapshotConfigSnapshotMode `json:"snapshot_mode,omitempty"`
+
 	ObsLocation *ObsFileAddr `json:"obs_location"`
 
 	// 是否启用回调通知 - on：启用。 - off：不启用。
@@ -51,6 +54,57 @@ func (o LiveSnapshotConfig) String() string {
 	}
 
 	return strings.Join([]string{"LiveSnapshotConfig", string(data)}, " ")
+}
+
+type LiveSnapshotConfigSnapshotMode struct {
+	value string
+}
+
+type LiveSnapshotConfigSnapshotModeEnum struct {
+	KEYFRAME   LiveSnapshotConfigSnapshotMode
+	NOKEYFRAME LiveSnapshotConfigSnapshotMode
+	RANDOM     LiveSnapshotConfigSnapshotMode
+}
+
+func GetLiveSnapshotConfigSnapshotModeEnum() LiveSnapshotConfigSnapshotModeEnum {
+	return LiveSnapshotConfigSnapshotModeEnum{
+		KEYFRAME: LiveSnapshotConfigSnapshotMode{
+			value: "keyframe",
+		},
+		NOKEYFRAME: LiveSnapshotConfigSnapshotMode{
+			value: "nokeyframe",
+		},
+		RANDOM: LiveSnapshotConfigSnapshotMode{
+			value: "random",
+		},
+	}
+}
+
+func (c LiveSnapshotConfigSnapshotMode) Value() string {
+	return c.value
+}
+
+func (c LiveSnapshotConfigSnapshotMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *LiveSnapshotConfigSnapshotMode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type LiveSnapshotConfigCallBackEnable struct {

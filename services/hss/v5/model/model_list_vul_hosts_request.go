@@ -68,6 +68,9 @@ type ListVulHostsRequest struct {
 
 	// **参数解释**： 扫描任务开始时间的最大值（容器场景生效） **约束限制**: 不涉及 **取值范围**： 最小值0，最大值2^63-1 **默认取值**: 不涉及
 	MaxScanTime *int64 `json:"max_scan_time,omitempty"`
+
+	// **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
+	NodeType *string `json:"node_type,omitempty"`
 }
 
 func (o ListVulHostsRequest) String() string {

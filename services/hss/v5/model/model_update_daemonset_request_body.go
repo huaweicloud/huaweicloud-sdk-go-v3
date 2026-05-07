@@ -36,6 +36,8 @@ type UpdateDaemonsetRequestBody struct {
 
 	// 优先使用包周期配额，cce集成防护调用场景使用，默认false
 	PreferPacketCycle *bool `json:"prefer_packet_cycle,omitempty"`
+
+	ResourceInfo *CreateDaemonsetRequestBodyResourceInfo `json:"resource_info,omitempty"`
 }
 
 func (o UpdateDaemonsetRequestBody) String() string {

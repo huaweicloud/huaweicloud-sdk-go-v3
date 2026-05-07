@@ -9,7 +9,7 @@ import (
 // AppChangeResponseInfo 软件变动历史信息
 type AppChangeResponseInfo struct {
 
-	// **参数解释**: Agent ID **取值范围**: 字符长度1-64位
+	// **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **取值范围**: 字符长度1-64位
 	AgentId *string `json:"agent_id,omitempty"`
 
 	// **参数解释**: 变更类型 **取值范围**: - add：新建 - delete：删除 - modify：修改

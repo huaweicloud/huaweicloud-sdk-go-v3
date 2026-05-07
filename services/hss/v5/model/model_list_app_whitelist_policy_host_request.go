@@ -15,7 +15,7 @@ type ListAppWhitelistPolicyHostRequest struct {
 	// **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
 	Offset int32 `json:"offset"`
 
-	// **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+	// **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
 	Limit int32 `json:"limit"`
 
 	// 策略名称
@@ -27,7 +27,7 @@ type ListAppWhitelistPolicyHostRequest struct {
 	// **策略学习状态**： 策略应用状态 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: 不涉及
 	ApplyStatus *bool `json:"apply_status,omitempty"`
 
-	// **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 无
+	// **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产 **默认取值**： 无
 	AssetValue *string `json:"asset_value,omitempty"`
 
 	// **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及

@@ -16,6 +16,9 @@ type VulRepairFailedDetailInfo struct {
 	Reason *string `json:"reason,omitempty"`
 
 	// **参数解释**: 漏洞修复失败原因解释说明 **取值范围**: 字符长度0-256位
+	ReasonDescription *string `json:"reason_description,omitempty"`
+
+	// **参数解释**: 漏洞修复失败原因解释说明，已废弃 **取值范围**: 字符长度0-256位
 	ReasonDescribtion *string `json:"reason_describtion,omitempty"`
 
 	// **参数解释**: 解决方式说明 **取值范围**: 字符长度0-65535位
