@@ -7,7 +7,6 @@ import (
 )
 
 type MigrateRouteSwitchReqVo struct {
-	IamAccount *IamAccount `json:"iam_account,omitempty"`
 
 	// 项目id。
 	ProjectId *string `json:"project_id,omitempty"`

@@ -9,7 +9,7 @@ import (
 // CreateClusterInfo **参数解释**： 创建集群对象。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 type CreateClusterInfo struct {
 
-	// **参数解释**： 节点规格名称 **取值范围**： 集群规格详情请参见[数据仓库规格](dws_01_00018.html)。
+	// **参数解释**： 节点规格名称 **取值范围**： 集群规格详情请参见[数据仓库规格](https://support.huaweicloud.com/productdesc-dws/dws_01_00018.html)。
 	NodeType string `json:"node_type"`
 
 	// **参数解释**： 节点数量。 **约束限制**： 不涉及。 **取值范围**： 集群模式取值范围为3~256。 **默认取值**： 不涉及。

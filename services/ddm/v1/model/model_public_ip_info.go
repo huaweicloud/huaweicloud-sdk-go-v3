@@ -32,6 +32,9 @@ type PublicIpInfo struct {
 
 	// 绑定弹性公网IP的实体类型（目前只支持绑定node）。
 	BindingEntityType *PublicIpInfoBindingEntityType `json:"binding_entity_type,omitempty"`
+
+	// 绑定弹性公网IP的组ID。
+	GroupId *string `json:"group_id,omitempty"`
 }
 
 func (o PublicIpInfo) String() string {

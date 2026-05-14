@@ -749,8 +749,8 @@ func (c *DwsClient) DeleteAlarmSubInvoker(request *model.DeleteAlarmSubRequest) 
 
 // DeleteCluster 删除集群
 //
-// 删除集群v2接口。集群删除后将释放此集群的所有资源，包括客户数据。为了安全起见，请在删除集群前为这个集群创建快照。
-// 删除集群建议优先使用“删除DWS集群”接口，覆盖此接口所有参数及功能。
+// 删除集群（旧接口）。集群删除后将释放此集群的所有资源，包括客户数据。为了安全起见，请在删除集群前为这个集群创建快照。
+// 删除集群建议优先使用另一个新接口，覆盖此接口所有参数及功能。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) DeleteCluster(request *model.DeleteClusterRequest) (*model.DeleteClusterResponse, error) {
@@ -4132,6 +4132,27 @@ func (c *DwsClient) UpdateMaintenanceWindow(request *model.UpdateMaintenanceWind
 func (c *DwsClient) UpdateMaintenanceWindowInvoker(request *model.UpdateMaintenanceWindowRequest) *UpdateMaintenanceWindowInvoker {
 	requestDef := GenReqDefForUpdateMaintenanceWindow()
 	return &UpdateMaintenanceWindowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateQueueBaseInfo 更新资源池基础信息
+//
+// 更新资源池基础信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) UpdateQueueBaseInfo(request *model.UpdateQueueBaseInfoRequest) (*model.UpdateQueueBaseInfoResponse, error) {
+	requestDef := GenReqDefForUpdateQueueBaseInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateQueueBaseInfoResponse), nil
+	}
+}
+
+// UpdateQueueBaseInfoInvoker 更新资源池基础信息
+func (c *DwsClient) UpdateQueueBaseInfoInvoker(request *model.UpdateQueueBaseInfoRequest) *UpdateQueueBaseInfoInvoker {
+	requestDef := GenReqDefForUpdateQueueBaseInfo()
+	return &UpdateQueueBaseInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateQueueResources 更新资源池资源配置信息

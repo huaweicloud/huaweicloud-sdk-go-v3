@@ -27,11 +27,23 @@ type CreateSyncTaskReq struct {
 	// 源端桶的SK（最大长度100个字符）。
 	SrcSk string `json:"src_sk"`
 
+	// 加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+	SrcCryptoType *CreateSyncTaskReqSrcCryptoType `json:"src_crypto_type,omitempty"`
+
+	// KMS密钥ID，36个字符
+	SrcKmsKeyId *string `json:"src_kms_key_id,omitempty"`
+
 	// 目的端桶的AK（最大长度100个字符）。
 	DstAk string `json:"dst_ak"`
 
 	// 目的端桶的SK（最大长度100个字符）。
 	DstSk string `json:"dst_sk"`
+
+	// 加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+	DstCryptoType *CreateSyncTaskReqDstCryptoType `json:"dst_crypto_type,omitempty"`
+
+	// KMS密钥ID，36个字符
+	DstKmsKeyId *string `json:"dst_kms_key_id,omitempty"`
 
 	// 目的端region
 	DstRegion string `json:"dst_region"`
@@ -44,9 +56,6 @@ type CreateSyncTaskReq struct {
 
 	// 是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
 	EnableMetadataMigration *bool `json:"enable_metadata_migration,omitempty"`
-
-	// 是否开启KMS加密，默认不开启。
-	EnableKms *bool `json:"enable_kms,omitempty"`
 
 	// 是否自动解冻归档数据，默认否。  开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
 	EnableRestore *bool `json:"enable_restore,omitempty"`
@@ -70,6 +79,100 @@ func (o CreateSyncTaskReq) String() string {
 	}
 
 	return strings.Join([]string{"CreateSyncTaskReq", string(data)}, " ")
+}
+
+type CreateSyncTaskReqSrcCryptoType struct {
+	value string
+}
+
+type CreateSyncTaskReqSrcCryptoTypeEnum struct {
+	DEFAULT CreateSyncTaskReqSrcCryptoType
+	KMS     CreateSyncTaskReqSrcCryptoType
+}
+
+func GetCreateSyncTaskReqSrcCryptoTypeEnum() CreateSyncTaskReqSrcCryptoTypeEnum {
+	return CreateSyncTaskReqSrcCryptoTypeEnum{
+		DEFAULT: CreateSyncTaskReqSrcCryptoType{
+			value: "DEFAULT",
+		},
+		KMS: CreateSyncTaskReqSrcCryptoType{
+			value: "KMS",
+		},
+	}
+}
+
+func (c CreateSyncTaskReqSrcCryptoType) Value() string {
+	return c.value
+}
+
+func (c CreateSyncTaskReqSrcCryptoType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateSyncTaskReqSrcCryptoType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateSyncTaskReqDstCryptoType struct {
+	value string
+}
+
+type CreateSyncTaskReqDstCryptoTypeEnum struct {
+	DEFAULT CreateSyncTaskReqDstCryptoType
+	KMS     CreateSyncTaskReqDstCryptoType
+}
+
+func GetCreateSyncTaskReqDstCryptoTypeEnum() CreateSyncTaskReqDstCryptoTypeEnum {
+	return CreateSyncTaskReqDstCryptoTypeEnum{
+		DEFAULT: CreateSyncTaskReqDstCryptoType{
+			value: "DEFAULT",
+		},
+		KMS: CreateSyncTaskReqDstCryptoType{
+			value: "KMS",
+		},
+	}
+}
+
+func (c CreateSyncTaskReqDstCryptoType) Value() string {
+	return c.value
+}
+
+func (c CreateSyncTaskReqDstCryptoType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateSyncTaskReqDstCryptoType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }
 
 type CreateSyncTaskReqDstStoragePolicy struct {

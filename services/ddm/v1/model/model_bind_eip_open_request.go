@@ -9,10 +9,10 @@ import (
 type BindEipOpenRequest struct {
 
 	// 公共ip。
-	PublicIp *string `json:"public_ip,omitempty"`
+	PublicIp string `json:"public_ip"`
 
 	// 公共ip id。
-	PublicIpId *string `json:"public_ip_id,omitempty"`
+	PublicIpId string `json:"public_ip_id"`
 }
 
 func (o BindEipOpenRequest) String() string {

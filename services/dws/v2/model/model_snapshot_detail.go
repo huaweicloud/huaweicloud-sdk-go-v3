@@ -59,13 +59,13 @@ type SnapshotDetail struct {
 	// **参数解释**： 快照进度。 **取值范围**： 不涉及。
 	Progress *string `json:"progress,omitempty"`
 
-	// **参数解释**： 快照BakcupKey。 **取值范围**： 不涉及。
+	// **参数解释**： 快照的key，在其它快照中会用到。 **取值范围**： 不涉及。
 	BackupKey *string `json:"backup_key,omitempty"`
 
-	// **参数解释**： 增量快照，使用的前一个快照BakcupKey。 **取值范围**： 不涉及。
+	// **参数解释**： 增量快照，使用的前一个快照backup_key。 **取值范围**： 不涉及。
 	PriorBackupKey *string `json:"prior_backup_key,omitempty"`
 
-	// **参数解释**： 对应全量快照BakcupKey。 **取值范围**： 不涉及。
+	// **参数解释**： 对应全量快照backup_key。 **取值范围**： 不涉及。
 	BaseBackupKey *string `json:"base_backup_key,omitempty"`
 
 	// **参数解释**： 备份介质。 **取值范围**： NBU、OBS。

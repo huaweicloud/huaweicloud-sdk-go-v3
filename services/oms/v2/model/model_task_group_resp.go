@@ -36,9 +36,6 @@ type TaskGroupResp struct {
 	// 是否自动解冻归档数据，（由于对象存储解冻需要源端存储等待一定时间，开启自动解冻会对迁移速度有较大影响，建议先完成归档存储数据解冻后再启动迁移）。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移；关闭后，如果遇到归档类型的对象直接跳过相应对象，系统默认对象迁移失败并记录相关信息到失败对象列表中。
 	EnableRestore *bool `json:"enable_restore,omitempty"`
 
-	// 存储入OBS时是否使用KMS加密。
-	EnableKms *bool `json:"enable_kms,omitempty"`
-
 	// 任务类型，默认为PREFIX。 LIST：对象列表迁移 URL_LIST：URL列表迁移， PREFIX：对象前缀迁移
 	TaskType *TaskGroupRespTaskType `json:"task_type,omitempty"`
 

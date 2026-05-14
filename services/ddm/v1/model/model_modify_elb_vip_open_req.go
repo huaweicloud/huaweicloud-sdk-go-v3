@@ -12,7 +12,7 @@ type ModifyElbVipOpenReq struct {
 	GroupId *string `json:"group_id,omitempty"`
 
 	// 新ip。
-	NewIp *string `json:"new_ip,omitempty"`
+	NewIp string `json:"new_ip"`
 }
 
 func (o ModifyElbVipOpenReq) String() string {

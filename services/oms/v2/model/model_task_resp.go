@@ -25,9 +25,6 @@ type TaskResp struct {
 	// 是否记录失败对象。开启后，如果有迁移失败对象，会在目的端存储失败对象信息。
 	EnableFailedObjectRecording *bool `json:"enable_failed_object_recording,omitempty"`
 
-	// 存储入OBS时是否使用KMS加密。
-	EnableKms *bool `json:"enable_kms,omitempty"`
-
 	// 是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
 	EnableMetadataMigration *bool `json:"enable_metadata_migration,omitempty"`
 

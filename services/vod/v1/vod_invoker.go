@@ -117,6 +117,22 @@ func (i *CreateAssetCategoryInvoker) Invoke() (*model.CreateAssetCategoryRespons
 	}
 }
 
+type CreateAssetEditTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAssetEditTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAssetEditTaskInvoker) Invoke() (*model.CreateAssetEditTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAssetEditTaskResponse), nil
+	}
+}
+
 type CreateAssetProcessTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -373,6 +389,22 @@ func (i *DeleteAssetCategoryInvoker) Invoke() (*model.DeleteAssetCategoryRespons
 	}
 }
 
+type DeleteAssetEditTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAssetEditTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAssetEditTaskInvoker) Invoke() (*model.DeleteAssetEditTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAssetEditTaskResponse), nil
+	}
+}
+
 type DeleteAssetsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -530,6 +562,22 @@ func (i *ListAssetDailySummaryLogInvoker) Invoke() (*model.ListAssetDailySummary
 		return nil, err
 	} else {
 		return result.(*model.ListAssetDailySummaryLogResponse), nil
+	}
+}
+
+type ListAssetEditTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAssetEditTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAssetEditTaskInvoker) Invoke() (*model.ListAssetEditTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAssetEditTaskResponse), nil
 	}
 }
 

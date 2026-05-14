@@ -8,12 +8,12 @@ import (
 )
 
 var (
-	AP_SOUTHEAST_4 = region.NewRegion("ap-southeast-4",
-		"https://agent-identity-open.cn-southwest-2.myhuaweicloud.com")
+	CN_SOUTHWEST_2 = region.NewRegion("cn-southwest-2",
+		"https://agent-identity.cn-southwest-2.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
-	"ap-southeast-4": AP_SOUTHEAST_4,
+	"cn-southwest-2": CN_SOUTHWEST_2,
 }
 
 var provider = region.DefaultProviderChain("AGENTIDENTITY")

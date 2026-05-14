@@ -1573,6 +1573,22 @@ func (i *UnbindEipInvoker) Invoke() (*model.UnbindEipResponse, error) {
 	}
 }
 
+type UnbindLogicDbInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UnbindLogicDbInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UnbindLogicDbInvoker) Invoke() (*model.UnbindLogicDbResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UnbindLogicDbResponse), nil
+	}
+}
+
 type UpdateDatabaseInfoInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -3077,6 +3077,22 @@ func (i *UpdateMaintenanceWindowInvoker) Invoke() (*model.UpdateMaintenanceWindo
 	}
 }
 
+type UpdateQueueBaseInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateQueueBaseInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateQueueBaseInfoInvoker) Invoke() (*model.UpdateQueueBaseInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateQueueBaseInfoResponse), nil
+	}
+}
+
 type UpdateQueueResourcesInvoker struct {
 	*invoker.BaseInvoker
 }

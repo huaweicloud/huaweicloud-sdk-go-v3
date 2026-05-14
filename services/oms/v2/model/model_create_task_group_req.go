@@ -27,9 +27,6 @@ type CreateTaskGroupReq struct {
 	// 是否自动解冻归档数据，默认否。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
 	EnableRestore *bool `json:"enable_restore,omitempty"`
 
-	// 是否开启KMS加密，默认不开启。
-	EnableKms bool `json:"enable_kms"`
-
 	// 任务类型，默认为PREFIX。 LIST：对象列表迁移 URL_LIST：URL列表迁移， PREFIX：对象前缀迁移
 	TaskType *CreateTaskGroupReqTaskType `json:"task_type,omitempty"`
 

@@ -23,6 +23,12 @@ type SourceCdnReq struct {
 
 	// 协议类型，支持http和https协议。
 	Protocol SourceCdnReqProtocol `json:"protocol"`
+
+	// 加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+	CryptoType *SourceCdnReqCryptoType `json:"crypto_type,omitempty"`
+
+	// KMS密钥ID，36个字符
+	KmsKeyId *string `json:"kms_key_id,omitempty"`
 }
 
 func (o SourceCdnReq) String() string {
@@ -146,6 +152,53 @@ func (c SourceCdnReqProtocol) MarshalJSON() ([]byte, error) {
 }
 
 func (c *SourceCdnReqProtocol) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type SourceCdnReqCryptoType struct {
+	value string
+}
+
+type SourceCdnReqCryptoTypeEnum struct {
+	DEFAULT SourceCdnReqCryptoType
+	KMS     SourceCdnReqCryptoType
+}
+
+func GetSourceCdnReqCryptoTypeEnum() SourceCdnReqCryptoTypeEnum {
+	return SourceCdnReqCryptoTypeEnum{
+		DEFAULT: SourceCdnReqCryptoType{
+			value: "DEFAULT",
+		},
+		KMS: SourceCdnReqCryptoType{
+			value: "KMS",
+		},
+	}
+}
+
+func (c SourceCdnReqCryptoType) Value() string {
+	return c.value
+}
+
+func (c SourceCdnReqCryptoType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SourceCdnReqCryptoType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

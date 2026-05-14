@@ -9,10 +9,10 @@ import (
 type RestoreMetaData2ExistReq struct {
 
 	// metadata恢复源。
-	Source *interface{} `json:"source,omitempty"`
+	Source *interface{} `json:"source"`
 
 	// metadata恢复目标。
-	Target *interface{} `json:"target,omitempty"`
+	Target *interface{} `json:"target"`
 }
 
 func (o RestoreMetaData2ExistReq) String() string {

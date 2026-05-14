@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -17,6 +20,12 @@ type TaskGroupSrcNode struct {
 
 	// 连接字符串，用于微软云Blob鉴权
 	ConnectionString *string `json:"connection_string,omitempty"`
+
+	// 加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+	CryptoType *TaskGroupSrcNodeCryptoType `json:"crypto_type,omitempty"`
+
+	// KMS密钥ID，36个字符
+	KmsKeyId *string `json:"kms_key_id,omitempty"`
 
 	// 用于谷歌云Cloud Storage鉴权
 	JsonAuthFile *string `json:"json_auth_file,omitempty"`
@@ -46,4 +55,51 @@ func (o TaskGroupSrcNode) String() string {
 	}
 
 	return strings.Join([]string{"TaskGroupSrcNode", string(data)}, " ")
+}
+
+type TaskGroupSrcNodeCryptoType struct {
+	value string
+}
+
+type TaskGroupSrcNodeCryptoTypeEnum struct {
+	DEFAULT TaskGroupSrcNodeCryptoType
+	KMS     TaskGroupSrcNodeCryptoType
+}
+
+func GetTaskGroupSrcNodeCryptoTypeEnum() TaskGroupSrcNodeCryptoTypeEnum {
+	return TaskGroupSrcNodeCryptoTypeEnum{
+		DEFAULT: TaskGroupSrcNodeCryptoType{
+			value: "DEFAULT",
+		},
+		KMS: TaskGroupSrcNodeCryptoType{
+			value: "KMS",
+		},
+	}
+}
+
+func (c TaskGroupSrcNodeCryptoType) Value() string {
+	return c.value
+}
+
+func (c TaskGroupSrcNodeCryptoType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *TaskGroupSrcNodeCryptoType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

@@ -170,6 +170,27 @@ func (c *VodClient) CreateAssetCategoryInvoker(request *model.CreateAssetCategor
 	return &CreateAssetCategoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAssetEditTask 创建编辑任务
+//
+// 创建编辑任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) CreateAssetEditTask(request *model.CreateAssetEditTaskRequest) (*model.CreateAssetEditTaskResponse, error) {
+	requestDef := GenReqDefForCreateAssetEditTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAssetEditTaskResponse), nil
+	}
+}
+
+// CreateAssetEditTaskInvoker 创建编辑任务
+func (c *VodClient) CreateAssetEditTaskInvoker(request *model.CreateAssetEditTaskRequest) *CreateAssetEditTaskInvoker {
+	requestDef := GenReqDefForCreateAssetEditTask()
+	return &CreateAssetEditTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAssetProcessTask 媒资处理
 //
 // 实现视频转码、截图、加密等处理。既可以同时启动多种操作，也可以只启动一种操作。
@@ -518,6 +539,27 @@ func (c *VodClient) DeleteAssetCategoryInvoker(request *model.DeleteAssetCategor
 	return &DeleteAssetCategoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteAssetEditTask 取消编辑任务
+//
+// 取消编辑任务，仅支持取消等待中的任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) DeleteAssetEditTask(request *model.DeleteAssetEditTaskRequest) (*model.DeleteAssetEditTaskResponse, error) {
+	requestDef := GenReqDefForDeleteAssetEditTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAssetEditTaskResponse), nil
+	}
+}
+
+// DeleteAssetEditTaskInvoker 取消编辑任务
+func (c *VodClient) DeleteAssetEditTaskInvoker(request *model.DeleteAssetEditTaskRequest) *DeleteAssetEditTaskInvoker {
+	requestDef := GenReqDefForDeleteAssetEditTask()
+	return &DeleteAssetEditTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteAssets 删除媒资
 //
 // 删除媒资。
@@ -731,6 +773,27 @@ func (c *VodClient) ListAssetDailySummaryLog(request *model.ListAssetDailySummar
 func (c *VodClient) ListAssetDailySummaryLogInvoker(request *model.ListAssetDailySummaryLogRequest) *ListAssetDailySummaryLogInvoker {
 	requestDef := GenReqDefForListAssetDailySummaryLog()
 	return &ListAssetDailySummaryLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAssetEditTask 查询编辑任务
+//
+// 查询编辑任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) ListAssetEditTask(request *model.ListAssetEditTaskRequest) (*model.ListAssetEditTaskResponse, error) {
+	requestDef := GenReqDefForListAssetEditTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAssetEditTaskResponse), nil
+	}
+}
+
+// ListAssetEditTaskInvoker 查询编辑任务
+func (c *VodClient) ListAssetEditTaskInvoker(request *model.ListAssetEditTaskRequest) *ListAssetEditTaskInvoker {
+	requestDef := GenReqDefForListAssetEditTask()
+	return &ListAssetEditTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAssetList 查询媒资列表

@@ -1842,6 +1842,27 @@ func (c *IecClient) UpdatePublicIpInvoker(request *model.UpdatePublicIpRequest) 
 	return &UpdatePublicIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchListMetricData 批量查询监控数据
+//
+// 批量查询指定时间范围内指定指标的指定粒度的监控数据，目前最多支持500指标的批量查询。接口会按预估点数3000自适应查询起始时间，规则为\&quot;指标数量*(to-from)/监控周期&lt;&#x3D;3000\&quot;，若超出阈值，会自动调整from以满足规则。比如原始数据按1min点周期预估，查询500指标超过6min范围的数据，查询起始时间会自动调整from&#x3D;to-6min。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IecClient) BatchListMetricData(request *model.BatchListMetricDataRequest) (*model.BatchListMetricDataResponse, error) {
+	requestDef := GenReqDefForBatchListMetricData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchListMetricDataResponse), nil
+	}
+}
+
+// BatchListMetricDataInvoker 批量查询监控数据
+func (c *IecClient) BatchListMetricDataInvoker(request *model.BatchListMetricDataRequest) *BatchListMetricDataInvoker {
+	requestDef := GenReqDefForBatchListMetricData()
+	return &BatchListMetricDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AttachVipBandwidth 端口绑定带宽
 //
 // IPv6虚拟IP或者IPv6私网IP绑定带宽，支持公网访问。

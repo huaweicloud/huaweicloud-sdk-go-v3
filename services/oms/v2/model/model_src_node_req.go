@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -40,6 +43,12 @@ type SrcNodeReq struct {
 	ObjectKey *[]string `json:"object_key,omitempty"`
 
 	ListFile *ListFile `json:"list_file,omitempty"`
+
+	// 加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+	CryptoType *SrcNodeReqCryptoType `json:"crypto_type,omitempty"`
+
+	// KMS密钥ID，36个字符
+	KmsKeyId *string `json:"kms_key_id,omitempty"`
 }
 
 func (o SrcNodeReq) String() string {
@@ -49,4 +58,51 @@ func (o SrcNodeReq) String() string {
 	}
 
 	return strings.Join([]string{"SrcNodeReq", string(data)}, " ")
+}
+
+type SrcNodeReqCryptoType struct {
+	value string
+}
+
+type SrcNodeReqCryptoTypeEnum struct {
+	DEFAULT SrcNodeReqCryptoType
+	KMS     SrcNodeReqCryptoType
+}
+
+func GetSrcNodeReqCryptoTypeEnum() SrcNodeReqCryptoTypeEnum {
+	return SrcNodeReqCryptoTypeEnum{
+		DEFAULT: SrcNodeReqCryptoType{
+			value: "DEFAULT",
+		},
+		KMS: SrcNodeReqCryptoType{
+			value: "KMS",
+		},
+	}
+}
+
+func (c SrcNodeReqCryptoType) Value() string {
+	return c.value
+}
+
+func (c SrcNodeReqCryptoType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *SrcNodeReqCryptoType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

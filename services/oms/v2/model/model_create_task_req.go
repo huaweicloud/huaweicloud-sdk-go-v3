@@ -19,9 +19,6 @@ type CreateTaskReq struct {
 
 	DstNode *DstNodeReq `json:"dst_node"`
 
-	// 是否开启KMS加密，默认不开启。
-	EnableKms *bool `json:"enable_kms,omitempty"`
-
 	// 任务描述，不能超过255个字符，且不能包含^<>&\"'等特殊字符。
 	Description *string `json:"description,omitempty"`
 

@@ -19,8 +19,6 @@ type LoadSchemaMetadataReq struct {
 
 	// 项目id。
 	ProjectId *string `json:"project_id,omitempty"`
-
-	IamAccount *IamAccount `json:"iam_account,omitempty"`
 }
 
 func (o LoadSchemaMetadataReq) String() string {

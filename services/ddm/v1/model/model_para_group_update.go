@@ -15,7 +15,7 @@ type ParaGroupUpdate struct {
 	Description *string `json:"description,omitempty"`
 
 	// 参数值。
-	Values *interface{} `json:"values,omitempty"`
+	Values *interface{} `json:"values"`
 }
 
 func (o ParaGroupUpdate) String() string {

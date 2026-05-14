@@ -65,10 +65,10 @@ type Snapshots struct {
 	// **参数解释**： 备份产生的Key。 **取值范围**： 不涉及。
 	BackupKey *SnapshotsBackupKey `json:"backup_key,omitempty"`
 
-	// **参数解释**： 增量快照使用前一个快照的BackupKey。当取值为FULL时表示这是一个全量快照。 **取值范围**： 不涉及。
+	// **参数解释**： 增量快照使用前一个快照的backup_key。当取值为FULL时表示这是一个全量快照。 **取值范围**： 不涉及。
 	PriorBackupKey *string `json:"prior_backup_key,omitempty"`
 
-	// **参数解释**： 对应全量快照的BackupKey。 **取值范围**： 不涉及。
+	// **参数解释**： 对应全量快照的backup_key。 **取值范围**： 不涉及。
 	BaseBackupKey *string `json:"base_backup_key,omitempty"`
 
 	// **参数解释**： 备份介质。 **取值范围**： 不涉及。

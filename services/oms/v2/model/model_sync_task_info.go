@@ -42,9 +42,6 @@ type SyncTaskInfo struct {
 	// 同步任务状态 SYNCHRONIZING：同步中 STOPPED：已停止
 	Status *SyncTaskInfoStatus `json:"status,omitempty"`
 
-	// 是否开启KMS加密，默认不开启。
-	EnableKms *bool `json:"enable_kms,omitempty"`
-
 	// 是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
 	EnableMetadataMigration *bool `json:"enable_metadata_migration,omitempty"`
 

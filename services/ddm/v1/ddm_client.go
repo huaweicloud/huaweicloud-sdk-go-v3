@@ -2079,6 +2079,27 @@ func (c *DdmClient) UnbindEipInvoker(request *model.UnbindEipRequest) *UnbindEip
 	return &UnbindEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UnbindLogicDb 逻辑库解绑
+//
+// 逻辑库解绑
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdmClient) UnbindLogicDb(request *model.UnbindLogicDbRequest) (*model.UnbindLogicDbResponse, error) {
+	requestDef := GenReqDefForUnbindLogicDb()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UnbindLogicDbResponse), nil
+	}
+}
+
+// UnbindLogicDbInvoker 逻辑库解绑
+func (c *DdmClient) UnbindLogicDbInvoker(request *model.UnbindLogicDbRequest) *UnbindLogicDbInvoker {
+	requestDef := GenReqDefForUnbindLogicDb()
+	return &UnbindLogicDbInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateDatabaseInfo 同步DN信息
 //
 // 同步当前DDM实例已关联的所有DN实例配置信息。

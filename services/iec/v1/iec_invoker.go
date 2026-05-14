@@ -1381,6 +1381,22 @@ func (i *UpdatePublicIpInvoker) Invoke() (*model.UpdatePublicIpResponse, error) 
 	}
 }
 
+type BatchListMetricDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchListMetricDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchListMetricDataInvoker) Invoke() (*model.BatchListMetricDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchListMetricDataResponse), nil
+	}
+}
+
 type AttachVipBandwidthInvoker struct {
 	*invoker.BaseInvoker
 }
