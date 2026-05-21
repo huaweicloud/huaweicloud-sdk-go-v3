@@ -9,6 +9,9 @@ import (
 // BatchDeleteLoadbalancersResponse Response Object
 type BatchDeleteLoadbalancersResponse struct {
 
+	// **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+	RequestId *string `json:"request_id,omitempty"`
+
 	// 批量删除任务id
 	JobId *string `json:"job_id,omitempty"`
 

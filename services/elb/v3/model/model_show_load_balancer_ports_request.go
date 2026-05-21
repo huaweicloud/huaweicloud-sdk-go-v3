@@ -12,7 +12,7 @@ type ShowLoadBalancerPortsRequest struct {
 	// **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
 	LoadbalancerId string `json:"loadbalancer_id"`
 
-	// **参数解释**：负载均衡器占用的端口ID。  支持多值查询，查询条件格式：*port_id=xxx&port_id=xxx*。
+	// **参数解释**：负载均衡器占用的端口ID。  支持多值查询，查询条件格式：*port_id=xxx&port_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
 	PortId *[]string `json:"port_id,omitempty"`
 
 	// **参数解释**：负载均衡器占用的私有IPv4地址。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及  支持多值查询，查询条件格式：*ip_address=xxx&ip_address=xxx*。

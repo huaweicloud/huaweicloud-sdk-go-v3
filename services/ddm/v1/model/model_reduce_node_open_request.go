@@ -8,11 +8,8 @@ import (
 
 type ReduceNodeOpenRequest struct {
 
-	// 实例id。
-	InstanceId *string `json:"instance_id,omitempty"`
-
 	// 节点id列表。
-	NodeIds *[]string `json:"node_ids,omitempty"`
+	NodeIds []string `json:"node_ids"`
 }
 
 func (o ReduceNodeOpenRequest) String() string {

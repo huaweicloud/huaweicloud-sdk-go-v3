@@ -2443,7 +2443,7 @@ func GenReqDefForValidateWeakPassword() *def.HttpRequestDef {
 func GenReqDefForCheckDataNodeConnection() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
-		WithPath("/v3/{project_id}/instance/{instance_id}/rds/connection").
+		WithPath("/v3/{project_id}/instances/{instance_id}/rds/connection").
 		WithResponse(new(model.CheckDataNodeConnectionResponse)).
 		WithContentType("application/json;charset=UTF-8")
 

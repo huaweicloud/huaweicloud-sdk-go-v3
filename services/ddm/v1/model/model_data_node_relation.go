@@ -9,10 +9,10 @@ import (
 type DataNodeRelation struct {
 
 	// 源实例id。
-	SourceInstanceId *string `json:"source_instance_id,omitempty"`
+	SourceInstanceId string `json:"source_instance_id"`
 
 	// 目标实例id。
-	TargetInstanceId *string `json:"target_instance_id,omitempty"`
+	TargetInstanceId string `json:"target_instance_id"`
 }
 
 func (o DataNodeRelation) String() string {

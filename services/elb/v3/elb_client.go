@@ -200,9 +200,9 @@ func (c *ElbClient) BatchDeletePoolsInvoker(request *model.BatchDeletePoolsReque
 	return &BatchDeletePoolsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchDisableDomainIPs 批量将IP地址从LB实例域名解析中移除
+// BatchDisableDomainIPs 批量将IP地址从ELB实例域名解析中移除
 //
-// 批量将IP地址从LB实例域名解析中移除。
+// 批量将IP地址从ELB实例域名解析中移除。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) BatchDisableDomainIPs(request *model.BatchDisableDomainIPsRequest) (*model.BatchDisableDomainIPsResponse, error) {
@@ -215,15 +215,15 @@ func (c *ElbClient) BatchDisableDomainIPs(request *model.BatchDisableDomainIPsRe
 	}
 }
 
-// BatchDisableDomainIPsInvoker 批量将IP地址从LB实例域名解析中移除
+// BatchDisableDomainIPsInvoker 批量将IP地址从ELB实例域名解析中移除
 func (c *ElbClient) BatchDisableDomainIPsInvoker(request *model.BatchDisableDomainIPsRequest) *BatchDisableDomainIPsInvoker {
 	requestDef := GenReqDefForBatchDisableDomainIPs()
 	return &BatchDisableDomainIPsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchEnableDomainIPs 批量将IP地址加入LB实例域名解析中
+// BatchEnableDomainIPs 批量将IP地址加入ELB实例域名解析中
 //
-// 批量将IP地址加入LB实例域名解析中。
+// 批量将IP地址加入ELB实例域名解析中。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) BatchEnableDomainIPs(request *model.BatchEnableDomainIPsRequest) (*model.BatchEnableDomainIPsResponse, error) {
@@ -236,7 +236,7 @@ func (c *ElbClient) BatchEnableDomainIPs(request *model.BatchEnableDomainIPsRequ
 	}
 }
 
-// BatchEnableDomainIPsInvoker 批量将IP地址加入LB实例域名解析中
+// BatchEnableDomainIPsInvoker 批量将IP地址加入ELB实例域名解析中
 func (c *ElbClient) BatchEnableDomainIPsInvoker(request *model.BatchEnableDomainIPsRequest) *BatchEnableDomainIPsInvoker {
 	requestDef := GenReqDefForBatchEnableDomainIPs()
 	return &BatchEnableDomainIPsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -528,7 +528,7 @@ func (c *ElbClient) CreateL7RuleInvoker(request *model.CreateL7RuleRequest) *Cre
 
 // CreateListener 创建监听器
 //
-// 创建监听器。支持通过该接口创建独享型及共享型LB实例下的监听器。
+// 创建监听器。支持通过该接口创建独享型及共享型ELB实例下的监听器。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) CreateListener(request *model.CreateListenerRequest) (*model.CreateListenerResponse, error) {
@@ -1149,10 +1149,10 @@ func (c *ElbClient) ListCertificatesInvoker(request *model.ListCertificatesReque
 	return &ListCertificatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListDomainIPs 查询负载均衡器ip的域名配置信息
+// ListDomainIPs 查询负载均衡器IP地址的域名解析配置
 //
-// 查询负载均衡器ip的域名配置信息，即负载均衡器的ip是否加入了域名解析。
-// 注意：当负载均衡器的公网域名和私网域名都没有打开时，该接口返回空列表。
+// 查询负载均衡器所有IP的域名解析配置信息，即负载均衡器的IP是否加入了域名解析，以及对应的域名。
+// 注意：只返回启用的域名类型对应的配置。若只开启公网域名解析，则只返回该负载均衡器的公网IP的域名解析配置；若负载均衡器的公网域名解析和私网域名解析都没有开启，则该返回空列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) ListDomainIPs(request *model.ListDomainIPsRequest) (*model.ListDomainIPsResponse, error) {
@@ -1165,7 +1165,7 @@ func (c *ElbClient) ListDomainIPs(request *model.ListDomainIPsRequest) (*model.L
 	}
 }
 
-// ListDomainIPsInvoker 查询负载均衡器ip的域名配置信息
+// ListDomainIPsInvoker 查询负载均衡器IP地址的域名解析配置
 func (c *ElbClient) ListDomainIPsInvoker(request *model.ListDomainIPsRequest) *ListDomainIPsInvoker {
 	requestDef := GenReqDefForListDomainIPs()
 	return &ListDomainIPsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2311,9 +2311,9 @@ func (c *ElbClient) UpdateSecurityPolicyInvoker(request *model.UpdateSecurityPol
 	return &UpdateSecurityPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateSystemDefaultDomainConfig 配置负载均衡器系统默认域名化
+// UpdateSystemDefaultDomainConfig 配置系统默认的负载均衡器域名解析
 //
-// 配置负载均衡器系统默认域名化。
+// 配置系统默认的负载均衡器域名解析。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) UpdateSystemDefaultDomainConfig(request *model.UpdateSystemDefaultDomainConfigRequest) (*model.UpdateSystemDefaultDomainConfigResponse, error) {
@@ -2326,15 +2326,15 @@ func (c *ElbClient) UpdateSystemDefaultDomainConfig(request *model.UpdateSystemD
 	}
 }
 
-// UpdateSystemDefaultDomainConfigInvoker 配置负载均衡器系统默认域名化
+// UpdateSystemDefaultDomainConfigInvoker 配置系统默认的负载均衡器域名解析
 func (c *ElbClient) UpdateSystemDefaultDomainConfigInvoker(request *model.UpdateSystemDefaultDomainConfigRequest) *UpdateSystemDefaultDomainConfigInvoker {
 	requestDef := GenReqDefForUpdateSystemDefaultDomainConfig()
 	return &UpdateSystemDefaultDomainConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateUserDefinedDomainConfig 配置负载均衡器用户自定义域名化
+// UpdateUserDefinedDomainConfig 自定义配置负载均衡器域名解析
 //
-// 配置负载均衡器用户自定义域名化。
+// 自定义配置负载均衡器域名解析。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ElbClient) UpdateUserDefinedDomainConfig(request *model.UpdateUserDefinedDomainConfigRequest) (*model.UpdateUserDefinedDomainConfigResponse, error) {
@@ -2347,7 +2347,7 @@ func (c *ElbClient) UpdateUserDefinedDomainConfig(request *model.UpdateUserDefin
 	}
 }
 
-// UpdateUserDefinedDomainConfigInvoker 配置负载均衡器用户自定义域名化
+// UpdateUserDefinedDomainConfigInvoker 自定义配置负载均衡器域名解析
 func (c *ElbClient) UpdateUserDefinedDomainConfigInvoker(request *model.UpdateUserDefinedDomainConfigRequest) *UpdateUserDefinedDomainConfigInvoker {
 	requestDef := GenReqDefForUpdateUserDefinedDomainConfig()
 	return &UpdateUserDefinedDomainConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

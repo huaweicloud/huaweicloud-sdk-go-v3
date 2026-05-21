@@ -8,10 +8,7 @@ import (
 
 // ChangeStrategyResponse Response Object
 type ChangeStrategyResponse struct {
-
-	// **参数解释**：  工作流ID。  **取值范围**：  不涉及。
-	JobId          *string `json:"job_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o ChangeStrategyResponse) String() string {

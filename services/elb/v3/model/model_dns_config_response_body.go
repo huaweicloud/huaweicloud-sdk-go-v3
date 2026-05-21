@@ -6,8 +6,10 @@ import (
 	"strings"
 )
 
-// DnsConfigResponseBody 配置负载均衡器响应体相关配置参数。
 type DnsConfigResponseBody struct {
+
+	// **参数解释**：自定义域名解析配置ID。
+	Id *string `json:"id,omitempty"`
 
 	// **参数解释**：负载均衡器的IPv4虚拟IP地址。
 	VipAddress *string `json:"vip_address,omitempty"`
@@ -27,9 +29,6 @@ type DnsConfigResponseBody struct {
 	// **参数解释**：公网域名所使用的zone名称。 **约束限制**：   公网域名只能使用公网类型的zone。   当配置公网域名开关打开时，该字段不能置空。   所填的公网zone必须在云解析服务已注册过。
 	PublicDnsZoneName *string `json:"public_dns_zone_name,omitempty"`
 
-	// **参数解释**：   公网域名所使用的zone对应的id。   根据传入的公网zone 名称查询得出。
-	PublicDnsZoneId *string `json:"public_dns_zone_id,omitempty"`
-
 	// **参数解释**：   负载均衡实例的公网域名。 **约束限制**：   根据负载均衡实例id，局点id和zone信息以如下格式生成：   {lb_id}.elb.{region_id}.{zone_name}
 	PublicDomainName *string `json:"public_domain_name,omitempty"`
 
@@ -41,9 +40,6 @@ type DnsConfigResponseBody struct {
 
 	// **参数解释**：   私网域名所使用的zone的名称。 **约束限制**：   私网域名既能使用公网zone，也能使用私网zone，zone的类型在private_dns_zone_type字段中指定。   当配置私网域名开关打开时，该字段不能置空。   所填的私网zone必须在云解析服务已注册过。
 	PrivateDnsZoneName *string `json:"private_dns_zone_name,omitempty"`
-
-	// **参数解释**：   私网域名所使用的zone对应的id。 **约束限制**：   根据传入的私网zone 名称查询得出。
-	PrivateDnsZoneId *string `json:"private_dns_zone_id,omitempty"`
 
 	// **参数解释**：负载均衡实例的私网域名。 **约束限制**：   根据负载均衡实例id，局点id和zone信息以如下格式生成：   {lb_id}-internal.elb.{region_id}.{zone_name}
 	PrivateDomainName *string `json:"private_domain_name,omitempty"`

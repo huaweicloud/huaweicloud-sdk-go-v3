@@ -9,8 +9,11 @@ import (
 // BatchDeleteNodesResponse Response Object
 type BatchDeleteNodesResponse struct {
 
-	// **参数解释**：  工作流ID。  **取值范围**：  不涉及。
-	JobId          *string `json:"job_id,omitempty"`
+	// 任务ID，仅创建按需实例时会返回该参数。
+	JobId *string `json:"job_id,omitempty"`
+
+	// 订单号，创建包年包月时返回该参数。
+	OrderId        *string `json:"order_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -33,7 +33,7 @@ type JobItem struct {
 	InstanceId *string `json:"instance_id,omitempty"`
 
 	// 操作。
-	Jobs *[]string `json:"jobs,omitempty"`
+	Operations *[]string `json:"operations,omitempty"`
 
 	// 逻辑库名称。
 	DatabaseName *string `json:"database_name,omitempty"`

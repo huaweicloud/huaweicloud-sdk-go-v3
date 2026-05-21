@@ -536,6 +536,10 @@ func GenReqDefForShowJob() *def.HttpRequestDef {
 		WithName("Dependencies").
 		WithJsonTag("dependencies").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("GetJobSubmitVersion").
+		WithJsonTag("getJobSubmitVersion").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Workspace").

@@ -9,7 +9,7 @@ import (
 // DeleteCertificateRequest Request Object
 type DeleteCertificateRequest struct {
 
-	// 证书ID。
+	// **参数解释**：证书ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
 	CertificateId string `json:"certificate_id"`
 }
 

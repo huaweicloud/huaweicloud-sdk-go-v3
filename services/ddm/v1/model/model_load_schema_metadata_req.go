@@ -9,16 +9,10 @@ import (
 type LoadSchemaMetadataReq struct {
 
 	// 逻辑库信息。
-	CompressedDatabasesInfo *string `json:"compressed_databases_info,omitempty"`
+	CompressedDatabasesInfo string `json:"compressed_databases_info"`
 
 	// 关联的后端DN信息。
-	DnInstance *[]DnInstance `json:"dn_instance,omitempty"`
-
-	// 实例id。
-	InstanceId *string `json:"instance_id,omitempty"`
-
-	// 项目id。
-	ProjectId *string `json:"project_id,omitempty"`
+	DnInstance []DnInstance `json:"dn_instance"`
 }
 
 func (o LoadSchemaMetadataReq) String() string {

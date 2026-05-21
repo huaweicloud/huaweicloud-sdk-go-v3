@@ -9,13 +9,13 @@ import (
 type DnInstance struct {
 
 	// 实例id。
-	DnInstanceId *string `json:"dn_instance_id,omitempty"`
+	DnInstanceId string `json:"dn_instance_id"`
 
 	// 实例账号。
-	AdminUser *string `json:"admin_user,omitempty"`
+	AdminUser string `json:"admin_user"`
 
 	// 实例密码。
-	AdminPassword *string `json:"admin_password,omitempty"`
+	AdminPassword string `json:"admin_password"`
 }
 
 func (o DnInstance) String() string {

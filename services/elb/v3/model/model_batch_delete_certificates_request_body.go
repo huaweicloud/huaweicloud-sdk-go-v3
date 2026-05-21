@@ -10,7 +10,7 @@ import (
 type BatchDeleteCertificatesRequestBody struct {
 
 	// 待删除的证书id列表。
-	Certificates []string `json:"certificates"`
+	Certificates *[]string `json:"certificates,omitempty"`
 }
 
 func (o BatchDeleteCertificatesRequestBody) String() string {

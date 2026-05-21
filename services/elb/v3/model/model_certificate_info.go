@@ -15,7 +15,7 @@ type CertificateInfo struct {
 	// **参数解释**：证书的管理状态。该字段当前无用，设置为true或者false都不影响证书使用。  **取值范围**： - true：表示证书可用。 - false：表示证书不可用。
 	AdminStateUp bool `json:"admin_state_up"`
 
-	// **参数解释**：证书内容。支持最大11层证书链(含证书和证书链)。  **取值范围**：PEM编码格式，最大长度65536个字符。
+	// **参数解释**：证书内容。支持最大11层证书链(含证书和证书链)。  **取值范围**：PEM编码格式，最大长度20000个字符。
 	Certificate string `json:"certificate"`
 
 	// **参数解释**：证书的描述。  **取值范围**：0-255个字符。
@@ -48,7 +48,7 @@ type CertificateInfo struct {
 	// **参数解释**：项目ID。获取方式请参见[获取项目ID](elb_fl_0008.xml)。  **取值范围**：长度为32个字符，由小写字母和数字组成。
 	ProjectId string `json:"project_id"`
 
-	// **参数解释**：服务器SM双证书的证书内容。 支持最大11层证书链(含证书和证书链)。  **取值范围**：PEM编码格式。最大长度65536字符。
+	// **参数解释**：服务器SM双证书的证书内容。 支持最大11层证书链(含证书和证书链)。  **取值范围**：PEM编码格式。最大长度20000字符。
 	EncCertificate *string `json:"enc_certificate,omitempty"`
 
 	// **参数解释**：服务器SM双证书的私钥。  **取值范围**：PEM编码格式，最大长度8192个字符。

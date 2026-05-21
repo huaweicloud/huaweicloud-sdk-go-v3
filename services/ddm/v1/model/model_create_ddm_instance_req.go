@@ -9,28 +9,28 @@ import (
 type CreateDdmInstanceReq struct {
 
 	// 实例名称。
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 
 	// 可用区。
-	AvailableZones *[]string `json:"available_zones,omitempty"`
+	AvailableZones []string `json:"available_zones"`
 
 	// 节点数量。
-	NodeNum *int32 `json:"node_num,omitempty"`
+	NodeNum int32 `json:"node_num"`
 
 	// 引擎版本。
-	EngineVersion *string `json:"engine_version,omitempty"`
+	EngineVersion string `json:"engine_version"`
 
 	// 规格。
-	FlavorRef *string `json:"flavor_ref,omitempty"`
+	FlavorRef string `json:"flavor_ref"`
 
 	// 虚拟私有云id。
-	VpcId *string `json:"vpc_id,omitempty"`
+	VpcId string `json:"vpc_id"`
 
 	// 子网id。
-	SubnetId *string `json:"subnet_id,omitempty"`
+	SubnetId string `json:"subnet_id"`
 
 	// 安全组id。
-	SecurityGroupId *string `json:"security_group_id,omitempty"`
+	SecurityGroupId string `json:"security_group_id"`
 
 	// 参数组id。
 	ParamGroupId *string `json:"param_group_id,omitempty"`
@@ -47,8 +47,7 @@ type CreateDdmInstanceReq struct {
 	// 密码。
 	AdminUserPassword *string `json:"admin_user_password,omitempty"`
 
-	// 付费信息。
-	ChargeInfo *interface{} `json:"charge_info,omitempty"`
+	ChargeInfo *ChargeInfo `json:"charge_info,omitempty"`
 }
 
 func (o CreateDdmInstanceReq) String() string {

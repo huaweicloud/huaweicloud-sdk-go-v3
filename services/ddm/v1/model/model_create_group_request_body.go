@@ -17,8 +17,11 @@ type CreateGroupRequestBody struct {
 	// 组类型，type：rw读写、r只读
 	Type CreateGroupRequestBodyType `json:"type"`
 
-	// 节点规格ID。
-	FlavorId string `json:"flavor_id"`
+	// 节点规格ID（规格ID和规格码必须传一个）。
+	FlavorId *string `json:"flavor_id,omitempty"`
+
+	// 节点规格码（规格ID和规格码必须传一个）。
+	FlavorRef *string `json:"flavor_ref,omitempty"`
 
 	// 节点信息列表
 	Nodes []NodeInfo `json:"nodes"`

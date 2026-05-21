@@ -864,6 +864,10 @@ func GenReqDefForListAllL7Rules() *def.HttpRequestDef {
 		WithName("EnterpriseProjectId").
 		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("L7policyId").
+		WithJsonTag("l7policy_id").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1048,6 +1052,19 @@ func GenReqDefForListDomainIPs() *def.HttpRequestDef {
 		WithName("LoadbalancerId").
 		WithJsonTag("loadbalancer_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PageReverse").
+		WithJsonTag("page_reverse").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1858,6 +1875,10 @@ func GenReqDefForListMasterSlavePools() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ConnectionDrain").
 		WithJsonTag("connection_drain").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PublicBorderGroup").
+		WithJsonTag("public_border_group").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

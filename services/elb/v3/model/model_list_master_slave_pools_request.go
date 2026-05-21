@@ -65,6 +65,9 @@ type ListMasterSlavePoolsRequest struct {
 
 	// **参数解释**：查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false  **约束限制**：不涉及  **取值范围**：true 开启，false 不开启。  **默认取值**：不涉及
 	ConnectionDrain *bool `json:"connection_drain,omitempty"`
+
+	// **参数解释**：公网边界组。 支持多值查询，查询条件格式：*public_border_group=xxx&public_border_group=xxx*。  **约束限制**：不涉及  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  **默认取值**：不涉及
+	PublicBorderGroup *[]string `json:"public_border_group,omitempty"`
 }
 
 func (o ListMasterSlavePoolsRequest) String() string {

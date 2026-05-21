@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// UpdateSystemDefaultDomainConfigRequestBody **参数解释**：配置负载均衡器系统默认域名化相关配置参数。
+// UpdateSystemDefaultDomainConfigRequestBody **参数解释**：配置负载均衡器系统默认域名解析相关配置参数。
 type UpdateSystemDefaultDomainConfigRequestBody struct {
 	Loadbalancer *SystemDefaultDnsConfigRequestBody `json:"loadbalancer"`
 }

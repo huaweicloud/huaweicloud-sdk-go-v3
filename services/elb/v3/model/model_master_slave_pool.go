@@ -63,6 +63,9 @@ type MasterSlavePool struct {
 	ConnectionDrain *ConnectionDrain `json:"connection_drain,omitempty"`
 
 	QuicCidHashStrategy *QuicCidHashStrategy `json:"quic_cid_hash_strategy,omitempty"`
+
+	// **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
+	PublicBorderGroup *string `json:"public_border_group,omitempty"`
 }
 
 func (o MasterSlavePool) String() string {

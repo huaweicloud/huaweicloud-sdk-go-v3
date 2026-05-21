@@ -31,6 +31,9 @@ type GetUsersListDetailResponsesV3 struct {
 
 	// **参数解释**：  关联的逻辑库集合。账号只对已关联的逻辑库有访问权限。  **取值范围**：  不涉及。
 	Databases []GetUsersListdatabaseV3 `json:"databases"`
+
+	// **参数解释**：  DDM实例账号的创建时间。  格式为yyyy-mm-ddThh:mm:ssZ。其中，T指定某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **取值范围**：  不涉及。
+	ExpirationTime *string `json:"expiration_time,omitempty"`
 }
 
 func (o GetUsersListDetailResponsesV3) String() string {

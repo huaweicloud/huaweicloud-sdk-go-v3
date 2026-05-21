@@ -9,6 +9,15 @@ import (
 // ListTasksResponse Response Object
 type ListTasksResponse struct {
 
+	// 分页偏移量。
+	Offset *int32 `json:"offset,omitempty"`
+
+	// 一页数量。
+	Limit *int32 `json:"limit,omitempty"`
+
+	// 总条数。
+	Total *int32 `json:"total,omitempty"`
+
 	// 任务列表。
 	Jobs           *[]JobItem `json:"jobs,omitempty"`
 	HttpStatusCode int        `json:"-"`

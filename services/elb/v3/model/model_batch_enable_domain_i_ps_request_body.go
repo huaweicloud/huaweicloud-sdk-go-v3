@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// BatchEnableDomainIPsRequestBody 批量向负载均衡器域名解析中加入IP地址的请求体。
+// BatchEnableDomainIPsRequestBody 批量将IP地址加入ELB实例域名解析中的请求体。
 type BatchEnableDomainIPsRequestBody struct {
 
 	// **参数解释**：需要加入到负载均衡器域名解析中的IP列表。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及

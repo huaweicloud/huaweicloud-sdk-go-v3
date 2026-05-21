@@ -9,7 +9,7 @@ import (
 // LoadBalancerStatusHealthMonitor **参数解释**：LB状态树的后端服务器组健康检查器状态信息。
 type LoadBalancerStatusHealthMonitor struct {
 
-	// **参数解释**：健康检查器协议类型。  **取值范围**：TCP、UDP_CONNECT、HTTP。
+	// **参数解释**：健康检查器协议类型。  **取值范围**：TCP、UDP_CONNECT、HTTP。UDP_CONNECT即UDP协议。
 	Type *string `json:"type,omitempty"`
 
 	// **参数解释**：健康检查器ID。  **取值范围**：不涉及

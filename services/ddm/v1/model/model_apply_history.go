@@ -21,8 +21,8 @@ type ApplyHistory struct {
 	// **参数解释**：  应用日期。  **参数范围**：  不涉及。
 	AppliedAt *sdktime.SdkTime `json:"applied_at,omitempty"`
 
-	// **参数解释**：  错误码。  **参数范围**：  不涉及。
-	ErrorCode *string `json:"error_code,omitempty"`
+	// **参数解释**：  实例应用参数组的报错信息，若实例应用参数组成功则返回空。  **取值范围**：  不涉及。
+	ErrorMessage *string `json:"error_message,omitempty"`
 }
 
 func (o ApplyHistory) String() string {
