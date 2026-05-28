@@ -114,6 +114,9 @@ type ShowTaskGroupResponse struct {
 	// 一致性校验方式，用于迁移前/后校验对象是否一致，所有校验方式需满足源端/目的端对象的加密状态一致，具体校验方式和校验结果可通过对象列表查看。默认size_last_modified。 size_last_modified：默认配置。迁移前后，通过对比源端和目的端对象大小+最后修改时间，判断对象是否已存在或迁移后数据是否完整。源端与目的端同名对象大小相同，且目的端对象的最后修改时间不早于源端对象的最后修改时间，则代表该对象已存在/迁移成功。 crc64：目前仅支持华为/阿里/腾讯。迁移前后，通过对比源端和目的端对象元数据中CRC64值是否相同，判断对象是否已存在/迁移完成。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用大小/最后修改时间校验方式来校验。 no_check：目前仅支持HTTP/HTTPS数据源。当源端对象无法通过标准http协议中content-length字段获取数据大小时，默认数据下载成功即迁移成功，不对数据做额外校验，且迁移时源端对象默认覆盖目的端同名对象。当源端对象能正常通过标准http协议中content-length字段获取数据大小时，则采用大小/最后修改时间校验方式来校验。
 	ConsistencyCheck *ShowTaskGroupResponseConsistencyCheck `json:"consistency_check,omitempty"`
 
+	// OBS系统类型 BUCKET：一般桶 PFS：并行文件系统
+	ObsSystem *string `json:"obs_system,omitempty"`
+
 	// 是否开启请求者付款，在启用后，请求者支付请求和数据传输费用。
 	EnableRequesterPays *bool `json:"enable_requester_pays,omitempty"`
 	HttpStatusCode      int   `json:"-"`

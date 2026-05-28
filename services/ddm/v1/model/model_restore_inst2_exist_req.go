@@ -7,12 +7,9 @@ import (
 )
 
 type RestoreInst2ExistReq struct {
+	Source *RestoreInstSource `json:"source"`
 
-	// 数据恢复源。
-	Source *interface{} `json:"source"`
-
-	// 数据恢复目标。
-	Target *interface{} `json:"target"`
+	Target *RestoreInstTarget `json:"target"`
 
 	// 关联dn。
 	DataNodeRelations []DataNodeRelation `json:"data_node_relations"`

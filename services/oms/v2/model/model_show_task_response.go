@@ -117,6 +117,9 @@ type ShowTaskResponse struct {
 	// 是否开启请求者付款，在启用后，请求者支付请求和数据传输费用。
 	EnableRequesterPays *bool `json:"enable_requester_pays,omitempty"`
 
+	// OBS系统类型 BUCKET：一般桶 PFS：并行文件系统
+	ObsSystem *ShowTaskResponseObsSystem `json:"obs_system,omitempty"`
+
 	// HIGH：高优先级 MEDIUM：中优先级 LOW：低优先级
 	TaskPriority   *ShowTaskResponseTaskPriority `json:"task_priority,omitempty"`
 	HttpStatusCode int                           `json:"-"`
@@ -384,6 +387,53 @@ func (c ShowTaskResponseConsistencyCheck) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ShowTaskResponseConsistencyCheck) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ShowTaskResponseObsSystem struct {
+	value string
+}
+
+type ShowTaskResponseObsSystemEnum struct {
+	BUCKET ShowTaskResponseObsSystem
+	PFS    ShowTaskResponseObsSystem
+}
+
+func GetShowTaskResponseObsSystemEnum() ShowTaskResponseObsSystemEnum {
+	return ShowTaskResponseObsSystemEnum{
+		BUCKET: ShowTaskResponseObsSystem{
+			value: "BUCKET",
+		},
+		PFS: ShowTaskResponseObsSystem{
+			value: "PFS",
+		},
+	}
+}
+
+func (c ShowTaskResponseObsSystem) Value() string {
+	return c.value
+}
+
+func (c ShowTaskResponseObsSystem) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowTaskResponseObsSystem) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

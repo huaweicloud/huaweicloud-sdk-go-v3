@@ -24,11 +24,11 @@ type LogicalClusterPlanBo struct {
 	// **参数解释**： 计划类型，取值范围为(once|periodicity)。 **约束限制**： 不涉及。 **取值范围**： once：一次性计划 periodicity：周期性计划 **默认取值**： 不涉及。
 	PlanType string `json:"plan_type"`
 
-	// **参数解释**： 逻辑集群定时增删计划起始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-	StartTime *string `json:"start_time,omitempty"`
+	// **参数解释**： 逻辑集群定时增删计划起始时间，时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	StartTime *int64 `json:"start_time,omitempty"`
 
-	// **参数解释**： 逻辑集群定时增删计划终止时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-	EndTime *string `json:"end_time,omitempty"`
+	// **参数解释**： 逻辑集群定时增删计划终止时间，时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	EndTime *int64 `json:"end_time,omitempty"`
 
 	// **参数解释**： 逻辑集群定时增删计划细节。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Actions []LogicalClusterPlanActionsParam `json:"actions"`

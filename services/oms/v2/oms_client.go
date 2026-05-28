@@ -61,6 +61,27 @@ func (c *OmsClient) CheckPrefixInvoker(request *model.CheckPrefixRequest) *Check
 	return &CheckPrefixInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckUrlSourceListFileFormat 检查url来源列表文件格式
+//
+// 检查url来源列表文件格式是否有效
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OmsClient) CheckUrlSourceListFileFormat(request *model.CheckUrlSourceListFileFormatRequest) (*model.CheckUrlSourceListFileFormatResponse, error) {
+	requestDef := GenReqDefForCheckUrlSourceListFileFormat()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckUrlSourceListFileFormatResponse), nil
+	}
+}
+
+// CheckUrlSourceListFileFormatInvoker 检查url来源列表文件格式
+func (c *OmsClient) CheckUrlSourceListFileFormatInvoker(request *model.CheckUrlSourceListFileFormatRequest) *CheckUrlSourceListFileFormatInvoker {
+	requestDef := GenReqDefForCheckUrlSourceListFileFormat()
+	return &CheckUrlSourceListFileFormatInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSyncEvents 创建同步事件
 //
 // 源端有对象需要进行同步时，调用该接口创建一个同步事件，系统将根据同步事件中包含的对象名称进行同步(目前只支持华北-北京四、华东-上海一地区)。
@@ -507,7 +528,7 @@ func (c *OmsClient) ShowTaskGroupInvoker(request *model.ShowTaskGroupRequest) *S
 
 // StartSyncTask 启动同步任务
 //
-// 同步任务停止后，调用该接口以启动同步任务(目前只支持华北-北京四、华东-上海一地区)。
+// 同步任务停止后，调用该接口以启动同步任务(目前只支持华北-北京四、华东-上海一和西南-贵阳一地区)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *OmsClient) StartSyncTask(request *model.StartSyncTaskRequest) (*model.StartSyncTaskResponse, error) {
@@ -570,7 +591,7 @@ func (c *OmsClient) StartTaskGroupInvoker(request *model.StartTaskGroupRequest) 
 
 // StopSyncTask 暂停同步任务
 //
-// 当同步任务处于同步中时，调用该接口停止任务(目前只支持华北-北京四、华东-上海一地区)。
+// 当同步任务处于同步中时，调用该接口停止任务(目前只支持华北-北京四、华东-上海一和西南-贵阳一地区)。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *OmsClient) StopSyncTask(request *model.StopSyncTaskRequest) (*model.StopSyncTaskResponse, error) {

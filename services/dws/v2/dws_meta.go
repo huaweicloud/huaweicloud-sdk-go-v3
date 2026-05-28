@@ -1663,6 +1663,11 @@ func GenReqDefForListClusterScaleInNumbers() *def.HttpRequestDef {
 		WithJsonTag("cluster_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("LogicalClusterName").
+		WithJsonTag("logical_cluster_name").
+		WithLocationType(def.Query))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }

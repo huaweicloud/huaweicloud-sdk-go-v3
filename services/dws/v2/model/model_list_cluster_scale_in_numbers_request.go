@@ -11,6 +11,9 @@ type ListClusterScaleInNumbersRequest struct {
 
 	// **参数解释**： 集群ID。获取方法请参见[获取集群ID](dws_02_00068.xml)。 **约束限制**： 必须是有效的dws集群ID。 **取值范围**： 36位UUID。 **默认取值**： 不涉及。
 	ClusterId string `json:"cluster_id"`
+
+	// **参数解释**： 逻辑集群名，填写该参数，表示获取逻辑集群合适的缩容节点个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	LogicalClusterName *string `json:"logical_cluster_name,omitempty"`
 }
 
 func (o ListClusterScaleInNumbersRequest) String() string {

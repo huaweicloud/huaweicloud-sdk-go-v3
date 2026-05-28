@@ -36,6 +36,21 @@ func GenReqDefForCheckPrefix() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCheckUrlSourceListFileFormat() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/objectstorage/buckets/url-source-list-file").
+		WithResponse(new(model.CheckUrlSourceListFileFormatResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateSyncEvents() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -248,6 +263,10 @@ func GenReqDefForListTasks() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Status").
 		WithJsonTag("status").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TaskName").
+		WithJsonTag("task_name").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

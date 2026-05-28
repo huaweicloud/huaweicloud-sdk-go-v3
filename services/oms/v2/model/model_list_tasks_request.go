@@ -20,6 +20,9 @@ type ListTasksRequest struct {
 
 	// 迁移任务状态（无该参数时代表查询所有状态的任务）： 1：等待调度 2：正在执行 3：停止 4：失败 5：成功 7: 暂停中
 	Status *int32 `json:"status,omitempty"`
+
+	// 任务名称，支持模糊查询。 1.长度限制0~255 2.不支持特殊字符
+	TaskName *string `json:"task_name,omitempty"`
 }
 
 func (o ListTasksRequest) String() string {

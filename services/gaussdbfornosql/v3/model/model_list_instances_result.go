@@ -86,6 +86,9 @@ type ListInstancesResult struct {
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
 	DualActiveInfo *DualActiveInfo `json:"dual_active_info,omitempty"`
+
+	// 参数解释： SSL安全连接启用情况。 取值范围： - 取值为“0”表示未启用。 - 取值为“1”表示已启用。
+	Ssl string `json:"ssl"`
 }
 
 func (o ListInstancesResult) String() string {

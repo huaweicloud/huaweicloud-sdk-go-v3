@@ -37,6 +37,22 @@ func (i *CheckPrefixInvoker) Invoke() (*model.CheckPrefixResponse, error) {
 	}
 }
 
+type CheckUrlSourceListFileFormatInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckUrlSourceListFileFormatInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckUrlSourceListFileFormatInvoker) Invoke() (*model.CheckUrlSourceListFileFormatResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckUrlSourceListFileFormatResponse), nil
+	}
+}
+
 type CreateSyncEventsInvoker struct {
 	*invoker.BaseInvoker
 }
