@@ -391,6 +391,22 @@ func GenReqDefForShowAgency() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowAgencyCredential() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/agency/credential").
+		WithResponse(new(model.ShowAgencyCredentialResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AgencyType").
+		WithJsonTag("agency_type").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateCatalog() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -592,6 +608,10 @@ func GenReqDefForDeleteDatabase() *def.HttpRequestDef {
 		WithName("Cascade").
 		WithJsonTag("cascade").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IsAsync").
+		WithJsonTag("is_async").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -657,6 +677,14 @@ func GenReqDefForListDatabases() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ReversePage").
 		WithJsonTag("reverse_page").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ExternalDatabaseId").
+		WithJsonTag("external_database_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Deleted").
+		WithJsonTag("deleted").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -2114,6 +2142,16 @@ func GenReqDefForDeleteTable() *def.HttpRequestDef {
 		WithName("DeleteData").
 		WithJsonTag("delete_data").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IsAsync").
+		WithJsonTag("is_async").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("XRequestId").
+		WithJsonTag("X-request-id").
+		WithKindName("string").
+		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -2226,6 +2264,10 @@ func GenReqDefForListTables() *def.HttpRequestDef {
 		WithJsonTag("table_name_pattern").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TableFormat").
+		WithJsonTag("table_format").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("TableType").
 		WithJsonTag("table_type").
 		WithLocationType(def.Query))
@@ -2244,6 +2286,14 @@ func GenReqDefForListTables() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ReversePage").
 		WithJsonTag("reverse_page").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Deleted").
+		WithJsonTag("deleted").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IncludeFields").
+		WithJsonTag("include_fields").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -2305,6 +2355,11 @@ func GenReqDefForShowTable() *def.HttpRequestDef {
 		WithName("TableName").
 		WithJsonTag("table_name").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("VersionId").
+		WithJsonTag("version_id").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

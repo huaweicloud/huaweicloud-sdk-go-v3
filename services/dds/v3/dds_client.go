@@ -166,6 +166,27 @@ func (c *DdsClient) BatchUpgradeDatabaseVersionInvoker(request *model.BatchUpgra
 	return &BatchUpgradeDatabaseVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BindPublicGateway 绑定公网网关
+//
+// 为实例下的节点绑定公网网关。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) BindPublicGateway(request *model.BindPublicGatewayRequest) (*model.BindPublicGatewayResponse, error) {
+	requestDef := GenReqDefForBindPublicGateway()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BindPublicGatewayResponse), nil
+	}
+}
+
+// BindPublicGatewayInvoker 绑定公网网关
+func (c *DdsClient) BindPublicGatewayInvoker(request *model.BindPublicGatewayRequest) *BindPublicGatewayInvoker {
+	requestDef := GenReqDefForBindPublicGateway()
+	return &BindPublicGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CancelEip 解绑弹性公网IP
 //
 // 解绑实例下节点已经绑定的弹性公网IP。
@@ -2369,6 +2390,27 @@ func (c *DdsClient) SwitchoverReplicaSet(request *model.SwitchoverReplicaSetRequ
 func (c *DdsClient) SwitchoverReplicaSetInvoker(request *model.SwitchoverReplicaSetRequest) *SwitchoverReplicaSetInvoker {
 	requestDef := GenReqDefForSwitchoverReplicaSet()
 	return &SwitchoverReplicaSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UnbindPublicGateway 解绑公网网关
+//
+// 为实例下的节点解绑公网网关。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) UnbindPublicGateway(request *model.UnbindPublicGatewayRequest) (*model.UnbindPublicGatewayResponse, error) {
+	requestDef := GenReqDefForUnbindPublicGateway()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UnbindPublicGatewayResponse), nil
+	}
+}
+
+// UnbindPublicGatewayInvoker 解绑公网网关
+func (c *DdsClient) UnbindPublicGatewayInvoker(request *model.UnbindPublicGatewayRequest) *UnbindPublicGatewayInvoker {
+	requestDef := GenReqDefForUnbindPublicGateway()
+	return &UnbindPublicGatewayInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateBackupDownloadPolicy 更新备份下载策略

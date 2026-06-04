@@ -1153,6 +1153,27 @@ func (c *WorkspaceClient) UpdateAssistAuthMethodConfigInvoker(request *model.Upd
 	return &UpdateAssistAuthMethodConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateAuthConfig 增量更新认证配置
+//
+// 增量更新指定认证配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateAuthConfig(request *model.UpdateAuthConfigRequest) (*model.UpdateAuthConfigResponse, error) {
+	requestDef := GenReqDefForUpdateAuthConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAuthConfigResponse), nil
+	}
+}
+
+// UpdateAuthConfigInvoker 增量更新认证配置
+func (c *WorkspaceClient) UpdateAuthConfigInvoker(request *model.UpdateAuthConfigRequest) *UpdateAuthConfigInvoker {
+	requestDef := GenReqDefForUpdateAuthConfig()
+	return &UpdateAuthConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateAuthMethodConfig 更新认证策略配置
 //
 // 更新认证策略配置信息。
@@ -5251,25 +5272,25 @@ func (c *WorkspaceClient) ShowScreenRecordInvoker(request *model.ShowScreenRecor
 	return &ShowScreenRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateFullSpeedRecordConfig 更新录屏全速上传详情
+// UpdateScreenRecords 更新录屏全速上传详情
 //
 // 更新录屏全速上传详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *WorkspaceClient) UpdateFullSpeedRecordConfig(request *model.UpdateFullSpeedRecordConfigRequest) (*model.UpdateFullSpeedRecordConfigResponse, error) {
-	requestDef := GenReqDefForUpdateFullSpeedRecordConfig()
+func (c *WorkspaceClient) UpdateScreenRecords(request *model.UpdateScreenRecordsRequest) (*model.UpdateScreenRecordsResponse, error) {
+	requestDef := GenReqDefForUpdateScreenRecords()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdateFullSpeedRecordConfigResponse), nil
+		return resp.(*model.UpdateScreenRecordsResponse), nil
 	}
 }
 
-// UpdateFullSpeedRecordConfigInvoker 更新录屏全速上传详情
-func (c *WorkspaceClient) UpdateFullSpeedRecordConfigInvoker(request *model.UpdateFullSpeedRecordConfigRequest) *UpdateFullSpeedRecordConfigInvoker {
-	requestDef := GenReqDefForUpdateFullSpeedRecordConfig()
-	return &UpdateFullSpeedRecordConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateScreenRecordsInvoker 更新录屏全速上传详情
+func (c *WorkspaceClient) UpdateScreenRecordsInvoker(request *model.UpdateScreenRecordsRequest) *UpdateScreenRecordsInvoker {
+	requestDef := GenReqDefForUpdateScreenRecords()
+	return &UpdateScreenRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateScreenRecordsTrafficLimitConfig 更新站点录屏限速配置

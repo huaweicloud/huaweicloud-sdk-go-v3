@@ -32,6 +32,12 @@ type NodeItem struct {
 
 	// 可用区。
 	AvailabilityZone string `json:"availability_zone"`
+
+	// **参数解释：** 公网NAT网关实例的ID。可以调用“查询公网NAT网关列表”接口获取。 **取值范围：** 不涉及。
+	NatGatewayId *string `json:"nat_gateway_id,omitempty"`
+
+	// **参数解释：** 弹性公网IP对外提供服务的端口号。 **取值范围：** 1~65535。
+	ExternalServicePort *int32 `json:"external_service_port,omitempty"`
 }
 
 func (o NodeItem) String() string {

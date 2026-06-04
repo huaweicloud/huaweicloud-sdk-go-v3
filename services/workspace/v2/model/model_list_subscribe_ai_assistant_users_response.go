@@ -13,7 +13,7 @@ type ListSubscribeAiAssistantUsersResponse struct {
 	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 订阅用户列表。
-	Users *[]SubscribeUserInfo `json:"users,omitempty"`
+	Users *[]SubscribeUserBasicInfo `json:"users,omitempty"`
 
 	// 订阅用户组列表。
 	Usergroups *[]SubscribeUserGroupInfo `json:"usergroups,omitempty"`

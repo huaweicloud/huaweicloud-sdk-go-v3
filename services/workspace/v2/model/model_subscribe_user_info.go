@@ -6,20 +6,14 @@ import (
 	"strings"
 )
 
-// SubscribeUserInfo 查询订阅用户信息
+// SubscribeUserInfo 用户信息。
 type SubscribeUserInfo struct {
 
 	// 用户id。
-	UserId *string `json:"user_id,omitempty"`
+	UserId string `json:"user_id"`
 
-	// 桌面用户名。
-	UserName *string `json:"user_name,omitempty"`
-
-	// 用户手机号。
-	UserPhone *string `json:"user_phone,omitempty"`
-
-	// ai 功能是否启用。 * true： 启用 * false： 不启用
-	AiFunc *bool `json:"ai_func,omitempty"`
+	// 用户名称。
+	UserName string `json:"user_name"`
 }
 
 func (o SubscribeUserInfo) String() string {

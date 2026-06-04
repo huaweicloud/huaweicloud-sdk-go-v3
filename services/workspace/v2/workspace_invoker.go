@@ -869,6 +869,22 @@ func (i *UpdateAssistAuthMethodConfigInvoker) Invoke() (*model.UpdateAssistAuthM
 	}
 }
 
+type UpdateAuthConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAuthConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAuthConfigInvoker) Invoke() (*model.UpdateAuthConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAuthConfigResponse), nil
+	}
+}
+
 type UpdateAuthMethodConfigInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3989,19 +4005,19 @@ func (i *ShowScreenRecordInvoker) Invoke() (*model.ShowScreenRecordResponse, err
 	}
 }
 
-type UpdateFullSpeedRecordConfigInvoker struct {
+type UpdateScreenRecordsInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *UpdateFullSpeedRecordConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *UpdateScreenRecordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *UpdateFullSpeedRecordConfigInvoker) Invoke() (*model.UpdateFullSpeedRecordConfigResponse, error) {
+func (i *UpdateScreenRecordsInvoker) Invoke() (*model.UpdateScreenRecordsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.UpdateFullSpeedRecordConfigResponse), nil
+		return result.(*model.UpdateScreenRecordsResponse), nil
 	}
 }
 

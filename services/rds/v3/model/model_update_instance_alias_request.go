@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// UpdatePostgresqlInstanceAliasRequest Request Object
-type UpdatePostgresqlInstanceAliasRequest struct {
+// UpdateInstanceAliasRequest Request Object
+type UpdateInstanceAliasRequest struct {
 
 	// 语言
 	XLanguage *string `json:"X-Language,omitempty"`
@@ -18,11 +18,11 @@ type UpdatePostgresqlInstanceAliasRequest struct {
 	Body *UpdateRdsInstanceAliasRequest `json:"body,omitempty"`
 }
 
-func (o UpdatePostgresqlInstanceAliasRequest) String() string {
+func (o UpdateInstanceAliasRequest) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "UpdatePostgresqlInstanceAliasRequest struct{}"
+		return "UpdateInstanceAliasRequest struct{}"
 	}
 
-	return strings.Join([]string{"UpdatePostgresqlInstanceAliasRequest", string(data)}, " ")
+	return strings.Join([]string{"UpdateInstanceAliasRequest", string(data)}, " ")
 }

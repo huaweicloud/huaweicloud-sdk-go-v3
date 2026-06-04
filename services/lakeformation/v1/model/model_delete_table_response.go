@@ -8,7 +8,8 @@ import (
 
 // DeleteTableResponse Response Object
 type DeleteTableResponse struct {
-	HttpStatusCode int `json:"-"`
+	XRequestId     *string `json:"X-request-id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteTableResponse) String() string {

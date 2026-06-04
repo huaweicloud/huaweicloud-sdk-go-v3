@@ -117,6 +117,22 @@ func (i *BatchUpgradeDatabaseVersionInvoker) Invoke() (*model.BatchUpgradeDataba
 	}
 }
 
+type BindPublicGatewayInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BindPublicGatewayInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BindPublicGatewayInvoker) Invoke() (*model.BindPublicGatewayResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BindPublicGatewayResponse), nil
+	}
+}
+
 type CancelEipInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1794,6 +1810,22 @@ func (i *SwitchoverReplicaSetInvoker) Invoke() (*model.SwitchoverReplicaSetRespo
 		return nil, err
 	} else {
 		return result.(*model.SwitchoverReplicaSetResponse), nil
+	}
+}
+
+type UnbindPublicGatewayInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UnbindPublicGatewayInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UnbindPublicGatewayInvoker) Invoke() (*model.UnbindPublicGatewayResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UnbindPublicGatewayResponse), nil
 	}
 }
 

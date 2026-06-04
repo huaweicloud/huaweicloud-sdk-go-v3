@@ -29,6 +29,9 @@ type ShowAuthConfigResponse struct {
 	// 应急登录模式。
 	EmergencyLoginMode *string `json:"emergency_login_mode,omitempty"`
 
+	// 短信验证码登录开关。
+	SmsLoginEnabled *bool `json:"sms_login_enabled,omitempty"`
+
 	Saml2AuthConfig *Saml2AuthConfig `json:"saml2_auth_config,omitempty"`
 	HttpStatusCode  int              `json:"-"`
 }

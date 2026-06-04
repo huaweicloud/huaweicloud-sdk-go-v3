@@ -261,6 +261,22 @@ func (i *ShowAgencyInvoker) Invoke() (*model.ShowAgencyResponse, error) {
 	}
 }
 
+type ShowAgencyCredentialInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAgencyCredentialInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAgencyCredentialInvoker) Invoke() (*model.ShowAgencyCredentialResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAgencyCredentialResponse), nil
+	}
+}
+
 type CreateCatalogInvoker struct {
 	*invoker.BaseInvoker
 }

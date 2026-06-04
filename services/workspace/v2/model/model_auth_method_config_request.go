@@ -25,6 +25,9 @@ type AuthMethodConfigRequest struct {
 	EmergencyLoginMode *string `json:"emergency_login_mode,omitempty"`
 
 	Saml2AuthConfig *Saml2AuthConfig `json:"saml2_auth_config,omitempty"`
+
+	// 短信验证码登录开关。
+	SmsLoginEnabled *bool `json:"sms_login_enabled,omitempty"`
 }
 
 func (o AuthMethodConfigRequest) String() string {

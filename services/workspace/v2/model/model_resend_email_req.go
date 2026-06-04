@@ -10,6 +10,9 @@ type ResendEmailReq struct {
 
 	// 邮件模板ID。
 	TemplateId *string `json:"template_id,omitempty"`
+
+	// 短信模板ID。
+	PhoneTemplateId *string `json:"phone_template_id,omitempty"`
 }
 
 func (o ResendEmailReq) String() string {

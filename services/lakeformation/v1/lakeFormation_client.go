@@ -357,6 +357,27 @@ func (c *LakeFormationClient) ShowAgencyInvoker(request *model.ShowAgencyRequest
 	return &ShowAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAgencyCredential 查询委托凭据
+//
+// 查询委托凭据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) ShowAgencyCredential(request *model.ShowAgencyCredentialRequest) (*model.ShowAgencyCredentialResponse, error) {
+	requestDef := GenReqDefForShowAgencyCredential()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAgencyCredentialResponse), nil
+	}
+}
+
+// ShowAgencyCredentialInvoker 查询委托凭据
+func (c *LakeFormationClient) ShowAgencyCredentialInvoker(request *model.ShowAgencyCredentialRequest) *ShowAgencyCredentialInvoker {
+	requestDef := GenReqDefForShowAgencyCredential()
+	return &ShowAgencyCredentialInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCatalog 创建catalog
 //
 // 创建catalog，会在catalog下创建默认数据库，默认数据库名称为：default
@@ -507,7 +528,7 @@ func (c *LakeFormationClient) ShowCredentialInvoker(request *model.ShowCredentia
 
 // CreateDatabase 创建数据库
 //
-// 创建数据库
+// 创建数据库。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *LakeFormationClient) CreateDatabase(request *model.CreateDatabaseRequest) (*model.CreateDatabaseResponse, error) {
@@ -529,8 +550,8 @@ func (c *LakeFormationClient) CreateDatabaseInvoker(request *model.CreateDatabas
 // DeleteDatabase 删除数据库
 //
 // 删除指定数据库，catalog的默认数据库不允许删除。
-// cascade: 指定为true时，删除数据库下的表；指定为false时，只能删除空的数据库
-// delete_data: 指定为true时，级联删除会将表的数据放入回收站；指定为false时，不删除表数据
+// cascade: 指定为true时，删除数据库下的表；指定为false时，只能删除空的数据库。
+// delete_data: 指定为true时，级联删除会将表的数据放入回收站；指定为false时，不删除表数据。
 // 删除数据库后不支持恢复数据库下的事务表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -573,7 +594,7 @@ func (c *LakeFormationClient) ListDatabaseNamesInvoker(request *model.ListDataba
 
 // ListDatabases 列举数据库信息
 //
-// 列举数据库信息
+// 列举数据库信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *LakeFormationClient) ListDatabases(request *model.ListDatabasesRequest) (*model.ListDatabasesResponse, error) {
@@ -594,7 +615,7 @@ func (c *LakeFormationClient) ListDatabasesInvoker(request *model.ListDatabasesR
 
 // ShowDatabase 获取数据库
 //
-// 获取数据库
+// 获取数据库。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *LakeFormationClient) ShowDatabase(request *model.ShowDatabaseRequest) (*model.ShowDatabaseResponse, error) {
@@ -1631,7 +1652,7 @@ func (c *LakeFormationClient) ListSpecsInvoker(request *model.ListSpecsRequest) 
 
 // CreateTable 创建表
 //
-// 创建表操作
+// 创建表操作。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *LakeFormationClient) CreateTable(request *model.CreateTableRequest) (*model.CreateTableResponse, error) {
@@ -1673,7 +1694,7 @@ func (c *LakeFormationClient) DeleteAllTablesInvoker(request *model.DeleteAllTab
 
 // DeleteTable 删除表
 //
-// 删除表及表下的分区
+// 删除表及表下的分区。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *LakeFormationClient) DeleteTable(request *model.DeleteTableRequest) (*model.DeleteTableResponse, error) {
@@ -1736,9 +1757,9 @@ func (c *LakeFormationClient) ListTableNamesInvoker(request *model.ListTableName
 
 // ListTables 根据条件分页列举表信息
 //
-// 返回数据库下符合查询条件的表的元数据信息，不支持事务操作
-// 当表名通配符或表类型不为空时，优先根据表名和类型筛选过滤
-// 当表名通配符或表类型为空时，再根据属性筛选过滤
+// 返回数据库下符合查询条件的表的元数据信息，不支持事务操作。
+// 当表名通配符或表类型不为空时，优先根据表名和类型筛选过滤。
+// 当表名通配符或表类型为空时，再根据属性筛选过滤。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *LakeFormationClient) ListTables(request *model.ListTablesRequest) (*model.ListTablesResponse, error) {
@@ -1780,7 +1801,7 @@ func (c *LakeFormationClient) ListTablesByNameInvoker(request *model.ListTablesB
 
 // ShowTable 获取表信息
 //
-// 获取表信息
+// 获取表信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *LakeFormationClient) ShowTable(request *model.ShowTableRequest) (*model.ShowTableResponse, error) {
@@ -1801,7 +1822,7 @@ func (c *LakeFormationClient) ShowTableInvoker(request *model.ShowTableRequest) 
 
 // UpdateTable 修改表信息
 //
-// 修改表信息
+// 修改表信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *LakeFormationClient) UpdateTable(request *model.UpdateTableRequest) (*model.UpdateTableResponse, error) {

@@ -2789,6 +2789,22 @@ func (i *UpdateIncreBackupPolicy1Invoker) Invoke() (*model.UpdateIncreBackupPoli
 	}
 }
 
+type UpdateInstanceAliasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstanceAliasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInstanceAliasInvoker) Invoke() (*model.UpdateInstanceAliasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceAliasResponse), nil
+	}
+}
+
 type UpdateInstanceConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2850,22 +2866,6 @@ func (i *UpdatePortInvoker) Invoke() (*model.UpdatePortResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdatePortResponse), nil
-	}
-}
-
-type UpdatePostgresqlInstanceAliasInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdatePostgresqlInstanceAliasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdatePostgresqlInstanceAliasInvoker) Invoke() (*model.UpdatePostgresqlInstanceAliasResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdatePostgresqlInstanceAliasResponse), nil
 	}
 }
 

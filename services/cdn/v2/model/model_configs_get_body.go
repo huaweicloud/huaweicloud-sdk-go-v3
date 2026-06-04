@@ -102,6 +102,8 @@ type ConfigsGetBody struct {
 	AccessAreaFilter *[]AccessAreaFilter `json:"access_area_filter,omitempty"`
 
 	ClientCert *ClientCert `json:"client_cert,omitempty"`
+
+	HttpsTlsVersion *HttpsTlsVersion `json:"https_tls_version,omitempty"`
 }
 
 func (o ConfigsGetBody) String() string {

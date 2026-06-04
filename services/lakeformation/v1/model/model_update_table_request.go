@@ -9,16 +9,16 @@ import (
 // UpdateTableRequest Request Object
 type UpdateTableRequest struct {
 
-	// 实例Id
+	// LakeFormation实例ID。创建实例时自动生成。例如：2180518f-42b8-4947-b20b-adfc53981a25。
 	InstanceId string `json:"instance_id"`
 
-	// catalog名字
+	// catalog名称。只能包含字母、数字和下划线，且长度为1~256个字符。
 	CatalogName string `json:"catalog_name"`
 
-	// 数据库名字
+	// 数据库名称。只能包含中文、字母、数字、下划线、中划线，且长度为1~128个字符。
 	DatabaseName string `json:"database_name"`
 
-	// 表名称
+	// 表名称。只能包含中文、字母、数字、下划线、中划线，且长度为1~256个字符。
 	TableName string `json:"table_name"`
 
 	Body *AlterTableInput `json:"body,omitempty"`

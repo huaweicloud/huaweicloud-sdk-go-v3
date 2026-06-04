@@ -3682,6 +3682,27 @@ func (c *RdsClient) UpdateIncreBackupPolicy1Invoker(request *model.UpdateIncreBa
 	return &UpdateIncreBackupPolicy1Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateInstanceAlias 修改实例备注信息
+//
+// 修改指定数据库实例的备注信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) UpdateInstanceAlias(request *model.UpdateInstanceAliasRequest) (*model.UpdateInstanceAliasResponse, error) {
+	requestDef := GenReqDefForUpdateInstanceAlias()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstanceAliasResponse), nil
+	}
+}
+
+// UpdateInstanceAliasInvoker 修改实例备注信息
+func (c *RdsClient) UpdateInstanceAliasInvoker(request *model.UpdateInstanceAliasRequest) *UpdateInstanceAliasInvoker {
+	requestDef := GenReqDefForUpdateInstanceAlias()
+	return &UpdateInstanceAliasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateInstanceConfiguration 修改指定实例的参数
 //
 // 修改指定实例的参数。
@@ -3764,27 +3785,6 @@ func (c *RdsClient) UpdatePort(request *model.UpdatePortRequest) (*model.UpdateP
 func (c *RdsClient) UpdatePortInvoker(request *model.UpdatePortRequest) *UpdatePortInvoker {
 	requestDef := GenReqDefForUpdatePort()
 	return &UpdatePortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdatePostgresqlInstanceAlias 修改实例备注信息
-//
-// 修改指定数据库实例的备注信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *RdsClient) UpdatePostgresqlInstanceAlias(request *model.UpdatePostgresqlInstanceAliasRequest) (*model.UpdatePostgresqlInstanceAliasResponse, error) {
-	requestDef := GenReqDefForUpdatePostgresqlInstanceAlias()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdatePostgresqlInstanceAliasResponse), nil
-	}
-}
-
-// UpdatePostgresqlInstanceAliasInvoker 修改实例备注信息
-func (c *RdsClient) UpdatePostgresqlInstanceAliasInvoker(request *model.UpdatePostgresqlInstanceAliasRequest) *UpdatePostgresqlInstanceAliasInvoker {
-	requestDef := GenReqDefForUpdatePostgresqlInstanceAlias()
-	return &UpdatePostgresqlInstanceAliasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSqlLimit 修改SQL限流

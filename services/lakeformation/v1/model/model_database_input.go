@@ -9,35 +9,47 @@ import (
 	"strings"
 )
 
-// DatabaseInput 数据库信息
+// DatabaseInput 数据库信息。
 type DatabaseInput struct {
 
-	// 数据库名称。只能包含中文、字母、数字和下划线，且长度为1~128个字符。
+	// 数据库名称。只能包含中文、字母、数字、下划线、中划线，且长度为1~128个字符。
 	DatabaseName string `json:"database_name"`
+
+	// 用户端数据库id，创建时指定，不可修改。
+	ExternalDatabaseId *string `json:"external_database_id,omitempty"`
 
 	// 数据库所有者。长度为0~128个字符。
 	Owner *string `json:"owner,omitempty"`
 
-	// 所有者类型,USER-用户,GROUP-组,ROLE-角色。LakeFormation服务分为一期和二期，一期响应Body无该参数。
+	// 所有者类型：USER-用户、GROUP-组、ROLE-角色。LakeFormation服务分为一期和二期，一期响应Body无该参数。
 	OwnerType *DatabaseInputOwnerType `json:"owner_type,omitempty"`
 
-	// 所有者来源,IAM-云用户,SAML-联邦,LDAP-ld用户,LOCAL-本地用户,AGENTTENANT-委托,OTHER-其它。LakeFormation服务分为一期和二期，一期响应Body无该参数。
+	// 所有者来源：IAM-云用户、SAML-联邦、LDAP-ld用户、LOCAL-本地用户、AGENTTENANT-委托、OTHER-其它。LakeFormation服务分为一期和二期，一期响应Body无该参数。
 	OwnerAuthSourceType *DatabaseInputOwnerAuthSourceType `json:"owner_auth_source_type,omitempty"`
 
 	// 数据库描述信息。由用户创建数据库时输入，最大长度为4000个字符。
 	Description *string `json:"description,omitempty"`
 
-	// 数据库路径地址。例如obs://location/uri/
+	// 数据库路径地址。例如obs://location/uri/。
 	Location *string `json:"location,omitempty"`
 
-	// 标签信息
+	// 标签信息。
 	Parameters map[string]string `json:"parameters,omitempty"`
 
-	// 表路径列表
+	// 表路径列表。
 	TableLocationList *[]string `json:"table_location_list,omitempty"`
 
-	// 函数路径列表
+	// 函数路径列表。
 	FunctionLocationList *[]string `json:"function_location_list,omitempty"`
+
+	// 数据概况统计开关。默认状态为关，若要开启database下table的数据概况统计，需要先打开database的数据概况开关
+	DataStatisticEnable *bool `json:"data_statistic_enable,omitempty"`
+
+	// 连接名称
+	ConnectionName *string `json:"connection_name,omitempty"`
+
+	// 数据库类型：MANAGED_DATABASE内置数据库、FOREIGN_DATABASE外置数据库。
+	DatabaseType *DatabaseInputDatabaseType `json:"database_type,omitempty"`
 }
 
 func (o DatabaseInput) String() string {
@@ -145,6 +157,53 @@ func (c DatabaseInputOwnerAuthSourceType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *DatabaseInputOwnerAuthSourceType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type DatabaseInputDatabaseType struct {
+	value string
+}
+
+type DatabaseInputDatabaseTypeEnum struct {
+	MANAGED_DATABASE DatabaseInputDatabaseType
+	FOREIGN_DATABASE DatabaseInputDatabaseType
+}
+
+func GetDatabaseInputDatabaseTypeEnum() DatabaseInputDatabaseTypeEnum {
+	return DatabaseInputDatabaseTypeEnum{
+		MANAGED_DATABASE: DatabaseInputDatabaseType{
+			value: "MANAGED_DATABASE",
+		},
+		FOREIGN_DATABASE: DatabaseInputDatabaseType{
+			value: "FOREIGN_DATABASE",
+		},
+	}
+}
+
+func (c DatabaseInputDatabaseType) Value() string {
+	return c.value
+}
+
+func (c DatabaseInputDatabaseType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *DatabaseInputDatabaseType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

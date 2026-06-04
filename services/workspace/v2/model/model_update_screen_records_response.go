@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// UpdateFullSpeedRecordConfigResponse Response Object
-type UpdateFullSpeedRecordConfigResponse struct {
+// UpdateScreenRecordsResponse Response Object
+type UpdateScreenRecordsResponse struct {
 
 	// 结果码
 	ResultCode *string `json:"result_code,omitempty"`
@@ -17,11 +17,11 @@ type UpdateFullSpeedRecordConfigResponse struct {
 	HttpStatusCode int     `json:"-"`
 }
 
-func (o UpdateFullSpeedRecordConfigResponse) String() string {
+func (o UpdateScreenRecordsResponse) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "UpdateFullSpeedRecordConfigResponse struct{}"
+		return "UpdateScreenRecordsResponse struct{}"
 	}
 
-	return strings.Join([]string{"UpdateFullSpeedRecordConfigResponse", string(data)}, " ")
+	return strings.Join([]string{"UpdateScreenRecordsResponse", string(data)}, " ")
 }

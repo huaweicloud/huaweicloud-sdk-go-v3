@@ -968,6 +968,26 @@ func GenReqDefForUpdateAssistAuthMethodConfig() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForUpdateAuthConfig() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/{project_id}/auth-configs/{auth_config_id}").
+		WithResponse(new(model.UpdateAuthConfigResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AuthConfigId").
+		WithJsonTag("auth_config_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateAuthMethodConfig() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -5333,11 +5353,11 @@ func GenReqDefForShowScreenRecord() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForUpdateFullSpeedRecordConfig() *def.HttpRequestDef {
+func GenReqDefForUpdateScreenRecords() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v2/{project_id}/screen-records/{record_id}").
-		WithResponse(new(model.UpdateFullSpeedRecordConfigResponse)).
+		WithResponse(new(model.UpdateScreenRecordsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

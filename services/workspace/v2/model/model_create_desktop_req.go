@@ -59,6 +59,9 @@ type CreateDesktopReq struct {
 	// 企业项目ID，默认\"0。\"
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
 
+	// OU名称，在对接AD时使用，需提前在AD中创建OU。
+	OuName *string `json:"ou_name,omitempty"`
+
 	// 标签列表。
 	Tags *[]Tag `json:"tags,omitempty"`
 
