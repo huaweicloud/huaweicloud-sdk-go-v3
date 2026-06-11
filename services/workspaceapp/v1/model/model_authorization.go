@@ -37,7 +37,7 @@ type Authorization struct {
 
 	PlatformType *PlatformTypeEnum `json:"platform_type,omitempty"`
 
-	// 域名城。
+	// 域名称。
 	Domain *string `json:"domain,omitempty"`
 
 	// 发布时间。

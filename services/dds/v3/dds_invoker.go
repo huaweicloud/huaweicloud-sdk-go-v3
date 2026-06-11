@@ -85,6 +85,22 @@ func (i *BatchDeleteBackupInvoker) Invoke() (*model.BatchDeleteBackupResponse, e
 	}
 }
 
+type BatchDeleteShardsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteShardsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteShardsInvoker) Invoke() (*model.BatchDeleteShardsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteShardsResponse), nil
+	}
+}
+
 type BatchTagActionInvoker struct {
 	*invoker.BaseInvoker
 }

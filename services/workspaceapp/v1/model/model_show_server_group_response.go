@@ -83,7 +83,7 @@ type ShowServerGroupResponse struct {
 	// 镜像名称。
 	ImageName *string `json:"image_name,omitempty"`
 
-	ProductInfo *ProductInfo `json:"product_info,omitempty"`
+	ProductInfo *ServerProductInfo `json:"product_info,omitempty"`
 
 	// 子网名称。
 	SubnetName *string `json:"subnet_name,omitempty"`
@@ -105,7 +105,7 @@ type ShowServerGroupResponse struct {
 	// 镜像运行的最小内存，单位为MB，默认设置为0。
 	ImageMinDisk *int32 `json:"image_min_disk,omitempty"`
 
-	RoutePolicy *RoutePolicy `json:"route_policy,omitempty"`
+	RoutePolicy *RoutePolicyDetail `json:"route_policy,omitempty"`
 
 	// 镜像的产品id。
 	ImageProductId *string `json:"image_product_id,omitempty"`

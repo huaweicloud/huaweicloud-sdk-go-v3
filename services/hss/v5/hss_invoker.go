@@ -613,6 +613,38 @@ func (i *ListAgentInstallScriptInvoker) Invoke() (*model.ListAgentInstallScriptR
 	}
 }
 
+type ListAiComponentDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAiComponentDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAiComponentDetailInvoker) Invoke() (*model.ListAiComponentDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAiComponentDetailResponse), nil
+	}
+}
+
+type ListAiComponentStatisticsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAiComponentStatisticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAiComponentStatisticsInvoker) Invoke() (*model.ListAiComponentStatisticsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAiComponentStatisticsResponse), nil
+	}
+}
+
 type ListAlarmWhiteListInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3061,22 +3093,6 @@ func (i *ValidateAdminInvoker) Invoke() (*model.ValidateAdminResponse, error) {
 	}
 }
 
-type ListAgentStatusInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListAgentStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListAgentStatusInvoker) Invoke() (*model.ListAgentStatusResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListAgentStatusResponse), nil
-	}
-}
-
 type ChangeAntivirusPayPerScanStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3618,38 +3634,6 @@ func (i *SwitchAppWhitelistPolicyLearnStatusInvoker) Invoke() (*model.SwitchAppW
 		return nil, err
 	} else {
 		return result.(*model.SwitchAppWhitelistPolicyLearnStatusResponse), nil
-	}
-}
-
-type ListAiComponentDetailInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListAiComponentDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListAiComponentDetailInvoker) Invoke() (*model.ListAiComponentDetailResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListAiComponentDetailResponse), nil
-	}
-}
-
-type ListAiComponentStatisticsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListAiComponentStatisticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListAiComponentStatisticsInvoker) Invoke() (*model.ListAiComponentStatisticsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListAiComponentStatisticsResponse), nil
 	}
 }
 
@@ -5202,6 +5186,22 @@ func (i *DeleteHostsGroupInvoker) Invoke() (*model.DeleteHostsGroupResponse, err
 		return nil, err
 	} else {
 		return result.(*model.DeleteHostsGroupResponse), nil
+	}
+}
+
+type ListAgentStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAgentStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAgentStatusInvoker) Invoke() (*model.ListAgentStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAgentStatusResponse), nil
 	}
 }
 

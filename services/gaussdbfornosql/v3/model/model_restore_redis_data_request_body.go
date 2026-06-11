@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// RestoreRedisDataRequestBody 参数解释： 恢复到已有实例的请求body。 约束限制： 不涉及。 取值范围： 不涉及。 默认取值： 不涉及。
+// RestoreRedisDataRequestBody **参数解释：** 恢复到已有实例的请求body。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 type RestoreRedisDataRequestBody struct {
 	RecoveryInfo *RecoveryInfo `json:"recovery_info,omitempty"`
 }

@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// ArrowSchema 定义了Arrow Schema的结构，遵循Apache Arrow标准，包含字段定义和元数据信息。
-type ArrowSchema struct {
+// LanceSchema 定义了Arrow Schema的结构，遵循Apache Arrow标准，包含字段定义和元数据信息。
+type LanceSchema struct {
 
 	// Arrow字段列表，定义表的所有列及其类型信息。
 	Fields []ArrowField `json:"fields"`
@@ -16,11 +16,11 @@ type ArrowSchema struct {
 	Metadata map[string]string `json:"metadata,omitempty"`
 }
 
-func (o ArrowSchema) String() string {
+func (o LanceSchema) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "ArrowSchema struct{}"
+		return "LanceSchema struct{}"
 	}
 
-	return strings.Join([]string{"ArrowSchema", string(data)}, " ")
+	return strings.Join([]string{"LanceSchema", string(data)}, " ")
 }

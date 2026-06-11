@@ -9,10 +9,10 @@ import (
 // ShowDisasterRecoverySettingsResponse Response Object
 type ShowDisasterRecoverySettingsResponse struct {
 
-	// 容灾切换的故障节点比例列表。
-	DisasterRecoverySettings *[]SwitchoverRatioInfo `json:"disaster_recovery_settings,omitempty"`
+	// **参数解释：** 容灾切换的故障节点比例列表。 **取值范围：** 不涉及。
+	DisasterRecoverySettings *[]QuerySwitchoverRatioInfo `json:"disaster_recovery_settings,omitempty"`
 
-	// 总记录数。
+	// **参数解释：** 参数修改历史记录总条数。 **取值范围：** 不涉及。
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

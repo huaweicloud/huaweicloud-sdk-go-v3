@@ -8,7 +8,7 @@ import (
 
 // CreateLanceTableInput Lance表格式结构体
 type CreateLanceTableInput struct {
-	Schema *ArrowSchema `json:"schema,omitempty"`
+	Schema *LanceSchema `json:"schema,omitempty"`
 }
 
 func (o CreateLanceTableInput) String() string {

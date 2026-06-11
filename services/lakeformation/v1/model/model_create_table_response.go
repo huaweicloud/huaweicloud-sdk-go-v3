@@ -49,6 +49,9 @@ type CreateTableResponse struct {
 
 	StorageDescriptor *StorageDescriptor `json:"storage_descriptor,omitempty"`
 
+	// 表格式,支持HIVE,ICEBERG,LANCE
+	TableFormat *CreateTableResponseTableFormat `json:"table_format,omitempty"`
+
 	// 表类型
 	TableType *CreateTableResponseTableType `json:"table_type,omitempty"`
 
@@ -105,6 +108,57 @@ func (c CreateTableResponseOwnerType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateTableResponseOwnerType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateTableResponseTableFormat struct {
+	value string
+}
+
+type CreateTableResponseTableFormatEnum struct {
+	HIVE    CreateTableResponseTableFormat
+	ICEBERG CreateTableResponseTableFormat
+	LANCE   CreateTableResponseTableFormat
+}
+
+func GetCreateTableResponseTableFormatEnum() CreateTableResponseTableFormatEnum {
+	return CreateTableResponseTableFormatEnum{
+		HIVE: CreateTableResponseTableFormat{
+			value: "HIVE",
+		},
+		ICEBERG: CreateTableResponseTableFormat{
+			value: "ICEBERG",
+		},
+		LANCE: CreateTableResponseTableFormat{
+			value: "LANCE",
+		},
+	}
+}
+
+func (c CreateTableResponseTableFormat) Value() string {
+	return c.value
+}
+
+func (c CreateTableResponseTableFormat) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateTableResponseTableFormat) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

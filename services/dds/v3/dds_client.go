@@ -124,6 +124,27 @@ func (c *DdsClient) BatchDeleteBackupInvoker(request *model.BatchDeleteBackupReq
 	return &BatchDeleteBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteShards 删除分片
+//
+// 删除分片
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DdsClient) BatchDeleteShards(request *model.BatchDeleteShardsRequest) (*model.BatchDeleteShardsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteShards()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteShardsResponse), nil
+	}
+}
+
+// BatchDeleteShardsInvoker 删除分片
+func (c *DdsClient) BatchDeleteShardsInvoker(request *model.BatchDeleteShardsRequest) *BatchDeleteShardsInvoker {
+	requestDef := GenReqDefForBatchDeleteShards()
+	return &BatchDeleteShardsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchTagAction 批量添加或删除资源标签
 //
 // 批量添加或删除指定实例的标签。

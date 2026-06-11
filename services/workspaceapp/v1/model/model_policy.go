@@ -12,7 +12,7 @@ type Policy struct {
 	// 版本号。
 	Version *string `json:"version,omitempty"`
 
-	Statement *PolicyStatement `json:"statement,omitempty"`
+	Statement *AuthorizeObsPolicyStatement `json:"statement,omitempty"`
 }
 
 func (o Policy) String() string {

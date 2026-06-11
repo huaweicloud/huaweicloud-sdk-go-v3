@@ -8,10 +8,16 @@ import (
 
 type AlterTableInput struct {
 
-	// 修改表参数映射信息，支持的参数如下： CASADE: 级联删除列，如果为true则会把partition中的列也删除；如果为false则不会 DO_NOT_UPDATE_STATS: 不更新文件级别统计信息。true则不更新；false则更新。 STATS_GENERATED：记录本次更新的发起者。可填：TASK/USET。具体作用未明确。
+	// 修改表参数映射信息，支持的参数如下： CASCADE: 级联删除列，如果为true则会把partition中的列也删除；如果为false则不会 DO_NOT_UPDATE_STATS: 不更新文件级别统计信息。true则不更新；false则更新。 STATS_GENERATED：记录本次更新的发起者。可填：TASK/UNSET。具体作用未明确。
 	AlterParams map[string]string `json:"alter_params,omitempty"`
 
-	Table *TableInput `json:"table"`
+	// 版本ID
+	VersionId *string `json:"version_id,omitempty"`
+
+	Table *UpdateTableInput `json:"table"`
+
+	// 是否异步修改，默认为false。
+	IsAsync *bool `json:"is_async,omitempty"`
 }
 
 func (o AlterTableInput) String() string {

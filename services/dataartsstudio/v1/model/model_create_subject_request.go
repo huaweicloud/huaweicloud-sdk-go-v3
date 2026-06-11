@@ -18,7 +18,7 @@ type CreateSubjectRequest struct {
 	// 默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
 	ContentType *string `json:"Content-Type,omitempty"`
 
-	Body *CatalogVo `json:"body,omitempty"`
+	Body *CatalogParamsVo `json:"body,omitempty"`
 }
 
 func (o CreateSubjectRequest) String() string {

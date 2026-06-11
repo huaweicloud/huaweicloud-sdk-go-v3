@@ -63,7 +63,7 @@ func (c *WorkspaceAppClient) BatchDeleteWarehouseAppInvoker(request *model.Batch
 
 // BindAppWarehouseBucket 添加用户应用仓库桶及桶授权
 //
-// 添加用户应用仓库桶及桶授权。
+// 添加用户应用仓库桶及桶授权，用于租户自定义桶。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) BindAppWarehouseBucket(request *model.BindAppWarehouseBucketRequest) (*model.BindAppWarehouseBucketResponse, error) {
@@ -480,6 +480,27 @@ func (c *WorkspaceAppClient) UploadAppIcon(request *model.UploadAppIconRequest) 
 func (c *WorkspaceAppClient) UploadAppIconInvoker(request *model.UploadAppIconRequest) *UploadAppIconInvoker {
 	requestDef := GenReqDefForUploadAppIcon()
 	return &UploadAppIconInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadAppIconRaw 修改自定义应用图标
+//
+// 修改自定义应用图标。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceAppClient) UploadAppIconRaw(request *model.UploadAppIconRawRequest) (*model.UploadAppIconRawResponse, error) {
+	requestDef := GenReqDefForUploadAppIconRaw()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadAppIconRawResponse), nil
+	}
+}
+
+// UploadAppIconRawInvoker 修改自定义应用图标
+func (c *WorkspaceAppClient) UploadAppIconRawInvoker(request *model.UploadAppIconRawRequest) *UploadAppIconRawInvoker {
+	requestDef := GenReqDefForUploadAppIconRaw()
+	return &UploadAppIconRawInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // InitializeTenant 租户服务激活、初始化
@@ -928,7 +949,7 @@ func (c *WorkspaceAppClient) BatchDeleteCloudStorageInvoker(request *model.Batch
 
 // ChangeCluster 切换文件夹归属集群
 //
-// 切换文件夹归属集群，文件系统在切换
+// 切换文件夹归属集群，该操作需要sfs先操作文件系统切换后调用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ChangeCluster(request *model.ChangeClusterRequest) (*model.ChangeClusterResponse, error) {
@@ -970,7 +991,7 @@ func (c *WorkspaceAppClient) CreateCloudStorageInvoker(request *model.CreateClou
 
 // CreateUserFolderAssignment 创建个人文件夹
 //
-// 创建个人文件夹，已存在对应目录时，仅更新策略不会重复创建目录。
+// 创建个人文件夹并创建对应文件系统，已存在对应目录时，仅更新策略不会重复创建目录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) CreateUserFolderAssignment(request *model.CreateUserFolderAssignmentRequest) (*model.CreateUserFolderAssignmentResponse, error) {
@@ -991,7 +1012,7 @@ func (c *WorkspaceAppClient) CreateUserFolderAssignmentInvoker(request *model.Cr
 
 // DeleteCloudStorage 删除云存储
 //
-// 删除共享存储，只会解除NAS与项目配置之间的关联关系。
+// 删除共享存储，只会解除NAS与项目配置之间的关联关系
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) DeleteCloudStorage(request *model.DeleteCloudStorageRequest) (*model.DeleteCloudStorageResponse, error) {
@@ -1012,7 +1033,7 @@ func (c *WorkspaceAppClient) DeleteCloudStorageInvoker(request *model.DeleteClou
 
 // DeleteCloudStorageAttachment 删除个人文件夹
 //
-// 删除个人存储目录，个人目录中的数据也将永久删除且无法恢复。
+// 删除个人存储目录，对应文件系统也将删除，个人目录中的数据也将永久删除且无法恢复。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) DeleteCloudStorageAttachment(request *model.DeleteCloudStorageAttachmentRequest) (*model.DeleteCloudStorageAttachmentResponse, error) {
@@ -1117,7 +1138,7 @@ func (c *WorkspaceAppClient) ListProjectConfigsInvoker(request *model.ListProjec
 
 // ResetUserProfile 重置userprofile
 //
-// 重置userprofile，初始化或重置并备份userprofile。
+// 重置userprofile，初始化或重置并备份userprofile，输入ori_name时将ori_name备份重置到AppData目录，不输入时为初始化重置
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) ResetUserProfile(request *model.ResetUserProfileRequest) (*model.ResetUserProfileResponse, error) {
@@ -1159,7 +1180,7 @@ func (c *WorkspaceAppClient) ShowProjectConfigInvoker(request *model.ShowProject
 
 // TransferFile 文件流转
 //
-// 云存储文件流转与分享
+// 云存储文件流转与分享，根据不同的transfer_type实现个人文件上传到共享文件夹，从共享文件夹拉取文件到个人文件夹。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) TransferFile(request *model.TransferFileRequest) (*model.TransferFileResponse, error) {
@@ -1180,7 +1201,7 @@ func (c *WorkspaceAppClient) TransferFileInvoker(request *model.TransferFileRequ
 
 // TransferFilePre 文件预流转
 //
-// 文件预流转，在接收方接收文件前返回可用的文件路径
+// 文件预流转，在接收方接收文件前返回可用的文件路径，如果接收方不存在当前获取文件的同名文件，则不修改返回，否则返回新的可用的文件名。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) TransferFilePre(request *model.TransferFilePreRequest) (*model.TransferFilePreResponse, error) {
@@ -1201,7 +1222,7 @@ func (c *WorkspaceAppClient) TransferFilePreInvoker(request *model.TransferFileP
 
 // UpdateCloudUserFolderAssignment 修改个人文件夹
 //
-// 创建个人文件夹。
+// 修改个人文件夹。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) UpdateCloudUserFolderAssignment(request *model.UpdateCloudUserFolderAssignmentRequest) (*model.UpdateCloudUserFolderAssignmentResponse, error) {
@@ -1306,7 +1327,7 @@ func (c *WorkspaceAppClient) UpdateHotspotSessionConfigInvoker(request *model.Up
 
 // UpdateNonMigrationUsers 修改热点会话不迁移用户
 //
-// 修改热点会话不迁移用户, 在对热点绘画迁移用户新增时如已存在该用户，则进行覆盖添加，在删除用户时如果不存在用户，则进行忽略。
+// 修改热点会话不迁移用户, 在对热点会话迁移用户新增时如已存在该用户，则进行覆盖添加，在删除用户时如果不存在用户，则进行忽略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *WorkspaceAppClient) UpdateNonMigrationUsers(request *model.UpdateNonMigrationUsersRequest) (*model.UpdateNonMigrationUsersResponse, error) {

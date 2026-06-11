@@ -15,7 +15,7 @@ type UpdateServerGroupReq struct {
 	// 服务器组描述。
 	Description *string `json:"description,omitempty"`
 
-	RoutePolicy *RoutePolicy `json:"route_policy,omitempty"`
+	RoutePolicy *RoutePolicyDetail `json:"route_policy,omitempty"`
 
 	StorageMountPolicy *StorageFolderMountType `json:"storage_mount_policy,omitempty"`
 

@@ -11,7 +11,7 @@ import (
 type CatalogVo struct {
 
 	// 中文名称。
-	NameCh *string `json:"name_ch,omitempty"`
+	NameCh string `json:"name_ch"`
 
 	// 英文名称。
 	NameEn *string `json:"name_en,omitempty"`
@@ -19,7 +19,7 @@ type CatalogVo struct {
 	// 描述信息。
 	Description *string `json:"description,omitempty"`
 
-	// 扩展名。
+	// 对象标识。
 	QualifiedName *string `json:"qualified_name,omitempty"`
 
 	// guid，自动生成。
@@ -33,13 +33,15 @@ type CatalogVo struct {
 
 	Status *BizStatusEnum `json:"status,omitempty"`
 
+	Permission *int32 `json:"permission,omitempty"`
+
 	NewBiz *BizVersionManageVo `json:"new_biz,omitempty"`
 
-	// 数据所有者。
+	// 数据owner。
 	DataOwner *string `json:"data_owner,omitempty"`
 
 	// 数据所有者集合。
-	DataOwnerList *string `json:"data_owner_list,omitempty"`
+	DataOwnerList string `json:"data_owner_list"`
 
 	// 数据域。
 	DataDepartment *string `json:"data_department,omitempty"`
@@ -48,36 +50,33 @@ type CatalogVo struct {
 	Path *string `json:"path,omitempty"`
 
 	// 层级信息。
-	Level *int32 `json:"level,omitempty"`
+	Level int32 `json:"level"`
 
 	// 序号。
 	Ordinal *int32 `json:"ordinal,omitempty"`
 
-	// 责任人。
+	// 责任人
 	Owner *string `json:"owner,omitempty"`
 
 	// 父目录ID，木有则为根目录，ID字符串。
-	ParentId *string `json:"parent_id,omitempty"`
+	ParentId *int64 `json:"parent_id,omitempty"`
 
 	// 同层排序，目标节点的ID，ID字符串。
-	SwapOrderId *string `json:"swap_order_id,omitempty"`
+	SwapOrderId *int64 `json:"swap_order_id,omitempty"`
 
 	// 主题ID，ID字符串。
 	Id *string `json:"id,omitempty"`
 
-	// 认证ID，自动生成。
+	// 认证ID，自动生成
 	QualifiedId *string `json:"qualified_id,omitempty"`
 
-	// 是否来自公共层。
-	FromPublic *bool `json:"from_public,omitempty"`
-
-	// 创建人。
+	// 创建人
 	CreateBy *string `json:"create_by,omitempty"`
 
-	// 更新人。
+	// 更新人
 	UpdateBy *string `json:"update_by,omitempty"`
 
-	// 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+	// 创建时间
 	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
 
 	// 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
@@ -91,6 +90,9 @@ type CatalogVo struct {
 
 	// 属性自定义项。
 	SelfDefinedFields *[]SelfDefinedFieldVo `json:"self_defined_fields,omitempty"`
+
+	// 关系
+	Relations *[]RelationVo `json:"relations,omitempty"`
 }
 
 func (o CatalogVo) String() string {

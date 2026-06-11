@@ -6,19 +6,20 @@ import (
 	"strings"
 )
 
-// ArrowField 定义了Arrow Field的结构，遵循Apache Arrow标准。
+// ArrowField Arrow Schema中的字段定义，包含字段名、类型、是否可空及元数据。
 type ArrowField struct {
 
 	// 字段名称。
 	Name string `json:"name"`
 
-	// 字段是否可为空。
-	Nullable bool `json:"nullable"`
+	Type *ArrowType `json:"type"`
 
-	// 字段类型。
-	Type string `json:"type"`
+	// 字段是否允许为null。
+	Nullable *bool `json:"nullable,omitempty"`
 
-	// 子字段列表（用于嵌套类型）。
+	// 字段的元数据信息。
+	Metadata map[string]string `json:"metadata,omitempty"`
+
 	Children *[]ArrowField `json:"children,omitempty"`
 }
 

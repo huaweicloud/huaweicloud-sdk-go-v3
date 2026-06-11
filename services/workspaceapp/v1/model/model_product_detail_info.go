@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-type ProductInfo struct {
+type ProductDetailInfo struct {
 
 	// 产品id。
 	ProductId *string `json:"product_id,omitempty"`
@@ -88,11 +88,11 @@ type ProductInfo struct {
 	SupportGpuType *string `json:"support_gpu_type,omitempty"`
 }
 
-func (o ProductInfo) String() string {
+func (o ProductDetailInfo) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "ProductInfo struct{}"
+		return "ProductDetailInfo struct{}"
 	}
 
-	return strings.Join([]string{"ProductInfo", string(data)}, " ")
+	return strings.Join([]string{"ProductDetailInfo", string(data)}, " ")
 }

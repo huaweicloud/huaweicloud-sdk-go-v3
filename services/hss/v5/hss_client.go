@@ -817,6 +817,48 @@ func (c *HssClient) ListAgentInstallScriptInvoker(request *model.ListAgentInstal
 	return &ListAgentInstallScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAiComponentDetail AI组件详细信息
+//
+// 查询AI组件详细信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListAiComponentDetail(request *model.ListAiComponentDetailRequest) (*model.ListAiComponentDetailResponse, error) {
+	requestDef := GenReqDefForListAiComponentDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAiComponentDetailResponse), nil
+	}
+}
+
+// ListAiComponentDetailInvoker AI组件详细信息
+func (c *HssClient) ListAiComponentDetailInvoker(request *model.ListAiComponentDetailRequest) *ListAiComponentDetailInvoker {
+	requestDef := GenReqDefForListAiComponentDetail()
+	return &ListAiComponentDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAiComponentStatistics 查询AI组件统计信息
+//
+// 查询AI组件统计信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListAiComponentStatistics(request *model.ListAiComponentStatisticsRequest) (*model.ListAiComponentStatisticsResponse, error) {
+	requestDef := GenReqDefForListAiComponentStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAiComponentStatisticsResponse), nil
+	}
+}
+
+// ListAiComponentStatisticsInvoker 查询AI组件统计信息
+func (c *HssClient) ListAiComponentStatisticsInvoker(request *model.ListAiComponentStatisticsRequest) *ListAiComponentStatisticsInvoker {
+	requestDef := GenReqDefForListAiComponentStatistics()
+	return &ListAiComponentStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAlarmWhiteList 查询告警白名单列表
 //
 // 查询告警白名单列表。
@@ -2350,9 +2392,9 @@ func (c *HssClient) ListSameEventsInvoker(request *model.ListSameEventsRequest) 
 	return &ListSameEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListSecurityEvents 查入侵事件列表
+// ListSecurityEvents 查询安全告警事件
 //
-// 查入侵事件列表。
+// 查询安全告警事件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ListSecurityEvents(request *model.ListSecurityEventsRequest) (*model.ListSecurityEventsResponse, error) {
@@ -2365,7 +2407,7 @@ func (c *HssClient) ListSecurityEvents(request *model.ListSecurityEventsRequest)
 	}
 }
 
-// ListSecurityEventsInvoker 查入侵事件列表
+// ListSecurityEventsInvoker 查询安全告警事件
 func (c *HssClient) ListSecurityEventsInvoker(request *model.ListSecurityEventsRequest) *ListSecurityEventsInvoker {
 	requestDef := GenReqDefForListSecurityEvents()
 	return &ListSecurityEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -4030,27 +4072,6 @@ func (c *HssClient) ValidateAdminInvoker(request *model.ValidateAdminRequest) *V
 	return &ValidateAdminInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAgentStatus 查询Agent历史状态列表
-//
-// 查询Agent历史状态列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListAgentStatus(request *model.ListAgentStatusRequest) (*model.ListAgentStatusResponse, error) {
-	requestDef := GenReqDefForListAgentStatus()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAgentStatusResponse), nil
-	}
-}
-
-// ListAgentStatusInvoker 查询Agent历史状态列表
-func (c *HssClient) ListAgentStatusInvoker(request *model.ListAgentStatusRequest) *ListAgentStatusInvoker {
-	requestDef := GenReqDefForListAgentStatus()
-	return &ListAgentStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ChangeAntivirusPayPerScanStatus 修改“病毒查杀按次计费”开关状态
 //
 // 修改“病毒查杀按次计费”开关状态。
@@ -4763,48 +4784,6 @@ func (c *HssClient) SwitchAppWhitelistPolicyLearnStatus(request *model.SwitchApp
 func (c *HssClient) SwitchAppWhitelistPolicyLearnStatusInvoker(request *model.SwitchAppWhitelistPolicyLearnStatusRequest) *SwitchAppWhitelistPolicyLearnStatusInvoker {
 	requestDef := GenReqDefForSwitchAppWhitelistPolicyLearnStatus()
 	return &SwitchAppWhitelistPolicyLearnStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListAiComponentDetail AI组件详细信息
-//
-// 查询AI组件详细信息
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListAiComponentDetail(request *model.ListAiComponentDetailRequest) (*model.ListAiComponentDetailResponse, error) {
-	requestDef := GenReqDefForListAiComponentDetail()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAiComponentDetailResponse), nil
-	}
-}
-
-// ListAiComponentDetailInvoker AI组件详细信息
-func (c *HssClient) ListAiComponentDetailInvoker(request *model.ListAiComponentDetailRequest) *ListAiComponentDetailInvoker {
-	requestDef := GenReqDefForListAiComponentDetail()
-	return &ListAiComponentDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListAiComponentStatistics 查询AI组件统计信息
-//
-// 查询AI组件统计信息
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListAiComponentStatistics(request *model.ListAiComponentStatisticsRequest) (*model.ListAiComponentStatisticsResponse, error) {
-	requestDef := GenReqDefForListAiComponentStatistics()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAiComponentStatisticsResponse), nil
-	}
-}
-
-// ListAiComponentStatisticsInvoker 查询AI组件统计信息
-func (c *HssClient) ListAiComponentStatisticsInvoker(request *model.ListAiComponentStatisticsRequest) *ListAiComponentStatisticsInvoker {
-	requestDef := GenReqDefForListAiComponentStatistics()
-	return &ListAiComponentStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AddBaselineWhiteList 新增基线白名单
@@ -6842,6 +6821,27 @@ func (c *HssClient) DeleteHostsGroup(request *model.DeleteHostsGroupRequest) (*m
 func (c *HssClient) DeleteHostsGroupInvoker(request *model.DeleteHostsGroupRequest) *DeleteHostsGroupInvoker {
 	requestDef := GenReqDefForDeleteHostsGroup()
 	return &DeleteHostsGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAgentStatus 查询Agent历史状态列表
+//
+// 查询Agent历史状态列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListAgentStatus(request *model.ListAgentStatusRequest) (*model.ListAgentStatusResponse, error) {
+	requestDef := GenReqDefForListAgentStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAgentStatusResponse), nil
+	}
+}
+
+// ListAgentStatusInvoker 查询Agent历史状态列表
+func (c *HssClient) ListAgentStatusInvoker(request *model.ListAgentStatusRequest) *ListAgentStatusInvoker {
+	requestDef := GenReqDefForListAgentStatus()
+	return &ListAgentStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAutoOpenQuotaStatus 查询“自动绑定配额”配置开关状态

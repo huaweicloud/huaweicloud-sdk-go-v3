@@ -30,6 +30,9 @@ type ListQuotasDetailRequest struct {
 	// **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
 	HostName *string `json:"host_name,omitempty"`
 
+	// **参数解释**: 服务器ID列表 **约束限制**: 不涉及 **取值范围**: 单个服务器ID字符长度1-64位 批量查询服务器ID个数1-100个 采用逗号分割 **默认取值**: 不涉及
+	HostIdList *[]string `json:"host_id_list,omitempty"`
+
 	// **参数解释** : HSS配额的资源ID **约束限制** : 不涉及 **取值范围** : 字符长度1-128位 **默认取值** : 不涉及
 	ResourceId *string `json:"resource_id,omitempty"`
 

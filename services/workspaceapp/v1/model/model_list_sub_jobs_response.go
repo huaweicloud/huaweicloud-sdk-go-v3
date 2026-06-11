@@ -13,8 +13,8 @@ type ListSubJobsResponse struct {
 	Count *int32 `json:"count,omitempty"`
 
 	// 任务明细信息列表，返回列表条目数量上限为分页的最大上限值。
-	Items          *[]ImageJobDetailInfo `json:"items,omitempty"`
-	HttpStatusCode int                   `json:"-"`
+	Items          *[]SubJobDetailInfo `json:"items,omitempty"`
+	HttpStatusCode int                 `json:"-"`
 }
 
 func (o ListSubJobsResponse) String() string {

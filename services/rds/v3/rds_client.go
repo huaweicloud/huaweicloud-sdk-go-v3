@@ -460,6 +460,27 @@ func (c *RdsClient) CreateDnsNameInvoker(request *model.CreateDnsNameRequest) *C
 	return &CreateDnsNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDrsJobTask 创建drs同步任务
+//
+// 创建drs同步任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) CreateDrsJobTask(request *model.CreateDrsJobTaskRequest) (*model.CreateDrsJobTaskResponse, error) {
+	requestDef := GenReqDefForCreateDrsJobTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDrsJobTaskResponse), nil
+	}
+}
+
+// CreateDrsJobTaskInvoker 创建drs同步任务
+func (c *RdsClient) CreateDrsJobTaskInvoker(request *model.CreateDrsJobTaskRequest) *CreateDrsJobTaskInvoker {
+	requestDef := GenReqDefForCreateDrsJobTask()
+	return &CreateDrsJobTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateInstance 创建数据库实例
 //
 // 创建数据库实例。
@@ -1255,6 +1276,69 @@ func (c *RdsClient) ListHistoryDatabase(request *model.ListHistoryDatabaseReques
 func (c *RdsClient) ListHistoryDatabaseInvoker(request *model.ListHistoryDatabaseRequest) *ListHistoryDatabaseInvoker {
 	requestDef := GenReqDefForListHistoryDatabase()
 	return &ListHistoryDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHistorySessions 查询历史会话
+//
+// 查询历史会话
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListHistorySessions(request *model.ListHistorySessionsRequest) (*model.ListHistorySessionsResponse, error) {
+	requestDef := GenReqDefForListHistorySessions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHistorySessionsResponse), nil
+	}
+}
+
+// ListHistorySessionsInvoker 查询历史会话
+func (c *RdsClient) ListHistorySessionsInvoker(request *model.ListHistorySessionsRequest) *ListHistorySessionsInvoker {
+	requestDef := GenReqDefForListHistorySessions()
+	return &ListHistorySessionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHistoryTopSqls 查询历史TOP SQL（瞬时）
+//
+// 查询历史TOP SQL（瞬时）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListHistoryTopSqls(request *model.ListHistoryTopSqlsRequest) (*model.ListHistoryTopSqlsResponse, error) {
+	requestDef := GenReqDefForListHistoryTopSqls()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHistoryTopSqlsResponse), nil
+	}
+}
+
+// ListHistoryTopSqlsInvoker 查询历史TOP SQL（瞬时）
+func (c *RdsClient) ListHistoryTopSqlsInvoker(request *model.ListHistoryTopSqlsRequest) *ListHistoryTopSqlsInvoker {
+	requestDef := GenReqDefForListHistoryTopSqls()
+	return &ListHistoryTopSqlsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHistoryWaitEvents 查询历史等待事件
+//
+// 查询历史等待事件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListHistoryWaitEvents(request *model.ListHistoryWaitEventsRequest) (*model.ListHistoryWaitEventsResponse, error) {
+	requestDef := GenReqDefForListHistoryWaitEvents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHistoryWaitEventsResponse), nil
+	}
+}
+
+// ListHistoryWaitEventsInvoker 查询历史等待事件
+func (c *RdsClient) ListHistoryWaitEventsInvoker(request *model.ListHistoryWaitEventsRequest) *ListHistoryWaitEventsInvoker {
+	requestDef := GenReqDefForListHistoryWaitEvents()
+	return &ListHistoryWaitEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListInspectionHistories 查询实例大版本升级检查历史
@@ -2779,6 +2863,27 @@ func (c *RdsClient) ShowAutoUpgradePolicyInvoker(request *model.ShowAutoUpgradeP
 	return &ShowAutoUpgradePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAvailableBuildDrInstance 查询可用于搭建容灾的主实例或灾备实例
+//
+// 查询可用于搭建容灾的主实例或灾备实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowAvailableBuildDrInstance(request *model.ShowAvailableBuildDrInstanceRequest) (*model.ShowAvailableBuildDrInstanceResponse, error) {
+	requestDef := GenReqDefForShowAvailableBuildDrInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAvailableBuildDrInstanceResponse), nil
+	}
+}
+
+// ShowAvailableBuildDrInstanceInvoker 查询可用于搭建容灾的主实例或灾备实例
+func (c *RdsClient) ShowAvailableBuildDrInstanceInvoker(request *model.ShowAvailableBuildDrInstanceRequest) *ShowAvailableBuildDrInstanceInvoker {
+	requestDef := GenReqDefForShowAvailableBuildDrInstance()
+	return &ShowAvailableBuildDrInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowAvailableVersion 查询实例可升级的目标版本
 //
 // 查询实例可升级的目标版本
@@ -2987,6 +3092,69 @@ func (c *RdsClient) ShowDrReplicaStatus(request *model.ShowDrReplicaStatusReques
 func (c *RdsClient) ShowDrReplicaStatusInvoker(request *model.ShowDrReplicaStatusRequest) *ShowDrReplicaStatusInvoker {
 	requestDef := GenReqDefForShowDrReplicaStatus()
 	return &ShowDrReplicaStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDrsJobName 查询实例的drs任务名称
+//
+// 查询实例的drs任务名称
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowDrsJobName(request *model.ShowDrsJobNameRequest) (*model.ShowDrsJobNameResponse, error) {
+	requestDef := GenReqDefForShowDrsJobName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDrsJobNameResponse), nil
+	}
+}
+
+// ShowDrsJobNameInvoker 查询实例的drs任务名称
+func (c *RdsClient) ShowDrsJobNameInvoker(request *model.ShowDrsJobNameRequest) *ShowDrsJobNameInvoker {
+	requestDef := GenReqDefForShowDrsJobName()
+	return &ShowDrsJobNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHistorySessionAnalyseDownloadInfo 查询历史会话分析的下载信息
+//
+// 查询历史会话分析的下载信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowHistorySessionAnalyseDownloadInfo(request *model.ShowHistorySessionAnalyseDownloadInfoRequest) (*model.ShowHistorySessionAnalyseDownloadInfoResponse, error) {
+	requestDef := GenReqDefForShowHistorySessionAnalyseDownloadInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHistorySessionAnalyseDownloadInfoResponse), nil
+	}
+}
+
+// ShowHistorySessionAnalyseDownloadInfoInvoker 查询历史会话分析的下载信息
+func (c *RdsClient) ShowHistorySessionAnalyseDownloadInfoInvoker(request *model.ShowHistorySessionAnalyseDownloadInfoRequest) *ShowHistorySessionAnalyseDownloadInfoInvoker {
+	requestDef := GenReqDefForShowHistorySessionAnalyseDownloadInfo()
+	return &ShowHistorySessionAnalyseDownloadInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHotClodSeparationStatus 查询冷热分离是否开启
+//
+// 查询冷热分离是否开启
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowHotClodSeparationStatus(request *model.ShowHotClodSeparationStatusRequest) (*model.ShowHotClodSeparationStatusResponse, error) {
+	requestDef := GenReqDefForShowHotClodSeparationStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHotClodSeparationStatusResponse), nil
+	}
+}
+
+// ShowHotClodSeparationStatusInvoker 查询冷热分离是否开启
+func (c *RdsClient) ShowHotClodSeparationStatusInvoker(request *model.ShowHotClodSeparationStatusRequest) *ShowHotClodSeparationStatusInvoker {
+	requestDef := GenReqDefForShowHotClodSeparationStatus()
+	return &ShowHotClodSeparationStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowIncreBackupPolicy1 获取增备策略
@@ -3260,6 +3428,27 @@ func (c *RdsClient) ShowTdeStatus(request *model.ShowTdeStatusRequest) (*model.S
 func (c *RdsClient) ShowTdeStatusInvoker(request *model.ShowTdeStatusRequest) *ShowTdeStatusInvoker {
 	requestDef := GenReqDefForShowTdeStatus()
 	return &ShowTdeStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTopObjects 查询top对象
+//
+// 查询top对象
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowTopObjects(request *model.ShowTopObjectsRequest) (*model.ShowTopObjectsResponse, error) {
+	requestDef := GenReqDefForShowTopObjects()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTopObjectsResponse), nil
+	}
+}
+
+// ShowTopObjectsInvoker 查询top对象
+func (c *RdsClient) ShowTopObjectsInvoker(request *model.ShowTopObjectsRequest) *ShowTopObjectsInvoker {
+	requestDef := GenReqDefForShowTopObjects()
+	return &ShowTopObjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowTransferPolicy 查询自动转储策略
@@ -3976,6 +4165,27 @@ func (c *RdsClient) UpgradeLargeVersionInvoker(request *model.UpgradeLargeVersio
 	return &UpgradeLargeVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UploadHistorySessionAnalyase 上传历史会话分析
+//
+// 上传历史会话分析
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) UploadHistorySessionAnalyase(request *model.UploadHistorySessionAnalyaseRequest) (*model.UploadHistorySessionAnalyaseResponse, error) {
+	requestDef := GenReqDefForUploadHistorySessionAnalyase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadHistorySessionAnalyaseResponse), nil
+	}
+}
+
+// UploadHistorySessionAnalyaseInvoker 上传历史会话分析
+func (c *RdsClient) UploadHistorySessionAnalyaseInvoker(request *model.UploadHistorySessionAnalyaseRequest) *UploadHistorySessionAnalyaseInvoker {
+	requestDef := GenReqDefForUploadHistorySessionAnalyase()
+	return &UploadHistorySessionAnalyaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListApiVersion 查询API版本列表
 //
 // 查询API版本列表。
@@ -4037,6 +4247,27 @@ func (c *RdsClient) ShowApiVersion(request *model.ShowApiVersionRequest) (*model
 func (c *RdsClient) ShowApiVersionInvoker(request *model.ShowApiVersionRequest) *ShowApiVersionInvoker {
 	requestDef := GenReqDefForShowApiVersion()
 	return &ShowApiVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMsdtcLocalHost 获取msdtc本机信息
+//
+// 获取msdtc本机信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowMsdtcLocalHost(request *model.ShowMsdtcLocalHostRequest) (*model.ShowMsdtcLocalHostResponse, error) {
+	requestDef := GenReqDefForShowMsdtcLocalHost()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMsdtcLocalHostResponse), nil
+	}
+}
+
+// ShowMsdtcLocalHostInvoker 获取msdtc本机信息
+func (c *RdsClient) ShowMsdtcLocalHostInvoker(request *model.ShowMsdtcLocalHostRequest) *ShowMsdtcLocalHostInvoker {
+	requestDef := GenReqDefForShowMsdtcLocalHost()
+	return &ShowMsdtcLocalHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AllowDbUserPrivilege 授权数据库帐号
@@ -5177,6 +5408,27 @@ func (c *RdsClient) GetInstancesNoIndexTables(request *model.GetInstancesNoIndex
 func (c *RdsClient) GetInstancesNoIndexTablesInvoker(request *model.GetInstancesNoIndexTablesRequest) *GetInstancesNoIndexTablesInvoker {
 	requestDef := GenReqDefForGetInstancesNoIndexTables()
 	return &GetInstancesNoIndexTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RotateAuditLog 触发审计日志轮转
+//
+// 触发审计日志轮转
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) RotateAuditLog(request *model.RotateAuditLogRequest) (*model.RotateAuditLogResponse, error) {
+	requestDef := GenReqDefForRotateAuditLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RotateAuditLogResponse), nil
+	}
+}
+
+// RotateAuditLogInvoker 触发审计日志轮转
+func (c *RdsClient) RotateAuditLogInvoker(request *model.RotateAuditLogRequest) *RotateAuditLogInvoker {
+	requestDef := GenReqDefForRotateAuditLog()
+	return &RotateAuditLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAutoCesAlarm 查询当前用户自动告警配置

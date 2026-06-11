@@ -18,7 +18,7 @@ type ImageAccountInfo struct {
 	// 用户类型： * `USER` - 用户 * `USER_GROUP` - 用户组
 	AccountType ImageAccountInfoAccountType `json:"account_type"`
 
-	// 域名城。
+	// 域名称。
 	Domain *string `json:"domain,omitempty"`
 }
 

@@ -16,8 +16,8 @@ type ListProductResponse struct {
 	OsType *string `json:"os_type,omitempty"`
 
 	// 产品列表。
-	Products       *[]ProductInfo `json:"products,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	Products       *[]ProductDetailInfo `json:"products,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o ListProductResponse) String() string {

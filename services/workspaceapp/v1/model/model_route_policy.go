@@ -9,7 +9,7 @@ import (
 // RoutePolicy 路由策略。
 type RoutePolicy struct {
 
-	// 单台服务器最大的链接会话数。
+	// 单台服务器最大的连接会话数。
 	MaxSession *int32 `json:"max_session,omitempty"`
 
 	// cpu使用率阈值，单位为%。

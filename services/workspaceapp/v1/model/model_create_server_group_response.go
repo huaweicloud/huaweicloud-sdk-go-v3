@@ -83,7 +83,7 @@ type CreateServerGroupResponse struct {
 	// 镜像名称。
 	ImageName *string `json:"image_name,omitempty"`
 
-	ProductInfo *ProductInfo `json:"product_info,omitempty"`
+	ProductInfo *ServerProductInfo `json:"product_info,omitempty"`
 
 	// 子网名称。
 	SubnetName *string `json:"subnet_name,omitempty"`

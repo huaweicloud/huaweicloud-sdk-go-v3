@@ -25,7 +25,7 @@ type CreateServerGroupReq struct {
 	// 服务器组描述。
 	Description *string `json:"description,omitempty"`
 
-	RoutePolicy *RoutePolicy `json:"route_policy,omitempty"`
+	RoutePolicy *RoutePolicyDetail `json:"route_policy,omitempty"`
 
 	// 产品ID。 > - 获取方式详见产品套餐管理ListProduct：\"GET  /v1/{project_id}/product\"。
 	ProductId string `json:"product_id"`
@@ -50,7 +50,7 @@ type CreateServerGroupReq struct {
 	// 云服务器系统盘对应的存储池的ID。
 	ClusterId *string `json:"cluster_id,omitempty"`
 
-	// 可用分区。 > - 将服务创建到指定的可用分区，如果不指定则使用系统随机的可用分区。 > - 获取方式详见可用区管理ListAvailabilityZone：\"GET  /v1/{project_id}/availability-zone\"。
+	// 可用分区。 > - 将服务创建到指定的可用分区，如果不指定则使用系统随机的可用分区，如果不存在中心站点，则必须指定availability_zone。 > - 获取方式详见可用区管理ListAvailabilityZone：\"GET  /v1/{project_id}/availability-zone\"。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
 	IpVirtual *IpVirtual `json:"ip_virtual,omitempty"`

@@ -9,10 +9,10 @@ import (
 // AddReadonlyNodeResponse Response Object
 type AddReadonlyNodeResponse struct {
 
-	// 任务ID。
+	// **参数解释：** 任务ID，仅按需实例返回该参数。 **取值范围：** 不涉及。
 	JobId *string `json:"job_id,omitempty"`
 
-	// 订单ID，仅扩容包年包月实例的节点数量时返回该参数。
+	// **参数解释：** 订单ID，仅扩容包年包月实例的节点数量时返回该参数。 **取值范围：** 不涉及。
 	OrderId        *string `json:"order_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

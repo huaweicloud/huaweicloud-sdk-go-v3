@@ -9,7 +9,7 @@ import (
 // ListInstanceMaintenanceWindowResponse Response Object
 type ListInstanceMaintenanceWindowResponse struct {
 
-	// 参数解释： 实例的可维护时间窗。
+	// **参数解释：** 实例的可维护时间窗。
 	MaintenanceWindow *string `json:"maintenance_window,omitempty"`
 	HttpStatusCode    int     `json:"-"`
 }

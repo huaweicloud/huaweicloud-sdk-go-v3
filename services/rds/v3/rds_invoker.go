@@ -341,6 +341,22 @@ func (i *CreateDnsNameInvoker) Invoke() (*model.CreateDnsNameResponse, error) {
 	}
 }
 
+type CreateDrsJobTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDrsJobTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDrsJobTaskInvoker) Invoke() (*model.CreateDrsJobTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDrsJobTaskResponse), nil
+	}
+}
+
 type CreateInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -946,6 +962,54 @@ func (i *ListHistoryDatabaseInvoker) Invoke() (*model.ListHistoryDatabaseRespons
 		return nil, err
 	} else {
 		return result.(*model.ListHistoryDatabaseResponse), nil
+	}
+}
+
+type ListHistorySessionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHistorySessionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListHistorySessionsInvoker) Invoke() (*model.ListHistorySessionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHistorySessionsResponse), nil
+	}
+}
+
+type ListHistoryTopSqlsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHistoryTopSqlsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListHistoryTopSqlsInvoker) Invoke() (*model.ListHistoryTopSqlsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHistoryTopSqlsResponse), nil
+	}
+}
+
+type ListHistoryWaitEventsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHistoryWaitEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListHistoryWaitEventsInvoker) Invoke() (*model.ListHistoryWaitEventsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHistoryWaitEventsResponse), nil
 	}
 }
 
@@ -2101,6 +2165,22 @@ func (i *ShowAutoUpgradePolicyInvoker) Invoke() (*model.ShowAutoUpgradePolicyRes
 	}
 }
 
+type ShowAvailableBuildDrInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAvailableBuildDrInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAvailableBuildDrInstanceInvoker) Invoke() (*model.ShowAvailableBuildDrInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAvailableBuildDrInstanceResponse), nil
+	}
+}
+
 type ShowAvailableVersionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2258,6 +2338,54 @@ func (i *ShowDrReplicaStatusInvoker) Invoke() (*model.ShowDrReplicaStatusRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowDrReplicaStatusResponse), nil
+	}
+}
+
+type ShowDrsJobNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDrsJobNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDrsJobNameInvoker) Invoke() (*model.ShowDrsJobNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDrsJobNameResponse), nil
+	}
+}
+
+type ShowHistorySessionAnalyseDownloadInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHistorySessionAnalyseDownloadInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowHistorySessionAnalyseDownloadInfoInvoker) Invoke() (*model.ShowHistorySessionAnalyseDownloadInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHistorySessionAnalyseDownloadInfoResponse), nil
+	}
+}
+
+type ShowHotClodSeparationStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHotClodSeparationStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowHotClodSeparationStatusInvoker) Invoke() (*model.ShowHotClodSeparationStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHotClodSeparationStatusResponse), nil
 	}
 }
 
@@ -2466,6 +2594,22 @@ func (i *ShowTdeStatusInvoker) Invoke() (*model.ShowTdeStatusResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowTdeStatusResponse), nil
+	}
+}
+
+type ShowTopObjectsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTopObjectsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTopObjectsInvoker) Invoke() (*model.ShowTopObjectsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTopObjectsResponse), nil
 	}
 }
 
@@ -3013,6 +3157,22 @@ func (i *UpgradeLargeVersionInvoker) Invoke() (*model.UpgradeLargeVersionRespons
 	}
 }
 
+type UploadHistorySessionAnalyaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadHistorySessionAnalyaseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UploadHistorySessionAnalyaseInvoker) Invoke() (*model.UploadHistorySessionAnalyaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadHistorySessionAnalyaseResponse), nil
+	}
+}
+
 type ListApiVersionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3058,6 +3218,22 @@ func (i *ShowApiVersionInvoker) Invoke() (*model.ShowApiVersionResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ShowApiVersionResponse), nil
+	}
+}
+
+type ShowMsdtcLocalHostInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMsdtcLocalHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowMsdtcLocalHostInvoker) Invoke() (*model.ShowMsdtcLocalHostResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMsdtcLocalHostResponse), nil
 	}
 }
 
@@ -3922,6 +4098,22 @@ func (i *GetInstancesNoIndexTablesInvoker) Invoke() (*model.GetInstancesNoIndexT
 		return nil, err
 	} else {
 		return result.(*model.GetInstancesNoIndexTablesResponse), nil
+	}
+}
+
+type RotateAuditLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RotateAuditLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RotateAuditLogInvoker) Invoke() (*model.RotateAuditLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RotateAuditLogResponse), nil
 	}
 }
 

@@ -357,6 +357,22 @@ func (i *UploadAppIconInvoker) Invoke() (*model.UploadAppIconResponse, error) {
 	}
 }
 
+type UploadAppIconRawInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UploadAppIconRawInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UploadAppIconRawInvoker) Invoke() (*model.UploadAppIconRawResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UploadAppIconRawResponse), nil
+	}
+}
+
 type InitializeTenantInvoker struct {
 	*invoker.BaseInvoker
 }

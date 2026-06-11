@@ -15,9 +15,13 @@ type ImageJobType struct {
 }
 
 type ImageJobTypeEnum struct {
-	CREATE_SERVER       ImageJobType
-	CREATE_SERVER_IMAGE ImageJobType
-	DELETE_SERVER       ImageJobType
+	CREATE_SERVER             ImageJobType
+	CREATE_SERVER_IMAGE       ImageJobType
+	DELETE_SERVER             ImageJobType
+	BUILD_IMAGE               ImageJobType
+	GENERATE_IMAGE            ImageJobType
+	DELETE_IMAGE_BUILD_SERVER ImageJobType
+	DELETE_IMAGE              ImageJobType
 }
 
 func GetImageJobTypeEnum() ImageJobTypeEnum {
@@ -30,6 +34,18 @@ func GetImageJobTypeEnum() ImageJobTypeEnum {
 		},
 		DELETE_SERVER: ImageJobType{
 			value: "DELETE_SERVER",
+		},
+		BUILD_IMAGE: ImageJobType{
+			value: "BUILD_IMAGE",
+		},
+		GENERATE_IMAGE: ImageJobType{
+			value: "GENERATE_IMAGE",
+		},
+		DELETE_IMAGE_BUILD_SERVER: ImageJobType{
+			value: "DELETE_IMAGE_BUILD_SERVER",
+		},
+		DELETE_IMAGE: ImageJobType{
+			value: "DELETE_IMAGE",
 		},
 	}
 }

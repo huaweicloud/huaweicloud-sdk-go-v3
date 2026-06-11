@@ -18,6 +18,8 @@ type ListTopSqlsRequest struct {
 	// 语言。
 	XLanguage *ListTopSqlsRequestXLanguage `json:"X-Language,omitempty"`
 
+	Offset *int32 `json:"offset,omitempty"`
+
 	// 排序字段: avg_cpu_time:平均CPU耗时 total_cpu_time：总CPU耗时 total_duration_time：总执行时间 avg_duration_time：平均执行时间 total_rows：总行数 avg_rows：平均行数 total_logical_reads：总逻辑读 avg_logical_reads：平均逻辑读
 	SortKey *string `json:"sort_key,omitempty"`
 

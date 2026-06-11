@@ -17,7 +17,7 @@ type AccountInfo struct {
 
 	AccountType *AccountTypeEnum `json:"account_type"`
 
-	// 域名城。
+	// 域名称。
 	Domain *string `json:"domain,omitempty"`
 
 	// 邮箱。

@@ -20,6 +20,15 @@ type AntiVirusEventWhiteRuleListRequestInfo struct {
 
 	// 通配符，包含如下: - equal ：相等 - contain ：包含
 	JudgeType string `json:"judge_type"`
+
+	// **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否 **默认取值**: false
+	Scope *bool `json:"scope,omitempty"`
+
+	// **参数解释**: agent列表 **约束限制**: 不涉及 **取值范围**: 1-1000个agentID **默认取值**: 不涉及
+	AgentIds *[]string `json:"agent_ids,omitempty"`
+
+	// **参数解释**: 实例ID列表 **约束限制**: 当需要为serverless配置规则时，传入此字段 **取值范围**: 1-1000个实例ID **默认取值**: 不涉及
+	InstanceIds *[]string `json:"instance_ids,omitempty"`
 }
 
 func (o AntiVirusEventWhiteRuleListRequestInfo) String() string {

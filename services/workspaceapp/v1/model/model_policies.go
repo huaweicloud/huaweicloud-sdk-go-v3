@@ -36,6 +36,8 @@ type Policies struct {
 
 	FolderRedirection *PoliciesFolderRedirection `json:"folder_redirection,omitempty"`
 
+	FolderRedirectionV2 *PoliciesFolderRedirectionV2 `json:"folder_redirection_v2,omitempty"`
+
 	UserProfileManagement *PoliciesUserProfileManagement `json:"user_profile_management,omitempty"`
 }
 
