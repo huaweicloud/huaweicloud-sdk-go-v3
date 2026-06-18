@@ -191,6 +191,17 @@ func GenReqDefForListSpecifications() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListSwitchConfigInfo() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/cbs/feature/config").
+		WithResponse(new(model.ListSwitchConfigInfoResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

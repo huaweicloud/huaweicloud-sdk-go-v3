@@ -42,10 +42,21 @@ type ShowMergeRequestDetailResponse struct {
 	// 源分支是否为保护分支
 	IsSourceBranchProtected *bool `json:"is_source_branch_protected,omitempty"`
 
+	// 源分支是否为默认分支
+	IsSourceBranchDefault *bool `json:"is_source_branch_default,omitempty"`
+
 	// 源分支
 	DevcloudSourceBranch *string `json:"devcloud_source_branch,omitempty"`
 
+	// MR点赞数
+	Upvotes *int32 `json:"upvotes,omitempty"`
+
+	// MR倒赞数
+	Downvotes *int32 `json:"downvotes,omitempty"`
+
 	Author *UserBasicExternalDto `json:"author,omitempty"`
+
+	Assignee *UserBasicExternalDto `json:"assignee,omitempty"`
 
 	// 源仓库id
 	SourceRepositoryId *int32 `json:"source_repository_id,omitempty"`
@@ -95,6 +106,9 @@ type ShowMergeRequestDetailResponse struct {
 	// 检视意见数量
 	UserNotesCount *int32 `json:"user_notes_count,omitempty"`
 
+	// 是否需要删除源分支
+	ShouldRemoveSourceBranch *bool `json:"should_remove_source_branch,omitempty"`
+
 	// 合入后删除源分支
 	ForceRemoveSourceBranch *bool `json:"force_remove_source_branch,omitempty"`
 
@@ -142,6 +156,9 @@ type ShowMergeRequestDetailResponse struct {
 	// 是否使用临时分支
 	IsUseTempBranch *bool `json:"is_use_temp_branch,omitempty"`
 
+	// 只有合并人允许合入
+	OnlyAssigneeCanMerge *bool `json:"only_assignee_can_merge,omitempty"`
+
 	// 检视模式
 	ReviewMode *string `json:"review_mode,omitempty"`
 
@@ -153,6 +170,9 @@ type ShowMergeRequestDetailResponse struct {
 
 	// 审核模式检视人
 	ApprovalMergeRequestReviewers *[]ApprovalUserDto `json:"approval_merge_request_reviewers,omitempty"`
+
+	// MR主题
+	Topic *string `json:"topic,omitempty"`
 
 	SourceRepository *ProjectSimpleDto `json:"source_repository,omitempty"`
 

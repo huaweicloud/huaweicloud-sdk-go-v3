@@ -103,6 +103,9 @@ type GroupBaseDto struct {
 
 	// **参数解释：** 是否关注。
 	Starred *bool `json:"starred,omitempty"`
+
+	// **参数解释：** 角色列表。
+	Roles *[]MultipleRoleDto `json:"roles,omitempty"`
 }
 
 func (o GroupBaseDto) String() string {

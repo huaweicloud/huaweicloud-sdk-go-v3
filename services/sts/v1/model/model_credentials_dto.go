@@ -7,19 +7,19 @@ import (
 	"strings"
 )
 
-// CredentialsDto 临时安全凭证。
+// CredentialsDto **参数解释**： 临时安全凭证。  **取值范围**： 不涉及。
 type CredentialsDto struct {
 
-	// 临时安全凭证的AK。
+	// **参数解释**： 临时安全凭证的AK。  **取值范围**： 不涉及。
 	AccessKeyId string `json:"access_key_id"`
 
-	// 临时安全凭证的失效时间。
+	// **参数解释**： 临时安全凭证的失效时间。  **取值范围**： 不涉及。
 	Expiration *sdktime.SdkTime `json:"expiration"`
 
-	// 临时安全凭证的SK。
+	// **参数解释**： 临时安全凭证的SK。  **取值范围**： 不涉及。
 	SecretAccessKey string `json:"secret_access_key"`
 
-	// 临时安全凭证的security_token。
+	// **参数解释**： 临时安全凭证的security_token。  **取值范围**： 不涉及。
 	SecurityToken string `json:"security_token"`
 }
 

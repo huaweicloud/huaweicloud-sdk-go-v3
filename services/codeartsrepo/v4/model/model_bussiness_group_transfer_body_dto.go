@@ -10,7 +10,7 @@ import (
 type BussinessGroupTransferBodyDto struct {
 
 	// 移交目标用户id
-	OwnerId *int32 `json:"owner_id,omitempty"`
+	OwnerId int32 `json:"owner_id"`
 }
 
 func (o BussinessGroupTransferBodyDto) String() string {

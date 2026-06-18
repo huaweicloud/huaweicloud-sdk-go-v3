@@ -83,6 +83,9 @@ type CommitDto struct {
 
 	// 用户名
 	UserName *string `json:"user_name,omitempty"`
+
+	// 作者id
+	AuthorId *int32 `json:"author_id,omitempty"`
 }
 
 func (o CommitDto) String() string {

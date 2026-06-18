@@ -12,9 +12,6 @@ type RepositoryMergeRequestTemplateDto struct {
 	// **参数解释：** 合并请求模板主键id
 	Id *int32 `json:"id,omitempty"`
 
-	// **参数解释：** 仓库id。
-	RepositoryId *int32 `json:"repository_id,omitempty"`
-
 	// **参数解释：** 描述
 	Description *string `json:"description,omitempty"`
 
@@ -40,6 +37,11 @@ type RepositoryMergeRequestTemplateDto struct {
 	AutoExtractMrTitle *int32 `json:"auto_extract_mr_title,omitempty"`
 
 	Creator *UserBasicDto `json:"creator,omitempty"`
+
+	// **参数解释：** 仓库id。
+	RepositoryId *int32 `json:"repository_id,omitempty"`
+
+	From *MergeRequestTemplateFromDto `json:"from,omitempty"`
 }
 
 func (o RepositoryMergeRequestTemplateDto) String() string {

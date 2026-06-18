@@ -8,8 +8,10 @@ import (
 
 // ListMergeRequestValidAssignedCandidatesResponse Response Object
 type ListMergeRequestValidAssignedCandidatesResponse struct {
-	Body           *[]MrVoteReviewerDto `json:"body,omitempty"`
-	HttpStatusCode int                  `json:"-"`
+	Body *[]MrVoteReviewerDto `json:"body,omitempty"`
+
+	XTotal         *string `json:"X-Total,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListMergeRequestValidAssignedCandidatesResponse) String() string {

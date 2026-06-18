@@ -12,7 +12,7 @@ import (
 // ListGroupRepositoriesRequest Request Object
 type ListGroupRepositoriesRequest struct {
 
-	// **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+	// **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
 	GroupId int32 `json:"group_id"`
 
 	// **参数解释：** 仓库名称搜索关键字。 **取值范围：** 不涉及。 **约束限制：** 不涉及。 **默认取值：** 不涉及。

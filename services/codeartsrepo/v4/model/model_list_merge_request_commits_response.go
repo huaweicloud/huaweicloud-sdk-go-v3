@@ -8,8 +8,10 @@ import (
 
 // ListMergeRequestCommitsResponse Response Object
 type ListMergeRequestCommitsResponse struct {
-	Body           *[]MergeRequestCommitDto `json:"body,omitempty"`
-	HttpStatusCode int                      `json:"-"`
+	Body *[]MergeRequestCommitDto `json:"body,omitempty"`
+
+	XTotal         *string `json:"X-Total,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListMergeRequestCommitsResponse) String() string {

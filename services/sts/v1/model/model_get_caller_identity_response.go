@@ -9,13 +9,13 @@ import (
 // GetCallerIdentityResponse Response Object
 type GetCallerIdentityResponse struct {
 
-	// 账号ID。
+	// **参数解释**： 账号ID。  **取值范围**： 不涉及。
 	AccountId *string `json:"account_id,omitempty"`
 
-	// 主体URN。
+	// **参数解释**： 主体URN。  **取值范围**： 不涉及。
 	PrincipalUrn *string `json:"principal_urn,omitempty"`
 
-	// 主体ID。
+	// **参数解释**： 主体ID。  **取值范围**： 不涉及。
 	PrincipalId    *string `json:"principal_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -15,7 +15,7 @@ type ListResourceTagsV5Request struct {
 	// 资源ID，长度为1到64个字符，只包含字母、数字和\"-\"的字符串。
 	ResourceId string `json:"resource_id"`
 
-	// 资源类型，可以为“信任委托”（trust agency）或“IAM用户”（user）。
+	// 资源类型，可以为“信任委托”（trust agency）或“IAM用户”（user）或“身份提供商”（provider）。
 	ResourceType ListResourceTagsV5RequestResourceType `json:"resource_type"`
 }
 
@@ -33,8 +33,10 @@ type ListResourceTagsV5RequestResourceType struct {
 }
 
 type ListResourceTagsV5RequestResourceTypeEnum struct {
-	AGENCY ListResourceTagsV5RequestResourceType
-	USER   ListResourceTagsV5RequestResourceType
+	AGENCY        ListResourceTagsV5RequestResourceType
+	USER          ListResourceTagsV5RequestResourceType
+	OIDC_PROVIDER ListResourceTagsV5RequestResourceType
+	SAML_PROVIDER ListResourceTagsV5RequestResourceType
 }
 
 func GetListResourceTagsV5RequestResourceTypeEnum() ListResourceTagsV5RequestResourceTypeEnum {
@@ -44,6 +46,12 @@ func GetListResourceTagsV5RequestResourceTypeEnum() ListResourceTagsV5RequestRes
 		},
 		USER: ListResourceTagsV5RequestResourceType{
 			value: "user",
+		},
+		OIDC_PROVIDER: ListResourceTagsV5RequestResourceType{
+			value: "oidc_provider",
+		},
+		SAML_PROVIDER: ListResourceTagsV5RequestResourceType{
+			value: "saml_provider",
 		},
 	}
 }

@@ -11,7 +11,7 @@ import (
 
 type RepoNotificationSubscriptionStateDto struct {
 
-	// **参数解释：** 配资源。
+	// **参数解释：** 配置源。
 	ConfigSource *RepoNotificationSubscriptionStateDtoConfigSource `json:"config_source,omitempty"`
 
 	// **参数解释：** 开启通知。

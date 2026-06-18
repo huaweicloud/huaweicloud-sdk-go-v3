@@ -17,6 +17,9 @@ type CreateRepoRequest struct {
 	// 指定项目ID，获取方式请参见[获取项目ID](codehub_api_0014.xml)。
 	ProjectUuid string `json:"project_uuid"`
 
+	// 代码组id，代码组首页，Group ID后的数字Id
+	GroupId *int32 `json:"group_id,omitempty"`
+
 	// 复制模板的ID
 	TemplateId *string `json:"template_id,omitempty"`
 

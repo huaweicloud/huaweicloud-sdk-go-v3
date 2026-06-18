@@ -18,6 +18,9 @@ type WebhookParamsDto struct {
 	// **参数解释：** 推送事件分支过滤正则规则。 **取值范围：** 字符串长度不少于0，不超过500。
 	PushEventsBranchRegexFilter *string `json:"push_events_branch_regex_filter,omitempty"`
 
+	// **参数解释：** 评论事件文本过滤规则。 **取值范围：** 字符串长度不少于0，不超过50，不能超过10个。
+	NotePlainTextFilter *[]string `json:"note_plain_text_filter,omitempty"`
+
 	// **参数解释：** 是否启用Tag推送事件。
 	TagPushEvents *bool `json:"tag_push_events,omitempty"`
 

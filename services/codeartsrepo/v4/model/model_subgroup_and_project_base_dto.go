@@ -31,10 +31,10 @@ type SubgroupAndProjectBaseDto struct {
 	CreatedAt *string `json:"created_at,omitempty"`
 
 	// **参数解释：** 更新时间戳。 **取值范围：** 字符串长度不少于1，不超过1000。
-	UpdatedAtTimestamp *string `json:"updated_at_timestamp,omitempty"`
+	UpdatedAtTimestamp *int64 `json:"updated_at_timestamp,omitempty"`
 
 	// **参数解释：** 开始时间戳。 **取值范围：** 字符串长度不少于1，不超过1000。
-	StarTime *string `json:"star_time,omitempty"`
+	StarTime *int64 `json:"star_time,omitempty"`
 
 	// **参数解释：** 是否收藏。
 	Starred *bool `json:"starred,omitempty"`

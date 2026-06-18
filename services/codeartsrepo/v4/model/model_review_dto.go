@@ -78,16 +78,16 @@ type ReviewDto struct {
 	// **参数解释：** 内容审核状态。
 	ModerationStatus *int32 `json:"moderation_status,omitempty"`
 
-	// **参数解释：** 合并请求id(noteable_type=MergRequest时返回)。
+	// **参数解释：** 合并请求id(noteable_type=MergeRequest时返回)。
 	MergeRequestId *int32 `json:"merge_request_id,omitempty"`
 
-	// **参数解释：** 合并请求iid(noteable_type=MergRequest时返回)。
+	// **参数解释：** 合并请求iid(noteable_type=MergeRequest时返回)。
 	MergeRequestIid *int32 `json:"merge_request_iid,omitempty"`
 
-	// **参数解释：** 合并请求标题(noteable_type=MergRequest时返回)。
+	// **参数解释：** 合并请求标题(noteable_type=MergeRequest时返回)。
 	MergeRequestTitle *string `json:"merge_request_title,omitempty"`
 
-	// **参数解释：** 合并请求状态(noteable_type=MergRequest时返回)。
+	// **参数解释：** 合并请求状态(noteable_type=MergeRequest时返回)。
 	MergeRequestState *string `json:"merge_request_state,omitempty"`
 
 	// **参数解释：** commit id(noteable_type=Commit时返回)。

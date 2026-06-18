@@ -12,9 +12,6 @@ type ShowMergeRequestTemplateResponse struct {
 	// **参数解释：** 合并请求模板主键id
 	Id *int32 `json:"id,omitempty"`
 
-	// **参数解释：** 仓库id。
-	RepositoryId *int32 `json:"repository_id,omitempty"`
-
 	// **参数解释：** 描述
 	Description *string `json:"description,omitempty"`
 
@@ -39,8 +36,13 @@ type ShowMergeRequestTemplateResponse struct {
 	// **参数解释：** 自动提取合并请求标题 0：不提取 1：提取提交信息 2：提取e2e单标题
 	AutoExtractMrTitle *int32 `json:"auto_extract_mr_title,omitempty"`
 
-	Creator        *UserBasicDto `json:"creator,omitempty"`
-	HttpStatusCode int           `json:"-"`
+	Creator *UserBasicDto `json:"creator,omitempty"`
+
+	// **参数解释：** 仓库id。
+	RepositoryId *int32 `json:"repository_id,omitempty"`
+
+	From           *MergeRequestTemplateFromDto `json:"from,omitempty"`
+	HttpStatusCode int                          `json:"-"`
 }
 
 func (o ShowMergeRequestTemplateResponse) String() string {

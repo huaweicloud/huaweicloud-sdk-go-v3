@@ -1132,6 +1132,27 @@ func (c *CodeArtsRepoClient) ListGroupPermissionResourcesInvoker(request *model.
 	return &ListGroupPermissionResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListGroupProtectedBranches 获取代码组下保护分支列表
+//
+// 获取代码组下保护分支列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) ListGroupProtectedBranches(request *model.ListGroupProtectedBranchesRequest) (*model.ListGroupProtectedBranchesResponse, error) {
+	requestDef := GenReqDefForListGroupProtectedBranches()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGroupProtectedBranchesResponse), nil
+	}
+}
+
+// ListGroupProtectedBranchesInvoker 获取代码组下保护分支列表
+func (c *CodeArtsRepoClient) ListGroupProtectedBranchesInvoker(request *model.ListGroupProtectedBranchesRequest) *ListGroupProtectedBranchesInvoker {
+	requestDef := GenReqDefForListGroupProtectedBranches()
+	return &ListGroupProtectedBranchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListGroupSubgroupsAndRepositories 获取代码组下的子代码组和仓库列表
 //
 // 获取代码组下的子代码组和仓库列表
@@ -1487,6 +1508,27 @@ func (c *CodeArtsRepoClient) ListGroupProtectedRefsUserGroups(request *model.Lis
 func (c *CodeArtsRepoClient) ListGroupProtectedRefsUserGroupsInvoker(request *model.ListGroupProtectedRefsUserGroupsRequest) *ListGroupProtectedRefsUserGroupsInvoker {
 	requestDef := GenReqDefForListGroupProtectedRefsUserGroups()
 	return &ListGroupProtectedRefsUserGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListManagementUsers 获取仓库下有审批权限成员
+//
+// 获取仓库下有审批权限成员（审批用户是否可以进入该仓库）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) ListManagementUsers(request *model.ListManagementUsersRequest) (*model.ListManagementUsersResponse, error) {
+	requestDef := GenReqDefForListManagementUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListManagementUsersResponse), nil
+	}
+}
+
+// ListManagementUsersInvoker 获取仓库下有审批权限成员
+func (c *CodeArtsRepoClient) ListManagementUsersInvoker(request *model.ListManagementUsersRequest) *ListManagementUsersInvoker {
+	requestDef := GenReqDefForListManagementUsers()
+	return &ListManagementUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListMembers 获取仓库成员列表
@@ -2287,9 +2329,9 @@ func (c *CodeArtsRepoClient) ListMergeRequestTemplatesInvoker(request *model.Lis
 	return &ListMergeRequestTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListMergeRequestValidAssignedCandidates 获取可选的合并请求检视人
+// ListMergeRequestValidAssignedCandidates 获取仓库审核人或合并人
 //
-// 获取可选的合并请求检视人
+// 获取仓库审核人或合并人
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsRepoClient) ListMergeRequestValidAssignedCandidates(request *model.ListMergeRequestValidAssignedCandidatesRequest) (*model.ListMergeRequestValidAssignedCandidatesResponse, error) {
@@ -2302,7 +2344,7 @@ func (c *CodeArtsRepoClient) ListMergeRequestValidAssignedCandidates(request *mo
 	}
 }
 
-// ListMergeRequestValidAssignedCandidatesInvoker 获取可选的合并请求检视人
+// ListMergeRequestValidAssignedCandidatesInvoker 获取仓库审核人或合并人
 func (c *CodeArtsRepoClient) ListMergeRequestValidAssignedCandidatesInvoker(request *model.ListMergeRequestValidAssignedCandidatesRequest) *ListMergeRequestValidAssignedCandidatesInvoker {
 	requestDef := GenReqDefForListMergeRequestValidAssignedCandidates()
 	return &ListMergeRequestValidAssignedCandidatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2373,7 +2415,7 @@ func (c *CodeArtsRepoClient) ListProjectMergeRequestApproverSettingsInvoker(requ
 
 // ListProjectMergeRequestCanBeAssignedReviewers 获取项目检视人
 //
-// 获取代码组检视人
+// 获取项目检视人
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsRepoClient) ListProjectMergeRequestCanBeAssignedReviewers(request *model.ListProjectMergeRequestCanBeAssignedReviewersRequest) (*model.ListProjectMergeRequestCanBeAssignedReviewersResponse, error) {
@@ -2394,7 +2436,7 @@ func (c *CodeArtsRepoClient) ListProjectMergeRequestCanBeAssignedReviewersInvoke
 
 // ListProjectMergeRequestCanBeAssignedUsers 获取项目审核人或合并人
 //
-// 获取代码组审核人或合并人
+// 获取项目审核人或合并人
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsRepoClient) ListProjectMergeRequestCanBeAssignedUsers(request *model.ListProjectMergeRequestCanBeAssignedUsersRequest) (*model.ListProjectMergeRequestCanBeAssignedUsersResponse, error) {
@@ -2432,6 +2474,27 @@ func (c *CodeArtsRepoClient) ListProjectMergeRequestTemplates(request *model.Lis
 func (c *CodeArtsRepoClient) ListProjectMergeRequestTemplatesInvoker(request *model.ListProjectMergeRequestTemplatesRequest) *ListProjectMergeRequestTemplatesInvoker {
 	requestDef := GenReqDefForListProjectMergeRequestTemplates()
 	return &ListProjectMergeRequestTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProjectMergeRequests 获取项目MR列表
+//
+// 获取项目MR列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) ListProjectMergeRequests(request *model.ListProjectMergeRequestsRequest) (*model.ListProjectMergeRequestsResponse, error) {
+	requestDef := GenReqDefForListProjectMergeRequests()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProjectMergeRequestsResponse), nil
+	}
+}
+
+// ListProjectMergeRequestsInvoker 获取项目MR列表
+func (c *CodeArtsRepoClient) ListProjectMergeRequestsInvoker(request *model.ListProjectMergeRequestsRequest) *ListProjectMergeRequestsInvoker {
+	requestDef := GenReqDefForListProjectMergeRequests()
+	return &ListProjectMergeRequestsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListRepositoryMergeRequests 获取仓库MR列表
@@ -3169,6 +3232,27 @@ func (c *CodeArtsRepoClient) ShowRepositoryPermissionInheritEnabledInvoker(reque
 	return &ShowRepositoryPermissionInheritEnabledInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateGroupResourcePermissions 更新代码组权限矩阵配置
+//
+// 更新代码组权限矩阵配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) UpdateGroupResourcePermissions(request *model.UpdateGroupResourcePermissionsRequest) (*model.UpdateGroupResourcePermissionsResponse, error) {
+	requestDef := GenReqDefForUpdateGroupResourcePermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateGroupResourcePermissionsResponse), nil
+	}
+}
+
+// UpdateGroupResourcePermissionsInvoker 更新代码组权限矩阵配置
+func (c *CodeArtsRepoClient) UpdateGroupResourcePermissionsInvoker(request *model.UpdateGroupResourcePermissionsRequest) *UpdateGroupResourcePermissionsInvoker {
+	requestDef := GenReqDefForUpdateGroupResourcePermissions()
+	return &UpdateGroupResourcePermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateRepositoryPermissionInheritEnabled 更新仓库权限继承配置
 //
 // 更新仓库权限继承配置。
@@ -3400,9 +3484,12 @@ func (c *CodeArtsRepoClient) ShowProjectsGeneralPolicyInvoker(request *model.Sho
 	return &ShowProjectsGeneralPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowResourcePermissions 获取资源点对应的角色和权限
+// ShowResourcePermissions 获取代码组中指定权限资源下的权限矩阵
 //
-// 获取资源点对应的角色和权限
+// 获取代码组中指定权限资源下的权限矩阵。
+// 说明：
+// (a) 权限资源：CodeArtsRepo中需要鉴权的对象。代码组层级的权限资源有：代码组、仓库、代码、成员、Tag、合并请求&amp;变更请求、标签。&lt;动作 + 权限资源&gt; 就构成权限点，如：新建仓库、下载代码、添加成员等。权限点是CodeArtsRepo鉴权的基本单位。
+// (b) 权限矩阵：记录了角色和权限点之间的关联关系，即记录了角色有哪些权限，没有哪些权限。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsRepoClient) ShowResourcePermissions(request *model.ShowResourcePermissionsRequest) (*model.ShowResourcePermissionsResponse, error) {
@@ -3415,7 +3502,7 @@ func (c *CodeArtsRepoClient) ShowResourcePermissions(request *model.ShowResource
 	}
 }
 
-// ShowResourcePermissionsInvoker 获取资源点对应的角色和权限
+// ShowResourcePermissionsInvoker 获取代码组中指定权限资源下的权限矩阵
 func (c *CodeArtsRepoClient) ShowResourcePermissionsInvoker(request *model.ShowResourcePermissionsRequest) *ShowResourcePermissionsInvoker {
 	requestDef := GenReqDefForShowResourcePermissions()
 	return &ShowResourcePermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3862,27 +3949,6 @@ func (c *CodeArtsRepoClient) UpdateProtectedTagInvoker(request *model.UpdateProt
 	return &UpdateProtectedTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListRefsList 查看分支/tag列表
-//
-// 查看分支/tag列表
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeArtsRepoClient) ListRefsList(request *model.ListRefsListRequest) (*model.ListRefsListResponse, error) {
-	requestDef := GenReqDefForListRefsList()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListRefsListResponse), nil
-	}
-}
-
-// ListRefsListInvoker 查看分支/tag列表
-func (c *CodeArtsRepoClient) ListRefsListInvoker(request *model.ListRefsListRequest) *ListRefsListInvoker {
-	requestDef := GenReqDefForListRefsList()
-	return &ListRefsListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // BatchDeleteBranch 批量删除分支
 //
 // 批量删除分支
@@ -4007,6 +4073,27 @@ func (c *CodeArtsRepoClient) ListBranches(request *model.ListBranchesRequest) (*
 func (c *CodeArtsRepoClient) ListBranchesInvoker(request *model.ListBranchesRequest) *ListBranchesInvoker {
 	requestDef := GenReqDefForListBranches()
 	return &ListBranchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRefsList 查看分支/tag列表
+//
+// 查看分支/tag列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) ListRefsList(request *model.ListRefsListRequest) (*model.ListRefsListResponse, error) {
+	requestDef := GenReqDefForListRefsList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRefsListResponse), nil
+	}
+}
+
+// ListRefsListInvoker 查看分支/tag列表
+func (c *CodeArtsRepoClient) ListRefsListInvoker(request *model.ListRefsListRequest) *ListRefsListInvoker {
+	requestDef := GenReqDefForListRefsList()
+	return &ListRefsListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListTags 获取标签列表
@@ -4597,6 +4684,27 @@ func (c *CodeArtsRepoClient) ListRepositoryLanguagesInvoker(request *model.ListR
 	return &ListRepositoryLanguagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListRepositoryNavigationReferences 获取代码导航引用关系
+//
+// 获取代码导航引用关系
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) ListRepositoryNavigationReferences(request *model.ListRepositoryNavigationReferencesRequest) (*model.ListRepositoryNavigationReferencesResponse, error) {
+	requestDef := GenReqDefForListRepositoryNavigationReferences()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRepositoryNavigationReferencesResponse), nil
+	}
+}
+
+// ListRepositoryNavigationReferencesInvoker 获取代码导航引用关系
+func (c *CodeArtsRepoClient) ListRepositoryNavigationReferencesInvoker(request *model.ListRepositoryNavigationReferencesRequest) *ListRepositoryNavigationReferencesInvoker {
+	requestDef := GenReqDefForListRepositoryNavigationReferences()
+	return &ListRepositoryNavigationReferencesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListRepositoryTemplates 模板仓列表
 //
 // 模板仓列表
@@ -4681,6 +4789,27 @@ func (c *CodeArtsRepoClient) LockRepositoryInvoker(request *model.LockRepository
 	return &LockRepositoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RebuildRepositoryNavigation 触发代码导航任务
+//
+// 触发代码导航任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) RebuildRepositoryNavigation(request *model.RebuildRepositoryNavigationRequest) (*model.RebuildRepositoryNavigationResponse, error) {
+	requestDef := GenReqDefForRebuildRepositoryNavigation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RebuildRepositoryNavigationResponse), nil
+	}
+}
+
+// RebuildRepositoryNavigationInvoker 触发代码导航任务
+func (c *CodeArtsRepoClient) RebuildRepositoryNavigationInvoker(request *model.RebuildRepositoryNavigationRequest) *RebuildRepositoryNavigationInvoker {
+	requestDef := GenReqDefForRebuildRepositoryNavigation()
+	return &RebuildRepositoryNavigationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RemoveDeployKey 删除仓库部署密钥
 //
 // 删除仓库部署密钥
@@ -4704,7 +4833,7 @@ func (c *CodeArtsRepoClient) RemoveDeployKeyInvoker(request *model.RemoveDeployK
 
 // RemoveDeployKeyFromSubmodules 删除子仓库部署密钥
 //
-// 将该该仓库的部署密钥从子模组中删除
+// 将该仓库的部署密钥从子模组中删除
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsRepoClient) RemoveDeployKeyFromSubmodules(request *model.RemoveDeployKeyFromSubmodulesRequest) (*model.RemoveDeployKeyFromSubmodulesResponse, error) {
@@ -4891,6 +5020,48 @@ func (c *CodeArtsRepoClient) ShowRemoteMirrorInvoker(request *model.ShowRemoteMi
 	return &ShowRemoteMirrorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowRepoLastStatistics 获取仓库最近的提交统计信息
+//
+// 获取仓库最近的提交统计信息，其中按人员统计记录最多统计按创建时间降序的前100条数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) ShowRepoLastStatistics(request *model.ShowRepoLastStatisticsRequest) (*model.ShowRepoLastStatisticsResponse, error) {
+	requestDef := GenReqDefForShowRepoLastStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRepoLastStatisticsResponse), nil
+	}
+}
+
+// ShowRepoLastStatisticsInvoker 获取仓库最近的提交统计信息
+func (c *CodeArtsRepoClient) ShowRepoLastStatisticsInvoker(request *model.ShowRepoLastStatisticsRequest) *ShowRepoLastStatisticsInvoker {
+	requestDef := GenReqDefForShowRepoLastStatistics()
+	return &ShowRepoLastStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRepoStatisticsSummary 获取仓库统计信息概览
+//
+// 获取仓库统计信息概览，包括仓库大小，分支数量，提交数量等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) ShowRepoStatisticsSummary(request *model.ShowRepoStatisticsSummaryRequest) (*model.ShowRepoStatisticsSummaryResponse, error) {
+	requestDef := GenReqDefForShowRepoStatisticsSummary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRepoStatisticsSummaryResponse), nil
+	}
+}
+
+// ShowRepoStatisticsSummaryInvoker 获取仓库统计信息概览
+func (c *CodeArtsRepoClient) ShowRepoStatisticsSummaryInvoker(request *model.ShowRepoStatisticsSummaryRequest) *ShowRepoStatisticsSummaryInvoker {
+	requestDef := GenReqDefForShowRepoStatisticsSummary()
+	return &ShowRepoStatisticsSummaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowRepository 获取仓库详情
 //
 // 获取仓库详情
@@ -4994,6 +5165,69 @@ func (c *CodeArtsRepoClient) ShowRepositoryInheritSettingSource(request *model.S
 func (c *CodeArtsRepoClient) ShowRepositoryInheritSettingSourceInvoker(request *model.ShowRepositoryInheritSettingSourceRequest) *ShowRepositoryInheritSettingSourceInvoker {
 	requestDef := GenReqDefForShowRepositoryInheritSettingSource()
 	return &ShowRepositoryInheritSettingSourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRepositoryNavigationLanguage 获取代码导航功能的语言信息
+//
+// 获取代码导航功能的语言信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) ShowRepositoryNavigationLanguage(request *model.ShowRepositoryNavigationLanguageRequest) (*model.ShowRepositoryNavigationLanguageResponse, error) {
+	requestDef := GenReqDefForShowRepositoryNavigationLanguage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRepositoryNavigationLanguageResponse), nil
+	}
+}
+
+// ShowRepositoryNavigationLanguageInvoker 获取代码导航功能的语言信息
+func (c *CodeArtsRepoClient) ShowRepositoryNavigationLanguageInvoker(request *model.ShowRepositoryNavigationLanguageRequest) *ShowRepositoryNavigationLanguageInvoker {
+	requestDef := GenReqDefForShowRepositoryNavigationLanguage()
+	return &ShowRepositoryNavigationLanguageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRepositoryNavigationOutline 获取代码导航大纲
+//
+// 获取代码导航大纲
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) ShowRepositoryNavigationOutline(request *model.ShowRepositoryNavigationOutlineRequest) (*model.ShowRepositoryNavigationOutlineResponse, error) {
+	requestDef := GenReqDefForShowRepositoryNavigationOutline()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRepositoryNavigationOutlineResponse), nil
+	}
+}
+
+// ShowRepositoryNavigationOutlineInvoker 获取代码导航大纲
+func (c *CodeArtsRepoClient) ShowRepositoryNavigationOutlineInvoker(request *model.ShowRepositoryNavigationOutlineRequest) *ShowRepositoryNavigationOutlineInvoker {
+	requestDef := GenReqDefForShowRepositoryNavigationOutline()
+	return &ShowRepositoryNavigationOutlineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRepositoryNavigationSchema 获取代码导航功能的模式信息
+//
+// 获取代码导航功能的模式信息，包括最近索引创建时间，做大统计的文件数量信息等
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) ShowRepositoryNavigationSchema(request *model.ShowRepositoryNavigationSchemaRequest) (*model.ShowRepositoryNavigationSchemaResponse, error) {
+	requestDef := GenReqDefForShowRepositoryNavigationSchema()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRepositoryNavigationSchemaResponse), nil
+	}
+}
+
+// ShowRepositoryNavigationSchemaInvoker 获取代码导航功能的模式信息
+func (c *CodeArtsRepoClient) ShowRepositoryNavigationSchemaInvoker(request *model.ShowRepositoryNavigationSchemaRequest) *ShowRepositoryNavigationSchemaInvoker {
+	requestDef := GenReqDefForShowRepositoryNavigationSchema()
+	return &ShowRepositoryNavigationSchemaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowRepositoryStatisticsStatus 获取仓库统计任务状态
@@ -5141,6 +5375,27 @@ func (c *CodeArtsRepoClient) SyncDeployKeyToSubmodules(request *model.SyncDeploy
 func (c *CodeArtsRepoClient) SyncDeployKeyToSubmodulesInvoker(request *model.SyncDeployKeyToSubmodulesRequest) *SyncDeployKeyToSubmodulesInvoker {
 	requestDef := GenReqDefForSyncDeployKeyToSubmodules()
 	return &SyncDeployKeyToSubmodulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// TransferRepository 转移仓库
+//
+// 将仓库转移到其他代码组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) TransferRepository(request *model.TransferRepositoryRequest) (*model.TransferRepositoryResponse, error) {
+	requestDef := GenReqDefForTransferRepository()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.TransferRepositoryResponse), nil
+	}
+}
+
+// TransferRepositoryInvoker 转移仓库
+func (c *CodeArtsRepoClient) TransferRepositoryInvoker(request *model.TransferRepositoryRequest) *TransferRepositoryInvoker {
+	requestDef := GenReqDefForTransferRepository()
+	return &TransferRepositoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UnlockRepository 解锁仓库
@@ -5374,6 +5629,27 @@ func (c *CodeArtsRepoClient) AddTenantTrustedIpAddressInvoker(request *model.Add
 	return &AddTenantTrustedIpAddressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateTenantKmsGrant 创建当前租户委托给Repo的KMS授权
+//
+// 创建当前租户委托给Repo的KMS授权
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) CreateTenantKmsGrant(request *model.CreateTenantKmsGrantRequest) (*model.CreateTenantKmsGrantResponse, error) {
+	requestDef := GenReqDefForCreateTenantKmsGrant()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTenantKmsGrantResponse), nil
+	}
+}
+
+// CreateTenantKmsGrantInvoker 创建当前租户委托给Repo的KMS授权
+func (c *CodeArtsRepoClient) CreateTenantKmsGrantInvoker(request *model.CreateTenantKmsGrantRequest) *CreateTenantKmsGrantInvoker {
+	requestDef := GenReqDefForCreateTenantKmsGrant()
+	return &CreateTenantKmsGrantInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteTenantTrustedIpAddress 删除租户ip白名单
 //
 // 删除租户ip白名单
@@ -5397,7 +5673,7 @@ func (c *CodeArtsRepoClient) DeleteTenantTrustedIpAddressInvoker(request *model.
 
 // ExportTenantRepositories 租户仓库列表
 //
-// 租户下所有占用资源的仓库列表
+// 租户下所有占用资源的仓库列表，最多只能导出2万条记录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CodeArtsRepoClient) ExportTenantRepositories(request *model.ExportTenantRepositoriesRequest) (*model.ExportTenantRepositoriesResponse, error) {
@@ -5414,6 +5690,48 @@ func (c *CodeArtsRepoClient) ExportTenantRepositories(request *model.ExportTenan
 func (c *CodeArtsRepoClient) ExportTenantRepositoriesInvoker(request *model.ExportTenantRepositoriesRequest) *ExportTenantRepositoriesInvoker {
 	requestDef := GenReqDefForExportTenantRepositories()
 	return &ExportTenantRepositoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTenantCmks 获取当前租户的在KMS托管的主密钥CMK列表
+//
+// 获取当前租户的在KMS托管的主密钥CMK列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) ListTenantCmks(request *model.ListTenantCmksRequest) (*model.ListTenantCmksResponse, error) {
+	requestDef := GenReqDefForListTenantCmks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTenantCmksResponse), nil
+	}
+}
+
+// ListTenantCmksInvoker 获取当前租户的在KMS托管的主密钥CMK列表
+func (c *CodeArtsRepoClient) ListTenantCmksInvoker(request *model.ListTenantCmksRequest) *ListTenantCmksInvoker {
+	requestDef := GenReqDefForListTenantCmks()
+	return &ListTenantCmksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTenantEncryptedRepositories 获取当前租户已加密的仓库列表
+//
+// 获取当前租户已加密的仓库列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) ListTenantEncryptedRepositories(request *model.ListTenantEncryptedRepositoriesRequest) (*model.ListTenantEncryptedRepositoriesResponse, error) {
+	requestDef := GenReqDefForListTenantEncryptedRepositories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTenantEncryptedRepositoriesResponse), nil
+	}
+}
+
+// ListTenantEncryptedRepositoriesInvoker 获取当前租户已加密的仓库列表
+func (c *CodeArtsRepoClient) ListTenantEncryptedRepositoriesInvoker(request *model.ListTenantEncryptedRepositoriesRequest) *ListTenantEncryptedRepositoriesInvoker {
+	requestDef := GenReqDefForListTenantEncryptedRepositories()
+	return &ListTenantEncryptedRepositoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListTenantRepositories 租户仓库列表
@@ -5456,6 +5774,111 @@ func (c *CodeArtsRepoClient) ListTenantTrustedIpAddresses(request *model.ListTen
 func (c *CodeArtsRepoClient) ListTenantTrustedIpAddressesInvoker(request *model.ListTenantTrustedIpAddressesRequest) *ListTenantTrustedIpAddressesInvoker {
 	requestDef := GenReqDefForListTenantTrustedIpAddresses()
 	return &ListTenantTrustedIpAddressesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProjectTenantSettings 获取租户设置
+//
+// 获取租户设置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) ShowProjectTenantSettings(request *model.ShowProjectTenantSettingsRequest) (*model.ShowProjectTenantSettingsResponse, error) {
+	requestDef := GenReqDefForShowProjectTenantSettings()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProjectTenantSettingsResponse), nil
+	}
+}
+
+// ShowProjectTenantSettingsInvoker 获取租户设置
+func (c *CodeArtsRepoClient) ShowProjectTenantSettingsInvoker(request *model.ShowProjectTenantSettingsRequest) *ShowProjectTenantSettingsInvoker {
+	requestDef := GenReqDefForShowProjectTenantSettings()
+	return &ShowProjectTenantSettingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTenantDevelopMode 查看当前租户的开发模式
+//
+// 查看当前租户的开发模式
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) ShowTenantDevelopMode(request *model.ShowTenantDevelopModeRequest) (*model.ShowTenantDevelopModeResponse, error) {
+	requestDef := GenReqDefForShowTenantDevelopMode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTenantDevelopModeResponse), nil
+	}
+}
+
+// ShowTenantDevelopModeInvoker 查看当前租户的开发模式
+func (c *CodeArtsRepoClient) ShowTenantDevelopModeInvoker(request *model.ShowTenantDevelopModeRequest) *ShowTenantDevelopModeInvoker {
+	requestDef := GenReqDefForShowTenantDevelopMode()
+	return &ShowTenantDevelopModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTenantKmsGrant 获取当前租户委托授权KMS状态
+//
+// 获取当前租户委托授权KMS状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) ShowTenantKmsGrant(request *model.ShowTenantKmsGrantRequest) (*model.ShowTenantKmsGrantResponse, error) {
+	requestDef := GenReqDefForShowTenantKmsGrant()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTenantKmsGrantResponse), nil
+	}
+}
+
+// ShowTenantKmsGrantInvoker 获取当前租户委托授权KMS状态
+func (c *CodeArtsRepoClient) ShowTenantKmsGrantInvoker(request *model.ShowTenantKmsGrantRequest) *ShowTenantKmsGrantInvoker {
+	requestDef := GenReqDefForShowTenantKmsGrant()
+	return &ShowTenantKmsGrantInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTenantRepoEncryptionSetting 获取当前租户的仓库加密配置
+//
+// 获取当前租户的仓库加密配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) ShowTenantRepoEncryptionSetting(request *model.ShowTenantRepoEncryptionSettingRequest) (*model.ShowTenantRepoEncryptionSettingResponse, error) {
+	requestDef := GenReqDefForShowTenantRepoEncryptionSetting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTenantRepoEncryptionSettingResponse), nil
+	}
+}
+
+// ShowTenantRepoEncryptionSettingInvoker 获取当前租户的仓库加密配置
+func (c *CodeArtsRepoClient) ShowTenantRepoEncryptionSettingInvoker(request *model.ShowTenantRepoEncryptionSettingRequest) *ShowTenantRepoEncryptionSettingInvoker {
+	requestDef := GenReqDefForShowTenantRepoEncryptionSetting()
+	return &ShowTenantRepoEncryptionSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTenantRepoEncryptionSetting 修改当前租户的仓库加密配置
+//
+// 修改当前租户的仓库加密配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsRepoClient) UpdateTenantRepoEncryptionSetting(request *model.UpdateTenantRepoEncryptionSettingRequest) (*model.UpdateTenantRepoEncryptionSettingResponse, error) {
+	requestDef := GenReqDefForUpdateTenantRepoEncryptionSetting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTenantRepoEncryptionSettingResponse), nil
+	}
+}
+
+// UpdateTenantRepoEncryptionSettingInvoker 修改当前租户的仓库加密配置
+func (c *CodeArtsRepoClient) UpdateTenantRepoEncryptionSettingInvoker(request *model.UpdateTenantRepoEncryptionSettingRequest) *UpdateTenantRepoEncryptionSettingInvoker {
+	requestDef := GenReqDefForUpdateTenantRepoEncryptionSetting()
+	return &UpdateTenantRepoEncryptionSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateTenantTrustedIpAddress 修改租户ip白名单

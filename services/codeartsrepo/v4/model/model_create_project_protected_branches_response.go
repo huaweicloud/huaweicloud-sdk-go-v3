@@ -9,13 +9,13 @@ import (
 // CreateProjectProtectedBranchesResponse Response Object
 type CreateProjectProtectedBranchesResponse struct {
 
-	// **参数解释：** 保护分支唯一标识。
+	// **参数解释：** 保护分支唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Id *int32 `json:"id,omitempty"`
 
-	// **参数解释：** 保护分支名称 **取值范围：** 字符串长度不少于1，不超过1000。
+	// **参数解释：** 保护分支名称 **取值范围：** 字符串长度不少于1，不超过1000。 **约束限制：** 不涉及 **默认取值：** 不涉及
 	Name *string `json:"name,omitempty"`
 
-	// **参数解释：** 事件列表。
+	// **参数解释：** 事件列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Actions        *[]ProjectProtectedActionResultApiDto `json:"actions,omitempty"`
 	HttpStatusCode int                                   `json:"-"`
 }

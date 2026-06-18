@@ -630,6 +630,188 @@ func (c *IamClient) ListMfaDevicesV5Invoker(request *model.ListMfaDevicesV5Reque
 	return &ListMfaDevicesV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddClientIDToOIDCProviderV5 向指定OIDC提供商添加客户端 ID
+//
+// 该接口可以用于向指定 IAM OIDC 提供商已注册的客户端 ID 列表中添加一个新的客户端 ID。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) AddClientIDToOIDCProviderV5(request *model.AddClientIdToOidcProviderV5Request) (*model.AddClientIdToOidcProviderV5Response, error) {
+	requestDef := GenReqDefForAddClientIDToOIDCProviderV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddClientIdToOidcProviderV5Response), nil
+	}
+}
+
+// AddClientIDToOIDCProviderV5Invoker 向指定OIDC提供商添加客户端 ID
+func (c *IamClient) AddClientIDToOIDCProviderV5Invoker(request *model.AddClientIdToOidcProviderV5Request) *AddClientIDToOIDCProviderV5Invoker {
+	requestDef := GenReqDefForAddClientIDToOIDCProviderV5()
+	return &AddClientIDToOIDCProviderV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateOIDCProviderV5 创建OIDC提供商
+//
+// 该接口可以用于创建一个支持 OpenID Connect (OIDC) 的身份提供商 (IdP)。
+// 您通过此操作创建的 OIDC 提供商可用作信任委托的信任策略中的主体 (Principal)，用于在华为云和 OIDC 提供商之间建立信任关系。
+// 您可以直接使用您的身份提供商去创建新的信任委托，要了解更多信息，请参阅 IAM 用户指南中的**身份提供商**章节。
+//
+// 当您创建 IAM OIDC 提供商时，您需要指定以下内容：
+// - 要信任的 OIDC 身份提供商的 URL。
+// - 客户端 ID 列表（也称为受众 Audiences），用于识别允许使用该 OIDC 提供商进行身份验证的应用程序。
+// - 附加到指定 IAM OIDC 提供商的标签列表。
+// - OIDC 身份提供商使用的一个或多个服务器证书的指纹列表。
+//
+// **注意：**
+// IAM 使用我们的信任根证书颁发机构 (CAs) 库来验证 JSON Web Key Set (JWKS) 端点的 TLS 证书，从而确保与 OIDC 身份提供商 (IdPs) 的通信安全。如果您的 OIDC IdP 依赖于不是由这些受信任 CA 之一签名的证书，那么我们才会使用 IdP 配置中设置的指纹来确保通信安全。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) CreateOIDCProviderV5(request *model.CreateOidcProviderV5Request) (*model.CreateOidcProviderV5Response, error) {
+	requestDef := GenReqDefForCreateOIDCProviderV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateOidcProviderV5Response), nil
+	}
+}
+
+// CreateOIDCProviderV5Invoker 创建OIDC提供商
+func (c *IamClient) CreateOIDCProviderV5Invoker(request *model.CreateOidcProviderV5Request) *CreateOIDCProviderV5Invoker {
+	requestDef := GenReqDefForCreateOIDCProviderV5()
+	return &CreateOIDCProviderV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteOIDCProviderV5 删除指定OIDC提供商
+//
+// 该接口可以用于删除 IAM 中的一个 OpenID Connect (OIDC) 的身份提供商 (IdP)。IAM 在删除 OIDC 提供商时不会更新在信任策略中引用该提供商作为主体的任何信任委托，删除之后任何尝试切换代入引用已删除提供商的信任委托的操作都将失败。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) DeleteOIDCProviderV5(request *model.DeleteOidcProviderV5Request) (*model.DeleteOidcProviderV5Response, error) {
+	requestDef := GenReqDefForDeleteOIDCProviderV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteOidcProviderV5Response), nil
+	}
+}
+
+// DeleteOIDCProviderV5Invoker 删除指定OIDC提供商
+func (c *IamClient) DeleteOIDCProviderV5Invoker(request *model.DeleteOidcProviderV5Request) *DeleteOIDCProviderV5Invoker {
+	requestDef := GenReqDefForDeleteOIDCProviderV5()
+	return &DeleteOIDCProviderV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListOIDCProvidersV5 查询所有OIDC提供商
+//
+// 该接口可以用于查询所有 OpenID Connect (OIDC) 的身份提供商 (IdP) 列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) ListOIDCProvidersV5(request *model.ListOidcProvidersV5Request) (*model.ListOidcProvidersV5Response, error) {
+	requestDef := GenReqDefForListOIDCProvidersV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOidcProvidersV5Response), nil
+	}
+}
+
+// ListOIDCProvidersV5Invoker 查询所有OIDC提供商
+func (c *IamClient) ListOIDCProvidersV5Invoker(request *model.ListOidcProvidersV5Request) *ListOIDCProvidersV5Invoker {
+	requestDef := GenReqDefForListOIDCProvidersV5()
+	return &ListOIDCProvidersV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RemoveClientIDFromOIDCProviderV5 移除指定OIDC提供商中指定的客户端ID
+//
+// 该接口可以用于移除指定 IAM OIDC 提供商客户端 ID 列表中指定的客户端 ID。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) RemoveClientIDFromOIDCProviderV5(request *model.RemoveClientIdFromOidcProviderV5Request) (*model.RemoveClientIdFromOidcProviderV5Response, error) {
+	requestDef := GenReqDefForRemoveClientIDFromOIDCProviderV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoveClientIdFromOidcProviderV5Response), nil
+	}
+}
+
+// RemoveClientIDFromOIDCProviderV5Invoker 移除指定OIDC提供商中指定的客户端ID
+func (c *IamClient) RemoveClientIDFromOIDCProviderV5Invoker(request *model.RemoveClientIdFromOidcProviderV5Request) *RemoveClientIDFromOIDCProviderV5Invoker {
+	requestDef := GenReqDefForRemoveClientIDFromOIDCProviderV5()
+	return &RemoveClientIDFromOIDCProviderV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowOIDCProviderV5 查询指定OIDC提供商
+//
+// 该接口可以用于查询 OpenID Connect (OIDC) 的身份提供商 (IdP) 详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) ShowOIDCProviderV5(request *model.ShowOidcProviderV5Request) (*model.ShowOidcProviderV5Response, error) {
+	requestDef := GenReqDefForShowOIDCProviderV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowOidcProviderV5Response), nil
+	}
+}
+
+// ShowOIDCProviderV5Invoker 查询指定OIDC提供商
+func (c *IamClient) ShowOIDCProviderV5Invoker(request *model.ShowOidcProviderV5Request) *ShowOIDCProviderV5Invoker {
+	requestDef := GenReqDefForShowOIDCProviderV5()
+	return &ShowOIDCProviderV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateOIDCProviderThumbprintV5 替换OIDC提供商指纹列表
+//
+// 该接口可以用一个新的指纹列表替换与 OIDC 提供商关联的现有指纹列表。通常，您仅在身份提供商证书更改时才需要更新指纹，这种情况一般很少发生。但是，如果提供商的证书发生了变化，而您又没有更新指纹，那么任何尝试切换代入与该 OIDC 提供商相关的 信任委托都将失败。
+//
+// **注意：**
+// IAM 使用自己的信任根证书颁发机构 (CAs) 库来验证 JSON Web Key Set (JWKS) 端点的 TLS 证书，从而确保与 OIDC 身份提供商 (IdPs) 的通信安全。如果您的 OIDC IdP 依赖于不是由这些受信任 CA 之一签名的证书，那么我们才会使用 IdP 配置中设置的指纹来确保通信安全。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) UpdateOIDCProviderThumbprintV5(request *model.UpdateOidcProviderThumbprintV5Request) (*model.UpdateOidcProviderThumbprintV5Response, error) {
+	requestDef := GenReqDefForUpdateOIDCProviderThumbprintV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateOidcProviderThumbprintV5Response), nil
+	}
+}
+
+// UpdateOIDCProviderThumbprintV5Invoker 替换OIDC提供商指纹列表
+func (c *IamClient) UpdateOIDCProviderThumbprintV5Invoker(request *model.UpdateOidcProviderThumbprintV5Request) *UpdateOIDCProviderThumbprintV5Invoker {
+	requestDef := GenReqDefForUpdateOIDCProviderThumbprintV5()
+	return &UpdateOIDCProviderThumbprintV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateOIDCProviderV5 修改指定OIDC提供商描述
+//
+// 该接口可以用于修改 IAM 中的一个 OpenID Connect (OIDC) 的身份提供商 (IdP)的描述字段。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) UpdateOIDCProviderV5(request *model.UpdateOidcProviderV5Request) (*model.UpdateOidcProviderV5Response, error) {
+	requestDef := GenReqDefForUpdateOIDCProviderV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateOidcProviderV5Response), nil
+	}
+}
+
+// UpdateOIDCProviderV5Invoker 修改指定OIDC提供商描述
+func (c *IamClient) UpdateOIDCProviderV5Invoker(request *model.UpdateOidcProviderV5Request) *UpdateOIDCProviderV5Invoker {
+	requestDef := GenReqDefForUpdateOIDCProviderV5()
+	return &UpdateOIDCProviderV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePolicyV5 创建自定义身份策略
 //
 // 该接口可以用于创建一个默认版本为v1的新自定义身份策略。
@@ -1090,6 +1272,115 @@ func (c *IamClient) TagResourceV5(request *model.TagResourceV5Request) (*model.T
 func (c *IamClient) TagResourceV5Invoker(request *model.TagResourceV5Request) *TagResourceV5Invoker {
 	requestDef := GenReqDefForTagResourceV5()
 	return &TagResourceV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSAMLProviderV5 创建SAML提供商
+//
+// 该接口可以用于创建一个支持 SAML 2.0 的身份提供商 (IdP)。
+//
+// 您通过此操作创建的 SAML 提供商可用作信任委托的信任策略中的主体 (Principal)，用于在华为云和 SAML 提供商之间建立信任关系。 该信任策略可以允许使用 SAML IdP 登录的联邦用户切换至该信任委托，您可以创建使用 Web 单点登录 (SSO) 到 华为云控制台的 IAM 信任委托，或者支持对华为云进行 API 访问的 IAM 信任委托。
+//
+// 当您创建 SAML 提供商时，您需要上传从 IdP 获得的 SAML 元数据文档。该文档包含颁发者的名称、过期信息以及可用于验证 IdP 发送的 SAML 身份验证响应（断言）的密钥。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) CreateSAMLProviderV5(request *model.CreateSamlProviderV5Request) (*model.CreateSamlProviderV5Response, error) {
+	requestDef := GenReqDefForCreateSAMLProviderV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSamlProviderV5Response), nil
+	}
+}
+
+// CreateSAMLProviderV5Invoker 创建SAML提供商
+func (c *IamClient) CreateSAMLProviderV5Invoker(request *model.CreateSamlProviderV5Request) *CreateSAMLProviderV5Invoker {
+	requestDef := GenReqDefForCreateSAMLProviderV5()
+	return &CreateSAMLProviderV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSAMLProviderV5 删除指定SAML提供商
+//
+// 该接口可以用于删除 IAM 中的一个 SAML 2.0 的身份提供商 (IdP)。IAM 在删除 SAML 提供商时不会更新在信任策略中引用该提供商作为主体的任何信任委托，删除之后任何尝试切换代入引用已删除提供商的信任委托的操作都将失败。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) DeleteSAMLProviderV5(request *model.DeleteSamlProviderV5Request) (*model.DeleteSamlProviderV5Response, error) {
+	requestDef := GenReqDefForDeleteSAMLProviderV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSamlProviderV5Response), nil
+	}
+}
+
+// DeleteSAMLProviderV5Invoker 删除指定SAML提供商
+func (c *IamClient) DeleteSAMLProviderV5Invoker(request *model.DeleteSamlProviderV5Request) *DeleteSAMLProviderV5Invoker {
+	requestDef := GenReqDefForDeleteSAMLProviderV5()
+	return &DeleteSAMLProviderV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSAMLProvidersV5 查询所有SAML提供商
+//
+// 该接口可以用于查询所有 SAML 2.0 的身份提供商 (IdP) 列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) ListSAMLProvidersV5(request *model.ListSamlProvidersV5Request) (*model.ListSamlProvidersV5Response, error) {
+	requestDef := GenReqDefForListSAMLProvidersV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSamlProvidersV5Response), nil
+	}
+}
+
+// ListSAMLProvidersV5Invoker 查询所有SAML提供商
+func (c *IamClient) ListSAMLProvidersV5Invoker(request *model.ListSamlProvidersV5Request) *ListSAMLProvidersV5Invoker {
+	requestDef := GenReqDefForListSAMLProvidersV5()
+	return &ListSAMLProvidersV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSAMLProviderV5 查询指定SAML提供商
+//
+// 该接口可以用于查询 SAML 2.0 的身份提供商 (IdP) 详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) ShowSAMLProviderV5(request *model.ShowSamlProviderV5Request) (*model.ShowSamlProviderV5Response, error) {
+	requestDef := GenReqDefForShowSAMLProviderV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSamlProviderV5Response), nil
+	}
+}
+
+// ShowSAMLProviderV5Invoker 查询指定SAML提供商
+func (c *IamClient) ShowSAMLProviderV5Invoker(request *model.ShowSamlProviderV5Request) *ShowSAMLProviderV5Invoker {
+	requestDef := GenReqDefForShowSAMLProviderV5()
+	return &ShowSAMLProviderV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSAMLProviderV5 更新指定SAML提供商
+//
+// 该接口可以用于更新现有 SAML 提供商的元数据文档、SAML 加密设置以及私钥。要轮换私钥，请在单独的请求中先添加新的私钥，然后移除旧的私钥。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) UpdateSAMLProviderV5(request *model.UpdateSamlProviderV5Request) (*model.UpdateSamlProviderV5Response, error) {
+	requestDef := GenReqDefForUpdateSAMLProviderV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSamlProviderV5Response), nil
+	}
+}
+
+// UpdateSAMLProviderV5Invoker 更新指定SAML提供商
+func (c *IamClient) UpdateSAMLProviderV5Invoker(request *model.UpdateSamlProviderV5Request) *UpdateSAMLProviderV5Invoker {
+	requestDef := GenReqDefForUpdateSAMLProviderV5()
+	return &UpdateSAMLProviderV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowLoginPolicyV5 查询账号登录策略

@@ -8,8 +8,10 @@ import (
 
 // ListDiscussionTemplatesResponse Response Object
 type ListDiscussionTemplatesResponse struct {
-	Body           *[]DiscussionTemplateDto `json:"body,omitempty"`
-	HttpStatusCode int                      `json:"-"`
+	Body *[]DiscussionTemplateDto `json:"body,omitempty"`
+
+	XTotal         *string `json:"X-Total,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListDiscussionTemplatesResponse) String() string {

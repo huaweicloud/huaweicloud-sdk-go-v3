@@ -105,6 +105,12 @@ type RepositoryBasicDto struct {
 	CreatorId *int32 `json:"creator_id,omitempty"`
 
 	ForkedFromRepository *RepositorySimpleDto `json:"forked_from_repository,omitempty"`
+
+	// **参数解释：** 仓库加密状态 **取值范围：** - encrypting，加密中。 - encrypted，已加密。 - decrypting，解密中。 - decrypted，已解密。 **默认取值：** 不涉及。
+	EncryptionStatus *RepositoryBasicDtoEncryptionStatus `json:"encryption_status,omitempty"`
+
+	// **参数解释：** 是否开启仓库加密 **取值范围：** - true，已开启加密。 - false，未开启加密。
+	RepoEncryptionEnabled *bool `json:"repo_encryption_enabled,omitempty"`
 }
 
 func (o RepositoryBasicDto) String() string {
@@ -145,6 +151,61 @@ func (c RepositoryBasicDtoDevelopMode) MarshalJSON() ([]byte, error) {
 }
 
 func (c *RepositoryBasicDtoDevelopMode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type RepositoryBasicDtoEncryptionStatus struct {
+	value string
+}
+
+type RepositoryBasicDtoEncryptionStatusEnum struct {
+	ENCRYPTING RepositoryBasicDtoEncryptionStatus
+	ENCRYPTED  RepositoryBasicDtoEncryptionStatus
+	DECRYPTING RepositoryBasicDtoEncryptionStatus
+	DECRYPTED  RepositoryBasicDtoEncryptionStatus
+}
+
+func GetRepositoryBasicDtoEncryptionStatusEnum() RepositoryBasicDtoEncryptionStatusEnum {
+	return RepositoryBasicDtoEncryptionStatusEnum{
+		ENCRYPTING: RepositoryBasicDtoEncryptionStatus{
+			value: "encrypting",
+		},
+		ENCRYPTED: RepositoryBasicDtoEncryptionStatus{
+			value: "encrypted",
+		},
+		DECRYPTING: RepositoryBasicDtoEncryptionStatus{
+			value: "decrypting",
+		},
+		DECRYPTED: RepositoryBasicDtoEncryptionStatus{
+			value: "decrypted",
+		},
+	}
+}
+
+func (c RepositoryBasicDtoEncryptionStatus) Value() string {
+	return c.value
+}
+
+func (c RepositoryBasicDtoEncryptionStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *RepositoryBasicDtoEncryptionStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

@@ -50,7 +50,19 @@ type GetAccountSummaryV5Response struct {
 
 	// 根用户绑定的已启用MFA的数量。
 	RootUserMfaEnabled *int32 `json:"root_user_mfa_enabled,omitempty"`
-	HttpStatusCode     int    `json:"-"`
+
+	// 此账号当前创建的OIDC身份提供商数量。
+	OidcProvider *int32 `json:"oidc_provider,omitempty"`
+
+	// 此账号当前创建的OIDC身份提供商数量上限。
+	OidcProviderQuota *int32 `json:"oidc_provider_quota,omitempty"`
+
+	// 此账号当前创建的SAML身份提供商数量。
+	SamlProvider *int32 `json:"saml_provider,omitempty"`
+
+	// 此账号当前创建的SAML身份提供商数量上限。
+	SamlProviderQuota *int32 `json:"saml_provider_quota,omitempty"`
+	HttpStatusCode    int    `json:"-"`
 }
 
 func (o GetAccountSummaryV5Response) String() string {

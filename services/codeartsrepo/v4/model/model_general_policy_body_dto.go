@@ -25,6 +25,9 @@ type GeneralPolicyBodyDto struct {
 
 	// **参数解释：** 开发人员创建分支权限例外白名单。多个用户ID使用逗号分隔。
 	CreateBranchWhitelistUserIds *string `json:"create_branch_whitelist_user_ids,omitempty"`
+
+	// **参数解释：** 是否开启仓库加密。 **约束限制：** 不涉及。 **取值范围：** - true，开启仓库加密。 - false，关闭仓库加密。
+	RepoEncryptionEnabled *bool `json:"repo_encryption_enabled,omitempty"`
 }
 
 func (o GeneralPolicyBodyDto) String() string {

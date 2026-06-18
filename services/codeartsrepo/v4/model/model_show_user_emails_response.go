@@ -34,8 +34,11 @@ type ShowUserEmailsResponse struct {
 	LastActivityOn *string `json:"last_activity_on,omitempty"`
 
 	// **参数解释：** 提交邮箱。 **取值范围：** 字符串长度不少于1，不超过1000。
-	CommitEmail    *string `json:"commit_email,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	CommitEmail *string `json:"commit_email,omitempty"`
+
+	// **参数解释：** 是否为默认邮箱。
+	IsDefault      *bool `json:"is_default,omitempty"`
+	HttpStatusCode int   `json:"-"`
 }
 
 func (o ShowUserEmailsResponse) String() string {

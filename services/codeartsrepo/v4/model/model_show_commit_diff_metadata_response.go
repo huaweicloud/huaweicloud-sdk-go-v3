@@ -27,8 +27,11 @@ type ShowCommitDiffMetadataResponse struct {
 	ChangeLineCount *int32 `json:"change_line_count,omitempty"`
 
 	// **参数解释：** 是否为大文件。 **取值范围：** - true，大文件。 - false，非大文件
-	TooLarge       *bool `json:"too_large,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	TooLarge *bool `json:"too_large,omitempty"`
+
+	// **参数解释：** blob文件ID。 **约束限制：** 不涉及。
+	BlobId         *string `json:"blob_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowCommitDiffMetadataResponse) String() string {

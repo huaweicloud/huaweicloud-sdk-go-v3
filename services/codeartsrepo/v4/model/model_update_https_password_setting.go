@@ -9,7 +9,7 @@ import (
 type UpdateHttpsPasswordSetting struct {
 
 	// **参数解释：** 是否用https的认证方式 true,false。 **取值范围：** 字符串长度不少于1，不超过1000。
-	HttpsCloneIamAuth *string `json:"https_clone_iam_auth,omitempty"`
+	HttpsCloneIamAuth string `json:"https_clone_iam_auth"`
 }
 
 func (o UpdateHttpsPasswordSetting) String() string {

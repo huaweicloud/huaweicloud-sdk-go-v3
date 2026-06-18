@@ -13,7 +13,7 @@ import (
 type CreateMergeRequestNoteDto struct {
 
 	// **参数解释：** 评论内容。
-	Body *string `json:"body,omitempty"`
+	Body string `json:"body"`
 
 	// **参数解释：** 检视意见严重程度。
 	Severity *CreateMergeRequestNoteDtoSeverity `json:"severity,omitempty"`

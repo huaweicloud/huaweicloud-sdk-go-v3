@@ -26,7 +26,12 @@ type UpdateRepositoryGeneralPolicyResponse struct {
 
 	// **参数解释：** 开发人员创建分支权限白名单。
 	CreateBranchWhitelistUsers *[]PushRuleDevelopersDto `json:"create_branch_whitelist_users,omitempty"`
-	HttpStatusCode             int                      `json:"-"`
+
+	// **参数解释：** 是否开启仓库加密。 **约束限制：** 不涉及。 **取值范围：** - true，开启仓库加密。 - false，关闭仓库加密。
+	RepoEncryptionEnabled *bool `json:"repo_encryption_enabled,omitempty"`
+
+	RepoEncryptionStatus *ProjectEncryptionStatusBriefDto `json:"repo_encryption_status,omitempty"`
+	HttpStatusCode       int                              `json:"-"`
 }
 
 func (o UpdateRepositoryGeneralPolicyResponse) String() string {

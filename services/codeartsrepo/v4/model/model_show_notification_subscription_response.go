@@ -18,12 +18,12 @@ type ShowNotificationSubscriptionResponse struct {
 	// **参数解释：** 开启通知。
 	Enabled *bool `json:"enabled,omitempty"`
 
-	// **参数解释：** 配资源。
+	// **参数解释：** 配置源。
 	ConfigSource *ShowNotificationSubscriptionResponseConfigSource `json:"config_source,omitempty"`
 
 	WebhookConfig *RepoWebHookSubscriptionDto `json:"webhook_config,omitempty"`
 
-	// **参数解释：** 仓库使用量告警阀值（百分比）。
+	// **参数解释：** 仓库使用量告警阈值（百分比）。
 	WaringRepoUsageRate *ShowNotificationSubscriptionResponseWaringRepoUsageRate `json:"waring_repo_usage_rate,omitempty"`
 
 	// **参数解释：** 通知事件。

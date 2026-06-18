@@ -15,7 +15,7 @@ type DeleteResourceTagsV5Request struct {
 	// 资源ID，长度为1到64个字符，只包含字母、数字和\"-\"的字符串。
 	ResourceId string `json:"resource_id"`
 
-	// 资源类型，可以为“信任委托”（trust agency）或“IAM用户”（user）。
+	// 资源类型，可以为“信任委托”（trust agency）或“IAM用户”（user）或“身份提供商”（provider）。
 	ResourceType DeleteResourceTagsV5RequestResourceType `json:"resource_type"`
 
 	// 待删除的标签键列表。
@@ -36,8 +36,10 @@ type DeleteResourceTagsV5RequestResourceType struct {
 }
 
 type DeleteResourceTagsV5RequestResourceTypeEnum struct {
-	AGENCY DeleteResourceTagsV5RequestResourceType
-	USER   DeleteResourceTagsV5RequestResourceType
+	AGENCY        DeleteResourceTagsV5RequestResourceType
+	USER          DeleteResourceTagsV5RequestResourceType
+	OIDC_PROVIDER DeleteResourceTagsV5RequestResourceType
+	SAML_PROVIDER DeleteResourceTagsV5RequestResourceType
 }
 
 func GetDeleteResourceTagsV5RequestResourceTypeEnum() DeleteResourceTagsV5RequestResourceTypeEnum {
@@ -47,6 +49,12 @@ func GetDeleteResourceTagsV5RequestResourceTypeEnum() DeleteResourceTagsV5Reques
 		},
 		USER: DeleteResourceTagsV5RequestResourceType{
 			value: "user",
+		},
+		OIDC_PROVIDER: DeleteResourceTagsV5RequestResourceType{
+			value: "oidc_provider",
+		},
+		SAML_PROVIDER: DeleteResourceTagsV5RequestResourceType{
+			value: "saml_provider",
 		},
 	}
 }

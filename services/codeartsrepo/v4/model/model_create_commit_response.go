@@ -87,6 +87,9 @@ type CreateCommitResponse struct {
 	// 用户名
 	UserName *string `json:"user_name,omitempty"`
 
+	// 作者id
+	AuthorId *int32 `json:"author_id,omitempty"`
+
 	Stats *CommitStatsDto `json:"stats,omitempty"`
 
 	// 流水线状态，pending为排队，running为运行中，success为成功，failed为失败，canceled为取消，skipped为跳过，timedout为超时

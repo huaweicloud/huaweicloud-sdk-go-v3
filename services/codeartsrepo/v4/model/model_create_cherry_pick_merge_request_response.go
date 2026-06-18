@@ -15,7 +15,7 @@ type CreateCherryPickMergeRequestResponse struct {
 	// CherryPick标题
 	Title *string `json:"title,omitempty"`
 
-	// CherryPick临时分支名名称
+	// CherryPick临时分支名称
 	CherryPickBranchName *string `json:"cherry_pick_branch_name,omitempty"`
 	HttpStatusCode       int     `json:"-"`
 }

@@ -13,7 +13,7 @@ import (
 type LineDiscussionDto struct {
 
 	// **参数解释：** 位于某一侧某行的检视意见集合。
-	Discussions *[]MergeRequestBasicDiscussionDto `json:"discussions,omitempty"`
+	Discussions *[]MergeRequestDiscussionDto `json:"discussions,omitempty"`
 
 	// **参数解释：** 所在的行号。
 	Line *int32 `json:"line,omitempty"`

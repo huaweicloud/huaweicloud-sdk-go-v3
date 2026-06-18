@@ -9,7 +9,7 @@ import (
 // UpdateGroupMergeRequestApproverSettingRequest Request Object
 type UpdateGroupMergeRequestApproverSettingRequest struct {
 
-	// **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+	// **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
 	GroupId int32 `json:"group_id"`
 
 	// **参数解释：** 合并请求审核设置id。

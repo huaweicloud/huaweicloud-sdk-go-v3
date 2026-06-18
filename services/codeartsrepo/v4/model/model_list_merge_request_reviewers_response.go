@@ -10,10 +10,10 @@ import (
 type ListMergeRequestReviewersResponse struct {
 
 	// **参数解释：** 必选检视人列表。 **取值范围：** 不涉及。
-	RequiredReviewersList *[]UserBasicDto `json:"required_reviewers_list,omitempty"`
+	RequiredReviewersList *[]MergeRequestApprovalUserDto `json:"required_reviewers_list,omitempty"`
 
 	// **参数解释：** 可选检视人列表。 **取值范围：** 不涉及。
-	OptionalReviewersList *[]UserBasicDto `json:"optional_reviewers_list,omitempty"`
+	OptionalReviewersList *[]MergeRequestApprovalUserDto `json:"optional_reviewers_list,omitempty"`
 
 	XTotal         *string `json:"X-Total,omitempty"`
 	HttpStatusCode int     `json:"-"`

@@ -31,7 +31,9 @@ type ListMergeRequestEvaluationsResponse struct {
 
 	// 自定义评价
 	CustomEvaluations *[]CustomEvaluationDto `json:"custom_evaluations,omitempty"`
-	HttpStatusCode    int                    `json:"-"`
+
+	XTotal         *string `json:"X-Total,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListMergeRequestEvaluationsResponse) String() string {

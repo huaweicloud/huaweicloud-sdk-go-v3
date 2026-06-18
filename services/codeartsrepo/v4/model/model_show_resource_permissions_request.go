@@ -9,10 +9,10 @@ import (
 // ShowResourcePermissionsRequest Request Object
 type ShowResourcePermissionsRequest struct {
 
-	// **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+	// **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
 	GroupId int32 `json:"group_id"`
 
-	// **参数解释：** 资源Id，通过获取代码组权限资源点列表获取的数据中的Id
+	// **参数解释：** 资源Id，通过获取代码组权限资源点列表获取的数据中的Id **默认取值：** 不涉及。
 	ResourceId int32 `json:"resource_id"`
 
 	// **参数解释：** 偏移量，从0开始。

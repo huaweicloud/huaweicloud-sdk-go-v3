@@ -9,7 +9,7 @@ import (
 type UpdateWatermarkDto struct {
 
 	// **参数解释：** 水印开启状态。 - true，开启水印。 - false，关闭水印。
-	Watermark *bool `json:"watermark,omitempty"`
+	Watermark bool `json:"watermark"`
 }
 
 func (o UpdateWatermarkDto) String() string {

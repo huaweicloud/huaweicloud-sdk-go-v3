@@ -41,6 +41,9 @@ type TenantRepositoryDto struct {
 
 	// **参数解释：** 项目Id。 **取值范围：** 不涉及。
 	ProjectId *string `json:"project_id,omitempty"`
+
+	// **参数解释：** 是否锁定。 **取值范围：** - true，是。 - false，否。
+	Locked *bool `json:"locked,omitempty"`
 }
 
 func (o TenantRepositoryDto) String() string {

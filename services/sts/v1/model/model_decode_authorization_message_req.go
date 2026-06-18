@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// DecodeAuthorizationMessageReq 接口/v5/decode-authorization-message的Http请求体。
+// DecodeAuthorizationMessageReq **参数解释**： 接口/v5/decode-authorization-message的Http请求体。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
 type DecodeAuthorizationMessageReq struct {
 
-	// 加密的鉴权失败原因，字符串长度范围[1,10240]。
+	// **参数解释**： 加密的鉴权失败原因。  **约束限制**： 长度范围为[1,10240]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
 	EncodedMessage string `json:"encoded_message"`
 }
 

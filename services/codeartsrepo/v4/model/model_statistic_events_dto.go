@@ -8,19 +8,19 @@ import (
 
 type StatisticEventsDto struct {
 
-	// **参数解释：** 统计ID。
+	// **参数解释：** 统计ID。 **默认取值：** 不涉及。
 	Id *int32 `json:"id,omitempty"`
 
-	// **参数解释：** 用户ID。
+	// **参数解释：** 用户ID。 **默认取值：** 不涉及。
 	UserId *int32 `json:"user_id,omitempty"`
 
-	// **参数解释：** 仓库ID。
+	// **参数解释：** 仓库ID。 **默认取值：** 不涉及。
 	ProjectId *int32 `json:"project_id,omitempty"`
 
-	// **参数解释：** 分支名。 **取值范围：** 最小1个字节，最大200字节
+	// **参数解释：** 分支名。 **取值范围：** 最小1个字节，最大200字节 **默认取值：** 不涉及。
 	Branch *string `json:"branch,omitempty"`
 
-	// **参数解释：** 统计状态。
+	// **参数解释：** 统计状态。 **默认取值：** 0
 	Status *string `json:"status,omitempty"`
 
 	// **参数解释：** 统计时间。

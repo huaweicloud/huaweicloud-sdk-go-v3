@@ -11,7 +11,7 @@ import (
 
 type RepositoryInheritSettingUpdateBodyDto struct {
 
-	// **参数解释：** 设置源类型。 **约束限制：** 不涉及。 **取值范围：** - protected_branches，保护分支设置。 - protected_tags，保护Tag设置。 - repository_settings，仓库设置。 - push_rules，提交规则设置。 - merge_requests，合并请求设置。 - e2e_settings，E2E设置。 - watermark，水印设置。 **默认取值：** 不涉及。
+	// **参数解释：** 设置源类型。 **约束限制：** 不涉及。 **取值范围：** - protected_branches，保护分支设置。 - protected_tags，保护Tag设置。 - repository_settings，仓库设置。 - push_rules，提交规则设置。 - merge_requests，合并请求设置。 - mr_branch_policies，分支策略设置。 - reviews，检视意见设置。 - e2e_settings，E2E设置。 - watermark，水印设置。 **默认取值：** 不涉及。
 	Name *RepositoryInheritSettingUpdateBodyDtoName `json:"name,omitempty"`
 
 	// **参数解释：** 继承设置。 **约束限制：** 不涉及。 **取值范围：** - inherit，继承上级配置。 - custom，使用当前仓库配置。 **默认取值：** 不涉及。
@@ -37,6 +37,8 @@ type RepositoryInheritSettingUpdateBodyDtoNameEnum struct {
 	REPOSITORY_SETTINGS RepositoryInheritSettingUpdateBodyDtoName
 	PUSH_RULES          RepositoryInheritSettingUpdateBodyDtoName
 	MERGE_REQUESTS      RepositoryInheritSettingUpdateBodyDtoName
+	MR_BRANCH_POLICIES  RepositoryInheritSettingUpdateBodyDtoName
+	REVIEWS             RepositoryInheritSettingUpdateBodyDtoName
 	E2E_SETTINGS        RepositoryInheritSettingUpdateBodyDtoName
 	WATERMARK           RepositoryInheritSettingUpdateBodyDtoName
 }
@@ -57,6 +59,12 @@ func GetRepositoryInheritSettingUpdateBodyDtoNameEnum() RepositoryInheritSetting
 		},
 		MERGE_REQUESTS: RepositoryInheritSettingUpdateBodyDtoName{
 			value: "merge_requests",
+		},
+		MR_BRANCH_POLICIES: RepositoryInheritSettingUpdateBodyDtoName{
+			value: "mr_branch_policies",
+		},
+		REVIEWS: RepositoryInheritSettingUpdateBodyDtoName{
+			value: "reviews",
 		},
 		E2E_SETTINGS: RepositoryInheritSettingUpdateBodyDtoName{
 			value: "e2e_settings",

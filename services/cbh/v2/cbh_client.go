@@ -229,6 +229,27 @@ func (c *CbhClient) ListSpecificationsInvoker(request *model.ListSpecificationsR
 	return &ListSpecificationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSwitchConfigInfo 获取后端开关控制信息列表
+//
+// 获取当前版本的开关控制信息列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbhClient) ListSwitchConfigInfo(request *model.ListSwitchConfigInfoRequest) (*model.ListSwitchConfigInfoResponse, error) {
+	requestDef := GenReqDefForListSwitchConfigInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSwitchConfigInfoResponse), nil
+	}
+}
+
+// ListSwitchConfigInfoInvoker 获取后端开关控制信息列表
+func (c *CbhClient) ListSwitchConfigInfoInvoker(request *model.ListSwitchConfigInfoRequest) *ListSwitchConfigInfoInvoker {
+	requestDef := GenReqDefForListSwitchConfigInfo()
+	return &ListSwitchConfigInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListTags 查询租户在项目中的资源标签集合
 //
 // 查询租户在项目中的资源标签集合。

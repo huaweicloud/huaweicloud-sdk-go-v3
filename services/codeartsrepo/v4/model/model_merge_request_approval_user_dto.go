@@ -9,8 +9,7 @@ import (
 	"strings"
 )
 
-// MergeRequestVoteReviewerDto 合并请求打分模式评审人
-type MergeRequestVoteReviewerDto struct {
+type MergeRequestApprovalUserDto struct {
 
 	// **参数解释：** 用户id。
 	Id *int32 `json:"id,omitempty"`
@@ -22,7 +21,7 @@ type MergeRequestVoteReviewerDto struct {
 	Username *string `json:"username,omitempty"`
 
 	// **参数解释：** 用户状态。 **取值范围：** - active: 可用账户。 - blocked: 被锁定用户。 - error: 未查询到该用户。
-	State *MergeRequestVoteReviewerDtoState `json:"state,omitempty"`
+	State *MergeRequestApprovalUserDtoState `json:"state,omitempty"`
 
 	// 服务级权限状态 0：停用 1：启用
 	ServiceLicenseStatus *int32 `json:"service_license_status,omitempty"`
@@ -51,52 +50,52 @@ type MergeRequestVoteReviewerDto struct {
 	// **参数解释：** 部分查询接口校验到传参里的用户权限不足或不存在时，返回该用户但该字段不为空用于提示。
 	ErrorMessage *string `json:"error_message,omitempty"`
 
-	// **参数解释：** 是否为committer。
-	IsCommitter *bool `json:"is_committer,omitempty"`
+	// **参数解释：** 是否有相关权限。 **取值范围：** true：有权限。 false：没权限。
+	HasPermission *bool `json:"has_permission,omitempty"`
 }
 
-func (o MergeRequestVoteReviewerDto) String() string {
+func (o MergeRequestApprovalUserDto) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "MergeRequestVoteReviewerDto struct{}"
+		return "MergeRequestApprovalUserDto struct{}"
 	}
 
-	return strings.Join([]string{"MergeRequestVoteReviewerDto", string(data)}, " ")
+	return strings.Join([]string{"MergeRequestApprovalUserDto", string(data)}, " ")
 }
 
-type MergeRequestVoteReviewerDtoState struct {
+type MergeRequestApprovalUserDtoState struct {
 	value string
 }
 
-type MergeRequestVoteReviewerDtoStateEnum struct {
-	ACTIVE  MergeRequestVoteReviewerDtoState
-	BLOCKED MergeRequestVoteReviewerDtoState
-	ERROR   MergeRequestVoteReviewerDtoState
+type MergeRequestApprovalUserDtoStateEnum struct {
+	ACTIVE  MergeRequestApprovalUserDtoState
+	BLOCKED MergeRequestApprovalUserDtoState
+	ERROR   MergeRequestApprovalUserDtoState
 }
 
-func GetMergeRequestVoteReviewerDtoStateEnum() MergeRequestVoteReviewerDtoStateEnum {
-	return MergeRequestVoteReviewerDtoStateEnum{
-		ACTIVE: MergeRequestVoteReviewerDtoState{
+func GetMergeRequestApprovalUserDtoStateEnum() MergeRequestApprovalUserDtoStateEnum {
+	return MergeRequestApprovalUserDtoStateEnum{
+		ACTIVE: MergeRequestApprovalUserDtoState{
 			value: "active",
 		},
-		BLOCKED: MergeRequestVoteReviewerDtoState{
+		BLOCKED: MergeRequestApprovalUserDtoState{
 			value: "blocked",
 		},
-		ERROR: MergeRequestVoteReviewerDtoState{
+		ERROR: MergeRequestApprovalUserDtoState{
 			value: "error",
 		},
 	}
 }
 
-func (c MergeRequestVoteReviewerDtoState) Value() string {
+func (c MergeRequestApprovalUserDtoState) Value() string {
 	return c.value
 }
 
-func (c MergeRequestVoteReviewerDtoState) MarshalJSON() ([]byte, error) {
+func (c MergeRequestApprovalUserDtoState) MarshalJSON() ([]byte, error) {
 	return utils.Marshal(c.value)
 }
 
-func (c *MergeRequestVoteReviewerDtoState) UnmarshalJSON(b []byte) error {
+func (c *MergeRequestApprovalUserDtoState) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

@@ -8,8 +8,10 @@ import (
 
 // ListMergeRequestParticipantsResponse Response Object
 type ListMergeRequestParticipantsResponse struct {
-	Body           *[]UserBasicDto `json:"body,omitempty"`
-	HttpStatusCode int             `json:"-"`
+	Body *[]UserBasicDto `json:"body,omitempty"`
+
+	XTotal         *string `json:"X-Total,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListMergeRequestParticipantsResponse) String() string {

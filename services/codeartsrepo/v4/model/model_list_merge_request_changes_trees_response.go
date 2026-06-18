@@ -8,8 +8,10 @@ import (
 
 // ListMergeRequestChangesTreesResponse Response Object
 type ListMergeRequestChangesTreesResponse struct {
-	Body           *[]ChangesTreeDto `json:"body,omitempty"`
-	HttpStatusCode int               `json:"-"`
+	Body *[]ChangesTreeDto `json:"body,omitempty"`
+
+	XTotal         *string `json:"X-Total,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListMergeRequestChangesTreesResponse) String() string {

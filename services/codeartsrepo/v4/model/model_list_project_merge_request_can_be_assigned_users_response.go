@@ -8,8 +8,10 @@ import (
 
 // ListProjectMergeRequestCanBeAssignedUsersResponse Response Object
 type ListProjectMergeRequestCanBeAssignedUsersResponse struct {
-	Body           *[]MergeRequestVoteReviewerDto `json:"body,omitempty"`
-	HttpStatusCode int                            `json:"-"`
+	Body *[]UserBasicDto `json:"body,omitempty"`
+
+	XTotal         *string `json:"X-Total,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListProjectMergeRequestCanBeAssignedUsersResponse) String() string {

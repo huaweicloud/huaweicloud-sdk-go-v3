@@ -9,13 +9,13 @@ import (
 // UpdateGroupWebhookRequest Request Object
 type UpdateGroupWebhookRequest struct {
 
-	// **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+	// **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
 	GroupId int32 `json:"group_id"`
 
 	// **参数解释：**  Webhook id。
 	HookId int32 `json:"hook_id"`
 
-	Body *WebhookParamsDto `json:"body,omitempty"`
+	Body *WebhookParamsRequestDto `json:"body,omitempty"`
 }
 
 func (o UpdateGroupWebhookRequest) String() string {

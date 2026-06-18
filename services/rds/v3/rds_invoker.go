@@ -101,6 +101,22 @@ func (i *BatchExecuteEventsInvoker) Invoke() (*model.BatchExecuteEventsResponse,
 	}
 }
 
+type BatchResizeFlavorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchResizeFlavorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchResizeFlavorInvoker) Invoke() (*model.BatchResizeFlavorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchResizeFlavorResponse), nil
+	}
+}
+
 type BatchRestoreDatabaseInvoker struct {
 	*invoker.BaseInvoker
 }

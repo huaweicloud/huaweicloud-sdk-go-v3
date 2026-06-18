@@ -51,9 +51,8 @@ type ListGroupMergeRequestCanBeAssignedReviewersResponse struct {
 	// **参数解释：** 部分查询接口校验到传参里的用户权限不足或不存在时，返回该用户但该字段不为空用于提示。
 	ErrorMessage *string `json:"error_message,omitempty"`
 
-	// **参数解释：** 是否为committer。
-	IsCommitter    *bool `json:"is_committer,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	XTotal         *string `json:"X-Total,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListGroupMergeRequestCanBeAssignedReviewersResponse) String() string {

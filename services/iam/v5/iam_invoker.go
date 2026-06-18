@@ -469,6 +469,134 @@ func (i *ListMfaDevicesV5Invoker) Invoke() (*model.ListMfaDevicesV5Response, err
 	}
 }
 
+type AddClientIDToOIDCProviderV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddClientIDToOIDCProviderV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddClientIDToOIDCProviderV5Invoker) Invoke() (*model.AddClientIdToOidcProviderV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddClientIdToOidcProviderV5Response), nil
+	}
+}
+
+type CreateOIDCProviderV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateOIDCProviderV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateOIDCProviderV5Invoker) Invoke() (*model.CreateOidcProviderV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateOidcProviderV5Response), nil
+	}
+}
+
+type DeleteOIDCProviderV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteOIDCProviderV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteOIDCProviderV5Invoker) Invoke() (*model.DeleteOidcProviderV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteOidcProviderV5Response), nil
+	}
+}
+
+type ListOIDCProvidersV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOIDCProvidersV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListOIDCProvidersV5Invoker) Invoke() (*model.ListOidcProvidersV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOidcProvidersV5Response), nil
+	}
+}
+
+type RemoveClientIDFromOIDCProviderV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RemoveClientIDFromOIDCProviderV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RemoveClientIDFromOIDCProviderV5Invoker) Invoke() (*model.RemoveClientIdFromOidcProviderV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RemoveClientIdFromOidcProviderV5Response), nil
+	}
+}
+
+type ShowOIDCProviderV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowOIDCProviderV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowOIDCProviderV5Invoker) Invoke() (*model.ShowOidcProviderV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowOidcProviderV5Response), nil
+	}
+}
+
+type UpdateOIDCProviderThumbprintV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateOIDCProviderThumbprintV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateOIDCProviderThumbprintV5Invoker) Invoke() (*model.UpdateOidcProviderThumbprintV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateOidcProviderThumbprintV5Response), nil
+	}
+}
+
+type UpdateOIDCProviderV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateOIDCProviderV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateOIDCProviderV5Invoker) Invoke() (*model.UpdateOidcProviderV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateOidcProviderV5Response), nil
+	}
+}
+
 type CreatePolicyV5Invoker struct {
 	*invoker.BaseInvoker
 }
@@ -818,6 +946,86 @@ func (i *TagResourceV5Invoker) Invoke() (*model.TagResourceV5Response, error) {
 		return nil, err
 	} else {
 		return result.(*model.TagResourceV5Response), nil
+	}
+}
+
+type CreateSAMLProviderV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSAMLProviderV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSAMLProviderV5Invoker) Invoke() (*model.CreateSamlProviderV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSamlProviderV5Response), nil
+	}
+}
+
+type DeleteSAMLProviderV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSAMLProviderV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteSAMLProviderV5Invoker) Invoke() (*model.DeleteSamlProviderV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSamlProviderV5Response), nil
+	}
+}
+
+type ListSAMLProvidersV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSAMLProvidersV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSAMLProvidersV5Invoker) Invoke() (*model.ListSamlProvidersV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSamlProvidersV5Response), nil
+	}
+}
+
+type ShowSAMLProviderV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSAMLProviderV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSAMLProviderV5Invoker) Invoke() (*model.ShowSamlProviderV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSamlProviderV5Response), nil
+	}
+}
+
+type UpdateSAMLProviderV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSAMLProviderV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSAMLProviderV5Invoker) Invoke() (*model.UpdateSamlProviderV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSamlProviderV5Response), nil
 	}
 }
 

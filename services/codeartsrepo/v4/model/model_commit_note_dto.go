@@ -36,9 +36,6 @@ type CommitNoteDto struct {
 	// **参数解释：** 关联代码行的代码片段。
 	Diff *string `json:"diff,omitempty"`
 
-	// **参数解释：** 附件(弃用)。
-	Attachment *string `json:"attachment,omitempty"`
-
 	Author *UserBasicDto `json:"author,omitempty"`
 
 	// **参数解释：** 创建时间。
@@ -102,6 +99,9 @@ type CommitNoteDto struct {
 
 	// **参数解释：** 是否为回复。
 	IsReply *bool `json:"is_reply,omitempty"`
+
+	// **参数解释：** 是否为AI工具提供的。
+	FromRobot *bool `json:"from_robot,omitempty"`
 
 	// **参数解释：** 内容审核结果。
 	ModerationResult *bool `json:"moderation_result,omitempty"`

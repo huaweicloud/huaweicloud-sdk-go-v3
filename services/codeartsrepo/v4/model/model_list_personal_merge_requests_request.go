@@ -246,8 +246,9 @@ type ListPersonalMergeRequestsRequestView struct {
 }
 
 type ListPersonalMergeRequestsRequestViewEnum struct {
-	SIMPLE ListPersonalMergeRequestsRequestView
-	BASIC  ListPersonalMergeRequestsRequestView
+	SIMPLE        ListPersonalMergeRequestsRequestView
+	BASIC         ListPersonalMergeRequestsRequestView
+	VIEW_FOR_LIST ListPersonalMergeRequestsRequestView
 }
 
 func GetListPersonalMergeRequestsRequestViewEnum() ListPersonalMergeRequestsRequestViewEnum {
@@ -257,6 +258,9 @@ func GetListPersonalMergeRequestsRequestViewEnum() ListPersonalMergeRequestsRequ
 		},
 		BASIC: ListPersonalMergeRequestsRequestView{
 			value: "basic",
+		},
+		VIEW_FOR_LIST: ListPersonalMergeRequestsRequestView{
+			value: "view_for_list",
 		},
 	}
 }
@@ -352,17 +356,17 @@ type ListPersonalMergeRequestsRequestWip struct {
 }
 
 type ListPersonalMergeRequestsRequestWipEnum struct {
-	TRUE  ListPersonalMergeRequestsRequestWip
-	FALSE ListPersonalMergeRequestsRequestWip
+	YES ListPersonalMergeRequestsRequestWip
+	NO  ListPersonalMergeRequestsRequestWip
 }
 
 func GetListPersonalMergeRequestsRequestWipEnum() ListPersonalMergeRequestsRequestWipEnum {
 	return ListPersonalMergeRequestsRequestWipEnum{
-		TRUE: ListPersonalMergeRequestsRequestWip{
-			value: "true",
+		YES: ListPersonalMergeRequestsRequestWip{
+			value: "yes",
 		},
-		FALSE: ListPersonalMergeRequestsRequestWip{
-			value: "false",
+		NO: ListPersonalMergeRequestsRequestWip{
+			value: "no",
 		},
 	}
 }

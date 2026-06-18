@@ -21,6 +21,38 @@ func (i *AssumeAgencyInvoker) Invoke() (*model.AssumeAgencyResponse, error) {
 	}
 }
 
+type AssumeAgencyWithOIDCInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssumeAgencyWithOIDCInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AssumeAgencyWithOIDCInvoker) Invoke() (*model.AssumeAgencyWithOidcResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssumeAgencyWithOidcResponse), nil
+	}
+}
+
+type AssumeAgencyWithSAMLInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssumeAgencyWithSAMLInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AssumeAgencyWithSAMLInvoker) Invoke() (*model.AssumeAgencyWithSamlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssumeAgencyWithSamlResponse), nil
+	}
+}
+
 type DecodeAuthorizationMessageInvoker struct {
 	*invoker.BaseInvoker
 }

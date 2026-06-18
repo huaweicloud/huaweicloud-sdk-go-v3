@@ -14,6 +14,9 @@ type ShowTemplateDeployParamsRequest struct {
 
 	// 模板版本。
 	Version string `json:"version"`
+
+	// 纳管账号ID。
+	AccountId *string `json:"account_id,omitempty"`
 }
 
 func (o ShowTemplateDeployParamsRequest) String() string {

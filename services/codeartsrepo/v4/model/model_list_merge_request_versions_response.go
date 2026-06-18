@@ -18,7 +18,7 @@ type ListMergeRequestVersionsResponse struct {
 	// **参数解释：** base commit节点。
 	BaseCommitSha *string `json:"base_commit_sha,omitempty"`
 
-	// **参数解释：** tart commit节点。
+	// **参数解释：** start commit节点。
 	StartCommitSha *string `json:"start_commit_sha,omitempty"`
 
 	// **参数解释：** 创建时间。
@@ -31,7 +31,9 @@ type ListMergeRequestVersionsResponse struct {
 	State *string `json:"state,omitempty"`
 
 	// **参数解释：** diff大小。
-	RealSize       *string `json:"real_size,omitempty"`
+	RealSize *string `json:"real_size,omitempty"`
+
+	XTotal         *string `json:"X-Total,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -107,6 +107,12 @@ type ShowRepositoryResponse struct {
 
 	ForkedFromRepository *RepositorySimpleDto `json:"forked_from_repository,omitempty"`
 
+	// **参数解释：** 仓库加密状态 **取值范围：** - encrypting，加密中。 - encrypted，已加密。 - decrypting，解密中。 - decrypted，已解密。 **默认取值：** 不涉及。
+	EncryptionStatus *ShowRepositoryResponseEncryptionStatus `json:"encryption_status,omitempty"`
+
+	// **参数解释：** 是否开启仓库加密 **取值范围：** - true，已开启加密。 - false，未开启加密。
+	RepoEncryptionEnabled *bool `json:"repo_encryption_enabled,omitempty"`
+
 	// **参数解释：** 仓库唯一标识符。 **约束限制：** 不涉及。
 	Uuid *string `json:"uuid,omitempty"`
 
@@ -202,6 +208,61 @@ func (c ShowRepositoryResponseDevelopMode) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ShowRepositoryResponseDevelopMode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ShowRepositoryResponseEncryptionStatus struct {
+	value string
+}
+
+type ShowRepositoryResponseEncryptionStatusEnum struct {
+	ENCRYPTING ShowRepositoryResponseEncryptionStatus
+	ENCRYPTED  ShowRepositoryResponseEncryptionStatus
+	DECRYPTING ShowRepositoryResponseEncryptionStatus
+	DECRYPTED  ShowRepositoryResponseEncryptionStatus
+}
+
+func GetShowRepositoryResponseEncryptionStatusEnum() ShowRepositoryResponseEncryptionStatusEnum {
+	return ShowRepositoryResponseEncryptionStatusEnum{
+		ENCRYPTING: ShowRepositoryResponseEncryptionStatus{
+			value: "encrypting",
+		},
+		ENCRYPTED: ShowRepositoryResponseEncryptionStatus{
+			value: "encrypted",
+		},
+		DECRYPTING: ShowRepositoryResponseEncryptionStatus{
+			value: "decrypting",
+		},
+		DECRYPTED: ShowRepositoryResponseEncryptionStatus{
+			value: "decrypted",
+		},
+	}
+}
+
+func (c ShowRepositoryResponseEncryptionStatus) Value() string {
+	return c.value
+}
+
+func (c ShowRepositoryResponseEncryptionStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowRepositoryResponseEncryptionStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

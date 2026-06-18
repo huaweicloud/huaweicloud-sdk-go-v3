@@ -41,6 +41,9 @@ type ApproverBasicDto struct {
 
 	// **参数解释：** 审核备注。 **取值范围：** 不涉及。
 	ApproverComment *string `json:"approver_comment,omitempty"`
+
+	// **参数解释：** 是否有相关权限。
+	HasPermission *bool `json:"has_permission,omitempty"`
 }
 
 func (o ApproverBasicDto) String() string {

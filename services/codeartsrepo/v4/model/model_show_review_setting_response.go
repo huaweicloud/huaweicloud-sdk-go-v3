@@ -27,16 +27,19 @@ type ShowReviewSettingResponse struct {
 	// **参数解释：** 检视意见模块。
 	ReviewModules *[]string `json:"review_modules,omitempty"`
 
-	// **参数解释：** 仓库id。
-	RepositoryId *int32 `json:"repository_id,omitempty"`
+	// **参数解释：** 系统预置检视意见分类类型(启用系统预置检视意见分类时返回，默认'HiCode')。
+	SecondaryCategoryType *string `json:"secondary_category_type,omitempty"`
 
-	// **参数解释：** 检视意见必填项。
+	// **参数解释：** 系统预置检视意见分类详情(启用系统预置检视意见分类时返回)。
+	SecondaryCategories *[]CategoryDto `json:"secondary_categories,omitempty"`
+
+	// **参数解释：** 检视意见必填项(post接口不更新必填项时不返回)。
 	NoteRequiredAttributes *[]RequiredAttributeDto `json:"note_required_attributes,omitempty"`
 
-	// **参数解释：** 检视意见分类(所有可勾选的，需传参with_default_review_categories: true才返回)。
+	// **参数解释：** 检视意见分类(可勾选的，需get接口传参with_default_review_categories: true才返回)。
 	CodehubDefaultCategories *[]CategoryDto `json:"codehub_default_categories,omitempty"`
 
-	// **参数解释：** 系统预置检视意见分类(需传参with_default_review_categories: true才返回)。
+	// **参数解释：** 系统预置检视意见分类(需get接口传参with_default_review_categories: true才返回)。
 	HicodeDefaultCategories *[]CategoryDto `json:"hicode_default_categories,omitempty"`
 	HttpStatusCode          int            `json:"-"`
 }

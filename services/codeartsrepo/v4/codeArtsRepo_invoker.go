@@ -853,6 +853,22 @@ func (i *ListGroupPermissionResourcesInvoker) Invoke() (*model.ListGroupPermissi
 	}
 }
 
+type ListGroupProtectedBranchesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListGroupProtectedBranchesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListGroupProtectedBranchesInvoker) Invoke() (*model.ListGroupProtectedBranchesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGroupProtectedBranchesResponse), nil
+	}
+}
+
 type ListGroupSubgroupsAndRepositoriesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1122,6 +1138,22 @@ func (i *ListGroupProtectedRefsUserGroupsInvoker) Invoke() (*model.ListGroupProt
 		return nil, err
 	} else {
 		return result.(*model.ListGroupProtectedRefsUserGroupsResponse), nil
+	}
+}
+
+type ListManagementUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListManagementUsersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListManagementUsersInvoker) Invoke() (*model.ListManagementUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListManagementUsersResponse), nil
 	}
 }
 
@@ -1845,6 +1877,22 @@ func (i *ListProjectMergeRequestTemplatesInvoker) Invoke() (*model.ListProjectMe
 	}
 }
 
+type ListProjectMergeRequestsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProjectMergeRequestsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListProjectMergeRequestsInvoker) Invoke() (*model.ListProjectMergeRequestsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProjectMergeRequestsResponse), nil
+	}
+}
+
 type ListRepositoryMergeRequestsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2405,6 +2453,22 @@ func (i *ShowRepositoryPermissionInheritEnabledInvoker) Invoke() (*model.ShowRep
 	}
 }
 
+type UpdateGroupResourcePermissionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateGroupResourcePermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateGroupResourcePermissionsInvoker) Invoke() (*model.UpdateGroupResourcePermissionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateGroupResourcePermissionsResponse), nil
+	}
+}
+
 type UpdateRepositoryPermissionInheritEnabledInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2933,22 +2997,6 @@ func (i *UpdateProtectedTagInvoker) Invoke() (*model.UpdateProtectedTagResponse,
 	}
 }
 
-type ListRefsListInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListRefsListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListRefsListInvoker) Invoke() (*model.ListRefsListResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListRefsListResponse), nil
-	}
-}
-
 type BatchDeleteBranchInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3042,6 +3090,22 @@ func (i *ListBranchesInvoker) Invoke() (*model.ListBranchesResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListBranchesResponse), nil
+	}
+}
+
+type ListRefsListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRefsListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRefsListInvoker) Invoke() (*model.ListRefsListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRefsListResponse), nil
 	}
 }
 
@@ -3493,6 +3557,22 @@ func (i *ListRepositoryLanguagesInvoker) Invoke() (*model.ListRepositoryLanguage
 	}
 }
 
+type ListRepositoryNavigationReferencesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRepositoryNavigationReferencesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRepositoryNavigationReferencesInvoker) Invoke() (*model.ListRepositoryNavigationReferencesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRepositoryNavigationReferencesResponse), nil
+	}
+}
+
 type ListRepositoryTemplatesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3554,6 +3634,22 @@ func (i *LockRepositoryInvoker) Invoke() (*model.LockRepositoryResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.LockRepositoryResponse), nil
+	}
+}
+
+type RebuildRepositoryNavigationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RebuildRepositoryNavigationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RebuildRepositoryNavigationInvoker) Invoke() (*model.RebuildRepositoryNavigationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RebuildRepositoryNavigationResponse), nil
 	}
 }
 
@@ -3717,6 +3813,38 @@ func (i *ShowRemoteMirrorInvoker) Invoke() (*model.ShowRemoteMirrorResponse, err
 	}
 }
 
+type ShowRepoLastStatisticsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRepoLastStatisticsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRepoLastStatisticsInvoker) Invoke() (*model.ShowRepoLastStatisticsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRepoLastStatisticsResponse), nil
+	}
+}
+
+type ShowRepoStatisticsSummaryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRepoStatisticsSummaryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRepoStatisticsSummaryInvoker) Invoke() (*model.ShowRepoStatisticsSummaryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRepoStatisticsSummaryResponse), nil
+	}
+}
+
 type ShowRepositoryInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3794,6 +3922,54 @@ func (i *ShowRepositoryInheritSettingSourceInvoker) Invoke() (*model.ShowReposit
 		return nil, err
 	} else {
 		return result.(*model.ShowRepositoryInheritSettingSourceResponse), nil
+	}
+}
+
+type ShowRepositoryNavigationLanguageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRepositoryNavigationLanguageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRepositoryNavigationLanguageInvoker) Invoke() (*model.ShowRepositoryNavigationLanguageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRepositoryNavigationLanguageResponse), nil
+	}
+}
+
+type ShowRepositoryNavigationOutlineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRepositoryNavigationOutlineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRepositoryNavigationOutlineInvoker) Invoke() (*model.ShowRepositoryNavigationOutlineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRepositoryNavigationOutlineResponse), nil
+	}
+}
+
+type ShowRepositoryNavigationSchemaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRepositoryNavigationSchemaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRepositoryNavigationSchemaInvoker) Invoke() (*model.ShowRepositoryNavigationSchemaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRepositoryNavigationSchemaResponse), nil
 	}
 }
 
@@ -3906,6 +4082,22 @@ func (i *SyncDeployKeyToSubmodulesInvoker) Invoke() (*model.SyncDeployKeyToSubmo
 		return nil, err
 	} else {
 		return result.(*model.SyncDeployKeyToSubmodulesResponse), nil
+	}
+}
+
+type TransferRepositoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *TransferRepositoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *TransferRepositoryInvoker) Invoke() (*model.TransferRepositoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.TransferRepositoryResponse), nil
 	}
 }
 
@@ -4085,6 +4277,22 @@ func (i *AddTenantTrustedIpAddressInvoker) Invoke() (*model.AddTenantTrustedIpAd
 	}
 }
 
+type CreateTenantKmsGrantInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTenantKmsGrantInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateTenantKmsGrantInvoker) Invoke() (*model.CreateTenantKmsGrantResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTenantKmsGrantResponse), nil
+	}
+}
+
 type DeleteTenantTrustedIpAddressInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4117,6 +4325,38 @@ func (i *ExportTenantRepositoriesInvoker) Invoke() (*model.ExportTenantRepositor
 	}
 }
 
+type ListTenantCmksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTenantCmksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTenantCmksInvoker) Invoke() (*model.ListTenantCmksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTenantCmksResponse), nil
+	}
+}
+
+type ListTenantEncryptedRepositoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTenantEncryptedRepositoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTenantEncryptedRepositoriesInvoker) Invoke() (*model.ListTenantEncryptedRepositoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTenantEncryptedRepositoriesResponse), nil
+	}
+}
+
 type ListTenantRepositoriesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4146,6 +4386,86 @@ func (i *ListTenantTrustedIpAddressesInvoker) Invoke() (*model.ListTenantTrusted
 		return nil, err
 	} else {
 		return result.(*model.ListTenantTrustedIpAddressesResponse), nil
+	}
+}
+
+type ShowProjectTenantSettingsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProjectTenantSettingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowProjectTenantSettingsInvoker) Invoke() (*model.ShowProjectTenantSettingsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProjectTenantSettingsResponse), nil
+	}
+}
+
+type ShowTenantDevelopModeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTenantDevelopModeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTenantDevelopModeInvoker) Invoke() (*model.ShowTenantDevelopModeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTenantDevelopModeResponse), nil
+	}
+}
+
+type ShowTenantKmsGrantInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTenantKmsGrantInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTenantKmsGrantInvoker) Invoke() (*model.ShowTenantKmsGrantResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTenantKmsGrantResponse), nil
+	}
+}
+
+type ShowTenantRepoEncryptionSettingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTenantRepoEncryptionSettingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTenantRepoEncryptionSettingInvoker) Invoke() (*model.ShowTenantRepoEncryptionSettingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTenantRepoEncryptionSettingResponse), nil
+	}
+}
+
+type UpdateTenantRepoEncryptionSettingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTenantRepoEncryptionSettingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateTenantRepoEncryptionSettingInvoker) Invoke() (*model.UpdateTenantRepoEncryptionSettingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTenantRepoEncryptionSettingResponse), nil
 	}
 }
 

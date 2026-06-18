@@ -9,7 +9,7 @@ import (
 // AssumeAgencyResponse Response Object
 type AssumeAgencyResponse struct {
 
-	// 调用链里最初调用者所声明的身份。
+	// **参数解释**： 调用链里最初调用者所声明的身份。  **取值范围**： 不涉及。
 	SourceIdentity *string `json:"source_identity,omitempty"`
 
 	AssumedAgency *AssumedAgencyDto `json:"assumed_agency,omitempty"`

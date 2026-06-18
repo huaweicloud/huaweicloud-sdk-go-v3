@@ -97,8 +97,11 @@ type UpdateMergeRequestSettingResponse struct {
 	OnlyAssigneeCanMerge *bool `json:"only_assignee_can_merge,omitempty"`
 
 	// **参数解释：** 仓库id。
-	RepositoryId   *int32 `json:"repository_id,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	RepositoryId *int32 `json:"repository_id,omitempty"`
+
+	// **参数解释：** 调用者是否有星级评价权限。
+	HasEvaluationPermission *bool `json:"has_evaluation_permission,omitempty"`
+	HttpStatusCode          int   `json:"-"`
 }
 
 func (o UpdateMergeRequestSettingResponse) String() string {

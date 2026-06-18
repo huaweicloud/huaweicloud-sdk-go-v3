@@ -35,6 +35,9 @@ type ListTenantRepositoriesRequest struct {
 	// **参数解释：** 用作排序的字段。 - owner，仓库所有者。 - capacity，使用空间。 - status，状态。 - create_time，创建时间。 - member_number，成员数量。 - repository_name，仓库名称。
 	SortField *ListTenantRepositoriesRequestSortField `json:"sort_field,omitempty"`
 
+	// **参数解释：** 是否锁定。 **约束限制：** 不传是查询全部数据 **取值范围：** - true，锁定的仓库。 - false，未锁定的仓库。
+	Locked *bool `json:"locked,omitempty"`
+
 	// **参数解释：** 偏移量，从0开始。
 	Offset *int32 `json:"offset,omitempty"`
 

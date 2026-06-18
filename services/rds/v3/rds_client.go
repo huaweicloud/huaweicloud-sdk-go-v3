@@ -145,6 +145,27 @@ func (c *RdsClient) BatchExecuteEventsInvoker(request *model.BatchExecuteEventsR
 	return &BatchExecuteEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchResizeFlavor 批量变更实例规格
+//
+// 批量变更实例规格
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) BatchResizeFlavor(request *model.BatchResizeFlavorRequest) (*model.BatchResizeFlavorResponse, error) {
+	requestDef := GenReqDefForBatchResizeFlavor()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchResizeFlavorResponse), nil
+	}
+}
+
+// BatchResizeFlavorInvoker 批量变更实例规格
+func (c *RdsClient) BatchResizeFlavorInvoker(request *model.BatchResizeFlavorRequest) *BatchResizeFlavorInvoker {
+	requestDef := GenReqDefForBatchResizeFlavor()
+	return &BatchResizeFlavorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchRestoreDatabase 库级时间点恢复
 //
 // 库级时间点恢复

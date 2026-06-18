@@ -21,9 +21,6 @@ type NoteDto struct {
 	// **参数解释：** 评论内容。
 	Body *string `json:"body,omitempty"`
 
-	// **参数解释：** 附件(弃用)。
-	Attachment *string `json:"attachment,omitempty"`
-
 	Author *UserBasicDto `json:"author,omitempty"`
 
 	// **参数解释：** 创建时间。
@@ -41,7 +38,7 @@ type NoteDto struct {
 	// **参数解释：** 意见类型。 **取值范围：** - MergeRequest: 合并请求下提的检视意见。 - Commit: 代码页或提交记录下提的检视意见。
 	NoteableType *NoteDtoNoteableType `json:"noteable_type,omitempty"`
 
-	// **参数解释：** 提交记录id。
+	// **参数解释：** 提交记录id(源自合并请求下的评论commit_id为null，源自commit的评论才有值)。 **约束限制：** 不涉及。 **取值范围：** 长度为40的sha1字符串。 **默认取值：** 不涉及。
 	CommitId *string `json:"commit_id,omitempty"`
 
 	// **参数解释：** 是否需要解决。
@@ -108,6 +105,9 @@ type NoteDto struct {
 
 	// **参数解释：** 是否已过期。
 	IsOutdated *bool `json:"is_outdated,omitempty"`
+
+	// **参数解释：** 是否为AI工具提供的。
+	FromRobot *bool `json:"from_robot,omitempty"`
 
 	// **参数解释：** 内容审核结果。
 	ModerationResult *bool `json:"moderation_result,omitempty"`

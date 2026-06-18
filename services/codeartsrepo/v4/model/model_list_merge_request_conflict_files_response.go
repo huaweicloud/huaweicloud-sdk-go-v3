@@ -8,8 +8,10 @@ import (
 
 // ListMergeRequestConflictFilesResponse Response Object
 type ListMergeRequestConflictFilesResponse struct {
-	Body           *[]MrConflictFileDto `json:"body,omitempty"`
-	HttpStatusCode int                  `json:"-"`
+	Body *[]MrConflictFileDto `json:"body,omitempty"`
+
+	XTotal         *string `json:"X-Total,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListMergeRequestConflictFilesResponse) String() string {

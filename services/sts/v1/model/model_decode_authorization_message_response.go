@@ -9,7 +9,7 @@ import (
 // DecodeAuthorizationMessageResponse Response Object
 type DecodeAuthorizationMessageResponse struct {
 
-	// 鉴权失败原因的明文。
+	// **参数解释**： 鉴权失败原因的明文。  **取值范围**： 不涉及。
 	DecodedMessage *string `json:"decoded_message,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

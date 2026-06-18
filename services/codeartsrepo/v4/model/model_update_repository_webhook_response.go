@@ -18,6 +18,9 @@ type UpdateRepositoryWebhookResponse struct {
 	// **参数解释：** 推送事件分支过滤正则规则。 **取值范围：** 字符串长度不少于0，不超过500。
 	PushEventsBranchRegexFilter *string `json:"push_events_branch_regex_filter,omitempty"`
 
+	// **参数解释：** 评论事件文本过滤规则。 **取值范围：** 字符串长度不少于0，不超过50，不能超过10个。
+	NotePlainTextFilter *[]string `json:"note_plain_text_filter,omitempty"`
+
 	// **参数解释：** 是否启用Tag推送事件。
 	TagPushEvents *bool `json:"tag_push_events,omitempty"`
 
@@ -39,6 +42,14 @@ type UpdateRepositoryWebhookResponse struct {
 	// **参数解释：** 描述。 **取值范围：** 字符串长度不少于0，不超过200。
 	Description *string `json:"description,omitempty"`
 
+	// **参数解释：** 预留字段，事件触发设置，可为空。
+	EventCfgs *[]WebHookEventCfgDto `json:"event_cfgs,omitempty"`
+
+	// **参数解释：** 预留字段，仓库分支规则设置，可为空。
+	ProjectCfgs *[]WebHookBranchCfgDto `json:"project_cfgs,omitempty"`
+
+	BranchCfgs *[]WebHookBranchCfgDto `json:"branch_cfgs,omitempty"`
+
 	// **参数解释：** Webhook id。
 	Id *int32 `json:"id,omitempty"`
 
@@ -46,7 +57,10 @@ type UpdateRepositoryWebhookResponse struct {
 	CreatedAt *string `json:"created_at,omitempty"`
 
 	// **参数解释：** 更新时间。 **参数解释：** yyyy-MM-dd'T'HH:mm:ss.SSSXXX
-	UpdatedAt      *string `json:"updated_at,omitempty"`
+	UpdatedAt *string `json:"updated_at,omitempty"`
+
+	// **参数解释：** 内部服务名称。
+	Service        *string `json:"service,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

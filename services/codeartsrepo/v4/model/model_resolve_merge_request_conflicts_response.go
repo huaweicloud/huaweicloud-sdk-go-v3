@@ -9,7 +9,7 @@ import (
 // ResolveMergeRequestConflictsResponse Response Object
 type ResolveMergeRequestConflictsResponse struct {
 
-	// **参数解释：** prompt property name already exists
+	// **参数解释：** 解决冲突结果信息
 	Message        *string `json:"message,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

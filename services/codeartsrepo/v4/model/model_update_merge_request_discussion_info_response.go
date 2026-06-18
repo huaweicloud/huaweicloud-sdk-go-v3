@@ -12,31 +12,17 @@ import (
 // UpdateMergeRequestDiscussionInfoResponse Response Object
 type UpdateMergeRequestDiscussionInfoResponse struct {
 
-	// **参数解释：** 评论id(主评论和回复不共用)。
-	Id *int32 `json:"id,omitempty"`
+	// **参数解释：** 检视意见id(主评论和回复共用)。
+	Id *string `json:"id,omitempty"`
 
-	// **参数解释：** 评论类型。 **取值范围：** - DiscussionNote: 需要解决的关联代码行的评论。 - DiffNote: 一般。
-	Type *string `json:"type,omitempty"`
+	// **参数解释：** 个人检视意见(不需要解决)。
+	IndividualNote *bool `json:"individual_note,omitempty"`
 
-	// **参数解释：** 评论内容。
-	Body *string `json:"body,omitempty"`
+	// **参数解释：** 评论列表(主评+回复)。
+	Notes *[]NoteDto `json:"notes,omitempty"`
 
-	// **参数解释：** 附件(弃用)。
-	Attachment *string `json:"attachment,omitempty"`
-
-	Author *UserBasicDto `json:"author,omitempty"`
-
-	// **参数解释：** 创建时间。
-	CreatedAt *string `json:"created_at,omitempty"`
-
-	// **参数解释：** 更新时间。
-	UpdatedAt *string `json:"updated_at,omitempty"`
-
-	// **参数解释：** 是否为系统添加的。
-	System *bool `json:"system,omitempty"`
-
-	// **参数解释：** 合并请求id或issue id。
-	NoteableId *int32 `json:"noteable_id,omitempty"`
+	// **参数解释：** 仓库id。
+	RepositoryId *int32 `json:"repository_id,omitempty"`
 
 	// **参数解释：** 意见类型。 **取值范围：** - MergeRequest: 合并请求下提的检视意见。 - Commit: 代码页或提交记录下提的检视意见。
 	NoteableType *UpdateMergeRequestDiscussionInfoResponseNoteableType `json:"noteable_type,omitempty"`
@@ -44,28 +30,23 @@ type UpdateMergeRequestDiscussionInfoResponse struct {
 	// **参数解释：** 提交记录id。
 	CommitId *string `json:"commit_id,omitempty"`
 
-	// **参数解释：** 是否需要解决。
-	Resolvable *bool `json:"resolvable,omitempty"`
-
-	// **参数解释：** 是否为回复。
-	IsReply *bool `json:"is_reply,omitempty"`
-
-	ResolvedBy *UserBasicDto `json:"resolved_by,omitempty"`
-
-	// **参数解释：** 合并请求iid或issue iid。
-	NoteableIid *int32 `json:"noteable_iid,omitempty"`
-
-	// **参数解释：** 检视意见id(主评论和回复共用)。
-	DiscussionId *string `json:"discussion_id,omitempty"`
-
 	// **参数解释：** 仓库路径。
-	Repository *string `json:"repository,omitempty"`
+	RepositoryFullPath *string `json:"repository_full_path,omitempty"`
 
-	// **参数解释：** 关联代码行所在文件的文件名。
-	DiffFile *string `json:"diff_file,omitempty"`
+	// **参数解释：** 文件旧权限(默认100644)。
+	AMode *string `json:"a_mode,omitempty"`
 
-	// **参数解释：** 关联代码行的代码片段。
-	Diff *string `json:"diff,omitempty"`
+	// **参数解释：** 文件新权限(默认100644)。
+	BMode *string `json:"b_mode,omitempty"`
+
+	// **参数解释：** 是否为删除文件。
+	DeletedFile *bool `json:"deleted_file,omitempty"`
+
+	// **参数解释：** 是否为新增文件。
+	NewFile *bool `json:"new_file,omitempty"`
+
+	// **参数解释：** 是否已解决。
+	Resolved *bool `json:"resolved,omitempty"`
 
 	// **参数解释：** 是否已归档。
 	Archived *bool `json:"archived,omitempty"`
@@ -73,51 +54,39 @@ type UpdateMergeRequestDiscussionInfoResponse struct {
 	// **参数解释：** 意见分类key。
 	ReviewCategories *string `json:"review_categories,omitempty"`
 
-	// **参数解释：** 意见分类中文名。
+	// **参数解释：** 意见分类中文。
 	ReviewCategoriesCn *string `json:"review_categories_cn,omitempty"`
 
-	// **参数解释：** 合并请求版本信息。
+	// **参数解释：** 意见分类英文。
 	ReviewCategoriesEn *string `json:"review_categories_en,omitempty"`
 
-	// **参数解释：** 合并请求版本信息。
+	// **参数解释：** 意见模块。
 	ReviewModules *string `json:"review_modules,omitempty"`
 
-	// **参数解释：** 严重程度key。
+	// **参数解释：** 严重程度key。 **取值范围：** - suggestion: 建议。 - minor: 一般。 - major: 严重。 - fatal: 致命。
 	Severity *UpdateMergeRequestDiscussionInfoResponseSeverity `json:"severity,omitempty"`
 
-	// **参数解释：** 严重程度中文。 **约束限制：** - 建议 - 一般 - 严重 - 致命
+	// **参数解释：** 严重程度中文。 **取值范围：** - 建议 - 一般 - 严重 - 致命
 	SeverityCn *string `json:"severity_cn,omitempty"`
 
-	// **参数解释：** 严重程度英文。
+	// **参数解释：** 严重程度英文。 **取值范围：** - Suggestion: 建议。 - Minor: 一般。 - major: 严重。 - fatal: 致命。
 	SeverityEn *UpdateMergeRequestDiscussionInfoResponseSeverityEn `json:"severity_en,omitempty"`
-
-	// **参数解释：** 文件路径(弃用)。
-	FilePath *string `json:"file_path,omitempty"`
-
-	// **参数解释：** 行号(弃用)。
-	Line *string `json:"line,omitempty"`
 
 	Assignee *UserBasicDto `json:"assignee,omitempty"`
 
 	Proposer *UserBasicDto `json:"proposer,omitempty"`
 
-	Position *PositionDto `json:"position,omitempty"`
+	MergeRequestVersionParams *MergeRequestVersionParamsDto `json:"merge_request_version_params,omitempty"`
 
-	// **参数解释：** 是否已解决。
-	Resolved *bool `json:"resolved,omitempty"`
+	// **参数解释：** 变更页检视意见的代码片段。
+	DiffFile *string `json:"diff_file,omitempty"`
 
-	// **参数解释：** 是否已过期。
-	IsOutdated *bool `json:"is_outdated,omitempty"`
+	// **参数解释：** 检视意见所在文件的新增行数量。
+	AddedLines *int32 `json:"added_lines,omitempty"`
 
-	// **参数解释：** 内容审核结果。
-	ModerationResult *bool `json:"moderation_result,omitempty"`
-
-	// **参数解释：** 内容审核时间。
-	ModerationTime *int64 `json:"moderation_time,omitempty"`
-
-	// **参数解释：** 内容审核状态。
-	ModerationStatus *int32 `json:"moderation_status,omitempty"`
-	HttpStatusCode   int    `json:"-"`
+	// **参数解释：** 检视意见所在文件的删除行数量。
+	RemovedLines   *int32 `json:"removed_lines,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o UpdateMergeRequestDiscussionInfoResponse) String() string {

@@ -20,7 +20,7 @@ type PermissionDto struct {
 	// **参数解释：** 角色中文名称。 **取值范围：** 字符串长度不少于1，不超过1000。
 	RoleNameCn *string `json:"role_name_cn,omitempty"`
 
-	// **参数解释：** 资源权限对象。
+	// **参数解释：** 资源权限对象。记录权限点的ID、名称、以及角色是否有该权限点权限等。
 	ResourcePermissions map[string]ResourcePermissionDto `json:"resource_permissions,omitempty"`
 }
 

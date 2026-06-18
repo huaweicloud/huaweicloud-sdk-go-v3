@@ -11,7 +11,7 @@ import (
 
 type RepositoryInheritSettingDto struct {
 
-	// **参数解释：** 设置源类型。 **取值范围：** - protected_branches，保护分支设置。 - protected_tags，保护Tag设置。 - repository_settings，仓库设置。 - push_rules，提交规则设置。 - merge_requests，合并请求设置。 - e2e_settings，E2E设置。 - watermark，水印设置。
+	// **参数解释：** 设置源类型。 **取值范围：** - protected_branches，保护分支设置。 - protected_tags，保护Tag设置。 - repository_settings，仓库设置。 - push_rules，提交规则设置。 - merge_requests，合并请求设置。 - mr_branch_policies，分支策略设置。 - reviews，检视意见设置。 - e2e_settings，E2E设置。 - watermark，水印设置。
 	Name *RepositoryInheritSettingDtoName `json:"name,omitempty"`
 
 	// **参数解释：** 继承设置。 **取值范围：** - inherit，继承上级配置。 - custom，使用当前仓库配置。 - force_inherit，强制继承上级配置。
@@ -37,6 +37,8 @@ type RepositoryInheritSettingDtoNameEnum struct {
 	REPOSITORY_SETTINGS RepositoryInheritSettingDtoName
 	PUSH_RULES          RepositoryInheritSettingDtoName
 	MERGE_REQUESTS      RepositoryInheritSettingDtoName
+	MR_BRANCH_POLICIES  RepositoryInheritSettingDtoName
+	REVIEWS             RepositoryInheritSettingDtoName
 	E2E_SETTINGS        RepositoryInheritSettingDtoName
 	WATERMARK           RepositoryInheritSettingDtoName
 }
@@ -57,6 +59,12 @@ func GetRepositoryInheritSettingDtoNameEnum() RepositoryInheritSettingDtoNameEnu
 		},
 		MERGE_REQUESTS: RepositoryInheritSettingDtoName{
 			value: "merge_requests",
+		},
+		MR_BRANCH_POLICIES: RepositoryInheritSettingDtoName{
+			value: "mr_branch_policies",
+		},
+		REVIEWS: RepositoryInheritSettingDtoName{
+			value: "reviews",
 		},
 		E2E_SETTINGS: RepositoryInheritSettingDtoName{
 			value: "e2e_settings",

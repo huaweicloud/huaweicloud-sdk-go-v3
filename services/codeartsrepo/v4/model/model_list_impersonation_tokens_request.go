@@ -12,9 +12,6 @@ import (
 // ListImpersonationTokensRequest Request Object
 type ListImpersonationTokensRequest struct {
 
-	// **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
-	GroupId int32 `json:"group_id"`
-
 	// **参数解释：** 状态 all 所有状态 active 活跃，未过期 inactive 非活跃，失效的。
 	State *ListImpersonationTokensRequestState `json:"state,omitempty"`
 
