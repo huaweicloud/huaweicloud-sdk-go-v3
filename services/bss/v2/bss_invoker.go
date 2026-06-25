@@ -1381,6 +1381,22 @@ func (i *UpdatePeriodToOnDemandInvoker) Invoke() (*model.UpdatePeriodToOnDemandR
 	}
 }
 
+type UpdatePeriodToOnDemandInstantlyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePeriodToOnDemandInstantlyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePeriodToOnDemandInstantlyInvoker) Invoke() (*model.UpdatePeriodToOnDemandInstantlyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePeriodToOnDemandInstantlyResponse), nil
+	}
+}
+
 type UpdateSubEnterpriseAmountInvoker struct {
 	*invoker.BaseInvoker
 }

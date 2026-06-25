@@ -1237,6 +1237,38 @@ func (i *UploadMetaDataByUrlInvoker) Invoke() (*model.UploadMetaDataByUrlRespons
 	}
 }
 
+type ShowHttpsConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHttpsConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowHttpsConfigInvoker) Invoke() (*model.ShowHttpsConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHttpsConfigResponse), nil
+	}
+}
+
+type UpdateHttpsConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateHttpsConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateHttpsConfigInvoker) Invoke() (*model.UpdateHttpsConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateHttpsConfigResponse), nil
+	}
+}
+
 type ListTakeOverTaskInvoker struct {
 	*invoker.BaseInvoker
 }

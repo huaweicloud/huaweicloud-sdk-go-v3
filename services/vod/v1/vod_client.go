@@ -1679,6 +1679,48 @@ func (c *VodClient) UploadMetaDataByUrlInvoker(request *model.UploadMetaDataByUr
 	return &UploadMetaDataByUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowHttpsConfig 查询https配置
+//
+// 查询证书配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) ShowHttpsConfig(request *model.ShowHttpsConfigRequest) (*model.ShowHttpsConfigResponse, error) {
+	requestDef := GenReqDefForShowHttpsConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHttpsConfigResponse), nil
+	}
+}
+
+// ShowHttpsConfigInvoker 查询https配置
+func (c *VodClient) ShowHttpsConfigInvoker(request *model.ShowHttpsConfigRequest) *ShowHttpsConfigInvoker {
+	requestDef := GenReqDefForShowHttpsConfig()
+	return &ShowHttpsConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateHttpsConfig 配置https
+//
+// 点播提供给域名配置https证书的接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VodClient) UpdateHttpsConfig(request *model.UpdateHttpsConfigRequest) (*model.UpdateHttpsConfigResponse, error) {
+	requestDef := GenReqDefForUpdateHttpsConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateHttpsConfigResponse), nil
+	}
+}
+
+// UpdateHttpsConfigInvoker 配置https
+func (c *VodClient) UpdateHttpsConfigInvoker(request *model.UpdateHttpsConfigRequest) *UpdateHttpsConfigInvoker {
+	requestDef := GenReqDefForUpdateHttpsConfig()
+	return &UpdateHttpsConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListTakeOverTask 查询托管任务
 //
 // 查询OBS存量托管任务列表。

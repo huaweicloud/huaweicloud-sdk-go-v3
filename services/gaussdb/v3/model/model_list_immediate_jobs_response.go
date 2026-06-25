@@ -13,8 +13,11 @@ type ListImmediateJobsResponse struct {
 	Jobs *[]TaskDetailInfo `json:"jobs,omitempty"`
 
 	// 任务总数。
-	TotalCount     *int32 `json:"total_count,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	TotalCount *int32 `json:"total_count,omitempty"`
+
+	// **参数解释**：  支持筛选的任务名称。  **取值范围**：  不涉及。
+	ActionNames    *[]string `json:"action_names,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o ListImmediateJobsResponse) String() string {

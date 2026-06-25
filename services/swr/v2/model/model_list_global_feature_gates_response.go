@@ -16,8 +16,11 @@ type ListGlobalFeatureGatesResponse struct {
 	EnableEnterprise *bool `json:"enableEnterprise,omitempty"`
 
 	// 是否支持SWR企业版功能
-	CerAvailable   *bool `json:"cerAvailable,omitempty"`
-	HttpStatusCode int   `json:"-"`
+	CerAvailable *bool `json:"cerAvailable,omitempty"`
+
+	// 是否展示创建内网访问的开关按钮
+	EnableIntranetAccessSwitch *bool `json:"enableIntranetAccessSwitch,omitempty"`
+	HttpStatusCode             int   `json:"-"`
 }
 
 func (o ListGlobalFeatureGatesResponse) String() string {

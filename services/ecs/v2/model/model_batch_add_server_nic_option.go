@@ -25,6 +25,9 @@ type BatchAddServerNicOption struct {
 	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
 
 	Ipv6Bandwidth *Ipv6Bandwidth `json:"ipv6_bandwidth,omitempty"`
+
+	// 使能网卡的vRoCE能力，只支持从网卡，主网卡不支持。
+	EfiEnable *bool `json:"efi_enable,omitempty"`
 }
 
 func (o BatchAddServerNicOption) String() string {

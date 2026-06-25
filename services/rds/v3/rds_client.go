@@ -1383,6 +1383,27 @@ func (c *RdsClient) ListInspectionHistoriesInvoker(request *model.ListInspection
 	return &ListInspectionHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInstanceBackupSummary 获取实例备份概览列表
+//
+// 获取实例备份概览列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListInstanceBackupSummary(request *model.ListInstanceBackupSummaryRequest) (*model.ListInstanceBackupSummaryResponse, error) {
+	requestDef := GenReqDefForListInstanceBackupSummary()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceBackupSummaryResponse), nil
+	}
+}
+
+// ListInstanceBackupSummaryInvoker 获取实例备份概览列表
+func (c *RdsClient) ListInstanceBackupSummaryInvoker(request *model.ListInstanceBackupSummaryRequest) *ListInstanceBackupSummaryInvoker {
+	requestDef := GenReqDefForListInstanceBackupSummary()
+	return &ListInstanceBackupSummaryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInstanceDiagnosis 获取诊断后的实例数量
 //
 // 获取诊断后的实例数量
@@ -2142,6 +2163,27 @@ func (c *RdsClient) ListSmallVersion(request *model.ListSmallVersionRequest) (*m
 func (c *RdsClient) ListSmallVersionInvoker(request *model.ListSmallVersionRequest) *ListSmallVersionInvoker {
 	requestDef := GenReqDefForListSmallVersion()
 	return &ListSmallVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSparseBackupPolicy 查询稀疏备份策略
+//
+// 查询稀疏备份策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListSparseBackupPolicy(request *model.ListSparseBackupPolicyRequest) (*model.ListSparseBackupPolicyResponse, error) {
+	requestDef := GenReqDefForListSparseBackupPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSparseBackupPolicyResponse), nil
+	}
+}
+
+// ListSparseBackupPolicyInvoker 查询稀疏备份策略
+func (c *RdsClient) ListSparseBackupPolicyInvoker(request *model.ListSparseBackupPolicyRequest) *ListSparseBackupPolicyInvoker {
+	requestDef := GenReqDefForListSparseBackupPolicy()
+	return &ListSparseBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSqlLimit 查询SQL限流列表
@@ -2987,6 +3029,27 @@ func (c *RdsClient) ShowBackupPolicy(request *model.ShowBackupPolicyRequest) (*m
 func (c *RdsClient) ShowBackupPolicyInvoker(request *model.ShowBackupPolicyRequest) *ShowBackupPolicyInvoker {
 	requestDef := GenReqDefForShowBackupPolicy()
 	return &ShowBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBackupUsage 查询备份用量总览
+//
+// 查询备份用量总览
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowBackupUsage(request *model.ShowBackupUsageRequest) (*model.ShowBackupUsageResponse, error) {
+	requestDef := GenReqDefForShowBackupUsage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBackupUsageResponse), nil
+	}
+}
+
+// ShowBackupUsageInvoker 查询备份用量总览
+func (c *RdsClient) ShowBackupUsageInvoker(request *model.ShowBackupUsageRequest) *ShowBackupUsageInvoker {
+	requestDef := GenReqDefForShowBackupUsage()
+	return &ShowBackupUsageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowBinlogClearPolicy 获取binlog本地保留时长
@@ -3995,6 +4058,27 @@ func (c *RdsClient) UpdatePort(request *model.UpdatePortRequest) (*model.UpdateP
 func (c *RdsClient) UpdatePortInvoker(request *model.UpdatePortRequest) *UpdatePortInvoker {
 	requestDef := GenReqDefForUpdatePort()
 	return &UpdatePortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSparseBackupPolicy 修改实例稀疏备份策略
+//
+// 修改实例稀疏备份策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) UpdateSparseBackupPolicy(request *model.UpdateSparseBackupPolicyRequest) (*model.UpdateSparseBackupPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateSparseBackupPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSparseBackupPolicyResponse), nil
+	}
+}
+
+// UpdateSparseBackupPolicyInvoker 修改实例稀疏备份策略
+func (c *RdsClient) UpdateSparseBackupPolicyInvoker(request *model.UpdateSparseBackupPolicyRequest) *UpdateSparseBackupPolicyInvoker {
+	requestDef := GenReqDefForUpdateSparseBackupPolicy()
+	return &UpdateSparseBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSqlLimit 修改SQL限流

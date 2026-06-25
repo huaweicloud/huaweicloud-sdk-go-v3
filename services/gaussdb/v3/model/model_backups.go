@@ -33,7 +33,7 @@ type Backups struct {
 	Type *string `json:"type,omitempty"`
 
 	// 备份大小（单位：MB）。
-	Size *int64 `json:"size,omitempty"`
+	Size *float64 `json:"size,omitempty"`
 
 	Datastore *MysqlDatastoreInBackup `json:"datastore,omitempty"`
 

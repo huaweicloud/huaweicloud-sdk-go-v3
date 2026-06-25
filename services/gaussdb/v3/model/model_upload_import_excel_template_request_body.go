@@ -29,6 +29,9 @@ type UploadImportExcelTemplateRequestBody struct {
 	// **参数解释**：  用户选中的数据库名，用英文\",\"隔开。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
 	SelectedDbs *def.MultiPart `json:"selected_dbs"`
 
+	// **参数解释**：  数据库同步范围。  **约束限制**：  必须选择实例级同步。  **取值范围**：  - true：所有库。 - false：部分库。  **默认取值**：  部分库。
+	DatabaseScope *def.MultiPart `json:"database_scope,omitempty"`
+
 	// **参数解释**：  是否支持标配符。  **约束限制**：  不涉及。  **取值范围**：  - true: 支持标配符。 - false: 不支持标配符。  **默认取值**：  不涉及。
 	IsSupportRegexp *def.MultiPart `json:"is_support_regexp,omitempty"`
 }

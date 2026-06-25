@@ -1045,6 +1045,22 @@ func (i *ListInspectionHistoriesInvoker) Invoke() (*model.ListInspectionHistorie
 	}
 }
 
+type ListInstanceBackupSummaryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceBackupSummaryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceBackupSummaryInvoker) Invoke() (*model.ListInstanceBackupSummaryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceBackupSummaryResponse), nil
+	}
+}
+
 type ListInstanceDiagnosisInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1618,6 +1634,22 @@ func (i *ListSmallVersionInvoker) Invoke() (*model.ListSmallVersionResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListSmallVersionResponse), nil
+	}
+}
+
+type ListSparseBackupPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSparseBackupPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSparseBackupPolicyInvoker) Invoke() (*model.ListSparseBackupPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSparseBackupPolicyResponse), nil
 	}
 }
 
@@ -2258,6 +2290,22 @@ func (i *ShowBackupPolicyInvoker) Invoke() (*model.ShowBackupPolicyResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ShowBackupPolicyResponse), nil
+	}
+}
+
+type ShowBackupUsageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBackupUsageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowBackupUsageInvoker) Invoke() (*model.ShowBackupUsageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBackupUsageResponse), nil
 	}
 }
 
@@ -3026,6 +3074,22 @@ func (i *UpdatePortInvoker) Invoke() (*model.UpdatePortResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdatePortResponse), nil
+	}
+}
+
+type UpdateSparseBackupPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSparseBackupPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSparseBackupPolicyInvoker) Invoke() (*model.UpdateSparseBackupPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSparseBackupPolicyResponse), nil
 	}
 }
 

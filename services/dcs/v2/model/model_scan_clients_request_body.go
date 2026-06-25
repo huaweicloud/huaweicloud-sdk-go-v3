@@ -9,7 +9,7 @@ import (
 type ScanClientsRequestBody struct {
 
 	// 节点ID
-	NodeId string `json:"node_id"`
+	NodeId *string `json:"node_id,omitempty"`
 
 	// 是否重新查询并保存会话列表
 	CleanCache *bool `json:"clean_cache,omitempty"`

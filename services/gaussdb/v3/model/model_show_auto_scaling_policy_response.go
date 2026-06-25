@@ -36,6 +36,9 @@ type ShowAutoScalingPolicyResponse struct {
 	// 自动回缩开关状态。  取值：  - true：已开启 - false：已关闭
 	ReduceEnabled *bool `json:"reduce_enabled,omitempty"`
 
+	// **参数解释**：  自动回缩的CPU平均使用率阈值（百分比数值）。  **取值范围**：  10-30。
+	ReduceThreshold *int32 `json:"reduce_threshold,omitempty"`
+
 	// 缩容规格下限。
 	MinFlavor *string `json:"min_flavor,omitempty"`
 

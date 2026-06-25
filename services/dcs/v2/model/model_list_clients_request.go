@@ -16,7 +16,7 @@ type ListClientsRequest struct {
 	InstanceId string `json:"instance_id"`
 
 	// 节点ID。
-	NodeId string `json:"node_id"`
+	NodeId *string `json:"node_id,omitempty"`
 
 	// 偏移量，表示从此偏移量开始查询， 偏移量大于等于0。
 	Offset *int32 `json:"offset,omitempty"`

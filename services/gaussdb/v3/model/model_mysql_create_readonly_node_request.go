@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -15,6 +18,9 @@ type MysqlCreateReadonlyNodeRequest struct {
 	// 创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  - true，为自动支付，默认该方式。 - false，为手动支付。
 	IsAutoPay *string `json:"is_auto_pay,omitempty"`
 
+	// **参数解释**：     计费模式。  **约束限制**：  仅当实例为包年/包月实例时生效。  **取值范围**：  - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费。  **默认取值**：  prePaid。
+	ChargeMode *MysqlCreateReadonlyNodeRequestChargeMode `json:"charge_mode,omitempty"`
+
 	// 可用区。可指定可用区创建只读节点，不传该参数时默认为自动选择可用区。  调用[查询数据库规格](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlFlavors.html)获取，其中az_status中的key为availability_zone。  注：指定可用区创建只读节点，可能由于资源不足创建失败。
 	AvailabilityZones *[]string `json:"availability_zones,omitempty"`
 }
@@ -26,4 +32,51 @@ func (o MysqlCreateReadonlyNodeRequest) String() string {
 	}
 
 	return strings.Join([]string{"MysqlCreateReadonlyNodeRequest", string(data)}, " ")
+}
+
+type MysqlCreateReadonlyNodeRequestChargeMode struct {
+	value string
+}
+
+type MysqlCreateReadonlyNodeRequestChargeModeEnum struct {
+	PRE_PAID  MysqlCreateReadonlyNodeRequestChargeMode
+	POST_PAID MysqlCreateReadonlyNodeRequestChargeMode
+}
+
+func GetMysqlCreateReadonlyNodeRequestChargeModeEnum() MysqlCreateReadonlyNodeRequestChargeModeEnum {
+	return MysqlCreateReadonlyNodeRequestChargeModeEnum{
+		PRE_PAID: MysqlCreateReadonlyNodeRequestChargeMode{
+			value: "prePaid",
+		},
+		POST_PAID: MysqlCreateReadonlyNodeRequestChargeMode{
+			value: "postPaid",
+		},
+	}
+}
+
+func (c MysqlCreateReadonlyNodeRequestChargeMode) Value() string {
+	return c.value
+}
+
+func (c MysqlCreateReadonlyNodeRequestChargeMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *MysqlCreateReadonlyNodeRequestChargeMode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
 }

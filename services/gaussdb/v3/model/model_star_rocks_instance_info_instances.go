@@ -83,6 +83,9 @@ type StarRocksInstanceInfoInstances struct {
 	// 实例创建失败错误码。
 	CreateFailErrorCode *string `json:"create_fail_error_code,omitempty"`
 
+	// **参数解释**：  账号同步开关状态。  **取值范围**：  - true：开启。 - false：关闭。
+	UsersSyncSwitchOn *bool `json:"users_sync_switch_on,omitempty"`
+
 	// 实例分组。
 	Groups *[]StarRocksInstanceInfoGroups `json:"groups,omitempty"`
 

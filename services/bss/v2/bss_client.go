@@ -2043,6 +2043,27 @@ func (c *BssClient) UpdatePeriodToOnDemandInvoker(request *model.UpdatePeriodToO
 	return &UpdatePeriodToOnDemandInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdatePeriodToOnDemandInstantly 设置包年/包月资源即时转按需
+//
+// 功能描述：客户在自建平台完成包年/包月资源即时转为按需资源计费
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssClient) UpdatePeriodToOnDemandInstantly(request *model.UpdatePeriodToOnDemandInstantlyRequest) (*model.UpdatePeriodToOnDemandInstantlyResponse, error) {
+	requestDef := GenReqDefForUpdatePeriodToOnDemandInstantly()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePeriodToOnDemandInstantlyResponse), nil
+	}
+}
+
+// UpdatePeriodToOnDemandInstantlyInvoker 设置包年/包月资源即时转按需
+func (c *BssClient) UpdatePeriodToOnDemandInstantlyInvoker(request *model.UpdatePeriodToOnDemandInstantlyRequest) *UpdatePeriodToOnDemandInstantlyInvoker {
+	requestDef := GenReqDefForUpdatePeriodToOnDemandInstantly()
+	return &UpdatePeriodToOnDemandInstantlyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateSubEnterpriseAmount 企业主账号向企业子账号拨款
 //
 // 企业主账号在自建平台向企业子账号拨款。

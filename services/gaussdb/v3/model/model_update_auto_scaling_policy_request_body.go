@@ -27,6 +27,9 @@ type UpdateAutoScalingPolicyRequestBody struct {
 	// 是否开启自动回缩。开启自动变配时必填。 - true：是。 - false：否。
 	ReduceEnabled *bool `json:"reduce_enabled,omitempty"`
 
+	// **参数解释**：  自动回缩的CPU平均使用率阈值（百分比数值）。  **约束限制**：  不涉及。  **取值范围**：  10-30。  **默认取值**：  不涉及。
+	ReduceThreshold *int32 `json:"reduce_threshold,omitempty"`
+
 	// 只读节点数量上限。开启增删只读节点时必填。
 	MaxReadOnlyCount *int32 `json:"max_read_only_count,omitempty"`
 

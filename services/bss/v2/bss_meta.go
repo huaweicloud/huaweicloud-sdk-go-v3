@@ -2290,6 +2290,21 @@ func GenReqDefForUpdatePeriodToOnDemand() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForUpdatePeriodToOnDemandInstantly() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/orders/subscriptions/resources/to-on-demand/instantly").
+		WithResponse(new(model.UpdatePeriodToOnDemandInstantlyResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateSubEnterpriseAmount() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

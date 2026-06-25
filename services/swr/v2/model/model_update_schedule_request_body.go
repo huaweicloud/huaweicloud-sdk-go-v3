@@ -9,7 +9,7 @@ import (
 type UpdateScheduleRequestBody struct {
 	Schedule *ScheduleObj `json:"schedule"`
 
-	Parameters *GcParameters `json:"parameters"`
+	Parameters *GcParameters `json:"parameters,omitempty"`
 }
 
 func (o UpdateScheduleRequestBody) String() string {

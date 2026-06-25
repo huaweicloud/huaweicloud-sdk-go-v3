@@ -53,6 +53,12 @@ type BatchCreateCcRuleRequestBody struct {
 
 	// 添加规则的策略id列表。策略id从\"查询防护策略列表\"(ListPolicy)接口获取，多个策略之间用“,”隔开
 	PolicyIds []string `json:"policy_ids"`
+
+	// 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+	Priority *int32 `json:"priority,omitempty"`
+
+	// 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
+	CcPriority *int32 `json:"cc_priority,omitempty"`
 }
 
 func (o BatchCreateCcRuleRequestBody) String() string {

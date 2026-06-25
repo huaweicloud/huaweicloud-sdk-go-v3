@@ -74,7 +74,13 @@ type UpdateCcRuleResponse struct {
 	AgingTime *int32 `json:"aging_time,omitempty"`
 
 	// 规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
-	Producer       *int32 `json:"producer,omitempty"`
+	Producer *int32 `json:"producer,omitempty"`
+
+	// 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+	Priority *int32 `json:"priority,omitempty"`
+
+	// 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
+	CcPriority     *int32 `json:"cc_priority,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

@@ -9,10 +9,10 @@ import (
 type SecurityOptions struct {
 
 	// 是否支持安全启动 true:支持安全启动 false:不支持安全启动 默认值：false
-	SecureBootEnabled bool `json:"secure_boot_enabled"`
+	SecureBootEnabled *bool `json:"secure_boot_enabled,omitempty"`
 
 	// 是否支持vtpm启动 true:支持vtpm启动 false:不支持vtpm启动 默认值：false
-	TpmEnabled bool `json:"tpm_enabled"`
+	TpmEnabled *bool `json:"tpm_enabled,omitempty"`
 }
 
 func (o SecurityOptions) String() string {

@@ -7,7 +7,7 @@ import (
 )
 
 type EnclaveOptions struct {
-	Enabled bool `json:"enabled"`
+	Enabled *bool `json:"enabled,omitempty"`
 }
 
 func (o EnclaveOptions) String() string {
