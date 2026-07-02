@@ -9,10 +9,19 @@ import (
 // ShowEngineInstanceExtendProductInfoResponse Response Object
 type ShowEngineInstanceExtendProductInfoResponse struct {
 
+	// 查询结果总数。
+	Total *int32 `json:"total,omitempty"`
+
+	// 下一个偏移量。
+	NextOffset *int32 `json:"next_offset,omitempty"`
+
+	// 前一个偏移量。
+	PreviousOffset *int32 `json:"previous_offset,omitempty"`
+
 	// 消息引擎类型。
 	Engine *string `json:"engine,omitempty"`
 
-	// 消息引擎支持的版本
+	// 消息引擎支持的版本。
 	Versions *[]string `json:"versions,omitempty"`
 
 	// 规格变更的产品信息。

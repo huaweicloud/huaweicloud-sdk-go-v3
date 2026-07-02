@@ -30,7 +30,7 @@ type ShowWidgetResponse struct {
 	// **参数解释** 阈值是否展示 **取值范围** - true:展示 - false:不展示
 	ThresholdEnabled *bool `json:"threshold_enabled,omitempty"`
 
-	// **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图
+	// **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图 - gauge:仪表盘 - stat:数字
 	View *ShowWidgetResponseView `json:"view,omitempty"`
 
 	// **参数解释** 指标展示类型 **取值范围** - single:单指标展示 - multiple:多指标展示
@@ -68,6 +68,8 @@ type ShowWidgetResponseViewEnum struct {
 	TABLE        ShowWidgetResponseView
 	CIRCULAR_BAR ShowWidgetResponseView
 	AREA_CHART   ShowWidgetResponseView
+	GAUGE        ShowWidgetResponseView
+	STAT         ShowWidgetResponseView
 }
 
 func GetShowWidgetResponseViewEnum() ShowWidgetResponseViewEnum {
@@ -89,6 +91,12 @@ func GetShowWidgetResponseViewEnum() ShowWidgetResponseViewEnum {
 		},
 		AREA_CHART: ShowWidgetResponseView{
 			value: "area_chart",
+		},
+		GAUGE: ShowWidgetResponseView{
+			value: "gauge",
+		},
+		STAT: ShowWidgetResponseView{
+			value: "stat",
 		},
 	}
 }

@@ -81,6 +81,9 @@ type FlinkJobConfig struct {
 	// 参数解释: Flink作业运行时自定义优化参数 示例: [{\\\"key\\\":\\\"high-availability\\\",\\\"value\\\":\\\"org.apache.flink.kubernetes.highavailability.KubernetesHaServicesFactory\\\" },{ \\\"key\\\":\\\"kubernetes.jobmanager.replicas\\\",\\\"value\\\":\\\"2\\\" },{ \\\"key\\\":\\\"high-availability.storageDir\\\",\\\"value\\\":\\\"obs://fz-test/test\\\"}] 约束限制:  无 取值范围: 无 默认取值: 无
 	RuntimeConfig *string `json:"runtime_config,omitempty"`
 
+	// Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
+	FlinkLogConfig *string `json:"flink_log_config,omitempty"`
+
 	// 参数解释: 流图编辑开关 示例: false 约束限制:  无 取值范围: 无 默认取值: false
 	GraphEditorEnabled *bool `json:"graph_editor_enabled,omitempty"`
 

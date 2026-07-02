@@ -28,6 +28,9 @@ type ConfigListRsp struct {
 
 	// 返回错误信息。当状态为success时该参数为null。
 	FailedMsg *string `json:"failedMsg,omitempty"`
+
+	// **参数解释**： 节点类型。 **取值范围**： 不涉及
+	InstType *string `json:"instType,omitempty"`
 }
 
 func (o ConfigListRsp) String() string {

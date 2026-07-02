@@ -10,7 +10,7 @@ import (
 type UpdateStatisticsRequestBody struct {
 
 	// 数据库名
-	DbName *string `json:"db_name,omitempty"`
+	DbName string `json:"db_name"`
 }
 
 func (o UpdateStatisticsRequestBody) String() string {

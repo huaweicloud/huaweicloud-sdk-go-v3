@@ -90,6 +90,9 @@ type CreateFlinkJarJobRequestBody struct {
 	// Flink作业运行时自定义优化参数。
 	RuntimeConfig *string `json:"runtime_config,omitempty"`
 
+	// Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
+	FlinkLogConfig *string `json:"flink_log_config,omitempty"`
+
 	// 授权给DLI的委托名。Flink1.15版本时支持配置该参数。
 	ExecutionAgencyUrn *string `json:"execution_agency_urn,omitempty"`
 

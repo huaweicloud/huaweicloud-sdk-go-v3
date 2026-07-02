@@ -24,6 +24,9 @@ type ShowOneTopicResponse struct {
 	// **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。       **默认取值**： 不涉及。
 	Permission *ShowOneTopicResponsePermission `json:"permission,omitempty"`
 
+	// **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	CreatedAt *int64 `json:"created_at,omitempty"`
+
 	// **参数解释**： 关联的代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Brokers *[]TopicBrokers `json:"brokers,omitempty"`
 

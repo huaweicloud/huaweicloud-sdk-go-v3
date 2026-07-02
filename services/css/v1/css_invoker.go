@@ -949,19 +949,19 @@ func (i *StartTargetClusterConnectivityTestInvoker) Invoke() (*model.StartTarget
 	}
 }
 
-type StartVpecpInvoker struct {
+type StartVpcepInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *StartVpecpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *StartVpcepInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *StartVpecpInvoker) Invoke() (*model.StartVpecpResponse, error) {
+func (i *StartVpcepInvoker) Invoke() (*model.StartVpcepResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.StartVpecpResponse), nil
+		return result.(*model.StartVpcepResponse), nil
 	}
 }
 
@@ -1029,19 +1029,19 @@ func (i *StopSnapshotInvoker) Invoke() (*model.StopSnapshotResponse, error) {
 	}
 }
 
-type StopVpecpInvoker struct {
+type StopVpcepInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *StopVpecpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *StopVpcepInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *StopVpecpInvoker) Invoke() (*model.StopVpecpResponse, error) {
+func (i *StopVpcepInvoker) Invoke() (*model.StopVpcepResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.StopVpecpResponse), nil
+		return result.(*model.StopVpcepResponse), nil
 	}
 }
 
@@ -1554,22 +1554,6 @@ func (i *DeleteConfInvoker) Invoke() (*model.DeleteConfResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteConfResponse), nil
-	}
-}
-
-type DeleteConfigInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteConfigInvoker) Invoke() (*model.DeleteConfigResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteConfigResponse), nil
 	}
 }
 

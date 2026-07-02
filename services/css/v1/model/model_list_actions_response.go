@@ -10,8 +10,11 @@ import (
 type ListActionsResponse struct {
 
 	// 操作记录列表。
-	Actions        *[]Actions `json:"actions,omitempty"`
-	HttpStatusCode int        `json:"-"`
+	Actions *[]Actions `json:"actions,omitempty"`
+
+	// 操作记录总条数。
+	TotalSize      *int32 `json:"totalSize,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListActionsResponse) String() string {

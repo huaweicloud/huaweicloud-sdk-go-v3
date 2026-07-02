@@ -14,6 +14,9 @@ type RabbitMqExtendProductInfoEntity struct {
 	// 产品ID。
 	ProductId *string `json:"product_id,omitempty"`
 
+	// 账单计费类型。
+	BillingCode *string `json:"billing_code,omitempty"`
+
 	// 该产品使用的ECS规格。
 	EcsFlavorId *string `json:"ecs_flavor_id,omitempty"`
 
@@ -36,6 +39,9 @@ type RabbitMqExtendProductInfoEntity struct {
 
 	// 支持的特性功能。
 	SupportFeatures *[]RabbitMqProductSupportFeaturesEntity `json:"support_features,omitempty"`
+
+	// 是否兼容擎天。
+	QingtianIncompatible *bool `json:"qingtian_incompatible,omitempty"`
 }
 
 func (o RabbitMqExtendProductInfoEntity) String() string {

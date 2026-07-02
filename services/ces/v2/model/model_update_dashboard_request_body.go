@@ -15,7 +15,7 @@ type UpdateDashboardRequestBody struct {
 	IsFavorite *bool `json:"is_favorite,omitempty"`
 
 	// **参数解释** 监控视图展示模式 **约束限制** 不涉及 **取值范围** - 0 自定义坐标 - 1 每行一个 - 2 每行两个 - 3 每行三个 - 4 每行四个 **默认取值** 不涉及
-	RowWidgetNum int32 `json:"row_widget_num"`
+	RowWidgetNum *int32 `json:"row_widget_num,omitempty"`
 
 	ExtendInfo *ExtendInfo `json:"extend_info,omitempty"`
 }

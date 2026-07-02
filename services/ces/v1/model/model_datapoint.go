@@ -9,25 +9,25 @@ import (
 // Datapoint
 type Datapoint struct {
 
-	// 聚合周期内指标数据的最大值。
+	// **参数解释** 聚合周期内指标数据的最大值 **取值范围** 不涉及
 	Max *float64 `json:"max,omitempty"`
 
-	// 聚合周期内指标数据的最小值。
+	// **参数解释** 聚合周期内指标数据的最小值 **取值范围** 不涉及
 	Min *float64 `json:"min,omitempty"`
 
-	// 聚合周期内指标数据的平均值。
+	// **参数解释** 聚合周期内指标数据的平均值 **取值范围** 不涉及
 	Average *float64 `json:"average,omitempty"`
 
-	// 聚合周期内指标数据的求和值。
+	// **参数解释** 聚合周期内指标数据的求和值 **取值范围** 不涉及
 	Sum *float64 `json:"sum,omitempty"`
 
-	// 聚合周期内指标数据的方差。
+	// **参数解释** 聚合周期内指标数据的方差 **取值范围** 不涉及
 	Variance *float64 `json:"variance,omitempty"`
 
-	// 指标采集时间，UNIX时间戳，单位毫秒。
+	// **参数解释** 指标采集时间，UNIX时间戳，单位毫秒 **取值范围** 不涉及
 	Timestamp int64 `json:"timestamp"`
 
-	// 指标单位。
+	// **参数解释** 指标单位 **取值范围** 不涉及
 	Unit *string `json:"unit,omitempty"`
 }
 

@@ -29,7 +29,7 @@ type InvocationInfo struct {
 	// **参数解释**: 弹性公网ip列表
 	ElasticIps *[]string `json:"elastic_ips,omitempty"`
 
-	// **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试
+	// **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试 - SET_REMOTE_INSTALLER：设置远程安装主机 - REMOTE_INSTALL：执行远程安装
 	InvocationType *InvocationInfoInvocationType `json:"invocation_type,omitempty"`
 
 	// **参数解释**: 任务状态 **取值范围**: - PENDING：待执行 - RUNNING：运行中 - TIMEOUT：超时 - FAILED：失败 - SUCCEEDED：成功 - CANCELED：取消 - ROLLBACKED：已回退
@@ -115,10 +115,12 @@ type InvocationInfoInvocationType struct {
 }
 
 type InvocationInfoInvocationTypeEnum struct {
-	INSTALL  InvocationInfoInvocationType
-	UPDATE   InvocationInfoInvocationType
-	ROLLBACK InvocationInfoInvocationType
-	RETRY    InvocationInfoInvocationType
+	INSTALL              InvocationInfoInvocationType
+	UPDATE               InvocationInfoInvocationType
+	ROLLBACK             InvocationInfoInvocationType
+	RETRY                InvocationInfoInvocationType
+	SET_REMOTE_INSTALLER InvocationInfoInvocationType
+	REMOTE_INSTALL       InvocationInfoInvocationType
 }
 
 func GetInvocationInfoInvocationTypeEnum() InvocationInfoInvocationTypeEnum {
@@ -134,6 +136,12 @@ func GetInvocationInfoInvocationTypeEnum() InvocationInfoInvocationTypeEnum {
 		},
 		RETRY: InvocationInfoInvocationType{
 			value: "RETRY",
+		},
+		SET_REMOTE_INSTALLER: InvocationInfoInvocationType{
+			value: "SET_REMOTE_INSTALLER",
+		},
+		REMOTE_INSTALL: InvocationInfoInvocationType{
+			value: "REMOTE_INSTALL",
 		},
 	}
 }

@@ -10,8 +10,10 @@ import (
 type ListConfsResponse struct {
 
 	// 配置文件列表。
-	Confs          *[]Confs `json:"confs,omitempty"`
-	HttpStatusCode int      `json:"-"`
+	Confs *[]Confs `json:"confs,omitempty"`
+
+	TotalSize      *int32 `json:"totalSize,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListConfsResponse) String() string {

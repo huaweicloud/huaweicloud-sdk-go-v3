@@ -19,7 +19,7 @@ type CreateInstanceReq struct {
 	Description *string `json:"description,omitempty"`
 
 	// **参数解释**： 消息引擎。 **约束限制**： 不涉及 **取值范围**： rabbitmq：RabbitMQ引擎。 **默认取值**： 不涉及。
-	Engine CreateInstanceReqEngine `json:"engine"`
+	Engine *CreateInstanceReqEngine `json:"engine,omitempty"`
 
 	// **参数解释**： 消息引擎的版本。 **约束限制**： 不涉及 **取值范围**： [- 3.8.35](tag:hws,hws_hk,hws_eu,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,ax,srg) [- 3.12.13](tag:srg) [- 3.13.7](tag:dt) [- AMQP-0-9-1](tag:hws,hws_hk,hws_eu) **默认取值**： 不涉及。
 	EngineVersion string `json:"engine_version"`
@@ -31,10 +31,10 @@ type CreateInstanceReq struct {
 	StorageSpace int32 `json:"storage_space"`
 
 	// **参数解释**：  认证用户名。 **约束限制**： 只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-	AccessUser *string `json:"access_user,omitempty"`
+	AccessUser string `json:"access_user"`
 
 	// **参数解释**： 实例的认证密码。 **约束限制**： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的三种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）和空格，并且不能以-开头 - 当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-	Password *string `json:"password,omitempty"`
+	Password string `json:"password"`
 
 	// **参数解释**：  虚拟私有云ID。获取方法如下：参考[[《虚拟私有云 API参考》](https://support.huaweicloud.com/api-vpc/vpc_apiv3_0003.html)](tag:hws)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/intl/zh-cn/api-vpc/vpc_apiv3_0003.html)](tag:hws_hk)[[《虚拟私有云 API参考》](https://support.huaweicloud.com/eu/api-vpc/vpc_apiv3_0003.html)](tag:hws_eu)[《虚拟私有云 API参考》](tag:ax,cmcc,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm,srg,dt)，调用“查询VPC列表”接口，从响应体中获取VPC ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	VpcId string `json:"vpc_id"`
@@ -74,6 +74,15 @@ type CreateInstanceReq struct {
 
 	// **参数解释**： 企业项目ID。 **约束限制**： 若为企业项目账号，该参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+	DiskEncryptedEnable *bool `json:"disk_encrypted_enable,omitempty"`
+
+	// **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	DiskEncryptedKey *string `json:"disk_encrypted_key,omitempty"`
+
+	// **参数解释**： CPU架构。 **约束限制**： 不涉及。 **取值范围**： - X86：X86架构。 [- ARM：鲲鹏架构。](tag:hws_test,cmcc,ctc) **默认取值**： 不涉及。
+	ArchType *string `json:"arch_type,omitempty"`
 
 	// **参数解释**： 标签列表。 **约束限制**： 一个RabbitMQ实例最多添加20个标签。
 	Tags *[]TagEntity `json:"tags,omitempty"`

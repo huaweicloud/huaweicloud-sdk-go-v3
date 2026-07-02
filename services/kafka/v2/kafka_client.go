@@ -1125,6 +1125,27 @@ func (c *KafkaClient) ResetUserPasswrodInvoker(request *model.ResetUserPasswrodR
 	return &ResetUserPasswrodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ResizeEngineInstance 实例扩容
+//
+// 实例规格变更。[当前通过调用API，只支持按需实例进行实例扩容。](tag:hws,hws_hk,ctc,cmcc,hws_eu)
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) ResizeEngineInstance(request *model.ResizeEngineInstanceRequest) (*model.ResizeEngineInstanceResponse, error) {
+	requestDef := GenReqDefForResizeEngineInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResizeEngineInstanceResponse), nil
+	}
+}
+
+// ResizeEngineInstanceInvoker 实例扩容
+func (c *KafkaClient) ResizeEngineInstanceInvoker(request *model.ResizeEngineInstanceRequest) *ResizeEngineInstanceInvoker {
+	requestDef := GenReqDefForResizeEngineInstance()
+	return &ResizeEngineInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ResizeKafkaInstance 实例扩容
 //
 // 实例规格变更。[当前通过调用API，只支持按需实例进行实例扩容。](tag:hws,hws_hk,ctc,cmcc,hws_eu,ax)
@@ -1526,6 +1547,27 @@ func (c *KafkaClient) ShowKafkaInstanceExtendProductInfo(request *model.ShowKafk
 func (c *KafkaClient) ShowKafkaInstanceExtendProductInfoInvoker(request *model.ShowKafkaInstanceExtendProductInfoRequest) *ShowKafkaInstanceExtendProductInfoInvoker {
 	requestDef := GenReqDefForShowKafkaInstanceExtendProductInfo()
 	return &ShowKafkaInstanceExtendProductInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowKafkaLogTask 查询日志任务
+//
+// 查询日志任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) ShowKafkaLogTask(request *model.ShowKafkaLogTaskRequest) (*model.ShowKafkaLogTaskResponse, error) {
+	requestDef := GenReqDefForShowKafkaLogTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKafkaLogTaskResponse), nil
+	}
+}
+
+// ShowKafkaLogTaskInvoker 查询日志任务
+func (c *KafkaClient) ShowKafkaLogTaskInvoker(request *model.ShowKafkaLogTaskRequest) *ShowKafkaLogTaskInvoker {
+	requestDef := GenReqDefForShowKafkaLogTask()
+	return &ShowKafkaLogTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowKafkaProductCores 查询Kafka产品规格核数
@@ -1948,6 +1990,48 @@ func (c *KafkaClient) ShowVolumeExpandConfig(request *model.ShowVolumeExpandConf
 func (c *KafkaClient) ShowVolumeExpandConfigInvoker(request *model.ShowVolumeExpandConfigRequest) *ShowVolumeExpandConfigInvoker {
 	requestDef := GenReqDefForShowVolumeExpandConfig()
 	return &ShowVolumeExpandConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartKafkaLogTask 开启日志任务
+//
+// 开启日志任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) StartKafkaLogTask(request *model.StartKafkaLogTaskRequest) (*model.StartKafkaLogTaskResponse, error) {
+	requestDef := GenReqDefForStartKafkaLogTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartKafkaLogTaskResponse), nil
+	}
+}
+
+// StartKafkaLogTaskInvoker 开启日志任务
+func (c *KafkaClient) StartKafkaLogTaskInvoker(request *model.StartKafkaLogTaskRequest) *StartKafkaLogTaskInvoker {
+	requestDef := GenReqDefForStartKafkaLogTask()
+	return &StartKafkaLogTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopKafkaLogTask 停止日志任务
+//
+// 停止日志任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KafkaClient) StopKafkaLogTask(request *model.StopKafkaLogTaskRequest) (*model.StopKafkaLogTaskResponse, error) {
+	requestDef := GenReqDefForStopKafkaLogTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopKafkaLogTaskResponse), nil
+	}
+}
+
+// StopKafkaLogTaskInvoker 停止日志任务
+func (c *KafkaClient) StopKafkaLogTaskInvoker(request *model.StopKafkaLogTaskRequest) *StopKafkaLogTaskInvoker {
+	requestDef := GenReqDefForStopKafkaLogTask()
+	return &StopKafkaLogTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // StopKafkaRebalanceLogTask 关闭Kafka实例重平衡日志功能

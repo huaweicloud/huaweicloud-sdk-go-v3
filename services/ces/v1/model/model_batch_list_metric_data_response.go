@@ -9,7 +9,7 @@ import (
 // BatchListMetricDataResponse Response Object
 type BatchListMetricDataResponse struct {
 
-	// 监控指标。
+	// **参数解释** 监控指标响应体
 	Metrics        *[]BatchMetricData `json:"metrics,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }

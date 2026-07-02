@@ -629,6 +629,54 @@ func (i *DeleteVpnConnectionInvoker) Invoke() (*model.DeleteVpnConnectionRespons
 	}
 }
 
+type ExportVpnConnectionPeerConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportVpnConnectionPeerConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExportVpnConnectionPeerConfigurationInvoker) Invoke() (*model.ExportVpnConnectionPeerConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportVpnConnectionPeerConfigurationResponse), nil
+	}
+}
+
+type ListConnectionIpsecSaInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListConnectionIpsecSaInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListConnectionIpsecSaInvoker) Invoke() (*model.ListConnectionIpsecSaResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListConnectionIpsecSaResponse), nil
+	}
+}
+
+type ListPeerConfigurationSupportedDevicesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPeerConfigurationSupportedDevicesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPeerConfigurationSupportedDevicesInvoker) Invoke() (*model.ListPeerConfigurationSupportedDevicesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPeerConfigurationSupportedDevicesResponse), nil
+	}
+}
+
 type ListVpnConnectionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -962,6 +1010,22 @@ func (i *CreateVgwCertificateInvoker) Invoke() (*model.CreateVgwCertificateRespo
 		return nil, err
 	} else {
 		return result.(*model.CreateVgwCertificateResponse), nil
+	}
+}
+
+type ListVpnGatewayCertificatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVpnGatewayCertificatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListVpnGatewayCertificatesInvoker) Invoke() (*model.ListVpnGatewayCertificatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVpnGatewayCertificatesResponse), nil
 	}
 }
 

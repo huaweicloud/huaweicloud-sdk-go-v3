@@ -26,6 +26,9 @@ type Job struct {
 	// 创建时间
 	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
 
+	// 预计剩余执行时间，单位：s
+	ExpectedTimeSeconds *int32 `json:"expected_time_seconds,omitempty"`
+
 	// 完成时间
 	FinishedAt *sdktime.SdkTime `json:"finished_at,omitempty"`
 
@@ -103,6 +106,8 @@ type JobStatusEnum struct {
 	ROLLING_BACK            JobStatus
 	ROLLBACK_SUCCESS        JobStatus
 	FAIL                    JobStatus
+	RUNNING                 JobStatus
+	INIT                    JobStatus
 }
 
 func GetJobStatusEnum() JobStatusEnum {
@@ -124,6 +129,12 @@ func GetJobStatusEnum() JobStatusEnum {
 		},
 		FAIL: JobStatus{
 			value: "fail",
+		},
+		RUNNING: JobStatus{
+			value: "running",
+		},
+		INIT: JobStatus{
+			value: "init",
 		},
 	}
 }

@@ -123,6 +123,12 @@ type ShowInstanceResponse struct {
 	// **参数解释**： 是否开启IPv6。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
 	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
 
+	// **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	Ipv6BrokerAddress *string `json:"ipv6_broker_address,omitempty"`
+
+	// **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	Ipv6NamesrvAddress *string `json:"ipv6_namesrv_address,omitempty"`
+
 	// **参数解释**： 实例支持的特性功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
 	SupportFeatures *string `json:"support_features,omitempty"`
 

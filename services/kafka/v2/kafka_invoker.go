@@ -837,6 +837,22 @@ func (i *ResetUserPasswrodInvoker) Invoke() (*model.ResetUserPasswrodResponse, e
 	}
 }
 
+type ResizeEngineInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResizeEngineInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ResizeEngineInstanceInvoker) Invoke() (*model.ResizeEngineInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResizeEngineInstanceResponse), nil
+	}
+}
+
 type ResizeKafkaInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1138,6 +1154,22 @@ func (i *ShowKafkaInstanceExtendProductInfoInvoker) Invoke() (*model.ShowKafkaIn
 		return nil, err
 	} else {
 		return result.(*model.ShowKafkaInstanceExtendProductInfoResponse), nil
+	}
+}
+
+type ShowKafkaLogTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowKafkaLogTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowKafkaLogTaskInvoker) Invoke() (*model.ShowKafkaLogTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowKafkaLogTaskResponse), nil
 	}
 }
 
@@ -1458,6 +1490,38 @@ func (i *ShowVolumeExpandConfigInvoker) Invoke() (*model.ShowVolumeExpandConfigR
 		return nil, err
 	} else {
 		return result.(*model.ShowVolumeExpandConfigResponse), nil
+	}
+}
+
+type StartKafkaLogTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartKafkaLogTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StartKafkaLogTaskInvoker) Invoke() (*model.StartKafkaLogTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartKafkaLogTaskResponse), nil
+	}
+}
+
+type StopKafkaLogTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopKafkaLogTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StopKafkaLogTaskInvoker) Invoke() (*model.StopKafkaLogTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopKafkaLogTaskResponse), nil
 	}
 }
 

@@ -37,6 +37,9 @@ type ConsumerGroup struct {
 
 	// **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
 	GroupOnline *bool `json:"group_online,omitempty"`
+
+	// **参数解释**： Topic订阅数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	TopicSubscriptionCount *int64 `json:"topic_subscription_count,omitempty"`
 }
 
 func (o ConsumerGroup) String() string {

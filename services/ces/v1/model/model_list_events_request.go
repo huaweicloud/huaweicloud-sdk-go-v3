@@ -12,25 +12,25 @@ import (
 // ListEventsRequest Request Object
 type ListEventsRequest struct {
 
-	// 事件类型，值为EVENT.SYS或EVENT.CUSTOM，EVENT.SYS表示系统事件，EVENT.CUSTOM表示自定义事件。
+	// **参数解释** 事件类型 **约束限制** 不涉及 **取值范围** 枚举值： - EVENT.SYS 系统事件 - EVENT.CUSTOM 自定义事件 **默认取值** 不涉及
 	EventType *ListEventsRequestEventType `json:"event_type,omitempty"`
 
-	// 事件子类, 枚举类型：SUB_EVENT.OPS 运维事件, SUB_EVENT.PLAN 计划事件，SUB_EVENT.CUSTOM 自定义事件
+	// **参数解释** 事件子类型 **约束限制** 不涉及 **取值范围** 枚举值： - SUB_EVENT.OPS 运维事件 - SUB_EVENT.PLAN 计划事件 - SUB_EVENT.CUSTOM 自定义事件 **默认取值** 不涉及
 	SubEventType *ListEventsRequestSubEventType `json:"sub_event_type,omitempty"`
 
-	// 事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称。
+	// **参数解释** 事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称 **约束限制** 不涉及 **取值范围** 必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_），长度为[1,64]个字符 **默认取值** 不涉及
 	EventName *string `json:"event_name,omitempty"`
 
-	// 查询数据起始时间，UNIX时间戳，单位毫秒；例如：1605952700911。
+	// **参数解释** 查询数据起始时间，UNIX时间戳，单位毫秒 **约束限制** 不涉及 **取值范围** 毫秒级时间戳，范围为[1111111111111,9999999999999] **默认取值** 不涉及
 	From *int64 `json:"from,omitempty"`
 
-	// 查询数据截止时间UNIX时间戳，单位毫秒。from必须小于to，例如：1606557500911。
+	// **参数解释** 查询数据截止时间，UNIX时间戳，单位毫秒 **约束限制** from必须小于to **取值范围** 毫秒级时间戳，范围为[1111111111111,9999999999999] **默认取值** 不涉及
 	To *int64 `json:"to,omitempty"`
 
-	// 分页起始值，默认值为0。
+	// **参数解释** 分页起始值 **约束限制** 不涉及 **取值范围** 非负整数 **默认取值** 0
 	Start *string `json:"start,omitempty"`
 
-	// 单次查询的条数限制，取值范围[0,100]，默认值为100，用于限制结果数据条数。
+	// **参数解释** 单次查询的条数限制 **约束限制** 不涉及 **取值范围** 条数限制为[1,100] **默认取值** 100
 	Limit *int32 `json:"limit,omitempty"`
 }
 

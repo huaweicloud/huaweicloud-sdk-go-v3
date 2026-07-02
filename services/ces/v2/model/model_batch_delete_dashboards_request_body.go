@@ -8,7 +8,7 @@ import (
 
 type BatchDeleteDashboardsRequestBody struct {
 
-	// **参数解释** 监控看板id列表 **约束限制** 包含的监控看板id对象个数为[1,30]
+	// **参数解释** 监控看板id列表 **约束限制** 包含的监控看板id对象个数为[1,50]
 	DashboardIds *[]string `json:"dashboard_ids,omitempty"`
 }
 

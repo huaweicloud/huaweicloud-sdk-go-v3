@@ -12,7 +12,7 @@ type ModifySubscriptionsRequestBody struct {
 	// 修改的订阅id列表。每次修改的订阅必须属于同一实例。
 	SubscriptionIds []string `json:"subscription_ids"`
 
-	JobSchedule *OperateUsedJobSchedule `json:"job_schedule"`
+	JobSchedule *OperateUsedJobScheduleModify `json:"job_schedule"`
 }
 
 func (o ModifySubscriptionsRequestBody) String() string {

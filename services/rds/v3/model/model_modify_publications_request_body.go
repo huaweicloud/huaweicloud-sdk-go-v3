@@ -10,7 +10,7 @@ import (
 type ModifyPublicationsRequestBody struct {
 	SubscriptionOptions *SubscriptionOption `json:"subscription_options,omitempty"`
 
-	JobSchedule *OperateUsedJobSchedule `json:"job_schedule,omitempty"`
+	JobSchedule *OperateUsedJobScheduleModifyPub `json:"job_schedule,omitempty"`
 
 	// 是否选择所有数据表。
 	IsSelectAllTable *bool `json:"is_select_all_table,omitempty"`

@@ -20,6 +20,9 @@ type SubJob struct {
 	// 任务状态
 	Status *SubJobStatus `json:"status,omitempty"`
 
+	// 预计剩余执行时间，单位：s
+	ExpectedTimeSeconds *int32 `json:"expected_time_seconds,omitempty"`
+
 	// 创建时间
 	CreatedAt *sdktime.SdkTime `json:"created_at,omitempty"`
 
@@ -44,9 +47,10 @@ type SubJobJobType struct {
 }
 
 type SubJobJobTypeEnum struct {
-	PREPARE_RESOURCE SubJobJobType
-	UPGRADE_WORKER_1 SubJobJobType
-	UPGRADE_WORKER_2 SubJobJobType
+	PREPARE_RESOURCE  SubJobJobType
+	UPGRADE_WORKER_1  SubJobJobType
+	UPGRADE_WORKER_2  SubJobJobType
+	MIGRATE_NETWORK_1 SubJobJobType
 }
 
 func GetSubJobJobTypeEnum() SubJobJobTypeEnum {
@@ -59,6 +63,9 @@ func GetSubJobJobTypeEnum() SubJobJobTypeEnum {
 		},
 		UPGRADE_WORKER_2: SubJobJobType{
 			value: "upgrade_worker_2",
+		},
+		MIGRATE_NETWORK_1: SubJobJobType{
+			value: "migrate_network_1",
 		},
 	}
 }

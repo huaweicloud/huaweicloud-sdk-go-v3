@@ -8,8 +8,8 @@ import (
 
 type CreateConsumerGroupOrBatchDeleteConsumerGroupReq struct {
 
-	// **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-	JobId *string `json:"job_id,omitempty"`
+	// **参数解释**： 需要删除的消费组名称列表。 **约束限制**： 当批量删除消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	Groups *[]string `json:"groups,omitempty"`
 
 	// **参数解释**： 消费组名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 当创建消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Name *string `json:"name,omitempty"`

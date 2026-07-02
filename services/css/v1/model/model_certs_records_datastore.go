@@ -19,10 +19,10 @@ type CertsRecordsDatastore struct {
 	FileLocation *string `json:"fileLocation,omitempty"`
 
 	// 证书记录文件名称。
-	FileName *bool `json:"fileName,omitempty"`
+	FileName *string `json:"fileName,omitempty"`
 
 	// 证书记录更新时间。
-	UpdateAt *bool `json:"updateAt,omitempty"`
+	UpdateAt *string `json:"updateAt,omitempty"`
 }
 
 func (o CertsRecordsDatastore) String() string {

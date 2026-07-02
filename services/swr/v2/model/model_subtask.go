@@ -12,7 +12,7 @@ type Subtask struct {
 	Id int32 `json:"id"`
 
 	// 内部任务ID
-	JobId string `json:"job_id"`
+	JobId int32 `json:"job_id"`
 
 	// 命名空间名
 	Namespace string `json:"namespace"`

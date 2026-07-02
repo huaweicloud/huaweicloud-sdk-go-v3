@@ -36,6 +36,12 @@ type ProductEntityProperties struct {
 	// **参数解释**： 单个rcu最大TPS。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	MaxTpsPerRcu *string `json:"max_tps_per_rcu,omitempty"`
 
+	// **参数解释**： 单个broker最大TPS。 **约束限制**： 不涉及。
+	MaxTpsPerBroker *string `json:"max_tps_per_broker,omitempty"`
+
+	// **参数解释**： 每次增加或减少的代理数量。 **约束限制**： 不涉及。
+	StepLength *string `json:"step_length,omitempty"`
+
 	// **参数解释**： 消息引擎版本。  **约束限制**： 不涉及。  **取值范围**： [- 4.8.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- 5.x](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) **默认取值**： 不涉及。
 	EngineVersions *string `json:"engine_versions,omitempty"`
 

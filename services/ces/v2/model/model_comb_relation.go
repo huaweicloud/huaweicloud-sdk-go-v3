@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// CombRelation **参数解释** 组合匹配参数。 **约束限制** 不涉及。
+// CombRelation **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)组合匹配参数。 **约束限制** 不涉及。
 type CombRelation struct {
 
 	// **参数解释** 逻辑运算符。 **约束限制** 不涉及。 **取值范围** - ALL: 所有条件匹配成功。 - ANY: 任意条件匹配成功。 **默认取值** 不涉及。

@@ -26,10 +26,7 @@ type CollectPublicationMonitorResponse struct {
 
 	// 等待传送到分发数据库的事务数。
 	ReplicatedTransactions *int32 `json:"replicated_transactions,omitempty"`
-
-	// 平均每秒传送到分发数据库的事务数。
-	ReplicationRateTrans float32 `json:"replication_rate_trans,omitempty"`
-	HttpStatusCode       int     `json:"-"`
+	HttpStatusCode         int    `json:"-"`
 }
 
 func (o CollectPublicationMonitorResponse) String() string {

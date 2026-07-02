@@ -16,8 +16,8 @@ type ListDataArtsStudioInstancesResponse struct {
 	Count *int32 `json:"count,omitempty"`
 
 	// 返回实例列表
-	CommodityOrderLists *[]ApigCommodityOrder `json:"commodity_order_lists,omitempty"`
-	HttpStatusCode      int                   `json:"-"`
+	CommodityOrders *[]ApigCommodityOrder `json:"commodity_orders,omitempty"`
+	HttpStatusCode  int                   `json:"-"`
 }
 
 func (o ListDataArtsStudioInstancesResponse) String() string {

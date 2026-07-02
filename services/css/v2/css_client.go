@@ -126,7 +126,7 @@ func (c *CssClient) StopAutoCreateSnapshotsInvoker(request *model.StopAutoCreate
 	return &StopAutoCreateSnapshotsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteLogstashConf 删除配置文件
+// DeleteLogstashConf 删除配置文件V2
 //
 // 删除配置文件。
 //
@@ -141,13 +141,13 @@ func (c *CssClient) DeleteLogstashConf(request *model.DeleteLogstashConfRequest)
 	}
 }
 
-// DeleteLogstashConfInvoker 删除配置文件
+// DeleteLogstashConfInvoker 删除配置文件V2
 func (c *CssClient) DeleteLogstashConfInvoker(request *model.DeleteLogstashConfRequest) *DeleteLogstashConfInvoker {
 	requestDef := GenReqDefForDeleteLogstashConf()
 	return &DeleteLogstashConfInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteLogstashTemplate 删除自定义模板
+// DeleteLogstashTemplate 删除自定义模板V2
 //
 // 此接口用于删除自定义模板。
 //
@@ -162,7 +162,7 @@ func (c *CssClient) DeleteLogstashTemplate(request *model.DeleteLogstashTemplate
 	}
 }
 
-// DeleteLogstashTemplateInvoker 删除自定义模板
+// DeleteLogstashTemplateInvoker 删除自定义模板V2
 func (c *CssClient) DeleteLogstashTemplateInvoker(request *model.DeleteLogstashTemplateRequest) *DeleteLogstashTemplateInvoker {
 	requestDef := GenReqDefForDeleteLogstashTemplate()
 	return &DeleteLogstashTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

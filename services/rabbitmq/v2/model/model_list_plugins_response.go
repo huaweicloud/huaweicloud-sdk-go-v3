@@ -9,6 +9,9 @@ import (
 // ListPluginsResponse Response Object
 type ListPluginsResponse struct {
 
+	// 插件是否在变更中。
+	PluginsModifying *bool `json:"plugins_modifying,omitempty"`
+
 	// 插件信息列表。
 	Plugins        *[]PluginEntity `json:"plugins,omitempty"`
 	HttpStatusCode int             `json:"-"`

@@ -8,7 +8,10 @@ import (
 
 // SetOffSiteBackupPolicyResponse Response Object
 type SetOffSiteBackupPolicyResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 响应结果
+	Resp           *string `json:"resp,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o SetOffSiteBackupPolicyResponse) String() string {

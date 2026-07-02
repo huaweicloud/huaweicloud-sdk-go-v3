@@ -27,7 +27,7 @@ type Statistic struct {
 	Rows *int64 `json:"rows,omitempty"`
 
 	// 是否可以执行sql限流
-	CanUse *float64 `json:"canUse,omitempty"`
+	CanUse *bool `json:"canUse,omitempty"`
 }
 
 func (o Statistic) String() string {

@@ -6,19 +6,19 @@ import (
 	"strings"
 )
 
-// StartVpecpResponse Response Object
-type StartVpecpResponse struct {
+// StartVpcepResponse Response Object
+type StartVpcepResponse struct {
 
 	// 操作行为。固定为：createVpcepservice，表示已开启终端节点。
 	Action         *string `json:"action,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 
-func (o StartVpecpResponse) String() string {
+func (o StartVpcepResponse) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "StartVpecpResponse struct{}"
+		return "StartVpcepResponse struct{}"
 	}
 
-	return strings.Join([]string{"StartVpecpResponse", string(data)}, " ")
+	return strings.Join([]string{"StartVpcepResponse", string(data)}, " ")
 }

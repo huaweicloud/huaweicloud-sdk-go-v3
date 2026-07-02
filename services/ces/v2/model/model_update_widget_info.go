@@ -30,7 +30,7 @@ type UpdateWidgetInfo struct {
 	// **参数解释** 阈值是否展示 **约束限制** 不涉及 **取值范围** - true 展示 - false 不展示 **默认取值** 不涉及
 	ThresholdEnabled *bool `json:"threshold_enabled,omitempty"`
 
-	// **参数解释** 监控视图图表类型 **约束限制** 不涉及 **取值范围** 枚举值： - bar 条形图 - line 折线图 - bar_chart 柱状图 - table 表格 - circular_bar 环形柱状图 - area_chart 面积图 **默认取值** 不涉及
+	// **参数解释** 监控视图图表类型 **约束限制** 不涉及 **取值范围** 枚举值： - bar 条形图 - line 折线图 - bar_chart 柱状图 - table 表格 - circular_bar 环形柱状图 - area_chart 面积图 - gauge 仪表盘 - stat 数字 **默认取值** 不涉及
 	View *UpdateWidgetInfoView `json:"view,omitempty"`
 
 	// **参数解释** 指标展示类型 **约束限制** 不涉及 **取值范围** 枚举值： - single 单指标展示 - multiple 多指标展示 **默认取值** 不涉及
@@ -64,6 +64,8 @@ type UpdateWidgetInfoViewEnum struct {
 	TABLE        UpdateWidgetInfoView
 	CIRCULAR_BAR UpdateWidgetInfoView
 	AREA_CHART   UpdateWidgetInfoView
+	GAUGE        UpdateWidgetInfoView
+	STAT         UpdateWidgetInfoView
 }
 
 func GetUpdateWidgetInfoViewEnum() UpdateWidgetInfoViewEnum {
@@ -85,6 +87,12 @@ func GetUpdateWidgetInfoViewEnum() UpdateWidgetInfoViewEnum {
 		},
 		AREA_CHART: UpdateWidgetInfoView{
 			value: "area_chart",
+		},
+		GAUGE: UpdateWidgetInfoView{
+			value: "gauge",
+		},
+		STAT: UpdateWidgetInfoView{
+			value: "stat",
 		},
 	}
 }

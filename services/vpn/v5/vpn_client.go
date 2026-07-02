@@ -838,6 +838,69 @@ func (c *VpnClient) DeleteVpnConnectionInvoker(request *model.DeleteVpnConnectio
 	return &DeleteVpnConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExportVpnConnectionPeerConfiguration 导出VPN连接配置
+//
+// 根据连接ID、设备厂商、型号、版本，导出指定VPN连接对应的配置文件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) ExportVpnConnectionPeerConfiguration(request *model.ExportVpnConnectionPeerConfigurationRequest) (*model.ExportVpnConnectionPeerConfigurationResponse, error) {
+	requestDef := GenReqDefForExportVpnConnectionPeerConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportVpnConnectionPeerConfigurationResponse), nil
+	}
+}
+
+// ExportVpnConnectionPeerConfigurationInvoker 导出VPN连接配置
+func (c *VpnClient) ExportVpnConnectionPeerConfigurationInvoker(request *model.ExportVpnConnectionPeerConfigurationRequest) *ExportVpnConnectionPeerConfigurationInvoker {
+	requestDef := GenReqDefForExportVpnConnectionPeerConfiguration()
+	return &ExportVpnConnectionPeerConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListConnectionIpsecSa 查询VPN连接网段协商信息
+//
+// 根据连接ID，查询指定的VPN连接网段协商信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) ListConnectionIpsecSa(request *model.ListConnectionIpsecSaRequest) (*model.ListConnectionIpsecSaResponse, error) {
+	requestDef := GenReqDefForListConnectionIpsecSa()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListConnectionIpsecSaResponse), nil
+	}
+}
+
+// ListConnectionIpsecSaInvoker 查询VPN连接网段协商信息
+func (c *VpnClient) ListConnectionIpsecSaInvoker(request *model.ListConnectionIpsecSaRequest) *ListConnectionIpsecSaInvoker {
+	requestDef := GenReqDefForListConnectionIpsecSa()
+	return &ListConnectionIpsecSaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPeerConfigurationSupportedDevices 获取可导出VPN连接配置的设备
+//
+// 获取可导出VPN连接配置的设备厂商、型号、版本
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) ListPeerConfigurationSupportedDevices(request *model.ListPeerConfigurationSupportedDevicesRequest) (*model.ListPeerConfigurationSupportedDevicesResponse, error) {
+	requestDef := GenReqDefForListPeerConfigurationSupportedDevices()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPeerConfigurationSupportedDevicesResponse), nil
+	}
+}
+
+// ListPeerConfigurationSupportedDevicesInvoker 获取可导出VPN连接配置的设备
+func (c *VpnClient) ListPeerConfigurationSupportedDevicesInvoker(request *model.ListPeerConfigurationSupportedDevicesRequest) *ListPeerConfigurationSupportedDevicesInvoker {
+	requestDef := GenReqDefForListPeerConfigurationSupportedDevices()
+	return &ListPeerConfigurationSupportedDevicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListVpnConnections 查询VPN连接列表
 //
 // 查询VPN连接列表
@@ -1276,6 +1339,27 @@ func (c *VpnClient) CreateVgwCertificate(request *model.CreateVgwCertificateRequ
 func (c *VpnClient) CreateVgwCertificateInvoker(request *model.CreateVgwCertificateRequest) *CreateVgwCertificateInvoker {
 	requestDef := GenReqDefForCreateVgwCertificate()
 	return &CreateVgwCertificateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVpnGatewayCertificates 查询租户下的的所有VPN网关证书
+//
+// 查询租户下的所有VPN网关证书
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpnClient) ListVpnGatewayCertificates(request *model.ListVpnGatewayCertificatesRequest) (*model.ListVpnGatewayCertificatesResponse, error) {
+	requestDef := GenReqDefForListVpnGatewayCertificates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVpnGatewayCertificatesResponse), nil
+	}
+}
+
+// ListVpnGatewayCertificatesInvoker 查询租户下的的所有VPN网关证书
+func (c *VpnClient) ListVpnGatewayCertificatesInvoker(request *model.ListVpnGatewayCertificatesRequest) *ListVpnGatewayCertificatesInvoker {
+	requestDef := GenReqDefForListVpnGatewayCertificates()
+	return &ListVpnGatewayCertificatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowVpnGatewayCertificate 查询VPN网关证书

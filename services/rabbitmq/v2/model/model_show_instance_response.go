@@ -169,8 +169,14 @@ type ShowInstanceResponse struct {
 	ServiceType *string `json:"service_type,omitempty"`
 
 	// **参数解释**： 存储类型。 **取值范围**： hec：存储类型。
-	StorageType    *string `json:"storage_type,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	StorageType *string `json:"storage_type,omitempty"`
+
+	// **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启 - false：不开启
+	DiskEncrypted *bool `json:"disk_encrypted,omitempty"`
+
+	// **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
+	DiskEncryptedKey *string `json:"disk_encrypted_key,omitempty"`
+	HttpStatusCode   int     `json:"-"`
 }
 
 func (o ShowInstanceResponse) String() string {

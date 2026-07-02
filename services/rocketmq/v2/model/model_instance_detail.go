@@ -128,6 +128,9 @@ type InstanceDetail struct {
 	// **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启。 - false：不开启。
 	DiskEncrypted *bool `json:"disk_encrypted,omitempty"`
 
+	// **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
+	DiskEncryptedKey *string `json:"disk_encrypted_key,omitempty"`
+
 	// **参数解释**： 云监控版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	CesVersion *string `json:"ces_version,omitempty"`
 
@@ -155,8 +158,14 @@ type InstanceDetail struct {
 	// **参数解释**： 业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	BrokerAddress *string `json:"broker_address,omitempty"`
 
+	// **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	Ipv6BrokerAddress *string `json:"ipv6_broker_address,omitempty"`
+
 	// **参数解释**： 公网元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	PublicNamesrvAddress *string `json:"public_namesrv_address,omitempty"`
+
+	// **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	Ipv6NamesrvAddress *string `json:"ipv6_namesrv_address,omitempty"`
 
 	// **参数解释**： 公网元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	PublicNamesrvDomainName *string `json:"public_namesrv_domain_name,omitempty"`

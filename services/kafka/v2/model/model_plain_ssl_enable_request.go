@@ -13,10 +13,10 @@ import (
 type PlainSslEnableRequest struct {
 
 	// 需要开启或者关闭的接入方式。
-	Protocol *PlainSslEnableRequestProtocol `json:"protocol,omitempty"`
+	Protocol PlainSslEnableRequestProtocol `json:"protocol"`
 
 	// - true：开启指定的接入方式。 - false：关闭指定的接入方式。
-	Enable *bool `json:"enable,omitempty"`
+	Enable bool `json:"enable"`
 
 	// 首次开启SASL时，需要输入用户名。 实例创建后，关闭SASL并不会删除已经创建的用户，再次开启SASL时无需传入用户名，传入的用户名将无效。
 	UserName *string `json:"user_name,omitempty"`

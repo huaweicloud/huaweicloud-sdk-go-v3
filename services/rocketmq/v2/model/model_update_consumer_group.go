@@ -22,6 +22,12 @@ type UpdateConsumerGroup struct {
 
 	// **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
 	RetryMaxTime int32 `json:"retry_max_time"`
+
+	// **参数解释**： 是否按顺序消费。 **约束限制**： 仅RocketMQ实例5.x版本需要填写此参数。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+	ConsumeOrderly *bool `json:"consume_orderly,omitempty"`
+
+	// **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 0~200。 **默认取值**： 不涉及。
+	GroupDesc *string `json:"group_desc,omitempty"`
 }
 
 func (o UpdateConsumerGroup) String() string {

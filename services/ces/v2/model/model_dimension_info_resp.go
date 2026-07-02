@@ -12,10 +12,10 @@ import (
 // DimensionInfoResp **参数解释** 维度信息列表。
 type DimensionInfoResp struct {
 
-	// **参数解释**： 维度名称。 **取值范围**： 多维度用逗号分隔，各服务资源的维度名称，请参阅具体云服务的文档。您可以直接从[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/en-us/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)页面导航至相应文档。。必须以字母开头，只能包含0-9/a-z/A-Z/_/-，多维度用\",\"分隔，每个维度的最大长度为32。总长度为[1,131]个字符。目前最大支持4个维度。举例：单维度场景：instance_id；多维度场景：instance_id,disk
+	// **参数解释**： 维度名称。 **取值范围**： 多维度用逗号分隔，各服务资源的维度名称，请参阅具体云服务的文档。您可以直接从[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)页面导航至相应文档。必须以字母开头，只能包含0-9/a-z/A-Z/_/-，多维度用\",\"分隔，每个维度的最大长度为32。总长度为[1,131]个字符。目前最大支持4个维度。举例：单维度场景：instance_id；多维度场景：instance_id,disk
 	Name *string `json:"name,omitempty"`
 
-	// **参数解释**： 资源类型。 **取值范围**： - all_instances: 全部资源 - specific_instances: 指定资源
+	// **参数解释**： 资源类型。 **取值范围**： - all_instances: 全部资源 - specific_instances: 指定资源 - resource_groups:资源分组
 	FilterType *DimensionInfoRespFilterType `json:"filter_type,omitempty"`
 
 	// **参数解释**： 维度值列表。
@@ -38,6 +38,7 @@ type DimensionInfoRespFilterType struct {
 type DimensionInfoRespFilterTypeEnum struct {
 	ALL_INSTANCES      DimensionInfoRespFilterType
 	SPECIFIC_INSTANCES DimensionInfoRespFilterType
+	RESOURCE_GROUPS    DimensionInfoRespFilterType
 }
 
 func GetDimensionInfoRespFilterTypeEnum() DimensionInfoRespFilterTypeEnum {
@@ -47,6 +48,9 @@ func GetDimensionInfoRespFilterTypeEnum() DimensionInfoRespFilterTypeEnum {
 		},
 		SPECIFIC_INSTANCES: DimensionInfoRespFilterType{
 			value: "specific_instances",
+		},
+		RESOURCE_GROUPS: DimensionInfoRespFilterType{
+			value: "resource_groups",
 		},
 	}
 }

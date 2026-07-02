@@ -16,11 +16,11 @@ type CreatePublicationsRequestBody struct {
 	PublicationDatabase string `json:"publication_database"`
 
 	// 是否立即创建快照。
-	IsCreateSnapshotImmediately string `json:"is_create_snapshot_immediately"`
+	IsCreateSnapshotImmediately bool `json:"is_create_snapshot_immediately"`
 
 	SubscriptionOptions *SubscriptionOption `json:"subscription_options,omitempty"`
 
-	JobSchedule *OperateUsedJobSchedule `json:"job_schedule"`
+	JobSchedule *OperateUsedJobScheduleCreate `json:"job_schedule"`
 
 	// 是否选择所有数据表。
 	IsSelectAllTable *bool `json:"is_select_all_table,omitempty"`

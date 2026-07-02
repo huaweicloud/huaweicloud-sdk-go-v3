@@ -6,18 +6,18 @@ import (
 	"strings"
 )
 
-// StopVpecpRequest Request Object
-type StopVpecpRequest struct {
+// StopVpcepRequest Request Object
+type StopVpcepRequest struct {
 
 	// 指定待关闭终端节点的集群ID。
 	ClusterId string `json:"cluster_id"`
 }
 
-func (o StopVpecpRequest) String() string {
+func (o StopVpcepRequest) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "StopVpecpRequest struct{}"
+		return "StopVpcepRequest struct{}"
 	}
 
-	return strings.Join([]string{"StopVpecpRequest", string(data)}, " ")
+	return strings.Join([]string{"StopVpcepRequest", string(data)}, " ")
 }

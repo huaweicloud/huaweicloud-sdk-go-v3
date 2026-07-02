@@ -9,7 +9,7 @@ import (
 // ShowEventDataResponse Response Object
 type ShowEventDataResponse struct {
 
-	// 配置信息列表。如果不存在对应的配置信息，则datapoints为空数组[]。
+	// **参数解释**： 配置信息列表 **取值范围**： 不涉及
 	Datapoints     *[]EventDataInfo `json:"datapoints,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

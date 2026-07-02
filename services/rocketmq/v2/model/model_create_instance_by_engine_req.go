@@ -54,6 +54,12 @@ type CreateInstanceByEngineReq struct {
 	// **参数解释**： 是否支持IPv6。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **约束限制**： 不涉及。 **取值范围**： - true：支持 - false：不支持 **默认取值**： false。
 	Ipv6Enable *bool `json:"ipv6_enable,omitempty"`
 
+	// **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	Ipv6BrokerAddress *string `json:"ipv6_broker_address,omitempty"`
+
+	// **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	Ipv6NamesrvAddress *string `json:"ipv6_namesrv_address,omitempty"`
+
 	// **参数解释**： 是否开启Proxy功能。 **约束限制**： 不涉及。 **取值范围**： - true：支持 - false：不支持 **默认取值**： false。
 	ProxyEnable *bool `json:"proxy_enable,omitempty"`
 

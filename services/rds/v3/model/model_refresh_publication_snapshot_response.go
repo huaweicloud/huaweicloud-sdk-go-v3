@@ -8,7 +8,10 @@ import (
 
 // RefreshPublicationSnapshotResponse Response Object
 type RefreshPublicationSnapshotResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 响应结果
+	Resp           *string `json:"resp,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RefreshPublicationSnapshotResponse) String() string {

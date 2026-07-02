@@ -1272,25 +1272,25 @@ func (c *CssClient) StartTargetClusterConnectivityTestInvoker(request *model.Sta
 	return &StartTargetClusterConnectivityTestInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// StartVpecp 开启终端节点服务
+// StartVpcep 开启终端节点服务
 //
 // 该接口用于开启终端节点服务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CssClient) StartVpecp(request *model.StartVpecpRequest) (*model.StartVpecpResponse, error) {
-	requestDef := GenReqDefForStartVpecp()
+func (c *CssClient) StartVpcep(request *model.StartVpcepRequest) (*model.StartVpcepResponse, error) {
+	requestDef := GenReqDefForStartVpcep()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.StartVpecpResponse), nil
+		return resp.(*model.StartVpcepResponse), nil
 	}
 }
 
-// StartVpecpInvoker 开启终端节点服务
-func (c *CssClient) StartVpecpInvoker(request *model.StartVpecpRequest) *StartVpecpInvoker {
-	requestDef := GenReqDefForStartVpecp()
-	return &StartVpecpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// StartVpcepInvoker 开启终端节点服务
+func (c *CssClient) StartVpcepInvoker(request *model.StartVpcepRequest) *StartVpcepInvoker {
+	requestDef := GenReqDefForStartVpcep()
+	return &StartVpcepInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // StopLogAutoBackupPolicy 关闭日志自动备份策略
@@ -1377,25 +1377,25 @@ func (c *CssClient) StopSnapshotInvoker(request *model.StopSnapshotRequest) *Sto
 	return &StopSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// StopVpecp 关闭终端节点服务
+// StopVpcep 关闭终端节点服务
 //
 // 该接口用于关闭终端节点服务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *CssClient) StopVpecp(request *model.StopVpecpRequest) (*model.StopVpecpResponse, error) {
-	requestDef := GenReqDefForStopVpecp()
+func (c *CssClient) StopVpcep(request *model.StopVpcepRequest) (*model.StopVpcepResponse, error) {
+	requestDef := GenReqDefForStopVpcep()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.StopVpecpResponse), nil
+		return resp.(*model.StopVpcepResponse), nil
 	}
 }
 
-// StopVpecpInvoker 关闭终端节点服务
-func (c *CssClient) StopVpecpInvoker(request *model.StopVpecpRequest) *StopVpecpInvoker {
-	requestDef := GenReqDefForStopVpecp()
-	return &StopVpecpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// StopVpcepInvoker 关闭终端节点服务
+func (c *CssClient) StopVpcepInvoker(request *model.StopVpcepRequest) *StopVpcepInvoker {
+	requestDef := GenReqDefForStopVpcep()
+	return &StopVpcepInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateAiOpsSetting 更新智能运维定时检测设置
@@ -2076,27 +2076,6 @@ func (c *CssClient) DeleteConf(request *model.DeleteConfRequest) (*model.DeleteC
 func (c *CssClient) DeleteConfInvoker(request *model.DeleteConfRequest) *DeleteConfInvoker {
 	requestDef := GenReqDefForDeleteConf()
 	return &DeleteConfInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteConfig 删除配置文件V2
-//
-// 删除配置文件。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CssClient) DeleteConfig(request *model.DeleteConfigRequest) (*model.DeleteConfigResponse, error) {
-	requestDef := GenReqDefForDeleteConfig()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteConfigResponse), nil
-	}
-}
-
-// DeleteConfigInvoker 删除配置文件V2
-func (c *CssClient) DeleteConfigInvoker(request *model.DeleteConfigRequest) *DeleteConfigInvoker {
-	requestDef := GenReqDefForDeleteConfig()
-	return &DeleteConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteTemplate 删除自定义模板

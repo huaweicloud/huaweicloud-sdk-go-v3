@@ -17,9 +17,6 @@ type LoadBalancer struct {
 	// 是否独享型负载均衡器。
 	Guaranteed *string `json:"guaranteed,omitempty"`
 
-	// 资源账单信息。
-	BillingInfo *string `json:"billing_info,omitempty"`
-
 	// 描述信息。
 	Description *string `json:"description,omitempty"`
 

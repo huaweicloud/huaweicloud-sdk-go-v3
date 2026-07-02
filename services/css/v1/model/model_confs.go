@@ -24,6 +24,9 @@ type Confs struct {
 
 	// **参数解释**： 配置文件描述。 **取值范围**： 长度不超过128个字符。
 	Desc *string `json:"desc,omitempty"`
+
+	// 是否隐藏敏感词
+	SensitiveWordsShielding *bool `json:"sensitiveWordsShielding,omitempty"`
 }
 
 func (o Confs) String() string {

@@ -1133,11 +1133,11 @@ func GenReqDefForStartTargetClusterConnectivityTest() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForStartVpecp() *def.HttpRequestDef {
+func GenReqDefForStartVpcep() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1.0/{project_id}/clusters/{cluster_id}/vpcepservice/open").
-		WithResponse(new(model.StartVpecpResponse)).
+		WithResponse(new(model.StartVpcepResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1217,11 +1217,11 @@ func GenReqDefForStopSnapshot() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForStopVpecp() *def.HttpRequestDef {
+func GenReqDefForStopVpcep() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
 		WithPath("/v1.0/{project_id}/clusters/{cluster_id}/vpcepservice/close").
-		WithResponse(new(model.StopVpecpResponse)).
+		WithResponse(new(model.StopVpcepResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1892,26 +1892,6 @@ func GenReqDefForDeleteConf() *def.HttpRequestDef {
 		WithMethod(http.MethodDelete).
 		WithPath("/v1.0/{project_id}/clusters/{cluster_id}/lgsconf/delete").
 		WithResponse(new(model.DeleteConfResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ClusterId").
-		WithJsonTag("cluster_id").
-		WithLocationType(def.Path))
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
-func GenReqDefForDeleteConfig() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodDelete).
-		WithPath("/v2.0/{project_id}/clusters/{cluster_id}/lgsconf/delete").
-		WithResponse(new(model.DeleteConfigResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

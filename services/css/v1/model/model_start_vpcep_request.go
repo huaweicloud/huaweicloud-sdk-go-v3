@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// StartVpecpRequest Request Object
-type StartVpecpRequest struct {
+// StartVpcepRequest Request Object
+type StartVpcepRequest struct {
 
 	// 指定开启终端节点的集群ID。
 	ClusterId string `json:"cluster_id"`
@@ -15,11 +15,11 @@ type StartVpecpRequest struct {
 	Body *StartVpecpReq `json:"body,omitempty"`
 }
 
-func (o StartVpecpRequest) String() string {
+func (o StartVpcepRequest) String() string {
 	data, err := utils.Marshal(o)
 	if err != nil {
-		return "StartVpecpRequest struct{}"
+		return "StartVpcepRequest struct{}"
 	}
 
-	return strings.Join([]string{"StartVpecpRequest", string(data)}, " ")
+	return strings.Join([]string{"StartVpcepRequest", string(data)}, " ")
 }

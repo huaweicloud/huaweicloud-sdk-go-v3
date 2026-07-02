@@ -322,6 +322,9 @@ func (c *CesClient) ListEventsInvoker(request *model.ListEventsRequest) *ListEve
 //
 // 查询系统当前可监控指标列表，可以指定指标命名空间、指标名称、维度、排序方式，起始记录和最大记录条数过滤查询结果。
 //
+// 须知：
+// 云服务资源删除后，会保留3个小时的数据缓存，在3小时之内还能查到资源对应的监控指标，属于正常现象。
+//
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CesClient) ListMetrics(request *model.ListMetricsRequest) (*model.ListMetricsResponse, error) {
 	requestDef := GenReqDefForListMetrics()

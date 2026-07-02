@@ -27,7 +27,7 @@ type BaseWidgetInfo struct {
 	// **参数解释** 阈值是否展示 **约束限制** 不涉及   **取值范围** - true:展示 - false:不展示 **默认取值** 不涉及
 	ThresholdEnabled bool `json:"threshold_enabled"`
 
-	// **参数解释** 监控视图图表类型 **约束限制** 不涉及   **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图 **默认取值** 不涉及
+	// **参数解释** 监控视图图表类型 **约束限制** 不涉及   **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图 - gauge:仪表盘 - stat:数字 **默认取值** 不涉及
 	View BaseWidgetInfoView `json:"view"`
 
 	// **参数解释** 指标展示类型 **约束限制** 不涉及   **取值范围** - single:单指标展示 - multiple:多指标展示 **默认取值** 不涉及
@@ -61,6 +61,8 @@ type BaseWidgetInfoViewEnum struct {
 	TABLE        BaseWidgetInfoView
 	CIRCULAR_BAR BaseWidgetInfoView
 	AREA_CHART   BaseWidgetInfoView
+	GAUGE        BaseWidgetInfoView
+	STAT         BaseWidgetInfoView
 }
 
 func GetBaseWidgetInfoViewEnum() BaseWidgetInfoViewEnum {
@@ -82,6 +84,12 @@ func GetBaseWidgetInfoViewEnum() BaseWidgetInfoViewEnum {
 		},
 		AREA_CHART: BaseWidgetInfoView{
 			value: "area_chart",
+		},
+		GAUGE: BaseWidgetInfoView{
+			value: "gauge",
+		},
+		STAT: BaseWidgetInfoView{
+			value: "stat",
 		},
 	}
 }
