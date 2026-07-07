@@ -1,7 +1,6 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
@@ -11,13 +10,13 @@ import (
 type ScheduledTaskV3 struct {
 
 	// **参数解释**：  任务创建时间。  **取值范围**： 不涉及。
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+	CreateTime *int64 `json:"create_time,omitempty"`
 
 	// **参数解释**：  数据库类型。  **取值范围**： 目前只支持gaussdb-mysql。
 	DatastoreType *string `json:"datastore_type,omitempty"`
 
 	// **参数解释**：  任务结束时间。  **取值范围**： 不涉及。
-	EndTime *sdktime.SdkTime `json:"end_time,omitempty"`
+	EndTime *int64 `json:"end_time,omitempty"`
 
 	// **参数解释**：  任务绑定的实例ID。  **取值范围**： 不涉及。
 	InstanceId *string `json:"instance_id,omitempty"`
@@ -38,7 +37,7 @@ type ScheduledTaskV3 struct {
 	ProxyName *string `json:"proxy_name,omitempty"`
 
 	// **参数解释**：  任务开始时间。  **取值范围**： 不涉及。
-	StartTime *sdktime.SdkTime `json:"start_time,omitempty"`
+	StartTime *int64 `json:"start_time,omitempty"`
 
 	// **参数解释**：  任务的目标端配置信息，以键值对形式存储。  **取值范围**： 不涉及。
 	TargetConfig map[string]string `json:"target_config,omitempty"`

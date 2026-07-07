@@ -1109,6 +1109,22 @@ func (i *LogoffBuiltInAccountInvoker) Invoke() (*model.LogoffBuiltInAccountRespo
 	}
 }
 
+type ParseDeadLockInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ParseDeadLockInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ParseDeadLockInvoker) Invoke() (*model.ParseDeadLockResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ParseDeadLockResponse), nil
+	}
+}
+
 type ParseSqlLimitRulesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1205,6 +1221,38 @@ func (i *SetThresholdForMetricInvoker) Invoke() (*model.SetThresholdForMetricRes
 	}
 }
 
+type ShowAnalysisSessionResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAnalysisSessionResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAnalysisSessionResultInvoker) Invoke() (*model.ShowAnalysisSessionResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAnalysisSessionResultResponse), nil
+	}
+}
+
+type ShowAnalysisSessionStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAnalysisSessionStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAnalysisSessionStatusInvoker) Invoke() (*model.ShowAnalysisSessionStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAnalysisSessionStatusResponse), nil
+	}
+}
+
 type ShowCredentialInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1250,6 +1298,38 @@ func (i *ShowDbUserInvoker) Invoke() (*model.ShowDbUserResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowDbUserResponse), nil
+	}
+}
+
+type ShowDeadLockAnalysisResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDeadLockAnalysisResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDeadLockAnalysisResultInvoker) Invoke() (*model.ShowDeadLockAnalysisResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDeadLockAnalysisResultResponse), nil
+	}
+}
+
+type ShowDeadLockTopologyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDeadLockTopologyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDeadLockTopologyInvoker) Invoke() (*model.ShowDeadLockTopologyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDeadLockTopologyResponse), nil
 	}
 }
 
@@ -1538,6 +1618,22 @@ func (i *ShowTuningInvoker) Invoke() (*model.ShowTuningResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowTuningResponse), nil
+	}
+}
+
+type StartAnalysisSessionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartAnalysisSessionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StartAnalysisSessionInvoker) Invoke() (*model.StartAnalysisSessionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartAnalysisSessionResponse), nil
 	}
 }
 

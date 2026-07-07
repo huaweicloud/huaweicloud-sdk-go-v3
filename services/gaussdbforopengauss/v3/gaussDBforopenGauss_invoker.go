@@ -117,6 +117,22 @@ func (i *BatchDeleteInstanceTagInvoker) Invoke() (*model.BatchDeleteInstanceTagR
 	}
 }
 
+type BatchExecuteEventsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchExecuteEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchExecuteEventsInvoker) Invoke() (*model.BatchExecuteEventsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchExecuteEventsResponse), nil
+	}
+}
+
 type BatchSetBackupPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1266,6 +1282,22 @@ func (i *ListEpsQuotasInvoker) Invoke() (*model.ListEpsQuotasResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListEpsQuotasResponse), nil
+	}
+}
+
+type ListEventsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListEventsInvoker) Invoke() (*model.ListEventsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEventsResponse), nil
 	}
 }
 

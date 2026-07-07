@@ -10,7 +10,7 @@ import (
 type BackupResourcePackageFlavor struct {
 
 	// **参数解释**：  备份资源包规格码。  **取值范围**：  不涉及。
-	SpceCode string `json:"spce_code"`
+	SpecCode string `json:"spec_code"`
 
 	// **参数解释**：  备份资源包规格。  **取值范围**：  不涉及。
 	Volume string `json:"volume"`

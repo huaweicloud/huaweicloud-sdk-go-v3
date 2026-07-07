@@ -1492,6 +1492,27 @@ func (c *DasClient) LogoffBuiltInAccountInvoker(request *model.LogoffBuiltInAcco
 	return &LogoffBuiltInAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ParseDeadLock 一键分析死锁日志
+//
+// 一键分析死锁日志
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ParseDeadLock(request *model.ParseDeadLockRequest) (*model.ParseDeadLockResponse, error) {
+	requestDef := GenReqDefForParseDeadLock()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ParseDeadLockResponse), nil
+	}
+}
+
+// ParseDeadLockInvoker 一键分析死锁日志
+func (c *DasClient) ParseDeadLockInvoker(request *model.ParseDeadLockRequest) *ParseDeadLockInvoker {
+	requestDef := GenReqDefForParseDeadLock()
+	return &ParseDeadLockInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ParseSqlLimitRules 根据原始SQL生成SQL限流关键字
 //
 // 根据原始SQL生成SQL限流关键字，目前支持MySQL、MariaDB、GaussDB(for MySQL)三种引擎。
@@ -1619,6 +1640,48 @@ func (c *DasClient) SetThresholdForMetricInvoker(request *model.SetThresholdForM
 	return &SetThresholdForMetricInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAnalysisSessionResult 查询会话分析结果
+//
+// 查询会话分析结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowAnalysisSessionResult(request *model.ShowAnalysisSessionResultRequest) (*model.ShowAnalysisSessionResultResponse, error) {
+	requestDef := GenReqDefForShowAnalysisSessionResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAnalysisSessionResultResponse), nil
+	}
+}
+
+// ShowAnalysisSessionResultInvoker 查询会话分析结果
+func (c *DasClient) ShowAnalysisSessionResultInvoker(request *model.ShowAnalysisSessionResultRequest) *ShowAnalysisSessionResultInvoker {
+	requestDef := GenReqDefForShowAnalysisSessionResult()
+	return &ShowAnalysisSessionResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAnalysisSessionStatus 查询会话分析状态
+//
+// 查询会话分析状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowAnalysisSessionStatus(request *model.ShowAnalysisSessionStatusRequest) (*model.ShowAnalysisSessionStatusResponse, error) {
+	requestDef := GenReqDefForShowAnalysisSessionStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAnalysisSessionStatusResponse), nil
+	}
+}
+
+// ShowAnalysisSessionStatusInvoker 查询会话分析状态
+func (c *DasClient) ShowAnalysisSessionStatusInvoker(request *model.ShowAnalysisSessionStatusRequest) *ShowAnalysisSessionStatusInvoker {
+	requestDef := GenReqDefForShowAnalysisSessionStatus()
+	return &ShowAnalysisSessionStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowCredential 查询AK/SK
 //
 // 查询AK/SK。用于判断是否已保存AK/SK
@@ -1681,6 +1744,48 @@ func (c *DasClient) ShowDbUser(request *model.ShowDbUserRequest) (*model.ShowDbU
 func (c *DasClient) ShowDbUserInvoker(request *model.ShowDbUserRequest) *ShowDbUserInvoker {
 	requestDef := GenReqDefForShowDbUser()
 	return &ShowDbUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDeadLockAnalysisResult 查询死锁日志分析结果
+//
+// 查询死锁日志分析结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowDeadLockAnalysisResult(request *model.ShowDeadLockAnalysisResultRequest) (*model.ShowDeadLockAnalysisResultResponse, error) {
+	requestDef := GenReqDefForShowDeadLockAnalysisResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDeadLockAnalysisResultResponse), nil
+	}
+}
+
+// ShowDeadLockAnalysisResultInvoker 查询死锁日志分析结果
+func (c *DasClient) ShowDeadLockAnalysisResultInvoker(request *model.ShowDeadLockAnalysisResultRequest) *ShowDeadLockAnalysisResultInvoker {
+	requestDef := GenReqDefForShowDeadLockAnalysisResult()
+	return &ShowDeadLockAnalysisResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDeadLockTopology 获取死锁拓扑图数据
+//
+// 获取死锁拓扑图数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowDeadLockTopology(request *model.ShowDeadLockTopologyRequest) (*model.ShowDeadLockTopologyResponse, error) {
+	requestDef := GenReqDefForShowDeadLockTopology()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDeadLockTopologyResponse), nil
+	}
+}
+
+// ShowDeadLockTopologyInvoker 获取死锁拓扑图数据
+func (c *DasClient) ShowDeadLockTopologyInvoker(request *model.ShowDeadLockTopologyRequest) *ShowDeadLockTopologyInvoker {
+	requestDef := GenReqDefForShowDeadLockTopology()
+	return &ShowDeadLockTopologyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowFullDeadLockList 获取全量死锁信息
@@ -2066,6 +2171,27 @@ func (c *DasClient) ShowTuning(request *model.ShowTuningRequest) (*model.ShowTun
 func (c *DasClient) ShowTuningInvoker(request *model.ShowTuningRequest) *ShowTuningInvoker {
 	requestDef := GenReqDefForShowTuning()
 	return &ShowTuningInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartAnalysisSession 开始会话分析
+//
+// 开始会话分析
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) StartAnalysisSession(request *model.StartAnalysisSessionRequest) (*model.StartAnalysisSessionResponse, error) {
+	requestDef := GenReqDefForStartAnalysisSession()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartAnalysisSessionResponse), nil
+	}
+}
+
+// StartAnalysisSessionInvoker 开始会话分析
+func (c *DasClient) StartAnalysisSessionInvoker(request *model.StartAnalysisSessionRequest) *StartAnalysisSessionInvoker {
+	requestDef := GenReqDefForStartAnalysisSession()
+	return &StartAnalysisSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SynchronizeInstances 同步实例列表

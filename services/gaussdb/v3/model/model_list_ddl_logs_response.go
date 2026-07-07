@@ -16,7 +16,7 @@ type ListDdlLogsResponse struct {
 	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// **参数解释**：  日志保留天数。  **取值范围**：  不涉及。
-	KeeyDays *int32 `json:"keey_days,omitempty"`
+	KeepDays *int32 `json:"keep_days,omitempty"`
 
 	// **参数解释**：  DDL日志下载开关状态。  **取值范围**：  - ON，开启。 - OFF，关闭。
 	SwitchStatus   *string `json:"switch_status,omitempty"`

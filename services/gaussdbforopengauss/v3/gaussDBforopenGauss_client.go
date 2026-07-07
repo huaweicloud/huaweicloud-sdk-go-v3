@@ -166,6 +166,27 @@ func (c *GaussDBforopenGaussClient) BatchDeleteInstanceTagInvoker(request *model
 	return &BatchDeleteInstanceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchExecuteEvents 操作EG事件中心通知事件
+//
+// 操作EG事件中心通知事件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) BatchExecuteEvents(request *model.BatchExecuteEventsRequest) (*model.BatchExecuteEventsResponse, error) {
+	requestDef := GenReqDefForBatchExecuteEvents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchExecuteEventsResponse), nil
+	}
+}
+
+// BatchExecuteEventsInvoker 操作EG事件中心通知事件
+func (c *GaussDBforopenGaussClient) BatchExecuteEventsInvoker(request *model.BatchExecuteEventsRequest) *BatchExecuteEventsInvoker {
+	requestDef := GenReqDefForBatchExecuteEvents()
+	return &BatchExecuteEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchSetBackupPolicy 批量设置自动备份策略
 //
 // 批量设置自动备份策略。
@@ -1676,6 +1697,27 @@ func (c *GaussDBforopenGaussClient) ListEpsQuotas(request *model.ListEpsQuotasRe
 func (c *GaussDBforopenGaussClient) ListEpsQuotasInvoker(request *model.ListEpsQuotasRequest) *ListEpsQuotasInvoker {
 	requestDef := GenReqDefForListEpsQuotas()
 	return &ListEpsQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEvents 查询事件列表
+//
+// 查询事件列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListEvents(request *model.ListEventsRequest) (*model.ListEventsResponse, error) {
+	requestDef := GenReqDefForListEvents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEventsResponse), nil
+	}
+}
+
+// ListEventsInvoker 查询事件列表
+func (c *GaussDBforopenGaussClient) ListEventsInvoker(request *model.ListEventsRequest) *ListEventsInvoker {
+	requestDef := GenReqDefForListEvents()
+	return &ListEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListFeatures 查询实例特性列表
