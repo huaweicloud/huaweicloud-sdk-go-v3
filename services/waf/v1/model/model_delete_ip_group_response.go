@@ -25,8 +25,11 @@ type DeleteIpGroupResponse struct {
 	Size *int32 `json:"size,omitempty"`
 
 	// ip地址组绑定的规则列表
-	Rules          *[]RuleInfo `json:"rules,omitempty"`
-	HttpStatusCode int         `json:"-"`
+	Rules *[]RuleInfo `json:"rules,omitempty"`
+
+	// 描述
+	Description    *string `json:"description,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteIpGroupResponse) String() string {

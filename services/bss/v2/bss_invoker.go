@@ -853,6 +853,22 @@ func (i *ListRenewRateOnPeriodInvoker) Invoke() (*model.ListRenewRateOnPeriodRes
 	}
 }
 
+type ListResourceSpecsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResourceSpecsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListResourceSpecsInvoker) Invoke() (*model.ListResourceSpecsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResourceSpecsResponse), nil
+	}
+}
+
 type ListResourceTypesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1282,6 +1298,38 @@ func (i *ShowMultiAccountTransferAmountInvoker) Invoke() (*model.ShowMultiAccoun
 		return nil, err
 	} else {
 		return result.(*model.ShowMultiAccountTransferAmountResponse), nil
+	}
+}
+
+type ShowRealNameAuthQrCodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRealNameAuthQrCodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRealNameAuthQrCodeInvoker) Invoke() (*model.ShowRealNameAuthQrCodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRealNameAuthQrCodeResponse), nil
+	}
+}
+
+type ShowRealNameAuthStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRealNameAuthStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRealNameAuthStatusInvoker) Invoke() (*model.ShowRealNameAuthStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRealNameAuthStatusResponse), nil
 	}
 }
 

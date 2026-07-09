@@ -485,6 +485,22 @@ func (i *ListRenewRateOnPeriodInvoker) Invoke() (*model.ListRenewRateOnPeriodRes
 	}
 }
 
+type ListResourceSpecsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResourceSpecsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListResourceSpecsInvoker) Invoke() (*model.ListResourceSpecsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResourceSpecsResponse), nil
+	}
+}
+
 type ListResourceTypesInvoker struct {
 	*invoker.BaseInvoker
 }

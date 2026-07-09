@@ -42,7 +42,7 @@ type DeleteIgnoreRuleResponse struct {
 	Advanced *IgnoreAdvanced `json:"advanced,omitempty"`
 
 	// 防护域名或防护网站
-	Domains        *[]string `json:"domains,omitempty"`
+	Domain         *[]string `json:"domain,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }
 

@@ -19,8 +19,17 @@ type DeleteAntitamperRuleResponse struct {
 	Url *string `json:"url,omitempty"`
 
 	// 创建规则的时间戳
-	Timestamp      *int64 `json:"timestamp,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	Timestamp *int64 `json:"timestamp,omitempty"`
+
+	// 防护域名
+	Hostname *string `json:"hostname,omitempty"`
+
+	// 规则状态
+	Status *string `json:"status,omitempty"`
+
+	// 规则描述
+	Description    *string `json:"description,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteAntitamperRuleResponse) String() string {

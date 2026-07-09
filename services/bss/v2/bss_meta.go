@@ -1479,6 +1479,26 @@ func GenReqDefForListRenewRateOnPeriod() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListResourceSpecs() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/products/resource-specs-query").
+		WithResponse(new(model.ListResourceSpecsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListResourceTypes() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -2185,6 +2205,28 @@ func GenReqDefForShowMultiAccountTransferAmount() *def.HttpRequestDef {
 		WithName("Limit").
 		WithJsonTag("limit").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowRealNameAuthQrCode() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/customers/real-name-auth-qrcode").
+		WithResponse(new(model.ShowRealNameAuthQrCodeResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowRealNameAuthStatus() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/customers/real-name-auth-status").
+		WithResponse(new(model.ShowRealNameAuthStatusResponse)).
+		WithContentType("application/json")
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

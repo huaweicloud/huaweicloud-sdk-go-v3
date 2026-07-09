@@ -211,6 +211,7 @@ func (c *CssClient) CreateBindPublicInvoker(request *model.CreateBindPublicReque
 	return &CreateBindPublicInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateCluster 创建集群
 //
 // 该接口用于创建集群。
@@ -226,6 +227,7 @@ func (c *CssClient) CreateCluster(request *model.CreateClusterRequest) (*model.C
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateClusterInvoker 创建集群
 func (c *CssClient) CreateClusterInvoker(request *model.CreateClusterRequest) *CreateClusterInvoker {
 	requestDef := GenReqDefForCreateCluster()
@@ -696,7 +698,8 @@ func (c *CssClient) ListRoutesInvoker(request *model.ListRoutesRequest) *ListRou
 	return &ListRoutesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListSmnTopics 获取智能运维告警可用的SMN主题
+// Deprecated: This function is deprecated and will be removed in the future versions.
+// ListSmnTopics 获取可用的SMN主题
 //
 // 该接口用于获取智能运维告警可用的SMN主题。
 //
@@ -711,7 +714,8 @@ func (c *CssClient) ListSmnTopics(request *model.ListSmnTopicsRequest) (*model.L
 	}
 }
 
-// ListSmnTopicsInvoker 获取智能运维告警可用的SMN主题
+// Deprecated: This function is deprecated and will be removed in the future versions.
+// ListSmnTopicsInvoker 获取可用的SMN主题
 func (c *CssClient) ListSmnTopicsInvoker(request *model.ListSmnTopicsRequest) *ListSmnTopicsInvoker {
 	requestDef := GenReqDefForListSmnTopics()
 	return &ListSmnTopicsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -801,6 +805,7 @@ func (c *CssClient) ResetPasswordInvoker(request *model.ResetPasswordRequest) *R
 	return &ResetPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // RestartCluster 重启集群
 //
 // 此接口用于重启集群，重启集群将导致业务中断。
@@ -816,6 +821,7 @@ func (c *CssClient) RestartCluster(request *model.RestartClusterRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // RestartClusterInvoker 重启集群
 func (c *CssClient) RestartClusterInvoker(request *model.RestartClusterRequest) *RestartClusterInvoker {
 	requestDef := GenReqDefForRestartCluster()
@@ -1158,7 +1164,8 @@ func (c *CssClient) ShowVpcepConnectionInvoker(request *model.ShowVpcepConnectio
 	return &ShowVpcepConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// StartAutoSetting 自动设置集群快照的基础配置（不推荐使用）
+// Deprecated: This function is deprecated and will be removed in the future versions.
+// StartAutoSetting 自动设置集群快照的基础配置
 //
 // 该接口用于自动设置集群快照的基础配置，包括配置OBS桶和IAM委托。
 //
@@ -1182,7 +1189,8 @@ func (c *CssClient) StartAutoSetting(request *model.StartAutoSettingRequest) (*m
 	}
 }
 
-// StartAutoSettingInvoker 自动设置集群快照的基础配置（不推荐使用）
+// Deprecated: This function is deprecated and will be removed in the future versions.
+// StartAutoSettingInvoker 自动设置集群快照的基础配置
 func (c *CssClient) StartAutoSettingInvoker(request *model.StartAutoSettingRequest) *StartAutoSettingInvoker {
 	requestDef := GenReqDefForStartAutoSetting()
 	return &StartAutoSettingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1503,6 +1511,7 @@ func (c *CssClient) UpdateEsListenerInvoker(request *model.UpdateEsListenerReque
 	return &UpdateEsListenerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateExtendCluster 扩容集群
 //
 // 该接口用于集群扩容实例（仅支持扩容elasticsearch实例）。只扩容普通节点，且只针对要扩容的集群实例不存在特殊节点（Master、Client、冷数据节点）的情况。
@@ -1520,6 +1529,7 @@ func (c *CssClient) UpdateExtendCluster(request *model.UpdateExtendClusterReques
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateExtendClusterInvoker 扩容集群
 func (c *CssClient) UpdateExtendClusterInvoker(request *model.UpdateExtendClusterRequest) *UpdateExtendClusterInvoker {
 	requestDef := GenReqDefForUpdateExtendCluster()
@@ -1547,6 +1557,7 @@ func (c *CssClient) UpdateExtendInstanceStorageInvoker(request *model.UpdateExte
 	return &UpdateExtendInstanceStorageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateFlavor 变更规格
 //
 // 该接口用于变更集群规格。只支持变更ess节点类型。
@@ -1562,6 +1573,7 @@ func (c *CssClient) UpdateFlavor(request *model.UpdateFlavorRequest) (*model.Upd
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateFlavorInvoker 变更规格
 func (c *CssClient) UpdateFlavorInvoker(request *model.UpdateFlavorRequest) *UpdateFlavorInvoker {
 	requestDef := GenReqDefForUpdateFlavor()

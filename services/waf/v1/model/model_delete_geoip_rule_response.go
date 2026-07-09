@@ -21,6 +21,9 @@ type DeleteGeoipRuleResponse struct {
 	// 地理位置封禁区域
 	Geoip *string `json:"geoip,omitempty"`
 
+	// 地理位置封禁区域
+	GeoTagList *[]string `json:"geoTagList,omitempty"`
+
 	// 防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
 	White *int32 `json:"white,omitempty"`
 

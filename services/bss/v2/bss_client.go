@@ -1266,6 +1266,27 @@ func (c *BssClient) ListRenewRateOnPeriodInvoker(request *model.ListRenewRateOnP
 	return &ListRenewRateOnPeriodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListResourceSpecs 查询云服务类型资源规格
+//
+// 功能描述：根据云服务类型、资源类型、区域等条件查询资源规格列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssClient) ListResourceSpecs(request *model.ListResourceSpecsRequest) (*model.ListResourceSpecsResponse, error) {
+	requestDef := GenReqDefForListResourceSpecs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourceSpecsResponse), nil
+	}
+}
+
+// ListResourceSpecsInvoker 查询云服务类型资源规格
+func (c *BssClient) ListResourceSpecsInvoker(request *model.ListResourceSpecsRequest) *ListResourceSpecsInvoker {
+	requestDef := GenReqDefForListResourceSpecs()
+	return &ListResourceSpecsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListResourceTypes 查询资源类型列表
 //
 // 伙伴在伙伴销售平台查询资源类型的列表。
@@ -1900,6 +1921,48 @@ func (c *BssClient) ShowMultiAccountTransferAmount(request *model.ShowMultiAccou
 func (c *BssClient) ShowMultiAccountTransferAmountInvoker(request *model.ShowMultiAccountTransferAmountRequest) *ShowMultiAccountTransferAmountInvoker {
 	requestDef := GenReqDefForShowMultiAccountTransferAmount()
 	return &ShowMultiAccountTransferAmountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRealNameAuthQrCode 获取人脸实名认证二维码
+//
+// 功能描述：客户在agent使用时获取人脸实名认证二维码地址，扫码完成实名认证
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssClient) ShowRealNameAuthQrCode(request *model.ShowRealNameAuthQrCodeRequest) (*model.ShowRealNameAuthQrCodeResponse, error) {
+	requestDef := GenReqDefForShowRealNameAuthQrCode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRealNameAuthQrCodeResponse), nil
+	}
+}
+
+// ShowRealNameAuthQrCodeInvoker 获取人脸实名认证二维码
+func (c *BssClient) ShowRealNameAuthQrCodeInvoker(request *model.ShowRealNameAuthQrCodeRequest) *ShowRealNameAuthQrCodeInvoker {
+	requestDef := GenReqDefForShowRealNameAuthQrCode()
+	return &ShowRealNameAuthQrCodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRealNameAuthStatus 查询实名认证状态
+//
+// 功能描述：客户在agent使用时查询自己的实名认证状态和类型
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssClient) ShowRealNameAuthStatus(request *model.ShowRealNameAuthStatusRequest) (*model.ShowRealNameAuthStatusResponse, error) {
+	requestDef := GenReqDefForShowRealNameAuthStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRealNameAuthStatusResponse), nil
+	}
+}
+
+// ShowRealNameAuthStatusInvoker 查询实名认证状态
+func (c *BssClient) ShowRealNameAuthStatusInvoker(request *model.ShowRealNameAuthStatusRequest) *ShowRealNameAuthStatusInvoker {
+	requestDef := GenReqDefForShowRealNameAuthStatus()
+	return &ShowRealNameAuthStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowRealnameAuthenticationReviewResult 查询实名认证审核结果

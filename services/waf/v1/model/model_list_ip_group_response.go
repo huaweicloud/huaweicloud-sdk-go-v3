@@ -16,7 +16,7 @@ type ListIpGroupResponse struct {
 	Items *[]IpGroupBody `json:"items,omitempty"`
 
 	// 该用户总的Ip地址组数量，包含本地与共享地址组
-	CloudTotal     *int32 `json:"cloudTotal,omitempty"`
+	CloudTotal     *int32 `json:"cloud_total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

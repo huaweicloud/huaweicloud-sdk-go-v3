@@ -34,7 +34,7 @@ type UpdateAlertNoticeConfigRequestBody struct {
 	NoticeClass string `json:"notice_class"`
 
 	// 提前通知天数，通知类型为证书到期通知需要填写该参数
-	NearlyExpiredTime *string `json:"nearly_expired_time,omitempty"`
+	NearlyExpiredTime *int64 `json:"nearly_expired_time,omitempty"`
 
 	// 是否是所有企业项目
 	IsAllEnterpriseProject *bool `json:"is_all_enterprise_project,omitempty"`

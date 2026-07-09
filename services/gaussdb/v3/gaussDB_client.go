@@ -1322,6 +1322,7 @@ func (c *GaussDBClient) ListGaussMySqlDedicatedResourcesInvoker(request *model.L
 	return &ListGaussMySqlDedicatedResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListGaussMySqlInstanceDetailInfo 批量查询实例详情
 //
 // 批量查询实例详情。
@@ -1337,6 +1338,7 @@ func (c *GaussDBClient) ListGaussMySqlInstanceDetailInfo(request *model.ListGaus
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListGaussMySqlInstanceDetailInfoInvoker 批量查询实例详情
 func (c *GaussDBClient) ListGaussMySqlInstanceDetailInfoInvoker(request *model.ListGaussMySqlInstanceDetailInfoRequest) *ListGaussMySqlInstanceDetailInfoInvoker {
 	requestDef := GenReqDefForListGaussMySqlInstanceDetailInfo()
@@ -1364,6 +1366,7 @@ func (c *GaussDBClient) ListGaussMySqlInstanceDetailInfoUnifyStatusInvoker(reque
 	return &ListGaussMySqlInstanceDetailInfoUnifyStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListGaussMySqlInstances 查询实例列表
 //
 // 根据指定条件查询实例列表。
@@ -1379,6 +1382,7 @@ func (c *GaussDBClient) ListGaussMySqlInstances(request *model.ListGaussMySqlIns
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListGaussMySqlInstancesInvoker 查询实例列表
 func (c *GaussDBClient) ListGaussMySqlInstancesInvoker(request *model.ListGaussMySqlInstancesRequest) *ListGaussMySqlInstancesInvoker {
 	requestDef := GenReqDefForListGaussMySqlInstances()
@@ -2477,6 +2481,7 @@ func (c *GaussDBClient) ShowGaussMySqlIncrementalBackupListInvoker(request *mode
 	return &ShowGaussMySqlIncrementalBackupListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowGaussMySqlInstanceInfo 查询实例详情信息
 //
 // 查询实例详情信息。
@@ -2492,6 +2497,7 @@ func (c *GaussDBClient) ShowGaussMySqlInstanceInfo(request *model.ShowGaussMySql
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowGaussMySqlInstanceInfoInvoker 查询实例详情信息
 func (c *GaussDBClient) ShowGaussMySqlInstanceInfoInvoker(request *model.ShowGaussMySqlInstanceInfoRequest) *ShowGaussMySqlInstanceInfoInvoker {
 	requestDef := GenReqDefForShowGaussMySqlInstanceInfo()

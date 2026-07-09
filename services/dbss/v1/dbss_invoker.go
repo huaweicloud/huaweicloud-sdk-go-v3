@@ -57,6 +57,22 @@ func (i *AddAuditDatabaseNewInvoker) Invoke() (*model.AddAuditDatabaseNewRespons
 	}
 }
 
+type AddDatabaseSslKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddDatabaseSslKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddDatabaseSslKeyInvoker) Invoke() (*model.AddDatabaseSslKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddDatabaseSslKeyResponse), nil
+	}
+}
+
 type AddRdsDatabaseInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -931,6 +947,22 @@ func (i *ListAuditInstancesInvoker) Invoke() (*model.ListAuditInstancesResponse,
 	}
 }
 
+type ListAuditInstancesLastInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAuditInstancesLastInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAuditInstancesLastInvoker) Invoke() (*model.ListAuditInstancesLastResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAuditInstancesLastResponse), nil
+	}
+}
+
 type ListAuditInstancesNewInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1244,6 +1276,22 @@ func (i *ListDbEncryptInstancesInvoker) Invoke() (*model.ListDbEncryptInstancesR
 		return nil, err
 	} else {
 		return result.(*model.ListDbEncryptInstancesResponse), nil
+	}
+}
+
+type ListDomainAllResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDomainAllResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDomainAllResourceInvoker) Invoke() (*model.ListDomainAllResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDomainAllResourceResponse), nil
 	}
 }
 
@@ -1851,6 +1899,22 @@ func (i *ShowBackupRiskBucketPathInvoker) Invoke() (*model.ShowBackupRiskBucketP
 	}
 }
 
+type ShowDomainAllResourceCountInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDomainAllResourceCountInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDomainAllResourceCountInvoker) Invoke() (*model.ShowDomainAllResourceCountResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDomainAllResourceCountResponse), nil
+	}
+}
+
 type ShowInstanceMonitorInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1880,6 +1944,22 @@ func (i *ShowInstanceQuotaInvoker) Invoke() (*model.ShowInstanceQuotaResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceQuotaResponse), nil
+	}
+}
+
+type ShowLogRetentionCommonSettingsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLogRetentionCommonSettingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowLogRetentionCommonSettingsInvoker) Invoke() (*model.ShowLogRetentionCommonSettingsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLogRetentionCommonSettingsResponse), nil
 	}
 }
 
@@ -2358,6 +2438,22 @@ func (i *UpdateDbOmInstanceNameInvoker) Invoke() (*model.UpdateDbOmInstanceNameR
 		return nil, err
 	} else {
 		return result.(*model.UpdateDbOmInstanceNameResponse), nil
+	}
+}
+
+type UpdateLogRetentionCommonSettingsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateLogRetentionCommonSettingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateLogRetentionCommonSettingsInvoker) Invoke() (*model.UpdateLogRetentionCommonSettingsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateLogRetentionCommonSettingsResponse), nil
 	}
 }
 

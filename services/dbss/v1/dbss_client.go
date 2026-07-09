@@ -86,6 +86,27 @@ func (c *DbssClient) AddAuditDatabaseNewInvoker(request *model.AddAuditDatabaseN
 	return &AddAuditDatabaseNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddDatabaseSslKey 上传/更新数据库私钥
+//
+// 上传/更新数据库私钥
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DbssClient) AddDatabaseSslKey(request *model.AddDatabaseSslKeyRequest) (*model.AddDatabaseSslKeyResponse, error) {
+	requestDef := GenReqDefForAddDatabaseSslKey()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddDatabaseSslKeyResponse), nil
+	}
+}
+
+// AddDatabaseSslKeyInvoker 上传/更新数据库私钥
+func (c *DbssClient) AddDatabaseSslKeyInvoker(request *model.AddDatabaseSslKeyRequest) *AddDatabaseSslKeyInvoker {
+	requestDef := GenReqDefForAddDatabaseSslKey()
+	return &AddDatabaseSslKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // Deprecated: This function is deprecated and will be removed in the future versions.
 // AddRdsDatabase 添加RDS数据库[待下线]
 //
@@ -1225,7 +1246,28 @@ func (c *DbssClient) ListAuditInstancesInvoker(request *model.ListAuditInstances
 	return &ListAuditInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAuditInstancesNew 查询审计实例列表
+// ListAuditInstancesLast 查询审计实例列表
+//
+// 查询审计实例列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DbssClient) ListAuditInstancesLast(request *model.ListAuditInstancesLastRequest) (*model.ListAuditInstancesLastResponse, error) {
+	requestDef := GenReqDefForListAuditInstancesLast()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAuditInstancesLastResponse), nil
+	}
+}
+
+// ListAuditInstancesLastInvoker 查询审计实例列表
+func (c *DbssClient) ListAuditInstancesLastInvoker(request *model.ListAuditInstancesLastRequest) *ListAuditInstancesLastInvoker {
+	requestDef := GenReqDefForListAuditInstancesLast()
+	return &ListAuditInstancesLastInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAuditInstancesNew 查询审计实例列表[待下线]
 //
 // 查询审计实例列表
 //
@@ -1240,7 +1282,7 @@ func (c *DbssClient) ListAuditInstancesNew(request *model.ListAuditInstancesNewR
 	}
 }
 
-// ListAuditInstancesNewInvoker 查询审计实例列表
+// ListAuditInstancesNewInvoker 查询审计实例列表[待下线]
 func (c *DbssClient) ListAuditInstancesNewInvoker(request *model.ListAuditInstancesNewRequest) *ListAuditInstancesNewInvoker {
 	requestDef := GenReqDefForListAuditInstancesNew()
 	return &ListAuditInstancesNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1634,6 +1676,27 @@ func (c *DbssClient) ListDbEncryptInstances(request *model.ListDbEncryptInstance
 func (c *DbssClient) ListDbEncryptInstancesInvoker(request *model.ListDbEncryptInstancesRequest) *ListDbEncryptInstancesInvoker {
 	requestDef := GenReqDefForListDbEncryptInstances()
 	return &ListDbEncryptInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDomainAllResource 云脑链接器获取资源列表
+//
+// 云脑链接器获取资源列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DbssClient) ListDomainAllResource(request *model.ListDomainAllResourceRequest) (*model.ListDomainAllResourceResponse, error) {
+	requestDef := GenReqDefForListDomainAllResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDomainAllResourceResponse), nil
+	}
+}
+
+// ListDomainAllResourceInvoker 云脑链接器获取资源列表
+func (c *DbssClient) ListDomainAllResourceInvoker(request *model.ListDomainAllResourceRequest) *ListDomainAllResourceInvoker {
+	requestDef := GenReqDefForListDomainAllResource()
+	return &ListDomainAllResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -2425,6 +2488,27 @@ func (c *DbssClient) ShowBackupRiskBucketPathInvoker(request *model.ShowBackupRi
 	return &ShowBackupRiskBucketPathInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDomainAllResourceCount 云脑链接器获取资源总量
+//
+// 云脑链接器获取资源总量
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DbssClient) ShowDomainAllResourceCount(request *model.ShowDomainAllResourceCountRequest) (*model.ShowDomainAllResourceCountResponse, error) {
+	requestDef := GenReqDefForShowDomainAllResourceCount()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDomainAllResourceCountResponse), nil
+	}
+}
+
+// ShowDomainAllResourceCountInvoker 云脑链接器获取资源总量
+func (c *DbssClient) ShowDomainAllResourceCountInvoker(request *model.ShowDomainAllResourceCountRequest) *ShowDomainAllResourceCountInvoker {
+	requestDef := GenReqDefForShowDomainAllResourceCount()
+	return &ShowDomainAllResourceCountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowInstanceMonitorInfo 获取实例监控数据
 //
 // 获取实例监控数据
@@ -2465,6 +2549,27 @@ func (c *DbssClient) ShowInstanceQuota(request *model.ShowInstanceQuotaRequest) 
 func (c *DbssClient) ShowInstanceQuotaInvoker(request *model.ShowInstanceQuotaRequest) *ShowInstanceQuotaInvoker {
 	requestDef := GenReqDefForShowInstanceQuota()
 	return &ShowInstanceQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLogRetentionCommonSettings 获取审计实例日志保存时间配置
+//
+// 获取审计实例日志保存时间配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DbssClient) ShowLogRetentionCommonSettings(request *model.ShowLogRetentionCommonSettingsRequest) (*model.ShowLogRetentionCommonSettingsResponse, error) {
+	requestDef := GenReqDefForShowLogRetentionCommonSettings()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLogRetentionCommonSettingsResponse), nil
+	}
+}
+
+// ShowLogRetentionCommonSettingsInvoker 获取审计实例日志保存时间配置
+func (c *DbssClient) ShowLogRetentionCommonSettingsInvoker(request *model.ShowLogRetentionCommonSettingsRequest) *ShowLogRetentionCommonSettingsInvoker {
+	requestDef := GenReqDefForShowLogRetentionCommonSettings()
+	return &ShowLogRetentionCommonSettingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSensitiveMaskSwitch 获取隐私数据脱敏开关
@@ -3088,6 +3193,27 @@ func (c *DbssClient) UpdateDbOmInstanceName(request *model.UpdateDbOmInstanceNam
 func (c *DbssClient) UpdateDbOmInstanceNameInvoker(request *model.UpdateDbOmInstanceNameRequest) *UpdateDbOmInstanceNameInvoker {
 	requestDef := GenReqDefForUpdateDbOmInstanceName()
 	return &UpdateDbOmInstanceNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateLogRetentionCommonSettings 设置审计实例日志保存时间配置
+//
+// 设置审计实例日志保存时间配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DbssClient) UpdateLogRetentionCommonSettings(request *model.UpdateLogRetentionCommonSettingsRequest) (*model.UpdateLogRetentionCommonSettingsResponse, error) {
+	requestDef := GenReqDefForUpdateLogRetentionCommonSettings()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateLogRetentionCommonSettingsResponse), nil
+	}
+}
+
+// UpdateLogRetentionCommonSettingsInvoker 设置审计实例日志保存时间配置
+func (c *DbssClient) UpdateLogRetentionCommonSettingsInvoker(request *model.UpdateLogRetentionCommonSettingsRequest) *UpdateLogRetentionCommonSettingsInvoker {
+	requestDef := GenReqDefForUpdateLogRetentionCommonSettings()
+	return &UpdateLogRetentionCommonSettingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateSensitiveMaskRule 修改编辑隐私数据脱敏规则

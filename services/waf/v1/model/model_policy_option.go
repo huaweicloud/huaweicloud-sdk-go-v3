@@ -39,6 +39,9 @@ type PolicyOption struct {
 	// 精准防护是否开启
 	Custom *bool `json:"custom,omitempty"`
 
+	// 精准防护（旧版）是否开启
+	Precise *bool `json:"precise,omitempty"`
+
 	// 黑白名单防护是否开启
 	Whiteblackip *bool `json:"whiteblackip,omitempty"`
 
@@ -62,6 +65,12 @@ type PolicyOption struct {
 
 	// modulex智能cc防护是否开启，该特性是公测特性，在公测期间，只支持仅记录模式。
 	ModulexEnabled *bool `json:"modulex_enabled,omitempty"`
+
+	// 攻击惩罚规则是否开启
+	FollowedAction *bool `json:"followed_action,omitempty"`
+
+	// 反爬虫规则是否开启
+	Anticrawler *bool `json:"anticrawler,omitempty"`
 }
 
 func (o PolicyOption) String() string {

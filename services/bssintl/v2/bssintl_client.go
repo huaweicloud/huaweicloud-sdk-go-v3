@@ -651,6 +651,27 @@ func (c *BssintlClient) ListRenewRateOnPeriodInvoker(request *model.ListRenewRat
 	return &ListRenewRateOnPeriodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListResourceSpecs 查询云服务类型资源规格
+//
+// 功能描述：根据云服务类型、资源类型、区域等条件查询资源规格列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssintlClient) ListResourceSpecs(request *model.ListResourceSpecsRequest) (*model.ListResourceSpecsResponse, error) {
+	requestDef := GenReqDefForListResourceSpecs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourceSpecsResponse), nil
+	}
+}
+
+// ListResourceSpecsInvoker 查询云服务类型资源规格
+func (c *BssintlClient) ListResourceSpecsInvoker(request *model.ListResourceSpecsRequest) *ListResourceSpecsInvoker {
+	requestDef := GenReqDefForListResourceSpecs()
+	return &ListResourceSpecsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListResourceTypes 查询资源类型列表
 //
 // 伙伴在伙伴销售平台查询资源类型的列表。

@@ -40,7 +40,7 @@ type DeleteAlertNoticeConfigResponse struct {
 	NoticeClass *string `json:"notice_class,omitempty"`
 
 	// 提前通知天数
-	NearlyExpiredTime *string `json:"nearly_expired_time,omitempty"`
+	NearlyExpiredTime *int64 `json:"nearly_expired_time,omitempty"`
 
 	// 是否是所有企业项目
 	IsAllEnterpriseProject *bool `json:"is_all_enterprise_project,omitempty"`

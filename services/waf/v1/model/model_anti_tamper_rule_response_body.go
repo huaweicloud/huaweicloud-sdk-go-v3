@@ -28,6 +28,9 @@ type AntiTamperRuleResponseBody struct {
 
 	// 防篡改的url
 	Url *string `json:"url,omitempty"`
+
+	// 策略名称
+	Policyname *string `json:"policyname,omitempty"`
 }
 
 func (o AntiTamperRuleResponseBody) String() string {

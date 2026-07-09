@@ -8,7 +8,9 @@ import (
 
 // ListSwitchConfigInfoResponse Response Object
 type ListSwitchConfigInfoResponse struct {
-	Properties     *interface{} `json:"properties,omitempty"`
+	SwitchInfo *SwitchInfo `json:"switch_info,omitempty"`
+
+	VersionInfo    *VersionInfo `json:"version_info,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }
 

@@ -31,7 +31,13 @@ type ShowWebProtectionRuleResponse struct {
 	Description *string `json:"description,omitempty"`
 
 	// **参数解释：** 规则上线时间，Web防护规则正式启用的时间（时间戳格式） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-	CreateTime     *int64 `json:"create_time,omitempty"`
+	CreateTime *int64 `json:"create_time,omitempty"`
+
+	// **参数解释：** 规则更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	UpdateTime *int64 `json:"update_time,omitempty"`
+
+	// **参数解释：** 新增规则的生效时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	EffectiveTime  *int64 `json:"effective_time,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

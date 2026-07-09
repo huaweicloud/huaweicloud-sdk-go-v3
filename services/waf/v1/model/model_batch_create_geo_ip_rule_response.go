@@ -34,8 +34,11 @@ type BatchCreateGeoIpRuleResponse struct {
 	Description *string `json:"description,omitempty"`
 
 	// 创建规则时间戳
-	Timestamp      *int64 `json:"timestamp,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	Timestamp *int64 `json:"timestamp,omitempty"`
+
+	// 地理位置
+	GeoTagList     *[]string `json:"geoTagList,omitempty"`
+	HttpStatusCode int       `json:"-"`
 }
 
 func (o BatchCreateGeoIpRuleResponse) String() string {

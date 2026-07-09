@@ -15,24 +15,15 @@ type DeleteCertificateResponse struct {
 	// 证书名
 	Name *string `json:"name,omitempty"`
 
-	// 证书文件，PEM编码
-	Content *string `json:"content,omitempty"`
-
-	// 证书私钥，PEM编码
-	Key *string `json:"key,omitempty"`
-
 	// 证书过期时间戳
 	ExpireTime *int64 `json:"expire_time,omitempty"`
-
-	// **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
-	ExpStatus *int32 `json:"exp_status,omitempty"`
 
 	// 证书上传时间戳
 	Timestamp *int64 `json:"timestamp,omitempty"`
 
-	// 证书关联的域名信息
-	BindHost       *[]BindHost `json:"bind_host,omitempty"`
-	HttpStatusCode int         `json:"-"`
+	// 证书类型
+	CertType       *string `json:"cert_type,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteCertificateResponse) String() string {

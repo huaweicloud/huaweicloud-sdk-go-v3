@@ -9,10 +9,10 @@ import (
 // ListAuditInstancesNewResponse Response Object
 type ListAuditInstancesNewResponse struct {
 
-	// 实例信息列表
-	Servers *[]AuditInstanceListBean `json:"servers,omitempty"`
+	// 实例列表
+	Instances *[]ResponseAuditV2 `json:"instances,omitempty"`
 
-	// 总数
+	// 总记录数
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

@@ -66,6 +66,30 @@ func GenReqDefForAddAuditDatabaseNew() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForAddDatabaseSslKey() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/audit/{instance_id}/databases/{db_id}/sslkey").
+		WithResponse(new(model.AddDatabaseSslKeyResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DbId").
+		WithJsonTag("db_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForAddRdsDatabase() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -1109,6 +1133,26 @@ func GenReqDefForListAuditInstances() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListAuditInstancesLast() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/audit/instances").
+		WithResponse(new(model.ListAuditInstancesLastResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListAuditInstancesNew() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -1486,6 +1530,39 @@ func GenReqDefForListDbEncryptInstances() *def.HttpRequestDef {
 		WithPath("/v2/{project_id}/db-encrypt/instances").
 		WithResponse(new(model.ListDbEncryptInstancesResponse)).
 		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListDomainAllResource() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/resource-manager/domains/{domain_id}/all-resources/{region_id}/{resource_type}").
+		WithResponse(new(model.ListDomainAllResourceResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DomainId").
+		WithJsonTag("domain_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceType").
+		WithJsonTag("resource_type").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RegionId").
+		WithJsonTag("region_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Marker").
+		WithJsonTag("marker").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -2155,6 +2232,30 @@ func GenReqDefForShowBackupRiskBucketPath() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowDomainAllResourceCount() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/resource-manager/domains/{domain_id}/all-resources/{region_id}/{resource_type}/count").
+		WithResponse(new(model.ShowDomainAllResourceCountResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DomainId").
+		WithJsonTag("domain_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceType").
+		WithJsonTag("resource_type").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RegionId").
+		WithJsonTag("region_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowInstanceMonitorInfo() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -2181,6 +2282,22 @@ func GenReqDefForShowInstanceQuota() *def.HttpRequestDef {
 		WithPath("/v1/{project_id}/instance/quota").
 		WithResponse(new(model.ShowInstanceQuotaResponse)).
 		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowLogRetentionCommonSettings() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/{project_id}/audit/{instance_id}/settings/common-settings").
+		WithResponse(new(model.ShowLogRetentionCommonSettingsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -2688,6 +2805,26 @@ func GenReqDefForUpdateDbOmInstanceName() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v1/{project_id}/db-om/{instance_id}/name").
 		WithResponse(new(model.UpdateDbOmInstanceNameResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateLogRetentionCommonSettings() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/{project_id}/audit/{instance_id}/settings/common-settings").
+		WithResponse(new(model.UpdateLogRetentionCommonSettingsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
