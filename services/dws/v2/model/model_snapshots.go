@@ -63,7 +63,7 @@ type Snapshots struct {
 	Progress *string `json:"progress,omitempty"`
 
 	// **参数解释**： 备份产生的Key。 **取值范围**： 不涉及。
-	BackupKey *SnapshotsBackupKey `json:"backup_key,omitempty"`
+	BackupKey *string `json:"backup_key,omitempty"`
 
 	// **参数解释**： 增量快照使用前一个快照的backup_key。当取值为FULL时表示这是一个全量快照。 **取值范围**： 不涉及。
 	PriorBackupKey *string `json:"prior_backup_key,omitempty"`
@@ -114,49 +114,6 @@ func (o Snapshots) String() string {
 	}
 
 	return strings.Join([]string{"Snapshots", string(data)}, " ")
-}
-
-type SnapshotsBackupKey struct {
-	value string
-}
-
-type SnapshotsBackupKeyEnum struct {
-	E_20160823_035923 SnapshotsBackupKey
-}
-
-func GetSnapshotsBackupKeyEnum() SnapshotsBackupKeyEnum {
-	return SnapshotsBackupKeyEnum{
-		E_20160823_035923: SnapshotsBackupKey{
-			value: "20160823_035923",
-		},
-	}
-}
-
-func (c SnapshotsBackupKey) Value() string {
-	return c.value
-}
-
-func (c SnapshotsBackupKey) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *SnapshotsBackupKey) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }
 
 type SnapshotsBackupLevel struct {

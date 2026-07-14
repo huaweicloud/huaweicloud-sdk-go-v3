@@ -24,7 +24,7 @@ type ClusterMetric struct {
 	// **参数解释**： 采集时间范围。 **取值范围**： 不涉及。
 	CollectRange *[]string `json:"collect_range,omitempty"`
 
-	// **参数解释**： 创建时间。 **取值范围**： 不涉及。
+	// **参数解释**： 创建时间。 **取值范围**： 毫秒时间戳格式的字符串。
 	CreateTime *string `json:"create_time,omitempty"`
 }
 

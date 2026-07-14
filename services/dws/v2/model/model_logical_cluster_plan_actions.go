@@ -21,7 +21,7 @@ type LogicalClusterPlanActions struct {
 	// **参数解释**： 类型。 **取值范围**： create：创建 delete：删除
 	Type *string `json:"type,omitempty"`
 
-	// **参数解释**： 周期信息。Cron表达式：如\"0 0 0 ? * 3\"。 **取值范围**： 不涉及。
+	// **参数解释**： 周期信息。Cron表达式：如\"0 0 0 ? * 3\"，或Unix毫秒时间戳。 **取值范围**： 不涉及。
 	Strategy *string `json:"strategy,omitempty"`
 
 	// **参数解释**： 任务状态。 **取值范围**： - running：运行中。 - waiting：等待中。 - deleted：已删除。 - finished：已完成。 - disabled：已禁用。 - failed：失败。

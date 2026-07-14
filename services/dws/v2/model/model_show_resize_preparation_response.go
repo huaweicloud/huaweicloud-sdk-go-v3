@@ -18,7 +18,7 @@ type ShowResizePreparationResponse struct {
 	// **参数解释**： 扩容准备进度。 **取值范围**： 不涉及
 	Progress *string `json:"progress,omitempty"`
 
-	// **参数解释**： 扩容准备的节点id; **取值范围**： 不涉及
+	// **参数解释**： 扩容准备的节点ID; **取值范围**： 不涉及
 	InstanceIds    *[]string `json:"instance_ids,omitempty"`
 	HttpStatusCode int       `json:"-"`
 }

@@ -36,10 +36,10 @@ type DatabaseUserInfoReq struct {
 	// **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
 	Replication *bool `json:"replication,omitempty"`
 
-	// **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+	// **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ss。 **取值范围**： 不涉及。
 	ValidBegin *string `json:"valid_begin,omitempty"`
 
-	// **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+	// **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ss。 **取值范围**： 不涉及。
 	ValidUntil *string `json:"valid_until,omitempty"`
 
 	// **参数解释**： 是否锁定。 **取值范围**： 不涉及。

@@ -24,10 +24,10 @@ type PlanStage struct {
 	// **参数解释**： 计划阶段名称。 **取值范围**： 不涉及。
 	StageName string `json:"stage_name"`
 
-	// **参数解释**： 计划开始时间。 **取值范围**： 不涉及。
+	// **参数解释**： 计划开始时间。 **取值范围**： 仅时间部分，如00:00:00。
 	StartTime *string `json:"start_time,omitempty"`
 
-	// **参数解释**： 计划结束时间。 **取值范围**： 不涉及。
+	// **参数解释**： 计划结束时间。 **取值范围**： 仅时间部分，如00:00:00。
 	EndTime *string `json:"end_time,omitempty"`
 
 	// **参数解释**： 下次校验时间。 **取值范围**： 不涉及。

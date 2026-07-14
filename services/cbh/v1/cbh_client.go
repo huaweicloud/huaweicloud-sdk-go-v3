@@ -134,6 +134,7 @@ func (c *CbhClient) InstallCbhEipInvoker(request *model.InstallCbhEipRequest) *I
 	return &InstallCbhEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListCbhInstance 获取CBH实例列表
 //
 // 获取当前租户下的云堡垒机实例列表。
@@ -149,6 +150,7 @@ func (c *CbhClient) ListCbhInstance(request *model.ListCbhInstanceRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListCbhInstanceInvoker 获取CBH实例列表
 func (c *CbhClient) ListCbhInstanceInvoker(request *model.ListCbhInstanceRequest) *ListCbhInstanceInvoker {
 	requestDef := GenReqDefForListCbhInstance()

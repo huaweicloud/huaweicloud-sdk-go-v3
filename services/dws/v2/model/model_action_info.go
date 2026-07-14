@@ -9,7 +9,7 @@ import (
 // ActionInfo **参数解释**： 逻辑集群操作信息。 **取值范围**： 不涉及。
 type ActionInfo struct {
 
-	// **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群
+	// **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群 Grow：扩容逻辑集群
 	ActionName *string `json:"action_name,omitempty"`
 
 	// **参数解释**： 操作进度，默认10。 **取值范围**： 0~100

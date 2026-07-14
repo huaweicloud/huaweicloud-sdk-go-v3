@@ -21,7 +21,7 @@ type EventSubRequest struct {
 	// **参数解释**： 事件类别。 **取值范围**： 支持management、monitor、security、system alarm。
 	Category *string `json:"category,omitempty"`
 
-	// **参数解释**： 事件级别。 **取值范围**： 支持normal、warning。
+	// **参数解释**： 事件级别。 **取值范围**： 支持normal、warning，可同时包含多值。
 	Severity *string `json:"severity,omitempty"`
 
 	// **参数解释**： 事件标签。 **取值范围**： 不涉及。

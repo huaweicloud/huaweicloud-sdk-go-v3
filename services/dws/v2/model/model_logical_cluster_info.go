@@ -46,6 +46,9 @@ type LogicalClusterInfo struct {
 
 	// **参数解释**： 逻辑集群类型。 **取值范围**： - createFromPlan：计划弹性。 - createFromElastic：自动弹性。
 	ClusterType *string `json:"cluster_type,omitempty"`
+
+	// **参数解释**： 逻辑集群包含的节点信息列表。 **取值范围**： 不涉及。
+	NodeList *[]NodeVo `json:"node_list,omitempty"`
 }
 
 func (o LogicalClusterInfo) String() string {

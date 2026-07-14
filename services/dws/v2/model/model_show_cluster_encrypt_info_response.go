@@ -24,7 +24,7 @@ type ShowClusterEncryptInfoResponse struct {
 	// **参数解释**： 最后做密钥轮转的时间。 **取值范围**： 不涉及。
 	LastRotateKeyTime *string `json:"last_rotate_key_time,omitempty"`
 
-	// **参数解释**： 加密方式。 **取值范围**： 不涉及。
+	// **参数解释**： 加密方式。 **取值范围**： generalCipher：scc国际加密算法 SMCompatible：scc国密算法 SMCompatibleL4：加密卡加密
 	CryptAlgorithm *string `json:"crypt_algorithm,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

@@ -68,7 +68,7 @@ type SnapshotDetail struct {
 	// **参数解释**： 对应全量快照backup_key。 **取值范围**： 不涉及。
 	BaseBackupKey *string `json:"base_backup_key,omitempty"`
 
-	// **参数解释**： 备份介质。 **取值范围**： NBU、OBS。
+	// **参数解释**： 备份介质。 **取值范围**： NBU、OBS、obs。
 	BackupDevice *string `json:"backup_device,omitempty"`
 
 	// **参数解释**： 累计快照大小。 **取值范围**： 不涉及。

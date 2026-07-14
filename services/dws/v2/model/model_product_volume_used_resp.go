@@ -9,7 +9,7 @@ import (
 // ProductVolumeUsedResp **参数解释**： 集群使用的规格信息。 **取值范围**： 不涉及。
 type ProductVolumeUsedResp struct {
 
-	// **参数解释**： 节点使用存储类型。 **取值范围**： HIGH：SAS盘； ULTRAHIGH：SSD云盘； COMMON：SATA盘； LOCAL_DISK：本地盘；
+	// **参数解释**： 节点使用存储类型。 **取值范围**： 不同接口中此字段返回格式可能有如下几种类型。 SAS、SSD、SATA、HIGH、ULTRAHIGH、COMMON、LOCAL_DISK
 	VolumeType *string `json:"volume_type,omitempty"`
 
 	// **参数解释**： 节点使用的磁盘数量信息。 **取值范围**： 不涉及。

@@ -428,7 +428,7 @@ func (c *DwsClient) CopySnapshotInvoker(request *model.CopySnapshotRequest) *Cop
 
 // CreateAlarmSub 创建告警订阅
 //
-// 创建告警订阅。
+// 创建订阅告警。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) CreateAlarmSub(request *model.CreateAlarmSubRequest) (*model.CreateAlarmSubResponse, error) {
@@ -2280,9 +2280,9 @@ func (c *DwsClient) ListLtsLogsInvoker(request *model.ListLtsLogsRequest) *ListL
 	return &ListLtsLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListMetrics 查询集群使用指标列表
+// ListMetrics 查询集群使用的指标列表
 //
-// 查询集群使用指标列表。
+// 查询集群使用的指标列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListMetrics(request *model.ListMetricsRequest) (*model.ListMetricsResponse, error) {
@@ -2295,7 +2295,7 @@ func (c *DwsClient) ListMetrics(request *model.ListMetricsRequest) (*model.ListM
 	}
 }
 
-// ListMetricsInvoker 查询集群使用指标列表
+// ListMetricsInvoker 查询集群使用的指标列表
 func (c *DwsClient) ListMetricsInvoker(request *model.ListMetricsRequest) *ListMetricsInvoker {
 	requestDef := GenReqDefForListMetrics()
 	return &ListMetricsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
