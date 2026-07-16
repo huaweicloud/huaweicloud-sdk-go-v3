@@ -1,0 +1,47 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// GroupModel **参数解释：** 模型存储挂载配置。 **约束限制：** 不涉及。
+type GroupModel struct {
+
+	// **参数解释：** 代码来源类别。 **约束限制：** 不涉及。 **取值范围：** 如下参数不区分大小写 - OBS：对象存储服务。 - OBSFS：OBS的文件系统接口。 - EFS：弹性文件服务。 - [TRAIN：训练作业。](tag:hws) - LOCAL：挂载宿主机本地存储目录。 **默认取值：** 不涉及。
+	Source string `json:"source"`
+
+	// **参数解释：** 代码来源地址，格式遵循不同存储系统。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+	Address *string `json:"address,omitempty"`
+
+	// **参数解释：** 挂载到容器内的路径，要求以/开头，后面可包含中划线，反斜杠，下划线，点号，字母，数字。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+	MountPath string `json:"mount_path"`
+
+	// **参数解释：** 是否支持模型本地缓存，默认是不支持。 **约束限制：** 不涉及。 **取值范围：** - true：支持。 - false：不支持。 **默认取值：** false。
+	HostCache *bool `json:"host_cache,omitempty"`
+
+	// **参数解释：** 当存储类别为EFS时，支持配置子目录。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+	EfsSubPath *string `json:"efs_sub_path,omitempty"`
+
+	// **参数解释：** 挂载权限设置，是否只读。 **约束限制：** 不涉及。 **取值范围：** - true：只读。 - false：非只读。 **默认取值：** 不涉及。
+	ReadOnly *bool `json:"read_only,omitempty"`
+
+	// **参数解释：** os预热。 **约束限制：** 不涉及。 **取值范围：** - true：预热。 - false：不预热。 **默认取值：** 不涉及。
+	OsWarmUp *bool `json:"os_warm_up,omitempty"`
+
+	// **参数解释：** 预热名称。 **约束限制：** os_warm_up为true时必填。 **取值范围：** 支持1-64位字符，可包含字母、中文、数字、中划线、下划线。 **默认取值：** 不涉及。
+	SourceName *string `json:"source_name,omitempty"`
+
+	// 参数解释： 预置资产id。 取值范围： 支持1-64位字符，可包含字母、中文、数字、中划线、下划线。
+	AssetId *string `json:"asset_id,omitempty"`
+}
+
+func (o GroupModel) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "GroupModel struct{}"
+	}
+
+	return strings.Join([]string{"GroupModel", string(data)}, " ")
+}

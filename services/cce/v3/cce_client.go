@@ -63,6 +63,27 @@ func (c *CceClient) AddNodesToNodePoolInvoker(request *model.AddNodesToNodePoolR
 	return &AddNodesToNodePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AssumeAgencyForPodIdentity 获取pod-identity关联相关委托凭据
+//
+// 该API用于通过ServiceAccount token来assume获取ServiceAccount所关联的pod-identity关联中绑定的IAM委托凭据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) AssumeAgencyForPodIdentity(request *model.AssumeAgencyForPodIdentityRequest) (*model.AssumeAgencyForPodIdentityResponse, error) {
+	requestDef := GenReqDefForAssumeAgencyForPodIdentity()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssumeAgencyForPodIdentityResponse), nil
+	}
+}
+
+// AssumeAgencyForPodIdentityInvoker 获取pod-identity关联相关委托凭据
+func (c *CceClient) AssumeAgencyForPodIdentityInvoker(request *model.AssumeAgencyForPodIdentityRequest) *AssumeAgencyForPodIdentityInvoker {
+	requestDef := GenReqDefForAssumeAgencyForPodIdentity()
+	return &AssumeAgencyForPodIdentityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AwakeCluster 集群唤醒
 //
 // 集群唤醒用于唤醒已休眠的集群，唤醒后，将继续收取控制节点资源费用。
@@ -82,6 +103,31 @@ func (c *CceClient) AwakeCluster(request *model.AwakeClusterRequest) (*model.Awa
 func (c *CceClient) AwakeClusterInvoker(request *model.AwakeClusterRequest) *AwakeClusterInvoker {
 	requestDef := GenReqDefForAwakeCluster()
 	return &AwakeClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchChangeNodeToPeriod 按需节点转包年/包月
+//
+// 该API用于将节点从按需计费模式转成包周期计费模式。
+// &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+// &gt;按需节点池中的节点转成包年/包月时，需要将集群升级到v1.19.16-r40、v1.21.11-r0、v1.23.9-r0、v1.25.4-r0以及其他更高版本的集群。
+// &gt;当按需节点池中的节点转成包年/包月后，该节点不支持弹性缩容。
+// &gt;按需计费节点绑定的资源（弹性公网IP）可能不支持同步变更计费模式，详情请参见[弹性云服务器ECS按需转包年/包月说明](https://support.huaweicloud.com/price-ecs/ecs_billing_5002.html)。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) BatchChangeNodeToPeriod(request *model.BatchChangeNodeToPeriodRequest) (*model.BatchChangeNodeToPeriodResponse, error) {
+	requestDef := GenReqDefForBatchChangeNodeToPeriod()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchChangeNodeToPeriodResponse), nil
+	}
+}
+
+// BatchChangeNodeToPeriodInvoker 按需节点转包年/包月
+func (c *CceClient) BatchChangeNodeToPeriodInvoker(request *model.BatchChangeNodeToPeriodRequest) *BatchChangeNodeToPeriodInvoker {
+	requestDef := GenReqDefForBatchChangeNodeToPeriod()
+	return &BatchChangeNodeToPeriodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchCreateAddonPrecheck 批量创建插件检查任务
@@ -399,6 +445,27 @@ func (c *CceClient) CreatePartitionInvoker(request *model.CreatePartitionRequest
 	return &CreatePartitionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePodIdentityAssociation 创建pod-identity关联
+//
+// 该API用于创建pod-identity关联，将容器集群serviceaccount与IAM委托绑定。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) CreatePodIdentityAssociation(request *model.CreatePodIdentityAssociationRequest) (*model.CreatePodIdentityAssociationResponse, error) {
+	requestDef := GenReqDefForCreatePodIdentityAssociation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePodIdentityAssociationResponse), nil
+	}
+}
+
+// CreatePodIdentityAssociationInvoker 创建pod-identity关联
+func (c *CceClient) CreatePodIdentityAssociationInvoker(request *model.CreatePodIdentityAssociationRequest) *CreatePodIdentityAssociationInvoker {
+	requestDef := GenReqDefForCreatePodIdentityAssociation()
+	return &CreatePodIdentityAssociationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePostCheck 集群升级后确认
 //
 // 集群升级后确认，该接口建议配合Console使用，主要用于升级步骤完成后，客户确认集群状态和业务正常后做反馈。
@@ -633,6 +700,27 @@ func (c *CceClient) DeleteNodePool(request *model.DeleteNodePoolRequest) (*model
 func (c *CceClient) DeleteNodePoolInvoker(request *model.DeleteNodePoolRequest) *DeleteNodePoolInvoker {
 	requestDef := GenReqDefForDeleteNodePool()
 	return &DeleteNodePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePodIdentityAssociation 删除pod-identity关联
+//
+// 该API用于删除指定的pod-identity关联。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) DeletePodIdentityAssociation(request *model.DeletePodIdentityAssociationRequest) (*model.DeletePodIdentityAssociationResponse, error) {
+	requestDef := GenReqDefForDeletePodIdentityAssociation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePodIdentityAssociationResponse), nil
+	}
+}
+
+// DeletePodIdentityAssociationInvoker 删除pod-identity关联
+func (c *CceClient) DeletePodIdentityAssociationInvoker(request *model.DeletePodIdentityAssociationRequest) *DeletePodIdentityAssociationInvoker {
+	requestDef := GenReqDefForDeletePodIdentityAssociation()
+	return &DeletePodIdentityAssociationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteRelease 删除指定模板实例
@@ -1164,6 +1252,27 @@ func (c *CceClient) ListPartitionsInvoker(request *model.ListPartitionsRequest) 
 	return &ListPartitionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPodIdentityAssociations 查询指定集群的pod-identity关联
+//
+// 该API用于获取集群下所有pod-identity关联。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ListPodIdentityAssociations(request *model.ListPodIdentityAssociationsRequest) (*model.ListPodIdentityAssociationsResponse, error) {
+	requestDef := GenReqDefForListPodIdentityAssociations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPodIdentityAssociationsResponse), nil
+	}
+}
+
+// ListPodIdentityAssociationsInvoker 查询指定集群的pod-identity关联
+func (c *CceClient) ListPodIdentityAssociationsInvoker(request *model.ListPodIdentityAssociationsRequest) *ListPodIdentityAssociationsInvoker {
+	requestDef := GenReqDefForListPodIdentityAssociations()
+	return &ListPodIdentityAssociationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListPreCheckTasks 获取集群升级前检查任务详情列表
 //
 // 获取集群升级前检查任务详情列表
@@ -1471,6 +1580,52 @@ func (c *CceClient) RollbackAddonInstance(request *model.RollbackAddonInstanceRe
 func (c *CceClient) RollbackAddonInstanceInvoker(request *model.RollbackAddonInstanceRequest) *RollbackAddonInstanceInvoker {
 	requestDef := GenReqDefForRollbackAddonInstance()
 	return &RollbackAddonInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RotateClusterCredentials 轮转用户的集群证书
+//
+// 该API用于轮转指定集群的证书
+//
+// &gt; 只支持1.19及以上集群版本
+// &gt; 操作完成后，用户集群组件的证书有效期会续期5年。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) RotateClusterCredentials(request *model.RotateClusterCredentialsRequest) (*model.RotateClusterCredentialsResponse, error) {
+	requestDef := GenReqDefForRotateClusterCredentials()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RotateClusterCredentialsResponse), nil
+	}
+}
+
+// RotateClusterCredentialsInvoker 轮转用户的集群证书
+func (c *CceClient) RotateClusterCredentialsInvoker(request *model.RotateClusterCredentialsRequest) *RotateClusterCredentialsInvoker {
+	requestDef := GenReqDefForRotateClusterCredentials()
+	return &RotateClusterCredentialsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RotateNodeCert 轮转节点证书
+//
+// 该API用于在指定集群下轮转节点证书。作为集群证书轮转操作的补偿机制：当通过配套的集群证书轮转接口执行轮转时，若部分节点证书轮转失败，可通过调用本接口进行重试。
+// &gt; 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) RotateNodeCert(request *model.RotateNodeCertRequest) (*model.RotateNodeCertResponse, error) {
+	requestDef := GenReqDefForRotateNodeCert()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RotateNodeCertResponse), nil
+	}
+}
+
+// RotateNodeCertInvoker 轮转节点证书
+func (c *CceClient) RotateNodeCertInvoker(request *model.RotateNodeCertRequest) *RotateNodeCertInvoker {
+	requestDef := GenReqDefForRotateNodeCert()
+	return &RotateNodeCertInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ScaleNodePool 伸缩节点池
@@ -1838,6 +1993,27 @@ func (c *CceClient) ShowPartition(request *model.ShowPartitionRequest) (*model.S
 func (c *CceClient) ShowPartitionInvoker(request *model.ShowPartitionRequest) *ShowPartitionInvoker {
 	requestDef := GenReqDefForShowPartition()
 	return &ShowPartitionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPodIdentityAssociation 查询指定pod-identity关联
+//
+// 该API用于查询指定pod-identity关联详情信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) ShowPodIdentityAssociation(request *model.ShowPodIdentityAssociationRequest) (*model.ShowPodIdentityAssociationResponse, error) {
+	requestDef := GenReqDefForShowPodIdentityAssociation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPodIdentityAssociationResponse), nil
+	}
+}
+
+// ShowPodIdentityAssociationInvoker 查询指定pod-identity关联
+func (c *CceClient) ShowPodIdentityAssociationInvoker(request *model.ShowPodIdentityAssociationRequest) *ShowPodIdentityAssociationInvoker {
+	requestDef := GenReqDefForShowPodIdentityAssociation()
+	return &ShowPodIdentityAssociationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowPreCheck 获取集群升级前检查任务详情
@@ -2290,6 +2466,27 @@ func (c *CceClient) UpdatePartition(request *model.UpdatePartitionRequest) (*mod
 func (c *CceClient) UpdatePartitionInvoker(request *model.UpdatePartitionRequest) *UpdatePartitionInvoker {
 	requestDef := GenReqDefForUpdatePartition()
 	return &UpdatePartitionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePodIdentityAssociation 更新pod-identity关联
+//
+// 该API用于更新指定pod-identity关联所绑定的IAM委托信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CceClient) UpdatePodIdentityAssociation(request *model.UpdatePodIdentityAssociationRequest) (*model.UpdatePodIdentityAssociationResponse, error) {
+	requestDef := GenReqDefForUpdatePodIdentityAssociation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePodIdentityAssociationResponse), nil
+	}
+}
+
+// UpdatePodIdentityAssociationInvoker 更新pod-identity关联
+func (c *CceClient) UpdatePodIdentityAssociationInvoker(request *model.UpdatePodIdentityAssociationRequest) *UpdatePodIdentityAssociationInvoker {
+	requestDef := GenReqDefForUpdatePodIdentityAssociation()
+	return &UpdatePodIdentityAssociationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateRelease 更新指定模板实例

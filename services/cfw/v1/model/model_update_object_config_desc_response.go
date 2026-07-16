@@ -10,8 +10,8 @@ import (
 type UpdateObjectConfigDescResponse struct {
 
 	// 成员id
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	Data           *string `json:"data,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateObjectConfigDescResponse) String() string {

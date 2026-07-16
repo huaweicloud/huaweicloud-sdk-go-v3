@@ -32,7 +32,7 @@ type CreateReportProfileDto struct {
 	Status *CreateReportProfileDtoStatus `json:"status,omitempty"`
 
 	// **参数解释**： 通知群组 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
-	TopicUrn string `json:"topic_urn"`
+	TopicUrn *string `json:"topic_urn,omitempty"`
 
 	// **参数解释**： 通知方式 **约束限制**： 不涉及 **取值范围**： 0 SMN通知方式 1 不需要通知 **默认取值**： 不涉及
 	SubscriptionType *CreateReportProfileDtoSubscriptionType `json:"subscription_type,omitempty"`

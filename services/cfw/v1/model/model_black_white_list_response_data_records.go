@@ -31,10 +31,10 @@ type BlackWhiteListResponseDataRecords struct {
 	Description *string `json:"description,omitempty"`
 
 	// |- **参数解释**： 黑白名单创建时间。 **取值范围**： 不涉及
-	CreatedDate *string `json:"created_date,omitempty"`
+	CreatedDate *int32 `json:"created_date,omitempty"`
 
 	// |- **参数解释**： 黑白名单修改时间。 **取值范围**： 不涉及
-	ModifiedDate *string `json:"modified_date,omitempty"`
+	ModifiedDate *int32 `json:"modified_date,omitempty"`
 }
 
 func (o BlackWhiteListResponseDataRecords) String() string {

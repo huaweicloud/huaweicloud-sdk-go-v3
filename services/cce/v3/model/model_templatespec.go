@@ -9,7 +9,7 @@ import (
 // Templatespec 插件模板详细信息
 type Templatespec struct {
 
-	// 模板类型（helm，static）
+	// **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
 	Type string `json:"type"`
 
 	// 是否为必安装插件

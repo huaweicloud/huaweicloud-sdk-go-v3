@@ -18,13 +18,13 @@ type ReleaseReqBodyParams struct {
 	// 安装时是否禁用hooks
 	NoHooks *bool `json:"no_hooks,omitempty"`
 
-	// 是否替换同名实例
+	// 模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效
 	Replace *bool `json:"replace,omitempty"`
 
-	// 是否重建实例
+	// 模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效
 	Recreate *bool `json:"recreate,omitempty"`
 
-	// 更新时是否重置values
+	// 模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效
 	ResetValues *bool `json:"reset_values,omitempty"`
 
 	// 回滚实例的版本

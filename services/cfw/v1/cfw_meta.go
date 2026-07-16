@@ -1779,10 +1779,6 @@ func GenReqDefForListDomains() *def.HttpRequestDef {
 		WithName("DomainName").
 		WithJsonTag("domain_name").
 		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ObjectId").
-		WithJsonTag("object_Id").
-		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

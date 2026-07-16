@@ -14,6 +14,9 @@ type MultiAccountRespData struct {
 
 	// **参数解释**： 防火墙名称 **取值范围**： 不涉及
 	Name *string `json:"name,omitempty"`
+
+	// **参数解释**： 云防火墙可信服务状态 **取值范围**： 1 已开启
+	TrustServiceStatus *int32 `json:"trust_service_status,omitempty"`
 }
 
 func (o MultiAccountRespData) String() string {

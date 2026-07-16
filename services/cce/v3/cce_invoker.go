@@ -37,6 +37,22 @@ func (i *AddNodesToNodePoolInvoker) Invoke() (*model.AddNodesToNodePoolResponse,
 	}
 }
 
+type AssumeAgencyForPodIdentityInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssumeAgencyForPodIdentityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AssumeAgencyForPodIdentityInvoker) Invoke() (*model.AssumeAgencyForPodIdentityResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssumeAgencyForPodIdentityResponse), nil
+	}
+}
+
 type AwakeClusterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,6 +66,22 @@ func (i *AwakeClusterInvoker) Invoke() (*model.AwakeClusterResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.AwakeClusterResponse), nil
+	}
+}
+
+type BatchChangeNodeToPeriodInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchChangeNodeToPeriodInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchChangeNodeToPeriodInvoker) Invoke() (*model.BatchChangeNodeToPeriodResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchChangeNodeToPeriodResponse), nil
 	}
 }
 
@@ -277,6 +309,22 @@ func (i *CreatePartitionInvoker) Invoke() (*model.CreatePartitionResponse, error
 	}
 }
 
+type CreatePodIdentityAssociationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePodIdentityAssociationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreatePodIdentityAssociationInvoker) Invoke() (*model.CreatePodIdentityAssociationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePodIdentityAssociationResponse), nil
+	}
+}
+
 type CreatePostCheckInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -450,6 +498,22 @@ func (i *DeleteNodePoolInvoker) Invoke() (*model.DeleteNodePoolResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.DeleteNodePoolResponse), nil
+	}
+}
+
+type DeletePodIdentityAssociationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePodIdentityAssociationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeletePodIdentityAssociationInvoker) Invoke() (*model.DeletePodIdentityAssociationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePodIdentityAssociationResponse), nil
 	}
 }
 
@@ -853,6 +917,22 @@ func (i *ListPartitionsInvoker) Invoke() (*model.ListPartitionsResponse, error) 
 	}
 }
 
+type ListPodIdentityAssociationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPodIdentityAssociationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPodIdentityAssociationsInvoker) Invoke() (*model.ListPodIdentityAssociationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPodIdentityAssociationsResponse), nil
+	}
+}
+
 type ListPreCheckTasksInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1074,6 +1154,38 @@ func (i *RollbackAddonInstanceInvoker) Invoke() (*model.RollbackAddonInstanceRes
 		return nil, err
 	} else {
 		return result.(*model.RollbackAddonInstanceResponse), nil
+	}
+}
+
+type RotateClusterCredentialsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RotateClusterCredentialsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RotateClusterCredentialsInvoker) Invoke() (*model.RotateClusterCredentialsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RotateClusterCredentialsResponse), nil
+	}
+}
+
+type RotateNodeCertInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RotateNodeCertInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RotateNodeCertInvoker) Invoke() (*model.RotateNodeCertResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RotateNodeCertResponse), nil
 	}
 }
 
@@ -1346,6 +1458,22 @@ func (i *ShowPartitionInvoker) Invoke() (*model.ShowPartitionResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowPartitionResponse), nil
+	}
+}
+
+type ShowPodIdentityAssociationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPodIdentityAssociationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPodIdentityAssociationInvoker) Invoke() (*model.ShowPodIdentityAssociationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPodIdentityAssociationResponse), nil
 	}
 }
 
@@ -1682,6 +1810,22 @@ func (i *UpdatePartitionInvoker) Invoke() (*model.UpdatePartitionResponse, error
 		return nil, err
 	} else {
 		return result.(*model.UpdatePartitionResponse), nil
+	}
+}
+
+type UpdatePodIdentityAssociationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePodIdentityAssociationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePodIdentityAssociationInvoker) Invoke() (*model.UpdatePodIdentityAssociationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePodIdentityAssociationResponse), nil
 	}
 }
 

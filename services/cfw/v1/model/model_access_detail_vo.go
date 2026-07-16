@@ -8,6 +8,12 @@ import (
 
 type AccessDetailVo struct {
 
+	// **参数解释**： 所有会话数 **取值范围**： 不涉及
+	AllSessionCount *int64 `json:"all_session_count,omitempty"`
+
+	// **参数解释**： 会话数 **取值范围**： 不涉及
+	SessionCount *int64 `json:"session_count,omitempty"`
+
 	// **参数解释**： 目的IP数量 **取值范围**： 不涉及
 	DstIpCount *int64 `json:"dst_ip_count,omitempty"`
 

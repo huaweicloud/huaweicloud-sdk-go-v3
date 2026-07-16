@@ -18,10 +18,10 @@ type IpRegionResponseBodyData struct {
 	DescriptionEn *string `json:"description_en,omitempty"`
 
 	// **参数解释**： 区域类型 **取值范围**： - 0：国家 - 1：省份 - 2：大洲
-	RegionType *string `json:"region_type,omitempty"`
+	RegionType *int32 `json:"region_type,omitempty"`
 
 	// **参数解释**： 上级区域ID **取值范围**： 不涉及
-	SuperiorRegionId *int32 `json:"superior_region_id,omitempty"`
+	SuperiorRegionId *string `json:"superior_region_id,omitempty"`
 }
 
 func (o IpRegionResponseBodyData) String() string {

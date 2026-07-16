@@ -16,7 +16,7 @@ type EniNetwork struct {
 	EniSubnetCIDR *string `json:"eniSubnetCIDR,omitempty"`
 
 	// IPv4子网ID列表
-	Subnets []NetworkSubnet `json:"subnets"`
+	Subnets *[]NetworkSubnet `json:"subnets,omitempty"`
 }
 
 func (o EniNetwork) String() string {

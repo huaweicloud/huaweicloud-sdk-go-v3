@@ -9,10 +9,10 @@ import (
 type AntiVirusSwitchDto struct {
 
 	// 参数解释： 反病毒开关状态，为必传参数 约束限制： 不涉及 取值范围： 0：开启 1：关闭 默认取值： 不涉及
-	AntiVirusStatus *int32 `json:"anti_virus_status,omitempty"`
+	AntiVirusStatus int32 `json:"anti_virus_status"`
 
 	// 防护对象ID，为必传参数
-	ObjectId *string `json:"object_id,omitempty"`
+	ObjectId string `json:"object_id"`
 }
 
 func (o AntiVirusSwitchDto) String() string {

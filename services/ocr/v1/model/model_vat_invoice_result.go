@@ -116,6 +116,12 @@ type VatInvoiceResult struct {
 	// 市。
 	City *string `json:"city,omitempty"`
 
+	// 总页码。
+	TotalPages *string `json:"total_pages,omitempty"`
+
+	// 当前页码。
+	CurrentPage *string `json:"current_page,omitempty"`
+
 	// 各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
 	Confidence *interface{} `json:"confidence,omitempty"`
 

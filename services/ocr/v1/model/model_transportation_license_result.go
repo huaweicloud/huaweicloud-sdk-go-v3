@@ -59,6 +59,9 @@ type TransportationLicenseResult struct {
 	// 道路运输证图片的base64编码结果。仅在return_adjusted_image设置为true时返回该字段。
 	AdjustedImage *string `json:"adjusted_image,omitempty"`
 
+	// 是否是待理证，取值范围包括： - true：是待理证 - false：非待理证
+	IsTemporaryCertificate *bool `json:"is_temporary_certificate,omitempty"`
+
 	// 相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
 	Confidence *interface{} `json:"confidence,omitempty"`
 }

@@ -8,6 +8,9 @@ import (
 
 type AccessTopVo struct {
 
+	// **参数解释**： 所有命中规则列表 **取值范围**： 不涉及
+	AllHitRuleList *[]AccessTopMemberVo `json:"all_hit_rule_list,omitempty"`
+
 	// **参数解释**： 阻断次数 **取值范围**： 不涉及
 	DenyCount *int64 `json:"deny_count,omitempty"`
 

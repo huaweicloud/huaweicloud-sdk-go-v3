@@ -12,13 +12,13 @@ import (
 type IpsRuleChangeDto struct {
 
 	// ips的id列表，Ips规则id，为必填参数，可通过[获取ips规则列表]( ListIpsRules.xml)查询获得，通过返回值中的data.records.ips_id（.表示各对象之间层级的区分）获得。
-	IpsIds *[]string `json:"ips_ids,omitempty"`
+	IpsIds []string `json:"ips_ids"`
 
 	// 防护对象id
-	ObjectId *string `json:"object_id,omitempty"`
+	ObjectId string `json:"object_id"`
 
 	// ips规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
-	Status *IpsRuleChangeDtoStatus `json:"status,omitempty"`
+	Status IpsRuleChangeDtoStatus `json:"status"`
 }
 
 func (o IpsRuleChangeDto) String() string {

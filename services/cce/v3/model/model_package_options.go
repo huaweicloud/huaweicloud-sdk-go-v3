@@ -27,7 +27,7 @@ type PackageOptions struct {
 	// **参数解释**： 参数分类 **取值范围**： 不涉及
 	Schema string `json:"schema"`
 
-	// **参数解释**： 参数类型 **取值范围**： 不涉及
+	// **参数解释**： 参数类型 **取值范围**： - str: 数据类型为字符串 - int: 数据类型为整型 - float: 数据类型为浮点型 - bool: 数据类型为布尔型
 	Type string `json:"type"`
 }
 

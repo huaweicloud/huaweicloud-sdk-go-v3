@@ -41,6 +41,9 @@ type ClusterStatus struct {
 
 	// 删除状态信息（仅删除请求响应包含）
 	DeleteStatus *interface{} `json:"deleteStatus,omitempty"`
+
+	// **参数解释**： 集群当前详细状态列表，详情参见Condition类型定义。 **约束限制**： 不涉及
+	Conditions *[]ClusterCondition `json:"conditions,omitempty"`
 }
 
 func (o ClusterStatus) String() string {

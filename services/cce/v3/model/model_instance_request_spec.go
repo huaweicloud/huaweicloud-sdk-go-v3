@@ -15,7 +15,7 @@ type InstanceRequestSpec struct {
 	// 集群id
 	ClusterID string `json:"clusterID"`
 
-	// 插件模板安装参数（各插件不同），升级插件时需要填写全量安装参数，未填写参数将使用插件模板中的默认值，当前插件安装参数可通过查询插件实例接口获取。
+	// 插件模板安装参数（各插件不同），升级插件时需要填写全量安装参数，未填写参数将使用插件模板中的默认值，当前插件安装参数可通过查询插件实例接口获取。[安装参数请参考[插件实例字段说明](https://support.huaweicloud.com/api-cce/cce_02_0366.html)。](tag:hws)[安装参数请参考[插件实例字段说明](https://support.huaweicloud.com/intl/zh-cn/api-cce/cce_02_0366.html)。](tag:hws_hk)
 	Values map[string]interface{} `json:"values"`
 
 	// 待安装插件模板名称，如coredns

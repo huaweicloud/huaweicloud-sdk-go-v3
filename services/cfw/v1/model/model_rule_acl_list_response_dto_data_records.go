@@ -33,7 +33,7 @@ type RuleAclListResponseDtoDataRecords struct {
 	// **参数解释**： 规则动作类型，用于区分规则对流量的动作 **取值范围**： 0表示允许通行（permit），1表示拒绝通行（deny）
 	ActionType *int32 `json:"action_type,omitempty"`
 
-	// **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示启用，1表示禁用
+	// **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示禁用，1表示启用
 	Status *int32 `json:"status,omitempty"`
 
 	// **参数解释**： 规则描述，用于描述规则的用途。 **取值范围**： 不涉及

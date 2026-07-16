@@ -12,19 +12,19 @@ type AdvancedIpsRuleDto struct {
 	Action *int32 `json:"action,omitempty"`
 
 	// 高级ips规则id
-	IpsRuleId *string `json:"ips_rule_id,omitempty"`
+	IpsRuleId string `json:"ips_rule_id"`
 
 	// ips规则类型：0表示敏感目录扫描、1表示反弹xshell
-	IpsRuleType *int32 `json:"ips_rule_type,omitempty"`
+	IpsRuleType int32 `json:"ips_rule_type"`
 
 	// 防护对象id
-	ObjectId *string `json:"object_id,omitempty"`
+	ObjectId string `json:"object_id"`
 
 	// 包含特殊参数的JSON字符串
 	Param *string `json:"param,omitempty"`
 
 	// 频率ips规则状态，0表示关闭，1表示打开
-	Status *int32 `json:"status,omitempty"`
+	Status int32 `json:"status"`
 }
 
 func (o AdvancedIpsRuleDto) String() string {

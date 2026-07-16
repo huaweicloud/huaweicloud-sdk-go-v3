@@ -8,12 +8,11 @@ import (
 
 // ShowAlarmConfigResponse Response Object
 type ShowAlarmConfigResponse struct {
+	Data *interface{} `json:"data,omitempty"`
 
 	// 告警配置列表
-	AlarmConfigs *[]AlarmConfig `json:"alarm_configs,omitempty"`
-
-	Data           *interface{} `json:"data,omitempty"`
-	HttpStatusCode int          `json:"-"`
+	AlarmConfigs   *[]AlarmConfig `json:"alarm_configs,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ShowAlarmConfigResponse) String() string {
