@@ -8,7 +8,10 @@ import (
 
 // RestartDbAgentJobResponse Response Object
 type RestartDbAgentJobResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 响应结果
+	Resp           *string `json:"resp,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o RestartDbAgentJobResponse) String() string {

@@ -9,10 +9,10 @@ import (
 // CreateMultiViewRequest Request Object
 type CreateMultiViewRequest struct {
 
-	// **参数解释：**  数据模型的英文名称。  **约束限制：**  不涉及。  **取值范围：**  大写字母开头，只能包含字母、数字、“_”，且长度为[1-60]个字符。  **默认取值：**  不涉及。
+	// **参数解释：**  数据模型的英文名称。  **约束限制：**  不涉及。  **取值范围：**  以大写字母开头，只能包含字母、数字、“_”，且长度为1-60个字符。  **默认取值：**  不涉及。
 	MvModelName string `json:"mvModelName"`
 
-	// 应用ID。
+	// 应用ID，用于指定实例所属的应用。
 	Identifier string `json:"identifier"`
 
 	Body *RdmParamVoMultiViewModelDto `json:"body,omitempty"`

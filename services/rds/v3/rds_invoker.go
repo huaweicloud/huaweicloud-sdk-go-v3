@@ -4373,6 +4373,22 @@ func (i *CreateDistributionInvoker) Invoke() (*model.CreateDistributionResponse,
 	}
 }
 
+type CreateJobScheduleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateJobScheduleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateJobScheduleInvoker) Invoke() (*model.CreateJobScheduleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateJobScheduleResponse), nil
+	}
+}
+
 type CreatePublicationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4450,6 +4466,22 @@ func (i *DeleteDistributionInvoker) Invoke() (*model.DeleteDistributionResponse,
 		return nil, err
 	} else {
 		return result.(*model.DeleteDistributionResponse), nil
+	}
+}
+
+type DeleteJobScheduleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteJobScheduleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteJobScheduleInvoker) Invoke() (*model.DeleteJobScheduleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteJobScheduleResponse), nil
 	}
 }
 
@@ -4661,6 +4693,22 @@ func (i *ListDistributorInstancesInvoker) Invoke() (*model.ListDistributorInstan
 	}
 }
 
+type ListJobSchedulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListJobSchedulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListJobSchedulesInvoker) Invoke() (*model.ListJobSchedulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListJobSchedulesResponse), nil
+	}
+}
+
 type ListMarketplaceEngineProductsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4866,6 +4914,22 @@ func (i *ModifyDbAgentJobInvoker) Invoke() (*model.ModifyDbAgentJobResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ModifyDbAgentJobResponse), nil
+	}
+}
+
+type ModifyJobScheduleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyJobScheduleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyJobScheduleInvoker) Invoke() (*model.ModifyJobScheduleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyJobScheduleResponse), nil
 	}
 }
 

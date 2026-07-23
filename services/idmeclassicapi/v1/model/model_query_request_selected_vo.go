@@ -7,7 +7,9 @@ import (
 )
 
 type QueryRequestSelectedVo struct {
-	CharacterSet *CharacterSetEnum `json:"characterSet,omitempty"`
+
+	// **参数解释：**  编码类型。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  UTF8。
+	CharacterSet *string `json:"characterSet,omitempty"`
 
 	// **参数解释：**  查询条件。  此参数已废弃，不建议继续使用，建议使用替代参数filter。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Conditions *[]QueryCondition `json:"conditions,omitempty"`

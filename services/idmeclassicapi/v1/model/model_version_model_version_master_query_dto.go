@@ -8,17 +8,17 @@ import (
 
 type VersionModelVersionMasterQueryDto struct {
 
-	// **参数解释：**  是否加密。  **取值范围：**  - true：加密。 - false：不加密。  **默认取值：**  false。
-	Decrypt *bool `json:"decrypt,omitempty"`
-
-	// **参数解释：**  迭代版本。如果此参数为空，则返回M-V模型实例的最新版本信息。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
-	Iteration *int32 `json:"iteration,omitempty"`
-
-	// **参数解释：**  主对象ID。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
+	// **参数解释：**  主对象ID，用于定位M-V模型实例所属的主对象。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	MasterId string `json:"masterId"`
 
-	// **参数解释：**  版本号。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
+	// **参数解释：**  版本号，用于指定查询的版本标识。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	Version string `json:"version"`
+
+	// **参数解释：**  迭代版本号，用于精确定位某一版本下的特定迭代。如果此参数为空，则返回M-V模型实例的最新版本信息。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
+	Iteration *int32 `json:"iteration,omitempty"`
+
+	// **参数解释：**  是否对返回数据进行解密。当数据实体配置了加密属性时，可通过此参数控制是否返回明文数据。  **约束限制：**  不涉及。  **取值范围：**  - true：加密。 - false：不加密。  **默认取值：**  false。
+	Decrypt *bool `json:"decrypt,omitempty"`
 }
 
 func (o VersionModelVersionMasterQueryDto) String() string {

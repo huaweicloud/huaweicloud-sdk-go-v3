@@ -160,6 +160,15 @@ type MonthlyBillRes struct {
 
 	// |参数名称：周期数量| |参数的约束及描述：该参数非必填|
 	PeriodNum *decimal.Decimal `json:"period_num,omitempty"`
+
+	// 是否竞价实例。该参数非必填，Y：是；N：否；--：不涉及（例如：包周期和预留实例不涉及此特性展示为\"--\"）。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
+	IsSpot *string `json:"is_spot,omitempty"`
+
+	// 优惠类型。该参数非必填，优惠类型。不含折扣返回null或空串，多种折扣，逗号拼接，举例：300,500。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
+	PromotionType *string `json:"promotion_type,omitempty"`
+
+	// 付款方式。该参数非必填，付款方式，节省计划和预留实例有值；枚举值：ALL_UPFRONT：全预付；PARTIAL_UPFRONT：部分预付；NO_UPFRONT：零预付。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
+	PaymentType *string `json:"payment_type,omitempty"`
 }
 
 func (o MonthlyBillRes) String() string {

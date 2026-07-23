@@ -10,7 +10,7 @@ import (
 type ListDbAgentJobHistorysResponse struct {
 
 	// 执行历史列表。
-	Historys *[]ListDbAgentJobHistorysResult `json:"historys,omitempty"`
+	Histories *[]ListDbAgentJobHistorysResult `json:"histories,omitempty"`
 
 	// 执行历史总数。
 	TotalCount     *int32 `json:"total_count,omitempty"`

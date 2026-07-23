@@ -5767,6 +5767,27 @@ func (c *RdsClient) CreateDistributionInvoker(request *model.CreateDistributionR
 	return &CreateDistributionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateJobSchedule 创建数据库定时任务策略
+//
+// 创建数据库定时任务策略。每个类型最多只能创建100个自定义策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) CreateJobSchedule(request *model.CreateJobScheduleRequest) (*model.CreateJobScheduleResponse, error) {
+	requestDef := GenReqDefForCreateJobSchedule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateJobScheduleResponse), nil
+	}
+}
+
+// CreateJobScheduleInvoker 创建数据库定时任务策略
+func (c *RdsClient) CreateJobScheduleInvoker(request *model.CreateJobScheduleRequest) *CreateJobScheduleInvoker {
+	requestDef := GenReqDefForCreateJobSchedule()
+	return &CreateJobScheduleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePublication 创建发布
 //
 // 创建发布
@@ -5870,6 +5891,27 @@ func (c *RdsClient) DeleteDistribution(request *model.DeleteDistributionRequest)
 func (c *RdsClient) DeleteDistributionInvoker(request *model.DeleteDistributionRequest) *DeleteDistributionInvoker {
 	requestDef := GenReqDefForDeleteDistribution()
 	return &DeleteDistributionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteJobSchedule 删除数据库定时任务策略
+//
+// 删除数据库定时任务策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) DeleteJobSchedule(request *model.DeleteJobScheduleRequest) (*model.DeleteJobScheduleResponse, error) {
+	requestDef := GenReqDefForDeleteJobSchedule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteJobScheduleResponse), nil
+	}
+}
+
+// DeleteJobScheduleInvoker 删除数据库定时任务策略
+func (c *RdsClient) DeleteJobScheduleInvoker(request *model.DeleteJobScheduleRequest) *DeleteJobScheduleInvoker {
+	requestDef := GenReqDefForDeleteJobSchedule()
+	return &DeleteJobScheduleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteMsdtcLocalHost 删除MSDTC
@@ -6145,6 +6187,27 @@ func (c *RdsClient) ListDistributorInstancesInvoker(request *model.ListDistribut
 	return &ListDistributorInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListJobSchedules 查询数据库定时任务策略
+//
+// 查询数据库定时任务策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListJobSchedules(request *model.ListJobSchedulesRequest) (*model.ListJobSchedulesResponse, error) {
+	requestDef := GenReqDefForListJobSchedules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListJobSchedulesResponse), nil
+	}
+}
+
+// ListJobSchedulesInvoker 查询数据库定时任务策略
+func (c *RdsClient) ListJobSchedulesInvoker(request *model.ListJobSchedulesRequest) *ListJobSchedulesInvoker {
+	requestDef := GenReqDefForListJobSchedules()
+	return &ListJobSchedulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListMarketplaceEngineProducts 查询云市场引擎商品列表
 //
 // 查询云市场引擎商品列表。
@@ -6416,6 +6479,27 @@ func (c *RdsClient) ModifyDbAgentJob(request *model.ModifyDbAgentJobRequest) (*m
 func (c *RdsClient) ModifyDbAgentJobInvoker(request *model.ModifyDbAgentJobRequest) *ModifyDbAgentJobInvoker {
 	requestDef := GenReqDefForModifyDbAgentJob()
 	return &ModifyDbAgentJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyJobSchedule 修改数据库定时任务策略
+//
+// 修改数据库定时任务策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ModifyJobSchedule(request *model.ModifyJobScheduleRequest) (*model.ModifyJobScheduleResponse, error) {
+	requestDef := GenReqDefForModifyJobSchedule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyJobScheduleResponse), nil
+	}
+}
+
+// ModifyJobScheduleInvoker 修改数据库定时任务策略
+func (c *RdsClient) ModifyJobScheduleInvoker(request *model.ModifyJobScheduleRequest) *ModifyJobScheduleInvoker {
+	requestDef := GenReqDefForModifyJobSchedule()
+	return &ModifyJobScheduleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ModifyPublication 修改发布

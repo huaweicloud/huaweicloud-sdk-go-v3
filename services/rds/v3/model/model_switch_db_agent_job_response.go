@@ -8,7 +8,10 @@ import (
 
 // SwitchDbAgentJobResponse Response Object
 type SwitchDbAgentJobResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 响应结果
+	Resp           *string `json:"resp,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o SwitchDbAgentJobResponse) String() string {

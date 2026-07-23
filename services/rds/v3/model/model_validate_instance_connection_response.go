@@ -8,7 +8,10 @@ import (
 
 // ValidateInstanceConnectionResponse Response Object
 type ValidateInstanceConnectionResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// 响应结果
+	Resp           *string `json:"resp,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ValidateInstanceConnectionResponse) String() string {

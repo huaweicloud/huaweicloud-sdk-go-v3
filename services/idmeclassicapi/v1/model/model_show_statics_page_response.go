@@ -9,15 +9,17 @@ import (
 // ShowStaticsPageResponse Response Object
 type ShowStaticsPageResponse struct {
 
-	// **参数解释：**  请求结果。  **取值范围：**  - SUCCESS：请求成功。 - FAIL：请求失败。  **默认取值：**  不涉及。
+	// **参数解释：**  请求结果。  **取值范围：**  - SUCCESS：请求成功。 - FAIL：请求失败。
 	Result *string `json:"result,omitempty"`
 
-	// **参数解释：**  请求数据。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
+	// **参数解释：**  请求数据。  **取值范围：**  不涉及。
 	Data *[]interface{} `json:"data,omitempty"`
 
-	// **参数解释：**  异常信息。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
-	Errors         *[]string `json:"errors,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	// **参数解释：**  异常信息，当请求失败时返回具体的错误描述。  **取值范围：**  不涉及。
+	Errors *[]string `json:"errors,omitempty"`
+
+	PageInfo       *PageInfoViewDto `json:"pageInfo,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o ShowStaticsPageResponse) String() string {

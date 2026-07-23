@@ -9,7 +9,7 @@ import (
 type SortInfoVo struct {
 	CharacterSet *CharacterSetEnum `json:"characterSet,omitempty"`
 
-	// **参数解释：**  按某个字段进行排序。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
+	// **参数解释：**  排序字段，按指定字段对查询结果进行排序。  **约束限制：**  不涉及。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
 	OrderBy *string `json:"orderBy,omitempty"`
 
 	// **参数解释：**  排序方向。  **约束限制：**  不涉及。  **取值范围：**  - ASC：表示升序。 - DESC：表示降序。  **默认取值：**  ASC。

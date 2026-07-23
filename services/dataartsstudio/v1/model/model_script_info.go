@@ -45,6 +45,9 @@ type ScriptInfo struct {
 	// 责任人名称。
 	Owner *string `json:"owner,omitempty"`
 
+	// 脚本最后修改时间。
+	ModifyTime *int64 `json:"modify_time,omitempty"`
+
 	// 脚本最新提交版本。
 	Version *int32 `json:"version,omitempty"`
 }

@@ -57,7 +57,7 @@ type ListCustomerselfResourceRecordsRequest struct {
 	// 查询的资源消费记录的结束日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
 	BillDateEnd *string `json:"bill_date_end,omitempty"`
 
-	// |参数名称：统计类型。| |参数的约束及描述：统计类型。非必填，默认值为3。1：按账期 3：按明细|
+	// 统计类型。1：按账期 2：按天 3：按明细。该参数不携带或携带值为空时，取默认值3。
 	StatisticType *int32 `json:"statistic_type,omitempty"`
 }
 

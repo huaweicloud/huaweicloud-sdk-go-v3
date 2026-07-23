@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Result **参数解释：**  请求结果。  **取值范围：**  - SUCCESS：请求成功。 - FAIL：请求失败。  **默认取值：**  不涉及。
+// Result **参数解释：**  请求结果。  **取值范围：**  - SUCCESS：请求成功。 - FAIL：请求失败。
 type Result struct {
 }
 

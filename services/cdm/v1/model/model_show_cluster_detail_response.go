@@ -104,8 +104,14 @@ type ShowClusterDetailResponse struct {
 	Updated *string `json:"updated,omitempty"`
 
 	// 集群状态： - 100：创建中 - 200：正常 - 300：失败 - 303：创建失败 - 800：冻结 - 900：已关机 - 910：正在关机 - 920：正在开机
-	Status         *string `json:"status,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Status *string `json:"status,omitempty"`
+
+	// 企业项目ID
+	EpsId *string `json:"eps_id,omitempty"`
+
+	// 标签列表
+	Tags           *[]ClusterTag `json:"tags,omitempty"`
+	HttpStatusCode int           `json:"-"`
 }
 
 func (o ShowClusterDetailResponse) String() string {

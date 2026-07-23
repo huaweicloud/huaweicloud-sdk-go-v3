@@ -9,13 +9,13 @@ import (
 // ListHistoryDataResponse Response Object
 type ListHistoryDataResponse struct {
 
-	// **参数解释：**  请求结果。  **取值范围：**  - SUCCESS：请求成功。 - FAIL：请求失败。  **默认取值：**  不涉及。
+	// **参数解释：**  请求结果。  **取值范围：**  - SUCCESS：请求成功。 - FAIL：请求失败。
 	Result *string `json:"result,omitempty"`
 
-	// **参数解释：**  请求数据。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
+	// **参数解释：**  请求数据，返回数据实例的历史版本信息列表。  **取值范围：**  不涉及。
 	Data *[]HistoryDataModelHistoryViewDto `json:"data,omitempty"`
 
-	// **参数解释：**  异常信息。  **取值范围：**  不涉及。  **默认取值：**  不涉及。
+	// **参数解释：**  异常信息，当请求失败时返回具体的错误描述。  **取值范围：**  不涉及。
 	Errors *[]string `json:"errors,omitempty"`
 
 	PageInfo       *PageInfoViewDto `json:"pageInfo,omitempty"`

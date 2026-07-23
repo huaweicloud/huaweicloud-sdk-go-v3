@@ -1,3 +1,62 @@
+# 0.1.208 2026-07-23
+
+### HuaweiCloud SDK BSS
+
+- _接口版本_
+  - V2
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ListCustomerselfResourceRecordDetails**
+    - 响应参数变更
+      - `+ monthly_records.is_spot`
+      - `+ monthly_records.promotion_type`
+      - `+ monthly_records.payment_type`
+
+### HuaweiCloud SDK BSSINTL
+
+- _接口版本_
+  - V2
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ListCustomerselfResourceRecordDetails**
+    - 响应参数变更
+      - `+ monthly_records.is_spot`
+      - `+ monthly_records.promotion_type`
+      - `+ monthly_records.payment_type`
+
+### HuaweiCloud SDK DataArtsStudio
+
+- _接口版本_
+  - V1
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ListFactoryScripts**
+    - 响应参数变更
+      - `+ scripts.modify_time`
+
+### HuaweiCloud SDK RDS
+
+- _接口版本_
+  - V3
+- _新增特性_
+  - 支持接口`ModifyJobSchedule`、`DeleteJobSchedule`、`ListJobSchedules`、`CreateJobSchedule`
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ListDbAgentJobHistorys**
+    - 响应参数变更
+      - `+ histories`
+      - `- historys`
+
 # 0.1.207 2026-07-16
 
 ### HuaweiCloud SDK CCE

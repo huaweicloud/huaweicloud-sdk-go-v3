@@ -1,3 +1,62 @@
+# 0.1.208 2026-07-23
+
+### HuaweiCloud SDK BSS
+
+- _API Version_
+  - V2
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **ListCustomerselfResourceRecordDetails**
+    - changes of response param
+      - `+ monthly_records.is_spot`
+      - `+ monthly_records.promotion_type`
+      - `+ monthly_records.payment_type`
+
+### HuaweiCloud SDK BSSINTL
+
+- _API Version_
+  - V2
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **ListCustomerselfResourceRecordDetails**
+    - changes of response param
+      - `+ monthly_records.is_spot`
+      - `+ monthly_records.promotion_type`
+      - `+ monthly_records.payment_type`
+
+### HuaweiCloud SDK DataArtsStudio
+
+- _API Version_
+  - V1
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **ListFactoryScripts**
+    - changes of response param
+      - `+ scripts.modify_time`
+
+### HuaweiCloud SDK RDS
+
+- _API Version_
+  - V3
+- _Features_
+  - Support the APIs `ModifyJobSchedule`, `DeleteJobSchedule`, `ListJobSchedules`, `CreateJobSchedule`
+- _Bug Fix_
+  - None
+- _Change_
+  - **ListDbAgentJobHistorys**
+    - changes of response param
+      - `+ histories`
+      - `- historys`
+
 # 0.1.207 2026-07-16
 
 ### HuaweiCloud SDK CCE

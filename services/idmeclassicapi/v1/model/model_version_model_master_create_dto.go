@@ -8,7 +8,7 @@ import (
 
 type VersionModelMasterCreateDto struct {
 
-	// 创建时间。
+	// 创建时间。使用UTC+0时间格式，格式为yyyy-MM-ddTHH:mm:ss.SSSZ。
 	CreateTime *string `json:"createTime,omitempty"`
 
 	// 创建者。
@@ -17,10 +17,10 @@ type VersionModelMasterCreateDto struct {
 	// 唯一标识。
 	Id *string `json:"id,omitempty"`
 
-	// 最后更新时间。
+	// 最后更新时间。使用UTC+0时间格式，格式为yyyy-MM-ddTHH:mm:ss.SSSZ。
 	LastUpdateTime *string `json:"lastUpdateTime,omitempty"`
 
-	// 修改人。
+	// 更新者。
 	Modifier *string `json:"modifier,omitempty"`
 
 	// 扩展类型。
