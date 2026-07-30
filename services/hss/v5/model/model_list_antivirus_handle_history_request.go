@@ -51,11 +51,11 @@ type ListAntivirusHandleHistoryRequest struct {
 	// **参数解释**: 用户名 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
 	UserName *string `json:"user_name,omitempty"`
 
-	// **参数解释**: 事件类型 **约束限制**: 不涉及 **取值范围**: 0（病毒查杀事件）、1（恶意文件处置事件） **默认取值**: 不涉及
-	EventType *int32 `json:"event_type,omitempty"`
-
 	// **参数解释**: 排序的顺序 **约束限制**: 不涉及 **取值范围**:   - asc：正序   - desc：倒序  **默认取值**: 正序排序
 	SortDir *string `json:"sort_dir,omitempty"`
+
+	// **参数解释**: 事件类型 **约束限制**: 不涉及 **取值范围**: 0（病毒查杀事件）、1（恶意文件处置事件） **默认取值**: 不涉及
+	EventType *int32 `json:"event_type,omitempty"`
 
 	// **参数解释**: 排序字段 **约束限制**: 不涉及 **取值范围**: handle_time（处置时间） **默认取值**: 不涉及
 	SortKey *string `json:"sort_key,omitempty"`

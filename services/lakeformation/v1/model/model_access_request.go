@@ -16,7 +16,7 @@ type AccessRequest struct {
 	// 授权主体信息
 	Principal []Principal `json:"principal"`
 
-	// 权限信息,ALL,CREATE,ALTER,DROP,DESCRIBE,EXEC,CREATE_DATABASE,LIST_DATABASE,CREATE_TABLE,LIST_TABLE,CREATE_FUNC,LIST_FUNC,REGISTER_MODEL,LIST_MODEL,INSERT,UPDATE,DELETE,SELECT,READ,WRITE,OPERATE,USE
+	// 权限信息,ALL,CREATE,ALTER,DROP,DESCRIBE,EXEC,CREATE_DATABASE,LIST_DATABASE,CREATE_TABLE,LIST_TABLE,CREATE_FUNC,LIST_FUNC,REGISTER_MODEL,LIST_MODEL,CREATE_DATASET,LIST_DATASET,READ_DATASET,WRITE_DATASET,INSERT,UPDATE,DELETE,SELECT,READ,WRITE,OPERATE,USE
 	Action AccessRequestAction `json:"action"`
 }
 
@@ -48,6 +48,10 @@ type AccessRequestActionEnum struct {
 	LIST_FUNC       AccessRequestAction
 	REGISTER_MODEL  AccessRequestAction
 	LIST_MODEL      AccessRequestAction
+	CREATE_DATASET  AccessRequestAction
+	LIST_DATASET    AccessRequestAction
+	READ_DATASET    AccessRequestAction
+	WRITE_DATASET   AccessRequestAction
 	INSERT          AccessRequestAction
 	UPDATE          AccessRequestAction
 	DELETE          AccessRequestAction
@@ -101,6 +105,18 @@ func GetAccessRequestActionEnum() AccessRequestActionEnum {
 		},
 		LIST_MODEL: AccessRequestAction{
 			value: "LIST_MODEL",
+		},
+		CREATE_DATASET: AccessRequestAction{
+			value: "CREATE_DATASET",
+		},
+		LIST_DATASET: AccessRequestAction{
+			value: "LIST_DATASET",
+		},
+		READ_DATASET: AccessRequestAction{
+			value: "READ_DATASET",
+		},
+		WRITE_DATASET: AccessRequestAction{
+			value: "WRITE_DATASET",
 		},
 		INSERT: AccessRequestAction{
 			value: "INSERT",

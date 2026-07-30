@@ -30,6 +30,9 @@ type NodeLabels struct {
 	// **参数解释**：批量创建的节点个数。 **取值范围**：不涉及。
 	OsModelartsNodeBatchCount *string `json:"os.modelarts.node/batch.count,omitempty"`
 
+	// **参数解释**：HPS超节点ID。该值相同的节点，A5代表在同一框内，A3代表在同一个超节点内。 **取值范围**：不涉及。
+	OsModelartsNodeSpodId *string `json:"os.modelarts.node/spod.id,omitempty"`
+
 	// **参数解释**：节点的资源id。 **取值范围**：不涉及。
 	OsModelartsResourceId *string `json:"os.modelarts/resource.id,omitempty"`
 

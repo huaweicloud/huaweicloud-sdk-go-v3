@@ -12,7 +12,7 @@ import (
 // ResourceInput ResourceInput
 type ResourceInput struct {
 
-	// 元数据资源类型,CATALOG,DATABASE,TABLE,FUNC,MODEL,COLUMN,URI
+	// 元数据资源类型,CATALOG,DATABASE,TABLE,FUNC,MODEL,COLUMN,URI,DATASET
 	ResourceType ResourceInputResourceType `json:"resource_type"`
 
 	// catalog名称。只能包含字母、数字和下划线，且长度为1~256个字符。
@@ -35,6 +35,9 @@ type ResourceInput struct {
 
 	// 列名称列表
 	Columns *[]string `json:"columns,omitempty"`
+
+	// 数据集名称。
+	Dataset *string `json:"dataset,omitempty"`
 }
 
 func (o ResourceInput) String() string {
@@ -58,6 +61,7 @@ type ResourceInputResourceTypeEnum struct {
 	MODEL    ResourceInputResourceType
 	COLUMN   ResourceInputResourceType
 	URI      ResourceInputResourceType
+	DATASET  ResourceInputResourceType
 }
 
 func GetResourceInputResourceTypeEnum() ResourceInputResourceTypeEnum {
@@ -82,6 +86,9 @@ func GetResourceInputResourceTypeEnum() ResourceInputResourceTypeEnum {
 		},
 		URI: ResourceInputResourceType{
 			value: "URI",
+		},
+		DATASET: ResourceInputResourceType{
+			value: "DATASET",
 		},
 	}
 }

@@ -485,6 +485,86 @@ func (i *UpdateDatabaseInvoker) Invoke() (*model.UpdateDatabaseResponse, error) 
 	}
 }
 
+type CreateDatasetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDatasetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDatasetInvoker) Invoke() (*model.CreateDatasetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDatasetResponse), nil
+	}
+}
+
+type DeleteDatasetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDatasetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDatasetInvoker) Invoke() (*model.DeleteDatasetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDatasetResponse), nil
+	}
+}
+
+type ListDatasetsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDatasetsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDatasetsInvoker) Invoke() (*model.ListDatasetsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDatasetsResponse), nil
+	}
+}
+
+type ShowDatasetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDatasetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDatasetInvoker) Invoke() (*model.ShowDatasetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDatasetResponse), nil
+	}
+}
+
+type UpdateDatasetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDatasetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDatasetInvoker) Invoke() (*model.UpdateDatasetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDatasetResponse), nil
+	}
+}
+
 type CreateFunctionInvoker struct {
 	*invoker.BaseInvoker
 }

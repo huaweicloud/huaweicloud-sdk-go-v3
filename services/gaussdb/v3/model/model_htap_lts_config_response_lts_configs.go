@@ -18,7 +18,7 @@ type HtapLtsConfigResponseLtsConfigs struct {
 	LtsStreamId string `json:"lts_stream_id"`
 
 	// **参数解释**： LTS配置开关状态。  **取值范围**：  不涉及。
-	Enabled string `json:"enabled"`
+	Enabled bool `json:"enabled"`
 }
 
 func (o HtapLtsConfigResponseLtsConfigs) String() string {

@@ -10,7 +10,7 @@ import (
 type ShowAutoScalingHistoryResponse struct {
 
 	// 记录总数。
-	TotalCount *string `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 自动变配历史记录列表。
 	Records        *[]AutoScalingRecordInfo `json:"records,omitempty"`

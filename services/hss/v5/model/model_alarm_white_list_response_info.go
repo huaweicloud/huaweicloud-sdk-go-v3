@@ -12,7 +12,7 @@ type AlarmWhiteListResponseInfo struct {
 	// 企业项目名称
 	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
 
-	// **参数解释**: 事件白名单SHA256 **约束限制**: 不涉及 **取值范围**: 字符长度0-512位 **默认取值**: 不涉及
+	// **参数解释**: 事件白名单SHA256 **约束限制**: 不涉及 **取值范围**: 字符长度0-64位 **默认取值**: 不涉及
 	Hash *string `json:"hash,omitempty"`
 
 	// **参数解释**: 描述信息。 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及

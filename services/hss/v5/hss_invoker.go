@@ -3093,6 +3093,150 @@ func (i *ValidateAdminInvoker) Invoke() (*model.ValidateAdminResponse, error) {
 	}
 }
 
+type BindAgentPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BindAgentPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BindAgentPolicyInvoker) Invoke() (*model.BindAgentPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BindAgentPolicyResponse), nil
+	}
+}
+
+type CopyAiPolicyGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CopyAiPolicyGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CopyAiPolicyGroupInvoker) Invoke() (*model.CopyAiPolicyGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CopyAiPolicyGroupResponse), nil
+	}
+}
+
+type DeleteAiPolicyGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAiPolicyGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAiPolicyGroupsInvoker) Invoke() (*model.DeleteAiPolicyGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAiPolicyGroupsResponse), nil
+	}
+}
+
+type ListAiPoliciesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAiPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAiPoliciesInvoker) Invoke() (*model.ListAiPoliciesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAiPoliciesResponse), nil
+	}
+}
+
+type ListAiPolicyDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAiPolicyDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAiPolicyDetailInvoker) Invoke() (*model.ListAiPolicyDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAiPolicyDetailResponse), nil
+	}
+}
+
+type ListAiPolicyGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAiPolicyGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAiPolicyGroupsInvoker) Invoke() (*model.ListAiPolicyGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAiPolicyGroupsResponse), nil
+	}
+}
+
+type ResumePauseAiPoliciesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResumePauseAiPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ResumePauseAiPoliciesInvoker) Invoke() (*model.ResumePauseAiPoliciesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResumePauseAiPoliciesResponse), nil
+	}
+}
+
+type ResumePauseAiPolicyGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResumePauseAiPolicyGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ResumePauseAiPolicyGroupsInvoker) Invoke() (*model.ResumePauseAiPolicyGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResumePauseAiPolicyGroupsResponse), nil
+	}
+}
+
+type UpdateAiPolicyDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAiPolicyDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAiPolicyDetailInvoker) Invoke() (*model.UpdateAiPolicyDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAiPolicyDetailResponse), nil
+	}
+}
+
 type ChangeAntivirusPayPerScanStatusInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4978,6 +5122,38 @@ func (i *UpdateCustomRuleConfigInvoker) Invoke() (*model.UpdateCustomRuleConfigR
 		return nil, err
 	} else {
 		return result.(*model.UpdateCustomRuleConfigResponse), nil
+	}
+}
+
+type ListAlarmWhiteListHostDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAlarmWhiteListHostDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAlarmWhiteListHostDetailInvoker) Invoke() (*model.ListAlarmWhiteListHostDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAlarmWhiteListHostDetailResponse), nil
+	}
+}
+
+type UpdateAlarmWhiteListHostInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAlarmWhiteListHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAlarmWhiteListHostInvoker) Invoke() (*model.UpdateAlarmWhiteListHostResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAlarmWhiteListHostResponse), nil
 	}
 }
 

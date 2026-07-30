@@ -197,6 +197,10 @@ type LakeFormationPolicyPermissionsEnum struct {
 	LIST_FUNC       LakeFormationPolicyPermissions
 	REGISTER_MODEL  LakeFormationPolicyPermissions
 	LIST_MODEL      LakeFormationPolicyPermissions
+	CREATE_DATASET  LakeFormationPolicyPermissions
+	LIST_DATASET    LakeFormationPolicyPermissions
+	READ_DATASET    LakeFormationPolicyPermissions
+	WRITE_DATASET   LakeFormationPolicyPermissions
 	INSERT          LakeFormationPolicyPermissions
 	UPDATE          LakeFormationPolicyPermissions
 	DELETE          LakeFormationPolicyPermissions
@@ -249,6 +253,18 @@ func GetLakeFormationPolicyPermissionsEnum() LakeFormationPolicyPermissionsEnum 
 		},
 		LIST_MODEL: LakeFormationPolicyPermissions{
 			value: "LIST_MODEL",
+		},
+		CREATE_DATASET: LakeFormationPolicyPermissions{
+			value: "CREATE_DATASET",
+		},
+		LIST_DATASET: LakeFormationPolicyPermissions{
+			value: "LIST_DATASET",
+		},
+		READ_DATASET: LakeFormationPolicyPermissions{
+			value: "READ_DATASET",
+		},
+		WRITE_DATASET: LakeFormationPolicyPermissions{
+			value: "WRITE_DATASET",
 		},
 		INSERT: LakeFormationPolicyPermissions{
 			value: "INSERT",
@@ -320,6 +336,10 @@ type LakeFormationPolicyGrantAblePermissionsEnum struct {
 	LIST_FUNC       LakeFormationPolicyGrantAblePermissions
 	REGISTER_MODEL  LakeFormationPolicyGrantAblePermissions
 	LIST_MODEL      LakeFormationPolicyGrantAblePermissions
+	CREATE_DATASET  LakeFormationPolicyGrantAblePermissions
+	LIST_DATASET    LakeFormationPolicyGrantAblePermissions
+	READ_DATASET    LakeFormationPolicyGrantAblePermissions
+	WRITE_DATASET   LakeFormationPolicyGrantAblePermissions
 	INSERT          LakeFormationPolicyGrantAblePermissions
 	UPDATE          LakeFormationPolicyGrantAblePermissions
 	DELETE          LakeFormationPolicyGrantAblePermissions
@@ -372,6 +392,18 @@ func GetLakeFormationPolicyGrantAblePermissionsEnum() LakeFormationPolicyGrantAb
 		},
 		LIST_MODEL: LakeFormationPolicyGrantAblePermissions{
 			value: "LIST_MODEL",
+		},
+		CREATE_DATASET: LakeFormationPolicyGrantAblePermissions{
+			value: "CREATE_DATASET",
+		},
+		LIST_DATASET: LakeFormationPolicyGrantAblePermissions{
+			value: "LIST_DATASET",
+		},
+		READ_DATASET: LakeFormationPolicyGrantAblePermissions{
+			value: "READ_DATASET",
+		},
+		WRITE_DATASET: LakeFormationPolicyGrantAblePermissions{
+			value: "WRITE_DATASET",
 		},
 		INSERT: LakeFormationPolicyGrantAblePermissions{
 			value: "INSERT",

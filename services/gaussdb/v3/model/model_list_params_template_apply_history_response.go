@@ -10,7 +10,7 @@ import (
 type ListParamsTemplateApplyHistoryResponse struct {
 
 	// 应用记录数量。
-	TotalCount *string `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 应用记录信息
 	Histories      *[]TemplateApplyHistory `json:"histories,omitempty"`

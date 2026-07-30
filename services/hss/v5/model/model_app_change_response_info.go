@@ -30,10 +30,10 @@ type AppChangeResponseInfo struct {
 	// **参数解释**: 版本号 **取值范围**: 字符长度1-128位
 	Version *string `json:"version,omitempty"`
 
-	// **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值10000
+	// **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值9223372036854775807
 	UpdateTime *int64 `json:"update_time,omitempty"`
 
-	// **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值10000
+	// **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值9223372036854775807
 	RecentScanTime *int64 `json:"recent_scan_time,omitempty"`
 }
 

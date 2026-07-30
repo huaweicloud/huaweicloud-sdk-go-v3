@@ -23,6 +23,9 @@ type JobEngineResp struct {
 
 	// **参数解释**：是否需要安装训练平台指定的 moxing 版本。 **取值范围**： - true：需要 - false：不需要
 	InstallSysPackages *bool `json:"install_sys_packages,omitempty"`
+
+	// **参数解释**：SWR企业仓实例ID，使用企业仓镜像时需传入。 **取值范围**：不涉及。
+	ImageRepoId *string `json:"image_repo_id,omitempty"`
 }
 
 func (o JobEngineResp) String() string {

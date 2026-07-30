@@ -10,7 +10,7 @@ import (
 type ShowProxyConfigurationsResponse struct {
 
 	// 数据总数
-	TotalCount *string `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 内核可配置的参数列表
 	Configurations *[]ProxyConfiguration `json:"configurations,omitempty"`

@@ -18,7 +18,7 @@ type ListAlgorithmsResponse struct {
 	// 查询到当前用户名下的所有算法限制个数。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 查询到当前用户名下的所有算法查询偏移量。
+	// 查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。
 	Offset *int32 `json:"offset,omitempty"`
 
 	// 查询到当前用户名下的所有算法排序依赖字段。

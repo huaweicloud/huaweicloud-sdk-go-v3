@@ -10,10 +10,10 @@ import (
 type UpdateServerlessComputeAbilityPolicy struct {
 
 	// **参数解释**：  单节点VCPUs伸缩下限。  **约束限制**：  不涉及。  **取值范围**：  取值范围可根据[查询数据库规格](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlFlavors.html)接口获取。  **默认取值**：  不涉及。
-	MinVcpus int32 `json:"min_vcpus"`
+	MinVcpus string `json:"min_vcpus"`
 
 	// **参数解释**：  单节点VCPUs伸缩上限。  **约束限制**：  不涉及。  **取值范围**：  ≥4。取值范围可根据[查询数据库规格](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlFlavors.html)接口获取。  **默认取值**：  不涉及。
-	MaxVcpus int32 `json:"max_vcpus"`
+	MaxVcpus string `json:"max_vcpus"`
 
 	// **参数解释**：  节点算力同步，修改算力范围的同时，是否将小于最小算力的节点的当前算力同步至最小算力。  **约束限制**：  不涉及。  **取值范围**： - true: 节点算力同步。 - false: 节点算力不同步。  **默认取值**： false。
 	NeedUpdateNodesComputeAbility *bool `json:"need_update_nodes_compute_ability,omitempty"`

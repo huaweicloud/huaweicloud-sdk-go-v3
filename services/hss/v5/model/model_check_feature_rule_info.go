@@ -20,10 +20,10 @@ type CheckFeatureRuleInfo struct {
 	// 检测特性规则配置信息
 	FeatureConfigure *string `json:"feature_configure,omitempty"`
 
-	// 防护动作，包含如下 -1 检测   -2 检测并阻断/拦截
+	// **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: - 1：检测 - 2: 检测并阻断/拦截     **默认取值**: 不涉及
 	ProtectiveAction *int32 `json:"protective_action,omitempty"`
 
-	// 可选防护动作，包含如下 -1 检测   -2 检测并阻断/拦截   -3 都可以
+	// **参数解释**: 可选防护动作 **约束限制**: 不涉及 **取值范围**: - 1：检测 - 2: 检测并阻断/拦截 - 3: 都可以       **默认取值**: 不涉及
 	OptionalProtectiveAction *int32 `json:"optional_protective_action,omitempty"`
 
 	// 开启状态，包含如下 -0 开启 -1 关闭

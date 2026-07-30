@@ -24,10 +24,10 @@ type RecycleBackupV3 struct {
 	Status *string `json:"status,omitempty"`
 
 	// 备份开始时间。
-	BeginTime *string `json:"begin_time,omitempty"`
+	BeginTime *int64 `json:"begin_time,omitempty"`
 
 	// 备份结束时间。
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime *int64 `json:"end_time,omitempty"`
 }
 
 func (o RecycleBackupV3) String() string {

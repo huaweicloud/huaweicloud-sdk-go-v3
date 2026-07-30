@@ -19,6 +19,48 @@ func TmsClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// ChangeAssociatedResourceOpenStatus 开通或关闭关联资源标签继承能力
+//
+// 开通或关闭关联资源标签继承能力
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *TmsClient) ChangeAssociatedResourceOpenStatus(request *model.ChangeAssociatedResourceOpenStatusRequest) (*model.ChangeAssociatedResourceOpenStatusResponse, error) {
+	requestDef := GenReqDefForChangeAssociatedResourceOpenStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeAssociatedResourceOpenStatusResponse), nil
+	}
+}
+
+// ChangeAssociatedResourceOpenStatusInvoker 开通或关闭关联资源标签继承能力
+func (c *TmsClient) ChangeAssociatedResourceOpenStatusInvoker(request *model.ChangeAssociatedResourceOpenStatusRequest) *ChangeAssociatedResourceOpenStatusInvoker {
+	requestDef := GenReqDefForChangeAssociatedResourceOpenStatus()
+	return &ChangeAssociatedResourceOpenStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAssociatedResourceRules 批量启用规则
+//
+// 按照规则和region来批量启用规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *TmsClient) CreateAssociatedResourceRules(request *model.CreateAssociatedResourceRulesRequest) (*model.CreateAssociatedResourceRulesResponse, error) {
+	requestDef := GenReqDefForCreateAssociatedResourceRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAssociatedResourceRulesResponse), nil
+	}
+}
+
+// CreateAssociatedResourceRulesInvoker 批量启用规则
+func (c *TmsClient) CreateAssociatedResourceRulesInvoker(request *model.CreateAssociatedResourceRulesRequest) *CreateAssociatedResourceRulesInvoker {
+	requestDef := GenReqDefForCreateAssociatedResourceRules()
+	return &CreateAssociatedResourceRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePredefineTags 创建预定义标签
 //
 // 用于创建预定标签。用户创建预定义标签后，可以使用预定义标签来给资源创建标签。该接口支持幂等特性和处理批量数据。
@@ -59,6 +101,27 @@ func (c *TmsClient) CreateResourceTag(request *model.CreateResourceTagRequest) (
 func (c *TmsClient) CreateResourceTagInvoker(request *model.CreateResourceTagRequest) *CreateResourceTagInvoker {
 	requestDef := GenReqDefForCreateResourceTag()
 	return &CreateResourceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAssociatedResourceRule 关闭规则
+//
+// 通过指定setting_name和region_id来关闭指定的规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *TmsClient) DeleteAssociatedResourceRule(request *model.DeleteAssociatedResourceRuleRequest) (*model.DeleteAssociatedResourceRuleResponse, error) {
+	requestDef := GenReqDefForDeleteAssociatedResourceRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAssociatedResourceRuleResponse), nil
+	}
+}
+
+// DeleteAssociatedResourceRuleInvoker 关闭规则
+func (c *TmsClient) DeleteAssociatedResourceRuleInvoker(request *model.DeleteAssociatedResourceRuleRequest) *DeleteAssociatedResourceRuleInvoker {
+	requestDef := GenReqDefForDeleteAssociatedResourceRule()
+	return &DeleteAssociatedResourceRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeletePredefineTags 删除预定义标签
@@ -122,6 +185,48 @@ func (c *TmsClient) ListApiVersions(request *model.ListApiVersionsRequest) (*mod
 func (c *TmsClient) ListApiVersionsInvoker(request *model.ListApiVersionsRequest) *ListApiVersionsInvoker {
 	requestDef := GenReqDefForListApiVersions()
 	return &ListApiVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAssociatedResourceRules 查询当前规则列表
+//
+// 查询当前规则列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *TmsClient) ListAssociatedResourceRules(request *model.ListAssociatedResourceRulesRequest) (*model.ListAssociatedResourceRulesResponse, error) {
+	requestDef := GenReqDefForListAssociatedResourceRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAssociatedResourceRulesResponse), nil
+	}
+}
+
+// ListAssociatedResourceRulesInvoker 查询当前规则列表
+func (c *TmsClient) ListAssociatedResourceRulesInvoker(request *model.ListAssociatedResourceRulesRequest) *ListAssociatedResourceRulesInvoker {
+	requestDef := GenReqDefForListAssociatedResourceRules()
+	return &ListAssociatedResourceRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAssociatedResourceSettings 查询当前规则的配置列表
+//
+// 查询当前规则的配置列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *TmsClient) ListAssociatedResourceSettings(request *model.ListAssociatedResourceSettingsRequest) (*model.ListAssociatedResourceSettingsResponse, error) {
+	requestDef := GenReqDefForListAssociatedResourceSettings()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAssociatedResourceSettingsResponse), nil
+	}
+}
+
+// ListAssociatedResourceSettingsInvoker 查询当前规则的配置列表
+func (c *TmsClient) ListAssociatedResourceSettingsInvoker(request *model.ListAssociatedResourceSettingsRequest) *ListAssociatedResourceSettingsInvoker {
+	requestDef := GenReqDefForListAssociatedResourceSettings()
+	return &ListAssociatedResourceSettingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPredefineTags 查询预定义标签列表
@@ -271,6 +376,27 @@ func (c *TmsClient) ShowApiVersionInvoker(request *model.ShowApiVersionRequest) 
 	return &ShowApiVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowAssociatedResourceOpenStatus 查询当前用户的关联资源标签继承能力的开通状态
+//
+// 查询当前用户的关联资源标签继承能力的开通状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *TmsClient) ShowAssociatedResourceOpenStatus(request *model.ShowAssociatedResourceOpenStatusRequest) (*model.ShowAssociatedResourceOpenStatusResponse, error) {
+	requestDef := GenReqDefForShowAssociatedResourceOpenStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAssociatedResourceOpenStatusResponse), nil
+	}
+}
+
+// ShowAssociatedResourceOpenStatusInvoker 查询当前用户的关联资源标签继承能力的开通状态
+func (c *TmsClient) ShowAssociatedResourceOpenStatusInvoker(request *model.ShowAssociatedResourceOpenStatusRequest) *ShowAssociatedResourceOpenStatusInvoker {
+	requestDef := GenReqDefForShowAssociatedResourceOpenStatus()
+	return &ShowAssociatedResourceOpenStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowResourceTag 查询资源标签
 //
 // 查询单个资源上的标签。
@@ -311,6 +437,27 @@ func (c *TmsClient) ShowTagQuota(request *model.ShowTagQuotaRequest) (*model.Sho
 func (c *TmsClient) ShowTagQuotaInvoker(request *model.ShowTagQuotaRequest) *ShowTagQuotaInvoker {
 	requestDef := GenReqDefForShowTagQuota()
 	return &ShowTagQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAssociatedResourceRules 更新规则
+//
+// 更新规则。规则更新的信息会覆盖原有内容
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *TmsClient) UpdateAssociatedResourceRules(request *model.UpdateAssociatedResourceRulesRequest) (*model.UpdateAssociatedResourceRulesResponse, error) {
+	requestDef := GenReqDefForUpdateAssociatedResourceRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAssociatedResourceRulesResponse), nil
+	}
+}
+
+// UpdateAssociatedResourceRulesInvoker 更新规则
+func (c *TmsClient) UpdateAssociatedResourceRulesInvoker(request *model.UpdateAssociatedResourceRulesRequest) *UpdateAssociatedResourceRulesInvoker {
+	requestDef := GenReqDefForUpdateAssociatedResourceRules()
+	return &UpdateAssociatedResourceRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdatePredefineTags 修改预定义标签

@@ -28,7 +28,7 @@ type HtapProcessInfo struct {
 	SqlStatement *string `json:"sql_statement,omitempty"`
 
 	// **参数解释**：  会话持续时间，单位是秒。  **取值范围**：  不涉及。
-	Duration *string `json:"duration,omitempty"`
+	Duration *float64 `json:"duration,omitempty"`
 
 	// **参数解释**：  会话命令类型。    **取值范围**：  不涉及。
 	Command *string `json:"command,omitempty"`

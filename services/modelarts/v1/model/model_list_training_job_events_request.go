@@ -15,7 +15,7 @@ type ListTrainingJobEventsRequest struct {
 	// 训练作业ID。获取方法请参见[查询训练作业列表](ListTrainingJobs.xml)。
 	TrainingJobId string `json:"training_job_id"`
 
-	// 数据条目偏移量。
+	// **参数解释**：分页列表的起始页。 **约束限制**：最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。 **默认取值**：默认为0。
 	Offset *int32 `json:"offset,omitempty"`
 
 	// 指定每一页返回的最大条目数，取值范围[1,100]，默认为50。

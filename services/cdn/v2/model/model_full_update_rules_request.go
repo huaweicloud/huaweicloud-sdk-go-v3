@@ -10,7 +10,7 @@ import (
 type FullUpdateRulesRequest struct {
 
 	// **参数解释：** 规则配置内容，可以配置多个规则 **约束限制：** 不涉及
-	Rules []CreateRuleRequest `json:"rules"`
+	Rules []FullUpdateRuleRequest `json:"rules"`
 }
 
 func (o FullUpdateRulesRequest) String() string {

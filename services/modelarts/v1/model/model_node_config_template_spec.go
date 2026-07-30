@@ -13,6 +13,9 @@ type NodeConfigTemplateSpec struct {
 	DockerBaseSize int32 `json:"dockerBaseSize"`
 
 	DockerLvmConfig *DockerLvmConfig `json:"dockerLvmConfig,omitempty"`
+
+	// **参数解释**：该规格支持的Modelarts内置操作系统列表。
+	OsList *[]AffinityOs `json:"osList,omitempty"`
 }
 
 func (o NodeConfigTemplateSpec) String() string {

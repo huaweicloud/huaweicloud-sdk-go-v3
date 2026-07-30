@@ -12,7 +12,7 @@ import (
 type ModifyAutoExpandPolicyReq struct {
 
 	// **参数解释**：  自动扩容策略开关。  **取值范围**：  - true：表示开启。 - false：表示关闭。
-	SwitchOption *bool `json:"switch_option,omitempty"`
+	SwitchOption bool `json:"switch_option"`
 
 	// **参数解释**：  存储自动扩容上限，需要为10的倍数，单位GB。  **取值范围**：  10 - 最大容量上限。  示例：500
 	LimitSize *int32 `json:"limit_size,omitempty"`

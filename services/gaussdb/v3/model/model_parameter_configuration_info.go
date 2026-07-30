@@ -15,6 +15,9 @@ type ParameterConfigurationInfo struct {
 	// 数据库名称。
 	DatastoreName *string `json:"datastore_name,omitempty"`
 
+	// **参数解释**：  参数组ID。  **取值范围**：  只能由英文字母、数字组成，前面为UUID，后缀为pr07，长度为36个字符。
+	ConfigurationId *string `json:"configuration_id,omitempty"`
+
 	// 创建时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
 	Created *string `json:"created,omitempty"`
 

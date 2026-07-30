@@ -10,10 +10,10 @@ import (
 type UpgradeSrKernelVersionRequestV3 struct {
 
 	// **参数解释**： 是否延时升级。  **约束限制**： 不涉及  **取值范围**： - true - false  **默认取值**： false。
-	Delay *string `json:"delay,omitempty"`
+	Delay *bool `json:"delay,omitempty"`
 
 	// **参数解释**： 是否跳过升级校验。  **约束限制**： 不涉及  **取值范围**： - true - false  **默认取值**： false。
-	IsSkipValidate *string `json:"is_skip_validate,omitempty"`
+	IsSkipValidate *bool `json:"is_skip_validate,omitempty"`
 }
 
 func (o UpgradeSrKernelVersionRequestV3) String() string {

@@ -8,10 +8,7 @@ import (
 
 // ModifyAutoExpandPolicyResponse Response Object
 type ModifyAutoExpandPolicyResponse struct {
-
-	// 修改结果。
-	Result         *string `json:"result,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o ModifyAutoExpandPolicyResponse) String() string {

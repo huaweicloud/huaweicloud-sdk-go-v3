@@ -17,6 +17,9 @@ type DatabaseInfo struct {
 
 	// 子方法信息
 	Functions *[]FunctionInfo `json:"functions,omitempty"`
+
+	// **参数解释:** 子数据集信息 **约束限制:** 数组元素个数为0~10 **取值范围:** 数组元素个数为0~10 **默认取值:** 不涉及
+	Datasets *[]DatasetInfo `json:"datasets,omitempty"`
 }
 
 func (o DatabaseInfo) String() string {

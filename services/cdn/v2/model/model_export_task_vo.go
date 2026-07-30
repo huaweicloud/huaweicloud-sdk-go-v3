@@ -27,7 +27,7 @@ type ExportTaskVo struct {
 	// 查询时间间隔，单位：秒
 	Interval *int64 `json:"interval,omitempty"`
 
-	// **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球 **默认取值：** mainland_china: 中国大陆
+	// **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球  **默认取值：** mainland_china: 中国大陆
 	ServiceArea *string `json:"service_area,omitempty"`
 
 	// 参数类型支持：flux(流量)，req_num(请求总数)。

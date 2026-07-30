@@ -655,6 +655,111 @@ func (c *LakeFormationClient) UpdateDatabaseInvoker(request *model.UpdateDatabas
 	return &UpdateDatabaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateDataset 创建数据集
+//
+// 创建数据集
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) CreateDataset(request *model.CreateDatasetRequest) (*model.CreateDatasetResponse, error) {
+	requestDef := GenReqDefForCreateDataset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDatasetResponse), nil
+	}
+}
+
+// CreateDatasetInvoker 创建数据集
+func (c *LakeFormationClient) CreateDatasetInvoker(request *model.CreateDatasetRequest) *CreateDatasetInvoker {
+	requestDef := GenReqDefForCreateDataset()
+	return &CreateDatasetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDataset 删除数据集
+//
+// 删除数据集
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) DeleteDataset(request *model.DeleteDatasetRequest) (*model.DeleteDatasetResponse, error) {
+	requestDef := GenReqDefForDeleteDataset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDatasetResponse), nil
+	}
+}
+
+// DeleteDatasetInvoker 删除数据集
+func (c *LakeFormationClient) DeleteDatasetInvoker(request *model.DeleteDatasetRequest) *DeleteDatasetInvoker {
+	requestDef := GenReqDefForDeleteDataset()
+	return &DeleteDatasetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDatasets 查询数据集列表
+//
+// 分页查询数据集列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) ListDatasets(request *model.ListDatasetsRequest) (*model.ListDatasetsResponse, error) {
+	requestDef := GenReqDefForListDatasets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDatasetsResponse), nil
+	}
+}
+
+// ListDatasetsInvoker 查询数据集列表
+func (c *LakeFormationClient) ListDatasetsInvoker(request *model.ListDatasetsRequest) *ListDatasetsInvoker {
+	requestDef := GenReqDefForListDatasets()
+	return &ListDatasetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDataset 获取数据集信息详情
+//
+// 按名称获取数据集信息详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) ShowDataset(request *model.ShowDatasetRequest) (*model.ShowDatasetResponse, error) {
+	requestDef := GenReqDefForShowDataset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDatasetResponse), nil
+	}
+}
+
+// ShowDatasetInvoker 获取数据集信息详情
+func (c *LakeFormationClient) ShowDatasetInvoker(request *model.ShowDatasetRequest) *ShowDatasetInvoker {
+	requestDef := GenReqDefForShowDataset()
+	return &ShowDatasetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDataset 修改数据集属性
+//
+// 修改数据集属性
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *LakeFormationClient) UpdateDataset(request *model.UpdateDatasetRequest) (*model.UpdateDatasetResponse, error) {
+	requestDef := GenReqDefForUpdateDataset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDatasetResponse), nil
+	}
+}
+
+// UpdateDatasetInvoker 修改数据集属性
+func (c *LakeFormationClient) UpdateDatasetInvoker(request *model.UpdateDatasetRequest) *UpdateDatasetInvoker {
+	requestDef := GenReqDefForUpdateDataset()
+	return &UpdateDatasetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateFunction 创建函数
 //
 // 创建函数

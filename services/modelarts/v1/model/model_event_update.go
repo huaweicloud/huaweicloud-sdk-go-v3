@@ -10,6 +10,8 @@ type EventUpdate struct {
 
 	// **参数解释**：计划执行开始时间，格式为yyyy-MM-ddTHH:mm:ssZ。 **约束限制**：不涉及。 **取值范围**：大于当前时间。 **默认取值**：不填表示立即执行。
 	NotBefore *string `json:"notBefore,omitempty"`
+
+	RedeployConfig *RedeployConfig `json:"redeployConfig,omitempty"`
 }
 
 func (o EventUpdate) String() string {

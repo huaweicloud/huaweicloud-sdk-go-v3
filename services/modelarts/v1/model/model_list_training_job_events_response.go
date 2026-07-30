@@ -15,7 +15,7 @@ type ListTrainingJobEventsResponse struct {
 	// **参数解释**：最大显示条数。 **取值范围**：不涉及。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// **参数解释**：开始的条数。 **取值范围**：不涉及。
+	// **参数解释**：查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。
 	Offset *int32 `json:"offset,omitempty"`
 
 	// **参数解释**：排序方式。 **取值范围**：不涉及。

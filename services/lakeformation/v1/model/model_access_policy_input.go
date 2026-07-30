@@ -64,6 +64,10 @@ type AccessPolicyInputPermissionsEnum struct {
 	LIST_FUNC       AccessPolicyInputPermissions
 	REGISTER_MODEL  AccessPolicyInputPermissions
 	LIST_MODEL      AccessPolicyInputPermissions
+	CREATE_DATASET  AccessPolicyInputPermissions
+	LIST_DATASET    AccessPolicyInputPermissions
+	READ_DATASET    AccessPolicyInputPermissions
+	WRITE_DATASET   AccessPolicyInputPermissions
 	INSERT          AccessPolicyInputPermissions
 	UPDATE          AccessPolicyInputPermissions
 	DELETE          AccessPolicyInputPermissions
@@ -116,6 +120,18 @@ func GetAccessPolicyInputPermissionsEnum() AccessPolicyInputPermissionsEnum {
 		},
 		LIST_MODEL: AccessPolicyInputPermissions{
 			value: "LIST_MODEL",
+		},
+		CREATE_DATASET: AccessPolicyInputPermissions{
+			value: "CREATE_DATASET",
+		},
+		LIST_DATASET: AccessPolicyInputPermissions{
+			value: "LIST_DATASET",
+		},
+		READ_DATASET: AccessPolicyInputPermissions{
+			value: "READ_DATASET",
+		},
+		WRITE_DATASET: AccessPolicyInputPermissions{
+			value: "WRITE_DATASET",
 		},
 		INSERT: AccessPolicyInputPermissions{
 			value: "INSERT",
@@ -187,6 +203,10 @@ type AccessPolicyInputGrantAblePermissionsEnum struct {
 	LIST_FUNC       AccessPolicyInputGrantAblePermissions
 	REGISTER_MODEL  AccessPolicyInputGrantAblePermissions
 	LIST_MODEL      AccessPolicyInputGrantAblePermissions
+	CREATE_DATASET  AccessPolicyInputGrantAblePermissions
+	LIST_DATASET    AccessPolicyInputGrantAblePermissions
+	READ_DATASET    AccessPolicyInputGrantAblePermissions
+	WRITE_DATASET   AccessPolicyInputGrantAblePermissions
 	INSERT          AccessPolicyInputGrantAblePermissions
 	UPDATE          AccessPolicyInputGrantAblePermissions
 	DELETE          AccessPolicyInputGrantAblePermissions
@@ -239,6 +259,18 @@ func GetAccessPolicyInputGrantAblePermissionsEnum() AccessPolicyInputGrantAblePe
 		},
 		LIST_MODEL: AccessPolicyInputGrantAblePermissions{
 			value: "LIST_MODEL",
+		},
+		CREATE_DATASET: AccessPolicyInputGrantAblePermissions{
+			value: "CREATE_DATASET",
+		},
+		LIST_DATASET: AccessPolicyInputGrantAblePermissions{
+			value: "LIST_DATASET",
+		},
+		READ_DATASET: AccessPolicyInputGrantAblePermissions{
+			value: "READ_DATASET",
+		},
+		WRITE_DATASET: AccessPolicyInputGrantAblePermissions{
+			value: "WRITE_DATASET",
 		},
 		INSERT: AccessPolicyInputGrantAblePermissions{
 			value: "INSERT",

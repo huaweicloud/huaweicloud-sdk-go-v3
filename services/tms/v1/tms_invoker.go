@@ -5,6 +5,38 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/tms/v1/model"
 )
 
+type ChangeAssociatedResourceOpenStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeAssociatedResourceOpenStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeAssociatedResourceOpenStatusInvoker) Invoke() (*model.ChangeAssociatedResourceOpenStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeAssociatedResourceOpenStatusResponse), nil
+	}
+}
+
+type CreateAssociatedResourceRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAssociatedResourceRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAssociatedResourceRulesInvoker) Invoke() (*model.CreateAssociatedResourceRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAssociatedResourceRulesResponse), nil
+	}
+}
+
 type CreatePredefineTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -34,6 +66,22 @@ func (i *CreateResourceTagInvoker) Invoke() (*model.CreateResourceTagResponse, e
 		return nil, err
 	} else {
 		return result.(*model.CreateResourceTagResponse), nil
+	}
+}
+
+type DeleteAssociatedResourceRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAssociatedResourceRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAssociatedResourceRuleInvoker) Invoke() (*model.DeleteAssociatedResourceRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAssociatedResourceRuleResponse), nil
 	}
 }
 
@@ -82,6 +130,38 @@ func (i *ListApiVersionsInvoker) Invoke() (*model.ListApiVersionsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListApiVersionsResponse), nil
+	}
+}
+
+type ListAssociatedResourceRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAssociatedResourceRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAssociatedResourceRulesInvoker) Invoke() (*model.ListAssociatedResourceRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAssociatedResourceRulesResponse), nil
+	}
+}
+
+type ListAssociatedResourceSettingsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAssociatedResourceSettingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAssociatedResourceSettingsInvoker) Invoke() (*model.ListAssociatedResourceSettingsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAssociatedResourceSettingsResponse), nil
 	}
 }
 
@@ -197,6 +277,22 @@ func (i *ShowApiVersionInvoker) Invoke() (*model.ShowApiVersionResponse, error) 
 	}
 }
 
+type ShowAssociatedResourceOpenStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAssociatedResourceOpenStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAssociatedResourceOpenStatusInvoker) Invoke() (*model.ShowAssociatedResourceOpenStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAssociatedResourceOpenStatusResponse), nil
+	}
+}
+
 type ShowResourceTagInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -226,6 +322,22 @@ func (i *ShowTagQuotaInvoker) Invoke() (*model.ShowTagQuotaResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowTagQuotaResponse), nil
+	}
+}
+
+type UpdateAssociatedResourceRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAssociatedResourceRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAssociatedResourceRulesInvoker) Invoke() (*model.UpdateAssociatedResourceRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAssociatedResourceRulesResponse), nil
 	}
 }
 

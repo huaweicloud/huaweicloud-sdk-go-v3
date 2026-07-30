@@ -47,7 +47,7 @@ type ProtectionServeInfo struct {
 	// 动态加载是否开启
 	AutoAttach *bool `json:"auto_attach,omitempty"`
 
-	// 防护状态 |- agent防护状态，包含如下2种。 - 0 ：关闭。 - 1 ：开启。
+	// 防护状态 |- agent防护状态，包含如下2种。 - closed ：关闭。 - opened ：开启。
 	ProtectStatus *string `json:"protect_status,omitempty"`
 
 	// 服务器组ID

@@ -12,7 +12,7 @@ type BatchUpgradeDatabasesRequestBody struct {
 	DatabasesInstanceInfos []UpgradeDatabasesSingleInstance `json:"databases_instance_infos"`
 
 	// 是否延迟升级。
-	Delay string `json:"delay"`
+	Delay bool `json:"delay"`
 }
 
 func (o BatchUpgradeDatabasesRequestBody) String() string {

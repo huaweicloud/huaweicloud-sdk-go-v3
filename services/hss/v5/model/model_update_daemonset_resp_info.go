@@ -9,8 +9,11 @@ import (
 // UpdateDaemonsetRespInfo 升级Ds响应信息
 type UpdateDaemonsetRespInfo struct {
 
-	// 失败原因
+	// 失败原因（已废弃，请使用failed_reason）
 	FailedReson *string `json:"failed_reson,omitempty"`
+
+	// 失败原因
+	FailedReason *string `json:"failed_reason,omitempty"`
 
 	// 集群Id
 	ClusterId *string `json:"cluster_id,omitempty"`

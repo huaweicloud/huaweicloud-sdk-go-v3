@@ -43,7 +43,7 @@ type ShowInstanceEipResponse struct {
 	BandwidthName *string `json:"bandwidth_name,omitempty"`
 
 	// 带宽大小。
-	BandwidthSize *string `json:"bandwidth_size,omitempty"`
+	BandwidthSize *int32 `json:"bandwidth_size,omitempty"`
 
 	// 带宽类型。枚举值：PER 和WHOLE。
 	BandwidthShareType *string `json:"bandwidth_share_type,omitempty"`

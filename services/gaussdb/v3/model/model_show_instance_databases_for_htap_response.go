@@ -13,10 +13,7 @@ type ShowInstanceDatabasesForHtapResponse struct {
 	Databases *[]string `json:"databases,omitempty"`
 
 	// 数据库数量。
-	TotalCount *int32 `json:"total_count,omitempty"`
-
-	// 查询时间戳。
-	Timestamp      *int32 `json:"timestamp,omitempty"`
+	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

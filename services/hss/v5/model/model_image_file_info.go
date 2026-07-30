@@ -15,7 +15,7 @@ type ImageFileInfo struct {
 	// **参数解释**: 文件路径 **取值范围**: 字符长度1-256
 	FilePath *string `json:"file_path,omitempty"`
 
-	// **参数解释**: 文件大小 **取值范围**: 最小值0，最大值65535
+	// **参数解释**: 文件大小 **取值范围**: 最小值0，最大值2147483547
 	Size *int32 `json:"size,omitempty"`
 }
 

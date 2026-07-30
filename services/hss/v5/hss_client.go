@@ -4072,6 +4072,195 @@ func (c *HssClient) ValidateAdminInvoker(request *model.ValidateAdminRequest) *V
 	return &ValidateAdminInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BindAgentPolicy Agent绑定策略ID，当前仅西南-贵阳一支持
+//
+// Agent绑定策略ID。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) BindAgentPolicy(request *model.BindAgentPolicyRequest) (*model.BindAgentPolicyResponse, error) {
+	requestDef := GenReqDefForBindAgentPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BindAgentPolicyResponse), nil
+	}
+}
+
+// BindAgentPolicyInvoker Agent绑定策略ID，当前仅西南-贵阳一支持
+func (c *HssClient) BindAgentPolicyInvoker(request *model.BindAgentPolicyRequest) *BindAgentPolicyInvoker {
+	requestDef := GenReqDefForBindAgentPolicy()
+	return &BindAgentPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CopyAiPolicyGroup 复制策略组，当前仅西南-贵阳一支持
+//
+// 复制策略组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) CopyAiPolicyGroup(request *model.CopyAiPolicyGroupRequest) (*model.CopyAiPolicyGroupResponse, error) {
+	requestDef := GenReqDefForCopyAiPolicyGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CopyAiPolicyGroupResponse), nil
+	}
+}
+
+// CopyAiPolicyGroupInvoker 复制策略组，当前仅西南-贵阳一支持
+func (c *HssClient) CopyAiPolicyGroupInvoker(request *model.CopyAiPolicyGroupRequest) *CopyAiPolicyGroupInvoker {
+	requestDef := GenReqDefForCopyAiPolicyGroup()
+	return &CopyAiPolicyGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAiPolicyGroups 删除策略组，当前仅西南-贵阳一支持
+//
+// 删除策略组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) DeleteAiPolicyGroups(request *model.DeleteAiPolicyGroupsRequest) (*model.DeleteAiPolicyGroupsResponse, error) {
+	requestDef := GenReqDefForDeleteAiPolicyGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAiPolicyGroupsResponse), nil
+	}
+}
+
+// DeleteAiPolicyGroupsInvoker 删除策略组，当前仅西南-贵阳一支持
+func (c *HssClient) DeleteAiPolicyGroupsInvoker(request *model.DeleteAiPolicyGroupsRequest) *DeleteAiPolicyGroupsInvoker {
+	requestDef := GenReqDefForDeleteAiPolicyGroups()
+	return &DeleteAiPolicyGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAiPolicies 查询策略列表，当前仅西南-贵阳一支持
+//
+// 查询策略列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListAiPolicies(request *model.ListAiPoliciesRequest) (*model.ListAiPoliciesResponse, error) {
+	requestDef := GenReqDefForListAiPolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAiPoliciesResponse), nil
+	}
+}
+
+// ListAiPoliciesInvoker 查询策略列表，当前仅西南-贵阳一支持
+func (c *HssClient) ListAiPoliciesInvoker(request *model.ListAiPoliciesRequest) *ListAiPoliciesInvoker {
+	requestDef := GenReqDefForListAiPolicies()
+	return &ListAiPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAiPolicyDetail 查询策略详情，当前仅西南-贵阳一支持
+//
+// 查询策略详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListAiPolicyDetail(request *model.ListAiPolicyDetailRequest) (*model.ListAiPolicyDetailResponse, error) {
+	requestDef := GenReqDefForListAiPolicyDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAiPolicyDetailResponse), nil
+	}
+}
+
+// ListAiPolicyDetailInvoker 查询策略详情，当前仅西南-贵阳一支持
+func (c *HssClient) ListAiPolicyDetailInvoker(request *model.ListAiPolicyDetailRequest) *ListAiPolicyDetailInvoker {
+	requestDef := GenReqDefForListAiPolicyDetail()
+	return &ListAiPolicyDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAiPolicyGroups 查询策略组列表，当前仅西南-贵阳一支持
+//
+// 查询策略组列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListAiPolicyGroups(request *model.ListAiPolicyGroupsRequest) (*model.ListAiPolicyGroupsResponse, error) {
+	requestDef := GenReqDefForListAiPolicyGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAiPolicyGroupsResponse), nil
+	}
+}
+
+// ListAiPolicyGroupsInvoker 查询策略组列表，当前仅西南-贵阳一支持
+func (c *HssClient) ListAiPolicyGroupsInvoker(request *model.ListAiPolicyGroupsRequest) *ListAiPolicyGroupsInvoker {
+	requestDef := GenReqDefForListAiPolicyGroups()
+	return &ListAiPolicyGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResumePauseAiPolicies 启用、停用策略，当前仅西南-贵阳一支持
+//
+// 启用、停用策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ResumePauseAiPolicies(request *model.ResumePauseAiPoliciesRequest) (*model.ResumePauseAiPoliciesResponse, error) {
+	requestDef := GenReqDefForResumePauseAiPolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResumePauseAiPoliciesResponse), nil
+	}
+}
+
+// ResumePauseAiPoliciesInvoker 启用、停用策略，当前仅西南-贵阳一支持
+func (c *HssClient) ResumePauseAiPoliciesInvoker(request *model.ResumePauseAiPoliciesRequest) *ResumePauseAiPoliciesInvoker {
+	requestDef := GenReqDefForResumePauseAiPolicies()
+	return &ResumePauseAiPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResumePauseAiPolicyGroups 启用、停用策略组，当前仅西南-贵阳一支持
+//
+// 启用、停用策略组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ResumePauseAiPolicyGroups(request *model.ResumePauseAiPolicyGroupsRequest) (*model.ResumePauseAiPolicyGroupsResponse, error) {
+	requestDef := GenReqDefForResumePauseAiPolicyGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResumePauseAiPolicyGroupsResponse), nil
+	}
+}
+
+// ResumePauseAiPolicyGroupsInvoker 启用、停用策略组，当前仅西南-贵阳一支持
+func (c *HssClient) ResumePauseAiPolicyGroupsInvoker(request *model.ResumePauseAiPolicyGroupsRequest) *ResumePauseAiPolicyGroupsInvoker {
+	requestDef := GenReqDefForResumePauseAiPolicyGroups()
+	return &ResumePauseAiPolicyGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAiPolicyDetail 修改策略详情，当前仅西南-贵阳一支持
+//
+// 修改策略详情，该接口非常复杂，不建议通过API调用，推荐使用华为云console页面修改。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) UpdateAiPolicyDetail(request *model.UpdateAiPolicyDetailRequest) (*model.UpdateAiPolicyDetailResponse, error) {
+	requestDef := GenReqDefForUpdateAiPolicyDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAiPolicyDetailResponse), nil
+	}
+}
+
+// UpdateAiPolicyDetailInvoker 修改策略详情，当前仅西南-贵阳一支持
+func (c *HssClient) UpdateAiPolicyDetailInvoker(request *model.UpdateAiPolicyDetailRequest) *UpdateAiPolicyDetailInvoker {
+	requestDef := GenReqDefForUpdateAiPolicyDetail()
+	return &UpdateAiPolicyDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ChangeAntivirusPayPerScanStatus 修改“病毒查杀按次计费”开关状态
 //
 // 修改“病毒查杀按次计费”开关状态。
@@ -6548,6 +6737,48 @@ func (c *HssClient) UpdateCustomRuleConfig(request *model.UpdateCustomRuleConfig
 func (c *HssClient) UpdateCustomRuleConfigInvoker(request *model.UpdateCustomRuleConfigRequest) *UpdateCustomRuleConfigInvoker {
 	requestDef := GenReqDefForUpdateCustomRuleConfig()
 	return &UpdateCustomRuleConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAlarmWhiteListHostDetail 查询告警白名单生详情
+//
+// 查询告警白名单生详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListAlarmWhiteListHostDetail(request *model.ListAlarmWhiteListHostDetailRequest) (*model.ListAlarmWhiteListHostDetailResponse, error) {
+	requestDef := GenReqDefForListAlarmWhiteListHostDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAlarmWhiteListHostDetailResponse), nil
+	}
+}
+
+// ListAlarmWhiteListHostDetailInvoker 查询告警白名单生详情
+func (c *HssClient) ListAlarmWhiteListHostDetailInvoker(request *model.ListAlarmWhiteListHostDetailRequest) *ListAlarmWhiteListHostDetailInvoker {
+	requestDef := GenReqDefForListAlarmWhiteListHostDetail()
+	return &ListAlarmWhiteListHostDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAlarmWhiteListHost 编辑告警白名单生效主机
+//
+// 编辑告警白名单主机相关信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) UpdateAlarmWhiteListHost(request *model.UpdateAlarmWhiteListHostRequest) (*model.UpdateAlarmWhiteListHostResponse, error) {
+	requestDef := GenReqDefForUpdateAlarmWhiteListHost()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAlarmWhiteListHostResponse), nil
+	}
+}
+
+// UpdateAlarmWhiteListHostInvoker 编辑告警白名单生效主机
+func (c *HssClient) UpdateAlarmWhiteListHostInvoker(request *model.UpdateAlarmWhiteListHostRequest) *UpdateAlarmWhiteListHostInvoker {
+	requestDef := GenReqDefForUpdateAlarmWhiteListHost()
+	return &UpdateAlarmWhiteListHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListFileEvents 变更文件列表

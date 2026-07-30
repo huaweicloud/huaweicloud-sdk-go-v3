@@ -62,7 +62,7 @@ func GenReqDefForBatchBindInferApiKeys() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/services/{service_id}/api-keys/batch-bind").
 		WithResponse(new(model.BatchBindInferApiKeysResponse)).
-		WithContentType("application/x-www-form-urlencoded")
+		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServiceId").
@@ -300,7 +300,7 @@ func GenReqDefForBatchUnbindInferApiKeys() *def.HttpRequestDef {
 		WithMethod(http.MethodPost).
 		WithPath("/v2/{project_id}/services/{service_id}/api-keys/batch-unbind").
 		WithResponse(new(model.BatchUnbindInferApiKeysResponse)).
-		WithContentType("application/x-www-form-urlencoded")
+		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ServiceId").

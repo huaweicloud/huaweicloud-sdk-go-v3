@@ -10,7 +10,7 @@ import (
 type DownloadDdlLogsResponse struct {
 
 	// **参数解释**：  每个日志文件的下载链接详情。  **取值范围**：  不涉及。
-	List           *[]DownLoadFileInfoItem `json:"list,omitempty"`
+	DownloadFiles  *[]DownLoadFileInfoItem `json:"download_files,omitempty"`
 	HttpStatusCode int                     `json:"-"`
 }
 

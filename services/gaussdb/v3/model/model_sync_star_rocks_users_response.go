@@ -10,8 +10,8 @@ import (
 type SyncStarRocksUsersResponse struct {
 
 	// 开启行列分流是否成功。
-	Success        *string `json:"success,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Success        *bool `json:"success,omitempty"`
+	HttpStatusCode int   `json:"-"`
 }
 
 func (o SyncStarRocksUsersResponse) String() string {

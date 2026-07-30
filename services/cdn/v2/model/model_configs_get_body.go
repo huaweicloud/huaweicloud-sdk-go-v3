@@ -104,6 +104,9 @@ type ConfigsGetBody struct {
 	ClientCert *ClientCert `json:"client_cert,omitempty"`
 
 	HttpsTlsVersion *HttpsTlsVersion `json:"https_tls_version,omitempty"`
+
+	// **参数解释：** 设置用量封顶阈值，当实际用量大于阈值时停用域名，有效预防流量盗刷或恶意攻击带来的高额账单。  > 由于监控数据存在时延，域名将在用量达到阈值后的10分钟左右被停用  **约束限制：** 不涉及
+	FlowLimitStrategy *[]FlowLimitStrategy `json:"flow_limit_strategy,omitempty"`
 }
 
 func (o ConfigsGetBody) String() string {

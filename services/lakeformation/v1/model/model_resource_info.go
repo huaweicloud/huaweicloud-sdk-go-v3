@@ -43,6 +43,7 @@ type ResourceInfoTypeEnum struct {
 	FUNC     ResourceInfoType
 	MODEL    ResourceInfoType
 	URI      ResourceInfoType
+	DATASET  ResourceInfoType
 }
 
 func GetResourceInfoTypeEnum() ResourceInfoTypeEnum {
@@ -67,6 +68,9 @@ func GetResourceInfoTypeEnum() ResourceInfoTypeEnum {
 		},
 		URI: ResourceInfoType{
 			value: "URI",
+		},
+		DATASET: ResourceInfoType{
+			value: "DATASET",
 		},
 	}
 }

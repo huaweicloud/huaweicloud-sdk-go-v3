@@ -8,12 +8,7 @@ import (
 
 // UpdateServerlessScalingPolicyResponse Response Object
 type UpdateServerlessScalingPolicyResponse struct {
-
-	// **参数描述**：  自定义扩容步长。  **约束限制**：  不涉及。  **取值范围**：  2-算力上限的一半。  **默认取值**：  不涉及。
-	EnlargeStepSize *string `json:"enlarge_step_size,omitempty"`
-
-	CustomScalingConfig *CustomScalingConfig `json:"custom_scaling_config,omitempty"`
-	HttpStatusCode      int                  `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o UpdateServerlessScalingPolicyResponse) String() string {

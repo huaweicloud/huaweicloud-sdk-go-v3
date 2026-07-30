@@ -41,7 +41,7 @@ type VulUrgentResponseInfoDataList struct {
 	// **参数解释**: 主机名称 **取值范围**: 字符长度1-128位
 	HostName *string `json:"host_name,omitempty"`
 
-	// **参数解释**: 修复优先级 **取值范围**: - Critical：紧急。 - High：高。 - Medium：中。 - Low：低。
+	// **参数解释**: 主机的资产重要性 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产
 	AssetValue *string `json:"asset_value,omitempty"`
 
 	// **参数解释**： 漏洞状态 **取值范围**： 字符长度0-32位

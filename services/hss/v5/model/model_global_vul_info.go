@@ -18,8 +18,11 @@ type GlobalVulInfo struct {
 	// **参数解释**: 修复紧急度 **取值范围**: - immediate_repair：需尽快修复。 - delay_repair：可延后修复。 - not_needed_repair：暂可不修复。
 	RepairNecessity *string `json:"repair_necessity,omitempty"`
 
-	// **参数解释** 漏洞描述 **取值范围** 字符长度0-65535位
+	// **参数解释** 漏洞描述（已废弃，请使用description） **取值范围** 字符长度0-65535位
 	Decription *string `json:"decription,omitempty"`
+
+	// **参数解释** 漏洞描述 **取值范围** 字符长度0-65535位
+	Description *string `json:"description,omitempty"`
 
 	// **参数解释** 解决方案 **取值范围** 字符长度0-65535位
 	Solution *string `json:"solution,omitempty"`

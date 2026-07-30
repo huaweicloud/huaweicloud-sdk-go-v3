@@ -22,7 +22,7 @@ type HtapErrorLogQueryRequestBody struct {
 	Level string `json:"level"`
 
 	// **参数解释**： 查询记录数。  **约束限制**：  不涉及。  **取值范围**： 0-100。  **默认取值**： 不涉及。
-	Limit int32 `json:"limit"`
+	Limit string `json:"limit"`
 
 	// **参数解释**： 日志单行序列号，第一次查询时不需要此参数，后续分页查询时需要使用，可从上次查询的返回信息中获取。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**： 不涉及。
 	LineNum *string `json:"line_num,omitempty"`

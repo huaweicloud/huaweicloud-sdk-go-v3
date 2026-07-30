@@ -56,8 +56,14 @@ type ScheduledEvent struct {
 	// **参数解释**：提示信息。 **约束限制**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
 	ProbeMsg *string `json:"probeMsg,omitempty"`
 
+	// **参数解释**：计划事件执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+	JobProgress *string `json:"jobProgress,omitempty"`
+
 	// **参数解释**：节点的重部署类型。 **约束限制**：不涉及。 **取值范围**：可选值如下：- HARD：表示支持强制重部署, - SOFT：表示支持重部署 **默认取值**：不涉及。
 	RedeployType []string `json:"redeployType"`
+
+	// **参数解释**：snt9b23 场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：snt9b23 涉及, snt9b 不涉及。
+	UnderLyingInstanceId *string `json:"underLyingInstanceId,omitempty"`
 }
 
 func (o ScheduledEvent) String() string {

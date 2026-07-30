@@ -11,8 +11,11 @@ type ImageTypeRiskInfo struct {
 	// 本地镜像
 	Local *int32 `json:"local,omitempty"`
 
-	// 仓库镜像
+	// 仓库镜像（已废弃，请使用registry）
 	Registriy *int32 `json:"registriy,omitempty"`
+
+	// 仓库镜像
+	Registry *int32 `json:"registry,omitempty"`
 
 	// cicd镜像
 	Cicd *int32 `json:"cicd,omitempty"`
