@@ -23,6 +23,9 @@ type ListDataconnectionsRequest struct {
 
 	// 偏移量
 	Offset *string `json:"offset,omitempty"`
+
+	// 数据连接中数据库的ip，支持模糊搜索
+	Ip *string `json:"ip,omitempty"`
 }
 
 func (o ListDataconnectionsRequest) String() string {

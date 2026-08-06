@@ -3744,7 +3744,7 @@ func (c *DataArtsStudioClient) ListFactoryJobInstancesByNameInvoker(request *mod
 
 // ListFactoryJobs 查询作业列表
 //
-// 查询作业列表清单
+// 查询作业列表清单，支持按作业类型、名称、ID、状态、标签、数据连接等条件筛选。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListFactoryJobs(request *model.ListFactoryJobsRequest) (*model.ListFactoryJobsResponse, error) {
@@ -4726,6 +4726,27 @@ func (c *DataArtsStudioClient) ListTableModels(request *model.ListTableModelsReq
 func (c *DataArtsStudioClient) ListTableModelsInvoker(request *model.ListTableModelsRequest) *ListTableModelsInvoker {
 	requestDef := GenReqDefForListTableModels()
 	return &ListTableModelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTaskTableReferenceDetail 查询单表的作业表引用详情
+//
+// 根据表名查询该表被哪些作业引用的详细信息，支持按输入输出类型、工作空间等条件筛选。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListTaskTableReferenceDetail(request *model.ListTaskTableReferenceDetailRequest) (*model.ListTaskTableReferenceDetailResponse, error) {
+	requestDef := GenReqDefForListTaskTableReferenceDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTaskTableReferenceDetailResponse), nil
+	}
+}
+
+// ListTaskTableReferenceDetailInvoker 查询单表的作业表引用详情
+func (c *DataArtsStudioClient) ListTaskTableReferenceDetailInvoker(request *model.ListTaskTableReferenceDetailRequest) *ListTaskTableReferenceDetailInvoker {
+	requestDef := GenReqDefForListTaskTableReferenceDetail()
+	return &ListTaskTableReferenceDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListWorkspaceRoles 获取工作空间用户角色

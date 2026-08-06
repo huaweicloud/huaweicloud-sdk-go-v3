@@ -9,12 +9,12 @@ import (
 // ListFactoryJobsResponse Response Object
 type ListFactoryJobsResponse struct {
 
-	// 作业数量
+	// 作业总数。
 	Total *int32 `json:"total,omitempty"`
 
-	// 作业列表
-	Jobs           *[]JobResp `json:"jobs,omitempty"`
-	HttpStatusCode int        `json:"-"`
+	// 作业列表。
+	Jobs           *[]JobResultV2 `json:"jobs,omitempty"`
+	HttpStatusCode int            `json:"-"`
 }
 
 func (o ListFactoryJobsResponse) String() string {

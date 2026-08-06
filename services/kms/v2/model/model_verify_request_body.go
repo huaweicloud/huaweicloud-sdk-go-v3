@@ -20,7 +20,7 @@ type VerifyRequestBody struct {
 	// 待验证的签名值，使用Base64编码。
 	Signature string `json:"signature"`
 
-	// 签名算法，枚举如下：  - RSASSA_PSS_SHA_256  - RSASSA_PSS_SHA_384  - RSASSA_PSS_SHA_512  - RSASSA_PKCS1_V1_5_SHA_256  - RSASSA_PKCS1_V1_5_SHA_384  - RSASSA_PKCS1_V1_5_SHA_512  - ECDSA_SHA_256  - ECDSA_SHA_384  - ECDSA_SHA_512  - SM2DSA_SM3
+	// 签名算法，枚举如下：  - RSASSA_PSS_SHA_256  - RSASSA_PSS_SHA_384  - RSASSA_PSS_SHA_512  - RSASSA_PKCS1_V1_5_SHA_256  - RSASSA_PKCS1_V1_5_SHA_384  - RSASSA_PKCS1_V1_5_SHA_512  - ECDSA_SHA_256  - ECDSA_SHA_384  - ECDSA_SHA_512  - SM2DSA_SM3  - ED25519_SHA_512  - ED25519_PH_SHA_512
 	SigningAlgorithm VerifyRequestBodySigningAlgorithm `json:"signing_algorithm"`
 
 	// 消息类型，默认为“DIGEST”，枚举如下：  - DIGEST 表示消息摘要  - RAW 表示消息原文
@@ -54,6 +54,8 @@ type VerifyRequestBodySigningAlgorithmEnum struct {
 	ECDSA_SHA_384             VerifyRequestBodySigningAlgorithm
 	ECDSA_SHA_512             VerifyRequestBodySigningAlgorithm
 	SM2_DSA_SM3               VerifyRequestBodySigningAlgorithm
+	ED25519_SHA_512           VerifyRequestBodySigningAlgorithm
+	ED25519_PH_SHA_512        VerifyRequestBodySigningAlgorithm
 }
 
 func GetVerifyRequestBodySigningAlgorithmEnum() VerifyRequestBodySigningAlgorithmEnum {
@@ -87,6 +89,12 @@ func GetVerifyRequestBodySigningAlgorithmEnum() VerifyRequestBodySigningAlgorith
 		},
 		SM2_DSA_SM3: VerifyRequestBodySigningAlgorithm{
 			value: "SM2DSA_SM3",
+		},
+		ED25519_SHA_512: VerifyRequestBodySigningAlgorithm{
+			value: "ED25519_SHA_512",
+		},
+		ED25519_PH_SHA_512: VerifyRequestBodySigningAlgorithm{
+			value: "ED25519_PH_SHA_512",
 		},
 	}
 }

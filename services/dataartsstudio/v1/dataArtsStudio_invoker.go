@@ -3589,6 +3589,22 @@ func (i *ListTableModelsInvoker) Invoke() (*model.ListTableModelsResponse, error
 	}
 }
 
+type ListTaskTableReferenceDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTaskTableReferenceDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTaskTableReferenceDetailInvoker) Invoke() (*model.ListTaskTableReferenceDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTaskTableReferenceDetailResponse), nil
+	}
+}
+
 type ListWorkspaceRolesInvoker struct {
 	*invoker.BaseInvoker
 }

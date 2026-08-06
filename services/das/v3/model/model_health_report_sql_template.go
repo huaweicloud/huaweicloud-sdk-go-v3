@@ -9,37 +9,37 @@ import (
 type HealthReportSqlTemplate struct {
 
 	// 模版ID。
-	TemplateId string `json:"template_id"`
+	TemplateId *string `json:"template_id,omitempty"`
 
 	// 模版内容。
-	Template string `json:"template"`
+	Template *string `json:"template,omitempty"`
 
 	// 数据库列表。
-	Databases []string `json:"databases"`
+	Databases *[]string `json:"databases,omitempty"`
 
 	// 执行次数。
-	Times int64 `json:"times"`
+	Times *int64 `json:"times,omitempty"`
 
 	// 平均执行时间。
-	AvgQueryTime float64 `json:"avg_query_time"`
+	AvgQueryTime *float64 `json:"avg_query_time,omitempty"`
 
 	// 最大执行时间。
-	MaxQueryTime float64 `json:"max_query_time"`
+	MaxQueryTime *float64 `json:"max_query_time,omitempty"`
 
 	// 平均扫描行数。
-	AvgRowsExamined float64 `json:"avg_rows_examined"`
+	AvgRowsExamined *float64 `json:"avg_rows_examined,omitempty"`
 
 	// 最大扫描行数。
-	MaxRowsExamined float64 `json:"max_rows_examined"`
+	MaxRowsExamined *float64 `json:"max_rows_examined,omitempty"`
 
 	// 总扫描行数。
-	SumRowsExamined float64 `json:"sum_rows_examined"`
+	SumRowsExamined *float64 `json:"sum_rows_examined,omitempty"`
 
 	// 平均返回行数。
-	AvgRowsSent float64 `json:"avg_rows_sent"`
+	AvgRowsSent *float64 `json:"avg_rows_sent,omitempty"`
 
 	// 最大返回行数。
-	MaxRowsSent float64 `json:"max_rows_sent"`
+	MaxRowsSent *float64 `json:"max_rows_sent,omitempty"`
 }
 
 func (o HealthReportSqlTemplate) String() string {

@@ -20,6 +20,12 @@ type ListInferDeploymentPodEventsRequest struct {
 
 	// **参数解释：** 服务实例pod名字，可以为all，为all时去查询所有的服务实例。 **约束限制：** 不涉及。 **取值范围：** 服务实例名字。 **默认取值：** 不涉及。
 	Name string `json:"name"`
+
+	// **参数解释：** 查询开始时间，Unix时间戳（毫秒）。 **约束限制：** 需要与end_time同时传入或同时为空。不能早于end_time。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+	StartTime *string `json:"start_time,omitempty"`
+
+	// **参数解释：** 查询结束时间，Unix时间戳（毫秒）。 **约束限制：** 需要与start_time同时传入或同时为空。不能早于start_time。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+	EndTime *string `json:"end_time,omitempty"`
 }
 
 func (o ListInferDeploymentPodEventsRequest) String() string {

@@ -981,6 +981,38 @@ func (i *ListSubTaskCaseOverstockUsingInvoker) Invoke() (*model.ListSubTaskCaseO
 	}
 }
 
+type ListSubTasksByPostUsingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSubTasksByPostUsingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSubTasksByPostUsingInvoker) Invoke() (*model.ListSubTasksByPostUsingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSubTasksByPostUsingResponse), nil
+	}
+}
+
+type ListSubTestCaseByConditionsUsingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSubTestCaseByConditionsUsingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSubTestCaseByConditionsUsingInvoker) Invoke() (*model.ListSubTestCaseByConditionsUsingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSubTestCaseByConditionsUsingResponse), nil
+	}
+}
+
 type ListTaskAssignCasesInvoker struct {
 	*invoker.BaseInvoker
 }

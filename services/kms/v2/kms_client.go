@@ -135,6 +135,27 @@ func (c *KmsClient) CancelSelfGrantInvoker(request *model.CancelSelfGrantRequest
 	return &CancelSelfGrantInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateAccessPoint 创建接入点
+//
+// 用于创建接入点
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) CreateAccessPoint(request *model.CreateAccessPointRequest) (*model.CreateAccessPointResponse, error) {
+	requestDef := GenReqDefForCreateAccessPoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAccessPointResponse), nil
+	}
+}
+
+// CreateAccessPointInvoker 创建接入点
+func (c *KmsClient) CreateAccessPointInvoker(request *model.CreateAccessPointRequest) *CreateAccessPointInvoker {
+	requestDef := GenReqDefForCreateAccessPoint()
+	return &CreateAccessPointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateAlias
 //
 //
@@ -174,6 +195,27 @@ func (c *KmsClient) CreateDatakey(request *model.CreateDatakeyRequest) (*model.C
 func (c *KmsClient) CreateDatakeyInvoker(request *model.CreateDatakeyRequest) *CreateDatakeyInvoker {
 	requestDef := GenReqDefForCreateDatakey()
 	return &CreateDatakeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDatakeyCapsule 创建密钥胶囊
+//
+// 创建密钥胶囊
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) CreateDatakeyCapsule(request *model.CreateDatakeyCapsuleRequest) (*model.CreateDatakeyCapsuleResponse, error) {
+	requestDef := GenReqDefForCreateDatakeyCapsule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDatakeyCapsuleResponse), nil
+	}
+}
+
+// CreateDatakeyCapsuleInvoker 创建密钥胶囊
+func (c *KmsClient) CreateDatakeyCapsuleInvoker(request *model.CreateDatakeyCapsuleRequest) *CreateDatakeyCapsuleInvoker {
+	requestDef := GenReqDefForCreateDatakeyCapsule()
+	return &CreateDatakeyCapsuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateDatakeyWithoutPlaintext 创建不含明文数据密钥
@@ -262,6 +304,27 @@ func (c *KmsClient) CreateKey(request *model.CreateKeyRequest) (*model.CreateKey
 func (c *KmsClient) CreateKeyInvoker(request *model.CreateKeyRequest) *CreateKeyInvoker {
 	requestDef := GenReqDefForCreateKey()
 	return &CreateKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateKeyPolicy 创建密钥策略
+//
+// 创建密钥策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) CreateKeyPolicy(request *model.CreateKeyPolicyRequest) (*model.CreateKeyPolicyResponse, error) {
+	requestDef := GenReqDefForCreateKeyPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateKeyPolicyResponse), nil
+	}
+}
+
+// CreateKeyPolicyInvoker 创建密钥策略
+func (c *KmsClient) CreateKeyPolicyInvoker(request *model.CreateKeyPolicyRequest) *CreateKeyPolicyInvoker {
+	requestDef := GenReqDefForCreateKeyPolicy()
+	return &CreateKeyPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateKeyStore 创建专属密钥库
@@ -434,6 +497,48 @@ func (c *KmsClient) DecryptDatakeyInvoker(request *model.DecryptDatakeyRequest) 
 	return &DecryptDatakeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DecryptDatakeyCapsule 解密密钥胶囊
+//
+// 解密密钥胶囊
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) DecryptDatakeyCapsule(request *model.DecryptDatakeyCapsuleRequest) (*model.DecryptDatakeyCapsuleResponse, error) {
+	requestDef := GenReqDefForDecryptDatakeyCapsule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DecryptDatakeyCapsuleResponse), nil
+	}
+}
+
+// DecryptDatakeyCapsuleInvoker 解密密钥胶囊
+func (c *KmsClient) DecryptDatakeyCapsuleInvoker(request *model.DecryptDatakeyCapsuleRequest) *DecryptDatakeyCapsuleInvoker {
+	requestDef := GenReqDefForDecryptDatakeyCapsule()
+	return &DecryptDatakeyCapsuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAccessPoint 删除接入点
+//
+// 删除接入点
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) DeleteAccessPoint(request *model.DeleteAccessPointRequest) (*model.DeleteAccessPointResponse, error) {
+	requestDef := GenReqDefForDeleteAccessPoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAccessPointResponse), nil
+	}
+}
+
+// DeleteAccessPointInvoker 删除接入点
+func (c *KmsClient) DeleteAccessPointInvoker(request *model.DeleteAccessPointRequest) *DeleteAccessPointInvoker {
+	requestDef := GenReqDefForDeleteAccessPoint()
+	return &DeleteAccessPointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteAlias
 //
 // 删除别名
@@ -495,6 +600,27 @@ func (c *KmsClient) DeleteKey(request *model.DeleteKeyRequest) (*model.DeleteKey
 func (c *KmsClient) DeleteKeyInvoker(request *model.DeleteKeyRequest) *DeleteKeyInvoker {
 	requestDef := GenReqDefForDeleteKey()
 	return &DeleteKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteKeyPolicy 删除密钥策略
+//
+// 删除密钥策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) DeleteKeyPolicy(request *model.DeleteKeyPolicyRequest) (*model.DeleteKeyPolicyResponse, error) {
+	requestDef := GenReqDefForDeleteKeyPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteKeyPolicyResponse), nil
+	}
+}
+
+// DeleteKeyPolicyInvoker 删除密钥策略
+func (c *KmsClient) DeleteKeyPolicyInvoker(request *model.DeleteKeyPolicyRequest) *DeleteKeyPolicyInvoker {
+	requestDef := GenReqDefForDeleteKeyPolicy()
+	return &DeleteKeyPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteKeyStore 删除专属密钥库
@@ -560,6 +686,27 @@ func (c *KmsClient) DeriveSharedSecretInvoker(request *model.DeriveSharedSecretR
 	return &DeriveSharedSecretInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DisableAccessPoint 禁用接入点
+//
+// 禁用接入点
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) DisableAccessPoint(request *model.DisableAccessPointRequest) (*model.DisableAccessPointResponse, error) {
+	requestDef := GenReqDefForDisableAccessPoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisableAccessPointResponse), nil
+	}
+}
+
+// DisableAccessPointInvoker 禁用接入点
+func (c *KmsClient) DisableAccessPointInvoker(request *model.DisableAccessPointRequest) *DisableAccessPointInvoker {
+	requestDef := GenReqDefForDisableAccessPoint()
+	return &DisableAccessPointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DisableKey 禁用密钥
 //
 // - 功能介绍：禁用密钥，密钥禁用后不可以使用。
@@ -622,6 +769,48 @@ func (c *KmsClient) DisableKeyStore(request *model.DisableKeyStoreRequest) (*mod
 func (c *KmsClient) DisableKeyStoreInvoker(request *model.DisableKeyStoreRequest) *DisableKeyStoreInvoker {
 	requestDef := GenReqDefForDisableKeyStore()
 	return &DisableKeyStoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadAccessPointPrivateKey 下载通用接入点私钥
+//
+// 用于下载通用接入点私钥
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) DownloadAccessPointPrivateKey(request *model.DownloadAccessPointPrivateKeyRequest) (*model.DownloadAccessPointPrivateKeyResponse, error) {
+	requestDef := GenReqDefForDownloadAccessPointPrivateKey()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadAccessPointPrivateKeyResponse), nil
+	}
+}
+
+// DownloadAccessPointPrivateKeyInvoker 下载通用接入点私钥
+func (c *KmsClient) DownloadAccessPointPrivateKeyInvoker(request *model.DownloadAccessPointPrivateKeyRequest) *DownloadAccessPointPrivateKeyInvoker {
+	requestDef := GenReqDefForDownloadAccessPointPrivateKey()
+	return &DownloadAccessPointPrivateKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// EnableAccessPoint 启用接入点
+//
+// 启用接入点
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) EnableAccessPoint(request *model.EnableAccessPointRequest) (*model.EnableAccessPointResponse, error) {
+	requestDef := GenReqDefForEnableAccessPoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.EnableAccessPointResponse), nil
+	}
+}
+
+// EnableAccessPointInvoker 启用接入点
+func (c *KmsClient) EnableAccessPointInvoker(request *model.EnableAccessPointRequest) *EnableAccessPointInvoker {
+	requestDef := GenReqDefForEnableAccessPoint()
+	return &EnableAccessPointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // EnableKey 启用密钥
@@ -775,6 +964,27 @@ func (c *KmsClient) ImportKeyMaterialInvoker(request *model.ImportKeyMaterialReq
 	return &ImportKeyMaterialInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAccessPoint 查询接入点列表
+//
+// 用于查询接入点
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) ListAccessPoint(request *model.ListAccessPointRequest) (*model.ListAccessPointResponse, error) {
+	requestDef := GenReqDefForListAccessPoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAccessPointResponse), nil
+	}
+}
+
+// ListAccessPointInvoker 查询接入点列表
+func (c *KmsClient) ListAccessPointInvoker(request *model.ListAccessPointRequest) *ListAccessPointInvoker {
+	requestDef := GenReqDefForListAccessPoint()
+	return &ListAccessPointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAliases
 //
 // 查询一个密钥关联的所有别名
@@ -836,6 +1046,27 @@ func (c *KmsClient) ListKeyDetail(request *model.ListKeyDetailRequest) (*model.L
 func (c *KmsClient) ListKeyDetailInvoker(request *model.ListKeyDetailRequest) *ListKeyDetailInvoker {
 	requestDef := GenReqDefForListKeyDetail()
 	return &ListKeyDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListKeyPolicy 查询密钥策略列表
+//
+// 查询密钥策略列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) ListKeyPolicy(request *model.ListKeyPolicyRequest) (*model.ListKeyPolicyResponse, error) {
+	requestDef := GenReqDefForListKeyPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListKeyPolicyResponse), nil
+	}
+}
+
+// ListKeyPolicyInvoker 查询密钥策略列表
+func (c *KmsClient) ListKeyPolicyInvoker(request *model.ListKeyPolicyRequest) *ListKeyPolicyInvoker {
+	requestDef := GenReqDefForListKeyPolicy()
+	return &ListKeyPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListKeyStores 查询专属密钥库列表
@@ -1006,6 +1237,48 @@ func (c *KmsClient) ReplicateKey(request *model.ReplicateKeyRequest) (*model.Rep
 func (c *KmsClient) ReplicateKeyInvoker(request *model.ReplicateKeyRequest) *ReplicateKeyInvoker {
 	requestDef := GenReqDefForReplicateKey()
 	return &ReplicateKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RotateOnDemand 按需轮转密钥
+//
+// 用于外部密钥的密钥材料，需要用户提前导入密钥材料后才能执行轮转
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) RotateOnDemand(request *model.RotateOnDemandRequest) (*model.RotateOnDemandResponse, error) {
+	requestDef := GenReqDefForRotateOnDemand()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RotateOnDemandResponse), nil
+	}
+}
+
+// RotateOnDemandInvoker 按需轮转密钥
+func (c *KmsClient) RotateOnDemandInvoker(request *model.RotateOnDemandRequest) *RotateOnDemandInvoker {
+	requestDef := GenReqDefForRotateOnDemand()
+	return &RotateOnDemandInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowKeyPolicy 查询密钥策略
+//
+// 查询密钥策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) ShowKeyPolicy(request *model.ShowKeyPolicyRequest) (*model.ShowKeyPolicyResponse, error) {
+	requestDef := GenReqDefForShowKeyPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKeyPolicyResponse), nil
+	}
+}
+
+// ShowKeyPolicyInvoker 查询密钥策略
+func (c *KmsClient) ShowKeyPolicyInvoker(request *model.ShowKeyPolicyRequest) *ShowKeyPolicyInvoker {
+	requestDef := GenReqDefForShowKeyPolicy()
+	return &ShowKeyPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowKeyRotationStatus 查询密钥轮换状态
@@ -1201,6 +1474,27 @@ func (c *KmsClient) UpdateKeyDescription(request *model.UpdateKeyDescriptionRequ
 func (c *KmsClient) UpdateKeyDescriptionInvoker(request *model.UpdateKeyDescriptionRequest) *UpdateKeyDescriptionInvoker {
 	requestDef := GenReqDefForUpdateKeyDescription()
 	return &UpdateKeyDescriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateKeyPolicy 更新密钥策略
+//
+// 更新密钥策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) UpdateKeyPolicy(request *model.UpdateKeyPolicyRequest) (*model.UpdateKeyPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateKeyPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateKeyPolicyResponse), nil
+	}
+}
+
+// UpdateKeyPolicyInvoker 更新密钥策略
+func (c *KmsClient) UpdateKeyPolicyInvoker(request *model.UpdateKeyPolicyRequest) *UpdateKeyPolicyInvoker {
+	requestDef := GenReqDefForUpdateKeyPolicy()
+	return &UpdateKeyPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateKeyRotationInterval 修改密钥轮换周期

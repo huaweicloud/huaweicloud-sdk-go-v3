@@ -9,19 +9,19 @@ import (
 type HealthReportRatioStat struct {
 
 	// 指标名。
-	Metric string `json:"metric"`
+	Metric *string `json:"metric,omitempty"`
 
 	// 最大值。
-	MaxValue float64 `json:"max_value"`
+	MaxValue *float64 `json:"max_value,omitempty"`
 
 	// 高水位占比。
-	CriticalRatio float64 `json:"critical_ratio"`
+	CriticalRatio *float64 `json:"critical_ratio,omitempty"`
 
 	// 中水位占比。
-	MediumRatio float64 `json:"medium_ratio"`
+	MediumRatio *float64 `json:"medium_ratio,omitempty"`
 
 	// 低水位占比。
-	LightRatio float64 `json:"light_ratio"`
+	LightRatio *float64 `json:"light_ratio,omitempty"`
 }
 
 func (o HealthReportRatioStat) String() string {

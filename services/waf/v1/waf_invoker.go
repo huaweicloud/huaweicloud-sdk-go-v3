@@ -837,6 +837,22 @@ func (i *CreatePolicyInvoker) Invoke() (*model.CreatePolicyResponse, error) {
 	}
 }
 
+type CreatePoolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreatePoolInvoker) Invoke() (*model.CreatePoolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePoolResponse), nil
+	}
+}
+
 type CreatePremiumHostInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1202,6 +1218,22 @@ func (i *DeletePolicyInvoker) Invoke() (*model.DeletePolicyResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeletePolicyResponse), nil
+	}
+}
+
+type DeletePoolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeletePoolInvoker) Invoke() (*model.DeletePoolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePoolResponse), nil
 	}
 }
 
@@ -2514,6 +2546,22 @@ func (i *ShowPolicyGeoipMapInvoker) Invoke() (*model.ShowPolicyGeoipMapResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowPolicyGeoipMapResponse), nil
+	}
+}
+
+type ShowPoolInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPoolInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPoolInvoker) Invoke() (*model.ShowPoolResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPoolResponse), nil
 	}
 }
 

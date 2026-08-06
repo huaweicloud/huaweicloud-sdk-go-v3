@@ -20,7 +20,10 @@ type ShowKeyRotationStatusResponse struct {
 
 	// 密钥轮换次数。
 	NumberOfRotations *int32 `json:"number_of_rotations,omitempty"`
-	HttpStatusCode    int    `json:"-"`
+
+	// **参数解释：** 密钥下的密钥材料信息 **取值范围：** 不涉及
+	KeyMaterials   *[]GetkeyRotationStatusResponseBodyKeyMaterials `json:"key_materials,omitempty"`
+	HttpStatusCode int                                             `json:"-"`
 }
 
 func (o ShowKeyRotationStatusResponse) String() string {

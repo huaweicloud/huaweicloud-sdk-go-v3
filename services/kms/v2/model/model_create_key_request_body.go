@@ -14,7 +14,7 @@ type CreateKeyRequestBody struct {
 	// 非默认主密钥别名，取值范围为1到255个字符，满足正则匹配“^[a-zA-Z0-9:/_-]{1,255}$”，且不与系统服务创建的默认主密钥别名重名。
 	KeyAlias string `json:"key_alias"`
 
-	// 密钥生成算法，默认为“AES_256”，枚举如下： - AES_256 - SM4 - RSA_2048 - RSA_3072 - RSA_4096 - EC_P256 - EC_P384 - SECP256K1 - SM2
+	// 密钥生成算法，默认为“AES_256”，枚举如下： - AES_256 - SM4 - RSA_2048 - RSA_3072 - RSA_4096 - EC_P256 - EC_P384 - SECP256K1 - SM2 - ED25519 - HMAC_256 - HMAC_384 - HMAC_512 - HMAC_SM3
 	KeySpec *CreateKeyRequestBodyKeySpec `json:"key_spec,omitempty"`
 
 	// 密钥用途，对称密钥默认为“ENCRYPT_DECRYPT”，非对称密钥默认为“SIGN_VERIFY”，枚举如下： - ENCRYPT_DECRYPT - SIGN_VERIFY
@@ -62,6 +62,11 @@ type CreateKeyRequestBodyKeySpecEnum struct {
 	EC_P384    CreateKeyRequestBodyKeySpec
 	SECP256_K1 CreateKeyRequestBodyKeySpec
 	SM2        CreateKeyRequestBodyKeySpec
+	ED25519    CreateKeyRequestBodyKeySpec
+	HMAC_256   CreateKeyRequestBodyKeySpec
+	HMAC_384   CreateKeyRequestBodyKeySpec
+	HMAC_512   CreateKeyRequestBodyKeySpec
+	HMAC_SM3   CreateKeyRequestBodyKeySpec
 }
 
 func GetCreateKeyRequestBodyKeySpecEnum() CreateKeyRequestBodyKeySpecEnum {
@@ -92,6 +97,21 @@ func GetCreateKeyRequestBodyKeySpecEnum() CreateKeyRequestBodyKeySpecEnum {
 		},
 		SM2: CreateKeyRequestBodyKeySpec{
 			value: "SM2",
+		},
+		ED25519: CreateKeyRequestBodyKeySpec{
+			value: "ED25519",
+		},
+		HMAC_256: CreateKeyRequestBodyKeySpec{
+			value: "HMAC_256",
+		},
+		HMAC_384: CreateKeyRequestBodyKeySpec{
+			value: "HMAC_384",
+		},
+		HMAC_512: CreateKeyRequestBodyKeySpec{
+			value: "HMAC_512",
+		},
+		HMAC_SM3: CreateKeyRequestBodyKeySpec{
+			value: "HMAC_SM3",
 		},
 	}
 }

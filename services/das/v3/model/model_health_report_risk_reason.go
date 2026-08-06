@@ -6,16 +6,17 @@ import (
 	"strings"
 )
 
+// HealthReportRiskReason 风险可能原因
 type HealthReportRiskReason struct {
 
-	// 可能原因编码。
-	ReasonCode string `json:"reason_code"`
+	// 可能原因编码
+	ReasonCode *string `json:"reason_code,omitempty"`
 
-	// 可能原因内容。
-	ReasonContent string `json:"reason_content"`
+	// 可能原因内容
+	ReasonContent *string `json:"reason_content,omitempty"`
 
-	// 建议优化措施列表。
-	Suggestions []HealthReportRiskSuggestion `json:"suggestions"`
+	// 建议优化措施列表
+	Suggestions *[]HealthReportRiskSuggestion `json:"suggestions,omitempty"`
 }
 
 func (o HealthReportRiskReason) String() string {

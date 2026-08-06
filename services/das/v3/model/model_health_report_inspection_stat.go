@@ -9,13 +9,13 @@ import (
 type HealthReportInspectionStat struct {
 
 	// 巡检评分。
-	InspectionScore []HealthReportInspectionScore `json:"inspection_score"`
+	InspectionScore *[]HealthReportInspectionScore `json:"inspection_score,omitempty"`
 
 	// 统计分析是否成功。
-	AnalyzeSuccess bool `json:"analyze_success"`
+	AnalyzeSuccess *bool `json:"analyze_success,omitempty"`
 
 	// 错误信息。
-	ErrorMessage string `json:"error_message"`
+	ErrorMessage *string `json:"error_message,omitempty"`
 }
 
 func (o HealthReportInspectionStat) String() string {

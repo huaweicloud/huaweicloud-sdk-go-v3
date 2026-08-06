@@ -9,7 +9,7 @@ import (
 type HealthReportSummaryInfo struct {
 
 	// 分析结果列表
-	AnalysisResults []HealthReportAnalysisResult `json:"analysis_results"`
+	AnalysisResults *[]HealthReportAnalysisResult `json:"analysis_results,omitempty"`
 }
 
 func (o HealthReportSummaryInfo) String() string {

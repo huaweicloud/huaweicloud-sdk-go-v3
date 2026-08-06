@@ -1114,6 +1114,27 @@ func (c *WafClient) CreatePolicyInvoker(request *model.CreatePolicyRequest) *Cre
 	return &CreatePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePool 创建实例组
+//
+// 创建实例组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) CreatePool(request *model.CreatePoolRequest) (*model.CreatePoolResponse, error) {
+	requestDef := GenReqDefForCreatePool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePoolResponse), nil
+	}
+}
+
+// CreatePoolInvoker 创建实例组
+func (c *WafClient) CreatePoolInvoker(request *model.CreatePoolRequest) *CreatePoolInvoker {
+	requestDef := GenReqDefForCreatePool()
+	return &CreatePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreatePremiumHost 创建独享模式域名或者创建云模式ELB接入模式域名
 //
 // 创建独享模式域名或者创建云模式ELB接入模式域名
@@ -1595,6 +1616,27 @@ func (c *WafClient) DeletePolicy(request *model.DeletePolicyRequest) (*model.Del
 func (c *WafClient) DeletePolicyInvoker(request *model.DeletePolicyRequest) *DeletePolicyInvoker {
 	requestDef := GenReqDefForDeletePolicy()
 	return &DeletePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePool 删除实例组
+//
+// 删除实例组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) DeletePool(request *model.DeletePoolRequest) (*model.DeletePoolResponse, error) {
+	requestDef := GenReqDefForDeletePool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePoolResponse), nil
+	}
+}
+
+// DeletePoolInvoker 删除实例组
+func (c *WafClient) DeletePoolInvoker(request *model.DeletePoolRequest) *DeletePoolInvoker {
+	requestDef := GenReqDefForDeletePool()
+	return &DeletePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeletePremiumHost 删除独享模式域名
@@ -3317,6 +3359,27 @@ func (c *WafClient) ShowPolicyGeoipMap(request *model.ShowPolicyGeoipMapRequest)
 func (c *WafClient) ShowPolicyGeoipMapInvoker(request *model.ShowPolicyGeoipMapRequest) *ShowPolicyGeoipMapInvoker {
 	requestDef := GenReqDefForShowPolicyGeoipMap()
 	return &ShowPolicyGeoipMapInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPool 查询实例组详情
+//
+// 查询实例组详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ShowPool(request *model.ShowPoolRequest) (*model.ShowPoolResponse, error) {
+	requestDef := GenReqDefForShowPool()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPoolResponse), nil
+	}
+}
+
+// ShowPoolInvoker 查询实例组详情
+func (c *WafClient) ShowPoolInvoker(request *model.ShowPoolRequest) *ShowPoolInvoker {
+	requestDef := GenReqDefForShowPool()
+	return &ShowPoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowPremiumHost 查看独享模式域名配置

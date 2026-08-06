@@ -9,7 +9,7 @@ import (
 type ShowRecommendSqlLimitRuleRequestBody struct {
 
 	// 引擎类型，目前只支持mysql或者taurus
-	EngineType *string `json:"engine_type,omitempty"`
+	EngineType string `json:"engine_type"`
 
 	// 如果是rds类型， 那么可以选择'count', 'average_time', 'max_time', 'all'这几种类型
 	RdsRecommendationType *string `json:"rds_recommendation_type,omitempty"`
@@ -18,7 +18,7 @@ type ShowRecommendSqlLimitRuleRequestBody struct {
 	TaurusRecommendationType *string `json:"taurus_recommendation_type,omitempty"`
 
 	// 推荐数量
-	RecommendCount *int64 `json:"recommend_count,omitempty"`
+	RecommendCount int64 `json:"recommend_count"`
 
 	// 如果选择了taurus， 那么需要制定node id
 	NodeId *string `json:"node_id,omitempty"`

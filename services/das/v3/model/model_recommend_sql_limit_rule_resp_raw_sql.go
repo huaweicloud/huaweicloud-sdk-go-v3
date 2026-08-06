@@ -10,7 +10,7 @@ import (
 type RecommendSqlLimitRuleRespRawSql struct {
 
 	// 会话id
-	SessionId *string `json:"session_id,omitempty"`
+	SessionId float32 `json:"session_id,omitempty"`
 
 	// 主机ip
 	Host *string `json:"host,omitempty"`
@@ -20,6 +20,12 @@ type RecommendSqlLimitRuleRespRawSql struct {
 
 	// 数据库名称
 	Db *string `json:"db,omitempty"`
+
+	// 会话用户名
+	User *string `json:"user,omitempty"`
+
+	// SQL类型
+	SqlType *string `json:"sql_type,omitempty"`
 
 	// 时间
 	Time *int64 `json:"time,omitempty"`

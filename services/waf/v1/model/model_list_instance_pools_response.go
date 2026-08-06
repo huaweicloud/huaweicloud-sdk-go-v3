@@ -9,10 +9,10 @@ import (
 // ListInstancePoolsResponse Response Object
 type ListInstancePoolsResponse struct {
 
-	// 实例组总数
+	// **参数解释：** 符合条件的实例组总数。 **取值范围：** 不涉及
 	Total *int64 `json:"total,omitempty"`
 
-	// 实例组列表
+	// **参数解释：** 实例组列表，详细字段说明请参见PremiumWafPoolResponse object。 **取值范围：** 不涉及
 	Items          *[]PremiumWafPoolResponse `json:"items,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }

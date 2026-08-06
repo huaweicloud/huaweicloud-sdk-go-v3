@@ -6,19 +6,20 @@ import (
 	"strings"
 )
 
+// HealthReportAnalysisResult 分析结果项
 type HealthReportAnalysisResult struct {
 
-	// 风险点编码。
-	RiskCode string `json:"risk_code"`
+	// 风险点编码
+	RiskCode *string `json:"risk_code,omitempty"`
 
-	// 风险点级别。
-	RiskLevel string `json:"risk_level"`
+	// 风险点级别
+	RiskLevel *string `json:"risk_level,omitempty"`
 
-	// 风险点内容。
-	RiskContent string `json:"risk_content"`
+	// 风险点内容
+	RiskContent *string `json:"risk_content,omitempty"`
 
-	// 可能原因列表。
-	Reasons []HealthReportRiskReason `json:"reasons"`
+	// 可能原因列表
+	Reasons *[]HealthReportRiskReason `json:"reasons,omitempty"`
 }
 
 func (o HealthReportAnalysisResult) String() string {

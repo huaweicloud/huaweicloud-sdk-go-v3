@@ -6,13 +6,14 @@ import (
 	"strings"
 )
 
+// HealthReportRiskSuggestion 建议优化操作
 type HealthReportRiskSuggestion struct {
 
-	// 建议优化措施编码。
-	SuggestionCode string `json:"suggestion_code"`
+	// 建议优化措施编码
+	SuggestionCode *string `json:"suggestion_code,omitempty"`
 
-	// 建议优化措施。
-	SuggestionContent string `json:"suggestion_content"`
+	// 建议优化措施
+	SuggestionContent *string `json:"suggestion_content,omitempty"`
 }
 
 func (o HealthReportRiskSuggestion) String() string {

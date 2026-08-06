@@ -59,6 +59,12 @@ type ListPortsRequest struct {
 
 	// **参数解释**： 端口所属的云服务实例类型，例如“RDS”。 **取值范围**： 不涉及。
 	InstanceType *string `json:"instance_type,omitempty"`
+
+	// **参数解释**： 每页返回的个数。 **取值范围**： 0-2000。
+	Limit *int32 `json:"limit,omitempty"`
+
+	// **参数解释**： 分页查询起始的资源ID，为空时查询第一页。 **取值范围**： 带“-”的标准UUID格式。
+	Marker *string `json:"marker,omitempty"`
 }
 
 func (o ListPortsRequest) String() string {

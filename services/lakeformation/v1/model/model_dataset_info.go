@@ -9,7 +9,7 @@ import (
 // DatasetInfo dataset input when grant policy
 type DatasetInfo struct {
 
-	// 数据集名称。只能包含数字、字母、下划线，且长度为1~256。
+	// 数据集名称。只能包含中文、字母、数字和_*-特殊字符，且长度为1~256。
 	Name string `json:"name"`
 }
 

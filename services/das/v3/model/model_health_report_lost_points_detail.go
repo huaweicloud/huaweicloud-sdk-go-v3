@@ -9,13 +9,13 @@ import (
 type HealthReportLostPointsDetail struct {
 
 	// 扣分项。
-	Metric string `json:"metric"`
+	Metric *string `json:"metric,omitempty"`
 
 	// 所扣分数。
-	LostPoints float64 `json:"lost_points"`
+	LostPoints *float64 `json:"lost_points,omitempty"`
 
 	// 事件等级。
-	RiskLevel string `json:"risk_level"`
+	RiskLevel *string `json:"risk_level,omitempty"`
 }
 
 func (o HealthReportLostPointsDetail) String() string {

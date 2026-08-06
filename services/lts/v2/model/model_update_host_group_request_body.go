@@ -20,6 +20,12 @@ type UpdateHostGroupRequestBody struct {
 
 	// 主机组标签。KEY不能重复
 	HostGroupTag *[]HostGroupTag `json:"host_group_tag,omitempty"`
+
+	// **参数解释：** 主机组类型。支持两种主机组类型，分别为IP类型和LABEL类型。 **约束限制：** 不涉及 **取值范围：** - IP - LABEL **默认取值：** IP。
+	AgentAccessType *string `json:"agent_access_type,omitempty"`
+
+	// **参数解释：** 自定义标识。主机组类型为LABEL类型，该字段必填。 **约束限制：** 不涉及。
+	Labels *[]string `json:"labels,omitempty"`
 }
 
 func (o UpdateHostGroupRequestBody) String() string {

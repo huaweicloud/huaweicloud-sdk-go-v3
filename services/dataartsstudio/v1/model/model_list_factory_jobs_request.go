@@ -27,8 +27,35 @@ type ListFactoryJobsRequest struct {
 	// 作业名称
 	JobName *string `json:"job_name,omitempty"`
 
-	// 作业标签
+	// 作业ID，支持多个ID逗号分隔查询，最多50个ID，总长度不超过1000字符。 每个ID必须为纯数字。
+	JobId *string `json:"job_id,omitempty"`
+
+	// 作业状态，支持多个状态逗号分隔查询。 批处理作业状态：  - SCHEDULING: 调度中  - STOPPED: 停止  - PAUSED: 暂停 实时作业状态：  - STARTING: 启动中  - NORMAL: 正常  - EXCEPTION: 异常  - STOPPING: 停止中  - STOPPED: 停止  - PAUSE: 暂停  - ABNORMAL: 异常
+	Status *string `json:"status,omitempty"`
+
+	// 是否返回作业告警信息，默认为false。
+	NeedAlarms *bool `json:"need_alarms,omitempty"`
+
+	// 作业标签，多个标签逗号分隔。
 	Tags *string `json:"tags,omitempty"`
+
+	// 标签匹配模式：  - false: 任一标签匹配即返回（OR模式）  - true: 所有标签都匹配才返回（AND模式）
+	MatchAllTags *bool `json:"match_all_tags,omitempty"`
+
+	// 数据连接名称，按数据连接筛选作业。
+	ConnectionName *string `json:"connection_name,omitempty"`
+
+	// 源端数据连接类型，按源端数据类型筛选作业。
+	SourceType *string `json:"source_type,omitempty"`
+
+	// 源端数据连接名称，按源端数据名称筛选作业。
+	SourceName *string `json:"source_name,omitempty"`
+
+	// 目的端数据连接类型，按目的端数据类型筛选作业。
+	SinkType *string `json:"sink_type,omitempty"`
+
+	// 目的端数据连接名称，按目的端数据名称筛选作业。
+	SinkName *string `json:"sink_name,omitempty"`
 }
 
 func (o ListFactoryJobsRequest) String() string {

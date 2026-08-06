@@ -12,11 +12,17 @@ type RecommendSqlLimitRuleRespSqlLimitInfos struct {
 	// 平均时间
 	AverageTime *float64 `json:"average_time,omitempty"`
 
+	// 限流关键字
+	Keyword *string `json:"keyword,omitempty"`
+
+	// 推荐类型
+	RecommendType *string `json:"recommend_type,omitempty"`
+
 	// 数量
 	Count *float64 `json:"count,omitempty"`
 
 	// mysql 提供， taurus不提供
-	MaxTime *int64 `json:"maxTime,omitempty"`
+	MaxTime *int64 `json:"max_time,omitempty"`
 
 	// 执行时间
 	ExeTime *int64 `json:"exe_time,omitempty"`

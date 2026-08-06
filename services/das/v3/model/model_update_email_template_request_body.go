@@ -40,6 +40,9 @@ type UpdateEmailTemplateRequestBody struct {
 
 	// 时区
 	TimeZone *string `json:"time_zone,omitempty"`
+
+	// 服务地址
+	ServiceUri *string `json:"service_uri,omitempty"`
 }
 
 func (o UpdateEmailTemplateRequestBody) String() string {

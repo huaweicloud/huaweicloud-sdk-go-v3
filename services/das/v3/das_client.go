@@ -231,6 +231,48 @@ func (c *DasClient) AddInstanceToGroupInvoker(request *model.AddInstanceToGroupR
 	return &AddInstanceToGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddSqlLimitingRecordNew 新增SQL限流规则
+//
+// 新增SQL限流规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) AddSqlLimitingRecordNew(request *model.AddSqlLimitingRecordNewRequest) (*model.AddSqlLimitingRecordNewResponse, error) {
+	requestDef := GenReqDefForAddSqlLimitingRecordNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddSqlLimitingRecordNewResponse), nil
+	}
+}
+
+// AddSqlLimitingRecordNewInvoker 新增SQL限流规则
+func (c *DasClient) AddSqlLimitingRecordNewInvoker(request *model.AddSqlLimitingRecordNewRequest) *AddSqlLimitingRecordNewInvoker {
+	requestDef := GenReqDefForAddSqlLimitingRecordNew()
+	return &AddSqlLimitingRecordNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteConnectionNew 批量删除连接
+//
+// 批量删除连接
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) BatchDeleteConnectionNew(request *model.BatchDeleteConnectionNewRequest) (*model.BatchDeleteConnectionNewResponse, error) {
+	requestDef := GenReqDefForBatchDeleteConnectionNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteConnectionNewResponse), nil
+	}
+}
+
+// BatchDeleteConnectionNewInvoker 批量删除连接
+func (c *DasClient) BatchDeleteConnectionNewInvoker(request *model.BatchDeleteConnectionNewRequest) *BatchDeleteConnectionNewInvoker {
+	requestDef := GenReqDefForBatchDeleteConnectionNew()
+	return &BatchDeleteConnectionNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchSendEmail 批量发送邮件
 //
 // 批量发送邮件
@@ -271,6 +313,27 @@ func (c *DasClient) BatchSubscribeReport(request *model.BatchSubscribeReportRequ
 func (c *DasClient) BatchSubscribeReportInvoker(request *model.BatchSubscribeReportRequest) *BatchSubscribeReportInvoker {
 	requestDef := GenReqDefForBatchSubscribeReport()
 	return &BatchSubscribeReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CancelShareNew 取消共享链接
+//
+// 取消共享链接
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) CancelShareNew(request *model.CancelShareNewRequest) (*model.CancelShareNewResponse, error) {
+	requestDef := GenReqDefForCancelShareNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelShareNewResponse), nil
+	}
+}
+
+// CancelShareNewInvoker 取消共享链接
+func (c *DasClient) CancelShareNewInvoker(request *model.CancelShareNewRequest) *CancelShareNewInvoker {
+	requestDef := GenReqDefForCancelShareNew()
+	return &CancelShareNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ChangeChargeMode 设置付费模式
@@ -915,6 +978,27 @@ func (c *DasClient) ListCloudDbaInstances(request *model.ListCloudDbaInstancesRe
 func (c *DasClient) ListCloudDbaInstancesInvoker(request *model.ListCloudDbaInstancesRequest) *ListCloudDbaInstancesInvoker {
 	requestDef := GenReqDefForListCloudDbaInstances()
 	return &ListCloudDbaInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDbNames 获取库名列表
+//
+// 获取库名列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListDbNames(request *model.ListDbNamesRequest) (*model.ListDbNamesResponse, error) {
+	requestDef := GenReqDefForListDbNames()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDbNamesResponse), nil
+	}
+}
+
+// ListDbNamesInvoker 获取库名列表
+func (c *DasClient) ListDbNamesInvoker(request *model.ListDbNamesRequest) *ListDbNamesInvoker {
+	requestDef := GenReqDefForListDbNames()
+	return &ListDbNamesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDbUsers 查询数据库用户列表
@@ -1682,6 +1766,27 @@ func (c *DasClient) ShowAnalysisSessionStatusInvoker(request *model.ShowAnalysis
 	return &ShowAnalysisSessionStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowClouddbaGetSearchPathFlagNew 查询searchpath开关状态
+//
+// 查询searchpath开关状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowClouddbaGetSearchPathFlagNew(request *model.ShowClouddbaGetSearchPathFlagNewRequest) (*model.ShowClouddbaGetSearchPathFlagNewResponse, error) {
+	requestDef := GenReqDefForShowClouddbaGetSearchPathFlagNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowClouddbaGetSearchPathFlagNewResponse), nil
+	}
+}
+
+// ShowClouddbaGetSearchPathFlagNewInvoker 查询searchpath开关状态
+func (c *DasClient) ShowClouddbaGetSearchPathFlagNewInvoker(request *model.ShowClouddbaGetSearchPathFlagNewRequest) *ShowClouddbaGetSearchPathFlagNewInvoker {
+	requestDef := GenReqDefForShowClouddbaGetSearchPathFlagNew()
+	return &ShowClouddbaGetSearchPathFlagNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowCredential 查询AK/SK
 //
 // 查询AK/SK。用于判断是否已保存AK/SK
@@ -1701,6 +1806,27 @@ func (c *DasClient) ShowCredential(request *model.ShowCredentialRequest) (*model
 func (c *DasClient) ShowCredentialInvoker(request *model.ShowCredentialRequest) *ShowCredentialInvoker {
 	requestDef := GenReqDefForShowCredential()
 	return &ShowCredentialInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDasCloudDbaPrice 开通配额询价
+//
+// 开通配额询价
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowDasCloudDbaPrice(request *model.ShowDasCloudDbaPriceRequest) (*model.ShowDasCloudDbaPriceResponse, error) {
+	requestDef := GenReqDefForShowDasCloudDbaPrice()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDasCloudDbaPriceResponse), nil
+	}
+}
+
+// ShowDasCloudDbaPriceInvoker 开通配额询价
+func (c *DasClient) ShowDasCloudDbaPriceInvoker(request *model.ShowDasCloudDbaPriceRequest) *ShowDasCloudDbaPriceInvoker {
+	requestDef := GenReqDefForShowDasCloudDbaPrice()
+	return &ShowDasCloudDbaPriceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDasRecommendSqlLimitRule 自动推荐SQL限流规则
@@ -1767,6 +1893,27 @@ func (c *DasClient) ShowDeadLockAnalysisResultInvoker(request *model.ShowDeadLoc
 	return &ShowDeadLockAnalysisResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDeadLockSwitchNew 查询死锁开关状态
+//
+// 查询死锁开关状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowDeadLockSwitchNew(request *model.ShowDeadLockSwitchNewRequest) (*model.ShowDeadLockSwitchNewResponse, error) {
+	requestDef := GenReqDefForShowDeadLockSwitchNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDeadLockSwitchNewResponse), nil
+	}
+}
+
+// ShowDeadLockSwitchNewInvoker 查询死锁开关状态
+func (c *DasClient) ShowDeadLockSwitchNewInvoker(request *model.ShowDeadLockSwitchNewRequest) *ShowDeadLockSwitchNewInvoker {
+	requestDef := GenReqDefForShowDeadLockSwitchNew()
+	return &ShowDeadLockSwitchNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDeadLockTopology 获取死锁拓扑图数据
 //
 // 获取死锁拓扑图数据
@@ -1786,6 +1933,27 @@ func (c *DasClient) ShowDeadLockTopology(request *model.ShowDeadLockTopologyRequ
 func (c *DasClient) ShowDeadLockTopologyInvoker(request *model.ShowDeadLockTopologyRequest) *ShowDeadLockTopologyInvoker {
 	requestDef := GenReqDefForShowDeadLockTopology()
 	return &ShowDeadLockTopologyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowExportTaskInfo 查看全量SQL导出任务详情
+//
+// 查看全量SQL导出任务详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowExportTaskInfo(request *model.ShowExportTaskInfoRequest) (*model.ShowExportTaskInfoResponse, error) {
+	requestDef := GenReqDefForShowExportTaskInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowExportTaskInfoResponse), nil
+	}
+}
+
+// ShowExportTaskInfoInvoker 查看全量SQL导出任务详情
+func (c *DasClient) ShowExportTaskInfoInvoker(request *model.ShowExportTaskInfoRequest) *ShowExportTaskInfoInvoker {
+	requestDef := GenReqDefForShowExportTaskInfo()
+	return &ShowExportTaskInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowFullDeadLockList 获取全量死锁信息
@@ -1830,6 +1998,48 @@ func (c *DasClient) ShowFullDeadLockSwitchInvoker(request *model.ShowFullDeadLoc
 	return &ShowFullDeadLockSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowFullDeadLockSwitchNew 获取全量死锁开关
+//
+// 获取全量死锁开关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowFullDeadLockSwitchNew(request *model.ShowFullDeadLockSwitchNewRequest) (*model.ShowFullDeadLockSwitchNewResponse, error) {
+	requestDef := GenReqDefForShowFullDeadLockSwitchNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFullDeadLockSwitchNewResponse), nil
+	}
+}
+
+// ShowFullDeadLockSwitchNewInvoker 获取全量死锁开关
+func (c *DasClient) ShowFullDeadLockSwitchNewInvoker(request *model.ShowFullDeadLockSwitchNewRequest) *ShowFullDeadLockSwitchNewInvoker {
+	requestDef := GenReqDefForShowFullDeadLockSwitchNew()
+	return &ShowFullDeadLockSwitchNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowGlobalPrivacyNew 获取产品级别的安全协议
+//
+// 获取产品级别的安全协议
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowGlobalPrivacyNew(request *model.ShowGlobalPrivacyNewRequest) (*model.ShowGlobalPrivacyNewResponse, error) {
+	requestDef := GenReqDefForShowGlobalPrivacyNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowGlobalPrivacyNewResponse), nil
+	}
+}
+
+// ShowGlobalPrivacyNewInvoker 获取产品级别的安全协议
+func (c *DasClient) ShowGlobalPrivacyNewInvoker(request *model.ShowGlobalPrivacyNewRequest) *ShowGlobalPrivacyNewInvoker {
+	requestDef := GenReqDefForShowGlobalPrivacyNew()
+	return &ShowGlobalPrivacyNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowHealthReportSettings 查看实例诊断报告设置
 //
 // 查看实例诊断报告设置
@@ -1872,6 +2082,48 @@ func (c *DasClient) ShowHistoryTransactionExportTaskInfoInvoker(request *model.S
 	return &ShowHistoryTransactionExportTaskInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowHistoryTransactionSwitchNew 查询历史事务开关
+//
+// 查询历史事务开关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowHistoryTransactionSwitchNew(request *model.ShowHistoryTransactionSwitchNewRequest) (*model.ShowHistoryTransactionSwitchNewResponse, error) {
+	requestDef := GenReqDefForShowHistoryTransactionSwitchNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHistoryTransactionSwitchNewResponse), nil
+	}
+}
+
+// ShowHistoryTransactionSwitchNewInvoker 查询历史事务开关
+func (c *DasClient) ShowHistoryTransactionSwitchNewInvoker(request *model.ShowHistoryTransactionSwitchNewRequest) *ShowHistoryTransactionSwitchNewInvoker {
+	requestDef := GenReqDefForShowHistoryTransactionSwitchNew()
+	return &ShowHistoryTransactionSwitchNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIndexUsageSwitchNew 查询索引使用开关
+//
+// 查询索引使用开关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowIndexUsageSwitchNew(request *model.ShowIndexUsageSwitchNewRequest) (*model.ShowIndexUsageSwitchNewResponse, error) {
+	requestDef := GenReqDefForShowIndexUsageSwitchNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIndexUsageSwitchNewResponse), nil
+	}
+}
+
+// ShowIndexUsageSwitchNewInvoker 查询索引使用开关
+func (c *DasClient) ShowIndexUsageSwitchNewInvoker(request *model.ShowIndexUsageSwitchNewRequest) *ShowIndexUsageSwitchNewInvoker {
+	requestDef := GenReqDefForShowIndexUsageSwitchNew()
+	return &ShowIndexUsageSwitchNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowInstanceHealthReport 获取实例健康诊断报告内容
 //
 // 获取实例健康诊断报告内容。
@@ -1893,6 +2145,27 @@ func (c *DasClient) ShowInstanceHealthReportInvoker(request *model.ShowInstanceH
 	return &ShowInstanceHealthReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowKillProcessTaskSwitch 查询自治限流开关
+//
+// 查询自治限流开关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowKillProcessTaskSwitch(request *model.ShowKillProcessTaskSwitchRequest) (*model.ShowKillProcessTaskSwitchResponse, error) {
+	requestDef := GenReqDefForShowKillProcessTaskSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKillProcessTaskSwitchResponse), nil
+	}
+}
+
+// ShowKillProcessTaskSwitchInvoker 查询自治限流开关
+func (c *DasClient) ShowKillProcessTaskSwitchInvoker(request *model.ShowKillProcessTaskSwitchRequest) *ShowKillProcessTaskSwitchInvoker {
+	requestDef := GenReqDefForShowKillProcessTaskSwitch()
+	return &ShowKillProcessTaskSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowLatestDeadLockSnapshot 获取死锁的快照信息
 //
 // 获取死锁的快照信息
@@ -1912,6 +2185,27 @@ func (c *DasClient) ShowLatestDeadLockSnapshot(request *model.ShowLatestDeadLock
 func (c *DasClient) ShowLatestDeadLockSnapshotInvoker(request *model.ShowLatestDeadLockSnapshotRequest) *ShowLatestDeadLockSnapshotInvoker {
 	requestDef := GenReqDefForShowLatestDeadLockSnapshot()
 	return &ShowLatestDeadLockSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowLatestInstanceHealthReport 获取最新的数据库健康日报内容
+//
+// 获取最新的数据库健康日报内容
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowLatestInstanceHealthReport(request *model.ShowLatestInstanceHealthReportRequest) (*model.ShowLatestInstanceHealthReportResponse, error) {
+	requestDef := GenReqDefForShowLatestInstanceHealthReport()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLatestInstanceHealthReportResponse), nil
+	}
+}
+
+// ShowLatestInstanceHealthReportInvoker 获取最新的数据库健康日报内容
+func (c *DasClient) ShowLatestInstanceHealthReportInvoker(request *model.ShowLatestInstanceHealthReportRequest) *ShowLatestInstanceHealthReportInvoker {
+	requestDef := GenReqDefForShowLatestInstanceHealthReport()
+	return &ShowLatestInstanceHealthReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowLockBlockingStatistics 查询锁阻塞数量统计
@@ -1980,6 +2274,27 @@ func (c *DasClient) ShowLockBlockingTrendInvoker(request *model.ShowLockBlocking
 	return &ShowLockBlockingTrendInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowLongHistoryTransactionSwitchNew 查询长事务开关
+//
+// 查询长事务开关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowLongHistoryTransactionSwitchNew(request *model.ShowLongHistoryTransactionSwitchNewRequest) (*model.ShowLongHistoryTransactionSwitchNewResponse, error) {
+	requestDef := GenReqDefForShowLongHistoryTransactionSwitchNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowLongHistoryTransactionSwitchNewResponse), nil
+	}
+}
+
+// ShowLongHistoryTransactionSwitchNewInvoker 查询长事务开关
+func (c *DasClient) ShowLongHistoryTransactionSwitchNewInvoker(request *model.ShowLongHistoryTransactionSwitchNewRequest) *ShowLongHistoryTransactionSwitchNewInvoker {
+	requestDef := GenReqDefForShowLongHistoryTransactionSwitchNew()
+	return &ShowLongHistoryTransactionSwitchNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowMetricNamesSupport 多节点单指标支持指标信息
 //
 // 多节点单指标支持指标信息
@@ -2001,6 +2316,27 @@ func (c *DasClient) ShowMetricNamesSupportInvoker(request *model.ShowMetricNames
 	return &ShowMetricNamesSupportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowNameList 查看库名列表
+//
+// 查看库名列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowNameList(request *model.ShowNameListRequest) (*model.ShowNameListResponse, error) {
+	requestDef := GenReqDefForShowNameList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowNameListResponse), nil
+	}
+}
+
+// ShowNameListInvoker 查看库名列表
+func (c *DasClient) ShowNameListInvoker(request *model.ShowNameListRequest) *ShowNameListInvoker {
+	requestDef := GenReqDefForShowNameList()
+	return &ShowNameListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowQuotas 查询云DBA配额
 //
 // 查询云DBA配额
@@ -2020,6 +2356,27 @@ func (c *DasClient) ShowQuotas(request *model.ShowQuotasRequest) (*model.ShowQuo
 func (c *DasClient) ShowQuotasInvoker(request *model.ShowQuotasRequest) *ShowQuotasInvoker {
 	requestDef := GenReqDefForShowQuotas()
 	return &ShowQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSlowLogSwitchNew 查询慢日志开关
+//
+// 查询慢日志开关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowSlowLogSwitchNew(request *model.ShowSlowLogSwitchNewRequest) (*model.ShowSlowLogSwitchNewResponse, error) {
+	requestDef := GenReqDefForShowSlowLogSwitchNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSlowLogSwitchNewResponse), nil
+	}
+}
+
+// ShowSlowLogSwitchNewInvoker 查询慢日志开关
+func (c *DasClient) ShowSlowLogSwitchNewInvoker(request *model.ShowSlowLogSwitchNewRequest) *ShowSlowLogSwitchNewInvoker {
+	requestDef := GenReqDefForShowSlowLogSwitchNew()
+	return &ShowSlowLogSwitchNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSqlExecutionPlan 查询SQL执行计划
@@ -2109,6 +2466,27 @@ func (c *DasClient) ShowSqlLimitSwitchStatusInvoker(request *model.ShowSqlLimitS
 	return &ShowSqlLimitSwitchStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSqlLimitingSwitchNew 查询SQL限流开关
+//
+// 查询SQL限流开关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowSqlLimitingSwitchNew(request *model.ShowSqlLimitingSwitchNewRequest) (*model.ShowSqlLimitingSwitchNewResponse, error) {
+	requestDef := GenReqDefForShowSqlLimitingSwitchNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSqlLimitingSwitchNewResponse), nil
+	}
+}
+
+// ShowSqlLimitingSwitchNewInvoker 查询SQL限流开关
+func (c *DasClient) ShowSqlLimitingSwitchNewInvoker(request *model.ShowSqlLimitingSwitchNewRequest) *ShowSqlLimitingSwitchNewInvoker {
+	requestDef := GenReqDefForShowSqlLimitingSwitchNew()
+	return &ShowSqlLimitingSwitchNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSqlSwitchStatus 查询全量SQL和慢SQL的开关状态
 //
 // 查询DAS收集全量SQL和慢SQL的开关状态。该功能仅支持付费实例。
@@ -2128,6 +2506,27 @@ func (c *DasClient) ShowSqlSwitchStatus(request *model.ShowSqlSwitchStatusReques
 func (c *DasClient) ShowSqlSwitchStatusInvoker(request *model.ShowSqlSwitchStatusRequest) *ShowSqlSwitchStatusInvoker {
 	requestDef := GenReqDefForShowSqlSwitchStatus()
 	return &ShowSqlSwitchStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSupportedEngines 查看支持的引擎类型
+//
+// 查看支持的引擎类型
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowSupportedEngines(request *model.ShowSupportedEnginesRequest) (*model.ShowSupportedEnginesResponse, error) {
+	requestDef := GenReqDefForShowSupportedEngines()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSupportedEnginesResponse), nil
+	}
+}
+
+// ShowSupportedEnginesInvoker 查看支持的引擎类型
+func (c *DasClient) ShowSupportedEnginesInvoker(request *model.ShowSupportedEnginesRequest) *ShowSupportedEnginesInvoker {
+	requestDef := GenReqDefForShowSupportedEngines()
+	return &ShowSupportedEnginesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowTransactionSwitchStatus 查询历史事务开关
@@ -2173,6 +2572,27 @@ func (c *DasClient) ShowTuningInvoker(request *model.ShowTuningRequest) *ShowTun
 	return &ShowTuningInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowWhetherUseCloudDba 判断该实例能否使用云DBA功能
+//
+// 判断该实例能否使用云DBA功能
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowWhetherUseCloudDba(request *model.ShowWhetherUseCloudDbaRequest) (*model.ShowWhetherUseCloudDbaResponse, error) {
+	requestDef := GenReqDefForShowWhetherUseCloudDba()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWhetherUseCloudDbaResponse), nil
+	}
+}
+
+// ShowWhetherUseCloudDbaInvoker 判断该实例能否使用云DBA功能
+func (c *DasClient) ShowWhetherUseCloudDbaInvoker(request *model.ShowWhetherUseCloudDbaRequest) *ShowWhetherUseCloudDbaInvoker {
+	requestDef := GenReqDefForShowWhetherUseCloudDba()
+	return &ShowWhetherUseCloudDbaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // StartAnalysisSession 开始会话分析
 //
 // 开始会话分析
@@ -2192,6 +2612,27 @@ func (c *DasClient) StartAnalysisSession(request *model.StartAnalysisSessionRequ
 func (c *DasClient) StartAnalysisSessionInvoker(request *model.StartAnalysisSessionRequest) *StartAnalysisSessionInvoker {
 	requestDef := GenReqDefForStartAnalysisSession()
 	return &StartAnalysisSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchFullsqlSwitch 开启/关闭全量SQL开关
+//
+// 开启/关闭全量SQL开关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) SwitchFullsqlSwitch(request *model.SwitchFullsqlSwitchRequest) (*model.SwitchFullsqlSwitchResponse, error) {
+	requestDef := GenReqDefForSwitchFullsqlSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchFullsqlSwitchResponse), nil
+	}
+}
+
+// SwitchFullsqlSwitchInvoker 开启/关闭全量SQL开关
+func (c *DasClient) SwitchFullsqlSwitchInvoker(request *model.SwitchFullsqlSwitchRequest) *SwitchFullsqlSwitchInvoker {
+	requestDef := GenReqDefForSwitchFullsqlSwitch()
+	return &SwitchFullsqlSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SynchronizeInstances 同步实例列表

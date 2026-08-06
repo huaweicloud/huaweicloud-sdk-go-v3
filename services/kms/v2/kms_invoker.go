@@ -85,6 +85,22 @@ func (i *CancelSelfGrantInvoker) Invoke() (*model.CancelSelfGrantResponse, error
 	}
 }
 
+type CreateAccessPointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAccessPointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAccessPointInvoker) Invoke() (*model.CreateAccessPointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAccessPointResponse), nil
+	}
+}
+
 type CreateAliasInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -114,6 +130,22 @@ func (i *CreateDatakeyInvoker) Invoke() (*model.CreateDatakeyResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateDatakeyResponse), nil
+	}
+}
+
+type CreateDatakeyCapsuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDatakeyCapsuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDatakeyCapsuleInvoker) Invoke() (*model.CreateDatakeyCapsuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDatakeyCapsuleResponse), nil
 	}
 }
 
@@ -178,6 +210,22 @@ func (i *CreateKeyInvoker) Invoke() (*model.CreateKeyResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.CreateKeyResponse), nil
+	}
+}
+
+type CreateKeyPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateKeyPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateKeyPolicyInvoker) Invoke() (*model.CreateKeyPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateKeyPolicyResponse), nil
 	}
 }
 
@@ -309,6 +357,38 @@ func (i *DecryptDatakeyInvoker) Invoke() (*model.DecryptDatakeyResponse, error) 
 	}
 }
 
+type DecryptDatakeyCapsuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DecryptDatakeyCapsuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DecryptDatakeyCapsuleInvoker) Invoke() (*model.DecryptDatakeyCapsuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DecryptDatakeyCapsuleResponse), nil
+	}
+}
+
+type DeleteAccessPointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAccessPointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAccessPointInvoker) Invoke() (*model.DeleteAccessPointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAccessPointResponse), nil
+	}
+}
+
 type DeleteAliasInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -354,6 +434,22 @@ func (i *DeleteKeyInvoker) Invoke() (*model.DeleteKeyResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteKeyResponse), nil
+	}
+}
+
+type DeleteKeyPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteKeyPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteKeyPolicyInvoker) Invoke() (*model.DeleteKeyPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteKeyPolicyResponse), nil
 	}
 }
 
@@ -405,6 +501,22 @@ func (i *DeriveSharedSecretInvoker) Invoke() (*model.DeriveSharedSecretResponse,
 	}
 }
 
+type DisableAccessPointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisableAccessPointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DisableAccessPointInvoker) Invoke() (*model.DisableAccessPointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisableAccessPointResponse), nil
+	}
+}
+
 type DisableKeyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -450,6 +562,38 @@ func (i *DisableKeyStoreInvoker) Invoke() (*model.DisableKeyStoreResponse, error
 		return nil, err
 	} else {
 		return result.(*model.DisableKeyStoreResponse), nil
+	}
+}
+
+type DownloadAccessPointPrivateKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadAccessPointPrivateKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadAccessPointPrivateKeyInvoker) Invoke() (*model.DownloadAccessPointPrivateKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadAccessPointPrivateKeyResponse), nil
+	}
+}
+
+type EnableAccessPointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *EnableAccessPointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *EnableAccessPointInvoker) Invoke() (*model.EnableAccessPointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.EnableAccessPointResponse), nil
 	}
 }
 
@@ -565,6 +709,22 @@ func (i *ImportKeyMaterialInvoker) Invoke() (*model.ImportKeyMaterialResponse, e
 	}
 }
 
+type ListAccessPointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAccessPointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAccessPointInvoker) Invoke() (*model.ListAccessPointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAccessPointResponse), nil
+	}
+}
+
 type ListAliasesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -610,6 +770,22 @@ func (i *ListKeyDetailInvoker) Invoke() (*model.ListKeyDetailResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListKeyDetailResponse), nil
+	}
+}
+
+type ListKeyPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListKeyPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListKeyPolicyInvoker) Invoke() (*model.ListKeyPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListKeyPolicyResponse), nil
 	}
 }
 
@@ -738,6 +914,38 @@ func (i *ReplicateKeyInvoker) Invoke() (*model.ReplicateKeyResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ReplicateKeyResponse), nil
+	}
+}
+
+type RotateOnDemandInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RotateOnDemandInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RotateOnDemandInvoker) Invoke() (*model.RotateOnDemandResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RotateOnDemandResponse), nil
+	}
+}
+
+type ShowKeyPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowKeyPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowKeyPolicyInvoker) Invoke() (*model.ShowKeyPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowKeyPolicyResponse), nil
 	}
 }
 
@@ -882,6 +1090,22 @@ func (i *UpdateKeyDescriptionInvoker) Invoke() (*model.UpdateKeyDescriptionRespo
 		return nil, err
 	} else {
 		return result.(*model.UpdateKeyDescriptionResponse), nil
+	}
+}
+
+type UpdateKeyPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateKeyPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateKeyPolicyInvoker) Invoke() (*model.UpdateKeyPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateKeyPolicyResponse), nil
 	}
 }
 

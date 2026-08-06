@@ -1300,6 +1300,48 @@ func (c *CloudtestClient) ListSubTaskCaseOverstockUsingInvoker(request *model.Li
 	return &ListSubTaskCaseOverstockUsingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSubTasksByPostUsing 根据条件查询子任务集合
+//
+// 根据条件查询子任务集合
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ListSubTasksByPostUsing(request *model.ListSubTasksByPostUsingRequest) (*model.ListSubTasksByPostUsingResponse, error) {
+	requestDef := GenReqDefForListSubTasksByPostUsing()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSubTasksByPostUsingResponse), nil
+	}
+}
+
+// ListSubTasksByPostUsingInvoker 根据条件查询子任务集合
+func (c *CloudtestClient) ListSubTasksByPostUsingInvoker(request *model.ListSubTasksByPostUsingRequest) *ListSubTasksByPostUsingInvoker {
+	requestDef := GenReqDefForListSubTasksByPostUsing()
+	return &ListSubTasksByPostUsingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSubTestCaseByConditionsUsing 批量查询子任务用例
+//
+// 批量查询子任务用例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ListSubTestCaseByConditionsUsing(request *model.ListSubTestCaseByConditionsUsingRequest) (*model.ListSubTestCaseByConditionsUsingResponse, error) {
+	requestDef := GenReqDefForListSubTestCaseByConditionsUsing()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSubTestCaseByConditionsUsingResponse), nil
+	}
+}
+
+// ListSubTestCaseByConditionsUsingInvoker 批量查询子任务用例
+func (c *CloudtestClient) ListSubTestCaseByConditionsUsingInvoker(request *model.ListSubTestCaseByConditionsUsingRequest) *ListSubTestCaseByConditionsUsingInvoker {
+	requestDef := GenReqDefForListSubTestCaseByConditionsUsing()
+	return &ListSubTestCaseByConditionsUsingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListTaskAssignCases 获取测试套关联用例详情
 //
 // 获取测试套关联用例详情
