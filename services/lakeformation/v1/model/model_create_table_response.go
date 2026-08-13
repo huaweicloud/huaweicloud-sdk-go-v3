@@ -49,7 +49,7 @@ type CreateTableResponse struct {
 
 	StorageDescriptor *StorageDescriptor `json:"storage_descriptor,omitempty"`
 
-	// 表格式,支持HIVE,ICEBERG,LANCE
+	// 表格式,支持HIVE,ICEBERG,LANCE,PAIMON
 	TableFormat *CreateTableResponseTableFormat `json:"table_format,omitempty"`
 
 	// 表类型
@@ -134,6 +134,7 @@ type CreateTableResponseTableFormatEnum struct {
 	HIVE    CreateTableResponseTableFormat
 	ICEBERG CreateTableResponseTableFormat
 	LANCE   CreateTableResponseTableFormat
+	PAIMON  CreateTableResponseTableFormat
 }
 
 func GetCreateTableResponseTableFormatEnum() CreateTableResponseTableFormatEnum {
@@ -146,6 +147,9 @@ func GetCreateTableResponseTableFormatEnum() CreateTableResponseTableFormatEnum 
 		},
 		LANCE: CreateTableResponseTableFormat{
 			value: "LANCE",
+		},
+		PAIMON: CreateTableResponseTableFormat{
+			value: "PAIMON",
 		},
 	}
 }

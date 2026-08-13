@@ -49,7 +49,7 @@ type Table struct {
 
 	StorageDescriptor *StorageDescriptor `json:"storage_descriptor"`
 
-	// 表格式,支持HIVE,ICEBERG,LANCE
+	// 表格式,支持HIVE,ICEBERG,LANCE,PAIMON
 	TableFormat *TableTableFormat `json:"table_format,omitempty"`
 
 	// 表类型
@@ -133,6 +133,7 @@ type TableTableFormatEnum struct {
 	HIVE    TableTableFormat
 	ICEBERG TableTableFormat
 	LANCE   TableTableFormat
+	PAIMON  TableTableFormat
 }
 
 func GetTableTableFormatEnum() TableTableFormatEnum {
@@ -145,6 +146,9 @@ func GetTableTableFormatEnum() TableTableFormatEnum {
 		},
 		LANCE: TableTableFormat{
 			value: "LANCE",
+		},
+		PAIMON: TableTableFormat{
+			value: "PAIMON",
 		},
 	}
 }

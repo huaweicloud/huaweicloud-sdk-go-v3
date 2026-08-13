@@ -9,10 +9,10 @@ import (
 // UpdateServerlessPolicy 设置serverless配置策略请求体。
 type UpdateServerlessPolicy struct {
 
-	// 单节点VCPUs伸缩下限，取值范围可根据[查询数据库规格](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlFlavors.html)接口获取。
+	// 单节点VCPUs伸缩下限，取值范围可根据[查询数据库规格](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlFlavors.html)接口获取。
 	MinVcpus int32 `json:"min_vcpus"`
 
-	// 单节点VCPUs伸缩上限，取值范围可根据[查询数据库规格](https://support.huaweicloud.com/api-gaussdb/ShowGaussMySqlFlavors.html)接口获取。
+	// 单节点VCPUs伸缩上限，取值范围可根据[查询数据库规格](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlFlavors.html)接口获取。
 	MaxVcpus int32 `json:"max_vcpus"`
 }
 

@@ -338,6 +338,21 @@ func GenReqDefForChangeFullDeadLockSwitch() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForChangePaymentModeNew() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/clouddba/change-payment-mode").
+		WithResponse(new(model.ChangePaymentModeNewResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForChangeSqlLimitSwitchStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -3298,7 +3313,7 @@ func GenReqDefForStartAnalysisSession() *def.HttpRequestDef {
 
 func GenReqDefForSwitchFullsqlSwitch() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodPost).
+		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/fullsql/switch").
 		WithResponse(new(model.SwitchFullsqlSwitchResponse)).
 		WithContentType("application/json")

@@ -24,7 +24,7 @@ type ListTablesRequest struct {
 	// 表名称通配符。只能包含中文、字母、数字和_|*.-特殊字符，且长度为1~256个字符。
 	TableNamePattern *string `json:"table_name_pattern,omitempty"`
 
-	// 表格式。支持HIVE,ICEBERG,LANCE
+	// 表格式。支持HIVE,ICEBERG,LANCE,PAIMON
 	TableFormat *ListTablesRequestTableFormat `json:"table_format,omitempty"`
 
 	// 表类型：MANAGED_TABLE-内表、EXTERNAL_TABLE-外表、VIRTUAL_VIEW-视图、MATERIALIZED_VIEW-物化视图、DICTIONARY_TABLE字典表、LAKE_TABLE内表。
@@ -66,6 +66,7 @@ type ListTablesRequestTableFormatEnum struct {
 	HIVE    ListTablesRequestTableFormat
 	ICEBERG ListTablesRequestTableFormat
 	LANCE   ListTablesRequestTableFormat
+	PAIMON  ListTablesRequestTableFormat
 }
 
 func GetListTablesRequestTableFormatEnum() ListTablesRequestTableFormatEnum {
@@ -78,6 +79,9 @@ func GetListTablesRequestTableFormatEnum() ListTablesRequestTableFormatEnum {
 		},
 		LANCE: ListTablesRequestTableFormat{
 			value: "LANCE",
+		},
+		PAIMON: ListTablesRequestTableFormat{
+			value: "PAIMON",
 		},
 	}
 }

@@ -2796,6 +2796,27 @@ func (c *GaussDBforNoSQLClient) SwitchOverInvoker(request *model.SwitchOverReque
 	return &SwitchOverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SwitchOverDisasterRecovery 容灾实例倒换
+//
+// 容灾实例倒换。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) SwitchOverDisasterRecovery(request *model.SwitchOverDisasterRecoveryRequest) (*model.SwitchOverDisasterRecoveryResponse, error) {
+	requestDef := GenReqDefForSwitchOverDisasterRecovery()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchOverDisasterRecoveryResponse), nil
+	}
+}
+
+// SwitchOverDisasterRecoveryInvoker 容灾实例倒换
+func (c *GaussDBforNoSQLClient) SwitchOverDisasterRecoveryInvoker(request *model.SwitchOverDisasterRecoveryRequest) *SwitchOverDisasterRecoveryInvoker {
+	requestDef := GenReqDefForSwitchOverDisasterRecovery()
+	return &SwitchOverDisasterRecoveryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SwitchSecondLevelMonitoring 开启/关闭秒级监控
 //
 // 开启或关闭指定实例的5秒级监控。

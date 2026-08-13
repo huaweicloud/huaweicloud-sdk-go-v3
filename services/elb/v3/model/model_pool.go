@@ -69,7 +69,7 @@ type Pool struct {
 	// **参数解释**：后端服务器组的类型。  **取值范围**： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加IP类型后端，type指定为该类型时，vpc_id不允许指定。pool的protocol为IP时，type不允许设置为ip。] - 空字符串（\"\"）：允许任意类型的后端
 	Type string `json:"type"`
 
-	// **参数解释**：修改保护状态,。  **取值范围**： - nonProtection: 不保护。 - consoleProtection: 控制台修改保护。
+	// **参数解释**：修改保护状态。  **取值范围**： - nonProtection: 不保护。 - consoleProtection: 控制台修改保护。
 	ProtectionStatus *PoolProtectionStatus `json:"protection_status,omitempty"`
 
 	// **参数解释**：设置保护的原因。作为protection_status的转态设置的原因。  **取值范围**：除'<'和'>'外通用Unicode字符集字符，最大255个字符。

@@ -2873,6 +2873,22 @@ func GenReqDefForSwitchOver() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForSwitchOverDisasterRecovery() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3/{project_id}/instances/{instance_id}/disaster-recovery/switchover").
+		WithResponse(new(model.SwitchOverDisasterRecoveryResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForSwitchSecondLevelMonitoring() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).

@@ -14,6 +14,9 @@ type SpecResizeRequest struct {
 
 	// **参数解释**： 强制备份。字段已废弃，不再生效。 **取值范围**： 不涉及。
 	ForceBackup *bool `json:"force_backup,omitempty"`
+
+	// **参数解释**： 规格变更模式。 **约束限制**： 不涉及。 **取值范围**： online：在线模式； offline：离线模式； **默认取值**： offline
+	ChangeMode *string `json:"change_mode,omitempty"`
 }
 
 func (o SpecResizeRequest) String() string {

@@ -6,7 +6,6 @@ import (
 	"strings"
 )
 
-// PolicyLabel
 type PolicyLabel struct {
 
 	// **参数解释**：转发策略id。  **取值范围**：不涉及
@@ -16,7 +15,7 @@ type PolicyLabel struct {
 	Name string `json:"name"`
 
 	// **参数解释**：转发策略优先级。  **取值范围**：不涉及
-	Priority *string `json:"priority,omitempty"`
+	Priority *int32 `json:"priority,omitempty"`
 
 	// **参数解释**：转发策略action。  **取值范围**：不涉及
 	Action string `json:"action"`

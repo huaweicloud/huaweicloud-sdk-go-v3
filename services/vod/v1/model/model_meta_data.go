@@ -18,6 +18,9 @@ type MetaData struct {
 	// 视频编码格式。  取值如下： - MPEG-2 - MPEG-4 - H.264 - H.265 - WMV - Vorbis - AAC - AC-3 - AMR - APE - FLAC - MP3 - MP2 - WMA - PCM - ADPCM - WavPack
 	Codec *MetaDataCodec `json:"codec,omitempty"`
 
+	// 音频编码格式。 须知：仅在2025/01/01之后创建的媒资元数据/转码产物包含该参数。
+	AudioCodec *string `json:"audio_codec,omitempty"`
+
 	// 视频时长，单位：秒。  若视频的原时长为非整数，则该字段值为原时长的向下取整。 若视频的原时长小于1，则该字段值为1。
 	Duration *int64 `json:"duration,omitempty"`
 

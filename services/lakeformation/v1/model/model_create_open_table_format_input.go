@@ -11,6 +11,8 @@ type CreateOpenTableFormatInput struct {
 	CreateIcebergTableInput *CreateIcebergTableInput `json:"create_iceberg_table_input,omitempty"`
 
 	CreateLanceTableInput *CreateLanceTableInput `json:"create_lance_table_input,omitempty"`
+
+	CreatePaimonTableInput *CreatePaimonTableInput `json:"create_paimon_table_input,omitempty"`
 }
 
 func (o CreateOpenTableFormatInput) String() string {

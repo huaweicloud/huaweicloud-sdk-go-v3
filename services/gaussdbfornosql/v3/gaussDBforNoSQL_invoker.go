@@ -2117,6 +2117,22 @@ func (i *SwitchOverInvoker) Invoke() (*model.SwitchOverResponse, error) {
 	}
 }
 
+type SwitchOverDisasterRecoveryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchOverDisasterRecoveryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SwitchOverDisasterRecoveryInvoker) Invoke() (*model.SwitchOverDisasterRecoveryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchOverDisasterRecoveryResponse), nil
+	}
+}
+
 type SwitchSecondLevelMonitoringInvoker struct {
 	*invoker.BaseInvoker
 }

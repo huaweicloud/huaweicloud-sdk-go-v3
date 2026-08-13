@@ -12,7 +12,7 @@ import (
 // L7Rule L7转发规则
 type L7Rule struct {
 
-	// **参数解释**：转发规则的管理状。  **取值范围**：固定为true。  不支持该字段，请勿使用。
+	// **参数解释**：转发规则的管理状态。  **取值范围**：固定为true。  不支持该字段，请勿使用。
 	AdminStateUp bool `json:"admin_state_up"`
 
 	// **参数解释**：转发规则的匹配方式。  **取值范围**：type为HOST_NAME时可以为EQUAL_TO。type为PATH时可以为REGEX，STARTS_WITH，EQUAL_TO。

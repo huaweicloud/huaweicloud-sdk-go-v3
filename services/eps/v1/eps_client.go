@@ -334,6 +334,7 @@ func (c *EpsClient) ShowEpConfigsInvoker(request *model.ShowEpConfigsRequest) *S
 	return &ShowEpConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowResourceBindEnterpriseProject 查询企业项目绑定的资源列表
 //
 // 查询企业项目下绑定的资源详情。
@@ -349,6 +350,7 @@ func (c *EpsClient) ShowResourceBindEnterpriseProject(request *model.ShowResourc
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowResourceBindEnterpriseProjectInvoker 查询企业项目绑定的资源列表
 func (c *EpsClient) ShowResourceBindEnterpriseProjectInvoker(request *model.ShowResourceBindEnterpriseProjectRequest) *ShowResourceBindEnterpriseProjectInvoker {
 	requestDef := GenReqDefForShowResourceBindEnterpriseProject()

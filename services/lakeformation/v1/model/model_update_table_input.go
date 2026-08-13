@@ -14,7 +14,7 @@ type UpdateTableInput struct {
 	// 表名称。只能包含中文、字母、数字、下划线、中划线，且长度为1~256个字符。
 	TableName *string `json:"table_name,omitempty"`
 
-	// 表格式。支持{HIVE,ICEBERG,LANCE}，默认值为HIVE。
+	// 表格式。支持{HIVE,ICEBERG,LANCE,PAIMON}，默认值为HIVE。
 	TableFormat *UpdateTableInputTableFormat `json:"table_format,omitempty"`
 
 	// 表类型：MANAGED_TABLE-内表、EXTERNAL_TABLE-外表、VIRTUAL_VIEW-视图、MATERIALIZED_VIEW-物化视图、DICTIONARY_TABLE字典表，LAKE_TABLE内表。
@@ -85,6 +85,7 @@ type UpdateTableInputTableFormatEnum struct {
 	HIVE    UpdateTableInputTableFormat
 	ICEBERG UpdateTableInputTableFormat
 	LANCE   UpdateTableInputTableFormat
+	PAIMON  UpdateTableInputTableFormat
 }
 
 func GetUpdateTableInputTableFormatEnum() UpdateTableInputTableFormatEnum {
@@ -97,6 +98,9 @@ func GetUpdateTableInputTableFormatEnum() UpdateTableInputTableFormatEnum {
 		},
 		LANCE: UpdateTableInputTableFormat{
 			value: "LANCE",
+		},
+		PAIMON: UpdateTableInputTableFormat{
+			value: "PAIMON",
 		},
 	}
 }

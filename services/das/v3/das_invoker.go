@@ -277,6 +277,22 @@ func (i *ChangeFullDeadLockSwitchInvoker) Invoke() (*model.ChangeFullDeadLockSwi
 	}
 }
 
+type ChangePaymentModeNewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangePaymentModeNewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangePaymentModeNewInvoker) Invoke() (*model.ChangePaymentModeNewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangePaymentModeNewResponse), nil
+	}
+}
+
 type ChangeSqlLimitSwitchStatusInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -336,9 +336,9 @@ func (c *DasClient) CancelShareNewInvoker(request *model.CancelShareNewRequest) 
 	return &CancelShareNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ChangeChargeMode 设置付费模式
+// ChangeChargeMode 设置实例付费/免费模式
 //
-// 设置付费实例
+// 设置实例付费/免费模式
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DasClient) ChangeChargeMode(request *model.ChangeChargeModeRequest) (*model.ChangeChargeModeResponse, error) {
@@ -351,7 +351,7 @@ func (c *DasClient) ChangeChargeMode(request *model.ChangeChargeModeRequest) (*m
 	}
 }
 
-// ChangeChargeModeInvoker 设置付费模式
+// ChangeChargeModeInvoker 设置实例付费/免费模式
 func (c *DasClient) ChangeChargeModeInvoker(request *model.ChangeChargeModeRequest) *ChangeChargeModeInvoker {
 	requestDef := GenReqDefForChangeChargeMode()
 	return &ChangeChargeModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -376,6 +376,27 @@ func (c *DasClient) ChangeFullDeadLockSwitch(request *model.ChangeFullDeadLockSw
 func (c *DasClient) ChangeFullDeadLockSwitchInvoker(request *model.ChangeFullDeadLockSwitchRequest) *ChangeFullDeadLockSwitchInvoker {
 	requestDef := GenReqDefForChangeFullDeadLockSwitch()
 	return &ChangeFullDeadLockSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangePaymentModeNew 设置实例付费/免费模式
+//
+// 设置实例付费/免费模式
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ChangePaymentModeNew(request *model.ChangePaymentModeNewRequest) (*model.ChangePaymentModeNewResponse, error) {
+	requestDef := GenReqDefForChangePaymentModeNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangePaymentModeNewResponse), nil
+	}
+}
+
+// ChangePaymentModeNewInvoker 设置实例付费/免费模式
+func (c *DasClient) ChangePaymentModeNewInvoker(request *model.ChangePaymentModeNewRequest) *ChangePaymentModeNewInvoker {
+	requestDef := GenReqDefForChangePaymentModeNew()
+	return &ChangePaymentModeNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ChangeSqlLimitSwitchStatus 设置SQL限流开关状态

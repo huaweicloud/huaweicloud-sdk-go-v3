@@ -13,6 +13,9 @@ type ChangeChargeModeBody struct {
 
 	// 引擎类型
 	DatastoreType string `json:"datastore_type"`
+
+	// true: 设置为付费, false: 设置为免费
+	PaymentMode *bool `json:"payment_mode,omitempty"`
 }
 
 func (o ChangeChargeModeBody) String() string {

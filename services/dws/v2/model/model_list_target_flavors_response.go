@@ -13,8 +13,11 @@ type ListTargetFlavorsResponse struct {
 	Count *int32 `json:"count,omitempty"`
 
 	// **参数解释**： 规格详情列表。接口返回的规格列表最多为20条。 **取值范围**： 不涉及。
-	Flavors        *[]FlavorInfoResponse `json:"flavors,omitempty"`
-	HttpStatusCode int                   `json:"-"`
+	Flavors *[]FlavorInfoResponse `json:"flavors,omitempty"`
+
+	// **参数解释**： 规格变更模式。 **取值范围**： online：在线模式； offline：离线模式； all：在线模式、离线模式都支持。
+	ChangeMode     *string `json:"change_mode,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListTargetFlavorsResponse) String() string {

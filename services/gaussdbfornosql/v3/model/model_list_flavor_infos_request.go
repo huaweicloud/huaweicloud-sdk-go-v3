@@ -12,7 +12,7 @@ type ListFlavorInfosRequest struct {
 	// 数据库类型。   - 取值为“cassandra”，表示查询GeminiDB Cassandra数据库实例支持的规格。   - 取值为“mongodb”，表示查询GeminiDB Mongo数据库实例支持的规格。   - 取值为“influxdb”，表示查询GeminiDB Influx数据库实例支持的规格。   - 取值为“redis”，表示查询GeminiDB Redis数据库实例支持的规格。   - 如果不传该参数，默认为“cassandra”。
 	EngineName *string `json:"engine_name,omitempty"`
 
-	// - 取值为“CloudNativeCluster”, 表示查询云原生部署模式支持的规格。 - 不传该参数表示查询数据库类型下的所有经典部署模式支持的规格。
+	// - 取值为“CloudNativeCluster”, 表示查询云原生部署模式支持的规格。 - 取值为“EnhancedCluster”, 表示查询GeminiDB Influx经典部署模式集群增强版实例支持的规格。 - 不传该参数表示查询数据库类型下的所有经典部署模式支持的规格。
 	Mode *string `json:"mode,omitempty"`
 
 	// 产品类型。   - Standard 标准型   - Capacity 容量型 当创建GeminiDB Redis云原生部署模式集群类型必传此参数。

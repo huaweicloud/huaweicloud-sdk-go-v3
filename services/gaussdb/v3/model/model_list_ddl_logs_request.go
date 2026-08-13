@@ -24,11 +24,11 @@ type ListDdlLogsRequest struct {
 	// **参数解释**：  每页显示条数。  **约束限制**：  不涉及。  **取值范围**：  1-100  **默认取值**：  10
 	Limit *int32 `json:"limit,omitempty"`
 
-	// **参数解释**：  开始日期。格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-	StartTime *string `json:"start_time,omitempty"`
+	// **参数解释**：  查询开始时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+	StartTime *int64 `json:"start_time,omitempty"`
 
-	// **参数解释**：  结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。只能查询当前时间前一个月内的慢日志。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-	EndTime *string `json:"end_time,omitempty"`
+	// **参数解释**：  查询结束时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+	EndTime *int64 `json:"end_time,omitempty"`
 }
 
 func (o ListDdlLogsRequest) String() string {
