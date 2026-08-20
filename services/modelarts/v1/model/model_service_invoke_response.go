@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ServiceInvokeResponse **参数解释：** 服务调用时的相关配置。
+// ServiceInvokeResponse **参数解释：**  服务调用时的相关配置。
 type ServiceInvokeResponse struct {
 
 	// **参数解释：** 服务端口号。 **取值范围：** [1, 65535]。
@@ -52,6 +52,8 @@ type ServiceInvokeResponse struct {
 	RequestRetryIntervalMs *int32 `json:"request_retry_interval_ms,omitempty"`
 
 	FuseConfigs *FuseConfig `json:"fuse_configs,omitempty"`
+
+	ElbConnection *ElbConnectionResponse `json:"elb_connection,omitempty"`
 }
 
 func (o ServiceInvokeResponse) String() string {

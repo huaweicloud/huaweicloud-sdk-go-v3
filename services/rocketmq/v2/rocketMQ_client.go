@@ -969,6 +969,27 @@ func (c *RocketMQClient) ResizeInstanceForRocketMqInvoker(request *model.ResizeI
 	return &ResizeInstanceForRocketMqInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RestartInstance 重启指定实例
+//
+// 重启指定实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RocketMQClient) RestartInstance(request *model.RestartInstanceRequest) (*model.RestartInstanceResponse, error) {
+	requestDef := GenReqDefForRestartInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestartInstanceResponse), nil
+	}
+}
+
+// RestartInstanceInvoker 重启指定实例
+func (c *RocketMQClient) RestartInstanceInvoker(request *model.RestartInstanceRequest) *RestartInstanceInvoker {
+	requestDef := GenReqDefForRestartInstance()
+	return &RestartInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RestoreRecycleInstance 恢复回收站实例
 //
 // 恢复回收站实例。

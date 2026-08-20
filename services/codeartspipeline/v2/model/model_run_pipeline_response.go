@@ -10,7 +10,10 @@ import (
 type RunPipelineResponse struct {
 
 	// **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
-	PipelineRunId  *string `json:"pipeline_run_id,omitempty"`
+	PipelineRunId *string `json:"pipeline_run_id,omitempty"`
+
+	// **参数解释**： 流水线运行失败详情。 **取值范围**： 不涉及。
+	ErrorMsg       *string `json:"error_msg,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

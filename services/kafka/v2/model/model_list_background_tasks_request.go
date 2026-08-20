@@ -13,7 +13,7 @@ type ListBackgroundTasksRequest struct {
 	InstanceId string `json:"instance_id"`
 
 	// 开启查询的任务编号。
-	Offset *int32 `json:"offset,omitempty"`
+	Start *int32 `json:"start,omitempty"`
 
 	// 查询的任务个数。
 	Limit *int32 `json:"limit,omitempty"`

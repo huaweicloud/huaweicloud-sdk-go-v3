@@ -9,7 +9,7 @@ import (
 // ListCdnDomainTopUasResponse Response Object
 type ListCdnDomainTopUasResponse struct {
 
-	// 详情数据对象。
+	// **参数解释：** 数据详情 **取值范围：** 不涉及
 	TopUaSummary   *[]TopUaSummary `json:"top_ua_summary,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

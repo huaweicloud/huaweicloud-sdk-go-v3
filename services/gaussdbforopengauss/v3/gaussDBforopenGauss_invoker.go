@@ -213,6 +213,22 @@ func (i *ChangeDemand2PeriodInvoker) Invoke() (*model.ChangeDemand2PeriodRespons
 	}
 }
 
+type ChangeDeploymentSolutionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeDeploymentSolutionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeDeploymentSolutionInvoker) Invoke() (*model.ChangeDeploymentSolutionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeDeploymentSolutionResponse), nil
+	}
+}
+
 type ConfirmRestoredDataInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -901,22 +917,6 @@ func (i *ListAvailableFlavorsInvoker) Invoke() (*model.ListAvailableFlavorsRespo
 	}
 }
 
-type ListBackupsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListBackupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListBackupsInvoker) Invoke() (*model.ListBackupsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListBackupsResponse), nil
-	}
-}
-
 type ListBackupsDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -978,22 +978,6 @@ func (i *ListComponentInfosInvoker) Invoke() (*model.ListComponentInfosResponse,
 		return nil, err
 	} else {
 		return result.(*model.ListComponentInfosResponse), nil
-	}
-}
-
-type ListConfigurationsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListConfigurationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListConfigurationsInvoker) Invoke() (*model.ListConfigurationsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListConfigurationsResponse), nil
 	}
 }
 
@@ -1157,22 +1141,6 @@ func (i *ListDatabasesInvoker) Invoke() (*model.ListDatabasesResponse, error) {
 	}
 }
 
-type ListDatastoresInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListDatastoresInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListDatastoresInvoker) Invoke() (*model.ListDatastoresResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListDatastoresResponse), nil
-	}
-}
-
 type ListDatastoresDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1186,38 +1154,6 @@ func (i *ListDatastoresDetailsInvoker) Invoke() (*model.ListDatastoresDetailsRes
 		return nil, err
 	} else {
 		return result.(*model.ListDatastoresDetailsResponse), nil
-	}
-}
-
-type ListDbBackupsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListDbBackupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListDbBackupsInvoker) Invoke() (*model.ListDbBackupsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListDbBackupsResponse), nil
-	}
-}
-
-type ListDbFlavorsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListDbFlavorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListDbFlavorsInvoker) Invoke() (*model.ListDbFlavorsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListDbFlavorsResponse), nil
 	}
 }
 
@@ -1317,22 +1253,6 @@ func (i *ListFeaturesInvoker) Invoke() (*model.ListFeaturesResponse, error) {
 	}
 }
 
-type ListFlavorsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListFlavorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListFlavorsInvoker) Invoke() (*model.ListFlavorsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListFlavorsResponse), nil
-	}
-}
-
 type ListFlavorsDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1346,22 +1266,6 @@ func (i *ListFlavorsDetailsInvoker) Invoke() (*model.ListFlavorsDetailsResponse,
 		return nil, err
 	} else {
 		return result.(*model.ListFlavorsDetailsResponse), nil
-	}
-}
-
-type ListGaussDbDatastoresInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListGaussDbDatastoresInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListGaussDbDatastoresInvoker) Invoke() (*model.ListGaussDbDatastoresResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListGaussDbDatastoresResponse), nil
 	}
 }
 
@@ -1413,22 +1317,6 @@ func (i *ListHistoryOperationsInvoker) Invoke() (*model.ListHistoryOperationsRes
 	}
 }
 
-type ListInstanceDetailsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListInstanceDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListInstanceDetailsInvoker) Invoke() (*model.ListInstanceDetailsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListInstanceDetailsResponse), nil
-	}
-}
-
 type ListInstanceEngineDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1474,38 +1362,6 @@ func (i *ListInstanceTagsInvoker) Invoke() (*model.ListInstanceTagsResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListInstanceTagsResponse), nil
-	}
-}
-
-type ListInstancesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListInstancesInvoker) Invoke() (*model.ListInstancesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListInstancesResponse), nil
-	}
-}
-
-type ListInstancesDetailsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListInstancesDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListInstancesDetailsInvoker) Invoke() (*model.ListInstancesDetailsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListInstancesDetailsResponse), nil
 	}
 }
 
@@ -1570,22 +1426,6 @@ func (i *ListMetricDatasInvoker) Invoke() (*model.ListMetricDatasResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListMetricDatasResponse), nil
-	}
-}
-
-type ListParamGroupTemplatesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListParamGroupTemplatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListParamGroupTemplatesInvoker) Invoke() (*model.ListParamGroupTemplatesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListParamGroupTemplatesResponse), nil
 	}
 }
 
@@ -1701,22 +1541,6 @@ func (i *ListRealTimeSessionsInvoker) Invoke() (*model.ListRealTimeSessionsRespo
 	}
 }
 
-type ListRecycleInstancesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListRecycleInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListRecycleInstancesInvoker) Invoke() (*model.ListRecycleInstancesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListRecycleInstancesResponse), nil
-	}
-}
-
 type ListRecycleInstancesDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1730,22 +1554,6 @@ func (i *ListRecycleInstancesDetailsInvoker) Invoke() (*model.ListRecycleInstanc
 		return nil, err
 	} else {
 		return result.(*model.ListRecycleInstancesDetailsResponse), nil
-	}
-}
-
-type ListRestorableInstancesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListRestorableInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListRestorableInstancesInvoker) Invoke() (*model.ListRestorableInstancesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListRestorableInstancesResponse), nil
 	}
 }
 
@@ -2261,6 +2069,22 @@ func (i *RestoreInstanceInvoker) Invoke() (*model.RestoreInstanceResponse, error
 	}
 }
 
+type RestoreNodeRolesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestoreNodeRolesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RestoreNodeRolesInvoker) Invoke() (*model.RestoreNodeRolesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestoreNodeRolesResponse), nil
+	}
+}
+
 type ResumePluginExtensionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2322,22 +2146,6 @@ func (i *SearchAutoEnlargePolicyInvoker) Invoke() (*model.SearchAutoEnlargePolic
 		return nil, err
 	} else {
 		return result.(*model.SearchAutoEnlargePolicyResponse), nil
-	}
-}
-
-type SetBackupPolicyInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SetBackupPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *SetBackupPolicyInvoker) Invoke() (*model.SetBackupPolicyResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SetBackupPolicyResponse), nil
 	}
 }
 
@@ -2485,22 +2293,6 @@ func (i *ShowBalanceStatusInvoker) Invoke() (*model.ShowBalanceStatusResponse, e
 	}
 }
 
-type ShowBatchUpgradeCandidateVersionsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowBatchUpgradeCandidateVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowBatchUpgradeCandidateVersionsInvoker) Invoke() (*model.ShowBatchUpgradeCandidateVersionsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowBatchUpgradeCandidateVersionsResponse), nil
-	}
-}
-
 type ShowConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2514,22 +2306,6 @@ func (i *ShowConfigurationInvoker) Invoke() (*model.ShowConfigurationResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowConfigurationResponse), nil
-	}
-}
-
-type ShowConfigurationDetailInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowConfigurationDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowConfigurationDetailInvoker) Invoke() (*model.ShowConfigurationDetailResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowConfigurationDetailResponse), nil
 	}
 }
 
@@ -2629,22 +2405,6 @@ func (i *ShowExpansionParametersInvoker) Invoke() (*model.ShowExpansionParameter
 	}
 }
 
-type ShowInstanceConfigurationInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowInstanceConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowInstanceConfigurationInvoker) Invoke() (*model.ShowInstanceConfigurationResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowInstanceConfigurationResponse), nil
-	}
-}
-
 type ShowInstanceDiskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2677,22 +2437,6 @@ func (i *ShowInstanceMetricDataInvoker) Invoke() (*model.ShowInstanceMetricDataR
 	}
 }
 
-type ShowInstanceParamGroupInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowInstanceParamGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowInstanceParamGroupInvoker) Invoke() (*model.ShowInstanceParamGroupResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowInstanceParamGroupResponse), nil
-	}
-}
-
 type ShowInstanceParamGroupDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2709,19 +2453,19 @@ func (i *ShowInstanceParamGroupDetailInvoker) Invoke() (*model.ShowInstanceParam
 	}
 }
 
-type ShowInstanceSnapshotInvoker struct {
+type ShowInstanceQuotasInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ShowInstanceSnapshotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ShowInstanceQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ShowInstanceSnapshotInvoker) Invoke() (*model.ShowInstanceSnapshotResponse, error) {
+func (i *ShowInstanceQuotasInvoker) Invoke() (*model.ShowInstanceQuotasResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ShowInstanceSnapshotResponse), nil
+		return result.(*model.ShowInstanceQuotasResponse), nil
 	}
 }
 
@@ -2962,22 +2706,6 @@ func (i *ShowSslCertDownloadLinkInvoker) Invoke() (*model.ShowSslCertDownloadLin
 		return nil, err
 	} else {
 		return result.(*model.ShowSslCertDownloadLinkResponse), nil
-	}
-}
-
-type ShowUpgradeCandidateVersionsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowUpgradeCandidateVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowUpgradeCandidateVersionsInvoker) Invoke() (*model.ShowUpgradeCandidateVersionsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowUpgradeCandidateVersionsResponse), nil
 	}
 }
 
@@ -3333,22 +3061,6 @@ func (i *UpdateInstanceNameInvoker) Invoke() (*model.UpdateInstanceNameResponse,
 	}
 }
 
-type UpdateInstanceVersionsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateInstanceVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateInstanceVersionsInvoker) Invoke() (*model.UpdateInstanceVersionsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateInstanceVersionsResponse), nil
-	}
-}
-
 type UpdateMysqlCompatibilityInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3449,10 +3161,12 @@ type CreateDbInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *CreateDbInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *CreateDbInstanceInvoker) Invoke() (*model.CreateDbInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -3465,10 +3179,12 @@ type CreateInstanceInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *CreateInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *CreateInstanceInvoker) Invoke() (*model.CreateInstanceResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -3477,19 +3193,489 @@ func (i *CreateInstanceInvoker) Invoke() (*model.CreateInstanceResponse, error) 
 	}
 }
 
+type CreateLimitTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *CreateLimitTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *CreateLimitTaskInvoker) Invoke() (*model.CreateLimitTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateLimitTaskResponse), nil
+	}
+}
+
+type DeleteLimitTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *DeleteLimitTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *DeleteLimitTaskInvoker) Invoke() (*model.DeleteLimitTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteLimitTaskResponse), nil
+	}
+}
+
+type ListBackupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListBackupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListBackupsInvoker) Invoke() (*model.ListBackupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBackupsResponse), nil
+	}
+}
+
+type ListConfigurationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListConfigurationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListConfigurationsInvoker) Invoke() (*model.ListConfigurationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListConfigurationsResponse), nil
+	}
+}
+
+type ListDatastoresInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListDatastoresInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListDatastoresInvoker) Invoke() (*model.ListDatastoresResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDatastoresResponse), nil
+	}
+}
+
+type ListDbBackupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListDbBackupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListDbBackupsInvoker) Invoke() (*model.ListDbBackupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDbBackupsResponse), nil
+	}
+}
+
+type ListDbFlavorsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListDbFlavorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListDbFlavorsInvoker) Invoke() (*model.ListDbFlavorsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDbFlavorsResponse), nil
+	}
+}
+
+type ListFlavorsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListFlavorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListFlavorsInvoker) Invoke() (*model.ListFlavorsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFlavorsResponse), nil
+	}
+}
+
+type ListGaussDbDatastoresInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListGaussDbDatastoresInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListGaussDbDatastoresInvoker) Invoke() (*model.ListGaussDbDatastoresResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListGaussDbDatastoresResponse), nil
+	}
+}
+
+type ListInstanceDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListInstanceDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListInstanceDetailsInvoker) Invoke() (*model.ListInstanceDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceDetailsResponse), nil
+	}
+}
+
+type ListInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListInstancesInvoker) Invoke() (*model.ListInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstancesResponse), nil
+	}
+}
+
+type ListInstancesDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListInstancesDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListInstancesDetailsInvoker) Invoke() (*model.ListInstancesDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstancesDetailsResponse), nil
+	}
+}
+
+type ListLimitTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListLimitTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListLimitTaskInvoker) Invoke() (*model.ListLimitTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLimitTaskResponse), nil
+	}
+}
+
+type ListParamGroupTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListParamGroupTemplatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListParamGroupTemplatesInvoker) Invoke() (*model.ListParamGroupTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListParamGroupTemplatesResponse), nil
+	}
+}
+
+type ListRecycleInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListRecycleInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListRecycleInstancesInvoker) Invoke() (*model.ListRecycleInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRecycleInstancesResponse), nil
+	}
+}
+
+type ListRestorableInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListRestorableInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ListRestorableInstancesInvoker) Invoke() (*model.ListRestorableInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRestorableInstancesResponse), nil
+	}
+}
+
 type ResizeInstanceFlavorInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ResizeInstanceFlavorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ResizeInstanceFlavorInvoker) Invoke() (*model.ResizeInstanceFlavorResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
 		return result.(*model.ResizeInstanceFlavorResponse), nil
+	}
+}
+
+type SetBackupPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *SetBackupPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *SetBackupPolicyInvoker) Invoke() (*model.SetBackupPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetBackupPolicyResponse), nil
+	}
+}
+
+type ShowBatchUpgradeCandidateVersionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowBatchUpgradeCandidateVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowBatchUpgradeCandidateVersionsInvoker) Invoke() (*model.ShowBatchUpgradeCandidateVersionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBatchUpgradeCandidateVersionsResponse), nil
+	}
+}
+
+type ShowConfigurationDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowConfigurationDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowConfigurationDetailInvoker) Invoke() (*model.ShowConfigurationDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowConfigurationDetailResponse), nil
+	}
+}
+
+type ShowInstanceConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowInstanceConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowInstanceConfigurationInvoker) Invoke() (*model.ShowInstanceConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceConfigurationResponse), nil
+	}
+}
+
+type ShowInstanceParamGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowInstanceParamGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowInstanceParamGroupInvoker) Invoke() (*model.ShowInstanceParamGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceParamGroupResponse), nil
+	}
+}
+
+type ShowInstanceSnapshotInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowInstanceSnapshotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowInstanceSnapshotInvoker) Invoke() (*model.ShowInstanceSnapshotResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceSnapshotResponse), nil
+	}
+}
+
+type ShowLimitTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowLimitTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowLimitTaskInvoker) Invoke() (*model.ShowLimitTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLimitTaskResponse), nil
+	}
+}
+
+type ShowUpgradeCandidateVersionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowUpgradeCandidateVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *ShowUpgradeCandidateVersionsInvoker) Invoke() (*model.ShowUpgradeCandidateVersionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowUpgradeCandidateVersionsResponse), nil
+	}
+}
+
+type UpdateInstanceVersionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *UpdateInstanceVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *UpdateInstanceVersionsInvoker) Invoke() (*model.UpdateInstanceVersionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstanceVersionsResponse), nil
+	}
+}
+
+type UpdateLimitTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *UpdateLimitTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *UpdateLimitTaskInvoker) Invoke() (*model.UpdateLimitTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateLimitTaskResponse), nil
 	}
 }
 
@@ -3605,22 +3791,6 @@ func (i *UnbindLtsConfigInvoker) Invoke() (*model.UnbindLtsConfigResponse, error
 	}
 }
 
-type CreateLimitTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateLimitTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateLimitTaskInvoker) Invoke() (*model.CreateLimitTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateLimitTaskResponse), nil
-	}
-}
-
 type CreateSqlLimitTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3634,22 +3804,6 @@ func (i *CreateSqlLimitTaskInvoker) Invoke() (*model.CreateSqlLimitTaskResponse,
 		return nil, err
 	} else {
 		return result.(*model.CreateSqlLimitTaskResponse), nil
-	}
-}
-
-type DeleteLimitTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteLimitTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteLimitTaskInvoker) Invoke() (*model.DeleteLimitTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteLimitTaskResponse), nil
 	}
 }
 
@@ -3762,22 +3916,6 @@ func (i *ListFullSqlSwitchesInvoker) Invoke() (*model.ListFullSqlSwitchesRespons
 		return nil, err
 	} else {
 		return result.(*model.ListFullSqlSwitchesResponse), nil
-	}
-}
-
-type ListLimitTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListLimitTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListLimitTaskInvoker) Invoke() (*model.ListLimitTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListLimitTaskResponse), nil
 	}
 }
 
@@ -3925,22 +4063,6 @@ func (i *ShowGlobalSlowSqlDetailInvoker) Invoke() (*model.ShowGlobalSlowSqlDetai
 	}
 }
 
-type ShowLimitTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowLimitTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowLimitTaskInvoker) Invoke() (*model.ShowLimitTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowLimitTaskResponse), nil
-	}
-}
-
 type ShowSqlLimitTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4002,22 +4124,6 @@ func (i *SyncLimitDataInvoker) Invoke() (*model.SyncLimitDataResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.SyncLimitDataResponse), nil
-	}
-}
-
-type UpdateLimitTaskInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateLimitTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateLimitTaskInvoker) Invoke() (*model.UpdateLimitTaskResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateLimitTaskResponse), nil
 	}
 }
 
@@ -4114,6 +4220,22 @@ func (i *CreateWdrSnapshotInvoker) Invoke() (*model.CreateWdrSnapshotResponse, e
 		return nil, err
 	} else {
 		return result.(*model.CreateWdrSnapshotResponse), nil
+	}
+}
+
+type ListWdrSnapshotAvailableGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListWdrSnapshotAvailableGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListWdrSnapshotAvailableGroupsInvoker) Invoke() (*model.ListWdrSnapshotAvailableGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListWdrSnapshotAvailableGroupsResponse), nil
 	}
 }
 

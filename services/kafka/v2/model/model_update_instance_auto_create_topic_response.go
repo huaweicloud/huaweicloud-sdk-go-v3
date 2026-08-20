@@ -8,7 +8,10 @@ import (
 
 // UpdateInstanceAutoCreateTopicResponse Response Object
 type UpdateInstanceAutoCreateTopicResponse struct {
-	HttpStatusCode int `json:"-"`
+
+	// **参数解释**： 是否开启自动创建Topic功能。 **取值范围**： - true：开启自动创建Topic功能。 - false：关闭自动创建Topic功能。
+	EnableAutoTopic *bool `json:"enable_auto_topic,omitempty"`
+	HttpStatusCode  int   `json:"-"`
 }
 
 func (o UpdateInstanceAutoCreateTopicResponse) String() string {

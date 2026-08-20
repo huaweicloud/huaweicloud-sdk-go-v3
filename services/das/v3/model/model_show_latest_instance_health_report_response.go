@@ -36,7 +36,10 @@ type ShowLatestInstanceHealthReportResponse struct {
 	FullSqlStat *HealthReportFullSqlStat `json:"full_sql_stat,omitempty"`
 
 	InspectionStat *HealthReportInspectionStat `json:"inspection_stat,omitempty"`
-	HttpStatusCode int                         `json:"-"`
+
+	// 错误信息
+	ErrorMessage   *string `json:"error_message,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowLatestInstanceHealthReportResponse) String() string {

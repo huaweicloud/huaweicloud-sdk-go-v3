@@ -12,10 +12,10 @@ type TopIpSummary struct {
 	// IP值。
 	Ip *string `json:"ip,omitempty"`
 
-	// 对应查询类型的值。（流量单位：Byte）
+	// **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
 	Value *int64 `json:"value,omitempty"`
 
-	// 该IP的流量(或请求数)占当前查询条件下总流量(或请求数)的比例。保留4位小数
+	// **参数解释：** 该IP的流量（或请求数）占当前查询条件下总流量（或请求数）的比例 **取值范围：** 保留4位小数
 	Ratio *float64 `json:"ratio,omitempty"`
 }
 

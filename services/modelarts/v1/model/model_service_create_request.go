@@ -27,15 +27,15 @@ type ServiceCreateRequest struct {
 	// **参数解释：** 服务实例组配置。 **约束限制：** 仅创建服务时group_configs可传[]空数组，group_configs的最大元素数量为1。
 	GroupConfigs []GroupConfig `json:"group_configs"`
 
-	RuntimeConfig *RuntimeConfig `json:"runtime_config"`
+	RuntimeConfig *RuntimeConfigCreateRequest `json:"runtime_config"`
 
 	UpgradeConfig *UpgradeConfig `json:"upgrade_config,omitempty"`
 
 	// **参数解释：** 日志策略。 **约束限制：** 不涉及。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略 **默认取值：** AUTO_CREATE：自动创建日志流。
 	LtsStrategy *string `json:"lts_strategy,omitempty"`
 
-	// **参数解释：** 日志配置。 **约束限制：** 当开启LTS日志的时候，STDOUT类型为必填。 数量上限为2个。
-	LogConfigs *[]LtsConfig `json:"log_configs,omitempty"`
+	// **参数解释：** 服务日志配置。 **约束限制：** 数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
+	LogConfigs *[]LtsConfiguration `json:"log_configs,omitempty"`
 
 	// **参数解释：** 服务标签。 **约束限制：** 上限20个。
 	Tags *[]ServiceCreateRequestTags `json:"tags,omitempty"`
@@ -43,7 +43,7 @@ type ServiceCreateRequest struct {
 	// **参数解释：** 工作空间ID。 **约束限制：** 不涉及。 **取值范围：** - 0：默认空间ID。 - 由数字和小写字母组成的32位字符：其他空间ID，可参考[工作空间创建](CreateWorkspace.xml)。 **默认取值：** 不涉及。
 	WorkspaceId *string `json:"workspace_id,omitempty"`
 
-	// **参数解释：** 定时停止配置。 **约束限制：** 最多支持一个定时任务。
+	// **参数解释：**  定时停止配置。 **约束限制：**  最多支持一个定时任务。
 	Schedule *[]ScheduleConfig `json:"schedule,omitempty"`
 
 	// **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，比如：[http,8080,metrics]，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。 **约束限制：** 长度不超过255。 **取值范围：** - 协议范围：http/https。 - 端口范围：1-65535。 - 地址范围：仅包含字母、数字、点号（.）、中划线（-)、下划线（_）、斜杠（/）的路径，非斜杠（/）开头。 **默认取值：** 不涉及。

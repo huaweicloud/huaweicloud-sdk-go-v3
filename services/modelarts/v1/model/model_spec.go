@@ -17,6 +17,8 @@ type Spec struct {
 
 	AutoStop *AutoStop `json:"auto_stop,omitempty"`
 
+	Retention *RetentionPolicy `json:"retention,omitempty"`
+
 	SchedulePolicy *SchedulePolicy `json:"schedule_policy,omitempty"`
 
 	LogExportConfig *LogExportConfig `json:"log_export_config,omitempty"`
@@ -32,6 +34,8 @@ type Spec struct {
 
 	// **参数解释**：精调训练作业资产模型ID。
 	AssetId *string `json:"asset_id,omitempty"`
+
+	ReservedTime *ReserveTime `json:"reserved_time,omitempty"`
 }
 
 func (o Spec) String() string {

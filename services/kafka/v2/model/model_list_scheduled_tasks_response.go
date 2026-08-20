@@ -10,7 +10,7 @@ import (
 type ListScheduledTasksResponse struct {
 
 	// **参数解释**： 任务总数。 **取值范围**： 不涉及。
-	JobCount *string `json:"job_count,omitempty"`
+	JobCount *int32 `json:"job_count,omitempty"`
 
 	// **参数解释**： 任务列表。
 	Jobs           *[]ScheduledTaskEntity `json:"jobs,omitempty"`

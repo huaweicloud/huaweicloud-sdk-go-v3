@@ -9,10 +9,10 @@ import (
 // TopPathSummary topPath详情数据
 type TopPathSummary struct {
 
-	// top100 path访问路径
+	// **参数解释：** top100 path访问路径 **取值范围：** 不涉及
 	Path *string `json:"path,omitempty"`
 
-	// top100path访问次数
+	// **参数解释：** top100 path访问次数 **取值范围：** 不涉及
 	Value *int64 `json:"value,omitempty"`
 }
 

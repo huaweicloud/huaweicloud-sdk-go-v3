@@ -12,10 +12,10 @@ type HealthReportTableSpaceQuerySpaceTopResp struct {
 	TopDataList *[]HealthReportTableSpaceTopDataDto `json:"top_data_list,omitempty"`
 
 	// 采集时间
-	CollectTimestamp float32 `json:"collect_timestamp,omitempty"`
+	CollectTimestamp *int64 `json:"collect_timestamp,omitempty"`
 
 	// 总大小。
-	TotalCount float32 `json:"total_count,omitempty"`
+	TotalCount *int64 `json:"total_count,omitempty"`
 }
 
 func (o HealthReportTableSpaceQuerySpaceTopResp) String() string {

@@ -18,7 +18,7 @@ type PeriodProductOfficialRatingResult struct {
 	// 包年/包月产品的官网价。
 	OfficialWebsiteAmount *decimal.Decimal `json:"official_website_amount,omitempty"`
 
-	// 价格度量单位标识。 1：元
+	// 价格度量单位标识。 1：美元
 	MeasureId *int32 `json:"measure_id,omitempty"`
 }
 

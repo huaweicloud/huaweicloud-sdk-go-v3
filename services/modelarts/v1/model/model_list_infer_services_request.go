@@ -48,6 +48,9 @@ type ListInferServicesRequest struct {
 	// **参数解释：** 资产ID，查询使用了指定资产的服务，默认不过滤。可通过[资产管理][模型列表]获取。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	AssetId *string `json:"asset_id,omitempty"`
 
+	// **参数解释：** 节点IP地址，按节点IP地址查询该节点IP下POD对应的服务，默认不过滤。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+	NodeIp *string `json:"node_ip,omitempty"`
+
 	// **参数解释：** 排序方式 **约束限制：** 不涉及。 **取值范围：** - ASC: 递增排序。 - DESC: 递减排序。 **默认取值：** DESC。
 	SortDir *string `json:"sort_dir,omitempty"`
 

@@ -19,9 +19,6 @@ type ShowCeshierarchyRespDimensions struct {
 
 	// **参数解释**： 监控维度路由。
 	DimRouter *[]string `json:"dim_router,omitempty"`
-
-	// **参数解释**： 子维度列表。
-	Children *[]ShowCeshierarchyRespChildren `json:"children,omitempty"`
 }
 
 func (o ShowCeshierarchyRespDimensions) String() string {

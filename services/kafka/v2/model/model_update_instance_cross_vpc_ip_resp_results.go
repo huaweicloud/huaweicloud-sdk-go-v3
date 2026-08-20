@@ -9,13 +9,13 @@ import (
 // UpdateInstanceCrossVpcIpRespResults 修改broker跨VPC访问的结果。
 type UpdateInstanceCrossVpcIpRespResults struct {
 
-	// advertised.listeners IP/域名。
+	// **参数解释**： advertised.listeners IP/域名。 **取值范围**： 不涉及。
 	AdvertisedIp *string `json:"advertised_ip,omitempty"`
 
-	// 修改broker跨VPC访问的状态。
+	// **参数解释**： 修改broker跨VPC访问的状态。 **取值范围**： - true：修改broker跨VPC访问成功。 - false：修改broker跨VPC访问失败。
 	Success *bool `json:"success,omitempty"`
 
-	// listeners IP。
+	// **参数解释**： listeners IP。 **取值范围**： 不涉及。
 	Ip *string `json:"ip,omitempty"`
 }
 

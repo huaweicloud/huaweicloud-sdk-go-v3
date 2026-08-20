@@ -607,6 +607,174 @@ func (c *ProjectManClient) UpdateProjectV4Invoker(request *model.UpdateProjectV4
 	return &UpdateProjectV4Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AssociateIpdThirdParty 新建并关联外部链接
+//
+// 需要给IPD项目下的工作项关联外部链接时，可调用此接口，用户可以通过项目ID和工作项ID，传入需要绑定的外部链接的名称和地址，给该工作项关联外部链接。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) AssociateIpdThirdParty(request *model.AssociateIpdThirdPartyRequest) (*model.AssociateIpdThirdPartyResponse, error) {
+	requestDef := GenReqDefForAssociateIpdThirdParty()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateIpdThirdPartyResponse), nil
+	}
+}
+
+// AssociateIpdThirdPartyInvoker 新建并关联外部链接
+func (c *ProjectManClient) AssociateIpdThirdPartyInvoker(request *model.AssociateIpdThirdPartyRequest) *AssociateIpdThirdPartyInvoker {
+	requestDef := GenReqDefForAssociateIpdThirdParty()
+	return &AssociateIpdThirdPartyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AssociateIssues 工作项关联/取消关联
+//
+// 支持动态关联或取消工作项间的父子层级及其他关联关系，用户可以根据不同的参数明确是关联或者取消，也可以根据参数明确关联的类型，比如关联父、子工作项或者关联其他工作项。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) AssociateIssues(request *model.AssociateIssuesRequest) (*model.AssociateIssuesResponse, error) {
+	requestDef := GenReqDefForAssociateIssues()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateIssuesResponse), nil
+	}
+}
+
+// AssociateIssuesInvoker 工作项关联/取消关联
+func (c *ProjectManClient) AssociateIssuesInvoker(request *model.AssociateIssuesRequest) *AssociateIssuesInvoker {
+	requestDef := GenReqDefForAssociateIssues()
+	return &AssociateIssuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchBaselineIpdIssues 批量基线工作项
+//
+// 需要批量基线IPD项目下的工作项时，可调用此接口。用户可以根据待基线的工作项ID数组对工作项进行批量基线。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) BatchBaselineIpdIssues(request *model.BatchBaselineIpdIssuesRequest) (*model.BatchBaselineIpdIssuesResponse, error) {
+	requestDef := GenReqDefForBatchBaselineIpdIssues()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchBaselineIpdIssuesResponse), nil
+	}
+}
+
+// BatchBaselineIpdIssuesInvoker 批量基线工作项
+func (c *ProjectManClient) BatchBaselineIpdIssuesInvoker(request *model.BatchBaselineIpdIssuesRequest) *BatchBaselineIpdIssuesInvoker {
+	requestDef := GenReqDefForBatchBaselineIpdIssues()
+	return &BatchBaselineIpdIssuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateIssueSnapitems 批量创建工作项快照
+//
+// 为IPD工作项批量创建快照时，可调用此接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) BatchCreateIssueSnapitems(request *model.BatchCreateIssueSnapitemsRequest) (*model.BatchCreateIssueSnapitemsResponse, error) {
+	requestDef := GenReqDefForBatchCreateIssueSnapitems()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateIssueSnapitemsResponse), nil
+	}
+}
+
+// BatchCreateIssueSnapitemsInvoker 批量创建工作项快照
+func (c *ProjectManClient) BatchCreateIssueSnapitemsInvoker(request *model.BatchCreateIssueSnapitemsRequest) *BatchCreateIssueSnapitemsInvoker {
+	requestDef := GenReqDefForBatchCreateIssueSnapitems()
+	return &BatchCreateIssueSnapitemsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteSnapshots 批量删除快照
+//
+// 根据传入的快照ID列表批量删除快照。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) BatchDeleteSnapshots(request *model.BatchDeleteSnapshotsRequest) (*model.BatchDeleteSnapshotsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteSnapshots()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteSnapshotsResponse), nil
+	}
+}
+
+// BatchDeleteSnapshotsInvoker 批量删除快照
+func (c *ProjectManClient) BatchDeleteSnapshotsInvoker(request *model.BatchDeleteSnapshotsRequest) *BatchDeleteSnapshotsInvoker {
+	requestDef := GenReqDefForBatchDeleteSnapshots()
+	return &BatchDeleteSnapshotsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchUpdateSnapshotDeletableFlag 批量更新快照可删除标识
+//
+// 批量更新快照的可删除标识状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) BatchUpdateSnapshotDeletableFlag(request *model.BatchUpdateSnapshotDeletableFlagRequest) (*model.BatchUpdateSnapshotDeletableFlagResponse, error) {
+	requestDef := GenReqDefForBatchUpdateSnapshotDeletableFlag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateSnapshotDeletableFlagResponse), nil
+	}
+}
+
+// BatchUpdateSnapshotDeletableFlagInvoker 批量更新快照可删除标识
+func (c *ProjectManClient) BatchUpdateSnapshotDeletableFlagInvoker(request *model.BatchUpdateSnapshotDeletableFlagRequest) *BatchUpdateSnapshotDeletableFlagInvoker {
+	requestDef := GenReqDefForBatchUpdateSnapshotDeletableFlag()
+	return &BatchUpdateSnapshotDeletableFlagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateIpdLabel 创建标签
+//
+// 创建标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) CreateIpdLabel(request *model.CreateIpdLabelRequest) (*model.CreateIpdLabelResponse, error) {
+	requestDef := GenReqDefForCreateIpdLabel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateIpdLabelResponse), nil
+	}
+}
+
+// CreateIpdLabelInvoker 创建标签
+func (c *ProjectManClient) CreateIpdLabelInvoker(request *model.CreateIpdLabelRequest) *CreateIpdLabelInvoker {
+	requestDef := GenReqDefForCreateIpdLabel()
+	return &CreateIpdLabelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateIpdProcessInstance 创建变更评审单（BR/GR）
+//
+// 创建变更评审单，适用于基线评审（BR）和通用评审（GR）单
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) CreateIpdProcessInstance(request *model.CreateIpdProcessInstanceRequest) (*model.CreateIpdProcessInstanceResponse, error) {
+	requestDef := GenReqDefForCreateIpdProcessInstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateIpdProcessInstanceResponse), nil
+	}
+}
+
+// CreateIpdProcessInstanceInvoker 创建变更评审单（BR/GR）
+func (c *ProjectManClient) CreateIpdProcessInstanceInvoker(request *model.CreateIpdProcessInstanceRequest) *CreateIpdProcessInstanceInvoker {
+	requestDef := GenReqDefForCreateIpdProcessInstance()
+	return &CreateIpdProcessInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateIpdProjectIssue 创建工作项
 //
 // 创建IPD项目的工作项
@@ -649,6 +817,27 @@ func (c *ProjectManClient) CreateIpdProjectIssueAttachmentInvoker(request *model
 	return &CreateIpdProjectIssueAttachmentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateSprintSnapshots 创建计划管理快照
+//
+// 为指定的发布/迭代及其中的工作项创建一个快照。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) CreateSprintSnapshots(request *model.CreateSprintSnapshotsRequest) (*model.CreateSprintSnapshotsResponse, error) {
+	requestDef := GenReqDefForCreateSprintSnapshots()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSprintSnapshotsResponse), nil
+	}
+}
+
+// CreateSprintSnapshotsInvoker 创建计划管理快照
+func (c *ProjectManClient) CreateSprintSnapshotsInvoker(request *model.CreateSprintSnapshotsRequest) *CreateSprintSnapshotsInvoker {
+	requestDef := GenReqDefForCreateSprintSnapshots()
+	return &CreateSprintSnapshotsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteIpdImageInIssue 删除工作项描述中的图片
 //
 // 删除工作项描述中的图片
@@ -668,6 +857,48 @@ func (c *ProjectManClient) DeleteIpdImageInIssue(request *model.DeleteIpdImageIn
 func (c *ProjectManClient) DeleteIpdImageInIssueInvoker(request *model.DeleteIpdImageInIssueRequest) *DeleteIpdImageInIssueInvoker {
 	requestDef := GenReqDefForDeleteIpdImageInIssue()
 	return &DeleteIpdImageInIssueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteIpdLabel 删除标签
+//
+// 删除标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) DeleteIpdLabel(request *model.DeleteIpdLabelRequest) (*model.DeleteIpdLabelResponse, error) {
+	requestDef := GenReqDefForDeleteIpdLabel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteIpdLabelResponse), nil
+	}
+}
+
+// DeleteIpdLabelInvoker 删除标签
+func (c *ProjectManClient) DeleteIpdLabelInvoker(request *model.DeleteIpdLabelRequest) *DeleteIpdLabelInvoker {
+	requestDef := GenReqDefForDeleteIpdLabel()
+	return &DeleteIpdLabelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteIpdThirdParty 删除外部链接
+//
+// 需要删除IPD项目下的工作项对应的外部链接时，可调用此接口，用户可以通过项目ID和工作项ID确定工作项，传入需要删除的外部链接唯一标识ID，此ID可以通过查询外部链接获得，删除该工作项的某条外部链接。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) DeleteIpdThirdParty(request *model.DeleteIpdThirdPartyRequest) (*model.DeleteIpdThirdPartyResponse, error) {
+	requestDef := GenReqDefForDeleteIpdThirdParty()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteIpdThirdPartyResponse), nil
+	}
+}
+
+// DeleteIpdThirdPartyInvoker 删除外部链接
+func (c *ProjectManClient) DeleteIpdThirdPartyInvoker(request *model.DeleteIpdThirdPartyRequest) *DeleteIpdThirdPartyInvoker {
+	requestDef := GenReqDefForDeleteIpdThirdParty()
+	return &DeleteIpdThirdPartyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DownloadIpdImageInIssue 下载工作项描述中的图片
@@ -691,6 +922,27 @@ func (c *ProjectManClient) DownloadIpdImageInIssueInvoker(request *model.Downloa
 	return &DownloadIpdImageInIssueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListIpdLabels 查询标签列表
+//
+// 查询标签列表，不分页，支持按标题搜索。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) ListIpdLabels(request *model.ListIpdLabelsRequest) (*model.ListIpdLabelsResponse, error) {
+	requestDef := GenReqDefForListIpdLabels()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIpdLabelsResponse), nil
+	}
+}
+
+// ListIpdLabelsInvoker 查询标签列表
+func (c *ProjectManClient) ListIpdLabelsInvoker(request *model.ListIpdLabelsRequest) *ListIpdLabelsInvoker {
+	requestDef := GenReqDefForListIpdLabels()
+	return &ListIpdLabelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListIpdProjectIssues 查询项目工作项列表
 //
 // 查询Ipd项目的工作项列表
@@ -710,6 +962,48 @@ func (c *ProjectManClient) ListIpdProjectIssues(request *model.ListIpdProjectIss
 func (c *ProjectManClient) ListIpdProjectIssuesInvoker(request *model.ListIpdProjectIssuesRequest) *ListIpdProjectIssuesInvoker {
 	requestDef := GenReqDefForListIpdProjectIssues()
 	return &ListIpdProjectIssuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIpdReviewFormsByIssueId 根据工作项ID查询关联的评审单列表
+//
+// 根据工作项ID查询关联的评审单列表。支持查询的评审单类型包括：变更评审、通用评审、基线评审。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) ListIpdReviewFormsByIssueId(request *model.ListIpdReviewFormsByIssueIdRequest) (*model.ListIpdReviewFormsByIssueIdResponse, error) {
+	requestDef := GenReqDefForListIpdReviewFormsByIssueId()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIpdReviewFormsByIssueIdResponse), nil
+	}
+}
+
+// ListIpdReviewFormsByIssueIdInvoker 根据工作项ID查询关联的评审单列表
+func (c *ProjectManClient) ListIpdReviewFormsByIssueIdInvoker(request *model.ListIpdReviewFormsByIssueIdRequest) *ListIpdReviewFormsByIssueIdInvoker {
+	requestDef := GenReqDefForListIpdReviewFormsByIssueId()
+	return &ListIpdReviewFormsByIssueIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListIssueBySnapIds 根据快照ID查询工作项信息
+//
+// 根据快照ID查询该快照的工作项信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) ListIssueBySnapIds(request *model.ListIssueBySnapIdsRequest) (*model.ListIssueBySnapIdsResponse, error) {
+	requestDef := GenReqDefForListIssueBySnapIds()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIssueBySnapIdsResponse), nil
+	}
+}
+
+// ListIssueBySnapIdsInvoker 根据快照ID查询工作项信息
+func (c *ProjectManClient) ListIssueBySnapIdsInvoker(request *model.ListIssueBySnapIdsRequest) *ListIssueBySnapIdsInvoker {
+	requestDef := GenReqDefForListIssueBySnapIds()
+	return &ListIssueBySnapIdsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListIssueFields 查询字段模板列表
@@ -733,6 +1027,27 @@ func (c *ProjectManClient) ListIssueFieldsInvoker(request *model.ListIssueFields
 	return &ListIssueFieldsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListIssueSprintSnapshots 查询工作项计划管理快照列表
+//
+// 根据工作项ID查询工作项快照列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) ListIssueSprintSnapshots(request *model.ListIssueSprintSnapshotsRequest) (*model.ListIssueSprintSnapshotsResponse, error) {
+	requestDef := GenReqDefForListIssueSprintSnapshots()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIssueSprintSnapshotsResponse), nil
+	}
+}
+
+// ListIssueSprintSnapshotsInvoker 查询工作项计划管理快照列表
+func (c *ProjectManClient) ListIssueSprintSnapshotsInvoker(request *model.ListIssueSprintSnapshotsRequest) *ListIssueSprintSnapshotsInvoker {
+	requestDef := GenReqDefForListIssueSprintSnapshots()
+	return &ListIssueSprintSnapshotsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListIssueStatues 查询工作项状态
 //
 // 根据工作项查询工作项下的状态信息
@@ -752,6 +1067,90 @@ func (c *ProjectManClient) ListIssueStatues(request *model.ListIssueStatuesReque
 func (c *ProjectManClient) ListIssueStatuesInvoker(request *model.ListIssueStatuesRequest) *ListIssueStatuesInvoker {
 	requestDef := GenReqDefForListIssueStatues()
 	return &ListIssueStatuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// PutIpdChangeReviewFormV2 更新IPD变更评审单
+//
+// 更新变更评审单，传参方式与portal页面一致。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) PutIpdChangeReviewFormV2(request *model.PutIpdChangeReviewFormV2Request) (*model.PutIpdChangeReviewFormV2Response, error) {
+	requestDef := GenReqDefForPutIpdChangeReviewFormV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PutIpdChangeReviewFormV2Response), nil
+	}
+}
+
+// PutIpdChangeReviewFormV2Invoker 更新IPD变更评审单
+func (c *ProjectManClient) PutIpdChangeReviewFormV2Invoker(request *model.PutIpdChangeReviewFormV2Request) *PutIpdChangeReviewFormV2Invoker {
+	requestDef := GenReqDefForPutIpdChangeReviewFormV2()
+	return &PutIpdChangeReviewFormV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// QueryIssueAssociatedItem 查询工作项关联项
+//
+// 根据项目ID和工作项ID，查询该工作项的所有关联关系（包括父子关系、协同上下游、普通关联等），支持分页查询、关系字段过滤和跨项目关联查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) QueryIssueAssociatedItem(request *model.QueryIssueAssociatedItemRequest) (*model.QueryIssueAssociatedItemResponse, error) {
+	requestDef := GenReqDefForQueryIssueAssociatedItem()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.QueryIssueAssociatedItemResponse), nil
+	}
+}
+
+// QueryIssueAssociatedItemInvoker 查询工作项关联项
+func (c *ProjectManClient) QueryIssueAssociatedItemInvoker(request *model.QueryIssueAssociatedItemRequest) *QueryIssueAssociatedItemInvoker {
+	requestDef := GenReqDefForQueryIssueAssociatedItem()
+	return &QueryIssueAssociatedItemInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIpdFieldsV2 查询工作项实例字段列表
+//
+// 查询创建工作项实例时可用的字段配置信息，包含系统字段和项目自定义字段。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) ShowIpdFieldsV2(request *model.ShowIpdFieldsV2Request) (*model.ShowIpdFieldsV2Response, error) {
+	requestDef := GenReqDefForShowIpdFieldsV2()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIpdFieldsV2Response), nil
+	}
+}
+
+// ShowIpdFieldsV2Invoker 查询工作项实例字段列表
+func (c *ProjectManClient) ShowIpdFieldsV2Invoker(request *model.ShowIpdFieldsV2Request) *ShowIpdFieldsV2Invoker {
+	requestDef := GenReqDefForShowIpdFieldsV2()
+	return &ShowIpdFieldsV2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIpdThirdPartyAssociated 查询外部链接
+//
+// 需要获取IPD项目下工作项对应的外部链接列表时，可调用此接口，用户可以通过项目ID和工作项ID查询该工作项关联的所有外部链接。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) ShowIpdThirdPartyAssociated(request *model.ShowIpdThirdPartyAssociatedRequest) (*model.ShowIpdThirdPartyAssociatedResponse, error) {
+	requestDef := GenReqDefForShowIpdThirdPartyAssociated()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIpdThirdPartyAssociatedResponse), nil
+	}
+}
+
+// ShowIpdThirdPartyAssociatedInvoker 查询外部链接
+func (c *ProjectManClient) ShowIpdThirdPartyAssociatedInvoker(request *model.ShowIpdThirdPartyAssociatedRequest) *ShowIpdThirdPartyAssociatedInvoker {
+	requestDef := GenReqDefForShowIpdThirdPartyAssociated()
+	return &ShowIpdThirdPartyAssociatedInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowIssueConfigFields 查询工作流字段配置信息
@@ -836,6 +1235,48 @@ func (c *ProjectManClient) TransferWorkItemFlow(request *model.TransferWorkItemF
 func (c *ProjectManClient) TransferWorkItemFlowInvoker(request *model.TransferWorkItemFlowRequest) *TransferWorkItemFlowInvoker {
 	requestDef := GenReqDefForTransferWorkItemFlow()
 	return &TransferWorkItemFlowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateIpdLabel 更新标签
+//
+// 更新标签，支持更新标题和颜色。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) UpdateIpdLabel(request *model.UpdateIpdLabelRequest) (*model.UpdateIpdLabelResponse, error) {
+	requestDef := GenReqDefForUpdateIpdLabel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateIpdLabelResponse), nil
+	}
+}
+
+// UpdateIpdLabelInvoker 更新标签
+func (c *ProjectManClient) UpdateIpdLabelInvoker(request *model.UpdateIpdLabelRequest) *UpdateIpdLabelInvoker {
+	requestDef := GenReqDefForUpdateIpdLabel()
+	return &UpdateIpdLabelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateIpdThirdParty 修改外部链接
+//
+// 需要修改IPD项目下的工作项对应的外部链接时，可调用此接口，用户可以通过项目ID和工作项ID确定工作项，传入需要修改的外部链接唯一标识ID，此ID可以通过查询外部链接接口获得，以及修改后的名称和地址，修改该工作项的某条外部链接的名称和地址。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ProjectManClient) UpdateIpdThirdParty(request *model.UpdateIpdThirdPartyRequest) (*model.UpdateIpdThirdPartyResponse, error) {
+	requestDef := GenReqDefForUpdateIpdThirdParty()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateIpdThirdPartyResponse), nil
+	}
+}
+
+// UpdateIpdThirdPartyInvoker 修改外部链接
+func (c *ProjectManClient) UpdateIpdThirdPartyInvoker(request *model.UpdateIpdThirdPartyRequest) *UpdateIpdThirdPartyInvoker {
+	requestDef := GenReqDefForUpdateIpdThirdParty()
+	return &UpdateIpdThirdPartyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UploadIpdImageInIssue 上传图片到工作项描述中

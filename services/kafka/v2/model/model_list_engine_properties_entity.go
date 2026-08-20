@@ -33,6 +33,9 @@ type ListEnginePropertiesEntity struct {
 	// **参数解释**： 每个Broker的最大TPS。 **取值范围**： 不涉及。
 	MaxTpsPerBroker *string `json:"max_tps_per_broker,omitempty"`
 
+	// **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
+	EngineVersions *string `json:"engine_versions,omitempty"`
+
 	// **参数解释**： product_id的别名。 **取值范围**： 不涉及。
 	ProductAlias *string `json:"product_alias,omitempty"`
 }

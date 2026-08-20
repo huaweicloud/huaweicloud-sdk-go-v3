@@ -453,6 +453,134 @@ func (i *UpdateProjectV4Invoker) Invoke() (*model.UpdateProjectV4Response, error
 	}
 }
 
+type AssociateIpdThirdPartyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssociateIpdThirdPartyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AssociateIpdThirdPartyInvoker) Invoke() (*model.AssociateIpdThirdPartyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssociateIpdThirdPartyResponse), nil
+	}
+}
+
+type AssociateIssuesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssociateIssuesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AssociateIssuesInvoker) Invoke() (*model.AssociateIssuesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssociateIssuesResponse), nil
+	}
+}
+
+type BatchBaselineIpdIssuesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchBaselineIpdIssuesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchBaselineIpdIssuesInvoker) Invoke() (*model.BatchBaselineIpdIssuesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchBaselineIpdIssuesResponse), nil
+	}
+}
+
+type BatchCreateIssueSnapitemsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateIssueSnapitemsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateIssueSnapitemsInvoker) Invoke() (*model.BatchCreateIssueSnapitemsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateIssueSnapitemsResponse), nil
+	}
+}
+
+type BatchDeleteSnapshotsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteSnapshotsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteSnapshotsInvoker) Invoke() (*model.BatchDeleteSnapshotsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteSnapshotsResponse), nil
+	}
+}
+
+type BatchUpdateSnapshotDeletableFlagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateSnapshotDeletableFlagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateSnapshotDeletableFlagInvoker) Invoke() (*model.BatchUpdateSnapshotDeletableFlagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateSnapshotDeletableFlagResponse), nil
+	}
+}
+
+type CreateIpdLabelInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateIpdLabelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateIpdLabelInvoker) Invoke() (*model.CreateIpdLabelResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateIpdLabelResponse), nil
+	}
+}
+
+type CreateIpdProcessInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateIpdProcessInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateIpdProcessInstanceInvoker) Invoke() (*model.CreateIpdProcessInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateIpdProcessInstanceResponse), nil
+	}
+}
+
 type CreateIpdProjectIssueInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -485,6 +613,22 @@ func (i *CreateIpdProjectIssueAttachmentInvoker) Invoke() (*model.CreateIpdProje
 	}
 }
 
+type CreateSprintSnapshotsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSprintSnapshotsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSprintSnapshotsInvoker) Invoke() (*model.CreateSprintSnapshotsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSprintSnapshotsResponse), nil
+	}
+}
+
 type DeleteIpdImageInIssueInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -498,6 +642,38 @@ func (i *DeleteIpdImageInIssueInvoker) Invoke() (*model.DeleteIpdImageInIssueRes
 		return nil, err
 	} else {
 		return result.(*model.DeleteIpdImageInIssueResponse), nil
+	}
+}
+
+type DeleteIpdLabelInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteIpdLabelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteIpdLabelInvoker) Invoke() (*model.DeleteIpdLabelResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteIpdLabelResponse), nil
+	}
+}
+
+type DeleteIpdThirdPartyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteIpdThirdPartyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteIpdThirdPartyInvoker) Invoke() (*model.DeleteIpdThirdPartyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteIpdThirdPartyResponse), nil
 	}
 }
 
@@ -517,6 +693,22 @@ func (i *DownloadIpdImageInIssueInvoker) Invoke() (*model.DownloadIpdImageInIssu
 	}
 }
 
+type ListIpdLabelsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIpdLabelsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListIpdLabelsInvoker) Invoke() (*model.ListIpdLabelsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIpdLabelsResponse), nil
+	}
+}
+
 type ListIpdProjectIssuesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -530,6 +722,38 @@ func (i *ListIpdProjectIssuesInvoker) Invoke() (*model.ListIpdProjectIssuesRespo
 		return nil, err
 	} else {
 		return result.(*model.ListIpdProjectIssuesResponse), nil
+	}
+}
+
+type ListIpdReviewFormsByIssueIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIpdReviewFormsByIssueIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListIpdReviewFormsByIssueIdInvoker) Invoke() (*model.ListIpdReviewFormsByIssueIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIpdReviewFormsByIssueIdResponse), nil
+	}
+}
+
+type ListIssueBySnapIdsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIssueBySnapIdsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListIssueBySnapIdsInvoker) Invoke() (*model.ListIssueBySnapIdsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIssueBySnapIdsResponse), nil
 	}
 }
 
@@ -549,6 +773,22 @@ func (i *ListIssueFieldsInvoker) Invoke() (*model.ListIssueFieldsResponse, error
 	}
 }
 
+type ListIssueSprintSnapshotsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIssueSprintSnapshotsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListIssueSprintSnapshotsInvoker) Invoke() (*model.ListIssueSprintSnapshotsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIssueSprintSnapshotsResponse), nil
+	}
+}
+
 type ListIssueStatuesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -562,6 +802,70 @@ func (i *ListIssueStatuesInvoker) Invoke() (*model.ListIssueStatuesResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListIssueStatuesResponse), nil
+	}
+}
+
+type PutIpdChangeReviewFormV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PutIpdChangeReviewFormV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *PutIpdChangeReviewFormV2Invoker) Invoke() (*model.PutIpdChangeReviewFormV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PutIpdChangeReviewFormV2Response), nil
+	}
+}
+
+type QueryIssueAssociatedItemInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *QueryIssueAssociatedItemInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *QueryIssueAssociatedItemInvoker) Invoke() (*model.QueryIssueAssociatedItemResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.QueryIssueAssociatedItemResponse), nil
+	}
+}
+
+type ShowIpdFieldsV2Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIpdFieldsV2Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowIpdFieldsV2Invoker) Invoke() (*model.ShowIpdFieldsV2Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIpdFieldsV2Response), nil
+	}
+}
+
+type ShowIpdThirdPartyAssociatedInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIpdThirdPartyAssociatedInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowIpdThirdPartyAssociatedInvoker) Invoke() (*model.ShowIpdThirdPartyAssociatedResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIpdThirdPartyAssociatedResponse), nil
 	}
 }
 
@@ -626,6 +930,38 @@ func (i *TransferWorkItemFlowInvoker) Invoke() (*model.TransferWorkItemFlowRespo
 		return nil, err
 	} else {
 		return result.(*model.TransferWorkItemFlowResponse), nil
+	}
+}
+
+type UpdateIpdLabelInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateIpdLabelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateIpdLabelInvoker) Invoke() (*model.UpdateIpdLabelResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateIpdLabelResponse), nil
+	}
+}
+
+type UpdateIpdThirdPartyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateIpdThirdPartyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateIpdThirdPartyInvoker) Invoke() (*model.UpdateIpdThirdPartyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateIpdThirdPartyResponse), nil
 	}
 }
 

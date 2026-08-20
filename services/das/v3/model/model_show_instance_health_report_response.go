@@ -25,9 +25,9 @@ type ShowInstanceHealthReportResponse struct {
 
 	InstanceInfo *HealthReportInstanceInfo `json:"instance_info,omitempty"`
 
-	PerformanceStat *HealthReportPerformanceStat `json:"performance_stat,omitempty"`
+	PerformanceStat *HealthReportPerformanceStatInfo `json:"performance_stat,omitempty"`
 
-	DiskStat *HealthReportDiskStat `json:"disk_stat,omitempty"`
+	DiskStat *HealthReportDiskStatInfo `json:"disk_stat,omitempty"`
 
 	TableSpaceStat *HealthReportTableSpaceStat `json:"table_space_stat,omitempty"`
 

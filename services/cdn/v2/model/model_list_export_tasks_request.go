@@ -9,17 +9,17 @@ import (
 // ListExportTasksRequest Request Object
 type ListExportTasksRequest struct {
 
-	// - 每页显示的条目数量, 默认为10
+	// **参数解释：** 每页显示的条目数量 **约束限制：** 不涉及 **取值范围：** 0-100 **默认取值：** 10
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 偏移量，表示从此偏移量开始查询， offset大于等于0，默认为0
+	// **参数解释：** 偏移量 > 表示从此偏移量开始查询  **约束限制：** 不涉及 **取值范围：** offset大于等于0 **默认取值：** 0
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 任务id
-	TaskId string `json:"task_id"`
+	// **参数解释：** 任务id **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	TaskId *string `json:"task_id,omitempty"`
 
-	// 任务名称
-	TaskName string `json:"task_name"`
+	// **参数解释：** 任务名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	TaskName *string `json:"task_name,omitempty"`
 }
 
 func (o ListExportTasksRequest) String() string {

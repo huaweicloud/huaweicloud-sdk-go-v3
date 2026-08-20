@@ -31,11 +31,14 @@ type ServiceVersionResponse struct {
 	// **参数解释：** 日志策略。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略
 	LtsStrategy *string `json:"lts_strategy,omitempty"`
 
-	// **参数解释：** 部署对接lts状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+	// **参数解释：** 服务容器标准输出对接lts开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
 	LtsStatus *string `json:"lts_status,omitempty"`
 
-	// **参数解释：** 部署对接lts k8s事件状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+	// **参数解释：** 服务对接lts k8s事件开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
 	LtsEventStatus *string `json:"lts_event_status,omitempty"`
+
+	// **参数解释：** 服务容器日志文件对接lts开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+	LtsFileStatus *string `json:"lts_file_status,omitempty"`
 
 	// **参数解释：** 服务日志配置信息。
 	LogConfigs *[]LogConfigResponse `json:"log_configs,omitempty"`

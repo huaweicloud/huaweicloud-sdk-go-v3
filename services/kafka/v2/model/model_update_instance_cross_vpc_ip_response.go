@@ -9,10 +9,10 @@ import (
 // UpdateInstanceCrossVpcIpResponse Response Object
 type UpdateInstanceCrossVpcIpResponse struct {
 
-	// 修改跨VPC访问结果。
+	// **参数解释**： 修改跨VPC访问结果。 **取值范围**： - true：修改跨VPC访问成功。 - false：修改跨VPC访问失败。
 	Success *bool `json:"success,omitempty"`
 
-	// 修改broker跨VPC访问的结果列表。
+	// **参数解释**： 修改broker跨VPC访问的结果列表。
 	Results        *[]UpdateInstanceCrossVpcIpRespResults `json:"results,omitempty"`
 	HttpStatusCode int                                    `json:"-"`
 }

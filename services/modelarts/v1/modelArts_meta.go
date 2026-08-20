@@ -631,6 +631,21 @@ func GenReqDefForCreateInferServiceTag() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateInferTempApiKey() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/services/api-keys/temp").
+		WithResponse(new(model.CreateInferTempApiKeyResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateModelArtsAgency() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -2007,6 +2022,10 @@ func GenReqDefForListInferServices() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("AssetId").
 		WithJsonTag("asset_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("NodeIp").
+		WithJsonTag("node_ip").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("SortDir").

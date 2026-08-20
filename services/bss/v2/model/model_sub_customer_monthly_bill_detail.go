@@ -36,7 +36,7 @@ type SubCustomerMonthlyBillDetail struct {
 	// 交易时间，即某条消费记录对应的扣费时间。 示例：2020-11-17T06:43:38Z
 	TradeTime *string `json:"trade_time,omitempty"`
 
-	// 订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
+	// 订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8和103时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
 	TradeId *string `json:"trade_id,omitempty"`
 
 	// 唯一标识。
@@ -152,6 +152,15 @@ type SubCustomerMonthlyBillDetail struct {
 
 	// 周期数量，该参数非必填
 	PeriodNum *decimal.Decimal `json:"period_num,omitempty"`
+
+	// 企业项目标识（企业项目ID），该参数非必填，最大长度：64
+	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 订单类型，该参数非必填，1：开通 2：续订 3：变更 4：退订 10：包年/包月转按需 11：按需转包年/包月 13：试用 14：转商用 15：费用调整
+	OrderType *int32 `json:"order_type,omitempty"`
+
+	// 付款方式，节省计划和预留实例有值。枚举值：ALL_UPFRONT：全预付；PARTIAL_UPFRONT：部分预付；NO_UPFRONT：零预付
+	PaymentType *string `json:"payment_type,omitempty"`
 }
 
 func (o SubCustomerMonthlyBillDetail) String() string {

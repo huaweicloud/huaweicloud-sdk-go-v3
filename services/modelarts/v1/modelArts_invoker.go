@@ -517,6 +517,22 @@ func (i *CreateInferServiceTagInvoker) Invoke() (*model.CreateInferServiceTagRes
 	}
 }
 
+type CreateInferTempApiKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateInferTempApiKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateInferTempApiKeyInvoker) Invoke() (*model.CreateInferTempApiKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateInferTempApiKeyResponse), nil
+	}
+}
+
 type CreateModelArtsAgencyInvoker struct {
 	*invoker.BaseInvoker
 }

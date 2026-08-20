@@ -36,7 +36,7 @@ type ListSubCustomerBillDetailRequest struct {
 	// 资源名称。此参数不携带或携带值为空时，不作为筛选条件；携带值为null时，作为筛选条件；不支持携带值为空串。
 	ResourceName *string `json:"resource_name,omitempty"`
 
-	// 订单ID或交易ID，扣费维度的唯一标识。账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID 此参数不携带或携带值为空时，不作为筛选条件；携带值为null时，作为筛选条件；不支持携带值为空串。
+	// 订单ID或交易ID，扣费维度的唯一标识。账单类型为1，2，3，4，8和103时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID 此参数不携带或携带值为空时，不作为筛选条件；携带值为null时，作为筛选条件；不支持携带值为空串。
 	TradeId *string `json:"trade_id,omitempty"`
 
 	// 客户经理标识。此参数不携带或携带值为空时，不作为筛选条件；携带值为null时，作为筛选条件；不支持携带值为空串。

@@ -53,6 +53,38 @@ func (i *CreateShareConnectionsInvoker) Invoke() (*model.CreateShareConnectionsR
 	}
 }
 
+type ExecuteExportTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteExportTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteExportTaskInvoker) Invoke() (*model.ExecuteExportTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteExportTaskResponse), nil
+	}
+}
+
+type ExecuteImportTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteImportTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteImportTaskInvoker) Invoke() (*model.ExecuteImportTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteImportTaskResponse), nil
+	}
+}
+
 type ListConnectionsInvoker struct {
 	*invoker.BaseInvoker
 }

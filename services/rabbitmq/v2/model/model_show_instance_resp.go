@@ -95,7 +95,7 @@ type ShowInstanceResp struct {
 	// **参数解释**： RabbitMQ实例是否开启公网访问功能。 **取值范围**： - true：开启 - false：未开启
 	EnablePublicip *bool `json:"enable_publicip,omitempty"`
 
-	// **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： - true：开启 - false：未开启
+	// **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。
 	PublicipAddress *string `json:"publicip_address,omitempty"`
 
 	// **参数解释**： RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。

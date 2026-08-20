@@ -63,6 +63,9 @@ type AccountPermission struct {
 	// 行级权限描述
 	RowLevelSecurityDesc *string `json:"row_level_security_desc,omitempty"`
 
+	// 续期工单状态，可选值： * ORDER_WAITING_APPROVE  工单待审批 * NO_ORDER  无工单 * ORDER_REJECT  工单已拒绝
+	RenewalStatus *AccountPermissionRenewalStatus `json:"renewal_status,omitempty"`
+
 	// schema名称
 	SchemaName *string `json:"schema_name,omitempty"`
 
@@ -249,6 +252,57 @@ func (c AccountPermissionPermissionAction) MarshalJSON() ([]byte, error) {
 }
 
 func (c *AccountPermissionPermissionAction) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type AccountPermissionRenewalStatus struct {
+	value string
+}
+
+type AccountPermissionRenewalStatusEnum struct {
+	ORDER_WAITING_APPROVE AccountPermissionRenewalStatus
+	NO_ORDER              AccountPermissionRenewalStatus
+	ORDER_REJECT          AccountPermissionRenewalStatus
+}
+
+func GetAccountPermissionRenewalStatusEnum() AccountPermissionRenewalStatusEnum {
+	return AccountPermissionRenewalStatusEnum{
+		ORDER_WAITING_APPROVE: AccountPermissionRenewalStatus{
+			value: "ORDER_WAITING_APPROVE",
+		},
+		NO_ORDER: AccountPermissionRenewalStatus{
+			value: "NO_ORDER",
+		},
+		ORDER_REJECT: AccountPermissionRenewalStatus{
+			value: "ORDER_REJECT",
+		},
+	}
+}
+
+func (c AccountPermissionRenewalStatus) Value() string {
+	return c.value
+}
+
+func (c AccountPermissionRenewalStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *AccountPermissionRenewalStatus) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

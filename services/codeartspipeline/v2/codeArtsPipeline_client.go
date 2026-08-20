@@ -82,27 +82,6 @@ func (c *CodeArtsPipelineClient) BatchShowPipelinesLatestStatusInvoker(request *
 	return &BatchShowPipelinesLatestStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchShowPipelinesStatus 批量获取流水线状态
-//
-// 批量获取流水线状态和阶段信息
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CodeArtsPipelineClient) BatchShowPipelinesStatus(request *model.BatchShowPipelinesStatusRequest) (*model.BatchShowPipelinesStatusResponse, error) {
-	requestDef := GenReqDefForBatchShowPipelinesStatus()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchShowPipelinesStatusResponse), nil
-	}
-}
-
-// BatchShowPipelinesStatusInvoker 批量获取流水线状态
-func (c *CodeArtsPipelineClient) BatchShowPipelinesStatusInvoker(request *model.BatchShowPipelinesStatusRequest) *BatchShowPipelinesStatusInvoker {
-	requestDef := GenReqDefForBatchShowPipelinesStatus()
-	return &BatchShowPipelinesStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateBasicPlugin 创建基础插件
 //
 // 创建基础插件
@@ -563,6 +542,48 @@ func (c *CodeArtsPipelineClient) ListBasePluginsNewPost(request *model.ListBaseP
 func (c *CodeArtsPipelineClient) ListBasePluginsNewPostInvoker(request *model.ListBasePluginsNewPostRequest) *ListBasePluginsNewPostInvoker {
 	requestDef := GenReqDefForListBasePluginsNewPost()
 	return &ListBasePluginsNewPostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEndpointsDetails 查询扩展点列表
+//
+// 查询扩展点列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) ListEndpointsDetails(request *model.ListEndpointsDetailsRequest) (*model.ListEndpointsDetailsResponse, error) {
+	requestDef := GenReqDefForListEndpointsDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEndpointsDetailsResponse), nil
+	}
+}
+
+// ListEndpointsDetailsInvoker 查询扩展点列表
+func (c *CodeArtsPipelineClient) ListEndpointsDetailsInvoker(request *model.ListEndpointsDetailsRequest) *ListEndpointsDetailsInvoker {
+	requestDef := GenReqDefForListEndpointsDetails()
+	return &ListEndpointsDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListModulesDetail 查询插件列表
+//
+// 查询插件列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) ListModulesDetail(request *model.ListModulesDetailRequest) (*model.ListModulesDetailResponse, error) {
+	requestDef := GenReqDefForListModulesDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListModulesDetailResponse), nil
+	}
+}
+
+// ListModulesDetailInvoker 查询插件列表
+func (c *CodeArtsPipelineClient) ListModulesDetailInvoker(request *model.ListModulesDetailRequest) *ListModulesDetailInvoker {
+	requestDef := GenReqDefForListModulesDetail()
+	return &ListModulesDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPLuginVersion 查询插件所有版本信息
@@ -1718,6 +1739,27 @@ func (c *CodeArtsPipelineClient) UploadPublisherIcon(request *model.UploadPublis
 func (c *CodeArtsPipelineClient) UploadPublisherIconInvoker(request *model.UploadPublisherIconRequest) *UploadPublisherIconInvoker {
 	requestDef := GenReqDefForUploadPublisherIcon()
 	return &UploadPublisherIconInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// InvokeEndpointProxy 代理调用外部服务接口
+//
+// 代理调用外部服务接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) InvokeEndpointProxy(request *model.InvokeEndpointProxyRequest) (*model.InvokeEndpointProxyResponse, error) {
+	requestDef := GenReqDefForInvokeEndpointProxy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.InvokeEndpointProxyResponse), nil
+	}
+}
+
+// InvokeEndpointProxyInvoker 代理调用外部服务接口
+func (c *CodeArtsPipelineClient) InvokeEndpointProxyInvoker(request *model.InvokeEndpointProxyRequest) *InvokeEndpointProxyInvoker {
+	requestDef := GenReqDefForInvokeEndpointProxy()
+	return &InvokeEndpointProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteActionsRunPipeline 删除gitcode流水线运行详情

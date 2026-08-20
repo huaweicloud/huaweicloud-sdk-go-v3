@@ -84,6 +84,50 @@ func (c *DasClient) CreateShareConnectionsInvoker(request *model.CreateShareConn
 	return &CreateShareConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExecuteExportTask 立即执行导出任务
+//
+// 立即执行导出任务，
+// 用于用户立即执行导出任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ExecuteExportTask(request *model.ExecuteExportTaskRequest) (*model.ExecuteExportTaskResponse, error) {
+	requestDef := GenReqDefForExecuteExportTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteExportTaskResponse), nil
+	}
+}
+
+// ExecuteExportTaskInvoker 立即执行导出任务
+func (c *DasClient) ExecuteExportTaskInvoker(request *model.ExecuteExportTaskRequest) *ExecuteExportTaskInvoker {
+	requestDef := GenReqDefForExecuteExportTask()
+	return &ExecuteExportTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteImportTask 立即执行导入任务
+//
+// 立即执行导入任务，
+// 用于用户立即执行导入任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ExecuteImportTask(request *model.ExecuteImportTaskRequest) (*model.ExecuteImportTaskResponse, error) {
+	requestDef := GenReqDefForExecuteImportTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteImportTaskResponse), nil
+	}
+}
+
+// ExecuteImportTaskInvoker 立即执行导入任务
+func (c *DasClient) ExecuteImportTaskInvoker(request *model.ExecuteImportTaskRequest) *ExecuteImportTaskInvoker {
+	requestDef := GenReqDefForExecuteImportTask()
+	return &ExecuteImportTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListConnections 查询实例连接列表
 //
 // 查询实例连接列表

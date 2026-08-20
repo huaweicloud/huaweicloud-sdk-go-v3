@@ -10,7 +10,7 @@ import (
 type ListRateOnPeriodDetailResponse struct {
 	OfficialWebsiteRatingResult *OfficialWebsiteRatingResult `json:"official_website_rating_result,omitempty"`
 
-	// 存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表4。
+	// 存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见OptionalDiscountRatingResult。
 	OptionalDiscountRatingResults *[]OptionalDiscountRatingResult `json:"optional_discount_rating_results,omitempty"`
 
 	// 币种。 USD：美元。 值为空代表美元。

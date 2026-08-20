@@ -3333,6 +3333,22 @@ func (i *ListSecurityMemberPermissionInvoker) Invoke() (*model.ListSecurityMembe
 	}
 }
 
+type ListSecurityMemberPermissionsByUserIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecurityMemberPermissionsByUserIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSecurityMemberPermissionsByUserIdInvoker) Invoke() (*model.ListSecurityMemberPermissionsByUserIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecurityMemberPermissionsByUserIdResponse), nil
+	}
+}
+
 type ListSecurityMemberSyncTasksInvoker struct {
 	*invoker.BaseInvoker
 }

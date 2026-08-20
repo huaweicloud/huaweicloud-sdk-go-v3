@@ -167,7 +167,7 @@ type IssueVo struct {
 	ChildIssues map[string]IssueVo `json:"child_issues,omitempty"`
 
 	// **参数解释：**  激活次数。Bug激活时自动赋值。 **取值范围：**  不涉及。
-	ActivateTimes *int32 `json:"activate_times,omitempty"`
+	ActivateTimes *string `json:"activate_times,omitempty"`
 
 	Baseline *OptionVo `json:"baseline,omitempty"`
 
@@ -259,7 +259,7 @@ type IssueVo struct {
 	ReasonAnalysis *string `json:"reason_analysis,omitempty"`
 
 	// **参数解释：**  回归不通过次数。缺陷测试不通过时自动赋值。 **取值范围：**  不涉及。
-	RegressionFailureNumber *int32 `json:"regression_failure_number,omitempty"`
+	RegressionFailureNumber *string `json:"regression_failure_number,omitempty"`
 
 	RelatedNetworkSecurity *OptionVo `json:"related_network_security,omitempty"`
 
@@ -278,7 +278,7 @@ type IssueVo struct {
 	SysNoRepairReason *string `json:"sys_no_repair_reason,omitempty"`
 
 	// **参数解释：**  测试不通过次数。 **取值范围：**  不涉及。
-	TestFailuresTimes *int32 `json:"test_failures_times,omitempty"`
+	TestFailuresTimes *string `json:"test_failures_times,omitempty"`
 
 	// **参数解释：**  测试责任人。通常用于“测试”状态节点。 **取值范围：**  不涉及。
 	TestOwner *string `json:"test_owner,omitempty"`

@@ -9,7 +9,7 @@ import (
 // ListSubscriptionTasksResponse Response Object
 type ListSubscriptionTasksResponse struct {
 
-	// 订阅任务总数
+	// **参数解释：** 订阅任务总数 **取值范围：** 不涉及
 	Total *int32 `json:"total,omitempty"`
 
 	Data           *[]SubscriptionTask `json:"data,omitempty"`

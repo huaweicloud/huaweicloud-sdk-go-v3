@@ -9,22 +9,22 @@ import (
 // SetChargeModesResponse Response Object
 type SetChargeModesResponse struct {
 
-	// 账号的计费模式
+	// **参数解释：** 账号的计费模式 **取值范围：** - flux：流量 - bw：带宽
 	ChargeMode *string `json:"charge_mode,omitempty"`
 
-	// 加速类型
+	// **参数解释：** 加速类型 **取值范围：** base：基础加速
 	ProductType *string `json:"product_type,omitempty"`
 
-	// 该模式生效时间
+	// **参数解释：** 该模式生效时间 **取值范围：** 不涉及
 	EffectiveTime *int64 `json:"effective_time,omitempty"`
 
-	// 创建时间
+	// **参数解释：** 创建时间 **取值范围：** 不涉及
 	CreateTime *int64 `json:"create_time,omitempty"`
 
-	// 该模式的区域
+	// **参数解释：** 该模式的区域 **取值范围：** mainland_china：中国大陆
 	ServiceArea *string `json:"service_area,omitempty"`
 
-	// 状态,首次开通状态为active,之后修改为upcoming
+	// **参数解释：** 状态 > 首次开通状态为active（已生效）,之后修改为upcoming（待生效）  **取值范围：** - active：已生效 - upcoming：待生效
 	Status         *string `json:"status,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

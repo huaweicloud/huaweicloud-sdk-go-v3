@@ -12,7 +12,7 @@ type CreateIpdProjectIssueRequest struct {
 	// devcloud项目的32位id
 	ProjectId string `json:"project_id"`
 
-	Body *CreateIpdProjectIssueRequestBody `json:"body,omitempty"`
+	Body *CreateIpdProjectIssueParam `json:"body,omitempty"`
 }
 
 func (o CreateIpdProjectIssueRequest) String() string {

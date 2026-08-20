@@ -9,7 +9,7 @@ import (
 // ListCdnDomainTopIpsResponse Response Object
 type ListCdnDomainTopIpsResponse struct {
 
-	// 详情数据对象。
+	// **参数解释：** 数据详情 **取值范围：** 不涉及
 	TopIpSummary   *[]TopIpSummary `json:"top_ip_summary,omitempty"`
 	HttpStatusCode int             `json:"-"`
 }

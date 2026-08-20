@@ -725,6 +725,22 @@ func (i *ResizeInstanceForRocketMqInvoker) Invoke() (*model.ResizeInstanceForRoc
 	}
 }
 
+type RestartInstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestartInstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RestartInstanceInvoker) Invoke() (*model.RestartInstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestartInstanceResponse), nil
+	}
+}
+
 type RestoreRecycleInstanceInvoker struct {
 	*invoker.BaseInvoker
 }

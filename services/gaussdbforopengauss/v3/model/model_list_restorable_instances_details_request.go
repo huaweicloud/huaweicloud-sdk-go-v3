@@ -27,10 +27,10 @@ type ListRestorableInstancesDetailsRequest struct {
 	// 查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// **参数解释**: 查备份恢复的粒度。 **约束限制**: 不涉及。 **取值范围**:   - INSTANCE   - DATABASE_TABLE   - DATABASE **默认取值**: INSTANCE
+	// **参数解释**: 查备份恢复的粒度。 **约束限制**: 不涉及。 **取值范围**:   - INSTANCE   - DATABASE_TABLE   - DATABASE  **默认取值**: INSTANCE
 	BackupRestoreType *string `json:"backup_restore_type,omitempty"`
 
-	// **参数解释**: 源实例的备份类型。 **约束限制**: 不涉及。 **取值范围**:   - INSTANCE   - DATABASE_TABLE **默认取值**: INSTANCE
+	// **参数解释**: 源实例的备份类型。 **约束限制**: 不涉及。 **取值范围**:   - INSTANCE   - DATABASE_TABLE  **默认取值**: INSTANCE
 	SourceBackupSchema *string `json:"source_backup_schema,omitempty"`
 
 	// **参数解释**: 目标实例ID，通过此参数过滤实例列表。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。

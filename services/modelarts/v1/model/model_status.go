@@ -32,6 +32,12 @@ type Status struct {
 
 	// 训练作业运行及故障恢复记录。
 	RunningRecords *[]RunningRecord `json:"running_records,omitempty"`
+
+	// **参数解释**：作业已经保留时长。  **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。  **取值范围**：不涉及。    **默认取值**：不涉及。
+	RetentionTime *int32 `json:"retention_time,omitempty"`
+
+	// **参数解释**：训练作业各 Task 的 IP 信息。 **约束限制**：仅当查询请求携带 `host_ips` 时返回；且仅返回与筛选 IP 匹配的记录。 **取值范围**：不涉及。 **默认取值**：不传 `host_ips` 时不返回。
+	TaskIps *[]TaskIp `json:"task_ips,omitempty"`
 }
 
 func (o Status) String() string {

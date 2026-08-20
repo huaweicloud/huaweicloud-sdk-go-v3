@@ -9,7 +9,7 @@ import (
 type BatchDeleteMessageDiagnosisRespResults struct {
 
 	// 报告删除结果
-	Result bool `json:"result"`
+	Success *bool `json:"success,omitempty"`
 
 	// 报告ID
 	Id string `json:"id"`

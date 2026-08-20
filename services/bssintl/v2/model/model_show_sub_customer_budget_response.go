@@ -23,7 +23,7 @@ type ShowSubCustomerBudgetResponse struct {
 	// 币种。 USD：美金
 	Currency *string `json:"currency,omitempty"`
 
-	// |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算|
+	// 预算模式。 MONTHLY：月度预算 PACKAGE：一次性预算
 	BudgetType     *ShowSubCustomerBudgetResponseBudgetType `json:"budget_type,omitempty"`
 	HttpStatusCode int                                      `json:"-"`
 }

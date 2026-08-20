@@ -11,8 +11,8 @@ type ListIssueFieldsResponse struct {
 	Page *PageVo `json:"page,omitempty"`
 
 	// 返回数据
-	Result         *[]FieldVo `json:"result,omitempty"`
-	HttpStatusCode int        `json:"-"`
+	Result         *[]FieldLongDateVo `json:"result,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o ListIssueFieldsResponse) String() string {

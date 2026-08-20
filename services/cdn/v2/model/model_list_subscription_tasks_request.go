@@ -9,10 +9,10 @@ import (
 // ListSubscriptionTasksRequest Request Object
 type ListSubscriptionTasksRequest struct {
 
-	// - 每页显示的条目数量，默认值为5, 传入空或0时，会按默认处理
+	// **参数解释：** 每页显示的条目数量 **约束限制：** 不涉及 **取值范围：** 0-100 **默认取值：** 5 > 传入空或0时，会按默认处理
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 偏移量，表示从此偏移量开始查询， offset大于等于0，默认为0
+	// **参数解释：** 偏移量 > 表示从此偏移量开始查询  **约束限制：** 不涉及 **取值范围：** offset大于等于0 **默认取值：** 0
 	Offset *int32 `json:"offset,omitempty"`
 }
 

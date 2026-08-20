@@ -9,10 +9,10 @@ import (
 // ShowTopUrlResponse Response Object
 type ShowTopUrlResponse struct {
 
-	// 服务区域：mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
+	// **参数解释：** 服务范围 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 - global：全球
 	ServiceArea *string `json:"service_area,omitempty"`
 
-	// 详情数据对象。
+	// **参数解释：** 数据详情 **取值范围：** 不涉及
 	TopUrlSummary  *[]TopUrlSummary `json:"top_url_summary,omitempty"`
 	HttpStatusCode int              `json:"-"`
 }

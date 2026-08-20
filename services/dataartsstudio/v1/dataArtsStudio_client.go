@@ -4392,6 +4392,29 @@ func (c *DataArtsStudioClient) ListSecurityMemberPermissionInvoker(request *mode
 	return &ListSecurityMemberPermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSecurityMemberPermissionsByUserId 查询指定用户权限清单
+//
+// 查询指定用户权限清单。
+//
+// 权限要求：dayu_admin / te_admin / 数据安全管理员可查询任意用户；普通用户仅可查询自身权限。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListSecurityMemberPermissionsByUserId(request *model.ListSecurityMemberPermissionsByUserIdRequest) (*model.ListSecurityMemberPermissionsByUserIdResponse, error) {
+	requestDef := GenReqDefForListSecurityMemberPermissionsByUserId()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityMemberPermissionsByUserIdResponse), nil
+	}
+}
+
+// ListSecurityMemberPermissionsByUserIdInvoker 查询指定用户权限清单
+func (c *DataArtsStudioClient) ListSecurityMemberPermissionsByUserIdInvoker(request *model.ListSecurityMemberPermissionsByUserIdRequest) *ListSecurityMemberPermissionsByUserIdInvoker {
+	requestDef := GenReqDefForListSecurityMemberPermissionsByUserId()
+	return &ListSecurityMemberPermissionsByUserIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSecurityMemberSyncTasks 查询用户同步列表
 //
 // 查询用户同步列表。

@@ -21,13 +21,13 @@ type InstanceRecycleInfo struct {
 	Engine *string `json:"engine,omitempty"`
 
 	// **参数解释**： 回收时间。  **取值范围**： 不涉及。
-	InRecycleTime *string `json:"in_recycle_time,omitempty"`
+	InRecycleTime *int64 `json:"in_recycle_time,omitempty"`
 
 	// **参数解释**： 保留时间。  **取值范围**： 1~7。
 	SaveTime *int32 `json:"save_time,omitempty"`
 
 	// **参数解释**： 自动删除时间。  **取值范围**： 不涉及。
-	AutoDeleteTime *string `json:"auto_delete_time,omitempty"`
+	AutoDeleteTime *int64 `json:"auto_delete_time,omitempty"`
 
 	// **参数解释**： 每小时的费用。  **取值范围**： 不涉及。
 	CostPerHour *float64 `json:"cost_per_hour,omitempty"`

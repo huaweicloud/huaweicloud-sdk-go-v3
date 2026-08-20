@@ -23,7 +23,7 @@ type ObsBucketEntity struct {
 	// **参数解释**： 桶拥有者信息。
 	Owner *interface{} `json:"owner,omitempty"`
 
-	// **参数解释**： 桶的创建时间。 **取值范围**： 长度为24的字符串。
+	// **参数解释**： 桶的创建时间。 **取值范围**： 不涉及。
 	CreationDate *int64 `json:"creationDate,omitempty"`
 
 	// **参数解释**： 桶所在的区域。 **取值范围**： 不涉及。

@@ -9,30 +9,36 @@ import (
 // ShowKafkaRebalanceLogResponse Response Object
 type ShowKafkaRebalanceLogResponse struct {
 
-	// 日志ID。
+	// **参数解释**： 日志ID。 **取值范围**： 不涉及。
 	Id *string `json:"id,omitempty"`
 
-	// 实例ID。
-	InstanceId *string `json:"instanceId,omitempty"`
+	// **参数解释**： 实例ID。 **取值范围**： 不涉及。
+	InstanceId *string `json:"instance_id,omitempty"`
 
-	// 状态。
+	// **参数解释**： 重平衡日志状态。 **取值范围**： - OPEN：已开启重平衡日志。 - CLOSE：已关闭重平衡日志。 - OPENING：重平衡日志开启中。 - CLOSING：重平衡日志关闭中。
 	Status *string `json:"status,omitempty"`
 
-	// 日志流ID。
-	LogStreamId *string `json:"logStreamId,omitempty"`
+	// **参数解释**： 日志流ID。 **取值范围**： 不涉及。
+	LogStreamId *string `json:"log_stream_id,omitempty"`
 
-	// 日志组ID。
-	LogGroupId *string `json:"logGroupId,omitempty"`
+	// **参数解释**： 日志组ID。 **取值范围**： 不涉及。
+	LogGroupId *string `json:"log_group_id,omitempty"`
 
-	// 看板ID。
-	DashboardId *string `json:"dashboardId,omitempty"`
+	// **参数解释**： 看板ID。 **取值范围**： 不涉及。
+	DashboardId *string `json:"dashboard_id,omitempty"`
 
-	// 创建时间。
-	CreateAt *string `json:"createAt,omitempty"`
+	// **参数解释**： 日志类型。 **取值范围**： 不涉及。
+	LogType *string `json:"log_type,omitempty"`
 
-	// 更新时间。
-	UpdateAt       *string `json:"updateAt,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	// **参数解释**： 日志文件名称。 **取值范围**： 不涉及。
+	LogFileName *string `json:"log_file_name,omitempty"`
+
+	// **参数解释**： 创建时间。 **取值范围**： 不涉及。
+	CreatedAt *int64 `json:"created_at,omitempty"`
+
+	// **参数解释**： 更新时间。 **取值范围**： 不涉及。
+	UpdatedAt      *int64 `json:"updated_at,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ShowKafkaRebalanceLogResponse) String() string {

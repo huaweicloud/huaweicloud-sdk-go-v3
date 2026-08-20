@@ -15,7 +15,7 @@ type CreateConnectorReq struct {
 	Specification *CreateConnectorReqSpecification `json:"specification,omitempty"`
 
 	// Smart Connect节点数量。不能小于2个。 如果不填，默认是2个。
-	NodeCnt *string `json:"node_cnt,omitempty"`
+	NodeCnt *int32 `json:"node_cnt,omitempty"`
 
 	// 转储节点规格编码。仅老规格实例需要填写。
 	SpecCode *string `json:"spec_code,omitempty"`

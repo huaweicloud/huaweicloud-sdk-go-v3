@@ -22,6 +22,9 @@ type Queue struct {
 
 	// **参数解释**： 最新消费消息的存储时间，Unix毫秒时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	LastMessageTime *int64 `json:"last_message_time,omitempty"`
+
+	// **参数解释**： 客户端ID。 **取值范围**： 不涉及。
+	ClientId *string `json:"client_id,omitempty"`
 }
 
 func (o Queue) String() string {

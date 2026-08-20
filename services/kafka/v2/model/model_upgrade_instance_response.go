@@ -9,8 +9,11 @@ import (
 // UpgradeInstanceResponse Response Object
 type UpgradeInstanceResponse struct {
 
-	// 提交升级任务id
-	Body           *string `json:"body,omitempty"`
+	// **参数解释**： 实例升级任务ID。 **取值范围**： 不涉及。
+	JobId *string `json:"job_id,omitempty"`
+
+	// **参数解释**： 实例升级调度任务ID。 **取值范围**： 不涉及。
+	ScheduleId     *string `json:"schedule_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

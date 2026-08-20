@@ -9,7 +9,7 @@ import (
 // ListCdnDomainTopPathResponse Response Object
 type ListCdnDomainTopPathResponse struct {
 
-	// 详情数据对象。
+	// **参数解释：** 数据详情 **取值范围：** 不涉及
 	TopPathSummary *[]TopPathSummary `json:"top_path_summary,omitempty"`
 	HttpStatusCode int               `json:"-"`
 }

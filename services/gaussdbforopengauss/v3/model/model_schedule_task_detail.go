@@ -30,7 +30,7 @@ type ScheduleTaskDetail struct {
 	InstanceName *string `json:"instance_name,omitempty"`
 
 	// 任务信息。
-	TaskContent *interface{} `json:"task_content,omitempty"`
+	TaskContent *string `json:"task_content,omitempty"`
 }
 
 func (o ScheduleTaskDetail) String() string {

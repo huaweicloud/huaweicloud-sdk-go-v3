@@ -584,8 +584,8 @@ func GenReqDefForListBackgroundTasks() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Offset").
-		WithJsonTag("offset").
+		WithName("Start").
+		WithJsonTag("start").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -1706,6 +1706,10 @@ func GenReqDefForShowKafkaScalePreCheckInfo() *def.HttpRequestDef {
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -2411,10 +2415,6 @@ func GenReqDefForUpgradeInstance() *def.HttpRequestDef {
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 

@@ -698,6 +698,36 @@ func (c *ModelArtsClient) CreateInferServiceTagInvoker(request *model.CreateInfe
 	return &CreateInferServiceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateInferTempApiKey 创建临时应用密钥
+//
+// 本接口用于在系统中创建一个新的临时API_KEY，适用于需要为用户或应用程序生成临时访问凭证的场景。调用此接口前，确保已具备相应的创建权限，并提供必要的参数，如用户ID或应用程序ID。创建成功后，系统将生成一个唯一的API_KEY，并返回该API_KEY的详细信息，包括临时API_KEY值、创建时间等。如果提供的参数无效，将返回相应的异常信息，提示用户检查输入数据的有效性。
+// 临时API KEY使用方法：
+// **预测接口**加上两个header：
+// X-Api-Key-Type&#x3D;temp
+// Authorization&#x3D;临时API KEY
+// **取值范围：**
+// - normal：普通API KEY
+// - temp：临时API KEY
+// **默认取值：**
+// normal。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) CreateInferTempApiKey(request *model.CreateInferTempApiKeyRequest) (*model.CreateInferTempApiKeyResponse, error) {
+	requestDef := GenReqDefForCreateInferTempApiKey()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateInferTempApiKeyResponse), nil
+	}
+}
+
+// CreateInferTempApiKeyInvoker 创建临时应用密钥
+func (c *ModelArtsClient) CreateInferTempApiKeyInvoker(request *model.CreateInferTempApiKeyRequest) *CreateInferTempApiKeyInvoker {
+	requestDef := GenReqDefForCreateInferTempApiKey()
+	return &CreateInferTempApiKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateModelArtsAgency 创建ModelArts委托
 //
 // 创建ModelArts委托接口用于创建包含OBS、SWR、IEF等依赖服务的ModelArts委托。该接口适用于以下场景：当需要配置ModelArts访问OBS、SWR、IEF等服务的权限时，用户可通过此接口创建委托。使用该接口的前提条件是用户具备创建委托的权限，并且需要在IAM系统中具备相应的权限。创建完成后，ModelArts将被授权访问OBS、SWR、IEF等服务，从而能够正常执行数据存储、镜像拉取、模型部署等功能。若用户无权限创建委托或依赖服务未配置，接口将返回相应的错误信息。

@@ -9,7 +9,7 @@ import (
 // ListCdnDomainTopOriginUrlResponse Response Object
 type ListCdnDomainTopOriginUrlResponse struct {
 
-	// 详情数据对象。
+	// **参数解释：** 数据详情 **取值范围：** 不涉及
 	TopOriginUrlSummary *[]TopOriginUrlSummary `json:"top_origin_url_summary,omitempty"`
 	HttpStatusCode      int                    `json:"-"`
 }

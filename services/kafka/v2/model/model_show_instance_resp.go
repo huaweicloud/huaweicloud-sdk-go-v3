@@ -50,7 +50,7 @@ type ShowInstanceResp struct {
 	// **参数解释**： 实例ID。 **取值范围**： 不涉及。
 	InstanceId *string `json:"instance_id,omitempty"`
 
-	// **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [不涉及。](tag:hcs)
+	// **参数解释**： 资源规格标识。 **取值范围**： 不涉及。
 	ResourceSpecCode *string `json:"resource_spec_code,omitempty"`
 
 	// **参数解释**： 付费模式。 **取值范围**： [- 1表示按需计费。 - 0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc,ax,hws_eu)[付费模式，暂未使用。](tag:hws_ocb,ocb) [- 1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc)
@@ -200,7 +200,7 @@ type ShowInstanceResp struct {
 	// **参数解释**： 是否开启转储。 **取值范围**： - true：开启 - false：不开启
 	ConnectorEnable *bool `json:"connector_enable,omitempty"`
 
-	// **参数解释**： connector节点数量。 **取值范围**： 2-16。
+	// **参数解释**： connector节点数量。 **取值范围**： 0-16。
 	ConnectorNodeNum *int32 `json:"connector_node_num,omitempty"`
 
 	// **参数解释**： 转储任务ID。 **取值范围**： 不涉及。

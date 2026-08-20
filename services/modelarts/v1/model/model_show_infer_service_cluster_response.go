@@ -40,8 +40,14 @@ type ShowInferServiceClusterResponse struct {
 	UpdateAt *int64 `json:"update_at,omitempty"`
 
 	// **参数解释：** 当前专属池支持的规格。
-	Flavors        *[]InferFlavor `json:"flavors,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	Flavors *[]NotebookFlavor `json:"flavors,omitempty"`
+
+	// **参数解释：** 资源池类型。 **取值范围：** - LOGICAL ：逻辑池。 - PHYSICAL ：物理池。
+	PoolType *ShowInferServiceClusterResponsePoolType `json:"pool_type,omitempty"`
+
+	// **参数解释：** 物理资源池ID，逻辑子池对应的父池ID。 **取值范围：** 不涉及。
+	PhysicalPoolId *string `json:"physical_pool_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowInferServiceClusterResponse) String() string {
@@ -161,6 +167,53 @@ func (c ShowInferServiceClusterResponseType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ShowInferServiceClusterResponseType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ShowInferServiceClusterResponsePoolType struct {
+	value string
+}
+
+type ShowInferServiceClusterResponsePoolTypeEnum struct {
+	LOGICAL  ShowInferServiceClusterResponsePoolType
+	PHYSICAL ShowInferServiceClusterResponsePoolType
+}
+
+func GetShowInferServiceClusterResponsePoolTypeEnum() ShowInferServiceClusterResponsePoolTypeEnum {
+	return ShowInferServiceClusterResponsePoolTypeEnum{
+		LOGICAL: ShowInferServiceClusterResponsePoolType{
+			value: "LOGICAL",
+		},
+		PHYSICAL: ShowInferServiceClusterResponsePoolType{
+			value: "PHYSICAL",
+		},
+	}
+}
+
+func (c ShowInferServiceClusterResponsePoolType) Value() string {
+	return c.value
+}
+
+func (c ShowInferServiceClusterResponsePoolType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ShowInferServiceClusterResponsePoolType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

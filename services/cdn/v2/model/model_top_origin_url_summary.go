@@ -9,13 +9,13 @@ import (
 // TopOriginUrlSummary top origin url 详情数据
 type TopOriginUrlSummary struct {
 
-	// 回源url名称
+	// **参数解释：** 回源url **取值范围：** 不涉及
 	OriginUrl *string `json:"origin_url,omitempty"`
 
-	// 对应查询类型的值。（流量单位：Byte）
+	// **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
 	Value *int64 `json:"value,omitempty"`
 
-	// 该origin url的流量(或请求数)占当前查询条件下总流量(或请求数)的比例。保留4位小数
+	// **参数解释：** 该origin url的流量（或请求数）占当前查询条件下总流量（或请求数）的比例 **取值范围：** 保留4位小数
 	Ratio *float64 `json:"ratio,omitempty"`
 }
 

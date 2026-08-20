@@ -777,10 +777,6 @@ func GenReqDefForListCdnDomainTopRefers() *def.HttpRequestDef {
 		WithName("EnterpriseProjectId").
 		WithJsonTag("enterprise_project_id").
 		WithLocationType(def.Query))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("IncludeRatio").
-		WithJsonTag("include_ratio").
-		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

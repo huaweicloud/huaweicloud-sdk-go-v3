@@ -15,10 +15,10 @@ type StepDetail struct {
 	Statue *string `json:"statue,omitempty"`
 
 	// **参数解释**： 开始时间。     **取值范围**： 不涉及。
-	StartTime *string `json:"start_time,omitempty"`
+	StartTime *int64 `json:"start_time,omitempty"`
 
 	// **参数解释**： 结束时间。 **取值范围**： 不涉及。
-	EndTime *string `json:"end_time,omitempty"`
+	EndTime *int64 `json:"end_time,omitempty"`
 }
 
 func (o StepDetail) String() string {

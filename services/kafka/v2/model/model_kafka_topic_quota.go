@@ -13,10 +13,10 @@ type KafkaTopicQuota struct {
 	Topic *string `json:"topic,omitempty"`
 
 	// 生产者速率
-	ProducerByteRate *int32 `json:"producer-byte-rate,omitempty"`
+	ProducerByteRate *int32 `json:"producer_byte_rate,omitempty"`
 
 	// 消费者速率
-	ConsumerByteRate *int32 `json:"consumer-byte-rate,omitempty"`
+	ConsumerByteRate *int32 `json:"consumer_byte_rate,omitempty"`
 }
 
 func (o KafkaTopicQuota) String() string {

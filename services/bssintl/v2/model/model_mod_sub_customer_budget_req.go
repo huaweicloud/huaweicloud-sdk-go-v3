@@ -22,10 +22,10 @@ type ModSubCustomerBudgetReq struct {
 	// 云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
 	IndirectPartnerId *string `json:"indirect_partner_id,omitempty"`
 
-	// |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算 ，此参数不携带或携带值为null时，默认值为MONTHLY。|
+	// 预算模式。MONTHLY：月度预算 PACKAGE：一次性预算，此参数不携带或携带值为null时，默认值为MONTHLY。
 	BudgetType *ModSubCustomerBudgetReqBudgetType `json:"budget_type,omitempty"`
 
-	// |参数名称：设置超预算时是否自动冻结| |参数的约束及描述：0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。|
+	// 设置超预算时是否自动冻结。0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。
 	FrozenOperateType *int32 `json:"frozen_operate_type,omitempty"`
 }
 

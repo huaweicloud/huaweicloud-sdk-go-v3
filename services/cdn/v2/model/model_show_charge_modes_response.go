@@ -9,7 +9,7 @@ import (
 // ShowChargeModesResponse Response Object
 type ShowChargeModesResponse struct {
 
-	// 计费模式查询结果
+	// **参数解释：** 计费模式查询结果 **取值范围：** 不涉及
 	Result         *[]map[string]interface{} `json:"result,omitempty"`
 	HttpStatusCode int                       `json:"-"`
 }

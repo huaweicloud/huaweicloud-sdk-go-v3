@@ -53,22 +53,6 @@ func (i *BatchShowPipelinesLatestStatusInvoker) Invoke() (*model.BatchShowPipeli
 	}
 }
 
-type BatchShowPipelinesStatusInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchShowPipelinesStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchShowPipelinesStatusInvoker) Invoke() (*model.BatchShowPipelinesStatusResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchShowPipelinesStatusResponse), nil
-	}
-}
-
 type CreateBasicPluginInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -418,6 +402,38 @@ func (i *ListBasePluginsNewPostInvoker) Invoke() (*model.ListBasePluginsNewPostR
 		return nil, err
 	} else {
 		return result.(*model.ListBasePluginsNewPostResponse), nil
+	}
+}
+
+type ListEndpointsDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEndpointsDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListEndpointsDetailsInvoker) Invoke() (*model.ListEndpointsDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEndpointsDetailsResponse), nil
+	}
+}
+
+type ListModulesDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListModulesDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListModulesDetailInvoker) Invoke() (*model.ListModulesDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListModulesDetailResponse), nil
 	}
 }
 
@@ -1298,6 +1314,22 @@ func (i *UploadPublisherIconInvoker) Invoke() (*model.UploadPublisherIconRespons
 		return nil, err
 	} else {
 		return result.(*model.UploadPublisherIconResponse), nil
+	}
+}
+
+type InvokeEndpointProxyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *InvokeEndpointProxyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *InvokeEndpointProxyInvoker) Invoke() (*model.InvokeEndpointProxyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.InvokeEndpointProxyResponse), nil
 	}
 }
 

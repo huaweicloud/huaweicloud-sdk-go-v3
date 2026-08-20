@@ -10,10 +10,10 @@ import (
 type GroupMessageOffsetsDetailEntity struct {
 
 	// 分区
-	Partition *string `json:"partition,omitempty"`
+	Partition *int32 `json:"partition,omitempty"`
 
 	// 消息当前位点
-	MessageCurrentOffset *string `json:"message_current_offset,omitempty"`
+	MessageCurrentOffset *int32 `json:"message_current_offset,omitempty"`
 
 	// topic名称
 	Topic *string `json:"topic,omitempty"`
