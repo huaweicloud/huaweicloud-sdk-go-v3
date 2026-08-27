@@ -48,6 +48,9 @@ type Backups struct {
 
 	// 备份文件描述信息。
 	Description *string `json:"description,omitempty"`
+
+	// **参数解释**：  备份类型。  **取值范围**： - differential：差量备份。 - completed：全量备份。
+	BackupMode *string `json:"backup_mode,omitempty"`
 }
 
 func (o Backups) String() string {

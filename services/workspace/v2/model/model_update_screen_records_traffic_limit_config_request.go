@@ -8,7 +8,7 @@ import (
 
 // UpdateScreenRecordsTrafficLimitConfigRequest Request Object
 type UpdateScreenRecordsTrafficLimitConfigRequest struct {
-	Body *ScreenRecordsConfigResultReq `json:"body,omitempty"`
+	Body *UpdateScreenRecordsTrafficLimitConfigRequestBody `json:"body,omitempty"`
 }
 
 func (o UpdateScreenRecordsTrafficLimitConfigRequest) String() string {

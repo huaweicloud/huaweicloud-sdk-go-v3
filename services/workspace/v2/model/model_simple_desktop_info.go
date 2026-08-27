@@ -82,6 +82,9 @@ type SimpleDesktopInfo struct {
 
 	// 桌面池id。
 	PoolId *string `json:"pool_id,omitempty"`
+
+	// 加域状态。|- 1 正常。 2 脱域。 3 未上报。
+	DomainStatus *int32 `json:"domain_status,omitempty"`
 }
 
 func (o SimpleDesktopInfo) String() string {

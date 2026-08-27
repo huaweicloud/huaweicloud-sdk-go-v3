@@ -19,6 +19,9 @@ type AccessPolicyObject struct {
 
 	// 对象类型。 * USER： 用户 * USERGROUP： 用户组
 	ObjectType *AccessPolicyObjectObjectType `json:"object_type,omitempty"`
+
+	// 域名称。
+	ObjectDomain *string `json:"object_domain,omitempty"`
 }
 
 func (o AccessPolicyObject) String() string {

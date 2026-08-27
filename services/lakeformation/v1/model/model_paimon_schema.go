@@ -13,10 +13,10 @@ type PaimonSchema struct {
 	Fields []PaimonField `json:"fields"`
 
 	// 分区建集合
-	PartitionKeys *[]string `json:"partitionKeys,omitempty"`
+	PartitionKeys *[]string `json:"partition_keys,omitempty"`
 
 	// 主键集合
-	PrimaryKeys *[]string `json:"primaryKeys,omitempty"`
+	PrimaryKeys *[]string `json:"primary_keys,omitempty"`
 
 	// Paimon表属性
 	Options map[string]string `json:"options,omitempty"`

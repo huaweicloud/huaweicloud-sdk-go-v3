@@ -25,6 +25,9 @@ type PoliciesRecordAudit struct {
 
 	// 录屏文件保留时长（天）。取值为1~180天，0 表示永久保留。
 	RetentionDuration *int32 `json:"retention_duration,omitempty"`
+
+	// 登录时，录屏审计提醒频率（天/次）。取值为1~30天，0 表示每次登录都提醒。
+	ReminderFrequency *int32 `json:"reminder_frequency,omitempty"`
 }
 
 func (o PoliciesRecordAudit) String() string {

@@ -32,6 +32,12 @@ type ListContainerNodesRequest struct {
 
 	// **参数解释**: 用来识别cce节点或者自建节点的标签 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - cce：cce节点   - self：自建节点   - other：其他节点  **默认取值**: 不涉及
 	ContainerTags *string `json:"container_tags,omitempty"`
+
+	// **参数解释**: 查询是否是容器节点 **约束限制**: 不涉及 **取值范围**: - true：是容器节点 - false：非容器节点  **默认取值**: false
+	ContainerNode *bool `json:"container_node,omitempty"`
+
+	// **参数解释**: 节点开启的防护版本 **约束限制**: 不涉及 **取值范围**: - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。              **默认取值**: 不涉及
+	Version *string `json:"version,omitempty"`
 }
 
 func (o ListContainerNodesRequest) String() string {

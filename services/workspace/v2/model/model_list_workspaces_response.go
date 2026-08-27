@@ -110,7 +110,10 @@ type ListWorkspacesResponse struct {
 
 	// 是否授权最终租户创建快照。
 	EnableUserCreateSnapshot *bool `json:"enable_user_create_snapshot,omitempty"`
-	HttpStatusCode           int   `json:"-"`
+
+	// 开户完成时间。
+	CompleteTime   *string `json:"complete_time,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ListWorkspacesResponse) String() string {

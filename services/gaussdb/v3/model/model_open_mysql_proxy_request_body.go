@@ -29,8 +29,14 @@ type OpenMysqlProxyRequestBody struct {
 	// 数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
 	NodesReadWeight *[]NodesWeight `json:"nodes_read_weight,omitempty"`
 
+	// **参数解释**：  数据库代理节点的可用区设置。  **约束限制**：  不传该字段，代理节点可用区将随机设置，优先与数据库节点可用区保持一致；传入该字段，代理节点将设置在指定可用区。
+	ProxyNodesAzList *[]string `json:"proxy_nodes_az_list,omitempty"`
+
 	// 数据库VPC下的子网ID。
 	SubnetId *string `json:"subnet_id,omitempty"`
+
+	// **参数解释**：   数据库代理IP，获取方法如下。 - 用户自定义代理IP时，由用户自定义传入。 - 用户不指定代理IP时，随机在指定子网下生成的IPV4地址。  **约束限制**：  指定子网下的可用IP，获取方法如下： 登录TaurusDB的控制台界面，单击实例名称，进入实例详情页面，在该页面单击数据库代理，新增代理，查看已使用IP地址，查找指定子网下未被使用的IP。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+	ProxyIp *string `json:"proxy_ip,omitempty"`
 
 	// 是否开启新增节点自动加入该Proxy。如果需要设置是否开启新增节点自动加入该Proxy，请联系客服人员添加白名单，加入白名单后，方可输入该字段。  取值范围： - ON：开启。 - OFF：关闭。
 	NewNodeAutoAddStatus *string `json:"new_node_auto_add_status,omitempty"`

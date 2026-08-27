@@ -27,6 +27,12 @@ type ExecuteScriptOrCommandReq struct {
 	// 执行的脚本列表。
 	ScriptIds *[]string `json:"script_ids,omitempty"`
 
+	// 执行的命令行，与script_ids二选一。
+	Command *string `json:"command,omitempty"`
+
+	// 命令行的类型（POWERSHELL，BAT，SHELL）。
+	CommandType *string `json:"command_type,omitempty"`
+
 	// 执行脚本的超时时间，单位分钟。
 	ExecutionTimeout *int32 `json:"execution_timeout,omitempty"`
 }

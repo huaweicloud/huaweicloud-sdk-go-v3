@@ -12,6 +12,10 @@ type Capacity struct {
 
 	MaxValue *Value `json:"maxValue,omitempty"`
 
+	AllValue *Value `json:"allValue,omitempty"`
+
+	AllMaxValue *Value `json:"allMaxValue,omitempty"`
+
 	// UTC时间，格式yyyy-MM-dd'T'HH:mm:ss'Z'。
 	Timestamp *string `json:"timestamp,omitempty"`
 

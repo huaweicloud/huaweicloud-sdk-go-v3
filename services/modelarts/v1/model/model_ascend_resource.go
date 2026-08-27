@@ -22,6 +22,9 @@ type AscendResource struct {
 
 	// **参数解释：** 切分规格中的ai_cpu。 **取值范围：** 不涉及。
 	AiCpu *string `json:"ai_cpu,omitempty"`
+
+	// **参数解释：** 区分卡类型，如Snt9b3、Snt9b2 **取值范围：** 不涉及。
+	TypeAlias *string `json:"type_alias,omitempty"`
 }
 
 func (o AscendResource) String() string {

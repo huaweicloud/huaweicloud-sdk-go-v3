@@ -28,6 +28,8 @@ type AuthMethodConfigRequest struct {
 
 	// 短信验证码登录开关。
 	SmsLoginEnabled *bool `json:"sms_login_enabled,omitempty"`
+
+	LoginCaptcha *LoginCaptchaConfig `json:"login_captcha,omitempty"`
 }
 
 func (o AuthMethodConfigRequest) String() string {

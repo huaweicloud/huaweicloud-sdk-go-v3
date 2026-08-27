@@ -103,6 +103,27 @@ func (c *GaussDBClient) BatchTagActionInvoker(request *model.BatchTagActionReque
 	return &BatchTagActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchUpdateBackupPolicy 批量设置同区域备份策略
+//
+// 批量设置同区域备份策略，支持设置普通备份策略和稀疏备份策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) BatchUpdateBackupPolicy(request *model.BatchUpdateBackupPolicyRequest) (*model.BatchUpdateBackupPolicyResponse, error) {
+	requestDef := GenReqDefForBatchUpdateBackupPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateBackupPolicyResponse), nil
+	}
+}
+
+// BatchUpdateBackupPolicyInvoker 批量设置同区域备份策略
+func (c *GaussDBClient) BatchUpdateBackupPolicyInvoker(request *model.BatchUpdateBackupPolicyRequest) *BatchUpdateBackupPolicyInvoker {
+	requestDef := GenReqDefForBatchUpdateBackupPolicy()
+	return &BatchUpdateBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchUpgradeDatabases 批量实例小版本升级
 //
 // 批量实例小版本升级
@@ -208,6 +229,27 @@ func (c *GaussDBClient) ChangeGaussMySqlProxySpecificationInvoker(request *model
 	return &ChangeGaussMySqlProxySpecificationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CheckKernelUpgrade 实例升级预检查
+//
+// 实例升级预检查。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) CheckKernelUpgrade(request *model.CheckKernelUpgradeRequest) (*model.CheckKernelUpgradeResponse, error) {
+	requestDef := GenReqDefForCheckKernelUpgrade()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckKernelUpgradeResponse), nil
+	}
+}
+
+// CheckKernelUpgradeInvoker 实例升级预检查
+func (c *GaussDBClient) CheckKernelUpgradeInvoker(request *model.CheckKernelUpgradeRequest) *CheckKernelUpgradeInvoker {
+	requestDef := GenReqDefForCheckKernelUpgrade()
+	return &CheckKernelUpgradeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CheckResource 资源预校验
 //
 // 资源预校验。
@@ -248,6 +290,27 @@ func (c *GaussDBClient) CheckScheduleTaskExist(request *model.CheckScheduleTaskE
 func (c *GaussDBClient) CheckScheduleTaskExistInvoker(request *model.CheckScheduleTaskExistRequest) *CheckScheduleTaskExistInvoker {
 	requestDef := GenReqDefForCheckScheduleTaskExist()
 	return &CheckScheduleTaskExistInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ClearOnlineDdlTaskTempTable 清理实例无锁变更任务临时表
+//
+// 清理实例无锁变更任务产生的临时表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ClearOnlineDdlTaskTempTable(request *model.ClearOnlineDdlTaskTempTableRequest) (*model.ClearOnlineDdlTaskTempTableResponse, error) {
+	requestDef := GenReqDefForClearOnlineDdlTaskTempTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ClearOnlineDdlTaskTempTableResponse), nil
+	}
+}
+
+// ClearOnlineDdlTaskTempTableInvoker 清理实例无锁变更任务临时表
+func (c *GaussDBClient) ClearOnlineDdlTaskTempTableInvoker(request *model.ClearOnlineDdlTaskTempTableRequest) *ClearOnlineDdlTaskTempTableInvoker {
+	requestDef := GenReqDefForClearOnlineDdlTaskTempTable()
+	return &ClearOnlineDdlTaskTempTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CollectRealtimeSession 收集全部实时会话信息
@@ -817,6 +880,27 @@ func (c *GaussDBClient) DeleteLtsConfigsInvoker(request *model.DeleteLtsConfigsR
 	return &DeleteLtsConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteOnlineDdlTaskRecord 删除实例无锁变更任务记录
+//
+// 删除实例无锁变更记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) DeleteOnlineDdlTaskRecord(request *model.DeleteOnlineDdlTaskRecordRequest) (*model.DeleteOnlineDdlTaskRecordResponse, error) {
+	requestDef := GenReqDefForDeleteOnlineDdlTaskRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteOnlineDdlTaskRecordResponse), nil
+	}
+}
+
+// DeleteOnlineDdlTaskRecordInvoker 删除实例无锁变更任务记录
+func (c *GaussDBClient) DeleteOnlineDdlTaskRecordInvoker(request *model.DeleteOnlineDdlTaskRecordRequest) *DeleteOnlineDdlTaskRecordInvoker {
+	requestDef := GenReqDefForDeleteOnlineDdlTaskRecord()
+	return &DeleteOnlineDdlTaskRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteProxyPrivateDnsName 删除proxy内网dns
 //
 // 删除proxy内网dns。
@@ -962,6 +1046,27 @@ func (c *GaussDBClient) DownloadDdlLogs(request *model.DownloadDdlLogsRequest) (
 func (c *GaussDBClient) DownloadDdlLogsInvoker(request *model.DownloadDdlLogsRequest) *DownloadDdlLogsInvoker {
 	requestDef := GenReqDefForDownloadDdlLogs()
 	return &DownloadDdlLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadOnlineDdlTaskLog 获取实例无锁变更任务日志记录下载链接
+//
+// 获取实例无锁变更任务日志记录下载链接。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) DownloadOnlineDdlTaskLog(request *model.DownloadOnlineDdlTaskLogRequest) (*model.DownloadOnlineDdlTaskLogResponse, error) {
+	requestDef := GenReqDefForDownloadOnlineDdlTaskLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadOnlineDdlTaskLogResponse), nil
+	}
+}
+
+// DownloadOnlineDdlTaskLogInvoker 获取实例无锁变更任务日志记录下载链接
+func (c *GaussDBClient) DownloadOnlineDdlTaskLogInvoker(request *model.DownloadOnlineDdlTaskLogRequest) *DownloadOnlineDdlTaskLogInvoker {
+	requestDef := GenReqDefForDownloadOnlineDdlTaskLog()
+	return &DownloadOnlineDdlTaskLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DownloadRealtimeSession 下载全部实时会话信息
@@ -1131,6 +1236,27 @@ func (c *GaussDBClient) ListAuditLogs(request *model.ListAuditLogsRequest) (*mod
 func (c *GaussDBClient) ListAuditLogsInvoker(request *model.ListAuditLogsRequest) *ListAuditLogsInvoker {
 	requestDef := GenReqDefForListAuditLogs()
 	return &ListAuditLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListColdTableMetas 查询冷表元信息
+//
+// 查询冷表元信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListColdTableMetas(request *model.ListColdTableMetasRequest) (*model.ListColdTableMetasResponse, error) {
+	requestDef := GenReqDefForListColdTableMetas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListColdTableMetasResponse), nil
+	}
+}
+
+// ListColdTableMetasInvoker 查询冷表元信息
+func (c *GaussDBClient) ListColdTableMetasInvoker(request *model.ListColdTableMetasRequest) *ListColdTableMetasInvoker {
+	requestDef := GenReqDefForListColdTableMetas()
+	return &ListColdTableMetasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListConfigurationsDifferences 对比参数模板
@@ -1555,6 +1681,27 @@ func (c *GaussDBClient) ListModifyHistory(request *model.ListModifyHistoryReques
 func (c *GaussDBClient) ListModifyHistoryInvoker(request *model.ListModifyHistoryRequest) *ListModifyHistoryInvoker {
 	requestDef := GenReqDefForListModifyHistory()
 	return &ListModifyHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListOnlineDdlTaskRecords 查询无锁变更任务记录列表
+//
+// 查询无锁变更任务记录列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListOnlineDdlTaskRecords(request *model.ListOnlineDdlTaskRecordsRequest) (*model.ListOnlineDdlTaskRecordsResponse, error) {
+	requestDef := GenReqDefForListOnlineDdlTaskRecords()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOnlineDdlTaskRecordsResponse), nil
+	}
+}
+
+// ListOnlineDdlTaskRecordsInvoker 查询无锁变更任务记录列表
+func (c *GaussDBClient) ListOnlineDdlTaskRecordsInvoker(request *model.ListOnlineDdlTaskRecordsRequest) *ListOnlineDdlTaskRecordsInvoker {
+	requestDef := GenReqDefForListOnlineDdlTaskRecords()
+	return &ListOnlineDdlTaskRecordsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListParamsTemplateApplyHistory 查询参数模板应用记录。
@@ -2038,6 +2185,48 @@ func (c *GaussDBClient) SetGaussMySqlQuotas(request *model.SetGaussMySqlQuotasRe
 func (c *GaussDBClient) SetGaussMySqlQuotasInvoker(request *model.SetGaussMySqlQuotasRequest) *SetGaussMySqlQuotasInvoker {
 	requestDef := GenReqDefForSetGaussMySqlQuotas()
 	return &SetGaussMySqlQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetInstanceReadonlyStatus 设置/解除实例只读
+//
+// 设置实例状态为只读或解读实例的只读状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) SetInstanceReadonlyStatus(request *model.SetInstanceReadonlyStatusRequest) (*model.SetInstanceReadonlyStatusResponse, error) {
+	requestDef := GenReqDefForSetInstanceReadonlyStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetInstanceReadonlyStatusResponse), nil
+	}
+}
+
+// SetInstanceReadonlyStatusInvoker 设置/解除实例只读
+func (c *GaussDBClient) SetInstanceReadonlyStatusInvoker(request *model.SetInstanceReadonlyStatusRequest) *SetInstanceReadonlyStatusInvoker {
+	requestDef := GenReqDefForSetInstanceReadonlyStatus()
+	return &SetInstanceReadonlyStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetInstanceScheduleEvents 操作事件
+//
+// 对事件进行授权立即执行、授权取消执行或者授权预约执行等操作。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) SetInstanceScheduleEvents(request *model.SetInstanceScheduleEventsRequest) (*model.SetInstanceScheduleEventsResponse, error) {
+	requestDef := GenReqDefForSetInstanceScheduleEvents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetInstanceScheduleEventsResponse), nil
+	}
+}
+
+// SetInstanceScheduleEventsInvoker 操作事件
+func (c *GaussDBClient) SetInstanceScheduleEventsInvoker(request *model.SetInstanceScheduleEventsRequest) *SetInstanceScheduleEventsInvoker {
+	requestDef := GenReqDefForSetInstanceScheduleEvents()
+	return &SetInstanceScheduleEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SetRecyclePolicy 设置回收站策略
@@ -2735,6 +2924,27 @@ func (c *GaussDBClient) ShowInstanceMonitorExtendInvoker(request *model.ShowInst
 	return &ShowInstanceMonitorExtendInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowInstanceScheduleEvents 获取事件列表
+//
+// 获取事件列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowInstanceScheduleEvents(request *model.ShowInstanceScheduleEventsRequest) (*model.ShowInstanceScheduleEventsResponse, error) {
+	requestDef := GenReqDefForShowInstanceScheduleEvents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceScheduleEventsResponse), nil
+	}
+}
+
+// ShowInstanceScheduleEventsInvoker 获取事件列表
+func (c *GaussDBClient) ShowInstanceScheduleEventsInvoker(request *model.ShowInstanceScheduleEventsRequest) *ShowInstanceScheduleEventsInvoker {
+	requestDef := GenReqDefForShowInstanceScheduleEvents()
+	return &ShowInstanceScheduleEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowIntelligentDiagnosisAbnormalCountOfInstances 获取各指标的异常实例数
 //
 // 获取各指标的异常实例数。
@@ -2796,6 +3006,27 @@ func (c *GaussDBClient) ShowIntelligentKillSessionStatistic(request *model.ShowI
 func (c *GaussDBClient) ShowIntelligentKillSessionStatisticInvoker(request *model.ShowIntelligentKillSessionStatisticRequest) *ShowIntelligentKillSessionStatisticInvoker {
 	requestDef := GenReqDefForShowIntelligentKillSessionStatistic()
 	return &ShowIntelligentKillSessionStatisticInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowKernelUpgradeCheckResult 查询实例升级预检查结果
+//
+// 查询实例升级预检查结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowKernelUpgradeCheckResult(request *model.ShowKernelUpgradeCheckResultRequest) (*model.ShowKernelUpgradeCheckResultResponse, error) {
+	requestDef := GenReqDefForShowKernelUpgradeCheckResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKernelUpgradeCheckResultResponse), nil
+	}
+}
+
+// ShowKernelUpgradeCheckResultInvoker 查询实例升级预检查结果
+func (c *GaussDBClient) ShowKernelUpgradeCheckResultInvoker(request *model.ShowKernelUpgradeCheckResultRequest) *ShowKernelUpgradeCheckResultInvoker {
+	requestDef := GenReqDefForShowKernelUpgradeCheckResult()
+	return &ShowKernelUpgradeCheckResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowLockWaitSession 查询锁等待会话信息
@@ -3260,6 +3491,48 @@ func (c *GaussDBClient) ShowTaskDetailsInvoker(request *model.ShowTaskDetailsReq
 	return &ShowTaskDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowTaurusDbAdvancedBackupPolicy 查询自动备份策略
+//
+// 查询实例自动备份策略，包括基础备份策略和稀疏备份策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowTaurusDbAdvancedBackupPolicy(request *model.ShowTaurusDbAdvancedBackupPolicyRequest) (*model.ShowTaurusDbAdvancedBackupPolicyResponse, error) {
+	requestDef := GenReqDefForShowTaurusDbAdvancedBackupPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTaurusDbAdvancedBackupPolicyResponse), nil
+	}
+}
+
+// ShowTaurusDbAdvancedBackupPolicyInvoker 查询自动备份策略
+func (c *GaussDBClient) ShowTaurusDbAdvancedBackupPolicyInvoker(request *model.ShowTaurusDbAdvancedBackupPolicyRequest) *ShowTaurusDbAdvancedBackupPolicyInvoker {
+	requestDef := GenReqDefForShowTaurusDbAdvancedBackupPolicy()
+	return &ShowTaurusDbAdvancedBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTaurusDbTxnProgress 查询大事务执行进度
+//
+// 根据事务ID列表查询对应事务的执行进度，目前仅支持查询回滚事务的执行进度。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowTaurusDbTxnProgress(request *model.ShowTaurusDbTxnProgressRequest) (*model.ShowTaurusDbTxnProgressResponse, error) {
+	requestDef := GenReqDefForShowTaurusDbTxnProgress()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTaurusDbTxnProgressResponse), nil
+	}
+}
+
+// ShowTaurusDbTxnProgressInvoker 查询大事务执行进度
+func (c *GaussDBClient) ShowTaurusDbTxnProgressInvoker(request *model.ShowTaurusDbTxnProgressRequest) *ShowTaurusDbTxnProgressInvoker {
+	requestDef := GenReqDefForShowTaurusDbTxnProgress()
+	return &ShowTaurusDbTxnProgressInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShrinkGaussMySqlProxy 减少数据库代理节点的数量
 //
 // 缩容数据库代理节点的数量。
@@ -3280,6 +3553,48 @@ func (c *GaussDBClient) ShrinkGaussMySqlProxy(request *model.ShrinkGaussMySqlPro
 func (c *GaussDBClient) ShrinkGaussMySqlProxyInvoker(request *model.ShrinkGaussMySqlProxyRequest) *ShrinkGaussMySqlProxyInvoker {
 	requestDef := GenReqDefForShrinkGaussMySqlProxy()
 	return &ShrinkGaussMySqlProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartOnlineDdlTask 开启实例无锁变更任务
+//
+// 开启实例无锁变更任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) StartOnlineDdlTask(request *model.StartOnlineDdlTaskRequest) (*model.StartOnlineDdlTaskResponse, error) {
+	requestDef := GenReqDefForStartOnlineDdlTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartOnlineDdlTaskResponse), nil
+	}
+}
+
+// StartOnlineDdlTaskInvoker 开启实例无锁变更任务
+func (c *GaussDBClient) StartOnlineDdlTaskInvoker(request *model.StartOnlineDdlTaskRequest) *StartOnlineDdlTaskInvoker {
+	requestDef := GenReqDefForStartOnlineDdlTask()
+	return &StartOnlineDdlTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopOnlineDdlTask 停止实例无锁变更任务
+//
+// 停止实例无锁变更任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) StopOnlineDdlTask(request *model.StopOnlineDdlTaskRequest) (*model.StopOnlineDdlTaskResponse, error) {
+	requestDef := GenReqDefForStopOnlineDdlTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopOnlineDdlTaskResponse), nil
+	}
+}
+
+// StopOnlineDdlTaskInvoker 停止实例无锁变更任务
+func (c *GaussDBClient) StopOnlineDdlTaskInvoker(request *model.StopOnlineDdlTaskRequest) *StopOnlineDdlTaskInvoker {
+	requestDef := GenReqDefForStopOnlineDdlTask()
+	return &StopOnlineDdlTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SwitchAccessControl 开启或关闭访问控制
@@ -4080,6 +4395,27 @@ func (c *GaussDBClient) UpdateSqlFilterControlInvoker(request *model.UpdateSqlFi
 	return &UpdateSqlFilterControlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateTaurusDbAdvancedBackupPolicy 设置同区域备份策略
+//
+// 修改同区域备份策略，支持自定义基础备份策略和稀疏备份策略。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateTaurusDbAdvancedBackupPolicy(request *model.UpdateTaurusDbAdvancedBackupPolicyRequest) (*model.UpdateTaurusDbAdvancedBackupPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateTaurusDbAdvancedBackupPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTaurusDbAdvancedBackupPolicyResponse), nil
+	}
+}
+
+// UpdateTaurusDbAdvancedBackupPolicyInvoker 设置同区域备份策略
+func (c *GaussDBClient) UpdateTaurusDbAdvancedBackupPolicyInvoker(request *model.UpdateTaurusDbAdvancedBackupPolicyRequest) *UpdateTaurusDbAdvancedBackupPolicyInvoker {
+	requestDef := GenReqDefForUpdateTaurusDbAdvancedBackupPolicy()
+	return &UpdateTaurusDbAdvancedBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateTaurusNodeDataIp 修改只读节点的读内网地址
 //
 // 修改只读节点的读内网地址。
@@ -4120,6 +4456,27 @@ func (c *GaussDBClient) UpdateTransactionSplitStatus(request *model.UpdateTransa
 func (c *GaussDBClient) UpdateTransactionSplitStatusInvoker(request *model.UpdateTransactionSplitStatusRequest) *UpdateTransactionSplitStatusInvoker {
 	requestDef := GenReqDefForUpdateTransactionSplitStatus()
 	return &UpdateTransactionSplitStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpgradeConfiguration 更新自定义参数模板
+//
+// 更新自定义参数模板，将模板参数值同步为系统默认模板的值，包含规格参数值。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpgradeConfiguration(request *model.UpgradeConfigurationRequest) (*model.UpgradeConfigurationResponse, error) {
+	requestDef := GenReqDefForUpgradeConfiguration()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeConfigurationResponse), nil
+	}
+}
+
+// UpgradeConfigurationInvoker 更新自定义参数模板
+func (c *GaussDBClient) UpgradeConfigurationInvoker(request *model.UpgradeConfigurationRequest) *UpgradeConfigurationInvoker {
+	requestDef := GenReqDefForUpgradeConfiguration()
+	return &UpgradeConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpgradeGaussMySqlInstanceDatabase 内核版本升级

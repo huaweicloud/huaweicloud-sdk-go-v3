@@ -40,7 +40,7 @@ type ShowInferServiceClusterResponse struct {
 	UpdateAt *int64 `json:"update_at,omitempty"`
 
 	// **参数解释：** 当前专属池支持的规格。
-	Flavors *[]NotebookFlavor `json:"flavors,omitempty"`
+	Flavors *[]InferFlavor `json:"flavors,omitempty"`
 
 	// **参数解释：** 资源池类型。 **取值范围：** - LOGICAL ：逻辑池。 - PHYSICAL ：物理池。
 	PoolType *ShowInferServiceClusterResponsePoolType `json:"pool_type,omitempty"`

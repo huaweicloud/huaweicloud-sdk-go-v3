@@ -18,6 +18,9 @@ type ExportUserGroupUsersNewRequest struct {
 	// 用户名支持模糊查询。
 	UserName *string `json:"user_name,omitempty"`
 
+	// 用户名列表，支持多用户名查询。
+	UserNames *[]string `json:"user_names,omitempty"`
+
 	// 用户描述支持模糊查询。
 	Description *string `json:"description,omitempty"`
 

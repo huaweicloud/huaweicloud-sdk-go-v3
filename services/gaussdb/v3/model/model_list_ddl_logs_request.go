@@ -25,10 +25,10 @@ type ListDdlLogsRequest struct {
 	Limit *int32 `json:"limit,omitempty"`
 
 	// **参数解释**：  查询开始时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-	StartTime *int64 `json:"start_time,omitempty"`
+	StartTime int64 `json:"start_time"`
 
 	// **参数解释**：  查询结束时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-	EndTime *int64 `json:"end_time,omitempty"`
+	EndTime int64 `json:"end_time"`
 }
 
 func (o ListDdlLogsRequest) String() string {

@@ -21,6 +21,22 @@ func (i *AcceptScheduledEventInvoker) Invoke() (*model.AcceptScheduledEventRespo
 	}
 }
 
+type AttachDevServerVolumeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AttachDevServerVolumeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AttachDevServerVolumeInvoker) Invoke() (*model.AttachDevServerVolumeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AttachDevServerVolumeResponse), nil
+	}
+}
+
 type AttachDynamicStorageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -146,6 +162,38 @@ func (i *BatchDeletePoolTagsInvoker) Invoke() (*model.BatchDeletePoolTagsRespons
 		return nil, err
 	} else {
 		return result.(*model.BatchDeletePoolTagsResponse), nil
+	}
+}
+
+type BatchDevServersActionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDevServersActionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDevServersActionInvoker) Invoke() (*model.BatchDevServersActionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDevServersActionResponse), nil
+	}
+}
+
+type BatchDrainPoolNodesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDrainPoolNodesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDrainPoolNodesInvoker) Invoke() (*model.BatchDrainPoolNodesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDrainPoolNodesResponse), nil
 	}
 }
 
@@ -277,6 +325,22 @@ func (i *BatchUpdatePoolNodesInvoker) Invoke() (*model.BatchUpdatePoolNodesRespo
 	}
 }
 
+type BindDevServerPublicIPInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BindDevServerPublicIPInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BindDevServerPublicIPInvoker) Invoke() (*model.BindDevServerPublicIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BindDevServerPublicIpResponse), nil
+	}
+}
+
 type BindInferApiKeyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -322,6 +386,38 @@ func (i *ChangeAlgorithmInvoker) Invoke() (*model.ChangeAlgorithmResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ChangeAlgorithmResponse), nil
+	}
+}
+
+type ChangeDevServerOSInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeDevServerOSInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeDevServerOSInvoker) Invoke() (*model.ChangeDevServerOsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeDevServerOsResponse), nil
+	}
+}
+
+type ChangeHyperinstanceOSInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeHyperinstanceOSInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeHyperinstanceOSInvoker) Invoke() (*model.ChangeHyperinstanceOsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeHyperinstanceOsResponse), nil
 	}
 }
 
@@ -434,6 +530,70 @@ func (i *CreateAuthorizationInvoker) Invoke() (*model.CreateAuthorizationRespons
 		return nil, err
 	} else {
 		return result.(*model.CreateAuthorizationResponse), nil
+	}
+}
+
+type CreateDevServerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDevServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDevServerInvoker) Invoke() (*model.CreateDevServerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDevServerResponse), nil
+	}
+}
+
+type CreateDevServerJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDevServerJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDevServerJobInvoker) Invoke() (*model.CreateDevServerJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDevServerJobResponse), nil
+	}
+}
+
+type CreateHyperClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateHyperClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateHyperClusterInvoker) Invoke() (*model.CreateHyperClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateHyperClusterResponse), nil
+	}
+}
+
+type CreateHyperinstanceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateHyperinstanceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateHyperinstanceTagsInvoker) Invoke() (*model.CreateHyperinstanceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateHyperinstanceTagsResponse), nil
 	}
 }
 
@@ -629,6 +789,22 @@ func (i *CreatePoolPluginInvoker) Invoke() (*model.CreatePoolPluginResponse, err
 	}
 }
 
+type CreateRoceNetworkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRoceNetworkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateRoceNetworkInvoker) Invoke() (*model.CreateRoceNetworkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRoceNetworkResponse), nil
+	}
+}
+
 type CreateSaveImageJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -738,6 +914,86 @@ func (i *DeleteAuthorizationsInvoker) Invoke() (*model.DeleteAuthorizationsRespo
 		return nil, err
 	} else {
 		return result.(*model.DeleteAuthorizationsResponse), nil
+	}
+}
+
+type DeleteDevServerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDevServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDevServerInvoker) Invoke() (*model.DeleteDevServerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDevServerResponse), nil
+	}
+}
+
+type DeleteDevServerJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDevServerJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDevServerJobsInvoker) Invoke() (*model.DeleteDevServerJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDevServerJobsResponse), nil
+	}
+}
+
+type DeleteHyperClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteHyperClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteHyperClusterInvoker) Invoke() (*model.DeleteHyperClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteHyperClusterResponse), nil
+	}
+}
+
+type DeleteHyperinstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteHyperinstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteHyperinstanceInvoker) Invoke() (*model.DeleteHyperinstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteHyperinstanceResponse), nil
+	}
+}
+
+type DeleteHyperinstanceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteHyperinstanceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteHyperinstanceTagsInvoker) Invoke() (*model.DeleteHyperinstanceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteHyperinstanceTagsResponse), nil
 	}
 }
 
@@ -981,6 +1237,22 @@ func (i *DeleteWorkspaceInvoker) Invoke() (*model.DeleteWorkspaceResponse, error
 	}
 }
 
+type DetachDevServerVolumeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DetachDevServerVolumeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DetachDevServerVolumeInvoker) Invoke() (*model.DetachDevServerVolumeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DetachDevServerVolumeResponse), nil
+	}
+}
+
 type DetachDynamicStorageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1013,6 +1285,118 @@ func (i *GetAuthorizationsInvoker) Invoke() (*model.GetAuthorizationsResponse, e
 	}
 }
 
+type GetDevServerImageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetDevServerImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetDevServerImageInvoker) Invoke() (*model.GetDevServerImageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetDevServerImageResponse), nil
+	}
+}
+
+type GetDevServerJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetDevServerJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetDevServerJobInvoker) Invoke() (*model.GetDevServerJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetDevServerJobResponse), nil
+	}
+}
+
+type GetDevServerJobServiceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetDevServerJobServiceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetDevServerJobServiceInvoker) Invoke() (*model.GetDevServerJobServiceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetDevServerJobServiceResponse), nil
+	}
+}
+
+type GetDevServerJobTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetDevServerJobTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetDevServerJobTemplateInvoker) Invoke() (*model.GetDevServerJobTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetDevServerJobTemplateResponse), nil
+	}
+}
+
+type GetDevServerOperationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetDevServerOperationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetDevServerOperationInvoker) Invoke() (*model.GetDevServerOperationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetDevServerOperationResponse), nil
+	}
+}
+
+type GetHyperClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetHyperClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetHyperClusterInvoker) Invoke() (*model.GetHyperClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetHyperClusterResponse), nil
+	}
+}
+
+type GetHyperinstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetHyperinstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetHyperinstanceInvoker) Invoke() (*model.GetHyperinstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetHyperinstanceResponse), nil
+	}
+}
+
 type GetHyperinstanceOperationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1029,6 +1413,38 @@ func (i *GetHyperinstanceOperationInvoker) Invoke() (*model.GetHyperinstanceOper
 	}
 }
 
+type GetScaleEvaluationsDevServerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetScaleEvaluationsDevServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetScaleEvaluationsDevServerInvoker) Invoke() (*model.GetScaleEvaluationsDevServerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetScaleEvaluationsDevServerResponse), nil
+	}
+}
+
+type GetTopologiesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetTopologiesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetTopologiesInvoker) Invoke() (*model.GetTopologiesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetTopologiesResponse), nil
+	}
+}
+
 type ListAlgorithmsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1042,6 +1458,134 @@ func (i *ListAlgorithmsInvoker) Invoke() (*model.ListAlgorithmsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ListAlgorithmsResponse), nil
+	}
+}
+
+type ListAllDevServersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAllDevServersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAllDevServersInvoker) Invoke() (*model.ListAllDevServersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAllDevServersResponse), nil
+	}
+}
+
+type ListAllHyperinstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAllHyperinstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAllHyperinstancesInvoker) Invoke() (*model.ListAllHyperinstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAllHyperinstancesResponse), nil
+	}
+}
+
+type ListDevServerFlavorsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDevServerFlavorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDevServerFlavorsInvoker) Invoke() (*model.ListDevServerFlavorsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDevServerFlavorsResponse), nil
+	}
+}
+
+type ListDevServerImagesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDevServerImagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDevServerImagesInvoker) Invoke() (*model.ListDevServerImagesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDevServerImagesResponse), nil
+	}
+}
+
+type ListDevServerJobTemplatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDevServerJobTemplatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDevServerJobTemplatesInvoker) Invoke() (*model.ListDevServerJobTemplatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDevServerJobTemplatesResponse), nil
+	}
+}
+
+type ListDevServerJobsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDevServerJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDevServerJobsInvoker) Invoke() (*model.ListDevServerJobsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDevServerJobsResponse), nil
+	}
+}
+
+type ListDevServerPublicIPInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDevServerPublicIPInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDevServerPublicIPInvoker) Invoke() (*model.ListDevServerPublicIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDevServerPublicIpResponse), nil
+	}
+}
+
+type ListDevServersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDevServersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDevServersInvoker) Invoke() (*model.ListDevServersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDevServersResponse), nil
 	}
 }
 
@@ -1090,6 +1634,54 @@ func (i *ListEventsInvoker) Invoke() (*model.ListEventsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListEventsResponse), nil
+	}
+}
+
+type ListHyperClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHyperClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListHyperClusterInvoker) Invoke() (*model.ListHyperClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHyperClusterResponse), nil
+	}
+}
+
+type ListHyperinstanceClustersCapacityInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHyperinstanceClustersCapacityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListHyperinstanceClustersCapacityInvoker) Invoke() (*model.ListHyperinstanceClustersCapacityResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHyperinstanceClustersCapacityResponse), nil
+	}
+}
+
+type ListHyperinstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHyperinstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListHyperinstancesInvoker) Invoke() (*model.ListHyperinstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHyperinstancesResponse), nil
 	}
 }
 
@@ -1701,6 +2293,38 @@ func (i *PatchPoolInvoker) Invoke() (*model.PatchPoolResponse, error) {
 	}
 }
 
+type QueryHyperinstanceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *QueryHyperinstanceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *QueryHyperinstanceTagsInvoker) Invoke() (*model.QueryHyperinstanceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.QueryHyperinstanceTagsResponse), nil
+	}
+}
+
+type RebootDevServerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RebootDevServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RebootDevServerInvoker) Invoke() (*model.RebootDevServerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RebootDevServerResponse), nil
+	}
+}
+
 type RegisterImageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1714,6 +2338,54 @@ func (i *RegisterImageInvoker) Invoke() (*model.RegisterImageResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.RegisterImageResponse), nil
+	}
+}
+
+type ReinstallDevServerOSInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ReinstallDevServerOSInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ReinstallDevServerOSInvoker) Invoke() (*model.ReinstallDevServerOsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ReinstallDevServerOsResponse), nil
+	}
+}
+
+type ScaleDownHyperinstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ScaleDownHyperinstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ScaleDownHyperinstanceInvoker) Invoke() (*model.ScaleDownHyperinstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ScaleDownHyperinstanceResponse), nil
+	}
+}
+
+type ScaleUpHyperinstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ScaleUpHyperinstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ScaleUpHyperinstanceInvoker) Invoke() (*model.ScaleUpHyperinstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ScaleUpHyperinstanceResponse), nil
 	}
 }
 
@@ -1858,6 +2530,22 @@ func (i *ShowAutoSearchYamlTemplatesInfoInvoker) Invoke() (*model.ShowAutoSearch
 		return nil, err
 	} else {
 		return result.(*model.ShowAutoSearchYamlTemplatesInfoResponse), nil
+	}
+}
+
+type ShowDevServerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDevServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDevServerInvoker) Invoke() (*model.ShowDevServerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDevServerResponse), nil
 	}
 }
 
@@ -2453,6 +3141,38 @@ func (i *ShowWorkspaceQuotasInvoker) Invoke() (*model.ShowWorkspaceQuotasRespons
 	}
 }
 
+type StartDevServerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartDevServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StartDevServerInvoker) Invoke() (*model.StartDevServerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartDevServerResponse), nil
+	}
+}
+
+type StartHyperinstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartHyperinstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StartHyperinstanceInvoker) Invoke() (*model.StartHyperinstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartHyperinstanceResponse), nil
+	}
+}
+
 type StartInferDeploymentInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2482,6 +3202,38 @@ func (i *StartInferServiceInvoker) Invoke() (*model.StartInferServiceResponse, e
 		return nil, err
 	} else {
 		return result.(*model.StartInferServiceResponse), nil
+	}
+}
+
+type StopDevServerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopDevServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StopDevServerInvoker) Invoke() (*model.StopDevServerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopDevServerResponse), nil
+	}
+}
+
+type StopHyperinstanceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopHyperinstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StopHyperinstanceInvoker) Invoke() (*model.StopHyperinstanceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopHyperinstanceResponse), nil
 	}
 }
 
@@ -2549,6 +3301,22 @@ func (i *SwitchInferDeploymentVersionInvoker) Invoke() (*model.SwitchInferDeploy
 	}
 }
 
+type SyncDevServersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SyncDevServersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SyncDevServersInvoker) Invoke() (*model.SyncDevServersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SyncDevServersResponse), nil
+	}
+}
+
 type SyncImageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2594,6 +3362,22 @@ func (i *UpdateAuthModeInvoker) Invoke() (*model.UpdateAuthModeResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdateAuthModeResponse), nil
+	}
+}
+
+type UpdateDevServerInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDevServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDevServerInvoker) Invoke() (*model.UpdateDevServerResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDevServerResponse), nil
 	}
 }
 
@@ -2850,774 +3634,6 @@ func (i *UpdateInferHraInvoker) Invoke() (*model.UpdateInferHraResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdateInferHraResponse), nil
-	}
-}
-
-type AttachDevServerVolumeInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *AttachDevServerVolumeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *AttachDevServerVolumeInvoker) Invoke() (*model.AttachDevServerVolumeResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.AttachDevServerVolumeResponse), nil
-	}
-}
-
-type BatchDevServersActionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchDevServersActionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchDevServersActionInvoker) Invoke() (*model.BatchDevServersActionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchDevServersActionResponse), nil
-	}
-}
-
-type BindDevServerPublicIPInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BindDevServerPublicIPInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BindDevServerPublicIPInvoker) Invoke() (*model.BindDevServerPublicIpResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BindDevServerPublicIpResponse), nil
-	}
-}
-
-type ChangeDevServerOSInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ChangeDevServerOSInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ChangeDevServerOSInvoker) Invoke() (*model.ChangeDevServerOsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ChangeDevServerOsResponse), nil
-	}
-}
-
-type ChangeHyperinstanceOSInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ChangeHyperinstanceOSInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ChangeHyperinstanceOSInvoker) Invoke() (*model.ChangeHyperinstanceOsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ChangeHyperinstanceOsResponse), nil
-	}
-}
-
-type CreateDevServerInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateDevServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateDevServerInvoker) Invoke() (*model.CreateDevServerResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateDevServerResponse), nil
-	}
-}
-
-type CreateDevServerJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateDevServerJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateDevServerJobInvoker) Invoke() (*model.CreateDevServerJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateDevServerJobResponse), nil
-	}
-}
-
-type CreateHyperClusterInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateHyperClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateHyperClusterInvoker) Invoke() (*model.CreateHyperClusterResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateHyperClusterResponse), nil
-	}
-}
-
-type CreateHyperinstanceTagsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateHyperinstanceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateHyperinstanceTagsInvoker) Invoke() (*model.CreateHyperinstanceTagsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateHyperinstanceTagsResponse), nil
-	}
-}
-
-type CreateRoceNetworkInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateRoceNetworkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateRoceNetworkInvoker) Invoke() (*model.CreateRoceNetworkResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateRoceNetworkResponse), nil
-	}
-}
-
-type DeleteDevServerInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteDevServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteDevServerInvoker) Invoke() (*model.DeleteDevServerResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteDevServerResponse), nil
-	}
-}
-
-type DeleteDevServerJobsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteDevServerJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteDevServerJobsInvoker) Invoke() (*model.DeleteDevServerJobsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteDevServerJobsResponse), nil
-	}
-}
-
-type DeleteHyperClusterInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteHyperClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteHyperClusterInvoker) Invoke() (*model.DeleteHyperClusterResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteHyperClusterResponse), nil
-	}
-}
-
-type DeleteHyperinstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteHyperinstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteHyperinstanceInvoker) Invoke() (*model.DeleteHyperinstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteHyperinstanceResponse), nil
-	}
-}
-
-type DeleteHyperinstanceTagsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteHyperinstanceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteHyperinstanceTagsInvoker) Invoke() (*model.DeleteHyperinstanceTagsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteHyperinstanceTagsResponse), nil
-	}
-}
-
-type DetachDevServerVolumeInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DetachDevServerVolumeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DetachDevServerVolumeInvoker) Invoke() (*model.DetachDevServerVolumeResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DetachDevServerVolumeResponse), nil
-	}
-}
-
-type GetDevServerImageInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *GetDevServerImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *GetDevServerImageInvoker) Invoke() (*model.GetDevServerImageResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.GetDevServerImageResponse), nil
-	}
-}
-
-type GetDevServerJobInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *GetDevServerJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *GetDevServerJobInvoker) Invoke() (*model.GetDevServerJobResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.GetDevServerJobResponse), nil
-	}
-}
-
-type GetDevServerJobServiceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *GetDevServerJobServiceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *GetDevServerJobServiceInvoker) Invoke() (*model.GetDevServerJobServiceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.GetDevServerJobServiceResponse), nil
-	}
-}
-
-type GetDevServerJobTemplateInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *GetDevServerJobTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *GetDevServerJobTemplateInvoker) Invoke() (*model.GetDevServerJobTemplateResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.GetDevServerJobTemplateResponse), nil
-	}
-}
-
-type GetDevServerOperationInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *GetDevServerOperationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *GetDevServerOperationInvoker) Invoke() (*model.GetDevServerOperationResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.GetDevServerOperationResponse), nil
-	}
-}
-
-type GetHyperClusterInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *GetHyperClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *GetHyperClusterInvoker) Invoke() (*model.GetHyperClusterResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.GetHyperClusterResponse), nil
-	}
-}
-
-type GetHyperinstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *GetHyperinstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *GetHyperinstanceInvoker) Invoke() (*model.GetHyperinstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.GetHyperinstanceResponse), nil
-	}
-}
-
-type GetScaleEvaluationsDevServerInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *GetScaleEvaluationsDevServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *GetScaleEvaluationsDevServerInvoker) Invoke() (*model.GetScaleEvaluationsDevServerResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.GetScaleEvaluationsDevServerResponse), nil
-	}
-}
-
-type GetTopologiesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *GetTopologiesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *GetTopologiesInvoker) Invoke() (*model.GetTopologiesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.GetTopologiesResponse), nil
-	}
-}
-
-type ListAllDevServersInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListAllDevServersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListAllDevServersInvoker) Invoke() (*model.ListAllDevServersResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListAllDevServersResponse), nil
-	}
-}
-
-type ListAllHyperinstancesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListAllHyperinstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListAllHyperinstancesInvoker) Invoke() (*model.ListAllHyperinstancesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListAllHyperinstancesResponse), nil
-	}
-}
-
-type ListDevServerFlavorsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListDevServerFlavorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListDevServerFlavorsInvoker) Invoke() (*model.ListDevServerFlavorsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListDevServerFlavorsResponse), nil
-	}
-}
-
-type ListDevServerImagesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListDevServerImagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListDevServerImagesInvoker) Invoke() (*model.ListDevServerImagesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListDevServerImagesResponse), nil
-	}
-}
-
-type ListDevServerJobTemplatesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListDevServerJobTemplatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListDevServerJobTemplatesInvoker) Invoke() (*model.ListDevServerJobTemplatesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListDevServerJobTemplatesResponse), nil
-	}
-}
-
-type ListDevServerJobsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListDevServerJobsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListDevServerJobsInvoker) Invoke() (*model.ListDevServerJobsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListDevServerJobsResponse), nil
-	}
-}
-
-type ListDevServerPublicIPInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListDevServerPublicIPInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListDevServerPublicIPInvoker) Invoke() (*model.ListDevServerPublicIpResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListDevServerPublicIpResponse), nil
-	}
-}
-
-type ListDevServersInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListDevServersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListDevServersInvoker) Invoke() (*model.ListDevServersResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListDevServersResponse), nil
-	}
-}
-
-type ListHyperClusterInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListHyperClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListHyperClusterInvoker) Invoke() (*model.ListHyperClusterResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListHyperClusterResponse), nil
-	}
-}
-
-type ListHyperinstanceClustersCapacityInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListHyperinstanceClustersCapacityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListHyperinstanceClustersCapacityInvoker) Invoke() (*model.ListHyperinstanceClustersCapacityResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListHyperinstanceClustersCapacityResponse), nil
-	}
-}
-
-type ListHyperinstancesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListHyperinstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListHyperinstancesInvoker) Invoke() (*model.ListHyperinstancesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListHyperinstancesResponse), nil
-	}
-}
-
-type QueryHyperinstanceTagsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *QueryHyperinstanceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *QueryHyperinstanceTagsInvoker) Invoke() (*model.QueryHyperinstanceTagsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.QueryHyperinstanceTagsResponse), nil
-	}
-}
-
-type RebootDevServerInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *RebootDevServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *RebootDevServerInvoker) Invoke() (*model.RebootDevServerResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.RebootDevServerResponse), nil
-	}
-}
-
-type ReinstallDevServerOSInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ReinstallDevServerOSInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ReinstallDevServerOSInvoker) Invoke() (*model.ReinstallDevServerOsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ReinstallDevServerOsResponse), nil
-	}
-}
-
-type ScaleDownHyperinstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ScaleDownHyperinstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ScaleDownHyperinstanceInvoker) Invoke() (*model.ScaleDownHyperinstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ScaleDownHyperinstanceResponse), nil
-	}
-}
-
-type ScaleUpHyperinstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ScaleUpHyperinstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ScaleUpHyperinstanceInvoker) Invoke() (*model.ScaleUpHyperinstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ScaleUpHyperinstanceResponse), nil
-	}
-}
-
-type ShowDevServerInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowDevServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowDevServerInvoker) Invoke() (*model.ShowDevServerResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowDevServerResponse), nil
-	}
-}
-
-type StartDevServerInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *StartDevServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *StartDevServerInvoker) Invoke() (*model.StartDevServerResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.StartDevServerResponse), nil
-	}
-}
-
-type StartHyperinstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *StartHyperinstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *StartHyperinstanceInvoker) Invoke() (*model.StartHyperinstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.StartHyperinstanceResponse), nil
-	}
-}
-
-type StopDevServerInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *StopDevServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *StopDevServerInvoker) Invoke() (*model.StopDevServerResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.StopDevServerResponse), nil
-	}
-}
-
-type StopHyperinstanceInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *StopHyperinstanceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *StopHyperinstanceInvoker) Invoke() (*model.StopHyperinstanceResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.StopHyperinstanceResponse), nil
-	}
-}
-
-type SyncDevServersInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *SyncDevServersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *SyncDevServersInvoker) Invoke() (*model.SyncDevServersResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.SyncDevServersResponse), nil
-	}
-}
-
-type UpdateDevServerInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateDevServerInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateDevServerInvoker) Invoke() (*model.UpdateDevServerResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateDevServerResponse), nil
 	}
 }
 

@@ -41,6 +41,9 @@ type ListLoginRecordsNewRequest struct {
 
 	// 查询端到端时延的最大值。
 	MaxNetworkRtt *int32 `json:"max_network_rtt,omitempty"`
+
+	// 域名筛选条件，用于根据域名筛选用户连接记录。
+	Domain *string `json:"domain,omitempty"`
 }
 
 func (o ListLoginRecordsNewRequest) String() string {

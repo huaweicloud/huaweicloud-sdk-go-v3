@@ -71,6 +71,12 @@ type ContainerNodeInfo struct {
 
 	// **参数解释**: 策略组名称 **取值范围**: 字符长度1-128位
 	PolicyGroupName *string `json:"policy_group_name,omitempty"`
+
+	// **参数解释** 是否是容器节点 **取值范围** - true：是容器节点 - false：非容器节点
+	IsContainerNode *bool `json:"is_container_node,omitempty"`
+
+	// **参数解释**: 节点开启的防护版本 **取值范围**: - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
+	Version *string `json:"version,omitempty"`
 }
 
 func (o ContainerNodeInfo) String() string {

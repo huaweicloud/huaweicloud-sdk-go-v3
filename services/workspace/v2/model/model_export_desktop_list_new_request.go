@@ -15,6 +15,9 @@ type ExportDesktopListNewRequest struct {
 	// 桌面名。
 	ComputerName *string `json:"computer_name,omitempty"`
 
+	// 桌面名列表
+	ComputerNames *[]string `json:"computer_names,omitempty"`
+
 	// 桌面IP地址。
 	DesktopIp *string `json:"desktop_ip,omitempty"`
 
@@ -45,9 +48,6 @@ type ExportDesktopListNewRequest struct {
 	// 排序类型，默认升序，需要结合sort_field字段一起使用。 - ASC 升序。 - DESC 降序。
 	SortType *ExportDesktopListNewRequestSortType `json:"sort_type,omitempty"`
 
-	// 桌面池ID,多个桌面池ID用逗号隔开。
-	PoolId *string `json:"pool_id,omitempty"`
-
 	// 是否分配了用户。
 	UserAttached *bool `json:"user_attached,omitempty"`
 
@@ -65,6 +65,24 @@ type ExportDesktopListNewRequest struct {
 
 	// 连接状态版本，默认值为OLD。 - NEW：新版本 - OLD：老版本
 	ConnectionStatusVersion *string `json:"connection_status_version,omitempty"`
+
+	// 桌面池ID,多个桌面池ID用逗号隔开。
+	PoolId *string `json:"pool_id,omitempty"`
+
+	// 是否只导出桌面池桌面。 - true：只导出桌面池桌面，此时可配合pool_name、pool_type、pool_in_maintenance_mode过滤参数对桌面池进行过滤 - false：只导出普通桌面，忽略其他pool_name、pool_type、pool_in_maintenance_mode过滤参数参数
+	IncludePool *bool `json:"include_pool,omitempty"`
+
+	// 桌面池名称。
+	PoolName *string `json:"pool_name,omitempty"`
+
+	// 桌面池类型，DYNAMIC：动态池，STATIC：静态池。
+	PoolType *ExportDesktopListNewRequestPoolType `json:"pool_type,omitempty"`
+
+	// 按照维护状态过滤。
+	PoolInMaintenanceMode *bool `json:"pool_in_maintenance_mode,omitempty"`
+
+	// 按照企业项目ID过滤桌面池。
+	PoolEnterpriseProjectId *string `json:"pool_enterprise_project_id,omitempty"`
 }
 
 func (o ExportDesktopListNewRequest) String() string {
@@ -199,6 +217,53 @@ func (c ExportDesktopListNewRequestSortType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *ExportDesktopListNewRequestSortType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type ExportDesktopListNewRequestPoolType struct {
+	value string
+}
+
+type ExportDesktopListNewRequestPoolTypeEnum struct {
+	DYNAMIC ExportDesktopListNewRequestPoolType
+	STATIC  ExportDesktopListNewRequestPoolType
+}
+
+func GetExportDesktopListNewRequestPoolTypeEnum() ExportDesktopListNewRequestPoolTypeEnum {
+	return ExportDesktopListNewRequestPoolTypeEnum{
+		DYNAMIC: ExportDesktopListNewRequestPoolType{
+			value: "DYNAMIC",
+		},
+		STATIC: ExportDesktopListNewRequestPoolType{
+			value: "STATIC",
+		},
+	}
+}
+
+func (c ExportDesktopListNewRequestPoolType) Value() string {
+	return c.value
+}
+
+func (c ExportDesktopListNewRequestPoolType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ExportDesktopListNewRequestPoolType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

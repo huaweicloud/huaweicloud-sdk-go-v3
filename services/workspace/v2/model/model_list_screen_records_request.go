@@ -18,6 +18,9 @@ type ListScreenRecordsRequest struct {
 	// 根据桌面ID过滤结果。
 	DesktopId *string `json:"desktop_id,omitempty"`
 
+	// 桌面名称列表，多个名称用英文逗号分割，最多支持100个桌面名称
+	DesktopNames *string `json:"desktop_names,omitempty"`
+
 	// 根据用户名称过滤结果。
 	Username *string `json:"username,omitempty"`
 

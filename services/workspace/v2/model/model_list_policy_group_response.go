@@ -10,7 +10,7 @@ import (
 type ListPolicyGroupResponse struct {
 
 	// 策略组。
-	PolicyGroups *[]PolicyGroupForList `json:"policy_groups,omitempty"`
+	PolicyGroups *[]PolicyGroupForBaseList `json:"policy_groups,omitempty"`
 
 	// 总数。
 	TotalCount     *int32 `json:"total_count,omitempty"`

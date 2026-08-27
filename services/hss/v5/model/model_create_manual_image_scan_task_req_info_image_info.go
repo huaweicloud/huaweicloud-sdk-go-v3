@@ -38,7 +38,7 @@ type CreateManualImageScanTaskReqInfoImageInfo struct {
 	// 下载企业镜像URL
 	InstanceUrl *string `json:"instance_url,omitempty"`
 
-	// **参数解释**: 镜像仓库类型 **约束限制**: 不涉及 **取值范围**: - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。  **默认取值**: 不涉及
+	// **参数解释**: 镜像仓库类型 **约束限制**: 不涉及 **取值范围**: - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。 - Local：本地镜像 **默认取值**: 不涉及
 	RegistryType *string `json:"registry_type,omitempty"`
 }
 

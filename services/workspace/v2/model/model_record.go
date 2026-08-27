@@ -73,6 +73,9 @@ type Record struct {
 
 	// 企业项目ID。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 桌面ID。
+	DesktopId *string `json:"desktop_id,omitempty"`
 }
 
 func (o Record) String() string {

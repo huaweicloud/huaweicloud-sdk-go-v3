@@ -1615,6 +1615,7 @@ func (c *HssClient) ListEventOperatesInvoker(request *model.ListEventOperatesReq
 	return &ListEventOperatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListEventTopRisk 查询TOP5事件类型统计列表--接口已废弃
 //
 // 查询TOP5事件类型统计列表--接口已废弃。
@@ -1630,6 +1631,7 @@ func (c *HssClient) ListEventTopRisk(request *model.ListEventTopRiskRequest) (*m
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListEventTopRiskInvoker 查询TOP5事件类型统计列表--接口已废弃
 func (c *HssClient) ListEventTopRiskInvoker(request *model.ListEventTopRiskRequest) *ListEventTopRiskInvoker {
 	requestDef := GenReqDefForListEventTopRisk()
@@ -7516,6 +7518,7 @@ func (c *HssClient) BatchScanLocalImageInvoker(request *model.BatchScanLocalImag
 	return &BatchScanLocalImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchScanSwrImage 镜像仓库镜像批量扫描--接口已废弃
 //
 // 镜像仓库镜像批量扫描--接口已废弃。
@@ -7531,6 +7534,7 @@ func (c *HssClient) BatchScanSwrImage(request *model.BatchScanSwrImageRequest) (
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchScanSwrImageInvoker 镜像仓库镜像批量扫描--接口已废弃
 func (c *HssClient) BatchScanSwrImageInvoker(request *model.BatchScanSwrImageRequest) *BatchScanSwrImageInvoker {
 	requestDef := GenReqDefForBatchScanSwrImage()
@@ -7558,6 +7562,7 @@ func (c *HssClient) ChangeExtendedWeakPasswordInvoker(request *model.ChangeExten
 	return &ChangeExtendedWeakPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ChangeFilePathWhiteDetail 修改镜像的敏感信息文件路径白名单--接口已废弃
 //
 // 修改镜像的敏感信息文件路径白名单--接口已废弃。
@@ -7573,6 +7578,7 @@ func (c *HssClient) ChangeFilePathWhiteDetail(request *model.ChangeFilePathWhite
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ChangeFilePathWhiteDetailInvoker 修改镜像的敏感信息文件路径白名单--接口已废弃
 func (c *HssClient) ChangeFilePathWhiteDetailInvoker(request *model.ChangeFilePathWhiteDetailRequest) *ChangeFilePathWhiteDetailInvoker {
 	requestDef := GenReqDefForChangeFilePathWhiteDetail()
@@ -8272,6 +8278,7 @@ func (c *HssClient) ListLocalImageHostsInvoker(request *model.ListLocalImageHost
 	return &ListLocalImageHostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListSwrImageRepository 查询swr镜像仓库镜像列表-接口已废弃，不再推荐使用
 //
 // 查询swr镜像仓库镜像列表,如果需要从swr同步最新镜像，需要先调用“从swr同步镜像”接口。
@@ -8287,6 +8294,7 @@ func (c *HssClient) ListSwrImageRepository(request *model.ListSwrImageRepository
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListSwrImageRepositoryInvoker 查询swr镜像仓库镜像列表-接口已废弃，不再推荐使用
 func (c *HssClient) ListSwrImageRepositoryInvoker(request *model.ListSwrImageRepositoryRequest) *ListSwrImageRepositoryInvoker {
 	requestDef := GenReqDefForListSwrImageRepository()
@@ -8398,6 +8406,7 @@ func (c *HssClient) ListVulnerabilityCveInvoker(request *model.ListVulnerability
 	return &ListVulnerabilityCveInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // RunImageSynchronize 从SWR服务同步镜像列表--接口已废弃
 //
 // 从SWR服务同步镜像列表--接口已废弃。
@@ -8413,6 +8422,7 @@ func (c *HssClient) RunImageSynchronize(request *model.RunImageSynchronizeReques
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // RunImageSynchronizeInvoker 从SWR服务同步镜像列表--接口已废弃
 func (c *HssClient) RunImageSynchronizeInvoker(request *model.RunImageSynchronizeRequest) *RunImageSynchronizeInvoker {
 	requestDef := GenReqDefForRunImageSynchronize()
@@ -8440,6 +8450,7 @@ func (c *HssClient) ShowExtendedWeakPasswordInvoker(request *model.ShowExtendedW
 	return &ShowExtendedWeakPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowFilePathWhiteDetail 查询镜像的敏感信息文件路径白名单--接口已废弃
 //
 // 查询镜像的敏感信息文件路径白名单--接口已废弃。
@@ -8455,6 +8466,7 @@ func (c *HssClient) ShowFilePathWhiteDetail(request *model.ShowFilePathWhiteDeta
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowFilePathWhiteDetailInvoker 查询镜像的敏感信息文件路径白名单--接口已废弃
 func (c *HssClient) ShowFilePathWhiteDetailInvoker(request *model.ShowFilePathWhiteDetailRequest) *ShowFilePathWhiteDetailInvoker {
 	requestDef := GenReqDefForShowFilePathWhiteDetail()
@@ -10099,6 +10111,7 @@ func (c *HssClient) UpdateSecurityCheckConfigInvoker(request *model.UpdateSecuri
 	return &UpdateSecurityCheckConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListServerlessAsset 查询Serverless资产列表--接口已废弃
 //
 // 查询Serverless资产列表--接口已废弃
@@ -10114,12 +10127,14 @@ func (c *HssClient) ListServerlessAsset(request *model.ListServerlessAssetReques
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListServerlessAssetInvoker 查询Serverless资产列表--接口已废弃
 func (c *HssClient) ListServerlessAssetInvoker(request *model.ListServerlessAssetRequest) *ListServerlessAssetInvoker {
 	requestDef := GenReqDefForListServerlessAsset()
 	return &ListServerlessAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListServerlessAssetDetail 查询Serverless资产详细信息--接口已废弃
 //
 // 查询Serverless资产详细信息--接口已废弃
@@ -10135,6 +10150,7 @@ func (c *HssClient) ListServerlessAssetDetail(request *model.ListServerlessAsset
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListServerlessAssetDetailInvoker 查询Serverless资产详细信息--接口已废弃
 func (c *HssClient) ListServerlessAssetDetailInvoker(request *model.ListServerlessAssetDetailRequest) *ListServerlessAssetDetailInvoker {
 	requestDef := GenReqDefForListServerlessAssetDetail()

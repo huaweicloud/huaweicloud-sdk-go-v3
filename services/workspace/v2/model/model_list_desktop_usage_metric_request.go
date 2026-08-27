@@ -18,6 +18,9 @@ type ListDesktopUsageMetricRequest struct {
 	// 资源名称(模糊匹配)。
 	ResourceName *string `json:"resource_name,omitempty"`
 
+	// 资源ID(精确匹配)。
+	ResourceId *string `json:"resource_id,omitempty"`
+
 	// 最小空闲天数。
 	MinIdleDays *int32 `json:"min_idle_days,omitempty"`
 

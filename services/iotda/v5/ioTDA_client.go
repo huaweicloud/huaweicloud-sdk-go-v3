@@ -3035,6 +3035,111 @@ func (c *IoTDAClient) UpdatePropertiesInvoker(request *model.UpdatePropertiesReq
 	return &UpdatePropertiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateProtocolConfig 创建泛协议配置
+//
+// 提供创建泛协议配置的功能，仅企业版白名单支持。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) CreateProtocolConfig(request *model.CreateProtocolConfigRequest) (*model.CreateProtocolConfigResponse, error) {
+	requestDef := GenReqDefForCreateProtocolConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateProtocolConfigResponse), nil
+	}
+}
+
+// CreateProtocolConfigInvoker 创建泛协议配置
+func (c *IoTDAClient) CreateProtocolConfigInvoker(request *model.CreateProtocolConfigRequest) *CreateProtocolConfigInvoker {
+	requestDef := GenReqDefForCreateProtocolConfig()
+	return &CreateProtocolConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteProtocolConfig 删除泛协议配置
+//
+// 提供删除泛协议配置的功能，仅企业版白名单支持。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) DeleteProtocolConfig(request *model.DeleteProtocolConfigRequest) (*model.DeleteProtocolConfigResponse, error) {
+	requestDef := GenReqDefForDeleteProtocolConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteProtocolConfigResponse), nil
+	}
+}
+
+// DeleteProtocolConfigInvoker 删除泛协议配置
+func (c *IoTDAClient) DeleteProtocolConfigInvoker(request *model.DeleteProtocolConfigRequest) *DeleteProtocolConfigInvoker {
+	requestDef := GenReqDefForDeleteProtocolConfig()
+	return &DeleteProtocolConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProtocolConfigs 查询泛协议配置列表
+//
+// 提供查询泛协议配置列表的功能，仅企业版白名单支持。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ListProtocolConfigs(request *model.ListProtocolConfigsRequest) (*model.ListProtocolConfigsResponse, error) {
+	requestDef := GenReqDefForListProtocolConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProtocolConfigsResponse), nil
+	}
+}
+
+// ListProtocolConfigsInvoker 查询泛协议配置列表
+func (c *IoTDAClient) ListProtocolConfigsInvoker(request *model.ListProtocolConfigsRequest) *ListProtocolConfigsInvoker {
+	requestDef := GenReqDefForListProtocolConfigs()
+	return &ListProtocolConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProtocolConfig 查询泛协议配置详情
+//
+// 提供查询泛协议配置详情的功能，仅企业版白名单支持。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) ShowProtocolConfig(request *model.ShowProtocolConfigRequest) (*model.ShowProtocolConfigResponse, error) {
+	requestDef := GenReqDefForShowProtocolConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProtocolConfigResponse), nil
+	}
+}
+
+// ShowProtocolConfigInvoker 查询泛协议配置详情
+func (c *IoTDAClient) ShowProtocolConfigInvoker(request *model.ShowProtocolConfigRequest) *ShowProtocolConfigInvoker {
+	requestDef := GenReqDefForShowProtocolConfig()
+	return &ShowProtocolConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateProtocolConfig 更新泛协议配置
+//
+// 提供更新泛协议配置的功能，仅企业版白名单支持。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTDAClient) UpdateProtocolConfig(request *model.UpdateProtocolConfigRequest) (*model.UpdateProtocolConfigResponse, error) {
+	requestDef := GenReqDefForUpdateProtocolConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateProtocolConfigResponse), nil
+	}
+}
+
+// UpdateProtocolConfigInvoker 更新泛协议配置
+func (c *IoTDAClient) UpdateProtocolConfigInvoker(request *model.UpdateProtocolConfigRequest) *UpdateProtocolConfigInvoker {
+	requestDef := GenReqDefForUpdateProtocolConfig()
+	return &UpdateProtocolConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateProvisioningTemplate 创建预调配模板
 //
 // 应用服务器可调用此接口在物联网平台创建一个预调配模板。用户的设备未在平台注册时，可以通过预调配模板在设备首次接入物联网平台时将设备信息自动注册到物联网平台。

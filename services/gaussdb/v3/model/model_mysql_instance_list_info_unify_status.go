@@ -80,6 +80,9 @@ type MysqlInstanceListInfoUnifyStatus struct {
 
 	// 标签列表。
 	Tags *[]InstanceTagItem `json:"tags,omitempty"`
+
+	// **参数解释**：  当前内核版本是否EOS。  **取值范围**：  - true：版本EOS。 - false：版本正常维护。
+	EosTag *bool `json:"eos_tag,omitempty"`
 }
 
 func (o MysqlInstanceListInfoUnifyStatus) String() string {

@@ -40,6 +40,27 @@ func (c *ModelArtsClient) AcceptScheduledEventInvoker(request *model.AcceptSched
 	return &AcceptScheduledEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AttachDevServerVolume Lite Server服务器挂载磁盘
+//
+// Lite Server服务器挂载磁盘接口用于将额外的磁盘挂载到Lite Server服务器上。该接口适用于以下场景：当用户需要扩展Lite Server服务器的存储空间以满足更大的数据存储需求时，可以通过此接口将指定的磁盘挂载到服务器上。使用该接口的前提条件是Lite Server服务器已创建且处于运行状态、或者停止状态，用户具有挂载磁盘的权限，且指定的磁盘已存在且未被其他服务器使用。挂载操作完成后，磁盘将成功挂载到Lite Server服务器上，用户可以访问和使用新增的存储空间。若Lite Server服务器不存在、指定的磁盘不存在或已被使用，或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) AttachDevServerVolume(request *model.AttachDevServerVolumeRequest) (*model.AttachDevServerVolumeResponse, error) {
+	requestDef := GenReqDefForAttachDevServerVolume()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AttachDevServerVolumeResponse), nil
+	}
+}
+
+// AttachDevServerVolumeInvoker Lite Server服务器挂载磁盘
+func (c *ModelArtsClient) AttachDevServerVolumeInvoker(request *model.AttachDevServerVolumeRequest) *AttachDevServerVolumeInvoker {
+	requestDef := GenReqDefForAttachDevServerVolume()
+	return &AttachDevServerVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AttachDynamicStorage 动态挂载Notebook存储
 //
 // 动态挂载Notebook存储接口支持将存储动态挂载到运行中的Notebook实例的指定文件目录。调用该接口后，系统将在Notebook实例中**异步**挂载指定的存储实例，挂载完成后用户可在容器中以文件系统方式读写存储实例中的文件。若用户无权限访问指定实例或Notebook实例未运行，接口将返回相应的错误信息。
@@ -213,6 +234,48 @@ func (c *ModelArtsClient) BatchDeletePoolTagsInvoker(request *model.BatchDeleteP
 	return &BatchDeletePoolTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDevServersAction 批量操作Lite Server实例
+//
+// 批量操作Lite Server实例接口用于对多个Lite Server实例进行统一操作，如启动、停止、重启或删除等。该接口适用于以下场景：当需要对多个Lite Server实例进行相同的操作，例如在维护期间批量停止实例、更新配置后批量重启实例或清理不再需要的实例时，用户可通过此接口高效地完成批量操作。使用该接口的前提条件是目标Lite Server实例已存在且用户具有相应的操作权限。操作完成后，所有指定的Lite Server实例将根据请求完成相应的状态变更或被移除，相关资源和配置也将被相应调整或清理。若目标Lite Server实例不存在、用户无权限操作或请求参数不正确，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) BatchDevServersAction(request *model.BatchDevServersActionRequest) (*model.BatchDevServersActionResponse, error) {
+	requestDef := GenReqDefForBatchDevServersAction()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDevServersActionResponse), nil
+	}
+}
+
+// BatchDevServersActionInvoker 批量操作Lite Server实例
+func (c *ModelArtsClient) BatchDevServersActionInvoker(request *model.BatchDevServersActionRequest) *BatchDevServersActionInvoker {
+	requestDef := GenReqDefForBatchDevServersAction()
+	return &BatchDevServersActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDrainPoolNodes 节点批量排水
+//
+// 节点批量排水接口用于集中停止指定节点的业务处理能力并释放相关资源。该接口适用于以下场景：当系统需进行紧急故障隔离、资源回收、版本升级或维护操作时，用户可通过此接口批量暂停目标节点的业务流量，确保操作期间服务稳定性。使用该接口的前提条件包括：目标节点已存在且用户具备管理员权限，节点需处于运行状态且未被锁定，资源池需满足排水后容量约束（如最小可用节点数），同时需提供有效的节点列表及排水策略（如立即排水或延迟排水）作为输入参数。操作完成后，指定节点将停止接收新任务并逐步释放资源，原有业务数据将根据策略保留或迁移。若节点不存在、用户权限不足、节点状态异常（如维护中）、资源池容量不足或输入参数缺失，接口将返回对应错误信息（如404未找到节点、403权限拒绝、400参数校验失败等）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) BatchDrainPoolNodes(request *model.BatchDrainPoolNodesRequest) (*model.BatchDrainPoolNodesResponse, error) {
+	requestDef := GenReqDefForBatchDrainPoolNodes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDrainPoolNodesResponse), nil
+	}
+}
+
+// BatchDrainPoolNodesInvoker 节点批量排水
+func (c *ModelArtsClient) BatchDrainPoolNodesInvoker(request *model.BatchDrainPoolNodesRequest) *BatchDrainPoolNodesInvoker {
+	requestDef := GenReqDefForBatchDrainPoolNodes()
+	return &BatchDrainPoolNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchLockPoolNodes 批量对节点功能上锁
 //
 // 批量对节点功能上锁接口用于批量对指定节点的功能进行上锁操作，被上锁的功能在控制台将无法正常使用。该接口适用于以下场景：当需要临时禁用某些节点的功能以防止误操作、进行系统维护或测试时，用户可通过此接口批量对节点功能进行上锁。使用该接口的前提条件是节点功能已存在且用户具有管理员权限。上锁操作完成后，指定节点的功能将在控制台被禁用，无法进行相关操作。若节点功能不存在、用户无权限操作或请求参数无效，接口将返回相应的错误信息。
@@ -381,6 +444,27 @@ func (c *ModelArtsClient) BatchUpdatePoolNodesInvoker(request *model.BatchUpdate
 	return &BatchUpdatePoolNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BindDevServerPublicIP Lite Server服务器绑定EIP
+//
+// Lite Server服务器绑定的EIP接口用于将弹性公网IP（EIP）绑定到Lite Server服务器上。该接口适用于以下场景：当用户需要为Lite Server服务器分配一个固定的公网IP地址，以便从外部网络访问服务器时，可以通过此接口将指定的EIP绑定到服务器上。使用该接口的前提条件是Lite Server服务器已创建且处于运行状态，用户具有绑定EIP的权限，且指定的EIP已存在且未被其他资源使用。绑定操作完成后，EIP将成功绑定到Lite Server服务器上，服务器可以通过该EIP从外部网络访问。若Lite Server服务器不存在、已处于停止状态、指定的EIP不存在或已被使用，或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) BindDevServerPublicIP(request *model.BindDevServerPublicIpRequest) (*model.BindDevServerPublicIpResponse, error) {
+	requestDef := GenReqDefForBindDevServerPublicIP()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BindDevServerPublicIpResponse), nil
+	}
+}
+
+// BindDevServerPublicIPInvoker Lite Server服务器绑定EIP
+func (c *ModelArtsClient) BindDevServerPublicIPInvoker(request *model.BindDevServerPublicIpRequest) *BindDevServerPublicIPInvoker {
+	requestDef := GenReqDefForBindDevServerPublicIP()
+	return &BindDevServerPublicIPInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BindInferApiKey 绑定应用密钥
 //
 // 本接口用于将生成的apikey与指定服务进行绑定，适用于应用程序需要调用特定服务的场景。调用此接口前，确保已成功创建服务实例，并获取到有效的apikey。绑定成功后，apikey将作为服务调用时的身份验证凭证，确保仅授权用户能够访问该服务。如果尝试绑定已失效的apikey，将返回相应的异常信息，提示用户检查apikey的有效性和绑定状态。
@@ -442,6 +526,48 @@ func (c *ModelArtsClient) ChangeAlgorithm(request *model.ChangeAlgorithmRequest)
 func (c *ModelArtsClient) ChangeAlgorithmInvoker(request *model.ChangeAlgorithmRequest) *ChangeAlgorithmInvoker {
 	requestDef := GenReqDefForChangeAlgorithm()
 	return &ChangeAlgorithmInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeDevServerOS 切换Lite Server服务器操作系统镜像
+//
+// 切换Lite Server服务器操作系统镜像接口用于更换Lite Server服务器当前使用的操作系统镜像。该接口适用于以下场景：当用户需要更换操作系统以适应不同的开发或测试需求时，可以通过此接口切换指定的Lite Server服务器操作系统镜像。使用该接口的前提条件是Lite Server服务器已存在且处于停止状态，用户具有切换操作系统的权限。切换操作完成后，Lite Server服务器将安装新的操作系统镜像，并重新进入运行状态，若Lite Server服务器不存在、已处于运行状态或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ChangeDevServerOS(request *model.ChangeDevServerOsRequest) (*model.ChangeDevServerOsResponse, error) {
+	requestDef := GenReqDefForChangeDevServerOS()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeDevServerOsResponse), nil
+	}
+}
+
+// ChangeDevServerOSInvoker 切换Lite Server服务器操作系统镜像
+func (c *ModelArtsClient) ChangeDevServerOSInvoker(request *model.ChangeDevServerOsRequest) *ChangeDevServerOSInvoker {
+	requestDef := GenReqDefForChangeDevServerOS()
+	return &ChangeDevServerOSInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeHyperinstanceOS 切换Lite Server超节点服务器操作系统镜像
+//
+// 切换Lite Server超节点服务器操作系统镜像接口用于更换Lite Server超节点服务器当前使用的操作系统镜像。该接口适用于以下场景：当用户需要更换操作系统以适应不同的开发或测试需求时，可以通过此接口切换指定的Lite Server超节点服务器操作系统镜像。使用该接口的前提条件是Lite Server超节点服务器已存在且处于停止状态，用户具有切换操作系统的权限。切换操作完成后，Lite Server超节点服务器将安装新的操作系统镜像，并重新进入运行状态，若Lite Server超节点服务器不存在、已处于运行状态或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ChangeHyperinstanceOS(request *model.ChangeHyperinstanceOsRequest) (*model.ChangeHyperinstanceOsResponse, error) {
+	requestDef := GenReqDefForChangeHyperinstanceOS()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeHyperinstanceOsResponse), nil
+	}
+}
+
+// ChangeHyperinstanceOSInvoker 切换Lite Server超节点服务器操作系统镜像
+func (c *ModelArtsClient) ChangeHyperinstanceOSInvoker(request *model.ChangeHyperinstanceOsRequest) *ChangeHyperinstanceOSInvoker {
+	requestDef := GenReqDefForChangeHyperinstanceOS()
+	return &ChangeHyperinstanceOSInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ChangeTrainingExperiment 更新训练实验信息
@@ -591,6 +717,90 @@ func (c *ModelArtsClient) CreateAuthorization(request *model.CreateAuthorization
 func (c *ModelArtsClient) CreateAuthorizationInvoker(request *model.CreateAuthorizationRequest) *CreateAuthorizationInvoker {
 	requestDef := GenReqDefForCreateAuthorization()
 	return &CreateAuthorizationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDevServer 创建Lite Server
+//
+// 创建Lite Server接口用于创建LiteServer弹性云服务器、裸金属服务器及超节点服务器。该接口适用于以下场景：用户需要根据业务需求快速部署和配置不同类型的服务器资源。使用该接口的前提条件是用户已登录且具有创建Lite Server的权限，并且需要提供服务器类型、规格、网络配置等必要参数。创建操作完成后，系统将返回新创建的Lite Server实例信息，包括实例ID、状态等。若用户无权限、参数配置错误或资源不足，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) CreateDevServer(request *model.CreateDevServerRequest) (*model.CreateDevServerResponse, error) {
+	requestDef := GenReqDefForCreateDevServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDevServerResponse), nil
+	}
+}
+
+// CreateDevServerInvoker 创建Lite Server
+func (c *ModelArtsClient) CreateDevServerInvoker(request *model.CreateDevServerRequest) *CreateDevServerInvoker {
+	requestDef := GenReqDefForCreateDevServer()
+	return &CreateDevServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDevServerJob 创建Lite Server任务
+//
+// 创建Lite Server任务接口用于在Lite Server上创建新的任务。该接口适用于以下场景：当用户需要在Lite Server上启动新的开发、测试或部署任务时，可以通过此接口创建并配置任务。使用该接口的前提条件是用户具有创建任务的权限，并且提供的任务配置参数符合要求。创建操作完成后，新的Lite Server任务将被成功创建，并返回任务ID和其他相关信息。若用户无权限操作、提供的参数不正确或系统资源不足，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) CreateDevServerJob(request *model.CreateDevServerJobRequest) (*model.CreateDevServerJobResponse, error) {
+	requestDef := GenReqDefForCreateDevServerJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDevServerJobResponse), nil
+	}
+}
+
+// CreateDevServerJobInvoker 创建Lite Server任务
+func (c *ModelArtsClient) CreateDevServerJobInvoker(request *model.CreateDevServerJobRequest) *CreateDevServerJobInvoker {
+	requestDef := GenReqDefForCreateDevServerJob()
+	return &CreateDevServerJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateHyperCluster 创建Hyper Cluster
+//
+// 创建Hyper Cluster接口用于在系统中创建一个新的Hyper Cluster。该接口适用于以下场景：当用户需要使用超节点网络时，可以通过此接口创建Hyper Cluster。使用该接口的前提条件是用户已登录并具有创建Hyper Cluster的权限，且系统中已配置了必要的资源。创建操作完成后，将生成一个新的超节点网络，并返回超节点网络的详细信息，包括ID、名称、子网信息等。若用户无权限操作、系统中缺少必要的资源或配置参数无效，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) CreateHyperCluster(request *model.CreateHyperClusterRequest) (*model.CreateHyperClusterResponse, error) {
+	requestDef := GenReqDefForCreateHyperCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateHyperClusterResponse), nil
+	}
+}
+
+// CreateHyperClusterInvoker 创建Hyper Cluster
+func (c *ModelArtsClient) CreateHyperClusterInvoker(request *model.CreateHyperClusterRequest) *CreateHyperClusterInvoker {
+	requestDef := GenReqDefForCreateHyperCluster()
+	return &CreateHyperClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateHyperinstanceTags 创建Lite Server超节点标签
+//
+// 创建Lite Server超节点标签接口用于为Lite Server超节点添加自定义标签。该接口适用于以下场景：当用户需要对Lite Server超节点进行分类管理或标记特定信息时，可以通过此接口为指定的超节点创建标签。使用该接口的前提条件是Lite Server超节点已存在，用户具有创建标签的权限。创建操作完成后，标签将被成功添加到指定的超节点上，用户可以通过标签进行快速查找和管理。若Lite Server超节点不存在、标签已存在或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) CreateHyperinstanceTags(request *model.CreateHyperinstanceTagsRequest) (*model.CreateHyperinstanceTagsResponse, error) {
+	requestDef := GenReqDefForCreateHyperinstanceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateHyperinstanceTagsResponse), nil
+	}
+}
+
+// CreateHyperinstanceTagsInvoker 创建Lite Server超节点标签
+func (c *ModelArtsClient) CreateHyperinstanceTagsInvoker(request *model.CreateHyperinstanceTagsRequest) *CreateHyperinstanceTagsInvoker {
+	requestDef := GenReqDefForCreateHyperinstanceTags()
+	return &CreateHyperinstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateInferApiKey 创建应用密钥
@@ -854,6 +1064,27 @@ func (c *ModelArtsClient) CreatePoolPluginInvoker(request *model.CreatePoolPlugi
 	return &CreatePoolPluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateRoceNetwork 创建RoCE网络
+//
+// 创建RoCE网络接口用于在系统中创建一个新的RoCE网络。该接口适用于以下场景：当用户需要为高性能计算或低延迟应用创建专用的RoCE网络时，可以通过此接口创建并配置RoCE网络。使用该接口的前提条件是用户已登录并具有创建RoCE网络的权限，且系统中已配置了必要的网络资源。创建操作完成后，将生成一个新的RoCE网络，并返回网络的详细信息，包括网络ID、子网信息、配置参数等。若用户无权限操作、系统中缺少必要的网络资源或网络配置参数无效，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) CreateRoceNetwork(request *model.CreateRoceNetworkRequest) (*model.CreateRoceNetworkResponse, error) {
+	requestDef := GenReqDefForCreateRoceNetwork()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRoceNetworkResponse), nil
+	}
+}
+
+// CreateRoceNetworkInvoker 创建RoCE网络
+func (c *ModelArtsClient) CreateRoceNetworkInvoker(request *model.CreateRoceNetworkRequest) *CreateRoceNetworkInvoker {
+	requestDef := GenReqDefForCreateRoceNetwork()
+	return &CreateRoceNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSaveImageJob 创建训练作业镜像保存任务
 //
 // 创建训练作业镜像保存任务。
@@ -1000,6 +1231,111 @@ func (c *ModelArtsClient) DeleteAuthorizations(request *model.DeleteAuthorizatio
 func (c *ModelArtsClient) DeleteAuthorizationsInvoker(request *model.DeleteAuthorizationsRequest) *DeleteAuthorizationsInvoker {
 	requestDef := GenReqDefForDeleteAuthorizations()
 	return &DeleteAuthorizationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDevServer 删除Lite Server实例
+//
+// 删除Lite Server实例接口用于移除已创建的Lite Server实例。该接口适用于以下场景：当Lite Server按需实例不再需要使用时或者创建失败的实例以及处于ERROR状态时，用户可通过此接口删除指定的Lite Server实例。使用该接口的前提条件是Lite Server实例已存在且用户具有管理员权限。删除操作完成后，Lite Server实例将被永久移除，相关资源也将被清理。若Lite Server实例不存在或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) DeleteDevServer(request *model.DeleteDevServerRequest) (*model.DeleteDevServerResponse, error) {
+	requestDef := GenReqDefForDeleteDevServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDevServerResponse), nil
+	}
+}
+
+// DeleteDevServerInvoker 删除Lite Server实例
+func (c *ModelArtsClient) DeleteDevServerInvoker(request *model.DeleteDevServerRequest) *DeleteDevServerInvoker {
+	requestDef := GenReqDefForDeleteDevServer()
+	return &DeleteDevServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDevServerJobs 批量删除Lite Server Job
+//
+// 批量删除Lite Server Job接口用于批量移除已创建的Lite Server Job。该接口适用于以下场景：当多个Lite Server Job已完成、配置错误或需要清理资源时，用户可以通过此接口批量删除指定的Lite Server Job。使用该接口的前提条件是目标Lite Server Job已存在且用户具有管理员权限。删除操作完成后，指定的Lite Server Job将被永久移除，相关资源和配置也将被清理。若目标Lite Server Job不存在、用户无权限操作或请求参数不正确，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) DeleteDevServerJobs(request *model.DeleteDevServerJobsRequest) (*model.DeleteDevServerJobsResponse, error) {
+	requestDef := GenReqDefForDeleteDevServerJobs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDevServerJobsResponse), nil
+	}
+}
+
+// DeleteDevServerJobsInvoker 批量删除Lite Server Job
+func (c *ModelArtsClient) DeleteDevServerJobsInvoker(request *model.DeleteDevServerJobsRequest) *DeleteDevServerJobsInvoker {
+	requestDef := GenReqDefForDeleteDevServerJobs()
+	return &DeleteDevServerJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteHyperCluster 删除Hyper Cluster实例
+//
+// 删除Hyper Cluster实例接口用于移除已创建的Hyper Cluster。该接口适用于以下场景：当超节点网络配置错误或需要清理资源时，用户可通过此接口删除指定的超节点网络。使用该接口的前提条件是Hyper Cluster实例已存在且用户具有管理员权限。删除操作完成后，超节点网络将被永久移除，相关资源和配置也将被清理。若Hyper Cluster实例不存在或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) DeleteHyperCluster(request *model.DeleteHyperClusterRequest) (*model.DeleteHyperClusterResponse, error) {
+	requestDef := GenReqDefForDeleteHyperCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteHyperClusterResponse), nil
+	}
+}
+
+// DeleteHyperClusterInvoker 删除Hyper Cluster实例
+func (c *ModelArtsClient) DeleteHyperClusterInvoker(request *model.DeleteHyperClusterRequest) *DeleteHyperClusterInvoker {
+	requestDef := GenReqDefForDeleteHyperCluster()
+	return &DeleteHyperClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteHyperinstance 删除Lite Server超节点实例
+//
+// 删除Lite Server超节点实例接口用于删除按需超节点实例同时移除处于ERROR状态的Lite Server超节点实例。该接口适用于以下场景：当超节点实例因创建失败、或其他原因进入ERROR状态；按需超节点实例，用户可以通过此接口删除指定的超节点实例。使用该接口的前提条件是用户已登录并具有删除超节点实例的权限，且指定的超节点实例是按需且处于运行状态、或者处于ERROR状态。删除操作完成后，指定的超节点实例将被永久移除，相关资源也将被清理。若指定的超节点实例不存在、未处于ERROR状态或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) DeleteHyperinstance(request *model.DeleteHyperinstanceRequest) (*model.DeleteHyperinstanceResponse, error) {
+	requestDef := GenReqDefForDeleteHyperinstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteHyperinstanceResponse), nil
+	}
+}
+
+// DeleteHyperinstanceInvoker 删除Lite Server超节点实例
+func (c *ModelArtsClient) DeleteHyperinstanceInvoker(request *model.DeleteHyperinstanceRequest) *DeleteHyperinstanceInvoker {
+	requestDef := GenReqDefForDeleteHyperinstance()
+	return &DeleteHyperinstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteHyperinstanceTags 删除Lite Server超节点标签
+//
+// 删除Lite Server超节点标签接口用于移除已创建的Lite Server超节点标签。该接口适用于以下场景：当用户需要清理不再需要的标签或修正标签错误时，可以通过此接口删除指定的超节点标签。使用该接口的前提条件是Lite Server超节点已存在，且该超节点上已存在要删除的标签，用户具有删除标签的权限。删除操作完成后，指定的标签将从超节点上移除，超节点的其他配置和数据保持不变。若Lite Server超节点不存在、标签不存在或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) DeleteHyperinstanceTags(request *model.DeleteHyperinstanceTagsRequest) (*model.DeleteHyperinstanceTagsResponse, error) {
+	requestDef := GenReqDefForDeleteHyperinstanceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteHyperinstanceTagsResponse), nil
+	}
+}
+
+// DeleteHyperinstanceTagsInvoker 删除Lite Server超节点标签
+func (c *ModelArtsClient) DeleteHyperinstanceTagsInvoker(request *model.DeleteHyperinstanceTagsRequest) *DeleteHyperinstanceTagsInvoker {
+	requestDef := GenReqDefForDeleteHyperinstanceTags()
+	return &DeleteHyperinstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteImage 删除镜像
@@ -1321,6 +1657,27 @@ func (c *ModelArtsClient) DeleteWorkspaceInvoker(request *model.DeleteWorkspaceR
 	return &DeleteWorkspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DetachDevServerVolume Lite Server服务器卸载磁盘
+//
+// Lite Server服务器卸载磁盘接口用于从Lite Server服务器上卸载已挂载的磁盘。该接口适用于以下场景：当用户需要释放存储资源或重新分配磁盘时，可以通过此接口卸载指定的磁盘。使用该接口的前提条件是Lite Server服务器已创建且处于运行状态、或者停止状态，用户具有卸载磁盘的权限，且指定的磁盘已挂载到服务器上。卸载操作完成后，磁盘将从Lite Server服务器上成功卸载，用户可以将其挂载到其他服务器或进行其他操作。若Lite Server服务器不存在、指定的磁盘未挂载到服务器上，或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) DetachDevServerVolume(request *model.DetachDevServerVolumeRequest) (*model.DetachDevServerVolumeResponse, error) {
+	requestDef := GenReqDefForDetachDevServerVolume()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetachDevServerVolumeResponse), nil
+	}
+}
+
+// DetachDevServerVolumeInvoker Lite Server服务器卸载磁盘
+func (c *ModelArtsClient) DetachDevServerVolumeInvoker(request *model.DetachDevServerVolumeRequest) *DetachDevServerVolumeInvoker {
+	requestDef := GenReqDefForDetachDevServerVolume()
+	return &DetachDevServerVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DetachDynamicStorage 动态卸载Notebook存储
 //
 // 动态卸载Notebook存储接口用于从运行中的Notebook实例中卸载已挂载的动态存储实例。
@@ -1365,6 +1722,153 @@ func (c *ModelArtsClient) GetAuthorizationsInvoker(request *model.GetAuthorizati
 	return &GetAuthorizationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// GetDevServerImage 查询Lite Server镜像详情
+//
+// 查询Lite Server镜像详情接口用于获取指定Lite Server镜像的详细信息。该接口适用于以下场景：当用户需要了解某个Lite Server镜像的具体配置和属性，以便在创建或调整Lite Server实例时选择合适的镜像时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询镜像详情的权限，且指定的镜像已存在。查询操作完成后，接口将返回指定Lite Server镜像的详细信息，包括镜像ID、名称、操作系统、版本、创建时间等。若用户无权限操作、指定的镜像不存在或镜像ID无效，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) GetDevServerImage(request *model.GetDevServerImageRequest) (*model.GetDevServerImageResponse, error) {
+	requestDef := GenReqDefForGetDevServerImage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetDevServerImageResponse), nil
+	}
+}
+
+// GetDevServerImageInvoker 查询Lite Server镜像详情
+func (c *ModelArtsClient) GetDevServerImageInvoker(request *model.GetDevServerImageRequest) *GetDevServerImageInvoker {
+	requestDef := GenReqDefForGetDevServerImage()
+	return &GetDevServerImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetDevServerJob 查询Lite Server Job详情
+//
+// 查询Lite Server Job详情接口用于获取指定Lite Server Job的详细信息。该接口适用于以下场景：当用户需要查看某个Lite Server Job的执行状态、配置参数、日志信息等详细数据时，可以通过此接口获取相关信息。使用该接口的前提条件是目标Lite Server Job已存在且用户具有查看权限。查询操作完成后，接口将返回指定Lite Server Job的详细信息，包括但不限于Job ID、状态、创建时间、执行时间、配置参数和日志等。若目标Lite Server Job不存在或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) GetDevServerJob(request *model.GetDevServerJobRequest) (*model.GetDevServerJobResponse, error) {
+	requestDef := GenReqDefForGetDevServerJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetDevServerJobResponse), nil
+	}
+}
+
+// GetDevServerJobInvoker 查询Lite Server Job详情
+func (c *ModelArtsClient) GetDevServerJobInvoker(request *model.GetDevServerJobRequest) *GetDevServerJobInvoker {
+	requestDef := GenReqDefForGetDevServerJob()
+	return &GetDevServerJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetDevServerJobService 获取Lite Server 部署服务详情
+//
+// 根据服务id获取Lite Server部署服务详情。该接口适用于以下场景：当用户需要查看部署服务详情，以便查看已部署服务的状态、api等信息时，可以通过此接口获取服务详情。使用该接口的前提条件是用户具有查看服务的权限。查询操作完成后，接口将返回此部署服务的详细信息，包括名称、状态、描述、所用模型、实例详情等信息。若用户无权限操作或无相应id，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) GetDevServerJobService(request *model.GetDevServerJobServiceRequest) (*model.GetDevServerJobServiceResponse, error) {
+	requestDef := GenReqDefForGetDevServerJobService()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetDevServerJobServiceResponse), nil
+	}
+}
+
+// GetDevServerJobServiceInvoker 获取Lite Server 部署服务详情
+func (c *ModelArtsClient) GetDevServerJobServiceInvoker(request *model.GetDevServerJobServiceRequest) *GetDevServerJobServiceInvoker {
+	requestDef := GenReqDefForGetDevServerJobService()
+	return &GetDevServerJobServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetDevServerJobTemplate 获取Lite Server Job模板详情
+//
+// 获取Lite Server Job模板详情接口用于获取指定Lite Server Job模板的详细信息。该接口适用于以下场景：当用户需要查看某个特定Job模板的详细配置，以便了解其参数设置、使用说明等信息时，可以通过此接口获取模板详情。查询操作完成后，接口将返回指定模板的详细信息，包括模板ID、名称、描述、配置参数等。若目标模板不存在，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) GetDevServerJobTemplate(request *model.GetDevServerJobTemplateRequest) (*model.GetDevServerJobTemplateResponse, error) {
+	requestDef := GenReqDefForGetDevServerJobTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetDevServerJobTemplateResponse), nil
+	}
+}
+
+// GetDevServerJobTemplateInvoker 获取Lite Server Job模板详情
+func (c *ModelArtsClient) GetDevServerJobTemplateInvoker(request *model.GetDevServerJobTemplateRequest) *GetDevServerJobTemplateInvoker {
+	requestDef := GenReqDefForGetDevServerJobTemplate()
+	return &GetDevServerJobTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetDevServerOperation 查询Operation详情
+//
+// 查询Operation详情接口用于获取指定Operation的详细信息。该接口适用于以下场景：当用户需要了解某个Operation的具体执行情况和状态，以便进行故障排查或操作审计时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询Operation详情的权限，且指定的Operation已存在。查询操作完成后，接口将返回指定Operation的详细信息，包括Operation ID、操作类型、执行状态、开始时间、结束时间、操作结果等。若用户无权限操作、指定的Operation不存在或Operation ID无效，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) GetDevServerOperation(request *model.GetDevServerOperationRequest) (*model.GetDevServerOperationResponse, error) {
+	requestDef := GenReqDefForGetDevServerOperation()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetDevServerOperationResponse), nil
+	}
+}
+
+// GetDevServerOperationInvoker 查询Operation详情
+func (c *ModelArtsClient) GetDevServerOperationInvoker(request *model.GetDevServerOperationRequest) *GetDevServerOperationInvoker {
+	requestDef := GenReqDefForGetDevServerOperation()
+	return &GetDevServerOperationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetHyperCluster 查询Hyper Cluster实例详情
+//
+// 查询Hyper Cluster实例详情接口用于获取指定Hyper Cluster实例的详细信息。该接口适用于以下场景：当用户需要了解某个超节点网络的具体配置和状态，以便进行管理和监控时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询Hyper Cluster详情的权限，且指定的超节点网络已存在。查询操作完成后，接口将返回指定超节点网络的详细信息，包括ID、名称、子网信息等。若用户无权限操作、指定的超节点网络不存在或ID无效，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) GetHyperCluster(request *model.GetHyperClusterRequest) (*model.GetHyperClusterResponse, error) {
+	requestDef := GenReqDefForGetHyperCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetHyperClusterResponse), nil
+	}
+}
+
+// GetHyperClusterInvoker 查询Hyper Cluster实例详情
+func (c *ModelArtsClient) GetHyperClusterInvoker(request *model.GetHyperClusterRequest) *GetHyperClusterInvoker {
+	requestDef := GenReqDefForGetHyperCluster()
+	return &GetHyperClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetHyperinstance 查询指定超节点实例详情
+//
+// 查询指定超节点实例详情接口用于获取特定Lite Server超节点实例的详细信息。该接口适用于以下场景：当用户需要查看某个具体超节点实例的配置、状态和使用情况时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询超节点实例的权限，且指定的超节点实例已存在。查询操作完成后，接口将返回指定超节点实例的详细信息，包括实例ID、操作系统、运行状态、资源使用情况等。若用户无权限操作、指定的超节点实例不存在或实例ID无效，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) GetHyperinstance(request *model.GetHyperinstanceRequest) (*model.GetHyperinstanceResponse, error) {
+	requestDef := GenReqDefForGetHyperinstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetHyperinstanceResponse), nil
+	}
+}
+
+// GetHyperinstanceInvoker 查询指定超节点实例详情
+func (c *ModelArtsClient) GetHyperinstanceInvoker(request *model.GetHyperinstanceRequest) *GetHyperinstanceInvoker {
+	requestDef := GenReqDefForGetHyperinstance()
+	return &GetHyperinstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // GetHyperinstanceOperation 查询超节点Operation详情
 //
 // 查询Operation详情接口用于获取指定Operation的详细信息。该接口适用于以下场景：当用户需要了解某个Operation的具体执行情况和状态，以便进行故障排查或操作审计时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询Operation详情的权限，且指定的Operation已存在。查询操作完成后，接口将返回指定Operation的详细信息，包括Operation ID、操作类型、执行状态、开始时间、结束时间、操作结果等。若用户无权限操作、指定的Operation不存在或Operation ID无效，接口将返回相应的错误信息。
@@ -1386,6 +1890,48 @@ func (c *ModelArtsClient) GetHyperinstanceOperationInvoker(request *model.GetHyp
 	return &GetHyperinstanceOperationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// GetScaleEvaluationsDevServer 查询Lite Server超节点扩缩容支持规格列表及容量测算
+//
+// 查询Lite Server超节点扩缩容支持规格列表及容量测算接口用于获取Lite Server超节点支持的扩缩容规格列表，并进行容量测算。该接口适用于以下场景：当用户需要了解Lite Server超节点支持的扩缩容选项，以便在调整超节点资源时选择合适的规格，并评估扩缩容后的资源需求时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询超节点扩缩容规格的权限，且指定的超节点已存在。查询操作完成后，接口将返回支持的扩缩容规格列表及容量测算结果，包括规格ID、CPU、内存、存储等详细配置和扩缩容后的资源使用情况。若用户无权限操作、指定的超节点不存在或系统中没有可用的扩缩容规格，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) GetScaleEvaluationsDevServer(request *model.GetScaleEvaluationsDevServerRequest) (*model.GetScaleEvaluationsDevServerResponse, error) {
+	requestDef := GenReqDefForGetScaleEvaluationsDevServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetScaleEvaluationsDevServerResponse), nil
+	}
+}
+
+// GetScaleEvaluationsDevServerInvoker 查询Lite Server超节点扩缩容支持规格列表及容量测算
+func (c *ModelArtsClient) GetScaleEvaluationsDevServerInvoker(request *model.GetScaleEvaluationsDevServerRequest) *GetScaleEvaluationsDevServerInvoker {
+	requestDef := GenReqDefForGetScaleEvaluationsDevServer()
+	return &GetScaleEvaluationsDevServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetTopologies 查询实例的Tor信息
+//
+// 查询实例的Tor信息接口用于获取指定实例的Top-of-Rack（Tor）交换机相关信息。该接口适用于以下场景：当用户需要了解实例连接的Tor交换机的详细信息，以便进行网络配置时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询实例Tor信息的权限，且指定的实例已存在。查询操作完成后，接口将返回指定实例的Tor信息。若用户无权限操作、指定的实例不存在或实例未连接到Tor交换机，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) GetTopologies(request *model.GetTopologiesRequest) (*model.GetTopologiesResponse, error) {
+	requestDef := GenReqDefForGetTopologies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetTopologiesResponse), nil
+	}
+}
+
+// GetTopologiesInvoker 查询实例的Tor信息
+func (c *ModelArtsClient) GetTopologiesInvoker(request *model.GetTopologiesRequest) *GetTopologiesInvoker {
+	requestDef := GenReqDefForGetTopologies()
+	return &GetTopologiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAlgorithms 查询算法列表
 //
 // 查询算法列表。
@@ -1405,6 +1951,174 @@ func (c *ModelArtsClient) ListAlgorithms(request *model.ListAlgorithmsRequest) (
 func (c *ModelArtsClient) ListAlgorithmsInvoker(request *model.ListAlgorithmsRequest) *ListAlgorithmsInvoker {
 	requestDef := GenReqDefForListAlgorithms()
 	return &ListAlgorithmsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAllDevServers 查询租户Lite Server列表
+//
+// 查询租户Lite Server列表接口用于获取指定租户的所有Lite Server实例信息。该接口适用于以下场景：当用户需要查看其租户下所有Lite Server实例的详细信息，以便进行管理和监控时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询租户Lite Server列表的权限。查询操作完成后，接口将返回租户下所有Lite Server实例的详细信息，包括实例ID、名称、状态、资源配置等。若用户无权限操作或租户下没有Lite Server实例，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListAllDevServers(request *model.ListAllDevServersRequest) (*model.ListAllDevServersResponse, error) {
+	requestDef := GenReqDefForListAllDevServers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAllDevServersResponse), nil
+	}
+}
+
+// ListAllDevServersInvoker 查询租户Lite Server列表
+func (c *ModelArtsClient) ListAllDevServersInvoker(request *model.ListAllDevServersRequest) *ListAllDevServersInvoker {
+	requestDef := GenReqDefForListAllDevServers()
+	return &ListAllDevServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAllHyperinstances 查询租户Hyperinstance列表
+//
+// 查询租户Hyperinstance列表接口用于获取指定租户的所有Hyperinstance实例信息。该接口适用于以下场景：当用户需要查看其租户下所有Hyperinstance实例的详细信息，以便进行管理和监控时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询租户Hyperinstance列表的权限。查询操作完成后，接口将返回租户下所有Hyperinstance实例的详细信息，包括实例ID、名称、状态、资源配置等。若用户无权限操作或租户下没有Hyperinstance实例，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListAllHyperinstances(request *model.ListAllHyperinstancesRequest) (*model.ListAllHyperinstancesResponse, error) {
+	requestDef := GenReqDefForListAllHyperinstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAllHyperinstancesResponse), nil
+	}
+}
+
+// ListAllHyperinstancesInvoker 查询租户Hyperinstance列表
+func (c *ModelArtsClient) ListAllHyperinstancesInvoker(request *model.ListAllHyperinstancesRequest) *ListAllHyperinstancesInvoker {
+	requestDef := GenReqDefForListAllHyperinstances()
+	return &ListAllHyperinstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDevServerFlavors 查询规格列表
+//
+// 查询规格列表接口用于获取系统中所有可用的资源规格信息。该接口适用于以下场景：当用户需要了解可用的资源规格，以便在创建或调整Lite Server实例时选择合适的配置时，可以通过此接口获取规格列表。使用该接口的前提条件是用户已登录并具有查询规格的权限。查询操作完成后，接口将返回所有可用的资源规格信息，包括规格ID、CPU、内存、存储等详细配置。若用户无权限操作或系统中没有可用的资源规格，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListDevServerFlavors(request *model.ListDevServerFlavorsRequest) (*model.ListDevServerFlavorsResponse, error) {
+	requestDef := GenReqDefForListDevServerFlavors()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDevServerFlavorsResponse), nil
+	}
+}
+
+// ListDevServerFlavorsInvoker 查询规格列表
+func (c *ModelArtsClient) ListDevServerFlavorsInvoker(request *model.ListDevServerFlavorsRequest) *ListDevServerFlavorsInvoker {
+	requestDef := GenReqDefForListDevServerFlavors()
+	return &ListDevServerFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDevServerImages 查询Lite Server镜像列表
+//
+// 查询Lite Server镜像列表接口用于获取系统中所有可用的Lite Server镜像信息。该接口适用于以下场景：当用户需要了解可用的Lite Server镜像，以便在创建或调整Lite Server实例时选择合适的镜像时，可以通过此接口获取镜像列表。使用该接口的前提条件是用户已登录并具有查询镜像列表的权限。查询操作完成后，接口将返回所有可用的Lite Server镜像信息，包括镜像ID、名称、架构类型等。若用户无权限操作或系统中没有可用的镜像，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListDevServerImages(request *model.ListDevServerImagesRequest) (*model.ListDevServerImagesResponse, error) {
+	requestDef := GenReqDefForListDevServerImages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDevServerImagesResponse), nil
+	}
+}
+
+// ListDevServerImagesInvoker 查询Lite Server镜像列表
+func (c *ModelArtsClient) ListDevServerImagesInvoker(request *model.ListDevServerImagesRequest) *ListDevServerImagesInvoker {
+	requestDef := GenReqDefForListDevServerImages()
+	return &ListDevServerImagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDevServerJobTemplates 获取Lite Server Job模板列表
+//
+// 获取Lite Server Job模板列表接口用于获取可用的Lite Server Job模板列表。该接口适用于以下场景：当用户需要查看可用的Job模板，以便选择合适的模板来创建新的Lite Server任务时，可以通过此接口获取模板列表。查询操作完成后，接口将返回所有可用的Lite Server Job模板列表，包括模板ID、名称、描述等信息。若系统中无可用模板，接口将返回相应的信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListDevServerJobTemplates(request *model.ListDevServerJobTemplatesRequest) (*model.ListDevServerJobTemplatesResponse, error) {
+	requestDef := GenReqDefForListDevServerJobTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDevServerJobTemplatesResponse), nil
+	}
+}
+
+// ListDevServerJobTemplatesInvoker 获取Lite Server Job模板列表
+func (c *ModelArtsClient) ListDevServerJobTemplatesInvoker(request *model.ListDevServerJobTemplatesRequest) *ListDevServerJobTemplatesInvoker {
+	requestDef := GenReqDefForListDevServerJobTemplates()
+	return &ListDevServerJobTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDevServerJobs 查询Lite Server Job列表
+//
+// 查询Lite Server Job列表接口用于获取Lite Server Job的列表信息，并支持按照状态、ID等相关字段进行过滤。该接口适用于以下场景：当用户需要查看多个Lite Server Job的概要信息，例如在监控作业状态、排查问题或进行日常管理时，可以通过此接口获取符合过滤条件的Job列表。使用该接口的前提条件是用户具有查看权限。查询操作完成后，接口将返回符合条件的Lite Server Job列表，包括每个Job的ID、状态、创建时间等基本信息。若用户无权限操作或请求参数不正确，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListDevServerJobs(request *model.ListDevServerJobsRequest) (*model.ListDevServerJobsResponse, error) {
+	requestDef := GenReqDefForListDevServerJobs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDevServerJobsResponse), nil
+	}
+}
+
+// ListDevServerJobsInvoker 查询Lite Server Job列表
+func (c *ModelArtsClient) ListDevServerJobsInvoker(request *model.ListDevServerJobsRequest) *ListDevServerJobsInvoker {
+	requestDef := GenReqDefForListDevServerJobs()
+	return &ListDevServerJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDevServerPublicIP 查询已绑定的EIP
+//
+// 查询已绑定的EIP接口用于获取已绑定到Lite Server服务器上的弹性公网IP（EIP）信息。该接口适用于以下场景：当用户需要查看Lite Server服务器上已绑定的EIP及其详细信息时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询EIP的权限，且指定的Lite Server服务器已存在。查询操作完成后，接口将返回已绑定到Lite Server服务器上的EIP的详细信息，包括EIP地址、绑定时间、状态等。若Lite Server服务器不存在、未绑定EIP或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListDevServerPublicIP(request *model.ListDevServerPublicIpRequest) (*model.ListDevServerPublicIpResponse, error) {
+	requestDef := GenReqDefForListDevServerPublicIP()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDevServerPublicIpResponse), nil
+	}
+}
+
+// ListDevServerPublicIPInvoker 查询已绑定的EIP
+func (c *ModelArtsClient) ListDevServerPublicIPInvoker(request *model.ListDevServerPublicIpRequest) *ListDevServerPublicIPInvoker {
+	requestDef := GenReqDefForListDevServerPublicIP()
+	return &ListDevServerPublicIPInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDevServers 查询用户所有Lite Server实例列表
+//
+// 查询用户所有Lite Server实例列表接口用于获取用户名下所有Lite Server实例的详细信息。该接口适用于以下场景：用户需要查看其所有Lite Server实例的状态、配置等信息，以便进行资源管理和监控。使用该接口的前提条件是用户已登录且具有查看Lite Server实例的权限。调用此接口后，系统将返回用户名下所有Lite Server实例的列表，包括实例ID、名称、状态、创建时间等信息。若用户无权限或未登录，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListDevServers(request *model.ListDevServersRequest) (*model.ListDevServersResponse, error) {
+	requestDef := GenReqDefForListDevServers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDevServersResponse), nil
+	}
+}
+
+// ListDevServersInvoker 查询用户所有Lite Server实例列表
+func (c *ModelArtsClient) ListDevServersInvoker(request *model.ListDevServersRequest) *ListDevServersInvoker {
+	requestDef := GenReqDefForListDevServers()
+	return &ListDevServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDynamicStorages 获取动态挂载存储信息列表
@@ -1470,6 +2184,69 @@ func (c *ModelArtsClient) ListEvents(request *model.ListEventsRequest) (*model.L
 func (c *ModelArtsClient) ListEventsInvoker(request *model.ListEventsRequest) *ListEventsInvoker {
 	requestDef := GenReqDefForListEvents()
 	return &ListEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHyperCluster 查询Hyper Cluster详情列表
+//
+// 查询Hyper Cluster详情列表接口用于获取所有Hyper Cluster的详细信息。该接口适用于以下场景：当用户需要了解系统中所有超节点网络的配置和状态时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询Hyper Cluster详情的权限。查询操作完成后，接口将返回所有超节点网络的详细信息，包括ID、名称、子网信息等。若用户无权限操作或系统中没有Hyper Cluster，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListHyperCluster(request *model.ListHyperClusterRequest) (*model.ListHyperClusterResponse, error) {
+	requestDef := GenReqDefForListHyperCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHyperClusterResponse), nil
+	}
+}
+
+// ListHyperClusterInvoker 查询Hyper Cluster详情列表
+func (c *ModelArtsClient) ListHyperClusterInvoker(request *model.ListHyperClusterRequest) *ListHyperClusterInvoker {
+	requestDef := GenReqDefForListHyperCluster()
+	return &ListHyperClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHyperinstanceClustersCapacity 查询超节点hyperinstance-clusters逻辑容量测算结果
+//
+// 查询超节点hyperinstance-clusters逻辑容量测算结果接口用于获取指定超节点集群的逻辑容量测算结果。该接口适用于以下场景：当用户需要了解超节点集群的资源使用情况和容量规划，以便进行资源管理和优化时，可以通过此接口获取逻辑容量测算结果。使用该接口的前提条件是用户已登录并具有查询超节点集群逻辑容量的权限，且指定的超节点集群已存在。查询操作完成后，接口将返回指定超节点集群的逻辑容量测算结果，包括可用容量信息。若用户无权限操作、指定的超节点集群不存在或集群ID无效，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListHyperinstanceClustersCapacity(request *model.ListHyperinstanceClustersCapacityRequest) (*model.ListHyperinstanceClustersCapacityResponse, error) {
+	requestDef := GenReqDefForListHyperinstanceClustersCapacity()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHyperinstanceClustersCapacityResponse), nil
+	}
+}
+
+// ListHyperinstanceClustersCapacityInvoker 查询超节点hyperinstance-clusters逻辑容量测算结果
+func (c *ModelArtsClient) ListHyperinstanceClustersCapacityInvoker(request *model.ListHyperinstanceClustersCapacityRequest) *ListHyperinstanceClustersCapacityInvoker {
+	requestDef := GenReqDefForListHyperinstanceClustersCapacity()
+	return &ListHyperinstanceClustersCapacityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHyperinstances 查询用户所有超节点实例详情
+//
+// 查询用户所有超节点实例详情接口用于获取用户所有Lite Server超节点实例的详细信息。该接口适用于以下场景：当用户需要查看其所有超节点实例的配置、状态和使用情况时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询超节点实例的权限。查询操作完成后，接口将返回所有超节点实例的详细信息，包括实例ID、操作系统、运行状态、资源使用情况等。若用户无权限操作或没有超节点实例，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListHyperinstances(request *model.ListHyperinstancesRequest) (*model.ListHyperinstancesResponse, error) {
+	requestDef := GenReqDefForListHyperinstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHyperinstancesResponse), nil
+	}
+}
+
+// ListHyperinstancesInvoker 查询用户所有超节点实例详情
+func (c *ModelArtsClient) ListHyperinstancesInvoker(request *model.ListHyperinstancesRequest) *ListHyperinstancesInvoker {
+	requestDef := GenReqDefForListHyperinstances()
+	return &ListHyperinstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListImage 查询支持的镜像列表
@@ -2272,6 +3049,48 @@ func (c *ModelArtsClient) PatchPoolInvoker(request *model.PatchPoolRequest) *Pat
 	return &PatchPoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// QueryHyperinstanceTags 查询Lite Server超节点标签
+//
+// 查询Lite Server超节点标签接口用于获取Lite Server超节点上的所有标签信息。该接口适用于以下场景：当用户需要查看或管理Lite Server超节点的标签时，可以通过此接口查询指定超节点上的所有标签。使用该接口的前提条件是Lite Server超节点已存在，用户具有查询标签的权限。查询操作完成后，接口将返回超节点上的所有标签信息，包括标签名称和相关属性。若Lite Server超节点不存在或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) QueryHyperinstanceTags(request *model.QueryHyperinstanceTagsRequest) (*model.QueryHyperinstanceTagsResponse, error) {
+	requestDef := GenReqDefForQueryHyperinstanceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.QueryHyperinstanceTagsResponse), nil
+	}
+}
+
+// QueryHyperinstanceTagsInvoker 查询Lite Server超节点标签
+func (c *ModelArtsClient) QueryHyperinstanceTagsInvoker(request *model.QueryHyperinstanceTagsRequest) *QueryHyperinstanceTagsInvoker {
+	requestDef := GenReqDefForQueryHyperinstanceTags()
+	return &QueryHyperinstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RebootDevServer 重启Lite Server实例
+//
+// 重启Lite Server实例接口用于重启正在运行的Lite Server实例。该接口适用于以下场景：当用户需要重启实例以应用配置更改、解决运行问题或进行系统维护时，可以通过此接口重启指定的Lite Server实例。使用该接口的前提条件是Lite Server实例已创建且处于运行状态，用户具有重启实例的权限。重启操作完成后，Lite Server实例将重新启动并进入运行状态，用户可以继续使用实例提供的服务。若Lite Server实例不存在、已处于停止状态或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) RebootDevServer(request *model.RebootDevServerRequest) (*model.RebootDevServerResponse, error) {
+	requestDef := GenReqDefForRebootDevServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RebootDevServerResponse), nil
+	}
+}
+
+// RebootDevServerInvoker 重启Lite Server实例
+func (c *ModelArtsClient) RebootDevServerInvoker(request *model.RebootDevServerRequest) *RebootDevServerInvoker {
+	requestDef := GenReqDefForRebootDevServer()
+	return &RebootDevServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RegisterImage 注册自定义镜像
 //
 // 注册自定义镜像接口用于将用户自定义的镜像注册到ModelArts镜像管理。该接口适用于以下场景：当用户需要将自己的自定义镜像（如特定算法环境、工具链或配置）集成到ModelArts平台时，可通过此接口将镜像注册到镜像管理中以便后续使用。使用该接口的前提条件是用户具备ModelArts镜像管理权限，并且需要提供有效的镜像地址和符合要求的镜像格式。注册操作完成后，自定义镜像将被成功添加到ModelArts镜像列表中，用户可以在后续任务中选择使用该镜像。若镜像地址无效、镜像格式不符合要求或用户无权限操作，接口将返回相应的错误信息。
@@ -2291,6 +3110,69 @@ func (c *ModelArtsClient) RegisterImage(request *model.RegisterImageRequest) (*m
 func (c *ModelArtsClient) RegisterImageInvoker(request *model.RegisterImageRequest) *RegisterImageInvoker {
 	requestDef := GenReqDefForRegisterImage()
 	return &RegisterImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ReinstallDevServerOS 重装Lite Server服务器操作系统镜像
+//
+// 重装Lite Server服务器操作系统镜像接口用于重新安装Lite Server服务器的操作系统镜像。该接口适用于以下场景：当用户需要更新操作系统版本、修复系统故障或重新配置系统环境时，可以通过此接口重装指定的Lite Server服务器操作系统镜像。使用该接口的前提条件是Lite Server服务器已存在且处于停止状态，用户具有重装操作系统的权限。重装操作完成后，Lite Server服务器将安装新的操作系统镜像，并重新进入运行状态，若Lite Server服务器不存在、已处于运行状态或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ReinstallDevServerOS(request *model.ReinstallDevServerOsRequest) (*model.ReinstallDevServerOsResponse, error) {
+	requestDef := GenReqDefForReinstallDevServerOS()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ReinstallDevServerOsResponse), nil
+	}
+}
+
+// ReinstallDevServerOSInvoker 重装Lite Server服务器操作系统镜像
+func (c *ModelArtsClient) ReinstallDevServerOSInvoker(request *model.ReinstallDevServerOsRequest) *ReinstallDevServerOSInvoker {
+	requestDef := GenReqDefForReinstallDevServerOS()
+	return &ReinstallDevServerOSInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ScaleDownHyperinstance 缩容Lite Server超节点
+//
+// 缩容Lite Server超节点接口用于减少Lite Server超节点的资源容量。该接口适用于以下场景：当用户需要降低Lite Server超节点的资源使用，以节省成本或优化资源分配时，可以通过此接口进行缩容。使用该接口的前提条件是用户已登录并具有缩容超节点的权限，且指定的超节点已存在且处于运行状态。缩容操作完成后，超节点的资源容量将根据指定的规格进行调整，用户可以立即使用减少后的资源。若用户无权限操作、指定的超节点不存在、超节点已处于最小容量或指定的缩容规格无效，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ScaleDownHyperinstance(request *model.ScaleDownHyperinstanceRequest) (*model.ScaleDownHyperinstanceResponse, error) {
+	requestDef := GenReqDefForScaleDownHyperinstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ScaleDownHyperinstanceResponse), nil
+	}
+}
+
+// ScaleDownHyperinstanceInvoker 缩容Lite Server超节点
+func (c *ModelArtsClient) ScaleDownHyperinstanceInvoker(request *model.ScaleDownHyperinstanceRequest) *ScaleDownHyperinstanceInvoker {
+	requestDef := GenReqDefForScaleDownHyperinstance()
+	return &ScaleDownHyperinstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ScaleUpHyperinstance 扩容Lite Server超节点
+//
+// 扩容Lite Server超节点接口用于增加Lite Server超节点的资源容量。该接口适用于以下场景：当用户需要提升Lite Server超节点的性能，以支持更多的负载或更大的数据处理需求时，可以通过此接口进行扩容。使用该接口的前提条件是用户已登录并具有扩容超节点的权限，且指定的超节点已存在且处于运行状态。扩容操作完成后，超节点的资源容量将根据指定的规格进行调整，用户可以立即使用增加的资源。若用户无权限操作、指定的超节点不存在、超节点已处于最大容量或指定的扩容规格无效，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ScaleUpHyperinstance(request *model.ScaleUpHyperinstanceRequest) (*model.ScaleUpHyperinstanceResponse, error) {
+	requestDef := GenReqDefForScaleUpHyperinstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ScaleUpHyperinstanceResponse), nil
+	}
+}
+
+// ScaleUpHyperinstanceInvoker 扩容Lite Server超节点
+func (c *ModelArtsClient) ScaleUpHyperinstanceInvoker(request *model.ScaleUpHyperinstanceRequest) *ScaleUpHyperinstanceInvoker {
+	requestDef := GenReqDefForScaleUpHyperinstance()
+	return &ScaleUpHyperinstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAlgorithmByUuid 查询算法详情
@@ -2480,6 +3362,27 @@ func (c *ModelArtsClient) ShowAutoSearchYamlTemplatesInfo(request *model.ShowAut
 func (c *ModelArtsClient) ShowAutoSearchYamlTemplatesInfoInvoker(request *model.ShowAutoSearchYamlTemplatesInfoRequest) *ShowAutoSearchYamlTemplatesInfoInvoker {
 	requestDef := GenReqDefForShowAutoSearchYamlTemplatesInfo()
 	return &ShowAutoSearchYamlTemplatesInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDevServer 查询Lite Server实例详情
+//
+// 查询Lite Server实例详情接口用于获取指定Lite Server实例的详细信息。该接口适用于以下场景：用户需要查看特定Lite Server实例的配置、状态、网络信息等详细数据，以便进行故障排查、资源管理和监控。使用该接口的前提条件是用户已登录且具有查看Lite Server实例的权限，并且需要提供有效的实例ID。查询操作完成后，系统将返回指定Lite Server实例的详细信息，包括实例ID、名称、状态、配置、网络配置等。若用户无权限、实例ID无效或实例不存在，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ShowDevServer(request *model.ShowDevServerRequest) (*model.ShowDevServerResponse, error) {
+	requestDef := GenReqDefForShowDevServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDevServerResponse), nil
+	}
+}
+
+// ShowDevServerInvoker 查询Lite Server实例详情
+func (c *ModelArtsClient) ShowDevServerInvoker(request *model.ShowDevServerRequest) *ShowDevServerInvoker {
+	requestDef := GenReqDefForShowDevServer()
+	return &ShowDevServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDynamicStorage 获取动态挂载存储实例详情
@@ -3263,6 +4166,48 @@ func (c *ModelArtsClient) ShowWorkspaceQuotasInvoker(request *model.ShowWorkspac
 	return &ShowWorkspaceQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// StartDevServer 启动Lite Server实例
+//
+// 启动Lite Server实例接口用于启动已创建但未运行的Lite Server实例。该接口适用于以下场景：当用户需要开始使用Lite Server实例进行开发或测试时，可以通过此接口启动指定的Lite Server实例。使用该接口的前提条件是Lite Server实例已创建且处于停止状态，用户具有启动实例的权限。若Lite Server实例不存在、已处于运行状态或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) StartDevServer(request *model.StartDevServerRequest) (*model.StartDevServerResponse, error) {
+	requestDef := GenReqDefForStartDevServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartDevServerResponse), nil
+	}
+}
+
+// StartDevServerInvoker 启动Lite Server实例
+func (c *ModelArtsClient) StartDevServerInvoker(request *model.StartDevServerRequest) *StartDevServerInvoker {
+	requestDef := GenReqDefForStartDevServer()
+	return &StartDevServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartHyperinstance 启动Lite Server超节点服务器
+//
+// 启动Lite Server超节点服务器接口用于启动已创建但未运行的Lite Server超节点服务器。该接口适用于以下场景：当用户需要开始使用Lite Server超节点服务器进行开发或测试时，可以通过此接口启动指定的超节点服务器。使用该接口的前提条件是Lite Server超节点服务器已创建且处于停止状态，用户具有启动超节点服务器的权限。启动操作完成后，超节点服务器将进入运行状态，用户可以访问和使用服务器提供的服务。若Lite Server超节点服务器不存在、已处于运行状态或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) StartHyperinstance(request *model.StartHyperinstanceRequest) (*model.StartHyperinstanceResponse, error) {
+	requestDef := GenReqDefForStartHyperinstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartHyperinstanceResponse), nil
+	}
+}
+
+// StartHyperinstanceInvoker 启动Lite Server超节点服务器
+func (c *ModelArtsClient) StartHyperinstanceInvoker(request *model.StartHyperinstanceRequest) *StartHyperinstanceInvoker {
+	requestDef := GenReqDefForStartHyperinstance()
+	return &StartHyperinstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // StartInferDeployment 启动服务部署
 //
 // 使部署从“停止”或“失败”状态进入“部署中”状态，适用于用户需要重新启动已停止或启动失败的部署的情况。调用此接口前，部署状态必须为“停止”或“失败”，且用户需具有启动部署的权限。调用成功后，部署状态将变为“部署中”，系统将开始执行部署流程，包括资源准备、配置加载等。如果部署当前状态不是“停止”或“失败”，或用户没有启动部署的权限，调用将返回错误。
@@ -3303,6 +4248,48 @@ func (c *ModelArtsClient) StartInferService(request *model.StartInferServiceRequ
 func (c *ModelArtsClient) StartInferServiceInvoker(request *model.StartInferServiceRequest) *StartInferServiceInvoker {
 	requestDef := GenReqDefForStartInferService()
 	return &StartInferServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopDevServer 停止Lite Server实例
+//
+// 停止Lite Server实例接口用于停止正在运行的Lite Server实例。该接口适用于以下场景：当用户需要停止Lite Server实例，以节省资源或进行维护时，可以通过此接口停止指定的Lite Server实例。使用该接口的前提条件是Lite Server实例已创建且处于运行状态，用户具有停止实例的权限。若Lite Server实例不存在、已处于停止状态或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) StopDevServer(request *model.StopDevServerRequest) (*model.StopDevServerResponse, error) {
+	requestDef := GenReqDefForStopDevServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopDevServerResponse), nil
+	}
+}
+
+// StopDevServerInvoker 停止Lite Server实例
+func (c *ModelArtsClient) StopDevServerInvoker(request *model.StopDevServerRequest) *StopDevServerInvoker {
+	requestDef := GenReqDefForStopDevServer()
+	return &StopDevServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopHyperinstance 停止Lite Server超节点服务器
+//
+// 停止Lite Server超节点服务器接口用于停止正在运行的Lite Server超节点服务器。该接口适用于以下场景：当用户需要暂停使用Lite Server超节点服务器，以节省资源或进行维护时，可以通过此接口停止指定的超节点服务器。使用该接口的前提条件是Lite Server超节点服务器已创建且处于运行状态或者停止失败状态，用户具有停止超节点服务器的权限。停止操作完成后，超节点服务器将进入停止状态，不再提供服务。若Lite Server超节点服务器不存在、已处于停止状态或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) StopHyperinstance(request *model.StopHyperinstanceRequest) (*model.StopHyperinstanceResponse, error) {
+	requestDef := GenReqDefForStopHyperinstance()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopHyperinstanceResponse), nil
+	}
+}
+
+// StopHyperinstanceInvoker 停止Lite Server超节点服务器
+func (c *ModelArtsClient) StopHyperinstanceInvoker(request *model.StopHyperinstanceRequest) *StopHyperinstanceInvoker {
+	requestDef := GenReqDefForStopHyperinstance()
+	return &StopHyperinstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // StopInferDeployment 停止在线服务部署
@@ -3389,6 +4376,27 @@ func (c *ModelArtsClient) SwitchInferDeploymentVersionInvoker(request *model.Swi
 	return &SwitchInferDeploymentVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SyncDevServers 实时同步用户指定Lite Server实例状态
+//
+// 实时同步用户Lite Server实例状态接口用于实时获取并同步用户Lite Server实例的当前状态。该接口适用于以下场景：用户需要实时监控其Lite Server实例的运行状态，确保实例正常运行或及时发现并处理异常情况。使用该接口的前提条件是用户已登录并具有相应的权限，且Lite Server实例已创建并处于运行状态。接口调用成功后，将返回Lite Server实例的最新状态信息，包括但不限于实例ID、运行状态、资源使用情况等。若用户无权限操作或Lite Server实例不存在，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) SyncDevServers(request *model.SyncDevServersRequest) (*model.SyncDevServersResponse, error) {
+	requestDef := GenReqDefForSyncDevServers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SyncDevServersResponse), nil
+	}
+}
+
+// SyncDevServersInvoker 实时同步用户指定Lite Server实例状态
+func (c *ModelArtsClient) SyncDevServersInvoker(request *model.SyncDevServersRequest) *SyncDevServersInvoker {
+	requestDef := GenReqDefForSyncDevServers()
+	return &SyncDevServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SyncImage 同步镜像状态
 //
 // 同步镜像状态接口用于修正镜像状态的异常情况。该接口适用于以下场景：当镜像状态因误操作、网络问题或系统故障等原因出现异常时，用户可通过此接口同步镜像的最新状态。使用该接口的前提条件是镜像已存在且用户具有相应的操作权限。同步操作完成后，镜像的状态将被更新为最新的正确状态，相关资源和配置也将被同步。若镜像不存在、用户无权限操作或同步过程中出现错误，接口将返回相应的错误信息。
@@ -3450,6 +4458,27 @@ func (c *ModelArtsClient) UpdateAuthMode(request *model.UpdateAuthModeRequest) (
 func (c *ModelArtsClient) UpdateAuthModeInvoker(request *model.UpdateAuthModeRequest) *UpdateAuthModeInvoker {
 	requestDef := GenReqDefForUpdateAuthMode()
 	return &UpdateAuthModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateDevServer 修改Lite Server实例名称
+//
+// 修改DevServer实例名称接口用于更改已创建的DevServer实例的名称。该接口适用于以下场景：当用户需要对DevServer实例进行重命名以更好地反映实例的功能或用途时，或者在实例名称不再符合当前项目命名规范时进行更新。使用该接口的前提条件是DevServer实例已存在且用户具有对该实例的管理权限。修改操作完成后，实例的新名称将立即生效，并在所有相关视图和记录中更新。若DevServer实例不存在、用户无权限操作或新名称不符合命名规则，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) UpdateDevServer(request *model.UpdateDevServerRequest) (*model.UpdateDevServerResponse, error) {
+	requestDef := GenReqDefForUpdateDevServer()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDevServerResponse), nil
+	}
+}
+
+// UpdateDevServerInvoker 修改Lite Server实例名称
+func (c *ModelArtsClient) UpdateDevServerInvoker(request *model.UpdateDevServerRequest) *UpdateDevServerInvoker {
+	requestDef := GenReqDefForUpdateDevServer()
+	return &UpdateDevServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateImageGroup 更新镜像组
@@ -3786,1014 +4815,6 @@ func (c *ModelArtsClient) UpdateInferHra(request *model.UpdateInferHraRequest) (
 func (c *ModelArtsClient) UpdateInferHraInvoker(request *model.UpdateInferHraRequest) *UpdateInferHraInvoker {
 	requestDef := GenReqDefForUpdateInferHra()
 	return &UpdateInferHraInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// AttachDevServerVolume Lite Server服务器挂载磁盘
-//
-// Lite Server服务器挂载磁盘接口用于将额外的磁盘挂载到Lite Server服务器上。该接口适用于以下场景：当用户需要扩展Lite Server服务器的存储空间以满足更大的数据存储需求时，可以通过此接口将指定的磁盘挂载到服务器上。使用该接口的前提条件是Lite Server服务器已创建且处于运行状态、或者停止状态，用户具有挂载磁盘的权限，且指定的磁盘已存在且未被其他服务器使用。挂载操作完成后，磁盘将成功挂载到Lite Server服务器上，用户可以访问和使用新增的存储空间。若Lite Server服务器不存在、指定的磁盘不存在或已被使用，或用户无权限操作，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) AttachDevServerVolume(request *model.AttachDevServerVolumeRequest) (*model.AttachDevServerVolumeResponse, error) {
-	requestDef := GenReqDefForAttachDevServerVolume()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.AttachDevServerVolumeResponse), nil
-	}
-}
-
-// AttachDevServerVolumeInvoker Lite Server服务器挂载磁盘
-func (c *ModelArtsClient) AttachDevServerVolumeInvoker(request *model.AttachDevServerVolumeRequest) *AttachDevServerVolumeInvoker {
-	requestDef := GenReqDefForAttachDevServerVolume()
-	return &AttachDevServerVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// BatchDevServersAction 批量操作Lite Server实例
-//
-// 批量操作Lite Server实例接口用于对多个Lite Server实例进行统一操作，如启动、停止、重启或删除等。该接口适用于以下场景：当需要对多个Lite Server实例进行相同的操作，例如在维护期间批量停止实例、更新配置后批量重启实例或清理不再需要的实例时，用户可通过此接口高效地完成批量操作。使用该接口的前提条件是目标Lite Server实例已存在且用户具有相应的操作权限。操作完成后，所有指定的Lite Server实例将根据请求完成相应的状态变更或被移除，相关资源和配置也将被相应调整或清理。若目标Lite Server实例不存在、用户无权限操作或请求参数不正确，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) BatchDevServersAction(request *model.BatchDevServersActionRequest) (*model.BatchDevServersActionResponse, error) {
-	requestDef := GenReqDefForBatchDevServersAction()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchDevServersActionResponse), nil
-	}
-}
-
-// BatchDevServersActionInvoker 批量操作Lite Server实例
-func (c *ModelArtsClient) BatchDevServersActionInvoker(request *model.BatchDevServersActionRequest) *BatchDevServersActionInvoker {
-	requestDef := GenReqDefForBatchDevServersAction()
-	return &BatchDevServersActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// BindDevServerPublicIP Lite Server服务器绑定EIP
-//
-// Lite Server服务器绑定的EIP接口用于将弹性公网IP（EIP）绑定到Lite Server服务器上。该接口适用于以下场景：当用户需要为Lite Server服务器分配一个固定的公网IP地址，以便从外部网络访问服务器时，可以通过此接口将指定的EIP绑定到服务器上。使用该接口的前提条件是Lite Server服务器已创建且处于运行状态，用户具有绑定EIP的权限，且指定的EIP已存在且未被其他资源使用。绑定操作完成后，EIP将成功绑定到Lite Server服务器上，服务器可以通过该EIP从外部网络访问。若Lite Server服务器不存在、已处于停止状态、指定的EIP不存在或已被使用，或用户无权限操作，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) BindDevServerPublicIP(request *model.BindDevServerPublicIpRequest) (*model.BindDevServerPublicIpResponse, error) {
-	requestDef := GenReqDefForBindDevServerPublicIP()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BindDevServerPublicIpResponse), nil
-	}
-}
-
-// BindDevServerPublicIPInvoker Lite Server服务器绑定EIP
-func (c *ModelArtsClient) BindDevServerPublicIPInvoker(request *model.BindDevServerPublicIpRequest) *BindDevServerPublicIPInvoker {
-	requestDef := GenReqDefForBindDevServerPublicIP()
-	return &BindDevServerPublicIPInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ChangeDevServerOS 切换Lite Server服务器操作系统镜像
-//
-// 切换Lite Server服务器操作系统镜像接口用于更换Lite Server服务器当前使用的操作系统镜像。该接口适用于以下场景：当用户需要更换操作系统以适应不同的开发或测试需求时，可以通过此接口切换指定的Lite Server服务器操作系统镜像。使用该接口的前提条件是Lite Server服务器已存在且处于停止状态，用户具有切换操作系统的权限。切换操作完成后，Lite Server服务器将安装新的操作系统镜像，并重新进入运行状态，若Lite Server服务器不存在、已处于运行状态或用户无权限操作，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) ChangeDevServerOS(request *model.ChangeDevServerOsRequest) (*model.ChangeDevServerOsResponse, error) {
-	requestDef := GenReqDefForChangeDevServerOS()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ChangeDevServerOsResponse), nil
-	}
-}
-
-// ChangeDevServerOSInvoker 切换Lite Server服务器操作系统镜像
-func (c *ModelArtsClient) ChangeDevServerOSInvoker(request *model.ChangeDevServerOsRequest) *ChangeDevServerOSInvoker {
-	requestDef := GenReqDefForChangeDevServerOS()
-	return &ChangeDevServerOSInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ChangeHyperinstanceOS 切换Lite Server超节点服务器操作系统镜像
-//
-// 切换Lite Server超节点服务器操作系统镜像接口用于更换Lite Server超节点服务器当前使用的操作系统镜像。该接口适用于以下场景：当用户需要更换操作系统以适应不同的开发或测试需求时，可以通过此接口切换指定的Lite Server超节点服务器操作系统镜像。使用该接口的前提条件是Lite Server超节点服务器已存在且处于停止状态，用户具有切换操作系统的权限。切换操作完成后，Lite Server超节点服务器将安装新的操作系统镜像，并重新进入运行状态，若Lite Server超节点服务器不存在、已处于运行状态或用户无权限操作，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) ChangeHyperinstanceOS(request *model.ChangeHyperinstanceOsRequest) (*model.ChangeHyperinstanceOsResponse, error) {
-	requestDef := GenReqDefForChangeHyperinstanceOS()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ChangeHyperinstanceOsResponse), nil
-	}
-}
-
-// ChangeHyperinstanceOSInvoker 切换Lite Server超节点服务器操作系统镜像
-func (c *ModelArtsClient) ChangeHyperinstanceOSInvoker(request *model.ChangeHyperinstanceOsRequest) *ChangeHyperinstanceOSInvoker {
-	requestDef := GenReqDefForChangeHyperinstanceOS()
-	return &ChangeHyperinstanceOSInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateDevServer 创建Lite Server
-//
-// 创建Lite Server接口用于创建LiteServer弹性云服务器、裸金属服务器及超节点服务器。该接口适用于以下场景：用户需要根据业务需求快速部署和配置不同类型的服务器资源。使用该接口的前提条件是用户已登录且具有创建Lite Server的权限，并且需要提供服务器类型、规格、网络配置等必要参数。创建操作完成后，系统将返回新创建的Lite Server实例信息，包括实例ID、状态等。若用户无权限、参数配置错误或资源不足，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) CreateDevServer(request *model.CreateDevServerRequest) (*model.CreateDevServerResponse, error) {
-	requestDef := GenReqDefForCreateDevServer()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateDevServerResponse), nil
-	}
-}
-
-// CreateDevServerInvoker 创建Lite Server
-func (c *ModelArtsClient) CreateDevServerInvoker(request *model.CreateDevServerRequest) *CreateDevServerInvoker {
-	requestDef := GenReqDefForCreateDevServer()
-	return &CreateDevServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateDevServerJob 创建Lite Server任务
-//
-// 创建Lite Server任务接口用于在Lite Server上创建新的任务。该接口适用于以下场景：当用户需要在Lite Server上启动新的开发、测试或部署任务时，可以通过此接口创建并配置任务。使用该接口的前提条件是用户具有创建任务的权限，并且提供的任务配置参数符合要求。创建操作完成后，新的Lite Server任务将被成功创建，并返回任务ID和其他相关信息。若用户无权限操作、提供的参数不正确或系统资源不足，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) CreateDevServerJob(request *model.CreateDevServerJobRequest) (*model.CreateDevServerJobResponse, error) {
-	requestDef := GenReqDefForCreateDevServerJob()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateDevServerJobResponse), nil
-	}
-}
-
-// CreateDevServerJobInvoker 创建Lite Server任务
-func (c *ModelArtsClient) CreateDevServerJobInvoker(request *model.CreateDevServerJobRequest) *CreateDevServerJobInvoker {
-	requestDef := GenReqDefForCreateDevServerJob()
-	return &CreateDevServerJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateHyperCluster 创建Hyper Cluster
-//
-// 创建Hyper Cluster接口用于在系统中创建一个新的Hyper Cluster。该接口适用于以下场景：当用户需要使用超节点网络时，可以通过此接口创建Hyper Cluster。使用该接口的前提条件是用户已登录并具有创建Hyper Cluster的权限，且系统中已配置了必要的资源。创建操作完成后，将生成一个新的超节点网络，并返回超节点网络的详细信息，包括ID、名称、子网信息等。若用户无权限操作、系统中缺少必要的资源或配置参数无效，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) CreateHyperCluster(request *model.CreateHyperClusterRequest) (*model.CreateHyperClusterResponse, error) {
-	requestDef := GenReqDefForCreateHyperCluster()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateHyperClusterResponse), nil
-	}
-}
-
-// CreateHyperClusterInvoker 创建Hyper Cluster
-func (c *ModelArtsClient) CreateHyperClusterInvoker(request *model.CreateHyperClusterRequest) *CreateHyperClusterInvoker {
-	requestDef := GenReqDefForCreateHyperCluster()
-	return &CreateHyperClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateHyperinstanceTags 创建Lite Server超节点标签
-//
-// 创建Lite Server超节点标签接口用于为Lite Server超节点添加自定义标签。该接口适用于以下场景：当用户需要对Lite Server超节点进行分类管理或标记特定信息时，可以通过此接口为指定的超节点创建标签。使用该接口的前提条件是Lite Server超节点已存在，用户具有创建标签的权限。创建操作完成后，标签将被成功添加到指定的超节点上，用户可以通过标签进行快速查找和管理。若Lite Server超节点不存在、标签已存在或用户无权限操作，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) CreateHyperinstanceTags(request *model.CreateHyperinstanceTagsRequest) (*model.CreateHyperinstanceTagsResponse, error) {
-	requestDef := GenReqDefForCreateHyperinstanceTags()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateHyperinstanceTagsResponse), nil
-	}
-}
-
-// CreateHyperinstanceTagsInvoker 创建Lite Server超节点标签
-func (c *ModelArtsClient) CreateHyperinstanceTagsInvoker(request *model.CreateHyperinstanceTagsRequest) *CreateHyperinstanceTagsInvoker {
-	requestDef := GenReqDefForCreateHyperinstanceTags()
-	return &CreateHyperinstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// CreateRoceNetwork 创建RoCE网络
-//
-// 创建RoCE网络接口用于在系统中创建一个新的RoCE网络。该接口适用于以下场景：当用户需要为高性能计算或低延迟应用创建专用的RoCE网络时，可以通过此接口创建并配置RoCE网络。使用该接口的前提条件是用户已登录并具有创建RoCE网络的权限，且系统中已配置了必要的网络资源。创建操作完成后，将生成一个新的RoCE网络，并返回网络的详细信息，包括网络ID、子网信息、配置参数等。若用户无权限操作、系统中缺少必要的网络资源或网络配置参数无效，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) CreateRoceNetwork(request *model.CreateRoceNetworkRequest) (*model.CreateRoceNetworkResponse, error) {
-	requestDef := GenReqDefForCreateRoceNetwork()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateRoceNetworkResponse), nil
-	}
-}
-
-// CreateRoceNetworkInvoker 创建RoCE网络
-func (c *ModelArtsClient) CreateRoceNetworkInvoker(request *model.CreateRoceNetworkRequest) *CreateRoceNetworkInvoker {
-	requestDef := GenReqDefForCreateRoceNetwork()
-	return &CreateRoceNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteDevServer 删除Lite Server实例
-//
-// 删除Lite Server实例接口用于移除已创建的Lite Server实例。该接口适用于以下场景：当Lite Server按需实例不再需要使用时或者创建失败的实例以及处于ERROR状态时，用户可通过此接口删除指定的Lite Server实例。使用该接口的前提条件是Lite Server实例已存在且用户具有管理员权限。删除操作完成后，Lite Server实例将被永久移除，相关资源也将被清理。若Lite Server实例不存在或用户无权限操作，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) DeleteDevServer(request *model.DeleteDevServerRequest) (*model.DeleteDevServerResponse, error) {
-	requestDef := GenReqDefForDeleteDevServer()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteDevServerResponse), nil
-	}
-}
-
-// DeleteDevServerInvoker 删除Lite Server实例
-func (c *ModelArtsClient) DeleteDevServerInvoker(request *model.DeleteDevServerRequest) *DeleteDevServerInvoker {
-	requestDef := GenReqDefForDeleteDevServer()
-	return &DeleteDevServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteDevServerJobs 批量删除Lite Server Job
-//
-// 批量删除Lite Server Job接口用于批量移除已创建的Lite Server Job。该接口适用于以下场景：当多个Lite Server Job已完成、配置错误或需要清理资源时，用户可以通过此接口批量删除指定的Lite Server Job。使用该接口的前提条件是目标Lite Server Job已存在且用户具有管理员权限。删除操作完成后，指定的Lite Server Job将被永久移除，相关资源和配置也将被清理。若目标Lite Server Job不存在、用户无权限操作或请求参数不正确，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) DeleteDevServerJobs(request *model.DeleteDevServerJobsRequest) (*model.DeleteDevServerJobsResponse, error) {
-	requestDef := GenReqDefForDeleteDevServerJobs()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteDevServerJobsResponse), nil
-	}
-}
-
-// DeleteDevServerJobsInvoker 批量删除Lite Server Job
-func (c *ModelArtsClient) DeleteDevServerJobsInvoker(request *model.DeleteDevServerJobsRequest) *DeleteDevServerJobsInvoker {
-	requestDef := GenReqDefForDeleteDevServerJobs()
-	return &DeleteDevServerJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteHyperCluster 删除Hyper Cluster实例
-//
-// 删除Hyper Cluster实例接口用于移除已创建的Hyper Cluster。该接口适用于以下场景：当超节点网络配置错误或需要清理资源时，用户可通过此接口删除指定的超节点网络。使用该接口的前提条件是Hyper Cluster实例已存在且用户具有管理员权限。删除操作完成后，超节点网络将被永久移除，相关资源和配置也将被清理。若Hyper Cluster实例不存在或用户无权限操作，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) DeleteHyperCluster(request *model.DeleteHyperClusterRequest) (*model.DeleteHyperClusterResponse, error) {
-	requestDef := GenReqDefForDeleteHyperCluster()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteHyperClusterResponse), nil
-	}
-}
-
-// DeleteHyperClusterInvoker 删除Hyper Cluster实例
-func (c *ModelArtsClient) DeleteHyperClusterInvoker(request *model.DeleteHyperClusterRequest) *DeleteHyperClusterInvoker {
-	requestDef := GenReqDefForDeleteHyperCluster()
-	return &DeleteHyperClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteHyperinstance 删除Lite Server超节点实例
-//
-// 删除Lite Server超节点实例接口用于删除按需超节点实例同时移除处于ERROR状态的Lite Server超节点实例。该接口适用于以下场景：当超节点实例因创建失败、或其他原因进入ERROR状态；按需超节点实例，用户可以通过此接口删除指定的超节点实例。使用该接口的前提条件是用户已登录并具有删除超节点实例的权限，且指定的超节点实例是按需且处于运行状态、或者处于ERROR状态。删除操作完成后，指定的超节点实例将被永久移除，相关资源也将被清理。若指定的超节点实例不存在、未处于ERROR状态或用户无权限操作，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) DeleteHyperinstance(request *model.DeleteHyperinstanceRequest) (*model.DeleteHyperinstanceResponse, error) {
-	requestDef := GenReqDefForDeleteHyperinstance()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteHyperinstanceResponse), nil
-	}
-}
-
-// DeleteHyperinstanceInvoker 删除Lite Server超节点实例
-func (c *ModelArtsClient) DeleteHyperinstanceInvoker(request *model.DeleteHyperinstanceRequest) *DeleteHyperinstanceInvoker {
-	requestDef := GenReqDefForDeleteHyperinstance()
-	return &DeleteHyperinstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DeleteHyperinstanceTags 删除Lite Server超节点标签
-//
-// 删除Lite Server超节点标签接口用于移除已创建的Lite Server超节点标签。该接口适用于以下场景：当用户需要清理不再需要的标签或修正标签错误时，可以通过此接口删除指定的超节点标签。使用该接口的前提条件是Lite Server超节点已存在，且该超节点上已存在要删除的标签，用户具有删除标签的权限。删除操作完成后，指定的标签将从超节点上移除，超节点的其他配置和数据保持不变。若Lite Server超节点不存在、标签不存在或用户无权限操作，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) DeleteHyperinstanceTags(request *model.DeleteHyperinstanceTagsRequest) (*model.DeleteHyperinstanceTagsResponse, error) {
-	requestDef := GenReqDefForDeleteHyperinstanceTags()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DeleteHyperinstanceTagsResponse), nil
-	}
-}
-
-// DeleteHyperinstanceTagsInvoker 删除Lite Server超节点标签
-func (c *ModelArtsClient) DeleteHyperinstanceTagsInvoker(request *model.DeleteHyperinstanceTagsRequest) *DeleteHyperinstanceTagsInvoker {
-	requestDef := GenReqDefForDeleteHyperinstanceTags()
-	return &DeleteHyperinstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// DetachDevServerVolume Lite Server服务器卸载磁盘
-//
-// Lite Server服务器卸载磁盘接口用于从Lite Server服务器上卸载已挂载的磁盘。该接口适用于以下场景：当用户需要释放存储资源或重新分配磁盘时，可以通过此接口卸载指定的磁盘。使用该接口的前提条件是Lite Server服务器已创建且处于运行状态、或者停止状态，用户具有卸载磁盘的权限，且指定的磁盘已挂载到服务器上。卸载操作完成后，磁盘将从Lite Server服务器上成功卸载，用户可以将其挂载到其他服务器或进行其他操作。若Lite Server服务器不存在、指定的磁盘未挂载到服务器上，或用户无权限操作，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) DetachDevServerVolume(request *model.DetachDevServerVolumeRequest) (*model.DetachDevServerVolumeResponse, error) {
-	requestDef := GenReqDefForDetachDevServerVolume()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DetachDevServerVolumeResponse), nil
-	}
-}
-
-// DetachDevServerVolumeInvoker Lite Server服务器卸载磁盘
-func (c *ModelArtsClient) DetachDevServerVolumeInvoker(request *model.DetachDevServerVolumeRequest) *DetachDevServerVolumeInvoker {
-	requestDef := GenReqDefForDetachDevServerVolume()
-	return &DetachDevServerVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// GetDevServerImage 查询Lite Server镜像详情
-//
-// 查询Lite Server镜像详情接口用于获取指定Lite Server镜像的详细信息。该接口适用于以下场景：当用户需要了解某个Lite Server镜像的具体配置和属性，以便在创建或调整Lite Server实例时选择合适的镜像时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询镜像详情的权限，且指定的镜像已存在。查询操作完成后，接口将返回指定Lite Server镜像的详细信息，包括镜像ID、名称、操作系统、版本、创建时间等。若用户无权限操作、指定的镜像不存在或镜像ID无效，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) GetDevServerImage(request *model.GetDevServerImageRequest) (*model.GetDevServerImageResponse, error) {
-	requestDef := GenReqDefForGetDevServerImage()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.GetDevServerImageResponse), nil
-	}
-}
-
-// GetDevServerImageInvoker 查询Lite Server镜像详情
-func (c *ModelArtsClient) GetDevServerImageInvoker(request *model.GetDevServerImageRequest) *GetDevServerImageInvoker {
-	requestDef := GenReqDefForGetDevServerImage()
-	return &GetDevServerImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// GetDevServerJob 查询Lite Server Job详情
-//
-// 查询Lite Server Job详情接口用于获取指定Lite Server Job的详细信息。该接口适用于以下场景：当用户需要查看某个Lite Server Job的执行状态、配置参数、日志信息等详细数据时，可以通过此接口获取相关信息。使用该接口的前提条件是目标Lite Server Job已存在且用户具有查看权限。查询操作完成后，接口将返回指定Lite Server Job的详细信息，包括但不限于Job ID、状态、创建时间、执行时间、配置参数和日志等。若目标Lite Server Job不存在或用户无权限操作，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) GetDevServerJob(request *model.GetDevServerJobRequest) (*model.GetDevServerJobResponse, error) {
-	requestDef := GenReqDefForGetDevServerJob()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.GetDevServerJobResponse), nil
-	}
-}
-
-// GetDevServerJobInvoker 查询Lite Server Job详情
-func (c *ModelArtsClient) GetDevServerJobInvoker(request *model.GetDevServerJobRequest) *GetDevServerJobInvoker {
-	requestDef := GenReqDefForGetDevServerJob()
-	return &GetDevServerJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// GetDevServerJobService 获取Lite Server 部署服务详情
-//
-// 根据服务id获取Lite Server部署服务详情。该接口适用于以下场景：当用户需要查看部署服务详情，以便查看已部署服务的状态、api等信息时，可以通过此接口获取服务详情。使用该接口的前提条件是用户具有查看服务的权限。查询操作完成后，接口将返回此部署服务的详细信息，包括名称、状态、描述、所用模型、实例详情等信息。若用户无权限操作或无相应id，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) GetDevServerJobService(request *model.GetDevServerJobServiceRequest) (*model.GetDevServerJobServiceResponse, error) {
-	requestDef := GenReqDefForGetDevServerJobService()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.GetDevServerJobServiceResponse), nil
-	}
-}
-
-// GetDevServerJobServiceInvoker 获取Lite Server 部署服务详情
-func (c *ModelArtsClient) GetDevServerJobServiceInvoker(request *model.GetDevServerJobServiceRequest) *GetDevServerJobServiceInvoker {
-	requestDef := GenReqDefForGetDevServerJobService()
-	return &GetDevServerJobServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// GetDevServerJobTemplate 获取Lite Server Job模板详情
-//
-// 获取Lite Server Job模板详情接口用于获取指定Lite Server Job模板的详细信息。该接口适用于以下场景：当用户需要查看某个特定Job模板的详细配置，以便了解其参数设置、使用说明等信息时，可以通过此接口获取模板详情。查询操作完成后，接口将返回指定模板的详细信息，包括模板ID、名称、描述、配置参数等。若目标模板不存在，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) GetDevServerJobTemplate(request *model.GetDevServerJobTemplateRequest) (*model.GetDevServerJobTemplateResponse, error) {
-	requestDef := GenReqDefForGetDevServerJobTemplate()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.GetDevServerJobTemplateResponse), nil
-	}
-}
-
-// GetDevServerJobTemplateInvoker 获取Lite Server Job模板详情
-func (c *ModelArtsClient) GetDevServerJobTemplateInvoker(request *model.GetDevServerJobTemplateRequest) *GetDevServerJobTemplateInvoker {
-	requestDef := GenReqDefForGetDevServerJobTemplate()
-	return &GetDevServerJobTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// GetDevServerOperation 查询Operation详情
-//
-// 查询Operation详情接口用于获取指定Operation的详细信息。该接口适用于以下场景：当用户需要了解某个Operation的具体执行情况和状态，以便进行故障排查或操作审计时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询Operation详情的权限，且指定的Operation已存在。查询操作完成后，接口将返回指定Operation的详细信息，包括Operation ID、操作类型、执行状态、开始时间、结束时间、操作结果等。若用户无权限操作、指定的Operation不存在或Operation ID无效，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) GetDevServerOperation(request *model.GetDevServerOperationRequest) (*model.GetDevServerOperationResponse, error) {
-	requestDef := GenReqDefForGetDevServerOperation()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.GetDevServerOperationResponse), nil
-	}
-}
-
-// GetDevServerOperationInvoker 查询Operation详情
-func (c *ModelArtsClient) GetDevServerOperationInvoker(request *model.GetDevServerOperationRequest) *GetDevServerOperationInvoker {
-	requestDef := GenReqDefForGetDevServerOperation()
-	return &GetDevServerOperationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// GetHyperCluster 查询Hyper Cluster实例详情
-//
-// 查询Hyper Cluster实例详情接口用于获取指定Hyper Cluster实例的详细信息。该接口适用于以下场景：当用户需要了解某个超节点网络的具体配置和状态，以便进行管理和监控时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询Hyper Cluster详情的权限，且指定的超节点网络已存在。查询操作完成后，接口将返回指定超节点网络的详细信息，包括ID、名称、子网信息等。若用户无权限操作、指定的超节点网络不存在或ID无效，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) GetHyperCluster(request *model.GetHyperClusterRequest) (*model.GetHyperClusterResponse, error) {
-	requestDef := GenReqDefForGetHyperCluster()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.GetHyperClusterResponse), nil
-	}
-}
-
-// GetHyperClusterInvoker 查询Hyper Cluster实例详情
-func (c *ModelArtsClient) GetHyperClusterInvoker(request *model.GetHyperClusterRequest) *GetHyperClusterInvoker {
-	requestDef := GenReqDefForGetHyperCluster()
-	return &GetHyperClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// GetHyperinstance 查询指定超节点实例详情
-//
-// 查询指定超节点实例详情接口用于获取特定Lite Server超节点实例的详细信息。该接口适用于以下场景：当用户需要查看某个具体超节点实例的配置、状态和使用情况时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询超节点实例的权限，且指定的超节点实例已存在。查询操作完成后，接口将返回指定超节点实例的详细信息，包括实例ID、操作系统、运行状态、资源使用情况等。若用户无权限操作、指定的超节点实例不存在或实例ID无效，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) GetHyperinstance(request *model.GetHyperinstanceRequest) (*model.GetHyperinstanceResponse, error) {
-	requestDef := GenReqDefForGetHyperinstance()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.GetHyperinstanceResponse), nil
-	}
-}
-
-// GetHyperinstanceInvoker 查询指定超节点实例详情
-func (c *ModelArtsClient) GetHyperinstanceInvoker(request *model.GetHyperinstanceRequest) *GetHyperinstanceInvoker {
-	requestDef := GenReqDefForGetHyperinstance()
-	return &GetHyperinstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// GetScaleEvaluationsDevServer 查询Lite Server超节点扩缩容支持规格列表及容量测算
-//
-// 查询Lite Server超节点扩缩容支持规格列表及容量测算接口用于获取Lite Server超节点支持的扩缩容规格列表，并进行容量测算。该接口适用于以下场景：当用户需要了解Lite Server超节点支持的扩缩容选项，以便在调整超节点资源时选择合适的规格，并评估扩缩容后的资源需求时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询超节点扩缩容规格的权限，且指定的超节点已存在。查询操作完成后，接口将返回支持的扩缩容规格列表及容量测算结果，包括规格ID、CPU、内存、存储等详细配置和扩缩容后的资源使用情况。若用户无权限操作、指定的超节点不存在或系统中没有可用的扩缩容规格，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) GetScaleEvaluationsDevServer(request *model.GetScaleEvaluationsDevServerRequest) (*model.GetScaleEvaluationsDevServerResponse, error) {
-	requestDef := GenReqDefForGetScaleEvaluationsDevServer()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.GetScaleEvaluationsDevServerResponse), nil
-	}
-}
-
-// GetScaleEvaluationsDevServerInvoker 查询Lite Server超节点扩缩容支持规格列表及容量测算
-func (c *ModelArtsClient) GetScaleEvaluationsDevServerInvoker(request *model.GetScaleEvaluationsDevServerRequest) *GetScaleEvaluationsDevServerInvoker {
-	requestDef := GenReqDefForGetScaleEvaluationsDevServer()
-	return &GetScaleEvaluationsDevServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// GetTopologies 查询实例的Tor信息
-//
-// 查询实例的Tor信息接口用于获取指定实例的Top-of-Rack（Tor）交换机相关信息。该接口适用于以下场景：当用户需要了解实例连接的Tor交换机的详细信息，以便进行网络配置时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询实例Tor信息的权限，且指定的实例已存在。查询操作完成后，接口将返回指定实例的Tor信息。若用户无权限操作、指定的实例不存在或实例未连接到Tor交换机，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) GetTopologies(request *model.GetTopologiesRequest) (*model.GetTopologiesResponse, error) {
-	requestDef := GenReqDefForGetTopologies()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.GetTopologiesResponse), nil
-	}
-}
-
-// GetTopologiesInvoker 查询实例的Tor信息
-func (c *ModelArtsClient) GetTopologiesInvoker(request *model.GetTopologiesRequest) *GetTopologiesInvoker {
-	requestDef := GenReqDefForGetTopologies()
-	return &GetTopologiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListAllDevServers 查询租户Lite Server列表
-//
-// 查询租户Lite Server列表接口用于获取指定租户的所有Lite Server实例信息。该接口适用于以下场景：当用户需要查看其租户下所有Lite Server实例的详细信息，以便进行管理和监控时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询租户Lite Server列表的权限。查询操作完成后，接口将返回租户下所有Lite Server实例的详细信息，包括实例ID、名称、状态、资源配置等。若用户无权限操作或租户下没有Lite Server实例，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) ListAllDevServers(request *model.ListAllDevServersRequest) (*model.ListAllDevServersResponse, error) {
-	requestDef := GenReqDefForListAllDevServers()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAllDevServersResponse), nil
-	}
-}
-
-// ListAllDevServersInvoker 查询租户Lite Server列表
-func (c *ModelArtsClient) ListAllDevServersInvoker(request *model.ListAllDevServersRequest) *ListAllDevServersInvoker {
-	requestDef := GenReqDefForListAllDevServers()
-	return &ListAllDevServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListAllHyperinstances 查询租户Hyperinstance列表
-//
-// 查询租户Hyperinstance列表接口用于获取指定租户的所有Hyperinstance实例信息。该接口适用于以下场景：当用户需要查看其租户下所有Hyperinstance实例的详细信息，以便进行管理和监控时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询租户Hyperinstance列表的权限。查询操作完成后，接口将返回租户下所有Hyperinstance实例的详细信息，包括实例ID、名称、状态、资源配置等。若用户无权限操作或租户下没有Hyperinstance实例，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) ListAllHyperinstances(request *model.ListAllHyperinstancesRequest) (*model.ListAllHyperinstancesResponse, error) {
-	requestDef := GenReqDefForListAllHyperinstances()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAllHyperinstancesResponse), nil
-	}
-}
-
-// ListAllHyperinstancesInvoker 查询租户Hyperinstance列表
-func (c *ModelArtsClient) ListAllHyperinstancesInvoker(request *model.ListAllHyperinstancesRequest) *ListAllHyperinstancesInvoker {
-	requestDef := GenReqDefForListAllHyperinstances()
-	return &ListAllHyperinstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListDevServerFlavors 查询规格列表
-//
-// 查询规格列表接口用于获取系统中所有可用的资源规格信息。该接口适用于以下场景：当用户需要了解可用的资源规格，以便在创建或调整Lite Server实例时选择合适的配置时，可以通过此接口获取规格列表。使用该接口的前提条件是用户已登录并具有查询规格的权限。查询操作完成后，接口将返回所有可用的资源规格信息，包括规格ID、CPU、内存、存储等详细配置。若用户无权限操作或系统中没有可用的资源规格，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) ListDevServerFlavors(request *model.ListDevServerFlavorsRequest) (*model.ListDevServerFlavorsResponse, error) {
-	requestDef := GenReqDefForListDevServerFlavors()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListDevServerFlavorsResponse), nil
-	}
-}
-
-// ListDevServerFlavorsInvoker 查询规格列表
-func (c *ModelArtsClient) ListDevServerFlavorsInvoker(request *model.ListDevServerFlavorsRequest) *ListDevServerFlavorsInvoker {
-	requestDef := GenReqDefForListDevServerFlavors()
-	return &ListDevServerFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListDevServerImages 查询Lite Server镜像列表
-//
-// 查询Lite Server镜像列表接口用于获取系统中所有可用的Lite Server镜像信息。该接口适用于以下场景：当用户需要了解可用的Lite Server镜像，以便在创建或调整Lite Server实例时选择合适的镜像时，可以通过此接口获取镜像列表。使用该接口的前提条件是用户已登录并具有查询镜像列表的权限。查询操作完成后，接口将返回所有可用的Lite Server镜像信息，包括镜像ID、名称、架构类型等。若用户无权限操作或系统中没有可用的镜像，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) ListDevServerImages(request *model.ListDevServerImagesRequest) (*model.ListDevServerImagesResponse, error) {
-	requestDef := GenReqDefForListDevServerImages()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListDevServerImagesResponse), nil
-	}
-}
-
-// ListDevServerImagesInvoker 查询Lite Server镜像列表
-func (c *ModelArtsClient) ListDevServerImagesInvoker(request *model.ListDevServerImagesRequest) *ListDevServerImagesInvoker {
-	requestDef := GenReqDefForListDevServerImages()
-	return &ListDevServerImagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListDevServerJobTemplates 获取Lite Server Job模板列表
-//
-// 获取Lite Server Job模板列表接口用于获取可用的Lite Server Job模板列表。该接口适用于以下场景：当用户需要查看可用的Job模板，以便选择合适的模板来创建新的Lite Server任务时，可以通过此接口获取模板列表。查询操作完成后，接口将返回所有可用的Lite Server Job模板列表，包括模板ID、名称、描述等信息。若系统中无可用模板，接口将返回相应的信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) ListDevServerJobTemplates(request *model.ListDevServerJobTemplatesRequest) (*model.ListDevServerJobTemplatesResponse, error) {
-	requestDef := GenReqDefForListDevServerJobTemplates()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListDevServerJobTemplatesResponse), nil
-	}
-}
-
-// ListDevServerJobTemplatesInvoker 获取Lite Server Job模板列表
-func (c *ModelArtsClient) ListDevServerJobTemplatesInvoker(request *model.ListDevServerJobTemplatesRequest) *ListDevServerJobTemplatesInvoker {
-	requestDef := GenReqDefForListDevServerJobTemplates()
-	return &ListDevServerJobTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListDevServerJobs 查询Lite Server Job列表
-//
-// 查询Lite Server Job列表接口用于获取Lite Server Job的列表信息，并支持按照状态、ID等相关字段进行过滤。该接口适用于以下场景：当用户需要查看多个Lite Server Job的概要信息，例如在监控作业状态、排查问题或进行日常管理时，可以通过此接口获取符合过滤条件的Job列表。使用该接口的前提条件是用户具有查看权限。查询操作完成后，接口将返回符合条件的Lite Server Job列表，包括每个Job的ID、状态、创建时间等基本信息。若用户无权限操作或请求参数不正确，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) ListDevServerJobs(request *model.ListDevServerJobsRequest) (*model.ListDevServerJobsResponse, error) {
-	requestDef := GenReqDefForListDevServerJobs()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListDevServerJobsResponse), nil
-	}
-}
-
-// ListDevServerJobsInvoker 查询Lite Server Job列表
-func (c *ModelArtsClient) ListDevServerJobsInvoker(request *model.ListDevServerJobsRequest) *ListDevServerJobsInvoker {
-	requestDef := GenReqDefForListDevServerJobs()
-	return &ListDevServerJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListDevServerPublicIP 查询已绑定的EIP
-//
-// 查询已绑定的EIP接口用于获取已绑定到Lite Server服务器上的弹性公网IP（EIP）信息。该接口适用于以下场景：当用户需要查看Lite Server服务器上已绑定的EIP及其详细信息时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询EIP的权限，且指定的Lite Server服务器已存在。查询操作完成后，接口将返回已绑定到Lite Server服务器上的EIP的详细信息，包括EIP地址、绑定时间、状态等。若Lite Server服务器不存在、未绑定EIP或用户无权限操作，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) ListDevServerPublicIP(request *model.ListDevServerPublicIpRequest) (*model.ListDevServerPublicIpResponse, error) {
-	requestDef := GenReqDefForListDevServerPublicIP()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListDevServerPublicIpResponse), nil
-	}
-}
-
-// ListDevServerPublicIPInvoker 查询已绑定的EIP
-func (c *ModelArtsClient) ListDevServerPublicIPInvoker(request *model.ListDevServerPublicIpRequest) *ListDevServerPublicIPInvoker {
-	requestDef := GenReqDefForListDevServerPublicIP()
-	return &ListDevServerPublicIPInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListDevServers 查询用户所有Lite Server实例列表
-//
-// 查询用户所有Lite Server实例列表接口用于获取用户名下所有Lite Server实例的详细信息。该接口适用于以下场景：用户需要查看其所有Lite Server实例的状态、配置等信息，以便进行资源管理和监控。使用该接口的前提条件是用户已登录且具有查看Lite Server实例的权限。调用此接口后，系统将返回用户名下所有Lite Server实例的列表，包括实例ID、名称、状态、创建时间等信息。若用户无权限或未登录，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) ListDevServers(request *model.ListDevServersRequest) (*model.ListDevServersResponse, error) {
-	requestDef := GenReqDefForListDevServers()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListDevServersResponse), nil
-	}
-}
-
-// ListDevServersInvoker 查询用户所有Lite Server实例列表
-func (c *ModelArtsClient) ListDevServersInvoker(request *model.ListDevServersRequest) *ListDevServersInvoker {
-	requestDef := GenReqDefForListDevServers()
-	return &ListDevServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListHyperCluster 查询Hyper Cluster详情列表
-//
-// 查询Hyper Cluster详情列表接口用于获取所有Hyper Cluster的详细信息。该接口适用于以下场景：当用户需要了解系统中所有超节点网络的配置和状态时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询Hyper Cluster详情的权限。查询操作完成后，接口将返回所有超节点网络的详细信息，包括ID、名称、子网信息等。若用户无权限操作或系统中没有Hyper Cluster，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) ListHyperCluster(request *model.ListHyperClusterRequest) (*model.ListHyperClusterResponse, error) {
-	requestDef := GenReqDefForListHyperCluster()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListHyperClusterResponse), nil
-	}
-}
-
-// ListHyperClusterInvoker 查询Hyper Cluster详情列表
-func (c *ModelArtsClient) ListHyperClusterInvoker(request *model.ListHyperClusterRequest) *ListHyperClusterInvoker {
-	requestDef := GenReqDefForListHyperCluster()
-	return &ListHyperClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListHyperinstanceClustersCapacity 查询超节点hyperinstance-clusters逻辑容量测算结果
-//
-// 查询超节点hyperinstance-clusters逻辑容量测算结果接口用于获取指定超节点集群的逻辑容量测算结果。该接口适用于以下场景：当用户需要了解超节点集群的资源使用情况和容量规划，以便进行资源管理和优化时，可以通过此接口获取逻辑容量测算结果。使用该接口的前提条件是用户已登录并具有查询超节点集群逻辑容量的权限，且指定的超节点集群已存在。查询操作完成后，接口将返回指定超节点集群的逻辑容量测算结果，包括可用容量信息。若用户无权限操作、指定的超节点集群不存在或集群ID无效，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) ListHyperinstanceClustersCapacity(request *model.ListHyperinstanceClustersCapacityRequest) (*model.ListHyperinstanceClustersCapacityResponse, error) {
-	requestDef := GenReqDefForListHyperinstanceClustersCapacity()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListHyperinstanceClustersCapacityResponse), nil
-	}
-}
-
-// ListHyperinstanceClustersCapacityInvoker 查询超节点hyperinstance-clusters逻辑容量测算结果
-func (c *ModelArtsClient) ListHyperinstanceClustersCapacityInvoker(request *model.ListHyperinstanceClustersCapacityRequest) *ListHyperinstanceClustersCapacityInvoker {
-	requestDef := GenReqDefForListHyperinstanceClustersCapacity()
-	return &ListHyperinstanceClustersCapacityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListHyperinstances 查询用户所有超节点实例详情
-//
-// 查询用户所有超节点实例详情接口用于获取用户所有Lite Server超节点实例的详细信息。该接口适用于以下场景：当用户需要查看其所有超节点实例的配置、状态和使用情况时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询超节点实例的权限。查询操作完成后，接口将返回所有超节点实例的详细信息，包括实例ID、操作系统、运行状态、资源使用情况等。若用户无权限操作或没有超节点实例，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) ListHyperinstances(request *model.ListHyperinstancesRequest) (*model.ListHyperinstancesResponse, error) {
-	requestDef := GenReqDefForListHyperinstances()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListHyperinstancesResponse), nil
-	}
-}
-
-// ListHyperinstancesInvoker 查询用户所有超节点实例详情
-func (c *ModelArtsClient) ListHyperinstancesInvoker(request *model.ListHyperinstancesRequest) *ListHyperinstancesInvoker {
-	requestDef := GenReqDefForListHyperinstances()
-	return &ListHyperinstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// QueryHyperinstanceTags 查询Lite Server超节点标签
-//
-// 查询Lite Server超节点标签接口用于获取Lite Server超节点上的所有标签信息。该接口适用于以下场景：当用户需要查看或管理Lite Server超节点的标签时，可以通过此接口查询指定超节点上的所有标签。使用该接口的前提条件是Lite Server超节点已存在，用户具有查询标签的权限。查询操作完成后，接口将返回超节点上的所有标签信息，包括标签名称和相关属性。若Lite Server超节点不存在或用户无权限操作，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) QueryHyperinstanceTags(request *model.QueryHyperinstanceTagsRequest) (*model.QueryHyperinstanceTagsResponse, error) {
-	requestDef := GenReqDefForQueryHyperinstanceTags()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.QueryHyperinstanceTagsResponse), nil
-	}
-}
-
-// QueryHyperinstanceTagsInvoker 查询Lite Server超节点标签
-func (c *ModelArtsClient) QueryHyperinstanceTagsInvoker(request *model.QueryHyperinstanceTagsRequest) *QueryHyperinstanceTagsInvoker {
-	requestDef := GenReqDefForQueryHyperinstanceTags()
-	return &QueryHyperinstanceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// RebootDevServer 重启Lite Server实例
-//
-// 重启Lite Server实例接口用于重启正在运行的Lite Server实例。该接口适用于以下场景：当用户需要重启实例以应用配置更改、解决运行问题或进行系统维护时，可以通过此接口重启指定的Lite Server实例。使用该接口的前提条件是Lite Server实例已创建且处于运行状态，用户具有重启实例的权限。重启操作完成后，Lite Server实例将重新启动并进入运行状态，用户可以继续使用实例提供的服务。若Lite Server实例不存在、已处于停止状态或用户无权限操作，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) RebootDevServer(request *model.RebootDevServerRequest) (*model.RebootDevServerResponse, error) {
-	requestDef := GenReqDefForRebootDevServer()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.RebootDevServerResponse), nil
-	}
-}
-
-// RebootDevServerInvoker 重启Lite Server实例
-func (c *ModelArtsClient) RebootDevServerInvoker(request *model.RebootDevServerRequest) *RebootDevServerInvoker {
-	requestDef := GenReqDefForRebootDevServer()
-	return &RebootDevServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ReinstallDevServerOS 重装Lite Server服务器操作系统镜像
-//
-// 重装Lite Server服务器操作系统镜像接口用于重新安装Lite Server服务器的操作系统镜像。该接口适用于以下场景：当用户需要更新操作系统版本、修复系统故障或重新配置系统环境时，可以通过此接口重装指定的Lite Server服务器操作系统镜像。使用该接口的前提条件是Lite Server服务器已存在且处于停止状态，用户具有重装操作系统的权限。重装操作完成后，Lite Server服务器将安装新的操作系统镜像，并重新进入运行状态，若Lite Server服务器不存在、已处于运行状态或用户无权限操作，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) ReinstallDevServerOS(request *model.ReinstallDevServerOsRequest) (*model.ReinstallDevServerOsResponse, error) {
-	requestDef := GenReqDefForReinstallDevServerOS()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ReinstallDevServerOsResponse), nil
-	}
-}
-
-// ReinstallDevServerOSInvoker 重装Lite Server服务器操作系统镜像
-func (c *ModelArtsClient) ReinstallDevServerOSInvoker(request *model.ReinstallDevServerOsRequest) *ReinstallDevServerOSInvoker {
-	requestDef := GenReqDefForReinstallDevServerOS()
-	return &ReinstallDevServerOSInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ScaleDownHyperinstance 缩容Lite Server超节点
-//
-// 缩容Lite Server超节点接口用于减少Lite Server超节点的资源容量。该接口适用于以下场景：当用户需要降低Lite Server超节点的资源使用，以节省成本或优化资源分配时，可以通过此接口进行缩容。使用该接口的前提条件是用户已登录并具有缩容超节点的权限，且指定的超节点已存在且处于运行状态。缩容操作完成后，超节点的资源容量将根据指定的规格进行调整，用户可以立即使用减少后的资源。若用户无权限操作、指定的超节点不存在、超节点已处于最小容量或指定的缩容规格无效，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) ScaleDownHyperinstance(request *model.ScaleDownHyperinstanceRequest) (*model.ScaleDownHyperinstanceResponse, error) {
-	requestDef := GenReqDefForScaleDownHyperinstance()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ScaleDownHyperinstanceResponse), nil
-	}
-}
-
-// ScaleDownHyperinstanceInvoker 缩容Lite Server超节点
-func (c *ModelArtsClient) ScaleDownHyperinstanceInvoker(request *model.ScaleDownHyperinstanceRequest) *ScaleDownHyperinstanceInvoker {
-	requestDef := GenReqDefForScaleDownHyperinstance()
-	return &ScaleDownHyperinstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ScaleUpHyperinstance 扩容Lite Server超节点
-//
-// 扩容Lite Server超节点接口用于增加Lite Server超节点的资源容量。该接口适用于以下场景：当用户需要提升Lite Server超节点的性能，以支持更多的负载或更大的数据处理需求时，可以通过此接口进行扩容。使用该接口的前提条件是用户已登录并具有扩容超节点的权限，且指定的超节点已存在且处于运行状态。扩容操作完成后，超节点的资源容量将根据指定的规格进行调整，用户可以立即使用增加的资源。若用户无权限操作、指定的超节点不存在、超节点已处于最大容量或指定的扩容规格无效，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) ScaleUpHyperinstance(request *model.ScaleUpHyperinstanceRequest) (*model.ScaleUpHyperinstanceResponse, error) {
-	requestDef := GenReqDefForScaleUpHyperinstance()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ScaleUpHyperinstanceResponse), nil
-	}
-}
-
-// ScaleUpHyperinstanceInvoker 扩容Lite Server超节点
-func (c *ModelArtsClient) ScaleUpHyperinstanceInvoker(request *model.ScaleUpHyperinstanceRequest) *ScaleUpHyperinstanceInvoker {
-	requestDef := GenReqDefForScaleUpHyperinstance()
-	return &ScaleUpHyperinstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowDevServer 查询Lite Server实例详情
-//
-// 查询Lite Server实例详情接口用于获取指定Lite Server实例的详细信息。该接口适用于以下场景：用户需要查看特定Lite Server实例的配置、状态、网络信息等详细数据，以便进行故障排查、资源管理和监控。使用该接口的前提条件是用户已登录且具有查看Lite Server实例的权限，并且需要提供有效的实例ID。查询操作完成后，系统将返回指定Lite Server实例的详细信息，包括实例ID、名称、状态、配置、网络配置等。若用户无权限、实例ID无效或实例不存在，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) ShowDevServer(request *model.ShowDevServerRequest) (*model.ShowDevServerResponse, error) {
-	requestDef := GenReqDefForShowDevServer()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowDevServerResponse), nil
-	}
-}
-
-// ShowDevServerInvoker 查询Lite Server实例详情
-func (c *ModelArtsClient) ShowDevServerInvoker(request *model.ShowDevServerRequest) *ShowDevServerInvoker {
-	requestDef := GenReqDefForShowDevServer()
-	return &ShowDevServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// StartDevServer 启动Lite Server实例
-//
-// 启动Lite Server实例接口用于启动已创建但未运行的Lite Server实例。该接口适用于以下场景：当用户需要开始使用Lite Server实例进行开发或测试时，可以通过此接口启动指定的Lite Server实例。使用该接口的前提条件是Lite Server实例已创建且处于停止状态，用户具有启动实例的权限。若Lite Server实例不存在、已处于运行状态或用户无权限操作，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) StartDevServer(request *model.StartDevServerRequest) (*model.StartDevServerResponse, error) {
-	requestDef := GenReqDefForStartDevServer()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.StartDevServerResponse), nil
-	}
-}
-
-// StartDevServerInvoker 启动Lite Server实例
-func (c *ModelArtsClient) StartDevServerInvoker(request *model.StartDevServerRequest) *StartDevServerInvoker {
-	requestDef := GenReqDefForStartDevServer()
-	return &StartDevServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// StartHyperinstance 启动Lite Server超节点服务器
-//
-// 启动Lite Server超节点服务器接口用于启动已创建但未运行的Lite Server超节点服务器。该接口适用于以下场景：当用户需要开始使用Lite Server超节点服务器进行开发或测试时，可以通过此接口启动指定的超节点服务器。使用该接口的前提条件是Lite Server超节点服务器已创建且处于停止状态，用户具有启动超节点服务器的权限。启动操作完成后，超节点服务器将进入运行状态，用户可以访问和使用服务器提供的服务。若Lite Server超节点服务器不存在、已处于运行状态或用户无权限操作，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) StartHyperinstance(request *model.StartHyperinstanceRequest) (*model.StartHyperinstanceResponse, error) {
-	requestDef := GenReqDefForStartHyperinstance()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.StartHyperinstanceResponse), nil
-	}
-}
-
-// StartHyperinstanceInvoker 启动Lite Server超节点服务器
-func (c *ModelArtsClient) StartHyperinstanceInvoker(request *model.StartHyperinstanceRequest) *StartHyperinstanceInvoker {
-	requestDef := GenReqDefForStartHyperinstance()
-	return &StartHyperinstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// StopDevServer 停止Lite Server实例
-//
-// 停止Lite Server实例接口用于停止正在运行的Lite Server实例。该接口适用于以下场景：当用户需要停止Lite Server实例，以节省资源或进行维护时，可以通过此接口停止指定的Lite Server实例。使用该接口的前提条件是Lite Server实例已创建且处于运行状态，用户具有停止实例的权限。若Lite Server实例不存在、已处于停止状态或用户无权限操作，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) StopDevServer(request *model.StopDevServerRequest) (*model.StopDevServerResponse, error) {
-	requestDef := GenReqDefForStopDevServer()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.StopDevServerResponse), nil
-	}
-}
-
-// StopDevServerInvoker 停止Lite Server实例
-func (c *ModelArtsClient) StopDevServerInvoker(request *model.StopDevServerRequest) *StopDevServerInvoker {
-	requestDef := GenReqDefForStopDevServer()
-	return &StopDevServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// StopHyperinstance 停止Lite Server超节点服务器
-//
-// 停止Lite Server超节点服务器接口用于停止正在运行的Lite Server超节点服务器。该接口适用于以下场景：当用户需要暂停使用Lite Server超节点服务器，以节省资源或进行维护时，可以通过此接口停止指定的超节点服务器。使用该接口的前提条件是Lite Server超节点服务器已创建且处于运行状态或者停止失败状态，用户具有停止超节点服务器的权限。停止操作完成后，超节点服务器将进入停止状态，不再提供服务。若Lite Server超节点服务器不存在、已处于停止状态或用户无权限操作，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) StopHyperinstance(request *model.StopHyperinstanceRequest) (*model.StopHyperinstanceResponse, error) {
-	requestDef := GenReqDefForStopHyperinstance()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.StopHyperinstanceResponse), nil
-	}
-}
-
-// StopHyperinstanceInvoker 停止Lite Server超节点服务器
-func (c *ModelArtsClient) StopHyperinstanceInvoker(request *model.StopHyperinstanceRequest) *StopHyperinstanceInvoker {
-	requestDef := GenReqDefForStopHyperinstance()
-	return &StopHyperinstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// SyncDevServers 实时同步用户指定Lite Server实例状态
-//
-// 实时同步用户Lite Server实例状态接口用于实时获取并同步用户Lite Server实例的当前状态。该接口适用于以下场景：用户需要实时监控其Lite Server实例的运行状态，确保实例正常运行或及时发现并处理异常情况。使用该接口的前提条件是用户已登录并具有相应的权限，且Lite Server实例已创建并处于运行状态。接口调用成功后，将返回Lite Server实例的最新状态信息，包括但不限于实例ID、运行状态、资源使用情况等。若用户无权限操作或Lite Server实例不存在，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) SyncDevServers(request *model.SyncDevServersRequest) (*model.SyncDevServersResponse, error) {
-	requestDef := GenReqDefForSyncDevServers()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.SyncDevServersResponse), nil
-	}
-}
-
-// SyncDevServersInvoker 实时同步用户指定Lite Server实例状态
-func (c *ModelArtsClient) SyncDevServersInvoker(request *model.SyncDevServersRequest) *SyncDevServersInvoker {
-	requestDef := GenReqDefForSyncDevServers()
-	return &SyncDevServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateDevServer 修改Lite Server实例名称
-//
-// 修改DevServer实例名称接口用于更改已创建的DevServer实例的名称。该接口适用于以下场景：当用户需要对DevServer实例进行重命名以更好地反映实例的功能或用途时，或者在实例名称不再符合当前项目命名规范时进行更新。使用该接口的前提条件是DevServer实例已存在且用户具有对该实例的管理权限。修改操作完成后，实例的新名称将立即生效，并在所有相关视图和记录中更新。若DevServer实例不存在、用户无权限操作或新名称不符合命名规则，接口将返回相应的错误信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) UpdateDevServer(request *model.UpdateDevServerRequest) (*model.UpdateDevServerResponse, error) {
-	requestDef := GenReqDefForUpdateDevServer()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateDevServerResponse), nil
-	}
-}
-
-// UpdateDevServerInvoker 修改Lite Server实例名称
-func (c *ModelArtsClient) UpdateDevServerInvoker(request *model.UpdateDevServerRequest) *UpdateDevServerInvoker {
-	requestDef := GenReqDefForUpdateDevServer()
-	return &UpdateDevServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateImage 通过运行的实例保存成容器镜像

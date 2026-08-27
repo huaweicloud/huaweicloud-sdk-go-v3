@@ -53,6 +53,9 @@ type PoolDesktopsDetailInfo struct {
 	// 任务状态。  - scheduling：创建中，正在进行调度。 - block_device_mapping：创建中，正在准备磁盘。 - networking：创建中，正在准备网络。 - spawning：创建中，正在内部创建。 - rebooting：重启中。 - reboot_pending：重启中，正在下发重启。 - reboot_started：重启中，开始内部重启。 - rebooting_hard：强制重启中。 - reboot_pending_hard：强制重启中，正在下发重启。 - reboot_started_hard：强制重启中，开始内部重启。 - rebuilding：重建中。 - rebuild_block_device_mapping：重建中，正在准备磁盘。 - rebuild_spawning：重建中，正在内部重建。 - migrating：热迁移中。 - resize_prep：调整规格中，正在准备阶段。 - resize_migrating：调整规格中，正在迁移阶段。 - resize_migrated：调整规格中，已经完成迁移。 - resize_finish：调整规格中，正在完成调整。 - resize_reverting：调整规格中，正在回退调整。 - powering-off：停止中。 - powering-on：启动中。 - deleting：删除中。 - deleteFailed：删除失败。 - updating: 更新中。 - desktopNetworkChanging: 切换网络中。
 	TaskStatus *string `json:"task_status,omitempty"`
 
+	// 加域状态。|- 1 正常。 2 脱域。 3 未上报。
+	DomainStatus *int32 `json:"domain_status,omitempty"`
+
 	// 是否处于维护模式,true表示维护模式，false表示不处于维护模式。
 	InMaintenanceMode *bool `json:"in_maintenance_mode,omitempty"`
 
@@ -151,6 +154,9 @@ type PoolDesktopsDetailInfo struct {
 
 	// 桌面分配的域。
 	Domain *string `json:"domain,omitempty"`
+
+	// agent版本。
+	AgentVersion *string `json:"agent_version,omitempty"`
 
 	// 桌面与桌面池不一致的规格类型: - PRODUCT: 产品ID不一致 - IMAGE: 镜像ID不一致
 	InconsistentTypes *[]string `json:"inconsistent_types,omitempty"`

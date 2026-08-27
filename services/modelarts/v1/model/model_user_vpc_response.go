@@ -26,6 +26,12 @@ type UserVpcResponse struct {
 
 	// **参数解释**：网卡ip。 **取值范围**：不涉及。
 	PortIp *string `json:"port_ip,omitempty"`
+
+	// **参数解释**：NAT ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+	NatId *string `json:"nat_id,omitempty"`
+
+	// **参数解释**：EIP ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+	EipId *string `json:"eip_id,omitempty"`
 }
 
 func (o UserVpcResponse) String() string {

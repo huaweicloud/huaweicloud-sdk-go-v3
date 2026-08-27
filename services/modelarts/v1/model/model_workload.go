@@ -39,6 +39,9 @@ type Workload struct {
 	// **参数解释**：作业状态。 **取值范围**：不涉及。
 	Status *string `json:"status,omitempty"`
 
+	// **参数解释**：作业创建者。 **取值范围**：不涉及。
+	UserName *string `json:"userName,omitempty"`
+
 	ResourceRequirement *WorkloadResourceRequirement `json:"resourceRequirement,omitempty"`
 
 	// **参数解释**：作业的优先级。 **取值范围**：不涉及。

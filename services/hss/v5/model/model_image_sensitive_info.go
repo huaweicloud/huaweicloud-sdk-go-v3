@@ -29,7 +29,7 @@ type ImageSensitiveInfo struct {
 	// **参数解释**: 敏感信息内容 **取值范围**: 字符长度0-128位
 	Content *string `json:"content,omitempty"`
 
-	// **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值2147483647
+	// **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值9223372036854775807
 	LatestScanTime *int64 `json:"latest_scan_time,omitempty"`
 
 	// **参数解释**: 是否已处理 **取值范围**: - unhandled：未处理。 - handled：已处理。

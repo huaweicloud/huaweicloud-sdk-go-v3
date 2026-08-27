@@ -11,7 +11,7 @@ import (
 
 type NotebookCreateRequest struct {
 
-	// **参数解释**：实例描述信息。 **约束限制**：不涉及。 **取值范围**：长度限制为512字符，且不能包含字符&<>\"'/。 **默认取值**：不涉及。
+	// **参数解释**：实例描述信息。 **约束限制**：不涉及。 **取值范围**：长度限制为512字符，不可包含特殊字符<>，缺省值为空。 **默认取值**：不涉及。
 	Description *string `json:"description,omitempty"`
 
 	// **参数解释**：仅在本地IDE（如PyCharm、VS Code）或SSH客户端接入Notebook。 **约束限制**：仅在本地IDE（如PyCharm、VS Code）或SSH客户端，通过SSH远程接入Notebook实例时需要的相关配置。
@@ -28,7 +28,7 @@ type NotebookCreateRequest struct {
 	// **参数解释**：待创建Notebook实例的镜像，需要指定镜像ID。ID格式为通用唯一识别码（Universally Unique Identifier，简称UUID）。镜像的ID可通过调用[[查询支持的镜像列表](https://support.huaweicloud.com/api-modelarts/ListImage.html)](tag:hc)[[查询支持的镜像列表](https://support.huaweicloud.com/intl/zh-cn/api-modelarts/ListImage.html)](tag:hk)接口获取。 **约束限制**：不涉及。 **取值范围**：调用[[查询支持的镜像列表](https://support.huaweicloud.com/api-modelarts/ListImage.html)](tag:hc)[[查询支持的镜像列表](https://support.huaweicloud.com/intl/zh-cn/api-modelarts/ListImage.html)](tag:hk)接口获取的合法镜像ID列表。 **默认取值**：不涉及。
 	ImageId string `json:"image_id"`
 
-	// **参数解释**：实例名称。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符，支持大小写字母、数字、中划线和下划线，名称可重复。 **默认取值**：不涉及。
+	// **参数解释**：实例名称。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符， 支持大小写字母、数字、中划线、下划线和中文，名称可重复。 **默认取值**：不涉及。
 	Name string `json:"name"`
 
 	// **参数解释**：专属资源池ID，若需要指定专属资源池创建实例时必填。专属资源池ID可通过[[查询资源池列表](https://support.huaweicloud.com/api-modelarts/ListPools.html)](tag:hc)[[查询资源池列表](https://support.huaweicloud.com/intl/zh-cn/api-modelarts/ListPools.html)](tag:hk)接口获取。 **约束限制**：不涉及。 **取值范围**：调用[[查询资源池列表](https://support.huaweicloud.com/api-modelarts/ListPools.html)](tag:hc)[[查询资源池列表](https://support.huaweicloud.com/intl/zh-cn/api-modelarts/ListPools.html)](tag:hk)接口获取的合法资源池ID列表。 **默认取值**：不涉及。
@@ -54,6 +54,8 @@ type NotebookCreateRequest struct {
 
 	// **参数解释**：定时停止，以当前时刻为起点，运行的时长（到期后自动停止）。单位：毫秒。 **约束限制**：不涉及。 **取值范围**：3600000-259200000。 **默认取值**：3600000。
 	Duration *int32 `json:"duration,omitempty"`
+
+	PublicNetworkConfig *PublicNetworkConfig `json:"public_network_config,omitempty"`
 }
 
 func (o NotebookCreateRequest) String() string {

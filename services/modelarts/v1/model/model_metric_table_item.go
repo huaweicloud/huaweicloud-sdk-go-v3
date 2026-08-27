@@ -10,6 +10,10 @@ type MetricTableItem struct {
 	Allocated *Allocated `json:"allocated,omitempty"`
 
 	Capacity *Capacity `json:"capacity,omitempty"`
+
+	Available *Available `json:"available,omitempty"`
+
+	Workload *WorkloadInfo `json:"workload,omitempty"`
 }
 
 func (o MetricTableItem) String() string {

@@ -1225,10 +1225,12 @@ type ListEventTopRiskInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListEventTopRiskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListEventTopRiskInvoker) Invoke() (*model.ListEventTopRiskResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -5721,10 +5723,12 @@ type BatchScanSwrImageInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *BatchScanSwrImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *BatchScanSwrImageInvoker) Invoke() (*model.BatchScanSwrImageResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -5753,10 +5757,12 @@ type ChangeFilePathWhiteDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ChangeFilePathWhiteDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ChangeFilePathWhiteDetailInvoker) Invoke() (*model.ChangeFilePathWhiteDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -6297,10 +6303,12 @@ type ListSwrImageRepositoryInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListSwrImageRepositoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListSwrImageRepositoryInvoker) Invoke() (*model.ListSwrImageRepositoryResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -6393,10 +6401,12 @@ type RunImageSynchronizeInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *RunImageSynchronizeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *RunImageSynchronizeInvoker) Invoke() (*model.RunImageSynchronizeResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -6425,10 +6435,12 @@ type ShowFilePathWhiteDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowFilePathWhiteDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowFilePathWhiteDetailInvoker) Invoke() (*model.ShowFilePathWhiteDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -7689,10 +7701,12 @@ type ListServerlessAssetInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListServerlessAssetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListServerlessAssetInvoker) Invoke() (*model.ListServerlessAssetResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -7705,10 +7719,12 @@ type ListServerlessAssetDetailInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListServerlessAssetDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListServerlessAssetDetailInvoker) Invoke() (*model.ListServerlessAssetDetailResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err

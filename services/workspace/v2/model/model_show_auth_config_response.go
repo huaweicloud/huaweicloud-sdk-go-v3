@@ -32,6 +32,8 @@ type ShowAuthConfigResponse struct {
 	// 短信验证码登录开关。
 	SmsLoginEnabled *bool `json:"sms_login_enabled,omitempty"`
 
+	LoginCaptcha *LoginCaptchaConfig `json:"login_captcha,omitempty"`
+
 	Saml2AuthConfig *Saml2AuthConfig `json:"saml2_auth_config,omitempty"`
 	HttpStatusCode  int              `json:"-"`
 }

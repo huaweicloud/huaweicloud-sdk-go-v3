@@ -9,6 +9,12 @@ import (
 // Entities entities字段数据结构说明
 type Entities struct {
 
+	// 裸金属服务器相关操作显示server_id
+	ServerId *string `json:"server_id,omitempty"`
+
+	// 网卡相关操作显示nic_id
+	NicId *string `json:"nic_id,omitempty"`
+
 	// 子任务数量。没有子任务时为0
 	SubJobsTotal *int32 `json:"sub_jobs_total,omitempty"`
 

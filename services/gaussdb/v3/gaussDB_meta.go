@@ -100,6 +100,30 @@ func GenReqDefForBatchTagAction() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchUpdateBackupPolicy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/instances/backups/policy").
+		WithResponse(new(model.BatchUpdateBackupPolicyResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchUpgradeDatabases() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -215,6 +239,26 @@ func GenReqDefForChangeGaussMySqlProxySpecification() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCheckKernelUpgrade() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/instances/database-version/upgrade/pre-check").
+		WithResponse(new(model.CheckKernelUpgradeResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCheckResource() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -254,6 +298,35 @@ func GenReqDefForCheckScheduleTaskExist() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForClearOnlineDdlTaskTempTable() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/instances/{instance_id}/online-ddl-task/clear").
+		WithResponse(new(model.ClearOnlineDdlTaskTempTableResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -921,6 +994,31 @@ func GenReqDefForDeleteLtsConfigs() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForDeleteOnlineDdlTaskRecord() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v3/{project_id}/instances/{instance_id}/online-ddl-task").
+		WithResponse(new(model.DeleteOnlineDdlTaskRecordResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForDeleteProxyPrivateDnsName() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
@@ -1090,6 +1188,35 @@ func GenReqDefForDownloadDdlLogs() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDownloadOnlineDdlTaskLog() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/instances/{instance_id}/online-ddl-task/log/download").
+		WithResponse(new(model.DownloadOnlineDdlTaskLogResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1317,6 +1444,36 @@ func GenReqDefForListAuditLogs() *def.HttpRequestDef {
 		WithName("EndTime").
 		WithJsonTag("end_time").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListColdTableMetas() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3.1/{project_id}/instances/{instance_id}/cold-tables/meta").
+		WithResponse(new(model.ListColdTableMetasResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
 		WithJsonTag("offset").
@@ -1990,6 +2147,44 @@ func GenReqDefForListModifyHistory() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListOnlineDdlTaskRecords() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/instances/{instance_id}/operation-records").
+		WithResponse(new(model.ListOnlineDdlTaskRecordsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("StartTime").
+		WithJsonTag("start_time").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EndTime").
+		WithJsonTag("end_time").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListParamsTemplateApplyHistory() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -2623,6 +2818,55 @@ func GenReqDefForSetGaussMySqlQuotas() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForSetInstanceReadonlyStatus() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3/{project_id}/instances/{instance_id}/readonly-status").
+		WithResponse(new(model.SetInstanceReadonlyStatusResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForSetInstanceScheduleEvents() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/schedule-events").
+		WithResponse(new(model.SetInstanceScheduleEventsResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -3513,6 +3757,59 @@ func GenReqDefForShowInstanceMonitorExtend() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowInstanceScheduleEvents() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/schedule-events").
+		WithResponse(new(model.ShowInstanceScheduleEventsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Status").
+		WithJsonTag("status").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Type").
+		WithJsonTag("type").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Level").
+		WithJsonTag("level").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SortField").
+		WithJsonTag("sort_field").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Order").
+		WithJsonTag("order").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowIntelligentDiagnosisAbnormalCountOfInstances() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -3579,6 +3876,26 @@ func GenReqDefForShowIntelligentKillSessionStatistic() *def.HttpRequestDef {
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
 		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowKernelUpgradeCheckResult() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/instances/database-version/upgrade/pre-check-result").
+		WithResponse(new(model.ShowKernelUpgradeCheckResultResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -4205,6 +4522,60 @@ func GenReqDefForShowTaskDetails() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowTaurusDbAdvancedBackupPolicy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/instances/{instance_id}/backups/advanced-policy").
+		WithResponse(new(model.ShowTaurusDbAdvancedBackupPolicyResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowTaurusDbTxnProgress() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/instances/{instance_id}/nodes/{node_id}/txn-progress").
+		WithResponse(new(model.ShowTaurusDbTxnProgressResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("NodeId").
+		WithJsonTag("node_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShrinkGaussMySqlProxy() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -4224,6 +4595,64 @@ func GenReqDefForShrinkGaussMySqlProxy() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
 		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForStartOnlineDdlTask() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/instances/{instance_id}/online-ddl-task").
+		WithResponse(new(model.StartOnlineDdlTaskResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForStopOnlineDdlTask() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/instances/{instance_id}/online-ddl-task/stop").
+		WithResponse(new(model.StopOnlineDdlTaskResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
 		WithLocationType(def.Header))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -5271,6 +5700,35 @@ func GenReqDefForUpdateSqlFilterControl() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForUpdateTaurusDbAdvancedBackupPolicy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3/{project_id}/instances/{instance_id}/backups/advanced-policy").
+		WithResponse(new(model.UpdateTaurusDbAdvancedBackupPolicyResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("InstanceId").
+		WithJsonTag("instance_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateTaurusNodeDataIp() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -5316,6 +5774,35 @@ func GenReqDefForUpdateTransactionSplitStatus() *def.HttpRequestDef {
 		WithJsonTag("instance_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XLanguage").
+		WithJsonTag("X-Language").
+		WithLocationType(def.Header))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpgradeConfiguration() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3/{project_id}/configurations/{configuration_id}/upgrade").
+		WithResponse(new(model.UpgradeConfigurationResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ConfigurationId").
+		WithJsonTag("configuration_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContentType").
+		WithJsonTag("Content-Type").
+		WithLocationType(def.Header))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("XLanguage").
 		WithJsonTag("X-Language").

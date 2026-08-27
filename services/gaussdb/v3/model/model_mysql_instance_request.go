@@ -69,6 +69,11 @@ type MysqlInstanceRequest struct {
 	RestorePoint *MysqlRestorePoint `json:"restore_point,omitempty"`
 
 	TdeInfo *MysqlTdeInfo `json:"tde_info,omitempty"`
+
+	// **参数解释**：  是否打开本地Binlog日志。  **约束限制**：  不涉及。  **取值范围**：  - true: 打开。 - false: 关闭。  **默认取值**：  false。
+	EnableBinlog *bool `json:"enable_binlog,omitempty"`
+
+	VolumeAutoExpand *MysqlVolumeAutoExpandPolicy `json:"volume_auto_expand,omitempty"`
 }
 
 func (o MysqlInstanceRequest) String() string {

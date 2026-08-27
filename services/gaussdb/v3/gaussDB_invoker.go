@@ -69,6 +69,22 @@ func (i *BatchTagActionInvoker) Invoke() (*model.BatchTagActionResponse, error) 
 	}
 }
 
+type BatchUpdateBackupPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateBackupPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateBackupPolicyInvoker) Invoke() (*model.BatchUpdateBackupPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateBackupPolicyResponse), nil
+	}
+}
+
 type BatchUpgradeDatabasesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -149,6 +165,22 @@ func (i *ChangeGaussMySqlProxySpecificationInvoker) Invoke() (*model.ChangeGauss
 	}
 }
 
+type CheckKernelUpgradeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckKernelUpgradeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckKernelUpgradeInvoker) Invoke() (*model.CheckKernelUpgradeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckKernelUpgradeResponse), nil
+	}
+}
+
 type CheckResourceInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -178,6 +210,22 @@ func (i *CheckScheduleTaskExistInvoker) Invoke() (*model.CheckScheduleTaskExistR
 		return nil, err
 	} else {
 		return result.(*model.CheckScheduleTaskExistResponse), nil
+	}
+}
+
+type ClearOnlineDdlTaskTempTableInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ClearOnlineDdlTaskTempTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ClearOnlineDdlTaskTempTableInvoker) Invoke() (*model.ClearOnlineDdlTaskTempTableResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ClearOnlineDdlTaskTempTableResponse), nil
 	}
 }
 
@@ -613,6 +661,22 @@ func (i *DeleteLtsConfigsInvoker) Invoke() (*model.DeleteLtsConfigsResponse, err
 	}
 }
 
+type DeleteOnlineDdlTaskRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteOnlineDdlTaskRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteOnlineDdlTaskRecordInvoker) Invoke() (*model.DeleteOnlineDdlTaskRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteOnlineDdlTaskRecordResponse), nil
+	}
+}
+
 type DeleteProxyPrivateDnsNameInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -722,6 +786,22 @@ func (i *DownloadDdlLogsInvoker) Invoke() (*model.DownloadDdlLogsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.DownloadDdlLogsResponse), nil
+	}
+}
+
+type DownloadOnlineDdlTaskLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadOnlineDdlTaskLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadOnlineDdlTaskLogInvoker) Invoke() (*model.DownloadOnlineDdlTaskLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadOnlineDdlTaskLogResponse), nil
 	}
 }
 
@@ -850,6 +930,22 @@ func (i *ListAuditLogsInvoker) Invoke() (*model.ListAuditLogsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListAuditLogsResponse), nil
+	}
+}
+
+type ListColdTableMetasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListColdTableMetasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListColdTableMetasInvoker) Invoke() (*model.ListColdTableMetasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListColdTableMetasResponse), nil
 	}
 }
 
@@ -1174,6 +1270,22 @@ func (i *ListModifyHistoryInvoker) Invoke() (*model.ListModifyHistoryResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ListModifyHistoryResponse), nil
+	}
+}
+
+type ListOnlineDdlTaskRecordsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOnlineDdlTaskRecordsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListOnlineDdlTaskRecordsInvoker) Invoke() (*model.ListOnlineDdlTaskRecordsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOnlineDdlTaskRecordsResponse), nil
 	}
 }
 
@@ -1542,6 +1654,38 @@ func (i *SetGaussMySqlQuotasInvoker) Invoke() (*model.SetGaussMySqlQuotasRespons
 		return nil, err
 	} else {
 		return result.(*model.SetGaussMySqlQuotasResponse), nil
+	}
+}
+
+type SetInstanceReadonlyStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetInstanceReadonlyStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetInstanceReadonlyStatusInvoker) Invoke() (*model.SetInstanceReadonlyStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetInstanceReadonlyStatusResponse), nil
+	}
+}
+
+type SetInstanceScheduleEventsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetInstanceScheduleEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetInstanceScheduleEventsInvoker) Invoke() (*model.SetInstanceScheduleEventsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetInstanceScheduleEventsResponse), nil
 	}
 }
 
@@ -2075,6 +2219,22 @@ func (i *ShowInstanceMonitorExtendInvoker) Invoke() (*model.ShowInstanceMonitorE
 	}
 }
 
+type ShowInstanceScheduleEventsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceScheduleEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceScheduleEventsInvoker) Invoke() (*model.ShowInstanceScheduleEventsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceScheduleEventsResponse), nil
+	}
+}
+
 type ShowIntelligentDiagnosisAbnormalCountOfInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2120,6 +2280,22 @@ func (i *ShowIntelligentKillSessionStatisticInvoker) Invoke() (*model.ShowIntell
 		return nil, err
 	} else {
 		return result.(*model.ShowIntelligentKillSessionStatisticResponse), nil
+	}
+}
+
+type ShowKernelUpgradeCheckResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowKernelUpgradeCheckResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowKernelUpgradeCheckResultInvoker) Invoke() (*model.ShowKernelUpgradeCheckResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowKernelUpgradeCheckResultResponse), nil
 	}
 }
 
@@ -2475,6 +2651,38 @@ func (i *ShowTaskDetailsInvoker) Invoke() (*model.ShowTaskDetailsResponse, error
 	}
 }
 
+type ShowTaurusDbAdvancedBackupPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTaurusDbAdvancedBackupPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTaurusDbAdvancedBackupPolicyInvoker) Invoke() (*model.ShowTaurusDbAdvancedBackupPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTaurusDbAdvancedBackupPolicyResponse), nil
+	}
+}
+
+type ShowTaurusDbTxnProgressInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTaurusDbTxnProgressInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTaurusDbTxnProgressInvoker) Invoke() (*model.ShowTaurusDbTxnProgressResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTaurusDbTxnProgressResponse), nil
+	}
+}
+
 type ShrinkGaussMySqlProxyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2488,6 +2696,38 @@ func (i *ShrinkGaussMySqlProxyInvoker) Invoke() (*model.ShrinkGaussMySqlProxyRes
 		return nil, err
 	} else {
 		return result.(*model.ShrinkGaussMySqlProxyResponse), nil
+	}
+}
+
+type StartOnlineDdlTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartOnlineDdlTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StartOnlineDdlTaskInvoker) Invoke() (*model.StartOnlineDdlTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartOnlineDdlTaskResponse), nil
+	}
+}
+
+type StopOnlineDdlTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopOnlineDdlTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StopOnlineDdlTaskInvoker) Invoke() (*model.StopOnlineDdlTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopOnlineDdlTaskResponse), nil
 	}
 }
 
@@ -3099,6 +3339,22 @@ func (i *UpdateSqlFilterControlInvoker) Invoke() (*model.UpdateSqlFilterControlR
 	}
 }
 
+type UpdateTaurusDbAdvancedBackupPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTaurusDbAdvancedBackupPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateTaurusDbAdvancedBackupPolicyInvoker) Invoke() (*model.UpdateTaurusDbAdvancedBackupPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTaurusDbAdvancedBackupPolicyResponse), nil
+	}
+}
+
 type UpdateTaurusNodeDataIpInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3128,6 +3384,22 @@ func (i *UpdateTransactionSplitStatusInvoker) Invoke() (*model.UpdateTransaction
 		return nil, err
 	} else {
 		return result.(*model.UpdateTransactionSplitStatusResponse), nil
+	}
+}
+
+type UpgradeConfigurationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpgradeConfigurationInvoker) Invoke() (*model.UpgradeConfigurationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeConfigurationResponse), nil
 	}
 }
 

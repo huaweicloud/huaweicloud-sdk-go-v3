@@ -13,8 +13,8 @@ type ShowTrainingJobFlavorsResponse struct {
 	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 训练作业资源规格列表。
-	Flavors        *[]FlavorResponse `json:"flavors,omitempty"`
-	HttpStatusCode int               `json:"-"`
+	Flavors        *[]FlavorResponseWithSupport `json:"flavors,omitempty"`
+	HttpStatusCode int                          `json:"-"`
 }
 
 func (o ShowTrainingJobFlavorsResponse) String() string {

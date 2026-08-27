@@ -57,6 +57,9 @@ type ListPoolDesktopsDetailRequest struct {
 	// 桌面的标签。样例：  - key1=value1。 - key1=value1，key2=value2。
 	Tag *string `json:"tag,omitempty"`
 
+	// 加域状态。|- 1 正常。 2 脱域。 3 未上报。
+	DomainStatus *ListPoolDesktopsDetailRequestDomainStatus `json:"domain_status,omitempty"`
+
 	// 是否分配了用户。
 	UserAttached *bool `json:"user_attached,omitempty"`
 
@@ -247,5 +250,54 @@ func (c *ListPoolDesktopsDetailRequestSortType) UnmarshalJSON(b []byte) error {
 		return nil
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListPoolDesktopsDetailRequestDomainStatus struct {
+	value int32
+}
+
+type ListPoolDesktopsDetailRequestDomainStatusEnum struct {
+	E_1 ListPoolDesktopsDetailRequestDomainStatus
+	E_2 ListPoolDesktopsDetailRequestDomainStatus
+	E_3 ListPoolDesktopsDetailRequestDomainStatus
+}
+
+func GetListPoolDesktopsDetailRequestDomainStatusEnum() ListPoolDesktopsDetailRequestDomainStatusEnum {
+	return ListPoolDesktopsDetailRequestDomainStatusEnum{
+		E_1: ListPoolDesktopsDetailRequestDomainStatus{
+			value: 1,
+		}, E_2: ListPoolDesktopsDetailRequestDomainStatus{
+			value: 2,
+		}, E_3: ListPoolDesktopsDetailRequestDomainStatus{
+			value: 3,
+		},
+	}
+}
+
+func (c ListPoolDesktopsDetailRequestDomainStatus) Value() int32 {
+	return c.value
+}
+
+func (c ListPoolDesktopsDetailRequestDomainStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListPoolDesktopsDetailRequestDomainStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }

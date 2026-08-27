@@ -11,6 +11,8 @@ type UpdateAuthConfigReq struct {
 
 	// 是否开启短信登录。
 	SmsLoginEnabled *bool `json:"sms_login_enabled,omitempty"`
+
+	LoginCaptcha *LoginCaptchaConfig `json:"login_captcha,omitempty"`
 }
 
 func (o UpdateAuthConfigReq) String() string {

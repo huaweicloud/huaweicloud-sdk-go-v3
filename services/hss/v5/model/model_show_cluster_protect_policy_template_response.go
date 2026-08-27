@@ -27,7 +27,7 @@ type ShowClusterProtectPolicyTemplateResponse struct {
 	// **参数解释**: 标签 **取值范围**: 字符长度0-2048
 	Tag *string `json:"tag,omitempty"`
 
-	// **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
+	// **参数解释**: 推荐级别 **取值范围**: 字符长度1-6
 	Level *string `json:"level,omitempty"`
 
 	// **参数解释**: 策略模板内容 **取值范围**: 字符长度1-65535

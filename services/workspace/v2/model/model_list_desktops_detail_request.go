@@ -18,6 +18,9 @@ type ListDesktopsDetailRequest struct {
 	// 桌面所属用户，当传user_names时，本字段不生效。
 	UserName *string `json:"user_name,omitempty"`
 
+	// 用户ID。
+	UserId *string `json:"user_id,omitempty"`
+
 	// 桌面所属用户，批量筛选，最多不超过100个用户。
 	UserNames *[]string `json:"user_names,omitempty"`
 
@@ -47,6 +50,9 @@ type ListDesktopsDetailRequest struct {
 
 	// 桌面类型，为空时查所有桌面。 - DEDICATED：普通桌面，包括专享桌面、专属桌面等 - POOLED：池桌面，即桌面池里的桌面
 	DesktopType *string `json:"desktop_type,omitempty"`
+
+	// 加域状态。|- 1 正常。 2 脱域。 3 未上报。
+	DomainStatus *ListDesktopsDetailRequestDomainStatus `json:"domain_status,omitempty"`
 
 	// 桌面的标签。样例：  - key1=value1。 - key1=value1，key2=value2。
 	Tag *string `json:"tag,omitempty"`
@@ -80,6 +86,9 @@ type ListDesktopsDetailRequest struct {
 
 	// 查询可用区。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
+
+	// agent版本。
+	AgentVersion *string `json:"agent_version,omitempty"`
 }
 
 func (o ListDesktopsDetailRequest) String() string {
@@ -182,5 +191,54 @@ func (c *ListDesktopsDetailRequestSortType) UnmarshalJSON(b []byte) error {
 		return nil
 	} else {
 		return errors.New("convert enum data to string error")
+	}
+}
+
+type ListDesktopsDetailRequestDomainStatus struct {
+	value int32
+}
+
+type ListDesktopsDetailRequestDomainStatusEnum struct {
+	E_1 ListDesktopsDetailRequestDomainStatus
+	E_2 ListDesktopsDetailRequestDomainStatus
+	E_3 ListDesktopsDetailRequestDomainStatus
+}
+
+func GetListDesktopsDetailRequestDomainStatusEnum() ListDesktopsDetailRequestDomainStatusEnum {
+	return ListDesktopsDetailRequestDomainStatusEnum{
+		E_1: ListDesktopsDetailRequestDomainStatus{
+			value: 1,
+		}, E_2: ListDesktopsDetailRequestDomainStatus{
+			value: 2,
+		}, E_3: ListDesktopsDetailRequestDomainStatus{
+			value: 3,
+		},
+	}
+}
+
+func (c ListDesktopsDetailRequestDomainStatus) Value() int32 {
+	return c.value
+}
+
+func (c ListDesktopsDetailRequestDomainStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListDesktopsDetailRequestDomainStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
 	}
 }

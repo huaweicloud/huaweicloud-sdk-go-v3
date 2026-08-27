@@ -3,6 +3,9 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
+	"errors"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
+
 	"strings"
 )
 
@@ -23,6 +26,9 @@ type ListDesktopsRequest struct {
 
 	// 用于分页查询，取值范围0-1000，默认值1000。
 	Limit *int32 `json:"limit,omitempty"`
+
+	// 加域状态。|- 1 正常。 2 脱域。 3 未上报。
+	DomainStatus *ListDesktopsRequestDomainStatus `json:"domain_status,omitempty"`
 
 	// 桌面池ID,多个桌面池ID用逗号隔开。
 	PoolId *string `json:"pool_id,omitempty"`
@@ -56,4 +62,53 @@ func (o ListDesktopsRequest) String() string {
 	}
 
 	return strings.Join([]string{"ListDesktopsRequest", string(data)}, " ")
+}
+
+type ListDesktopsRequestDomainStatus struct {
+	value int32
+}
+
+type ListDesktopsRequestDomainStatusEnum struct {
+	E_1 ListDesktopsRequestDomainStatus
+	E_2 ListDesktopsRequestDomainStatus
+	E_3 ListDesktopsRequestDomainStatus
+}
+
+func GetListDesktopsRequestDomainStatusEnum() ListDesktopsRequestDomainStatusEnum {
+	return ListDesktopsRequestDomainStatusEnum{
+		E_1: ListDesktopsRequestDomainStatus{
+			value: 1,
+		}, E_2: ListDesktopsRequestDomainStatus{
+			value: 2,
+		}, E_3: ListDesktopsRequestDomainStatus{
+			value: 3,
+		},
+	}
+}
+
+func (c ListDesktopsRequestDomainStatus) Value() int32 {
+	return c.value
+}
+
+func (c ListDesktopsRequestDomainStatus) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *ListDesktopsRequestDomainStatus) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("int32")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: int32")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(int32); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to int32 error")
+	}
 }

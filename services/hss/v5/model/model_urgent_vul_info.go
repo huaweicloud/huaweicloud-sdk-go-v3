@@ -29,7 +29,7 @@ type UrgentVulInfo struct {
 	// **参数解释**： 解决方案 **取值范围**： 字符长度0-65534位
 	SolutionDetail *string `json:"solution_detail,omitempty"`
 
-	// **参数解释**： 漏洞描述 **取值范围**： 字符长度0-64位
+	// **参数解释**： 漏洞描述 **取值范围**： 字符长度0-2048位
 	Description *string `json:"description,omitempty"`
 
 	// **参数解释**： 漏洞扫描状态 **约束限制**: 不涉及 **取值范围**： - never_scan : 未扫描 - scanning : 扫描中 - finished : 扫描完成  **默认取值**: 不涉及

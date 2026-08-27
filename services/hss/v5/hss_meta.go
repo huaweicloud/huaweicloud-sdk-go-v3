@@ -2235,6 +2235,14 @@ func GenReqDefForListContainerNodes() *def.HttpRequestDef {
 		WithName("ContainerTags").
 		WithJsonTag("container_tags").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ContainerNode").
+		WithJsonTag("container_node").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Version").
+		WithJsonTag("version").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Region").

@@ -14,6 +14,9 @@ type EnlargeProxyRequest struct {
 
 	// 数据库代理ID。  如果实例只开启了一个代理，可不传该参数；如果实例开启了多个代理，则必须指定一个数据库代理，扩容新的代理节点。
 	ProxyId *string `json:"proxy_id,omitempty"`
+
+	// **参数解释**：  数据库代理节点的可用区设置。  **约束限制**：  不传该字段，代理节点可用区将随机设置，优先与数据库节点可用区保持一致；传入该字段，代理节点将设置在指定可用区。
+	ProxyNodesAzList *[]string `json:"proxy_nodes_az_list,omitempty"`
 }
 
 func (o EnlargeProxyRequest) String() string {

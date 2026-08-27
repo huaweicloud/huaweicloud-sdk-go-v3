@@ -271,6 +271,69 @@ func (c *WorkspaceClient) ListAgenciesInvoker(request *model.ListAgenciesRequest
 	return &ListAgenciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAgentInstances 查询 Agent 实例列表
+//
+// 查询 Agent 实例列表，支持多条件筛选、排序和分页。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListAgentInstances(request *model.ListAgentInstancesRequest) (*model.ListAgentInstancesResponse, error) {
+	requestDef := GenReqDefForListAgentInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAgentInstancesResponse), nil
+	}
+}
+
+// ListAgentInstancesInvoker 查询 Agent 实例列表
+func (c *WorkspaceClient) ListAgentInstancesInvoker(request *model.ListAgentInstancesRequest) *ListAgentInstancesInvoker {
+	requestDef := GenReqDefForListAgentInstances()
+	return &ListAgentInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstanceModelGroups 查询 Agent 实例关联的模型分组列表
+//
+// 根据 Agent 实例 ID 查询其关联的所有模型分组，按优先级升序排列，支持分页。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListInstanceModelGroups(request *model.ListInstanceModelGroupsRequest) (*model.ListInstanceModelGroupsResponse, error) {
+	requestDef := GenReqDefForListInstanceModelGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceModelGroupsResponse), nil
+	}
+}
+
+// ListInstanceModelGroupsInvoker 查询 Agent 实例关联的模型分组列表
+func (c *WorkspaceClient) ListInstanceModelGroupsInvoker(request *model.ListInstanceModelGroupsRequest) *ListInstanceModelGroupsInvoker {
+	requestDef := GenReqDefForListInstanceModelGroups()
+	return &ListInstanceModelGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstanceStatistics 查询 Agent 实例统计信息
+//
+// 查询 Agent 实例统计信息，包括桌面总数、未配置模型桌面数、未配置通道桌面数、存在风险桌面数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListInstanceStatistics(request *model.ListInstanceStatisticsRequest) (*model.ListInstanceStatisticsResponse, error) {
+	requestDef := GenReqDefForListInstanceStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceStatisticsResponse), nil
+	}
+}
+
+// ListInstanceStatisticsInvoker 查询 Agent 实例统计信息
+func (c *WorkspaceClient) ListInstanceStatisticsInvoker(request *model.ListInstanceStatisticsRequest) *ListInstanceStatisticsInvoker {
+	requestDef := GenReqDefForListInstanceStatistics()
+	return &ListInstanceStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSubscribeAiAssistantUsers 查询订阅AI助手的项目，用户组，用户列表
 //
 // 查询订阅AI助手的项目，用户组，用户列表
@@ -1468,6 +1531,27 @@ func (c *WorkspaceClient) ShowCertDetailInvoker(request *model.ShowCertDetailReq
 	return &ShowCertDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCheckDesktopRejoinDomain 批量检查加域
+//
+// 该接口用于批量检查桌面是否支持重新加入AD域。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) BatchCheckDesktopRejoinDomain(request *model.BatchCheckDesktopRejoinDomainRequest) (*model.BatchCheckDesktopRejoinDomainResponse, error) {
+	requestDef := GenReqDefForBatchCheckDesktopRejoinDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCheckDesktopRejoinDomainResponse), nil
+	}
+}
+
+// BatchCheckDesktopRejoinDomainInvoker 批量检查加域
+func (c *WorkspaceClient) BatchCheckDesktopRejoinDomainInvoker(request *model.BatchCheckDesktopRejoinDomainRequest) *BatchCheckDesktopRejoinDomainInvoker {
+	requestDef := GenReqDefForBatchCheckDesktopRejoinDomain()
+	return &BatchCheckDesktopRejoinDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CheckDesktopImages 检查桌面镜像是否存在
 //
 // 用于校验指定桌面列表的桌面镜像，当前是否存在，如果存在返回对应的imageId，不存在就不返回。
@@ -1826,6 +1910,27 @@ func (c *WorkspaceClient) BatchRunDesktopsInvoker(request *model.BatchRunDesktop
 	return &BatchRunDesktopsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchUpdateDesktopDomain 批量重新加入AD域
+//
+// 该接口用于Windows桌面批量重新加入AD域，一般用于解决桌面脱域的情况使用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) BatchUpdateDesktopDomain(request *model.BatchUpdateDesktopDomainRequest) (*model.BatchUpdateDesktopDomainResponse, error) {
+	requestDef := GenReqDefForBatchUpdateDesktopDomain()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateDesktopDomainResponse), nil
+	}
+}
+
+// BatchUpdateDesktopDomainInvoker 批量重新加入AD域
+func (c *WorkspaceClient) BatchUpdateDesktopDomainInvoker(request *model.BatchUpdateDesktopDomainRequest) *BatchUpdateDesktopDomainInvoker {
+	requestDef := GenReqDefForBatchUpdateDesktopDomain()
+	return &BatchUpdateDesktopDomainInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CancelRemoteAssistance 取消远程协助
 //
 // 取消远程协助。
@@ -1994,6 +2099,27 @@ func (c *WorkspaceClient) DetachInstancesInvoker(request *model.DetachInstancesR
 	return &DetachInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExportDesktopVersionList 导出该版本的桌面列表
+//
+// 根据agent版本号、操作系统类型、桌面名称、用户名等条件导出桌面版本列表的Excel文件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ExportDesktopVersionList(request *model.ExportDesktopVersionListRequest) (*model.ExportDesktopVersionListResponse, error) {
+	requestDef := GenReqDefForExportDesktopVersionList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportDesktopVersionListResponse), nil
+	}
+}
+
+// ExportDesktopVersionListInvoker 导出该版本的桌面列表
+func (c *WorkspaceClient) ExportDesktopVersionListInvoker(request *model.ExportDesktopVersionListRequest) *ExportDesktopVersionListInvoker {
+	requestDef := GenReqDefForExportDesktopVersionList()
+	return &ExportDesktopVersionListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAgentsInstallCondition 查询桌面安装监控插件详情
 //
 // 展示桌面安装监控插件详情。
@@ -2055,6 +2181,48 @@ func (c *WorkspaceClient) ListDesktopDetachInfo(request *model.ListDesktopDetach
 func (c *WorkspaceClient) ListDesktopDetachInfoInvoker(request *model.ListDesktopDetachInfoRequest) *ListDesktopDetachInfoInvoker {
 	requestDef := GenReqDefForListDesktopDetachInfo()
 	return &ListDesktopDetachInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDesktopStatisticsByVersion 查询桌面版本统计信息
+//
+// 查询每个桌面版本下的桌面数量统计信息，支持按版本号过滤。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListDesktopStatisticsByVersion(request *model.ListDesktopStatisticsByVersionRequest) (*model.ListDesktopStatisticsByVersionResponse, error) {
+	requestDef := GenReqDefForListDesktopStatisticsByVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDesktopStatisticsByVersionResponse), nil
+	}
+}
+
+// ListDesktopStatisticsByVersionInvoker 查询桌面版本统计信息
+func (c *WorkspaceClient) ListDesktopStatisticsByVersionInvoker(request *model.ListDesktopStatisticsByVersionRequest) *ListDesktopStatisticsByVersionInvoker {
+	requestDef := GenReqDefForListDesktopStatisticsByVersion()
+	return &ListDesktopStatisticsByVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDesktopVersion 查询该版本的桌面列表
+//
+// 根据agent版本号、操作系统类型、桌面名称、用户名等条件查询桌面版本信息列表，支持分页查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListDesktopVersion(request *model.ListDesktopVersionRequest) (*model.ListDesktopVersionResponse, error) {
+	requestDef := GenReqDefForListDesktopVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDesktopVersionResponse), nil
+	}
+}
+
+// ListDesktopVersionInvoker 查询该版本的桌面列表
+func (c *WorkspaceClient) ListDesktopVersionInvoker(request *model.ListDesktopVersionRequest) *ListDesktopVersionInvoker {
+	requestDef := GenReqDefForListDesktopVersion()
+	return &ListDesktopVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListDesktops 查询桌面列表
@@ -3402,6 +3570,27 @@ func (c *WorkspaceClient) ExportUserGroupUsersNewInvoker(request *model.ExportUs
 	return &ExportUserGroupUsersNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExportHostsDetail 导出云办公主机列表
+//
+// 导出云办公主机列表的详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ExportHostsDetail(request *model.ExportHostsDetailRequest) (*model.ExportHostsDetailResponse, error) {
+	requestDef := GenReqDefForExportHostsDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportHostsDetailResponse), nil
+	}
+}
+
+// ExportHostsDetailInvoker 导出云办公主机列表
+func (c *WorkspaceClient) ExportHostsDetailInvoker(request *model.ExportHostsDetailRequest) *ExportHostsDetailInvoker {
+	requestDef := GenReqDefForExportHostsDetail()
+	return &ExportHostsDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListHostsDetail 查询云办公主机列表
 //
 // 展示云办公主机列表的详情。
@@ -3463,6 +3652,69 @@ func (c *WorkspaceClient) UpdateHosts(request *model.UpdateHostsRequest) (*model
 func (c *WorkspaceClient) UpdateHostsInvoker(request *model.UpdateHostsRequest) *UpdateHostsInvoker {
 	requestDef := GenReqDefForUpdateHosts()
 	return &UpdateHostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteImChannel 删除 IM 通道配置
+//
+// 删除指定 Agent 实例上某个平台的 IM 通道配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) DeleteImChannel(request *model.DeleteImChannelRequest) (*model.DeleteImChannelResponse, error) {
+	requestDef := GenReqDefForDeleteImChannel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteImChannelResponse), nil
+	}
+}
+
+// DeleteImChannelInvoker 删除 IM 通道配置
+func (c *WorkspaceClient) DeleteImChannelInvoker(request *model.DeleteImChannelRequest) *DeleteImChannelInvoker {
+	requestDef := GenReqDefForDeleteImChannel()
+	return &DeleteImChannelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListImChannels 查询 IM 通道配置列表
+//
+// 根据 Agent 实例主键 ID 查询其配置的 IM 通道列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListImChannels(request *model.ListImChannelsRequest) (*model.ListImChannelsResponse, error) {
+	requestDef := GenReqDefForListImChannels()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListImChannelsResponse), nil
+	}
+}
+
+// ListImChannelsInvoker 查询 IM 通道配置列表
+func (c *WorkspaceClient) ListImChannelsInvoker(request *model.ListImChannelsRequest) *ListImChannelsInvoker {
+	requestDef := GenReqDefForListImChannels()
+	return &ListImChannelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SaveImChannels 下发 IM 通道配置
+//
+// 配置 IM 通道（钉钉/企业微信/飞书/wework）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) SaveImChannels(request *model.SaveImChannelsRequest) (*model.SaveImChannelsResponse, error) {
+	requestDef := GenReqDefForSaveImChannels()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SaveImChannelsResponse), nil
+	}
+}
+
+// SaveImChannelsInvoker 下发 IM 通道配置
+func (c *WorkspaceClient) SaveImChannelsInvoker(request *model.SaveImChannelsRequest) *SaveImChannelsInvoker {
+	requestDef := GenReqDefForSaveImChannels()
+	return &SaveImChannelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListImages 查询产品镜像列表
@@ -3715,6 +3967,342 @@ func (c *WorkspaceClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJob
 func (c *WorkspaceClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoker {
 	requestDef := GenReqDefForShowJob()
 	return &ShowJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ApplyModelConfig 批量关联模型分组与资源（桌面/桌面标签）
+//
+// 批量关联模型分组与资源。支持根据模型分组关联桌面/桌面标签，也支持根据桌面/桌面标签关联模型分组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ApplyModelConfig(request *model.ApplyModelConfigRequest) (*model.ApplyModelConfigResponse, error) {
+	requestDef := GenReqDefForApplyModelConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ApplyModelConfigResponse), nil
+	}
+}
+
+// ApplyModelConfigInvoker 批量关联模型分组与资源（桌面/桌面标签）
+func (c *WorkspaceClient) ApplyModelConfigInvoker(request *model.ApplyModelConfigRequest) *ApplyModelConfigInvoker {
+	requestDef := GenReqDefForApplyModelConfig()
+	return &ApplyModelConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RemoveModelConfig 批量移除模型分组与资源的关联
+//
+// 批量移除模型分组与资源（桌面/桌面标签）的关联。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) RemoveModelConfig(request *model.RemoveModelConfigRequest) (*model.RemoveModelConfigResponse, error) {
+	requestDef := GenReqDefForRemoveModelConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoveModelConfigResponse), nil
+	}
+}
+
+// RemoveModelConfigInvoker 批量移除模型分组与资源的关联
+func (c *WorkspaceClient) RemoveModelConfigInvoker(request *model.RemoveModelConfigRequest) *RemoveModelConfigInvoker {
+	requestDef := GenReqDefForRemoveModelConfig()
+	return &RemoveModelConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchBindProviders 批量绑定供应商到模型组
+//
+// 批量添加供应商关联到指定模型分组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) BatchBindProviders(request *model.BatchBindProvidersRequest) (*model.BatchBindProvidersResponse, error) {
+	requestDef := GenReqDefForBatchBindProviders()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchBindProvidersResponse), nil
+	}
+}
+
+// BatchBindProvidersInvoker 批量绑定供应商到模型组
+func (c *WorkspaceClient) BatchBindProvidersInvoker(request *model.BatchBindProvidersRequest) *BatchBindProvidersInvoker {
+	requestDef := GenReqDefForBatchBindProviders()
+	return &BatchBindProvidersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteProviders 批量解绑供应商从模型组
+//
+// 批量移除供应商关联，当全部成功时返回200，部分成功时返回207。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) BatchDeleteProviders(request *model.BatchDeleteProvidersRequest) (*model.BatchDeleteProvidersResponse, error) {
+	requestDef := GenReqDefForBatchDeleteProviders()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteProvidersResponse), nil
+	}
+}
+
+// BatchDeleteProvidersInvoker 批量解绑供应商从模型组
+func (c *WorkspaceClient) BatchDeleteProvidersInvoker(request *model.BatchDeleteProvidersRequest) *BatchDeleteProvidersInvoker {
+	requestDef := GenReqDefForBatchDeleteProviders()
+	return &BatchDeleteProvidersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateModelGroup 新增模型组
+//
+// 新增模型组，支持同时关联供应商。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CreateModelGroup(request *model.CreateModelGroupRequest) (*model.CreateModelGroupResponse, error) {
+	requestDef := GenReqDefForCreateModelGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateModelGroupResponse), nil
+	}
+}
+
+// CreateModelGroupInvoker 新增模型组
+func (c *WorkspaceClient) CreateModelGroupInvoker(request *model.CreateModelGroupRequest) *CreateModelGroupInvoker {
+	requestDef := GenReqDefForCreateModelGroup()
+	return &CreateModelGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteModelGroup 删除模型组
+//
+// 删除模型组。如果模型组已被Agent实例或桌面标签授权绑定，禁止删除，返回422错误。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) DeleteModelGroup(request *model.DeleteModelGroupRequest) (*model.DeleteModelGroupResponse, error) {
+	requestDef := GenReqDefForDeleteModelGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteModelGroupResponse), nil
+	}
+}
+
+// DeleteModelGroupInvoker 删除模型组
+func (c *WorkspaceClient) DeleteModelGroupInvoker(request *model.DeleteModelGroupRequest) *DeleteModelGroupInvoker {
+	requestDef := GenReqDefForDeleteModelGroup()
+	return &DeleteModelGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListModelGroupProviders 查询模型组关联的供应商列表
+//
+// 分页查询模型组关联的供应商。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListModelGroupProviders(request *model.ListModelGroupProvidersRequest) (*model.ListModelGroupProvidersResponse, error) {
+	requestDef := GenReqDefForListModelGroupProviders()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListModelGroupProvidersResponse), nil
+	}
+}
+
+// ListModelGroupProvidersInvoker 查询模型组关联的供应商列表
+func (c *WorkspaceClient) ListModelGroupProvidersInvoker(request *model.ListModelGroupProvidersRequest) *ListModelGroupProvidersInvoker {
+	requestDef := GenReqDefForListModelGroupProviders()
+	return &ListModelGroupProvidersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListModelGroupResources 查询模型分组关联的应用对象列表
+//
+// 分页查询模型分组关联的应用对象（Agent实例或桌面标签）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListModelGroupResources(request *model.ListModelGroupResourcesRequest) (*model.ListModelGroupResourcesResponse, error) {
+	requestDef := GenReqDefForListModelGroupResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListModelGroupResourcesResponse), nil
+	}
+}
+
+// ListModelGroupResourcesInvoker 查询模型分组关联的应用对象列表
+func (c *WorkspaceClient) ListModelGroupResourcesInvoker(request *model.ListModelGroupResourcesRequest) *ListModelGroupResourcesInvoker {
+	requestDef := GenReqDefForListModelGroupResources()
+	return &ListModelGroupResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListModelGroups 查询模型组列表
+//
+// 查询模型组列表，支持模糊搜索。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListModelGroups(request *model.ListModelGroupsRequest) (*model.ListModelGroupsResponse, error) {
+	requestDef := GenReqDefForListModelGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListModelGroupsResponse), nil
+	}
+}
+
+// ListModelGroupsInvoker 查询模型组列表
+func (c *WorkspaceClient) ListModelGroupsInvoker(request *model.ListModelGroupsRequest) *ListModelGroupsInvoker {
+	requestDef := GenReqDefForListModelGroups()
+	return &ListModelGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowModelGroup 查询模型组详情
+//
+// 查询模型组详情，包含关联的供应商简化信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowModelGroup(request *model.ShowModelGroupRequest) (*model.ShowModelGroupResponse, error) {
+	requestDef := GenReqDefForShowModelGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowModelGroupResponse), nil
+	}
+}
+
+// ShowModelGroupInvoker 查询模型组详情
+func (c *WorkspaceClient) ShowModelGroupInvoker(request *model.ShowModelGroupRequest) *ShowModelGroupInvoker {
+	requestDef := GenReqDefForShowModelGroup()
+	return &ShowModelGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateModelGroup 更新模型组
+//
+// 更新模型组信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateModelGroup(request *model.UpdateModelGroupRequest) (*model.UpdateModelGroupResponse, error) {
+	requestDef := GenReqDefForUpdateModelGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateModelGroupResponse), nil
+	}
+}
+
+// UpdateModelGroupInvoker 更新模型组
+func (c *WorkspaceClient) UpdateModelGroupInvoker(request *model.UpdateModelGroupRequest) *UpdateModelGroupInvoker {
+	requestDef := GenReqDefForUpdateModelGroup()
+	return &UpdateModelGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateModel 批量新增模型
+//
+// 批量创建模型（供应商已存在后追加新增模型）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) BatchCreateModel(request *model.BatchCreateModelRequest) (*model.BatchCreateModelResponse, error) {
+	requestDef := GenReqDefForBatchCreateModel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateModelResponse), nil
+	}
+}
+
+// BatchCreateModelInvoker 批量新增模型
+func (c *WorkspaceClient) BatchCreateModelInvoker(request *model.BatchCreateModelRequest) *BatchCreateModelInvoker {
+	requestDef := GenReqDefForBatchCreateModel()
+	return &BatchCreateModelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteModel 批量删除模型
+//
+// 批量删除模型（支持部分失败）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) BatchDeleteModel(request *model.BatchDeleteModelRequest) (*model.BatchDeleteModelResponse, error) {
+	requestDef := GenReqDefForBatchDeleteModel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteModelResponse), nil
+	}
+}
+
+// BatchDeleteModelInvoker 批量删除模型
+func (c *WorkspaceClient) BatchDeleteModelInvoker(request *model.BatchDeleteModelRequest) *BatchDeleteModelInvoker {
+	requestDef := GenReqDefForBatchDeleteModel()
+	return &BatchDeleteModelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListModels 查询模型列表
+//
+// 获取指定供应商下的模型列表，支持分页。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListModels(request *model.ListModelsRequest) (*model.ListModelsResponse, error) {
+	requestDef := GenReqDefForListModels()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListModelsResponse), nil
+	}
+}
+
+// ListModelsInvoker 查询模型列表
+func (c *WorkspaceClient) ListModelsInvoker(request *model.ListModelsRequest) *ListModelsInvoker {
+	requestDef := GenReqDefForListModels()
+	return &ListModelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowModel 查询模型详情
+//
+// 获取模型详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowModel(request *model.ShowModelRequest) (*model.ShowModelResponse, error) {
+	requestDef := GenReqDefForShowModel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowModelResponse), nil
+	}
+}
+
+// ShowModelInvoker 查询模型详情
+func (c *WorkspaceClient) ShowModelInvoker(request *model.ShowModelRequest) *ShowModelInvoker {
+	requestDef := GenReqDefForShowModel()
+	return &ShowModelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateModel 更新模型
+//
+// 更新模型信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateModel(request *model.UpdateModelRequest) (*model.UpdateModelResponse, error) {
+	requestDef := GenReqDefForUpdateModel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateModelResponse), nil
+	}
+}
+
+// UpdateModelInvoker 更新模型
+func (c *WorkspaceClient) UpdateModelInvoker(request *model.UpdateModelRequest) *UpdateModelInvoker {
+	requestDef := GenReqDefForUpdateModel()
+	return &UpdateModelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListNatMappingConfigs 查询租户的NAT映射配置项
@@ -4851,6 +5439,174 @@ func (c *WorkspaceClient) UpdateTenantProfileInvoker(request *model.UpdateTenant
 	return &UpdateTenantProfileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateProvider 新增供应商配置
+//
+// 创建供应商，支持同时批量创建关联的模型。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CreateProvider(request *model.CreateProviderRequest) (*model.CreateProviderResponse, error) {
+	requestDef := GenReqDefForCreateProvider()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateProviderResponse), nil
+	}
+}
+
+// CreateProviderInvoker 新增供应商配置
+func (c *WorkspaceClient) CreateProviderInvoker(request *model.CreateProviderRequest) *CreateProviderInvoker {
+	requestDef := GenReqDefForCreateProvider()
+	return &CreateProviderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteProvider 删除供应商配置
+//
+// 删除供应商。删除成功后自动删除下属所有模型记录；触发模型重新下发事件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) DeleteProvider(request *model.DeleteProviderRequest) (*model.DeleteProviderResponse, error) {
+	requestDef := GenReqDefForDeleteProvider()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteProviderResponse), nil
+	}
+}
+
+// DeleteProviderInvoker 删除供应商配置
+func (c *WorkspaceClient) DeleteProviderInvoker(request *model.DeleteProviderRequest) *DeleteProviderInvoker {
+	requestDef := GenReqDefForDeleteProvider()
+	return &DeleteProviderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProviderTemplates 查询供应商模板列表
+//
+// 获取内置供应商模板列表（hw_maas、deepseek）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListProviderTemplates(request *model.ListProviderTemplatesRequest) (*model.ListProviderTemplatesResponse, error) {
+	requestDef := GenReqDefForListProviderTemplates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProviderTemplatesResponse), nil
+	}
+}
+
+// ListProviderTemplatesInvoker 查询供应商模板列表
+func (c *WorkspaceClient) ListProviderTemplatesInvoker(request *model.ListProviderTemplatesRequest) *ListProviderTemplatesInvoker {
+	requestDef := GenReqDefForListProviderTemplates()
+	return &ListProviderTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProviders 查询供应商配置列表
+//
+// 获取供应商列表，支持分页和多维度筛选。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListProviders(request *model.ListProvidersRequest) (*model.ListProvidersResponse, error) {
+	requestDef := GenReqDefForListProviders()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProvidersResponse), nil
+	}
+}
+
+// ListProvidersInvoker 查询供应商配置列表
+func (c *WorkspaceClient) ListProvidersInvoker(request *model.ListProvidersRequest) *ListProvidersInvoker {
+	requestDef := GenReqDefForListProviders()
+	return &ListProvidersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRemoteProviderModels 查询供应商远程模型列表
+//
+// 根据供应商配置查询第三方平台的可用模型列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListRemoteProviderModels(request *model.ListRemoteProviderModelsRequest) (*model.ListRemoteProviderModelsResponse, error) {
+	requestDef := GenReqDefForListRemoteProviderModels()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRemoteProviderModelsResponse), nil
+	}
+}
+
+// ListRemoteProviderModelsInvoker 查询供应商远程模型列表
+func (c *WorkspaceClient) ListRemoteProviderModelsInvoker(request *model.ListRemoteProviderModelsRequest) *ListRemoteProviderModelsInvoker {
+	requestDef := GenReqDefForListRemoteProviderModels()
+	return &ListRemoteProviderModelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProvider 查询供应商详情
+//
+// 获取供应商详情，包含关联的分组列表和下属模型列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowProvider(request *model.ShowProviderRequest) (*model.ShowProviderResponse, error) {
+	requestDef := GenReqDefForShowProvider()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProviderResponse), nil
+	}
+}
+
+// ShowProviderInvoker 查询供应商详情
+func (c *WorkspaceClient) ShowProviderInvoker(request *model.ShowProviderRequest) *ShowProviderInvoker {
+	requestDef := GenReqDefForShowProvider()
+	return &ShowProviderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateProvider 更新供应商配置
+//
+// 更新供应商信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateProvider(request *model.UpdateProviderRequest) (*model.UpdateProviderResponse, error) {
+	requestDef := GenReqDefForUpdateProvider()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateProviderResponse), nil
+	}
+}
+
+// UpdateProviderInvoker 更新供应商配置
+func (c *WorkspaceClient) UpdateProviderInvoker(request *model.UpdateProviderRequest) *UpdateProviderInvoker {
+	requestDef := GenReqDefForUpdateProvider()
+	return &UpdateProviderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// VerifyProvider 验证供应商配置
+//
+// 验证供应商连通性和 API Key 有效性。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) VerifyProvider(request *model.VerifyProviderRequest) (*model.VerifyProviderResponse, error) {
+	requestDef := GenReqDefForVerifyProvider()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.VerifyProviderResponse), nil
+	}
+}
+
+// VerifyProviderInvoker 验证供应商配置
+func (c *WorkspaceClient) VerifyProviderInvoker(request *model.VerifyProviderRequest) *VerifyProviderInvoker {
+	requestDef := GenReqDefForVerifyProvider()
+	return &VerifyProviderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowQuotaDetails 查询租户单个站点配额详情
 //
 // 查询租户单个站点配额详情。
@@ -5144,6 +5900,165 @@ func (c *WorkspaceClient) UpdateScheduledTasks(request *model.UpdateScheduledTas
 func (c *WorkspaceClient) UpdateScheduledTasksInvoker(request *model.UpdateScheduledTasksRequest) *UpdateScheduledTasksInvoker {
 	requestDef := GenReqDefForUpdateScheduledTasks()
 	return &UpdateScheduledTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateUpgradeScheduleTask 创建升级定时任务
+//
+// 创建升级任务，支持配置定时任务、执行策略、灰度策略、应用对象等。
+// - 任务名称在当前项目下唯一
+// - 创建后默认按配置的定时规则执行
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CreateUpgradeScheduleTask(request *model.CreateUpgradeScheduleTaskRequest) (*model.CreateUpgradeScheduleTaskResponse, error) {
+	requestDef := GenReqDefForCreateUpgradeScheduleTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateUpgradeScheduleTaskResponse), nil
+	}
+}
+
+// CreateUpgradeScheduleTaskInvoker 创建升级定时任务
+func (c *WorkspaceClient) CreateUpgradeScheduleTaskInvoker(request *model.CreateUpgradeScheduleTaskRequest) *CreateUpgradeScheduleTaskInvoker {
+	requestDef := GenReqDefForCreateUpgradeScheduleTask()
+	return &CreateUpgradeScheduleTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteUpgradeTask 批量删除升级任务
+//
+// 批量删除指定的升级任务。
+// - 同时删除任务关联的应用对象信息
+// - 删除后不可恢复
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) DeleteUpgradeTask(request *model.DeleteUpgradeTaskRequest) (*model.DeleteUpgradeTaskResponse, error) {
+	requestDef := GenReqDefForDeleteUpgradeTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteUpgradeTaskResponse), nil
+	}
+}
+
+// DeleteUpgradeTaskInvoker 批量删除升级任务
+func (c *WorkspaceClient) DeleteUpgradeTaskInvoker(request *model.DeleteUpgradeTaskRequest) *DeleteUpgradeTaskInvoker {
+	requestDef := GenReqDefForDeleteUpgradeTask()
+	return &DeleteUpgradeTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteTriggerUpgrade 触发升级任务
+//
+// 根据配置参数触发桌面升级任务。
+// - 支持强制升级、版本指定、超时控制及通知功能
+// - 触发后立即执行，不受定时任务调度
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ExecuteTriggerUpgrade(request *model.ExecuteTriggerUpgradeRequest) (*model.ExecuteTriggerUpgradeResponse, error) {
+	requestDef := GenReqDefForExecuteTriggerUpgrade()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteTriggerUpgradeResponse), nil
+	}
+}
+
+// ExecuteTriggerUpgradeInvoker 触发升级任务
+func (c *WorkspaceClient) ExecuteTriggerUpgradeInvoker(request *model.ExecuteTriggerUpgradeRequest) *ExecuteTriggerUpgradeInvoker {
+	requestDef := GenReqDefForExecuteTriggerUpgrade()
+	return &ExecuteTriggerUpgradeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTaskApplyObjects 查询升级任务应用对象列表
+//
+// 分页查询指定任务下的应用对象列表。
+// - 支持按应用对象名称模糊匹配
+// - 按任务ID精确匹配
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListTaskApplyObjects(request *model.ListTaskApplyObjectsRequest) (*model.ListTaskApplyObjectsResponse, error) {
+	requestDef := GenReqDefForListTaskApplyObjects()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTaskApplyObjectsResponse), nil
+	}
+}
+
+// ListTaskApplyObjectsInvoker 查询升级任务应用对象列表
+func (c *WorkspaceClient) ListTaskApplyObjectsInvoker(request *model.ListTaskApplyObjectsRequest) *ListTaskApplyObjectsInvoker {
+	requestDef := GenReqDefForListTaskApplyObjects()
+	return &ListTaskApplyObjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUpgradeTasks 查询升级任务列表
+//
+// 分页查询升级任务列表。
+// - 支持按任务名称（模糊）、任务类型、执行周期类型、启用状态、上次执行状态条件查询
+// - 默认按创建时间倒序排序
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListUpgradeTasks(request *model.ListUpgradeTasksRequest) (*model.ListUpgradeTasksResponse, error) {
+	requestDef := GenReqDefForListUpgradeTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUpgradeTasksResponse), nil
+	}
+}
+
+// ListUpgradeTasksInvoker 查询升级任务列表
+func (c *WorkspaceClient) ListUpgradeTasksInvoker(request *model.ListUpgradeTasksRequest) *ListUpgradeTasksInvoker {
+	requestDef := GenReqDefForListUpgradeTasks()
+	return &ListUpgradeTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowUpgradeTaskDetail 查询升级任务详情
+//
+// 根据任务ID查询升级任务详情。
+// - 包括定时配置、执行策略、灰度配置、应用对象等完整信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowUpgradeTaskDetail(request *model.ShowUpgradeTaskDetailRequest) (*model.ShowUpgradeTaskDetailResponse, error) {
+	requestDef := GenReqDefForShowUpgradeTaskDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowUpgradeTaskDetailResponse), nil
+	}
+}
+
+// ShowUpgradeTaskDetailInvoker 查询升级任务详情
+func (c *WorkspaceClient) ShowUpgradeTaskDetailInvoker(request *model.ShowUpgradeTaskDetailRequest) *ShowUpgradeTaskDetailInvoker {
+	requestDef := GenReqDefForShowUpgradeTaskDetail()
+	return &ShowUpgradeTaskDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateUpgradeTask 修改升级任务
+//
+// 修改升级任务配置。
+// - 仅传入的字段会被更新，未传入的字段保持不变
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateUpgradeTask(request *model.UpdateUpgradeTaskRequest) (*model.UpdateUpgradeTaskResponse, error) {
+	requestDef := GenReqDefForUpdateUpgradeTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateUpgradeTaskResponse), nil
+	}
+}
+
+// UpdateUpgradeTaskInvoker 修改升级任务
+func (c *WorkspaceClient) UpdateUpgradeTaskInvoker(request *model.UpdateUpgradeTaskRequest) *UpdateUpgradeTaskInvoker {
+	requestDef := GenReqDefForUpdateUpgradeTask()
+	return &UpdateUpgradeTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchDeleteScreenRecords 批量删除录屏记录
@@ -5753,6 +6668,27 @@ func (c *WorkspaceClient) ListWksEdgeSites(request *model.ListWksEdgeSitesReques
 func (c *WorkspaceClient) ListWksEdgeSitesInvoker(request *model.ListWksEdgeSitesRequest) *ListWksEdgeSitesInvoker {
 	requestDef := GenReqDefForListWksEdgeSites()
 	return &ListWksEdgeSitesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetSiteAuthConfig 重置站点认证信息
+//
+// 重置站点认证信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ResetSiteAuthConfig(request *model.ResetSiteAuthConfigRequest) (*model.ResetSiteAuthConfigResponse, error) {
+	requestDef := GenReqDefForResetSiteAuthConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetSiteAuthConfigResponse), nil
+	}
+}
+
+// ResetSiteAuthConfigInvoker 重置站点认证信息
+func (c *WorkspaceClient) ResetSiteAuthConfigInvoker(request *model.ResetSiteAuthConfigRequest) *ResetSiteAuthConfigInvoker {
+	requestDef := GenReqDefForResetSiteAuthConfig()
+	return &ResetSiteAuthConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateAccessMode 修改站点接入方式
@@ -6402,6 +7338,208 @@ func (c *WorkspaceClient) UpdateTenantConfigInvoker(request *model.UpdateTenantC
 	return &UpdateTenantConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateTenantUpgradeStrategy 创建升级策略
+//
+// 创建升级策略，同时支持关联应用对象。
+// - 策略名称在当前项目下唯一
+// - 创建后默认按优先级参与升级匹配
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CreateTenantUpgradeStrategy(request *model.CreateTenantUpgradeStrategyRequest) (*model.CreateTenantUpgradeStrategyResponse, error) {
+	requestDef := GenReqDefForCreateTenantUpgradeStrategy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTenantUpgradeStrategyResponse), nil
+	}
+}
+
+// CreateTenantUpgradeStrategyInvoker 创建升级策略
+func (c *WorkspaceClient) CreateTenantUpgradeStrategyInvoker(request *model.CreateTenantUpgradeStrategyRequest) *CreateTenantUpgradeStrategyInvoker {
+	requestDef := GenReqDefForCreateTenantUpgradeStrategy()
+	return &CreateTenantUpgradeStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTenantUpgradeStrategy 批量删除升级策略
+//
+// 批量删除升级策略。
+// - 同时删除策略关联的应用对象信息
+// - 删除后不可恢复
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) DeleteTenantUpgradeStrategy(request *model.DeleteTenantUpgradeStrategyRequest) (*model.DeleteTenantUpgradeStrategyResponse, error) {
+	requestDef := GenReqDefForDeleteTenantUpgradeStrategy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTenantUpgradeStrategyResponse), nil
+	}
+}
+
+// DeleteTenantUpgradeStrategyInvoker 批量删除升级策略
+func (c *WorkspaceClient) DeleteTenantUpgradeStrategyInvoker(request *model.DeleteTenantUpgradeStrategyRequest) *DeleteTenantUpgradeStrategyInvoker {
+	requestDef := GenReqDefForDeleteTenantUpgradeStrategy()
+	return &DeleteTenantUpgradeStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportTenantUpgradeStrategies 导出升级策略列表
+//
+// 异步导出升级策略数据。
+// - 支持按策略名称、策略类型、是否强制升级、启用状态条件筛选
+// - 返回导出任务ID，通过任务ID查询导出结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ExportTenantUpgradeStrategies(request *model.ExportTenantUpgradeStrategiesRequest) (*model.ExportTenantUpgradeStrategiesResponse, error) {
+	requestDef := GenReqDefForExportTenantUpgradeStrategies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportTenantUpgradeStrategiesResponse), nil
+	}
+}
+
+// ExportTenantUpgradeStrategiesInvoker 导出升级策略列表
+func (c *WorkspaceClient) ExportTenantUpgradeStrategiesInvoker(request *model.ExportTenantUpgradeStrategiesRequest) *ExportTenantUpgradeStrategiesInvoker {
+	requestDef := GenReqDefForExportTenantUpgradeStrategies()
+	return &ExportTenantUpgradeStrategiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApplyObjects 查询升级策略应用对象列表
+//
+// 分页查询指定策略下的应用对象列表。
+// - 支持按应用对象名称模糊匹配
+// - 按策略ID精确匹配
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListApplyObjects(request *model.ListApplyObjectsRequest) (*model.ListApplyObjectsResponse, error) {
+	requestDef := GenReqDefForListApplyObjects()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListApplyObjectsResponse), nil
+	}
+}
+
+// ListApplyObjectsInvoker 查询升级策略应用对象列表
+func (c *WorkspaceClient) ListApplyObjectsInvoker(request *model.ListApplyObjectsRequest) *ListApplyObjectsInvoker {
+	requestDef := GenReqDefForListApplyObjects()
+	return &ListApplyObjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTenantUpgradeStrategies 查询升级策略列表
+//
+// 分页查询升级策略列表。
+// - 支持按策略名称（模糊/精确）、策略类型、是否强制升级、启用状态、优先级条件查询
+// - 默认按优先级升序排序
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListTenantUpgradeStrategies(request *model.ListTenantUpgradeStrategiesRequest) (*model.ListTenantUpgradeStrategiesResponse, error) {
+	requestDef := GenReqDefForListTenantUpgradeStrategies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTenantUpgradeStrategiesResponse), nil
+	}
+}
+
+// ListTenantUpgradeStrategiesInvoker 查询升级策略列表
+func (c *WorkspaceClient) ListTenantUpgradeStrategiesInvoker(request *model.ListTenantUpgradeStrategiesRequest) *ListTenantUpgradeStrategiesInvoker {
+	requestDef := GenReqDefForListTenantUpgradeStrategies()
+	return &ListTenantUpgradeStrategiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateStrategyApplyObjects 批量更新升级策略应用对象
+//
+// 批量操作指定策略关联的应用对象。
+// - 支持批量删除和批量新增两种操作类型
+// - operate_type为1时执行批量删除，operate_type为2时执行批量新增
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateStrategyApplyObjects(request *model.UpdateStrategyApplyObjectsRequest) (*model.UpdateStrategyApplyObjectsResponse, error) {
+	requestDef := GenReqDefForUpdateStrategyApplyObjects()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateStrategyApplyObjectsResponse), nil
+	}
+}
+
+// UpdateStrategyApplyObjectsInvoker 批量更新升级策略应用对象
+func (c *WorkspaceClient) UpdateStrategyApplyObjectsInvoker(request *model.UpdateStrategyApplyObjectsRequest) *UpdateStrategyApplyObjectsInvoker {
+	requestDef := GenReqDefForUpdateStrategyApplyObjects()
+	return &UpdateStrategyApplyObjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTenantUpgradeStrategy 修改升级策略
+//
+// 修改升级策略，同时支持更新关联的应用对象信息。
+// - 仅传入的字段会被更新，未传入的字段保持不变
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateTenantUpgradeStrategy(request *model.UpdateTenantUpgradeStrategyRequest) (*model.UpdateTenantUpgradeStrategyResponse, error) {
+	requestDef := GenReqDefForUpdateTenantUpgradeStrategy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTenantUpgradeStrategyResponse), nil
+	}
+}
+
+// UpdateTenantUpgradeStrategyInvoker 修改升级策略
+func (c *WorkspaceClient) UpdateTenantUpgradeStrategyInvoker(request *model.UpdateTenantUpgradeStrategyRequest) *UpdateTenantUpgradeStrategyInvoker {
+	requestDef := GenReqDefForUpdateTenantUpgradeStrategy()
+	return &UpdateTenantUpgradeStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTenantVersionConfig 查询版本列表
+//
+// 查询版本列表，支持按版本类型、版本号、操作系统类型、发布时间段、版本状态、版本说明条件查询。版本说明模糊查询会同时搜索SRE配置的版本说明和租户自定义的版本说明。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListTenantVersionConfig(request *model.ListTenantVersionConfigRequest) (*model.ListTenantVersionConfigResponse, error) {
+	requestDef := GenReqDefForListTenantVersionConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTenantVersionConfigResponse), nil
+	}
+}
+
+// ListTenantVersionConfigInvoker 查询版本列表
+func (c *WorkspaceClient) ListTenantVersionConfigInvoker(request *model.ListTenantVersionConfigRequest) *ListTenantVersionConfigInvoker {
+	requestDef := GenReqDefForListTenantVersionConfig()
+	return &ListTenantVersionConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTenantVersionConfig 查询版本详情
+//
+// 查询版本详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowTenantVersionConfig(request *model.ShowTenantVersionConfigRequest) (*model.ShowTenantVersionConfigResponse, error) {
+	requestDef := GenReqDefForShowTenantVersionConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTenantVersionConfigResponse), nil
+	}
+}
+
+// ShowTenantVersionConfigInvoker 查询版本详情
+func (c *WorkspaceClient) ShowTenantVersionConfigInvoker(request *model.ShowTenantVersionConfigRequest) *ShowTenantVersionConfigInvoker {
+	requestDef := GenReqDefForShowTenantVersionConfig()
+	return &ShowTenantVersionConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateTerminalsBindingDesktops 增加终端与桌面绑定配置
 //
 // 增加终端与桌面绑定配置。
@@ -6967,6 +8105,27 @@ func (c *WorkspaceClient) SetUserEventsLtsConfigurations(request *model.SetUserE
 func (c *WorkspaceClient) SetUserEventsLtsConfigurationsInvoker(request *model.SetUserEventsLtsConfigurationsRequest) *SetUserEventsLtsConfigurationsInvoker {
 	requestDef := GenReqDefForSetUserEventsLtsConfigurations()
 	return &SetUserEventsLtsConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportUserGroupsNew 导出用户组
+//
+// 以excel文件形式导出用户组。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ExportUserGroupsNew(request *model.ExportUserGroupsNewRequest) (*model.ExportUserGroupsNewResponse, error) {
+	requestDef := GenReqDefForExportUserGroupsNew()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportUserGroupsNewResponse), nil
+	}
+}
+
+// ExportUserGroupsNewInvoker 导出用户组
+func (c *WorkspaceClient) ExportUserGroupsNewInvoker(request *model.ExportUserGroupsNewRequest) *ExportUserGroupsNewInvoker {
+	requestDef := GenReqDefForExportUserGroupsNew()
+	return &ExportUserGroupsNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ExportUsersNew 导出用户

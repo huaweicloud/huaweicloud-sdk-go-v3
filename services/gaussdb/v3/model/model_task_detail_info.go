@@ -43,6 +43,9 @@ type TaskDetailInfo struct {
 
 	// **参数解释**：  是否支持通过[获取异步任务详情](https://support.huaweicloud.com/api-taurusdb/ShowTaskDetails.html)接口获取任务详情。  **取值范围**：  - true：是。 - false：否。
 	ShowDetail *bool `json:"show_detail,omitempty"`
+
+	// **参数解释**：  任务扩展字段，默认null。
+	ExtendFields map[string]interface{} `json:"extend_fields,omitempty"`
 }
 
 func (o TaskDetailInfo) String() string {

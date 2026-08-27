@@ -21,9 +21,9 @@ type ResourceFlavorSpec struct {
 	// **参数解释**：资源规格实例的内存大小。以Gi为单位。 **取值范围**：不涉及。
 	Memory *string `json:"memory,omitempty"`
 
-	Gpu *ResourceFlavorSpecGpu `json:"gpu,omitempty"`
+	Gpu *ResourceFlavorXpu `json:"gpu,omitempty"`
 
-	Npu *ResourceFlavorSpecNpu `json:"npu,omitempty"`
+	Npu *ResourceFlavorXpu `json:"npu,omitempty"`
 
 	// **参数解释**：资源规格实例的存储资源信息。
 	DataVolume *[]ResourceFlavorSpecDataVolume `json:"dataVolume,omitempty"`

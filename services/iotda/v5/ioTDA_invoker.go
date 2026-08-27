@@ -2165,6 +2165,86 @@ func (i *UpdatePropertiesInvoker) Invoke() (*model.UpdatePropertiesResponse, err
 	}
 }
 
+type CreateProtocolConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateProtocolConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateProtocolConfigInvoker) Invoke() (*model.CreateProtocolConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateProtocolConfigResponse), nil
+	}
+}
+
+type DeleteProtocolConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteProtocolConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteProtocolConfigInvoker) Invoke() (*model.DeleteProtocolConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteProtocolConfigResponse), nil
+	}
+}
+
+type ListProtocolConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListProtocolConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListProtocolConfigsInvoker) Invoke() (*model.ListProtocolConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListProtocolConfigsResponse), nil
+	}
+}
+
+type ShowProtocolConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowProtocolConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowProtocolConfigInvoker) Invoke() (*model.ShowProtocolConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowProtocolConfigResponse), nil
+	}
+}
+
+type UpdateProtocolConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateProtocolConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateProtocolConfigInvoker) Invoke() (*model.UpdateProtocolConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateProtocolConfigResponse), nil
+	}
+}
+
 type CreateProvisioningTemplateInvoker struct {
 	*invoker.BaseInvoker
 }

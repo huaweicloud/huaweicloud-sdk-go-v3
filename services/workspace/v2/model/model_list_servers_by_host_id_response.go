@@ -10,8 +10,11 @@ import (
 type ListServersByHostIdResponse struct {
 
 	// 计算机列表。
-	Servers        *[]ListServersRspServers `json:"servers,omitempty"`
-	HttpStatusCode int                      `json:"-"`
+	Servers *[]ListServersRspServers `json:"servers,omitempty"`
+
+	// 计算机实例总数。
+	Total          *int32 `json:"total,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListServersByHostIdResponse) String() string {

@@ -13,8 +13,8 @@ type ListScreenRecordsTrafficLimitConfigResponse struct {
 	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 录屏记录。
-	Configs        *[]ScreenRecordsConfigResultReqConfigs `json:"configs,omitempty"`
-	HttpStatusCode int                                    `json:"-"`
+	Configs        *[]UpdateScreenRecordsTrafficLimitConfigRequestBodyConfigs `json:"configs,omitempty"`
+	HttpStatusCode int                                                        `json:"-"`
 }
 
 func (o ListScreenRecordsTrafficLimitConfigResponse) String() string {

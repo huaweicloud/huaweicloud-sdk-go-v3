@@ -55,6 +55,9 @@ type Flavor struct {
 	Gpu *GpUsInfo `json:"gpu,omitempty"`
 
 	Ascend *AscendInfo `json:"ascend,omitempty"`
+
+	// **参数解释**：是否支持ENI挂载。
+	SupportEni *bool `json:"support_eni,omitempty"`
 }
 
 func (o Flavor) String() string {
