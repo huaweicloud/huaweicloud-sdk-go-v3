@@ -9,7 +9,10 @@ import (
 type UpdateSubscriptionRequestBody struct {
 
 	// 订阅者备注。订阅者备注的最大长度为128byte。
-	Remark string `json:"remark"`
+	Remark *string `json:"remark,omitempty"`
+
+	// 订阅终端收到的验证码。
+	VerificationCode *string `json:"verification_code,omitempty"`
 }
 
 func (o UpdateSubscriptionRequestBody) String() string {

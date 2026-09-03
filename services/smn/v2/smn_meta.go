@@ -488,12 +488,6 @@ func GenReqDefForDownloadHttpCert() *def.HttpRequestDef {
 		WithJsonTag("certificate_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("ContentType").
-		WithJsonTag("content-type").
-		WithKindName("string").
-		WithLocationType(def.Header))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -509,12 +503,6 @@ func GenReqDefForDownloadHttpSignCert() *def.HttpRequestDef {
 		WithName("CertificateId").
 		WithJsonTag("certificate_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("ContentType").
-		WithJsonTag("content-type").
-		WithKindName("string").
-		WithLocationType(def.Header))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

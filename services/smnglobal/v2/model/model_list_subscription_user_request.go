@@ -15,13 +15,13 @@ type ListSubscriptionUserRequest struct {
 	// 订阅用户名称。
 	Name *string `json:"name,omitempty"`
 
-	// 协议。 http：HTTP终端 https：HTTPS终端 sms：短信 email：邮件
+	// 协议。 http：HTTP终端 https：HTTPS终端 sms：短信 email：邮件 callnotify: 语音 wechat: 企业微信机器人 dingding: 钉钉群机器人 feishu: 飞书群机器人 welink: WeLink群机器人 ding_talk_bot: 个人钉钉协议
 	Protocol *ListSubscriptionUserRequestProtocol `json:"protocol,omitempty"`
 
 	// 订阅用户状态。 UNCONFIRMED：未确认 CONFIRMED：已确认 CANCELLED：已取消
 	Status *ListSubscriptionUserRequestStatus `json:"status,omitempty"`
 
-	// 订阅用户分组。
+	// 订阅用户分组。该字段支持模糊查询。
 	Group *string `json:"group,omitempty"`
 
 	// 偏移量。偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
@@ -45,10 +45,16 @@ type ListSubscriptionUserRequestProtocol struct {
 }
 
 type ListSubscriptionUserRequestProtocolEnum struct {
-	HTTP  ListSubscriptionUserRequestProtocol
-	HTTPS ListSubscriptionUserRequestProtocol
-	SMS   ListSubscriptionUserRequestProtocol
-	EMAIL ListSubscriptionUserRequestProtocol
+	HTTP          ListSubscriptionUserRequestProtocol
+	HTTPS         ListSubscriptionUserRequestProtocol
+	SMS           ListSubscriptionUserRequestProtocol
+	EMAIL         ListSubscriptionUserRequestProtocol
+	CALLNOTIFY    ListSubscriptionUserRequestProtocol
+	WECHAT        ListSubscriptionUserRequestProtocol
+	DINGDING      ListSubscriptionUserRequestProtocol
+	FEISHU        ListSubscriptionUserRequestProtocol
+	WELINK        ListSubscriptionUserRequestProtocol
+	DING_TALK_BOT ListSubscriptionUserRequestProtocol
 }
 
 func GetListSubscriptionUserRequestProtocolEnum() ListSubscriptionUserRequestProtocolEnum {
@@ -64,6 +70,24 @@ func GetListSubscriptionUserRequestProtocolEnum() ListSubscriptionUserRequestPro
 		},
 		EMAIL: ListSubscriptionUserRequestProtocol{
 			value: "email",
+		},
+		CALLNOTIFY: ListSubscriptionUserRequestProtocol{
+			value: "callnotify",
+		},
+		WECHAT: ListSubscriptionUserRequestProtocol{
+			value: "wechat",
+		},
+		DINGDING: ListSubscriptionUserRequestProtocol{
+			value: "dingding",
+		},
+		FEISHU: ListSubscriptionUserRequestProtocol{
+			value: "feishu",
+		},
+		WELINK: ListSubscriptionUserRequestProtocol{
+			value: "welink",
+		},
+		DING_TALK_BOT: ListSubscriptionUserRequestProtocol{
+			value: "ding_talk_bot",
 		},
 	}
 }

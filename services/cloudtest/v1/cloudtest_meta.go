@@ -34,6 +34,26 @@ func GenReqDefForAddCaseResultFour() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForAddOrUpdateTestsuiteInfoUsing() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/projects/{service_id}/testsuite").
+		WithResponse(new(model.AddOrUpdateTestsuiteInfoUsingResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ServiceId").
+		WithJsonTag("service_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForAddTestCaseComment() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -688,6 +708,30 @@ func GenReqDefForDeleteTestReportCustomDetailByUri() *def.HttpRequestDef {
 		WithName("CustomInfoUri").
 		WithJsonTag("custom_info_uri").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteTestsuiteInfosUsing() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/projects/{service_id}/testsuite").
+		WithResponse(new(model.DeleteTestsuiteInfosUsingResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ServiceId").
+		WithJsonTag("service_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -3005,6 +3049,31 @@ func GenReqDefForShowTestpointByPage() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowTestsuiteInfoUsing() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/projects/{service_id}/testsuite/{suite_id}").
+		WithResponse(new(model.ShowTestsuiteInfoUsingResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ServiceId").
+		WithJsonTag("service_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SuiteId").
+		WithJsonTag("suite_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PlanId").
+		WithJsonTag("planId").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowUserAccessInfo() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -3031,6 +3100,30 @@ func GenReqDefForShowUserExecuteTestCaseInfo() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
 		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForStartTestsuiteUsing() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/projects/{service_id}/testsuite/{suite_id}/start").
+		WithResponse(new(model.StartTestsuiteUsingResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ServiceId").
+		WithJsonTag("service_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SuiteId").
+		WithJsonTag("suite_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -3232,6 +3325,30 @@ func GenReqDefForUpdateTestReportCustomDetailByUri() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("CustomInfoUri").
 		WithJsonTag("custom_info_uri").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateTestsuiteInfoUsing() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/projects/{service_id}/testsuite/{suite_id}").
+		WithResponse(new(model.UpdateTestsuiteInfoUsingResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ServiceId").
+		WithJsonTag("service_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SuiteId").
+		WithJsonTag("suite_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

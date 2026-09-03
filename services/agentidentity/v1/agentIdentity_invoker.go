@@ -149,6 +149,22 @@ func (i *GetResourceStsTokenInvoker) Invoke() (*model.GetResourceStsTokenRespons
 	}
 }
 
+type ListIdentityProvidersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListIdentityProvidersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListIdentityProvidersInvoker) Invoke() (*model.ListIdentityProvidersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListIdentityProvidersResponse), nil
+	}
+}
+
 type Oauth2AuthorizeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -261,6 +277,182 @@ func (i *UpdateOauth2CredentialProviderInvoker) Invoke() (*model.UpdateOauth2Cre
 	}
 }
 
+type CreatePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreatePolicyInvoker) Invoke() (*model.CreatePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePolicyResponse), nil
+	}
+}
+
+type DeletePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeletePolicyInvoker) Invoke() (*model.DeletePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePolicyResponse), nil
+	}
+}
+
+type GetPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetPolicyInvoker) Invoke() (*model.GetPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetPolicyResponse), nil
+	}
+}
+
+type ListPoliciesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPoliciesInvoker) Invoke() (*model.ListPoliciesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPoliciesResponse), nil
+	}
+}
+
+type UpdatePolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePolicyInvoker) Invoke() (*model.UpdatePolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePolicyResponse), nil
+	}
+}
+
+type CreatePolicyEngineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePolicyEngineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreatePolicyEngineInvoker) Invoke() (*model.CreatePolicyEngineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePolicyEngineResponse), nil
+	}
+}
+
+type DeletePolicyEngineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePolicyEngineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeletePolicyEngineInvoker) Invoke() (*model.DeletePolicyEngineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePolicyEngineResponse), nil
+	}
+}
+
+type GetPolicyEngineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetPolicyEngineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetPolicyEngineInvoker) Invoke() (*model.GetPolicyEngineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetPolicyEngineResponse), nil
+	}
+}
+
+type ListPolicyEngineAttachmentsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPolicyEngineAttachmentsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPolicyEngineAttachmentsInvoker) Invoke() (*model.ListPolicyEngineAttachmentsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPolicyEngineAttachmentsResponse), nil
+	}
+}
+
+type ListPolicyEnginesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPolicyEnginesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPolicyEnginesInvoker) Invoke() (*model.ListPolicyEnginesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPolicyEnginesResponse), nil
+	}
+}
+
+type UpdatePolicyEngineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePolicyEngineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePolicyEngineInvoker) Invoke() (*model.UpdatePolicyEngineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePolicyEngineResponse), nil
+	}
+}
+
 type CreateStsCredentialProviderInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -354,6 +546,22 @@ func (i *GetTokenVaultInvoker) Invoke() (*model.GetTokenVaultResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.GetTokenVaultResponse), nil
+	}
+}
+
+type UpdateTokenVaultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTokenVaultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateTokenVaultInvoker) Invoke() (*model.UpdateTokenVaultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTokenVaultResponse), nil
 	}
 }
 

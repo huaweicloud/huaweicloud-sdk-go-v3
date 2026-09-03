@@ -60,6 +60,7 @@ func (c *EcsClient) AddServerGroupMemberInvoker(request *model.AddServerGroupMem
 	return &AddServerGroupMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // AssociateServerVirtualIp 云服务器网卡配置虚拟IP地址
 //
 // 虚拟IP地址用于为网卡提供第二个IP地址，同时支持与多个弹性云服务器的网卡绑定，从而实现多个弹性云服务器之间的高可用性。
@@ -81,6 +82,7 @@ func (c *EcsClient) AssociateServerVirtualIp(request *model.AssociateServerVirtu
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // AssociateServerVirtualIpInvoker 云服务器网卡配置虚拟IP地址
 func (c *EcsClient) AssociateServerVirtualIpInvoker(request *model.AssociateServerVirtualIpRequest) *AssociateServerVirtualIpInvoker {
 	requestDef := GenReqDefForAssociateServerVirtualIp()
@@ -108,6 +110,7 @@ func (c *EcsClient) AttachServerVolumeInvoker(request *model.AttachServerVolumeR
 	return &AttachServerVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchAddServerGroupMember 云服务器组批量添加成员
 //
 // 将云服务器加入云服务器组。添加成功后，该云服务器与云服务器组中的其他成员尽量分散地创建在不同主机上。
@@ -123,6 +126,7 @@ func (c *EcsClient) BatchAddServerGroupMember(request *model.BatchAddServerGroup
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchAddServerGroupMemberInvoker 云服务器组批量添加成员
 func (c *EcsClient) BatchAddServerGroupMemberInvoker(request *model.BatchAddServerGroupMemberRequest) *BatchAddServerGroupMemberInvoker {
 	requestDef := GenReqDefForBatchAddServerGroupMember()
@@ -194,6 +198,7 @@ func (c *EcsClient) BatchCreateServerTagsInvoker(request *model.BatchCreateServe
 	return &BatchCreateServerTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchDeleteServerGroupMember 云服务器组批量删除成员
 //
 // 将弹性云服务器移出云服务器组。移出后，该云服务器与云服务器组中的成员不再遵从反亲和策略。
@@ -209,6 +214,7 @@ func (c *EcsClient) BatchDeleteServerGroupMember(request *model.BatchDeleteServe
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchDeleteServerGroupMemberInvoker 云服务器组批量删除成员
 func (c *EcsClient) BatchDeleteServerGroupMemberInvoker(request *model.BatchDeleteServerGroupMemberRequest) *BatchDeleteServerGroupMemberInvoker {
 	requestDef := GenReqDefForBatchDeleteServerGroupMember()
@@ -807,6 +813,7 @@ func (c *EcsClient) DetachServerVolumeInvoker(request *model.DetachServerVolumeR
 	return &DetachServerVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DisassociateServerVirtualIp 云服务器网卡解绑虚拟IP地址
 //
 // 虚拟IP地址用于为网卡提供第二个IP地址，同时支持与多个弹性云服务器的网卡绑定，从而实现多个弹性云服务器之间的高可用性。
@@ -824,6 +831,7 @@ func (c *EcsClient) DisassociateServerVirtualIp(request *model.DisassociateServe
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DisassociateServerVirtualIpInvoker 云服务器网卡解绑虚拟IP地址
 func (c *EcsClient) DisassociateServerVirtualIpInvoker(request *model.DisassociateServerVirtualIpRequest) *DisassociateServerVirtualIpInvoker {
 	requestDef := GenReqDefForDisassociateServerVirtualIp()
@@ -1239,6 +1247,7 @@ func (c *EcsClient) MigrateServerInvoker(request *model.MigrateServerRequest) *M
 	return &MigrateServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaAssociateSecurityGroup 添加安全组
 //
 // 为弹性云服务器添加一个安全组。
@@ -1256,12 +1265,14 @@ func (c *EcsClient) NovaAssociateSecurityGroup(request *model.NovaAssociateSecur
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaAssociateSecurityGroupInvoker 添加安全组
 func (c *EcsClient) NovaAssociateSecurityGroupInvoker(request *model.NovaAssociateSecurityGroupRequest) *NovaAssociateSecurityGroupInvoker {
 	requestDef := GenReqDefForNovaAssociateSecurityGroup()
 	return &NovaAssociateSecurityGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaAttachInterface 添加云服务器网卡
 //
 // 给云服务器添加一张网卡。
@@ -1277,12 +1288,14 @@ func (c *EcsClient) NovaAttachInterface(request *model.NovaAttachInterfaceReques
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaAttachInterfaceInvoker 添加云服务器网卡
 func (c *EcsClient) NovaAttachInterfaceInvoker(request *model.NovaAttachInterfaceRequest) *NovaAttachInterfaceInvoker {
 	requestDef := GenReqDefForNovaAttachInterface()
 	return &NovaAttachInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaCreateKeypair 创建和导入SSH密钥
 //
 // 创建SSH密钥，或把公钥导入系统，生成密钥对。
@@ -1300,12 +1313,14 @@ func (c *EcsClient) NovaCreateKeypair(request *model.NovaCreateKeypairRequest) (
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaCreateKeypairInvoker 创建和导入SSH密钥
 func (c *EcsClient) NovaCreateKeypairInvoker(request *model.NovaCreateKeypairRequest) *NovaCreateKeypairInvoker {
 	requestDef := GenReqDefForNovaCreateKeypair()
 	return &NovaCreateKeypairInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaCreateServers 创建云服务器
 //
 // 创建一台弹性云服务器。
@@ -1325,12 +1340,14 @@ func (c *EcsClient) NovaCreateServers(request *model.NovaCreateServersRequest) (
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaCreateServersInvoker 创建云服务器
 func (c *EcsClient) NovaCreateServersInvoker(request *model.NovaCreateServersRequest) *NovaCreateServersInvoker {
 	requestDef := GenReqDefForNovaCreateServers()
 	return &NovaCreateServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaDeleteKeypair 删除SSH密钥
 //
 // 根据SSH密钥的名称，删除指定SSH密钥。
@@ -1346,12 +1363,14 @@ func (c *EcsClient) NovaDeleteKeypair(request *model.NovaDeleteKeypairRequest) (
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaDeleteKeypairInvoker 删除SSH密钥
 func (c *EcsClient) NovaDeleteKeypairInvoker(request *model.NovaDeleteKeypairRequest) *NovaDeleteKeypairInvoker {
 	requestDef := GenReqDefForNovaDeleteKeypair()
 	return &NovaDeleteKeypairInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaDeleteServer 删除云服务器
 //
 // 删除一台云服务器。
@@ -1367,12 +1386,14 @@ func (c *EcsClient) NovaDeleteServer(request *model.NovaDeleteServerRequest) (*m
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaDeleteServerInvoker 删除云服务器
 func (c *EcsClient) NovaDeleteServerInvoker(request *model.NovaDeleteServerRequest) *NovaDeleteServerInvoker {
 	requestDef := GenReqDefForNovaDeleteServer()
 	return &NovaDeleteServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaDisassociateSecurityGroup 移除安全组
 //
 // 移除弹性云服务器中的安全组。
@@ -1388,6 +1409,7 @@ func (c *EcsClient) NovaDisassociateSecurityGroup(request *model.NovaDisassociat
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaDisassociateSecurityGroupInvoker 移除安全组
 func (c *EcsClient) NovaDisassociateSecurityGroupInvoker(request *model.NovaDisassociateSecurityGroupRequest) *NovaDisassociateSecurityGroupInvoker {
 	requestDef := GenReqDefForNovaDisassociateSecurityGroup()
@@ -1417,6 +1439,7 @@ func (c *EcsClient) NovaListAvailabilityZonesInvoker(request *model.NovaListAvai
 	return &NovaListAvailabilityZonesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaListKeypairs 查询SSH密钥列表
 //
 // 查询SSH密钥信息列表。
@@ -1432,12 +1455,14 @@ func (c *EcsClient) NovaListKeypairs(request *model.NovaListKeypairsRequest) (*m
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaListKeypairsInvoker 查询SSH密钥列表
 func (c *EcsClient) NovaListKeypairsInvoker(request *model.NovaListKeypairsRequest) *NovaListKeypairsInvoker {
 	requestDef := GenReqDefForNovaListKeypairs()
 	return &NovaListKeypairsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaListServerSecurityGroups 查询指定云服务器安全组列表
 //
 // 查询指定弹性云服务器的安全组。
@@ -1453,12 +1478,14 @@ func (c *EcsClient) NovaListServerSecurityGroups(request *model.NovaListServerSe
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaListServerSecurityGroupsInvoker 查询指定云服务器安全组列表
 func (c *EcsClient) NovaListServerSecurityGroupsInvoker(request *model.NovaListServerSecurityGroupsRequest) *NovaListServerSecurityGroupsInvoker {
 	requestDef := GenReqDefForNovaListServerSecurityGroups()
 	return &NovaListServerSecurityGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaListServers 查询云服务器列表
 //
 // 查询云服务器信息列表。
@@ -1474,12 +1501,14 @@ func (c *EcsClient) NovaListServers(request *model.NovaListServersRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaListServersInvoker 查询云服务器列表
 func (c *EcsClient) NovaListServersInvoker(request *model.NovaListServersRequest) *NovaListServersInvoker {
 	requestDef := GenReqDefForNovaListServers()
 	return &NovaListServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaListServersDetails 查询云服务器详情列表
 //
 // 查询云服务器详情信息列表。
@@ -1495,12 +1524,14 @@ func (c *EcsClient) NovaListServersDetails(request *model.NovaListServersDetails
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaListServersDetailsInvoker 查询云服务器详情列表
 func (c *EcsClient) NovaListServersDetailsInvoker(request *model.NovaListServersDetailsRequest) *NovaListServersDetailsInvoker {
 	requestDef := GenReqDefForNovaListServersDetails()
 	return &NovaListServersDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaShowFlavorExtraSpecs 查询云服务器规格extra_specs的详情
 //
 // 查询指定的规格的详细信息。
@@ -1516,12 +1547,14 @@ func (c *EcsClient) NovaShowFlavorExtraSpecs(request *model.NovaShowFlavorExtraS
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaShowFlavorExtraSpecsInvoker 查询云服务器规格extra_specs的详情
 func (c *EcsClient) NovaShowFlavorExtraSpecsInvoker(request *model.NovaShowFlavorExtraSpecsRequest) *NovaShowFlavorExtraSpecsInvoker {
 	requestDef := GenReqDefForNovaShowFlavorExtraSpecs()
 	return &NovaShowFlavorExtraSpecsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaShowKeypair 查询SSH密钥详情
 //
 // 根据SSH密钥名称查询指定SSH密钥。
@@ -1537,12 +1570,14 @@ func (c *EcsClient) NovaShowKeypair(request *model.NovaShowKeypairRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaShowKeypairInvoker 查询SSH密钥详情
 func (c *EcsClient) NovaShowKeypairInvoker(request *model.NovaShowKeypairRequest) *NovaShowKeypairInvoker {
 	requestDef := GenReqDefForNovaShowKeypair()
 	return &NovaShowKeypairInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaShowServer 查询云服务器详情
 //
 // 根据云服务器ID，查询云服务器的详细信息。
@@ -1558,12 +1593,14 @@ func (c *EcsClient) NovaShowServer(request *model.NovaShowServerRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaShowServerInvoker 查询云服务器详情
 func (c *EcsClient) NovaShowServerInvoker(request *model.NovaShowServerRequest) *NovaShowServerInvoker {
 	requestDef := GenReqDefForNovaShowServer()
 	return &NovaShowServerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaShowServerInterface 查询指定云服务器网卡信息
 //
 // 根据网卡ID，查询云服务器网卡信息。
@@ -1579,12 +1616,14 @@ func (c *EcsClient) NovaShowServerInterface(request *model.NovaShowServerInterfa
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // NovaShowServerInterfaceInvoker 查询指定云服务器网卡信息
 func (c *EcsClient) NovaShowServerInterfaceInvoker(request *model.NovaShowServerInterfaceRequest) *NovaShowServerInterfaceInvoker {
 	requestDef := GenReqDefForNovaShowServerInterface()
 	return &NovaShowServerInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // RegisterServerMonitor 注册云服务器监控
 //
 // 将云服务器添加到监控表中。
@@ -1602,6 +1641,7 @@ func (c *EcsClient) RegisterServerMonitor(request *model.RegisterServerMonitorRe
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // RegisterServerMonitorInvoker 注册云服务器监控
 func (c *EcsClient) RegisterServerMonitorInvoker(request *model.RegisterServerMonitorRequest) *RegisterServerMonitorInvoker {
 	requestDef := GenReqDefForRegisterServerMonitor()

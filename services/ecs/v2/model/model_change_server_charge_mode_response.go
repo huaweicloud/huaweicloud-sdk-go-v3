@@ -10,7 +10,10 @@ import (
 type ChangeServerChargeModeResponse struct {
 
 	// 按需转包提交后返回的订单ID，用户可以使用该ID对订单结果进行查询。
-	OrderId        *string `json:"order_id,omitempty"`
+	OrderId *string `json:"order_id,omitempty"`
+
+	// 提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。
+	JobId          *string `json:"job_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

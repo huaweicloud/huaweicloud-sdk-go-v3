@@ -51,8 +51,7 @@ type ScheduleEventInfo struct {
 	// **参数解释**：  事件的执行时间。UTC，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  **取值范围**：  不涉及。
 	ExecuteTime *string `json:"execute_time,omitempty"`
 
-	// **参数解释**：  事件执行窗口。
-	ExecutionTimeWindow *interface{} `json:"execution_time_window,omitempty"`
+	ExecutionTimeWindow *ExecuteWindow `json:"execution_time_window,omitempty"`
 
 	// **参数解释**：  事件对象信息列表，包含事件对象ID和事件对象的执行状态
 	EventEntities *[]EventEntity `json:"event_entities,omitempty"`

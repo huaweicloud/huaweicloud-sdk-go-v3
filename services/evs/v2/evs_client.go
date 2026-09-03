@@ -89,6 +89,27 @@ func (c *EvsClient) BatchResizeVolumesInvoker(request *model.BatchResizeVolumesR
 	return &BatchResizeVolumesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ChangeVolumeChargeMode 修改云硬盘计费模式
+//
+// 将挂载状态下的云硬盘的计费模式有按需转成包周期，且到期时间和挂载的虚拟机保持一致。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) ChangeVolumeChargeMode(request *model.ChangeVolumeChargeModeRequest) (*model.ChangeVolumeChargeModeResponse, error) {
+	requestDef := GenReqDefForChangeVolumeChargeMode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeVolumeChargeModeResponse), nil
+	}
+}
+
+// ChangeVolumeChargeModeInvoker 修改云硬盘计费模式
+func (c *EvsClient) ChangeVolumeChargeModeInvoker(request *model.ChangeVolumeChargeModeRequest) *ChangeVolumeChargeModeInvoker {
+	requestDef := GenReqDefForChangeVolumeChargeMode()
+	return &ChangeVolumeChargeModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CinderAcceptVolumeTransfer 接受云硬盘过户
 //
 // 通过云硬盘过户记录ID以及身份认证密钥来接受云硬盘过户。

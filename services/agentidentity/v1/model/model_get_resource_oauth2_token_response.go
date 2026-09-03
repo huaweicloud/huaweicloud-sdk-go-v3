@@ -1,11 +1,10 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
-
 	"errors"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 	"strings"
 )
 
@@ -22,8 +21,11 @@ type GetResourceOauth2TokenResponse struct {
 	SessionStatus *GetResourceOauth2TokenResponseSessionStatus `json:"session_status,omitempty"`
 
 	// Unique identifier for the user's authentication session (matches request session_uri)
-	SessionUri     *string `json:"session_uri,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	SessionUri *string `json:"session_uri,omitempty"`
+
+	// Absolute expiration time of the access token in RFC 3339 format, UTC timezone.
+	ExpiresAt      *sdktime.SdkTime `json:"expires_at,omitempty"`
+	HttpStatusCode int              `json:"-"`
 }
 
 func (o GetResourceOauth2TokenResponse) String() string {

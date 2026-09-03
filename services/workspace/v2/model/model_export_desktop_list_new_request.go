@@ -24,8 +24,11 @@ type ExportDesktopListNewRequest struct {
 	// 桌面ID。
 	DesktopId *string `json:"desktop_id,omitempty"`
 
-	// 桌面的标签。标签的键和标签的值用“=”连接。
+	// 桌面的标签。标签的键和标签的值用”=”连接。
 	Tag *string `json:"tag,omitempty"`
+
+	// 是否过滤不带标签的桌面，为true时只返回不带任何标签的桌面。
+	WithoutAnyTag *bool `json:"without_any_tag,omitempty"`
 
 	// 语言。  - zh_CN：中文 - en_US：英文
 	Language ExportDesktopListNewRequestLanguage `json:"language"`

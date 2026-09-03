@@ -234,6 +234,28 @@ func (c *ModelArtsClient) BatchDeletePoolTagsInvoker(request *model.BatchDeleteP
 	return &BatchDeletePoolTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteTrainingJob 批量删除训练作业
+//
+// 批量删除训练作业接口用于一次性从ModelArts平台上移除多个已创建的训练作业。
+// 该接口适用于以下场景：当用户需要集中清理多个已完成或不再需要的训练作业时，可以通过此接口批量删除，避免逐个调用删除接口。使用该接口的前提条件是待删除的训练作业均已存在、属于同一工作空间，且用户具有删除训练作业的权限。删除操作完成后，训练作业将从平台中永久移除，相关资源和配置也将被清理。若待删除作业数量超过100、作业不存在、作业不属于同一工作空间或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) BatchDeleteTrainingJob(request *model.BatchDeleteTrainingJobRequest) (*model.BatchDeleteTrainingJobResponse, error) {
+	requestDef := GenReqDefForBatchDeleteTrainingJob()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteTrainingJobResponse), nil
+	}
+}
+
+// BatchDeleteTrainingJobInvoker 批量删除训练作业
+func (c *ModelArtsClient) BatchDeleteTrainingJobInvoker(request *model.BatchDeleteTrainingJobRequest) *BatchDeleteTrainingJobInvoker {
+	requestDef := GenReqDefForBatchDeleteTrainingJob()
+	return &BatchDeleteTrainingJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDevServersAction 批量操作Lite Server实例
 //
 // 批量操作Lite Server实例接口用于对多个Lite Server实例进行统一操作，如启动、停止、重启或删除等。该接口适用于以下场景：当需要对多个Lite Server实例进行相同的操作，例如在维护期间批量停止实例、更新配置后批量重启实例或清理不再需要的实例时，用户可通过此接口高效地完成批量操作。使用该接口的前提条件是目标Lite Server实例已存在且用户具有相应的操作权限。操作完成后，所有指定的Lite Server实例将根据请求完成相应的状态变更或被移除，相关资源和配置也将被相应调整或清理。若目标Lite Server实例不存在、用户无权限操作或请求参数不正确，接口将返回相应的错误信息。
@@ -653,6 +675,28 @@ func (c *ModelArtsClient) CountInferServicesByTags(request *model.CountInferServ
 func (c *ModelArtsClient) CountInferServicesByTagsInvoker(request *model.CountInferServicesByTagsRequest) *CountInferServicesByTagsInvoker {
 	requestDef := GenReqDefForCountInferServicesByTags()
 	return &CountInferServicesByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountTrainingJobsByTags 按标签统计训练作业资源数量
+//
+// 按标签统计训练作业资源数量接口用于根据标签等条件查询当前项目下符合条件的训练作业总数。
+// 该接口适用于以下场景：当用户需要按标签键值、资源名称等条件统计训练作业数量时，可以通过此接口进行查询。使用该接口的前提条件是用户已登录并具有查看训练作业标签的权限。查询操作完成后，平台将返回符合条件的训练作业总数。若用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) CountTrainingJobsByTags(request *model.CountTrainingJobsByTagsRequest) (*model.CountTrainingJobsByTagsResponse, error) {
+	requestDef := GenReqDefForCountTrainingJobsByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountTrainingJobsByTagsResponse), nil
+	}
+}
+
+// CountTrainingJobsByTagsInvoker 按标签统计训练作业资源数量
+func (c *ModelArtsClient) CountTrainingJobsByTagsInvoker(request *model.CountTrainingJobsByTagsRequest) *CountTrainingJobsByTagsInvoker {
+	requestDef := GenReqDefForCountTrainingJobsByTags()
+	return &CountTrainingJobsByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateAlgorithm 创建算法
@@ -2186,6 +2230,27 @@ func (c *ModelArtsClient) ListEventsInvoker(request *model.ListEventsRequest) *L
 	return &ListEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListFtArtifacts 查询精调训练任务产物列表
+//
+// 查询精调训练任务产物列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListFtArtifacts(request *model.ListFtArtifactsRequest) (*model.ListFtArtifactsResponse, error) {
+	requestDef := GenReqDefForListFtArtifacts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListFtArtifactsResponse), nil
+	}
+}
+
+// ListFtArtifactsInvoker 查询精调训练任务产物列表
+func (c *ModelArtsClient) ListFtArtifactsInvoker(request *model.ListFtArtifactsRequest) *ListFtArtifactsInvoker {
+	requestDef := GenReqDefForListFtArtifacts()
+	return &ListFtArtifactsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListHyperCluster 查询Hyper Cluster详情列表
 //
 // 查询Hyper Cluster详情列表接口用于获取所有Hyper Cluster的详细信息。该接口适用于以下场景：当用户需要了解系统中所有超节点网络的配置和状态时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询Hyper Cluster详情的权限。查询操作完成后，接口将返回所有超节点网络的详细信息，包括ID、名称、子网信息等。若用户无权限操作或系统中没有Hyper Cluster，接口将返回相应的错误信息。
@@ -2860,6 +2925,28 @@ func (c *ModelArtsClient) ListTrainingJobStagesInvoker(request *model.ListTraini
 	return &ListTrainingJobStagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTrainingJobTags 查询项目下训练作业标签列表
+//
+// 查询项目下训练作业标签列表接口用于获取指定项目下所有训练作业已使用的标签集合，按标签key聚合，每个key下包含所有不同的value。
+// 该接口适用于以下场景：当用户需要了解项目下训练作业已使用的所有标签键值对，以便进行标签筛选、资源分类或管理时，可以通过此接口获取标签列表。使用该接口的前提条件是用户具有查看标签的权限。查询操作完成后，平台将返回项目下所有训练作业标签的聚合结果，按key分组，每个key下列出该key出现过的所有不同value。若用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListTrainingJobTags(request *model.ListTrainingJobTagsRequest) (*model.ListTrainingJobTagsResponse, error) {
+	requestDef := GenReqDefForListTrainingJobTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTrainingJobTagsResponse), nil
+	}
+}
+
+// ListTrainingJobTagsInvoker 查询项目下训练作业标签列表
+func (c *ModelArtsClient) ListTrainingJobTagsInvoker(request *model.ListTrainingJobTagsRequest) *ListTrainingJobTagsInvoker {
+	requestDef := GenReqDefForListTrainingJobTags()
+	return &ListTrainingJobTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListTrainingJobTasks 查询训练作业的实例历史调度信息
 //
 // 查询训练作业调度的实例IP、节点IP等信息，可通过schedule_count参数查询具体的某一次调度的实例信息。
@@ -2900,6 +2987,28 @@ func (c *ModelArtsClient) ListTrainingJobs(request *model.ListTrainingJobsReques
 func (c *ModelArtsClient) ListTrainingJobsInvoker(request *model.ListTrainingJobsRequest) *ListTrainingJobsInvoker {
 	requestDef := GenReqDefForListTrainingJobs()
 	return &ListTrainingJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTrainingJobsByTags 查询训练作业资源列表（按标签筛选）
+//
+// 查询训练作业资源列表接口用于按标签、资源名称等条件筛选项目下符合条件的训练作业资源，并返回每个作业的标签信息。
+// 该接口适用于以下场景：当用户需要通过标签或资源名称筛选训练作业，以进行资源分类管理或批量操作时，可以通过此接口获取符合条件的作业资源列表。使用该接口的前提条件是用户具有查看标签的权限。查询操作完成后，平台将返回符合条件的作业资源列表及总数。若标签格式不合法、标签key重复或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListTrainingJobsByTags(request *model.ListTrainingJobsByTagsRequest) (*model.ListTrainingJobsByTagsResponse, error) {
+	requestDef := GenReqDefForListTrainingJobsByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTrainingJobsByTagsResponse), nil
+	}
+}
+
+// ListTrainingJobsByTagsInvoker 查询训练作业资源列表（按标签筛选）
+func (c *ModelArtsClient) ListTrainingJobsByTagsInvoker(request *model.ListTrainingJobsByTagsRequest) *ListTrainingJobsByTagsInvoker {
+	requestDef := GenReqDefForListTrainingJobsByTags()
+	return &ListTrainingJobsByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListWorkloads 查询资源池作业列表
@@ -2963,6 +3072,28 @@ func (c *ModelArtsClient) ModifyInferIntranetConnections(request *model.ModifyIn
 func (c *ModelArtsClient) ModifyInferIntranetConnectionsInvoker(request *model.ModifyInferIntranetConnectionsRequest) *ModifyInferIntranetConnectionsInvoker {
 	requestDef := GenReqDefForModifyInferIntranetConnections()
 	return &ModifyInferIntranetConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifyTrainingQuotas 修改训练配额
+//
+// 修改训练配额接口用于修改用户在ModelArts服务中的训练资源配额信息。
+// 该接口适用于以下场景：当管理员需要调整用户的训练资源配额（如作业个数配额、自动老化开关、配额告警通知等）时，可以通过此接口进行修改。使用该接口的前提条件是用户已登录并具有修改配额的权限。修改成功后，用户的训练资源配额将被更新。若用户无权限或配额信息无效，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ModifyTrainingQuotas(request *model.ModifyTrainingQuotasRequest) (*model.ModifyTrainingQuotasResponse, error) {
+	requestDef := GenReqDefForModifyTrainingQuotas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyTrainingQuotasResponse), nil
+	}
+}
+
+// ModifyTrainingQuotasInvoker 修改训练配额
+func (c *ModelArtsClient) ModifyTrainingQuotasInvoker(request *model.ModifyTrainingQuotasRequest) *ModifyTrainingQuotasInvoker {
+	requestDef := GenReqDefForModifyTrainingQuotas()
+	return &ModifyTrainingQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // NotifyTrainingJobInformation 训练作业事件上报接口
@@ -3047,6 +3178,27 @@ func (c *ModelArtsClient) PatchPool(request *model.PatchPoolRequest) (*model.Pat
 func (c *ModelArtsClient) PatchPoolInvoker(request *model.PatchPoolRequest) *PatchPoolInvoker {
 	requestDef := GenReqDefForPatchPool()
 	return &PatchPoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// PublishFtArtifacts 发布精调训练产物为模型资产
+//
+// 训练任务运行成功后，将产生的模型信息发布到资产中心。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) PublishFtArtifacts(request *model.PublishFtArtifactsRequest) (*model.PublishFtArtifactsResponse, error) {
+	requestDef := GenReqDefForPublishFtArtifacts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PublishFtArtifactsResponse), nil
+	}
+}
+
+// PublishFtArtifactsInvoker 发布精调训练产物为模型资产
+func (c *ModelArtsClient) PublishFtArtifactsInvoker(request *model.PublishFtArtifactsRequest) *PublishFtArtifactsInvoker {
+	requestDef := GenReqDefForPublishFtArtifacts()
+	return &PublishFtArtifactsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // QueryHyperinstanceTags 查询Lite Server超节点标签
@@ -3406,6 +3558,49 @@ func (c *ModelArtsClient) ShowDynamicStorage(request *model.ShowDynamicStorageRe
 func (c *ModelArtsClient) ShowDynamicStorageInvoker(request *model.ShowDynamicStorageRequest) *ShowDynamicStorageInvoker {
 	requestDef := GenReqDefForShowDynamicStorage()
 	return &ShowDynamicStorageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFtDetail 查询精调训练作业详情
+//
+// 查询精调训练作业详情接口用于获取ModelArts平台上指定训练作业的详细信息。
+// 该接口适用于以下场景：当用户需要查看特定训练作业的运行状态和配置信息时，可以通过此接口获取作业详情。使用该接口的前提条件是用户已知训练作业ID，并具有查看作业详情的权限。查询操作完成后，平台将返回包含训练作业的状态、配置、日志等详细信息。若训练作业ID不存在或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ShowFtDetail(request *model.ShowFtDetailRequest) (*model.ShowFtDetailResponse, error) {
+	requestDef := GenReqDefForShowFtDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFtDetailResponse), nil
+	}
+}
+
+// ShowFtDetailInvoker 查询精调训练作业详情
+func (c *ModelArtsClient) ShowFtDetailInvoker(request *model.ShowFtDetailRequest) *ShowFtDetailInvoker {
+	requestDef := GenReqDefForShowFtDetail()
+	return &ShowFtDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFtMetrics 查询精调训练任务指标信息
+//
+// 查询精调训练任务指标信息，如：训练loss等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ShowFtMetrics(request *model.ShowFtMetricsRequest) (*model.ShowFtMetricsResponse, error) {
+	requestDef := GenReqDefForShowFtMetrics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFtMetricsResponse), nil
+	}
+}
+
+// ShowFtMetricsInvoker 查询精调训练任务指标信息
+func (c *ModelArtsClient) ShowFtMetricsInvoker(request *model.ShowFtMetricsRequest) *ShowFtMetricsInvoker {
+	requestDef := GenReqDefForShowFtMetrics()
+	return &ShowFtMetricsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowImage 查询镜像详情
@@ -3976,6 +4171,28 @@ func (c *ModelArtsClient) ShowTrainingExperimentDetailsInvoker(request *model.Sh
 	return &ShowTrainingExperimentDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowTrainingFlavorMaxAvailableResource 查询资源池规格最大可用资源
+//
+// 查询资源池规格最大可用资源接口用于获取指定资源池中指定资源规格可分配的最大CPU和内存资源。
+// 该接口适用于以下场景：当用户需要在创建训练作业前了解资源池中某规格的可用资源上限，以便合理选择规格和节点数时，可以通过此接口进行查询。使用该接口的前提条件是用户已知资源池ID和资源规格ID，并具有查看训练资源的权限。查询操作完成后，平台将返回该规格在资源池中的最大可用CPU核数和内存大小。若资源池或规格不存在、或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ShowTrainingFlavorMaxAvailableResource(request *model.ShowTrainingFlavorMaxAvailableResourceRequest) (*model.ShowTrainingFlavorMaxAvailableResourceResponse, error) {
+	requestDef := GenReqDefForShowTrainingFlavorMaxAvailableResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTrainingFlavorMaxAvailableResourceResponse), nil
+	}
+}
+
+// ShowTrainingFlavorMaxAvailableResourceInvoker 查询资源池规格最大可用资源
+func (c *ModelArtsClient) ShowTrainingFlavorMaxAvailableResourceInvoker(request *model.ShowTrainingFlavorMaxAvailableResourceRequest) *ShowTrainingFlavorMaxAvailableResourceInvoker {
+	requestDef := GenReqDefForShowTrainingFlavorMaxAvailableResource()
+	return &ShowTrainingFlavorMaxAvailableResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowTrainingJobDetails 查询训练作业详情
 //
 // 查询训练作业详情。
@@ -4039,6 +4256,28 @@ func (c *ModelArtsClient) ShowTrainingJobFlavorsInvoker(request *model.ShowTrain
 	return &ShowTrainingJobFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowTrainingJobLogsFromAom 查询训练作业指定任务的日志
+//
+// 查询训练作业指定任务的日志接口用于获取ModelArts平台上指定训练作业任务的实时运行日志。
+// 该接口适用于以下场景：当用户需要查看特定训练任务的运行日志以便排查问题或监控训练进度时，可以通过此接口获取日志内容。使用该接口的前提条件是用户已知训练作业ID和任务ID，并具有查看日志的权限。查询操作完成后，平台将返回包含日志内容、起止行号等信息。若训练作业ID或任务ID不存在、任务未生成日志或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ShowTrainingJobLogsFromAom(request *model.ShowTrainingJobLogsFromAomRequest) (*model.ShowTrainingJobLogsFromAomResponse, error) {
+	requestDef := GenReqDefForShowTrainingJobLogsFromAom()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTrainingJobLogsFromAomResponse), nil
+	}
+}
+
+// ShowTrainingJobLogsFromAomInvoker 查询训练作业指定任务的日志
+func (c *ModelArtsClient) ShowTrainingJobLogsFromAomInvoker(request *model.ShowTrainingJobLogsFromAomRequest) *ShowTrainingJobLogsFromAomInvoker {
+	requestDef := GenReqDefForShowTrainingJobLogsFromAom()
+	return &ShowTrainingJobLogsFromAomInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowTrainingJobLogsPreview 查询训练作业指定任务的日志（预览）
 //
 // 查询训练作业指定任务的日志（预览）。
@@ -4079,6 +4318,28 @@ func (c *ModelArtsClient) ShowTrainingJobMetrics(request *model.ShowTrainingJobM
 func (c *ModelArtsClient) ShowTrainingJobMetricsInvoker(request *model.ShowTrainingJobMetricsRequest) *ShowTrainingJobMetricsInvoker {
 	requestDef := GenReqDefForShowTrainingJobMetrics()
 	return &ShowTrainingJobMetricsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTrainingJobRoutePlan 查询训练作业的路由规划信息
+//
+// 查询训练作业的路由规划信息接口用于获取指定训练作业在Ascend规格专属资源池下的路由规划（rank映射）结果。
+// 该接口适用于以下场景：当用户在Ascend 910规格专属资源池上创建了多节点（节点数不少于3）训练作业，且需要查询作业实际生效的rank映射关系以进行性能调优或问题定位时，可以通过此接口获取路由规划信息。使用该接口的前提条件是用户已知训练作业ID，并具有查看作业详情的权限。查询操作完成后，平台将返回该作业的路由规划状态与rank映射结果。若训练作业不满足路由规划条件（非Ascend 910规格或节点数少于3），接口将返回状态为failed的默认rank映射结果；若训练作业ID不存在或用户无权限操作，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ShowTrainingJobRoutePlan(request *model.ShowTrainingJobRoutePlanRequest) (*model.ShowTrainingJobRoutePlanResponse, error) {
+	requestDef := GenReqDefForShowTrainingJobRoutePlan()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTrainingJobRoutePlanResponse), nil
+	}
+}
+
+// ShowTrainingJobRoutePlanInvoker 查询训练作业的路由规划信息
+func (c *ModelArtsClient) ShowTrainingJobRoutePlanInvoker(request *model.ShowTrainingJobRoutePlanRequest) *ShowTrainingJobRoutePlanInvoker {
+	requestDef := GenReqDefForShowTrainingJobRoutePlan()
+	return &ShowTrainingJobRoutePlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowTrainingQuotas 获取训练配额
@@ -4647,6 +4908,28 @@ func (c *ModelArtsClient) ValidateAuthorization(request *model.ValidateAuthoriza
 func (c *ModelArtsClient) ValidateAuthorizationInvoker(request *model.ValidateAuthorizationRequest) *ValidateAuthorizationInvoker {
 	requestDef := GenReqDefForValidateAuthorization()
 	return &ValidateAuthorizationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ValidateTrainingJobName 校验训练作业名称
+//
+// 校验训练作业名称接口用于校验ModelArts平台上创建训练作业的名称是否重复。
+// 该接口适用于以下场景：当用户需要创建训练作业时，可以通过此接口校验训练作业名称是否存在，新创建的名称不存在时才能创建成功。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ValidateTrainingJobName(request *model.ValidateTrainingJobNameRequest) (*model.ValidateTrainingJobNameResponse, error) {
+	requestDef := GenReqDefForValidateTrainingJobName()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ValidateTrainingJobNameResponse), nil
+	}
+}
+
+// ValidateTrainingJobNameInvoker 校验训练作业名称
+func (c *ModelArtsClient) ValidateTrainingJobNameInvoker(request *model.ValidateTrainingJobNameRequest) *ValidateTrainingJobNameInvoker {
+	requestDef := GenReqDefForValidateTrainingJobName()
+	return &ValidateTrainingJobNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateInferDeploymentHpa 创建自动扩缩容策略

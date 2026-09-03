@@ -87,6 +87,9 @@ type ListDesktopsDetailRequest struct {
 	// 查询可用区。
 	AvailabilityZone *string `json:"availability_zone,omitempty"`
 
+	// 是否过滤不带标签的桌面，为true时只返回不带任何标签的桌面。
+	WithoutAnyTag *bool `json:"without_any_tag,omitempty"`
+
 	// agent版本。
 	AgentVersion *string `json:"agent_version,omitempty"`
 }

@@ -21,6 +21,22 @@ func (i *AddCaseResultFourInvoker) Invoke() (*model.AddCaseResultFourResponse, e
 	}
 }
 
+type AddOrUpdateTestsuiteInfoUsingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddOrUpdateTestsuiteInfoUsingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddOrUpdateTestsuiteInfoUsingInvoker) Invoke() (*model.AddOrUpdateTestsuiteInfoUsingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddOrUpdateTestsuiteInfoUsingResponse), nil
+	}
+}
+
 type AddTestCaseCommentInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -514,6 +530,22 @@ func (i *DeleteTestReportCustomDetailByUriInvoker) Invoke() (*model.DeleteTestRe
 		return nil, err
 	} else {
 		return result.(*model.DeleteTestReportCustomDetailByUriResponse), nil
+	}
+}
+
+type DeleteTestsuiteInfosUsingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTestsuiteInfosUsingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteTestsuiteInfosUsingInvoker) Invoke() (*model.DeleteTestsuiteInfosUsingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTestsuiteInfosUsingResponse), nil
 	}
 }
 
@@ -2149,6 +2181,22 @@ func (i *ShowTestpointByPageInvoker) Invoke() (*model.ShowTestpointByPageRespons
 	}
 }
 
+type ShowTestsuiteInfoUsingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTestsuiteInfoUsingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTestsuiteInfoUsingInvoker) Invoke() (*model.ShowTestsuiteInfoUsingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTestsuiteInfoUsingResponse), nil
+	}
+}
+
 type ShowUserAccessInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2178,6 +2226,22 @@ func (i *ShowUserExecuteTestCaseInfoInvoker) Invoke() (*model.ShowUserExecuteTes
 		return nil, err
 	} else {
 		return result.(*model.ShowUserExecuteTestCaseInfoResponse), nil
+	}
+}
+
+type StartTestsuiteUsingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartTestsuiteUsingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StartTestsuiteUsingInvoker) Invoke() (*model.StartTestsuiteUsingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartTestsuiteUsingResponse), nil
 	}
 }
 
@@ -2306,6 +2370,22 @@ func (i *UpdateTestReportCustomDetailByUriInvoker) Invoke() (*model.UpdateTestRe
 		return nil, err
 	} else {
 		return result.(*model.UpdateTestReportCustomDetailByUriResponse), nil
+	}
+}
+
+type UpdateTestsuiteInfoUsingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTestsuiteInfoUsingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateTestsuiteInfoUsingInvoker) Invoke() (*model.UpdateTestsuiteInfoUsingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTestsuiteInfoUsingResponse), nil
 	}
 }
 

@@ -88,6 +88,12 @@ type AlarmRulesItemsDetails struct {
 
 	// smn配置id。
 	SmnConfigId *string `json:"smn_config_id,omitempty"`
+
+	// 是否启用恢复通知，为true时作业恢复成功后发送恢复通知。
+	EnableRecovery *bool `json:"enable_recovery,omitempty"`
+
+	// 是否启用持续告警，为true时按发送间隔重复发送告警通知。
+	EnablePersistentAlarm *bool `json:"enable_persistent_alarm,omitempty"`
 }
 
 func (o AlarmRulesItemsDetails) String() string {

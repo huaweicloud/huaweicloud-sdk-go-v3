@@ -1594,6 +1594,48 @@ func (c *WorkspaceClient) CheckSysprepInfoInvoker(request *model.CheckSysprepInf
 	return &CheckSysprepInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCommonSkills 查询公共技能列表（只读）
+//
+// 企业租户查询公共技能列表（只读），支持按分类、状态过滤。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListCommonSkills(request *model.ListCommonSkillsRequest) (*model.ListCommonSkillsResponse, error) {
+	requestDef := GenReqDefForListCommonSkills()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCommonSkillsResponse), nil
+	}
+}
+
+// ListCommonSkillsInvoker 查询公共技能列表（只读）
+func (c *WorkspaceClient) ListCommonSkillsInvoker(request *model.ListCommonSkillsRequest) *ListCommonSkillsInvoker {
+	requestDef := GenReqDefForListCommonSkills()
+	return &ListCommonSkillsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCommonSkill 查询公共技能详情（只读）
+//
+// 企业租户查询公共技能详情（只读）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowCommonSkill(request *model.ShowCommonSkillRequest) (*model.ShowCommonSkillResponse, error) {
+	requestDef := GenReqDefForShowCommonSkill()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCommonSkillResponse), nil
+	}
+}
+
+// ShowCommonSkillInvoker 查询公共技能详情（只读）
+func (c *WorkspaceClient) ShowCommonSkillInvoker(request *model.ShowCommonSkillRequest) *ShowCommonSkillInvoker {
+	requestDef := GenReqDefForShowCommonSkill()
+	return &ShowCommonSkillInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExportUserLoginInfoNew 导出连接记录(待废弃)
 //
 // 该接口用于导出连接记录，待废弃。
@@ -2685,6 +2727,27 @@ func (c *WorkspaceClient) AddDesktopPoolVolumes(request *model.AddDesktopPoolVol
 func (c *WorkspaceClient) AddDesktopPoolVolumesInvoker(request *model.AddDesktopPoolVolumesRequest) *AddDesktopPoolVolumesInvoker {
 	requestDef := GenReqDefForAddDesktopPoolVolumes()
 	return &AddDesktopPoolVolumesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AttachDesktopPoolUser 桌面池绑定用户
+//
+// 将用户绑定到桌面池。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) AttachDesktopPoolUser(request *model.AttachDesktopPoolUserRequest) (*model.AttachDesktopPoolUserResponse, error) {
+	requestDef := GenReqDefForAttachDesktopPoolUser()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AttachDesktopPoolUserResponse), nil
+	}
+}
+
+// AttachDesktopPoolUserInvoker 桌面池绑定用户
+func (c *WorkspaceClient) AttachDesktopPoolUserInvoker(request *model.AttachDesktopPoolUserRequest) *AttachDesktopPoolUserInvoker {
+	requestDef := GenReqDefForAttachDesktopPoolUser()
+	return &AttachDesktopPoolUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateDesktopPool 创建桌面池
@@ -6752,6 +6815,510 @@ func (c *WorkspaceClient) UpdateSubnetIds(request *model.UpdateSubnetIdsRequest)
 func (c *WorkspaceClient) UpdateSubnetIdsInvoker(request *model.UpdateSubnetIdsRequest) *UpdateSubnetIdsInvoker {
 	requestDef := GenReqDefForUpdateSubnetIds()
 	return &UpdateSubnetIdsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSkillBindings 创建技能绑定
+//
+// 批量绑定技能到实例。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CreateSkillBindings(request *model.CreateSkillBindingsRequest) (*model.CreateSkillBindingsResponse, error) {
+	requestDef := GenReqDefForCreateSkillBindings()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSkillBindingsResponse), nil
+	}
+}
+
+// CreateSkillBindingsInvoker 创建技能绑定
+func (c *WorkspaceClient) CreateSkillBindingsInvoker(request *model.CreateSkillBindingsRequest) *CreateSkillBindingsInvoker {
+	requestDef := GenReqDefForCreateSkillBindings()
+	return &CreateSkillBindingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSkillBindings 删除技能绑定
+//
+// 批量解绑技能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) DeleteSkillBindings(request *model.DeleteSkillBindingsRequest) (*model.DeleteSkillBindingsResponse, error) {
+	requestDef := GenReqDefForDeleteSkillBindings()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSkillBindingsResponse), nil
+	}
+}
+
+// DeleteSkillBindingsInvoker 删除技能绑定
+func (c *WorkspaceClient) DeleteSkillBindingsInvoker(request *model.DeleteSkillBindingsRequest) *DeleteSkillBindingsInvoker {
+	requestDef := GenReqDefForDeleteSkillBindings()
+	return &DeleteSkillBindingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCommonSkillResources 查询公共技能绑定的资源列表
+//
+// 查询公共技能绑定的资源列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListCommonSkillResources(request *model.ListCommonSkillResourcesRequest) (*model.ListCommonSkillResourcesResponse, error) {
+	requestDef := GenReqDefForListCommonSkillResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCommonSkillResourcesResponse), nil
+	}
+}
+
+// ListCommonSkillResourcesInvoker 查询公共技能绑定的资源列表
+func (c *WorkspaceClient) ListCommonSkillResourcesInvoker(request *model.ListCommonSkillResourcesRequest) *ListCommonSkillResourcesInvoker {
+	requestDef := GenReqDefForListCommonSkillResources()
+	return &ListCommonSkillResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInstanceSkills 查询实例绑定的技能列表
+//
+// 查询实例绑定的技能列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListInstanceSkills(request *model.ListInstanceSkillsRequest) (*model.ListInstanceSkillsResponse, error) {
+	requestDef := GenReqDefForListInstanceSkills()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceSkillsResponse), nil
+	}
+}
+
+// ListInstanceSkillsInvoker 查询实例绑定的技能列表
+func (c *WorkspaceClient) ListInstanceSkillsInvoker(request *model.ListInstanceSkillsRequest) *ListInstanceSkillsInvoker {
+	requestDef := GenReqDefForListInstanceSkills()
+	return &ListInstanceSkillsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSecurityPolicyControlResources 查询安全策略管控资源列表
+//
+// 查询安全策略管控的资源列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListSecurityPolicyControlResources(request *model.ListSecurityPolicyControlResourcesRequest) (*model.ListSecurityPolicyControlResourcesResponse, error) {
+	requestDef := GenReqDefForListSecurityPolicyControlResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityPolicyControlResourcesResponse), nil
+	}
+}
+
+// ListSecurityPolicyControlResourcesInvoker 查询安全策略管控资源列表
+func (c *WorkspaceClient) ListSecurityPolicyControlResourcesInvoker(request *model.ListSecurityPolicyControlResourcesRequest) *ListSecurityPolicyControlResourcesInvoker {
+	requestDef := GenReqDefForListSecurityPolicyControlResources()
+	return &ListSecurityPolicyControlResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSkillResources 查询企业技能绑定的资源列表
+//
+// 查询企业自研技能绑定的资源列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListSkillResources(request *model.ListSkillResourcesRequest) (*model.ListSkillResourcesResponse, error) {
+	requestDef := GenReqDefForListSkillResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSkillResourcesResponse), nil
+	}
+}
+
+// ListSkillResourcesInvoker 查询企业技能绑定的资源列表
+func (c *WorkspaceClient) ListSkillResourcesInvoker(request *model.ListSkillResourcesRequest) *ListSkillResourcesInvoker {
+	requestDef := GenReqDefForListSkillResources()
+	return &ListSkillResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSecurityPolicyControl 更新安全策略管控
+//
+// 批量更新实例的安全策略管控状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateSecurityPolicyControl(request *model.UpdateSecurityPolicyControlRequest) (*model.UpdateSecurityPolicyControlResponse, error) {
+	requestDef := GenReqDefForUpdateSecurityPolicyControl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSecurityPolicyControlResponse), nil
+	}
+}
+
+// UpdateSecurityPolicyControlInvoker 更新安全策略管控
+func (c *WorkspaceClient) UpdateSecurityPolicyControlInvoker(request *model.UpdateSecurityPolicyControlRequest) *UpdateSecurityPolicyControlInvoker {
+	requestDef := GenReqDefForUpdateSecurityPolicyControl()
+	return &UpdateSecurityPolicyControlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchListSkillPackages 批量查询技能包
+//
+// 根据技能ID列表批量查询当前生效的技能包信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) BatchListSkillPackages(request *model.BatchListSkillPackagesRequest) (*model.BatchListSkillPackagesResponse, error) {
+	requestDef := GenReqDefForBatchListSkillPackages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchListSkillPackagesResponse), nil
+	}
+}
+
+// BatchListSkillPackagesInvoker 批量查询技能包
+func (c *WorkspaceClient) BatchListSkillPackagesInvoker(request *model.BatchListSkillPackagesRequest) *BatchListSkillPackagesInvoker {
+	requestDef := GenReqDefForBatchListSkillPackages()
+	return &BatchListSkillPackagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDownloadUrl 生成下载地址
+//
+// 生成企业自研技能包的OBS预签名下载地址。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CreateDownloadUrl(request *model.CreateDownloadUrlRequest) (*model.CreateDownloadUrlResponse, error) {
+	requestDef := GenReqDefForCreateDownloadUrl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDownloadUrlResponse), nil
+	}
+}
+
+// CreateDownloadUrlInvoker 生成下载地址
+func (c *WorkspaceClient) CreateDownloadUrlInvoker(request *model.CreateDownloadUrlRequest) *CreateDownloadUrlInvoker {
+	requestDef := GenReqDefForCreateDownloadUrl()
+	return &CreateDownloadUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSkillPackage 创建技能包
+//
+// 为企业自研技能上传新版本技能包。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CreateSkillPackage(request *model.CreateSkillPackageRequest) (*model.CreateSkillPackageResponse, error) {
+	requestDef := GenReqDefForCreateSkillPackage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSkillPackageResponse), nil
+	}
+}
+
+// CreateSkillPackageInvoker 创建技能包
+func (c *WorkspaceClient) CreateSkillPackageInvoker(request *model.CreateSkillPackageRequest) *CreateSkillPackageInvoker {
+	requestDef := GenReqDefForCreateSkillPackage()
+	return &CreateSkillPackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateUploadUrls 生成上传地址
+//
+// 生成OBS预签名上传地址，用于企业自研技能包上传。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CreateUploadUrls(request *model.CreateUploadUrlsRequest) (*model.CreateUploadUrlsResponse, error) {
+	requestDef := GenReqDefForCreateUploadUrls()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateUploadUrlsResponse), nil
+	}
+}
+
+// CreateUploadUrlsInvoker 生成上传地址
+func (c *WorkspaceClient) CreateUploadUrlsInvoker(request *model.CreateUploadUrlsRequest) *CreateUploadUrlsInvoker {
+	requestDef := GenReqDefForCreateUploadUrls()
+	return &CreateUploadUrlsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSkillPackage 删除技能包
+//
+// 删除企业自研技能的技能包。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) DeleteSkillPackage(request *model.DeleteSkillPackageRequest) (*model.DeleteSkillPackageResponse, error) {
+	requestDef := GenReqDefForDeleteSkillPackage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSkillPackageResponse), nil
+	}
+}
+
+// DeleteSkillPackageInvoker 删除技能包
+func (c *WorkspaceClient) DeleteSkillPackageInvoker(request *model.DeleteSkillPackageRequest) *DeleteSkillPackageInvoker {
+	requestDef := GenReqDefForDeleteSkillPackage()
+	return &DeleteSkillPackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExpandSkillPackageRegion 扩展技能包区域
+//
+// 为企业自研技能包扩展新的OBS区域。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ExpandSkillPackageRegion(request *model.ExpandSkillPackageRegionRequest) (*model.ExpandSkillPackageRegionResponse, error) {
+	requestDef := GenReqDefForExpandSkillPackageRegion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExpandSkillPackageRegionResponse), nil
+	}
+}
+
+// ExpandSkillPackageRegionInvoker 扩展技能包区域
+func (c *WorkspaceClient) ExpandSkillPackageRegionInvoker(request *model.ExpandSkillPackageRegionRequest) *ExpandSkillPackageRegionInvoker {
+	requestDef := GenReqDefForExpandSkillPackageRegion()
+	return &ExpandSkillPackageRegionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCommonSkillPackages 查询公共技能包列表（只读）
+//
+// 企业租户查询公共技能的技能包列表（只读）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListCommonSkillPackages(request *model.ListCommonSkillPackagesRequest) (*model.ListCommonSkillPackagesResponse, error) {
+	requestDef := GenReqDefForListCommonSkillPackages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCommonSkillPackagesResponse), nil
+	}
+}
+
+// ListCommonSkillPackagesInvoker 查询公共技能包列表（只读）
+func (c *WorkspaceClient) ListCommonSkillPackagesInvoker(request *model.ListCommonSkillPackagesRequest) *ListCommonSkillPackagesInvoker {
+	requestDef := GenReqDefForListCommonSkillPackages()
+	return &ListCommonSkillPackagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSkillPackages 查询技能包列表
+//
+// 查询企业自研技能的技能包列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListSkillPackages(request *model.ListSkillPackagesRequest) (*model.ListSkillPackagesResponse, error) {
+	requestDef := GenReqDefForListSkillPackages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSkillPackagesResponse), nil
+	}
+}
+
+// ListSkillPackagesInvoker 查询技能包列表
+func (c *WorkspaceClient) ListSkillPackagesInvoker(request *model.ListSkillPackagesRequest) *ListSkillPackagesInvoker {
+	requestDef := GenReqDefForListSkillPackages()
+	return &ListSkillPackagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RemoveSkillPackageRegion 移除技能包区域
+//
+// 批量移除企业自研技能包的OBS区域。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) RemoveSkillPackageRegion(request *model.RemoveSkillPackageRegionRequest) (*model.RemoveSkillPackageRegionResponse, error) {
+	requestDef := GenReqDefForRemoveSkillPackageRegion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoveSkillPackageRegionResponse), nil
+	}
+}
+
+// RemoveSkillPackageRegionInvoker 移除技能包区域
+func (c *WorkspaceClient) RemoveSkillPackageRegionInvoker(request *model.RemoveSkillPackageRegionRequest) *RemoveSkillPackageRegionInvoker {
+	requestDef := GenReqDefForRemoveSkillPackageRegion()
+	return &RemoveSkillPackageRegionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCommonSkillPackage 查询公共技能包详情（只读）
+//
+// 企业租户查询公共技能的技能包详情（只读）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowCommonSkillPackage(request *model.ShowCommonSkillPackageRequest) (*model.ShowCommonSkillPackageResponse, error) {
+	requestDef := GenReqDefForShowCommonSkillPackage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCommonSkillPackageResponse), nil
+	}
+}
+
+// ShowCommonSkillPackageInvoker 查询公共技能包详情（只读）
+func (c *WorkspaceClient) ShowCommonSkillPackageInvoker(request *model.ShowCommonSkillPackageRequest) *ShowCommonSkillPackageInvoker {
+	requestDef := GenReqDefForShowCommonSkillPackage()
+	return &ShowCommonSkillPackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSkillPackage 查询技能包详情
+//
+// 查询企业自研技能的技能包详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowSkillPackage(request *model.ShowSkillPackageRequest) (*model.ShowSkillPackageResponse, error) {
+	requestDef := GenReqDefForShowSkillPackage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSkillPackageResponse), nil
+	}
+}
+
+// ShowSkillPackageInvoker 查询技能包详情
+func (c *WorkspaceClient) ShowSkillPackageInvoker(request *model.ShowSkillPackageRequest) *ShowSkillPackageInvoker {
+	requestDef := GenReqDefForShowSkillPackage()
+	return &ShowSkillPackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSkillPackage 更新技能包
+//
+// 更新企业自研技能的技能包信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateSkillPackage(request *model.UpdateSkillPackageRequest) (*model.UpdateSkillPackageResponse, error) {
+	requestDef := GenReqDefForUpdateSkillPackage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSkillPackageResponse), nil
+	}
+}
+
+// UpdateSkillPackageInvoker 更新技能包
+func (c *WorkspaceClient) UpdateSkillPackageInvoker(request *model.UpdateSkillPackageRequest) *UpdateSkillPackageInvoker {
+	requestDef := GenReqDefForUpdateSkillPackage()
+	return &UpdateSkillPackageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSkill 创建企业自研技能
+//
+// 创建企业自研技能，支持同时上传技能包。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) CreateSkill(request *model.CreateSkillRequest) (*model.CreateSkillResponse, error) {
+	requestDef := GenReqDefForCreateSkill()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSkillResponse), nil
+	}
+}
+
+// CreateSkillInvoker 创建企业自研技能
+func (c *WorkspaceClient) CreateSkillInvoker(request *model.CreateSkillRequest) *CreateSkillInvoker {
+	requestDef := GenReqDefForCreateSkill()
+	return &CreateSkillInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSkill 删除企业自研技能
+//
+// 删除企业自研技能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) DeleteSkill(request *model.DeleteSkillRequest) (*model.DeleteSkillResponse, error) {
+	requestDef := GenReqDefForDeleteSkill()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSkillResponse), nil
+	}
+}
+
+// DeleteSkillInvoker 删除企业自研技能
+func (c *WorkspaceClient) DeleteSkillInvoker(request *model.DeleteSkillRequest) *DeleteSkillInvoker {
+	requestDef := GenReqDefForDeleteSkill()
+	return &DeleteSkillInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSkills 查询企业自研技能列表
+//
+// 查询企业自研技能列表，支持按分类、状态过滤。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ListSkills(request *model.ListSkillsRequest) (*model.ListSkillsResponse, error) {
+	requestDef := GenReqDefForListSkills()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSkillsResponse), nil
+	}
+}
+
+// ListSkillsInvoker 查询企业自研技能列表
+func (c *WorkspaceClient) ListSkillsInvoker(request *model.ListSkillsRequest) *ListSkillsInvoker {
+	requestDef := GenReqDefForListSkills()
+	return &ListSkillsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSkill 查询企业自研技能详情
+//
+// 查询企业自研技能详情，包含技能包摘要列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) ShowSkill(request *model.ShowSkillRequest) (*model.ShowSkillResponse, error) {
+	requestDef := GenReqDefForShowSkill()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSkillResponse), nil
+	}
+}
+
+// ShowSkillInvoker 查询企业自研技能详情
+func (c *WorkspaceClient) ShowSkillInvoker(request *model.ShowSkillRequest) *ShowSkillInvoker {
+	requestDef := GenReqDefForShowSkill()
+	return &ShowSkillInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSkill 更新企业自研技能
+//
+// 更新企业自研技能信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WorkspaceClient) UpdateSkill(request *model.UpdateSkillRequest) (*model.UpdateSkillResponse, error) {
+	requestDef := GenReqDefForUpdateSkill()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSkillResponse), nil
+	}
+}
+
+// UpdateSkillInvoker 更新企业自研技能
+func (c *WorkspaceClient) UpdateSkillInvoker(request *model.UpdateSkillRequest) *UpdateSkillInvoker {
+	requestDef := GenReqDefForUpdateSkill()
+	return &UpdateSkillInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchCreateDesktopSnapshot 批量创建快照

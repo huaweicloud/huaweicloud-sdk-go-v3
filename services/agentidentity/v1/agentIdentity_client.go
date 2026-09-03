@@ -208,6 +208,27 @@ func (c *AgentIdentityClient) GetResourceStsTokenInvoker(request *model.GetResou
 	return &GetResourceStsTokenInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListIdentityProviders 查询身份提供商
+//
+// Lists identity providers.
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AgentIdentityClient) ListIdentityProviders(request *model.ListIdentityProvidersRequest) (*model.ListIdentityProvidersResponse, error) {
+	requestDef := GenReqDefForListIdentityProviders()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListIdentityProvidersResponse), nil
+	}
+}
+
+// ListIdentityProvidersInvoker 查询身份提供商
+func (c *AgentIdentityClient) ListIdentityProvidersInvoker(request *model.ListIdentityProvidersRequest) *ListIdentityProvidersInvoker {
+	requestDef := GenReqDefForListIdentityProviders()
+	return &ListIdentityProvidersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // Oauth2Authorize OAuth2.0 Pushed Authorization Request (PAR) standard authorize API
 //
 // Core OAuth2 authorization endpoint following RFC 9126 PAR spec, only accepts authorization request via request_uri parameter to trigger user authorization flow
@@ -355,6 +376,237 @@ func (c *AgentIdentityClient) UpdateOauth2CredentialProviderInvoker(request *mod
 	return &UpdateOauth2CredentialProviderInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreatePolicy 在指定策略集中创建策略
+//
+// Creates a new policy in the specified policy engine.
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AgentIdentityClient) CreatePolicy(request *model.CreatePolicyRequest) (*model.CreatePolicyResponse, error) {
+	requestDef := GenReqDefForCreatePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePolicyResponse), nil
+	}
+}
+
+// CreatePolicyInvoker 在指定策略集中创建策略
+func (c *AgentIdentityClient) CreatePolicyInvoker(request *model.CreatePolicyRequest) *CreatePolicyInvoker {
+	requestDef := GenReqDefForCreatePolicy()
+	return &CreatePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePolicy 删除策略
+//
+// Deletes a policy.
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AgentIdentityClient) DeletePolicy(request *model.DeletePolicyRequest) (*model.DeletePolicyResponse, error) {
+	requestDef := GenReqDefForDeletePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePolicyResponse), nil
+	}
+}
+
+// DeletePolicyInvoker 删除策略
+func (c *AgentIdentityClient) DeletePolicyInvoker(request *model.DeletePolicyRequest) *DeletePolicyInvoker {
+	requestDef := GenReqDefForDeletePolicy()
+	return &DeletePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetPolicy 查询策略详情
+//
+// Gets details of a specific policy.
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AgentIdentityClient) GetPolicy(request *model.GetPolicyRequest) (*model.GetPolicyResponse, error) {
+	requestDef := GenReqDefForGetPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetPolicyResponse), nil
+	}
+}
+
+// GetPolicyInvoker 查询策略详情
+func (c *AgentIdentityClient) GetPolicyInvoker(request *model.GetPolicyRequest) *GetPolicyInvoker {
+	requestDef := GenReqDefForGetPolicy()
+	return &GetPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPolicies 查询策略列表
+//
+// Lists policies in the specified policy engine.
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AgentIdentityClient) ListPolicies(request *model.ListPoliciesRequest) (*model.ListPoliciesResponse, error) {
+	requestDef := GenReqDefForListPolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPoliciesResponse), nil
+	}
+}
+
+// ListPoliciesInvoker 查询策略列表
+func (c *AgentIdentityClient) ListPoliciesInvoker(request *model.ListPoliciesRequest) *ListPoliciesInvoker {
+	requestDef := GenReqDefForListPolicies()
+	return &ListPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePolicy 更新策略
+//
+// Updates an existing policy.
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AgentIdentityClient) UpdatePolicy(request *model.UpdatePolicyRequest) (*model.UpdatePolicyResponse, error) {
+	requestDef := GenReqDefForUpdatePolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePolicyResponse), nil
+	}
+}
+
+// UpdatePolicyInvoker 更新策略
+func (c *AgentIdentityClient) UpdatePolicyInvoker(request *model.UpdatePolicyRequest) *UpdatePolicyInvoker {
+	requestDef := GenReqDefForUpdatePolicy()
+	return &UpdatePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePolicyEngine 创建策略集
+//
+// Creates a new policy engine.
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AgentIdentityClient) CreatePolicyEngine(request *model.CreatePolicyEngineRequest) (*model.CreatePolicyEngineResponse, error) {
+	requestDef := GenReqDefForCreatePolicyEngine()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePolicyEngineResponse), nil
+	}
+}
+
+// CreatePolicyEngineInvoker 创建策略集
+func (c *AgentIdentityClient) CreatePolicyEngineInvoker(request *model.CreatePolicyEngineRequest) *CreatePolicyEngineInvoker {
+	requestDef := GenReqDefForCreatePolicyEngine()
+	return &CreatePolicyEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePolicyEngine 删除策略集
+//
+// Deletes a policy engine.
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AgentIdentityClient) DeletePolicyEngine(request *model.DeletePolicyEngineRequest) (*model.DeletePolicyEngineResponse, error) {
+	requestDef := GenReqDefForDeletePolicyEngine()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePolicyEngineResponse), nil
+	}
+}
+
+// DeletePolicyEngineInvoker 删除策略集
+func (c *AgentIdentityClient) DeletePolicyEngineInvoker(request *model.DeletePolicyEngineRequest) *DeletePolicyEngineInvoker {
+	requestDef := GenReqDefForDeletePolicyEngine()
+	return &DeletePolicyEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetPolicyEngine 查询策略集详情
+//
+// Gets details of a policy engine.
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AgentIdentityClient) GetPolicyEngine(request *model.GetPolicyEngineRequest) (*model.GetPolicyEngineResponse, error) {
+	requestDef := GenReqDefForGetPolicyEngine()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetPolicyEngineResponse), nil
+	}
+}
+
+// GetPolicyEngineInvoker 查询策略集详情
+func (c *AgentIdentityClient) GetPolicyEngineInvoker(request *model.GetPolicyEngineRequest) *GetPolicyEngineInvoker {
+	requestDef := GenReqDefForGetPolicyEngine()
+	return &GetPolicyEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPolicyEngineAttachments 查询策略集关联的实体列表
+//
+// Lists the entities (gateways and token vaults) attached to the specified policy engine.
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AgentIdentityClient) ListPolicyEngineAttachments(request *model.ListPolicyEngineAttachmentsRequest) (*model.ListPolicyEngineAttachmentsResponse, error) {
+	requestDef := GenReqDefForListPolicyEngineAttachments()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPolicyEngineAttachmentsResponse), nil
+	}
+}
+
+// ListPolicyEngineAttachmentsInvoker 查询策略集关联的实体列表
+func (c *AgentIdentityClient) ListPolicyEngineAttachmentsInvoker(request *model.ListPolicyEngineAttachmentsRequest) *ListPolicyEngineAttachmentsInvoker {
+	requestDef := GenReqDefForListPolicyEngineAttachments()
+	return &ListPolicyEngineAttachmentsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPolicyEngines 查询策略集列表
+//
+// Lists policy engines.
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AgentIdentityClient) ListPolicyEngines(request *model.ListPolicyEnginesRequest) (*model.ListPolicyEnginesResponse, error) {
+	requestDef := GenReqDefForListPolicyEngines()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPolicyEnginesResponse), nil
+	}
+}
+
+// ListPolicyEnginesInvoker 查询策略集列表
+func (c *AgentIdentityClient) ListPolicyEnginesInvoker(request *model.ListPolicyEnginesRequest) *ListPolicyEnginesInvoker {
+	requestDef := GenReqDefForListPolicyEngines()
+	return &ListPolicyEnginesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdatePolicyEngine 更新策略集
+//
+// Updates a policy engine (description only).
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AgentIdentityClient) UpdatePolicyEngine(request *model.UpdatePolicyEngineRequest) (*model.UpdatePolicyEngineResponse, error) {
+	requestDef := GenReqDefForUpdatePolicyEngine()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePolicyEngineResponse), nil
+	}
+}
+
+// UpdatePolicyEngineInvoker 更新策略集
+func (c *AgentIdentityClient) UpdatePolicyEngineInvoker(request *model.UpdatePolicyEngineRequest) *UpdatePolicyEngineInvoker {
+	requestDef := GenReqDefForUpdatePolicyEngine()
+	return &UpdatePolicyEngineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateStsCredentialProvider 创建STS凭证提供者
 //
 // Creates a new STS credential provider.
@@ -479,6 +731,27 @@ func (c *AgentIdentityClient) GetTokenVault(request *model.GetTokenVaultRequest)
 func (c *AgentIdentityClient) GetTokenVaultInvoker(request *model.GetTokenVaultRequest) *GetTokenVaultInvoker {
 	requestDef := GenReqDefForGetTokenVault()
 	return &GetTokenVaultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTokenVault 更新令牌保管库配置
+//
+// Updates the token vault configuration including KMS and policy engine settings.
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AgentIdentityClient) UpdateTokenVault(request *model.UpdateTokenVaultRequest) (*model.UpdateTokenVaultResponse, error) {
+	requestDef := GenReqDefForUpdateTokenVault()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTokenVaultResponse), nil
+	}
+}
+
+// UpdateTokenVaultInvoker 更新令牌保管库配置
+func (c *AgentIdentityClient) UpdateTokenVaultInvoker(request *model.UpdateTokenVaultRequest) *UpdateTokenVaultInvoker {
+	requestDef := GenReqDefForUpdateTokenVault()
+	return &UpdateTokenVaultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateWorkloadAccessToken Create workload access token (not acting on behalf of a user)

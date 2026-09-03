@@ -4709,6 +4709,22 @@ func (i *ShowFactLogicTableByIdInvoker) Invoke() (*model.ShowFactLogicTableByIdR
 	}
 }
 
+type ShowFactoryDependInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFactoryDependInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowFactoryDependInstancesInvoker) Invoke() (*model.ShowFactoryDependInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFactoryDependInstancesResponse), nil
+	}
+}
+
 type ShowFactoryEnvInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4738,6 +4754,22 @@ func (i *ShowFactoryFullTextInvoker) Invoke() (*model.ShowFactoryFullTextRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowFactoryFullTextResponse), nil
+	}
+}
+
+type ShowFactoryJobDependInstancesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFactoryJobDependInstancesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowFactoryJobDependInstancesInvoker) Invoke() (*model.ShowFactoryJobDependInstancesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFactoryJobDependInstancesResponse), nil
 	}
 }
 

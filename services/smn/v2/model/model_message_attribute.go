@@ -12,7 +12,7 @@ import (
 // MessageAttribute 消息属性
 type MessageAttribute struct {
 
-	// 属性名称。属性名称只能包含小写英文字母([a-z])、数字([0-9])、下划线(_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符
+	// 属性名称。属性名称只能包含小写英文字母([a-z])、数字([0-9])、下划线(\\_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符
 	Name string `json:"name"`
 
 	// 属性类型 STRING：字符串（String）类型 STRING_ARRAY：字符串数组（String.Array）类型 PROTOCOL：协议类型

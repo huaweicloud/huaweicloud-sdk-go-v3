@@ -439,6 +439,27 @@ func (c *RdsClient) CopyConfigurationInvoker(request *model.CopyConfigurationReq
 	return &CopyConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateBinlogMerge 合并Binlog
+//
+// 合并Binlog
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) CreateBinlogMerge(request *model.CreateBinlogMergeRequest) (*model.CreateBinlogMergeResponse, error) {
+	requestDef := GenReqDefForCreateBinlogMerge()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateBinlogMergeResponse), nil
+	}
+}
+
+// CreateBinlogMergeInvoker 合并Binlog
+func (c *RdsClient) CreateBinlogMergeInvoker(request *model.CreateBinlogMergeRequest) *CreateBinlogMergeInvoker {
+	requestDef := GenReqDefForCreateBinlogMerge()
+	return &CreateBinlogMergeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateConfiguration 创建参数模板
 //
 // 创建参数模板。
@@ -458,6 +479,27 @@ func (c *RdsClient) CreateConfiguration(request *model.CreateConfigurationReques
 func (c *RdsClient) CreateConfigurationInvoker(request *model.CreateConfigurationRequest) *CreateConfigurationInvoker {
 	requestDef := GenReqDefForCreateConfiguration()
 	return &CreateConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDiskSpaceDiagnosis 磁盘容量趋势诊断
+//
+// 磁盘容量趋势诊断
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) CreateDiskSpaceDiagnosis(request *model.CreateDiskSpaceDiagnosisRequest) (*model.CreateDiskSpaceDiagnosisResponse, error) {
+	requestDef := GenReqDefForCreateDiskSpaceDiagnosis()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDiskSpaceDiagnosisResponse), nil
+	}
+}
+
+// CreateDiskSpaceDiagnosisInvoker 磁盘容量趋势诊断
+func (c *RdsClient) CreateDiskSpaceDiagnosisInvoker(request *model.CreateDiskSpaceDiagnosisRequest) *CreateDiskSpaceDiagnosisInvoker {
+	requestDef := GenReqDefForCreateDiskSpaceDiagnosis()
+	return &CreateDiskSpaceDiagnosisInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateDnsName 申请域名
@@ -689,6 +731,27 @@ func (c *RdsClient) DeleteBackupSelection(request *model.DeleteBackupSelectionRe
 func (c *RdsClient) DeleteBackupSelectionInvoker(request *model.DeleteBackupSelectionRequest) *DeleteBackupSelectionInvoker {
 	requestDef := GenReqDefForDeleteBackupSelection()
 	return &DeleteBackupSelectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteBinlogMerge 删除Binlog合并记录
+//
+// 删除Binlog合并记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) DeleteBinlogMerge(request *model.DeleteBinlogMergeRequest) (*model.DeleteBinlogMergeResponse, error) {
+	requestDef := GenReqDefForDeleteBinlogMerge()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteBinlogMergeResponse), nil
+	}
+}
+
+// DeleteBinlogMergeInvoker 删除Binlog合并记录
+func (c *RdsClient) DeleteBinlogMergeInvoker(request *model.DeleteBinlogMergeRequest) *DeleteBinlogMergeInvoker {
+	requestDef := GenReqDefForDeleteBinlogMerge()
+	return &DeleteBinlogMergeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteConfiguration 删除参数模板
@@ -940,6 +1003,27 @@ func (c *RdsClient) EnableConfiguration(request *model.EnableConfigurationReques
 func (c *RdsClient) EnableConfigurationInvoker(request *model.EnableConfigurationRequest) *EnableConfigurationInvoker {
 	requestDef := GenReqDefForEnableConfiguration()
 	return &EnableConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetInstancesOpsMetricNames 查询实例CES监控指标名称列表
+//
+// 查询实例CES监控指标名称列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) GetInstancesOpsMetricNames(request *model.GetInstancesOpsMetricNamesRequest) (*model.GetInstancesOpsMetricNamesResponse, error) {
+	requestDef := GenReqDefForGetInstancesOpsMetricNames()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetInstancesOpsMetricNamesResponse), nil
+	}
+}
+
+// GetInstancesOpsMetricNamesInvoker 查询实例CES监控指标名称列表
+func (c *RdsClient) GetInstancesOpsMetricNamesInvoker(request *model.GetInstancesOpsMetricNamesRequest) *GetInstancesOpsMetricNamesInvoker {
+	requestDef := GenReqDefForGetInstancesOpsMetricNames()
+	return &GetInstancesOpsMetricNamesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAuditlogs 获取审计日志列表
@@ -1933,6 +2017,27 @@ func (c *RdsClient) ListRestoreTimesInvoker(request *model.ListRestoreTimesReque
 	return &ListRestoreTimesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListRetainBackups 查询被删除实例保留的备份
+//
+// 查询被删除实例保留的备份
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListRetainBackups(request *model.ListRetainBackupsRequest) (*model.ListRetainBackupsResponse, error) {
+	requestDef := GenReqDefForListRetainBackups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRetainBackupsResponse), nil
+	}
+}
+
+// ListRetainBackupsInvoker 查询被删除实例保留的备份
+func (c *RdsClient) ListRetainBackupsInvoker(request *model.ListRetainBackupsRequest) *ListRetainBackupsInvoker {
+	requestDef := GenReqDefForListRetainBackups()
+	return &ListRetainBackupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListScheduleEvents 查询事件列表
 //
 // 查询事件列表
@@ -2397,6 +2502,27 @@ func (c *RdsClient) MigrateFollowerInvoker(request *model.MigrateFollowerRequest
 	return &MigrateFollowerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ModifyNewBackupEncrypt 设置备份加密开关
+//
+// 设置备份加密开关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ModifyNewBackupEncrypt(request *model.ModifyNewBackupEncryptRequest) (*model.ModifyNewBackupEncryptResponse, error) {
+	requestDef := GenReqDefForModifyNewBackupEncrypt()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifyNewBackupEncryptResponse), nil
+	}
+}
+
+// ModifyNewBackupEncryptInvoker 设置备份加密开关
+func (c *RdsClient) ModifyNewBackupEncryptInvoker(request *model.ModifyNewBackupEncryptRequest) *ModifyNewBackupEncryptInvoker {
+	requestDef := GenReqDefForModifyNewBackupEncrypt()
+	return &ModifyNewBackupEncryptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ModifyPostgresqlHbaConf 修改pg_hba.conf文件的单个或多个配置
 //
 // 修改/新增pg_hba.conf文件的单个或多个配置，以priority做唯一标识，priority不存在的新增，存在的修改
@@ -2458,6 +2584,27 @@ func (c *RdsClient) NotifyReplaceNode(request *model.NotifyReplaceNodeRequest) (
 func (c *RdsClient) NotifyReplaceNodeInvoker(request *model.NotifyReplaceNodeRequest) *NotifyReplaceNodeInvoker {
 	requestDef := GenReqDefForNotifyReplaceNode()
 	return &NotifyReplaceNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// QueryNewBackupEncryption 查询未加密实例是否打开备份加密开关
+//
+// 查询未加密实例是否打开备份加密开关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) QueryNewBackupEncryption(request *model.QueryNewBackupEncryptionRequest) (*model.QueryNewBackupEncryptionResponse, error) {
+	requestDef := GenReqDefForQueryNewBackupEncryption()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.QueryNewBackupEncryptionResponse), nil
+	}
+}
+
+// QueryNewBackupEncryptionInvoker 查询未加密实例是否打开备份加密开关
+func (c *RdsClient) QueryNewBackupEncryptionInvoker(request *model.QueryNewBackupEncryptionRequest) *QueryNewBackupEncryptionInvoker {
+	requestDef := GenReqDefForQueryNewBackupEncryption()
+	return &QueryNewBackupEncryptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ResetConfiguration 重置自定义参数模板
@@ -2670,6 +2817,27 @@ func (c *RdsClient) SetBackupPolicy(request *model.SetBackupPolicyRequest) (*mod
 func (c *RdsClient) SetBackupPolicyInvoker(request *model.SetBackupPolicyRequest) *SetBackupPolicyInvoker {
 	requestDef := GenReqDefForSetBackupPolicy()
 	return &SetBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetBackupRetainPolicy 设置备份保留策略
+//
+// 设置备份保留策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) SetBackupRetainPolicy(request *model.SetBackupRetainPolicyRequest) (*model.SetBackupRetainPolicyResponse, error) {
+	requestDef := GenReqDefForSetBackupRetainPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetBackupRetainPolicyResponse), nil
+	}
+}
+
+// SetBackupRetainPolicyInvoker 设置备份保留策略
+func (c *RdsClient) SetBackupRetainPolicyInvoker(request *model.SetBackupRetainPolicyRequest) *SetBackupRetainPolicyInvoker {
+	requestDef := GenReqDefForSetBackupRetainPolicy()
+	return &SetBackupRetainPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SetBinlogClearPolicy 设置binlog本地保留时长
@@ -3031,6 +3199,27 @@ func (c *RdsClient) ShowBackupPolicyInvoker(request *model.ShowBackupPolicyReque
 	return &ShowBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowBackupRetainPolicy 查询备份保留策略
+//
+// 查询备份保留策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowBackupRetainPolicy(request *model.ShowBackupRetainPolicyRequest) (*model.ShowBackupRetainPolicyResponse, error) {
+	requestDef := GenReqDefForShowBackupRetainPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBackupRetainPolicyResponse), nil
+	}
+}
+
+// ShowBackupRetainPolicyInvoker 查询备份保留策略
+func (c *RdsClient) ShowBackupRetainPolicyInvoker(request *model.ShowBackupRetainPolicyRequest) *ShowBackupRetainPolicyInvoker {
+	requestDef := GenReqDefForShowBackupRetainPolicy()
+	return &ShowBackupRetainPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowBackupUsage 查询备份用量总览
 //
 // 查询备份用量总览
@@ -3050,6 +3239,48 @@ func (c *RdsClient) ShowBackupUsage(request *model.ShowBackupUsageRequest) (*mod
 func (c *RdsClient) ShowBackupUsageInvoker(request *model.ShowBackupUsageRequest) *ShowBackupUsageInvoker {
 	requestDef := GenReqDefForShowBackupUsage()
 	return &ShowBackupUsageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBackupUsageAlarmConfig 查询备份空间告警配置
+//
+// 查询备份空间告警配置，未配置时返回默认值。告警关闭时仅返回alarm_enabled字段。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowBackupUsageAlarmConfig(request *model.ShowBackupUsageAlarmConfigRequest) (*model.ShowBackupUsageAlarmConfigResponse, error) {
+	requestDef := GenReqDefForShowBackupUsageAlarmConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBackupUsageAlarmConfigResponse), nil
+	}
+}
+
+// ShowBackupUsageAlarmConfigInvoker 查询备份空间告警配置
+func (c *RdsClient) ShowBackupUsageAlarmConfigInvoker(request *model.ShowBackupUsageAlarmConfigRequest) *ShowBackupUsageAlarmConfigInvoker {
+	requestDef := GenReqDefForShowBackupUsageAlarmConfig()
+	return &ShowBackupUsageAlarmConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBackupUsageExceededInstances 查询备份空间超阈值实例列表
+//
+// 查询当前项目和账号下备份空间使用量超过告警阈值的实例列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowBackupUsageExceededInstances(request *model.ShowBackupUsageExceededInstancesRequest) (*model.ShowBackupUsageExceededInstancesResponse, error) {
+	requestDef := GenReqDefForShowBackupUsageExceededInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBackupUsageExceededInstancesResponse), nil
+	}
+}
+
+// ShowBackupUsageExceededInstancesInvoker 查询备份空间超阈值实例列表
+func (c *RdsClient) ShowBackupUsageExceededInstancesInvoker(request *model.ShowBackupUsageExceededInstancesRequest) *ShowBackupUsageExceededInstancesInvoker {
+	requestDef := GenReqDefForShowBackupUsageExceededInstances()
+	return &ShowBackupUsageExceededInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowBinlogClearPolicy 获取binlog本地保留时长
@@ -3428,6 +3659,27 @@ func (c *RdsClient) ShowRestartPolicy(request *model.ShowRestartPolicyRequest) (
 func (c *RdsClient) ShowRestartPolicyInvoker(request *model.ShowRestartPolicyRequest) *ShowRestartPolicyInvoker {
 	requestDef := GenReqDefForShowRestartPolicy()
 	return &ShowRestartPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRestoreTables 获取已恢复库表信息
+//
+// 获取已恢复库表信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowRestoreTables(request *model.ShowRestoreTablesRequest) (*model.ShowRestoreTablesResponse, error) {
+	requestDef := GenReqDefForShowRestoreTables()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRestoreTablesResponse), nil
+	}
+}
+
+// ShowRestoreTablesInvoker 获取已恢复库表信息
+func (c *RdsClient) ShowRestoreTablesInvoker(request *model.ShowRestoreTablesRequest) *ShowRestoreTablesInvoker {
+	requestDef := GenReqDefForShowRestoreTables()
+	return &ShowRestoreTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSecondLevelMonitoring 查询秒级监控策略
@@ -3871,6 +4123,27 @@ func (c *RdsClient) UnlockNodeReadonlyStatusInvoker(request *model.UnlockNodeRea
 	return &UnlockNodeReadonlyStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateBackupUsageAlarmConfig 修改备份空间告警配置
+//
+// 修改备份空间告警配置，包括告警开关、阈值百分比和增量百分比。关闭告警时不需要传阈值和增量参数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) UpdateBackupUsageAlarmConfig(request *model.UpdateBackupUsageAlarmConfigRequest) (*model.UpdateBackupUsageAlarmConfigResponse, error) {
+	requestDef := GenReqDefForUpdateBackupUsageAlarmConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateBackupUsageAlarmConfigResponse), nil
+	}
+}
+
+// UpdateBackupUsageAlarmConfigInvoker 修改备份空间告警配置
+func (c *RdsClient) UpdateBackupUsageAlarmConfigInvoker(request *model.UpdateBackupUsageAlarmConfigRequest) *UpdateBackupUsageAlarmConfigInvoker {
+	requestDef := GenReqDefForUpdateBackupUsageAlarmConfig()
+	return &UpdateBackupUsageAlarmConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateConfiguration 修改参数模板参数
 //
 // 修改参数模板参数。
@@ -3974,6 +4247,27 @@ func (c *RdsClient) UpdateInstanceAlias(request *model.UpdateInstanceAliasReques
 func (c *RdsClient) UpdateInstanceAliasInvoker(request *model.UpdateInstanceAliasRequest) *UpdateInstanceAliasInvoker {
 	requestDef := GenReqDefForUpdateInstanceAlias()
 	return &UpdateInstanceAliasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstanceBackupMethod 切换实例备份方式
+//
+// 切换实例备份方式
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) UpdateInstanceBackupMethod(request *model.UpdateInstanceBackupMethodRequest) (*model.UpdateInstanceBackupMethodResponse, error) {
+	requestDef := GenReqDefForUpdateInstanceBackupMethod()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstanceBackupMethodResponse), nil
+	}
+}
+
+// UpdateInstanceBackupMethodInvoker 切换实例备份方式
+func (c *RdsClient) UpdateInstanceBackupMethodInvoker(request *model.UpdateInstanceBackupMethodRequest) *UpdateInstanceBackupMethodInvoker {
+	requestDef := GenReqDefForUpdateInstanceBackupMethod()
+	return &UpdateInstanceBackupMethodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateInstanceConfiguration 修改指定实例的参数
@@ -4564,6 +4858,27 @@ func (c *RdsClient) ListDbUsersInvoker(request *model.ListDbUsersRequest) *ListD
 	return &ListDbUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInstanceAllProxyVersion 查询实例代理节点的引擎版本信息
+//
+// 获取某个实例下代理节点的引擎版本信息，用于版本升级判断。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListInstanceAllProxyVersion(request *model.ListInstanceAllProxyVersionRequest) (*model.ListInstanceAllProxyVersionResponse, error) {
+	requestDef := GenReqDefForListInstanceAllProxyVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstanceAllProxyVersionResponse), nil
+	}
+}
+
+// ListInstanceAllProxyVersionInvoker 查询实例代理节点的引擎版本信息
+func (c *RdsClient) ListInstanceAllProxyVersionInvoker(request *model.ListInstanceAllProxyVersionRequest) *ListInstanceAllProxyVersionInvoker {
+	requestDef := GenReqDefForListInstanceAllProxyVersion()
+	return &ListInstanceAllProxyVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ResetPwd 重置数据库密码
 //
 // 重置数据库密码.
@@ -4646,6 +4961,48 @@ func (c *RdsClient) SetReadOnlySwitch(request *model.SetReadOnlySwitchRequest) (
 func (c *RdsClient) SetReadOnlySwitchInvoker(request *model.SetReadOnlySwitchRequest) *SetReadOnlySwitchInvoker {
 	requestDef := GenReqDefForSetReadOnlySwitch()
 	return &SetReadOnlySwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMySqlProxySlowLogList 查询数据库代理慢日志信息列表
+//
+// 查询数据库代理慢日志信息列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowMySqlProxySlowLogList(request *model.ShowMySqlProxySlowLogListRequest) (*model.ShowMySqlProxySlowLogListResponse, error) {
+	requestDef := GenReqDefForShowMySqlProxySlowLogList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMySqlProxySlowLogListResponse), nil
+	}
+}
+
+// ShowMySqlProxySlowLogListInvoker 查询数据库代理慢日志信息列表
+func (c *RdsClient) ShowMySqlProxySlowLogListInvoker(request *model.ShowMySqlProxySlowLogListRequest) *ShowMySqlProxySlowLogListInvoker {
+	requestDef := GenReqDefForShowMySqlProxySlowLogList()
+	return &ShowMySqlProxySlowLogListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchMySqlProxySlowLog 更改数据库代理慢日志上报开关
+//
+// 更改数据库代理慢日志上报开关。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) SwitchMySqlProxySlowLog(request *model.SwitchMySqlProxySlowLogRequest) (*model.SwitchMySqlProxySlowLogResponse, error) {
+	requestDef := GenReqDefForSwitchMySqlProxySlowLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchMySqlProxySlowLogResponse), nil
+	}
+}
+
+// SwitchMySqlProxySlowLogInvoker 更改数据库代理慢日志上报开关
+func (c *RdsClient) SwitchMySqlProxySlowLogInvoker(request *model.SwitchMySqlProxySlowLogRequest) *SwitchMySqlProxySlowLogInvoker {
+	requestDef := GenReqDefForSwitchMySqlProxySlowLog()
+	return &SwitchMySqlProxySlowLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDatabase 修改指定实例的数据库备注
@@ -5557,6 +5914,27 @@ func (c *RdsClient) ShowAutoCesAlarmInvoker(request *model.ShowAutoCesAlarmReque
 	return &ShowAutoCesAlarmInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDiskSpaceDiagnosis 查询磁盘容量趋势诊断结果
+//
+// 查询磁盘容量趋势诊断结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowDiskSpaceDiagnosis(request *model.ShowDiskSpaceDiagnosisRequest) (*model.ShowDiskSpaceDiagnosisResponse, error) {
+	requestDef := GenReqDefForShowDiskSpaceDiagnosis()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDiskSpaceDiagnosisResponse), nil
+	}
+}
+
+// ShowDiskSpaceDiagnosisInvoker 查询磁盘容量趋势诊断结果
+func (c *RdsClient) ShowDiskSpaceDiagnosisInvoker(request *model.ShowDiskSpaceDiagnosisRequest) *ShowDiskSpaceDiagnosisInvoker {
+	requestDef := GenReqDefForShowDiskSpaceDiagnosis()
+	return &ShowDiskSpaceDiagnosisInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowIntelligentKillSessionHistory 查询一键kill会话历史
 //
 // 查询一键kill会话历史
@@ -5597,6 +5975,27 @@ func (c *RdsClient) ShowIntelligentKillSessionStatistic(request *model.ShowIntel
 func (c *RdsClient) ShowIntelligentKillSessionStatisticInvoker(request *model.ShowIntelligentKillSessionStatisticRequest) *ShowIntelligentKillSessionStatisticInvoker {
 	requestDef := GenReqDefForShowIntelligentKillSessionStatistic()
 	return &ShowIntelligentKillSessionStatisticInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSqlDiagnosis 查询诊断项sql详情
+//
+// 查询诊断项sql详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowSqlDiagnosis(request *model.ShowSqlDiagnosisRequest) (*model.ShowSqlDiagnosisResponse, error) {
+	requestDef := GenReqDefForShowSqlDiagnosis()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSqlDiagnosisResponse), nil
+	}
+}
+
+// ShowSqlDiagnosisInvoker 查询诊断项sql详情
+func (c *RdsClient) ShowSqlDiagnosisInvoker(request *model.ShowSqlDiagnosisRequest) *ShowSqlDiagnosisInvoker {
+	requestDef := GenReqDefForShowSqlDiagnosis()
+	return &ShowSqlDiagnosisInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AllowSqlserverDbUserPrivilege 授权数据库帐号

@@ -36,6 +36,18 @@ type ListSubscriptionUserResponseItemInfo struct {
 	Sms *ListSubscriptionUserResponseSmsEndpointInfo `json:"sms,omitempty"`
 
 	Email *ListSubscriptionUserResponseEmailEndpointInfo `json:"email,omitempty"`
+
+	Callnotify *ListSubscriptionUserResponseCallnotifyEndpointInfo `json:"callnotify,omitempty"`
+
+	Wechat *ListSubscriptionUserResponseWechatEndpointInfo `json:"wechat,omitempty"`
+
+	Dingding *ListSubscriptionUserResponseDingdingEndpointInfo `json:"dingding,omitempty"`
+
+	Feishu *ListSubscriptionUserResponseFeishuEndpointInfo `json:"feishu,omitempty"`
+
+	Welink *ListSubscriptionUserResponseWelinkEndpointInfo `json:"welink,omitempty"`
+
+	DingTalkBot *ListSubscriptionUserResponseDingTalkBotEndpointInfo `json:"ding_talk_bot,omitempty"`
 }
 
 func (o ListSubscriptionUserResponseItemInfo) String() string {

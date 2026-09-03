@@ -53,6 +53,22 @@ func (i *BatchResizeVolumesInvoker) Invoke() (*model.BatchResizeVolumesResponse,
 	}
 }
 
+type ChangeVolumeChargeModeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeVolumeChargeModeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeVolumeChargeModeInvoker) Invoke() (*model.ChangeVolumeChargeModeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeVolumeChargeModeResponse), nil
+	}
+}
+
 type CinderAcceptVolumeTransferInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -30,6 +30,8 @@ type ListSubscriptionsItem struct {
 	Status int32 `json:"status"`
 
 	FilterPolices *[]SubscriptionsFilterPolicy `json:"filter_polices,omitempty"`
+
+	Extension *SubscriptionExtensionResponse `json:"extension,omitempty"`
 }
 
 func (o ListSubscriptionsItem) String() string {

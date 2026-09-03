@@ -21,6 +21,18 @@ type CreateSubscriptionUserRequestBody struct {
 	Sms *CreateSubscriptionUserRequestSmsEndpointInfo `json:"sms,omitempty"`
 
 	Email *CreateSubscriptionUserRequestEmailEndpointInfo `json:"email,omitempty"`
+
+	Callnotify *CreateSubscriptionUserRequestCallnotifyEndpointInfo `json:"callnotify,omitempty"`
+
+	Wechat *CreateSubscriptionUserRequestWechatEndpointInfo `json:"wechat,omitempty"`
+
+	Dingding *CreateSubscriptionUserRequestDingdingEndpointInfo `json:"dingding,omitempty"`
+
+	Feishu *CreateSubscriptionUserRequestFeishuEndpointInfo `json:"feishu,omitempty"`
+
+	Welink *CreateSubscriptionUserRequestWelinkEndpointInfo `json:"welink,omitempty"`
+
+	DingTalkBot *CreateSubscriptionUserRequestDingTalkBotEndpointInfo `json:"ding_talk_bot,omitempty"`
 }
 
 func (o CreateSubscriptionUserRequestBody) String() string {

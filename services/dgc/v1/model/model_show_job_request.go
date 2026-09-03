@@ -21,7 +21,7 @@ type ShowJobRequest struct {
 	// 返回下游依赖当前作业的作业，只返回第一层。
 	Dependencies *bool `json:"dependencies,omitempty"`
 
-	// 该字段仅在verion未设置时生效，true：作业最新提交版本，false：开发态作业（即最新保存版本）。
+	// 该字段仅在version未设置时生效，true：作业最新提交版本，false：开发态作业（即最新保存版本）。
 	GetJobSubmitVersion *bool `json:"getJobSubmitVersion,omitempty"`
 }
 

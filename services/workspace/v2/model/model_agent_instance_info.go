@@ -78,6 +78,9 @@ type AgentInstanceInfo struct {
 
 	// 企业项目 ID
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// 安全策略管控，1=开启，0=关闭
+	SecurityPolicyControl *int32 `json:"security_policy_control,omitempty"`
 }
 
 func (o AgentInstanceInfo) String() string {

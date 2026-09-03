@@ -9,9 +9,15 @@ import (
 // ShowKernelUpgradeCheckResultResponse Response Object
 type ShowKernelUpgradeCheckResultResponse struct {
 
-	// **参数解释**：  预检查任务ID集合。  **取值范围**：  不涉及。
-	JobIds         *[]string `json:"job_ids,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	// **参数解释**：  预检查结果。  **取值范围**：  - true：成功。 - false：失败。
+	UpgradePrecheckResult *string `json:"upgrade_precheck_result,omitempty"`
+
+	// **参数解释**：  预检查完成时间。  **取值范围**：  格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。
+	UpdatedAt *int64 `json:"updated_at,omitempty"`
+
+	// **参数解释**：  实例预检查详情。
+	UpgradePrecheckDetail *[]UpgradeDatabasePrecheckResult `json:"upgrade_precheck_detail,omitempty"`
+	HttpStatusCode        int                              `json:"-"`
 }
 
 func (o ShowKernelUpgradeCheckResultResponse) String() string {

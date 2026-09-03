@@ -40,6 +40,27 @@ func (c *CloudtestClient) AddCaseResultFourInvoker(request *model.AddCaseResultF
 	return &AddCaseResultFourInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddOrUpdateTestsuiteInfoUsing 添加测试套
+//
+// 添加测试套
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) AddOrUpdateTestsuiteInfoUsing(request *model.AddOrUpdateTestsuiteInfoUsingRequest) (*model.AddOrUpdateTestsuiteInfoUsingResponse, error) {
+	requestDef := GenReqDefForAddOrUpdateTestsuiteInfoUsing()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddOrUpdateTestsuiteInfoUsingResponse), nil
+	}
+}
+
+// AddOrUpdateTestsuiteInfoUsingInvoker 添加测试套
+func (c *CloudtestClient) AddOrUpdateTestsuiteInfoUsingInvoker(request *model.AddOrUpdateTestsuiteInfoUsingRequest) *AddOrUpdateTestsuiteInfoUsingInvoker {
+	requestDef := GenReqDefForAddOrUpdateTestsuiteInfoUsing()
+	return &AddOrUpdateTestsuiteInfoUsingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddTestCaseComment 新增用例评论
 //
 // 新增用例评论
@@ -689,6 +710,27 @@ func (c *CloudtestClient) DeleteTestReportCustomDetailByUri(request *model.Delet
 func (c *CloudtestClient) DeleteTestReportCustomDetailByUriInvoker(request *model.DeleteTestReportCustomDetailByUriRequest) *DeleteTestReportCustomDetailByUriInvoker {
 	requestDef := GenReqDefForDeleteTestReportCustomDetailByUri()
 	return &DeleteTestReportCustomDetailByUriInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTestsuiteInfosUsing 根据任务Id列表批量删除任务
+//
+// 根据任务Id列表批量删除任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) DeleteTestsuiteInfosUsing(request *model.DeleteTestsuiteInfosUsingRequest) (*model.DeleteTestsuiteInfosUsingResponse, error) {
+	requestDef := GenReqDefForDeleteTestsuiteInfosUsing()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTestsuiteInfosUsingResponse), nil
+	}
+}
+
+// DeleteTestsuiteInfosUsingInvoker 根据任务Id列表批量删除任务
+func (c *CloudtestClient) DeleteTestsuiteInfosUsingInvoker(request *model.DeleteTestsuiteInfosUsingRequest) *DeleteTestsuiteInfosUsingInvoker {
+	requestDef := GenReqDefForDeleteTestsuiteInfosUsing()
+	return &DeleteTestsuiteInfosUsingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DownloadStepImageNew 下载图片
@@ -2831,6 +2873,27 @@ func (c *CloudtestClient) ShowTestpointByPageInvoker(request *model.ShowTestpoin
 	return &ShowTestpointByPageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowTestsuiteInfoUsing 根据任务id查询任务
+//
+// 根据任务id查询任务
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ShowTestsuiteInfoUsing(request *model.ShowTestsuiteInfoUsingRequest) (*model.ShowTestsuiteInfoUsingResponse, error) {
+	requestDef := GenReqDefForShowTestsuiteInfoUsing()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTestsuiteInfoUsingResponse), nil
+	}
+}
+
+// ShowTestsuiteInfoUsingInvoker 根据任务id查询任务
+func (c *CloudtestClient) ShowTestsuiteInfoUsingInvoker(request *model.ShowTestsuiteInfoUsingRequest) *ShowTestsuiteInfoUsingInvoker {
+	requestDef := GenReqDefForShowTestsuiteInfoUsing()
+	return &ShowTestsuiteInfoUsingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowUserAccessInfo 获取租户订单信息
 //
 // 获取租户订单信息
@@ -2871,6 +2934,27 @@ func (c *CloudtestClient) ShowUserExecuteTestCaseInfo(request *model.ShowUserExe
 func (c *CloudtestClient) ShowUserExecuteTestCaseInfoInvoker(request *model.ShowUserExecuteTestCaseInfoRequest) *ShowUserExecuteTestCaseInfoInvoker {
 	requestDef := GenReqDefForShowUserExecuteTestCaseInfo()
 	return &ShowUserExecuteTestCaseInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartTestsuiteUsing 启动测试套
+//
+// 启动测试套
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) StartTestsuiteUsing(request *model.StartTestsuiteUsingRequest) (*model.StartTestsuiteUsingResponse, error) {
+	requestDef := GenReqDefForStartTestsuiteUsing()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartTestsuiteUsingResponse), nil
+	}
+}
+
+// StartTestsuiteUsingInvoker 启动测试套
+func (c *CloudtestClient) StartTestsuiteUsingInvoker(request *model.StartTestsuiteUsingRequest) *StartTestsuiteUsingInvoker {
+	requestDef := GenReqDefForStartTestsuiteUsing()
+	return &StartTestsuiteUsingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateBasicAwById 修改关键字信息接口
@@ -3039,6 +3123,27 @@ func (c *CloudtestClient) UpdateTestReportCustomDetailByUri(request *model.Updat
 func (c *CloudtestClient) UpdateTestReportCustomDetailByUriInvoker(request *model.UpdateTestReportCustomDetailByUriRequest) *UpdateTestReportCustomDetailByUriInvoker {
 	requestDef := GenReqDefForUpdateTestReportCustomDetailByUri()
 	return &UpdateTestReportCustomDetailByUriInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTestsuiteInfoUsing 更新测试套
+//
+// 更新测试套
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) UpdateTestsuiteInfoUsing(request *model.UpdateTestsuiteInfoUsingRequest) (*model.UpdateTestsuiteInfoUsingResponse, error) {
+	requestDef := GenReqDefForUpdateTestsuiteInfoUsing()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTestsuiteInfoUsingResponse), nil
+	}
+}
+
+// UpdateTestsuiteInfoUsingInvoker 更新测试套
+func (c *CloudtestClient) UpdateTestsuiteInfoUsingInvoker(request *model.UpdateTestsuiteInfoUsingRequest) *UpdateTestsuiteInfoUsingInvoker {
+	requestDef := GenReqDefForUpdateTestsuiteInfoUsing()
+	return &UpdateTestsuiteInfoUsingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateUserDnsMapping 更新用户DNS映射

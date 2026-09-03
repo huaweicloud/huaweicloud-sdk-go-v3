@@ -10,8 +10,7 @@ import (
 type Available struct {
 	Value *Value `json:"value,omitempty"`
 
-	// 最大弹性资源量减去故障资源和热备节点的资源。
-	MaxValue *interface{} `json:"maxValue,omitempty"`
+	MaxValue *Value `json:"maxValue,omitempty"`
 
 	// UTC时间，格式yyyy-MM-dd'T'HH:mm:ss'Z'。
 	Timestamp *string `json:"timestamp,omitempty"`

@@ -15,8 +15,7 @@ type SetInstanceScheduleEventsRequestBody struct {
 	// **参数解释**：  事件信息。  **约束限制**：  批量事件个数不得超过20个。
 	EventInstances []EventInstances `json:"event_instances"`
 
-	// **参数解释**：  事件执行窗口。  **约束限制**：  当operation_type为reservation时，该字段必传。
-	EventScheduleWindow *interface{} `json:"event_schedule_window,omitempty"`
+	EventScheduleWindow *EventScheduleWindow `json:"event_schedule_window,omitempty"`
 }
 
 func (o SetInstanceScheduleEventsRequestBody) String() string {

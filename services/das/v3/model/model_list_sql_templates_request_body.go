@@ -1,0 +1,53 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// ListSqlTemplatesRequestBody 查询SQL模板列表请求体
+type ListSqlTemplatesRequestBody struct {
+
+	// 实例ID，实例的唯一标识
+	InstanceId string `json:"instance_id"`
+
+	// 节点ID，实例节点的唯一标识
+	NodeId *string `json:"node_id,omitempty"`
+
+	// 开始时间，Unix timestamp，单位：毫秒
+	StartAt int64 `json:"start_at"`
+
+	// 结束时间，Unix timestamp，单位：毫秒
+	EndAt int64 `json:"end_at"`
+
+	// 操作类型，可组合，用逗号分隔
+	Operation *string `json:"operation,omitempty"`
+
+	// 数据库名称列表
+	DbNameList *[]string `json:"db_name_list,omitempty"`
+
+	// 关键字
+	Keyword *string `json:"keyword,omitempty"`
+
+	// SQL模板ID
+	SqlTemplateId *string `json:"sql_template_id,omitempty"`
+
+	// 排序字段，取值范围：executeNum（执行次数）、totalCost（总耗时）、avgCost（平均耗时）、totalScan（总扫描行数）、avgScan（平均扫描行数）
+	Sort *string `json:"sort,omitempty"`
+
+	// 排序顺序，true（正序）、false（逆序）
+	Asc *bool `json:"asc,omitempty"`
+
+	// 数量，默认30
+	Size *int32 `json:"size,omitempty"`
+}
+
+func (o ListSqlTemplatesRequestBody) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "ListSqlTemplatesRequestBody struct{}"
+	}
+
+	return strings.Join([]string{"ListSqlTemplatesRequestBody", string(data)}, " ")
+}

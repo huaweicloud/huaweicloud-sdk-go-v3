@@ -22,6 +22,12 @@ type HealthReportTableSpaceNewStat struct {
 
 	// 无索引表列表。
 	NoIndexTablesResp *[]HealthReportTableSpaceQuerySpecialTablesResp `json:"no_index_tables_resp,omitempty"`
+
+	// 统计分析是否成功。
+	AnalyzeSuccess *bool `json:"analyze_success,omitempty"`
+
+	// 错误信息。
+	ErrorMessage *string `json:"error_message,omitempty"`
 }
 
 func (o HealthReportTableSpaceNewStat) String() string {

@@ -1,0 +1,22 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// DeletePolicyResponse Response Object
+type DeletePolicyResponse struct {
+	Policy         *Policy `json:"policy,omitempty"`
+	HttpStatusCode int     `json:"-"`
+}
+
+func (o DeletePolicyResponse) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "DeletePolicyResponse struct{}"
+	}
+
+	return strings.Join([]string{"DeletePolicyResponse", string(data)}, " ")
+}

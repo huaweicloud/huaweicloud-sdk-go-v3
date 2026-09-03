@@ -165,6 +165,22 @@ func (i *BatchDeletePoolTagsInvoker) Invoke() (*model.BatchDeletePoolTagsRespons
 	}
 }
 
+type BatchDeleteTrainingJobInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteTrainingJobInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteTrainingJobInvoker) Invoke() (*model.BatchDeleteTrainingJobResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteTrainingJobResponse), nil
+	}
+}
+
 type BatchDevServersActionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -482,6 +498,22 @@ func (i *CountInferServicesByTagsInvoker) Invoke() (*model.CountInferServicesByT
 		return nil, err
 	} else {
 		return result.(*model.CountInferServicesByTagsResponse), nil
+	}
+}
+
+type CountTrainingJobsByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountTrainingJobsByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CountTrainingJobsByTagsInvoker) Invoke() (*model.CountTrainingJobsByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountTrainingJobsByTagsResponse), nil
 	}
 }
 
@@ -1637,6 +1669,22 @@ func (i *ListEventsInvoker) Invoke() (*model.ListEventsResponse, error) {
 	}
 }
 
+type ListFtArtifactsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListFtArtifactsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListFtArtifactsInvoker) Invoke() (*model.ListFtArtifactsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListFtArtifactsResponse), nil
+	}
+}
+
 type ListHyperClusterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2149,6 +2197,22 @@ func (i *ListTrainingJobStagesInvoker) Invoke() (*model.ListTrainingJobStagesRes
 	}
 }
 
+type ListTrainingJobTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTrainingJobTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTrainingJobTagsInvoker) Invoke() (*model.ListTrainingJobTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTrainingJobTagsResponse), nil
+	}
+}
+
 type ListTrainingJobTasksInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2178,6 +2242,22 @@ func (i *ListTrainingJobsInvoker) Invoke() (*model.ListTrainingJobsResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListTrainingJobsResponse), nil
+	}
+}
+
+type ListTrainingJobsByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTrainingJobsByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTrainingJobsByTagsInvoker) Invoke() (*model.ListTrainingJobsByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTrainingJobsByTagsResponse), nil
 	}
 }
 
@@ -2226,6 +2306,22 @@ func (i *ModifyInferIntranetConnectionsInvoker) Invoke() (*model.ModifyInferIntr
 		return nil, err
 	} else {
 		return result.(*model.ModifyInferIntranetConnectionsResponse), nil
+	}
+}
+
+type ModifyTrainingQuotasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyTrainingQuotasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyTrainingQuotasInvoker) Invoke() (*model.ModifyTrainingQuotasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyTrainingQuotasResponse), nil
 	}
 }
 
@@ -2290,6 +2386,22 @@ func (i *PatchPoolInvoker) Invoke() (*model.PatchPoolResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.PatchPoolResponse), nil
+	}
+}
+
+type PublishFtArtifactsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PublishFtArtifactsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *PublishFtArtifactsInvoker) Invoke() (*model.PublishFtArtifactsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PublishFtArtifactsResponse), nil
 	}
 }
 
@@ -2562,6 +2674,38 @@ func (i *ShowDynamicStorageInvoker) Invoke() (*model.ShowDynamicStorageResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowDynamicStorageResponse), nil
+	}
+}
+
+type ShowFtDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFtDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowFtDetailInvoker) Invoke() (*model.ShowFtDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFtDetailResponse), nil
+	}
+}
+
+type ShowFtMetricsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFtMetricsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowFtMetricsInvoker) Invoke() (*model.ShowFtMetricsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFtMetricsResponse), nil
 	}
 }
 
@@ -2997,6 +3141,22 @@ func (i *ShowTrainingExperimentDetailsInvoker) Invoke() (*model.ShowTrainingExpe
 	}
 }
 
+type ShowTrainingFlavorMaxAvailableResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTrainingFlavorMaxAvailableResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTrainingFlavorMaxAvailableResourceInvoker) Invoke() (*model.ShowTrainingFlavorMaxAvailableResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTrainingFlavorMaxAvailableResourceResponse), nil
+	}
+}
+
 type ShowTrainingJobDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3045,6 +3205,22 @@ func (i *ShowTrainingJobFlavorsInvoker) Invoke() (*model.ShowTrainingJobFlavorsR
 	}
 }
 
+type ShowTrainingJobLogsFromAomInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTrainingJobLogsFromAomInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTrainingJobLogsFromAomInvoker) Invoke() (*model.ShowTrainingJobLogsFromAomResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTrainingJobLogsFromAomResponse), nil
+	}
+}
+
 type ShowTrainingJobLogsPreviewInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3074,6 +3250,22 @@ func (i *ShowTrainingJobMetricsInvoker) Invoke() (*model.ShowTrainingJobMetricsR
 		return nil, err
 	} else {
 		return result.(*model.ShowTrainingJobMetricsResponse), nil
+	}
+}
+
+type ShowTrainingJobRoutePlanInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTrainingJobRoutePlanInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTrainingJobRoutePlanInvoker) Invoke() (*model.ShowTrainingJobRoutePlanResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTrainingJobRoutePlanResponse), nil
 	}
 }
 
@@ -3506,6 +3698,22 @@ func (i *ValidateAuthorizationInvoker) Invoke() (*model.ValidateAuthorizationRes
 		return nil, err
 	} else {
 		return result.(*model.ValidateAuthorizationResponse), nil
+	}
+}
+
+type ValidateTrainingJobNameInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ValidateTrainingJobNameInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ValidateTrainingJobNameInvoker) Invoke() (*model.ValidateTrainingJobNameResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ValidateTrainingJobNameResponse), nil
 	}
 }
 

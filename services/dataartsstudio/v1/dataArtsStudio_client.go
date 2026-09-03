@@ -6201,6 +6201,27 @@ func (c *DataArtsStudioClient) ShowFactLogicTableByIdInvoker(request *model.Show
 	return &ShowFactLogicTableByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowFactoryDependInstances 查询实例的上下游依赖
+//
+// 查询实例的上下游依赖
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowFactoryDependInstances(request *model.ShowFactoryDependInstancesRequest) (*model.ShowFactoryDependInstancesResponse, error) {
+	requestDef := GenReqDefForShowFactoryDependInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFactoryDependInstancesResponse), nil
+	}
+}
+
+// ShowFactoryDependInstancesInvoker 查询实例的上下游依赖
+func (c *DataArtsStudioClient) ShowFactoryDependInstancesInvoker(request *model.ShowFactoryDependInstancesRequest) *ShowFactoryDependInstancesInvoker {
+	requestDef := GenReqDefForShowFactoryDependInstances()
+	return &ShowFactoryDependInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowFactoryEnv 查询环境变量信息
 //
 // 查询环境变量信息
@@ -6241,6 +6262,27 @@ func (c *DataArtsStudioClient) ShowFactoryFullText(request *model.ShowFactoryFul
 func (c *DataArtsStudioClient) ShowFactoryFullTextInvoker(request *model.ShowFactoryFullTextRequest) *ShowFactoryFullTextInvoker {
 	requestDef := GenReqDefForShowFactoryFullText()
 	return &ShowFactoryFullTextInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowFactoryJobDependInstances 查看作业的上下游依赖关系
+//
+// 提供对外接口，查看作业的上下游依赖关系及责任人。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowFactoryJobDependInstances(request *model.ShowFactoryJobDependInstancesRequest) (*model.ShowFactoryJobDependInstancesResponse, error) {
+	requestDef := GenReqDefForShowFactoryJobDependInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowFactoryJobDependInstancesResponse), nil
+	}
+}
+
+// ShowFactoryJobDependInstancesInvoker 查看作业的上下游依赖关系
+func (c *DataArtsStudioClient) ShowFactoryJobDependInstancesInvoker(request *model.ShowFactoryJobDependInstancesRequest) *ShowFactoryJobDependInstancesInvoker {
+	requestDef := GenReqDefForShowFactoryJobDependInstances()
+	return &ShowFactoryJobDependInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowFactoryPackageDetail 查询指定发布包详情

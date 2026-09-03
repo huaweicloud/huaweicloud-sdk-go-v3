@@ -1205,6 +1205,38 @@ func (i *CheckSysprepInfoInvoker) Invoke() (*model.CheckSysprepInfoResponse, err
 	}
 }
 
+type ListCommonSkillsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCommonSkillsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCommonSkillsInvoker) Invoke() (*model.ListCommonSkillsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCommonSkillsResponse), nil
+	}
+}
+
+type ShowCommonSkillInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCommonSkillInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowCommonSkillInvoker) Invoke() (*model.ShowCommonSkillResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCommonSkillResponse), nil
+	}
+}
+
 type ExportUserLoginInfoNewInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2034,6 +2066,22 @@ func (i *AddDesktopPoolVolumesInvoker) Invoke() (*model.AddDesktopPoolVolumesRes
 		return nil, err
 	} else {
 		return result.(*model.AddDesktopPoolVolumesResponse), nil
+	}
+}
+
+type AttachDesktopPoolUserInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AttachDesktopPoolUserInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AttachDesktopPoolUserInvoker) Invoke() (*model.AttachDesktopPoolUserResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AttachDesktopPoolUserResponse), nil
 	}
 }
 
@@ -5122,6 +5170,390 @@ func (i *UpdateSubnetIdsInvoker) Invoke() (*model.UpdateSubnetIdsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.UpdateSubnetIdsResponse), nil
+	}
+}
+
+type CreateSkillBindingsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSkillBindingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSkillBindingsInvoker) Invoke() (*model.CreateSkillBindingsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSkillBindingsResponse), nil
+	}
+}
+
+type DeleteSkillBindingsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSkillBindingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteSkillBindingsInvoker) Invoke() (*model.DeleteSkillBindingsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSkillBindingsResponse), nil
+	}
+}
+
+type ListCommonSkillResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCommonSkillResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCommonSkillResourcesInvoker) Invoke() (*model.ListCommonSkillResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCommonSkillResourcesResponse), nil
+	}
+}
+
+type ListInstanceSkillsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstanceSkillsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstanceSkillsInvoker) Invoke() (*model.ListInstanceSkillsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstanceSkillsResponse), nil
+	}
+}
+
+type ListSecurityPolicyControlResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSecurityPolicyControlResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSecurityPolicyControlResourcesInvoker) Invoke() (*model.ListSecurityPolicyControlResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSecurityPolicyControlResourcesResponse), nil
+	}
+}
+
+type ListSkillResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSkillResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSkillResourcesInvoker) Invoke() (*model.ListSkillResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSkillResourcesResponse), nil
+	}
+}
+
+type UpdateSecurityPolicyControlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSecurityPolicyControlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSecurityPolicyControlInvoker) Invoke() (*model.UpdateSecurityPolicyControlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSecurityPolicyControlResponse), nil
+	}
+}
+
+type BatchListSkillPackagesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchListSkillPackagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchListSkillPackagesInvoker) Invoke() (*model.BatchListSkillPackagesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchListSkillPackagesResponse), nil
+	}
+}
+
+type CreateDownloadUrlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDownloadUrlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDownloadUrlInvoker) Invoke() (*model.CreateDownloadUrlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDownloadUrlResponse), nil
+	}
+}
+
+type CreateSkillPackageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSkillPackageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSkillPackageInvoker) Invoke() (*model.CreateSkillPackageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSkillPackageResponse), nil
+	}
+}
+
+type CreateUploadUrlsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateUploadUrlsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateUploadUrlsInvoker) Invoke() (*model.CreateUploadUrlsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateUploadUrlsResponse), nil
+	}
+}
+
+type DeleteSkillPackageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSkillPackageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteSkillPackageInvoker) Invoke() (*model.DeleteSkillPackageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSkillPackageResponse), nil
+	}
+}
+
+type ExpandSkillPackageRegionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExpandSkillPackageRegionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExpandSkillPackageRegionInvoker) Invoke() (*model.ExpandSkillPackageRegionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExpandSkillPackageRegionResponse), nil
+	}
+}
+
+type ListCommonSkillPackagesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCommonSkillPackagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCommonSkillPackagesInvoker) Invoke() (*model.ListCommonSkillPackagesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCommonSkillPackagesResponse), nil
+	}
+}
+
+type ListSkillPackagesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSkillPackagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSkillPackagesInvoker) Invoke() (*model.ListSkillPackagesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSkillPackagesResponse), nil
+	}
+}
+
+type RemoveSkillPackageRegionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RemoveSkillPackageRegionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RemoveSkillPackageRegionInvoker) Invoke() (*model.RemoveSkillPackageRegionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RemoveSkillPackageRegionResponse), nil
+	}
+}
+
+type ShowCommonSkillPackageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCommonSkillPackageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowCommonSkillPackageInvoker) Invoke() (*model.ShowCommonSkillPackageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCommonSkillPackageResponse), nil
+	}
+}
+
+type ShowSkillPackageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSkillPackageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSkillPackageInvoker) Invoke() (*model.ShowSkillPackageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSkillPackageResponse), nil
+	}
+}
+
+type UpdateSkillPackageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSkillPackageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSkillPackageInvoker) Invoke() (*model.UpdateSkillPackageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSkillPackageResponse), nil
+	}
+}
+
+type CreateSkillInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSkillInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSkillInvoker) Invoke() (*model.CreateSkillResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSkillResponse), nil
+	}
+}
+
+type DeleteSkillInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSkillInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteSkillInvoker) Invoke() (*model.DeleteSkillResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSkillResponse), nil
+	}
+}
+
+type ListSkillsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSkillsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSkillsInvoker) Invoke() (*model.ListSkillsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSkillsResponse), nil
+	}
+}
+
+type ShowSkillInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSkillInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSkillInvoker) Invoke() (*model.ShowSkillResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSkillResponse), nil
+	}
+}
+
+type UpdateSkillInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSkillInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSkillInvoker) Invoke() (*model.UpdateSkillResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSkillResponse), nil
 	}
 }
 

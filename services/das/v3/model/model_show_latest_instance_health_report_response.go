@@ -13,10 +13,10 @@ type ShowLatestInstanceHealthReportResponse struct {
 	Success *bool `json:"success,omitempty"`
 
 	// 日报诊断区间的起始时间（Unix timestamp），单位：毫秒
-	StartAt float32 `json:"start_at,omitempty"`
+	StartAt *int64 `json:"start_at,omitempty"`
 
 	// 日报诊断区间的结束时间（Unix timestamp），单位：毫秒
-	EndAt float32 `json:"end_at,omitempty"`
+	EndAt *int64 `json:"end_at,omitempty"`
 
 	// 报告ID
 	TaskId *string `json:"task_id,omitempty"`
