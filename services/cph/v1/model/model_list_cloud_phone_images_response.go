@@ -13,8 +13,10 @@ type ListCloudPhoneImagesResponse struct {
 	RequestId *string `json:"request_id,omitempty"`
 
 	// 手机镜像信息。
-	PhoneImages    *[]PhoneImage `json:"phone_images,omitempty"`
-	HttpStatusCode int           `json:"-"`
+	PhoneImages *[]PhoneImage `json:"phone_images,omitempty"`
+
+	PageInfo       *ListCloudPhoneImagesResponseBodyPageInfo `json:"page_info,omitempty"`
+	HttpStatusCode int                                       `json:"-"`
 }
 
 func (o ListCloudPhoneImagesResponse) String() string {

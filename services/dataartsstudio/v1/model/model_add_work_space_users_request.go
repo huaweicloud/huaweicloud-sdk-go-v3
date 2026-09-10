@@ -9,7 +9,7 @@ import (
 // AddWorkSpaceUsersRequest Request Object
 type AddWorkSpaceUsersRequest struct {
 
-	// 工作空间id
+	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
 
 	Body *ApigWorkspaceUserDto `json:"body,omitempty"`

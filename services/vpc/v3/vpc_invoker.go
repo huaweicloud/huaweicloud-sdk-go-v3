@@ -37,6 +37,22 @@ func (i *AddSourcesToTrafficMirrorSessionInvoker) Invoke() (*model.AddSourcesToT
 	}
 }
 
+type AttachSubNetworkInterfaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AttachSubNetworkInterfaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AttachSubNetworkInterfaceInvoker) Invoke() (*model.AttachSubNetworkInterfaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AttachSubNetworkInterfaceResponse), nil
+	}
+}
+
 type BatchCreatePortTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -85,6 +101,22 @@ func (i *BatchCreateSubNetworkInterfaceInvoker) Invoke() (*model.BatchCreateSubN
 	}
 }
 
+type BatchCreateSubNetworkInterfaceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateSubNetworkInterfaceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateSubNetworkInterfaceTagsInvoker) Invoke() (*model.BatchCreateSubNetworkInterfaceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateSubNetworkInterfaceTagsResponse), nil
+	}
+}
+
 type BatchDeletePortTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -101,6 +133,22 @@ func (i *BatchDeletePortTagsInvoker) Invoke() (*model.BatchDeletePortTagsRespons
 	}
 }
 
+type BatchDeleteSubNetworkInterfaceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteSubNetworkInterfaceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteSubNetworkInterfaceTagsInvoker) Invoke() (*model.BatchDeleteSubNetworkInterfaceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteSubNetworkInterfaceTagsResponse), nil
+	}
+}
+
 type CountPortsByTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -114,6 +162,22 @@ func (i *CountPortsByTagsInvoker) Invoke() (*model.CountPortsByTagsResponse, err
 		return nil, err
 	} else {
 		return result.(*model.CountPortsByTagsResponse), nil
+	}
+}
+
+type CountSubNetworkInterfacesByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountSubNetworkInterfacesByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CountSubNetworkInterfacesByTagsInvoker) Invoke() (*model.CountSubNetworkInterfacesByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountSubNetworkInterfacesByTagsResponse), nil
 	}
 }
 
@@ -178,6 +242,22 @@ func (i *CreateSubNetworkInterfaceInvoker) Invoke() (*model.CreateSubNetworkInte
 		return nil, err
 	} else {
 		return result.(*model.CreateSubNetworkInterfaceResponse), nil
+	}
+}
+
+type CreateSubNetworkInterfaceTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSubNetworkInterfaceTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSubNetworkInterfaceTagInvoker) Invoke() (*model.CreateSubNetworkInterfaceTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSubNetworkInterfaceTagResponse), nil
 	}
 }
 
@@ -309,6 +389,22 @@ func (i *DeleteSubNetworkInterfaceInvoker) Invoke() (*model.DeleteSubNetworkInte
 	}
 }
 
+type DeleteSubNetworkInterfaceTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSubNetworkInterfaceTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteSubNetworkInterfaceTagInvoker) Invoke() (*model.DeleteSubNetworkInterfaceTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSubNetworkInterfaceTagResponse), nil
+	}
+}
+
 type DeleteTrafficMirrorFilterInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -370,6 +466,22 @@ func (i *DeleteVirsubnetCidrReservationInvoker) Invoke() (*model.DeleteVirsubnet
 		return nil, err
 	} else {
 		return result.(*model.DeleteVirsubnetCidrReservationResponse), nil
+	}
+}
+
+type DetachSubNetworkInterfaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DetachSubNetworkInterfaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DetachSubNetworkInterfaceInvoker) Invoke() (*model.DetachSubNetworkInterfaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DetachSubNetworkInterfaceResponse), nil
 	}
 }
 
@@ -453,6 +565,22 @@ func (i *ListSecurityGroupsInvoker) Invoke() (*model.ListSecurityGroupsResponse,
 	}
 }
 
+type ListSubNetworkInterfaceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSubNetworkInterfaceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSubNetworkInterfaceTagsInvoker) Invoke() (*model.ListSubNetworkInterfaceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSubNetworkInterfaceTagsResponse), nil
+	}
+}
+
 type ListSubNetworkInterfacesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -466,6 +594,22 @@ func (i *ListSubNetworkInterfacesInvoker) Invoke() (*model.ListSubNetworkInterfa
 		return nil, err
 	} else {
 		return result.(*model.ListSubNetworkInterfacesResponse), nil
+	}
+}
+
+type ListSubNetworkInterfacesByTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSubNetworkInterfacesByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSubNetworkInterfacesByTagsInvoker) Invoke() (*model.ListSubNetworkInterfacesByTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSubNetworkInterfacesByTagsResponse), nil
 	}
 }
 
@@ -690,6 +834,22 @@ func (i *ShowSubNetworkInterfaceInvoker) Invoke() (*model.ShowSubNetworkInterfac
 		return nil, err
 	} else {
 		return result.(*model.ShowSubNetworkInterfaceResponse), nil
+	}
+}
+
+type ShowSubNetworkInterfaceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSubNetworkInterfaceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSubNetworkInterfaceTagsInvoker) Invoke() (*model.ShowSubNetworkInterfaceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSubNetworkInterfaceTagsResponse), nil
 	}
 }
 

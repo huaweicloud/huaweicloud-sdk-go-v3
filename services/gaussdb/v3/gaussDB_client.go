@@ -3239,6 +3239,7 @@ func (c *GaussDBClient) ShowRestoreAvailableTablesInvoker(request *model.ShowRes
 	return &ShowRestoreAvailableTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowRestoreTables 查询表级时间点恢复可选表
 //
 // 查询表级时间点恢复可选表。
@@ -3254,6 +3255,7 @@ func (c *GaussDBClient) ShowRestoreTables(request *model.ShowRestoreTablesReques
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowRestoreTablesInvoker 查询表级时间点恢复可选表
 func (c *GaussDBClient) ShowRestoreTablesInvoker(request *model.ShowRestoreTablesRequest) *ShowRestoreTablesInvoker {
 	requestDef := GenReqDefForShowRestoreTables()

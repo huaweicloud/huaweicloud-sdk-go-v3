@@ -46,6 +46,26 @@ func GenReqDefForAddSourcesToTrafficMirrorSession() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForAttachSubNetworkInterface() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/vpc/sub-network-interfaces/{sub_network_interface_id}/attach").
+		WithResponse(new(model.AttachSubNetworkInterfaceResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SubNetworkInterfaceId").
+		WithJsonTag("sub_network_interface_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchCreatePortTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -101,6 +121,26 @@ func GenReqDefForBatchCreateSubNetworkInterface() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchCreateSubNetworkInterfaceTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/sub-network-interfaces/{sub_network_interface_id}/tags/create").
+		WithResponse(new(model.BatchCreateSubNetworkInterfaceTagsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SubNetworkInterfaceId").
+		WithJsonTag("sub_network_interface_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchDeletePortTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -121,11 +161,46 @@ func GenReqDefForBatchDeletePortTags() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchDeleteSubNetworkInterfaceTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/sub-network-interfaces/{sub_network_interface_id}/tags/delete").
+		WithResponse(new(model.BatchDeleteSubNetworkInterfaceTagsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SubNetworkInterfaceId").
+		WithJsonTag("sub_network_interface_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCountPortsByTags() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v3/{project_id}/ports/resource-instances/count").
 		WithResponse(new(model.CountPortsByTagsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCountSubNetworkInterfacesByTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/sub-network-interfaces/resource-instances/count").
+		WithResponse(new(model.CountSubNetworkInterfacesByTagsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -192,6 +267,26 @@ func GenReqDefForCreateSubNetworkInterface() *def.HttpRequestDef {
 		WithPath("/v3/{project_id}/vpc/sub-network-interfaces").
 		WithResponse(new(model.CreateSubNetworkInterfaceResponse)).
 		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateSubNetworkInterfaceTag() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/sub-network-interfaces/{sub_network_interface_id}/tags").
+		WithResponse(new(model.CreateSubNetworkInterfaceTagResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SubNetworkInterfaceId").
+		WithJsonTag("sub_network_interface_id").
+		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -329,6 +424,26 @@ func GenReqDefForDeleteSubNetworkInterface() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForDeleteSubNetworkInterfaceTag() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v3/{project_id}/sub-network-interfaces/{sub_network_interface_id}/tags/{tag_key}").
+		WithResponse(new(model.DeleteSubNetworkInterfaceTagResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SubNetworkInterfaceId").
+		WithJsonTag("sub_network_interface_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TagKey").
+		WithJsonTag("tag_key").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForDeleteTrafficMirrorFilter() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
@@ -387,6 +502,22 @@ func GenReqDefForDeleteVirsubnetCidrReservation() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("VirsubnetCidrReservationId").
 		WithJsonTag("virsubnet_cidr_reservation_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDetachSubNetworkInterface() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/vpc/sub-network-interfaces/{sub_network_interface_id}/detach").
+		WithResponse(new(model.DetachSubNetworkInterfaceResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SubNetworkInterfaceId").
+		WithJsonTag("sub_network_interface_id").
 		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
@@ -629,6 +760,17 @@ func GenReqDefForListSecurityGroups() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListSubNetworkInterfaceTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/sub-network-interfaces/tags").
+		WithResponse(new(model.ListSubNetworkInterfaceTagsResponse)).
+		WithContentType("application/json")
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListSubNetworkInterfaces() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -672,6 +814,30 @@ func GenReqDefForListSubNetworkInterfaces() *def.HttpRequestDef {
 		WithName("ParentId").
 		WithJsonTag("parent_id").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListSubNetworkInterfacesByTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/sub-network-interfaces/resource-instances/filter").
+		WithResponse(new(model.ListSubNetworkInterfacesByTagsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1084,6 +1250,22 @@ func GenReqDefForShowSubNetworkInterface() *def.HttpRequestDef {
 		WithMethod(http.MethodGet).
 		WithPath("/v3/{project_id}/vpc/sub-network-interfaces/{sub_network_interface_id}").
 		WithResponse(new(model.ShowSubNetworkInterfaceResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SubNetworkInterfaceId").
+		WithJsonTag("sub_network_interface_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowSubNetworkInterfaceTags() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/sub-network-interfaces/{sub_network_interface_id}/tags").
+		WithResponse(new(model.ShowSubNetworkInterfaceTagsResponse)).
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

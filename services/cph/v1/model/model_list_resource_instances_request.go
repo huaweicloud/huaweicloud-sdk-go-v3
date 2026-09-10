@@ -12,7 +12,7 @@ import (
 // ListResourceInstancesRequest Request Object
 type ListResourceInstancesRequest struct {
 
-	// 资源类型。  - cph-server，云手机服务器
+	// 资源类型。  - cph-server，云手机服务器 [- elastic-cloud-phone, 弹性云手机实例](tag:hws_test)
 	ResourceType ListResourceInstancesRequestResourceType `json:"resource_type"`
 
 	Body *ListResourceInstancesRequestBody `json:"body,omitempty"`
@@ -32,13 +32,17 @@ type ListResourceInstancesRequestResourceType struct {
 }
 
 type ListResourceInstancesRequestResourceTypeEnum struct {
-	CPH_SERVER ListResourceInstancesRequestResourceType
+	CPH_SERVER          ListResourceInstancesRequestResourceType
+	ELASTIC_CLOUD_PHONE ListResourceInstancesRequestResourceType
 }
 
 func GetListResourceInstancesRequestResourceTypeEnum() ListResourceInstancesRequestResourceTypeEnum {
 	return ListResourceInstancesRequestResourceTypeEnum{
 		CPH_SERVER: ListResourceInstancesRequestResourceType{
 			value: "cph-server",
+		},
+		ELASTIC_CLOUD_PHONE: ListResourceInstancesRequestResourceType{
+			value: "elastic-cloud-phone",
 		},
 	}
 }

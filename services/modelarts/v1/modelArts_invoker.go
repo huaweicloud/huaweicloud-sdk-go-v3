@@ -21,6 +21,22 @@ func (i *AcceptScheduledEventInvoker) Invoke() (*model.AcceptScheduledEventRespo
 	}
 }
 
+type AttachDevServerPortInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AttachDevServerPortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AttachDevServerPortInvoker) Invoke() (*model.AttachDevServerPortResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AttachDevServerPortResponse), nil
+	}
+}
+
 type AttachDevServerVolumeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1269,6 +1285,22 @@ func (i *DeleteWorkspaceInvoker) Invoke() (*model.DeleteWorkspaceResponse, error
 	}
 }
 
+type DetachDevServerPortInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DetachDevServerPortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DetachDevServerPortInvoker) Invoke() (*model.DetachDevServerPortResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DetachDevServerPortResponse), nil
+	}
+}
+
 type DetachDevServerVolumeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2258,6 +2290,22 @@ func (i *ListTrainingJobsByTagsInvoker) Invoke() (*model.ListTrainingJobsByTagsR
 		return nil, err
 	} else {
 		return result.(*model.ListTrainingJobsByTagsResponse), nil
+	}
+}
+
+type ListUsersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListUsersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListUsersInvoker) Invoke() (*model.ListUsersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListUsersResponse), nil
 	}
 }
 

@@ -41,8 +41,7 @@ type ShareBackups struct {
 	// 备份所在实例状态。
 	InstanceStatus *string `json:"instance_status,omitempty"`
 
-	// 数据库版本信息。
-	Datastore *interface{} `json:"datastore,omitempty"`
+	Datastore *ShareBackupDatastore `json:"datastore,omitempty"`
 
 	// 共享者用户名称。
 	UserName *string `json:"user_name,omitempty"`

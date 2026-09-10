@@ -42,6 +42,48 @@ func (c *CphClient) AddImageMemberInvoker(request *model.AddImageMemberRequest) 
 	return &AddImageMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AttachShareFilesystem 挂载共享文件系统
+//
+// 将指定的共享文件系统挂载到多个云手机服务器。单个共享文件系统同时挂载的服务器数量建议不超过50台。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) AttachShareFilesystem(request *model.AttachShareFilesystemRequest) (*model.AttachShareFilesystemResponse, error) {
+	requestDef := GenReqDefForAttachShareFilesystem()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AttachShareFilesystemResponse), nil
+	}
+}
+
+// AttachShareFilesystemInvoker 挂载共享文件系统
+func (c *CphClient) AttachShareFilesystemInvoker(request *model.AttachShareFilesystemRequest) *AttachShareFilesystemInvoker {
+	requestDef := GenReqDefForAttachShareFilesystem()
+	return &AttachShareFilesystemInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AuthorizeScheduledEvent 授权计划事件
+//
+// 授权计划事件。当系统上报计划事件时，需要对服务器进行“授权维护”操作。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) AuthorizeScheduledEvent(request *model.AuthorizeScheduledEventRequest) (*model.AuthorizeScheduledEventResponse, error) {
+	requestDef := GenReqDefForAuthorizeScheduledEvent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AuthorizeScheduledEventResponse), nil
+	}
+}
+
+// AuthorizeScheduledEventInvoker 授权计划事件
+func (c *CphClient) AuthorizeScheduledEventInvoker(request *model.AuthorizeScheduledEventRequest) *AuthorizeScheduledEventInvoker {
+	requestDef := GenReqDefForAuthorizeScheduledEvent()
+	return &AuthorizeScheduledEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchCreateTags 批量添加标签
 //
 // 批量添加标签。
@@ -86,7 +128,7 @@ func (c *CphClient) BatchDeleteTagsInvoker(request *model.BatchDeleteTagsRequest
 
 // BatchExportCloudPhoneData 导出云手机数据
 //
-// 批量导出云手机中的数据。该接口为异步接口。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)
+// 批量导出云手机中的数据，不支持导出共享应用及其数据文件。该接口为异步接口。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) BatchExportCloudPhoneData(request *model.BatchExportCloudPhoneDataRequest) (*model.BatchExportCloudPhoneDataResponse, error) {
@@ -195,7 +237,7 @@ func (c *CphClient) ChangeCloudPhoneServerModelInvoker(request *model.ChangeClou
 
 // CreateCloudPhoneSingleServer 创建云手机裸服务器
 //
-// 该接口创建的服务器仅包含服务器和服务器的镜像，不包含云手机实例和镜像等内容。若需要创建包含云手机实例的服务器，请使用创建云手机服务器接口。
+// 该接口创建的服务器仅包含服务器和服务器的镜像，不包含云手机实例和镜像等内容。若需创建包含云手机实例的服务器，请使用创建云手机服务器接口。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) CreateCloudPhoneSingleServer(request *model.CreateCloudPhoneSingleServerRequest) (*model.CreateCloudPhoneSingleServerResponse, error) {
@@ -343,6 +385,27 @@ func (c *CphClient) DeleteShareFilesInvoker(request *model.DeleteShareFilesReque
 	return &DeleteShareFilesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DetachShareFilesystem 卸载共享文件系统
+//
+// 卸载多个云手机服务器上的共享文件系统
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) DetachShareFilesystem(request *model.DetachShareFilesystemRequest) (*model.DetachShareFilesystemResponse, error) {
+	requestDef := GenReqDefForDetachShareFilesystem()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetachShareFilesystemResponse), nil
+	}
+}
+
+// DetachShareFilesystemInvoker 卸载共享文件系统
+func (c *CphClient) DetachShareFilesystemInvoker(request *model.DetachShareFilesystemRequest) *DetachShareFilesystemInvoker {
+	requestDef := GenReqDefForDetachShareFilesystem()
+	return &DetachShareFilesystemInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExpandPhoneDataVolumeSize 扩容云手机数据盘大小
 //
 // 扩容云手机数据盘大小
@@ -426,6 +489,27 @@ func (c *CphClient) ListCloudPhoneModels(request *model.ListCloudPhoneModelsRequ
 func (c *CphClient) ListCloudPhoneModelsInvoker(request *model.ListCloudPhoneModelsRequest) *ListCloudPhoneModelsInvoker {
 	requestDef := GenReqDefForListCloudPhoneModels()
 	return &ListCloudPhoneModelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCloudPhoneServerModelOfferings 查询云手机服务器规格售卖状态列表
+//
+// 查询客户有权限的可用区，及可用区内支持的服务器规格售卖状态列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) ListCloudPhoneServerModelOfferings(request *model.ListCloudPhoneServerModelOfferingsRequest) (*model.ListCloudPhoneServerModelOfferingsResponse, error) {
+	requestDef := GenReqDefForListCloudPhoneServerModelOfferings()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCloudPhoneServerModelOfferingsResponse), nil
+	}
+}
+
+// ListCloudPhoneServerModelOfferingsInvoker 查询云手机服务器规格售卖状态列表
+func (c *CphClient) ListCloudPhoneServerModelOfferingsInvoker(request *model.ListCloudPhoneServerModelOfferingsRequest) *ListCloudPhoneServerModelOfferingsInvoker {
+	requestDef := GenReqDefForListCloudPhoneServerModelOfferings()
+	return &ListCloudPhoneServerModelOfferingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListCloudPhoneServerModels 查询云手机服务器规格列表
@@ -638,6 +722,53 @@ func (c *CphClient) ListResourceTags(request *model.ListResourceTagsRequest) (*m
 func (c *CphClient) ListResourceTagsInvoker(request *model.ListResourceTagsRequest) *ListResourceTagsInvoker {
 	requestDef := GenReqDefForListResourceTags()
 	return &ListResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListScheduledEvents 查询计划事件列表
+//
+// 查询服务器计划事件列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) ListScheduledEvents(request *model.ListScheduledEventsRequest) (*model.ListScheduledEventsResponse, error) {
+	requestDef := GenReqDefForListScheduledEvents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListScheduledEventsResponse), nil
+	}
+}
+
+// ListScheduledEventsInvoker 查询计划事件列表
+func (c *CphClient) ListScheduledEventsInvoker(request *model.ListScheduledEventsRequest) *ListScheduledEventsInvoker {
+	requestDef := GenReqDefForListScheduledEvents()
+	return &ListScheduledEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListShareAppsSnapshot 查询服务器已安装共享应用列表
+//
+// 该接口查询云手机服务器上最新采集的已安装的共享应用快照，采集在云手机服务器上定时每两小时执行一次。
+// 注意存在以下限制：
+// 1.云手机服务器安装不同的共享应用数量不能超过10000个，超过限制不会采集该服务器数据。
+// 2.推送安装的共享应用包名只包含大小写字母、数字、下划线、点，不能以数字和下划线开头，点不能作为结尾且包名中至少有一个点，点后必须以字母开头，长度不超过128。不符合该限制的共享应用包名不会采集。
+// 3.推送安装的共享应用版本只包含字母、数字、连字符、下划线、点，无空格，不能以连字符、点开头，长度不超过32。不符合该限制的共享应用包版本不会采集。
+// 4.同一个服务器上同一个已安装的共享应用版本建议不要超过60个。超过会影响该应用的采集。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) ListShareAppsSnapshot(request *model.ListShareAppsSnapshotRequest) (*model.ListShareAppsSnapshotResponse, error) {
+	requestDef := GenReqDefForListShareAppsSnapshot()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListShareAppsSnapshotResponse), nil
+	}
+}
+
+// ListShareAppsSnapshotInvoker 查询服务器已安装共享应用列表
+func (c *CphClient) ListShareAppsSnapshotInvoker(request *model.ListShareAppsSnapshotRequest) *ListShareAppsSnapshotInvoker {
+	requestDef := GenReqDefForListShareAppsSnapshot()
+	return &ListShareAppsSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListShareFiles 查询共享存储文件
@@ -938,7 +1069,7 @@ func (c *CphClient) UpdateCloudPhonePropertyInvoker(request *model.UpdateCloudPh
 
 // UpdateImageMember 更新共享镜像接受信息
 //
-// 用户收到共享镜像后，选择接受或拒绝共享镜像。未接受的共享镜像无法使用。
+// 用户收到共享镜像后，选择接受或者拒绝共享镜像。未接受的共享镜像无法使用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CphClient) UpdateImageMember(request *model.UpdateImageMemberRequest) (*model.UpdateImageMemberResponse, error) {
@@ -999,6 +1130,27 @@ func (c *CphClient) UpdatePhoneNameInvoker(request *model.UpdatePhoneNameRequest
 	return &UpdatePhoneNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateScheduledEvent 修改计划事件预约时间
+//
+// 更新计划事件的执行开始时间。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CphClient) UpdateScheduledEvent(request *model.UpdateScheduledEventRequest) (*model.UpdateScheduledEventResponse, error) {
+	requestDef := GenReqDefForUpdateScheduledEvent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateScheduledEventResponse), nil
+	}
+}
+
+// UpdateScheduledEventInvoker 修改计划事件预约时间
+func (c *CphClient) UpdateScheduledEventInvoker(request *model.UpdateScheduledEventRequest) *UpdateScheduledEventInvoker {
+	requestDef := GenReqDefForUpdateScheduledEvent()
+	return &UpdateScheduledEventInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateServerName 修改云手机服务器名称
 //
 // 根据serverId修改serverName。
@@ -1023,7 +1175,7 @@ func (c *CphClient) UpdateServerNameInvoker(request *model.UpdateServerNameReque
 // InstallApk 安装apk
 //
 // 在云手机中安装apk。系统会将指定的apk文件下载后直接安装到云手机中。
-// 支持安装单apk应用和多apk应用。可使用install命令安装单apk应用，一次只支持安装一个apk，如果一次传多个apk只有第一个安装成功；可使用install-multiple命令安装多apk应用（多apk应用为单个应用拆分成多个apk），一次只支持同一个应用的多个apk。该接口为异步接口。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)
+// 支持安装单apk应用和多apk应用。可使用install命令安装单apk应用，一次只支持安装一个apk，只能传一个apk；可使用install-multiple命令安装多apk应用（多apk应用为单个应用拆分成多个apk），一次只支持同一个应用的多个apk。该接口为异步接口。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)
 // - 管理面性能有限，对相同服务器批量执行的ADB命令，将会阻塞云手机其他任务执行。
 // - 允许安装的apk大小限制为2G（即不可将obs桶内大于2G的apk安装到手机中），超过限制将返回错误。
 //

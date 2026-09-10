@@ -17,6 +17,12 @@ type ShowAnalysisSessionResultRespSqlTemplates struct {
 	// 总执行次数
 	TotalCount int64 `json:"total_count"`
 
+	// 平均执行耗时（秒）
+	AvgExecuteTime float64 `json:"avg_execute_time"`
+
+	// 总执行耗时（秒）
+	TotalExecuteTime float64 `json:"total_execute_time"`
+
 	// 当前模板下状态持续时间长TOP会话列表
 	TopStateDurationList []ShowAnalysisSessionResultRespTopStateDuration `json:"top_state_duration_list"`
 

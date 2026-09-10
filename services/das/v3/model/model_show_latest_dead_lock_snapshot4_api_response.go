@@ -15,8 +15,8 @@ type ShowLatestDeadLockSnapshot4ApiResponse struct {
 	// 发生时间（ms）
 	HappenTime *int64 `json:"happen_time,omitempty"`
 
-	MysqlDeadLock  *MySqlDeadLock `json:"mysql_dead_lock,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	MysqlDeadLock  *MySqlLatestDeadLock `json:"mysql_dead_lock,omitempty"`
+	HttpStatusCode int                  `json:"-"`
 }
 
 func (o ShowLatestDeadLockSnapshot4ApiResponse) String() string {

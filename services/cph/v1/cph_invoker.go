@@ -21,6 +21,38 @@ func (i *AddImageMemberInvoker) Invoke() (*model.AddImageMemberResponse, error) 
 	}
 }
 
+type AttachShareFilesystemInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AttachShareFilesystemInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AttachShareFilesystemInvoker) Invoke() (*model.AttachShareFilesystemResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AttachShareFilesystemResponse), nil
+	}
+}
+
+type AuthorizeScheduledEventInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AuthorizeScheduledEventInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AuthorizeScheduledEventInvoker) Invoke() (*model.AuthorizeScheduledEventResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AuthorizeScheduledEventResponse), nil
+	}
+}
+
 type BatchCreateTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -245,6 +277,22 @@ func (i *DeleteShareFilesInvoker) Invoke() (*model.DeleteShareFilesResponse, err
 	}
 }
 
+type DetachShareFilesystemInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DetachShareFilesystemInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DetachShareFilesystemInvoker) Invoke() (*model.DetachShareFilesystemResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DetachShareFilesystemResponse), nil
+	}
+}
+
 type ExpandPhoneDataVolumeSizeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -306,6 +354,22 @@ func (i *ListCloudPhoneModelsInvoker) Invoke() (*model.ListCloudPhoneModelsRespo
 		return nil, err
 	} else {
 		return result.(*model.ListCloudPhoneModelsResponse), nil
+	}
+}
+
+type ListCloudPhoneServerModelOfferingsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCloudPhoneServerModelOfferingsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCloudPhoneServerModelOfferingsInvoker) Invoke() (*model.ListCloudPhoneServerModelOfferingsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCloudPhoneServerModelOfferingsResponse), nil
 	}
 }
 
@@ -466,6 +530,38 @@ func (i *ListResourceTagsInvoker) Invoke() (*model.ListResourceTagsResponse, err
 		return nil, err
 	} else {
 		return result.(*model.ListResourceTagsResponse), nil
+	}
+}
+
+type ListScheduledEventsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListScheduledEventsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListScheduledEventsInvoker) Invoke() (*model.ListScheduledEventsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListScheduledEventsResponse), nil
+	}
+}
+
+type ListShareAppsSnapshotInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListShareAppsSnapshotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListShareAppsSnapshotInvoker) Invoke() (*model.ListShareAppsSnapshotResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListShareAppsSnapshotResponse), nil
 	}
 }
 
@@ -738,6 +834,22 @@ func (i *UpdatePhoneNameInvoker) Invoke() (*model.UpdatePhoneNameResponse, error
 		return nil, err
 	} else {
 		return result.(*model.UpdatePhoneNameResponse), nil
+	}
+}
+
+type UpdateScheduledEventInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateScheduledEventInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateScheduledEventInvoker) Invoke() (*model.UpdateScheduledEventResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateScheduledEventResponse), nil
 	}
 }
 

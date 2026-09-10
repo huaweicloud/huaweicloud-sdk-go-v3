@@ -9,7 +9,7 @@ import (
 // CreateManagerWorkSpaceRequest Request Object
 type CreateManagerWorkSpaceRequest struct {
 
-	// DataArtsStudio实例id
+	// DataArts Studio实例ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
 	InstanceId string `json:"instance_id"`
 
 	Body *CreateWorkspaceParams `json:"body,omitempty"`

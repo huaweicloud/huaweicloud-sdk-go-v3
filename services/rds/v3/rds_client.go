@@ -397,6 +397,27 @@ func (c *RdsClient) CheckWeakpwdInvoker(request *model.CheckWeakpwdRequest) *Che
 	return &CheckWeakpwdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CollectInstanceStatistic 总览页面实例统计
+//
+// 总览页面实例统计
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) CollectInstanceStatistic(request *model.CollectInstanceStatisticRequest) (*model.CollectInstanceStatisticResponse, error) {
+	requestDef := GenReqDefForCollectInstanceStatistic()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CollectInstanceStatisticResponse), nil
+	}
+}
+
+// CollectInstanceStatisticInvoker 总览页面实例统计
+func (c *RdsClient) CollectInstanceStatisticInvoker(request *model.CollectInstanceStatisticRequest) *CollectInstanceStatisticInvoker {
+	requestDef := GenReqDefForCollectInstanceStatistic()
+	return &CollectInstanceStatisticInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CompareConfiguration 比较参数模板
 //
 // 比较参数模板
@@ -1131,6 +1152,27 @@ func (c *RdsClient) ListCollationsInvoker(request *model.ListCollationsRequest) 
 	return &ListCollationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListComputeResource 获取资源包详情
+//
+// 获取资源包详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListComputeResource(request *model.ListComputeResourceRequest) (*model.ListComputeResourceResponse, error) {
+	requestDef := GenReqDefForListComputeResource()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListComputeResourceResponse), nil
+	}
+}
+
+// ListComputeResourceInvoker 获取资源包详情
+func (c *RdsClient) ListComputeResourceInvoker(request *model.ListComputeResourceRequest) *ListComputeResourceInvoker {
+	requestDef := GenReqDefForListComputeResource()
+	return &ListComputeResourceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListConfigurationApplyHistories 查询参数组应用历史
 //
 // 查询参数组应用历史
@@ -1614,6 +1656,27 @@ func (c *RdsClient) ListInstancesInfoDiagnosisInvoker(request *model.ListInstanc
 	return &ListInstancesInfoDiagnosisInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInstancesResourceMetrics 查询监控大盘列表
+//
+// 查询监控大盘列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListInstancesResourceMetrics(request *model.ListInstancesResourceMetricsRequest) (*model.ListInstancesResourceMetricsResponse, error) {
+	requestDef := GenReqDefForListInstancesResourceMetrics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInstancesResourceMetricsResponse), nil
+	}
+}
+
+// ListInstancesResourceMetricsInvoker 查询监控大盘列表
+func (c *RdsClient) ListInstancesResourceMetricsInvoker(request *model.ListInstancesResourceMetricsRequest) *ListInstancesResourceMetricsInvoker {
+	requestDef := GenReqDefForListInstancesResourceMetrics()
+	return &ListInstancesResourceMetricsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListInstancesSupportFastRestore 获取实例是否能使用极速恢复
 //
 // 批量获取实例是否能在库表恢复时使用极速恢复。
@@ -1783,6 +1846,27 @@ func (c *RdsClient) ListOffSiteRestoreTimes(request *model.ListOffSiteRestoreTim
 func (c *RdsClient) ListOffSiteRestoreTimesInvoker(request *model.ListOffSiteRestoreTimesRequest) *ListOffSiteRestoreTimesInvoker {
 	requestDef := GenReqDefForListOffSiteRestoreTimes()
 	return &ListOffSiteRestoreTimesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListOperateRecord 查询指定实例的操作记录
+//
+// 查询指定实例的操作记录
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListOperateRecord(request *model.ListOperateRecordRequest) (*model.ListOperateRecordResponse, error) {
+	requestDef := GenReqDefForListOperateRecord()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOperateRecordResponse), nil
+	}
+}
+
+// ListOperateRecordInvoker 查询指定实例的操作记录
+func (c *RdsClient) ListOperateRecordInvoker(request *model.ListOperateRecordRequest) *ListOperateRecordInvoker {
+	requestDef := GenReqDefForListOperateRecord()
+	return &ListOperateRecordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPackLogInfos 查询binlog合并下载文件
@@ -3680,6 +3764,27 @@ func (c *RdsClient) ShowRestoreTables(request *model.ShowRestoreTablesRequest) (
 func (c *RdsClient) ShowRestoreTablesInvoker(request *model.ShowRestoreTablesRequest) *ShowRestoreTablesInvoker {
 	requestDef := GenReqDefForShowRestoreTables()
 	return &ShowRestoreTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRiskInfo 查询指定实例的风险版本信息
+//
+// 查询指定实例的风险版本信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowRiskInfo(request *model.ShowRiskInfoRequest) (*model.ShowRiskInfoResponse, error) {
+	requestDef := GenReqDefForShowRiskInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRiskInfoResponse), nil
+	}
+}
+
+// ShowRiskInfoInvoker 查询指定实例的风险版本信息
+func (c *RdsClient) ShowRiskInfoInvoker(request *model.ShowRiskInfoRequest) *ShowRiskInfoInvoker {
+	requestDef := GenReqDefForShowRiskInfo()
+	return &ShowRiskInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSecondLevelMonitoring 查询秒级监控策略
@@ -5872,6 +5977,48 @@ func (c *RdsClient) GetInstancesNoIndexTablesInvoker(request *model.GetInstances
 	return &GetInstancesNoIndexTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// GetInstancesOpsResourceUsage 查询资源利用率
+//
+// 查询资源利用率
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) GetInstancesOpsResourceUsage(request *model.GetInstancesOpsResourceUsageRequest) (*model.GetInstancesOpsResourceUsageResponse, error) {
+	requestDef := GenReqDefForGetInstancesOpsResourceUsage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetInstancesOpsResourceUsageResponse), nil
+	}
+}
+
+// GetInstancesOpsResourceUsageInvoker 查询资源利用率
+func (c *RdsClient) GetInstancesOpsResourceUsageInvoker(request *model.GetInstancesOpsResourceUsageRequest) *GetInstancesOpsResourceUsageInvoker {
+	requestDef := GenReqDefForGetInstancesOpsResourceUsage()
+	return &GetInstancesOpsResourceUsageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// QueryAutoSqlLimiting 查询自治限流规则
+//
+// 查询自治限流规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) QueryAutoSqlLimiting(request *model.QueryAutoSqlLimitingRequest) (*model.QueryAutoSqlLimitingResponse, error) {
+	requestDef := GenReqDefForQueryAutoSqlLimiting()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.QueryAutoSqlLimitingResponse), nil
+	}
+}
+
+// QueryAutoSqlLimitingInvoker 查询自治限流规则
+func (c *RdsClient) QueryAutoSqlLimitingInvoker(request *model.QueryAutoSqlLimitingRequest) *QueryAutoSqlLimitingInvoker {
+	requestDef := GenReqDefForQueryAutoSqlLimiting()
+	return &QueryAutoSqlLimitingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // RotateAuditLog 触发审计日志轮转
 //
 // 触发审计日志轮转
@@ -5891,6 +6038,27 @@ func (c *RdsClient) RotateAuditLog(request *model.RotateAuditLogRequest) (*model
 func (c *RdsClient) RotateAuditLogInvoker(request *model.RotateAuditLogRequest) *RotateAuditLogInvoker {
 	requestDef := GenReqDefForRotateAuditLog()
 	return &RotateAuditLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAgencyPolicy 查询可收缩委托策略
+//
+// 查询可收缩委托策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowAgencyPolicy(request *model.ShowAgencyPolicyRequest) (*model.ShowAgencyPolicyResponse, error) {
+	requestDef := GenReqDefForShowAgencyPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAgencyPolicyResponse), nil
+	}
+}
+
+// ShowAgencyPolicyInvoker 查询可收缩委托策略
+func (c *RdsClient) ShowAgencyPolicyInvoker(request *model.ShowAgencyPolicyRequest) *ShowAgencyPolicyInvoker {
+	requestDef := GenReqDefForShowAgencyPolicy()
+	return &ShowAgencyPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAutoCesAlarm 查询当前用户自动告警配置
@@ -7172,4 +7340,25 @@ func (c *RdsClient) ResetViewSqlStatistics(request *model.ResetViewSqlStatistics
 func (c *RdsClient) ResetViewSqlStatisticsInvoker(request *model.ResetViewSqlStatisticsRequest) *ResetViewSqlStatisticsInvoker {
 	requestDef := GenReqDefForResetViewSqlStatistics()
 	return &ResetViewSqlStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// GetAvailableVpcs 根据实例ID和管理网子网信息，返回可用的数据子网
+//
+// 根据实例ID和管理网子网信息，返回可用的数据子网。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) GetAvailableVpcs(request *model.GetAvailableVpcsRequest) (*model.GetAvailableVpcsResponse, error) {
+	requestDef := GenReqDefForGetAvailableVpcs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetAvailableVpcsResponse), nil
+	}
+}
+
+// GetAvailableVpcsInvoker 根据实例ID和管理网子网信息，返回可用的数据子网
+func (c *RdsClient) GetAvailableVpcsInvoker(request *model.GetAvailableVpcsRequest) *GetAvailableVpcsInvoker {
+	requestDef := GenReqDefForGetAvailableVpcs()
+	return &GetAvailableVpcsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

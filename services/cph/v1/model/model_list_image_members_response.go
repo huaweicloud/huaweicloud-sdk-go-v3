@@ -10,8 +10,10 @@ import (
 type ListImageMembersResponse struct {
 
 	// 镜像成员详情
-	Members        *[]ListImageMembersView `json:"members,omitempty"`
-	HttpStatusCode int                     `json:"-"`
+	Members *[]ListImageMembersView `json:"members,omitempty"`
+
+	PageInfo       *ListCloudPhoneImagesResponseBodyPageInfo `json:"page_info,omitempty"`
+	HttpStatusCode int                                       `json:"-"`
 }
 
 func (o ListImageMembersResponse) String() string {

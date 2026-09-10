@@ -12,7 +12,7 @@ import (
 // BatchCreateTagsRequest Request Object
 type BatchCreateTagsRequest struct {
 
-	// 资源类型。  - cph-server，云手机服务器
+	// 资源类型。  - cph-server，云手机服务器 [- elastic-cloud-phone, 弹性云手机实例](tag:hws_test)
 	ResourceType BatchCreateTagsRequestResourceType `json:"resource_type"`
 
 	// 资源ID。
@@ -35,13 +35,17 @@ type BatchCreateTagsRequestResourceType struct {
 }
 
 type BatchCreateTagsRequestResourceTypeEnum struct {
-	CPH_SERVER BatchCreateTagsRequestResourceType
+	CPH_SERVER          BatchCreateTagsRequestResourceType
+	ELASTIC_CLOUD_PHONE BatchCreateTagsRequestResourceType
 }
 
 func GetBatchCreateTagsRequestResourceTypeEnum() BatchCreateTagsRequestResourceTypeEnum {
 	return BatchCreateTagsRequestResourceTypeEnum{
 		CPH_SERVER: BatchCreateTagsRequestResourceType{
 			value: "cph-server",
+		},
+		ELASTIC_CLOUD_PHONE: BatchCreateTagsRequestResourceType{
+			value: "elastic-cloud-phone",
 		},
 	}
 }

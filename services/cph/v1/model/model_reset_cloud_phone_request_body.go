@@ -13,7 +13,7 @@ type ResetCloudPhoneRequestBody struct {
 	ImageId *string `json:"image_id,omitempty"`
 
 	// 云手机列表。
-	Phones []PhoneProperty `json:"phones"`
+	Phones []ResetPhoneProperty `json:"phones"`
 }
 
 func (o ResetCloudPhoneRequestBody) String() string {

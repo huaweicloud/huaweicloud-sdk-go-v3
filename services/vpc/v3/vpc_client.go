@@ -61,6 +61,26 @@ func (c *VpcClient) AddSourcesToTrafficMirrorSessionInvoker(request *model.AddSo
 	return &AddSourcesToTrafficMirrorSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AttachSubNetworkInterface 挂载辅助弹性网卡
+//
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) AttachSubNetworkInterface(request *model.AttachSubNetworkInterfaceRequest) (*model.AttachSubNetworkInterfaceResponse, error) {
+	requestDef := GenReqDefForAttachSubNetworkInterface()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AttachSubNetworkInterfaceResponse), nil
+	}
+}
+
+// AttachSubNetworkInterfaceInvoker 挂载辅助弹性网卡
+func (c *VpcClient) AttachSubNetworkInterfaceInvoker(request *model.AttachSubNetworkInterfaceRequest) *AttachSubNetworkInterfaceInvoker {
+	requestDef := GenReqDefForAttachSubNetworkInterface()
+	return &AttachSubNetworkInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchCreatePortTags 批量添加端口资源标签
 //
 // 为指定的端口批量添加标签。
@@ -125,6 +145,28 @@ func (c *VpcClient) BatchCreateSubNetworkInterfaceInvoker(request *model.BatchCr
 	return &BatchCreateSubNetworkInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreateSubNetworkInterfaceTags 批量添加辅助弹性网卡资源标签
+//
+// 为指定的辅助弹性网卡资源实例批量添加标签。
+// 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) BatchCreateSubNetworkInterfaceTags(request *model.BatchCreateSubNetworkInterfaceTagsRequest) (*model.BatchCreateSubNetworkInterfaceTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateSubNetworkInterfaceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateSubNetworkInterfaceTagsResponse), nil
+	}
+}
+
+// BatchCreateSubNetworkInterfaceTagsInvoker 批量添加辅助弹性网卡资源标签
+func (c *VpcClient) BatchCreateSubNetworkInterfaceTagsInvoker(request *model.BatchCreateSubNetworkInterfaceTagsRequest) *BatchCreateSubNetworkInterfaceTagsInvoker {
+	requestDef := GenReqDefForBatchCreateSubNetworkInterfaceTags()
+	return &BatchCreateSubNetworkInterfaceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeletePortTags 批量删除端口资源标签
 //
 // 为指定的端口资源实例批量删除标签。
@@ -147,6 +189,28 @@ func (c *VpcClient) BatchDeletePortTagsInvoker(request *model.BatchDeletePortTag
 	return &BatchDeletePortTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteSubNetworkInterfaceTags 批量删除辅助弹性网卡资源标签
+//
+// 为指定的辅助弹性网卡资源实例批量删除标签。
+// 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) BatchDeleteSubNetworkInterfaceTags(request *model.BatchDeleteSubNetworkInterfaceTagsRequest) (*model.BatchDeleteSubNetworkInterfaceTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteSubNetworkInterfaceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteSubNetworkInterfaceTagsResponse), nil
+	}
+}
+
+// BatchDeleteSubNetworkInterfaceTagsInvoker 批量删除辅助弹性网卡资源标签
+func (c *VpcClient) BatchDeleteSubNetworkInterfaceTagsInvoker(request *model.BatchDeleteSubNetworkInterfaceTagsRequest) *BatchDeleteSubNetworkInterfaceTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteSubNetworkInterfaceTags()
+	return &BatchDeleteSubNetworkInterfaceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CountPortsByTags 查询端口资源实例数量
 //
 // 使用标签过滤查询端口实例数量。
@@ -166,6 +230,27 @@ func (c *VpcClient) CountPortsByTags(request *model.CountPortsByTagsRequest) (*m
 func (c *VpcClient) CountPortsByTagsInvoker(request *model.CountPortsByTagsRequest) *CountPortsByTagsInvoker {
 	requestDef := GenReqDefForCountPortsByTags()
 	return &CountPortsByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountSubNetworkInterfacesByTags 查询辅助弹性网卡资源实例数量
+//
+// 使用标签过滤查询辅助弹性网卡实例数量。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) CountSubNetworkInterfacesByTags(request *model.CountSubNetworkInterfacesByTagsRequest) (*model.CountSubNetworkInterfacesByTagsResponse, error) {
+	requestDef := GenReqDefForCountSubNetworkInterfacesByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountSubNetworkInterfacesByTagsResponse), nil
+	}
+}
+
+// CountSubNetworkInterfacesByTagsInvoker 查询辅助弹性网卡资源实例数量
+func (c *VpcClient) CountSubNetworkInterfacesByTagsInvoker(request *model.CountSubNetworkInterfacesByTagsRequest) *CountSubNetworkInterfacesByTagsInvoker {
+	requestDef := GenReqDefForCountSubNetworkInterfacesByTags()
+	return &CountSubNetworkInterfacesByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreatePortTag 添加端口资源标签
@@ -251,6 +336,28 @@ func (c *VpcClient) CreateSubNetworkInterface(request *model.CreateSubNetworkInt
 func (c *VpcClient) CreateSubNetworkInterfaceInvoker(request *model.CreateSubNetworkInterfaceRequest) *CreateSubNetworkInterfaceInvoker {
 	requestDef := GenReqDefForCreateSubNetworkInterface()
 	return &CreateSubNetworkInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSubNetworkInterfaceTag 添加辅助弹性网卡资源标签
+//
+// 给指定辅助弹性网卡资源实例增加标签信息。
+// 此接口为幂等接口：创建时，如果创建的标签之前已经存在（key相同），则覆盖之前的标签。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) CreateSubNetworkInterfaceTag(request *model.CreateSubNetworkInterfaceTagRequest) (*model.CreateSubNetworkInterfaceTagResponse, error) {
+	requestDef := GenReqDefForCreateSubNetworkInterfaceTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSubNetworkInterfaceTagResponse), nil
+	}
+}
+
+// CreateSubNetworkInterfaceTagInvoker 添加辅助弹性网卡资源标签
+func (c *VpcClient) CreateSubNetworkInterfaceTagInvoker(request *model.CreateSubNetworkInterfaceTagRequest) *CreateSubNetworkInterfaceTagInvoker {
+	requestDef := GenReqDefForCreateSubNetworkInterfaceTag()
+	return &CreateSubNetworkInterfaceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateTrafficMirrorFilter 创建流量镜像筛选条件
@@ -422,6 +529,28 @@ func (c *VpcClient) DeleteSubNetworkInterfaceInvoker(request *model.DeleteSubNet
 	return &DeleteSubNetworkInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteSubNetworkInterfaceTag 删除辅助弹性网卡资源标签
+//
+// 删除指定辅助弹性网卡资源实例的标签信息
+// 该接口为幂等接口：删除的key不存在报404，key不能为空或者空字符串。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) DeleteSubNetworkInterfaceTag(request *model.DeleteSubNetworkInterfaceTagRequest) (*model.DeleteSubNetworkInterfaceTagResponse, error) {
+	requestDef := GenReqDefForDeleteSubNetworkInterfaceTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSubNetworkInterfaceTagResponse), nil
+	}
+}
+
+// DeleteSubNetworkInterfaceTagInvoker 删除辅助弹性网卡资源标签
+func (c *VpcClient) DeleteSubNetworkInterfaceTagInvoker(request *model.DeleteSubNetworkInterfaceTagRequest) *DeleteSubNetworkInterfaceTagInvoker {
+	requestDef := GenReqDefForDeleteSubNetworkInterfaceTag()
+	return &DeleteSubNetworkInterfaceTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteTrafficMirrorFilter 删除流量镜像筛选条件
 //
 // 删除流量镜像筛选条件
@@ -504,6 +633,27 @@ func (c *VpcClient) DeleteVirsubnetCidrReservation(request *model.DeleteVirsubne
 func (c *VpcClient) DeleteVirsubnetCidrReservationInvoker(request *model.DeleteVirsubnetCidrReservationRequest) *DeleteVirsubnetCidrReservationInvoker {
 	requestDef := GenReqDefForDeleteVirsubnetCidrReservation()
 	return &DeleteVirsubnetCidrReservationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DetachSubNetworkInterface 卸载辅助弹性网卡
+//
+// 辅助弹性网卡支持从云服务器网卡之间迁移，用户可以通过此接口从云服务器网卡中解绑辅助弹性网卡，再绑定辅助弹性网卡到其他云服务器网卡上。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) DetachSubNetworkInterface(request *model.DetachSubNetworkInterfaceRequest) (*model.DetachSubNetworkInterfaceResponse, error) {
+	requestDef := GenReqDefForDetachSubNetworkInterface()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetachSubNetworkInterfaceResponse), nil
+	}
+}
+
+// DetachSubNetworkInterfaceInvoker 卸载辅助弹性网卡
+func (c *VpcClient) DetachSubNetworkInterfaceInvoker(request *model.DetachSubNetworkInterfaceRequest) *DetachSubNetworkInterfaceInvoker {
+	requestDef := GenReqDefForDetachSubNetworkInterface()
+	return &DetachSubNetworkInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPortTags 查询端口项目标签
@@ -611,6 +761,27 @@ func (c *VpcClient) ListSecurityGroupsInvoker(request *model.ListSecurityGroupsR
 	return &ListSecurityGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSubNetworkInterfaceTags 查询辅助弹性网卡项目标签
+//
+// 查询租户在指定项目下，辅助弹性网卡资源的所有标签信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ListSubNetworkInterfaceTags(request *model.ListSubNetworkInterfaceTagsRequest) (*model.ListSubNetworkInterfaceTagsResponse, error) {
+	requestDef := GenReqDefForListSubNetworkInterfaceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSubNetworkInterfaceTagsResponse), nil
+	}
+}
+
+// ListSubNetworkInterfaceTagsInvoker 查询辅助弹性网卡项目标签
+func (c *VpcClient) ListSubNetworkInterfaceTagsInvoker(request *model.ListSubNetworkInterfaceTagsRequest) *ListSubNetworkInterfaceTagsInvoker {
+	requestDef := GenReqDefForListSubNetworkInterfaceTags()
+	return &ListSubNetworkInterfaceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSubNetworkInterfaces 查询租户下辅助弹性网卡列表
 //
 // 查询辅助弹性网卡列表，单次查询最多返回2000条数据
@@ -630,6 +801,27 @@ func (c *VpcClient) ListSubNetworkInterfaces(request *model.ListSubNetworkInterf
 func (c *VpcClient) ListSubNetworkInterfacesInvoker(request *model.ListSubNetworkInterfacesRequest) *ListSubNetworkInterfacesInvoker {
 	requestDef := GenReqDefForListSubNetworkInterfaces()
 	return &ListSubNetworkInterfacesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSubNetworkInterfacesByTags 查询辅助弹性网卡资源实例列表
+//
+// 使用标签过滤，查询辅助弹性网卡实例列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ListSubNetworkInterfacesByTags(request *model.ListSubNetworkInterfacesByTagsRequest) (*model.ListSubNetworkInterfacesByTagsResponse, error) {
+	requestDef := GenReqDefForListSubNetworkInterfacesByTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSubNetworkInterfacesByTagsResponse), nil
+	}
+}
+
+// ListSubNetworkInterfacesByTagsInvoker 查询辅助弹性网卡资源实例列表
+func (c *VpcClient) ListSubNetworkInterfacesByTagsInvoker(request *model.ListSubNetworkInterfacesByTagsRequest) *ListSubNetworkInterfacesByTagsInvoker {
+	requestDef := GenReqDefForListSubNetworkInterfacesByTags()
+	return &ListSubNetworkInterfacesByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListTrafficMirrorFilterRules 查询流量镜像筛选规则列表
@@ -924,6 +1116,27 @@ func (c *VpcClient) ShowSubNetworkInterface(request *model.ShowSubNetworkInterfa
 func (c *VpcClient) ShowSubNetworkInterfaceInvoker(request *model.ShowSubNetworkInterfaceRequest) *ShowSubNetworkInterfaceInvoker {
 	requestDef := GenReqDefForShowSubNetworkInterface()
 	return &ShowSubNetworkInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSubNetworkInterfaceTags 查询辅助弹性网卡资源标签
+//
+// 查询指定辅助弹性网卡实例的标签信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ShowSubNetworkInterfaceTags(request *model.ShowSubNetworkInterfaceTagsRequest) (*model.ShowSubNetworkInterfaceTagsResponse, error) {
+	requestDef := GenReqDefForShowSubNetworkInterfaceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSubNetworkInterfaceTagsResponse), nil
+	}
+}
+
+// ShowSubNetworkInterfaceTagsInvoker 查询辅助弹性网卡资源标签
+func (c *VpcClient) ShowSubNetworkInterfaceTagsInvoker(request *model.ShowSubNetworkInterfaceTagsRequest) *ShowSubNetworkInterfaceTagsInvoker {
+	requestDef := GenReqDefForShowSubNetworkInterfaceTags()
+	return &ShowSubNetworkInterfaceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowSubNetworkInterfacesQuantity 查询租户下辅助弹性网卡数目

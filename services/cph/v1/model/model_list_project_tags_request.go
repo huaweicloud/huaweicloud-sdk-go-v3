@@ -12,7 +12,7 @@ import (
 // ListProjectTagsRequest Request Object
 type ListProjectTagsRequest struct {
 
-	// 资源类型。  - cph-server，云手机服务器
+	// 资源类型。  - cph-server，云手机服务器 [- elastic-cloud-phone, 弹性云手机实例](tag:hws_test)
 	ResourceType ListProjectTagsRequestResourceType `json:"resource_type"`
 
 	// 每页返回的资源个数。取值范围：1~100（默认值为100），一般设置为10、20、50。
@@ -36,13 +36,17 @@ type ListProjectTagsRequestResourceType struct {
 }
 
 type ListProjectTagsRequestResourceTypeEnum struct {
-	CPH_SERVER ListProjectTagsRequestResourceType
+	CPH_SERVER          ListProjectTagsRequestResourceType
+	ELASTIC_CLOUD_PHONE ListProjectTagsRequestResourceType
 }
 
 func GetListProjectTagsRequestResourceTypeEnum() ListProjectTagsRequestResourceTypeEnum {
 	return ListProjectTagsRequestResourceTypeEnum{
 		CPH_SERVER: ListProjectTagsRequestResourceType{
 			value: "cph-server",
+		},
+		ELASTIC_CLOUD_PHONE: ListProjectTagsRequestResourceType{
+			value: "elastic-cloud-phone",
 		},
 	}
 }

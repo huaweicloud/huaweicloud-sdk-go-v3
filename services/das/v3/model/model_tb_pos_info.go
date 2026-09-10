@@ -8,6 +8,9 @@ import (
 
 type TbPosInfo struct {
 
+	// Schema名称
+	SchemaName *string `json:"schema_name,omitempty"`
+
 	// 原始名称
 	OriginName *string `json:"origin_name,omitempty"`
 

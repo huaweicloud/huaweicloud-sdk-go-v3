@@ -145,6 +145,27 @@ func (c *DataArtsStudioClient) AssociateClassificationToEntityInvoker(request *m
 	return &AssociateClassificationToEntityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AssociateConnectionCluster 绑定集群
+//
+// 该API用于在已创建的资源组网络连接中绑定集群。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) AssociateConnectionCluster(request *model.AssociateConnectionClusterRequest) (*model.AssociateConnectionClusterResponse, error) {
+	requestDef := GenReqDefForAssociateConnectionCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateConnectionClusterResponse), nil
+	}
+}
+
+// AssociateConnectionClusterInvoker 绑定集群
+func (c *DataArtsStudioClient) AssociateConnectionClusterInvoker(request *model.AssociateConnectionClusterRequest) *AssociateConnectionClusterInvoker {
+	requestDef := GenReqDefForAssociateConnectionCluster()
+	return &AssociateConnectionClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AssociateSecurityLevelToEntitie 资产关联密级
 //
 // 关联资产到密级，资产关联指定密级
@@ -164,27 +185,6 @@ func (c *DataArtsStudioClient) AssociateSecurityLevelToEntitie(request *model.As
 func (c *DataArtsStudioClient) AssociateSecurityLevelToEntitieInvoker(request *model.AssociateSecurityLevelToEntitieRequest) *AssociateSecurityLevelToEntitieInvoker {
 	requestDef := GenReqDefForAssociateSecurityLevelToEntitie()
 	return &AssociateSecurityLevelToEntitieInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// AuthorizeDataConnection 数据连接跨空间授权
-//
-// 数据连接跨空间授权。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *DataArtsStudioClient) AuthorizeDataConnection(request *model.AuthorizeDataConnectionRequest) (*model.AuthorizeDataConnectionResponse, error) {
-	requestDef := GenReqDefForAuthorizeDataConnection()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.AuthorizeDataConnectionResponse), nil
-	}
-}
-
-// AuthorizeDataConnectionInvoker 数据连接跨空间授权
-func (c *DataArtsStudioClient) AuthorizeDataConnectionInvoker(request *model.AuthorizeDataConnectionRequest) *AuthorizeDataConnectionInvoker {
-	requestDef := GenReqDefForAuthorizeDataConnection()
-	return &AuthorizeDataConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchApproveApply 审核申请
@@ -269,6 +269,27 @@ func (c *DataArtsStudioClient) BatchAssociateSecurityLevelToEntities(request *mo
 func (c *DataArtsStudioClient) BatchAssociateSecurityLevelToEntitiesInvoker(request *model.BatchAssociateSecurityLevelToEntitiesRequest) *BatchAssociateSecurityLevelToEntitiesInvoker {
 	requestDef := GenReqDefForBatchAssociateSecurityLevelToEntities()
 	return &BatchAssociateSecurityLevelToEntitiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchBindMigrationResourceToWorkspace 批量关联或取消关联数据集成资源到工作空间
+//
+// 批量关联或取消关联数据集成资源到工作空间，通过workspaces中的action字段区分操作类型。action为band表示关联，action为remove表示取消关联。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) BatchBindMigrationResourceToWorkspace(request *model.BatchBindMigrationResourceToWorkspaceRequest) (*model.BatchBindMigrationResourceToWorkspaceResponse, error) {
+	requestDef := GenReqDefForBatchBindMigrationResourceToWorkspace()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchBindMigrationResourceToWorkspaceResponse), nil
+	}
+}
+
+// BatchBindMigrationResourceToWorkspaceInvoker 批量关联或取消关联数据集成资源到工作空间
+func (c *DataArtsStudioClient) BatchBindMigrationResourceToWorkspaceInvoker(request *model.BatchBindMigrationResourceToWorkspaceRequest) *BatchBindMigrationResourceToWorkspaceInvoker {
+	requestDef := GenReqDefForBatchBindMigrationResourceToWorkspace()
+	return &BatchBindMigrationResourceToWorkspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchCreateDesignTableModelsFromLogic 转换逻辑模型为物理模型
@@ -506,6 +527,27 @@ func (c *DataArtsStudioClient) BatchDeleteTemplatesInvoker(request *model.BatchD
 	return &BatchDeleteTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchDeleteWorkspaces 删除工作空间
+//
+// 删除工作空间
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) BatchDeleteWorkspaces(request *model.BatchDeleteWorkspacesRequest) (*model.BatchDeleteWorkspacesResponse, error) {
+	requestDef := GenReqDefForBatchDeleteWorkspaces()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteWorkspacesResponse), nil
+	}
+}
+
+// BatchDeleteWorkspacesInvoker 删除工作空间
+func (c *DataArtsStudioClient) BatchDeleteWorkspacesInvoker(request *model.BatchDeleteWorkspacesRequest) *BatchDeleteWorkspacesInvoker {
+	requestDef := GenReqDefForBatchDeleteWorkspaces()
+	return &BatchDeleteWorkspacesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchOffline 批量下线
 //
 // 批量下线。
@@ -634,7 +676,7 @@ func (c *DataArtsStudioClient) BatchUpdateSecurityDlfDataWareHousesInvoker(reque
 
 // CancelFactoryPackages 撤销任务包
 //
-// 撤销任务包
+// 目前支持发布包管理中相关包的撤销，支持撤销多个任务包。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CancelFactoryPackages(request *model.CancelFactoryPackagesRequest) (*model.CancelFactoryPackagesResponse, error) {
@@ -1011,6 +1053,27 @@ func (c *DataArtsStudioClient) CreateCatalogInvoker(request *model.CreateCatalog
 	return &CreateCatalogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateCluster 创建集群
+//
+// 该API用于创建集群，该集群将会绑定用户指定的计算资源。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateCluster(request *model.CreateClusterRequest) (*model.CreateClusterResponse, error) {
+	requestDef := GenReqDefForCreateCluster()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateClusterResponse), nil
+	}
+}
+
+// CreateClusterInvoker 创建集群
+func (c *DataArtsStudioClient) CreateClusterInvoker(request *model.CreateClusterRequest) *CreateClusterInvoker {
+	requestDef := GenReqDefForCreateCluster()
+	return &CreateClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateCodeTable 创建码表
 //
 // 创建码表。
@@ -1051,6 +1114,48 @@ func (c *DataArtsStudioClient) CreateConnections(request *model.CreateConnection
 func (c *DataArtsStudioClient) CreateConnectionsInvoker(request *model.CreateConnectionsRequest) *CreateConnectionsInvoker {
 	requestDef := GenReqDefForCreateConnections()
 	return &CreateConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDatasourceConnection 创建资源组网络连接
+//
+// 该API用于创建与其他服务的资源组网络连接。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateDatasourceConnection(request *model.CreateDatasourceConnectionRequest) (*model.CreateDatasourceConnectionResponse, error) {
+	requestDef := GenReqDefForCreateDatasourceConnection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDatasourceConnectionResponse), nil
+	}
+}
+
+// CreateDatasourceConnectionInvoker 创建资源组网络连接
+func (c *DataArtsStudioClient) CreateDatasourceConnectionInvoker(request *model.CreateDatasourceConnectionRequest) *CreateDatasourceConnectionInvoker {
+	requestDef := GenReqDefForCreateDatasourceConnection()
+	return &CreateDatasourceConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateDatasourceConnectionRoutes 创建路由
+//
+// 该API用于给资源组网络连接添加路由。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) CreateDatasourceConnectionRoutes(request *model.CreateDatasourceConnectionRoutesRequest) (*model.CreateDatasourceConnectionRoutesResponse, error) {
+	requestDef := GenReqDefForCreateDatasourceConnectionRoutes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateDatasourceConnectionRoutesResponse), nil
+	}
+}
+
+// CreateDatasourceConnectionRoutesInvoker 创建路由
+func (c *DataArtsStudioClient) CreateDatasourceConnectionRoutesInvoker(request *model.CreateDatasourceConnectionRoutesRequest) *CreateDatasourceConnectionRoutesInvoker {
+	requestDef := GenReqDefForCreateDatasourceConnectionRoutes()
+	return &CreateDatasourceConnectionRoutesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateDesignAggregationLogicTable 新建汇总表
@@ -1265,7 +1370,7 @@ func (c *DataArtsStudioClient) CreateFactoryPendingItemsPackageInvoker(request *
 
 // CreateFactorySupplementDataInstance 创建补数据实例
 //
-// 创建补数据实例
+// 创建一个补数据实例。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CreateFactorySupplementDataInstance(request *model.CreateFactorySupplementDataInstanceRequest) (*model.CreateFactorySupplementDataInstanceResponse, error) {
@@ -2019,6 +2124,48 @@ func (c *DataArtsStudioClient) DeleteDataconnectionInvoker(request *model.Delete
 	return &DeleteDataconnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteDatasourceConnection 删除资源组网络连接
+//
+// 该API用于删除已创建的DLI资源组网络连接。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) DeleteDatasourceConnection(request *model.DeleteDatasourceConnectionRequest) (*model.DeleteDatasourceConnectionResponse, error) {
+	requestDef := GenReqDefForDeleteDatasourceConnection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDatasourceConnectionResponse), nil
+	}
+}
+
+// DeleteDatasourceConnectionInvoker 删除资源组网络连接
+func (c *DataArtsStudioClient) DeleteDatasourceConnectionInvoker(request *model.DeleteDatasourceConnectionRequest) *DeleteDatasourceConnectionInvoker {
+	requestDef := GenReqDefForDeleteDatasourceConnection()
+	return &DeleteDatasourceConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteDatasourceConnectionRoutes 删除路由
+//
+// 该API用于删除资源组网络连接添加的路由。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) DeleteDatasourceConnectionRoutes(request *model.DeleteDatasourceConnectionRoutesRequest) (*model.DeleteDatasourceConnectionRoutesResponse, error) {
+	requestDef := GenReqDefForDeleteDatasourceConnectionRoutes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteDatasourceConnectionRoutesResponse), nil
+	}
+}
+
+// DeleteDatasourceConnectionRoutesInvoker 删除路由
+func (c *DataArtsStudioClient) DeleteDatasourceConnectionRoutesInvoker(request *model.DeleteDatasourceConnectionRoutesRequest) *DeleteDatasourceConnectionRoutesInvoker {
+	requestDef := GenReqDefForDeleteDatasourceConnectionRoutes()
+	return &DeleteDatasourceConnectionRoutesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteDesignAggregationLogicTable 删除汇总表
 //
 // 批量删除汇总表，只能删除状态为草稿、已线下、已驳回的表。
@@ -2547,7 +2694,7 @@ func (c *DataArtsStudioClient) DeleteWorkspaceusersInvoker(request *model.Delete
 
 // DeployFactoryPackages 发布任务包
 //
-// 发布任务包
+// 目前支持发布包管理中相关包的发布，支持发布多个任务包。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) DeployFactoryPackages(request *model.DeployFactoryPackagesRequest) (*model.DeployFactoryPackagesResponse, error) {
@@ -2564,6 +2711,27 @@ func (c *DataArtsStudioClient) DeployFactoryPackages(request *model.DeployFactor
 func (c *DataArtsStudioClient) DeployFactoryPackagesInvoker(request *model.DeployFactoryPackagesRequest) *DeployFactoryPackagesInvoker {
 	requestDef := GenReqDefForDeployFactoryPackages()
 	return &DeployFactoryPackagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadTaskLog 下载实时处理集成作业日志
+//
+// 获取range范围的日志内容，最多10MB。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) DownloadTaskLog(request *model.DownloadTaskLogRequest) (*model.DownloadTaskLogResponse, error) {
+	requestDef := GenReqDefForDownloadTaskLog()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadTaskLogResponse), nil
+	}
+}
+
+// DownloadTaskLogInvoker 下载实时处理集成作业日志
+func (c *DataArtsStudioClient) DownloadTaskLogInvoker(request *model.DownloadTaskLogRequest) *DownloadTaskLogInvoker {
+	requestDef := GenReqDefForDownloadTaskLog()
+	return &DownloadTaskLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ExecuteSecurityDiagnose 执行数据安全诊断
@@ -3511,6 +3679,27 @@ func (c *DataArtsStudioClient) ListDataconnectionsInvoker(request *model.ListDat
 	return &ListDataconnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDatasourceConnections 查询资源组网络连接列表
+//
+// 该API用于查询该用户已创建的DLI资源组网络连接列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListDatasourceConnections(request *model.ListDatasourceConnectionsRequest) (*model.ListDatasourceConnectionsResponse, error) {
+	requestDef := GenReqDefForListDatasourceConnections()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDatasourceConnectionsResponse), nil
+	}
+}
+
+// ListDatasourceConnectionsInvoker 查询资源组网络连接列表
+func (c *DataArtsStudioClient) ListDatasourceConnectionsInvoker(request *model.ListDatasourceConnectionsRequest) *ListDatasourceConnectionsInvoker {
+	requestDef := GenReqDefForListDatasourceConnections()
+	return &ListDatasourceConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDerivativeIndexes 查找衍生指标
 //
 // 通过中英文名称、创建者、审核人、状态、修改时间、l3Id分页查找衍生指标信息。
@@ -3681,7 +3870,7 @@ func (c *DataArtsStudioClient) ListFactLogicTablesInvoker(request *model.ListFac
 
 // ListFactoryAlarmInfo 查询告警通知记录
 //
-// 查询告警通知记录
+// 此接口可以查询指定时间段内的告警通知记录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListFactoryAlarmInfo(request *model.ListFactoryAlarmInfoRequest) (*model.ListFactoryAlarmInfoResponse, error) {
@@ -3723,7 +3912,7 @@ func (c *DataArtsStudioClient) ListFactoryAlarmRulesInvoker(request *model.ListF
 
 // ListFactoryJobInstancesByName 查询指定作业的实例列表
 //
-// 查询指定作业的实例列表
+// 根据作业名称精确查询作业实例列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListFactoryJobInstancesByName(request *model.ListFactoryJobInstancesByNameRequest) (*model.ListFactoryJobInstancesByNameResponse, error) {
@@ -3786,7 +3975,7 @@ func (c *DataArtsStudioClient) ListFactoryPendingItemsInvoker(request *model.Lis
 
 // ListFactoryReleasePackages 查询发布包列表
 //
-// 查询发布包列表
+// 用于查询发布包的列表信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListFactoryReleasePackages(request *model.ListFactoryReleasePackagesRequest) (*model.ListFactoryReleasePackagesResponse, error) {
@@ -3849,7 +4038,7 @@ func (c *DataArtsStudioClient) ListFactorySearchBaselineInstancesInvoker(request
 
 // ListFactoryTaskCompletion 查询任务完成情况
 //
-// 查询任务完成情况
+// 查询任务完成情况。包括今天，昨天以及近7天的平均任务完成情况。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListFactoryTaskCompletion(request *model.ListFactoryTaskCompletionRequest) (*model.ListFactoryTaskCompletionResponse, error) {
@@ -3870,7 +4059,7 @@ func (c *DataArtsStudioClient) ListFactoryTaskCompletionInvoker(request *model.L
 
 // ListFactoryTaskOverview 查询实例运行状态
 //
-// 查询实例运行状态
+// 此接口可以查询实例运行状态，包括当天、昨天、前天以及近7天的实例状态情况。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListFactoryTaskOverview(request *model.ListFactoryTaskOverviewRequest) (*model.ListFactoryTaskOverviewResponse, error) {
@@ -4751,9 +4940,30 @@ func (c *DataArtsStudioClient) ListTableModelsInvoker(request *model.ListTableMo
 	return &ListTableModelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTaskLogs 查询实时处理集成作业日志列表
+//
+// 查询实时处理集成作业日志列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ListTaskLogs(request *model.ListTaskLogsRequest) (*model.ListTaskLogsResponse, error) {
+	requestDef := GenReqDefForListTaskLogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTaskLogsResponse), nil
+	}
+}
+
+// ListTaskLogsInvoker 查询实时处理集成作业日志列表
+func (c *DataArtsStudioClient) ListTaskLogsInvoker(request *model.ListTaskLogsRequest) *ListTaskLogsInvoker {
+	requestDef := GenReqDefForListTaskLogs()
+	return &ListTaskLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListTaskTableReferenceDetail 查询单表的作业表引用详情
 //
-// 根据表名查询该表被哪些作业引用的详细信息，支持按输入输出类型、工作空间等条件筛选。
+// 查询表被作业（调度中）引用详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListTaskTableReferenceDetail(request *model.ListTaskTableReferenceDetailRequest) (*model.ListTaskTableReferenceDetailResponse, error) {
@@ -5069,7 +5279,7 @@ func (c *DataArtsStudioClient) ResetLinkAttributeAndStandardInvoker(request *mod
 
 // RetryFactoryJobInstance 重跑作业实例
 //
-// 支持重跑作业实例以及上下游的作业实例。
+// 支持重跑作业实例以及上下游的作业实例。该接口功能处于邀测阶段，后续将随功能公测逐步开放。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) RetryFactoryJobInstance(request *model.RetryFactoryJobInstanceRequest) (*model.RetryFactoryJobInstanceResponse, error) {
@@ -5447,6 +5657,7 @@ func (c *DataArtsStudioClient) SearchVersionsInvoker(request *model.SearchVersio
 
 // SetFactoryJobTags 设置作业标签
 //
+// 此接口可以设置作业标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) SetFactoryJobTags(request *model.SetFactoryJobTagsRequest) (*model.SetFactoryJobTagsResponse, error) {
@@ -6054,6 +6265,27 @@ func (c *DataArtsStudioClient) ShowDatamapLineageInvoker(request *model.ShowData
 	return &ShowDatamapLineageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDatasourceConnection 查询资源组网络连接
+//
+// 该API用于查询该用户已创建的DLI资源组网络连接。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowDatasourceConnection(request *model.ShowDatasourceConnectionRequest) (*model.ShowDatasourceConnectionResponse, error) {
+	requestDef := GenReqDefForShowDatasourceConnection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDatasourceConnectionResponse), nil
+	}
+}
+
+// ShowDatasourceConnectionInvoker 查询资源组网络连接
+func (c *DataArtsStudioClient) ShowDatasourceConnectionInvoker(request *model.ShowDatasourceConnectionRequest) *ShowDatasourceConnectionInvoker {
+	requestDef := GenReqDefForShowDatasourceConnection()
+	return &ShowDatasourceConnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDerivativeIndexById 查看衍生指标详情
 //
 // 通过ID获取衍生详情信息。
@@ -6287,7 +6519,7 @@ func (c *DataArtsStudioClient) ShowFactoryJobDependInstancesInvoker(request *mod
 
 // ShowFactoryPackageDetail 查询指定发布包详情
 //
-// 查询指定发布包详情
+// 用于查询指定的发布包详情信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowFactoryPackageDetail(request *model.ShowFactoryPackageDetailRequest) (*model.ShowFactoryPackageDetailResponse, error) {
@@ -6308,7 +6540,7 @@ func (c *DataArtsStudioClient) ShowFactoryPackageDetailInvoker(request *model.Sh
 
 // ShowFactorySupplementData 查询补数据实例
 //
-// 查询补数据实例
+// 查询补数据实例列表，支持分页查询。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowFactorySupplementData(request *model.ShowFactorySupplementDataRequest) (*model.ShowFactorySupplementDataResponse, error) {
@@ -6409,6 +6641,27 @@ func (c *DataArtsStudioClient) ShowInstanceResult(request *model.ShowInstanceRes
 func (c *DataArtsStudioClient) ShowInstanceResultInvoker(request *model.ShowInstanceResultRequest) *ShowInstanceResultInvoker {
 	requestDef := GenReqDefForShowInstanceResult()
 	return &ShowInstanceResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJobMonitorInfo 查询实时处理集成作业监控指标
+//
+// 查询实时处理集成作业的子任务监控指标结果，包括各子任务的吞吐量、延迟等运行指标。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowJobMonitorInfo(request *model.ShowJobMonitorInfoRequest) (*model.ShowJobMonitorInfoResponse, error) {
+	requestDef := GenReqDefForShowJobMonitorInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowJobMonitorInfoResponse), nil
+	}
+}
+
+// ShowJobMonitorInfoInvoker 查询实时处理集成作业监控指标
+func (c *DataArtsStudioClient) ShowJobMonitorInfoInvoker(request *model.ShowJobMonitorInfoRequest) *ShowJobMonitorInfoInvoker {
+	requestDef := GenReqDefForShowJobMonitorInfo()
+	return &ShowJobMonitorInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowLineage 血缘查询
@@ -6620,6 +6873,28 @@ func (c *DataArtsStudioClient) ShowQueues(request *model.ShowQueuesRequest) (*mo
 func (c *DataArtsStudioClient) ShowQueuesInvoker(request *model.ShowQueuesRequest) *ShowQueuesInvoker {
 	requestDef := GenReqDefForShowQueues()
 	return &ShowQueuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRealTimeJobDetails 查询实时作业详情
+//
+// 查询实时作业的详细监控信息，包括作业运行状态、引擎版本、追踪URL及各子任务详情。
+// 仅支持一键入湖（OneClickCDC）类型的实时作业。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) ShowRealTimeJobDetails(request *model.ShowRealTimeJobDetailsRequest) (*model.ShowRealTimeJobDetailsResponse, error) {
+	requestDef := GenReqDefForShowRealTimeJobDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowRealTimeJobDetailsResponse), nil
+	}
+}
+
+// ShowRealTimeJobDetailsInvoker 查询实时作业详情
+func (c *DataArtsStudioClient) ShowRealTimeJobDetailsInvoker(request *model.ShowRealTimeJobDetailsRequest) *ShowRealTimeJobDetailsInvoker {
+	requestDef := GenReqDefForShowRealTimeJobDetails()
+	return &ShowRealTimeJobDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowRelationById 查看关系详情
@@ -7149,7 +7424,7 @@ func (c *DataArtsStudioClient) ShowWorkspaceDetailByIdInvoker(request *model.Sho
 
 // StopFactorySupplementDataInstance 停止补数据实例
 //
-// 停止补数据实例
+// 停止指定的补数据实例。只有补数据实例的状态是运行中，才能停止补数据实例。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) StopFactorySupplementDataInstance(request *model.StopFactorySupplementDataInstanceRequest) (*model.StopFactorySupplementDataInstanceResponse, error) {
@@ -7357,6 +7632,27 @@ func (c *DataArtsStudioClient) UpdateDataconnectionInvoker(request *model.Update
 	return &UpdateDataconnectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateDatasourceConnectionHostMessage 修改资源组网络连接的主机信息
+//
+// 该API用于在DLI资源组网络连接中修改数据源主机信息，仅支持全量覆盖。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UpdateDatasourceConnectionHostMessage(request *model.UpdateDatasourceConnectionHostMessageRequest) (*model.UpdateDatasourceConnectionHostMessageResponse, error) {
+	requestDef := GenReqDefForUpdateDatasourceConnectionHostMessage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateDatasourceConnectionHostMessageResponse), nil
+	}
+}
+
+// UpdateDatasourceConnectionHostMessageInvoker 修改资源组网络连接的主机信息
+func (c *DataArtsStudioClient) UpdateDatasourceConnectionHostMessageInvoker(request *model.UpdateDatasourceConnectionHostMessageRequest) *UpdateDatasourceConnectionHostMessageInvoker {
+	requestDef := GenReqDefForUpdateDatasourceConnectionHostMessage()
+	return &UpdateDatasourceConnectionHostMessageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateDesignAggregationLogicTable 更新汇总表
 //
 // 更新汇总表。
@@ -7548,7 +7844,7 @@ func (c *DataArtsStudioClient) UpdateEntityAttributeInvoker(request *model.Updat
 
 // UpdateFactoryJobName 修改作业名称
 //
-// 修改作业名称
+// 对作业名称进行重命名操作。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) UpdateFactoryJobName(request *model.UpdateFactoryJobNameRequest) (*model.UpdateFactoryJobNameResponse, error) {
@@ -7964,6 +8260,27 @@ func (c *DataArtsStudioClient) UpdateTemplate(request *model.UpdateTemplateReque
 func (c *DataArtsStudioClient) UpdateTemplateInvoker(request *model.UpdateTemplateRequest) *UpdateTemplateInvoker {
 	requestDef := GenReqDefForUpdateTemplate()
 	return &UpdateTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateWorkSpaceOld 修改工作空间
+//
+// 修改工作空间
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) UpdateWorkSpaceOld(request *model.UpdateWorkSpaceOldRequest) (*model.UpdateWorkSpaceOldResponse, error) {
+	requestDef := GenReqDefForUpdateWorkSpaceOld()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateWorkSpaceOldResponse), nil
+	}
+}
+
+// UpdateWorkSpaceOldInvoker 修改工作空间
+func (c *DataArtsStudioClient) UpdateWorkSpaceOldInvoker(request *model.UpdateWorkSpaceOldRequest) *UpdateWorkSpaceOldInvoker {
+	requestDef := GenReqDefForUpdateWorkSpaceOld()
+	return &UpdateWorkSpaceOldInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateWorkSpaceUserOrGroup 编辑工作空间用户或用户组

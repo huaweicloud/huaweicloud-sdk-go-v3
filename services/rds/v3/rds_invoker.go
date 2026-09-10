@@ -293,6 +293,22 @@ func (i *CheckWeakpwdInvoker) Invoke() (*model.CheckWeakpwdResponse, error) {
 	}
 }
 
+type CollectInstanceStatisticInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CollectInstanceStatisticInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CollectInstanceStatisticInvoker) Invoke() (*model.CollectInstanceStatisticResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CollectInstanceStatisticResponse), nil
+	}
+}
+
 type CompareConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -853,6 +869,22 @@ func (i *ListCollationsInvoker) Invoke() (*model.ListCollationsResponse, error) 
 	}
 }
 
+type ListComputeResourceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListComputeResourceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListComputeResourceInvoker) Invoke() (*model.ListComputeResourceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListComputeResourceResponse), nil
+	}
+}
+
 type ListConfigurationApplyHistoriesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1221,6 +1253,22 @@ func (i *ListInstancesInfoDiagnosisInvoker) Invoke() (*model.ListInstancesInfoDi
 	}
 }
 
+type ListInstancesResourceMetricsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInstancesResourceMetricsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInstancesResourceMetricsInvoker) Invoke() (*model.ListInstancesResourceMetricsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInstancesResourceMetricsResponse), nil
+	}
+}
+
 type ListInstancesSupportFastRestoreInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1346,6 +1394,22 @@ func (i *ListOffSiteRestoreTimesInvoker) Invoke() (*model.ListOffSiteRestoreTime
 		return nil, err
 	} else {
 		return result.(*model.ListOffSiteRestoreTimesResponse), nil
+	}
+}
+
+type ListOperateRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOperateRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListOperateRecordInvoker) Invoke() (*model.ListOperateRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOperateRecordResponse), nil
 	}
 }
 
@@ -2786,6 +2850,22 @@ func (i *ShowRestoreTablesInvoker) Invoke() (*model.ShowRestoreTablesResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowRestoreTablesResponse), nil
+	}
+}
+
+type ShowRiskInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRiskInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRiskInfoInvoker) Invoke() (*model.ShowRiskInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRiskInfoResponse), nil
 	}
 }
 
@@ -4453,6 +4533,38 @@ func (i *GetInstancesNoIndexTablesInvoker) Invoke() (*model.GetInstancesNoIndexT
 	}
 }
 
+type GetInstancesOpsResourceUsageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetInstancesOpsResourceUsageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetInstancesOpsResourceUsageInvoker) Invoke() (*model.GetInstancesOpsResourceUsageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetInstancesOpsResourceUsageResponse), nil
+	}
+}
+
+type QueryAutoSqlLimitingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *QueryAutoSqlLimitingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *QueryAutoSqlLimitingInvoker) Invoke() (*model.QueryAutoSqlLimitingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.QueryAutoSqlLimitingResponse), nil
+	}
+}
+
 type RotateAuditLogInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4466,6 +4578,22 @@ func (i *RotateAuditLogInvoker) Invoke() (*model.RotateAuditLogResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.RotateAuditLogResponse), nil
+	}
+}
+
+type ShowAgencyPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAgencyPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAgencyPolicyInvoker) Invoke() (*model.ShowAgencyPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAgencyPolicyResponse), nil
 	}
 }
 
@@ -5442,5 +5570,21 @@ func (i *ResetViewSqlStatisticsInvoker) Invoke() (*model.ResetViewSqlStatisticsR
 		return nil, err
 	} else {
 		return result.(*model.ResetViewSqlStatisticsResponse), nil
+	}
+}
+
+type GetAvailableVpcsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetAvailableVpcsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetAvailableVpcsInvoker) Invoke() (*model.GetAvailableVpcsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetAvailableVpcsResponse), nil
 	}
 }

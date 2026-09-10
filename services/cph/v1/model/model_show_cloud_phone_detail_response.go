@@ -42,6 +42,9 @@ type ShowCloudPhoneDetailResponse struct {
 	// 云手机属性字符串，不超过2048个字节。
 	Property *string `json:"property,omitempty"`
 
+	// 云手机用户自定义属性键值对列表。
+	CustomProperty map[string]string `json:"custom_property,omitempty"`
+
 	Metadata *ShowCloudPhoneDetailResponseBodyMetadata `json:"metadata,omitempty"`
 
 	PhoneDataVolume *PhoneDataVolume `json:"phone_data_volume,omitempty"`

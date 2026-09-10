@@ -8,8 +8,8 @@ import (
 
 // UnsubscribePostpaidVolumeResponse Response Object
 type UnsubscribePostpaidVolumeResponse struct {
-	Body           *[]UnsubscribeVolumeResponseBody `json:"body,omitempty"`
-	HttpStatusCode int                              `json:"-"`
+	Body           *interface{} `json:"body,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o UnsubscribePostpaidVolumeResponse) String() string {

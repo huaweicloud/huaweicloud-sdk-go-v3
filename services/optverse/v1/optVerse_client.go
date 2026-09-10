@@ -523,6 +523,553 @@ func (c *OptVerseClient) UpdateEvolveTaskInvoker(request *model.UpdateEvolveTask
 	return &UpdateEvolveTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteModelAsset 删除模型资产
+//
+// 删除模型资产。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) DeleteModelAsset(request *model.DeleteModelAssetRequest) (*model.DeleteModelAssetResponse, error) {
+	requestDef := GenReqDefForDeleteModelAsset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteModelAssetResponse), nil
+	}
+}
+
+// DeleteModelAssetInvoker 删除模型资产
+func (c *OptVerseClient) DeleteModelAssetInvoker(request *model.DeleteModelAssetRequest) *DeleteModelAssetInvoker {
+	requestDef := GenReqDefForDeleteModelAsset()
+	return &DeleteModelAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListModelAssets 获取模型资产列表
+//
+// 获取模型资产列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) ListModelAssets(request *model.ListModelAssetsRequest) (*model.ListModelAssetsResponse, error) {
+	requestDef := GenReqDefForListModelAssets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListModelAssetsResponse), nil
+	}
+}
+
+// ListModelAssetsInvoker 获取模型资产列表
+func (c *OptVerseClient) ListModelAssetsInvoker(request *model.ListModelAssetsRequest) *ListModelAssetsInvoker {
+	requestDef := GenReqDefForListModelAssets()
+	return &ListModelAssetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowModelAssetDetail 查询资产详情
+//
+// 查询资产详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) ShowModelAssetDetail(request *model.ShowModelAssetDetailRequest) (*model.ShowModelAssetDetailResponse, error) {
+	requestDef := GenReqDefForShowModelAssetDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowModelAssetDetailResponse), nil
+	}
+}
+
+// ShowModelAssetDetailInvoker 查询资产详情
+func (c *OptVerseClient) ShowModelAssetDetailInvoker(request *model.ShowModelAssetDetailRequest) *ShowModelAssetDetailInvoker {
+	requestDef := GenReqDefForShowModelAssetDetail()
+	return &ShowModelAssetDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateModelAsset 编辑模型资产
+//
+// 编辑模型资产描述。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) UpdateModelAsset(request *model.UpdateModelAssetRequest) (*model.UpdateModelAssetResponse, error) {
+	requestDef := GenReqDefForUpdateModelAsset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateModelAssetResponse), nil
+	}
+}
+
+// UpdateModelAssetInvoker 编辑模型资产
+func (c *OptVerseClient) UpdateModelAssetInvoker(request *model.UpdateModelAssetRequest) *UpdateModelAssetInvoker {
+	requestDef := GenReqDefForUpdateModelAsset()
+	return &UpdateModelAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CancelChat 取消对话
+//
+// 取消对话。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) CancelChat(request *model.CancelChatRequest) (*model.CancelChatResponse, error) {
+	requestDef := GenReqDefForCancelChat()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelChatResponse), nil
+	}
+}
+
+// CancelChatInvoker 取消对话
+func (c *OptVerseClient) CancelChatInvoker(request *model.CancelChatRequest) *CancelChatInvoker {
+	requestDef := GenReqDefForCancelChat()
+	return &CancelChatInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateArtifacts 产物中心
+//
+// 创建产物中心产物。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) CreateArtifacts(request *model.CreateArtifactsRequest) (*model.CreateArtifactsResponse, error) {
+	requestDef := GenReqDefForCreateArtifacts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateArtifactsResponse), nil
+	}
+}
+
+// CreateArtifactsInvoker 产物中心
+func (c *OptVerseClient) CreateArtifactsInvoker(request *model.CreateArtifactsRequest) *CreateArtifactsInvoker {
+	requestDef := GenReqDefForCreateArtifacts()
+	return &CreateArtifactsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteChat 删除对话
+//
+// 删除对话。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) DeleteChat(request *model.DeleteChatRequest) (*model.DeleteChatResponse, error) {
+	requestDef := GenReqDefForDeleteChat()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteChatResponse), nil
+	}
+}
+
+// DeleteChatInvoker 删除对话
+func (c *OptVerseClient) DeleteChatInvoker(request *model.DeleteChatRequest) *DeleteChatInvoker {
+	requestDef := GenReqDefForDeleteChat()
+	return &DeleteChatInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadFile 下载文件
+//
+// 下载文件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) DownloadFile(request *model.DownloadFileRequest) (*model.DownloadFileResponse, error) {
+	requestDef := GenReqDefForDownloadFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadFileResponse), nil
+	}
+}
+
+// DownloadFileInvoker 下载文件
+func (c *OptVerseClient) DownloadFileInvoker(request *model.DownloadFileRequest) *DownloadFileInvoker {
+	requestDef := GenReqDefForDownloadFile()
+	return &DownloadFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListArtifacts 获取产物中心列表
+//
+// 获取产物中心列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) ListArtifacts(request *model.ListArtifactsRequest) (*model.ListArtifactsResponse, error) {
+	requestDef := GenReqDefForListArtifacts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListArtifactsResponse), nil
+	}
+}
+
+// ListArtifactsInvoker 获取产物中心列表
+func (c *OptVerseClient) ListArtifactsInvoker(request *model.ListArtifactsRequest) *ListArtifactsInvoker {
+	requestDef := GenReqDefForListArtifacts()
+	return &ListArtifactsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListChat 获取对话列表
+//
+// 获取对话列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) ListChat(request *model.ListChatRequest) (*model.ListChatResponse, error) {
+	requestDef := GenReqDefForListChat()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListChatResponse), nil
+	}
+}
+
+// ListChatInvoker 获取对话列表
+func (c *OptVerseClient) ListChatInvoker(request *model.ListChatRequest) *ListChatInvoker {
+	requestDef := GenReqDefForListChat()
+	return &ListChatInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// PublishChat 发布助手
+//
+// 发布助手。
+// 发布前会校验当前助手最后一个阶段的文档是否已确认，确认后才可发布。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) PublishChat(request *model.PublishChatRequest) (*model.PublishChatResponse, error) {
+	requestDef := GenReqDefForPublishChat()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PublishChatResponse), nil
+	}
+}
+
+// PublishChatInvoker 发布助手
+func (c *OptVerseClient) PublishChatInvoker(request *model.PublishChatRequest) *PublishChatInvoker {
+	requestDef := GenReqDefForPublishChat()
+	return &PublishChatInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowChat 获取对话详情
+//
+// 获取对话详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) ShowChat(request *model.ShowChatRequest) (*model.ShowChatResponse, error) {
+	requestDef := GenReqDefForShowChat()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowChatResponse), nil
+	}
+}
+
+// ShowChatInvoker 获取对话详情
+func (c *OptVerseClient) ShowChatInvoker(request *model.ShowChatRequest) *ShowChatInvoker {
+	requestDef := GenReqDefForShowChat()
+	return &ShowChatInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateChat 更新对话
+//
+// 更新对话。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) UpdateChat(request *model.UpdateChatRequest) (*model.UpdateChatResponse, error) {
+	requestDef := GenReqDefForUpdateChat()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateChatResponse), nil
+	}
+}
+
+// UpdateChatInvoker 更新对话
+func (c *OptVerseClient) UpdateChatInvoker(request *model.UpdateChatRequest) *UpdateChatInvoker {
+	requestDef := GenReqDefForUpdateChat()
+	return &UpdateChatInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadFile 上传文件
+//
+// 上传文件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) UploadFile(request *model.UploadFileRequest) (*model.UploadFileResponse, error) {
+	requestDef := GenReqDefForUploadFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadFileResponse), nil
+	}
+}
+
+// UploadFileInvoker 上传文件
+func (c *OptVerseClient) UploadFileInvoker(request *model.UploadFileRequest) *UploadFileInvoker {
+	requestDef := GenReqDefForUploadFile()
+	return &UploadFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateModelService 创建模型服务
+//
+// 创建模型服务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) CreateModelService(request *model.CreateModelServiceRequest) (*model.CreateModelServiceResponse, error) {
+	requestDef := GenReqDefForCreateModelService()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateModelServiceResponse), nil
+	}
+}
+
+// CreateModelServiceInvoker 创建模型服务
+func (c *OptVerseClient) CreateModelServiceInvoker(request *model.CreateModelServiceRequest) *CreateModelServiceInvoker {
+	requestDef := GenReqDefForCreateModelService()
+	return &CreateModelServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateModelServiceTask 调用模型服务创建任务
+//
+// 调用模型服务创建任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) CreateModelServiceTask(request *model.CreateModelServiceTaskRequest) (*model.CreateModelServiceTaskResponse, error) {
+	requestDef := GenReqDefForCreateModelServiceTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateModelServiceTaskResponse), nil
+	}
+}
+
+// CreateModelServiceTaskInvoker 调用模型服务创建任务
+func (c *OptVerseClient) CreateModelServiceTaskInvoker(request *model.CreateModelServiceTaskRequest) *CreateModelServiceTaskInvoker {
+	requestDef := GenReqDefForCreateModelServiceTask()
+	return &CreateModelServiceTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteModelService 删除模型服务
+//
+// 删除模型服务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) DeleteModelService(request *model.DeleteModelServiceRequest) (*model.DeleteModelServiceResponse, error) {
+	requestDef := GenReqDefForDeleteModelService()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteModelServiceResponse), nil
+	}
+}
+
+// DeleteModelServiceInvoker 删除模型服务
+func (c *OptVerseClient) DeleteModelServiceInvoker(request *model.DeleteModelServiceRequest) *DeleteModelServiceInvoker {
+	requestDef := GenReqDefForDeleteModelService()
+	return &DeleteModelServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListModelServiceTasks 获取模型服务任务列表
+//
+// 获取模型服务任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) ListModelServiceTasks(request *model.ListModelServiceTasksRequest) (*model.ListModelServiceTasksResponse, error) {
+	requestDef := GenReqDefForListModelServiceTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListModelServiceTasksResponse), nil
+	}
+}
+
+// ListModelServiceTasksInvoker 获取模型服务任务列表
+func (c *OptVerseClient) ListModelServiceTasksInvoker(request *model.ListModelServiceTasksRequest) *ListModelServiceTasksInvoker {
+	requestDef := GenReqDefForListModelServiceTasks()
+	return &ListModelServiceTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowModelServiceDetail 获取模型服务详情
+//
+// 获取模型服务详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) ShowModelServiceDetail(request *model.ShowModelServiceDetailRequest) (*model.ShowModelServiceDetailResponse, error) {
+	requestDef := GenReqDefForShowModelServiceDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowModelServiceDetailResponse), nil
+	}
+}
+
+// ShowModelServiceDetailInvoker 获取模型服务详情
+func (c *OptVerseClient) ShowModelServiceDetailInvoker(request *model.ShowModelServiceDetailRequest) *ShowModelServiceDetailInvoker {
+	requestDef := GenReqDefForShowModelServiceDetail()
+	return &ShowModelServiceDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowModelServiceList 获取模型服务列表
+//
+// 获取模型服务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) ShowModelServiceList(request *model.ShowModelServiceListRequest) (*model.ShowModelServiceListResponse, error) {
+	requestDef := GenReqDefForShowModelServiceList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowModelServiceListResponse), nil
+	}
+}
+
+// ShowModelServiceListInvoker 获取模型服务列表
+func (c *OptVerseClient) ShowModelServiceListInvoker(request *model.ShowModelServiceListRequest) *ShowModelServiceListInvoker {
+	requestDef := GenReqDefForShowModelServiceList()
+	return &ShowModelServiceListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowModelServiceTask 获取模型服务任务详情
+//
+// 获取模型服务任务详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) ShowModelServiceTask(request *model.ShowModelServiceTaskRequest) (*model.ShowModelServiceTaskResponse, error) {
+	requestDef := GenReqDefForShowModelServiceTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowModelServiceTaskResponse), nil
+	}
+}
+
+// ShowModelServiceTaskInvoker 获取模型服务任务详情
+func (c *OptVerseClient) ShowModelServiceTaskInvoker(request *model.ShowModelServiceTaskRequest) *ShowModelServiceTaskInvoker {
+	requestDef := GenReqDefForShowModelServiceTask()
+	return &ShowModelServiceTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartModelService 启动模型服务
+//
+// 启动模型服务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) StartModelService(request *model.StartModelServiceRequest) (*model.StartModelServiceResponse, error) {
+	requestDef := GenReqDefForStartModelService()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartModelServiceResponse), nil
+	}
+}
+
+// StartModelServiceInvoker 启动模型服务
+func (c *OptVerseClient) StartModelServiceInvoker(request *model.StartModelServiceRequest) *StartModelServiceInvoker {
+	requestDef := GenReqDefForStartModelService()
+	return &StartModelServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopModelService 停止模型服务
+//
+// 停止模型服务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) StopModelService(request *model.StopModelServiceRequest) (*model.StopModelServiceResponse, error) {
+	requestDef := GenReqDefForStopModelService()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopModelServiceResponse), nil
+	}
+}
+
+// StopModelServiceInvoker 停止模型服务
+func (c *OptVerseClient) StopModelServiceInvoker(request *model.StopModelServiceRequest) *StopModelServiceInvoker {
+	requestDef := GenReqDefForStopModelService()
+	return &StopModelServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateModelService 编辑推理服务
+//
+// 编辑推理服务，仅支持修改服务名称和服务描述。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) UpdateModelService(request *model.UpdateModelServiceRequest) (*model.UpdateModelServiceResponse, error) {
+	requestDef := GenReqDefForUpdateModelService()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateModelServiceResponse), nil
+	}
+}
+
+// UpdateModelServiceInvoker 编辑推理服务
+func (c *OptVerseClient) UpdateModelServiceInvoker(request *model.UpdateModelServiceRequest) *UpdateModelServiceInvoker {
+	requestDef := GenReqDefForUpdateModelService()
+	return &UpdateModelServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UploadModelServiceTaskFile 上传任务依赖的输入文件
+//
+// 上传任务依赖的输入文件。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) UploadModelServiceTaskFile(request *model.UploadModelServiceTaskFileRequest) (*model.UploadModelServiceTaskFileResponse, error) {
+	requestDef := GenReqDefForUploadModelServiceTaskFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UploadModelServiceTaskFileResponse), nil
+	}
+}
+
+// UploadModelServiceTaskFileInvoker 上传任务依赖的输入文件
+func (c *OptVerseClient) UploadModelServiceTaskFileInvoker(request *model.UploadModelServiceTaskFileRequest) *UploadModelServiceTaskFileInvoker {
+	requestDef := GenReqDefForUploadModelServiceTaskFile()
+	return &UploadModelServiceTaskFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// PublishModel 发布模型
+//
+// 发布训练任务生成的模型。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *OptVerseClient) PublishModel(request *model.PublishModelRequest) (*model.PublishModelResponse, error) {
+	requestDef := GenReqDefForPublishModel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PublishModelResponse), nil
+	}
+}
+
+// PublishModelInvoker 发布模型
+func (c *OptVerseClient) PublishModelInvoker(request *model.PublishModelRequest) *PublishModelInvoker {
+	requestDef := GenReqDefForPublishModel()
+	return &PublishModelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AuthorizePermission 授权
 //
 // 授予LLM4AD操作用户桶的权限

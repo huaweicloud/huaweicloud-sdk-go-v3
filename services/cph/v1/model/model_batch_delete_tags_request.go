@@ -12,7 +12,7 @@ import (
 // BatchDeleteTagsRequest Request Object
 type BatchDeleteTagsRequest struct {
 
-	// 资源类型。  - cph-server，云手机服务器
+	// 资源类型。  - cph-server，云手机服务器 [- elastic-cloud-phone, 弹性云手机实例](tag:hws_test)
 	ResourceType BatchDeleteTagsRequestResourceType `json:"resource_type"`
 
 	// 资源ID。
@@ -35,13 +35,17 @@ type BatchDeleteTagsRequestResourceType struct {
 }
 
 type BatchDeleteTagsRequestResourceTypeEnum struct {
-	CPH_SERVER BatchDeleteTagsRequestResourceType
+	CPH_SERVER          BatchDeleteTagsRequestResourceType
+	ELASTIC_CLOUD_PHONE BatchDeleteTagsRequestResourceType
 }
 
 func GetBatchDeleteTagsRequestResourceTypeEnum() BatchDeleteTagsRequestResourceTypeEnum {
 	return BatchDeleteTagsRequestResourceTypeEnum{
 		CPH_SERVER: BatchDeleteTagsRequestResourceType{
 			value: "cph-server",
+		},
+		ELASTIC_CLOUD_PHONE: BatchDeleteTagsRequestResourceType{
+			value: "elastic-cloud-phone",
 		},
 	}
 }

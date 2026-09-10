@@ -9,7 +9,7 @@ import (
 // DeleteWorkspaceusersRequest Request Object
 type DeleteWorkspaceusersRequest struct {
 
-	// 工作空间id
+	// 工作空间ID
 	WorkspaceId string `json:"workspace_id"`
 
 	Body *ApigDelUserParams `json:"body,omitempty"`

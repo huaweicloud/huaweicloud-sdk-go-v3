@@ -101,6 +101,22 @@ func (i *AssociateClassificationToEntityInvoker) Invoke() (*model.AssociateClass
 	}
 }
 
+type AssociateConnectionClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssociateConnectionClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AssociateConnectionClusterInvoker) Invoke() (*model.AssociateConnectionClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssociateConnectionClusterResponse), nil
+	}
+}
+
 type AssociateSecurityLevelToEntitieInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -114,22 +130,6 @@ func (i *AssociateSecurityLevelToEntitieInvoker) Invoke() (*model.AssociateSecur
 		return nil, err
 	} else {
 		return result.(*model.AssociateSecurityLevelToEntitieResponse), nil
-	}
-}
-
-type AuthorizeDataConnectionInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *AuthorizeDataConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *AuthorizeDataConnectionInvoker) Invoke() (*model.AuthorizeDataConnectionResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.AuthorizeDataConnectionResponse), nil
 	}
 }
 
@@ -194,6 +194,22 @@ func (i *BatchAssociateSecurityLevelToEntitiesInvoker) Invoke() (*model.BatchAss
 		return nil, err
 	} else {
 		return result.(*model.BatchAssociateSecurityLevelToEntitiesResponse), nil
+	}
+}
+
+type BatchBindMigrationResourceToWorkspaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchBindMigrationResourceToWorkspaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchBindMigrationResourceToWorkspaceInvoker) Invoke() (*model.BatchBindMigrationResourceToWorkspaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchBindMigrationResourceToWorkspaceResponse), nil
 	}
 }
 
@@ -370,6 +386,22 @@ func (i *BatchDeleteTemplatesInvoker) Invoke() (*model.BatchDeleteTemplatesRespo
 		return nil, err
 	} else {
 		return result.(*model.BatchDeleteTemplatesResponse), nil
+	}
+}
+
+type BatchDeleteWorkspacesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteWorkspacesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteWorkspacesInvoker) Invoke() (*model.BatchDeleteWorkspacesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteWorkspacesResponse), nil
 	}
 }
 
@@ -757,6 +789,22 @@ func (i *CreateCatalogInvoker) Invoke() (*model.CreateCatalogResponse, error) {
 	}
 }
 
+type CreateClusterInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateClusterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateClusterInvoker) Invoke() (*model.CreateClusterResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateClusterResponse), nil
+	}
+}
+
 type CreateCodeTableInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -786,6 +834,38 @@ func (i *CreateConnectionsInvoker) Invoke() (*model.CreateConnectionsResponse, e
 		return nil, err
 	} else {
 		return result.(*model.CreateConnectionsResponse), nil
+	}
+}
+
+type CreateDatasourceConnectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDatasourceConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDatasourceConnectionInvoker) Invoke() (*model.CreateDatasourceConnectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDatasourceConnectionResponse), nil
+	}
+}
+
+type CreateDatasourceConnectionRoutesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateDatasourceConnectionRoutesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateDatasourceConnectionRoutesInvoker) Invoke() (*model.CreateDatasourceConnectionRoutesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateDatasourceConnectionRoutesResponse), nil
 	}
 }
 
@@ -1525,6 +1605,38 @@ func (i *DeleteDataconnectionInvoker) Invoke() (*model.DeleteDataconnectionRespo
 	}
 }
 
+type DeleteDatasourceConnectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDatasourceConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDatasourceConnectionInvoker) Invoke() (*model.DeleteDatasourceConnectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDatasourceConnectionResponse), nil
+	}
+}
+
+type DeleteDatasourceConnectionRoutesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDatasourceConnectionRoutesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDatasourceConnectionRoutesInvoker) Invoke() (*model.DeleteDatasourceConnectionRoutesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDatasourceConnectionRoutesResponse), nil
+	}
+}
+
 type DeleteDesignAggregationLogicTableInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1938,6 +2050,22 @@ func (i *DeployFactoryPackagesInvoker) Invoke() (*model.DeployFactoryPackagesRes
 		return nil, err
 	} else {
 		return result.(*model.DeployFactoryPackagesResponse), nil
+	}
+}
+
+type DownloadTaskLogInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadTaskLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadTaskLogInvoker) Invoke() (*model.DownloadTaskLogResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadTaskLogResponse), nil
 	}
 }
 
@@ -2658,6 +2786,22 @@ func (i *ListDataconnectionsInvoker) Invoke() (*model.ListDataconnectionsRespons
 		return nil, err
 	} else {
 		return result.(*model.ListDataconnectionsResponse), nil
+	}
+}
+
+type ListDatasourceConnectionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDatasourceConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDatasourceConnectionsInvoker) Invoke() (*model.ListDatasourceConnectionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDatasourceConnectionsResponse), nil
 	}
 }
 
@@ -3602,6 +3746,22 @@ func (i *ListTableModelsInvoker) Invoke() (*model.ListTableModelsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListTableModelsResponse), nil
+	}
+}
+
+type ListTaskLogsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTaskLogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTaskLogsInvoker) Invoke() (*model.ListTaskLogsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTaskLogsResponse), nil
 	}
 }
 
@@ -4597,6 +4757,22 @@ func (i *ShowDatamapLineageInvoker) Invoke() (*model.ShowDatamapLineageResponse,
 	}
 }
 
+type ShowDatasourceConnectionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDatasourceConnectionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDatasourceConnectionInvoker) Invoke() (*model.ShowDatasourceConnectionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDatasourceConnectionResponse), nil
+	}
+}
+
 type ShowDerivativeIndexByIdInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4869,6 +5045,22 @@ func (i *ShowInstanceResultInvoker) Invoke() (*model.ShowInstanceResultResponse,
 	}
 }
 
+type ShowJobMonitorInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowJobMonitorInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowJobMonitorInfoInvoker) Invoke() (*model.ShowJobMonitorInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowJobMonitorInfoResponse), nil
+	}
+}
+
 type ShowLineageInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -5026,6 +5218,22 @@ func (i *ShowQueuesInvoker) Invoke() (*model.ShowQueuesResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowQueuesResponse), nil
+	}
+}
+
+type ShowRealTimeJobDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowRealTimeJobDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowRealTimeJobDetailsInvoker) Invoke() (*model.ShowRealTimeJobDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowRealTimeJobDetailsResponse), nil
 	}
 }
 
@@ -5589,6 +5797,22 @@ func (i *UpdateDataconnectionInvoker) Invoke() (*model.UpdateDataconnectionRespo
 	}
 }
 
+type UpdateDatasourceConnectionHostMessageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateDatasourceConnectionHostMessageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateDatasourceConnectionHostMessageInvoker) Invoke() (*model.UpdateDatasourceConnectionHostMessageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateDatasourceConnectionHostMessageResponse), nil
+	}
+}
+
 type UpdateDesignAggregationLogicTableInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -6050,6 +6274,22 @@ func (i *UpdateTemplateInvoker) Invoke() (*model.UpdateTemplateResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdateTemplateResponse), nil
+	}
+}
+
+type UpdateWorkSpaceOldInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateWorkSpaceOldInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateWorkSpaceOldInvoker) Invoke() (*model.UpdateWorkSpaceOldResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateWorkSpaceOldResponse), nil
 	}
 }
 

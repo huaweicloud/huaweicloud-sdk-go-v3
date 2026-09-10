@@ -13,8 +13,10 @@ type ListCloudPhoneServerModelsResponse struct {
 	RequestId *string `json:"request_id,omitempty"`
 
 	// 云手机服务器的规格信息。
-	ServerModels   *[]ServerModel `json:"server_models,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	ServerModels *[]ServerModel `json:"server_models,omitempty"`
+
+	PageInfo       *ListCloudPhoneServerModelsResponseBodyPageInfo `json:"page_info,omitempty"`
+	HttpStatusCode int                                             `json:"-"`
 }
 
 func (o ListCloudPhoneServerModelsResponse) String() string {
