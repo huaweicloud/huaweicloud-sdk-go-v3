@@ -8,8 +8,8 @@ import (
 
 // GetClusterFlavorSpecsResponse Response Object
 type GetClusterFlavorSpecsResponse struct {
-	ClusterFlavorSpecs *ClusterFlavorSpecification `json:"clusterFlavorSpecs,omitempty"`
-	HttpStatusCode     int                         `json:"-"`
+	ClusterFlavorSpecs *[]ClusterFlavorSpecification `json:"clusterFlavorSpecs,omitempty"`
+	HttpStatusCode     int                           `json:"-"`
 }
 
 func (o GetClusterFlavorSpecsResponse) String() string {

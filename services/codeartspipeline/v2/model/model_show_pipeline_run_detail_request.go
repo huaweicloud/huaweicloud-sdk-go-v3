@@ -17,6 +17,9 @@ type ShowPipelineRunDetailRequest struct {
 
 	// 流水线运行实例ID
 	PipelineRunId *string `json:"pipeline_run_id,omitempty"`
+
+	// 流水线运行编号
+	PipelineRunNumber *string `json:"pipeline_run_number,omitempty"`
 }
 
 func (o ShowPipelineRunDetailRequest) String() string {

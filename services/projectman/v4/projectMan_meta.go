@@ -51,6 +51,21 @@ func GenReqDefForAddMemberV4() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForAssociateScrumIssue() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/issues/associate-issue").
+		WithResponse(new(model.AssociateScrumIssueResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchAddMembersV4() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -106,6 +121,21 @@ func GenReqDefForBatchUpdateChildNickNames() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCancelScrumAssociate() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/issues/cancel-associate").
+		WithResponse(new(model.CancelScrumAssociateResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCheckProjectNameV4() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -147,6 +177,21 @@ func GenReqDefForDeleteProjectV4() *def.HttpRequestDef {
 		WithName("ProjectId").
 		WithJsonTag("project_id").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteScrumMyIssueNotes() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2/workitem/issue-note").
+		WithResponse(new(model.DeleteScrumMyIssueNotesResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -264,6 +309,21 @@ func GenReqDefForListProjectsV4() *def.HttpRequestDef {
 		WithName("QueryType").
 		WithJsonTag("query_type").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListScrumJobCache() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/job-cache/list-cache").
+		WithResponse(new(model.ListScrumJobCacheResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -632,11 +692,129 @@ func GenReqDefForBatchBaselineIpdIssues() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchCreateIpdIssues() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/ipdprojectservice/projects/{project_id}/issues/batch-create").
+		WithResponse(new(model.BatchCreateIpdIssuesResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchCreateIssueSnapitems() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
 		WithPath("/v1/ipdprojectservice/projects/{project_id}/baseline-snapshots/create/batch").
 		WithResponse(new(model.BatchCreateIssueSnapitemsResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBatchCreateIssuesV2() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/ipdprojectservice/projects/{project_id}/issues/batch").
+		WithResponse(new(model.BatchCreateIssuesV2Response)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBatchDeleteIpdIssue() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/ipdprojectservice/projects/{project_id}/issues/batch-delete").
+		WithResponse(new(model.BatchDeleteIpdIssueResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IsPermanentDelete").
+		WithJsonTag("is_permanent_delete").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SrcProjectId").
+		WithJsonTag("src_project_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBatchDeleteIpdIssues() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/ipdprojectservice/projects/{project_id}/issues/batch").
+		WithResponse(new(model.BatchDeleteIpdIssuesResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IsPermanentDelete").
+		WithJsonTag("is_permanent_delete").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SrcProjectId").
+		WithJsonTag("src_project_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBatchDeletePlans() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/planservice/projects/{project_id}/plans/batch-delete").
+		WithResponse(new(model.BatchDeletePlansResponse)).
 		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -672,6 +850,71 @@ func GenReqDefForBatchDeleteSnapshots() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchTransferIpdWorkItemFlow() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/ipdprojectservice/projects/{project_id}/work-item/processes/transfer-batch").
+		WithResponse(new(model.BatchTransferIpdWorkItemFlowResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IsRecover").
+		WithJsonTag("is_recover").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBatchUpdateBaseline() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/planservice/projects/{project_id}/plans/batch-baseline").
+		WithResponse(new(model.BatchUpdateBaselineResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBatchUpdateIpdIssues() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/ipdprojectservice/projects/{project_id}/issues/batch").
+		WithResponse(new(model.BatchUpdateIpdIssuesResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchUpdateSnapshotDeletableFlag() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -682,6 +925,54 @@ func GenReqDefForBatchUpdateSnapshotDeletableFlag() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
 		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForChangePlanStatus() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/planservice/projects/{project_id}/plans/{plan_id}/status").
+		WithResponse(new(model.ChangePlanStatusResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PlanId").
+		WithJsonTag("plan_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateIpdIssueComments() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/ipdprojectservice/projects/{project_id}/issues/{issue_id}/comments").
+		WithResponse(new(model.CreateIpdIssueCommentsResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IssueId").
+		WithJsonTag("issue_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -785,6 +1076,26 @@ func GenReqDefForCreateIpdProjectIssueAttachment() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreatePlans() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/planservice/projects/{project_id}/plans").
+		WithResponse(new(model.CreatePlansResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForCreateSprintSnapshots() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -825,6 +1136,30 @@ func GenReqDefForDeleteIpdImageInIssue() *def.HttpRequestDef {
 		WithName("FileName").
 		WithJsonTag("file_name").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteIpdIssueComment() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v1/ipdprojectservice/projects/{project_id}/issues/{issue_id}/comments/{comment_id}").
+		WithResponse(new(model.DeleteIpdIssueCommentResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IssueId").
+		WithJsonTag("issue_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CommentId").
+		WithJsonTag("comment_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -899,6 +1234,59 @@ func GenReqDefForDownloadIpdImageInIssue() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForGetModelConfig() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/ipdprojectservice/projects/{project_id}/model-config").
+		WithResponse(new(model.GetModelConfigResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListIpdIssueComments() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/ipdprojectservice/projects/{project_id}/issues/{issue_id}/comments").
+		WithResponse(new(model.ListIpdIssueCommentsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IssueId").
+		WithJsonTag("issue_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DateDesc").
+		WithJsonTag("date_desc").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PageNo").
+		WithJsonTag("page_no").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PageSize").
+		WithJsonTag("page_size").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Category").
+		WithJsonTag("category").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForListIpdLabels() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -922,6 +1310,35 @@ func GenReqDefForListIpdLabels() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("CategoryTypes").
 		WithJsonTag("category_types").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListIpdProjectFields() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/ipdprojectservice/projects/{project_id}/fields").
+		WithResponse(new(model.ListIpdProjectFieldsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Keyword").
+		WithJsonTag("keyword").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -1074,6 +1491,67 @@ func GenReqDefForListIssueStatues() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListPlan() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/planservice/projects/{project_id}/plans/query").
+		WithResponse(new(model.ListPlanResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("KeyWord").
+		WithJsonTag("key_word").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("UpdatedTimeInterval").
+		WithJsonTag("updated_time_interval").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListPlanDetail() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/planservice/projects/{project_id}/plans/{plan_id}").
+		WithResponse(new(model.ListPlanDetailResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PlanId").
+		WithJsonTag("plan_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListProjectUsers() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/ipdprojectservice/projects/{project_id}/users").
+		WithResponse(new(model.ListProjectUsersResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForPutIpdChangeReviewFormV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).
@@ -1143,6 +1621,48 @@ func GenReqDefForQueryIssueAssociatedItem() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowBaselineSnapshots() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/ipdprojectservice/projects/{project_id}/feature-set/query").
+		WithResponse(new(model.ShowBaselineSnapshotsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("SnapshotVersionId").
+		WithJsonTag("snapshot_version_id").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowCategoryStatus() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/ipdprojectservice/projects/{project_id}/status").
+		WithResponse(new(model.ShowCategoryStatusResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Categories").
+		WithJsonTag("categories").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowIpdFieldsV2() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -1172,6 +1692,42 @@ func GenReqDefForShowIpdFieldsV2() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowIpdIssueRelationsConfigByProject() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/ipdprojectservice/projects/{project_id}/issue-relation-config").
+		WithResponse(new(model.ShowIpdIssueRelationsConfigByProjectResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowIpdProjectList() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/ipdprojectservice/projects/ipd").
+		WithResponse(new(model.ShowIpdProjectListResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Search").
+		WithJsonTag("search").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Model").
+		WithJsonTag("model").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowIpdThirdPartyAssociated() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -1187,6 +1743,31 @@ func GenReqDefForShowIpdThirdPartyAssociated() *def.HttpRequestDef {
 		WithName("ProjectId").
 		WithJsonTag("project_id").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowIpdWorkItemFlow() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/ipdprojectservice/projects/{project_id}/work-item/{issue_id}/flow/detail").
+		WithResponse(new(model.ShowIpdWorkItemFlowResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IssueId").
+		WithJsonTag("issue_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IssueCategory").
+		WithJsonTag("issue_category").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1242,6 +1823,30 @@ func GenReqDefForShowIssueDetail() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowTenantIssueList() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/ipdprojectservice/projects/tenant/query").
+		WithResponse(new(model.ShowTenantIssueListResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IssueType").
+		WithJsonTag("issue_type").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForShowWorkflowTemplate() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -1273,6 +1878,34 @@ func GenReqDefForTransferWorkItemFlow() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
 		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateIpdIssueComment() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/ipdprojectservice/projects/{project_id}/issues/{issue_id}/comments/{comment_id}").
+		WithResponse(new(model.UpdateIpdIssueCommentResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IssueId").
+		WithJsonTag("issue_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("CommentId").
+		WithJsonTag("comment_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1321,6 +1954,30 @@ func GenReqDefForUpdateIpdThirdParty() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("IssueId").
 		WithJsonTag("issue_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdatePlanInfo() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v1/planservice/projects/{project_id}/plans/{plan_id}").
+		WithResponse(new(model.UpdatePlanInfoResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PlanId").
+		WithJsonTag("plan_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -1561,6 +2218,21 @@ func GenReqDefForBatchDeleteIterationsV4() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchDeleteScrumWorkitem() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/workitem/batch-delete").
+		WithResponse(new(model.BatchDeleteScrumWorkitemResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchListAssociatedIssues() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
@@ -1581,6 +2253,21 @@ func GenReqDefForBatchListAssociatedIssues() *def.HttpRequestDef {
 		WithName("Offset").
 		WithJsonTag("offset").
 		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBatchUpdateScrumIssues() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/workitem/issues").
+		WithResponse(new(model.BatchUpdateScrumIssuesResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -2380,6 +3067,22 @@ func GenReqDefForListStatusStatistic() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListWorkitemConfigs() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v4/project/{project_id}/public-configs").
+		WithResponse(new(model.ListWorkitemConfigsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForSearchIssues() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -2575,6 +3278,51 @@ func GenReqDefForUpdateProjectModule() *def.HttpRequestDef {
 		WithName("ModuleId").
 		WithJsonTag("module_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateScrumIssueNotes() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/issues/update-issue-notes").
+		WithResponse(new(model.UpdateScrumIssueNotesResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateScrumIssueWorkflow() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/workitem/issue-flowage").
+		WithResponse(new(model.UpdateScrumIssueWorkflowResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateScrumMyIssueNotes() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/workitem/issue-note").
+		WithResponse(new(model.UpdateScrumMyIssueNotesResponse)).
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

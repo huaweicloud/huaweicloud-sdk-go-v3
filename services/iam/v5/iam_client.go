@@ -1467,6 +1467,90 @@ func (c *IamClient) UpdatePasswordPolicyV5Invoker(request *model.UpdatePasswordP
 	return &UpdatePasswordPolicyV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteServiceSpecificCredentialV5 删除服务专属凭证
+//
+// 该接口可以用于删除服务专属凭证。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) DeleteServiceSpecificCredentialV5(request *model.DeleteServiceSpecificCredentialV5Request) (*model.DeleteServiceSpecificCredentialV5Response, error) {
+	requestDef := GenReqDefForDeleteServiceSpecificCredentialV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteServiceSpecificCredentialV5Response), nil
+	}
+}
+
+// DeleteServiceSpecificCredentialV5Invoker 删除服务专属凭证
+func (c *IamClient) DeleteServiceSpecificCredentialV5Invoker(request *model.DeleteServiceSpecificCredentialV5Request) *DeleteServiceSpecificCredentialV5Invoker {
+	requestDef := GenReqDefForDeleteServiceSpecificCredentialV5()
+	return &DeleteServiceSpecificCredentialV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListServiceSpecificCredentialSupportedServicesV5 查询支持服务专属凭证的云服务列表
+//
+// 该接口可以用于查询支持服务专属凭证的云服务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) ListServiceSpecificCredentialSupportedServicesV5(request *model.ListServiceSpecificCredentialSupportedServicesV5Request) (*model.ListServiceSpecificCredentialSupportedServicesV5Response, error) {
+	requestDef := GenReqDefForListServiceSpecificCredentialSupportedServicesV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListServiceSpecificCredentialSupportedServicesV5Response), nil
+	}
+}
+
+// ListServiceSpecificCredentialSupportedServicesV5Invoker 查询支持服务专属凭证的云服务列表
+func (c *IamClient) ListServiceSpecificCredentialSupportedServicesV5Invoker(request *model.ListServiceSpecificCredentialSupportedServicesV5Request) *ListServiceSpecificCredentialSupportedServicesV5Invoker {
+	requestDef := GenReqDefForListServiceSpecificCredentialSupportedServicesV5()
+	return &ListServiceSpecificCredentialSupportedServicesV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListServiceSpecificCredentialsV5 查询服务专属凭证列表
+//
+// 该接口可以用于查询服务专属凭证列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) ListServiceSpecificCredentialsV5(request *model.ListServiceSpecificCredentialsV5Request) (*model.ListServiceSpecificCredentialsV5Response, error) {
+	requestDef := GenReqDefForListServiceSpecificCredentialsV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListServiceSpecificCredentialsV5Response), nil
+	}
+}
+
+// ListServiceSpecificCredentialsV5Invoker 查询服务专属凭证列表
+func (c *IamClient) ListServiceSpecificCredentialsV5Invoker(request *model.ListServiceSpecificCredentialsV5Request) *ListServiceSpecificCredentialsV5Invoker {
+	requestDef := GenReqDefForListServiceSpecificCredentialsV5()
+	return &ListServiceSpecificCredentialsV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateServiceSpecificCredentialV5 更新服务专属凭证
+//
+// 该接口可以用于更新服务专属凭证的状态或描述。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) UpdateServiceSpecificCredentialV5(request *model.UpdateServiceSpecificCredentialV5Request) (*model.UpdateServiceSpecificCredentialV5Response, error) {
+	requestDef := GenReqDefForUpdateServiceSpecificCredentialV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateServiceSpecificCredentialV5Response), nil
+	}
+}
+
+// UpdateServiceSpecificCredentialV5Invoker 更新服务专属凭证
+func (c *IamClient) UpdateServiceSpecificCredentialV5Invoker(request *model.UpdateServiceSpecificCredentialV5Request) *UpdateServiceSpecificCredentialV5Invoker {
+	requestDef := GenReqDefForUpdateServiceSpecificCredentialV5()
+	return &UpdateServiceSpecificCredentialV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateUserV5 创建IAM用户
 //
 // 该接口可以用于创建IAM用户。

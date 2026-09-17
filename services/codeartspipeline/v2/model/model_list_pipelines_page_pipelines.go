@@ -42,6 +42,15 @@ type ListPipelinesPagePipelines struct {
 
 	// **参数解释**： 流水线涉密等级。 **取值范围**： 正整数。 null：未设置密级。 1：最低密级。
 	SecurityLevel *int32 `json:"security_level,omitempty"`
+
+	// **参数解释**： 是否禁用流水线。 **取值范围**： - true：流水线已禁用。 - false：流水线未禁用。
+	Banned *bool `json:"banned,omitempty"`
+
+	// **参数解释**： 流水线描述。 **取值范围**： 不涉及。
+	Description *string `json:"description,omitempty"`
+
+	// **参数解释**： 流水线标签列表。 **取值范围**： 不涉及。
+	TagList *[]ListPipelinesPageTagList `json:"tag_list,omitempty"`
 }
 
 func (o ListPipelinesPagePipelines) String() string {

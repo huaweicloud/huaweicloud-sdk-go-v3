@@ -9,7 +9,7 @@ import (
 // UpdateAutopilotChartRequest Request Object
 type UpdateAutopilotChartRequest struct {
 
-	// 模板的ID
+	// **参数解释：** 模板的ID。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	ChartId string `json:"chart_id"`
 
 	Body *UpdateAutopilotChartRequestBody `json:"body,omitempty" type:"multipart"`

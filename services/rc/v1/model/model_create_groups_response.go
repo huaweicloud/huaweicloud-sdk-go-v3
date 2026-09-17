@@ -17,9 +17,9 @@ type CreateGroupsResponse struct {
 
 	Description *string `json:"description,omitempty"`
 
-	CreateTime *string `json:"create_time,omitempty"`
+	Created *string `json:"created,omitempty"`
 
-	UpdateTime *string `json:"update_time,omitempty"`
+	Updated *string `json:"updated,omitempty"`
 }
 
 func (o CreateGroupsResponse) String() string {

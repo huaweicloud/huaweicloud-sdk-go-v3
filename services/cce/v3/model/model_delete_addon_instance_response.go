@@ -9,18 +9,9 @@ import (
 // DeleteAddonInstanceResponse Response Object
 type DeleteAddonInstanceResponse struct {
 
-	// API类型，固定值“Addon”，该值不可修改。
-	Kind *string `json:"kind,omitempty"`
-
-	// API版本，固定值“v3”，该值不可修改。
-	ApiVersion *string `json:"apiVersion,omitempty"`
-
-	Metadata *AddonMetadata `json:"metadata,omitempty"`
-
-	Spec *InstanceSpec `json:"spec,omitempty"`
-
-	Status         *AddonInstanceStatus `json:"status,omitempty"`
-	HttpStatusCode int                  `json:"-"`
+	// **参数解释**： 删除插件实例的返回结果。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	Body           *string `json:"body,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o DeleteAddonInstanceResponse) String() string {

@@ -709,6 +709,22 @@ func (i *HibernateClusterInvoker) Invoke() (*model.HibernateClusterResponse, err
 	}
 }
 
+type InplaceMigrateNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *InplaceMigrateNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *InplaceMigrateNodeInvoker) Invoke() (*model.InplaceMigrateNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.InplaceMigrateNodeResponse), nil
+	}
+}
+
 type ListAccessPolicyInvoker struct {
 	*invoker.BaseInvoker
 }

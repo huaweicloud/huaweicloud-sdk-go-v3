@@ -43,6 +43,9 @@ type SlowLogDetail struct {
 
 	// 日志单行序列号
 	LineNum string `json:"line_num"`
+
+	// 推荐的创建索引命令。使用此命令创建索引可优化该慢查询语句。如果结果为空，说明不需要推荐索引，或AI未识别出可优化的索引。
+	IndexRecommendation string `json:"index_recommendation"`
 }
 
 func (o SlowLogDetail) String() string {

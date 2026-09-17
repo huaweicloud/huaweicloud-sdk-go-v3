@@ -29,6 +29,8 @@ type ClusterInformationSpec struct {
 
 	// **参数解释：** 配置参数后，配置CCE Standard/Turbo集群是否启用自动升配功能。 **约束限制：** 当前集群自动升配功能受限开放。 集群支持范围： - 版本范围：v1.27及以上 - 规格范围：cce.s2.*规格的集群支持启用自动升配  **取值范围：** - true: 启用自动升配能力 - false: 禁用自动升配能力  **默认取值：** 默认false，未指定则不更新此参数
 	EnableAutoResizing *bool `json:"enableAutoResizing,omitempty"`
+
+	SecretConfig *SecretConfigUpdate `json:"secretConfig,omitempty"`
 }
 
 func (o ClusterInformationSpec) String() string {

@@ -49,7 +49,7 @@ type ClusterSpec struct {
 
 	ContainerNetwork *ContainerNetwork `json:"containerNetwork"`
 
-	EniNetwork *EniNetwork `json:"eniNetwork"`
+	EniNetwork *EniNetwork `json:"eniNetwork,omitempty"`
 
 	ServiceNetwork *ServiceNetwork `json:"serviceNetwork,omitempty"`
 
@@ -103,6 +103,8 @@ type ClusterSpec struct {
 	EncryptionConfig *EncryptionConfig `json:"encryptionConfig,omitempty"`
 
 	CertificateAuthority *CertificateAuthority `json:"certificateAuthority,omitempty"`
+
+	SecretConfig *SecretConfig `json:"secretConfig,omitempty"`
 }
 
 func (o ClusterSpec) String() string {

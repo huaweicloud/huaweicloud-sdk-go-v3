@@ -28,6 +28,9 @@ type CreateDcPointReqDto struct {
 	Property string `json:"property"`
 
 	ProcessingConfig *ProcessingConfigDto `json:"processing_config,omitempty"`
+
+	// 点位启停状态，默认开启
+	Active *bool `json:"active,omitempty"`
 }
 
 func (o CreateDcPointReqDto) String() string {

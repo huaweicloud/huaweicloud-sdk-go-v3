@@ -27,6 +27,9 @@ type CountMetaObjResponse struct {
 	// 分区数量
 	PartitionsCount *int64 `json:"partitions_count,omitempty"`
 
+	// 数据集数量
+	DatasetsCount *int64 `json:"datasets_count,omitempty"`
+
 	// 索引数量
 	IndexesCount   *int64 `json:"indexes_count,omitempty"`
 	HttpStatusCode int    `json:"-"`

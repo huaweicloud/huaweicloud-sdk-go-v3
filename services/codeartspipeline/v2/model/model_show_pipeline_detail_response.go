@@ -73,8 +73,100 @@ type ShowPipelineDetailResponse struct {
 	Definition *string `json:"definition,omitempty"`
 
 	// **参数解释**： 流水线涉密等级。 **取值范围**： 不涉及。
-	SecurityLevel  *int32 `json:"security_level,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	SecurityLevel *int32 `json:"security_level,omitempty"`
+
+	// **参数解释**： 复制流水线场景下，原流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+	OriginId *string `json:"origin_id,omitempty"`
+
+	// **参数解释**： 是否禁用发布分支管理。 **取值范围**： - true：禁用发布分支管理。 - false：不禁用发布分支管理。
+	DisableReleaseBranchManagement *bool `json:"disable_release_branch_management,omitempty"`
+
+	// **参数解释**： 流水线是否已被删除。 **取值范围**： - true：已删除。 - false：未删除。
+	Deleted *bool `json:"deleted,omitempty"`
+
+	// **参数解释**： 流水线是否被禁用。 **取值范围**： - true：已禁用。 - false：未禁用。
+	Banned *bool `json:"banned,omitempty"`
+
+	// **参数解释**： 是否来自CodeHub代码仓。 **取值范围**： - true：来自CodeHub代码仓。 - false：非来自CodeHub代码仓。
+	FromGitCode *bool `json:"from_git_code,omitempty"`
+
+	// **参数解释**： 是否来自CodeHub代码仓库。 **取值范围**： - true：来自CodeHub代码仓库。 - false：非来自CodeHub代码仓库。
+	FromGitCodeRepo *bool `json:"from_git_code_repo,omitempty"`
+
+	// **参数解释**： CodeHub代码仓库ID。 **取值范围**： 不涉及。
+	GitCodeRepoId *string `json:"git_code_repo_id,omitempty"`
+
+	// **参数解释**： YAML格式流水线定义。 **取值范围**： 不涉及。
+	YamlDefinition *string `json:"yaml_definition,omitempty"`
+
+	// **参数解释**： PAC代码仓关联信息。 **取值范围**： 不涉及。
+	PacRepoRelation *interface{} `json:"pac_repo_relation,omitempty"`
+
+	// **参数解释**： YAML流水线文件内容。 **取值范围**： 不涉及。
+	YamlContent *string `json:"yaml_content,omitempty"`
+
+	// **参数解释**： 委托名称。 **取值范围**： 不涉及。
+	AgencyName *string `json:"agency_name,omitempty"`
+
+	// **参数解释**： 执行计划列表。 **取值范围**： 不涉及。
+	ExecutionPlans *[]interface{} `json:"execution_plans,omitempty"`
+
+	// **参数解释**： 流水线来源。 **取值范围**： - 0：默认。 - 1：普通模板创建。 - 2：老数据转换。 - 3：CloudInit凤凰商城触发模板创建。 - 4：CloudInit其他触发模板创建。 - 5：创建模板。
+	FromSource *int32 `json:"from_source,omitempty"`
+
+	// **参数解释**： 项目名称。 **取值范围**： 不涉及。
+	ProjectName *string `json:"project_name,omitempty"`
+
+	// **参数解释**： 流水线所属分组名称。 **取值范围**： 不涉及。
+	GroupName *string `json:"group_name,omitempty"`
+
+	ConcurrencyControl *PipelineConcurrencyMgmt `json:"concurrency_control,omitempty"`
+
+	// **参数解释**： 流水线取消运行策略。 **取值范围**： 不涉及。
+	CancelStrategy *interface{} `json:"cancel_strategy,omitempty"`
+
+	// **参数解释**： 流水线标签ID列表。 **取值范围**： 不涉及。
+	TagIds *[]string `json:"tag_ids,omitempty"`
+
+	// **参数解释**： 流水线变量组列表。 **取值范围**： 不涉及。
+	VariableGroups *[]string `json:"variable_groups,omitempty"`
+
+	// **参数解释**： 流水线密级代码。 **取值范围**： 不涉及。
+	SecurityLevelCode *string `json:"security_level_code,omitempty"`
+
+	// **参数解释**： 流水线权限信息。 **取值范围**： 不涉及。
+	Permissions *interface{} `json:"permissions,omitempty"`
+
+	// **参数解释**： 主体ID，即流水线ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+	SubjectId *string `json:"subject_id,omitempty"`
+
+	// **参数解释**： 流水线详情页URL。 **取值范围**： 不涉及。
+	DetailUrl *string `json:"detail_url,omitempty"`
+
+	// **参数解释**： 流水线编辑页URL。 **取值范围**： 不涉及。
+	ModifyUrl *string `json:"modify_url,omitempty"`
+
+	// **参数解释**： 流水线标签列表。 **取值范围**： 不涉及。
+	Tags *[]interface{} `json:"tags,omitempty"`
+
+	// **参数解释**： 是否为CR（变更）模型流水线。 **取值范围**： - true：是CR模型流水线。 - false：非CR模型流水线。
+	IsCrModel *bool `json:"is_cr_model,omitempty"`
+
+	// **参数解释**： PAC归档源信息。 **取值范围**： 不涉及。
+	ArchiveSource *interface{} `json:"archive_source,omitempty"`
+
+	// **参数解释**： V2 YAML流水线的代码仓相关信息。 **取值范围**： 不涉及。
+	YamlRepoProperties *interface{} `json:"yaml_repo_properties,omitempty"`
+
+	// **参数解释**： 关联的通用参数组ID列表。 **取值范围**： 不涉及。
+	VariableGroupIds *[]string `json:"variable_group_ids,omitempty"`
+
+	// **参数解释**： PAC代码源别名。 **取值范围**： 不涉及。
+	PacSourceAlias *string `json:"pac_source_alias,omitempty"`
+
+	// **参数解释**： PAC代码源CodeHub仓库的HTTPS端点ID。 **取值范围**： 不涉及。
+	PacSourceRepoHttpsEndpoint *string `json:"pac_source_repo_https_endpoint,omitempty"`
+	HttpStatusCode             int     `json:"-"`
 }
 
 func (o ShowPipelineDetailResponse) String() string {

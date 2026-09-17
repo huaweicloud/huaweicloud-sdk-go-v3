@@ -9,13 +9,13 @@ import (
 	"strings"
 )
 
-// ApiVersionLink API版本的URL链接信息。
+// ApiVersionLink **参数解释：** API版本的URL链接信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 type ApiVersionLink struct {
 
-	// API版本信息的链接。
+	// **参数解释：** API版本信息的链接。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Href string `json:"href"`
 
-	// 链接属性。self：自助链接包含版本链接的资源。立即链接后使用这些链接。
+	// **参数解释：** 链接属性。 **约束限制：** 不涉及 **取值范围：** - self：自助链接包含版本链接的资源。立即链接后使用这些链接。  **默认取值：** 不涉及
 	Rel ApiVersionLinkRel `json:"rel"`
 }
 

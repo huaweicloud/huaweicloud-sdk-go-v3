@@ -8,8 +8,7 @@ import (
 
 // DeleteScheduleResponse Response Object
 type DeleteScheduleResponse struct {
-	Body           *string `json:"body,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteScheduleResponse) String() string {

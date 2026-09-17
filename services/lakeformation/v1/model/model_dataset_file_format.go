@@ -16,7 +16,7 @@ type DatasetFileFormat struct {
 	Format DatasetFileFormatFormat `json:"format"`
 
 	// 文件内容类型。行存文件格式,format为ROW时设置,可选值: CSV-Comma Separated Values文件,JSONL-Json对象行文件,AVRO-AVRO行存文件 图片文件格式，format为IMAGE时设置,可选值: JPG-JPG图片,PNG-PNG图片,TIFF-TIFF图片 音频文件格式，format为AUDIO时设置,可选值: WAV-WAV音频,MP3-MP3音频,FLAC-FLAC音频 视频文件格式，format为VIDEO时设置,可选值: MP4-MP4视频,MOV-MOV视频,AVI-AVI视频
-	ContentTypes []string `json:"content_types"`
+	ContentTypes *[]string `json:"content_types,omitempty"`
 }
 
 func (o DatasetFileFormat) String() string {

@@ -15,7 +15,7 @@ type EdgeNodeCreation struct {
 	// 边缘节点名称，只允许中、数字、英文大小写、中划线、下划线
 	Name string `json:"name"`
 
-	// 节点所属资源类型：advanced|standard
+	// 边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
 	Type string `json:"type"`
 
 	// 边缘节点注册使用的验证码，如果不输入则平台随机生成。
@@ -24,10 +24,10 @@ type EdgeNodeCreation struct {
 	// 验证码的有效时间单位秒，默认1800秒，范围为1~864000，过期后平台会随机生成。
 	TimeOut *int32 `json:"time_out,omitempty"`
 
-	// 系统架构。包括：arm64，arm32，x86_64。
+	// 边缘节点系统架构。包括：arm64，arm32，x86_64。
 	Arch *string `json:"arch,omitempty"`
 
-	// 系统类型。包括：generalLinux通用系统，openHarmony。
+	// 边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
 	OsType *string `json:"os_type,omitempty"`
 
 	// 实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
@@ -42,13 +42,13 @@ type EdgeNodeCreation struct {
 	// 节点的安全等级，MEDIUM表示本地明文存储，HIGH表示本地加密存储。
 	SecurityLevel *string `json:"security_level,omitempty"`
 
-	// 节点的可靠性等级。
+	// 节点的可靠性等级，LOW表示中级别，MEDIUM表示高级别。详细功能请参考“用户指南>管理边缘节点>注册节点”。
 	ReliabilityLevel *string `json:"reliability_level,omitempty"`
 
 	// 节点的存储周期，默认0天，取值范围0~7天，0天则不存储。
 	StoragePeriod *int32 `json:"storage_period,omitempty"`
 
-	// AI加速卡类型，如华为昇腾AI加速卡NPU、图像处理加速卡GPU。
+	// AI加速卡类型，如昇腾AI加速卡NPU、图像处理加速卡GPU。
 	AiCardType *string `json:"ai_card_type,omitempty"`
 
 	// npu驱动动态库路径
@@ -56,10 +56,10 @@ type EdgeNodeCreation struct {
 
 	BasePath *BasePathDto `json:"base_path,omitempty"`
 
-	// 边缘节点在IEF日志配置参数，仅高级版支持。
+	// 边缘节点在IEF日志配置参数，仅专业版支持。
 	LogConfigs *[]LogConfigDto `json:"log_configs,omitempty"`
 
-	// 用户预置第三方边缘应用
+	// 需要自动安装的边缘应用。此处可填写控制台“应用管理”页面中列出的业务应用与驱动应用。
 	Apps *[]EdgeAppInstanceDto `json:"apps,omitempty"`
 
 	// 网络接入方式类型
@@ -82,6 +82,9 @@ type EdgeNodeCreation struct {
 
 	// omagent监控运维工具是否上报指标
 	MetricReport *string `json:"metric_report,omitempty"`
+
+	// iotda的南向接入地址
+	IotdaSouthAccess *string `json:"iotda_south_access,omitempty"`
 }
 
 func (o EdgeNodeCreation) String() string {

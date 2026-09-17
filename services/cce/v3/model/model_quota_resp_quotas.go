@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// QuotaRespQuotas 模板配额
+// QuotaRespQuotas **参数解释：** 模板配额 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 type QuotaRespQuotas struct {
 
-	// 资源
+	// **参数解释：** 资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Resources *[]QuotaRespQuotasResources `json:"resources,omitempty"`
 }
 

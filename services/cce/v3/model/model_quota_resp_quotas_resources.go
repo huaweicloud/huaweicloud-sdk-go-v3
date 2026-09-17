@@ -8,13 +8,13 @@ import (
 
 type QuotaRespQuotasResources struct {
 
-	// **参数解释**： 类型 **取值范围**： - Charts：配额类型为模板
+	// **参数解释：** 类型 **约束限制：** 不涉及 **取值范围：** - Charts：配额类型为模板  **默认取值：** 不涉及
 	Type *string `json:"type,omitempty"`
 
-	// 配额
+	// **参数解释：** 配额 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Quota *int32 `json:"quota,omitempty"`
 
-	// 已使用量
+	// **参数解释：** 已使用量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Used *int32 `json:"used,omitempty"`
 }
 

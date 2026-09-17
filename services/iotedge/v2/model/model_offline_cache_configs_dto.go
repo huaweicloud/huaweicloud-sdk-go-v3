@@ -15,8 +15,11 @@ type OfflineCacheConfigsDto struct {
 	// 节点离线缓存数据的储存天数，默认7，取值范围-1~14，-1表示存储天数没有限制
 	Period *int32 `json:"period,omitempty"`
 
-	// 节点离线缓存容量，单位MB，默认2048，取值范围500-8192
+	// 节点离线缓存容量，单位MB，默认2048，取值范围500-1048576
 	Capacity *int32 `json:"capacity,omitempty"`
+
+	// 路由转发开启离线缓存
+	ChannelCacheState *string `json:"channel_cache_state,omitempty"`
 }
 
 func (o OfflineCacheConfigsDto) String() string {

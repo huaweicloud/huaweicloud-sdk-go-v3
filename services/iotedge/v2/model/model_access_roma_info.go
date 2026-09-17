@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// AccessRomaInfo 接入方式为ROMA的鉴权信息结构体
 type AccessRomaInfo struct {
 
 	// 认证key，加密存储

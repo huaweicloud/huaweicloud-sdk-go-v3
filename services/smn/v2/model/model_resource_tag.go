@@ -9,10 +9,10 @@ import (
 // ResourceTag 资源标签结构体。
 type ResourceTag struct {
 
-	// 键。  - 最大长度127个unicode字符。  - key不能为空。
+	// 键。  - 最大长度128个unicode字符。  - key不能为空。
 	Key string `json:"key"`
 
-	// 值。  - 每个值最大长度255个unicode字符。
+	// 值。  - 每个值最大长度256个unicode字符。
 	Value string `json:"value"`
 }
 

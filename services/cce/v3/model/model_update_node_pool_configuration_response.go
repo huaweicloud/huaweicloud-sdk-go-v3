@@ -9,17 +9,17 @@ import (
 // UpdateNodePoolConfigurationResponse Response Object
 type UpdateNodePoolConfigurationResponse struct {
 
-	// API版本
+	// **参数解释：** API版本，固定值**v3** **约束限制：** 固定值 **取值范围：** - v3  **默认取值：** v3
 	ApiVersion *string `json:"apiVersion,omitempty"`
 
-	// API类型，固定值**Configuration**
+	// **参数解释：** API类型，固定值**Configuration** **约束限制：** 固定值 **取值范围：** - Configuration  **默认取值：** Configuration
 	Kind *string `json:"kind,omitempty"`
 
 	Metadata *ConfigurationMetadata `json:"metadata,omitempty"`
 
 	Spec *ClusterConfigurationsSpec `json:"spec,omitempty"`
 
-	// Configuration的状态信息
+	// **参数解释：** Configuration的状态信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Status         *interface{} `json:"status,omitempty"`
 	HttpStatusCode int          `json:"-"`
 }

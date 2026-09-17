@@ -37,10 +37,55 @@ func GenReqDefForCreateInstallCmd() *def.HttpRequestDef {
 		WithName("Arch").
 		WithJsonTag("arch").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnableTpm").
+		WithJsonTag("enable_tpm").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateReinstallCmd() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/edge-nodes/{edge_node_id}/reinstall").
+		WithResponse(new(model.CreateReinstallCmdResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EdgeNodeId").
+		WithJsonTag("edge_node_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnableTpm").
+		WithJsonTag("enable_tpm").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateUpgradeCmd() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/edge-nodes/{edge_node_id}/upgrade").
+		WithResponse(new(model.CreateUpgradeCmdResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EdgeNodeId").
+		WithJsonTag("edge_node_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -62,10 +107,6 @@ func GenReqDefForDeleteEdgeNode() *def.HttpRequestDef {
 		WithName("DeleteExternalNode").
 		WithJsonTag("delete_external_node").
 		WithLocationType(def.Query))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -101,6 +142,10 @@ func GenReqDefForListEdgeNodes() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("NodeIds").
 		WithJsonTag("node_ids").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AppId").
+		WithJsonTag("app_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
@@ -157,6 +202,86 @@ func GenReqDefForUpdateEdgeNode() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EdgeNodeId").
 		WithJsonTag("edge_node_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateClientNode() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/push-channels/{channel_id}/client-nodes").
+		WithResponse(new(model.CreateClientNodeResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ChannelId").
+		WithJsonTag("channel_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateClientNode() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/{project_id}/push-channels/{channel_id}/client-nodes/{node_id}").
+		WithResponse(new(model.UpdateClientNodeResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ChannelId").
+		WithJsonTag("channel_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("NodeId").
+		WithJsonTag("node_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowEdgeNodeSoftwareVersion() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/edge-nodes/{edge_node_id}/software-versions").
+		WithResponse(new(model.ShowEdgeNodeSoftwareVersionResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EdgeNodeId").
+		WithJsonTag("edge_node_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBindNode() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/resources/{resource_id}/bind").
+		WithResponse(new(model.BindNodeResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceId").
+		WithJsonTag("resource_id").
 		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
@@ -260,10 +385,6 @@ func GenReqDefForSetDeviceControlDefaultValues() *def.HttpRequestDef {
 		WithName("Body").
 		WithLocationType(def.Body))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -304,10 +425,6 @@ func GenReqDefForDeleteDevice() *def.HttpRequestDef {
 		WithJsonTag("device_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -331,6 +448,14 @@ func GenReqDefForListDevices() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("DeviceName").
 		WithJsonTag("device_name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ModuleId").
+		WithJsonTag("module_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DeviceId").
+		WithJsonTag("device_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
@@ -407,10 +532,6 @@ func GenReqDefForAddGeneralAppConfigsTemplate() *def.HttpRequestDef {
 		WithResponse(new(model.AddGeneralAppConfigsTemplateResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -446,10 +567,6 @@ func GenReqDefForDeleteAppConfigsTemplate() *def.HttpRequestDef {
 		WithName("TplId").
 		WithJsonTag("tpl_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -498,6 +615,14 @@ func GenReqDefForBatchListEdgeApps() *def.HttpRequestDef {
 		WithName("FunctionType").
 		WithJsonTag("function_type").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FunctionTypes").
+		WithJsonTag("function_types").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Protocol").
+		WithJsonTag("protocol").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -529,10 +654,6 @@ func GenReqDefForDeleteEdgeApp() *def.HttpRequestDef {
 		WithName("EdgeAppId").
 		WithJsonTag("edge_app_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -590,6 +711,10 @@ func GenReqDefForBatchListEdgeAppVersions() *def.HttpRequestDef {
 		WithName("State").
 		WithJsonTag("state").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DeployType").
+		WithJsonTag("deploy_type").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -630,10 +755,6 @@ func GenReqDefForDeleteEdgeApplicationVersion() *def.HttpRequestDef {
 		WithName("Version").
 		WithJsonTag("version").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -724,6 +845,10 @@ func GenReqDefForBatchListDcDs() *def.HttpRequestDef {
 		WithJsonTag("module_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Name").
+		WithJsonTag("name").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
 		WithJsonTag("offset").
 		WithLocationType(def.Query))
@@ -772,10 +897,6 @@ func GenReqDefForDeleteDcDs() *def.HttpRequestDef {
 		WithJsonTag("ds_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -816,10 +937,6 @@ func GenReqDefForSynchronizeDcConfigs() *def.HttpRequestDef {
 		WithJsonTag("ds_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -839,6 +956,11 @@ func GenReqDefForUpdateDcDs() *def.HttpRequestDef {
 		WithName("DsId").
 		WithJsonTag("ds_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("UpdateNameOnly").
+		WithJsonTag("update_name_only").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -914,6 +1036,10 @@ func GenReqDefForBatchListDcPoints() *def.HttpRequestDef {
 		WithJsonTag("device_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Active").
+		WithJsonTag("active").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Offset").
 		WithJsonTag("offset").
 		WithLocationType(def.Query))
@@ -978,10 +1104,6 @@ func GenReqDefForDeleteDcPoint() *def.HttpRequestDef {
 		WithName("Property").
 		WithJsonTag("property").
 		WithLocationType(def.Query))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1108,10 +1230,6 @@ func GenReqDefForDeleteExternalEntity() *def.HttpRequestDef {
 		WithJsonTag("external_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1193,6 +1311,18 @@ func GenReqDefForBatchListModules() *def.HttpRequestDef {
 		WithName("FunctionType").
 		WithJsonTag("function_type").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("FunctionTypes").
+		WithJsonTag("function_types").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProtocolTypes").
+		WithJsonTag("protocol_types").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ModuleName").
+		WithJsonTag("module_name").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1233,10 +1363,6 @@ func GenReqDefForDeleteModule() *def.HttpRequestDef {
 		WithName("ModuleId").
 		WithJsonTag("module_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1430,10 +1556,6 @@ func GenReqDefForAddGeneralOtTemplate() *def.HttpRequestDef {
 		WithResponse(new(model.AddGeneralOtTemplateResponse)).
 		WithContentType("application/json")
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1485,10 +1607,6 @@ func GenReqDefForDeleteOtTemplate() *def.HttpRequestDef {
 		WithJsonTag("tpl_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1531,10 +1649,6 @@ func GenReqDefForImportPoints() *def.HttpRequestDef {
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -1618,10 +1732,6 @@ func GenReqDefForDeleteSchedule() *def.HttpRequestDef {
 		WithJsonTag("schedule_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1641,6 +1751,200 @@ func GenReqDefForUpdateSchedule() *def.HttpRequestDef {
 		WithName("ScheduleId").
 		WithJsonTag("schedule_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForInvokeDeleteProxy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2/{project_id}/edge-nodes/{node_id}/ias/{ia_id}/api").
+		WithResponse(new(model.InvokeDeleteProxyResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("NodeId").
+		WithJsonTag("node_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IaId").
+		WithJsonTag("ia_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IaUri").
+		WithJsonTag("ia_uri").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForInvokeGetProxy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/edge-nodes/{node_id}/ias/{ia_id}/api").
+		WithResponse(new(model.InvokeGetProxyResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("NodeId").
+		WithJsonTag("node_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IaId").
+		WithJsonTag("ia_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IaUri").
+		WithJsonTag("ia_uri").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForInvokePatchProxy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPatch).
+		WithPath("/v2/{project_id}/edge-nodes/{node_id}/ias/{ia_id}/api").
+		WithResponse(new(model.InvokePatchProxyResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("NodeId").
+		WithJsonTag("node_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IaId").
+		WithJsonTag("ia_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IaUri").
+		WithJsonTag("ia_uri").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForInvokePostProxy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/edge-nodes/{node_id}/ias/{ia_id}/api").
+		WithResponse(new(model.InvokePostProxyResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("NodeId").
+		WithJsonTag("node_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IaId").
+		WithJsonTag("ia_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IaUri").
+		WithJsonTag("ia_uri").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForInvokePutProxy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v2/{project_id}/edge-nodes/{node_id}/ias/{ia_id}/api").
+		WithResponse(new(model.InvokePutProxyResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("NodeId").
+		WithJsonTag("node_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IaId").
+		WithJsonTag("ia_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IaUri").
+		WithJsonTag("ia_uri").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForBatchConfirmConfigs() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/edge-nodes/{node_id}/ias/{ia_id}/configs").
+		WithResponse(new(model.BatchConfirmConfigsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("NodeId").
+		WithJsonTag("node_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("IaId").
+		WithJsonTag("ia_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Action").
+		WithJsonTag("action").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -1717,10 +2021,6 @@ func GenReqDefForDeleteIaConfig() *def.HttpRequestDef {
 		WithName("ConfigId").
 		WithJsonTag("config_id").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1844,10 +2144,6 @@ func GenReqDefForDeleteNa() *def.HttpRequestDef {
 		WithJsonTag("na_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1932,6 +2228,57 @@ func GenReqDefForUpdateNa() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreatePushChannel() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v2/{project_id}/push-channels").
+		WithResponse(new(model.CreatePushChannelResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeletePushChannel() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v2/{project_id}/push-channels/{channel_id}").
+		WithResponse(new(model.DeletePushChannelResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ChannelId").
+		WithJsonTag("channel_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListPushChannels() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v2/{project_id}/push-channels").
+		WithResponse(new(model.ListPushChannelsResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

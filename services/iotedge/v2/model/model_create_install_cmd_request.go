@@ -15,6 +15,9 @@ type CreateInstallCmdRequest struct {
 	// 节点架构
 	Arch string `json:"arch"`
 
+	// 是否启用TPM
+	EnableTpm *bool `json:"enable_tpm,omitempty"`
+
 	Body *CreateInstallCmdRequestDto `json:"body,omitempty"`
 }
 

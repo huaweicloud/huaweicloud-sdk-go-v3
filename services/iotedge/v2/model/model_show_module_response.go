@@ -21,6 +21,9 @@ type ShowModuleResponse struct {
 	// 模块运行状态
 	State *ShowModuleResponseState `json:"state,omitempty"`
 
+	// 模块健康状态
+	LivenessState *string `json:"liveness_state,omitempty"`
+
 	// 模块管控状态
 	ControlStatus *string `json:"control_status,omitempty"`
 
@@ -63,15 +66,17 @@ type ShowModuleResponseState struct {
 }
 
 type ShowModuleResponseStateEnum struct {
-	PENDING        ShowModuleResponseState
-	PENDING_DELETE ShowModuleResponseState
-	DELETE_FAILED  ShowModuleResponseState
-	RUNNING        ShowModuleResponseState
-	FAILED         ShowModuleResponseState
-	SUCCEEDED      ShowModuleResponseState
-	UNKNOWN        ShowModuleResponseState
-	DELETE_SUCCESS ShowModuleResponseState
-	STOPPED        ShowModuleResponseState
+	PENDING            ShowModuleResponseState
+	PENDING_DELETE     ShowModuleResponseState
+	DELETE_FAILED      ShowModuleResponseState
+	RUNNING            ShowModuleResponseState
+	UPGRADE_PRELOADING ShowModuleResponseState
+	UPGRADE_PRELOADED  ShowModuleResponseState
+	FAILED             ShowModuleResponseState
+	SUCCEEDED          ShowModuleResponseState
+	UNKNOWN            ShowModuleResponseState
+	DELETE_SUCCESS     ShowModuleResponseState
+	STOPPED            ShowModuleResponseState
 }
 
 func GetShowModuleResponseStateEnum() ShowModuleResponseStateEnum {
@@ -87,6 +92,12 @@ func GetShowModuleResponseStateEnum() ShowModuleResponseStateEnum {
 		},
 		RUNNING: ShowModuleResponseState{
 			value: "RUNNING",
+		},
+		UPGRADE_PRELOADING: ShowModuleResponseState{
+			value: "UPGRADE_PRELOADING",
+		},
+		UPGRADE_PRELOADED: ShowModuleResponseState{
+			value: "UPGRADE_PRELOADED",
 		},
 		FAILED: ShowModuleResponseState{
 			value: "FAILED",
@@ -195,6 +206,7 @@ type ShowModuleResponseFunctionTypeEnum struct {
 	GATEWAY_MANAGER        ShowModuleResponseFunctionType
 	COMPOSITE_APPLICATION  ShowModuleResponseFunctionType
 	DATA_COLLECTION        ShowModuleResponseFunctionType
+	MODEL_INFERENCE        ShowModuleResponseFunctionType
 }
 
 func GetShowModuleResponseFunctionTypeEnum() ShowModuleResponseFunctionTypeEnum {
@@ -216,6 +228,9 @@ func GetShowModuleResponseFunctionTypeEnum() ShowModuleResponseFunctionTypeEnum 
 		},
 		DATA_COLLECTION: ShowModuleResponseFunctionType{
 			value: "DATA_COLLECTION",
+		},
+		MODEL_INFERENCE: ShowModuleResponseFunctionType{
+			value: "MODEL_INFERENCE",
 		},
 	}
 }

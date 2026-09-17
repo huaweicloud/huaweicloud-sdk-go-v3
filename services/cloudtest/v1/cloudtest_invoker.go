@@ -2837,6 +2837,166 @@ func (i *UpdateMindmapNameInvoker) Invoke() (*model.UpdateMindmapNameResponse, e
 	}
 }
 
+type AddResourceToIteratorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddResourceToIteratorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddResourceToIteratorInvoker) Invoke() (*model.AddResourceToIteratorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddResourceToIteratorResponse), nil
+	}
+}
+
+type ListVisibleServicesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVisibleServicesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListVisibleServicesInvoker) Invoke() (*model.ListVisibleServicesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVisibleServicesResponse), nil
+	}
+}
+
+type BatchDeleteTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteTasksInvoker) Invoke() (*model.BatchDeleteTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteTasksResponse), nil
+	}
+}
+
+type CreateTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateTaskInvoker) Invoke() (*model.CreateTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTaskResponse), nil
+	}
+}
+
+type ShowTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTaskInvoker) Invoke() (*model.ShowTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTaskResponse), nil
+	}
+}
+
+type UpdateTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateTaskInvoker) Invoke() (*model.UpdateTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTaskResponse), nil
+	}
+}
+
+type CreateTestVersionCaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTestVersionCaseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateTestVersionCaseInvoker) Invoke() (*model.CreateTestVersionCaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTestVersionCaseResponse), nil
+	}
+}
+
+type ListTestCasesByConditionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTestCasesByConditionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTestCasesByConditionInvoker) Invoke() (*model.ListTestCasesByConditionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTestCasesByConditionResponse), nil
+	}
+}
+
+type ShowTestVersionCaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTestVersionCaseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTestVersionCaseInvoker) Invoke() (*model.ShowTestVersionCaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTestVersionCaseResponse), nil
+	}
+}
+
+type UpdateTestVersionCaseInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTestVersionCaseInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateTestVersionCaseInvoker) Invoke() (*model.UpdateTestVersionCaseResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTestVersionCaseResponse), nil
+	}
+}
+
 type AddFeatureInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2850,6 +3010,166 @@ func (i *AddFeatureInvoker) Invoke() (*model.AddFeatureResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.AddFeatureResponse), nil
+	}
+}
+
+type AddIssuesToIteratorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddIssuesToIteratorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddIssuesToIteratorInvoker) Invoke() (*model.AddIssuesToIteratorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddIssuesToIteratorResponse), nil
+	}
+}
+
+type CreateBranchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateBranchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateBranchInvoker) Invoke() (*model.CreateBranchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateBranchResponse), nil
+	}
+}
+
+type CreateTestIteratorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTestIteratorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateTestIteratorInvoker) Invoke() (*model.CreateTestIteratorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTestIteratorResponse), nil
+	}
+}
+
+type DeleteBranchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteBranchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteBranchInvoker) Invoke() (*model.DeleteBranchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteBranchResponse), nil
+	}
+}
+
+type DeleteIteratorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteIteratorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteIteratorInvoker) Invoke() (*model.DeleteIteratorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteIteratorResponse), nil
+	}
+}
+
+type ListTestBranchesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTestBranchesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTestBranchesInvoker) Invoke() (*model.ListTestBranchesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTestBranchesResponse), nil
+	}
+}
+
+type ShowIteratorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowIteratorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowIteratorInvoker) Invoke() (*model.ShowIteratorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowIteratorResponse), nil
+	}
+}
+
+type ShowTestBranchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTestBranchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTestBranchInvoker) Invoke() (*model.ShowTestBranchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTestBranchResponse), nil
+	}
+}
+
+type UpdateBranchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateBranchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateBranchInvoker) Invoke() (*model.UpdateBranchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateBranchResponse), nil
+	}
+}
+
+type UpdateTestIteratorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateTestIteratorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateTestIteratorInvoker) Invoke() (*model.UpdateTestIteratorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateTestIteratorResponse), nil
 	}
 }
 

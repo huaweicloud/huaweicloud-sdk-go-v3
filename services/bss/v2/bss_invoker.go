@@ -213,6 +213,22 @@ func (i *CreateSubEnterpriseAccountInvoker) Invoke() (*model.CreateSubEnterprise
 	}
 }
 
+type ListBusinessDiscountInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBusinessDiscountInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBusinessDiscountInfoInvoker) Invoke() (*model.ListBusinessDiscountInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBusinessDiscountInfoResponse), nil
+	}
+}
+
 type ListCitiesInvoker struct {
 	*invoker.BaseInvoker
 }

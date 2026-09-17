@@ -26,7 +26,7 @@ type AlarmSubUpdateRequest struct {
 	// **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
 	NotificationTargetType string `json:"notification_target_type"`
 
-	// **参数解释**：  语言。  **取值范围**：  不涉及。
+	// **参数解释**： 语言。 **取值范围**： 不涉及。
 	Language *string `json:"language,omitempty"`
 
 	// **参数解释**： 时区。 **取值范围**： 不涉及。

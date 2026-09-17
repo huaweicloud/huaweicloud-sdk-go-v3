@@ -9,7 +9,7 @@ import (
 // DownloadHttpSignCertRequest Request Object
 type DownloadHttpSignCertRequest struct {
 
-	// 证书文件ID名称，格式为SMN-{RegionID}-{UUID}.pem
+	// 证书文件ID名称，格式为SMN_{RegionID}_{UUID}.pem
 	CertificateId string `json:"certificate_id"`
 }
 

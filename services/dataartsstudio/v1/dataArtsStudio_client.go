@@ -508,7 +508,7 @@ func (c *DataArtsStudioClient) BatchDeleteSecuritySecrecyLevelsInvoker(request *
 
 // BatchDeleteTemplates 批量删除规则模板
 //
-// 批量删除规则模板
+// 批量删除规则模板。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) BatchDeleteTemplates(request *model.BatchDeleteTemplatesRequest) (*model.BatchDeleteTemplatesResponse, error) {
@@ -1223,7 +1223,7 @@ func (c *DataArtsStudioClient) CreateDesignCompoundMetricInvoker(request *model.
 
 // CreateDesignDerivativeIndex 新建衍生指标
 //
-// 根据参数，新建衍生指标指标。
+// 根据参数，新建衍生指标。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CreateDesignDerivativeIndex(request *model.CreateDesignDerivativeIndexRequest) (*model.CreateDesignDerivativeIndexResponse, error) {
@@ -1853,7 +1853,7 @@ func (c *DataArtsStudioClient) CreateTaskInvoker(request *model.CreateTaskReques
 
 // CreateTemplate 创建规则模板
 //
-// 创建规则模板
+// 创建规则模板。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) CreateTemplate(request *model.CreateTemplateRequest) (*model.CreateTemplateResponse, error) {
@@ -3408,7 +3408,7 @@ func (c *DataArtsStudioClient) ListCategoriesTreeInvoker(request *model.ListCate
 
 // ListCategory 获取作业目录
 //
-// 获取作业目录
+// 获取作业目录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListCategory(request *model.ListCategoryRequest) (*model.ListCategoryResponse, error) {
@@ -3492,7 +3492,7 @@ func (c *DataArtsStudioClient) ListConditionInvoker(request *model.ListCondition
 
 // ListConsistencyTask 获取对账作业列表
 //
-// 获取对账作业列表
+// 获取对账作业列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListConsistencyTask(request *model.ListConsistencyTaskRequest) (*model.ListConsistencyTaskResponse, error) {
@@ -4101,7 +4101,7 @@ func (c *DataArtsStudioClient) ListFactoryWorkspacesApprovalInvoker(request *mod
 
 // ListInstances 获取任务执行结果列表
 //
-// 获取任务执行结果列表
+// 获取任务执行结果列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListInstances(request *model.ListInstancesRequest) (*model.ListInstancesResponse, error) {
@@ -4206,7 +4206,7 @@ func (c *DataArtsStudioClient) ListMetricRelationsInvoker(request *model.ListMet
 
 // ListQualityTask 获取质量作业列表
 //
-// 获取质量作业列表
+// 获取质量作业列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListQualityTask(request *model.ListQualityTaskRequest) (*model.ListQualityTaskResponse, error) {
@@ -4227,6 +4227,7 @@ func (c *DataArtsStudioClient) ListQualityTaskInvoker(request *model.ListQuality
 
 // ListQualityTaskLists 获取质量作业列表V1
 //
+// 批量查询数据质量作业，返回质量作业列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListQualityTaskLists(request *model.ListQualityTaskListsRequest) (*model.ListQualityTaskListsResponse, error) {
@@ -4247,7 +4248,7 @@ func (c *DataArtsStudioClient) ListQualityTaskListsInvoker(request *model.ListQu
 
 // ListQualityTemplates 获取规则模板列表
 //
-// 分页获取规则模板列表
+// 分页获取规则模板列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ListQualityTemplates(request *model.ListQualityTemplatesRequest) (*model.ListQualityTemplatesResponse, error) {
@@ -5342,7 +5343,7 @@ func (c *DataArtsStudioClient) SearchApprovalsInvoker(request *model.SearchAppro
 
 // SearchAtomicIndexes 查找原子指标
 //
-// 通过中英文名称、创建者、审核人、状态、修改时间分页查找原子指标信息看，中英文名称支持模糊查询。
+// 通过中英文名称、创建者、审核人、状态、修改时间分页查找原子指标信息，中英文名称支持模糊查询。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) SearchAtomicIndexes(request *model.SearchAtomicIndexesRequest) (*model.SearchAtomicIndexesResponse, error) {
@@ -6099,7 +6100,7 @@ func (c *DataArtsStudioClient) ShowConditionByIdInvoker(request *model.ShowCondi
 
 // ShowConsistencyTaskDetail 获取对账作业详情
 //
-// 获取对账作业详情
+// 获取对账作业详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowConsistencyTaskDetail(request *model.ShowConsistencyTaskDetailRequest) (*model.ShowConsistencyTaskDetailResponse, error) {
@@ -6624,7 +6625,7 @@ func (c *DataArtsStudioClient) ShowInstanceLogInvoker(request *model.ShowInstanc
 
 // ShowInstanceResult 获取实例结果
 //
-// 获取实例结果
+// 获取实例结果。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowInstanceResult(request *model.ShowInstanceResultRequest) (*model.ShowInstanceResultResponse, error) {
@@ -6835,7 +6836,7 @@ func (c *DataArtsStudioClient) ShowPathObjectByIdInvoker(request *model.ShowPath
 
 // ShowQualityTaskDetail 获取质量作业详情
 //
-// 获取质量作业详情
+// 获取质量作业详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowQualityTaskDetail(request *model.ShowQualityTaskDetailRequest) (*model.ShowQualityTaskDetailResponse, error) {
@@ -7340,7 +7341,7 @@ func (c *DataArtsStudioClient) ShowTechnicalAssetsStatisticInvoker(request *mode
 
 // ShowTemplatesDetail 获取规则模板详情
 //
-// 获取规则模板详情
+// 获取规则模板详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) ShowTemplatesDetail(request *model.ShowTemplatesDetailRequest) (*model.ShowTemplatesDetailResponse, error) {
@@ -8243,7 +8244,7 @@ func (c *DataArtsStudioClient) UpdateTaskInfoInvoker(request *model.UpdateTaskIn
 
 // UpdateTemplate 更新规则模板
 //
-// 更新规则模板
+// 更新规则模板。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DataArtsStudioClient) UpdateTemplate(request *model.UpdateTemplateRequest) (*model.UpdateTemplateResponse, error) {

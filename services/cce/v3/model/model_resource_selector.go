@@ -12,13 +12,13 @@ import (
 // ResourceSelector 资源标签选择器，匹配Kubernetes中node资源
 type ResourceSelector struct {
 
-	// 标签键值，取值如下 - node.uid：节点UID。
+	// **参数解释：** 标签键值 **约束限制：** 不涉及 **取值范围：** - node.uid：节点UID  **默认取值：** 不涉及
 	Key ResourceSelectorKey `json:"key"`
 
-	// 标签值列表
+	// **参数解释：** 标签值列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Values *[]string `json:"values,omitempty"`
 
-	// 标签逻辑运算符，当前支持如下取值 - In
+	// **参数解释：** 标签逻辑运算符 **约束限制：** 不涉及 **取值范围：** - In  **默认取值：** 不涉及
 	Operator ResourceSelectorOperator `json:"operator"`
 }
 

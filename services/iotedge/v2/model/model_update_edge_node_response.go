@@ -44,7 +44,7 @@ type UpdateEdgeNodeResponse struct {
 	// 边缘节点状态
 	State *string `json:"state,omitempty"`
 
-	// 边缘应用id，只允许数字、英文小写、中划线，切必须以字母或数字结尾
+	// 边缘应用id，只允许数字、英文小写、中划线，且必须以字母或数字结尾
 	SoftwareVersion *string `json:"software_version,omitempty"`
 
 	// 边缘节点创建时间
@@ -53,10 +53,10 @@ type UpdateEdgeNodeResponse struct {
 	// 边缘节点更新时间
 	UpdateTime *string `json:"update_time,omitempty"`
 
-	// 边缘节点操作系统名称
+	// 边缘节点操作系统。例如：Ubuntu 20.04；CentOS 7.9。不同于os_type边缘节点系统类型。
 	OsName *string `json:"os_name,omitempty"`
 
-	// 边缘节点操作系统架构
+	// 边缘节点系统架构。包括：arm64，arm32，x86_64。
 	Arch *string `json:"arch,omitempty"`
 
 	// 边缘节点主机名
@@ -68,7 +68,7 @@ type UpdateEdgeNodeResponse struct {
 	// 网络规格，如4 cores | 3867 MB
 	Specification *string `json:"specification,omitempty"`
 
-	// AI加速卡类型，如华为昇腾AI加速卡NPU、图像处理加速卡GPU。
+	// AI加速卡类型，如昇腾AI加速卡NPU、图像处理加速卡GPU。
 	AiCardType *string `json:"ai_card_type,omitempty"`
 
 	// npu驱动动态库路径
@@ -77,13 +77,13 @@ type UpdateEdgeNodeResponse struct {
 	// 容器运行时版本
 	ContainerVersion *string `json:"container_version,omitempty"`
 
-	// 节点所属资源类型：advanced|standard
+	// 边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
 	Type *string `json:"type,omitempty"`
 
 	// 节点的安全等级，MEDIUM边缘节数据上报不进行加密，HIGH对数据上报进行加密。
 	SecurityLevel *string `json:"security_level,omitempty"`
 
-	// 节点的可靠性等级。
+	// 节点的可靠性等级，LOW表示中级别，MEDIUM表示高级别。详细功能请参考“用户指南>管理边缘节点>注册节点”。
 	ReliabilityLevel *string `json:"reliability_level,omitempty"`
 
 	// 节点的存储周期，默认0天，取值范围0~7天，0天则不存储。
@@ -107,7 +107,20 @@ type UpdateEdgeNodeResponse struct {
 	DeviceDataRecord *DeviceDataRecord `json:"device_data_record,omitempty"`
 
 	// omagent监控运维工具是否上报指标
-	MetricReport   *string `json:"metric_report,omitempty"`
+	MetricReport *string `json:"metric_report,omitempty"`
+
+	// iotda南向接入地址
+	IotdaSouthAccess *string `json:"iotda_south_access,omitempty"`
+
+	TpmInfo *TpmInfoDto `json:"tpm_info,omitempty"`
+
+	RuntimeInfo *RuntimeInfoDto `json:"runtime_info,omitempty"`
+
+	// 边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
+	OsType *string `json:"os_type,omitempty"`
+
+	// 节点组ID
+	NodeGroupId    *string `json:"node_group_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 

@@ -8,6 +8,12 @@ import (
 
 type ModuleContainerSettingsResDto struct {
 	Configs *ContainerConfigsResDto `json:"configs,omitempty"`
+
+	// 自定义环境变量
+	CustomEnvs *interface{} `json:"custom_envs,omitempty"`
+
+	// 域名解析配置集合
+	ExtraHosts *[]DnsConfigDto `json:"extra_hosts,omitempty"`
 }
 
 func (o ModuleContainerSettingsResDto) String() string {

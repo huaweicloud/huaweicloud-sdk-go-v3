@@ -324,3 +324,115 @@ func (i *ShowClusterInvoker) Invoke() (*model.ShowClusterResponse, error) {
 		return result.(*model.ShowClusterResponse), nil
 	}
 }
+
+type ShowClusterResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowClusterResourcesInvoker) Invoke() (*model.ShowClusterResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowClusterResourcesResponse), nil
+	}
+}
+
+type UpdateResourceBindingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateResourceBindingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateResourceBindingInvoker) Invoke() (*model.UpdateResourceBindingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateResourceBindingResponse), nil
+	}
+}
+
+type InvokeKubeApiInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *InvokeKubeApiInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *InvokeKubeApiInvoker) Invoke() (*model.InvokeKubeApiResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.InvokeKubeApiResponse), nil
+	}
+}
+
+type ListClusterNamespacesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListClusterNamespacesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListClusterNamespacesInvoker) Invoke() (*model.ListClusterNamespacesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListClusterNamespacesResponse), nil
+	}
+}
+
+type CreateClusterNodesInstallCmdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateClusterNodesInstallCmdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateClusterNodesInstallCmdInvoker) Invoke() (*model.CreateClusterNodesInstallCmdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateClusterNodesInstallCmdResponse), nil
+	}
+}
+
+type ListClusterNodesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListClusterNodesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListClusterNodesInvoker) Invoke() (*model.ListClusterNodesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListClusterNodesResponse), nil
+	}
+}
+
+type ShowClusterNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowClusterNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowClusterNodeInvoker) Invoke() (*model.ShowClusterNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowClusterNodeResponse), nil
+	}
+}

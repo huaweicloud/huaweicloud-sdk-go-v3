@@ -15,10 +15,10 @@ type BatchListEdgeAppsRequest struct {
 	// 应用ID搜索关键字
 	EdgeAppId *string `json:"edge_app_id,omitempty"`
 
-	// 查询的起始位置，取值范围为非负整数，默认为0
+	// 查询的起始位置，取值范围为非负整数，默认为0。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 每页记录数，默认值为10，取值区间为1-1000
+	// 每页记录数，默认值为10，取值区间为1-1000。
 	Limit *int32 `json:"limit,omitempty"`
 
 	// 应用id搜索关键字
@@ -26,6 +26,12 @@ type BatchListEdgeAppsRequest struct {
 
 	// 功能类型
 	FunctionType *BatchListEdgeAppsRequestFunctionType `json:"function_type,omitempty"`
+
+	// 功能类型列表
+	FunctionTypes *[]string `json:"function_types,omitempty"`
+
+	// 驱动协议类型搜索关键字
+	Protocol *string `json:"protocol,omitempty"`
 }
 
 func (o BatchListEdgeAppsRequest) String() string {
@@ -99,6 +105,7 @@ type BatchListEdgeAppsRequestFunctionTypeEnum struct {
 	GATEWAY_MANAGER        BatchListEdgeAppsRequestFunctionType
 	COMPOSITE_APPLICATION  BatchListEdgeAppsRequestFunctionType
 	DATA_COLLECTION        BatchListEdgeAppsRequestFunctionType
+	MODEL_INFERENCE        BatchListEdgeAppsRequestFunctionType
 }
 
 func GetBatchListEdgeAppsRequestFunctionTypeEnum() BatchListEdgeAppsRequestFunctionTypeEnum {
@@ -120,6 +127,9 @@ func GetBatchListEdgeAppsRequestFunctionTypeEnum() BatchListEdgeAppsRequestFunct
 		},
 		DATA_COLLECTION: BatchListEdgeAppsRequestFunctionType{
 			value: "DATA_COLLECTION",
+		},
+		MODEL_INFERENCE: BatchListEdgeAppsRequestFunctionType{
+			value: "MODEL_INFERENCE",
 		},
 	}
 }

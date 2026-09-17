@@ -18,7 +18,7 @@ type ExternalEntityRespDto struct {
 	// 外部实体ID
 	ExternalId *string `json:"external_id,omitempty"`
 
-	// 接入协议类型
+	// 接入协议类型：MQTT，HTTP。
 	Protocol *string `json:"protocol,omitempty"`
 
 	// 连接类型(client和server)

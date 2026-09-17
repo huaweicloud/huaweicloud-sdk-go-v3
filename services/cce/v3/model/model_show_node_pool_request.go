@@ -17,6 +17,9 @@ type ShowNodePoolRequest struct {
 
 	// 集群状态兼容Error参数，用于API平滑切换。 兼容场景下，errorStatus为空则屏蔽Error状态为Deleting状态。
 	ErrorStatus *string `json:"errorStatus,omitempty"`
+
+	// **参数解释：** 节点池conditions是否反映整个节点池整体状态。 **约束限制：** 不涉及 **取值范围：** - true: 节点池的conditions反映整个节点池整体状态。 - false: 节点池的conditions仅反映默认伸缩组的状态。  **默认取值：** 不指定时默认为false
+	AdvanceStatus *bool `json:"advanceStatus,omitempty"`
 }
 
 func (o ShowNodePoolRequest) String() string {

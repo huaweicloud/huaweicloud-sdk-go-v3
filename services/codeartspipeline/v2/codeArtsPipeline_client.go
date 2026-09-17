@@ -19,6 +19,27 @@ func CodeArtsPipelineClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// AcceptCheckpoint 手动卡点通过
+//
+// 手动卡点通过
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) AcceptCheckpoint(request *model.AcceptCheckpointRequest) (*model.AcceptCheckpointResponse, error) {
+	requestDef := GenReqDefForAcceptCheckpoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AcceptCheckpointResponse), nil
+	}
+}
+
+// AcceptCheckpointInvoker 手动卡点通过
+func (c *CodeArtsPipelineClient) AcceptCheckpointInvoker(request *model.AcceptCheckpointRequest) *AcceptCheckpointInvoker {
+	requestDef := GenReqDefForAcceptCheckpoint()
+	return &AcceptCheckpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AcceptManualReview 通过人工审核
 //
 // 通过人工审核
@@ -80,6 +101,27 @@ func (c *CodeArtsPipelineClient) BatchShowPipelinesLatestStatus(request *model.B
 func (c *CodeArtsPipelineClient) BatchShowPipelinesLatestStatusInvoker(request *model.BatchShowPipelinesLatestStatusRequest) *BatchShowPipelinesLatestStatusInvoker {
 	requestDef := GenReqDefForBatchShowPipelinesLatestStatus()
 	return &BatchShowPipelinesLatestStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAlertPolicy 创建告警策略
+//
+// 创建流水线告警策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) CreateAlertPolicy(request *model.CreateAlertPolicyRequest) (*model.CreateAlertPolicyResponse, error) {
+	requestDef := GenReqDefForCreateAlertPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAlertPolicyResponse), nil
+	}
+}
+
+// CreateAlertPolicyInvoker 创建告警策略
+func (c *CodeArtsPipelineClient) CreateAlertPolicyInvoker(request *model.CreateAlertPolicyRequest) *CreateAlertPolicyInvoker {
+	requestDef := GenReqDefForCreateAlertPolicy()
+	return &CreateAlertPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateBasicPlugin 创建基础插件
@@ -185,6 +227,27 @@ func (c *CodeArtsPipelineClient) CreatePipelineNew(request *model.CreatePipeline
 func (c *CodeArtsPipelineClient) CreatePipelineNewInvoker(request *model.CreatePipelineNewRequest) *CreatePipelineNewInvoker {
 	requestDef := GenReqDefForCreatePipelineNew()
 	return &CreatePipelineNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePipelineTag 新建流水线标签
+//
+// 新建流水线标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) CreatePipelineTag(request *model.CreatePipelineTagRequest) (*model.CreatePipelineTagResponse, error) {
+	requestDef := GenReqDefForCreatePipelineTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePipelineTagResponse), nil
+	}
+}
+
+// CreatePipelineTagInvoker 新建流水线标签
+func (c *CodeArtsPipelineClient) CreatePipelineTagInvoker(request *model.CreatePipelineTagRequest) *CreatePipelineTagInvoker {
+	requestDef := GenReqDefForCreatePipelineTag()
+	return &CreatePipelineTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreatePipelineTemplate 创建流水线模板
@@ -313,6 +376,48 @@ func (c *CodeArtsPipelineClient) CreateStrategyInvoker(request *model.CreateStra
 	return &CreateStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateVariableGroup 创建参数组
+//
+// 创建参数组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) CreateVariableGroup(request *model.CreateVariableGroupRequest) (*model.CreateVariableGroupResponse, error) {
+	requestDef := GenReqDefForCreateVariableGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateVariableGroupResponse), nil
+	}
+}
+
+// CreateVariableGroupInvoker 创建参数组
+func (c *CodeArtsPipelineClient) CreateVariableGroupInvoker(request *model.CreateVariableGroupRequest) *CreateVariableGroupInvoker {
+	requestDef := GenReqDefForCreateVariableGroup()
+	return &CreateVariableGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAlertPolicy 删除告警策略
+//
+// 删除流水线告警策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) DeleteAlertPolicy(request *model.DeleteAlertPolicyRequest) (*model.DeleteAlertPolicyResponse, error) {
+	requestDef := GenReqDefForDeleteAlertPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAlertPolicyResponse), nil
+	}
+}
+
+// DeleteAlertPolicyInvoker 删除告警策略
+func (c *CodeArtsPipelineClient) DeleteAlertPolicyInvoker(request *model.DeleteAlertPolicyRequest) *DeleteAlertPolicyInvoker {
+	requestDef := GenReqDefForDeleteAlertPolicy()
+	return &DeleteAlertPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteBasicPlugin 删除基础插件
 //
 // 删除基础插件
@@ -374,6 +479,27 @@ func (c *CodeArtsPipelineClient) DeletePipelineGroup(request *model.DeletePipeli
 func (c *CodeArtsPipelineClient) DeletePipelineGroupInvoker(request *model.DeletePipelineGroupRequest) *DeletePipelineGroupInvoker {
 	requestDef := GenReqDefForDeletePipelineGroup()
 	return &DeletePipelineGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePipelineTag 删除流水线标签
+//
+// 删除流水线标签
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) DeletePipelineTag(request *model.DeletePipelineTagRequest) (*model.DeletePipelineTagResponse, error) {
+	requestDef := GenReqDefForDeletePipelineTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePipelineTagResponse), nil
+	}
+}
+
+// DeletePipelineTagInvoker 删除流水线标签
+func (c *CodeArtsPipelineClient) DeletePipelineTagInvoker(request *model.DeletePipelineTagRequest) *DeletePipelineTagInvoker {
+	requestDef := GenReqDefForDeletePipelineTag()
+	return &DeletePipelineTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeletePipelineTemplate 删除流水线模板
@@ -479,6 +605,27 @@ func (c *CodeArtsPipelineClient) DeleteStrategy(request *model.DeleteStrategyReq
 func (c *CodeArtsPipelineClient) DeleteStrategyInvoker(request *model.DeleteStrategyRequest) *DeleteStrategyInvoker {
 	requestDef := GenReqDefForDeleteStrategy()
 	return &DeleteStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteVariableGroup 删除参数组
+//
+// 删除参数组
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) DeleteVariableGroup(request *model.DeleteVariableGroupRequest) (*model.DeleteVariableGroupResponse, error) {
+	requestDef := GenReqDefForDeleteVariableGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteVariableGroupResponse), nil
+	}
+}
+
+// DeleteVariableGroupInvoker 删除参数组
+func (c *CodeArtsPipelineClient) DeleteVariableGroupInvoker(request *model.DeleteVariableGroupRequest) *DeleteVariableGroupInvoker {
+	requestDef := GenReqDefForDeleteVariableGroup()
+	return &DeleteVariableGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAvailablePublisher 查询可用发布商
@@ -647,6 +794,27 @@ func (c *CodeArtsPipelineClient) ListPipelineSimpleInfo(request *model.ListPipel
 func (c *CodeArtsPipelineClient) ListPipelineSimpleInfoInvoker(request *model.ListPipelineSimpleInfoRequest) *ListPipelineSimpleInfoInvoker {
 	requestDef := GenReqDefForListPipelineSimpleInfo()
 	return &ListPipelineSimpleInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPipelineTag 查询流水线标签列表
+//
+// 查询流水线标签列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) ListPipelineTag(request *model.ListPipelineTagRequest) (*model.ListPipelineTagResponse, error) {
+	requestDef := GenReqDefForListPipelineTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPipelineTagResponse), nil
+	}
+}
+
+// ListPipelineTagInvoker 查询流水线标签列表
+func (c *CodeArtsPipelineClient) ListPipelineTagInvoker(request *model.ListPipelineTagRequest) *ListPipelineTagInvoker {
+	requestDef := GenReqDefForListPipelineTag()
+	return &ListPipelineTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPipelineTemplates 查询模板列表
@@ -880,6 +1048,27 @@ func (c *CodeArtsPipelineClient) ListTemplatesInvoker(request *model.ListTemplat
 	return &ListTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListVariableGroups 查询参数组列表
+//
+// 查询参数组列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) ListVariableGroups(request *model.ListVariableGroupsRequest) (*model.ListVariableGroupsResponse, error) {
+	requestDef := GenReqDefForListVariableGroups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVariableGroupsResponse), nil
+	}
+}
+
+// ListVariableGroupsInvoker 查询参数组列表
+func (c *CodeArtsPipelineClient) ListVariableGroupsInvoker(request *model.ListVariableGroupsRequest) *ListVariableGroupsInvoker {
+	requestDef := GenReqDefForListVariableGroups()
+	return &ListVariableGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // PublishPlugin 发布插件
 //
 // 发布插件
@@ -1025,6 +1214,27 @@ func (c *CodeArtsPipelineClient) RunPipeline(request *model.RunPipelineRequest) 
 func (c *CodeArtsPipelineClient) RunPipelineInvoker(request *model.RunPipelineRequest) *RunPipelineInvoker {
 	requestDef := GenReqDefForRunPipeline()
 	return &RunPipelineInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAlertPolicy 查询告警策略详情
+//
+// 查询流水线告警策略详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) ShowAlertPolicy(request *model.ShowAlertPolicyRequest) (*model.ShowAlertPolicyResponse, error) {
+	requestDef := GenReqDefForShowAlertPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAlertPolicyResponse), nil
+	}
+}
+
+// ShowAlertPolicyInvoker 查询告警策略详情
+func (c *CodeArtsPipelineClient) ShowAlertPolicyInvoker(request *model.ShowAlertPolicyRequest) *ShowAlertPolicyInvoker {
+	requestDef := GenReqDefForShowAlertPolicy()
+	return &ShowAlertPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowBasicPlugin 查询基础插件详情
@@ -1300,7 +1510,7 @@ func (c *CodeArtsPipelineClient) ShowPluginVersionInvoker(request *model.ShowPlu
 	return &ShowPluginVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowProjectStrategy
+// ShowProjectStrategy 查询项目级策略详情
 //
 // 查询项目级策略详情
 //
@@ -1315,7 +1525,7 @@ func (c *CodeArtsPipelineClient) ShowProjectStrategy(request *model.ShowProjectS
 	}
 }
 
-// ShowProjectStrategyInvoker
+// ShowProjectStrategyInvoker 查询项目级策略详情
 func (c *CodeArtsPipelineClient) ShowProjectStrategyInvoker(request *model.ShowProjectStrategyRequest) *ShowProjectStrategyInvoker {
 	requestDef := GenReqDefForShowProjectStrategy()
 	return &ShowProjectStrategyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1424,6 +1634,27 @@ func (c *CodeArtsPipelineClient) ShowTemplateDetail(request *model.ShowTemplateD
 func (c *CodeArtsPipelineClient) ShowTemplateDetailInvoker(request *model.ShowTemplateDetailRequest) *ShowTemplateDetailInvoker {
 	requestDef := GenReqDefForShowTemplateDetail()
 	return &ShowTemplateDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVariableGroupDetail 查询参数组详情
+//
+// 查询参数组详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsPipelineClient) ShowVariableGroupDetail(request *model.ShowVariableGroupDetailRequest) (*model.ShowVariableGroupDetailResponse, error) {
+	requestDef := GenReqDefForShowVariableGroupDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVariableGroupDetailResponse), nil
+	}
+}
+
+// ShowVariableGroupDetailInvoker 查询参数组详情
+func (c *CodeArtsPipelineClient) ShowVariableGroupDetailInvoker(request *model.ShowVariableGroupDetailRequest) *ShowVariableGroupDetailInvoker {
+	requestDef := GenReqDefForShowVariableGroupDetail()
+	return &ShowVariableGroupDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // StartNewPipeline 启动流水线

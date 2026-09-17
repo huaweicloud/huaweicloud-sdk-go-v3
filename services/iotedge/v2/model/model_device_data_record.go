@@ -15,7 +15,7 @@ type DeviceDataRecord struct {
 	// 老化时间，日志压缩文件名时间戳老于这个时间就会发生老化删除
 	Age int32 `json:"age"`
 
-	// 配置开关，true启用数据打印，false不启用数据打印
+	// 配置开关，on启用数据打印，off不启用数据打印
 	State string `json:"state"`
 }
 

@@ -17,6 +17,8 @@ type RetryPipelineRunRequest struct {
 
 	// 流水线运行实例ID
 	PipelineRunId string `json:"pipeline_run_id"`
+
+	Body *RetryPipelineRequest `json:"body,omitempty"`
 }
 
 func (o RetryPipelineRunRequest) String() string {

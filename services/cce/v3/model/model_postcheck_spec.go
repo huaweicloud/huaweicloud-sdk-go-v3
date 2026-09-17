@@ -8,13 +8,13 @@ import (
 
 type PostcheckSpec struct {
 
-	// 集群ID
+	// **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	ClusterID *string `json:"clusterID,omitempty"`
 
-	// 集群升级源版本
+	// **参数解释：** 升级前的集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	ClusterVersion *string `json:"clusterVersion,omitempty"`
 
-	// 集群升级目标版本
+	// **参数解释：** 当前集群版本 **约束限制：** 不涉及 **取值范围：** CCE支持的集群版本 **默认取值：** 不涉及
 	TargetVersion *string `json:"targetVersion,omitempty"`
 }
 

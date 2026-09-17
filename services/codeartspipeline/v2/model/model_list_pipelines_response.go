@@ -18,6 +18,14 @@ type ListPipelinesResponse struct {
 	// **参数解释**： 记录总数。 **取值范围**： 不涉及。
 	Total *int32 `json:"total,omitempty"`
 
+	// **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
+	CurrentSystemTime *int64 `json:"current_system_time,omitempty"`
+
+	HighestConfidentiality *ListPipelinesPageHighestConfidentiality `json:"highest_confidentiality,omitempty"`
+
+	// **参数解释**： 隐藏数据数量。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 不涉及。
+	NumberOfHiddenData *int64 `json:"number_of_hidden_data,omitempty"`
+
 	// **参数解释**： 流水线。 **取值范围**： 不涉及。
 	Pipelines      *[]ListPipelinesPagePipelines `json:"pipelines,omitempty"`
 	HttpStatusCode int                           `json:"-"`

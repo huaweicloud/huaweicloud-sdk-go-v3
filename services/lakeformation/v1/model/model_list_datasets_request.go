@@ -27,8 +27,11 @@ type ListDatasetsRequest struct {
 	// **参数解释:** 是否查询上一页。 **约束限制:** 不涉及 **取值范围:** 不涉及 **默认取值:** false
 	ReversePage *bool `json:"reverse_page,omitempty"`
 
-	// **参数解释:** 数据集名称通配符，用于模糊查询。 **约束限制:** 只能包含中文、字母、数字和_|*.-特殊字符，且长度为1~256个字符。 **取值范围:** 长度为1~256个字符
+	// **参数解释:** 冗余字段，后续删除。数据集名称通配符，用于模糊查询。 **约束限制:** 只能包含中文、字母、数字和_|*.-特殊字符，且长度为1~256个字符。 **取值范围:** 长度为1~256个字符
 	NamePartern *string `json:"name_partern,omitempty"`
+
+	// **参数解释:** 数据集名称通配符，用于模糊查询。 **约束限制:** 只能包含中文、字母、数字和_|*.-特殊字符，且长度为1~256个字符。 **取值范围:** 长度为1~256个字符
+	NamePattern *string `json:"name_pattern,omitempty"`
 
 	// 数据格式 描述文件的组织方式：行存储/文本/图片/音频/视频/自定义
 	Format *string `json:"format,omitempty"`

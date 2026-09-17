@@ -31,6 +31,9 @@ type PipelineTemplateDto struct {
 
 	// **参数解释**： 是否显示流水线源。 **约束限制**： 不涉及。 **取值范围**： - true：显示流水线源。 - false：不显示流水线源。 **默认取值**： 不涉及。
 	IsShowSource bool `json:"is_show_source"`
+
+	// **参数解释**： 模板manifest版本。 **约束限制**： 不涉及。 **取值范围**： - 3.0：CLASSIC版本。 - 2.0.0：YAML版本。 - 4.0：PAC版本。 - 5.0：DATAOPS版本。 - 6.0：GITCODE_ACTIONS_NEW版本。 **默认取值**： 3.0。
+	ManifestVersion *string `json:"manifest_version,omitempty"`
 }
 
 func (o PipelineTemplateDto) String() string {

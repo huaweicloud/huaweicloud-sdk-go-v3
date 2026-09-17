@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// HyperNodeMetadataOwnerReference 属主对象
+// HyperNodeMetadataOwnerReference **参数解释**： 属主对象 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 type HyperNodeMetadataOwnerReference struct {
 
-	// **参数解释**： 节点池名称
+	// **参数解释**： 节点池名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	NodepoolName *string `json:"nodepoolName,omitempty"`
 
-	// **参数解释**： 节点池UID
+	// **参数解释**： 节点池ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	NodepoolID *string `json:"nodepoolID,omitempty"`
 }
 

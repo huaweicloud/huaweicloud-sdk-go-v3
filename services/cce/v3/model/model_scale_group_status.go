@@ -33,7 +33,7 @@ type ScaleGroupStatus struct {
 	// 订单未支付节点个数
 	UnpaidScaleNodeCount *int32 `json:"unpaidScaleNodeCount,omitempty"`
 
-	// **参数解释**： 伸缩组就绪节点个数 **取值范围**： 不涉及
+	// **参数解释**： 伸缩组就绪节点个数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	ActiveNodeCount *int32 `json:"activeNodeCount,omitempty"`
 
 	ExistingNodeCount *ScaleGroupStatusExistingNodeCount `json:"existingNodeCount,omitempty"`

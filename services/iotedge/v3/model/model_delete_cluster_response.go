@@ -8,8 +8,7 @@ import (
 
 // DeleteClusterResponse Response Object
 type DeleteClusterResponse struct {
-	Body           *string `json:"body,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteClusterResponse) String() string {

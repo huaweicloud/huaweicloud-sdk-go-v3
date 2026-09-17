@@ -18,10 +18,10 @@ type ListDatabaseUsersRequest struct {
 	// **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 1000。
 	Limit *int32 `json:"limit,omitempty"`
 
-	// **参数解释**： 查询角色还是用户。 **约束限制**： 不涉及。 **取值范围**： ROLE：表示查询所有角色。  USER：表示查询所有用户。 **默认取值**： 不涉及。
+	// **参数解释**： 查询角色还是用户。 **约束限制**： 不涉及。 **取值范围**： ROLE：表示查询所有角色。 USER：表示查询所有用户。 **默认取值**： 不涉及。
 	Type *string `json:"type,omitempty"`
 
-	// **参数解释**： 用户类型，COMMON、IAM或者OneAccess。 **约束限制**： 不涉及。 **取值范围**： COMMON：表示普通数据库用户。  IAM：表示IAM同步的数据库用户。 OneAccess: 表示OneAccess用户。 **默认取值**： 不涉及。
+	// **参数解释**： 用户类型，COMMON、IAM或者OneAccess。 **约束限制**： 不涉及。 **取值范围**： COMMON：表示普通数据库用户。 IAM：表示IAM同步的数据库用户。 OneAccess: 表示OneAccess用户。 **默认取值**： 不涉及。
 	UserType *string `json:"user_type,omitempty"`
 }
 

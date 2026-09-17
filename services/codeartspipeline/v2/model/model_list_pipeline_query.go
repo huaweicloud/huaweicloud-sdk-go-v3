@@ -42,6 +42,21 @@ type ListPipelineQuery struct {
 	// **参数解释**： 流水线结束时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	EndTime *string `json:"end_time,omitempty"`
 
+	// **参数解释**： 流水线运行更新时间。 **约束限制**： 不涉及。 **取值范围**： 时间戳或yyyy-MM-dd HH:mm:ss格式。 **默认取值**： 不涉及。
+	PipelineRunUpdateTime *string `json:"pipeline_run_update_time,omitempty"`
+
+	// **参数解释**： 排除的流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+	ExcludePipelineId *string `json:"exclude_pipeline_id,omitempty"`
+
+	// **参数解释**： 包含的流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+	IncludePipelineId *string `json:"include_pipeline_id,omitempty"`
+
+	// **参数解释**： 流水线标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	TagList *[]string `json:"tag_list,omitempty"`
+
+	// **参数解释**： 流水线版本列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	ManifestVersionList *[]string `json:"manifest_version_list,omitempty"`
+
 	// **参数解释**： 起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Offset *int64 `json:"offset,omitempty"`
 
@@ -68,6 +83,9 @@ type ListPipelineQuery struct {
 
 	// **参数解释**： 流水线密集等级。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
 	SecurityLevelList *[]int32 `json:"security_level_list,omitempty"`
+
+	// **参数解释**： DevUC流水线密级列表。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
+	DevUcSecurityLevelList *[]int32 `json:"dev_uc_security_level_list,omitempty"`
 }
 
 func (o ListPipelineQuery) String() string {

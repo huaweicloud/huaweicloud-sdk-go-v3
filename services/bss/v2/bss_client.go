@@ -349,6 +349,27 @@ func (c *BssClient) CreateSubEnterpriseAccountInvoker(request *model.CreateSubEn
 	return &CreateSubEnterpriseAccountInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListBusinessDiscountInfo 查询商务折扣信息
+//
+// 功能描述：默认查询华为云框架商务（正在生效），支持产品报价项/分类报价项分页查询，返回全量阶梯折扣及站点区域信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssClient) ListBusinessDiscountInfo(request *model.ListBusinessDiscountInfoRequest) (*model.ListBusinessDiscountInfoResponse, error) {
+	requestDef := GenReqDefForListBusinessDiscountInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBusinessDiscountInfoResponse), nil
+	}
+}
+
+// ListBusinessDiscountInfoInvoker 查询商务折扣信息
+func (c *BssClient) ListBusinessDiscountInfoInvoker(request *model.ListBusinessDiscountInfoRequest) *ListBusinessDiscountInfoInvoker {
+	requestDef := GenReqDefForListBusinessDiscountInfo()
+	return &ListBusinessDiscountInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCities 查询城市信息
 //
 // 伙伴在伙伴销售平台上查询城市信息。

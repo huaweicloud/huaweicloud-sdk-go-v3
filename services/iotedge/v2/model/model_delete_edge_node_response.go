@@ -8,8 +8,7 @@ import (
 
 // DeleteEdgeNodeResponse Response Object
 type DeleteEdgeNodeResponse struct {
-	Body           *string `json:"body,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o DeleteEdgeNodeResponse) String() string {

@@ -24,7 +24,7 @@ type DualActiveInfo struct {
 	DestinationInstanceName *string `json:"destination_instance_name,omitempty"`
 
 	// **参数解释：** 双活对端实例节点数量。 **取值范围：** 不涉及。
-	DestinationInstanceNodeNum *string `json:"destination_instance_node_num,omitempty"`
+	DestinationInstanceNodeNum *int32 `json:"destination_instance_node_num,omitempty"`
 
 	// **参数解释：** 双活对端实例规格。 **取值范围：** 不涉及。
 	DestinationInstanceSpecCode *string `json:"destination_instance_spec_code,omitempty"`

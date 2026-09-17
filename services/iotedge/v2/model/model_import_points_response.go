@@ -8,8 +8,7 @@ import (
 
 // ImportPointsResponse Response Object
 type ImportPointsResponse struct {
-	Body           *string `json:"body,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o ImportPointsResponse) String() string {

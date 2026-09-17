@@ -22,6 +22,8 @@ type NodeTemplate struct {
 
 	Login *Login `json:"login,omitempty"`
 
+	VolumeConfig *VolumeConfig `json:"volumeConfig,omitempty"`
+
 	RootVolume *Volume `json:"rootVolume,omitempty"`
 
 	// **参数解释**： 节点的数据盘参数。针对专属云节点，参数解释与rootVolume一致。 **约束限制**： - 磁盘挂载上限为虚拟机不超过16块，裸金属不超过10块。在此基础上还受限于虚拟机/裸金属规格可挂载磁盘数上限。（目前支持通过控制台和API为CCE节点添加多块数据盘）。 - 如果数据盘正供容器运行时和Kubelet组件使用，则不可被卸载，否则将导致节点不可用。 - 仅在选择系统盘作为系统组件存储磁盘时，允许为空。

@@ -3734,6 +3734,216 @@ func (c *CloudtestClient) UpdateMindmapNameInvoker(request *model.UpdateMindmapN
 	return &UpdateMindmapNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddResourceToIterator 向迭代中添加资源
+//
+// 向迭代中添加资源
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) AddResourceToIterator(request *model.AddResourceToIteratorRequest) (*model.AddResourceToIteratorResponse, error) {
+	requestDef := GenReqDefForAddResourceToIterator()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddResourceToIteratorResponse), nil
+	}
+}
+
+// AddResourceToIteratorInvoker 向迭代中添加资源
+func (c *CloudtestClient) AddResourceToIteratorInvoker(request *model.AddResourceToIteratorRequest) *AddResourceToIteratorInvoker {
+	requestDef := GenReqDefForAddResourceToIterator()
+	return &AddResourceToIteratorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVisibleServices 查询当前租户可见的第三方服务列表
+//
+// 查询当前租户可见的第三方服务列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ListVisibleServices(request *model.ListVisibleServicesRequest) (*model.ListVisibleServicesResponse, error) {
+	requestDef := GenReqDefForListVisibleServices()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVisibleServicesResponse), nil
+	}
+}
+
+// ListVisibleServicesInvoker 查询当前租户可见的第三方服务列表
+func (c *CloudtestClient) ListVisibleServicesInvoker(request *model.ListVisibleServicesRequest) *ListVisibleServicesInvoker {
+	requestDef := GenReqDefForListVisibleServices()
+	return &ListVisibleServicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteTasks 批量删除测试套件
+//
+// 批量删除测试套件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) BatchDeleteTasks(request *model.BatchDeleteTasksRequest) (*model.BatchDeleteTasksResponse, error) {
+	requestDef := GenReqDefForBatchDeleteTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteTasksResponse), nil
+	}
+}
+
+// BatchDeleteTasksInvoker 批量删除测试套件
+func (c *CloudtestClient) BatchDeleteTasksInvoker(request *model.BatchDeleteTasksRequest) *BatchDeleteTasksInvoker {
+	requestDef := GenReqDefForBatchDeleteTasks()
+	return &BatchDeleteTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTask 新建测试套件
+//
+// 新建测试套件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) CreateTask(request *model.CreateTaskRequest) (*model.CreateTaskResponse, error) {
+	requestDef := GenReqDefForCreateTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTaskResponse), nil
+	}
+}
+
+// CreateTaskInvoker 新建测试套件
+func (c *CloudtestClient) CreateTaskInvoker(request *model.CreateTaskRequest) *CreateTaskInvoker {
+	requestDef := GenReqDefForCreateTask()
+	return &CreateTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTask 查询测试套件详情
+//
+// 查询测试套件详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ShowTask(request *model.ShowTaskRequest) (*model.ShowTaskResponse, error) {
+	requestDef := GenReqDefForShowTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTaskResponse), nil
+	}
+}
+
+// ShowTaskInvoker 查询测试套件详情
+func (c *CloudtestClient) ShowTaskInvoker(request *model.ShowTaskRequest) *ShowTaskInvoker {
+	requestDef := GenReqDefForShowTask()
+	return &ShowTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTask 修改测试套件
+//
+// 修改测试套件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) UpdateTask(request *model.UpdateTaskRequest) (*model.UpdateTaskResponse, error) {
+	requestDef := GenReqDefForUpdateTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTaskResponse), nil
+	}
+}
+
+// UpdateTaskInvoker 修改测试套件
+func (c *CloudtestClient) UpdateTaskInvoker(request *model.UpdateTaskRequest) *UpdateTaskInvoker {
+	requestDef := GenReqDefForUpdateTask()
+	return &UpdateTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTestVersionCase 在分支或者迭代下创建用例
+//
+// 在分支或者迭代下创建用例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) CreateTestVersionCase(request *model.CreateTestVersionCaseRequest) (*model.CreateTestVersionCaseResponse, error) {
+	requestDef := GenReqDefForCreateTestVersionCase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTestVersionCaseResponse), nil
+	}
+}
+
+// CreateTestVersionCaseInvoker 在分支或者迭代下创建用例
+func (c *CloudtestClient) CreateTestVersionCaseInvoker(request *model.CreateTestVersionCaseRequest) *CreateTestVersionCaseInvoker {
+	requestDef := GenReqDefForCreateTestVersionCase()
+	return &CreateTestVersionCaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTestCasesByCondition 查询用例列表
+//
+// 查询用例列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ListTestCasesByCondition(request *model.ListTestCasesByConditionRequest) (*model.ListTestCasesByConditionResponse, error) {
+	requestDef := GenReqDefForListTestCasesByCondition()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTestCasesByConditionResponse), nil
+	}
+}
+
+// ListTestCasesByConditionInvoker 查询用例列表
+func (c *CloudtestClient) ListTestCasesByConditionInvoker(request *model.ListTestCasesByConditionRequest) *ListTestCasesByConditionInvoker {
+	requestDef := GenReqDefForListTestCasesByCondition()
+	return &ListTestCasesByConditionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTestVersionCase 查询用例详情
+//
+// 查询用例详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ShowTestVersionCase(request *model.ShowTestVersionCaseRequest) (*model.ShowTestVersionCaseResponse, error) {
+	requestDef := GenReqDefForShowTestVersionCase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTestVersionCaseResponse), nil
+	}
+}
+
+// ShowTestVersionCaseInvoker 查询用例详情
+func (c *CloudtestClient) ShowTestVersionCaseInvoker(request *model.ShowTestVersionCaseRequest) *ShowTestVersionCaseInvoker {
+	requestDef := GenReqDefForShowTestVersionCase()
+	return &ShowTestVersionCaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTestVersionCase 在分支或者迭代下修改用例
+//
+// 在分支或者迭代下修改用例
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) UpdateTestVersionCase(request *model.UpdateTestVersionCaseRequest) (*model.UpdateTestVersionCaseResponse, error) {
+	requestDef := GenReqDefForUpdateTestVersionCase()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTestVersionCaseResponse), nil
+	}
+}
+
+// UpdateTestVersionCaseInvoker 在分支或者迭代下修改用例
+func (c *CloudtestClient) UpdateTestVersionCaseInvoker(request *model.UpdateTestVersionCaseRequest) *UpdateTestVersionCaseInvoker {
+	requestDef := GenReqDefForUpdateTestVersionCase()
+	return &UpdateTestVersionCaseInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddFeature 添加目录信息
 //
 // 添加目录信息
@@ -3753,6 +3963,216 @@ func (c *CloudtestClient) AddFeature(request *model.AddFeatureRequest) (*model.A
 func (c *CloudtestClient) AddFeatureInvoker(request *model.AddFeatureRequest) *AddFeatureInvoker {
 	requestDef := GenReqDefForAddFeature()
 	return &AddFeatureInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AddIssuesToIterator 向迭代中添加需求
+//
+// 向迭代中添加需求
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) AddIssuesToIterator(request *model.AddIssuesToIteratorRequest) (*model.AddIssuesToIteratorResponse, error) {
+	requestDef := GenReqDefForAddIssuesToIterator()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddIssuesToIteratorResponse), nil
+	}
+}
+
+// AddIssuesToIteratorInvoker 向迭代中添加需求
+func (c *CloudtestClient) AddIssuesToIteratorInvoker(request *model.AddIssuesToIteratorRequest) *AddIssuesToIteratorInvoker {
+	requestDef := GenReqDefForAddIssuesToIterator()
+	return &AddIssuesToIteratorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateBranch 新增分支
+//
+// 新增分支
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) CreateBranch(request *model.CreateBranchRequest) (*model.CreateBranchResponse, error) {
+	requestDef := GenReqDefForCreateBranch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateBranchResponse), nil
+	}
+}
+
+// CreateBranchInvoker 新增分支
+func (c *CloudtestClient) CreateBranchInvoker(request *model.CreateBranchRequest) *CreateBranchInvoker {
+	requestDef := GenReqDefForCreateBranch()
+	return &CreateBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateTestIterator 新增迭代
+//
+// 新增迭代
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) CreateTestIterator(request *model.CreateTestIteratorRequest) (*model.CreateTestIteratorResponse, error) {
+	requestDef := GenReqDefForCreateTestIterator()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTestIteratorResponse), nil
+	}
+}
+
+// CreateTestIteratorInvoker 新增迭代
+func (c *CloudtestClient) CreateTestIteratorInvoker(request *model.CreateTestIteratorRequest) *CreateTestIteratorInvoker {
+	requestDef := GenReqDefForCreateTestIterator()
+	return &CreateTestIteratorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteBranch 删除分支
+//
+// 删除分支
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) DeleteBranch(request *model.DeleteBranchRequest) (*model.DeleteBranchResponse, error) {
+	requestDef := GenReqDefForDeleteBranch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteBranchResponse), nil
+	}
+}
+
+// DeleteBranchInvoker 删除分支
+func (c *CloudtestClient) DeleteBranchInvoker(request *model.DeleteBranchRequest) *DeleteBranchInvoker {
+	requestDef := GenReqDefForDeleteBranch()
+	return &DeleteBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteIterator 删除迭代
+//
+// 删除迭代
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) DeleteIterator(request *model.DeleteIteratorRequest) (*model.DeleteIteratorResponse, error) {
+	requestDef := GenReqDefForDeleteIterator()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteIteratorResponse), nil
+	}
+}
+
+// DeleteIteratorInvoker 删除迭代
+func (c *CloudtestClient) DeleteIteratorInvoker(request *model.DeleteIteratorRequest) *DeleteIteratorInvoker {
+	requestDef := GenReqDefForDeleteIterator()
+	return &DeleteIteratorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListTestBranches 获取分支列表
+//
+// 获取分支列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ListTestBranches(request *model.ListTestBranchesRequest) (*model.ListTestBranchesResponse, error) {
+	requestDef := GenReqDefForListTestBranches()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTestBranchesResponse), nil
+	}
+}
+
+// ListTestBranchesInvoker 获取分支列表
+func (c *CloudtestClient) ListTestBranchesInvoker(request *model.ListTestBranchesRequest) *ListTestBranchesInvoker {
+	requestDef := GenReqDefForListTestBranches()
+	return &ListTestBranchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowIterator 查询迭代计划详情，包含统计信息
+//
+// 查询迭代计划详情，包含统计信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ShowIterator(request *model.ShowIteratorRequest) (*model.ShowIteratorResponse, error) {
+	requestDef := GenReqDefForShowIterator()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowIteratorResponse), nil
+	}
+}
+
+// ShowIteratorInvoker 查询迭代计划详情，包含统计信息
+func (c *CloudtestClient) ShowIteratorInvoker(request *model.ShowIteratorRequest) *ShowIteratorInvoker {
+	requestDef := GenReqDefForShowIterator()
+	return &ShowIteratorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTestBranch 获取分支详情
+//
+// 获取分支详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) ShowTestBranch(request *model.ShowTestBranchRequest) (*model.ShowTestBranchResponse, error) {
+	requestDef := GenReqDefForShowTestBranch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTestBranchResponse), nil
+	}
+}
+
+// ShowTestBranchInvoker 获取分支详情
+func (c *CloudtestClient) ShowTestBranchInvoker(request *model.ShowTestBranchRequest) *ShowTestBranchInvoker {
+	requestDef := GenReqDefForShowTestBranch()
+	return &ShowTestBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateBranch 修改分支
+//
+// 修改分支
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) UpdateBranch(request *model.UpdateBranchRequest) (*model.UpdateBranchResponse, error) {
+	requestDef := GenReqDefForUpdateBranch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateBranchResponse), nil
+	}
+}
+
+// UpdateBranchInvoker 修改分支
+func (c *CloudtestClient) UpdateBranchInvoker(request *model.UpdateBranchRequest) *UpdateBranchInvoker {
+	requestDef := GenReqDefForUpdateBranch()
+	return &UpdateBranchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateTestIterator 修改迭代
+//
+// 修改迭代
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CloudtestClient) UpdateTestIterator(request *model.UpdateTestIteratorRequest) (*model.UpdateTestIteratorResponse, error) {
+	requestDef := GenReqDefForUpdateTestIterator()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateTestIteratorResponse), nil
+	}
+}
+
+// UpdateTestIteratorInvoker 修改迭代
+func (c *CloudtestClient) UpdateTestIteratorInvoker(request *model.UpdateTestIteratorRequest) *UpdateTestIteratorInvoker {
+	requestDef := GenReqDefForUpdateTestIterator()
+	return &UpdateTestIteratorInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListTestcasePlans 根据测试用例URI或用例编号查询测试用例对应的测试计划

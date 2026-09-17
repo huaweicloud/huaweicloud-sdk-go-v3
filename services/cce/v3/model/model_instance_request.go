@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// InstanceRequest 插件安装/升级-request结构体
+// InstanceRequest **参数解释**： 插件安装/升级请求结构体。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 type InstanceRequest struct {
 
-	// API类型，固定值“Addon”，该值不可修改，该字段传入无效。
+	// **参数解释**： API类型，固定值\"Addon\"，该值不可修改，该字段传入无效。 **约束限制**： 该值不可修改 **取值范围**： - Addon  **默认取值**： Addon
 	Kind string `json:"kind"`
 
-	// API版本，固定值“v3”，该值不可修改，该字段传入无效。
+	// **参数解释**： API版本，固定值\"v3\"，该值不可修改，该字段传入无效。 **约束限制**： 该值不可修改 **取值范围**： - v3  **默认取值**： v3
 	ApiVersion string `json:"apiVersion"`
 
 	Metadata *AddonMetadata `json:"metadata"`

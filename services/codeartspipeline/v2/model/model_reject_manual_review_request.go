@@ -23,6 +23,9 @@ type RejectManualReviewRequest struct {
 
 	// 流水线运行实例ID
 	PipelineRunId string `json:"pipeline_run_id"`
+
+	// 审核意见
+	ApprovalDescription *string `json:"approval_description,omitempty"`
 }
 
 func (o RejectManualReviewRequest) String() string {

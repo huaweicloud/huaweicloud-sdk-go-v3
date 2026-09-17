@@ -21,9 +21,6 @@ type FirewallRuleDetail struct {
 	// 功能说明：ACL规则对流量执行的操作放通或拒绝 取值范围：allow放通；deny拒绝
 	Action string `json:"action"`
 
-	// 功能说明：资源所属项目ID
-	ProjectId string `json:"project_id"`
-
 	// 功能说明：ACL规则协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
 	Protocol string `json:"protocol"`
 

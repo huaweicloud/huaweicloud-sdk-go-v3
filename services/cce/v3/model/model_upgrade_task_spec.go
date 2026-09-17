@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// UpgradeTaskSpec 升级任务属性
+// UpgradeTaskSpec **参数解释：** 升级任务属性 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 type UpgradeTaskSpec struct {
 
-	// 升级前集群版本
+	// **参数解释：** 升级前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Version *string `json:"version,omitempty"`
 
-	// 升级的目标集群版本
+	// **参数解释：** 升级的目标集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	TargetVersion *string `json:"targetVersion,omitempty"`
 
-	// 升级任务附属信息
+	// **参数解释：** 升级任务附属信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Items *interface{} `json:"items,omitempty"`
 }
 

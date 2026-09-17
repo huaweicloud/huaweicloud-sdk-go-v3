@@ -61,6 +61,48 @@ func (c *IoTEdgeClient) CreateInstallCmdInvoker(request *model.CreateInstallCmdR
 	return &CreateInstallCmdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateReinstallCmd 生成边缘节点重新安装命令
+//
+// 生成边缘节点重新安装命令，命令有效时间30分钟，超过后需要重新生成
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) CreateReinstallCmd(request *model.CreateReinstallCmdRequest) (*model.CreateReinstallCmdResponse, error) {
+	requestDef := GenReqDefForCreateReinstallCmd()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateReinstallCmdResponse), nil
+	}
+}
+
+// CreateReinstallCmdInvoker 生成边缘节点重新安装命令
+func (c *IoTEdgeClient) CreateReinstallCmdInvoker(request *model.CreateReinstallCmdRequest) *CreateReinstallCmdInvoker {
+	requestDef := GenReqDefForCreateReinstallCmd()
+	return &CreateReinstallCmdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateUpgradeCmd 生成边缘节点升级命令
+//
+// 生成边缘节点升级命令，命令有效时间30分钟，超过后需要重新生成
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) CreateUpgradeCmd(request *model.CreateUpgradeCmdRequest) (*model.CreateUpgradeCmdResponse, error) {
+	requestDef := GenReqDefForCreateUpgradeCmd()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateUpgradeCmdResponse), nil
+	}
+}
+
+// CreateUpgradeCmdInvoker 生成边缘节点升级命令
+func (c *IoTEdgeClient) CreateUpgradeCmdInvoker(request *model.CreateUpgradeCmdRequest) *CreateUpgradeCmdInvoker {
+	requestDef := GenReqDefForCreateUpgradeCmd()
+	return &CreateUpgradeCmdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteEdgeNode 删除边缘节点
 //
 // 删除指定边缘节点
@@ -164,6 +206,90 @@ func (c *IoTEdgeClient) UpdateEdgeNode(request *model.UpdateEdgeNodeRequest) (*m
 func (c *IoTEdgeClient) UpdateEdgeNodeInvoker(request *model.UpdateEdgeNodeRequest) *UpdateEdgeNodeInvoker {
 	requestDef := GenReqDefForUpdateEdgeNode()
 	return &UpdateEdgeNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateClientNode 分配推送通道到客户端节点
+//
+// 分配推送通道到客户端节点
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) CreateClientNode(request *model.CreateClientNodeRequest) (*model.CreateClientNodeResponse, error) {
+	requestDef := GenReqDefForCreateClientNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateClientNodeResponse), nil
+	}
+}
+
+// CreateClientNodeInvoker 分配推送通道到客户端节点
+func (c *IoTEdgeClient) CreateClientNodeInvoker(request *model.CreateClientNodeRequest) *CreateClientNodeInvoker {
+	requestDef := GenReqDefForCreateClientNode()
+	return &CreateClientNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateClientNode 修改已分配节点通道的详情
+//
+// 修改已分配节点通道的详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) UpdateClientNode(request *model.UpdateClientNodeRequest) (*model.UpdateClientNodeResponse, error) {
+	requestDef := GenReqDefForUpdateClientNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateClientNodeResponse), nil
+	}
+}
+
+// UpdateClientNodeInvoker 修改已分配节点通道的详情
+func (c *IoTEdgeClient) UpdateClientNodeInvoker(request *model.UpdateClientNodeRequest) *UpdateClientNodeInvoker {
+	requestDef := GenReqDefForUpdateClientNode()
+	return &UpdateClientNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowEdgeNodeSoftwareVersion 查询当前边缘软件版本
+//
+// 查询当前边缘软件版本
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) ShowEdgeNodeSoftwareVersion(request *model.ShowEdgeNodeSoftwareVersionRequest) (*model.ShowEdgeNodeSoftwareVersionResponse, error) {
+	requestDef := GenReqDefForShowEdgeNodeSoftwareVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowEdgeNodeSoftwareVersionResponse), nil
+	}
+}
+
+// ShowEdgeNodeSoftwareVersionInvoker 查询当前边缘软件版本
+func (c *IoTEdgeClient) ShowEdgeNodeSoftwareVersionInvoker(request *model.ShowEdgeNodeSoftwareVersionRequest) *ShowEdgeNodeSoftwareVersionInvoker {
+	requestDef := GenReqDefForShowEdgeNodeSoftwareVersion()
+	return &ShowEdgeNodeSoftwareVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BindNode 绑定节点-专业版
+//
+// 绑定节点-专业版
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) BindNode(request *model.BindNodeRequest) (*model.BindNodeResponse, error) {
+	requestDef := GenReqDefForBindNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BindNodeResponse), nil
+	}
+}
+
+// BindNodeInvoker 绑定节点-专业版
+func (c *IoTEdgeClient) BindNodeInvoker(request *model.BindNodeRequest) *BindNodeInvoker {
+	requestDef := GenReqDefForBindNode()
+	return &BindNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ExecuteDeviceControlsRelease 设备控制释放
@@ -1134,7 +1260,7 @@ func (c *IoTEdgeClient) ShowModuleInvoker(request *model.ShowModuleRequest) *Sho
 
 // UpdateModule 修改边缘模块
 //
-// 用户通过Console接口查询指定边缘节点上指定边缘模块
+// 用户通过Console接口修改指定边缘节点上指定边缘模块
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) UpdateModule(request *model.UpdateModuleRequest) (*model.UpdateModuleResponse, error) {
@@ -1405,9 +1531,9 @@ func (c *IoTEdgeClient) ShowPointTemplateInvoker(request *model.ShowPointTemplat
 	return &ShowPointTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowPoints 查询点位表模板文件
+// ShowPoints 导出点位表文件
 //
-// 查询点位表模板文件
+// 导出点位表文件
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) ShowPoints(request *model.ShowPointsRequest) (*model.ShowPointsResponse, error) {
@@ -1420,7 +1546,7 @@ func (c *IoTEdgeClient) ShowPoints(request *model.ShowPointsRequest) (*model.Sho
 	}
 }
 
-// ShowPointsInvoker 查询点位表模板文件
+// ShowPointsInvoker 导出点位表文件
 func (c *IoTEdgeClient) ShowPointsInvoker(request *model.ShowPointsRequest) *ShowPointsInvoker {
 	requestDef := GenReqDefForShowPoints()
 	return &ShowPointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1489,6 +1615,134 @@ func (c *IoTEdgeClient) UpdateScheduleInvoker(request *model.UpdateScheduleReque
 	return &UpdateScheduleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// InvokeDeleteProxy DELETE方法的代理
+//
+// 北向NA调用南向第三方应用的DELETE方法时使用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) InvokeDeleteProxy(request *model.InvokeDeleteProxyRequest) (*model.InvokeDeleteProxyResponse, error) {
+	requestDef := GenReqDefForInvokeDeleteProxy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.InvokeDeleteProxyResponse), nil
+	}
+}
+
+// InvokeDeleteProxyInvoker DELETE方法的代理
+func (c *IoTEdgeClient) InvokeDeleteProxyInvoker(request *model.InvokeDeleteProxyRequest) *InvokeDeleteProxyInvoker {
+	requestDef := GenReqDefForInvokeDeleteProxy()
+	return &InvokeDeleteProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// InvokeGetProxy GET方法的代理
+//
+// 北向NA调用南向第三方应用的GET方法时使用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) InvokeGetProxy(request *model.InvokeGetProxyRequest) (*model.InvokeGetProxyResponse, error) {
+	requestDef := GenReqDefForInvokeGetProxy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.InvokeGetProxyResponse), nil
+	}
+}
+
+// InvokeGetProxyInvoker GET方法的代理
+func (c *IoTEdgeClient) InvokeGetProxyInvoker(request *model.InvokeGetProxyRequest) *InvokeGetProxyInvoker {
+	requestDef := GenReqDefForInvokeGetProxy()
+	return &InvokeGetProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// InvokePatchProxy PATCH方法的代理
+//
+// 北向NA调用南向第三方应用的PATCH方法时使用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) InvokePatchProxy(request *model.InvokePatchProxyRequest) (*model.InvokePatchProxyResponse, error) {
+	requestDef := GenReqDefForInvokePatchProxy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.InvokePatchProxyResponse), nil
+	}
+}
+
+// InvokePatchProxyInvoker PATCH方法的代理
+func (c *IoTEdgeClient) InvokePatchProxyInvoker(request *model.InvokePatchProxyRequest) *InvokePatchProxyInvoker {
+	requestDef := GenReqDefForInvokePatchProxy()
+	return &InvokePatchProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// InvokePostProxy POST方法的代理
+//
+// 北向NA调用南向第三方应用的POST方法时使用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) InvokePostProxy(request *model.InvokePostProxyRequest) (*model.InvokePostProxyResponse, error) {
+	requestDef := GenReqDefForInvokePostProxy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.InvokePostProxyResponse), nil
+	}
+}
+
+// InvokePostProxyInvoker POST方法的代理
+func (c *IoTEdgeClient) InvokePostProxyInvoker(request *model.InvokePostProxyRequest) *InvokePostProxyInvoker {
+	requestDef := GenReqDefForInvokePostProxy()
+	return &InvokePostProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// InvokePutProxy PUT方法的代理
+//
+// 北向NA调用南向第三方应用的PUT方法时使用
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) InvokePutProxy(request *model.InvokePutProxyRequest) (*model.InvokePutProxyResponse, error) {
+	requestDef := GenReqDefForInvokePutProxy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.InvokePutProxyResponse), nil
+	}
+}
+
+// InvokePutProxyInvoker PUT方法的代理
+func (c *IoTEdgeClient) InvokePutProxyInvoker(request *model.InvokePutProxyRequest) *InvokePutProxyInvoker {
+	requestDef := GenReqDefForInvokePutProxy()
+	return &InvokePutProxyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+// BatchConfirmConfigs 南向3rdIA对配置项下发进行确认
+//
+// 南向3rdIA对配置项下发进行确认
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) BatchConfirmConfigs(request *model.BatchConfirmConfigsRequest) (*model.BatchConfirmConfigsResponse, error) {
+	requestDef := GenReqDefForBatchConfirmConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchConfirmConfigsResponse), nil
+	}
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+// BatchConfirmConfigsInvoker 南向3rdIA对配置项下发进行确认
+func (c *IoTEdgeClient) BatchConfirmConfigsInvoker(request *model.BatchConfirmConfigsRequest) *BatchConfirmConfigsInvoker {
+	requestDef := GenReqDefForBatchConfirmConfigs()
+	return &BatchConfirmConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchConfirmConfigsNew 批量确认南向3rdIA配置项
 //
 // 南向3rdIA对下发的配置项进行批量确认
@@ -1512,7 +1766,7 @@ func (c *IoTEdgeClient) BatchConfirmConfigsNewInvoker(request *model.BatchConfir
 
 // BatchImportConfigs 批量导入南向3rdIA配置项
 //
-// 批量导入南向3rdIA配置项
+// 用户批量上传/导入南向3rdIA配置项
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) BatchImportConfigs(request *model.BatchImportConfigsRequest) (*model.BatchImportConfigsResponse, error) {
@@ -1617,8 +1871,7 @@ func (c *IoTEdgeClient) UpdateIaConfigInvoker(request *model.UpdateIaConfigReque
 
 // BatchAssociateNaToNodes 授权北向NA信息到边缘节点
 //
-// 批量授权北向NA信息到边缘节点。
-// 已授权的边缘节点上的南向IA应用，可以通过部署在边缘节点上的api网关访问北向NA提供的接口。
+// 授权北向NA信息到边缘节点
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) BatchAssociateNaToNodes(request *model.BatchAssociateNaToNodesRequest) (*model.BatchAssociateNaToNodesResponse, error) {
@@ -1639,7 +1892,7 @@ func (c *IoTEdgeClient) BatchAssociateNaToNodesInvoker(request *model.BatchAssoc
 
 // DeleteNa 删除北向NA信息
 //
-// 删除北向NA信息，如果有边缘节点已分配该NA信息，会通知到该边缘节点。
+// 删除北向NA信息，如果有边缘节点已分配该NA信息，会通知到边缘节点
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) DeleteNa(request *model.DeleteNaRequest) (*model.DeleteNaResponse, error) {
@@ -1723,7 +1976,7 @@ func (c *IoTEdgeClient) ShowNaInvoker(request *model.ShowNaRequest) *ShowNaInvok
 
 // UpdateNa 创建&amp;更新北向NA信息
 //
-// 创建&amp;更新北向NA信息，当更新北向NA信息时，会通知到已分配该北向NA的所有边缘节点。
+// 创建&amp;更新北向NA信息
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) UpdateNa(request *model.UpdateNaRequest) (*model.UpdateNaResponse, error) {
@@ -1740,4 +1993,67 @@ func (c *IoTEdgeClient) UpdateNa(request *model.UpdateNaRequest) (*model.UpdateN
 func (c *IoTEdgeClient) UpdateNaInvoker(request *model.UpdateNaRequest) *UpdateNaInvoker {
 	requestDef := GenReqDefForUpdateNa()
 	return &UpdateNaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePushChannel 创建外部推送通道
+//
+// 创建外部推送通道
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) CreatePushChannel(request *model.CreatePushChannelRequest) (*model.CreatePushChannelResponse, error) {
+	requestDef := GenReqDefForCreatePushChannel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePushChannelResponse), nil
+	}
+}
+
+// CreatePushChannelInvoker 创建外部推送通道
+func (c *IoTEdgeClient) CreatePushChannelInvoker(request *model.CreatePushChannelRequest) *CreatePushChannelInvoker {
+	requestDef := GenReqDefForCreatePushChannel()
+	return &CreatePushChannelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeletePushChannel 删除外部推送通道
+//
+// 删除查询外部推送通道
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) DeletePushChannel(request *model.DeletePushChannelRequest) (*model.DeletePushChannelResponse, error) {
+	requestDef := GenReqDefForDeletePushChannel()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeletePushChannelResponse), nil
+	}
+}
+
+// DeletePushChannelInvoker 删除外部推送通道
+func (c *IoTEdgeClient) DeletePushChannelInvoker(request *model.DeletePushChannelRequest) *DeletePushChannelInvoker {
+	requestDef := GenReqDefForDeletePushChannel()
+	return &DeletePushChannelInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPushChannels 查询推送通道列表
+//
+// 查询推送通道列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) ListPushChannels(request *model.ListPushChannelsRequest) (*model.ListPushChannelsResponse, error) {
+	requestDef := GenReqDefForListPushChannels()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPushChannelsResponse), nil
+	}
+}
+
+// ListPushChannelsInvoker 查询推送通道列表
+func (c *IoTEdgeClient) ListPushChannelsInvoker(request *model.ListPushChannelsRequest) *ListPushChannelsInvoker {
+	requestDef := GenReqDefForListPushChannels()
+	return &ListPushChannelsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

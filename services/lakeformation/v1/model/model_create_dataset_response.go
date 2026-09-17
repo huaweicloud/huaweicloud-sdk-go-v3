@@ -23,7 +23,7 @@ type CreateDatasetResponse struct {
 	// DatasetID
 	DatasetId *string `json:"dataset_id,omitempty"`
 
-	// 数据集的描述信息
+	// 数据集描述信息。最大长度为4000个字符。
 	Description *string `json:"description,omitempty"`
 
 	// 数据库名称。

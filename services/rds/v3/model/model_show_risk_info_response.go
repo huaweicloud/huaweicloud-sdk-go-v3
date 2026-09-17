@@ -10,7 +10,7 @@ import (
 type ShowRiskInfoResponse struct {
 
 	// 风险版本信息
-	Risks *[]EngineRiskDesc `json:"risks,omitempty"`
+	Risks *[]ShowRiskInfoEngineRiskDesc `json:"risks,omitempty"`
 
 	XRequestId     *string `json:"X-request-id,omitempty"`
 	HttpStatusCode int     `json:"-"`

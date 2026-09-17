@@ -12,10 +12,19 @@ type ClusterNodeConfig struct {
 	// master虚拟ip
 	MasterNodeVip *string `json:"master_node_vip,omitempty"`
 
+	// dmz区worker节点虚拟ip
+	DmzVip *string `json:"dmz_vip,omitempty"`
+
+	// 网卡名称
+	InterfaceName *string `json:"interface_name,omitempty"`
+
 	// master节点数
 	MasterNodes *[]NodeConfig `json:"master_nodes,omitempty"`
 
-	// work节点数
+	// dmz区worker节点数
+	DmzNodes *[]NodeConfig `json:"dmz_nodes,omitempty"`
+
+	// trust区worker节点数
 	WorkNodes *[]NodeConfig `json:"work_nodes,omitempty"`
 }
 

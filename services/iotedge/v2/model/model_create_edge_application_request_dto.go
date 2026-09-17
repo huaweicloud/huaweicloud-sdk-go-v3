@@ -25,6 +25,9 @@ type CreateEdgeApplicationRequestDto struct {
 
 	// 驱动协议类型OPCUA|Modbus-TCP
 	Protocol *string `json:"protocol,omitempty"`
+
+	// 是否是下发到端侧网关上应用。
+	DeliveredApp *bool `json:"delivered_app,omitempty"`
 }
 
 func (o CreateEdgeApplicationRequestDto) String() string {
@@ -47,6 +50,7 @@ type CreateEdgeApplicationRequestDtoFunctionTypeEnum struct {
 	GATEWAY_MANAGER        CreateEdgeApplicationRequestDtoFunctionType
 	COMPOSITE_APPLICATION  CreateEdgeApplicationRequestDtoFunctionType
 	DATA_COLLECTION        CreateEdgeApplicationRequestDtoFunctionType
+	MODEL_INFERENCE        CreateEdgeApplicationRequestDtoFunctionType
 }
 
 func GetCreateEdgeApplicationRequestDtoFunctionTypeEnum() CreateEdgeApplicationRequestDtoFunctionTypeEnum {
@@ -68,6 +72,9 @@ func GetCreateEdgeApplicationRequestDtoFunctionTypeEnum() CreateEdgeApplicationR
 		},
 		DATA_COLLECTION: CreateEdgeApplicationRequestDtoFunctionType{
 			value: "DATA_COLLECTION",
+		},
+		MODEL_INFERENCE: CreateEdgeApplicationRequestDtoFunctionType{
+			value: "MODEL_INFERENCE",
 		},
 	}
 }

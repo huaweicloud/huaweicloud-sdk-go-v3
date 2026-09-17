@@ -9,7 +9,7 @@ import (
 // DeviceAuthInfoDto 边缘节点设备认证方式信息。
 type DeviceAuthInfoDto struct {
 
-	// 边缘节点认证方式，不填默认为密钥认证接入方式(SECRET)。
+	// 边缘节点认证方式。
 	AuthType string `json:"auth_type"`
 
 	// 证书指纹，认证类型使用证书认证接入(CERTIFICATES)需填写该字段。

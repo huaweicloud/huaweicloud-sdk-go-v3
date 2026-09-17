@@ -33,10 +33,6 @@ func GenReqDefForDeleteApp() *def.HttpRequestDef {
 		WithJsonTag("app_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -129,10 +125,6 @@ func GenReqDefForDeleteAppInstance() *def.HttpRequestDef {
 		WithName("Namespace").
 		WithJsonTag("namespace").
 		WithLocationType(def.Query))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -243,10 +235,6 @@ func GenReqDefForDeleteAppVersion() *def.HttpRequestDef {
 		WithName("Version").
 		WithJsonTag("version").
 		WithLocationType(def.Path))
-
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -402,10 +390,6 @@ func GenReqDefForDeleteCluster() *def.HttpRequestDef {
 		WithJsonTag("cluster_id").
 		WithLocationType(def.Path))
 
-	reqDefBuilder.WithResponseField(def.NewFieldDef().
-		WithName("Body").
-		WithLocationType(def.Body))
-
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -424,6 +408,10 @@ func GenReqDefForListClusters() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("State").
 		WithJsonTag("state").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ClusterIds").
+		WithJsonTag("cluster_ids").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Limit").
@@ -448,6 +436,147 @@ func GenReqDefForShowCluster() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowClusterResources() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/resources").
+		WithResponse(new(model.ShowClusterResourcesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceGroup").
+		WithJsonTag("resource_group").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Offset").
+		WithJsonTag("offset").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Limit").
+		WithJsonTag("limit").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForUpdateResourceBinding() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3/{project_id}/resources/{resource_id}/cluster").
+		WithResponse(new(model.UpdateResourceBindingResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ResourceId").
+		WithJsonTag("resource_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForInvokeKubeApi() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/clusters/{cluster_id}/api-proxy").
+		WithResponse(new(model.InvokeKubeApiResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ClusterId").
+		WithJsonTag("cluster_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XForwardTarget").
+		WithJsonTag("X-Forward-Target").
+		WithLocationType(def.Header))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("XForwardHeaders").
+		WithJsonTag("X-Forward-Headers").
+		WithLocationType(def.Header))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListClusterNamespaces() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/clusters/{cluster_id}/namespaces").
+		WithResponse(new(model.ListClusterNamespacesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ClusterId").
+		WithJsonTag("cluster_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateClusterNodesInstallCmd() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v3/{project_id}/clusters/{cluster_id}/nodes/install-cmd").
+		WithResponse(new(model.CreateClusterNodesInstallCmdResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ClusterId").
+		WithJsonTag("cluster_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListClusterNodes() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/clusters/{cluster_id}/nodes").
+		WithResponse(new(model.ListClusterNodesResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ClusterId").
+		WithJsonTag("cluster_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowClusterNode() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v3/{project_id}/clusters/{cluster_id}/nodes/{node_name}").
+		WithResponse(new(model.ShowClusterNodeResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ClusterId").
+		WithJsonTag("cluster_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("NodeName").
+		WithJsonTag("node_name").
 		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()

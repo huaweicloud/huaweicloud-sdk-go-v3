@@ -5,6 +5,22 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/dws/v2/model"
 )
 
+type AddOperationalTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddOperationalTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddOperationalTaskInvoker) Invoke() (*model.AddOperationalTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddOperationalTaskResponse), nil
+	}
+}
+
 type AddQueueUserListInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -258,6 +274,38 @@ func (i *CheckGrowClusterInvoker) Invoke() (*model.CheckGrowClusterResponse, err
 		return nil, err
 	} else {
 		return result.(*model.CheckGrowClusterResponse), nil
+	}
+}
+
+type CheckInstanceStorageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckInstanceStorageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckInstanceStorageInvoker) Invoke() (*model.CheckInstanceStorageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckInstanceStorageResponse), nil
+	}
+}
+
+type CheckSnapshotInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckSnapshotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckSnapshotInvoker) Invoke() (*model.CheckSnapshotResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckSnapshotResponse), nil
 	}
 }
 
@@ -709,6 +757,22 @@ func (i *DeleteLogicalClusterPlanInvoker) Invoke() (*model.DeleteLogicalClusterP
 	}
 }
 
+type DeleteOperationalTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteOperationalTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteOperationalTaskInvoker) Invoke() (*model.DeleteOperationalTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteOperationalTaskResponse), nil
+	}
+}
+
 type DeleteQueueUserListInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1061,6 +1125,22 @@ func (i *ExportUserAuthorityInvoker) Invoke() (*model.ExportUserAuthorityRespons
 	}
 }
 
+type ListActionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListActionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListActionsInvoker) Invoke() (*model.ListActionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListActionsResponse), nil
+	}
+}
+
 type ListAlarmConfigsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1301,6 +1381,22 @@ func (i *ListClusterScaleInNumbersInvoker) Invoke() (*model.ListClusterScaleInNu
 	}
 }
 
+type ListClusterSecurityConfigurationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListClusterSecurityConfigurationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListClusterSecurityConfigurationsInvoker) Invoke() (*model.ListClusterSecurityConfigurationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListClusterSecurityConfigurationsResponse), nil
+	}
+}
+
 type ListClusterSnapshotsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1429,6 +1525,22 @@ func (i *ListDatabaseUserAuthoritiesInvoker) Invoke() (*model.ListDatabaseUserAu
 	}
 }
 
+type ListDatabaseUserRolesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListDatabaseUserRolesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListDatabaseUserRolesInvoker) Invoke() (*model.ListDatabaseUserRolesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListDatabaseUserRolesResponse), nil
+	}
+}
+
 type ListDatabaseUsersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1490,6 +1602,38 @@ func (i *ListElbsInvoker) Invoke() (*model.ListElbsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListElbsResponse), nil
+	}
+}
+
+type ListElbsInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListElbsInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListElbsInfoInvoker) Invoke() (*model.ListElbsInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListElbsInfoResponse), nil
+	}
+}
+
+type ListEpsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListEpsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListEpsInvoker) Invoke() (*model.ListEpsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListEpsResponse), nil
 	}
 }
 
@@ -1781,6 +1925,38 @@ func (i *ListNodeTypesInvoker) Invoke() (*model.ListNodeTypesResponse, error) {
 	}
 }
 
+type ListOperationalTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOperationalTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListOperationalTaskInvoker) Invoke() (*model.ListOperationalTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOperationalTaskResponse), nil
+	}
+}
+
+type ListOperationalTaskDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListOperationalTaskDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListOperationalTaskDetailInvoker) Invoke() (*model.ListOperationalTaskDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListOperationalTaskDetailResponse), nil
+	}
+}
+
 type ListPlanExecLogsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1842,6 +2018,22 @@ func (i *ListRedistributionSchemaInvoker) Invoke() (*model.ListRedistributionSch
 		return nil, err
 	} else {
 		return result.(*model.ListRedistributionSchemaResponse), nil
+	}
+}
+
+type ListResourceByTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResourceByTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListResourceByTagInvoker) Invoke() (*model.ListResourceByTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResourceByTagResponse), nil
 	}
 }
 
@@ -2197,6 +2389,38 @@ func (i *PauseDisasterRecoveryInvoker) Invoke() (*model.PauseDisasterRecoveryRes
 	}
 }
 
+type PauseOperationalTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PauseOperationalTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *PauseOperationalTaskInvoker) Invoke() (*model.PauseOperationalTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PauseOperationalTaskResponse), nil
+	}
+}
+
+type RefreshOperationalTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RefreshOperationalTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RefreshOperationalTaskInvoker) Invoke() (*model.RefreshOperationalTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RefreshOperationalTaskResponse), nil
+	}
+}
+
 type ResetPasswordInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2354,6 +2578,22 @@ func (i *RestoreTableInvoker) Invoke() (*model.RestoreTableResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.RestoreTableResponse), nil
+	}
+}
+
+type ResumeOperationalTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResumeOperationalTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ResumeOperationalTaskInvoker) Invoke() (*model.ResumeOperationalTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResumeOperationalTaskResponse), nil
 	}
 }
 
@@ -2594,6 +2834,22 @@ func (i *ShowInstanceInvoker) Invoke() (*model.ShowInstanceResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceResponse), nil
+	}
+}
+
+type ShowOperationalTaskConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowOperationalTaskConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowOperationalTaskConfigInvoker) Invoke() (*model.ShowOperationalTaskConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowOperationalTaskConfigResponse), nil
 	}
 }
 
@@ -3077,6 +3333,38 @@ func (i *UpdateMaintenanceWindowInvoker) Invoke() (*model.UpdateMaintenanceWindo
 	}
 }
 
+type UpdateOperationalTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateOperationalTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateOperationalTaskInvoker) Invoke() (*model.UpdateOperationalTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateOperationalTaskResponse), nil
+	}
+}
+
+type UpdateOperationalTaskConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateOperationalTaskConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateOperationalTaskConfigInvoker) Invoke() (*model.UpdateOperationalTaskConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateOperationalTaskConfigResponse), nil
+	}
+}
+
 type UpdateQueueBaseInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3170,5 +3458,21 @@ func (i *UpdateWorkloadRuleInvoker) Invoke() (*model.UpdateWorkloadRuleResponse,
 		return nil, err
 	} else {
 		return result.(*model.UpdateWorkloadRuleResponse), nil
+	}
+}
+
+type ValidateDbDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ValidateDbDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ValidateDbDataInvoker) Invoke() (*model.ValidateDbDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ValidateDbDataResponse), nil
 	}
 }

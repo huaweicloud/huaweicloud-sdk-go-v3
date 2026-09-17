@@ -76,8 +76,10 @@ type CreateEdgeApplicationVersionResponse struct {
 	Supplier *string `json:"supplier,omitempty"`
 
 	// 模板id
-	TplId          *string `json:"tpl_id,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	TplId *string `json:"tpl_id,omitempty"`
+
+	PreUpgradeProbe *PreUpgradeProbeDto `json:"pre_upgrade_probe,omitempty"`
+	HttpStatusCode  int                 `json:"-"`
 }
 
 func (o CreateEdgeApplicationVersionResponse) String() string {

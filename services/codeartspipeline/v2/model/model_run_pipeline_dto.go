@@ -23,6 +23,12 @@ type RunPipelineDto struct {
 
 	// **参数解释**： 选择的流水线阶段。优先级高于choose_jobs，即stage未选择时，无视choose_jobs中该stage下的job。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	ChooseStages *[]string `json:"choose_stages,omitempty"`
+
+	// **参数解释**： 是否为子流水线触发。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	SubHook *bool `json:"sub_hook,omitempty"`
+
+	// **参数解释**： 使用哪一个执行方案运行流水线。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	ExecutionPlanId *string `json:"execution_plan_id,omitempty"`
 }
 
 func (o RunPipelineDto) String() string {

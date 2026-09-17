@@ -19,6 +19,27 @@ func DwsClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// AddOperationalTask 新增调度任务
+//
+// 新增调度任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) AddOperationalTask(request *model.AddOperationalTaskRequest) (*model.AddOperationalTaskResponse, error) {
+	requestDef := GenReqDefForAddOperationalTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddOperationalTaskResponse), nil
+	}
+}
+
+// AddOperationalTaskInvoker 新增调度任务
+func (c *DwsClient) AddOperationalTaskInvoker(request *model.AddOperationalTaskRequest) *AddOperationalTaskInvoker {
+	requestDef := GenReqDefForAddOperationalTask()
+	return &AddOperationalTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddQueueUserList 添加资源池的绑定用户
 //
 // 添加资源池的绑定用户。
@@ -237,9 +258,9 @@ func (c *DwsClient) BatchDeleteResourceTagInvoker(request *model.BatchDeleteReso
 
 // CancelReadonlyCluster 解除只读
 //
-// 当集群进入只读状态时，无法进行数据库相关操作，用户可以在管理控制台解除集群的只读状态。触发只读状态可能是由于磁盘使用率过高，因此需要对集群数据进行清理或扩容。
-//  **约束限制**：
-//  解除只读支持1.7.2及以上版本。
+// 当集群进入只读状态时，无法进行数据库相关操作，用户可以调用该API解除集群的只读状态。触发只读状态可能是由于磁盘使用率过高，因此需要先对集群数据进行清理或扩容再解除只读。
+// **约束限制**：
+// 解除只读支持1.7.2及以上版本。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) CancelReadonlyCluster(request *model.CancelReadonlyClusterRequest) (*model.CancelReadonlyClusterResponse, error) {
@@ -361,6 +382,48 @@ func (c *DwsClient) CheckGrowCluster(request *model.CheckGrowClusterRequest) (*m
 func (c *DwsClient) CheckGrowClusterInvoker(request *model.CheckGrowClusterRequest) *CheckGrowClusterInvoker {
 	requestDef := GenReqDefForCheckGrowCluster()
 	return &CheckGrowClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckInstanceStorage 磁盘扩容前检查
+//
+// 磁盘扩容前检查。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) CheckInstanceStorage(request *model.CheckInstanceStorageRequest) (*model.CheckInstanceStorageResponse, error) {
+	requestDef := GenReqDefForCheckInstanceStorage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckInstanceStorageResponse), nil
+	}
+}
+
+// CheckInstanceStorageInvoker 磁盘扩容前检查
+func (c *DwsClient) CheckInstanceStorageInvoker(request *model.CheckInstanceStorageRequest) *CheckInstanceStorageInvoker {
+	requestDef := GenReqDefForCheckInstanceStorage()
+	return &CheckInstanceStorageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CheckSnapshot 检验快照信息
+//
+// 检验快照信息，状态码200时校验成功。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) CheckSnapshot(request *model.CheckSnapshotRequest) (*model.CheckSnapshotResponse, error) {
+	requestDef := GenReqDefForCheckSnapshot()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CheckSnapshotResponse), nil
+	}
+}
+
+// CheckSnapshotInvoker 检验快照信息
+func (c *DwsClient) CheckSnapshotInvoker(request *model.CheckSnapshotRequest) *CheckSnapshotInvoker {
+	requestDef := GenReqDefForCheckSnapshot()
+	return &CheckSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CheckTableRestore 用户恢复表名检测
@@ -898,7 +961,7 @@ func (c *DwsClient) DeleteDwsClusterInvoker(request *model.DeleteDwsClusterReque
 	return &DeleteDwsClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteEventSub 删除订阅事件
+// DeleteEventSub 删除订阅的事件
 //
 // 删除订阅的事件。
 //
@@ -913,7 +976,7 @@ func (c *DwsClient) DeleteEventSub(request *model.DeleteEventSubRequest) (*model
 	}
 }
 
-// DeleteEventSubInvoker 删除订阅事件
+// DeleteEventSubInvoker 删除订阅的事件
 func (c *DwsClient) DeleteEventSubInvoker(request *model.DeleteEventSubRequest) *DeleteEventSubInvoker {
 	requestDef := GenReqDefForDeleteEventSub()
 	return &DeleteEventSubInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -959,6 +1022,27 @@ func (c *DwsClient) DeleteLogicalClusterPlan(request *model.DeleteLogicalCluster
 func (c *DwsClient) DeleteLogicalClusterPlanInvoker(request *model.DeleteLogicalClusterPlanRequest) *DeleteLogicalClusterPlanInvoker {
 	requestDef := GenReqDefForDeleteLogicalClusterPlan()
 	return &DeleteLogicalClusterPlanInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteOperationalTask 批量删除调度任务
+//
+// 批量删除调度任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) DeleteOperationalTask(request *model.DeleteOperationalTaskRequest) (*model.DeleteOperationalTaskResponse, error) {
+	requestDef := GenReqDefForDeleteOperationalTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteOperationalTaskResponse), nil
+	}
+}
+
+// DeleteOperationalTaskInvoker 批量删除调度任务
+func (c *DwsClient) DeleteOperationalTaskInvoker(request *model.DeleteOperationalTaskRequest) *DeleteOperationalTaskInvoker {
+	requestDef := GenReqDefForDeleteOperationalTask()
+	return &DeleteOperationalTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteQueueUserList 删除资源池的绑定用户
@@ -1374,7 +1458,7 @@ func (c *DwsClient) ExecuteRedistributionClusterInvoker(request *model.ExecuteRe
 // ExpandInstanceStorage 磁盘扩容
 //
 // 随着客户业务的发展，磁盘空间往往最先出现资源瓶颈，在其他资源尚且充足的情况下，通过磁盘扩容可快速缓解存储资源瓶颈现象，操作过程中无需暂停业务，并且不会造成CPU、内存等资源浪费。
-//  **约束限制**：
+// **约束限制**：
 // 磁盘扩容功能仅8.1.1.203及以上版本支持，并且创建集群规格需要为云数仓SSD云盘或实时数仓类型。
 // 按需+折扣套餐包消费模式下，存储扩容后超出折扣套餐包部分将按需收费。
 //
@@ -1435,6 +1519,27 @@ func (c *DwsClient) ExportUserAuthority(request *model.ExportUserAuthorityReques
 func (c *DwsClient) ExportUserAuthorityInvoker(request *model.ExportUserAuthorityRequest) *ExportUserAuthorityInvoker {
 	requestDef := GenReqDefForExportUserAuthority()
 	return &ExportUserAuthorityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListActions 查询租户白名单
+//
+// 查询租户白名单。仅返回当前用户支持的灰度特性，集群列表等基础功能不受白名单控制，所有用户均可以使用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListActions(request *model.ListActionsRequest) (*model.ListActionsResponse, error) {
+	requestDef := GenReqDefForListActions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListActionsResponse), nil
+	}
+}
+
+// ListActionsInvoker 查询租户白名单
+func (c *DwsClient) ListActionsInvoker(request *model.ListActionsRequest) *ListActionsInvoker {
+	requestDef := GenReqDefForListActions()
+	return &ListActionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAlarmConfigs 查询告警配置
@@ -1521,9 +1626,9 @@ func (c *DwsClient) ListAlarmSubsInvoker(request *model.ListAlarmSubsRequest) *L
 	return &ListAlarmSubsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAuditLog 查询日志记录
+// ListAuditLog 查询审计日志转储执行记录
 //
-// 查询审计日志记录。
+// 查询审计日志转储执行记录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListAuditLog(request *model.ListAuditLogRequest) (*model.ListAuditLogResponse, error) {
@@ -1536,7 +1641,7 @@ func (c *DwsClient) ListAuditLog(request *model.ListAuditLogRequest) (*model.Lis
 	}
 }
 
-// ListAuditLogInvoker 查询日志记录
+// ListAuditLogInvoker 查询审计日志转储执行记录
 func (c *DwsClient) ListAuditLogInvoker(request *model.ListAuditLogRequest) *ListAuditLogInvoker {
 	requestDef := GenReqDefForListAuditLog()
 	return &ListAuditLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1752,6 +1857,27 @@ func (c *DwsClient) ListClusterScaleInNumbersInvoker(request *model.ListClusterS
 	return &ListClusterScaleInNumbersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListClusterSecurityConfigurations 查询集群安全参数配置
+//
+// 查询集群安全参数配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListClusterSecurityConfigurations(request *model.ListClusterSecurityConfigurationsRequest) (*model.ListClusterSecurityConfigurationsResponse, error) {
+	requestDef := GenReqDefForListClusterSecurityConfigurations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListClusterSecurityConfigurationsResponse), nil
+	}
+}
+
+// ListClusterSecurityConfigurationsInvoker 查询集群安全参数配置
+func (c *DwsClient) ListClusterSecurityConfigurationsInvoker(request *model.ListClusterSecurityConfigurationsRequest) *ListClusterSecurityConfigurationsInvoker {
+	requestDef := GenReqDefForListClusterSecurityConfigurations()
+	return &ListClusterSecurityConfigurationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListClusterSnapshots 查询集群快照列表
 //
 // 该接口用于查询集群快照列表。
@@ -1922,6 +2048,27 @@ func (c *DwsClient) ListDatabaseUserAuthoritiesInvoker(request *model.ListDataba
 	return &ListDatabaseUserAuthoritiesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDatabaseUserRoles 查询用户所属角色
+//
+// 查询用户所属角色。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListDatabaseUserRoles(request *model.ListDatabaseUserRolesRequest) (*model.ListDatabaseUserRolesResponse, error) {
+	requestDef := GenReqDefForListDatabaseUserRoles()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDatabaseUserRolesResponse), nil
+	}
+}
+
+// ListDatabaseUserRolesInvoker 查询用户所属角色
+func (c *DwsClient) ListDatabaseUserRolesInvoker(request *model.ListDatabaseUserRolesRequest) *ListDatabaseUserRolesInvoker {
+	requestDef := GenReqDefForListDatabaseUserRoles()
+	return &ListDatabaseUserRolesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDatabaseUsers 查询所有数据库用户/角色
 //
 // 查询所有数据库用户/角色。
@@ -2005,6 +2152,48 @@ func (c *DwsClient) ListElbs(request *model.ListElbsRequest) (*model.ListElbsRes
 func (c *DwsClient) ListElbsInvoker(request *model.ListElbsRequest) *ListElbsInvoker {
 	requestDef := GenReqDefForListElbs()
 	return &ListElbsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListElbsInfo 查询可用弹性负载均衡列表
+//
+// 查询可用弹性负载均衡列表，该接口是对ELB提供的openapi的封装，针对DWS进行了部分筛选，且不含已经被其它dws集群绑定的弹性负载均衡器。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListElbsInfo(request *model.ListElbsInfoRequest) (*model.ListElbsInfoResponse, error) {
+	requestDef := GenReqDefForListElbsInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListElbsInfoResponse), nil
+	}
+}
+
+// ListElbsInfoInvoker 查询可用弹性负载均衡列表
+func (c *DwsClient) ListElbsInfoInvoker(request *model.ListElbsInfoRequest) *ListElbsInfoInvoker {
+	requestDef := GenReqDefForListElbsInfo()
+	return &ListElbsInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListEps 查询所有集群的企业项目信息
+//
+// 查询所有集群的企业项目信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListEps(request *model.ListEpsRequest) (*model.ListEpsResponse, error) {
+	requestDef := GenReqDefForListEps()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListEpsResponse), nil
+	}
+}
+
+// ListEpsInvoker 查询所有集群的企业项目信息
+func (c *DwsClient) ListEpsInvoker(request *model.ListEpsRequest) *ListEpsInvoker {
+	requestDef := GenReqDefForListEps()
+	return &ListEpsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListEventSpecs 查询事件配置
@@ -2385,6 +2574,48 @@ func (c *DwsClient) ListNodeTypesInvoker(request *model.ListNodeTypesRequest) *L
 	return &ListNodeTypesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListOperationalTask 查询运维任务列表
+//
+// 查询运维任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListOperationalTask(request *model.ListOperationalTaskRequest) (*model.ListOperationalTaskResponse, error) {
+	requestDef := GenReqDefForListOperationalTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOperationalTaskResponse), nil
+	}
+}
+
+// ListOperationalTaskInvoker 查询运维任务列表
+func (c *DwsClient) ListOperationalTaskInvoker(request *model.ListOperationalTaskRequest) *ListOperationalTaskInvoker {
+	requestDef := GenReqDefForListOperationalTask()
+	return &ListOperationalTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListOperationalTaskDetail 获取运维任务执行信息
+//
+// 获取运维任务执行信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListOperationalTaskDetail(request *model.ListOperationalTaskDetailRequest) (*model.ListOperationalTaskDetailResponse, error) {
+	requestDef := GenReqDefForListOperationalTaskDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListOperationalTaskDetailResponse), nil
+	}
+}
+
+// ListOperationalTaskDetailInvoker 获取运维任务执行信息
+func (c *DwsClient) ListOperationalTaskDetailInvoker(request *model.ListOperationalTaskDetailRequest) *ListOperationalTaskDetailInvoker {
+	requestDef := GenReqDefForListOperationalTaskDetail()
+	return &ListOperationalTaskDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListPlanExecLogs 查看计划执行日志
 //
 // 查看计划执行日志。
@@ -2467,6 +2698,27 @@ func (c *DwsClient) ListRedistributionSchema(request *model.ListRedistributionSc
 func (c *DwsClient) ListRedistributionSchemaInvoker(request *model.ListRedistributionSchemaRequest) *ListRedistributionSchemaInvoker {
 	requestDef := GenReqDefForListRedistributionSchema()
 	return &ListRedistributionSchemaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResourceByTag 使用标签查询集群
+//
+// 使用标签查询集群。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ListResourceByTag(request *model.ListResourceByTagRequest) (*model.ListResourceByTagResponse, error) {
+	requestDef := GenReqDefForListResourceByTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourceByTagResponse), nil
+	}
+}
+
+// ListResourceByTagInvoker 使用标签查询集群
+func (c *DwsClient) ListResourceByTagInvoker(request *model.ListResourceByTagRequest) *ListResourceByTagInvoker {
+	requestDef := GenReqDefForListResourceByTag()
+	return &ListResourceByTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSchemas 查询集群模式空间信息
@@ -2553,9 +2805,9 @@ func (c *DwsClient) ListSnapshotPolicyInvoker(request *model.ListSnapshotPolicyR
 	return &ListSnapshotPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListSnapshotStatistics 快照统计信息
+// ListSnapshotStatistics 查询快照统计信息
 //
-// 快照统计信息。
+// 查询快照统计信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ListSnapshotStatistics(request *model.ListSnapshotStatisticsRequest) (*model.ListSnapshotStatisticsResponse, error) {
@@ -2568,7 +2820,7 @@ func (c *DwsClient) ListSnapshotStatistics(request *model.ListSnapshotStatistics
 	}
 }
 
-// ListSnapshotStatisticsInvoker 快照统计信息
+// ListSnapshotStatisticsInvoker 查询快照统计信息
 func (c *DwsClient) ListSnapshotStatisticsInvoker(request *model.ListSnapshotStatisticsRequest) *ListSnapshotStatisticsInvoker {
 	requestDef := GenReqDefForListSnapshotStatistics()
 	return &ListSnapshotStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2595,7 +2847,7 @@ func (c *DwsClient) ListSnapshotsInvoker(request *model.ListSnapshotsRequest) *L
 	return &ListSnapshotsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListStatistics 查询资源统计信息列表
+// ListStatistics 查询当前可用资源数
 //
 // 查询当前可用资源数量，其中包括“可用集群和总集群（个）”、“可用节点和总节点（个）”、“总容量（GB）”。
 //
@@ -2610,7 +2862,7 @@ func (c *DwsClient) ListStatistics(request *model.ListStatisticsRequest) (*model
 	}
 }
 
-// ListStatisticsInvoker 查询资源统计信息列表
+// ListStatisticsInvoker 查询当前可用资源数
 func (c *DwsClient) ListStatisticsInvoker(request *model.ListStatisticsRequest) *ListStatisticsInvoker {
 	requestDef := GenReqDefForListStatistics()
 	return &ListStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -2943,6 +3195,48 @@ func (c *DwsClient) PauseDisasterRecoveryInvoker(request *model.PauseDisasterRec
 	return &PauseDisasterRecoveryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// PauseOperationalTask 批量暂停调度任务
+//
+// 批量暂停调度任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) PauseOperationalTask(request *model.PauseOperationalTaskRequest) (*model.PauseOperationalTaskResponse, error) {
+	requestDef := GenReqDefForPauseOperationalTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PauseOperationalTaskResponse), nil
+	}
+}
+
+// PauseOperationalTaskInvoker 批量暂停调度任务
+func (c *DwsClient) PauseOperationalTaskInvoker(request *model.PauseOperationalTaskRequest) *PauseOperationalTaskInvoker {
+	requestDef := GenReqDefForPauseOperationalTask()
+	return &PauseOperationalTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RefreshOperationalTask 同步当前集群运维任务状态
+//
+// 同步当前集群运维任务状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) RefreshOperationalTask(request *model.RefreshOperationalTaskRequest) (*model.RefreshOperationalTaskResponse, error) {
+	requestDef := GenReqDefForRefreshOperationalTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RefreshOperationalTaskResponse), nil
+	}
+}
+
+// RefreshOperationalTaskInvoker 同步当前集群运维任务状态
+func (c *DwsClient) RefreshOperationalTaskInvoker(request *model.RefreshOperationalTaskRequest) *RefreshOperationalTaskInvoker {
+	requestDef := GenReqDefForRefreshOperationalTask()
+	return &RefreshOperationalTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ResetPassword 重置密码
 //
 // 重置集群管理员密码。
@@ -3157,6 +3451,27 @@ func (c *DwsClient) RestoreTable(request *model.RestoreTableRequest) (*model.Res
 func (c *DwsClient) RestoreTableInvoker(request *model.RestoreTableRequest) *RestoreTableInvoker {
 	requestDef := GenReqDefForRestoreTable()
 	return &RestoreTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResumeOperationalTask 批量恢复调度任务
+//
+// 批量恢复调度任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ResumeOperationalTask(request *model.ResumeOperationalTaskRequest) (*model.ResumeOperationalTaskResponse, error) {
+	requestDef := GenReqDefForResumeOperationalTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResumeOperationalTaskResponse), nil
+	}
+}
+
+// ResumeOperationalTaskInvoker 批量恢复调度任务
+func (c *DwsClient) ResumeOperationalTaskInvoker(request *model.ResumeOperationalTaskRequest) *ResumeOperationalTaskInvoker {
+	requestDef := GenReqDefForResumeOperationalTask()
+	return &ResumeOperationalTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // RotateKey 轮转密钥
@@ -3481,6 +3796,27 @@ func (c *DwsClient) ShowInstanceInvoker(request *model.ShowInstanceRequest) *Sho
 	return &ShowInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowOperationalTaskConfig 查询调度运维任务公共配置
+//
+// 查询调度运维任务公共配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ShowOperationalTaskConfig(request *model.ShowOperationalTaskConfigRequest) (*model.ShowOperationalTaskConfigResponse, error) {
+	requestDef := GenReqDefForShowOperationalTaskConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowOperationalTaskConfigResponse), nil
+	}
+}
+
+// ShowOperationalTaskConfigInvoker 查询调度运维任务公共配置
+func (c *DwsClient) ShowOperationalTaskConfigInvoker(request *model.ShowOperationalTaskConfigRequest) *ShowOperationalTaskConfigInvoker {
+	requestDef := GenReqDefForShowOperationalTaskConfig()
+	return &ShowOperationalTaskConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowQueryDetail 查询SQL执行信息
 //
 // 查询SQL执行信息。
@@ -3523,9 +3859,9 @@ func (c *DwsClient) ShowResizePreparationInvoker(request *model.ShowResizePrepar
 	return &ShowResizePreparationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowResourceStatistics 查询资源统计
+// ShowResourceStatistics 查询资源统计信息
 //
-// 该接口用于查询资源统计。
+// 该接口用于查询资源统计信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) ShowResourceStatistics(request *model.ShowResourceStatisticsRequest) (*model.ShowResourceStatisticsResponse, error) {
@@ -3538,7 +3874,7 @@ func (c *DwsClient) ShowResourceStatistics(request *model.ShowResourceStatistics
 	}
 }
 
-// ShowResourceStatisticsInvoker 查询资源统计
+// ShowResourceStatisticsInvoker 查询资源统计信息
 func (c *DwsClient) ShowResourceStatisticsInvoker(request *model.ShowResourceStatisticsRequest) *ShowResourceStatisticsInvoker {
 	requestDef := GenReqDefForShowResourceStatistics()
 	return &ShowResourceStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -3809,8 +4145,8 @@ func (c *DwsClient) SwitchFailoverDisasterInvoker(request *model.SwitchFailoverD
 //
 // 当集群状态为“非均衡”时会出现某些节点主实例增多，从而负载压力较大。这种情况下集群状态是正常的，但整体性能要低于均衡状态。可进行集群主备恢复操作将集群状态切换为“可用”状态。
 // **约束限制**：
-//  集群主备恢复仅8.1.1.202及以上版本支持。
-//  集群主备恢复将会短暂中断业务，中断时间根据用户自身业务量所决定，建议用户在业务低峰期执行此操作。
+// 集群主备恢复仅8.1.1.202及以上版本支持。
+// 集群主备恢复将会短暂中断业务，中断时间根据用户自身业务量所决定，建议用户在业务低峰期执行此操作。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *DwsClient) SwitchOverCluster(request *model.SwitchOverClusterRequest) (*model.SwitchOverClusterResponse, error) {
@@ -3857,8 +4193,8 @@ func (c *DwsClient) SwitchPlanStageInvoker(request *model.SwitchPlanStageRequest
 // 容灾状态为“运行中”时可以执行灾备切换操作。
 // 灾备切换需要一定时间，在此期间，原生产集群将不可用。
 // 不同场景下进行灾备切换，RPO（Recovery Point Object，灾难发生后，系统和数据必须恢复到的时间点要求。）说明如下：
-//   生产集群在“可用”的状态下，RPO&#x3D;0。
-//   生产集群在“不可用”的状态下，无法保证RPO&#x3D;0，但数据至少可恢复到生产集群“最近容灾成功时间”。
+// 生产集群在“可用”的状态下，RPO&#x3D;0。
+// 生产集群在“不可用”的状态下，无法保证RPO&#x3D;0，但数据至少可恢复到生产集群“最近容灾成功时间”。
 // 仅支持DWS 2.0集群。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -4135,6 +4471,48 @@ func (c *DwsClient) UpdateMaintenanceWindowInvoker(request *model.UpdateMaintena
 	return &UpdateMaintenanceWindowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateOperationalTask 修改调度任务
+//
+// 修改调度任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) UpdateOperationalTask(request *model.UpdateOperationalTaskRequest) (*model.UpdateOperationalTaskResponse, error) {
+	requestDef := GenReqDefForUpdateOperationalTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateOperationalTaskResponse), nil
+	}
+}
+
+// UpdateOperationalTaskInvoker 修改调度任务
+func (c *DwsClient) UpdateOperationalTaskInvoker(request *model.UpdateOperationalTaskRequest) *UpdateOperationalTaskInvoker {
+	requestDef := GenReqDefForUpdateOperationalTask()
+	return &UpdateOperationalTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateOperationalTaskConfig 修改调度运维任务公共配置
+//
+// 修改调度运维任务公共配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) UpdateOperationalTaskConfig(request *model.UpdateOperationalTaskConfigRequest) (*model.UpdateOperationalTaskConfigResponse, error) {
+	requestDef := GenReqDefForUpdateOperationalTaskConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateOperationalTaskConfigResponse), nil
+	}
+}
+
+// UpdateOperationalTaskConfigInvoker 修改调度运维任务公共配置
+func (c *DwsClient) UpdateOperationalTaskConfigInvoker(request *model.UpdateOperationalTaskConfigRequest) *UpdateOperationalTaskConfigInvoker {
+	requestDef := GenReqDefForUpdateOperationalTaskConfig()
+	return &UpdateOperationalTaskConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateQueueBaseInfo 更新资源池基础信息
 //
 // 更新资源池基础信息。
@@ -4259,4 +4637,25 @@ func (c *DwsClient) UpdateWorkloadRule(request *model.UpdateWorkloadRuleRequest)
 func (c *DwsClient) UpdateWorkloadRuleInvoker(request *model.UpdateWorkloadRuleRequest) *UpdateWorkloadRuleInvoker {
 	requestDef := GenReqDefForUpdateWorkloadRule()
 	return &UpdateWorkloadRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ValidateDbData 校验schema或table列表数据
+//
+// 传入schema或table列表数据，返回存在的数据列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DwsClient) ValidateDbData(request *model.ValidateDbDataRequest) (*model.ValidateDbDataResponse, error) {
+	requestDef := GenReqDefForValidateDbData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ValidateDbDataResponse), nil
+	}
+}
+
+// ValidateDbDataInvoker 校验schema或table列表数据
+func (c *DwsClient) ValidateDbDataInvoker(request *model.ValidateDbDataRequest) *ValidateDbDataInvoker {
+	requestDef := GenReqDefForValidateDbData()
+	return &ValidateDbDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

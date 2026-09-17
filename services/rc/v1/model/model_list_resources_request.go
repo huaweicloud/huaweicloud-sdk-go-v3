@@ -29,6 +29,9 @@ type ListResourcesRequest struct {
 
 	// 分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
 	Marker *string `json:"marker,omitempty"`
+
+	// 资源组ID
+	GroupId *string `json:"group_id,omitempty"`
 }
 
 func (o ListResourcesRequest) String() string {

@@ -15,6 +15,9 @@ type UpdateDcDsRequest struct {
 	// 采集数据源id，创建数据源配置时设置，节点下唯一。
 	DsId string `json:"ds_id"`
 
+	// 指此配置是否只更新了名称，默认值为false。 - true: 配置中只更新了名称 - false: 配置中包含其他配置参数更新
+	UpdateNameOnly *bool `json:"update_name_only,omitempty"`
+
 	Body *UpdateDcDsReqDto `json:"body,omitempty"`
 }
 

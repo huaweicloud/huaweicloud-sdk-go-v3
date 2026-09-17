@@ -23,6 +23,9 @@ type AcceptManualReviewRequest struct {
 
 	// 流水线步骤ID
 	StepRunId string `json:"step_run_id"`
+
+	// 审核意见
+	ApprovalDescription *string `json:"approval_description,omitempty"`
 }
 
 func (o AcceptManualReviewRequest) String() string {

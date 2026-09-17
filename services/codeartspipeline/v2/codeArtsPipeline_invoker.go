@@ -5,6 +5,22 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/codeartspipeline/v2/model"
 )
 
+type AcceptCheckpointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AcceptCheckpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AcceptCheckpointInvoker) Invoke() (*model.AcceptCheckpointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AcceptCheckpointResponse), nil
+	}
+}
+
 type AcceptManualReviewInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -50,6 +66,22 @@ func (i *BatchShowPipelinesLatestStatusInvoker) Invoke() (*model.BatchShowPipeli
 		return nil, err
 	} else {
 		return result.(*model.BatchShowPipelinesLatestStatusResponse), nil
+	}
+}
+
+type CreateAlertPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAlertPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAlertPolicyInvoker) Invoke() (*model.CreateAlertPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAlertPolicyResponse), nil
 	}
 }
 
@@ -130,6 +162,22 @@ func (i *CreatePipelineNewInvoker) Invoke() (*model.CreatePipelineNewResponse, e
 		return nil, err
 	} else {
 		return result.(*model.CreatePipelineNewResponse), nil
+	}
+}
+
+type CreatePipelineTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePipelineTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreatePipelineTagInvoker) Invoke() (*model.CreatePipelineTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePipelineTagResponse), nil
 	}
 }
 
@@ -229,6 +277,38 @@ func (i *CreateStrategyInvoker) Invoke() (*model.CreateStrategyResponse, error) 
 	}
 }
 
+type CreateVariableGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateVariableGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateVariableGroupInvoker) Invoke() (*model.CreateVariableGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateVariableGroupResponse), nil
+	}
+}
+
+type DeleteAlertPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAlertPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAlertPolicyInvoker) Invoke() (*model.DeleteAlertPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAlertPolicyResponse), nil
+	}
+}
+
 type DeleteBasicPluginInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -274,6 +354,22 @@ func (i *DeletePipelineGroupInvoker) Invoke() (*model.DeletePipelineGroupRespons
 		return nil, err
 	} else {
 		return result.(*model.DeletePipelineGroupResponse), nil
+	}
+}
+
+type DeletePipelineTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePipelineTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeletePipelineTagInvoker) Invoke() (*model.DeletePipelineTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePipelineTagResponse), nil
 	}
 }
 
@@ -354,6 +450,22 @@ func (i *DeleteStrategyInvoker) Invoke() (*model.DeleteStrategyResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.DeleteStrategyResponse), nil
+	}
+}
+
+type DeleteVariableGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteVariableGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteVariableGroupInvoker) Invoke() (*model.DeleteVariableGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteVariableGroupResponse), nil
 	}
 }
 
@@ -482,6 +594,22 @@ func (i *ListPipelineSimpleInfoInvoker) Invoke() (*model.ListPipelineSimpleInfoR
 		return nil, err
 	} else {
 		return result.(*model.ListPipelineSimpleInfoResponse), nil
+	}
+}
+
+type ListPipelineTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPipelineTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPipelineTagInvoker) Invoke() (*model.ListPipelineTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPipelineTagResponse), nil
 	}
 }
 
@@ -661,6 +789,22 @@ func (i *ListTemplatesInvoker) Invoke() (*model.ListTemplatesResponse, error) {
 	}
 }
 
+type ListVariableGroupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVariableGroupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListVariableGroupsInvoker) Invoke() (*model.ListVariableGroupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVariableGroupsResponse), nil
+	}
+}
+
 type PublishPluginInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -770,6 +914,22 @@ func (i *RunPipelineInvoker) Invoke() (*model.RunPipelineResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.RunPipelineResponse), nil
+	}
+}
+
+type ShowAlertPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAlertPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAlertPolicyInvoker) Invoke() (*model.ShowAlertPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAlertPolicyResponse), nil
 	}
 }
 
@@ -1074,6 +1234,22 @@ func (i *ShowTemplateDetailInvoker) Invoke() (*model.ShowTemplateDetailResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowTemplateDetailResponse), nil
+	}
+}
+
+type ShowVariableGroupDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVariableGroupDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowVariableGroupDetailInvoker) Invoke() (*model.ShowVariableGroupDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVariableGroupDetailResponse), nil
 	}
 }
 

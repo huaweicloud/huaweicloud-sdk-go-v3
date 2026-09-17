@@ -29,6 +29,9 @@ type RouterDetailRespDto struct {
 
 	// 是否可用
 	Available *bool `json:"available,omitempty"`
+
+	// 路由类型：standard|customized
+	Type *string `json:"type,omitempty"`
 }
 
 func (o RouterDetailRespDto) String() string {

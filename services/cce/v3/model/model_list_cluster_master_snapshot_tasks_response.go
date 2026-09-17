@@ -9,15 +9,15 @@ import (
 // ListClusterMasterSnapshotTasksResponse Response Object
 type ListClusterMasterSnapshotTasksResponse struct {
 
-	// api版本，默认为v3.1
+	// **参数解释：** API版本，默认为v3.1 **约束限制：** 不涉及 **取值范围：** - v3.1  **默认取值：** v3.1
 	ApiVersion *string `json:"apiVersion,omitempty"`
 
-	// 任务类型
+	// **参数解释：** 任务类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Kind *string `json:"kind,omitempty"`
 
 	Metadata *SnapshotTaskMetadata `json:"metadata,omitempty"`
 
-	// 备份任务列表
+	// **参数解释：** 备份任务列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Items *[]SnapshotTask `json:"items,omitempty"`
 
 	Status         *SnapshotTaskStatus `json:"status,omitempty"`

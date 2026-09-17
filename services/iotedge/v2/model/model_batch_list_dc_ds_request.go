@@ -15,6 +15,9 @@ type BatchListDcDsRequest struct {
 	// 数据源所属的模块id
 	ModuleId *string `json:"module_id,omitempty"`
 
+	// 采集数据源名称，允许中、数字、英文大小写、下划线、中划线
+	Name *string `json:"name,omitempty"`
+
 	// 查询的起始位置，取值范围为非负整数，默认为0
 	Offset *int32 `json:"offset,omitempty"`
 

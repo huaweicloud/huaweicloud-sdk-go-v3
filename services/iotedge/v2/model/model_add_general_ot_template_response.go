@@ -8,8 +8,7 @@ import (
 
 // AddGeneralOtTemplateResponse Response Object
 type AddGeneralOtTemplateResponse struct {
-	Body           *string `json:"body,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o AddGeneralOtTemplateResponse) String() string {

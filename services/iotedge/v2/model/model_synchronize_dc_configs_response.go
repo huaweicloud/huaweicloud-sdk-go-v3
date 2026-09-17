@@ -8,8 +8,7 @@ import (
 
 // SynchronizeDcConfigsResponse Response Object
 type SynchronizeDcConfigsResponse struct {
-	Body           *string `json:"body,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	HttpStatusCode int `json:"-"`
 }
 
 func (o SynchronizeDcConfigsResponse) String() string {

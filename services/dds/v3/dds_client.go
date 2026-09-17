@@ -1048,6 +1048,7 @@ func (c *DdsClient) ListDatastoreVersionsInvoker(request *model.ListDatastoreVer
 	return &ListDatastoreVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListErrorLogs 查询数据库错误日志
 //
 // 查询数据库错误信息。
@@ -1063,6 +1064,7 @@ func (c *DdsClient) ListErrorLogs(request *model.ListErrorLogsRequest) (*model.L
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListErrorLogsInvoker 查询数据库错误日志
 func (c *DdsClient) ListErrorLogsInvoker(request *model.ListErrorLogsRequest) *ListErrorLogsInvoker {
 	requestDef := GenReqDefForListErrorLogs()
@@ -1090,6 +1092,7 @@ func (c *DdsClient) ListFlavorInfosInvoker(request *model.ListFlavorInfosRequest
 	return &ListFlavorInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListFlavors 查询所有实例规格信息
 //
 // 查询指定条件下的所有实例规格信息。
@@ -1105,6 +1108,7 @@ func (c *DdsClient) ListFlavors(request *model.ListFlavorsRequest) (*model.ListF
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListFlavorsInvoker 查询所有实例规格信息
 func (c *DdsClient) ListFlavorsInvoker(request *model.ListFlavorsRequest) *ListFlavorsInvoker {
 	requestDef := GenReqDefForListFlavors()
@@ -1384,6 +1388,7 @@ func (c *DdsClient) ListSessionsInvoker(request *model.ListSessionsRequest) *Lis
 	return &ListSessionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListSlowLogs 查询数据库慢日志
 //
 // 查询数据库慢日志信息。
@@ -1399,6 +1404,7 @@ func (c *DdsClient) ListSlowLogs(request *model.ListSlowLogsRequest) (*model.Lis
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListSlowLogsInvoker 查询数据库慢日志
 func (c *DdsClient) ListSlowLogsInvoker(request *model.ListSlowLogsRequest) *ListSlowLogsInvoker {
 	requestDef := GenReqDefForListSlowLogs()

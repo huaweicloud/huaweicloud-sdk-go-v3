@@ -16,7 +16,7 @@ type UpdatePipelineInfoRequest struct {
 	PipelineId string `json:"pipeline_id"`
 
 	// 微服务ID
-	ComponentId *string `json:"componentId,omitempty"`
+	ComponentId *string `json:"component_id,omitempty"`
 
 	Body *PipelineDto `json:"body,omitempty"`
 }

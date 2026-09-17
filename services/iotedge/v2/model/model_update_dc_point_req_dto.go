@@ -25,6 +25,9 @@ type UpdateDcPointReqDto struct {
 	DataType *string `json:"data_type,omitempty"`
 
 	ProcessingConfig *ProcessingConfigDto `json:"processing_config,omitempty"`
+
+	// 点位启停状态，默认开启
+	Active *bool `json:"active,omitempty"`
 }
 
 func (o UpdateDcPointReqDto) String() string {

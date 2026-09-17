@@ -12,7 +12,7 @@ type ListEdgeNodesRequest struct {
 	// 节点名称
 	Name *string `json:"name,omitempty"`
 
-	// 节点状态,OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|UPGRADING
+	// 节点状态,OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|UPGRADING|FROZEN
 	State *string `json:"state,omitempty"`
 
 	// 节点所属资源类型，advanced|standard
@@ -26,6 +26,9 @@ type ListEdgeNodesRequest struct {
 
 	// 节点id列表,查询ID在给的节点ID列表内的节点信息
 	NodeIds *[]string `json:"node_ids,omitempty"`
+
+	// 应用ID，查询部署了该应用的节点列表。
+	AppId *string `json:"app_id,omitempty"`
 
 	// 查询的起始位置，取值范围为非负整数，默认为0
 	Offset *int32 `json:"offset,omitempty"`

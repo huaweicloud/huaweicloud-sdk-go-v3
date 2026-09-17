@@ -512,6 +512,10 @@ func GenReqDefForDeleteAddonInstance() *def.HttpRequestDef {
 		WithJsonTag("cluster_id").
 		WithLocationType(def.Query))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -730,6 +734,10 @@ func GenReqDefForDeleteRelease() *def.HttpRequestDef {
 		WithJsonTag("show_resources").
 		WithLocationType(def.Query))
 
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -903,6 +911,30 @@ func GenReqDefForHibernateCluster() *def.HttpRequestDef {
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForInplaceMigrateNode() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/api/v3/projects/{project_id}/clusters/{cluster_id}/nodes/operation/in-place-migrateto/{target_cluster_id}").
+		WithResponse(new(model.InplaceMigrateNodeResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ClusterId").
+		WithJsonTag("cluster_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TargetClusterId").
+		WithJsonTag("target_cluster_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1138,6 +1170,10 @@ func GenReqDefForListNodePools() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ShowDefaultNodePool").
 		WithJsonTag("showDefaultNodePool").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AdvanceStatus").
+		WithJsonTag("advanceStatus").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -1381,6 +1417,11 @@ func GenReqDefForRemoveNode() *def.HttpRequestDef {
 		WithName("ClusterId").
 		WithJsonTag("cluster_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("RemoveNodeSystemSecurityGroup").
+		WithJsonTag("removeNodeSystemSecurityGroup").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -1809,6 +1850,10 @@ func GenReqDefForShowNodePool() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ErrorStatus").
 		WithJsonTag("errorStatus").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AdvanceStatus").
+		WithJsonTag("advanceStatus").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

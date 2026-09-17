@@ -27,6 +27,9 @@ type BatchListDcPointsRequest struct {
 	// 设备标识，精确查询
 	DeviceId *string `json:"device_id,omitempty"`
 
+	// 点位启停状态筛选
+	Active *bool `json:"active,omitempty"`
+
 	// 查询的起始位置，取值范围为非负整数，默认为0
 	Offset *int32 `json:"offset,omitempty"`
 

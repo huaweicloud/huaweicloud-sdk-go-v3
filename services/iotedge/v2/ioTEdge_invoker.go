@@ -37,6 +37,38 @@ func (i *CreateInstallCmdInvoker) Invoke() (*model.CreateInstallCmdResponse, err
 	}
 }
 
+type CreateReinstallCmdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateReinstallCmdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateReinstallCmdInvoker) Invoke() (*model.CreateReinstallCmdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateReinstallCmdResponse), nil
+	}
+}
+
+type CreateUpgradeCmdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateUpgradeCmdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateUpgradeCmdInvoker) Invoke() (*model.CreateUpgradeCmdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateUpgradeCmdResponse), nil
+	}
+}
+
 type DeleteEdgeNodeInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -114,6 +146,70 @@ func (i *UpdateEdgeNodeInvoker) Invoke() (*model.UpdateEdgeNodeResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdateEdgeNodeResponse), nil
+	}
+}
+
+type CreateClientNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateClientNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateClientNodeInvoker) Invoke() (*model.CreateClientNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateClientNodeResponse), nil
+	}
+}
+
+type UpdateClientNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateClientNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateClientNodeInvoker) Invoke() (*model.UpdateClientNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateClientNodeResponse), nil
+	}
+}
+
+type ShowEdgeNodeSoftwareVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowEdgeNodeSoftwareVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowEdgeNodeSoftwareVersionInvoker) Invoke() (*model.ShowEdgeNodeSoftwareVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowEdgeNodeSoftwareVersionResponse), nil
+	}
+}
+
+type BindNodeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BindNodeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BindNodeInvoker) Invoke() (*model.BindNodeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BindNodeResponse), nil
 	}
 }
 
@@ -1125,6 +1221,104 @@ func (i *UpdateScheduleInvoker) Invoke() (*model.UpdateScheduleResponse, error) 
 	}
 }
 
+type InvokeDeleteProxyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *InvokeDeleteProxyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *InvokeDeleteProxyInvoker) Invoke() (*model.InvokeDeleteProxyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.InvokeDeleteProxyResponse), nil
+	}
+}
+
+type InvokeGetProxyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *InvokeGetProxyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *InvokeGetProxyInvoker) Invoke() (*model.InvokeGetProxyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.InvokeGetProxyResponse), nil
+	}
+}
+
+type InvokePatchProxyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *InvokePatchProxyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *InvokePatchProxyInvoker) Invoke() (*model.InvokePatchProxyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.InvokePatchProxyResponse), nil
+	}
+}
+
+type InvokePostProxyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *InvokePostProxyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *InvokePostProxyInvoker) Invoke() (*model.InvokePostProxyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.InvokePostProxyResponse), nil
+	}
+}
+
+type InvokePutProxyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *InvokePutProxyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *InvokePutProxyInvoker) Invoke() (*model.InvokePutProxyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.InvokePutProxyResponse), nil
+	}
+}
+
+type BatchConfirmConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *BatchConfirmConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+func (i *BatchConfirmConfigsInvoker) Invoke() (*model.BatchConfirmConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchConfirmConfigsResponse), nil
+	}
+}
+
 type BatchConfirmConfigsNewInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1314,5 +1508,53 @@ func (i *UpdateNaInvoker) Invoke() (*model.UpdateNaResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.UpdateNaResponse), nil
+	}
+}
+
+type CreatePushChannelInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePushChannelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreatePushChannelInvoker) Invoke() (*model.CreatePushChannelResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePushChannelResponse), nil
+	}
+}
+
+type DeletePushChannelInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeletePushChannelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeletePushChannelInvoker) Invoke() (*model.DeletePushChannelResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeletePushChannelResponse), nil
+	}
+}
+
+type ListPushChannelsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPushChannelsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPushChannelsInvoker) Invoke() (*model.ListPushChannelsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPushChannelsResponse), nil
 	}
 }

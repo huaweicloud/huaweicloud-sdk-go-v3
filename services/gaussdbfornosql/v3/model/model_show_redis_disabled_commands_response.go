@@ -13,7 +13,7 @@ import (
 type ShowRedisDisabledCommandsResponse struct {
 
 	// 总数。
-	TotalCount *string `json:"total_count,omitempty"`
+	TotalCount *int32 `json:"total_count,omitempty"`
 
 	// 禁用类型。
 	DisabledType *ShowRedisDisabledCommandsResponseDisabledType `json:"disabled_type,omitempty"`

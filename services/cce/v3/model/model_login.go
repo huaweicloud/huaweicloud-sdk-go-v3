@@ -8,7 +8,7 @@ import (
 
 type Login struct {
 
-	// 选择密钥对方式登录时的密钥对名称。
+	// **参数解释**： 选择密钥对方式登录时的密钥对名称。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	SshKey *string `json:"sshKey,omitempty"`
 
 	UserPassword *UserPassword `json:"userPassword,omitempty"`

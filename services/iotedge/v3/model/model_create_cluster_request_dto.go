@@ -15,6 +15,9 @@ type CreateClusterRequestDto struct {
 	Description *string `json:"description,omitempty"`
 
 	ClusterNodeConfig *ClusterNodeConfig `json:"cluster_node_config,omitempty"`
+
+	// 集群类型
+	ClusterType *string `json:"cluster_type,omitempty"`
 }
 
 func (o CreateClusterRequestDto) String() string {

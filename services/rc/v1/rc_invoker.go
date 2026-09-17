@@ -117,6 +117,118 @@ func (i *UpdateResourceGroupInvoker) Invoke() (*model.UpdateResourceGroupRespons
 	}
 }
 
+type CreateStoredQueryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateStoredQueryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateStoredQueryInvoker) Invoke() (*model.CreateStoredQueryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateStoredQueryResponse), nil
+	}
+}
+
+type DeleteStoredQueryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteStoredQueryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteStoredQueryInvoker) Invoke() (*model.DeleteStoredQueryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteStoredQueryResponse), nil
+	}
+}
+
+type ListSchemasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSchemasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSchemasInvoker) Invoke() (*model.ListSchemasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSchemasResponse), nil
+	}
+}
+
+type ListStoredQueriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListStoredQueriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListStoredQueriesInvoker) Invoke() (*model.ListStoredQueriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListStoredQueriesResponse), nil
+	}
+}
+
+type RunQueryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RunQueryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RunQueryInvoker) Invoke() (*model.RunQueryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RunQueryResponse), nil
+	}
+}
+
+type ShowStoredQueryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStoredQueryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowStoredQueryInvoker) Invoke() (*model.ShowStoredQueryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStoredQueryResponse), nil
+	}
+}
+
+type UpdateStoredQueryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateStoredQueryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateStoredQueryInvoker) Invoke() (*model.UpdateStoredQueryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateStoredQueryResponse), nil
+	}
+}
+
 type ShowResourceRelationsInvoker struct {
 	*invoker.BaseInvoker
 }

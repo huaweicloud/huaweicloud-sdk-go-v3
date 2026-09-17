@@ -1093,6 +1093,70 @@ func (i *UpdatePasswordPolicyV5Invoker) Invoke() (*model.UpdatePasswordPolicyV5R
 	}
 }
 
+type DeleteServiceSpecificCredentialV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteServiceSpecificCredentialV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteServiceSpecificCredentialV5Invoker) Invoke() (*model.DeleteServiceSpecificCredentialV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteServiceSpecificCredentialV5Response), nil
+	}
+}
+
+type ListServiceSpecificCredentialSupportedServicesV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListServiceSpecificCredentialSupportedServicesV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListServiceSpecificCredentialSupportedServicesV5Invoker) Invoke() (*model.ListServiceSpecificCredentialSupportedServicesV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListServiceSpecificCredentialSupportedServicesV5Response), nil
+	}
+}
+
+type ListServiceSpecificCredentialsV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListServiceSpecificCredentialsV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListServiceSpecificCredentialsV5Invoker) Invoke() (*model.ListServiceSpecificCredentialsV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListServiceSpecificCredentialsV5Response), nil
+	}
+}
+
+type UpdateServiceSpecificCredentialV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateServiceSpecificCredentialV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateServiceSpecificCredentialV5Invoker) Invoke() (*model.UpdateServiceSpecificCredentialV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateServiceSpecificCredentialV5Response), nil
+	}
+}
+
 type CreateUserV5Invoker struct {
 	*invoker.BaseInvoker
 }

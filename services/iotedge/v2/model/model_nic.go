@@ -14,6 +14,9 @@ type Nic struct {
 
 	// 网卡ip
 	Ip *string `json:"ip,omitempty"`
+
+	// 子网掩码的位数
+	MaskLen *int32 `json:"mask_len,omitempty"`
 }
 
 func (o Nic) String() string {

@@ -21,7 +21,7 @@ type InfluxdbSlowLogDetail struct {
 	OperateType string `json:"operate_type"`
 
 	// 执行时间。单位：ms
-	CostTime string `json:"cost_time"`
+	CostTime int32 `json:"cost_time"`
 
 	// 日志产生时间，UTC时间。 格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
 	LogTime string `json:"log_time"`

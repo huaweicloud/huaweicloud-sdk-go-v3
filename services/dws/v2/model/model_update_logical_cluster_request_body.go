@@ -12,7 +12,7 @@ type UpdateLogicalClusterRequestBody struct {
 	// **参数解释**： 逻辑集群编辑环列表信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	ClusterRings []ClusterRing `json:"cluster_rings"`
 
-	// **参数解释**： 重分布模式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	// **参数解释**： 重分布模式。 **约束限制**： 不涉及。 **取值范围**： - null：离线模式 - read-only：离线模式 - insert：在线模式  **默认取值**： 不涉及。
 	Mode *string `json:"mode,omitempty"`
 
 	// **参数解释**： 查杀作业等待时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。

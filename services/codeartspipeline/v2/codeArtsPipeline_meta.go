@@ -6,6 +6,34 @@ import (
 	"net/http"
 )
 
+func GenReqDefForAcceptCheckpoint() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v5/{project_id}/api/pipelines/{pipeline_id}/pipeline-runs/{pipeline_run_id}/steps/{step_run_id}/manual/pass").
+		WithResponse(new(model.AcceptCheckpointResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("StepRunId").
+		WithJsonTag("step_run_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PipelineId").
+		WithJsonTag("pipeline_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PipelineRunId").
+		WithJsonTag("pipeline_run_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForAcceptManualReview() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -33,6 +61,11 @@ func GenReqDefForAcceptManualReview() *def.HttpRequestDef {
 		WithName("StepRunId").
 		WithJsonTag("step_run_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ApprovalDescription").
+		WithJsonTag("approval_description").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -79,6 +112,26 @@ func GenReqDefForBatchShowPipelinesLatestStatus() *def.HttpRequestDef {
 		WithLocationType(def.Body))
 
 	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreateAlertPolicy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v5/{tenant_id}/api/alert/policies").
+		WithResponse(new(model.CreateAlertPolicyResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TenantId").
+		WithJsonTag("tenant_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -190,6 +243,26 @@ func GenReqDefForCreatePipelineNew() *def.HttpRequestDef {
 		WithName("ComponentId").
 		WithJsonTag("component_id").
 		WithLocationType(def.Query))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForCreatePipelineTag() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v5/{project_id}/api/pipeline-tag/create").
+		WithResponse(new(model.CreatePipelineTagResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
@@ -331,6 +404,46 @@ func GenReqDefForCreateStrategy() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForCreateVariableGroup() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v5/{project_id}/api/pipeline/variable/group/create").
+		WithResponse(new(model.CreateVariableGroupResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteAlertPolicy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v5/{tenant_id}/api/alert/policies/{policy_id}").
+		WithResponse(new(model.DeleteAlertPolicyResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TenantId").
+		WithJsonTag("tenant_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PolicyId").
+		WithJsonTag("policy_id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForDeleteBasicPlugin() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodDelete).
@@ -399,6 +512,27 @@ func GenReqDefForDeletePipelineGroup() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Id").
 		WithJsonTag("id").
+		WithLocationType(def.Query))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeletePipelineTag() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v5/{project_id}/api/pipeline-tag/delete").
+		WithResponse(new(model.DeletePipelineTagResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TagId").
+		WithJsonTag("tagId").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -514,6 +648,27 @@ func GenReqDefForDeleteStrategy() *def.HttpRequestDef {
 		WithName("DomainId").
 		WithJsonTag("domain_id").
 		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForDeleteVariableGroup() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodDelete).
+		WithPath("/v5/{project_id}/api/pipeline/variable/group/delete").
+		WithResponse(new(model.DeleteVariableGroupResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -734,6 +889,31 @@ func GenReqDefForListPipelineSimpleInfo() *def.HttpRequestDef {
 		WithContentType("application/json")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForListPipelineTag() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v5/{project_id}/api/pipeline-tag/list").
+		WithResponse(new(model.ListPipelineTagResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjId").
+		WithJsonTag("proj_id").
+		WithLocationType(def.Query))
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
 
@@ -1083,6 +1263,26 @@ func GenReqDefForListTemplates() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListVariableGroups() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v5/{project_id}/api/pipeline/variable/group/list").
+		WithResponse(new(model.ListVariableGroupsResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForPublishPlugin() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -1183,6 +1383,11 @@ func GenReqDefForRejectManualReview() *def.HttpRequestDef {
 		WithJsonTag("pipeline_run_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ApprovalDescription").
+		WithJsonTag("approval_description").
+		WithLocationType(def.Query))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }
@@ -1208,7 +1413,7 @@ func GenReqDefForRetryPipelineRun() *def.HttpRequestDef {
 		WithMethod(http.MethodPut).
 		WithPath("/v5/{project_id}/api/pipelines/{pipeline_id}/pipeline-runs/{pipeline_run_id}/retry").
 		WithResponse(new(model.RetryPipelineRunResponse)).
-		WithContentType("application/json")
+		WithContentType("application/json;charset=UTF-8")
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ProjectId").
@@ -1222,6 +1427,10 @@ func GenReqDefForRetryPipelineRun() *def.HttpRequestDef {
 		WithName("PipelineRunId").
 		WithJsonTag("pipeline_run_id").
 		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1246,6 +1455,26 @@ func GenReqDefForRunPipeline() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").
 		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
+func GenReqDefForShowAlertPolicy() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v5/{tenant_id}/api/alert/policies/{policy_id}").
+		WithResponse(new(model.ShowAlertPolicyResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TenantId").
+		WithJsonTag("tenant_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PolicyId").
+		WithJsonTag("policy_id").
+		WithLocationType(def.Path))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -1411,6 +1640,10 @@ func GenReqDefForShowPipelineRunDetail() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("PipelineRunId").
 		WithJsonTag("pipeline_run_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PipelineRunNumber").
+		WithJsonTag("pipeline_run_number").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -1699,6 +1932,26 @@ func GenReqDefForShowTemplateDetail() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForShowVariableGroupDetail() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v5/{project_id}/api/pipeline/variable/group/{id}").
+		WithResponse(new(model.ShowVariableGroupDetailResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ProjectId").
+		WithJsonTag("project_id").
+		WithLocationType(def.Path))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Id").
+		WithJsonTag("id").
+		WithLocationType(def.Path))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForStartNewPipeline() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -1850,7 +2103,7 @@ func GenReqDefForUpdatePipelineInfo() *def.HttpRequestDef {
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ComponentId").
-		WithJsonTag("componentId").
+		WithJsonTag("component_id").
 		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().

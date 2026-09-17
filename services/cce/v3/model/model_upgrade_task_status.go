@@ -6,16 +6,16 @@ import (
 	"strings"
 )
 
-// UpgradeTaskStatus 升级任务状态信息
+// UpgradeTaskStatus **参数解释：** 升级任务状态信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 type UpgradeTaskStatus struct {
 
-	// 升级任务状态. > Init：初始化 > Queuing：等待 > Running：运行中 > Pause：暂停 > Success：成功 > Failed：失败
+	// **参数解释：** 升级任务状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Queuing：等待 - Running：运行中 - Pause：暂停 - Success：成功 - Failed：失败  **默认取值：** 不涉及
 	Phase *string `json:"phase,omitempty"`
 
-	// 升级任务进度
+	// **参数解释：** 升级任务进度 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Progress *string `json:"progress,omitempty"`
 
-	// 升级任务结束时间
+	// **参数解释：** 升级任务结束时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	CompletionTime *string `json:"completionTime,omitempty"`
 }
 

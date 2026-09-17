@@ -18,10 +18,13 @@ type UpdateEdgeModuleReqDto struct {
 	// 边缘模块名称
 	ModuleName *string `json:"module_name,omitempty"`
 
-	ContainerSettings *ContainerSettingsReqDto `json:"container_settings,omitempty"`
-
 	// 模块期望状态: RUNNING(升级后期望模块运行)，STOPPED(升级后期望模块停止)，空值默认继承升级前模块期望状态
 	DesiredState *UpdateEdgeModuleReqDtoDesiredState `json:"desired_state,omitempty"`
+
+	ContainerSettings *ContainerSettingsReqDto `json:"container_settings,omitempty"`
+
+	// 是否强制升级
+	ForceUpgrade *bool `json:"force_upgrade,omitempty"`
 }
 
 func (o UpdateEdgeModuleReqDto) String() string {

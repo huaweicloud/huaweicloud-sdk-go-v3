@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// ClusterConfigurationsSpec Configuration的规格信息
+// ClusterConfigurationsSpec **参数解释：** Configuration的规格信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 type ClusterConfigurationsSpec struct {
 
-	// 组件配置项列表
+	// **参数解释：** 组件配置项列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Packages []ClusterConfigurationsSpecPackages `json:"packages"`
 }
 

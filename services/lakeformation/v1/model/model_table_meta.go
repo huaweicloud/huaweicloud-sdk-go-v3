@@ -27,6 +27,9 @@ type TableMeta struct {
 	// 表描述信息
 	Comments string `json:"comments"`
 
+	// **参数解释:** 表格式。支持{HIVE,ICEBERG,LANCE,PAIMON}，默认值为HIVE **约束限制:** 可选值为：HIVE, ICEBERG, LANCE,PAIMON
+	TableFormat *TableMetaTableFormat `json:"table_format,omitempty"`
+
 	// 分区列以外的所有字段。
 	Columns *[]Column `json:"columns,omitempty"`
 
@@ -80,6 +83,61 @@ func (c TableMetaTableType) MarshalJSON() ([]byte, error) {
 }
 
 func (c *TableMetaTableType) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type TableMetaTableFormat struct {
+	value string
+}
+
+type TableMetaTableFormatEnum struct {
+	HIVE    TableMetaTableFormat
+	ICEBERG TableMetaTableFormat
+	LANCE   TableMetaTableFormat
+	PAIMON  TableMetaTableFormat
+}
+
+func GetTableMetaTableFormatEnum() TableMetaTableFormatEnum {
+	return TableMetaTableFormatEnum{
+		HIVE: TableMetaTableFormat{
+			value: "HIVE",
+		},
+		ICEBERG: TableMetaTableFormat{
+			value: "ICEBERG",
+		},
+		LANCE: TableMetaTableFormat{
+			value: "LANCE",
+		},
+		PAIMON: TableMetaTableFormat{
+			value: "PAIMON",
+		},
+	}
+}
+
+func (c TableMetaTableFormat) Value() string {
+	return c.value
+}
+
+func (c TableMetaTableFormat) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *TableMetaTableFormat) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

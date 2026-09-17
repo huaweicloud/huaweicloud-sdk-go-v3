@@ -20,6 +20,9 @@ type CreateIpdProjectIssueParam struct {
 	// 提出项目domainId
 	SrcDomain *string `json:"src_domain,omitempty"`
 
+	// 所属特性集，适用于SF类型工作项
+	FeatureSet *string `json:"feature_set,omitempty"`
+
 	// 提交人Id
 	SubmittedBy *string `json:"submitted_by,omitempty"`
 
@@ -64,6 +67,24 @@ type CreateIpdProjectIssueParam struct {
 
 	// 是否需要分解
 	NeedBreak *string `json:"need_break,omitempty"`
+
+	// 工作项层级ID
+	CategoryLayerId *string `json:"category_layer_id,omitempty"`
+
+	// 父工作项ID
+	ParentId *string `json:"parent_id,omitempty"`
+
+	// IR关联的RR的ID
+	Ir2rr *string `json:"ir2rr,omitempty"`
+
+	// US关联的RR的ID
+	Us2rr *string `json:"us2rr,omitempty"`
+
+	// 关联工作项ID，多值使用英文逗号分隔
+	Link *string `json:"link,omitempty"`
+
+	// IR关联的SF的ID
+	Ir2feature *string `json:"ir2feature,omitempty"`
 }
 
 func (o CreateIpdProjectIssueParam) String() string {

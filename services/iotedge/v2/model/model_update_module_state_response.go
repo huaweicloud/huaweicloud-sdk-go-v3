@@ -21,6 +21,9 @@ type UpdateModuleStateResponse struct {
 	// 模块运行状态
 	State *UpdateModuleStateResponseState `json:"state,omitempty"`
 
+	// 模块健康状态
+	LivenessState *string `json:"liveness_state,omitempty"`
+
 	// 模块管控状态
 	ControlStatus *string `json:"control_status,omitempty"`
 
@@ -61,15 +64,17 @@ type UpdateModuleStateResponseState struct {
 }
 
 type UpdateModuleStateResponseStateEnum struct {
-	PENDING        UpdateModuleStateResponseState
-	PENDING_DELETE UpdateModuleStateResponseState
-	DELETE_FAILED  UpdateModuleStateResponseState
-	RUNNING        UpdateModuleStateResponseState
-	FAILED         UpdateModuleStateResponseState
-	SUCCEEDED      UpdateModuleStateResponseState
-	UNKNOWN        UpdateModuleStateResponseState
-	DELETE_SUCCESS UpdateModuleStateResponseState
-	STOPPED        UpdateModuleStateResponseState
+	PENDING            UpdateModuleStateResponseState
+	PENDING_DELETE     UpdateModuleStateResponseState
+	DELETE_FAILED      UpdateModuleStateResponseState
+	RUNNING            UpdateModuleStateResponseState
+	UPGRADE_PRELOADING UpdateModuleStateResponseState
+	UPGRADE_PRELOADED  UpdateModuleStateResponseState
+	FAILED             UpdateModuleStateResponseState
+	SUCCEEDED          UpdateModuleStateResponseState
+	UNKNOWN            UpdateModuleStateResponseState
+	DELETE_SUCCESS     UpdateModuleStateResponseState
+	STOPPED            UpdateModuleStateResponseState
 }
 
 func GetUpdateModuleStateResponseStateEnum() UpdateModuleStateResponseStateEnum {
@@ -85,6 +90,12 @@ func GetUpdateModuleStateResponseStateEnum() UpdateModuleStateResponseStateEnum 
 		},
 		RUNNING: UpdateModuleStateResponseState{
 			value: "RUNNING",
+		},
+		UPGRADE_PRELOADING: UpdateModuleStateResponseState{
+			value: "UPGRADE_PRELOADING",
+		},
+		UPGRADE_PRELOADED: UpdateModuleStateResponseState{
+			value: "UPGRADE_PRELOADED",
 		},
 		FAILED: UpdateModuleStateResponseState{
 			value: "FAILED",
@@ -193,6 +204,7 @@ type UpdateModuleStateResponseFunctionTypeEnum struct {
 	GATEWAY_MANAGER        UpdateModuleStateResponseFunctionType
 	COMPOSITE_APPLICATION  UpdateModuleStateResponseFunctionType
 	DATA_COLLECTION        UpdateModuleStateResponseFunctionType
+	MODEL_INFERENCE        UpdateModuleStateResponseFunctionType
 }
 
 func GetUpdateModuleStateResponseFunctionTypeEnum() UpdateModuleStateResponseFunctionTypeEnum {
@@ -214,6 +226,9 @@ func GetUpdateModuleStateResponseFunctionTypeEnum() UpdateModuleStateResponseFun
 		},
 		DATA_COLLECTION: UpdateModuleStateResponseFunctionType{
 			value: "DATA_COLLECTION",
+		},
+		MODEL_INFERENCE: UpdateModuleStateResponseFunctionType{
+			value: "MODEL_INFERENCE",
 		},
 	}
 }

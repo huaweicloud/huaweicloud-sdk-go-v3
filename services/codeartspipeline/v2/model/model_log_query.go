@@ -20,6 +20,12 @@ type LogQuery struct {
 
 	// **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序 **默认取值**： 不涉及。
 	Sort string `json:"sort"`
+
+	// **参数解释**： 日志偏移量。仅查询Jenkins日志时使用，其余场景请使用start_offset和end_offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	Offset *int64 `json:"offset,omitempty"`
+
+	// **参数解释**： 日志级别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+	Level *string `json:"level,omitempty"`
 }
 
 func (o LogQuery) String() string {

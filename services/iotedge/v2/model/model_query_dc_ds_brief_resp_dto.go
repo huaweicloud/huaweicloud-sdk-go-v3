@@ -27,7 +27,7 @@ type QueryDcDsBriefRespDto struct {
 	// 质量上报开关，不携带或值不为true，默认为false
 	QualityReport *bool `json:"quality_report,omitempty"`
 
-	// 应用ID
+	// 应用名称
 	EdgeAppName *string `json:"edge_app_name,omitempty"`
 
 	// 数采连接信息

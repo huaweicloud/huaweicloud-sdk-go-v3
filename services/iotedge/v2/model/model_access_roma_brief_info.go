@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// AccessRomaBriefInfo ROMA接入鉴权信息
 type AccessRomaBriefInfo struct {
 
 	// 认证key，加密存储

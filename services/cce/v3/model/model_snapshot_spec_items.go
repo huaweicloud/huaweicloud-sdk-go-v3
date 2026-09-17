@@ -8,7 +8,7 @@ import (
 
 type SnapshotSpecItems struct {
 
-	// 子任务ID
+	// **参数解释：** 子任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Id *string `json:"id,omitempty"`
 
 	// **参数解释**： 子任务类型 **取值范围**： - master-backup：集群EVS备份 - master-backup-rollback：集群EVS回滚 **默认取值**： 不涉及
@@ -17,13 +17,13 @@ type SnapshotSpecItems struct {
 	// **参数解释**： 状态 **取值范围**： - Init：初始化 - Queuing：等待 - Running：运行中 - Pause：暂停 - Success：成功 - Failed：失败 **默认取值**： 不涉及
 	Status *string `json:"status,omitempty"`
 
-	// 任务创建时间
+	// **参数解释：** 任务创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	CreationTimestamp *string `json:"creationTimestamp,omitempty"`
 
-	// 任务更新时间
+	// **参数解释：** 任务更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	UpdateTimestamp *string `json:"updateTimestamp,omitempty"`
 
-	// 信息
+	// **参数解释：** 信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Message *string `json:"message,omitempty"`
 }
 

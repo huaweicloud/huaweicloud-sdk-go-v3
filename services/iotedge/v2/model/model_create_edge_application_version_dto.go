@@ -32,7 +32,7 @@ type CreateEdgeApplicationVersionDto struct {
 
 	ReadinessProbe *ProbeDto `json:"readiness_probe,omitempty"`
 
-	// 架构
+	// 架构（x86_64|arm32|arm64）,示例：[\"x86_64\"]
 	Arch *interface{} `json:"arch"`
 
 	// 启动命令
@@ -55,6 +55,8 @@ type CreateEdgeApplicationVersionDto struct {
 
 	// 模板id
 	TplId *string `json:"tpl_id,omitempty"`
+
+	PreUpgradeProbe *PreUpgradeProbeDto `json:"pre_upgrade_probe,omitempty"`
 }
 
 func (o CreateEdgeApplicationVersionDto) String() string {

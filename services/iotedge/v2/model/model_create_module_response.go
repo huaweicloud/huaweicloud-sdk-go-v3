@@ -21,6 +21,9 @@ type CreateModuleResponse struct {
 	// 模块运行状态
 	State *CreateModuleResponseState `json:"state,omitempty"`
 
+	// 模块健康状态
+	LivenessState *string `json:"liveness_state,omitempty"`
+
 	// 模块管控状态
 	ControlStatus *string `json:"control_status,omitempty"`
 
@@ -63,15 +66,17 @@ type CreateModuleResponseState struct {
 }
 
 type CreateModuleResponseStateEnum struct {
-	PENDING        CreateModuleResponseState
-	PENDING_DELETE CreateModuleResponseState
-	DELETE_FAILED  CreateModuleResponseState
-	RUNNING        CreateModuleResponseState
-	FAILED         CreateModuleResponseState
-	SUCCEEDED      CreateModuleResponseState
-	UNKNOWN        CreateModuleResponseState
-	DELETE_SUCCESS CreateModuleResponseState
-	STOPPED        CreateModuleResponseState
+	PENDING            CreateModuleResponseState
+	PENDING_DELETE     CreateModuleResponseState
+	DELETE_FAILED      CreateModuleResponseState
+	RUNNING            CreateModuleResponseState
+	UPGRADE_PRELOADING CreateModuleResponseState
+	UPGRADE_PRELOADED  CreateModuleResponseState
+	FAILED             CreateModuleResponseState
+	SUCCEEDED          CreateModuleResponseState
+	UNKNOWN            CreateModuleResponseState
+	DELETE_SUCCESS     CreateModuleResponseState
+	STOPPED            CreateModuleResponseState
 }
 
 func GetCreateModuleResponseStateEnum() CreateModuleResponseStateEnum {
@@ -87,6 +92,12 @@ func GetCreateModuleResponseStateEnum() CreateModuleResponseStateEnum {
 		},
 		RUNNING: CreateModuleResponseState{
 			value: "RUNNING",
+		},
+		UPGRADE_PRELOADING: CreateModuleResponseState{
+			value: "UPGRADE_PRELOADING",
+		},
+		UPGRADE_PRELOADED: CreateModuleResponseState{
+			value: "UPGRADE_PRELOADED",
 		},
 		FAILED: CreateModuleResponseState{
 			value: "FAILED",
@@ -195,6 +206,7 @@ type CreateModuleResponseFunctionTypeEnum struct {
 	GATEWAY_MANAGER        CreateModuleResponseFunctionType
 	COMPOSITE_APPLICATION  CreateModuleResponseFunctionType
 	DATA_COLLECTION        CreateModuleResponseFunctionType
+	MODEL_INFERENCE        CreateModuleResponseFunctionType
 }
 
 func GetCreateModuleResponseFunctionTypeEnum() CreateModuleResponseFunctionTypeEnum {
@@ -216,6 +228,9 @@ func GetCreateModuleResponseFunctionTypeEnum() CreateModuleResponseFunctionTypeE
 		},
 		DATA_COLLECTION: CreateModuleResponseFunctionType{
 			value: "DATA_COLLECTION",
+		},
+		MODEL_INFERENCE: CreateModuleResponseFunctionType{
+			value: "MODEL_INFERENCE",
 		},
 	}
 }

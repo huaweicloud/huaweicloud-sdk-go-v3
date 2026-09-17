@@ -37,6 +37,9 @@ type QueryApplicationBriefResponseDto struct {
 
 	// 应用名称
 	EdgeAppName *string `json:"edge_app_name,omitempty"`
+
+	// 是否是下发到端侧网关上应用。
+	DeliveredApp *bool `json:"delivered_app,omitempty"`
 }
 
 func (o QueryApplicationBriefResponseDto) String() string {

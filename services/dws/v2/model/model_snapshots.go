@@ -3,9 +3,6 @@ package model
 import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
-	"errors"
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/converter"
-
 	"strings"
 )
 
@@ -86,8 +83,8 @@ type Snapshots struct {
 	// **参数解释**： 是否支持细粒度备份。 **取值范围**： 不涉及。
 	FineGrainedBackup *bool `json:"fine_grained_backup,omitempty"`
 
-	// **参数解释**： 备份等级。 **取值范围**： 不涉及。
-	BackupLevel *SnapshotsBackupLevel `json:"backup_level,omitempty"`
+	// **参数解释**： 备份等级。 **取值范围**： - cluster：集群级 - schema：schema级 - table：表级
+	BackupLevel *string `json:"backup_level,omitempty"`
 
 	FineGrainedBackupDetail *ExtFineGrainedSnapshotDetail `json:"fine_grained_backup_detail,omitempty"`
 
@@ -114,55 +111,4 @@ func (o Snapshots) String() string {
 	}
 
 	return strings.Join([]string{"Snapshots", string(data)}, " ")
-}
-
-type SnapshotsBackupLevel struct {
-	value string
-}
-
-type SnapshotsBackupLevelEnum struct {
-	CLUSTER SnapshotsBackupLevel
-	SCHEMA  SnapshotsBackupLevel
-	TABLE   SnapshotsBackupLevel
-}
-
-func GetSnapshotsBackupLevelEnum() SnapshotsBackupLevelEnum {
-	return SnapshotsBackupLevelEnum{
-		CLUSTER: SnapshotsBackupLevel{
-			value: "cluster",
-		},
-		SCHEMA: SnapshotsBackupLevel{
-			value: "schema",
-		},
-		TABLE: SnapshotsBackupLevel{
-			value: "table",
-		},
-	}
-}
-
-func (c SnapshotsBackupLevel) Value() string {
-	return c.value
-}
-
-func (c SnapshotsBackupLevel) MarshalJSON() ([]byte, error) {
-	return utils.Marshal(c.value)
-}
-
-func (c *SnapshotsBackupLevel) UnmarshalJSON(b []byte) error {
-	myConverter := converter.StringConverterFactory("string")
-	if myConverter == nil {
-		return errors.New("unsupported StringConverter type: string")
-	}
-
-	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
-	if err != nil {
-		return err
-	}
-
-	if val, ok := interf.(string); ok {
-		c.value = val
-		return nil
-	} else {
-		return errors.New("convert enum data to string error")
-	}
 }

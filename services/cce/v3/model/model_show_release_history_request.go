@@ -9,10 +9,10 @@ import (
 // ShowReleaseHistoryRequest Request Object
 type ShowReleaseHistoryRequest struct {
 
-	// 模板实例名称
+	// **参数解释：** 模板实例名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Name string `json:"name"`
 
-	// 模板实例所在的命名空间
+	// **参数解释：** 模板实例所在的命名空间。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Namespace string `json:"namespace"`
 
 	// 集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。

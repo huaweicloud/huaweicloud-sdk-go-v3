@@ -15,7 +15,7 @@ type AddDatasetInput struct {
 	// 数据集名称
 	DatasetName string `json:"dataset_name"`
 
-	// 数据集的描述信息
+	// 数据集描述信息。最大长度为4000个字符。
 	Description *string `json:"description,omitempty"`
 
 	// 数据集存储类型：EXTERNAL-外置存储,MANAGED-系统托管存储 EXTERNAL类型的数据集不支持创建文件分组和文件元数据。

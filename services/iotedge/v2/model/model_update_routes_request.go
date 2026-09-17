@@ -12,6 +12,7 @@ type UpdateRoutesRequest struct {
 	// 边缘节点ID
 	EdgeNodeId string `json:"edge_node_id"`
 
+	// 创建路由请求结构体
 	Body *[]CreateRouterReqDto `json:"body,omitempty"`
 }
 

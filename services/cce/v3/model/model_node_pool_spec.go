@@ -22,6 +22,8 @@ type NodePoolSpec struct {
 
 	Autoscaling *NodePoolNodeAutoscaling `json:"autoscaling,omitempty"`
 
+	RepairPolicy *NodePoolRepairPolicy `json:"repairPolicy,omitempty"`
+
 	NodeManagement *NodeManagement `json:"nodeManagement,omitempty"`
 
 	// 1.21版本集群节点池支持绑定安全组，最多五个。

@@ -12,7 +12,7 @@ type NpuDetailsDto struct {
 	// 昇腾设备ID
 	DeviceId *string `json:"device_id,omitempty"`
 
-	// 华为AI加速卡型号，如D310推理卡、D310P推理卡、D910训练卡。
+	// AI加速卡型号，如D310推理卡、D310P推理卡、D910训练卡。
 	NpuType *string `json:"npu_type,omitempty"`
 
 	// 昇腾设备产品类型

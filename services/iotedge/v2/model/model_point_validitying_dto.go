@@ -10,10 +10,13 @@ import (
 type PointValidityingDto struct {
 
 	// 点位上报值的最小值，小于该值则上报告警
-	Min int64 `json:"min"`
+	Min *interface{} `json:"min"`
 
 	// 点位上报值的最大值，大于该值则上报告警
-	Max int64 `json:"max"`
+	Max *interface{} `json:"max"`
+
+	// 异常值过滤
+	OutlierFiltering *bool `json:"outlier_filtering,omitempty"`
 }
 
 func (o PointValidityingDto) String() string {

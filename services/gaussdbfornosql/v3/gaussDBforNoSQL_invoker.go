@@ -9,10 +9,12 @@ type ApplyConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ApplyConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ApplyConfigurationInvoker) Invoke() (*model.ApplyConfigurationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -617,10 +619,12 @@ type ListConfigurationsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListConfigurationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListConfigurationsInvoker) Invoke() (*model.ListConfigurationsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -745,10 +749,12 @@ type ListFlavorsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListFlavorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListFlavorsInvoker) Invoke() (*model.ListFlavorsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -873,10 +879,12 @@ type ListInstancesByTagsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListInstancesByTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListInstancesByTagsInvoker) Invoke() (*model.ListInstancesByTagsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1113,10 +1121,12 @@ type ListSlowLogsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListSlowLogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListSlowLogsInvoker) Invoke() (*model.ListSlowLogsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1689,10 +1699,12 @@ type ShowBackupPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowBackupPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowBackupPolicyInvoker) Invoke() (*model.ShowBackupPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1753,10 +1765,12 @@ type ShowErrorLogInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowErrorLogInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowErrorLogInvoker) Invoke() (*model.ShowErrorLogResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -2297,10 +2311,12 @@ type UpdateInstanceConfigurationInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *UpdateInstanceConfigurationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *UpdateInstanceConfigurationInvoker) Invoke() (*model.UpdateInstanceConfigurationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err

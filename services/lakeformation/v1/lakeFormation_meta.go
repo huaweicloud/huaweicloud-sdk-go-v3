@@ -845,6 +845,10 @@ func GenReqDefForListDatasets() *def.HttpRequestDef {
 		WithJsonTag("name_partern").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("NamePattern").
+		WithJsonTag("name_pattern").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Format").
 		WithJsonTag("format").
 		WithLocationType(def.Query))

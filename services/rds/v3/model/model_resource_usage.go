@@ -9,13 +9,13 @@ import (
 type ResourceUsage struct {
 
 	// 当前使用量。
-	Value *float32 `json:"value,omitempty"`
+	Value *float64 `json:"value,omitempty"`
 
 	// 总量。
-	Total *float32 `json:"total,omitempty"`
+	Total *float64 `json:"total,omitempty"`
 
 	// 对比值。
-	Contrast *float32 `json:"contrast,omitempty"`
+	Contrast *float64 `json:"contrast,omitempty"`
 
 	// 单位。
 	Unit *string `json:"unit,omitempty"`

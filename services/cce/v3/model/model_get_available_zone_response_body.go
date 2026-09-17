@@ -25,7 +25,7 @@ type GetAvailableZoneResponseBody struct {
 	AzGroupIds *[]string `json:"azGroupIds,omitempty"`
 
 	// **参数解释**： EIP所属的组，IES边缘场景为可用区ID，中心区统一为“center” **取值范围**： 不涉及
-	PublicBorderGroup *string `json:"PublicBorderGroup,omitempty"`
+	PublicBorderGroup *string `json:"publicBorderGroup,omitempty"`
 
 	// **参数解释**： 可用区分类 **取值范围**： - Default: 中心云可用区 - IES: 专属云可用区 - HomeZone: 智能边缘云可用区
 	Category *GetAvailableZoneResponseBodyCategory `json:"category,omitempty"`

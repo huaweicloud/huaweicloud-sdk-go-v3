@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// PostcheckCluserResponseMetadata 升级后确认元数据
+// PostcheckCluserResponseMetadata **参数解释：** 升级后确认元数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 type PostcheckCluserResponseMetadata struct {
 
-	// 任务ID
+	// **参数解释：** 任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Uid *string `json:"uid,omitempty"`
 }
 

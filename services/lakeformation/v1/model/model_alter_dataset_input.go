@@ -9,7 +9,7 @@ import (
 // AlterDatasetInput 用户输入的数据集
 type AlterDatasetInput struct {
 
-	// 数据集的描述信息
+	// 数据集描述信息。最大长度为4000个字符。
 	Description *string `json:"description,omitempty"`
 
 	DatasetFormat *DatasetFileFormat `json:"dataset_format,omitempty"`

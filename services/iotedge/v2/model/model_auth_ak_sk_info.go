@@ -6,9 +6,10 @@ import (
 	"strings"
 )
 
+// AuthAkSkInfo AK/SK鉴权信息结构体
 type AuthAkSkInfo struct {
 
-	// 鉴权秘钥
+	// 鉴权密钥
 	Secret *string `json:"secret,omitempty"`
 }
 

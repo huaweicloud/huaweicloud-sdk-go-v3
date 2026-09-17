@@ -42,6 +42,12 @@ type CreatePipelineGroupResponse struct {
 	// **参数解释**： 更新时间。 **取值范围**： 不涉及。
 	UpdateTime *int64 `json:"update_time,omitempty"`
 
+	// **参数解释**： 分组下的流水线总数。 **取值范围**： 不涉及。
+	PipelineCount *int32 `json:"pipeline_count,omitempty"`
+
+	// **参数解释**： 未分组的流水线数量。 **取值范围**： 不涉及。
+	NoGroupCount *int32 `json:"no_group_count,omitempty"`
+
 	// **参数解释**： 流水线分组详情。 **取值范围**： 不涉及。
 	Children       *[]PipelineGroupVo `json:"children,omitempty"`
 	HttpStatusCode int                `json:"-"`

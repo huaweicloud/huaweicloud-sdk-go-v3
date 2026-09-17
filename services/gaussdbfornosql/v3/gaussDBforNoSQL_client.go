@@ -19,6 +19,7 @@ func GaussDBforNoSQLClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ApplyConfiguration 应用参数模板
 //
 // 将参数模板应用到实例，可以指定一个或多个实例。
@@ -34,6 +35,7 @@ func (c *GaussDBforNoSQLClient) ApplyConfiguration(request *model.ApplyConfigura
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ApplyConfigurationInvoker 应用参数模板
 func (c *GaussDBforNoSQLClient) ApplyConfigurationInvoker(request *model.ApplyConfigurationRequest) *ApplyConfigurationInvoker {
 	requestDef := GenReqDefForApplyConfiguration()
@@ -818,6 +820,7 @@ func (c *GaussDBforNoSQLClient) ListConfigurationTemplatesInvoker(request *model
 	return &ListConfigurationTemplatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListConfigurations 获取参数模板列表
 //
 // 获取参数模板列表，包括所有数据库的默认参数模板和用户创建的参数模板。
@@ -833,6 +836,7 @@ func (c *GaussDBforNoSQLClient) ListConfigurations(request *model.ListConfigurat
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListConfigurationsInvoker 获取参数模板列表
 func (c *GaussDBforNoSQLClient) ListConfigurationsInvoker(request *model.ListConfigurationsRequest) *ListConfigurationsInvoker {
 	requestDef := GenReqDefForListConfigurations()
@@ -986,7 +990,8 @@ func (c *GaussDBforNoSQLClient) ListFlavorInfosInvoker(request *model.ListFlavor
 	return &ListFlavorInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListFlavors 查询指定条件下的所有实例规格信息
+// Deprecated: This function is deprecated and will be removed in the future versions.
+// ListFlavors 查询所有实例规格信息
 //
 // 查询指定条件下的所有实例规格信息。
 //
@@ -1001,7 +1006,8 @@ func (c *GaussDBforNoSQLClient) ListFlavors(request *model.ListFlavorsRequest) (
 	}
 }
 
-// ListFlavorsInvoker 查询指定条件下的所有实例规格信息
+// Deprecated: This function is deprecated and will be removed in the future versions.
+// ListFlavorsInvoker 查询所有实例规格信息
 func (c *GaussDBforNoSQLClient) ListFlavorsInvoker(request *model.ListFlavorsRequest) *ListFlavorsInvoker {
 	requestDef := GenReqDefForListFlavors()
 	return &ListFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1154,6 +1160,7 @@ func (c *GaussDBforNoSQLClient) ListInstancesByResourceTagsInvoker(request *mode
 	return &ListInstancesByResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListInstancesByTags 查询资源实例
 //
 // 根据标签查询指定的数据库实例。
@@ -1169,6 +1176,7 @@ func (c *GaussDBforNoSQLClient) ListInstancesByTags(request *model.ListInstances
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListInstancesByTagsInvoker 查询资源实例
 func (c *GaussDBforNoSQLClient) ListInstancesByTagsInvoker(request *model.ListInstancesByTagsRequest) *ListInstancesByTagsInvoker {
 	requestDef := GenReqDefForListInstancesByTags()
@@ -1469,6 +1477,7 @@ func (c *GaussDBforNoSQLClient) ListRestoreTimeInvoker(request *model.ListRestor
 	return &ListRestoreTimeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListSlowLogs 查询数据库慢日志
 //
 // 查询数据库慢日志信息。
@@ -1484,6 +1493,7 @@ func (c *GaussDBforNoSQLClient) ListSlowLogs(request *model.ListSlowLogsRequest)
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListSlowLogsInvoker 查询数据库慢日志
 func (c *GaussDBforNoSQLClient) ListSlowLogsInvoker(request *model.ListSlowLogsRequest) *ListSlowLogsInvoker {
 	requestDef := GenReqDefForListSlowLogs()
@@ -2229,6 +2239,7 @@ func (c *GaussDBforNoSQLClient) ShowBackupPoliciesInvoker(request *model.ShowBac
 	return &ShowBackupPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowBackupPolicy 查询自动备份策略
 //
 // 查询自动备份策略。
@@ -2244,6 +2255,7 @@ func (c *GaussDBforNoSQLClient) ShowBackupPolicy(request *model.ShowBackupPolicy
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowBackupPolicyInvoker 查询自动备份策略
 func (c *GaussDBforNoSQLClient) ShowBackupPolicyInvoker(request *model.ShowBackupPolicyRequest) *ShowBackupPolicyInvoker {
 	requestDef := GenReqDefForShowBackupPolicy()
@@ -2313,6 +2325,7 @@ func (c *GaussDBforNoSQLClient) ShowElbIpGroupInvoker(request *model.ShowElbIpGr
 	return &ShowElbIpGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowErrorLog 查询数据库错误日志信息
 //
 // 查询数据库错误日志
@@ -2328,6 +2341,7 @@ func (c *GaussDBforNoSQLClient) ShowErrorLog(request *model.ShowErrorLogRequest)
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowErrorLogInvoker 查询数据库错误日志信息
 func (c *GaussDBforNoSQLClient) ShowErrorLogInvoker(request *model.ShowErrorLogRequest) *ShowErrorLogInvoker {
 	requestDef := GenReqDefForShowErrorLog()
@@ -3027,6 +3041,7 @@ func (c *GaussDBforNoSQLClient) UpdateHighRiskCommandsInvoker(request *model.Upd
 	return &UpdateHighRiskCommandsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateInstanceConfiguration 修改指定实例的参数
 //
 // 修改指定实例的参数。
@@ -3042,6 +3057,7 @@ func (c *GaussDBforNoSQLClient) UpdateInstanceConfiguration(request *model.Updat
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateInstanceConfigurationInvoker 修改指定实例的参数
 func (c *GaussDBforNoSQLClient) UpdateInstanceConfigurationInvoker(request *model.UpdateInstanceConfigurationRequest) *UpdateInstanceConfigurationInvoker {
 	requestDef := GenReqDefForUpdateInstanceConfiguration()

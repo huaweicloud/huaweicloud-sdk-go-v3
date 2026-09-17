@@ -793,10 +793,12 @@ type ListErrorLogsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListErrorLogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListErrorLogsInvoker) Invoke() (*model.ListErrorLogsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -825,10 +827,12 @@ type ListFlavorsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListFlavorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListFlavorsInvoker) Invoke() (*model.ListFlavorsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1049,10 +1053,12 @@ type ListSlowLogsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListSlowLogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListSlowLogsInvoker) Invoke() (*model.ListSlowLogsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err

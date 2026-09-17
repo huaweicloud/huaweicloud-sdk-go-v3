@@ -49,7 +49,7 @@ type AutopilotClusterSpec struct {
 
 	ContainerNetwork *AutopilotContainerNetwork `json:"containerNetwork"`
 
-	EniNetwork *AutopilotEniNetwork `json:"eniNetwork,omitempty"`
+	EniNetwork *AutopilotEniNetwork `json:"eniNetwork"`
 
 	ServiceNetwork *AutopilotServiceNetwork `json:"serviceNetwork,omitempty"`
 

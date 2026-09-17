@@ -18,7 +18,7 @@ type MqttConnectionInfo struct {
 	// 鉴权类型。支持密钥认证接入(SECRET)和证书认证接入(CERTIFICATES)两种方式。使用密钥认证接入方式(SECRET)填写user_name和user_name字段，使用证书认证接入方式(CERTIFICATES)填写privateKey和certificate字段
 	AuthType *string `json:"auth_type,omitempty"`
 
-	// 证书秘钥
+	// 证书密钥
 	PrivateKey *string `json:"private_key,omitempty"`
 
 	// 证书

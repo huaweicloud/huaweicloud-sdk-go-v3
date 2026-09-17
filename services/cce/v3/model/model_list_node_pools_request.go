@@ -17,6 +17,9 @@ type ListNodePoolsRequest struct {
 
 	// 是否展示默认节点池。默认不展示，指定为“true”时展示默认节点池。
 	ShowDefaultNodePool *string `json:"showDefaultNodePool,omitempty"`
+
+	// **参数解释：** 节点池conditions是否反映整个节点池整体状态。 **约束限制：** 不涉及 **取值范围：** - true: 节点池的conditions反映整个节点池整体状态。 - false: 节点池的conditions仅反映默认伸缩组的状态。  **默认取值：** 不指定时默认为false
+	AdvanceStatus *bool `json:"advanceStatus,omitempty"`
 }
 
 func (o ListNodePoolsRequest) String() string {

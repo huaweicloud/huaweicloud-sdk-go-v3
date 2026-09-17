@@ -21,8 +21,14 @@ type NodePoolStatus struct {
 	// 当前节点池中删除中的节点数量。
 	DeletingNode *int32 `json:"deletingNode,omitempty"`
 
-	// **参数解释**： 当前节点池中就绪的节点数量。 **取值范围**： 不涉及
+	// **参数解释**： 当前节点池中就绪的节点数量。 **取值范围**： 不涉及 **默认取值**： 不涉及
 	ActiveNode *int32 `json:"activeNode,omitempty"`
+
+	// **参数解释**： 当前节点池中修复中的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	RepairingNode *int32 `json:"repairingNode,omitempty"`
+
+	// **参数解释**： 当前节点池中修复失败的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+	RepairFailedNode *int32 `json:"repairFailedNode,omitempty"`
 
 	// **参数解释** 当前节点池中已经同步了节点池配置参数的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
 	ConfigurationSyncedNodeCount *int32 `json:"configurationSyncedNodeCount,omitempty"`

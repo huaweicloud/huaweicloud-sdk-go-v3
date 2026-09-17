@@ -9,7 +9,7 @@ import (
 // RollbackAddonInstanceRequest Request Object
 type RollbackAddonInstanceRequest struct {
 
-	// 插件实例ID
+	// **参数解释**： 插件实例ID。 **约束限制**： 不涉及 **取值范围**： UUID格式，长度范围1~255位。 **默认取值**： 不涉及
 	Id string `json:"id"`
 
 	Body *AddonInstanceRollbackRequest `json:"body,omitempty"`

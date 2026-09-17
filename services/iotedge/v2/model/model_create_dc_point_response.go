@@ -32,6 +32,9 @@ type CreateDcPointResponse struct {
 
 	ProcessingConfig *ProcessingConfigDto `json:"processing_config,omitempty"`
 
+	// 点位启停状态
+	Active *bool `json:"active,omitempty"`
+
 	// 创建时间
 	CreateTime *string `json:"create_time,omitempty"`
 

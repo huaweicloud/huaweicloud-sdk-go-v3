@@ -15,6 +15,9 @@ type ListClustersRequest struct {
 	// 边缘集群状态
 	State *string `json:"state,omitempty"`
 
+	// 边缘集群ID列表
+	ClusterIds *[]string `json:"cluster_ids,omitempty"`
+
 	// 每页记录数，默认值为10，取值区间为1-1000。
 	Limit *int32 `json:"limit,omitempty"`
 

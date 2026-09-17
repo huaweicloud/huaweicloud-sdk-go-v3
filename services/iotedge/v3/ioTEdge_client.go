@@ -438,3 +438,150 @@ func (c *IoTEdgeClient) ShowClusterInvoker(request *model.ShowClusterRequest) *S
 	requestDef := GenReqDefForShowCluster()
 	return &ShowClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// ShowClusterResources 查询资源列表-企业版
+//
+// 查询资源列表-企业版
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) ShowClusterResources(request *model.ShowClusterResourcesRequest) (*model.ShowClusterResourcesResponse, error) {
+	requestDef := GenReqDefForShowClusterResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowClusterResourcesResponse), nil
+	}
+}
+
+// ShowClusterResourcesInvoker 查询资源列表-企业版
+func (c *IoTEdgeClient) ShowClusterResourcesInvoker(request *model.ShowClusterResourcesRequest) *ShowClusterResourcesInvoker {
+	requestDef := GenReqDefForShowClusterResources()
+	return &ShowClusterResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateResourceBinding 更改资源绑定信息-企业版
+//
+// 更改资源绑定信息-企业版
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) UpdateResourceBinding(request *model.UpdateResourceBindingRequest) (*model.UpdateResourceBindingResponse, error) {
+	requestDef := GenReqDefForUpdateResourceBinding()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateResourceBindingResponse), nil
+	}
+}
+
+// UpdateResourceBindingInvoker 更改资源绑定信息-企业版
+func (c *IoTEdgeClient) UpdateResourceBindingInvoker(request *model.UpdateResourceBindingRequest) *UpdateResourceBindingInvoker {
+	requestDef := GenReqDefForUpdateResourceBinding()
+	return &UpdateResourceBindingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// InvokeKubeApi 转发k8s API
+//
+// 转发k8s API。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) InvokeKubeApi(request *model.InvokeKubeApiRequest) (*model.InvokeKubeApiResponse, error) {
+	requestDef := GenReqDefForInvokeKubeApi()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.InvokeKubeApiResponse), nil
+	}
+}
+
+// InvokeKubeApiInvoker 转发k8s API
+func (c *IoTEdgeClient) InvokeKubeApiInvoker(request *model.InvokeKubeApiRequest) *InvokeKubeApiInvoker {
+	requestDef := GenReqDefForInvokeKubeApi()
+	return &InvokeKubeApiInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListClusterNamespaces 查询命名空间列表
+//
+// 应用服务器可调用此接口查询命名空间列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) ListClusterNamespaces(request *model.ListClusterNamespacesRequest) (*model.ListClusterNamespacesResponse, error) {
+	requestDef := GenReqDefForListClusterNamespaces()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListClusterNamespacesResponse), nil
+	}
+}
+
+// ListClusterNamespacesInvoker 查询命名空间列表
+func (c *IoTEdgeClient) ListClusterNamespacesInvoker(request *model.ListClusterNamespacesRequest) *ListClusterNamespacesInvoker {
+	requestDef := GenReqDefForListClusterNamespaces()
+	return &ListClusterNamespacesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateClusterNodesInstallCmd 生成安装集群节点的安装命令
+//
+// 生成安装集群节点的安装命令。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) CreateClusterNodesInstallCmd(request *model.CreateClusterNodesInstallCmdRequest) (*model.CreateClusterNodesInstallCmdResponse, error) {
+	requestDef := GenReqDefForCreateClusterNodesInstallCmd()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateClusterNodesInstallCmdResponse), nil
+	}
+}
+
+// CreateClusterNodesInstallCmdInvoker 生成安装集群节点的安装命令
+func (c *IoTEdgeClient) CreateClusterNodesInstallCmdInvoker(request *model.CreateClusterNodesInstallCmdRequest) *CreateClusterNodesInstallCmdInvoker {
+	requestDef := GenReqDefForCreateClusterNodesInstallCmd()
+	return &CreateClusterNodesInstallCmdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListClusterNodes 查询集群的节点列表
+//
+// 应用服务器可调用此接口查询集群的节点列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) ListClusterNodes(request *model.ListClusterNodesRequest) (*model.ListClusterNodesResponse, error) {
+	requestDef := GenReqDefForListClusterNodes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListClusterNodesResponse), nil
+	}
+}
+
+// ListClusterNodesInvoker 查询集群的节点列表
+func (c *IoTEdgeClient) ListClusterNodesInvoker(request *model.ListClusterNodesRequest) *ListClusterNodesInvoker {
+	requestDef := GenReqDefForListClusterNodes()
+	return &ListClusterNodesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowClusterNode 查询集群的节点详情
+//
+// 应用服务器可调用此接口查询集群的节点详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IoTEdgeClient) ShowClusterNode(request *model.ShowClusterNodeRequest) (*model.ShowClusterNodeResponse, error) {
+	requestDef := GenReqDefForShowClusterNode()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowClusterNodeResponse), nil
+	}
+}
+
+// ShowClusterNodeInvoker 查询集群的节点详情
+func (c *IoTEdgeClient) ShowClusterNodeInvoker(request *model.ShowClusterNodeRequest) *ShowClusterNodeInvoker {
+	requestDef := GenReqDefForShowClusterNode()
+	return &ShowClusterNodeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

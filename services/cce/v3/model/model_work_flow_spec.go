@@ -6,15 +6,16 @@ import (
 	"strings"
 )
 
+// WorkFlowSpec **参数解释：** 集群升级流程配置信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 type WorkFlowSpec struct {
 
-	// 集群ID，资源唯一标识，创建成功后自动生成，填写无效
+	// **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	ClusterID *string `json:"clusterID,omitempty"`
 
-	// 本次集群升级的当前版本
+	// **参数解释：** 当前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	ClusterVersion *string `json:"clusterVersion,omitempty"`
 
-	// 本次集群升级的目标版本
+	// **参数解释：** 本次集群升级的目标版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	TargetVersion string `json:"targetVersion"`
 }
 

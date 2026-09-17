@@ -32,6 +32,9 @@ type BatchListEdgeAppVersionsRequest struct {
 
 	// 应用版本状态
 	State *BatchListEdgeAppVersionsRequestState `json:"state,omitempty"`
+
+	// 应用部署类型
+	DeployType *BatchListEdgeAppVersionsRequestDeployType `json:"deploy_type,omitempty"`
 }
 
 func (o BatchListEdgeAppVersionsRequest) String() string {
@@ -48,9 +51,9 @@ type BatchListEdgeAppVersionsRequestAiCardType struct {
 }
 
 type BatchListEdgeAppVersionsRequestAiCardTypeEnum struct {
-	GPU         BatchListEdgeAppVersionsRequestAiCardType
-	NPU         BatchListEdgeAppVersionsRequestAiCardType
-	UN_EQUIPPED BatchListEdgeAppVersionsRequestAiCardType
+	GPU        BatchListEdgeAppVersionsRequestAiCardType
+	NPU        BatchListEdgeAppVersionsRequestAiCardType
+	UNEQUIPPED BatchListEdgeAppVersionsRequestAiCardType
 }
 
 func GetBatchListEdgeAppVersionsRequestAiCardTypeEnum() BatchListEdgeAppVersionsRequestAiCardTypeEnum {
@@ -61,8 +64,8 @@ func GetBatchListEdgeAppVersionsRequestAiCardTypeEnum() BatchListEdgeAppVersions
 		NPU: BatchListEdgeAppVersionsRequestAiCardType{
 			value: "NPU",
 		},
-		UN_EQUIPPED: BatchListEdgeAppVersionsRequestAiCardType{
-			value: "unEquipped",
+		UNEQUIPPED: BatchListEdgeAppVersionsRequestAiCardType{
+			value: "UNEQUIPPED",
 		},
 	}
 }
@@ -178,6 +181,53 @@ func (c BatchListEdgeAppVersionsRequestState) MarshalJSON() ([]byte, error) {
 }
 
 func (c *BatchListEdgeAppVersionsRequestState) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type BatchListEdgeAppVersionsRequestDeployType struct {
+	value string
+}
+
+type BatchListEdgeAppVersionsRequestDeployTypeEnum struct {
+	DOCKER  BatchListEdgeAppVersionsRequestDeployType
+	PROCESS BatchListEdgeAppVersionsRequestDeployType
+}
+
+func GetBatchListEdgeAppVersionsRequestDeployTypeEnum() BatchListEdgeAppVersionsRequestDeployTypeEnum {
+	return BatchListEdgeAppVersionsRequestDeployTypeEnum{
+		DOCKER: BatchListEdgeAppVersionsRequestDeployType{
+			value: "docker",
+		},
+		PROCESS: BatchListEdgeAppVersionsRequestDeployType{
+			value: "process",
+		},
+	}
+}
+
+func (c BatchListEdgeAppVersionsRequestDeployType) Value() string {
+	return c.value
+}
+
+func (c BatchListEdgeAppVersionsRequestDeployType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *BatchListEdgeAppVersionsRequestDeployType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

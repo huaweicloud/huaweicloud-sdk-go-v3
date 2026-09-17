@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// PrecheckCluserResponseMetadata 升级前检查元数据
+// PrecheckCluserResponseMetadata **参数解释：** 升级前检查元数据 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 type PrecheckCluserResponseMetadata struct {
 
-	// 检查任务ID
+	// **参数解释：** 检查任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Uid *string `json:"uid,omitempty"`
 }
 

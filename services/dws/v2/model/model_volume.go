@@ -14,6 +14,9 @@ type Volume struct {
 
 	// **参数解释**： 磁盘容量，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Capacity *int32 `json:"capacity,omitempty"`
+
+	// **参数解释**： ESSD2磁盘IOPS值。  **约束限制**： 仅磁盘类型为ESSD2时必填。 **取值范围**： 100~256000 **默认取值**： 不涉及。
+	Iops *int32 `json:"iops,omitempty"`
 }
 
 func (o Volume) String() string {

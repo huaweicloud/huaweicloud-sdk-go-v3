@@ -21,6 +21,9 @@ type EdgeModuleDto struct {
 	// 模块运行状态
 	State *EdgeModuleDtoState `json:"state,omitempty"`
 
+	// 模块健康状态
+	LivenessState *string `json:"liveness_state,omitempty"`
+
 	// 模块管控状态
 	ControlStatus *string `json:"control_status,omitempty"`
 
@@ -60,15 +63,17 @@ type EdgeModuleDtoState struct {
 }
 
 type EdgeModuleDtoStateEnum struct {
-	PENDING        EdgeModuleDtoState
-	PENDING_DELETE EdgeModuleDtoState
-	DELETE_FAILED  EdgeModuleDtoState
-	RUNNING        EdgeModuleDtoState
-	FAILED         EdgeModuleDtoState
-	SUCCEEDED      EdgeModuleDtoState
-	UNKNOWN        EdgeModuleDtoState
-	DELETE_SUCCESS EdgeModuleDtoState
-	STOPPED        EdgeModuleDtoState
+	PENDING            EdgeModuleDtoState
+	PENDING_DELETE     EdgeModuleDtoState
+	DELETE_FAILED      EdgeModuleDtoState
+	RUNNING            EdgeModuleDtoState
+	UPGRADE_PRELOADING EdgeModuleDtoState
+	UPGRADE_PRELOADED  EdgeModuleDtoState
+	FAILED             EdgeModuleDtoState
+	SUCCEEDED          EdgeModuleDtoState
+	UNKNOWN            EdgeModuleDtoState
+	DELETE_SUCCESS     EdgeModuleDtoState
+	STOPPED            EdgeModuleDtoState
 }
 
 func GetEdgeModuleDtoStateEnum() EdgeModuleDtoStateEnum {
@@ -84,6 +89,12 @@ func GetEdgeModuleDtoStateEnum() EdgeModuleDtoStateEnum {
 		},
 		RUNNING: EdgeModuleDtoState{
 			value: "RUNNING",
+		},
+		UPGRADE_PRELOADING: EdgeModuleDtoState{
+			value: "UPGRADE_PRELOADING",
+		},
+		UPGRADE_PRELOADED: EdgeModuleDtoState{
+			value: "UPGRADE_PRELOADED",
 		},
 		FAILED: EdgeModuleDtoState{
 			value: "FAILED",
@@ -192,6 +203,7 @@ type EdgeModuleDtoFunctionTypeEnum struct {
 	GATEWAY_MANAGER        EdgeModuleDtoFunctionType
 	COMPOSITE_APPLICATION  EdgeModuleDtoFunctionType
 	DATA_COLLECTION        EdgeModuleDtoFunctionType
+	MODEL_INFERENCE        EdgeModuleDtoFunctionType
 }
 
 func GetEdgeModuleDtoFunctionTypeEnum() EdgeModuleDtoFunctionTypeEnum {
@@ -213,6 +225,9 @@ func GetEdgeModuleDtoFunctionTypeEnum() EdgeModuleDtoFunctionTypeEnum {
 		},
 		DATA_COLLECTION: EdgeModuleDtoFunctionType{
 			value: "DATA_COLLECTION",
+		},
+		MODEL_INFERENCE: EdgeModuleDtoFunctionType{
+			value: "MODEL_INFERENCE",
 		},
 	}
 }

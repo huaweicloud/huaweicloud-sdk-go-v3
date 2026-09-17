@@ -9,10 +9,10 @@ import (
 // AddonRisks 节点风险来源
 type AddonRisks struct {
 
-	// 插件模板名称
+	// **参数解释：** 插件模板名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	AddonTemplateName *string `json:"addonTemplateName,omitempty"`
 
-	// 插件别名
+	// **参数解释：** 插件别名。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Alias *string `json:"alias,omitempty"`
 }
 

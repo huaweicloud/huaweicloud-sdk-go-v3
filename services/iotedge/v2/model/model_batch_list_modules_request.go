@@ -26,6 +26,15 @@ type BatchListModulesRequest struct {
 
 	// 功能类型
 	FunctionType *BatchListModulesRequestFunctionType `json:"function_type,omitempty"`
+
+	// 功能类型列表
+	FunctionTypes *[]string `json:"function_types,omitempty"`
+
+	// 协议类型列表
+	ProtocolTypes *[]string `json:"protocol_types,omitempty"`
+
+	// 边缘模块名称
+	ModuleName *string `json:"module_name,omitempty"`
 }
 
 func (o BatchListModulesRequest) String() string {
@@ -96,6 +105,10 @@ type BatchListModulesRequestFunctionTypeEnum struct {
 	DATA_PROCESSING        BatchListModulesRequestFunctionType
 	PROTOCOL_PARSING       BatchListModulesRequestFunctionType
 	ON_PREMISE_INTEGRATION BatchListModulesRequestFunctionType
+	GATEWAY_MANAGER        BatchListModulesRequestFunctionType
+	COMPOSITE_APPLICATION  BatchListModulesRequestFunctionType
+	DATA_COLLECTION        BatchListModulesRequestFunctionType
+	MODEL_INFERENCE        BatchListModulesRequestFunctionType
 }
 
 func GetBatchListModulesRequestFunctionTypeEnum() BatchListModulesRequestFunctionTypeEnum {
@@ -108,6 +121,18 @@ func GetBatchListModulesRequestFunctionTypeEnum() BatchListModulesRequestFunctio
 		},
 		ON_PREMISE_INTEGRATION: BatchListModulesRequestFunctionType{
 			value: "ON_PREMISE_INTEGRATION",
+		},
+		GATEWAY_MANAGER: BatchListModulesRequestFunctionType{
+			value: "GATEWAY_MANAGER",
+		},
+		COMPOSITE_APPLICATION: BatchListModulesRequestFunctionType{
+			value: "COMPOSITE_APPLICATION",
+		},
+		DATA_COLLECTION: BatchListModulesRequestFunctionType{
+			value: "DATA_COLLECTION",
+		},
+		MODEL_INFERENCE: BatchListModulesRequestFunctionType{
+			value: "MODEL_INFERENCE",
 		},
 	}
 }

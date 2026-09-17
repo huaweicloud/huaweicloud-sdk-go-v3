@@ -24,6 +24,9 @@ type UpdateScheduleResponse struct {
 	// 调度计划是否生效
 	Enabled *bool `json:"enabled,omitempty"`
 
+	// 是否立即执行
+	ResetCurrentTask *bool `json:"reset_current_task,omitempty"`
+
 	// 调度计划起始时间，毫秒级别的时间戳
 	StartTime *int64 `json:"start_time,omitempty"`
 

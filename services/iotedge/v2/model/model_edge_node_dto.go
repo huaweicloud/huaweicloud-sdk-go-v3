@@ -24,7 +24,7 @@ type EdgeNodeDto struct {
 	// 资源空间id，对应IOTDA云服务接口参数中的app_id。
 	SpaceId *string `json:"space_id,omitempty"`
 
-	// 节点所属资源类型：advanced|standard
+	// 边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
 	Type *string `json:"type,omitempty"`
 
 	// 节点所购买的资源类型的列表
@@ -36,8 +36,14 @@ type EdgeNodeDto struct {
 	// 边缘节点ip列表
 	Ips *[]string `json:"ips,omitempty"`
 
+	// 节点软件版本
+	SoftwareVersion *string `json:"software_version,omitempty"`
+
 	// 边缘节点创建时间
 	CreateTime *string `json:"create_time,omitempty"`
+
+	// 节点组ID
+	NodeGroupId *string `json:"node_group_id,omitempty"`
 }
 
 func (o EdgeNodeDto) String() string {

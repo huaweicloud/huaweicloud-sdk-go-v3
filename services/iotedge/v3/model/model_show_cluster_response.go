@@ -30,6 +30,23 @@ type ShowClusterResponse struct {
 	// 集群架构
 	Arch *string `json:"arch,omitempty"`
 
+	License *LicenseInfo `json:"license,omitempty"`
+
+	// 资源id
+	ResourceId *string `json:"resource_id,omitempty"`
+
+	// 集群类型
+	ClusterType *string `json:"cluster_type,omitempty"`
+
+	// kubernetes版本
+	KubernetesVersion *string `json:"kubernetes_version,omitempty"`
+
+	// 集群license状态
+	LicenseStatus *string `json:"license_status,omitempty"`
+
+	// 集群地址
+	ClusterAddr *string `json:"cluster_addr,omitempty"`
+
 	// 创建时间
 	CreateTime *string `json:"create_time,omitempty"`
 

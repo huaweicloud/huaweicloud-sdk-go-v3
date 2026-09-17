@@ -48,7 +48,7 @@ type PipelineTemplateSimpleVo struct {
 	IsCollect *bool `json:"is_collect,omitempty"`
 
 	// **参数解释**： 是否展示流水线源。 **取值范围**： - true：展示流水线源。 - false：不展示流水线源。
-	IsShowSource *string `json:"is_show_source,omitempty"`
+	IsShowSource *bool `json:"is_show_source,omitempty"`
 
 	// **参数解释**： 模板编排的阶段列表。 **约束限制**： 不涉及。
 	Stages *[]PipelineTemplateSimpleVoStages `json:"stages,omitempty"`

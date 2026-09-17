@@ -30,7 +30,7 @@ type CreateEdgeNodeResponse struct {
 	// 边缘节点状态UNINSTALLED|INSTALLED|OFFLINE|ONLINE|DELETING|FROZEN
 	State *string `json:"state,omitempty"`
 
-	// 节点所属资源类型：advanced|standard
+	// 边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
 	Type *string `json:"type,omitempty"`
 
 	// 安装文件版本
@@ -59,7 +59,13 @@ type CreateEdgeNodeResponse struct {
 	DeviceDataRecord *DeviceDataRecord `json:"device_data_record,omitempty"`
 
 	// omagent监控运维工具是否上报指标
-	MetricReport   *string `json:"metric_report,omitempty"`
+	MetricReport *string `json:"metric_report,omitempty"`
+
+	// iotda南向接入地址
+	IotdaSouthAccess *string `json:"iotda_south_access,omitempty"`
+
+	// 边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
+	OsType         *string `json:"os_type,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }
 
