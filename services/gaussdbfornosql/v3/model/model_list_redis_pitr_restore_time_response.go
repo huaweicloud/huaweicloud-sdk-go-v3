@@ -9,10 +9,10 @@ import (
 // ListRedisPitrRestoreTimeResponse Response Object
 type ListRedisPitrRestoreTimeResponse struct {
 
-	// Redis可恢复时间点列表。 yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。
+	// **参数解释：** Redis可恢复时间点列表。yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **取值范围：** 不涉及。
 	RestoreTime *[]string `json:"restore_time,omitempty"`
 
-	// Redis实例可恢复时间点总数。
+	// **参数解释：** Redis实例可恢复时间点总数。 **取值范围：** 不涉及。
 	TotalCount     *int32 `json:"total_count,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

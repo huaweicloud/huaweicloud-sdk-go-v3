@@ -16,7 +16,7 @@ type PolicyUpdate struct {
 
 	OperationDefinition *PolicyoOdCreate `json:"operation_definition,omitempty"`
 
-	Trigger *PolicyTriggerReq `json:"trigger,omitempty"`
+	Trigger *PolicyTriggerUpdateReq `json:"trigger,omitempty"`
 }
 
 func (o PolicyUpdate) String() string {

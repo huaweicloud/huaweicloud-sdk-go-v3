@@ -1026,6 +1026,27 @@ func (c *RdsClient) EnableConfigurationInvoker(request *model.EnableConfiguratio
 	return &EnableConfigurationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExecuteOptimizeTableSpace 清理表碎片空间
+//
+// 清理表碎片空间
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ExecuteOptimizeTableSpace(request *model.ExecuteOptimizeTableSpaceRequest) (*model.ExecuteOptimizeTableSpaceResponse, error) {
+	requestDef := GenReqDefForExecuteOptimizeTableSpace()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteOptimizeTableSpaceResponse), nil
+	}
+}
+
+// ExecuteOptimizeTableSpaceInvoker 清理表碎片空间
+func (c *RdsClient) ExecuteOptimizeTableSpaceInvoker(request *model.ExecuteOptimizeTableSpaceRequest) *ExecuteOptimizeTableSpaceInvoker {
+	requestDef := GenReqDefForExecuteOptimizeTableSpace()
+	return &ExecuteOptimizeTableSpaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // GetInstancesOpsMetricNames 查询实例CES监控指标名称列表
 //
 // 查询实例CES监控指标名称列表
@@ -1066,6 +1087,27 @@ func (c *RdsClient) ListAuditlogs(request *model.ListAuditlogsRequest) (*model.L
 func (c *RdsClient) ListAuditlogsInvoker(request *model.ListAuditlogsRequest) *ListAuditlogsInvoker {
 	requestDef := GenReqDefForListAuditlogs()
 	return &ListAuditlogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAutoScalingHistory 查询自动变配历史
+//
+// 查询自动变配历史。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListAutoScalingHistory(request *model.ListAutoScalingHistoryRequest) (*model.ListAutoScalingHistoryResponse, error) {
+	requestDef := GenReqDefForListAutoScalingHistory()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAutoScalingHistoryResponse), nil
+	}
+}
+
+// ListAutoScalingHistoryInvoker 查询自动变配历史
+func (c *RdsClient) ListAutoScalingHistoryInvoker(request *model.ListAutoScalingHistoryRequest) *ListAutoScalingHistoryInvoker {
+	requestDef := GenReqDefForListAutoScalingHistory()
+	return &ListAutoScalingHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAutoScalingPolicy 查询自动变配策略
@@ -2861,6 +2903,27 @@ func (c *RdsClient) SetAutoEnlargePolicyInvoker(request *model.SetAutoEnlargePol
 	return &SetAutoEnlargePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetAutoScalingPolicy 修改自动变配策略
+//
+// 修改自动变配的策略，包括自动升配和降配。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) SetAutoScalingPolicy(request *model.SetAutoScalingPolicyRequest) (*model.SetAutoScalingPolicyResponse, error) {
+	requestDef := GenReqDefForSetAutoScalingPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetAutoScalingPolicyResponse), nil
+	}
+}
+
+// SetAutoScalingPolicyInvoker 修改自动变配策略
+func (c *RdsClient) SetAutoScalingPolicyInvoker(request *model.SetAutoScalingPolicyRequest) *SetAutoScalingPolicyInvoker {
+	requestDef := GenReqDefForSetAutoScalingPolicy()
+	return &SetAutoScalingPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetAutoUpgradePolicy 设置实例内核小版本自动升级策略
 //
 // 设置实例内核小版本自动升级策略
@@ -3006,6 +3069,27 @@ func (c *RdsClient) SetOffSiteBackupPolicy(request *model.SetOffSiteBackupPolicy
 func (c *RdsClient) SetOffSiteBackupPolicyInvoker(request *model.SetOffSiteBackupPolicyRequest) *SetOffSiteBackupPolicyInvoker {
 	requestDef := GenReqDefForSetOffSiteBackupPolicy()
 	return &SetOffSiteBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SetRdsDBFaultPolicy 设置内核故障的处理策略
+//
+// 设置内核故障的处理策略：优先切换或优先修复。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) SetRdsDBFaultPolicy(request *model.SetRdsDbFaultPolicyRequest) (*model.SetRdsDbFaultPolicyResponse, error) {
+	requestDef := GenReqDefForSetRdsDBFaultPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetRdsDbFaultPolicyResponse), nil
+	}
+}
+
+// SetRdsDBFaultPolicyInvoker 设置内核故障的处理策略
+func (c *RdsClient) SetRdsDBFaultPolicyInvoker(request *model.SetRdsDbFaultPolicyRequest) *SetRdsDBFaultPolicyInvoker {
+	requestDef := GenReqDefForSetRdsDBFaultPolicy()
+	return &SetRdsDBFaultPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SetSecondLevelMonitor 设置秒级监控策略
@@ -3197,6 +3281,27 @@ func (c *RdsClient) ShowAvailableBuildDrInstance(request *model.ShowAvailableBui
 func (c *RdsClient) ShowAvailableBuildDrInstanceInvoker(request *model.ShowAvailableBuildDrInstanceRequest) *ShowAvailableBuildDrInstanceInvoker {
 	requestDef := GenReqDefForShowAvailableBuildDrInstance()
 	return &ShowAvailableBuildDrInstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAvailableCorsVpcs 查询云耀实例的VPC服务信息
+//
+// 查询云耀实例的VPC服务信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowAvailableCorsVpcs(request *model.ShowAvailableCorsVpcsRequest) (*model.ShowAvailableCorsVpcsResponse, error) {
+	requestDef := GenReqDefForShowAvailableCorsVpcs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAvailableCorsVpcsResponse), nil
+	}
+}
+
+// ShowAvailableCorsVpcsInvoker 查询云耀实例的VPC服务信息
+func (c *RdsClient) ShowAvailableCorsVpcsInvoker(request *model.ShowAvailableCorsVpcsRequest) *ShowAvailableCorsVpcsInvoker {
+	requestDef := GenReqDefForShowAvailableCorsVpcs()
+	return &ShowAvailableCorsVpcsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAvailableVersion 查询实例可升级的目标版本
@@ -5089,6 +5194,27 @@ func (c *RdsClient) ShowMySqlProxySlowLogListInvoker(request *model.ShowMySqlPro
 	return &ShowMySqlProxySlowLogListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SwitchMySqlProxyEip 数据库代理绑定解绑弹性公网IP
+//
+// 数据库代理绑定解绑弹性公网IP。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) SwitchMySqlProxyEip(request *model.SwitchMySqlProxyEipRequest) (*model.SwitchMySqlProxyEipResponse, error) {
+	requestDef := GenReqDefForSwitchMySqlProxyEip()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchMySqlProxyEipResponse), nil
+	}
+}
+
+// SwitchMySqlProxyEipInvoker 数据库代理绑定解绑弹性公网IP
+func (c *RdsClient) SwitchMySqlProxyEipInvoker(request *model.SwitchMySqlProxyEipRequest) *SwitchMySqlProxyEipInvoker {
+	requestDef := GenReqDefForSwitchMySqlProxyEip()
+	return &SwitchMySqlProxyEipInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SwitchMySqlProxySlowLog 更改数据库代理慢日志上报开关
 //
 // 更改数据库代理慢日志上报开关。
@@ -5171,6 +5297,27 @@ func (c *RdsClient) UpdateHostPrivilege(request *model.UpdateHostPrivilegeReques
 func (c *RdsClient) UpdateHostPrivilegeInvoker(request *model.UpdateHostPrivilegeRequest) *UpdateHostPrivilegeInvoker {
 	requestDef := GenReqDefForUpdateHostPrivilege()
 	return &UpdateHostPrivilegeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInstancesProxyPort 修改数据库代理端口号
+//
+// 修改数据库代理端口号。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) UpdateInstancesProxyPort(request *model.UpdateInstancesProxyPortRequest) (*model.UpdateInstancesProxyPortResponse, error) {
+	requestDef := GenReqDefForUpdateInstancesProxyPort()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInstancesProxyPortResponse), nil
+	}
+}
+
+// UpdateInstancesProxyPortInvoker 修改数据库代理端口号
+func (c *RdsClient) UpdateInstancesProxyPortInvoker(request *model.UpdateInstancesProxyPortRequest) *UpdateInstancesProxyPortInvoker {
+	requestDef := GenReqDefForUpdateInstancesProxyPort()
+	return &UpdateInstancesProxyPortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AllowDbPrivilege 授权数据库帐号

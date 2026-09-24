@@ -777,7 +777,7 @@ func (c *IoTEdgeClient) UpdateEdgeApplicationVersionInvoker(request *model.Updat
 
 // UpdateEdgeApplicationVersionState 更新应用版本状态
 //
-// 更新应用版本状态。
+// 更新应用版本状态
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) UpdateEdgeApplicationVersionState(request *model.UpdateEdgeApplicationVersionStateRequest) (*model.UpdateEdgeApplicationVersionStateResponse, error) {
@@ -922,7 +922,7 @@ func (c *IoTEdgeClient) UpdateDcDsInvoker(request *model.UpdateDcDsRequest) *Upd
 	return &UpdateDcDsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchListDcDevices 查数采连接子设备列表
+// BatchListDcDevices 查询数采连接子设备列表
 //
 // 查询数采连接下子设备列表
 //
@@ -937,7 +937,7 @@ func (c *IoTEdgeClient) BatchListDcDevices(request *model.BatchListDcDevicesRequ
 	}
 }
 
-// BatchListDcDevicesInvoker 查数采连接子设备列表
+// BatchListDcDevicesInvoker 查询数采连接子设备列表
 func (c *IoTEdgeClient) BatchListDcDevicesInvoker(request *model.BatchListDcDevicesRequest) *BatchListDcDevicesInvoker {
 	requestDef := GenReqDefForBatchListDcDevices()
 	return &BatchListDcDevicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -966,7 +966,7 @@ func (c *IoTEdgeClient) BatchListDcPointsInvoker(request *model.BatchListDcPoint
 
 // CreateDcPoint 创建点位表配置
 //
-// 用户通过Console接口在指定边缘节点上点位表配置
+// 用户通过Console接口在指定边缘节点上创建点位表配置
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) CreateDcPoint(request *model.CreateDcPointRequest) (*model.CreateDcPointResponse, error) {
@@ -1197,7 +1197,7 @@ func (c *IoTEdgeClient) CreateModuleInvoker(request *model.CreateModuleRequest) 
 
 // DeleteModule 删除边缘模块
 //
-// 用户通过过Console接口在指定边缘节点上删除边缘模块
+// 用户通过Console接口在指定边缘节点上删除边缘模块
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) DeleteModule(request *model.DeleteModuleRequest) (*model.DeleteModuleResponse, error) {
@@ -1218,7 +1218,7 @@ func (c *IoTEdgeClient) DeleteModuleInvoker(request *model.DeleteModuleRequest) 
 
 // InvokeModuleMsg 代理边缘模块消息
 //
-// iotedge通过该接口透明代理用户到模块的请求
+// IoTEdge通过该接口透明代理用户到模块的请求
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) InvokeModuleMsg(request *model.InvokeModuleMsgRequest) (*model.InvokeModuleMsgResponse, error) {
@@ -1281,7 +1281,7 @@ func (c *IoTEdgeClient) UpdateModuleInvoker(request *model.UpdateModuleRequest) 
 
 // UpdateModuleState 修改边缘模块状态
 //
-// 用户通过Console接口启停数采连接
+// 用户通过Console接口修改边缘模块状态
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) UpdateModuleState(request *model.UpdateModuleStateRequest) (*model.UpdateModuleStateResponse, error) {
@@ -1491,7 +1491,7 @@ func (c *IoTEdgeClient) ShowOtTemplateInvoker(request *model.ShowOtTemplateReque
 
 // ImportPoints 批量导入点位表
 //
-// 用户通过Console接口在指定边缘节点上点位表配置
+// 用户通过Console接口在指定边缘节点上创建点位表配置
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) ImportPoints(request *model.ImportPointsRequest) (*model.ImportPointsResponse, error) {
@@ -2018,7 +2018,7 @@ func (c *IoTEdgeClient) CreatePushChannelInvoker(request *model.CreatePushChanne
 
 // DeletePushChannel 删除外部推送通道
 //
-// 删除查询外部推送通道
+// 删除外部推送通道
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *IoTEdgeClient) DeletePushChannel(request *model.DeletePushChannelRequest) (*model.DeletePushChannelResponse, error) {

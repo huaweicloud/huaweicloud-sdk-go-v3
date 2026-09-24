@@ -4015,6 +4015,22 @@ func (i *ListSqlPlanActionInvoker) Invoke() (*model.ListSqlPlanActionResponse, e
 	}
 }
 
+type ListSqlRecommendRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSqlRecommendRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSqlRecommendRulesInvoker) Invoke() (*model.ListSqlRecommendRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSqlRecommendRulesResponse), nil
+	}
+}
+
 type ListSqlTraceInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -22,7 +22,7 @@ type IssueCreateEntity struct {
 	CategoryLayerId string `json:"category_layer_id"`
 
 	// **参数解释**： 父工作项ID。 **约束限制**： 创建子工作项时必填，其他场景非必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-	ParentId string `json:"parent_id"`
+	ParentId *string `json:"parent_id,omitempty"`
 
 	// **参数解释**： 工作项状态code。可通过[查询工作项状态](ListIssueStatues.xml)接口获取，响应消息体中的**code**字段的值就是工作项状态code。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
 	Status string `json:"status"`

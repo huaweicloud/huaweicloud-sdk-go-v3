@@ -773,6 +773,22 @@ func (i *EnableConfigurationInvoker) Invoke() (*model.EnableConfigurationRespons
 	}
 }
 
+type ExecuteOptimizeTableSpaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteOptimizeTableSpaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteOptimizeTableSpaceInvoker) Invoke() (*model.ExecuteOptimizeTableSpaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteOptimizeTableSpaceResponse), nil
+	}
+}
+
 type GetInstancesOpsMetricNamesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -802,6 +818,22 @@ func (i *ListAuditlogsInvoker) Invoke() (*model.ListAuditlogsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListAuditlogsResponse), nil
+	}
+}
+
+type ListAutoScalingHistoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAutoScalingHistoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAutoScalingHistoryInvoker) Invoke() (*model.ListAutoScalingHistoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAutoScalingHistoryResponse), nil
 	}
 }
 
@@ -2165,6 +2197,22 @@ func (i *SetAutoEnlargePolicyInvoker) Invoke() (*model.SetAutoEnlargePolicyRespo
 	}
 }
 
+type SetAutoScalingPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetAutoScalingPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetAutoScalingPolicyInvoker) Invoke() (*model.SetAutoScalingPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetAutoScalingPolicyResponse), nil
+	}
+}
+
 type SetAutoUpgradePolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2274,6 +2322,22 @@ func (i *SetOffSiteBackupPolicyInvoker) Invoke() (*model.SetOffSiteBackupPolicyR
 		return nil, err
 	} else {
 		return result.(*model.SetOffSiteBackupPolicyResponse), nil
+	}
+}
+
+type SetRdsDBFaultPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetRdsDBFaultPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetRdsDBFaultPolicyInvoker) Invoke() (*model.SetRdsDbFaultPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetRdsDbFaultPolicyResponse), nil
 	}
 }
 
@@ -2418,6 +2482,22 @@ func (i *ShowAvailableBuildDrInstanceInvoker) Invoke() (*model.ShowAvailableBuil
 		return nil, err
 	} else {
 		return result.(*model.ShowAvailableBuildDrInstanceResponse), nil
+	}
+}
+
+type ShowAvailableCorsVpcsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAvailableCorsVpcsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAvailableCorsVpcsInvoker) Invoke() (*model.ShowAvailableCorsVpcsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAvailableCorsVpcsResponse), nil
 	}
 }
 
@@ -3861,6 +3941,22 @@ func (i *ShowMySqlProxySlowLogListInvoker) Invoke() (*model.ShowMySqlProxySlowLo
 	}
 }
 
+type SwitchMySqlProxyEipInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchMySqlProxyEipInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SwitchMySqlProxyEipInvoker) Invoke() (*model.SwitchMySqlProxyEipResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchMySqlProxyEipResponse), nil
+	}
+}
+
 type SwitchMySqlProxySlowLogInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3922,6 +4018,22 @@ func (i *UpdateHostPrivilegeInvoker) Invoke() (*model.UpdateHostPrivilegeRespons
 		return nil, err
 	} else {
 		return result.(*model.UpdateHostPrivilegeResponse), nil
+	}
+}
+
+type UpdateInstancesProxyPortInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInstancesProxyPortInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInstancesProxyPortInvoker) Invoke() (*model.UpdateInstancesProxyPortResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInstancesProxyPortResponse), nil
 	}
 }
 

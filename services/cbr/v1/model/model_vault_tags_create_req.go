@@ -6,9 +6,8 @@ import (
 	"strings"
 )
 
-// VaultTagsCreateReq
 type VaultTagsCreateReq struct {
-	Tag *Tag `json:"tag,omitempty"`
+	Tag *TagCreate `json:"tag"`
 }
 
 func (o VaultTagsCreateReq) String() string {

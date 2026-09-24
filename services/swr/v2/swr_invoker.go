@@ -2117,6 +2117,38 @@ func (i *ListInstanceWebhooksInvoker) Invoke() (*model.ListInstanceWebhooksRespo
 	}
 }
 
+type ListInternalEndpointConnectionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInternalEndpointConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInternalEndpointConnectionsInvoker) Invoke() (*model.ListInternalEndpointConnectionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInternalEndpointConnectionsResponse), nil
+	}
+}
+
+type ListInternalEndpointPermissionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListInternalEndpointPermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListInternalEndpointPermissionsInvoker) Invoke() (*model.ListInternalEndpointPermissionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListInternalEndpointPermissionsResponse), nil
+	}
+}
+
 type ListNamespaceRepositoriesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2722,5 +2754,37 @@ func (i *UpdateInstanceWebhookInvoker) Invoke() (*model.UpdateInstanceWebhookRes
 		return nil, err
 	} else {
 		return result.(*model.UpdateInstanceWebhookResponse), nil
+	}
+}
+
+type UpdateInternalEndpointConnectionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInternalEndpointConnectionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInternalEndpointConnectionsInvoker) Invoke() (*model.UpdateInternalEndpointConnectionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInternalEndpointConnectionsResponse), nil
+	}
+}
+
+type UpdateInternalEndpointPermissionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateInternalEndpointPermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateInternalEndpointPermissionsInvoker) Invoke() (*model.UpdateInternalEndpointPermissionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateInternalEndpointPermissionsResponse), nil
 	}
 }

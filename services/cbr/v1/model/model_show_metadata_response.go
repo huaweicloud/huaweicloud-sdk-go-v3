@@ -31,8 +31,11 @@ type ShowMetadataResponse struct {
 	Server *string `json:"server,omitempty"`
 
 	// 云服务器卷信息
-	Volumes        *[]string `json:"volumes,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	Volumes *[]string `json:"volumes,omitempty"`
+
+	// 云桌面信息，取值范围不涉及。
+	Workspace      *string `json:"workspace,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o ShowMetadataResponse) String() string {

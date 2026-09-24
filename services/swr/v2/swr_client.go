@@ -2791,6 +2791,48 @@ func (c *SwrClient) ListInstanceWebhooksInvoker(request *model.ListInstanceWebho
 	return &ListInstanceWebhooksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListInternalEndpointConnections 查询内网访问连接列表
+//
+// 查询内网访问连接列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) ListInternalEndpointConnections(request *model.ListInternalEndpointConnectionsRequest) (*model.ListInternalEndpointConnectionsResponse, error) {
+	requestDef := GenReqDefForListInternalEndpointConnections()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInternalEndpointConnectionsResponse), nil
+	}
+}
+
+// ListInternalEndpointConnectionsInvoker 查询内网访问连接列表
+func (c *SwrClient) ListInternalEndpointConnectionsInvoker(request *model.ListInternalEndpointConnectionsRequest) *ListInternalEndpointConnectionsInvoker {
+	requestDef := GenReqDefForListInternalEndpointConnections()
+	return &ListInternalEndpointConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListInternalEndpointPermissions 查询内网访问白名单列表
+//
+// 查询内网访问白名单列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) ListInternalEndpointPermissions(request *model.ListInternalEndpointPermissionsRequest) (*model.ListInternalEndpointPermissionsResponse, error) {
+	requestDef := GenReqDefForListInternalEndpointPermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListInternalEndpointPermissionsResponse), nil
+	}
+}
+
+// ListInternalEndpointPermissionsInvoker 查询内网访问白名单列表
+func (c *SwrClient) ListInternalEndpointPermissionsInvoker(request *model.ListInternalEndpointPermissionsRequest) *ListInternalEndpointPermissionsInvoker {
+	requestDef := GenReqDefForListInternalEndpointPermissions()
+	return &ListInternalEndpointPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListNamespaceRepositories 获取命名空间下所有制品仓库列表
 //
 // 获取命名空间下所有制品仓库列表
@@ -3587,4 +3629,46 @@ func (c *SwrClient) UpdateInstanceWebhook(request *model.UpdateInstanceWebhookRe
 func (c *SwrClient) UpdateInstanceWebhookInvoker(request *model.UpdateInstanceWebhookRequest) *UpdateInstanceWebhookInvoker {
 	requestDef := GenReqDefForUpdateInstanceWebhook()
 	return &UpdateInstanceWebhookInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInternalEndpointConnections 允许或拒绝内网访问连接
+//
+// 允许或拒绝内网访问连接
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) UpdateInternalEndpointConnections(request *model.UpdateInternalEndpointConnectionsRequest) (*model.UpdateInternalEndpointConnectionsResponse, error) {
+	requestDef := GenReqDefForUpdateInternalEndpointConnections()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInternalEndpointConnectionsResponse), nil
+	}
+}
+
+// UpdateInternalEndpointConnectionsInvoker 允许或拒绝内网访问连接
+func (c *SwrClient) UpdateInternalEndpointConnectionsInvoker(request *model.UpdateInternalEndpointConnectionsRequest) *UpdateInternalEndpointConnectionsInvoker {
+	requestDef := GenReqDefForUpdateInternalEndpointConnections()
+	return &UpdateInternalEndpointConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateInternalEndpointPermissions 添加或移除内网访问白名单
+//
+// 添加或移除内网访问白名单
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *SwrClient) UpdateInternalEndpointPermissions(request *model.UpdateInternalEndpointPermissionsRequest) (*model.UpdateInternalEndpointPermissionsResponse, error) {
+	requestDef := GenReqDefForUpdateInternalEndpointPermissions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateInternalEndpointPermissionsResponse), nil
+	}
+}
+
+// UpdateInternalEndpointPermissionsInvoker 添加或移除内网访问白名单
+func (c *SwrClient) UpdateInternalEndpointPermissionsInvoker(request *model.UpdateInternalEndpointPermissionsRequest) *UpdateInternalEndpointPermissionsInvoker {
+	requestDef := GenReqDefForUpdateInternalEndpointPermissions()
+	return &UpdateInternalEndpointPermissionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

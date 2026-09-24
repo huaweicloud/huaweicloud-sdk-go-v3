@@ -689,6 +689,7 @@ func (c *ImsClient) ShowImageQuotaInvoker(request *model.ShowImageQuotaRequest) 
 	return &ShowImageQuotaInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowJob 异步任务查询
 //
 // 该接口为扩展接口，主要用于查询异步接口执行情况，比如查询导出镜像任务的执行状态。
@@ -704,6 +705,7 @@ func (c *ImsClient) ShowJob(request *model.ShowJobRequest) (*model.ShowJobRespon
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowJobInvoker 异步任务查询
 func (c *ImsClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoker {
 	requestDef := GenReqDefForShowJob()
@@ -794,6 +796,7 @@ func (c *ImsClient) ShowVersionInvoker(request *model.ShowVersionRequest) *ShowV
 	return &ShowVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GlanceAddImageMember 添加镜像成员（OpenStack原生）
 //
 // 用户共享镜像给其他用户时，使用该接口向该镜像成员中添加接受镜像用户的项目ID。
@@ -809,6 +812,7 @@ func (c *ImsClient) GlanceAddImageMember(request *model.GlanceAddImageMemberRequ
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GlanceAddImageMemberInvoker 添加镜像成员（OpenStack原生）
 func (c *ImsClient) GlanceAddImageMemberInvoker(request *model.GlanceAddImageMemberRequest) *GlanceAddImageMemberInvoker {
 	requestDef := GenReqDefForGlanceAddImageMember()
@@ -836,6 +840,7 @@ func (c *ImsClient) GlanceCreateImageMetadataInvoker(request *model.GlanceCreate
 	return &GlanceCreateImageMetadataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GlanceCreateTag 增加标签（OpenStack原生）
 //
 // 该接口主要用于为某个镜像添加一个自定义标签。通过自定义标签，用户可以将镜像进行分类。
@@ -851,6 +856,7 @@ func (c *ImsClient) GlanceCreateTag(request *model.GlanceCreateTagRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GlanceCreateTagInvoker 增加标签（OpenStack原生）
 func (c *ImsClient) GlanceCreateTagInvoker(request *model.GlanceCreateTagRequest) *GlanceCreateTagInvoker {
 	requestDef := GenReqDefForGlanceCreateTag()
@@ -878,6 +884,7 @@ func (c *ImsClient) GlanceDeleteImageInvoker(request *model.GlanceDeleteImageReq
 	return &GlanceDeleteImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GlanceDeleteImageMember 删除指定的镜像成员（OpenStack原生）
 //
 // 该接口用于取消对某个用户的镜像共享。
@@ -893,12 +900,14 @@ func (c *ImsClient) GlanceDeleteImageMember(request *model.GlanceDeleteImageMemb
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GlanceDeleteImageMemberInvoker 删除指定的镜像成员（OpenStack原生）
 func (c *ImsClient) GlanceDeleteImageMemberInvoker(request *model.GlanceDeleteImageMemberRequest) *GlanceDeleteImageMemberInvoker {
 	requestDef := GenReqDefForGlanceDeleteImageMember()
 	return &GlanceDeleteImageMemberInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GlanceDeleteTag 删除标签（OpenStack原生）
 //
 // 该接口主要用于删除某个镜像的自定义标签，通过该接口，用户可以将私有镜像中一些不用的标签删除。
@@ -914,6 +923,7 @@ func (c *ImsClient) GlanceDeleteTag(request *model.GlanceDeleteTagRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GlanceDeleteTagInvoker 删除标签（OpenStack原生）
 func (c *ImsClient) GlanceDeleteTagInvoker(request *model.GlanceDeleteTagRequest) *GlanceDeleteTagInvoker {
 	requestDef := GenReqDefForGlanceDeleteTag()
@@ -983,6 +993,7 @@ func (c *ImsClient) GlanceListImageSchemasInvoker(request *model.GlanceListImage
 	return &GlanceListImageSchemasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GlanceListImages 查询镜像列表（OpenStack原生）
 //
 // 获取镜像列表。
@@ -1002,12 +1013,14 @@ func (c *ImsClient) GlanceListImages(request *model.GlanceListImagesRequest) (*m
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GlanceListImagesInvoker 查询镜像列表（OpenStack原生）
 func (c *ImsClient) GlanceListImagesInvoker(request *model.GlanceListImagesRequest) *GlanceListImagesInvoker {
 	requestDef := GenReqDefForGlanceListImages()
 	return &GlanceListImagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GlanceShowImage 查询镜像详情（OpenStack原生）
 //
 // 查询单个镜像详情，用户可以通过该接口查询单个私有或者公共镜像的详情
@@ -1023,6 +1036,7 @@ func (c *ImsClient) GlanceShowImage(request *model.GlanceShowImageRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GlanceShowImageInvoker 查询镜像详情（OpenStack原生）
 func (c *ImsClient) GlanceShowImageInvoker(request *model.GlanceShowImageRequest) *GlanceShowImageInvoker {
 	requestDef := GenReqDefForGlanceShowImage()
@@ -1092,6 +1106,7 @@ func (c *ImsClient) GlanceShowImageSchemasInvoker(request *model.GlanceShowImage
 	return &GlanceShowImageSchemasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GlanceUpdateImage 更新镜像信息（OpenStack原生）
 //
 // 修改镜像信息
@@ -1107,12 +1122,14 @@ func (c *ImsClient) GlanceUpdateImage(request *model.GlanceUpdateImageRequest) (
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GlanceUpdateImageInvoker 更新镜像信息（OpenStack原生）
 func (c *ImsClient) GlanceUpdateImageInvoker(request *model.GlanceUpdateImageRequest) *GlanceUpdateImageInvoker {
 	requestDef := GenReqDefForGlanceUpdateImage()
 	return &GlanceUpdateImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GlanceUpdateImageMember 更新镜像成员状态（OpenStack原生）
 //
 // 用户接受或者拒绝共享镜像时，使用该接口更新镜像成员的状态。
@@ -1128,6 +1145,7 @@ func (c *ImsClient) GlanceUpdateImageMember(request *model.GlanceUpdateImageMemb
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // GlanceUpdateImageMemberInvoker 更新镜像成员状态（OpenStack原生）
 func (c *ImsClient) GlanceUpdateImageMemberInvoker(request *model.GlanceUpdateImageMemberRequest) *GlanceUpdateImageMemberInvoker {
 	requestDef := GenReqDefForGlanceUpdateImageMember()

@@ -9,19 +9,19 @@ import (
 // ListRedisPitrRestoreTimeRequest Request Object
 type ListRedisPitrRestoreTimeRequest struct {
 
-	// 实例ID。
+	// **参数解释：** 实例ID，可以调用“查询实例列表和详情”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	InstanceId string `json:"instance_id"`
 
-	// 查询可恢复时间点的开始时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。
+	// **参数解释：** 查询可恢复时间点的开始时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	StartTime string `json:"start_time"`
 
-	// 查询可恢复时间点的结束时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。
+	// **参数解释：** 查询可恢复时间点的结束时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	EndTime string `json:"end_time"`
 
-	// 偏移量，表示查询该偏移量后面的记录，默认值为0。
+	// **参数解释：** 偏移量，表示查询该偏移量后面的记录量。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 0。
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 查询返回记录的数量上限值，取值范围为1~100，默认值为100。
+	// **参数解释：** 查询返回记录的数量上限值。 **约束限制：** 不涉及。 **取值范围：** 1~300。 **默认取值：** 300。
 	Limit *int32 `json:"limit,omitempty"`
 }
 

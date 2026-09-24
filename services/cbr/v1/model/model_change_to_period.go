@@ -9,7 +9,7 @@ import (
 type ChangeToPeriod struct {
 
 	// 付费模式，当前仅可选择：pre_paid
-	ChargingMode *string `json:"charging_mode,omitempty"`
+	ChargingMode string `json:"charging_mode"`
 
 	// 创建类型，按年(year)或者按月(month)
 	PeriodType string `json:"period_type"`
@@ -18,10 +18,10 @@ type ChangeToPeriod struct {
 	PeriodNum int32 `json:"period_num"`
 
 	// 到期后是否自动续期，默认不续期
-	IsAutoRenew *bool `json:"is_auto_renew,omitempty"`
+	IsAutoRenew bool `json:"is_auto_renew"`
 
 	// 是否自动付费，默认为不自动付费
-	IsAutoPay *bool `json:"is_auto_pay,omitempty"`
+	IsAutoPay bool `json:"is_auto_pay"`
 
 	// 跳转URL
 	ConsoleUrl *string `json:"console_url,omitempty"`

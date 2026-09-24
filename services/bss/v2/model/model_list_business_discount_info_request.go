@@ -9,7 +9,7 @@ import (
 // ListBusinessDiscountInfoRequest Request Object
 type ListBusinessDiscountInfoRequest struct {
 
-	// 忽略大小写，中文：zh_cn 英文：en_us。缺省为zh_cn
+	// 语言，非必填，忽略大小写，中文：zh_cn 英文：en_us。缺省为zh_cn
 	XLanguage *string `json:"X-Language,omitempty"`
 
 	Body *BusinessDiscountQueryReq `json:"body,omitempty"`

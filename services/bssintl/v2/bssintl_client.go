@@ -672,6 +672,27 @@ func (c *BssintlClient) ListResourceSpecsInvoker(request *model.ListResourceSpec
 	return &ListResourceSpecsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListResourceSpecsPrice 查询云服务类型资源规格定价
+//
+// 客户或伙伴在自建平台查询云服务类型资源规格定价，辅助购买决策
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *BssintlClient) ListResourceSpecsPrice(request *model.ListResourceSpecsPriceRequest) (*model.ListResourceSpecsPriceResponse, error) {
+	requestDef := GenReqDefForListResourceSpecsPrice()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourceSpecsPriceResponse), nil
+	}
+}
+
+// ListResourceSpecsPriceInvoker 查询云服务类型资源规格定价
+func (c *BssintlClient) ListResourceSpecsPriceInvoker(request *model.ListResourceSpecsPriceRequest) *ListResourceSpecsPriceInvoker {
+	requestDef := GenReqDefForListResourceSpecsPrice()
+	return &ListResourceSpecsPriceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListResourceTypes 查询资源类型列表
 //
 // 伙伴在伙伴销售平台查询资源类型的列表。

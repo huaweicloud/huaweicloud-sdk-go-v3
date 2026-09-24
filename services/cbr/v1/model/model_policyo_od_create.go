@@ -43,6 +43,8 @@ type PolicyoOdCreate struct {
 
 	// 跨账户复制策略所关联的跨账户复制存储库标识
 	CrossAccountUrn *string `json:"cross_account_urn,omitempty"`
+
+	AdvancedRetentionRules *PolicyAdvancedRetentionRules `json:"advanced_retention_rules,omitempty"`
 }
 
 func (o PolicyoOdCreate) String() string {

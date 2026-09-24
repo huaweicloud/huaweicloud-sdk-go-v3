@@ -265,7 +265,7 @@ func (c *EcsClient) BatchDeleteServerTagsInvoker(request *model.BatchDeleteServe
 	return &BatchDeleteServerTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchDetachVolumes 批量卸载卷
+// BatchDetachVolumes 批量卸载指定共享盘
 //
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -279,7 +279,7 @@ func (c *EcsClient) BatchDetachVolumes(request *model.BatchDetachVolumesRequest)
 	}
 }
 
-// BatchDetachVolumesInvoker 批量卸载卷
+// BatchDetachVolumesInvoker 批量卸载指定共享盘
 func (c *EcsClient) BatchDetachVolumesInvoker(request *model.BatchDetachVolumesRequest) *BatchDetachVolumesInvoker {
 	requestDef := GenReqDefForBatchDetachVolumes()
 	return &BatchDetachVolumesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

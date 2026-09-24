@@ -5314,6 +5314,27 @@ func (c *GaussDBforopenGaussClient) ListSqlPlanActionInvoker(request *model.List
 	return &ListSqlPlanActionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSqlRecommendRules 获取SQL限流推荐规则
+//
+// 获取SQL限流推荐规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforopenGaussClient) ListSqlRecommendRules(request *model.ListSqlRecommendRulesRequest) (*model.ListSqlRecommendRulesResponse, error) {
+	requestDef := GenReqDefForListSqlRecommendRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSqlRecommendRulesResponse), nil
+	}
+}
+
+// ListSqlRecommendRulesInvoker 获取SQL限流推荐规则
+func (c *GaussDBforopenGaussClient) ListSqlRecommendRulesInvoker(request *model.ListSqlRecommendRulesRequest) *ListSqlRecommendRulesInvoker {
+	requestDef := GenReqDefForListSqlRecommendRules()
+	return &ListSqlRecommendRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSqlTrace 查询SQL链路信息
 //
 // 要用于查询SQL某次执行（对应归一化SQL ID和唯一SQL ID传值）过程中的全部链路信息，包含各个阶段的多维度耗时统计。对于分布式版实例，可查询对应SQL的完整执行链路，包含CN和DN上SQL语句的耗时分析。

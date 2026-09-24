@@ -1,7 +1,6 @@
 package model
 
 import (
-	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/sdktime"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
 
 	"strings"
@@ -21,7 +20,7 @@ type GetNetworkPolicy struct {
 	PolicyContent *NetworkPolicyBody `json:"policy_content,omitempty"`
 
 	// 创建时间
-	CreateTime *sdktime.SdkTime `json:"create_time,omitempty"`
+	CreateTime *string `json:"create_time,omitempty"`
 
 	// **参数解释**: 下发策略到cce成功与否 **取值范围**: - true: 成功 - false: 失败
 	DeployStatus *bool `json:"deploy_status,omitempty"`

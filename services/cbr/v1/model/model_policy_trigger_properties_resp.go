@@ -13,6 +13,9 @@ type PolicyTriggerPropertiesResp struct {
 
 	// 调度器开始时间，例如：\"2020-01-08 09:59:49\"
 	StartTime *string `json:"start_time,omitempty"`
+
+	// 启动时间窗口大小
+	StartWindowMinutes *int32 `json:"start_window_minutes,omitempty"`
 }
 
 func (o PolicyTriggerPropertiesResp) String() string {

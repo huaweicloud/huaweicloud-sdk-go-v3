@@ -41,11 +41,11 @@ type SlowSqlDetailResult struct {
 	// **参数解释**: 执行计划。 **取值范围**: 不涉及。
 	QueryPlan *string `json:"query_plan,omitempty"`
 
-	// **参数解释**: 开始时间UTC时间。 **取值范围**: 格式为yyyy-mm-ddThh:mm:ss+0000。
-	StartTime *int32 `json:"start_time,omitempty"`
+	// **参数解释**: 开始时间UTC时间，格式为yyyy-mm-ddThh:mm:ss+0000。 **取值范围**: 不涉及。
+	StartTime *string `json:"start_time,omitempty"`
 
-	// **参数解释**: 结束时间UTC时间。 **取值范围**: 格式为yyyy-mm-ddThh:mm:ss+0000。
-	FinishTime *int32 `json:"finish_time,omitempty"`
+	// **参数解释**: 结束时间UTC时间，格式为yyyy-mm-ddThh:mm:ss+0000。 **取值范围**: 不涉及。
+	FinishTime *string `json:"finish_time,omitempty"`
 
 	// **参数解释**: 返回行。 **取值范围**: 不涉及。
 	ReturnedRows *int32 `json:"returned_rows,omitempty"`
@@ -60,22 +60,22 @@ type SlowSqlDetailResult struct {
 	HitPages *int32 `json:"hit_pages,omitempty"`
 
 	// **参数解释**: 总耗时（单位：微秒）。 **取值范围**: 不涉及。
-	TotalTime *int32 `json:"total_time,omitempty"`
+	TotalTime *string `json:"total_time,omitempty"`
 
 	// **参数解释**: CPU耗时（单位：微秒）。 **取值范围**: 不涉及。
-	CpuTime *int32 `json:"cpu_time,omitempty"`
+	CpuTime *string `json:"cpu_time,omitempty"`
 
 	// **参数解释**: 计划耗时（单位：微秒）。 **取值范围**: 不涉及。
-	PlanTime *int32 `json:"plan_time,omitempty"`
+	PlanTime *string `json:"plan_time,omitempty"`
 
 	// **参数解释**: IO耗时（单位：微秒）。 **取值范围**: 不涉及。
-	IoTime *int32 `json:"io_time,omitempty"`
+	IoTime *string `json:"io_time,omitempty"`
 
 	// **参数解释**: 加锁次数。 **取值范围**: 不涉及。
 	LockCount *int32 `json:"lock_count,omitempty"`
 
 	// **参数解释**: 加锁耗时(单位：微秒)。 **取值范围**: 不涉及。
-	LockTime *int32 `json:"lock_time,omitempty"`
+	LockTime *string `json:"lock_time,omitempty"`
 }
 
 func (o SlowSqlDetailResult) String() string {

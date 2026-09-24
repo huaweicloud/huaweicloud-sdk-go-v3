@@ -145,9 +145,9 @@ func (c *OptVerseClient) DeleteEvolveTaskInvoker(request *model.DeleteEvolveTask
 	return &DeleteEvolveTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ImportAlgorithmFile 保存算法文件
+// ImportAlgorithmFile 上传算法文件（ZIP包）
 //
-// 保存算法文件
+// 上传算法文件（ZIP包）
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *OptVerseClient) ImportAlgorithmFile(request *model.ImportAlgorithmFileRequest) (*model.ImportAlgorithmFileResponse, error) {
@@ -160,7 +160,7 @@ func (c *OptVerseClient) ImportAlgorithmFile(request *model.ImportAlgorithmFileR
 	}
 }
 
-// ImportAlgorithmFileInvoker 保存算法文件
+// ImportAlgorithmFileInvoker 上传算法文件（ZIP包）
 func (c *OptVerseClient) ImportAlgorithmFileInvoker(request *model.ImportAlgorithmFileRequest) *ImportAlgorithmFileInvoker {
 	requestDef := GenReqDefForImportAlgorithmFile()
 	return &ImportAlgorithmFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -271,9 +271,9 @@ func (c *OptVerseClient) ListEvolveTaskStatsInvoker(request *model.ListEvolveTas
 	return &ListEvolveTaskStatsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// SaveAlgorithmFile 保存算法文件
+// SaveAlgorithmFile 上传算法文件
 //
-// 保存算法文件
+// 上传算法文件
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *OptVerseClient) SaveAlgorithmFile(request *model.SaveAlgorithmFileRequest) (*model.SaveAlgorithmFileResponse, error) {
@@ -286,7 +286,7 @@ func (c *OptVerseClient) SaveAlgorithmFile(request *model.SaveAlgorithmFileReque
 	}
 }
 
-// SaveAlgorithmFileInvoker 保存算法文件
+// SaveAlgorithmFileInvoker 上传算法文件
 func (c *OptVerseClient) SaveAlgorithmFileInvoker(request *model.SaveAlgorithmFileRequest) *SaveAlgorithmFileInvoker {
 	requestDef := GenReqDefForSaveAlgorithmFile()
 	return &SaveAlgorithmFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

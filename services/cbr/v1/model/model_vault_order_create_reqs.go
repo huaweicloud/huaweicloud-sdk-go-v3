@@ -8,7 +8,7 @@ import (
 
 // VaultOrderCreateReqs 创建包周期存储库请求体
 type VaultOrderCreateReqs struct {
-	Vault *VaultOrder `json:"vault"`
+	Vault *PrePaidVaultOrder `json:"vault"`
 }
 
 func (o VaultOrderCreateReqs) String() string {

@@ -748,6 +748,10 @@ func GenReqDefForShowReviewSetting() *def.HttpRequestDef {
 		WithName("WithDefaultReviewCategories").
 		WithJsonTag("with_default_review_categories").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("TakeEffect").
+		WithJsonTag("take_effect").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

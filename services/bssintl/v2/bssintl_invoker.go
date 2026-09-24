@@ -501,6 +501,22 @@ func (i *ListResourceSpecsInvoker) Invoke() (*model.ListResourceSpecsResponse, e
 	}
 }
 
+type ListResourceSpecsPriceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResourceSpecsPriceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListResourceSpecsPriceInvoker) Invoke() (*model.ListResourceSpecsPriceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResourceSpecsPriceResponse), nil
+	}
+}
+
 type ListResourceTypesInvoker struct {
 	*invoker.BaseInvoker
 }

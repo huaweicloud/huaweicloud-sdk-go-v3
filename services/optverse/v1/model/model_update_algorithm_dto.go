@@ -26,14 +26,8 @@ type UpdateAlgorithmDto struct {
 	// **参数解释**： 算法描述。 **约束限制**： 不涉及 **取值范围**： 长度[0,32768] **默认取值**： 不涉及
 	Description *string `json:"description,omitempty"`
 
-	// **参数解释**： 算法默认启动指令 **约束限制**： 不涉及 **取值范围**： 长度[0,256] **默认取值**： 不涉及
-	Command *string `json:"command,omitempty"`
-
 	// **参数解释**： 算法的创建时间 **约束限制**： 不涉及 **取值范围**： [0,9999999999999] **默认取值**： 无
 	CreateAt *int64 `json:"create_at,omitempty"`
-
-	// **参数解释**： 算法项目的图标 **约束限制**： 不涉及 **取值范围**： [0,65536] **默认取值**： 无
-	Picture *string `json:"picture,omitempty"`
 
 	Lang *ProgramLang `json:"lang,omitempty"`
 }

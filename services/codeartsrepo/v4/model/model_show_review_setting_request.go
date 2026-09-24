@@ -14,6 +14,9 @@ type ShowReviewSettingRequest struct {
 
 	// **参数解释：** 额外返回可勾选检视意见分类和系统预置检视意见分类。 **取值范围：** - true, 返回可勾选检视意见分类和系统预置检视意见分类。 - false, 不返回可勾选检视意见分类和系统预置检视意见分类。
 	WithDefaultReviewCategories *bool `json:"with_default_review_categories,omitempty"`
+
+	// **参数解释：** 设置是否继承上层配置。 **取值范围：** - true, 返回从上层继承配置。 - false, 只返回自身配置。
+	TakeEffect *bool `json:"take_effect,omitempty"`
 }
 
 func (o ShowReviewSettingRequest) String() string {

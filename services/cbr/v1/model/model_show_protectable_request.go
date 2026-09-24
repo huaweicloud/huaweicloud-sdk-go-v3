@@ -15,7 +15,7 @@ type ShowProtectableRequest struct {
 	// 资源ID
 	InstanceId string `json:"instance_id"`
 
-	// 可保护性类型
+	// **参数解释：** 可保护性类型 **约束限制：** 不涉及 **取值范围：** 可选参数为server,disk,turbo,workspace和workspace_v2 server： 云服务器类型 disk：云硬盘类型 turbo：turbo类型 workspace：workspace类型 workspace_v2：workspace_v2类型 **默认取值：** 不涉及
 	ProtectableType ShowProtectableRequestProtectableType `json:"protectable_type"`
 }
 
@@ -33,8 +33,11 @@ type ShowProtectableRequestProtectableType struct {
 }
 
 type ShowProtectableRequestProtectableTypeEnum struct {
-	SERVER ShowProtectableRequestProtectableType
-	DISK   ShowProtectableRequestProtectableType
+	SERVER       ShowProtectableRequestProtectableType
+	DISK         ShowProtectableRequestProtectableType
+	TURBO        ShowProtectableRequestProtectableType
+	WORKSPACE    ShowProtectableRequestProtectableType
+	WORKSPACE_V2 ShowProtectableRequestProtectableType
 }
 
 func GetShowProtectableRequestProtectableTypeEnum() ShowProtectableRequestProtectableTypeEnum {
@@ -44,6 +47,15 @@ func GetShowProtectableRequestProtectableTypeEnum() ShowProtectableRequestProtec
 		},
 		DISK: ShowProtectableRequestProtectableType{
 			value: "disk",
+		},
+		TURBO: ShowProtectableRequestProtectableType{
+			value: "turbo",
+		},
+		WORKSPACE: ShowProtectableRequestProtectableType{
+			value: "workspace",
+		},
+		WORKSPACE_V2: ShowProtectableRequestProtectableType{
+			value: "workspace_v2",
 		},
 	}
 }

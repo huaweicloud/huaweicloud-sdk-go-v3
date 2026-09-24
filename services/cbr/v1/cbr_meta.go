@@ -1458,6 +1458,26 @@ func GenReqDefForUpdateBackup() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForUpdateExpirationTime() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v3/{project_id}/vaults/{vault_id}/update-backup-expiration-time").
+		WithResponse(new(model.UpdateExpirationTimeResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("VaultId").
+		WithJsonTag("vault_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForUpdateMemberStatus() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPut).

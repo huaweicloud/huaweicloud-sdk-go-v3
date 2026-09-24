@@ -13,7 +13,7 @@ type TagsResp struct {
 	Key *string `json:"key,omitempty"`
 
 	// 值列表。  value最大长度43个字符。  value可以为空字符串。  key只能由中文，字母，数字，“-”，“_”组成。
-	Values *string `json:"values,omitempty"`
+	Values *[]string `json:"values,omitempty"`
 }
 
 func (o TagsResp) String() string {

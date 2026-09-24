@@ -23,7 +23,7 @@ type OrganizationPolicyUpdate struct {
 
 	PolicyOperationDefinition *PolicyoOdCreate `json:"policy_operation_definition,omitempty"`
 
-	PolicyTrigger *PolicyTriggerReq `json:"policy_trigger,omitempty"`
+	PolicyTrigger *PolicyTriggerUpdateReq `json:"policy_trigger,omitempty"`
 
 	// 组织策略生效范围
 	EffectiveScope *string `json:"effective_scope,omitempty"`

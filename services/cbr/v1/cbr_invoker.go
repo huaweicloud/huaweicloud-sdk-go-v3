@@ -1093,6 +1093,22 @@ func (i *UpdateBackupInvoker) Invoke() (*model.UpdateBackupResponse, error) {
 	}
 }
 
+type UpdateExpirationTimeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateExpirationTimeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateExpirationTimeInvoker) Invoke() (*model.UpdateExpirationTimeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateExpirationTimeResponse), nil
+	}
+}
+
 type UpdateMemberStatusInvoker struct {
 	*invoker.BaseInvoker
 }

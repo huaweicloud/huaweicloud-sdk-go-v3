@@ -9,7 +9,7 @@ import (
 // ShowRedisPitrInfoResponse Response Object
 type ShowRedisPitrInfoResponse struct {
 
-	// 查询Redis实例指定时间点恢复所占用的存储空间。 单位：GB
+	// **参数解释：** 查询Redis实例指定时间点恢复所占用的存储空间。单位：GB **取值范围：** 不涉及。
 	Storage        *string `json:"storage,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

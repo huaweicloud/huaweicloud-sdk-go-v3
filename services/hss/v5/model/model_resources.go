@@ -15,8 +15,8 @@ type Resources struct {
 	// **参数解释**： 集群名称 **取值范围**： 不涉及
 	ClusterName *string `json:"cluster_name,omitempty"`
 
-	// **参数解释**： 镜像 **取值范围**： 不涉及
-	Images *string `json:"images,omitempty"`
+	// **参数解释**： 镜像列表 **取值范围**： 不涉及
+	Images *[]string `json:"images,omitempty"`
 
 	// **参数解释**： 标签列表 **取值范围**： 不涉及
 	Labels *[]string `json:"labels,omitempty"`

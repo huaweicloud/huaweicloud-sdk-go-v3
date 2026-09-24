@@ -24,6 +24,8 @@ type OpExtraInfo struct {
 	Restore *OpExtendInfoRestore `json:"restore,omitempty"`
 
 	VaultDelete *OpExtendInfoVaultDelete `json:"vault_delete,omitempty"`
+
+	UpdateExpirationTime *OpExtendInfoUpdateExpirationTime `json:"update_expiration_time,omitempty"`
 }
 
 func (o OpExtraInfo) String() string {

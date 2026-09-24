@@ -661,6 +661,22 @@ func (i *ListAlarmWhiteListInvoker) Invoke() (*model.ListAlarmWhiteListResponse,
 	}
 }
 
+type ListAlarmWhiteListHostDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAlarmWhiteListHostDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAlarmWhiteListHostDetailInvoker) Invoke() (*model.ListAlarmWhiteListHostDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAlarmWhiteListHostDetailResponse), nil
+	}
+}
+
 type ListAppChangeHistoriesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3015,6 +3031,22 @@ func (i *SyncSecurityGroupPoliciesInvoker) Invoke() (*model.SyncSecurityGroupPol
 	}
 }
 
+type UpdateAlarmWhiteListHostInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAlarmWhiteListHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAlarmWhiteListHostInvoker) Invoke() (*model.UpdateAlarmWhiteListHostResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAlarmWhiteListHostResponse), nil
+	}
+}
+
 type UpdateContainerNetworkPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -5124,38 +5156,6 @@ func (i *UpdateCustomRuleConfigInvoker) Invoke() (*model.UpdateCustomRuleConfigR
 		return nil, err
 	} else {
 		return result.(*model.UpdateCustomRuleConfigResponse), nil
-	}
-}
-
-type ListAlarmWhiteListHostDetailInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListAlarmWhiteListHostDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListAlarmWhiteListHostDetailInvoker) Invoke() (*model.ListAlarmWhiteListHostDetailResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListAlarmWhiteListHostDetailResponse), nil
-	}
-}
-
-type UpdateAlarmWhiteListHostInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateAlarmWhiteListHostInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateAlarmWhiteListHostInvoker) Invoke() (*model.UpdateAlarmWhiteListHostResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateAlarmWhiteListHostResponse), nil
 	}
 }
 

@@ -15,7 +15,7 @@ type EvolveTaskCreateReq struct {
 	Description string `json:"description"`
 
 	// **参数解释**： 优化结果存储路径。 **约束限制**： 不涉及 **取值范围**： 取值范围[0,256]。 **默认取值**： 不涉及
-	OutputPath string `json:"output_path"`
+	OutputPath *string `json:"output_path,omitempty"`
 
 	// **参数解释**： 关联的算法设计项目。 **约束限制**： 不涉及 **取值范围**： 取值范围[1,128]。 **默认取值**： 不涉及
 	AlgorithmId string `json:"algorithm_id"`

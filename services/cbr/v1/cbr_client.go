@@ -63,7 +63,7 @@ func (c *CbrClient) AddMemberInvoker(request *model.AddMemberRequest) *AddMember
 
 // AddVaultResource 添加资源
 //
-// 存储库添加资源
+// 向存储库添加资源
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) AddVaultResource(request *model.AddVaultResourceRequest) (*model.AddVaultResourceResponse, error) {
@@ -84,7 +84,7 @@ func (c *CbrClient) AddVaultResourceInvoker(request *model.AddVaultResourceReque
 
 // AssociateVaultPolicy 设置存储库策略
 //
-// 存储库设置策略
+// 为存储库设置策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) AssociateVaultPolicy(request *model.AssociateVaultPolicyRequest) (*model.AssociateVaultPolicyResponse, error) {
@@ -103,16 +103,10 @@ func (c *CbrClient) AssociateVaultPolicyInvoker(request *model.AssociateVaultPol
 	return &AssociateVaultPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchCreateAndDeleteVaultTags 批量添加删除存储库资源标签
+// BatchCreateAndDeleteVaultTags 批量添加或删除存储库资源标签
 //
 // 为指定实例批量添加或删除标签
-// 标签管理服务需要使用该接口批量管理实例的标签。
 // 一个资源上最多有10个标签。
-// 此接口为幂等接口：
-//     创建时如果请求体中存在重复key则报错。
-//     创建时，不允许重复key，如果数据库存在就覆盖。
-//     删除时，允许重复key。
-//     删除时，如果删除的标签不存在，默认处理成功,删除时不对标签字符集范围做校验。key长度127个字符，value为255个字符。删除时tags结构体不能缺失，key不能为空，或者空字符串。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) BatchCreateAndDeleteVaultTags(request *model.BatchCreateAndDeleteVaultTagsRequest) (*model.BatchCreateAndDeleteVaultTagsResponse, error) {
@@ -125,7 +119,7 @@ func (c *CbrClient) BatchCreateAndDeleteVaultTags(request *model.BatchCreateAndD
 	}
 }
 
-// BatchCreateAndDeleteVaultTagsInvoker 批量添加删除存储库资源标签
+// BatchCreateAndDeleteVaultTagsInvoker 批量添加或删除存储库资源标签
 func (c *CbrClient) BatchCreateAndDeleteVaultTagsInvoker(request *model.BatchCreateAndDeleteVaultTagsRequest) *BatchCreateAndDeleteVaultTagsInvoker {
 	requestDef := GenReqDefForBatchCreateAndDeleteVaultTags()
 	return &BatchCreateAndDeleteVaultTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -154,7 +148,7 @@ func (c *CbrClient) BatchUpdateVaultInvoker(request *model.BatchUpdateVaultReque
 
 // ChangeOrder 变更
 //
-// 订单更新，调用该接口更新包周期产品订单信息,返回待支付订单信息。
+// 订单更新，调用该接口更新包周期产品订单信息，返回待支付订单信息。
 // &gt; 该接口目前属于公测阶段，部分region暂时无法使用
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -196,7 +190,7 @@ func (c *CbrClient) ChangeVaultChargeModeInvoker(request *model.ChangeVaultCharg
 	return &ChangeVaultChargeModeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CheckAgent 查询agent状态
+// CheckAgent 查询Agent状态
 //
 // 检查应用一致性Agent状态
 //
@@ -211,7 +205,7 @@ func (c *CbrClient) CheckAgent(request *model.CheckAgentRequest) (*model.CheckAg
 	}
 }
 
-// CheckAgentInvoker 查询agent状态
+// CheckAgentInvoker 查询Agent状态
 func (c *CbrClient) CheckAgentInvoker(request *model.CheckAgentRequest) *CheckAgentInvoker {
 	requestDef := GenReqDefForCheckAgent()
 	return &CheckAgentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -240,7 +234,7 @@ func (c *CbrClient) CopyBackupInvoker(request *model.CopyBackupRequest) *CopyBac
 
 // CopyCheckpoint 复制备份还原点
 //
-// 执行复制
+// 将备份还原点复制到其他存储库。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) CopyCheckpoint(request *model.CopyCheckpointRequest) (*model.CopyCheckpointResponse, error) {
@@ -366,8 +360,7 @@ func (c *CbrClient) CreateVaultInvoker(request *model.CreateVaultRequest) *Creat
 
 // CreateVaultTags 添加存储库资源标签
 //
-// 一个资源上最多有10个标签。
-// 此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
+// 为指定存储库资源添加标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) CreateVaultTags(request *model.CreateVaultTagsRequest) (*model.CreateVaultTagsResponse, error) {
@@ -472,7 +465,7 @@ func (c *CbrClient) DeletePolicyInvoker(request *model.DeletePolicyRequest) *Del
 
 // DeleteVault 删除存储库
 //
-// 删除存储库。若删除储存库，将一并删除存储库中的所有备份。
+// 删除存储库。若删除存储库，将一并删除存储库中的所有备份。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) DeleteVault(request *model.DeleteVaultRequest) (*model.DeleteVaultResponse, error) {
@@ -493,7 +486,7 @@ func (c *CbrClient) DeleteVaultInvoker(request *model.DeleteVaultRequest) *Delet
 
 // DeleteVaultTag 删除存储库资源标签
 //
-// 幂等接口：删除时，如果删除的标签不存在，返回404。Key不能为空或者空字符串。
+// 删除存储库资源标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) DeleteVaultTag(request *model.DeleteVaultTagRequest) (*model.DeleteVaultTagResponse, error) {
@@ -514,7 +507,7 @@ func (c *CbrClient) DeleteVaultTagInvoker(request *model.DeleteVaultTagRequest) 
 
 // DisassociateVaultPolicy 解除存储库策略
 //
-// 存储库解除策略
+// 解除存储库绑定的策略。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) DisassociateVaultPolicy(request *model.DisassociateVaultPolicyRequest) (*model.DisassociateVaultPolicyResponse, error) {
@@ -556,7 +549,7 @@ func (c *CbrClient) ImportBackupInvoker(request *model.ImportBackupRequest) *Imp
 
 // ImportCheckpoint 同步备份还原点
 //
-// 针对vault同步备份副本
+// 针对存储库同步备份副本
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) ImportCheckpoint(request *model.ImportCheckpointRequest) (*model.ImportCheckpointResponse, error) {
@@ -598,7 +591,7 @@ func (c *CbrClient) ListAgentInvoker(request *model.ListAgentRequest) *ListAgent
 
 // ListBackups 查询所有备份
 //
-// 查询所有副本
+// 查询所有备份
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) ListBackups(request *model.ListBackupsRequest) (*model.ListBackupsResponse, error) {
@@ -725,7 +718,7 @@ func (c *CbrClient) ListOrganizationPoliciesInvoker(request *model.ListOrganizat
 
 // ListOrganizationPolicyDetail 查询组织策略部署状态列表
 //
-// 查询组织策略每个账号下策略部署状态列表
+// 查询组织策略在每个账号下的策略部署状态列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) ListOrganizationPolicyDetail(request *model.ListOrganizationPolicyDetailRequest) (*model.ListOrganizationPolicyDetailResponse, error) {
@@ -851,7 +844,7 @@ func (c *CbrClient) MigrateDomainInvoker(request *model.MigrateDomainRequest) *M
 
 // MigrateVaultResource 迁移资源
 //
-// 支持资源迁移到另一个存储库，不删除备份。
+// 将资源迁移到另一个存储库，迁移过程中不删除备份。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) MigrateVaultResource(request *model.MigrateVaultResourceRequest) (*model.MigrateVaultResourceResponse, error) {
@@ -914,7 +907,7 @@ func (c *CbrClient) RemoveAgentPathInvoker(request *model.RemoveAgentPathRequest
 
 // RemoveVaultResource 移除资源
 //
-// 移除存储库中的资源，若移除资源，将一并删除该资源在保管库中的备份
+// 移除存储库中的资源，若移除资源，将一并删除该资源在存储库中的备份。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) RemoveVaultResource(request *model.RemoveVaultResourceRequest) (*model.RemoveVaultResourceResponse, error) {
@@ -998,7 +991,7 @@ func (c *CbrClient) ShowAgentInvoker(request *model.ShowAgentRequest) *ShowAgent
 
 // ShowBackup 查询指定备份
 //
-// 根据指定id查询单个副本。
+// 根据指定ID查询单个副本。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) ShowBackup(request *model.ShowBackupRequest) (*model.ShowBackupResponse, error) {
@@ -1040,7 +1033,7 @@ func (c *CbrClient) ShowCheckpointInvoker(request *model.ShowCheckpointRequest) 
 
 // ShowDomain 查询租户信息
 //
-// 由控制台调用的内部接口，用于仅在查询共享备份时获取源project_id的域名信息。
+// 由控制台调用的内部接口，用于仅在查询共享备份时获取源项目ID的域名信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) ShowDomain(request *model.ShowDomainRequest) (*model.ShowDomainResponse, error) {
@@ -1061,7 +1054,7 @@ func (c *CbrClient) ShowDomainInvoker(request *model.ShowDomainRequest) *ShowDom
 
 // ShowFeature 查询指定特性
 //
-// 查询服务指定特性
+// 查询服务的指定特性
 // &gt; 该接口目前属于公测阶段，部分region暂时无法使用。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
@@ -1335,8 +1328,7 @@ func (c *CbrClient) ShowVaultInvoker(request *model.ShowVaultRequest) *ShowVault
 
 // ShowVaultProjectTag 查询存储库项目标签
 //
-// 查询租户在指定Region和实例类型的所有标签集合
-// 标签管理服务需要能够列出当前租户全部已使用的标签集合，为各服务Console打标签和过滤实例时提供标签联想功能
+// 查询租户在指定区域和实例类型的所有标签集合
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) ShowVaultProjectTag(request *model.ShowVaultProjectTagRequest) (*model.ShowVaultProjectTagResponse, error) {
@@ -1358,7 +1350,6 @@ func (c *CbrClient) ShowVaultProjectTagInvoker(request *model.ShowVaultProjectTa
 // ShowVaultResourceInstances 查询存储库资源实例
 //
 // 使用标签过滤实例
-// 标签管理服务需要提供按标签过滤各服务实例并汇总显示在列表中，需要各服务提供查询能力
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) ShowVaultResourceInstances(request *model.ShowVaultResourceInstancesRequest) (*model.ShowVaultResourceInstancesResponse, error) {
@@ -1380,7 +1371,6 @@ func (c *CbrClient) ShowVaultResourceInstancesInvoker(request *model.ShowVaultRe
 // ShowVaultTag 查询存储库资源标签
 //
 // 查询指定实例的标签信息
-// 标签管理服务需要使用该接口查询指定实例的全部标签数据
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) ShowVaultTag(request *model.ShowVaultTagRequest) (*model.ShowVaultTagResponse, error) {
@@ -1443,7 +1433,7 @@ func (c *CbrClient) UpdateAgentInvoker(request *model.UpdateAgentRequest) *Updat
 
 // UpdateBackup 更新备份
 //
-// 根据备份id更改备份
+// 根据备份ID更改备份。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CbrClient) UpdateBackup(request *model.UpdateBackupRequest) (*model.UpdateBackupResponse, error) {
@@ -1460,6 +1450,27 @@ func (c *CbrClient) UpdateBackup(request *model.UpdateBackupRequest) (*model.Upd
 func (c *CbrClient) UpdateBackupInvoker(request *model.UpdateBackupRequest) *UpdateBackupInvoker {
 	requestDef := GenReqDefForUpdateBackup()
 	return &UpdateBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateExpirationTime 变更指定存储库备份过期时间
+//
+// 变更指定存储库备份过期时间
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CbrClient) UpdateExpirationTime(request *model.UpdateExpirationTimeRequest) (*model.UpdateExpirationTimeResponse, error) {
+	requestDef := GenReqDefForUpdateExpirationTime()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateExpirationTimeResponse), nil
+	}
+}
+
+// UpdateExpirationTimeInvoker 变更指定存储库备份过期时间
+func (c *CbrClient) UpdateExpirationTimeInvoker(request *model.UpdateExpirationTimeRequest) *UpdateExpirationTimeInvoker {
+	requestDef := GenReqDefForUpdateExpirationTime()
+	return &UpdateExpirationTimeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateMemberStatus 更新备份成员状态

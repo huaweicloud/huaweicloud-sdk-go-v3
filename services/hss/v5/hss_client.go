@@ -880,6 +880,27 @@ func (c *HssClient) ListAlarmWhiteListInvoker(request *model.ListAlarmWhiteListR
 	return &ListAlarmWhiteListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListAlarmWhiteListHostDetail 查询告警白名单生详情
+//
+// 查询告警白名单生详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListAlarmWhiteListHostDetail(request *model.ListAlarmWhiteListHostDetailRequest) (*model.ListAlarmWhiteListHostDetailResponse, error) {
+	requestDef := GenReqDefForListAlarmWhiteListHostDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAlarmWhiteListHostDetailResponse), nil
+	}
+}
+
+// ListAlarmWhiteListHostDetailInvoker 查询告警白名单生详情
+func (c *HssClient) ListAlarmWhiteListHostDetailInvoker(request *model.ListAlarmWhiteListHostDetailRequest) *ListAlarmWhiteListHostDetailInvoker {
+	requestDef := GenReqDefForListAlarmWhiteListHostDetail()
+	return &ListAlarmWhiteListHostDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAppChangeHistories 获取软件信息的历史变动记录
 //
 // 获取软件信息的历史变动记录。
@@ -3969,6 +3990,27 @@ func (c *HssClient) SyncSecurityGroupPoliciesInvoker(request *model.SyncSecurity
 	return &SyncSecurityGroupPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateAlarmWhiteListHost 编辑告警白名单生效主机
+//
+// 编辑告警白名单主机相关信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) UpdateAlarmWhiteListHost(request *model.UpdateAlarmWhiteListHostRequest) (*model.UpdateAlarmWhiteListHostResponse, error) {
+	requestDef := GenReqDefForUpdateAlarmWhiteListHost()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAlarmWhiteListHostResponse), nil
+	}
+}
+
+// UpdateAlarmWhiteListHostInvoker 编辑告警白名单生效主机
+func (c *HssClient) UpdateAlarmWhiteListHostInvoker(request *model.UpdateAlarmWhiteListHostRequest) *UpdateAlarmWhiteListHostInvoker {
+	requestDef := GenReqDefForUpdateAlarmWhiteListHost()
+	return &UpdateAlarmWhiteListHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateContainerNetworkPolicy 容器集群网络更新配置策略
 //
 // 容器集群网络更新配置策略。
@@ -6739,48 +6781,6 @@ func (c *HssClient) UpdateCustomRuleConfig(request *model.UpdateCustomRuleConfig
 func (c *HssClient) UpdateCustomRuleConfigInvoker(request *model.UpdateCustomRuleConfigRequest) *UpdateCustomRuleConfigInvoker {
 	requestDef := GenReqDefForUpdateCustomRuleConfig()
 	return &UpdateCustomRuleConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListAlarmWhiteListHostDetail 查询告警白名单生详情
-//
-// 查询告警白名单生详情
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListAlarmWhiteListHostDetail(request *model.ListAlarmWhiteListHostDetailRequest) (*model.ListAlarmWhiteListHostDetailResponse, error) {
-	requestDef := GenReqDefForListAlarmWhiteListHostDetail()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAlarmWhiteListHostDetailResponse), nil
-	}
-}
-
-// ListAlarmWhiteListHostDetailInvoker 查询告警白名单生详情
-func (c *HssClient) ListAlarmWhiteListHostDetailInvoker(request *model.ListAlarmWhiteListHostDetailRequest) *ListAlarmWhiteListHostDetailInvoker {
-	requestDef := GenReqDefForListAlarmWhiteListHostDetail()
-	return &ListAlarmWhiteListHostDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// UpdateAlarmWhiteListHost 编辑告警白名单生效主机
-//
-// 编辑告警白名单主机相关信息
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) UpdateAlarmWhiteListHost(request *model.UpdateAlarmWhiteListHostRequest) (*model.UpdateAlarmWhiteListHostResponse, error) {
-	requestDef := GenReqDefForUpdateAlarmWhiteListHost()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateAlarmWhiteListHostResponse), nil
-	}
-}
-
-// UpdateAlarmWhiteListHostInvoker 编辑告警白名单生效主机
-func (c *HssClient) UpdateAlarmWhiteListHostInvoker(request *model.UpdateAlarmWhiteListHostRequest) *UpdateAlarmWhiteListHostInvoker {
-	requestDef := GenReqDefForUpdateAlarmWhiteListHost()
-	return &UpdateAlarmWhiteListHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListFileEvents 变更文件列表
