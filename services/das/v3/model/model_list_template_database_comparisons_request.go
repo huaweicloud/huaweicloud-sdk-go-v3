@@ -22,10 +22,10 @@ type ListTemplateDatabaseComparisonsRequest struct {
 	EndAt1 int64 `json:"end_at1"`
 
 	// 比较时间段2的开始时间，Unix timestamp，单位：毫秒
-	StartAt2 int64 `json:"start_at2"`
+	StartAt2 *int64 `json:"start_at2,omitempty"`
 
 	// 比较时间段2的结束时间，Unix timestamp，单位：毫秒
-	EndAt2 int64 `json:"end_at2"`
+	EndAt2 *int64 `json:"end_at2,omitempty"`
 
 	// 操作类型，可组合，用逗号分隔
 	Operation *string `json:"operation,omitempty"`

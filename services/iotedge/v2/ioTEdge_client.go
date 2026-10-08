@@ -1594,7 +1594,7 @@ func (c *IoTEdgeClient) DeleteScheduleInvoker(request *model.DeleteScheduleReque
 	return &DeleteScheduleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateSchedule 更新调度计划，机机接口，全量更新字段
+// UpdateSchedule 更新调度计划
 //
 // 用户通过北向接口修改边缘节点上调度计划
 //
@@ -1609,7 +1609,7 @@ func (c *IoTEdgeClient) UpdateSchedule(request *model.UpdateScheduleRequest) (*m
 	}
 }
 
-// UpdateScheduleInvoker 更新调度计划，机机接口，全量更新字段
+// UpdateScheduleInvoker 更新调度计划
 func (c *IoTEdgeClient) UpdateScheduleInvoker(request *model.UpdateScheduleRequest) *UpdateScheduleInvoker {
 	requestDef := GenReqDefForUpdateSchedule()
 	return &UpdateScheduleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}

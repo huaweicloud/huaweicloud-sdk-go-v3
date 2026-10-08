@@ -1441,6 +1441,22 @@ func (i *ShowServerBlockDeviceInvoker) Invoke() (*model.ShowServerBlockDeviceRes
 	}
 }
 
+type ShowServerConsoleOutputInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowServerConsoleOutputInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowServerConsoleOutputInvoker) Invoke() (*model.ShowServerConsoleOutputResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowServerConsoleOutputResponse), nil
+	}
+}
+
 type ShowServerGroupInvoker struct {
 	*invoker.BaseInvoker
 }

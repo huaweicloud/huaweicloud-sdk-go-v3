@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ServiceInvokeUpdateRequest **参数解释：**  服务调用时的相关配置。 **约束限制：**  不涉及。
+// ServiceInvokeUpdateRequest **参数解释：** 服务调用时的相关配置。 **约束限制：** 不涉及。
 type ServiceInvokeUpdateRequest struct {
 
 	// **参数解释：** 服务端口号。 **约束限制：**  不涉及。  **取值范围：** [1, 65535]。 **默认取值：**  不涉及。

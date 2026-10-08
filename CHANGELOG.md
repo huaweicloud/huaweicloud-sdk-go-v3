@@ -1,3 +1,84 @@
+# 0.1.218 2026-10-08
+
+### HuaweiCloud SDK DAS
+
+- _API Version_
+  - V3
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **ListTemplateDatabaseComparisons**
+    - changes of request param
+      - `* start_at2: required -> optional`
+      - `* end_at2: required -> optional`
+
+### HuaweiCloud SDK DataArtsStudio
+
+- _API Version_
+  - V1
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **CreateFactoryJob**
+    - changes of request param
+      - `+ basic_config.task_priority`
+
+### HuaweiCloud SDK DGC
+
+- _API Version_
+  - V1
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **CreateJob**
+    - changes of request param
+      - `+ basicConfig.taskPriority`
+  - **ShowJob**
+    - changes of response param
+      - `+ basicConfig.taskPriority`
+  - **UpdateJob**
+    - changes of request param
+      - `+ basicConfig.taskPriority`
+
+### HuaweiCloud SDK DLF
+
+- _API Version_
+  - V1
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **ShowJob**
+    - changes of response param
+      - `+ basicConfig.taskPriority`
+  - **UpdateJob**
+    - changes of request param
+      - `+ basicConfig.taskPriority`
+  - **CreateJob**
+    - changes of request param
+      - `+ basicConfig.taskPriority`
+  - **ListJobs**
+    - changes of response param
+      - `+ jobs.basicConfig.taskPriority`
+
+### HuaweiCloud SDK ECS
+
+- _API Version_
+  - V2
+- _Features_
+  - Support the API `ShowServerConsoleOutput`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
 # 0.1.217 2026-09-24
 
 ### HuaweiCloud SDK BSSINTL

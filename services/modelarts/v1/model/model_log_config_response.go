@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// LogConfigResponse **参数解释：**  服务日志配置信息。
+// LogConfigResponse **参数解释：** 服务日志配置信息。
 type LogConfigResponse struct {
 
 	// **参数解释：** 日志输出类型。 **取值范围：** - STDOUT：日志输出到控制台或终端。 - EVENT：k8s事件。 - FILE：容器日志文件

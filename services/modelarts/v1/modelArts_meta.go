@@ -4237,26 +4237,6 @@ func GenReqDefForShowNodePool() *def.HttpRequestDef {
 	return requestDef
 }
 
-func GenReqDefForShowObsUrlOfTrainingJobLogs() *def.HttpRequestDef {
-	reqDefBuilder := def.NewHttpRequestDefBuilder().
-		WithMethod(http.MethodGet).
-		WithPath("/v2/{project_id}/training-jobs/{training_job_id}/tasks/{task_id}/logs/url").
-		WithResponse(new(model.ShowObsUrlOfTrainingJobLogsResponse)).
-		WithContentType("application/json")
-
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("TrainingJobId").
-		WithJsonTag("training_job_id").
-		WithLocationType(def.Path))
-	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("TaskId").
-		WithJsonTag("task_id").
-		WithLocationType(def.Path))
-
-	requestDef := reqDefBuilder.Build()
-	return requestDef
-}
-
 func GenReqDefForShowOrder() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).

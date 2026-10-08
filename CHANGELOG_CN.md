@@ -1,3 +1,84 @@
+# 0.1.218 2026-10-08
+
+### HuaweiCloud SDK DAS
+
+- _接口版本_
+  - V3
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ListTemplateDatabaseComparisons**
+    - 请求参数变更
+      - `* start_at2: required -> optional`
+      - `* end_at2: required -> optional`
+
+### HuaweiCloud SDK DataArtsStudio
+
+- _接口版本_
+  - V1
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **CreateFactoryJob**
+    - 请求参数变更
+      - `+ basic_config.task_priority`
+
+### HuaweiCloud SDK DGC
+
+- _接口版本_
+  - V1
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **CreateJob**
+    - 请求参数变更
+      - `+ basicConfig.taskPriority`
+  - **ShowJob**
+    - 响应参数变更
+      - `+ basicConfig.taskPriority`
+  - **UpdateJob**
+    - 请求参数变更
+      - `+ basicConfig.taskPriority`
+
+### HuaweiCloud SDK DLF
+
+- _接口版本_
+  - V1
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ShowJob**
+    - 响应参数变更
+      - `+ basicConfig.taskPriority`
+  - **UpdateJob**
+    - 请求参数变更
+      - `+ basicConfig.taskPriority`
+  - **CreateJob**
+    - 请求参数变更
+      - `+ basicConfig.taskPriority`
+  - **ListJobs**
+    - 响应参数变更
+      - `+ jobs.basicConfig.taskPriority`
+
+### HuaweiCloud SDK ECS
+
+- _接口版本_
+  - V2
+- _新增特性_
+  - 支持接口`ShowServerConsoleOutput`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
 # 0.1.217 2026-09-24
 
 ### HuaweiCloud SDK BSSINTL

@@ -2917,22 +2917,6 @@ func (i *ShowNodePoolInvoker) Invoke() (*model.ShowNodePoolResponse, error) {
 	}
 }
 
-type ShowObsUrlOfTrainingJobLogsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowObsUrlOfTrainingJobLogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowObsUrlOfTrainingJobLogsInvoker) Invoke() (*model.ShowObsUrlOfTrainingJobLogsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowObsUrlOfTrainingJobLogsResponse), nil
-	}
-}
-
 type ShowOrderInvoker struct {
 	*invoker.BaseInvoker
 }

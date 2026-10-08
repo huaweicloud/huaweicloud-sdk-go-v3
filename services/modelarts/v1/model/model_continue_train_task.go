@@ -23,7 +23,7 @@ type ContinueTrainTask struct {
 	// 跳过步数，0表示不跳过。
 	SkippedSteps *int32 `json:"skipped_steps,omitempty"`
 
-	// 是否续训任务。  0: 非续训, 1:续训。
+	// 是否续训任务。 0: 非续训, 1:续训。
 	RestoreTraining *int32 `json:"restore_training,omitempty"`
 
 	// 创建时间。

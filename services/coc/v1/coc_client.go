@@ -21,7 +21,7 @@ func CocClientBuilder() *httpclient.HcHttpClientBuilder {
 
 // CreatePasswordChangePlan 创建改密计划
 //
-// 创建改密计划
+// 创建改密计划。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) CreatePasswordChangePlan(request *model.CreatePasswordChangePlanRequest) (*model.CreatePasswordChangePlanResponse, error) {
@@ -42,7 +42,7 @@ func (c *CocClient) CreatePasswordChangePlanInvoker(request *model.CreatePasswor
 
 // ResetAccountPassword 主机密码重置
 //
-// 主机密码重置
+// 主机密码重置。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ResetAccountPassword(request *model.ResetAccountPasswordRequest) (*model.ResetAccountPasswordResponse, error) {
@@ -63,7 +63,7 @@ func (c *CocClient) ResetAccountPasswordInvoker(request *model.ResetAccountPassw
 
 // UpdateAccountPassword 回写改密结果
 //
-// 回写改密结果
+// 回写改密结果。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) UpdateAccountPassword(request *model.UpdateAccountPasswordRequest) (*model.UpdateAccountPasswordResponse, error) {
@@ -84,7 +84,7 @@ func (c *CocClient) UpdateAccountPasswordInvoker(request *model.UpdateAccountPas
 
 // ClearAlarm 批量清除告警
 //
-// 清除告警
+// 批量清除告警。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ClearAlarm(request *model.ClearAlarmRequest) (*model.ClearAlarmResponse, error) {
@@ -105,7 +105,7 @@ func (c *CocClient) ClearAlarmInvoker(request *model.ClearAlarmRequest) *ClearAl
 
 // HandlerAlarm 自动处理告警
 //
-// 自动处理告警
+// 自动处理告警。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) HandlerAlarm(request *model.HandlerAlarmRequest) (*model.HandlerAlarmResponse, error) {
@@ -126,7 +126,7 @@ func (c *CocClient) HandlerAlarmInvoker(request *model.HandlerAlarmRequest) *Han
 
 // ListAlarmHandleHistories 查询告警工单历史
 //
-// 查询告警工单历史
+// 查询告警工单历史。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ListAlarmHandleHistories(request *model.ListAlarmHandleHistoriesRequest) (*model.ListAlarmHandleHistoriesResponse, error) {
@@ -147,7 +147,7 @@ func (c *CocClient) ListAlarmHandleHistoriesInvoker(request *model.ListAlarmHand
 
 // ShowAlarm 查询Alarm
 //
-// Get alarm info by id
+// 查询Alarm。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ShowAlarm(request *model.ShowAlarmRequest) (*model.ShowAlarmResponse, error) {
@@ -168,7 +168,7 @@ func (c *CocClient) ShowAlarmInvoker(request *model.ShowAlarmRequest) *ShowAlarm
 
 // TransferAlarmToIncident 批量告警转事件
 //
-// 批量告警转事件
+// 批量告警转事件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) TransferAlarmToIncident(request *model.TransferAlarmToIncidentRequest) (*model.TransferAlarmToIncidentResponse, error) {
@@ -252,7 +252,7 @@ func (c *CocClient) UpdateApplicationInvoker(request *model.UpdateApplicationReq
 
 // BatchCreateApplicationView 批量创建应用，分组，组件
 //
-// 批量创建应用，分组，组件。
+// 批量创建应用、分组、组件。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) BatchCreateApplicationView(request *model.BatchCreateApplicationViewRequest) (*model.BatchCreateApplicationViewResponse, error) {
@@ -294,7 +294,7 @@ func (c *CocClient) ListApplicationViewInvoker(request *model.ListApplicationVie
 
 // CreateAssessTask 创建应用评估任务
 //
-// 创建应用评估任务
+// 创建应用评估任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) CreateAssessTask(request *model.CreateAssessTaskRequest) (*model.CreateAssessTaskResponse, error) {
@@ -315,7 +315,7 @@ func (c *CocClient) CreateAssessTaskInvoker(request *model.CreateAssessTaskReque
 
 // ListAssessTask 分页查询评估任务列表
 //
-// 分页查询评估任务列表
+// 分页查询评估任务列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ListAssessTask(request *model.ListAssessTaskRequest) (*model.ListAssessTaskResponse, error) {
@@ -399,7 +399,7 @@ func (c *CocClient) ListIncidentsInvoker(request *model.ListIncidentsRequest) *L
 
 // ListIncidentsHistories ListIncidentsHistories 获取事件单历史
 //
-// ListIncidentsHistories  获取事件单历史
+// ListIncidentsHistories 获取事件单历史。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ListIncidentsHistories(request *model.ListIncidentsHistoriesRequest) (*model.ListIncidentsHistoriesResponse, error) {
@@ -441,7 +441,7 @@ func (c *CocClient) ShowIncidentTaskInvoker(request *model.ShowIncidentTaskReque
 
 // ListInstanceCompliant 获取节点合规性报告
 //
-// 分页获取节点合规性报告
+// 分页获取节点合规性报告。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ListInstanceCompliant(request *model.ListInstanceCompliantRequest) (*model.ListInstanceCompliantResponse, error) {
@@ -462,7 +462,7 @@ func (c *CocClient) ListInstanceCompliantInvoker(request *model.ListInstanceComp
 
 // ShowInstancePatchItems 分页获取节点补丁详情
 //
-// 分页获取节点补丁详情
+// 分页获取节点补丁详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ShowInstancePatchItems(request *model.ShowInstancePatchItemsRequest) (*model.ShowInstancePatchItemsResponse, error) {
@@ -630,7 +630,7 @@ func (c *CocClient) ImportOtherResourceInvoker(request *model.ImportOtherResourc
 
 // CancelDiagnosisTask 取消诊断任务
 //
-// 取消诊断任务
+// 取消诊断任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) CancelDiagnosisTask(request *model.CancelDiagnosisTaskRequest) (*model.CancelDiagnosisTaskResponse, error) {
@@ -651,7 +651,7 @@ func (c *CocClient) CancelDiagnosisTaskInvoker(request *model.CancelDiagnosisTas
 
 // CreateDiagnosisTask 提交诊断任务
 //
-// 提交诊断任务
+// 提交诊断任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) CreateDiagnosisTask(request *model.CreateDiagnosisTaskRequest) (*model.CreateDiagnosisTaskResponse, error) {
@@ -672,7 +672,7 @@ func (c *CocClient) CreateDiagnosisTaskInvoker(request *model.CreateDiagnosisTas
 
 // ListDiagnosisTasks 查询诊断记录
 //
-// 查询诊断记录
+// 查询诊断记录。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ListDiagnosisTasks(request *model.ListDiagnosisTasksRequest) (*model.ListDiagnosisTasksResponse, error) {
@@ -693,7 +693,7 @@ func (c *CocClient) ListDiagnosisTasksInvoker(request *model.ListDiagnosisTasksR
 
 // RetryDiagnosisTask 重试诊断任务
 //
-// 重试诊断任务
+// 重试诊断任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) RetryDiagnosisTask(request *model.RetryDiagnosisTaskRequest) (*model.RetryDiagnosisTaskResponse, error) {
@@ -714,7 +714,7 @@ func (c *CocClient) RetryDiagnosisTaskInvoker(request *model.RetryDiagnosisTaskR
 
 // ShowDiagnosisNode 查询指定诊断记录下的指定诊断步骤的详情
 //
-// 查询指定诊断记录下的指定诊断步骤的详情
+// 查询指定诊断记录下的指定诊断步骤的详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ShowDiagnosisNode(request *model.ShowDiagnosisNodeRequest) (*model.ShowDiagnosisNodeResponse, error) {
@@ -735,7 +735,7 @@ func (c *CocClient) ShowDiagnosisNodeInvoker(request *model.ShowDiagnosisNodeReq
 
 // ShowDiagnosisSummary 查询批量诊断任务的结果概要
 //
-// 查询诊断任务的结果概要
+// 查询批量诊断任务的结果概要。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ShowDiagnosisSummary(request *model.ShowDiagnosisSummaryRequest) (*model.ShowDiagnosisSummaryResponse, error) {
@@ -756,7 +756,7 @@ func (c *CocClient) ShowDiagnosisSummaryInvoker(request *model.ShowDiagnosisSumm
 
 // ShowDiagnosisTask 查询单个诊断任务详情
 //
-// 查询单个诊断任务详情
+// 查询单个诊断任务详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ShowDiagnosisTask(request *model.ShowDiagnosisTaskRequest) (*model.ShowDiagnosisTaskResponse, error) {
@@ -777,7 +777,7 @@ func (c *CocClient) ShowDiagnosisTaskInvoker(request *model.ShowDiagnosisTaskReq
 
 // CreateDocument 创建自定义作业
 //
-// 创建自定义作业
+// 创建自定义作业。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) CreateDocument(request *model.CreateDocumentRequest) (*model.CreateDocumentResponse, error) {
@@ -798,7 +798,7 @@ func (c *CocClient) CreateDocumentInvoker(request *model.CreateDocumentRequest) 
 
 // DeleteDocument 删除自定义作业
 //
-// 删除自定义作业
+// 删除自定义作业。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) DeleteDocument(request *model.DeleteDocumentRequest) (*model.DeleteDocumentResponse, error) {
@@ -819,7 +819,7 @@ func (c *CocClient) DeleteDocumentInvoker(request *model.DeleteDocumentRequest) 
 
 // ExecuteDocument 执行自定义作业
 //
-// 执行自定义作业
+// 执行自定义作业。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ExecuteDocument(request *model.ExecuteDocumentRequest) (*model.ExecuteDocumentResponse, error) {
@@ -840,7 +840,7 @@ func (c *CocClient) ExecuteDocumentInvoker(request *model.ExecuteDocumentRequest
 
 // GetDocument 查询自定义作业详情
 //
-// 查询自定义作业详情
+// 查询自定义作业详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) GetDocument(request *model.GetDocumentRequest) (*model.GetDocumentResponse, error) {
@@ -859,9 +859,9 @@ func (c *CocClient) GetDocumentInvoker(request *model.GetDocumentRequest) *GetDo
 	return &GetDocumentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// GetDocumentAtomicInfo 获取原子能力详细
+// GetDocumentAtomicInfo 获取原子能力详情
 //
-// 获取原子能力详细
+// 获取原子能力详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) GetDocumentAtomicInfo(request *model.GetDocumentAtomicInfoRequest) (*model.GetDocumentAtomicInfoResponse, error) {
@@ -874,7 +874,7 @@ func (c *CocClient) GetDocumentAtomicInfo(request *model.GetDocumentAtomicInfoRe
 	}
 }
 
-// GetDocumentAtomicInfoInvoker 获取原子能力详细
+// GetDocumentAtomicInfoInvoker 获取原子能力详情
 func (c *CocClient) GetDocumentAtomicInfoInvoker(request *model.GetDocumentAtomicInfoRequest) *GetDocumentAtomicInfoInvoker {
 	requestDef := GenReqDefForGetDocumentAtomicInfo()
 	return &GetDocumentAtomicInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -882,7 +882,7 @@ func (c *CocClient) GetDocumentAtomicInfoInvoker(request *model.GetDocumentAtomi
 
 // ListDocumentAtomics 获取原子能力列表
 //
-// 获取原子能力列表
+// 获取原子能力列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ListDocumentAtomics(request *model.ListDocumentAtomicsRequest) (*model.ListDocumentAtomicsResponse, error) {
@@ -903,7 +903,7 @@ func (c *CocClient) ListDocumentAtomicsInvoker(request *model.ListDocumentAtomic
 
 // ListDocuments 查询自定义作业列表
 //
-// 查询自定义作业列表
+// 查询自定义作业列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ListDocuments(request *model.ListDocumentsRequest) (*model.ListDocumentsResponse, error) {
@@ -924,7 +924,7 @@ func (c *CocClient) ListDocumentsInvoker(request *model.ListDocumentsRequest) *L
 
 // UpdateDocument 修改自定义作业
 //
-// 修改自定义作业
+// 修改自定义作业。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) UpdateDocument(request *model.UpdateDocumentRequest) (*model.UpdateDocumentResponse, error) {
@@ -1008,7 +1008,7 @@ func (c *CocClient) CreateReportPrometheusEventInvoker(request *model.CreateRepo
 
 // GetExecution 查询作业工单详情
 //
-// 查询作业工单详情
+// 查询作业工单详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) GetExecution(request *model.GetExecutionRequest) (*model.GetExecutionResponse, error) {
@@ -1029,7 +1029,7 @@ func (c *CocClient) GetExecutionInvoker(request *model.GetExecutionRequest) *Get
 
 // ListExecutionInstances 查询工单步骤批次实例
 //
-// 查询工单步骤批次实例，如脚本分批操作里的ECS实例
+// 查询工单步骤批次实例，如脚本分批操作里的ECS实例。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ListExecutionInstances(request *model.ListExecutionInstancesRequest) (*model.ListExecutionInstancesResponse, error) {
@@ -1050,7 +1050,7 @@ func (c *CocClient) ListExecutionInstancesInvoker(request *model.ListExecutionIn
 
 // ListExecutionSteps 查询工单步骤详情
 //
-// 查询工单步骤详情
+// 查询工单步骤详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ListExecutionSteps(request *model.ListExecutionStepsRequest) (*model.ListExecutionStepsResponse, error) {
@@ -1071,7 +1071,7 @@ func (c *CocClient) ListExecutionStepsInvoker(request *model.ListExecutionStepsR
 
 // ListExecutions 查询作业工单列表
 //
-// 查询作业工单列表
+// 查询作业工单列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ListExecutions(request *model.ListExecutionsRequest) (*model.ListExecutionsResponse, error) {
@@ -1092,7 +1092,7 @@ func (c *CocClient) ListExecutionsInvoker(request *model.ListExecutionsRequest) 
 
 // OperateExecution 操作工单
 //
-// 操作工单
+// 操作工单。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) OperateExecution(request *model.OperateExecutionRequest) (*model.OperateExecutionResponse, error) {
@@ -1109,27 +1109,6 @@ func (c *CocClient) OperateExecution(request *model.OperateExecutionRequest) (*m
 func (c *CocClient) OperateExecutionInvoker(request *model.OperateExecutionRequest) *OperateExecutionInvoker {
 	requestDef := GenReqDefForOperateExecution()
 	return &OperateExecutionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListSubTickets 搜索变更工单子单
-//
-// 搜索变更工单子单。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *CocClient) ListSubTickets(request *model.ListSubTicketsRequest) (*model.ListSubTicketsResponse, error) {
-	requestDef := GenReqDefForListSubTickets()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListSubTicketsResponse), nil
-	}
-}
-
-// ListSubTicketsInvoker 搜索变更工单子单
-func (c *CocClient) ListSubTicketsInvoker(request *model.ListSubTicketsRequest) *ListSubTicketsInvoker {
-	requestDef := GenReqDefForListSubTickets()
-	return &ListSubTicketsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ExecuteTicketAction 工单操作
@@ -1197,7 +1176,7 @@ func (c *CocClient) ListTicketsInvoker(request *model.ListTicketsRequest) *ListT
 
 // ShowTicketInfo 查询Ticket
 //
-// Get Ticket info by id
+// 查询Ticket。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ShowTicketInfo(request *model.ShowTicketInfoRequest) (*model.ShowTicketInfoResponse, error) {
@@ -1235,6 +1214,27 @@ func (c *CocClient) DeleteTicketInfo(request *model.DeleteTicketInfoRequest) (*m
 func (c *CocClient) DeleteTicketInfoInvoker(request *model.DeleteTicketInfoRequest) *DeleteTicketInfoInvoker {
 	requestDef := GenReqDefForDeleteTicketInfo()
 	return &DeleteTicketInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSubTickets 搜索变更工单子单
+//
+// 搜索变更工单子单。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CocClient) ListSubTickets(request *model.ListSubTicketsRequest) (*model.ListSubTicketsResponse, error) {
+	requestDef := GenReqDefForListSubTickets()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSubTicketsResponse), nil
+	}
+}
+
+// ListSubTicketsInvoker 搜索变更工单子单
+func (c *CocClient) ListSubTicketsInvoker(request *model.ListSubTicketsRequest) *ListSubTicketsInvoker {
+	requestDef := GenReqDefForListSubTickets()
+	return &ListSubTicketsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateTicket 变更单状态修改
@@ -1323,7 +1323,7 @@ func (c *CocClient) HandleCocIncidentInvoker(request *model.HandleCocIncidentReq
 
 // ListCocTicketOperationHistories GetCocTicketOperationHistories 获取事件单历史
 //
-// ListCocTicketOperationHistories  获取事件单历史
+// ListCocTicketOperationHistories 获取事件单历史。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ListCocTicketOperationHistories(request *model.ListCocTicketOperationHistoriesRequest) (*model.ListCocTicketOperationHistoriesResponse, error) {
@@ -1363,9 +1363,9 @@ func (c *CocClient) ListIncidentSimpleTicketsInvoker(request *model.ListIncident
 	return &ListIncidentSimpleTicketsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowCocIncidentDetail GetCocIncidentDetail 获取事件单详细
+// ShowCocIncidentDetail GetCocIncidentDetail 获取事件单详情
 //
-// ShowCocIncidentDetail  获取事件单详细
+// ShowCocIncidentDetail 获取事件单详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ShowCocIncidentDetail(request *model.ShowCocIncidentDetailRequest) (*model.ShowCocIncidentDetailResponse, error) {
@@ -1378,7 +1378,7 @@ func (c *CocClient) ShowCocIncidentDetail(request *model.ShowCocIncidentDetailRe
 	}
 }
 
-// ShowCocIncidentDetailInvoker GetCocIncidentDetail 获取事件单详细
+// ShowCocIncidentDetailInvoker GetCocIncidentDetail 获取事件单详情
 func (c *CocClient) ShowCocIncidentDetailInvoker(request *model.ShowCocIncidentDetailRequest) *ShowCocIncidentDetailInvoker {
 	requestDef := GenReqDefForShowCocIncidentDetail()
 	return &ShowCocIncidentDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1405,9 +1405,9 @@ func (c *CocClient) CreateCocIssuesInvoker(request *model.CreateCocIssuesRequest
 	return &CreateCocIssuesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowCocIssuesDetail GetCocIssuesDetail 获取事件单详细
+// ShowCocIssuesDetail GetCocIssuesDetail 获取问题单详情
 //
-// ShowCocIssuesDetail  获取事件单详细
+// ShowCocIssuesDetail 获取问题单详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ShowCocIssuesDetail(request *model.ShowCocIssuesDetailRequest) (*model.ShowCocIssuesDetailResponse, error) {
@@ -1420,7 +1420,7 @@ func (c *CocClient) ShowCocIssuesDetail(request *model.ShowCocIssuesDetailReques
 	}
 }
 
-// ShowCocIssuesDetailInvoker GetCocIssuesDetail 获取事件单详细
+// ShowCocIssuesDetailInvoker GetCocIssuesDetail 获取问题单详情
 func (c *CocClient) ShowCocIssuesDetailInvoker(request *model.ShowCocIssuesDetailRequest) *ShowCocIssuesDetailInvoker {
 	requestDef := GenReqDefForShowCocIssuesDetail()
 	return &ShowCocIssuesDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -1533,7 +1533,7 @@ func (c *CocClient) DeleteApplicationGroupInvoker(request *model.DeleteApplicati
 
 // ListApplicationGroups 查询分组
 //
-// 查询应用。
+// 查询分组。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ListApplicationGroups(request *model.ListApplicationGroupsRequest) (*model.ListApplicationGroupsResponse, error) {
@@ -1848,7 +1848,7 @@ func (c *CocClient) SyncMultiCloudResourceInvoker(request *model.SyncMultiCloudR
 
 // CountMultiResources 查询用户各种资源总数
 //
-// 查询用户各种资源总数
+// 查询用户各种资源总数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) CountMultiResources(request *model.CountMultiResourcesRequest) (*model.CountMultiResourcesResponse, error) {
@@ -1890,7 +1890,7 @@ func (c *CocClient) CountResourcesInvoker(request *model.CountResourcesRequest) 
 
 // ListResources 查询用户所有资源
 //
-// 查询租户所有资源：
+// 查询租户所有资源。
 //  - 查询租户所有资源等相关信息，便于租户详细了解资源总体情况。
 //  - 请求参数provider（云服务名称），type（云资源类型），limit（查询条数）必填，单次最大查询条数：500。
 //  - 返回信息包括：资源ID，资源名称，云服务名称，资源类型，项目ID，租户ID，区域ID，企业项目ID，资源标签，资源详细属性，资源ingest属性，uniagentID，uniagent状态，是否托管，是否可运维。
@@ -1914,7 +1914,7 @@ func (c *CocClient) ListResourcesInvoker(request *model.ListResourcesRequest) *L
 
 // SyncResource 从RMS同步用户所有资源
 //
-// 从RMS同步用户所有资源
+// 从RMS同步用户所有资源。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) SyncResource(request *model.SyncResourceRequest) (*model.SyncResourceResponse, error) {
@@ -1956,7 +1956,7 @@ func (c *CocClient) SyncResourceAgentInvoker(request *model.SyncResourceAgentReq
 
 // ListScriptResourceTags 查询资源标签列表
 //
-// 查询资源标签列表
+// 查询资源标签列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ListScriptResourceTags(request *model.ListScriptResourceTagsRequest) (*model.ListScriptResourceTagsResponse, error) {
@@ -1977,7 +1977,7 @@ func (c *CocClient) ListScriptResourceTagsInvoker(request *model.ListScriptResou
 
 // UpdateResourceTags 更新资源标签
 //
-// 更新资源标签
+// 更新资源标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) UpdateResourceTags(request *model.UpdateResourceTagsRequest) (*model.UpdateResourceTagsResponse, error) {
@@ -2187,7 +2187,7 @@ func (c *CocClient) UpdateResourceViewsInvoker(request *model.UpdateResourceView
 
 // CreateScheduledTask 新建定时运维
 //
-// Create Scheduled Task
+// 创建定时运维任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) CreateScheduledTask(request *model.CreateScheduledTaskRequest) (*model.CreateScheduledTaskResponse, error) {
@@ -2208,7 +2208,7 @@ func (c *CocClient) CreateScheduledTaskInvoker(request *model.CreateScheduledTas
 
 // DeleteScheduledTask 删除ScheduledTask
 //
-// Delete scheduled task by id
+// 根据ID删除定时运维任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) DeleteScheduledTask(request *model.DeleteScheduledTaskRequest) (*model.DeleteScheduledTaskResponse, error) {
@@ -2229,7 +2229,7 @@ func (c *CocClient) DeleteScheduledTaskInvoker(request *model.DeleteScheduledTas
 
 // DisableScheduledTask 禁用ScheduledTask
 //
-// Disable scheduled task by id
+// 根据ID禁用定时运维任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) DisableScheduledTask(request *model.DisableScheduledTaskRequest) (*model.DisableScheduledTaskResponse, error) {
@@ -2250,7 +2250,7 @@ func (c *CocClient) DisableScheduledTaskInvoker(request *model.DisableScheduledT
 
 // EnableScheduledTask 启用ScheduledTask
 //
-// Enable scheduled task by id
+// 根据ID启用定时运维任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) EnableScheduledTask(request *model.EnableScheduledTaskRequest) (*model.EnableScheduledTaskResponse, error) {
@@ -2271,7 +2271,7 @@ func (c *CocClient) EnableScheduledTaskInvoker(request *model.EnableScheduledTas
 
 // ListScheduledTask 查询ScheduledTask列表
 //
-// Get ScheduledTask infos
+// 查询定时运维任务列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ListScheduledTask(request *model.ListScheduledTaskRequest) (*model.ListScheduledTaskResponse, error) {
@@ -2292,7 +2292,7 @@ func (c *CocClient) ListScheduledTaskInvoker(request *model.ListScheduledTaskReq
 
 // ListScheduledTaskHistory 查询定时运维历史记录
 //
-// get scheduled task history list
+// 查询定时运维历史记录列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ListScheduledTaskHistory(request *model.ListScheduledTaskHistoryRequest) (*model.ListScheduledTaskHistoryResponse, error) {
@@ -2313,7 +2313,7 @@ func (c *CocClient) ListScheduledTaskHistoryInvoker(request *model.ListScheduled
 
 // ShowScheduledTask 查询ScheduledTask
 //
-// Get ScheduledTask info by id
+// 根据ID查询定时运维任务详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ShowScheduledTask(request *model.ShowScheduledTaskRequest) (*model.ShowScheduledTaskResponse, error) {
@@ -2334,7 +2334,7 @@ func (c *CocClient) ShowScheduledTaskInvoker(request *model.ShowScheduledTaskReq
 
 // UpdateScheduledTask 修改ScheduledTask
 //
-// Update ScheduledTask
+// 修改定时运维任务。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) UpdateScheduledTask(request *model.UpdateScheduledTaskRequest) (*model.UpdateScheduledTaskResponse, error) {
@@ -2532,7 +2532,7 @@ func (c *CocClient) CheckScriptRiskInvoker(request *model.CheckScriptRiskRequest
 
 // CreateScript 创建脚本
 //
-// 创建作业脚本：自定义脚本
+// 创建作业脚本：自定义脚本。
 // - 脚本有标签属性，表示是高危脚本。创建时候不需要对脚本进行是否是高危的二次校验。
 // - 进行租户隔离；北向接口创建的脚本，审批人字段不填写，默认不需要审批
 // - 约束条件：
@@ -2585,7 +2585,7 @@ func (c *CocClient) DeleteScriptInvoker(request *model.DeleteScriptRequest) *Del
 
 // ExecuteScript 执行自定义脚本
 //
-// 执行脚本
+// 执行脚本。
 //
 // 脚本入参、超时时间、执行用户、资源受限
 // 脚本入参支持20个。
@@ -2613,7 +2613,7 @@ func (c *CocClient) ExecuteScriptInvoker(request *model.ExecuteScriptRequest) *E
 
 // GetScript 获取自定义脚本详情
 //
-// 获取脚本详情
+// 获取脚本详情。
 // 约束条件：
 // 只能查询自定义脚本详情
 //
@@ -2666,7 +2666,7 @@ func (c *CocClient) ListInstancesBatchInvoker(request *model.ListInstancesBatchR
 
 // ListScripts 查询脚本列表
 //
-// 作业脚本列表：自定义脚本
+// 作业脚本列表：自定义脚本。
 //
 // limit最大为100
 //
@@ -2689,7 +2689,7 @@ func (c *CocClient) ListScriptsInvoker(request *model.ListScriptsRequest) *ListS
 
 // UpdateScript 修改脚本
 //
-// 修改作业脚本：自定义脚本
+// 修改作业脚本：自定义脚本。
 // 约束条件：
 // 脚本名称：同一租户下，脚本名称不能重复，最大字符64个字符，支持中文+字母+数字+下划线。
 // 脚本内容最大4096个字符。
@@ -2718,7 +2718,7 @@ func (c *CocClient) UpdateScriptInvoker(request *model.UpdateScriptRequest) *Upd
 
 // ExecutePublicScript 执行公共脚本
 //
-// 执行公共脚本
+// 执行公共脚本。
 // 脚本入参、超时时间、执行用户、资源受限
 // 脚本入参支持20个。
 // 单次下发的机器支持200个。
@@ -2744,7 +2744,7 @@ func (c *CocClient) ExecutePublicScriptInvoker(request *model.ExecutePublicScrip
 
 // GetPublicScript 展示公共脚本详情
 //
-// 展示公共脚本详情
+// 展示公共脚本详情。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) GetPublicScript(request *model.GetPublicScriptRequest) (*model.GetPublicScriptResponse, error) {
@@ -2765,7 +2765,7 @@ func (c *CocClient) GetPublicScriptInvoker(request *model.GetPublicScriptRequest
 
 // ListPublicScripts 获取公共脚本列表
 //
-// 获取公共脚本列表，分页逻辑：采用limit+marker方式，提高分页效率。用自增id作为marker参数
+// 获取公共脚本列表，分页逻辑：采用limit+marker方式，提高分页效率。用自增id作为marker参数。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ListPublicScripts(request *model.ListPublicScriptsRequest) (*model.ListPublicScriptsResponse, error) {
@@ -2807,7 +2807,7 @@ func (c *CocClient) CreateVendorAccountInvoker(request *model.CreateVendorAccoun
 
 // DeleteVendorAccount 删除云厂商账号
 //
-// 增加云广商账号，不需要后，可删除云厂商账号。
+// 增加云厂商账号，不需要后，可删除云厂商账号。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) DeleteVendorAccount(request *model.DeleteVendorAccountRequest) (*model.DeleteVendorAccountResponse, error) {
@@ -2870,7 +2870,7 @@ func (c *CocClient) UpdateVendorAccountInvoker(request *model.UpdateVendorAccoun
 
 // CreateWarRoom 创建租户区WarRoom
 //
-// 创建租户区WarRoom
+// 创建租户区WarRoom。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) CreateWarRoom(request *model.CreateWarRoomRequest) (*model.CreateWarRoomResponse, error) {
@@ -2891,7 +2891,7 @@ func (c *CocClient) CreateWarRoomInvoker(request *model.CreateWarRoomRequest) *C
 
 // ListWarRooms 查询租户区WarRoom信息列表
 //
-// 查询租户区WarRoom信息列表
+// 查询租户区WarRoom信息列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *CocClient) ListWarRooms(request *model.ListWarRoomsRequest) (*model.ListWarRoomsResponse, error) {

@@ -837,22 +837,6 @@ func (i *OperateExecutionInvoker) Invoke() (*model.OperateExecutionResponse, err
 	}
 }
 
-type ListSubTicketsInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListSubTicketsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListSubTicketsInvoker) Invoke() (*model.ListSubTicketsResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListSubTicketsResponse), nil
-	}
-}
-
 type ExecuteTicketActionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -930,6 +914,22 @@ func (i *DeleteTicketInfoInvoker) Invoke() (*model.DeleteTicketInfoResponse, err
 		return nil, err
 	} else {
 		return result.(*model.DeleteTicketInfoResponse), nil
+	}
+}
+
+type ListSubTicketsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSubTicketsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSubTicketsInvoker) Invoke() (*model.ListSubTicketsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSubTicketsResponse), nil
 	}
 }
 

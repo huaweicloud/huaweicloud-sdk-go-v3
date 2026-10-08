@@ -3876,27 +3876,6 @@ func (c *ModelArtsClient) ShowNodePoolInvoker(request *model.ShowNodePoolRequest
 	return &ShowNodePoolInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowObsUrlOfTrainingJobLogs 查询训练作业指定任务的日志（OBS链接）
-//
-// 查询训练作业指定任务的日志（OBS临时链接，有效期5分钟），可全量查看或直接下载。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *ModelArtsClient) ShowObsUrlOfTrainingJobLogs(request *model.ShowObsUrlOfTrainingJobLogsRequest) (*model.ShowObsUrlOfTrainingJobLogsResponse, error) {
-	requestDef := GenReqDefForShowObsUrlOfTrainingJobLogs()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowObsUrlOfTrainingJobLogsResponse), nil
-	}
-}
-
-// ShowObsUrlOfTrainingJobLogsInvoker 查询训练作业指定任务的日志（OBS链接）
-func (c *ModelArtsClient) ShowObsUrlOfTrainingJobLogsInvoker(request *model.ShowObsUrlOfTrainingJobLogsRequest) *ShowObsUrlOfTrainingJobLogsInvoker {
-	requestDef := GenReqDefForShowObsUrlOfTrainingJobLogs()
-	return &ShowObsUrlOfTrainingJobLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowOrder 查询订单详情
 //
 // 查询订单详情接口用于获取指定订单的详细信息。该接口适用于以下场景：当需要查看订单的状态、金额、商品信息或处理订单相关问题时，用户可通过此接口获取订单的详细数据。使用该接口的前提条件是订单已存在且用户具有访问该订单的权限。调用接口成功后，系统将返回订单的详细信息，包括订单号、商品列表、金额、支付状态、下单时间等。若订单不存在、用户无权限访问或订单信息未正确配置，接口将返回相应的错误信息。

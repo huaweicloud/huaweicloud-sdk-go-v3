@@ -35,7 +35,7 @@ type BatchCreateApplicationViewRequestBodyGroupList struct {
 	// **参数解释：** 分组关联的组件名称。 **约束限制：** 不涉及。 **取值范围：**  由中文、英文字母、数字、中划线、下划线组成，长度在3~50个字符之间。 **默认取值：** 不涉及。
 	ComponentName *string `json:"component_name,omitempty"`
 
-	// **参数解释：** 云广商信息。 **约束限制：** 不涉及。 **取值范围：** - RMS： 华为云。 - AWS：亚马逊。 - AZURE：微软。 - ALI：阿里云。 - VMWARE：VMware。 - OPENSTACK：openstack云平台。 - HCS：Huawei Cloud Stack。 - OTHER：其他云广商。 **默认取值：** 不涉及。
+	// **参数解释：** 云厂商信息。 **约束限制：** 不涉及。 **取值范围：** - RMS： 华为云。 - AWS：亚马逊。 - AZURE：微软。 - ALI：阿里云。 - VMWARE：VMware。 - OPENSTACK：openstack云平台。 - HCS：Huawei Cloud Stack。 - OTHER：其他云厂商。 **默认取值：** 不涉及。
 	Vendor *string `json:"vendor,omitempty"`
 
 	// **参数解释：** 分组配置信息。 **约束限制：** 不涉及。 **取值范围：** 分组的关联配置信息，比如对应的APM的配置信息。 **默认取值：** 不涉及。

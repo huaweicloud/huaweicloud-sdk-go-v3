@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// ServiceInvokeResponse **参数解释：**  服务调用时的相关配置。
+// ServiceInvokeResponse **参数解释：** 服务调用时的相关配置。
 type ServiceInvokeResponse struct {
 
 	// **参数解释：** 服务端口号。 **取值范围：** [1, 65535]。

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// GroupConfigUpdateRequest **参数解释：** 服务实例组配置，当推理方式为BATCH/EDGE时仅支持配置一个模型；当推理方式为REAL_TIME时，可根据业务需要配置多个服务实例并分配权重。  **约束限制：** 不涉及
+// GroupConfigUpdateRequest **参数解释：** 服务实例组配置，当推理方式为BATCH/EDGE时仅支持配置一个模型；当推理方式为REAL_TIME时，可根据业务需要配置多个服务实例并分配权重。 **约束限制：** 不涉及
 type GroupConfigUpdateRequest struct {
 
 	// **参数解释：** 部署ID。 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及。 **默认取值：** 不涉及。

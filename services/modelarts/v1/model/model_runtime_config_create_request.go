@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// RuntimeConfigCreateRequest **参数解释：** 服务运行配置。  **约束限制：** 不涉及。
+// RuntimeConfigCreateRequest **参数解释：** 服务运行配置。 **约束限制：** 不涉及。
 type RuntimeConfigCreateRequest struct {
 	ServiceInvoke *ServiceInvokeCreateRequest `json:"service_invoke"`
 

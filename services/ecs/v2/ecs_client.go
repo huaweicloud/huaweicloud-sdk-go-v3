@@ -1981,6 +1981,27 @@ func (c *EcsClient) ShowServerBlockDeviceInvoker(request *model.ShowServerBlockD
 	return &ShowServerBlockDeviceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowServerConsoleOutput 获取弹性云服务器的控制台日志
+//
+// 获取弹性云服务器云主机的控制台日志。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EcsClient) ShowServerConsoleOutput(request *model.ShowServerConsoleOutputRequest) (*model.ShowServerConsoleOutputResponse, error) {
+	requestDef := GenReqDefForShowServerConsoleOutput()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowServerConsoleOutputResponse), nil
+	}
+}
+
+// ShowServerConsoleOutputInvoker 获取弹性云服务器的控制台日志
+func (c *EcsClient) ShowServerConsoleOutputInvoker(request *model.ShowServerConsoleOutputRequest) *ShowServerConsoleOutputInvoker {
+	requestDef := GenReqDefForShowServerConsoleOutput()
+	return &ShowServerConsoleOutputInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowServerGroup 查询云服务器组详情
 //
 // 查询弹性云服务器组详情。
