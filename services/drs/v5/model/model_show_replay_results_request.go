@@ -18,7 +18,7 @@ type ShowReplayResultsRequest struct {
 	// 请求语言类型。
 	XLanguage *ShowReplayResultsRequestXLanguage `json:"X-Language,omitempty"`
 
-	// 结果类型。取值： - shard_statistics：回放概览基于时间维度统计信息。 - slow_sql：慢SQL详情。 - error_sql： 回放异常SQL详情。 - slow_sql_template：慢SQL统计信息。  - error_sql_template：异常SQL统计信息。 - replaying_sql：正在回放SQL详情。 - error_classification：回放异常SQL分类。
+	// 结果类型。取值： - shard_statistics：回放概览基于时间维度统计信息。 - slow_sql：慢SQL详情。 - error_sql： 回放异常SQL详情。 - slow_sql_template：慢SQL统计信息。  - error_sql_template：异常SQL统计信息。 - replaying_sql：正在回放SQL详情。 - error_classification：回放异常SQL分类。 - sql_result_inconsistent：回放库和镜像库里面SQL执行结果不一致详情。 - replayed_sql：流量回放已回放SQL统计信息。 - ugo_error_sql：ugo转换失败信息。 - sql_object_statistic：SQL对象统计信息。 - archive_capture_data：录制产生文件的SQL data数据。
 	Type ShowReplayResultsRequestType `json:"type"`
 
 	// 查询数据的起始时间，在type为shard_statistics、slow_sql、error_sql时必填
@@ -113,13 +113,18 @@ type ShowReplayResultsRequestType struct {
 }
 
 type ShowReplayResultsRequestTypeEnum struct {
-	SHARD_STATISTICS     ShowReplayResultsRequestType
-	SLOW_SQL             ShowReplayResultsRequestType
-	ERROR_SQL            ShowReplayResultsRequestType
-	SLOW_SQL_TEMPLATE    ShowReplayResultsRequestType
-	ERROR_SQL_TEMPLATE   ShowReplayResultsRequestType
-	REPLAYING_SQL        ShowReplayResultsRequestType
-	ERROR_CLASSIFICATION ShowReplayResultsRequestType
+	SHARD_STATISTICS        ShowReplayResultsRequestType
+	SLOW_SQL                ShowReplayResultsRequestType
+	ERROR_SQL               ShowReplayResultsRequestType
+	SLOW_SQL_TEMPLATE       ShowReplayResultsRequestType
+	ERROR_SQL_TEMPLATE      ShowReplayResultsRequestType
+	REPLAYING_SQL           ShowReplayResultsRequestType
+	ERROR_CLASSIFICATION    ShowReplayResultsRequestType
+	SQL_RESULT_INCONSISTENT ShowReplayResultsRequestType
+	REPLAYED_SQL            ShowReplayResultsRequestType
+	UGO_ERROR_SQL           ShowReplayResultsRequestType
+	SQL_OBJECT_STATISTIC    ShowReplayResultsRequestType
+	ARCHIVE_CAPTURE_DATA    ShowReplayResultsRequestType
 }
 
 func GetShowReplayResultsRequestTypeEnum() ShowReplayResultsRequestTypeEnum {
@@ -144,6 +149,21 @@ func GetShowReplayResultsRequestTypeEnum() ShowReplayResultsRequestTypeEnum {
 		},
 		ERROR_CLASSIFICATION: ShowReplayResultsRequestType{
 			value: "error_classification",
+		},
+		SQL_RESULT_INCONSISTENT: ShowReplayResultsRequestType{
+			value: "sql_result_inconsistent",
+		},
+		REPLAYED_SQL: ShowReplayResultsRequestType{
+			value: "replayed_sql",
+		},
+		UGO_ERROR_SQL: ShowReplayResultsRequestType{
+			value: "ugo_error_sql",
+		},
+		SQL_OBJECT_STATISTIC: ShowReplayResultsRequestType{
+			value: "sql_object_statistic",
+		},
+		ARCHIVE_CAPTURE_DATA: ShowReplayResultsRequestType{
+			value: "archive_capture_data",
 		},
 	}
 }

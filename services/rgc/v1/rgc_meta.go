@@ -384,6 +384,21 @@ func GenReqDefForDeleteLandingZone() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForListLandingZoneVersion() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodGet).
+		WithPath("/v1/landing-zone/version").
+		WithResponse(new(model.ListLandingZoneVersionResponse)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithResponseField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForSetupLandingZone() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

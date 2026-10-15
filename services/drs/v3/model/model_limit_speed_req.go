@@ -9,7 +9,7 @@ import (
 // LimitSpeedReq
 type LimitSpeedReq struct {
 
-	// 任务id
+	// 任务ID。
 	JobId string `json:"job_id"`
 
 	// 限速信息请求体

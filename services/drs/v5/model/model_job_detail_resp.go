@@ -12,27 +12,27 @@ import (
 // JobDetailResp 任务详情响应体。
 type JobDetailResp struct {
 
-	// 任务ID。
+	// **参数解释**：  任务ID，用于唯一标识一个数据复制任务。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
 	Id *string `json:"id,omitempty"`
 
-	// 任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
+	// **参数解释**：  任务当前运行状态。  **约束限制**：  不涉及。  **取值范围**：  - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败  **默认取值**：  不涉及
 	Status *JobDetailRespStatus `json:"status,omitempty"`
 
-	// 任务创建时间。
+	// **参数解释**：  任务的创建时间，表示任务首次被创建的时间戳。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	CreateTime *string `json:"create_time,omitempty"`
 
-	// 列表中的项目总数，与分页无关。
+	// **参数解释**：  列表中的项目总数，与分页无关。表示满足查询条件的记录总数量，用于分页计算。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	TotalCount *int32 `json:"total_count,omitempty"`
 
-	// 多任务主节点的任务ID。
+	// **参数解释**：  多任务主节点的任务ID，在多对一同步场景中标识主任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	MasterJobId *string `json:"master_job_id,omitempty"`
 
 	BaseInfo *JobBaseInfo `json:"base_info,omitempty"`
 
-	// 任务源数据库信息体。
+	// **参数解释**：  任务源数据库信息体，详情请参见JobEndpointInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
 	SourceEndpoint *[]JobEndpointInfo `json:"source_endpoint,omitempty"`
 
-	// 任务目标数据库信息体。
+	// **参数解释**：  任务目标数据库信息体，详情请参见JobEndpointInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
 	TargetEndpoint *[]JobEndpointInfo `json:"target_endpoint,omitempty"`
 
 	AlarmNotify *AlarmNotifyConfig `json:"alarm_notify,omitempty"`
@@ -52,10 +52,10 @@ type JobDetailResp struct {
 
 	NodeInfo *JobNodeInfo `json:"node_info,omitempty"`
 
-	// 日志查询结果信息体。
+	// **参数解释**：  日志查询结果信息体，详情请参见TaskLogInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
 	Logs *[]TaskLogInfo `json:"logs,omitempty"`
 
-	// 网络打通测试结果信息体。
+	// **参数解释**：  网络打通测试结果信息体，详情请参见QueryNetworkResult对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
 	NetworkResults *[]QueryNetworkResult `json:"network_results,omitempty"`
 
 	PrecheckResult *QueryPreCheckResult `json:"precheck_result,omitempty"`
@@ -70,38 +70,41 @@ type JobDetailResp struct {
 
 	SupportImportFileResp *SupportImportFileResult `json:"support_import_file_resp,omitempty"`
 
-	// 由开关和版本共同控制的任务级别的功能列表。
+	// **参数解释**：  由开关和版本共同控制的任务级别的功能列表，格式为key/value键值对。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
 	InstanceFeatures map[string]string `json:"instance_features,omitempty"`
 
-	// 任务版本。
+	// **参数解释**：  任务版本，标识当前数据复制任务所使用的版本号。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	TaskVersion *string `json:"task_version,omitempty"`
 
 	ConnectionManagement *ConnectionManagement `json:"connection_management,omitempty"`
 
-	// 指定公网IP的信息
+	// **参数解释**：  指定公网IP的信息列表，详情请参见PublicIpConfig对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
 	PublicIpList *[]PublicIpConfig `json:"public_ip_list,omitempty"`
 
-	// 是否成功绑定公网IP 取值：SUCCESS，FAILED
+	// **参数解释**：  是否成功绑定公网IP，标识为任务绑定公网IP操作的执行结果。  **约束限制**：  不涉及。  **取值范围**：  - SUCCESS：成功 - FAILED：失败  **默认取值**：  不涉及
 	BindPublicIpState *string `json:"bind_public_ip_state,omitempty"`
 
-	// 多任务时，存在子任务绑定失败时，返回子任务的信息
+	// **参数解释**：  多任务时存在子任务绑定失败时返回的子任务信息列表，详情请参见FailedToBindEipChildInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
 	Children *[]FailedToBindEipChildInfo `json:"children,omitempty"`
 
-	// 解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
+	// **参数解释**：  解除目标库只读操作后，目标库解除只读是否成功。  **约束限制**：  不涉及。  **取值范围**：  - pending：目标库解除操作进行中 - success：目标库解除只读操作成功  **默认取值**：  不涉及
 	IsWritable *JobDetailRespIsWritable `json:"is_writable,omitempty"`
 
-	// 一键诊断结果。
+	// **参数解释**：  一键诊断结果列表，详情请参见QueryDiagnosisResult对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
 	Diagnoses *[]QueryDiagnosisResult `json:"diagnoses,omitempty"`
 
 	RepairProgressInfo *JobDetailRespRepairProgressInfo `json:"repair_progress_info,omitempty"`
 
 	RepairDetailInfo *QueryRepairDetailResp `json:"repair_detail_info,omitempty"`
 
-	// 修复SQL导出状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
+	// **参数解释**：  修复SQL导出状态，标识数据修复SQL文件的导出进度。  **约束限制**：  不涉及。  **取值范围**：  - INIT：初始状态 - EXPORTING：比对结果导出中 - EXPORT_COMPLETE：比对结果导出完成 - EXPORT_COMMON_FAILED：比对结果导出失败  **默认取值**：  不涉及
 	RepairExportStatus *string `json:"repair_export_status,omitempty"`
 
-	// 灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
+	// **参数解释**：  灾备内核方向，非倒换中与job_direction取值相同，倒换中与job_direction取值相反。  **约束限制**：  不涉及。  **取值范围**：  - up：入云，灾备场景时对应本云为备 - down：出云，灾备场景时对应本云为主  **默认取值**：  不涉及
 	JobKernelDirection *JobDetailRespJobKernelDirection `json:"job_kernel_direction,omitempty"`
+
+	// 同步模式 DB_LEVEL：库级 SCHEMA_LEVEL：schema级 TABLE_LEVEL：表级 FILE_IMPORT：文件导入 INSTANCE_LEVEL：实例级
+	SyncMode *JobDetailRespSyncMode `json:"sync_mode,omitempty"`
 }
 
 func (o JobDetailResp) String() string {
@@ -344,6 +347,65 @@ func (c JobDetailRespJobKernelDirection) MarshalJSON() ([]byte, error) {
 }
 
 func (c *JobDetailRespJobKernelDirection) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type JobDetailRespSyncMode struct {
+	value string
+}
+
+type JobDetailRespSyncModeEnum struct {
+	DB_LEVEL       JobDetailRespSyncMode
+	SCHEMA_LEVEL   JobDetailRespSyncMode
+	TABLE_LEVEL    JobDetailRespSyncMode
+	FILE_IMPORT    JobDetailRespSyncMode
+	INSTANCE_LEVEL JobDetailRespSyncMode
+}
+
+func GetJobDetailRespSyncModeEnum() JobDetailRespSyncModeEnum {
+	return JobDetailRespSyncModeEnum{
+		DB_LEVEL: JobDetailRespSyncMode{
+			value: "DB_LEVEL",
+		},
+		SCHEMA_LEVEL: JobDetailRespSyncMode{
+			value: "SCHEMA_LEVEL",
+		},
+		TABLE_LEVEL: JobDetailRespSyncMode{
+			value: "TABLE_LEVEL",
+		},
+		FILE_IMPORT: JobDetailRespSyncMode{
+			value: "FILE_IMPORT",
+		},
+		INSTANCE_LEVEL: JobDetailRespSyncMode{
+			value: "INSTANCE_LEVEL",
+		},
+	}
+}
+
+func (c JobDetailRespSyncMode) Value() string {
+	return c.value
+}
+
+func (c JobDetailRespSyncMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *JobDetailRespSyncMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

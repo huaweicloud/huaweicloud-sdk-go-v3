@@ -863,6 +863,26 @@ func GenReqDefForSetDefaultPolicyVersionV5() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForUpdatePolicyV5() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPut).
+		WithPath("/v5/policies/{policy_id}").
+		WithResponse(new(model.UpdatePolicyV5Response)).
+		WithContentType("application/json")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("PolicyId").
+		WithJsonTag("policy_id").
+		WithLocationType(def.Path))
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForAttachAgencyPolicyV5() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).
@@ -1445,6 +1465,10 @@ func GenReqDefForListUsersV5() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("GroupId").
 		WithJsonTag("group_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AccessKeyId").
+		WithJsonTag("access_key_id").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()

@@ -12,19 +12,19 @@ import (
 // CheckJobResp 响应体
 type CheckJobResp struct {
 
-	// 任务id。
+	// **参数解释**：  任务ID，用于唯一标识一个数据复制任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	Id string `json:"id"`
 
-	// 测试结果。 - true：成功 - false：失败
+	// **参数解释**：  测试结果状态。  **约束限制**：  不涉及。  **取值范围**：  - true：成功 - false：失败  **默认取值**：  不涉及
 	Status CheckJobRespStatus `json:"status"`
 
-	// 错误码。
+	// **参数解释**：  错误码，当任务报错时返回的错误代码。  **约束限制**：  不涉及。  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
 	ErrorCode *string `json:"error_code,omitempty"`
 
-	// 错误信息。
+	// **参数解释**：  错误详细信息，当任务执行失败时返回的具体错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	ErrorMsg *string `json:"error_msg,omitempty"`
 
-	// 是否成功
+	// **参数解释**：  操作是否成功，标识测试连接操作的执行结果。  **约束限制**：  不涉及。  **取值范围**：  - true：操作成功 - false：操作失败  **默认取值**：  不涉及
 	Success *bool `json:"success,omitempty"`
 }
 

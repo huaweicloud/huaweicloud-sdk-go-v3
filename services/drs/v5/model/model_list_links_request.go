@@ -12,16 +12,16 @@ import (
 // ListLinksRequest Request Object
 type ListLinksRequest struct {
 
-	// 请求语言类型。
+	// **参数解释**：  请求语言类型。  **约束限制**：  不涉及。  **取值范围**：  - en-us：英文 - zh-cn：中文  **默认取值**：  en-us
 	XLanguage *ListLinksRequestXLanguage `json:"X-Language,omitempty"`
 
-	// 任务场景。取值： - migration：实时迁移。 - sync：实时同步。 - cloudDataGuard：实时灾备。
+	// **参数解释**：  DRS任务场景类型，用于区分不同的数据复制场景。  **约束限制**：  不涉及。  **取值范围**：  - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备 - replay：流量回放  **默认取值**：  不涉及
 	JobType ListLinksRequestJobType `json:"job_type"`
 
-	// 偏移量，表示查询该偏移量后面的记录。
+	// **参数解释**：  偏移量，表示查询该偏移量后面的记录，用于分页查询。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  0
 	Offset *int32 `json:"offset,omitempty"`
 
-	// 查询返回记录的数量限制。
+	// **参数解释**：  查询返回记录的数量限制，用于分页查询时控制每页返回的数据条数。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	Limit *int32 `json:"limit,omitempty"`
 }
 
@@ -89,6 +89,7 @@ type ListLinksRequestJobTypeEnum struct {
 	MIGRATION        ListLinksRequestJobType
 	SYNC             ListLinksRequestJobType
 	CLOUD_DATA_GUARD ListLinksRequestJobType
+	REPLAY           ListLinksRequestJobType
 }
 
 func GetListLinksRequestJobTypeEnum() ListLinksRequestJobTypeEnum {
@@ -101,6 +102,9 @@ func GetListLinksRequestJobTypeEnum() ListLinksRequestJobTypeEnum {
 		},
 		CLOUD_DATA_GUARD: ListLinksRequestJobType{
 			value: "cloudDataGuard",
+		},
+		REPLAY: ListLinksRequestJobType{
+			value: "replay",
 		},
 	}
 }

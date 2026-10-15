@@ -66,6 +66,9 @@ type PublishableApp struct {
 	// 是否开启应用预开，取值为： - false: 表示关闭应用预开。 - true: 表示开启应用预开。
 	IsPreBoot *bool `json:"is_pre_boot,omitempty"`
 
+	// 预开状态：0：非预开，1：会话预开，3：应用预开。
+	PreLaunchPolicy *int32 `json:"pre_launch_policy,omitempty"`
+
 	AppExtendedInfo *AppExtendedInfo `json:"app_extended_info,omitempty"`
 
 	// 镜像ids。

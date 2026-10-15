@@ -18,7 +18,7 @@ type MigrationObjectOverviewInfo struct {
 	// 已迁移数量。
 	DstCount *string `json:"dst_count,omitempty"`
 
-	// 状态. NOT_START：未启动，TRANSFERING：迁移中，COMPLETED：已完成，FAILED：失败，TRANSFER_WHEN_END：结束后迁移
+	// 状态。 - NOT_START：未启动。 - TRANSFERING：迁移中。 - COMPLETED：已完成。 - FAILED：失败。 - TRANSFER_WHEN_END：结束后迁移。
 	Status *string `json:"status,omitempty"`
 
 	// 开始时间。

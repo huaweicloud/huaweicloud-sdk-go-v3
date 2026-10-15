@@ -18,7 +18,7 @@ type UploadDbObjectTemplateRequest struct {
 	// 请求语言类型。
 	XLanguage *UploadDbObjectTemplateRequestXLanguage `json:"X-Language,omitempty"`
 
-	// 文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级 - partition：partition分区级导入
+	// 文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级 - partition：partition分区级导入 - compare_key：对比场景下指定分片键导入
 	FileImportDbLevel *UploadDbObjectTemplateRequestFileImportDbLevel `json:"file_import_db_level,omitempty"`
 
 	// 导入文件模板的映射场景，取值： - table_mapping：表名映射 - topic_mapping：topic名映射
@@ -88,10 +88,11 @@ type UploadDbObjectTemplateRequestFileImportDbLevel struct {
 }
 
 type UploadDbObjectTemplateRequestFileImportDbLevelEnum struct {
-	DATABASE  UploadDbObjectTemplateRequestFileImportDbLevel
-	TABLE     UploadDbObjectTemplateRequestFileImportDbLevel
-	COLUMN    UploadDbObjectTemplateRequestFileImportDbLevel
-	PARTITION UploadDbObjectTemplateRequestFileImportDbLevel
+	DATABASE    UploadDbObjectTemplateRequestFileImportDbLevel
+	TABLE       UploadDbObjectTemplateRequestFileImportDbLevel
+	COLUMN      UploadDbObjectTemplateRequestFileImportDbLevel
+	PARTITION   UploadDbObjectTemplateRequestFileImportDbLevel
+	COMPARE_KEY UploadDbObjectTemplateRequestFileImportDbLevel
 }
 
 func GetUploadDbObjectTemplateRequestFileImportDbLevelEnum() UploadDbObjectTemplateRequestFileImportDbLevelEnum {
@@ -107,6 +108,9 @@ func GetUploadDbObjectTemplateRequestFileImportDbLevelEnum() UploadDbObjectTempl
 		},
 		PARTITION: UploadDbObjectTemplateRequestFileImportDbLevel{
 			value: "partition",
+		},
+		COMPARE_KEY: UploadDbObjectTemplateRequestFileImportDbLevel{
+			value: "compare_key",
 		},
 	}
 }

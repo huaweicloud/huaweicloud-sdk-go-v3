@@ -12,7 +12,7 @@ import (
 // ListResourceInstancesRequest Request Object
 type ListResourceInstancesRequest struct {
 
-	// 资源类型，枚举类：SCALING_GROUP_TAG。
+	// 资源类型，枚举类：SCALING_GROUP_TAG、SCALING_CONFIGURATION_TAG。
 	ResourceType ListResourceInstancesRequestResourceType `json:"resource_type"`
 
 	Body *QueryTagsOption `json:"body,omitempty"`
@@ -32,13 +32,17 @@ type ListResourceInstancesRequestResourceType struct {
 }
 
 type ListResourceInstancesRequestResourceTypeEnum struct {
-	SCALING_GROUP_TAG ListResourceInstancesRequestResourceType
+	SCALING_GROUP_TAG         ListResourceInstancesRequestResourceType
+	SCALING_CONFIGURATION_TAG ListResourceInstancesRequestResourceType
 }
 
 func GetListResourceInstancesRequestResourceTypeEnum() ListResourceInstancesRequestResourceTypeEnum {
 	return ListResourceInstancesRequestResourceTypeEnum{
 		SCALING_GROUP_TAG: ListResourceInstancesRequestResourceType{
 			value: "scaling_group_tag",
+		},
+		SCALING_CONFIGURATION_TAG: ListResourceInstancesRequestResourceType{
+			value: "scaling_configuration_tag",
 		},
 	}
 }

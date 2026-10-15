@@ -366,6 +366,10 @@ func GenReqDefForCountAllResources() *def.HttpRequestDef {
 		WithName("Tags").
 		WithJsonTag("tags").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("GroupId").
+		WithJsonTag("group_id").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

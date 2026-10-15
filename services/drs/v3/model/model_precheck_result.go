@@ -12,25 +12,25 @@ import (
 // PrecheckResult 预检查结果信息体
 type PrecheckResult struct {
 
-	// 检查项。
+	// **参数解释**：  预检查的具体检查项名称，用于标识预检查中执行的具体检查项目。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	Item *string `json:"item,omitempty"`
 
-	// 检查结果
+	// **参数解释**：  预检查项的检查结果，表示该检查项是否通过。  **约束限制**：  不涉及。  **取值范围**：  - PASSED：通过 - ALARM：告警 - FAILED：失败  **默认取值**：  不涉及
 	Result *PrecheckResultResult `json:"result,omitempty"`
 
-	// 失败原因。
+	// **参数解释**：  预检查项的失败原因，当检查结果为FAILED或ALARM时返回的具体失败描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	FailedReason *string `json:"failed_reason,omitempty"`
 
-	// 加密的数据。
+	// **参数解释**：  预检查项的加密数据，包含检查项的详细检测数据，以JSON格式加密返回。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	Data *string `json:"data,omitempty"`
 
-	// 行错误信息。
+	// **参数解释**：  原始错误信息，预检查过程中产生的原始错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	RawErrorMsg *string `json:"raw_error_msg,omitempty"`
 
-	// 检查项分组
+	// **参数解释**：  检查项分组，用于将预检查项按类别归类展示。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	Group *string `json:"group,omitempty"`
 
-	// 失败的子任务信息。
+	// **参数解释**：  失败的子任务信息集合，包含预检查中失败的子任务详情，详情请参见PrecheckFailSubJobVO对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	FailedSubJobs *[]PrecheckFailSubJobVo `json:"failed_sub_jobs,omitempty"`
 }
 

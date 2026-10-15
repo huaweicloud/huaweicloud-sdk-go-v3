@@ -26,6 +26,9 @@ type HealthCompareJob struct {
 
 	// 对比计算资源。
 	ComputeType *string `json:"compute_type,omitempty"`
+
+	// 灾备数据库信息。
+	DatabaseInfo *interface{} `json:"database_info,omitempty"`
 }
 
 func (o HealthCompareJob) String() string {

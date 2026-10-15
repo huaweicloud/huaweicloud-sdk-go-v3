@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-// BatchModifyJobReq 批量修改任务请求体
+// BatchModifyJobReq 批量修改任务请求体。
 type BatchModifyJobReq struct {
 
-	// 修改任务请求体
+	// **参数解释**：  修改任务请求体列表，包含需要修改的一个或多个任务信息，详情请参见ModifyJobReq对象定义。  **约束限制**：  - 建议批量调用数量不超过10个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	Jobs []ModifyJobReq `json:"jobs"`
 }
 

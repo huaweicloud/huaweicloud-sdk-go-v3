@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// PolicyDescription 身份策略描述。
+// PolicyDescription **参数解释**： 身份策略描述信息。  **约束限制**： 不涉及。  **取值范围**： 长度范围为[0,1000]。  **默认取值**： 不涉及。
 type PolicyDescription struct {
 }
 

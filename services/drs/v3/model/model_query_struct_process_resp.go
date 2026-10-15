@@ -19,6 +19,9 @@ type QueryStructProcessResp struct {
 	ErrorMessage *string `json:"error_message,omitempty"`
 
 	StructProcess *StructProcessResp `json:"struct_process,omitempty"`
+
+	// 灾备数据库信息。
+	DatabaseInfo *interface{} `json:"database_info,omitempty"`
 }
 
 func (o QueryStructProcessResp) String() string {

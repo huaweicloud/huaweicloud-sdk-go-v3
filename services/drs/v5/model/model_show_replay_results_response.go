@@ -32,7 +32,10 @@ type ShowReplayResultsResponse struct {
 
 	// 回放异常SQL分类信息，在type为error_classification时返回
 	ErrorClassifications *[]ReplayErrorClassification `json:"error_classifications,omitempty"`
-	HttpStatusCode       int                          `json:"-"`
+
+	// SQL执行结果不一致数据，在type为sql_result_inconsistent时返回
+	CompareResults *[]ReplayCompareResultResp `json:"compare_results,omitempty"`
+	HttpStatusCode int                        `json:"-"`
 }
 
 func (o ShowReplayResultsResponse) String() string {

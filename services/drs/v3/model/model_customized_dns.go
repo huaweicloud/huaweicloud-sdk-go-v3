@@ -12,13 +12,13 @@ import (
 // CustomizedDns 客户自定义DNS服务。
 type CustomizedDns struct {
 
-	// 是否设置客户自定义DNS。
+	// **参数解释**：  是否设置客户自定义DNS。  **约束限制**：  不涉及。  **取值范围**：  - true：设置客户自定义DNS - false：不设置客户自定义DNS  **默认取值**：  不涉及
 	IsSetDns bool `json:"is_set_dns"`
 
-	// 设置客户自定义DNS的行为。 - add：新增客户自定义DNS IP。 - keep：保持客户自定义DNS IP。 - update：更新客户自定义DNS IP（当DNS IP变化时更新生效）。 - recover：还原系统默认DNS IP（还原时可能会导致域名解析失败，请谨慎操作）。
+	// **参数解释**：  设置客户自定义DNS的行为。  **约束限制**：  不涉及。  **取值范围**：  - add：新增客户自定义DNS IP - keep：保持客户自定义DNS IP - update：更新客户自定义DNS IP（当DNS IP变化时更新生效） - recover：还原系统默认DNS IP（还原时可能会导致域名解析失败，请谨慎操作）  **默认取值**：  不涉及
 	SetDnsAction CustomizedDnsSetDnsAction `json:"set_dns_action"`
 
-	// 设置客户自定义DNS IP。
+	// **参数解释**：  设置客户自定义DNS IP地址。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	DnsIp string `json:"dns_ip"`
 }
 

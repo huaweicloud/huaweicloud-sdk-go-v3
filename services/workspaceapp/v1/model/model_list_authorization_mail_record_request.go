@@ -21,7 +21,7 @@ type ListAuthorizationMailRecordRequest struct {
 	// 用户(组)名称。
 	Account *string `json:"account,omitempty"`
 
-	// 授权类型： - ADD_GROUP_AUTHORIZATION 添加组授权 - DEL_GROUP_AUTHORIZATION 删除组授权。
+	// 授权类型： - ADD_GROUP_AUTHORIZATION 添加组授权 - DEL_GROUP_AUTHORIZATION 删除组授权 - ADD_GROUP_AUTHORIZATION_SMS 添加组授权短信 - DEL_GROUP_AUTHORIZATION_SMS 删除组授权短信。
 	MailSendType *string `json:"mail_send_type,omitempty"`
 
 	// 邮件发送结果(SUCCESS|FAIL)。

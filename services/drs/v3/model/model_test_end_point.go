@@ -12,61 +12,61 @@ import (
 // TestEndPoint 测试连接信息体
 type TestEndPoint struct {
 
-	// 任务ID
+	// **参数解释**：  DRS任务ID，用于唯一标识一个数据复制任务，可从任务列表或任务详情页面获取。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	Id string `json:"id"`
 
-	// 网络类型
+	// **参数解释**：  任务使用的网络类型。  **约束限制**：  不涉及。  **取值范围**：  - vpn：虚拟专用网络 - vpc：虚拟私有云 - eip：弹性公网IP  **默认取值**：  不涉及
 	NetType TestEndPointNetType `json:"net_type"`
 
-	// 数据库类型
+	// **参数解释**：  数据库类型，标识源库或目标库的数据库引擎种类。  **约束限制**：  不涉及。  **取值范围**：  - mysql：MySQL - mongodb：MongoDB - gaussdbv5：GaussDB分布式版 - postgresql：PostgreSQL - kafka：Kafka - gaussdbv5ha：GaussDB集中式版 - taurus：TaurusDB  **默认取值**：  不涉及
 	DbType TestEndPointDbType `json:"db_type"`
 
-	// 数据库IP
+	// **参数解释**：  数据库IP地址，用于指定连接数据库的服务器地址。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	Ip string `json:"ip"`
 
-	// 数据库端口，Mongo、DDS必填为0。
+	// **参数解释**：  数据库端口号，用于指定连接数据库的服务端口。  **约束限制**：  - db_type为MongoDB、DDS时端口必填取值为0。 - db_type为Oracle时为必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	DbPort *int32 `json:"db_port,omitempty"`
 
-	// RDS实例id，RDS实例必填。
+	// **参数解释**：  RDS实例ID，用于标识华为云RDS数据库实例。  **约束限制**：  - 数据库为RDS实例时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	InstId *string `json:"inst_id,omitempty"`
 
-	// 数据库帐号。
+	// **参数解释**：  数据库帐号，用于连接数据库的用户名。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	DbUser string `json:"db_user"`
 
-	// 数据库密码。
+	// **参数解释**：  数据库密码，用于连接数据库的认证密码。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	DbPassword string `json:"db_password"`
 
-	// 是否SSL安全连接。
+	// **参数解释**：  是否使用SSL安全连接，指定数据库连接是否启用SSL加密传输。  **约束限制**：  - 该参数为true时，需填写SSL证书相关信息参数。  **取值范围**：  - true：使用SSL安全连接 - false：不使用SSL安全连接  **默认取值**：  不涉及
 	SslLink *bool `json:"ssl_link,omitempty"`
 
-	// SSL证书内容，base64加密后的值，源库安全连接必选。
+	// **参数解释**：  SSL证书内容，获取SSL证书后将内容通过BASE64加密后所得的字符串。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	SslCertKey *string `json:"ssl_cert_key,omitempty"`
 
-	// SSL证书名字，源库安全连接必选。
+	// **参数解释**：  SSL证书名字。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	SslCertName *string `json:"ssl_cert_name,omitempty"`
 
-	// SSL证书内容checksum值，证书经过sha256加密后的值，后端校验，源库安全连接必选。
+	// **参数解释**：  SSL证书内容checksum值，获取SSL证书后将内容经过SHA256加密后的值，后端校验用。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	SslCertCheckSum *string `json:"ssl_cert_check_sum,omitempty"`
 
-	// SSL证书密码，证书文件后缀为.p12，需要密码。
+	// **参数解释**：  SSL证书密码。  **约束限制**：  - 证书文件后缀为.p12时需要填写密码。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	SslCertPassword *string `json:"ssl_cert_password,omitempty"`
 
-	// vpcid，数据库为RDS时必选。
+	// **参数解释**：  虚拟私有云ID，用于标识数据库所在的VPC。  **约束限制**：  - 网络类型为VPC时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	VpcId *string `json:"vpc_id,omitempty"`
 
-	// subnetid，数据库为RDS必选。
+	// **参数解释**：  子网ID，用于标识数据库所在的子网。  **约束限制**：  - 网络类型为VPC时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	SubnetId *string `json:"subnet_id,omitempty"`
 
-	// 源库：so,目标库：ta
+	// **参数解释**：  数据库端点类型，标识该数据库在数据复制任务中是源端还是目标端。  **约束限制**：  不涉及。  **取值范围**：  - so：源库 - ta：目标库  **默认取值**：  so
 	EndPointType TestEndPointEndPointType `json:"end_point_type"`
 
-	// rds实例region，数据库为RDS时必填。
+	// **参数解释**：  RDS实例所在区域，用于标识数据库实例的地理区域。  **约束限制**：  - 数据库为RDS实例时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	Region *string `json:"region,omitempty"`
 
-	// 用户所处region的projectId。
+	// **参数解释**：  数据库实例所在Region的项目ID，数据库为云上实例时填写数据库实例所在Region下的项目ID，否则填写当前任务所在Region下的项目ID。获取方法请参见获取项目ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	ProjectId *string `json:"project_id,omitempty"`
 
-	// 数据库用户名，DDS的账号认证数据库，Oracle的serviceName。
+	// **参数解释**：  数据库名称，Oracle场景下为serviceName。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	DbName *string `json:"db_name,omitempty"`
 
 	KafkaSecurityConfig *KafkaSecurity `json:"kafka_security_config,omitempty"`

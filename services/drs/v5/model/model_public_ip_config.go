@@ -9,16 +9,16 @@ import (
 	"strings"
 )
 
-// PublicIpConfig 租户公网IP信息
+// PublicIpConfig 租户公网IP信息。
 type PublicIpConfig struct {
 
-	// 指定公网IP的ID
+	// 指定公网IP的ID。
 	Id string `json:"id"`
 
-	// 指定公网IP
+	// 指定公网IP。
 	PublicIp string `json:"public_ip"`
 
-	// 指定公网IP绑定任务的类型： - 主备任务：主是master，备是slave - 其他固定为master
+	// 指定公网IP绑定任务的类型： - 主备任务：主是master，备是slave。 - 其他固定为master。
 	Type PublicIpConfigType `json:"type"`
 }
 

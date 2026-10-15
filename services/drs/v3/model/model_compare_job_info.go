@@ -38,6 +38,9 @@ type CompareJobInfo struct {
 
 	// 抽样比例，对比类型为抽样对比时填写。
 	ProportionValue *string `json:"proportion_value,omitempty"`
+
+	// 灾备数据库信息。
+	DatabaseInfo *interface{} `json:"database_info,omitempty"`
 }
 
 func (o CompareJobInfo) String() string {

@@ -9,16 +9,16 @@ import (
 	"strings"
 )
 
-// DeleteJobReq 删除在线迁移任务请求体
+// DeleteJobReq 删除在线迁移任务请求体。
 type DeleteJobReq struct {
 
-	// terminate:结束迁移任务,force_terminate:强制结束迁移任务,delete:删除迁移任务,roll_back_upgrade_active_standby:转主备任务回滚
+	// **参数解释**：  批量结束或删除任务的操作类型，指定对任务执行结束还是删除操作。  **约束限制**：  包年/包月任务需要先手动退订，然后delete_type参数设置为delete调用该接口删除任务。  **取值范围**：  - terminate：结束任务 - force_terminate：强制结束任务 - delete：删除任务 - roll_back_upgrade_active_standby：转主备任务回滚  **默认取值**：  不涉及
 	DeleteType DeleteJobReqDeleteType `json:"delete_type"`
 
-	// 任务ID
+	// **参数解释**：  任务ID，用于唯一标识需要结束或删除的数据复制任务。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
 	JobId string `json:"job_id"`
 
-	// MySQL为源，实时迁移，实时同步，数据订阅，实时灾备结束任务时是否展示断点信息
+	// **参数解释**：  MySQL为源的数据复制任务，结束任务时是否展示断点信息。  **约束限制**：  仅MySQL为源的实时迁移、实时同步、实时灾备任务适用。  **取值范围**：  - true：展示断点信息 - false：不展示断点信息  **默认取值**：  不涉及
 	IsShowBreakpointPosition *bool `json:"is_show_breakpoint_position,omitempty"`
 }
 

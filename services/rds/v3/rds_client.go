@@ -4039,6 +4039,27 @@ func (c *RdsClient) ShowUpgradeDbMajorVersionStatusInvoker(request *model.ShowUp
 	return &ShowUpgradeDbMajorVersionStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowVectorStorageConfig 查询实例的向量存储配置
+//
+// 查询实例的向量存储配置
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowVectorStorageConfig(request *model.ShowVectorStorageConfigRequest) (*model.ShowVectorStorageConfigResponse, error) {
+	requestDef := GenReqDefForShowVectorStorageConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVectorStorageConfigResponse), nil
+	}
+}
+
+// ShowVectorStorageConfigInvoker 查询实例的向量存储配置
+func (c *RdsClient) ShowVectorStorageConfigInvoker(request *model.ShowVectorStorageConfigRequest) *ShowVectorStorageConfigInvoker {
+	requestDef := GenReqDefForShowVectorStorageConfig()
+	return &ShowVectorStorageConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // StartFailover 手动倒换主备
 //
 // 手动倒换主备.
@@ -4667,6 +4688,27 @@ func (c *RdsClient) UpdateToPeriod(request *model.UpdateToPeriodRequest) (*model
 func (c *RdsClient) UpdateToPeriodInvoker(request *model.UpdateToPeriodRequest) *UpdateToPeriodInvoker {
 	requestDef := GenReqDefForUpdateToPeriod()
 	return &UpdateToPeriodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateVectorStorageConfig 修改实例的向量存储配置
+//
+// 修改实例的向量存储配置，开启或关闭向量存储功能。该接口为异步接口，返回工作流ID。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) UpdateVectorStorageConfig(request *model.UpdateVectorStorageConfigRequest) (*model.UpdateVectorStorageConfigResponse, error) {
+	requestDef := GenReqDefForUpdateVectorStorageConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateVectorStorageConfigResponse), nil
+	}
+}
+
+// UpdateVectorStorageConfigInvoker 修改实例的向量存储配置
+func (c *RdsClient) UpdateVectorStorageConfigInvoker(request *model.UpdateVectorStorageConfigRequest) *UpdateVectorStorageConfigInvoker {
+	requestDef := GenReqDefForUpdateVectorStorageConfig()
+	return &UpdateVectorStorageConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpgradeDbMajorVersion PostgreSQL数据库升级大版本

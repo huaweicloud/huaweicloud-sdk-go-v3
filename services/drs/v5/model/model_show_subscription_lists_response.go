@@ -9,7 +9,7 @@ import (
 // ShowSubscriptionListsResponse Response Object
 type ShowSubscriptionListsResponse struct {
 
-	// 列表中的项目总数，与分页无关。
+	// **参数解释**：  列表中的项目总数，与分页无关。表示满足查询条件的记录总数量，用于分页计算。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	TotalCount int32 `json:"total_count"`
 
 	Jobs           *SubscriptionListResp `json:"jobs"`

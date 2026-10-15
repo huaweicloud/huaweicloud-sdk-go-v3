@@ -21,10 +21,10 @@ type ListJobHistoryParametersRequest struct {
 	// 每页显示的条目数量。默认为10，取值范围【1-1000】
 	Limit *int32 `json:"limit,omitempty"`
 
-	// 开始时间，UTC时间，例如：2020-09-01T18:50:20Z
+	// 开始时间，格式为毫秒级时间戳。
 	BeginTime *string `json:"begin_time,omitempty"`
 
-	// 结束时间，UTC时间，例如：2020-09-01T19:50:20Z
+	// 结束时间，格式为毫秒级时间戳。
 	EndTime *string `json:"end_time,omitempty"`
 
 	// 参数名称。

@@ -3349,6 +3349,22 @@ func (i *BatchSendEmailInvoker) Invoke() (*model.BatchSendEmailResponse, error) 
 	}
 }
 
+type BatchSetHealthReportConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchSetHealthReportConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchSetHealthReportConfigInvoker) Invoke() (*model.BatchSetHealthReportConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchSetHealthReportConfigResponse), nil
+	}
+}
+
 type BatchSubscribeReportInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3378,6 +3394,22 @@ func (i *CancelShareNewInvoker) Invoke() (*model.CancelShareNewResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.CancelShareNewResponse), nil
+	}
+}
+
+type ChangeBigKeyHotKeySwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeBigKeyHotKeySwitchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeBigKeyHotKeySwitchInvoker) Invoke() (*model.ChangeBigKeyHotKeySwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeBigKeyHotKeySwitchResponse), nil
 	}
 }
 
@@ -3541,6 +3573,22 @@ func (i *CreateHealthReportTaskInvoker) Invoke() (*model.CreateHealthReportTaskR
 	}
 }
 
+type CreateHealthReportTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateHealthReportTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateHealthReportTemplateInvoker) Invoke() (*model.CreateHealthReportTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateHealthReportTemplateResponse), nil
+	}
+}
+
 type CreateHistoryTransactionExportTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3650,6 +3698,22 @@ func (i *DeleteEmailTemplateInvoker) Invoke() (*model.DeleteEmailTemplateRespons
 		return nil, err
 	} else {
 		return result.(*model.DeleteEmailTemplateResponse), nil
+	}
+}
+
+type DeleteHealthReportTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteHealthReportTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteHealthReportTemplateInvoker) Invoke() (*model.DeleteHealthReportTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteHealthReportTemplateResponse), nil
 	}
 }
 
@@ -3893,6 +3957,22 @@ func (i *ListAutoIncrementUsageInvoker) Invoke() (*model.ListAutoIncrementUsageR
 	}
 }
 
+type ListBigKeysInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBigKeysInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBigKeysInvoker) Invoke() (*model.ListBigKeysResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBigKeysResponse), nil
+	}
+}
+
 type ListCloudDbaInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4005,6 +4085,22 @@ func (i *ListFullSqlTasksInvoker) Invoke() (*model.ListFullSqlTasksResponse, err
 	}
 }
 
+type ListHealthReportConfigsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHealthReportConfigsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListHealthReportConfigsInvoker) Invoke() (*model.ListHealthReportConfigsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHealthReportConfigsResponse), nil
+	}
+}
+
 type ListHealthReportTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4021,6 +4117,22 @@ func (i *ListHealthReportTaskInvoker) Invoke() (*model.ListHealthReportTaskRespo
 	}
 }
 
+type ListHealthReportTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHealthReportTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListHealthReportTemplateInvoker) Invoke() (*model.ListHealthReportTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHealthReportTemplateResponse), nil
+	}
+}
+
 type ListHistoryTransactionExportTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4034,6 +4146,22 @@ func (i *ListHistoryTransactionExportTaskInvoker) Invoke() (*model.ListHistoryTr
 		return nil, err
 	} else {
 		return result.(*model.ListHistoryTransactionExportTaskResponse), nil
+	}
+}
+
+type ListHotKeysInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHotKeysInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListHotKeysInvoker) Invoke() (*model.ListHotKeysResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHotKeysResponse), nil
 	}
 }
 
@@ -4453,6 +4581,22 @@ func (i *SaveCredentialForBatchInspectionInvoker) Invoke() (*model.SaveCredentia
 	}
 }
 
+type SetInstanceHealthReportConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetInstanceHealthReportConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetInstanceHealthReportConfigInvoker) Invoke() (*model.SetInstanceHealthReportConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetInstanceHealthReportConfigResponse), nil
+	}
+}
+
 type SetLockBlockingSwitchInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4514,6 +4658,22 @@ func (i *ShowAnalysisSessionStatusInvoker) Invoke() (*model.ShowAnalysisSessionS
 		return nil, err
 	} else {
 		return result.(*model.ShowAnalysisSessionStatusResponse), nil
+	}
+}
+
+type ShowBigKeyHotKeySwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBigKeyHotKeySwitchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowBigKeyHotKeySwitchInvoker) Invoke() (*model.ShowBigKeyHotKeySwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBigKeyHotKeySwitchResponse), nil
 	}
 }
 
@@ -4725,6 +4885,22 @@ func (i *ShowHealthReportSettingsInvoker) Invoke() (*model.ShowHealthReportSetti
 	}
 }
 
+type ShowHealthReportTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowHealthReportTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowHealthReportTemplateInvoker) Invoke() (*model.ShowHealthReportTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowHealthReportTemplateResponse), nil
+	}
+}
+
 type ShowHistoryTransactionExportTaskInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -4786,6 +4962,38 @@ func (i *ShowInstanceHealthReportInvoker) Invoke() (*model.ShowInstanceHealthRep
 		return nil, err
 	} else {
 		return result.(*model.ShowInstanceHealthReportResponse), nil
+	}
+}
+
+type ShowInstanceHealthReportConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceHealthReportConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceHealthReportConfigInvoker) Invoke() (*model.ShowInstanceHealthReportConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceHealthReportConfigResponse), nil
+	}
+}
+
+type ShowKeyTrendInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowKeyTrendInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowKeyTrendInvoker) Invoke() (*model.ShowKeyTrendResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowKeyTrendResponse), nil
 	}
 }
 
@@ -5218,6 +5426,22 @@ func (i *UpdateHealthReportSettingsInvoker) Invoke() (*model.UpdateHealthReportS
 		return nil, err
 	} else {
 		return result.(*model.UpdateHealthReportSettingsResponse), nil
+	}
+}
+
+type UpdateHealthReportTemplateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateHealthReportTemplateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateHealthReportTemplateInvoker) Invoke() (*model.UpdateHealthReportTemplateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateHealthReportTemplateResponse), nil
 	}
 }
 

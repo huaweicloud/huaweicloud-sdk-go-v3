@@ -502,6 +502,27 @@ func (c *RgcClient) DeleteLandingZoneInvoker(request *model.DeleteLandingZoneReq
 	return &DeleteLandingZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListLandingZoneVersion 列出Landing Zone版本列表
+//
+// 列出Landing Zone版本列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RgcClient) ListLandingZoneVersion(request *model.ListLandingZoneVersionRequest) (*model.ListLandingZoneVersionResponse, error) {
+	requestDef := GenReqDefForListLandingZoneVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLandingZoneVersionResponse), nil
+	}
+}
+
+// ListLandingZoneVersionInvoker 列出Landing Zone版本列表
+func (c *RgcClient) ListLandingZoneVersionInvoker(request *model.ListLandingZoneVersionRequest) *ListLandingZoneVersionInvoker {
+	requestDef := GenReqDefForListLandingZoneVersion()
+	return &ListLandingZoneVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetupLandingZone 设置Landing Zone
 //
 // 在当前区域创建或者更新Landing Zone。

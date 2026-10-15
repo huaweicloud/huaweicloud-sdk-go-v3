@@ -9,13 +9,13 @@ import (
 	"strings"
 )
 
-// SubscriptionInfo 收件方式与信息体
+// SubscriptionInfo 收件方式与信息体。
 type SubscriptionInfo struct {
 
-	// 短信或者邮件列表
+	// **参数解释**：  手机号或者邮箱列表，用于接收异常告警通知的联系方式。  **约束限制**：  - 最多支持10个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	Endpoints *[]string `json:"endpoints,omitempty"`
 
-	// 收件方式，sms：短信,email：邮件
+	// **参数解释**：  收件方式，指定异常告警的通知渠道。  **约束限制**：  不涉及。  **取值范围**：  - sms：短信 - email：邮件  **默认取值**：  不涉及
 	Protocol *SubscriptionInfoProtocol `json:"protocol,omitempty"`
 }
 

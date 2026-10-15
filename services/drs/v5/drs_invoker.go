@@ -5,6 +5,22 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/drs/v5/model"
 )
 
+type AssociateSmnTopicInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssociateSmnTopicInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AssociateSmnTopicInvoker) Invoke() (*model.AssociateSmnTopicResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssociateSmnTopicResponse), nil
+	}
+}
+
 type BatchCreateJobsAsyncInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -119,6 +135,22 @@ func (i *BatchTagActionInvoker) Invoke() (*model.BatchTagActionResponse, error) 
 	}
 }
 
+type ChangeJobFlavorInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ChangeJobFlavorInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ChangeJobFlavorInvoker) Invoke() (*model.ChangeJobFlavorResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ChangeJobFlavorResponse), nil
+	}
+}
+
 type ChangeToPeriodInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -139,15 +171,33 @@ type CheckDataFilterInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *CheckDataFilterInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *CheckDataFilterInvoker) Invoke() (*model.CheckDataFilterResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
 		return result.(*model.CheckDataFilterResponse), nil
+	}
+}
+
+type CheckDataFilterRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CheckDataFilterRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CheckDataFilterRulesInvoker) Invoke() (*model.CheckDataFilterRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CheckDataFilterRulesResponse), nil
 	}
 }
 
@@ -180,6 +230,22 @@ func (i *CollectColumnsInvoker) Invoke() (*model.CollectColumnsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.CollectColumnsResponse), nil
+	}
+}
+
+type CollectDataFilterRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CollectDataFilterRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CollectDataFilterRulesInvoker) Invoke() (*model.CollectDataFilterRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CollectDataFilterRulesResponse), nil
 	}
 }
 
@@ -377,14 +443,32 @@ func (i *DeleteConnectionInvoker) Invoke() (*model.DeleteConnectionResponse, err
 	}
 }
 
+type DeleteDataFilterRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteDataFilterRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteDataFilterRulesInvoker) Invoke() (*model.DeleteDataFilterRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteDataFilterRulesResponse), nil
+	}
+}
+
 type DeleteJdbcDriverInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *DeleteJdbcDriverInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *DeleteJdbcDriverInvoker) Invoke() (*model.DeleteJdbcDriverResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -505,6 +589,22 @@ func (i *DownloadDbObjectTemplateInvoker) Invoke() (*model.DownloadDbObjectTempl
 	}
 }
 
+type DownloadFileInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DownloadFileInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DownloadFileInvoker) Invoke() (*model.DownloadFileResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DownloadFileResponse), nil
+	}
+}
+
 type ExecuteJobActionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -534,6 +634,22 @@ func (i *ExportCreationTemplateInvoker) Invoke() (*model.ExportCreationTemplateR
 		return nil, err
 	} else {
 		return result.(*model.ExportCreationTemplateResponse), nil
+	}
+}
+
+type ExportJobListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExportJobListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExportJobListInvoker) Invoke() (*model.ExportJobListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExportJobListResponse), nil
 	}
 }
 
@@ -703,10 +819,12 @@ type ListJdbcDriversInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListJdbcDriversInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListJdbcDriversInvoker) Invoke() (*model.ListJdbcDriversResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -783,10 +901,12 @@ type ListLinksInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListLinksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListLinksInvoker) Invoke() (*model.ListLinksResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -810,6 +930,22 @@ func (i *ListProjectTagsInvoker) Invoke() (*model.ListProjectTagsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListProjectTagsResponse), nil
+	}
+}
+
+type ListReplaySupportSourceConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListReplaySupportSourceConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListReplaySupportSourceConfigInvoker) Invoke() (*model.ListReplaySupportSourceConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListReplaySupportSourceConfigResponse), nil
 	}
 }
 
@@ -897,10 +1033,12 @@ type ListsAgencyPermissionsInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListsAgencyPermissionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ListsAgencyPermissionsInvoker) Invoke() (*model.ListsAgencyPermissionsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -957,6 +1095,22 @@ func (i *PauseCompareJobsInvoker) Invoke() (*model.PauseCompareJobsResponse, err
 	}
 }
 
+type ResetSubscriptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ResetSubscriptionInvoker) Invoke() (*model.ResetSubscriptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetSubscriptionResponse), nil
+	}
+}
+
 type RestartCompareJobsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -970,6 +1124,38 @@ func (i *RestartCompareJobsInvoker) Invoke() (*model.RestartCompareJobsResponse,
 		return nil, err
 	} else {
 		return result.(*model.RestartCompareJobsResponse), nil
+	}
+}
+
+type RetrySubscriptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RetrySubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RetrySubscriptionInvoker) Invoke() (*model.RetrySubscriptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RetrySubscriptionResponse), nil
+	}
+}
+
+type SaveDataFilterRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SaveDataFilterRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SaveDataFilterRulesInvoker) Invoke() (*model.SaveDataFilterRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SaveDataFilterRulesResponse), nil
 	}
 }
 
@@ -993,10 +1179,12 @@ type ShowAgencyInfoInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowAgencyInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowAgencyInfoInvoker) Invoke() (*model.ShowAgencyInfoResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1101,14 +1289,32 @@ func (i *ShowCompareUsersDetailInvoker) Invoke() (*model.ShowCompareUsersDetailR
 	}
 }
 
+type ShowDataFilterRulesResultInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowDataFilterRulesResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowDataFilterRulesResultInvoker) Invoke() (*model.ShowDataFilterRulesResultResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowDataFilterRulesResultResponse), nil
+	}
+}
+
 type ShowDataFilteringResultInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowDataFilteringResultInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *ShowDataFilteringResultInvoker) Invoke() (*model.ShowDataFilteringResultResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1261,6 +1467,22 @@ func (i *ShowExportProgressInvoker) Invoke() (*model.ShowExportProgressResponse,
 	}
 }
 
+type ShowFilesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowFilesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowFilesInvoker) Invoke() (*model.ShowFilesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowFilesResponse), nil
+	}
+}
+
 type ShowHealthCompareJobDetailInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1359,6 +1581,22 @@ func (i *ShowJobDetailInvoker) Invoke() (*model.ShowJobDetailResponse, error) {
 	}
 }
 
+type ShowLinkFlavorsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowLinkFlavorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowLinkFlavorsInvoker) Invoke() (*model.ShowLinkFlavorsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowLinkFlavorsResponse), nil
+	}
+}
+
 type ShowMeteringInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1388,6 +1626,22 @@ func (i *ShowMonitorDataInvoker) Invoke() (*model.ShowMonitorDataResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ShowMonitorDataResponse), nil
+	}
+}
+
+type ShowObjectColumnInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowObjectColumnInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowObjectColumnInfoInvoker) Invoke() (*model.ShowObjectColumnInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowObjectColumnInfoResponse), nil
 	}
 }
 
@@ -1439,6 +1693,22 @@ func (i *ShowProgressDataInvoker) Invoke() (*model.ShowProgressDataResponse, err
 	}
 }
 
+type ShowReplayExecuteRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowReplayExecuteRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowReplayExecuteRecordInvoker) Invoke() (*model.ShowReplayExecuteRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowReplayExecuteRecordResponse), nil
+	}
+}
+
 type ShowReplayProgressInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1452,6 +1722,22 @@ func (i *ShowReplayProgressInvoker) Invoke() (*model.ShowReplayProgressResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowReplayProgressResponse), nil
+	}
+}
+
+type ShowReplayRecordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowReplayRecordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowReplayRecordInvoker) Invoke() (*model.ShowReplayRecordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowReplayRecordResponse), nil
 	}
 }
 
@@ -1500,6 +1786,38 @@ func (i *ShowReplicationJobInvoker) Invoke() (*model.ShowReplicationJobResponse,
 		return nil, err
 	} else {
 		return result.(*model.ShowReplicationJobResponse), nil
+	}
+}
+
+type ShowReportFileObsUrisInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowReportFileObsUrisInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowReportFileObsUrisInvoker) Invoke() (*model.ShowReportFileObsUrisResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowReportFileObsUrisResponse), nil
+	}
+}
+
+type ShowSmnSubscriptionDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSmnSubscriptionDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSmnSubscriptionDetailInvoker) Invoke() (*model.ShowSmnSubscriptionDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSmnSubscriptionDetailResponse), nil
 	}
 }
 
@@ -1567,6 +1885,38 @@ func (i *ShowSupportObjectTypeInvoker) Invoke() (*model.ShowSupportObjectTypeRes
 	}
 }
 
+type ShowSwitchoverInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSwitchoverInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSwitchoverInfoInvoker) Invoke() (*model.ShowSwitchoverInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSwitchoverInfoResponse), nil
+	}
+}
+
+type ShowTaskExecuteProgressInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTaskExecuteProgressInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTaskExecuteProgressInvoker) Invoke() (*model.ShowTaskExecuteProgressResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTaskExecuteProgressResponse), nil
+	}
+}
+
 type ShowTimelineInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1599,6 +1949,22 @@ func (i *ShowUpdateObjectSavingStatusInvoker) Invoke() (*model.ShowUpdateObjectS
 	}
 }
 
+type StartSubscriptionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartSubscriptionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StartSubscriptionInvoker) Invoke() (*model.StartSubscriptionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartSubscriptionResponse), nil
+	}
+}
+
 type StopJobActionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1619,10 +1985,12 @@ type SyncJdbcDriverInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *SyncJdbcDriverInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *SyncJdbcDriverInvoker) Invoke() (*model.SyncJdbcDriverResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1651,10 +2019,12 @@ type UpdateAgencyPolicyInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *UpdateAgencyPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *UpdateAgencyPolicyInvoker) Invoke() (*model.UpdateAgencyPolicyResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
@@ -1811,10 +2181,12 @@ type UploadJdbcDriverInvoker struct {
 	*invoker.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *UploadJdbcDriverInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 func (i *UploadJdbcDriverInvoker) Invoke() (*model.UploadJdbcDriverResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err

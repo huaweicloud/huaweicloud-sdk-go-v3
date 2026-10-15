@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// FailedToBindEipChildInfo 绑定EIP失败的子任务信息
+// FailedToBindEipChildInfo 绑定EIP失败的子任务信息。
 type FailedToBindEipChildInfo struct {
 
-	// 子任务ID
+	// 子任务ID。
 	Id *string `json:"id,omitempty"`
 
-	// 子任务名称
+	// 子任务名称。
 	Name *string `json:"name,omitempty"`
 }
 

@@ -19,6 +19,7 @@ func DrsClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchChangeData 批量数据加工
 //
 // 数据复制服务支持对同步的对象进行加工，即可以为选择的对象添加规则。
@@ -34,12 +35,14 @@ func (c *DrsClient) BatchChangeData(request *model.BatchChangeDataRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchChangeDataInvoker 批量数据加工
 func (c *DrsClient) BatchChangeDataInvoker(request *model.BatchChangeDataRequest) *BatchChangeDataInvoker {
 	requestDef := GenReqDefForBatchChangeData()
 	return &BatchChangeDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchCheckJobs 批量预检查
 //
 // 批量预检查，校验是否可进行迁移。
@@ -55,12 +58,14 @@ func (c *DrsClient) BatchCheckJobs(request *model.BatchCheckJobsRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchCheckJobsInvoker 批量预检查
 func (c *DrsClient) BatchCheckJobsInvoker(request *model.BatchCheckJobsRequest) *BatchCheckJobsInvoker {
 	requestDef := GenReqDefForBatchCheckJobs()
 	return &BatchCheckJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchCheckResults 批量查询预检查结果
 //
 // 批量查询任务的预检查结果。
@@ -76,12 +81,14 @@ func (c *DrsClient) BatchCheckResults(request *model.BatchCheckResultsRequest) (
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchCheckResultsInvoker 批量查询预检查结果
 func (c *DrsClient) BatchCheckResultsInvoker(request *model.BatchCheckResultsRequest) *BatchCheckResultsInvoker {
 	requestDef := GenReqDefForBatchCheckResults()
 	return &BatchCheckResultsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchCreateJobs 批量创建任务
 //
 // 根据请求参数不同，可以批量创建实时迁移、实时同步、实时灾备任务。
@@ -97,12 +104,14 @@ func (c *DrsClient) BatchCreateJobs(request *model.BatchCreateJobsRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchCreateJobsInvoker 批量创建任务
 func (c *DrsClient) BatchCreateJobsInvoker(request *model.BatchCreateJobsRequest) *BatchCreateJobsInvoker {
 	requestDef := GenReqDefForBatchCreateJobs()
 	return &BatchCreateJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchDeleteJobs 批量结束任务或删除任务
 //
 // 批量结束任务或删除实时迁移、实时同步、实时灾备任务。
@@ -118,12 +127,14 @@ func (c *DrsClient) BatchDeleteJobs(request *model.BatchDeleteJobsRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchDeleteJobsInvoker 批量结束任务或删除任务
 func (c *DrsClient) BatchDeleteJobsInvoker(request *model.BatchDeleteJobsRequest) *BatchDeleteJobsInvoker {
 	requestDef := GenReqDefForBatchDeleteJobs()
 	return &BatchDeleteJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchListJobDetails 批量查询任务详情
 //
 // 根据任务ID批量查询任务详情。
@@ -139,12 +150,14 @@ func (c *DrsClient) BatchListJobDetails(request *model.BatchListJobDetailsReques
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchListJobDetailsInvoker 批量查询任务详情
 func (c *DrsClient) BatchListJobDetailsInvoker(request *model.BatchListJobDetailsRequest) *BatchListJobDetailsInvoker {
 	requestDef := GenReqDefForBatchListJobDetails()
 	return &BatchListJobDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchListJobStatus 批量查询任务状态
 //
 // 根据任务ID批量查询任务状态。
@@ -160,6 +173,7 @@ func (c *DrsClient) BatchListJobStatus(request *model.BatchListJobStatusRequest)
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchListJobStatusInvoker 批量查询任务状态
 func (c *DrsClient) BatchListJobStatusInvoker(request *model.BatchListJobStatusRequest) *BatchListJobStatusInvoker {
 	requestDef := GenReqDefForBatchListJobStatus()
@@ -229,6 +243,7 @@ func (c *DrsClient) BatchListStructDetailInvoker(request *model.BatchListStructD
 	return &BatchListStructDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchListStructProcess 批量查询灾备初始化进度
 //
 // 根据任务ID批量查询灾备初始化进度，虚拟id不支持查询。
@@ -244,12 +259,14 @@ func (c *DrsClient) BatchListStructProcess(request *model.BatchListStructProcess
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchListStructProcessInvoker 批量查询灾备初始化进度
 func (c *DrsClient) BatchListStructProcessInvoker(request *model.BatchListStructProcessRequest) *BatchListStructProcessInvoker {
 	requestDef := GenReqDefForBatchListStructProcess()
 	return &BatchListStructProcessInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchResetPassword 批量修改源库/目标库密码
 //
 // 任务启动之后需要修改源库/目标库密码时调用此接口。
@@ -265,12 +282,14 @@ func (c *DrsClient) BatchResetPassword(request *model.BatchResetPasswordRequest)
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchResetPasswordInvoker 批量修改源库/目标库密码
 func (c *DrsClient) BatchResetPasswordInvoker(request *model.BatchResetPasswordRequest) *BatchResetPasswordInvoker {
 	requestDef := GenReqDefForBatchResetPassword()
 	return &BatchResetPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchRestoreTask 批量续传/重试
 //
 // 在迁移过程中由于不确定因素导致迁移任务失败，可通过重试功能，重新提交迁移任务。
@@ -286,12 +305,14 @@ func (c *DrsClient) BatchRestoreTask(request *model.BatchRestoreTaskRequest) (*m
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchRestoreTaskInvoker 批量续传/重试
 func (c *DrsClient) BatchRestoreTaskInvoker(request *model.BatchRestoreTaskRequest) *BatchRestoreTaskInvoker {
 	requestDef := GenReqDefForBatchRestoreTask()
 	return &BatchRestoreTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchSetDefiner 批量设置definer
 //
 // 批量设置Definer迁移是否迁移到到该用户下。
@@ -309,12 +330,14 @@ func (c *DrsClient) BatchSetDefiner(request *model.BatchSetDefinerRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchSetDefinerInvoker 批量设置definer
 func (c *DrsClient) BatchSetDefinerInvoker(request *model.BatchSetDefinerRequest) *BatchSetDefinerInvoker {
 	requestDef := GenReqDefForBatchSetDefiner()
 	return &BatchSetDefinerInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchSetObjects 批量数据库对象选择
 //
 // 迁移之前，选择需要迁移的数据库或者表。
@@ -330,12 +353,14 @@ func (c *DrsClient) BatchSetObjects(request *model.BatchSetObjectsRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchSetObjectsInvoker 批量数据库对象选择
 func (c *DrsClient) BatchSetObjectsInvoker(request *model.BatchSetObjectsRequest) *BatchSetObjectsInvoker {
 	requestDef := GenReqDefForBatchSetObjects()
 	return &BatchSetObjectsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchSetPolicy 批量设置同步策略
 //
 // - 批量设置同步策略，包括冲突策略、过滤DROP Datase、对象同步范围。
@@ -352,12 +377,14 @@ func (c *DrsClient) BatchSetPolicy(request *model.BatchSetPolicyRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchSetPolicyInvoker 批量设置同步策略
 func (c *DrsClient) BatchSetPolicyInvoker(request *model.BatchSetPolicyRequest) *BatchSetPolicyInvoker {
 	requestDef := GenReqDefForBatchSetPolicy()
 	return &BatchSetPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchSetSmn 批量配置异常通知
 //
 // 批量设置异常通知，已结束的任务不支持设置。
@@ -374,12 +401,14 @@ func (c *DrsClient) BatchSetSmn(request *model.BatchSetSmnRequest) (*model.Batch
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchSetSmnInvoker 批量配置异常通知
 func (c *DrsClient) BatchSetSmnInvoker(request *model.BatchSetSmnRequest) *BatchSetSmnInvoker {
 	requestDef := GenReqDefForBatchSetSmn()
 	return &BatchSetSmnInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchSetSpeed 批量设置任务限速
 //
 // 批量设置任务限速，任务创建成功后默认不限速。
@@ -397,12 +426,14 @@ func (c *DrsClient) BatchSetSpeed(request *model.BatchSetSpeedRequest) (*model.B
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchSetSpeedInvoker 批量设置任务限速
 func (c *DrsClient) BatchSetSpeedInvoker(request *model.BatchSetSpeedRequest) *BatchSetSpeedInvoker {
 	requestDef := GenReqDefForBatchSetSpeed()
 	return &BatchSetSpeedInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchShowParams 批量获取数据库参数
 //
 // 在进行数据库迁移时，为了确保迁移成功后业务应用的使用不受影响，数据复制服务提供了参数对比功能帮助您进行源库和目标库参数一致性对比，此接口可以获取源库和目标库的数据库参数。
@@ -418,12 +449,14 @@ func (c *DrsClient) BatchShowParams(request *model.BatchShowParamsRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchShowParamsInvoker 批量获取数据库参数
 func (c *DrsClient) BatchShowParamsInvoker(request *model.BatchShowParamsRequest) *BatchShowParamsInvoker {
 	requestDef := GenReqDefForBatchShowParams()
 	return &BatchShowParamsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchStartJobs 批量启动任务
 //
 // 批量启动实时迁移、同步、灾备任务。
@@ -439,12 +472,14 @@ func (c *DrsClient) BatchStartJobs(request *model.BatchStartJobsRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchStartJobsInvoker 批量启动任务
 func (c *DrsClient) BatchStartJobsInvoker(request *model.BatchStartJobsRequest) *BatchStartJobsInvoker {
 	requestDef := GenReqDefForBatchStartJobs()
 	return &BatchStartJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchStopJobs 批量暂停任务
 //
 // 批量暂停任务。
@@ -460,12 +495,14 @@ func (c *DrsClient) BatchStopJobs(request *model.BatchStopJobsRequest) (*model.B
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchStopJobsInvoker 批量暂停任务
 func (c *DrsClient) BatchStopJobsInvoker(request *model.BatchStopJobsRequest) *BatchStopJobsInvoker {
 	requestDef := GenReqDefForBatchStopJobs()
 	return &BatchStopJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchSwitchover 批量主备倒换
 //
 // 批量主备倒换。
@@ -481,12 +518,14 @@ func (c *DrsClient) BatchSwitchover(request *model.BatchSwitchoverRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchSwitchoverInvoker 批量主备倒换
 func (c *DrsClient) BatchSwitchoverInvoker(request *model.BatchSwitchoverRequest) *BatchSwitchoverInvoker {
 	requestDef := GenReqDefForBatchSwitchover()
 	return &BatchSwitchoverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchUpdateJob 批量修改任务
 //
 // 批量修改任务名称或描述，设置异常通知信息。
@@ -502,12 +541,14 @@ func (c *DrsClient) BatchUpdateJob(request *model.BatchUpdateJobRequest) (*model
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchUpdateJobInvoker 批量修改任务
 func (c *DrsClient) BatchUpdateJobInvoker(request *model.BatchUpdateJobRequest) *BatchUpdateJobInvoker {
 	requestDef := GenReqDefForBatchUpdateJob()
 	return &BatchUpdateJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchUpdateUser 批量更新迁移用户信息
 //
 // 数据库的迁移过程中，迁移用户需要进行单独处理，该接口可以批量设置需要迁移的用户和角色。
@@ -523,12 +564,14 @@ func (c *DrsClient) BatchUpdateUser(request *model.BatchUpdateUserRequest) (*mod
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchUpdateUserInvoker 批量更新迁移用户信息
 func (c *DrsClient) BatchUpdateUserInvoker(request *model.BatchUpdateUserRequest) *BatchUpdateUserInvoker {
 	requestDef := GenReqDefForBatchUpdateUser()
 	return &BatchUpdateUserInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchValidateClustersConnections 批量测试连接-集群模式
 //
 // - 批量测试连接（集群模式）。
@@ -545,12 +588,14 @@ func (c *DrsClient) BatchValidateClustersConnections(request *model.BatchValidat
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchValidateClustersConnectionsInvoker 批量测试连接-集群模式
 func (c *DrsClient) BatchValidateClustersConnectionsInvoker(request *model.BatchValidateClustersConnectionsRequest) *BatchValidateClustersConnectionsInvoker {
 	requestDef := GenReqDefForBatchValidateClustersConnections()
 	return &BatchValidateClustersConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchValidateConnections 批量测试连接
 //
 // 批量测试连接。
@@ -566,12 +611,14 @@ func (c *DrsClient) BatchValidateConnections(request *model.BatchValidateConnect
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // BatchValidateConnectionsInvoker 批量测试连接
 func (c *DrsClient) BatchValidateConnectionsInvoker(request *model.BatchValidateConnectionsRequest) *BatchValidateConnectionsInvoker {
 	requestDef := GenReqDefForBatchValidateConnections()
 	return &BatchValidateConnectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateCompareResultFile 导出对比任务结果文件
 //
 // 导出对比任务结果文件。
@@ -587,12 +634,14 @@ func (c *DrsClient) CreateCompareResultFile(request *model.CreateCompareResultFi
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateCompareResultFileInvoker 导出对比任务结果文件
 func (c *DrsClient) CreateCompareResultFileInvoker(request *model.CreateCompareResultFileRequest) *CreateCompareResultFileInvoker {
 	requestDef := GenReqDefForCreateCompareResultFile()
 	return &CreateCompareResultFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateCompareTask 创建对比任务
 //
 // 创建对比任务。
@@ -608,12 +657,14 @@ func (c *DrsClient) CreateCompareTask(request *model.CreateCompareTaskRequest) (
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateCompareTaskInvoker 创建对比任务
 func (c *DrsClient) CreateCompareTaskInvoker(request *model.CreateCompareTaskRequest) *CreateCompareTaskInvoker {
 	requestDef := GenReqDefForCreateCompareTask()
 	return &CreateCompareTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateDataLevelTableCompareJob 创建数据级表对比任务
 //
 // 创建数据级表对比任务。
@@ -629,12 +680,14 @@ func (c *DrsClient) CreateDataLevelTableCompareJob(request *model.CreateDataLeve
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateDataLevelTableCompareJobInvoker 创建数据级表对比任务
 func (c *DrsClient) CreateDataLevelTableCompareJobInvoker(request *model.CreateDataLevelTableCompareJobRequest) *CreateDataLevelTableCompareJobInvoker {
 	requestDef := GenReqDefForCreateDataLevelTableCompareJob()
 	return &CreateDataLevelTableCompareJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateObjectLevelCompareJob 创建对象级对比任务
 //
 // 创建对象级对比任务。
@@ -650,12 +703,14 @@ func (c *DrsClient) CreateObjectLevelCompareJob(request *model.CreateObjectLevel
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateObjectLevelCompareJobInvoker 创建对象级对比任务
 func (c *DrsClient) CreateObjectLevelCompareJobInvoker(request *model.CreateObjectLevelCompareJobRequest) *CreateObjectLevelCompareJobInvoker {
 	requestDef := GenReqDefForCreateObjectLevelCompareJob()
 	return &CreateObjectLevelCompareJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteCompareJob 取消对比任务
 //
 // 取消对比任务。
@@ -671,12 +726,14 @@ func (c *DrsClient) DeleteCompareJob(request *model.DeleteCompareJobRequest) (*m
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DeleteCompareJobInvoker 取消对比任务
 func (c *DrsClient) DeleteCompareJobInvoker(request *model.DeleteCompareJobRequest) *DeleteCompareJobInvoker {
 	requestDef := GenReqDefForDeleteCompareJob()
 	return &DeleteCompareJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DownloadCompareResultFile 下载对比任务结果文件
 //
 // 下载对比任务结果文件。
@@ -692,12 +749,14 @@ func (c *DrsClient) DownloadCompareResultFile(request *model.DownloadCompareResu
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // DownloadCompareResultFileInvoker 下载对比任务结果文件
 func (c *DrsClient) DownloadCompareResultFileInvoker(request *model.DownloadCompareResultFileRequest) *DownloadCompareResultFileInvoker {
 	requestDef := GenReqDefForDownloadCompareResultFile()
 	return &DownloadCompareResultFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListAvailableNodeTypes 查询可用的Node规格
 //
 // 查询可用的Node规格。
@@ -713,6 +772,7 @@ func (c *DrsClient) ListAvailableNodeTypes(request *model.ListAvailableNodeTypes
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListAvailableNodeTypesInvoker 查询可用的Node规格
 func (c *DrsClient) ListAvailableNodeTypesInvoker(request *model.ListAvailableNodeTypesRequest) *ListAvailableNodeTypesInvoker {
 	requestDef := GenReqDefForListAvailableNodeTypes()
@@ -740,6 +800,7 @@ func (c *DrsClient) ListAvailableZoneInvoker(request *model.ListAvailableZoneReq
 	return &ListAvailableZoneInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListCompareResult 查询对比结果
 //
 // 查询对比结果。
@@ -755,12 +816,14 @@ func (c *DrsClient) ListCompareResult(request *model.ListCompareResultRequest) (
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListCompareResultInvoker 查询对比结果
 func (c *DrsClient) ListCompareResultInvoker(request *model.ListCompareResultRequest) *ListCompareResultInvoker {
 	requestDef := GenReqDefForListCompareResult()
 	return &ListCompareResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListContentCompareDetail 查询内容对比详情
 //
 // 查询内容对比详情
@@ -776,12 +839,14 @@ func (c *DrsClient) ListContentCompareDetail(request *model.ListContentCompareDe
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListContentCompareDetailInvoker 查询内容对比详情
 func (c *DrsClient) ListContentCompareDetailInvoker(request *model.ListContentCompareDetailRequest) *ListContentCompareDetailInvoker {
 	requestDef := GenReqDefForListContentCompareDetail()
 	return &ListContentCompareDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListContentCompareDifference 查询内容对比差异
 //
 // 查询内容对比差异。
@@ -797,12 +862,14 @@ func (c *DrsClient) ListContentCompareDifference(request *model.ListContentCompa
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListContentCompareDifferenceInvoker 查询内容对比差异
 func (c *DrsClient) ListContentCompareDifferenceInvoker(request *model.ListContentCompareDifferenceRequest) *ListContentCompareDifferenceInvoker {
 	requestDef := GenReqDefForListContentCompareDifference()
 	return &ListContentCompareDifferenceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListContentCompareOverview 查询内容对比总览
 //
 // 查询内容对比总览。
@@ -818,12 +885,14 @@ func (c *DrsClient) ListContentCompareOverview(request *model.ListContentCompare
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListContentCompareOverviewInvoker 查询内容对比总览
 func (c *DrsClient) ListContentCompareOverviewInvoker(request *model.ListContentCompareOverviewRequest) *ListContentCompareOverviewInvoker {
 	requestDef := GenReqDefForListContentCompareOverview()
 	return &ListContentCompareOverviewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListDataCompareDetail 查询行数对比详情
 //
 // 查询行数对比详情。
@@ -839,12 +908,14 @@ func (c *DrsClient) ListDataCompareDetail(request *model.ListDataCompareDetailRe
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListDataCompareDetailInvoker 查询行数对比详情
 func (c *DrsClient) ListDataCompareDetailInvoker(request *model.ListDataCompareDetailRequest) *ListDataCompareDetailInvoker {
 	requestDef := GenReqDefForListDataCompareDetail()
 	return &ListDataCompareDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListDataCompareOverview 查询行数对比总览
 //
 // 查询行数对比总览。
@@ -860,12 +931,14 @@ func (c *DrsClient) ListDataCompareOverview(request *model.ListDataCompareOvervi
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListDataCompareOverviewInvoker 查询行数对比总览
 func (c *DrsClient) ListDataCompareOverviewInvoker(request *model.ListDataCompareOverviewRequest) *ListDataCompareOverviewInvoker {
 	requestDef := GenReqDefForListDataCompareOverview()
 	return &ListDataCompareOverviewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListDataLevelTableCompareJobs 查询数据级表对比任务列表
 //
 // 查询数据级表对比任务列表。
@@ -881,12 +954,14 @@ func (c *DrsClient) ListDataLevelTableCompareJobs(request *model.ListDataLevelTa
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListDataLevelTableCompareJobsInvoker 查询数据级表对比任务列表
 func (c *DrsClient) ListDataLevelTableCompareJobsInvoker(request *model.ListDataLevelTableCompareJobsRequest) *ListDataLevelTableCompareJobsInvoker {
 	requestDef := GenReqDefForListDataLevelTableCompareJobs()
 	return &ListDataLevelTableCompareJobsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListObejectLevelCompareDetail 查询对象对比任务详情
 //
 // 查询对象对比任务详情。
@@ -902,12 +977,14 @@ func (c *DrsClient) ListObejectLevelCompareDetail(request *model.ListObejectLeve
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListObejectLevelCompareDetailInvoker 查询对象对比任务详情
 func (c *DrsClient) ListObejectLevelCompareDetailInvoker(request *model.ListObejectLevelCompareDetailRequest) *ListObejectLevelCompareDetailInvoker {
 	requestDef := GenReqDefForListObejectLevelCompareDetail()
 	return &ListObejectLevelCompareDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListObejectLevelCompareOverview 查询对象对比任务概览
 //
 // 查询对象对比任务概览。
@@ -923,12 +1000,14 @@ func (c *DrsClient) ListObejectLevelCompareOverview(request *model.ListObejectLe
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListObejectLevelCompareOverviewInvoker 查询对象对比任务概览
 func (c *DrsClient) ListObejectLevelCompareOverviewInvoker(request *model.ListObejectLevelCompareOverviewRequest) *ListObejectLevelCompareOverviewInvoker {
 	requestDef := GenReqDefForListObejectLevelCompareOverview()
 	return &ListObejectLevelCompareOverviewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListUsers 获取源库迁移用户列表
 //
 // 数据库的迁移过程中，迁移用户需要进行单独处理，该接口可以查询源库的用户信息。
@@ -944,12 +1023,14 @@ func (c *DrsClient) ListUsers(request *model.ListUsersRequest) (*model.ListUsers
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListUsersInvoker 获取源库迁移用户列表
 func (c *DrsClient) ListUsersInvoker(request *model.ListUsersRequest) *ListUsersInvoker {
 	requestDef := GenReqDefForListUsers()
 	return &ListUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ModifyGroupAndStream 更新LTS配置
 //
 // 更新任务的LTS配置。
@@ -965,12 +1046,14 @@ func (c *DrsClient) ModifyGroupAndStream(request *model.ModifyGroupAndStreamRequ
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ModifyGroupAndStreamInvoker 更新LTS配置
 func (c *DrsClient) ModifyGroupAndStreamInvoker(request *model.ModifyGroupAndStreamRequest) *ModifyGroupAndStreamInvoker {
 	requestDef := GenReqDefForModifyGroupAndStream()
 	return &ModifyGroupAndStreamInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // QueryTuningParams 查询高级设置参数
 //
 // 查询高级设置参数。
@@ -986,12 +1069,14 @@ func (c *DrsClient) QueryTuningParams(request *model.QueryTuningParamsRequest) (
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // QueryTuningParamsInvoker 查询高级设置参数
 func (c *DrsClient) QueryTuningParamsInvoker(request *model.QueryTuningParamsRequest) *QueryTuningParamsInvoker {
 	requestDef := GenReqDefForQueryTuningParams()
 	return &QueryTuningParamsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // SelectGroupAndStream 查询LTS配置
 //
 // 查询任务的LTS配置。
@@ -1007,12 +1092,14 @@ func (c *DrsClient) SelectGroupAndStream(request *model.SelectGroupAndStreamRequ
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // SelectGroupAndStreamInvoker 查询LTS配置
 func (c *DrsClient) SelectGroupAndStreamInvoker(request *model.SelectGroupAndStreamRequest) *SelectGroupAndStreamInvoker {
 	requestDef := GenReqDefForSelectGroupAndStream()
 	return &SelectGroupAndStreamInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowJobList 查询租户任务列表
 //
 // 查询租户任务列表，可以根据引擎类型，网络类型，任务状态，任务名称，任务ID进行查询。
@@ -1028,12 +1115,14 @@ func (c *DrsClient) ShowJobList(request *model.ShowJobListRequest) (*model.ShowJ
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowJobListInvoker 查询租户任务列表
 func (c *DrsClient) ShowJobListInvoker(request *model.ShowJobListRequest) *ShowJobListInvoker {
 	requestDef := GenReqDefForShowJobList()
 	return &ShowJobListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowMonitoringData 查询容灾监控数据
 //
 // 根据任务ID查询容灾监控数据。
@@ -1049,6 +1138,7 @@ func (c *DrsClient) ShowMonitoringData(request *model.ShowMonitoringDataRequest)
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowMonitoringDataInvoker 查询容灾监控数据
 func (c *DrsClient) ShowMonitoringDataInvoker(request *model.ShowMonitoringDataRequest) *ShowMonitoringDataInvoker {
 	requestDef := GenReqDefForShowMonitoringData()
@@ -1076,6 +1166,7 @@ func (c *DrsClient) ShowQuotasInvoker(request *model.ShowQuotasRequest) *ShowQuo
 	return &ShowQuotasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // StartPromptlyDataLevelTableCompareJob 立即启动数据级表对比任务
 //
 // 立即启动数据级表对比任务。
@@ -1091,12 +1182,14 @@ func (c *DrsClient) StartPromptlyDataLevelTableCompareJob(request *model.StartPr
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // StartPromptlyDataLevelTableCompareJobInvoker 立即启动数据级表对比任务
 func (c *DrsClient) StartPromptlyDataLevelTableCompareJobInvoker(request *model.StartPromptlyDataLevelTableCompareJobRequest) *StartPromptlyDataLevelTableCompareJobInvoker {
 	requestDef := GenReqDefForStartPromptlyDataLevelTableCompareJob()
 	return &StartPromptlyDataLevelTableCompareJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateParams 修改数据库参数
 //
 // 修改数据库参数。
@@ -1112,12 +1205,14 @@ func (c *DrsClient) UpdateParams(request *model.UpdateParamsRequest) (*model.Upd
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateParamsInvoker 修改数据库参数
 func (c *DrsClient) UpdateParamsInvoker(request *model.UpdateParamsRequest) *UpdateParamsInvoker {
 	requestDef := GenReqDefForUpdateParams()
 	return &UpdateParamsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateTuningParams 高级设置
 //
 // 修改调优参数的值。
@@ -1133,6 +1228,7 @@ func (c *DrsClient) UpdateTuningParams(request *model.UpdateTuningParamsRequest)
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateTuningParamsInvoker 高级设置
 func (c *DrsClient) UpdateTuningParamsInvoker(request *model.UpdateTuningParamsRequest) *UpdateTuningParamsInvoker {
 	requestDef := GenReqDefForUpdateTuningParams()

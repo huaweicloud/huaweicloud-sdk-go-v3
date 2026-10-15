@@ -12,7 +12,7 @@ import (
 // DeleteScalingTagInfoRequest Request Object
 type DeleteScalingTagInfoRequest struct {
 
-	// 资源类型，枚举类：scaling_group_tag。scaling_group_tag表示资源类型为伸缩组。
+	// 资源类型，枚举类：scaling_group_tag、scaling_configuration_tag。scaling_group_tag表示资源类型为伸缩组，scaling_configuration_tag表示资源类型为伸缩配置。
 	ResourceType DeleteScalingTagInfoRequestResourceType `json:"resource_type"`
 
 	// 资源ID。
@@ -35,13 +35,17 @@ type DeleteScalingTagInfoRequestResourceType struct {
 }
 
 type DeleteScalingTagInfoRequestResourceTypeEnum struct {
-	SCALING_GROUP_TAG DeleteScalingTagInfoRequestResourceType
+	SCALING_GROUP_TAG         DeleteScalingTagInfoRequestResourceType
+	SCALING_CONFIGURATION_TAG DeleteScalingTagInfoRequestResourceType
 }
 
 func GetDeleteScalingTagInfoRequestResourceTypeEnum() DeleteScalingTagInfoRequestResourceTypeEnum {
 	return DeleteScalingTagInfoRequestResourceTypeEnum{
 		SCALING_GROUP_TAG: DeleteScalingTagInfoRequestResourceType{
 			value: "scaling_group_tag",
+		},
+		SCALING_CONFIGURATION_TAG: DeleteScalingTagInfoRequestResourceType{
+			value: "scaling_configuration_tag",
 		},
 	}
 }

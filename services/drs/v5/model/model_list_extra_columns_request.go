@@ -26,6 +26,9 @@ type ListExtraColumnsRequest struct {
 
 	// 查询返回记录的数量限制，默认为10。
 	Limit *int32 `json:"limit,omitempty"`
+
+	// 是否查询所有数据，值为\"true\"时会使得offset和limit参数失效并返回所有记录，默认值为\"false\"。
+	FetchAll *bool `json:"fetch_all,omitempty"`
 }
 
 func (o ListExtraColumnsRequest) String() string {

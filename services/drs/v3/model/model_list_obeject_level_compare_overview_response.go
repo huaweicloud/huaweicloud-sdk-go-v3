@@ -31,8 +31,11 @@ type ListObejectLevelCompareOverviewResponse struct {
 	ErrorMsg *string `json:"error_msg,omitempty"`
 
 	// 对比结果。
-	CompareResult  *[]ObjectsCompareOverviewInfo `json:"compare_result,omitempty"`
-	HttpStatusCode int                           `json:"-"`
+	CompareResult *[]ObjectsCompareOverviewInfo `json:"compare_result,omitempty"`
+
+	// 灾备数据库信息。
+	DatabaseInfo   *interface{} `json:"database_info,omitempty"`
+	HttpStatusCode int          `json:"-"`
 }
 
 func (o ListObejectLevelCompareOverviewResponse) String() string {

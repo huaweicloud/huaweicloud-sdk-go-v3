@@ -56,6 +56,12 @@ type InstanceConfig struct {
 	MarketType *InstanceConfigMarketType `json:"market_type,omitempty"`
 
 	CpuOptions *CpuOptions `json:"cpu_options,omitempty"`
+
+	// 伸缩配置标签列表。每个伸缩配置最多添加20个标签。
+	Tags *[]TagsSingleValue `json:"tags,omitempty"`
+
+	// 标签传递策略，OVERRIDE表示扩容时使用伸缩配置标签，SUPPRESS表示扩容时使用伸缩组标签，默认SUPPRESS
+	TagTransmissionPolicy *string `json:"tag_transmission_policy,omitempty"`
 }
 
 func (o InstanceConfig) String() string {

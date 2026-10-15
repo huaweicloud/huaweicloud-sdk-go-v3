@@ -12,13 +12,13 @@ import (
 // ListInstanceTagsRequest Request Object
 type ListInstanceTagsRequest struct {
 
-	// 资源类型。 - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备 - subscription：数据订阅 - backupMigration：备份迁移 - replay：录制回放
+	// **参数解释**：  DRS资源类型，用于指定需要操作标签的资源所属的业务类型。不同资源类型对应不同的DRS任务类型，查询标签时需根据实际任务类型传入对应值。  **约束限制**：  不涉及。  **取值范围**：  - migration：实时迁移 - sync：实时同步 - cloudDataGuard：实时灾备 - subscription：数据订阅 - backupMigration：备份迁移 - replay：录制回放 - verify：校验任务  **默认取值**：  不涉及
 	ResourceType ListInstanceTagsRequestResourceType `json:"resource_type"`
 
-	// 请求语言类型。
+	// **参数解释**：  请求语言类型。  **约束限制**：  不涉及。  **取值范围**：  - en-us：英文 - zh-cn：中文  **默认取值**：  en-us
 	XLanguage *ListInstanceTagsRequestXLanguage `json:"X-Language,omitempty"`
 
-	// 资源ID，即DRS任务ID。
+	// **参数解释**：  资源ID，即DRS任务ID。用于唯一标识一个DRS任务资源，在标签管理接口中用于定位需要查询标签的具体任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	ResourceId string `json:"resource_id"`
 }
 
@@ -42,6 +42,7 @@ type ListInstanceTagsRequestResourceTypeEnum struct {
 	SUBSCRIPTION     ListInstanceTagsRequestResourceType
 	BACKUP_MIGRATION ListInstanceTagsRequestResourceType
 	REPLAY           ListInstanceTagsRequestResourceType
+	VERIFY           ListInstanceTagsRequestResourceType
 }
 
 func GetListInstanceTagsRequestResourceTypeEnum() ListInstanceTagsRequestResourceTypeEnum {
@@ -63,6 +64,9 @@ func GetListInstanceTagsRequestResourceTypeEnum() ListInstanceTagsRequestResourc
 		},
 		REPLAY: ListInstanceTagsRequestResourceType{
 			value: "replay",
+		},
+		VERIFY: ListInstanceTagsRequestResourceType{
+			value: "verify",
 		},
 	}
 }

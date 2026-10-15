@@ -17,6 +17,9 @@ type ListUsersV5Request struct {
 
 	// 用户组ID，长度为1到64个字符，只包含字母、数字和\"-\"的字符串。
 	GroupId *string `json:"group_id,omitempty"`
+
+	// 永久访问密钥ID，即AK。
+	AccessKeyId *string `json:"access_key_id,omitempty"`
 }
 
 func (o ListUsersV5Request) String() string {

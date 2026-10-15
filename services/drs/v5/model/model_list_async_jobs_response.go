@@ -9,10 +9,10 @@ import (
 // ListAsyncJobsResponse Response Object
 type ListAsyncJobsResponse struct {
 
-	// 列表中的项目总数，与分页无关。
+	// **参数解释**：  列表中的项目总数，与分页无关。表示满足查询条件的记录总数量，用于分页计算。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	TotalCount int32 `json:"total_count"`
 
-	// 所有批量异步创建任务响应体。
+	// **参数解释**：  批量异步创建任务响应列表，包含满足查询条件的所有异步任务信息。详情请参见AsyncJobResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	Jobs           []AsyncJobResp `json:"jobs"`
 	HttpStatusCode int            `json:"-"`
 }

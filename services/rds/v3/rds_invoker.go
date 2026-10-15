@@ -3061,6 +3061,22 @@ func (i *ShowUpgradeDbMajorVersionStatusInvoker) Invoke() (*model.ShowUpgradeDbM
 	}
 }
 
+type ShowVectorStorageConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowVectorStorageConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowVectorStorageConfigInvoker) Invoke() (*model.ShowVectorStorageConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowVectorStorageConfigResponse), nil
+	}
+}
+
 type StartFailoverInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3538,6 +3554,22 @@ func (i *UpdateToPeriodInvoker) Invoke() (*model.UpdateToPeriodResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdateToPeriodResponse), nil
+	}
+}
+
+type UpdateVectorStorageConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateVectorStorageConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateVectorStorageConfigInvoker) Invoke() (*model.UpdateVectorStorageConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateVectorStorageConfigResponse), nil
 	}
 }
 

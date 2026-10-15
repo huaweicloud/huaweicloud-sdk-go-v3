@@ -18,7 +18,7 @@ type ShowDbObjectTemplateResultRequest struct {
 	// 请求语言类型。
 	XLanguage *ShowDbObjectTemplateResultRequestXLanguage `json:"X-Language,omitempty"`
 
-	// 导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。 - change: 获取新增和删除的对象结果（当再编辑时使用）
+	// 导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。 - change: 获取新增和删除的对象结果（当再编辑时使用） - compare: 获取已导入的对比键文件结果。 - compare_key_detail: 获取已导入的对比键校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。
 	Type ShowDbObjectTemplateResultRequestType `json:"type"`
 
 	// 默认为空。当进行列加工导入时，查询列加工导入进度，取值column。
@@ -86,9 +86,11 @@ type ShowDbObjectTemplateResultRequestType struct {
 }
 
 type ShowDbObjectTemplateResultRequestTypeEnum struct {
-	DETAIL       ShowDbObjectTemplateResultRequestType
-	SYNCHRONIZED ShowDbObjectTemplateResultRequestType
-	CHANGE       ShowDbObjectTemplateResultRequestType
+	DETAIL             ShowDbObjectTemplateResultRequestType
+	SYNCHRONIZED       ShowDbObjectTemplateResultRequestType
+	CHANGE             ShowDbObjectTemplateResultRequestType
+	COMPARE            ShowDbObjectTemplateResultRequestType
+	COMPARE_KEY_DETAIL ShowDbObjectTemplateResultRequestType
 }
 
 func GetShowDbObjectTemplateResultRequestTypeEnum() ShowDbObjectTemplateResultRequestTypeEnum {
@@ -101,6 +103,12 @@ func GetShowDbObjectTemplateResultRequestTypeEnum() ShowDbObjectTemplateResultRe
 		},
 		CHANGE: ShowDbObjectTemplateResultRequestType{
 			value: "change",
+		},
+		COMPARE: ShowDbObjectTemplateResultRequestType{
+			value: "compare",
+		},
+		COMPARE_KEY_DETAIL: ShowDbObjectTemplateResultRequestType{
+			value: "compare_key_detail",
 		},
 	}
 }

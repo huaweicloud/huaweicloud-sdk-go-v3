@@ -1001,6 +1001,27 @@ func (c *IamClient) SetDefaultPolicyVersionV5Invoker(request *model.SetDefaultPo
 	return &SetDefaultPolicyVersionV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdatePolicyV5 修改自定义身份策略描述
+//
+// 该接口可以用于修改自定义身份策略的描述字段。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *IamClient) UpdatePolicyV5(request *model.UpdatePolicyV5Request) (*model.UpdatePolicyV5Response, error) {
+	requestDef := GenReqDefForUpdatePolicyV5()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdatePolicyV5Response), nil
+	}
+}
+
+// UpdatePolicyV5Invoker 修改自定义身份策略描述
+func (c *IamClient) UpdatePolicyV5Invoker(request *model.UpdatePolicyV5Request) *UpdatePolicyV5Invoker {
+	requestDef := GenReqDefForUpdatePolicyV5()
+	return &UpdatePolicyV5Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AttachAgencyPolicyV5 为委托或信任委托附加身份策略
 //
 // 该接口可以用于为指定委托或信任委托附加指定身份策略。

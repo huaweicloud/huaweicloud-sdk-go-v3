@@ -21,8 +21,17 @@ type ListChatRequest struct {
 	// **参数解释**： 对话名称，支持模糊搜索。 **约束限制**： 不涉及 **取值范围**： 取值范围为[1-500]个字符。 **默认取值**： 不涉及
 	Title *string `json:"title,omitempty"`
 
-	// **参数解释**： 对话名称，支持模糊搜索。 **约束限制**： 不涉及 **取值范围**： * optverse：天筹工具链 * predict：预测工具链 * vrp：路径规划工具链 * demand：需求助手 **默认取值**： 不涉及
+	// **参数解释**： 对话名称，支持模糊搜索。 **约束限制**： 不涉及 **取值范围**： * optverse：天筹工具链 * predict：预测工具链 * demand：需求助手 **默认取值**： 不涉及
 	AgentType *string `json:"agent_type,omitempty"`
+
+	// **参数解释**： 领域类型，仅agent_type为optverse时生效。 **约束限制**： 不涉及 **取值范围**： * production-planning：生产计划 * sequence-planning：生产排程 * vrp：运输计划 * optverse：通用数学规划 **默认取值**： optverse
+	DomainType *string `json:"domain_type,omitempty"`
+
+	// **参数解释**： 筛选起始时间，按对话创建时间（create_time）过滤，包含边界。 **约束限制**： 不涉及 **取值范围**： Unix时间戳（秒级），例如：1789991522。 **默认取值**： 不涉及
+	StartTime *string `json:"start_time,omitempty"`
+
+	// **参数解释**： 筛选结束时间，按对话创建时间（create_time）过滤，包含边界。 **约束限制**： 不涉及 **取值范围**： Unix时间戳（秒级），例如：1789991522。 **默认取值**： 不涉及
+	EndTime *string `json:"end_time,omitempty"`
 }
 
 func (o ListChatRequest) String() string {

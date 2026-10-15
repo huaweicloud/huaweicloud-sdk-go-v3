@@ -29,7 +29,7 @@ type Policy struct {
 	// 附加了本身份策略的实体数量。
 	AttachmentCount int32 `json:"attachment_count"`
 
-	// 身份策略描述。
+	// **参数解释**： 身份策略描述信息。  **约束限制**： 不涉及。  **取值范围**： 长度范围为[0,1000]。  **默认取值**： 不涉及。
 	Description *string `json:"description,omitempty"`
 
 	// 身份策略创建时间。

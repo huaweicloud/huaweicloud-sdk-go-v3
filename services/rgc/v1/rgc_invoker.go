@@ -373,6 +373,22 @@ func (i *DeleteLandingZoneInvoker) Invoke() (*model.DeleteLandingZoneResponse, e
 	}
 }
 
+type ListLandingZoneVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListLandingZoneVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListLandingZoneVersionInvoker) Invoke() (*model.ListLandingZoneVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListLandingZoneVersionResponse), nil
+	}
+}
+
 type SetupLandingZoneInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// JobDetailRespRepairProgressInfo 修复进度明细。
+// JobDetailRespRepairProgressInfo **参数解释**：  修复进度明细。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
 type JobDetailRespRepairProgressInfo struct {
 
 	// 修复状态。 取值：\"FAILED\", \"SUCCEEDED\", \"FINISHED\", \"SUCCESS\"

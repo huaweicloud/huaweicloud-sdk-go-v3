@@ -29,6 +29,9 @@ type CountAllResourcesRequest struct {
 
 	// 标签列表
 	Tags *[]string `json:"tags,omitempty"`
+
+	// 资源组ID
+	GroupId *string `json:"group_id,omitempty"`
 }
 
 func (o CountAllResourcesRequest) String() string {

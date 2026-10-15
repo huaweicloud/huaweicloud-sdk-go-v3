@@ -49,6 +49,12 @@ type PublishApp struct {
 	SandboxEnable *bool `json:"sandbox_enable,omitempty"`
 
 	AppExtendedInfo *AppExtendedInfo `json:"app_extended_info,omitempty"`
+
+	// 是否开启会话预开。
+	IsPreBoot *bool `json:"is_pre_boot,omitempty"`
+
+	// 预开状态：0：非预开，1：会话预开，3：应用预开。
+	PreLaunchPolicy *int32 `json:"pre_launch_policy,omitempty"`
 }
 
 func (o PublishApp) String() string {

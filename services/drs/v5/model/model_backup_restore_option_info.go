@@ -35,6 +35,9 @@ type BackupRestoreOptionInfo struct {
 
 	// 该参数控制使用OBS桶中备份文件恢复时，当任务结束时是否删除下载到RDS for SQL server磁盘中的OBS备份文件，默认删除。 - true 删除 - false 不删除
 	IsDeleteBackupFile *bool `json:"is_delete_backup_file,omitempty"`
+
+	// DBCC一致性校验模式。 - sync 同步 - async 异步
+	ConsistencyCheckMode *BackupRestoreOptionInfoConsistencyCheckMode `json:"consistency_check_mode,omitempty"`
 }
 
 func (o BackupRestoreOptionInfo) String() string {
@@ -75,6 +78,53 @@ func (c BackupRestoreOptionInfoRecoveryMode) MarshalJSON() ([]byte, error) {
 }
 
 func (c *BackupRestoreOptionInfoRecoveryMode) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type BackupRestoreOptionInfoConsistencyCheckMode struct {
+	value string
+}
+
+type BackupRestoreOptionInfoConsistencyCheckModeEnum struct {
+	SYNC  BackupRestoreOptionInfoConsistencyCheckMode
+	ASYNC BackupRestoreOptionInfoConsistencyCheckMode
+}
+
+func GetBackupRestoreOptionInfoConsistencyCheckModeEnum() BackupRestoreOptionInfoConsistencyCheckModeEnum {
+	return BackupRestoreOptionInfoConsistencyCheckModeEnum{
+		SYNC: BackupRestoreOptionInfoConsistencyCheckMode{
+			value: "sync",
+		},
+		ASYNC: BackupRestoreOptionInfoConsistencyCheckMode{
+			value: "async",
+		},
+	}
+}
+
+func (c BackupRestoreOptionInfoConsistencyCheckMode) Value() string {
+	return c.value
+}
+
+func (c BackupRestoreOptionInfoConsistencyCheckMode) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *BackupRestoreOptionInfoConsistencyCheckMode) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

@@ -420,7 +420,7 @@ func (c *AsClient) CreateScalingPolicyInvoker(request *model.CreateScalingPolicy
 
 // CreateScalingTagInfo 创建标签
 //
-// 创建或删除指定资源的标签。每个伸缩组最多添加10个标签。
+// 创建或删除指定资源的标签。每个伸缩组或伸缩配置最多添加10个标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AsClient) CreateScalingTagInfo(request *model.CreateScalingTagInfoRequest) (*model.CreateScalingTagInfoResponse, error) {
@@ -588,7 +588,7 @@ func (c *AsClient) DeleteScalingPolicyInvoker(request *model.DeleteScalingPolicy
 
 // DeleteScalingTagInfo 删除标签
 //
-// 创建或删除指定资源的标签。每个伸缩组最多添加10个标签。
+// 创建或删除指定资源的标签。每个伸缩组或伸缩配置最多添加10个标签。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *AsClient) DeleteScalingTagInfo(request *model.DeleteScalingTagInfoRequest) (*model.DeleteScalingTagInfoResponse, error) {

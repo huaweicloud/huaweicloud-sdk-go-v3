@@ -12,13 +12,13 @@ import (
 // PublicIpConfig 租户公网IP信息
 type PublicIpConfig struct {
 
-	// 指定公网IP的ID
+	// **参数解释**：  指定公网IP的ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	Id string `json:"id"`
 
-	// 指定公网IP
+	// **参数解释**：  指定公网IP地址。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
 	PublicIp string `json:"public_ip"`
 
-	// 指定公网IP绑定任务的类型： - 主备任务：主是master，备是slave - 其他固定传master
+	// **参数解释**：  指定公网IP绑定任务的类型。  **约束限制**：  不涉及。  **取值范围**：  - master：主任务或单任务的公网IP - slave：备任务的公网IP  **默认取值**：  不涉及
 	Type PublicIpConfigType `json:"type"`
 }
 

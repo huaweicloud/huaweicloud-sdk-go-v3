@@ -23,6 +23,9 @@ type UploadFileRequestBody struct {
 
 	// **参数解释**： 对话ID。 **约束限制**： 不涉及 **取值范围**： 仅支持字母、数字、中划线和下划线，长度为[1-128]个字符。 **默认取值**： 不涉及
 	AgentType *def.MultiPart `json:"agent_type"`
+
+	// **参数解释**： 领域类型，仅agent_type为optverse时生效。 **约束限制**： 不涉及 **取值范围**： * production-planning：生产计划 * sequence-planning：生产排程 * vrp：运输计划 * optverse：通用数学规划 **默认取值**： optverse
+	DomainType *def.MultiPart `json:"domain_type,omitempty"`
 }
 
 func (o UploadFileRequestBody) String() string {

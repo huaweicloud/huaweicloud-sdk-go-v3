@@ -741,6 +741,22 @@ func (i *SetDefaultPolicyVersionV5Invoker) Invoke() (*model.SetDefaultPolicyVers
 	}
 }
 
+type UpdatePolicyV5Invoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdatePolicyV5Invoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdatePolicyV5Invoker) Invoke() (*model.UpdatePolicyV5Response, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdatePolicyV5Response), nil
+	}
+}
+
 type AttachAgencyPolicyV5Invoker struct {
 	*invoker.BaseInvoker
 }

@@ -12,7 +12,7 @@ import (
 // ListScalingTagInfosByResourceIdRequest Request Object
 type ListScalingTagInfosByResourceIdRequest struct {
 
-	// 资源类型，枚举类：scaling_group_tag。scaling_group_tag表示资源类型为伸缩组。
+	// 资源类型，枚举类：scaling_group_tag、scaling_configuration_tag。scaling_group_tag表示资源类型为伸缩组，scaling_configuration_tag表示资源类型为伸缩配置。
 	ResourceType ListScalingTagInfosByResourceIdRequestResourceType `json:"resource_type"`
 
 	// 资源ID。
@@ -33,13 +33,17 @@ type ListScalingTagInfosByResourceIdRequestResourceType struct {
 }
 
 type ListScalingTagInfosByResourceIdRequestResourceTypeEnum struct {
-	SCALING_GROUP_TAG ListScalingTagInfosByResourceIdRequestResourceType
+	SCALING_GROUP_TAG         ListScalingTagInfosByResourceIdRequestResourceType
+	SCALING_CONFIGURATION_TAG ListScalingTagInfosByResourceIdRequestResourceType
 }
 
 func GetListScalingTagInfosByResourceIdRequestResourceTypeEnum() ListScalingTagInfosByResourceIdRequestResourceTypeEnum {
 	return ListScalingTagInfosByResourceIdRequestResourceTypeEnum{
 		SCALING_GROUP_TAG: ListScalingTagInfosByResourceIdRequestResourceType{
 			value: "scaling_group_tag",
+		},
+		SCALING_CONFIGURATION_TAG: ListScalingTagInfosByResourceIdRequestResourceType{
+			value: "scaling_configuration_tag",
 		},
 	}
 }

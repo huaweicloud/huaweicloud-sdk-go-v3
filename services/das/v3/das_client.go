@@ -4412,6 +4412,27 @@ func (c *DasClient) BatchSendEmailInvoker(request *model.BatchSendEmailRequest) 
 	return &BatchSendEmailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchSetHealthReportConfig 批量设置实例健康报告模板配置
+//
+// 批量设置实例的健康报告模板配置，用于批量巡检实例组场景。此为实例级配置，修改后将同时影响实例的日报订阅报告内容。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) BatchSetHealthReportConfig(request *model.BatchSetHealthReportConfigRequest) (*model.BatchSetHealthReportConfigResponse, error) {
+	requestDef := GenReqDefForBatchSetHealthReportConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchSetHealthReportConfigResponse), nil
+	}
+}
+
+// BatchSetHealthReportConfigInvoker 批量设置实例健康报告模板配置
+func (c *DasClient) BatchSetHealthReportConfigInvoker(request *model.BatchSetHealthReportConfigRequest) *BatchSetHealthReportConfigInvoker {
+	requestDef := GenReqDefForBatchSetHealthReportConfig()
+	return &BatchSetHealthReportConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchSubscribeReport 批量订阅/取消订阅
 //
 // 批量订阅/取消订阅
@@ -4452,6 +4473,27 @@ func (c *DasClient) CancelShareNew(request *model.CancelShareNewRequest) (*model
 func (c *DasClient) CancelShareNewInvoker(request *model.CancelShareNewRequest) *CancelShareNewInvoker {
 	requestDef := GenReqDefForCancelShareNew()
 	return &CancelShareNewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeBigKeyHotKeySwitch 开启/关闭Redis大key热key历史数据采集
+//
+// 开启或关闭GeminiDB Redis实例的大key、热key历史数据采集开关。仅支持GeminiDB Redis引擎，内核版本需≥5.0.7.20。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ChangeBigKeyHotKeySwitch(request *model.ChangeBigKeyHotKeySwitchRequest) (*model.ChangeBigKeyHotKeySwitchResponse, error) {
+	requestDef := GenReqDefForChangeBigKeyHotKeySwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeBigKeyHotKeySwitchResponse), nil
+	}
+}
+
+// ChangeBigKeyHotKeySwitchInvoker 开启/关闭Redis大key热key历史数据采集
+func (c *DasClient) ChangeBigKeyHotKeySwitchInvoker(request *model.ChangeBigKeyHotKeySwitchRequest) *ChangeBigKeyHotKeySwitchInvoker {
+	requestDef := GenReqDefForChangeBigKeyHotKeySwitch()
+	return &ChangeBigKeyHotKeySwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ChangeChargeMode 设置实例付费/免费模式
@@ -4665,6 +4707,27 @@ func (c *DasClient) CreateHealthReportTaskInvoker(request *model.CreateHealthRep
 	return &CreateHealthReportTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateHealthReportTemplate 创建健康报告模板
+//
+// 创建健康报告模板，模板为租户级资源。系统预设模板不可创建，每个租户最多创建20个自定义模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) CreateHealthReportTemplate(request *model.CreateHealthReportTemplateRequest) (*model.CreateHealthReportTemplateResponse, error) {
+	requestDef := GenReqDefForCreateHealthReportTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateHealthReportTemplateResponse), nil
+	}
+}
+
+// CreateHealthReportTemplateInvoker 创建健康报告模板
+func (c *DasClient) CreateHealthReportTemplateInvoker(request *model.CreateHealthReportTemplateRequest) *CreateHealthReportTemplateInvoker {
+	requestDef := GenReqDefForCreateHealthReportTemplate()
+	return &CreateHealthReportTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateHistoryTransactionExportTask 创建导出历史事务任务
 //
 // DAS收集历史事务开关打开后，支持创建一次性导出指定时间范围内的历史事务数据任务。
@@ -4822,6 +4885,27 @@ func (c *DasClient) DeleteEmailTemplate(request *model.DeleteEmailTemplateReques
 func (c *DasClient) DeleteEmailTemplateInvoker(request *model.DeleteEmailTemplateRequest) *DeleteEmailTemplateInvoker {
 	requestDef := GenReqDefForDeleteEmailTemplate()
 	return &DeleteEmailTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteHealthReportTemplate 删除健康报告模板
+//
+// 删除健康报告模板。系统预设模板不可删除，有实例引用时不可删除。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) DeleteHealthReportTemplate(request *model.DeleteHealthReportTemplateRequest) (*model.DeleteHealthReportTemplateResponse, error) {
+	requestDef := GenReqDefForDeleteHealthReportTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteHealthReportTemplateResponse), nil
+	}
+}
+
+// DeleteHealthReportTemplateInvoker 删除健康报告模板
+func (c *DasClient) DeleteHealthReportTemplateInvoker(request *model.DeleteHealthReportTemplateRequest) *DeleteHealthReportTemplateInvoker {
+	requestDef := GenReqDefForDeleteHealthReportTemplate()
+	return &DeleteHealthReportTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteHistoryTransactionExportTask 删除导出历史事务任务
@@ -5140,6 +5224,27 @@ func (c *DasClient) ListAutoIncrementUsageInvoker(request *model.ListAutoIncreme
 	return &ListAutoIncrementUsageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListBigKeys 查询大key列表
+//
+// 查询GeminiDB Redis实例的历史大key排行列表，支持按长度（size）和存储占用（storage）两个统计维度筛选，返回Top 1000排行。同一key出现多次时进行MAX聚合。仅支持GeminiDB Redis引擎。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListBigKeys(request *model.ListBigKeysRequest) (*model.ListBigKeysResponse, error) {
+	requestDef := GenReqDefForListBigKeys()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBigKeysResponse), nil
+	}
+}
+
+// ListBigKeysInvoker 查询大key列表
+func (c *DasClient) ListBigKeysInvoker(request *model.ListBigKeysRequest) *ListBigKeysInvoker {
+	requestDef := GenReqDefForListBigKeys()
+	return &ListBigKeysInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCloudDbaInstances 获取DAS云DBA实例列表
 //
 // 获取DAS云DBA实例列表。
@@ -5288,6 +5393,27 @@ func (c *DasClient) ListFullSqlTasksInvoker(request *model.ListFullSqlTasksReque
 	return &ListFullSqlTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListHealthReportConfigs 批量查询实例健康报告模板配置
+//
+// 批量查询实例的健康报告模板配置，用于批量巡检实例组场景下查看组内实例的模板配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListHealthReportConfigs(request *model.ListHealthReportConfigsRequest) (*model.ListHealthReportConfigsResponse, error) {
+	requestDef := GenReqDefForListHealthReportConfigs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHealthReportConfigsResponse), nil
+	}
+}
+
+// ListHealthReportConfigsInvoker 批量查询实例健康报告模板配置
+func (c *DasClient) ListHealthReportConfigsInvoker(request *model.ListHealthReportConfigsRequest) *ListHealthReportConfigsInvoker {
+	requestDef := GenReqDefForListHealthReportConfigs()
+	return &ListHealthReportConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListHealthReportTask 查询实例健康诊断报告列表
 //
 // 查询实例健康诊断报告列表。
@@ -5309,6 +5435,27 @@ func (c *DasClient) ListHealthReportTaskInvoker(request *model.ListHealthReportT
 	return &ListHealthReportTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListHealthReportTemplate 查询健康报告模板列表
+//
+// 查询租户可用的健康报告模板列表，包含系统预设模板和自定义模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListHealthReportTemplate(request *model.ListHealthReportTemplateRequest) (*model.ListHealthReportTemplateResponse, error) {
+	requestDef := GenReqDefForListHealthReportTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHealthReportTemplateResponse), nil
+	}
+}
+
+// ListHealthReportTemplateInvoker 查询健康报告模板列表
+func (c *DasClient) ListHealthReportTemplateInvoker(request *model.ListHealthReportTemplateRequest) *ListHealthReportTemplateInvoker {
+	requestDef := GenReqDefForListHealthReportTemplate()
+	return &ListHealthReportTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListHistoryTransactionExportTask 查询历史事务导出任务列表
 //
 // DAS收集历史事务开关打开后，查询历史事务导出任务列表。
@@ -5328,6 +5475,27 @@ func (c *DasClient) ListHistoryTransactionExportTask(request *model.ListHistoryT
 func (c *DasClient) ListHistoryTransactionExportTaskInvoker(request *model.ListHistoryTransactionExportTaskRequest) *ListHistoryTransactionExportTaskInvoker {
 	requestDef := GenReqDefForListHistoryTransactionExportTask()
 	return &ListHistoryTransactionExportTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHotKeys 查询热key列表
+//
+// 查询GeminiDB Redis实例的历史热key排行列表，支持按QPS（qps）和流量（traffic）两个统计维度筛选，返回Top 1000排行。同一key出现多次时进行MAX聚合。仅支持GeminiDB Redis引擎。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ListHotKeys(request *model.ListHotKeysRequest) (*model.ListHotKeysResponse, error) {
+	requestDef := GenReqDefForListHotKeys()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHotKeysResponse), nil
+	}
+}
+
+// ListHotKeysInvoker 查询热key列表
+func (c *DasClient) ListHotKeysInvoker(request *model.ListHotKeysRequest) *ListHotKeysInvoker {
+	requestDef := GenReqDefForListHotKeys()
+	return &ListHotKeysInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListInnodbLocks 查询InnoDB锁等待列表
@@ -5884,6 +6052,27 @@ func (c *DasClient) SaveCredentialForBatchInspectionInvoker(request *model.SaveC
 	return &SaveCredentialForBatchInspectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetInstanceHealthReportConfig 设置实例健康报告模板配置
+//
+// 设置实例的健康报告模板配置，此为实例级配置，修改后将同时影响该实例的批量巡检报告内容。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) SetInstanceHealthReportConfig(request *model.SetInstanceHealthReportConfigRequest) (*model.SetInstanceHealthReportConfigResponse, error) {
+	requestDef := GenReqDefForSetInstanceHealthReportConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetInstanceHealthReportConfigResponse), nil
+	}
+}
+
+// SetInstanceHealthReportConfigInvoker 设置实例健康报告模板配置
+func (c *DasClient) SetInstanceHealthReportConfigInvoker(request *model.SetInstanceHealthReportConfigRequest) *SetInstanceHealthReportConfigInvoker {
+	requestDef := GenReqDefForSetInstanceHealthReportConfig()
+	return &SetInstanceHealthReportConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetLockBlockingSwitch 设置锁阻塞开关和保存时长
 //
 // 设置锁阻塞开关和保存时长，仅支持SQLServer引擎
@@ -5966,6 +6155,27 @@ func (c *DasClient) ShowAnalysisSessionStatus(request *model.ShowAnalysisSession
 func (c *DasClient) ShowAnalysisSessionStatusInvoker(request *model.ShowAnalysisSessionStatusRequest) *ShowAnalysisSessionStatusInvoker {
 	requestDef := GenReqDefForShowAnalysisSessionStatus()
 	return &ShowAnalysisSessionStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowBigKeyHotKeySwitch 查询Redis大key热key历史数据采集开关状态
+//
+// 查询GeminiDB Redis实例的大key、热key历史数据采集开关状态、数据保留时长及是否可开启等信息。仅支持GeminiDB Redis引擎，内核版本需≥5.0.7.20。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowBigKeyHotKeySwitch(request *model.ShowBigKeyHotKeySwitchRequest) (*model.ShowBigKeyHotKeySwitchResponse, error) {
+	requestDef := GenReqDefForShowBigKeyHotKeySwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBigKeyHotKeySwitchResponse), nil
+	}
+}
+
+// ShowBigKeyHotKeySwitchInvoker 查询Redis大key热key历史数据采集开关状态
+func (c *DasClient) ShowBigKeyHotKeySwitchInvoker(request *model.ShowBigKeyHotKeySwitchRequest) *ShowBigKeyHotKeySwitchInvoker {
+	requestDef := GenReqDefForShowBigKeyHotKeySwitch()
+	return &ShowBigKeyHotKeySwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowClouddbaGetSearchPathFlagNew 查询searchpath开关状态
@@ -6242,6 +6452,27 @@ func (c *DasClient) ShowHealthReportSettingsInvoker(request *model.ShowHealthRep
 	return &ShowHealthReportSettingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowHealthReportTemplate 查询健康报告模板详情
+//
+// 查询指定健康报告模板的详细信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowHealthReportTemplate(request *model.ShowHealthReportTemplateRequest) (*model.ShowHealthReportTemplateResponse, error) {
+	requestDef := GenReqDefForShowHealthReportTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHealthReportTemplateResponse), nil
+	}
+}
+
+// ShowHealthReportTemplateInvoker 查询健康报告模板详情
+func (c *DasClient) ShowHealthReportTemplateInvoker(request *model.ShowHealthReportTemplateRequest) *ShowHealthReportTemplateInvoker {
+	requestDef := GenReqDefForShowHealthReportTemplate()
+	return &ShowHealthReportTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowHistoryTransactionExportTaskInfo 查询历史事务导出任务详情
 //
 // DAS收集历史事务开关打开后，查询历史事务导出任务详情。
@@ -6324,6 +6555,48 @@ func (c *DasClient) ShowInstanceHealthReport(request *model.ShowInstanceHealthRe
 func (c *DasClient) ShowInstanceHealthReportInvoker(request *model.ShowInstanceHealthReportRequest) *ShowInstanceHealthReportInvoker {
 	requestDef := GenReqDefForShowInstanceHealthReport()
 	return &ShowInstanceHealthReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowInstanceHealthReportConfig 查询实例健康报告模板配置
+//
+// 查询实例的健康报告模板配置，未配置时template_id等字段为null，表示使用完整版模板。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowInstanceHealthReportConfig(request *model.ShowInstanceHealthReportConfigRequest) (*model.ShowInstanceHealthReportConfigResponse, error) {
+	requestDef := GenReqDefForShowInstanceHealthReportConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceHealthReportConfigResponse), nil
+	}
+}
+
+// ShowInstanceHealthReportConfigInvoker 查询实例健康报告模板配置
+func (c *DasClient) ShowInstanceHealthReportConfigInvoker(request *model.ShowInstanceHealthReportConfigRequest) *ShowInstanceHealthReportConfigInvoker {
+	requestDef := GenReqDefForShowInstanceHealthReportConfig()
+	return &ShowInstanceHealthReportConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowKeyTrend 查询单key趋势
+//
+// 查询GeminiDB Redis实例中指定key在所选时间段内的变化曲线，支持自适应时间粒度聚合。traffic维度同时返回入口流量和出口流量双指标趋势。仅支持GeminiDB Redis引擎。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) ShowKeyTrend(request *model.ShowKeyTrendRequest) (*model.ShowKeyTrendResponse, error) {
+	requestDef := GenReqDefForShowKeyTrend()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKeyTrendResponse), nil
+	}
+}
+
+// ShowKeyTrendInvoker 查询单key趋势
+func (c *DasClient) ShowKeyTrendInvoker(request *model.ShowKeyTrendRequest) *ShowKeyTrendInvoker {
+	requestDef := GenReqDefForShowKeyTrend()
+	return &ShowKeyTrendInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowKillProcessTaskSwitch 查询自治限流开关
@@ -6899,6 +7172,27 @@ func (c *DasClient) UpdateHealthReportSettings(request *model.UpdateHealthReport
 func (c *DasClient) UpdateHealthReportSettingsInvoker(request *model.UpdateHealthReportSettingsRequest) *UpdateHealthReportSettingsInvoker {
 	requestDef := GenReqDefForUpdateHealthReportSettings()
 	return &UpdateHealthReportSettingsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateHealthReportTemplate 更新健康报告模板
+//
+// 更新健康报告模板，采用全量更新语义。系统预设模板不可更新。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DasClient) UpdateHealthReportTemplate(request *model.UpdateHealthReportTemplateRequest) (*model.UpdateHealthReportTemplateResponse, error) {
+	requestDef := GenReqDefForUpdateHealthReportTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateHealthReportTemplateResponse), nil
+	}
+}
+
+// UpdateHealthReportTemplateInvoker 更新健康报告模板
+func (c *DasClient) UpdateHealthReportTemplateInvoker(request *model.UpdateHealthReportTemplateRequest) *UpdateHealthReportTemplateInvoker {
+	requestDef := GenReqDefForUpdateHealthReportTemplate()
+	return &UpdateHealthReportTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateInstanceGroup 修改实例组

@@ -34,8 +34,11 @@ type ShowComparePolicyResponse struct {
 	ComparePolicy *string `json:"compare_policy,omitempty"`
 
 	// 间隔时间。
-	IntervalHour   *int32 `json:"interval_hour,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	IntervalHour *int32 `json:"interval_hour,omitempty"`
+
+	// **参数解释：** 冲突策略。 **约束限制：** 不涉及 **取值范围：** 不涉及 默认取值： 不涉及
+	ConflictStrategy *string `json:"conflict_strategy,omitempty"`
+	HttpStatusCode   int     `json:"-"`
 }
 
 func (o ShowComparePolicyResponse) String() string {
