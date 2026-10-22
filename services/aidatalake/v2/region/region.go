@@ -13,9 +13,11 @@ var (
 	CN_NORTH_2 = region.NewRegion("cn-north-2",
 		"https://fabric.cn-north-2.myhuaweicloud.com")
 	CN_SOUTHWEST_2 = region.NewRegion("cn-southwest-2",
-		"https://fabric.cn-southwest-2.myhuaweicloud.com")
+		"https://fabric-serverless.cn-southwest-2.myhuaweicloud.com")
 	CN_EAST_4 = region.NewRegion("cn-east-4",
-		"https://fabric.cn-east-4.myhuaweicloud.com")
+		"https://fabric-serverless.cn-east-4.myhuaweicloud.com")
+	AP_SOUTHEAST_1 = region.NewRegion("ap-southeast-1",
+		"https://fabric.ap-southeast-1.myhuaweicloud.com")
 )
 
 var staticFields = map[string]*region.Region{
@@ -23,6 +25,7 @@ var staticFields = map[string]*region.Region{
 	"cn-north-2":     CN_NORTH_2,
 	"cn-southwest-2": CN_SOUTHWEST_2,
 	"cn-east-4":      CN_EAST_4,
+	"ap-southeast-1": AP_SOUTHEAST_1,
 }
 
 var provider = region.DefaultProviderChain("AIDATALAKE")

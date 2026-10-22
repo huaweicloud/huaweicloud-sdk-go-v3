@@ -30,6 +30,8 @@ type PolicyResponse struct {
 	// 智能访问控制防护项相关配置信息，目前该特性还处于公测阶段，只有部分局点支持该特性
 	ModulexOptions map[string]interface{} `json:"modulex_options,omitempty"`
 
+	ScanProtectionOptions *ScanProtectionOption `json:"scan_protection_options,omitempty"`
+
 	// 与防护策略绑定的防护的域名id数组
 	Hosts *[]string `json:"hosts,omitempty"`
 

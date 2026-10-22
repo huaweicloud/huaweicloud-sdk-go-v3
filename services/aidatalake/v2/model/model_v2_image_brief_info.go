@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// V2ImageBriefInfo **参数解释**：镜像信息。 **约束限制**：仅提交作业到RayJob端点时配置。
+// V2ImageBriefInfo **参数解释**：镜像简要信息。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
 type V2ImageBriefInfo struct {
 
 	// **参数解释**：镜像ID。获取方式请参见[查看镜像列表](ListV2TenantImages.xml)。 **约束限制**：不涉及。 **取值范围**：长度为32~36的英文、数字、中划线的组合。 **默认取值**：不涉及。

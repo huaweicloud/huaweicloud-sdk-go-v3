@@ -24,6 +24,9 @@ type Resource struct {
 	// **参数解释**：训练作业选择的资源池ID。 **取值范围**：不涉及。
 	PoolId *string `json:"pool_id,omitempty"`
 
+	// **参数解释**：训练作业选择的资源池名称。 **取值范围**：不涉及。
+	PoolName *string `json:"pool_name,omitempty"`
+
 	// **参数解释**：训练作业选择的资源池联邦ID。 **取值范围**：不涉及。
 	PoolGroupId *string `json:"pool_group_id,omitempty"`
 

@@ -629,6 +629,22 @@ func (i *CreateHyperClusterInvoker) Invoke() (*model.CreateHyperClusterResponse,
 	}
 }
 
+type CreateHyperinstanceGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateHyperinstanceGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateHyperinstanceGroupInvoker) Invoke() (*model.CreateHyperinstanceGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateHyperinstanceGroupResponse), nil
+	}
+}
+
 type CreateHyperinstanceTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1026,6 +1042,22 @@ func (i *DeleteHyperinstanceInvoker) Invoke() (*model.DeleteHyperinstanceRespons
 		return nil, err
 	} else {
 		return result.(*model.DeleteHyperinstanceResponse), nil
+	}
+}
+
+type DeleteHyperinstanceGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteHyperinstanceGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteHyperinstanceGroupInvoker) Invoke() (*model.DeleteHyperinstanceGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteHyperinstanceGroupResponse), nil
 	}
 }
 
@@ -1461,6 +1493,22 @@ func (i *GetHyperinstanceInvoker) Invoke() (*model.GetHyperinstanceResponse, err
 	}
 }
 
+type GetHyperinstanceGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *GetHyperinstanceGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *GetHyperinstanceGroupInvoker) Invoke() (*model.GetHyperinstanceGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.GetHyperinstanceGroupResponse), nil
+	}
+}
+
 type GetHyperinstanceOperationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1746,6 +1794,54 @@ func (i *ListHyperinstanceClustersCapacityInvoker) Invoke() (*model.ListHyperins
 		return nil, err
 	} else {
 		return result.(*model.ListHyperinstanceClustersCapacityResponse), nil
+	}
+}
+
+type ListHyperinstanceGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHyperinstanceGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListHyperinstanceGroupInvoker) Invoke() (*model.ListHyperinstanceGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHyperinstanceGroupResponse), nil
+	}
+}
+
+type ListHyperinstanceGroupsCapacityInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHyperinstanceGroupsCapacityInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListHyperinstanceGroupsCapacityInvoker) Invoke() (*model.ListHyperinstanceGroupsCapacityResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHyperinstanceGroupsCapacityResponse), nil
+	}
+}
+
+type ListHyperinstanceServersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListHyperinstanceServersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListHyperinstanceServersInvoker) Invoke() (*model.ListHyperinstanceServersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListHyperinstanceServersResponse), nil
 	}
 }
 
@@ -3554,6 +3650,22 @@ func (i *SyncImageInvoker) Invoke() (*model.SyncImageResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.SyncImageResponse), nil
+	}
+}
+
+type UnbindDevServerPublicIPInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UnbindDevServerPublicIPInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UnbindDevServerPublicIPInvoker) Invoke() (*model.UnbindDevServerPublicIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UnbindDevServerPublicIpResponse), nil
 	}
 }
 

@@ -10,7 +10,7 @@ import (
 type AdvancedConfig struct {
 
 	// **参数解释：** 部署超时时间
-	DeployTimeoutMinutes *string `json:"deploy_timeout_minutes,omitempty"`
+	DeployTimeoutMinutes *int32 `json:"deploy_timeout_minutes,omitempty"`
 
 	UpgradeConfig *UpgradeConfig `json:"upgrade_config"`
 
@@ -36,6 +36,9 @@ type AdvancedConfig struct {
 
 	// **参数解释：** 自定义监控采集指标地址
 	CustomMetricsPath *string `json:"custom_metrics_path,omitempty"`
+
+	// **参数解释：** Mooncake缓存开关。 **约束限制：** 不涉及。 **取值范围：** - true：开启Mooncake缓存开关。 - false：关闭Mooncake缓存开关。 **默认取值：** false
+	MooncakeEnable *bool `json:"mooncake_enable,omitempty"`
 
 	// **参数解释：** 容器端口
 	Port int32 `json:"port"`

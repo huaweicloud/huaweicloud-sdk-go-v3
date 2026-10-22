@@ -636,7 +636,8 @@ func (c *ModelArtsClient) ChangeTrainingExperimentInvoker(request *model.ChangeT
 
 // ChangeTrainingJobDescription 更新训练作业描述
 //
-// 更新训练作业描述。
+// 更新训练作业接口用于修改已存在的训练作业的描述、事件通知、作业优先级、允许被抢占等信息。
+// 该接口适用于以下场景：当用户需要更新训练作业的描述、事件通知、作业优先级、允许被抢占等信息时，可以通过此接口进行修改。使用该接口的前提条件是训练作业已存在且用户具有相应的权限。更新操作完成后，训练作业的描述、事件通知、作业优先级、允许被抢占等信息将被更新。若训练作业不存在或用户无权限操作，接口将返回相应的错误信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *ModelArtsClient) ChangeTrainingJobDescription(request *model.ChangeTrainingJobDescriptionRequest) (*model.ChangeTrainingJobDescriptionResponse, error) {
@@ -845,6 +846,27 @@ func (c *ModelArtsClient) CreateHyperCluster(request *model.CreateHyperClusterRe
 func (c *ModelArtsClient) CreateHyperClusterInvoker(request *model.CreateHyperClusterRequest) *CreateHyperClusterInvoker {
 	requestDef := GenReqDefForCreateHyperCluster()
 	return &CreateHyperClusterInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateHyperinstanceGroup 创建hyperinstance-group
+//
+// 创建Hyper Group接口用于在系统中创建一个新的Hyper Group。该接口适用于以下场景：当用户需要使用超平面网络时，可以通过此接口创建Hyper Group。使用该接口的前提条件是用户已登录并具有创建Hyper Group的权限，且系统中已配置了必要的资源。创建操作完成后，将生成一个新的超平面网络，并返回超平面网络的详细信息，包括ID、名称、参数面网络ID。若用户无权限操作、系统中缺少必要的资源或配置参数无效，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) CreateHyperinstanceGroup(request *model.CreateHyperinstanceGroupRequest) (*model.CreateHyperinstanceGroupResponse, error) {
+	requestDef := GenReqDefForCreateHyperinstanceGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateHyperinstanceGroupResponse), nil
+	}
+}
+
+// CreateHyperinstanceGroupInvoker 创建hyperinstance-group
+func (c *ModelArtsClient) CreateHyperinstanceGroupInvoker(request *model.CreateHyperinstanceGroupRequest) *CreateHyperinstanceGroupInvoker {
+	requestDef := GenReqDefForCreateHyperinstanceGroup()
+	return &CreateHyperinstanceGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateHyperinstanceTags 创建Lite Server超节点标签
@@ -1380,6 +1402,27 @@ func (c *ModelArtsClient) DeleteHyperinstance(request *model.DeleteHyperinstance
 func (c *ModelArtsClient) DeleteHyperinstanceInvoker(request *model.DeleteHyperinstanceRequest) *DeleteHyperinstanceInvoker {
 	requestDef := GenReqDefForDeleteHyperinstance()
 	return &DeleteHyperinstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteHyperinstanceGroup 删除hyperinstance-group
+//
+// 删除hyperinstance-group
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) DeleteHyperinstanceGroup(request *model.DeleteHyperinstanceGroupRequest) (*model.DeleteHyperinstanceGroupResponse, error) {
+	requestDef := GenReqDefForDeleteHyperinstanceGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteHyperinstanceGroupResponse), nil
+	}
+}
+
+// DeleteHyperinstanceGroupInvoker 删除hyperinstance-group
+func (c *ModelArtsClient) DeleteHyperinstanceGroupInvoker(request *model.DeleteHyperinstanceGroupRequest) *DeleteHyperinstanceGroupInvoker {
+	requestDef := GenReqDefForDeleteHyperinstanceGroup()
+	return &DeleteHyperinstanceGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteHyperinstanceTags 删除Lite Server超节点标签
@@ -1955,6 +1998,27 @@ func (c *ModelArtsClient) GetHyperinstanceInvoker(request *model.GetHyperinstanc
 	return &GetHyperinstanceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// GetHyperinstanceGroup 查询hyperinstance-group详情
+//
+// 查询HyperGroup详情接口用于在系统中查询Hyper Group详情。该接口适用于以下场景：当用户需要查询Hyper Group详情，可以通过此接口完成。使用该接口的前提条件是用户已登录并具有查询Hyper Group的权限，且系统中已配置了必要的资源。查询会返回超平面网络的详细信息，包括ID、名称、参数面网络ID等。若用户无权限操作、系统中缺少必要的资源或配置参数无效，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) GetHyperinstanceGroup(request *model.GetHyperinstanceGroupRequest) (*model.GetHyperinstanceGroupResponse, error) {
+	requestDef := GenReqDefForGetHyperinstanceGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.GetHyperinstanceGroupResponse), nil
+	}
+}
+
+// GetHyperinstanceGroupInvoker 查询hyperinstance-group详情
+func (c *ModelArtsClient) GetHyperinstanceGroupInvoker(request *model.GetHyperinstanceGroupRequest) *GetHyperinstanceGroupInvoker {
+	requestDef := GenReqDefForGetHyperinstanceGroup()
+	return &GetHyperinstanceGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // GetHyperinstanceOperation 查询超节点Operation详情
 //
 // 查询Operation详情接口用于获取指定Operation的详细信息。该接口适用于以下场景：当用户需要了解某个Operation的具体执行情况和状态，以便进行故障排查或操作审计时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询Operation详情的权限，且指定的Operation已存在。查询操作完成后，接口将返回指定Operation的详细信息，包括Operation ID、操作类型、执行状态、开始时间、结束时间、操作结果等。若用户无权限操作、指定的Operation不存在或Operation ID无效，接口将返回相应的错误信息。
@@ -2333,6 +2397,69 @@ func (c *ModelArtsClient) ListHyperinstanceClustersCapacity(request *model.ListH
 func (c *ModelArtsClient) ListHyperinstanceClustersCapacityInvoker(request *model.ListHyperinstanceClustersCapacityRequest) *ListHyperinstanceClustersCapacityInvoker {
 	requestDef := GenReqDefForListHyperinstanceClustersCapacity()
 	return &ListHyperinstanceClustersCapacityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHyperinstanceGroup 查询hyperinstance-group详情列表
+//
+// 查询hyperinstance-group详情列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListHyperinstanceGroup(request *model.ListHyperinstanceGroupRequest) (*model.ListHyperinstanceGroupResponse, error) {
+	requestDef := GenReqDefForListHyperinstanceGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHyperinstanceGroupResponse), nil
+	}
+}
+
+// ListHyperinstanceGroupInvoker 查询hyperinstance-group详情列表
+func (c *ModelArtsClient) ListHyperinstanceGroupInvoker(request *model.ListHyperinstanceGroupRequest) *ListHyperinstanceGroupInvoker {
+	requestDef := GenReqDefForListHyperinstanceGroup()
+	return &ListHyperinstanceGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHyperinstanceGroupsCapacity 查询超节点hyperinstance-groups容量测算结果
+//
+// 查询超节点hyperinstance-groups容量测算结果
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListHyperinstanceGroupsCapacity(request *model.ListHyperinstanceGroupsCapacityRequest) (*model.ListHyperinstanceGroupsCapacityResponse, error) {
+	requestDef := GenReqDefForListHyperinstanceGroupsCapacity()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHyperinstanceGroupsCapacityResponse), nil
+	}
+}
+
+// ListHyperinstanceGroupsCapacityInvoker 查询超节点hyperinstance-groups容量测算结果
+func (c *ModelArtsClient) ListHyperinstanceGroupsCapacityInvoker(request *model.ListHyperinstanceGroupsCapacityRequest) *ListHyperinstanceGroupsCapacityInvoker {
+	requestDef := GenReqDefForListHyperinstanceGroupsCapacity()
+	return &ListHyperinstanceGroupsCapacityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHyperinstanceServers 查询超节点的所有子节点
+//
+// 查询指定超节点下的所有节点实例列表接口用于获取用户名下指定超节点所有Lite Server实例的详细信息。该接口适用于以下场景：用户需要查看其指定超节点下的所有Lite Server实例的状态、配置等信息，以便进行资源管理。使用该接口的前提条件是用户已登录且具有查询指定超节点下的所有节点实例列表接口的权限。调用此接口后，系统将返回指定超节点下所有Lite Server实例的列表，包括实例ID、名称、状态、创建时间等信息。若用户无权限或未登录，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListHyperinstanceServers(request *model.ListHyperinstanceServersRequest) (*model.ListHyperinstanceServersResponse, error) {
+	requestDef := GenReqDefForListHyperinstanceServers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHyperinstanceServersResponse), nil
+	}
+}
+
+// ListHyperinstanceServersInvoker 查询超节点的所有子节点
+func (c *ModelArtsClient) ListHyperinstanceServersInvoker(request *model.ListHyperinstanceServersRequest) *ListHyperinstanceServersInvoker {
+	requestDef := GenReqDefForListHyperinstanceServers()
+	return &ListHyperinstanceServersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListHyperinstances 查询用户所有超节点实例详情
@@ -4719,6 +4846,27 @@ func (c *ModelArtsClient) SyncImage(request *model.SyncImageRequest) (*model.Syn
 func (c *ModelArtsClient) SyncImageInvoker(request *model.SyncImageRequest) *SyncImageInvoker {
 	requestDef := GenReqDefForSyncImage()
 	return &SyncImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UnbindDevServerPublicIP Lite Server解绑EIP
+//
+// Lite Server解绑EIP
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) UnbindDevServerPublicIP(request *model.UnbindDevServerPublicIpRequest) (*model.UnbindDevServerPublicIpResponse, error) {
+	requestDef := GenReqDefForUnbindDevServerPublicIP()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UnbindDevServerPublicIpResponse), nil
+	}
+}
+
+// UnbindDevServerPublicIPInvoker Lite Server解绑EIP
+func (c *ModelArtsClient) UnbindDevServerPublicIPInvoker(request *model.UnbindDevServerPublicIpRequest) *UnbindDevServerPublicIPInvoker {
+	requestDef := GenReqDefForUnbindDevServerPublicIP()
+	return &UnbindDevServerPublicIPInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UnbindInferApiKey 解绑应用密钥

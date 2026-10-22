@@ -567,6 +567,22 @@ func (i *ListBackupsInvoker) Invoke() (*model.ListBackupsResponse, error) {
 	}
 }
 
+type ListBiactiveInstanceCandidatesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBiactiveInstanceCandidatesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBiactiveInstanceCandidatesInvoker) Invoke() (*model.ListBiactiveInstanceCandidatesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBiactiveInstanceCandidatesResponse), nil
+	}
+}
+
 type ListCassandraSlowLogsInvoker struct {
 	*invoker.BaseInvoker
 }

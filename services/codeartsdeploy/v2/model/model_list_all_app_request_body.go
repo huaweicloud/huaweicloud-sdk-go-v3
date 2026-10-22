@@ -14,6 +14,9 @@ type ListAllAppRequestBody struct {
 	// 项目id
 	ProjectId string `json:"project_id"`
 
+	// 检索关键字，应用名称模糊匹配
+	Search *string `json:"search,omitempty"`
+
 	// 分页页码， 表示从此页开始查询， page大于等于1
 	Page int32 `json:"page"`
 

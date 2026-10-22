@@ -27,6 +27,8 @@ type ServerNetwork struct {
 
 	// **参数解释：** IP/Mac对列表。 **约束限制：** - IP地址不允许为 “0.0.0.0/0”。 - 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 - 如果allowed_address_pairs为“1.1.1.1/0”，表示关闭源目的地址检查开关。 - 如果是虚拟IP绑定云服务器，       则mac_address可为空或者填写被绑定云服务器网卡的Mac地址。       被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。 **取值范围：** 不涉及 **默认取值：** 不涉及\"
 	AllowedAddressPairs *[]AllowedAddressPairs `json:"allowed_address_pairs,omitempty"`
+
+	HyperGroup *HyperGroup `json:"hyper_group,omitempty"`
 }
 
 func (o ServerNetwork) String() string {

@@ -16,6 +16,9 @@ type SecurityReportContentResponseReportContentInfoTopAttackedUrlsInfoList struc
 
 	// **参数解释：** 该URL所属的域名标识（如*:80表示所有域名的80端口）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	Host *string `json:"host,omitempty"`
+
+	// **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	WebTag *string `json:"web_tag,omitempty"`
 }
 
 func (o SecurityReportContentResponseReportContentInfoTopAttackedUrlsInfoList) String() string {

@@ -24,8 +24,8 @@ type ListInferDeploymentInstancesRequest struct {
 	// **参数解释：** 分页列表的起始页。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 0。
 	Offset *string `json:"offset,omitempty"`
 
-	// **参数解释：** pod名字。 **取值范围：** 不涉及。
-	PodName *string `json:"pod_name,omitempty"`
+	// **参数解释：** 服务实例名字。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+	InstanceName *string `json:"instance_name,omitempty"`
 }
 
 func (o ListInferDeploymentInstancesRequest) String() string {

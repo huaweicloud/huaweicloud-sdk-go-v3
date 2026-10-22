@@ -13,6 +13,12 @@ type SecurityReportContentResponseReportContentInfoTopAttackSourceLocationsInfoL
 
 	// **参数解释：** 该地理位置发起攻击的总次数。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
 	Num *int32 `json:"num,omitempty"`
+
+	// **参数解释：** 域名标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	Host *string `json:"host,omitempty"`
+
+	// **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	WebTag *string `json:"web_tag,omitempty"`
 }
 
 func (o SecurityReportContentResponseReportContentInfoTopAttackSourceLocationsInfoList) String() string {

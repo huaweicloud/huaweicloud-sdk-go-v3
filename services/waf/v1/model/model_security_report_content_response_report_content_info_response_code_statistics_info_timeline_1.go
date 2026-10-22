@@ -13,6 +13,9 @@ type SecurityReportContentResponseReportContentInfoResponseCodeStatisticsInfoTim
 
 	// **参数解释：** 该时间点上游服务器返回该响应码的数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
 	Num *int64 `json:"num,omitempty"`
+
+	// **参数解释：** 该时间点各响应码的详细统计项。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	DocCountItems *[]SecurityReportContentResponseReportContentInfoResponseCodeStatisticsInfoDocCountItems `json:"docCountItems,omitempty"`
 }
 
 func (o SecurityReportContentResponseReportContentInfoResponseCodeStatisticsInfoTimeline1) String() string {

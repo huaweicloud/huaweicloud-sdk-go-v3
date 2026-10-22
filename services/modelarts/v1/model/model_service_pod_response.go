@@ -28,6 +28,9 @@ type ServicePodResponse struct {
 
 	// **参数解释：** 最近更新时间。 **取值范围：** 不涉及。
 	UpdateTime *int64 `json:"update_time,omitempty"`
+
+	// **参数解释：** pod所属单元名称。 **取值范围：** 不涉及。
+	PodRoleName *string `json:"pod_role_name,omitempty"`
 }
 
 func (o ServicePodResponse) String() string {

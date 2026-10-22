@@ -13,6 +13,9 @@ type SecurityReportContentResponseReportContentInfoQpsStatisticsInfoTimeline1 st
 
 	// **参数解释：** 该时间点对应统计维度的峰值QPS值。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
 	Num *int64 `json:"num,omitempty"`
+
+	// **参数解释：** 该时间点各维度的详细统计项。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	DocCountItems *[]SecurityReportContentResponseReportContentInfoDocCountItems `json:"docCountItems,omitempty"`
 }
 
 func (o SecurityReportContentResponseReportContentInfoQpsStatisticsInfoTimeline1) String() string {

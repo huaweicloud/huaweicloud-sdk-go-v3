@@ -63,6 +63,9 @@ type PolicyOption struct {
 	// 网站反爬虫总开关是否开启
 	BotEnable *bool `json:"bot_enable,omitempty"`
 
+	// BOT管理是否开启
+	BotManagerEnable *bool `json:"bot_manager_enable,omitempty"`
+
 	// modulex智能cc防护是否开启，该特性是公测特性，在公测期间，只支持仅记录模式。
 	ModulexEnabled *bool `json:"modulex_enabled,omitempty"`
 
@@ -71,6 +74,15 @@ type PolicyOption struct {
 
 	// 反爬虫规则是否开启
 	Anticrawler *bool `json:"anticrawler,omitempty"`
+
+	// 扫描防护总开关是否开启
+	ScanProtection *bool `json:"scan_protection,omitempty"`
+
+	// 高频扫描封禁是否开启
+	HighFrequencyScanBlocking *bool `json:"high_frequency_scan_blocking,omitempty"`
+
+	// 目录遍历防护是否开启
+	DirectoryTraversalProtection *bool `json:"directory_traversal_protection,omitempty"`
 }
 
 func (o PolicyOption) String() string {

@@ -43,6 +43,9 @@ type UnitConfig struct {
 	// **参数解释：** 配置实例个数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	Count *int32 `json:"count,omitempty"`
 
+	// **参数解释：** 表示是否启用绑核加速。 **取值范围：** - true：启用绑核加速。 - false：不启用绑核加速。
+	CpuAffinity *bool `json:"cpu_affinity,omitempty"`
+
 	// **参数解释：** 启动命令。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	Cmd *string `json:"cmd,omitempty"`
 
@@ -75,6 +78,8 @@ type UnitConfig struct {
 
 	// **参数解释：** 节点池资源规格。 **约束限制：** 只能包含字母、数字、点、中划线和下划线。 **取值范围：** 长度不超过128字符。 **默认取值：** 不涉及。
 	PoolResourceFlavor *string `json:"pool_resource_flavor,omitempty"`
+
+	GroupPolicy *UnitGroupPolicy `json:"group_policy,omitempty"`
 }
 
 func (o UnitConfig) String() string {

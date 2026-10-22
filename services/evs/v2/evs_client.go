@@ -19,6 +19,69 @@ func EvsClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// AssociateAutoSnapshotPolicy 绑定自动快照策略
+//
+// 绑定自动快照策略。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) AssociateAutoSnapshotPolicy(request *model.AssociateAutoSnapshotPolicyRequest) (*model.AssociateAutoSnapshotPolicyResponse, error) {
+	requestDef := GenReqDefForAssociateAutoSnapshotPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AssociateAutoSnapshotPolicyResponse), nil
+	}
+}
+
+// AssociateAutoSnapshotPolicyInvoker 绑定自动快照策略
+func (c *EvsClient) AssociateAutoSnapshotPolicyInvoker(request *model.AssociateAutoSnapshotPolicyRequest) *AssociateAutoSnapshotPolicyInvoker {
+	requestDef := GenReqDefForAssociateAutoSnapshotPolicy()
+	return &AssociateAutoSnapshotPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateSnapshotGroupTag 为指定快照组添加标签
+//
+// 为指定快照组添加标签。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) BatchCreateSnapshotGroupTag(request *model.BatchCreateSnapshotGroupTagRequest) (*model.BatchCreateSnapshotGroupTagResponse, error) {
+	requestDef := GenReqDefForBatchCreateSnapshotGroupTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateSnapshotGroupTagResponse), nil
+	}
+}
+
+// BatchCreateSnapshotGroupTagInvoker 为指定快照组添加标签
+func (c *EvsClient) BatchCreateSnapshotGroupTagInvoker(request *model.BatchCreateSnapshotGroupTagRequest) *BatchCreateSnapshotGroupTagInvoker {
+	requestDef := GenReqDefForBatchCreateSnapshotGroupTag()
+	return &BatchCreateSnapshotGroupTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateSnapshotTags 为指定快照添加标签
+//
+// 为指定快照添加标签。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) BatchCreateSnapshotTags(request *model.BatchCreateSnapshotTagsRequest) (*model.BatchCreateSnapshotTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateSnapshotTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateSnapshotTagsResponse), nil
+	}
+}
+
+// BatchCreateSnapshotTagsInvoker 为指定快照添加标签
+func (c *EvsClient) BatchCreateSnapshotTagsInvoker(request *model.BatchCreateSnapshotTagsRequest) *BatchCreateSnapshotTagsInvoker {
+	requestDef := GenReqDefForBatchCreateSnapshotTags()
+	return &BatchCreateSnapshotTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchCreateVolumeTags 为指定云硬盘批量添加标签
 //
 // 为指定云硬盘批量添加标签。
@@ -41,6 +104,48 @@ func (c *EvsClient) BatchCreateVolumeTags(request *model.BatchCreateVolumeTagsRe
 func (c *EvsClient) BatchCreateVolumeTagsInvoker(request *model.BatchCreateVolumeTagsRequest) *BatchCreateVolumeTagsInvoker {
 	requestDef := GenReqDefForBatchCreateVolumeTags()
 	return &BatchCreateVolumeTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteSnapshotGroupTag 为指定快照组删除标签
+//
+// 为指定快照组删除标签。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) BatchDeleteSnapshotGroupTag(request *model.BatchDeleteSnapshotGroupTagRequest) (*model.BatchDeleteSnapshotGroupTagResponse, error) {
+	requestDef := GenReqDefForBatchDeleteSnapshotGroupTag()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteSnapshotGroupTagResponse), nil
+	}
+}
+
+// BatchDeleteSnapshotGroupTagInvoker 为指定快照组删除标签
+func (c *EvsClient) BatchDeleteSnapshotGroupTagInvoker(request *model.BatchDeleteSnapshotGroupTagRequest) *BatchDeleteSnapshotGroupTagInvoker {
+	requestDef := GenReqDefForBatchDeleteSnapshotGroupTag()
+	return &BatchDeleteSnapshotGroupTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteSnapshotTags 为指定快照删除标签
+//
+// 为指定快照删除标签。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) BatchDeleteSnapshotTags(request *model.BatchDeleteSnapshotTagsRequest) (*model.BatchDeleteSnapshotTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteSnapshotTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteSnapshotTagsResponse), nil
+	}
+}
+
+// BatchDeleteSnapshotTagsInvoker 为指定快照删除标签
+func (c *EvsClient) BatchDeleteSnapshotTagsInvoker(request *model.BatchDeleteSnapshotTagsRequest) *BatchDeleteSnapshotTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteSnapshotTags()
+	return &BatchDeleteSnapshotTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchDeleteVolumeTags 为指定云硬盘批量删除标签
@@ -279,6 +384,111 @@ func (c *EvsClient) CinderShowVolumeTransferInvoker(request *model.CinderShowVol
 	return &CinderShowVolumeTransferInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CountAutoSnapshotPolicies 查询自动快照策略总数
+//
+// 查询自动快照策略总数。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) CountAutoSnapshotPolicies(request *model.CountAutoSnapshotPoliciesRequest) (*model.CountAutoSnapshotPoliciesResponse, error) {
+	requestDef := GenReqDefForCountAutoSnapshotPolicies()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountAutoSnapshotPoliciesResponse), nil
+	}
+}
+
+// CountAutoSnapshotPoliciesInvoker 查询自动快照策略总数
+func (c *EvsClient) CountAutoSnapshotPoliciesInvoker(request *model.CountAutoSnapshotPoliciesRequest) *CountAutoSnapshotPoliciesInvoker {
+	requestDef := GenReqDefForCountAutoSnapshotPolicies()
+	return &CountAutoSnapshotPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountSnapshotChains 查询快照链个数
+//
+// 查询快照链个数。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) CountSnapshotChains(request *model.CountSnapshotChainsRequest) (*model.CountSnapshotChainsResponse, error) {
+	requestDef := GenReqDefForCountSnapshotChains()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountSnapshotChainsResponse), nil
+	}
+}
+
+// CountSnapshotChainsInvoker 查询快照链个数
+func (c *EvsClient) CountSnapshotChainsInvoker(request *model.CountSnapshotChainsRequest) *CountSnapshotChainsInvoker {
+	requestDef := GenReqDefForCountSnapshotChains()
+	return &CountSnapshotChainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountSnapshots 查询快照个数
+//
+// 查询快照个数。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) CountSnapshots(request *model.CountSnapshotsRequest) (*model.CountSnapshotsResponse, error) {
+	requestDef := GenReqDefForCountSnapshots()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountSnapshotsResponse), nil
+	}
+}
+
+// CountSnapshotsInvoker 查询快照个数
+func (c *EvsClient) CountSnapshotsInvoker(request *model.CountSnapshotsRequest) *CountSnapshotsInvoker {
+	requestDef := GenReqDefForCountSnapshots()
+	return &CountSnapshotsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountSnapshotsGroup 查询快照一致性组个数
+//
+// 查询快照一致性组个数。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) CountSnapshotsGroup(request *model.CountSnapshotsGroupRequest) (*model.CountSnapshotsGroupResponse, error) {
+	requestDef := GenReqDefForCountSnapshotsGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountSnapshotsGroupResponse), nil
+	}
+}
+
+// CountSnapshotsGroupInvoker 查询快照一致性组个数
+func (c *EvsClient) CountSnapshotsGroupInvoker(request *model.CountSnapshotsGroupRequest) *CountSnapshotsGroupInvoker {
+	requestDef := GenReqDefForCountSnapshotsGroup()
+	return &CountSnapshotsGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAutoSnapshotPolicy 创建自动快照策略
+//
+// 创建自动快照策略。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) CreateAutoSnapshotPolicy(request *model.CreateAutoSnapshotPolicyRequest) (*model.CreateAutoSnapshotPolicyResponse, error) {
+	requestDef := GenReqDefForCreateAutoSnapshotPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAutoSnapshotPolicyResponse), nil
+	}
+}
+
+// CreateAutoSnapshotPolicyInvoker 创建自动快照策略
+func (c *EvsClient) CreateAutoSnapshotPolicyInvoker(request *model.CreateAutoSnapshotPolicyRequest) *CreateAutoSnapshotPolicyInvoker {
+	requestDef := GenReqDefForCreateAutoSnapshotPolicy()
+	return &CreateAutoSnapshotPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateSnapshot 创建云硬盘快照
 //
 // 创建云硬盘快照。
@@ -298,6 +508,48 @@ func (c *EvsClient) CreateSnapshot(request *model.CreateSnapshotRequest) (*model
 func (c *EvsClient) CreateSnapshotInvoker(request *model.CreateSnapshotRequest) *CreateSnapshotInvoker {
 	requestDef := GenReqDefForCreateSnapshot()
 	return &CreateSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateSnapshotGroup 创建快照一致性组
+//
+// 创建快照一致性组。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) CreateSnapshotGroup(request *model.CreateSnapshotGroupRequest) (*model.CreateSnapshotGroupResponse, error) {
+	requestDef := GenReqDefForCreateSnapshotGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSnapshotGroupResponse), nil
+	}
+}
+
+// CreateSnapshotGroupInvoker 创建快照一致性组
+func (c *EvsClient) CreateSnapshotGroupInvoker(request *model.CreateSnapshotGroupRequest) *CreateSnapshotGroupInvoker {
+	requestDef := GenReqDefForCreateSnapshotGroup()
+	return &CreateSnapshotGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateStandardSnapshot 创建快照
+//
+// 创建标准快照。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) CreateStandardSnapshot(request *model.CreateStandardSnapshotRequest) (*model.CreateStandardSnapshotResponse, error) {
+	requestDef := GenReqDefForCreateStandardSnapshot()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateStandardSnapshotResponse), nil
+	}
+}
+
+// CreateStandardSnapshotInvoker 创建快照
+func (c *EvsClient) CreateStandardSnapshotInvoker(request *model.CreateStandardSnapshotRequest) *CreateStandardSnapshotInvoker {
+	requestDef := GenReqDefForCreateStandardSnapshot()
+	return &CreateStandardSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateVolume 创建云硬盘
@@ -326,6 +578,27 @@ func (c *EvsClient) CreateVolumeInvoker(request *model.CreateVolumeRequest) *Cre
 	return &CreateVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteAutoSnapshotPolicy 删除单个自动快照策略
+//
+// 删除单个自动快照策略。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) DeleteAutoSnapshotPolicy(request *model.DeleteAutoSnapshotPolicyRequest) (*model.DeleteAutoSnapshotPolicyResponse, error) {
+	requestDef := GenReqDefForDeleteAutoSnapshotPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAutoSnapshotPolicyResponse), nil
+	}
+}
+
+// DeleteAutoSnapshotPolicyInvoker 删除单个自动快照策略
+func (c *EvsClient) DeleteAutoSnapshotPolicyInvoker(request *model.DeleteAutoSnapshotPolicyRequest) *DeleteAutoSnapshotPolicyInvoker {
+	requestDef := GenReqDefForDeleteAutoSnapshotPolicy()
+	return &DeleteAutoSnapshotPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteSnapshot 删除云硬盘快照
 //
 // 删除云硬盘快照。
@@ -345,6 +618,48 @@ func (c *EvsClient) DeleteSnapshot(request *model.DeleteSnapshotRequest) (*model
 func (c *EvsClient) DeleteSnapshotInvoker(request *model.DeleteSnapshotRequest) *DeleteSnapshotInvoker {
 	requestDef := GenReqDefForDeleteSnapshot()
 	return &DeleteSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSnapshotGroup 删除快照一致性组
+//
+// 删除快照一致性组。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) DeleteSnapshotGroup(request *model.DeleteSnapshotGroupRequest) (*model.DeleteSnapshotGroupResponse, error) {
+	requestDef := GenReqDefForDeleteSnapshotGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSnapshotGroupResponse), nil
+	}
+}
+
+// DeleteSnapshotGroupInvoker 删除快照一致性组
+func (c *EvsClient) DeleteSnapshotGroupInvoker(request *model.DeleteSnapshotGroupRequest) *DeleteSnapshotGroupInvoker {
+	requestDef := GenReqDefForDeleteSnapshotGroup()
+	return &DeleteSnapshotGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteStandardSnapshot 删除快照
+//
+// 删除快照。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) DeleteStandardSnapshot(request *model.DeleteStandardSnapshotRequest) (*model.DeleteStandardSnapshotResponse, error) {
+	requestDef := GenReqDefForDeleteStandardSnapshot()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteStandardSnapshotResponse), nil
+	}
+}
+
+// DeleteStandardSnapshotInvoker 删除快照
+func (c *EvsClient) DeleteStandardSnapshotInvoker(request *model.DeleteStandardSnapshotRequest) *DeleteStandardSnapshotInvoker {
+	requestDef := GenReqDefForDeleteStandardSnapshot()
+	return &DeleteStandardSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeleteVolume 删除云硬盘
@@ -389,6 +704,132 @@ func (c *EvsClient) DeleteVolumeInRecycleInvoker(request *model.DeleteVolumeInRe
 	return &DeleteVolumeInRecycleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DisassociateAutoSnapshotPolicy 解绑自动快照策略
+//
+// 解绑自动快照策略。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) DisassociateAutoSnapshotPolicy(request *model.DisassociateAutoSnapshotPolicyRequest) (*model.DisassociateAutoSnapshotPolicyResponse, error) {
+	requestDef := GenReqDefForDisassociateAutoSnapshotPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DisassociateAutoSnapshotPolicyResponse), nil
+	}
+}
+
+// DisassociateAutoSnapshotPolicyInvoker 解绑自动快照策略
+func (c *EvsClient) DisassociateAutoSnapshotPolicyInvoker(request *model.DisassociateAutoSnapshotPolicyRequest) *DisassociateAutoSnapshotPolicyInvoker {
+	requestDef := GenReqDefForDisassociateAutoSnapshotPolicy()
+	return &DisassociateAutoSnapshotPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAutoSnapshotPolicy 查询自动快照策略
+//
+// 查询自动快照策略。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) ListAutoSnapshotPolicy(request *model.ListAutoSnapshotPolicyRequest) (*model.ListAutoSnapshotPolicyResponse, error) {
+	requestDef := GenReqDefForListAutoSnapshotPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAutoSnapshotPolicyResponse), nil
+	}
+}
+
+// ListAutoSnapshotPolicyInvoker 查询自动快照策略
+func (c *EvsClient) ListAutoSnapshotPolicyInvoker(request *model.ListAutoSnapshotPolicyRequest) *ListAutoSnapshotPolicyInvoker {
+	requestDef := GenReqDefForListAutoSnapshotPolicy()
+	return &ListAutoSnapshotPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSnapshotChains 查询快照链列表
+//
+// 查询快照链的列表。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) ListSnapshotChains(request *model.ListSnapshotChainsRequest) (*model.ListSnapshotChainsResponse, error) {
+	requestDef := GenReqDefForListSnapshotChains()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSnapshotChainsResponse), nil
+	}
+}
+
+// ListSnapshotChainsInvoker 查询快照链列表
+func (c *EvsClient) ListSnapshotChainsInvoker(request *model.ListSnapshotChainsRequest) *ListSnapshotChainsInvoker {
+	requestDef := GenReqDefForListSnapshotChains()
+	return &ListSnapshotChainsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSnapshotGroup 查询快照一致性组列表
+//
+// 查询快照一致性组列表。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) ListSnapshotGroup(request *model.ListSnapshotGroupRequest) (*model.ListSnapshotGroupResponse, error) {
+	requestDef := GenReqDefForListSnapshotGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSnapshotGroupResponse), nil
+	}
+}
+
+// ListSnapshotGroupInvoker 查询快照一致性组列表
+func (c *EvsClient) ListSnapshotGroupInvoker(request *model.ListSnapshotGroupRequest) *ListSnapshotGroupInvoker {
+	requestDef := GenReqDefForListSnapshotGroup()
+	return &ListSnapshotGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSnapshotGroupTags 查询快照组的所有标签
+//
+// 查询快照组的所有标签。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) ListSnapshotGroupTags(request *model.ListSnapshotGroupTagsRequest) (*model.ListSnapshotGroupTagsResponse, error) {
+	requestDef := GenReqDefForListSnapshotGroupTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSnapshotGroupTagsResponse), nil
+	}
+}
+
+// ListSnapshotGroupTagsInvoker 查询快照组的所有标签
+func (c *EvsClient) ListSnapshotGroupTagsInvoker(request *model.ListSnapshotGroupTagsRequest) *ListSnapshotGroupTagsInvoker {
+	requestDef := GenReqDefForListSnapshotGroupTags()
+	return &ListSnapshotGroupTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSnapshotTags 查询快照资源的所有标签
+//
+// 查询快照资源的所有标签。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) ListSnapshotTags(request *model.ListSnapshotTagsRequest) (*model.ListSnapshotTagsResponse, error) {
+	requestDef := GenReqDefForListSnapshotTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSnapshotTagsResponse), nil
+	}
+}
+
+// ListSnapshotTagsInvoker 查询快照资源的所有标签
+func (c *EvsClient) ListSnapshotTagsInvoker(request *model.ListSnapshotTagsRequest) *ListSnapshotTagsInvoker {
+	requestDef := GenReqDefForListSnapshotTags()
+	return &ListSnapshotTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSnapshots 查询云硬盘快照详情列表
 //
 // 查询云硬盘快照详细列表信息。
@@ -408,6 +849,27 @@ func (c *EvsClient) ListSnapshots(request *model.ListSnapshotsRequest) (*model.L
 func (c *EvsClient) ListSnapshotsInvoker(request *model.ListSnapshotsRequest) *ListSnapshotsInvoker {
 	requestDef := GenReqDefForListSnapshots()
 	return &ListSnapshotsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSnapshotsDetails 查询快照详情列表
+//
+// 查询快照详情列表。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) ListSnapshotsDetails(request *model.ListSnapshotsDetailsRequest) (*model.ListSnapshotsDetailsResponse, error) {
+	requestDef := GenReqDefForListSnapshotsDetails()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSnapshotsDetailsResponse), nil
+	}
+}
+
+// ListSnapshotsDetailsInvoker 查询快照详情列表
+func (c *EvsClient) ListSnapshotsDetailsInvoker(request *model.ListSnapshotsDetailsRequest) *ListSnapshotsDetailsInvoker {
+	requestDef := GenReqDefForListSnapshotsDetails()
+	return &ListSnapshotsDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListVolumeTags 获取云硬盘资源的所有标签
@@ -609,6 +1071,48 @@ func (c *EvsClient) RollbackSnapshotInvoker(request *model.RollbackSnapshotReque
 	return &RollbackSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// RollbackStandardSnapshot 快照回滚
+//
+// 将快照数据回滚到云硬盘。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) RollbackStandardSnapshot(request *model.RollbackStandardSnapshotRequest) (*model.RollbackStandardSnapshotResponse, error) {
+	requestDef := GenReqDefForRollbackStandardSnapshot()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RollbackStandardSnapshotResponse), nil
+	}
+}
+
+// RollbackStandardSnapshotInvoker 快照回滚
+func (c *EvsClient) RollbackStandardSnapshotInvoker(request *model.RollbackStandardSnapshotRequest) *RollbackStandardSnapshotInvoker {
+	requestDef := GenReqDefForRollbackStandardSnapshot()
+	return &RollbackStandardSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAutoSnapshotPolicy 查询单个自动快照策略
+//
+// 查询单个自动快照策略。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) ShowAutoSnapshotPolicy(request *model.ShowAutoSnapshotPolicyRequest) (*model.ShowAutoSnapshotPolicyResponse, error) {
+	requestDef := GenReqDefForShowAutoSnapshotPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAutoSnapshotPolicyResponse), nil
+	}
+}
+
+// ShowAutoSnapshotPolicyInvoker 查询单个自动快照策略
+func (c *EvsClient) ShowAutoSnapshotPolicyInvoker(request *model.ShowAutoSnapshotPolicyRequest) *ShowAutoSnapshotPolicyInvoker {
+	requestDef := GenReqDefForShowAutoSnapshotPolicy()
+	return &ShowAutoSnapshotPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowJob 查询job的状态
 //
 // 查询Job的执行状态。
@@ -671,6 +1175,48 @@ func (c *EvsClient) ShowSnapshot(request *model.ShowSnapshotRequest) (*model.Sho
 func (c *EvsClient) ShowSnapshotInvoker(request *model.ShowSnapshotRequest) *ShowSnapshotInvoker {
 	requestDef := GenReqDefForShowSnapshot()
 	return &ShowSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSnapshotGroup 查询单个快照一致性组
+//
+// 查询单个快照一致性组。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) ShowSnapshotGroup(request *model.ShowSnapshotGroupRequest) (*model.ShowSnapshotGroupResponse, error) {
+	requestDef := GenReqDefForShowSnapshotGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSnapshotGroupResponse), nil
+	}
+}
+
+// ShowSnapshotGroupInvoker 查询单个快照一致性组
+func (c *EvsClient) ShowSnapshotGroupInvoker(request *model.ShowSnapshotGroupRequest) *ShowSnapshotGroupInvoker {
+	requestDef := GenReqDefForShowSnapshotGroup()
+	return &ShowSnapshotGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowStandardSnapshot 查询单个快照信息
+//
+// 查询单个快照信息。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) ShowStandardSnapshot(request *model.ShowStandardSnapshotRequest) (*model.ShowStandardSnapshotResponse, error) {
+	requestDef := GenReqDefForShowStandardSnapshot()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowStandardSnapshotResponse), nil
+	}
+}
+
+// ShowStandardSnapshotInvoker 查询单个快照信息
+func (c *EvsClient) ShowStandardSnapshotInvoker(request *model.ShowStandardSnapshotRequest) *ShowStandardSnapshotInvoker {
+	requestDef := GenReqDefForShowStandardSnapshot()
+	return &ShowStandardSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowVolume 查询单个云硬盘详情
@@ -759,6 +1305,27 @@ func (c *EvsClient) UnsubscribePostpaidVolumeInvoker(request *model.UnsubscribeP
 	return &UnsubscribePostpaidVolumeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateAutoSnapshotPolicy 更新自动快照策略
+//
+// 更新自动快照策略。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) UpdateAutoSnapshotPolicy(request *model.UpdateAutoSnapshotPolicyRequest) (*model.UpdateAutoSnapshotPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateAutoSnapshotPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAutoSnapshotPolicyResponse), nil
+	}
+}
+
+// UpdateAutoSnapshotPolicyInvoker 更新自动快照策略
+func (c *EvsClient) UpdateAutoSnapshotPolicyInvoker(request *model.UpdateAutoSnapshotPolicyRequest) *UpdateAutoSnapshotPolicyInvoker {
+	requestDef := GenReqDefForUpdateAutoSnapshotPolicy()
+	return &UpdateAutoSnapshotPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateRecyclePolicy 更新回收站策略
 //
 // 更新回收站策略。
@@ -799,6 +1366,48 @@ func (c *EvsClient) UpdateSnapshot(request *model.UpdateSnapshotRequest) (*model
 func (c *EvsClient) UpdateSnapshotInvoker(request *model.UpdateSnapshotRequest) *UpdateSnapshotInvoker {
 	requestDef := GenReqDefForUpdateSnapshot()
 	return &UpdateSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateSnapshotGroup 更新快照一致性组
+//
+// 更新快照一致性组。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) UpdateSnapshotGroup(request *model.UpdateSnapshotGroupRequest) (*model.UpdateSnapshotGroupResponse, error) {
+	requestDef := GenReqDefForUpdateSnapshotGroup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSnapshotGroupResponse), nil
+	}
+}
+
+// UpdateSnapshotGroupInvoker 更新快照一致性组
+func (c *EvsClient) UpdateSnapshotGroupInvoker(request *model.UpdateSnapshotGroupRequest) *UpdateSnapshotGroupInvoker {
+	requestDef := GenReqDefForUpdateSnapshotGroup()
+	return &UpdateSnapshotGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateStandardSnapshot 更新快照信息
+//
+// 更新快照信息。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *EvsClient) UpdateStandardSnapshot(request *model.UpdateStandardSnapshotRequest) (*model.UpdateStandardSnapshotResponse, error) {
+	requestDef := GenReqDefForUpdateStandardSnapshot()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateStandardSnapshotResponse), nil
+	}
+}
+
+// UpdateStandardSnapshotInvoker 更新快照信息
+func (c *EvsClient) UpdateStandardSnapshotInvoker(request *model.UpdateStandardSnapshotRequest) *UpdateStandardSnapshotInvoker {
+	requestDef := GenReqDefForUpdateStandardSnapshot()
+	return &UpdateStandardSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateVolume 更新云硬盘

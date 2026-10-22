@@ -5,6 +5,54 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/evs/v2/model"
 )
 
+type AssociateAutoSnapshotPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AssociateAutoSnapshotPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AssociateAutoSnapshotPolicyInvoker) Invoke() (*model.AssociateAutoSnapshotPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AssociateAutoSnapshotPolicyResponse), nil
+	}
+}
+
+type BatchCreateSnapshotGroupTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateSnapshotGroupTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateSnapshotGroupTagInvoker) Invoke() (*model.BatchCreateSnapshotGroupTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateSnapshotGroupTagResponse), nil
+	}
+}
+
+type BatchCreateSnapshotTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateSnapshotTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateSnapshotTagsInvoker) Invoke() (*model.BatchCreateSnapshotTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateSnapshotTagsResponse), nil
+	}
+}
+
 type BatchCreateVolumeTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -18,6 +66,38 @@ func (i *BatchCreateVolumeTagsInvoker) Invoke() (*model.BatchCreateVolumeTagsRes
 		return nil, err
 	} else {
 		return result.(*model.BatchCreateVolumeTagsResponse), nil
+	}
+}
+
+type BatchDeleteSnapshotGroupTagInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteSnapshotGroupTagInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteSnapshotGroupTagInvoker) Invoke() (*model.BatchDeleteSnapshotGroupTagResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteSnapshotGroupTagResponse), nil
+	}
+}
+
+type BatchDeleteSnapshotTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteSnapshotTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteSnapshotTagsInvoker) Invoke() (*model.BatchDeleteSnapshotTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteSnapshotTagsResponse), nil
 	}
 }
 
@@ -197,6 +277,86 @@ func (i *CinderShowVolumeTransferInvoker) Invoke() (*model.CinderShowVolumeTrans
 	}
 }
 
+type CountAutoSnapshotPoliciesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountAutoSnapshotPoliciesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CountAutoSnapshotPoliciesInvoker) Invoke() (*model.CountAutoSnapshotPoliciesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountAutoSnapshotPoliciesResponse), nil
+	}
+}
+
+type CountSnapshotChainsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountSnapshotChainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CountSnapshotChainsInvoker) Invoke() (*model.CountSnapshotChainsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountSnapshotChainsResponse), nil
+	}
+}
+
+type CountSnapshotsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountSnapshotsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CountSnapshotsInvoker) Invoke() (*model.CountSnapshotsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountSnapshotsResponse), nil
+	}
+}
+
+type CountSnapshotsGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountSnapshotsGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CountSnapshotsGroupInvoker) Invoke() (*model.CountSnapshotsGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountSnapshotsGroupResponse), nil
+	}
+}
+
+type CreateAutoSnapshotPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAutoSnapshotPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAutoSnapshotPolicyInvoker) Invoke() (*model.CreateAutoSnapshotPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAutoSnapshotPolicyResponse), nil
+	}
+}
+
 type CreateSnapshotInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -210,6 +370,38 @@ func (i *CreateSnapshotInvoker) Invoke() (*model.CreateSnapshotResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.CreateSnapshotResponse), nil
+	}
+}
+
+type CreateSnapshotGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSnapshotGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSnapshotGroupInvoker) Invoke() (*model.CreateSnapshotGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSnapshotGroupResponse), nil
+	}
+}
+
+type CreateStandardSnapshotInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateStandardSnapshotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateStandardSnapshotInvoker) Invoke() (*model.CreateStandardSnapshotResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateStandardSnapshotResponse), nil
 	}
 }
 
@@ -229,6 +421,22 @@ func (i *CreateVolumeInvoker) Invoke() (*model.CreateVolumeResponse, error) {
 	}
 }
 
+type DeleteAutoSnapshotPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAutoSnapshotPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAutoSnapshotPolicyInvoker) Invoke() (*model.DeleteAutoSnapshotPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAutoSnapshotPolicyResponse), nil
+	}
+}
+
 type DeleteSnapshotInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -242,6 +450,38 @@ func (i *DeleteSnapshotInvoker) Invoke() (*model.DeleteSnapshotResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.DeleteSnapshotResponse), nil
+	}
+}
+
+type DeleteSnapshotGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSnapshotGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteSnapshotGroupInvoker) Invoke() (*model.DeleteSnapshotGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSnapshotGroupResponse), nil
+	}
+}
+
+type DeleteStandardSnapshotInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteStandardSnapshotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteStandardSnapshotInvoker) Invoke() (*model.DeleteStandardSnapshotResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteStandardSnapshotResponse), nil
 	}
 }
 
@@ -277,6 +517,102 @@ func (i *DeleteVolumeInRecycleInvoker) Invoke() (*model.DeleteVolumeInRecycleRes
 	}
 }
 
+type DisassociateAutoSnapshotPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DisassociateAutoSnapshotPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DisassociateAutoSnapshotPolicyInvoker) Invoke() (*model.DisassociateAutoSnapshotPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DisassociateAutoSnapshotPolicyResponse), nil
+	}
+}
+
+type ListAutoSnapshotPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAutoSnapshotPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAutoSnapshotPolicyInvoker) Invoke() (*model.ListAutoSnapshotPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAutoSnapshotPolicyResponse), nil
+	}
+}
+
+type ListSnapshotChainsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSnapshotChainsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSnapshotChainsInvoker) Invoke() (*model.ListSnapshotChainsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSnapshotChainsResponse), nil
+	}
+}
+
+type ListSnapshotGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSnapshotGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSnapshotGroupInvoker) Invoke() (*model.ListSnapshotGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSnapshotGroupResponse), nil
+	}
+}
+
+type ListSnapshotGroupTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSnapshotGroupTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSnapshotGroupTagsInvoker) Invoke() (*model.ListSnapshotGroupTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSnapshotGroupTagsResponse), nil
+	}
+}
+
+type ListSnapshotTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSnapshotTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSnapshotTagsInvoker) Invoke() (*model.ListSnapshotTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSnapshotTagsResponse), nil
+	}
+}
+
 type ListSnapshotsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -290,6 +626,22 @@ func (i *ListSnapshotsInvoker) Invoke() (*model.ListSnapshotsResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ListSnapshotsResponse), nil
+	}
+}
+
+type ListSnapshotsDetailsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSnapshotsDetailsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSnapshotsDetailsInvoker) Invoke() (*model.ListSnapshotsDetailsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSnapshotsDetailsResponse), nil
 	}
 }
 
@@ -437,6 +789,38 @@ func (i *RollbackSnapshotInvoker) Invoke() (*model.RollbackSnapshotResponse, err
 	}
 }
 
+type RollbackStandardSnapshotInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RollbackStandardSnapshotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RollbackStandardSnapshotInvoker) Invoke() (*model.RollbackStandardSnapshotResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RollbackStandardSnapshotResponse), nil
+	}
+}
+
+type ShowAutoSnapshotPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAutoSnapshotPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAutoSnapshotPolicyInvoker) Invoke() (*model.ShowAutoSnapshotPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAutoSnapshotPolicyResponse), nil
+	}
+}
+
 type ShowJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -482,6 +866,38 @@ func (i *ShowSnapshotInvoker) Invoke() (*model.ShowSnapshotResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.ShowSnapshotResponse), nil
+	}
+}
+
+type ShowSnapshotGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSnapshotGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSnapshotGroupInvoker) Invoke() (*model.ShowSnapshotGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSnapshotGroupResponse), nil
+	}
+}
+
+type ShowStandardSnapshotInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowStandardSnapshotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowStandardSnapshotInvoker) Invoke() (*model.ShowStandardSnapshotResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowStandardSnapshotResponse), nil
 	}
 }
 
@@ -549,6 +965,22 @@ func (i *UnsubscribePostpaidVolumeInvoker) Invoke() (*model.UnsubscribePostpaidV
 	}
 }
 
+type UpdateAutoSnapshotPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAutoSnapshotPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAutoSnapshotPolicyInvoker) Invoke() (*model.UpdateAutoSnapshotPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAutoSnapshotPolicyResponse), nil
+	}
+}
+
 type UpdateRecyclePolicyInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -578,6 +1010,38 @@ func (i *UpdateSnapshotInvoker) Invoke() (*model.UpdateSnapshotResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdateSnapshotResponse), nil
+	}
+}
+
+type UpdateSnapshotGroupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateSnapshotGroupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateSnapshotGroupInvoker) Invoke() (*model.UpdateSnapshotGroupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateSnapshotGroupResponse), nil
+	}
+}
+
+type UpdateStandardSnapshotInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateStandardSnapshotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateStandardSnapshotInvoker) Invoke() (*model.UpdateStandardSnapshotResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateStandardSnapshotResponse), nil
 	}
 }
 

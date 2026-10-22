@@ -53,22 +53,6 @@ func (i *BatchCreateAntileakageRuleInvoker) Invoke() (*model.BatchCreateAntileak
 	}
 }
 
-type BatchCreateCcRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *BatchCreateCcRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *BatchCreateCcRuleInvoker) Invoke() (*model.BatchCreateCcRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.BatchCreateCcRuleResponse), nil
-	}
-}
-
 type BatchCreateCustomRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -261,19 +245,35 @@ func (i *BatchUpdateAntitamperRulesInvoker) Invoke() (*model.BatchUpdateAntitamp
 	}
 }
 
-type BatchUpdateCcRulesInvoker struct {
+type BatchUpdateBotMRuleActionInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *BatchUpdateCcRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *BatchUpdateBotMRuleActionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *BatchUpdateCcRulesInvoker) Invoke() (*model.BatchUpdateCcRulesResponse, error) {
+func (i *BatchUpdateBotMRuleActionInvoker) Invoke() (*model.BatchUpdateBotMRuleActionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.BatchUpdateCcRulesResponse), nil
+		return result.(*model.BatchUpdateBotMRuleActionResponse), nil
+	}
+}
+
+type BatchUpdateBotMRuleStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateBotMRuleStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateBotMRuleStatusInvoker) Invoke() (*model.BatchUpdateBotMRuleStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateBotMRuleStatusResponse), nil
 	}
 }
 
@@ -613,22 +613,6 @@ func (i *CreateAntiTamperRuleInvoker) Invoke() (*model.CreateAntiTamperRuleRespo
 	}
 }
 
-type CreateAnticrawlerRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *CreateAnticrawlerRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *CreateAnticrawlerRuleInvoker) Invoke() (*model.CreateAnticrawlerRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.CreateAnticrawlerRuleResponse), nil
-	}
-}
-
 type CreateAntileakageRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -645,19 +629,19 @@ func (i *CreateAntileakageRuleInvoker) Invoke() (*model.CreateAntileakageRuleRes
 	}
 }
 
-type CreateCcRuleInvoker struct {
+type CreateBotMTrafficDetectionConditionInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *CreateCcRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *CreateBotMTrafficDetectionConditionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *CreateCcRuleInvoker) Invoke() (*model.CreateCcRuleResponse, error) {
+func (i *CreateBotMTrafficDetectionConditionInvoker) Invoke() (*model.CreateBotMTrafficDetectionConditionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.CreateCcRuleResponse), nil
+		return result.(*model.CreateBotMTrafficDetectionConditionResponse), nil
 	}
 }
 
@@ -997,22 +981,6 @@ func (i *DeleteAlertNoticeConfigInvoker) Invoke() (*model.DeleteAlertNoticeConfi
 	}
 }
 
-type DeleteAnticrawlerRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *DeleteAnticrawlerRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *DeleteAnticrawlerRuleInvoker) Invoke() (*model.DeleteAnticrawlerRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.DeleteAnticrawlerRuleResponse), nil
-	}
-}
-
 type DeleteAntileakageRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1045,19 +1013,19 @@ func (i *DeleteAntitamperRuleInvoker) Invoke() (*model.DeleteAntitamperRuleRespo
 	}
 }
 
-type DeleteCcRuleInvoker struct {
+type DeleteBotMTrafficDetectionConditionInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *DeleteCcRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *DeleteBotMTrafficDetectionConditionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *DeleteCcRuleInvoker) Invoke() (*model.DeleteCcRuleResponse, error) {
+func (i *DeleteBotMTrafficDetectionConditionInvoker) Invoke() (*model.DeleteBotMTrafficDetectionConditionResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.DeleteCcRuleResponse), nil
+		return result.(*model.DeleteBotMTrafficDetectionConditionResponse), nil
 	}
 }
 
@@ -1349,22 +1317,6 @@ func (i *ListAntiTamperPolicyRulesInvoker) Invoke() (*model.ListAntiTamperPolicy
 	}
 }
 
-type ListAnticrawlerRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListAnticrawlerRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListAnticrawlerRulesInvoker) Invoke() (*model.ListAnticrawlerRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListAnticrawlerRulesResponse), nil
-	}
-}
-
 type ListAntileakagePolicyRulesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1445,35 +1397,19 @@ func (i *ListBandwidthTimelineInvoker) Invoke() (*model.ListBandwidthTimelineRes
 	}
 }
 
-type ListCcPolicyRulesInvoker struct {
+type ListBotMRulesInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListCcPolicyRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ListBotMRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ListCcPolicyRulesInvoker) Invoke() (*model.ListCcPolicyRulesResponse, error) {
+func (i *ListBotMRulesInvoker) Invoke() (*model.ListBotMRulesResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListCcPolicyRulesResponse), nil
-	}
-}
-
-type ListCcRulesInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ListCcRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ListCcRulesInvoker) Invoke() (*model.ListCcRulesResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ListCcRulesResponse), nil
+		return result.(*model.ListBotMRulesResponse), nil
 	}
 }
 
@@ -2261,22 +2197,6 @@ func (i *RenameInstanceInvoker) Invoke() (*model.RenameInstanceResponse, error) 
 	}
 }
 
-type ShowAnticrawlerRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *ShowAnticrawlerRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *ShowAnticrawlerRuleInvoker) Invoke() (*model.ShowAnticrawlerRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.ShowAnticrawlerRuleResponse), nil
-	}
-}
-
 type ShowAntileakageRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2309,19 +2229,19 @@ func (i *ShowAntitamperRuleInvoker) Invoke() (*model.ShowAntitamperRuleResponse,
 	}
 }
 
-type ShowCcRuleInvoker struct {
+type ShowBotMRuleInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ShowCcRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ShowBotMRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ShowCcRuleInvoker) Invoke() (*model.ShowCcRuleResponse, error) {
+func (i *ShowBotMRuleInvoker) Invoke() (*model.ShowBotMRuleResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ShowCcRuleResponse), nil
+		return result.(*model.ShowBotMRuleResponse), nil
 	}
 }
 
@@ -2757,38 +2677,6 @@ func (i *UpdateAntiTamperRuleRefreshInvoker) Invoke() (*model.UpdateAntiTamperRu
 	}
 }
 
-type UpdateAnticrawlerRuleInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateAnticrawlerRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateAnticrawlerRuleInvoker) Invoke() (*model.UpdateAnticrawlerRuleResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateAnticrawlerRuleResponse), nil
-	}
-}
-
-type UpdateAnticrawlerRuleTypeInvoker struct {
-	*invoker.BaseInvoker
-}
-
-func (i *UpdateAnticrawlerRuleTypeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
-	return i.BaseInvoker
-}
-
-func (i *UpdateAnticrawlerRuleTypeInvoker) Invoke() (*model.UpdateAnticrawlerRuleTypeResponse, error) {
-	if result, err := i.BaseInvoker.Invoke(); err != nil {
-		return nil, err
-	} else {
-		return result.(*model.UpdateAnticrawlerRuleTypeResponse), nil
-	}
-}
-
 type UpdateAntileakageRuleInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2805,19 +2693,99 @@ func (i *UpdateAntileakageRuleInvoker) Invoke() (*model.UpdateAntileakageRuleRes
 	}
 }
 
-type UpdateCcRuleInvoker struct {
+type UpdateBotMCategoryStatusInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *UpdateCcRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *UpdateBotMCategoryStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *UpdateCcRuleInvoker) Invoke() (*model.UpdateCcRuleResponse, error) {
+func (i *UpdateBotMCategoryStatusInvoker) Invoke() (*model.UpdateBotMCategoryStatusResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.UpdateCcRuleResponse), nil
+		return result.(*model.UpdateBotMCategoryStatusResponse), nil
+	}
+}
+
+type UpdateBotMRuleActionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateBotMRuleActionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateBotMRuleActionInvoker) Invoke() (*model.UpdateBotMRuleActionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateBotMRuleActionResponse), nil
+	}
+}
+
+type UpdateBotMRuleDefenseStrategyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateBotMRuleDefenseStrategyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateBotMRuleDefenseStrategyInvoker) Invoke() (*model.UpdateBotMRuleDefenseStrategyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateBotMRuleDefenseStrategyResponse), nil
+	}
+}
+
+type UpdateBotMRuleStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateBotMRuleStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateBotMRuleStatusInvoker) Invoke() (*model.UpdateBotMRuleStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateBotMRuleStatusResponse), nil
+	}
+}
+
+type UpdateBotMTenantPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateBotMTenantPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateBotMTenantPolicyInvoker) Invoke() (*model.UpdateBotMTenantPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateBotMTenantPolicyResponse), nil
+	}
+}
+
+type UpdateBotMTrafficDetectionConditionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateBotMTrafficDetectionConditionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateBotMTrafficDetectionConditionInvoker) Invoke() (*model.UpdateBotMTrafficDetectionConditionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateBotMTrafficDetectionConditionResponse), nil
 	}
 }
 
@@ -3221,6 +3189,822 @@ func (i *UpdateWhiteblackipRuleInvoker) Invoke() (*model.UpdateWhiteblackipRuleR
 	}
 }
 
+type BatchDeleteAiAppsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteAiAppsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteAiAppsInvoker) Invoke() (*model.BatchDeleteAiAppsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteAiAppsResponse), nil
+	}
+}
+
+type CreateAiAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAiAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAiAppInvoker) Invoke() (*model.CreateAiAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAiAppResponse), nil
+	}
+}
+
+type DeleteAiAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAiAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAiAppInvoker) Invoke() (*model.DeleteAiAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAiAppResponse), nil
+	}
+}
+
+type ListAiAppsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAiAppsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAiAppsInvoker) Invoke() (*model.ListAiAppsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAiAppsResponse), nil
+	}
+}
+
+type SetAiAppSettingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SetAiAppSettingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SetAiAppSettingInvoker) Invoke() (*model.SetAiAppSettingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SetAiAppSettingResponse), nil
+	}
+}
+
+type ShowAiAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAiAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAiAppInvoker) Invoke() (*model.ShowAiAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAiAppResponse), nil
+	}
+}
+
+type ShowAiAppSettingInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAiAppSettingInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAiAppSettingInvoker) Invoke() (*model.ShowAiAppSettingResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAiAppSettingResponse), nil
+	}
+}
+
+type UpdateAiAppInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAiAppInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAiAppInvoker) Invoke() (*model.UpdateAiAppResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAiAppResponse), nil
+	}
+}
+
+type UpdateAiAppPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAiAppPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAiAppPolicyInvoker) Invoke() (*model.UpdateAiAppPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAiAppPolicyResponse), nil
+	}
+}
+
+type UpdateAiAppProtectStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAiAppProtectStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAiAppProtectStatusInvoker) Invoke() (*model.UpdateAiAppProtectStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAiAppProtectStatusResponse), nil
+	}
+}
+
+type ListAiAppsLogsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAiAppsLogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAiAppsLogsInvoker) Invoke() (*model.ListAiAppsLogsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAiAppsLogsResponse), nil
+	}
+}
+
+type ShowAiGuardAttackDistributionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAiGuardAttackDistributionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAiGuardAttackDistributionInvoker) Invoke() (*model.ShowAiGuardAttackDistributionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAiGuardAttackDistributionResponse), nil
+	}
+}
+
+type ShowAiGuardRequestTimelineInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAiGuardRequestTimelineInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAiGuardRequestTimelineInvoker) Invoke() (*model.ShowAiGuardRequestTimelineResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAiGuardRequestTimelineResponse), nil
+	}
+}
+
+type ListAiGuardOverviewSummaryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAiGuardOverviewSummaryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAiGuardOverviewSummaryInvoker) Invoke() (*model.ListAiGuardOverviewSummaryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAiGuardOverviewSummaryResponse), nil
+	}
+}
+
+type BatchDeleteAiGuardPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteAiGuardPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteAiGuardPolicyInvoker) Invoke() (*model.BatchDeleteAiGuardPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteAiGuardPolicyResponse), nil
+	}
+}
+
+type BindAiAppsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BindAiAppsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BindAiAppsInvoker) Invoke() (*model.BindAiAppsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BindAiAppsResponse), nil
+	}
+}
+
+type CreateAiGuardPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAiGuardPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAiGuardPolicyInvoker) Invoke() (*model.CreateAiGuardPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAiGuardPolicyResponse), nil
+	}
+}
+
+type DeleteAiGuardPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAiGuardPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAiGuardPolicyInvoker) Invoke() (*model.DeleteAiGuardPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAiGuardPolicyResponse), nil
+	}
+}
+
+type ListAiGuardPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAiGuardPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAiGuardPolicyInvoker) Invoke() (*model.ListAiGuardPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAiGuardPolicyResponse), nil
+	}
+}
+
+type ShowAiGuardPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAiGuardPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAiGuardPolicyInvoker) Invoke() (*model.ShowAiGuardPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAiGuardPolicyResponse), nil
+	}
+}
+
+type UpdateAiGuardPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAiGuardPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAiGuardPolicyInvoker) Invoke() (*model.UpdateAiGuardPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAiGuardPolicyResponse), nil
+	}
+}
+
+type BatchDeleteAiGuardRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteAiGuardRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteAiGuardRuleInvoker) Invoke() (*model.BatchDeleteAiGuardRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteAiGuardRuleResponse), nil
+	}
+}
+
+type BatchUpdateAiGuardRuleStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateAiGuardRuleStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateAiGuardRuleStatusInvoker) Invoke() (*model.BatchUpdateAiGuardRuleStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateAiGuardRuleStatusResponse), nil
+	}
+}
+
+type CreateAiGuardRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAiGuardRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAiGuardRuleInvoker) Invoke() (*model.CreateAiGuardRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAiGuardRuleResponse), nil
+	}
+}
+
+type CreateAiguardTemplateRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAiguardTemplateRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAiguardTemplateRuleInvoker) Invoke() (*model.CreateAiguardTemplateRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAiguardTemplateRuleResponse), nil
+	}
+}
+
+type DeleteAiGuardRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAiGuardRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAiGuardRuleInvoker) Invoke() (*model.DeleteAiGuardRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAiGuardRuleResponse), nil
+	}
+}
+
+type ListAiGuardRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAiGuardRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAiGuardRuleInvoker) Invoke() (*model.ListAiGuardRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAiGuardRuleResponse), nil
+	}
+}
+
+type ShowAiGuardRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAiGuardRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAiGuardRuleInvoker) Invoke() (*model.ShowAiGuardRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAiGuardRuleResponse), nil
+	}
+}
+
+type UpdateAiGuardRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAiGuardRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAiGuardRuleInvoker) Invoke() (*model.UpdateAiGuardRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAiGuardRuleResponse), nil
+	}
+}
+
+type UpdateAiGuardRuleStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAiGuardRuleStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAiGuardRuleStatusInvoker) Invoke() (*model.UpdateAiGuardRuleStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAiGuardRuleStatusResponse), nil
+	}
+}
+
+type BatchDeleteCustomAnswersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteCustomAnswersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteCustomAnswersInvoker) Invoke() (*model.BatchDeleteCustomAnswersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteCustomAnswersResponse), nil
+	}
+}
+
+type CreateCustomAnswersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCustomAnswersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateCustomAnswersInvoker) Invoke() (*model.CreateCustomAnswersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCustomAnswersResponse), nil
+	}
+}
+
+type DeleteCustomAnswersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCustomAnswersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteCustomAnswersInvoker) Invoke() (*model.DeleteCustomAnswersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCustomAnswersResponse), nil
+	}
+}
+
+type ListCustomAnswersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCustomAnswersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCustomAnswersInvoker) Invoke() (*model.ListCustomAnswersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCustomAnswersResponse), nil
+	}
+}
+
+type ShowCustomAnswersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCustomAnswersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowCustomAnswersInvoker) Invoke() (*model.ShowCustomAnswersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCustomAnswersResponse), nil
+	}
+}
+
+type UpdateCustomAnswersInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateCustomAnswersInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateCustomAnswersInvoker) Invoke() (*model.UpdateCustomAnswersResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateCustomAnswersResponse), nil
+	}
+}
+
+type BatchDeleteCustomLlmInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteCustomLlmInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteCustomLlmInvoker) Invoke() (*model.BatchDeleteCustomLlmResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteCustomLlmResponse), nil
+	}
+}
+
+type CreateCustomLlmInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCustomLlmInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateCustomLlmInvoker) Invoke() (*model.CreateCustomLlmResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCustomLlmResponse), nil
+	}
+}
+
+type DeleteCustomLlmInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCustomLlmInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteCustomLlmInvoker) Invoke() (*model.DeleteCustomLlmResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCustomLlmResponse), nil
+	}
+}
+
+type ListCustomLlmInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCustomLlmInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCustomLlmInvoker) Invoke() (*model.ListCustomLlmResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCustomLlmResponse), nil
+	}
+}
+
+type ShowCustomLlmInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCustomLlmInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowCustomLlmInvoker) Invoke() (*model.ShowCustomLlmResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCustomLlmResponse), nil
+	}
+}
+
+type ShowPresignedUrlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowPresignedUrlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowPresignedUrlInvoker) Invoke() (*model.ShowPresignedUrlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowPresignedUrlResponse), nil
+	}
+}
+
+type UpdateCustomLlmInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateCustomLlmInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateCustomLlmInvoker) Invoke() (*model.UpdateCustomLlmResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateCustomLlmResponse), nil
+	}
+}
+
+type BatchCreateCcRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateCcRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateCcRuleInvoker) Invoke() (*model.BatchCreateCcRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateCcRuleResponse), nil
+	}
+}
+
+type BatchUpdateCcRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateCcRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateCcRulesInvoker) Invoke() (*model.BatchUpdateCcRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateCcRulesResponse), nil
+	}
+}
+
+type CreateCcRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCcRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateCcRuleInvoker) Invoke() (*model.CreateCcRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCcRuleResponse), nil
+	}
+}
+
+type DeleteCcRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCcRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteCcRuleInvoker) Invoke() (*model.DeleteCcRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCcRuleResponse), nil
+	}
+}
+
+type ListCcPolicyRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCcPolicyRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCcPolicyRulesInvoker) Invoke() (*model.ListCcPolicyRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCcPolicyRulesResponse), nil
+	}
+}
+
+type ListCcRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCcRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCcRulesInvoker) Invoke() (*model.ListCcRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCcRulesResponse), nil
+	}
+}
+
+type ShowCcRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCcRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowCcRuleInvoker) Invoke() (*model.ShowCcRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCcRuleResponse), nil
+	}
+}
+
+type UpdateCcRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateCcRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateCcRuleInvoker) Invoke() (*model.UpdateCcRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateCcRuleResponse), nil
+	}
+}
+
 type ConfirmDnsDomainInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3250,6 +4034,166 @@ func (i *CreateQuickAccessDomainInvoker) Invoke() (*model.CreateQuickAccessDomai
 		return nil, err
 	} else {
 		return result.(*model.CreateQuickAccessDomainResponse), nil
+	}
+}
+
+type CreateAnticrawlerRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAnticrawlerRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAnticrawlerRuleInvoker) Invoke() (*model.CreateAnticrawlerRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAnticrawlerRuleResponse), nil
+	}
+}
+
+type DeleteAnticrawlerRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAnticrawlerRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAnticrawlerRuleInvoker) Invoke() (*model.DeleteAnticrawlerRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAnticrawlerRuleResponse), nil
+	}
+}
+
+type ListAnticrawlerRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAnticrawlerRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAnticrawlerRulesInvoker) Invoke() (*model.ListAnticrawlerRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAnticrawlerRulesResponse), nil
+	}
+}
+
+type ShowAnticrawlerRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAnticrawlerRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAnticrawlerRuleInvoker) Invoke() (*model.ShowAnticrawlerRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAnticrawlerRuleResponse), nil
+	}
+}
+
+type UpdateAnticrawlerRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAnticrawlerRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAnticrawlerRuleInvoker) Invoke() (*model.UpdateAnticrawlerRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAnticrawlerRuleResponse), nil
+	}
+}
+
+type UpdateAnticrawlerRuleTypeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAnticrawlerRuleTypeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAnticrawlerRuleTypeInvoker) Invoke() (*model.UpdateAnticrawlerRuleTypeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAnticrawlerRuleTypeResponse), nil
+	}
+}
+
+type ShowAiGuardLtsConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAiGuardLtsConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAiGuardLtsConfigInvoker) Invoke() (*model.ShowAiGuardLtsConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAiGuardLtsConfigResponse), nil
+	}
+}
+
+type UpdateAiGuardLtsConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAiGuardLtsConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAiGuardLtsConfigInvoker) Invoke() (*model.UpdateAiGuardLtsConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAiGuardLtsConfigResponse), nil
+	}
+}
+
+type ListPiiCategoriesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListPiiCategoriesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListPiiCategoriesInvoker) Invoke() (*model.ListPiiCategoriesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListPiiCategoriesResponse), nil
+	}
+}
+
+type ListSystemLexiconsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSystemLexiconsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSystemLexiconsInvoker) Invoke() (*model.ListSystemLexiconsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSystemLexiconsResponse), nil
 	}
 }
 

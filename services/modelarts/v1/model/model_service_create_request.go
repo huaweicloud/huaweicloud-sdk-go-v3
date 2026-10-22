@@ -35,7 +35,7 @@ type ServiceCreateRequest struct {
 	LtsStrategy *string `json:"lts_strategy,omitempty"`
 
 	// **参数解释：** 服务日志配置。 **约束限制：** 数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
-	LogConfigs *[]LtsConfiguration `json:"log_configs,omitempty"`
+	LogConfigs *[]LtsConfigurationV2 `json:"log_configs,omitempty"`
 
 	// **参数解释：** 服务标签。 **约束限制：** 上限20个。
 	Tags *[]ServiceCreateRequestTags `json:"tags,omitempty"`

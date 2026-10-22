@@ -1,0 +1,20 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// ComputeName **参数解释**：计算资源名称。 **约束限制**：不涉及。 **取值范围**：支持小写字母、数字、中划线，必须字母开头、字母或数字结尾，长度为1~63个字符。 **默认取值**：不涉及。
+type ComputeName struct {
+}
+
+func (o ComputeName) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "ComputeName struct{}"
+	}
+
+	return strings.Join([]string{"ComputeName", string(data)}, " ")
+}

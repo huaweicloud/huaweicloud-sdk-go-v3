@@ -30,6 +30,9 @@ type UpdateAppInfoRequestBody struct {
 	// 创建类型，template：部署模板创建
 	CreateType UpdateAppInfoRequestBodyCreateType `json:"create_type"`
 
+	// 分组id
+	GroupId *string `json:"group_id,omitempty"`
+
 	// 自定义slave资源池id
 	SlaveClusterId *string `json:"slave_cluster_id,omitempty"`
 
@@ -37,6 +40,15 @@ type UpdateAppInfoRequestBody struct {
 
 	// 部署任务列表信息
 	ArrangeInfos *[]UpdateTaskV2RequestBody `json:"arrange_infos,omitempty"`
+
+	// 委托URN
+	AgencyUrn *string `json:"agency_urn,omitempty"`
+
+	// 资源池类型
+	SlaveResourceType *string `json:"slave_resource_type,omitempty"`
+
+	// 任务执行超时时间
+	Timeout *int32 `json:"timeout,omitempty"`
 }
 
 func (o UpdateAppInfoRequestBody) String() string {

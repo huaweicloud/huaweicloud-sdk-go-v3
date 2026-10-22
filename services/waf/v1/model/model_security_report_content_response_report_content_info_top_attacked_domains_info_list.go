@@ -16,6 +16,9 @@ type SecurityReportContentResponseReportContentInfoTopAttackedDomainsInfoList st
 
 	// **参数解释：** 域名的Web标签，用于标识域名所属业务类型。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	WebTag *string `json:"web_tag,omitempty"`
+
+	// **参数解释：** 域名标识，包含域名及关联标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	Host *string `json:"host,omitempty"`
 }
 
 func (o SecurityReportContentResponseReportContentInfoTopAttackedDomainsInfoList) String() string {

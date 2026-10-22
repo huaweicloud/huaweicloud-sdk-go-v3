@@ -13,6 +13,9 @@ type SecurityReportContentResponseReportContentInfoAttackTypeDistributionInfoLis
 
 	// **参数解释：** 该攻击类型的总数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
 	Num *int32 `json:"num,omitempty"`
+
+	// **参数解释：** 该攻击类型的详细分布信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	Detail *[]SecurityReportContentResponseReportContentInfoDetail `json:"detail,omitempty"`
 }
 
 func (o SecurityReportContentResponseReportContentInfoAttackTypeDistributionInfoList) String() string {

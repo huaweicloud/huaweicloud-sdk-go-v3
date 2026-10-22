@@ -19,6 +19,909 @@ func AIDataLakeClientBuilder() *httpclient.HcHttpClientBuilder {
 	return builder
 }
 
+// AddV2TenantImageVersion 添加自定义镜像版本
+//
+// 为已有镜像添加新版本。用户通过该接口为已注册的镜像添加新的版本。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) AddV2TenantImageVersion(request *model.AddV2TenantImageVersionRequest) (*model.AddV2TenantImageVersionResponse, error) {
+	requestDef := GenReqDefForAddV2TenantImageVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddV2TenantImageVersionResponse), nil
+	}
+}
+
+// AddV2TenantImageVersionInvoker 添加自定义镜像版本
+func (c *AIDataLakeClient) AddV2TenantImageVersionInvoker(request *model.AddV2TenantImageVersionRequest) *AddV2TenantImageVersionInvoker {
+	requestDef := GenReqDefForAddV2TenantImageVersion()
+	return &AddV2TenantImageVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// AttachV2AgencyPolicy 附加策略
+//
+// 为委托附加策略。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) AttachV2AgencyPolicy(request *model.AttachV2AgencyPolicyRequest) (*model.AttachV2AgencyPolicyResponse, error) {
+	requestDef := GenReqDefForAttachV2AgencyPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AttachV2AgencyPolicyResponse), nil
+	}
+}
+
+// AttachV2AgencyPolicyInvoker 附加策略
+func (c *AIDataLakeClient) AttachV2AgencyPolicyInvoker(request *model.AttachV2AgencyPolicyRequest) *AttachV2AgencyPolicyInvoker {
+	requestDef := GenReqDefForAttachV2AgencyPolicy()
+	return &AttachV2AgencyPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateV2Agency 创建服务委托
+//
+// 创建服务委托，将指定权限策略授权给AI DataLake服务。用户可通过传入支持的委托权限策略，选择性地授予相应权限。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) CreateV2Agency(request *model.CreateV2AgencyRequest) (*model.CreateV2AgencyResponse, error) {
+	requestDef := GenReqDefForCreateV2Agency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateV2AgencyResponse), nil
+	}
+}
+
+// CreateV2AgencyInvoker 创建服务委托
+func (c *AIDataLakeClient) CreateV2AgencyInvoker(request *model.CreateV2AgencyRequest) *CreateV2AgencyInvoker {
+	requestDef := GenReqDefForCreateV2Agency()
+	return &CreateV2AgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateV2Compute 创建计算资源
+//
+// 创建计算资源。此接口为异步接口，可通过[查询计算资源操作记录列表](ListV2ComputeVersions.xml)接口获取操作结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) CreateV2Compute(request *model.CreateV2ComputeRequest) (*model.CreateV2ComputeResponse, error) {
+	requestDef := GenReqDefForCreateV2Compute()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateV2ComputeResponse), nil
+	}
+}
+
+// CreateV2ComputeInvoker 创建计算资源
+func (c *AIDataLakeClient) CreateV2ComputeInvoker(request *model.CreateV2ComputeRequest) *CreateV2ComputeInvoker {
+	requestDef := GenReqDefForCreateV2Compute()
+	return &CreateV2ComputeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateV2Endpoint 创建端点
+//
+// 在工作空间下创建端点。此接口为异步接口，可通过[查询端点详情](ShowV2Endpoint.xml)接口获取操作结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) CreateV2Endpoint(request *model.CreateV2EndpointRequest) (*model.CreateV2EndpointResponse, error) {
+	requestDef := GenReqDefForCreateV2Endpoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateV2EndpointResponse), nil
+	}
+}
+
+// CreateV2EndpointInvoker 创建端点
+func (c *AIDataLakeClient) CreateV2EndpointInvoker(request *model.CreateV2EndpointRequest) *CreateV2EndpointInvoker {
+	requestDef := GenReqDefForCreateV2Endpoint()
+	return &CreateV2EndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateV2Network 创建网络配置
+//
+// 创建网络配置，该工作空间下的资源都将使用该网络配置。此接口是同步接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) CreateV2Network(request *model.CreateV2NetworkRequest) (*model.CreateV2NetworkResponse, error) {
+	requestDef := GenReqDefForCreateV2Network()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateV2NetworkResponse), nil
+	}
+}
+
+// CreateV2NetworkInvoker 创建网络配置
+func (c *AIDataLakeClient) CreateV2NetworkInvoker(request *model.CreateV2NetworkRequest) *CreateV2NetworkInvoker {
+	requestDef := GenReqDefForCreateV2Network()
+	return &CreateV2NetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateV2TenantImageSnapshot 创建镜像快照
+//
+// 为指定镜像版本创建快照。此接口为异步接口，一个镜像版本最多创建一个快照，创建后状态为Creating，可通过[查询镜像快照列表](ListV2TenantImageSnapshots.xml)获得镜像快照创建结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) CreateV2TenantImageSnapshot(request *model.CreateV2TenantImageSnapshotRequest) (*model.CreateV2TenantImageSnapshotResponse, error) {
+	requestDef := GenReqDefForCreateV2TenantImageSnapshot()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateV2TenantImageSnapshotResponse), nil
+	}
+}
+
+// CreateV2TenantImageSnapshotInvoker 创建镜像快照
+func (c *AIDataLakeClient) CreateV2TenantImageSnapshotInvoker(request *model.CreateV2TenantImageSnapshotRequest) *CreateV2TenantImageSnapshotInvoker {
+	requestDef := GenReqDefForCreateV2TenantImageSnapshot()
+	return &CreateV2TenantImageSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateV2Workspace 创建工作空间
+//
+// 创建工作空间。创建工作空间接口存在同名校验，不支持创建重复名称的工作空间，并且同一账户下最多可创建5个工作空间。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) CreateV2Workspace(request *model.CreateV2WorkspaceRequest) (*model.CreateV2WorkspaceResponse, error) {
+	requestDef := GenReqDefForCreateV2Workspace()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateV2WorkspaceResponse), nil
+	}
+}
+
+// CreateV2WorkspaceInvoker 创建工作空间
+func (c *AIDataLakeClient) CreateV2WorkspaceInvoker(request *model.CreateV2WorkspaceRequest) *CreateV2WorkspaceInvoker {
+	requestDef := GenReqDefForCreateV2Workspace()
+	return &CreateV2WorkspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteV2Agency 删除服务委托
+//
+// 取消授权给AI DataLake服务的委托。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) DeleteV2Agency(request *model.DeleteV2AgencyRequest) (*model.DeleteV2AgencyResponse, error) {
+	requestDef := GenReqDefForDeleteV2Agency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteV2AgencyResponse), nil
+	}
+}
+
+// DeleteV2AgencyInvoker 删除服务委托
+func (c *AIDataLakeClient) DeleteV2AgencyInvoker(request *model.DeleteV2AgencyRequest) *DeleteV2AgencyInvoker {
+	requestDef := GenReqDefForDeleteV2Agency()
+	return &DeleteV2AgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteV2Agreement 删除用户签署协议
+//
+// 删除用户签署的协议。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) DeleteV2Agreement(request *model.DeleteV2AgreementRequest) (*model.DeleteV2AgreementResponse, error) {
+	requestDef := GenReqDefForDeleteV2Agreement()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteV2AgreementResponse), nil
+	}
+}
+
+// DeleteV2AgreementInvoker 删除用户签署协议
+func (c *AIDataLakeClient) DeleteV2AgreementInvoker(request *model.DeleteV2AgreementRequest) *DeleteV2AgreementInvoker {
+	requestDef := GenReqDefForDeleteV2Agreement()
+	return &DeleteV2AgreementInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteV2Compute 删除计算资源
+//
+// 删除计算资源，通过输入计算资源ID，返回操作结果。此接口为异步接口，可通过[查询计算资源操作记录列表](ListV2ComputeVersions.xml)接口获取操作结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) DeleteV2Compute(request *model.DeleteV2ComputeRequest) (*model.DeleteV2ComputeResponse, error) {
+	requestDef := GenReqDefForDeleteV2Compute()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteV2ComputeResponse), nil
+	}
+}
+
+// DeleteV2ComputeInvoker 删除计算资源
+func (c *AIDataLakeClient) DeleteV2ComputeInvoker(request *model.DeleteV2ComputeRequest) *DeleteV2ComputeInvoker {
+	requestDef := GenReqDefForDeleteV2Compute()
+	return &DeleteV2ComputeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteV2Endpoint 删除端点
+//
+// 删除端点。此接口为异步接口，可通过[查询端点详情](ShowV2Endpoint.xml)接口获取操作结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) DeleteV2Endpoint(request *model.DeleteV2EndpointRequest) (*model.DeleteV2EndpointResponse, error) {
+	requestDef := GenReqDefForDeleteV2Endpoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteV2EndpointResponse), nil
+	}
+}
+
+// DeleteV2EndpointInvoker 删除端点
+func (c *AIDataLakeClient) DeleteV2EndpointInvoker(request *model.DeleteV2EndpointRequest) *DeleteV2EndpointInvoker {
+	requestDef := GenReqDefForDeleteV2Endpoint()
+	return &DeleteV2EndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteV2TenantImage 删除镜像下所有版本
+//
+// 删除指定镜像下的所有版本。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) DeleteV2TenantImage(request *model.DeleteV2TenantImageRequest) (*model.DeleteV2TenantImageResponse, error) {
+	requestDef := GenReqDefForDeleteV2TenantImage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteV2TenantImageResponse), nil
+	}
+}
+
+// DeleteV2TenantImageInvoker 删除镜像下所有版本
+func (c *AIDataLakeClient) DeleteV2TenantImageInvoker(request *model.DeleteV2TenantImageRequest) *DeleteV2TenantImageInvoker {
+	requestDef := GenReqDefForDeleteV2TenantImage()
+	return &DeleteV2TenantImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteV2TenantImageSnapshot 删除镜像快照
+//
+// 删除指定的镜像快照。创建中的快照不允许删除。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) DeleteV2TenantImageSnapshot(request *model.DeleteV2TenantImageSnapshotRequest) (*model.DeleteV2TenantImageSnapshotResponse, error) {
+	requestDef := GenReqDefForDeleteV2TenantImageSnapshot()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteV2TenantImageSnapshotResponse), nil
+	}
+}
+
+// DeleteV2TenantImageSnapshotInvoker 删除镜像快照
+func (c *AIDataLakeClient) DeleteV2TenantImageSnapshotInvoker(request *model.DeleteV2TenantImageSnapshotRequest) *DeleteV2TenantImageSnapshotInvoker {
+	requestDef := GenReqDefForDeleteV2TenantImageSnapshot()
+	return &DeleteV2TenantImageSnapshotInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteV2TenantImageVersion 删除指定镜像版本
+//
+// 删除指定镜像版本。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) DeleteV2TenantImageVersion(request *model.DeleteV2TenantImageVersionRequest) (*model.DeleteV2TenantImageVersionResponse, error) {
+	requestDef := GenReqDefForDeleteV2TenantImageVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteV2TenantImageVersionResponse), nil
+	}
+}
+
+// DeleteV2TenantImageVersionInvoker 删除指定镜像版本
+func (c *AIDataLakeClient) DeleteV2TenantImageVersionInvoker(request *model.DeleteV2TenantImageVersionRequest) *DeleteV2TenantImageVersionInvoker {
+	requestDef := GenReqDefForDeleteV2TenantImageVersion()
+	return &DeleteV2TenantImageVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteV2Workspace 删除工作空间
+//
+// 删除工作空间。此接口为同步接口，无配套使用接口。在该工作空间下存在计算资源、端点以及App的情况下无法删除，需要先清除该工作空间下创建的各种资源后才能删除。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) DeleteV2Workspace(request *model.DeleteV2WorkspaceRequest) (*model.DeleteV2WorkspaceResponse, error) {
+	requestDef := GenReqDefForDeleteV2Workspace()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteV2WorkspaceResponse), nil
+	}
+}
+
+// DeleteV2WorkspaceInvoker 删除工作空间
+func (c *AIDataLakeClient) DeleteV2WorkspaceInvoker(request *model.DeleteV2WorkspaceRequest) *DeleteV2WorkspaceInvoker {
+	requestDef := GenReqDefForDeleteV2Workspace()
+	return &DeleteV2WorkspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DetachV2AgencyPolicy 移除策略
+//
+// 为委托移除关联策略。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) DetachV2AgencyPolicy(request *model.DetachV2AgencyPolicyRequest) (*model.DetachV2AgencyPolicyResponse, error) {
+	requestDef := GenReqDefForDetachV2AgencyPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DetachV2AgencyPolicyResponse), nil
+	}
+}
+
+// DetachV2AgencyPolicyInvoker 移除策略
+func (c *AIDataLakeClient) DetachV2AgencyPolicyInvoker(request *model.DetachV2AgencyPolicyRequest) *DetachV2AgencyPolicyInvoker {
+	requestDef := GenReqDefForDetachV2AgencyPolicy()
+	return &DetachV2AgencyPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListV2AgreementRule 查询系统协议
+//
+// 查询系统内置的租户协议内容列表，用户可从中了解协议名称、版本等信息。该接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ListV2AgreementRule(request *model.ListV2AgreementRuleRequest) (*model.ListV2AgreementRuleResponse, error) {
+	requestDef := GenReqDefForListV2AgreementRule()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListV2AgreementRuleResponse), nil
+	}
+}
+
+// ListV2AgreementRuleInvoker 查询系统协议
+func (c *AIDataLakeClient) ListV2AgreementRuleInvoker(request *model.ListV2AgreementRuleRequest) *ListV2AgreementRuleInvoker {
+	requestDef := GenReqDefForListV2AgreementRule()
+	return &ListV2AgreementRuleInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListV2AllEndpoints 查询所有端点列表
+//
+// 列举该租户所有端点列表。此接口为同步接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ListV2AllEndpoints(request *model.ListV2AllEndpointsRequest) (*model.ListV2AllEndpointsResponse, error) {
+	requestDef := GenReqDefForListV2AllEndpoints()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListV2AllEndpointsResponse), nil
+	}
+}
+
+// ListV2AllEndpointsInvoker 查询所有端点列表
+func (c *AIDataLakeClient) ListV2AllEndpointsInvoker(request *model.ListV2AllEndpointsRequest) *ListV2AllEndpointsInvoker {
+	requestDef := GenReqDefForListV2AllEndpoints()
+	return &ListV2AllEndpointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListV2ComputeVersions 查询计算资源操作记录列表
+//
+// 查询计算资源操作记录列表。此接口为同步接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ListV2ComputeVersions(request *model.ListV2ComputeVersionsRequest) (*model.ListV2ComputeVersionsResponse, error) {
+	requestDef := GenReqDefForListV2ComputeVersions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListV2ComputeVersionsResponse), nil
+	}
+}
+
+// ListV2ComputeVersionsInvoker 查询计算资源操作记录列表
+func (c *AIDataLakeClient) ListV2ComputeVersionsInvoker(request *model.ListV2ComputeVersionsRequest) *ListV2ComputeVersionsInvoker {
+	requestDef := GenReqDefForListV2ComputeVersions()
+	return &ListV2ComputeVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListV2Computes 查询计算资源列表
+//
+// 查询工作空间下的计算资源列表。此接口为同步接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ListV2Computes(request *model.ListV2ComputesRequest) (*model.ListV2ComputesResponse, error) {
+	requestDef := GenReqDefForListV2Computes()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListV2ComputesResponse), nil
+	}
+}
+
+// ListV2ComputesInvoker 查询计算资源列表
+func (c *AIDataLakeClient) ListV2ComputesInvoker(request *model.ListV2ComputesRequest) *ListV2ComputesInvoker {
+	requestDef := GenReqDefForListV2Computes()
+	return &ListV2ComputesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListV2Endpoints 查询端点列表
+//
+// 列举工作空间下的端点列表。用户可使用该接口列举指定工作空间下的端点列表，支持输入名称、id等参数过滤，支持分页查询。此接口为同步接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ListV2Endpoints(request *model.ListV2EndpointsRequest) (*model.ListV2EndpointsResponse, error) {
+	requestDef := GenReqDefForListV2Endpoints()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListV2EndpointsResponse), nil
+	}
+}
+
+// ListV2EndpointsInvoker 查询端点列表
+func (c *AIDataLakeClient) ListV2EndpointsInvoker(request *model.ListV2EndpointsRequest) *ListV2EndpointsInvoker {
+	requestDef := GenReqDefForListV2Endpoints()
+	return &ListV2EndpointsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListV2Networks 查询网络配置列表
+//
+// 查询工作空间下的网络配置列表。接口支持分页查询。此接口为同步接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ListV2Networks(request *model.ListV2NetworksRequest) (*model.ListV2NetworksResponse, error) {
+	requestDef := GenReqDefForListV2Networks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListV2NetworksResponse), nil
+	}
+}
+
+// ListV2NetworksInvoker 查询网络配置列表
+func (c *AIDataLakeClient) ListV2NetworksInvoker(request *model.ListV2NetworksRequest) *ListV2NetworksInvoker {
+	requestDef := GenReqDefForListV2Networks()
+	return &ListV2NetworksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListV2TenantImageSnapshots 查询镜像快照列表
+//
+// 查询当前租户下的全部镜像快照列表。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ListV2TenantImageSnapshots(request *model.ListV2TenantImageSnapshotsRequest) (*model.ListV2TenantImageSnapshotsResponse, error) {
+	requestDef := GenReqDefForListV2TenantImageSnapshots()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListV2TenantImageSnapshotsResponse), nil
+	}
+}
+
+// ListV2TenantImageSnapshotsInvoker 查询镜像快照列表
+func (c *AIDataLakeClient) ListV2TenantImageSnapshotsInvoker(request *model.ListV2TenantImageSnapshotsRequest) *ListV2TenantImageSnapshotsInvoker {
+	requestDef := GenReqDefForListV2TenantImageSnapshots()
+	return &ListV2TenantImageSnapshotsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListV2TenantImageVersions 查询自定义镜像版本列表
+//
+// 查询自定义镜像版本列表。用户可查询指定镜像下的所有版本信息。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ListV2TenantImageVersions(request *model.ListV2TenantImageVersionsRequest) (*model.ListV2TenantImageVersionsResponse, error) {
+	requestDef := GenReqDefForListV2TenantImageVersions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListV2TenantImageVersionsResponse), nil
+	}
+}
+
+// ListV2TenantImageVersionsInvoker 查询自定义镜像版本列表
+func (c *AIDataLakeClient) ListV2TenantImageVersionsInvoker(request *model.ListV2TenantImageVersionsRequest) *ListV2TenantImageVersionsInvoker {
+	requestDef := GenReqDefForListV2TenantImageVersions()
+	return &ListV2TenantImageVersionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListV2TenantImages 查询自定义镜像列表。
+//
+// 查询自定义镜像列表。用户可查询已创建的自定义镜像列表。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ListV2TenantImages(request *model.ListV2TenantImagesRequest) (*model.ListV2TenantImagesResponse, error) {
+	requestDef := GenReqDefForListV2TenantImages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListV2TenantImagesResponse), nil
+	}
+}
+
+// ListV2TenantImagesInvoker 查询自定义镜像列表。
+func (c *AIDataLakeClient) ListV2TenantImagesInvoker(request *model.ListV2TenantImagesRequest) *ListV2TenantImagesInvoker {
+	requestDef := GenReqDefForListV2TenantImages()
+	return &ListV2TenantImagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListV2Workspaces 查询工作空间列表
+//
+// 查询工作空间列表。此接口为同步接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ListV2Workspaces(request *model.ListV2WorkspacesRequest) (*model.ListV2WorkspacesResponse, error) {
+	requestDef := GenReqDefForListV2Workspaces()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListV2WorkspacesResponse), nil
+	}
+}
+
+// ListV2WorkspacesInvoker 查询工作空间列表
+func (c *AIDataLakeClient) ListV2WorkspacesInvoker(request *model.ListV2WorkspacesRequest) *ListV2WorkspacesInvoker {
+	requestDef := GenReqDefForListV2Workspaces()
+	return &ListV2WorkspacesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RegisterV2TenantImage 注册自定义镜像
+//
+// 注册自定义镜像。用户通过该接口将外部镜像仓库中的镜像注册到租户中，以便后续使用。与[添加自定义镜像版本](AddV2ImageVersion.xml)接口配合完成镜像版本的添加。此接口为同步接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) RegisterV2TenantImage(request *model.RegisterV2TenantImageRequest) (*model.RegisterV2TenantImageResponse, error) {
+	requestDef := GenReqDefForRegisterV2TenantImage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RegisterV2TenantImageResponse), nil
+	}
+}
+
+// RegisterV2TenantImageInvoker 注册自定义镜像
+func (c *AIDataLakeClient) RegisterV2TenantImageInvoker(request *model.RegisterV2TenantImageRequest) *RegisterV2TenantImageInvoker {
+	requestDef := GenReqDefForRegisterV2TenantImage()
+	return &RegisterV2TenantImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowV2Agency 查询服务委托
+//
+// 查询授权给AI DataLake服务的委托。用户调用该接口查询已授权给AI DataLake的委托，以及委托中具体的权限内容。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ShowV2Agency(request *model.ShowV2AgencyRequest) (*model.ShowV2AgencyResponse, error) {
+	requestDef := GenReqDefForShowV2Agency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowV2AgencyResponse), nil
+	}
+}
+
+// ShowV2AgencyInvoker 查询服务委托
+func (c *AIDataLakeClient) ShowV2AgencyInvoker(request *model.ShowV2AgencyRequest) *ShowV2AgencyInvoker {
+	requestDef := GenReqDefForShowV2Agency()
+	return &ShowV2AgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowV2Agreement 查询用户是否签署协议
+//
+// 查询用户是否签署协议。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ShowV2Agreement(request *model.ShowV2AgreementRequest) (*model.ShowV2AgreementResponse, error) {
+	requestDef := GenReqDefForShowV2Agreement()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowV2AgreementResponse), nil
+	}
+}
+
+// ShowV2AgreementInvoker 查询用户是否签署协议
+func (c *AIDataLakeClient) ShowV2AgreementInvoker(request *model.ShowV2AgreementRequest) *ShowV2AgreementInvoker {
+	requestDef := GenReqDefForShowV2Agreement()
+	return &ShowV2AgreementInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowV2Compute 查看计算资源详情
+//
+// 查看指定计算资源的详细信息。此接口为同步接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ShowV2Compute(request *model.ShowV2ComputeRequest) (*model.ShowV2ComputeResponse, error) {
+	requestDef := GenReqDefForShowV2Compute()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowV2ComputeResponse), nil
+	}
+}
+
+// ShowV2ComputeInvoker 查看计算资源详情
+func (c *AIDataLakeClient) ShowV2ComputeInvoker(request *model.ShowV2ComputeRequest) *ShowV2ComputeInvoker {
+	requestDef := GenReqDefForShowV2Compute()
+	return &ShowV2ComputeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowV2ComputesMetrics 查询资源池监控
+//
+// 查询资源池监控CPU、MEM、NPU、GPU数据。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ShowV2ComputesMetrics(request *model.ShowV2ComputesMetricsRequest) (*model.ShowV2ComputesMetricsResponse, error) {
+	requestDef := GenReqDefForShowV2ComputesMetrics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowV2ComputesMetricsResponse), nil
+	}
+}
+
+// ShowV2ComputesMetricsInvoker 查询资源池监控
+func (c *AIDataLakeClient) ShowV2ComputesMetricsInvoker(request *model.ShowV2ComputesMetricsRequest) *ShowV2ComputesMetricsInvoker {
+	requestDef := GenReqDefForShowV2ComputesMetrics()
+	return &ShowV2ComputesMetricsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowV2Endpoint 查询端点详情
+//
+// 列举工作空间下的端点详情。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ShowV2Endpoint(request *model.ShowV2EndpointRequest) (*model.ShowV2EndpointResponse, error) {
+	requestDef := GenReqDefForShowV2Endpoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowV2EndpointResponse), nil
+	}
+}
+
+// ShowV2EndpointInvoker 查询端点详情
+func (c *AIDataLakeClient) ShowV2EndpointInvoker(request *model.ShowV2EndpointRequest) *ShowV2EndpointInvoker {
+	requestDef := GenReqDefForShowV2Endpoint()
+	return &ShowV2EndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowV2EndpointResourceLimit 查询端点配置限制
+//
+// 查询指定资源池各规格的端点配置限制。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ShowV2EndpointResourceLimit(request *model.ShowV2EndpointResourceLimitRequest) (*model.ShowV2EndpointResourceLimitResponse, error) {
+	requestDef := GenReqDefForShowV2EndpointResourceLimit()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowV2EndpointResourceLimitResponse), nil
+	}
+}
+
+// ShowV2EndpointResourceLimitInvoker 查询端点配置限制
+func (c *AIDataLakeClient) ShowV2EndpointResourceLimitInvoker(request *model.ShowV2EndpointResourceLimitRequest) *ShowV2EndpointResourceLimitInvoker {
+	requestDef := GenReqDefForShowV2EndpointResourceLimit()
+	return &ShowV2EndpointResourceLimitInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowV2EndpointsMetrics 查询端点监控
+//
+// 查询端点CPU、MEM、NPU、GPU监控数据。此接口为同步接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ShowV2EndpointsMetrics(request *model.ShowV2EndpointsMetricsRequest) (*model.ShowV2EndpointsMetricsResponse, error) {
+	requestDef := GenReqDefForShowV2EndpointsMetrics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowV2EndpointsMetricsResponse), nil
+	}
+}
+
+// ShowV2EndpointsMetricsInvoker 查询端点监控
+func (c *AIDataLakeClient) ShowV2EndpointsMetricsInvoker(request *model.ShowV2EndpointsMetricsRequest) *ShowV2EndpointsMetricsInvoker {
+	requestDef := GenReqDefForShowV2EndpointsMetrics()
+	return &ShowV2EndpointsMetricsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowV2TenantImage 查询镜像详情
+//
+// 查询指定镜像的详细信息。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ShowV2TenantImage(request *model.ShowV2TenantImageRequest) (*model.ShowV2TenantImageResponse, error) {
+	requestDef := GenReqDefForShowV2TenantImage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowV2TenantImageResponse), nil
+	}
+}
+
+// ShowV2TenantImageInvoker 查询镜像详情
+func (c *AIDataLakeClient) ShowV2TenantImageInvoker(request *model.ShowV2TenantImageRequest) *ShowV2TenantImageInvoker {
+	requestDef := GenReqDefForShowV2TenantImage()
+	return &ShowV2TenantImageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowV2TenantImageVersion 查询自定义镜像版本
+//
+// 查询自定义镜像版本。用户可查询指定镜像版本的详细信息。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ShowV2TenantImageVersion(request *model.ShowV2TenantImageVersionRequest) (*model.ShowV2TenantImageVersionResponse, error) {
+	requestDef := GenReqDefForShowV2TenantImageVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowV2TenantImageVersionResponse), nil
+	}
+}
+
+// ShowV2TenantImageVersionInvoker 查询自定义镜像版本
+func (c *AIDataLakeClient) ShowV2TenantImageVersionInvoker(request *model.ShowV2TenantImageVersionRequest) *ShowV2TenantImageVersionInvoker {
+	requestDef := GenReqDefForShowV2TenantImageVersion()
+	return &ShowV2TenantImageVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowV2Workspace 查询工作空间详细信息
+//
+// 查询工作空间详细信息。用户可通过该接口查询某工作空间详情，输入为工作空间ID，返回对应工作空间详情。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ShowV2Workspace(request *model.ShowV2WorkspaceRequest) (*model.ShowV2WorkspaceResponse, error) {
+	requestDef := GenReqDefForShowV2Workspace()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowV2WorkspaceResponse), nil
+	}
+}
+
+// ShowV2WorkspaceInvoker 查询工作空间详细信息
+func (c *AIDataLakeClient) ShowV2WorkspaceInvoker(request *model.ShowV2WorkspaceRequest) *ShowV2WorkspaceInvoker {
+	requestDef := GenReqDefForShowV2Workspace()
+	return &ShowV2WorkspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SignV2Agreement 签署租户协议
+//
+// 签署租户协议，用户通过该接口签署租户协议。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) SignV2Agreement(request *model.SignV2AgreementRequest) (*model.SignV2AgreementResponse, error) {
+	requestDef := GenReqDefForSignV2Agreement()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SignV2AgreementResponse), nil
+	}
+}
+
+// SignV2AgreementInvoker 签署租户协议
+func (c *AIDataLakeClient) SignV2AgreementInvoker(request *model.SignV2AgreementRequest) *SignV2AgreementInvoker {
+	requestDef := GenReqDefForSignV2Agreement()
+	return &SignV2AgreementInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateV2Compute 更新计算资源
+//
+// 更新指定计算资源的配置信息。此接口为异步接口，可通过[查询计算资源操作记录列表](ListV2ComputeVersions.xml)接口获取操作结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) UpdateV2Compute(request *model.UpdateV2ComputeRequest) (*model.UpdateV2ComputeResponse, error) {
+	requestDef := GenReqDefForUpdateV2Compute()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateV2ComputeResponse), nil
+	}
+}
+
+// UpdateV2ComputeInvoker 更新计算资源
+func (c *AIDataLakeClient) UpdateV2ComputeInvoker(request *model.UpdateV2ComputeRequest) *UpdateV2ComputeInvoker {
+	requestDef := GenReqDefForUpdateV2Compute()
+	return &UpdateV2ComputeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateV2Endpoint 更新端点
+//
+// 更新端点。此接口为异步接口，可通过[查询端点详情](ShowV2Endpoint.xml)接口获取操作结果。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) UpdateV2Endpoint(request *model.UpdateV2EndpointRequest) (*model.UpdateV2EndpointResponse, error) {
+	requestDef := GenReqDefForUpdateV2Endpoint()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateV2EndpointResponse), nil
+	}
+}
+
+// UpdateV2EndpointInvoker 更新端点
+func (c *AIDataLakeClient) UpdateV2EndpointInvoker(request *model.UpdateV2EndpointRequest) *UpdateV2EndpointInvoker {
+	requestDef := GenReqDefForUpdateV2Endpoint()
+	return &UpdateV2EndpointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateV2TenantImageVersion 更新自定义镜像版本
+//
+// 更新自定义镜像版本信息。用户通过该接口更新指定镜像版本的描述、架构、容器软件、分类等信息。与[注册自定义镜像](RegisterV2Image.xml)接口配合完成镜像版本管理。此接口为同步接口。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) UpdateV2TenantImageVersion(request *model.UpdateV2TenantImageVersionRequest) (*model.UpdateV2TenantImageVersionResponse, error) {
+	requestDef := GenReqDefForUpdateV2TenantImageVersion()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateV2TenantImageVersionResponse), nil
+	}
+}
+
+// UpdateV2TenantImageVersionInvoker 更新自定义镜像版本
+func (c *AIDataLakeClient) UpdateV2TenantImageVersionInvoker(request *model.UpdateV2TenantImageVersionRequest) *UpdateV2TenantImageVersionInvoker {
+	requestDef := GenReqDefForUpdateV2TenantImageVersion()
+	return &UpdateV2TenantImageVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateV2Workspace 更新工作空间
+//
+// 更新工作空间。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) UpdateV2Workspace(request *model.UpdateV2WorkspaceRequest) (*model.UpdateV2WorkspaceResponse, error) {
+	requestDef := GenReqDefForUpdateV2Workspace()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateV2WorkspaceResponse), nil
+	}
+}
+
+// UpdateV2WorkspaceInvoker 更新工作空间
+func (c *AIDataLakeClient) UpdateV2WorkspaceInvoker(request *model.UpdateV2WorkspaceRequest) *UpdateV2WorkspaceInvoker {
+	requestDef := GenReqDefForUpdateV2Workspace()
+	return &UpdateV2WorkspaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CancelAuraDataframeJob 取消Aura Dataframe Job
 //
 // 取消正在运行中的Dataframe Job。
@@ -289,7 +1192,7 @@ func (c *AIDataLakeClient) ShowAuraSqlSessionInvoker(request *model.ShowAuraSqlS
 	return &ShowAuraSqlSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowAuraSqlStatementResult 查看SQL执行结果。
+// ShowAuraSqlStatementResult 查看SQL执行结果
 //
 // 查询SQL语句执行结果。
 // 用户可通过该接口查询SQL语句执行结果，输入为SQL Session id、statement id，返回执行结果。
@@ -306,7 +1209,7 @@ func (c *AIDataLakeClient) ShowAuraSqlStatementResult(request *model.ShowAuraSql
 	}
 }
 
-// ShowAuraSqlStatementResultInvoker 查看SQL执行结果。
+// ShowAuraSqlStatementResultInvoker 查看SQL执行结果
 func (c *AIDataLakeClient) ShowAuraSqlStatementResultInvoker(request *model.ShowAuraSqlStatementResultRequest) *ShowAuraSqlStatementResultInvoker {
 	requestDef := GenReqDefForShowAuraSqlStatementResult()
 	return &ShowAuraSqlStatementResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -643,109 +1546,109 @@ func (c *AIDataLakeClient) ShowFlinkSavepointInvoker(request *model.ShowFlinkSav
 	return &ShowFlinkSavepointInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateFederation 创建Ray联邦端点
+// CreateV2RayFederation 创建Ray联邦端点
 //
 // 创建Ray联邦端点。此接口为同步接口。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *AIDataLakeClient) CreateFederation(request *model.CreateFederationRequest) (*model.CreateFederationResponse, error) {
-	requestDef := GenReqDefForCreateFederation()
+func (c *AIDataLakeClient) CreateV2RayFederation(request *model.CreateV2RayFederationRequest) (*model.CreateV2RayFederationResponse, error) {
+	requestDef := GenReqDefForCreateV2RayFederation()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.CreateFederationResponse), nil
+		return resp.(*model.CreateV2RayFederationResponse), nil
 	}
 }
 
-// CreateFederationInvoker 创建Ray联邦端点
-func (c *AIDataLakeClient) CreateFederationInvoker(request *model.CreateFederationRequest) *CreateFederationInvoker {
-	requestDef := GenReqDefForCreateFederation()
-	return &CreateFederationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// CreateV2RayFederationInvoker 创建Ray联邦端点
+func (c *AIDataLakeClient) CreateV2RayFederationInvoker(request *model.CreateV2RayFederationRequest) *CreateV2RayFederationInvoker {
+	requestDef := GenReqDefForCreateV2RayFederation()
+	return &CreateV2RayFederationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteFederation 删除Ray联邦端点
+// DeleteV2RayFederation 删除Ray联邦端点
 //
 // 删除Ray联邦端点。此接口为同步接口。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *AIDataLakeClient) DeleteFederation(request *model.DeleteFederationRequest) (*model.DeleteFederationResponse, error) {
-	requestDef := GenReqDefForDeleteFederation()
+func (c *AIDataLakeClient) DeleteV2RayFederation(request *model.DeleteV2RayFederationRequest) (*model.DeleteV2RayFederationResponse, error) {
+	requestDef := GenReqDefForDeleteV2RayFederation()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.DeleteFederationResponse), nil
+		return resp.(*model.DeleteV2RayFederationResponse), nil
 	}
 }
 
-// DeleteFederationInvoker 删除Ray联邦端点
-func (c *AIDataLakeClient) DeleteFederationInvoker(request *model.DeleteFederationRequest) *DeleteFederationInvoker {
-	requestDef := GenReqDefForDeleteFederation()
-	return &DeleteFederationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// DeleteV2RayFederationInvoker 删除Ray联邦端点
+func (c *AIDataLakeClient) DeleteV2RayFederationInvoker(request *model.DeleteV2RayFederationRequest) *DeleteV2RayFederationInvoker {
+	requestDef := GenReqDefForDeleteV2RayFederation()
+	return &DeleteV2RayFederationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListFederations 查询Ray联邦端点列表
+// ListV2RayFederations 查询Ray联邦端点列表
 //
 // 查询工作空间下的Ray联邦端点列表。此接口为同步接口。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *AIDataLakeClient) ListFederations(request *model.ListFederationsRequest) (*model.ListFederationsResponse, error) {
-	requestDef := GenReqDefForListFederations()
+func (c *AIDataLakeClient) ListV2RayFederations(request *model.ListV2RayFederationsRequest) (*model.ListV2RayFederationsResponse, error) {
+	requestDef := GenReqDefForListV2RayFederations()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListFederationsResponse), nil
+		return resp.(*model.ListV2RayFederationsResponse), nil
 	}
 }
 
-// ListFederationsInvoker 查询Ray联邦端点列表
-func (c *AIDataLakeClient) ListFederationsInvoker(request *model.ListFederationsRequest) *ListFederationsInvoker {
-	requestDef := GenReqDefForListFederations()
-	return &ListFederationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListV2RayFederationsInvoker 查询Ray联邦端点列表
+func (c *AIDataLakeClient) ListV2RayFederationsInvoker(request *model.ListV2RayFederationsRequest) *ListV2RayFederationsInvoker {
+	requestDef := GenReqDefForListV2RayFederations()
+	return &ListV2RayFederationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowFederation 查询Ray联邦端点详情
+// ShowV2RayFederation 查询Ray联邦端点详情
 //
 // 查询Ray联邦端点详情。此接口为同步接口。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *AIDataLakeClient) ShowFederation(request *model.ShowFederationRequest) (*model.ShowFederationResponse, error) {
-	requestDef := GenReqDefForShowFederation()
+func (c *AIDataLakeClient) ShowV2RayFederation(request *model.ShowV2RayFederationRequest) (*model.ShowV2RayFederationResponse, error) {
+	requestDef := GenReqDefForShowV2RayFederation()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowFederationResponse), nil
+		return resp.(*model.ShowV2RayFederationResponse), nil
 	}
 }
 
-// ShowFederationInvoker 查询Ray联邦端点详情
-func (c *AIDataLakeClient) ShowFederationInvoker(request *model.ShowFederationRequest) *ShowFederationInvoker {
-	requestDef := GenReqDefForShowFederation()
-	return &ShowFederationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ShowV2RayFederationInvoker 查询Ray联邦端点详情
+func (c *AIDataLakeClient) ShowV2RayFederationInvoker(request *model.ShowV2RayFederationRequest) *ShowV2RayFederationInvoker {
+	requestDef := GenReqDefForShowV2RayFederation()
+	return &ShowV2RayFederationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateFederation 更新Ray联邦端点
+// UpdateV2RayFederation 更新Ray联邦端点
 //
 // 更新Ray联邦端点。此接口为同步接口。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *AIDataLakeClient) UpdateFederation(request *model.UpdateFederationRequest) (*model.UpdateFederationResponse, error) {
-	requestDef := GenReqDefForUpdateFederation()
+func (c *AIDataLakeClient) UpdateV2RayFederation(request *model.UpdateV2RayFederationRequest) (*model.UpdateV2RayFederationResponse, error) {
+	requestDef := GenReqDefForUpdateV2RayFederation()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.UpdateFederationResponse), nil
+		return resp.(*model.UpdateV2RayFederationResponse), nil
 	}
 }
 
-// UpdateFederationInvoker 更新Ray联邦端点
-func (c *AIDataLakeClient) UpdateFederationInvoker(request *model.UpdateFederationRequest) *UpdateFederationInvoker {
-	requestDef := GenReqDefForUpdateFederation()
-	return &UpdateFederationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// UpdateV2RayFederationInvoker 更新Ray联邦端点
+func (c *AIDataLakeClient) UpdateV2RayFederationInvoker(request *model.UpdateV2RayFederationRequest) *UpdateV2RayFederationInvoker {
+	requestDef := GenReqDefForUpdateV2RayFederation()
+	return &UpdateV2RayFederationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CancelRayJob 取消作业运行
@@ -1145,4 +2048,130 @@ func (c *AIDataLakeClient) ShowSparkSqlState(request *model.ShowSparkSqlStateReq
 func (c *AIDataLakeClient) ShowSparkSqlStateInvoker(request *model.ShowSparkSqlStateRequest) *ShowSparkSqlStateInvoker {
 	requestDef := GenReqDefForShowSparkSqlState()
 	return &ShowSparkSqlStateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchCreateV2ResourceTags 批量添加资源标签
+//
+// 资源批量添加标签。此接口为同步接口，无配套使用接口。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) BatchCreateV2ResourceTags(request *model.BatchCreateV2ResourceTagsRequest) (*model.BatchCreateV2ResourceTagsResponse, error) {
+	requestDef := GenReqDefForBatchCreateV2ResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateV2ResourceTagsResponse), nil
+	}
+}
+
+// BatchCreateV2ResourceTagsInvoker 批量添加资源标签
+func (c *AIDataLakeClient) BatchCreateV2ResourceTagsInvoker(request *model.BatchCreateV2ResourceTagsRequest) *BatchCreateV2ResourceTagsInvoker {
+	requestDef := GenReqDefForBatchCreateV2ResourceTags()
+	return &BatchCreateV2ResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteV2ResourceTags 批量删除资源标签
+//
+// 标签资源批量删除标签。此接口为同步接口，无配套使用接口。删除时，如果删除的标签不存在，默认处理成功，删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空或者空字符串。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) BatchDeleteV2ResourceTags(request *model.BatchDeleteV2ResourceTagsRequest) (*model.BatchDeleteV2ResourceTagsResponse, error) {
+	requestDef := GenReqDefForBatchDeleteV2ResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteV2ResourceTagsResponse), nil
+	}
+}
+
+// BatchDeleteV2ResourceTagsInvoker 批量删除资源标签
+func (c *AIDataLakeClient) BatchDeleteV2ResourceTagsInvoker(request *model.BatchDeleteV2ResourceTagsRequest) *BatchDeleteV2ResourceTagsInvoker {
+	requestDef := GenReqDefForBatchDeleteV2ResourceTags()
+	return &BatchDeleteV2ResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CountV2TagResources 查询资源实例数量
+//
+// 通过标签查询资源实例数量。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) CountV2TagResources(request *model.CountV2TagResourcesRequest) (*model.CountV2TagResourcesResponse, error) {
+	requestDef := GenReqDefForCountV2TagResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CountV2TagResourcesResponse), nil
+	}
+}
+
+// CountV2TagResourcesInvoker 查询资源实例数量
+func (c *AIDataLakeClient) CountV2TagResourcesInvoker(request *model.CountV2TagResourcesRequest) *CountV2TagResourcesInvoker {
+	requestDef := GenReqDefForCountV2TagResources()
+	return &CountV2TagResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListV2ProjectTags 查询项目标签
+//
+// 查询指定项目关联的标签列表。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ListV2ProjectTags(request *model.ListV2ProjectTagsRequest) (*model.ListV2ProjectTagsResponse, error) {
+	requestDef := GenReqDefForListV2ProjectTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListV2ProjectTagsResponse), nil
+	}
+}
+
+// ListV2ProjectTagsInvoker 查询项目标签
+func (c *AIDataLakeClient) ListV2ProjectTagsInvoker(request *model.ListV2ProjectTagsRequest) *ListV2ProjectTagsInvoker {
+	requestDef := GenReqDefForListV2ProjectTags()
+	return &ListV2ProjectTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListV2ResourceTags 查询资源标签
+//
+// 查询资源的标签。用于查询资源的标签，返回对应资源的标签。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ListV2ResourceTags(request *model.ListV2ResourceTagsRequest) (*model.ListV2ResourceTagsResponse, error) {
+	requestDef := GenReqDefForListV2ResourceTags()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListV2ResourceTagsResponse), nil
+	}
+}
+
+// ListV2ResourceTagsInvoker 查询资源标签
+func (c *AIDataLakeClient) ListV2ResourceTagsInvoker(request *model.ListV2ResourceTagsRequest) *ListV2ResourceTagsInvoker {
+	requestDef := GenReqDefForListV2ResourceTags()
+	return &ListV2ResourceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListV2TagResources 查询资源实例列表
+//
+// 通过标签查询资源列表。此接口为同步接口，无配套使用接口和特殊场景。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *AIDataLakeClient) ListV2TagResources(request *model.ListV2TagResourcesRequest) (*model.ListV2TagResourcesResponse, error) {
+	requestDef := GenReqDefForListV2TagResources()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListV2TagResourcesResponse), nil
+	}
+}
+
+// ListV2TagResourcesInvoker 查询资源实例列表
+func (c *AIDataLakeClient) ListV2TagResourcesInvoker(request *model.ListV2TagResourcesRequest) *ListV2TagResourcesInvoker {
+	requestDef := GenReqDefForListV2TagResources()
+	return &ListV2TagResourcesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }

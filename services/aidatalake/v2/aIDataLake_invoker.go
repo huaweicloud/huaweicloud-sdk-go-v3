@@ -5,6 +5,694 @@ import (
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/aidatalake/v2/model"
 )
 
+type AddV2TenantImageVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddV2TenantImageVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddV2TenantImageVersionInvoker) Invoke() (*model.AddV2TenantImageVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddV2TenantImageVersionResponse), nil
+	}
+}
+
+type AttachV2AgencyPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AttachV2AgencyPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AttachV2AgencyPolicyInvoker) Invoke() (*model.AttachV2AgencyPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AttachV2AgencyPolicyResponse), nil
+	}
+}
+
+type CreateV2AgencyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateV2AgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateV2AgencyInvoker) Invoke() (*model.CreateV2AgencyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateV2AgencyResponse), nil
+	}
+}
+
+type CreateV2ComputeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateV2ComputeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateV2ComputeInvoker) Invoke() (*model.CreateV2ComputeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateV2ComputeResponse), nil
+	}
+}
+
+type CreateV2EndpointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateV2EndpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateV2EndpointInvoker) Invoke() (*model.CreateV2EndpointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateV2EndpointResponse), nil
+	}
+}
+
+type CreateV2NetworkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateV2NetworkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateV2NetworkInvoker) Invoke() (*model.CreateV2NetworkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateV2NetworkResponse), nil
+	}
+}
+
+type CreateV2TenantImageSnapshotInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateV2TenantImageSnapshotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateV2TenantImageSnapshotInvoker) Invoke() (*model.CreateV2TenantImageSnapshotResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateV2TenantImageSnapshotResponse), nil
+	}
+}
+
+type CreateV2WorkspaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateV2WorkspaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateV2WorkspaceInvoker) Invoke() (*model.CreateV2WorkspaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateV2WorkspaceResponse), nil
+	}
+}
+
+type DeleteV2AgencyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteV2AgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteV2AgencyInvoker) Invoke() (*model.DeleteV2AgencyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteV2AgencyResponse), nil
+	}
+}
+
+type DeleteV2AgreementInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteV2AgreementInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteV2AgreementInvoker) Invoke() (*model.DeleteV2AgreementResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteV2AgreementResponse), nil
+	}
+}
+
+type DeleteV2ComputeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteV2ComputeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteV2ComputeInvoker) Invoke() (*model.DeleteV2ComputeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteV2ComputeResponse), nil
+	}
+}
+
+type DeleteV2EndpointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteV2EndpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteV2EndpointInvoker) Invoke() (*model.DeleteV2EndpointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteV2EndpointResponse), nil
+	}
+}
+
+type DeleteV2TenantImageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteV2TenantImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteV2TenantImageInvoker) Invoke() (*model.DeleteV2TenantImageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteV2TenantImageResponse), nil
+	}
+}
+
+type DeleteV2TenantImageSnapshotInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteV2TenantImageSnapshotInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteV2TenantImageSnapshotInvoker) Invoke() (*model.DeleteV2TenantImageSnapshotResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteV2TenantImageSnapshotResponse), nil
+	}
+}
+
+type DeleteV2TenantImageVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteV2TenantImageVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteV2TenantImageVersionInvoker) Invoke() (*model.DeleteV2TenantImageVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteV2TenantImageVersionResponse), nil
+	}
+}
+
+type DeleteV2WorkspaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteV2WorkspaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteV2WorkspaceInvoker) Invoke() (*model.DeleteV2WorkspaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteV2WorkspaceResponse), nil
+	}
+}
+
+type DetachV2AgencyPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DetachV2AgencyPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DetachV2AgencyPolicyInvoker) Invoke() (*model.DetachV2AgencyPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DetachV2AgencyPolicyResponse), nil
+	}
+}
+
+type ListV2AgreementRuleInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListV2AgreementRuleInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListV2AgreementRuleInvoker) Invoke() (*model.ListV2AgreementRuleResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListV2AgreementRuleResponse), nil
+	}
+}
+
+type ListV2AllEndpointsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListV2AllEndpointsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListV2AllEndpointsInvoker) Invoke() (*model.ListV2AllEndpointsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListV2AllEndpointsResponse), nil
+	}
+}
+
+type ListV2ComputeVersionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListV2ComputeVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListV2ComputeVersionsInvoker) Invoke() (*model.ListV2ComputeVersionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListV2ComputeVersionsResponse), nil
+	}
+}
+
+type ListV2ComputesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListV2ComputesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListV2ComputesInvoker) Invoke() (*model.ListV2ComputesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListV2ComputesResponse), nil
+	}
+}
+
+type ListV2EndpointsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListV2EndpointsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListV2EndpointsInvoker) Invoke() (*model.ListV2EndpointsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListV2EndpointsResponse), nil
+	}
+}
+
+type ListV2NetworksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListV2NetworksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListV2NetworksInvoker) Invoke() (*model.ListV2NetworksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListV2NetworksResponse), nil
+	}
+}
+
+type ListV2TenantImageSnapshotsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListV2TenantImageSnapshotsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListV2TenantImageSnapshotsInvoker) Invoke() (*model.ListV2TenantImageSnapshotsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListV2TenantImageSnapshotsResponse), nil
+	}
+}
+
+type ListV2TenantImageVersionsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListV2TenantImageVersionsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListV2TenantImageVersionsInvoker) Invoke() (*model.ListV2TenantImageVersionsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListV2TenantImageVersionsResponse), nil
+	}
+}
+
+type ListV2TenantImagesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListV2TenantImagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListV2TenantImagesInvoker) Invoke() (*model.ListV2TenantImagesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListV2TenantImagesResponse), nil
+	}
+}
+
+type ListV2WorkspacesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListV2WorkspacesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListV2WorkspacesInvoker) Invoke() (*model.ListV2WorkspacesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListV2WorkspacesResponse), nil
+	}
+}
+
+type RegisterV2TenantImageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RegisterV2TenantImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RegisterV2TenantImageInvoker) Invoke() (*model.RegisterV2TenantImageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RegisterV2TenantImageResponse), nil
+	}
+}
+
+type ShowV2AgencyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowV2AgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowV2AgencyInvoker) Invoke() (*model.ShowV2AgencyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowV2AgencyResponse), nil
+	}
+}
+
+type ShowV2AgreementInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowV2AgreementInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowV2AgreementInvoker) Invoke() (*model.ShowV2AgreementResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowV2AgreementResponse), nil
+	}
+}
+
+type ShowV2ComputeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowV2ComputeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowV2ComputeInvoker) Invoke() (*model.ShowV2ComputeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowV2ComputeResponse), nil
+	}
+}
+
+type ShowV2ComputesMetricsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowV2ComputesMetricsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowV2ComputesMetricsInvoker) Invoke() (*model.ShowV2ComputesMetricsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowV2ComputesMetricsResponse), nil
+	}
+}
+
+type ShowV2EndpointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowV2EndpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowV2EndpointInvoker) Invoke() (*model.ShowV2EndpointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowV2EndpointResponse), nil
+	}
+}
+
+type ShowV2EndpointResourceLimitInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowV2EndpointResourceLimitInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowV2EndpointResourceLimitInvoker) Invoke() (*model.ShowV2EndpointResourceLimitResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowV2EndpointResourceLimitResponse), nil
+	}
+}
+
+type ShowV2EndpointsMetricsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowV2EndpointsMetricsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowV2EndpointsMetricsInvoker) Invoke() (*model.ShowV2EndpointsMetricsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowV2EndpointsMetricsResponse), nil
+	}
+}
+
+type ShowV2TenantImageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowV2TenantImageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowV2TenantImageInvoker) Invoke() (*model.ShowV2TenantImageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowV2TenantImageResponse), nil
+	}
+}
+
+type ShowV2TenantImageVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowV2TenantImageVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowV2TenantImageVersionInvoker) Invoke() (*model.ShowV2TenantImageVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowV2TenantImageVersionResponse), nil
+	}
+}
+
+type ShowV2WorkspaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowV2WorkspaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowV2WorkspaceInvoker) Invoke() (*model.ShowV2WorkspaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowV2WorkspaceResponse), nil
+	}
+}
+
+type SignV2AgreementInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SignV2AgreementInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SignV2AgreementInvoker) Invoke() (*model.SignV2AgreementResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SignV2AgreementResponse), nil
+	}
+}
+
+type UpdateV2ComputeInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateV2ComputeInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateV2ComputeInvoker) Invoke() (*model.UpdateV2ComputeResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateV2ComputeResponse), nil
+	}
+}
+
+type UpdateV2EndpointInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateV2EndpointInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateV2EndpointInvoker) Invoke() (*model.UpdateV2EndpointResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateV2EndpointResponse), nil
+	}
+}
+
+type UpdateV2TenantImageVersionInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateV2TenantImageVersionInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateV2TenantImageVersionInvoker) Invoke() (*model.UpdateV2TenantImageVersionResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateV2TenantImageVersionResponse), nil
+	}
+}
+
+type UpdateV2WorkspaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateV2WorkspaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateV2WorkspaceInvoker) Invoke() (*model.UpdateV2WorkspaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateV2WorkspaceResponse), nil
+	}
+}
+
 type CancelAuraDataframeJobInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -453,83 +1141,83 @@ func (i *ShowFlinkSavepointInvoker) Invoke() (*model.ShowFlinkSavepointResponse,
 	}
 }
 
-type CreateFederationInvoker struct {
+type CreateV2RayFederationInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *CreateFederationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *CreateV2RayFederationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *CreateFederationInvoker) Invoke() (*model.CreateFederationResponse, error) {
+func (i *CreateV2RayFederationInvoker) Invoke() (*model.CreateV2RayFederationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.CreateFederationResponse), nil
+		return result.(*model.CreateV2RayFederationResponse), nil
 	}
 }
 
-type DeleteFederationInvoker struct {
+type DeleteV2RayFederationInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *DeleteFederationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *DeleteV2RayFederationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *DeleteFederationInvoker) Invoke() (*model.DeleteFederationResponse, error) {
+func (i *DeleteV2RayFederationInvoker) Invoke() (*model.DeleteV2RayFederationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.DeleteFederationResponse), nil
+		return result.(*model.DeleteV2RayFederationResponse), nil
 	}
 }
 
-type ListFederationsInvoker struct {
+type ListV2RayFederationsInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ListFederationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ListV2RayFederationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ListFederationsInvoker) Invoke() (*model.ListFederationsResponse, error) {
+func (i *ListV2RayFederationsInvoker) Invoke() (*model.ListV2RayFederationsResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ListFederationsResponse), nil
+		return result.(*model.ListV2RayFederationsResponse), nil
 	}
 }
 
-type ShowFederationInvoker struct {
+type ShowV2RayFederationInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *ShowFederationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *ShowV2RayFederationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *ShowFederationInvoker) Invoke() (*model.ShowFederationResponse, error) {
+func (i *ShowV2RayFederationInvoker) Invoke() (*model.ShowV2RayFederationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.ShowFederationResponse), nil
+		return result.(*model.ShowV2RayFederationResponse), nil
 	}
 }
 
-type UpdateFederationInvoker struct {
+type UpdateV2RayFederationInvoker struct {
 	*invoker.BaseInvoker
 }
 
-func (i *UpdateFederationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+func (i *UpdateV2RayFederationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
 	return i.BaseInvoker
 }
 
-func (i *UpdateFederationInvoker) Invoke() (*model.UpdateFederationResponse, error) {
+func (i *UpdateV2RayFederationInvoker) Invoke() (*model.UpdateV2RayFederationResponse, error) {
 	if result, err := i.BaseInvoker.Invoke(); err != nil {
 		return nil, err
 	} else {
-		return result.(*model.UpdateFederationResponse), nil
+		return result.(*model.UpdateV2RayFederationResponse), nil
 	}
 }
 
@@ -834,5 +1522,101 @@ func (i *ShowSparkSqlStateInvoker) Invoke() (*model.ShowSparkSqlStateResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowSparkSqlStateResponse), nil
+	}
+}
+
+type BatchCreateV2ResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateV2ResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateV2ResourceTagsInvoker) Invoke() (*model.BatchCreateV2ResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateV2ResourceTagsResponse), nil
+	}
+}
+
+type BatchDeleteV2ResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteV2ResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteV2ResourceTagsInvoker) Invoke() (*model.BatchDeleteV2ResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteV2ResourceTagsResponse), nil
+	}
+}
+
+type CountV2TagResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CountV2TagResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CountV2TagResourcesInvoker) Invoke() (*model.CountV2TagResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CountV2TagResourcesResponse), nil
+	}
+}
+
+type ListV2ProjectTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListV2ProjectTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListV2ProjectTagsInvoker) Invoke() (*model.ListV2ProjectTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListV2ProjectTagsResponse), nil
+	}
+}
+
+type ListV2ResourceTagsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListV2ResourceTagsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListV2ResourceTagsInvoker) Invoke() (*model.ListV2ResourceTagsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListV2ResourceTagsResponse), nil
+	}
+}
+
+type ListV2TagResourcesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListV2TagResourcesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListV2TagResourcesInvoker) Invoke() (*model.ListV2TagResourcesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListV2TagResourcesResponse), nil
 	}
 }

@@ -10,7 +10,7 @@ import (
 type SecurityReportContentResponseReportContentInfo struct {
 
 	// **参数解释：** 总览统计信息，包含各维度的汇总统计数据及TOP域名详情。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-	OverviewStatisticsListInfo *[]SecurityReportContentResponseReportContentInfoOverviewStatisticsListInfo `json:"overview_statistics_list_info,omitempty"`
+	OverviewStatisticsInfoList *[]SecurityReportContentResponseReportContentInfoOverviewStatisticsInfoList `json:"overview_statistics_info_list,omitempty"`
 
 	// **参数解释：** 请求次数统计信息，包含各维度按时间线的请求数量统计。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	RequestStatisticsInfoList *[]SecurityReportContentResponseReportContentInfoRequestStatisticsInfoList `json:"request_statistics_info_list,omitempty"`
@@ -36,7 +36,7 @@ type SecurityReportContentResponseReportContentInfo struct {
 	// **参数解释：** TOP攻击的源地理位置信息，按攻击次数排序的地理位置列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	TopAttackSourceLocationsInfoList *[]SecurityReportContentResponseReportContentInfoTopAttackSourceLocationsInfoList `json:"top_attack_source_locations_info_list,omitempty"`
 
-	TopAbnormalUrlsInfo *SecurityReportContentResponseReportContentInfoTopAbnormalUrlsInfo `json:"top_abnormal_urls_info,omitempty"`
+	TopErrorPagesInfo *SecurityReportContentResponseReportContentInfoTopErrorPagesInfo `json:"top_error_pages_info,omitempty"`
 }
 
 func (o SecurityReportContentResponseReportContentInfo) String() string {

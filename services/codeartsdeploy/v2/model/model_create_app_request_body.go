@@ -37,6 +37,15 @@ type CreateAppRequestBody struct {
 
 	// 部署任务列表信息
 	ArrangeInfos *[]TaskV2RequestBody `json:"arrange_infos,omitempty"`
+
+	// 委托URN
+	AgencyUrn *string `json:"agency_urn,omitempty"`
+
+	// 资源池类型
+	SlaveResourceType *string `json:"slave_resource_type,omitempty"`
+
+	// 任务执行超时时间
+	Timeout *int32 `json:"timeout,omitempty"`
 }
 
 func (o CreateAppRequestBody) String() string {

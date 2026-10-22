@@ -15,6 +15,9 @@ type RuntimeConfigCreateRequest struct {
 	ServiceSecret *ServiceSecret `json:"service_secret,omitempty"`
 
 	ServerTaskLimit *ServerTaskLimit `json:"server_task_limit,omitempty"`
+
+	// **参数解释：** 智能分流开启字段。 **取值范围：** [true, false]。
+	SmartRoutingEnable *bool `json:"smart_routing_enable,omitempty"`
 }
 
 func (o RuntimeConfigCreateRequest) String() string {

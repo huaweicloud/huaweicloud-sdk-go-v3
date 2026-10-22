@@ -38,6 +38,9 @@ type ListInferDeploymentPodsRequest struct {
 
 	// **参数解释：** pod节点名称。 **取值范围：** 不涉及。
 	PodNodeName *string `json:"pod_node_name,omitempty"`
+
+	// **参数解释：** pod所属单元名称。 **取值范围：** 不涉及。
+	PodRoleName *string `json:"pod_role_name,omitempty"`
 }
 
 func (o ListInferDeploymentPodsRequest) String() string {

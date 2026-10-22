@@ -24,6 +24,12 @@ type CreateHostClusterRequestBody struct {
 	// slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
 	SlaveClusterId *string `json:"slave_cluster_id,omitempty"`
 
+	// 资源池类型，self-hosted 自托管资源池，exclusive 独享资源池
+	SlaveResourceType *CreateHostClusterRequestBodySlaveResourceType `json:"slave_resource_type,omitempty"`
+
+	// 是否切换新系统支持，1：是 0：否
+	AnsibleType *int32 `json:"ansible_type,omitempty"`
+
 	// 描述
 	Description *string `json:"description,omitempty"`
 
@@ -69,6 +75,53 @@ func (c CreateHostClusterRequestBodyOs) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateHostClusterRequestBodyOs) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateHostClusterRequestBodySlaveResourceType struct {
+	value string
+}
+
+type CreateHostClusterRequestBodySlaveResourceTypeEnum struct {
+	SELF_HOSTED CreateHostClusterRequestBodySlaveResourceType
+	EXCLUSIVE   CreateHostClusterRequestBodySlaveResourceType
+}
+
+func GetCreateHostClusterRequestBodySlaveResourceTypeEnum() CreateHostClusterRequestBodySlaveResourceTypeEnum {
+	return CreateHostClusterRequestBodySlaveResourceTypeEnum{
+		SELF_HOSTED: CreateHostClusterRequestBodySlaveResourceType{
+			value: "self-hosted",
+		},
+		EXCLUSIVE: CreateHostClusterRequestBodySlaveResourceType{
+			value: "exclusive",
+		},
+	}
+}
+
+func (c CreateHostClusterRequestBodySlaveResourceType) Value() string {
+	return c.value
+}
+
+func (c CreateHostClusterRequestBodySlaveResourceType) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateHostClusterRequestBodySlaveResourceType) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

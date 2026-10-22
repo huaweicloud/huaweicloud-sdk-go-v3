@@ -14,7 +14,7 @@ type StatementRecord struct {
 	// **参数解释**：Sql执行StatementID。 **取值范围**：不涉及。
 	Id *string `json:"id,omitempty"`
 
-	// **参数解释**：工作空间ID。 **取值范围**：长度为1~36个字符，支持大小写英文字母、数字、连字符。
+	// **参数解释**：工作空间ID。 **取值范围**：长度为1~36的英文字母、数字和中划线的组合。
 	WorkspaceId *string `json:"workspace_id,omitempty"`
 
 	// **参数解释**：端点ID。 **取值范围**：长度为1~64个字符，支持大小写英文字母、数字、连字符。

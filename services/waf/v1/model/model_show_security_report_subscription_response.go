@@ -12,6 +12,9 @@ type ShowSecurityReportSubscriptionResponse struct {
 	// **参数解释：** 订阅ID，唯一标识当前安全报告订阅。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	SubscriptionId *string `json:"subscription_id,omitempty"`
 
+	// **参数解释：** 报告ID，关联当前订阅的最新安全报告唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	ReportId *string `json:"report_id,omitempty"`
+
 	// **参数解释：** 发送时间段，标识报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00  **默认取值：** 不涉及
 	SendingPeriod *string `json:"sending_period,omitempty"`
 
@@ -20,6 +23,9 @@ type ShowSecurityReportSubscriptionResponse struct {
 
 	// **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report ： 周报 - monthly_report ： 月报 - custom_report ： 自定义  **默认取值：** 不涉及
 	ReportCategory *string `json:"report_category,omitempty"`
+
+	// **参数解释：** 报告开启状态 **约束限制：** 不涉及 **取值范围：** - opened：已开启 - closed：已关闭 **默认取值：** 不涉及
+	ReportStatus *string `json:"report_status,omitempty"`
 
 	// **参数解释：** 报告接收方式使用消息主题类型时需要填该参数。 查询可使用的主题，通过 云日志服务的“查询SMN主题”接口，返回体中的\"topic_urn\"字段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	TopicUrn *string `json:"topic_urn,omitempty"`
@@ -36,7 +42,16 @@ type ShowSecurityReportSubscriptionResponse struct {
 
 	// **参数解释：** 企业项目ID，订阅关联的企业项目唯一标识（is_all_enterprise_project为false时生效）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
-	HttpStatusCode      int     `json:"-"`
+
+	// **参数解释：** 模板企业项目ID，订阅关联的模板企业项目唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	TemplateEpsId *string `json:"template_eps_id,omitempty"`
+
+	// **参数解释：** 是否已生成报告，标识当前订阅是否已生成过安全报告（true表示已生成，false表示未生成）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** false
+	IsReportCreated *bool `json:"is_report_created,omitempty"`
+
+	// **参数解释：** 最近生成时间，最近一次生成安全报告的时间戳（毫秒级）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	LatestCreateTime *int64 `json:"latest_create_time,omitempty"`
+	HttpStatusCode   int    `json:"-"`
 }
 
 func (o ShowSecurityReportSubscriptionResponse) String() string {

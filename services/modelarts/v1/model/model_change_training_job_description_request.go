@@ -12,7 +12,7 @@ type ChangeTrainingJobDescriptionRequest struct {
 	// 训练作业ID。获取方法请参见[查询训练作业列表](ListTrainingJobs.xml)。
 	TrainingJobId string `json:"training_job_id"`
 
-	Body *JobDescription `json:"body,omitempty"`
+	Body *JobUpdateRequestBody `json:"body,omitempty"`
 }
 
 func (o ChangeTrainingJobDescriptionRequest) String() string {

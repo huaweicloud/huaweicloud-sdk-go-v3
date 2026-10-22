@@ -757,6 +757,27 @@ func (c *GaussDBforNoSQLClient) ListBackupsInvoker(request *model.ListBackupsReq
 	return &ListBackupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListBiactiveInstanceCandidates 查询实例可搭建双活关系的候选实例
+//
+// 查询实例在目标Region可搭建双活关系的候选实例列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBforNoSQLClient) ListBiactiveInstanceCandidates(request *model.ListBiactiveInstanceCandidatesRequest) (*model.ListBiactiveInstanceCandidatesResponse, error) {
+	requestDef := GenReqDefForListBiactiveInstanceCandidates()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBiactiveInstanceCandidatesResponse), nil
+	}
+}
+
+// ListBiactiveInstanceCandidatesInvoker 查询实例可搭建双活关系的候选实例
+func (c *GaussDBforNoSQLClient) ListBiactiveInstanceCandidatesInvoker(request *model.ListBiactiveInstanceCandidatesRequest) *ListBiactiveInstanceCandidatesInvoker {
+	requestDef := GenReqDefForListBiactiveInstanceCandidates()
+	return &ListBiactiveInstanceCandidatesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListCassandraSlowLogs 查询GeminiDB(for Cassandra)数据库慢日志
 //
 // 查询GeminiDB(for Cassandra)数据库慢日志信息，支持日志关键字搜索。

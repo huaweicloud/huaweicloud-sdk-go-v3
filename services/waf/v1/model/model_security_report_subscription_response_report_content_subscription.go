@@ -42,8 +42,8 @@ type SecurityReportSubscriptionResponseReportContentSubscription struct {
 	// **参数解释：** 是否启用TOP攻击源地理位置统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
 	TopAttackSourceLocationsEnable *bool `json:"top_attack_source_locations_enable,omitempty"`
 
-	// **参数解释：** 是否启用TOP异常URL统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
-	TopAbnormalUrlsEnable *bool `json:"top_abnormal_urls_enable,omitempty"`
+	// **参数解释：** 是否启用TOP异常页面统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
+	TopErrorPagesEnable *bool `json:"top_error_pages_enable,omitempty"`
 }
 
 func (o SecurityReportSubscriptionResponseReportContentSubscription) String() string {

@@ -40,6 +40,9 @@ type UnitConfigResponse struct {
 	// **参数解释：** 配置实例个数。 **取值范围：** 不涉及。
 	Count *int32 `json:"count,omitempty"`
 
+	// **参数解释：** 表示是否启用绑核加速。 **取值范围：** - true：启用绑核加速。 - false：不启用绑核加速。
+	CpuAffinity *bool `json:"cpu_affinity,omitempty"`
+
 	// **参数解释：** 单元副本数，当部署类型deploy_type为SINGLE或工作负载类型workload_type为DEPLOYMENT时，该参数无效。 **取值范围：** [1, 100] 或者为空。 **默认取值：** 默认值为1。
 	GroupCount *int32 `json:"group_count,omitempty"`
 
@@ -75,6 +78,8 @@ type UnitConfigResponse struct {
 
 	// **参数解释：** 节点池资源规格。 **约束限制：** 只能包含字母、数字、点、中划线和下划线。 **取值范围：** 长度不超过128字符。 **默认取值：** 不涉及。
 	PoolResourceFlavor *string `json:"pool_resource_flavor,omitempty"`
+
+	GroupPolicy *UnitGroupPolicyResponse `json:"group_policy,omitempty"`
 }
 
 func (o UnitConfigResponse) String() string {

@@ -10,10 +10,10 @@ import (
 type CreateDevServerJobResponse struct {
 
 	// **参数解释**：创建时间。 **取值范围**：不涉及。
-	CreateAt *string `json:"create_at,omitempty"`
+	CreateAt *int64 `json:"create_at,omitempty"`
 
 	// **参数解释**：更新时间。 **取值范围**：不涉及。
-	UpdateAt *string `json:"update_at,omitempty"`
+	UpdateAt *int64 `json:"update_at,omitempty"`
 
 	// **参数解释**：任务ID。 **取值范围**：不涉及。
 	Id *string `json:"id,omitempty"`
