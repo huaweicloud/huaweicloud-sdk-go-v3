@@ -33,6 +33,8 @@ type ListSparkJobResponseDto struct {
 	// **参数解释**：作业状态消息，当作业异常结束时显示相关信息。 **取值范围**：长度为0~512个字符。
 	StateMessage *string `json:"state_message,omitempty"`
 
+	MetricStatistics *SparkJobMetricStatistics `json:"metric_statistics,omitempty"`
+
 	// **参数解释**：作业重试次数，用于记录作业失败后的重试次数。 **取值范围**：最小值为0。
 	RetryTimes *int32 `json:"retry_times,omitempty"`
 

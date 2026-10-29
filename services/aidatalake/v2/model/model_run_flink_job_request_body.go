@@ -43,6 +43,9 @@ type RunFlinkJobRequestBody struct {
 
 	// **参数解释**：描述信息，用于说明作业用途。 **约束限制**：不涉及。 **取值范围**：长度为1~512个字符。 **默认取值**：不涉及。
 	Description *string `json:"description,omitempty"`
+
+	// **参数解释**：是否对该作业开启失败告警通知，用于按作业控制是否向客户发送告警消息。 **约束限制**：仅提交作业时指定，作业运行期间不支持修改。 **取值范围**：   - true：开启。作业运行失败或提交失败时，通过消息中心向客户发送告警通知。   - false：关闭。该作业失败时不发送告警通知。 **默认取值**：false，不指定时默认关闭（不发送该作业的失败告警通知），需要告警时显式指定为 true。
+	AlertEnabled *bool `json:"alert_enabled,omitempty"`
 }
 
 func (o RunFlinkJobRequestBody) String() string {

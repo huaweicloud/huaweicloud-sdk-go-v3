@@ -25,7 +25,7 @@ type ListExternalVaultRequest struct {
 	RegionId string `json:"region_id"`
 
 	// 资源类型
-	ObjcetType *string `json:"objcet_type,omitempty"`
+	ObjectType *string `json:"object_type,omitempty"`
 
 	// [云类型。取值为public和hybrid。](tag:hws,hws_hk) [云类型。取值为public。](tag:g42,hk-g42,sbc,dt,fcs_vm,ctc,ocb,tm,tlf,cmcc,hcso_dt)
 	CloudType *string `json:"cloud_type,omitempty"`

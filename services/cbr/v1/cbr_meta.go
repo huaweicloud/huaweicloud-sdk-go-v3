@@ -577,6 +577,10 @@ func GenReqDefForListBackups() *def.HttpRequestDef {
 		WithName("Incremental").
 		WithJsonTag("incremental").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ExistedQuantityBasedRetentionBackups").
+		WithJsonTag("existed_quantity_based_retention_backups").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -626,8 +630,8 @@ func GenReqDefForListExternalVault() *def.HttpRequestDef {
 		WithJsonTag("region_id").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
-		WithName("ObjcetType").
-		WithJsonTag("objcet_type").
+		WithName("ObjectType").
+		WithJsonTag("object_type").
 		WithLocationType(def.Query))
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("CloudType").
@@ -720,6 +724,14 @@ func GenReqDefForListOpLogs() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("EnterpriseProjectId").
 		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DestinationRegion").
+		WithJsonTag("destination_region").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("DestinationProjectId").
+		WithJsonTag("destination_project_id").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -837,6 +849,10 @@ func GenReqDefForListProtectable() *def.HttpRequestDef {
 		WithName("ServerId").
 		WithJsonTag("server_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef
@@ -892,6 +908,10 @@ func GenReqDefForListVault() *def.HttpRequestDef {
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("ResourceIds").
 		WithJsonTag("resource_ids").
+		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("AvailabilityZone").
+		WithJsonTag("availability_zone").
 		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
@@ -1377,6 +1397,11 @@ func GenReqDefForShowVaultResourceInstances() *def.HttpRequestDef {
 		WithPath("/v3/{project_id}/vault/resource_instances/action").
 		WithResponse(new(model.ShowVaultResourceInstancesResponse)).
 		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("EnterpriseProjectId").
+		WithJsonTag("enterprise_project_id").
+		WithLocationType(def.Query))
 
 	reqDefBuilder.WithRequestField(def.NewFieldDef().
 		WithName("Body").

@@ -28,6 +28,14 @@ type PriceItem struct {
 
 	// 计费因子编码
 	BillingUsageFactor *string `json:"billing_usage_factor,omitempty"`
+
+	// 定价策略模式，SIMPLE：简单定价、DIVISION：阶梯定价、CONDITION：条件选择定价
+	PolicyMode *string `json:"policy_mode,omitempty"`
+
+	DivisionPattern *DivisionPattern `json:"division_pattern,omitempty"`
+
+	// 条件选择定价结构，policy_mode=CONDITION 时有效
+	ConditionNodes *[]ConditionSelectPattern `json:"condition_nodes,omitempty"`
 }
 
 func (o PriceItem) String() string {

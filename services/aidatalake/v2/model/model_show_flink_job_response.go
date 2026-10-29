@@ -71,6 +71,9 @@ type ShowFlinkJobResponse struct {
 	// **参数解释**：描述信息。 **取值范围**：1~512个字符。
 	Description *string `json:"description,omitempty"`
 
+	// **参数解释**：该作业是否开启失败告警通知。 **取值范围**：   - true：开启。作业运行失败或提交失败时会向客户发送告警通知。   - false：关闭。作业失败时不发送告警通知。 **默认取值**：false，不指定时默认关闭。
+	AlertEnabled *bool `json:"alert_enabled,omitempty"`
+
 	// **参数解释**：作业开始运行的时间戳（进入RUNNING状态的时间）。 **取值范围**：0 ~ 4102416000000，13位毫秒时间戳。
 	StartTime *int64 `json:"start_time,omitempty"`
 

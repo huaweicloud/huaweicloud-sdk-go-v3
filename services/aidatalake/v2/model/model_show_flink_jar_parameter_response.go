@@ -9,10 +9,10 @@ import (
 	"strings"
 )
 
-// ShowFlinkJarParameterResponse **参数解释**：Flink JAR作业参数，包含JAR作业的详细配置信息。
+// ShowFlinkJarParameterResponse **参数解释**：JAR作业参数，包含JAR作业的详细配置信息。
 type ShowFlinkJarParameterResponse struct {
 
-	// **参数解释**：作业类型。 **约束限制**：不涉及。 **取值范围**：   - FLINK_JAR_JOB：Flink Jar作业。
+	// **参数解释**：作业类型，用于区分SQL作业、Jar作业和SQL Gateway作业。 **约束限制**：不涉及。 **取值范围**：   - FLINK_JAR_JOB：Jar作业。
 	Type *ShowFlinkJarParameterResponseType `json:"type,omitempty"`
 
 	// **参数解释**：JAR作业主类所在JAR包的OBS路径，用于指定作业的入口JAR包。 **取值范围**：长度为1~512个字符，以obs://开头。
@@ -29,6 +29,8 @@ type ShowFlinkJarParameterResponse struct {
 
 	// **参数解释**：JAR作业依赖文件的OBS路径列表，用于指定作业运行所需的依赖文件。
 	DependencyFiles *[]string `json:"dependency_files,omitempty"`
+
+	PythonParameter *ShowFlinkPythonDependencyParameterResponse `json:"python_parameter,omitempty"`
 }
 
 func (o ShowFlinkJarParameterResponse) String() string {

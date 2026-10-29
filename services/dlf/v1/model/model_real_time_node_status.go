@@ -92,22 +92,22 @@ type RealTimeNodeStatusNodeType struct {
 }
 
 type RealTimeNodeStatusNodeTypeEnum struct {
-	HIVE_SQL           RealTimeNodeStatusNodeType
-	SPARK_SQL          RealTimeNodeStatusNodeType
-	DWSSQL             RealTimeNodeStatusNodeType
-	DLISQL             RealTimeNodeStatusNodeType
-	SHELL              RealTimeNodeStatusNodeType
-	CDM_JOB            RealTimeNodeStatusNodeType
-	DIS_TRANSFER_TASK  RealTimeNodeStatusNodeType
-	CS_JOB             RealTimeNodeStatusNodeType
-	CLOUD_TABLE_MANAGE RealTimeNodeStatusNodeType
-	OBS_MANAGER        RealTimeNodeStatusNodeType
-	RESTAPI            RealTimeNodeStatusNodeType
-	MACHINE_LEARNING   RealTimeNodeStatusNodeType
-	SMN                RealTimeNodeStatusNodeType
-	MRS_SPARK          RealTimeNodeStatusNodeType
-	MAP_REDUCE         RealTimeNodeStatusNodeType
-	DLI_SPARK          RealTimeNodeStatusNodeType
+	HIVE_SQL            RealTimeNodeStatusNodeType
+	SPARK_SQL           RealTimeNodeStatusNodeType
+	DWSSQL              RealTimeNodeStatusNodeType
+	DLISQL              RealTimeNodeStatusNodeType
+	SHELL               RealTimeNodeStatusNodeType
+	CDM_JOB             RealTimeNodeStatusNodeType
+	DIS_TRANSFER_TASK   RealTimeNodeStatusNodeType
+	CS_JOB              RealTimeNodeStatusNodeType
+	CLOUD_TABLE_MANAGER RealTimeNodeStatusNodeType
+	OBS_MANAGER         RealTimeNodeStatusNodeType
+	RESTAPI             RealTimeNodeStatusNodeType
+	MACHINE_LEARNING    RealTimeNodeStatusNodeType
+	SMN                 RealTimeNodeStatusNodeType
+	MRS_SPARK           RealTimeNodeStatusNodeType
+	MAP_REDUCE          RealTimeNodeStatusNodeType
+	DLI_SPARK           RealTimeNodeStatusNodeType
 }
 
 func GetRealTimeNodeStatusNodeTypeEnum() RealTimeNodeStatusNodeTypeEnum {
@@ -136,8 +136,8 @@ func GetRealTimeNodeStatusNodeTypeEnum() RealTimeNodeStatusNodeTypeEnum {
 		CS_JOB: RealTimeNodeStatusNodeType{
 			value: "CSJob",
 		},
-		CLOUD_TABLE_MANAGE: RealTimeNodeStatusNodeType{
-			value: "CloudTableManage",
+		CLOUD_TABLE_MANAGER: RealTimeNodeStatusNodeType{
+			value: "CloudTableManager",
 		},
 		OBS_MANAGER: RealTimeNodeStatusNodeType{
 			value: "OBSManager",

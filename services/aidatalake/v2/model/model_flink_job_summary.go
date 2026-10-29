@@ -24,7 +24,7 @@ type FlinkJobSummary struct {
 	// **参数解释**：作业运行的端点名称。 **取值范围**：只能由英文小写字母、数字及中划线组成，以英文小写字母开头，以英文小写字母或数字结尾，且长度为1~63个字符。
 	EndpointName *string `json:"endpoint_name,omitempty"`
 
-	// **参数解释**：作业类型。 **取值范围**：   - FLINK_JAR_JOB：JAR作业。   - FLINK_SQL_JOB：SQL作业。   - FLINK_SQL_GATEWAY：SQL Gateway作业。
+	// **参数解释**：作业类型。 **取值范围**：   - FLINK_JAR_JOB：JAR作业。   - FLINK_SQL_JOB：SQL作业。   - FLINK_SQL_GATEWAY：SQL Gateway作业。   - FLINK_PYTHON_JOB：Python作业。
 	JobType *FlinkJobSummaryJobType `json:"job_type,omitempty"`
 
 	Status *FlinkJobStatus `json:"status"`
@@ -48,6 +48,9 @@ type FlinkJobSummary struct {
 
 	// **参数解释**：作业描述信息。 **取值范围**：1~512个字符。
 	Description string `json:"description"`
+
+	// **参数解释**：该作业是否开启失败告警通知。 **取值范围**：   - true：开启。作业运行失败或提交失败时会向客户发送告警通知。   - false：关闭。作业失败时不发送告警通知。 **默认取值**：false，不指定时默认关闭。
+	AlertEnabled *bool `json:"alert_enabled,omitempty"`
 
 	// **参数解释**：作业开始运行的时间戳（进入RUNNING状态的时间）。 **取值范围**：0 ~ 4102416000000，13位毫秒时间戳。
 	StartTime *int64 `json:"start_time,omitempty"`
@@ -73,6 +76,7 @@ type FlinkJobSummaryJobTypeEnum struct {
 	FLINK_JAR_JOB     FlinkJobSummaryJobType
 	FLINK_SQL_JOB     FlinkJobSummaryJobType
 	FLINK_SQL_GATEWAY FlinkJobSummaryJobType
+	FLINK_PYTHON_JOB  FlinkJobSummaryJobType
 }
 
 func GetFlinkJobSummaryJobTypeEnum() FlinkJobSummaryJobTypeEnum {
@@ -85,6 +89,9 @@ func GetFlinkJobSummaryJobTypeEnum() FlinkJobSummaryJobTypeEnum {
 		},
 		FLINK_SQL_GATEWAY: FlinkJobSummaryJobType{
 			value: "FLINK_SQL_GATEWAY",
+		},
+		FLINK_PYTHON_JOB: FlinkJobSummaryJobType{
+			value: "FLINK_PYTHON_JOB",
 		},
 	}
 }

@@ -12,7 +12,7 @@ type UpdateTaskRulesetRequest struct {
 	// 任务ID
 	TaskId string `json:"task_id"`
 
-	// 修改任务规则集
+	// **参数解释：** 规则集信息。 **约束限制：** 不涉及。
 	Body *[]UpdateTaskRulesetItem `json:"body,omitempty"`
 }
 

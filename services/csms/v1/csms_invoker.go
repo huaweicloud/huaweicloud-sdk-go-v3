@@ -21,6 +21,22 @@ func (i *BatchCreateOrDeleteTagsInvoker) Invoke() (*model.BatchCreateOrDeleteTag
 	}
 }
 
+type BatchGetSecretValueInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchGetSecretValueInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchGetSecretValueInvoker) Invoke() (*model.BatchGetSecretValueResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchGetSecretValueResponse), nil
+	}
+}
+
 type BatchImportSecretsInvoker struct {
 	*invoker.BaseInvoker
 }

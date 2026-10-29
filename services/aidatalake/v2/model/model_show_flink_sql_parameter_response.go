@@ -9,10 +9,10 @@ import (
 	"strings"
 )
 
-// ShowFlinkSqlParameterResponse **参数解释**：Flink SQL作业参数，包含SQL作业的详细配置信息。
+// ShowFlinkSqlParameterResponse **参数解释**：SQL作业参数，包含SQL作业的详细配置信息。
 type ShowFlinkSqlParameterResponse struct {
 
-	// **参数解释**：作业类型。 **约束限制**：不涉及。 **取值范围**：   - FLINK_SQL_JOB：Flink SQL作业。
+	// **参数解释**：作业类型，用于区分SQL作业、Jar作业和SQL Gateway作业。 **约束限制**：不涉及。 **取值范围**：   - FLINK_SQL_JOB：SQL作业。
 	Type *ShowFlinkSqlParameterResponseType `json:"type,omitempty"`
 
 	// **参数解释**：SQL脚本所在的OBS文件路径，用于指定SQL作业的脚本文件。 **取值范围**：OBS URL格式，长度为1~512个字符，以obs://开头。
@@ -20,6 +20,11 @@ type ShowFlinkSqlParameterResponse struct {
 
 	// **参数解释**：SQL作业依赖的JAR包OBS路径列表，用于指定作业运行所需的依赖JAR包，单个路径为OBS URL格式，长度为1~512个字符，以obs://开头。
 	DependencyJars *[]string `json:"dependency_jars,omitempty"`
+
+	// **参数解释**：SQL作业依赖文件的OBS路径列表，用于指定作业运行所需的依赖文件。
+	DependencyFiles *[]string `json:"dependency_files,omitempty"`
+
+	PythonParameter *ShowFlinkPythonDependencyParameterResponse `json:"python_parameter,omitempty"`
 }
 
 func (o ShowFlinkSqlParameterResponse) String() string {

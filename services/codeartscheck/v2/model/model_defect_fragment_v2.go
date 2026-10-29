@@ -6,19 +6,18 @@ import (
 	"strings"
 )
 
-// DefectFragmentV2 start_offset和end_offset均为-1，表示该行不是缺陷片段或者整行都是，需要结合DefectInfoV2中的line_number属性一起判断哪一行是具体的缺陷片段。
 type DefectFragmentV2 struct {
 
-	// 行号
+	// **参数解释：** 行号。 **取值范围：** 不涉及。
 	LineNum *string `json:"line_num,omitempty"`
 
-	// 该行代码内容
+	// **参数解释：** 行代码内容。 **取值范围：** 不涉及。
 	LineContent *string `json:"line_content,omitempty"`
 
-	// 缺陷开始列号
+	// **参数解释：** 废弃字段。 **取值范围：** 不涉及。
 	StartOffset *int32 `json:"start_offset,omitempty"`
 
-	// 缺陷结束列号
+	// **参数解释：** 废弃字段。 **取值范围：** 不涉及。
 	EndOffset *int32 `json:"end_offset,omitempty"`
 }
 

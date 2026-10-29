@@ -42,6 +42,8 @@ type ShowSparkJobResponse struct {
 	// **参数解释**：用户自定义Spark参数配置。 **取值范围**：长度为0~1024个字符。
 	SparkConfig map[string]string `json:"spark_config,omitempty"`
 
+	MetricStatistics *SparkJobMetricStatistics `json:"metric_statistics,omitempty"`
+
 	LoggingConfig *ShowSparkLoggingConfigResponse `json:"logging_config,omitempty"`
 
 	Image *ShowSparkJobImageConfigResponse `json:"image,omitempty"`
@@ -67,8 +69,10 @@ type ShowSparkJobResponse struct {
 	LogUrl *string `json:"log_url,omitempty"`
 
 	// **参数解释**：Spark作业描述信息，用于说明作业用途。 **取值范围**：长度为0~512个字符。
-	Description    *string `json:"description,omitempty"`
-	HttpStatusCode int     `json:"-"`
+	Description *string `json:"description,omitempty"`
+
+	SparkUi        *SparkUiSharedInfo `json:"spark_ui,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o ShowSparkJobResponse) String() string {

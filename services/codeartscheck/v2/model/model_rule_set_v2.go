@@ -8,10 +8,10 @@ import (
 
 type RuleSetV2 struct {
 
-	// 规则集id，需要从web界面获取
+	// **参数解释：** 规则集ID。 **约束限制:** 长度为[1~32]个字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	RulesetId *string `json:"ruleset_id,omitempty"`
 
-	// 检查语言，支持cpp,java,js,python,php,css,html,go,typescript
+	// **参数解释：** 检查语言，支持的语言请关注服务更新特性文档。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	Language string `json:"language"`
 }
 

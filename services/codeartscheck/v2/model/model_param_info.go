@@ -6,28 +6,28 @@ import (
 	"strings"
 )
 
-// ParamInfo 任务详情
+// ParamInfo **参数解释：** 任务基本信息。
 type ParamInfo struct {
 
-	// 仓库地址
+	// **参数解释：** 代码仓地址。 **取值范围:** 不涉及。
 	Url *string `json:"url,omitempty"`
 
-	// 仓库分支
+	// **参数解释：** 任务本次扫描的代码仓分支。 **取值范围:** 不涉及。
 	Branch *string `json:"branch,omitempty"`
 
-	// 仓库语言
+	// **参数解释：** 任务本次扫描的规则语言。 **取值范围:** 不涉及。
 	Language *string `json:"language,omitempty"`
 
-	// 排除的目录
+	// **参数解释：** 任务配置的排除目录信息。 **取值范围:** 不涉及。
 	ExcludeDir *string `json:"exclude_dir,omitempty"`
 
-	// 编码格式
+	// **参数解释：** 废弃字段。 **取值范围:** 不涉及。
 	Encode *string `json:"encode,omitempty"`
 
-	// 编译配置信息
+	// **参数解释：** 任务的部分检查参数json格式信息。 **取值范围:** 不涉及。
 	CompileConfig *string `json:"compile_config,omitempty"`
 
-	// g规则集名称
+	// **参数解释：** 废弃字段。 **取值范围:** 不涉及。
 	RuleTemplate *string `json:"rule_template,omitempty"`
 }
 

@@ -6,14 +6,14 @@ import (
 	"strings"
 )
 
-// ShowFlinkSqlGatewayResourceSpecResponseBody **参数解释**：SQL Gateway sidecar的资源规格，包含CPU和内存配额，仅FLINK_SQL_GATEWAY类型返回。
+// ShowFlinkSqlGatewayResourceSpecResponseBody **参数解释**：SQL Gateway 的资源规格，包含CPU和内存配额。
 type ShowFlinkSqlGatewayResourceSpecResponseBody struct {
 
-	// **参数解释**：SQL Gateway的CPU配额，单位为毫核。 **取值范围**：100~48000。
-	Cpu *int32 `json:"cpu,omitempty"`
+	// **参数解释**：CPU毫核数，单位为毫核。 **取值范围**：500~47500。
+	Cpu int32 `json:"cpu"`
 
-	// **参数解释**：SQL Gateway的内存配额，单位为MB。 **取值范围**：128~393216。
-	Memory *int32 `json:"memory,omitempty"`
+	// **参数解释**：内存大小，单位为MB。 **取值范围**：2048~391168。
+	Memory int32 `json:"memory"`
 }
 
 func (o ShowFlinkSqlGatewayResourceSpecResponseBody) String() string {

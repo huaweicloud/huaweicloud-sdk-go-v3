@@ -9,10 +9,10 @@ import (
 // ShowTaskSettingsResponse Response Object
 type ShowTaskSettingsResponse struct {
 
-	// 高级选项的相关信息
+	// **参数解释：** 高级配置的相关信息。
 	Info *[]TaskAdvancedSettings `json:"info,omitempty"`
 
-	// 总数
+	// **参数解释：** 总数。 **取值范围：** ≥0
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

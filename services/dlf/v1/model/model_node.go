@@ -60,22 +60,22 @@ type NodeNodeType struct {
 }
 
 type NodeNodeTypeEnum struct {
-	HIVE_SQL           NodeNodeType
-	SPARK_SQL          NodeNodeType
-	DWSSQL             NodeNodeType
-	DLISQL             NodeNodeType
-	SHELL              NodeNodeType
-	CDM_JOB            NodeNodeType
-	DIS_TRANSFER_TASK  NodeNodeType
-	CS_JOB             NodeNodeType
-	CLOUD_TABLE_MANAGE NodeNodeType
-	OBS_MANAGER        NodeNodeType
-	RESTAPI            NodeNodeType
-	MACHINE_LEARNING   NodeNodeType
-	SMN                NodeNodeType
-	MRS_SPARK          NodeNodeType
-	MAP_REDUCE         NodeNodeType
-	DLI_SPARK          NodeNodeType
+	HIVE_SQL            NodeNodeType
+	SPARK_SQL           NodeNodeType
+	DWSSQL              NodeNodeType
+	DLISQL              NodeNodeType
+	SHELL               NodeNodeType
+	CDM_JOB             NodeNodeType
+	DIS_TRANSFER_TASK   NodeNodeType
+	CS_JOB              NodeNodeType
+	CLOUD_TABLE_MANAGER NodeNodeType
+	OBS_MANAGER         NodeNodeType
+	RESTAPI             NodeNodeType
+	MACHINE_LEARNING    NodeNodeType
+	SMN                 NodeNodeType
+	MRS_SPARK           NodeNodeType
+	MAP_REDUCE          NodeNodeType
+	DLI_SPARK           NodeNodeType
 }
 
 func GetNodeNodeTypeEnum() NodeNodeTypeEnum {
@@ -104,8 +104,8 @@ func GetNodeNodeTypeEnum() NodeNodeTypeEnum {
 		CS_JOB: NodeNodeType{
 			value: "CSJob",
 		},
-		CLOUD_TABLE_MANAGE: NodeNodeType{
-			value: "CloudTableManage",
+		CLOUD_TABLE_MANAGER: NodeNodeType{
+			value: "CloudTableManager",
 		},
 		OBS_MANAGER: NodeNodeType{
 			value: "OBSManager",

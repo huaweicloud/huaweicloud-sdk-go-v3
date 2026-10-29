@@ -14,6 +14,9 @@ type PreviewAgencyLogAccessReqBody struct {
 	// 日志访问类型
 	AgencyAccessType PreviewAgencyLogAccessReqBodyAgencyAccessType `json:"agency_access_type"`
 
+	// 跨账号日志接入配置id
+	AgencyAccessConfigId *string `json:"agency_accessConfig_id,omitempty"`
+
 	// 跨账号日志接入配置名称
 	AgencyLogAccess string `json:"agency_log_access"`
 

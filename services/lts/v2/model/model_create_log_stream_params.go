@@ -23,6 +23,12 @@ type CreateLogStreamParams struct {
 
 	// 企业项目名称 >只能由中文、英文字母、数字、下划线、中划线组成，且不能使用任何大小写形式的“default”； 描述不超过512个字符。
 	EnterpriseProjectName *string `json:"enterprise_project_name,omitempty"`
+
+	// **参数解释：** 是否开启智能冷存储。 **约束限制：** 开启智能冷存储需要日志存储时间大于7天。开启智能冷存储后，需要设置标准存储层数据的保存时间。标准存储至少需保存7天才能转换为智能冷存储层数据。当日志保存时间大于标准存储层数据保存时间，且小于日志存储时间时，日志数据将自动转换为智能冷存储层数据存储。 **取值范围：** true/false。 **默认取值：** false
+	HotColdSeparation *bool `json:"hot_cold_separation,omitempty"`
+
+	// **参数解释：** 日志流标准存储时间（单位：天），即日志上报到LTS后日志标准存储的时间。 **约束限制：** 开启智能冷存储需要日志总存储时间大于7天。 **取值范围：** 最小值：7天 最大值：365天 **默认取值：** 不涉及。
+	HotStorageDays *int32 `json:"hot_storage_days,omitempty"`
 }
 
 func (o CreateLogStreamParams) String() string {

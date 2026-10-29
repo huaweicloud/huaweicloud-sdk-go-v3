@@ -9,7 +9,7 @@ import (
 // CreateTaskResponse Response Object
 type CreateTaskResponse struct {
 
-	// 检查任务id
+	// **参数解释：** 任务ID。 **取值范围：** 全量任务为32位UUID，MR增量任务为\"MR_\"+32位UUID。
 	TaskId         *string `json:"task_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

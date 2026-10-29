@@ -9,10 +9,10 @@ import (
 // ShowTaskListByProjectIdResponse Response Object
 type ShowTaskListByProjectIdResponse struct {
 
-	// 任务信息
+	// **参数解释：** 任务信息。
 	Tasks *[]SimpleTaskInfoV2 `json:"tasks,omitempty"`
 
-	// 总数
+	// **参数解释：** 项目下的任务总数。 **取值范围：** 不涉及。
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

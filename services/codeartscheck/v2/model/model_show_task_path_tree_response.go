@@ -9,10 +9,10 @@ import (
 // ShowTaskPathTreeResponse Response Object
 type ShowTaskPathTreeResponse struct {
 
-	// 任务的目录树信息
+	// **参数解释:** 任务的目录树信息。
 	Info *[]TreeNode `json:"info,omitempty"`
 
-	// 数目
+	// **参数解释:** 数目。 **取值范围:** ≥0
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

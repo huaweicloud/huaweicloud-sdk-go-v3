@@ -65,30 +65,29 @@ type NodeType struct {
 }
 
 type NodeTypeEnum struct {
-	HIVE_SQL           NodeType
-	SPARK_SQL          NodeType
-	DWSSQL             NodeType
-	DLISQL             NodeType
-	SHELL              NodeType
-	CDM_JOB            NodeType
-	DIS_TRANSFER_TASK  NodeType
-	CS_JOB             NodeType
-	CLOUD_TABLE_MANAGE NodeType
-	OBS_MANAGER        NodeType
-	RESTAPI            NodeType
-	MACHINE_LEARNING   NodeType
-	SMN                NodeType
-	MRS_SPARK          NodeType
-	MAP_REDUCE         NodeType
-	DLI_SPARK          NodeType
-	MRS_FLINK          NodeType
-	MRS_FLINK_JOB      NodeType
-	MRS_HETU_ENGINE    NodeType
-	RDS_SQL            NodeType
-	DATA_MIGRATION     NodeType
-	ONECLICK_CDC       NodeType
-	DUMMY              NodeType
-	MRS_SPARK_PYTHON   NodeType
+	HIVE_SQL            NodeType
+	SPARK_SQL           NodeType
+	DWSSQL              NodeType
+	DLISQL              NodeType
+	SHELL               NodeType
+	CDM_JOB             NodeType
+	DIS_TRANSFER_TASK   NodeType
+	CS_JOB              NodeType
+	CLOUD_TABLE_MANAGER NodeType
+	OBS_MANAGER         NodeType
+	RESTAPI             NodeType
+	MACHINE_LEARNING    NodeType
+	SMN                 NodeType
+	MRS_SPARK           NodeType
+	MAP_REDUCE          NodeType
+	DLI_SPARK           NodeType
+	MRS_FLINK_JOB       NodeType
+	HETU_ENGINE_SQL     NodeType
+	RDSSQL              NodeType
+	DATA_MIGRATION      NodeType
+	ONECLICK_CDC        NodeType
+	DUMMY               NodeType
+	MRS_SPARK_PYTHON    NodeType
 }
 
 func GetNodeTypeEnum() NodeTypeEnum {
@@ -117,8 +116,8 @@ func GetNodeTypeEnum() NodeTypeEnum {
 		CS_JOB: NodeType{
 			value: "CSJob",
 		},
-		CLOUD_TABLE_MANAGE: NodeType{
-			value: "CloudTableManage",
+		CLOUD_TABLE_MANAGER: NodeType{
+			value: "CloudTableManager",
 		},
 		OBS_MANAGER: NodeType{
 			value: "OBSManager",
@@ -141,17 +140,14 @@ func GetNodeTypeEnum() NodeTypeEnum {
 		DLI_SPARK: NodeType{
 			value: "DLISpark",
 		},
-		MRS_FLINK: NodeType{
-			value: "MRSFlink",
-		},
 		MRS_FLINK_JOB: NodeType{
 			value: "MRSFlinkJob",
 		},
-		MRS_HETU_ENGINE: NodeType{
-			value: "MRSHetuEngine",
+		HETU_ENGINE_SQL: NodeType{
+			value: "HetuEngineSQL",
 		},
-		RDS_SQL: NodeType{
-			value: "RDS SQL",
+		RDSSQL: NodeType{
+			value: "RDSSQL",
 		},
 		DATA_MIGRATION: NodeType{
 			value: "DataMigration",

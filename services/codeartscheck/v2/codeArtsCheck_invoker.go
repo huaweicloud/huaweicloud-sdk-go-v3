@@ -117,6 +117,22 @@ func (i *DeleteTaskInvoker) Invoke() (*model.DeleteTaskResponse, error) {
 	}
 }
 
+type ListCriterionSetsByLanguageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCriterionSetsByLanguageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCriterionSetsByLanguageInvoker) Invoke() (*model.ListCriterionSetsByLanguageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCriterionSetsByLanguageResponse), nil
+	}
+}
+
 type ListRulesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -309,6 +325,22 @@ func (i *ShowTaskDetailInvoker) Invoke() (*model.ShowTaskDetailResponse, error) 
 	}
 }
 
+type ShowTaskInfoByIdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTaskInfoByIdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTaskInfoByIdInvoker) Invoke() (*model.ShowTaskInfoByIdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTaskInfoByIdResponse), nil
+	}
+}
+
 type ShowTaskListByProjectIdInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -373,6 +405,22 @@ func (i *ShowTasklogInvoker) Invoke() (*model.ShowTasklogResponse, error) {
 	}
 }
 
+type ShowTasksListInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTasksListInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTasksListInvoker) Invoke() (*model.ShowTasksListResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTasksListResponse), nil
+	}
+}
+
 type ShowTasksRulesetsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -402,6 +450,22 @@ func (i *StopTaskByIdInvoker) Invoke() (*model.StopTaskByIdResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.StopTaskByIdResponse), nil
+	}
+}
+
+type UpdateCodeGateInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateCodeGateInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateCodeGateInvoker) Invoke() (*model.UpdateCodeGateResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateCodeGateResponse), nil
 	}
 }
 

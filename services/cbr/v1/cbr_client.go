@@ -1494,6 +1494,7 @@ func (c *CbrClient) UpdateMemberStatusInvoker(request *model.UpdateMemberStatusR
 	return &UpdateMemberStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateOrder 变更（废弃）
 //
 // 订单更新，支付cbc订单后，调用该接口更新包周期产品订单信息。该接口已废弃。
@@ -1509,6 +1510,7 @@ func (c *CbrClient) UpdateOrder(request *model.UpdateOrderRequest) (*model.Updat
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateOrderInvoker 变更（废弃）
 func (c *CbrClient) UpdateOrderInvoker(request *model.UpdateOrderRequest) *UpdateOrderInvoker {
 	requestDef := GenReqDefForUpdateOrder()

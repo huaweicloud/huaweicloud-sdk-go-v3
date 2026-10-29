@@ -8,8 +8,8 @@ import (
 
 // CheckParametersResponse Response Object
 type CheckParametersResponse struct {
-	Body           *[]TaskCheckParamters `json:"body,omitempty"`
-	HttpStatusCode int                   `json:"-"`
+	Body           *[]TaskCheckParameters `json:"body,omitempty"`
+	HttpStatusCode int                    `json:"-"`
 }
 
 func (o CheckParametersResponse) String() string {

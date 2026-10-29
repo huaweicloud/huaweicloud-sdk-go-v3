@@ -9,8 +9,8 @@ import (
 // ListLogHistogramResponse Response Object
 type ListLogHistogramResponse struct {
 
-	// 直方图结果
-	Histogram *string `json:"histogram,omitempty"`
+	// **参数解释：** 直方图结果。 **取值范围：** 不涉及。
+	Histogram *[]LogCounts `json:"histogram,omitempty"`
 
 	// 日志条数
 	Count *int64 `json:"count,omitempty"`

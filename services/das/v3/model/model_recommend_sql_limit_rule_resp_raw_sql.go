@@ -10,7 +10,7 @@ import (
 type RecommendSqlLimitRuleRespRawSql struct {
 
 	// 会话id
-	SessionId float32 `json:"session_id,omitempty"`
+	SessionId *int64 `json:"session_id,omitempty"`
 
 	// 主机ip
 	Host *string `json:"host,omitempty"`

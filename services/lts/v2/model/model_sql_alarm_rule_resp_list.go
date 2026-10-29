@@ -72,6 +72,9 @@ type SqlAlarmRuleRespList struct {
 
 	// **参数解释：** 告警标签信息。
 	Tags *[]TagsResBody `json:"tags,omitempty"`
+
+	// **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。
+	ConditionExpressions *[]AlarmCondition `json:"condition_expressions,omitempty"`
 }
 
 func (o SqlAlarmRuleRespList) String() string {

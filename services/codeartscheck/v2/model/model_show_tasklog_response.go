@@ -10,7 +10,7 @@ import (
 type ShowTasklogResponse struct {
 	ParamInfo *ParamInfo `json:"param_info,omitempty"`
 
-	// 日志信息
+	// **参数解释：** 失败日志详情。
 	LogInfo        *[]LogInfo `json:"log_info,omitempty"`
 	HttpStatusCode int        `json:"-"`
 }

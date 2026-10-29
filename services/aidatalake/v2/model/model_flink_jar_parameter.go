@@ -26,6 +26,8 @@ type FlinkJarParameter struct {
 
 	// **参数解释**：JAR作业依赖文件的OBS路径列表，用于指定作业运行所需的依赖文件，单个路径为OBS URL格式，长度为1~512个字符，以obs://开头。 **约束限制**：依赖文件数量不能超过100个。
 	DependencyFiles *[]string `json:"dependency_files,omitempty"`
+
+	PythonParameter *FlinkPythonDependencyParameter `json:"python_parameter,omitempty"`
 }
 
 func (o FlinkJarParameter) String() string {

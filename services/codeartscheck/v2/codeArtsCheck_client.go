@@ -166,6 +166,27 @@ func (c *CodeArtsCheckClient) DeleteTaskInvoker(request *model.DeleteTaskRequest
 	return &DeleteTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListCriterionSetsByLanguage 根据语言查询规则集
+//
+// 该API用于查询项目下某一语言的规则集列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsCheckClient) ListCriterionSetsByLanguage(request *model.ListCriterionSetsByLanguageRequest) (*model.ListCriterionSetsByLanguageResponse, error) {
+	requestDef := GenReqDefForListCriterionSetsByLanguage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCriterionSetsByLanguageResponse), nil
+	}
+}
+
+// ListCriterionSetsByLanguageInvoker 根据语言查询规则集
+func (c *CodeArtsCheckClient) ListCriterionSetsByLanguageInvoker(request *model.ListCriterionSetsByLanguageRequest) *ListCriterionSetsByLanguageInvoker {
+	requestDef := GenReqDefForListCriterionSetsByLanguage()
+	return &ListCriterionSetsByLanguageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListRules 获取规则列表接口
 //
 // 根据语言、问题级别等条件查询规则列表。
@@ -418,6 +439,27 @@ func (c *CodeArtsCheckClient) ShowTaskDetailInvoker(request *model.ShowTaskDetai
 	return &ShowTaskDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowTaskInfoById 根据任务ID查询检查任务
+//
+// 根据任务ID查询代码检查任务的基本信息，返回任务ID、任务名、项目ID、项目名、代码仓地址、分支和配置模板ID等信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsCheckClient) ShowTaskInfoById(request *model.ShowTaskInfoByIdRequest) (*model.ShowTaskInfoByIdResponse, error) {
+	requestDef := GenReqDefForShowTaskInfoById()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTaskInfoByIdResponse), nil
+	}
+}
+
+// ShowTaskInfoByIdInvoker 根据任务ID查询检查任务
+func (c *CodeArtsCheckClient) ShowTaskInfoByIdInvoker(request *model.ShowTaskInfoByIdRequest) *ShowTaskInfoByIdInvoker {
+	requestDef := GenReqDefForShowTaskInfoById()
+	return &ShowTaskInfoByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowTaskListByProjectId 查询任务列表
 //
 // 根据DEVCLOUD_PROJECT_UUID查询该项目下的任务列表。
@@ -502,6 +544,27 @@ func (c *CodeArtsCheckClient) ShowTasklogInvoker(request *model.ShowTasklogReque
 	return &ShowTasklogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowTasksList 查询任务列表
+//
+// 根据项目ID、需要搜索的任务名、任务分组ID和任务执行状态分页查询项目下的代码检查任务，返回任务名称、代码仓地址、分支、配置模板ID和规则集等信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsCheckClient) ShowTasksList(request *model.ShowTasksListRequest) (*model.ShowTasksListResponse, error) {
+	requestDef := GenReqDefForShowTasksList()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTasksListResponse), nil
+	}
+}
+
+// ShowTasksListInvoker 查询任务列表
+func (c *CodeArtsCheckClient) ShowTasksListInvoker(request *model.ShowTasksListRequest) *ShowTasksListInvoker {
+	requestDef := GenReqDefForShowTasksList()
+	return &ShowTasksListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowTasksRulesets 查询任务的已选规则集列表
 //
 // 查询任务的已选规则集列表。
@@ -542,6 +605,27 @@ func (c *CodeArtsCheckClient) StopTaskById(request *model.StopTaskByIdRequest) (
 func (c *CodeArtsCheckClient) StopTaskByIdInvoker(request *model.StopTaskByIdRequest) *StopTaskByIdInvoker {
 	requestDef := GenReqDefForStopTaskById()
 	return &StopTaskByIdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCodeGate 更新门禁配置
+//
+// 根据任务ID设置任务的致命问题数、严重问题数、一般问题数和提示问题数的质量门禁，在检查完成后，超过门禁阈值将提示门禁结果为Failed。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsCheckClient) UpdateCodeGate(request *model.UpdateCodeGateRequest) (*model.UpdateCodeGateResponse, error) {
+	requestDef := GenReqDefForUpdateCodeGate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateCodeGateResponse), nil
+	}
+}
+
+// UpdateCodeGateInvoker 更新门禁配置
+func (c *CodeArtsCheckClient) UpdateCodeGateInvoker(request *model.UpdateCodeGateRequest) *UpdateCodeGateInvoker {
+	requestDef := GenReqDefForUpdateCodeGate()
+	return &UpdateCodeGateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDefectStatus 修改缺陷状态

@@ -60,8 +60,10 @@ type ShowSparkSqlResponse struct {
 	CreateUser *SparkCreateUser `json:"create_user,omitempty"`
 
 	// **参数解释**：作业标签列表，用于标识和分类作业。数组中的每个元素为SparkSqlLabelRes对象，包含标签的键和值。
-	Labels         *[]SparkSqlLabelRes `json:"labels,omitempty"`
-	HttpStatusCode int                 `json:"-"`
+	Labels *[]SparkSqlLabelRes `json:"labels,omitempty"`
+
+	SparkUi        *SparkUiSharedInfo `json:"spark_ui,omitempty"`
+	HttpStatusCode int                `json:"-"`
 }
 
 func (o ShowSparkSqlResponse) String() string {

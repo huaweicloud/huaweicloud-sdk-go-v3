@@ -17,6 +17,12 @@ type FlinkSqlGatewayParameter struct {
 
 	// **参数解释**：用户自定义的SQL Gateway访问鉴权Token，调用方通过HTTP请求头 Authorization: Bearer {token} 携带。 **约束限制**：不涉及。 **取值范围**：长度为1~256个字符。 **默认取值**：不涉及。
 	SqlGatewayToken *string `json:"sql_gateway_token,omitempty"`
+
+	// **参数解释**：是否开启空闲自动释放。 **约束限制**：不涉及。 **取值范围**：   - true：开启空闲自动释放。   - false：关闭空闲自动释放。 **默认取值**：false。
+	IdleEnabled *bool `json:"idle_enabled,omitempty"`
+
+	// **参数解释**：最大空闲时长，单位为分钟，用于指定SQL Gateway空闲多长时间后自动停止。空闲指会话内没有正在运行的作业，创建会话等其他操作不计为非空闲。 **约束限制**：不涉及。 **取值范围**：10~1440。 **默认取值**：30。
+	IdleTimeout *int32 `json:"idle_timeout,omitempty"`
 }
 
 func (o FlinkSqlGatewayParameter) String() string {

@@ -8,19 +8,19 @@ import (
 
 type LogInfo struct {
 
-	// 日志标题
+	// **参数解释：** 检查日志页面所显示的子任务阶段名称。 **取值范围:** 不涉及。
 	DisplayName *string `json:"display_name,omitempty"`
 
-	// 日志内容
+	// **参数解释：** 扫描日志内容。 **取值范围:** 不涉及。
 	Log *string `json:"log,omitempty"`
 
-	// 日志级别
+	// **参数解释：** 废弃字段。 **取值范围:** 不涉及。
 	Level *string `json:"level,omitempty"`
 
-	// 日志分析
+	// **参数解释：** 任务失败的简要原因。 **取值范围:** 不涉及。
 	Analysis *string `json:"analysis,omitempty"`
 
-	// 常见问题解答
+	// **参数解释：** 废弃字段。 **取值范围:** 不涉及。
 	Faq *string `json:"faq,omitempty"`
 }
 

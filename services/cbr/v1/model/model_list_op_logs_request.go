@@ -47,6 +47,12 @@ type ListOpLogsRequest struct {
 
 	// 企业项目id或all_granted_eps，all_granted_eps表示查询用户有权限的所有企业项目id
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// **参数解释：** 复制的目标区域 [获取方法请参见\"[地区和终端节点查询](https://console.huaweicloud.com/apiexplorer/#/endpoint/CBR)\"。 ](tag:hws) [获取方法请参见\"[地区和终端节点查询](https://console-intl.huaweicloud.com/apiexplorer/#/endpoint/CBR)\"。](tag:hws_hk) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	DestinationRegion *string `json:"destination_region,omitempty"`
+
+	// **参数解释：** 复制的目标区域项目ID，获取方法请参见[获取项目ID](cbr_04_0022.xml) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	DestinationProjectId *string `json:"destination_project_id,omitempty"`
 }
 
 func (o ListOpLogsRequest) String() string {

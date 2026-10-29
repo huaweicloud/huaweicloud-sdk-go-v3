@@ -66,8 +66,17 @@ type UpdateSqlAlarmRuleResponse struct {
 	RecoveryPolicy *int32 `json:"recovery_policy,omitempty"`
 
 	// **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
-	Tags           *[]TagsResBody `json:"tags,omitempty"`
-	HttpStatusCode int            `json:"-"`
+	Tags *[]TagsResBody `json:"tags,omitempty"`
+
+	// **参数解释：** 告警规则创建的时间，毫秒级的时间戳。 **取值范围** 不涉及。
+	CreateTime *int64 `json:"create_time,omitempty"`
+
+	// **参数解释：** 告警规则最后一次修改的时间，毫秒级的时间戳。 **取值范围：** 不涉及。
+	UpdateTime *int64 `json:"update_time,omitempty"`
+
+	// **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。 **约束限制：** 不涉及。
+	ConditionExpressions *[]AlarmCondition `json:"condition_expressions,omitempty"`
+	HttpStatusCode       int               `json:"-"`
 }
 
 func (o UpdateSqlAlarmRuleResponse) String() string {

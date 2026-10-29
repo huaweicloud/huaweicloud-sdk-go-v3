@@ -80,6 +80,9 @@ type ListBackupsRequest struct {
 
 	// 是否是增备
 	Incremental *bool `json:"incremental,omitempty"`
+
+	// **参数解释：** 是否查询按数量保留或永久保留自动备份 **约束限制：** 不涉及 **取值范围：** - true：返回按数量保留或永久保留自动备份  - false：返回按时间保留自动备份 **默认取值：** 不涉及
+	ExistedQuantityBasedRetentionBackups *bool `json:"existed_quantity_based_retention_backups,omitempty"`
 }
 
 func (o ListBackupsRequest) String() string {

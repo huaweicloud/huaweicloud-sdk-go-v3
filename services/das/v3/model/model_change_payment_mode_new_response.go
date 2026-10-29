@@ -13,7 +13,7 @@ type ChangePaymentModeNewResponse struct {
 	Success *bool `json:"success,omitempty"`
 
 	// 可恢复为免费实例的时间
-	CanSetFreeTime float32 `json:"can_set_free_time,omitempty"`
+	CanSetFreeTime *int64 `json:"can_set_free_time,omitempty"`
 
 	// 错误信息
 	ErrorMsg       *string `json:"error_msg,omitempty"`

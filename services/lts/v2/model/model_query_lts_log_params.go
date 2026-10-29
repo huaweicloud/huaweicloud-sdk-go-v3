@@ -56,6 +56,9 @@ type QueryLtsLogParams struct {
 
 	// 是否为带管道符的sql分析语句。当该参数为true时，将依照body体中的query参数内容进行查询，且body体中除start_time与end_time以外的参数失效，分页、排序、查询结果条数等功能请依照sql语法规则实现。查询结果的响应体不同于未启用时的查询方式，将以默认列存的形式返回查询结果。当前仅对内测用户开放。响应示例：{\"analysisLogs\":[{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"}]}
 	IsAnalysisQuery *bool `json:"is_analysis_query,omitempty"`
+
+	// **参数解释：** 查询时区。 当开启管道符语句查询功能时，将会按照sql_timezone中的时区信息对时间算子进行处理。 **约束限制：** 不涉及。 **取值范围：** 标准时区值 **默认取值：** UTC
+	SqlTimezone *string `json:"sql_timezone,omitempty"`
 }
 
 func (o QueryLtsLogParams) String() string {

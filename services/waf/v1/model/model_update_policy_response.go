@@ -40,8 +40,10 @@ type UpdatePolicyResponse struct {
 	Extend map[string]string `json:"extend,omitempty"`
 
 	// 创建防护策略的时间
-	Timestamp      *int64 `json:"timestamp,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	Timestamp *int64 `json:"timestamp,omitempty"`
+
+	ScanProtectionOptions *ScanProtectionOption `json:"scan_protection_options,omitempty"`
+	HttpStatusCode        int                   `json:"-"`
 }
 
 func (o UpdatePolicyResponse) String() string {

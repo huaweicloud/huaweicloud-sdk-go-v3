@@ -26,10 +26,10 @@ type CreateSqlAlarmRuleRequestBody struct {
 	Frequency *CreateSqlAlarmRuleFrequency `json:"frequency"`
 
 	// 条件表达式
-	ConditionExpression string `json:"condition_expression"`
+	ConditionExpression *string `json:"condition_expression,omitempty"`
 
 	// 告警级别
-	SqlAlarmLevel CreateSqlAlarmRuleRequestBodySqlAlarmLevel `json:"sql_alarm_level"`
+	SqlAlarmLevel *CreateSqlAlarmRuleRequestBodySqlAlarmLevel `json:"sql_alarm_level,omitempty"`
 
 	// domainId
 	DomainId string `json:"domain_id"`
@@ -57,6 +57,9 @@ type CreateSqlAlarmRuleRequestBody struct {
 
 	// **参数解释：** 企业项目id信息。 **约束限制：** 不涉及。
 	EnterpriseProjectId *string `json:"enterprise_project_id,omitempty"`
+
+	// **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。 **约束限制：** 不涉及。
+	ConditionExpressions *[]AlarmCondition `json:"condition_expressions,omitempty"`
 }
 
 func (o CreateSqlAlarmRuleRequestBody) String() string {

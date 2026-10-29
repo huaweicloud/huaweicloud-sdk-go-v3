@@ -39,9 +39,6 @@ type ShowLogConvergeConfigResponse struct {
 	// 管理员项目id
 	ManagementProjectId *string `json:"management_project_id,omitempty"`
 
-	// 版本
-	Version *string `json:"version,omitempty"`
-
 	// 日志汇聚配置
 	LogMappingConfig *[]LogMappingConfig `json:"log_mapping_config,omitempty"`
 	HttpStatusCode   int                 `json:"-"`

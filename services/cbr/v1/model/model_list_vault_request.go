@@ -44,6 +44,9 @@ type ListVaultRequest struct {
 
 	// 资源id，支持多资源，以英文逗号分隔
 	ResourceIds *string `json:"resource_ids,omitempty"`
+
+	// **参数解释：** 存储库可用区信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	AvailabilityZone *string `json:"availability_zone,omitempty"`
 }
 
 func (o ListVaultRequest) String() string {

@@ -8,16 +8,16 @@ import (
 
 type StatisticSeverityV2 struct {
 
-	// 致命问题数
+	// **参数解释：** 致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
 	Critical *int32 `json:"critical,omitempty"`
 
-	// 严重问题数
+	// **参数解释：** 严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
 	Major *int32 `json:"major,omitempty"`
 
-	// 一般问题数
+	// **参数解释：** 一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
 	Minor *int32 `json:"minor,omitempty"`
 
-	// 提示问题数
+	// **参数解释：** 提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
 	Suggestion *int32 `json:"suggestion,omitempty"`
 }
 

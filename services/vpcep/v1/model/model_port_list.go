@@ -18,7 +18,7 @@ type PortList struct {
 	// 终端节点服务的端口。 终端节点服务绑定了后端资源，作为提供服务的端口，范围1-65535。
 	ServerPort *int32 `json:"server_port,omitempty"`
 
-	// 端口映射协议，支持TCP。
+	// 端口映射协议，支持TCP、UDP。
 	Protocol *PortListProtocol `json:"protocol,omitempty"`
 }
 
@@ -37,12 +37,16 @@ type PortListProtocol struct {
 
 type PortListProtocolEnum struct {
 	TCP PortListProtocol
+	UDP PortListProtocol
 }
 
 func GetPortListProtocolEnum() PortListProtocolEnum {
 	return PortListProtocolEnum{
 		TCP: PortListProtocol{
 			value: "TCP",
+		},
+		UDP: PortListProtocol{
+			value: "UDP",
 		},
 	}
 }

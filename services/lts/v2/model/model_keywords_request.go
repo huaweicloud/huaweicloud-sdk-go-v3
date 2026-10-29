@@ -42,6 +42,9 @@ type KeywordsRequest struct {
 
 	// **参数解释：** 是否是相对时间。（暂不开放，后续aom上线该功能后一起开放） **约束限制：** 不涉及。 **取值范围：** - true - false **默认取值：** true
 	IsTimeRangeRelative *bool `json:"is_time_range_relative,omitempty"`
+
+	// **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视keywords_alarm_level参数以及keywords_requests中的condition、number参数。 **约束限制：** 不涉及。
+	Conditions *[]KeywordsAlarmConditions `json:"conditions,omitempty"`
 }
 
 func (o KeywordsRequest) String() string {

@@ -292,6 +292,7 @@ func (c *LtsClient) CreateStructConfigInvoker(request *model.CreateStructConfigR
 	return &CreateStructConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateStructTemplate 创建结构化配置
 //
 // 该接口用于创建指定日志流下的结构化配置。
@@ -307,6 +308,7 @@ func (c *LtsClient) CreateStructTemplate(request *model.CreateStructTemplateRequ
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // CreateStructTemplateInvoker 创建结构化配置
 func (c *LtsClient) CreateStructTemplateInvoker(request *model.CreateStructTemplateRequest) *CreateStructTemplateInvoker {
 	requestDef := GenReqDefForCreateStructTemplate()
@@ -1090,6 +1092,7 @@ func (c *LtsClient) ListQueryAllSearchCriteriasInvoker(request *model.ListQueryA
 	return &ListQueryAllSearchCriteriasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListQueryStructuredLogs 查询结构化日志
 //
 // 该接口用于查询指定日志流下的结构化日志内容。
@@ -1105,6 +1108,7 @@ func (c *LtsClient) ListQueryStructuredLogs(request *model.ListQueryStructuredLo
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListQueryStructuredLogsInvoker 查询结构化日志
 func (c *LtsClient) ListQueryStructuredLogsInvoker(request *model.ListQueryStructuredLogsRequest) *ListQueryStructuredLogsInvoker {
 	requestDef := GenReqDefForListQueryStructuredLogs()
@@ -1132,6 +1136,7 @@ func (c *LtsClient) ListStructTemplateInvoker(request *model.ListStructTemplateR
 	return &ListStructTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListStructuredLogsWithTimeRange 查询结构化日志（新版）
 //
 // 该接口用于查询指定日志流下的结构化日志内容（新版）。
@@ -1147,6 +1152,7 @@ func (c *LtsClient) ListStructuredLogsWithTimeRange(request *model.ListStructure
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListStructuredLogsWithTimeRangeInvoker 查询结构化日志（新版）
 func (c *LtsClient) ListStructuredLogsWithTimeRangeInvoker(request *model.ListStructuredLogsWithTimeRangeRequest) *ListStructuredLogsWithTimeRangeInvoker {
 	requestDef := GenReqDefForListStructuredLogsWithTimeRange()
@@ -1510,6 +1516,7 @@ func (c *LtsClient) UpdateStructConfigInvoker(request *model.UpdateStructConfigR
 	return &UpdateStructConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateStructTemplate 修改结构化配置
 //
 // 该接口用于修改指定日志流下的结构化配置。
@@ -1525,6 +1532,7 @@ func (c *LtsClient) UpdateStructTemplate(request *model.UpdateStructTemplateRequ
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // UpdateStructTemplateInvoker 修改结构化配置
 func (c *LtsClient) UpdateStructTemplateInvoker(request *model.UpdateStructTemplateRequest) *UpdateStructTemplateInvoker {
 	requestDef := GenReqDefForUpdateStructTemplate()

@@ -36,6 +36,12 @@ type SqlRequestResponse struct {
 
 	// **参数解释：** 告警查询日志的时间区间为相对时间还是整点时间。 **约束限制：** 不涉及。 **取值范围：** - true: 相对时间。 - false: 整点时间。 **默认取值：** true
 	IsTimeRangeRelative *bool `json:"is_time_range_relative,omitempty"`
+
+	// **参数解释：** 日志组别名。 **约束限制：** 不涉及。
+	LogGroupNameAlias *string `json:"log_group_name_alias,omitempty"`
+
+	// **参数解释：** 日志流别名。 **约束限制：** 不涉及。
+	LogStreamNameAlias *string `json:"log_stream_name_alias,omitempty"`
 }
 
 func (o SqlRequestResponse) String() string {

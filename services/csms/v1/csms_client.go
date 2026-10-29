@@ -40,6 +40,27 @@ func (c *CsmsClient) BatchCreateOrDeleteTagsInvoker(request *model.BatchCreateOr
 	return &BatchCreateOrDeleteTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchGetSecretValue 批量查询明文凭据值
+//
+// 批量查询明文凭据值，仅获取latest凭据值，即仅获取凭据版本状态为\&quot;SYSCURRENT\&quot;的凭据版本值。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CsmsClient) BatchGetSecretValue(request *model.BatchGetSecretValueRequest) (*model.BatchGetSecretValueResponse, error) {
+	requestDef := GenReqDefForBatchGetSecretValue()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchGetSecretValueResponse), nil
+	}
+}
+
+// BatchGetSecretValueInvoker 批量查询明文凭据值
+func (c *CsmsClient) BatchGetSecretValueInvoker(request *model.BatchGetSecretValueRequest) *BatchGetSecretValueInvoker {
+	requestDef := GenReqDefForBatchGetSecretValue()
+	return &BatchGetSecretValueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchImportSecrets 批量导入凭据
 //
 // 批量导入凭据。

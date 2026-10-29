@@ -15,7 +15,7 @@ type OpExtendInfoRemoveResources struct {
 	TotalCount *int32 `json:"total_count,omitempty"`
 
 	//
-	Resources *[]Resource `json:"resources,omitempty"`
+	Resources *[]OpResourceResp `json:"resources,omitempty"`
 }
 
 func (o OpExtendInfoRemoveResources) String() string {

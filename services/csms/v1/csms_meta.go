@@ -26,6 +26,21 @@ func GenReqDefForBatchCreateOrDeleteTags() *def.HttpRequestDef {
 	return requestDef
 }
 
+func GenReqDefForBatchGetSecretValue() *def.HttpRequestDef {
+	reqDefBuilder := def.NewHttpRequestDefBuilder().
+		WithMethod(http.MethodPost).
+		WithPath("/v1/{project_id}/secrets/batch-get-secret-value").
+		WithResponse(new(model.BatchGetSecretValueResponse)).
+		WithContentType("application/json;charset=UTF-8")
+
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
+	requestDef := reqDefBuilder.Build()
+	return requestDef
+}
+
 func GenReqDefForBatchImportSecrets() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodPost).

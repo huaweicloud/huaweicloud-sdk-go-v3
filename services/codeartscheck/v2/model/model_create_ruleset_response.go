@@ -9,7 +9,7 @@ import (
 // CreateRulesetResponse Response Object
 type CreateRulesetResponse struct {
 
-	// 规则集ID
+	// **参数解释:** 规则集ID。 **取值范围:** 32位UUID。
 	TemplateId     *string `json:"template_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

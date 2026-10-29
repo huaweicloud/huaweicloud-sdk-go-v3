@@ -20,6 +20,9 @@ type ListUsersV5Request struct {
 
 	// 永久访问密钥ID，即AK。
 	AccessKeyId *string `json:"access_key_id,omitempty"`
+
+	// **参数解释**： 服务专属凭证的标识符 ID。  **约束限制**： 不涉及。  **取值范围**： 长度固定为20，格式为HSSC + 16位随机字符，只能包含大小写字母和数字。  **默认取值**： 不涉及。
+	ServiceSpecificCredentialId *string `json:"service_specific_credential_id,omitempty"`
 }
 
 func (o ListUsersV5Request) String() string {

@@ -53,6 +53,9 @@ type CreateEndpointRequestBody struct {
 
 	// 访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
 	Ipv6Address *string `json:"ipv6_address,omitempty"`
+
+	// 终端节点的商用类型。 - profession：专业版 - basic：基础版 不传时默认为基础版。
+	Edition *CreateEndpointRequestBodyEdition `json:"edition,omitempty"`
 }
 
 func (o CreateEndpointRequestBody) String() string {
@@ -93,6 +96,53 @@ func (c CreateEndpointRequestBodyIpVersion) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateEndpointRequestBodyIpVersion) UnmarshalJSON(b []byte) error {
+	myConverter := converter.StringConverterFactory("string")
+	if myConverter == nil {
+		return errors.New("unsupported StringConverter type: string")
+	}
+
+	interf, err := myConverter.CovertStringToInterface(strings.Trim(string(b[:]), "\""))
+	if err != nil {
+		return err
+	}
+
+	if val, ok := interf.(string); ok {
+		c.value = val
+		return nil
+	} else {
+		return errors.New("convert enum data to string error")
+	}
+}
+
+type CreateEndpointRequestBodyEdition struct {
+	value string
+}
+
+type CreateEndpointRequestBodyEditionEnum struct {
+	PROFESSION CreateEndpointRequestBodyEdition
+	BASIC      CreateEndpointRequestBodyEdition
+}
+
+func GetCreateEndpointRequestBodyEditionEnum() CreateEndpointRequestBodyEditionEnum {
+	return CreateEndpointRequestBodyEditionEnum{
+		PROFESSION: CreateEndpointRequestBodyEdition{
+			value: "profession",
+		},
+		BASIC: CreateEndpointRequestBodyEdition{
+			value: "basic",
+		},
+	}
+}
+
+func (c CreateEndpointRequestBodyEdition) Value() string {
+	return c.value
+}
+
+func (c CreateEndpointRequestBodyEdition) MarshalJSON() ([]byte, error) {
+	return utils.Marshal(c.value)
+}
+
+func (c *CreateEndpointRequestBodyEdition) UnmarshalJSON(b []byte) error {
 	myConverter := converter.StringConverterFactory("string")
 	if myConverter == nil {
 		return errors.New("unsupported StringConverter type: string")

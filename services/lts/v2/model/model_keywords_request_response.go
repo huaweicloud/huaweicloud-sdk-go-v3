@@ -39,6 +39,20 @@ type KeywordsRequestResponse struct {
 
 	// **参数解释：** 告警查询日志的时间区间为相对时间还是整点时间。 **约束限制：** 不涉及。 **取值范围：** - true: 相对时间。 - false: 整点时间。 **默认取值：** true
 	IsTimeRangeRelative *bool `json:"is_time_range_relative,omitempty"`
+
+	// **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视keywords_alarm_level参数以及keywords_requests中的condition、number参数。 **约束限制：** 不涉及。
+	Conditions *[]KeywordsAlarmConditions `json:"conditions,omitempty"`
+
+	// **参数解释：** 日志组别名。 **取值范围：** 不涉及。
+	LogGroupNameAlias *string `json:"log_group_name_alias,omitempty"`
+
+	// **参数解释：** 日志流别名。 **取值范围：** 不涉及。
+	LogStreamNameAlias *string `json:"log_stream_name_alias,omitempty"`
+
+	// **参数解释：** 企业项目ID。 **取值范围：** 不涉及。
+	EpsId *string `json:"eps_id,omitempty"`
+
+	TimeRange *TimeRange `json:"time_range,omitempty"`
 }
 
 func (o KeywordsRequestResponse) String() string {

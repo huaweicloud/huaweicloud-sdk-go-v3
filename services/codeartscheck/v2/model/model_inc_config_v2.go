@@ -6,28 +6,28 @@ import (
 	"strings"
 )
 
-// IncConfigV2 增量检查相关的参数
+// IncConfigV2 **参数解释：** 基于某一任务创建分支任务、MR任务时使用的参数。 **约束限制：** 不涉及。
 type IncConfigV2 struct {
 
-	// 需要关联的父任务ID，流水线创建或MR创建任务需要该参数
+	// **参数解释：** 需要关联的任务ID。 **约束限制：** 32位UUID。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	ParentTaskId *string `json:"parent_task_id,omitempty"`
 
-	// 增量检查代码源分支
+	// **参数解释：** MR增量任务的源分支。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	GitSourceBranch *string `json:"git_source_branch,omitempty"`
 
-	// 增量检查代码目标分支
+	// **参数解释：** MR增量任务的目标分支。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	GitTargetBranch *string `json:"git_target_branch,omitempty"`
 
-	// MR唯一标示ID
+	// **参数解释：** MR编号。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	MergeId *string `json:"merge_id,omitempty"`
 
-	// webhook触发事件类型,merge_request/push_request
+	// **参数解释：** 创建MR增量任务时需传。 **约束限制：** 不涉及。 **取值范围：** merge_request。 **默认取值：** 不涉及。
 	EventType *string `json:"event_type,omitempty"`
 
-	// webhook事件状态，open/close/update
+	// **参数解释：** 创建MR增量任务时需传。 **约束限制：** 不涉及。 **取值范围：** open。 **默认取值：** 不涉及。
 	Action *string `json:"action,omitempty"`
 
-	// MR标题
+	// **参数解释：** 创建MR增量任务时需传，MR标题。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
 	Title *string `json:"title,omitempty"`
 }
 

@@ -82,9 +82,8 @@ type NodeTypeEnum struct {
 	SMN               NodeType
 	MRS_SPARK         NodeType
 	MAP_REDUCE        NodeType
-	MRS_FLINK         NodeType
 	MRS_FLINK_JOB     NodeType
-	MRS_HETU_ENGINE   NodeType
+	HETU_ENGINE_SQL   NodeType
 	DATA_MIGRATION    NodeType
 }
 
@@ -138,14 +137,11 @@ func GetNodeTypeEnum() NodeTypeEnum {
 		MAP_REDUCE: NodeType{
 			value: "MapReduce",
 		},
-		MRS_FLINK: NodeType{
-			value: "MRSFlink",
-		},
 		MRS_FLINK_JOB: NodeType{
 			value: "MRSFlinkJob",
 		},
-		MRS_HETU_ENGINE: NodeType{
-			value: "MRSHetuEngine",
+		HETU_ENGINE_SQL: NodeType{
+			value: "HetuEngineSQL",
 		},
 		DATA_MIGRATION: NodeType{
 			value: "DataMigration",

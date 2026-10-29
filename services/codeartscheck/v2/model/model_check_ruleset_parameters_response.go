@@ -9,10 +9,10 @@ import (
 // CheckRulesetParametersResponse Response Object
 type CheckRulesetParametersResponse struct {
 
-	// 历史记录数据
-	Data *[]TaskCheckParamters `json:"data,omitempty"`
+	// **参数解释：** 历史记录数据。
+	Data *[]TaskCheckParameters `json:"data,omitempty"`
 
-	// 总数
+	// **参数解释：** 总数。 **取值范围:** ≥0
 	Total          *int32 `json:"total,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }

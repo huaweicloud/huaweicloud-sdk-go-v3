@@ -16,6 +16,12 @@ type ShowFlinkSqlGatewayParameterResponse struct {
 	Type *ShowFlinkSqlGatewayParameterResponseType `json:"type,omitempty"`
 
 	SqlGatewayConfig *ShowFlinkSqlGatewayConfigResponseBody `json:"sql_gateway_config,omitempty"`
+
+	// **参数解释**：是否开启空闲自动释放。 **取值范围**：   - true：开启空闲自动释放。   - false：关闭空闲自动释放。
+	IdleEnabled *bool `json:"idle_enabled,omitempty"`
+
+	// **参数解释**：最大空闲时长，单位为分钟。空闲指会话内没有正在运行的作业，创建会话等其他操作不计为非空闲。 **取值范围**：10~1440。
+	IdleTimeout *int32 `json:"idle_timeout,omitempty"`
 }
 
 func (o ShowFlinkSqlGatewayParameterResponse) String() string {

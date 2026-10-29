@@ -48,7 +48,7 @@ type ListFlinkJobsRequest struct {
 	// **参数解释**：Flink作业状态，用于按状态筛选作业列表。数组元素为FlinkJobState枚举，取值如下：   - CREATED：已创建。   - STARTING：启动中。   - RUNNING：运行中。   - CANCELLING：停止中。   - FAILED：已失败。   - CANCELLED：已停止。   - FINISHED：已完成。 **约束限制**：不涉及。
 	State *[]FlinkJobState `json:"state,omitempty"`
 
-	// **参数解释**：作业类型，用于按作业类型筛选列表。 **约束限制**：不涉及。 **取值范围**：   - FLINK_SQL_JOB：SQL作业。   - FLINK_JAR_JOB：JAR作业。 **默认取值**：不涉及。
+	// **参数解释**：作业类型，用于按作业类型筛选列表。 **约束限制**：不涉及。 **取值范围**：   - FLINK_SQL_JOB：SQL作业。   - FLINK_JAR_JOB：JAR作业。   - FLINK_SQL_GATEWAY：SQL Gateway作业。   - FLINK_PYTHON_JOB：Python作业。 **默认取值**：不涉及。
 	JobType *ListFlinkJobsRequestJobType `json:"job_type,omitempty"`
 
 	// **参数解释**：执行模式，用于按执行模式筛选作业列表。 **约束限制**：不涉及。 **取值范围**：   - STREAMING：流模式。   - BATCH：批模式。 **默认取值**：不涉及。
@@ -75,8 +75,10 @@ type ListFlinkJobsRequestJobType struct {
 }
 
 type ListFlinkJobsRequestJobTypeEnum struct {
-	FLINK_SQL_JOB ListFlinkJobsRequestJobType
-	FLINK_JAR_JOB ListFlinkJobsRequestJobType
+	FLINK_SQL_JOB     ListFlinkJobsRequestJobType
+	FLINK_JAR_JOB     ListFlinkJobsRequestJobType
+	FLINK_SQL_GATEWAY ListFlinkJobsRequestJobType
+	FLINK_PYTHON_JOB  ListFlinkJobsRequestJobType
 }
 
 func GetListFlinkJobsRequestJobTypeEnum() ListFlinkJobsRequestJobTypeEnum {
@@ -86,6 +88,12 @@ func GetListFlinkJobsRequestJobTypeEnum() ListFlinkJobsRequestJobTypeEnum {
 		},
 		FLINK_JAR_JOB: ListFlinkJobsRequestJobType{
 			value: "FLINK_JAR_JOB",
+		},
+		FLINK_SQL_GATEWAY: ListFlinkJobsRequestJobType{
+			value: "FLINK_SQL_GATEWAY",
+		},
+		FLINK_PYTHON_JOB: ListFlinkJobsRequestJobType{
+			value: "FLINK_PYTHON_JOB",
 		},
 	}
 }

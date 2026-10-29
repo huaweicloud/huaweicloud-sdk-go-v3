@@ -1470,6 +1470,10 @@ func GenReqDefForListUsersV5() *def.HttpRequestDef {
 		WithName("AccessKeyId").
 		WithJsonTag("access_key_id").
 		WithLocationType(def.Query))
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("ServiceSpecificCredentialId").
+		WithJsonTag("service_specific_credential_id").
+		WithLocationType(def.Query))
 
 	requestDef := reqDefBuilder.Build()
 	return requestDef

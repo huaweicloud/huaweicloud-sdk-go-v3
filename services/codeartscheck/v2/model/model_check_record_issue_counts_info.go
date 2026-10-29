@@ -8,16 +8,16 @@ import (
 
 type CheckRecordIssueCountsInfo struct {
 
-	// 致命问题
+	// **参数解释：** 致命问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
 	Critical *int32 `json:"critical,omitempty"`
 
-	// 严重问题
+	// **参数解释：** 严重问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
 	Serious *int32 `json:"serious,omitempty"`
 
-	// 常规问题
+	// **参数解释：** 一般问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
 	Normal *int32 `json:"normal,omitempty"`
 
-	// 提示问题
+	// **参数解释：** 提示问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
 	Prompt *int32 `json:"prompt,omitempty"`
 }
 
