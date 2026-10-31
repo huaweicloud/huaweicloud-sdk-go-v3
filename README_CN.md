@@ -874,6 +874,10 @@ func main() {
 
 默认访问的endpoint会从[映射表](./core/auth/internal/iam_endpoint.go)中查询，如果查不到则会使用默认值 **https://iam.myhuaweicloud.com**
 
+IdpId/IdTokenFile 联邦认证也使用相同的选择规则：两次令牌交换请求都会使用 `WithRegion` 指定区域所映射的 IAM endpoint，即使 projectId/domainId 已显式配置或从缓存中获取。刷新临时凭证时仍使用该区域。凭证级 endpoint 的优先级高于环境变量 `HUAWEICLOUD_SDK_IAM_ENDPOINT`，环境变量的优先级高于映射表。如果未配置区域或映射表中没有该区域，则使用上述默认 endpoint；SDK 不会根据区域名称拼接 endpoint。
+
+这会改变已有映射区域的联邦认证默认行为：此前始终使用默认 IAM endpoint。如需保留原有行为，可通过下述任一方式显式配置 `https://iam.myhuaweicloud.com`。
+
 **欧洲站用户需要指定 endpoint 为 https://iam.eu-west-101.myhuaweicloud.eu** ，用户可以通过以下两种方式来修改endpoint
 
 ###### 3.3.1.1 全局级 [:top:](#用户手册-top)
