@@ -16,7 +16,7 @@ type ClusterLogRecord struct {
 	ClusterId *string `json:"clusterId,omitempty"`
 
 	// 创建时间。格式：Unix时间戳格式。
-	CreateAt *string `json:"createAt,omitempty"`
+	CreateAt *int32 `json:"createAt,omitempty"`
 
 	// 日志在OBS桶中的备份路径。
 	LogPath *string `json:"logPath,omitempty"`

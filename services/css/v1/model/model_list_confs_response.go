@@ -10,7 +10,7 @@ import (
 type ListConfsResponse struct {
 
 	// 配置文件列表。
-	Confs *[]Confs `json:"confs,omitempty"`
+	Confs *[]ListConfsRespConfs `json:"confs,omitempty"`
 
 	TotalSize      *int32 `json:"totalSize,omitempty"`
 	HttpStatusCode int    `json:"-"`

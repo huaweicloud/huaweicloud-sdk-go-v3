@@ -18,7 +18,7 @@ type EsListenerResponse struct {
 	Name *string `json:"name,omitempty"`
 
 	// 监听器的前端监听端口。
-	ProtocolPort *string `json:"protocol_port,omitempty"`
+	ProtocolPort *int32 `json:"protocol_port,omitempty"`
 
 	// **参数解释**： 监听器使用的服务器证书ID。 **取值范围**： 不涉及。
 	DefaultTlsContainerRef *string `json:"default_tls_container_ref,omitempty"`

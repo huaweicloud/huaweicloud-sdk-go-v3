@@ -5530,6 +5530,27 @@ func (c *DataArtsStudioClient) SearchDwByTypeInvoker(request *model.SearchDwByTy
 	return &SearchDwByTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SearchFactoryJobBaselineInfo 批量查询作业基线归属信息
+//
+// 批量查询作业是否为基线任务及关联的基线信息。该接口返回的基线归属信息依赖每日基线实例的生成，在基线实例生成前，返回的基线信息列表为空，需等待基线实例生成后方可获取到完整的基线归属信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *DataArtsStudioClient) SearchFactoryJobBaselineInfo(request *model.SearchFactoryJobBaselineInfoRequest) (*model.SearchFactoryJobBaselineInfoResponse, error) {
+	requestDef := GenReqDefForSearchFactoryJobBaselineInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SearchFactoryJobBaselineInfoResponse), nil
+	}
+}
+
+// SearchFactoryJobBaselineInfoInvoker 批量查询作业基线归属信息
+func (c *DataArtsStudioClient) SearchFactoryJobBaselineInfoInvoker(request *model.SearchFactoryJobBaselineInfoRequest) *SearchFactoryJobBaselineInfoInvoker {
+	requestDef := GenReqDefForSearchFactoryJobBaselineInfo()
+	return &SearchFactoryJobBaselineInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SearchFieldsForRelation 查询目的表和字段(待下线)
 //
 // 查询目的表和字段(待下线)。

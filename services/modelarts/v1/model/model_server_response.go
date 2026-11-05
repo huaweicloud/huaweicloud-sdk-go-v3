@@ -22,9 +22,6 @@ type ServerResponse struct {
 
 	CloudServer *CloudServer `json:"cloud_server,omitempty"`
 
-	// **参数解释**：实例私有IP信息。
-	EndpointsResponse *[]Endpoints `json:"endpoints_response,omitempty"`
-
 	// **参数解释**：实例规格名称。 **取值范围**：^.{1,128}$。
 	Flavor *string `json:"flavor,omitempty"`
 

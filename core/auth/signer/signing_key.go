@@ -23,7 +23,7 @@ import (
 	"crypto/ecdsa"
 	"crypto/rand"
 	"encoding/asn1"
-	"github.com/tjfoc/gmsm/sm2"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/crypto/sm2"
 	"math/big"
 )
 

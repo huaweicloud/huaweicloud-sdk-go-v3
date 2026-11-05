@@ -1383,3 +1383,24 @@ func (c *CodeArtsDeployClient) ShowProjectSuccessRateInvoker(request *model.Show
 	requestDef := GenReqDefForShowProjectSuccessRate()
 	return &ShowProjectSuccessRateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
+
+// ShowTaskLogs 查询部署记录的执行日志
+//
+// 查询部署记录的执行日志。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *CodeArtsDeployClient) ShowTaskLogs(request *model.ShowTaskLogsRequest) (*model.ShowTaskLogsResponse, error) {
+	requestDef := GenReqDefForShowTaskLogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTaskLogsResponse), nil
+	}
+}
+
+// ShowTaskLogsInvoker 查询部署记录的执行日志
+func (c *CodeArtsDeployClient) ShowTaskLogsInvoker(request *model.ShowTaskLogsRequest) *ShowTaskLogsInvoker {
+	requestDef := GenReqDefForShowTaskLogs()
+	return &ShowTaskLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}

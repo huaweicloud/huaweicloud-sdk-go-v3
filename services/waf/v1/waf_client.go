@@ -4840,6 +4840,216 @@ func (c *WafClient) UpdateAiGuardRuleStatusInvoker(request *model.UpdateAiGuardR
 	return &UpdateAiGuardRuleStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddImages 加入图库
+//
+// 加入图库（批量 + 拉取原图真实校验大小/格式 + 置status&#x3D;0 + 逐个返回结果）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) AddImages(request *model.AddImagesRequest) (*model.AddImagesResponse, error) {
+	requestDef := GenReqDefForAddImages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddImagesResponse), nil
+	}
+}
+
+// AddImagesInvoker 加入图库
+func (c *WafClient) AddImagesInvoker(request *model.AddImagesRequest) *AddImagesInvoker {
+	requestDef := GenReqDefForAddImages()
+	return &AddImagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteAtlases 批量删除图库
+//
+// 批量删除图库
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) BatchDeleteAtlases(request *model.BatchDeleteAtlasesRequest) (*model.BatchDeleteAtlasesResponse, error) {
+	requestDef := GenReqDefForBatchDeleteAtlases()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteAtlasesResponse), nil
+	}
+}
+
+// BatchDeleteAtlasesInvoker 批量删除图库
+func (c *WafClient) BatchDeleteAtlasesInvoker(request *model.BatchDeleteAtlasesRequest) *BatchDeleteAtlasesInvoker {
+	requestDef := GenReqDefForBatchDeleteAtlases()
+	return &BatchDeleteAtlasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAtlas 创建图库
+//
+// 创建图库（0&#x3D;白库/豁免/可信样本，1&#x3D;黑库/敏感/拦截样本）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) CreateAtlas(request *model.CreateAtlasRequest) (*model.CreateAtlasResponse, error) {
+	requestDef := GenReqDefForCreateAtlas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAtlasResponse), nil
+	}
+}
+
+// CreateAtlasInvoker 创建图库
+func (c *WafClient) CreateAtlasInvoker(request *model.CreateAtlasRequest) *CreateAtlasInvoker {
+	requestDef := GenReqDefForCreateAtlas()
+	return &CreateAtlasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreatePresignedUploadUrl 批量获取预签名上传地址
+//
+// 批量获取OBS PUT预签名上传地址（前端直传图片到OBS，后端不转发二进制；逐项校验、部分成功、保序返回）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) CreatePresignedUploadUrl(request *model.CreatePresignedUploadUrlRequest) (*model.CreatePresignedUploadUrlResponse, error) {
+	requestDef := GenReqDefForCreatePresignedUploadUrl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreatePresignedUploadUrlResponse), nil
+	}
+}
+
+// CreatePresignedUploadUrlInvoker 批量获取预签名上传地址
+func (c *WafClient) CreatePresignedUploadUrlInvoker(request *model.CreatePresignedUploadUrlRequest) *CreatePresignedUploadUrlInvoker {
+	requestDef := GenReqDefForCreatePresignedUploadUrl()
+	return &CreatePresignedUploadUrlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteAtlas 删除图库
+//
+// 删除图库
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) DeleteAtlas(request *model.DeleteAtlasRequest) (*model.DeleteAtlasResponse, error) {
+	requestDef := GenReqDefForDeleteAtlas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteAtlasResponse), nil
+	}
+}
+
+// DeleteAtlasInvoker 删除图库
+func (c *WafClient) DeleteAtlasInvoker(request *model.DeleteAtlasRequest) *DeleteAtlasInvoker {
+	requestDef := GenReqDefForDeleteAtlas()
+	return &DeleteAtlasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAtlases 查询图库列表
+//
+// 查询图库列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ListAtlases(request *model.ListAtlasesRequest) (*model.ListAtlasesResponse, error) {
+	requestDef := GenReqDefForListAtlases()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAtlasesResponse), nil
+	}
+}
+
+// ListAtlasesInvoker 查询图库列表
+func (c *WafClient) ListAtlasesInvoker(request *model.ListAtlasesRequest) *ListAtlasesInvoker {
+	requestDef := GenReqDefForListAtlases()
+	return &ListAtlasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListImages 查询图库图片列表
+//
+// 查询图库图片列表（按status返回缩略图/原图预签名 + status/message）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ListImages(request *model.ListImagesRequest) (*model.ListImagesResponse, error) {
+	requestDef := GenReqDefForListImages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListImagesResponse), nil
+	}
+}
+
+// ListImagesInvoker 查询图库图片列表
+func (c *WafClient) ListImagesInvoker(request *model.ListImagesRequest) *ListImagesInvoker {
+	requestDef := GenReqDefForListImages()
+	return &ListImagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RemoveImages 移除图片
+//
+// 移除图片（批量软删）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) RemoveImages(request *model.RemoveImagesRequest) (*model.RemoveImagesResponse, error) {
+	requestDef := GenReqDefForRemoveImages()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RemoveImagesResponse), nil
+	}
+}
+
+// RemoveImagesInvoker 移除图片
+func (c *WafClient) RemoveImagesInvoker(request *model.RemoveImagesRequest) *RemoveImagesInvoker {
+	requestDef := GenReqDefForRemoveImages()
+	return &RemoveImagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAtlas 查询图库详情
+//
+// 查询图库详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ShowAtlas(request *model.ShowAtlasRequest) (*model.ShowAtlasResponse, error) {
+	requestDef := GenReqDefForShowAtlas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAtlasResponse), nil
+	}
+}
+
+// ShowAtlasInvoker 查询图库详情
+func (c *WafClient) ShowAtlasInvoker(request *model.ShowAtlasRequest) *ShowAtlasInvoker {
+	requestDef := GenReqDefForShowAtlas()
+	return &ShowAtlasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAtlas 更新图库
+//
+// 更新图库（不支持修改type，图库类型创建后不可变更）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) UpdateAtlas(request *model.UpdateAtlasRequest) (*model.UpdateAtlasResponse, error) {
+	requestDef := GenReqDefForUpdateAtlas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAtlasResponse), nil
+	}
+}
+
+// UpdateAtlasInvoker 更新图库
+func (c *WafClient) UpdateAtlasInvoker(request *model.UpdateAtlasRequest) *UpdateAtlasInvoker {
+	requestDef := GenReqDefForUpdateAtlas()
+	return &UpdateAtlasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeleteCustomAnswers 批量删除自定义代答库
 //
 // 批量删除自定义代答库
@@ -5111,6 +5321,237 @@ func (c *WafClient) UpdateCustomLlm(request *model.UpdateCustomLlmRequest) (*mod
 func (c *WafClient) UpdateCustomLlmInvoker(request *model.UpdateCustomLlmRequest) *UpdateCustomLlmInvoker {
 	requestDef := GenReqDefForUpdateCustomLlm()
 	return &UpdateCustomLlmInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchDeleteCustomRegexSet 批量删除自定义正则库
+//
+// 批量删除自定义正则库
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) BatchDeleteCustomRegexSet(request *model.BatchDeleteCustomRegexSetRequest) (*model.BatchDeleteCustomRegexSetResponse, error) {
+	requestDef := GenReqDefForBatchDeleteCustomRegexSet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchDeleteCustomRegexSetResponse), nil
+	}
+}
+
+// BatchDeleteCustomRegexSetInvoker 批量删除自定义正则库
+func (c *WafClient) BatchDeleteCustomRegexSetInvoker(request *model.BatchDeleteCustomRegexSetRequest) *BatchDeleteCustomRegexSetInvoker {
+	requestDef := GenReqDefForBatchDeleteCustomRegexSet()
+	return &BatchDeleteCustomRegexSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCustomRegex 添加正则
+//
+// 向指定正则库添加正则条目
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) CreateCustomRegex(request *model.CreateCustomRegexRequest) (*model.CreateCustomRegexResponse, error) {
+	requestDef := GenReqDefForCreateCustomRegex()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCustomRegexResponse), nil
+	}
+}
+
+// CreateCustomRegexInvoker 添加正则
+func (c *WafClient) CreateCustomRegexInvoker(request *model.CreateCustomRegexRequest) *CreateCustomRegexInvoker {
+	requestDef := GenReqDefForCreateCustomRegex()
+	return &CreateCustomRegexInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateCustomRegexSet 创建自定义正则库
+//
+// 创建自定义正则库
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) CreateCustomRegexSet(request *model.CreateCustomRegexSetRequest) (*model.CreateCustomRegexSetResponse, error) {
+	requestDef := GenReqDefForCreateCustomRegexSet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateCustomRegexSetResponse), nil
+	}
+}
+
+// CreateCustomRegexSetInvoker 创建自定义正则库
+func (c *WafClient) CreateCustomRegexSetInvoker(request *model.CreateCustomRegexSetRequest) *CreateCustomRegexSetInvoker {
+	requestDef := GenReqDefForCreateCustomRegexSet()
+	return &CreateCustomRegexSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateRegexTest 正则拨测
+//
+// 拨测正则表达式有效性，校验正则语法及匹配效果（内部转发至引擎PII检测接口）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) CreateRegexTest(request *model.CreateRegexTestRequest) (*model.CreateRegexTestResponse, error) {
+	requestDef := GenReqDefForCreateRegexTest()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateRegexTestResponse), nil
+	}
+}
+
+// CreateRegexTestInvoker 正则拨测
+func (c *WafClient) CreateRegexTestInvoker(request *model.CreateRegexTestRequest) *CreateRegexTestInvoker {
+	requestDef := GenReqDefForCreateRegexTest()
+	return &CreateRegexTestInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCustomRegex 删除正则
+//
+// 删除正则条目
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) DeleteCustomRegex(request *model.DeleteCustomRegexRequest) (*model.DeleteCustomRegexResponse, error) {
+	requestDef := GenReqDefForDeleteCustomRegex()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCustomRegexResponse), nil
+	}
+}
+
+// DeleteCustomRegexInvoker 删除正则
+func (c *WafClient) DeleteCustomRegexInvoker(request *model.DeleteCustomRegexRequest) *DeleteCustomRegexInvoker {
+	requestDef := GenReqDefForDeleteCustomRegex()
+	return &DeleteCustomRegexInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteCustomRegexSet 删除自定义正则库
+//
+// 删除自定义正则库
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) DeleteCustomRegexSet(request *model.DeleteCustomRegexSetRequest) (*model.DeleteCustomRegexSetResponse, error) {
+	requestDef := GenReqDefForDeleteCustomRegexSet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteCustomRegexSetResponse), nil
+	}
+}
+
+// DeleteCustomRegexSetInvoker 删除自定义正则库
+func (c *WafClient) DeleteCustomRegexSetInvoker(request *model.DeleteCustomRegexSetRequest) *DeleteCustomRegexSetInvoker {
+	requestDef := GenReqDefForDeleteCustomRegexSet()
+	return &DeleteCustomRegexSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCustomRegex 查询正则列表
+//
+// 查询正则库下正则列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ListCustomRegex(request *model.ListCustomRegexRequest) (*model.ListCustomRegexResponse, error) {
+	requestDef := GenReqDefForListCustomRegex()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCustomRegexResponse), nil
+	}
+}
+
+// ListCustomRegexInvoker 查询正则列表
+func (c *WafClient) ListCustomRegexInvoker(request *model.ListCustomRegexRequest) *ListCustomRegexInvoker {
+	requestDef := GenReqDefForListCustomRegex()
+	return &ListCustomRegexInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListCustomRegexSet 查询自定义正则库列表
+//
+// 查询自定义正则库列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ListCustomRegexSet(request *model.ListCustomRegexSetRequest) (*model.ListCustomRegexSetResponse, error) {
+	requestDef := GenReqDefForListCustomRegexSet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListCustomRegexSetResponse), nil
+	}
+}
+
+// ListCustomRegexSetInvoker 查询自定义正则库列表
+func (c *WafClient) ListCustomRegexSetInvoker(request *model.ListCustomRegexSetRequest) *ListCustomRegexSetInvoker {
+	requestDef := GenReqDefForListCustomRegexSet()
+	return &ListCustomRegexSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCustomRegexSet 查询自定义正则库详情
+//
+// 查询自定义正则库详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) ShowCustomRegexSet(request *model.ShowCustomRegexSetRequest) (*model.ShowCustomRegexSetResponse, error) {
+	requestDef := GenReqDefForShowCustomRegexSet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCustomRegexSetResponse), nil
+	}
+}
+
+// ShowCustomRegexSetInvoker 查询自定义正则库详情
+func (c *WafClient) ShowCustomRegexSetInvoker(request *model.ShowCustomRegexSetRequest) *ShowCustomRegexSetInvoker {
+	requestDef := GenReqDefForShowCustomRegexSet()
+	return &ShowCustomRegexSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCustomRegex 更新正则
+//
+// 更新正则条目（仅更新传入的字段，未传字段保持不变）
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) UpdateCustomRegex(request *model.UpdateCustomRegexRequest) (*model.UpdateCustomRegexResponse, error) {
+	requestDef := GenReqDefForUpdateCustomRegex()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateCustomRegexResponse), nil
+	}
+}
+
+// UpdateCustomRegexInvoker 更新正则
+func (c *WafClient) UpdateCustomRegexInvoker(request *model.UpdateCustomRegexRequest) *UpdateCustomRegexInvoker {
+	requestDef := GenReqDefForUpdateCustomRegex()
+	return &UpdateCustomRegexInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateCustomRegexSet 更新自定义正则库
+//
+// 更新自定义正则库
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *WafClient) UpdateCustomRegexSet(request *model.UpdateCustomRegexSetRequest) (*model.UpdateCustomRegexSetResponse, error) {
+	requestDef := GenReqDefForUpdateCustomRegexSet()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateCustomRegexSetResponse), nil
+	}
+}
+
+// UpdateCustomRegexSetInvoker 更新自定义正则库
+func (c *WafClient) UpdateCustomRegexSetInvoker(request *model.UpdateCustomRegexSetRequest) *UpdateCustomRegexSetInvoker {
+	requestDef := GenReqDefForUpdateCustomRegexSet()
+	return &UpdateCustomRegexSetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // BatchCreateCcRule 选中多个策略为批量添加cc规则

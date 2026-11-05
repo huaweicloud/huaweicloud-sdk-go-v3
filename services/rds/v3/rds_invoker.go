@@ -5717,6 +5717,278 @@ func (i *ResetViewSqlStatisticsInvoker) Invoke() (*model.ResetViewSqlStatisticsR
 	}
 }
 
+type CreateSupabaseApplicationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateSupabaseApplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateSupabaseApplicationInvoker) Invoke() (*model.CreateSupabaseApplicationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateSupabaseApplicationResponse), nil
+	}
+}
+
+type DeleteSupabaseApplicationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteSupabaseApplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteSupabaseApplicationInvoker) Invoke() (*model.DeleteSupabaseApplicationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteSupabaseApplicationResponse), nil
+	}
+}
+
+type ListAiApplicationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAiApplicationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAiApplicationsInvoker) Invoke() (*model.ListAiApplicationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAiApplicationsResponse), nil
+	}
+}
+
+type ListSupabaseApplicationApiKeysInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSupabaseApplicationApiKeysInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSupabaseApplicationApiKeysInvoker) Invoke() (*model.ListSupabaseApplicationApiKeysResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSupabaseApplicationApiKeysResponse), nil
+	}
+}
+
+type ListSupabaseApplicationFlavorsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSupabaseApplicationFlavorsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSupabaseApplicationFlavorsInvoker) Invoke() (*model.ListSupabaseApplicationFlavorsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSupabaseApplicationFlavorsResponse), nil
+	}
+}
+
+type ModifySupabaseApplicationAuthConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifySupabaseApplicationAuthConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifySupabaseApplicationAuthConfigInvoker) Invoke() (*model.ModifySupabaseApplicationAuthConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifySupabaseApplicationAuthConfigResponse), nil
+	}
+}
+
+type ModifySupabaseApplicationPasswordInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifySupabaseApplicationPasswordInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifySupabaseApplicationPasswordInvoker) Invoke() (*model.ModifySupabaseApplicationPasswordResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifySupabaseApplicationPasswordResponse), nil
+	}
+}
+
+type ModifySupabaseApplicationStorageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifySupabaseApplicationStorageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifySupabaseApplicationStorageInvoker) Invoke() (*model.ModifySupabaseApplicationStorageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifySupabaseApplicationStorageResponse), nil
+	}
+}
+
+type ResetSupabaseApplicationApiKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ResetSupabaseApplicationApiKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ResetSupabaseApplicationApiKeyInvoker) Invoke() (*model.ResetSupabaseApplicationApiKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ResetSupabaseApplicationApiKeyResponse), nil
+	}
+}
+
+type RestartSupabaseApplicationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RestartSupabaseApplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RestartSupabaseApplicationInvoker) Invoke() (*model.RestartSupabaseApplicationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RestartSupabaseApplicationResponse), nil
+	}
+}
+
+type ShowSupabaseApplicationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSupabaseApplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSupabaseApplicationInvoker) Invoke() (*model.ShowSupabaseApplicationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSupabaseApplicationResponse), nil
+	}
+}
+
+type ShowSupabaseApplicationApiKeyValueInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSupabaseApplicationApiKeyValueInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSupabaseApplicationApiKeyValueInvoker) Invoke() (*model.ShowSupabaseApplicationApiKeyValueResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSupabaseApplicationApiKeyValueResponse), nil
+	}
+}
+
+type ShowSupabaseApplicationAuthConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSupabaseApplicationAuthConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSupabaseApplicationAuthConfigInvoker) Invoke() (*model.ShowSupabaseApplicationAuthConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSupabaseApplicationAuthConfigResponse), nil
+	}
+}
+
+type StartSupabaseApplicationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StartSupabaseApplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StartSupabaseApplicationInvoker) Invoke() (*model.StartSupabaseApplicationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StartSupabaseApplicationResponse), nil
+	}
+}
+
+type StopSupabaseApplicationInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopSupabaseApplicationInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StopSupabaseApplicationInvoker) Invoke() (*model.StopSupabaseApplicationResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopSupabaseApplicationResponse), nil
+	}
+}
+
+type SwitchSupabaseApplicationEipBindInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchSupabaseApplicationEipBindInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SwitchSupabaseApplicationEipBindInvoker) Invoke() (*model.SwitchSupabaseApplicationEipBindResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchSupabaseApplicationEipBindResponse), nil
+	}
+}
+
+type SwitchSupabaseApplicationSslInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchSupabaseApplicationSslInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SwitchSupabaseApplicationSslInvoker) Invoke() (*model.SwitchSupabaseApplicationSslResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchSupabaseApplicationSslResponse), nil
+	}
+}
+
 type GetAvailableVpcsInvoker struct {
 	*invoker.BaseInvoker
 }

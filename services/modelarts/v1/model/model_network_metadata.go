@@ -14,6 +14,9 @@ type NetworkMetadata struct {
 	// **参数解释**：网络的创建时间。例如\"2025-11-01T03:49:41Z\"。 **取值范围**：不涉及。
 	CreationTimestamp string `json:"creationTimestamp"`
 
+	// **参数解释**：网络的删除时间。例如\"2025-12-01T03:49:41Z\"。 **取值范围**：不涉及。
+	DeletionTimestamp *string `json:"deletionTimestamp,omitempty"`
+
 	Labels *NetworkMetadataLabels `json:"labels"`
 
 	Annotations *NetworkMetadataAnnotations `json:"annotations,omitempty"`

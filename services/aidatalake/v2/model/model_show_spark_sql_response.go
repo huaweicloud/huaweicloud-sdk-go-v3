@@ -62,7 +62,7 @@ type ShowSparkSqlResponse struct {
 	// **参数解释**：作业标签列表，用于标识和分类作业。数组中的每个元素为SparkSqlLabelRes对象，包含标签的键和值。
 	Labels *[]SparkSqlLabelRes `json:"labels,omitempty"`
 
-	SparkUi        *SparkUiSharedInfo `json:"spark_ui,omitempty"`
+	SharedSparkUi  *SharedSparkUiInfo `json:"shared_spark_ui,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }
 

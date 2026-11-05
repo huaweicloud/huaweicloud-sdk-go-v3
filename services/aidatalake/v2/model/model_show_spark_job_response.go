@@ -71,7 +71,7 @@ type ShowSparkJobResponse struct {
 	// **参数解释**：Spark作业描述信息，用于说明作业用途。 **取值范围**：长度为0~512个字符。
 	Description *string `json:"description,omitempty"`
 
-	SparkUi        *SparkUiSharedInfo `json:"spark_ui,omitempty"`
+	SharedSparkUi  *SharedSparkUiInfo `json:"shared_spark_ui,omitempty"`
 	HttpStatusCode int                `json:"-"`
 }
 

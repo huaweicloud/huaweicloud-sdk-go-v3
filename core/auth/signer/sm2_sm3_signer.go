@@ -20,8 +20,8 @@
 package signer
 
 import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/crypto/sm2"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/request"
-	"github.com/tjfoc/gmsm/sm2"
 	"math/big"
 )
 

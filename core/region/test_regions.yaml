@@ -6,3 +6,20 @@ Service2:
     endpoints:
       - 'https://service2.region-id-2.com'
       - 'https://service2.region-id-2.cn'
+# edge cases for yaml.v3 compatibility
+Service3:
+  - id: "region-id-3"
+    endpoint: "https://service3.region-id-3.com:8080"
+  - id: region-id-4
+    endpoints:
+      - "https://service3.region-id-4.com"
+      - 'https://service3.region-id-4.cn'
+Service4:
+  - id: region-id-5
+    endpoint: https://service4.region-id-5.com/path?q=1
+Service5:
+  - id: region-id-6
+    endpoint: 'https://service5.region-id-6.com'
+  - id: region-id-7
+    endpoints:
+      - 'https://service5.region-id-7.com'

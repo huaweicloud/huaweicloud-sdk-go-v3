@@ -23,7 +23,7 @@ import (
 	chmac "crypto/hmac"
 	"crypto/sha256"
 	"encoding/hex"
-	"github.com/tjfoc/gmsm/sm3"
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/crypto/sm3"
 )
 
 type iHasher interface {

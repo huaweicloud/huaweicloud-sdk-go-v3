@@ -7531,6 +7531,373 @@ func (c *RdsClient) ResetViewSqlStatisticsInvoker(request *model.ResetViewSqlSta
 	return &ResetViewSqlStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateSupabaseApplication 创建Supabase应用
+//
+// 创建Supabase应用。支持两类路径：
+// 1) 同时创建托管的PostgreSQL实例（manage_type&#x3D;newly_instance）；
+// 2) 关联已有PostgreSQL实例（manage_type&#x3D;existed_instance）。
+// 异步接口，返回job_id（按需）或order_id（包周期）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) CreateSupabaseApplication(request *model.CreateSupabaseApplicationRequest) (*model.CreateSupabaseApplicationResponse, error) {
+	requestDef := GenReqDefForCreateSupabaseApplication()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateSupabaseApplicationResponse), nil
+	}
+}
+
+// CreateSupabaseApplicationInvoker 创建Supabase应用
+func (c *RdsClient) CreateSupabaseApplicationInvoker(request *model.CreateSupabaseApplicationRequest) *CreateSupabaseApplicationInvoker {
+	requestDef := GenReqDefForCreateSupabaseApplication()
+	return &CreateSupabaseApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSupabaseApplication 删除Supabase应用
+//
+// 删除Supabase应用。仅删除应用本身，保留底层PG实例及关联关系。
+// 注：HTTP无请求体，delete_instance字段不对外暴露，恒为仅删应用。
+// PG级联删除为反向触发（PG删→自动删关联Supabase）。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) DeleteSupabaseApplication(request *model.DeleteSupabaseApplicationRequest) (*model.DeleteSupabaseApplicationResponse, error) {
+	requestDef := GenReqDefForDeleteSupabaseApplication()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSupabaseApplicationResponse), nil
+	}
+}
+
+// DeleteSupabaseApplicationInvoker 删除Supabase应用
+func (c *RdsClient) DeleteSupabaseApplicationInvoker(request *model.DeleteSupabaseApplicationRequest) *DeleteSupabaseApplicationInvoker {
+	requestDef := GenReqDefForDeleteSupabaseApplication()
+	return &DeleteSupabaseApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAiApplications 查询AI应用列表
+//
+// 查询AI应用列表，含应用状态和关联PG实例信息。删除应用前通常先调此接口定位目标。支持按type过滤Supabase应用。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListAiApplications(request *model.ListAiApplicationsRequest) (*model.ListAiApplicationsResponse, error) {
+	requestDef := GenReqDefForListAiApplications()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAiApplicationsResponse), nil
+	}
+}
+
+// ListAiApplicationsInvoker 查询AI应用列表
+func (c *RdsClient) ListAiApplicationsInvoker(request *model.ListAiApplicationsRequest) *ListAiApplicationsInvoker {
+	requestDef := GenReqDefForListAiApplications()
+	return &ListAiApplicationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSupabaseApplicationApiKeys 查询Supabase应用ApiKey列表
+//
+// 分页查询ApiKey元数据。列表不含明文。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListSupabaseApplicationApiKeys(request *model.ListSupabaseApplicationApiKeysRequest) (*model.ListSupabaseApplicationApiKeysResponse, error) {
+	requestDef := GenReqDefForListSupabaseApplicationApiKeys()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSupabaseApplicationApiKeysResponse), nil
+	}
+}
+
+// ListSupabaseApplicationApiKeysInvoker 查询Supabase应用ApiKey列表
+func (c *RdsClient) ListSupabaseApplicationApiKeysInvoker(request *model.ListSupabaseApplicationApiKeysRequest) *ListSupabaseApplicationApiKeysInvoker {
+	requestDef := GenReqDefForListSupabaseApplicationApiKeys()
+	return &ListSupabaseApplicationApiKeysInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSupabaseApplicationFlavors 查询Supabase应用规格列表
+//
+// 查询可用规格，含每个AZ的可售状态和支持版本。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ListSupabaseApplicationFlavors(request *model.ListSupabaseApplicationFlavorsRequest) (*model.ListSupabaseApplicationFlavorsResponse, error) {
+	requestDef := GenReqDefForListSupabaseApplicationFlavors()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSupabaseApplicationFlavorsResponse), nil
+	}
+}
+
+// ListSupabaseApplicationFlavorsInvoker 查询Supabase应用规格列表
+func (c *RdsClient) ListSupabaseApplicationFlavorsInvoker(request *model.ListSupabaseApplicationFlavorsRequest) *ListSupabaseApplicationFlavorsInvoker {
+	requestDef := GenReqDefForListSupabaseApplicationFlavors()
+	return &ListSupabaseApplicationFlavorsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifySupabaseApplicationAuthConfig 修改Supabase应用Auth配置
+//
+// 部分更新：仅更新传入的非空字段，省略字段保留原值（@JsonInclude NON_EMPTY）。
+// enable_github&#x3D;false时清空github子字段；enable_email_sign_up&#x3D;false时清空smtp_config子字段。
+// 秘密字段（smtp_pwd、oauth_client_secret）需通过受控方式输入，show不返回故不会回显覆盖。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ModifySupabaseApplicationAuthConfig(request *model.ModifySupabaseApplicationAuthConfigRequest) (*model.ModifySupabaseApplicationAuthConfigResponse, error) {
+	requestDef := GenReqDefForModifySupabaseApplicationAuthConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifySupabaseApplicationAuthConfigResponse), nil
+	}
+}
+
+// ModifySupabaseApplicationAuthConfigInvoker 修改Supabase应用Auth配置
+func (c *RdsClient) ModifySupabaseApplicationAuthConfigInvoker(request *model.ModifySupabaseApplicationAuthConfigRequest) *ModifySupabaseApplicationAuthConfigInvoker {
+	requestDef := GenReqDefForModifySupabaseApplicationAuthConfig()
+	return &ModifySupabaseApplicationAuthConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifySupabaseApplicationPassword 修改Supabase应用密码
+//
+// 可单独修改应用密码或实例密码，但不能同时为空。不修改底层PG其他账号。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ModifySupabaseApplicationPassword(request *model.ModifySupabaseApplicationPasswordRequest) (*model.ModifySupabaseApplicationPasswordResponse, error) {
+	requestDef := GenReqDefForModifySupabaseApplicationPassword()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifySupabaseApplicationPasswordResponse), nil
+	}
+}
+
+// ModifySupabaseApplicationPasswordInvoker 修改Supabase应用密码
+func (c *RdsClient) ModifySupabaseApplicationPasswordInvoker(request *model.ModifySupabaseApplicationPasswordRequest) *ModifySupabaseApplicationPasswordInvoker {
+	requestDef := GenReqDefForModifySupabaseApplicationPassword()
+	return &ModifySupabaseApplicationPasswordInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ModifySupabaseApplicationStorage 修改Supabase应用Storage配置
+//
+// enabled&#x3D;false时bucket_name/ak/sk必须全空；enabled&#x3D;true时全必填。
+// show不返回sk，故部分更新省略sk即保留。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ModifySupabaseApplicationStorage(request *model.ModifySupabaseApplicationStorageRequest) (*model.ModifySupabaseApplicationStorageResponse, error) {
+	requestDef := GenReqDefForModifySupabaseApplicationStorage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ModifySupabaseApplicationStorageResponse), nil
+	}
+}
+
+// ModifySupabaseApplicationStorageInvoker 修改Supabase应用Storage配置
+func (c *RdsClient) ModifySupabaseApplicationStorageInvoker(request *model.ModifySupabaseApplicationStorageRequest) *ModifySupabaseApplicationStorageInvoker {
+	requestDef := GenReqDefForModifySupabaseApplicationStorage()
+	return &ModifySupabaseApplicationStorageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ResetSupabaseApplicationApiKey 重置Supabase应用ApiKey
+//
+// 异步重置ApiKey。agent异步动作成功后，旧Key置deleted、新Key置normal，同事务原子切换。
+// 新Key不沿用旧Key ID。返回job_id，需轮询list_job_info。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ResetSupabaseApplicationApiKey(request *model.ResetSupabaseApplicationApiKeyRequest) (*model.ResetSupabaseApplicationApiKeyResponse, error) {
+	requestDef := GenReqDefForResetSupabaseApplicationApiKey()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ResetSupabaseApplicationApiKeyResponse), nil
+	}
+}
+
+// ResetSupabaseApplicationApiKeyInvoker 重置Supabase应用ApiKey
+func (c *RdsClient) ResetSupabaseApplicationApiKeyInvoker(request *model.ResetSupabaseApplicationApiKeyRequest) *ResetSupabaseApplicationApiKeyInvoker {
+	requestDef := GenReqDefForResetSupabaseApplicationApiKey()
+	return &ResetSupabaseApplicationApiKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RestartSupabaseApplication 重启Supabase应用
+//
+// 异步重启Supabase应用。返回job_id，需轮询list_job_info。无requestBody。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) RestartSupabaseApplication(request *model.RestartSupabaseApplicationRequest) (*model.RestartSupabaseApplicationResponse, error) {
+	requestDef := GenReqDefForRestartSupabaseApplication()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RestartSupabaseApplicationResponse), nil
+	}
+}
+
+// RestartSupabaseApplicationInvoker 重启Supabase应用
+func (c *RdsClient) RestartSupabaseApplicationInvoker(request *model.RestartSupabaseApplicationRequest) *RestartSupabaseApplicationInvoker {
+	requestDef := GenReqDefForRestartSupabaseApplication()
+	return &RestartSupabaseApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSupabaseApplication 查询Supabase应用详情
+//
+// 查询Supabase应用详情，含运行状态、关联PG、SSL/EIP/Storage配置等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowSupabaseApplication(request *model.ShowSupabaseApplicationRequest) (*model.ShowSupabaseApplicationResponse, error) {
+	requestDef := GenReqDefForShowSupabaseApplication()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSupabaseApplicationResponse), nil
+	}
+}
+
+// ShowSupabaseApplicationInvoker 查询Supabase应用详情
+func (c *RdsClient) ShowSupabaseApplicationInvoker(request *model.ShowSupabaseApplicationRequest) *ShowSupabaseApplicationInvoker {
+	requestDef := GenReqDefForShowSupabaseApplication()
+	return &ShowSupabaseApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSupabaseApplicationApiKeyValue 查询Supabase应用ApiKey明文值
+//
+// 受控查看指定ApiKey的明文值。敏感操作，需明确授权。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowSupabaseApplicationApiKeyValue(request *model.ShowSupabaseApplicationApiKeyValueRequest) (*model.ShowSupabaseApplicationApiKeyValueResponse, error) {
+	requestDef := GenReqDefForShowSupabaseApplicationApiKeyValue()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSupabaseApplicationApiKeyValueResponse), nil
+	}
+}
+
+// ShowSupabaseApplicationApiKeyValueInvoker 查询Supabase应用ApiKey明文值
+func (c *RdsClient) ShowSupabaseApplicationApiKeyValueInvoker(request *model.ShowSupabaseApplicationApiKeyValueRequest) *ShowSupabaseApplicationApiKeyValueInvoker {
+	requestDef := GenReqDefForShowSupabaseApplicationApiKeyValue()
+	return &ShowSupabaseApplicationApiKeyValueInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSupabaseApplicationAuthConfig 查询Supabase应用Auth配置
+//
+// 查询Auth配置。敏感秘密（smtp_pwd、oauth_client_secret）在响应中省略，非脱敏占位。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) ShowSupabaseApplicationAuthConfig(request *model.ShowSupabaseApplicationAuthConfigRequest) (*model.ShowSupabaseApplicationAuthConfigResponse, error) {
+	requestDef := GenReqDefForShowSupabaseApplicationAuthConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSupabaseApplicationAuthConfigResponse), nil
+	}
+}
+
+// ShowSupabaseApplicationAuthConfigInvoker 查询Supabase应用Auth配置
+func (c *RdsClient) ShowSupabaseApplicationAuthConfigInvoker(request *model.ShowSupabaseApplicationAuthConfigRequest) *ShowSupabaseApplicationAuthConfigInvoker {
+	requestDef := GenReqDefForShowSupabaseApplicationAuthConfig()
+	return &ShowSupabaseApplicationAuthConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StartSupabaseApplication 启动Supabase应用
+//
+// 异步启动Supabase应用。返回job_id，需轮询list_job_info。无requestBody。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) StartSupabaseApplication(request *model.StartSupabaseApplicationRequest) (*model.StartSupabaseApplicationResponse, error) {
+	requestDef := GenReqDefForStartSupabaseApplication()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StartSupabaseApplicationResponse), nil
+	}
+}
+
+// StartSupabaseApplicationInvoker 启动Supabase应用
+func (c *RdsClient) StartSupabaseApplicationInvoker(request *model.StartSupabaseApplicationRequest) *StartSupabaseApplicationInvoker {
+	requestDef := GenReqDefForStartSupabaseApplication()
+	return &StartSupabaseApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// StopSupabaseApplication 停止Supabase应用
+//
+// 异步停止Supabase应用。返回job_id，需轮询list_job_info。无requestBody。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) StopSupabaseApplication(request *model.StopSupabaseApplicationRequest) (*model.StopSupabaseApplicationResponse, error) {
+	requestDef := GenReqDefForStopSupabaseApplication()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopSupabaseApplicationResponse), nil
+	}
+}
+
+// StopSupabaseApplicationInvoker 停止Supabase应用
+func (c *RdsClient) StopSupabaseApplicationInvoker(request *model.StopSupabaseApplicationRequest) *StopSupabaseApplicationInvoker {
+	requestDef := GenReqDefForStopSupabaseApplication()
+	return &StopSupabaseApplicationInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchSupabaseApplicationEipBind 绑定或解绑Supabase应用EIP
+//
+// 异步绑定/解绑EIP。is_bind&#x3D;true时public_ip_id和public_ip_address必填。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) SwitchSupabaseApplicationEipBind(request *model.SwitchSupabaseApplicationEipBindRequest) (*model.SwitchSupabaseApplicationEipBindResponse, error) {
+	requestDef := GenReqDefForSwitchSupabaseApplicationEipBind()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchSupabaseApplicationEipBindResponse), nil
+	}
+}
+
+// SwitchSupabaseApplicationEipBindInvoker 绑定或解绑Supabase应用EIP
+func (c *RdsClient) SwitchSupabaseApplicationEipBindInvoker(request *model.SwitchSupabaseApplicationEipBindRequest) *SwitchSupabaseApplicationEipBindInvoker {
+	requestDef := GenReqDefForSwitchSupabaseApplicationEipBind()
+	return &SwitchSupabaseApplicationEipBindInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchSupabaseApplicationSsl 开启或关闭Supabase应用SSL
+//
+// 异步开关SSL。enable_ssl&#x3D;false时cert_id必须为空；enable_ssl&#x3D;true时cert_id必填。
+// SSL切换后需手动同步Auth相关URL协议（http&lt;-&gt;https），否则认证可能故障。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) SwitchSupabaseApplicationSsl(request *model.SwitchSupabaseApplicationSslRequest) (*model.SwitchSupabaseApplicationSslResponse, error) {
+	requestDef := GenReqDefForSwitchSupabaseApplicationSsl()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchSupabaseApplicationSslResponse), nil
+	}
+}
+
+// SwitchSupabaseApplicationSslInvoker 开启或关闭Supabase应用SSL
+func (c *RdsClient) SwitchSupabaseApplicationSslInvoker(request *model.SwitchSupabaseApplicationSslRequest) *SwitchSupabaseApplicationSslInvoker {
+	requestDef := GenReqDefForSwitchSupabaseApplicationSsl()
+	return &SwitchSupabaseApplicationSslInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // GetAvailableVpcs 根据实例ID和管理网子网信息，返回可用的数据子网
 //
 // 根据实例ID和管理网子网信息，返回可用的数据子网。

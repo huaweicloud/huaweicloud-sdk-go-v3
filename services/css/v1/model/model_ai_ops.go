@@ -27,7 +27,7 @@ type AiOps struct {
 	Status *int32 `json:"status,omitempty"`
 
 	// **参数解释**： 集群风险检测任务创建时间。 **取值范围**： 格式：Unix时间戳格式。
-	CreateTime *string `json:"create_time,omitempty"`
+	CreateTime *int32 `json:"create_time,omitempty"`
 
 	Summary *SummaryInfo `json:"summary,omitempty"`
 

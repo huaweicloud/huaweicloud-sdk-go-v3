@@ -3669,6 +3669,166 @@ func (i *UpdateAiGuardRuleStatusInvoker) Invoke() (*model.UpdateAiGuardRuleStatu
 	}
 }
 
+type AddImagesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddImagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddImagesInvoker) Invoke() (*model.AddImagesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddImagesResponse), nil
+	}
+}
+
+type BatchDeleteAtlasesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteAtlasesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteAtlasesInvoker) Invoke() (*model.BatchDeleteAtlasesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteAtlasesResponse), nil
+	}
+}
+
+type CreateAtlasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAtlasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAtlasInvoker) Invoke() (*model.CreateAtlasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAtlasResponse), nil
+	}
+}
+
+type CreatePresignedUploadUrlInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreatePresignedUploadUrlInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreatePresignedUploadUrlInvoker) Invoke() (*model.CreatePresignedUploadUrlResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreatePresignedUploadUrlResponse), nil
+	}
+}
+
+type DeleteAtlasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteAtlasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteAtlasInvoker) Invoke() (*model.DeleteAtlasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteAtlasResponse), nil
+	}
+}
+
+type ListAtlasesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAtlasesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAtlasesInvoker) Invoke() (*model.ListAtlasesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAtlasesResponse), nil
+	}
+}
+
+type ListImagesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListImagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListImagesInvoker) Invoke() (*model.ListImagesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListImagesResponse), nil
+	}
+}
+
+type RemoveImagesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *RemoveImagesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *RemoveImagesInvoker) Invoke() (*model.RemoveImagesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.RemoveImagesResponse), nil
+	}
+}
+
+type ShowAtlasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAtlasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAtlasInvoker) Invoke() (*model.ShowAtlasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAtlasResponse), nil
+	}
+}
+
+type UpdateAtlasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAtlasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAtlasInvoker) Invoke() (*model.UpdateAtlasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAtlasResponse), nil
+	}
+}
+
 type BatchDeleteCustomAnswersInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -3874,6 +4034,182 @@ func (i *UpdateCustomLlmInvoker) Invoke() (*model.UpdateCustomLlmResponse, error
 		return nil, err
 	} else {
 		return result.(*model.UpdateCustomLlmResponse), nil
+	}
+}
+
+type BatchDeleteCustomRegexSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchDeleteCustomRegexSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchDeleteCustomRegexSetInvoker) Invoke() (*model.BatchDeleteCustomRegexSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchDeleteCustomRegexSetResponse), nil
+	}
+}
+
+type CreateCustomRegexInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCustomRegexInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateCustomRegexInvoker) Invoke() (*model.CreateCustomRegexResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCustomRegexResponse), nil
+	}
+}
+
+type CreateCustomRegexSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateCustomRegexSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateCustomRegexSetInvoker) Invoke() (*model.CreateCustomRegexSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateCustomRegexSetResponse), nil
+	}
+}
+
+type CreateRegexTestInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateRegexTestInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateRegexTestInvoker) Invoke() (*model.CreateRegexTestResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateRegexTestResponse), nil
+	}
+}
+
+type DeleteCustomRegexInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCustomRegexInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteCustomRegexInvoker) Invoke() (*model.DeleteCustomRegexResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCustomRegexResponse), nil
+	}
+}
+
+type DeleteCustomRegexSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteCustomRegexSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteCustomRegexSetInvoker) Invoke() (*model.DeleteCustomRegexSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteCustomRegexSetResponse), nil
+	}
+}
+
+type ListCustomRegexInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCustomRegexInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCustomRegexInvoker) Invoke() (*model.ListCustomRegexResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCustomRegexResponse), nil
+	}
+}
+
+type ListCustomRegexSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListCustomRegexSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListCustomRegexSetInvoker) Invoke() (*model.ListCustomRegexSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListCustomRegexSetResponse), nil
+	}
+}
+
+type ShowCustomRegexSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowCustomRegexSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowCustomRegexSetInvoker) Invoke() (*model.ShowCustomRegexSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowCustomRegexSetResponse), nil
+	}
+}
+
+type UpdateCustomRegexInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateCustomRegexInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateCustomRegexInvoker) Invoke() (*model.UpdateCustomRegexResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateCustomRegexResponse), nil
+	}
+}
+
+type UpdateCustomRegexSetInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateCustomRegexSetInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateCustomRegexSetInvoker) Invoke() (*model.UpdateCustomRegexSetResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateCustomRegexSetResponse), nil
 	}
 }
 

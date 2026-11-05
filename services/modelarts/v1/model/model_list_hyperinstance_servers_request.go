@@ -11,6 +11,18 @@ type ListHyperinstanceServersRequest struct {
 
 	// **参数解释**：Lite Server超节点实例ID。 **约束限制**：^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$。 **取值范围**：不涉及。 **默认取值**：不涉及。
 	Id string `json:"id"`
+
+	// **参数解释**：每一页显示实例的数量。 **约束限制**：不涉及。 **取值范围**：[10,20,50]。 **默认取值**：10。
+	Limit *int32 `json:"limit,omitempty"`
+
+	// **参数解释**：分页记录的起始位置偏移量。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：0。
+	Offset *int32 `json:"offset,omitempty"`
+
+	// **参数解释**：排序的字段，多个字段使用(“,”)逗号分隔。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符，支持大小写字母、数字、中划线、下划线和逗号。 **默认取值**：不涉及。
+	SortKey *string `json:"sort_key,omitempty"`
+
+	// **参数解释**：实例排序方式。 **约束限制**：不涉及。 **取值范围**： - ASC：升序 - DESC：降序  **默认取值**：DESC。
+	SortDir *string `json:"sort_dir,omitempty"`
 }
 
 func (o ListHyperinstanceServersRequest) String() string {

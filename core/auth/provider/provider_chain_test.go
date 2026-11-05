@@ -39,6 +39,7 @@ func TestDefaultCredentialProviderChain(t *testing.T) {
 		NewEnvCredentialProvider(credentialType),
 		NewProfileCredentialProvider(credentialType),
 		NewMetadataCredentialProvider(credentialType),
+		NewPodIdentityCredentialProvider(credentialType),
 	})
 	assert.Equal(t, expected, chain)
 }

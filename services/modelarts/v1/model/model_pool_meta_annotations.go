@@ -39,8 +39,11 @@ type PoolMetaAnnotations struct {
 	// **参数解释**：资源池上的资源标签。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
 	OsModelartsTmsTags *string `json:"os.modelarts/tms.tags,omitempty"`
 
-	// **参数解释**：资源池调度队列的策略，用于定义任务调度的规则。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+	// **参数解释**：资源池调度队列的策略，用于定义任务调度的规则。 **取值范围**：枚举：FIFO、Range、Step、Rank。
 	OsModelartsPoolSchedulerQueueStrategy *string `json:"os.modelarts.pool/scheduler.queue.strategy,omitempty"`
+
+	// **参数解释**：资源池的调度策略配置。 **约束限制**：仅当调度策略为Step或Rank时生效。 **取值范围**：Json字符串，自行配置，示例如下： - Step: {\"step_config\":{\"timeout\":300}} - Rank: {\"rank_config\":[{\"max_priority\":3,\"min_priority\":3,\"rank_strategy\":\"Step\",\"step_config\":{\"timeout\":300}},{\"max_priority\":2,\"min_priority\":1,\"rank_strategy\":\"Range\"}]} **默认取值**：不涉及。
+	OsModelartsPoolSchedulerQueueStrategyConfig *string `json:"os.modelarts.pool/scheduler.queue.strategy.config,omitempty"`
 
 	// **参数解释**：资源池包含的逻辑子池的数量。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
 	OsModelartsPoolSubpoolsCount *string `json:"os.modelarts.pool/subpools.count,omitempty"`

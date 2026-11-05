@@ -42,7 +42,7 @@ func DefaultCredentialProviderChain(credentialType string) *CredentialProviderCh
 		NewEnvCredentialProvider(credentialType),
 		NewProfileCredentialProvider(credentialType),
 		NewMetadataCredentialProvider(credentialType),
-		NewProfileCredentialProvider(credentialType),
+		NewPodIdentityCredentialProvider(credentialType),
 	}
 	return NewCredentialProviderChain(providers)
 }

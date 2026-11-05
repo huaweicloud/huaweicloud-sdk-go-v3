@@ -23,6 +23,9 @@ type EndpointsRes struct {
 
 	// **参数解释**：SSH密钥对名称列表，允许设置多个密钥对实现同时对SSH实例的访问。 **取值范围**：不涉及。
 	KeyPairNames *[]string `json:"key_pair_names,omitempty"`
+
+	// **参数解释**：通过应用专属URL直接打开应用进入远程开发模式。包含应用的各种扩展配置。key表示扩展配置名称，value表示扩展配置值。
+	Extensions map[string]string `json:"extensions,omitempty"`
 }
 
 func (o EndpointsRes) String() string {

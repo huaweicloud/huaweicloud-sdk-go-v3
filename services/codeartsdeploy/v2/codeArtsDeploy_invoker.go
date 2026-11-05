@@ -1044,3 +1044,19 @@ func (i *ShowProjectSuccessRateInvoker) Invoke() (*model.ShowProjectSuccessRateR
 		return result.(*model.ShowProjectSuccessRateResponse), nil
 	}
 }
+
+type ShowTaskLogsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTaskLogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTaskLogsInvoker) Invoke() (*model.ShowTaskLogsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTaskLogsResponse), nil
+	}
+}

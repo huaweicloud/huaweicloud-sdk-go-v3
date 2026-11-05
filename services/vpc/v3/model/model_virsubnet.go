@@ -45,6 +45,12 @@ type Virsubnet struct {
 	// **参数解释**： 子网的DHCP属性，支持配置NTP地址、DNS域名或租约到期时间。 **取值范围**： 不涉及。
 	ExtraDhcpOpts []SubnetExtraDhcpOpt `json:"extra_dhcp_opts"`
 
+	// **参数解释**： 是否开启当前子网的IPv4地址使用量指标监控。 **取值范围**： true：开启。 false：不开启。
+	EnableNetworkAddressUsageMetrics bool `json:"enable_network_address_usage_metrics"`
+
+	// **参数解释**： 子网内剩余可用的IPv4地址数量。 **取值范围**： 不涉及。
+	AvailableIpAddressCount int32 `json:"available_ip_address_count"`
+
 	// **参数解释**： 子网的创建时间。 **取值范围**： UTC时间格式，yyyy-MM-ddTHH:mm:ss。
 	CreatedAt *sdktime.SdkTime `json:"created_at"`
 

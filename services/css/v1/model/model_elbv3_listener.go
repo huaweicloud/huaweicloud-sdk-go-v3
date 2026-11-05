@@ -20,6 +20,12 @@ type Elbv3Listener struct {
 	// 监听器的前端监听端口。
 	ProtocolPort *int32 `json:"protocol_port,omitempty"`
 
+	// **参数解释**： 负载均衡器监听器的服务端证书。 **取值范围**： 不涉及
+	DefaultTlsContainerRef *string `json:"default_tls_container_ref,omitempty"`
+
+	// **参数解释**： 负载均衡器监听器的ca证书。 **取值范围**： 不涉及
+	ClientCaTlsContainerRef *string `json:"client_ca_tls_container_ref,omitempty"`
+
 	Ipgroup *ListenerIpGroup `json:"ipgroup,omitempty"`
 }
 

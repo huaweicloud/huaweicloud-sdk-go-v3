@@ -117,6 +117,22 @@ func (i *BatchCreatePoolTagsInvoker) Invoke() (*model.BatchCreatePoolTagsRespons
 	}
 }
 
+type BatchCreateServiceOpensInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateServiceOpensInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateServiceOpensInvoker) Invoke() (*model.BatchCreateServiceOpensResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateServiceOpensResponse), nil
+	}
+}
+
 type BatchDeleteInferIntranetConnectionsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -562,6 +578,22 @@ func (i *CreateAlgorithmVersionToGalleryInvoker) Invoke() (*model.CreateAlgorith
 		return nil, err
 	} else {
 		return result.(*model.CreateAlgorithmVersionToGalleryResponse), nil
+	}
+}
+
+type CreateAuthGrantInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateAuthGrantInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateAuthGrantInvoker) Invoke() (*model.CreateAuthGrantResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateAuthGrantResponse), nil
 	}
 }
 
@@ -2277,6 +2309,22 @@ func (i *ListScheduledEventsInvoker) Invoke() (*model.ListScheduledEventsRespons
 	}
 }
 
+type ListServiceStatusesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListServiceStatusesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListServiceStatusesInvoker) Invoke() (*model.ListServiceStatusesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListServiceStatusesResponse), nil
+	}
+}
+
 type ListTrainingExperimentsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2501,6 +2549,22 @@ func (i *PatchNetworkInvoker) Invoke() (*model.PatchNetworkResponse, error) {
 	}
 }
 
+type PatchNodeConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *PatchNodeConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *PatchNodeConfigInvoker) Invoke() (*model.PatchNodeConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.PatchNodeConfigResponse), nil
+	}
+}
+
 type PatchNodePoolInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2658,6 +2722,22 @@ func (i *ShowAlgorithmByUuidInvoker) Invoke() (*model.ShowAlgorithmByUuidRespons
 		return nil, err
 	} else {
 		return result.(*model.ShowAlgorithmByUuidResponse), nil
+	}
+}
+
+type ShowAuthGrantInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowAuthGrantInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowAuthGrantInvoker) Invoke() (*model.ShowAuthGrantResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowAuthGrantResponse), nil
 	}
 }
 
@@ -3858,6 +3938,22 @@ func (i *ValidateTrainingJobNameInvoker) Invoke() (*model.ValidateTrainingJobNam
 		return nil, err
 	} else {
 		return result.(*model.ValidateTrainingJobNameResponse), nil
+	}
+}
+
+type VerifyAgencyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *VerifyAgencyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *VerifyAgencyInvoker) Invoke() (*model.VerifyAgencyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.VerifyAgencyResponse), nil
 	}
 }
 

@@ -16,10 +16,10 @@ type CreateHyperinstanceGroupResponse struct {
 	Name *string `json:"name,omitempty"`
 
 	// **参数解释**：npu数量限制。 **默认取值**：不涉及。
-	NpuCountLimit *string `json:"npu_count_limit,omitempty"`
+	NpuCountLimit *int32 `json:"npu_count_limit,omitempty"`
 
 	// **参数解释**：npu数量。 **默认取值**：不涉及。
-	NpuCount *string `json:"npu_count,omitempty"`
+	NpuCount *int32 `json:"npu_count,omitempty"`
 
 	// **参数解释**：超节点集群ID。 **默认取值**：不涉及。
 	HyperinstanceClusterId *string `json:"hyperinstance_cluster_id,omitempty"`

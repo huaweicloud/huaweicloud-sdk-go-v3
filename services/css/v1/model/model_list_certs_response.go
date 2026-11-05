@@ -8,7 +8,7 @@ import (
 
 // ListCertsResponse Response Object
 type ListCertsResponse struct {
-	CertsRecords *CertsRecordsDatastore `json:"certsRecords,omitempty"`
+	CertsRecords *[]CertsRecordsDatastore `json:"certsRecords,omitempty"`
 
 	// 证书记录数量。
 	TotalSize      *int32 `json:"totalSize,omitempty"`

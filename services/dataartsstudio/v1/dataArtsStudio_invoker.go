@@ -4197,6 +4197,22 @@ func (i *SearchDwByTypeInvoker) Invoke() (*model.SearchDwByTypeResponse, error) 
 	}
 }
 
+type SearchFactoryJobBaselineInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SearchFactoryJobBaselineInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SearchFactoryJobBaselineInfoInvoker) Invoke() (*model.SearchFactoryJobBaselineInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SearchFactoryJobBaselineInfoResponse), nil
+	}
+}
+
 type SearchFieldsForRelationInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -35,6 +35,12 @@ type PoolAnnotationsCreation struct {
 
 	// **参数解释**：订单id，包周期资源池创建或者计费模式变更的时候该参数必需。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
 	OsModelartsOrderId *string `json:"os.modelarts/order.id,omitempty"`
+
+	// **参数解释**：资源池的调度算法。 **约束限制**：不涉及。 **取值范围**：可选值如下： - FIFO：先进先出，默认值 - Range：遍历调度 - Step: 阶梯轮询 - Rank: 分级调度 **默认取值**：FIFO。
+	OsModelartsPoolSchedulerQueueStrategy *string `json:"os.modelarts.pool/scheduler.queue.strategy,omitempty"`
+
+	// **参数解释**：资源池的调度策略配置。 **约束限制**：仅当调度策略为Step或Rank时生效。 **取值范围**：Json字符串，自行配置，示例如下： - Step: {\"step_config\":{\"timeout\":300}} - Rank: {\"rank_config\":[{\"max_priority\":3,\"min_priority\":3,\"rank_strategy\":\"Step\",\"step_config\":{\"timeout\":300}},{\"max_priority\":2,\"min_priority\":1,\"rank_strategy\":\"Range\"}]} **默认取值**：不涉及。
+	OsModelartsPoolSchedulerQueueStrategyConfig *string `json:"os.modelarts.pool/scheduler.queue.strategy.config,omitempty"`
 }
 
 func (o PoolAnnotationsCreation) String() string {

@@ -37,7 +37,7 @@ type ShowIkThesaurusResponse struct {
 	ExtraStopObj *string `json:"extraStopObj,omitempty"`
 
 	// 词库最近更新时间。
-	UpdateTime *string `json:"updateTime,omitempty"`
+	UpdateTime *int32 `json:"updateTime,omitempty"`
 
 	// 更新详情。
 	UpdateDetails *string `json:"updateDetails,omitempty"`

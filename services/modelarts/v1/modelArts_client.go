@@ -171,6 +171,27 @@ func (c *ModelArtsClient) BatchCreatePoolTagsInvoker(request *model.BatchCreateP
 	return &BatchCreatePoolTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreateServiceOpens 一键开通依赖服务
+//
+// 一键开通依赖服务接口用于一键开通AOM、CCE、CES、SWR-EE等依赖服务。该接口适用于以下场景：当用户首次使用ModelArts服务或需要批量开通相关依赖服务时，可通过此接口一键完成多个依赖服务的开通操作。使用该接口的前提条件是用户已登录系统、具有相应操作权限且账号余额充足。执行一键开通后，系统将自动为用户开通指定的依赖服务，服务开通后即可正常使用。若用户无权限操作、账号余额不足或服务开通失败，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) BatchCreateServiceOpens(request *model.BatchCreateServiceOpensRequest) (*model.BatchCreateServiceOpensResponse, error) {
+	requestDef := GenReqDefForBatchCreateServiceOpens()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateServiceOpensResponse), nil
+	}
+}
+
+// BatchCreateServiceOpensInvoker 一键开通依赖服务
+func (c *ModelArtsClient) BatchCreateServiceOpensInvoker(request *model.BatchCreateServiceOpensRequest) *BatchCreateServiceOpensInvoker {
+	requestDef := GenReqDefForBatchCreateServiceOpens()
+	return &BatchCreateServiceOpensInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeleteInferIntranetConnections 批量删除内网接入
 //
 // 本接口用于批量删除指定的内网接入点，适用于需要清理多个不再使用的内网接入点的场景。调用此接口前，确保已具备相应的删除权限，并提供一个有效的内网接入点ID列表。删除成功后，所指定的内网接入点将被彻底移除，不再对任何服务生效。如果提供的内网接入点ID列表中包含无效或已删除的ID，将返回相应的异常信息，提示用户检查ID的有效性。此外，如果调用时出现权限不足或其他系统异常，也将返回相应的异常信息，提示用户检查权限或联系技术支持。
@@ -762,6 +783,27 @@ func (c *ModelArtsClient) CreateAlgorithmVersionToGallery(request *model.CreateA
 func (c *ModelArtsClient) CreateAlgorithmVersionToGalleryInvoker(request *model.CreateAlgorithmVersionToGalleryRequest) *CreateAlgorithmVersionToGalleryInvoker {
 	requestDef := GenReqDefForCreateAlgorithmVersionToGallery()
 	return &CreateAlgorithmVersionToGalleryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateAuthGrant 一键授权或重置授权
+//
+// 一键授权或重置授权接口用于一键创建ModelArts委托授权或重置已有委托。该接口适用于以下场景：当用户首次使用ModelArts服务需要开通委托授权时，或当现有委托授权出现异常、过期需要重新配置时，可通过此接口一键完成授权操作。使用该接口的前提条件是用户已登录系统且具有相应的操作权限。执行一键授权后，系统将自动创建委托授权关系；执行重置操作后，原有委托将被替换为新的授权。若用户无权限操作或服务异常，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) CreateAuthGrant(request *model.CreateAuthGrantRequest) (*model.CreateAuthGrantResponse, error) {
+	requestDef := GenReqDefForCreateAuthGrant()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateAuthGrantResponse), nil
+	}
+}
+
+// CreateAuthGrantInvoker 一键授权或重置授权
+func (c *ModelArtsClient) CreateAuthGrantInvoker(request *model.CreateAuthGrantRequest) *CreateAuthGrantInvoker {
+	requestDef := GenReqDefForCreateAuthGrant()
+	return &CreateAuthGrantInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateAuthorization 配置授权
@@ -3029,6 +3071,27 @@ func (c *ModelArtsClient) ListScheduledEventsInvoker(request *model.ListSchedule
 	return &ListScheduledEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListServiceStatuses 查询依赖服务开通状态
+//
+// 查询依赖服务开通状态接口用于查询AOM、CCE、CES、SWR-EE等依赖服务的开通状态。该接口适用于以下场景：当用户需要确认ModelArts相关依赖服务是否已开通时，可通过此接口批量查询各依赖服务的当前状态。使用该接口的前提条件是用户已登录系统且具有相应的查询权限。查询结果将返回各依赖服务的开通状态（已开通或未开通），若用户无权限查询或服务异常，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ListServiceStatuses(request *model.ListServiceStatusesRequest) (*model.ListServiceStatusesResponse, error) {
+	requestDef := GenReqDefForListServiceStatuses()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListServiceStatusesResponse), nil
+	}
+}
+
+// ListServiceStatusesInvoker 查询依赖服务开通状态
+func (c *ModelArtsClient) ListServiceStatusesInvoker(request *model.ListServiceStatusesRequest) *ListServiceStatusesInvoker {
+	requestDef := GenReqDefForListServiceStatuses()
+	return &ListServiceStatusesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListTrainingExperiments 查询训练实验列表
 //
 // 查询训练实验列表接口用于获取ModelArts平台上用户已创建的训练实验的列表。
@@ -3328,6 +3391,27 @@ func (c *ModelArtsClient) PatchNetworkInvoker(request *model.PatchNetworkRequest
 	return &PatchNetworkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// PatchNodeConfig 更新资源池节点自定义配置
+//
+// 更新资源池节点自定义配置接口用于修改资源池节点的个性化设置。该接口适用于以下场景：当资源池节点需要调整资源分配策略、更新性能参数、创建/删除镜像预热任务或变更其他自定义配置时，用户可通过此接口更新指定资源池节点的自定义配置信息。使用该接口的前提条件是资源池节点已存在且用户具有管理员权限。更新操作完成后，资源池节点的自定义配置将被更新并生效，相关变更将被记录以便后续查询。若资源池节点不存在、用户无权限操作或配置参数格式不正确，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) PatchNodeConfig(request *model.PatchNodeConfigRequest) (*model.PatchNodeConfigResponse, error) {
+	requestDef := GenReqDefForPatchNodeConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.PatchNodeConfigResponse), nil
+	}
+}
+
+// PatchNodeConfigInvoker 更新资源池节点自定义配置
+func (c *ModelArtsClient) PatchNodeConfigInvoker(request *model.PatchNodeConfigRequest) *PatchNodeConfigInvoker {
+	requestDef := GenReqDefForPatchNodeConfig()
+	return &PatchNodeConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // PatchNodePool 更新节点池
 //
 // 更新节点池接口用于修改指定节点池的配置信息。该接口适用于以下场景：当需要扩展节点池容量、调整节点规格、优化资源分配或修复节点池配置时，用户可通过此接口更新节点池的相关信息。使用该接口的前提条件是节点池已存在且用户具有管理员权限。更新操作完成后，节点池的配置将被更新，包括节点数量、规格、网络配置等参数。若节点池不存在、用户无权限操作或配置参数错误，接口将返回相应的错误信息。
@@ -3536,6 +3620,27 @@ func (c *ModelArtsClient) ShowAlgorithmByUuid(request *model.ShowAlgorithmByUuid
 func (c *ModelArtsClient) ShowAlgorithmByUuidInvoker(request *model.ShowAlgorithmByUuidRequest) *ShowAlgorithmByUuidInvoker {
 	requestDef := GenReqDefForShowAlgorithmByUuid()
 	return &ShowAlgorithmByUuidInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAuthGrant 查询委托授权状态
+//
+// 查询委托授权状态接口用于查询ModelArts服务的委托授权是否已开通。该接口适用于以下场景：当用户需要确认是否已开通ModelArts委托授权以进行后续操作（如模型训练、部署等）时，可通过此接口查询当前授权状态。使用该接口的前提条件是用户已登录系统且具有相应的查询权限。查询结果将返回委托授权的当前状态（已开通或未开通），若用户无权限查询或服务异常，接口将返回相应的错误信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) ShowAuthGrant(request *model.ShowAuthGrantRequest) (*model.ShowAuthGrantResponse, error) {
+	requestDef := GenReqDefForShowAuthGrant()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAuthGrantResponse), nil
+	}
+}
+
+// ShowAuthGrantInvoker 查询委托授权状态
+func (c *ModelArtsClient) ShowAuthGrantInvoker(request *model.ShowAuthGrantRequest) *ShowAuthGrantInvoker {
+	requestDef := GenReqDefForShowAuthGrant()
+	return &ShowAuthGrantInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowAuthmodeDetail 查询授权模式
@@ -5120,6 +5225,27 @@ func (c *ModelArtsClient) ValidateTrainingJobName(request *model.ValidateTrainin
 func (c *ModelArtsClient) ValidateTrainingJobNameInvoker(request *model.ValidateTrainingJobNameRequest) *ValidateTrainingJobNameInvoker {
 	requestDef := GenReqDefForValidateTrainingJobName()
 	return &ValidateTrainingJobNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// VerifyAgency 校验委托使用权限
+//
+// 校验当前用户是否有权使用指定委托，仅支持委托给ModelArts服务的委托，通过PDP5的iam:agencies:pass鉴权判定
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *ModelArtsClient) VerifyAgency(request *model.VerifyAgencyRequest) (*model.VerifyAgencyResponse, error) {
+	requestDef := GenReqDefForVerifyAgency()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.VerifyAgencyResponse), nil
+	}
+}
+
+// VerifyAgencyInvoker 校验委托使用权限
+func (c *ModelArtsClient) VerifyAgencyInvoker(request *model.VerifyAgencyRequest) *VerifyAgencyInvoker {
+	requestDef := GenReqDefForVerifyAgency()
+	return &VerifyAgencyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CreateInferDeploymentHpa 创建自动扩缩容策略

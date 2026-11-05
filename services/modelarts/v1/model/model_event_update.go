@@ -12,6 +12,9 @@ type EventUpdate struct {
 	NotBefore *string `json:"notBefore,omitempty"`
 
 	RedeployConfig *RedeployConfig `json:"redeployConfig,omitempty"`
+
+	// **参数解释**：授权节点ID列表。授权重部处理时可选填,支持填入单个故障节点ID。 **约束限制**：不涉及。 **取值范围**：计划事件故障节点列表。 **默认取值**：不填表示授权所有节点。
+	InstanceId *[]string `json:"instanceId,omitempty"`
 }
 
 func (o EventUpdate) String() string {

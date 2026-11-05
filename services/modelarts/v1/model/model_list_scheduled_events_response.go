@@ -9,7 +9,7 @@ import (
 // ListScheduledEventsResponse Response Object
 type ListScheduledEventsResponse struct {
 
-	// **参数解释**：计划事件列表
+	// '**参数解释**：计划事件列表'。
 	Events *[]ScheduledEvent `json:"events,omitempty"`
 
 	// **参数解释**：计划事件总数。 **取值范围**：不涉及。
