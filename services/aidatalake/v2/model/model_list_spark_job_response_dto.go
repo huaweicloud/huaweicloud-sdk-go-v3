@@ -51,6 +51,12 @@ type ListSparkJobResponseDto struct {
 
 	// **参数解释**：日志归档路径OBS URL，用于查看作业执行日志。 **取值范围**：OBS URL格式，长度为1~1024个字符。
 	LogUrl *string `json:"log_url,omitempty"`
+
+	// **参数解释**：用户自定义Spark参数配置，敏感配置项已脱敏。Map中的key为Spark配置项名称（如spark.executor.memory），value为对应的配置值，key和value均为字符串，单个长度不超过10240个字符。
+	SparkConfig map[string]string `json:"spark_config,omitempty"`
+
+	// **参数解释**：作业标签列表，用于标识和分类作业。
+	Labels *[]SparkJobLabel `json:"labels,omitempty"`
 }
 
 func (o ListSparkJobResponseDto) String() string {

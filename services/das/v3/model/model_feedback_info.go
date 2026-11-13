@@ -9,7 +9,7 @@ import (
 type FeedbackInfo struct {
 
 	// 编号
-	Id *string `json:"id,omitempty"`
+	Id *int64 `json:"id,omitempty"`
 
 	// 项目Id
 	ProjectId *string `json:"project_id,omitempty"`

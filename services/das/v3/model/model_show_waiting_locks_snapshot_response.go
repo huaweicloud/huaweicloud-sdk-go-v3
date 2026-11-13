@@ -13,7 +13,7 @@ type ShowWaitingLocksSnapshotResponse struct {
 	Trx *[]InnodbTrxInfo `json:"trx,omitempty"`
 
 	// InnoDB锁等待信息
-	LockWaitsInfos *[]interface{} `json:"lock_waits_infos,omitempty"`
+	LockWaitsInfos *[]InnodbLockWaitsInfo `json:"lock_waits_infos,omitempty"`
 
 	// 等待锁的会话的数量
 	WaitLockCount *int32 `json:"wait_lock_count,omitempty"`

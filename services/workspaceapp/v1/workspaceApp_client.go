@@ -800,6 +800,7 @@ func (c *WorkspaceAppClient) ListSessionTypeInvoker(request *model.ListSessionTy
 	return &ListSessionTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowSessionTypes 查询会话套餐列表（已废弃）
 //
 // 该接口用于查询会话套餐列表。
@@ -815,6 +816,7 @@ func (c *WorkspaceAppClient) ShowSessionTypes(request *model.ShowSessionTypesReq
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowSessionTypesInvoker 查询会话套餐列表（已废弃）
 func (c *WorkspaceAppClient) ShowSessionTypesInvoker(request *model.ShowSessionTypesRequest) *ShowSessionTypesInvoker {
 	requestDef := GenReqDefForShowSessionTypes()
@@ -1693,6 +1695,7 @@ func (c *WorkspaceAppClient) ShowImageJobInvoker(request *model.ShowImageJobRequ
 	return &ShowImageJobInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowJob 查询任务的执行状态（已废弃）
 //
 // 查询Job的执行状态。
@@ -1710,6 +1713,7 @@ func (c *WorkspaceAppClient) ShowJob(request *model.ShowJobRequest) (*model.Show
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ShowJobInvoker 查询任务的执行状态（已废弃）
 func (c *WorkspaceAppClient) ShowJobInvoker(request *model.ShowJobRequest) *ShowJobInvoker {
 	requestDef := GenReqDefForShowJob()

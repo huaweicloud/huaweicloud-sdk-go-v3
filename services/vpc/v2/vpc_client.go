@@ -765,6 +765,27 @@ func (c *VpcClient) ListSubnetsByTagsInvoker(request *model.ListSubnetsByTagsReq
 	return &ListSubnetsByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListVpcPeeringInfos 查询对等连接信息列表
+//
+// 当您的对等连接创建成功后，您可以通过该接口查询所有对等连接信息，包括对等连接的名称、两端vpc的信息等
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ListVpcPeeringInfos(request *model.ListVpcPeeringInfosRequest) (*model.ListVpcPeeringInfosResponse, error) {
+	requestDef := GenReqDefForListVpcPeeringInfos()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVpcPeeringInfosResponse), nil
+	}
+}
+
+// ListVpcPeeringInfosInvoker 查询对等连接信息列表
+func (c *VpcClient) ListVpcPeeringInfosInvoker(request *model.ListVpcPeeringInfosRequest) *ListVpcPeeringInfosInvoker {
+	requestDef := GenReqDefForListVpcPeeringInfos()
+	return &ListVpcPeeringInfosInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListVpcPeerings 查询对等连接列表
 //
 // 查询提交请求的租户的所有对等连接。根据过滤条件进行过滤。

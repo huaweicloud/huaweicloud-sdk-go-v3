@@ -4762,7 +4762,7 @@ func GenReqDefForSwitchLoggerReplica() *def.HttpRequestDef {
 func GenReqDefForSwitchLoggerReplicaAvailabilityZones() *def.HttpRequestDef {
 	reqDefBuilder := def.NewHttpRequestDefBuilder().
 		WithMethod(http.MethodGet).
-		WithPath("/v3/{project_id}/instances/{instance_id}/switch-logger-replica/availability_zones").
+		WithPath("/v3/{project_id}/instances/{instance_id}/switch-logger-replica/availability-zones").
 		WithResponse(new(model.SwitchLoggerReplicaAvailabilityZonesResponse)).
 		WithContentType("application/json")
 

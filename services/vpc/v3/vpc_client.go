@@ -167,6 +167,27 @@ func (c *VpcClient) BatchCreateSubNetworkInterfaceTagsInvoker(request *model.Bat
 	return &BatchCreateSubNetworkInterfaceTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchCreateTrafficMirrorFilterRules 批量创建流量镜像筛选规则
+//
+// 批量创建流量镜像筛选规则
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) BatchCreateTrafficMirrorFilterRules(request *model.BatchCreateTrafficMirrorFilterRulesRequest) (*model.BatchCreateTrafficMirrorFilterRulesResponse, error) {
+	requestDef := GenReqDefForBatchCreateTrafficMirrorFilterRules()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchCreateTrafficMirrorFilterRulesResponse), nil
+	}
+}
+
+// BatchCreateTrafficMirrorFilterRulesInvoker 批量创建流量镜像筛选规则
+func (c *VpcClient) BatchCreateTrafficMirrorFilterRulesInvoker(request *model.BatchCreateTrafficMirrorFilterRulesRequest) *BatchCreateTrafficMirrorFilterRulesInvoker {
+	requestDef := GenReqDefForBatchCreateTrafficMirrorFilterRules()
+	return &BatchCreateTrafficMirrorFilterRulesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchDeletePortTags 批量删除端口资源标签
 //
 // 为指定的端口资源实例批量删除标签。
@@ -717,6 +738,27 @@ func (c *VpcClient) ListPortsByTags(request *model.ListPortsByTagsRequest) (*mod
 func (c *VpcClient) ListPortsByTagsInvoker(request *model.ListPortsByTagsRequest) *ListPortsByTagsInvoker {
 	requestDef := GenReqDefForListPortsByTags()
 	return &ListPortsByTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListResourceAssociations 查询资源关联的实例信息列表
+//
+// 网卡等资源可以关联高阶服务的资源实例，如ELB，您可以通过此接口查询资源关联的实例信息列表，包括资源和实例的类型、ID和所属的项目ID。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *VpcClient) ListResourceAssociations(request *model.ListResourceAssociationsRequest) (*model.ListResourceAssociationsResponse, error) {
+	requestDef := GenReqDefForListResourceAssociations()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListResourceAssociationsResponse), nil
+	}
+}
+
+// ListResourceAssociationsInvoker 查询资源关联的实例信息列表
+func (c *VpcClient) ListResourceAssociationsInvoker(request *model.ListResourceAssociationsRequest) *ListResourceAssociationsInvoker {
+	requestDef := GenReqDefForListResourceAssociations()
+	return &ListResourceAssociationsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListSecurityGroupRules 查询安全组规则列表

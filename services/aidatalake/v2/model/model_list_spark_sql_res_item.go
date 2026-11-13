@@ -51,6 +51,12 @@ type ListSparkSqlResItem struct {
 	EndTime *int64 `json:"end_time,omitempty"`
 
 	CreateUser *SparkCreateUser `json:"create_user"`
+
+	// **参数解释**：用户自定义Spark参数配置。Map中的key为Spark配置项名称（如spark.executor.memory），value为对应的配置值，key和value均为字符串，单个长度不超过10240个字符。
+	SparkConfig map[string]string `json:"spark_config,omitempty"`
+
+	// **参数解释**：作业标签列表，用于标识和分类作业。
+	Labels *[]SparkSqlLabelRes `json:"labels,omitempty"`
 }
 
 func (o ListSparkSqlResItem) String() string {

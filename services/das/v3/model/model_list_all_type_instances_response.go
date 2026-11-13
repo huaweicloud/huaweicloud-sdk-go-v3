@@ -9,9 +9,12 @@ import (
 // ListAllTypeInstancesResponse Response Object
 type ListAllTypeInstancesResponse struct {
 
-	// 错误信息条件列表
-	EntryNames     *[]string `json:"entry_names,omitempty"`
-	HttpStatusCode int       `json:"-"`
+	// 实例列表
+	Instances *[]DasCommonInstanceDto `json:"instances,omitempty"`
+
+	// 总记录数
+	TotalCount     *int64 `json:"total_count,omitempty"`
+	HttpStatusCode int    `json:"-"`
 }
 
 func (o ListAllTypeInstancesResponse) String() string {

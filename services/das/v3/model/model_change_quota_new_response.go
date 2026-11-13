@@ -9,12 +9,9 @@ import (
 // ChangeQuotaNewResponse Response Object
 type ChangeQuotaNewResponse struct {
 
-	// 实例列表
-	Instances *[]DasCommonInstanceDto `json:"instances,omitempty"`
-
-	// 总记录数
-	TotalCount     *int64 `json:"total_count,omitempty"`
-	HttpStatusCode int    `json:"-"`
+	// 是否成功
+	Success        *bool `json:"success,omitempty"`
+	HttpStatusCode int   `json:"-"`
 }
 
 func (o ChangeQuotaNewResponse) String() string {

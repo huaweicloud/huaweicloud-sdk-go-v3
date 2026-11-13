@@ -20,13 +20,13 @@ type CreateSupabaseApplicationRequestBody struct {
 	// Supabase版本号，格式 x.y.z。
 	Version string `json:"version"`
 
-	// 部署模式。
+	// 部署模式。当前仅支持Single。
 	Mode CreateSupabaseApplicationRequestBodyMode `json:"mode"`
 
-	// 规格码，格式 rds.supabase.{...}。Ha模式必须以.ha结尾，Single不得以.ha结尾。
+	// 规格码，格式 rds.supabase.{...}。
 	FlavorRef string `json:"flavor_ref"`
 
-	// 可用区ID。Single=1个，Ha=2个逗号分隔。
+	// 可用区ID。Single模式下为1个可用区。
 	AvailabilityZone string `json:"availability_zone"`
 
 	// 指定实例内网IP（可选）。IPv4格式。
@@ -63,16 +63,12 @@ type CreateSupabaseApplicationRequestBodyMode struct {
 
 type CreateSupabaseApplicationRequestBodyModeEnum struct {
 	SINGLE CreateSupabaseApplicationRequestBodyMode
-	HA     CreateSupabaseApplicationRequestBodyMode
 }
 
 func GetCreateSupabaseApplicationRequestBodyModeEnum() CreateSupabaseApplicationRequestBodyModeEnum {
 	return CreateSupabaseApplicationRequestBodyModeEnum{
 		SINGLE: CreateSupabaseApplicationRequestBodyMode{
 			value: "Single",
-		},
-		HA: CreateSupabaseApplicationRequestBodyMode{
-			value: "Ha",
 		},
 	}
 }

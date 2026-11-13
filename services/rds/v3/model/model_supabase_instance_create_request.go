@@ -17,10 +17,8 @@ type SupabaseInstanceCreateRequest struct {
 
 	Volume *SupabaseVolumeConfig `json:"volume"`
 
-	// 可用区，≤2个逗号分隔，首个=顶层主AZ。
+	// 可用区，Single模式下为1个，需与顶层主AZ一致。
 	AvailabilityZone string `json:"availability_zone"`
-
-	Ha *SupabaseHaConfig `json:"ha"`
 
 	// 参数模板ID（可选）。
 	ConfigurationId *string `json:"configuration_id,omitempty"`

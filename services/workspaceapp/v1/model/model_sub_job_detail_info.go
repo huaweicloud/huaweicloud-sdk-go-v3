@@ -14,7 +14,7 @@ type SubJobDetailInfo struct {
 
 	JobType *JobType `json:"job_type,omitempty"`
 
-	JobResourceInfo *JobResourceInfo `json:"job_resource_info,omitempty"`
+	JobResourceInfo *ApsJobResourceInfo `json:"job_resource_info,omitempty"`
 
 	// 任务创建时间。
 	BeginTime *sdktime.SdkTime `json:"begin_time,omitempty"`

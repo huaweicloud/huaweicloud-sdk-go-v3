@@ -10,10 +10,10 @@ import (
 type SlowLogTplContrast struct {
 
 	// 前一日慢日志模板数据列表
-	TemplateOfPreDay *[]SlowSqlTemplate `json:"template_of_pre_day,omitempty"`
+	TemplateOfPreDay *[]SlowSqlTplTemplate `json:"template_of_pre_day,omitempty"`
 
 	// 当日慢日志模板数据列表
-	TemplateOfCurDay *[]SlowSqlTemplate `json:"template_of_cur_day,omitempty"`
+	TemplateOfCurDay *[]SlowSqlTplTemplate `json:"template_of_cur_day,omitempty"`
 
 	// 执行耗时是否增长
 	ExecuteTimeIncrease *bool `json:"execute_time_increase,omitempty"`

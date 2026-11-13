@@ -117,6 +117,22 @@ func (i *BatchCreateSubNetworkInterfaceTagsInvoker) Invoke() (*model.BatchCreate
 	}
 }
 
+type BatchCreateTrafficMirrorFilterRulesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchCreateTrafficMirrorFilterRulesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchCreateTrafficMirrorFilterRulesInvoker) Invoke() (*model.BatchCreateTrafficMirrorFilterRulesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchCreateTrafficMirrorFilterRulesResponse), nil
+	}
+}
+
 type BatchDeletePortTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -530,6 +546,22 @@ func (i *ListPortsByTagsInvoker) Invoke() (*model.ListPortsByTagsResponse, error
 		return nil, err
 	} else {
 		return result.(*model.ListPortsByTagsResponse), nil
+	}
+}
+
+type ListResourceAssociationsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListResourceAssociationsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListResourceAssociationsInvoker) Invoke() (*model.ListResourceAssociationsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListResourceAssociationsResponse), nil
 	}
 }
 

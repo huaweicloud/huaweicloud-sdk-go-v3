@@ -565,6 +565,22 @@ func (i *ListSubnetsByTagsInvoker) Invoke() (*model.ListSubnetsByTagsResponse, e
 	}
 }
 
+type ListVpcPeeringInfosInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListVpcPeeringInfosInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListVpcPeeringInfosInvoker) Invoke() (*model.ListVpcPeeringInfosResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListVpcPeeringInfosResponse), nil
+	}
+}
+
 type ListVpcPeeringsInvoker struct {
 	*invoker.BaseInvoker
 }

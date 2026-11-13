@@ -10,7 +10,7 @@ import (
 type ChangeQuotaNewRequestBody struct {
 
 	// 修改配额的数量
-	OpenNum *int32 `json:"open_num,omitempty"`
+	OpenNum int32 `json:"open_num"`
 }
 
 func (o ChangeQuotaNewRequestBody) String() string {

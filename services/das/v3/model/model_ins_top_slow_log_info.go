@@ -19,7 +19,7 @@ type InsTopSlowLogInfo struct {
 	Databases *[]string `json:"databases,omitempty"`
 
 	// 执行次数
-	Time *int64 `json:"time,omitempty"`
+	Times *int64 `json:"times,omitempty"`
 
 	// 平均执行时间
 	AvgQueryTime *float64 `json:"avg_query_time,omitempty"`

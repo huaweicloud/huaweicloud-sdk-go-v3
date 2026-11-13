@@ -1636,6 +1636,7 @@ func (c *WorkspaceClient) ShowCommonSkillInvoker(request *model.ShowCommonSkillR
 	return &ShowCommonSkillInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ExportUserLoginInfoNew 导出连接记录(待废弃)
 //
 // 该接口用于导出连接记录，待废弃。
@@ -1651,6 +1652,7 @@ func (c *WorkspaceClient) ExportUserLoginInfoNew(request *model.ExportUserLoginI
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ExportUserLoginInfoNewInvoker 导出连接记录(待废弃)
 func (c *WorkspaceClient) ExportUserLoginInfoNewInvoker(request *model.ExportUserLoginInfoNewRequest) *ExportUserLoginInfoNewInvoker {
 	requestDef := GenReqDefForExportUserLoginInfoNew()
@@ -3255,6 +3257,7 @@ func (c *WorkspaceClient) DeleteTagInvoker(request *model.DeleteTagRequest) *Del
 	return &DeleteTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListDesktopByTags 使用标签过滤桌面（已废弃）
 //
 // 使用标签过滤桌面。该接口已废弃，请使用post /v2/{project_id}/desktops/resource-instances/action
@@ -3270,6 +3273,7 @@ func (c *WorkspaceClient) ListDesktopByTags(request *model.ListDesktopByTagsRequ
 	}
 }
 
+// Deprecated: This function is deprecated and will be removed in the future versions.
 // ListDesktopByTagsInvoker 使用标签过滤桌面（已废弃）
 func (c *WorkspaceClient) ListDesktopByTagsInvoker(request *model.ListDesktopByTagsRequest) *ListDesktopByTagsInvoker {
 	requestDef := GenReqDefForListDesktopByTags()

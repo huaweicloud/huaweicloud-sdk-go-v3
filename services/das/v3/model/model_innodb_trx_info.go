@@ -65,6 +65,27 @@ type InnodbTrxInfo struct {
 
 	// 事务隔离级别
 	TrxIsolationLevel *string `json:"trx_isolation_level,omitempty"`
+
+	// 是否打开唯一性检查的标识
+	TrxUniqueChecks *string `json:"trx_unique_checks,omitempty"`
+
+	// 是否打开外键检查的标识
+	TrxForeignKeyChecks *string `json:"trx_foreign_key_checks,omitempty"`
+
+	// 最后一次的外键错误信息
+	TrxLastForeignKeyError *string `json:"trx_last_foreign_key_error,omitempty"`
+
+	// 自适应散列索引是否被当前事务锁住的标识
+	TrxAdaptiveHashLatched *string `json:"trx_adaptive_hash_latched,omitempty"`
+
+	// 是否立刻放弃为自适应散列索引搜索 LATCH 的标识
+	TrxAdaptiveHashTimeout *string `json:"trx_adaptive_hash_timeout,omitempty"`
+
+	// 等待的锁列表
+	WaitLocks *[]InnodbLock `json:"wait_locks,omitempty"`
+
+	// 持有的锁列表
+	HoldLocks *[]InnodbLock `json:"hold_locks,omitempty"`
 }
 
 func (o InnodbTrxInfo) String() string {
