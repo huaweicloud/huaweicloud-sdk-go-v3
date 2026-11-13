@@ -37,6 +37,7 @@ type GlobalCredentials struct {
 }
 
 func (s *GlobalCredentials) ProcessAuthParams(client *impl.DefaultHttpClient, region string) (ICredential, error) {
+	s.iamRegionId = region
 	if s.DomainId != "" {
 		return s, nil
 	}
