@@ -32,12 +32,6 @@ type RecycleInstanceV3 struct {
 	// 删除时间。
 	DeletedAt *int64 `json:"deleted_at,omitempty"`
 
-	// 磁盘类型。
-	VolumeType *string `json:"volume_type,omitempty"`
-
-	// 磁盘大小。
-	VolumeSize *string `json:"volume_size,omitempty"`
-
 	// 数据面VIP。
 	DataVip *string `json:"data_vip,omitempty"`
 
@@ -58,6 +52,9 @@ type RecycleInstanceV3 struct {
 
 	// 回收状态。
 	RecycleStatus *string `json:"recycle_status,omitempty"`
+
+	// **参数解释**：  回收站备份剩余保留天数。由总保留天数减去实例删除后已过天数得出，为0表示即将清理。  **取值范围**：  - 0：回收站备份即将被清理。 - -1：永久保留（retain_all 策略，不主动清理）。 - 其他值：剩余保留天数。  **默认取值**： 不涉及。
+	RetentionDays *int32 `json:"retention_days,omitempty"`
 
 	// **参数解释**：  实例所有的回收站备份列表。
 	RecycleBackups *[]RecycleBackupV3 `json:"recycle_backups,omitempty"`

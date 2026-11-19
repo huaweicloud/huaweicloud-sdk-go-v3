@@ -18,7 +18,7 @@ type CreateAppWhitelistPolicyRequestInfo struct {
 	// **参数解释**: 策略学习天数 **取值范围**: 最小值3，最大值30
 	LearningDays int32 `json:"learning_days"`
 
-	// **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否 **默认取值**： 不涉及
+	// **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否  **默认取值**： 不涉及
 	SpecifiedDir *bool `json:"specified_dir,omitempty"`
 
 	// **参数解释**： 是否开启阻断 **取值范围**: - true：是 - false：否

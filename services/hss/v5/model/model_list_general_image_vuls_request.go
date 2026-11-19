@@ -42,7 +42,7 @@ type ListGeneralImageVulsRequest struct {
 	// **参数解释**: 漏洞标签列表 **取值范围**: 最小值0，最大值10
 	LabelList *[]string `json:"label_list,omitempty"`
 
-	// **参数解释**: 漏洞当前状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略 **默认取值**: 不涉及
+	// **参数解释**: 漏洞当前状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略  **默认取值**: 不涉及
 	Status *string `json:"status,omitempty"`
 
 	// **参数解释**: 集群id **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及

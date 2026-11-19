@@ -32,7 +32,7 @@ type AddProtectionPolicyInfoRequestInfo struct {
 	// 进程白名单
 	ProcessWhitelist *[]TrustProcessInfo `json:"process_whitelist,omitempty"`
 
-	// **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
+	// **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: closed
 	AiProtectionStatus *string `json:"ai_protection_status,omitempty"`
 }
 

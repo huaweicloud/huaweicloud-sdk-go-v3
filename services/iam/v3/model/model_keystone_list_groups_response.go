@@ -12,7 +12,10 @@ type KeystoneListGroupsResponse struct {
 	// 用户组信息列表。
 	Groups *[]KeystoneGroupResult `json:"groups,omitempty"`
 
-	Links          *Links `json:"links,omitempty"`
+	Links *Links `json:"links,omitempty"`
+
+	// 满足查询条件的用户组总数。
+	TotalNumber    *int32 `json:"total_number,omitempty"`
 	HttpStatusCode int    `json:"-"`
 }
 

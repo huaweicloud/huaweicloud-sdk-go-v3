@@ -63,7 +63,28 @@ type UpdateTableResponse struct {
 
 	// 如果表是视图，则为视图的原始文本；否则为 null
 	ViewOriginalText *string `json:"view_original_text,omitempty"`
-	HttpStatusCode   int     `json:"-"`
+
+	// catalogID
+	CatalogId *string `json:"catalog_id,omitempty"`
+
+	// 数据库ID
+	DatabaseId *string `json:"database_id,omitempty"`
+
+	// 表ID
+	TableId *string `json:"table_id,omitempty"`
+
+	// 表状态，0表示正常，1表示删除中，2表示已删除，3表示恢复中，4表示清除中，其余值为元数据更新、创建、异常等中间状态
+	TableStatus *int32 `json:"table_status,omitempty"`
+
+	// 用户端表id，创建时指定，不可修改
+	ExternalTableId *string `json:"external_table_id,omitempty"`
+
+	// 数据概况统计开关。默认状态为开，修改table开关状态后，还需检查所属database的开关状态
+	DataStatisticEnable *bool `json:"data_statistic_enable,omitempty"`
+
+	// 版本ID
+	VersionId      *string `json:"version_id,omitempty"`
+	HttpStatusCode int     `json:"-"`
 }
 
 func (o UpdateTableResponse) String() string {

@@ -29,6 +29,9 @@ type LoginPolicyResult struct {
 
 	// 是否显示最近一次的登录信息。
 	ShowRecentLoginInfo bool `json:"show_recent_login_info"`
+
+	// 是否允许账号短信登录。
+	AllowSmsLogin bool `json:"allow_sms_login"`
 }
 
 func (o LoginPolicyResult) String() string {

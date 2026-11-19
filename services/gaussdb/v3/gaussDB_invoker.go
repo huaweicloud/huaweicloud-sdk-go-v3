@@ -21,6 +21,22 @@ func (i *AddDatabasePermissionInvoker) Invoke() (*model.AddDatabasePermissionRes
 	}
 }
 
+type AddKillProcessTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *AddKillProcessTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *AddKillProcessTaskInvoker) Invoke() (*model.AddKillProcessTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.AddKillProcessTaskResponse), nil
+	}
+}
+
 type BatchChangeInstanceSpecificationInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -85,6 +101,22 @@ func (i *BatchUpdateBackupPolicyInvoker) Invoke() (*model.BatchUpdateBackupPolic
 	}
 }
 
+type BatchUpdateTaurusSlowProcessThresholdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BatchUpdateTaurusSlowProcessThresholdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BatchUpdateTaurusSlowProcessThresholdInvoker) Invoke() (*model.BatchUpdateTaurusSlowProcessThresholdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BatchUpdateTaurusSlowProcessThresholdResponse), nil
+	}
+}
+
 type BatchUpgradeDatabasesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -98,6 +130,22 @@ func (i *BatchUpgradeDatabasesInvoker) Invoke() (*model.BatchUpgradeDatabasesRes
 		return nil, err
 	} else {
 		return result.(*model.BatchUpgradeDatabasesResponse), nil
+	}
+}
+
+type CancelColdTableWaitingTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CancelColdTableWaitingTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CancelColdTableWaitingTasksInvoker) Invoke() (*model.CancelColdTableWaitingTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CancelColdTableWaitingTasksResponse), nil
 	}
 }
 
@@ -226,6 +274,22 @@ func (i *ClearOnlineDdlTaskTempTableInvoker) Invoke() (*model.ClearOnlineDdlTask
 		return nil, err
 	} else {
 		return result.(*model.ClearOnlineDdlTaskTempTableResponse), nil
+	}
+}
+
+type CollectColdTableMetasInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CollectColdTableMetasInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CollectColdTableMetasInvoker) Invoke() (*model.CollectColdTableMetasResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CollectColdTableMetasResponse), nil
 	}
 }
 
@@ -501,6 +565,22 @@ func (i *DeleteAutoSqlLimitingInvoker) Invoke() (*model.DeleteAutoSqlLimitingRes
 	}
 }
 
+type DeleteColdTableDataInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteColdTableDataInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteColdTableDataInvoker) Invoke() (*model.DeleteColdTableDataResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteColdTableDataResponse), nil
+	}
+}
+
 type DeleteDatabasePermissionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -693,6 +773,22 @@ func (i *DeleteProxyPrivateDnsNameInvoker) Invoke() (*model.DeleteProxyPrivateDn
 	}
 }
 
+type DeleteRetainedBackupInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteRetainedBackupInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteRetainedBackupInvoker) Invoke() (*model.DeleteRetainedBackupResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteRetainedBackupResponse), nil
+	}
+}
+
 type DeleteScheduleTasKInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -837,6 +933,22 @@ func (i *DownloadSlowLogFileInvoker) Invoke() (*model.DownloadSlowLogFileRespons
 	}
 }
 
+type ExchangeInstanceVipProxyIpInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExchangeInstanceVipProxyIpInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExchangeInstanceVipProxyIpInvoker) Invoke() (*model.ExchangeInstanceVipProxyIpResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExchangeInstanceVipProxyIpResponse), nil
+	}
+}
+
 type ExecuteIntelligentKillSessionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -850,6 +962,22 @@ func (i *ExecuteIntelligentKillSessionInvoker) Invoke() (*model.ExecuteIntellige
 		return nil, err
 	} else {
 		return result.(*model.ExecuteIntelligentKillSessionResponse), nil
+	}
+}
+
+type ExecuteKillAllProcessInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ExecuteKillAllProcessInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ExecuteKillAllProcessInvoker) Invoke() (*model.ExecuteKillAllProcessResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ExecuteKillAllProcessResponse), nil
 	}
 }
 
@@ -901,6 +1029,22 @@ func (i *InvokeGaussMySqlInstanceSwitchOverInvoker) Invoke() (*model.InvokeGauss
 	}
 }
 
+type ListArchivableTablesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListArchivableTablesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListArchivableTablesInvoker) Invoke() (*model.ListArchivableTablesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListArchivableTablesResponse), nil
+	}
+}
+
 type ListAuditLogDownloadLinkInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -933,6 +1077,38 @@ func (i *ListAuditLogsInvoker) Invoke() (*model.ListAuditLogsResponse, error) {
 	}
 }
 
+type ListBinlogDownloadLinkInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBinlogDownloadLinkInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBinlogDownloadLinkInvoker) Invoke() (*model.ListBinlogDownloadLinkResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBinlogDownloadLinkResponse), nil
+	}
+}
+
+type ListBinlogsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListBinlogsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListBinlogsInvoker) Invoke() (*model.ListBinlogsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListBinlogsResponse), nil
+	}
+}
+
 type ListColdTableMetasInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -946,6 +1122,38 @@ func (i *ListColdTableMetasInvoker) Invoke() (*model.ListColdTableMetasResponse,
 		return nil, err
 	} else {
 		return result.(*model.ListColdTableMetasResponse), nil
+	}
+}
+
+type ListColdTableTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListColdTableTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListColdTableTasksInvoker) Invoke() (*model.ListColdTableTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListColdTableTasksResponse), nil
+	}
+}
+
+type ListColdTableWaitingTasksInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListColdTableWaitingTasksInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListColdTableWaitingTasksInvoker) Invoke() (*model.ListColdTableWaitingTasksResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListColdTableWaitingTasksResponse), nil
 	}
 }
 
@@ -1334,6 +1542,22 @@ func (i *ListRecycleInstancesInvoker) Invoke() (*model.ListRecycleInstancesRespo
 		return nil, err
 	} else {
 		return result.(*model.ListRecycleInstancesResponse), nil
+	}
+}
+
+type ListRetainedBackupsInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRetainedBackupsInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRetainedBackupsInvoker) Invoke() (*model.ListRetainedBackupsResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRetainedBackupsResponse), nil
 	}
 }
 
@@ -1881,6 +2105,38 @@ func (i *ShowBackupVaultLockInvoker) Invoke() (*model.ShowBackupVaultLockRespons
 	}
 }
 
+type ShowBinlogSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowBinlogSwitchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowBinlogSwitchInvoker) Invoke() (*model.ShowBinlogSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowBinlogSwitchResponse), nil
+	}
+}
+
+type ShowColdTableSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowColdTableSwitchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowColdTableSwitchInvoker) Invoke() (*model.ShowColdTableSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowColdTableSwitchResponse), nil
+	}
+}
+
 type ShowDedicatedResourceInfoInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1926,6 +2182,22 @@ func (i *ShowErrorLogDownloadLinkInvoker) Invoke() (*model.ShowErrorLogDownloadL
 		return nil, err
 	} else {
 		return result.(*model.ShowErrorLogDownloadLinkResponse), nil
+	}
+}
+
+type ShowExceptionSnapshotStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowExceptionSnapshotStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowExceptionSnapshotStatusInvoker) Invoke() (*model.ShowExceptionSnapshotStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowExceptionSnapshotStatusResponse), nil
 	}
 }
 
@@ -2235,6 +2507,22 @@ func (i *ShowInstanceScheduleEventsInvoker) Invoke() (*model.ShowInstanceSchedul
 	}
 }
 
+type ShowInstanceStorageInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowInstanceStorageInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowInstanceStorageInfoInvoker) Invoke() (*model.ShowInstanceStorageInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowInstanceStorageInfoResponse), nil
+	}
+}
+
 type ShowIntelligentDiagnosisAbnormalCountOfInstancesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2299,6 +2587,70 @@ func (i *ShowKernelUpgradeCheckResultInvoker) Invoke() (*model.ShowKernelUpgrade
 	}
 }
 
+type ShowKillProcessHistoryInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowKillProcessHistoryInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowKillProcessHistoryInvoker) Invoke() (*model.ShowKillProcessHistoryResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowKillProcessHistoryResponse), nil
+	}
+}
+
+type ShowKillProcessStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowKillProcessStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowKillProcessStatusInvoker) Invoke() (*model.ShowKillProcessStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowKillProcessStatusResponse), nil
+	}
+}
+
+type ShowKillProcessTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowKillProcessTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowKillProcessTaskInvoker) Invoke() (*model.ShowKillProcessTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowKillProcessTaskResponse), nil
+	}
+}
+
+type ShowKillProcessTaskPreviewInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowKillProcessTaskPreviewInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowKillProcessTaskPreviewInvoker) Invoke() (*model.ShowKillProcessTaskPreviewResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowKillProcessTaskPreviewResponse), nil
+	}
+}
+
 type ShowLockWaitSessionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2328,6 +2680,22 @@ func (i *ShowLtsConfigsInvoker) Invoke() (*model.ShowLtsConfigsResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.ShowLtsConfigsResponse), nil
+	}
+}
+
+type ShowMigrateInfoInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowMigrateInfoInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowMigrateInfoInvoker) Invoke() (*model.ShowMigrateInfoResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowMigrateInfoResponse), nil
 	}
 }
 
@@ -2440,6 +2808,22 @@ func (i *ShowRecyclePolicyInvoker) Invoke() (*model.ShowRecyclePolicyResponse, e
 		return nil, err
 	} else {
 		return result.(*model.ShowRecyclePolicyResponse), nil
+	}
+}
+
+type ShowReplicaBinlogReadConfigInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowReplicaBinlogReadConfigInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowReplicaBinlogReadConfigInvoker) Invoke() (*model.ShowReplicaBinlogReadConfigResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowReplicaBinlogReadConfigResponse), nil
 	}
 }
 
@@ -2669,6 +3053,22 @@ func (i *ShowTaurusDbAdvancedBackupPolicyInvoker) Invoke() (*model.ShowTaurusDbA
 	}
 }
 
+type ShowTaurusDbSlowProcessThresholdInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowTaurusDbSlowProcessThresholdInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowTaurusDbSlowProcessThresholdInvoker) Invoke() (*model.ShowTaurusDbSlowProcessThresholdResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowTaurusDbSlowProcessThresholdResponse), nil
+	}
+}
+
 type ShowTaurusDbTxnProgressInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2717,6 +3117,22 @@ func (i *StartOnlineDdlTaskInvoker) Invoke() (*model.StartOnlineDdlTaskResponse,
 	}
 }
 
+type StopKillProcessTaskInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopKillProcessTaskInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StopKillProcessTaskInvoker) Invoke() (*model.StopKillProcessTaskResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopKillProcessTaskResponse), nil
+	}
+}
+
 type StopOnlineDdlTaskInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2746,6 +3162,38 @@ func (i *SwitchAccessControlInvoker) Invoke() (*model.SwitchAccessControlRespons
 		return nil, err
 	} else {
 		return result.(*model.SwitchAccessControlResponse), nil
+	}
+}
+
+type SwitchColdTableStorageInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchColdTableStorageInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SwitchColdTableStorageInvoker) Invoke() (*model.SwitchColdTableStorageResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchColdTableStorageResponse), nil
+	}
+}
+
+type SwitchExceptionSnapshotStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchExceptionSnapshotStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SwitchExceptionSnapshotStatusInvoker) Invoke() (*model.SwitchExceptionSnapshotStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchExceptionSnapshotStatusResponse), nil
 	}
 }
 
@@ -2797,6 +3245,22 @@ func (i *SwitchGaussMySqlProxyAltInvoker) Invoke() (*model.SwitchGaussMySqlProxy
 	}
 }
 
+type SwitchGaussMySqlProxyBinlogPullInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchGaussMySqlProxyBinlogPullInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SwitchGaussMySqlProxyBinlogPullInvoker) Invoke() (*model.SwitchGaussMySqlProxyBinlogPullResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchGaussMySqlProxyBinlogPullResponse), nil
+	}
+}
+
 type SwitchGaussMySqlProxyEipInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2829,6 +3293,22 @@ func (i *SwitchGaussMySqlProxySslInvoker) Invoke() (*model.SwitchGaussMySqlProxy
 	}
 }
 
+type SwitchOnColdTableInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *SwitchOnColdTableInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *SwitchOnColdTableInvoker) Invoke() (*model.SwitchOnColdTableResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.SwitchOnColdTableResponse), nil
+	}
+}
+
 type UpdateAuditLogInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2842,6 +3322,22 @@ func (i *UpdateAuditLogInvoker) Invoke() (*model.UpdateAuditLogResponse, error) 
 		return nil, err
 	} else {
 		return result.(*model.UpdateAuditLogResponse), nil
+	}
+}
+
+type UpdateAutoKillProcessStatusInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateAutoKillProcessStatusInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateAutoKillProcessStatusInvoker) Invoke() (*model.UpdateAutoKillProcessStatusResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateAutoKillProcessStatusResponse), nil
 	}
 }
 
@@ -2874,6 +3370,22 @@ func (i *UpdateBackupOffsitePolicyInvoker) Invoke() (*model.UpdateBackupOffsiteP
 		return nil, err
 	} else {
 		return result.(*model.UpdateBackupOffsitePolicyResponse), nil
+	}
+}
+
+type UpdateBinlogSwitchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateBinlogSwitchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateBinlogSwitchInvoker) Invoke() (*model.UpdateBinlogSwitchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateBinlogSwitchResponse), nil
 	}
 }
 
@@ -3274,6 +3786,22 @@ func (i *UpdateServerlessPolicyInvoker) Invoke() (*model.UpdateServerlessPolicyR
 		return nil, err
 	} else {
 		return result.(*model.UpdateServerlessPolicyResponse), nil
+	}
+}
+
+type UpdateServerlessScaleToZeroPolicyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateServerlessScaleToZeroPolicyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateServerlessScaleToZeroPolicyInvoker) Invoke() (*model.UpdateServerlessScaleToZeroPolicyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateServerlessScaleToZeroPolicyResponse), nil
 	}
 }
 

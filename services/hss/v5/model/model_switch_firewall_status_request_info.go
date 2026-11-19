@@ -8,7 +8,7 @@ import (
 
 type SwitchFirewallStatusRequestInfo struct {
 
-	// **参数解释**： 防火墙开启状态 **约束限制**： 不涉及 **取值范围**：   - Opened：开启windows防火墙   - Closed：关闭windows防火墙 **默认取值**： 不涉及
+	// **参数解释**： 防火墙开启状态 **约束限制**： 不涉及 **取值范围**：   - Opened：开启windows防火墙   - Closed：关闭windows防火墙  **默认取值**： 不涉及
 	FirewallStatus string `json:"firewall_status"`
 
 	// **参数解释**： 主机ID列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及

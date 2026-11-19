@@ -24,7 +24,7 @@ type ShowVulAffectedStaticsRequest struct {
 	// **参数解释**: 容器id集合 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值1000 **默认取值**: 不涉及
 	ContainerIds *[]string `json:"container_ids,omitempty"`
 
-	// **参数解释**: 是否是容器场景 **约束限制**: 不涉及 **取值范围**: - true：是容器场景 - false：不是容器场景 **默认取值**: false
+	// **参数解释**: 是否是容器场景 **约束限制**: 不涉及 **取值范围**: - true：是容器场景 - false：不是容器场景  **默认取值**: false
 	IsContainer *bool `json:"is_container,omitempty"`
 
 	// **参数解释**: 漏洞id集合 **约束限制**: 不涉及 **取值范围**: 最小值1，最大值1000 **默认取值**: 不涉及

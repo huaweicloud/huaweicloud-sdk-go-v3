@@ -27,7 +27,7 @@ type ListProtectionPolicyRequest struct {
 	// **参数解释**: 防护策略id **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
 	ProtectPolicyId *string `json:"protect_policy_id,omitempty"`
 
-	// **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
+	// **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
 	OperatingSystem *string `json:"operating_system,omitempty"`
 }
 

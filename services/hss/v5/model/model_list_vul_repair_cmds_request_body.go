@@ -18,7 +18,7 @@ type ListVulRepairCmdsRequestBody struct {
 	// **参数解释**: 主机维度漏洞列表 **约束限制**: 不涉及 **取值范围**: 最少1条，最多500条 **默认取值**: 不涉及
 	HostDataList *[]HostVulOperateInfo `json:"host_data_list,omitempty"`
 
-	// **参数解释**: 是否是容器场景 **约束限制**: 不涉及 **取值范围**: - true：是容器场景 - false：不是容器场景 **默认取值**: false
+	// **参数解释**: 是否是容器场景 **约束限制**: 不涉及 **取值范围**: - true：是容器场景 - false：不是容器场景  **默认取值**: false
 	IsContainer *bool `json:"is_container,omitempty"`
 
 	// **参数解释**: 集群id **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及

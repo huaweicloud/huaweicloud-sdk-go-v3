@@ -27,7 +27,7 @@ type ListWebTamperImageOptionsRequest struct {
 	// **参数解释**: 仓库镜像镜像仓名称 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
 	RegistryName *string `json:"registry_name,omitempty"`
 
-	// **参数解释**: 查询镜像类型 **约束限制**: 不涉及。 **取值范围**: - registry：仓库镜像。 - local：本地镜像。 **默认取值**: 不涉及
+	// **参数解释**: 查询镜像类型 **约束限制**: 不涉及。 **取值范围**: - registry：仓库镜像。 - local：本地镜像。  **默认取值**: 不涉及
 	ImageType string `json:"image_type"`
 
 	// **参数解释**: 镜像名称 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及

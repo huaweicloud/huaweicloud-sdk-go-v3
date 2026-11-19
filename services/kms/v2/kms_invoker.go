@@ -325,6 +325,22 @@ func (i *CreateRsaDatakeyPairInvoker) Invoke() (*model.CreateRsaDatakeyPairRespo
 	}
 }
 
+type CreateTrustedKeySpaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *CreateTrustedKeySpaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *CreateTrustedKeySpaceInvoker) Invoke() (*model.CreateTrustedKeySpaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.CreateTrustedKeySpaceResponse), nil
+	}
+}
+
 type DecryptDataInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -482,6 +498,22 @@ func (i *DeleteTagInvoker) Invoke() (*model.DeleteTagResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.DeleteTagResponse), nil
+	}
+}
+
+type DeleteTrustedKeySpaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *DeleteTrustedKeySpaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *DeleteTrustedKeySpaceInvoker) Invoke() (*model.DeleteTrustedKeySpaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.DeleteTrustedKeySpaceResponse), nil
 	}
 }
 
@@ -885,6 +917,22 @@ func (i *ListSupportRegionsInvoker) Invoke() (*model.ListSupportRegionsResponse,
 	}
 }
 
+type ListTrustedKeySpaceInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListTrustedKeySpaceInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListTrustedKeySpaceInvoker) Invoke() (*model.ListTrustedKeySpaceResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListTrustedKeySpaceResponse), nil
+	}
+}
+
 type ReEncryptInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -981,6 +1029,22 @@ func (i *ShowKeyStoreInvoker) Invoke() (*model.ShowKeyStoreResponse, error) {
 	}
 }
 
+type ShowKeyUsageFlowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowKeyUsageFlowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowKeyUsageFlowInvoker) Invoke() (*model.ShowKeyUsageFlowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowKeyUsageFlowResponse), nil
+	}
+}
+
 type ShowKmsTagsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1061,6 +1125,22 @@ func (i *SignInvoker) Invoke() (*model.SignResponse, error) {
 	}
 }
 
+type TransferKeyInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *TransferKeyInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *TransferKeyInvoker) Invoke() (*model.TransferKeyResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.TransferKeyResponse), nil
+	}
+}
+
 type UpdateKeyAliasInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1122,6 +1202,22 @@ func (i *UpdateKeyRotationIntervalInvoker) Invoke() (*model.UpdateKeyRotationInt
 		return nil, err
 	} else {
 		return result.(*model.UpdateKeyRotationIntervalResponse), nil
+	}
+}
+
+type UpdateKeyStoreInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpdateKeyStoreInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpdateKeyStoreInvoker) Invoke() (*model.UpdateKeyStoreResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpdateKeyStoreResponse), nil
 	}
 }
 

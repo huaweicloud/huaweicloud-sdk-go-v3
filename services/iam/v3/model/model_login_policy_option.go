@@ -29,6 +29,9 @@ type LoginPolicyOption struct {
 
 	// 显示最近一次的登录信息。取值范围true或false。
 	ShowRecentLoginInfo *bool `json:"show_recent_login_info,omitempty"`
+
+	// 允许账号短信登录。取值范围true或false。
+	AllowSmsLogin *bool `json:"allow_sms_login,omitempty"`
 }
 
 func (o LoginPolicyOption) String() string {

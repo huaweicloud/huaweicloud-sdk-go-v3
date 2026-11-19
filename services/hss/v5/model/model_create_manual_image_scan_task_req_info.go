@@ -15,7 +15,7 @@ type CreateManualImageScanTaskReqInfo struct {
 	// **参数解释**: 三方镜像仓扫描限速,其他镜像仓不生效 单位：个/h **约束限制**: 不涉及 **取值范围**: 0-1000，0表示不限制。  **默认取值**: 不涉及
 	RateLimit *int32 `json:"rate_limit,omitempty"`
 
-	// **参数解释**: 扫描全部镜像 **约束限制**: 不涉及 **取值范围**: - true：扫描全部镜像。支持全部镜像扫描或者指定镜像仓类型扫描，若为指定镜像仓类型扫描，需要填写query_info的image_type类型。 - false：指定镜像扫描,需要填写详细的镜像信息image_info字段。 **默认取值**: 不涉及
+	// **参数解释**: 扫描全部镜像 **约束限制**: 不涉及 **取值范围**: - true：扫描全部镜像。支持全部镜像扫描或者指定镜像仓类型扫描，若为指定镜像仓类型扫描，需要填写query_info的image_type类型。 - false：指定镜像扫描,需要填写详细的镜像信息image_info字段。  **默认取值**: 不涉及
 	IsAll *bool `json:"is_all,omitempty"`
 
 	QueryInfo *CreateManualImageScanTaskReqInfoQueryInfo `json:"query_info,omitempty"`

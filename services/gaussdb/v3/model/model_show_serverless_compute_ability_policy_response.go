@@ -26,7 +26,16 @@ type ShowServerlessComputeAbilityPolicyResponse struct {
 
 	// **参数解释**：  最小只读节点个数。  **取值范围**：  ≥1。
 	MinReadonlyNodeCount *int32 `json:"min_readonly_node_count,omitempty"`
-	HttpStatusCode       int    `json:"-"`
+
+	// **参数解释**：  Scale to Zero开关。  **取值范围**： - true: 开启Scale to Zero。 - false: 关闭Scale to Zero。
+	ScaleToZero *bool `json:"scale_to_zero,omitempty"`
+
+	// **参数解释**：  空闲持续时长阈值，单位是秒。  所有节点活跃连接数为0且持续达到该阈值时触发Scale to Zero（停止计算计费）。  **取值范围**：  300-3600。
+	IdleDurationSeconds *int32 `json:"idle_duration_seconds,omitempty"`
+
+	// **参数解释**：  Scale to Zero开启后实例的运行状态。  **取值范围**： - ACTIVE：实例已唤醒，正常计费。 - SCALED_TO_ZERO：计算资源停止计费。
+	ScaleToZeroStatus *string `json:"scale_to_zero_status,omitempty"`
+	HttpStatusCode    int     `json:"-"`
 }
 
 func (o ShowServerlessComputeAbilityPolicyResponse) String() string {

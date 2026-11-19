@@ -187,27 +187,6 @@ func (c *HssClient) BatchDeleteTagsInvoker(request *model.BatchDeleteTagsRequest
 	return &BatchDeleteTagsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BatchModifyPortStatus 修改开放端口状态
-//
-// 修改开放端口状态。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) BatchModifyPortStatus(request *model.BatchModifyPortStatusRequest) (*model.BatchModifyPortStatusResponse, error) {
-	requestDef := GenReqDefForBatchModifyPortStatus()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.BatchModifyPortStatusResponse), nil
-	}
-}
-
-// BatchModifyPortStatusInvoker 修改开放端口状态
-func (c *HssClient) BatchModifyPortStatusInvoker(request *model.BatchModifyPortStatusRequest) *BatchModifyPortStatusInvoker {
-	requestDef := GenReqDefForBatchModifyPortStatus()
-	return &BatchModifyPortStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ChangeBlockedIp 解除已拦截IP
 //
 // 解除已拦截IP。
@@ -439,27 +418,6 @@ func (c *HssClient) CreateDecoyPortPolicyInvoker(request *model.CreateDecoyPortP
 	return &CreateDecoyPortPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CreateGlobalAssetScanTask 创建全局资产扫描任务
-//
-// 创建全局资产扫描任务。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) CreateGlobalAssetScanTask(request *model.CreateGlobalAssetScanTaskRequest) (*model.CreateGlobalAssetScanTaskResponse, error) {
-	requestDef := GenReqDefForCreateGlobalAssetScanTask()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.CreateGlobalAssetScanTaskResponse), nil
-	}
-}
-
-// CreateGlobalAssetScanTaskInvoker 创建全局资产扫描任务
-func (c *HssClient) CreateGlobalAssetScanTaskInvoker(request *model.CreateGlobalAssetScanTaskRequest) *CreateGlobalAssetScanTaskInvoker {
-	requestDef := GenReqDefForCreateGlobalAssetScanTask()
-	return &CreateGlobalAssetScanTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // CreateSecurityGroupPolicy 创建安全组策略
 //
 // 创建安全组策略(云原生网络模型)。
@@ -670,27 +628,6 @@ func (c *HssClient) DeleteSecurityGroupPolicyInvoker(request *model.DeleteSecuri
 	return &DeleteSecurityGroupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DownloadAssetFile 导出资产指纹信息
-//
-// 导出资产指纹信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) DownloadAssetFile(request *model.DownloadAssetFileRequest) (*model.DownloadAssetFileResponse, error) {
-	requestDef := GenReqDefForDownloadAssetFile()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.DownloadAssetFileResponse), nil
-	}
-}
-
-// DownloadAssetFileInvoker 导出资产指纹信息
-func (c *HssClient) DownloadAssetFileInvoker(request *model.DownloadAssetFileRequest) *DownloadAssetFileInvoker {
-	requestDef := GenReqDefForDownloadAssetFile()
-	return &DownloadAssetFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // DownloadEventSourceFile 下载告警源文件
 //
 // 下载告警源文件。
@@ -817,48 +754,6 @@ func (c *HssClient) ListAgentInstallScriptInvoker(request *model.ListAgentInstal
 	return &ListAgentInstallScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAiComponentDetail AI组件详细信息
-//
-// 查询AI组件详细信息
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListAiComponentDetail(request *model.ListAiComponentDetailRequest) (*model.ListAiComponentDetailResponse, error) {
-	requestDef := GenReqDefForListAiComponentDetail()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAiComponentDetailResponse), nil
-	}
-}
-
-// ListAiComponentDetailInvoker AI组件详细信息
-func (c *HssClient) ListAiComponentDetailInvoker(request *model.ListAiComponentDetailRequest) *ListAiComponentDetailInvoker {
-	requestDef := GenReqDefForListAiComponentDetail()
-	return &ListAiComponentDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListAiComponentStatistics 查询AI组件统计信息
-//
-// 查询AI组件统计信息
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListAiComponentStatistics(request *model.ListAiComponentStatisticsRequest) (*model.ListAiComponentStatisticsResponse, error) {
-	requestDef := GenReqDefForListAiComponentStatistics()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAiComponentStatisticsResponse), nil
-	}
-}
-
-// ListAiComponentStatisticsInvoker 查询AI组件统计信息
-func (c *HssClient) ListAiComponentStatisticsInvoker(request *model.ListAiComponentStatisticsRequest) *ListAiComponentStatisticsInvoker {
-	requestDef := GenReqDefForListAiComponentStatistics()
-	return &ListAiComponentStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ListAlarmWhiteList 查询告警白名单列表
 //
 // 查询告警白名单列表。
@@ -899,132 +794,6 @@ func (c *HssClient) ListAlarmWhiteListHostDetail(request *model.ListAlarmWhiteLi
 func (c *HssClient) ListAlarmWhiteListHostDetailInvoker(request *model.ListAlarmWhiteListHostDetailRequest) *ListAlarmWhiteListHostDetailInvoker {
 	requestDef := GenReqDefForListAlarmWhiteListHostDetail()
 	return &ListAlarmWhiteListHostDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListAppChangeHistories 获取软件信息的历史变动记录
-//
-// 获取软件信息的历史变动记录。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListAppChangeHistories(request *model.ListAppChangeHistoriesRequest) (*model.ListAppChangeHistoriesResponse, error) {
-	requestDef := GenReqDefForListAppChangeHistories()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAppChangeHistoriesResponse), nil
-	}
-}
-
-// ListAppChangeHistoriesInvoker 获取软件信息的历史变动记录
-func (c *HssClient) ListAppChangeHistoriesInvoker(request *model.ListAppChangeHistoriesRequest) *ListAppChangeHistoriesInvoker {
-	requestDef := GenReqDefForListAppChangeHistories()
-	return &ListAppChangeHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListAppStatistics 查询软件列表
-//
-// 查询软件列表，支持通过软件名称查询对应的服务器数。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListAppStatistics(request *model.ListAppStatisticsRequest) (*model.ListAppStatisticsResponse, error) {
-	requestDef := GenReqDefForListAppStatistics()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAppStatisticsResponse), nil
-	}
-}
-
-// ListAppStatisticsInvoker 查询软件列表
-func (c *HssClient) ListAppStatisticsInvoker(request *model.ListAppStatisticsRequest) *ListAppStatisticsInvoker {
-	requestDef := GenReqDefForListAppStatistics()
-	return &ListAppStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListApps 查询软件的服务器列表
-//
-// 查询软件的服务器列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListApps(request *model.ListAppsRequest) (*model.ListAppsResponse, error) {
-	requestDef := GenReqDefForListApps()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAppsResponse), nil
-	}
-}
-
-// ListAppsInvoker 查询软件的服务器列表
-func (c *HssClient) ListAppsInvoker(request *model.ListAppsRequest) *ListAppsInvoker {
-	requestDef := GenReqDefForListApps()
-	return &ListAppsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListAutoLaunchChangeHistories 获取自启动项的历史变动记录
-//
-// 获取自启动项的历史变动记录。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListAutoLaunchChangeHistories(request *model.ListAutoLaunchChangeHistoriesRequest) (*model.ListAutoLaunchChangeHistoriesResponse, error) {
-	requestDef := GenReqDefForListAutoLaunchChangeHistories()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAutoLaunchChangeHistoriesResponse), nil
-	}
-}
-
-// ListAutoLaunchChangeHistoriesInvoker 获取自启动项的历史变动记录
-func (c *HssClient) ListAutoLaunchChangeHistoriesInvoker(request *model.ListAutoLaunchChangeHistoriesRequest) *ListAutoLaunchChangeHistoriesInvoker {
-	requestDef := GenReqDefForListAutoLaunchChangeHistories()
-	return &ListAutoLaunchChangeHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListAutoLaunchStatistics 查询自启动项信息
-//
-// 查询自启动信息，支持通过传入自启动名称查询启动类型和服务器数。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListAutoLaunchStatistics(request *model.ListAutoLaunchStatisticsRequest) (*model.ListAutoLaunchStatisticsResponse, error) {
-	requestDef := GenReqDefForListAutoLaunchStatistics()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAutoLaunchStatisticsResponse), nil
-	}
-}
-
-// ListAutoLaunchStatisticsInvoker 查询自启动项信息
-func (c *HssClient) ListAutoLaunchStatisticsInvoker(request *model.ListAutoLaunchStatisticsRequest) *ListAutoLaunchStatisticsInvoker {
-	requestDef := GenReqDefForListAutoLaunchStatistics()
-	return &ListAutoLaunchStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListAutoLaunchs 查询自启动项的服务列表
-//
-// 查询自启动项的服务列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListAutoLaunchs(request *model.ListAutoLaunchsRequest) (*model.ListAutoLaunchsResponse, error) {
-	requestDef := GenReqDefForListAutoLaunchs()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListAutoLaunchsResponse), nil
-	}
-}
-
-// ListAutoLaunchsInvoker 查询自启动项的服务列表
-func (c *HssClient) ListAutoLaunchsInvoker(request *model.ListAutoLaunchsRequest) *ListAutoLaunchsInvoker {
-	requestDef := GenReqDefForListAutoLaunchs()
-	return &ListAutoLaunchsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListBlockedIp 查询已拦截IP列表
@@ -1069,25 +838,25 @@ func (c *HssClient) ListCceClusterConfigInvoker(request *model.ListCceClusterCon
 	return &ListCceClusterConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListCceClusterDetectRisk 批量获取容器集群风险信息
+// ListCceClusterDetectRisk2 批量获取容器集群风险信息
 //
 // 批量获取容器集群风险信息。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListCceClusterDetectRisk(request *model.ListCceClusterDetectRiskRequest) (*model.ListCceClusterDetectRiskResponse, error) {
-	requestDef := GenReqDefForListCceClusterDetectRisk()
+func (c *HssClient) ListCceClusterDetectRisk2(request *model.ListCceClusterDetectRisk2Request) (*model.ListCceClusterDetectRisk2Response, error) {
+	requestDef := GenReqDefForListCceClusterDetectRisk2()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListCceClusterDetectRiskResponse), nil
+		return resp.(*model.ListCceClusterDetectRisk2Response), nil
 	}
 }
 
-// ListCceClusterDetectRiskInvoker 批量获取容器集群风险信息
-func (c *HssClient) ListCceClusterDetectRiskInvoker(request *model.ListCceClusterDetectRiskRequest) *ListCceClusterDetectRiskInvoker {
-	requestDef := GenReqDefForListCceClusterDetectRisk()
-	return &ListCceClusterDetectRiskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListCceClusterDetectRisk2Invoker 批量获取容器集群风险信息
+func (c *HssClient) ListCceClusterDetectRisk2Invoker(request *model.ListCceClusterDetectRisk2Request) *ListCceClusterDetectRisk2Invoker {
+	requestDef := GenReqDefForListCceClusterDetectRisk2()
+	return &ListCceClusterDetectRisk2Invoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListCheckFeatureRule 查询检测规则列表
@@ -1531,6 +1300,27 @@ func (c *HssClient) ListDecoyPortPolicyInvoker(request *model.ListDecoyPortPolic
 	return &ListDecoyPortPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListDelegatedAccounts 查询已委托账号树形结构
+//
+// 查询已委托账号树形结构
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListDelegatedAccounts(request *model.ListDelegatedAccountsRequest) (*model.ListDelegatedAccountsResponse, error) {
+	requestDef := GenReqDefForListDelegatedAccounts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDelegatedAccountsResponse), nil
+	}
+}
+
+// ListDelegatedAccountsInvoker 查询已委托账号树形结构
+func (c *HssClient) ListDelegatedAccountsInvoker(request *model.ListDelegatedAccountsRequest) *ListDelegatedAccountsInvoker {
+	requestDef := GenReqDefForListDelegatedAccounts()
+	return &ListDelegatedAccountsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListDockerPlugins 查询插件列表
 //
 // 查询插件列表。
@@ -1680,25 +1470,25 @@ func (c *HssClient) ListEventTypeInvoker(request *model.ListEventTypeRequest) *L
 	return &ListEventTypeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListGlobalAssetScanTask 查询资产全局扫描任务状态
+// ListIgnoreHosts 查询已忽略的服务器列表
 //
-// 查询资产全局扫描任务状态。
+// 查询已忽略的服务器列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListGlobalAssetScanTask(request *model.ListGlobalAssetScanTaskRequest) (*model.ListGlobalAssetScanTaskResponse, error) {
-	requestDef := GenReqDefForListGlobalAssetScanTask()
+func (c *HssClient) ListIgnoreHosts(request *model.ListIgnoreHostsRequest) (*model.ListIgnoreHostsResponse, error) {
+	requestDef := GenReqDefForListIgnoreHosts()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListGlobalAssetScanTaskResponse), nil
+		return resp.(*model.ListIgnoreHostsResponse), nil
 	}
 }
 
-// ListGlobalAssetScanTaskInvoker 查询资产全局扫描任务状态
-func (c *HssClient) ListGlobalAssetScanTaskInvoker(request *model.ListGlobalAssetScanTaskRequest) *ListGlobalAssetScanTaskInvoker {
-	requestDef := GenReqDefForListGlobalAssetScanTask()
-	return &ListGlobalAssetScanTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListIgnoreHostsInvoker 查询已忽略的服务器列表
+func (c *HssClient) ListIgnoreHostsInvoker(request *model.ListIgnoreHostsRequest) *ListIgnoreHostsInvoker {
+	requestDef := GenReqDefForListIgnoreHosts()
+	return &ListIgnoreHostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListIsolatedFile 查询已隔离文件列表
@@ -1720,69 +1510,6 @@ func (c *HssClient) ListIsolatedFile(request *model.ListIsolatedFileRequest) (*m
 func (c *HssClient) ListIsolatedFileInvoker(request *model.ListIsolatedFileRequest) *ListIsolatedFileInvoker {
 	requestDef := GenReqDefForListIsolatedFile()
 	return &ListIsolatedFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListJarPackageHostInfo 查询指定中间件的服务器列表
-//
-// 查询指定中间件的服务器列表，通过传入中间件名称参数，返回对应的中间件服务器列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListJarPackageHostInfo(request *model.ListJarPackageHostInfoRequest) (*model.ListJarPackageHostInfoResponse, error) {
-	requestDef := GenReqDefForListJarPackageHostInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListJarPackageHostInfoResponse), nil
-	}
-}
-
-// ListJarPackageHostInfoInvoker 查询指定中间件的服务器列表
-func (c *HssClient) ListJarPackageHostInfoInvoker(request *model.ListJarPackageHostInfoRequest) *ListJarPackageHostInfoInvoker {
-	requestDef := GenReqDefForListJarPackageHostInfo()
-	return &ListJarPackageHostInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListJarPackageInfo 查询指定主机的中间件信息
-//
-// 查询指定主机的中间件信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListJarPackageInfo(request *model.ListJarPackageInfoRequest) (*model.ListJarPackageInfoResponse, error) {
-	requestDef := GenReqDefForListJarPackageInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListJarPackageInfoResponse), nil
-	}
-}
-
-// ListJarPackageInfoInvoker 查询指定主机的中间件信息
-func (c *HssClient) ListJarPackageInfoInvoker(request *model.ListJarPackageInfoRequest) *ListJarPackageInfoInvoker {
-	requestDef := GenReqDefForListJarPackageInfo()
-	return &ListJarPackageInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListJarPackageStatistics 查询中间件列表
-//
-// 查询中间件列表，支持通过中间件名称查询对应的服务器数。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListJarPackageStatistics(request *model.ListJarPackageStatisticsRequest) (*model.ListJarPackageStatisticsResponse, error) {
-	requestDef := GenReqDefForListJarPackageStatistics()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListJarPackageStatisticsResponse), nil
-	}
-}
-
-// ListJarPackageStatisticsInvoker 查询中间件列表
-func (c *HssClient) ListJarPackageStatisticsInvoker(request *model.ListJarPackageStatisticsRequest) *ListJarPackageStatisticsInvoker {
-	requestDef := GenReqDefForListJarPackageStatistics()
-	return &ListJarPackageStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListK8sCronJobs 查询cronjobs基本信息列表
@@ -1909,69 +1636,6 @@ func (c *HssClient) ListK8sStatefulSets(request *model.ListK8sStatefulSetsReques
 func (c *HssClient) ListK8sStatefulSetsInvoker(request *model.ListK8sStatefulSetsRequest) *ListK8sStatefulSetsInvoker {
 	requestDef := GenReqDefForListK8sStatefulSets()
 	return &ListK8sStatefulSetsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListKernelModuleHostInfo 查询指定内核模块的服务器列表
-//
-// 查询指定内核模块的服务器列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListKernelModuleHostInfo(request *model.ListKernelModuleHostInfoRequest) (*model.ListKernelModuleHostInfoResponse, error) {
-	requestDef := GenReqDefForListKernelModuleHostInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListKernelModuleHostInfoResponse), nil
-	}
-}
-
-// ListKernelModuleHostInfoInvoker 查询指定内核模块的服务器列表
-func (c *HssClient) ListKernelModuleHostInfoInvoker(request *model.ListKernelModuleHostInfoRequest) *ListKernelModuleHostInfoInvoker {
-	requestDef := GenReqDefForListKernelModuleHostInfo()
-	return &ListKernelModuleHostInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListKernelModuleInfo 查询指定主机的内核模块信息
-//
-// 查询指定主机的内核模块信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListKernelModuleInfo(request *model.ListKernelModuleInfoRequest) (*model.ListKernelModuleInfoResponse, error) {
-	requestDef := GenReqDefForListKernelModuleInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListKernelModuleInfoResponse), nil
-	}
-}
-
-// ListKernelModuleInfoInvoker 查询指定主机的内核模块信息
-func (c *HssClient) ListKernelModuleInfoInvoker(request *model.ListKernelModuleInfoRequest) *ListKernelModuleInfoInvoker {
-	requestDef := GenReqDefForListKernelModuleInfo()
-	return &ListKernelModuleInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListKernelModuleStatistics 查询内核模块的统计信息
-//
-// 查询内核模块的服务器数。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListKernelModuleStatistics(request *model.ListKernelModuleStatisticsRequest) (*model.ListKernelModuleStatisticsResponse, error) {
-	requestDef := GenReqDefForListKernelModuleStatistics()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListKernelModuleStatisticsResponse), nil
-	}
-}
-
-// ListKernelModuleStatisticsInvoker 查询内核模块的统计信息
-func (c *HssClient) ListKernelModuleStatisticsInvoker(request *model.ListKernelModuleStatisticsRequest) *ListKernelModuleStatisticsInvoker {
-	requestDef := GenReqDefForListKernelModuleStatistics()
-	return &ListKernelModuleStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListKubernetesClusterDetails 查询容器Kubernetes集群列表
@@ -2142,109 +1806,25 @@ func (c *HssClient) ListPluginInstallScriptInvoker(request *model.ListPluginInst
 	return &ListPluginInstallScriptInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListPortHost 查询指定开放端口的服务器列表
+// ListProcesses 查询进程列表
 //
-// 查询具备该端口的主机/容器的服务器列表。
+// 查询主机或容器上的进程列表。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListPortHost(request *model.ListPortHostRequest) (*model.ListPortHostResponse, error) {
-	requestDef := GenReqDefForListPortHost()
+func (c *HssClient) ListProcesses(request *model.ListProcessesRequest) (*model.ListProcessesResponse, error) {
+	requestDef := GenReqDefForListProcesses()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListPortHostResponse), nil
+		return resp.(*model.ListProcessesResponse), nil
 	}
 }
 
-// ListPortHostInvoker 查询指定开放端口的服务器列表
-func (c *HssClient) ListPortHostInvoker(request *model.ListPortHostRequest) *ListPortHostInvoker {
-	requestDef := GenReqDefForListPortHost()
-	return &ListPortHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListPortStatistics 查询开放端口统计信息
-//
-// 查询开放端口列表，支持通过传入端口或协议类型查询服务器数。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListPortStatistics(request *model.ListPortStatisticsRequest) (*model.ListPortStatisticsResponse, error) {
-	requestDef := GenReqDefForListPortStatistics()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListPortStatisticsResponse), nil
-	}
-}
-
-// ListPortStatisticsInvoker 查询开放端口统计信息
-func (c *HssClient) ListPortStatisticsInvoker(request *model.ListPortStatisticsRequest) *ListPortStatisticsInvoker {
-	requestDef := GenReqDefForListPortStatistics()
-	return &ListPortStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListPorts 查询单服务器的开放端口列表
-//
-// 查询单服务器的开放端口列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListPorts(request *model.ListPortsRequest) (*model.ListPortsResponse, error) {
-	requestDef := GenReqDefForListPorts()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListPortsResponse), nil
-	}
-}
-
-// ListPortsInvoker 查询单服务器的开放端口列表
-func (c *HssClient) ListPortsInvoker(request *model.ListPortsRequest) *ListPortsInvoker {
-	requestDef := GenReqDefForListPorts()
-	return &ListPortsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListProcessStatistics 查询进程统计信息
-//
-// 查询进程列表，通过传入进程路径参数查询对应的服务器数。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListProcessStatistics(request *model.ListProcessStatisticsRequest) (*model.ListProcessStatisticsResponse, error) {
-	requestDef := GenReqDefForListProcessStatistics()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListProcessStatisticsResponse), nil
-	}
-}
-
-// ListProcessStatisticsInvoker 查询进程统计信息
-func (c *HssClient) ListProcessStatisticsInvoker(request *model.ListProcessStatisticsRequest) *ListProcessStatisticsInvoker {
-	requestDef := GenReqDefForListProcessStatistics()
-	return &ListProcessStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListProcessesHost 查询指定进程的服务器列表
-//
-// 具备该进程的主机/容器的服务器列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListProcessesHost(request *model.ListProcessesHostRequest) (*model.ListProcessesHostResponse, error) {
-	requestDef := GenReqDefForListProcessesHost()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListProcessesHostResponse), nil
-	}
-}
-
-// ListProcessesHostInvoker 查询指定进程的服务器列表
-func (c *HssClient) ListProcessesHostInvoker(request *model.ListProcessesHostRequest) *ListProcessesHostInvoker {
-	requestDef := GenReqDefForListProcessesHost()
-	return &ListProcessesHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListProcessesInvoker 查询进程列表
+func (c *HssClient) ListProcessesInvoker(request *model.ListProcessesRequest) *ListProcessesInvoker {
+	requestDef := GenReqDefForListProcesses()
+	return &ListProcessesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListProjectTags 查询租户当前项目下所有用过的标签
@@ -2541,237 +2121,6 @@ func (c *HssClient) ListTrustServiceStatusInvoker(request *model.ListTrustServic
 	return &ListTrustServiceStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListUserChangeHistories 获取账户变动历史信息
-//
-// 获取账户变动历史记录信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListUserChangeHistories(request *model.ListUserChangeHistoriesRequest) (*model.ListUserChangeHistoriesResponse, error) {
-	requestDef := GenReqDefForListUserChangeHistories()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListUserChangeHistoriesResponse), nil
-	}
-}
-
-// ListUserChangeHistoriesInvoker 获取账户变动历史信息
-func (c *HssClient) ListUserChangeHistoriesInvoker(request *model.ListUserChangeHistoriesRequest) *ListUserChangeHistoriesInvoker {
-	requestDef := GenReqDefForListUserChangeHistories()
-	return &ListUserChangeHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListUserStatistics 查询账号信息列表
-//
-// 查询账号信息列表，支持通过传入账号名称参数查询对应的服务器数。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListUserStatistics(request *model.ListUserStatisticsRequest) (*model.ListUserStatisticsResponse, error) {
-	requestDef := GenReqDefForListUserStatistics()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListUserStatisticsResponse), nil
-	}
-}
-
-// ListUserStatisticsInvoker 查询账号信息列表
-func (c *HssClient) ListUserStatisticsInvoker(request *model.ListUserStatisticsRequest) *ListUserStatisticsInvoker {
-	requestDef := GenReqDefForListUserStatistics()
-	return &ListUserStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListUsers 查询账号的服务器列表
-//
-// 查询账号的服务器列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListUsers(request *model.ListUsersRequest) (*model.ListUsersResponse, error) {
-	requestDef := GenReqDefForListUsers()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListUsersResponse), nil
-	}
-}
-
-// ListUsersInvoker 查询账号的服务器列表
-func (c *HssClient) ListUsersInvoker(request *model.ListUsersRequest) *ListUsersInvoker {
-	requestDef := GenReqDefForListUsers()
-	return &ListUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListWebAppAndServiceStatistics 查询Web服务、Web应用、数据库的统计信息
-//
-// 查询Web服务、Web应用、数据库的服务器数。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListWebAppAndServiceStatistics(request *model.ListWebAppAndServiceStatisticsRequest) (*model.ListWebAppAndServiceStatisticsResponse, error) {
-	requestDef := GenReqDefForListWebAppAndServiceStatistics()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListWebAppAndServiceStatisticsResponse), nil
-	}
-}
-
-// ListWebAppAndServiceStatisticsInvoker 查询Web服务、Web应用、数据库的统计信息
-func (c *HssClient) ListWebAppAndServiceStatisticsInvoker(request *model.ListWebAppAndServiceStatisticsRequest) *ListWebAppAndServiceStatisticsInvoker {
-	requestDef := GenReqDefForListWebAppAndServiceStatistics()
-	return &ListWebAppAndServiceStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListWebAppAndServices 查询指定Web服务、Web应用、数据库的服务器列表
-//
-// 查询指定Web服务、Web应用、数据库的服务器列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListWebAppAndServices(request *model.ListWebAppAndServicesRequest) (*model.ListWebAppAndServicesResponse, error) {
-	requestDef := GenReqDefForListWebAppAndServices()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListWebAppAndServicesResponse), nil
-	}
-}
-
-// ListWebAppAndServicesInvoker 查询指定Web服务、Web应用、数据库的服务器列表
-func (c *HssClient) ListWebAppAndServicesInvoker(request *model.ListWebAppAndServicesRequest) *ListWebAppAndServicesInvoker {
-	requestDef := GenReqDefForListWebAppAndServices()
-	return &ListWebAppAndServicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListWebFrameworkHostInfo 查询指定Web框架的服务器列表
-//
-// 查询指定Web框架的服务器列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListWebFrameworkHostInfo(request *model.ListWebFrameworkHostInfoRequest) (*model.ListWebFrameworkHostInfoResponse, error) {
-	requestDef := GenReqDefForListWebFrameworkHostInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListWebFrameworkHostInfoResponse), nil
-	}
-}
-
-// ListWebFrameworkHostInfoInvoker 查询指定Web框架的服务器列表
-func (c *HssClient) ListWebFrameworkHostInfoInvoker(request *model.ListWebFrameworkHostInfoRequest) *ListWebFrameworkHostInfoInvoker {
-	requestDef := GenReqDefForListWebFrameworkHostInfo()
-	return &ListWebFrameworkHostInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListWebFrameworkInfo 查询指定主机的Web框架信息
-//
-// 查询指定主机的Web框架信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListWebFrameworkInfo(request *model.ListWebFrameworkInfoRequest) (*model.ListWebFrameworkInfoResponse, error) {
-	requestDef := GenReqDefForListWebFrameworkInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListWebFrameworkInfoResponse), nil
-	}
-}
-
-// ListWebFrameworkInfoInvoker 查询指定主机的Web框架信息
-func (c *HssClient) ListWebFrameworkInfoInvoker(request *model.ListWebFrameworkInfoRequest) *ListWebFrameworkInfoInvoker {
-	requestDef := GenReqDefForListWebFrameworkInfo()
-	return &ListWebFrameworkInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListWebFrameworkStatistics 查询Web框架的统计信息
-//
-// 查询Web框架的服务器数。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListWebFrameworkStatistics(request *model.ListWebFrameworkStatisticsRequest) (*model.ListWebFrameworkStatisticsResponse, error) {
-	requestDef := GenReqDefForListWebFrameworkStatistics()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListWebFrameworkStatisticsResponse), nil
-	}
-}
-
-// ListWebFrameworkStatisticsInvoker 查询Web框架的统计信息
-func (c *HssClient) ListWebFrameworkStatisticsInvoker(request *model.ListWebFrameworkStatisticsRequest) *ListWebFrameworkStatisticsInvoker {
-	requestDef := GenReqDefForListWebFrameworkStatistics()
-	return &ListWebFrameworkStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListWebSiteHostInfo 查询指定Web站点的服务器列表
-//
-// 查询指定Web站点的服务器列表。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListWebSiteHostInfo(request *model.ListWebSiteHostInfoRequest) (*model.ListWebSiteHostInfoResponse, error) {
-	requestDef := GenReqDefForListWebSiteHostInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListWebSiteHostInfoResponse), nil
-	}
-}
-
-// ListWebSiteHostInfoInvoker 查询指定Web站点的服务器列表
-func (c *HssClient) ListWebSiteHostInfoInvoker(request *model.ListWebSiteHostInfoRequest) *ListWebSiteHostInfoInvoker {
-	requestDef := GenReqDefForListWebSiteHostInfo()
-	return &ListWebSiteHostInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListWebSiteInfo 查询指定主机的Web站点信息
-//
-// 查询指定主机的Web站点信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListWebSiteInfo(request *model.ListWebSiteInfoRequest) (*model.ListWebSiteInfoResponse, error) {
-	requestDef := GenReqDefForListWebSiteInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListWebSiteInfoResponse), nil
-	}
-}
-
-// ListWebSiteInfoInvoker 查询指定主机的Web站点信息
-func (c *HssClient) ListWebSiteInfoInvoker(request *model.ListWebSiteInfoRequest) *ListWebSiteInfoInvoker {
-	requestDef := GenReqDefForListWebSiteInfo()
-	return &ListWebSiteInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ListWebSiteStatistics 查询Web站点的统计信息
-//
-// 查询Web站点的服务器数。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListWebSiteStatistics(request *model.ListWebSiteStatisticsRequest) (*model.ListWebSiteStatisticsResponse, error) {
-	requestDef := GenReqDefForListWebSiteStatistics()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ListWebSiteStatisticsResponse), nil
-	}
-}
-
-// ListWebSiteStatisticsInvoker 查询Web站点的统计信息
-func (c *HssClient) ListWebSiteStatisticsInvoker(request *model.ListWebSiteStatisticsRequest) *ListWebSiteStatisticsInvoker {
-	requestDef := GenReqDefForListWebSiteStatistics()
-	return &ListWebSiteStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ListWorkLoads 查询集群下某一命名空间下的工作负载
 //
 // 查询集群下某一命名空间下的工作负载。
@@ -2877,27 +2226,6 @@ func (c *HssClient) RemoveSystemUserWhiteListInvoker(request *model.RemoveSystem
 	return &RemoveSystemUserWhiteListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// RunHostAssetManualCollect 采集单主机资产指纹
-//
-// 采集单主机资产指纹。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) RunHostAssetManualCollect(request *model.RunHostAssetManualCollectRequest) (*model.RunHostAssetManualCollectResponse, error) {
-	requestDef := GenReqDefForRunHostAssetManualCollect()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.RunHostAssetManualCollectResponse), nil
-	}
-}
-
-// RunHostAssetManualCollectInvoker 采集单主机资产指纹
-func (c *HssClient) RunHostAssetManualCollectInvoker(request *model.RunHostAssetManualCollectRequest) *RunHostAssetManualCollectInvoker {
-	requestDef := GenReqDefForRunHostAssetManualCollect()
-	return &RunHostAssetManualCollectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // SetMalwareReminders 设置提示信息配置
 //
 // 设置提示信息配置。
@@ -2919,48 +2247,6 @@ func (c *HssClient) SetMalwareRemindersInvoker(request *model.SetMalwareReminder
 	return &SetMalwareRemindersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowAccountTop 资产管理-概览-账户Top
-//
-// 资产管理-概览-账户Top。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ShowAccountTop(request *model.ShowAccountTopRequest) (*model.ShowAccountTopResponse, error) {
-	requestDef := GenReqDefForShowAccountTop()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowAccountTopResponse), nil
-	}
-}
-
-// ShowAccountTopInvoker 资产管理-概览-账户Top
-func (c *HssClient) ShowAccountTopInvoker(request *model.ShowAccountTopRequest) *ShowAccountTopInvoker {
-	requestDef := GenReqDefForShowAccountTop()
-	return &ShowAccountTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowAgentStatisticsStatus 资产管理-概览-资产状态-主机Agent状态
-//
-// 资产管理-概览-资产状态-主机Agent状态。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ShowAgentStatisticsStatus(request *model.ShowAgentStatisticsStatusRequest) (*model.ShowAgentStatisticsStatusResponse, error) {
-	requestDef := GenReqDefForShowAgentStatisticsStatus()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowAgentStatisticsStatusResponse), nil
-	}
-}
-
-// ShowAgentStatisticsStatusInvoker 资产管理-概览-资产状态-主机Agent状态
-func (c *HssClient) ShowAgentStatisticsStatusInvoker(request *model.ShowAgentStatisticsStatusRequest) *ShowAgentStatisticsStatusInvoker {
-	requestDef := GenReqDefForShowAgentStatisticsStatus()
-	return &ShowAgentStatisticsStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowAppRaspSwitchStatus 查询应用防护开启状态
 //
 // 查询应用防护开启状态：查询单台服务器的应用防护功能开启状态。
@@ -2980,48 +2266,6 @@ func (c *HssClient) ShowAppRaspSwitchStatus(request *model.ShowAppRaspSwitchStat
 func (c *HssClient) ShowAppRaspSwitchStatusInvoker(request *model.ShowAppRaspSwitchStatusRequest) *ShowAppRaspSwitchStatusInvoker {
 	requestDef := GenReqDefForShowAppRaspSwitchStatus()
 	return &ShowAppRaspSwitchStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowAssetStatistic 统计资产信息数量
-//
-// 资产统计信息，账号、端口、进程等。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ShowAssetStatistic(request *model.ShowAssetStatisticRequest) (*model.ShowAssetStatisticResponse, error) {
-	requestDef := GenReqDefForShowAssetStatistic()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowAssetStatisticResponse), nil
-	}
-}
-
-// ShowAssetStatisticInvoker 统计资产信息数量
-func (c *HssClient) ShowAssetStatisticInvoker(request *model.ShowAssetStatisticRequest) *ShowAssetStatisticInvoker {
-	requestDef := GenReqDefForShowAssetStatistic()
-	return &ShowAssetStatisticInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowAutoLaunchTop 资产管理-概览-自启动项Top
-//
-// 资产管理-概览-自启动项Top。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ShowAutoLaunchTop(request *model.ShowAutoLaunchTopRequest) (*model.ShowAutoLaunchTopResponse, error) {
-	requestDef := GenReqDefForShowAutoLaunchTop()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowAutoLaunchTopResponse), nil
-	}
-}
-
-// ShowAutoLaunchTopInvoker 资产管理-概览-自启动项Top
-func (c *HssClient) ShowAutoLaunchTopInvoker(request *model.ShowAutoLaunchTopRequest) *ShowAutoLaunchTopInvoker {
-	requestDef := GenReqDefForShowAutoLaunchTop()
-	return &ShowAutoLaunchTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowClusterAssetStatistics 查询集群资产统计数量
@@ -3066,27 +2310,6 @@ func (c *HssClient) ShowClusterProtectPolicyTemplateInvoker(request *model.ShowC
 	return &ShowClusterProtectPolicyTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowCommonPort 查询某一端口的描述信息
-//
-// 呈现某一端口详细信息，如本地端口：80，类型：TCP，危险程度：正常，端口描述：常用于SSH(SecureShell)-远程登录协议，用于安全登录文件传输（SCP，SFTP）及端口重新定向。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ShowCommonPort(request *model.ShowCommonPortRequest) (*model.ShowCommonPortResponse, error) {
-	requestDef := GenReqDefForShowCommonPort()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowCommonPortResponse), nil
-	}
-}
-
-// ShowCommonPortInvoker 查询某一端口的描述信息
-func (c *HssClient) ShowCommonPortInvoker(request *model.ShowCommonPortRequest) *ShowCommonPortInvoker {
-	requestDef := GenReqDefForShowCommonPort()
-	return &ShowCommonPortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowContainerNetworkInfo 查询容器集群网络的网络信息
 //
 // 查询容器集群网络的网络信息。
@@ -3127,27 +2350,6 @@ func (c *HssClient) ShowContainerNodeStatistics(request *model.ShowContainerNode
 func (c *HssClient) ShowContainerNodeStatisticsInvoker(request *model.ShowContainerNodeStatisticsRequest) *ShowContainerNodeStatisticsInvoker {
 	requestDef := GenReqDefForShowContainerNodeStatistics()
 	return &ShowContainerNodeStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowContainerProtectionStatus 资产管理-概览-资产状态-容器节点防护状态
-//
-// 资产管理-概览-资产状态-容器节点防护状态。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ShowContainerProtectionStatus(request *model.ShowContainerProtectionStatusRequest) (*model.ShowContainerProtectionStatusResponse, error) {
-	requestDef := GenReqDefForShowContainerProtectionStatus()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowContainerProtectionStatusResponse), nil
-	}
-}
-
-// ShowContainerProtectionStatusInvoker 资产管理-概览-资产状态-容器节点防护状态
-func (c *HssClient) ShowContainerProtectionStatusInvoker(request *model.ShowContainerProtectionStatusRequest) *ShowContainerProtectionStatusInvoker {
-	requestDef := GenReqDefForShowContainerProtectionStatus()
-	return &ShowContainerProtectionStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowDecoyPortAutoBind 查看默认为新增主机开启防护开关
@@ -3213,6 +2415,27 @@ func (c *HssClient) ShowDecoyPortPolicyDetailsInvoker(request *model.ShowDecoyPo
 	return &ShowDecoyPortPolicyDetailsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowDecoyPortStatistics 查询诱饵端口主机统计
+//
+// 查询诱饵端口主机统计
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowDecoyPortStatistics(request *model.ShowDecoyPortStatisticsRequest) (*model.ShowDecoyPortStatisticsResponse, error) {
+	requestDef := GenReqDefForShowDecoyPortStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDecoyPortStatisticsResponse), nil
+	}
+}
+
+// ShowDecoyPortStatisticsInvoker 查询诱饵端口主机统计
+func (c *HssClient) ShowDecoyPortStatisticsInvoker(request *model.ShowDecoyPortStatisticsRequest) *ShowDecoyPortStatisticsInvoker {
+	requestDef := GenReqDefForShowDecoyPortStatistics()
+	return &ShowDecoyPortStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowEventAttackTag 查询攻击标识分布统计列表
 //
 // 查询攻击标识分布统计列表。
@@ -3255,6 +2478,27 @@ func (c *HssClient) ShowEventSeverityInvoker(request *model.ShowEventSeverityReq
 	return &ShowEventSeverityInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowEventStatistics 查询告警事件统计
+//
+// 查询告警事件统计
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowEventStatistics(request *model.ShowEventStatisticsRequest) (*model.ShowEventStatisticsResponse, error) {
+	requestDef := GenReqDefForShowEventStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowEventStatisticsResponse), nil
+	}
+}
+
+// ShowEventStatisticsInvoker 查询告警事件统计
+func (c *HssClient) ShowEventStatisticsInvoker(request *model.ShowEventStatisticsRequest) *ShowEventStatisticsInvoker {
+	requestDef := GenReqDefForShowEventStatistics()
+	return &ShowEventStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowExportTask 查询导出任务信息
 //
 // 查询导出任务信息。
@@ -3276,67 +2520,25 @@ func (c *HssClient) ShowExportTaskInvoker(request *model.ShowExportTaskRequest) 
 	return &ShowExportTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowHostAssetManualCollectStatus 查询单主机资产指纹采集状态
+// ShowHoneypotEventStatistics 查询蜜罐事件统计
 //
-// 查询单主机资产指纹采集状态。
+// 查询蜜罐事件统计
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ShowHostAssetManualCollectStatus(request *model.ShowHostAssetManualCollectStatusRequest) (*model.ShowHostAssetManualCollectStatusResponse, error) {
-	requestDef := GenReqDefForShowHostAssetManualCollectStatus()
+func (c *HssClient) ShowHoneypotEventStatistics(request *model.ShowHoneypotEventStatisticsRequest) (*model.ShowHoneypotEventStatisticsResponse, error) {
+	requestDef := GenReqDefForShowHoneypotEventStatistics()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ShowHostAssetManualCollectStatusResponse), nil
+		return resp.(*model.ShowHoneypotEventStatisticsResponse), nil
 	}
 }
 
-// ShowHostAssetManualCollectStatusInvoker 查询单主机资产指纹采集状态
-func (c *HssClient) ShowHostAssetManualCollectStatusInvoker(request *model.ShowHostAssetManualCollectStatusRequest) *ShowHostAssetManualCollectStatusInvoker {
-	requestDef := GenReqDefForShowHostAssetManualCollectStatus()
-	return &ShowHostAssetManualCollectStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowHostProtectionStatus 资产管理-概览-资产状态-Agent状态
-//
-// 资产管理-概览-资产状态-Agent状态。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ShowHostProtectionStatus(request *model.ShowHostProtectionStatusRequest) (*model.ShowHostProtectionStatusResponse, error) {
-	requestDef := GenReqDefForShowHostProtectionStatus()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowHostProtectionStatusResponse), nil
-	}
-}
-
-// ShowHostProtectionStatusInvoker 资产管理-概览-资产状态-Agent状态
-func (c *HssClient) ShowHostProtectionStatusInvoker(request *model.ShowHostProtectionStatusRequest) *ShowHostProtectionStatusInvoker {
-	requestDef := GenReqDefForShowHostProtectionStatus()
-	return &ShowHostProtectionStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowJarPackageTop 资产管理-概览-jar包Top
-//
-// 资产管理-概览-jar包Top。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ShowJarPackageTop(request *model.ShowJarPackageTopRequest) (*model.ShowJarPackageTopResponse, error) {
-	requestDef := GenReqDefForShowJarPackageTop()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowJarPackageTopResponse), nil
-	}
-}
-
-// ShowJarPackageTopInvoker 资产管理-概览-jar包Top
-func (c *HssClient) ShowJarPackageTopInvoker(request *model.ShowJarPackageTopRequest) *ShowJarPackageTopInvoker {
-	requestDef := GenReqDefForShowJarPackageTop()
-	return &ShowJarPackageTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ShowHoneypotEventStatisticsInvoker 查询蜜罐事件统计
+func (c *HssClient) ShowHoneypotEventStatisticsInvoker(request *model.ShowHoneypotEventStatisticsRequest) *ShowHoneypotEventStatisticsInvoker {
+	requestDef := GenReqDefForShowHoneypotEventStatistics()
+	return &ShowHoneypotEventStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowK8sContainerDetail 查询容器详细信息
@@ -3379,27 +2581,6 @@ func (c *HssClient) ShowK8sPodDetail(request *model.ShowK8sPodDetailRequest) (*m
 func (c *HssClient) ShowK8sPodDetailInvoker(request *model.ShowK8sPodDetailRequest) *ShowK8sPodDetailInvoker {
 	requestDef := GenReqDefForShowK8sPodDetail()
 	return &ShowK8sPodDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowKernelModuleTop 资产管理-概览-内核模块Top
-//
-// 资产管理-概览-内核模块Top。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ShowKernelModuleTop(request *model.ShowKernelModuleTopRequest) (*model.ShowKernelModuleTopResponse, error) {
-	requestDef := GenReqDefForShowKernelModuleTop()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowKernelModuleTopResponse), nil
-	}
-}
-
-// ShowKernelModuleTopInvoker 资产管理-概览-内核模块Top
-func (c *HssClient) ShowKernelModuleTopInvoker(request *model.ShowKernelModuleTopRequest) *ShowKernelModuleTopInvoker {
-	requestDef := GenReqDefForShowKernelModuleTop()
-	return &ShowKernelModuleTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowKubernetesEndpointInfo 查询容器Kubernetes端点详情
@@ -3507,27 +2688,6 @@ func (c *HssClient) ShowNetworkStatisticsInvoker(request *model.ShowNetworkStati
 	return &ShowNetworkStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowOsStatisticsInfo 资产管理-概览-资产状态-操作系统统计信息
-//
-// 资产管理-概览-资产状态-操作系统统计信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ShowOsStatisticsInfo(request *model.ShowOsStatisticsInfoRequest) (*model.ShowOsStatisticsInfoResponse, error) {
-	requestDef := GenReqDefForShowOsStatisticsInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowOsStatisticsInfoResponse), nil
-	}
-}
-
-// ShowOsStatisticsInfoInvoker 资产管理-概览-资产状态-操作系统统计信息
-func (c *HssClient) ShowOsStatisticsInfoInvoker(request *model.ShowOsStatisticsInfoRequest) *ShowOsStatisticsInfoInvoker {
-	requestDef := GenReqDefForShowOsStatisticsInfo()
-	return &ShowOsStatisticsInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // ShowPageNotices 获取页面通知信息
 //
 // 获取页面通知信息。
@@ -3547,69 +2707,6 @@ func (c *HssClient) ShowPageNotices(request *model.ShowPageNoticesRequest) (*mod
 func (c *HssClient) ShowPageNoticesInvoker(request *model.ShowPageNoticesRequest) *ShowPageNoticesInvoker {
 	requestDef := GenReqDefForShowPageNotices()
 	return &ShowPageNoticesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowPortTop 资产管理-概览-端口Top
-//
-// 资产管理-概览-端口Top。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ShowPortTop(request *model.ShowPortTopRequest) (*model.ShowPortTopResponse, error) {
-	requestDef := GenReqDefForShowPortTop()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowPortTopResponse), nil
-	}
-}
-
-// ShowPortTopInvoker 资产管理-概览-端口Top
-func (c *HssClient) ShowPortTopInvoker(request *model.ShowPortTopRequest) *ShowPortTopInvoker {
-	requestDef := GenReqDefForShowPortTop()
-	return &ShowPortTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowProcessTop 资产管理-概览-进程Top
-//
-// 资产管理-概览-进程Top。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ShowProcessTop(request *model.ShowProcessTopRequest) (*model.ShowProcessTopResponse, error) {
-	requestDef := GenReqDefForShowProcessTop()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowProcessTopResponse), nil
-	}
-}
-
-// ShowProcessTopInvoker 资产管理-概览-进程Top
-func (c *HssClient) ShowProcessTopInvoker(request *model.ShowProcessTopRequest) *ShowProcessTopInvoker {
-	requestDef := GenReqDefForShowProcessTop()
-	return &ShowProcessTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowQuotaStatisticsInfo 资产管理-概览-资产状态-防护配额统计信息
-//
-// 资产管理-概览-资产状态-防护配额统计信息。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ShowQuotaStatisticsInfo(request *model.ShowQuotaStatisticsInfoRequest) (*model.ShowQuotaStatisticsInfoResponse, error) {
-	requestDef := GenReqDefForShowQuotaStatisticsInfo()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowQuotaStatisticsInfoResponse), nil
-	}
-}
-
-// ShowQuotaStatisticsInfoInvoker 资产管理-概览-资产状态-防护配额统计信息
-func (c *HssClient) ShowQuotaStatisticsInfoInvoker(request *model.ShowQuotaStatisticsInfoRequest) *ShowQuotaStatisticsInfoInvoker {
-	requestDef := GenReqDefForShowQuotaStatisticsInfo()
-	return &ShowQuotaStatisticsInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowRaspPolicyDetail 查询防护策略详情
@@ -3673,90 +2770,6 @@ func (c *HssClient) ShowRaspServerDetail(request *model.ShowRaspServerDetailRequ
 func (c *HssClient) ShowRaspServerDetailInvoker(request *model.ShowRaspServerDetailRequest) *ShowRaspServerDetailInvoker {
 	requestDef := GenReqDefForShowRaspServerDetail()
 	return &ShowRaspServerDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowSoftwareTop 资产管理-概览-软件Top
-//
-// 资产管理-概览-软件Top。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ShowSoftwareTop(request *model.ShowSoftwareTopRequest) (*model.ShowSoftwareTopResponse, error) {
-	requestDef := GenReqDefForShowSoftwareTop()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowSoftwareTopResponse), nil
-	}
-}
-
-// ShowSoftwareTopInvoker 资产管理-概览-软件Top
-func (c *HssClient) ShowSoftwareTopInvoker(request *model.ShowSoftwareTopRequest) *ShowSoftwareTopInvoker {
-	requestDef := GenReqDefForShowSoftwareTop()
-	return &ShowSoftwareTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowWebAppAndServiceTop 资产管理-概览-WebAppAndServiceTop
-//
-// 资产管理-概览-Web应用TOP5/Web服务TOP5。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ShowWebAppAndServiceTop(request *model.ShowWebAppAndServiceTopRequest) (*model.ShowWebAppAndServiceTopResponse, error) {
-	requestDef := GenReqDefForShowWebAppAndServiceTop()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowWebAppAndServiceTopResponse), nil
-	}
-}
-
-// ShowWebAppAndServiceTopInvoker 资产管理-概览-WebAppAndServiceTop
-func (c *HssClient) ShowWebAppAndServiceTopInvoker(request *model.ShowWebAppAndServiceTopRequest) *ShowWebAppAndServiceTopInvoker {
-	requestDef := GenReqDefForShowWebAppAndServiceTop()
-	return &ShowWebAppAndServiceTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowWebFrameworkTop 资产管理-概览-Web框架Top
-//
-// 资产管理-概览-Web框架Top。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ShowWebFrameworkTop(request *model.ShowWebFrameworkTopRequest) (*model.ShowWebFrameworkTopResponse, error) {
-	requestDef := GenReqDefForShowWebFrameworkTop()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowWebFrameworkTopResponse), nil
-	}
-}
-
-// ShowWebFrameworkTopInvoker 资产管理-概览-Web框架Top
-func (c *HssClient) ShowWebFrameworkTopInvoker(request *model.ShowWebFrameworkTopRequest) *ShowWebFrameworkTopInvoker {
-	requestDef := GenReqDefForShowWebFrameworkTop()
-	return &ShowWebFrameworkTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
-// ShowWebSiteTop 资产管理-概览-Web站点Top
-//
-// 资产管理-概览-Web站点Top。
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ShowWebSiteTop(request *model.ShowWebSiteTopRequest) (*model.ShowWebSiteTopResponse, error) {
-	requestDef := GenReqDefForShowWebSiteTop()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.ShowWebSiteTopResponse), nil
-	}
-}
-
-// ShowWebSiteTopInvoker 资产管理-概览-Web站点Top
-func (c *HssClient) ShowWebSiteTopInvoker(request *model.ShowWebSiteTopRequest) *ShowWebSiteTopInvoker {
-	requestDef := GenReqDefForShowWebSiteTop()
-	return &ShowWebSiteTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SwitchClusterProtectionMode 操作集群防护模式
@@ -3990,27 +3003,6 @@ func (c *HssClient) SyncSecurityGroupPoliciesInvoker(request *model.SyncSecurity
 	return &SyncSecurityGroupPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateAlarmWhiteListHost 编辑告警白名单生效主机
-//
-// 编辑告警白名单主机相关信息
-//
-// Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) UpdateAlarmWhiteListHost(request *model.UpdateAlarmWhiteListHostRequest) (*model.UpdateAlarmWhiteListHostResponse, error) {
-	requestDef := GenReqDefForUpdateAlarmWhiteListHost()
-
-	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
-		return nil, err
-	} else {
-		return resp.(*model.UpdateAlarmWhiteListHostResponse), nil
-	}
-}
-
-// UpdateAlarmWhiteListHostInvoker 编辑告警白名单生效主机
-func (c *HssClient) UpdateAlarmWhiteListHostInvoker(request *model.UpdateAlarmWhiteListHostRequest) *UpdateAlarmWhiteListHostInvoker {
-	requestDef := GenReqDefForUpdateAlarmWhiteListHost()
-	return &UpdateAlarmWhiteListHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
-}
-
 // UpdateContainerNetworkPolicy 容器集群网络更新配置策略
 //
 // 容器集群网络更新配置策略。
@@ -4116,7 +3108,285 @@ func (c *HssClient) ValidateAdminInvoker(request *model.ValidateAdminRequest) *V
 	return &ValidateAdminInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// BindAgentPolicy Agent绑定策略ID，当前仅西南-贵阳一支持
+// Deprecated: This function is deprecated and will be removed in the future versions.
+// ListServerlessAsset 查询Serverless资产列表--接口已废弃
+//
+// 查询Serverless资产列表--接口已废弃
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListServerlessAsset(request *model.ListServerlessAssetRequest) (*model.ListServerlessAssetResponse, error) {
+	requestDef := GenReqDefForListServerlessAsset()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListServerlessAssetResponse), nil
+	}
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+// ListServerlessAssetInvoker 查询Serverless资产列表--接口已废弃
+func (c *HssClient) ListServerlessAssetInvoker(request *model.ListServerlessAssetRequest) *ListServerlessAssetInvoker {
+	requestDef := GenReqDefForListServerlessAsset()
+	return &ListServerlessAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+// ListServerlessAssetDetail 查询Serverless资产详细信息--接口已废弃
+//
+// 查询Serverless资产详细信息--接口已废弃
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListServerlessAssetDetail(request *model.ListServerlessAssetDetailRequest) (*model.ListServerlessAssetDetailResponse, error) {
+	requestDef := GenReqDefForListServerlessAssetDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListServerlessAssetDetailResponse), nil
+	}
+}
+
+// Deprecated: This function is deprecated and will be removed in the future versions.
+// ListServerlessAssetDetailInvoker 查询Serverless资产详细信息--接口已废弃
+func (c *HssClient) ListServerlessAssetDetailInvoker(request *model.ListServerlessAssetDetailRequest) *ListServerlessAssetDetailInvoker {
+	requestDef := GenReqDefForListServerlessAssetDetail()
+	return &ListServerlessAssetDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAiInstances 查询AI智能体列表
+//
+// 查询AI智能体列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListAiInstances(request *model.ListAiInstancesRequest) (*model.ListAiInstancesResponse, error) {
+	requestDef := GenReqDefForListAiInstances()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAiInstancesResponse), nil
+	}
+}
+
+// ListAiInstancesInvoker 查询AI智能体列表
+func (c *HssClient) ListAiInstancesInvoker(request *model.ListAiInstancesRequest) *ListAiInstancesInvoker {
+	requestDef := GenReqDefForListAiInstances()
+	return &ListAiInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAiSessions 查询AI会话列表
+//
+// 查询AI会话列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListAiSessions(request *model.ListAiSessionsRequest) (*model.ListAiSessionsResponse, error) {
+	requestDef := GenReqDefForListAiSessions()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAiSessionsResponse), nil
+	}
+}
+
+// ListAiSessionsInvoker 查询AI会话列表
+func (c *HssClient) ListAiSessionsInvoker(request *model.ListAiSessionsRequest) *ListAiSessionsInvoker {
+	requestDef := GenReqDefForListAiSessions()
+	return &ListAiSessionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListDefenderPlugins 查询智能体卫士插件列表
+//
+// 查询智能体卫士插件列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListDefenderPlugins(request *model.ListDefenderPluginsRequest) (*model.ListDefenderPluginsResponse, error) {
+	requestDef := GenReqDefForListDefenderPlugins()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListDefenderPluginsResponse), nil
+	}
+}
+
+// ListDefenderPluginsInvoker 查询智能体卫士插件列表
+func (c *HssClient) ListDefenderPluginsInvoker(request *model.ListDefenderPluginsRequest) *ListDefenderPluginsInvoker {
+	requestDef := GenReqDefForListDefenderPlugins()
+	return &ListDefenderPluginsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAiFirewallConfig 查询大模型防火墙配置
+//
+// 查询大模型防火墙配置信息，包括防火墙AK、SK和应用ID。当未配置时返回空配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowAiFirewallConfig(request *model.ShowAiFirewallConfigRequest) (*model.ShowAiFirewallConfigResponse, error) {
+	requestDef := GenReqDefForShowAiFirewallConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAiFirewallConfigResponse), nil
+	}
+}
+
+// ShowAiFirewallConfigInvoker 查询大模型防火墙配置
+func (c *HssClient) ShowAiFirewallConfigInvoker(request *model.ShowAiFirewallConfigRequest) *ShowAiFirewallConfigInvoker {
+	requestDef := GenReqDefForShowAiFirewallConfig()
+	return &ShowAiFirewallConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAiOverviewStatistics AI Defender概览统计
+//
+// AI Defender概览统计。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowAiOverviewStatistics(request *model.ShowAiOverviewStatisticsRequest) (*model.ShowAiOverviewStatisticsResponse, error) {
+	requestDef := GenReqDefForShowAiOverviewStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAiOverviewStatisticsResponse), nil
+	}
+}
+
+// ShowAiOverviewStatisticsInvoker AI Defender概览统计
+func (c *HssClient) ShowAiOverviewStatisticsInvoker(request *model.ShowAiOverviewStatisticsRequest) *ShowAiOverviewStatisticsInvoker {
+	requestDef := GenReqDefForShowAiOverviewStatistics()
+	return &ShowAiOverviewStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowDefenderPluginManualCommand 获取智能体卫士插件手动操作命令（安装/卸载）
+//
+// 获取智能体卫士插件手动操作命令（安装/卸载），通过opt区分操作类型
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowDefenderPluginManualCommand(request *model.ShowDefenderPluginManualCommandRequest) (*model.ShowDefenderPluginManualCommandResponse, error) {
+	requestDef := GenReqDefForShowDefenderPluginManualCommand()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowDefenderPluginManualCommandResponse), nil
+	}
+}
+
+// ShowDefenderPluginManualCommandInvoker 获取智能体卫士插件手动操作命令（安装/卸载）
+func (c *HssClient) ShowDefenderPluginManualCommandInvoker(request *model.ShowDefenderPluginManualCommandRequest) *ShowDefenderPluginManualCommandInvoker {
+	requestDef := GenReqDefForShowDefenderPluginManualCommand()
+	return &ShowDefenderPluginManualCommandInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAiFirewallConfig 配置大模型防火墙
+//
+// 配置大模型防火墙，包括防火墙AK、SK和应用ID。SK加密存储，AK明文存储。
+// 当三个参数都为空时，删除已有配置。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) UpdateAiFirewallConfig(request *model.UpdateAiFirewallConfigRequest) (*model.UpdateAiFirewallConfigResponse, error) {
+	requestDef := GenReqDefForUpdateAiFirewallConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAiFirewallConfigResponse), nil
+	}
+}
+
+// UpdateAiFirewallConfigInvoker 配置大模型防火墙
+func (c *HssClient) UpdateAiFirewallConfigInvoker(request *model.UpdateAiFirewallConfigRequest) *UpdateAiFirewallConfigInvoker {
+	requestDef := GenReqDefForUpdateAiFirewallConfig()
+	return &UpdateAiFirewallConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchRegisterDefenderPlugin 批量操作智能体卫士插件
+//
+// 批量操作智能体卫士插件（安装/卸载），通过opt区分操作类型，异步下发指令
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) BatchRegisterDefenderPlugin(request *model.BatchRegisterDefenderPluginRequest) (*model.BatchRegisterDefenderPluginResponse, error) {
+	requestDef := GenReqDefForBatchRegisterDefenderPlugin()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchRegisterDefenderPluginResponse), nil
+	}
+}
+
+// BatchRegisterDefenderPluginInvoker 批量操作智能体卫士插件
+func (c *HssClient) BatchRegisterDefenderPluginInvoker(request *model.BatchRegisterDefenderPluginRequest) *BatchRegisterDefenderPluginInvoker {
+	requestDef := GenReqDefForBatchRegisterDefenderPlugin()
+	return &BatchRegisterDefenderPluginInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAiComponentStatistics 查询AI组件统计信息
+//
+// 查询AI组件统计信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListAiComponentStatistics(request *model.ListAiComponentStatisticsRequest) (*model.ListAiComponentStatisticsResponse, error) {
+	requestDef := GenReqDefForListAiComponentStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAiComponentStatisticsResponse), nil
+	}
+}
+
+// ListAiComponentStatisticsInvoker 查询AI组件统计信息
+func (c *HssClient) ListAiComponentStatisticsInvoker(request *model.ListAiComponentStatisticsRequest) *ListAiComponentStatisticsInvoker {
+	requestDef := GenReqDefForListAiComponentStatistics()
+	return &ListAiComponentStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAiFeatureStatus 查询AI特性开关状态
+//
+// 查询AI Defender各产品特性的开关状态，包括AI Defender白名单开关、AgentArts开关、OfficeAce开关和OpenClaw开关。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowAiFeatureStatus(request *model.ShowAiFeatureStatusRequest) (*model.ShowAiFeatureStatusResponse, error) {
+	requestDef := GenReqDefForShowAiFeatureStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAiFeatureStatusResponse), nil
+	}
+}
+
+// ShowAiFeatureStatusInvoker 查询AI特性开关状态
+func (c *HssClient) ShowAiFeatureStatusInvoker(request *model.ShowAiFeatureStatusRequest) *ShowAiFeatureStatusInvoker {
+	requestDef := GenReqDefForShowAiFeatureStatus()
+	return &ShowAiFeatureStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAiInstanceProtection 开启或关闭智能体的安全防护
+//
+// 开启或关闭智能体的安全防护。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) UpdateAiInstanceProtection(request *model.UpdateAiInstanceProtectionRequest) (*model.UpdateAiInstanceProtectionResponse, error) {
+	requestDef := GenReqDefForUpdateAiInstanceProtection()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAiInstanceProtectionResponse), nil
+	}
+}
+
+// UpdateAiInstanceProtectionInvoker 开启或关闭智能体的安全防护
+func (c *HssClient) UpdateAiInstanceProtectionInvoker(request *model.UpdateAiInstanceProtectionRequest) *UpdateAiInstanceProtectionInvoker {
+	requestDef := GenReqDefForUpdateAiInstanceProtection()
+	return &UpdateAiInstanceProtectionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BindAgentPolicy Agent绑定策略ID，当前仅西南-贵阳一、北京四支持
 //
 // Agent绑定策略ID。
 //
@@ -4131,13 +3401,13 @@ func (c *HssClient) BindAgentPolicy(request *model.BindAgentPolicyRequest) (*mod
 	}
 }
 
-// BindAgentPolicyInvoker Agent绑定策略ID，当前仅西南-贵阳一支持
+// BindAgentPolicyInvoker Agent绑定策略ID，当前仅西南-贵阳一、北京四支持
 func (c *HssClient) BindAgentPolicyInvoker(request *model.BindAgentPolicyRequest) *BindAgentPolicyInvoker {
 	requestDef := GenReqDefForBindAgentPolicy()
 	return &BindAgentPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// CopyAiPolicyGroup 复制策略组，当前仅西南-贵阳一支持
+// CopyAiPolicyGroup 复制策略组，当前仅西南-贵阳一、北京四支持
 //
 // 复制策略组。
 //
@@ -4152,13 +3422,13 @@ func (c *HssClient) CopyAiPolicyGroup(request *model.CopyAiPolicyGroupRequest) (
 	}
 }
 
-// CopyAiPolicyGroupInvoker 复制策略组，当前仅西南-贵阳一支持
+// CopyAiPolicyGroupInvoker 复制策略组，当前仅西南-贵阳一、北京四支持
 func (c *HssClient) CopyAiPolicyGroupInvoker(request *model.CopyAiPolicyGroupRequest) *CopyAiPolicyGroupInvoker {
 	requestDef := GenReqDefForCopyAiPolicyGroup()
 	return &CopyAiPolicyGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// DeleteAiPolicyGroups 删除策略组，当前仅西南-贵阳一支持
+// DeleteAiPolicyGroups 删除策略组，当前仅西南-贵阳一、北京四支持
 //
 // 删除策略组。
 //
@@ -4173,13 +3443,13 @@ func (c *HssClient) DeleteAiPolicyGroups(request *model.DeleteAiPolicyGroupsRequ
 	}
 }
 
-// DeleteAiPolicyGroupsInvoker 删除策略组，当前仅西南-贵阳一支持
+// DeleteAiPolicyGroupsInvoker 删除策略组，当前仅西南-贵阳一、北京四支持
 func (c *HssClient) DeleteAiPolicyGroupsInvoker(request *model.DeleteAiPolicyGroupsRequest) *DeleteAiPolicyGroupsInvoker {
 	requestDef := GenReqDefForDeleteAiPolicyGroups()
 	return &DeleteAiPolicyGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAiPolicies 查询策略列表，当前仅西南-贵阳一支持
+// ListAiPolicies 查询策略列表，当前仅西南-贵阳一、北京四支持
 //
 // 查询策略列表。
 //
@@ -4194,13 +3464,13 @@ func (c *HssClient) ListAiPolicies(request *model.ListAiPoliciesRequest) (*model
 	}
 }
 
-// ListAiPoliciesInvoker 查询策略列表，当前仅西南-贵阳一支持
+// ListAiPoliciesInvoker 查询策略列表，当前仅西南-贵阳一、北京四支持
 func (c *HssClient) ListAiPoliciesInvoker(request *model.ListAiPoliciesRequest) *ListAiPoliciesInvoker {
 	requestDef := GenReqDefForListAiPolicies()
 	return &ListAiPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAiPolicyDetail 查询策略详情，当前仅西南-贵阳一支持
+// ListAiPolicyDetail 查询策略详情，当前仅西南-贵阳一、北京四支持
 //
 // 查询策略详情。
 //
@@ -4215,13 +3485,13 @@ func (c *HssClient) ListAiPolicyDetail(request *model.ListAiPolicyDetailRequest)
 	}
 }
 
-// ListAiPolicyDetailInvoker 查询策略详情，当前仅西南-贵阳一支持
+// ListAiPolicyDetailInvoker 查询策略详情，当前仅西南-贵阳一、北京四支持
 func (c *HssClient) ListAiPolicyDetailInvoker(request *model.ListAiPolicyDetailRequest) *ListAiPolicyDetailInvoker {
 	requestDef := GenReqDefForListAiPolicyDetail()
 	return &ListAiPolicyDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ListAiPolicyGroups 查询策略组列表，当前仅西南-贵阳一支持
+// ListAiPolicyGroups 查询策略组列表，当前仅西南-贵阳一、北京四支持
 //
 // 查询策略组列表。
 //
@@ -4236,13 +3506,13 @@ func (c *HssClient) ListAiPolicyGroups(request *model.ListAiPolicyGroupsRequest)
 	}
 }
 
-// ListAiPolicyGroupsInvoker 查询策略组列表，当前仅西南-贵阳一支持
+// ListAiPolicyGroupsInvoker 查询策略组列表，当前仅西南-贵阳一、北京四支持
 func (c *HssClient) ListAiPolicyGroupsInvoker(request *model.ListAiPolicyGroupsRequest) *ListAiPolicyGroupsInvoker {
 	requestDef := GenReqDefForListAiPolicyGroups()
 	return &ListAiPolicyGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ResumePauseAiPolicies 启用、停用策略，当前仅西南-贵阳一支持
+// ResumePauseAiPolicies 启用、停用策略，当前仅西南-贵阳一、北京四支持
 //
 // 启用、停用策略。
 //
@@ -4257,13 +3527,13 @@ func (c *HssClient) ResumePauseAiPolicies(request *model.ResumePauseAiPoliciesRe
 	}
 }
 
-// ResumePauseAiPoliciesInvoker 启用、停用策略，当前仅西南-贵阳一支持
+// ResumePauseAiPoliciesInvoker 启用、停用策略，当前仅西南-贵阳一、北京四支持
 func (c *HssClient) ResumePauseAiPoliciesInvoker(request *model.ResumePauseAiPoliciesRequest) *ResumePauseAiPoliciesInvoker {
 	requestDef := GenReqDefForResumePauseAiPolicies()
 	return &ResumePauseAiPoliciesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ResumePauseAiPolicyGroups 启用、停用策略组，当前仅西南-贵阳一支持
+// ResumePauseAiPolicyGroups 启用、停用策略组，当前仅西南-贵阳一、北京四支持
 //
 // 启用、停用策略组。
 //
@@ -4278,13 +3548,13 @@ func (c *HssClient) ResumePauseAiPolicyGroups(request *model.ResumePauseAiPolicy
 	}
 }
 
-// ResumePauseAiPolicyGroupsInvoker 启用、停用策略组，当前仅西南-贵阳一支持
+// ResumePauseAiPolicyGroupsInvoker 启用、停用策略组，当前仅西南-贵阳一、北京四支持
 func (c *HssClient) ResumePauseAiPolicyGroupsInvoker(request *model.ResumePauseAiPolicyGroupsRequest) *ResumePauseAiPolicyGroupsInvoker {
 	requestDef := GenReqDefForResumePauseAiPolicyGroups()
 	return &ResumePauseAiPolicyGroupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// UpdateAiPolicyDetail 修改策略详情，当前仅西南-贵阳一支持
+// UpdateAiPolicyDetail 修改策略详情，当前仅西南-贵阳一、北京四支持
 //
 // 修改策略详情，该接口非常复杂，不建议通过API调用，推荐使用华为云console页面修改。
 //
@@ -4299,7 +3569,7 @@ func (c *HssClient) UpdateAiPolicyDetail(request *model.UpdateAiPolicyDetailRequ
 	}
 }
 
-// UpdateAiPolicyDetailInvoker 修改策略详情，当前仅西南-贵阳一支持
+// UpdateAiPolicyDetailInvoker 修改策略详情，当前仅西南-贵阳一、北京四支持
 func (c *HssClient) UpdateAiPolicyDetailInvoker(request *model.UpdateAiPolicyDetailRequest) *UpdateAiPolicyDetailInvoker {
 	requestDef := GenReqDefForUpdateAiPolicyDetail()
 	return &UpdateAiPolicyDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
@@ -5019,6 +4289,1098 @@ func (c *HssClient) SwitchAppWhitelistPolicyLearnStatusInvoker(request *model.Sw
 	return &SwitchAppWhitelistPolicyLearnStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchModifyPortStatus 修改开放端口状态
+//
+// 修改开放端口状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) BatchModifyPortStatus(request *model.BatchModifyPortStatusRequest) (*model.BatchModifyPortStatusResponse, error) {
+	requestDef := GenReqDefForBatchModifyPortStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchModifyPortStatusResponse), nil
+	}
+}
+
+// BatchModifyPortStatusInvoker 修改开放端口状态
+func (c *HssClient) BatchModifyPortStatusInvoker(request *model.BatchModifyPortStatusRequest) *BatchModifyPortStatusInvoker {
+	requestDef := GenReqDefForBatchModifyPortStatus()
+	return &BatchModifyPortStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CreateGlobalAssetScanTask 创建全局资产扫描任务
+//
+// 创建全局资产扫描任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) CreateGlobalAssetScanTask(request *model.CreateGlobalAssetScanTaskRequest) (*model.CreateGlobalAssetScanTaskResponse, error) {
+	requestDef := GenReqDefForCreateGlobalAssetScanTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateGlobalAssetScanTaskResponse), nil
+	}
+}
+
+// CreateGlobalAssetScanTaskInvoker 创建全局资产扫描任务
+func (c *HssClient) CreateGlobalAssetScanTaskInvoker(request *model.CreateGlobalAssetScanTaskRequest) *CreateGlobalAssetScanTaskInvoker {
+	requestDef := GenReqDefForCreateGlobalAssetScanTask()
+	return &CreateGlobalAssetScanTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DownloadAssetFile 导出资产指纹信息
+//
+// 导出资产指纹信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) DownloadAssetFile(request *model.DownloadAssetFileRequest) (*model.DownloadAssetFileResponse, error) {
+	requestDef := GenReqDefForDownloadAssetFile()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DownloadAssetFileResponse), nil
+	}
+}
+
+// DownloadAssetFileInvoker 导出资产指纹信息
+func (c *HssClient) DownloadAssetFileInvoker(request *model.DownloadAssetFileRequest) *DownloadAssetFileInvoker {
+	requestDef := GenReqDefForDownloadAssetFile()
+	return &DownloadAssetFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAiComponentDetail AI组件详细信息
+//
+// 查询AI组件详细信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListAiComponentDetail(request *model.ListAiComponentDetailRequest) (*model.ListAiComponentDetailResponse, error) {
+	requestDef := GenReqDefForListAiComponentDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAiComponentDetailResponse), nil
+	}
+}
+
+// ListAiComponentDetailInvoker AI组件详细信息
+func (c *HssClient) ListAiComponentDetailInvoker(request *model.ListAiComponentDetailRequest) *ListAiComponentDetailInvoker {
+	requestDef := GenReqDefForListAiComponentDetail()
+	return &ListAiComponentDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAppChangeHistories 获取软件信息的历史变动记录
+//
+// 获取软件信息的历史变动记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListAppChangeHistories(request *model.ListAppChangeHistoriesRequest) (*model.ListAppChangeHistoriesResponse, error) {
+	requestDef := GenReqDefForListAppChangeHistories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAppChangeHistoriesResponse), nil
+	}
+}
+
+// ListAppChangeHistoriesInvoker 获取软件信息的历史变动记录
+func (c *HssClient) ListAppChangeHistoriesInvoker(request *model.ListAppChangeHistoriesRequest) *ListAppChangeHistoriesInvoker {
+	requestDef := GenReqDefForListAppChangeHistories()
+	return &ListAppChangeHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAppStatistics 查询软件列表
+//
+// 查询软件列表，支持通过软件名称查询对应的服务器数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListAppStatistics(request *model.ListAppStatisticsRequest) (*model.ListAppStatisticsResponse, error) {
+	requestDef := GenReqDefForListAppStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAppStatisticsResponse), nil
+	}
+}
+
+// ListAppStatisticsInvoker 查询软件列表
+func (c *HssClient) ListAppStatisticsInvoker(request *model.ListAppStatisticsRequest) *ListAppStatisticsInvoker {
+	requestDef := GenReqDefForListAppStatistics()
+	return &ListAppStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListApps 查询软件的服务器列表
+//
+// 查询软件的服务器列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListApps(request *model.ListAppsRequest) (*model.ListAppsResponse, error) {
+	requestDef := GenReqDefForListApps()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAppsResponse), nil
+	}
+}
+
+// ListAppsInvoker 查询软件的服务器列表
+func (c *HssClient) ListAppsInvoker(request *model.ListAppsRequest) *ListAppsInvoker {
+	requestDef := GenReqDefForListApps()
+	return &ListAppsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAutoLaunchChangeHistories 获取自启动项的历史变动记录
+//
+// 获取自启动项的历史变动记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListAutoLaunchChangeHistories(request *model.ListAutoLaunchChangeHistoriesRequest) (*model.ListAutoLaunchChangeHistoriesResponse, error) {
+	requestDef := GenReqDefForListAutoLaunchChangeHistories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAutoLaunchChangeHistoriesResponse), nil
+	}
+}
+
+// ListAutoLaunchChangeHistoriesInvoker 获取自启动项的历史变动记录
+func (c *HssClient) ListAutoLaunchChangeHistoriesInvoker(request *model.ListAutoLaunchChangeHistoriesRequest) *ListAutoLaunchChangeHistoriesInvoker {
+	requestDef := GenReqDefForListAutoLaunchChangeHistories()
+	return &ListAutoLaunchChangeHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAutoLaunchStatistics 查询自启动项信息
+//
+// 查询自启动信息，支持通过传入自启动名称查询启动类型和服务器数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListAutoLaunchStatistics(request *model.ListAutoLaunchStatisticsRequest) (*model.ListAutoLaunchStatisticsResponse, error) {
+	requestDef := GenReqDefForListAutoLaunchStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAutoLaunchStatisticsResponse), nil
+	}
+}
+
+// ListAutoLaunchStatisticsInvoker 查询自启动项信息
+func (c *HssClient) ListAutoLaunchStatisticsInvoker(request *model.ListAutoLaunchStatisticsRequest) *ListAutoLaunchStatisticsInvoker {
+	requestDef := GenReqDefForListAutoLaunchStatistics()
+	return &ListAutoLaunchStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListAutoLaunchs 查询自启动项的服务列表
+//
+// 查询自启动项的服务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListAutoLaunchs(request *model.ListAutoLaunchsRequest) (*model.ListAutoLaunchsResponse, error) {
+	requestDef := GenReqDefForListAutoLaunchs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListAutoLaunchsResponse), nil
+	}
+}
+
+// ListAutoLaunchsInvoker 查询自启动项的服务列表
+func (c *HssClient) ListAutoLaunchsInvoker(request *model.ListAutoLaunchsRequest) *ListAutoLaunchsInvoker {
+	requestDef := GenReqDefForListAutoLaunchs()
+	return &ListAutoLaunchsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListGlobalAssetScanTask 查询资产全局扫描任务状态
+//
+// 查询资产全局扫描任务状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListGlobalAssetScanTask(request *model.ListGlobalAssetScanTaskRequest) (*model.ListGlobalAssetScanTaskResponse, error) {
+	requestDef := GenReqDefForListGlobalAssetScanTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListGlobalAssetScanTaskResponse), nil
+	}
+}
+
+// ListGlobalAssetScanTaskInvoker 查询资产全局扫描任务状态
+func (c *HssClient) ListGlobalAssetScanTaskInvoker(request *model.ListGlobalAssetScanTaskRequest) *ListGlobalAssetScanTaskInvoker {
+	requestDef := GenReqDefForListGlobalAssetScanTask()
+	return &ListGlobalAssetScanTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListJarPackageHostInfo 查询指定中间件的服务器列表
+//
+// 查询指定中间件的服务器列表，通过传入中间件名称参数，返回对应的中间件服务器列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListJarPackageHostInfo(request *model.ListJarPackageHostInfoRequest) (*model.ListJarPackageHostInfoResponse, error) {
+	requestDef := GenReqDefForListJarPackageHostInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListJarPackageHostInfoResponse), nil
+	}
+}
+
+// ListJarPackageHostInfoInvoker 查询指定中间件的服务器列表
+func (c *HssClient) ListJarPackageHostInfoInvoker(request *model.ListJarPackageHostInfoRequest) *ListJarPackageHostInfoInvoker {
+	requestDef := GenReqDefForListJarPackageHostInfo()
+	return &ListJarPackageHostInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListJarPackageInfo 查询指定主机的中间件信息
+//
+// 查询指定主机的中间件信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListJarPackageInfo(request *model.ListJarPackageInfoRequest) (*model.ListJarPackageInfoResponse, error) {
+	requestDef := GenReqDefForListJarPackageInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListJarPackageInfoResponse), nil
+	}
+}
+
+// ListJarPackageInfoInvoker 查询指定主机的中间件信息
+func (c *HssClient) ListJarPackageInfoInvoker(request *model.ListJarPackageInfoRequest) *ListJarPackageInfoInvoker {
+	requestDef := GenReqDefForListJarPackageInfo()
+	return &ListJarPackageInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListJarPackageStatistics 查询中间件列表
+//
+// 查询中间件列表，支持通过中间件名称查询对应的服务器数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListJarPackageStatistics(request *model.ListJarPackageStatisticsRequest) (*model.ListJarPackageStatisticsResponse, error) {
+	requestDef := GenReqDefForListJarPackageStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListJarPackageStatisticsResponse), nil
+	}
+}
+
+// ListJarPackageStatisticsInvoker 查询中间件列表
+func (c *HssClient) ListJarPackageStatisticsInvoker(request *model.ListJarPackageStatisticsRequest) *ListJarPackageStatisticsInvoker {
+	requestDef := GenReqDefForListJarPackageStatistics()
+	return &ListJarPackageStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListKernelModuleHostInfo 查询指定内核模块的服务器列表
+//
+// 查询指定内核模块的服务器列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListKernelModuleHostInfo(request *model.ListKernelModuleHostInfoRequest) (*model.ListKernelModuleHostInfoResponse, error) {
+	requestDef := GenReqDefForListKernelModuleHostInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListKernelModuleHostInfoResponse), nil
+	}
+}
+
+// ListKernelModuleHostInfoInvoker 查询指定内核模块的服务器列表
+func (c *HssClient) ListKernelModuleHostInfoInvoker(request *model.ListKernelModuleHostInfoRequest) *ListKernelModuleHostInfoInvoker {
+	requestDef := GenReqDefForListKernelModuleHostInfo()
+	return &ListKernelModuleHostInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListKernelModuleInfo 查询指定主机的内核模块信息
+//
+// 查询指定主机的内核模块信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListKernelModuleInfo(request *model.ListKernelModuleInfoRequest) (*model.ListKernelModuleInfoResponse, error) {
+	requestDef := GenReqDefForListKernelModuleInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListKernelModuleInfoResponse), nil
+	}
+}
+
+// ListKernelModuleInfoInvoker 查询指定主机的内核模块信息
+func (c *HssClient) ListKernelModuleInfoInvoker(request *model.ListKernelModuleInfoRequest) *ListKernelModuleInfoInvoker {
+	requestDef := GenReqDefForListKernelModuleInfo()
+	return &ListKernelModuleInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListKernelModuleStatistics 查询内核模块的统计信息
+//
+// 查询内核模块的服务器数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListKernelModuleStatistics(request *model.ListKernelModuleStatisticsRequest) (*model.ListKernelModuleStatisticsResponse, error) {
+	requestDef := GenReqDefForListKernelModuleStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListKernelModuleStatisticsResponse), nil
+	}
+}
+
+// ListKernelModuleStatisticsInvoker 查询内核模块的统计信息
+func (c *HssClient) ListKernelModuleStatisticsInvoker(request *model.ListKernelModuleStatisticsRequest) *ListKernelModuleStatisticsInvoker {
+	requestDef := GenReqDefForListKernelModuleStatistics()
+	return &ListKernelModuleStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPortHost 查询指定开放端口的服务器列表
+//
+// 查询具备该端口的主机/容器的服务器列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListPortHost(request *model.ListPortHostRequest) (*model.ListPortHostResponse, error) {
+	requestDef := GenReqDefForListPortHost()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPortHostResponse), nil
+	}
+}
+
+// ListPortHostInvoker 查询指定开放端口的服务器列表
+func (c *HssClient) ListPortHostInvoker(request *model.ListPortHostRequest) *ListPortHostInvoker {
+	requestDef := GenReqDefForListPortHost()
+	return &ListPortHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPortStatistics 查询开放端口统计信息
+//
+// 查询开放端口列表，支持通过传入端口或协议类型查询服务器数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListPortStatistics(request *model.ListPortStatisticsRequest) (*model.ListPortStatisticsResponse, error) {
+	requestDef := GenReqDefForListPortStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPortStatisticsResponse), nil
+	}
+}
+
+// ListPortStatisticsInvoker 查询开放端口统计信息
+func (c *HssClient) ListPortStatisticsInvoker(request *model.ListPortStatisticsRequest) *ListPortStatisticsInvoker {
+	requestDef := GenReqDefForListPortStatistics()
+	return &ListPortStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListPorts 查询单服务器的开放端口列表
+//
+// 查询单服务器的开放端口列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListPorts(request *model.ListPortsRequest) (*model.ListPortsResponse, error) {
+	requestDef := GenReqDefForListPorts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPortsResponse), nil
+	}
+}
+
+// ListPortsInvoker 查询单服务器的开放端口列表
+func (c *HssClient) ListPortsInvoker(request *model.ListPortsRequest) *ListPortsInvoker {
+	requestDef := GenReqDefForListPorts()
+	return &ListPortsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProcessStatistics 查询进程统计信息
+//
+// 查询进程列表，通过传入进程路径参数查询对应的服务器数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListProcessStatistics(request *model.ListProcessStatisticsRequest) (*model.ListProcessStatisticsResponse, error) {
+	requestDef := GenReqDefForListProcessStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProcessStatisticsResponse), nil
+	}
+}
+
+// ListProcessStatisticsInvoker 查询进程统计信息
+func (c *HssClient) ListProcessStatisticsInvoker(request *model.ListProcessStatisticsRequest) *ListProcessStatisticsInvoker {
+	requestDef := GenReqDefForListProcessStatistics()
+	return &ListProcessStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListProcessesHost 查询指定进程的服务器列表
+//
+// 具备该进程的主机/容器的服务器列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListProcessesHost(request *model.ListProcessesHostRequest) (*model.ListProcessesHostResponse, error) {
+	requestDef := GenReqDefForListProcessesHost()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListProcessesHostResponse), nil
+	}
+}
+
+// ListProcessesHostInvoker 查询指定进程的服务器列表
+func (c *HssClient) ListProcessesHostInvoker(request *model.ListProcessesHostRequest) *ListProcessesHostInvoker {
+	requestDef := GenReqDefForListProcessesHost()
+	return &ListProcessesHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUserChangeHistories 获取账户变动历史信息
+//
+// 获取账户变动历史记录信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListUserChangeHistories(request *model.ListUserChangeHistoriesRequest) (*model.ListUserChangeHistoriesResponse, error) {
+	requestDef := GenReqDefForListUserChangeHistories()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUserChangeHistoriesResponse), nil
+	}
+}
+
+// ListUserChangeHistoriesInvoker 获取账户变动历史信息
+func (c *HssClient) ListUserChangeHistoriesInvoker(request *model.ListUserChangeHistoriesRequest) *ListUserChangeHistoriesInvoker {
+	requestDef := GenReqDefForListUserChangeHistories()
+	return &ListUserChangeHistoriesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUserStatistics 查询账号信息列表
+//
+// 查询账号信息列表，支持通过传入账号名称参数查询对应的服务器数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListUserStatistics(request *model.ListUserStatisticsRequest) (*model.ListUserStatisticsResponse, error) {
+	requestDef := GenReqDefForListUserStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUserStatisticsResponse), nil
+	}
+}
+
+// ListUserStatisticsInvoker 查询账号信息列表
+func (c *HssClient) ListUserStatisticsInvoker(request *model.ListUserStatisticsRequest) *ListUserStatisticsInvoker {
+	requestDef := GenReqDefForListUserStatistics()
+	return &ListUserStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListUsers 查询账号的服务器列表
+//
+// 查询账号的服务器列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListUsers(request *model.ListUsersRequest) (*model.ListUsersResponse, error) {
+	requestDef := GenReqDefForListUsers()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListUsersResponse), nil
+	}
+}
+
+// ListUsersInvoker 查询账号的服务器列表
+func (c *HssClient) ListUsersInvoker(request *model.ListUsersRequest) *ListUsersInvoker {
+	requestDef := GenReqDefForListUsers()
+	return &ListUsersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWebAppAndServiceStatistics 查询Web服务、Web应用、数据库的统计信息
+//
+// 查询Web服务、Web应用、数据库的服务器数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListWebAppAndServiceStatistics(request *model.ListWebAppAndServiceStatisticsRequest) (*model.ListWebAppAndServiceStatisticsResponse, error) {
+	requestDef := GenReqDefForListWebAppAndServiceStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWebAppAndServiceStatisticsResponse), nil
+	}
+}
+
+// ListWebAppAndServiceStatisticsInvoker 查询Web服务、Web应用、数据库的统计信息
+func (c *HssClient) ListWebAppAndServiceStatisticsInvoker(request *model.ListWebAppAndServiceStatisticsRequest) *ListWebAppAndServiceStatisticsInvoker {
+	requestDef := GenReqDefForListWebAppAndServiceStatistics()
+	return &ListWebAppAndServiceStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWebAppAndServices 查询指定Web服务、Web应用、数据库的服务器列表
+//
+// 查询指定Web服务、Web应用、数据库的服务器列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListWebAppAndServices(request *model.ListWebAppAndServicesRequest) (*model.ListWebAppAndServicesResponse, error) {
+	requestDef := GenReqDefForListWebAppAndServices()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWebAppAndServicesResponse), nil
+	}
+}
+
+// ListWebAppAndServicesInvoker 查询指定Web服务、Web应用、数据库的服务器列表
+func (c *HssClient) ListWebAppAndServicesInvoker(request *model.ListWebAppAndServicesRequest) *ListWebAppAndServicesInvoker {
+	requestDef := GenReqDefForListWebAppAndServices()
+	return &ListWebAppAndServicesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWebFrameworkHostInfo 查询指定Web框架的服务器列表
+//
+// 查询指定Web框架的服务器列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListWebFrameworkHostInfo(request *model.ListWebFrameworkHostInfoRequest) (*model.ListWebFrameworkHostInfoResponse, error) {
+	requestDef := GenReqDefForListWebFrameworkHostInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWebFrameworkHostInfoResponse), nil
+	}
+}
+
+// ListWebFrameworkHostInfoInvoker 查询指定Web框架的服务器列表
+func (c *HssClient) ListWebFrameworkHostInfoInvoker(request *model.ListWebFrameworkHostInfoRequest) *ListWebFrameworkHostInfoInvoker {
+	requestDef := GenReqDefForListWebFrameworkHostInfo()
+	return &ListWebFrameworkHostInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWebFrameworkInfo 查询指定主机的Web框架信息
+//
+// 查询指定主机的Web框架信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListWebFrameworkInfo(request *model.ListWebFrameworkInfoRequest) (*model.ListWebFrameworkInfoResponse, error) {
+	requestDef := GenReqDefForListWebFrameworkInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWebFrameworkInfoResponse), nil
+	}
+}
+
+// ListWebFrameworkInfoInvoker 查询指定主机的Web框架信息
+func (c *HssClient) ListWebFrameworkInfoInvoker(request *model.ListWebFrameworkInfoRequest) *ListWebFrameworkInfoInvoker {
+	requestDef := GenReqDefForListWebFrameworkInfo()
+	return &ListWebFrameworkInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWebFrameworkStatistics 查询Web框架的统计信息
+//
+// 查询Web框架的服务器数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListWebFrameworkStatistics(request *model.ListWebFrameworkStatisticsRequest) (*model.ListWebFrameworkStatisticsResponse, error) {
+	requestDef := GenReqDefForListWebFrameworkStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWebFrameworkStatisticsResponse), nil
+	}
+}
+
+// ListWebFrameworkStatisticsInvoker 查询Web框架的统计信息
+func (c *HssClient) ListWebFrameworkStatisticsInvoker(request *model.ListWebFrameworkStatisticsRequest) *ListWebFrameworkStatisticsInvoker {
+	requestDef := GenReqDefForListWebFrameworkStatistics()
+	return &ListWebFrameworkStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWebSiteHostInfo 查询指定Web站点的服务器列表
+//
+// 查询指定Web站点的服务器列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListWebSiteHostInfo(request *model.ListWebSiteHostInfoRequest) (*model.ListWebSiteHostInfoResponse, error) {
+	requestDef := GenReqDefForListWebSiteHostInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWebSiteHostInfoResponse), nil
+	}
+}
+
+// ListWebSiteHostInfoInvoker 查询指定Web站点的服务器列表
+func (c *HssClient) ListWebSiteHostInfoInvoker(request *model.ListWebSiteHostInfoRequest) *ListWebSiteHostInfoInvoker {
+	requestDef := GenReqDefForListWebSiteHostInfo()
+	return &ListWebSiteHostInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWebSiteInfo 查询指定主机的Web站点信息
+//
+// 查询指定主机的Web站点信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListWebSiteInfo(request *model.ListWebSiteInfoRequest) (*model.ListWebSiteInfoResponse, error) {
+	requestDef := GenReqDefForListWebSiteInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWebSiteInfoResponse), nil
+	}
+}
+
+// ListWebSiteInfoInvoker 查询指定主机的Web站点信息
+func (c *HssClient) ListWebSiteInfoInvoker(request *model.ListWebSiteInfoRequest) *ListWebSiteInfoInvoker {
+	requestDef := GenReqDefForListWebSiteInfo()
+	return &ListWebSiteInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListWebSiteStatistics 查询Web站点的统计信息
+//
+// 查询Web站点的服务器数。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListWebSiteStatistics(request *model.ListWebSiteStatisticsRequest) (*model.ListWebSiteStatisticsResponse, error) {
+	requestDef := GenReqDefForListWebSiteStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListWebSiteStatisticsResponse), nil
+	}
+}
+
+// ListWebSiteStatisticsInvoker 查询Web站点的统计信息
+func (c *HssClient) ListWebSiteStatisticsInvoker(request *model.ListWebSiteStatisticsRequest) *ListWebSiteStatisticsInvoker {
+	requestDef := GenReqDefForListWebSiteStatistics()
+	return &ListWebSiteStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// RunHostAssetManualCollect 采集单主机资产指纹
+//
+// 采集单主机资产指纹。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) RunHostAssetManualCollect(request *model.RunHostAssetManualCollectRequest) (*model.RunHostAssetManualCollectResponse, error) {
+	requestDef := GenReqDefForRunHostAssetManualCollect()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.RunHostAssetManualCollectResponse), nil
+	}
+}
+
+// RunHostAssetManualCollectInvoker 采集单主机资产指纹
+func (c *HssClient) RunHostAssetManualCollectInvoker(request *model.RunHostAssetManualCollectRequest) *RunHostAssetManualCollectInvoker {
+	requestDef := GenReqDefForRunHostAssetManualCollect()
+	return &RunHostAssetManualCollectInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAccountTop 资产管理-概览-账户Top
+//
+// 资产管理-概览-账户Top。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowAccountTop(request *model.ShowAccountTopRequest) (*model.ShowAccountTopResponse, error) {
+	requestDef := GenReqDefForShowAccountTop()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAccountTopResponse), nil
+	}
+}
+
+// ShowAccountTopInvoker 资产管理-概览-账户Top
+func (c *HssClient) ShowAccountTopInvoker(request *model.ShowAccountTopRequest) *ShowAccountTopInvoker {
+	requestDef := GenReqDefForShowAccountTop()
+	return &ShowAccountTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAgentStatisticsStatus 资产管理-概览-资产状态-主机Agent状态
+//
+// 资产管理-概览-资产状态-主机Agent状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowAgentStatisticsStatus(request *model.ShowAgentStatisticsStatusRequest) (*model.ShowAgentStatisticsStatusResponse, error) {
+	requestDef := GenReqDefForShowAgentStatisticsStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAgentStatisticsStatusResponse), nil
+	}
+}
+
+// ShowAgentStatisticsStatusInvoker 资产管理-概览-资产状态-主机Agent状态
+func (c *HssClient) ShowAgentStatisticsStatusInvoker(request *model.ShowAgentStatisticsStatusRequest) *ShowAgentStatisticsStatusInvoker {
+	requestDef := GenReqDefForShowAgentStatisticsStatus()
+	return &ShowAgentStatisticsStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAssetStatistic 统计资产信息数量
+//
+// 资产统计信息，账号、端口、进程等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowAssetStatistic(request *model.ShowAssetStatisticRequest) (*model.ShowAssetStatisticResponse, error) {
+	requestDef := GenReqDefForShowAssetStatistic()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAssetStatisticResponse), nil
+	}
+}
+
+// ShowAssetStatisticInvoker 统计资产信息数量
+func (c *HssClient) ShowAssetStatisticInvoker(request *model.ShowAssetStatisticRequest) *ShowAssetStatisticInvoker {
+	requestDef := GenReqDefForShowAssetStatistic()
+	return &ShowAssetStatisticInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowAutoLaunchTop 资产管理-概览-自启动项Top
+//
+// 资产管理-概览-自启动项Top。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowAutoLaunchTop(request *model.ShowAutoLaunchTopRequest) (*model.ShowAutoLaunchTopResponse, error) {
+	requestDef := GenReqDefForShowAutoLaunchTop()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowAutoLaunchTopResponse), nil
+	}
+}
+
+// ShowAutoLaunchTopInvoker 资产管理-概览-自启动项Top
+func (c *HssClient) ShowAutoLaunchTopInvoker(request *model.ShowAutoLaunchTopRequest) *ShowAutoLaunchTopInvoker {
+	requestDef := GenReqDefForShowAutoLaunchTop()
+	return &ShowAutoLaunchTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowCommonPort 查询某一端口的描述信息
+//
+// 呈现某一端口详细信息，如本地端口：80，类型：TCP，危险程度：正常，端口描述：常用于SSH(SecureShell)-远程登录协议，用于安全登录文件传输（SCP，SFTP）及端口重新定向。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowCommonPort(request *model.ShowCommonPortRequest) (*model.ShowCommonPortResponse, error) {
+	requestDef := GenReqDefForShowCommonPort()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowCommonPortResponse), nil
+	}
+}
+
+// ShowCommonPortInvoker 查询某一端口的描述信息
+func (c *HssClient) ShowCommonPortInvoker(request *model.ShowCommonPortRequest) *ShowCommonPortInvoker {
+	requestDef := GenReqDefForShowCommonPort()
+	return &ShowCommonPortInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowContainerProtectionStatus 资产管理-概览-资产状态-容器节点防护状态
+//
+// 资产管理-概览-资产状态-容器节点防护状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowContainerProtectionStatus(request *model.ShowContainerProtectionStatusRequest) (*model.ShowContainerProtectionStatusResponse, error) {
+	requestDef := GenReqDefForShowContainerProtectionStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowContainerProtectionStatusResponse), nil
+	}
+}
+
+// ShowContainerProtectionStatusInvoker 资产管理-概览-资产状态-容器节点防护状态
+func (c *HssClient) ShowContainerProtectionStatusInvoker(request *model.ShowContainerProtectionStatusRequest) *ShowContainerProtectionStatusInvoker {
+	requestDef := GenReqDefForShowContainerProtectionStatus()
+	return &ShowContainerProtectionStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHostAssetManualCollectStatus 单主机资产指纹采集状态
+//
+// 单主机资产指纹采集状态
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowHostAssetManualCollectStatus(request *model.ShowHostAssetManualCollectStatusRequest) (*model.ShowHostAssetManualCollectStatusResponse, error) {
+	requestDef := GenReqDefForShowHostAssetManualCollectStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHostAssetManualCollectStatusResponse), nil
+	}
+}
+
+// ShowHostAssetManualCollectStatusInvoker 单主机资产指纹采集状态
+func (c *HssClient) ShowHostAssetManualCollectStatusInvoker(request *model.ShowHostAssetManualCollectStatusRequest) *ShowHostAssetManualCollectStatusInvoker {
+	requestDef := GenReqDefForShowHostAssetManualCollectStatus()
+	return &ShowHostAssetManualCollectStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowHostProtectionStatus 资产管理-概览-资产状态-Agent状态
+//
+// 资产管理-概览-资产状态-Agent状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowHostProtectionStatus(request *model.ShowHostProtectionStatusRequest) (*model.ShowHostProtectionStatusResponse, error) {
+	requestDef := GenReqDefForShowHostProtectionStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowHostProtectionStatusResponse), nil
+	}
+}
+
+// ShowHostProtectionStatusInvoker 资产管理-概览-资产状态-Agent状态
+func (c *HssClient) ShowHostProtectionStatusInvoker(request *model.ShowHostProtectionStatusRequest) *ShowHostProtectionStatusInvoker {
+	requestDef := GenReqDefForShowHostProtectionStatus()
+	return &ShowHostProtectionStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowJarPackageTop 资产管理-概览-jar包Top
+//
+// 资产管理-概览-jar包Top。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowJarPackageTop(request *model.ShowJarPackageTopRequest) (*model.ShowJarPackageTopResponse, error) {
+	requestDef := GenReqDefForShowJarPackageTop()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowJarPackageTopResponse), nil
+	}
+}
+
+// ShowJarPackageTopInvoker 资产管理-概览-jar包Top
+func (c *HssClient) ShowJarPackageTopInvoker(request *model.ShowJarPackageTopRequest) *ShowJarPackageTopInvoker {
+	requestDef := GenReqDefForShowJarPackageTop()
+	return &ShowJarPackageTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowKernelModuleTop 资产管理-概览-内核模块Top
+//
+// 资产管理-概览-内核模块Top。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowKernelModuleTop(request *model.ShowKernelModuleTopRequest) (*model.ShowKernelModuleTopResponse, error) {
+	requestDef := GenReqDefForShowKernelModuleTop()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKernelModuleTopResponse), nil
+	}
+}
+
+// ShowKernelModuleTopInvoker 资产管理-概览-内核模块Top
+func (c *HssClient) ShowKernelModuleTopInvoker(request *model.ShowKernelModuleTopRequest) *ShowKernelModuleTopInvoker {
+	requestDef := GenReqDefForShowKernelModuleTop()
+	return &ShowKernelModuleTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowOsStatisticsInfo 资产管理-概览-资产状态-操作系统统计信息
+//
+// 资产管理-概览-资产状态-操作系统统计信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowOsStatisticsInfo(request *model.ShowOsStatisticsInfoRequest) (*model.ShowOsStatisticsInfoResponse, error) {
+	requestDef := GenReqDefForShowOsStatisticsInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowOsStatisticsInfoResponse), nil
+	}
+}
+
+// ShowOsStatisticsInfoInvoker 资产管理-概览-资产状态-操作系统统计信息
+func (c *HssClient) ShowOsStatisticsInfoInvoker(request *model.ShowOsStatisticsInfoRequest) *ShowOsStatisticsInfoInvoker {
+	requestDef := GenReqDefForShowOsStatisticsInfo()
+	return &ShowOsStatisticsInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPortTop 资产管理-概览-端口Top
+//
+// 资产管理-概览-端口Top。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowPortTop(request *model.ShowPortTopRequest) (*model.ShowPortTopResponse, error) {
+	requestDef := GenReqDefForShowPortTop()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPortTopResponse), nil
+	}
+}
+
+// ShowPortTopInvoker 资产管理-概览-端口Top
+func (c *HssClient) ShowPortTopInvoker(request *model.ShowPortTopRequest) *ShowPortTopInvoker {
+	requestDef := GenReqDefForShowPortTop()
+	return &ShowPortTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProcessTop 资产管理-概览-进程Top
+//
+// 资产管理-概览-进程Top。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowProcessTop(request *model.ShowProcessTopRequest) (*model.ShowProcessTopResponse, error) {
+	requestDef := GenReqDefForShowProcessTop()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProcessTopResponse), nil
+	}
+}
+
+// ShowProcessTopInvoker 资产管理-概览-进程Top
+func (c *HssClient) ShowProcessTopInvoker(request *model.ShowProcessTopRequest) *ShowProcessTopInvoker {
+	requestDef := GenReqDefForShowProcessTop()
+	return &ShowProcessTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowQuotaStatisticsInfo 资产管理-概览-资产状态-防护配额统计信息
+//
+// 资产管理-概览-资产状态-防护配额统计信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowQuotaStatisticsInfo(request *model.ShowQuotaStatisticsInfoRequest) (*model.ShowQuotaStatisticsInfoResponse, error) {
+	requestDef := GenReqDefForShowQuotaStatisticsInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowQuotaStatisticsInfoResponse), nil
+	}
+}
+
+// ShowQuotaStatisticsInfoInvoker 资产管理-概览-资产状态-防护配额统计信息
+func (c *HssClient) ShowQuotaStatisticsInfoInvoker(request *model.ShowQuotaStatisticsInfoRequest) *ShowQuotaStatisticsInfoInvoker {
+	requestDef := GenReqDefForShowQuotaStatisticsInfo()
+	return &ShowQuotaStatisticsInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSoftwareTop 资产管理-概览-软件Top
+//
+// 资产管理-概览-软件Top。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowSoftwareTop(request *model.ShowSoftwareTopRequest) (*model.ShowSoftwareTopResponse, error) {
+	requestDef := GenReqDefForShowSoftwareTop()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSoftwareTopResponse), nil
+	}
+}
+
+// ShowSoftwareTopInvoker 资产管理-概览-软件Top
+func (c *HssClient) ShowSoftwareTopInvoker(request *model.ShowSoftwareTopRequest) *ShowSoftwareTopInvoker {
+	requestDef := GenReqDefForShowSoftwareTop()
+	return &ShowSoftwareTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowWebAppAndServiceTop 资产管理-概览-WebAppAndServiceTop
+//
+// 资产管理-概览-Web应用TOP5/Web服务TOP5。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowWebAppAndServiceTop(request *model.ShowWebAppAndServiceTopRequest) (*model.ShowWebAppAndServiceTopResponse, error) {
+	requestDef := GenReqDefForShowWebAppAndServiceTop()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWebAppAndServiceTopResponse), nil
+	}
+}
+
+// ShowWebAppAndServiceTopInvoker 资产管理-概览-WebAppAndServiceTop
+func (c *HssClient) ShowWebAppAndServiceTopInvoker(request *model.ShowWebAppAndServiceTopRequest) *ShowWebAppAndServiceTopInvoker {
+	requestDef := GenReqDefForShowWebAppAndServiceTop()
+	return &ShowWebAppAndServiceTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowWebFrameworkTop 资产管理-概览-Web框架Top
+//
+// 资产管理-概览-Web框架Top。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowWebFrameworkTop(request *model.ShowWebFrameworkTopRequest) (*model.ShowWebFrameworkTopResponse, error) {
+	requestDef := GenReqDefForShowWebFrameworkTop()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWebFrameworkTopResponse), nil
+	}
+}
+
+// ShowWebFrameworkTopInvoker 资产管理-概览-Web框架Top
+func (c *HssClient) ShowWebFrameworkTopInvoker(request *model.ShowWebFrameworkTopRequest) *ShowWebFrameworkTopInvoker {
+	requestDef := GenReqDefForShowWebFrameworkTop()
+	return &ShowWebFrameworkTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowWebSiteTop 资产管理-概览-Web站点Top
+//
+// 资产管理-概览-Web站点Top。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowWebSiteTop(request *model.ShowWebSiteTopRequest) (*model.ShowWebSiteTopResponse, error) {
+	requestDef := GenReqDefForShowWebSiteTop()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowWebSiteTopResponse), nil
+	}
+}
+
+// ShowWebSiteTopInvoker 资产管理-概览-Web站点Top
+func (c *HssClient) ShowWebSiteTopInvoker(request *model.ShowWebSiteTopRequest) *ShowWebSiteTopInvoker {
+	requestDef := GenReqDefForShowWebSiteTop()
+	return &ShowWebSiteTopInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // AddBaselineWhiteList 新增基线白名单
 //
 // 新增基线白名单。
@@ -5439,6 +5801,27 @@ func (c *HssClient) ListSecurityCheckPolicyGroupInvoker(request *model.ListSecur
 	return &ListSecurityCheckPolicyGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListSecurityCheckPolicyGroupHosts 查询配置检测策略组关联的主机信息列表
+//
+// 查询配置检测策略组关联的主机信息列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListSecurityCheckPolicyGroupHosts(request *model.ListSecurityCheckPolicyGroupHostsRequest) (*model.ListSecurityCheckPolicyGroupHostsResponse, error) {
+	requestDef := GenReqDefForListSecurityCheckPolicyGroupHosts()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityCheckPolicyGroupHostsResponse), nil
+	}
+}
+
+// ListSecurityCheckPolicyGroupHostsInvoker 查询配置检测策略组关联的主机信息列表
+func (c *HssClient) ListSecurityCheckPolicyGroupHostsInvoker(request *model.ListSecurityCheckPolicyGroupHostsRequest) *ListSecurityCheckPolicyGroupHostsInvoker {
+	requestDef := GenReqDefForListSecurityCheckPolicyGroupHosts()
+	return &ListSecurityCheckPolicyGroupHostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListWeakPasswordUsers 查询弱口令检测结果列表
 //
 // 查询弱口令检测结果列表。
@@ -5794,6 +6177,48 @@ func (c *HssClient) ShowClusterScanStatistics(request *model.ShowClusterScanStat
 func (c *HssClient) ShowClusterScanStatisticsInvoker(request *model.ShowClusterScanStatisticsRequest) *ShowClusterScanStatisticsInvoker {
 	requestDef := GenReqDefForShowClusterScanStatistics()
 	return &ShowClusterScanStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// BatchUploadFiles 批量上传文件
+//
+// 批量上传文件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) BatchUploadFiles(request *model.BatchUploadFilesRequest) (*model.BatchUploadFilesResponse, error) {
+	requestDef := GenReqDefForBatchUploadFiles()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUploadFilesResponse), nil
+	}
+}
+
+// BatchUploadFilesInvoker 批量上传文件
+func (c *HssClient) BatchUploadFilesInvoker(request *model.BatchUploadFilesRequest) *BatchUploadFilesInvoker {
+	requestDef := GenReqDefForBatchUploadFiles()
+	return &BatchUploadFilesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExportCommonInterface 公共的导出接口
+//
+// 公共的导出接口
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ExportCommonInterface(request *model.ExportCommonInterfaceRequest) (*model.ExportCommonInterfaceResponse, error) {
+	requestDef := GenReqDefForExportCommonInterface()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportCommonInterfaceResponse), nil
+	}
+}
+
+// ExportCommonInterfaceInvoker 公共的导出接口
+func (c *HssClient) ExportCommonInterfaceInvoker(request *model.ExportCommonInterfaceRequest) *ExportCommonInterfaceInvoker {
+	requestDef := GenReqDefForExportCommonInterface()
+	return &ExportCommonInterfaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListProjectConfigs 查询项目配置
@@ -6783,6 +7208,27 @@ func (c *HssClient) UpdateCustomRuleConfigInvoker(request *model.UpdateCustomRul
 	return &UpdateCustomRuleConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateAlarmWhiteListHost 编辑告警白名单生效主机
+//
+// 编辑告警白名单主机相关信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) UpdateAlarmWhiteListHost(request *model.UpdateAlarmWhiteListHostRequest) (*model.UpdateAlarmWhiteListHostResponse, error) {
+	requestDef := GenReqDefForUpdateAlarmWhiteListHost()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAlarmWhiteListHostResponse), nil
+	}
+}
+
+// UpdateAlarmWhiteListHostInvoker 编辑告警白名单生效主机
+func (c *HssClient) UpdateAlarmWhiteListHostInvoker(request *model.UpdateAlarmWhiteListHostRequest) *UpdateAlarmWhiteListHostInvoker {
+	requestDef := GenReqDefForUpdateAlarmWhiteListHost()
+	return &UpdateAlarmWhiteListHostInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListFileEvents 变更文件列表
 //
 // 变更文件列表。
@@ -6865,6 +7311,27 @@ func (c *HssClient) ShowFileStatistic(request *model.ShowFileStatisticRequest) (
 func (c *HssClient) ShowFileStatisticInvoker(request *model.ShowFileStatisticRequest) *ShowFileStatisticInvoker {
 	requestDef := GenReqDefForShowFileStatistic()
 	return &ShowFileStatisticInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHoneypotEvents 查询蜜罐事件列表
+//
+// 查询蜜罐事件列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListHoneypotEvents(request *model.ListHoneypotEventsRequest) (*model.ListHoneypotEventsResponse, error) {
+	requestDef := GenReqDefForListHoneypotEvents()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHoneypotEventsResponse), nil
+	}
+}
+
+// ListHoneypotEventsInvoker 查询蜜罐事件列表
+func (c *HssClient) ListHoneypotEventsInvoker(request *model.ListHoneypotEventsRequest) *ListHoneypotEventsInvoker {
+	requestDef := GenReqDefForListHoneypotEvents()
+	return &ListHoneypotEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AddHostsGroup 创建服务器组
@@ -7180,6 +7647,27 @@ func (c *HssClient) ListHostsRisk(request *model.ListHostsRiskRequest) (*model.L
 func (c *HssClient) ListHostsRiskInvoker(request *model.ListHostsRiskRequest) *ListHostsRiskInvoker {
 	requestDef := GenReqDefForListHostsRisk()
 	return &ListHostsRiskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHostsUpgrade 获取主机的升级状态
+//
+// 获取主机的升级状态，支持按主机ID列表批量查询Agent 1.0到2.0的升级状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListHostsUpgrade(request *model.ListHostsUpgradeRequest) (*model.ListHostsUpgradeResponse, error) {
+	requestDef := GenReqDefForListHostsUpgrade()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHostsUpgradeResponse), nil
+	}
+}
+
+// ListHostsUpgradeInvoker 获取主机的升级状态
+func (c *HssClient) ListHostsUpgradeInvoker(request *model.ListHostsUpgradeRequest) *ListHostsUpgradeInvoker {
+	requestDef := GenReqDefForListHostsUpgrade()
+	return &ListHostsUpgradeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListPolicies 查询主机策略列表
@@ -8110,6 +8598,27 @@ func (c *HssClient) ListImageRiskConfigsInvoker(request *model.ListImageRiskConf
 	return &ListImageRiskConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListImageScanOverview 获取镜像扫描的总览
+//
+// 获取镜像扫描的总览
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListImageScanOverview(request *model.ListImageScanOverviewRequest) (*model.ListImageScanOverviewResponse, error) {
+	requestDef := GenReqDefForListImageScanOverview()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListImageScanOverviewResponse), nil
+	}
+}
+
+// ListImageScanOverviewInvoker 获取镜像扫描的总览
+func (c *HssClient) ListImageScanOverviewInvoker(request *model.ListImageScanOverviewRequest) *ListImageScanOverviewInvoker {
+	requestDef := GenReqDefForListImageScanOverview()
+	return &ListImageScanOverviewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListImageSensitive 查询镜像的敏感信息
 //
 // 查询镜像的敏感信息，若镜像类型为cicd镜像，则需传参镜像类型和镜像id唯一确定一条cicd镜像信息；若镜像类型为其他镜像仓类型，需要传参镜像类型、组织名称、镜像名称、镜像版本名称唯一确定一条其他镜像信息。
@@ -8276,6 +8785,27 @@ func (c *HssClient) ListLocalImageHosts(request *model.ListLocalImageHostsReques
 func (c *HssClient) ListLocalImageHostsInvoker(request *model.ListLocalImageHostsRequest) *ListLocalImageHostsInvoker {
 	requestDef := GenReqDefForListLocalImageHosts()
 	return &ListLocalImageHostsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListLocalImageVul 查询本地镜像的漏洞信息
+//
+// 查询本地镜像的漏洞信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListLocalImageVul(request *model.ListLocalImageVulRequest) (*model.ListLocalImageVulResponse, error) {
+	requestDef := GenReqDefForListLocalImageVul()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListLocalImageVulResponse), nil
+	}
+}
+
+// ListLocalImageVulInvoker 查询本地镜像的漏洞信息
+func (c *HssClient) ListLocalImageVulInvoker(request *model.ListLocalImageVulRequest) *ListLocalImageVulInvoker {
+	requestDef := GenReqDefForListLocalImageVul()
+	return &ListLocalImageVulInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // Deprecated: This function is deprecated and will be removed in the future versions.
@@ -8935,9 +9465,51 @@ func (c *HssClient) ShowProtectStatisticsInvoker(request *model.ShowProtectStati
 	return &ShowProtectStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// ShowRiskScore 查询风险评分结果
+// ShowProtectionStatusStatistics 查询当前云负载的防护状态
 //
-// 查询风险评分结果。
+// 查询当前云负载的防护状态统计信息，包含主机、容器、Serverless的防护情况。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowProtectionStatusStatistics(request *model.ShowProtectionStatusStatisticsRequest) (*model.ShowProtectionStatusStatisticsResponse, error) {
+	requestDef := GenReqDefForShowProtectionStatusStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProtectionStatusStatisticsResponse), nil
+	}
+}
+
+// ShowProtectionStatusStatisticsInvoker 查询当前云负载的防护状态
+func (c *HssClient) ShowProtectionStatusStatisticsInvoker(request *model.ShowProtectionStatusStatisticsRequest) *ShowProtectionStatusStatisticsInvoker {
+	requestDef := GenReqDefForShowProtectionStatusStatistics()
+	return &ShowProtectionStatusStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowQuotaHostStatistics 查询主机配额统计信息
+//
+// 查询主机配额统计信息，包含各版本配额数量、主机数量、即将过期配额数量等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowQuotaHostStatistics(request *model.ShowQuotaHostStatisticsRequest) (*model.ShowQuotaHostStatisticsResponse, error) {
+	requestDef := GenReqDefForShowQuotaHostStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowQuotaHostStatisticsResponse), nil
+	}
+}
+
+// ShowQuotaHostStatisticsInvoker 查询主机配额统计信息
+func (c *HssClient) ShowQuotaHostStatisticsInvoker(request *model.ShowQuotaHostStatisticsRequest) *ShowQuotaHostStatisticsInvoker {
+	requestDef := GenReqDefForShowQuotaHostStatistics()
+	return &ShowQuotaHostStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowRiskScore 查询风险评分结果--接口已废弃
+//
+// 查询风险评分结果--接口已废弃。
 //
 // Please refer to HUAWEI cloud API Explorer for details.
 func (c *HssClient) ShowRiskScore(request *model.ShowRiskScoreRequest) (*model.ShowRiskScoreResponse, error) {
@@ -8950,10 +9522,94 @@ func (c *HssClient) ShowRiskScore(request *model.ShowRiskScoreRequest) (*model.S
 	}
 }
 
-// ShowRiskScoreInvoker 查询风险评分结果
+// ShowRiskScoreInvoker 查询风险评分结果--接口已废弃
 func (c *HssClient) ShowRiskScoreInvoker(request *model.ShowRiskScoreRequest) *ShowRiskScoreInvoker {
 	requestDef := GenReqDefForShowRiskScore()
 	return &ShowRiskScoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSecurityRisk 查询安全风险信息
+//
+// 查询项目安全风险信息，包含主机风险（告警、漏洞、基线、可疑进程）和容器风险（漏洞），以及7天安全风险趋势数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowSecurityRisk(request *model.ShowSecurityRiskRequest) (*model.ShowSecurityRiskResponse, error) {
+	requestDef := GenReqDefForShowSecurityRisk()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecurityRiskResponse), nil
+	}
+}
+
+// ShowSecurityRiskInvoker 查询安全风险信息
+func (c *HssClient) ShowSecurityRiskInvoker(request *model.ShowSecurityRiskRequest) *ShowSecurityRiskInvoker {
+	requestDef := GenReqDefForShowSecurityRisk()
+	return &ShowSecurityRiskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSecurityScore 查询总览界面安全评分信息
+//
+// 查询总览界面安全评分信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowSecurityScore(request *model.ShowSecurityScoreRequest) (*model.ShowSecurityScoreResponse, error) {
+	requestDef := GenReqDefForShowSecurityScore()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecurityScoreResponse), nil
+	}
+}
+
+// ShowSecurityScoreInvoker 查询总览界面安全评分信息
+func (c *HssClient) ShowSecurityScoreInvoker(request *model.ShowSecurityScoreRequest) *ShowSecurityScoreInvoker {
+	requestDef := GenReqDefForShowSecurityScore()
+	return &ShowSecurityScoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowStatistics 查询统计信息
+//
+// 统计信息：包含勒索病毒防治开启数量，应用防护开启数量，网页防篡改开启数量，双因子认证开启数量，支持双因子认证开启数量，隔离文件数量，应用进程控制防护服务器数
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowStatistics(request *model.ShowStatisticsRequest) (*model.ShowStatisticsResponse, error) {
+	requestDef := GenReqDefForShowStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowStatisticsResponse), nil
+	}
+}
+
+// ShowStatisticsInvoker 查询统计信息
+func (c *HssClient) ShowStatisticsInvoker(request *model.ShowStatisticsRequest) *ShowStatisticsInvoker {
+	requestDef := GenReqDefForShowStatistics()
+	return &ShowStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTrialsStatistics 查询试用主机风险统计
+//
+// 查询试用主机风险统计
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowTrialsStatistics(request *model.ShowTrialsStatisticsRequest) (*model.ShowTrialsStatisticsResponse, error) {
+	requestDef := GenReqDefForShowTrialsStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTrialsStatisticsResponse), nil
+	}
+}
+
+// ShowTrialsStatisticsInvoker 查询试用主机风险统计
+func (c *HssClient) ShowTrialsStatisticsInvoker(request *model.ShowTrialsStatisticsRequest) *ShowTrialsStatisticsInvoker {
+	requestDef := GenReqDefForShowTrialsStatistics()
+	return &ShowTrialsStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowWelfareAreaInfo 查询月度运营报告福利区公共信息
@@ -9187,6 +9843,48 @@ func (c *HssClient) ListPolicyGroupInvoker(request *model.ListPolicyGroupRequest
 	return &ListPolicyGroupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListPolicyGroupDetail 查询策略组详情
+//
+// 查询策略组详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListPolicyGroupDetail(request *model.ListPolicyGroupDetailRequest) (*model.ListPolicyGroupDetailResponse, error) {
+	requestDef := GenReqDefForListPolicyGroupDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListPolicyGroupDetailResponse), nil
+	}
+}
+
+// ListPolicyGroupDetailInvoker 查询策略组详情
+func (c *HssClient) ListPolicyGroupDetailInvoker(request *model.ListPolicyGroupDetailRequest) *ListPolicyGroupDetailInvoker {
+	requestDef := GenReqDefForListPolicyGroupDetail()
+	return &ListPolicyGroupDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowPolicyDetail 查询策略详情
+//
+// 查询策略详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowPolicyDetail(request *model.ShowPolicyDetailRequest) (*model.ShowPolicyDetailResponse, error) {
+	requestDef := GenReqDefForShowPolicyDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowPolicyDetailResponse), nil
+	}
+}
+
+// ShowPolicyDetailInvoker 查询策略详情
+func (c *HssClient) ShowPolicyDetailInvoker(request *model.ShowPolicyDetailRequest) *ShowPolicyDetailInvoker {
+	requestDef := GenReqDefForShowPolicyDetail()
+	return &ShowPolicyDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CancelHostsQuota 解绑配额
 //
 // 解绑配额。
@@ -9353,6 +10051,27 @@ func (c *HssClient) ShowVersion(request *model.ShowVersionRequest) (*model.ShowV
 func (c *HssClient) ShowVersionInvoker(request *model.ShowVersionRequest) *ShowVersionInvoker {
 	requestDef := GenReqDefForShowVersion()
 	return &ShowVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVersionNewService 查询租户版本信息
+//
+// 查询租户当前最高主机版本和容器版本信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowVersionNewService(request *model.ShowVersionNewServiceRequest) (*model.ShowVersionNewServiceResponse, error) {
+	requestDef := GenReqDefForShowVersionNewService()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVersionNewServiceResponse), nil
+	}
+}
+
+// ShowVersionNewServiceInvoker 查询租户版本信息
+func (c *HssClient) ShowVersionNewServiceInvoker(request *model.ShowVersionNewServiceRequest) *ShowVersionNewServiceInvoker {
+	requestDef := GenReqDefForShowVersionNewService()
+	return &ShowVersionNewServiceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // AddProtectionPolicy 添加防护策略
@@ -9691,6 +10410,48 @@ func (c *HssClient) ShowBackupPolicyInfoInvoker(request *model.ShowBackupPolicyI
 	return &ShowBackupPolicyInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowBackupsStatistics 查询防勒索备份统计信息
+//
+// 查询防勒索备份统计信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowBackupsStatistics(request *model.ShowBackupsStatisticsRequest) (*model.ShowBackupsStatisticsResponse, error) {
+	requestDef := GenReqDefForShowBackupsStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBackupsStatisticsResponse), nil
+	}
+}
+
+// ShowBackupsStatisticsInvoker 查询防勒索备份统计信息
+func (c *HssClient) ShowBackupsStatisticsInvoker(request *model.ShowBackupsStatisticsRequest) *ShowBackupsStatisticsInvoker {
+	requestDef := GenReqDefForShowBackupsStatistics()
+	return &ShowBackupsStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowProtectionStatistics 查询防勒索防护统计信息
+//
+// 查询防勒索防护统计信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowProtectionStatistics(request *model.ShowProtectionStatisticsRequest) (*model.ShowProtectionStatisticsResponse, error) {
+	requestDef := GenReqDefForShowProtectionStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowProtectionStatisticsResponse), nil
+	}
+}
+
+// ShowProtectionStatisticsInvoker 查询防勒索防护统计信息
+func (c *HssClient) ShowProtectionStatisticsInvoker(request *model.ShowProtectionStatisticsRequest) *ShowProtectionStatisticsInvoker {
+	requestDef := GenReqDefForShowProtectionStatistics()
+	return &ShowProtectionStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowSingleBackupPolicyInfo 查询单个备份策略信息
 //
 // 查询单个备份策略信息。
@@ -9796,6 +10557,48 @@ func (c *HssClient) UpdateProtectionPolicyInvoker(request *model.UpdateProtectio
 	return &UpdateProtectionPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpdateSnapshotPolicy 更新定时快照策略
+//
+// 更新定时快照策略
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) UpdateSnapshotPolicy(request *model.UpdateSnapshotPolicyRequest) (*model.UpdateSnapshotPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateSnapshotPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateSnapshotPolicyResponse), nil
+	}
+}
+
+// UpdateSnapshotPolicyInvoker 更新定时快照策略
+func (c *HssClient) UpdateSnapshotPolicyInvoker(request *model.UpdateSnapshotPolicyRequest) *UpdateSnapshotPolicyInvoker {
+	requestDef := GenReqDefForUpdateSnapshotPolicy()
+	return &UpdateSnapshotPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRaspPatches 查询虚拟补丁列表
+//
+// 查询虚拟补丁列表：查询已导入的虚拟补丁信息，包含补丁名称、漏洞ID、CVE编号、目标组件、影响版本、补丁版本、漏洞说明等。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListRaspPatches(request *model.ListRaspPatchesRequest) (*model.ListRaspPatchesResponse, error) {
+	requestDef := GenReqDefForListRaspPatches()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRaspPatchesResponse), nil
+	}
+}
+
+// ListRaspPatchesInvoker 查询虚拟补丁列表
+func (c *HssClient) ListRaspPatchesInvoker(request *model.ListRaspPatchesRequest) *ListRaspPatchesInvoker {
+	requestDef := GenReqDefForListRaspPatches()
+	return &ListRaspPatchesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // CreateImageSynchronizeTask 创建同步镜像任务
 //
 // 创建同步镜像任务。
@@ -9838,6 +10641,90 @@ func (c *HssClient) ListRegistryImagesInvoker(request *model.ListRegistryImagesR
 	return &ListRegistryImagesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddSecurityReport 添加安全报告
+//
+// 添加安全报告
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) AddSecurityReport(request *model.AddSecurityReportRequest) (*model.AddSecurityReportResponse, error) {
+	requestDef := GenReqDefForAddSecurityReport()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddSecurityReportResponse), nil
+	}
+}
+
+// AddSecurityReportInvoker 添加安全报告
+func (c *HssClient) AddSecurityReportInvoker(request *model.AddSecurityReportRequest) *AddSecurityReportInvoker {
+	requestDef := GenReqDefForAddSecurityReport()
+	return &AddSecurityReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ChangeSecurityReport 修改报告
+//
+// 修改报告
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ChangeSecurityReport(request *model.ChangeSecurityReportRequest) (*model.ChangeSecurityReportResponse, error) {
+	requestDef := GenReqDefForChangeSecurityReport()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ChangeSecurityReportResponse), nil
+	}
+}
+
+// ChangeSecurityReportInvoker 修改报告
+func (c *HssClient) ChangeSecurityReportInvoker(request *model.ChangeSecurityReportRequest) *ChangeSecurityReportInvoker {
+	requestDef := GenReqDefForChangeSecurityReport()
+	return &ChangeSecurityReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteSecurityReport 删除安全报告
+//
+// 删除安全报告
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) DeleteSecurityReport(request *model.DeleteSecurityReportRequest) (*model.DeleteSecurityReportResponse, error) {
+	requestDef := GenReqDefForDeleteSecurityReport()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteSecurityReportResponse), nil
+	}
+}
+
+// DeleteSecurityReportInvoker 删除安全报告
+func (c *HssClient) DeleteSecurityReportInvoker(request *model.DeleteSecurityReportRequest) *DeleteSecurityReportInvoker {
+	requestDef := GenReqDefForDeleteSecurityReport()
+	return &DeleteSecurityReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListHistoryPeriod 查询历史报告统计周期列表
+//
+// 查询历史报告统计周期列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListHistoryPeriod(request *model.ListHistoryPeriodRequest) (*model.ListHistoryPeriodResponse, error) {
+	requestDef := GenReqDefForListHistoryPeriod()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListHistoryPeriodResponse), nil
+	}
+}
+
+// ListHistoryPeriodInvoker 查询历史报告统计周期列表
+func (c *HssClient) ListHistoryPeriodInvoker(request *model.ListHistoryPeriodRequest) *ListHistoryPeriodInvoker {
+	requestDef := GenReqDefForListHistoryPeriod()
+	return &ListHistoryPeriodInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListSecurityReport 查询报告总览页列表
 //
 // 查询报告总览页列表
@@ -9878,6 +10765,69 @@ func (c *HssClient) SendSecurityReport(request *model.SendSecurityReportRequest)
 func (c *HssClient) SendSecurityReportInvoker(request *model.SendSecurityReportRequest) *SendSecurityReportInvoker {
 	requestDef := GenReqDefForSendSecurityReport()
 	return &SendSecurityReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowReportSubscription 查询报告订阅的内容
+//
+// 查询报告订阅的内容
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowReportSubscription(request *model.ShowReportSubscriptionRequest) (*model.ShowReportSubscriptionResponse, error) {
+	requestDef := GenReqDefForShowReportSubscription()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowReportSubscriptionResponse), nil
+	}
+}
+
+// ShowReportSubscriptionInvoker 查询报告订阅的内容
+func (c *HssClient) ShowReportSubscriptionInvoker(request *model.ShowReportSubscriptionRequest) *ShowReportSubscriptionInvoker {
+	requestDef := GenReqDefForShowReportSubscription()
+	return &ShowReportSubscriptionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSecurityReport 查询安全报告详情
+//
+// 查询安全报告详情
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowSecurityReport(request *model.ShowSecurityReportRequest) (*model.ShowSecurityReportResponse, error) {
+	requestDef := GenReqDefForShowSecurityReport()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecurityReportResponse), nil
+	}
+}
+
+// ShowSecurityReportInvoker 查询安全报告详情
+func (c *HssClient) ShowSecurityReportInvoker(request *model.ShowSecurityReportRequest) *ShowSecurityReportInvoker {
+	requestDef := GenReqDefForShowSecurityReport()
+	return &ShowSecurityReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSecurityReportLogo 获取安全报告logo
+//
+// 获取安全报告logo
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowSecurityReportLogo(request *model.ShowSecurityReportLogoRequest) (*model.ShowSecurityReportLogoResponse, error) {
+	requestDef := GenReqDefForShowSecurityReportLogo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecurityReportLogoResponse), nil
+	}
+}
+
+// ShowSecurityReportLogoInvoker 获取安全报告logo
+func (c *HssClient) ShowSecurityReportLogoInvoker(request *model.ShowSecurityReportLogoRequest) *ShowSecurityReportLogoInvoker {
+	requestDef := GenReqDefForShowSecurityReportLogo()
+	return &ShowSecurityReportLogoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAntivirusHandleHistory 查询病毒扫描历史处置记录列表
@@ -9941,6 +10891,27 @@ func (c *HssClient) ListSecurityCheckClusterReports(request *model.ListSecurityC
 func (c *HssClient) ListSecurityCheckClusterReportsInvoker(request *model.ListSecurityCheckClusterReportsRequest) *ListSecurityCheckClusterReportsInvoker {
 	requestDef := GenReqDefForListSecurityCheckClusterReports()
 	return &ListSecurityCheckClusterReportsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListSecurityCheckHostResult 查询安全体检主机结果列表
+//
+// 查询安全体检主机结果列表，支持按主机名称、主机IP、操作系统类型、风险级别等条件筛选
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListSecurityCheckHostResult(request *model.ListSecurityCheckHostResultRequest) (*model.ListSecurityCheckHostResultResponse, error) {
+	requestDef := GenReqDefForListSecurityCheckHostResult()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListSecurityCheckHostResultResponse), nil
+	}
+}
+
+// ListSecurityCheckHostResultInvoker 查询安全体检主机结果列表
+func (c *HssClient) ListSecurityCheckHostResultInvoker(request *model.ListSecurityCheckHostResultRequest) *ListSecurityCheckHostResultInvoker {
+	requestDef := GenReqDefForListSecurityCheckHostResult()
+	return &ListSecurityCheckHostResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListVulHandleHistory 查询漏洞历史处置记录列表
@@ -10048,6 +11019,48 @@ func (c *HssClient) ShowSecurityCheckHostReportInvoker(request *model.ShowSecuri
 	return &ShowSecurityCheckHostReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowSecurityCheckOverview 查询安全体检总览
+//
+// 查询安全体检总览信息，包括风险评分、风险数量、防护主机数量等
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowSecurityCheckOverview(request *model.ShowSecurityCheckOverviewRequest) (*model.ShowSecurityCheckOverviewResponse, error) {
+	requestDef := GenReqDefForShowSecurityCheckOverview()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecurityCheckOverviewResponse), nil
+	}
+}
+
+// ShowSecurityCheckOverviewInvoker 查询安全体检总览
+func (c *HssClient) ShowSecurityCheckOverviewInvoker(request *model.ShowSecurityCheckOverviewRequest) *ShowSecurityCheckOverviewInvoker {
+	requestDef := GenReqDefForShowSecurityCheckOverview()
+	return &ShowSecurityCheckOverviewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowSecurityCheckStatistic 查询安全体检统计信息
+//
+// 查询安全体检统计信息，包含本次体检服务器数量、各风险等级服务器数量等
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowSecurityCheckStatistic(request *model.ShowSecurityCheckStatisticRequest) (*model.ShowSecurityCheckStatisticResponse, error) {
+	requestDef := GenReqDefForShowSecurityCheckStatistic()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowSecurityCheckStatisticResponse), nil
+	}
+}
+
+// ShowSecurityCheckStatisticInvoker 查询安全体检统计信息
+func (c *HssClient) ShowSecurityCheckStatisticInvoker(request *model.ShowSecurityCheckStatisticRequest) *ShowSecurityCheckStatisticInvoker {
+	requestDef := GenReqDefForShowSecurityCheckStatistic()
+	return &ShowSecurityCheckStatisticInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // StartManualSecurityCheck 启动手动体检
 //
 // 启动手动体检。
@@ -10111,50 +11124,67 @@ func (c *HssClient) UpdateSecurityCheckConfigInvoker(request *model.UpdateSecuri
 	return &UpdateSecurityCheckConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// Deprecated: This function is deprecated and will be removed in the future versions.
-// ListServerlessAsset 查询Serverless资产列表--接口已废弃
+// InstalledInstanceAgentList 实例安装Agent列表
 //
-// 查询Serverless资产列表--接口已废弃
+// 实例安装Agent列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListServerlessAsset(request *model.ListServerlessAssetRequest) (*model.ListServerlessAssetResponse, error) {
-	requestDef := GenReqDefForListServerlessAsset()
+func (c *HssClient) InstalledInstanceAgentList(request *model.InstalledInstanceAgentListRequest) (*model.InstalledInstanceAgentListResponse, error) {
+	requestDef := GenReqDefForInstalledInstanceAgentList()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListServerlessAssetResponse), nil
+		return resp.(*model.InstalledInstanceAgentListResponse), nil
 	}
 }
 
-// Deprecated: This function is deprecated and will be removed in the future versions.
-// ListServerlessAssetInvoker 查询Serverless资产列表--接口已废弃
-func (c *HssClient) ListServerlessAssetInvoker(request *model.ListServerlessAssetRequest) *ListServerlessAssetInvoker {
-	requestDef := GenReqDefForListServerlessAsset()
-	return &ListServerlessAssetInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// InstalledInstanceAgentListInvoker 实例安装Agent列表
+func (c *HssClient) InstalledInstanceAgentListInvoker(request *model.InstalledInstanceAgentListRequest) *InstalledInstanceAgentListInvoker {
+	requestDef := GenReqDefForInstalledInstanceAgentList()
+	return &InstalledInstanceAgentListInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
-// Deprecated: This function is deprecated and will be removed in the future versions.
-// ListServerlessAssetDetail 查询Serverless资产详细信息--接口已废弃
+// ListInstanceProtections serverless防护管理列表
 //
-// 查询Serverless资产详细信息--接口已废弃
+// serverless防护管理列表
 //
 // Please refer to HUAWEI cloud API Explorer for details.
-func (c *HssClient) ListServerlessAssetDetail(request *model.ListServerlessAssetDetailRequest) (*model.ListServerlessAssetDetailResponse, error) {
-	requestDef := GenReqDefForListServerlessAssetDetail()
+func (c *HssClient) ListInstanceProtections(request *model.ListInstanceProtectionsRequest) (*model.ListInstanceProtectionsResponse, error) {
+	requestDef := GenReqDefForListInstanceProtections()
 
 	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
 		return nil, err
 	} else {
-		return resp.(*model.ListServerlessAssetDetailResponse), nil
+		return resp.(*model.ListInstanceProtectionsResponse), nil
 	}
 }
 
-// Deprecated: This function is deprecated and will be removed in the future versions.
-// ListServerlessAssetDetailInvoker 查询Serverless资产详细信息--接口已废弃
-func (c *HssClient) ListServerlessAssetDetailInvoker(request *model.ListServerlessAssetDetailRequest) *ListServerlessAssetDetailInvoker {
-	requestDef := GenReqDefForListServerlessAssetDetail()
-	return &ListServerlessAssetDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+// ListInstanceProtectionsInvoker serverless防护管理列表
+func (c *HssClient) ListInstanceProtectionsInvoker(request *model.ListInstanceProtectionsRequest) *ListInstanceProtectionsInvoker {
+	requestDef := GenReqDefForListInstanceProtections()
+	return &ListInstanceProtectionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowServerlessVulStatistics 查看serverless漏洞统计数据
+//
+// 查看serverless漏洞统计数据
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowServerlessVulStatistics(request *model.ShowServerlessVulStatisticsRequest) (*model.ShowServerlessVulStatisticsResponse, error) {
+	requestDef := GenReqDefForShowServerlessVulStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowServerlessVulStatisticsResponse), nil
+	}
+}
+
+// ShowServerlessVulStatisticsInvoker 查看serverless漏洞统计数据
+func (c *HssClient) ShowServerlessVulStatisticsInvoker(request *model.ShowServerlessVulStatisticsRequest) *ShowServerlessVulStatisticsInvoker {
+	requestDef := GenReqDefForShowServerlessVulStatistics()
+	return &ShowServerlessVulStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ChangeAgentAutoUpgradeStatus 开启或关闭“Agent自动升级”配置开关
@@ -10218,6 +11248,27 @@ func (c *HssClient) ChangeSwitchesStatus(request *model.ChangeSwitchesStatusRequ
 func (c *HssClient) ChangeSwitchesStatusInvoker(request *model.ChangeSwitchesStatusRequest) *ChangeSwitchesStatusInvoker {
 	requestDef := GenReqDefForChangeSwitchesStatus()
 	return &ChangeSwitchesStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// InstallAgent 安装agent
+//
+// 安装agent
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) InstallAgent(request *model.InstallAgentRequest) (*model.InstallAgentResponse, error) {
+	requestDef := GenReqDefForInstallAgent()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.InstallAgentResponse), nil
+	}
+}
+
+// InstallAgentInvoker 安装agent
+func (c *HssClient) InstallAgentInvoker(request *model.InstallAgentRequest) *InstallAgentInvoker {
+	requestDef := GenReqDefForInstallAgent()
+	return &InstallAgentInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListAgentAutoUpgradeStatus 查询“Agent自动升级”配置开关状态
@@ -10493,6 +11544,27 @@ func (c *HssClient) ModifyLoginWhiteIpInvoker(request *model.ModifyLoginWhiteIpR
 	return &ModifyLoginWhiteIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SetRemindersConfig 设置告警提醒开关
+//
+// 设置告警提醒开关
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) SetRemindersConfig(request *model.SetRemindersConfigRequest) (*model.SetRemindersConfigResponse, error) {
+	requestDef := GenReqDefForSetRemindersConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SetRemindersConfigResponse), nil
+	}
+}
+
+// SetRemindersConfigInvoker 设置告警提醒开关
+func (c *HssClient) SetRemindersConfigInvoker(request *model.SetRemindersConfigRequest) *SetRemindersConfigInvoker {
+	requestDef := GenReqDefForSetRemindersConfig()
+	return &SetRemindersConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SetTwoFactorLoginConfig 设置双因子登录配置
 //
 // 设置双因子登录配置。
@@ -10575,6 +11647,27 @@ func (c *HssClient) ShowSwitchesStatus(request *model.ShowSwitchesStatusRequest)
 func (c *HssClient) ShowSwitchesStatusInvoker(request *model.ShowSwitchesStatusRequest) *ShowSwitchesStatusInvoker {
 	requestDef := GenReqDefForShowSwitchesStatus()
 	return &ShowSwitchesStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowTemplate 下载模板文件
+//
+// 下载模板文件
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowTemplate(request *model.ShowTemplateRequest) (*model.ShowTemplateResponse, error) {
+	requestDef := GenReqDefForShowTemplate()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTemplateResponse), nil
+	}
+}
+
+// ShowTemplateInvoker 下载模板文件
+func (c *HssClient) ShowTemplateInvoker(request *model.ShowTemplateRequest) *ShowTemplateInvoker {
+	requestDef := GenReqDefForShowTemplate()
+	return &ShowTemplateInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // StartAutoKillVirusStatus 开启或关闭程序自动隔离查杀
@@ -10892,6 +11985,27 @@ func (c *HssClient) ExportVulHandleHistoryInvoker(request *model.ExportVulHandle
 	return &ExportVulHandleHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExportVulReport 导出漏洞报告
+//
+// 导出漏洞报告
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ExportVulReport(request *model.ExportVulReportRequest) (*model.ExportVulReportResponse, error) {
+	requestDef := GenReqDefForExportVulReport()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExportVulReportResponse), nil
+	}
+}
+
+// ExportVulReportInvoker 导出漏洞报告
+func (c *HssClient) ExportVulReportInvoker(request *model.ExportVulReportRequest) *ExportVulReportInvoker {
+	requestDef := GenReqDefForExportVulReport()
+	return &ExportVulReportInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExportVuls 导出漏洞及漏洞影响的主机的相关信息
 //
 // 导出漏洞及漏洞影响的主机的相关信息。
@@ -11058,6 +12172,48 @@ func (c *HssClient) ListVulContainers(request *model.ListVulContainersRequest) (
 func (c *HssClient) ListVulContainersInvoker(request *model.ListVulContainersRequest) *ListVulContainersInvoker {
 	requestDef := GenReqDefForListVulContainers()
 	return &ListVulContainersInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVulHandleTask 查询漏洞处置任务列表
+//
+// 查询漏洞处置任务列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListVulHandleTask(request *model.ListVulHandleTaskRequest) (*model.ListVulHandleTaskResponse, error) {
+	requestDef := GenReqDefForListVulHandleTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVulHandleTaskResponse), nil
+	}
+}
+
+// ListVulHandleTaskInvoker 查询漏洞处置任务列表
+func (c *HssClient) ListVulHandleTaskInvoker(request *model.ListVulHandleTaskRequest) *ListVulHandleTaskInvoker {
+	requestDef := GenReqDefForListVulHandleTask()
+	return &ListVulHandleTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListVulHandleTaskDetail 查询漏洞处置任务详情列表
+//
+// 查询漏洞处置任务详情列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ListVulHandleTaskDetail(request *model.ListVulHandleTaskDetailRequest) (*model.ListVulHandleTaskDetailResponse, error) {
+	requestDef := GenReqDefForListVulHandleTaskDetail()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListVulHandleTaskDetailResponse), nil
+	}
+}
+
+// ListVulHandleTaskDetailInvoker 查询漏洞处置任务详情列表
+func (c *HssClient) ListVulHandleTaskDetailInvoker(request *model.ListVulHandleTaskDetailRequest) *ListVulHandleTaskDetailInvoker {
+	requestDef := GenReqDefForListVulHandleTaskDetail()
+	return &ListVulHandleTaskDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListVulHostApps 查询受影响服务器详情-软件列表
@@ -11459,6 +12615,27 @@ func (c *HssClient) ShowLinuxVulDetailInvoker(request *model.ShowLinuxVulDetailR
 	return &ShowLinuxVulDetailInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowVulAffectInfo 查询漏洞影响的主机及主机下的漏洞
+//
+// 查询漏洞影响的主机及主机下的漏洞
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowVulAffectInfo(request *model.ShowVulAffectInfoRequest) (*model.ShowVulAffectInfoResponse, error) {
+	requestDef := GenReqDefForShowVulAffectInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVulAffectInfoResponse), nil
+	}
+}
+
+// ShowVulAffectInfoInvoker 查询漏洞影响的主机及主机下的漏洞
+func (c *HssClient) ShowVulAffectInfoInvoker(request *model.ShowVulAffectInfoRequest) *ShowVulAffectInfoInvoker {
+	requestDef := GenReqDefForShowVulAffectInfo()
+	return &ShowVulAffectInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowVulAffectedStatics 统计受影响服务器和漏洞数量
 //
 // 统计受影响服务器和漏洞数量。
@@ -11499,6 +12676,27 @@ func (c *HssClient) ShowVulBackupStatistics(request *model.ShowVulBackupStatisti
 func (c *HssClient) ShowVulBackupStatisticsInvoker(request *model.ShowVulBackupStatisticsRequest) *ShowVulBackupStatisticsInvoker {
 	requestDef := GenReqDefForShowVulBackupStatistics()
 	return &ShowVulBackupStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVulIndividualStatistics 查询漏洞指定统计数据
+//
+// 根据统计类型列表查询漏洞的指定统计数据，支持查询多种漏洞统计指标。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowVulIndividualStatistics(request *model.ShowVulIndividualStatisticsRequest) (*model.ShowVulIndividualStatisticsResponse, error) {
+	requestDef := GenReqDefForShowVulIndividualStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVulIndividualStatisticsResponse), nil
+	}
+}
+
+// ShowVulIndividualStatisticsInvoker 查询漏洞指定统计数据
+func (c *HssClient) ShowVulIndividualStatisticsInvoker(request *model.ShowVulIndividualStatisticsRequest) *ShowVulIndividualStatisticsInvoker {
+	requestDef := GenReqDefForShowVulIndividualStatistics()
+	return &ShowVulIndividualStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowVulReportData 漏洞管理-主机视图-主机列表-导出报告
@@ -11562,6 +12760,27 @@ func (c *HssClient) ShowVulScanTaskEstimatedTime(request *model.ShowVulScanTaskE
 func (c *HssClient) ShowVulScanTaskEstimatedTimeInvoker(request *model.ShowVulScanTaskEstimatedTimeRequest) *ShowVulScanTaskEstimatedTimeInvoker {
 	requestDef := GenReqDefForShowVulScanTaskEstimatedTime()
 	return &ShowVulScanTaskEstimatedTimeInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowVulScanTaskStatistics 查询漏洞扫描任务的统计数据
+//
+// 查询漏洞扫描任务的统计数据，包含扫描任务总次数、进行中任务次数和最后一次扫描任务详情。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *HssClient) ShowVulScanTaskStatistics(request *model.ShowVulScanTaskStatisticsRequest) (*model.ShowVulScanTaskStatisticsResponse, error) {
+	requestDef := GenReqDefForShowVulScanTaskStatistics()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowVulScanTaskStatisticsResponse), nil
+	}
+}
+
+// ShowVulScanTaskStatisticsInvoker 查询漏洞扫描任务的统计数据
+func (c *HssClient) ShowVulScanTaskStatisticsInvoker(request *model.ShowVulScanTaskStatisticsRequest) *ShowVulScanTaskStatisticsInvoker {
+	requestDef := GenReqDefForShowVulScanTaskStatistics()
+	return &ShowVulScanTaskStatisticsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowVulStatics 查询漏洞管理统计数据

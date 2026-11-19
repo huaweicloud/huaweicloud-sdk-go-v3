@@ -20,6 +20,12 @@ type ShowHistoricalSqlFilterRuleRequest struct {
 
 	// **参数解释**：  SQL限流类型。  **约束限制**：  不涉及。  **取值范围**：  - SELECT：查询语句。 - UPDATE：更新语句。 - DELETE：删除语句。 - INSERT：插入语句。  **默认取值**：  不传则默认查询所有类型的限流规则。
 	SqlType *string `json:"sql_type,omitempty"`
+
+	// **参数解释**：  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  ≥0。  **默认取值**：  0。
+	Offset *int32 `json:"offset,omitempty"`
+
+	// **参数解释**：  查询记录数。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  1-100。  **默认取值**：  100。
+	Limit *int32 `json:"limit,omitempty"`
 }
 
 func (o ShowHistoricalSqlFilterRuleRequest) String() string {

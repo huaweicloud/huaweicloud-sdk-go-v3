@@ -26,6 +26,12 @@ type ListResourceAssociationsRequest struct {
 
 	// **参数解释**： 实例所属的项目ID，填写后按照项目ID进行过滤。 **取值范围**： 不涉及。
 	InstanceProjectId *string `json:"instance_project_id,omitempty"`
+
+	// **参数解释**： 每页返回的个数。 **取值范围**： 0-2000。
+	Limit *int32 `json:"limit,omitempty"`
+
+	// **参数解释**： 分页查询起始的资源ID，为空时查询第一页。 **取值范围**： 带“-”的标准UUID格式。
+	Marker *string `json:"marker,omitempty"`
 }
 
 func (o ListResourceAssociationsRequest) String() string {

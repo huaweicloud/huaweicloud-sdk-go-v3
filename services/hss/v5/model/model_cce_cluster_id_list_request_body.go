@@ -9,10 +9,10 @@ import (
 // CceClusterIdListRequestBody CCE集群配置请求
 type CceClusterIdListRequestBody struct {
 
-	// 集群id列表
+	// **参数解释**： 集群ID列表 **约束限制**： 不涉及 **取值范围**： 数组长度0-200，每个元素字符长度0-128位 **默认取值**： 不涉及
 	ClusterIdList []string `json:"cluster_id_list"`
 
-	// 查询类型，包含如下:     - image : 镜像风险     - baseline : 基线风险     - vul : 漏洞风险     - event : 入侵风险
+	// **参数解释**： 查询类型 **约束限制**： 不涉及 **取值范围**： - image：镜像风险 - baseline：基线风险 - vul：漏洞风险 - event：入侵风险  **默认取值**： 不涉及
 	DetectType *string `json:"detect_type,omitempty"`
 }
 

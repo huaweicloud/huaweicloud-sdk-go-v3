@@ -21,7 +21,7 @@ type ListAntiVirusPolicyRequest struct {
 	// 策略名称
 	PolicyName *string `json:"policy_name,omitempty"`
 
-	// **参数解释**: 任务类型 **约束限制**: 不涉及 **取值范围**: - quick ：快速扫描 - full：全盘扫描 - custom : 自定义扫描 **默认取值**: 不涉及
+	// **参数解释**: 任务类型 **约束限制**: 不涉及 **取值范围**: - quick ：快速扫描 - full：全盘扫描 - custom : 自定义扫描  **默认取值**: 不涉及
 	ScanType *string `json:"scan_type,omitempty"`
 }
 

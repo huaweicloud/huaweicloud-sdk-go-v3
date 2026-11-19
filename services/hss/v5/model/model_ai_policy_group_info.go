@@ -14,7 +14,7 @@ type AiPolicyGroupInfo struct {
 	// **参数解释**: 策略组名称 **取值范围**: 字符长度1-128位
 	GroupName *string `json:"group_name,omitempty"`
 
-	// **参数解释**： 策略组ID **取值范围**： 最小值0，最大值2147483647
+	// **参数解释**： 策略组类型 **取值范围**： - 0：Agent运行时防护-OfficeAce - 1：Agent行为轨迹检测-OfficeAce - 2：Agent角色限定 - 3：Agent运行时防护-AgentArts - 4：Agent行为轨迹检测-AgentArts - 5：Agent运行时防护-OpenClaw - 6：Agent运行时防护-其他三方Claw
 	GroupType *int32 `json:"group_type,omitempty"`
 
 	// 项目ID

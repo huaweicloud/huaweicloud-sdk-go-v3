@@ -21,7 +21,7 @@ type ShowMultiCloudClusterImageCommandRequest struct {
 	// 密码
 	Password string `json:"password"`
 
-	// **参数解释**: 插件类型 **约束限制**: 不涉及 **取值范围**: - docker: docker插件镜像 - agent: hostguard镜像 **默认取值**: 不涉及
+	// **参数解释**: 插件类型 **约束限制**: 不涉及 **取值范围**: - docker: docker插件镜像 - agent: hostguard镜像  **默认取值**: 不涉及
 	PlugType *string `json:"plug_type,omitempty"`
 }
 

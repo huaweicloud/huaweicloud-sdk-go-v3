@@ -14,6 +14,8 @@ type DeleteGaussMySqlInstanceRequest struct {
 
 	// 实例ID，严格匹配UUID规则。
 	InstanceId string `json:"instance_id"`
+
+	Body *DeleteGaussMySqlInstanceRequestBody `json:"body,omitempty"`
 }
 
 func (o DeleteGaussMySqlInstanceRequest) String() string {

@@ -69,6 +69,22 @@ func (i *AllowDbRolePrivilegesInvoker) Invoke() (*model.AllowDbRolePrivilegesRes
 	}
 }
 
+type ApplyConfigurationWithEntitiesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ApplyConfigurationWithEntitiesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ApplyConfigurationWithEntitiesInvoker) Invoke() (*model.ApplyConfigurationWithEntitiesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ApplyConfigurationWithEntitiesResponse), nil
+	}
+}
+
 type AttachEipInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -178,6 +194,22 @@ func (i *BindDNatInvoker) Invoke() (*model.BindDNatResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.BindDNatResponse), nil
+	}
+}
+
+type BindServerRouteInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *BindServerRouteInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *BindServerRouteInvoker) Invoke() (*model.BindServerRouteResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.BindServerRouteResponse), nil
 	}
 }
 
@@ -853,6 +885,22 @@ func (i *InstallKernelPluginInvoker) Invoke() (*model.InstallKernelPluginRespons
 	}
 }
 
+type InstallPluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *InstallPluginInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *InstallPluginInvoker) Invoke() (*model.InstallPluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.InstallPluginResponse), nil
+	}
+}
+
 type ListAgencyInfosInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -885,6 +933,22 @@ func (i *ListApplicableInstancesInvoker) Invoke() (*model.ListApplicableInstance
 	}
 }
 
+type ListApplicableInstancesWithEntitiesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListApplicableInstancesWithEntitiesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListApplicableInstancesWithEntitiesInvoker) Invoke() (*model.ListApplicableInstancesWithEntitiesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListApplicableInstancesWithEntitiesResponse), nil
+	}
+}
+
 type ListAppliedHistoriesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -901,6 +965,22 @@ func (i *ListAppliedHistoriesInvoker) Invoke() (*model.ListAppliedHistoriesRespo
 	}
 }
 
+type ListAppliedHistoriesWithEntitiesInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAppliedHistoriesWithEntitiesInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAppliedHistoriesWithEntitiesInvoker) Invoke() (*model.ListAppliedHistoriesWithEntitiesResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAppliedHistoriesWithEntitiesResponse), nil
+	}
+}
+
 type ListAvailableFlavorsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -914,6 +994,22 @@ func (i *ListAvailableFlavorsInvoker) Invoke() (*model.ListAvailableFlavorsRespo
 		return nil, err
 	} else {
 		return result.(*model.ListAvailableFlavorsResponse), nil
+	}
+}
+
+type ListAvailableFlavorsDetailInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListAvailableFlavorsDetailInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListAvailableFlavorsDetailInvoker) Invoke() (*model.ListAvailableFlavorsDetailResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListAvailableFlavorsDetailResponse), nil
 	}
 }
 
@@ -1541,6 +1637,22 @@ func (i *ListRealTimeSessionsInvoker) Invoke() (*model.ListRealTimeSessionsRespo
 	}
 }
 
+type ListRealTimeSessionsUseOpsTunnelInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListRealTimeSessionsUseOpsTunnelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListRealTimeSessionsUseOpsTunnelInvoker) Invoke() (*model.ListRealTimeSessionsUseOpsTunnelResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListRealTimeSessionsUseOpsTunnelResponse), nil
+	}
+}
+
 type ListRecycleInstancesDetailsInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -1922,6 +2034,22 @@ func (i *ModifyInstancePortInvoker) Invoke() (*model.ModifyInstancePortResponse,
 		return nil, err
 	} else {
 		return result.(*model.ModifyInstancePortResponse), nil
+	}
+}
+
+type ModifyOpsWindowInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ModifyOpsWindowInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ModifyOpsWindowInvoker) Invoke() (*model.ModifyOpsWindowResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ModifyOpsWindowResponse), nil
 	}
 }
 
@@ -2613,6 +2741,22 @@ func (i *ShowSessionOverviewInvoker) Invoke() (*model.ShowSessionOverviewRespons
 	}
 }
 
+type ShowSessionSummaryUseOpsTunnelInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ShowSessionSummaryUseOpsTunnelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ShowSessionSummaryUseOpsTunnelInvoker) Invoke() (*model.ShowSessionSummaryUseOpsTunnelResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ShowSessionSummaryUseOpsTunnelResponse), nil
+	}
+}
+
 type ShowShardDiskMessagesInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2837,6 +2981,22 @@ func (i *StopSessionInvoker) Invoke() (*model.StopSessionResponse, error) {
 	}
 }
 
+type StopSessionUseOpsTunnelInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *StopSessionUseOpsTunnelInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *StopSessionUseOpsTunnelInvoker) Invoke() (*model.StopSessionUseOpsTunnelResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.StopSessionUseOpsTunnelResponse), nil
+	}
+}
+
 type StopTransactionInvoker struct {
 	*invoker.BaseInvoker
 }
@@ -2962,6 +3122,22 @@ func (i *SwitchShardInvoker) Invoke() (*model.SwitchShardResponse, error) {
 		return nil, err
 	} else {
 		return result.(*model.SwitchShardResponse), nil
+	}
+}
+
+type UninstallPluginInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UninstallPluginInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UninstallPluginInvoker) Invoke() (*model.UninstallPluginResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UninstallPluginResponse), nil
 	}
 }
 
@@ -4156,6 +4332,22 @@ func (i *UpdateSqlLimitTaskInvoker) Invoke() (*model.UpdateSqlLimitTaskResponse,
 		return nil, err
 	} else {
 		return result.(*model.UpdateSqlLimitTaskResponse), nil
+	}
+}
+
+type ListSqlPatchInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *ListSqlPatchInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *ListSqlPatchInvoker) Invoke() (*model.ListSqlPatchResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.ListSqlPatchResponse), nil
 	}
 }
 

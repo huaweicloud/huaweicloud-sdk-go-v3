@@ -39,7 +39,7 @@ type ListCheckRulesInfoRequest struct {
 	// **参数解释**: 镜像id **约束限制**： 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
 	ImageId *string `json:"image_id,omitempty"`
 
-	// **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**:   - pass：通过   - failed：未通过 **默认取值**: 不涉及
+	// **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**:   - pass：通过   - failed：未通过  **默认取值**: 不涉及
 	ScanResult *string `json:"scan_result,omitempty"`
 }
 

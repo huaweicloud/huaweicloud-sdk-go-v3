@@ -15,16 +15,16 @@ type GeneralImageVulsResponseInfo struct {
 	// **参数解释**： 漏洞ID **取值范围**： 字符长度0-128位
 	VulId *string `json:"vul_id,omitempty"`
 
-	// **参数解释**： 漏洞类型 **约束限制**: 不涉及 **取值范围**： - linux_vul：linux漏洞 - app_vul：应用漏洞 **默认取值**: 不涉及
+	// **参数解释**： 漏洞类型 **约束限制**: 不涉及 **取值范围**： - linux_vul：linux漏洞 - app_vul：应用漏洞  **默认取值**: 不涉及
 	Type *string `json:"type,omitempty"`
 
-	// **参数解释**： 镜像类型 **约束限制**: 不涉及 **取值范围**： - local：本地镜像 - registry：仓库镜像 - cicd：CI/CD镜像 - cluster：集群镜像 **默认取值**: 不涉及
+	// **参数解释**： 镜像类型 **约束限制**: 不涉及 **取值范围**： - local：本地镜像 - registry：仓库镜像 - cicd：CI/CD镜像 - cluster：集群镜像  **默认取值**: 不涉及
 	ImageType *string `json:"image_type,omitempty"`
 
 	// **参数解释**： 漏洞标签列表 **取值范围**： 最小值0，最大值10
 	LabelList *[]string `json:"label_list,omitempty"`
 
-	// **参数解释**： 漏洞的风险程度 **约束限制**: 不涉及 **取值范围**： - Critical：严重 - High：高危 - Medium：中危 - Low：低危 **默认取值**: 不涉及
+	// **参数解释**： 漏洞的风险程度 **约束限制**: 不涉及 **取值范围**： - Critical：严重 - High：高危 - Medium：中危 - Low：低危  **默认取值**: 不涉及
 	SeverityLevel *string `json:"severity_level,omitempty"`
 
 	// **参数解释**： 受影响镜像总数 **取值范围**： 字符长度0-2147483547位

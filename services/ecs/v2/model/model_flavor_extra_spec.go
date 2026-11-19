@@ -131,6 +131,12 @@ type FlavorExtraSpec struct {
 
 	// 规格特性
 	Infofeatures *string `json:"info:features,omitempty"`
+
+	// 规格的CPU资源绑定策略。（该字段是否返回根据云服务器规格而定）  - dedicated，CPU资源独占绑定。
+	HwcpuPolicy *string `json:"hw:cpu_policy,omitempty"`
+
+	// 规格的CPU超线程数（每核线程数）。（该字段是否返回根据云服务器规格而定）  - 1，每核1线程，未开启超线程。 - 2，每核2线程，开启超线程。
+	HwcpuThreads *string `json:"hw:cpu_threads,omitempty"`
 }
 
 func (o FlavorExtraSpec) String() string {

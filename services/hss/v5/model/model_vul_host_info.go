@@ -75,7 +75,7 @@ type VulHostInfo struct {
 	// **参数解释**: 操作系统内核 **取值范围**: 字符长度1-64位
 	OsKernel *string `json:"os_kernel,omitempty"`
 
-	// **参数解释**: 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。 **默认取值**: 不涉及
+	// **参数解释**: 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。  **默认取值**: 不涉及
 	HostStatus *string `json:"host_status,omitempty"`
 
 	// **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807

@@ -9,12 +9,10 @@ import (
 // BatchCreateTrafficMirrorFilterRulesResponse Response Object
 type BatchCreateTrafficMirrorFilterRulesResponse struct {
 
-	// 流量镜像筛选条件规则对象
+	// **参数解释**： 流量镜像筛选规则列表的响应体。 **取值范围**： 不涉及。
 	TrafficMirrorFilterRules *[]TrafficMirrorFilterRule `json:"traffic_mirror_filter_rules,omitempty"`
 
-	PageInfo *PageInfo `json:"page_info,omitempty"`
-
-	// 请求ID
+	// **参数解释**： 请求ID。 **取值范围**： 不涉及。
 	RequestId      *string `json:"request_id,omitempty"`
 	HttpStatusCode int     `json:"-"`
 }

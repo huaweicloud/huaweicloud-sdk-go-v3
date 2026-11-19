@@ -1,0 +1,20 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// ContainerNameRes **参数解释**： 容器实例名称 **取值范围**： 字符长度1-256位
+type ContainerNameRes struct {
+}
+
+func (o ContainerNameRes) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "ContainerNameRes struct{}"
+	}
+
+	return strings.Join([]string{"ContainerNameRes", string(data)}, " ")
+}

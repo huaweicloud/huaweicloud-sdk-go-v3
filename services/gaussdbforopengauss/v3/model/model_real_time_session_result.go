@@ -71,6 +71,9 @@ type RealTimeSessionResult struct {
 	// **参数解释**： 客户端用于与后台通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
 	ClientPort *string `json:"client_port,omitempty"`
 
+	// **参数解释**： 服务端用于通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
+	ServerPort *string `json:"server_port,omitempty"`
+
 	// **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
 	QueryId *string `json:"query_id,omitempty"`
 

@@ -3621,6 +3621,22 @@ func (i *UpgradeDbVersionInvoker) Invoke() (*model.UpgradeDbVersionResponse, err
 	}
 }
 
+type UpgradeDbVersionFinalConfirmInvoker struct {
+	*invoker.BaseInvoker
+}
+
+func (i *UpgradeDbVersionFinalConfirmInvoker) GetBaseInvoker() *invoker.BaseInvoker {
+	return i.BaseInvoker
+}
+
+func (i *UpgradeDbVersionFinalConfirmInvoker) Invoke() (*model.UpgradeDbVersionFinalConfirmResponse, error) {
+	if result, err := i.BaseInvoker.Invoke(); err != nil {
+		return nil, err
+	} else {
+		return result.(*model.UpgradeDbVersionFinalConfirmResponse), nil
+	}
+}
+
 type UpgradeDbVersionNewInvoker struct {
 	*invoker.BaseInvoker
 }

@@ -1,0 +1,20 @@
+package model
+
+import (
+	"github.com/huaweicloud/huaweicloud-sdk-go-v3/core/utils"
+
+	"strings"
+)
+
+// SeverityRes **参数解释**： 威胁等级 **取值范围**： - Security：安全 - Low: 低危 - Medium: 中危 - High: 高危 - Critical: 危急
+type SeverityRes struct {
+}
+
+func (o SeverityRes) String() string {
+	data, err := utils.Marshal(o)
+	if err != nil {
+		return "SeverityRes struct{}"
+	}
+
+	return strings.Join([]string{"SeverityRes", string(data)}, " ")
+}

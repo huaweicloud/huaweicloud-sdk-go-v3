@@ -9,7 +9,7 @@ import (
 // UpdateBackupPolicyRequestInfo1 备份策略
 type UpdateBackupPolicyRequestInfo1 struct {
 
-	// **参数解释**: 策略是否启用 **约束限制**: 不涉及 **取值范围**: - true：策略已启用 - false：策略未启用 **默认取值**: true
+	// **参数解释**: 策略是否启用 **约束限制**: 不涉及 **取值范围**: - true：策略已启用 - false：策略未启用  **默认取值**: true
 	Enabled *bool `json:"enabled,omitempty"`
 
 	// **参数解释**: 策略ID，若开启防护时开启备份防护，该字段必选 **约束限制**: 不涉及 **取值范围**: 字符长度1-256 **默认取值**: 不涉及

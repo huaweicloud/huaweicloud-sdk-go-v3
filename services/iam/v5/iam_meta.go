@@ -1558,6 +1558,10 @@ func GenReqDefForCreateAccessKeyV5() *def.HttpRequestDef {
 		WithJsonTag("user_id").
 		WithLocationType(def.Path))
 
+	reqDefBuilder.WithRequestField(def.NewFieldDef().
+		WithName("Body").
+		WithLocationType(def.Body))
+
 	requestDef := reqDefBuilder.Build()
 	return requestDef
 }

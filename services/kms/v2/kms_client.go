@@ -455,6 +455,27 @@ func (c *KmsClient) CreateRsaDatakeyPairInvoker(request *model.CreateRsaDatakeyP
 	return &CreateRsaDatakeyPairInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// CreateTrustedKeySpace 创建密钥空间
+//
+// 用于创建密钥空间
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) CreateTrustedKeySpace(request *model.CreateTrustedKeySpaceRequest) (*model.CreateTrustedKeySpaceResponse, error) {
+	requestDef := GenReqDefForCreateTrustedKeySpace()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CreateTrustedKeySpaceResponse), nil
+	}
+}
+
+// CreateTrustedKeySpaceInvoker 创建密钥空间
+func (c *KmsClient) CreateTrustedKeySpaceInvoker(request *model.CreateTrustedKeySpaceRequest) *CreateTrustedKeySpaceInvoker {
+	requestDef := GenReqDefForCreateTrustedKeySpace()
+	return &CreateTrustedKeySpaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DecryptData 解密数据
 //
 // - 功能介绍：解密数据。
@@ -663,6 +684,27 @@ func (c *KmsClient) DeleteTag(request *model.DeleteTagRequest) (*model.DeleteTag
 func (c *KmsClient) DeleteTagInvoker(request *model.DeleteTagRequest) *DeleteTagInvoker {
 	requestDef := GenReqDefForDeleteTag()
 	return &DeleteTagInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// DeleteTrustedKeySpace 删除密钥空间
+//
+// 用于删除密钥空间
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) DeleteTrustedKeySpace(request *model.DeleteTrustedKeySpaceRequest) (*model.DeleteTrustedKeySpaceResponse, error) {
+	requestDef := GenReqDefForDeleteTrustedKeySpace()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteTrustedKeySpaceResponse), nil
+	}
+}
+
+// DeleteTrustedKeySpaceInvoker 删除密钥空间
+func (c *KmsClient) DeleteTrustedKeySpaceInvoker(request *model.DeleteTrustedKeySpaceRequest) *DeleteTrustedKeySpaceInvoker {
+	requestDef := GenReqDefForDeleteTrustedKeySpace()
+	return &DeleteTrustedKeySpaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // DeriveSharedSecret 派生共享密钥
@@ -1195,6 +1237,27 @@ func (c *KmsClient) ListSupportRegionsInvoker(request *model.ListSupportRegionsR
 	return &ListSupportRegionsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListTrustedKeySpace 查询密钥空间列表
+//
+// 用于查询密钥空间列表
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) ListTrustedKeySpace(request *model.ListTrustedKeySpaceRequest) (*model.ListTrustedKeySpaceResponse, error) {
+	requestDef := GenReqDefForListTrustedKeySpace()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListTrustedKeySpaceResponse), nil
+	}
+}
+
+// ListTrustedKeySpaceInvoker 查询密钥空间列表
+func (c *KmsClient) ListTrustedKeySpaceInvoker(request *model.ListTrustedKeySpaceRequest) *ListTrustedKeySpaceInvoker {
+	requestDef := GenReqDefForListTrustedKeySpace()
+	return &ListTrustedKeySpaceInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ReEncrypt 重加密
 //
 // 将密文使用源密钥解密后，再使用指定的新密钥加密。
@@ -1323,6 +1386,30 @@ func (c *KmsClient) ShowKeyStoreInvoker(request *model.ShowKeyStoreRequest) *Sho
 	return &ShowKeyStoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowKeyUsageFlow 查询密钥使用流
+//
+// 查询指定密钥空间下指定密钥的使用流关系图，返回节点和边的图结构。
+// - 节点按类型分组：vpc（VPC节点，含ECS、CCE子节点）、custom（接入点节点）、modelarts（ModelArts节点）、policy（策略节点）、unknown_node（未知起点节点）、key（密钥节点）。
+// - 边表示使用流关系：起点节点到策略节点、策略节点到密钥节点。
+// - 该接口仅支持查询已记录使用流关系的密钥，若密钥不存在使用流记录，则返回空的节点和边。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) ShowKeyUsageFlow(request *model.ShowKeyUsageFlowRequest) (*model.ShowKeyUsageFlowResponse, error) {
+	requestDef := GenReqDefForShowKeyUsageFlow()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKeyUsageFlowResponse), nil
+	}
+}
+
+// ShowKeyUsageFlowInvoker 查询密钥使用流
+func (c *KmsClient) ShowKeyUsageFlowInvoker(request *model.ShowKeyUsageFlowRequest) *ShowKeyUsageFlowInvoker {
+	requestDef := GenReqDefForShowKeyUsageFlow()
+	return &ShowKeyUsageFlowInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowKmsTags 查询密钥标签
 //
 // - 功能介绍：查询密钥标签。
@@ -1428,6 +1515,28 @@ func (c *KmsClient) SignInvoker(request *model.SignRequest) *SignInvoker {
 	return &SignInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// TransferKey 转移密钥
+//
+// 用于将密钥从一个密钥空间转移到另一个密钥空间
+// - ASSIGN：将密钥分配给目标密钥空间，仅支持对称密钥，且密钥必须未属于任何密钥空间。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) TransferKey(request *model.TransferKeyRequest) (*model.TransferKeyResponse, error) {
+	requestDef := GenReqDefForTransferKey()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.TransferKeyResponse), nil
+	}
+}
+
+// TransferKeyInvoker 转移密钥
+func (c *KmsClient) TransferKeyInvoker(request *model.TransferKeyRequest) *TransferKeyInvoker {
+	requestDef := GenReqDefForTransferKey()
+	return &TransferKeyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateKeyAlias 修改密钥别名
 //
 // - 功能介绍：修改用户主密钥别名。
@@ -1516,6 +1625,27 @@ func (c *KmsClient) UpdateKeyRotationInterval(request *model.UpdateKeyRotationIn
 func (c *KmsClient) UpdateKeyRotationIntervalInvoker(request *model.UpdateKeyRotationIntervalRequest) *UpdateKeyRotationIntervalInvoker {
 	requestDef := GenReqDefForUpdateKeyRotationInterval()
 	return &UpdateKeyRotationIntervalInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateKeyStore 更新专属密钥库
+//
+// 仅XKS类型的密钥库支持更新访问凭证信息
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *KmsClient) UpdateKeyStore(request *model.UpdateKeyStoreRequest) (*model.UpdateKeyStoreResponse, error) {
+	requestDef := GenReqDefForUpdateKeyStore()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateKeyStoreResponse), nil
+	}
+}
+
+// UpdateKeyStoreInvoker 更新专属密钥库
+func (c *KmsClient) UpdateKeyStoreInvoker(request *model.UpdateKeyStoreRequest) *UpdateKeyStoreInvoker {
+	requestDef := GenReqDefForUpdateKeyStore()
+	return &UpdateKeyStoreInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdatePrimaryRegion 修改密钥所属的主区域

@@ -19,7 +19,7 @@ type CreateTrafficMirrorSessionOption struct {
 	TrafficMirrorFilterId string `json:"traffic_mirror_filter_id"`
 
 	// 功能说明：镜像源ID列表，支持弹性网卡作为镜像源。 约束：一个镜像会话默认最大支持10个镜像源。
-	TrafficMirrorSources []string `json:"traffic_mirror_sources"`
+	TrafficMirrorSources *[]string `json:"traffic_mirror_sources,omitempty"`
 
 	// 功能说明：镜像目的ID
 	TrafficMirrorTargetId string `json:"traffic_mirror_target_id"`

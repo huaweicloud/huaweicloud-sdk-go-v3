@@ -36,7 +36,7 @@ type ListAntiVirusPaidHostsRequest struct {
 	// 任务类型，包含如下:   - quick ：快速扫描   - full : 全盘扫描   - custom : 自定义扫描
 	ScanType *string `json:"scan_type,omitempty"`
 
-	// **参数解释**: 启动类型 **约束限制**: 不涉及 **取值范围**: - now ：立即启动 - period : 周期启动 **默认取值**: 不涉及
+	// **参数解释**: 启动类型 **约束限制**: 不涉及 **取值范围**: - now ：立即启动 - period : 周期启动  **默认取值**: 不涉及
 	StartType string `json:"start_type"`
 }
 

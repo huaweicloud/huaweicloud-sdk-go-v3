@@ -36,7 +36,7 @@ type ListWebTamperProtectionContainerRequest struct {
 	// **参数解释**: 受影响容器id **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
 	ContainerId *string `json:"container_id,omitempty"`
 
-	// **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - protected：防护中 - partial_protected：部分防护 - protect_failed：防护失败 **默认取值**: 不涉及
+	// **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - protected：防护中 - partial_protected：部分防护 - protect_failed：防护失败  **默认取值**: 不涉及
 	Status *string `json:"status,omitempty"`
 }
 

@@ -9,10 +9,10 @@ import (
 // CreateQuotasOrderRequestInfo 创建订单订购配额请求体对象
 type CreateQuotasOrderRequestInfo struct {
 
-	// **参数解释**： 资源规格 **约束限制**: 不涉及 **取值范围**： - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 **默认取值**: 不涉及
+	// **参数解释**： 资源规格 **约束限制**: 不涉及 **取值范围**： - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。  **默认取值**: 不涉及
 	ResourceSpecCode string `json:"resource_spec_code"`
 
-	// **参数解释**： 订购周期类型 **约束限制**: 不涉及 **取值范围**： - 2 : 月 - 3 : 年 **默认取值**: 不涉及
+	// **参数解释**： 订购周期类型 **约束限制**: 不涉及 **取值范围**： - 2 : 月 - 3 : 年  **默认取值**: 不涉及
 	PeriodType int32 `json:"period_type"`
 
 	// **参数解释**： 订购周期数 **约束限制**: 不涉及 **取值范围**： 整数类型1-1000 **默认取值**: 不涉及

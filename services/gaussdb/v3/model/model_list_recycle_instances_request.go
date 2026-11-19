@@ -9,9 +9,6 @@ import (
 // ListRecycleInstancesRequest Request Object
 type ListRecycleInstancesRequest struct {
 
-	// 内容类型。  取值：application/json。
-	ContentType string `json:"Content-Type"`
-
 	// 语言。
 	XLanguage *string `json:"X-Language,omitempty"`
 

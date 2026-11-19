@@ -24,7 +24,7 @@ type ListEventTypeRequest struct {
 	// 查询时间范围天数，与自定义查询时间begin_time，end_time互斥
 	LastDays *int32 `json:"last_days,omitempty"`
 
-	// **参数解释**: 事件类别 **约束限制**: 不涉及 **取值范围**: - host : 主机安全事件 - container : 容器安全事件 - serverless : serverless场景安全事件 **默认取值**: 不涉及
+	// **参数解释**: 事件类别 **约束限制**: 不涉及 **取值范围**: - host : 主机安全事件 - container : 容器安全事件 - serverless : serverless场景安全事件  **默认取值**: 不涉及
 	Category string `json:"category"`
 
 	// 服务器名称

@@ -4774,6 +4774,27 @@ func (c *RdsClient) UpgradeDbVersionInvoker(request *model.UpgradeDbVersionReque
 	return &UpgradeDbVersionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// UpgradeDbVersionFinalConfirm 数据库小版本升级后最后确认操作
+//
+// 数据库小版本升级后最后确认操作
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *RdsClient) UpgradeDbVersionFinalConfirm(request *model.UpgradeDbVersionFinalConfirmRequest) (*model.UpgradeDbVersionFinalConfirmResponse, error) {
+	requestDef := GenReqDefForUpgradeDbVersionFinalConfirm()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpgradeDbVersionFinalConfirmResponse), nil
+	}
+}
+
+// UpgradeDbVersionFinalConfirmInvoker 数据库小版本升级后最后确认操作
+func (c *RdsClient) UpgradeDbVersionFinalConfirmInvoker(request *model.UpgradeDbVersionFinalConfirmRequest) *UpgradeDbVersionFinalConfirmInvoker {
+	requestDef := GenReqDefForUpgradeDbVersionFinalConfirm()
+	return &UpgradeDbVersionFinalConfirmInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpgradeDbVersionNew 升级内核小版本
 //
 // 对实例进行小版本升级。

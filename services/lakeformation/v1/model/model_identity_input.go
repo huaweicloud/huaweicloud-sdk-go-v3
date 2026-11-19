@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// IdentityInput 用户名称，用户组，角色三个信息
+// IdentityInput 用户名称，用户组，角色及OBS路径信息
 type IdentityInput struct {
 
 	// IAM用户
@@ -17,6 +17,9 @@ type IdentityInput struct {
 
 	// 角色
 	Roles *[]string `json:"roles,omitempty"`
+
+	// OBS路径（可选），用于指定获取临时AKSK访问的对象路径，仅支持并行文件系统（PFS）桶，不支持对象桶。格式：obs://桶名/对象键
+	Location *string `json:"location,omitempty"`
 }
 
 func (o IdentityInput) String() string {

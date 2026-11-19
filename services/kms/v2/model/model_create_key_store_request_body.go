@@ -26,6 +26,24 @@ type CreateKeyStoreRequestBody struct {
 
 	// 专属密钥库集群类型。DHSM表示专属加密服务集群，CDMS表示密码卡集群,DEFAULT表示KMS原有集群
 	KeystoreType *CreateKeyStoreRequestBodyKeystoreType `json:"keystore_type,omitempty"`
+
+	// **参数解释：** 仅XKS类型的密钥库支持；可选，表示Xks-Proxy的域名信息 **约束限制：** ^https://[^\\s]+ **取值范围：** 不涉及 **默认取值：** 不涉及
+	ProxyUriEndpoint *string `json:"proxy_uri_endpoint,omitempty"`
+
+	// **参数解释：** 仅XKS类型的密钥库支持；必选，Xks-Proxy的路径前缀 **约束限制：** ^/(?:[a-zA-Z0-9/_-]{0,127})$ **取值范围：** 不涉及 **默认取值：** 不涉及
+	ProxyUriPath *string `json:"proxy_uri_path,omitempty"`
+
+	// **参数解释：** 仅XKS类型的密钥库支持；必选，访问XKS-Proxy的凭据ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	ProxyAccessKeyId *string `json:"proxy_access_key_id,omitempty"`
+
+	// **参数解释：** 仅XKS类型的密钥库支持；必选，访问XKS-Proxy的凭据Key **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	ProxySecretAccessKey *string `json:"proxy_secret_access_key,omitempty"`
+
+	// **参数解释：** 仅XKS类型的密钥库支持；必选，Xks-Proxy的终端节点服务名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	ProxyVpcEndpointServiceName *string `json:"proxy_vpc_endpoint_service_name,omitempty"`
+
+	// **参数解释：** 仅XKS类型的密钥库支持；必选，终端节点服务所属账号 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+	ProxyVpcEndpointServiceOwner *string `json:"proxy_vpc_endpoint_service_owner,omitempty"`
 }
 
 func (o CreateKeyStoreRequestBody) String() string {
@@ -45,6 +63,7 @@ type CreateKeyStoreRequestBodyKeystoreTypeEnum struct {
 	DEFAULT CreateKeyStoreRequestBodyKeystoreType
 	DHSM    CreateKeyStoreRequestBodyKeystoreType
 	CDMS    CreateKeyStoreRequestBodyKeystoreType
+	XKS     CreateKeyStoreRequestBodyKeystoreType
 }
 
 func GetCreateKeyStoreRequestBodyKeystoreTypeEnum() CreateKeyStoreRequestBodyKeystoreTypeEnum {
@@ -57,6 +76,9 @@ func GetCreateKeyStoreRequestBodyKeystoreTypeEnum() CreateKeyStoreRequestBodyKey
 		},
 		CDMS: CreateKeyStoreRequestBodyKeystoreType{
 			value: "CDMS",
+		},
+		XKS: CreateKeyStoreRequestBodyKeystoreType{
+			value: "XKS",
 		},
 	}
 }

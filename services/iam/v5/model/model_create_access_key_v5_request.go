@@ -11,6 +11,8 @@ type CreateAccessKeyV5Request struct {
 
 	// IAM用户ID。
 	UserId string `json:"user_id"`
+
+	Body *CreateAccessKeyReqBody `json:"body,omitempty"`
 }
 
 func (o CreateAccessKeyV5Request) String() string {

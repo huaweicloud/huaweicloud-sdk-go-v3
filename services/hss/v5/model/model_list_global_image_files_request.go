@@ -21,7 +21,7 @@ type ListGlobalImageFilesRequest struct {
 	// **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
 	Offset *int32 `json:"offset,omitempty"`
 
-	// **参数解释**: 镜像类型 **约束限制**: 不涉及 **取值范围**: - registry：仓库镜像。 - cicd：cicd镜像。 **默认取值**: 不涉及
+	// **参数解释**: 镜像类型 **约束限制**: 不涉及 **取值范围**: - registry：仓库镜像。 - cicd：cicd镜像。  **默认取值**: 不涉及
 	ImageType *string `json:"image_type,omitempty"`
 
 	// **参数解释**: 文件名称过滤查询(支持模糊匹配) **约束限制**: 不涉及 **取值范围**: 字符长度0-65535 **默认取值**: 不涉及

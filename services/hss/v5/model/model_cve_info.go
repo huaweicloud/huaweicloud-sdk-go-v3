@@ -8,16 +8,16 @@ import (
 
 type CveInfo struct {
 
-	// **参数解释** CVE id **取值范围** 字符长度0-128位
+	// **参数解释**: CVE id **取值范围**: 字符长度0-64位
 	CveId *string `json:"cve_id,omitempty"`
 
-	// **参数解释** CVSS分数 **取值范围** 取值0-100
+	// **参数解释**: CVSS分数 **取值范围**: 最小值0，最大值10
 	CvssScore *float32 `json:"cvss_score,omitempty"`
 
-	// **参数解释** CVE公布时间，时间单位：毫秒（ms） **取值范围** 取值0-3857960855552
+	// **参数解释**: CVE公布时间，毫秒级时间戳 **取值范围**: 最小值0，最大值9223372036854775807
 	PublishTime *int64 `json:"publish_time,omitempty"`
 
-	// **参数解释** CVE描述 **取值范围** 字符长度0-256位
+	// **参数解释**: CVE描述 **取值范围**: 字符长度0-4096位
 	Description *string `json:"description,omitempty"`
 }
 

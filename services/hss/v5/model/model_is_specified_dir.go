@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// IsSpecifiedDir **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否 **默认取值**： 不涉及
+// IsSpecifiedDir **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否  **默认取值**： 不涉及
 type IsSpecifiedDir struct {
 }
 

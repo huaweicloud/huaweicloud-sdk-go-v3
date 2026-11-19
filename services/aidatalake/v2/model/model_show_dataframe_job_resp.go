@@ -40,6 +40,11 @@ type ShowDataframeJobResp struct {
 	EndTime *sdktime.SdkTime `json:"end_time,omitempty"`
 
 	ExecutionResult *ExecutionResult `json:"execution_result,omitempty"`
+
+	Error *ErrorMessage `json:"error,omitempty"`
+
+	// **参数解释**：作业关联的 session 列表（含该 session 下的 statement 列表与已处理条数）。 **约束限制**：作业无关联 session 时返回空数组。 **取值范围**：不涉及。 **默认取值**：不涉及。
+	Sessions *[]DataframeJobSessionResp `json:"sessions,omitempty"`
 }
 
 func (o ShowDataframeJobResp) String() string {

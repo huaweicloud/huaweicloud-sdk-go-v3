@@ -40,6 +40,27 @@ func (c *GaussDBClient) AddDatabasePermissionInvoker(request *model.AddDatabaseP
 	return &AddDatabasePermissionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// AddKillProcessTask 添加自动Kill会话任务
+//
+// 添加自动Kill会话任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) AddKillProcessTask(request *model.AddKillProcessTaskRequest) (*model.AddKillProcessTaskResponse, error) {
+	requestDef := GenReqDefForAddKillProcessTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.AddKillProcessTaskResponse), nil
+	}
+}
+
+// AddKillProcessTaskInvoker 添加自动Kill会话任务
+func (c *GaussDBClient) AddKillProcessTaskInvoker(request *model.AddKillProcessTaskRequest) *AddKillProcessTaskInvoker {
+	requestDef := GenReqDefForAddKillProcessTask()
+	return &AddKillProcessTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchChangeInstanceSpecification 批量变更实例规格
 //
 // 批量变更数据库实例的规格。
@@ -124,6 +145,27 @@ func (c *GaussDBClient) BatchUpdateBackupPolicyInvoker(request *model.BatchUpdat
 	return &BatchUpdateBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// BatchUpdateTaurusSlowProcessThreshold 批量修改实例慢会话阈值
+//
+// 批量修改实例慢会话阈值。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) BatchUpdateTaurusSlowProcessThreshold(request *model.BatchUpdateTaurusSlowProcessThresholdRequest) (*model.BatchUpdateTaurusSlowProcessThresholdResponse, error) {
+	requestDef := GenReqDefForBatchUpdateTaurusSlowProcessThreshold()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.BatchUpdateTaurusSlowProcessThresholdResponse), nil
+	}
+}
+
+// BatchUpdateTaurusSlowProcessThresholdInvoker 批量修改实例慢会话阈值
+func (c *GaussDBClient) BatchUpdateTaurusSlowProcessThresholdInvoker(request *model.BatchUpdateTaurusSlowProcessThresholdRequest) *BatchUpdateTaurusSlowProcessThresholdInvoker {
+	requestDef := GenReqDefForBatchUpdateTaurusSlowProcessThreshold()
+	return &BatchUpdateTaurusSlowProcessThresholdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // BatchUpgradeDatabases 批量实例小版本升级
 //
 // 批量实例小版本升级
@@ -143,6 +185,27 @@ func (c *GaussDBClient) BatchUpgradeDatabases(request *model.BatchUpgradeDatabas
 func (c *GaussDBClient) BatchUpgradeDatabasesInvoker(request *model.BatchUpgradeDatabasesRequest) *BatchUpgradeDatabasesInvoker {
 	requestDef := GenReqDefForBatchUpgradeDatabases()
 	return &BatchUpgradeDatabasesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CancelColdTableWaitingTasks 取消冷热分离待下发任务
+//
+// 取消指定实例的待下发任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) CancelColdTableWaitingTasks(request *model.CancelColdTableWaitingTasksRequest) (*model.CancelColdTableWaitingTasksResponse, error) {
+	requestDef := GenReqDefForCancelColdTableWaitingTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CancelColdTableWaitingTasksResponse), nil
+	}
+}
+
+// CancelColdTableWaitingTasksInvoker 取消冷热分离待下发任务
+func (c *GaussDBClient) CancelColdTableWaitingTasksInvoker(request *model.CancelColdTableWaitingTasksRequest) *CancelColdTableWaitingTasksInvoker {
+	requestDef := GenReqDefForCancelColdTableWaitingTasks()
+	return &CancelColdTableWaitingTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CancelGaussMySqlInstanceEip 解绑弹性公网IP
@@ -311,6 +374,27 @@ func (c *GaussDBClient) ClearOnlineDdlTaskTempTable(request *model.ClearOnlineDd
 func (c *GaussDBClient) ClearOnlineDdlTaskTempTableInvoker(request *model.ClearOnlineDdlTaskTempTableRequest) *ClearOnlineDdlTaskTempTableInvoker {
 	requestDef := GenReqDefForClearOnlineDdlTaskTempTable()
 	return &ClearOnlineDdlTaskTempTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// CollectColdTableMetas 统计冷表元信息
+//
+// 统计冷表元信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) CollectColdTableMetas(request *model.CollectColdTableMetasRequest) (*model.CollectColdTableMetasResponse, error) {
+	requestDef := GenReqDefForCollectColdTableMetas()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.CollectColdTableMetasResponse), nil
+	}
+}
+
+// CollectColdTableMetasInvoker 统计冷表元信息
+func (c *GaussDBClient) CollectColdTableMetasInvoker(request *model.CollectColdTableMetasRequest) *CollectColdTableMetasInvoker {
+	requestDef := GenReqDefForCollectColdTableMetas()
+	return &CollectColdTableMetasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // CollectRealtimeSession 收集全部实时会话信息
@@ -670,6 +754,27 @@ func (c *GaussDBClient) DeleteAutoSqlLimitingInvoker(request *model.DeleteAutoSq
 	return &DeleteAutoSqlLimitingInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteColdTableData 删除冷表数据
+//
+// 删除指定冷表数据。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) DeleteColdTableData(request *model.DeleteColdTableDataRequest) (*model.DeleteColdTableDataResponse, error) {
+	requestDef := GenReqDefForDeleteColdTableData()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteColdTableDataResponse), nil
+	}
+}
+
+// DeleteColdTableDataInvoker 删除冷表数据
+func (c *GaussDBClient) DeleteColdTableDataInvoker(request *model.DeleteColdTableDataRequest) *DeleteColdTableDataInvoker {
+	requestDef := GenReqDefForDeleteColdTableData()
+	return &DeleteColdTableDataInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteDatabasePermission 删除数据库用户的数据库权限
 //
 // 删除云数据库 TaurusDB实例数据库用户的数据库权限。
@@ -922,6 +1027,27 @@ func (c *GaussDBClient) DeleteProxyPrivateDnsNameInvoker(request *model.DeletePr
 	return &DeleteProxyPrivateDnsNameInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// DeleteRetainedBackup 删除回收站中保留的备份
+//
+// 删除/释放实例后保留在回收站中的指定备份。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) DeleteRetainedBackup(request *model.DeleteRetainedBackupRequest) (*model.DeleteRetainedBackupResponse, error) {
+	requestDef := GenReqDefForDeleteRetainedBackup()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.DeleteRetainedBackupResponse), nil
+	}
+}
+
+// DeleteRetainedBackupInvoker 删除回收站中保留的备份
+func (c *GaussDBClient) DeleteRetainedBackupInvoker(request *model.DeleteRetainedBackupRequest) *DeleteRetainedBackupInvoker {
+	requestDef := GenReqDefForDeleteRetainedBackup()
+	return &DeleteRetainedBackupInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // DeleteScheduleTasK 删除定时任务
 //
 // 删除定时任务。
@@ -1111,6 +1237,27 @@ func (c *GaussDBClient) DownloadSlowLogFileInvoker(request *model.DownloadSlowLo
 	return &DownloadSlowLogFileInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ExchangeInstanceVipProxyIp 实例与数据库代理的IP互换
+//
+// 一键互换TaurusDB实例读写内网地址与代理地址。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ExchangeInstanceVipProxyIp(request *model.ExchangeInstanceVipProxyIpRequest) (*model.ExchangeInstanceVipProxyIpResponse, error) {
+	requestDef := GenReqDefForExchangeInstanceVipProxyIp()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExchangeInstanceVipProxyIpResponse), nil
+	}
+}
+
+// ExchangeInstanceVipProxyIpInvoker 实例与数据库代理的IP互换
+func (c *GaussDBClient) ExchangeInstanceVipProxyIpInvoker(request *model.ExchangeInstanceVipProxyIpRequest) *ExchangeInstanceVipProxyIpInvoker {
+	requestDef := GenReqDefForExchangeInstanceVipProxyIp()
+	return &ExchangeInstanceVipProxyIpInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ExecuteIntelligentKillSession 执行智能Kill会话动作
 //
 // 执行智能Kill会话动作。数据库根据会话最长执行时间、会话数量和会话平均执行时长排名，自动选择排名前三的组内会话进行智能Kill.
@@ -1130,6 +1277,27 @@ func (c *GaussDBClient) ExecuteIntelligentKillSession(request *model.ExecuteInte
 func (c *GaussDBClient) ExecuteIntelligentKillSessionInvoker(request *model.ExecuteIntelligentKillSessionRequest) *ExecuteIntelligentKillSessionInvoker {
 	requestDef := GenReqDefForExecuteIntelligentKillSession()
 	return &ExecuteIntelligentKillSessionInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ExecuteKillAllProcess 一键Kill所有会话
+//
+// 一键Kill实例的所有Kill会话。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ExecuteKillAllProcess(request *model.ExecuteKillAllProcessRequest) (*model.ExecuteKillAllProcessResponse, error) {
+	requestDef := GenReqDefForExecuteKillAllProcess()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ExecuteKillAllProcessResponse), nil
+	}
+}
+
+// ExecuteKillAllProcessInvoker 一键Kill所有会话
+func (c *GaussDBClient) ExecuteKillAllProcessInvoker(request *model.ExecuteKillAllProcessRequest) *ExecuteKillAllProcessInvoker {
+	requestDef := GenReqDefForExecuteKillAllProcess()
+	return &ExecuteKillAllProcessInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ExpandGaussMySqlInstanceVolume 包周期存储扩容
@@ -1196,6 +1364,27 @@ func (c *GaussDBClient) InvokeGaussMySqlInstanceSwitchOverInvoker(request *model
 	return &InvokeGaussMySqlInstanceSwitchOverInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListArchivableTables 查询冷热分离可归档表信息
+//
+// 查询指定实例下可归档的表信息，包括数据库名、表名及分区名。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListArchivableTables(request *model.ListArchivableTablesRequest) (*model.ListArchivableTablesResponse, error) {
+	requestDef := GenReqDefForListArchivableTables()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListArchivableTablesResponse), nil
+	}
+}
+
+// ListArchivableTablesInvoker 查询冷热分离可归档表信息
+func (c *GaussDBClient) ListArchivableTablesInvoker(request *model.ListArchivableTablesRequest) *ListArchivableTablesInvoker {
+	requestDef := GenReqDefForListArchivableTables()
+	return &ListArchivableTablesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListAuditLogDownloadLink 获取全量SQL的临时下载链接
 //
 // 获取全量SQL的临时下载链接。
@@ -1238,6 +1427,48 @@ func (c *GaussDBClient) ListAuditLogsInvoker(request *model.ListAuditLogsRequest
 	return &ListAuditLogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ListBinlogDownloadLink 查询Binlog日志下载链接
+//
+// 查询指定数据库实例的Binlog下载链接。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListBinlogDownloadLink(request *model.ListBinlogDownloadLinkRequest) (*model.ListBinlogDownloadLinkResponse, error) {
+	requestDef := GenReqDefForListBinlogDownloadLink()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBinlogDownloadLinkResponse), nil
+	}
+}
+
+// ListBinlogDownloadLinkInvoker 查询Binlog日志下载链接
+func (c *GaussDBClient) ListBinlogDownloadLinkInvoker(request *model.ListBinlogDownloadLinkRequest) *ListBinlogDownloadLinkInvoker {
+	requestDef := GenReqDefForListBinlogDownloadLink()
+	return &ListBinlogDownloadLinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListBinlogs 查询Binlog日志列表
+//
+// 查询指定数据库实例的Binlog日志列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListBinlogs(request *model.ListBinlogsRequest) (*model.ListBinlogsResponse, error) {
+	requestDef := GenReqDefForListBinlogs()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListBinlogsResponse), nil
+	}
+}
+
+// ListBinlogsInvoker 查询Binlog日志列表
+func (c *GaussDBClient) ListBinlogsInvoker(request *model.ListBinlogsRequest) *ListBinlogsInvoker {
+	requestDef := GenReqDefForListBinlogs()
+	return &ListBinlogsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ListColdTableMetas 查询冷表元信息
 //
 // 查询冷表元信息。
@@ -1257,6 +1488,48 @@ func (c *GaussDBClient) ListColdTableMetas(request *model.ListColdTableMetasRequ
 func (c *GaussDBClient) ListColdTableMetasInvoker(request *model.ListColdTableMetasRequest) *ListColdTableMetasInvoker {
 	requestDef := GenReqDefForListColdTableMetas()
 	return &ListColdTableMetasInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListColdTableTasks 查询冷热分离已下发任务列表
+//
+// 查询指定实例已下发的任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListColdTableTasks(request *model.ListColdTableTasksRequest) (*model.ListColdTableTasksResponse, error) {
+	requestDef := GenReqDefForListColdTableTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListColdTableTasksResponse), nil
+	}
+}
+
+// ListColdTableTasksInvoker 查询冷热分离已下发任务列表
+func (c *GaussDBClient) ListColdTableTasksInvoker(request *model.ListColdTableTasksRequest) *ListColdTableTasksInvoker {
+	requestDef := GenReqDefForListColdTableTasks()
+	return &ListColdTableTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListColdTableWaitingTasks 查询冷热分离待下发任务列表
+//
+// 查询冷热分离待下发任务列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListColdTableWaitingTasks(request *model.ListColdTableWaitingTasksRequest) (*model.ListColdTableWaitingTasksResponse, error) {
+	requestDef := GenReqDefForListColdTableWaitingTasks()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListColdTableWaitingTasksResponse), nil
+	}
+}
+
+// ListColdTableWaitingTasksInvoker 查询冷热分离待下发任务列表
+func (c *GaussDBClient) ListColdTableWaitingTasksInvoker(request *model.ListColdTableWaitingTasksRequest) *ListColdTableWaitingTasksInvoker {
+	requestDef := GenReqDefForListColdTableWaitingTasks()
+	return &ListColdTableWaitingTasksInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListConfigurationsDifferences 对比参数模板
@@ -1765,6 +2038,27 @@ func (c *GaussDBClient) ListRecycleInstances(request *model.ListRecycleInstances
 func (c *GaussDBClient) ListRecycleInstancesInvoker(request *model.ListRecycleInstancesRequest) *ListRecycleInstancesInvoker {
 	requestDef := GenReqDefForListRecycleInstances()
 	return &ListRecycleInstancesInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ListRetainedBackups 查询实例回收站中保留的备份列表
+//
+// 查询实例释放后保留在回收站中的备份列表。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ListRetainedBackups(request *model.ListRetainedBackupsRequest) (*model.ListRetainedBackupsResponse, error) {
+	requestDef := GenReqDefForListRetainedBackups()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ListRetainedBackupsResponse), nil
+	}
+}
+
+// ListRetainedBackupsInvoker 查询实例回收站中保留的备份列表
+func (c *GaussDBClient) ListRetainedBackupsInvoker(request *model.ListRetainedBackupsRequest) *ListRetainedBackupsInvoker {
+	requestDef := GenReqDefForListRetainedBackups()
+	return &ListRetainedBackupsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ListScheduleJobs 获取定时任务列表
@@ -2481,6 +2775,48 @@ func (c *GaussDBClient) ShowBackupVaultLockInvoker(request *model.ShowBackupVaul
 	return &ShowBackupVaultLockInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowBinlogSwitch 查询Binlog日志开关状态
+//
+// 查询指定数据库实例的Binlog日志开关状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowBinlogSwitch(request *model.ShowBinlogSwitchRequest) (*model.ShowBinlogSwitchResponse, error) {
+	requestDef := GenReqDefForShowBinlogSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowBinlogSwitchResponse), nil
+	}
+}
+
+// ShowBinlogSwitchInvoker 查询Binlog日志开关状态
+func (c *GaussDBClient) ShowBinlogSwitchInvoker(request *model.ShowBinlogSwitchRequest) *ShowBinlogSwitchInvoker {
+	requestDef := GenReqDefForShowBinlogSwitch()
+	return &ShowBinlogSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowColdTableSwitch 查询冷热分离开关状态
+//
+// 查询实例的冷热分离开关状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowColdTableSwitch(request *model.ShowColdTableSwitchRequest) (*model.ShowColdTableSwitchResponse, error) {
+	requestDef := GenReqDefForShowColdTableSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowColdTableSwitchResponse), nil
+	}
+}
+
+// ShowColdTableSwitchInvoker 查询冷热分离开关状态
+func (c *GaussDBClient) ShowColdTableSwitchInvoker(request *model.ShowColdTableSwitchRequest) *ShowColdTableSwitchInvoker {
+	requestDef := GenReqDefForShowColdTableSwitch()
+	return &ShowColdTableSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowDedicatedResourceInfo 查询专属资源信息详情
 //
 // 查询专属资源信息详情。
@@ -2542,6 +2878,27 @@ func (c *GaussDBClient) ShowErrorLogDownloadLink(request *model.ShowErrorLogDown
 func (c *GaussDBClient) ShowErrorLogDownloadLinkInvoker(request *model.ShowErrorLogDownloadLinkRequest) *ShowErrorLogDownloadLinkInvoker {
 	requestDef := GenReqDefForShowErrorLogDownloadLink()
 	return &ShowErrorLogDownloadLinkInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowExceptionSnapshotStatus 查询异常快照开关状态
+//
+// 查询实例的异常快照开关状态。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowExceptionSnapshotStatus(request *model.ShowExceptionSnapshotStatusRequest) (*model.ShowExceptionSnapshotStatusResponse, error) {
+	requestDef := GenReqDefForShowExceptionSnapshotStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowExceptionSnapshotStatusResponse), nil
+	}
+}
+
+// ShowExceptionSnapshotStatusInvoker 查询异常快照开关状态
+func (c *GaussDBClient) ShowExceptionSnapshotStatusInvoker(request *model.ShowExceptionSnapshotStatusRequest) *ShowExceptionSnapshotStatusInvoker {
+	requestDef := GenReqDefForShowExceptionSnapshotStatus()
+	return &ShowExceptionSnapshotStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowGaussMySqlBackupList 查询全量备份列表
@@ -2945,6 +3302,27 @@ func (c *GaussDBClient) ShowInstanceScheduleEventsInvoker(request *model.ShowIns
 	return &ShowInstanceScheduleEventsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowInstanceStorageInfo 查询实例存储空间信息
+//
+// 查询指定实例的存储空间信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowInstanceStorageInfo(request *model.ShowInstanceStorageInfoRequest) (*model.ShowInstanceStorageInfoResponse, error) {
+	requestDef := GenReqDefForShowInstanceStorageInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowInstanceStorageInfoResponse), nil
+	}
+}
+
+// ShowInstanceStorageInfoInvoker 查询实例存储空间信息
+func (c *GaussDBClient) ShowInstanceStorageInfoInvoker(request *model.ShowInstanceStorageInfoRequest) *ShowInstanceStorageInfoInvoker {
+	requestDef := GenReqDefForShowInstanceStorageInfo()
+	return &ShowInstanceStorageInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowIntelligentDiagnosisAbnormalCountOfInstances 获取各指标的异常实例数
 //
 // 获取各指标的异常实例数。
@@ -3029,6 +3407,90 @@ func (c *GaussDBClient) ShowKernelUpgradeCheckResultInvoker(request *model.ShowK
 	return &ShowKernelUpgradeCheckResultInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowKillProcessHistory 查询Kill会话历史记录
+//
+// 查询Kill会话历史记录。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowKillProcessHistory(request *model.ShowKillProcessHistoryRequest) (*model.ShowKillProcessHistoryResponse, error) {
+	requestDef := GenReqDefForShowKillProcessHistory()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKillProcessHistoryResponse), nil
+	}
+}
+
+// ShowKillProcessHistoryInvoker 查询Kill会话历史记录
+func (c *GaussDBClient) ShowKillProcessHistoryInvoker(request *model.ShowKillProcessHistoryRequest) *ShowKillProcessHistoryInvoker {
+	requestDef := GenReqDefForShowKillProcessHistory()
+	return &ShowKillProcessHistoryInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowKillProcessStatus 查询自动kill会话功能开关
+//
+// 查询实例自动kill会话功能开关。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowKillProcessStatus(request *model.ShowKillProcessStatusRequest) (*model.ShowKillProcessStatusResponse, error) {
+	requestDef := GenReqDefForShowKillProcessStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKillProcessStatusResponse), nil
+	}
+}
+
+// ShowKillProcessStatusInvoker 查询自动kill会话功能开关
+func (c *GaussDBClient) ShowKillProcessStatusInvoker(request *model.ShowKillProcessStatusRequest) *ShowKillProcessStatusInvoker {
+	requestDef := GenReqDefForShowKillProcessStatus()
+	return &ShowKillProcessStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowKillProcessTask 查询实例的自动kill会话任务
+//
+// 查询实例的自动kill会话任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowKillProcessTask(request *model.ShowKillProcessTaskRequest) (*model.ShowKillProcessTaskResponse, error) {
+	requestDef := GenReqDefForShowKillProcessTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKillProcessTaskResponse), nil
+	}
+}
+
+// ShowKillProcessTaskInvoker 查询实例的自动kill会话任务
+func (c *GaussDBClient) ShowKillProcessTaskInvoker(request *model.ShowKillProcessTaskRequest) *ShowKillProcessTaskInvoker {
+	requestDef := GenReqDefForShowKillProcessTask()
+	return &ShowKillProcessTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowKillProcessTaskPreview 预览自动Kill会话任务
+//
+// 预览当前自动Kill会话任务中符合条件的会话。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowKillProcessTaskPreview(request *model.ShowKillProcessTaskPreviewRequest) (*model.ShowKillProcessTaskPreviewResponse, error) {
+	requestDef := GenReqDefForShowKillProcessTaskPreview()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowKillProcessTaskPreviewResponse), nil
+	}
+}
+
+// ShowKillProcessTaskPreviewInvoker 预览自动Kill会话任务
+func (c *GaussDBClient) ShowKillProcessTaskPreviewInvoker(request *model.ShowKillProcessTaskPreviewRequest) *ShowKillProcessTaskPreviewInvoker {
+	requestDef := GenReqDefForShowKillProcessTaskPreview()
+	return &ShowKillProcessTaskPreviewInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowLockWaitSession 查询锁等待会话信息
 //
 // 根据节点ID和会话ID查询锁等待会话信息。
@@ -3069,6 +3531,27 @@ func (c *GaussDBClient) ShowLtsConfigs(request *model.ShowLtsConfigsRequest) (*m
 func (c *GaussDBClient) ShowLtsConfigsInvoker(request *model.ShowLtsConfigsRequest) *ShowLtsConfigsInvoker {
 	requestDef := GenReqDefForShowLtsConfigs()
 	return &ShowLtsConfigsInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowMigrateInfo 查询一键迁移信息
+//
+// 查询一键迁移到TaurusDB企业版的迁移信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowMigrateInfo(request *model.ShowMigrateInfoRequest) (*model.ShowMigrateInfoResponse, error) {
+	requestDef := GenReqDefForShowMigrateInfo()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowMigrateInfoResponse), nil
+	}
+}
+
+// ShowMigrateInfoInvoker 查询一键迁移信息
+func (c *GaussDBClient) ShowMigrateInfoInvoker(request *model.ShowMigrateInfoRequest) *ShowMigrateInfoInvoker {
+	requestDef := GenReqDefForShowMigrateInfo()
+	return &ShowMigrateInfoInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowMultiTenant 查询多租特性开关状态
@@ -3216,6 +3699,27 @@ func (c *GaussDBClient) ShowRecyclePolicy(request *model.ShowRecyclePolicyReques
 func (c *GaussDBClient) ShowRecyclePolicyInvoker(request *model.ShowRecyclePolicyRequest) *ShowRecyclePolicyInvoker {
 	requestDef := GenReqDefForShowRecyclePolicy()
 	return &ShowRecyclePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// ShowReplicaBinlogReadConfig 查询只读Binlog拉取配置信息
+//
+// 查询实例的只读Binlog拉取配置信息。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowReplicaBinlogReadConfig(request *model.ShowReplicaBinlogReadConfigRequest) (*model.ShowReplicaBinlogReadConfigResponse, error) {
+	requestDef := GenReqDefForShowReplicaBinlogReadConfig()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowReplicaBinlogReadConfigResponse), nil
+	}
+}
+
+// ShowReplicaBinlogReadConfigInvoker 查询只读Binlog拉取配置信息
+func (c *GaussDBClient) ShowReplicaBinlogReadConfigInvoker(request *model.ShowReplicaBinlogReadConfigRequest) *ShowReplicaBinlogReadConfigInvoker {
+	requestDef := GenReqDefForShowReplicaBinlogReadConfig()
+	return &ShowReplicaBinlogReadConfigInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // ShowRestoreAvailableTables 查询表级时间点恢复可选表
@@ -3514,6 +4018,27 @@ func (c *GaussDBClient) ShowTaurusDbAdvancedBackupPolicyInvoker(request *model.S
 	return &ShowTaurusDbAdvancedBackupPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// ShowTaurusDbSlowProcessThreshold 查询实例慢会话阈值
+//
+// 查询实例慢会话阈值。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) ShowTaurusDbSlowProcessThreshold(request *model.ShowTaurusDbSlowProcessThresholdRequest) (*model.ShowTaurusDbSlowProcessThresholdResponse, error) {
+	requestDef := GenReqDefForShowTaurusDbSlowProcessThreshold()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.ShowTaurusDbSlowProcessThresholdResponse), nil
+	}
+}
+
+// ShowTaurusDbSlowProcessThresholdInvoker 查询实例慢会话阈值
+func (c *GaussDBClient) ShowTaurusDbSlowProcessThresholdInvoker(request *model.ShowTaurusDbSlowProcessThresholdRequest) *ShowTaurusDbSlowProcessThresholdInvoker {
+	requestDef := GenReqDefForShowTaurusDbSlowProcessThreshold()
+	return &ShowTaurusDbSlowProcessThresholdInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // ShowTaurusDbTxnProgress 查询大事务执行进度
 //
 // 根据事务ID列表查询对应事务的执行进度，目前仅支持查询回滚事务的执行进度。
@@ -3578,6 +4103,27 @@ func (c *GaussDBClient) StartOnlineDdlTaskInvoker(request *model.StartOnlineDdlT
 	return &StartOnlineDdlTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// StopKillProcessTask 停止自动Kill会话任务
+//
+// 停止指定的自动Kill会话任务。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) StopKillProcessTask(request *model.StopKillProcessTaskRequest) (*model.StopKillProcessTaskResponse, error) {
+	requestDef := GenReqDefForStopKillProcessTask()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.StopKillProcessTaskResponse), nil
+	}
+}
+
+// StopKillProcessTaskInvoker 停止自动Kill会话任务
+func (c *GaussDBClient) StopKillProcessTaskInvoker(request *model.StopKillProcessTaskRequest) *StopKillProcessTaskInvoker {
+	requestDef := GenReqDefForStopKillProcessTask()
+	return &StopKillProcessTaskInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // StopOnlineDdlTask 停止实例无锁变更任务
 //
 // 停止实例无锁变更任务。
@@ -3618,6 +4164,48 @@ func (c *GaussDBClient) SwitchAccessControl(request *model.SwitchAccessControlRe
 func (c *GaussDBClient) SwitchAccessControlInvoker(request *model.SwitchAccessControlRequest) *SwitchAccessControlInvoker {
 	requestDef := GenReqDefForSwitchAccessControl()
 	return &SwitchAccessControlInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchColdTableStorage 创建/回迁冷表
+//
+// 对指定实例执行创建/回迁冷表操作。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) SwitchColdTableStorage(request *model.SwitchColdTableStorageRequest) (*model.SwitchColdTableStorageResponse, error) {
+	requestDef := GenReqDefForSwitchColdTableStorage()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchColdTableStorageResponse), nil
+	}
+}
+
+// SwitchColdTableStorageInvoker 创建/回迁冷表
+func (c *GaussDBClient) SwitchColdTableStorageInvoker(request *model.SwitchColdTableStorageRequest) *SwitchColdTableStorageInvoker {
+	requestDef := GenReqDefForSwitchColdTableStorage()
+	return &SwitchColdTableStorageInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// SwitchExceptionSnapshotStatus 开启或关闭异常快照功能
+//
+// 开启或关闭实例的异常快照功能。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) SwitchExceptionSnapshotStatus(request *model.SwitchExceptionSnapshotStatusRequest) (*model.SwitchExceptionSnapshotStatusResponse, error) {
+	requestDef := GenReqDefForSwitchExceptionSnapshotStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchExceptionSnapshotStatusResponse), nil
+	}
+}
+
+// SwitchExceptionSnapshotStatusInvoker 开启或关闭异常快照功能
+func (c *GaussDBClient) SwitchExceptionSnapshotStatusInvoker(request *model.SwitchExceptionSnapshotStatusRequest) *SwitchExceptionSnapshotStatusInvoker {
+	requestDef := GenReqDefForSwitchExceptionSnapshotStatus()
+	return &SwitchExceptionSnapshotStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // SwitchGaussMySqlConfiguration 应用参数模板
@@ -3683,6 +4271,27 @@ func (c *GaussDBClient) SwitchGaussMySqlProxyAltInvoker(request *model.SwitchGau
 	return &SwitchGaussMySqlProxyAltInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SwitchGaussMySqlProxyBinlogPull 打开或关闭数据库代理拉取Binlog开关
+//
+// 打开或关闭数据库代理拉取Binlog开关。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) SwitchGaussMySqlProxyBinlogPull(request *model.SwitchGaussMySqlProxyBinlogPullRequest) (*model.SwitchGaussMySqlProxyBinlogPullResponse, error) {
+	requestDef := GenReqDefForSwitchGaussMySqlProxyBinlogPull()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchGaussMySqlProxyBinlogPullResponse), nil
+	}
+}
+
+// SwitchGaussMySqlProxyBinlogPullInvoker 打开或关闭数据库代理拉取Binlog开关
+func (c *GaussDBClient) SwitchGaussMySqlProxyBinlogPullInvoker(request *model.SwitchGaussMySqlProxyBinlogPullRequest) *SwitchGaussMySqlProxyBinlogPullInvoker {
+	requestDef := GenReqDefForSwitchGaussMySqlProxyBinlogPull()
+	return &SwitchGaussMySqlProxyBinlogPullInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // SwitchGaussMySqlProxyEip Proxy绑定解绑弹性公网IP
 //
 // Proxy绑定解绑弹性公网IP。
@@ -3725,6 +4334,27 @@ func (c *GaussDBClient) SwitchGaussMySqlProxySslInvoker(request *model.SwitchGau
 	return &SwitchGaussMySqlProxySslInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
+// SwitchOnColdTable 开启冷热分离
+//
+// 开启实例的冷热分离。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) SwitchOnColdTable(request *model.SwitchOnColdTableRequest) (*model.SwitchOnColdTableResponse, error) {
+	requestDef := GenReqDefForSwitchOnColdTable()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.SwitchOnColdTableResponse), nil
+	}
+}
+
+// SwitchOnColdTableInvoker 开启冷热分离
+func (c *GaussDBClient) SwitchOnColdTableInvoker(request *model.SwitchOnColdTableRequest) *SwitchOnColdTableInvoker {
+	requestDef := GenReqDefForSwitchOnColdTable()
+	return &SwitchOnColdTableInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
 // UpdateAuditLog 开启或者关闭全量SQL
 //
 // 开启或者关闭全量SQL。
@@ -3744,6 +4374,27 @@ func (c *GaussDBClient) UpdateAuditLog(request *model.UpdateAuditLogRequest) (*m
 func (c *GaussDBClient) UpdateAuditLogInvoker(request *model.UpdateAuditLogRequest) *UpdateAuditLogInvoker {
 	requestDef := GenReqDefForUpdateAuditLog()
 	return &UpdateAuditLogInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateAutoKillProcessStatus 开启或关闭自动kill会话
+//
+// 开启或关闭自动kill会话。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateAutoKillProcessStatus(request *model.UpdateAutoKillProcessStatusRequest) (*model.UpdateAutoKillProcessStatusResponse, error) {
+	requestDef := GenReqDefForUpdateAutoKillProcessStatus()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateAutoKillProcessStatusResponse), nil
+	}
+}
+
+// UpdateAutoKillProcessStatusInvoker 开启或关闭自动kill会话
+func (c *GaussDBClient) UpdateAutoKillProcessStatusInvoker(request *model.UpdateAutoKillProcessStatusRequest) *UpdateAutoKillProcessStatusInvoker {
+	requestDef := GenReqDefForUpdateAutoKillProcessStatus()
+	return &UpdateAutoKillProcessStatusInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateAutoScalingPolicy 设置自动变配
@@ -3786,6 +4437,27 @@ func (c *GaussDBClient) UpdateBackupOffsitePolicy(request *model.UpdateBackupOff
 func (c *GaussDBClient) UpdateBackupOffsitePolicyInvoker(request *model.UpdateBackupOffsitePolicyRequest) *UpdateBackupOffsitePolicyInvoker {
 	requestDef := GenReqDefForUpdateBackupOffsitePolicy()
 	return &UpdateBackupOffsitePolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateBinlogSwitch 开启或者关闭Binlog日志开关
+//
+// 开启或者关闭指定数据库实例Binlog日志开关。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateBinlogSwitch(request *model.UpdateBinlogSwitchRequest) (*model.UpdateBinlogSwitchResponse, error) {
+	requestDef := GenReqDefForUpdateBinlogSwitch()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateBinlogSwitchResponse), nil
+	}
+}
+
+// UpdateBinlogSwitchInvoker 开启或者关闭Binlog日志开关
+func (c *GaussDBClient) UpdateBinlogSwitchInvoker(request *model.UpdateBinlogSwitchRequest) *UpdateBinlogSwitchInvoker {
+	requestDef := GenReqDefForUpdateBinlogSwitch()
+	return &UpdateBinlogSwitchInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateDynamicServerlessPolicy 设置动态Serverless算力策略
@@ -4311,6 +4983,30 @@ func (c *GaussDBClient) UpdateServerlessPolicy(request *model.UpdateServerlessPo
 func (c *GaussDBClient) UpdateServerlessPolicyInvoker(request *model.UpdateServerlessPolicyRequest) *UpdateServerlessPolicyInvoker {
 	requestDef := GenReqDefForUpdateServerlessPolicy()
 	return &UpdateServerlessPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
+}
+
+// UpdateServerlessScaleToZeroPolicy 设置Serverless自动启停策略
+//
+// 设置Serverless实例的Scale to Zero自动启停策略。
+//
+// 开启后，当实例所有节点算力不超过2TCU且无活跃用户连接达到空闲时长阈值时，实例自动缩容到零（停止计费）；
+// 当检测到新的用户连接时，实例自动唤醒并恢复计费。
+//
+// Please refer to HUAWEI cloud API Explorer for details.
+func (c *GaussDBClient) UpdateServerlessScaleToZeroPolicy(request *model.UpdateServerlessScaleToZeroPolicyRequest) (*model.UpdateServerlessScaleToZeroPolicyResponse, error) {
+	requestDef := GenReqDefForUpdateServerlessScaleToZeroPolicy()
+
+	if resp, err := c.HcClient.Sync(request, requestDef); err != nil {
+		return nil, err
+	} else {
+		return resp.(*model.UpdateServerlessScaleToZeroPolicyResponse), nil
+	}
+}
+
+// UpdateServerlessScaleToZeroPolicyInvoker 设置Serverless自动启停策略
+func (c *GaussDBClient) UpdateServerlessScaleToZeroPolicyInvoker(request *model.UpdateServerlessScaleToZeroPolicyRequest) *UpdateServerlessScaleToZeroPolicyInvoker {
+	requestDef := GenReqDefForUpdateServerlessScaleToZeroPolicy()
+	return &UpdateServerlessScaleToZeroPolicyInvoker{invoker.NewBaseInvoker(c.HcClient, request, requestDef)}
 }
 
 // UpdateServerlessScalingPolicy 设置Serverless自定义扩容策略

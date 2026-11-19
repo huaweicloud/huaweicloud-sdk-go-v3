@@ -14,13 +14,13 @@ type UpdateProtectionPolicyInfoRequestInfo struct {
 	// **参数解释**: 策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
 	PolicyName string `json:"policy_name"`
 
-	// **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **默认取值**: 不涉及
+	// **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。  **默认取值**: 不涉及
 	ProtectionMode string `json:"protection_mode"`
 
-	// **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。 **默认取值**: 不涉及
+	// **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。  **默认取值**: 不涉及
 	BaitProtectionStatus *string `json:"bait_protection_status,omitempty"`
 
-	// **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
+	// **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: closed
 	DeployMode *string `json:"deploy_mode,omitempty"`
 
 	// **参数解释**: 防护目录 **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个防护目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
@@ -35,16 +35,16 @@ type UpdateProtectionPolicyInfoRequestInfo struct {
 	// **参数解释**: 开启了此勒索防护策略的agent的id列表 **约束限制**: 不涉及 **取值范围**: 列表最大1000条 **默认取值**: 不涉及
 	AgentIdList *[]string `json:"agent_id_list,omitempty"`
 
-	// **参数解释**: 支持该策略的操作系统 **约束限制**: 不涉及 **取值范围**: 包含两种：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
+	// **参数解释**: 支持该策略的操作系统 **约束限制**: 不涉及 **取值范围**: 包含两种：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
 	OperatingSystem string `json:"operating_system"`
 
-	// **参数解释**: 是否运行时检测 **约束限制**: 不涉及 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。 **默认取值**: 不涉及
+	// **参数解释**: 是否运行时检测 **约束限制**: 不涉及 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。  **默认取值**: 不涉及
 	RuntimeDetectionStatus *string `json:"runtime_detection_status,omitempty"`
 
 	// 进程白名单
 	ProcessWhitelist *[]TrustProcessInfo `json:"process_whitelist,omitempty"`
 
-	// **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: 不涉及
+	// **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: 不涉及
 	AiProtectionStatus *string `json:"ai_protection_status,omitempty"`
 }
 
